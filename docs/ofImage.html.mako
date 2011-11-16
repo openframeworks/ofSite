@@ -1,17 +1,30 @@
 <%inherit file="_templates/docs.mako" />
 __ofImage__
 
+
+ofImage has pixels and texture information. Pixels are stored in RAM, the computer memory, while the texture is stored in the graphics card memory for drawing it faster. It also has methods to load and save images as some other utilities like resize or change the number of channels.
+
+
+
+
+
+
+
+
 ___Example___
 
+
+testApp.h
 $$code(lang=c++)
-//.h
 class testApp{
     void setup();
     void draw();
     ofImage img;
 }
+$$/code
 
-//.cpp
+testApp.cpp
+$$code(lang=c++)
 void testApp::setup(){
     img.loadImage("image.png");
 }
@@ -22,49 +35,12 @@ void testApp::draw(){
 $$/code
 
 
+
+
+
+
+
 ___Reference___
-
-$$code(lang=c++)
-int width
-$$/code
-
-
-
-$$code(lang=c++)
-int height
-$$/code
-
-
-
-$$code(lang=c++)
-int bpp
-$$/code
-
-
-
-$$code(lang=c++)
-int type
-$$/code
-
-
-
-$$code(lang=c++)
-None pixels
-$$/code
-
-
-
-$$code(lang=c++)
-bool bUseTexture
-$$/code
-
-
-
-$$code(lang=c++)
-None tex
-$$/code
-
-
 
 $$code(lang=c++)
 None ofImage()
@@ -82,11 +58,16 @@ $$code(lang=c++)
 void allocate(int w, int h, ofImageType type)
 $$/code
 
+> Allocates memory in RAM and texture for the image. type indicates if the image is grayscale, color or color with alpha
+Usually you don't need to use this method but only loadImage to load an image from disk
+
 
 
 $$code(lang=c++)
 void clear()
 $$/code
+
+> Clears the allocated memory in RAM and texture for this image
 
 
 
@@ -340,5 +321,43 @@ $$code(lang=c++)
 void resizePixels(ofPixels &pix, int newWidth, int newHeight)
 $$/code
 
+$$code(lang=c++)
+int width
+$$/code
 
+
+
+$$code(lang=c++)
+int height
+$$/code
+
+
+
+$$code(lang=c++)
+int bpp
+$$/code
+
+
+
+$$code(lang=c++)
+int type
+$$/code
+
+
+
+$$code(lang=c++)
+None pixels
+$$/code
+
+
+
+$$code(lang=c++)
+bool bUseTexture
+$$/code
+
+
+
+$$code(lang=c++)
+None tex
+$$/code
 
