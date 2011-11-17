@@ -40,6 +40,10 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -81,6 +85,10 @@ _version_started: 006_
 _version_deprecated: _
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -124,6 +132,10 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -166,6 +178,10 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -207,6 +223,10 @@ _version_started: 006_
 _version_deprecated: _
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -258,6 +278,10 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -299,6 +323,10 @@ _version_started: 006_
 _version_deprecated: _
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -352,6 +380,10 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -393,6 +425,10 @@ _version_started: 006_
 _version_deprecated: _
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -436,6 +472,10 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -477,6 +517,10 @@ _version_started: 006_
 _version_deprecated: _
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -520,6 +564,10 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -561,6 +609,10 @@ _version_started: 006_
 _version_deprecated: _
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -604,6 +656,10 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -646,6 +702,10 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -687,6 +747,10 @@ _version_started: 006_
 _version_deprecated: _
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -739,6 +803,10 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -787,6 +855,10 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -828,6 +900,10 @@ _version_started: 006_
 _version_deprecated: _
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -871,6 +947,10 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -912,6 +992,10 @@ _version_started: 006_
 _version_deprecated: _
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -955,6 +1039,10 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -997,6 +1085,10 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -1038,6 +1130,10 @@ _version_started: 006_
 _version_deprecated: _
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -1090,6 +1186,10 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -1132,6 +1232,10 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -1173,6 +1277,10 @@ _version_started: 006_
 _version_deprecated: _
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -1224,6 +1332,10 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -1265,6 +1377,10 @@ _version_started: 006_
 _version_deprecated: _
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -1308,347 +1424,15 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
 
 Draws the texture of the movie player class as the position (x,y) with the internal width and height of the loaded movie. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-###void setPaused(bPause)
-
-_syntax: setPaused(bPause)_
-
-_name: setPaused_
-
-_returns: void_
-
-_returns_description: _
-
-_parameters: bool bPause_
-
-_access: public_
-
-_version_started: 006_
-
-_version_deprecated: _
-
-_summary: _
-
-
-
-_description: _
-
-Sets the paused state of the movie. Use "true" to pause and false to unpause. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-###int getCurrentFrame()
-
-_syntax: getCurrentFrame()_
-
-_name: getCurrentFrame_
-
-_returns: int_
-
-_returns_description: Returns the current frame of the video._
-
-_parameters: _
-
-_access: public_
-
-_version_started: 006_
-
-_version_deprecated: _
-
-_summary: _
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-###int getTotalNumFrames()
-
-_syntax: getTotalNumFrames()_
-
-_name: getTotalNumFrames_
-
-_returns: int_
-
-_returns_description: Returns the total number of frames for the loaded movie._
-
-_parameters: _
-
-_access: public_
-
-_version_started: 006_
-
-_version_deprecated: _
-
-_summary: _
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-###void firstFrame()
-
-_syntax: firstFrame()_
-
-_name: firstFrame_
-
-_returns: void_
-
-_returns_description: _
-
-_parameters: _
-
-_access: public_
-
-_version_started: 006_
-
-_version_deprecated: _
-
-_summary: _
-
-
-
-_description: _
-
-Moves the playhead to the first frame of the movie. This can also be accomplished using setCurrentFrame(0).
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-###void nextFrame()
-
-_syntax: nextFrame()_
-
-_name: nextFrame_
-
-_returns: void_
-
-_returns_description: _
-
-_parameters: _
-
-_access: public_
-
-_version_started: 006_
-
-_version_deprecated: _
-
-_summary: _
-
-
-
-_description: _
-
-Advances the playhead by one frame.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-###void previousFrame()
-
-_syntax: previousFrame()_
-
-_name: previousFrame_
-
-_returns: void_
-
-_returns_description: _
-
-_parameters: _
-
-_access: public_
-
-_version_started: 006_
-
-_version_deprecated: _
-
-_summary: _
-
-
-
-_description: _
-
-Reverses the playhead by one frame.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-###float getHeight()
-
-_syntax: getHeight()_
-
-_name: getHeight_
-
-_returns: float_
-
-_returns_description: Returns the height of the loaded movie._
-
-_parameters: _
-
-_access: public_
-
-_version_started: 006_
-
-_version_deprecated: _
-
-_summary: _
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-###float getWidth()
-
-_syntax: getWidth()_
-
-_name: getWidth_
-
-_returns: float_
-
-_returns_description: Returns the width of the loaded movie._
-
-_parameters: _
-
-_access: public_
-
-_version_started: 006_
-
-_version_deprecated: _
-
-_summary: _
-
-
-
-_description: _
-
-
 
 
 
@@ -1685,6 +1469,10 @@ _version_started: 006_
 _version_deprecated: _
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -1728,6 +1516,10 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -1769,6 +1561,378 @@ _version_started: 006_
 _version_deprecated: _
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###void setPaused(bPause)
+
+_syntax: setPaused(bPause)_
+
+_name: setPaused_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: bool bPause_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: true_
+
+_advanced: true_
+
+
+
+_description: _
+
+Sets the paused state of the movie. Use "true" to pause and false to unpause. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###int getCurrentFrame()
+
+_syntax: getCurrentFrame()_
+
+_name: getCurrentFrame_
+
+_returns: int_
+
+_returns_description: Returns the current frame of the video._
+
+_parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: true_
+
+_advanced: true_
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###int getTotalNumFrames()
+
+_syntax: getTotalNumFrames()_
+
+_name: getTotalNumFrames_
+
+_returns: int_
+
+_returns_description: Returns the total number of frames for the loaded movie._
+
+_parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: true_
+
+_advanced: true_
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###void firstFrame()
+
+_syntax: firstFrame()_
+
+_name: firstFrame_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: true_
+
+_advanced: true_
+
+
+
+_description: _
+
+Moves the playhead to the first frame of the movie. This can also be accomplished using setCurrentFrame(0).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###void nextFrame()
+
+_syntax: nextFrame()_
+
+_name: nextFrame_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: true_
+
+_advanced: true_
+
+
+
+_description: _
+
+Advances the playhead by one frame.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###void previousFrame()
+
+_syntax: previousFrame()_
+
+_name: previousFrame_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: true_
+
+_advanced: true_
+
+
+
+_description: _
+
+Reverses the playhead by one frame.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###float getHeight()
+
+_syntax: getHeight()_
+
+_name: getHeight_
+
+_returns: float_
+
+_returns_description: Returns the height of the loaded movie._
+
+_parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: true_
+
+_advanced: true_
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###float getWidth()
+
+_syntax: getWidth()_
+
+_name: getWidth_
+
+_returns: float_
+
+_returns_description: Returns the width of the loaded movie._
+
+_parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -1814,6 +1978,10 @@ _constant: 0_
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -1849,6 +2017,10 @@ _version_deprecated: _
 _constant: 0_
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -1886,6 +2058,10 @@ _constant: 0_
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -1921,6 +2097,10 @@ _version_deprecated: _
 _constant: 0_
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -1958,6 +2138,10 @@ _constant: 0_
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -1993,6 +2177,10 @@ _version_deprecated: _
 _constant: 0_
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -2030,6 +2218,10 @@ _constant: 0_
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -2065,6 +2257,10 @@ _version_deprecated: _
 _constant: 0_
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -2102,6 +2298,10 @@ _constant: 0_
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -2137,6 +2337,10 @@ _version_deprecated: _
 _constant: 0_
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -2174,6 +2378,10 @@ _constant: 0_
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -2209,6 +2417,10 @@ _version_deprecated: _
 _constant: 0_
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -2246,6 +2458,10 @@ _constant: 0_
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -2281,6 +2497,10 @@ _version_deprecated: _
 _constant: 0_
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -2318,6 +2538,10 @@ _constant: 0_
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -2353,6 +2577,10 @@ _version_deprecated: _
 _constant: 0_
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -2390,6 +2618,10 @@ _constant: 0_
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -2425,6 +2657,10 @@ _version_deprecated: _
 _constant: 0_
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -2462,6 +2698,10 @@ _constant: 0_
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -2497,6 +2737,10 @@ _version_deprecated: _
 _constant: 0_
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -2534,6 +2778,10 @@ _constant: 0_
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -2570,6 +2818,10 @@ _constant: 0_
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -2605,6 +2857,10 @@ _version_deprecated: _
 _constant: 0_
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 

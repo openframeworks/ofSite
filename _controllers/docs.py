@@ -60,6 +60,11 @@ class Block(object):
                 self.classes[-1]['visible'] = False
             else:
                 self.classes[-1]['visible'] = True
+        elif mode=='clazz' and element.find('__advanced:')!=-1:
+            if element.find('false')!=-1:
+                self.classes[-1]['advanced'] = False
+            else:
+                self.classes[-1]['advanced'] = True
         elif mode=='clazz' and element.find('__methods__')!=-1:
             self.mode='methods'
             self.classes[-1]['methods']=[]
@@ -92,6 +97,8 @@ class Method(object):
         self.content = None
         self.filters = filters
         self.clazz = clazz
+        self.advanced = False
+        self.visible = True
         self.__parse()
         
     def __parse(self):        
@@ -115,6 +122,8 @@ class Method(object):
             self.returns = metadata['_returns'][:-1]
             self.returns_description = metadata['_returns_description'][:-1]
             self.summary = metadata['_summary'][:-1]
+            self.advanced = metadata['_advanced'][:-1]=='true'
+            self.visible = metadata['_visible'][:-1]=='true'
             
             if(len(self.parameters.split(','))>0):
                 self.syntax_resume = self.name + '(...)'
@@ -139,6 +148,8 @@ class Variable(object):
         self.content = None
         self.filters = filters
         self.clazz = clazz
+        self.advanced = False
+        self.visible = True
         self.__parse()
         
     def __parse(self):        
@@ -158,7 +169,9 @@ class Variable(object):
             self.name = metadata['_name'][:-1]
             self.type = metadata['_type'][:-1]
             self.access = metadata['_access'][:-1]
-            self.summary = metadata['_summary'][:-1]                
+            self.summary = metadata['_summary'][:-1] 
+            self.advanced = metadata['_advanced'][:-1]=='true'
+            self.visible = metadata['_visible'][:-1]=='true'               
             self.description = bf.filter.run_chain(self.filters, description)
         except:
             raise VarParseException( 'error parsing method from ' + str(self.source) )
@@ -225,7 +238,9 @@ class Clazz(object):
         
         env = {
             "methods": self.methods,
-            "clazz": self.description,
+            "variables": self.vars,
+            "class_name": self.name,
+            "class_description": self.description,
         }
         bf.writer.materialize_template("docs_class.mako", ('docs',self.folder+"/"+self.name+".html"), env )
 

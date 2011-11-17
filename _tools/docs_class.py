@@ -14,6 +14,8 @@ class DocsClass:
         self.id = classid
         self.name = ""
         self.new = 0
+        self.advanced = False
+        self.visible = True
         self.function_list = []
         
 
@@ -21,15 +23,17 @@ class DocsClass:
         return self.function_list      
 
 
-def list_all(db,fileid,advanced):
+def list_all(db,fileid):
     cursor=db.cursor()
-    sql='SELECT id,name FROM docs_class WHERE fileid=%s and advanced=%s'
-    cursor.execute(sql,(fileid,advanced,))
+    sql='SELECT id,name,visible,advanced FROM docs_class WHERE fileid=%s '
+    cursor.execute(sql,(fileid,))
     classes=cursor.fetchall()
     class_list = []
     for dbclass in classes:
         clazz = DocsClass(dbclass[0])
         clazz.name = dbclass[1]
+        clazz.visible = dbclass[2]
+        clazz.advanced = dbclass[3]
     return classes
 
 def getClass(db,classid):

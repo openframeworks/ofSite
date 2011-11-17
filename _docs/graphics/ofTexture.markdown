@@ -40,6 +40,10 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -81,6 +85,10 @@ _version_started: 006_
 _version_deprecated: _
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -124,6 +132,10 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -165,6 +177,10 @@ _version_started: 006_
 _version_deprecated: _
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -226,6 +242,10 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -267,6 +287,10 @@ _version_started: 006_
 _version_deprecated: _
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -310,6 +334,10 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -351,6 +379,10 @@ _version_started: 006_
 _version_deprecated: _
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -405,221 +437,15 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
 
 Grabs a region of the screen and loads it into the texture. Specifiy the position (x,y) you wish to grab from, with the width (w) and height (h) of the region. Make sure that you have allocated your texture (using allocate()) to be large enough to hold the region of the screen you wish to load.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-###void draw(x, y, w, h)
-
-_syntax: draw(x, y, w, h)_
-
-_name: draw_
-
-_returns: void_
-
-_returns_description: _
-
-_parameters: float x, float y, float w, float h_
-
-_access: public_
-
-_version_started: 006_
-
-_version_deprecated: _
-
-_summary: _
-
-
-
-_description: _
-
-draws the texture at a given point (x,y), with a given width (w) and height (h). 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-###void draw(x, y)
-
-_syntax: draw(x, y)_
-
-_name: draw_
-
-_returns: void_
-
-_returns_description: _
-
-_parameters: float x, float y_
-
-_access: public_
-
-_version_started: 006_
-
-_version_deprecated: _
-
-_summary: _
-
-
-
-_description: _
-
-Draws the texture at a given point (x,y), using the textures true width and height.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-###bool bAllocated()
-
-_syntax: bAllocated()_
-
-_name: bAllocated_
-
-_returns: bool_
-
-_returns_description: Returns true if the texture is allocated correctly._
-
-_parameters: _
-
-_access: public_
-
-_version_started: 006_
-
-_version_deprecated: _
-
-_summary: _
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-###float getHeight()
-
-_syntax: getHeight()_
-
-_name: getHeight_
-
-_returns: float_
-
-_returns_description: Returns the Height of the texture._
-
-_parameters: _
-
-_access: public_
-
-_version_started: 006_
-
-_version_deprecated: _
-
-_summary: _
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-###float getWidth()
-
-_syntax: getWidth()_
-
-_name: getWidth_
-
-_returns: float_
-
-_returns_description: Returns the Width of the texture._
-
-_parameters: _
-
-_access: public_
-
-_version_started: 006_
-
-_version_deprecated: _
-
-_summary: _
-
-
-
-_description: _
-
-
 
 
 
@@ -656,6 +482,10 @@ _version_started: 006_
 _version_deprecated: _
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -699,6 +529,10 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -741,11 +575,107 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###void draw(x, y, w, h)
+
+_syntax: draw(x, y, w, h)_
+
+_name: draw_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: float x, float y, float w, float h_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: true_
+
+_advanced: true_
+
+
+
+_description: _
+
+draws the texture at a given point (x,y), with a given width (w) and height (h). 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###void draw(x, y)
+
+_syntax: draw(x, y)_
+
+_name: draw_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: float x, float y_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: true_
+
+_advanced: true_
+
+
+
+_description: _
+
+Draws the texture at a given point (x,y), using the textures true width and height.
 
 
 
@@ -782,6 +712,10 @@ _version_started: 006_
 _version_deprecated: _
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -825,6 +759,56 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###bool bAllocated()
+
+_syntax: bAllocated()_
+
+_name: bAllocated_
+
+_returns: bool_
+
+_returns_description: Returns true if the texture is allocated correctly._
+
+_parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -866,6 +850,102 @@ _version_started: 006_
 _version_deprecated: _
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###float getHeight()
+
+_syntax: getHeight()_
+
+_name: getHeight_
+
+_returns: float_
+
+_returns_description: Returns the Height of the texture._
+
+_parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: true_
+
+_advanced: true_
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###float getWidth()
+
+_syntax: getWidth()_
+
+_name: getWidth_
+
+_returns: float_
+
+_returns_description: Returns the Width of the texture._
+
+_parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -911,6 +991,10 @@ _constant: 0_
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -947,6 +1031,10 @@ _constant: 0_
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -982,6 +1070,10 @@ _version_deprecated: _
 _constant: 0_
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 

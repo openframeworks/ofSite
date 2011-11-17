@@ -11,8 +11,10 @@ class DocsMethod:
         self.access = ""
         self.version_started = ""
         self.version_deprecated = ""
+        self.visible = True
+        self.advanced = False
         
-class DocsMethod:
+class DocsVar:
     def __init__(self,functionid):
         self.id = functionid
         self.name = ""
@@ -22,6 +24,8 @@ class DocsMethod:
         self.version_started = ""
         self.version_deprecated = ""
         self.constant = ""
+        self.visible = True
+        self.advanced = False
         
 def tostr(string):
     if string is None:
@@ -36,10 +40,10 @@ def names(db,classid,advanced):
     functions=cursor.fetchall()
     return functions
 
-def list_all_methods(db,classid,advanced):
+def list_all_methods(db,classid):
     cursor=db.cursor()
-    sql='SELECT id,name,returns,parameters,description,syntax,returns_description,access,version_started,version_deprecated,extra_description FROM docs_functions WHERE  linktable="class" and linkid=%s and advanced=%s ORDER BY sortid'
-    cursor.execute(sql,(classid,advanced,))
+    sql='SELECT id,name,returns,parameters,description,syntax,returns_description,access,version_started,version_deprecated,extra_description,visible,advanced FROM docs_functions WHERE  linktable="class" and linkid=%s ORDER BY sortid'
+    cursor.execute(sql,(classid,))
     functions=cursor.fetchall()
     function_list = []
     for dbfunction in functions:
@@ -62,17 +66,19 @@ def list_all_methods(db,classid,advanced):
             function.version_deprecated = ""
         else:
             function.version_deprecated = tostr(dbfunction[9])
+        function.visible = tostr(dbfunction[11])
+        function.advanced = tostr(dbfunction[12])
         function_list.append(function)
     return function_list
     
 def list_all_vars(db,classid):
     cursor=db.cursor()
-    sql='SELECT id,name,type,description,access,version_started,version_deprecated,constant FROM docs_vars WHERE  linktable="class" and linkid=%s ORDER BY sortid'
+    sql='SELECT id,name,type,description,access,version_started,version_deprecated,constant,visible,advanced FROM docs_vars WHERE  linktable="class" and linkid=%s ORDER BY sortid'
     cursor.execute(sql,(classid,))
     variables=cursor.fetchall()
     variables_list = []
     for dbvar in variables:
-        var = DocsMethod(dbvar[0])
+        var = DocsVar(dbvar[0])
         var.name = tostr(dbvar[1])
         var.type = tostr(dbvar[2])
         var.description = tostr(dbvar[3])
@@ -86,6 +92,8 @@ def list_all_vars(db,classid):
         else:
             var.version_deprecated = tostr(dbvar[6])
         var.constant = tostr(dbvar[7])
+        var.visible = tostr(dbvar[8])
+        var.advanced = tostr(dbvar[9])
         variables_list.append(var)
     return variables_list
     

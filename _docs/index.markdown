@@ -7,6 +7,8 @@
 
 __visible: true__
 
+__advanced: false__
+
 __methods__
 
 ofBaseApp()
@@ -50,6 +52,8 @@ mouseY
 ###ofAppBaseWindow###
 
 __visible: true__
+
+__advanced: true__
 
 __methods__
 
@@ -97,6 +101,80 @@ disableSetupScreen()
 
 __variables__
 
+###ofAppGlutWindow###
+
+__visible: true__
+
+__advanced: true__
+
+__methods__
+
+ofAppGlutWindow()
+
+exitApp()
+
+~ofAppGlutWindow()
+
+display(...)
+
+setupOpenGL(...)
+
+mouse_cb(...)
+
+initializeWindow()
+
+motion_cb(...)
+
+runAppViaInfiniteLoop(...)
+
+passive_motion_cb(...)
+
+hideCursor()
+
+idle_cb(...)
+
+showCursor()
+
+keyboard_cb(...)
+
+setFullscreen(...)
+
+keyboard_up_cb(...)
+
+toggleFullscreen()
+
+special_key_cb(...)
+
+setWindowTitle(...)
+
+special_key_up_cb(...)
+
+setWindowPosition(...)
+
+resize_cb(...)
+
+setWindowShape(...)
+
+getWindowPosition()
+
+getWindowSize()
+
+getScreenSize()
+
+getWindowMode()
+
+getFrameNum()
+
+getFrameRate()
+
+setFrameRate(...)
+
+enableSetupScreen()
+
+disableSetupScreen()
+
+__variables__
+
 //----------------------
 
 ##serial##
@@ -104,6 +182,8 @@ __variables__
 ###ofSerial###
 
 __visible: true__
+
+__advanced: false__
 
 __methods__
 
@@ -153,6 +233,8 @@ oldoptions
 
 __visible: true__
 
+__advanced: false__
+
 __methods__
 
 ofStandardFirmata()
@@ -189,32 +271,6 @@ setUseDelay(...)
 
 isInitialized()
 
-sendDigitalPinMode(...)
-
-sendAnalogPinReporting(...)
-
-sendDigital(...)
-
-sendPwm(...)
-
-sendString(...)
-
-sendReset()
-
-sendByte(...)
-
-getPwm(...)
-
-getDigital(...)
-
-getAnalog(...)
-
-getString()
-
-getDigitalPinMode(...)
-
-getAnalogPinReporting(...)
-
 sendServo(...)
 
 setDigitalHistoryLength(...)
@@ -231,19 +287,41 @@ getServo(...)
 
 setSysExHistoryLength(...)
 
+sendDigitalPinMode(...)
+
+sendAnalogPinReporting(...)
+
+sendDigital(...)
+
+sendPwm(...)
+
 sendSysEx(...)
+
+sendString(...)
 
 sendProtocolVersionRequest()
 
 sendFirmwareVersionRequest()
 
+sendReset()
+
 sendSysExBegin()
 
 sendSysExEnd()
 
+sendByte(...)
+
 sendValueAsTwo7bitBytes(...)
 
+getPwm(...)
+
+getDigital(...)
+
+getAnalog(...)
+
 getSysEx()
+
+getString()
 
 getMajorProtocolVersion()
 
@@ -262,6 +340,10 @@ getAnalogHistory(...)
 getSysExHistory()
 
 getStringHistory()
+
+getDigitalPinMode(...)
+
+getAnalogPinReporting(...)
 
 getValueFromTwo7bitBytes(...)
 
@@ -347,8 +429,23 @@ _digitalPinReporting
 
 _analogPinReporting
 
+###ofStandardFirmata###
+
+__visible: true__
+
+__advanced: true__
+
+__methods__
+
+__variables__
+
+
+
 
 ___column___
+
+
+
 
 
 //----------------------
@@ -358,6 +455,8 @@ ___column___
 ###ofVideoGrabber###
 
 __visible: true__
+
+__advanced: false__
 
 __methods__
 
@@ -393,15 +492,15 @@ draw(...)
 
 update()
 
-getHeight()
-
-getWidth()
-
 setAnchorPercent(...)
 
 setAnchorPoint(...)
 
 resetAnchor()
+
+getHeight()
+
+getWidth()
 
 __variables__
 
@@ -430,6 +529,8 @@ ucGrabber
 ###ofVideoPlayer###
 
 __visible: true__
+
+__advanced: false__
 
 __methods__
 
@@ -493,6 +594,12 @@ draw(...)
 
 draw(...)
 
+setAnchorPercent(...)
+
+setAnchorPoint(...)
+
+resetAnchor()
+
 setPaused(...)
 
 getCurrentFrame()
@@ -508,12 +615,6 @@ previousFrame()
 getHeight()
 
 getWidth()
-
-setAnchorPercent(...)
-
-setAnchorPoint(...)
-
-resetAnchor()
 
 __variables__
 
@@ -571,6 +672,8 @@ seek_mutex
 
 __visible: true__
 
+__advanced: false__
+
 __methods__
 
 ofImage()
@@ -588,6 +691,8 @@ changeTypeOfPixels(...)
 clear()
 
 resizePixels(...)
+
+ofImage(...)
 
 getBmpFromPixels(...)
 
@@ -621,6 +726,12 @@ grabScreen(...)
 
 update()
 
+setAnchorPercent(...)
+
+setAnchorPoint(...)
+
+resetAnchor()
+
 draw(...)
 
 draw(...)
@@ -628,14 +739,6 @@ draw(...)
 getWidth()
 
 getHeight()
-
-ofImage(...)
-
-setAnchorPercent(...)
-
-setAnchorPoint(...)
-
-resetAnchor()
 
 __variables__
 
@@ -657,6 +760,8 @@ tex
 
 __visible: true__
 
+__advanced: false__
+
 __methods__
 
 ofTexture()
@@ -677,27 +782,27 @@ loadData(...)
 
 loadScreenData(...)
 
-draw(...)
-
-draw(...)
-
-bAllocated()
-
-getHeight()
-
-getWidth()
-
 setAnchorPercent(...)
 
 setAnchorPoint(...)
 
 resetAnchor()
 
+draw(...)
+
+draw(...)
+
 bind()
 
 unbind()
 
+bAllocated()
+
 getTextureData()
+
+getHeight()
+
+getWidth()
 
 __variables__
 
@@ -710,6 +815,8 @@ bAnchorIsPct
 ###ofTrueTypeFont###
 
 __visible: true__
+
+__advanced: false__
 
 __methods__
 
@@ -769,8 +876,36 @@ border
 
 visibleBorder
 
+###ofTTFContour###
+
+__visible: true__
+
+__advanced: true__
+
+__methods__
+
+__variables__
+
+pts
+
+###ofTTFCharacter###
+
+__visible: true__
+
+__advanced: true__
+
+__methods__
+
+__variables__
+
+contours
+
+
+
 
 ___column___
+
+
 
 
 
@@ -781,6 +916,8 @@ ___column___
 ###ofSoundPlayer###
 
 __visible: true__
+
+__advanced: false__
 
 __methods__
 
@@ -858,13 +995,41 @@ sound
 
 ##utils##
 
+###ofUtils###
+
+__visible: false__
+
+__advanced: false__
+
+__methods__
+
+__variables__
+
 //----------------------
 
 ##types##
 
+###ofBaseVideo###
+
+__visible: true__
+
+__advanced: true__
+
+__methods__
+
+~ofBaseVideo()
+
+getPixels()
+
+close()
+
+__variables__
+
 ###ofColor###
 
 __visible: true__
+
+__advanced: false__
 
 __methods__
 
@@ -882,9 +1047,21 @@ b
 
 a
 
+###ofTypes###
+
+__visible: false__
+
+__advanced: false__
+
+__methods__
+
+__variables__
+
 ###ofPoint###
 
 __visible: true__
+
+__advanced: false__
 
 __methods__
 
@@ -948,9 +1125,109 @@ z
 
 v
 
+###ofStyle###
+
+__visible: true__
+
+__advanced: true__
+
+__methods__
+
+ofStyle()
+
+~ofStyle()
+
+__variables__
+
+color
+
+polyMode
+
+rectMode
+
+bFill
+
+blending
+
+smoothing
+
+circleResolution
+
+lineWidth
+
+###ofBaseHasPixels###
+
+__visible: true__
+
+__advanced: true__
+
+__methods__
+
+~ofBaseHasPixels()
+
+getPixels()
+
+__variables__
+
+###ofBaseDraws###
+
+__visible: true__
+
+__advanced: true__
+
+__methods__
+
+~ofBaseDraws()
+
+draw(...)
+
+draw(...)
+
+getHeight()
+
+getWidth()
+
+setAnchorPercent(...)
+
+setAnchorPoint(...)
+
+resetAnchor()
+
+__variables__
+
+###ofBaseUpdates###
+
+__visible: true__
+
+__advanced: true__
+
+__methods__
+
+~ofBaseUpdates()
+
+update()
+
+__variables__
+
+###ofBaseHasTexture###
+
+__visible: true__
+
+__advanced: true__
+
+__methods__
+
+~ofBaseHasTexture()
+
+getTextureReference()
+
+__variables__
+
 ###ofRectangle###
 
 __visible: true__
+
+__advanced: false__
 
 __methods__
 
@@ -986,7 +1263,117 @@ height
 
 __visible: true__
 
+__advanced: true__
+
 __methods__
 
 __variables__
+
+###ofKeyEventArgs###
+
+__visible: true__
+
+__advanced: false__
+
+__methods__
+
+__variables__
+
+key
+
+###ofEventArgs###
+
+__visible: true__
+
+__advanced: false__
+
+__methods__
+
+__variables__
+
+###ofAudioEventArgs###
+
+__visible: true__
+
+__advanced: false__
+
+__methods__
+
+__variables__
+
+buffer
+
+bufferSize
+
+nChannels
+
+###ofMouseEventArgs###
+
+__visible: true__
+
+__advanced: false__
+
+__methods__
+
+__variables__
+
+x
+
+y
+
+button
+
+###ofCoreEvents###
+
+__visible: true__
+
+__advanced: false__
+
+__methods__
+
+disable()
+
+enable()
+
+__variables__
+
+setup
+
+update
+
+draw
+
+exit
+
+windowResized
+
+keyPressed
+
+keyReleased
+
+mouseMoved
+
+mouseDragged
+
+mousePressed
+
+mouseReleased
+
+audioReceived
+
+audioRequested
+
+###ofResizeEventArgs###
+
+__visible: true__
+
+__advanced: false__
+
+__methods__
+
+__variables__
+
+width
+
+height
 

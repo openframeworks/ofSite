@@ -40,6 +40,10 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -81,6 +85,10 @@ _version_started: 006_
 _version_deprecated: _
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -124,6 +132,10 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -165,6 +177,10 @@ _version_started: 006_
 _version_deprecated: _
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -208,6 +224,10 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -249,6 +269,10 @@ _version_started: 006_
 _version_deprecated: _
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -292,6 +316,10 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -334,9 +362,70 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###void ofImage(mom)
+
+_syntax: ofImage(mom)_
+
+_name: ofImage_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: const ofImage & mom_
+
+_access: public_
+
+_version_started: 0.06_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: true_
+
+_advanced: true_
+
+
+
+_description: _
+
+The copy constructor. Pass in another image and it copies it. 
+
+
+$$code(lang=c++)
+image1.loadImage("face.jpg");
+ofImage image2(image1);
+$$/code
+
+
+image1 and image2 are now identical. 
 
 
 
@@ -375,6 +464,10 @@ _version_started: 006_
 _version_deprecated: _
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -417,6 +510,10 @@ _version_started: 0.06_
 _version_deprecated: _
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -470,6 +567,10 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -511,6 +612,10 @@ _version_started: 0.06_
 _version_deprecated: _
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -564,6 +669,10 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -605,6 +714,10 @@ _version_started: 006_
 _version_deprecated: _
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -657,6 +770,10 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -703,6 +820,10 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -744,6 +865,10 @@ _version_started: 0.01_
 _version_deprecated: _
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -800,6 +925,10 @@ _version_started: 0.01_
 _version_deprecated: _
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -860,6 +989,10 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -901,6 +1034,10 @@ _version_started: 006_
 _version_deprecated: _
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -949,6 +1086,10 @@ _version_started: 006_
 _version_deprecated: _
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -1000,6 +1141,10 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -1041,6 +1186,10 @@ _version_started: 006_
 _version_deprecated: _
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -1086,237 +1235,16 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
 
 Updates the image from its internal pixels. Call this if you have changed the values of the pixels using getPixels().
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-###void draw(x, y, w, h)
-
-_syntax: draw(x, y, w, h)_
-
-_name: draw_
-
-_returns: void_
-
-_returns_description: _
-
-_parameters: float x, float y, float w, float h_
-
-_access: public_
-
-_version_started: 006_
-
-_version_deprecated: _
-
-_summary: _
-
-
-
-_description: _
-
-Draws the image (via the internal texture) from point (x,y) with a given width (w) and height (h).
-
-Note: x,y typically reefers to the top left corner of the image.  You can change where on the image the x,y point refers to by using setAnchorPoint() or setAnchorPercent(). 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-###void draw(x, y)
-
-_syntax: draw(x, y)_
-
-_name: draw_
-
-_returns: void_
-
-_returns_description: _
-
-_parameters: float x, float y_
-
-_access: public_
-
-_version_started: 006_
-
-_version_deprecated: _
-
-_summary: _
-
-
-
-_description: _
-
-Draws the image (via the internal texture) from point (x,y) with the image's own width and height.
-
-Note: x,y typically reefers to the top left corner of the image.  You can change where on the image the x,y point refers to by using setAnchorPoint() or setAnchorPercent(). 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-###float getWidth()
-
-_syntax: getWidth()_
-
-_name: getWidth_
-
-_returns: float_
-
-_returns_description: The width of the image as a float. If no image is loaded it returns 0.0._
-
-_parameters: _
-
-_access: public_
-
-_version_started: 0.06_
-
-_version_deprecated: _
-
-_summary: _
-
-
-
-_description: _
-
-Returns the width of the image.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-###float getHeight()
-
-_syntax: getHeight()_
-
-_name: getHeight_
-
-_returns: float_
-
-_returns_description: The height of the image as a float. If no image is loaded it returns 0.0._
-
-_parameters: _
-
-_access: public_
-
-_version_started: 0.06_
-
-_version_deprecated: _
-
-_summary: _
-
-
-
-_description: _
-
-Returns the height of the image.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-###void ofImage(mom)
-
-_syntax: ofImage(mom)_
-
-_name: ofImage_
-
-_returns: void_
-
-_returns_description: _
-
-_parameters: const ofImage & mom_
-
-_access: public_
-
-_version_started: 0.06_
-
-_version_deprecated: _
-
-_summary: _
-
-
-
-_description: _
-
-The copy constructor. Pass in another image and it copies it. 
-
-
-$$code(lang=c++)
-image1.loadImage("face.jpg");
-ofImage image2(image1);
-$$/code
-
-
-image1 and image2 are now identical. 
 
 
 
@@ -1355,6 +1283,10 @@ _version_started: 0.06_
 _version_deprecated: _
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -1428,6 +1360,10 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -1500,11 +1436,203 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
 
 Resets the image's anchor to its default position at the top left corner. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###void draw(x, y, w, h)
+
+_syntax: draw(x, y, w, h)_
+
+_name: draw_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: float x, float y, float w, float h_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: true_
+
+_advanced: true_
+
+
+
+_description: _
+
+Draws the image (via the internal texture) from point (x,y) with a given width (w) and height (h).
+
+Note: x,y typically reefers to the top left corner of the image.  You can change where on the image the x,y point refers to by using setAnchorPoint() or setAnchorPercent(). 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###void draw(x, y)
+
+_syntax: draw(x, y)_
+
+_name: draw_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: float x, float y_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: true_
+
+_advanced: true_
+
+
+
+_description: _
+
+Draws the image (via the internal texture) from point (x,y) with the image's own width and height.
+
+Note: x,y typically reefers to the top left corner of the image.  You can change where on the image the x,y point refers to by using setAnchorPoint() or setAnchorPercent(). 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###float getWidth()
+
+_syntax: getWidth()_
+
+_name: getWidth_
+
+_returns: float_
+
+_returns_description: The width of the image as a float. If no image is loaded it returns 0.0._
+
+_parameters: _
+
+_access: public_
+
+_version_started: 0.06_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: true_
+
+_advanced: true_
+
+
+
+_description: _
+
+Returns the width of the image.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###float getHeight()
+
+_syntax: getHeight()_
+
+_name: getHeight_
+
+_returns: float_
+
+_returns_description: The height of the image as a float. If no image is loaded it returns 0.0._
+
+_parameters: _
+
+_access: public_
+
+_version_started: 0.06_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: true_
+
+_advanced: true_
+
+
+
+_description: _
+
+Returns the height of the image.
 
 
 
@@ -1544,6 +1672,10 @@ _constant: 0_
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -1579,6 +1711,10 @@ _version_deprecated: _
 _constant: 0_
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -1616,6 +1752,10 @@ _constant: 0_
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -1651,6 +1791,10 @@ _version_deprecated: _
 _constant: 0_
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -1688,6 +1832,10 @@ _constant: 0_
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -1724,6 +1872,10 @@ _constant: 0_
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -1759,6 +1911,10 @@ _version_deprecated: _
 _constant: 0_
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 

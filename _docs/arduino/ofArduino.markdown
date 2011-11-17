@@ -40,6 +40,10 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -81,6 +85,10 @@ _version_started: 006_
 _version_deprecated: _
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -124,6 +132,10 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -165,6 +177,10 @@ _version_started: 006_
 _version_deprecated: _
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -208,6 +224,10 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -249,6 +269,10 @@ _version_started: 006_
 _version_deprecated: _
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -292,6 +316,10 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -333,6 +361,10 @@ _version_started: 006_
 _version_deprecated: _
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -376,6 +408,10 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -417,6 +453,10 @@ _version_started: 006_
 _version_deprecated: _
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -460,6 +500,10 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -501,6 +545,10 @@ _version_started: 006_
 _version_deprecated: _
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -544,6 +592,10 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -585,6 +637,10 @@ _version_started: 006_
 _version_deprecated: _
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -628,6 +684,10 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -669,6 +729,10 @@ _version_started: 006_
 _version_deprecated: _
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -712,551 +776,9 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
 
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-###void sendDigitalPinMode(pin, mode)
-
-_syntax: sendDigitalPinMode(pin, mode)_
-
-_name: sendDigitalPinMode_
-
-_returns: void_
-
-_returns_description: _
-
-_parameters: int pin, int mode_
-
-_access: public_
-
-_version_started: 006_
-
-_version_deprecated: _
-
-_summary: _
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-###void sendAnalogPinReporting(pin, mode)
-
-_syntax: sendAnalogPinReporting(pin, mode)_
-
-_name: sendAnalogPinReporting_
-
-_returns: void_
-
-_returns_description: _
-
-_parameters: int pin, int mode_
-
-_access: public_
-
-_version_started: 006_
-
-_version_deprecated: _
-
-_summary: _
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-###void sendDigital(pin, value, force)
-
-_syntax: sendDigital(pin, value, force)_
-
-_name: sendDigital_
-
-_returns: void_
-
-_returns_description: _
-
-_parameters: int pin, int value, bool force_
-
-_access: public_
-
-_version_started: 006_
-
-_version_deprecated: _
-
-_summary: _
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-###void sendPwm(pin, value, force)
-
-_syntax: sendPwm(pin, value, force)_
-
-_name: sendPwm_
-
-_returns: void_
-
-_returns_description: _
-
-_parameters: int pin, int value, bool force_
-
-_access: public_
-
-_version_started: 006_
-
-_version_deprecated: _
-
-_summary: _
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-###void sendString(str)
-
-_syntax: sendString(str)_
-
-_name: sendString_
-
-_returns: void_
-
-_returns_description: _
-
-_parameters: string str_
-
-_access: public_
-
-_version_started: 006_
-
-_version_deprecated: _
-
-_summary: _
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-###void sendReset()
-
-_syntax: sendReset()_
-
-_name: sendReset_
-
-_returns: void_
-
-_returns_description: _
-
-_parameters: _
-
-_access: public_
-
-_version_started: 006_
-
-_version_deprecated: _
-
-_summary: _
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-###void sendByte(byte)
-
-_syntax: sendByte(byte)_
-
-_name: sendByte_
-
-_returns: void_
-
-_returns_description: _
-
-_parameters: unsigned char byte_
-
-_access: public_
-
-_version_started: 006_
-
-_version_deprecated: _
-
-_summary: _
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-###int getPwm(pin)
-
-_syntax: getPwm(pin)_
-
-_name: getPwm_
-
-_returns: int_
-
-_returns_description: _
-
-_parameters: int pin_
-
-_access: public_
-
-_version_started: 006_
-
-_version_deprecated: _
-
-_summary: _
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-###int getDigital(pin)
-
-_syntax: getDigital(pin)_
-
-_name: getDigital_
-
-_returns: int_
-
-_returns_description: _
-
-_parameters: int pin_
-
-_access: public_
-
-_version_started: 006_
-
-_version_deprecated: _
-
-_summary: _
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-###int getAnalog(pin)
-
-_syntax: getAnalog(pin)_
-
-_name: getAnalog_
-
-_returns: int_
-
-_returns_description: _
-
-_parameters: int pin_
-
-_access: public_
-
-_version_started: 006_
-
-_version_deprecated: _
-
-_summary: _
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-###string getString()
-
-_syntax: getString()_
-
-_name: getString_
-
-_returns: string_
-
-_returns_description: _
-
-_parameters: _
-
-_access: public_
-
-_version_started: 006_
-
-_version_deprecated: _
-
-_summary: _
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-###int getDigitalPinMode(pin)
-
-_syntax: getDigitalPinMode(pin)_
-
-_name: getDigitalPinMode_
-
-_returns: int_
-
-_returns_description: _
-
-_parameters: int pin_
-
-_access: public_
-
-_version_started: 006_
-
-_version_deprecated: _
-
-_summary: _
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-###int getAnalogPinReporting(pin)
-
-_syntax: getAnalogPinReporting(pin)_
-
-_name: getAnalogPinReporting_
-
-_returns: int_
-
-_returns_description: _
-
-_parameters: int pin_
-
-_access: public_
-
-_version_started: 006_
-
-_version_deprecated: _
-
-_summary: _
+_advanced: true_
 
 
 
@@ -1300,6 +822,10 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -1341,6 +867,10 @@ _version_started: 006_
 _version_deprecated: _
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -1384,6 +914,10 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -1425,6 +959,10 @@ _version_started: 006_
 _version_deprecated: _
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -1468,6 +1006,10 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -1509,6 +1051,10 @@ _version_started: 006_
 _version_deprecated: _
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -1552,6 +1098,10 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -1593,6 +1143,194 @@ _version_started: 006_
 _version_deprecated: _
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###void sendDigitalPinMode(pin, mode)
+
+_syntax: sendDigitalPinMode(pin, mode)_
+
+_name: sendDigitalPinMode_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: int pin, int mode_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: true_
+
+_advanced: true_
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###void sendAnalogPinReporting(pin, mode)
+
+_syntax: sendAnalogPinReporting(pin, mode)_
+
+_name: sendAnalogPinReporting_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: int pin, int mode_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: true_
+
+_advanced: true_
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###void sendDigital(pin, value, force)
+
+_syntax: sendDigital(pin, value, force)_
+
+_name: sendDigital_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: int pin, int value, bool force_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: true_
+
+_advanced: true_
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###void sendPwm(pin, value, force)
+
+_syntax: sendPwm(pin, value, force)_
+
+_name: sendPwm_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: int pin, int value, bool force_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -1636,6 +1374,56 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###void sendString(str)
+
+_syntax: sendString(str)_
+
+_name: sendString_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: string str_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -1677,6 +1465,10 @@ _version_started: 006_
 _version_deprecated: _
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -1720,6 +1512,56 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###void sendReset()
+
+_syntax: sendReset()_
+
+_name: sendReset_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -1761,6 +1603,10 @@ _version_started: 006_
 _version_deprecated: _
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -1804,6 +1650,56 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###void sendByte(byte)
+
+_syntax: sendByte(byte)_
+
+_name: sendByte_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: unsigned char byte_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -1845,6 +1741,148 @@ _version_started: 006_
 _version_deprecated: _
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###int getPwm(pin)
+
+_syntax: getPwm(pin)_
+
+_name: getPwm_
+
+_returns: int_
+
+_returns_description: _
+
+_parameters: int pin_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: true_
+
+_advanced: true_
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###int getDigital(pin)
+
+_syntax: getDigital(pin)_
+
+_name: getDigital_
+
+_returns: int_
+
+_returns_description: _
+
+_parameters: int pin_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: true_
+
+_advanced: true_
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###int getAnalog(pin)
+
+_syntax: getAnalog(pin)_
+
+_name: getAnalog_
+
+_returns: int_
+
+_returns_description: _
+
+_parameters: int pin_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -1888,6 +1926,56 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###string getString()
+
+_syntax: getString()_
+
+_name: getString_
+
+_returns: string_
+
+_returns_description: _
+
+_parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -1929,6 +2017,10 @@ _version_started: 006_
 _version_deprecated: _
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -1972,6 +2064,10 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -2013,6 +2109,10 @@ _version_started: 006_
 _version_deprecated: _
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -2056,6 +2156,10 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -2097,6 +2201,10 @@ _version_started: 006_
 _version_deprecated: _
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -2140,6 +2248,10 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -2181,6 +2293,10 @@ _version_started: 006_
 _version_deprecated: _
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -2224,6 +2340,10 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -2266,6 +2386,102 @@ _version_deprecated: _
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###int getDigitalPinMode(pin)
+
+_syntax: getDigitalPinMode(pin)_
+
+_name: getDigitalPinMode_
+
+_returns: int_
+
+_returns_description: _
+
+_parameters: int pin_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: true_
+
+_advanced: true_
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###int getAnalogPinReporting(pin)
+
+_syntax: getAnalogPinReporting(pin)_
+
+_name: getAnalogPinReporting_
+
+_returns: int_
+
+_returns_description: _
+
+_parameters: int pin_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -2307,6 +2523,10 @@ _version_started: 006_
 _version_deprecated: _
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -2352,6 +2572,10 @@ _constant: 0_
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -2387,6 +2611,10 @@ _version_deprecated: _
 _constant: 0_
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -2424,6 +2652,10 @@ _constant: 0_
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -2459,6 +2691,10 @@ _version_deprecated: _
 _constant: 0_
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -2496,6 +2732,10 @@ _constant: 0_
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -2531,6 +2771,10 @@ _version_deprecated: _
 _constant: 0_
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -2568,6 +2812,10 @@ _constant: 0_
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -2603,6 +2851,10 @@ _version_deprecated: _
 _constant: 0_
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -2640,6 +2892,10 @@ _constant: 0_
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -2675,6 +2931,10 @@ _version_deprecated: _
 _constant: 0_
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -2712,6 +2972,10 @@ _constant: 0_
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -2747,6 +3011,10 @@ _version_deprecated: _
 _constant: 0_
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -2784,6 +3052,10 @@ _constant: 0_
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -2819,6 +3091,10 @@ _version_deprecated: _
 _constant: 0_
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -2856,6 +3132,10 @@ _constant: 0_
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -2891,6 +3171,10 @@ _version_deprecated: _
 _constant: 0_
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -2928,6 +3212,10 @@ _constant: 0_
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -2963,6 +3251,10 @@ _version_deprecated: _
 _constant: 0_
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -3000,6 +3292,10 @@ _constant: 0_
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -3035,6 +3331,10 @@ _version_deprecated: _
 _constant: 0_
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -3072,6 +3372,10 @@ _constant: 0_
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -3107,6 +3411,10 @@ _version_deprecated: _
 _constant: 0_
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -3144,6 +3452,10 @@ _constant: 0_
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -3179,6 +3491,10 @@ _version_deprecated: _
 _constant: 0_
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -3216,6 +3532,10 @@ _constant: 0_
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -3251,6 +3571,10 @@ _version_deprecated: _
 _constant: 0_
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -3288,6 +3612,10 @@ _constant: 0_
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -3323,6 +3651,10 @@ _version_deprecated: _
 _constant: 0_
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -3360,6 +3692,10 @@ _constant: 0_
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -3395,6 +3731,10 @@ _version_deprecated: _
 _constant: 0_
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -3432,6 +3772,10 @@ _constant: 0_
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -3467,6 +3811,10 @@ _version_deprecated: _
 _constant: 0_
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -3504,6 +3852,10 @@ _constant: 0_
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -3539,6 +3891,10 @@ _version_deprecated: _
 _constant: 0_
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -3576,6 +3932,10 @@ _constant: 0_
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -3611,6 +3971,10 @@ _version_deprecated: _
 _constant: 0_
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -3648,6 +4012,10 @@ _constant: 0_
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -3683,6 +4051,10 @@ _version_deprecated: _
 _constant: 0_
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 
@@ -3720,6 +4092,10 @@ _constant: 0_
 
 _summary: _
 
+_visible: true_
+
+_advanced: true_
+
 
 
 _description: _
@@ -3755,6 +4131,10 @@ _version_deprecated: _
 _constant: 0_
 
 _summary: _
+
+_visible: true_
+
+_advanced: true_
 
 
 

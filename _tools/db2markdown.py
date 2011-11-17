@@ -18,6 +18,7 @@ adv_groups = docs_group.list_all(db,'core',True)
 def export_vars(db,clazz_file,clazz):
     variables = docs_members.list_all_vars(db,clazz.id)
     for var in variables:
+        #if var.visible and not var.advanced
         index.write(var.name+'\n\n')
         clazz_file.write("//----------------------\n\n")
         clazz_file.write( "###" + var.type + " " + var.name + "\n\n")
@@ -28,6 +29,8 @@ def export_vars(db,clazz_file,clazz):
         clazz_file.write( '_version_deprecated: ' + var.version_deprecated + '_\n\n')
         clazz_file.write( '_constant: ' + var.constant + '_\n\n')
         clazz_file.write( '_summary: _\n\n' )
+        clazz_file.write( '_visible: ' + ('true' if var.visible else 'false') + '_\n\n' )
+        clazz_file.write( '_advanced: ' + ('true' if var.advanced else 'false') + '_\n\n' )
         clazz_file.write( '\n\n_description: _\n\n' )
         if(var.description is not None):
             clazz_file.write( var.description.replace('[code]','\n$$code(lang=c++)\n').replace('[/code]','\n$$/code\n') + "\n\n")
@@ -35,9 +38,10 @@ def export_vars(db,clazz_file,clazz):
         clazz_file.write("\n\n\n\n\n\n\n\n\n\n\n\n")
         
         
-def export_methods(db,clazz_file,clazz,advanced):
-    methods = docs_members.list_all_methods(db,clazz.id,advanced)
+def export_methods(db,clazz_file,clazz):
+    methods = docs_members.list_all_methods(db,clazz.id)
     for method in methods:
+        #if method.visible and not method.advanced
         if len(method.parameters.replace(' ',''))>0:
             index.write(method.name+'(...)\n\n')
         else:
@@ -53,20 +57,23 @@ def export_methods(db,clazz_file,clazz,advanced):
         clazz_file.write( '_version_started: ' + method.version_started + '_\n\n')
         clazz_file.write( '_version_deprecated: ' + method.version_deprecated + '_\n\n')
         clazz_file.write( '_summary: _\n\n' )
+        clazz_file.write( '_visible: ' + ('true' if method.visible else 'false') + '_\n\n' )
+        clazz_file.write( '_advanced: ' + ('true' if method.advanced else 'false') + '_\n\n' )
         clazz_file.write( '\n\n_description: _\n\n' )
         if(method.description is not None):
             clazz_file.write( method.description.replace('[code]','\n$$code(lang=c++)\n').replace('[/code]','\n$$/code\n') + "\n\n")
         #clazz_file.write("_end " + method.name + "_\n\n")
         clazz_file.write("\n\n\n\n\n\n\n\n\n\n\n\n")
 
-def export_classes(db,group_dir,group,advanced):
-    classes = docs_files.list_all_classes(db,group.id,advanced)
+def export_classes(db,group_dir,group):
+    classes = docs_files.list_all_classes(db,group.id)
     for clazz in classes:
         print str(clazz.id) + " " + clazz.name + " " + str(clazz.new)
         clazz_file = open(group_dir+"/"+clazz.name+".markdown",'w')
 		
         index.write('###' + clazz.name + '###\n\n')
-        index.write('__visible: true__\n\n')            
+        index.write('__visible: ' + ('true' if clazz.visible else 'false' ) + '__\n\n')            
+        index.write('__advanced: ' + ('true' if clazz.advanced else 'false' ) + '__\n\n')            
         index.write('__methods__\n\n')
 	
         #clazz_file.write( '<%inherit file="_templates/docs.mako" />\n' )
@@ -80,8 +87,7 @@ def export_classes(db,group_dir,group,advanced):
         clazz_file.write("//----------------------\n\n")
         clazz_file.write( "##Methods\n\n\n\n" )
         
-        export_methods(db,clazz_file,clazz,False)
-        export_methods(db,clazz_file,clazz,True)
+        export_methods(db,clazz_file,clazz)
         
                  
         index.write('__variables__\n\n')
@@ -102,8 +108,7 @@ def export_groups(db,advanced):
             os.mkdir(group_dir)
         except:
             pass
-        export_classes(db,group_dir,group,False)
-        export_classes(db,group_dir,group,True)
+        export_classes(db,group_dir,group)
         
 
 

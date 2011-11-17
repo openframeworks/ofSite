@@ -1,4 +1,4 @@
-#class ofRectangle
+#class ofBaseDraws
 
 //----------------------
 
@@ -20,11 +20,11 @@
 
 //----------------------
 
-###void ofRectangle()
+###void ~ofBaseDraws()
 
-_syntax: ofRectangle()_
+_syntax: ~ofBaseDraws()_
 
-_name: ofRectangle_
+_name: ~ofBaseDraws_
 
 _returns: void_
 
@@ -66,17 +66,17 @@ _description: _
 
 //----------------------
 
-###void ofRectangle(_x, _y, _w, _h)
+###void draw(x, y)
 
-_syntax: ofRectangle(_x, _y, _w, _h)_
+_syntax: draw(x, y)_
 
-_name: ofRectangle_
+_name: draw_
 
 _returns: void_
 
 _returns_description: _
 
-_parameters: float _x, float _y, float _w, float _h_
+_parameters: float x, float y_
 
 _access: public_
 
@@ -112,11 +112,241 @@ _description: _
 
 //----------------------
 
-###void ~ofRectangle()
+###void draw(x, y, w, h)
 
-_syntax: ~ofRectangle()_
+_syntax: draw(x, y, w, h)_
 
-_name: ~ofRectangle_
+_name: draw_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: float x, float y, float w, float h_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: true_
+
+_advanced: true_
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###float getHeight()
+
+_syntax: getHeight()_
+
+_name: getHeight_
+
+_returns: float_
+
+_returns_description: _
+
+_parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: true_
+
+_advanced: true_
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###float getWidth()
+
+_syntax: getWidth()_
+
+_name: getWidth_
+
+_returns: float_
+
+_returns_description: _
+
+_parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: true_
+
+_advanced: true_
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###void setAnchorPercent(xPct, yPct)
+
+_syntax: setAnchorPercent(xPct, yPct)_
+
+_name: setAnchorPercent_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: float xPct, float yPct_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: true_
+
+_advanced: true_
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###void setAnchorPoint(x, y)
+
+_syntax: setAnchorPoint(x, y)_
+
+_name: setAnchorPoint_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: int x, int y_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: true_
+
+_advanced: true_
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###void resetAnchor()
+
+_syntax: resetAnchor()_
+
+_name: resetAnchor_
 
 _returns: void_
 
@@ -159,166 +389,6 @@ _description: _
 //----------------------
 
 ##Variables
-
-
-
-//----------------------
-
-###float x
-
-_name: x_
-
-_type: float_
-
-_access: public_
-
-_version_started: 006_
-
-_version_deprecated: _
-
-_constant: 0_
-
-_summary: _
-
-_visible: true_
-
-_advanced: true_
-
-
-
-_description: _
-
-x variable contains the x coordinate of our ofRectangle.
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-###float y
-
-_name: y_
-
-_type: float_
-
-_access: public_
-
-_version_started: 006_
-
-_version_deprecated: _
-
-_constant: 0_
-
-_summary: _
-
-_visible: true_
-
-_advanced: true_
-
-
-
-_description: _
-
-y variable contains the y coordinate of our ofRectangle.
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-###float width
-
-_name: width_
-
-_type: float_
-
-_access: public_
-
-_version_started: 006_
-
-_version_deprecated: _
-
-_constant: 0_
-
-_summary: _
-
-_visible: true_
-
-_advanced: true_
-
-
-
-_description: _
-
-width variable contains the width of our ofRectangle.
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-###float height
-
-_name: height_
-
-_type: float_
-
-_access: public_
-
-_version_started: 006_
-
-_version_deprecated: _
-
-_constant: 0_
-
-_summary: _
-
-_visible: true_
-
-_advanced: true_
-
-
-
-_description: _
-
-height variable contains the height of our ofRectangle.
-
-
-
-
-
-
-
-
-
-
 
 
 

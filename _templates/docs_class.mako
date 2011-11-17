@@ -13,9 +13,23 @@
         <div class="page-left-wide">
           <div id="main_block">
             <div id="prose_block">
-              ${clazz}
+              <h2>${class_name}</h2>
+              <p>
+              ${class_description}
+              </p>
+              
+              <h3>${class_name} functions</h3>
               % for method in methods:
-                    <%include file="docs_method.mako" args="method=method" />    
+                    % if method.visible and not method.advanced:
+                        <%include file="docs_method.mako" args="method=method" />    
+                    % endif
+              % endfor
+              
+              <h3>${class_name} variables</h3>
+              % for var in variables:
+                    % if var.visible and not var.advanced:
+                        <%include file="docs_var.mako" args="var=var" />    
+                    % endif
               % endfor
             </div><!-- End Prose Block -->
           </div><!-- End Main Block -->
