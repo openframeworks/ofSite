@@ -347,6 +347,10 @@ _digitalPinReporting
 
 _analogPinReporting
 
+
+___column___
+
+
 //----------------------
 
 ##video##
@@ -764,6 +768,11 @@ bMakeContours
 border
 
 visibleBorder
+
+
+___column___
+
+
 
 //----------------------
 

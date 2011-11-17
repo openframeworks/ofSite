@@ -271,14 +271,18 @@ def run():
     # process index file
     indexhtml_file = open("_docs/" + "index.markdown",'r')
     indexhtml = indexhtml_file.read()
-    blocks_src = indexhtml.split('//----------------------')
-    blocks = []
-    for block in blocks_src:
-        b = Block(block)
-        if b.name is not None and b.name != "":
-            blocks.append(b)
+    columns = []
+    columns_src = indexhtml.split('___column___')
+    for column in columns_src:    
+        blocks_src = column.split('//----------------------')
+        blocks = []
+        for block in blocks_src:
+            b = Block(block)
+            if b.name is not None and b.name != "":
+                blocks.append(b)
+        columns.append(blocks)
         
-    bf.writer.materialize_template("docs.mako", ('docs',"index.html"), {'blocks':blocks} )
+    bf.writer.materialize_template("docs.mako", ('docs',"index.html"), {'columns':columns} )
     #html = open(docs.dir + "/" + class_fn + ".html",'w')
     #html.write(p.content)
     #html.close()
