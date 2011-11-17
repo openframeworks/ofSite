@@ -24,6 +24,15 @@ class MethodParseException(Exception):
 
     def __str__(self):
         return repr(self.value)
+
+class VarParseException(Exception):
+
+    def __init__(self, value):
+        self.value = value
+
+    def __str__(self):
+        return repr(self.value)     
+        
         
         
 class Block(object):
@@ -44,9 +53,8 @@ class Block(object):
         if mode=='module' and element[:2]=='##':
             self.name = element[2:-2]
             self.mode = 'clazz'
-        elif mode=='clazz' and element is not None and element != "" and element.find('--')==-1 and element.find('###')!=-1:
+        elif mode=='clazz' and element is not None and element != "" and element.find('__')==-1 and element.find('###')!=-1:
             self.classes.append({'name':element[3:-3]})
-            print element[3:-3]
         elif mode=='clazz' and element.find('__visible:')!=-1:
             if element.find('false')!=-1:
                 self.classes[-1]['visible'] = False
@@ -55,13 +63,16 @@ class Block(object):
         elif mode=='clazz' and element.find('__methods__')!=-1:
             self.mode='methods'
             self.classes[-1]['methods']=[]
-        elif mode=='methods' and element is not None and element != "" and element.find('--')==-1 and element.find('##')==-1:
+        elif mode=='methods' and element is not None and element != "" and element.find('__')==-1 and element.find('##')==-1:
             self.classes[-1]['methods'].append(element)
-            print element
-        elif mode=='methods' and element.find('##')!=-1:
+        elif mode=='methods' and element.find('__variables__')!=-1:
+            self.mode='variables'
+            self.classes[-1]['variables']=[]
+        elif mode=='variables' and element is not None and element != "" and element.find('__')==-1 and element.find('##')==-1:
+            self.classes[-1]['variables'].append(element)
+        elif (mode=='methods' or mode=='variables') and element.find('##')!=-1:
             self.mode = 'clazz'
             self.__parse_element(element)
-            self.ignore_current = False
 
 class Method(object):
     """
@@ -70,11 +81,13 @@ class Method(object):
     def __init__(self, source, clazz="Untitled", filters = []):
         self.source = source
         self.name = None
+        self.access = None
         self.parameters = None
         self.syntax = None
         self.syntax_resume = None
         self.returns = None
         self.returns_description = None
+        self.summary = None
         self.description = None
         self.content = None
         self.filters = filters
@@ -96,10 +109,12 @@ class Method(object):
         
         try:
             self.name = metadata['_name'][:-1]
+            self.access = metadata['_access'][:-1]
             self.parameters = metadata['_parameters'][:-1]
             self.syntax = metadata['_syntax'][:-1]
             self.returns = metadata['_returns'][:-1]
             self.returns_description = metadata['_returns_description'][:-1]
+            self.summary = metadata['_summary'][:-1]
             
             if(len(self.parameters.split(','))>0):
                 self.syntax_resume = self.name + '(...)'
@@ -110,7 +125,45 @@ class Method(object):
         except:
             raise MethodParseException( 'error parsing method from ' + str(self.source) )
         
-
+class Variable(object):
+    """
+    Class to describe a documents class method and associated metadata
+    """
+    def __init__(self, source, clazz="Untitled", filters = []):
+        self.source = source
+        self.name = None
+        self.type = None
+        self.access = None
+        self.summary = None
+        self.description = None
+        self.content = None
+        self.filters = filters
+        self.clazz = clazz
+        self.__parse()
+        
+    def __parse(self):        
+        src_list = self.source.split('\n')
+        metadata = dict()
+        description = self.source[self.source.rfind('_description: _')+len('_description _')+1:]
+        for src in src_list:
+           element = src.split(': ')
+           if(len(element)<2):
+                continue
+           element_value = ""
+           for e in element[1:]:       
+               element_value = element_value + e
+           metadata[element[0]] = element_value
+        
+        try:
+            self.name = metadata['_name'][:-1]
+            self.type = metadata['_type'][:-1]
+            self.access = metadata['_access'][:-1]
+            self.summary = metadata['_summary'][:-1]                
+            self.description = bf.filter.run_chain(self.filters, description)
+        except:
+            raise VarParseException( 'error parsing method from ' + str(self.source) )
+            
+            
 class Clazz(object):
     """
     Class to describe a documents class and associated metadata
@@ -120,7 +173,7 @@ class Clazz(object):
         self.name = None
         self.description = None
         self.methods = []
-        self.vars = None
+        self.vars = []
         self.content = None
         self.filters = None
         self.folder = folder
@@ -137,25 +190,36 @@ class Clazz(object):
                 self.filters = []
         methods_content = self.source.split('//----------------------')
         
-        clazz_description = methods_content[0]
+        if(len(methods_content)<3):
+            raise ClassParseException( 'error parsing class from \n' + self.filename + '\n' + self.source )
+              
+        clazz_description = methods_content[1] + methods_content[2] + methods_content[3]
         self.description = bf.filter.run_chain(self.filters, clazz_description)
         
-        clazz_metadata = clazz_description.split('\n')
-        title = clazz_metadata[0].split(' ')
+        #clazz_metadata = clazz_description.split('\n')
+        title = methods_content[0].split(' ')
         
         if(len(title)!=2):
-            raise ClassParseException( 'error parsing class name from ' + clazz_metadata[0] )      
+            raise ClassParseException( 'error parsing class name from ' + methods_content[0] )      
             
-        self.name = title[1] 
+        self.name = title[1].split('\n')[0] 
         
-        methods_content = methods_content[1:]
+        print self.name
+        
+        methods_content = methods_content[4:]
         
         for method_content in methods_content:
+            if method_content.replace('\n','')[:len('##Variables')]=='##Variables':
+                continue
             try:
                 p = Method(method_content, clazz=self.name, filters=self.filters)
                 self.methods.append(p)
             except MethodParseException as e:
-                logger.warning(u"{0} : Skipping this method.".format(e.value))
+                try:
+                    v = Variable(method_content, clazz=self.name, filters=self.filters)
+                    self.vars.append(v)
+                except VarParseException as e:
+                    logger.warning(u"{0} : Skipping this element, coudln't parse as method or var.".format(e.value))
                 continue
         #self.content = bf.filter.run_chain(self.filters, self.source)
         

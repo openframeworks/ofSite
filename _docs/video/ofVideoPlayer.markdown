@@ -1,20 +1,26 @@
 #class ofVideoPlayer
 
-Example
+//----------------------
 
-
-
-Reference
-
-
-
-Methods
+##Example
 
 
 
 //----------------------
 
-##void ofVideoPlayer()
+##Reference
+
+
+
+//----------------------
+
+##Methods
+
+
+
+//----------------------
+
+###void ofVideoPlayer()
 
 _syntax: ofVideoPlayer()_
 
@@ -25,6 +31,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -48,7 +62,7 @@ _description: _
 
 //----------------------
 
-##void start()
+###void start()
 
 _syntax: start()_
 
@@ -59,6 +73,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: _
+
+_access: protected_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -82,7 +104,7 @@ Starts the movie, checking for whether the movie has been both loaded and if it 
 
 //----------------------
 
-##void ~ofVideoPlayer()
+###void ~ofVideoPlayer()
 
 _syntax: ~ofVideoPlayer()_
 
@@ -94,6 +116,14 @@ _returns_description: _
 
 _parameters: _
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -116,7 +146,7 @@ _description: _
 
 //----------------------
 
-##void createImgMemAndGWorld()
+###void createImgMemAndGWorld()
 
 _syntax: createImgMemAndGWorld()_
 
@@ -128,6 +158,14 @@ _returns_description: _
 
 _parameters: _
 
+_access: protected_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -150,7 +188,7 @@ _description: _
 
 //----------------------
 
-##bool loadMovie(name)
+###bool loadMovie(name)
 
 _syntax: loadMovie(name)_
 
@@ -161,6 +199,14 @@ _returns: bool_
 _returns_description: Returns true if the video is loaded successfully and false if not_
 
 _parameters: string name_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -192,7 +238,7 @@ $$/code
 
 //----------------------
 
-##void seek_lock()
+###void seek_lock()
 
 _syntax: seek_lock()_
 
@@ -203,6 +249,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: _
+
+_access: protected_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -226,7 +280,7 @@ _description: _
 
 //----------------------
 
-##void closeMovie()
+###void closeMovie()
 
 _syntax: closeMovie()_
 
@@ -237,6 +291,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -270,7 +332,7 @@ $$/code
 
 //----------------------
 
-##void seek_unlock()
+###void seek_unlock()
 
 _syntax: seek_unlock()_
 
@@ -281,6 +343,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: _
+
+_access: protected_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -304,7 +374,7 @@ _description: _
 
 //----------------------
 
-##void close()
+###void close()
 
 _syntax: close()_
 
@@ -315,6 +385,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -338,7 +416,7 @@ Calls the closeMovie() function, which closes the movie file and de-allocates re
 
 //----------------------
 
-##void gstHandleMessage()
+###void gstHandleMessage()
 
 _syntax: gstHandleMessage()_
 
@@ -349,6 +427,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: _
+
+_access: protected_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -372,7 +458,7 @@ _description: _
 
 //----------------------
 
-##void update()
+###void update()
 
 _syntax: update()_
 
@@ -383,6 +469,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -406,7 +500,7 @@ Calls the idleMovie() function. This function idles the movie player, so that th
 
 //----------------------
 
-##bool allocate()
+###bool allocate()
 
 _syntax: allocate()_
 
@@ -417,6 +511,14 @@ _returns: bool_
 _returns_description: _
 
 _parameters: _
+
+_access: protected_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -440,7 +542,7 @@ _description: _
 
 //----------------------
 
-##void idleMovie()
+###void idleMovie()
 
 _syntax: idleMovie()_
 
@@ -451,6 +553,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -474,7 +584,7 @@ This function idles the movie player, so that the movie can play. If you don't c
 
 //----------------------
 
-##void play()
+###void play()
 
 _syntax: play()_
 
@@ -485,6 +595,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -508,7 +626,7 @@ Plays the movie. If the movie has been stopped or paused it will the continue pl
 
 //----------------------
 
-##void stop()
+###void stop()
 
 _syntax: stop()_
 
@@ -519,6 +637,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -542,7 +668,7 @@ Stops the movie.
 
 //----------------------
 
-##bool isFrameNew()
+###bool isFrameNew()
 
 _syntax: isFrameNew()_
 
@@ -553,6 +679,14 @@ _returns: bool_
 _returns_description: Returns true if the frame of pixels is "new"._
 
 _parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -585,7 +719,7 @@ $$/code
 
 //----------------------
 
-##unsigned char * getPixels()
+###unsigned char * getPixels()
 
 _syntax: getPixels()_
 
@@ -596,6 +730,14 @@ _returns: unsigned char *_
 _returns_description: Returns a pointer to the array of pixels that are RGB (width*height*3)._
 
 _parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -625,7 +767,7 @@ int blue 	= pixels[(20 * widthOfLine) + 100 * 3 + 2];
 
 //----------------------
 
-##float getPosition()
+###float getPosition()
 
 _syntax: getPosition()_
 
@@ -636,6 +778,14 @@ _returns: float_
 _returns_description: Returns the current playhead position, between 0 (start of movie) and 1 (end of movie). _
 
 _parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -659,7 +809,7 @@ _description: _
 
 //----------------------
 
-##float getSpeed()
+###float getSpeed()
 
 _syntax: getSpeed()_
 
@@ -670,6 +820,14 @@ _returns: float_
 _returns_description: Returns the current speed of the movie._
 
 _parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -693,7 +851,7 @@ note: 1 = normal speed, 0 = paused, -1 = backwards.
 
 //----------------------
 
-##float getDuration()
+###float getDuration()
 
 _syntax: getDuration()_
 
@@ -705,6 +863,14 @@ _returns_description: Returns the duration, in seconds, of the movie. _
 
 _parameters: _
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -727,7 +893,7 @@ _description: _
 
 //----------------------
 
-##bool getIsMovieDone()
+###bool getIsMovieDone()
 
 _syntax: getIsMovieDone()_
 
@@ -739,6 +905,14 @@ _returns_description: Returns a boolean with the current status of the movie (re
 
 _parameters: _
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -761,7 +935,7 @@ _description: _
 
 //----------------------
 
-##void setPosition(pct)
+###void setPosition(pct)
 
 _syntax: setPosition(pct)_
 
@@ -772,6 +946,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: float pct_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -795,7 +977,7 @@ Sets the position of the playhead to a given percentage through the movie. Can b
 
 //----------------------
 
-##void setVolume(volume)
+###void setVolume(volume)
 
 _syntax: setVolume(volume)_
 
@@ -806,6 +988,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: int volume_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -829,7 +1019,7 @@ Sets the volume of a movie - default = 0, silent
 
 //----------------------
 
-##void setLoopState(state)
+###void setLoopState(state)
 
 _syntax: setLoopState(state)_
 
@@ -840,6 +1030,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: int state_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -872,7 +1070,7 @@ $$/code
 
 //----------------------
 
-##void setSpeed(speed)
+###void setSpeed(speed)
 
 _syntax: setSpeed(speed)_
 
@@ -883,6 +1081,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: float speed_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -906,7 +1112,7 @@ Sets the speed of the movie that is playing. 1 = normal, 2 = 2x as fast, 0 = sto
 
 //----------------------
 
-##void setFrame(frame)
+###void setFrame(frame)
 
 _syntax: setFrame(frame)_
 
@@ -917,6 +1123,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: int frame_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -940,7 +1154,7 @@ Sets the current frame of the video. Should be used only if you know the bounds 
 
 //----------------------
 
-##void setUseTexture(bUse)
+###void setUseTexture(bUse)
 
 _syntax: setUseTexture(bUse)_
 
@@ -951,6 +1165,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: bool bUse_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -982,7 +1204,7 @@ $$/code
 
 //----------------------
 
-##ofTexture & getTextureReference()
+###ofTexture & getTextureReference()
 
 _syntax: getTextureReference()_
 
@@ -993,6 +1215,14 @@ _returns: ofTexture &_
 _returns_description: _
 
 _parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -1016,7 +1246,7 @@ Returns a reference to the videoPlayer's texture.
 
 //----------------------
 
-##void draw(x, y, w, h)
+###void draw(x, y, w, h)
 
 _syntax: draw(x, y, w, h)_
 
@@ -1027,6 +1257,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: float x, float y, float w, float h_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -1050,7 +1288,7 @@ Draws the texture of the movie player class at the position (x,y) with the given
 
 //----------------------
 
-##void draw(x, y)
+###void draw(x, y)
 
 _syntax: draw(x, y)_
 
@@ -1061,6 +1299,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: float x, float y_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -1084,7 +1330,7 @@ Draws the texture of the movie player class as the position (x,y) with the inter
 
 //----------------------
 
-##void setPaused(bPause)
+###void setPaused(bPause)
 
 _syntax: setPaused(bPause)_
 
@@ -1095,6 +1341,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: bool bPause_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -1118,7 +1372,7 @@ Sets the paused state of the movie. Use "true" to pause and false to unpause.
 
 //----------------------
 
-##int getCurrentFrame()
+###int getCurrentFrame()
 
 _syntax: getCurrentFrame()_
 
@@ -1130,6 +1384,14 @@ _returns_description: Returns the current frame of the video._
 
 _parameters: _
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -1152,7 +1414,7 @@ _description: _
 
 //----------------------
 
-##int getTotalNumFrames()
+###int getTotalNumFrames()
 
 _syntax: getTotalNumFrames()_
 
@@ -1164,6 +1426,14 @@ _returns_description: Returns the total number of frames for the loaded movie._
 
 _parameters: _
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -1186,7 +1456,7 @@ _description: _
 
 //----------------------
 
-##void firstFrame()
+###void firstFrame()
 
 _syntax: firstFrame()_
 
@@ -1197,6 +1467,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -1220,7 +1498,7 @@ Moves the playhead to the first frame of the movie. This can also be accomplishe
 
 //----------------------
 
-##void nextFrame()
+###void nextFrame()
 
 _syntax: nextFrame()_
 
@@ -1231,6 +1509,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -1254,7 +1540,7 @@ Advances the playhead by one frame.
 
 //----------------------
 
-##void previousFrame()
+###void previousFrame()
 
 _syntax: previousFrame()_
 
@@ -1265,6 +1551,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -1288,7 +1582,7 @@ Reverses the playhead by one frame.
 
 //----------------------
 
-##float getHeight()
+###float getHeight()
 
 _syntax: getHeight()_
 
@@ -1300,6 +1594,14 @@ _returns_description: Returns the height of the loaded movie._
 
 _parameters: _
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -1322,7 +1624,7 @@ _description: _
 
 //----------------------
 
-##float getWidth()
+###float getWidth()
 
 _syntax: getWidth()_
 
@@ -1334,6 +1636,14 @@ _returns_description: Returns the width of the loaded movie._
 
 _parameters: _
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -1356,7 +1666,7 @@ _description: _
 
 //----------------------
 
-##void setAnchorPercent(xPct, yPct)
+###void setAnchorPercent(xPct, yPct)
 
 _syntax: setAnchorPercent(xPct, yPct)_
 
@@ -1368,6 +1678,14 @@ _returns_description: _
 
 _parameters: float xPct, float yPct_
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -1390,7 +1708,7 @@ _description: _
 
 //----------------------
 
-##void setAnchorPoint(x, y)
+###void setAnchorPoint(x, y)
 
 _syntax: setAnchorPoint(x, y)_
 
@@ -1402,6 +1720,14 @@ _returns_description: _
 
 _parameters: int x, int y_
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -1424,7 +1750,7 @@ _description: _
 
 //----------------------
 
-##void resetAnchor()
+###void resetAnchor()
 
 _syntax: resetAnchor()_
 
@@ -1436,11 +1762,853 @@ _returns_description: _
 
 _parameters: _
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+##Variables
+
+
+
+//----------------------
+
+###int width
+
+_name: width_
+
+_type: int_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+Variable containing the width of the video.
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###bool bStarted
+
+_name: bStarted_
+
+_type: bool_
+
+_access: protected_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###int height
+
+_name: height_
+
+_type: int_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+Variable containing the height of the video.
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###bool bPlaying
+
+_name: bPlaying_
+
+_type: bool_
+
+_access: protected_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###float speed
+
+_name: speed_
+
+_type: float_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+Contains the playback speed of the video. 1.0 is the normal speed. 2.0 is double the normal speed, -1 is backwards etc. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###bool bPaused
+
+_name: bPaused_
+
+_type: bool_
+
+_access: protected_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###bool bLoaded
+
+_name: bLoaded_
+
+_type: bool_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+A boolean that describes if the movie loaded properly. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###bool bIsFrameNew
+
+_name: bIsFrameNew_
+
+_type: bool_
+
+_access: protected_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###int nFrames
+
+_name: nFrames_
+
+_type: int_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+Variable containing the number of frames of the video.
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###ofGstVideoData gstData
+
+_name: gstData_
+
+_type: ofGstVideoData_
+
+_access: protected_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###unsigned char * pixels
+
+_name: pixels_
+
+_type: unsigned char *_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+Array of pixels that represents the current frame of live video. The data is stored as RGB in an array which is the size: width*height*3.
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###bool bIsMovieDone
+
+_name: bIsMovieDone_
+
+_type: bool_
+
+_access: protected_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###bool bHavePixelsChanged
+
+_name: bHavePixelsChanged_
+
+_type: bool_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+A boolean controlling if pixels have change.
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###bool isStream
+
+_name: isStream_
+
+_type: bool_
+
+_access: protected_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###ofTexture tex
+
+_name: tex_
+
+_type: ofTexture_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+ofTexture used by the video player class. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###GstElement * gstPipeline
+
+_name: gstPipeline_
+
+_type: GstElement *_
+
+_access: protected_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###bool bUseTexture
+
+_name: bUseTexture_
+
+_type: bool_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+bUseTexture enables and disables the use of ofTexture in our video player.
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###GstElement * gstSink
+
+_name: gstSink_
+
+_type: GstElement *_
+
+_access: protected_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###bool allocated
+
+_name: allocated_
+
+_type: bool_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+Boolean varible containing true if the texture has been already allocated inside our video player.
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###gint64 durationNanos
+
+_name: durationNanos_
+
+_type: gint64_
+
+_access: protected_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###int loopMode
+
+_name: loopMode_
+
+_type: int_
+
+_access: protected_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###bool posChangingPaused
+
+_name: posChangingPaused_
+
+_type: bool_
+
+_access: protected_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###pthread_mutex_t seek_mutex
+
+_name: seek_mutex_
+
+_type: pthread_mutex_t_
+
+_access: protected_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
 
 
 

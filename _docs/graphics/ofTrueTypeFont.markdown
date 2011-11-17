@@ -1,20 +1,26 @@
 #class ofTrueTypeFont
 
-Example
+//----------------------
 
-
-
-Reference
-
-
-
-Methods
+##Example
 
 
 
 //----------------------
 
-##void ofTrueTypeFont()
+##Reference
+
+
+
+//----------------------
+
+##Methods
+
+
+
+//----------------------
+
+###void ofTrueTypeFont()
 
 _syntax: ofTrueTypeFont()_
 
@@ -26,6 +32,14 @@ _returns_description: _
 
 _parameters: _
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -48,7 +62,7 @@ _description: _
 
 //----------------------
 
-##void drawChar(c, x, y)
+###void drawChar(c, x, y)
 
 _syntax: drawChar(c, x, y)_
 
@@ -60,6 +74,14 @@ _returns_description: _
 
 _parameters: int c, float x, float y_
 
+_access: protected_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -82,7 +104,7 @@ _description: _
 
 //----------------------
 
-##void ~ofTrueTypeFont()
+###void ~ofTrueTypeFont()
 
 _syntax: ~ofTrueTypeFont()_
 
@@ -94,6 +116,14 @@ _returns_description: _
 
 _parameters: _
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -116,7 +146,7 @@ _description: _
 
 //----------------------
 
-##void drawCharAsShape(c, x, y)
+###void drawCharAsShape(c, x, y)
 
 _syntax: drawCharAsShape(c, x, y)_
 
@@ -128,6 +158,14 @@ _returns_description: _
 
 _parameters: int c, float x, float y_
 
+_access: protected_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -150,7 +188,7 @@ _description: _
 
 //----------------------
 
-##void loadFont(filename, fontsize)
+###void loadFont(filename, fontsize)
 
 _syntax: loadFont(filename, fontsize)_
 
@@ -161,6 +199,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: string filename, int fontsize_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -197,7 +243,7 @@ $$/code
 
 //----------------------
 
-##int ofNextPow2(a)
+###int ofNextPow2(a)
 
 _syntax: ofNextPow2(a)_
 
@@ -208,6 +254,14 @@ _returns: int_
 _returns_description: _
 
 _parameters: int a_
+
+_access: protected_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -231,7 +285,7 @@ _description: _
 
 //----------------------
 
-##void loadFont(filename, fontsize, _bAntiAliased, _bFullCharacterSet, makeContours)
+###void loadFont(filename, fontsize, _bAntiAliased, _bFullCharacterSet, makeContours)
 
 _syntax: loadFont(filename, fontsize, _bAntiAliased, _bFullCharacterSet, makeContours)_
 
@@ -242,6 +296,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: string filename, int fontsize, bool _bAntiAliased, bool _bFullCharacterSet, bool makeContours_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -265,7 +327,7 @@ This loads a font, but in addition to setting the font name and size, you can al
 
 //----------------------
 
-##float getLineHeight()
+###float getLineHeight()
 
 _syntax: getLineHeight()_
 
@@ -276,6 +338,14 @@ _returns: float_
 _returns_description: Returns a float, which is the line height for the type face._
 
 _parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -299,7 +369,7 @@ The line height is computed, based on the font size, and can be adjusted. Useful
 
 //----------------------
 
-##void setLineHeight(height)
+###void setLineHeight(height)
 
 _syntax: setLineHeight(height)_
 
@@ -310,6 +380,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: float height_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -333,7 +411,7 @@ Sets the line height for text that is drawn on screen.
 
 //----------------------
 
-##float stringWidth(s)
+###float stringWidth(s)
 
 _syntax: stringWidth(s)_
 
@@ -344,6 +422,14 @@ _returns: float_
 _returns_description: Returns this width, in pixels, for a given string drawn with that typeface._
 
 _parameters: string s_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -367,7 +453,7 @@ _description: _
 
 //----------------------
 
-##float stringHeight(s)
+###float stringHeight(s)
 
 _syntax: stringHeight(s)_
 
@@ -378,6 +464,14 @@ _returns: float_
 _returns_description: Returns the height, in pixels, for a given string drawn with that typeface._
 
 _parameters: string s_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -401,7 +495,7 @@ _description: _
 
 //----------------------
 
-##ofRectangle getStringBoundingBox(s, x, y)
+###ofRectangle getStringBoundingBox(s, x, y)
 
 _syntax: getStringBoundingBox(s, x, y)_
 
@@ -412,6 +506,14 @@ _returns: ofRectangle_
 _returns_description: Returns an ofRectangle wich is the Bounding Box containing our TrueTypeFont This rectangle depends on the TruTypeFont size._
 
 _parameters: string s, float x, float y_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -454,7 +556,7 @@ $$/code
 
 //----------------------
 
-##void drawString(s, x, y)
+###void drawString(s, x, y)
 
 _syntax: drawString(s, x, y)_
 
@@ -465,6 +567,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: string s, float x, float y_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -521,7 +631,7 @@ $$/code
 
 //----------------------
 
-##void drawStringAsShapes(s, x, y)
+###void drawStringAsShapes(s, x, y)
 
 _syntax: drawStringAsShapes(s, x, y)_
 
@@ -532,6 +642,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: string s, float x, float y_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -555,7 +673,7 @@ drawStringAsShapes function draws the s string as if it was a geometrical shapes
 
 //----------------------
 
-##ofTTFCharacter getCharacterAsPoints(character)
+###ofTTFCharacter getCharacterAsPoints(character)
 
 _syntax: getCharacterAsPoints(character)_
 
@@ -567,11 +685,457 @@ _returns_description: Returns ofTTFCharacter object used by ofTrueTypeFont. Basi
 
 _parameters: int character_
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+##Variables
+
+
+
+//----------------------
+
+###bool bLoadedOk
+
+_name: bLoadedOk_
+
+_type: bool_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+bLoadedOk is a boolean variable containing true if the font was successfully loaded.   
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###vector< ofTTFCharacter > charOutlines
+
+_name: charOutlines_
+
+_type: vector< ofTTFCharacter >_
+
+_access: protected_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###bool bAntiAlised
+
+_name: bAntiAlised_
+
+_type: bool_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+A variable which tells you if the font is antiAliased.
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###float lineHeight
+
+_name: lineHeight_
+
+_type: float_
+
+_access: protected_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###bool bFullCharacterSet
+
+_name: bFullCharacterSet_
+
+_type: bool_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+A variable which tells you if the font contains the full character set, or a subset.
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###charProps * cps
+
+_name: cps_
+
+_type: charProps *_
+
+_access: protected_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###int nCharacters
+
+_name: nCharacters_
+
+_type: int_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+nCharacters contains the number of characters that our font has.
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###GLuint * texNames
+
+_name: texNames_
+
+_type: GLuint *_
+
+_access: protected_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###int fontSize
+
+_name: fontSize_
+
+_type: int_
+
+_access: protected_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###bool bMakeContours
+
+_name: bMakeContours_
+
+_type: bool_
+
+_access: protected_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###int border
+
+_name: border_
+
+_type: int_
+
+_access: protected_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###int visibleBorder
+
+_name: visibleBorder_
+
+_type: int_
+
+_access: protected_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
 
 
 

@@ -1,14 +1,26 @@
 #class ofEvent
 
-Example
+//----------------------
+
+##Example
 
 
 
-Reference
+//----------------------
+
+##Reference
 
 
 
-Methods
+//----------------------
+
+##Methods
+
+
+
+//----------------------
+
+##Variables
 
 
 

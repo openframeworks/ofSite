@@ -1,20 +1,26 @@
 #class ofPoint
 
-Example
+//----------------------
 
-
-
-Reference
-
-
-
-Methods
+##Example
 
 
 
 //----------------------
 
-##void ~ofPoint()
+##Reference
+
+
+
+//----------------------
+
+##Methods
+
+
+
+//----------------------
+
+###void ~ofPoint()
 
 _syntax: ~ofPoint()_
 
@@ -26,6 +32,14 @@ _returns_description: _
 
 _parameters: _
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -48,7 +62,7 @@ _description: _
 
 //----------------------
 
-##void ofPoint(_x, _y, _z)
+###void ofPoint(_x, _y, _z)
 
 _syntax: ofPoint(_x, _y, _z)_
 
@@ -60,6 +74,14 @@ _returns_description: _
 
 _parameters: float _x, float _y, float _z_
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -82,7 +104,7 @@ _description: _
 
 //----------------------
 
-##void ofPoint(pnt)
+###void ofPoint(pnt)
 
 _syntax: ofPoint(pnt)_
 
@@ -94,6 +116,14 @@ _returns_description: _
 
 _parameters: const ofPoint & pnt_
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -116,7 +146,7 @@ _description: _
 
 //----------------------
 
-##void set(_x, _y, _z)
+###void set(_x, _y, _z)
 
 _syntax: set(_x, _y, _z)_
 
@@ -127,6 +157,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: float _x, float _y, float _z_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -161,7 +199,7 @@ now firstpoint = (100,230,50)
 
 //----------------------
 
-##ofPoint operator-()
+###ofPoint operator-()
 
 _syntax: operator-()_
 
@@ -172,6 +210,14 @@ _returns: ofPoint_
 _returns_description: Returns the point with its components with different sign._
 
 _parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -206,7 +252,7 @@ Now p=(-10,-5,3)
 
 //----------------------
 
-##bool operator==(pnt)
+###bool operator==(pnt)
 
 _syntax: operator==(pnt)_
 
@@ -217,6 +263,14 @@ _returns: bool_
 _returns_description: Return true if both points are equal and false if not._
 
 _parameters: const ofPoint & pnt_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -254,7 +308,7 @@ After this equal=false;
 
 //----------------------
 
-##bool operator!=(pnt)
+###bool operator!=(pnt)
 
 _syntax: operator!=(pnt)_
 
@@ -265,6 +319,14 @@ _returns: bool_
 _returns_description: Returns true if two points are different and false if not._
 
 _parameters: const ofPoint & pnt_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -302,7 +364,7 @@ After this dif=true;
 
 //----------------------
 
-##ofPoint & operator=(pnt)
+###ofPoint & operator=(pnt)
 
 _syntax: operator=(pnt)_
 
@@ -313,6 +375,14 @@ _returns: ofPoint &_
 _returns_description: Returns ofPoint pnt as a ofPoint object._
 
 _parameters: const ofPoint & pnt_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -348,7 +418,7 @@ p1 and p2 are now identical.
 
 //----------------------
 
-##ofPoint & operator=(val)
+###ofPoint & operator=(val)
 
 _syntax: operator=(val)_
 
@@ -359,6 +429,14 @@ _returns: ofPoint &_
 _returns_description: An ofPoint object where x, y and z components are set to val _
 
 _parameters: const float & val_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -395,7 +473,7 @@ After this p1=(5.3,5.3,5.3);
 
 //----------------------
 
-##ofPoint operator+(pnt)
+###ofPoint operator+(pnt)
 
 _syntax: operator+(pnt)_
 
@@ -406,6 +484,14 @@ _returns: ofPoint_
 _returns_description: Returns an ofPoint object containing the result of the addition of two ofPoints._
 
 _parameters: const ofPoint & pnt_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -444,7 +530,7 @@ After this result=(3,3,3)
 
 //----------------------
 
-##ofPoint operator+(val)
+###ofPoint operator+(val)
 
 _syntax: operator+(val)_
 
@@ -455,6 +541,14 @@ _returns: ofPoint_
 _returns_description: Returns an ofPoint where their components x,y and z are the addition of the point component and val. _
 
 _parameters: const float & val_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -489,7 +583,7 @@ Now p1=(p1x+5,p1y+5,p1z+5)
 
 //----------------------
 
-##ofPoint & operator+=(pnt)
+###ofPoint & operator+=(pnt)
 
 _syntax: operator+=(pnt)_
 
@@ -500,6 +594,14 @@ _returns: ofPoint &_
 _returns_description: Return an ofPoint containing the result operation._
 
 _parameters: const ofPoint & pnt_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -533,7 +635,7 @@ Now p1=(p1x+p2x,p1y+p2y,p1z+p2z);
 
 //----------------------
 
-##ofPoint & operator+=(val)
+###ofPoint & operator+=(val)
 
 _syntax: operator+=(val)_
 
@@ -544,6 +646,14 @@ _returns: ofPoint &_
 _returns_description: Return an ofPoint containing the result operation._
 
 _parameters: const float & val_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -578,7 +688,7 @@ Now p1=(p1x+val,p1y+val,p1z+val);
 
 //----------------------
 
-##ofPoint operator-(pnt)
+###ofPoint operator-(pnt)
 
 _syntax: operator-(pnt)_
 
@@ -589,6 +699,14 @@ _returns: ofPoint_
 _returns_description: Return an ofPoint containing the result operation._
 
 _parameters: const ofPoint & pnt_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -613,7 +731,7 @@ p1-p2=(p1x-p2x,p1y-p2y,p1z-p2z)
 
 //----------------------
 
-##ofPoint operator-(val)
+###ofPoint operator-(val)
 
 _syntax: operator-(val)_
 
@@ -624,6 +742,14 @@ _returns: ofPoint_
 _returns_description: Return an ofPoint containing the result operation._
 
 _parameters: const float & val_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -648,7 +774,7 @@ p1-val=(p1x-val,p1y-val,p1z-val)
 
 //----------------------
 
-##ofPoint & operator-=(pnt)
+###ofPoint & operator-=(pnt)
 
 _syntax: operator-=(pnt)_
 
@@ -659,6 +785,14 @@ _returns: ofPoint &_
 _returns_description: Return an ofPoint containing the result operation._
 
 _parameters: const ofPoint & pnt_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -693,7 +827,7 @@ Now p1=(p1x-p2x,p1y-p2y,p1z-p2z);
 
 //----------------------
 
-##ofPoint & operator-=(val)
+###ofPoint & operator-=(val)
 
 _syntax: operator-=(val)_
 
@@ -704,6 +838,14 @@ _returns: ofPoint &_
 _returns_description: Return an ofPoint containing the result operation._
 
 _parameters: const float & val_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -739,7 +881,7 @@ Now p1=(p1x-val,p1y-val,p1z-val);
 
 //----------------------
 
-##ofPoint operator*(pnt)
+###ofPoint operator*(pnt)
 
 _syntax: operator*(pnt)_
 
@@ -750,6 +892,14 @@ _returns: ofPoint_
 _returns_description: Return an ofPoint containing the result operation._
 
 _parameters: const ofPoint & pnt_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -774,7 +924,7 @@ p1*p2=(p1x*p2x,p1y*p2y,p1z*p2z)
 
 //----------------------
 
-##ofPoint operator*(val)
+###ofPoint operator*(val)
 
 _syntax: operator*(val)_
 
@@ -785,6 +935,14 @@ _returns: ofPoint_
 _returns_description: Return an ofPoint containing the result operation._
 
 _parameters: const float & val_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -809,7 +967,7 @@ p1*val=(p1x*val,p1y*val,p1z*val)
 
 //----------------------
 
-##ofPoint & operator*=(pnt)
+###ofPoint & operator*=(pnt)
 
 _syntax: operator*=(pnt)_
 
@@ -820,6 +978,14 @@ _returns: ofPoint &_
 _returns_description: Return an ofPoint containing the result operation._
 
 _parameters: const ofPoint & pnt_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -854,7 +1020,7 @@ Now p1=(p1x*p2x,p1y*p2y,p1z*p2z);
 
 //----------------------
 
-##ofPoint & operator*=(val)
+###ofPoint & operator*=(val)
 
 _syntax: operator*=(val)_
 
@@ -865,6 +1031,14 @@ _returns: ofPoint &_
 _returns_description: Return an ofPoint containing the result operation._
 
 _parameters: const float & val_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -900,7 +1074,7 @@ Now p1=(p1x*val,p1y*val,p1z*val)
 
 //----------------------
 
-##ofPoint operator/(pnt)
+###ofPoint operator/(pnt)
 
 _syntax: operator/(pnt)_
 
@@ -911,6 +1085,14 @@ _returns: ofPoint_
 _returns_description: Return an ofPoint containing the result operation._
 
 _parameters: const ofPoint & pnt_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -935,7 +1117,7 @@ p1/p2=(p1x/p2x,p1y/p2y,p1z/p2z)
 
 //----------------------
 
-##ofPoint operator/(val)
+###ofPoint operator/(val)
 
 _syntax: operator/(val)_
 
@@ -946,6 +1128,14 @@ _returns: ofPoint_
 _returns_description: Return an ofPoint containing the result operation._
 
 _parameters: const float & val_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -971,7 +1161,7 @@ p1/val=(p1x/val,p1y/val,p1z/val)
 
 //----------------------
 
-##ofPoint & operator/=(pnt)
+###ofPoint & operator/=(pnt)
 
 _syntax: operator/=(pnt)_
 
@@ -982,6 +1172,14 @@ _returns: ofPoint &_
 _returns_description: Return an ofPoint containing the result operation._
 
 _parameters: const ofPoint & pnt_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -1016,7 +1214,7 @@ Now p1=(p1x/p2x,p1y/p2y,p1z/p2z);
 
 //----------------------
 
-##ofPoint & operator/=(val)
+###ofPoint & operator/=(val)
 
 _syntax: operator/=(val)_
 
@@ -1027,6 +1225,14 @@ _returns: ofPoint &_
 _returns_description: Return an ofPoint containing the result operation._
 
 _parameters: const float & val_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -1045,6 +1251,156 @@ $$/code
 
 
 Now p1=(p1x/val,p1y/val,p1z/val)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+##Variables
+
+
+
+//----------------------
+
+###float x
+
+_name: x_
+
+_type: float_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+Variable x contains the x coordinate of our ofPoint object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###float y
+
+_name: y_
+
+_type: float_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+Variable y contains the y coordinate of our ofPoint object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###float z
+
+_name: z_
+
+_type: float_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+Variable z contains the z coordinate of our ofPoint object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###float v
+
+_name: v_
+
+_type: float_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
 
 
 

@@ -33,6 +33,12 @@
 		${method.returns_description}<br />
     </div>
     
+    <div class="docs_detail_left_col">
+		summary
+	</div>
+	<div class="docs_detail_right_col">
+		${method.summary}<br />
+    </div>
     
 	<div class="docs_detail_left_col">
 		description

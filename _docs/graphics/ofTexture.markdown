@@ -1,20 +1,26 @@
 #class ofTexture
 
-Example
+//----------------------
 
-
-
-Reference
-
-
-
-Methods
+##Example
 
 
 
 //----------------------
 
-##void ofTexture()
+##Reference
+
+
+
+//----------------------
+
+##Methods
+
+
+
+//----------------------
+
+###void ofTexture()
 
 _syntax: ofTexture()_
 
@@ -26,6 +32,14 @@ _returns_description: _
 
 _parameters: _
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -48,7 +62,7 @@ _description: _
 
 //----------------------
 
-##void ~ofTexture()
+###void ~ofTexture()
 
 _syntax: ~ofTexture()_
 
@@ -60,6 +74,14 @@ _returns_description: _
 
 _parameters: _
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -82,7 +104,7 @@ _description: _
 
 //----------------------
 
-##void ofTexture(mom)
+###void ofTexture(mom)
 
 _syntax: ofTexture(mom)_
 
@@ -94,6 +116,14 @@ _returns_description: _
 
 _parameters: const ofTexture & mom_
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -116,7 +146,7 @@ _description: _
 
 //----------------------
 
-##ofTexture & operator=(mom)
+###ofTexture & operator=(mom)
 
 _syntax: operator=(mom)_
 
@@ -127,6 +157,14 @@ _returns: ofTexture &_
 _returns_description: _
 
 _parameters: const ofTexture & mom_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -168,7 +206,7 @@ text2 and text1 are now identical.
 
 //----------------------
 
-##void allocate(w, h, internalGlDataType)
+###void allocate(w, h, internalGlDataType)
 
 _syntax: allocate(w, h, internalGlDataType)_
 
@@ -179,6 +217,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: int w, int h, int internalGlDataType_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -202,7 +248,7 @@ This is the call to allocate opengl texture. The width (w) and height (h) do not
 
 //----------------------
 
-##void allocate(w, h, internalGlDataType, bUseARBExtention)
+###void allocate(w, h, internalGlDataType, bUseARBExtention)
 
 _syntax: allocate(w, h, internalGlDataType, bUseARBExtention)_
 
@@ -213,6 +259,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: int w, int h, int internalGlDataType, bool bUseARBExtention_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -236,7 +290,7 @@ See previous allocate for knowing the behaviour of this function. The parameter 
 
 //----------------------
 
-##void clear()
+###void clear()
 
 _syntax: clear()_
 
@@ -247,6 +301,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -270,7 +332,7 @@ clears / frees the texture memory, if something was already allocated. useful if
 
 //----------------------
 
-##void loadData(data, w, h, glDataType)
+###void loadData(data, w, h, glDataType)
 
 _syntax: loadData(data, w, h, glDataType)_
 
@@ -281,6 +343,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: unsigned char * data, int w, int h, int glDataType_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -315,7 +385,7 @@ $$/code
 
 //----------------------
 
-##void loadScreenData(x, y, w, h)
+###void loadScreenData(x, y, w, h)
 
 _syntax: loadScreenData(x, y, w, h)_
 
@@ -326,6 +396,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: int x, int y, int w, int h_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -349,7 +427,7 @@ Grabs a region of the screen and loads it into the texture. Specifiy the positio
 
 //----------------------
 
-##void draw(x, y, w, h)
+###void draw(x, y, w, h)
 
 _syntax: draw(x, y, w, h)_
 
@@ -360,6 +438,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: float x, float y, float w, float h_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -383,7 +469,7 @@ draws the texture at a given point (x,y), with a given width (w) and height (h).
 
 //----------------------
 
-##void draw(x, y)
+###void draw(x, y)
 
 _syntax: draw(x, y)_
 
@@ -394,6 +480,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: float x, float y_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -417,7 +511,7 @@ Draws the texture at a given point (x,y), using the textures true width and heig
 
 //----------------------
 
-##bool bAllocated()
+###bool bAllocated()
 
 _syntax: bAllocated()_
 
@@ -429,6 +523,14 @@ _returns_description: Returns true if the texture is allocated correctly._
 
 _parameters: _
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -451,7 +553,7 @@ _description: _
 
 //----------------------
 
-##float getHeight()
+###float getHeight()
 
 _syntax: getHeight()_
 
@@ -463,6 +565,14 @@ _returns_description: Returns the Height of the texture._
 
 _parameters: _
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -485,7 +595,7 @@ _description: _
 
 //----------------------
 
-##float getWidth()
+###float getWidth()
 
 _syntax: getWidth()_
 
@@ -497,6 +607,14 @@ _returns_description: Returns the Width of the texture._
 
 _parameters: _
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -519,7 +637,7 @@ _description: _
 
 //----------------------
 
-##void setAnchorPercent(xPct, yPct)
+###void setAnchorPercent(xPct, yPct)
 
 _syntax: setAnchorPercent(xPct, yPct)_
 
@@ -531,6 +649,14 @@ _returns_description: _
 
 _parameters: float xPct, float yPct_
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -553,7 +679,7 @@ _description: _
 
 //----------------------
 
-##void setAnchorPoint(x, y)
+###void setAnchorPoint(x, y)
 
 _syntax: setAnchorPoint(x, y)_
 
@@ -564,6 +690,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: int x, int y_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -587,7 +721,7 @@ Sets our texture anchor point and enables the use of it.
 
 //----------------------
 
-##void resetAnchor()
+###void resetAnchor()
 
 _syntax: resetAnchor()_
 
@@ -599,6 +733,14 @@ _returns_description: _
 
 _parameters: _
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -621,7 +763,7 @@ _description: _
 
 //----------------------
 
-##void bind()
+###void bind()
 
 _syntax: bind()_
 
@@ -633,6 +775,14 @@ _returns_description: _
 
 _parameters: _
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -655,7 +805,7 @@ _description: _
 
 //----------------------
 
-##void unbind()
+###void unbind()
 
 _syntax: unbind()_
 
@@ -667,6 +817,14 @@ _returns_description: _
 
 _parameters: _
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -689,7 +847,7 @@ _description: _
 
 //----------------------
 
-##ofTextureData getTextureData()
+###ofTextureData getTextureData()
 
 _syntax: getTextureData()_
 
@@ -701,11 +859,133 @@ _returns_description: Returns ofTextureData structure containing information abo
 
 _parameters: _
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+##Variables
+
+
+
+//----------------------
+
+###ofTextureData texData
+
+_name: texData_
+
+_type: ofTextureData_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+texData is a variable type ofTextureData. ofTextureData is a structure containing information about the texture such as size. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###ofPoint anchor
+
+_name: anchor_
+
+_type: ofPoint_
+
+_access: protected_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###bool bAnchorIsPct
+
+_name: bAnchorIsPct_
+
+_type: bool_
+
+_access: protected_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
 
 
 

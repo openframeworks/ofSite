@@ -1,20 +1,26 @@
 #class ofBaseApp
 
-Example
+//----------------------
 
-
-
-Reference
-
-
-
-Methods
+##Example
 
 
 
 //----------------------
 
-##void ofBaseApp()
+##Reference
+
+
+
+//----------------------
+
+##Methods
+
+
+
+//----------------------
+
+###void ofBaseApp()
 
 _syntax: ofBaseApp()_
 
@@ -25,6 +31,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -48,7 +62,7 @@ The openframeworks engine is contained in the "app" category. The project works,
 
 //----------------------
 
-##void ~ofBaseApp()
+###void ~ofBaseApp()
 
 _syntax: ~ofBaseApp()_
 
@@ -59,6 +73,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -82,7 +104,7 @@ _description: _
 
 //----------------------
 
-##void setup()
+###void setup()
 
 _syntax: setup()_
 
@@ -93,6 +115,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -116,7 +146,7 @@ This function gets called once, just at the start of the app. It would be a good
 
 //----------------------
 
-##void update()
+###void update()
 
 _syntax: update()_
 
@@ -127,6 +157,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -169,7 +207,7 @@ $$/code
 
 //----------------------
 
-##void draw()
+###void draw()
 
 _syntax: draw()_
 
@@ -180,6 +218,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -215,7 +261,7 @@ $$/code
 
 //----------------------
 
-##void exit()
+###void exit()
 
 _syntax: exit()_
 
@@ -226,6 +272,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -249,7 +303,7 @@ Add this function to your testApp to have it called at the moment before the app
 
 //----------------------
 
-##void windowResized(w, h)
+###void windowResized(w, h)
 
 _syntax: windowResized(w, h)_
 
@@ -260,6 +314,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: int w, int h_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -285,7 +347,7 @@ This function gets called when ever we resize the application window. You receiv
 
 //----------------------
 
-##void keyPressed(key)
+###void keyPressed(key)
 
 _syntax: keyPressed(key)_
 
@@ -296,6 +358,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: int key_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -337,7 +407,7 @@ There are more complicated character codes, for keys such as F1-F12, Down, Enter
 
 //----------------------
 
-##void keyReleased(key)
+###void keyReleased(key)
 
 _syntax: keyReleased(key)_
 
@@ -348,6 +418,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: int key_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -386,7 +464,7 @@ There are more complicated character codes, for keys such as F1-F12, Down, Enter
 
 //----------------------
 
-##void mouseMoved(x, y)
+###void mouseMoved(x, y)
 
 _syntax: mouseMoved(x, y)_
 
@@ -397,6 +475,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: int x, int y_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -420,7 +506,7 @@ This function gets when ever the mouse moves. You receive the x and y corrdinate
 
 //----------------------
 
-##void mouseDragged(x, y, button)
+###void mouseDragged(x, y, button)
 
 _syntax: mouseDragged(x, y, button)_
 
@@ -431,6 +517,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: int x, int y, int button_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -454,7 +548,7 @@ This function gets called when the mouse is moving and the button is down. The b
 
 //----------------------
 
-##void mousePressed(x, y, button)
+###void mousePressed(x, y, button)
 
 _syntax: mousePressed(x, y, button)_
 
@@ -465,6 +559,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: int x, int y, int button_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -488,7 +590,7 @@ This function gets called when the mouse is pushed down. The button (left, right
 
 //----------------------
 
-##void mouseReleased()
+###void mouseReleased()
 
 _syntax: mouseReleased()_
 
@@ -499,6 +601,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -522,7 +632,7 @@ This function gets called when the mouse is released.
 
 //----------------------
 
-##void mouseReleased(x, y, button)
+###void mouseReleased(x, y, button)
 
 _syntax: mouseReleased(x, y, button)_
 
@@ -533,6 +643,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: int x, int y, int button_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -556,7 +674,7 @@ This function gets called when the mouse is released. The button (left, right, c
 
 //----------------------
 
-##void audioReceived(input, bufferSize, nChannels)
+###void audioReceived(input, bufferSize, nChannels)
 
 _syntax: audioReceived(input, bufferSize, nChannels)_
 
@@ -567,6 +685,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: float * input, int bufferSize, int nChannels_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -606,7 +732,7 @@ $$/code
 
 //----------------------
 
-##void audioRequested(output, bufferSize, nChannels)
+###void audioRequested(output, bufferSize, nChannels)
 
 _syntax: audioRequested(output, bufferSize, nChannels)_
 
@@ -618,6 +744,14 @@ _returns_description: _
 
 _parameters: float * output, int bufferSize, int nChannels_
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -625,6 +759,84 @@ _description: _
 If you have setup audio output, via ofSetupAudio, this function will be called when the system needs one buffers worth of audio. Since you may have requested mutli-channel audio (for example, stereo output), you get not only an array of floating point info, also the size of the buffer, and the number of channels. 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+##Variables
+
+
+
+//----------------------
+
+###int mouseX
+
+_name: mouseX_
+
+_type: int_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+Variable mouseX contains information about the current x coordinate of the mouse.
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###int mouseY
+
+_name: mouseY_
+
+_type: int_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+Variable mouseY contains information about the current y coordinate of the mouse.
 
 
 

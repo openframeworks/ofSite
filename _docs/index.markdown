@@ -41,6 +41,12 @@ audioReceived(...)
 
 audioRequested(...)
 
+__variables__
+
+mouseX
+
+mouseY
+
 ###ofAppBaseWindow###
 
 __visible: true__
@@ -89,6 +95,8 @@ enableSetupScreen()
 
 disableSetupScreen()
 
+__variables__
+
 //----------------------
 
 ##serial##
@@ -126,6 +134,16 @@ flush(...)
 available()
 
 setVerbose(...)
+
+__variables__
+
+bVerbose
+
+bInited
+
+fd
+
+oldoptions
 
 //----------------------
 
@@ -247,6 +265,88 @@ getStringHistory()
 
 getValueFromTwo7bitBytes(...)
 
+__variables__
+
+EDigitalPinChanged
+
+_initialized
+
+bUseDelay
+
+EAnalogPinChanged
+
+_port
+
+connected
+
+ESysExReceived
+
+_portStatus
+
+connectTime
+
+EProtocolVersionReceived
+
+_analogHistoryLength
+
+_servoValue
+
+EFirmwareVersionReceived
+
+_digitalHistoryLength
+
+_temp
+
+EInitialized
+
+_stringHistoryLength
+
+_humidity
+
+EStringReceived
+
+_sysExHistoryLength
+
+_waitForData
+
+_executeMultiByteCommand
+
+_multiByteChannel
+
+_storedInputData
+
+_sysExData
+
+_majorProtocolVersion
+
+_minorProtocolVersion
+
+_majorFirmwareVersion
+
+_minorFirmwareVersion
+
+_firmwareName
+
+_sysExHistory
+
+_stringHistory
+
+_analogHistory
+
+_digitalHistory
+
+_digitalPinMode
+
+_digitalPinValue
+
+_digitalPortValue
+
+_digitalPortReporting
+
+_digitalPinReporting
+
+_analogPinReporting
+
 //----------------------
 
 ##video##
@@ -298,6 +398,30 @@ setAnchorPercent(...)
 setAnchorPoint(...)
 
 resetAnchor()
+
+__variables__
+
+height
+
+bChooseDevice
+
+width
+
+deviceID
+
+bUseTexture
+
+tex
+
+bVerbose
+
+bGrabberInited
+
+pixels
+
+bIsFrameNew
+
+ucGrabber
 
 ###ofVideoPlayer###
 
@@ -387,6 +511,54 @@ setAnchorPoint(...)
 
 resetAnchor()
 
+__variables__
+
+width
+
+bStarted
+
+height
+
+bPlaying
+
+speed
+
+bPaused
+
+bLoaded
+
+bIsFrameNew
+
+nFrames
+
+gstData
+
+pixels
+
+bIsMovieDone
+
+bHavePixelsChanged
+
+isStream
+
+tex
+
+gstPipeline
+
+bUseTexture
+
+gstSink
+
+allocated
+
+durationNanos
+
+loopMode
+
+posChangingPaused
+
+seek_mutex
+
 //----------------------
 
 ##graphics##
@@ -461,6 +633,22 @@ setAnchorPoint(...)
 
 resetAnchor()
 
+__variables__
+
+width
+
+myPixels
+
+height
+
+type
+
+bUseTexture
+
+bpp
+
+tex
+
 ###ofTexture###
 
 __visible: true__
@@ -507,6 +695,14 @@ unbind()
 
 getTextureData()
 
+__variables__
+
+texData
+
+anchor
+
+bAnchorIsPct
+
 ###ofTrueTypeFont###
 
 __visible: true__
@@ -542,6 +738,32 @@ drawString(...)
 drawStringAsShapes(...)
 
 getCharacterAsPoints(...)
+
+__variables__
+
+bLoadedOk
+
+charOutlines
+
+bAntiAlised
+
+lineHeight
+
+bFullCharacterSet
+
+cps
+
+nCharacters
+
+texNames
+
+fontSize
+
+bMakeContours
+
+border
+
+visibleBorder
 
 //----------------------
 
@@ -591,6 +813,34 @@ getSpeed()
 
 getPan()
 
+__variables__
+
+isStreaming
+
+bMultiPlay
+
+bLoop
+
+bLoadedOk
+
+bPaused
+
+pan
+
+volume
+
+internalFreq
+
+speed
+
+length
+
+result
+
+channel
+
+sound
+
 //----------------------
 
 ##sound stream##
@@ -612,6 +862,16 @@ __methods__
 ofColor()
 
 ~ofColor()
+
+__variables__
+
+r
+
+g
+
+b
+
+a
 
 ###ofPoint###
 
@@ -669,6 +929,16 @@ operator/=(...)
 
 operator/=(...)
 
+__variables__
+
+x
+
+y
+
+z
+
+v
+
 ###ofRectangle###
 
 __visible: true__
@@ -680,6 +950,16 @@ ofRectangle()
 ofRectangle(...)
 
 ~ofRectangle()
+
+__variables__
+
+x
+
+y
+
+width
+
+height
 
 //----------------------
 
@@ -698,4 +978,6 @@ ofRectangle(...)
 __visible: true__
 
 __methods__
+
+__variables__
 

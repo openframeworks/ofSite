@@ -1,20 +1,26 @@
 #class ofSerial
 
-Example
+//----------------------
 
-
-
-Reference
-
-
-
-Methods
+##Example
 
 
 
 //----------------------
 
-##void ofSerial()
+##Reference
+
+
+
+//----------------------
+
+##Methods
+
+
+
+//----------------------
+
+###void ofSerial()
 
 _syntax: ofSerial()_
 
@@ -26,6 +32,14 @@ _returns_description: _
 
 _parameters: _
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -48,7 +62,7 @@ _description: _
 
 //----------------------
 
-##void ~ofSerial()
+###void ~ofSerial()
 
 _syntax: ~ofSerial()_
 
@@ -60,6 +74,14 @@ _returns_description: _
 
 _parameters: _
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -82,7 +104,7 @@ _description: _
 
 //----------------------
 
-##void enumerateDevices()
+###void enumerateDevices()
 
 _syntax: enumerateDevices()_
 
@@ -93,6 +115,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -134,7 +164,7 @@ $$/code
 
 //----------------------
 
-##void close()
+###void close()
 
 _syntax: close()_
 
@@ -145,6 +175,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -168,7 +206,7 @@ Closes the connection to the serial device.
 
 //----------------------
 
-##bool setup()
+###bool setup()
 
 _syntax: setup()_
 
@@ -179,6 +217,14 @@ _returns: bool_
 _returns_description: Returns true if successful and false if setup fails._
 
 _parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -213,7 +259,7 @@ $$/code
 
 //----------------------
 
-##bool setup(portName,baudrate)
+###bool setup(portName,baudrate)
 
 _syntax: setup(portName,baudrate)_
 
@@ -224,6 +270,14 @@ _returns: bool_
 _returns_description: Returns true if successful and false if setup fails._
 
 _parameters: string portName, int baudrate_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -264,7 +318,7 @@ $$/code
 
 //----------------------
 
-##bool setup(deviceNumber,baudrate)
+###bool setup(deviceNumber,baudrate)
 
 _syntax: setup(deviceNumber,baudrate)_
 
@@ -275,6 +329,14 @@ _returns: bool_
 _returns_description: Returns true if successful and false if setup fails._
 
 _parameters: int deviceNumber, int baudrate_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -306,7 +368,7 @@ $$/code
 
 //----------------------
 
-##int readBytes(buffer,length)
+###int readBytes(buffer,length)
 
 _syntax: readBytes(buffer,length)_
 
@@ -317,6 +379,14 @@ _returns: int_
 _returns_description: Returns an int value telling the number of bytes that have been read, or OF_SERIAL_NO_DATA if no data was available, or OF_SERIAL_ERROR if an error occurred during reading._
 
 _parameters: unsigned char * buffer, int length_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -385,7 +455,7 @@ $$/code
 
 //----------------------
 
-##int writeBytes(buffer, length)
+###int writeBytes(buffer, length)
 
 _syntax: writeBytes(buffer, length)_
 
@@ -396,6 +466,14 @@ _returns: int_
 _returns_description: Returns number of bytes written, or OF_SERIAL_ERROR if an error occured._
 
 _parameters: unsigned char * buffer, int length_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -431,7 +509,7 @@ $$/code
 
 //----------------------
 
-##bool writeByte(singleByte)
+###bool writeByte(singleByte)
 
 _syntax: writeByte(singleByte)_
 
@@ -442,6 +520,14 @@ _returns: bool_
 _returns_description: Returns true if successful._
 
 _parameters: unsigned char singleByte_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -478,7 +564,7 @@ $$/code
 
 //----------------------
 
-##int readByte()
+###int readByte()
 
 _syntax: readByte()_
 
@@ -489,6 +575,14 @@ _returns: int_
 _returns_description: Returns a single byte, or OF_SERIAL_NO_DATA if no data was read, or OF_SERIAL_ERROR if an error occurred._
 
 _parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -529,7 +623,7 @@ $$/code
 
 //----------------------
 
-##void flush(flushIn, flushOut)
+###void flush(flushIn, flushOut)
 
 _syntax: flush(flushIn, flushOut)_
 
@@ -540,6 +634,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: bool flushIn, bool flushOut_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -563,7 +665,7 @@ Clears data from one or both of the serial buffers. Any data in the cleared buff
 
 //----------------------
 
-##int available()
+###int available()
 
 _syntax: available()_
 
@@ -574,6 +676,14 @@ _returns: int_
 _returns_description: Returns the number of available bytes._
 
 _parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -597,7 +707,7 @@ Lets you query how many bytes are available.
 
 //----------------------
 
-##void setVerbose(bLoudmouth)
+###void setVerbose(bLoudmouth)
 
 _syntax: setVerbose(bLoudmouth)_
 
@@ -609,11 +719,169 @@ _returns_description: _
 
 _parameters: bool bLoudmouth_
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: 0.06_
+
+_summary: _
+
 
 
 _description: _
 
 Enable or disable ofSerial messages and errors being sent to the console.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+##Variables
+
+
+
+//----------------------
+
+###bool bVerbose
+
+_name: bVerbose_
+
+_type: bool_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+bVerbose is a boolean varible controlling verbosity on the ofSerial class. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###bool bInited
+
+_name: bInited_
+
+_type: bool_
+
+_access: protected_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+h
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###int fd
+
+_name: fd_
+
+_type: int_
+
+_access: protected_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###struct termios oldoptions
+
+_name: oldoptions_
+
+_type: struct termios_
+
+_access: protected_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
 
 
 

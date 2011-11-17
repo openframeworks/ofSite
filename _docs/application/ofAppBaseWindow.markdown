@@ -1,20 +1,26 @@
 #class ofAppBaseWindow
 
-Example
+//----------------------
 
-
-
-Reference
-
-
-
-Methods
+##Example
 
 
 
 //----------------------
 
-##void ofAppBaseWindow()
+##Reference
+
+
+
+//----------------------
+
+##Methods
+
+
+
+//----------------------
+
+###void ofAppBaseWindow()
 
 _syntax: ofAppBaseWindow()_
 
@@ -26,6 +32,14 @@ _returns_description: _
 
 _parameters: _
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -48,7 +62,7 @@ _description: _
 
 //----------------------
 
-##void ~ofAppBaseWindow()
+###void ~ofAppBaseWindow()
 
 _syntax: ~ofAppBaseWindow()_
 
@@ -60,6 +74,14 @@ _returns_description: _
 
 _parameters: _
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -82,7 +104,7 @@ _description: _
 
 //----------------------
 
-##void setupOpenGL(w, h, screenMode)
+###void setupOpenGL(w, h, screenMode)
 
 _syntax: setupOpenGL(w, h, screenMode)_
 
@@ -94,6 +116,14 @@ _returns_description: _
 
 _parameters: int w, int h, int screenMode_
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: 0.01_
+
+_summary: _
+
 
 
 _description: _
@@ -116,7 +146,7 @@ _description: _
 
 //----------------------
 
-##void initializeWindow()
+###void initializeWindow()
 
 _syntax: initializeWindow()_
 
@@ -128,6 +158,14 @@ _returns_description: _
 
 _parameters: _
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -150,7 +188,7 @@ _description: _
 
 //----------------------
 
-##void runAppViaInfiniteLoop(appPtr)
+###void runAppViaInfiniteLoop(appPtr)
 
 _syntax: runAppViaInfiniteLoop(appPtr)_
 
@@ -162,6 +200,14 @@ _returns_description: _
 
 _parameters: ofBaseApp * appPtr_
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -184,7 +230,7 @@ _description: _
 
 //----------------------
 
-##void hideCursor()
+###void hideCursor()
 
 _syntax: hideCursor()_
 
@@ -196,6 +242,14 @@ _returns_description: _
 
 _parameters: _
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -218,7 +272,7 @@ _description: _
 
 //----------------------
 
-##void showCursor()
+###void showCursor()
 
 _syntax: showCursor()_
 
@@ -230,6 +284,14 @@ _returns_description: _
 
 _parameters: _
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -252,7 +314,7 @@ _description: _
 
 //----------------------
 
-##void setWindowPosition(x, y)
+###void setWindowPosition(x, y)
 
 _syntax: setWindowPosition(x, y)_
 
@@ -264,6 +326,14 @@ _returns_description: _
 
 _parameters: int x, int y_
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -286,7 +356,7 @@ _description: _
 
 //----------------------
 
-##void setWindowShape(w, h)
+###void setWindowShape(w, h)
 
 _syntax: setWindowShape(w, h)_
 
@@ -298,6 +368,14 @@ _returns_description: _
 
 _parameters: int w, int h_
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -320,7 +398,7 @@ _description: _
 
 //----------------------
 
-##int getFrameNum()
+###int getFrameNum()
 
 _syntax: getFrameNum()_
 
@@ -332,6 +410,14 @@ _returns_description: _
 
 _parameters: _
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -354,7 +440,7 @@ _description: _
 
 //----------------------
 
-##float getFrameRate()
+###float getFrameRate()
 
 _syntax: getFrameRate()_
 
@@ -366,6 +452,14 @@ _returns_description: _
 
 _parameters: _
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -388,7 +482,7 @@ _description: _
 
 //----------------------
 
-##ofPoint getWindowPosition()
+###ofPoint getWindowPosition()
 
 _syntax: getWindowPosition()_
 
@@ -400,6 +494,14 @@ _returns_description: _
 
 _parameters: _
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -422,7 +524,7 @@ _description: _
 
 //----------------------
 
-##ofPoint getWindowSize()
+###ofPoint getWindowSize()
 
 _syntax: getWindowSize()_
 
@@ -434,6 +536,14 @@ _returns_description: _
 
 _parameters: _
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -456,7 +566,7 @@ _description: _
 
 //----------------------
 
-##ofPoint getScreenSize()
+###ofPoint getScreenSize()
 
 _syntax: getScreenSize()_
 
@@ -468,6 +578,14 @@ _returns_description: _
 
 _parameters: _
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -490,7 +608,7 @@ _description: _
 
 //----------------------
 
-##void setFrameRate(targetRate)
+###void setFrameRate(targetRate)
 
 _syntax: setFrameRate(targetRate)_
 
@@ -502,6 +620,14 @@ _returns_description: _
 
 _parameters: float targetRate_
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -524,7 +650,7 @@ _description: _
 
 //----------------------
 
-##void setWindowTitle(title)
+###void setWindowTitle(title)
 
 _syntax: setWindowTitle(title)_
 
@@ -536,6 +662,14 @@ _returns_description: _
 
 _parameters: string title_
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -558,7 +692,7 @@ _description: _
 
 //----------------------
 
-##int getWindowMode()
+###int getWindowMode()
 
 _syntax: getWindowMode()_
 
@@ -570,6 +704,14 @@ _returns_description: _
 
 _parameters: _
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -592,7 +734,7 @@ _description: _
 
 //----------------------
 
-##void setFullscreen(fullscreen)
+###void setFullscreen(fullscreen)
 
 _syntax: setFullscreen(fullscreen)_
 
@@ -604,6 +746,14 @@ _returns_description: _
 
 _parameters: bool fullscreen_
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -626,7 +776,7 @@ _description: _
 
 //----------------------
 
-##void toggleFullscreen()
+###void toggleFullscreen()
 
 _syntax: toggleFullscreen()_
 
@@ -638,6 +788,14 @@ _returns_description: _
 
 _parameters: _
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -660,7 +818,7 @@ _description: _
 
 //----------------------
 
-##void enableSetupScreen()
+###void enableSetupScreen()
 
 _syntax: enableSetupScreen()_
 
@@ -672,6 +830,14 @@ _returns_description: _
 
 _parameters: _
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -694,7 +860,7 @@ _description: _
 
 //----------------------
 
-##void disableSetupScreen()
+###void disableSetupScreen()
 
 _syntax: disableSetupScreen()_
 
@@ -705,6 +871,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -723,6 +897,12 @@ _description: _
 
 
 
+
+
+
+//----------------------
+
+##Variables
 
 
 

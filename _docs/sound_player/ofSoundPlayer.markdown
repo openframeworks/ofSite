@@ -1,20 +1,26 @@
 #class ofSoundPlayer
 
-Example
+//----------------------
 
-
-
-Reference
-
-
-
-Methods
+##Example
 
 
 
 //----------------------
 
-##void ofSoundPlayer()
+##Reference
+
+
+
+//----------------------
+
+##Methods
+
+
+
+//----------------------
+
+###void ofSoundPlayer()
 
 _syntax: ofSoundPlayer()_
 
@@ -25,6 +31,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -48,7 +62,7 @@ _description: _
 
 //----------------------
 
-##void initializeFmod()
+###void initializeFmod()
 
 _syntax: initializeFmod()_
 
@@ -59,6 +73,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -82,7 +104,7 @@ Initializes fMod. Should only be called once internally.
 
 //----------------------
 
-##void ~ofSoundPlayer()
+###void ~ofSoundPlayer()
 
 _syntax: ~ofSoundPlayer()_
 
@@ -93,6 +115,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -116,7 +146,7 @@ _description: _
 
 //----------------------
 
-##void closeFmod()
+###void closeFmod()
 
 _syntax: closeFmod()_
 
@@ -127,6 +157,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -150,7 +188,7 @@ If Fmod is initialized via initializeFmod we can close it via closeFmod().
 
 //----------------------
 
-##void loadSound(fileName, stream)
+###void loadSound(fileName, stream)
 
 _syntax: loadSound(fileName, stream)_
 
@@ -161,6 +199,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: string fileName, bool stream_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -204,7 +250,7 @@ $$/code
 
 //----------------------
 
-##void unloadSound()
+###void unloadSound()
 
 _syntax: unloadSound()_
 
@@ -215,6 +261,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -248,7 +302,7 @@ $$/code
 
 //----------------------
 
-##void play()
+###void play()
 
 _syntax: play()_
 
@@ -259,6 +313,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -305,7 +367,7 @@ $$/code
 
 //----------------------
 
-##void stop()
+###void stop()
 
 _syntax: stop()_
 
@@ -316,6 +378,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -349,7 +419,7 @@ $$/code
 
 //----------------------
 
-##void setVolume(vol)
+###void setVolume(vol)
 
 _syntax: setVolume(vol)_
 
@@ -360,6 +430,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: float vol_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -393,7 +471,7 @@ $$/code
 
 //----------------------
 
-##void setPan(vol)
+###void setPan(vol)
 
 _syntax: setPan(vol)_
 
@@ -404,6 +482,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: float vol_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -439,7 +525,7 @@ $$/code
 
 //----------------------
 
-##void setSpeed(spd)
+###void setSpeed(spd)
 
 _syntax: setSpeed(spd)_
 
@@ -450,6 +536,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: float spd_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -485,7 +579,7 @@ $$/code
 
 //----------------------
 
-##void setPaused(bP)
+###void setPaused(bP)
 
 _syntax: setPaused(bP)_
 
@@ -496,6 +590,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: bool bP_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -530,7 +632,7 @@ $$/code
 
 //----------------------
 
-##void setLoop(bLp)
+###void setLoop(bLp)
 
 _syntax: setLoop(bLp)_
 
@@ -541,6 +643,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: bool bLp_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -574,7 +684,7 @@ $$/code
 
 //----------------------
 
-##void setMultiPlay(bMp)
+###void setMultiPlay(bMp)
 
 _syntax: setMultiPlay(bMp)_
 
@@ -585,6 +695,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: bool bMp_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -620,7 +738,7 @@ $$/code
 
 //----------------------
 
-##void setPosition(pct)
+###void setPosition(pct)
 
 _syntax: setPosition(pct)_
 
@@ -631,6 +749,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: float pct_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -665,7 +791,7 @@ $$/code
 
 //----------------------
 
-##float getPosition()
+###float getPosition()
 
 _syntax: getPosition()_
 
@@ -676,6 +802,14 @@ _returns: float_
 _returns_description: Returns the current position of the playback-head in the sound. 0.0 - 1.0 range._
 
 _parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -710,7 +844,7 @@ $$/code
 
 //----------------------
 
-##bool getIsPlaying()
+###bool getIsPlaying()
 
 _syntax: getIsPlaying()_
 
@@ -722,6 +856,14 @@ _returns_description: Returns true if sound is currently playing, otherwise retu
 _
 
 _parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -754,7 +896,7 @@ $$/code
 
 //----------------------
 
-##float getSpeed()
+###float getSpeed()
 
 _syntax: getSpeed()_
 
@@ -765,6 +907,14 @@ _returns: float_
 _returns_description: Returns the pan position of the sound. 0.0 - 1.0 range._
 
 _parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -799,7 +949,7 @@ $$/code
 
 //----------------------
 
-##float getPan()
+###float getPan()
 
 _syntax: getPan()_
 
@@ -810,6 +960,14 @@ _returns: float_
 _returns_description: Returns the pan position of the sound. 0.0 - 1.0 range._
 
 _parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -828,6 +986,481 @@ mySound.setPan(0.2f);
 mySound.getPan();//Returns 0.2
 $$/code
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+##Variables
+
+
+
+//----------------------
+
+###bool isStreaming
+
+_name: isStreaming_
+
+_type: bool_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+This boolean variable tells if the sound we are using is streaming or not.
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###bool bMultiPlay
+
+_name: bMultiPlay_
+
+_type: bool_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+Allows a sound to be played multiple times at once. See setMultiPlay(bool bMp) function for more info.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###bool bLoop
+
+_name: bLoop_
+
+_type: bool_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+bLoop variable controls if we are playing the sound as a loop.
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###bool bLoadedOk
+
+_name: bLoadedOk_
+
+_type: bool_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+bLoadedOk is a boolean variable containing true if the sound was successfully loaded.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###bool bPaused
+
+_name: bPaused_
+
+_type: bool_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+bPaused contain true if we pause the sound.
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###float pan
+
+_name: pan_
+
+_type: float_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+Contains the pan position of the sound. Going from 0 to 1.
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###float volume
+
+_name: volume_
+
+_type: float_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+Contains the value of the volume of our sound.
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###float internalFreq
+
+_name: internalFreq_
+
+_type: float_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+Contains the frequency value of the sound. It is set by default to 44100.
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###float speed
+
+_name: speed_
+
+_type: float_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+Contains the playback speed of the sound. 1.0 is the normal speed. 2.0 is double the normal speed, -1 is backwards etc. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###unsigned int length
+
+_name: length_
+
+_type: unsigned int_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###FMOD_RESULT result
+
+_name: result_
+
+_type: FMOD_RESULT_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###FMOD_CHANNEL * channel
+
+_name: channel_
+
+_type: FMOD_CHANNEL *_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###FMOD_SOUND * sound
+
+_name: sound_
+
+_type: FMOD_SOUND *_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
 
 
 

@@ -14,6 +14,27 @@ index = open(docs_root + "/index.markdown",'w')
 db = MySQLdb.connect(host='localhost',user='root',passwd='asdqwe34',db='of_site09')
 adv_groups = docs_group.list_all(db,'core',True)
 
+
+def export_vars(db,clazz_file,clazz):
+    variables = docs_members.list_all_vars(db,clazz.id)
+    for var in variables:
+        index.write(var.name+'\n\n')
+        clazz_file.write("//----------------------\n\n")
+        clazz_file.write( "###" + var.type + " " + var.name + "\n\n")
+        clazz_file.write( '_name: ' + var.name + '_\n\n')
+        clazz_file.write( '_type: ' + var.type + '_\n\n')
+        clazz_file.write( '_access: ' + var.access + '_\n\n')
+        clazz_file.write( '_version_started: ' + var.version_started + '_\n\n')
+        clazz_file.write( '_version_deprecated: ' + var.version_deprecated + '_\n\n')
+        clazz_file.write( '_constant: ' + var.constant + '_\n\n')
+        clazz_file.write( '_summary: _\n\n' )
+        clazz_file.write( '\n\n_description: _\n\n' )
+        if(var.description is not None):
+            clazz_file.write( var.description.replace('[code]','\n$$code(lang=c++)\n').replace('[/code]','\n$$/code\n') + "\n\n")
+        #clazz_file.write("_end " + method.name + "_\n\n")
+        clazz_file.write("\n\n\n\n\n\n\n\n\n\n\n\n")
+        
+        
 def export_methods(db,clazz_file,clazz,advanced):
     methods = docs_members.list_all_methods(db,clazz.id,advanced)
     for method in methods:
@@ -22,15 +43,16 @@ def export_methods(db,clazz_file,clazz,advanced):
         else:
             index.write(method.name+'()\n\n')
         clazz_file.write("//----------------------\n\n")
-        clazz_file.write( "##"+method.returns + " " + method.syntax + "\n\n")
+        clazz_file.write( "###"+method.returns + " " + method.syntax + "\n\n")
         clazz_file.write( '_syntax: ' + method.syntax + '_\n\n')
         clazz_file.write( '_name: ' + method.name + '_\n\n')
         clazz_file.write( '_returns: ' + method.returns + '_\n\n')
-        if(method.returns_description is not None):
-            clazz_file.write( '_returns_description: ' + method.returns_description + '_\n\n')
-        else:
-            clazz_file.write( '_returns_description: _\n\n')
+        clazz_file.write( '_returns_description: ' + method.returns_description + '_\n\n')
         clazz_file.write( '_parameters: ' + method.parameters.replace('<BR/>',', ').replace('<br/>',', ') + '_\n\n')
+        clazz_file.write( '_access: ' + method.access + '_\n\n')
+        clazz_file.write( '_version_started: ' + method.version_started + '_\n\n')
+        clazz_file.write( '_version_deprecated: ' + method.version_deprecated + '_\n\n')
+        clazz_file.write( '_summary: _\n\n' )
         clazz_file.write( '\n\n_description: _\n\n' )
         if(method.description is not None):
             clazz_file.write( method.description.replace('[code]','\n$$code(lang=c++)\n').replace('[/code]','\n$$/code\n') + "\n\n")
@@ -51,12 +73,21 @@ def export_classes(db,group_dir,group,advanced):
         clazz_file.write( '#class ' + clazz.name + "\n\n" )
         
         
-        clazz_file.write( "Example\n\n\n\n" )
-        clazz_file.write( "Reference\n\n\n\n" )
-        clazz_file.write( "Methods\n\n\n\n" )
+        clazz_file.write("//----------------------\n\n")
+        clazz_file.write( "##Example\n\n\n\n" )
+        clazz_file.write("//----------------------\n\n")
+        clazz_file.write( "##Reference\n\n\n\n" )
+        clazz_file.write("//----------------------\n\n")
+        clazz_file.write( "##Methods\n\n\n\n" )
         
         export_methods(db,clazz_file,clazz,False)
         export_methods(db,clazz_file,clazz,True)
+        
+                 
+        index.write('__variables__\n\n')
+        clazz_file.write("//----------------------\n\n")
+        clazz_file.write( "##Variables\n\n\n\n" )
+        export_vars(db,clazz_file,clazz)
 		
         clazz_file.close()	
 

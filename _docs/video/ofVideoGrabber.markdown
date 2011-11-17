@@ -1,20 +1,26 @@
 #class ofVideoGrabber
 
-Example
+//----------------------
 
-
-
-Reference
-
-
-
-Methods
+##Example
 
 
 
 //----------------------
 
-##void ofVideoGrabber()
+##Reference
+
+
+
+//----------------------
+
+##Methods
+
+
+
+//----------------------
+
+###void ofVideoGrabber()
 
 _syntax: ofVideoGrabber()_
 
@@ -26,6 +32,14 @@ _returns_description: _
 
 _parameters: _
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -48,7 +62,7 @@ _description: _
 
 //----------------------
 
-##void ~ofVideoGrabber()
+###void ~ofVideoGrabber()
 
 _syntax: ~ofVideoGrabber()_
 
@@ -60,6 +74,14 @@ _returns_description: _
 
 _parameters: _
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -82,7 +104,7 @@ _description: _
 
 //----------------------
 
-##void listDevices()
+###void listDevices()
 
 _syntax: listDevices()_
 
@@ -93,6 +115,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -116,7 +146,7 @@ Prints to the console a list of available capture devices with the device ID of 
 
 //----------------------
 
-##bool isFrameNew()
+###bool isFrameNew()
 
 _syntax: isFrameNew()_
 
@@ -127,6 +157,14 @@ _returns: bool_
 _returns_description: Returns true, if the current pixels have changed since the last time isFrameNew() was called. _
 
 _parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -150,7 +188,7 @@ _description: _
 
 //----------------------
 
-##void grabFrame()
+###void grabFrame()
 
 _syntax: grabFrame()_
 
@@ -161,6 +199,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -184,7 +230,7 @@ This function should be called regularly (for example, once per update) if you'd
 
 //----------------------
 
-##void close()
+###void close()
 
 _syntax: close()_
 
@@ -195,6 +241,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -218,7 +272,7 @@ Closes the sequence grabber and de-allocates any allocated resources.
 
 //----------------------
 
-##bool initGrabber(w, h, bTexture)
+###bool initGrabber(w, h, bTexture)
 
 _syntax: initGrabber(w, h, bTexture)_
 
@@ -229,6 +283,14 @@ _returns: bool_
 _returns_description: Returns true if the initialization is done successfully and false if not_
 
 _parameters: int w, int h, bool bTexture_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -267,7 +329,7 @@ bTexture variable tells ofVideoGrabber that it should setup a texture so you can
 
 //----------------------
 
-##void videoSettings()
+###void videoSettings()
 
 _syntax: videoSettings()_
 
@@ -278,6 +340,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -301,7 +371,7 @@ Loads the video settings on screen. If your opengl application is full screen, t
 
 //----------------------
 
-##unsigned char * getPixels()
+###unsigned char * getPixels()
 
 _syntax: getPixels()_
 
@@ -312,6 +382,14 @@ _returns: unsigned char *_
 _returns_description: _
 
 _parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -335,7 +413,7 @@ Returns the pointer to the array of pixels that represents the current frame of 
 
 //----------------------
 
-##ofTexture & getTextureReference()
+###ofTexture & getTextureReference()
 
 _syntax: getTextureReference()_
 
@@ -346,6 +424,14 @@ _returns: ofTexture &_
 _returns_description: Returns the ofTexture object that our videoGrabber class is using._
 
 _parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -369,7 +455,7 @@ _description: _
 
 //----------------------
 
-##void setVerbose(bTalkToMe)
+###void setVerbose(bTalkToMe)
 
 _syntax: setVerbose(bTalkToMe)_
 
@@ -380,6 +466,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: bool bTalkToMe_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: 0.06_
+
+_summary: _
 
 
 
@@ -413,7 +507,7 @@ $$/code
 
 //----------------------
 
-##void setDeviceID(_deviceID)
+###void setDeviceID(_deviceID)
 
 _syntax: setDeviceID(_deviceID)_
 
@@ -424,6 +518,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: int _deviceID_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -447,7 +549,7 @@ Choose to capture from a specific capture device specified by _deviceID. Use lis
 
 //----------------------
 
-##void setUseTexture(bUse)
+###void setUseTexture(bUse)
 
 _syntax: setUseTexture(bUse)_
 
@@ -458,6 +560,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: bool bUse_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -489,7 +599,7 @@ $$/code
 
 //----------------------
 
-##void draw(x, y, w, h)
+###void draw(x, y, w, h)
 
 _syntax: draw(x, y, w, h)_
 
@@ -500,6 +610,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: float x, float y, float w, float h_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -523,7 +641,7 @@ Draws the internal texture of the movie grabber class at the position (x,y) with
 
 //----------------------
 
-##void draw(x, y)
+###void draw(x, y)
 
 _syntax: draw(x, y)_
 
@@ -534,6 +652,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: float x, float y_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -557,7 +683,7 @@ Draws the internal texture of the movie grabber class at the position (x,y) with
 
 //----------------------
 
-##void update()
+###void update()
 
 _syntax: update()_
 
@@ -568,6 +694,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -591,7 +725,7 @@ Calls grabframe function.
 
 //----------------------
 
-##float getHeight()
+###float getHeight()
 
 _syntax: getHeight()_
 
@@ -603,6 +737,14 @@ _returns_description: Returns the height of the video grabber._
 
 _parameters: _
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -625,7 +767,7 @@ _description: _
 
 //----------------------
 
-##float getWidth()
+###float getWidth()
 
 _syntax: getWidth()_
 
@@ -637,6 +779,14 @@ _returns_description: Returns the width of the video grabber._
 
 _parameters: _
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -659,7 +809,7 @@ _description: _
 
 //----------------------
 
-##void setAnchorPercent(xPct, yPct)
+###void setAnchorPercent(xPct, yPct)
 
 _syntax: setAnchorPercent(xPct, yPct)_
 
@@ -671,6 +821,14 @@ _returns_description: _
 
 _parameters: float xPct, float yPct_
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -693,7 +851,7 @@ _description: _
 
 //----------------------
 
-##void setAnchorPoint(x, y)
+###void setAnchorPoint(x, y)
 
 _syntax: setAnchorPoint(x, y)_
 
@@ -705,6 +863,14 @@ _returns_description: _
 
 _parameters: int x, int y_
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -727,7 +893,7 @@ _description: _
 
 //----------------------
 
-##void resetAnchor()
+###void resetAnchor()
 
 _syntax: resetAnchor()_
 
@@ -739,11 +905,421 @@ _returns_description: _
 
 _parameters: _
 
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+##Variables
+
+
+
+//----------------------
+
+###int height
+
+_name: height_
+
+_type: int_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+Variable containing the height of the video grabber.
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###bool bChooseDevice
+
+_name: bChooseDevice_
+
+_type: bool_
+
+_access: protected_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###int width
+
+_name: width_
+
+_type: int_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+Variable containing the width of the video grabber.
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###int deviceID
+
+_name: deviceID_
+
+_type: int_
+
+_access: protected_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###bool bUseTexture
+
+_name: bUseTexture_
+
+_type: bool_
+
+_access: protected_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###ofTexture tex
+
+_name: tex_
+
+_type: ofTexture_
+
+_access: protected_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###bool bVerbose
+
+_name: bVerbose_
+
+_type: bool_
+
+_access: protected_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###bool bGrabberInited
+
+_name: bGrabberInited_
+
+_type: bool_
+
+_access: protected_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###unsigned char * pixels
+
+_name: pixels_
+
+_type: unsigned char *_
+
+_access: protected_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###bool bIsFrameNew
+
+_name: bIsFrameNew_
+
+_type: bool_
+
+_access: protected_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###ofUCUtils ucGrabber
+
+_name: ucGrabber_
+
+_type: ofUCUtils_
+
+_access: protected_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
 
 
 

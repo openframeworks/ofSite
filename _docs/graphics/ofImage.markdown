@@ -1,20 +1,26 @@
 #class ofImage
 
-Example
+//----------------------
 
-
-
-Reference
-
-
-
-Methods
+##Example
 
 
 
 //----------------------
 
-##void ofImage()
+##Reference
+
+
+
+//----------------------
+
+##Methods
+
+
+
+//----------------------
+
+###void ofImage()
 
 _syntax: ofImage()_
 
@@ -25,6 +31,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -48,7 +62,7 @@ The constructor. Called when you create the ofImage object. Internal values are 
 
 //----------------------
 
-##bool loadImageIntoPixels(fileName, pix)
+###bool loadImageIntoPixels(fileName, pix)
 
 _syntax: loadImageIntoPixels(fileName, pix)_
 
@@ -59,6 +73,14 @@ _returns: bool_
 _returns_description: _
 
 _parameters: string fileName, ofPixels & pix_
+
+_access: protected_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -82,7 +104,7 @@ _description: _
 
 //----------------------
 
-##void ~ofImage()
+###void ~ofImage()
 
 _syntax: ~ofImage()_
 
@@ -93,6 +115,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -116,7 +146,7 @@ The destructor. Calls clear() which cleans up memory and texture data.
 
 //----------------------
 
-##void saveImageFromPixels(fileName, pix)
+###void saveImageFromPixels(fileName, pix)
 
 _syntax: saveImageFromPixels(fileName, pix)_
 
@@ -127,6 +157,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: string fileName, ofPixels & pix_
+
+_access: protected_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -150,7 +188,7 @@ _description: _
 
 //----------------------
 
-##void allocate(w,h,type)
+###void allocate(w,h,type)
 
 _syntax: allocate(w,h,type)_
 
@@ -161,6 +199,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: int w, int h, int type_
+
+_access: public_
+
+_version_started: 0.01_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -184,7 +230,7 @@ This function allocates an image of width (w) and height (h). The type can be of
 
 //----------------------
 
-##void changeTypeOfPixels(pix, newType)
+###void changeTypeOfPixels(pix, newType)
 
 _syntax: changeTypeOfPixels(pix, newType)_
 
@@ -195,6 +241,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: ofPixels & pix, int newType_
+
+_access: protected_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -218,7 +272,7 @@ _description: _
 
 //----------------------
 
-##void clear()
+###void clear()
 
 _syntax: clear()_
 
@@ -229,6 +283,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: _
+
+_access: public_
+
+_version_started: 0.01_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -252,7 +314,7 @@ Frees pixel data from memory, resets internal variables to default values and cl
 
 //----------------------
 
-##void resizePixels(pix, newWidth, newHeight)
+###void resizePixels(pix, newWidth, newHeight)
 
 _syntax: resizePixels(pix, newWidth, newHeight)_
 
@@ -264,6 +326,14 @@ _returns_description: _
 
 _parameters: ofPixels & pix, int newWidth, int newHeight_
 
+_access: protected_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -286,7 +356,7 @@ _description: _
 
 //----------------------
 
-##FIBITMAP * getBmpFromPixels(pix)
+###FIBITMAP * getBmpFromPixels(pix)
 
 _syntax: getBmpFromPixels(pix)_
 
@@ -298,6 +368,14 @@ _returns_description: _
 
 _parameters: ofPixels & pix_
 
+_access: protected_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
@@ -320,7 +398,7 @@ _description: _
 
 //----------------------
 
-##ofImage & operator=(mom)
+###ofImage & operator=(mom)
 
 _syntax: operator=(mom)_
 
@@ -331,6 +409,14 @@ _returns: ofImage &_
 _returns_description: _
 
 _parameters: const ofImage & mom_
+
+_access: public_
+
+_version_started: 0.06_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -364,7 +450,7 @@ image1 and image2 are now identical.
 
 //----------------------
 
-##void putBmpIntoPixels(bmp, pix)
+###void putBmpIntoPixels(bmp, pix)
 
 _syntax: putBmpIntoPixels(bmp, pix)_
 
@@ -375,6 +461,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: FIBITMAP * bmp, ofPixels & pix_
+
+_access: protected_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -398,7 +492,7 @@ _description: _
 
 //----------------------
 
-##void clone(mom)
+###void clone(mom)
 
 _syntax: clone(mom)_
 
@@ -409,6 +503,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: const ofImage & mom_
+
+_access: public_
+
+_version_started: 0.06_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -442,7 +544,7 @@ image1 and image2 are now identical.
 
 //----------------------
 
-##void allocatePixels(pix, width, height, bpp)
+###void allocatePixels(pix, width, height, bpp)
 
 _syntax: allocatePixels(pix, width, height, bpp)_
 
@@ -453,6 +555,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: ofPixels & pix, int width, int height, int bpp_
+
+_access: protected_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -476,7 +586,7 @@ _description: _
 
 //----------------------
 
-##void setUseTexture(bUse)
+###void setUseTexture(bUse)
 
 _syntax: setUseTexture(bUse)_
 
@@ -487,6 +597,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: bool bUse_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -519,7 +637,7 @@ Since in the majority of cases, ofImages will be loaded in and drawn onscreen, t
 
 //----------------------
 
-##void swapRgb(pix)
+###void swapRgb(pix)
 
 _syntax: swapRgb(pix)_
 
@@ -530,6 +648,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: ofPixels & pix_
+
+_access: protected_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -553,7 +679,7 @@ _description: _
 
 //----------------------
 
-##ofTexture & getTextureReference()
+###ofTexture & getTextureReference()
 
 _syntax: getTextureReference()_
 
@@ -568,6 +694,14 @@ ofTexture & ref = myImage.getTextureReference();
 [/code]_
 
 _parameters: _
+
+_access: public_
+
+_version_started: 0.06_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -591,7 +725,7 @@ Returns a reference to the internal ofTexture.
 
 //----------------------
 
-##bool loadImage(fileName)
+###bool loadImage(fileName)
 
 _syntax: loadImage(fileName)_
 
@@ -602,6 +736,14 @@ _returns: bool_
 _returns_description: Returns true if the image is loaded successfully and false if not. _
 
 _parameters: string fileName_
+
+_access: public_
+
+_version_started: 0.01_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -639,7 +781,7 @@ $$/code
 
 //----------------------
 
-##void saveImage(fileName)
+###void saveImage(fileName)
 
 _syntax: saveImage(fileName)_
 
@@ -650,6 +792,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: string fileName_
+
+_access: public_
+
+_version_started: 0.01_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -690,7 +840,7 @@ $$/code
 
 //----------------------
 
-##unsigned char * getPixels()
+###unsigned char * getPixels()
 
 _syntax: getPixels()_
 
@@ -701,6 +851,14 @@ _returns: unsigned char *_
 _returns_description: The pixels as an array of unsigned chars. NOTE: this is not a copy but the actual pixels of the ofImage. _
 
 _parameters: _
+
+_access: public_
+
+_version_started: 0.01_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -724,7 +882,7 @@ This function will give you access to a continuous block of pixels. you can grab
 
 //----------------------
 
-##void setFromPixels(pixels, w, h, newType, bOrderIsRGB)
+###void setFromPixels(pixels, w, h, newType, bOrderIsRGB)
 
 _syntax: setFromPixels(pixels, w, h, newType, bOrderIsRGB)_
 
@@ -735,6 +893,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: unsigned char * pixels, int w, int h, int newType, bool bOrderIsRGB_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -764,7 +930,7 @@ Note: You do not need to call allocate() before calling setFromPixels() as setFr
 
 //----------------------
 
-##void setImageType(type)
+###void setImageType(type)
 
 _syntax: setImageType(type)_
 
@@ -775,6 +941,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: int type_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -806,7 +980,7 @@ $$/code
 
 //----------------------
 
-##void resize(newWidth, newHeight)
+###void resize(newWidth, newHeight)
 
 _syntax: resize(newWidth, newHeight)_
 
@@ -817,6 +991,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: int newWidth, int newHeight_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -840,7 +1022,7 @@ Resizes the image to a new size (w, h); Can be used to scale up or down an image
 
 //----------------------
 
-##void grabScreen(x, y, w, h)
+###void grabScreen(x, y, w, h)
 
 _syntax: grabScreen(x, y, w, h)_
 
@@ -851,6 +1033,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: int x, int y, int w, int h_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -876,7 +1066,7 @@ Grabs pixels from the opengl window specified by the region (x, y, w, h) and tur
 
 //----------------------
 
-##void update()
+###void update()
 
 _syntax: update()_
 
@@ -887,6 +1077,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: _
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -913,7 +1111,7 @@ Updates the image from its internal pixels. Call this if you have changed the va
 
 //----------------------
 
-##void draw(x, y, w, h)
+###void draw(x, y, w, h)
 
 _syntax: draw(x, y, w, h)_
 
@@ -924,6 +1122,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: float x, float y, float w, float h_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -949,7 +1155,7 @@ Note: x,y typically reefers to the top left corner of the image.  You can change
 
 //----------------------
 
-##void draw(x, y)
+###void draw(x, y)
 
 _syntax: draw(x, y)_
 
@@ -960,6 +1166,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: float x, float y_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -985,7 +1199,7 @@ Note: x,y typically reefers to the top left corner of the image.  You can change
 
 //----------------------
 
-##float getWidth()
+###float getWidth()
 
 _syntax: getWidth()_
 
@@ -996,6 +1210,14 @@ _returns: float_
 _returns_description: The width of the image as a float. If no image is loaded it returns 0.0._
 
 _parameters: _
+
+_access: public_
+
+_version_started: 0.06_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -1019,7 +1241,7 @@ Returns the width of the image.
 
 //----------------------
 
-##float getHeight()
+###float getHeight()
 
 _syntax: getHeight()_
 
@@ -1030,6 +1252,14 @@ _returns: float_
 _returns_description: The height of the image as a float. If no image is loaded it returns 0.0._
 
 _parameters: _
+
+_access: public_
+
+_version_started: 0.06_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -1053,7 +1283,7 @@ Returns the height of the image.
 
 //----------------------
 
-##void ofImage(mom)
+###void ofImage(mom)
 
 _syntax: ofImage(mom)_
 
@@ -1064,6 +1294,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: const ofImage & mom_
+
+_access: public_
+
+_version_started: 0.06_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -1098,7 +1336,7 @@ image1 and image2 are now identical.
 
 //----------------------
 
-##void setAnchorPercent(xPct, yPct)
+###void setAnchorPercent(xPct, yPct)
 
 _syntax: setAnchorPercent(xPct, yPct)_
 
@@ -1109,6 +1347,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: float xPct, float yPct_
+
+_access: public_
+
+_version_started: 0.06_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -1162,7 +1408,7 @@ $$/code
 
 //----------------------
 
-##void setAnchorPoint(x, y)
+###void setAnchorPoint(x, y)
 
 _syntax: setAnchorPoint(x, y)_
 
@@ -1173,6 +1419,14 @@ _returns: void_
 _returns_description: _
 
 _parameters: int x, int y_
+
+_access: public_
+
+_version_started: 0.06_
+
+_version_deprecated: _
+
+_summary: _
 
 
 
@@ -1226,7 +1480,7 @@ $$/code
 
 //----------------------
 
-##void resetAnchor()
+###void resetAnchor()
 
 _syntax: resetAnchor()_
 
@@ -1238,11 +1492,277 @@ _returns_description: _
 
 _parameters: _
 
+_access: public_
+
+_version_started: 0.06_
+
+_version_deprecated: _
+
+_summary: _
+
 
 
 _description: _
 
 Resets the image's anchor to its default position at the top left corner. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+##Variables
+
+
+
+//----------------------
+
+###int width
+
+_name: width_
+
+_type: int_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+width variable contains the width of our ofImage.
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###ofPixels myPixels
+
+_name: myPixels_
+
+_type: ofPixels_
+
+_access: protected_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###int height
+
+_name: height_
+
+_type: int_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+height variable contains the height of our ofImage.
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###int type
+
+_name: type_
+
+_type: int_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+type variable contains information about the kind of image we are using. Possible types are: OF_IMAGE_GRAYSCALE, OF_IMAGE_COLOR, OF_IMAGE_COLOR_ALPHA.
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###bool bUseTexture
+
+_name: bUseTexture_
+
+_type: bool_
+
+_access: protected_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###int bpp
+
+_name: bpp_
+
+_type: int_
+
+_access: public_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
+
+bpp contain the number of bits we need to use for every pixel. It will be 8 for a grayscale image (OF_IMAGE_GRAYSCALE), 24 for a color image (OF_IMAGE_COLOR) and 32 for a color image with alpha channel (OF_IMAGE_COLOR_ALPHA).
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+###ofTexture tex
+
+_name: tex_
+
+_type: ofTexture_
+
+_access: protected_
+
+_version_started: 006_
+
+_version_deprecated: _
+
+_constant: 0_
+
+_summary: _
+
+
+
+_description: _
 
 
 
