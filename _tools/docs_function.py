@@ -13,7 +13,7 @@ def names(db,classid,advanced):
 
 def list_all(db,classid,advanced):
     cursor=db.cursor()
-    sql='SELECT id,name,new FROM docs_functions WHERE linkid=%s and linktable="class" and advanced=%s and visible=1 ORDER BY sortid'
+    sql='SELECT id,name FROM docs_functions WHERE linkid=%s and linktable="class" and advanced=%s and visible=1 ORDER BY sortid'
     cursor.execute(sql,(classid,advanced,))
     functions=cursor.fetchall()
     function_list = []

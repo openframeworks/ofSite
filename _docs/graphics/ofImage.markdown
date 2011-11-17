@@ -14,193 +14,15 @@ Methods
 
 //----------------------
 
-##void resizePixels(ofPixels &pix, int newWidth, int newHeight)
+##void ofImage()
 
-_syntax: resizePixels(ofPixels &pix, int newWidth, int newHeight)_
-
-_name: resizePixels_
-
-_returns: void_
-
-_parameters: int, int_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void allocate(int w, int h, ofImageType type)
-
-_syntax: allocate(int w, int h, ofImageType type)_
-
-_name: allocate_
-
-_returns: void_
-
-_parameters: int, int, _
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##None ofImage(const ofImage &mom)
-
-_syntax: ofImage(const ofImage &mom)_
+_syntax: ofImage()_
 
 _name: ofImage_
 
-_returns: None_
-
-_parameters: const _
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##ofImage operator=(const ofImage &mom)
-
-_syntax: operator=(const ofImage &mom)_
-
-_name: operator=_
-
-_returns: ofImage_
-
-_parameters: const _
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void clone(const ofImage &mom)
-
-_syntax: clone(const ofImage &mom)_
-
-_name: clone_
-
 _returns: void_
 
-_parameters: const _
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void setUseTexture(bool bUse)
-
-_syntax: setUseTexture(bool bUse)_
-
-_name: setUseTexture_
-
-_returns: void_
-
-_parameters: bool_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##bool isUsingTexture()
-
-_syntax: isUsingTexture()_
-
-_name: isUsingTexture_
-
-_returns: bool_
+_returns_description: _
 
 _parameters: _
 
@@ -208,35 +30,7 @@ _parameters: _
 
 _description: _
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void bind()
-
-_syntax: bind()_
-
-_name: bind_
-
-_returns: void_
-
-_parameters: _
-
-
-
-_description: _
+The constructor. Called when you create the ofImage object. Internal values are initialized here. 
 
 
 
@@ -254,859 +48,57 @@ _description: _
 
 //----------------------
 
-##void unbind()
-
-_syntax: unbind()_
-
-_name: unbind_
-
-_returns: void_
-
-_parameters: _
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##bool loadImage(string fileName)
-
-_syntax: loadImage(string fileName)_
-
-_name: loadImage_
-
-_returns: bool_
-
-_parameters: string_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##bool loadImage(const ofBuffer &buffer)
-
-_syntax: loadImage(const ofBuffer &buffer)_
-
-_name: loadImage_
-
-_returns: bool_
-
-_parameters: const _
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void saveImage(string fileName, ofImageQualityType compressionLevel=OF_IMAGE_QUALITY_BEST)
-
-_syntax: saveImage(string fileName, ofImageQualityType compressionLevel=OF_IMAGE_QUALITY_BEST)_
-
-_name: saveImage_
-
-_returns: void_
-
-_parameters: string,  = OF_IMAGE_QUALITY_BEST_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void saveImage(ofBuffer &buffer, ofImageQualityType compressionLevel=OF_IMAGE_QUALITY_BEST)
-
-_syntax: saveImage(ofBuffer &buffer, ofImageQualityType compressionLevel=OF_IMAGE_QUALITY_BEST)_
-
-_name: saveImage_
-
-_returns: void_
-
-_parameters:  = OF_IMAGE_QUALITY_BEST_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void setCompression(ofTexCompression compression)
-
-_syntax: setCompression(ofTexCompression compression)_
-
-_name: setCompression_
-
-_returns: void_
-
-_parameters: _
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##ofPixelsRef getPixelsRef()
-
-_syntax: getPixelsRef()_
-
-_name: getPixelsRef_
-
-_returns: ofPixelsRef_
-
-_parameters: _
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##ofColor getColor(int x, int y) const 
-
-_syntax: getColor(int x, int y) const _
-
-_name: getColor_
-
-_returns: ofColor_
-
-_parameters: int, int_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void setColor(int x, int y, ofColor color)
-
-_syntax: setColor(int x, int y, ofColor color)_
-
-_name: setColor_
-
-_returns: void_
-
-_parameters: int, int, _
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void setFromPixels(unsigned char *pixels, int w, int h, ofImageType type, bool bOrderIsRGB=true)
-
-_syntax: setFromPixels(unsigned char *pixels, int w, int h, ofImageType type, bool bOrderIsRGB=true)_
-
-_name: setFromPixels_
-
-_returns: void_
-
-_parameters: unsigned char *, int, int, , bool = True_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void setImageType(ofImageType type)
-
-_syntax: setImageType(ofImageType type)_
-
-_name: setImageType_
-
-_returns: void_
-
-_parameters: _
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void resize(int newWidth, int newHeight)
-
-_syntax: resize(int newWidth, int newHeight)_
-
-_name: resize_
-
-_returns: void_
-
-_parameters: int, int_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void grabScreen(int x, int y, int w, int h)
-
-_syntax: grabScreen(int x, int y, int w, int h)_
-
-_name: grabScreen_
-
-_returns: void_
-
-_parameters: int, int, int, int_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void crop(int x, int y, int w, int h)
-
-_syntax: crop(int x, int y, int w, int h)_
-
-_name: crop_
-
-_returns: void_
-
-_parameters: int, int, int, int_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void cropFrom(ofImage &otherImage, int x, int y, int w, int h)
-
-_syntax: cropFrom(ofImage &otherImage, int x, int y, int w, int h)_
-
-_name: cropFrom_
-
-_returns: void_
-
-_parameters: int, int, int, int_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void rotate90(int rotation)
-
-_syntax: rotate90(int rotation)_
-
-_name: rotate90_
-
-_returns: void_
-
-_parameters: int_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void mirror(bool vertical, bool horizontal)
-
-_syntax: mirror(bool vertical, bool horizontal)_
-
-_name: mirror_
-
-_returns: void_
-
-_parameters: bool, bool_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void setAnchorPercent(float xPct, float yPct)
-
-_syntax: setAnchorPercent(float xPct, float yPct)_
-
-_name: setAnchorPercent_
-
-_returns: void_
-
-_parameters: float, float_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void setAnchorPoint(float x, float y)
-
-_syntax: setAnchorPoint(float x, float y)_
-
-_name: setAnchorPoint_
-
-_returns: void_
-
-_parameters: float, float_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void draw(const ofRectangle &r)
-
-_syntax: draw(const ofRectangle &r)_
-
-_name: draw_
-
-_returns: void_
-
-_parameters: const _
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void draw(const ofPoint &p, float w, float h)
-
-_syntax: draw(const ofPoint &p, float w, float h)_
-
-_name: draw_
-
-_returns: void_
-
-_parameters: const , float, float_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void draw(float x, float y, float w, float h)
-
-_syntax: draw(float x, float y, float w, float h)_
-
-_name: draw_
-
-_returns: void_
-
-_parameters: float, float, float, float_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void draw(float x, float y, float z, float w, float h)
-
-_syntax: draw(float x, float y, float z, float w, float h)_
-
-_name: draw_
-
-_returns: void_
-
-_parameters: float, float, float, float, float_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void draw(float x, float y)
-
-_syntax: draw(float x, float y)_
-
-_name: draw_
-
-_returns: void_
-
-_parameters: float, float_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void draw(float x, float y, float z)
-
-_syntax: draw(float x, float y, float z)_
-
-_name: draw_
-
-_returns: void_
-
-_parameters: float, float, float_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##bool bAllocated()
-
-_syntax: bAllocated()_
-
-_name: bAllocated_
-
-_returns: bool_
-
-_parameters: _
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void reloadTexture()
-
-_syntax: reloadTexture()_
-
-_name: reloadTexture_
-
-_returns: void_
-
-_parameters: _
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void changeTypeOfPixels(ofPixels &pix, ofImageType type)
-
-_syntax: changeTypeOfPixels(ofPixels &pix, ofImageType type)_
-
-_name: changeTypeOfPixels_
-
-_returns: void_
-
-_parameters: _
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void loadImageIntoPixels(fileName, pix)
+##bool loadImageIntoPixels(fileName, pix)
 
 _syntax: loadImageIntoPixels(fileName, pix)_
 
 _name: loadImageIntoPixels_
 
-_returns: void_
+_returns: bool_
+
+_returns_description: _
 
 _parameters: string fileName, ofPixels & pix_
 
 
 
 _description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+##void ~ofImage()
+
+_syntax: ~ofImage()_
+
+_name: ~ofImage_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: _
+
+
+
+_description: _
+
+The destructor. Calls clear() which cleans up memory and texture data. 
 
 
 
@@ -1132,11 +124,15 @@ _name: saveImageFromPixels_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: string fileName, ofPixels & pix_
 
 
 
 _description: _
+
+
 
 
 
@@ -1162,6 +158,8 @@ _name: allocate_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: int w, int h, int type_
 
 
@@ -1169,6 +167,8 @@ _parameters: int w, int h, int type_
 _description: _
 
 This function allocates an image of width (w) and height (h). The type can be of three types: OF_IMAGE_GRAYSCALE, OF_IMAGE_COLOR, OF_IMAGE_COLOR_ALPHA. You don't need to call this before loading an image, but for when you want to allocate space ahead of when you are going to use the image. 
+
+
 
 
 
@@ -1192,11 +192,15 @@ _name: changeTypeOfPixels_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: ofPixels & pix, int newType_
 
 
 
 _description: _
+
+
 
 
 
@@ -1222,6 +226,8 @@ _name: clear_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: _
 
 
@@ -1230,7 +236,7 @@ _description: _
 
 Frees pixel data from memory, resets internal variables to default values and clears internal texture if it exists. This function is also called by the destructor. 
 
-<br/><br/>return type changed from  to void in 0.07
+
 
 
 
@@ -1254,6 +260,8 @@ _name: resizePixels_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: ofPixels & pix, int newWidth, int newHeight_
 
 
@@ -1274,15 +282,19 @@ _description: _
 
 
 
+
+
 //----------------------
 
-##void getBmpFromPixels(pix)
+##FIBITMAP * getBmpFromPixels(pix)
 
 _syntax: getBmpFromPixels(pix)_
 
 _name: getBmpFromPixels_
 
-_returns: void_
+_returns: FIBITMAP *_
+
+_returns_description: _
 
 _parameters: ofPixels & pix_
 
@@ -1304,15 +316,19 @@ _description: _
 
 
 
+
+
 //----------------------
 
-##void operator=(mom)
+##ofImage & operator=(mom)
 
 _syntax: operator=(mom)_
 
 _name: operator=_
 
-_returns: void_
+_returns: ofImage &_
+
+_returns_description: _
 
 _parameters: const ofImage & mom_
 
@@ -1344,6 +360,8 @@ image1 and image2 are now identical.
 
 
 
+
+
 //----------------------
 
 ##void putBmpIntoPixels(bmp, pix)
@@ -1354,6 +372,8 @@ _name: putBmpIntoPixels_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: FIBITMAP * bmp, ofPixels & pix_
 
 
@@ -1361,34 +381,6 @@ _parameters: FIBITMAP * bmp, ofPixels & pix_
 _description: _
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void allocatePixels(pix, width, height, bpp)
-
-_syntax: allocatePixels(pix, width, height, bpp)_
-
-_name: allocatePixels_
-
-_returns: void_
-
-_parameters: ofPixels & pix, int width, int height, int bpp_
-
-
-
-_description: _
 
 
 
@@ -1413,6 +405,8 @@ _syntax: clone(mom)_
 _name: clone_
 
 _returns: void_
+
+_returns_description: _
 
 _parameters: const ofImage & mom_
 
@@ -1444,6 +438,42 @@ image1 and image2 are now identical.
 
 
 
+
+
+//----------------------
+
+##void allocatePixels(pix, width, height, bpp)
+
+_syntax: allocatePixels(pix, width, height, bpp)_
+
+_name: allocatePixels_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: ofPixels & pix, int width, int height, int bpp_
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //----------------------
 
 ##void setUseTexture(bUse)
@@ -1453,6 +483,8 @@ _syntax: setUseTexture(bUse)_
 _name: setUseTexture_
 
 _returns: void_
+
+_returns_description: _
 
 _parameters: bool bUse_
 
@@ -1483,6 +515,8 @@ Since in the majority of cases, ofImages will be loaded in and drawn onscreen, t
 
 
 
+
+
 //----------------------
 
 ##void swapRgb(pix)
@@ -1492,6 +526,8 @@ _syntax: swapRgb(pix)_
 _name: swapRgb_
 
 _returns: void_
+
+_returns_description: _
 
 _parameters: ofPixels & pix_
 
@@ -1513,15 +549,23 @@ _description: _
 
 
 
+
+
 //----------------------
 
-##ofTexture getTextureReference()
+##ofTexture & getTextureReference()
 
 _syntax: getTextureReference()_
 
 _name: getTextureReference_
 
-_returns: ofTexture_
+_returns: ofTexture &_
+
+_returns_description: A reference to the internal ofTexture. This is for more advanced users who might want to work with the texture directly. Be aware that you are getting the actual internal texture of the ofImage so any changes you make to the texture reference will affect how the ofImage is drawn to the screen. 
+
+[code]
+ofTexture & ref = myImage.getTextureReference(); 
+[/code]_
 
 _parameters: _
 
@@ -1531,7 +575,7 @@ _description: _
 
 Returns a reference to the internal ofTexture.
 
-<br/><br/>return type changed from  to ofTexture in 0.07
+
 
 
 
@@ -1547,13 +591,15 @@ Returns a reference to the internal ofTexture.
 
 //----------------------
 
-##void loadImage(fileName)
+##bool loadImage(fileName)
 
 _syntax: loadImage(fileName)_
 
 _name: loadImage_
 
-_returns: void_
+_returns: bool_
+
+_returns_description: Returns true if the image is loaded successfully and false if not. _
 
 _parameters: string fileName_
 
@@ -1589,6 +635,8 @@ $$/code
 
 
 
+
+
 //----------------------
 
 ##void saveImage(fileName)
@@ -1598,6 +646,8 @@ _syntax: saveImage(fileName)_
 _name: saveImage_
 
 _returns: void_
+
+_returns_description: _
 
 _parameters: string fileName_
 
@@ -1636,6 +686,8 @@ $$/code
 
 
 
+
+
 //----------------------
 
 ##unsigned char * getPixels()
@@ -1646,6 +698,8 @@ _name: getPixels_
 
 _returns: unsigned char *_
 
+_returns_description: The pixels as an array of unsigned chars. NOTE: this is not a copy but the actual pixels of the ofImage. _
+
 _parameters: _
 
 
@@ -1654,7 +708,7 @@ _description: _
 
 This function will give you access to a continuous block of pixels. you can grab the data and do what you like with it. If you have a grayscale image, you will have (width*height) number of pixels. Color images will have (width*height*3) number of pixels (interlaced R,G,B), and coloralpha images will have (width*height*4) number of pixels (interlaced R,G,B,A).
 
-<br/><br/>return type changed from  to unsigned char * in 0.07
+
 
 
 
@@ -1677,6 +731,8 @@ _syntax: setFromPixels(pixels, w, h, newType, bOrderIsRGB)_
 _name: setFromPixels_
 
 _returns: void_
+
+_returns_description: _
 
 _parameters: unsigned char * pixels, int w, int h, int newType, bool bOrderIsRGB_
 
@@ -1704,6 +760,8 @@ Note: You do not need to call allocate() before calling setFromPixels() as setFr
 
 
 
+
+
 //----------------------
 
 ##void setImageType(type)
@@ -1713,6 +771,8 @@ _syntax: setImageType(type)_
 _name: setImageType_
 
 _returns: void_
+
+_returns_description: _
 
 _parameters: int type_
 
@@ -1742,6 +802,8 @@ $$/code
 
 
 
+
+
 //----------------------
 
 ##void resize(newWidth, newHeight)
@@ -1752,6 +814,8 @@ _name: resize_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: int newWidth, int newHeight_
 
 
@@ -1759,6 +823,8 @@ _parameters: int newWidth, int newHeight_
 _description: _
 
 Resizes the image to a new size (w, h); Can be used to scale up or down an image.
+
+
 
 
 
@@ -1782,6 +848,8 @@ _name: grabScreen_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: int x, int y, int w, int h_
 
 
@@ -1789,6 +857,8 @@ _parameters: int x, int y, int w, int h_
 _description: _
 
 Grabs pixels from the opengl window specified by the region (x, y, w, h) and turns them into an image. It resizes or allocates the ofImage if it's necessary.
+
+
 
 
 
@@ -1814,6 +884,8 @@ _name: update_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: _
 
 
@@ -1825,7 +897,7 @@ Updates the image from its internal pixels. Call this if you have changed the va
 
 
 
-<br/><br/>return type changed from  to void in 0.07
+
 
 
 
@@ -1849,6 +921,8 @@ _name: draw_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: float x, float y, float w, float h_
 
 
@@ -1858,6 +932,8 @@ _description: _
 Draws the image (via the internal texture) from point (x,y) with a given width (w) and height (h).
 
 Note: x,y typically reefers to the top left corner of the image.  You can change where on the image the x,y point refers to by using setAnchorPoint() or setAnchorPercent(). 
+
+
 
 
 
@@ -1881,6 +957,8 @@ _name: draw_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: float x, float y_
 
 
@@ -1890,6 +968,8 @@ _description: _
 Draws the image (via the internal texture) from point (x,y) with the image's own width and height.
 
 Note: x,y typically reefers to the top left corner of the image.  You can change where on the image the x,y point refers to by using setAnchorPoint() or setAnchorPercent(). 
+
+
 
 
 
@@ -1913,6 +993,8 @@ _name: getWidth_
 
 _returns: float_
 
+_returns_description: The width of the image as a float. If no image is loaded it returns 0.0._
+
 _parameters: _
 
 
@@ -1921,7 +1003,7 @@ _description: _
 
 Returns the width of the image.
 
-<br/><br/>return type changed from  to float in 0.07
+
 
 
 
@@ -1945,6 +1027,8 @@ _name: getHeight_
 
 _returns: float_
 
+_returns_description: The height of the image as a float. If no image is loaded it returns 0.0._
+
 _parameters: _
 
 
@@ -1953,7 +1037,214 @@ _description: _
 
 Returns the height of the image.
 
-<br/><br/>return type changed from  to float in 0.07
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+##void ofImage(mom)
+
+_syntax: ofImage(mom)_
+
+_name: ofImage_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: const ofImage & mom_
+
+
+
+_description: _
+
+The copy constructor. Pass in another image and it copies it. 
+
+
+$$code(lang=c++)
+image1.loadImage("face.jpg");
+ofImage image2(image1);
+$$/code
+
+
+image1 and image2 are now identical. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+##void setAnchorPercent(xPct, yPct)
+
+_syntax: setAnchorPercent(xPct, yPct)_
+
+_name: setAnchorPercent_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: float xPct, float yPct_
+
+
+
+_description: _
+
+Changes the drawing position specified by draw() from the normal top-left corner of the image to a position specified by xPct and yPct in relation to the dimensions of the image. This can be useful for aligning and centering images as well as rotating an image around its center. 
+
+Note: range of xPct and yPct is 0.0 to 1.0. For xPct, 1.0 represents the width of the image. For yPct, 1.0 represents the height of the image. These values are not capped. 
+
+For example to draw an image so that its center is at 100, 100:
+
+$$code(lang=c++)
+myImage.setAnchorPercent(0.5, 0.5); 
+myImage.draw(100, 100);
+$$/code
+
+
+To rotate an image around its center at 100, 100:
+
+$$code(lang=c++)
+ofPushMatrix();
+  ofTranslate(100, 100, 0);
+  ofRotate(45);
+  myImage.setAnchorPercent(0.5, 0.5); 
+  myImage.draw(0, 0); 
+ofPopMatrix();
+$$/code
+
+
+To align the right side of an image with the right edge of the window:
+
+$$code(lang=c++)
+myImage.setAnchorPercent(1.0, 0.0);
+myImage.draw(ofGetWidth(), 0);
+$$/code
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+##void setAnchorPoint(x, y)
+
+_syntax: setAnchorPoint(x, y)_
+
+_name: setAnchorPoint_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: int x, int y_
+
+
+
+_description: _
+
+Changes the drawing position specified by draw() from the normal top-left corner of the image to a position specified by x and y, measured in pixels. This can be useful for aligning and centering images as well as rotating an image around its center. 
+
+Note: see also setAnchorPercent() if you want to specify the anchor as a percentage of the image size. 
+
+For example to draw an image so that its center is at 100, 100:
+
+$$code(lang=c++)
+myImage.setAnchorPoint(myImage.getWidth()/2, myImage.getHeight()/2); 
+myImage.draw(100, 100);
+$$/code
+
+
+To rotate an image around its center at 100, 100:
+
+$$code(lang=c++)
+ofPushMatrix();
+  ofTranslate(100, 100, 0);
+  ofRotate(45);
+  myImage.setAnchorPercent(myImage.getWidth()/2, myImage.getHeight()/2); 
+  myImage.draw(0, 0); 
+ofPopMatrix();
+$$/code
+
+
+To align the right side of an image with the right edge of the window:
+
+$$code(lang=c++)
+myImage.setAnchorPercent(myImage.getWidth(), 0.0);
+myImage.draw(ofGetWidth(), 0);
+$$/code
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+##void resetAnchor()
+
+_syntax: resetAnchor()_
+
+_name: resetAnchor_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: _
+
+
+
+_description: _
+
+Resets the image's anchor to its default position at the top left corner. 
+
+
 
 
 

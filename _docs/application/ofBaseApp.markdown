@@ -14,259 +14,57 @@ Methods
 
 //----------------------
 
-##void gotMessage(ofMessage msg)
+##void ofBaseApp()
 
-_syntax: gotMessage(ofMessage msg)_
+_syntax: ofBaseApp()_
 
-_name: gotMessage_
-
-_returns: void_
-
-_parameters: ofMessage_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void windowResized(int w, int h)
-
-_syntax: windowResized(int w, int h)_
-
-_name: windowResized_
+_name: ofBaseApp_
 
 _returns: void_
 
-_parameters: int, int_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void keyPressed(int key)
-
-_syntax: keyPressed(int key)_
-
-_name: keyPressed_
-
-_returns: void_
-
-_parameters: int_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void keyReleased(int key)
-
-_syntax: keyReleased(int key)_
-
-_name: keyReleased_
-
-_returns: void_
-
-_parameters: int_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void mouseMoved(int x, int y)
-
-_syntax: mouseMoved(int x, int y)_
-
-_name: mouseMoved_
-
-_returns: void_
-
-_parameters: int, int_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void mouseDragged(int x, int y, int button)
-
-_syntax: mouseDragged(int x, int y, int button)_
-
-_name: mouseDragged_
-
-_returns: void_
-
-_parameters: int, int, int_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void mousePressed(int x, int y, int button)
-
-_syntax: mousePressed(int x, int y, int button)_
-
-_name: mousePressed_
-
-_returns: void_
-
-_parameters: int, int, int_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void mouseReleased(int x, int y, int button)
-
-_syntax: mouseReleased(int x, int y, int button)_
-
-_name: mouseReleased_
-
-_returns: void_
-
-_parameters: int, int, int_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void dragEvent(ofDragInfo dragInfo)
-
-_syntax: dragEvent(ofDragInfo dragInfo)_
-
-_name: dragEvent_
-
-_returns: void_
+_returns_description: _
 
 _parameters: _
 
 
 
 _description: _
+
+The openframeworks engine is contained in the "app" category. The project works, similar to processing, in that you have a base class which extends a class that already exists. In the case of OF, there is a class called "ofBaseApp" which contains various event driven functions. When you create an OF project, you use a main.cpp which is the boot-strap, that kicks off the application and another class, which inherits the properties of ofSimpleApp. Essentially, when you write code in the testApp, you are re-writing already defined functions that exist in OF, such as update, draw, etc. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+##void ~ofBaseApp()
+
+_syntax: ~ofBaseApp()_
+
+_name: ~ofBaseApp_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: _
+
+
+
+_description: _
+
+
 
 
 
@@ -292,6 +90,8 @@ _name: setup_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: _
 
 
@@ -300,7 +100,7 @@ _description: _
 
 This function gets called once, just at the start of the app. It would be a good place, for example, to allocate variables or load in any files. 
 
-<br/><br/>return type changed from  to void in 0.07
+
 
 
 
@@ -323,6 +123,8 @@ _syntax: update()_
 _name: update_
 
 _returns: void_
+
+_returns_description: _
 
 _parameters: _
 
@@ -351,7 +153,7 @@ void draw(){
 $$/code
 
 
-<br/><br/>return type changed from  to void in 0.07
+
 
 
 
@@ -375,6 +177,8 @@ _name: draw_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: _
 
 
@@ -395,7 +199,7 @@ void draw(){
 $$/code
 
 
-<br/><br/>return type changed from  to void in 0.07
+
 
 
 
@@ -419,6 +223,8 @@ _name: exit_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: _
 
 
@@ -427,7 +233,7 @@ _description: _
 
 Add this function to your testApp to have it called at the moment before the app is terminated. This is useful for doing cleanup stuff or making sure files are saved before the app terminates. 
 
-<br/><br/>return type changed from  to void in 0.07
+
 
 
 
@@ -451,6 +257,8 @@ _name: windowResized_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: int w, int h_
 
 
@@ -458,6 +266,8 @@ _parameters: int w, int h_
 _description: _
 
 This function gets called when ever we resize the application window. You receive the new width (w) and the new height (h) of the window.
+
+
 
 
 
@@ -482,6 +292,8 @@ _syntax: keyPressed(key)_
 _name: keyPressed_
 
 _returns: void_
+
+_returns_description: _
 
 _parameters: int key_
 
@@ -521,6 +333,8 @@ There are more complicated character codes, for keys such as F1-F12, Down, Enter
 
 
 
+
+
 //----------------------
 
 ##void keyReleased(key)
@@ -530,6 +344,8 @@ _syntax: keyReleased(key)_
 _name: keyReleased_
 
 _returns: void_
+
+_returns_description: _
 
 _parameters: int key_
 
@@ -566,6 +382,8 @@ There are more complicated character codes, for keys such as F1-F12, Down, Enter
 
 
 
+
+
 //----------------------
 
 ##void mouseMoved(x, y)
@@ -576,6 +394,8 @@ _name: mouseMoved_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: int x, int y_
 
 
@@ -583,6 +403,8 @@ _parameters: int x, int y_
 _description: _
 
 This function gets when ever the mouse moves. You receive the x and y corrdinates of the mouse. 
+
+
 
 
 
@@ -606,6 +428,8 @@ _name: mouseDragged_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: int x, int y, int button_
 
 
@@ -613,6 +437,8 @@ _parameters: int x, int y, int button_
 _description: _
 
 This function gets called when the mouse is moving and the button is down. The button variable can be used to test against left or right button drags. You also receive the x and y corrdinates of the mouse.
+
+
 
 
 
@@ -636,6 +462,8 @@ _name: mousePressed_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: int x, int y, int button_
 
 
@@ -643,6 +471,8 @@ _parameters: int x, int y, int button_
 _description: _
 
 This function gets called when the mouse is pushed down. The button (left, right, center) is passed in, along with the x and y corrdinate. 
+
+
 
 
 
@@ -666,6 +496,8 @@ _name: mouseReleased_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: _
 
 
@@ -674,7 +506,7 @@ _description: _
 
 This function gets called when the mouse is released.
 
-<br/><br/>return type changed from  to void in 0.07
+
 
 
 
@@ -698,6 +530,8 @@ _name: mouseReleased_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: int x, int y, int button_
 
 
@@ -705,6 +539,8 @@ _parameters: int x, int y, int button_
 _description: _
 
 This function gets called when the mouse is released. The button (left, right, center) is passed in, along with the x and y corrdinate. 
+
+
 
 
 
@@ -727,6 +563,8 @@ _syntax: audioReceived(input, bufferSize, nChannels)_
 _name: audioReceived_
 
 _returns: void_
+
+_returns_description: _
 
 _parameters: float * input, int bufferSize, int nChannels_
 
@@ -764,6 +602,8 @@ $$/code
 
 
 
+
+
 //----------------------
 
 ##void audioRequested(output, bufferSize, nChannels)
@@ -774,6 +614,8 @@ _name: audioRequested_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: float * output, int bufferSize, int nChannels_
 
 
@@ -781,6 +623,8 @@ _parameters: float * output, int bufferSize, int nChannels_
 _description: _
 
 If you have setup audio output, via ofSetupAudio, this function will be called when the system needs one buffers worth of audio. Since you may have requested mutli-channel audio (for example, stereo output), you get not only an array of floating point info, also the size of the buffer, and the number of channels. 
+
+
 
 
 

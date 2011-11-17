@@ -14,13 +14,15 @@ Methods
 
 //----------------------
 
-##bool setGrabber(ofBaseVideoGrabber *newGrabber)
+##void ofVideoGrabber()
 
-_syntax: setGrabber(ofBaseVideoGrabber *newGrabber)_
+_syntax: ofVideoGrabber()_
 
-_name: setGrabber_
+_name: ofVideoGrabber_
 
-_returns: bool_
+_returns: void_
+
+_returns_description: _
 
 _parameters: _
 
@@ -42,15 +44,19 @@ _description: _
 
 
 
+
+
 //----------------------
 
-##ofBaseVideoGrabber getGrabber()
+##void ~ofVideoGrabber()
 
-_syntax: getGrabber()_
+_syntax: ~ofVideoGrabber()_
 
-_name: getGrabber_
+_name: ~ofVideoGrabber_
 
-_returns: ofBaseVideoGrabber_
+_returns: void_
+
+_returns_description: _
 
 _parameters: _
 
@@ -59,424 +65,6 @@ _parameters: _
 _description: _
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##bool initGrabber(int w, int h)
-
-_syntax: initGrabber(int w, int h)_
-
-_name: initGrabber_
-
-_returns: bool_
-
-_parameters: int, int_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##bool initGrabber(int w, int h, bool bTexture)
-
-_syntax: initGrabber(int w, int h, bool bTexture)_
-
-_name: initGrabber_
-
-_returns: bool_
-
-_parameters: int, int, bool_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void setPixelFormat(ofPixelFormat pixelFormat)
-
-_syntax: setPixelFormat(ofPixelFormat pixelFormat)_
-
-_name: setPixelFormat_
-
-_returns: void_
-
-_parameters: _
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##ofPixelFormat getPixelFormat()
-
-_syntax: getPixelFormat()_
-
-_name: getPixelFormat_
-
-_returns: ofPixelFormat_
-
-_parameters: _
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##ofPixelsRef getPixelsRef()
-
-_syntax: getPixelsRef()_
-
-_name: getPixelsRef_
-
-_returns: ofPixelsRef_
-
-_parameters: _
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void setVerbose(bool bTalkToMe)
-
-_syntax: setVerbose(bool bTalkToMe)_
-
-_name: setVerbose_
-
-_returns: void_
-
-_parameters: bool_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void setDeviceID(int _deviceID)
-
-_syntax: setDeviceID(int _deviceID)_
-
-_name: setDeviceID_
-
-_returns: void_
-
-_parameters: int_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void setDesiredFrameRate(int framerate)
-
-_syntax: setDesiredFrameRate(int framerate)_
-
-_name: setDesiredFrameRate_
-
-_returns: void_
-
-_parameters: int_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void setUseTexture(bool bUse)
-
-_syntax: setUseTexture(bool bUse)_
-
-_name: setUseTexture_
-
-_returns: void_
-
-_parameters: bool_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void draw(float x, float y, float w, float h)
-
-_syntax: draw(float x, float y, float w, float h)_
-
-_name: draw_
-
-_returns: void_
-
-_parameters: float, float, float, float_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void draw(float x, float y)
-
-_syntax: draw(float x, float y)_
-
-_name: draw_
-
-_returns: void_
-
-_parameters: float, float_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void draw(const ofPoint &p)
-
-_syntax: draw(const ofPoint &p)_
-
-_name: draw_
-
-_returns: void_
-
-_parameters: const _
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void setAnchorPercent(float xPct, float yPct)
-
-_syntax: setAnchorPercent(float xPct, float yPct)_
-
-_name: setAnchorPercent_
-
-_returns: void_
-
-_parameters: float, float_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void setAnchorPoint(float x, float y)
-
-_syntax: setAnchorPoint(float x, float y)_
-
-_name: setAnchorPoint_
-
-_returns: void_
-
-_parameters: float, float_
-
-
-
-_description: _
 
 
 
@@ -502,6 +90,8 @@ _name: listDevices_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: _
 
 
@@ -510,7 +100,7 @@ _description: _
 
 Prints to the console a list of available capture devices with the device ID of each device. The device ID can then be used with setDeviceID() to specify a specific device to capture from.
 
-<br/><br/>return type changed from  to void in 0.07
+
 
 
 
@@ -534,6 +124,8 @@ _name: isFrameNew_
 
 _returns: bool_
 
+_returns_description: Returns true, if the current pixels have changed since the last time isFrameNew() was called. _
+
 _parameters: _
 
 
@@ -542,7 +134,7 @@ _description: _
 
 
 
-<br/><br/>return type changed from  to bool in 0.07
+
 
 
 
@@ -566,6 +158,8 @@ _name: grabFrame_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: _
 
 
@@ -574,7 +168,7 @@ _description: _
 
 This function should be called regularly (for example, once per update) if you'd like to get new data from the sequence grabber. It will idle the video grabbing component so that you get new data.
 
-<br/><br/>return type changed from  to void in 0.07
+
 
 
 
@@ -598,6 +192,8 @@ _name: close_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: _
 
 
@@ -606,7 +202,7 @@ _description: _
 
 Closes the sequence grabber and de-allocates any allocated resources. 
 
-<br/><br/>return type changed from  to void in 0.07
+
 
 
 
@@ -622,13 +218,15 @@ Closes the sequence grabber and de-allocates any allocated resources.
 
 //----------------------
 
-##void initGrabber(w, h, bTexture)
+##bool initGrabber(w, h, bTexture)
 
 _syntax: initGrabber(w, h, bTexture)_
 
 _name: initGrabber_
 
-_returns: void_
+_returns: bool_
+
+_returns_description: Returns true if the initialization is done successfully and false if not_
 
 _parameters: int w, int h, bool bTexture_
 
@@ -665,6 +263,8 @@ bTexture variable tells ofVideoGrabber that it should setup a texture so you can
 
 
 
+
+
 //----------------------
 
 ##void videoSettings()
@@ -675,6 +275,8 @@ _name: videoSettings_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: _
 
 
@@ -683,7 +285,7 @@ _description: _
 
 Loads the video settings on screen. If your opengl application is full screen, this window might appear underneath the main window the first time you call this.
 
-<br/><br/>return type changed from  to void in 0.07
+
 
 
 
@@ -707,6 +309,8 @@ _name: getPixels_
 
 _returns: unsigned char *_
 
+_returns_description: _
+
 _parameters: _
 
 
@@ -715,7 +319,7 @@ _description: _
 
 Returns the pointer to the array of pixels that represents the current frame of live video. the data is stored as RGB, and in an array which is the size: width*height*3.
 
-<br/><br/>return type changed from  to unsigned char * in 0.07
+
 
 
 
@@ -731,13 +335,15 @@ Returns the pointer to the array of pixels that represents the current frame of 
 
 //----------------------
 
-##ofTexture getTextureReference()
+##ofTexture & getTextureReference()
 
 _syntax: getTextureReference()_
 
 _name: getTextureReference_
 
-_returns: ofTexture_
+_returns: ofTexture &_
+
+_returns_description: Returns the ofTexture object that our videoGrabber class is using._
 
 _parameters: _
 
@@ -747,7 +353,7 @@ _description: _
 
 
 
-<br/><br/>return type changed from  to ofTexture in 0.07
+
 
 
 
@@ -770,6 +376,8 @@ _syntax: setVerbose(bTalkToMe)_
 _name: setVerbose_
 
 _returns: void_
+
+_returns_description: _
 
 _parameters: bool bTalkToMe_
 
@@ -801,6 +409,8 @@ $$/code
 
 
 
+
+
 //----------------------
 
 ##void setDeviceID(_deviceID)
@@ -811,6 +421,8 @@ _name: setDeviceID_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: int _deviceID_
 
 
@@ -818,6 +430,8 @@ _parameters: int _deviceID_
 _description: _
 
 Choose to capture from a specific capture device specified by _deviceID. Use listDevices() to see a list of available capture devices and their device IDs.
+
+
 
 
 
@@ -840,6 +454,8 @@ _syntax: setUseTexture(bUse)_
 _name: setUseTexture_
 
 _returns: void_
+
+_returns_description: _
 
 _parameters: bool bUse_
 
@@ -869,6 +485,8 @@ $$/code
 
 
 
+
+
 //----------------------
 
 ##void draw(x, y, w, h)
@@ -879,6 +497,8 @@ _name: draw_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: float x, float y, float w, float h_
 
 
@@ -886,6 +506,8 @@ _parameters: float x, float y, float w, float h_
 _description: _
 
 Draws the internal texture of the movie grabber class at the position (x,y) with the given width (w) and height (h). 
+
+
 
 
 
@@ -909,6 +531,8 @@ _name: draw_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: float x, float y_
 
 
@@ -916,6 +540,8 @@ _parameters: float x, float y_
 _description: _
 
 Draws the internal texture of the movie grabber class at the position (x,y) with the internal width and height of the movie grabber.
+
+
 
 
 
@@ -939,6 +565,8 @@ _name: update_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: _
 
 
@@ -947,7 +575,7 @@ _description: _
 
 Calls grabframe function.
 
-<br/><br/>return type changed from  to void in 0.07
+
 
 
 
@@ -971,6 +599,8 @@ _name: getHeight_
 
 _returns: float_
 
+_returns_description: Returns the height of the video grabber._
+
 _parameters: _
 
 
@@ -979,7 +609,7 @@ _description: _
 
 
 
-<br/><br/>return type changed from  to float in 0.07
+
 
 
 
@@ -1003,6 +633,8 @@ _name: getWidth_
 
 _returns: float_
 
+_returns_description: Returns the width of the video grabber._
+
 _parameters: _
 
 
@@ -1011,7 +643,109 @@ _description: _
 
 
 
-<br/><br/>return type changed from  to float in 0.07
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+##void setAnchorPercent(xPct, yPct)
+
+_syntax: setAnchorPercent(xPct, yPct)_
+
+_name: setAnchorPercent_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: float xPct, float yPct_
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+##void setAnchorPoint(x, y)
+
+_syntax: setAnchorPoint(x, y)_
+
+_name: setAnchorPoint_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: int x, int y_
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+##void resetAnchor()
+
+_syntax: resetAnchor()_
+
+_name: resetAnchor_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: _
+
+
+
+_description: _
+
+
+
+
 
 
 

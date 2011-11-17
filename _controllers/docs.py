@@ -74,6 +74,7 @@ class Method(object):
         self.syntax = None
         self.syntax_resume = None
         self.returns = None
+        self.returns_description = None
         self.description = None
         self.content = None
         self.filters = filters
@@ -83,19 +84,22 @@ class Method(object):
     def __parse(self):        
         src_list = self.source.split('\n')
         metadata = dict()
-        description = self.source[self.source.find('_description: _')+len('_description _')+1:]
+        description = self.source[self.source.rfind('_description: _')+len('_description _')+1:]
         for src in src_list:
            element = src.split(': ')
-           if(len(element)!=2):
+           if(len(element)<2):
                 continue
-                
-           metadata[element[0]] = element[1]
+           element_value = ""
+           for e in element[1:]:       
+               element_value = element_value + e
+           metadata[element[0]] = element_value
         
         try:
             self.name = metadata['_name'][:-1]
             self.parameters = metadata['_parameters'][:-1]
             self.syntax = metadata['_syntax'][:-1]
             self.returns = metadata['_returns'][:-1]
+            self.returns_description = metadata['_returns_description'][:-1]
             
             if(len(self.parameters.split(','))>0):
                 self.syntax_resume = self.name + '(...)'

@@ -14,559 +14,23 @@ Methods
 
 //----------------------
 
-##void sendByte(unsigned char byte)
+##void ofStandardFirmata()
 
-_syntax: sendByte(unsigned char byte)_
+_syntax: ofStandardFirmata()_
 
-_name: sendByte_
-
-_returns: void_
-
-_parameters: unsigned char_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void sendValueAsTwo7bitBytes(int value)
-
-_syntax: sendValueAsTwo7bitBytes(int value)_
-
-_name: sendValueAsTwo7bitBytes_
+_name: ofStandardFirmata_
 
 _returns: void_
 
-_parameters: int_
+_returns_description: _
+
+_parameters: _
 
 
 
 _description: _
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##int getPwm(int pin)
-
-_syntax: getPwm(int pin)_
-
-_name: getPwm_
-
-_returns: int_
-
-_parameters: int_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##int getDigital(int pin)
-
-_syntax: getDigital(int pin)_
-
-_name: getDigital_
-
-_returns: int_
-
-_parameters: int_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##int getAnalog(int pin)
-
-_syntax: getAnalog(int pin)_
-
-_name: getAnalog_
-
-_returns: int_
-
-_parameters: int_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##list< int > * getDigitalHistory(int pin)
-
-_syntax: getDigitalHistory(int pin)_
-
-_name: getDigitalHistory_
-
-_returns: list< int > *_
-
-_parameters: int_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##list< int > * getAnalogHistory(int pin)
-
-_syntax: getAnalogHistory(int pin)_
-
-_name: getAnalogHistory_
-
-_returns: list< int > *_
-
-_parameters: int_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##int getDigitalPinMode(int pin)
-
-_syntax: getDigitalPinMode(int pin)_
-
-_name: getDigitalPinMode_
-
-_returns: int_
-
-_parameters: int_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##int getAnalogPinReporting(int pin)
-
-_syntax: getAnalogPinReporting(int pin)_
-
-_name: getAnalogPinReporting_
-
-_returns: int_
-
-_parameters: int_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##int getValueFromTwo7bitBytes(unsigned char lsb, unsigned char msb)
-
-_syntax: getValueFromTwo7bitBytes(unsigned char lsb, unsigned char msb)_
-
-_name: getValueFromTwo7bitBytes_
-
-_returns: int_
-
-_parameters: unsigned char, unsigned char_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void sendServo(int pin, int value, bool force=false)
-
-_syntax: sendServo(int pin, int value, bool force=false)_
-
-_name: sendServo_
-
-_returns: void_
-
-_parameters: int, int, bool = False_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void sendServoAttach(int pin, int minPulse=544, int maxPulse=2400, int angle=180)
-
-_syntax: sendServoAttach(int pin, int minPulse=544, int maxPulse=2400, int angle=180)_
-
-_name: sendServoAttach_
-
-_returns: void_
-
-_parameters: int, int = 544, int = 2400, int = 180_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void sendServoDetach(int pin)
-
-_syntax: sendServoDetach(int pin)_
-
-_name: sendServoDetach_
-
-_returns: void_
-
-_parameters: int_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##int getServo(int pin)
-
-_syntax: getServo(int pin)_
-
-_name: getServo_
-
-_returns: int_
-
-_parameters: int_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void sendDigitalPinReporting(int pin, int mode)
-
-_syntax: sendDigitalPinReporting(int pin, int mode)_
-
-_name: sendDigitalPinReporting_
-
-_returns: void_
-
-_parameters: int, int_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void sendDigitalPortReporting(int port, int mode)
-
-_syntax: sendDigitalPortReporting(int port, int mode)_
-
-_name: sendDigitalPortReporting_
-
-_returns: void_
-
-_parameters: int, int_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void processData(unsigned char inputData)
-
-_syntax: processData(unsigned char inputData)_
-
-_name: processData_
-
-_returns: void_
-
-_parameters: unsigned char_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void processDigitalPort(int port, unsigned char value)
-
-_syntax: processDigitalPort(int port, unsigned char value)_
-
-_name: processDigitalPort_
-
-_returns: void_
-
-_parameters: int, unsigned char_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void processSysExData(vector< unsigned char > data)
-
-_syntax: processSysExData(vector< unsigned char > data)_
-
-_name: processSysExData_
-
-_returns: void_
-
-_parameters: vector< unsigned char >_
-
-
-
-_description: _
 
 
 
@@ -592,11 +56,51 @@ _name: sendDigitalPinReporting_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: int pin, int mode_
 
 
 
 _description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+##void ofArduino()
+
+_syntax: ofArduino()_
+
+_name: ofArduino_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: _
+
+
+
+_description: _
+
+
+
+
 
 
 
@@ -620,6 +124,8 @@ _name: processSysExData_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: vector< unsigned char > data_
 
 
@@ -638,351 +144,29 @@ _description: _
 
 
 
-//----------------------
-
-##bool connect(string device, int baud=57600)
-
-_syntax: connect(string device, int baud=57600)_
-
-_name: connect_
-
-_returns: bool_
-
-_parameters: string, int = 57600_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
 
 
 
 
 //----------------------
 
-##void setUseDelay(bool bDelay)
+##void ~ofStandardFirmata()
 
-_syntax: setUseDelay(bool bDelay)_
+_syntax: ~ofStandardFirmata()_
 
-_name: setUseDelay_
+_name: ~ofStandardFirmata_
 
 _returns: void_
 
-_parameters: bool_
+_returns_description: _
+
+_parameters: _
 
 
 
 _description: _
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void setDigitalHistoryLength(int length)
-
-_syntax: setDigitalHistoryLength(int length)_
-
-_name: setDigitalHistoryLength_
-
-_returns: void_
-
-_parameters: int_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void setAnalogHistoryLength(int length)
-
-_syntax: setAnalogHistoryLength(int length)_
-
-_name: setAnalogHistoryLength_
-
-_returns: void_
-
-_parameters: int_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void setStringHistoryLength(int length)
-
-_syntax: setStringHistoryLength(int length)_
-
-_name: setStringHistoryLength_
-
-_returns: void_
-
-_parameters: int_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void setSysExHistoryLength(int nSysEx)
-
-_syntax: setSysExHistoryLength(int nSysEx)_
-
-_name: setSysExHistoryLength_
-
-_returns: void_
-
-_parameters: int_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void sendDigitalPinMode(int pin, int mode)
-
-_syntax: sendDigitalPinMode(int pin, int mode)_
-
-_name: sendDigitalPinMode_
-
-_returns: void_
-
-_parameters: int, int_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void sendAnalogPinReporting(int pin, int mode)
-
-_syntax: sendAnalogPinReporting(int pin, int mode)_
-
-_name: sendAnalogPinReporting_
-
-_returns: void_
-
-_parameters: int, int_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void sendDigital(int pin, int value, bool force=false)
-
-_syntax: sendDigital(int pin, int value, bool force=false)_
-
-_name: sendDigital_
-
-_returns: void_
-
-_parameters: int, int, bool = False_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void sendPwm(int pin, int value, bool force=false)
-
-_syntax: sendPwm(int pin, int value, bool force=false)_
-
-_name: sendPwm_
-
-_returns: void_
-
-_parameters: int, int, bool = False_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void sendSysEx(int command, vector< unsigned char > data)
-
-_syntax: sendSysEx(int command, vector< unsigned char > data)_
-
-_name: sendSysEx_
-
-_returns: void_
-
-_parameters: int, vector< unsigned char >_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void sendString(string str)
-
-_syntax: sendString(string str)_
-
-_name: sendString_
-
-_returns: void_
-
-_parameters: string_
-
-
-
-_description: _
 
 
 
@@ -1008,6 +192,8 @@ _name: sendDigitalPortReporting_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: int port, int mode_
 
 
@@ -1026,21 +212,65 @@ _description: _
 
 
 
+
+
+
+
 //----------------------
 
-##void connect(device, baud)
+##void ~ofArduino()
+
+_syntax: ~ofArduino()_
+
+_name: ~ofArduino_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: _
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+##int connect(device, baud)
 
 _syntax: connect(device, baud)_
 
 _name: connect_
 
-_returns: void_
+_returns: int_
+
+_returns_description: _
 
 _parameters: string device, int baud_
 
 
 
 _description: _
+
+
+
+
 
 
 
@@ -1064,6 +294,8 @@ _name: processData_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: unsigned char inputData_
 
 
@@ -1082,21 +314,31 @@ _description: _
 
 
 
+
+
+
+
 //----------------------
 
-##void connect(device, baud)
+##int connect(device, baud)
 
 _syntax: connect(device, baud)_
 
 _name: connect_
 
-_returns: void_
+_returns: int_
+
+_returns_description: _
 
 _parameters: string device, int baud_
 
 
 
 _description: _
+
+
+
+
 
 
 
@@ -1120,15 +362,17 @@ _name: disconnect_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: _
 
 
 
 _description: _
 
-None
 
-<br/><br/>return type changed from  to void in 0.07
+
+
 
 
 
@@ -1152,11 +396,17 @@ _name: processDigitalPort_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: int port, unsigned char value_
 
 
 
 _description: _
+
+
+
+
 
 
 
@@ -1180,15 +430,17 @@ _name: isArduinoReady_
 
 _returns: bool_
 
+_returns_description: _
+
 _parameters: _
 
 
 
 _description: _
 
-None
 
-<br/><br/>return type changed from  to bool in 0.07
+
+
 
 
 
@@ -1212,15 +464,17 @@ _name: update_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: _
 
 
 
 _description: _
 
-None
 
-<br/><br/>return type changed from  to void in 0.07
+
+
 
 
 
@@ -1244,11 +498,17 @@ _name: processSysExData_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: vector< unsigned char > data_
 
 
 
 _description: _
+
+
+
+
 
 
 
@@ -1272,11 +532,17 @@ _name: setUseDelay_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: bool bDelay_
 
 
 
 _description: _
+
+
+
+
 
 
 
@@ -1300,15 +566,17 @@ _name: isInitialized_
 
 _returns: bool_
 
+_returns_description: _
+
 _parameters: _
 
 
 
 _description: _
 
-None
 
-<br/><br/>return type changed from  to bool in 0.07
+
+
 
 
 
@@ -1332,11 +600,17 @@ _name: sendDigitalPinMode_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: int pin, int mode_
 
 
 
 _description: _
+
+
+
+
 
 
 
@@ -1360,11 +634,17 @@ _name: sendAnalogPinReporting_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: int pin, int mode_
 
 
 
 _description: _
+
+
+
+
 
 
 
@@ -1388,11 +668,17 @@ _name: sendDigital_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: int pin, int value, bool force_
 
 
 
 _description: _
+
+
+
+
 
 
 
@@ -1416,11 +702,17 @@ _name: sendPwm_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: int pin, int value, bool force_
 
 
 
 _description: _
+
+
+
+
 
 
 
@@ -1444,11 +736,17 @@ _name: sendString_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: string str_
 
 
 
 _description: _
+
+
+
+
 
 
 
@@ -1472,15 +770,17 @@ _name: sendReset_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: _
 
 
 
 _description: _
 
-None
 
-<br/><br/>return type changed from  to void in 0.07
+
+
 
 
 
@@ -1504,6 +804,8 @@ _name: sendByte_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: unsigned char byte_
 
 
@@ -1522,15 +824,21 @@ _description: _
 
 
 
+
+
+
+
 //----------------------
 
-##void getPwm(pin)
+##int getPwm(pin)
 
 _syntax: getPwm(pin)_
 
 _name: getPwm_
 
-_returns: void_
+_returns: int_
+
+_returns_description: _
 
 _parameters: int pin_
 
@@ -1550,21 +858,31 @@ _description: _
 
 
 
+
+
+
+
 //----------------------
 
-##void getDigital(pin)
+##int getDigital(pin)
 
 _syntax: getDigital(pin)_
 
 _name: getDigital_
 
-_returns: void_
+_returns: int_
+
+_returns_description: _
 
 _parameters: int pin_
 
 
 
 _description: _
+
+
+
+
 
 
 
@@ -1580,19 +898,25 @@ _description: _
 
 //----------------------
 
-##void getAnalog(pin)
+##int getAnalog(pin)
 
 _syntax: getAnalog(pin)_
 
 _name: getAnalog_
 
-_returns: void_
+_returns: int_
+
+_returns_description: _
 
 _parameters: int pin_
 
 
 
 _description: _
+
+
+
+
 
 
 
@@ -1616,15 +940,17 @@ _name: getString_
 
 _returns: string_
 
+_returns_description: _
+
 _parameters: _
 
 
 
 _description: _
 
-None
 
-<br/><br/>return type changed from  to string in 0.07
+
+
 
 
 
@@ -1640,19 +966,25 @@ None
 
 //----------------------
 
-##void getDigitalPinMode(pin)
+##int getDigitalPinMode(pin)
 
 _syntax: getDigitalPinMode(pin)_
 
 _name: getDigitalPinMode_
 
-_returns: void_
+_returns: int_
+
+_returns_description: _
 
 _parameters: int pin_
 
 
 
 _description: _
+
+
+
+
 
 
 
@@ -1668,19 +1000,875 @@ _description: _
 
 //----------------------
 
-##void getAnalogPinReporting(pin)
+##int getAnalogPinReporting(pin)
 
 _syntax: getAnalogPinReporting(pin)_
 
 _name: getAnalogPinReporting_
 
-_returns: void_
+_returns: int_
+
+_returns_description: _
 
 _parameters: int pin_
 
 
 
 _description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+##void sendServo(pin, value, force)
+
+_syntax: sendServo(pin, value, force)_
+
+_name: sendServo_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: int pin, int value, bool force_
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+##void setDigitalHistoryLength(length)
+
+_syntax: setDigitalHistoryLength(length)_
+
+_name: setDigitalHistoryLength_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: int length_
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+##void sendServoAttach(pin, minPulse, maxPulse, angle)
+
+_syntax: sendServoAttach(pin, minPulse, maxPulse, angle)_
+
+_name: sendServoAttach_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: int pin, int minPulse, int maxPulse, int angle_
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+##void setAnalogHistoryLength(length)
+
+_syntax: setAnalogHistoryLength(length)_
+
+_name: setAnalogHistoryLength_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: int length_
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+##void sendServoDetach(pin)
+
+_syntax: sendServoDetach(pin)_
+
+_name: sendServoDetach_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: int pin_
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+##void setStringHistoryLength(length)
+
+_syntax: setStringHistoryLength(length)_
+
+_name: setStringHistoryLength_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: int length_
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+##int getServo(pin)
+
+_syntax: getServo(pin)_
+
+_name: getServo_
+
+_returns: int_
+
+_returns_description: _
+
+_parameters: int pin_
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+##void setSysExHistoryLength(nSysEx)
+
+_syntax: setSysExHistoryLength(nSysEx)_
+
+_name: setSysExHistoryLength_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: int nSysEx_
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+##void sendSysEx(command, data)
+
+_syntax: sendSysEx(command, data)_
+
+_name: sendSysEx_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: int command, vector< unsigned char > data_
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+##void sendProtocolVersionRequest()
+
+_syntax: sendProtocolVersionRequest()_
+
+_name: sendProtocolVersionRequest_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: _
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+##void sendFirmwareVersionRequest()
+
+_syntax: sendFirmwareVersionRequest()_
+
+_name: sendFirmwareVersionRequest_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: _
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+##void sendSysExBegin()
+
+_syntax: sendSysExBegin()_
+
+_name: sendSysExBegin_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: _
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+##void sendSysExEnd()
+
+_syntax: sendSysExEnd()_
+
+_name: sendSysExEnd_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: _
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+##void sendValueAsTwo7bitBytes(value)
+
+_syntax: sendValueAsTwo7bitBytes(value)_
+
+_name: sendValueAsTwo7bitBytes_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: int value_
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+##vector< unsigned char > getSysEx()
+
+_syntax: getSysEx()_
+
+_name: getSysEx_
+
+_returns: vector< unsigned char >_
+
+_returns_description: _
+
+_parameters: _
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+##int getMajorProtocolVersion()
+
+_syntax: getMajorProtocolVersion()_
+
+_name: getMajorProtocolVersion_
+
+_returns: int_
+
+_returns_description: _
+
+_parameters: _
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+##int getMinorProtocolVersion()
+
+_syntax: getMinorProtocolVersion()_
+
+_name: getMinorProtocolVersion_
+
+_returns: int_
+
+_returns_description: _
+
+_parameters: _
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+##int getMajorFirmwareVersion()
+
+_syntax: getMajorFirmwareVersion()_
+
+_name: getMajorFirmwareVersion_
+
+_returns: int_
+
+_returns_description: _
+
+_parameters: _
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+##int getMinorFirmwareVersion()
+
+_syntax: getMinorFirmwareVersion()_
+
+_name: getMinorFirmwareVersion_
+
+_returns: int_
+
+_returns_description: _
+
+_parameters: _
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+##string getFirmwareName()
+
+_syntax: getFirmwareName()_
+
+_name: getFirmwareName_
+
+_returns: string_
+
+_returns_description: _
+
+_parameters: _
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+##list< int > * getDigitalHistory(pin)
+
+_syntax: getDigitalHistory(pin)_
+
+_name: getDigitalHistory_
+
+_returns: list< int > *_
+
+_returns_description: _
+
+_parameters: int pin_
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+##list< int > * getAnalogHistory(pin)
+
+_syntax: getAnalogHistory(pin)_
+
+_name: getAnalogHistory_
+
+_returns: list< int > *_
+
+_returns_description: _
+
+_parameters: int pin_
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+##list< vector< unsigned char > > * getSysExHistory()
+
+_syntax: getSysExHistory()_
+
+_name: getSysExHistory_
+
+_returns: list< vector< unsigned char > > *_
+
+_returns_description: _
+
+_parameters: _
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+##list< string > * getStringHistory()
+
+_syntax: getStringHistory()_
+
+_name: getStringHistory_
+
+_returns: list< string > *_
+
+_returns_description: _
+
+_parameters: _
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+##int getValueFromTwo7bitBytes(lsb, msb)
+
+_syntax: getValueFromTwo7bitBytes(lsb, msb)_
+
+_name: getValueFromTwo7bitBytes_
+
+_returns: int_
+
+_returns_description: _
+
+_parameters: unsigned char lsb, unsigned char msb_
+
+
+
+_description: _
+
+
+
+
 
 
 

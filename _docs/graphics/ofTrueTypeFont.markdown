@@ -14,73 +14,15 @@ Methods
 
 //----------------------
 
-##void loadFont(string filename, int fontsize, bool _bAntiAliased=true, bool _bFullCharacterSet=false, bool makeContours=false, bool simplifyAmt=0.3)
+##void ofTrueTypeFont()
 
-_syntax: loadFont(string filename, int fontsize, bool _bAntiAliased=true, bool _bFullCharacterSet=false, bool makeContours=false, bool simplifyAmt=0.3)_
+_syntax: ofTrueTypeFont()_
 
-_name: loadFont_
-
-_returns: void_
-
-_parameters: string, int, bool = True, bool = False, bool = False, bool = 0.3_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void setLineHeight(float height)
-
-_syntax: setLineHeight(float height)_
-
-_name: setLineHeight_
+_name: ofTrueTypeFont_
 
 _returns: void_
 
-_parameters: float_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##float getLetterSpacing()
-
-_syntax: getLetterSpacing()_
-
-_name: getLetterSpacing_
-
-_returns: float_
+_returns_description: _
 
 _parameters: _
 
@@ -89,424 +31,6 @@ _parameters: _
 _description: _
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void setLetterSpacing(float spacing)
-
-_syntax: setLetterSpacing(float spacing)_
-
-_name: setLetterSpacing_
-
-_returns: void_
-
-_parameters: float_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##float getSpaceSize()
-
-_syntax: getSpaceSize()_
-
-_name: getSpaceSize_
-
-_returns: float_
-
-_parameters: _
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void setSpaceSize(float size)
-
-_syntax: setSpaceSize(float size)_
-
-_name: setSpaceSize_
-
-_returns: void_
-
-_parameters: float_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##float stringWidth(string s)
-
-_syntax: stringWidth(string s)_
-
-_name: stringWidth_
-
-_returns: float_
-
-_parameters: string_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##float stringHeight(string s)
-
-_syntax: stringHeight(string s)_
-
-_name: stringHeight_
-
-_returns: float_
-
-_parameters: string_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##ofRectangle getStringBoundingBox(string s, float x, float y)
-
-_syntax: getStringBoundingBox(string s, float x, float y)_
-
-_name: getStringBoundingBox_
-
-_returns: ofRectangle_
-
-_parameters: string, float, float_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void drawString(string s, float x, float y)
-
-_syntax: drawString(string s, float x, float y)_
-
-_name: drawString_
-
-_returns: void_
-
-_parameters: string, float, float_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void drawStringAsShapes(string s, float x, float y)
-
-_syntax: drawStringAsShapes(string s, float x, float y)_
-
-_name: drawStringAsShapes_
-
-_returns: void_
-
-_parameters: string, float, float_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##ofTTFCharacter getCharacterAsPoints(int character)
-
-_syntax: getCharacterAsPoints(int character)_
-
-_name: getCharacterAsPoints_
-
-_returns: ofTTFCharacter_
-
-_parameters: int_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void drawChar(int c, float x, float y)
-
-_syntax: drawChar(int c, float x, float y)_
-
-_name: drawChar_
-
-_returns: void_
-
-_parameters: int, float, float_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void drawCharAsShape(int c, float x, float y)
-
-_syntax: drawCharAsShape(int c, float x, float y)_
-
-_name: drawCharAsShape_
-
-_returns: void_
-
-_parameters: int, float, float_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##int ofNextPow2(int a)
-
-_syntax: ofNextPow2(int a)_
-
-_name: ofNextPow2_
-
-_returns: int_
-
-_parameters: int_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void unloadTextures()
-
-_syntax: unloadTextures()_
-
-_name: unloadTextures_
-
-_returns: void_
-
-_parameters: _
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void reloadTextures()
-
-_syntax: reloadTextures()_
-
-_name: reloadTextures_
-
-_returns: void_
-
-_parameters: _
-
-
-
-_description: _
 
 
 
@@ -532,11 +56,51 @@ _name: drawChar_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: int c, float x, float y_
 
 
 
 _description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+##void ~ofTrueTypeFont()
+
+_syntax: ~ofTrueTypeFont()_
+
+_name: ~ofTrueTypeFont_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: _
+
+
+
+_description: _
+
+
+
+
 
 
 
@@ -560,11 +124,17 @@ _name: drawCharAsShape_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: int c, float x, float y_
 
 
 
 _description: _
+
+
+
+
 
 
 
@@ -587,6 +157,8 @@ _syntax: loadFont(filename, fontsize)_
 _name: loadFont_
 
 _returns: void_
+
+_returns_description: _
 
 _parameters: string filename, int fontsize_
 
@@ -621,21 +193,29 @@ $$/code
 
 
 
+
+
 //----------------------
 
-##void ofNextPow2(a)
+##int ofNextPow2(a)
 
 _syntax: ofNextPow2(a)_
 
 _name: ofNextPow2_
 
-_returns: void_
+_returns: int_
+
+_returns_description: _
 
 _parameters: int a_
 
 
 
 _description: _
+
+
+
+
 
 
 
@@ -659,6 +239,8 @@ _name: loadFont_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: string filename, int fontsize, bool _bAntiAliased, bool _bFullCharacterSet, bool makeContours_
 
 
@@ -666,6 +248,8 @@ _parameters: string filename, int fontsize, bool _bAntiAliased, bool _bFullChara
 _description: _
 
 This loads a font, but in addition to setting the font name and size, you can also pass in two flags: is this font antiAliased, and does it include the full character set?
+
+
 
 
 
@@ -689,6 +273,8 @@ _name: getLineHeight_
 
 _returns: float_
 
+_returns_description: Returns a float, which is the line height for the type face._
+
 _parameters: _
 
 
@@ -697,7 +283,7 @@ _description: _
 
 The line height is computed, based on the font size, and can be adjusted. Useful if you are print multi-line text.
 
-<br/><br/>return type changed from  to float in 0.07
+
 
 
 
@@ -721,6 +307,8 @@ _name: setLineHeight_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: float height_
 
 
@@ -741,15 +329,19 @@ Sets the line height for text that is drawn on screen.
 
 
 
+
+
 //----------------------
 
-##void stringWidth(s)
+##float stringWidth(s)
 
 _syntax: stringWidth(s)_
 
 _name: stringWidth_
 
-_returns: void_
+_returns: float_
+
+_returns_description: Returns this width, in pixels, for a given string drawn with that typeface._
 
 _parameters: string s_
 
@@ -771,15 +363,19 @@ _description: _
 
 
 
+
+
 //----------------------
 
-##void stringHeight(s)
+##float stringHeight(s)
 
 _syntax: stringHeight(s)_
 
 _name: stringHeight_
 
-_returns: void_
+_returns: float_
+
+_returns_description: Returns the height, in pixels, for a given string drawn with that typeface._
 
 _parameters: string s_
 
@@ -801,15 +397,19 @@ _description: _
 
 
 
+
+
 //----------------------
 
-##void getStringBoundingBox(s, x, y)
+##ofRectangle getStringBoundingBox(s, x, y)
 
 _syntax: getStringBoundingBox(s, x, y)_
 
 _name: getStringBoundingBox_
 
-_returns: void_
+_returns: ofRectangle_
+
+_returns_description: Returns an ofRectangle wich is the Bounding Box containing our TrueTypeFont This rectangle depends on the TruTypeFont size._
 
 _parameters: string s, float x, float y_
 
@@ -850,6 +450,8 @@ $$/code
 
 
 
+
+
 //----------------------
 
 ##void drawString(s, x, y)
@@ -859,6 +461,8 @@ _syntax: drawString(s, x, y)_
 _name: drawString_
 
 _returns: void_
+
+_returns_description: _
 
 _parameters: string s, float x, float y_
 
@@ -913,6 +517,8 @@ $$/code
 
 
 
+
+
 //----------------------
 
 ##void drawStringAsShapes(s, x, y)
@@ -923,6 +529,8 @@ _name: drawStringAsShapes_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: string s, float x, float y_
 
 
@@ -930,6 +538,42 @@ _parameters: string s, float x, float y_
 _description: _
 
 drawStringAsShapes function draws the s string as if it was a geometrical shapes using the information contained in ofTTFContour and ofTTFCharacter. Parameters x and y sets the position of the shape.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+##ofTTFCharacter getCharacterAsPoints(character)
+
+_syntax: getCharacterAsPoints(character)_
+
+_name: getCharacterAsPoints_
+
+_returns: ofTTFCharacter_
+
+_returns_description: Returns ofTTFCharacter object used by ofTrueTypeFont. Basically contains geometrical information of ofPoints that define diferent ofTrueTypeFont content (strings with a certain format). _
+
+_parameters: int character_
+
+
+
+_description: _
+
+
+
+
 
 
 

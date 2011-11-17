@@ -22,11 +22,17 @@ _name: ~ofPoint_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: _
 
 
 
 _description: _
+
+
+
+
 
 
 
@@ -50,11 +56,17 @@ _name: ofPoint_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: float _x, float _y, float _z_
 
 
 
 _description: _
+
+
+
+
 
 
 
@@ -78,11 +90,17 @@ _name: ofPoint_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: const ofPoint & pnt_
 
 
 
 _description: _
+
+
+
+
 
 
 
@@ -105,6 +123,8 @@ _syntax: set(_x, _y, _z)_
 _name: set_
 
 _returns: void_
+
+_returns_description: _
 
 _parameters: float _x, float _y, float _z_
 
@@ -137,15 +157,19 @@ now firstpoint = (100,230,50)
 
 
 
+
+
 //----------------------
 
-##void operator-()
+##ofPoint operator-()
 
 _syntax: operator-()_
 
 _name: operator-_
 
-_returns: void_
+_returns: ofPoint_
+
+_returns_description: Returns the point with its components with different sign._
 
 _parameters: _
 
@@ -178,15 +202,19 @@ Now p=(-10,-5,3)
 
 
 
+
+
 //----------------------
 
-##void operator==(pnt)
+##bool operator==(pnt)
 
 _syntax: operator==(pnt)_
 
 _name: operator==_
 
-_returns: void_
+_returns: bool_
+
+_returns_description: Return true if both points are equal and false if not._
 
 _parameters: const ofPoint & pnt_
 
@@ -222,15 +250,19 @@ After this equal=false;
 
 
 
+
+
 //----------------------
 
-##void operator!=(pnt)
+##bool operator!=(pnt)
 
 _syntax: operator!=(pnt)_
 
 _name: operator!=_
 
-_returns: void_
+_returns: bool_
+
+_returns_description: Returns true if two points are different and false if not._
 
 _parameters: const ofPoint & pnt_
 
@@ -266,15 +298,19 @@ After this dif=true;
 
 
 
+
+
 //----------------------
 
-##void operator=(pnt)
+##ofPoint & operator=(pnt)
 
 _syntax: operator=(pnt)_
 
 _name: operator=_
 
-_returns: void_
+_returns: ofPoint &_
+
+_returns_description: Returns ofPoint pnt as a ofPoint object._
 
 _parameters: const ofPoint & pnt_
 
@@ -308,15 +344,19 @@ p1 and p2 are now identical.
 
 
 
+
+
 //----------------------
 
-##void operator=(val)
+##ofPoint & operator=(val)
 
 _syntax: operator=(val)_
 
 _name: operator=_
 
-_returns: void_
+_returns: ofPoint &_
+
+_returns_description: An ofPoint object where x, y and z components are set to val _
 
 _parameters: const float & val_
 
@@ -351,15 +391,19 @@ After this p1=(5.3,5.3,5.3);
 
 
 
+
+
 //----------------------
 
-##void operator+(pnt)
+##ofPoint operator+(pnt)
 
 _syntax: operator+(pnt)_
 
 _name: operator+_
 
-_returns: void_
+_returns: ofPoint_
+
+_returns_description: Returns an ofPoint object containing the result of the addition of two ofPoints._
 
 _parameters: const ofPoint & pnt_
 
@@ -396,15 +440,19 @@ After this result=(3,3,3)
 
 
 
+
+
 //----------------------
 
-##void operator+(val)
+##ofPoint operator+(val)
 
 _syntax: operator+(val)_
 
 _name: operator+_
 
-_returns: void_
+_returns: ofPoint_
+
+_returns_description: Returns an ofPoint where their components x,y and z are the addition of the point component and val. _
 
 _parameters: const float & val_
 
@@ -437,15 +485,19 @@ Now p1=(p1x+5,p1y+5,p1z+5)
 
 
 
+
+
 //----------------------
 
-##void operator+=(pnt)
+##ofPoint & operator+=(pnt)
 
 _syntax: operator+=(pnt)_
 
 _name: operator+=_
 
-_returns: void_
+_returns: ofPoint &_
+
+_returns_description: Return an ofPoint containing the result operation._
 
 _parameters: const ofPoint & pnt_
 
@@ -477,15 +529,19 @@ Now p1=(p1x+p2x,p1y+p2y,p1z+p2z);
 
 
 
+
+
 //----------------------
 
-##void operator+=(val)
+##ofPoint & operator+=(val)
 
 _syntax: operator+=(val)_
 
 _name: operator+=_
 
-_returns: void_
+_returns: ofPoint &_
+
+_returns_description: Return an ofPoint containing the result operation._
 
 _parameters: const float & val_
 
@@ -518,15 +574,19 @@ Now p1=(p1x+val,p1y+val,p1z+val);
 
 
 
+
+
 //----------------------
 
-##void operator-(pnt)
+##ofPoint operator-(pnt)
 
 _syntax: operator-(pnt)_
 
 _name: operator-_
 
-_returns: void_
+_returns: ofPoint_
+
+_returns_description: Return an ofPoint containing the result operation._
 
 _parameters: const ofPoint & pnt_
 
@@ -549,15 +609,19 @@ p1-p2=(p1x-p2x,p1y-p2y,p1z-p2z)
 
 
 
+
+
 //----------------------
 
-##void operator-(val)
+##ofPoint operator-(val)
 
 _syntax: operator-(val)_
 
 _name: operator-_
 
-_returns: void_
+_returns: ofPoint_
+
+_returns_description: Return an ofPoint containing the result operation._
 
 _parameters: const float & val_
 
@@ -580,15 +644,19 @@ p1-val=(p1x-val,p1y-val,p1z-val)
 
 
 
+
+
 //----------------------
 
-##void operator-=(pnt)
+##ofPoint & operator-=(pnt)
 
 _syntax: operator-=(pnt)_
 
 _name: operator-=_
 
-_returns: void_
+_returns: ofPoint &_
+
+_returns_description: Return an ofPoint containing the result operation._
 
 _parameters: const ofPoint & pnt_
 
@@ -621,15 +689,19 @@ Now p1=(p1x-p2x,p1y-p2y,p1z-p2z);
 
 
 
+
+
 //----------------------
 
-##void operator-=(val)
+##ofPoint & operator-=(val)
 
 _syntax: operator-=(val)_
 
 _name: operator-=_
 
-_returns: void_
+_returns: ofPoint &_
+
+_returns_description: Return an ofPoint containing the result operation._
 
 _parameters: const float & val_
 
@@ -663,15 +735,19 @@ Now p1=(p1x-val,p1y-val,p1z-val);
 
 
 
+
+
 //----------------------
 
-##void operator*(pnt)
+##ofPoint operator*(pnt)
 
 _syntax: operator*(pnt)_
 
 _name: operator*_
 
-_returns: void_
+_returns: ofPoint_
+
+_returns_description: Return an ofPoint containing the result operation._
 
 _parameters: const ofPoint & pnt_
 
@@ -694,15 +770,19 @@ p1*p2=(p1x*p2x,p1y*p2y,p1z*p2z)
 
 
 
+
+
 //----------------------
 
-##void operator*(val)
+##ofPoint operator*(val)
 
 _syntax: operator*(val)_
 
 _name: operator*_
 
-_returns: void_
+_returns: ofPoint_
+
+_returns_description: Return an ofPoint containing the result operation._
 
 _parameters: const float & val_
 
@@ -725,15 +805,19 @@ p1*val=(p1x*val,p1y*val,p1z*val)
 
 
 
+
+
 //----------------------
 
-##void operator*=(pnt)
+##ofPoint & operator*=(pnt)
 
 _syntax: operator*=(pnt)_
 
 _name: operator*=_
 
-_returns: void_
+_returns: ofPoint &_
+
+_returns_description: Return an ofPoint containing the result operation._
 
 _parameters: const ofPoint & pnt_
 
@@ -766,15 +850,19 @@ Now p1=(p1x*p2x,p1y*p2y,p1z*p2z);
 
 
 
+
+
 //----------------------
 
-##void operator*=(val)
+##ofPoint & operator*=(val)
 
 _syntax: operator*=(val)_
 
 _name: operator*=_
 
-_returns: void_
+_returns: ofPoint &_
+
+_returns_description: Return an ofPoint containing the result operation._
 
 _parameters: const float & val_
 
@@ -808,15 +896,19 @@ Now p1=(p1x*val,p1y*val,p1z*val)
 
 
 
+
+
 //----------------------
 
-##void operator/(pnt)
+##ofPoint operator/(pnt)
 
 _syntax: operator/(pnt)_
 
 _name: operator/_
 
-_returns: void_
+_returns: ofPoint_
+
+_returns_description: Return an ofPoint containing the result operation._
 
 _parameters: const ofPoint & pnt_
 
@@ -839,15 +931,19 @@ p1/p2=(p1x/p2x,p1y/p2y,p1z/p2z)
 
 
 
+
+
 //----------------------
 
-##void operator/(val)
+##ofPoint operator/(val)
 
 _syntax: operator/(val)_
 
 _name: operator/_
 
-_returns: void_
+_returns: ofPoint_
+
+_returns_description: Return an ofPoint containing the result operation._
 
 _parameters: const float & val_
 
@@ -871,15 +967,19 @@ p1/val=(p1x/val,p1y/val,p1z/val)
 
 
 
+
+
 //----------------------
 
-##void operator/=(pnt)
+##ofPoint & operator/=(pnt)
 
 _syntax: operator/=(pnt)_
 
 _name: operator/=_
 
-_returns: void_
+_returns: ofPoint &_
+
+_returns_description: Return an ofPoint containing the result operation._
 
 _parameters: const ofPoint & pnt_
 
@@ -912,15 +1012,19 @@ Now p1=(p1x/p2x,p1y/p2y,p1z/p2z);
 
 
 
+
+
 //----------------------
 
-##void operator/=(val)
+##ofPoint & operator/=(val)
 
 _syntax: operator/=(val)_
 
 _name: operator/=_
 
-_returns: void_
+_returns: ofPoint &_
+
+_returns_description: Return an ofPoint containing the result operation._
 
 _parameters: const float & val_
 
@@ -941,6 +1045,8 @@ $$/code
 
 
 Now p1=(p1x/val,p1y/val,p1z/val)
+
+
 
 
 

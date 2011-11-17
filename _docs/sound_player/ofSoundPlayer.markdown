@@ -14,13 +14,15 @@ Methods
 
 //----------------------
 
-##bool setPlayer(ofBaseSoundPlayer *newPlayer)
+##void ofSoundPlayer()
 
-_syntax: setPlayer(ofBaseSoundPlayer *newPlayer)_
+_syntax: ofSoundPlayer()_
 
-_name: setPlayer_
+_name: ofSoundPlayer_
 
-_returns: bool_
+_returns: void_
+
+_returns_description: _
 
 _parameters: _
 
@@ -42,15 +44,53 @@ _description: _
 
 
 
+
+
 //----------------------
 
-##ofBaseSoundPlayer getPlayer()
+##void initializeFmod()
 
-_syntax: getPlayer()_
+_syntax: initializeFmod()_
 
-_name: getPlayer_
+_name: initializeFmod_
 
-_returns: ofBaseSoundPlayer_
+_returns: void_
+
+_returns_description: _
+
+_parameters: _
+
+
+
+_description: _
+
+Initializes fMod. Should only be called once internally.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------
+
+##void ~ofSoundPlayer()
+
+_syntax: ~ofSoundPlayer()_
+
+_name: ~ofSoundPlayer_
+
+_returns: void_
+
+_returns_description: _
 
 _parameters: _
 
@@ -72,231 +112,27 @@ _description: _
 
 
 
+
+
 //----------------------
 
-##void loadSound(string fileName, bool stream=false)
+##void closeFmod()
 
-_syntax: loadSound(string fileName, bool stream=false)_
+_syntax: closeFmod()_
 
-_name: loadSound_
+_name: closeFmod_
 
 _returns: void_
 
-_parameters: string, bool = False_
+_returns_description: _
+
+_parameters: _
 
 
 
 _description: _
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void setVolume(float vol)
-
-_syntax: setVolume(float vol)_
-
-_name: setVolume_
-
-_returns: void_
-
-_parameters: float_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void setPan(float vol)
-
-_syntax: setPan(float vol)_
-
-_name: setPan_
-
-_returns: void_
-
-_parameters: float_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void setSpeed(float spd)
-
-_syntax: setSpeed(float spd)_
-
-_name: setSpeed_
-
-_returns: void_
-
-_parameters: float_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void setPaused(bool bP)
-
-_syntax: setPaused(bool bP)_
-
-_name: setPaused_
-
-_returns: void_
-
-_parameters: bool_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void setLoop(bool bLp)
-
-_syntax: setLoop(bool bLp)_
-
-_name: setLoop_
-
-_returns: void_
-
-_parameters: bool_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void setMultiPlay(bool bMp)
-
-_syntax: setMultiPlay(bool bMp)_
-
-_name: setMultiPlay_
-
-_returns: void_
-
-_parameters: bool_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void setPosition(float pct)
-
-_syntax: setPosition(float pct)_
-
-_name: setPosition_
-
-_returns: void_
-
-_parameters: float_
-
-
-
-_description: _
+If Fmod is initialized via initializeFmod we can close it via closeFmod().
 
 
 
@@ -321,6 +157,8 @@ _syntax: loadSound(fileName, stream)_
 _name: loadSound_
 
 _returns: void_
+
+_returns_description: _
 
 _parameters: string fileName, bool stream_
 
@@ -362,6 +200,8 @@ $$/code
 
 
 
+
+
 //----------------------
 
 ##void unloadSound()
@@ -371,6 +211,8 @@ _syntax: unloadSound()_
 _name: unloadSound_
 
 _returns: void_
+
+_returns_description: _
 
 _parameters: _
 
@@ -390,7 +232,7 @@ mySound.unloadSound(); //Stops sound from playing, unloads "beat.mp3"
 $$/code
 
 
-<br/><br/>return type changed from  to void in 0.07
+
 
 
 
@@ -413,6 +255,8 @@ _syntax: play()_
 _name: play_
 
 _returns: void_
+
+_returns_description: _
 
 _parameters: _
 
@@ -445,7 +289,7 @@ mySound.play(); //Adds new copy of sound to channel and plays over currently pla
 $$/code
 
 
-<br/><br/>return type changed from  to void in 0.07
+
 
 
 
@@ -469,6 +313,8 @@ _name: stop_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: _
 
 
@@ -487,7 +333,7 @@ mySound.stop(); //Ends playback, stops audio
 $$/code
 
 
-<br/><br/>return type changed from  to void in 0.07
+
 
 
 
@@ -510,6 +356,8 @@ _syntax: setVolume(vol)_
 _name: setVolume_
 
 _returns: void_
+
+_returns_description: _
 
 _parameters: float vol_
 
@@ -541,6 +389,8 @@ $$/code
 
 
 
+
+
 //----------------------
 
 ##void setPan(vol)
@@ -550,6 +400,8 @@ _syntax: setPan(vol)_
 _name: setPan_
 
 _returns: void_
+
+_returns_description: _
 
 _parameters: float vol_
 
@@ -583,6 +435,8 @@ $$/code
 
 
 
+
+
 //----------------------
 
 ##void setSpeed(spd)
@@ -592,6 +446,8 @@ _syntax: setSpeed(spd)_
 _name: setSpeed_
 
 _returns: void_
+
+_returns_description: _
 
 _parameters: float spd_
 
@@ -625,6 +481,8 @@ $$/code
 
 
 
+
+
 //----------------------
 
 ##void setPaused(bP)
@@ -634,6 +492,8 @@ _syntax: setPaused(bP)_
 _name: setPaused_
 
 _returns: void_
+
+_returns_description: _
 
 _parameters: bool bP_
 
@@ -666,6 +526,8 @@ $$/code
 
 
 
+
+
 //----------------------
 
 ##void setLoop(bLp)
@@ -675,6 +537,8 @@ _syntax: setLoop(bLp)_
 _name: setLoop_
 
 _returns: void_
+
+_returns_description: _
 
 _parameters: bool bLp_
 
@@ -706,6 +570,8 @@ $$/code
 
 
 
+
+
 //----------------------
 
 ##void setMultiPlay(bMp)
@@ -715,6 +581,8 @@ _syntax: setMultiPlay(bMp)_
 _name: setMultiPlay_
 
 _returns: void_
+
+_returns_description: _
 
 _parameters: bool bMp_
 
@@ -748,6 +616,8 @@ $$/code
 
 
 
+
+
 //----------------------
 
 ##void setPosition(pct)
@@ -757,6 +627,8 @@ _syntax: setPosition(pct)_
 _name: setPosition_
 
 _returns: void_
+
+_returns_description: _
 
 _parameters: float pct_
 
@@ -789,6 +661,8 @@ $$/code
 
 
 
+
+
 //----------------------
 
 ##float getPosition()
@@ -798,6 +672,8 @@ _syntax: getPosition()_
 _name: getPosition_
 
 _returns: float_
+
+_returns_description: Returns the current position of the playback-head in the sound. 0.0 - 1.0 range._
 
 _parameters: _
 
@@ -818,7 +694,7 @@ mySound.getPosition(); //Returns the current position as a percent 0.0-1.0
 $$/code
 
 
-<br/><br/>return type changed from  to float in 0.07
+
 
 
 
@@ -842,6 +718,9 @@ _name: getIsPlaying_
 
 _returns: bool_
 
+_returns_description: Returns true if sound is currently playing, otherwise returns false.
+_
+
 _parameters: _
 
 
@@ -859,7 +738,7 @@ mySound.getIsPlaying(); //Returns true
 $$/code
 
 
-<br/><br/>return type changed from  to bool in 0.07
+
 
 
 
@@ -883,6 +762,8 @@ _name: getSpeed_
 
 _returns: float_
 
+_returns_description: Returns the pan position of the sound. 0.0 - 1.0 range._
+
 _parameters: _
 
 
@@ -902,7 +783,7 @@ mySound.getSpeed(); //Returns 2.0f
 $$/code
 
 
-<br/><br/>return type changed from  to float in 0.07
+
 
 
 
@@ -926,6 +807,8 @@ _name: getPan_
 
 _returns: float_
 
+_returns_description: Returns the pan position of the sound. 0.0 - 1.0 range._
+
 _parameters: _
 
 
@@ -946,7 +829,7 @@ mySound.getPan();//Returns 0.2
 $$/code
 
 
-<br/><br/>return type changed from  to float in 0.07
+
 
 
 

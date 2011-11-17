@@ -23,7 +23,7 @@ class DocsClass:
 
 def list_all(db,fileid,advanced):
     cursor=db.cursor()
-    sql='SELECT id,name FROM docs_class WHERE fileid=%s and advanced=%s and visible=1'
+    sql='SELECT id,name FROM docs_class WHERE fileid=%s and advanced=%s'
     cursor.execute(sql,(fileid,advanced,))
     classes=cursor.fetchall()
     class_list = []

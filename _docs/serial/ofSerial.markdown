@@ -14,13 +14,15 @@ Methods
 
 //----------------------
 
-##void listDevices()
+##void ofSerial()
 
-_syntax: listDevices()_
+_syntax: ofSerial()_
 
-_name: listDevices_
+_name: ofSerial_
 
 _returns: void_
+
+_returns_description: _
 
 _parameters: _
 
@@ -42,15 +44,19 @@ _description: _
 
 
 
+
+
 //----------------------
 
-##ofSerialDeviceInfo getDeviceList()
+##void ~ofSerial()
 
-_syntax: getDeviceList()_
+_syntax: ~ofSerial()_
 
-_name: getDeviceList_
+_name: ~ofSerial_
 
-_returns: ofSerialDeviceInfo_
+_returns: void_
+
+_returns_description: _
 
 _parameters: _
 
@@ -59,244 +65,6 @@ _parameters: _
 _description: _
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##bool setup(string portName, int baudrate)
-
-_syntax: setup(string portName, int baudrate)_
-
-_name: setup_
-
-_returns: bool_
-
-_parameters: string, int_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##bool setup(int deviceNumber, int baudrate)
-
-_syntax: setup(int deviceNumber, int baudrate)_
-
-_name: setup_
-
-_returns: bool_
-
-_parameters: int, int_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##int readBytes(unsigned char *buffer, int length)
-
-_syntax: readBytes(unsigned char *buffer, int length)_
-
-_name: readBytes_
-
-_returns: int_
-
-_parameters: unsigned char *, int_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##int writeBytes(unsigned char *buffer, int length)
-
-_syntax: writeBytes(unsigned char *buffer, int length)_
-
-_name: writeBytes_
-
-_returns: int_
-
-_parameters: unsigned char *, int_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##bool writeByte(unsigned char singleByte)
-
-_syntax: writeByte(unsigned char singleByte)_
-
-_name: writeByte_
-
-_returns: bool_
-
-_parameters: unsigned char_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void flush(bool flushIn=true, bool flushOut=true)
-
-_syntax: flush(bool flushIn=true, bool flushOut=true)_
-
-_name: flush_
-
-_returns: void_
-
-_parameters: bool = True, bool = True_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void setVerbose(bool bLoudmouth)
-
-_syntax: setVerbose(bool bLoudmouth)_
-
-_name: setVerbose_
-
-_returns: void_
-
-_parameters: bool_
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------
-
-##void buildDeviceList()
-
-_syntax: buildDeviceList()_
-
-_name: buildDeviceList_
-
-_returns: void_
-
-_parameters: _
-
-
-
-_description: _
 
 
 
@@ -321,6 +89,8 @@ _syntax: enumerateDevices()_
 _name: enumerateDevices_
 
 _returns: void_
+
+_returns_description: _
 
 _parameters: _
 
@@ -348,7 +118,7 @@ device 1 - COM4
 $$/code
 
 
-<br/><br/>return type changed from  to void in 0.07
+
 
 
 
@@ -372,6 +142,8 @@ _name: close_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: _
 
 
@@ -380,7 +152,7 @@ _description: _
 
 Closes the connection to the serial device. 
 
-<br/><br/>return type changed from  to void in 0.07
+
 
 
 
@@ -404,6 +176,8 @@ _name: setup_
 
 _returns: bool_
 
+_returns_description: Returns true if successful and false if setup fails._
+
 _parameters: _
 
 
@@ -423,7 +197,7 @@ if( mySerial.setup() ){
 $$/code
 
 
-<br/><br/>return type changed from  to bool in 0.07
+
 
 
 
@@ -439,13 +213,15 @@ $$/code
 
 //----------------------
 
-##void setup(portName,baudrate)
+##bool setup(portName,baudrate)
 
 _syntax: setup(portName,baudrate)_
 
 _name: setup_
 
-_returns: void_
+_returns: bool_
+
+_returns_description: Returns true if successful and false if setup fails._
 
 _parameters: string portName, int baudrate_
 
@@ -484,15 +260,19 @@ $$/code
 
 
 
+
+
 //----------------------
 
-##void setup(deviceNumber,baudrate)
+##bool setup(deviceNumber,baudrate)
 
 _syntax: setup(deviceNumber,baudrate)_
 
 _name: setup_
 
-_returns: void_
+_returns: bool_
+
+_returns_description: Returns true if successful and false if setup fails._
 
 _parameters: int deviceNumber, int baudrate_
 
@@ -522,15 +302,19 @@ $$/code
 
 
 
+
+
 //----------------------
 
-##void readBytes(buffer,length)
+##int readBytes(buffer,length)
 
 _syntax: readBytes(buffer,length)_
 
 _name: readBytes_
 
-_returns: void_
+_returns: int_
+
+_returns_description: Returns an int value telling the number of bytes that have been read, or OF_SERIAL_NO_DATA if no data was available, or OF_SERIAL_ERROR if an error occurred during reading._
 
 _parameters: unsigned char * buffer, int length_
 
@@ -597,15 +381,19 @@ $$/code
 
 
 
+
+
 //----------------------
 
-##void writeBytes(buffer, length)
+##int writeBytes(buffer, length)
 
 _syntax: writeBytes(buffer, length)_
 
 _name: writeBytes_
 
-_returns: void_
+_returns: int_
+
+_returns_description: Returns number of bytes written, or OF_SERIAL_ERROR if an error occured._
 
 _parameters: unsigned char * buffer, int length_
 
@@ -639,15 +427,19 @@ $$/code
 
 
 
+
+
 //----------------------
 
-##void writeByte(singleByte)
+##bool writeByte(singleByte)
 
 _syntax: writeByte(singleByte)_
 
 _name: writeByte_
 
-_returns: void_
+_returns: bool_
+
+_returns_description: Returns true if successful._
 
 _parameters: unsigned char singleByte_
 
@@ -682,6 +474,8 @@ $$/code
 
 
 
+
+
 //----------------------
 
 ##int readByte()
@@ -691,6 +485,8 @@ _syntax: readByte()_
 _name: readByte_
 
 _returns: int_
+
+_returns_description: Returns a single byte, or OF_SERIAL_NO_DATA if no data was read, or OF_SERIAL_ERROR if an error occurred._
 
 _parameters: _
 
@@ -717,7 +513,7 @@ $$/code
 
 
 
-<br/><br/>return type changed from  to int in 0.07
+
 
 
 
@@ -741,6 +537,8 @@ _name: flush_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: bool flushIn, bool flushOut_
 
 
@@ -748,6 +546,8 @@ _parameters: bool flushIn, bool flushOut_
 _description: _
 
 Clears data from one or both of the serial buffers. Any data in the cleared buffers is discarded. flushIn = true clears the incoming data buffer and  fluhOut = true clear the outcoming data buffer. 
+
+
 
 
 
@@ -771,6 +571,8 @@ _name: available_
 
 _returns: int_
 
+_returns_description: Returns the number of available bytes._
+
 _parameters: _
 
 
@@ -779,7 +581,7 @@ _description: _
 
 Lets you query how many bytes are available.
 
-<br/><br/>return type changed from  to int in 0.07
+
 
 
 
@@ -803,6 +605,8 @@ _name: setVerbose_
 
 _returns: void_
 
+_returns_description: _
+
 _parameters: bool bLoudmouth_
 
 
@@ -810,6 +614,8 @@ _parameters: bool bLoudmouth_
 _description: _
 
 Enable or disable ofSerial messages and errors being sent to the console.
+
+
 
 
 

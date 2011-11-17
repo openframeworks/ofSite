@@ -1,4 +1,4 @@
-#class ofBaseImage
+#class ofEvent
 
 Example
 
