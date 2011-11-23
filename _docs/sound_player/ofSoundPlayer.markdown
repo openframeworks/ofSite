@@ -916,8 +916,7 @@ _name: getIsPlaying_
 
 _returns: bool_
 
-_returns_description: Returns true if sound is currently playing, otherwise returns false.
-_
+_returns_description: Returns true if sound is currently playing, otherwise returns false._
 
 _parameters: _
 
