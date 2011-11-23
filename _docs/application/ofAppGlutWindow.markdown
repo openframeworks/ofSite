@@ -1,6 +1,9 @@
 #class ofAppGlutWindow
 
+
 ##Description
+
+
 
 
 
@@ -11,17 +14,21 @@ Introduced in 006 along with ofAppBaseWindow to provide a mean of substituting t
 The functionality provided by this class or any other inheriting from ofAppBaseWindow should not be accessed directly but through the functions available in ofAppRunner.
 
 
+
+
+
+
 ##Methods
 
 
 
-###void ofAppGlutWindow()
+### ofAppGlutWindow()
 
 _syntax: ofAppGlutWindow()_
 
 _name: ofAppGlutWindow_
 
-_returns: void_
+_returns: _
 
 _returns_description: _
 
@@ -35,13 +42,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 0_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -79,9 +97,13 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: False_
+
+_visible: True_
+
+_advanced: False_
 
 
 
@@ -103,13 +125,20 @@ _description: _
 
 
 
-###void ~ofAppGlutWindow()
+
+
+
+
+
+
+
+### ~ofAppGlutWindow()
 
 _syntax: ~ofAppGlutWindow()_
 
 _name: ~ofAppGlutWindow_
 
-_returns: void_
+_returns: _
 
 _returns_description: _
 
@@ -123,13 +152,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 0_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -167,13 +207,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: False_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -211,13 +262,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -255,13 +317,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: yes_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -299,13 +372,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -343,13 +427,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: yes_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -387,13 +482,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: False_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -431,13 +537,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: yes_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -475,13 +592,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -519,13 +647,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: False_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -563,13 +702,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -607,13 +757,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: yes_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -651,13 +812,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -695,13 +867,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: yes_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -739,13 +922,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -783,13 +977,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: yes_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -827,13 +1032,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -871,13 +1087,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: yes_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -915,13 +1142,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -959,13 +1197,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: yes_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1003,13 +1252,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1047,13 +1307,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1091,13 +1362,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1135,13 +1417,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1179,13 +1472,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1223,13 +1527,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1267,13 +1582,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1311,13 +1637,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1355,13 +1692,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1399,9 +1747,13 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
@@ -1423,7 +1775,424 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+###void runAppViaInfiniteLoop(*appPtr)
+
+_syntax: runAppViaInfiniteLoop(*appPtr)_
+
+_name: runAppViaInfiniteLoop_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: ofBaseApp *appPtr_
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###void setGlutDisplayString(str)
+
+_syntax: setGlutDisplayString(str)_
+
+_name: setGlutDisplayString_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: string str_
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###void setOrientation(orientation)
+
+_syntax: setOrientation(orientation)_
+
+_name: setOrientation_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: ofOrientation orientation_
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###ofOrientation getOrientation()
+
+_syntax: getOrientation()_
+
+_name: getOrientation_
+
+_returns: ofOrientation_
+
+_returns_description: _
+
+_parameters: _
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###int getWidth()
+
+_syntax: getWidth()_
+
+_name: getWidth_
+
+_returns: int_
+
+_returns_description: _
+
+_parameters: _
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###int getHeight()
+
+_syntax: getHeight()_
+
+_name: getHeight_
+
+_returns: int_
+
+_returns_description: _
+
+_parameters: _
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###double getLastFrameTime()
+
+_syntax: getLastFrameTime()_
+
+_name: getLastFrameTime_
+
+_returns: double_
+
+_returns_description: _
+
+_parameters: _
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###void display(void)
+
+_syntax: display(void)_
+
+_name: display_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: void_
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: yes_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###void idle_cb(void)
+
+_syntax: idle_cb(void)_
+
+_name: idle_cb_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: void_
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: yes_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###void dragEvent(**fileNames, howManyFiles, dragX, dragY)
+
+_syntax: dragEvent(**fileNames, howManyFiles, dragX, dragY)_
+
+_name: dragEvent_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: char **fileNames, int howManyFiles, int dragX, int dragY_
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: yes_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
 ##Variables
+
+
+
+###string displayString
+
+_name: displayString_
+
+_type: string_
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: True_
+
+_constant: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
 
 
 

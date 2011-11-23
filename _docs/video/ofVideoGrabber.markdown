@@ -1,23 +1,30 @@
 #class ofVideoGrabber
 
+
 ##Description
+
+
 
 
 
 The ofVideoGrabber class wraps quicktime's sequence grabbing component to provide low level access to live cameras. On windows it now uses the directshow based videoInput library which offers mainy performance advantages over quicktime and does not require quicktime or WinVDig to be installed. A #define in ofConstants.h allows you to choose whether to use quicktime or directshow (default) for windows.
 In linux it uses by default unicap, although you can change to v4l through a #define in ofConstants in case some v4l device doesn't work properly with unicap.
 
+
+
+
+
 ##Methods
 
 
 
-###void ofVideoGrabber()
+### ofVideoGrabber()
 
 _syntax: ofVideoGrabber()_
 
 _name: ofVideoGrabber_
 
-_returns: void_
+_returns: _
 
 _returns_description: _
 
@@ -31,9 +38,13 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 0_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: False_
+
+_advanced: False_
 
 
 
@@ -55,13 +66,20 @@ _description: _
 
 
 
-###void ~ofVideoGrabber()
+
+
+
+
+
+
+
+### ~ofVideoGrabber()
 
 _syntax: ~ofVideoGrabber()_
 
 _name: ~ofVideoGrabber_
 
-_returns: void_
+_returns: _
 
 _returns_description: _
 
@@ -75,13 +93,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 0_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -119,15 +148,26 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
 
+
 Prints to the console a list of available capture devices with the device ID of each device. The device ID can then be used with setDeviceID() to specify a specific device to capture from.
+
+
+
+
+
+
 
 
 
@@ -151,7 +191,7 @@ _name: isFrameNew_
 
 _returns: bool_
 
-_returns_description: Returns true, if the current pixels have changed since the last time isFrameNew() was called. _
+_returns_description: _
 
 _parameters: _
 
@@ -163,13 +203,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -207,15 +258,26 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
 
+
 This function should be called regularly (for example, once per update) if you'd like to get new data from the sequence grabber. It will idle the video grabbing component so that you get new data.
+
+
+
+
+
+
 
 
 
@@ -251,15 +313,26 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
 
+
 Closes the sequence grabber and de-allocates any allocated resources. 
+
+
+
+
+
+
 
 
 
@@ -283,7 +356,7 @@ _name: initGrabber_
 
 _returns: bool_
 
-_returns_description: Returns true if the initialization is done successfully and false if not_
+_returns_description: _
 
 _parameters: int w, int h, bool bTexture_
 
@@ -295,13 +368,18 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
 
 Initializes either the default capture device or the capture device specified by setDeviceID. Attempts to setup capture at the width and height specified. If the capture dimensions are not available it will setup capture for the next closest dimensions available. It is good to check what the actual size is before you start processing the pixels.
 
@@ -319,6 +397,12 @@ $$/code
 
 
 bTexture variable tells ofVideoGrabber that it should setup a texture so you can display the video on the screen.
+
+
+
+
+
+
 
 
 
@@ -354,15 +438,26 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
 
+
 Loads the video settings on screen. If your opengl application is full screen, this window might appear underneath the main window the first time you call this.
+
+
+
+
+
+
 
 
 
@@ -398,13 +493,18 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
 
 Returns the pointer to the array of pixels that represents the current frame of live video. the data is stored as RGB, and in an array which is the size: width*height*3.
 
@@ -422,15 +522,21 @@ Returns the pointer to the array of pixels that represents the current frame of 
 
 
 
-###ofTexture & getTextureReference()
+
+
+
+
+
+
+###ofTexture getTextureReference()
 
 _syntax: getTextureReference()_
 
 _name: getTextureReference_
 
-_returns: ofTexture &_
+_returns: ofTexture_
 
-_returns_description: Returns the ofTexture object that our videoGrabber class is using._
+_returns_description: _
 
 _parameters: _
 
@@ -442,13 +548,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -486,13 +603,18 @@ _version_deprecated: 0.06_
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
 
 Sets the verbosity - this can be useful for debugging the video grabber interface. you can set the verbosity and then try initGrabber();
 
@@ -504,6 +626,12 @@ myGrabber.setVerbose(true);
 myGrabber.initGrabber(320,240);
 
 $$/code
+
+
+
+
+
+
 
 
 
@@ -540,15 +668,26 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
 
+
 Choose to capture from a specific capture device specified by _deviceID. Use listDevices() to see a list of available capture devices and their device IDs.
+
+
+
+
+
+
 
 
 
@@ -584,13 +723,18 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
 
 Set the usage of texture inside this object. Typically, you will want to draw the movie grabber on screen, and so it will be necessary to use a texture, but there may be cases where it helps to not use a texture in order to save memory or for better performance. To disable the internal use of the texture, you can initialize the sequence grabber like this:
 
@@ -600,6 +744,12 @@ myGrabber.setUseTexture(false);
 myGrabber.initGrabber(320,240);
 
 $$/code
+
+
+
+
+
+
 
 
 
@@ -636,15 +786,26 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
 
+
 Draws the internal texture of the movie grabber class at the position (x,y) with the given width (w) and height (h). 
+
+
+
+
+
+
 
 
 
@@ -680,15 +841,26 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
 
+
 Draws the internal texture of the movie grabber class at the position (x,y) with the internal width and height of the movie grabber.
+
+
+
+
+
+
 
 
 
@@ -724,15 +896,26 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
 
+
 Calls grabframe function.
+
+
+
+
+
+
 
 
 
@@ -768,13 +951,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 1_
+_static: no_
+
+_visible: True_
+
+_advanced: True_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -812,13 +1006,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 1_
+_static: False_
+
+_visible: True_
+
+_advanced: True_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -856,13 +1061,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 1_
+_static: no_
+
+_visible: True_
+
+_advanced: True_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -888,7 +1104,7 @@ _name: getHeight_
 
 _returns: float_
 
-_returns_description: Returns the height of the video grabber._
+_returns_description: _
 
 _parameters: _
 
@@ -900,13 +1116,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -932,7 +1159,7 @@ _name: getWidth_
 
 _returns: float_
 
-_returns_description: Returns the width of the video grabber._
+_returns_description: _
 
 _parameters: _
 
@@ -944,9 +1171,13 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
@@ -961,6 +1192,431 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###void setGrabber(newGrabber)
+
+_syntax: setGrabber(newGrabber)_
+
+_name: setGrabber_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: ofPtr< ofBaseVideoGrabber > newGrabber_
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###ofPtr getGrabber()
+
+_syntax: getGrabber()_
+
+_name: getGrabber_
+
+_returns: ofPtr_
+
+_returns_description: _
+
+_parameters: _
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###bool initGrabber(w, h)
+
+_syntax: initGrabber(w, h)_
+
+_name: initGrabber_
+
+_returns: bool_
+
+_returns_description: _
+
+_parameters: int w, int h_
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###void setPixelFormat(pixelFormat)
+
+_syntax: setPixelFormat(pixelFormat)_
+
+_name: setPixelFormat_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: ofPixelFormat pixelFormat_
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###ofPixelFormat getPixelFormat()
+
+_syntax: getPixelFormat()_
+
+_name: getPixelFormat_
+
+_returns: ofPixelFormat_
+
+_returns_description: _
+
+_parameters: _
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###ofPixelsRef getPixelsRef()
+
+_syntax: getPixelsRef()_
+
+_name: getPixelsRef_
+
+_returns: ofPixelsRef_
+
+_returns_description: _
+
+_parameters: _
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###void setDesiredFrameRate(framerate)
+
+_syntax: setDesiredFrameRate(framerate)_
+
+_name: setDesiredFrameRate_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: int framerate_
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###void draw(&p)
+
+_syntax: draw(&p)_
+
+_name: draw_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: const ofPoint &p_
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###void draw(&r)
+
+_syntax: draw(&r)_
+
+_name: draw_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: const ofRectangle &r_
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###void setAnchorPoint(x, y)
+
+_syntax: setAnchorPoint(x, y)_
+
+_name: setAnchorPoint_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: float x, float y_
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###bool isInitialized()
+
+_syntax: isInitialized()_
+
+_name: isInitialized_
+
+_returns: bool_
+
+_returns_description: _
+
+_parameters: _
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
 
 
 
@@ -984,19 +1640,26 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
 
+
 Variable containing the height of the video grabber.
+
+
+
+
+
+
 
 
 
@@ -1022,17 +1685,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1060,19 +1730,26 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
 
+
 Variable containing the width of the video grabber.
+
+
+
+
+
+
 
 
 
@@ -1098,17 +1775,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1136,17 +1820,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1174,17 +1865,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1212,17 +1910,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1250,17 +1955,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1288,17 +2000,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1326,17 +2045,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1364,13 +2090,13 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
@@ -1383,6 +2109,163 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###bool bInitialized
+
+_name: bInitialized_
+
+_type: bool_
+
+_access: private_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: True_
+
+_constant: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###ofPtr grabber
+
+_name: grabber_
+
+_type: ofPtr_
+
+_access: private_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: True_
+
+_constant: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###int RequestedDeviceID
+
+_name: RequestedDeviceID_
+
+_type: int_
+
+_access: private_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: True_
+
+_constant: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###ofPixelFormat internalPixelFormat
+
+_name: internalPixelFormat_
+
+_type: ofPixelFormat_
+
+_access: private_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: True_
+
+_constant: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###int desiredFramerate
+
+_name: desiredFramerate_
+
+_type: int_
+
+_access: private_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: True_
+
+_constant: True_
+
+_advanced: False_
+
+
+
+_description: _
 
 
 

@@ -7,6 +7,9 @@
 
 
 
+
+
+
 The ofSoundPlayer class wraps fmod, which is a powerful audio utility library. The ofSoundPlayer allows you to load sound files and control and manipulate their playback and properties. 
 
 
@@ -19,17 +22,21 @@ their playback and properties.
 
 
 
+
+
+
+
 ##Methods
 
 
 
-###void ofSoundPlayer()
+### ofSoundPlayer()
 
 _syntax: ofSoundPlayer()_
 
 _name: ofSoundPlayer_
 
-_returns: void_
+_returns: _
 
 _returns_description: _
 
@@ -45,7 +52,7 @@ _summary: _
 
 _constant: False_
 
-_static: False_
+_static: no_
 
 _visible: False_
 
@@ -54,6 +61,13 @@ _advanced: False_
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -111,7 +125,14 @@ _advanced: False_
 _description: _
 
 
+
 Initializes fMod. Should only be called once internally.
+
+
+
+
+
+
 
 
 
@@ -188,6 +209,13 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void closeFmod()
 
 _syntax: closeFmod()_
@@ -221,7 +249,14 @@ _advanced: False_
 _description: _
 
 
+
 If Fmod is initialized via initializeFmod we can close it via closeFmod().
+
+
+
+
+
+
 
 
 
@@ -265,7 +300,7 @@ _summary: _
 
 _constant: False_
 
-_static: False_
+_static: no_
 
 _visible: True_
 
@@ -274,6 +309,7 @@ _advanced: False_
 
 
 _description: _
+
 
 
 Loads a sound file given by fileName. Sound files can be in .wav, .aif, .mp3, .mp2, .ogg or .raw format. The program will look for the file relative to the data/ folder. If you set the optional 'bool stream' argument to true the file will be streamed from disk instead of being completely loaded into memory. It makes a lot of sense to stream files if you are dynamically loading large sound files into your program, which would normally cause the program to freeze for a short time as the whole sound is read into memory. 
@@ -349,6 +385,12 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###void unloadSound()
 
 _syntax: unloadSound()_
@@ -371,7 +413,7 @@ _summary: _
 
 _constant: False_
 
-_static: False_
+_static: no_
 
 _visible: True_
 
@@ -380,6 +422,7 @@ _advanced: False_
 
 
 _description: _
+
 
 
 Stops and unloads the current sound.
@@ -433,6 +476,12 @@ $$/code`
 
 
 
+
+
+
+
+
+
 ###void play()
 
 _syntax: play()_
@@ -455,7 +504,7 @@ _summary: _
 
 _constant: False_
 
-_static: False_
+_static: no_
 
 _visible: True_
 
@@ -464,6 +513,7 @@ _advanced: False_
 
 
 _description: _
+
 
 
 Plays the sound. If setMultiPlay() has been set to true each play() command will spawn a new copy of the sound on a new channel, letting the existing sounds continue until they are finished. If setMultiPlay() is set to false it will restart the playback of the song.
@@ -548,6 +598,12 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###void stop()
 
 _syntax: stop()_
@@ -570,7 +626,7 @@ _summary: _
 
 _constant: False_
 
-_static: False_
+_static: no_
 
 _visible: True_
 
@@ -579,6 +635,7 @@ _advanced: False_
 
 
 _description: _
+
 
 
 Stops the sound currently playing. 
@@ -631,6 +688,12 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###void setVolume(vol)
 
 _syntax: setVolume(vol)_
@@ -653,7 +716,7 @@ _summary: _
 
 _constant: False_
 
-_static: False_
+_static: no_
 
 _visible: True_
 
@@ -662,6 +725,7 @@ _advanced: False_
 
 
 _description: _
+
 
 
 Sets the volume (vol) of the sound. 0.0 - 1.0 range. 0.0 is silent and 1.0 is full volume. 
@@ -715,6 +779,12 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###void setPan(vol)
 
 _syntax: setPan(vol)_
@@ -737,7 +807,7 @@ _summary: _
 
 _constant: False_
 
-_static: False_
+_static: no_
 
 _visible: True_
 
@@ -746,6 +816,7 @@ _advanced: False_
 
 
 _description: _
+
 
 
 Sets the pan position (pct) of the sound. 0.0 - 1.0 range. 0.5 is center pan, 0.0 is full left pan and 1.0 is full right pan. 
@@ -805,6 +876,12 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###void setSpeed(spd)
 
 _syntax: setSpeed(spd)_
@@ -827,7 +904,7 @@ _summary: _
 
 _constant: False_
 
-_static: False_
+_static: no_
 
 _visible: True_
 
@@ -836,6 +913,7 @@ _advanced: False_
 
 
 _description: _
+
 
 
 Sets the playback speed (spd) of the sound. 1.0 is the normal speed. 2.0 is double the normal speed etc. 
@@ -895,6 +973,12 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###void setPaused(bP)
 
 _syntax: setPaused(bP)_
@@ -917,7 +1001,7 @@ _summary: _
 
 _constant: False_
 
-_static: False_
+_static: no_
 
 _visible: True_
 
@@ -926,6 +1010,7 @@ _advanced: False_
 
 
 _description: _
+
 
 
 Pauses and un-pauses the playback of the sound. 
@@ -980,6 +1065,12 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###void setLoop(bLp)
 
 _syntax: setLoop(bLp)_
@@ -1002,7 +1093,7 @@ _summary: _
 
 _constant: False_
 
-_static: False_
+_static: no_
 
 _visible: True_
 
@@ -1011,6 +1102,7 @@ _advanced: False_
 
 
 _description: _
+
 
 
 Loops the sound if set to true. Does not loop the sound if set to false. Default is false.
@@ -1063,6 +1155,12 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###void setMultiPlay(bMp)
 
 _syntax: setMultiPlay(bMp)_
@@ -1085,7 +1183,7 @@ _summary: _
 
 _constant: False_
 
-_static: False_
+_static: no_
 
 _visible: True_
 
@@ -1094,6 +1192,7 @@ _advanced: False_
 
 
 _description: _
+
 
 
 Allows a sound to be played multiple times at once. When set to true the play() function will start playing the sound on a new channel, letting the old channels continue until they are done playing. When set to false the play() function will stop the channel before playing the sound.
@@ -1154,6 +1253,12 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###void setPosition(pct)
 
 _syntax: setPosition(pct)_
@@ -1176,7 +1281,7 @@ _summary: _
 
 _constant: False_
 
-_static: False_
+_static: no_
 
 _visible: True_
 
@@ -1185,6 +1290,7 @@ _advanced: False_
 
 
 _description: _
+
 
 
 Sets the playback-head to the position (pct) specified. 0.0 - 1.0 range. 0.0 is the beginning of the sound file and 1.0 is the end.
@@ -1240,6 +1346,12 @@ $$code(lang=c++)
 
 
 
+
+
+
+
+
+
 ###float getPosition()
 
 _syntax: getPosition()_
@@ -1262,7 +1374,7 @@ _summary: _
 
 _constant: False_
 
-_static: False_
+_static: no_
 
 _visible: True_
 
@@ -1271,6 +1383,7 @@ _advanced: False_
 
 
 _description: _
+
 
 
 0.0 is the beginning of the sound file and 1.0 is the end.
@@ -1323,6 +1436,12 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###bool getIsPlaying()
 
 _syntax: getIsPlaying()_
@@ -1345,7 +1464,7 @@ _summary: _
 
 _constant: False_
 
-_static: False_
+_static: no_
 
 _visible: True_
 
@@ -1354,6 +1473,7 @@ _advanced: False_
 
 
 _description: _
+
 
 
 Example:
@@ -1407,6 +1527,12 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###float getSpeed()
 
 _syntax: getSpeed()_
@@ -1429,7 +1555,7 @@ _summary: _
 
 _constant: False_
 
-_static: False_
+_static: no_
 
 _visible: True_
 
@@ -1438,6 +1564,7 @@ _advanced: False_
 
 
 _description: _
+
 
 
 0.5 is center pan, 0.0 is full left pan and 1.0 is full right pan.
@@ -1493,6 +1620,12 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###float getPan()
 
 _syntax: getPan()_
@@ -1515,7 +1648,7 @@ _summary: _
 
 _constant: False_
 
-_static: False_
+_static: no_
 
 _visible: True_
 
@@ -1524,6 +1657,7 @@ _advanced: False_
 
 
 _description: _
+
 
 
 0.5 is center pan, 0.0 is full left pan and 1.0 is full right pan. Default is 0.5
@@ -1586,6 +1720,164 @@ $$/code
 
 
 
+
+
+
+
+
+
+###void setPlayer(newPlayer)
+
+_syntax: setPlayer(newPlayer)_
+
+_name: setPlayer_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: ofPtr< ofBaseSoundPlayer > newPlayer_
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###ofPtr getPlayer()
+
+_syntax: getPlayer()_
+
+_name: getPlayer_
+
+_returns: ofPtr_
+
+_returns_description: _
+
+_parameters: _
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###void setPositionMS(ms)
+
+_syntax: setPositionMS(ms)_
+
+_name: setPositionMS_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: int ms_
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###int getPositionMS()
+
+_syntax: getPositionMS()_
+
+_name: getPositionMS_
+
+_returns: int_
+
+_returns_description: _
+
+_parameters: _
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
 ##Variables
 
 
@@ -1615,7 +1907,14 @@ _advanced: False_
 _description: _
 
 
+
 This boolean variable tells if the sound we are using is streaming or not.
+
+
+
+
+
+
 
 
 
@@ -1660,7 +1959,14 @@ _advanced: False_
 _description: _
 
 
+
 Allows a sound to be played multiple times at once. See setMultiPlay(bool bMp) function for more info.
+
+
+
+
+
+
 
 
 
@@ -1706,7 +2012,14 @@ _advanced: False_
 _description: _
 
 
+
 bLoop variable controls if we are playing the sound as a loop.
+
+
+
+
+
+
 
 
 
@@ -1751,7 +2064,14 @@ _advanced: False_
 _description: _
 
 
+
 bLoadedOk is a boolean variable containing true if the sound was successfully loaded.  
+
+
+
+
+
+
 
 
 
@@ -1796,7 +2116,14 @@ _advanced: False_
 _description: _
 
 
+
 bPaused contain true if we pause the sound.
+
+
+
+
+
+
 
 
 
@@ -1841,7 +2168,14 @@ _advanced: False_
 _description: _
 
 
+
 Contains the pan position of the sound. Going from 0 to 1.
+
+
+
+
+
+
 
 
 
@@ -1886,7 +2220,14 @@ _advanced: False_
 _description: _
 
 
+
 Contains the value of the volume of our sound.
+
+
+
+
+
+
 
 
 
@@ -1931,7 +2272,14 @@ _advanced: False_
 _description: _
 
 
+
 Contains the frequency value of the sound. It is set by default to 44100.
+
+
+
+
+
+
 
 
 
@@ -1976,7 +2324,14 @@ _advanced: False_
 _description: _
 
 
+
 Contains the playback speed of the sound. 1.0 is the normal speed. 2.0 is double the normal speed, -1 is backwards etc. 
+
+
+
+
+
+
 
 
 
@@ -2019,6 +2374,13 @@ _advanced: False_
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2086,6 +2448,13 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###FMOD_CHANNEL * channel
 
 _name: channel_
@@ -2109,6 +2478,13 @@ _advanced: True_
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2169,6 +2545,43 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###ofPtr player
+
+_name: player_
+
+_type: ofPtr_
+
+_access: protected_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: True_
+
+_constant: True_
+
+_advanced: False_
+
+
+
+_description: _
 
 
 

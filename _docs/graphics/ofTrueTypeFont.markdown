@@ -7,7 +7,14 @@
 
 
 
+
+
+
 The ofTrueTypeFont class provides an interface to load fonts into openframeworks. The fonts are converted to textures, and can be drawn on screen. There are some options when you load the font - what size the font is rendered at, wether or not it is anti-aliased, and wether the font object will be the full character set or a subset (ie, extended ascii, which can include accents, umlauts, or normal ascii). The default is anti-aliased, non-full character set. The library uses freetype, which has certain patent problems in regards to true type hinting, especially at small sizes, so non-anti-aliased type doesn't always render beautifully. But we find it quite adequate, and at larger sizes it seems to works well.
+
+
+
+
 
 
 
@@ -18,13 +25,13 @@ The ofTrueTypeFont class provides an interface to load fonts into openframeworks
 
 
 
-###void ofTrueTypeFont()
+### ofTrueTypeFont()
 
 _syntax: ofTrueTypeFont()_
 
 _name: ofTrueTypeFont_
 
-_returns: void_
+_returns: _
 
 _returns_description: _
 
@@ -40,7 +47,7 @@ _summary: _
 
 _constant: False_
 
-_static: False_
+_static: no_
 
 _visible: False_
 
@@ -49,6 +56,13 @@ _advanced: False_
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -95,7 +109,7 @@ _summary: _
 
 _constant: False_
 
-_static: False_
+_static: no_
 
 _visible: True_
 
@@ -128,13 +142,20 @@ _description: _
 
 
 
-###void ~ofTrueTypeFont()
+
+
+
+
+
+
+
+### ~ofTrueTypeFont()
 
 _syntax: ~ofTrueTypeFont()_
 
 _name: ~ofTrueTypeFont_
 
-_returns: void_
+_returns: _
 
 _returns_description: _
 
@@ -150,7 +171,7 @@ _summary: _
 
 _constant: False_
 
-_static: False_
+_static: no_
 
 _visible: False_
 
@@ -159,6 +180,13 @@ _advanced: False_
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -205,7 +233,7 @@ _summary: _
 
 _constant: False_
 
-_static: False_
+_static: no_
 
 _visible: True_
 
@@ -214,6 +242,13 @@ _advanced: False_
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -271,6 +306,7 @@ _advanced: False_
 _description: _
 
 
+
 Loads a fonts of a given filename in, and renders it to a texture at a given size (fontsize). It will look for the font file in the data/ folder. For example, to load the font arial at type size 32:
 
 
@@ -284,6 +320,12 @@ ofFont myFont;
 myFont.loadFont("arial.ttf", 32);
 
 $$/code
+
+
+
+
+
+
 
 
 
@@ -361,6 +403,13 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void loadFont(filename, fontsize, _bAntiAliased, _bFullCharacterSet, makeContours)
 
 _syntax: loadFont(filename, fontsize, _bAntiAliased, _bFullCharacterSet, makeContours)_
@@ -394,7 +443,14 @@ _advanced: False_
 _description: _
 
 
+
 This loads a font, but in addition to setting the font name and size, you can also pass in two flags: is this font antiAliased, and does it include the full character set?
+
+
+
+
+
+
 
 
 
@@ -438,7 +494,7 @@ _summary: _
 
 _constant: False_
 
-_static: False_
+_static: no_
 
 _visible: True_
 
@@ -449,7 +505,14 @@ _advanced: False_
 _description: _
 
 
+
 The line height is computed, based on the font size, and can be adjusted. Useful if you are print multi-line text.
+
+
+
+
+
+
 
 
 
@@ -493,7 +556,7 @@ _summary: _
 
 _constant: False_
 
-_static: False_
+_static: no_
 
 _visible: True_
 
@@ -504,7 +567,14 @@ _advanced: False_
 _description: _
 
 
+
 Sets the line height for text that is drawn on screen.
+
+
+
+
+
+
 
 
 
@@ -548,7 +618,7 @@ _summary: _
 
 _constant: False_
 
-_static: False_
+_static: no_
 
 _visible: True_
 
@@ -559,7 +629,14 @@ _advanced: False_
 _description: _
 
 
+
  
+
+
+
+
+
+
 
 
 
@@ -603,7 +680,7 @@ _summary: _
 
 _constant: False_
 
-_static: False_
+_static: no_
 
 _visible: True_
 
@@ -612,6 +689,13 @@ _advanced: False_
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -658,7 +742,7 @@ _summary: _
 
 _constant: False_
 
-_static: False_
+_static: no_
 
 _visible: True_
 
@@ -667,6 +751,7 @@ _advanced: False_
 
 
 _description: _
+
 
 
 e.g:
@@ -688,6 +773,12 @@ ofSetColor(0xcccccc);
 ofRect(rect.x, rect.y, rect.width, rect.height);
 
 $$/code
+
+
+
+
+
+
 
 
 
@@ -732,7 +823,7 @@ _summary: _
 
 _constant: False_
 
-_static: False_
+_static: no_
 
 _visible: True_
 
@@ -741,6 +832,7 @@ _advanced: False_
 
 
 _description: _
+
 
 
 Draws a string with that typeface, on screen, at point(x,y). For example, you can write some text on screen like this:
@@ -798,6 +890,12 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###void drawStringAsShapes(s, x, y)
 
 _syntax: drawStringAsShapes(s, x, y)_
@@ -820,7 +918,7 @@ _summary: _
 
 _constant: False_
 
-_static: False_
+_static: no_
 
 _visible: True_
 
@@ -831,7 +929,14 @@ _advanced: False_
 _description: _
 
 
+
 drawStringAsShapes function draws the s string as if it was a geometrical shapes using the information contained in ofTTFContour and ofTTFCharacter. Parameters x and y sets the position of the shape.
+
+
+
+
+
+
 
 
 
@@ -875,7 +980,7 @@ _summary: _
 
 _constant: False_
 
-_static: False_
+_static: no_
 
 _visible: True_
 
@@ -901,6 +1006,621 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###bool loadFont(filename, fontsize, _bAntiAliased = true, _bFullCharacterSet = false, makeContours = false, simplifyAmt = 0.3, dpi = 0)
+
+_syntax: loadFont(filename, fontsize, _bAntiAliased = true, _bFullCharacterSet = false, makeContours = false, simplifyAmt = 0.3, dpi = 0)_
+
+_name: loadFont_
+
+_returns: bool_
+
+_returns_description: _
+
+_parameters: string filename, int fontsize, bool _bAntiAliased=true, bool _bFullCharacterSet=false, bool makeContours=false, float simplifyAmt=0.3, int dpi=0_
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###bool isLoaded()
+
+_syntax: isLoaded()_
+
+_name: isLoaded_
+
+_returns: bool_
+
+_returns_description: _
+
+_parameters: _
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###bool isAntiAliased()
+
+_syntax: isAntiAliased()_
+
+_name: isAntiAliased_
+
+_returns: bool_
+
+_returns_description: _
+
+_parameters: _
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###bool hasFullCharacterSet()
+
+_syntax: hasFullCharacterSet()_
+
+_name: hasFullCharacterSet_
+
+_returns: bool_
+
+_returns_description: _
+
+_parameters: _
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###int getSize()
+
+_syntax: getSize()_
+
+_name: getSize_
+
+_returns: int_
+
+_returns_description: _
+
+_parameters: _
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###float getLetterSpacing()
+
+_syntax: getLetterSpacing()_
+
+_name: getLetterSpacing_
+
+_returns: float_
+
+_returns_description: _
+
+_parameters: _
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###void setLetterSpacing(spacing)
+
+_syntax: setLetterSpacing(spacing)_
+
+_name: setLetterSpacing_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: float spacing_
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###float getSpaceSize()
+
+_syntax: getSpaceSize()_
+
+_name: getSpaceSize_
+
+_returns: float_
+
+_returns_description: _
+
+_parameters: _
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###void setSpaceSize(size)
+
+_syntax: setSpaceSize(size)_
+
+_name: setSpaceSize_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: float size_
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###int getNumCharacters()
+
+_syntax: getNumCharacters()_
+
+_name: getNumCharacters_
+
+_returns: int_
+
+_returns_description: _
+
+_parameters: _
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###ofTTFCharacter getStringAsPoints(str)
+
+_syntax: getStringAsPoints(str)_
+
+_name: getStringAsPoints_
+
+_returns: ofTTFCharacter_
+
+_returns_description: _
+
+_parameters: string str_
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###void bind()
+
+_syntax: bind()_
+
+_name: bind_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: _
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###void unbind()
+
+_syntax: unbind()_
+
+_name: unbind_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: _
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###void setGlobalDpi(newDpi)
+
+_syntax: setGlobalDpi(newDpi)_
+
+_name: setGlobalDpi_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: int newDpi_
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: yes_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###void unloadTextures()
+
+_syntax: unloadTextures()_
+
+_name: unloadTextures_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: _
+
+_access: private_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###void reloadTextures()
+
+_syntax: reloadTextures()_
+
+_name: reloadTextures_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: _
+
+_access: private_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
 
 
 
@@ -937,7 +1657,14 @@ _advanced: False_
 _description: _
 
 
+
 bLoadedOk is a boolean variable containing true if the font was successfully loaded.   
+
+
+
+
+
+
 
 
 
@@ -1002,6 +1729,13 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool bAntiAlised
 
 _name: bAntiAlised_
@@ -1027,7 +1761,14 @@ _advanced: False_
 _description: _
 
 
+
 A variable which tells you if the font is antiAliased.
+
+
+
+
+
+
 
 
 
@@ -1092,6 +1833,13 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool bFullCharacterSet
 
 _name: bFullCharacterSet_
@@ -1117,7 +1865,14 @@ _advanced: False_
 _description: _
 
 
+
 A variable which tells you if the font contains the full character set, or a subset.
+
+
+
+
+
+
 
 
 
@@ -1182,6 +1937,13 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int nCharacters
 
 _name: nCharacters_
@@ -1207,7 +1969,14 @@ _advanced: False_
 _description: _
 
 
+
 nCharacters contains the number of characters that our font has.
+
+
+
+
+
+
 
 
 
@@ -1250,6 +2019,13 @@ _advanced: False_
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1317,6 +2093,13 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool bMakeContours
 
 _name: bMakeContours_
@@ -1340,6 +2123,13 @@ _advanced: False_
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1407,6 +2197,13 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int visibleBorder
 
 _name: visibleBorder_
@@ -1445,6 +2242,223 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###bool bAntiAliased
+
+_name: bAntiAliased_
+
+_type: bool_
+
+_access: protected_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: True_
+
+_constant: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###float letterSpacing
+
+_name: letterSpacing_
+
+_type: float_
+
+_access: protected_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: True_
+
+_constant: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###float spaceSize
+
+_name: spaceSize_
+
+_type: float_
+
+_access: protected_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: True_
+
+_constant: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###string filename
+
+_name: filename_
+
+_type: string_
+
+_access: protected_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: True_
+
+_constant: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###ofTexture texAtlas
+
+_name: texAtlas_
+
+_type: ofTexture_
+
+_access: protected_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: True_
+
+_constant: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###bool binded
+
+_name: binded_
+
+_type: bool_
+
+_access: protected_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: True_
+
+_constant: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###ofMesh stringQuads
+
+_name: stringQuads_
+
+_type: ofMesh_
+
+_access: protected_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: True_
+
+_constant: True_
+
+_advanced: False_
+
+
+
+_description: _
 
 
 

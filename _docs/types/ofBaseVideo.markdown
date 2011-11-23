@@ -1,6 +1,13 @@
 #class ofBaseVideo
 
+
 ##Description
+
+
+
+
+
+
 
 
 
@@ -10,13 +17,13 @@
 
 
 
-###void ~ofBaseVideo()
+### ~ofBaseVideo()
 
 _syntax: ~ofBaseVideo()_
 
 _name: ~ofBaseVideo_
 
-_returns: void_
+_returns: _
 
 _returns_description: _
 
@@ -30,13 +37,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -74,13 +92,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: False_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -118,9 +147,13 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
@@ -135,6 +168,51 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###bool isFrameNew()
+
+_syntax: isFrameNew()_
+
+_name: isFrameNew_
+
+_returns: bool_
+
+_returns_description: _
+
+_parameters: _
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
 
 
 

@@ -1,6 +1,13 @@
 #class ofArduino
 
+
 ##Description
+
+
+
+
+
+
 
 
 
@@ -30,13 +37,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 0_
+_constant: False_
 
-_advanced: 0_
+_static: False_
+
+_visible: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -74,9 +92,13 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
@@ -98,13 +120,20 @@ _description: _
 
 
 
-###void ofArduino()
+
+
+
+
+
+
+
+### ofArduino()
 
 _syntax: ofArduino()_
 
 _name: ofArduino_
 
-_returns: void_
+_returns: _
 
 _returns_description: _
 
@@ -118,13 +147,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 0_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -162,13 +202,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -206,13 +257,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 0_
+_constant: False_
 
-_advanced: 0_
+_static: False_
+
+_visible: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -250,9 +312,13 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
@@ -274,13 +340,20 @@ _description: _
 
 
 
-###void ~ofArduino()
+
+
+
+
+
+
+
+### ~ofArduino()
 
 _syntax: ~ofArduino()_
 
 _name: ~ofArduino_
 
-_returns: void_
+_returns: _
 
 _returns_description: _
 
@@ -294,9 +367,13 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 0_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: False_
+
+_advanced: False_
 
 
 
@@ -318,13 +395,20 @@ _description: _
 
 
 
-###int connect(device, baud)
+
+
+
+
+
+
+
+###bool connect(device, baud)
 
 _syntax: connect(device, baud)_
 
 _name: connect_
 
-_returns: int_
+_returns: bool_
 
 _returns_description: _
 
@@ -338,13 +422,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -382,13 +477,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -426,13 +532,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: False_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -470,13 +587,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -514,13 +642,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -558,13 +697,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -602,13 +752,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -646,13 +807,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: False_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -690,13 +862,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -734,13 +917,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -778,13 +972,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 1_
+_static: no_
+
+_visible: True_
+
+_advanced: True_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -822,13 +1027,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 1_
+_static: no_
+
+_visible: True_
+
+_advanced: True_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -866,13 +1082,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 1_
+_static: no_
+
+_visible: True_
+
+_advanced: True_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -910,13 +1137,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 1_
+_static: no_
+
+_visible: True_
+
+_advanced: True_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -954,13 +1192,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 1_
+_static: no_
+
+_visible: True_
+
+_advanced: True_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -998,13 +1247,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 1_
+_static: no_
+
+_visible: True_
+
+_advanced: True_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1042,13 +1302,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 1_
+_static: no_
+
+_visible: True_
+
+_advanced: True_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1086,13 +1357,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 1_
+_static: no_
+
+_visible: True_
+
+_advanced: True_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1130,13 +1412,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1174,13 +1467,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1218,13 +1522,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1262,13 +1577,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1306,13 +1632,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 1_
+_static: no_
+
+_visible: True_
+
+_advanced: True_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1350,13 +1687,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1394,13 +1742,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 1_
+_static: no_
+
+_visible: True_
+
+_advanced: True_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1438,13 +1797,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 1_
+_static: no_
+
+_visible: True_
+
+_advanced: True_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1482,13 +1852,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1526,13 +1907,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 1_
+_static: no_
+
+_visible: True_
+
+_advanced: True_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1570,13 +1962,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 1_
+_static: no_
+
+_visible: True_
+
+_advanced: True_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1614,13 +2017,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1658,13 +2072,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 1_
+_static: no_
+
+_visible: True_
+
+_advanced: True_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1702,13 +2127,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1746,13 +2182,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1790,13 +2237,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1834,13 +2292,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 1_
+_static: no_
+
+_visible: True_
+
+_advanced: True_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1878,13 +2347,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1922,13 +2402,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 1_
+_static: no_
+
+_visible: True_
+
+_advanced: True_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1966,13 +2457,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 1_
+_static: no_
+
+_visible: True_
+
+_advanced: True_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2010,13 +2512,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 1_
+_static: no_
+
+_visible: True_
+
+_advanced: True_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2054,13 +2567,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 1_
+_static: no_
+
+_visible: True_
+
+_advanced: True_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2098,13 +2622,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 1_
+_static: no_
+
+_visible: True_
+
+_advanced: True_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2142,13 +2677,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 1_
+_static: no_
+
+_visible: True_
+
+_advanced: True_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2186,13 +2732,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 1_
+_static: no_
+
+_visible: True_
+
+_advanced: True_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2230,13 +2787,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 1_
+_static: no_
+
+_visible: True_
+
+_advanced: True_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2274,13 +2842,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 1_
+_static: no_
+
+_visible: True_
+
+_advanced: True_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2318,13 +2897,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2362,13 +2952,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2406,9 +3007,13 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 1_
+_static: no_
+
+_visible: True_
+
+_advanced: True_
 
 
 
@@ -2423,6 +3028,51 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###void initPins()
+
+_syntax: initPins()_
+
+_name: initPins_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: _
+
+_access: protected_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
 
 
 
@@ -2446,17 +3096,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 1_
+_constant: False_
+
+_advanced: True_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2484,17 +3141,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2522,17 +3186,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2560,17 +3231,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 1_
+_constant: False_
+
+_advanced: True_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2598,17 +3276,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2636,17 +3321,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2674,17 +3366,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 1_
+_constant: False_
+
+_advanced: True_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2712,17 +3411,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2750,17 +3456,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2788,17 +3501,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 1_
+_constant: False_
+
+_advanced: True_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2826,17 +3546,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2864,17 +3591,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2902,17 +3636,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 1_
+_constant: False_
+
+_advanced: True_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2940,17 +3681,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2978,17 +3726,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -3016,17 +3771,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 1_
+_constant: False_
+
+_advanced: True_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -3054,17 +3816,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -3092,17 +3861,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -3130,17 +3906,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 1_
+_constant: False_
+
+_advanced: True_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -3168,17 +3951,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -3206,17 +3996,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -3244,17 +4041,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -3282,17 +4086,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -3320,17 +4131,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -3358,17 +4176,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -3396,17 +4221,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -3434,17 +4266,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -3472,17 +4311,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -3510,17 +4356,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -3548,17 +4401,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -3586,17 +4446,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -3624,17 +4491,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -3662,17 +4536,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -3700,17 +4581,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -3738,17 +4626,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -3776,17 +4671,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -3814,17 +4716,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -3852,17 +4761,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -3890,17 +4806,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -3928,13 +4851,13 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
@@ -3947,6 +4870,73 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###int _totalDigitalPins
+
+_name: _totalDigitalPins_
+
+_type: int_
+
+_access: protected_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: True_
+
+_constant: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###int _firmwareVersionSum
+
+_name: _firmwareVersionSum_
+
+_type: int_
+
+_access: protected_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: True_
+
+_constant: True_
+
+_advanced: False_
+
+
+
+_description: _
 
 
 

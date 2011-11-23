@@ -1,22 +1,29 @@
 #class ofSerial
 
+
 ##Description
+
+
 
 
 
 ofSerial provides a cross platform system for interfacing with the serial port. You can choose the port and baud rate, and then read and send data. Please note that the port must be set manually in the code, so you should be clear what port your device is on. For example, Arduino users should check the arduino app to see what port their device is on. Alternatively the ofSerial class can attempt to communicate with the first available device it finds.
 
+
+
+
+
 ##Methods
 
 
 
-###void ofSerial()
+### ofSerial()
 
 _syntax: ofSerial()_
 
 _name: ofSerial_
 
-_returns: void_
+_returns: _
 
 _returns_description: _
 
@@ -30,9 +37,13 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 0_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: False_
+
+_advanced: False_
 
 
 
@@ -54,13 +65,20 @@ _description: _
 
 
 
-###void ~ofSerial()
+
+
+
+
+
+
+
+### ~ofSerial()
 
 _syntax: ~ofSerial()_
 
 _name: ~ofSerial_
 
-_returns: void_
+_returns: _
 
 _returns_description: _
 
@@ -74,13 +92,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 0_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -118,13 +147,18 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
 
 Prints out the available serial devices:
 On mac and linux it might list something like this:
@@ -144,6 +178,12 @@ device 0 - COM2
 device 1 - COM4
 
 $$/code
+
+
+
+
+
+
 
 
 
@@ -180,15 +220,26 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
 
+
 Closes the connection to the serial device. 
+
+
+
+
+
+
 
 
 
@@ -212,7 +263,7 @@ _name: setup_
 
 _returns: bool_
 
-_returns_description: Returns true if successful and false if setup fails._
+_returns_description: _
 
 _parameters: _
 
@@ -224,13 +275,18 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
 
 Attempts to setup the first available device at a baud rate of 9600. 
 
@@ -259,6 +315,12 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###bool setup(portName,baudrate)
 
 _syntax: setup(portName,baudrate)_
@@ -267,7 +329,7 @@ _name: setup_
 
 _returns: bool_
 
-_returns_description: Returns true if successful and false if setup fails._
+_returns_description: _
 
 _parameters: string portName, int baudrate_
 
@@ -279,13 +341,18 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
 
 Opens the serial port, with the given name and baud rate. On mac and linux, it might look like:
 
@@ -320,6 +387,12 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###bool setup(deviceNumber,baudrate)
 
 _syntax: setup(deviceNumber,baudrate)_
@@ -328,7 +401,7 @@ _name: setup_
 
 _returns: bool_
 
-_returns_description: Returns true if successful and false if setup fails._
+_returns_description: _
 
 _parameters: int deviceNumber, int baudrate_
 
@@ -340,13 +413,18 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
 
 Opens the serial port based on the order in which is listed and sets the baud rate. The code bellow would open the first serial device found by the system:
 
@@ -372,6 +450,12 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###int readBytes(buffer,length)
 
 _syntax: readBytes(buffer,length)_
@@ -380,7 +464,7 @@ _name: readBytes_
 
 _returns: int_
 
-_returns_description: Returns an int value telling the number of bytes that have been read, or OF_SERIAL_NO_DATA if no data was available, or OF_SERIAL_ERROR if an error occurred during reading._
+_returns_description: _
 
 _parameters: unsigned char * buffer, int length_
 
@@ -392,13 +476,18 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: False_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
 
 Tries to read 'length' bytes from the connected serial device. In some cases it may read less than 'length' bytes, so for reliable reading of >1 bytes of data the return value must be checked against the number of bytes requested, and if fewer bytes than requested were read then the call must be tried again.
 
@@ -461,6 +550,12 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###int writeBytes(buffer, length)
 
 _syntax: writeBytes(buffer, length)_
@@ -469,7 +564,7 @@ _name: writeBytes_
 
 _returns: int_
 
-_returns_description: Returns number of bytes written, or OF_SERIAL_ERROR if an error occured._
+_returns_description: _
 
 _parameters: unsigned char * buffer, int length_
 
@@ -481,13 +576,18 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: False_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
 
 Writes a string of bytes to the connected serial device. As with readBytes() the return code should be checked and the call to writeBytes() repeated with the remaining data until all bytes have been written.
 
@@ -517,6 +617,12 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###bool writeByte(singleByte)
 
 _syntax: writeByte(singleByte)_
@@ -525,7 +631,7 @@ _name: writeByte_
 
 _returns: bool_
 
-_returns_description: Returns true if successful._
+_returns_description: _
 
 _parameters: unsigned char singleByte_
 
@@ -537,13 +643,18 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
 
 Writes a single byte to the connected serial device. Check the return value to be sure the data was written.
 
@@ -574,6 +685,12 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###int readByte()
 
 _syntax: readByte()_
@@ -582,7 +699,7 @@ _name: readByte_
 
 _returns: int_
 
-_returns_description: Returns a single byte, or OF_SERIAL_NO_DATA if no data was read, or OF_SERIAL_ERROR if an error occurred._
+_returns_description: _
 
 _parameters: _
 
@@ -594,13 +711,18 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
 
 Reads and returns a single byte from the requested device. 
 
@@ -618,6 +740,12 @@ else
   printf("myByte is %d", myByte);
 
 $$/code
+
+
+
+
+
+
 
 
 
@@ -655,15 +783,26 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
 
+
 Clears data from one or both of the serial buffers. Any data in the cleared buffers is discarded. flushIn = true clears the incoming data buffer and  fluhOut = true clear the outcoming data buffer. 
+
+
+
+
+
+
 
 
 
@@ -687,7 +826,7 @@ _name: available_
 
 _returns: int_
 
-_returns_description: Returns the number of available bytes._
+_returns_description: _
 
 _parameters: _
 
@@ -699,15 +838,26 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
 
+
 Lets you query how many bytes are available.
+
+
+
+
+
+
 
 
 
@@ -743,13 +893,18 @@ _version_deprecated: 0.06_
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
 
 Enable or disable ofSerial messages and errors being sent to the console.
 
@@ -760,6 +915,240 @@ Enable or disable ofSerial messages and errors being sent to the console.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+###void listDevices()
+
+_syntax: listDevices()_
+
+_name: listDevices_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: _
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###ofSerialDeviceInfo getDeviceList()
+
+_syntax: getDeviceList()_
+
+_name: getDeviceList_
+
+_returns: ofSerialDeviceInfo_
+
+_returns_description: _
+
+_parameters: _
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###int readBytes(*buffer, length)
+
+_syntax: readBytes(*buffer, length)_
+
+_name: readBytes_
+
+_returns: int_
+
+_returns_description: _
+
+_parameters: unsigned char *buffer, int length_
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###int writeBytes(*buffer, length)
+
+_syntax: writeBytes(*buffer, length)_
+
+_name: writeBytes_
+
+_returns: int_
+
+_returns_description: _
+
+_parameters: unsigned char *buffer, int length_
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###void drain()
+
+_syntax: drain()_
+
+_name: drain_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: _
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###void buildDeviceList()
+
+_syntax: buildDeviceList()_
+
+_name: buildDeviceList_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: _
+
+_access: protected_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
 
 
 
@@ -783,19 +1172,26 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 0_
+_visible: False_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
 
+
 bVerbose is a boolean varible controlling verbosity on the ofSerial class. 
+
+
+
+
+
+
 
 
 
@@ -821,19 +1217,26 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
 
+
 h
+
+
+
+
+
+
 
 
 
@@ -859,17 +1262,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -897,13 +1307,13 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
@@ -916,6 +1326,103 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###string deviceType
+
+_name: deviceType_
+
+_type: string_
+
+_access: protected_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: True_
+
+_constant: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###ofSerialDeviceInfo devices
+
+_name: devices_
+
+_type: ofSerialDeviceInfo_
+
+_access: protected_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: True_
+
+_constant: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###bool bHaveEnumeratedDevices
+
+_name: bHaveEnumeratedDevices_
+
+_type: bool_
+
+_access: protected_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: True_
+
+_constant: True_
+
+_advanced: False_
+
+
+
+_description: _
 
 
 

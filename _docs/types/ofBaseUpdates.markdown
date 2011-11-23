@@ -1,6 +1,13 @@
 #class ofBaseUpdates
 
+
 ##Description
+
+
+
+
+
+
 
 
 
@@ -10,13 +17,13 @@
 
 
 
-###void ~ofBaseUpdates()
+### ~ofBaseUpdates()
 
 _syntax: ~ofBaseUpdates()_
 
 _name: ~ofBaseUpdates_
 
-_returns: void_
+_returns: _
 
 _returns_description: _
 
@@ -30,13 +37,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -74,13 +92,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 

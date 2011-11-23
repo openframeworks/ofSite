@@ -1,6 +1,9 @@
 #class ofVideoPlayer
 
+
 ##Description
+
+
 
 
 
@@ -13,17 +16,21 @@ ofVideoPlayer myPlayer;
 $$/code
 
 
+
+
+
+
 ##Methods
 
 
 
-###void ofVideoPlayer()
+### ofVideoPlayer()
 
 _syntax: ofVideoPlayer()_
 
 _name: ofVideoPlayer_
 
-_returns: void_
+_returns: _
 
 _returns_description: _
 
@@ -37,13 +44,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 0_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -81,15 +99,26 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: False_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
 
+
 Starts the movie, checking for whether the movie has been both loaded and if it has been started. If it has been loaded but not started the movie is initialized and then played, otherwise it is just played.
+
+
+
+
+
+
 
 
 
@@ -125,13 +154,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 0_
+_constant: False_
 
-_advanced: 0_
+_static: False_
+
+_visible: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -169,13 +209,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: False_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -201,7 +252,7 @@ _name: loadMovie_
 
 _returns: bool_
 
-_returns_description: Returns true if the video is loaded successfully and false if not_
+_returns_description: _
 
 _parameters: string name_
 
@@ -213,13 +264,18 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
 
 Load a movie file (fileName) into that object. It will look for the movie file inside of the data/ folder. The movie does not automatically play once loaded.
 
@@ -229,6 +285,12 @@ $$code(lang=c++)
 ofVideoPlayer myPlayer;
 myPlayer.loadMovie('myMovie.mov');
 $$/code
+
+
+
+
+
+
 
 
 
@@ -265,13 +327,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: False_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -309,13 +382,18 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
 
 Closes the movie file and de-allocates resources.
 
@@ -327,6 +405,12 @@ ofVideoPlayer myPlayer;
 myPlayer.loadMovie("myMovie.mov"); //Loads video resources
 myPlayer.closeMovie(); //Unloads video resources
 $$/code
+
+
+
+
+
+
 
 
 
@@ -363,13 +447,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: False_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -407,15 +502,26 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
 
+
 Calls the closeMovie() function, which closes the movie file and de-allocates resources.
+
+
+
+
+
+
 
 
 
@@ -451,13 +557,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: False_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -495,15 +612,26 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
 
+
 Calls the idleMovie() function. This function idles the movie player, so that the movie can play. If you don't call it, when the movie is playing then you may encounter problems, especially on windows machines. 
+
+
+
+
+
+
 
 
 
@@ -539,13 +667,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: False_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -583,15 +722,26 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
 
+
 This function idles the movie player, so that the movie can play. If you don't call it, when the movie is playing then you may encouter problems, especially on winodws machines.
+
+
+
+
+
+
 
 
 
@@ -627,15 +777,26 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
 
+
 Plays the movie. If the movie has been stopped or paused it will the continue playback at the point it was stopped. 
+
+
+
+
+
+
 
 
 
@@ -671,15 +832,26 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
 
+
 Stops the movie. 
+
+
+
+
+
+
 
 
 
@@ -703,7 +875,7 @@ _name: isFrameNew_
 
 _returns: bool_
 
-_returns_description: Returns true if the frame of pixels is "new"._
+_returns_description: _
 
 _parameters: _
 
@@ -715,13 +887,18 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
 
 For example, if the pixels are new, you could then process them.
 
@@ -748,6 +925,12 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###unsigned char * getPixels()
 
 _syntax: getPixels()_
@@ -756,7 +939,7 @@ _name: getPixels_
 
 _returns: unsigned char *_
 
-_returns_description: Returns a pointer to the array of pixels that are RGB (width*height*3)._
+_returns_description: _
 
 _parameters: _
 
@@ -768,13 +951,18 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
 
 For example, to get the red green and blue of the pixel (100,20):
 
@@ -798,6 +986,12 @@ int blue 	= pixels[(20 * widthOfLine) + 100 * 3 + 2];
 
 
 
+
+
+
+
+
+
 ###float getPosition()
 
 _syntax: getPosition()_
@@ -806,7 +1000,7 @@ _name: getPosition_
 
 _returns: float_
 
-_returns_description: Returns the current playhead position, between 0 (start of movie) and 1 (end of movie). _
+_returns_description: _
 
 _parameters: _
 
@@ -818,13 +1012,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -850,7 +1055,7 @@ _name: getSpeed_
 
 _returns: float_
 
-_returns_description: Returns the current speed of the movie._
+_returns_description: _
 
 _parameters: _
 
@@ -862,15 +1067,26 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
 
+
 note: 1 = normal speed, 0 = paused, -1 = backwards. 
+
+
+
+
+
+
 
 
 
@@ -894,7 +1110,7 @@ _name: getDuration_
 
 _returns: float_
 
-_returns_description: Returns the duration, in seconds, of the movie. _
+_returns_description: _
 
 _parameters: _
 
@@ -906,13 +1122,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -938,7 +1165,7 @@ _name: getIsMovieDone_
 
 _returns: bool_
 
-_returns_description: Returns a boolean with the current status of the movie (returns true if finished, or false if still playing)._
+_returns_description: _
 
 _parameters: _
 
@@ -950,13 +1177,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -994,15 +1232,26 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
 
+
 Sets the position of the playhead to a given percentage through the movie. Can be used to scrub through a movie. 
+
+
+
+
+
+
 
 
 
@@ -1038,15 +1287,26 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
 
+
 Sets the volume of a movie - default = 0, silent 
+
+
+
+
+
+
 
 
 
@@ -1082,13 +1342,18 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: False_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
 
 Sets the looping state of the movie. Deafult behavior is to loop. There are three options:
 
@@ -1099,6 +1364,12 @@ OF_LOOP_NORMAL - loop normally (the last frame loops to the first frame)
 OF_LOOP_PALINDROME - loop back and forth
 
 $$/code
+
+
+
+
+
+
 
 
 
@@ -1135,15 +1406,26 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
 
+
 Sets the speed of the movie that is playing. 1 = normal, 2 = 2x as fast, 0 = stopped, -1 = backwards, etc; 
+
+
+
+
+
+
 
 
 
@@ -1179,15 +1461,26 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
 
+
 Sets the current frame of the video. Should be used only if you know the bounds of the movie ( using totalNumberFrames() ) or store a location using getCurrentFrame();
+
+
+
+
+
+
 
 
 
@@ -1223,13 +1516,18 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
 
 Set the usage of texture inside this object. Typically, you will want to draw the movie on screen, and so it will be necessary to use a texture, but there may be cases where it helps to not use a texture in order to save memory or for better performance. To disable the internal use of the texture, you can load the movie like this:
 
@@ -1255,13 +1553,19 @@ $$/code
 
 
 
-###ofTexture & getTextureReference()
+
+
+
+
+
+
+###ofTexture getTextureReference()
 
 _syntax: getTextureReference()_
 
 _name: getTextureReference_
 
-_returns: ofTexture &_
+_returns: ofTexture_
 
 _returns_description: _
 
@@ -1275,15 +1579,26 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
 
+
 Returns a reference to the videoPlayer's texture.
+
+
+
+
+
+
 
 
 
@@ -1319,15 +1634,26 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
 
+
 Draws the texture of the movie player class at the position (x,y) with the given width (w) and height (h). 
+
+
+
+
+
+
 
 
 
@@ -1363,15 +1689,26 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
 
+
 Draws the texture of the movie player class as the position (x,y) with the internal width and height of the loaded movie. 
+
+
+
+
+
+
 
 
 
@@ -1407,13 +1744,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 1_
+_static: no_
+
+_visible: True_
+
+_advanced: True_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1451,13 +1799,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 1_
+_static: False_
+
+_visible: True_
+
+_advanced: True_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1495,13 +1854,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 1_
+_static: no_
+
+_visible: True_
+
+_advanced: True_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1539,15 +1909,26 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
 
+
 Sets the paused state of the movie. Use "true" to pause and false to unpause. 
+
+
+
+
+
+
 
 
 
@@ -1571,7 +1952,7 @@ _name: getCurrentFrame_
 
 _returns: int_
 
-_returns_description: Returns the current frame of the video._
+_returns_description: _
 
 _parameters: _
 
@@ -1583,13 +1964,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1615,7 +2007,7 @@ _name: getTotalNumFrames_
 
 _returns: int_
 
-_returns_description: Returns the total number of frames for the loaded movie._
+_returns_description: _
 
 _parameters: _
 
@@ -1627,13 +2019,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1671,15 +2074,26 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
 
+
 Moves the playhead to the first frame of the movie. This can also be accomplished using setCurrentFrame(0).
+
+
+
+
+
+
 
 
 
@@ -1715,15 +2129,26 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
 
+
 Advances the playhead by one frame.
+
+
+
+
+
+
 
 
 
@@ -1759,15 +2184,26 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
 
+
 Reverses the playhead by one frame.
+
+
+
+
+
+
 
 
 
@@ -1791,7 +2227,7 @@ _name: getHeight_
 
 _returns: float_
 
-_returns_description: Returns the height of the loaded movie._
+_returns_description: _
 
 _parameters: _
 
@@ -1803,13 +2239,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1835,7 +2282,7 @@ _name: getWidth_
 
 _returns: float_
 
-_returns_description: Returns the width of the loaded movie._
+_returns_description: _
 
 _parameters: _
 
@@ -1847,9 +2294,13 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: False_
 
-_advanced: 0_
+_static: no_
+
+_visible: True_
+
+_advanced: False_
 
 
 
@@ -1864,6 +2315,469 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###void setPlayer(newPlayer)
+
+_syntax: setPlayer(newPlayer)_
+
+_name: setPlayer_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: ofPtr< ofBaseVideoPlayer > newPlayer_
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###ofPtr getPlayer()
+
+_syntax: getPlayer()_
+
+_name: getPlayer_
+
+_returns: ofPtr_
+
+_returns_description: _
+
+_parameters: _
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###void setPixelFormat(pixelFormat)
+
+_syntax: setPixelFormat(pixelFormat)_
+
+_name: setPixelFormat_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: ofPixelFormat pixelFormat_
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###ofPixelsRef getPixelsRef()
+
+_syntax: getPixelsRef()_
+
+_name: getPixelsRef_
+
+_returns: ofPixelsRef_
+
+_returns_description: _
+
+_parameters: _
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###void setLoopState(state)
+
+_syntax: setLoopState(state)_
+
+_name: setLoopState_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: ofLoopType state_
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###int getLoopState()
+
+_syntax: getLoopState()_
+
+_name: getLoopState_
+
+_returns: int_
+
+_returns_description: _
+
+_parameters: _
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###void draw(&p)
+
+_syntax: draw(&p)_
+
+_name: draw_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: const ofPoint &p_
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###void draw(&r)
+
+_syntax: draw(&r)_
+
+_name: draw_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: const ofRectangle &r_
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###void setAnchorPoint(x, y)
+
+_syntax: setAnchorPoint(x, y)_
+
+_name: setAnchorPoint_
+
+_returns: void_
+
+_returns_description: _
+
+_parameters: float x, float y_
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###bool isPaused()
+
+_syntax: isPaused()_
+
+_name: isPaused_
+
+_returns: bool_
+
+_returns_description: _
+
+_parameters: _
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###bool isLoaded()
+
+_syntax: isLoaded()_
+
+_name: isLoaded_
+
+_returns: bool_
+
+_returns_description: _
+
+_parameters: _
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###bool isPlaying()
+
+_syntax: isPlaying()_
+
+_name: isPlaying_
+
+_returns: bool_
+
+_returns_description: _
+
+_parameters: _
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+_description: _
 
 
 
@@ -1887,19 +2801,26 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
 
+
 Variable containing the width of the video.
+
+
+
+
+
+
 
 
 
@@ -1925,17 +2846,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1963,19 +2891,26 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
 
+
 Variable containing the height of the video.
+
+
+
+
+
+
 
 
 
@@ -2001,17 +2936,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2039,19 +2981,26 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
 
+
 Contains the playback speed of the video. 1.0 is the normal speed. 2.0 is double the normal speed, -1 is backwards etc. 
+
+
+
+
+
+
 
 
 
@@ -2077,17 +3026,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2115,19 +3071,26 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
 
+
 A boolean that describes if the movie loaded properly. 
+
+
+
+
+
+
 
 
 
@@ -2153,17 +3116,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2191,19 +3161,26 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
 
+
 Variable containing the number of frames of the video.
+
+
+
+
+
+
 
 
 
@@ -2229,17 +3206,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2267,19 +3251,26 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
 
+
 Array of pixels that represents the current frame of live video. The data is stored as RGB in an array which is the size: width*height*3.
+
+
+
+
+
+
 
 
 
@@ -2305,17 +3296,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2343,19 +3341,26 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
 
+
 A boolean controlling if pixels have change.
+
+
+
+
+
+
 
 
 
@@ -2381,17 +3386,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2419,19 +3431,26 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
 
+
 ofTexture used by the video player class. 
+
+
+
+
+
+
 
 
 
@@ -2457,17 +3476,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2495,19 +3521,26 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
 
+
 bUseTexture enables and disables the use of ofTexture in our video player.
+
+
+
+
+
+
 
 
 
@@ -2533,17 +3566,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2571,19 +3611,26 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
 
+
 Boolean varible containing true if the texture has been already allocated inside our video player.
+
+
+
+
+
+
 
 
 
@@ -2609,17 +3656,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2647,17 +3701,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2685,17 +3746,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2723,13 +3791,13 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
-_visible: 1_
+_visible: True_
 
-_advanced: 0_
+_constant: False_
+
+_advanced: False_
 
 
 
@@ -2742,6 +3810,103 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###ofPtr player
+
+_name: player_
+
+_type: ofPtr_
+
+_access: private_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: True_
+
+_constant: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###ofTexture playerTex
+
+_name: playerTex_
+
+_type: ofTexture_
+
+_access: private_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: True_
+
+_constant: True_
+
+_advanced: False_
+
+
+
+_description: _
+
+
+
+
+
+
+
+###ofPixelFormat internalPixelFormat
+
+_name: internalPixelFormat_
+
+_type: ofPixelFormat_
+
+_access: private_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_visible: True_
+
+_constant: True_
+
+_advanced: False_
+
+
+
+_description: _
 
 
 
