@@ -4,7 +4,6 @@
 ##Description
 
 
-##Description
 
 
 
@@ -392,7 +391,7 @@ _summary: _
 
 _constant: false_
 
-_static: true_
+_static: false_
 
 _visible: true_
 
@@ -433,7 +432,7 @@ _summary: _
 
 _constant: false_
 
-_static: true_
+_static: false_
 
 _visible: true_
 
@@ -646,7 +645,7 @@ _version_deprecated: _
 
 _summary: _
 
-_constant: true_
+_constant: false_
 
 _static: false_
 
@@ -872,7 +871,7 @@ _version_deprecated: _
 
 _summary: _
 
-_constant: true_
+_constant: false_
 
 _static: false_
 
@@ -913,7 +912,7 @@ _version_deprecated: _
 
 _summary: _
 
-_constant: true_
+_constant: false_
 
 _static: false_
 
@@ -954,7 +953,7 @@ _version_deprecated: _
 
 _summary: _
 
-_constant: true_
+_constant: false_
 
 _static: false_
 
@@ -995,7 +994,7 @@ _version_deprecated: _
 
 _summary: _
 
-_constant: true_
+_constant: false_
 
 _static: false_
 
@@ -1036,7 +1035,7 @@ _version_deprecated: _
 
 _summary: _
 
-_constant: true_
+_constant: false_
 
 _static: false_
 
@@ -1077,7 +1076,7 @@ _version_deprecated: _
 
 _summary: _
 
-_constant: true_
+_constant: false_
 
 _static: false_
 
@@ -1118,7 +1117,7 @@ _version_deprecated: _
 
 _summary: _
 
-_constant: true_
+_constant: false_
 
 _static: false_
 
@@ -1159,7 +1158,7 @@ _version_deprecated: _
 
 _summary: _
 
-_constant: true_
+_constant: false_
 
 _static: false_
 
@@ -1200,7 +1199,7 @@ _version_deprecated: _
 
 _summary: _
 
-_constant: true_
+_constant: false_
 
 _static: false_
 
@@ -1651,7 +1650,7 @@ _version_deprecated: _
 
 _summary: _
 
-_constant: true_
+_constant: false_
 
 _static: false_
 
@@ -1690,7 +1689,7 @@ _version_deprecated: _
 
 _summary: _
 
-_constant: true_
+_constant: false_
 
 _static: false_
 
@@ -1807,7 +1806,7 @@ _version_deprecated: _
 
 _summary: _
 
-_constant: true_
+_constant: false_
 
 _static: false_
 
@@ -1846,7 +1845,7 @@ _version_deprecated: _
 
 _summary: _
 
-_constant: true_
+_constant: false_
 
 _static: false_
 
@@ -1963,7 +1962,7 @@ _version_deprecated: _
 
 _summary: _
 
-_constant: true_
+_constant: false_
 
 _static: false_
 
@@ -2002,7 +2001,7 @@ _version_deprecated: _
 
 _summary: _
 
-_constant: true_
+_constant: false_
 
 _static: false_
 
@@ -2119,7 +2118,7 @@ _version_deprecated: _
 
 _summary: _
 
-_constant: true_
+_constant: false_
 
 _static: false_
 
@@ -2158,7 +2157,7 @@ _version_deprecated: _
 
 _summary: _
 
-_constant: true_
+_constant: false_
 
 _static: false_
 
@@ -2275,7 +2274,7 @@ _version_deprecated: _
 
 _summary: _
 
-_constant: true_
+_constant: false_
 
 _static: false_
 
@@ -2294,44 +2293,6 @@ Gives you access to the color as an array:
 [1] = g
 [2] = b
 [3] = a
-
-
-
-
-
-
-
-### PixelType & operator[](n)
-
-_syntax: operator[](n)_
-
-_name: operator[]_
-
-_returns:  PixelType &_
-
-_returns_description: _
-
-_parameters: int n_
-
-_access: _
-
-_version_started: _
-
-_version_deprecated: _
-
-_summary: _
-
-_constant: false_
-
-_static: false_
-
-_visible: true_
-
-_advanced: false_
-
-
-
-_description: _
 
 
 Gives you access to the color as an array:

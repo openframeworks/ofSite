@@ -4,7 +4,6 @@
 ##Description
 
 
-##Description
 
 
 
@@ -52,6 +51,7 @@ _advanced: true_
 
 
 _description: _
+
 
 
 
@@ -131,6 +131,7 @@ _description: _
 
 
 
+
 ###void ofTexture(mom)
 
 _syntax: ofTexture(mom)_
@@ -179,6 +180,8 @@ _description: _
 
 
 
+
+Copy constructor
 
 
 
@@ -253,6 +256,12 @@ text2 and text1 are now identical.
 
 
 
+Let's you do 
+
+$$code(lang=c++)
+tex2 = tex1;
+$$/code
+
 
 
 
@@ -307,6 +316,9 @@ This is the call to allocate opengl texture. The width (w) and height (h) do not
 
 
 
+
+You need to allocate the texture before drawing it or loading data into it.
+uses the currently set OF texture type - default ARB texture
 
 
 
@@ -363,6 +375,8 @@ See previous allocate for knowing the behaviour of this function. The parameter 
 
 
 
+You need to allocate the texture before drawing it or loading data into it, lets you overide the default OF texture type
+
 
 
 
@@ -417,6 +431,8 @@ clears / frees the texture memory, if something was already allocated. useful if
 
 
 
+
+Clears all the data from the texture
 
 
 
@@ -539,6 +555,8 @@ Grabs a region of the screen and loads it into the texture. Specifiy the positio
 
 
 
+Load data from the current screen into this texture. Grabs a region of the screen and loads it into the texture. Specifiy the position (x,y) you wish to grab from, with the width (w) and height (h) of the region. Make sure that you have allocated your texture (using allocate()) to be large enough to hold the region of the screen you wish to load.
+
 
 
 
@@ -593,6 +611,9 @@ _description: _
 
 
 
+
+
+The anchor is the point the image is drawn around. This can be useful if you want to rotate an image around a particular point, allowing you to set the anchor as a percentage of the image width/height ( 0.0-1.0 range )
 
 
 
@@ -710,6 +731,7 @@ _description: _
 
 
 
+
 ###void draw(x, y, w, h)
 
 _syntax: draw(x, y, w, h)_
@@ -758,6 +780,8 @@ draws the texture at a given point (x,y), with a given width (w) and height (h).
 
 
 
+
+Draws the texture at the x, y and w, h.
 
 
 
@@ -814,6 +838,8 @@ Draws the texture at a given point (x,y), using the textures true width and heig
 
 
 
+Draws the texture at the point passed in.
+
 
 
 
@@ -868,6 +894,8 @@ _description: _
 
 
 
+
+This is for the advanced user who wants to draw textures in their own way. Each set of vertices that you draw after calling bind() will be textured using this texture.
 
 
 
@@ -924,6 +952,8 @@ _description: _
 
 
 
+This for the advanced user who wants to draw textures in their own way. This stops vertices from being textured using this texture.
+
 
 
 
@@ -978,6 +1008,8 @@ _description: _
 
 
 
+
+Get whether the texture has been allocated.
 
 
 

@@ -4,7 +4,6 @@
 ##Description
 
 
-##Description
 
 
 
@@ -314,6 +313,37 @@ $$/code
 
 
 
+Loads a sound file given by fileName. Sound files can be in .wav, .aif, .mp3,
+.mp2, .ogg or .raw format. The program will look for the file relative to the
+data/ folder. If you set the optional 'bool stream' argument to true the file
+will be streamed from disk instead of being completely loaded into memory. It
+makes a lot of sense to stream files if you are dynamically loading large
+sound files into your program, which would normally cause the program to
+freeze for a short time as the whole sound is read into memory.
+
+  
+Examples:
+
+  
+Load a Sound
+$$code(lang=c++)
+    
+    ofSoundPlayer mySound;  
+    
+    mySound.loadSound("beat.mp3");
+$$/code
+  
+  
+Load a Sound with Folder Path
+$$code(lang=c++)
+    
+    ofSoundPlayer mySound;  
+    
+    mySound.loadSound("sounds/beat.mp3");
+$$/code
+  
+  
+
 
 
 
@@ -376,6 +406,25 @@ $$/code
 
 
 
+
+
+
+
+Stops and unloads the current sound.
+
+  
+Example:
+$$code(lang=c++)
+$$code(lang=c++)
+    
+    ofSoundPlayer mySound;  
+    
+    mySound.load("beat.mp3");  
+    
+    mySound.play();  
+    
+    mySound.unloadSound(); //Stops sound from playing, unloads "beat.mp3"
+$$/code`
 
 
 
@@ -457,6 +506,43 @@ $$/code
 
 
 
+description
+
+Plays the sound. If setMultiPlay() has been set to true each play() command
+will spawn a new copy of the sound on a new channel, letting the existing
+sounds continue until they are finished. If setMultiPlay() is set to false it
+will restart the playback of the song.
+
+  
+Examples:
+$$code(lang=c++)
+  
+    ofSoundPlayer mySound;  
+    
+    mySound.load("beat.mp3");  
+    
+    mySound.play(); //Plays sound  
+    
+    mySound.play(); //Restarts and plays sound
+$$/code
+  
+  
+Multiplay:
+$$code(lang=c++)
+    
+    ofSoundPlayer mySound;  
+    
+    mySound.setMultiPlay(true);  
+    
+    mySound.load("beat.mp3");  
+    
+    mySound.play(); //Plays sound  
+    
+    mySound.play(); //Adds new copy of sound to channel and plays over currently playing sound
+$$/code
+
+
+
 
 
 
@@ -519,6 +605,24 @@ $$/code
 
 
 
+
+
+
+Stops the sound currently playing.
+
+  
+Example:
+$$code(lang=c++)
+
+$$code(lang=c++)    
+    ofSoundPlayer mySound;  
+    
+    mySound.load("beat.mp3");  
+    
+    mySound.play(); //Begins playback of sound  
+    
+    mySound.stop(); //Ends playback, stops audio
+$$/code
 
 
 
@@ -587,6 +691,25 @@ $$/code
 
 
 
+Sets the volume (vol) of the sound. 0.0 - 1.0 range. 0.0 is silent and 1.0 is
+full volume.
+
+  
+Example:
+$$code(lang=c++)
+
+$$code(lang=c++)    
+    ofSoundPlayer mySound;  
+    
+    mySound.load("beat.mp3");  
+    
+    mySound.play();  
+    
+    mySound.setVolume(0.1f); //Sets volume at 10% of maximum
+
+$$/code
+
+
 
 
 
@@ -651,6 +774,29 @@ $$/code
 
 
 
+
+
+
+Sets the pan position (pct) of the sound. 0.0 - 1.0 range. 0.5 is center pan,
+0.0 is full left pan and 1.0 is full right pan.
+
+  
+Example:
+$$code(lang=c++)
+
+$$code(lang=c++)
+    ofSoundPlayer mySound;  
+    
+    mySound.load("beat.mp3");  
+    
+    mySound.play();  
+    
+    mySound.pan(0.2f); //Pans to the left  
+    
+    mySound.pan(0.8f); //Pans to the right  
+    
+    mySound.pan(0.5f); //Back to center
+$$/code
 
 
 
@@ -721,6 +867,29 @@ $$/code
 
 
 
+Sets the playback speed (spd) of the sound. 1.0 is the normal speed. 2.0 is
+double the normal speed etc.
+
+  
+Example:
+$$code(lang=c++)
+    
+    ofSoundPlayer mySound;  
+    
+    mySound.loadSound("beat.mp3");  
+    
+    mySound.play();  
+    
+    mySound.setSpeed(2.0f); //Chipmunk Voice  
+    
+    mySound.setSpeed(0.2f); //Isaac Hayes on Muscle Relaxers  
+    
+    mySound.setSpeed(1.0f); //Normal again
+$$/code
+
+
+
+
 
 
 
@@ -787,6 +956,25 @@ $$/code
 
 
 
+Pauses and un-pauses the playback of the sound.
+
+  
+Example:
+$$code(lang=c++)
+    
+    ofSoundPlayer mySound;  
+    
+    mySound.load("beat.mp3");  
+    
+    mySound.play();  
+    
+    mySound.setPaused(true); //Sound is paused  
+    
+    mySound.setPaused(false); //Sound is unpaused, playback continues
+$$/code
+
+
+
 
 
 
@@ -850,6 +1038,24 @@ $$/code
 
 
 
+
+
+Loops the sound if set to true. Does not loop the sound if set to false.
+Default is false.
+
+  
+Example:
+$$code(lang=c++)
+
+    
+    ofSoundPlayer mySound;  
+    
+    mySound.load("beat.mp3");  
+    
+    mySound.setLoop(true); //Sound will loop  
+    
+    mySound.play();
+$$/code
 
 
 
@@ -919,6 +1125,30 @@ $$/code
 
 
 
+Allows a sound to be played multiple times at once. When set to true the
+play() function will start playing the sound on a new channel, letting the old
+channels continue until they are done playing. When set to false the play()
+function will stop the channel before playing the sound.
+
+  
+Example:
+$$code(lang=c++)
+
+  
+
+    
+    ofSoundPlayer mySound;  
+    
+    mySound.setMultiPlay(true);  
+    
+    mySound.load("beat.mp3");  
+    
+    mySound.play(); //Plays sound  
+    
+    mySound.play(); //Adds new copy of sound to channel and plays over currently playing sound
+$$/code
+
+
 
 
 
@@ -982,6 +1212,26 @@ $$/code
 
 
 
+
+
+
+Sets the playback-head to the position (pct) specified. 0.0 - 1.0 range. 0.0
+is the beginning of the sound file and 1.0 is the end.
+
+  
+Example:
+$$code(lang=c++)
+
+    
+    ofSoundPlayer mySound;  
+    
+    mySound.load("beat.mp3");  
+    
+    mySound.play();  
+    
+    mySound.setPosition(0.5f); //Moves the playhead to halfway through the sound  
+    
+    mySound.setPosition(0.0f); //Moves the playhead back to the beginning of the sound
 
 
 
@@ -1051,6 +1301,23 @@ $$/code
 
 
 
+Returns the current position of the playback-head in the sound. 0.0 - 1.0
+range. 0.0 is the beginning of the sound file and 1.0 is the end.
+
+  
+Example:
+$$code(lang=c++)    
+    ofSoundPlayer mySound;  
+    
+    mySound.load("beat.mp3");  
+    
+    mySound.play();  
+    
+    mySound.getPosition(); //Returns the current position as a percent 0.0-1.0
+$$/code
+
+
+
 
 
 
@@ -1112,6 +1379,26 @@ $$/code
 
 
 
+
+
+
+Returns true if sound is currently playing, otherwise returns false.
+
+
+Example:
+$$code(lang=c++)
+
+    
+    ofSoundPlayer mySound;  
+    
+    mySound.load("beat.mp3");  
+    
+    mySound.getIsPlaying(); //Returns false  
+    
+    mySound.play();  
+    
+    mySound.getIsPlaying(); //Returns true
+$$/code
 
 
 
@@ -1181,6 +1468,26 @@ $$/code
 
 
 
+Returns the pan position of the sound. 0.0 - 1.0 range.
+0.5 is center pan, 0.0 is full left pan and 1.0 is full right pan.
+
+  
+Example:
+$$code(lang=c++)
+
+    
+    ofSoundPlayer mySound;  
+    
+    mySound.load("beat.mp3");  
+    
+    mySound.getSpeed(); //Returns 1.0  
+    
+    mySound.setSpeed(2.0f);  
+    
+    mySound.getSpeed(); //Returns 2.0f
+$$/code
+
+
 
 
 
@@ -1245,6 +1552,32 @@ $$/code
 
 
 
+
+
+
+
+Returns the pan position of the sound. 0.0 - 1.0 range.
+
+0.5 is center pan, 0.0 is full left pan and 1.0 is full right pan. Default is
+0.5
+
+  
+Example:
+$$code(lang=c++)
+
+    
+    ofSoundPlayer mySound;  
+    
+    mySound.load("beat.mp3");  
+    
+    mySound.play();  
+    
+    mySound.getPan();//Returns 0.5  
+    
+    mySound.setPan(0.2f);  
+    
+    mySound.getPan();//Returns 0.2
+$$/code
 
 
 
