@@ -1,24 +1,18 @@
 #class ofBaseHasTexture
 
-//----------------------
-
 ##Example
 
 
-
-//----------------------
 
 ##Reference
 
 
 
-//----------------------
+
 
 ##Methods
 
 
-
-//----------------------
 
 ###void ~ofBaseHasTexture()
 
@@ -40,9 +34,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -63,8 +57,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###ofTexture & getTextureReference()
 
@@ -86,9 +78,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -109,8 +101,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ##Variables
 

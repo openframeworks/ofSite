@@ -1,30 +1,22 @@
 #class ofKeyEventArgs
 
-//----------------------
-
 ##Example
 
 
-
-//----------------------
 
 ##Reference
 
 
 
-//----------------------
+This class is integrated into the openframeworks events system. When a key event (key pressed, key released) happens we record key information inside an object of the class. Used to send event messages. In the new openFrameworks release we can find a very ilustrative example about how to use events in openFrameworks.
 
 ##Methods
 
 
 
-//----------------------
-
 ##Variables
 
 
-
-//----------------------
 
 ###int key
 
@@ -42,9 +34,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 

@@ -1,30 +1,22 @@
 #class ofTTFCharacter
 
-//----------------------
-
 ##Example
 
 
-
-//----------------------
 
 ##Reference
 
 
 
-//----------------------
+ofTTFCharacter contain a vectorr with all the ofTTFContour.
 
 ##Methods
 
 
 
-//----------------------
-
 ##Variables
 
 
-
-//----------------------
 
 ###vector< ofTTFContour > contours
 
@@ -42,9 +34,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 

@@ -1,30 +1,22 @@
 #class ofResizeEventArgs
 
-//----------------------
-
 ##Example
 
 
-
-//----------------------
 
 ##Reference
 
 
 
-//----------------------
+This class is integrated into the openframeworks events system. When a resize event happens we record window size information inside an object of the class. Used to send event messages. In the new openFrameworks release we can find a very ilustrative example about how to use events in openFrameworks.
 
 ##Methods
 
 
 
-//----------------------
-
 ##Variables
 
 
-
-//----------------------
 
 ###int width
 
@@ -42,9 +34,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -64,8 +56,6 @@ When a window resize event happens (we resize the app window) new window width g
 
 
 
-//----------------------
-
 ###int height
 
 _name: height_
@@ -82,9 +72,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 

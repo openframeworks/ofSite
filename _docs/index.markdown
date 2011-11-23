@@ -1,6 +1,4 @@
 
-//----------------------
-
 ##application##
 
 ###ofBaseApp###
@@ -175,8 +173,6 @@ disableSetupScreen()
 
 __variables__
 
-//----------------------
-
 ##serial##
 
 ###ofSerial###
@@ -224,8 +220,6 @@ bInited
 fd
 
 oldoptions
-
-//----------------------
 
 ##arduino##
 
@@ -433,22 +427,11 @@ _analogPinReporting
 
 __visible: true__
 
-__advanced: true__
+__advanced: false__
 
 __methods__
 
 __variables__
-
-
-
-
-___column___
-
-
-
-
-
-//----------------------
 
 ##video##
 
@@ -663,8 +646,6 @@ loopMode
 posChangingPaused
 
 seek_mutex
-
-//----------------------
 
 ##graphics##
 
@@ -900,17 +881,6 @@ __variables__
 
 contours
 
-
-
-
-___column___
-
-
-
-
-
-//----------------------
-
 ##sound player##
 
 ###ofSoundPlayer###
@@ -987,11 +957,7 @@ channel
 
 sound
 
-//----------------------
-
 ##sound stream##
-
-//----------------------
 
 ##utils##
 
@@ -1004,8 +970,6 @@ __advanced: false__
 __methods__
 
 __variables__
-
-//----------------------
 
 ##types##
 
@@ -1247,15 +1211,9 @@ width
 
 height
 
-//----------------------
-
 ##math##
 
-//----------------------
-
 ##constants##
-
-//----------------------
 
 ##events##
 

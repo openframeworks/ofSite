@@ -1,24 +1,18 @@
 #class ofSoundPlayer
 
-//----------------------
-
 ##Example
 
 
-
-//----------------------
 
 ##Reference
 
 
 
-//----------------------
+The ofSoundPlayer class wraps fmod, which is a powerful audio utility library. The ofSoundPlayer allows you to load sound files and control and manipulate their playback and properties. 
 
 ##Methods
 
 
-
-//----------------------
 
 ###void ofSoundPlayer()
 
@@ -40,9 +34,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 0_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -63,8 +57,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void initializeFmod()
 
@@ -86,9 +78,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 0_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -110,8 +102,6 @@ Initializes fMod. Should only be called once internally.
 
 
 
-//----------------------
-
 ###void ~ofSoundPlayer()
 
 _syntax: ~ofSoundPlayer()_
@@ -132,9 +122,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 0_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -155,8 +145,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void closeFmod()
 
@@ -178,9 +166,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 0_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -202,8 +190,6 @@ If Fmod is initialized via initializeFmod we can close it via closeFmod().
 
 
 
-//----------------------
-
 ###void loadSound(fileName, stream)
 
 _syntax: loadSound(fileName, stream)_
@@ -224,9 +210,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -268,8 +254,6 @@ $$/code
 
 
 
-//----------------------
-
 ###void unloadSound()
 
 _syntax: unloadSound()_
@@ -290,9 +274,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -324,8 +308,6 @@ $$/code
 
 
 
-//----------------------
-
 ###void play()
 
 _syntax: play()_
@@ -346,9 +328,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -393,8 +375,6 @@ $$/code
 
 
 
-//----------------------
-
 ###void stop()
 
 _syntax: stop()_
@@ -415,9 +395,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -449,8 +429,6 @@ $$/code
 
 
 
-//----------------------
-
 ###void setVolume(vol)
 
 _syntax: setVolume(vol)_
@@ -471,9 +449,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -505,8 +483,6 @@ $$/code
 
 
 
-//----------------------
-
 ###void setPan(vol)
 
 _syntax: setPan(vol)_
@@ -527,9 +503,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -563,8 +539,6 @@ $$/code
 
 
 
-//----------------------
-
 ###void setSpeed(spd)
 
 _syntax: setSpeed(spd)_
@@ -585,9 +559,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -621,8 +595,6 @@ $$/code
 
 
 
-//----------------------
-
 ###void setPaused(bP)
 
 _syntax: setPaused(bP)_
@@ -643,9 +615,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -678,8 +650,6 @@ $$/code
 
 
 
-//----------------------
-
 ###void setLoop(bLp)
 
 _syntax: setLoop(bLp)_
@@ -700,9 +670,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -734,8 +704,6 @@ $$/code
 
 
 
-//----------------------
-
 ###void setMultiPlay(bMp)
 
 _syntax: setMultiPlay(bMp)_
@@ -756,9 +724,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -792,8 +760,6 @@ $$/code
 
 
 
-//----------------------
-
 ###void setPosition(pct)
 
 _syntax: setPosition(pct)_
@@ -814,9 +780,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -849,8 +815,6 @@ $$/code
 
 
 
-//----------------------
-
 ###float getPosition()
 
 _syntax: getPosition()_
@@ -871,9 +835,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -906,8 +870,6 @@ $$/code
 
 
 
-//----------------------
-
 ###bool getIsPlaying()
 
 _syntax: getIsPlaying()_
@@ -928,9 +890,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -961,8 +923,6 @@ $$/code
 
 
 
-//----------------------
-
 ###float getSpeed()
 
 _syntax: getSpeed()_
@@ -983,9 +943,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -1018,8 +978,6 @@ $$/code
 
 
 
-//----------------------
-
 ###float getPan()
 
 _syntax: getPan()_
@@ -1040,9 +998,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -1076,13 +1034,9 @@ $$/code
 
 
 
-//----------------------
-
 ##Variables
 
 
-
-//----------------------
 
 ###bool isStreaming
 
@@ -1100,9 +1054,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -1122,8 +1076,6 @@ This boolean variable tells if the sound we are using is streaming or not.
 
 
 
-//----------------------
-
 ###bool bMultiPlay
 
 _name: bMultiPlay_
@@ -1140,9 +1092,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -1163,8 +1115,6 @@ Allows a sound to be played multiple times at once. See setMultiPlay(bool bMp) f
 
 
 
-//----------------------
-
 ###bool bLoop
 
 _name: bLoop_
@@ -1181,9 +1131,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -1203,8 +1153,6 @@ bLoop variable controls if we are playing the sound as a loop.
 
 
 
-//----------------------
-
 ###bool bLoadedOk
 
 _name: bLoadedOk_
@@ -1221,9 +1169,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -1243,8 +1191,6 @@ bLoadedOk is a boolean variable containing true if the sound was successfully lo
 
 
 
-//----------------------
-
 ###bool bPaused
 
 _name: bPaused_
@@ -1261,9 +1207,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -1283,8 +1229,6 @@ bPaused contain true if we pause the sound.
 
 
 
-//----------------------
-
 ###float pan
 
 _name: pan_
@@ -1301,9 +1245,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -1323,8 +1267,6 @@ Contains the pan position of the sound. Going from 0 to 1.
 
 
 
-//----------------------
-
 ###float volume
 
 _name: volume_
@@ -1341,9 +1283,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -1363,8 +1305,6 @@ Contains the value of the volume of our sound.
 
 
 
-//----------------------
-
 ###float internalFreq
 
 _name: internalFreq_
@@ -1381,9 +1321,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 0_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -1403,8 +1343,6 @@ Contains the frequency value of the sound. It is set by default to 44100.
 
 
 
-//----------------------
-
 ###float speed
 
 _name: speed_
@@ -1421,9 +1359,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -1443,8 +1381,6 @@ Contains the playback speed of the sound. 1.0 is the normal speed. 2.0 is double
 
 
 
-//----------------------
-
 ###unsigned int length
 
 _name: length_
@@ -1461,9 +1397,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -1482,8 +1418,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###FMOD_RESULT result
 
@@ -1501,9 +1435,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 0_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -1522,8 +1456,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###FMOD_CHANNEL * channel
 
@@ -1541,9 +1473,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 1_
 
 
 
@@ -1563,8 +1495,6 @@ _description: _
 
 
 
-//----------------------
-
 ###FMOD_SOUND * sound
 
 _name: sound_
@@ -1581,9 +1511,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 1_
 
 
 

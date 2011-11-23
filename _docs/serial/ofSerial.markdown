@@ -1,24 +1,18 @@
 #class ofSerial
 
-//----------------------
-
 ##Example
 
 
-
-//----------------------
 
 ##Reference
 
 
 
-//----------------------
+ofSerial provides a cross platform system for interfacing with the serial port. You can choose the port and baud rate, and then read and send data. Please note that the port must be set manually in the code, so you should be clear what port your device is on. For example, Arduino users should check the arduino app to see what port their device is on. Alternatively the ofSerial class can attempt to communicate with the first available device it finds.
 
 ##Methods
 
 
-
-//----------------------
 
 ###void ofSerial()
 
@@ -40,9 +34,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 0_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -63,8 +57,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void ~ofSerial()
 
@@ -86,9 +78,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 0_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -110,8 +102,6 @@ _description: _
 
 
 
-//----------------------
-
 ###void enumerateDevices()
 
 _syntax: enumerateDevices()_
@@ -132,9 +122,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -174,8 +164,6 @@ $$/code
 
 
 
-//----------------------
-
 ###void close()
 
 _syntax: close()_
@@ -196,9 +184,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -220,8 +208,6 @@ Closes the connection to the serial device.
 
 
 
-//----------------------
-
 ###bool setup()
 
 _syntax: setup()_
@@ -242,9 +228,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -277,8 +263,6 @@ $$/code
 
 
 
-//----------------------
-
 ###bool setup(portName,baudrate)
 
 _syntax: setup(portName,baudrate)_
@@ -299,9 +283,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -340,8 +324,6 @@ $$/code
 
 
 
-//----------------------
-
 ###bool setup(deviceNumber,baudrate)
 
 _syntax: setup(deviceNumber,baudrate)_
@@ -362,9 +344,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -394,8 +376,6 @@ $$/code
 
 
 
-//----------------------
-
 ###int readBytes(buffer,length)
 
 _syntax: readBytes(buffer,length)_
@@ -416,9 +396,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -485,8 +465,6 @@ $$/code
 
 
 
-//----------------------
-
 ###int writeBytes(buffer, length)
 
 _syntax: writeBytes(buffer, length)_
@@ -507,9 +485,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -543,8 +521,6 @@ $$/code
 
 
 
-//----------------------
-
 ###bool writeByte(singleByte)
 
 _syntax: writeByte(singleByte)_
@@ -565,9 +541,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -602,8 +578,6 @@ $$/code
 
 
 
-//----------------------
-
 ###int readByte()
 
 _syntax: readByte()_
@@ -624,9 +598,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -665,8 +639,6 @@ $$/code
 
 
 
-//----------------------
-
 ###void flush(flushIn, flushOut)
 
 _syntax: flush(flushIn, flushOut)_
@@ -687,9 +659,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -711,8 +683,6 @@ Clears data from one or both of the serial buffers. Any data in the cleared buff
 
 
 
-//----------------------
-
 ###int available()
 
 _syntax: available()_
@@ -733,9 +703,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -757,8 +727,6 @@ Lets you query how many bytes are available.
 
 
 
-//----------------------
-
 ###void setVerbose(bLoudmouth)
 
 _syntax: setVerbose(bLoudmouth)_
@@ -779,9 +747,9 @@ _version_deprecated: 0.06_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -803,13 +771,9 @@ Enable or disable ofSerial messages and errors being sent to the console.
 
 
 
-//----------------------
-
 ##Variables
 
 
-
-//----------------------
 
 ###bool bVerbose
 
@@ -827,9 +791,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 0_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -849,8 +813,6 @@ bVerbose is a boolean varible controlling verbosity on the ofSerial class.
 
 
 
-//----------------------
-
 ###bool bInited
 
 _name: bInited_
@@ -867,9 +829,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -889,8 +851,6 @@ h
 
 
 
-//----------------------
-
 ###int fd
 
 _name: fd_
@@ -907,9 +867,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -929,8 +889,6 @@ _description: _
 
 
 
-//----------------------
-
 ###struct termios oldoptions
 
 _name: oldoptions_
@@ -947,9 +905,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 

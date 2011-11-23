@@ -1,24 +1,18 @@
 #class ofRectangle
 
-//----------------------
-
 ##Example
 
 
-
-//----------------------
 
 ##Reference
 
 
 
-//----------------------
+ofRectangle class contains information about how a rectangle is in openFrameworks. Basically the class contains the position and the size of a rectangle. 
 
 ##Methods
 
 
-
-//----------------------
 
 ###void ofRectangle()
 
@@ -40,9 +34,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -63,8 +57,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void ofRectangle(_x, _y, _w, _h)
 
@@ -86,9 +78,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -109,8 +101,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void ~ofRectangle()
 
@@ -132,9 +122,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -156,13 +146,9 @@ _description: _
 
 
 
-//----------------------
-
 ##Variables
 
 
-
-//----------------------
 
 ###float x
 
@@ -180,9 +166,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -202,8 +188,6 @@ x variable contains the x coordinate of our ofRectangle.
 
 
 
-//----------------------
-
 ###float y
 
 _name: y_
@@ -220,9 +204,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -242,8 +226,6 @@ y variable contains the y coordinate of our ofRectangle.
 
 
 
-//----------------------
-
 ###float width
 
 _name: width_
@@ -260,9 +242,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -282,8 +264,6 @@ width variable contains the width of our ofRectangle.
 
 
 
-//----------------------
-
 ###float height
 
 _name: height_
@@ -300,9 +280,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 

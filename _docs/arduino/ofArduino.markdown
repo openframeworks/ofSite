@@ -1,24 +1,18 @@
 #class ofArduino
 
-//----------------------
-
 ##Example
 
 
-
-//----------------------
 
 ##Reference
 
 
 
-//----------------------
+
 
 ##Methods
 
 
-
-//----------------------
 
 ###void ofStandardFirmata()
 
@@ -40,9 +34,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 0_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -63,8 +57,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void sendDigitalPinReporting(pin, mode)
 
@@ -86,9 +78,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -109,8 +101,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void ofArduino()
 
@@ -132,9 +122,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 0_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -155,8 +145,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void processSysExData(data)
 
@@ -178,9 +166,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -201,8 +189,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void ~ofStandardFirmata()
 
@@ -224,9 +210,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 0_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -247,8 +233,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void sendDigitalPortReporting(port, mode)
 
@@ -270,9 +254,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -293,8 +277,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void ~ofArduino()
 
@@ -316,9 +298,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 0_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -339,8 +321,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###int connect(device, baud)
 
@@ -362,9 +342,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -385,8 +365,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void processData(inputData)
 
@@ -408,9 +386,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -431,8 +409,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###int connect(device, baud)
 
@@ -454,9 +430,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -477,8 +453,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void disconnect()
 
@@ -500,9 +474,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -523,8 +497,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void processDigitalPort(port, value)
 
@@ -546,9 +518,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -569,8 +541,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###bool isArduinoReady()
 
@@ -592,9 +562,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -615,8 +585,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void update()
 
@@ -638,9 +606,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -661,8 +629,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void processSysExData(data)
 
@@ -684,9 +650,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -707,8 +673,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void setUseDelay(bDelay)
 
@@ -730,9 +694,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -753,8 +717,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###bool isInitialized()
 
@@ -776,9 +738,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -799,8 +761,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void sendServo(pin, value, force)
 
@@ -822,9 +782,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 1_
 
 
 
@@ -845,8 +805,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void setDigitalHistoryLength(length)
 
@@ -868,9 +826,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 1_
 
 
 
@@ -891,8 +849,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void sendServoAttach(pin, minPulse, maxPulse, angle)
 
@@ -914,9 +870,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 1_
 
 
 
@@ -937,8 +893,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void setAnalogHistoryLength(length)
 
@@ -960,9 +914,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 1_
 
 
 
@@ -983,8 +937,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void sendServoDetach(pin)
 
@@ -1006,9 +958,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 1_
 
 
 
@@ -1029,8 +981,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void setStringHistoryLength(length)
 
@@ -1052,9 +1002,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 1_
 
 
 
@@ -1075,8 +1025,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###int getServo(pin)
 
@@ -1098,9 +1046,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 1_
 
 
 
@@ -1121,8 +1069,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void setSysExHistoryLength(nSysEx)
 
@@ -1144,9 +1090,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 1_
 
 
 
@@ -1167,8 +1113,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void sendDigitalPinMode(pin, mode)
 
@@ -1190,9 +1134,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -1213,8 +1157,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void sendAnalogPinReporting(pin, mode)
 
@@ -1236,9 +1178,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -1259,8 +1201,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void sendDigital(pin, value, force)
 
@@ -1282,9 +1222,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -1305,8 +1245,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void sendPwm(pin, value, force)
 
@@ -1328,9 +1266,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -1351,8 +1289,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void sendSysEx(command, data)
 
@@ -1374,9 +1310,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 1_
 
 
 
@@ -1397,8 +1333,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void sendString(str)
 
@@ -1420,9 +1354,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -1443,8 +1377,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void sendProtocolVersionRequest()
 
@@ -1466,9 +1398,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 1_
 
 
 
@@ -1489,8 +1421,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void sendFirmwareVersionRequest()
 
@@ -1512,9 +1442,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 1_
 
 
 
@@ -1535,8 +1465,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void sendReset()
 
@@ -1558,9 +1486,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -1581,8 +1509,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void sendSysExBegin()
 
@@ -1604,9 +1530,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 1_
 
 
 
@@ -1627,8 +1553,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void sendSysExEnd()
 
@@ -1650,9 +1574,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 1_
 
 
 
@@ -1673,8 +1597,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void sendByte(byte)
 
@@ -1696,9 +1618,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -1719,8 +1641,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void sendValueAsTwo7bitBytes(value)
 
@@ -1742,9 +1662,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 1_
 
 
 
@@ -1765,8 +1685,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###int getPwm(pin)
 
@@ -1788,9 +1706,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -1811,8 +1729,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###int getDigital(pin)
 
@@ -1834,9 +1750,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -1857,8 +1773,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###int getAnalog(pin)
 
@@ -1880,9 +1794,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -1903,8 +1817,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###vector< unsigned char > getSysEx()
 
@@ -1926,9 +1838,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 1_
 
 
 
@@ -1949,8 +1861,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###string getString()
 
@@ -1972,9 +1882,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -1995,8 +1905,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###int getMajorProtocolVersion()
 
@@ -2018,9 +1926,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 1_
 
 
 
@@ -2041,8 +1949,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###int getMinorProtocolVersion()
 
@@ -2064,9 +1970,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 1_
 
 
 
@@ -2087,8 +1993,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###int getMajorFirmwareVersion()
 
@@ -2110,9 +2014,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 1_
 
 
 
@@ -2133,8 +2037,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###int getMinorFirmwareVersion()
 
@@ -2156,9 +2058,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 1_
 
 
 
@@ -2179,8 +2081,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###string getFirmwareName()
 
@@ -2202,9 +2102,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 1_
 
 
 
@@ -2225,8 +2125,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###list< int > * getDigitalHistory(pin)
 
@@ -2248,9 +2146,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 1_
 
 
 
@@ -2271,8 +2169,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###list< int > * getAnalogHistory(pin)
 
@@ -2294,9 +2190,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 1_
 
 
 
@@ -2317,8 +2213,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###list< vector< unsigned char > > * getSysExHistory()
 
@@ -2340,9 +2234,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 1_
 
 
 
@@ -2363,8 +2257,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###list< string > * getStringHistory()
 
@@ -2386,9 +2278,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 1_
 
 
 
@@ -2409,8 +2301,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###int getDigitalPinMode(pin)
 
@@ -2432,9 +2322,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -2455,8 +2345,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###int getAnalogPinReporting(pin)
 
@@ -2478,9 +2366,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -2501,8 +2389,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###int getValueFromTwo7bitBytes(lsb, msb)
 
@@ -2524,9 +2410,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 1_
 
 
 
@@ -2548,13 +2434,9 @@ _description: _
 
 
 
-//----------------------
-
 ##Variables
 
 
-
-//----------------------
 
 ###ofEvent< const int > EDigitalPinChanged
 
@@ -2572,9 +2454,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 1_
 
 
 
@@ -2593,8 +2475,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###bool _initialized
 
@@ -2612,9 +2492,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -2633,8 +2513,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###bool bUseDelay
 
@@ -2652,9 +2530,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -2673,8 +2551,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###ofEvent< const int > EAnalogPinChanged
 
@@ -2692,9 +2568,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 1_
 
 
 
@@ -2713,8 +2589,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###ofSerial _port
 
@@ -2732,9 +2606,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -2753,8 +2627,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###bool connected
 
@@ -2772,9 +2644,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -2793,8 +2665,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###ofEvent< const vector< unsigned char > > ESysExReceived
 
@@ -2812,9 +2682,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 1_
 
 
 
@@ -2833,8 +2703,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###int _portStatus
 
@@ -2852,9 +2720,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -2873,8 +2741,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###float connectTime
 
@@ -2892,9 +2758,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -2913,8 +2779,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###ofEvent< const int > EProtocolVersionReceived
 
@@ -2932,9 +2796,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 1_
 
 
 
@@ -2953,8 +2817,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###int _analogHistoryLength
 
@@ -2972,9 +2834,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -2993,8 +2855,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###int _servoValue
 
@@ -3012,9 +2872,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -3033,8 +2893,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###ofEvent< const int > EFirmwareVersionReceived
 
@@ -3052,9 +2910,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 1_
 
 
 
@@ -3073,8 +2931,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###int _digitalHistoryLength
 
@@ -3092,9 +2948,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -3113,8 +2969,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###float _temp
 
@@ -3132,9 +2986,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -3153,8 +3007,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###ofEvent< const int > EInitialized
 
@@ -3172,9 +3024,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 1_
 
 
 
@@ -3193,8 +3045,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###int _stringHistoryLength
 
@@ -3212,9 +3062,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -3233,8 +3083,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###float _humidity
 
@@ -3252,9 +3100,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -3273,8 +3121,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###ofEvent< const string > EStringReceived
 
@@ -3292,9 +3138,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 1_
 
 
 
@@ -3313,8 +3159,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###int _sysExHistoryLength
 
@@ -3332,9 +3176,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -3353,8 +3197,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###int _waitForData
 
@@ -3372,9 +3214,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -3393,8 +3235,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###int _executeMultiByteCommand
 
@@ -3412,9 +3252,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -3433,8 +3273,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###int _multiByteChannel
 
@@ -3452,9 +3290,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -3473,8 +3311,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###unsigned char _storedInputData
 
@@ -3492,9 +3328,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -3513,8 +3349,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###vector< unsigned char > _sysExData
 
@@ -3532,9 +3366,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -3553,8 +3387,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###int _majorProtocolVersion
 
@@ -3572,9 +3404,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -3593,8 +3425,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###int _minorProtocolVersion
 
@@ -3612,9 +3442,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -3633,8 +3463,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###int _majorFirmwareVersion
 
@@ -3652,9 +3480,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -3673,8 +3501,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###int _minorFirmwareVersion
 
@@ -3692,9 +3518,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -3713,8 +3539,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###string _firmwareName
 
@@ -3732,9 +3556,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -3753,8 +3577,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###list< vector< unsigned char > > _sysExHistory
 
@@ -3772,9 +3594,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -3793,8 +3615,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###list< string > _stringHistory
 
@@ -3812,9 +3632,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -3833,8 +3653,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###list< int > _analogHistory
 
@@ -3852,9 +3670,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -3873,8 +3691,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###list< int > _digitalHistory
 
@@ -3892,9 +3708,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -3913,8 +3729,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###int _digitalPinMode
 
@@ -3932,9 +3746,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -3953,8 +3767,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###int _digitalPinValue
 
@@ -3972,9 +3784,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -3993,8 +3805,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###int _digitalPortValue
 
@@ -4012,9 +3822,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -4033,8 +3843,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###int _digitalPortReporting
 
@@ -4052,9 +3860,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -4073,8 +3881,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###int _digitalPinReporting
 
@@ -4092,9 +3898,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -4114,8 +3920,6 @@ _description: _
 
 
 
-//----------------------
-
 ###int _analogPinReporting
 
 _name: _analogPinReporting_
@@ -4132,9 +3936,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 

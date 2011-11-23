@@ -1,30 +1,22 @@
 #class ofMouseEventArgs
 
-//----------------------
-
 ##Example
 
 
-
-//----------------------
 
 ##Reference
 
 
 
-//----------------------
+This class is integrated into the openframeworks events system. When a mouse event (mouse pressed, mouse released...) happens we record mouse information inside an object of the class. Used to send event messages. In the new openFrameworks release we can find a very ilustrative example about how to use events in openFrameworks.
 
 ##Methods
 
 
 
-//----------------------
-
 ##Variables
 
 
-
-//----------------------
 
 ###int x
 
@@ -42,9 +34,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -64,8 +56,6 @@ When a mouse event happens x - position of our mouse gets recorded here.
 
 
 
-//----------------------
-
 ###int y
 
 _name: y_
@@ -82,9 +72,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -104,8 +94,6 @@ When a mouse event happens, y - position of our mouse gets recorded here.
 
 
 
-//----------------------
-
 ###int button
 
 _name: button_
@@ -122,9 +110,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 

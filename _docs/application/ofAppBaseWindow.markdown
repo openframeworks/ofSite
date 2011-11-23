@@ -1,24 +1,18 @@
 #class ofAppBaseWindow
 
-//----------------------
-
 ##Example
 
 
-
-//----------------------
 
 ##Reference
 
 
 
-//----------------------
+Base class for all windowing classes. Extend this to create a different version of the default glut window in oF.
 
 ##Methods
 
 
-
-//----------------------
 
 ###void ofAppBaseWindow()
 
@@ -40,9 +34,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 0_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -63,8 +57,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void ~ofAppBaseWindow()
 
@@ -86,9 +78,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 0_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -109,8 +101,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void setupOpenGL(w, h, screenMode)
 
@@ -132,9 +122,9 @@ _version_deprecated: 0.01_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -155,8 +145,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void initializeWindow()
 
@@ -178,9 +166,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -201,8 +189,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void runAppViaInfiniteLoop(appPtr)
 
@@ -224,9 +210,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -247,8 +233,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void hideCursor()
 
@@ -270,9 +254,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -293,8 +277,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void showCursor()
 
@@ -316,9 +298,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -339,8 +321,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void setWindowPosition(x, y)
 
@@ -362,9 +342,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -385,8 +365,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void setWindowShape(w, h)
 
@@ -408,9 +386,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -431,8 +409,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###int getFrameNum()
 
@@ -454,9 +430,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -477,8 +453,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###float getFrameRate()
 
@@ -500,9 +474,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -523,8 +497,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###ofPoint getWindowPosition()
 
@@ -546,9 +518,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -569,8 +541,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###ofPoint getWindowSize()
 
@@ -592,9 +562,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -615,8 +585,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###ofPoint getScreenSize()
 
@@ -638,9 +606,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -661,8 +629,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void setFrameRate(targetRate)
 
@@ -684,9 +650,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -707,8 +673,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void setWindowTitle(title)
 
@@ -730,9 +694,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -753,8 +717,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###int getWindowMode()
 
@@ -776,9 +738,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -799,8 +761,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void setFullscreen(fullscreen)
 
@@ -822,9 +782,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -845,8 +805,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void toggleFullscreen()
 
@@ -868,9 +826,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -891,8 +849,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void enableSetupScreen()
 
@@ -914,9 +870,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -937,8 +893,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void disableSetupScreen()
 
@@ -960,9 +914,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -983,8 +937,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ##Variables
 

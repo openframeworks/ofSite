@@ -1,24 +1,22 @@
 #class ofCoreEvents
 
-//----------------------
-
 ##Example
 
 
-
-//----------------------
 
 ##Reference
 
 
 
-//----------------------
+Class for the core events in oF. This is used inside oF to create the global var ofEvents that can be used to register any class to the core events setup, update, draw, exit, keyPressed, keyReleased, mousePressed, mouseReleased, mouseDragged, mouseMoved and windowResize.
+
+To do so use the functions ofAddListener and ofRemoveListener.
+
+For a complete example take a look at the advancedEventsExample
 
 ##Methods
 
 
-
-//----------------------
 
 ###void disable()
 
@@ -40,9 +38,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -63,8 +61,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void enable()
 
@@ -86,9 +82,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -110,13 +106,9 @@ _description: _
 
 
 
-//----------------------
-
 ##Variables
 
 
-
-//----------------------
 
 ###ofEvent< ofEventArgs > setup
 
@@ -134,9 +126,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -155,8 +147,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###ofEvent< ofEventArgs > update
 
@@ -174,9 +164,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -195,8 +185,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###ofEvent< ofEventArgs > draw
 
@@ -214,9 +202,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -235,8 +223,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###ofEvent< ofEventArgs > exit
 
@@ -254,9 +240,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -275,8 +261,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###ofEvent< ofResizeEventArgs > windowResized
 
@@ -294,9 +278,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -315,8 +299,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###ofEvent< ofKeyEventArgs > keyPressed
 
@@ -334,9 +316,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -355,8 +337,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###ofEvent< ofKeyEventArgs > keyReleased
 
@@ -374,9 +354,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -395,8 +375,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###ofEvent< ofMouseEventArgs > mouseMoved
 
@@ -414,9 +392,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -435,8 +413,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###ofEvent< ofMouseEventArgs > mouseDragged
 
@@ -454,9 +430,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -475,8 +451,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###ofEvent< ofMouseEventArgs > mousePressed
 
@@ -494,9 +468,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -515,8 +489,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###ofEvent< ofMouseEventArgs > mouseReleased
 
@@ -534,9 +506,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -555,8 +527,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###ofEvent< ofAudioEventArgs > audioReceived
 
@@ -574,9 +544,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -596,8 +566,6 @@ _description: _
 
 
 
-//----------------------
-
 ###ofEvent< ofAudioEventArgs > audioRequested
 
 _name: audioRequested_
@@ -614,9 +582,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 

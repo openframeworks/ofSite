@@ -1,24 +1,18 @@
 #class ofBaseDraws
 
-//----------------------
-
 ##Example
 
 
-
-//----------------------
 
 ##Reference
 
 
 
-//----------------------
+
 
 ##Methods
 
 
-
-//----------------------
 
 ###void ~ofBaseDraws()
 
@@ -40,9 +34,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -63,8 +57,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void draw(x, y)
 
@@ -86,9 +78,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -109,8 +101,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void draw(x, y, w, h)
 
@@ -132,9 +122,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -155,8 +145,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###float getHeight()
 
@@ -178,9 +166,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -201,8 +189,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###float getWidth()
 
@@ -224,9 +210,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -247,8 +233,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void setAnchorPercent(xPct, yPct)
 
@@ -270,9 +254,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -293,8 +277,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void setAnchorPoint(x, y)
 
@@ -316,9 +298,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -339,8 +321,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void resetAnchor()
 
@@ -362,9 +342,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -385,8 +365,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ##Variables
 

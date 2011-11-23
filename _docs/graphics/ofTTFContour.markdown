@@ -1,30 +1,22 @@
 #class ofTTFContour
 
-//----------------------
-
 ##Example
 
 
-
-//----------------------
 
 ##Reference
 
 
 
-//----------------------
+ofTTFContour contains a vector of ofPoints defining the type contour.
 
 ##Methods
 
 
 
-//----------------------
-
 ##Variables
 
 
-
-//----------------------
 
 ###vector< ofPoint > pts
 
@@ -42,9 +34,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 

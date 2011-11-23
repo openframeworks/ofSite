@@ -1,24 +1,18 @@
 #class ofPoint
 
-//----------------------
-
 ##Example
 
 
-
-//----------------------
 
 ##Reference
 
 
 
-//----------------------
+This class contains all the information and functionality of a geometrical point. It can be a 2D or 3D point. ofPoint allow users perform graphical operations, set positions and more with a better organization and control.
 
 ##Methods
 
 
-
-//----------------------
 
 ###void ~ofPoint()
 
@@ -40,9 +34,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -63,8 +57,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void ofPoint(_x, _y, _z)
 
@@ -86,9 +78,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -109,8 +101,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void ofPoint(pnt)
 
@@ -132,9 +122,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -156,8 +146,6 @@ _description: _
 
 
 
-//----------------------
-
 ###void set(_x, _y, _z)
 
 _syntax: set(_x, _y, _z)_
@@ -178,9 +166,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -213,8 +201,6 @@ now firstpoint = (100,230,50)
 
 
 
-//----------------------
-
 ###ofPoint operator-()
 
 _syntax: operator-()_
@@ -235,9 +221,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -270,8 +256,6 @@ Now p=(-10,-5,3)
 
 
 
-//----------------------
-
 ###bool operator==(pnt)
 
 _syntax: operator==(pnt)_
@@ -292,9 +276,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -330,8 +314,6 @@ After this equal=false;
 
 
 
-//----------------------
-
 ###bool operator!=(pnt)
 
 _syntax: operator!=(pnt)_
@@ -352,9 +334,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -390,8 +372,6 @@ After this dif=true;
 
 
 
-//----------------------
-
 ###ofPoint & operator=(pnt)
 
 _syntax: operator=(pnt)_
@@ -412,9 +392,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -448,8 +428,6 @@ p1 and p2 are now identical.
 
 
 
-//----------------------
-
 ###ofPoint & operator=(val)
 
 _syntax: operator=(val)_
@@ -470,9 +448,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -507,8 +485,6 @@ After this p1=(5.3,5.3,5.3);
 
 
 
-//----------------------
-
 ###ofPoint operator+(pnt)
 
 _syntax: operator+(pnt)_
@@ -529,9 +505,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -568,8 +544,6 @@ After this result=(3,3,3)
 
 
 
-//----------------------
-
 ###ofPoint operator+(val)
 
 _syntax: operator+(val)_
@@ -590,9 +564,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -625,8 +599,6 @@ Now p1=(p1x+5,p1y+5,p1z+5)
 
 
 
-//----------------------
-
 ###ofPoint & operator+=(pnt)
 
 _syntax: operator+=(pnt)_
@@ -647,9 +619,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -681,8 +653,6 @@ Now p1=(p1x+p2x,p1y+p2y,p1z+p2z);
 
 
 
-//----------------------
-
 ###ofPoint & operator+=(val)
 
 _syntax: operator+=(val)_
@@ -703,9 +673,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -738,8 +708,6 @@ Now p1=(p1x+val,p1y+val,p1z+val);
 
 
 
-//----------------------
-
 ###ofPoint operator-(pnt)
 
 _syntax: operator-(pnt)_
@@ -760,9 +728,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -785,8 +753,6 @@ p1-p2=(p1x-p2x,p1y-p2y,p1z-p2z)
 
 
 
-//----------------------
-
 ###ofPoint operator-(val)
 
 _syntax: operator-(val)_
@@ -807,9 +773,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -832,8 +798,6 @@ p1-val=(p1x-val,p1y-val,p1z-val)
 
 
 
-//----------------------
-
 ###ofPoint & operator-=(pnt)
 
 _syntax: operator-=(pnt)_
@@ -854,9 +818,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -889,8 +853,6 @@ Now p1=(p1x-p2x,p1y-p2y,p1z-p2z);
 
 
 
-//----------------------
-
 ###ofPoint & operator-=(val)
 
 _syntax: operator-=(val)_
@@ -911,9 +873,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -947,8 +909,6 @@ Now p1=(p1x-val,p1y-val,p1z-val);
 
 
 
-//----------------------
-
 ###ofPoint operator*(pnt)
 
 _syntax: operator*(pnt)_
@@ -969,9 +929,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -994,8 +954,6 @@ p1*p2=(p1x*p2x,p1y*p2y,p1z*p2z)
 
 
 
-//----------------------
-
 ###ofPoint operator*(val)
 
 _syntax: operator*(val)_
@@ -1016,9 +974,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -1041,8 +999,6 @@ p1*val=(p1x*val,p1y*val,p1z*val)
 
 
 
-//----------------------
-
 ###ofPoint & operator*=(pnt)
 
 _syntax: operator*=(pnt)_
@@ -1063,9 +1019,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -1098,8 +1054,6 @@ Now p1=(p1x*p2x,p1y*p2y,p1z*p2z);
 
 
 
-//----------------------
-
 ###ofPoint & operator*=(val)
 
 _syntax: operator*=(val)_
@@ -1120,9 +1074,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -1156,8 +1110,6 @@ Now p1=(p1x*val,p1y*val,p1z*val)
 
 
 
-//----------------------
-
 ###ofPoint operator/(pnt)
 
 _syntax: operator/(pnt)_
@@ -1178,9 +1130,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -1203,8 +1155,6 @@ p1/p2=(p1x/p2x,p1y/p2y,p1z/p2z)
 
 
 
-//----------------------
-
 ###ofPoint operator/(val)
 
 _syntax: operator/(val)_
@@ -1225,9 +1175,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -1251,8 +1201,6 @@ p1/val=(p1x/val,p1y/val,p1z/val)
 
 
 
-//----------------------
-
 ###ofPoint & operator/=(pnt)
 
 _syntax: operator/=(pnt)_
@@ -1273,9 +1221,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -1308,8 +1256,6 @@ Now p1=(p1x/p2x,p1y/p2y,p1z/p2z);
 
 
 
-//----------------------
-
 ###ofPoint & operator/=(val)
 
 _syntax: operator/=(val)_
@@ -1330,9 +1276,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -1366,13 +1312,9 @@ Now p1=(p1x/val,p1y/val,p1z/val)
 
 
 
-//----------------------
-
 ##Variables
 
 
-
-//----------------------
 
 ###float x
 
@@ -1390,9 +1332,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -1412,8 +1354,6 @@ Variable x contains the x coordinate of our ofPoint object.
 
 
 
-//----------------------
-
 ###float y
 
 _name: y_
@@ -1430,9 +1370,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -1452,8 +1392,6 @@ Variable y contains the y coordinate of our ofPoint object.
 
 
 
-//----------------------
-
 ###float z
 
 _name: z_
@@ -1470,9 +1408,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -1492,8 +1430,6 @@ Variable z contains the z coordinate of our ofPoint object.
 
 
 
-//----------------------
-
 ###float v
 
 _name: v_
@@ -1510,9 +1446,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 

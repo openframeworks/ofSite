@@ -1,24 +1,31 @@
 #class ofColor
 
-//----------------------
-
 ##Example
 
 
-
-//----------------------
 
 ##Reference
 
 
 
-//----------------------
+This class contains variables defining a color. We can create a color object containing information about a certain color. 
+For example:
+
+$$code(lang=c++)
+
+ofColor red;
+red.r=255;
+red.g=0;
+red.b=0;
+ofSetColor(red.r,red.g,red.b);
+
+$$/code
+
+
 
 ##Methods
 
 
-
-//----------------------
 
 ###void ofColor()
 
@@ -40,9 +47,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -63,8 +70,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void ~ofColor()
 
@@ -86,9 +91,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -110,13 +115,9 @@ _description: _
 
 
 
-//----------------------
-
 ##Variables
 
 
-
-//----------------------
 
 ###float r
 
@@ -134,9 +135,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -156,8 +157,6 @@ Variable r contains the amount of red color our color object has. r needs to be 
 
 
 
-//----------------------
-
 ###float g
 
 _name: g_
@@ -174,9 +173,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -196,8 +195,6 @@ Variable g contains the amount of green color our color object has. g needs to b
 
 
 
-//----------------------
-
 ###float b
 
 _name: b_
@@ -214,9 +211,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -236,8 +233,6 @@ Variable b contains the amount of blue color our color object has. b needs to be
 
 
 
-//----------------------
-
 ###float a
 
 _name: a_
@@ -254,9 +249,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 

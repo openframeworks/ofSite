@@ -1,30 +1,22 @@
 #class ofAudioEventArgs
 
-//----------------------
-
 ##Example
 
 
-
-//----------------------
 
 ##Reference
 
 
 
-//----------------------
+This class is integrated into the openframeworks events system. When an audio event (audio received, audio requested) happens we record audio  information inside an object of the class. Used to send event messages. In the new openFrameworks release we can find a very ilustrative example about how to use events in openFrameworks.
 
 ##Methods
 
 
 
-//----------------------
-
 ##Variables
 
 
-
-//----------------------
 
 ###float * buffer
 
@@ -42,9 +34,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -64,8 +56,6 @@ When an audio event (audio received, audio requested) happens input/output sound
 
 
 
-//----------------------
-
 ###int bufferSize
 
 _name: bufferSize_
@@ -82,9 +72,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -104,8 +94,6 @@ When an audio event (audio received, audio requested) happens we record here the
 
 
 
-//----------------------
-
 ###int nChannels
 
 _name: nChannels_
@@ -122,9 +110,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 

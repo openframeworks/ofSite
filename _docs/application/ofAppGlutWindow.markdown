@@ -1,24 +1,23 @@
 #class ofAppGlutWindow
 
-//----------------------
-
 ##Example
 
 
-
-//----------------------
 
 ##Reference
 
 
 
-//----------------------
+Default window manager based on glut. This class provides all the functionality to create a window, change/query it's size, position... and all the keyboard and mouse events.
+
+Introduced in 006 along with ofAppBaseWindow to provide a mean of substituting the underlying windowing toolkit in oF.
+
+The functionality provided by this class or any other inheriting from ofAppBaseWindow should not be accessed directly but through the functions available in ofAppRunner.
+
 
 ##Methods
 
 
-
-//----------------------
 
 ###void ofAppGlutWindow()
 
@@ -40,9 +39,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 0_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -63,8 +62,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void exitApp()
 
@@ -86,9 +83,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -109,8 +106,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void ~ofAppGlutWindow()
 
@@ -132,9 +127,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 0_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -155,8 +150,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void display()
 
@@ -178,9 +171,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -201,8 +194,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void setupOpenGL(w, h, screenMode)
 
@@ -224,9 +215,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -247,8 +238,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void mouse_cb(button, state, x, y)
 
@@ -270,9 +259,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -293,8 +282,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void initializeWindow()
 
@@ -316,9 +303,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -339,8 +326,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void motion_cb(x, y)
 
@@ -362,9 +347,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -385,8 +370,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void runAppViaInfiniteLoop(appPtr)
 
@@ -408,9 +391,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -431,8 +414,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void passive_motion_cb(x, y)
 
@@ -454,9 +435,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -477,8 +458,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void hideCursor()
 
@@ -500,9 +479,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -523,8 +502,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void idle_cb()
 
@@ -546,9 +523,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -569,8 +546,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void showCursor()
 
@@ -592,9 +567,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -615,8 +590,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void keyboard_cb(key, x, y)
 
@@ -638,9 +611,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -661,8 +634,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void setFullscreen(fullScreen)
 
@@ -684,9 +655,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -707,8 +678,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void keyboard_up_cb(key, x, y)
 
@@ -730,9 +699,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -753,8 +722,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void toggleFullscreen()
 
@@ -776,9 +743,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -799,8 +766,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void special_key_cb(key, x, y)
 
@@ -822,9 +787,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -845,8 +810,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void setWindowTitle(title)
 
@@ -868,9 +831,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -891,8 +854,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void special_key_up_cb(key, x, y)
 
@@ -914,9 +875,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -937,8 +898,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void setWindowPosition(x, y)
 
@@ -960,9 +919,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -983,8 +942,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void resize_cb(w, h)
 
@@ -1006,9 +963,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -1029,8 +986,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void setWindowShape(w, h)
 
@@ -1052,9 +1007,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -1075,8 +1030,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###ofPoint getWindowPosition()
 
@@ -1098,9 +1051,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -1121,8 +1074,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###ofPoint getWindowSize()
 
@@ -1144,9 +1095,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -1167,8 +1118,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###ofPoint getScreenSize()
 
@@ -1190,9 +1139,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -1213,8 +1162,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###int getWindowMode()
 
@@ -1236,9 +1183,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -1259,8 +1206,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###int getFrameNum()
 
@@ -1282,9 +1227,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -1305,8 +1250,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###float getFrameRate()
 
@@ -1328,9 +1271,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -1351,8 +1294,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void setFrameRate(targetRate)
 
@@ -1374,9 +1315,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -1397,8 +1338,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void enableSetupScreen()
 
@@ -1420,9 +1359,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -1443,8 +1382,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void disableSetupScreen()
 
@@ -1466,9 +1403,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -1489,8 +1426,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ##Variables
 

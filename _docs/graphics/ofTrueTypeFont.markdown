@@ -1,24 +1,18 @@
 #class ofTrueTypeFont
 
-//----------------------
-
 ##Example
 
 
-
-//----------------------
 
 ##Reference
 
 
 
-//----------------------
+The ofTrueTypeFont class provides an interface to load fonts into openframeworks. The fonts are converted to textures, and can be drawn on screen. There are some options when you load the font - what size the font is rendered at, wether or not it is anti-aliased, and wether the font object will be the full character set or a subset (ie, extended ascii, which can include accents, umlauts, or normal ascii). The default is anti-aliased, non-full character set. The library uses freetype, which has certain patent problems in regards to true type hinting, especially at small sizes, so non-anti-aliased type doesn't always render beautifully. But we find it quite adequate, and at larger sizes it seems to works well.
 
 ##Methods
 
 
-
-//----------------------
 
 ###void ofTrueTypeFont()
 
@@ -40,9 +34,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 0_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -63,8 +57,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void drawChar(c, x, y)
 
@@ -86,9 +78,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -109,8 +101,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void ~ofTrueTypeFont()
 
@@ -132,9 +122,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 0_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -155,8 +145,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void drawCharAsShape(c, x, y)
 
@@ -178,9 +166,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -202,8 +190,6 @@ _description: _
 
 
 
-//----------------------
-
 ###void loadFont(filename, fontsize)
 
 _syntax: loadFont(filename, fontsize)_
@@ -224,9 +210,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -261,8 +247,6 @@ $$/code
 
 
 
-//----------------------
-
 ###int ofNextPow2(a)
 
 _syntax: ofNextPow2(a)_
@@ -283,9 +267,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -306,8 +290,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void loadFont(filename, fontsize, _bAntiAliased, _bFullCharacterSet, makeContours)
 
@@ -329,9 +311,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -353,8 +335,6 @@ This loads a font, but in addition to setting the font name and size, you can al
 
 
 
-//----------------------
-
 ###float getLineHeight()
 
 _syntax: getLineHeight()_
@@ -375,9 +355,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -399,8 +379,6 @@ The line height is computed, based on the font size, and can be adjusted. Useful
 
 
 
-//----------------------
-
 ###void setLineHeight(height)
 
 _syntax: setLineHeight(height)_
@@ -421,9 +399,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -445,8 +423,6 @@ Sets the line height for text that is drawn on screen.
 
 
 
-//----------------------
-
 ###float stringWidth(s)
 
 _syntax: stringWidth(s)_
@@ -467,9 +443,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -491,8 +467,6 @@ _description: _
 
 
 
-//----------------------
-
 ###float stringHeight(s)
 
 _syntax: stringHeight(s)_
@@ -513,9 +487,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -537,8 +511,6 @@ _description: _
 
 
 
-//----------------------
-
 ###ofRectangle getStringBoundingBox(s, x, y)
 
 _syntax: getStringBoundingBox(s, x, y)_
@@ -559,9 +531,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -602,8 +574,6 @@ $$/code
 
 
 
-//----------------------
-
 ###void drawString(s, x, y)
 
 _syntax: drawString(s, x, y)_
@@ -624,9 +594,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -681,8 +651,6 @@ $$/code
 
 
 
-//----------------------
-
 ###void drawStringAsShapes(s, x, y)
 
 _syntax: drawStringAsShapes(s, x, y)_
@@ -703,9 +671,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -727,8 +695,6 @@ drawStringAsShapes function draws the s string as if it was a geometrical shapes
 
 
 
-//----------------------
-
 ###ofTTFCharacter getCharacterAsPoints(character)
 
 _syntax: getCharacterAsPoints(character)_
@@ -749,9 +715,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 1_
 
 
 
@@ -773,13 +739,9 @@ _description: _
 
 
 
-//----------------------
-
 ##Variables
 
 
-
-//----------------------
 
 ###bool bLoadedOk
 
@@ -797,9 +759,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -819,8 +781,6 @@ bLoadedOk is a boolean variable containing true if the font was successfully loa
 
 
 
-//----------------------
-
 ###vector< ofTTFCharacter > charOutlines
 
 _name: charOutlines_
@@ -837,9 +797,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -859,8 +819,6 @@ _description: _
 
 
 
-//----------------------
-
 ###bool bAntiAlised
 
 _name: bAntiAlised_
@@ -877,9 +835,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -899,8 +857,6 @@ A variable which tells you if the font is antiAliased.
 
 
 
-//----------------------
-
 ###float lineHeight
 
 _name: lineHeight_
@@ -917,9 +873,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -939,8 +895,6 @@ _description: _
 
 
 
-//----------------------
-
 ###bool bFullCharacterSet
 
 _name: bFullCharacterSet_
@@ -957,9 +911,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -979,8 +933,6 @@ A variable which tells you if the font contains the full character set, or a sub
 
 
 
-//----------------------
-
 ###charProps * cps
 
 _name: cps_
@@ -997,9 +949,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -1019,8 +971,6 @@ _description: _
 
 
 
-//----------------------
-
 ###int nCharacters
 
 _name: nCharacters_
@@ -1037,9 +987,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -1059,8 +1009,6 @@ nCharacters contains the number of characters that our font has.
 
 
 
-//----------------------
-
 ###GLuint * texNames
 
 _name: texNames_
@@ -1077,9 +1025,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -1098,8 +1046,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###int fontSize
 
@@ -1117,9 +1063,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -1138,8 +1084,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###bool bMakeContours
 
@@ -1157,9 +1101,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -1178,8 +1122,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###int border
 
@@ -1197,9 +1139,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -1219,8 +1161,6 @@ _description: _
 
 
 
-//----------------------
-
 ###int visibleBorder
 
 _name: visibleBorder_
@@ -1237,9 +1177,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 

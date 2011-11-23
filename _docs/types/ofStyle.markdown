@@ -1,24 +1,18 @@
 #class ofStyle
 
-//----------------------
-
 ##Example
 
 
-
-//----------------------
 
 ##Reference
 
 
 
-//----------------------
+ofStyle class contains general information about the style of our ofGraphics elements such as color, line width and others.
 
 ##Methods
 
 
-
-//----------------------
 
 ###void ofStyle()
 
@@ -40,9 +34,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -63,8 +57,6 @@ _description: _
 
 
 
-
-//----------------------
 
 ###void ~ofStyle()
 
@@ -86,9 +78,9 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -110,13 +102,9 @@ _description: _
 
 
 
-//----------------------
-
 ##Variables
 
 
-
-//----------------------
 
 ###ofColor color
 
@@ -134,9 +122,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -156,8 +144,6 @@ color variable contain the color information for the style object.
 
 
 
-//----------------------
-
 ###int polyMode
 
 _name: polyMode_
@@ -174,9 +160,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -203,8 +189,6 @@ OF_POLY_WINDING_ABS_GEQ_TWO -
 
 
 
-//----------------------
-
 ###int rectMode
 
 _name: rectMode_
@@ -221,9 +205,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -244,8 +228,6 @@ If they are corner aligned, or drawn so that the x,y position is the center of t
 
 
 
-//----------------------
-
 ###bool bFill
 
 _name: bFill_
@@ -262,9 +244,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -284,8 +266,6 @@ bFill variable contains information about how the graphics have to be drawed: Fi
 
 
 
-//----------------------
-
 ###bool blending
 
 _name: blending_
@@ -302,9 +282,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -324,8 +304,6 @@ blending contains style information about allow the use of alpha channel in our 
 
 
 
-//----------------------
-
 ###bool smoothing
 
 _name: smoothing_
@@ -342,9 +320,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -364,8 +342,6 @@ smoothing variable contanins the information about if smoothing effect is activa
 
 
 
-//----------------------
-
 ###int circleResolution
 
 _name: circleResolution_
@@ -382,9 +358,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
@@ -404,8 +380,6 @@ circleResolution variable contains the resolution of a ofCircle.
 
 
 
-//----------------------
-
 ###float lineWidth
 
 _name: lineWidth_
@@ -422,9 +396,9 @@ _constant: 0_
 
 _summary: _
 
-_visible: true_
+_visible: 1_
 
-_advanced: true_
+_advanced: 0_
 
 
 
