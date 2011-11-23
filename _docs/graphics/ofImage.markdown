@@ -1,14 +1,21 @@
 #class ofImage
 
-##Example
+
+##Description
 
 
-
-##Reference
+##Description
 
 
 
 The ofImage class wraps a library called "freeImage", and is a useful object for loading, saving and drawing images in OF projects.
+
+
+
+
+
+
+
 
 ##Methods
 
@@ -34,15 +41,26 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 0_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
 
+
 The constructor. Called when you create the ofImage object. Internal values are initialized here. 
+
+
+
+
+
+
 
 
 
@@ -78,13 +96,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -122,15 +151,26 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 0_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
 
+
 The destructor. Calls clear() which cleans up memory and texture data. 
+
+
+
+
+
+
 
 
 
@@ -166,13 +206,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -210,15 +261,26 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
 
+
 This function allocates an image of width (w) and height (h). The type can be of three types: OF_IMAGE_GRAYSCALE, OF_IMAGE_COLOR, OF_IMAGE_COLOR_ALPHA. You don't need to call this before loading an image, but for when you want to allocate space ahead of when you are going to use the image. 
+
+
+
+
+
+
 
 
 
@@ -254,13 +316,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -298,15 +371,26 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
 
+
 Frees pixel data from memory, resets internal variables to default values and clears internal texture if it exists. This function is also called by the destructor. 
+
+
+
+
+
+
 
 
 
@@ -342,13 +426,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -386,13 +481,18 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 1_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
+
 
 The copy constructor. Pass in another image and it copies it. 
 
@@ -404,6 +504,12 @@ $$/code
 
 
 image1 and image2 are now identical. 
+
+
+
+
+
+
 
 
 
@@ -441,13 +547,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -485,13 +602,18 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
+
 
 Makes the current ofImage a copy of another ofImage. Same as clone(). 
 
@@ -504,6 +626,12 @@ $$/code
 
 
 image1 and image2 are now identical. 
+
+
+
+
+
+
 
 
 
@@ -539,13 +667,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -583,13 +722,18 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
+
 
 Makes the current ofImage a copy of another ofImage. 
 
@@ -602,6 +746,12 @@ $$/code
 
 
 image1 and image2 are now identical. 
+
+
+
+
+
+
 
 
 
@@ -637,13 +787,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -681,13 +842,18 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
+
 
 This turns on or off the allocation and use of a texture. any time you change the image (loading, resizing, converting the type), ofImage will uplaod data to an opengl texture. It may not be necessary, though, and it could be that you need to save memory on the graphics card, or that you don't need to draw this image on the screen. You can call this even before you load an image in to OF:
 
@@ -699,6 +865,12 @@ $$/code
 
 
 Since in the majority of cases, ofImages will be loaded in and drawn onscreen, the default is set to use a texture.
+
+
+
+
+
+
 
 
 
@@ -734,13 +906,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -766,11 +949,7 @@ _name: getTextureReference_
 
 _returns: ofTexture &_
 
-_returns_description: A reference to the internal ofTexture. This is for more advanced users who might want to work with the texture directly. Be aware that you are getting the actual internal texture of the ofImage so any changes you make to the texture reference will affect how the ofImage is drawn to the screen. 
-
-[code]
-ofTexture & ref = myImage.getTextureReference(); 
-[/code]_
+_returns_description: _
 
 _parameters: _
 
@@ -782,15 +961,26 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
 
+
 Returns a reference to the internal ofTexture.
+
+
+
+
+
+
 
 
 
@@ -814,7 +1004,7 @@ _name: loadImage_
 
 _returns: bool_
 
-_returns_description: Returns true if the image is loaded successfully and false if not. _
+_returns_description: _
 
 _parameters: string fileName_
 
@@ -826,13 +1016,18 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
+
 
 Loads in an image given by fileName. It will try it's best to guess the filetype based on the name. The program will look for the file relative to the data/ folder. 
 
@@ -848,6 +1043,12 @@ you can also supply folder paths for subfolders within the data folder:
 $$code(lang=c++)
 myImage.load("images/icon.gif");
 $$/code
+
+
+
+
+
+
 
 
 
@@ -884,13 +1085,18 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
+
 
 Saves an image to a file named fileName. It will guess, based on the name, what filetype to save as. This file will be relative to the data folder. 
 
@@ -925,6 +1131,12 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###unsigned char * getPixels()
 
 _syntax: getPixels()_
@@ -933,7 +1145,7 @@ _name: getPixels_
 
 _returns: unsigned char *_
 
-_returns_description: The pixels as an array of unsigned chars. NOTE: this is not a copy but the actual pixels of the ofImage. _
+_returns_description: _
 
 _parameters: _
 
@@ -945,15 +1157,26 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
 
+
 This function will give you access to a continuous block of pixels. you can grab the data and do what you like with it. If you have a grayscale image, you will have (width*height) number of pixels. Color images will have (width*height*3) number of pixels (interlaced R,G,B), and coloralpha images will have (width*height*4) number of pixels (interlaced R,G,B,A).
+
+
+
+
+
+
 
 
 
@@ -989,13 +1212,18 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
+
 
 Copies in the pixel data from  the 'pixels' array. Specify the corresponding width and height of the image you are passing in with 'w' and 'h'. The image type can be OF_IMAGE_GRAYSCALE, OF_IMAGE_COLOR, or OF_IMAGE_COLORALPHA. 
 
@@ -1004,6 +1232,12 @@ Note: that your array has to be at least as big as [ width * height * bytes per 
 If you have a grayscale image, you will have (width*height) number of pixels. Color images will have (width*height*3) number of pixels (interlaced R,G,B), and coloralpha images will have (width*height*4) number of pixels (interlaced R,G,B,A).
 
 Note: You do not need to call allocate() before calling setFromPixels() as setFromPixels() re-allocates itself if needed. 
+
+
+
+
+
+
 
 
 
@@ -1039,13 +1273,18 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
+
 
 Converts the image into a different type. 
 
@@ -1055,6 +1294,12 @@ $$code(lang=c++)
 myImage.loadImage("somethingColor.jpg");
 myImage.setImageType(OF_IMAGE_GRAYSCALE); 	// now I am grayscale;
 $$/code
+
+
+
+
+
+
 
 
 
@@ -1091,15 +1336,26 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
 
+
 Resizes the image to a new size (w, h); Can be used to scale up or down an image.
+
+
+
+
+
+
 
 
 
@@ -1135,15 +1391,26 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
 
+
 Grabs pixels from the opengl window specified by the region (x, y, w, h) and turns them into an image. It resizes or allocates the ofImage if it's necessary.
+
+
+
+
+
+
 
 
 
@@ -1181,15 +1448,26 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
 
+
 Updates the image from its internal pixels. Call this if you have changed the values of the pixels using getPixels().
+
+
+
+
+
+
 
 
 
@@ -1228,13 +1506,18 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 1_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
+
 
 Changes the drawing position specified by draw() from the normal top-left corner of the image to a position specified by xPct and yPct in relation to the dimensions of the image. This can be useful for aligning and centering images as well as rotating an image around its center. 
 
@@ -1282,6 +1565,12 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###void setAnchorPoint(x, y)
 
 _syntax: setAnchorPoint(x, y)_
@@ -1302,13 +1591,18 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 1_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
+
 
 Changes the drawing position specified by draw() from the normal top-left corner of the image to a position specified by x and y, measured in pixels. This can be useful for aligning and centering images as well as rotating an image around its center. 
 
@@ -1356,6 +1650,12 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###void resetAnchor()
 
 _syntax: resetAnchor()_
@@ -1376,15 +1676,26 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 1_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
 
+
 Resets the image's anchor to its default position at the top left corner. 
+
+
+
+
+
+
 
 
 
@@ -1420,17 +1731,28 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
 
+
 Draws the image (via the internal texture) from point (x,y) with a given width (w) and height (h).
 
 Note: x,y typically reefers to the top left corner of the image.  You can change where on the image the x,y point refers to by using setAnchorPoint() or setAnchorPercent(). 
+
+
+
+
+
+
 
 
 
@@ -1466,17 +1788,28 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
 
+
 Draws the image (via the internal texture) from point (x,y) with the image's own width and height.
 
 Note: x,y typically reefers to the top left corner of the image.  You can change where on the image the x,y point refers to by using setAnchorPoint() or setAnchorPercent(). 
+
+
+
+
+
+
 
 
 
@@ -1500,7 +1833,7 @@ _name: getWidth_
 
 _returns: float_
 
-_returns_description: The width of the image as a float. If no image is loaded it returns 0.0._
+_returns_description: _
 
 _parameters: _
 
@@ -1512,15 +1845,26 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
 
+
 Returns the width of the image.
+
+
+
+
+
+
 
 
 
@@ -1544,7 +1888,7 @@ _name: getHeight_
 
 _returns: float_
 
-_returns_description: The height of the image as a float. If no image is loaded it returns 0.0._
+_returns_description: _
 
 _parameters: _
 
@@ -1556,15 +1900,26 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
 
+
 Returns the height of the image.
+
+
+
+
+
+
 
 
 
@@ -1596,11 +1951,11 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
 _visible: 1_
+
+_constant: 0_
 
 _advanced: 0_
 
@@ -1608,7 +1963,14 @@ _advanced: 0_
 
 _description: _
 
+
 width variable contains the width of our ofImage.
+
+
+
+
+
+
 
 
 
@@ -1634,17 +1996,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
 _visible: 1_
+
+_constant: 0_
 
 _advanced: 0_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1672,11 +2041,11 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
 _visible: 1_
+
+_constant: 0_
 
 _advanced: 0_
 
@@ -1684,7 +2053,14 @@ _advanced: 0_
 
 _description: _
 
+
 height variable contains the height of our ofImage.
+
+
+
+
+
+
 
 
 
@@ -1710,11 +2086,11 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
 _visible: 1_
+
+_constant: 0_
 
 _advanced: 0_
 
@@ -1722,7 +2098,14 @@ _advanced: 0_
 
 _description: _
 
+
 type variable contains information about the kind of image we are using. Possible types are: OF_IMAGE_GRAYSCALE, OF_IMAGE_COLOR, OF_IMAGE_COLOR_ALPHA.
+
+
+
+
+
+
 
 
 
@@ -1748,17 +2131,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
 _visible: 1_
+
+_constant: 0_
 
 _advanced: 0_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1786,11 +2176,11 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
 _visible: 1_
+
+_constant: 0_
 
 _advanced: 0_
 
@@ -1798,7 +2188,14 @@ _advanced: 0_
 
 _description: _
 
+
 bpp contain the number of bits we need to use for every pixel. It will be 8 for a grayscale image (OF_IMAGE_GRAYSCALE), 24 for a color image (OF_IMAGE_COLOR) and 32 for a color image with alpha channel (OF_IMAGE_COLOR_ALPHA).
+
+
+
+
+
+
 
 
 
@@ -1824,17 +2221,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
 _visible: 1_
+
+_constant: 0_
 
 _advanced: 0_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 

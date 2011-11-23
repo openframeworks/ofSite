@@ -1,10 +1,6 @@
 #class ofVideoGrabber
 
-##Example
-
-
-
-##Reference
+##Description
 
 
 

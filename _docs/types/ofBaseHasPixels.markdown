@@ -1,10 +1,6 @@
 #class ofBaseHasPixels
 
-##Example
-
-
-
-##Reference
+##Description
 
 
 

@@ -1,14 +1,21 @@
 #class ofRectangle
 
-##Example
+
+##Description
 
 
-
-##Reference
+##Description
 
 
 
 ofRectangle class contains information about how a rectangle is in openFrameworks. Basically the class contains the position and the size of a rectangle. 
+
+
+
+
+
+
+
 
 ##Methods
 
@@ -34,13 +41,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -78,13 +96,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -122,13 +151,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -162,11 +202,11 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
 _visible: 1_
+
+_constant: 0_
 
 _advanced: 0_
 
@@ -174,7 +214,14 @@ _advanced: 0_
 
 _description: _
 
+
 x variable contains the x coordinate of our ofRectangle.
+
+
+
+
+
+
 
 
 
@@ -200,11 +247,11 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
 _visible: 1_
+
+_constant: 0_
 
 _advanced: 0_
 
@@ -212,7 +259,14 @@ _advanced: 0_
 
 _description: _
 
+
 y variable contains the y coordinate of our ofRectangle.
+
+
+
+
+
+
 
 
 
@@ -238,11 +292,11 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
 _visible: 1_
+
+_constant: 0_
 
 _advanced: 0_
 
@@ -250,7 +304,14 @@ _advanced: 0_
 
 _description: _
 
+
 width variable contains the width of our ofRectangle.
+
+
+
+
+
+
 
 
 
@@ -276,11 +337,11 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
 _visible: 1_
+
+_constant: 0_
 
 _advanced: 0_
 
@@ -288,7 +349,14 @@ _advanced: 0_
 
 _description: _
 
+
 height variable contains the height of our ofRectangle.
+
+
+
+
+
+
 
 
 

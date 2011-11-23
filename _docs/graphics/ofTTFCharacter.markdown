@@ -1,10 +1,6 @@
 #class ofTTFCharacter
 
-##Example
-
-
-
-##Reference
+##Description
 
 
 

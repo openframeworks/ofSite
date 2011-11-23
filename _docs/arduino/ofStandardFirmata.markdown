@@ -1,10 +1,6 @@
 #class ofStandardFirmata
 
-##Example
-
-
-
-##Reference
+##Description
 
 
 

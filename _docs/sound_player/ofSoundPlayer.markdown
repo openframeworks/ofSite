@@ -1,14 +1,24 @@
 #class ofSoundPlayer
 
-##Example
+
+##Description
 
 
-
-##Reference
+##Description
 
 
 
 The ofSoundPlayer class wraps fmod, which is a powerful audio utility library. The ofSoundPlayer allows you to load sound files and control and manipulate their playback and properties. 
+
+
+The ofSoundPlayer class wraps fmod, which is a powerful audio utility library.
+The ofSoundPlayer allows you to load sound files and control and manipulate
+their playback and properties.
+
+
+
+
+
 
 ##Methods
 
@@ -34,13 +44,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 0_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -78,15 +99,26 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 0_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
 
+
 Initializes fMod. Should only be called once internally.
+
+
+
+
+
+
 
 
 
@@ -122,13 +154,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 0_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -166,15 +209,26 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 0_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
 
+
 If Fmod is initialized via initializeFmod we can close it via closeFmod().
+
+
+
+
+
+
 
 
 
@@ -210,13 +264,18 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
+
 
 Loads a sound file given by fileName. Sound files can be in .wav, .aif, .mp3, .mp2, .ogg or .raw format. The program will look for the file relative to the data/ folder. If you set the optional 'bool stream' argument to true the file will be streamed from disk instead of being completely loaded into memory. It makes a lot of sense to stream files if you are dynamically loading large sound files into your program, which would normally cause the program to freeze for a short time as the whole sound is read into memory. 
 
@@ -236,6 +295,12 @@ $$code(lang=c++)
 ofSoundPlayer mySound;
 mySound.loadSound("sounds/beat.mp3");
 $$/code
+
+
+
+
+
+
 
 
 
@@ -274,13 +339,18 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
+
 
 Stops and unloads the current sound.
 
@@ -292,6 +362,12 @@ mySound.load("beat.mp3");
 mySound.play();
 mySound.unloadSound(); //Stops sound from playing, unloads "beat.mp3"
 $$/code
+
+
+
+
+
+
 
 
 
@@ -328,13 +404,18 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
+
 
 Plays the sound. If setMultiPlay() has been set to true each play() command will spawn a new copy of the sound on a new channel, letting the existing sounds continue until they are finished. If setMultiPlay() is set to false it will restart the playback of the song.
 
@@ -375,6 +456,12 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###void stop()
 
 _syntax: stop()_
@@ -395,13 +482,18 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
+
 
 Stops the sound currently playing. 
 
@@ -413,6 +505,12 @@ mySound.load("beat.mp3");
 mySound.play(); //Begins playback of sound
 mySound.stop(); //Ends playback, stops audio
 $$/code
+
+
+
+
+
+
 
 
 
@@ -449,13 +547,18 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
+
 
 Sets the volume (vol) of the sound. 0.0 - 1.0 range. 0.0 is silent and 1.0 is full volume. 
 
@@ -467,6 +570,12 @@ mySound.load("beat.mp3");
 mySound.play();
 mySound.setVolume(0.1f); //Sets volume at 10% of maximum
 $$/code
+
+
+
+
+
+
 
 
 
@@ -503,13 +612,18 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
+
 
 Sets the pan position (pct) of the sound. 0.0 - 1.0 range. 0.5 is center pan, 0.0 is full left pan and 1.0 is full right pan. 
 
@@ -523,6 +637,12 @@ mySound.pan(0.2f); //Pans to the left
 mySound.pan(0.8f); //Pans to the right
 mySound.pan(0.5f); //Back to center
 $$/code
+
+
+
+
+
+
 
 
 
@@ -559,13 +679,18 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
+
 
 Sets the playback speed (spd) of the sound. 1.0 is the normal speed. 2.0 is double the normal speed etc. 
 
@@ -579,6 +704,12 @@ mySound.setSpeed(2.0f); //Chipmunk Voice
 mySound.setSpeed(0.2f); //Isaac Hayes on Muscle Relaxers
 mySound.setSpeed(1.0f); //Normal again
 $$/code
+
+
+
+
+
+
 
 
 
@@ -615,13 +746,18 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
+
 
 Pauses and un-pauses the playback of the sound. 
 
@@ -634,6 +770,12 @@ mySound.play();
 mySound.setPaused(true); //Sound is paused
 mySound.setPaused(false); //Sound is unpaused, playback continues
 $$/code
+
+
+
+
+
+
 
 
 
@@ -670,13 +812,18 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
+
 
 Loops the sound if set to true. Does not loop the sound if set to false. Default is false.
 
@@ -688,6 +835,12 @@ mySound.load("beat.mp3");
 mySound.setLoop(true); //Sound will loop
 mySound.play();
 $$/code
+
+
+
+
+
+
 
 
 
@@ -724,13 +877,18 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
+
 
 Allows a sound to be played multiple times at once. When set to true the play() function will start playing the sound on a new channel, letting the old channels continue until they are done playing. When set to false the play() function will stop the channel before playing the sound.
 
@@ -744,6 +902,12 @@ mySound.load("beat.mp3");
 mySound.play(); //Plays sound
 mySound.play(); //Adds new copy of sound to channel and plays over currently playing sound
 $$/code
+
+
+
+
+
+
 
 
 
@@ -780,13 +944,18 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
+
 
 Sets the playback-head to the position (pct) specified. 0.0 - 1.0 range. 0.0 is the beginning of the sound file and 1.0 is the end.
 
@@ -815,6 +984,12 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###float getPosition()
 
 _syntax: getPosition()_
@@ -823,7 +998,7 @@ _name: getPosition_
 
 _returns: float_
 
-_returns_description: Returns the current position of the playback-head in the sound. 0.0 - 1.0 range._
+_returns_description: _
 
 _parameters: _
 
@@ -835,13 +1010,18 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
+
 
 0.0 is the beginning of the sound file and 1.0 is the end.
 
@@ -870,6 +1050,12 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###bool getIsPlaying()
 
 _syntax: getIsPlaying()_
@@ -878,7 +1064,7 @@ _name: getIsPlaying_
 
 _returns: bool_
 
-_returns_description: Returns true if sound is currently playing, otherwise returns false._
+_returns_description: _
 
 _parameters: _
 
@@ -890,13 +1076,18 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
+
 
 Example:
 
@@ -923,6 +1114,12 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###float getSpeed()
 
 _syntax: getSpeed()_
@@ -931,7 +1128,7 @@ _name: getSpeed_
 
 _returns: float_
 
-_returns_description: Returns the pan position of the sound. 0.0 - 1.0 range._
+_returns_description: _
 
 _parameters: _
 
@@ -943,13 +1140,18 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
+
 
 0.5 is center pan, 0.0 is full left pan and 1.0 is full right pan.
 
@@ -978,6 +1180,12 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###float getPan()
 
 _syntax: getPan()_
@@ -986,7 +1194,7 @@ _name: getPan_
 
 _returns: float_
 
-_returns_description: Returns the pan position of the sound. 0.0 - 1.0 range._
+_returns_description: _
 
 _parameters: _
 
@@ -998,13 +1206,18 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
+
 
 0.5 is center pan, 0.0 is full left pan and 1.0 is full right pan. Default is 0.5
 
@@ -1018,6 +1231,12 @@ mySound.getPan();//Returns 0.5
 mySound.setPan(0.2f);
 mySound.getPan();//Returns 0.2
 $$/code
+
+
+
+
+
+
 
 
 
@@ -1050,11 +1269,11 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
 _visible: 1_
+
+_constant: 0_
 
 _advanced: 0_
 
@@ -1062,7 +1281,14 @@ _advanced: 0_
 
 _description: _
 
+
 This boolean variable tells if the sound we are using is streaming or not.
+
+
+
+
+
+
 
 
 
@@ -1088,11 +1314,11 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
 _visible: 1_
+
+_constant: 0_
 
 _advanced: 0_
 
@@ -1100,7 +1326,14 @@ _advanced: 0_
 
 _description: _
 
+
 Allows a sound to be played multiple times at once. See setMultiPlay(bool bMp) function for more info.
+
+
+
+
+
+
 
 
 
@@ -1127,11 +1360,11 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
 _visible: 1_
+
+_constant: 0_
 
 _advanced: 0_
 
@@ -1139,7 +1372,14 @@ _advanced: 0_
 
 _description: _
 
+
 bLoop variable controls if we are playing the sound as a loop.
+
+
+
+
+
+
 
 
 
@@ -1165,11 +1405,11 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
 _visible: 1_
+
+_constant: 0_
 
 _advanced: 0_
 
@@ -1177,7 +1417,14 @@ _advanced: 0_
 
 _description: _
 
+
 bLoadedOk is a boolean variable containing true if the sound was successfully loaded.  
+
+
+
+
+
+
 
 
 
@@ -1203,11 +1450,11 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
 _visible: 1_
+
+_constant: 0_
 
 _advanced: 0_
 
@@ -1215,7 +1462,14 @@ _advanced: 0_
 
 _description: _
 
+
 bPaused contain true if we pause the sound.
+
+
+
+
+
+
 
 
 
@@ -1241,11 +1495,11 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
 _visible: 1_
+
+_constant: 0_
 
 _advanced: 0_
 
@@ -1253,7 +1507,14 @@ _advanced: 0_
 
 _description: _
 
+
 Contains the pan position of the sound. Going from 0 to 1.
+
+
+
+
+
+
 
 
 
@@ -1279,11 +1540,11 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
 _visible: 1_
+
+_constant: 0_
 
 _advanced: 0_
 
@@ -1291,7 +1552,14 @@ _advanced: 0_
 
 _description: _
 
+
 Contains the value of the volume of our sound.
+
+
+
+
+
+
 
 
 
@@ -1317,11 +1585,11 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
 _visible: 0_
+
+_constant: 0_
 
 _advanced: 0_
 
@@ -1329,7 +1597,14 @@ _advanced: 0_
 
 _description: _
 
+
 Contains the frequency value of the sound. It is set by default to 44100.
+
+
+
+
+
+
 
 
 
@@ -1355,11 +1630,11 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
 _visible: 1_
+
+_constant: 0_
 
 _advanced: 0_
 
@@ -1367,7 +1642,14 @@ _advanced: 0_
 
 _description: _
 
+
 Contains the playback speed of the sound. 1.0 is the normal speed. 2.0 is double the normal speed, -1 is backwards etc. 
+
+
+
+
+
+
 
 
 
@@ -1393,17 +1675,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
 _visible: 1_
+
+_constant: 0_
 
 _advanced: 0_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1431,17 +1720,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
 _visible: 0_
+
+_constant: 0_
 
 _advanced: 0_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1469,17 +1765,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
 _visible: 1_
+
+_constant: 0_
 
 _advanced: 1_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1507,17 +1810,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
 _visible: 1_
+
+_constant: 0_
 
 _advanced: 1_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 

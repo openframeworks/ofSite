@@ -1,10 +1,6 @@
 #class ofArduino
 
-##Example
-
-
-
-##Reference
+##Description
 
 
 

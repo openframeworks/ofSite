@@ -1,10 +1,17 @@
 #class ofTypes
 
-##Example
+
+##Description
+
+
+##Description
 
 
 
-##Reference
+
+
+
+
 
 
 

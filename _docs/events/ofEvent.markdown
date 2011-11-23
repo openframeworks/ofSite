@@ -1,10 +1,6 @@
 #class ofEvent
 
-##Example
-
-
-
-##Reference
+##Description
 
 
 

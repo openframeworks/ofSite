@@ -1,10 +1,6 @@
 #class ofTTFContour
 
-##Example
-
-
-
-##Reference
+##Description
 
 
 

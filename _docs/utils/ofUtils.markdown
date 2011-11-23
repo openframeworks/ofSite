@@ -1,14 +1,21 @@
 #class ofUtils
 
-##Example
+
+##Description
 
 
-
-##Reference
+##Description
 
 
 
 ofUtils class provide basic functionality and utility for OF programs.
+
+
+
+
+
+
+
 
 ##Methods
 

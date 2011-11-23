@@ -1,10 +1,6 @@
 #class ofCoreEvents
 
-##Example
-
-
-
-##Reference
+##Description
 
 
 

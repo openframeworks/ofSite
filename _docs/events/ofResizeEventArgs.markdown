@@ -1,10 +1,6 @@
 #class ofResizeEventArgs
 
-##Example
-
-
-
-##Reference
+##Description
 
 
 

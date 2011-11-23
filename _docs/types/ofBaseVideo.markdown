@@ -1,10 +1,6 @@
 #class ofBaseVideo
 
-##Example
-
-
-
-##Reference
+##Description
 
 
 

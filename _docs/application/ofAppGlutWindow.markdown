@@ -1,10 +1,6 @@
 #class ofAppGlutWindow
 
-##Example
-
-
-
-##Reference
+##Description
 
 
 

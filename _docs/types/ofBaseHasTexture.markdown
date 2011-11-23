@@ -1,10 +1,6 @@
 #class ofBaseHasTexture
 
-##Example
-
-
-
-##Reference
+##Description
 
 
 

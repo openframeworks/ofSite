@@ -1,10 +1,6 @@
 #class ofBaseUpdates
 
-##Example
-
-
-
-##Reference
+##Description
 
 
 

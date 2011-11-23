@@ -1,10 +1,6 @@
 #class ofStyle
 
-##Example
-
-
-
-##Reference
+##Description
 
 
 

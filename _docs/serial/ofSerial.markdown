@@ -1,10 +1,6 @@
 #class ofSerial
 
-##Example
-
-
-
-##Reference
+##Description
 
 
 

@@ -1,10 +1,6 @@
 #class ofVideoPlayer
 
-##Example
-
-
-
-##Reference
+##Description
 
 
 

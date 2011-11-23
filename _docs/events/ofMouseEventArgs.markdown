@@ -1,10 +1,6 @@
 #class ofMouseEventArgs
 
-##Example
-
-
-
-##Reference
+##Description
 
 
 

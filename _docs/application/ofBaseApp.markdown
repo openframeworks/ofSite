@@ -1,10 +1,6 @@
 #class ofBaseApp
 
-##Example
-
-
-
-##Reference
+##Description
 
 
 
@@ -132,7 +128,7 @@ _advanced: 0_
 
 _description: _
 
-This function gets called once, at the start of the app. It's where you allocate variables, initialize camera communication, load data, begin communication with a local or remoate service, and generally prepare your application.
+This function gets called once, just at the start of the app. It would be a good place, for example, to allocate variables or load in any files. 
 
 
 
@@ -176,7 +172,7 @@ _advanced: 0_
 
 _description: _
 
-This function gets called repeatedly, each frame. It gets just before draw, so it is an ideal place to do any updating of variables, checking files or peripherals, or any other preparation for drawing.
+This function gets called repeatedly. It gets just before draw, so it is an ideal place to do any updating of variables. For example, imagine you have a varibale already defined in your testApp.h called "xpos"
 
 
 $$code(lang=c++)
@@ -239,7 +235,7 @@ _advanced: 0_
 
 _description: _
 
-This function gets called regularly just after update. It's where you draw things.
+This function gets called regularly just after update. It's where you draw things:
 
 
 $$code(lang=c++)
@@ -295,7 +291,7 @@ _advanced: 0_
 
 _description: _
 
-Add this function to your testApp to have it called at the moment before the app is terminated. This is useful for doing cleanup stuff or making sure files are saved before the app terminates. This happens before the destructor of the app instance is called.
+Add this function to your testApp to have it called at the moment before the app is terminated. This is useful for doing cleanup stuff or making sure files are saved before the app terminates. 
 
 
 

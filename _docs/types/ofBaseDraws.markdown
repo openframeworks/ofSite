@@ -1,10 +1,6 @@
 #class ofBaseDraws
 
-##Example
-
-
-
-##Reference
+##Description
 
 
 

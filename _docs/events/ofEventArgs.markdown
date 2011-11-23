@@ -1,10 +1,6 @@
 #class ofEventArgs
 
-##Example
-
-
-
-##Reference
+##Description
 
 
 

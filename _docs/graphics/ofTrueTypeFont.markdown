@@ -1,14 +1,19 @@
 #class ofTrueTypeFont
 
-##Example
+
+##Description
 
 
-
-##Reference
+##Description
 
 
 
 The ofTrueTypeFont class provides an interface to load fonts into openframeworks. The fonts are converted to textures, and can be drawn on screen. There are some options when you load the font - what size the font is rendered at, wether or not it is anti-aliased, and wether the font object will be the full character set or a subset (ie, extended ascii, which can include accents, umlauts, or normal ascii). The default is anti-aliased, non-full character set. The library uses freetype, which has certain patent problems in regards to true type hinting, especially at small sizes, so non-anti-aliased type doesn't always render beautifully. But we find it quite adequate, and at larger sizes it seems to works well.
+
+
+
+
+
 
 ##Methods
 
@@ -34,13 +39,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 0_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -78,13 +94,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -122,13 +149,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 0_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -166,13 +204,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -210,13 +259,18 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
+
 
 Loads a fonts of a given filename in, and renders it to a texture at a given size (fontsize). It will look for the font file in the data/ folder. For example, to load the font arial at type size 32:
 
@@ -231,6 +285,12 @@ ofFont myFont;
 myFont.loadFont("arial.ttf", 32);
 
 $$/code
+
+
+
+
+
+
 
 
 
@@ -267,13 +327,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -311,15 +382,26 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
 
+
 This loads a font, but in addition to setting the font name and size, you can also pass in two flags: is this font antiAliased, and does it include the full character set?
+
+
+
+
+
+
 
 
 
@@ -343,7 +425,7 @@ _name: getLineHeight_
 
 _returns: float_
 
-_returns_description: Returns a float, which is the line height for the type face._
+_returns_description: _
 
 _parameters: _
 
@@ -355,15 +437,26 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
 
+
 The line height is computed, based on the font size, and can be adjusted. Useful if you are print multi-line text.
+
+
+
+
+
+
 
 
 
@@ -399,15 +492,26 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
 
+
 Sets the line height for text that is drawn on screen.
+
+
+
+
+
+
 
 
 
@@ -431,7 +535,7 @@ _name: stringWidth_
 
 _returns: float_
 
-_returns_description: Returns this width, in pixels, for a given string drawn with that typeface._
+_returns_description: _
 
 _parameters: string s_
 
@@ -443,15 +547,26 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
 
+
  
+
+
+
+
+
+
 
 
 
@@ -475,7 +590,7 @@ _name: stringHeight_
 
 _returns: float_
 
-_returns_description: Returns the height, in pixels, for a given string drawn with that typeface._
+_returns_description: _
 
 _parameters: string s_
 
@@ -487,13 +602,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -519,7 +645,7 @@ _name: getStringBoundingBox_
 
 _returns: ofRectangle_
 
-_returns_description: Returns an ofRectangle wich is the Bounding Box containing our TrueTypeFont This rectangle depends on the TruTypeFont size._
+_returns_description: _
 
 _parameters: string s, float x, float y_
 
@@ -531,13 +657,18 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
+
 
 e.g:
 
@@ -574,6 +705,12 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###void drawString(s, x, y)
 
 _syntax: drawString(s, x, y)_
@@ -594,13 +731,18 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
+
 
 Draws a string with that typeface, on screen, at point(x,y). For example, you can write some text on screen like this:
 
@@ -651,6 +793,12 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###void drawStringAsShapes(s, x, y)
 
 _syntax: drawStringAsShapes(s, x, y)_
@@ -671,15 +819,26 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 0_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
 
+
 drawStringAsShapes function draws the s string as if it was a geometrical shapes using the information contained in ofTTFContour and ofTTFCharacter. Parameters x and y sets the position of the shape.
+
+
+
+
+
+
 
 
 
@@ -703,7 +862,7 @@ _name: getCharacterAsPoints_
 
 _returns: ofTTFCharacter_
 
-_returns_description: Returns ofTTFCharacter object used by ofTrueTypeFont. Basically contains geometrical information of ofPoints that define diferent ofTrueTypeFont content (strings with a certain format). _
+_returns_description: _
 
 _parameters: int character_
 
@@ -715,13 +874,24 @@ _version_deprecated: _
 
 _summary: _
 
-_visible: 1_
+_constant: false_
 
-_advanced: 1_
+_static: false_
+
+_visible: true_
+
+_advanced: true_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -755,11 +925,11 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
 _visible: 1_
+
+_constant: 0_
 
 _advanced: 0_
 
@@ -767,7 +937,14 @@ _advanced: 0_
 
 _description: _
 
+
 bLoadedOk is a boolean variable containing true if the font was successfully loaded.   
+
+
+
+
+
+
 
 
 
@@ -793,17 +970,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
 _visible: 1_
+
+_constant: 0_
 
 _advanced: 0_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -831,11 +1015,11 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
 _visible: 1_
+
+_constant: 0_
 
 _advanced: 0_
 
@@ -843,7 +1027,14 @@ _advanced: 0_
 
 _description: _
 
+
 A variable which tells you if the font is antiAliased.
+
+
+
+
+
+
 
 
 
@@ -869,17 +1060,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
 _visible: 1_
+
+_constant: 0_
 
 _advanced: 0_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -907,11 +1105,11 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
 _visible: 1_
+
+_constant: 0_
 
 _advanced: 0_
 
@@ -919,7 +1117,14 @@ _advanced: 0_
 
 _description: _
 
+
 A variable which tells you if the font contains the full character set, or a subset.
+
+
+
+
+
+
 
 
 
@@ -945,17 +1150,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
 _visible: 1_
+
+_constant: 0_
 
 _advanced: 0_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -983,11 +1195,11 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
 _visible: 1_
+
+_constant: 0_
 
 _advanced: 0_
 
@@ -995,7 +1207,14 @@ _advanced: 0_
 
 _description: _
 
+
 nCharacters contains the number of characters that our font has.
+
+
+
+
+
+
 
 
 
@@ -1021,17 +1240,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
 _visible: 1_
+
+_constant: 0_
 
 _advanced: 0_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1059,17 +1285,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
 _visible: 1_
+
+_constant: 0_
 
 _advanced: 0_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1097,17 +1330,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
 _visible: 1_
+
+_constant: 0_
 
 _advanced: 0_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1135,17 +1375,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
 _visible: 1_
+
+_constant: 0_
 
 _advanced: 0_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1173,17 +1420,24 @@ _version_started: 006_
 
 _version_deprecated: _
 
-_constant: 0_
-
 _summary: _
 
 _visible: 1_
+
+_constant: 0_
 
 _advanced: 0_
 
 
 
 _description: _
+
+
+
+
+
+
+
 
 
 

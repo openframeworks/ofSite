@@ -1,10 +1,6 @@
 #class ofPoint
 
-##Example
-
-
-
-##Reference
+##Description
 
 
 

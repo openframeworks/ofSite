@@ -1,10 +1,6 @@
 #class ofKeyEventArgs
 
-##Example
-
-
-
-##Reference
+##Description
 
 
 

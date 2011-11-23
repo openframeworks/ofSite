@@ -1,10 +1,6 @@
 #class ofAudioEventArgs
 
-##Example
-
-
-
-##Reference
+##Description
 
 
 
