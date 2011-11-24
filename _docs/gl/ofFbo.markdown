@@ -5,13 +5,20 @@
 
 
 
+As an example, with an fbo you can do some drawing to the fbo (instead of to the screen or a texture) and then do some blurring, maybe invert the colors, combine multiple images, all without needing to draw it to the screen until you're ready.
 
+fbos are also used to create views of other scenes, like a TV in a house. A scene can be rendered through an FBO to a texture, then that texture can be applied to the surface of another object.
 
-The settings object is an easier way to set up the fbo when you allocate the fbo.
+You can also create a depth buffer within your fbo to figure out which objects should go in front of which other objects.
 
+As an example of an advanced usage:
 
+Create an ofFbo.
+Attach the color buffer of the ofFbo to a texture.
+Attach the depth buffer of the ofFbo to a texture.
+Render the texture to screen with a pixel shader using ofShader.
 
-
+Rad!
 
 
 
@@ -54,7 +61,7 @@ _advanced: False_
 _description: _
 
 
-
+This is the default constructor for the ofFbo.
 
 
 
@@ -90,8 +97,7 @@ _advanced: False_
 
 
 _description: _
-
-
+Copies all data from the mom fbo
 
 
 
@@ -128,8 +134,7 @@ _advanced: False_
 
 
 _description: _
-
-
+This overloaded operator allows you to set one fbo from another using the = operator. Very convenient.
 
 
 
@@ -204,11 +209,10 @@ _advanced: False_
 
 
 _description: _
+Before you use the fbo you need to allocate it. This sets the width, height, and GL type of the fbo (i.e. whether it has alpha data or not) and the number of samples for MSAA. MSAA is sort of a big topic.
+MSAA is what you typically have in hardware on a modern graphics card. The graphics card renders to a surface that is larger than the final image, but in shading each "cluster" of samples (that will end up in a single pixel on the final screen) the pixel shader is run only once. We save a ton of fill rate, but we still burn memory bandwidth.
 
-
-
-
-
+This technique does not anti-alias any effects coming out of the shader, because the shader runs at 1x, so alpha cutouts are jagged. This is the most common way to run a forward-rendering game. MSAA does not work for a deferred renderer because lighting decisions are made after the MSAA is "resolved" (down-sized) to its final image size.
 
 
 ###void allocate(settings = Settings())
@@ -243,7 +247,7 @@ _advanced: False_
 
 _description: _
 
-
+You can also allocate the ofFbo using a Settings object
 
 
 
@@ -281,7 +285,7 @@ _advanced: False_
 
 _description: _
 
-
+This allows you draw everything that's in your fbo to the screen using its default height and width at the x, y indicated.
 
 
 
@@ -318,7 +322,7 @@ _advanced: False_
 
 
 _description: _
-
+This allows you draw everything that's in your fbo to the screen using any height and width. Any stretching is up to you to handle appropriately.
 
 
 
@@ -357,7 +361,7 @@ _advanced: False_
 
 _description: _
 
-
+You can set the anchor that the texture will be drawn at.
 
 
 
@@ -395,7 +399,7 @@ _advanced: False_
 
 _description: _
 
-
+This allows you set the anchor position of the texture in the fbo when you draw it.
 
 
 
@@ -432,7 +436,7 @@ _advanced: False_
 
 
 _description: _
-
+This allows you reset the anchor position.
 
 
 
@@ -471,6 +475,7 @@ _advanced: False_
 
 _description: _
 
+This allows you set the default texture that your fbo will use. If you're using multiple textures, this will return the one that should be draw to, scaled, and positioned.
 
 
 
@@ -509,7 +514,7 @@ _advanced: False_
 
 _description: _
 
-
+If you've set the default texture reference, you can get access to it here.
 
 
 
@@ -546,7 +551,7 @@ _advanced: False_
 
 
 _description: _
-
+This gives you access to the ofTexture contained w/in the fbo. This returns the texture index returned by setDefaultTextureIndex() if you've set it there.
 
 
 
@@ -585,7 +590,7 @@ _advanced: False_
 
 _description: _
 
-
+This gives you access to a particular ofTexture if there are more than 1 contained w/in the fbo.
 
 
 
@@ -623,7 +628,7 @@ _advanced: False_
 
 _description: _
 
-
+This method does nothing.
 
 
 
@@ -662,7 +667,7 @@ _advanced: False_
 _description: _
 
 
-
+Any drawing that you do after begin() is drawn into the fbo rather than the screen. This is how you draw things into your ofFbo instance.
 
 
 
@@ -699,7 +704,7 @@ _advanced: False_
 
 _description: _
 
-
+Any drawing that you do after end() is drawn into the fbo rather than the screen. This is how you stop drawing things into your ofFbo instance.
 
 
 
@@ -737,6 +742,7 @@ _advanced: False_
 
 _description: _
 
+This allows you to get the pixels from an ofFbo and store it in an ofPixels instance. The attachmentPoint parameter allows you indicate which of the textures attached to the fbo you want to grab
 
 
 
@@ -776,6 +782,7 @@ _advanced: False_
 _description: _
 
 
+This allows you to get the pixels from an ofFbo and store it in an ofShortPixels instance. The attachmentPoint parameter allows you indicate which of the textures attached to the fbo you want to grab. The ofShortPixels instance is useful when you want your image at short ints, or non-floating point values.
 
 
 
@@ -813,6 +820,7 @@ _advanced: False_
 
 _description: _
 
+This allows you to get the pixels from an ofFbo and store it in an ofShortPixels instance. The attachmentPoint parameter allows you indicate which of the textures attached to the fbo you want to grab. The ofShortPixels instance is useful when you want your image as floating point values.
 
 
 
@@ -851,7 +859,7 @@ _advanced: False_
 
 _description: _
 
-
+This returns the width of the fbo that was set when it was allocated. This is just like width of a texture: it sets how many pixels wide the allocated memory on the graphics card is.
 
 
 
@@ -889,7 +897,7 @@ _advanced: False_
 
 _description: _
 
-
+This returns the height of the fbo. This is just like height of a texture: it sets how many pixels wide the allocated memory on the graphics card is.
 
 
 
@@ -928,7 +936,7 @@ _advanced: False_
 _description: _
 
 
-
+This lets you draw the fbo using vertices to define the area that the fbo will be drawn into. This can be an ofRectangle, ofMesh, or other vertex based drawing technique.
 
 
 
@@ -965,7 +973,7 @@ _advanced: False_
 
 _description: _
 
-
+After you bind the fbo and draw with it, call fbo to stop the fbo from being attached to vertices that are created.
 
 
 
@@ -1003,7 +1011,7 @@ _advanced: False_
 
 _description: _
 
-
+This returns the number of textures that the fbo contains.
 
 
 
@@ -1041,7 +1049,7 @@ _advanced: False_
 
 _description: _
 
-
+This returnes the GLuint of Fbo for advanced actions, if you're interested in doing something with the FBO id directly.
 
 
 
@@ -1079,7 +1087,7 @@ _advanced: False_
 
 _description: _
 
-
+This gives you the OpenGL id of the depthBuffer that the fbo contains.
 
 
 
@@ -1117,7 +1125,7 @@ _advanced: False_
 
 _description: _
 
-
+This gives you the OpenGL id of the depthBuffer that the fbo contains.
 
 
 
@@ -1155,7 +1163,7 @@ _advanced: False_
 
 _description: _
 
-
+This allows you quickly check whether your graphics card supports FBO objects.
 
 
 
@@ -1194,7 +1202,7 @@ _advanced: False_
 _description: _
 
 
-
+This returnes the max number of simultaneous max color attachments, i.e. textures that will just be used for color information.
 
 
 
@@ -1232,7 +1240,7 @@ _advanced: False_
 _description: _
 
 
-
+This returnes the max number of simultaneous draw buffers that your graphics card supports, i.e. color buffers that can be drawn to simultaneously. This is usually 4 at present.
 
 
 
@@ -1269,7 +1277,7 @@ _advanced: False_
 
 _description: _
 
-
+This is the maximum number of MSAA samples that your graphic card supports.
 
 
 
@@ -1306,7 +1314,6 @@ _advanced: False_
 
 
 _description: _
-
 
 
 
