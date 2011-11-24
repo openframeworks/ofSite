@@ -5,6 +5,34 @@
 
 
 
+ofPixels is an object for working with blocks of pixels, those pixels can be copied from an image that you've loaded, something that you've drawn using ofGraphics, or a ofVideoGrabber instance. You can create an image from pixels, using on ofPixels object like so:
+
+$$code(lang=c++)
+ofPixels p;
+ofLoadImage(p, "pathToImage.jpg");
+$$/code
+
+ofPixels represents pixels data on the CPU as opposed to an ofTexture which represents pixel data on the GPU. They can easily be made inter-operational though:
+
+$$code(lang=c++)
+ofTexture tex;
+// do some stuff with t
+ofPixels pix;
+tex.readToPixels(pix); // now all the pixels from tex are in pix
+$$/code
+
+You can access the pixels in an ofPixels object with the [] operator.
+
+$$code(lang=c++)
+ofPixels pix;
+// put some stuff in the pixels
+int i = 0;
+while( i < pix.size()) {
+	char c = pix[i];
+	i++;
+}
+$$/code
+
 
 
 ##Methods
@@ -613,7 +641,7 @@ _advanced: False_
 
 _description: _
 
-
+crop to a new width and height, this reallocates memory.
 
 
 
@@ -690,7 +718,7 @@ _advanced: False_
 _description: _
 
 
-
+crop to a new width and height, this reallocates memory.
 
 
 
@@ -994,7 +1022,13 @@ _advanced: False_
 _description: _
 
 
+This method tells you want pixel index an x, y pair would be at in the index, for instance:
 
+$$code(lang=c++)
+ofColor yellow = ofColor::yellow;
+int ind = pix.getPixelIndex(mouseX, mouseY);
+pix.setPixel(ind, yellow);
+$$/code
 
 
 
@@ -1032,7 +1066,11 @@ _advanced: False_
 _description: _
 
 
+This method returns the ofColor that the pixels contains at an x, y pair:
 
+$$code(lang=c++)
+ofColor c = pix.getColor(mouseX, mouseY);
+$$/code
 
 
 
@@ -1070,7 +1108,7 @@ _advanced: False_
 _description: _
 
 
-
+Sets the color of the pixel at the x,y location.
 
 
 
@@ -1107,7 +1145,7 @@ _advanced: False_
 
 _description: _
 
-
+Provides access to each channel of each pixel. If you have RGB pixel data, then you'll have 3 values for each pixel, if you have RGBA, you'll have 4.
 
 
 
@@ -1145,7 +1183,7 @@ _advanced: False_
 
 _description: _
 
-
+Returns whether memory has been allocated for an ofPixels object or not. Many operations like copying pixels, etc, automatically allocate the memory needed, but it's sometimes good to check.
 
 
 
@@ -1184,7 +1222,7 @@ _advanced: False_
 _description: _
 
 
-
+Returns the width of the pixels.
 
 
 
@@ -1222,7 +1260,7 @@ _advanced: False_
 _description: _
 
 
-
+Returns the height of the pixels.
 
 
 
@@ -1260,7 +1298,7 @@ _advanced: False_
 _description: _
 
 
-
+Returns the number of the pixels.
 
 
 
@@ -1298,7 +1336,7 @@ _advanced: False_
 _description: _
 
 
-
+If you have RGB pixel data, this will return 3, if you have RGBA, you'll have 4, if you have grayscale, this will return 1.
 
 
 
@@ -1335,10 +1373,9 @@ _advanced: False_
 
 _description: _
 
+This is how large each channel of a pixels is, ofPixels objects that store pixel data as unsigned char are smaller than  ofPixels objects that store pixel data as floats.
 
-
-
-
+This returns bytes, not bits, so you'll probably see ofPixels<float> as 4 and ofPixels<unsigned char> as 1.
 
 
 ###int getBitsPerChannel()
@@ -1374,7 +1411,9 @@ _advanced: False_
 _description: _
 
 
+This is how large each channel of a pixels is, ofPixels objects that store pixel data as unsigned char are smaller than  ofPixels objects that store pixel data as floats.
 
+This returns bit, not bytes, so you'll probably see ofPixels<float> as 32 and ofPixels<unsigned char> as 8.
 
 
 
@@ -1450,10 +1489,13 @@ _advanced: False_
 _description: _
 
 
+This returns a single channel, for instance, the Red pixel values, from the ofPixels object, this gives you a grayscale representation of that one channel.
 
-
-
-
+$$code(lang=c++)
+	ofPixels rpix = pix.getChannel(0);
+	ofPixels gpix = pix.getChannel(1);
+	ofPixels bpix = pix.getChannel(2);
+$$/code
 
 ###void setChannel(channel, channelPixels)
 
@@ -1488,7 +1530,7 @@ _advanced: False_
 _description: _
 
 
-
+This sets all the pixel data for a single channel, for instance, the Red pixel values, from an ofPixels object assumed to be a grayscale representation of the data that should go into that one channel.
 
 
 
@@ -1526,7 +1568,7 @@ _advanced: False_
 _description: _
 
 
-
+Returns what image type the ofPixels object is.
 
 
 
@@ -1563,7 +1605,7 @@ _advanced: False_
 
 _description: _
 
-
+This gives you the number of values that the ofPixels object contains, so an RGB data 400x400 would be 480,000, whereas RGBA data of the same dimensions would be 640,000.
 
 
 
