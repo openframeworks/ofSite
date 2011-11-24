@@ -1,1337 +1,1148 @@
+//----------------------
 
-##application##
 
-###ofBaseApp###
+##3d##
+
+
+###ofNode###
+
 
 __visible: true__
+
 
 __advanced: false__
 
-__methods__
 
-ofBaseApp()
+###ofEasyCam###
 
-~ofBaseApp()
-
-setup()
-
-update()
-
-draw()
-
-exit()
-
-windowResized(...)
-
-keyPressed(...)
-
-keyReleased(...)
-
-mouseMoved(...)
-
-mouseDragged(...)
-
-mousePressed(...)
-
-mouseReleased()
-
-mouseReleased(...)
-
-audioReceived(...)
-
-audioRequested(...)
-
-__variables__
-
-mouseX
-
-mouseY
-
-###ofAppBaseWindow###
 
 __visible: true__
 
-__advanced: true__
-
-__methods__
-
-ofAppBaseWindow()
-
-~ofAppBaseWindow()
-
-setupOpenGL(...)
-
-initializeWindow()
-
-runAppViaInfiniteLoop(...)
-
-hideCursor()
-
-showCursor()
-
-setWindowPosition(...)
-
-setWindowShape(...)
-
-getFrameNum()
-
-getFrameRate()
-
-getWindowPosition()
-
-getWindowSize()
-
-getScreenSize()
-
-setFrameRate(...)
-
-setWindowTitle(...)
-
-getWindowMode()
-
-setFullscreen(...)
-
-toggleFullscreen()
-
-enableSetupScreen()
-
-disableSetupScreen()
-
-__variables__
-
-###ofAppGlutWindow###
-
-__visible: true__
-
-__advanced: true__
-
-__methods__
-
-ofAppGlutWindow()
-
-exitApp()
-
-~ofAppGlutWindow()
-
-display(...)
-
-setupOpenGL(...)
-
-mouse_cb(...)
-
-initializeWindow()
-
-motion_cb(...)
-
-runAppViaInfiniteLoop(...)
-
-passive_motion_cb(...)
-
-hideCursor()
-
-idle_cb(...)
-
-showCursor()
-
-keyboard_cb(...)
-
-setFullscreen(...)
-
-keyboard_up_cb(...)
-
-toggleFullscreen()
-
-special_key_cb(...)
-
-setWindowTitle(...)
-
-special_key_up_cb(...)
-
-setWindowPosition(...)
-
-resize_cb(...)
-
-setWindowShape(...)
-
-getWindowPosition()
-
-getWindowSize()
-
-getScreenSize()
-
-getWindowMode()
-
-getFrameNum()
-
-getFrameRate()
-
-setFrameRate(...)
-
-enableSetupScreen()
-
-disableSetupScreen()
-
-__variables__
-
-##serial##
-
-###ofSerial###
-
-__visible: true__
 
 __advanced: false__
 
-__methods__
 
-ofSerial()
+###ofMesh###
 
-~ofSerial()
-
-enumerateDevices()
-
-close()
-
-setup()
-
-setup(...)
-
-setup(...)
-
-readBytes(...)
-
-writeBytes(...)
-
-writeByte(...)
-
-readByte()
-
-flush(...)
-
-available()
-
-setVerbose(...)
-
-__variables__
-
-bVerbose
-
-bInited
-
-fd
-
-oldoptions
-
-##arduino##
-
-###ofArduino###
 
 __visible: true__
 
+
 __advanced: false__
 
-__methods__
 
-ofStandardFirmata()
+###ofCamera###
 
-sendDigitalPinReporting(...)
-
-ofArduino()
-
-processSysExData(...)
-
-~ofStandardFirmata()
-
-sendDigitalPortReporting(...)
-
-~ofArduino()
-
-connect(...)
-
-processData(...)
-
-connect(...)
-
-disconnect()
-
-processDigitalPort(...)
-
-isArduinoReady()
-
-update()
-
-processSysExData(...)
-
-setUseDelay(...)
-
-isInitialized()
-
-sendServo(...)
-
-setDigitalHistoryLength(...)
-
-sendServoAttach(...)
-
-setAnalogHistoryLength(...)
-
-sendServoDetach(...)
-
-setStringHistoryLength(...)
-
-getServo(...)
-
-setSysExHistoryLength(...)
-
-sendDigitalPinMode(...)
-
-sendAnalogPinReporting(...)
-
-sendDigital(...)
-
-sendPwm(...)
-
-sendSysEx(...)
-
-sendString(...)
-
-sendProtocolVersionRequest()
-
-sendFirmwareVersionRequest()
-
-sendReset()
-
-sendSysExBegin()
-
-sendSysExEnd()
-
-sendByte(...)
-
-sendValueAsTwo7bitBytes(...)
-
-getPwm(...)
-
-getDigital(...)
-
-getAnalog(...)
-
-getSysEx()
-
-getString()
-
-getMajorProtocolVersion()
-
-getMinorProtocolVersion()
-
-getMajorFirmwareVersion()
-
-getMinorFirmwareVersion()
-
-getFirmwareName()
-
-getDigitalHistory(...)
-
-getAnalogHistory(...)
-
-getSysExHistory()
-
-getStringHistory()
-
-getDigitalPinMode(...)
-
-getAnalogPinReporting(...)
-
-getValueFromTwo7bitBytes(...)
-
-__variables__
-
-EDigitalPinChanged
-
-_initialized
-
-bUseDelay
-
-EAnalogPinChanged
-
-_port
-
-connected
-
-ESysExReceived
-
-_portStatus
-
-connectTime
-
-EProtocolVersionReceived
-
-_analogHistoryLength
-
-_servoValue
-
-EFirmwareVersionReceived
-
-_digitalHistoryLength
-
-_temp
-
-EInitialized
-
-_stringHistoryLength
-
-_humidity
-
-EStringReceived
-
-_sysExHistoryLength
-
-_waitForData
-
-_executeMultiByteCommand
-
-_multiByteChannel
-
-_storedInputData
-
-_sysExData
-
-_majorProtocolVersion
-
-_minorProtocolVersion
-
-_majorFirmwareVersion
-
-_minorFirmwareVersion
-
-_firmwareName
-
-_sysExHistory
-
-_stringHistory
-
-_analogHistory
-
-_digitalHistory
-
-_digitalPinMode
-
-_digitalPinValue
-
-_digitalPortValue
-
-_digitalPortReporting
-
-_digitalPinReporting
-
-_analogPinReporting
-
-###ofStandardFirmata###
 
 __visible: true__
 
+
 __advanced: false__
 
-__methods__
 
-__variables__
+###ofLight###
 
-##video##
-
-###ofVideoGrabber###
 
 __visible: true__
 
-__advanced: false__
-
-__methods__
-
-ofVideoGrabber()
-
-~ofVideoGrabber()
-
-listDevices()
-
-isFrameNew()
-
-grabFrame()
-
-close()
-
-initGrabber(...)
-
-videoSettings()
-
-getPixels()
-
-getTextureReference()
-
-setVerbose(...)
-
-setDeviceID(...)
-
-setUseTexture(...)
-
-draw(...)
-
-draw(...)
-
-update()
-
-setAnchorPercent(...)
-
-setAnchorPoint(...)
-
-resetAnchor()
-
-getHeight()
-
-getWidth()
-
-__variables__
-
-height
-
-bChooseDevice
-
-width
-
-deviceID
-
-bUseTexture
-
-tex
-
-bVerbose
-
-bGrabberInited
-
-pixels
-
-bIsFrameNew
-
-ucGrabber
-
-###ofVideoPlayer###
-
-__visible: true__
 
 __advanced: false__
 
-__methods__
 
-ofVideoPlayer()
 
-start()
 
-~ofVideoPlayer()
+//----------------------
 
-createImgMemAndGWorld()
-
-loadMovie(...)
-
-seek_lock()
-
-closeMovie()
-
-seek_unlock()
-
-close()
-
-gstHandleMessage()
-
-update()
-
-allocate()
-
-idleMovie()
-
-play()
-
-stop()
-
-isFrameNew()
-
-getPixels()
-
-getPosition()
-
-getSpeed()
-
-getDuration()
-
-getIsMovieDone()
-
-setPosition(...)
-
-setVolume(...)
-
-setLoopState(...)
-
-setSpeed(...)
-
-setFrame(...)
-
-setUseTexture(...)
-
-getTextureReference()
-
-draw(...)
-
-draw(...)
-
-setAnchorPercent(...)
-
-setAnchorPoint(...)
-
-resetAnchor()
-
-setPaused(...)
-
-getCurrentFrame()
-
-getTotalNumFrames()
-
-firstFrame()
-
-nextFrame()
-
-previousFrame()
-
-getHeight()
-
-getWidth()
-
-__variables__
-
-width
-
-bStarted
-
-height
-
-bPlaying
-
-speed
-
-bPaused
-
-bLoaded
-
-bIsFrameNew
-
-nFrames
-
-gstData
-
-pixels
-
-bIsMovieDone
-
-bHavePixelsChanged
-
-isStream
-
-tex
-
-gstPipeline
-
-bUseTexture
-
-gstSink
-
-allocated
-
-durationNanos
-
-loopMode
-
-posChangingPaused
-
-seek_mutex
 
 ##graphics##
 
-###ofImage###
+
+###ofPath###
+
 
 __visible: true__
 
-__advanced: false__
-
-__methods__
-
-ofImage()
-
-loadImageIntoPixels(...)
-
-~ofImage()
-
-saveImageFromPixels(...)
-
-allocate(...)
-
-changeTypeOfPixels(...)
-
-clear()
-
-resizePixels(...)
-
-ofImage(...)
-
-getBmpFromPixels(...)
-
-operator=(...)
-
-putBmpIntoPixels(...)
-
-clone(...)
-
-allocatePixels(...)
-
-setUseTexture(...)
-
-swapRgb(...)
-
-getTextureReference()
-
-loadImage(...)
-
-saveImage(...)
-
-getPixels()
-
-setFromPixels(...)
-
-setImageType(...)
-
-resize(...)
-
-grabScreen(...)
-
-update()
-
-setAnchorPercent(...)
-
-setAnchorPoint(...)
-
-resetAnchor()
-
-draw(...)
-
-draw(...)
-
-getWidth()
-
-getHeight()
-
-__variables__
-
-width
-
-myPixels
-
-height
-
-type
-
-bUseTexture
-
-bpp
-
-tex
-
-###ofTexture###
-
-__visible: true__
 
 __advanced: false__
 
-__methods__
-
-ofTexture()
-
-~ofTexture()
-
-ofTexture(...)
-
-operator=(...)
-
-allocate(...)
-
-allocate(...)
-
-clear()
-
-loadData(...)
-
-loadScreenData(...)
-
-setAnchorPercent(...)
-
-setAnchorPoint(...)
-
-resetAnchor()
-
-draw(...)
-
-draw(...)
-
-bind()
-
-unbind()
-
-bAllocated()
-
-getTextureData()
-
-getHeight()
-
-getWidth()
-
-__variables__
-
-texData
-
-anchor
-
-bAnchorIsPct
-
-###ofTrueTypeFont###
-
-__visible: true__
-
-__advanced: false__
-
-__methods__
-
-ofTrueTypeFont()
-
-drawChar(...)
-
-~ofTrueTypeFont()
-
-drawCharAsShape(...)
-
-loadFont(...)
-
-ofNextPow2(...)
-
-loadFont(...)
-
-getLineHeight()
-
-setLineHeight(...)
-
-stringWidth(...)
-
-stringHeight(...)
-
-getStringBoundingBox(...)
-
-drawString(...)
-
-drawStringAsShapes(...)
-
-getCharacterAsPoints(...)
-
-__variables__
-
-bLoadedOk
-
-charOutlines
-
-bAntiAlised
-
-lineHeight
-
-bFullCharacterSet
-
-cps
-
-nCharacters
-
-texNames
-
-fontSize
-
-bMakeContours
-
-border
-
-visibleBorder
 
 ###ofTTFContour###
 
+
 __visible: true__
 
-__advanced: true__
 
-__methods__
+__advanced: false__
 
-__variables__
 
-pts
+###ofImage###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofSubPath###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofPixels###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofPixelUtils###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofTrueTypeFont###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofPolyline###
+
+
+__visible: true__
+
+
+__advanced: false__
+
 
 ###ofTTFCharacter###
 
-__visible: true__
-
-__advanced: true__
-
-__methods__
-
-__variables__
-
-contours
-
-##sound player##
-
-###ofSoundPlayer###
 
 __visible: true__
+
 
 __advanced: false__
 
-__methods__
 
-ofSoundPlayer()
+###ofTessellator###
 
-initializeFmod()
 
-~ofSoundPlayer()
+__visible: true__
 
-closeFmod()
-
-loadSound(...)
-
-unloadSound()
-
-play()
-
-stop()
-
-setVolume(...)
-
-setPan(...)
-
-setSpeed(...)
-
-setPaused(...)
-
-setLoop(...)
-
-setMultiPlay(...)
-
-setPosition(...)
-
-getPosition()
-
-getIsPlaying()
-
-getSpeed()
-
-getPan()
-
-__variables__
-
-isStreaming
-
-bMultiPlay
-
-bLoop
-
-bLoadedOk
-
-bPaused
-
-pan
-
-volume
-
-internalFreq
-
-speed
-
-length
-
-result
-
-channel
-
-sound
-
-##sound stream##
-
-##utils##
-
-###ofUtils###
-
-__visible: false__
 
 __advanced: false__
 
-__methods__
 
-__variables__
+###ofImage_###
 
-##types##
-
-###ofBaseVideo###
 
 __visible: true__
 
-__advanced: true__
-
-__methods__
-
-~ofBaseVideo()
-
-getPixels()
-
-close()
-
-__variables__
-
-###ofColor###
-
-__visible: true__
 
 __advanced: false__
 
-__methods__
 
-ofColor()
+###ofCairoRenderer###
 
-~ofColor()
 
-__variables__
+__visible: true__
 
-r
-
-g
-
-b
-
-a
-
-###ofTypes###
-
-__visible: false__
 
 __advanced: false__
 
-__methods__
 
-__variables__
+###ofPixels_###
 
-###ofPoint###
 
 __visible: true__
+
 
 __advanced: false__
 
-__methods__
 
-~ofPoint()
+###ofTexture###
 
-ofPoint(...)
-
-ofPoint(...)
-
-set(...)
-
-operator-()
-
-operator==(...)
-
-operator!=(...)
-
-operator=(...)
-
-operator=(...)
-
-operator+(...)
-
-operator+(...)
-
-operator+=(...)
-
-operator+=(...)
-
-operator-(...)
-
-operator-(...)
-
-operator-=(...)
-
-operator-=(...)
-
-operator*(...)
-
-operator*(...)
-
-operator*=(...)
-
-operator*=(...)
-
-operator/(...)
-
-operator/(...)
-
-operator/=(...)
-
-operator/=(...)
-
-__variables__
-
-x
-
-y
-
-z
-
-v
-
-###ofStyle###
 
 __visible: true__
 
-__advanced: true__
-
-__methods__
-
-ofStyle()
-
-~ofStyle()
-
-__variables__
-
-color
-
-polyMode
-
-rectMode
-
-bFill
-
-blending
-
-smoothing
-
-circleResolution
-
-lineWidth
-
-###ofBaseHasPixels###
-
-__visible: true__
-
-__advanced: true__
-
-__methods__
-
-~ofBaseHasPixels()
-
-getPixels()
-
-__variables__
-
-###ofBaseDraws###
-
-__visible: true__
-
-__advanced: true__
-
-__methods__
-
-~ofBaseDraws()
-
-draw(...)
-
-draw(...)
-
-getHeight()
-
-getWidth()
-
-setAnchorPercent(...)
-
-setAnchorPoint(...)
-
-resetAnchor()
-
-__variables__
-
-###ofBaseUpdates###
-
-__visible: true__
-
-__advanced: true__
-
-__methods__
-
-~ofBaseUpdates()
-
-update()
-
-__variables__
-
-###ofBaseHasTexture###
-
-__visible: true__
-
-__advanced: true__
-
-__methods__
-
-~ofBaseHasTexture()
-
-getTextureReference()
-
-__variables__
-
-###ofRectangle###
-
-__visible: true__
 
 __advanced: false__
 
-__methods__
 
-ofRectangle()
+###ofRendererCollection###
 
-ofRectangle(...)
 
-~ofRectangle()
+__visible: true__
 
-__variables__
 
-x
+__advanced: false__
 
-y
+//----------------------
 
-width
 
-height
+##gl##
+
+
+###ofMaterial###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofFbo###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofGLRenderer###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofVbo###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofTextureData###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofShader###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofVboMesh###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+//----------------------
+
 
 ##math##
 
-##constants##
+
+###ofVec2f###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofMatrix4x4###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofMath###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofQuaternion###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofMatrix3x3###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofVec4f###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofVec3f###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+
+
+
+
+
+___column___
+
+
+
+
+
+
+
+//----------------------
+
+
+##video##
+
+
+###ofGstVideoGrabber###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofGstAppSink###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofQuickTimePlayer###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofGstUtils###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofiPhoneVideoPlayer###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofGstVideoPlayer###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofGstVideoUtils###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofVideoPlayer###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofVideoGrabber###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofDirectShowGrabber###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofiPhoneVideoGrabber###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+
+
+//----------------------
+
+
+##sound##
+
+
+###ofFmodSoundPlayer###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofRtAudioSoundStream###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofPASoundStream###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofOpenALSoundPlayer###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofxiPhoneSoundStream###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofSoundStream###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+//----------------------
+
+
+##sound_player##
+
+
+###ofSoundPlayer###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+
+//----------------------
+
+
+##arduino##
+
+
+###ofArduino###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofStandardFirmata###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+
+//----------------------
+
+
+##serial##
+
+
+###ofSerial###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofSerialDeviceInfo###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+___column___
+
+
+
+
+
+//----------------------
+
+
+##application##
+
+
+###ofAppGlutWindow###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofAppBaseWindow###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofDragInfo###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofBaseApp###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+
+//----------------------
+
+
+##utils##
+
+
+###ofDirectory###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofHttpResponse###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofFileDialogResult###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###std::tr1::shared_ptr###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofLogError###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofLogWarning###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofFileLoggerChannel###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofBuffer###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofFile###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofLogNotice###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofFilePath###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofConsoleLoggerChannel###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofHttpRequest###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofLogVerbose###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofLog###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofPtr###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ExtensionComparator###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofUtils###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofThread###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofLogFatalError###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofURLFileLoader###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+//----------------------
+
+
+##types##
+
+
+###ofColor_###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofAbstractHasPixels###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofBaseSoundStream###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofBaseHasTexture###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofBaseImage###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofBaseRenderer###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofBaseUpdates###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofBaseDraws###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofBaseSoundOutput###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofBaseSoundInput###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofBaseLoggerChannel###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofBaseVideoPlayer###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofStyle###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofBaseSoundPlayer###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofBaseVideoGrabber###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofTypes###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofBaseVideoDraws###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofRectangle###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofBaseVideo###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofBaseHasPixels_###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofPoint###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofBaseHasPixels###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofAbstractImage###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofBaseImage_###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofColor###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofBaseTypes###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+
+//----------------------
+
 
 ##events##
 
-###ofEvent###
-
-__visible: true__
-
-__advanced: true__
-
-__methods__
-
-__variables__
 
 ###ofKeyEventArgs###
 
-__visible: true__
-
-__advanced: false__
-
-__methods__
-
-__variables__
-
-key
-
-###ofEventArgs###
 
 __visible: true__
 
+
 __advanced: false__
 
-__methods__
-
-__variables__
 
 ###ofAudioEventArgs###
 
-__visible: true__
-
-__advanced: false__
-
-__methods__
-
-__variables__
-
-buffer
-
-bufferSize
-
-nChannels
-
-###ofMouseEventArgs###
 
 __visible: true__
 
+
 __advanced: false__
 
-__methods__
-
-__variables__
-
-x
-
-y
-
-button
 
 ###ofCoreEvents###
 
+
 __visible: true__
+
 
 __advanced: false__
 
-__methods__
 
-disable()
+###ofEventArgs###
 
-enable()
 
-__variables__
+__visible: true__
 
-setup
 
-update
+__advanced: false__
 
-draw
 
-exit
+###ofEvent###
 
-windowResized
 
-keyPressed
+__visible: true__
 
-keyReleased
 
-mouseMoved
+__advanced: false__
 
-mouseDragged
 
-mousePressed
+###ofMouseEventArgs###
 
-mouseReleased
 
-audioReceived
+__visible: true__
 
-audioRequested
+
+__advanced: false__
+
 
 ###ofResizeEventArgs###
 
+
 __visible: true__
+
 
 __advanced: false__
 
-__methods__
 
-__variables__
+###ofEvents###
 
-width
 
-height
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofEventUtils###
+
+
+__visible: true__
+
+
+__advanced: false__
+
 
