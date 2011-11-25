@@ -5,6 +5,15 @@ import logging
 
 import blogofile_bf as bf
 import shutil
+import sys
+
+import argparse
+import shutil
+import glob
+
+print os.path.realpath(__file__)[0:-(len(os.path.join('_controllers','docs.py'))+2)]
+sys.path.append(os.path.join(os.path.realpath(__file__)[0:-(len(os.path.join('_controllers','docs.py'))+1)],'_tools'))
+#sys.path.append( os.path.realpath('')+"/../_tools" )
 import markdown_file
 
 logger = logging.getLogger("blogofile.post")    
