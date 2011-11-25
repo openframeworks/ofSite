@@ -17,7 +17,7 @@
 		<a href="http://www.openframeworks.cc/setup" title="setup" >setup</a> /
 		<a href="http://www.openframeworks.cc/download" title="download" >download</a> /
 		<a href="http://www.openframeworks.cc/addons" title="addons" >addons</a> /
-		<a href="http://www.openframeworks.cc/documentation" title="docs" >docs</a> /
+		<a href="/newofsite/docs" title="docs" >docs</a> /
 		<a href="http://www.openframeworks.cc/gallery" title="gallery" >gallery</a> /
 		<a href="http://www.openframeworks.cc/community" title="community" >community</a> /
 		<a href="http://www.openframeworks.cc/forum/" title="forum" target="_blank">forum</a> <img src="http://www.openframeworks.cc/wp-content/themes/ofw/images/icon-tiny-open.gif" border="0" width="9" height="9" alt="new window" /> /

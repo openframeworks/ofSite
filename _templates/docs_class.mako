@@ -13,21 +13,23 @@
         <div class="page-left-wide">
           <div id="main_block">
             <div id="prose_block">
-              <h2>${class_name}</h2>
+              <h2>${clazz.name}</h2>
               <p>
-              ${class_description}
+              <%self:filter chain="syntax_highlight,markdown_template">
+                  ${clazz.reference}
+              </%self:filter>
               </p>
               
-              <h3>${class_name} functions</h3>
-              % for method in methods:
-                    % if method.visible and not method.advanced:
+              <h3>${clazz.name} functions</h3>
+              % for method in clazz.function_list:
+                    % if method.visible==1 and method.advanced==0:
                         <%include file="docs_method.mako" args="method=method" />    
                     % endif
               % endfor
               
-              <h3>${class_name} variables</h3>
-              % for var in variables:
-                    % if var.visible and not var.advanced:
+              <h3>${clazz.name} variables</h3>
+              % for var in clazz.var_list:
+                    % if var.visible==1 and var.advanced==0:
                         <%include file="docs_var.mako" args="var=var" />    
                     % endif
               % endfor
