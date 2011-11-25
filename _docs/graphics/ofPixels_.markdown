@@ -641,7 +641,7 @@ _advanced: False_
 
 _description: _
 
-crop to a new width and height, this reallocates memory.
+This crops the pixels to a new width and height. As a word of caution this reallocates memory and can be a bit expensive if done a lot.
 
 
 
@@ -679,7 +679,7 @@ _advanced: False_
 
 _description: _
 
-
+This crops the pixels into the ofPixels reference passed in by toPix. at the x and y and with the new width and height. As a word of caution this reallocates memory and can be a bit expensive if done a lot.
 
 
 
@@ -756,7 +756,7 @@ _advanced: False_
 _description: _
 
 
-
+This reflects the pixels across the vertical and/or horizontal axis.
 
 
 
@@ -794,6 +794,11 @@ _advanced: False_
 _description: _
 
 
+This resizes the ofPixels instance to the dstHeight and dstWidth. The options for the interpolation methods are as follows:
+
+OF_INTERPOLATE_NEAREST_NEIGHBOR =1
+OF_INTERPOLATE_BILINEAR			=2
+OF_INTERPOLATE_BICUBIC			=3
 
 
 
@@ -832,9 +837,11 @@ _advanced: False_
 _description: _
 
 
+This resizes the ofPixels instance to the size of the ofPixels object passed in dst. The options for the interpolation methods are as follows:
 
-
-
+OF_INTERPOLATE_NEAREST_NEIGHBOR =1
+OF_INTERPOLATE_BILINEAR			=2
+OF_INTERPOLATE_BICUBIC			=3
 
 
 ###bool pasteInto(&dst, x, y)
@@ -870,10 +877,23 @@ _advanced: False_
 _description: _
 
 
+This pastes the ofPixels object into another ofPixels object at the specified index, copying data from the ofPixels that the method is being called on to the ofPixels object at &dst. If the data being copied doesn't fit into the dst then the image is cropped.
 
+$$code(lang=c++)
+ofLoadImage(footballPixels, "two.jpg");
+ofLoadImage(fujiPixels, "one.jpg");
 
+fujiTex.loadData(footballPixels);
+footballTex.loadData(fujiPixels);
 
+footballPixels.pasteInto(fujiPixels, 150, 100); // now fujiPixels is altered
 
+mixtureTex.loadData(fujiPixels);
+$$/code
+
+Drawing the three textures here you can see the ball cropped into the mountain:
+
+![crop_demo](ofPixels_crop.png)
 
 ###void swapRgb()
 
@@ -908,7 +928,7 @@ _advanced: False_
 _description: _
 
 
-
+As implemented right now, this method swaps the R and B channels of an image, leaving the G and A channels as is.
 
 
 
@@ -946,7 +966,7 @@ _advanced: False_
 _description: _
 
 
-
+This clears all the data from the ofPixels objects. After calling this you'll need to allocate the ofPixels object again to use it.
 
 
 
@@ -984,9 +1004,16 @@ _advanced: False_
 _description: _
 
 
+This returns a raw pointer to the pixel data. Changing this will change the value of the pixels in the ofPixels object. One way to inspect the values returns in this pointer would be:
 
-
-
+$$code(lang=c++)
+unsigned char* pixPtr = pix.getPixels();
+while(pixPtr) {
+	// for RGB pixels there will be 3 values for each pixel
+	// for RGBA pixels there will be 4
+	++pixPtr;
+}
+$$/code
 
 
 ###int getPixelIndex(x, y)
@@ -1450,7 +1477,7 @@ _advanced: False_
 
 _description: _
 
-
+This returns the number of channels that the ofPixels object contains. RGB is 3 channels, RGBA is 4, and grayscale is 1.
 
 
 
