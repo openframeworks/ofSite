@@ -2,7 +2,7 @@
 import docs_functions
 import sys
 from docs_members import DocsMethod,DocsVar
-sys.path.append( "/var/www/test_new_docs/" )
+#sys.path.append( "/var/www/test_new_docs/" )
 
 import os
 import fileinput
