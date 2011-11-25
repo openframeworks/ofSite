@@ -153,7 +153,7 @@ __advanced: false__
 __visible: true__
 
 
-__advanced: false__
+__advanced: true__
 
 
 ###ofCairoRenderer###
@@ -171,7 +171,7 @@ __advanced: true__
 __visible: true__
 
 
-__advanced: false__
+__advanced: true__
 
 
 ###ofRendererCollection###
@@ -535,7 +535,7 @@ __advanced: false__
 __visible: true__
 
 
-__advanced: false__
+__advanced: true__
 
 
 ###ofAbstractHasPixels###
