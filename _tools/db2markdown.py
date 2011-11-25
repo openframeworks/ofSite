@@ -20,7 +20,7 @@ def export_vars(db,clazz_file,clazz):
     for var in variables:
         #if var.visible and not var.advanced
         index.write(var.name+'\n\n')
-        clazz_file.write("//----------------------\n\n")
+        #clazz_file.write("//----------------------\n\n")
         clazz_file.write( "###" + var.type + " " + var.name + "\n\n")
         clazz_file.write( '_name: ' + var.name + '_\n\n')
         clazz_file.write( '_type: ' + var.type + '_\n\n')
@@ -29,8 +29,8 @@ def export_vars(db,clazz_file,clazz):
         clazz_file.write( '_version_deprecated: ' + var.version_deprecated + '_\n\n')
         clazz_file.write( '_constant: ' + var.constant + '_\n\n')
         clazz_file.write( '_summary: _\n\n' )
-        clazz_file.write( '_visible: ' + ('true' if var.visible else 'false') + '_\n\n' )
-        clazz_file.write( '_advanced: ' + ('true' if var.advanced else 'false') + '_\n\n' )
+        clazz_file.write( '_visible: ' + str(var.visible) + '_\n\n' )
+        clazz_file.write( '_advanced: ' + str(var.advanced) + '_\n\n' )
         clazz_file.write( '\n\n_description: _\n\n' )
         if(var.description is not None):
             clazz_file.write( var.description.replace('[code]','\n$$code(lang=c++)\n').replace('[/code]','\n$$/code\n') + "\n\n")
@@ -46,7 +46,7 @@ def export_methods(db,clazz_file,clazz):
             index.write(method.name+'(...)\n\n')
         else:
             index.write(method.name+'()\n\n')
-        clazz_file.write("//----------------------\n\n")
+        #clazz_file.write("//----------------------\n\n")
         clazz_file.write( "###"+method.returns + " " + method.syntax + "\n\n")
         clazz_file.write( '_syntax: ' + method.syntax + '_\n\n')
         clazz_file.write( '_name: ' + method.name + '_\n\n')
@@ -57,8 +57,8 @@ def export_methods(db,clazz_file,clazz):
         clazz_file.write( '_version_started: ' + method.version_started + '_\n\n')
         clazz_file.write( '_version_deprecated: ' + method.version_deprecated + '_\n\n')
         clazz_file.write( '_summary: _\n\n' )
-        clazz_file.write( '_visible: ' + ('true' if method.visible else 'false') + '_\n\n' )
-        clazz_file.write( '_advanced: ' + ('true' if method.advanced else 'false') + '_\n\n' )
+        clazz_file.write( '_visible: ' + str(method.visible) + '_\n\n' )
+        clazz_file.write( '_advanced: ' + str(method.advanced) + '_\n\n' )
         clazz_file.write( '\n\n_description: _\n\n' )
         if(method.description is not None):
             clazz_file.write( method.description.replace('[code]','\n$$code(lang=c++)\n').replace('[/code]','\n$$/code\n') + "\n\n")
@@ -80,18 +80,19 @@ def export_classes(db,group_dir,group):
         clazz_file.write( '#class ' + clazz.name + "\n\n" )
         
         
-        clazz_file.write("//----------------------\n\n")
-        clazz_file.write( "##Example\n\n\n\n" )
-        clazz_file.write("//----------------------\n\n")
-        clazz_file.write( "##Reference\n\n\n\n" )
-        clazz_file.write("//----------------------\n\n")
+        #clazz_file.write("//----------------------\n\n")
+        clazz_file.write( "##Description\n\n\n\n" )
+        #clazz_file.write("//----------------------\n\n")
+        #clazz_file.write( "##Reference\n\n\n\n" )
+        clazz_file.write(clazz.reference.replace('[code]','\n$$code(lang=c++)\n').replace('[/code]','\n$$/code\n')  + "\n\n")
+        #clazz_file.write("//----------------------\n\n")
         clazz_file.write( "##Methods\n\n\n\n" )
         
         export_methods(db,clazz_file,clazz)
         
                  
         index.write('__variables__\n\n')
-        clazz_file.write("//----------------------\n\n")
+        #clazz_file.write("//----------------------\n\n")
         clazz_file.write( "##Variables\n\n\n\n" )
         export_vars(db,clazz_file,clazz)
 		
@@ -102,7 +103,7 @@ def export_groups(db,advanced):
     for group in groups:
         print str(group.id) + " " + group.name
         group_dir = docs_root + "/" + group.name.replace(' ','_')
-        index.write("//----------------------\n\n")
+        #index.write("//----------------------\n\n")
         index.write("##" + group.name + "##\n\n")
         try:
             os.mkdir(group_dir)

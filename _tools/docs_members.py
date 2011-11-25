@@ -9,23 +9,30 @@ class DocsMethod:
         self.parameters = ""
         self.syntax = ""
         self.access = ""
+        self.summary = ""
         self.version_started = ""
         self.version_deprecated = ""
+        self.constant = False
+        self.static = False
         self.visible = True
         self.advanced = False
-        
+        self.clazz = ""
+
 class DocsVar:
     def __init__(self,functionid):
         self.id = functionid
         self.name = ""
         self.type = ""
+        self.summary = ""
         self.description = ""
         self.access = ""
         self.version_started = ""
         self.version_deprecated = ""
-        self.constant = ""
+        self.constant = False
         self.visible = True
         self.advanced = False
+        self.static = False
+        self.clazz = ""
         
 def tostr(string):
     if string is None:
