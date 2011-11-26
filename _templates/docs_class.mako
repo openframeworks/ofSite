@@ -13,21 +13,43 @@
         <div class="page-left-wide">
           <div id="main_block">
             <div id="prose_block">
-              <h2>${class_name}</h2>
+              <h2>${clazz.name}</h2>
               <p>
-              ${class_description}
+              <%self:filter chain="syntax_highlight,markdown_template">
+                  ${clazz.reference}
+              </%self:filter>
               </p>
               
-              <h3>${class_name} functions</h3>
-              % for method in methods:
-                    % if method.visible and not method.advanced:
+              <h3>${clazz.name} functions list</h3>
+              <ul class="funtionslist">
+              % for method in clazz.function_list:
+                  % if method.visible and not method.advanced:
+                      <li> <a href="#${method.clazz}-${method.syntax}">${method.returns} ${method.name} ( ${method.parameters} )</a> </li>
+                  % endif
+              % endfor
+              </ul>
+              
+              <h3>${clazz.name} vars list</h3>
+              <ul class="varslist">
+              % for var in clazz.var_list:
+                  % if var.visible and not var.advanced:
+                      <li> <a href="#${var.clazz}-${var.name}">${var.type} ${var.name}</a> </li>
+                  % endif
+              % endfor
+              </ul>
+              
+              <br/><br/>
+              
+              <h3>${clazz.name} functions</h3>
+              % for method in clazz.function_list:
+                    % if method.visible==1 and method.advanced==0:
                         <%include file="docs_method.mako" args="method=method" />    
                     % endif
               % endfor
               
-              <h3>${class_name} variables</h3>
-              % for var in variables:
-                    % if var.visible and not var.advanced:
+              <h3>${clazz.name} variables</h3>
+              % for var in clazz.var_list:
+                    % if var.visible==1 and var.advanced==0:
                         <%include file="docs_var.mako" args="var=var" />    
                     % endif
               % endfor

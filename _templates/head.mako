@@ -25,7 +25,8 @@ href="${bf.util.site_path_helper(bf.config.blog.path,'/feed/atom')}" />
 <link rel='stylesheet' id='contact-form-7-css'  href='http://www.openframeworks.cc/wp-content/plugins/contact-form-7/styles.css?ver=2.4.4' type='text/css' media='all' />
 <script type='text/javascript' src='http://www.openframeworks.cc/wp-includes/js/l10n.js?ver=20101110'></script>
 <script type='text/javascript' src='http://www.openframeworks.cc/wp-includes/js/swfobject.js?ver=2.2'></script>
-<script type='text/javascript' src='http://www.openframeworks.cc/wp-includes/js/jquery/jquery.js?ver=1.4.4'></script>
+<script language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+<script language="javascript" src="tweet/jquery.tweet.js" type="text/javascript"></script>
 
 <!-- Bad Behavior 2.0.43 run time: 85.038 ms -->
 <script type="text/javascript">
@@ -71,4 +72,46 @@ var _wpcf7 = { cached: 1 };
 	var vvqexpressinstall = "http://www.openframeworks.cc/wp-content/plugins/vipers-video-quicktags/resources/expressinstall.swf";
 // ]]>
 </script>
+
+<script type='text/javascript'>
+     jQuery(function($){
+        $(".tweet").tweet({
+          avatar_size: 32,
+          count: 9,
+          query: "openFrameworks",
+          loading_text: "searching twitter..."
+        });
+      });
+</script>
+
+<script src="github/jquery.rss.min.js"></script>
+<script>
+  jQuery(function($) {
+    $("#rss-feeds").rss("https://github.com/openframeworks/openFrameworks/commits/develop.atom", {
+      limit: 9,
+      // will request the API via https; default: false
+      //ssl: true,
+
+      // template for the html transformation
+      /* default: "<ul>{entry}<li><a href='{url}'>[{author}@{date}] {title}</a><br>{shortBodyPlain}</li>{/entry}</ul>"*/
+
+      template: '<ul>{entry}<li><a href="{url}">{title}</a></li>{/entry}</ul>',
+
+      // additional token definition for in-template-usage
+      // default: {}
+      tokens: {
+          avatar: function(entry, tokens){ 
+            var text = "";
+            for( p in tokens )
+                text += p + ", "
+            return text; //entry["media:thumbnail"] 
+            //return tokens.teaserImage;
+          }, //'<img src="' + entry["media:thumbnail"].url + '">'},
+      }
+    })
+  })
+</script>
+</script>
+
+<link href="tweet/jquery.tweet.css" media="all" rel="stylesheet" type="text/css"/>
 

@@ -2,7 +2,7 @@
 <div class="docs_detail_table">
 
 	<div class="docs_detail_wide_col">
-		<a name="${method.clazz}-${method.syntax_resume}">${method.syntax_resume}</a>
+		<a name="${method.clazz}-${method.syntax}">${method.syntax}</a>
 	</div>
 
 	<div class="docs_detail_wide_col_tiny">
@@ -30,7 +30,7 @@
 		&nbsp;
 	</div>
 	<div class="docs_detail_right_col">
-		${method.returns_description}<br />
+        ${method.returns_description}<br />     
     </div>
     
     <div class="docs_detail_left_col">
@@ -44,7 +44,9 @@
 		description
 	</div>
 	<div class="docs_detail_right_col">
-		${method.description}
+	    <%self:filter chain="syntax_highlight,markdown_template">
+		    ${method.description}
+		</%self:filter>
     </div>
     
     
@@ -54,4 +56,6 @@
 	
 </div>
 
-
+<%def name="filter(chain)">
+  ${bf.filter.run_chain(chain, capture(caller.body))}
+</%def>

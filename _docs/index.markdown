@@ -72,7 +72,7 @@ __advanced: false__
 __visible: true__
 
 
-__advanced: false__
+__advanced: true__
 
 
 ###ofImage###
@@ -90,7 +90,7 @@ __advanced: false__
 __visible: true__
 
 
-__advanced: false__
+__advanced: true__
 
 
 ###ofPixels###
@@ -108,7 +108,7 @@ __advanced: false__
 __visible: true__
 
 
-__advanced: false__
+__advanced: true__
 
 
 ###ofTrueTypeFont###
@@ -153,7 +153,7 @@ __advanced: false__
 __visible: true__
 
 
-__advanced: false__
+__advanced: true__
 
 
 ###ofCairoRenderer###
@@ -162,7 +162,7 @@ __advanced: false__
 __visible: true__
 
 
-__advanced: false__
+__advanced: true__
 
 
 ###ofPixels_###
@@ -171,7 +171,21 @@ __advanced: false__
 __visible: true__
 
 
-__advanced: false__
+__advanced: true__
+
+
+###ofRendererCollection###
+
+
+__visible: true__
+
+
+__advanced: true__
+
+//----------------------
+
+
+##gl##
 
 
 ###ofTexture###
@@ -181,20 +195,6 @@ __visible: true__
 
 
 __advanced: false__
-
-
-###ofRendererCollection###
-
-
-__visible: true__
-
-
-__advanced: false__
-
-//----------------------
-
-
-##gl##
 
 
 ###ofMaterial###
@@ -221,7 +221,7 @@ __advanced: false__
 __visible: true__
 
 
-__advanced: false__
+__advanced: true__
 
 
 ###ofVbo###
@@ -354,7 +354,7 @@ ___column___
 __visible: true__
 
 
-__advanced: false__
+__advanced: true__
 
 
 ###ofGstAppSink###
@@ -363,7 +363,7 @@ __advanced: false__
 __visible: true__
 
 
-__advanced: false__
+__advanced: true__
 
 
 ###ofQuickTimePlayer###
@@ -372,7 +372,7 @@ __advanced: false__
 __visible: true__
 
 
-__advanced: false__
+__advanced: true__
 
 
 ###ofGstUtils###
@@ -381,7 +381,7 @@ __advanced: false__
 __visible: true__
 
 
-__advanced: false__
+__advanced: true__
 
 
 ###ofiPhoneVideoPlayer###
@@ -390,7 +390,7 @@ __advanced: false__
 __visible: true__
 
 
-__advanced: false__
+__advanced: true__
 
 
 ###ofGstVideoPlayer###
@@ -399,7 +399,7 @@ __advanced: false__
 __visible: true__
 
 
-__advanced: false__
+__advanced: true__
 
 
 ###ofGstVideoUtils###
@@ -408,7 +408,7 @@ __advanced: false__
 __visible: true__
 
 
-__advanced: false__
+__advanced: true__
 
 
 ###ofVideoPlayer###
@@ -435,7 +435,7 @@ __advanced: false__
 __visible: true__
 
 
-__advanced: false__
+__advanced: true__
 
 
 ###ofiPhoneVideoGrabber###
@@ -444,7 +444,7 @@ __advanced: false__
 __visible: true__
 
 
-__advanced: false__
+__advanced: true__
 
 
 
@@ -461,7 +461,7 @@ __advanced: false__
 __visible: true__
 
 
-__advanced: false__
+__advanced: true__
 
 
 ###ofRtAudioSoundStream###
@@ -470,7 +470,7 @@ __advanced: false__
 __visible: true__
 
 
-__advanced: false__
+__advanced: true__
 
 
 ###ofPASoundStream###
@@ -479,7 +479,7 @@ __advanced: false__
 __visible: true__
 
 
-__advanced: false__
+__advanced: true__
 
 
 ###ofOpenALSoundPlayer###
@@ -488,7 +488,7 @@ __advanced: false__
 __visible: true__
 
 
-__advanced: false__
+__advanced: true__
 
 
 ###ofxiPhoneSoundStream###
@@ -497,7 +497,7 @@ __advanced: false__
 __visible: true__
 
 
-__advanced: false__
+__advanced: true__
 
 
 ###ofSoundStream###
@@ -523,6 +523,246 @@ __visible: true__
 
 __advanced: false__
 
+//----------------------
+
+
+##types##
+
+
+###ofColor_###
+
+
+__visible: true__
+
+
+__advanced: true__
+
+
+###ofAbstractHasPixels###
+
+
+__visible: true__
+
+
+__advanced: true__
+
+
+###ofBaseSoundStream###
+
+
+__visible: true__
+
+
+__advanced: true__
+
+
+###ofBaseHasTexture###
+
+
+__visible: true__
+
+
+__advanced: true__
+
+
+###ofBaseImage###
+
+
+__visible: true__
+
+
+__advanced: true__
+
+
+###ofBaseRenderer###
+
+
+__visible: true__
+
+
+__advanced: true__
+
+
+###ofBaseUpdates###
+
+
+__visible: true__
+
+
+__advanced: true__
+
+
+###ofBaseDraws###
+
+
+__visible: true__
+
+
+__advanced: true__
+
+
+###ofBaseSoundOutput###
+
+
+__visible: true__
+
+
+__advanced: true__
+
+
+###ofBaseSoundInput###
+
+
+__visible: true__
+
+
+__advanced: true__
+
+
+###ofBaseLoggerChannel###
+
+
+__visible: true__
+
+
+__advanced: true__
+
+
+###ofBaseVideoPlayer###
+
+
+__visible: true__
+
+
+__advanced: true__
+
+
+
+###ofBaseSoundPlayer###
+
+
+__visible: true__
+
+
+__advanced: true__
+
+
+###ofBaseVideoGrabber###
+
+
+__visible: true__
+
+
+__advanced: true__
+
+
+
+###ofBaseVideoDraws###
+
+
+__visible: true__
+
+
+__advanced: true__
+
+
+###ofBaseVideo###
+
+
+__visible: true__
+
+
+__advanced: true__
+
+
+###ofBaseHasPixels_###
+
+
+__visible: true__
+
+
+__advanced: true__
+
+
+###ofBaseHasPixels###
+
+
+__visible: true__
+
+
+__advanced: true__
+
+
+###ofAbstractImage###
+
+
+__visible: true__
+
+
+__advanced: true__
+
+
+###ofBaseImage_###
+
+
+__visible: true__
+
+
+__advanced: true__
+
+
+###ofBaseTypes###
+
+
+__visible: true__
+
+
+__advanced: true__
+
+
+###ofRectangle###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofStyle###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofTypes###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofPoint###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofColor###
+
+
+__visible: true__
+
+
+__advanced: false__
 
 
 //----------------------
@@ -546,7 +786,7 @@ __advanced: false__
 __visible: true__
 
 
-__advanced: false__
+__advanced: true__
 
 
 
@@ -571,14 +811,7 @@ __advanced: false__
 __visible: true__
 
 
-__advanced: false__
-
-
-___column___
-
-
-
-
+__advanced: true__
 
 //----------------------
 
@@ -592,7 +825,7 @@ ___column___
 __visible: true__
 
 
-__advanced: false__
+__advanced: true__
 
 
 ###ofAppBaseWindow###
@@ -620,6 +853,21 @@ __visible: true__
 
 
 __advanced: false__
+
+
+
+
+
+
+
+
+___column___
+
+
+
+
+
+
 
 
 
@@ -662,6 +910,15 @@ __advanced: false__
 __visible: true__
 
 
+__advanced: true__
+
+
+###ofLogFatalError###
+
+
+__visible: true__
+
+
 __advanced: false__
 
 
@@ -683,61 +940,7 @@ __visible: true__
 __advanced: false__
 
 
-###ofFileLoggerChannel###
-
-
-__visible: true__
-
-
-__advanced: false__
-
-
-###ofBuffer###
-
-
-__visible: true__
-
-
-__advanced: false__
-
-
-###ofFile###
-
-
-__visible: true__
-
-
-__advanced: false__
-
-
 ###ofLogNotice###
-
-
-__visible: true__
-
-
-__advanced: false__
-
-
-###ofFilePath###
-
-
-__visible: true__
-
-
-__advanced: false__
-
-
-###ofConsoleLoggerChannel###
-
-
-__visible: true__
-
-
-__advanced: false__
-
-
-###ofHttpRequest###
 
 
 __visible: true__
@@ -764,6 +967,60 @@ __visible: true__
 __advanced: false__
 
 
+###ofFileLoggerChannel###
+
+
+__visible: true__
+
+
+__advanced: true__
+
+
+###ofBuffer###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofFile###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofFilePath###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
+###ofConsoleLoggerChannel###
+
+
+__visible: true__
+
+
+__advanced: true__
+
+
+###ofHttpRequest###
+
+
+__visible: true__
+
+
+__advanced: false__
+
+
 ###ofPtr###
 
 
@@ -779,7 +1036,7 @@ __advanced: false__
 __visible: true__
 
 
-__advanced: false__
+__advanced: true__
 
 
 ###ofUtils###
@@ -800,262 +1057,13 @@ __visible: true__
 __advanced: false__
 
 
-###ofLogFatalError###
-
-
-__visible: true__
-
-
-__advanced: false__
-
-
 ###ofURLFileLoader###
 
 
 __visible: true__
 
 
-__advanced: false__
-
-
-//----------------------
-
-
-##types##
-
-
-###ofColor_###
-
-
-__visible: true__
-
-
-__advanced: false__
-
-
-###ofAbstractHasPixels###
-
-
-__visible: true__
-
-
-__advanced: false__
-
-
-###ofBaseSoundStream###
-
-
-__visible: true__
-
-
-__advanced: false__
-
-
-###ofBaseHasTexture###
-
-
-__visible: true__
-
-
-__advanced: false__
-
-
-###ofBaseImage###
-
-
-__visible: true__
-
-
-__advanced: false__
-
-
-###ofBaseRenderer###
-
-
-__visible: true__
-
-
-__advanced: false__
-
-
-###ofBaseUpdates###
-
-
-__visible: true__
-
-
-__advanced: false__
-
-
-###ofBaseDraws###
-
-
-__visible: true__
-
-
-__advanced: false__
-
-
-###ofBaseSoundOutput###
-
-
-__visible: true__
-
-
-__advanced: false__
-
-
-###ofBaseSoundInput###
-
-
-__visible: true__
-
-
-__advanced: false__
-
-
-###ofBaseLoggerChannel###
-
-
-__visible: true__
-
-
-__advanced: false__
-
-
-###ofBaseVideoPlayer###
-
-
-__visible: true__
-
-
-__advanced: false__
-
-
-###ofStyle###
-
-
-__visible: true__
-
-
-__advanced: false__
-
-
-###ofBaseSoundPlayer###
-
-
-__visible: true__
-
-
-__advanced: false__
-
-
-###ofBaseVideoGrabber###
-
-
-__visible: true__
-
-
-__advanced: false__
-
-
-###ofTypes###
-
-
-__visible: true__
-
-
-__advanced: false__
-
-
-###ofBaseVideoDraws###
-
-
-__visible: true__
-
-
-__advanced: false__
-
-
-###ofRectangle###
-
-
-__visible: true__
-
-
-__advanced: false__
-
-
-###ofBaseVideo###
-
-
-__visible: true__
-
-
-__advanced: false__
-
-
-###ofBaseHasPixels_###
-
-
-__visible: true__
-
-
-__advanced: false__
-
-
-###ofPoint###
-
-
-__visible: true__
-
-
-__advanced: false__
-
-
-###ofBaseHasPixels###
-
-
-__visible: true__
-
-
-__advanced: false__
-
-
-###ofAbstractImage###
-
-
-__visible: true__
-
-
-__advanced: false__
-
-
-###ofBaseImage_###
-
-
-__visible: true__
-
-
-__advanced: false__
-
-
-###ofColor###
-
-
-__visible: true__
-
-
-__advanced: false__
-
-
-###ofBaseTypes###
-
-
-__visible: true__
-
-
-__advanced: false__
+__advanced: true__
 
 
 
@@ -1080,7 +1088,7 @@ __advanced: false__
 __visible: true__
 
 
-__advanced: false__
+__advanced: true__
 
 
 ###ofCoreEvents###

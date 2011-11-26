@@ -12,15 +12,16 @@ def names(db,advanced):
 
 def list_all_classes(db,groupid):
     cursor=db.cursor()
-    sql='SELECT c.id,c.name,c.advanced,c.visible FROM docs_class c JOIN docs_files f WHERE c.fileid=f.id and f.groupid=%s ORDER BY f.sortid, c.sortid'
+    sql='SELECT c.id,c.name,c.description,c.advanced,c.visible FROM docs_class c JOIN docs_files f WHERE c.fileid=f.id and f.groupid=%s ORDER BY f.sortid, c.sortid'
     cursor.execute(sql,(groupid))
     classes=cursor.fetchall()
     class_list = []
     for dbclass in classes:
         clazz = DocsClass(dbclass[0])
         clazz.name = dbclass[1]
-        clazz.advanced = dbclass[2]
-        clazz.visible = dbclass[3]
+        clazz.reference = dbclass[2]
+        clazz.advanced = dbclass[3]
+        clazz.visible = dbclass[4]
         #clazz.function_list = docs_function.list_all(db,dbclass[0])
         class_list.append(clazz)
     return class_list
