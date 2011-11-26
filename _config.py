@@ -19,7 +19,8 @@
 #  If you're hosting a blogofile powered site as a subdirectory of a larger
 #  non-blogofile site, then you would set the site_url to the full URL
 #  including that subdirectory: "http://www.yoursite.com/path/to/blogofile-dir"
-site.url = "http://www.yoursite.com"
+site.url = "http://arturocastro.net/newofsite"
+#site.url = "http://localhost:8080"
 
 #### Blog Settings ####
 blog = controllers.blog

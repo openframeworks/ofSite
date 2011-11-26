@@ -18,7 +18,7 @@
 
 		    <div class="page-left-split">
 			    <p>This page the start documentation for the main OF api. There are also additional libraries that you can find on the addons page. This api is a work in progress and any corrections, additions or comments are very welcome!</p>
-			    <p>This document refers to version <strong>0.06</strong></p>
+			    <p>This document refers to version <strong>007</strong></p>
 		    </div>
 
 		    <!--div class="page-left-right">
@@ -33,9 +33,6 @@
 
 
     	<div class="page-wide">
-
-          <div id="main_block">
-            <div id="prose_blocka">
             % for column in columns:
             <div class="docs_col">
                 % for block in column:
@@ -43,9 +40,6 @@
                 % endfor
             </div>
             % endfor
-            </div><!-- End Prose Block -->
-          </div><!-- End Main Block -->
-          
         </div><!-- End Page Wide -->
               
       </div><!-- End Body Wrap -->

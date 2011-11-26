@@ -99,7 +99,7 @@ __advanced: true__
 __visible: true__
 
 
-__advanced: false__
+__advanced: true__
 
 
 ###ofPixelUtils###
@@ -171,7 +171,7 @@ __advanced: true__
 __visible: true__
 
 
-__advanced: true__
+__advanced: false__
 
 
 ###ofRendererCollection###

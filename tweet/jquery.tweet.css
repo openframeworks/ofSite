@@ -5,7 +5,7 @@
 }
 
 .tweet{
-    width: 400px;
+    width: 300px;
 }
 
 .tweet_list {
@@ -13,8 +13,8 @@
 	-moz-border-radius: 0.5em;
 	border-radius: 0.5em;
 	list-style: none;
-	margin: 0;
 	padding: 0;
+	margin: 0;
 	overflow-y: hidden;
 	background-color: #EEEEEE;
 }
@@ -27,7 +27,7 @@
 .tweet_list li {
 	overflow-y: auto;
 	overflow-x: hidden;
-	padding: 0.5em;
+	padding: 1em;
 	list-style-type: none;
 }
 
@@ -49,30 +49,31 @@
 
 
  
-div#rss-feeds {
+div#github {
     margin: 0px auto;
-    width: 400px;
+    width: 300px;
     list-style-type: none;
 	-webkit-border-radius: 0.5em;
 	-moz-border-radius: 0.5em;
 	border-radius: 0.5em;
+	padding: 0;
 	list-style: none;
 	margin: 0;
-	padding: 0;
+	padding: 5px 0 5px 0;
 	overflow-y: hidden;
 	background-color: #EEEEEE;
 }
-div#rss-feeds ul {
+div#github ul {
 	margin: 0;
 	padding: 0;
 }
-div#rss-feeds li {
+div#github li {
 	overflow-y: auto;
 	overflow-x: hidden;
-	padding: 0.5em;
+	padding: 1em;
 	list-style-type: none;
 }
-div#rss-feeds li:nth-child(2n) {
+div#github li:nth-child(2n) {
 	background-color: #F8F8F8;
 }
 

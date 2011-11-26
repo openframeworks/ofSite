@@ -10,8 +10,11 @@
     <div id="content">
       ${self.header()}
       <div id="body-wrap">
-      		<div class="page-left-wide">
-                  ${next.body()}
+            <div class="page-left-wide">
+                <h1>gallery</h1>
+                <h3>Curated by <a href="http://creatveapplications.net">creativeapplications.net</a></h3>
+                <br/><br/>
+                <div id="gallery"></div>
             </div>
       </div>
       <div id="footer">

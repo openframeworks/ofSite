@@ -19,20 +19,22 @@
                   ${clazz.reference}
               </%self:filter>
               </p>
-              
+              <br/><br/>
               <h3>${clazz.name} functions list</h3>
-              <ul class="funtionslist">
+              <ul class="functionslist">
               % for method in clazz.function_list:
-                  % if method.visible and not method.advanced:
+                  % if method.visible and not method.advanced and method.access=='public':
                       <li> <a href="#${method.clazz}-${method.syntax}">${method.returns} ${method.name} ( ${method.parameters} )</a> </li>
                   % endif
               % endfor
               </ul>
               
-              <h3>${clazz.name} vars list</h3>
+              <br/><br/>
+              
+              <h3>${clazz.name} variables list</h3>
               <ul class="varslist">
               % for var in clazz.var_list:
-                  % if var.visible and not var.advanced:
+                  % if var.visible and not var.advanced and var.access=='public':
                       <li> <a href="#${var.clazz}-${var.name}">${var.type} ${var.name}</a> </li>
                   % endif
               % endfor
@@ -42,14 +44,14 @@
               
               <h3>${clazz.name} functions</h3>
               % for method in clazz.function_list:
-                    % if method.visible==1 and method.advanced==0:
+                    % if method.visible and not method.advanced and method.access=='public':
                         <%include file="docs_method.mako" args="method=method" />    
                     % endif
               % endfor
               
               <h3>${clazz.name} variables</h3>
               % for var in clazz.var_list:
-                    % if var.visible==1 and var.advanced==0:
+                    % if var.visible and not var.advanced and var.access=='public':
                         <%include file="docs_var.mako" args="var=var" />    
                     % endif
               % endfor
@@ -71,8 +73,6 @@
   <%include file="header.mako" />
 </%def>
 <%def name="footer()">
-  <hr/>
-  This is a footer that appears on every page.
   <%include file="footer.mako" />
 </%def>
 

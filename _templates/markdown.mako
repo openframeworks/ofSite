@@ -11,7 +11,9 @@
       ${self.header()}
       <div id="body-wrap">
       		<div class="page-left-wide">
+                <%self:filter chain="markdown_template">
                   ${next.body()}
+                </%self:filter>
             </div>
       </div>
       <div id="footer">

@@ -15,7 +15,7 @@
 
     % for clazz in block.classes:   
     	% if clazz['visible'] and not clazz['advanced']:
-    	<!--div class="docs_class"-->
+    	<div class="docs_class">
     	    <!-- class link -->
             &#160;&#160;&#160;<a href="${block.name + '/' + clazz['name']}.html" class="docs_class_link"><strong>${clazz['name']}</strong></a><br />
             
@@ -28,7 +28,7 @@
             % endif
             
             
-            <hr/>
+            <!--hr/-->
             
             
     	    <!-- class variables -->
@@ -39,7 +39,7 @@
             % endif
             
             
-        <!--/div-->
+        </div>
         % endif
     % endfor
 </div>

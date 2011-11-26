@@ -10,8 +10,19 @@
     <div id="content">
       ${self.header()}
       <div id="body-wrap">
-      		<div class="page-left-wide">
+      		<div class="page-left-medium">
                   ${next.body()}
+            </div>
+             
+            <div class="page-right-narrow">
+                <h2>OF on twitter</h2>
+                <div class="tweet"></div>
+            </div>
+
+            <div class="page-right-narrow">
+                <br/><br/><br/>
+                <h2>Latest commits on github</h2>
+                <div id="github"></div>
             </div>
       </div>
       <div id="footer">
