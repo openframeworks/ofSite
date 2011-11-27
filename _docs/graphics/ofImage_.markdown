@@ -5,6 +5,7 @@
 
 
 
+The ofImage class wraps a library called "freeImage", and is a useful object for loading, saving and drawing images in OF projects. ofImage contains both the pixels of an image and the texture used to draw the image. The ofImage allows you to load images =, maniuplate the pixels, and createa n OpenGL texture that you can display and manipulate on the graphics card. Loading a file into the ofImage allocates memory for the pixels and creates the ofTexture to display the pixels.
 
 
 ##Methods
@@ -44,7 +45,7 @@ _advanced: False_
 _description: _
 
 
-
+This creates an ofImage but doesn't allocate any memory for it, so you can't use the image immediately after creating it.
 
 
 
@@ -120,7 +121,7 @@ _advanced: False_
 _description: _
 
 
-
+This creates an ofImage from an ofPixels object, allocating space for the pixels, and copying the pixels into the texture that the ofImage instance contains.
 
 
 
@@ -159,8 +160,7 @@ _description: _
 
 
 
-
-
+This creates an ofImage from an ofFile instance.
 
 
 ### ofImage_(&filename)
@@ -197,6 +197,17 @@ _description: _
 
 
 
+This creates an ofImage from a file which can be a local string or a URL, allocating space for the pixels, and copying the pixels into the texture that the ofImage instance contains.
+
+$$code(lang=c++)
+ofImage img("http://www.openframeworks.cc/wp-content/themes/ofw/images/ofw-logo.gif");
+$$/code
+
+or
+
+$$code(lang=c++)
+ofImage img("anImage.png"); // assumes this is in bin/data
+$$/code
 
 
 
@@ -234,8 +245,17 @@ _advanced: False_
 _description: _
 
 
+This allocates space in the ofImage, both the ofPixels and the ofTexture that the ofImage contains.
 
-
+$$code(lang=c++)
+img.allocate(640, 480, OF_IMAGE_COLOR);
+int i = 0;
+while ( i < img.getPixelsRef().size() ) {
+	img.getPixelsRef()[i] = abs(sin( float(i) / 18.f)) * 255.f; // make some op-art
+	i++;
+}
+img.reloadTexture();
+$$/code
 
 
 
@@ -272,7 +292,7 @@ _advanced: False_
 _description: _
 
 
-
+This clears the texture and pixels contained within the ofImage.
 
 
 
@@ -311,7 +331,7 @@ _description: _
 
 
 
-
+This allows you to create an ofImage from another ofImage instance, copying all the pixels and the texture data while creating a new textureID.
 
 
 
@@ -350,7 +370,7 @@ _description: _
 
 
 
-
+This allows you to create an ofImage from another ofImage instance, copying all the pixels and the texture data while creating a new textureID.
 
 
 ### ofImage_(&mom)
@@ -387,7 +407,7 @@ _description: _
 
 
 
-
+This allows you to create an ofImage from another ofImage instance, copying all the pixels and the texture data while creating a new textureID.
 
 
 
@@ -426,7 +446,7 @@ _description: _
 
 
 
-
+This allows you to create an ofImage from another ofImage instance, copying all the pixels and the texture data while creating a new textureID.
 
 
 ###void clone(&mom)
@@ -463,8 +483,12 @@ _description: _
 
 
 
+This allows you to create an ofImage from another ofImage instance, copying all the pixels and the texture data while creating a new textureID.
 
-
+$$code(lang=c++)
+ofImage second;
+second.clone(first);
+$$/code
 
 
 ###void setUseTexture(bUse)
@@ -500,7 +524,7 @@ _advanced: False_
 _description: _
 
 
-
+If you set the ofImage to not use a texture it will contain the pixels of the image but cannot be drawn to the screen without copying its data into an ofTexture instance.
 
 
 
@@ -538,7 +562,7 @@ _advanced: False_
 _description: _
 
 
-
+Returns whether the ofImage has a texture or not. If not, nothing will be drawn to the screen if the draw() method is called.
 
 
 
@@ -576,7 +600,7 @@ _advanced: False_
 _description: _
 
 
-
+This returns the texture reference that the ofImage contains. You can use this to directly manipulate the texture itself, but keep in mind that if you manipulate the texture directly, there is no simple way to copy the data from the texture back to the pixels and keep the ofImage in sync.
 
 
 
@@ -614,7 +638,42 @@ _advanced: False_
 _description: _
 
 
+This binds the ofTexture instance that the ofImage contains so that it can be used for advaned drawing
 
+$$code(lang=c++)
+void ofApp::setup() {
+	img.allocate(256, 256, OF_IMAGE_COLOR);
+	int i = 0;
+	while ( i < img.getPixelsRef().size() ) {
+		img.getPixelsRef()[i] = abs(sin( float(i) / 18.f )) * 255.f;
+		i++;
+	}
+	img.reloadTexture();
+	
+	mesh.setMode(OF_PRIMITIVE_TRIANGLE_STRIP);
+	
+	mesh.addVertex(ofVec2f(10, 10));
+	mesh.addVertex(ofVec2f(410, 10));
+	mesh.addVertex(ofVec2f(410, 410));
+	mesh.addVertex(ofVec2f(10, 410));
+	mesh.addVertex(ofVec2f(10, 10));
+	
+	mesh.addTexCoord(ofVec2f(0, 0));
+	mesh.addTexCoord(ofVec2f(256, 0));
+	mesh.addTexCoord(ofVec2f(256, 256));
+	mesh.addTexCoord(ofVec2f(0, 256));
+	mesh.addTexCoord(ofVec2f(0, 0));
+}
+
+void ofApp::draw(){
+	
+	ofBackground(255, 255, 255); // background white
+	
+	img.bind();
+	mesh.draw();
+	img.unbind();
+}
+$$/code
 
 
 
@@ -651,8 +710,7 @@ _advanced: False_
 
 _description: _
 
-
-
+This unbinds the ofTexture instance that the ofImage contains. Call this after you call bind().
 
 
 
@@ -690,7 +748,7 @@ _advanced: False_
 _description: _
 
 
-
+Loads an image from a file name.
 
 
 
@@ -728,7 +786,7 @@ _advanced: False_
 _description: _
 
 
-
+Loads an image from an ofBuffer instance created by, for instance, ofFile::readToBuffer(). This actually loads the image data into an ofPixels object and then into the texture.
 
 
 
@@ -766,7 +824,7 @@ _advanced: False_
 _description: _
 
 
-
+Loads an image from an ofFile instance created by, for instance, ofDirectory::getFiles(). This actually loads the image data into an ofPixels object and then into the texture.
 
 
 
@@ -804,7 +862,13 @@ _advanced: False_
 _description: _
 
 
+This saves the image to the file path in fileName with the image quality specified by compressionLevel. The different compression levels are:
 
+OF_IMAGE_QUALITY_BEST,
+OF_IMAGE_QUALITY_HIGH,
+OF_IMAGE_QUALITY_MEDIUM,
+OF_IMAGE_QUALITY_LOW,
+OF_IMAGE_QUALITY_WORST
 
 
 
@@ -843,7 +907,13 @@ _description: _
 
 
 
+This saves the image to the ofBuffer passed with the image quality specified by compressionLevel. This is useful when streaming files. The different compression levels are:
 
+OF_IMAGE_QUALITY_BEST,
+OF_IMAGE_QUALITY_HIGH,
+OF_IMAGE_QUALITY_MEDIUM,
+OF_IMAGE_QUALITY_LOW,
+OF_IMAGE_QUALITY_WORST
 
 
 
@@ -880,7 +950,13 @@ _advanced: False_
 _description: _
 
 
+This saves the image to the ofFile passed with the image quality specified by compressionLevel. This is useful when streaming files. The different compression levels are:
 
+OF_IMAGE_QUALITY_BEST,
+OF_IMAGE_QUALITY_HIGH,
+OF_IMAGE_QUALITY_MEDIUM,
+OF_IMAGE_QUALITY_LOW,
+OF_IMAGE_QUALITY_WORST
 
 
 
@@ -919,7 +995,11 @@ _description: _
 
 
 
+This sets the compression level used when creating mipmaps for the ofTexture contained by the ofImage. This is quite different than the ofImageQualityType image quality parameter used in saveImage(). The different texture compression levels are:
 
+	OF_COMPRESS_NONE,
+	OF_COMPRESS_SRGB,
+	OF_COMPRESS_ARB
 
 
 
@@ -956,7 +1036,7 @@ _advanced: False_
 _description: _
 
 
-
+This returns a raw pointer to the pixel data.
 
 
 
@@ -994,9 +1074,21 @@ _advanced: False_
 _description: _
 
 
+This returns an ofPixels reference that you can use to manipulate the raw pixel data of the ofImage. Make sure you call either update() or reloadTexture() after making changes to the ofPixels.
 
-
-
+$$code(lang=c++)
+int i = 0;
+	while ( i < img.getPixelsRef().size() ) {
+		img.getPixelsRef()[i] = abs(cos( float(i) / (16 * j))) * 512.f;
+		i+=3;
+	}
+	if(j > 68.f)
+		j = 32.f;
+	else
+		j += 0.025;
+	
+	img.reloadTexture();
+$$/code
 
 
 ### operator ofPixels_< PixelType > &()
@@ -1033,10 +1125,6 @@ _description: _
 
 
 
-
-
-
-
 ###ofColor_ getColor(x, y)
 
 _syntax: getColor(x, y)_
@@ -1070,7 +1158,7 @@ _advanced: False_
 _description: _
 
 
-
+This returns the ofColor representing the pixels at the x and y position passed in.
 
 
 
