@@ -1,6 +1,6 @@
 <%inherit file="/_templates/markdown.mako" />
 
-Xcode setup guide
+xcode setup guide
 ==================
 
 Step 1 -- Install Xcode  

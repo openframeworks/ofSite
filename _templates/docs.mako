@@ -10,16 +10,17 @@
     <div id="content">
       ${self.header()}
       <div id="body-wrap">	
-        <div id="page-title">
-		    <h1>documentation</h1>
-    	</div>
 
 	    <div class="page-wide">
 
 		    <div class="page-left-split">
+                <h1>documentation</h1>
 			    <p>This page the start documentation for the main OF api. There are also additional libraries that you can find on the addons page. This api is a work in progress and any corrections, additions or comments are very welcome!</p>
+			    <p>You can contribute to this documentation from github by following this <a href="https://github.com/openframeworks/openFrameworks/wiki/Contributing-documentation">instructions</a> 
 			    <p>This document refers to version <strong>007</strong></p>
+			    <h2>core</h2>
 		    </div>
+		    
 
 		    <!--div class="page-left-right">
 		        <p>
@@ -40,6 +41,12 @@
                 % endfor
             </div>
             % endfor
+        </div><!-- End Page Wide -->
+        
+    	<div class="page-wide">
+            <div class="page-left-split">
+		        <h2>addons</h2>
+            </div>
         </div><!-- End Page Wide -->
               
       </div><!-- End Body Wrap -->

@@ -3,64 +3,134 @@
 download
 =========
 
-We are currently in pre-release. you can download a version suitable for your compiler here:
 
-**v0.07** 
+<div id="download-latest-header"><h2>007</h2> <strong> is a new release with a lot of new features, new api structures, and probably some new bugs too. 007 is not 100% compatible with 0062 projects. Please post any issues / bugs you find on the <a href="http://forum.openframeworks.cc">forum</a> or our <a href="http://github.com/openframeworks/openFrameworks/issues">github issues</a> page. </strong>
 
-**_0.07 is a new release with a lot of new features, new api structures, and probably some new bugs too. 0.07 is not 100% compatible with 0.062 projects. Please post any issues / bugs you find on the [forum](http://forum.openframeworks.cc) or our [github issues](http://github.com/openframeworks/openFrameworks/issues) page. _**
+<p>
+To use openFrameworks you will need an IDE you can find information about setting up one for your platform in the setup guides. Please leave a message in our forums if you are having trouble with a step or if you think we need to add something.
+</p>
 
-windows: [code blocks](http://www.openframeworks.cc/versions/preRelease_v0.07/of_preRelease_v007_win_cb.zip) | visual studio 2010 [visual studio 2010](http://www.openframeworks.cc/versions/preRelease_v0.07/of_preRelease_v007_vs2010.zip)
+</div>
 
-mac [x-code](http://www.openframeworks.cc/versions/preRelease_v0.07/of_preRelease_v007_osx.zip)
+<div id="download-latest-platform">
 
-linux: [code blocks](http://www.openframeworks.cc/versions/preRelease_v0.07/of_preRelease_v007_linux.tar.gz) | [(64 bit) code blocks](http://www.openframeworks.cc/versions/preRelease_v0.07/of_preRelease_v007_linux64.tar.gz)
+<h2>osx</h2>
 
-iphone: [iPhone 007](http://www.openframeworks.cc/versions/preRelease_v0.07/of_preRelease_v007_iphone.zip)
+<strong>download</strong><br/>
+<a href="http://www.openframeworks.cc/versions/preRelease_v0.07/of_preRelease_v007_osx.zip">xcode</a><br/>
 
-android: [android 007](http://www.openframeworks.cc/versions/preRelease_v0.07/of_preRelease_v007_android.tar.gz) (only linux and osx)
+<strong>setup guide</strong><br/>
+<a href="xcode.html">xcode</a>
+</div>
 
-license (MIT): [license](http://www.openframeworks.cc/license)
+
+<div id="download-latest-platform">
+
+<h2>linux</h2>
+
+<strong>download</strong><br/>
+<a href="http://www.openframeworks.cc/versions/preRelease_v0.07/of_preRelease_v007_linux.tar.gz">code::blocks</a> <br/>
+<a href="http://www.openframeworks.cc/versions/preRelease_v0.07/of_preRelease_v007_linux64.tar.gz">(64 bit) code::blocks</a><br/>
+
+<strong>setup guide</strong><br/>
+<a href="linux.html">code::blocks</a>
+</div>
+
+
+<div id="download-latest-platform">
+<h2>windows</h2>
+
+<strong>download</strong><br/>
+<a href="http://www.openframeworks.cc/versions/preRelease_v0.07/of_preRelease_v007_win_cb.zip">code::blocks</a> <br/>
+<a href="http://www.openframeworks.cc/versions/preRelease_v0.07/of_preRelease_v007_vs2010.zip">visual studio 2010</a><br/>
+
+<strong>setup guides</strong><br/>
+<a href="wincb.html">code::blocks</a><br/>
+<a href="vs2008.html">visual studio 2008</a>
+</div>
+
+
+<div id="download-latest-platform">
+
+<h2>ios</h2>
+
+<strong>download</strong><br/>
+<a href="http://www.openframeworks.cc/versions/preRelease_v0.07/of_preRelease_v007_iphone.zip">xcode</a><br/>
+
+<strong>setup guide</strong><br/>
+<a href="iphone.html">ios/xcode</a>
+</div>
+
+
+<div id="download-latest-platform">
+<h2>android</h2>
+
+<strong>download</strong><br/>
+<a href="http://www.openframeworks.cc/versions/preRelease_v0.07/of_preRelease_v007_android.tar.gz">eclipse</a> <br/>
+only linux and osx<br/>
+
+<strong>setup guide</strong><br/>
+<a href="android.html">eclipse</a></br>
+</div>
+
+
+
+<p class="download-license"><strong>MIT <a href="http://www.openframeworks.cc/license">license</a></strong> </p>
+
 
 --------------------------------
 
-**about the release**  
+setup guides
+-----------------
+
+you can contribute to keep the setup guides up to date by forking the OF website repository and updating the guides: [http://github.com/arturoc/new-OF-site](http://github.com/arturoc/new-OF-site)
+
+
+--------------------------------
+
+about the release
+-----------------
+  
 we release openframeworks as an uncompiled library. When you download openframeworks, for your chosen compiler, it will come with the following folders:
 
--addons  
--apps  
--libs  
--other  
--scripts
+- addons  
+- apps  
+- libs  
+- other  
+- scripts
 
 in the libs folder, you will find openFrameworks, along with all of the libs that it links to.  
 In the apps folder, you will find a variety of examples.
 
 --------------------------------
 
-**important note about multiple releases:**
+important note about multiple releases
+--------------------------------------
 
-_when you download v0.062, it comes with its own internal folder structure. You shouldn't change anything in the 0.061 folder but rather, keep the two distributions seperate. ie:_ 
+_when you download v0062, it comes with its own internal folder structure. You shouldn't change anything in the 0061 folder but rather, keep the two distributions seperate. ie:_ 
 
-_0.062/_  
-_---- addons/_  
-_---- apps/_  
-_---- libs/_  
-_---- other/_  
-_---- scripts/_
+_0062_  
+_---- addons_  
+_---- apps_  
+_---- libs_  
+_---- other_  
+_---- scripts_
 
-_0.06/_  
-_---- addons/_  
-_---- apps/_  
-_---- libs/_  
-_---- other/_  
-_---- scripts/_
+_006_  
+_---- addons_  
+_---- apps_  
+_---- libs_  
+_---- other_  
+_---- scripts_
 
-_the idea is to make sure that your 0.06 apps always compile._
+_the idea is to make sure that your 006 apps always compile._
 
 --------------------------------
 
-**about the apps**  
-These are designed to show of different aspects of openframeworks (apps new to 0.02 in bold). They demonstrate font loading, graphics, audio input and output, sound file playback and fft analysis, video grabbing, quicktime movie playing, image loading and saving, event handling and serial communication. Some screen shots:
+about the apps
+--------------
+
+these are designed to show of different aspects of openframeworks. They demonstrate font loading, graphics, audio input and output, sound file playback and fft analysis, video grabbing, quicktime movie playing, image loading and saving, event handling and serial communication. Some screen shots:
 
 <table border="0">
 <tbody>
@@ -123,17 +193,17 @@ These are designed to show of different aspects of openframeworks (apps new to 0
 
 --------------------------------
 
-**about compilers**  
-you can find information about setting up compilers [here][10]. If you are beginning, on windows we suggest dev-c++, because it is easier to setup and to get a handle on. There are also compiler specific threads in the forum.
+about the openframeworks source code  
+--------------------------------------
 
---------------------------------
-
-**about the openframeworks source code**  
 if you are interested in just taking a peak at the codebase or working with the very latest OF fixes and changes you can do that on the openFrameworks github page [here][11].
 
 --------------------------------
 
-**previous releases:** As we update and change OF, you can download older versions of the framework here. As we start to have multiple version of OF, please try to be clear on the discussion forum as to which version you are using.
+previous releases
+-------------------
+
+as we update and change OF, you can download older versions of the framework here. As we start to have multiple version of OF, please try to be clear on the discussion forum as to which version you are using.
 
 --------------------------------
 
@@ -146,6 +216,10 @@ mac [x-code FAT (10.6)][15] | [x-code FAT (10.5)][16]
 linux: [code blocks FAT][17] | [(64 bit) code blocks FAT][18]
 
 iphone: [iPhone 0062 FAT][19]
+
+
+--------------------------------
+
 
 **pre release v0.061**
 

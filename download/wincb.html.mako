@@ -1,7 +1,7 @@
 <%inherit file="/_templates/markdown.mako" />
 
-Code::Blocks setup guide
-===========================
+code::blocks setup guide
+=========================
 
 
 We like codeblocks for windows development since it's light weight, and avoids some of the quirkiness of windows visual studio. here's a step by step tutorial to get up and running.
