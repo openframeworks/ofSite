@@ -83,7 +83,7 @@ only linux and osx<br/>
 setup guides
 -----------------
 
-you can contribute to keep the setup guides up to date by forking the OF website repository and updating the guides: [http://github.com/arturoc/new-OF-site](http://github.com/arturoc/new-OF-site)
+you can contribute to keep the setup guides up to date by forking the OF website repository and updating the guides in the dowload folder: [http://github.com/arturoc/new-OF-site](http://github.com/arturoc/new-OF-site)
 
 
 --------------------------------
