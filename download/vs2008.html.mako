@@ -1,7 +1,7 @@
 <%inherit file="/_templates/markdown.mako" />
 
-VS 2008 setup guide
-=====================
+vs 2008 setup guide
+==================
 
 Here are the setup instructions for those of you who wish to work with Visual C++ 2008 Professional and the Express versions.
 

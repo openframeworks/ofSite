@@ -33,7 +33,7 @@
 <div id="nav">
     <div id="nav-menu">
 	    <a href="${bf.config.site.url}/about" title="about" >about</a> &nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
-	    <a href="${bf.config.site.url}/setup" title="setup" >setup</a> &nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
+	    <!--a href="${bf.config.site.url}/setup" title="setup" >setup</a> &nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;-->
 	    <a href="${bf.config.site.url}/download" title="download" >download</a> &nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
 	    <a href="${bf.config.site.url}/docs">docs</a> &nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
 	    <a href="${bf.config.site.url}/gallery" title="gallery" >gallery</a> &nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
