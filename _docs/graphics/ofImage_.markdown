@@ -1195,7 +1195,7 @@ _advanced: False_
 
 _description: _
 
-
+This sets the pixel at the x,y position passed in. The ofColor type needs to match the ofImage type, i.e. ofFloatImage requires that you use ofFloatPixels.
 
 
 
@@ -1234,9 +1234,9 @@ _advanced: False_
 _description: _
 
 
+Set the pixels of the image from an array of values, for an ofFloatImage these need to be floats, for an ofImage these need to be unsigned chars. The w and h values are important so that the correct dimensions are set in the image. This assumes that you're setting the pixels from 0,0 or the upper left hand corner of the image.
 
-
-
+The bOrderIsRGB flag allows you pass in pixel data that is BGR by setting bOrderIsRGB=false.
 
 
 ###void setFromPixels(&pixels)
@@ -1272,7 +1272,9 @@ _advanced: False_
 _description: _
 
 
+Set the pixels of the image from an ofPixels instance, for an ofFloatImage these need to be ofFloatPixels, for an ofImage these need to be unsigned chars. The w and h values are important so that the correct dimensions are set in the image. This assumes that you're setting the pixels from 0,0 or the upper left hand corner of the image.
 
+The bOrderIsRGB flag allows you pass in pixel data that is BGR by setting bOrderIsRGB=false.
 
 
 
@@ -1310,7 +1312,7 @@ _advanced: False_
 _description: _
 
 
-
+Set the type of image to one of the following: OF_IMAGE_GRAYSCALE, OF_IMAGE_COLOR, OF_IMAGE_COLOR_ALPHA. This does cause the image to be reallocated and the texture to be updated, so it can be an expensive operation if done frequently. Converting down, for example from color to grayscale, loses information and is a destructive change.
 
 
 
@@ -1348,7 +1350,7 @@ _advanced: False_
 _description: _
 
 
-
+Resizes the image to the w,h passed in.
 
 
 
@@ -1386,7 +1388,7 @@ _advanced: False_
 _description: _
 
 
-
+This grabs the users screen into the image. This is an easy way to copy complex effects or do multiple passes on another image.
 
 
 
@@ -1424,7 +1426,7 @@ _advanced: False_
 _description: _
 
 
-
+This crops the image to the w,h passed in from the x,y position.
 
 
 
@@ -1462,7 +1464,13 @@ _advanced: False_
 _description: _
 
 
+This crops another image into the image the cropFrom is being called on to the w,h passed in from the x,y position. The w,h are measured from the x,y, so passing 100, 100, 300, 300 will grab a 300x300 pixel block of data starting from 100, 100.
 
+$$code(lang=c++)
+ofImage img1, img2;
+img1.load("anImage.png");
+img2.cropFrom(img1, 100, 100, 300, 300);
+$$/code
 
 
 
@@ -1500,7 +1508,7 @@ _advanced: False_
 _description: _
 
 
-
+Rotates the image by a multiple of 90 degrees, for instance, if you pass in 2, then the image will be rotated 180 degrees.
 
 
 
@@ -1539,7 +1547,7 @@ _description: _
 
 
 
-
+This reflects the pixels of the image across the vertical and/or horizontal axis.
 
 
 
@@ -1577,7 +1585,7 @@ _description: _
 
 
 
-
+This method should be called after you update the pixels of the image and want to ensure that the changes to the pixels are reflected in the ofTexture of the image. Many of the ofImage methods call this after they change the pixels, but if you directly manipulate the pixels of the ofImage, then you should make sure to call update() before trying to draw the texture of the image to the screen.
 
 
 
@@ -1614,7 +1622,7 @@ _advanced: False_
 _description: _
 
 
-
+You can set the anchor position that the texture will be drawn at. This means that passing 50, 50 will draw the ofImage center at the point you pass in to the draw() method.
 
 
 
@@ -1653,7 +1661,7 @@ _description: _
 
 
 
-
+You can set the anchor position that the texture will be drawn at. This means that passing 50, 50 will draw the ofImage at an offset of 50,50 from the point you pass in to the draw() method.
 
 
 
@@ -1690,7 +1698,7 @@ _advanced: False_
 _description: _
 
 
-
+This removes any anchor positioning, meaning that the ofImage will be draw with the upper left hand corner at the point passed into draw().
 
 
 
@@ -1729,7 +1737,7 @@ _description: _
 
 
 
-
+Draws the ofImage into the ofRectangle passed in, with any attendant scaling that may occur from fitting the ofImage into the bounds of the ofRectangle.
 
 
 
@@ -1767,6 +1775,7 @@ _description: _
 
 
 
+Draws the ofImage into the ofVec2f location and with the width and height, with any attendant scaling that may occur from fitting the ofImage into the width and height.
 
 
 
@@ -1805,6 +1814,7 @@ _description: _
 
 
 
+Draws the ofImage into the x,y location and with the width and height, with any attendant scaling that may occur from fitting the ofImage into the width and height.
 
 
 
@@ -1842,6 +1852,7 @@ _advanced: False_
 _description: _
 
 
+Draws the ofImage into the x,y,z location and with the width and height, with any attendant scaling that may occur from fitting the ofImage into the width and height. You should ensure that you turn on depth sorting using glEnable(GL_DEPTH) before trying to draw multiple objects into z-space.
 
 
 
@@ -1880,6 +1891,7 @@ _advanced: False_
 _description: _
 
 
+Draws the ofImage into the x,y location using the default height and width of the image.
 
 
 
@@ -1918,7 +1930,7 @@ _advanced: False_
 _description: _
 
 
-
+Draws the ofImage into the x,y location using the default height and width of the image.
 
 
 
@@ -1956,6 +1968,7 @@ _advanced: False_
 _description: _
 
 
+Draws the ofImage into the x,y,z location with the default height and width. You should ensure that you turn on depth sorting using glEnable(GL_DEPTH) before trying to draw multiple objects into z-space.
 
 
 
@@ -1994,7 +2007,7 @@ _advanced: False_
 _description: _
 
 
-
+Returns the height of the image in pixels.
 
 
 
@@ -2033,7 +2046,7 @@ _description: _
 
 
 
-
+Returns the width of the image in pixels.
 
 
 
@@ -2071,7 +2084,7 @@ _description: _
 
 
 
-
+Whether the image has been allocated either by a call to allocate or by loading pixel data into the image.
 
 
 
@@ -2108,7 +2121,7 @@ _advanced: False_
 _description: _
 
 
-
+Returns whether the image has been allocated either by a call to allocate or by loading pixel data into the image.
 
 
 
@@ -2147,7 +2160,7 @@ _description: _
 
 
 
-
+Loads any data from the ofPixels that the image contains into the ofTexture so that draw() calls will reflect chagnes to the pixels.
 
 
 
@@ -2184,7 +2197,7 @@ _advanced: False_
 _description: _
 
 
-
+Allows you to set an image to pixels. This resizes the image to the size of the ofPixels and reallocates all the of the data within the image.
 
 
 
@@ -2220,7 +2233,6 @@ _advanced: False_
 
 
 _description: _
-
 
 
 
@@ -2295,7 +2307,7 @@ _description: _
 
 
 
-
+Width of the image in pixels.
 
 
 
@@ -2325,7 +2337,7 @@ _description: _
 
 
 
-
+Height of the image in pixels.
 
 
 
@@ -2354,7 +2366,7 @@ _advanced: False_
 _description: _
 
 
-
+Bytes per pixels of the image. This will be 3 for OF_IMAGE_COLOR with unsigned char pixels and 12 for an OF_COLOR_IMAGE with float pixels.
 
 
 
@@ -2384,7 +2396,7 @@ _advanced: False_
 _description: _
 
 
-
+Returns the type of image, OF_IMAGE_COLOR, OF_IMAGE_COLOR_ALPHA, or OF_IMAGE_GRAYSCALE
 
 
 
