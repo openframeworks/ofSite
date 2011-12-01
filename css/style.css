@@ -20,8 +20,8 @@ body {
 	font-family: 		Arial, sans-serif;
 	font-size: 		0.80em;
 	/*background: 		#E0E1E2;*/
-	/*background-color: #CCC;*/
-	background: url("../backgrounds/body_bg.png");
+	background-color: #CCC;
+	/*background: url("../backgrounds/body_bg.png");*/
 	height: 		100%;
 	text-align:     center;
 }
