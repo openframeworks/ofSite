@@ -7,11 +7,20 @@
 
 
 
+
+
+
+
+
+
+
 ##Methods
 
 
 
 ### ofBaseSoundPlayer()
+
+<!--
 
 _syntax: ofBaseSoundPlayer()_
 
@@ -41,6 +50,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -49,7 +60,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ~ofBaseSoundPlayer()
+
+<!--
 
 _syntax: ~ofBaseSoundPlayer()_
 
@@ -79,6 +99,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -87,7 +109,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void loadSound(fileName, stream = false)
+
+<!--
 
 _syntax: loadSound(fileName, stream = false)_
 
@@ -117,6 +148,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -125,7 +158,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void unloadSound()
+
+<!--
 
 _syntax: unloadSound()_
 
@@ -155,6 +197,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -163,7 +207,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void play()
+
+<!--
 
 _syntax: play()_
 
@@ -193,6 +246,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -201,7 +256,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void stop()
+
+<!--
 
 _syntax: stop()_
 
@@ -231,6 +295,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -239,7 +305,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setVolume(vol)
+
+<!--
 
 _syntax: setVolume(vol)_
 
@@ -269,6 +344,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -277,7 +354,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setPan(vol)
+
+<!--
 
 _syntax: setPan(vol)_
 
@@ -307,6 +393,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -315,7 +403,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setSpeed(spd)
+
+<!--
 
 _syntax: setSpeed(spd)_
 
@@ -345,6 +442,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -353,7 +452,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setPaused(bP)
+
+<!--
 
 _syntax: setPaused(bP)_
 
@@ -383,6 +491,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -391,7 +501,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setLoop(bLp)
+
+<!--
 
 _syntax: setLoop(bLp)_
 
@@ -421,6 +540,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -429,7 +550,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setMultiPlay(bMp)
+
+<!--
 
 _syntax: setMultiPlay(bMp)_
 
@@ -459,6 +589,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -467,7 +599,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setPosition(pct)
+
+<!--
 
 _syntax: setPosition(pct)_
 
@@ -497,6 +638,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -505,7 +648,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setPositionMS(ms)
+
+<!--
 
 _syntax: setPositionMS(ms)_
 
@@ -535,6 +687,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -543,7 +697,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float getPosition()
+
+<!--
 
 _syntax: getPosition()_
 
@@ -573,6 +736,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -581,7 +746,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int getPositionMS()
+
+<!--
 
 _syntax: getPositionMS()_
 
@@ -611,6 +785,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -619,7 +795,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool getIsPlaying()
+
+<!--
 
 _syntax: getIsPlaying()_
 
@@ -649,6 +834,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -657,7 +844,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float getSpeed()
+
+<!--
 
 _syntax: getSpeed()_
 
@@ -687,6 +883,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -695,7 +893,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float getPan()
+
+<!--
 
 _syntax: getPan()_
 
@@ -725,7 +932,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

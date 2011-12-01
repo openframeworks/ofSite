@@ -7,7 +7,14 @@
 
 
 
+
+
+
 ofSerial provides a cross platform system for interfacing with the serial port. You can choose the port and baud rate, and then read and send data. Please note that the port must be set manually in the code, so you should be clear what port your device is on. For example, Arduino users should check the arduino app to see what port their device is on. Alternatively the ofSerial class can attempt to communicate with the first available device it finds.
+
+
+
+
 
 
 
@@ -18,6 +25,8 @@ ofSerial provides a cross platform system for interfacing with the serial port. 
 
 
 ### ofSerial()
+
+<!--
 
 _syntax: ofSerial()_
 
@@ -47,6 +56,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -72,7 +83,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ~ofSerial()
+
+<!--
 
 _syntax: ~ofSerial()_
 
@@ -102,6 +122,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -127,7 +149,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void enumerateDevices()
+
+<!--
 
 _syntax: enumerateDevices()_
 
@@ -157,7 +188,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Prints out the available serial devices:
@@ -200,7 +234,15 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###void close()
+
+<!--
 
 _syntax: close()_
 
@@ -230,7 +272,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Closes the connection to the serial device. 
@@ -255,7 +300,15 @@ Closes the connection to the serial device.
 
 
 
+
+
+
+
+
+
 ###bool setup()
+
+<!--
 
 _syntax: setup()_
 
@@ -285,7 +338,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Attempts to setup the first available device at a baud rate of 9600. 
@@ -321,7 +377,15 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###bool setup(portName,baudrate)
+
+<!--
 
 _syntax: setup(portName,baudrate)_
 
@@ -351,7 +415,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Opens the serial port, with the given name and baud rate. On mac and linux, it might look like:
@@ -393,7 +460,15 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###bool setup(deviceNumber,baudrate)
+
+<!--
 
 _syntax: setup(deviceNumber,baudrate)_
 
@@ -423,7 +498,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Opens the serial port based on the order in which is listed and sets the baud rate. The code bellow would open the first serial device found by the system:
@@ -456,7 +534,15 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###int readBytes(buffer,length)
+
+<!--
 
 _syntax: readBytes(buffer,length)_
 
@@ -486,7 +572,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Tries to read 'length' bytes from the connected serial device. In some cases it may read less than 'length' bytes, so for reliable reading of >1 bytes of data the return value must be checked against the number of bytes requested, and if fewer bytes than requested were read then the call must be tried again.
@@ -556,7 +645,15 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###int writeBytes(buffer, length)
+
+<!--
 
 _syntax: writeBytes(buffer, length)_
 
@@ -586,7 +683,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Writes a string of bytes to the connected serial device. As with readBytes() the return code should be checked and the call to writeBytes() repeated with the remaining data until all bytes have been written.
@@ -623,7 +723,15 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###bool writeByte(singleByte)
+
+<!--
 
 _syntax: writeByte(singleByte)_
 
@@ -653,7 +761,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Writes a single byte to the connected serial device. Check the return value to be sure the data was written.
@@ -691,7 +802,15 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###int readByte()
+
+<!--
 
 _syntax: readByte()_
 
@@ -721,7 +840,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Reads and returns a single byte from the requested device. 
@@ -763,7 +885,15 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###void flush(flushIn, flushOut)
+
+<!--
 
 _syntax: flush(flushIn, flushOut)_
 
@@ -793,7 +923,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Clears data from one or both of the serial buffers. Any data in the cleared buffers is discarded. flushIn = true clears the incoming data buffer and  fluhOut = true clear the outcoming data buffer. 
@@ -818,7 +951,15 @@ Clears data from one or both of the serial buffers. Any data in the cleared buff
 
 
 
+
+
+
+
+
+
 ###int available()
+
+<!--
 
 _syntax: available()_
 
@@ -848,7 +989,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Lets you query how many bytes are available.
@@ -873,7 +1017,15 @@ Lets you query how many bytes are available.
 
 
 
+
+
+
+
+
+
 ###void setVerbose(bLoudmouth)
+
+<!--
 
 _syntax: setVerbose(bLoudmouth)_
 
@@ -903,7 +1055,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Enable or disable ofSerial messages and errors being sent to the console.
@@ -928,7 +1083,15 @@ Enable or disable ofSerial messages and errors being sent to the console.
 
 
 
+
+
+
+
+
+
 ###void listDevices()
+
+<!--
 
 _syntax: listDevices()_
 
@@ -958,6 +1121,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -966,7 +1131,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofSerialDeviceInfo getDeviceList()
+
+<!--
 
 _syntax: getDeviceList()_
 
@@ -996,6 +1170,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1004,7 +1180,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int readBytes(*buffer, length)
+
+<!--
 
 _syntax: readBytes(*buffer, length)_
 
@@ -1034,6 +1219,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1042,7 +1229,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int writeBytes(*buffer, length)
+
+<!--
 
 _syntax: writeBytes(*buffer, length)_
 
@@ -1072,6 +1268,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1080,7 +1278,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void drain()
+
+<!--
 
 _syntax: drain()_
 
@@ -1110,6 +1317,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1118,7 +1327,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void buildDeviceList()
+
+<!--
 
 _syntax: buildDeviceList()_
 
@@ -1148,7 +1366,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1161,6 +1388,8 @@ _description: _
 
 
 ###bool bVerbose
+
+<!--
 
 _name: bVerbose_
 
@@ -1182,7 +1411,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 bVerbose is a boolean varible controlling verbosity on the ofSerial class. 
@@ -1205,7 +1437,15 @@ bVerbose is a boolean varible controlling verbosity on the ofSerial class.
 
 
 
+
+
+
+
+
+
 ###bool bInited
+
+<!--
 
 _name: bInited_
 
@@ -1227,7 +1467,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 h
@@ -1250,7 +1493,15 @@ h
 
 
 
+
+
+
+
+
+
 ###int fd
+
+<!--
 
 _name: fd_
 
@@ -1272,7 +1523,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1297,6 +1557,8 @@ _description: _
 
 ###struct termios oldoptions
 
+<!--
+
 _name: oldoptions_
 
 _type: struct termios_
@@ -1317,7 +1579,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1342,6 +1613,8 @@ _description: _
 
 ###string deviceType
 
+<!--
+
 _name: deviceType_
 
 _type: string_
@@ -1362,6 +1635,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1370,7 +1645,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofSerialDeviceInfo devices
+
+<!--
 
 _name: devices_
 
@@ -1392,6 +1676,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1400,7 +1686,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool bHaveEnumeratedDevices
+
+<!--
 
 _name: bHaveEnumeratedDevices_
 
@@ -1422,7 +1717,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

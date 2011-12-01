@@ -7,11 +7,20 @@
 
 
 
+
+
+
+
+
+
+
 ##Methods
 
 
 
 ### ofTextureData()
+
+<!--
 
 _syntax: ofTextureData()_
 
@@ -41,7 +50,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -54,6 +72,8 @@ _description: _
 
 
 ###unsigned int textureID
+
+<!--
 
 _name: textureID_
 
@@ -75,6 +95,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -83,7 +105,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int textureTarget
+
+<!--
 
 _name: textureTarget_
 
@@ -105,6 +136,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -113,7 +146,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int glTypeInternal
+
+<!--
 
 _name: glTypeInternal_
 
@@ -135,6 +177,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -143,7 +187,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int glType
+
+<!--
 
 _name: glType_
 
@@ -165,6 +218,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -173,7 +228,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int pixelType
+
+<!--
 
 _name: pixelType_
 
@@ -195,6 +259,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -203,7 +269,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float tex_t
+
+<!--
 
 _name: tex_t_
 
@@ -225,6 +300,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -233,7 +310,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float tex_u
+
+<!--
 
 _name: tex_u_
 
@@ -255,6 +341,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -263,7 +351,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float tex_w
+
+<!--
 
 _name: tex_w_
 
@@ -285,6 +382,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -293,7 +392,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float tex_h
+
+<!--
 
 _name: tex_h_
 
@@ -315,6 +423,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -323,7 +433,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float width
+
+<!--
 
 _name: width_
 
@@ -345,6 +464,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -353,7 +474,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float height
+
+<!--
 
 _name: height_
 
@@ -375,6 +505,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -383,7 +515,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool bFlipTexture
+
+<!--
 
 _name: bFlipTexture_
 
@@ -405,6 +546,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -413,7 +556,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofTexCompression compressionType
+
+<!--
 
 _name: compressionType_
 
@@ -435,6 +587,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -443,7 +597,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool bAllocated
+
+<!--
 
 _name: bAllocated_
 
@@ -465,7 +628,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

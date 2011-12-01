@@ -7,11 +7,20 @@
 
 
 
+
+
+
+
+
+
+
 ##Methods
 
 
 
 ### ofVec4f(_x = 0.f, _y = 0.f, _z = 0.f, _w = 0.f)
+
+<!--
 
 _syntax: ofVec4f(_x = 0.f, _y = 0.f, _z = 0.f, _w = 0.f)_
 
@@ -41,6 +50,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -49,7 +60,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ofVec4f(&vec)
+
+<!--
 
 _syntax: ofVec4f(&vec)_
 
@@ -79,6 +99,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -87,7 +109,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ofVec4f(&vec)
+
+<!--
 
 _syntax: ofVec4f(&vec)_
 
@@ -117,6 +148,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -125,7 +158,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void set(_x, _y, _z, _w)
+
+<!--
 
 _syntax: set(_x, _y, _z, _w)_
 
@@ -155,6 +197,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -163,7 +207,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void set(&vec)
+
+<!--
 
 _syntax: set(&vec)_
 
@@ -193,6 +246,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -201,7 +256,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###const float * getPtr()
+
+<!--
 
 _syntax: getPtr()_
 
@@ -231,6 +295,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -239,7 +305,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float operator[](n)
+
+<!--
 
 _syntax: operator[](n)_
 
@@ -269,6 +344,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -277,7 +354,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool operator==(&vec)
+
+<!--
 
 _syntax: operator==(&vec)_
 
@@ -307,6 +393,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -315,7 +403,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool operator!=(&vec)
+
+<!--
 
 _syntax: operator!=(&vec)_
 
@@ -345,6 +442,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -353,7 +452,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool match(&vec, tolerance = 0.0001)
+
+<!--
 
 _syntax: match(&vec, tolerance = 0.0001)_
 
@@ -383,6 +491,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -391,7 +501,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec4f operator+(&vec)
+
+<!--
 
 _syntax: operator+(&vec)_
 
@@ -421,6 +540,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -429,7 +550,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec4f operator+=(&vec)
+
+<!--
 
 _syntax: operator+=(&vec)_
 
@@ -459,6 +589,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -467,7 +599,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec4f operator-(f)
+
+<!--
 
 _syntax: operator-(f)_
 
@@ -497,6 +638,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -505,7 +648,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec4f operator-=(f)
+
+<!--
 
 _syntax: operator-=(f)_
 
@@ -535,6 +687,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -543,7 +697,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec4f operator-(&vec)
+
+<!--
 
 _syntax: operator-(&vec)_
 
@@ -573,6 +736,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -581,7 +746,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec4f operator-=(&vec)
+
+<!--
 
 _syntax: operator-=(&vec)_
 
@@ -611,6 +785,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -619,7 +795,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec4f operator+(f)
+
+<!--
 
 _syntax: operator+(f)_
 
@@ -649,6 +834,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -657,7 +844,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec4f operator+=(f)
+
+<!--
 
 _syntax: operator+=(f)_
 
@@ -687,6 +883,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -695,7 +893,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec4f operator-()
+
+<!--
 
 _syntax: operator-()_
 
@@ -725,6 +932,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -733,7 +942,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec4f operator*(&vec)
+
+<!--
 
 _syntax: operator*(&vec)_
 
@@ -763,6 +981,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -771,7 +991,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec4f operator*=(&vec)
+
+<!--
 
 _syntax: operator*=(&vec)_
 
@@ -801,6 +1030,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -809,7 +1040,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec4f operator*(f)
+
+<!--
 
 _syntax: operator*(f)_
 
@@ -839,6 +1079,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -847,7 +1089,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec4f operator*=(f)
+
+<!--
 
 _syntax: operator*=(f)_
 
@@ -877,6 +1128,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -885,7 +1138,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec4f operator/(&vec)
+
+<!--
 
 _syntax: operator/(&vec)_
 
@@ -915,6 +1177,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -923,7 +1187,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec4f operator/=(&vec)
+
+<!--
 
 _syntax: operator/=(&vec)_
 
@@ -953,6 +1226,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -961,7 +1236,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec4f operator/(f)
+
+<!--
 
 _syntax: operator/(f)_
 
@@ -991,6 +1275,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -999,7 +1285,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec4f operator/=(f)
+
+<!--
 
 _syntax: operator/=(f)_
 
@@ -1029,6 +1324,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1037,7 +1334,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec4f getScaled(length)
+
+<!--
 
 _syntax: getScaled(length)_
 
@@ -1067,6 +1373,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1075,7 +1383,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec4f scale(length)
+
+<!--
 
 _syntax: scale(length)_
 
@@ -1105,6 +1422,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1113,7 +1432,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float distance(&pnt)
+
+<!--
 
 _syntax: distance(&pnt)_
 
@@ -1143,6 +1471,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1151,7 +1481,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float squareDistance(&pnt)
+
+<!--
 
 _syntax: squareDistance(&pnt)_
 
@@ -1181,6 +1520,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1189,7 +1530,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec4f getInterpolated(&pnt, p)
+
+<!--
 
 _syntax: getInterpolated(&pnt, p)_
 
@@ -1219,6 +1569,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1227,7 +1579,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec4f interpolate(&pnt, p)
+
+<!--
 
 _syntax: interpolate(&pnt, p)_
 
@@ -1257,6 +1618,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1265,7 +1628,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec4f getMiddle(&pnt)
+
+<!--
 
 _syntax: getMiddle(&pnt)_
 
@@ -1295,6 +1667,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1303,7 +1677,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec4f middle(&pnt)
+
+<!--
 
 _syntax: middle(&pnt)_
 
@@ -1333,6 +1716,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1341,7 +1726,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec4f average(*points, num)
+
+<!--
 
 _syntax: average(*points, num)_
 
@@ -1371,6 +1765,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1379,7 +1775,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec4f getNormalized()
+
+<!--
 
 _syntax: getNormalized()_
 
@@ -1409,6 +1814,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1417,7 +1824,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec4f normalize()
+
+<!--
 
 _syntax: normalize()_
 
@@ -1447,6 +1863,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1455,7 +1873,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec4f getLimited(max)
+
+<!--
 
 _syntax: getLimited(max)_
 
@@ -1485,6 +1912,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1493,7 +1922,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec4f limit(max)
+
+<!--
 
 _syntax: limit(max)_
 
@@ -1523,6 +1961,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1531,7 +1971,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float length()
+
+<!--
 
 _syntax: length()_
 
@@ -1561,6 +2010,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1569,7 +2020,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float squareLength()
+
+<!--
 
 _syntax: squareLength()_
 
@@ -1599,6 +2059,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1607,7 +2069,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float dot(&vec)
+
+<!--
 
 _syntax: dot(&vec)_
 
@@ -1637,6 +2108,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1645,7 +2118,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec4f rescaled(length)
+
+<!--
 
 _syntax: rescaled(length)_
 
@@ -1675,6 +2157,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1683,7 +2167,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec4f rescale(length)
+
+<!--
 
 _syntax: rescale(length)_
 
@@ -1713,6 +2206,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1721,7 +2216,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec4f normalized()
+
+<!--
 
 _syntax: normalized()_
 
@@ -1751,6 +2255,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1759,7 +2265,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec4f limited(max)
+
+<!--
 
 _syntax: limited(max)_
 
@@ -1789,6 +2304,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1797,7 +2314,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float lengthSquared()
+
+<!--
 
 _syntax: lengthSquared()_
 
@@ -1827,6 +2353,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1835,7 +2363,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float distanceSquared(&pnt)
+
+<!--
 
 _syntax: distanceSquared(&pnt)_
 
@@ -1865,6 +2402,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1873,7 +2412,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec4f interpolated(&pnt, p)
+
+<!--
 
 _syntax: interpolated(&pnt, p)_
 
@@ -1903,6 +2451,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1911,7 +2461,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec4f middled(&pnt)
+
+<!--
 
 _syntax: middled(&pnt)_
 
@@ -1941,7 +2500,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1954,6 +2522,8 @@ _description: _
 
 
 ###float x
+
+<!--
 
 _name: x_
 
@@ -1975,6 +2545,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1983,7 +2555,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float y
+
+<!--
 
 _name: y_
 
@@ -2005,6 +2586,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2013,7 +2596,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float z
+
+<!--
 
 _name: z_
 
@@ -2035,6 +2627,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2043,7 +2637,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float w
+
+<!--
 
 _name: w_
 
@@ -2065,7 +2668,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

@@ -7,11 +7,20 @@
 
 
 
+
+
+
+
+
+
+
 ##Methods
 
 
 
 ### ofDirectShowGrabber()
+
+<!--
 
 _syntax: ofDirectShowGrabber()_
 
@@ -41,6 +50,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -49,7 +60,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ~ofDirectShowGrabber()
+
+<!--
 
 _syntax: ~ofDirectShowGrabber()_
 
@@ -79,6 +99,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -87,7 +109,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void listDevices()
+
+<!--
 
 _syntax: listDevices()_
 
@@ -117,6 +148,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -125,7 +158,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool initGrabber(w, h)
+
+<!--
 
 _syntax: initGrabber(w, h)_
 
@@ -155,6 +197,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -163,7 +207,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void update()
+
+<!--
 
 _syntax: update()_
 
@@ -193,6 +246,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -201,7 +256,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool isFrameNew()
+
+<!--
 
 _syntax: isFrameNew()_
 
@@ -231,6 +295,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -239,7 +305,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###unsigned char * getPixels()
+
+<!--
 
 _syntax: getPixels()_
 
@@ -269,6 +344,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -277,7 +354,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofPixelsRef getPixelsRef()
+
+<!--
 
 _syntax: getPixelsRef()_
 
@@ -307,6 +393,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -315,7 +403,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void close()
+
+<!--
 
 _syntax: close()_
 
@@ -345,6 +442,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -353,7 +452,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void clearMemory()
+
+<!--
 
 _syntax: clearMemory()_
 
@@ -383,6 +491,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -391,7 +501,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void videoSettings()
+
+<!--
 
 _syntax: videoSettings()_
 
@@ -421,6 +540,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -429,7 +550,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float getWidth()
+
+<!--
 
 _syntax: getWidth()_
 
@@ -459,6 +589,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -467,7 +599,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float getHeight()
+
+<!--
 
 _syntax: getHeight()_
 
@@ -497,6 +638,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -505,7 +648,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setVerbose(bTalkToMe)
+
+<!--
 
 _syntax: setVerbose(bTalkToMe)_
 
@@ -535,6 +687,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -543,7 +697,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setDeviceID(_deviceID)
+
+<!--
 
 _syntax: setDeviceID(_deviceID)_
 
@@ -573,6 +736,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -581,7 +746,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setDesiredFrameRate(framerate)
+
+<!--
 
 _syntax: setDesiredFrameRate(framerate)_
 
@@ -611,7 +785,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -624,6 +807,8 @@ _description: _
 
 
 ###bool bChooseDevice
+
+<!--
 
 _name: bChooseDevice_
 
@@ -645,6 +830,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -653,7 +840,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int deviceID
+
+<!--
 
 _name: deviceID_
 
@@ -675,6 +871,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -683,7 +881,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool bVerbose
+
+<!--
 
 _name: bVerbose_
 
@@ -705,6 +912,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -713,7 +922,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool bGrabberInited
+
+<!--
 
 _name: bGrabberInited_
 
@@ -735,6 +953,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -743,7 +963,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofPixels pixels
+
+<!--
 
 _name: pixels_
 
@@ -765,6 +994,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -773,7 +1004,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int attemptFramerate
+
+<!--
 
 _name: attemptFramerate_
 
@@ -795,6 +1035,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -803,7 +1045,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool bIsFrameNew
+
+<!--
 
 _name: bIsFrameNew_
 
@@ -825,6 +1076,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -833,7 +1086,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int width
+
+<!--
 
 _name: width_
 
@@ -855,6 +1117,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -863,7 +1127,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int height
+
+<!--
 
 _name: height_
 
@@ -885,7 +1158,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

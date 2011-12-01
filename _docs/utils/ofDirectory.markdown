@@ -7,11 +7,20 @@
 
 
 
+
+
+
+
+
+
+
 ##Methods
 
 
 
 ### ofDirectory()
+
+<!--
 
 _syntax: ofDirectory()_
 
@@ -41,6 +50,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -49,7 +60,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ofDirectory(path)
+
+<!--
 
 _syntax: ofDirectory(path)_
 
@@ -79,6 +99,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -87,7 +109,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void open(path)
+
+<!--
 
 _syntax: open(path)_
 
@@ -117,6 +148,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -125,7 +158,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void close()
+
+<!--
 
 _syntax: close()_
 
@@ -155,6 +197,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -163,7 +207,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool create(recursive = false)
+
+<!--
 
 _syntax: create(recursive = false)_
 
@@ -193,6 +246,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -201,7 +256,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool exists()
+
+<!--
 
 _syntax: exists()_
 
@@ -231,6 +295,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -239,7 +305,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###string path()
+
+<!--
 
 _syntax: path()_
 
@@ -269,6 +344,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -277,7 +354,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool canRead()
+
+<!--
 
 _syntax: canRead()_
 
@@ -307,6 +393,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -315,7 +403,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool canWrite()
+
+<!--
 
 _syntax: canWrite()_
 
@@ -345,6 +442,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -353,7 +452,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool canExecute()
+
+<!--
 
 _syntax: canExecute()_
 
@@ -383,6 +491,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -391,7 +501,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool isDirectory()
+
+<!--
 
 _syntax: isDirectory()_
 
@@ -421,6 +540,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -429,7 +550,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool isHidden()
+
+<!--
 
 _syntax: isHidden()_
 
@@ -459,6 +589,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -467,7 +599,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setWriteable(writeable)
+
+<!--
 
 _syntax: setWriteable(writeable)_
 
@@ -497,6 +638,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -505,7 +648,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setReadOnly(readable)
+
+<!--
 
 _syntax: setReadOnly(readable)_
 
@@ -535,6 +687,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -543,7 +697,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setExecutable(executable)
+
+<!--
 
 _syntax: setExecutable(executable)_
 
@@ -573,6 +736,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -581,7 +746,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setShowHidden(showHidden)
+
+<!--
 
 _syntax: setShowHidden(showHidden)_
 
@@ -611,6 +785,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -619,7 +795,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool copyTo(path, bRelativeToData = true, overwrite = false)
+
+<!--
 
 _syntax: copyTo(path, bRelativeToData = true, overwrite = false)_
 
@@ -649,6 +834,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -657,7 +844,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool moveTo(path, bRelativeToData = true, overwrite = false)
+
+<!--
 
 _syntax: moveTo(path, bRelativeToData = true, overwrite = false)_
 
@@ -687,6 +883,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -695,7 +893,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool renameTo(path, bRelativeToData = true, overwrite = false)
+
+<!--
 
 _syntax: renameTo(path, bRelativeToData = true, overwrite = false)_
 
@@ -725,6 +932,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -733,7 +942,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool remove(recursive)
+
+<!--
 
 _syntax: remove(recursive)_
 
@@ -763,6 +981,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -771,7 +991,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void allowExt(extension)
+
+<!--
 
 _syntax: allowExt(extension)_
 
@@ -801,6 +1030,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -809,7 +1040,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int listDir(path)
+
+<!--
 
 _syntax: listDir(path)_
 
@@ -839,6 +1079,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -847,7 +1089,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int listDir()
+
+<!--
 
 _syntax: listDir()_
 
@@ -877,6 +1128,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -885,7 +1138,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###string getName(position)
+
+<!--
 
 _syntax: getName(position)_
 
@@ -915,6 +1177,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -923,7 +1187,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###string getPath(position)
+
+<!--
 
 _syntax: getPath(position)_
 
@@ -953,6 +1226,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -961,9 +1236,18 @@ _description: _
 
 
 
-###ofFile getFile(position, mode = ofFile::Reference, binary = false)
 
-_syntax: getFile(position, mode = ofFile::Reference, binary = false)_
+
+
+
+
+
+
+###ofFile getFile(position, mode = ofFile
+
+<!--
+
+_syntax: getFile(position, mode = ofFile_
 
 _name: getFile_
 
@@ -971,7 +1255,7 @@ _returns: ofFile_
 
 _returns_description: _
 
-_parameters: unsigned int position, ofFile::Mode mode=ofFile::Reference, bool binary=false_
+_parameters: unsigned int position, ofFile_
 
 _access: public_
 
@@ -983,13 +1267,15 @@ _summary: _
 
 _constant: False_
 
-_static: no_
+_static: False_
 
 _visible: True_
 
 _advanced: False_
 
 
+
+-->
 
 _description: _
 
@@ -999,7 +1285,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofFile getFiles()
+
+<!--
 
 _syntax: getFiles()_
 
@@ -1029,6 +1324,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1037,7 +1334,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofFile operator[](position)
+
+<!--
 
 _syntax: operator[](position)_
 
@@ -1067,6 +1373,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1075,7 +1383,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool getShowHidden()
+
+<!--
 
 _syntax: getShowHidden()_
 
@@ -1105,6 +1422,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1113,7 +1432,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void reset()
+
+<!--
 
 _syntax: reset()_
 
@@ -1143,6 +1471,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1151,7 +1481,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void sort()
+
+<!--
 
 _syntax: sort()_
 
@@ -1181,6 +1520,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1189,7 +1530,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###unsigned int size()
+
+<!--
 
 _syntax: size()_
 
@@ -1219,6 +1569,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1227,7 +1579,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int numFiles()
+
+<!--
 
 _syntax: numFiles()_
 
@@ -1257,6 +1618,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1265,7 +1628,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###Poco::File & getPocoFile()
+
+<!--
 
 _syntax: getPocoFile()_
 
@@ -1295,6 +1667,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1303,7 +1677,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool operator==(&dir)
+
+<!--
 
 _syntax: operator==(&dir)_
 
@@ -1333,6 +1716,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1341,7 +1726,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool operator!=(&dir)
+
+<!--
 
 _syntax: operator!=(&dir)_
 
@@ -1371,6 +1765,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1379,7 +1775,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool operator<(&dir)
+
+<!--
 
 _syntax: operator<(&dir)_
 
@@ -1409,6 +1814,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1417,7 +1824,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool operator<=(&dir)
+
+<!--
 
 _syntax: operator<=(&dir)_
 
@@ -1447,6 +1863,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1455,7 +1873,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool operator>(&dir)
+
+<!--
 
 _syntax: operator>(&dir)_
 
@@ -1485,6 +1912,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1493,7 +1922,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool operator>=(&dir)
+
+<!--
 
 _syntax: operator>=(&dir)_
 
@@ -1523,6 +1961,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1531,7 +1971,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool createDirectory(dirPath, bRelativeToData = true, recursive = false)
+
+<!--
 
 _syntax: createDirectory(dirPath, bRelativeToData = true, recursive = false)_
 
@@ -1561,6 +2010,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1569,7 +2020,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool isDirectoryEmpty(dirPath, bRelativeToData = true)
+
+<!--
 
 _syntax: isDirectoryEmpty(dirPath, bRelativeToData = true)_
 
@@ -1599,6 +2059,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1607,7 +2069,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool doesDirectoryExist(dirPath, bRelativeToData = true)
+
+<!--
 
 _syntax: doesDirectoryExist(dirPath, bRelativeToData = true)_
 
@@ -1637,6 +2108,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1645,7 +2118,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool removeDirectory(path, deleteIfNotEmpty, bRelativeToData = true)
+
+<!--
 
 _syntax: removeDirectory(path, deleteIfNotEmpty, bRelativeToData = true)_
 
@@ -1675,6 +2157,57 @@ _advanced: False_
 
 
 
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###ofFile getFile(position, mode = ofFile::Reference, binary = false)
+
+<!--
+
+_syntax: getFile(position, mode = ofFile::Reference, binary = false)_
+
+_name: getFile_
+
+_returns: ofFile_
+
+_returns_description: _
+
+_parameters: unsigned int position, ofFile::Mode mode=ofFile::Reference, bool binary=false_
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+-->
+
 _description: _
 
 
@@ -1687,11 +2220,13 @@ _description: _
 
 
 
-###Poco::File myDir
+###Poco myDir
+
+<!--
 
 _name: myDir_
 
-_type: Poco::File_
+_type: Poco_
 
 _access: private_
 
@@ -1709,6 +2244,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1717,7 +2254,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###string originalDirectory
+
+<!--
 
 _name: originalDirectory_
 
@@ -1739,6 +2285,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1747,7 +2295,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###vector< string > extensions
+
+<!--
 
 _name: extensions_
 
@@ -1769,6 +2326,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1777,7 +2336,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofFile files
+
+<!--
 
 _name: files_
 
@@ -1799,6 +2367,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1807,7 +2377,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool showHidden
+
+<!--
 
 _name: showHidden_
 
@@ -1829,7 +2408,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

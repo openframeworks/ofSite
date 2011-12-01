@@ -7,11 +7,20 @@
 
 
 
+
+
+
+
+
+
+
 ##Methods
 
 
 
 ### ofBuffer()
+
+<!--
 
 _syntax: ofBuffer()_
 
@@ -41,6 +50,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -49,7 +60,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ofBuffer(*buffer, size)
+
+<!--
 
 _syntax: ofBuffer(*buffer, size)_
 
@@ -79,6 +99,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -87,7 +109,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ofBuffer(&stream)
+
+<!--
 
 _syntax: ofBuffer(&stream)_
 
@@ -117,7 +148,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -127,6 +167,8 @@ _description: _
 
 ### ofBuffer(&buffer_)
 
+<!--
+
 _syntax: ofBuffer(&buffer_)_
 
 _name: ofBuffer_
@@ -135,7 +177,7 @@ _returns: _
 
 _returns_description: _
 
-_parameters: const ofBuffer &buffer__
+_parameters: const ofBuffer &buffer_
 
 _access: public_
 
@@ -155,6 +197,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -163,7 +207,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ~ofBuffer()
+
+<!--
 
 _syntax: ~ofBuffer()_
 
@@ -193,6 +246,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -201,7 +256,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void set(*_buffer, _size)
+
+<!--
 
 _syntax: set(*_buffer, _size)_
 
@@ -231,6 +295,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -239,7 +305,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool set(&stream)
+
+<!--
 
 _syntax: set(&stream)_
 
@@ -269,6 +344,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -277,7 +354,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool writeTo(&stream)
+
+<!--
 
 _syntax: writeTo(&stream)_
 
@@ -307,6 +393,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -315,7 +403,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void clear()
+
+<!--
 
 _syntax: clear()_
 
@@ -345,6 +442,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -353,7 +452,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void allocate(_size)
+
+<!--
 
 _syntax: allocate(_size)_
 
@@ -383,6 +491,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -391,7 +501,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###const char * getBinaryBuffer()
+
+<!--
 
 _syntax: getBinaryBuffer()_
 
@@ -421,6 +540,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -429,7 +550,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###string getText()
+
+<!--
 
 _syntax: getText()_
 
@@ -459,6 +589,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -467,7 +599,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### operator string()
+
+<!--
 
 _syntax: operator string()_
 
@@ -497,6 +638,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -505,7 +648,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###long size()
+
+<!--
 
 _syntax: size()_
 
@@ -535,6 +687,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -543,7 +697,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###string getNextLine()
+
+<!--
 
 _syntax: getNextLine()_
 
@@ -573,6 +736,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -581,7 +746,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###string getFirstLine()
+
+<!--
 
 _syntax: getFirstLine()_
 
@@ -611,6 +785,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -619,7 +795,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool isLastLine()
+
+<!--
 
 _syntax: isLastLine()_
 
@@ -649,6 +834,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -657,7 +844,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void resetLineReader()
+
+<!--
 
 _syntax: resetLineReader()_
 
@@ -687,7 +883,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -700,6 +905,8 @@ _description: _
 
 
 ###vector< char > buffer
+
+<!--
 
 _name: buffer_
 
@@ -721,6 +928,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -729,7 +938,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###long nextLinePos
+
+<!--
 
 _name: nextLinePos_
 
@@ -751,7 +969,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

@@ -7,11 +7,20 @@
 
 
 
+
+
+
+
+
+
+
 ##Methods
 
 
 
 ### ofGstUtils()
+
+<!--
 
 _syntax: ofGstUtils()_
 
@@ -41,6 +50,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -49,7 +60,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ~ofGstUtils()
+
+<!--
 
 _syntax: ~ofGstUtils()_
 
@@ -79,6 +99,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -87,7 +109,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool setPipelineWithSink(pipeline, sinkname = "sink", isStream = false)
+
+<!--
 
 _syntax: setPipelineWithSink(pipeline, sinkname = "sink", isStream = false)_
 
@@ -117,6 +148,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -125,7 +158,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool setPipelineWithSink(*pipeline, *sink, isStream = false)
+
+<!--
 
 _syntax: setPipelineWithSink(*pipeline, *sink, isStream = false)_
 
@@ -155,6 +197,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -163,7 +207,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void play()
+
+<!--
 
 _syntax: play()_
 
@@ -193,6 +246,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -201,7 +256,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void stop()
+
+<!--
 
 _syntax: stop()_
 
@@ -231,6 +295,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -239,7 +305,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setPaused(bPause)
+
+<!--
 
 _syntax: setPaused(bPause)_
 
@@ -269,6 +344,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -277,7 +354,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool isPaused()
+
+<!--
 
 _syntax: isPaused()_
 
@@ -307,6 +393,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -315,7 +403,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool isLoaded()
+
+<!--
 
 _syntax: isLoaded()_
 
@@ -345,6 +442,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -353,7 +452,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool isPlaying()
+
+<!--
 
 _syntax: isPlaying()_
 
@@ -383,6 +491,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -391,7 +501,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float getPosition()
+
+<!--
 
 _syntax: getPosition()_
 
@@ -421,6 +540,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -429,7 +550,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float getSpeed()
+
+<!--
 
 _syntax: getSpeed()_
 
@@ -459,6 +589,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -467,7 +599,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float getDuration()
+
+<!--
 
 _syntax: getDuration()_
 
@@ -497,6 +638,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -505,7 +648,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###guint64 getDurationNanos()
+
+<!--
 
 _syntax: getDurationNanos()_
 
@@ -535,6 +687,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -543,7 +697,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool getIsMovieDone()
+
+<!--
 
 _syntax: getIsMovieDone()_
 
@@ -573,6 +736,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -581,7 +746,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setPosition(pct)
+
+<!--
 
 _syntax: setPosition(pct)_
 
@@ -611,6 +785,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -619,7 +795,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setVolume(volume)
+
+<!--
 
 _syntax: setVolume(volume)_
 
@@ -649,6 +834,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -657,7 +844,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setLoopState(state)
+
+<!--
 
 _syntax: setLoopState(state)_
 
@@ -687,6 +883,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -695,7 +893,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int getLoopState()
+
+<!--
 
 _syntax: getLoopState()_
 
@@ -725,6 +932,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -733,7 +942,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setSpeed(speed)
+
+<!--
 
 _syntax: setSpeed(speed)_
 
@@ -763,6 +981,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -771,7 +991,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setFrameByFrame(bFrameByFrame)
+
+<!--
 
 _syntax: setFrameByFrame(bFrameByFrame)_
 
@@ -801,6 +1030,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -809,7 +1040,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool isFrameByFrame()
+
+<!--
 
 _syntax: isFrameByFrame()_
 
@@ -839,6 +1079,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -847,7 +1089,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###GstElement * getPipeline()
+
+<!--
 
 _syntax: getPipeline()_
 
@@ -877,6 +1128,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -885,7 +1138,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###GstElement * getSink()
+
+<!--
 
 _syntax: getSink()_
 
@@ -915,6 +1177,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -923,7 +1187,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void close()
+
+<!--
 
 _syntax: close()_
 
@@ -953,6 +1226,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -961,7 +1236,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setSinkListener(*appsink)
+
+<!--
 
 _syntax: setSinkListener(*appsink)_
 
@@ -991,6 +1275,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -999,7 +1285,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###GstFlowReturn preroll_cb(*buffer)
+
+<!--
 
 _syntax: preroll_cb(*buffer)_
 
@@ -1029,6 +1324,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1037,7 +1334,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###GstFlowReturn buffer_cb(*buffer)
+
+<!--
 
 _syntax: buffer_cb(*buffer)_
 
@@ -1067,6 +1373,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1075,7 +1383,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void eos_cb()
+
+<!--
 
 _syntax: eos_cb()_
 
@@ -1105,6 +1422,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1113,7 +1432,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void gstHandleMessage()
+
+<!--
 
 _syntax: gstHandleMessage()_
 
@@ -1143,6 +1471,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1151,7 +1481,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void update(&args)
+
+<!--
 
 _syntax: update(&args)_
 
@@ -1181,6 +1520,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1189,7 +1530,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool startPipeline()
+
+<!--
 
 _syntax: startPipeline()_
 
@@ -1219,7 +1569,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1232,6 +1591,8 @@ _description: _
 
 
 ###bool bPlaying
+
+<!--
 
 _name: bPlaying_
 
@@ -1253,6 +1614,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1261,7 +1624,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool bPaused
+
+<!--
 
 _name: bPaused_
 
@@ -1283,6 +1655,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1291,7 +1665,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool bIsMovieDone
+
+<!--
 
 _name: bIsMovieDone_
 
@@ -1313,6 +1696,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1321,7 +1706,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool bLoaded
+
+<!--
 
 _name: bLoaded_
 
@@ -1343,6 +1737,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1351,7 +1747,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool bFrameByFrame
+
+<!--
 
 _name: bFrameByFrame_
 
@@ -1373,6 +1778,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1381,7 +1788,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofLoopType loopMode
+
+<!--
 
 _name: loopMode_
 
@@ -1403,6 +1819,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1411,7 +1829,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###GstElement * gstSink
+
+<!--
 
 _name: gstSink_
 
@@ -1433,6 +1860,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1441,7 +1870,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###GstElement * gstPipeline
+
+<!--
 
 _name: gstPipeline_
 
@@ -1463,6 +1901,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1471,7 +1911,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofGstAppSink appsink
+
+<!--
 
 _name: appsink_
 
@@ -1493,6 +1942,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1501,7 +1952,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool posChangingPaused
+
+<!--
 
 _name: posChangingPaused_
 
@@ -1523,6 +1983,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1531,7 +1993,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int pipelineState
+
+<!--
 
 _name: pipelineState_
 
@@ -1553,6 +2024,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1561,7 +2034,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float speed
+
+<!--
 
 _name: speed_
 
@@ -1583,6 +2065,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1591,7 +2075,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###gint64 durationNanos
+
+<!--
 
 _name: durationNanos_
 
@@ -1613,6 +2106,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1621,7 +2116,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool isAppSink
+
+<!--
 
 _name: isAppSink_
 
@@ -1643,6 +2147,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1651,7 +2157,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool isStream
+
+<!--
 
 _name: isStream_
 
@@ -1673,7 +2188,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

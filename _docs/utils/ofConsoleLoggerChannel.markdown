@@ -7,11 +7,20 @@
 
 
 
+
+
+
+
+
+
+
 ##Methods
 
 
 
 ### ~ofConsoleLoggerChannel()
+
+<!--
 
 _syntax: ~ofConsoleLoggerChannel()_
 
@@ -41,6 +50,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -49,7 +60,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void log(level, &module, &message)
+
+<!--
 
 _syntax: log(level, &module, &message)_
 
@@ -79,6 +99,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -87,7 +109,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void log(logLevel, &module, *format, ...)
+
+<!--
 
 _syntax: log(logLevel, &module, *format, ...)_
 
@@ -117,6 +148,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -125,7 +158,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void log(logLevel, &module, *format, args)
+
+<!--
 
 _syntax: log(logLevel, &module, *format, args)_
 
@@ -155,7 +197,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

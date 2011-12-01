@@ -18,11 +18,20 @@
 
 
 
+
+
+
+
+
+
+
 ##Methods
 
 
 
 ### ofPolyline()
+
+<!--
 
 _syntax: ofPolyline()_
 
@@ -52,6 +61,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -60,7 +71,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ofPolyline(&verts)
+
+<!--
 
 _syntax: ofPolyline(&verts)_
 
@@ -90,6 +110,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -98,7 +120,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void clear()
+
+<!--
 
 _syntax: clear()_
 
@@ -128,6 +159,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -136,7 +169,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void addVertex(&p)
+
+<!--
 
 _syntax: addVertex(&p)_
 
@@ -166,6 +208,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -174,7 +218,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void addVertex(x, y, z = 0)
+
+<!--
 
 _syntax: addVertex(x, y, z = 0)_
 
@@ -204,6 +257,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -212,7 +267,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void addVertexes(&verts)
+
+<!--
 
 _syntax: addVertexes(&verts)_
 
@@ -242,6 +306,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -250,7 +316,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void addVertexes(*verts, numverts)
+
+<!--
 
 _syntax: addVertexes(*verts, numverts)_
 
@@ -280,6 +355,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -288,7 +365,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void lineTo(&to)
+
+<!--
 
 _syntax: lineTo(&to)_
 
@@ -318,6 +404,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -326,7 +414,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void lineTo(x, y, z = 0)
+
+<!--
 
 _syntax: lineTo(x, y, z = 0)_
 
@@ -356,6 +453,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -364,7 +463,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void arc(&center, radiusX, radiusY, angleBegin, angleEnd, curveResolution = 20)
+
+<!--
 
 _syntax: arc(&center, radiusX, radiusY, angleBegin, angleEnd, curveResolution = 20)_
 
@@ -394,6 +502,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -402,7 +512,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void arc(x, y, radiusX, radiusY, angleBegin, angleEnd, curveResolution = 20)
+
+<!--
 
 _syntax: arc(x, y, radiusX, radiusY, angleBegin, angleEnd, curveResolution = 20)_
 
@@ -432,6 +551,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -440,7 +561,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void arc(x, y, z, radiusX, radiusY, angleBegin, angleEnd, curveResolution = 20)
+
+<!--
 
 _syntax: arc(x, y, z, radiusX, radiusY, angleBegin, angleEnd, curveResolution = 20)_
 
@@ -470,6 +600,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -478,7 +610,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void curveTo(&to, curveResolution = 16)
+
+<!--
 
 _syntax: curveTo(&to, curveResolution = 16)_
 
@@ -508,6 +649,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -516,7 +659,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void curveTo(x, y, z = 0, curveResolution = 16)
+
+<!--
 
 _syntax: curveTo(x, y, z = 0, curveResolution = 16)_
 
@@ -546,6 +698,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -554,7 +708,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void bezierTo(&cp1, &cp2, &to, curveResolution = 16)
+
+<!--
 
 _syntax: bezierTo(&cp1, &cp2, &to, curveResolution = 16)_
 
@@ -584,6 +747,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -592,7 +757,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void bezierTo(cx1, cy1, cx2, cy2, x, y, curveResolution = 16)
+
+<!--
 
 _syntax: bezierTo(cx1, cy1, cx2, cy2, x, y, curveResolution = 16)_
 
@@ -622,6 +796,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -630,7 +806,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void bezierTo(cx1, cy1, cz1, cx2, cy2, cz2, x, y, z, curveResolution = 16)
+
+<!--
 
 _syntax: bezierTo(cx1, cy1, cz1, cx2, cy2, cz2, x, y, z, curveResolution = 16)_
 
@@ -660,6 +845,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -668,7 +855,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void quadBezierTo(cx1, cy1, cz1, cx2, cy2, cz2, x, y, z, curveResolution = 16)
+
+<!--
 
 _syntax: quadBezierTo(cx1, cy1, cz1, cx2, cy2, cz2, x, y, z, curveResolution = 16)_
 
@@ -698,6 +894,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -706,7 +904,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void quadBezierTo(&p1, &p2, &p3, curveResolution = 16)
+
+<!--
 
 _syntax: quadBezierTo(&p1, &p2, &p3, curveResolution = 16)_
 
@@ -736,6 +943,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -744,7 +953,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void quadBezierTo(cx1, cy1, cx2, cy2, x, y, curveResolution = 16)
+
+<!--
 
 _syntax: quadBezierTo(cx1, cy1, cx2, cy2, x, y, curveResolution = 16)_
 
@@ -774,6 +992,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -782,7 +1002,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofPolyline getSmoothed(smoothingSize, smoothingShape = 0)
+
+<!--
 
 _syntax: getSmoothed(smoothingSize, smoothingShape = 0)_
 
@@ -812,6 +1041,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -820,7 +1051,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofPolyline getResampledBySpacing(spacing)
+
+<!--
 
 _syntax: getResampledBySpacing(spacing)_
 
@@ -850,6 +1090,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -858,7 +1100,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofPolyline getResampledByCount(count)
+
+<!--
 
 _syntax: getResampledByCount(count)_
 
@@ -888,6 +1139,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -896,7 +1149,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofRectangle getBoundingBox()
+
+<!--
 
 _syntax: getBoundingBox()_
 
@@ -926,6 +1188,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -934,7 +1198,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofPoint getClosestPoint(&target, *nearestIndex = NULL)
+
+<!--
 
 _syntax: getClosestPoint(&target, *nearestIndex = NULL)_
 
@@ -964,6 +1237,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -972,7 +1247,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool inside(x, y)
+
+<!--
 
 _syntax: inside(x, y)_
 
@@ -1002,6 +1286,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1010,7 +1296,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool inside(&p)
+
+<!--
 
 _syntax: inside(&p)_
 
@@ -1040,6 +1335,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1048,7 +1345,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void simplify(tolerance = 0.3)
+
+<!--
 
 _syntax: simplify(tolerance = 0.3)_
 
@@ -1078,6 +1384,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1086,7 +1394,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###size_t size()
+
+<!--
 
 _syntax: size()_
 
@@ -1116,6 +1433,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1124,7 +1443,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofPoint operator[](index)
+
+<!--
 
 _syntax: operator[](index)_
 
@@ -1154,6 +1482,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1162,7 +1492,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void resize(size)
+
+<!--
 
 _syntax: resize(size)_
 
@@ -1192,6 +1531,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1200,7 +1541,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setClosed(tf)
+
+<!--
 
 _syntax: setClosed(tf)_
 
@@ -1230,6 +1580,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1238,7 +1590,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool isClosed()
+
+<!--
 
 _syntax: isClosed()_
 
@@ -1268,6 +1629,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1276,7 +1639,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void close()
+
+<!--
 
 _syntax: close()_
 
@@ -1306,6 +1678,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1314,7 +1688,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool hasChanged()
+
+<!--
 
 _syntax: hasChanged()_
 
@@ -1344,6 +1727,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1352,7 +1737,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofPoint getVertices()
+
+<!--
 
 _syntax: getVertices()_
 
@@ -1382,6 +1776,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1390,7 +1786,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float getPerimeter()
+
+<!--
 
 _syntax: getPerimeter()_
 
@@ -1420,6 +1825,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1428,7 +1835,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float getArea()
+
+<!--
 
 _syntax: getArea()_
 
@@ -1458,6 +1874,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1466,7 +1884,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofPoint getCentroid2D()
+
+<!--
 
 _syntax: getCentroid2D()_
 
@@ -1496,6 +1923,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1504,7 +1933,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void draw()
+
+<!--
 
 _syntax: draw()_
 
@@ -1534,6 +1972,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1542,7 +1982,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool inside(x, y, &polyline)
+
+<!--
 
 _syntax: inside(x, y, &polyline)_
 
@@ -1572,6 +2021,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1580,7 +2031,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool inside(&p, &polyline)
+
+<!--
 
 _syntax: inside(&p, &polyline)_
 
@@ -1610,6 +2070,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1618,7 +2080,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setCircleResolution(res)
+
+<!--
 
 _syntax: setCircleResolution(res)_
 
@@ -1648,7 +2119,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1661,6 +2141,8 @@ _description: _
 
 
 ###ofPoint points
+
+<!--
 
 _name: points_
 
@@ -1682,6 +2164,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1690,7 +2174,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofPoint curveVertices
+
+<!--
 
 _name: curveVertices_
 
@@ -1712,6 +2205,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1720,7 +2215,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofPoint circlePoints
+
+<!--
 
 _name: circlePoints_
 
@@ -1742,6 +2246,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1750,7 +2256,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool bClosed
+
+<!--
 
 _name: bClosed_
 
@@ -1772,6 +2287,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1780,7 +2297,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool bHasChanged
+
+<!--
 
 _name: bHasChanged_
 
@@ -1802,7 +2328,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

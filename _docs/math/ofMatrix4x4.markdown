@@ -7,11 +7,20 @@
 
 
 
+
+
+
+
+
+
+
 ##Methods
 
 
 
 ### ofMatrix4x4()
+
+<!--
 
 _syntax: ofMatrix4x4()_
 
@@ -41,6 +50,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -49,7 +60,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ofMatrix4x4(&mat)
+
+<!--
 
 _syntax: ofMatrix4x4(&mat)_
 
@@ -79,6 +99,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -87,7 +109,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ofMatrix4x4(ptr)
+
+<!--
 
 _syntax: ofMatrix4x4(ptr)_
 
@@ -117,6 +148,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -125,7 +158,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ofMatrix4x4(&quat)
+
+<!--
 
 _syntax: ofMatrix4x4(&quat)_
 
@@ -155,6 +197,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -163,7 +207,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ofMatrix4x4(a00, a01, a02, a03, a10, a11, a12, a13, a20, a21, a22, a23, a30, a31, a32, a33)
+
+<!--
 
 _syntax: ofMatrix4x4(a00, a01, a02, a03, a10, a11, a12, a13, a20, a21, a22, a23, a30, a31, a32, a33)_
 
@@ -193,6 +246,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -201,7 +256,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ~ofMatrix4x4()
+
+<!--
 
 _syntax: ~ofMatrix4x4()_
 
@@ -231,6 +295,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -239,7 +305,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float operator()(row, col)
+
+<!--
 
 _syntax: operator()(row, col)_
 
@@ -269,6 +344,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -277,7 +354,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f getRowAsVec3f(i)
+
+<!--
 
 _syntax: getRowAsVec3f(i)_
 
@@ -307,6 +393,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -315,7 +403,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec4f getRowAsVec4f(i)
+
+<!--
 
 _syntax: getRowAsVec4f(i)_
 
@@ -345,6 +442,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -353,7 +452,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool isValid()
+
+<!--
 
 _syntax: isValid()_
 
@@ -383,6 +491,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -391,7 +501,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool isNaN()
+
+<!--
 
 _syntax: isNaN()_
 
@@ -421,6 +540,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -429,7 +550,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofMatrix4x4 operator=(&rhs)
+
+<!--
 
 _syntax: operator=(&rhs)_
 
@@ -459,6 +589,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -467,7 +599,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void set(&rhs)
+
+<!--
 
 _syntax: set(&rhs)_
 
@@ -497,6 +638,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -505,7 +648,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void set(ptr)
+
+<!--
 
 _syntax: set(ptr)_
 
@@ -535,6 +687,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -543,7 +697,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void set(ptr)
+
+<!--
 
 _syntax: set(ptr)_
 
@@ -573,6 +736,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -581,7 +746,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void set(a00, a01, a02, a03, a10, a11, a12, a13, a20, a21, a22, a23, a30, a31, a32, a33)
+
+<!--
 
 _syntax: set(a00, a01, a02, a03, a10, a11, a12, a13, a20, a21, a22, a23, a30, a31, a32, a33)_
 
@@ -611,6 +785,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -619,7 +795,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###const float * getPtr()
+
+<!--
 
 _syntax: getPtr()_
 
@@ -649,6 +834,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -657,7 +844,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool isIdentity()
+
+<!--
 
 _syntax: isIdentity()_
 
@@ -687,6 +883,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -695,7 +893,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void makeIdentityMatrix()
+
+<!--
 
 _syntax: makeIdentityMatrix()_
 
@@ -725,6 +932,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -733,7 +942,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void makeScaleMatrix(&)
+
+<!--
 
 _syntax: makeScaleMatrix(&)_
 
@@ -763,6 +981,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -771,7 +991,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void makeScaleMatrix(float, float, float)
+
+<!--
 
 _syntax: makeScaleMatrix(float, float, float)_
 
@@ -801,6 +1030,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -809,7 +1040,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void makeTranslationMatrix(&)
+
+<!--
 
 _syntax: makeTranslationMatrix(&)_
 
@@ -839,6 +1079,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -847,7 +1089,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void makeTranslationMatrix(float, float, float)
+
+<!--
 
 _syntax: makeTranslationMatrix(float, float, float)_
 
@@ -877,6 +1128,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -885,7 +1138,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void makeRotationMatrix(&from, &to)
+
+<!--
 
 _syntax: makeRotationMatrix(&from, &to)_
 
@@ -915,6 +1177,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -923,7 +1187,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void makeRotationMatrix(angle, &axis)
+
+<!--
 
 _syntax: makeRotationMatrix(angle, &axis)_
 
@@ -953,6 +1226,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -961,7 +1236,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void makeRotationMatrix(angle, x, y, z)
+
+<!--
 
 _syntax: makeRotationMatrix(angle, x, y, z)_
 
@@ -991,6 +1275,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -999,7 +1285,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void makeRotationMatrix(&)
+
+<!--
 
 _syntax: makeRotationMatrix(&)_
 
@@ -1029,6 +1324,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1037,7 +1334,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void makeRotationMatrix(angle1, &axis1, angle2, &axis2, angle3, &axis3)
+
+<!--
 
 _syntax: makeRotationMatrix(angle1, &axis1, angle2, &axis2, angle3, &axis3)_
 
@@ -1067,6 +1373,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1075,7 +1383,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool makeInvertOf(&rhs)
+
+<!--
 
 _syntax: makeInvertOf(&rhs)_
 
@@ -1105,6 +1422,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1113,7 +1432,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void makeOrthoNormalOf(&rhs)
+
+<!--
 
 _syntax: makeOrthoNormalOf(&rhs)_
 
@@ -1143,6 +1471,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1151,7 +1481,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void makeFromMultiplicationOf(&, &)
+
+<!--
 
 _syntax: makeFromMultiplicationOf(&, &)_
 
@@ -1181,6 +1520,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1189,7 +1530,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofMatrix4x4 getInverse()
+
+<!--
 
 _syntax: getInverse()_
 
@@ -1219,6 +1569,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1227,7 +1579,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void makeOrthoMatrix(left, right, bottom, top, zNear, zFar)
+
+<!--
 
 _syntax: makeOrthoMatrix(left, right, bottom, top, zNear, zFar)_
 
@@ -1257,6 +1618,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1265,7 +1628,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void makeOrtho2DMatrix(left, right, bottom, top)
+
+<!--
 
 _syntax: makeOrtho2DMatrix(left, right, bottom, top)_
 
@@ -1295,6 +1667,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1303,7 +1677,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void makeFrustumMatrix(left, right, bottom, top, zNear, zFar)
+
+<!--
 
 _syntax: makeFrustumMatrix(left, right, bottom, top, zNear, zFar)_
 
@@ -1333,6 +1716,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1341,7 +1726,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void makePerspectiveMatrix(fovy, aspectRatio, zNear, zFar)
+
+<!--
 
 _syntax: makePerspectiveMatrix(fovy, aspectRatio, zNear, zFar)_
 
@@ -1371,6 +1765,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1379,7 +1775,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void makeLookAtMatrix(&eye, &center, &up)
+
+<!--
 
 _syntax: makeLookAtMatrix(&eye, &center, &up)_
 
@@ -1409,6 +1814,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1417,7 +1824,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void makeLookAtViewMatrix(&eye, &center, &up)
+
+<!--
 
 _syntax: makeLookAtViewMatrix(&eye, &center, &up)_
 
@@ -1447,6 +1863,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1455,7 +1873,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool getOrtho(&left, &right, &bottom, &top, &zNear, &zFar)
+
+<!--
 
 _syntax: getOrtho(&left, &right, &bottom, &top, &zNear, &zFar)_
 
@@ -1485,6 +1912,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1493,7 +1922,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool getFrustum(&left, &right, &bottom, &top, &zNear, &zFar)
+
+<!--
 
 _syntax: getFrustum(&left, &right, &bottom, &top, &zNear, &zFar)_
 
@@ -1523,6 +1961,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1531,7 +1971,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool getPerspective(&fovy, &aspectRatio, &zNear, &zFar)
+
+<!--
 
 _syntax: getPerspective(&fovy, &aspectRatio, &zNear, &zFar)_
 
@@ -1561,6 +2010,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1569,7 +2020,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void getLookAt(&eye, &center, &up, lookDistance = 1.0f)
+
+<!--
 
 _syntax: getLookAt(&eye, &center, &up, lookDistance = 1.0f)_
 
@@ -1599,6 +2059,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1607,7 +2069,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void decompose(&translation, &rotation, &scale, &so)
+
+<!--
 
 _syntax: decompose(&translation, &rotation, &scale, &so)_
 
@@ -1637,7 +2108,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1647,6 +2127,8 @@ _description: _
 
 ###ofVec3f postMult(&v)
 
+<!--
+
 _syntax: postMult(&v)_
 
 _name: postMult_
@@ -1675,7 +2157,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1685,6 +2176,8 @@ _description: _
 
 ###ofVec3f operator*(&v)
 
+<!--
+
 _syntax: operator*(&v)_
 
 _name: operator*_
@@ -1713,6 +2206,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1721,7 +2216,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec4f postMult(&v)
+
+<!--
 
 _syntax: postMult(&v)_
 
@@ -1751,6 +2255,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1759,7 +2265,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec4f operator*(&v)
+
+<!--
 
 _syntax: operator*(&v)_
 
@@ -1789,6 +2304,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1797,7 +2314,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f preMult(&v)
+
+<!--
 
 _syntax: preMult(&v)_
 
@@ -1827,6 +2353,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1835,7 +2363,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec4f preMult(&v)
+
+<!--
 
 _syntax: preMult(&v)_
 
@@ -1865,6 +2402,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1873,7 +2412,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setRotate(&q)
+
+<!--
 
 _syntax: setRotate(&q)_
 
@@ -1903,6 +2451,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1911,7 +2461,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setTranslation(tx, ty, tz)
+
+<!--
 
 _syntax: setTranslation(tx, ty, tz)_
 
@@ -1941,6 +2500,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1949,7 +2510,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setTranslation(&v)
+
+<!--
 
 _syntax: setTranslation(&v)_
 
@@ -1979,6 +2549,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1987,7 +2559,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void rotate(angle, x, y, z)
+
+<!--
 
 _syntax: rotate(angle, x, y, z)_
 
@@ -2017,6 +2598,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2025,7 +2608,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void rotateRad(angle, x, y, z)
+
+<!--
 
 _syntax: rotateRad(angle, x, y, z)_
 
@@ -2055,6 +2647,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2063,7 +2657,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void rotate(&q)
+
+<!--
 
 _syntax: rotate(&q)_
 
@@ -2093,6 +2696,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2101,7 +2706,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void translate(tx, ty, tz)
+
+<!--
 
 _syntax: translate(tx, ty, tz)_
 
@@ -2131,6 +2745,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2139,7 +2755,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void translate(&v)
+
+<!--
 
 _syntax: translate(&v)_
 
@@ -2169,6 +2794,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2177,7 +2804,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void scale(x, y, z)
+
+<!--
 
 _syntax: scale(x, y, z)_
 
@@ -2207,6 +2843,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2215,7 +2853,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void scale(&v)
+
+<!--
 
 _syntax: scale(&v)_
 
@@ -2245,6 +2892,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2253,7 +2902,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void glRotate(angle, x, y, z)
+
+<!--
 
 _syntax: glRotate(angle, x, y, z)_
 
@@ -2283,6 +2941,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2291,7 +2951,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void glRotateRad(angle, x, y, z)
+
+<!--
 
 _syntax: glRotateRad(angle, x, y, z)_
 
@@ -2321,6 +2990,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2329,7 +3000,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void glRotate(&q)
+
+<!--
 
 _syntax: glRotate(&q)_
 
@@ -2359,6 +3039,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2367,7 +3049,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void glTranslate(tx, ty, tz)
+
+<!--
 
 _syntax: glTranslate(tx, ty, tz)_
 
@@ -2397,6 +3088,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2405,7 +3098,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void glTranslate(&v)
+
+<!--
 
 _syntax: glTranslate(&v)_
 
@@ -2435,6 +3137,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2443,7 +3147,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void glScale(x, y, z)
+
+<!--
 
 _syntax: glScale(x, y, z)_
 
@@ -2473,6 +3186,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2481,7 +3196,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void glScale(&v)
+
+<!--
 
 _syntax: glScale(&v)_
 
@@ -2511,6 +3235,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2519,7 +3245,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofQuaternion getRotate()
+
+<!--
 
 _syntax: getRotate()_
 
@@ -2549,6 +3284,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2557,7 +3294,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f getTranslation()
+
+<!--
 
 _syntax: getTranslation()_
 
@@ -2587,6 +3333,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2595,7 +3343,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f getScale()
+
+<!--
 
 _syntax: getScale()_
 
@@ -2625,6 +3382,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2633,7 +3392,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void postMult(&)
+
+<!--
 
 _syntax: postMult(&)_
 
@@ -2663,6 +3431,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2671,7 +3441,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void operator*=(&other)
+
+<!--
 
 _syntax: operator*=(&other)_
 
@@ -2701,6 +3480,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2709,7 +3490,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofMatrix4x4 operator*(&m)
+
+<!--
 
 _syntax: operator*(&m)_
 
@@ -2739,6 +3529,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2747,7 +3539,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void preMult(&)
+
+<!--
 
 _syntax: preMult(&)_
 
@@ -2777,6 +3578,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2785,7 +3588,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void postMultTranslate(&v)
+
+<!--
 
 _syntax: postMultTranslate(&v)_
 
@@ -2815,6 +3627,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2823,7 +3637,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void postMultScale(&v)
+
+<!--
 
 _syntax: postMultScale(&v)_
 
@@ -2853,6 +3676,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2861,7 +3686,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void postMultRotate(&q)
+
+<!--
 
 _syntax: postMultRotate(&q)_
 
@@ -2891,6 +3725,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2899,7 +3735,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void postMultTranslate(x, y, z)
+
+<!--
 
 _syntax: postMultTranslate(x, y, z)_
 
@@ -2929,6 +3774,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2937,7 +3784,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void postMultRotate(angle, x, y, z)
+
+<!--
 
 _syntax: postMultRotate(angle, x, y, z)_
 
@@ -2967,6 +3823,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2975,7 +3833,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void postMultScale(x, y, z)
+
+<!--
 
 _syntax: postMultScale(x, y, z)_
 
@@ -3005,6 +3872,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -3013,7 +3882,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void preMultScale(&v)
+
+<!--
 
 _syntax: preMultScale(&v)_
 
@@ -3043,6 +3921,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -3051,7 +3931,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void preMultTranslate(&v)
+
+<!--
 
 _syntax: preMultTranslate(&v)_
 
@@ -3081,6 +3970,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -3089,7 +3980,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void preMultRotate(&q)
+
+<!--
 
 _syntax: preMultRotate(&q)_
 
@@ -3119,6 +4019,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -3127,7 +4029,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofMatrix4x4 newIdentityMatrix(void)
+
+<!--
 
 _syntax: newIdentityMatrix(void)_
 
@@ -3157,6 +4068,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -3165,7 +4078,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofMatrix4x4 newScaleMatrix(&sv)
+
+<!--
 
 _syntax: newScaleMatrix(&sv)_
 
@@ -3195,6 +4117,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -3203,7 +4127,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofMatrix4x4 newScaleMatrix(sx, sy, sz)
+
+<!--
 
 _syntax: newScaleMatrix(sx, sy, sz)_
 
@@ -3233,6 +4166,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -3241,7 +4176,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofMatrix4x4 newTranslationMatrix(&dv)
+
+<!--
 
 _syntax: newTranslationMatrix(&dv)_
 
@@ -3271,6 +4215,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -3279,7 +4225,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofMatrix4x4 newTranslationMatrix(x, y, z)
+
+<!--
 
 _syntax: newTranslationMatrix(x, y, z)_
 
@@ -3309,6 +4264,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -3317,7 +4274,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofMatrix4x4 newRotationMatrix(&from, &to)
+
+<!--
 
 _syntax: newRotationMatrix(&from, &to)_
 
@@ -3347,6 +4313,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -3355,7 +4323,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofMatrix4x4 newRotationMatrix(angle, x, y, z)
+
+<!--
 
 _syntax: newRotationMatrix(angle, x, y, z)_
 
@@ -3385,6 +4362,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -3393,7 +4372,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofMatrix4x4 newRotationMatrix(angle, &axis)
+
+<!--
 
 _syntax: newRotationMatrix(angle, &axis)_
 
@@ -3423,6 +4411,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -3431,7 +4421,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofMatrix4x4 newRotationMatrix(angle1, &axis1, angle2, &axis2, angle3, &axis3)
+
+<!--
 
 _syntax: newRotationMatrix(angle1, &axis1, angle2, &axis2, angle3, &axis3)_
 
@@ -3461,6 +4460,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -3469,7 +4470,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofMatrix4x4 newRotationMatrix(&quat)
+
+<!--
 
 _syntax: newRotationMatrix(&quat)_
 
@@ -3499,6 +4509,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -3507,7 +4519,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofMatrix4x4 getInverseOf(&matrix)
+
+<!--
 
 _syntax: getInverseOf(&matrix)_
 
@@ -3537,6 +4558,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -3545,7 +4568,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofMatrix4x4 getTransposedOf(&matrix)
+
+<!--
 
 _syntax: getTransposedOf(&matrix)_
 
@@ -3575,6 +4607,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -3583,7 +4617,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofMatrix4x4 getOrthoNormalOf(&matrix)
+
+<!--
 
 _syntax: getOrthoNormalOf(&matrix)_
 
@@ -3613,6 +4656,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -3621,7 +4666,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofMatrix4x4 newOrthoMatrix(left, right, bottom, top, zNear, zFar)
+
+<!--
 
 _syntax: newOrthoMatrix(left, right, bottom, top, zNear, zFar)_
 
@@ -3651,6 +4705,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -3659,7 +4715,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofMatrix4x4 newOrtho2DMatrix(left, right, bottom, top)
+
+<!--
 
 _syntax: newOrtho2DMatrix(left, right, bottom, top)_
 
@@ -3689,6 +4754,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -3697,7 +4764,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofMatrix4x4 newFrustumMatrix(left, right, bottom, top, zNear, zFar)
+
+<!--
 
 _syntax: newFrustumMatrix(left, right, bottom, top, zNear, zFar)_
 
@@ -3727,6 +4803,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -3735,7 +4813,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofMatrix4x4 newPerspectiveMatrix(fovy, aspectRatio, zNear, zFar)
+
+<!--
 
 _syntax: newPerspectiveMatrix(fovy, aspectRatio, zNear, zFar)_
 
@@ -3765,6 +4852,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -3773,7 +4862,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofMatrix4x4 newLookAtMatrix(&eye, &center, &up)
+
+<!--
 
 _syntax: newLookAtMatrix(&eye, &center, &up)_
 
@@ -3803,6 +4901,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -3811,7 +4911,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f transform3x3(&v, &m)
+
+<!--
 
 _syntax: transform3x3(&v, &m)_
 
@@ -3841,6 +4950,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -3849,7 +4960,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f transform3x3(&m, &v)
+
+<!--
 
 _syntax: transform3x3(&m, &v)_
 
@@ -3879,7 +4999,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -3892,6 +5021,8 @@ _description: _
 
 
 ###ofVec4f _mat
+
+<!--
 
 _name: _mat_
 
@@ -3913,7 +5044,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

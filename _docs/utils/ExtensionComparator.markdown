@@ -7,11 +7,20 @@
 
 
 
+
+
+
+
+
+
+
 ##Methods
 
 
 
 ###bool operator()(&file)
+
+<!--
 
 _syntax: operator()(&file)_
 
@@ -41,7 +50,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -54,6 +72,8 @@ _description: _
 
 
 ###vector< string > * extensions
+
+<!--
 
 _name: extensions_
 
@@ -75,7 +95,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

@@ -7,6 +7,9 @@
 
 
 
+
+
+
 First things first: a Vertex Buffer Object (VBO) provides a way for you to create vertices, normals, colors, and texture coordinates on the graphics card for non-immediate mode rendering. This means that you can store it all on the graphics card and then access, update, or draw it, whenever you need. This is pretty convenient when you have something that you want to draw multiple times wihtout changing it much, because it means that, instead of needing to upload new data each time, you can simply draw it without needing to recreate all your vertices and colors, a philosophy which is probably familiar to you from working with the ofFbo or ofTexture.
 
 There are a few things that are important to understand about VBOs:
@@ -118,11 +121,17 @@ $$/code
 
 
 
+
+
+
+
 ##Methods
 
 
 
 ### ofVbo()
+
+<!--
 
 _syntax: ofVbo()_
 
@@ -152,6 +161,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -168,7 +179,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ofVbo(mom)
+
+<!--
 
 _syntax: ofVbo(mom)_
 
@@ -198,7 +218,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -216,7 +239,15 @@ Allows you copy one ofVbo from another ofVbo.
 
 
 
+
+
+
+
+
+
 ###ofVbo & &operator=(mom)
+
+<!--
 
 _syntax: &operator=(mom)_
 
@@ -246,7 +277,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -270,7 +304,15 @@ $$/code
 
 
 
+
+
+
+
+
+
 ### ~ofVbo()
+
+<!--
 
 _syntax: ~ofVbo()_
 
@@ -300,6 +342,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -316,7 +360,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setMesh(mesh, usage)
+
+<!--
 
 _syntax: setMesh(mesh, usage)_
 
@@ -346,7 +399,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -371,7 +427,15 @@ This copies all the properties from the mesh, indices, vertices, colors, and tex
 
 
 
+
+
+
+
+
+
 ###void setVertexData(verts, total, usage)
+
+<!--
 
 _syntax: setVertexData(verts, total, usage)_
 
@@ -401,7 +465,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -430,7 +497,15 @@ usage Specifies the expected usage pattern of the data store. The symbolic const
 
 
 
+
+
+
+
+
+
 ###void setVertexData(verts, total, usage)
+
+<!--
 
 _syntax: setVertexData(verts, total, usage)_
 
@@ -460,7 +535,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -481,7 +559,15 @@ usage Specifies the expected usage pattern of the data store. The symbolic const
 
 
 
+
+
+
+
+
+
 ###void setColorData(colors, total, usage)
+
+<!--
 
 _syntax: setColorData(colors, total, usage)_
 
@@ -511,7 +597,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -532,7 +621,15 @@ usage Specifies the expected usage pattern of the data store. The symbolic const
 
 
 
+
+
+
+
+
+
 ###void setNormalData(normals, total, usage)
+
+<!--
 
 _syntax: setNormalData(normals, total, usage)_
 
@@ -562,7 +659,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -582,7 +682,15 @@ usage Specifies the expected usage pattern of the data store. The symbolic const
 
 
 
+
+
+
+
+
+
 ###void setTexCoordData(texCoords, total, usage)
+
+<!--
 
 _syntax: setTexCoordData(texCoords, total, usage)_
 
@@ -612,7 +720,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -632,7 +743,15 @@ usage Specifies the expected usage pattern of the data store. The symbolic const
 
 
 
+
+
+
+
+
+
 ###void setIndexData(indices, total, usage)
+
+<!--
 
 _syntax: setIndexData(indices, total, usage)_
 
@@ -662,7 +781,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -684,7 +806,15 @@ usage Specifies the expected usage pattern of the data store. The symbolic const
 
 
 
+
+
+
+
+
+
 ###void setVertexData(vert0x, numCoords, total, usage, stride = 0)
+
+<!--
 
 _syntax: setVertexData(vert0x, numCoords, total, usage, stride = 0)_
 
@@ -714,7 +844,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -746,7 +879,15 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###void setColorData(color0r, total, usage, stride = 0)
+
+<!--
 
 _syntax: setColorData(color0r, total, usage, stride = 0)_
 
@@ -776,7 +917,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -802,7 +946,15 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###void setNormalData(normal0x, total, usage, stride = 0)
+
+<!--
 
 _syntax: setNormalData(normal0x, total, usage, stride = 0)_
 
@@ -832,7 +984,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -859,7 +1014,15 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###void setTexCoordData(texCoord0x, total, usage, stride = 0)
+
+<!--
 
 _syntax: setTexCoordData(texCoord0x, total, usage, stride = 0)_
 
@@ -889,7 +1052,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -915,7 +1081,15 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###void updateMesh(mesh)
+
+<!--
 
 _syntax: updateMesh(mesh)_
 
@@ -945,7 +1119,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -970,7 +1147,15 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###void updateVertexData(verts, total)
+
+<!--
 
 _syntax: updateVertexData(verts, total)_
 
@@ -1000,7 +1185,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -1018,7 +1206,15 @@ If you've created your VBO with vertices that are using GL_DYNAMIC_DRAW then you
 
 
 
+
+
+
+
+
+
 ###void updateVertexData(verts, total)
+
+<!--
 
 _syntax: updateVertexData(verts, total)_
 
@@ -1048,7 +1244,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -1066,7 +1265,15 @@ If you've created your VBO with vertices that are using GL_DYNAMIC_DRAW then you
 
 
 
+
+
+
+
+
+
 ###void updateColorData(colors, total)
+
+<!--
 
 _syntax: updateColorData(colors, total)_
 
@@ -1096,7 +1303,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -1114,7 +1324,15 @@ If you've created your VBO with colors that are using GL_DYNAMIC_DRAW then you c
 
 
 
+
+
+
+
+
+
 ###void updateNormalData(normals, total)
+
+<!--
 
 _syntax: updateNormalData(normals, total)_
 
@@ -1144,7 +1362,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -1162,7 +1383,15 @@ If you've created your VBO with normals that are using GL_DYNAMIC_DRAW then you 
 
 
 
+
+
+
+
+
+
 ###void updateTexCoordData(texCoords, total)
+
+<!--
 
 _syntax: updateTexCoordData(texCoords, total)_
 
@@ -1192,7 +1421,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -1210,7 +1442,15 @@ If you've created your VBO with texture coordinates that are using GL_DYNAMIC_DR
 
 
 
+
+
+
+
+
+
 ###void updateIndexData(indices, total)
+
+<!--
 
 _syntax: updateIndexData(indices, total)_
 
@@ -1240,7 +1480,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -1258,7 +1501,15 @@ If you've created your VBO with indices that are using GL_DYNAMIC_DRAW then you 
 
 
 
+
+
+
+
+
+
 ###void updateVertexData(ver0x, total)
+
+<!--
 
 _syntax: updateVertexData(ver0x, total)_
 
@@ -1288,7 +1539,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -1306,7 +1560,15 @@ If you've created your VBO with indices that are using GL_DYNAMIC_DRAW then you 
 
 
 
+
+
+
+
+
+
 ###void updateColorData(color0r, total)
+
+<!--
 
 _syntax: updateColorData(color0r, total)_
 
@@ -1336,7 +1598,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -1354,7 +1619,15 @@ If you've created your VBO with colors that are using GL_DYNAMIC_DRAW then you c
 
 
 
+
+
+
+
+
+
 ###void updateNormalData(normal0x, total)
+
+<!--
 
 _syntax: updateNormalData(normal0x, total)_
 
@@ -1384,7 +1657,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -1402,7 +1678,15 @@ If you've created your VBO with normals that are using GL_DYNAMIC_DRAW then you 
 
 
 
+
+
+
+
+
+
 ###void updateTexCoordData(texCoord0x, total)
+
+<!--
 
 _syntax: updateTexCoordData(texCoord0x, total)_
 
@@ -1432,7 +1716,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -1450,7 +1737,15 @@ If you've created your VBO with texture coordinates that are using GL_DYNAMIC_DR
 
 
 
+
+
+
+
+
+
 ###GLuint getVertId()
+
+<!--
 
 _syntax: getVertId()_
 
@@ -1480,6 +1775,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1495,7 +1792,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###GLuint getColorId()
+
+<!--
 
 _syntax: getColorId()_
 
@@ -1525,6 +1831,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1540,7 +1848,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###GLuint getNormalId()
+
+<!--
 
 _syntax: getNormalId()_
 
@@ -1570,6 +1887,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1585,7 +1904,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###GLuint getTexCoordId()
+
+<!--
 
 _syntax: getTexCoordId()_
 
@@ -1615,6 +1943,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1630,7 +1960,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###GLuint getIndexId()
+
+<!--
 
 _syntax: getIndexId()_
 
@@ -1660,6 +1999,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1676,7 +2017,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool getIsAllocated()
+
+<!--
 
 _syntax: getIsAllocated()_
 
@@ -1706,6 +2056,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1721,7 +2073,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool getUsingVerts()
+
+<!--
 
 _syntax: getUsingVerts()_
 
@@ -1751,6 +2112,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1766,7 +2129,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool getUsingColors()
+
+<!--
 
 _syntax: getUsingColors()_
 
@@ -1796,6 +2168,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1811,7 +2185,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool getUsingNormals()
+
+<!--
 
 _syntax: getUsingNormals()_
 
@@ -1841,6 +2224,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1856,7 +2241,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool getUsingTexCoords()
+
+<!--
 
 _syntax: getUsingTexCoords()_
 
@@ -1886,6 +2280,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1901,7 +2297,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool getUsingIndices()
+
+<!--
 
 _syntax: getUsingIndices()_
 
@@ -1931,6 +2336,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1947,7 +2354,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void draw(drawMode, first, total)
+
+<!--
 
 _syntax: draw(drawMode, first, total)_
 
@@ -1977,7 +2393,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -2004,7 +2423,15 @@ Specifies the number of indices to be rendered. This last part is pretty importa
 
 
 
+
+
+
+
+
+
 ###void drawElements(drawMode, amt)
+
+<!--
 
 _syntax: drawElements(drawMode, amt)_
 
@@ -2034,7 +2461,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -2061,7 +2491,15 @@ amt specifies the number of indices to be rendered. This last part is pretty imp
 
 
 
+
+
+
+
+
+
 ###void bind()
+
+<!--
 
 _syntax: bind()_
 
@@ -2091,7 +2529,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -2109,7 +2550,15 @@ This is for advanced users who might want to use ways of drawing other than draw
 
 
 
+
+
+
+
+
+
 ###void unbind()
+
+<!--
 
 _syntax: unbind()_
 
@@ -2139,7 +2588,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -2157,7 +2609,15 @@ This is for advanced users who might want to use ways of drawing other than draw
 
 
 
+
+
+
+
+
+
 ###void clear()
+
+<!--
 
 _syntax: clear()_
 
@@ -2187,7 +2647,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -2203,7 +2666,15 @@ This erases your VBO's data from your graphics card, but not the VBO itself, so 
 
 
 
+
+
+
+
+
+
 ### ofVbo(&mom)
+
+<!--
 
 _syntax: ofVbo(&mom)_
 
@@ -2233,6 +2704,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2241,7 +2714,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVbo operator=(&mom)
+
+<!--
 
 _syntax: operator=(&mom)_
 
@@ -2271,6 +2753,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2279,7 +2763,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setMesh(&mesh, usage)
+
+<!--
 
 _syntax: setMesh(&mesh, usage)_
 
@@ -2309,6 +2802,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2317,7 +2812,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setVertexData(*verts, total, usage)
+
+<!--
 
 _syntax: setVertexData(*verts, total, usage)_
 
@@ -2347,6 +2851,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2355,7 +2861,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setVertexData(*verts, total, usage)
+
+<!--
 
 _syntax: setVertexData(*verts, total, usage)_
 
@@ -2385,6 +2900,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2393,7 +2910,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setColorData(*colors, total, usage)
+
+<!--
 
 _syntax: setColorData(*colors, total, usage)_
 
@@ -2423,6 +2949,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2431,7 +2959,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setNormalData(*normals, total, usage)
+
+<!--
 
 _syntax: setNormalData(*normals, total, usage)_
 
@@ -2461,6 +2998,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2469,7 +3008,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setTexCoordData(*texCoords, total, usage)
+
+<!--
 
 _syntax: setTexCoordData(*texCoords, total, usage)_
 
@@ -2499,6 +3047,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2507,7 +3057,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setIndexData(*indices, total, usage)
+
+<!--
 
 _syntax: setIndexData(*indices, total, usage)_
 
@@ -2537,6 +3096,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2545,7 +3106,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setVertexData(*vert0x, numCoords, total, usage, stride = 0)
+
+<!--
 
 _syntax: setVertexData(*vert0x, numCoords, total, usage, stride = 0)_
 
@@ -2575,6 +3145,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2583,7 +3155,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setColorData(*color0r, total, usage, stride = 0)
+
+<!--
 
 _syntax: setColorData(*color0r, total, usage, stride = 0)_
 
@@ -2613,6 +3194,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2621,7 +3204,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setNormalData(*normal0x, total, usage, stride = 0)
+
+<!--
 
 _syntax: setNormalData(*normal0x, total, usage, stride = 0)_
 
@@ -2651,6 +3243,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2659,7 +3253,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setTexCoordData(*texCoord0x, total, usage, stride = 0)
+
+<!--
 
 _syntax: setTexCoordData(*texCoord0x, total, usage, stride = 0)_
 
@@ -2689,6 +3292,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2697,7 +3302,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void updateMesh(&mesh)
+
+<!--
 
 _syntax: updateMesh(&mesh)_
 
@@ -2727,6 +3341,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2735,7 +3351,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void updateVertexData(*verts, total)
+
+<!--
 
 _syntax: updateVertexData(*verts, total)_
 
@@ -2765,6 +3390,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2773,7 +3400,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void updateVertexData(*verts, total)
+
+<!--
 
 _syntax: updateVertexData(*verts, total)_
 
@@ -2803,6 +3439,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2811,7 +3449,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void updateColorData(*colors, total)
+
+<!--
 
 _syntax: updateColorData(*colors, total)_
 
@@ -2841,6 +3488,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2849,7 +3498,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void updateNormalData(*normals, total)
+
+<!--
 
 _syntax: updateNormalData(*normals, total)_
 
@@ -2879,6 +3537,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2887,7 +3547,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void updateTexCoordData(*texCoords, total)
+
+<!--
 
 _syntax: updateTexCoordData(*texCoords, total)_
 
@@ -2917,6 +3586,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2925,7 +3596,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void updateIndexData(*indices, total)
+
+<!--
 
 _syntax: updateIndexData(*indices, total)_
 
@@ -2955,6 +3635,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2963,7 +3645,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void updateVertexData(*ver0x, total)
+
+<!--
 
 _syntax: updateVertexData(*ver0x, total)_
 
@@ -2993,6 +3684,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -3001,7 +3694,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void updateColorData(*color0r, total)
+
+<!--
 
 _syntax: updateColorData(*color0r, total)_
 
@@ -3031,6 +3733,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -3039,7 +3743,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void updateNormalData(*normal0x, total)
+
+<!--
 
 _syntax: updateNormalData(*normal0x, total)_
 
@@ -3069,6 +3782,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -3077,7 +3792,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void updateTexCoordData(*texCoord0x, total)
+
+<!--
 
 _syntax: updateTexCoordData(*texCoord0x, total)_
 
@@ -3107,7 +3831,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -3120,6 +3853,8 @@ _description: _
 
 
 ###GLuint indexId
+
+<!--
 
 _name: indexId_
 
@@ -3141,6 +3876,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -3149,7 +3886,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###GLuint vertId
+
+<!--
 
 _name: vertId_
 
@@ -3171,6 +3917,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -3179,7 +3927,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###GLuint colorId
+
+<!--
 
 _name: colorId_
 
@@ -3201,6 +3958,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -3209,7 +3968,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###GLuint normalId
+
+<!--
 
 _name: normalId_
 
@@ -3231,6 +3999,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -3239,7 +4009,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###GLuint texCoordId
+
+<!--
 
 _name: texCoordId_
 
@@ -3261,6 +4040,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -3269,7 +4050,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool bAllocated
+
+<!--
 
 _name: bAllocated_
 
@@ -3291,6 +4081,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -3299,7 +4091,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool bUsingVerts
+
+<!--
 
 _name: bUsingVerts_
 
@@ -3321,6 +4122,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -3329,7 +4132,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool bUsingTexCoords
+
+<!--
 
 _name: bUsingTexCoords_
 
@@ -3351,6 +4163,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -3359,7 +4173,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool bUsingColors
+
+<!--
 
 _name: bUsingColors_
 
@@ -3381,6 +4204,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -3389,7 +4214,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool bUsingNormals
+
+<!--
 
 _name: bUsingNormals_
 
@@ -3411,6 +4245,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -3419,7 +4255,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool bUsingIndices
+
+<!--
 
 _name: bUsingIndices_
 
@@ -3441,6 +4286,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -3449,7 +4296,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###GLsizei vertStride
+
+<!--
 
 _name: vertStride_
 
@@ -3471,6 +4327,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -3479,7 +4337,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###GLsizei colorStride
+
+<!--
 
 _name: colorStride_
 
@@ -3501,6 +4368,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -3509,7 +4378,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###GLsizei normalStride
+
+<!--
 
 _name: normalStride_
 
@@ -3531,6 +4409,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -3539,7 +4419,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###GLsizei texCoordStride
+
+<!--
 
 _name: texCoordStride_
 
@@ -3561,6 +4450,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -3569,7 +4460,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int vertSize
+
+<!--
 
 _name: vertSize_
 
@@ -3591,6 +4491,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -3599,7 +4501,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int totalVerts
+
+<!--
 
 _name: totalVerts_
 
@@ -3621,6 +4532,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -3629,7 +4542,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int vertUsage
+
+<!--
 
 _name: vertUsage_
 
@@ -3651,6 +4573,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -3659,7 +4583,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int colorUsage
+
+<!--
 
 _name: colorUsage_
 
@@ -3681,6 +4614,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -3689,7 +4624,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int normUsage
+
+<!--
 
 _name: normUsage_
 
@@ -3711,6 +4655,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -3719,7 +4665,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int texUsage
+
+<!--
 
 _name: texUsage_
 
@@ -3741,7 +4696,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

@@ -7,11 +7,20 @@
 
 
 
+
+
+
+
+
+
+
 ##Methods
 
 
 
 ### ofVec2f(_x = 0.f, _y = 0.f)
+
+<!--
 
 _syntax: ofVec2f(_x = 0.f, _y = 0.f)_
 
@@ -41,6 +50,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -49,7 +60,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ofVec2f(&vec)
+
+<!--
 
 _syntax: ofVec2f(&vec)_
 
@@ -79,6 +99,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -87,7 +109,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ofVec2f(&vec)
+
+<!--
 
 _syntax: ofVec2f(&vec)_
 
@@ -117,6 +148,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -125,7 +158,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###const float * getPtr()
+
+<!--
 
 _syntax: getPtr()_
 
@@ -155,6 +197,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -163,7 +207,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float operator[](n)
+
+<!--
 
 _syntax: operator[](n)_
 
@@ -193,6 +246,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -201,7 +256,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void set(_x, _y)
+
+<!--
 
 _syntax: set(_x, _y)_
 
@@ -231,6 +295,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -239,7 +305,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void set(&vec)
+
+<!--
 
 _syntax: set(&vec)_
 
@@ -269,6 +344,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -277,7 +354,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool operator==(&vec)
+
+<!--
 
 _syntax: operator==(&vec)_
 
@@ -307,6 +393,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -315,7 +403,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool operator!=(&vec)
+
+<!--
 
 _syntax: operator!=(&vec)_
 
@@ -345,6 +442,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -353,7 +452,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool match(&vec, tolerance = 0.0001)
+
+<!--
 
 _syntax: match(&vec, tolerance = 0.0001)_
 
@@ -383,6 +491,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -391,7 +501,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool align(&vec, tolerance = 0.0001)
+
+<!--
 
 _syntax: align(&vec, tolerance = 0.0001)_
 
@@ -421,6 +540,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -429,7 +550,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool alignRad(&vec, tolerance = 0.0001)
+
+<!--
 
 _syntax: alignRad(&vec, tolerance = 0.0001)_
 
@@ -459,6 +589,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -467,7 +599,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec2f operator+(&vec)
+
+<!--
 
 _syntax: operator+(&vec)_
 
@@ -497,6 +638,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -505,7 +648,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec2f operator+=(&vec)
+
+<!--
 
 _syntax: operator+=(&vec)_
 
@@ -535,6 +687,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -543,7 +697,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec2f operator-(&vec)
+
+<!--
 
 _syntax: operator-(&vec)_
 
@@ -573,6 +736,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -581,7 +746,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec2f operator-=(&vec)
+
+<!--
 
 _syntax: operator-=(&vec)_
 
@@ -611,6 +785,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -619,7 +795,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec2f operator*(&vec)
+
+<!--
 
 _syntax: operator*(&vec)_
 
@@ -649,6 +834,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -657,7 +844,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec2f operator*=(&vec)
+
+<!--
 
 _syntax: operator*=(&vec)_
 
@@ -687,6 +883,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -695,7 +893,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec2f operator/(&vec)
+
+<!--
 
 _syntax: operator/(&vec)_
 
@@ -725,6 +932,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -733,7 +942,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec2f operator/=(&vec)
+
+<!--
 
 _syntax: operator/=(&vec)_
 
@@ -763,6 +981,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -771,7 +991,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec2f operator+(f)
+
+<!--
 
 _syntax: operator+(f)_
 
@@ -801,6 +1030,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -809,7 +1040,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec2f operator+=(f)
+
+<!--
 
 _syntax: operator+=(f)_
 
@@ -839,6 +1079,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -847,7 +1089,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec2f operator-(f)
+
+<!--
 
 _syntax: operator-(f)_
 
@@ -877,6 +1128,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -885,7 +1138,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec2f operator-=(f)
+
+<!--
 
 _syntax: operator-=(f)_
 
@@ -915,6 +1177,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -923,7 +1187,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec2f operator-()
+
+<!--
 
 _syntax: operator-()_
 
@@ -953,6 +1226,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -961,7 +1236,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec2f operator*(f)
+
+<!--
 
 _syntax: operator*(f)_
 
@@ -991,6 +1275,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -999,7 +1285,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec2f operator*=(f)
+
+<!--
 
 _syntax: operator*=(f)_
 
@@ -1029,6 +1324,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1037,7 +1334,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec2f operator/(f)
+
+<!--
 
 _syntax: operator/(f)_
 
@@ -1067,6 +1373,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1075,7 +1383,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec2f operator/=(f)
+
+<!--
 
 _syntax: operator/=(f)_
 
@@ -1105,6 +1422,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1113,7 +1432,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec2f getScaled(length)
+
+<!--
 
 _syntax: getScaled(length)_
 
@@ -1143,6 +1471,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1151,7 +1481,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec2f scale(length)
+
+<!--
 
 _syntax: scale(length)_
 
@@ -1181,6 +1520,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1189,7 +1530,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec2f getRotated(angle)
+
+<!--
 
 _syntax: getRotated(angle)_
 
@@ -1219,6 +1569,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1227,7 +1579,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec2f getRotatedRad(angle)
+
+<!--
 
 _syntax: getRotatedRad(angle)_
 
@@ -1257,6 +1618,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1265,7 +1628,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec2f rotate(angle)
+
+<!--
 
 _syntax: rotate(angle)_
 
@@ -1295,6 +1667,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1303,7 +1677,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec2f rotateRad(angle)
+
+<!--
 
 _syntax: rotateRad(angle)_
 
@@ -1333,6 +1716,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1341,7 +1726,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec2f getRotated(angle, &pivot)
+
+<!--
 
 _syntax: getRotated(angle, &pivot)_
 
@@ -1371,6 +1765,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1379,7 +1775,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec2f rotate(angle, &pivot)
+
+<!--
 
 _syntax: rotate(angle, &pivot)_
 
@@ -1409,6 +1814,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1417,7 +1824,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec2f getRotatedRad(angle, &pivot)
+
+<!--
 
 _syntax: getRotatedRad(angle, &pivot)_
 
@@ -1447,6 +1863,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1455,7 +1873,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec2f rotateRad(angle, &pivot)
+
+<!--
 
 _syntax: rotateRad(angle, &pivot)_
 
@@ -1485,6 +1912,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1493,7 +1922,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec2f getMapped(&origin, &vx, &vy)
+
+<!--
 
 _syntax: getMapped(&origin, &vx, &vy)_
 
@@ -1523,6 +1961,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1531,7 +1971,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec2f map(&origin, &vx, &vy)
+
+<!--
 
 _syntax: map(&origin, &vx, &vy)_
 
@@ -1561,6 +2010,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1569,7 +2020,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float distance(&pnt)
+
+<!--
 
 _syntax: distance(&pnt)_
 
@@ -1599,6 +2059,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1607,7 +2069,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float squareDistance(&pnt)
+
+<!--
 
 _syntax: squareDistance(&pnt)_
 
@@ -1637,6 +2108,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1645,7 +2118,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec2f getInterpolated(&pnt, p)
+
+<!--
 
 _syntax: getInterpolated(&pnt, p)_
 
@@ -1675,6 +2157,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1683,7 +2167,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec2f interpolate(&pnt, p)
+
+<!--
 
 _syntax: interpolate(&pnt, p)_
 
@@ -1713,6 +2206,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1721,7 +2216,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec2f getMiddle(&pnt)
+
+<!--
 
 _syntax: getMiddle(&pnt)_
 
@@ -1751,6 +2255,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1759,7 +2265,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec2f middle(&pnt)
+
+<!--
 
 _syntax: middle(&pnt)_
 
@@ -1789,6 +2304,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1797,7 +2314,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec2f average(*points, num)
+
+<!--
 
 _syntax: average(*points, num)_
 
@@ -1827,6 +2353,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1835,7 +2363,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec2f getNormalized()
+
+<!--
 
 _syntax: getNormalized()_
 
@@ -1865,6 +2402,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1873,7 +2412,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec2f normalize()
+
+<!--
 
 _syntax: normalize()_
 
@@ -1903,6 +2451,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1911,7 +2461,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec2f getLimited(max)
+
+<!--
 
 _syntax: getLimited(max)_
 
@@ -1941,6 +2500,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1949,7 +2510,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec2f limit(max)
+
+<!--
 
 _syntax: limit(max)_
 
@@ -1979,6 +2549,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1987,7 +2559,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec2f getPerpendicular()
+
+<!--
 
 _syntax: getPerpendicular()_
 
@@ -2017,6 +2598,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2025,7 +2608,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec2f perpendicular()
+
+<!--
 
 _syntax: perpendicular()_
 
@@ -2055,6 +2647,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2063,7 +2657,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float length()
+
+<!--
 
 _syntax: length()_
 
@@ -2093,6 +2696,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2101,7 +2706,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float squareLength()
+
+<!--
 
 _syntax: squareLength()_
 
@@ -2131,6 +2745,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2139,7 +2755,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float angle(&vec)
+
+<!--
 
 _syntax: angle(&vec)_
 
@@ -2169,6 +2794,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2177,7 +2804,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float angleRad(&vec)
+
+<!--
 
 _syntax: angleRad(&vec)_
 
@@ -2207,6 +2843,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2215,7 +2853,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float dot(&vec)
+
+<!--
 
 _syntax: dot(&vec)_
 
@@ -2245,6 +2892,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2253,7 +2902,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec2f rescaled(length)
+
+<!--
 
 _syntax: rescaled(length)_
 
@@ -2283,6 +2941,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2291,7 +2951,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec2f rescale(length)
+
+<!--
 
 _syntax: rescale(length)_
 
@@ -2321,6 +2990,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2329,7 +3000,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec2f rotated(angle)
+
+<!--
 
 _syntax: rotated(angle)_
 
@@ -2359,6 +3039,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2367,7 +3049,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec2f normalized()
+
+<!--
 
 _syntax: normalized()_
 
@@ -2397,6 +3088,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2405,7 +3098,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec2f limited(max)
+
+<!--
 
 _syntax: limited(max)_
 
@@ -2435,6 +3137,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2443,7 +3147,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec2f perpendiculared()
+
+<!--
 
 _syntax: perpendiculared()_
 
@@ -2473,6 +3186,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2481,7 +3196,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float lengthSquared()
+
+<!--
 
 _syntax: lengthSquared()_
 
@@ -2511,6 +3235,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2519,7 +3245,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec2f interpolated(&pnt, p)
+
+<!--
 
 _syntax: interpolated(&pnt, p)_
 
@@ -2549,6 +3284,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2557,7 +3294,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec2f middled(&pnt)
+
+<!--
 
 _syntax: middled(&pnt)_
 
@@ -2587,6 +3333,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2595,7 +3343,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec2f mapped(&origin, &vx, &vy)
+
+<!--
 
 _syntax: mapped(&origin, &vx, &vy)_
 
@@ -2625,6 +3382,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2633,7 +3392,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float distanceSquared(&pnt)
+
+<!--
 
 _syntax: distanceSquared(&pnt)_
 
@@ -2663,6 +3431,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2671,7 +3441,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec2f rotated(angle, &pivot)
+
+<!--
 
 _syntax: rotated(angle, &pivot)_
 
@@ -2701,7 +3480,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2714,6 +3502,8 @@ _description: _
 
 
 ###float x
+
+<!--
 
 _name: x_
 
@@ -2735,6 +3525,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2743,7 +3535,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float y
+
+<!--
 
 _name: y_
 
@@ -2765,7 +3566,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

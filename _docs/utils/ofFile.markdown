@@ -7,11 +7,20 @@
 
 
 
+
+
+
+
+
+
+
 ##Methods
 
 
 
 ### ofFile()
+
+<!--
 
 _syntax: ofFile()_
 
@@ -41,6 +50,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -49,7 +60,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ofFile(filePath, mode = ReadOnly, binary = false)
+
+<!--
 
 _syntax: ofFile(filePath, mode = ReadOnly, binary = false)_
 
@@ -79,6 +99,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -87,7 +109,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ofFile(&mom)
+
+<!--
 
 _syntax: ofFile(&mom)_
 
@@ -117,6 +148,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -125,7 +158,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofFile operator=(&mom)
+
+<!--
 
 _syntax: operator=(&mom)_
 
@@ -155,6 +197,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -163,7 +207,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ~ofFile()
+
+<!--
 
 _syntax: ~ofFile()_
 
@@ -193,6 +246,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -201,7 +256,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool open(path, mode = ReadOnly, binary = false)
+
+<!--
 
 _syntax: open(path, mode = ReadOnly, binary = false)_
 
@@ -231,6 +295,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -239,7 +305,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool changeMode(mode, binary = false)
+
+<!--
 
 _syntax: changeMode(mode, binary = false)_
 
@@ -269,6 +344,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -277,7 +354,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void close()
+
+<!--
 
 _syntax: close()_
 
@@ -307,6 +393,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -315,7 +403,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool create()
+
+<!--
 
 _syntax: create()_
 
@@ -345,6 +442,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -353,7 +452,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool exists()
+
+<!--
 
 _syntax: exists()_
 
@@ -383,6 +491,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -391,7 +501,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###string path()
+
+<!--
 
 _syntax: path()_
 
@@ -421,6 +540,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -429,7 +550,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###string getExtension()
+
+<!--
 
 _syntax: getExtension()_
 
@@ -459,6 +589,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -467,7 +599,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###string getFileName()
+
+<!--
 
 _syntax: getFileName()_
 
@@ -497,6 +638,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -505,7 +648,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###string getBaseName()
+
+<!--
 
 _syntax: getBaseName()_
 
@@ -535,6 +687,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -543,7 +697,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###string getEnclosingDirectory()
+
+<!--
 
 _syntax: getEnclosingDirectory()_
 
@@ -573,6 +736,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -581,7 +746,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###string getAbsolutePath()
+
+<!--
 
 _syntax: getAbsolutePath()_
 
@@ -611,6 +785,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -619,7 +795,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool canRead()
+
+<!--
 
 _syntax: canRead()_
 
@@ -649,6 +834,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -657,7 +844,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool canWrite()
+
+<!--
 
 _syntax: canWrite()_
 
@@ -687,6 +883,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -695,7 +893,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool canExecute()
+
+<!--
 
 _syntax: canExecute()_
 
@@ -725,6 +932,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -733,7 +942,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool isFile()
+
+<!--
 
 _syntax: isFile()_
 
@@ -763,6 +981,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -771,7 +991,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool isLink()
+
+<!--
 
 _syntax: isLink()_
 
@@ -801,6 +1030,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -809,7 +1040,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool isDirectory()
+
+<!--
 
 _syntax: isDirectory()_
 
@@ -839,6 +1079,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -847,7 +1089,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool isDevice()
+
+<!--
 
 _syntax: isDevice()_
 
@@ -877,6 +1128,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -885,7 +1138,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool isHidden()
+
+<!--
 
 _syntax: isHidden()_
 
@@ -915,6 +1177,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -923,7 +1187,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setWriteable(writeable)
+
+<!--
 
 _syntax: setWriteable(writeable)_
 
@@ -953,6 +1226,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -961,7 +1236,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setReadOnly(readable)
+
+<!--
 
 _syntax: setReadOnly(readable)_
 
@@ -991,6 +1275,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -999,7 +1285,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setExecutable(executable)
+
+<!--
 
 _syntax: setExecutable(executable)_
 
@@ -1029,6 +1324,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1037,7 +1334,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool copyTo(path, bRelativeToData = true, overwrite = false)
+
+<!--
 
 _syntax: copyTo(path, bRelativeToData = true, overwrite = false)_
 
@@ -1067,6 +1373,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1075,7 +1383,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool moveTo(path, bRelativeToData = true, overwrite = false)
+
+<!--
 
 _syntax: moveTo(path, bRelativeToData = true, overwrite = false)_
 
@@ -1105,6 +1422,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1113,7 +1432,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool renameTo(path, bRelativeToData = true, overwrite = false)
+
+<!--
 
 _syntax: renameTo(path, bRelativeToData = true, overwrite = false)_
 
@@ -1143,6 +1471,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1151,7 +1481,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool remove(recursive = false)
+
+<!--
 
 _syntax: remove(recursive = false)_
 
@@ -1181,6 +1520,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1189,7 +1530,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###uint64_t getSize()
+
+<!--
 
 _syntax: getSize()_
 
@@ -1219,6 +1569,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1227,7 +1579,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###Poco::File & getPocoFile()
+
+<!--
 
 _syntax: getPocoFile()_
 
@@ -1257,6 +1618,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1265,7 +1628,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool operator==(&file)
+
+<!--
 
 _syntax: operator==(&file)_
 
@@ -1295,6 +1667,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1303,7 +1677,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool operator!=(&file)
+
+<!--
 
 _syntax: operator!=(&file)_
 
@@ -1333,6 +1716,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1341,7 +1726,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool operator<(&file)
+
+<!--
 
 _syntax: operator<(&file)_
 
@@ -1371,6 +1765,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1379,7 +1775,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool operator<=(&file)
+
+<!--
 
 _syntax: operator<=(&file)_
 
@@ -1409,6 +1814,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1417,7 +1824,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool operator>(&file)
+
+<!--
 
 _syntax: operator>(&file)_
 
@@ -1447,6 +1863,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1455,7 +1873,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool operator>=(&file)
+
+<!--
 
 _syntax: operator>=(&file)_
 
@@ -1485,6 +1912,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1493,7 +1922,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofBuffer readToBuffer()
+
+<!--
 
 _syntax: readToBuffer()_
 
@@ -1523,6 +1961,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1531,7 +1971,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool writeFromBuffer(&buffer)
+
+<!--
 
 _syntax: writeFromBuffer(&buffer)_
 
@@ -1561,6 +2010,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1569,7 +2020,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###filebuf * getFileBuffer()
+
+<!--
 
 _syntax: getFileBuffer()_
 
@@ -1599,6 +2059,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1607,7 +2069,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool copyFromTo(pathSrc, pathDst, bRelativeToData = true, overwrite = false)
+
+<!--
 
 _syntax: copyFromTo(pathSrc, pathDst, bRelativeToData = true, overwrite = false)_
 
@@ -1637,6 +2108,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1645,7 +2118,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool moveFromTo(pathSrc, pathDst, bRelativeToData = true, overwrite = false)
+
+<!--
 
 _syntax: moveFromTo(pathSrc, pathDst, bRelativeToData = true, overwrite = false)_
 
@@ -1675,6 +2157,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1683,7 +2167,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool doesFileExist(fPath, bRelativeToData = true)
+
+<!--
 
 _syntax: doesFileExist(fPath, bRelativeToData = true)_
 
@@ -1713,6 +2206,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1721,7 +2216,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool removeFile(path, bRelativeToData = true)
+
+<!--
 
 _syntax: removeFile(path, bRelativeToData = true)_
 
@@ -1751,6 +2255,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1759,7 +2265,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool isWriteMode()
+
+<!--
 
 _syntax: isWriteMode()_
 
@@ -1789,6 +2304,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1797,7 +2314,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool openStream(_mode, binary)
+
+<!--
 
 _syntax: openStream(_mode, binary)_
 
@@ -1827,6 +2353,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1835,7 +2363,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void copyFrom(&mom)
+
+<!--
 
 _syntax: copyFrom(&mom)_
 
@@ -1865,7 +2402,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1877,11 +2423,13 @@ _description: _
 
 
 
-###Poco::File myFile
+###Poco myFile
+
+<!--
 
 _name: myFile_
 
-_type: Poco::File_
+_type: Poco_
 
 _access: private_
 
@@ -1899,6 +2447,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1907,7 +2457,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###Mode mode
+
+<!--
 
 _name: mode_
 
@@ -1929,7 +2488,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

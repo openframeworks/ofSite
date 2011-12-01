@@ -5,6 +5,9 @@
 
 
 
+
+
+
 ofPixels is an object for working with blocks of pixels, those pixels can be copied from an image that you've loaded, something that you've drawn using ofGraphics, or a ofVideoGrabber instance. You can create an image from pixels, using on ofPixels object like so:
 
 $$code(lang=c++)
@@ -35,15 +38,21 @@ $$/code
 
 
 
+
+
+
+
 ##Methods
 
 
 
 ### ofPixels_()
 
+<!--
+
 _syntax: ofPixels_()_
 
-_name: ofPixels__
+_name: ofPixels_
 
 _returns: _
 
@@ -61,7 +70,7 @@ _summary: _
 
 _constant: False_
 
-_static: no_
+_static: False_
 
 _visible: True_
 
@@ -69,7 +78,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -79,9 +97,11 @@ _description: _
 
 ### ~ofPixels_()
 
+<!--
+
 _syntax: ~ofPixels_()_
 
-_name: ~ofPixels__
+_name: ~ofPixels_
 
 _returns: _
 
@@ -99,13 +119,15 @@ _summary: _
 
 _constant: False_
 
-_static: no_
+_static: False_
 
 _visible: True_
 
 _advanced: False_
 
 
+
+-->
 
 _description: _
 
@@ -115,11 +137,20 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ofPixels_(&mom)
+
+<!--
 
 _syntax: ofPixels_(&mom)_
 
-_name: ofPixels__
+_name: ofPixels_
 
 _returns: _
 
@@ -137,13 +168,15 @@ _summary: _
 
 _constant: False_
 
-_static: no_
+_static: False_
 
 _visible: True_
 
 _advanced: False_
 
 
+
+-->
 
 _description: _
 
@@ -153,7 +186,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofPixels_ operator=(&mom)
+
+<!--
 
 _syntax: operator=(&mom)_
 
@@ -183,7 +225,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -193,9 +244,11 @@ _description: _
 
 ### ofPixels_(&mom)
 
+<!--
+
 _syntax: ofPixels_(&mom)_
 
-_name: ofPixels__
+_name: ofPixels_
 
 _returns: _
 
@@ -213,13 +266,15 @@ _summary: _
 
 _constant: False_
 
-_static: no_
+_static: False_
 
 _visible: True_
 
 _advanced: False_
 
 
+
+-->
 
 _description: _
 
@@ -229,7 +284,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofPixels_ operator=(&mom)
+
+<!--
 
 _syntax: operator=(&mom)_
 
@@ -259,7 +323,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -268,6 +341,8 @@ _description: _
 
 
 ###void allocate(w, h, channels)
+
+<!--
 
 _syntax: allocate(w, h, channels)_
 
@@ -297,6 +372,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -305,7 +382,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void allocate(w, h, type)
+
+<!--
 
 _syntax: allocate(w, h, type)_
 
@@ -335,6 +421,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -343,7 +431,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void allocate(w, h, type)
+
+<!--
 
 _syntax: allocate(w, h, type)_
 
@@ -373,6 +470,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -381,7 +480,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void set(val)
+
+<!--
 
 _syntax: set(val)_
 
@@ -411,6 +519,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -419,7 +529,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void set(channel, val)
+
+<!--
 
 _syntax: set(channel, val)_
 
@@ -449,6 +568,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -457,7 +578,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setFromPixels(*newPixels, w, h, channels)
+
+<!--
 
 _syntax: setFromPixels(*newPixels, w, h, channels)_
 
@@ -487,6 +617,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -495,7 +627,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setFromPixels(*newPixels, w, h, type)
+
+<!--
 
 _syntax: setFromPixels(*newPixels, w, h, type)_
 
@@ -525,6 +666,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -533,7 +676,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setFromExternalPixels(*newPixels, w, h, channels)
+
+<!--
 
 _syntax: setFromExternalPixels(*newPixels, w, h, channels)_
 
@@ -563,6 +715,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -571,7 +725,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setFromAlignedPixels(*newPixels, width, height, channels, stride)
+
+<!--
 
 _syntax: setFromAlignedPixels(*newPixels, width, height, channels, stride)_
 
@@ -601,6 +764,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -609,7 +774,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void crop(x, y, width, height)
+
+<!--
 
 _syntax: crop(x, y, width, height)_
 
@@ -639,7 +813,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 This crops the pixels to a new width and height. As a word of caution this reallocates memory and can be a bit expensive if done a lot.
 
@@ -647,7 +824,15 @@ This crops the pixels to a new width and height. As a word of caution this reall
 
 
 
+
+
+
+
+
+
 ###void cropTo(&toPix, x, y, _width, _height)
+
+<!--
 
 _syntax: cropTo(&toPix, x, y, _width, _height)_
 
@@ -677,7 +862,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 This crops the pixels into the ofPixels reference passed in by toPix. at the x and y and with the new width and height. As a word of caution this reallocates memory and can be a bit expensive if done a lot.
 
@@ -685,7 +873,15 @@ This crops the pixels into the ofPixels reference passed in by toPix. at the x a
 
 
 
+
+
+
+
+
+
 ###void rotate90(nClockwiseRotations)
+
+<!--
 
 _syntax: rotate90(nClockwiseRotations)_
 
@@ -715,7 +911,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 crop to a new width and height, this reallocates memory.
@@ -723,7 +922,15 @@ crop to a new width and height, this reallocates memory.
 
 
 
+
+
+
+
+
+
 ###void mirror(vertically, horizontal)
+
+<!--
 
 _syntax: mirror(vertically, horizontal)_
 
@@ -753,7 +960,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 This reflects the pixels across the vertical and/or horizontal axis.
@@ -761,7 +971,15 @@ This reflects the pixels across the vertical and/or horizontal axis.
 
 
 
+
+
+
+
+
+
 ###bool resize(dstWidth, dstHeight, interpMethod = OF_INTERPOLATE_NEAREST_NEIGHBOR)
+
+<!--
 
 _syntax: resize(dstWidth, dstHeight, interpMethod = OF_INTERPOLATE_NEAREST_NEIGHBOR)_
 
@@ -791,7 +1009,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 This resizes the ofPixels instance to the dstHeight and dstWidth. The options for the interpolation methods are as follows:
@@ -804,7 +1025,15 @@ OF_INTERPOLATE_BICUBIC			=3
 
 
 
+
+
+
+
+
+
 ###bool resizeTo(&dst, interpMethod = OF_INTERPOLATE_NEAREST_NEIGHBOR)
+
+<!--
 
 _syntax: resizeTo(&dst, interpMethod = OF_INTERPOLATE_NEAREST_NEIGHBOR)_
 
@@ -834,7 +1063,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 This resizes the ofPixels instance to the size of the ofPixels object passed in dst. The options for the interpolation methods are as follows:
@@ -844,7 +1076,15 @@ OF_INTERPOLATE_BILINEAR			=2
 OF_INTERPOLATE_BICUBIC			=3
 
 
+
+
+
+
+
+
 ###bool pasteInto(&dst, x, y)
+
+<!--
 
 _syntax: pasteInto(&dst, x, y)_
 
@@ -874,7 +1114,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 This pastes the ofPixels object into another ofPixels object at the specified index, copying data from the ofPixels that the method is being called on to the ofPixels object at &dst. If the data being copied doesn't fit into the dst then the image is cropped.
@@ -895,7 +1138,15 @@ Drawing the three textures here you can see the ball cropped into the mountain:
 
 ![crop_demo](ofPixels_crop.png)
 
+
+
+
+
+
+
 ###void swapRgb()
+
+<!--
 
 _syntax: swapRgb()_
 
@@ -925,7 +1176,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 As implemented right now, this method swaps the R and B channels of an image, leaving the G and A channels as is.
@@ -933,7 +1187,15 @@ As implemented right now, this method swaps the R and B channels of an image, le
 
 
 
+
+
+
+
+
+
 ###void clear()
+
+<!--
 
 _syntax: clear()_
 
@@ -963,7 +1225,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 This clears all the data from the ofPixels objects. After calling this you'll need to allocate the ofPixels object again to use it.
@@ -971,7 +1236,15 @@ This clears all the data from the ofPixels objects. After calling this you'll ne
 
 
 
+
+
+
+
+
+
 ###const PixelType * getPixels()
+
+<!--
 
 _syntax: getPixels()_
 
@@ -1001,7 +1274,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 This returns a raw pointer to the pixel data. Changing this will change the value of the pixels in the ofPixels object. One way to inspect the values returns in this pointer would be:
@@ -1016,7 +1292,15 @@ while(pixPtr) {
 $$/code
 
 
+
+
+
+
+
+
 ###int getPixelIndex(x, y)
+
+<!--
 
 _syntax: getPixelIndex(x, y)_
 
@@ -1046,7 +1330,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 This method tells you want pixel index an x, y pair would be at in the index, for instance:
@@ -1060,7 +1347,15 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###ofColor_ getColor(x, y)
+
+<!--
 
 _syntax: getColor(x, y)_
 
@@ -1090,7 +1385,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 This method returns the ofColor that the pixels contains at an x, y pair:
@@ -1102,7 +1400,15 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###void setColor(x, y, color)
+
+<!--
 
 _syntax: setColor(x, y, color)_
 
@@ -1132,7 +1438,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Sets the color of the pixel at the x,y location.
@@ -1140,7 +1449,15 @@ Sets the color of the pixel at the x,y location.
 
 
 
+
+
+
+
+
+
 ###PixelType & operator[](pos)
+
+<!--
 
 _syntax: operator[](pos)_
 
@@ -1170,7 +1487,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 Provides access to each channel of each pixel. If you have RGB pixel data, then you'll have 3 values for each pixel, if you have RGBA, you'll have 4.
 
@@ -1178,7 +1498,15 @@ Provides access to each channel of each pixel. If you have RGB pixel data, then 
 
 
 
+
+
+
+
+
+
 ###bool isAllocated()
+
+<!--
 
 _syntax: isAllocated()_
 
@@ -1208,7 +1536,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 Returns whether memory has been allocated for an ofPixels object or not. Many operations like copying pixels, etc, automatically allocate the memory needed, but it's sometimes good to check.
 
@@ -1216,7 +1547,15 @@ Returns whether memory has been allocated for an ofPixels object or not. Many op
 
 
 
+
+
+
+
+
+
 ###int getWidth()
+
+<!--
 
 _syntax: getWidth()_
 
@@ -1246,7 +1585,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Returns the width of the pixels.
@@ -1254,7 +1596,15 @@ Returns the width of the pixels.
 
 
 
+
+
+
+
+
+
 ###int getHeight()
+
+<!--
 
 _syntax: getHeight()_
 
@@ -1284,7 +1634,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Returns the height of the pixels.
@@ -1292,7 +1645,15 @@ Returns the height of the pixels.
 
 
 
+
+
+
+
+
+
 ###int getBytesPerPixel()
+
+<!--
 
 _syntax: getBytesPerPixel()_
 
@@ -1322,7 +1683,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Returns the number of the pixels.
@@ -1330,7 +1694,15 @@ Returns the number of the pixels.
 
 
 
+
+
+
+
+
+
 ###int getBitsPerPixel()
+
+<!--
 
 _syntax: getBitsPerPixel()_
 
@@ -1360,7 +1732,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 If you have RGB pixel data, this will return 3, if you have RGBA, you'll have 4, if you have grayscale, this will return 1.
@@ -1368,7 +1743,15 @@ If you have RGB pixel data, this will return 3, if you have RGBA, you'll have 4,
 
 
 
+
+
+
+
+
+
 ###int getBytesPerChannel()
+
+<!--
 
 _syntax: getBytesPerChannel()_
 
@@ -1398,14 +1781,25 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 This is how large each channel of a pixels is, ofPixels objects that store pixel data as unsigned char are smaller than  ofPixels objects that store pixel data as floats.
 
 This returns bytes, not bits, so you'll probably see ofPixels<float> as 4 and ofPixels<unsigned char> as 1.
 
 
+
+
+
+
+
+
 ###int getBitsPerChannel()
+
+<!--
 
 _syntax: getBitsPerChannel()_
 
@@ -1435,7 +1829,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 This is how large each channel of a pixels is, ofPixels objects that store pixel data as unsigned char are smaller than  ofPixels objects that store pixel data as floats.
@@ -1445,7 +1842,15 @@ This returns bit, not bytes, so you'll probably see ofPixels<float> as 32 and of
 
 
 
+
+
+
+
+
+
 ###int getNumChannels()
+
+<!--
 
 _syntax: getNumChannels()_
 
@@ -1475,7 +1880,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 This returns the number of channels that the ofPixels object contains. RGB is 3 channels, RGBA is 4, and grayscale is 1.
 
@@ -1483,7 +1891,15 @@ This returns the number of channels that the ofPixels object contains. RGB is 3 
 
 
 
+
+
+
+
+
+
 ###ofPixels_ getChannel(channel)
+
+<!--
 
 _syntax: getChannel(channel)_
 
@@ -1513,7 +1929,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 This returns a single channel, for instance, the Red pixel values, from the ofPixels object, this gives you a grayscale representation of that one channel.
@@ -1524,7 +1943,15 @@ $$code(lang=c++)
 	ofPixels bpix = pix.getChannel(2);
 $$/code
 
+
+
+
+
+
+
 ###void setChannel(channel, channelPixels)
+
+<!--
 
 _syntax: setChannel(channel, channelPixels)_
 
@@ -1554,7 +1981,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 This sets all the pixel data for a single channel, for instance, the Red pixel values, from an ofPixels object assumed to be a grayscale representation of the data that should go into that one channel.
@@ -1562,7 +1992,15 @@ This sets all the pixel data for a single channel, for instance, the Red pixel v
 
 
 
+
+
+
+
+
+
 ###ofImageType getImageType()
+
+<!--
 
 _syntax: getImageType()_
 
@@ -1592,7 +2030,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Returns what image type the ofPixels object is.
@@ -1600,7 +2041,15 @@ Returns what image type the ofPixels object is.
 
 
 
+
+
+
+
+
+
 ###int size()
+
+<!--
 
 _syntax: size()_
 
@@ -1630,7 +2079,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 This gives you the number of values that the ofPixels object contains, so an RGB data 400x400 would be 480,000, whereas RGBA data of the same dimensions would be 640,000.
 
@@ -1638,7 +2090,15 @@ This gives you the number of values that the ofPixels object contains, so an RGB
 
 
 
+
+
+
+
+
+
 ###float bicubicInterpolate(*patch, x, y, x2, y2, x3, y3)
+
+<!--
 
 _syntax: bicubicInterpolate(*patch, x, y, x2, y2, x3, y3)_
 
@@ -1668,6 +2128,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1676,7 +2138,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void copyFrom(&mom)
+
+<!--
 
 _syntax: copyFrom(&mom)_
 
@@ -1706,6 +2177,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1714,7 +2187,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void copyFrom(&mom)
+
+<!--
 
 _syntax: copyFrom(&mom)_
 
@@ -1744,6 +2226,183 @@ _advanced: False_
 
 
 
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### ofPixels_()
+
+<!--
+
+_syntax: ofPixels_()_
+
+_name: ofPixels__
+
+_returns: _
+
+_returns_description: _
+
+_parameters: _
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+-->
+
+_description: _
+
+
+
+
+
+
+
+### ~ofPixels_()
+
+<!--
+
+_syntax: ~ofPixels_()_
+
+_name: ~ofPixels__
+
+_returns: _
+
+_returns_description: _
+
+_parameters: _
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+-->
+
+_description: _
+
+
+
+
+
+
+
+### ofPixels_(&mom)
+
+<!--
+
+_syntax: ofPixels_(&mom)_
+
+_name: ofPixels__
+
+_returns: _
+
+_returns_description: _
+
+_parameters: const ofPixels_< PixelType > &mom_
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+-->
+
+_description: _
+
+
+
+
+
+
+
+### ofPixels_(&mom)
+
+<!--
+
+_syntax: ofPixels_(&mom)_
+
+_name: ofPixels__
+
+_returns: _
+
+_returns_description: _
+
+_parameters: const ofPixels_< SrcType > &mom_
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+-->
+
 _description: _
 
 
@@ -1757,6 +2416,8 @@ _description: _
 
 
 ###PixelType * pixels
+
+<!--
 
 _name: pixels_
 
@@ -1778,6 +2439,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1786,7 +2449,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int width
+
+<!--
 
 _name: width_
 
@@ -1808,6 +2480,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1816,7 +2490,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int height
+
+<!--
 
 _name: height_
 
@@ -1838,6 +2521,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1846,7 +2531,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int channels
+
+<!--
 
 _name: channels_
 
@@ -1868,6 +2562,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1876,7 +2572,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool bAllocated
+
+<!--
 
 _name: bAllocated_
 
@@ -1898,6 +2603,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1906,7 +2613,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool pixelsOwner
+
+<!--
 
 _name: pixelsOwner_
 
@@ -1928,7 +2644,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

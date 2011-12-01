@@ -7,9 +7,16 @@
 
 
 
+
+
+
 The openframeworks engine is contained in the "app" category. The project works, similar to processing, in that you have a base class which extends a class that already exists. In the case of OF, there is a class called "ofBaseApp" which contains various event driven functions. When you create an OF project, you use a main.cpp which is the boot-strap, that kicks off the application and another class, which inherits the properties of ofBaseApp. Essentially, when you write code in the testApp, you are re-writing already defined functions that exist in OF, such as update, draw, etc. 
 
 In versions pre 0.06 this class was called ofSimpleApp
+
+
+
+
 
 
 
@@ -20,6 +27,8 @@ In versions pre 0.06 this class was called ofSimpleApp
 
 
 ### ofBaseApp()
+
+<!--
 
 _syntax: ofBaseApp()_
 
@@ -49,7 +58,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 The openframeworks engine is contained in the "app" category. The project works, similar to processing, in that you have a base class which extends a class that already exists. In the case of OF, there is a class called "ofBaseApp" which contains various event driven functions. When you create an OF project, you use a main.cpp which is the boot-strap, that kicks off the application and another class, which inherits the properties of ofSimpleApp. Essentially, when you write code in the testApp, you are re-writing already defined functions that exist in OF, such as update, draw, etc. 
@@ -74,7 +86,15 @@ The openframeworks engine is contained in the "app" category. The project works,
 
 
 
+
+
+
+
+
+
 ### ~ofBaseApp()
+
+<!--
 
 _syntax: ~ofBaseApp()_
 
@@ -104,6 +124,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -129,7 +151,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setup()
+
+<!--
 
 _syntax: setup()_
 
@@ -159,7 +190,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 This function gets called once, just at the start of the app. It would be a good place, for example, to allocate variables or load in any files. 
@@ -184,7 +218,15 @@ This function gets called once, just at the start of the app. It would be a good
 
 
 
+
+
+
+
+
+
 ###void update()
+
+<!--
 
 _syntax: update()_
 
@@ -214,7 +256,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 This function gets called repeatedly. It gets just before draw, so it is an ideal place to do any updating of variables. For example, imagine you have a varibale already defined in your testApp.h called "xpos"
@@ -258,7 +303,15 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###void draw()
+
+<!--
 
 _syntax: draw()_
 
@@ -288,7 +341,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 This function gets called regularly just after update. It's where you draw things:
@@ -325,7 +381,15 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###void exit()
+
+<!--
 
 _syntax: exit()_
 
@@ -355,7 +419,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Add this function to your testApp to have it called at the moment before the app is terminated. This is useful for doing cleanup stuff or making sure files are saved before the app terminates. 
@@ -380,7 +447,15 @@ Add this function to your testApp to have it called at the moment before the app
 
 
 
+
+
+
+
+
+
 ###void windowResized(w, h)
+
+<!--
 
 _syntax: windowResized(w, h)_
 
@@ -410,7 +485,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 This function gets called when ever we resize the application window. You receive the new width (w) and the new height (h) of the window.
@@ -437,7 +515,15 @@ This function gets called when ever we resize the application window. You receiv
 
 
 
+
+
+
+
+
+
 ###void keyPressed(key)
+
+<!--
 
 _syntax: keyPressed(key)_
 
@@ -467,7 +553,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 This function gets called when a key is pressed. The value key can be tested against:
@@ -510,7 +599,15 @@ There are more complicated character codes, for keys such as F1-F12, Down, Enter
 
 
 
+
+
+
+
+
+
 ###void keyReleased(key)
+
+<!--
 
 _syntax: keyReleased(key)_
 
@@ -540,7 +637,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 This function gets called when a key is released. The value key can be tested against:
@@ -580,7 +680,15 @@ There are more complicated character codes, for keys such as F1-F12, Down, Enter
 
 
 
+
+
+
+
+
+
 ###void mouseMoved(x, y)
+
+<!--
 
 _syntax: mouseMoved(x, y)_
 
@@ -610,7 +718,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 This function gets when ever the mouse moves. You receive the x and y corrdinates of the mouse. 
@@ -635,7 +746,15 @@ This function gets when ever the mouse moves. You receive the x and y corrdinate
 
 
 
+
+
+
+
+
+
 ###void mouseDragged(x, y, button)
+
+<!--
 
 _syntax: mouseDragged(x, y, button)_
 
@@ -665,7 +784,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 This function gets called when the mouse is moving and the button is down. The button variable can be used to test against left or right button drags. You also receive the x and y corrdinates of the mouse.
@@ -690,7 +812,15 @@ This function gets called when the mouse is moving and the button is down. The b
 
 
 
+
+
+
+
+
+
 ###void mousePressed(x, y, button)
+
+<!--
 
 _syntax: mousePressed(x, y, button)_
 
@@ -720,7 +850,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 This function gets called when the mouse is pushed down. The button (left, right, center) is passed in, along with the x and y corrdinate. 
@@ -745,7 +878,15 @@ This function gets called when the mouse is pushed down. The button (left, right
 
 
 
+
+
+
+
+
+
 ###void mouseReleased()
+
+<!--
 
 _syntax: mouseReleased()_
 
@@ -775,7 +916,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 This function gets called when the mouse is released.
@@ -800,7 +944,15 @@ This function gets called when the mouse is released.
 
 
 
+
+
+
+
+
+
 ###void mouseReleased(x, y, button)
+
+<!--
 
 _syntax: mouseReleased(x, y, button)_
 
@@ -830,7 +982,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 This function gets called when the mouse is released. The button (left, right, center) is passed in, along with the x and y corrdinate. 
@@ -855,7 +1010,15 @@ This function gets called when the mouse is released. The button (left, right, c
 
 
 
+
+
+
+
+
+
 ###void audioReceived(input, bufferSize, nChannels)
+
+<!--
 
 _syntax: audioReceived(input, bufferSize, nChannels)_
 
@@ -885,7 +1048,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 If you have setup audio input, via ofSetupAudio, this function will be called when you have one buffers worth of audio. Since you may have requested mutli-channel audio (for example, stereo input), you get not only an array of floating point info, also the size of the buffer, and the number of channels. The size of input (the float array with audio data) is: bufferSize * nChannels; The data will come interleaved, so if, for example, you request 2 channel (left / right) input, the samples come:
@@ -926,7 +1092,15 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###void audioRequested(output, bufferSize, nChannels)
+
+<!--
 
 _syntax: audioRequested(output, bufferSize, nChannels)_
 
@@ -956,7 +1130,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 If you have setup audio output, via ofSetupAudio, this function will be called when the system needs one buffers worth of audio. Since you may have requested mutli-channel audio (for example, stereo output), you get not only an array of floating point info, also the size of the buffer, and the number of channels. 
@@ -981,7 +1158,15 @@ If you have setup audio output, via ofSetupAudio, this function will be called w
 
 
 
+
+
+
+
+
+
 ###void dragEvent(dragInfo)
+
+<!--
 
 _syntax: dragEvent(dragInfo)_
 
@@ -1011,6 +1196,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1019,7 +1206,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void gotMessage(msg)
+
+<!--
 
 _syntax: gotMessage(msg)_
 
@@ -1049,7 +1245,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1062,6 +1267,8 @@ _description: _
 
 
 ###int mouseX
+
+<!--
 
 _name: mouseX_
 
@@ -1083,7 +1290,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Variable mouseX contains information about the current x coordinate of the mouse.
@@ -1106,7 +1316,15 @@ Variable mouseX contains information about the current x coordinate of the mouse
 
 
 
+
+
+
+
+
+
 ###int mouseY
+
+<!--
 
 _name: mouseY_
 
@@ -1128,10 +1346,19 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
+
 Variable mouseY contains information about the current y coordinate of the mouse.
+
+
+
+
+
+
 
 
 

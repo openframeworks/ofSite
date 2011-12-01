@@ -7,11 +7,20 @@
 
 
 
+
+
+
+
+
+
+
 ##Methods
 
 
 
 ### ofiPhoneVideoPlayer()
+
+<!--
 
 _syntax: ofiPhoneVideoPlayer()_
 
@@ -41,6 +50,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -49,7 +60,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ~ofiPhoneVideoPlayer()
+
+<!--
 
 _syntax: ~ofiPhoneVideoPlayer()_
 
@@ -79,6 +99,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -87,7 +109,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool loadMovie(name)
+
+<!--
 
 _syntax: loadMovie(name)_
 
@@ -117,6 +148,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -125,7 +158,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setPixelFormat(PixelFormat)
+
+<!--
 
 _syntax: setPixelFormat(PixelFormat)_
 
@@ -155,6 +197,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -163,7 +207,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void close()
+
+<!--
 
 _syntax: close()_
 
@@ -193,6 +246,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -201,7 +256,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void play()
+
+<!--
 
 _syntax: play()_
 
@@ -231,6 +295,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -239,7 +305,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void stop()
+
+<!--
 
 _syntax: stop()_
 
@@ -269,6 +344,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -277,7 +354,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool isFrameNew()
+
+<!--
 
 _syntax: isFrameNew()_
 
@@ -307,6 +393,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -315,7 +403,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###unsigned char * getPixels()
+
+<!--
 
 _syntax: getPixels()_
 
@@ -345,6 +442,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -353,7 +452,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofPixelsRef getPixelsRef()
+
+<!--
 
 _syntax: getPixelsRef()_
 
@@ -383,6 +491,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -391,7 +501,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofTexture getTexture()
+
+<!--
 
 _syntax: getTexture()_
 
@@ -421,6 +540,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -429,7 +550,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float getWidth()
+
+<!--
 
 _syntax: getWidth()_
 
@@ -459,6 +589,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -467,7 +599,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float getHeight()
+
+<!--
 
 _syntax: getHeight()_
 
@@ -497,6 +638,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -505,7 +648,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool isPaused()
+
+<!--
 
 _syntax: isPaused()_
 
@@ -535,6 +687,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -543,7 +697,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool isLoaded()
+
+<!--
 
 _syntax: isLoaded()_
 
@@ -573,6 +736,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -581,7 +746,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool isPlaying()
+
+<!--
 
 _syntax: isPlaying()_
 
@@ -611,6 +785,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -619,7 +795,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void update()
+
+<!--
 
 _syntax: update()_
 
@@ -649,6 +834,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -657,7 +844,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float getPosition()
+
+<!--
 
 _syntax: getPosition()_
 
@@ -687,6 +883,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -695,7 +893,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float getDuration()
+
+<!--
 
 _syntax: getDuration()_
 
@@ -725,6 +932,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -733,7 +942,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool getIsMovieDone()
+
+<!--
 
 _syntax: getIsMovieDone()_
 
@@ -763,6 +981,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -771,7 +991,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setPaused(bPause)
+
+<!--
 
 _syntax: setPaused(bPause)_
 
@@ -801,6 +1030,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -809,7 +1040,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setVolume(volume)
+
+<!--
 
 _syntax: setVolume(volume)_
 
@@ -839,6 +1079,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -847,7 +1089,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void initWithPath(path)
+
+<!--
 
 _syntax: initWithPath(path)_
 
@@ -877,6 +1128,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -885,7 +1138,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void updateCurrentFrameRef()
+
+<!--
 
 _syntax: updateCurrentFrameRef()_
 
@@ -915,7 +1177,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -928,6 +1199,8 @@ _description: _
 
 
 ###void * videoPlayer
+
+<!--
 
 _name: videoPlayer_
 
@@ -949,6 +1222,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -957,7 +1232,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###string videoPath
+
+<!--
 
 _name: videoPath_
 
@@ -979,6 +1263,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -987,7 +1273,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool videoWasStopped
+
+<!--
 
 _name: videoWasStopped_
 
@@ -1009,6 +1304,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1017,7 +1314,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int width
+
+<!--
 
 _name: width_
 
@@ -1039,6 +1345,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1047,7 +1355,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int height
+
+<!--
 
 _name: height_
 
@@ -1069,6 +1386,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1077,7 +1396,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float playbackSpeed
+
+<!--
 
 _name: playbackSpeed_
 
@@ -1099,6 +1427,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1107,7 +1437,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int vol
+
+<!--
 
 _name: vol_
 
@@ -1129,6 +1468,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1137,7 +1478,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###GLubyte * pixels
+
+<!--
 
 _name: pixels_
 
@@ -1159,6 +1509,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1167,7 +1519,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofTexture videoTexture
+
+<!--
 
 _name: videoTexture_
 
@@ -1189,6 +1550,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1197,7 +1560,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float lastUpdateTime
+
+<!--
 
 _name: lastUpdateTime_
 
@@ -1219,6 +1591,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1227,7 +1601,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###GLint internalGLFormat
+
+<!--
 
 _name: internalGLFormat_
 
@@ -1249,6 +1632,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1257,7 +1642,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###GLubyte * pixelsTmp
+
+<!--
 
 _name: pixelsTmp_
 
@@ -1279,7 +1673,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

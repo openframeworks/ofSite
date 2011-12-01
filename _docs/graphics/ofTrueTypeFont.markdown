@@ -10,7 +10,14 @@
 
 
 
+
+
+
 The ofTrueTypeFont class provides an interface to load fonts into openframeworks. The fonts are converted to textures, and can be drawn on screen. There are some options when you load the font - what size the font is rendered at, wether or not it is anti-aliased, and wether the font object will be the full character set or a subset (ie, extended ascii, which can include accents, umlauts, or normal ascii). The default is anti-aliased, non-full character set. The library uses freetype, which has certain patent problems in regards to true type hinting, especially at small sizes, so non-anti-aliased type doesn't always render beautifully. But we find it quite adequate, and at larger sizes it seems to works well.
+
+
+
+
 
 
 
@@ -26,6 +33,8 @@ The ofTrueTypeFont class provides an interface to load fonts into openframeworks
 
 
 ### ofTrueTypeFont()
+
+<!--
 
 _syntax: ofTrueTypeFont()_
 
@@ -55,7 +64,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -89,6 +107,8 @@ _description: _
 
 ###void drawChar(c, x, y)
 
+<!--
+
 _syntax: drawChar(c, x, y)_
 
 _name: drawChar_
@@ -117,7 +137,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -151,6 +180,8 @@ _description: _
 
 ### ~ofTrueTypeFont()
 
+<!--
+
 _syntax: ~ofTrueTypeFont()_
 
 _name: ~ofTrueTypeFont_
@@ -179,7 +210,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -213,6 +253,8 @@ _description: _
 
 ###void drawCharAsShape(c, x, y)
 
+<!--
+
 _syntax: drawCharAsShape(c, x, y)_
 
 _name: drawCharAsShape_
@@ -241,7 +283,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -275,6 +326,8 @@ _description: _
 
 ###void loadFont(filename, fontsize)
 
+<!--
+
 _syntax: loadFont(filename, fontsize)_
 
 _name: loadFont_
@@ -303,7 +356,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -348,7 +404,15 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###int ofNextPow2(a)
+
+<!--
 
 _syntax: ofNextPow2(a)_
 
@@ -378,7 +442,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -412,6 +485,8 @@ _description: _
 
 ###void loadFont(filename, fontsize, _bAntiAliased, _bFullCharacterSet, makeContours)
 
+<!--
+
 _syntax: loadFont(filename, fontsize, _bAntiAliased, _bFullCharacterSet, makeContours)_
 
 _name: loadFont_
@@ -440,7 +515,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -472,7 +550,15 @@ This loads a font, but in addition to setting the font name and size, you can al
 
 
 
+
+
+
+
+
+
 ###float getLineHeight()
+
+<!--
 
 _syntax: getLineHeight()_
 
@@ -502,7 +588,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -534,7 +623,15 @@ The line height is computed, based on the font size, and can be adjusted. Useful
 
 
 
+
+
+
+
+
+
 ###void setLineHeight(height)
+
+<!--
 
 _syntax: setLineHeight(height)_
 
@@ -564,7 +661,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -596,7 +696,15 @@ Sets the line height for text that is drawn on screen.
 
 
 
+
+
+
+
+
+
 ###float stringWidth(s)
+
+<!--
 
 _syntax: stringWidth(s)_
 
@@ -626,7 +734,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -658,7 +769,15 @@ _description: _
 
 
 
+
+
+
+
+
+
 ###float stringHeight(s)
+
+<!--
 
 _syntax: stringHeight(s)_
 
@@ -688,7 +807,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -722,6 +850,8 @@ _description: _
 
 ###ofRectangle getStringBoundingBox(s, x, y)
 
+<!--
+
 _syntax: getStringBoundingBox(s, x, y)_
 
 _name: getStringBoundingBox_
@@ -750,7 +880,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -801,7 +934,15 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###void drawString(s, x, y)
+
+<!--
 
 _syntax: drawString(s, x, y)_
 
@@ -831,7 +972,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -896,7 +1040,15 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###void drawStringAsShapes(s, x, y)
+
+<!--
 
 _syntax: drawStringAsShapes(s, x, y)_
 
@@ -926,7 +1078,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -958,7 +1113,15 @@ drawStringAsShapes function draws the s string as if it was a geometrical shapes
 
 
 
+
+
+
+
+
+
 ###ofTTFCharacter getCharacterAsPoints(character)
+
+<!--
 
 _syntax: getCharacterAsPoints(character)_
 
@@ -988,7 +1151,16 @@ _advanced: True_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1022,6 +1194,8 @@ _description: _
 
 ###bool loadFont(filename, fontsize, _bAntiAliased = true, _bFullCharacterSet = false, makeContours = false, simplifyAmt = 0.3, dpi = 0)
 
+<!--
+
 _syntax: loadFont(filename, fontsize, _bAntiAliased = true, _bFullCharacterSet = false, makeContours = false, simplifyAmt = 0.3, dpi = 0)_
 
 _name: loadFont_
@@ -1050,6 +1224,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1058,7 +1234,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool isLoaded()
+
+<!--
 
 _syntax: isLoaded()_
 
@@ -1088,6 +1273,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1096,7 +1283,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool isAntiAliased()
+
+<!--
 
 _syntax: isAntiAliased()_
 
@@ -1126,6 +1322,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1134,7 +1332,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool hasFullCharacterSet()
+
+<!--
 
 _syntax: hasFullCharacterSet()_
 
@@ -1164,6 +1371,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1172,7 +1381,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int getSize()
+
+<!--
 
 _syntax: getSize()_
 
@@ -1202,6 +1420,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1210,7 +1430,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float getLetterSpacing()
+
+<!--
 
 _syntax: getLetterSpacing()_
 
@@ -1240,6 +1469,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1248,7 +1479,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setLetterSpacing(spacing)
+
+<!--
 
 _syntax: setLetterSpacing(spacing)_
 
@@ -1278,6 +1518,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1286,7 +1528,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float getSpaceSize()
+
+<!--
 
 _syntax: getSpaceSize()_
 
@@ -1316,6 +1567,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1324,7 +1577,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setSpaceSize(size)
+
+<!--
 
 _syntax: setSpaceSize(size)_
 
@@ -1354,6 +1616,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1362,7 +1626,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int getNumCharacters()
+
+<!--
 
 _syntax: getNumCharacters()_
 
@@ -1392,6 +1665,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1400,7 +1675,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofTTFCharacter getStringAsPoints(str)
+
+<!--
 
 _syntax: getStringAsPoints(str)_
 
@@ -1430,6 +1714,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1438,7 +1724,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void bind()
+
+<!--
 
 _syntax: bind()_
 
@@ -1468,6 +1763,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1476,7 +1773,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void unbind()
+
+<!--
 
 _syntax: unbind()_
 
@@ -1506,6 +1812,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1514,7 +1822,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setGlobalDpi(newDpi)
+
+<!--
 
 _syntax: setGlobalDpi(newDpi)_
 
@@ -1544,6 +1861,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1552,7 +1871,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void unloadTextures()
+
+<!--
 
 _syntax: unloadTextures()_
 
@@ -1582,6 +1910,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1590,7 +1920,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void reloadTextures()
+
+<!--
 
 _syntax: reloadTextures()_
 
@@ -1620,7 +1959,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1633,6 +1981,8 @@ _description: _
 
 
 ###bool bLoadedOk
+
+<!--
 
 _name: bLoadedOk_
 
@@ -1654,7 +2004,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -1684,7 +2037,15 @@ bLoadedOk is a boolean variable containing true if the font was successfully loa
 
 
 
+
+
+
+
+
+
 ###vector< ofTTFCharacter > charOutlines
+
+<!--
 
 _name: charOutlines_
 
@@ -1706,7 +2067,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1738,6 +2108,8 @@ _description: _
 
 ###bool bAntiAlised
 
+<!--
+
 _name: bAntiAlised_
 
 _type: bool_
@@ -1758,7 +2130,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -1788,7 +2163,15 @@ A variable which tells you if the font is antiAliased.
 
 
 
+
+
+
+
+
+
 ###float lineHeight
+
+<!--
 
 _name: lineHeight_
 
@@ -1810,7 +2193,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1842,6 +2234,8 @@ _description: _
 
 ###bool bFullCharacterSet
 
+<!--
+
 _name: bFullCharacterSet_
 
 _type: bool_
@@ -1862,7 +2256,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -1892,7 +2289,15 @@ A variable which tells you if the font contains the full character set, or a sub
 
 
 
+
+
+
+
+
+
 ###charProps * cps
+
+<!--
 
 _name: cps_
 
@@ -1914,7 +2319,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1946,6 +2360,8 @@ _description: _
 
 ###int nCharacters
 
+<!--
+
 _name: nCharacters_
 
 _type: int_
@@ -1966,7 +2382,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -1996,7 +2415,15 @@ nCharacters contains the number of characters that our font has.
 
 
 
+
+
+
+
+
+
 ###GLuint * texNames
+
+<!--
 
 _name: texNames_
 
@@ -2018,7 +2445,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2050,6 +2486,8 @@ _description: _
 
 ###int fontSize
 
+<!--
+
 _name: fontSize_
 
 _type: int_
@@ -2070,7 +2508,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2102,6 +2549,8 @@ _description: _
 
 ###bool bMakeContours
 
+<!--
+
 _name: bMakeContours_
 
 _type: bool_
@@ -2122,7 +2571,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2154,6 +2612,8 @@ _description: _
 
 ###int border
 
+<!--
+
 _name: border_
 
 _type: int_
@@ -2174,7 +2634,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2206,6 +2675,8 @@ _description: _
 
 ###int visibleBorder
 
+<!--
+
 _name: visibleBorder_
 
 _type: int_
@@ -2226,7 +2697,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2258,6 +2738,8 @@ _description: _
 
 ###bool bAntiAliased
 
+<!--
+
 _name: bAntiAliased_
 
 _type: bool_
@@ -2278,6 +2760,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2286,7 +2770,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float letterSpacing
+
+<!--
 
 _name: letterSpacing_
 
@@ -2308,6 +2801,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2316,7 +2811,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float spaceSize
+
+<!--
 
 _name: spaceSize_
 
@@ -2338,6 +2842,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2346,7 +2852,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###string filename
+
+<!--
 
 _name: filename_
 
@@ -2368,6 +2883,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2376,7 +2893,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofTexture texAtlas
+
+<!--
 
 _name: texAtlas_
 
@@ -2398,6 +2924,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2406,7 +2934,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool binded
+
+<!--
 
 _name: binded_
 
@@ -2428,6 +2965,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2436,7 +2975,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofMesh stringQuads
+
+<!--
 
 _name: stringQuads_
 
@@ -2458,7 +3006,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

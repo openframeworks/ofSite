@@ -7,11 +7,20 @@
 
 
 
+
+
+
+
+
+
+
 ##Methods
 
 
 
 ### ~ofAbstractImage()
+
+<!--
 
 _syntax: ~ofAbstractImage()_
 
@@ -41,7 +50,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

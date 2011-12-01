@@ -7,11 +7,20 @@
 
 
 
+
+
+
+
+
+
+
 ##Methods
 
 
 
 ###void crop(&pix, x, y, width, height)
+
+<!--
 
 _syntax: crop(&pix, x, y, width, height)_
 
@@ -41,6 +50,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -49,7 +60,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void cropFromTo(&frompix, &topix, x, y, width, height)
+
+<!--
 
 _syntax: cropFromTo(&frompix, &topix, x, y, width, height)_
 
@@ -79,6 +99,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -87,7 +109,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void rotate90(&pix, nClockwiseRotations)
+
+<!--
 
 _syntax: rotate90(&pix, nClockwiseRotations)_
 
@@ -117,6 +148,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -125,7 +158,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void mirror(&pix, vertically, horizontal)
+
+<!--
 
 _syntax: mirror(&pix, vertically, horizontal)_
 
@@ -155,6 +197,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -163,7 +207,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool resize(&pix, dstWidth, dstHeight, interpMethod = OF_INTERPOLATE_NEAREST_NEIGHBOR)
+
+<!--
 
 _syntax: resize(&pix, dstWidth, dstHeight, interpMethod = OF_INTERPOLATE_NEAREST_NEIGHBOR)_
 
@@ -193,6 +246,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -201,7 +256,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool resize(&pix, &dst, interpMethod = OF_INTERPOLATE_NEAREST_NEIGHBOR)
+
+<!--
 
 _syntax: resize(&pix, &dst, interpMethod = OF_INTERPOLATE_NEAREST_NEIGHBOR)_
 
@@ -231,6 +295,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -239,7 +305,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float bicubicInterpolate(*patch, x, y, x2, y2, x3, y3)
+
+<!--
 
 _syntax: bicubicInterpolate(*patch, x, y, x2, y2, x3, y3)_
 
@@ -269,7 +344,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

@@ -7,11 +7,20 @@
 
 
 
+
+
+
+
+
+
+
 ##Methods
 
 
 
 ### ofGstVideoUtils()
+
+<!--
 
 _syntax: ofGstVideoUtils()_
 
@@ -41,6 +50,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -49,7 +60,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ~ofGstVideoUtils()
+
+<!--
 
 _syntax: ~ofGstVideoUtils()_
 
@@ -79,6 +99,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -87,7 +109,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool setPipeline(pipeline, bpp = 24, isStream = false, w = -1, h = -1)
+
+<!--
 
 _syntax: setPipeline(pipeline, bpp = 24, isStream = false, w = -1, h = -1)_
 
@@ -117,6 +148,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -125,7 +158,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool allocate(w, h, bpp)
+
+<!--
 
 _syntax: allocate(w, h, bpp)_
 
@@ -155,6 +197,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -163,7 +207,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool isFrameNew()
+
+<!--
 
 _syntax: isFrameNew()_
 
@@ -193,6 +246,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -201,7 +256,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###unsigned char * getPixels()
+
+<!--
 
 _syntax: getPixels()_
 
@@ -231,6 +295,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -239,7 +305,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofPixelsRef getPixelsRef()
+
+<!--
 
 _syntax: getPixelsRef()_
 
@@ -269,6 +344,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -277,7 +354,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void update()
+
+<!--
 
 _syntax: update()_
 
@@ -307,6 +393,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -315,7 +403,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float getHeight()
+
+<!--
 
 _syntax: getHeight()_
 
@@ -345,6 +442,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -353,7 +452,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float getWidth()
+
+<!--
 
 _syntax: getWidth()_
 
@@ -383,6 +491,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -391,7 +501,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void close()
+
+<!--
 
 _syntax: close()_
 
@@ -421,6 +540,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -429,7 +550,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###GstFlowReturn preroll_cb(*buffer)
+
+<!--
 
 _syntax: preroll_cb(*buffer)_
 
@@ -459,6 +589,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -467,7 +599,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###GstFlowReturn buffer_cb(*buffer)
+
+<!--
 
 _syntax: buffer_cb(*buffer)_
 
@@ -497,6 +638,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -505,7 +648,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void eos_cb()
+
+<!--
 
 _syntax: eos_cb()_
 
@@ -535,7 +687,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -548,6 +709,8 @@ _description: _
 
 
 ###ofPixels prerollEvent
+
+<!--
 
 _name: prerollEvent_
 
@@ -569,6 +732,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -577,7 +742,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofPixels bufferEvent
+
+<!--
 
 _name: bufferEvent_
 
@@ -599,6 +773,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -607,7 +783,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofEvent< ofEventArgs > eosEvent
+
+<!--
 
 _name: eosEvent_
 
@@ -629,6 +814,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -637,7 +824,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofPixels pixels
+
+<!--
 
 _name: pixels_
 
@@ -659,6 +855,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -667,7 +865,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofPixels backPixels
+
+<!--
 
 _name: backPixels_
 
@@ -689,6 +896,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -697,7 +906,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool bIsFrameNew
+
+<!--
 
 _name: bIsFrameNew_
 
@@ -719,6 +937,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -727,7 +947,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool bHavePixelsChanged
+
+<!--
 
 _name: bHavePixelsChanged_
 
@@ -749,6 +978,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -757,7 +988,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool bBackPixelsChanged
+
+<!--
 
 _name: bBackPixelsChanged_
 
@@ -779,6 +1019,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -787,7 +1029,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofMutex mutex
+
+<!--
 
 _name: mutex_
 
@@ -809,7 +1060,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

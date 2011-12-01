@@ -7,11 +7,20 @@
 
 
 
+
+
+
+
+
+
+
 ##Methods
 
 
 
 ### ofMaterial()
+
+<!--
 
 _syntax: ofMaterial()_
 
@@ -41,6 +50,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -49,7 +60,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setColors(oDiffuse, oAmbient, oSpecular, emissive)
+
+<!--
 
 _syntax: setColors(oDiffuse, oAmbient, oSpecular, emissive)_
 
@@ -79,6 +99,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -87,7 +109,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setDiffuseColor(oDiffuse)
+
+<!--
 
 _syntax: setDiffuseColor(oDiffuse)_
 
@@ -117,6 +148,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -125,7 +158,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setAmbientColor(oAmbient)
+
+<!--
 
 _syntax: setAmbientColor(oAmbient)_
 
@@ -155,6 +197,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -163,7 +207,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setSpecularColor(oSpecular)
+
+<!--
 
 _syntax: setSpecularColor(oSpecular)_
 
@@ -193,6 +246,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -201,7 +256,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setEmissiveColor(oEmmisive)
+
+<!--
 
 _syntax: setEmissiveColor(oEmmisive)_
 
@@ -231,6 +295,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -239,7 +305,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setShininess(nShininess)
+
+<!--
 
 _syntax: setShininess(nShininess)_
 
@@ -269,6 +344,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -277,7 +354,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofFloatColor getDiffuseColor()
+
+<!--
 
 _syntax: getDiffuseColor()_
 
@@ -307,6 +393,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -315,7 +403,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofFloatColor getAmbientColor()
+
+<!--
 
 _syntax: getAmbientColor()_
 
@@ -345,6 +442,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -353,7 +452,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofFloatColor getSpecularColor()
+
+<!--
 
 _syntax: getSpecularColor()_
 
@@ -383,6 +491,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -391,7 +501,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofFloatColor getEmissiveColor()
+
+<!--
 
 _syntax: getEmissiveColor()_
 
@@ -421,6 +540,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -429,7 +550,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float getShininess()
+
+<!--
 
 _syntax: getShininess()_
 
@@ -459,6 +589,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -467,7 +599,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void begin()
+
+<!--
 
 _syntax: begin()_
 
@@ -497,6 +638,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -505,7 +648,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void end()
+
+<!--
 
 _syntax: end()_
 
@@ -535,7 +687,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -548,6 +709,8 @@ _description: _
 
 
 ###ofFloatColor diffuse
+
+<!--
 
 _name: diffuse_
 
@@ -569,6 +732,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -577,7 +742,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofFloatColor ambient
+
+<!--
 
 _name: ambient_
 
@@ -599,6 +773,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -607,7 +783,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofFloatColor specular
+
+<!--
 
 _name: specular_
 
@@ -629,6 +814,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -637,7 +824,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofFloatColor emissive
+
+<!--
 
 _name: emissive_
 
@@ -659,6 +855,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -667,7 +865,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float shininess
+
+<!--
 
 _name: shininess_
 
@@ -689,6 +896,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -697,7 +906,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofFloatColor prev_diffuse
+
+<!--
 
 _name: prev_diffuse_
 
@@ -719,6 +937,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -727,7 +947,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofFloatColor prev_ambient
+
+<!--
 
 _name: prev_ambient_
 
@@ -749,6 +978,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -757,7 +988,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofFloatColor prev_specular
+
+<!--
 
 _name: prev_specular_
 
@@ -779,6 +1019,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -787,7 +1029,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofFloatColor prev_emissive
+
+<!--
 
 _name: prev_emissive_
 
@@ -809,6 +1060,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -817,7 +1070,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float prev_shininess
+
+<!--
 
 _name: prev_shininess_
 
@@ -839,7 +1101,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

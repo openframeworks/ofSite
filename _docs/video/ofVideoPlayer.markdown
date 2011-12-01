@@ -7,6 +7,9 @@
 
 
 
+
+
+
 The ofVideoPlayer class loads in a movie file via quicktime in windows and mac  or gstreamer in linux, and offers various controls to play the movie, control the properties of the movie, and to access the pixels of a given frame.
 
 Example:
@@ -20,11 +23,17 @@ $$/code
 
 
 
+
+
+
+
 ##Methods
 
 
 
 ### ofVideoPlayer()
+
+<!--
 
 _syntax: ofVideoPlayer()_
 
@@ -54,6 +63,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -79,7 +90,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void start()
+
+<!--
 
 _syntax: start()_
 
@@ -109,7 +129,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Starts the movie, checking for whether the movie has been both loaded and if it has been started. If it has been loaded but not started the movie is initialized and then played, otherwise it is just played.
@@ -134,7 +157,15 @@ Starts the movie, checking for whether the movie has been both loaded and if it 
 
 
 
+
+
+
+
+
+
 ###void ~ofVideoPlayer()
+
+<!--
 
 _syntax: ~ofVideoPlayer()_
 
@@ -164,6 +195,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -189,7 +222,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void createImgMemAndGWorld()
+
+<!--
 
 _syntax: createImgMemAndGWorld()_
 
@@ -219,6 +261,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -244,7 +288,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool loadMovie(name)
+
+<!--
 
 _syntax: loadMovie(name)_
 
@@ -274,7 +327,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Load a movie file (fileName) into that object. It will look for the movie file inside of the data/ folder. The movie does not automatically play once loaded.
@@ -307,7 +363,15 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###void seek_lock()
+
+<!--
 
 _syntax: seek_lock()_
 
@@ -337,6 +401,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -362,7 +428,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void closeMovie()
+
+<!--
 
 _syntax: closeMovie()_
 
@@ -392,7 +467,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Closes the movie file and de-allocates resources.
@@ -427,7 +505,15 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###void seek_unlock()
+
+<!--
 
 _syntax: seek_unlock()_
 
@@ -457,6 +543,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -482,7 +570,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void close()
+
+<!--
 
 _syntax: close()_
 
@@ -512,7 +609,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Calls the closeMovie() function, which closes the movie file and de-allocates resources.
@@ -537,7 +637,15 @@ Calls the closeMovie() function, which closes the movie file and de-allocates re
 
 
 
+
+
+
+
+
+
 ###void gstHandleMessage()
+
+<!--
 
 _syntax: gstHandleMessage()_
 
@@ -567,6 +675,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -592,7 +702,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void update()
+
+<!--
 
 _syntax: update()_
 
@@ -622,7 +741,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Calls the idleMovie() function. This function idles the movie player, so that the movie can play. If you don't call it, when the movie is playing then you may encounter problems, especially on windows machines. 
@@ -647,7 +769,15 @@ Calls the idleMovie() function. This function idles the movie player, so that th
 
 
 
+
+
+
+
+
+
 ###bool allocate()
+
+<!--
 
 _syntax: allocate()_
 
@@ -677,6 +807,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -702,7 +834,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void idleMovie()
+
+<!--
 
 _syntax: idleMovie()_
 
@@ -732,7 +873,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 This function idles the movie player, so that the movie can play. If you don't call it, when the movie is playing then you may encouter problems, especially on winodws machines.
@@ -757,7 +901,15 @@ This function idles the movie player, so that the movie can play. If you don't c
 
 
 
+
+
+
+
+
+
 ###void play()
+
+<!--
 
 _syntax: play()_
 
@@ -787,7 +939,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Plays the movie. If the movie has been stopped or paused it will the continue playback at the point it was stopped. 
@@ -812,7 +967,15 @@ Plays the movie. If the movie has been stopped or paused it will the continue pl
 
 
 
+
+
+
+
+
+
 ###void stop()
+
+<!--
 
 _syntax: stop()_
 
@@ -842,7 +1005,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Stops the movie. 
@@ -867,7 +1033,15 @@ Stops the movie.
 
 
 
+
+
+
+
+
+
 ###bool isFrameNew()
+
+<!--
 
 _syntax: isFrameNew()_
 
@@ -897,7 +1071,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 For example, if the pixels are new, you could then process them.
@@ -931,7 +1108,15 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###unsigned char * getPixels()
+
+<!--
 
 _syntax: getPixels()_
 
@@ -961,7 +1146,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 For example, to get the red green and blue of the pixel (100,20):
@@ -992,7 +1180,15 @@ int blue 	= pixels[(20 * widthOfLine) + 100 * 3 + 2];
 
 
 
+
+
+
+
+
+
 ###float getPosition()
+
+<!--
 
 _syntax: getPosition()_
 
@@ -1022,6 +1218,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1047,7 +1245,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float getSpeed()
+
+<!--
 
 _syntax: getSpeed()_
 
@@ -1077,7 +1284,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 note: 1 = normal speed, 0 = paused, -1 = backwards. 
@@ -1102,7 +1312,15 @@ note: 1 = normal speed, 0 = paused, -1 = backwards.
 
 
 
+
+
+
+
+
+
 ###float getDuration()
+
+<!--
 
 _syntax: getDuration()_
 
@@ -1132,6 +1350,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1157,7 +1377,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool getIsMovieDone()
+
+<!--
 
 _syntax: getIsMovieDone()_
 
@@ -1187,6 +1416,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1212,7 +1443,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setPosition(pct)
+
+<!--
 
 _syntax: setPosition(pct)_
 
@@ -1242,7 +1482,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Sets the position of the playhead to a given percentage through the movie. Can be used to scrub through a movie. 
@@ -1267,7 +1510,15 @@ Sets the position of the playhead to a given percentage through the movie. Can b
 
 
 
+
+
+
+
+
+
 ###void setVolume(volume)
+
+<!--
 
 _syntax: setVolume(volume)_
 
@@ -1297,7 +1548,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Sets the volume of a movie - default = 0, silent 
@@ -1322,7 +1576,15 @@ Sets the volume of a movie - default = 0, silent
 
 
 
+
+
+
+
+
+
 ###void setLoopState(state)
+
+<!--
 
 _syntax: setLoopState(state)_
 
@@ -1352,7 +1614,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Sets the looping state of the movie. Deafult behavior is to loop. There are three options:
@@ -1386,7 +1651,15 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###void setSpeed(speed)
+
+<!--
 
 _syntax: setSpeed(speed)_
 
@@ -1416,7 +1689,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Sets the speed of the movie that is playing. 1 = normal, 2 = 2x as fast, 0 = stopped, -1 = backwards, etc; 
@@ -1441,7 +1717,15 @@ Sets the speed of the movie that is playing. 1 = normal, 2 = 2x as fast, 0 = sto
 
 
 
+
+
+
+
+
+
 ###void setFrame(frame)
+
+<!--
 
 _syntax: setFrame(frame)_
 
@@ -1471,7 +1755,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Sets the current frame of the video. Should be used only if you know the bounds of the movie ( using totalNumberFrames() ) or store a location using getCurrentFrame();
@@ -1496,7 +1783,15 @@ Sets the current frame of the video. Should be used only if you know the bounds 
 
 
 
+
+
+
+
+
+
 ###void setUseTexture(bUse)
+
+<!--
 
 _syntax: setUseTexture(bUse)_
 
@@ -1526,7 +1821,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Set the usage of texture inside this object. Typically, you will want to draw the movie on screen, and so it will be necessary to use a texture, but there may be cases where it helps to not use a texture in order to save memory or for better performance. To disable the internal use of the texture, you can load the movie like this:
@@ -1559,7 +1857,15 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###ofTexture getTextureReference()
+
+<!--
 
 _syntax: getTextureReference()_
 
@@ -1589,7 +1895,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Returns a reference to the videoPlayer's texture.
@@ -1614,7 +1923,15 @@ Returns a reference to the videoPlayer's texture.
 
 
 
+
+
+
+
+
+
 ###void draw(x, y, w, h)
+
+<!--
 
 _syntax: draw(x, y, w, h)_
 
@@ -1644,7 +1961,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Draws the texture of the movie player class at the position (x,y) with the given width (w) and height (h). 
@@ -1669,7 +1989,15 @@ Draws the texture of the movie player class at the position (x,y) with the given
 
 
 
+
+
+
+
+
+
 ###void draw(x, y)
+
+<!--
 
 _syntax: draw(x, y)_
 
@@ -1699,7 +2027,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Draws the texture of the movie player class as the position (x,y) with the internal width and height of the loaded movie. 
@@ -1724,7 +2055,15 @@ Draws the texture of the movie player class as the position (x,y) with the inter
 
 
 
+
+
+
+
+
+
 ###void setAnchorPercent(xPct, yPct)
+
+<!--
 
 _syntax: setAnchorPercent(xPct, yPct)_
 
@@ -1754,6 +2093,8 @@ _advanced: True_
 
 
 
+-->
+
 _description: _
 
 
@@ -1779,7 +2120,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setAnchorPoint(x, y)
+
+<!--
 
 _syntax: setAnchorPoint(x, y)_
 
@@ -1809,6 +2159,8 @@ _advanced: True_
 
 
 
+-->
+
 _description: _
 
 
@@ -1834,7 +2186,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void resetAnchor()
+
+<!--
 
 _syntax: resetAnchor()_
 
@@ -1864,6 +2225,8 @@ _advanced: True_
 
 
 
+-->
+
 _description: _
 
 
@@ -1889,7 +2252,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setPaused(bPause)
+
+<!--
 
 _syntax: setPaused(bPause)_
 
@@ -1919,7 +2291,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Sets the paused state of the movie. Use "true" to pause and false to unpause. 
@@ -1944,7 +2319,15 @@ Sets the paused state of the movie. Use "true" to pause and false to unpause.
 
 
 
+
+
+
+
+
+
 ###int getCurrentFrame()
+
+<!--
 
 _syntax: getCurrentFrame()_
 
@@ -1974,6 +2357,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1999,7 +2384,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int getTotalNumFrames()
+
+<!--
 
 _syntax: getTotalNumFrames()_
 
@@ -2029,6 +2423,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2054,7 +2450,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void firstFrame()
+
+<!--
 
 _syntax: firstFrame()_
 
@@ -2084,7 +2489,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Moves the playhead to the first frame of the movie. This can also be accomplished using setCurrentFrame(0).
@@ -2109,7 +2517,15 @@ Moves the playhead to the first frame of the movie. This can also be accomplishe
 
 
 
+
+
+
+
+
+
 ###void nextFrame()
+
+<!--
 
 _syntax: nextFrame()_
 
@@ -2139,7 +2555,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Advances the playhead by one frame.
@@ -2164,7 +2583,15 @@ Advances the playhead by one frame.
 
 
 
+
+
+
+
+
+
 ###void previousFrame()
+
+<!--
 
 _syntax: previousFrame()_
 
@@ -2194,7 +2621,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Reverses the playhead by one frame.
@@ -2219,7 +2649,15 @@ Reverses the playhead by one frame.
 
 
 
+
+
+
+
+
+
 ###float getHeight()
+
+<!--
 
 _syntax: getHeight()_
 
@@ -2249,6 +2687,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2274,7 +2714,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float getWidth()
+
+<!--
 
 _syntax: getWidth()_
 
@@ -2304,6 +2753,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2329,7 +2780,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setPlayer(newPlayer)
+
+<!--
 
 _syntax: setPlayer(newPlayer)_
 
@@ -2359,6 +2819,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2367,7 +2829,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofPtr getPlayer()
+
+<!--
 
 _syntax: getPlayer()_
 
@@ -2397,6 +2868,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2405,7 +2878,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setPixelFormat(pixelFormat)
+
+<!--
 
 _syntax: setPixelFormat(pixelFormat)_
 
@@ -2435,6 +2917,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2443,7 +2927,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofPixelsRef getPixelsRef()
+
+<!--
 
 _syntax: getPixelsRef()_
 
@@ -2473,6 +2966,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2481,7 +2976,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setLoopState(state)
+
+<!--
 
 _syntax: setLoopState(state)_
 
@@ -2511,6 +3015,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2519,7 +3025,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int getLoopState()
+
+<!--
 
 _syntax: getLoopState()_
 
@@ -2549,6 +3064,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2557,7 +3074,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void draw(&p)
+
+<!--
 
 _syntax: draw(&p)_
 
@@ -2587,6 +3113,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2595,7 +3123,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void draw(&r)
+
+<!--
 
 _syntax: draw(&r)_
 
@@ -2625,6 +3162,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2633,7 +3172,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setAnchorPoint(x, y)
+
+<!--
 
 _syntax: setAnchorPoint(x, y)_
 
@@ -2663,6 +3211,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2671,7 +3221,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool isPaused()
+
+<!--
 
 _syntax: isPaused()_
 
@@ -2701,6 +3260,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2709,7 +3270,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool isLoaded()
+
+<!--
 
 _syntax: isLoaded()_
 
@@ -2739,6 +3309,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2747,7 +3319,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool isPlaying()
+
+<!--
 
 _syntax: isPlaying()_
 
@@ -2777,7 +3358,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2790,6 +3380,8 @@ _description: _
 
 
 ###int width
+
+<!--
 
 _name: width_
 
@@ -2811,7 +3403,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Variable containing the width of the video.
@@ -2834,7 +3429,15 @@ Variable containing the width of the video.
 
 
 
+
+
+
+
+
+
 ###bool bStarted
+
+<!--
 
 _name: bStarted_
 
@@ -2856,7 +3459,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2881,6 +3493,8 @@ _description: _
 
 ###int height
 
+<!--
+
 _name: height_
 
 _type: int_
@@ -2901,7 +3515,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Variable containing the height of the video.
@@ -2924,7 +3541,15 @@ Variable containing the height of the video.
 
 
 
+
+
+
+
+
+
 ###bool bPlaying
+
+<!--
 
 _name: bPlaying_
 
@@ -2946,7 +3571,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2971,6 +3605,8 @@ _description: _
 
 ###float speed
 
+<!--
+
 _name: speed_
 
 _type: float_
@@ -2991,7 +3627,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Contains the playback speed of the video. 1.0 is the normal speed. 2.0 is double the normal speed, -1 is backwards etc. 
@@ -3014,7 +3653,15 @@ Contains the playback speed of the video. 1.0 is the normal speed. 2.0 is double
 
 
 
+
+
+
+
+
+
 ###bool bPaused
+
+<!--
 
 _name: bPaused_
 
@@ -3036,7 +3683,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -3061,6 +3717,8 @@ _description: _
 
 ###bool bLoaded
 
+<!--
+
 _name: bLoaded_
 
 _type: bool_
@@ -3081,7 +3739,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 A boolean that describes if the movie loaded properly. 
@@ -3104,7 +3765,15 @@ A boolean that describes if the movie loaded properly.
 
 
 
+
+
+
+
+
+
 ###bool bIsFrameNew
+
+<!--
 
 _name: bIsFrameNew_
 
@@ -3126,7 +3795,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -3151,6 +3829,8 @@ _description: _
 
 ###int nFrames
 
+<!--
+
 _name: nFrames_
 
 _type: int_
@@ -3171,7 +3851,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Variable containing the number of frames of the video.
@@ -3194,7 +3877,15 @@ Variable containing the number of frames of the video.
 
 
 
+
+
+
+
+
+
 ###ofGstVideoData gstData
+
+<!--
 
 _name: gstData_
 
@@ -3216,7 +3907,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -3241,6 +3941,8 @@ _description: _
 
 ###unsigned char * pixels
 
+<!--
+
 _name: pixels_
 
 _type: unsigned char *_
@@ -3261,7 +3963,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Array of pixels that represents the current frame of live video. The data is stored as RGB in an array which is the size: width*height*3.
@@ -3284,7 +3989,15 @@ Array of pixels that represents the current frame of live video. The data is sto
 
 
 
+
+
+
+
+
+
 ###bool bIsMovieDone
+
+<!--
 
 _name: bIsMovieDone_
 
@@ -3306,7 +4019,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -3331,6 +4053,8 @@ _description: _
 
 ###bool bHavePixelsChanged
 
+<!--
+
 _name: bHavePixelsChanged_
 
 _type: bool_
@@ -3351,7 +4075,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 A boolean controlling if pixels have change.
@@ -3374,7 +4101,15 @@ A boolean controlling if pixels have change.
 
 
 
+
+
+
+
+
+
 ###bool isStream
+
+<!--
 
 _name: isStream_
 
@@ -3396,7 +4131,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -3421,6 +4165,8 @@ _description: _
 
 ###ofTexture tex
 
+<!--
+
 _name: tex_
 
 _type: ofTexture_
@@ -3441,7 +4187,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 ofTexture used by the video player class. 
@@ -3464,7 +4213,15 @@ ofTexture used by the video player class.
 
 
 
+
+
+
+
+
+
 ###GstElement * gstPipeline
+
+<!--
 
 _name: gstPipeline_
 
@@ -3486,7 +4243,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -3511,6 +4277,8 @@ _description: _
 
 ###bool bUseTexture
 
+<!--
+
 _name: bUseTexture_
 
 _type: bool_
@@ -3531,7 +4299,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 bUseTexture enables and disables the use of ofTexture in our video player.
@@ -3554,7 +4325,15 @@ bUseTexture enables and disables the use of ofTexture in our video player.
 
 
 
+
+
+
+
+
+
 ###GstElement * gstSink
+
+<!--
 
 _name: gstSink_
 
@@ -3576,7 +4355,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -3601,6 +4389,8 @@ _description: _
 
 ###bool allocated
 
+<!--
+
 _name: allocated_
 
 _type: bool_
@@ -3621,7 +4411,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Boolean varible containing true if the texture has been already allocated inside our video player.
@@ -3644,7 +4437,15 @@ Boolean varible containing true if the texture has been already allocated inside
 
 
 
+
+
+
+
+
+
 ###gint64 durationNanos
+
+<!--
 
 _name: durationNanos_
 
@@ -3666,7 +4467,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -3691,6 +4501,8 @@ _description: _
 
 ###int loopMode
 
+<!--
+
 _name: loopMode_
 
 _type: int_
@@ -3711,7 +4523,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -3736,6 +4557,8 @@ _description: _
 
 ###bool posChangingPaused
 
+<!--
+
 _name: posChangingPaused_
 
 _type: bool_
@@ -3756,7 +4579,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -3781,6 +4613,8 @@ _description: _
 
 ###pthread_mutex_t seek_mutex
 
+<!--
+
 _name: seek_mutex_
 
 _type: pthread_mutex_t_
@@ -3801,7 +4635,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -3826,6 +4669,8 @@ _description: _
 
 ###ofPtr player
 
+<!--
+
 _name: player_
 
 _type: ofPtr_
@@ -3846,6 +4691,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -3854,7 +4701,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofTexture playerTex
+
+<!--
 
 _name: playerTex_
 
@@ -3876,6 +4732,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -3884,7 +4742,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofPixelFormat internalPixelFormat
+
+<!--
 
 _name: internalPixelFormat_
 
@@ -3906,7 +4773,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

@@ -18,11 +18,20 @@
 
 
 
+
+
+
+
+
+
+
 ##Methods
 
 
 
 ### ofEasyCam()
+
+<!--
 
 _syntax: ofEasyCam()_
 
@@ -52,6 +61,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -60,7 +71,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ~ofEasyCam()
+
+<!--
 
 _syntax: ~ofEasyCam()_
 
@@ -90,6 +110,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -98,7 +120,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void begin(viewport = ofGetCurrentViewport())
+
+<!--
 
 _syntax: begin(viewport = ofGetCurrentViewport())_
 
@@ -128,6 +159,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -136,7 +169,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void reset()
+
+<!--
 
 _syntax: reset()_
 
@@ -166,6 +208,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -174,7 +218,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setTarget(&target)
+
+<!--
 
 _syntax: setTarget(&target)_
 
@@ -204,6 +257,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -212,7 +267,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setTarget(&target)
+
+<!--
 
 _syntax: setTarget(&target)_
 
@@ -242,6 +306,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -250,7 +316,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofNode getTarget()
+
+<!--
 
 _syntax: getTarget()_
 
@@ -280,6 +355,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -288,7 +365,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setDistance(distance)
+
+<!--
 
 _syntax: setDistance(distance)_
 
@@ -318,6 +404,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -326,7 +414,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float getDistance()
+
+<!--
 
 _syntax: getDistance()_
 
@@ -356,6 +453,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -364,7 +463,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setDrag(drag)
+
+<!--
 
 _syntax: setDrag(drag)_
 
@@ -394,6 +502,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -402,7 +512,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float getDrag()
+
+<!--
 
 _syntax: getDrag()_
 
@@ -432,6 +551,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -440,7 +561,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void mouseDragged(&mouse)
+
+<!--
 
 _syntax: mouseDragged(&mouse)_
 
@@ -470,6 +600,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -478,7 +610,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void mouseMoved(&mouse)
+
+<!--
 
 _syntax: mouseMoved(&mouse)_
 
@@ -508,6 +649,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -516,7 +659,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void mousePressed(&mouse)
+
+<!--
 
 _syntax: mousePressed(&mouse)_
 
@@ -546,6 +698,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -554,7 +708,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void mouseReleased(&mouse)
+
+<!--
 
 _syntax: mouseReleased(&mouse)_
 
@@ -584,6 +747,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -592,7 +757,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void enableMouseInput()
+
+<!--
 
 _syntax: enableMouseInput()_
 
@@ -622,6 +796,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -630,7 +806,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void disableMouseInput()
+
+<!--
 
 _syntax: disableMouseInput()_
 
@@ -660,6 +845,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -668,7 +855,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool getMouseInputEnabled()
+
+<!--
 
 _syntax: getMouseInputEnabled()_
 
@@ -698,6 +894,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -706,7 +904,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setDistance(distance, save)
+
+<!--
 
 _syntax: setDistance(distance, save)_
 
@@ -736,7 +943,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -749,6 +965,8 @@ _description: _
 
 
 ###ofNode target
+
+<!--
 
 _name: target_
 
@@ -770,6 +988,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -778,7 +998,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float drag
+
+<!--
 
 _name: drag_
 
@@ -800,6 +1029,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -808,7 +1039,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float zoomSpeed
+
+<!--
 
 _name: zoomSpeed_
 
@@ -830,6 +1070,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -838,7 +1080,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool bMouseInputEnabled
+
+<!--
 
 _name: bMouseInputEnabled_
 
@@ -860,6 +1111,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -868,7 +1121,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f mousePosViewPrev
+
+<!--
 
 _name: mousePosViewPrev_
 
@@ -890,6 +1152,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -898,7 +1162,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f mousePosScreenPrev
+
+<!--
 
 _name: mousePosScreenPrev_
 
@@ -920,6 +1193,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -928,7 +1203,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int lastFrame
+
+<!--
 
 _name: lastFrame_
 
@@ -950,6 +1234,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -958,7 +1244,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###unsigned long lastTap
+
+<!--
 
 _name: lastTap_
 
@@ -980,6 +1275,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -988,7 +1285,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool mousePressedPrev
+
+<!--
 
 _name: mousePressedPrev_
 
@@ -1010,6 +1316,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1018,7 +1326,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool bDistanceSet
+
+<!--
 
 _name: bDistanceSet_
 
@@ -1040,6 +1357,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1048,7 +1367,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float lastDistance
+
+<!--
 
 _name: lastDistance_
 
@@ -1070,6 +1398,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1078,7 +1408,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float distanceScaleVelocity
+
+<!--
 
 _name: distanceScaleVelocity_
 
@@ -1100,6 +1439,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1108,7 +1449,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofQuaternion rotation
+
+<!--
 
 _name: rotation_
 
@@ -1130,6 +1480,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1138,7 +1490,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f translation
+
+<!--
 
 _name: translation_
 
@@ -1160,7 +1521,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

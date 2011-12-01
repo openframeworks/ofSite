@@ -7,7 +7,14 @@
 
 
 
+
+
+
 Base class for all windowing classes. Extend this to create a different version of the default glut window in oF.
+
+
+
+
 
 
 
@@ -18,6 +25,8 @@ Base class for all windowing classes. Extend this to create a different version 
 
 
 ### ofAppBaseWindow()
+
+<!--
 
 _syntax: ofAppBaseWindow()_
 
@@ -47,6 +56,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -72,7 +83,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ~ofAppBaseWindow()
+
+<!--
 
 _syntax: ~ofAppBaseWindow()_
 
@@ -102,6 +122,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -127,7 +149,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setupOpenGL(w, h, screenMode)
+
+<!--
 
 _syntax: setupOpenGL(w, h, screenMode)_
 
@@ -157,6 +188,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -182,7 +215,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void initializeWindow()
+
+<!--
 
 _syntax: initializeWindow()_
 
@@ -212,6 +254,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -237,7 +281,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void runAppViaInfiniteLoop(appPtr)
+
+<!--
 
 _syntax: runAppViaInfiniteLoop(appPtr)_
 
@@ -267,6 +320,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -292,7 +347,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void hideCursor()
+
+<!--
 
 _syntax: hideCursor()_
 
@@ -322,6 +386,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -347,7 +413,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void showCursor()
+
+<!--
 
 _syntax: showCursor()_
 
@@ -377,6 +452,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -402,7 +479,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setWindowPosition(x, y)
+
+<!--
 
 _syntax: setWindowPosition(x, y)_
 
@@ -432,6 +518,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -457,7 +545,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setWindowShape(w, h)
+
+<!--
 
 _syntax: setWindowShape(w, h)_
 
@@ -487,6 +584,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -512,7 +611,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int getFrameNum()
+
+<!--
 
 _syntax: getFrameNum()_
 
@@ -542,6 +650,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -567,7 +677,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float getFrameRate()
+
+<!--
 
 _syntax: getFrameRate()_
 
@@ -597,6 +716,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -622,7 +743,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofPoint getWindowPosition()
+
+<!--
 
 _syntax: getWindowPosition()_
 
@@ -652,6 +782,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -677,7 +809,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofPoint getWindowSize()
+
+<!--
 
 _syntax: getWindowSize()_
 
@@ -707,6 +848,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -732,7 +875,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofPoint getScreenSize()
+
+<!--
 
 _syntax: getScreenSize()_
 
@@ -762,6 +914,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -787,7 +941,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setFrameRate(targetRate)
+
+<!--
 
 _syntax: setFrameRate(targetRate)_
 
@@ -817,6 +980,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -842,7 +1007,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setWindowTitle(title)
+
+<!--
 
 _syntax: setWindowTitle(title)_
 
@@ -872,6 +1046,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -897,7 +1073,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int getWindowMode()
+
+<!--
 
 _syntax: getWindowMode()_
 
@@ -927,6 +1112,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -952,7 +1139,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setFullscreen(fullscreen)
+
+<!--
 
 _syntax: setFullscreen(fullscreen)_
 
@@ -982,6 +1178,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1007,7 +1205,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void toggleFullscreen()
+
+<!--
 
 _syntax: toggleFullscreen()_
 
@@ -1037,6 +1244,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1062,7 +1271,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void enableSetupScreen()
+
+<!--
 
 _syntax: enableSetupScreen()_
 
@@ -1092,6 +1310,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1117,7 +1337,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void disableSetupScreen()
+
+<!--
 
 _syntax: disableSetupScreen()_
 
@@ -1147,6 +1376,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1172,7 +1403,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void runAppViaInfiniteLoop(*appPtr)
+
+<!--
 
 _syntax: runAppViaInfiniteLoop(*appPtr)_
 
@@ -1202,6 +1442,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1210,7 +1452,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###double getLastFrameTime()
+
+<!--
 
 _syntax: getLastFrameTime()_
 
@@ -1240,6 +1491,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1248,7 +1501,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setOrientation(orientation)
+
+<!--
 
 _syntax: setOrientation(orientation)_
 
@@ -1278,6 +1540,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1286,7 +1550,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofOrientation getOrientation()
+
+<!--
 
 _syntax: getOrientation()_
 
@@ -1316,6 +1589,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1324,7 +1599,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool doesHWOrientation()
+
+<!--
 
 _syntax: doesHWOrientation()_
 
@@ -1354,6 +1638,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1362,7 +1648,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int getWidth()
+
+<!--
 
 _syntax: getWidth()_
 
@@ -1392,6 +1687,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1400,7 +1697,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int getHeight()
+
+<!--
 
 _syntax: getHeight()_
 
@@ -1430,7 +1736,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

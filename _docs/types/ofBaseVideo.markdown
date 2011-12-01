@@ -13,11 +13,20 @@
 
 
 
+
+
+
+
+
+
+
 ##Methods
 
 
 
 ### ~ofBaseVideo()
+
+<!--
 
 _syntax: ~ofBaseVideo()_
 
@@ -47,6 +56,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -72,7 +83,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###unsigned char * getPixels()
+
+<!--
 
 _syntax: getPixels()_
 
@@ -102,6 +122,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -127,7 +149,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void close()
+
+<!--
 
 _syntax: close()_
 
@@ -157,6 +188,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -182,7 +215,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool isFrameNew()
+
+<!--
 
 _syntax: isFrameNew()_
 
@@ -212,7 +254,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

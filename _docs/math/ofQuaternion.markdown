@@ -7,11 +7,20 @@
 
 
 
+
+
+
+
+
+
+
 ##Methods
 
 
 
 ### ofQuaternion()
+
+<!--
 
 _syntax: ofQuaternion()_
 
@@ -41,6 +50,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -49,7 +60,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ofQuaternion(x, y, z, w)
+
+<!--
 
 _syntax: ofQuaternion(x, y, z, w)_
 
@@ -79,6 +99,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -87,7 +109,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ofQuaternion(&v)
+
+<!--
 
 _syntax: ofQuaternion(&v)_
 
@@ -117,6 +148,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -125,7 +158,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ofQuaternion(angle, &axis)
+
+<!--
 
 _syntax: ofQuaternion(angle, &axis)_
 
@@ -155,6 +197,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -163,7 +207,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ofQuaternion(angle1, &axis1, angle2, &axis2, angle3, &axis3)
+
+<!--
 
 _syntax: ofQuaternion(angle1, &axis1, angle2, &axis2, angle3, &axis3)_
 
@@ -193,6 +246,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -201,7 +256,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofQuaternion operator=(&q)
+
+<!--
 
 _syntax: operator=(&q)_
 
@@ -231,6 +295,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -239,7 +305,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool operator==(&q)
+
+<!--
 
 _syntax: operator==(&q)_
 
@@ -269,6 +344,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -277,7 +354,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool operator!=(&q)
+
+<!--
 
 _syntax: operator!=(&q)_
 
@@ -307,6 +393,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -315,7 +403,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ostream & operator<<(&os)
+
+<!--
 
 _syntax: operator<<(&os)_
 
@@ -345,6 +442,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -353,7 +452,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###istream & operator>>(&is)
+
+<!--
 
 _syntax: operator>>(&is)_
 
@@ -383,6 +491,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -391,7 +501,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec4f asVec4()
+
+<!--
 
 _syntax: asVec4()_
 
@@ -421,6 +540,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -429,7 +550,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f asVec3()
+
+<!--
 
 _syntax: asVec3()_
 
@@ -459,6 +589,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -467,7 +599,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void set(x, y, z, w)
+
+<!--
 
 _syntax: set(x, y, z, w)_
 
@@ -497,6 +638,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -505,7 +648,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void set(&v)
+
+<!--
 
 _syntax: set(&v)_
 
@@ -535,6 +687,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -543,7 +697,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void set(&matrix)
+
+<!--
 
 _syntax: set(&matrix)_
 
@@ -573,6 +736,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -581,7 +746,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void get(&matrix)
+
+<!--
 
 _syntax: get(&matrix)_
 
@@ -611,6 +785,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -619,7 +795,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float operator[](i)
+
+<!--
 
 _syntax: operator[](i)_
 
@@ -649,6 +834,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -657,7 +844,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float x()
+
+<!--
 
 _syntax: x()_
 
@@ -687,6 +883,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -695,7 +893,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float y()
+
+<!--
 
 _syntax: y()_
 
@@ -725,6 +932,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -733,7 +942,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float z()
+
+<!--
 
 _syntax: z()_
 
@@ -763,6 +981,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -771,7 +991,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float w()
+
+<!--
 
 _syntax: w()_
 
@@ -801,6 +1030,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -809,7 +1040,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool zeroRotation()
+
+<!--
 
 _syntax: zeroRotation()_
 
@@ -839,6 +1079,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -847,7 +1089,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofQuaternion operator*(rhs)
+
+<!--
 
 _syntax: operator*(rhs)_
 
@@ -877,6 +1128,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -885,7 +1138,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofQuaternion operator*=(rhs)
+
+<!--
 
 _syntax: operator*=(rhs)_
 
@@ -915,6 +1177,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -923,7 +1187,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofQuaternion operator*(&rhs)
+
+<!--
 
 _syntax: operator*(&rhs)_
 
@@ -953,6 +1226,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -961,7 +1236,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofQuaternion operator*=(&rhs)
+
+<!--
 
 _syntax: operator*=(&rhs)_
 
@@ -991,6 +1275,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -999,7 +1285,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofQuaternion operator/(rhs)
+
+<!--
 
 _syntax: operator/(rhs)_
 
@@ -1029,6 +1324,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1037,7 +1334,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofQuaternion operator/=(rhs)
+
+<!--
 
 _syntax: operator/=(rhs)_
 
@@ -1067,6 +1373,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1075,7 +1383,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofQuaternion operator/(&denom)
+
+<!--
 
 _syntax: operator/(&denom)_
 
@@ -1105,6 +1422,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1113,7 +1432,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofQuaternion operator/=(&denom)
+
+<!--
 
 _syntax: operator/=(&denom)_
 
@@ -1143,6 +1471,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1151,7 +1481,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofQuaternion operator+(&rhs)
+
+<!--
 
 _syntax: operator+(&rhs)_
 
@@ -1181,6 +1520,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1189,7 +1530,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofQuaternion operator+=(&rhs)
+
+<!--
 
 _syntax: operator+=(&rhs)_
 
@@ -1219,6 +1569,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1227,7 +1579,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofQuaternion operator-(&rhs)
+
+<!--
 
 _syntax: operator-(&rhs)_
 
@@ -1257,6 +1618,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1265,7 +1628,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofQuaternion operator-=(&rhs)
+
+<!--
 
 _syntax: operator-=(&rhs)_
 
@@ -1295,6 +1667,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1303,7 +1677,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofQuaternion operator-()
+
+<!--
 
 _syntax: operator-()_
 
@@ -1333,6 +1716,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1341,7 +1726,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f operator*(&v)
+
+<!--
 
 _syntax: operator*(&v)_
 
@@ -1371,6 +1765,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1379,7 +1775,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float length()
+
+<!--
 
 _syntax: length()_
 
@@ -1409,6 +1814,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1417,7 +1824,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float length2()
+
+<!--
 
 _syntax: length2()_
 
@@ -1447,6 +1863,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1455,7 +1873,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofQuaternion conj()
+
+<!--
 
 _syntax: conj()_
 
@@ -1485,6 +1912,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1493,7 +1922,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofQuaternion inverse()
+
+<!--
 
 _syntax: inverse()_
 
@@ -1523,6 +1961,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1531,7 +1971,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void makeRotate(angle, x, y, z)
+
+<!--
 
 _syntax: makeRotate(angle, x, y, z)_
 
@@ -1561,6 +2010,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1569,7 +2020,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void makeRotate(angle, &vec)
+
+<!--
 
 _syntax: makeRotate(angle, &vec)_
 
@@ -1599,6 +2059,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1607,7 +2069,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void makeRotate(angle1, &axis1, angle2, &axis2, angle3, &axis3)
+
+<!--
 
 _syntax: makeRotate(angle1, &axis1, angle2, &axis2, angle3, &axis3)_
 
@@ -1637,6 +2108,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1645,7 +2118,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void makeRotate(&vec1, &vec2)
+
+<!--
 
 _syntax: makeRotate(&vec1, &vec2)_
 
@@ -1675,6 +2157,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1683,7 +2167,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void makeRotate_original(&vec1, &vec2)
+
+<!--
 
 _syntax: makeRotate_original(&vec1, &vec2)_
 
@@ -1713,6 +2206,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1721,7 +2216,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void getRotate(&angle, &x, &y, &z)
+
+<!--
 
 _syntax: getRotate(&angle, &x, &y, &z)_
 
@@ -1751,6 +2255,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1759,7 +2265,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void getRotate(&angle, &vec)
+
+<!--
 
 _syntax: getRotate(&angle, &vec)_
 
@@ -1789,6 +2304,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1797,7 +2314,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f getEuler()
+
+<!--
 
 _syntax: getEuler()_
 
@@ -1827,6 +2353,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1835,7 +2363,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void slerp(t, &from, &to)
+
+<!--
 
 _syntax: slerp(t, &from, &to)_
 
@@ -1865,7 +2402,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1878,6 +2424,8 @@ _description: _
 
 
 ###ofVec4f _v
+
+<!--
 
 _name: _v_
 
@@ -1899,7 +2447,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

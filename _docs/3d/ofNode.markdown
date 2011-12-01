@@ -7,11 +7,20 @@
 
 
 
+
+
+
+
+
+
+
 ##Methods
 
 
 
 ### ofNode()
+
+<!--
 
 _syntax: ofNode()_
 
@@ -41,6 +50,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -49,7 +60,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ~ofNode()
+
+<!--
 
 _syntax: ~ofNode()_
 
@@ -79,6 +99,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -87,7 +109,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setParent(&parent)
+
+<!--
 
 _syntax: setParent(&parent)_
 
@@ -117,6 +148,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -125,7 +158,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void clearParent()
+
+<!--
 
 _syntax: clearParent()_
 
@@ -155,6 +197,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -163,7 +207,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofNode getParent()
+
+<!--
 
 _syntax: getParent()_
 
@@ -193,6 +246,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -201,7 +256,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f getPosition()
+
+<!--
 
 _syntax: getPosition()_
 
@@ -231,6 +295,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -239,7 +305,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float getX()
+
+<!--
 
 _syntax: getX()_
 
@@ -269,6 +344,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -277,7 +354,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float getY()
+
+<!--
 
 _syntax: getY()_
 
@@ -307,6 +393,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -315,7 +403,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float getZ()
+
+<!--
 
 _syntax: getZ()_
 
@@ -345,6 +442,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -353,7 +452,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f getXAxis()
+
+<!--
 
 _syntax: getXAxis()_
 
@@ -383,6 +491,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -391,7 +501,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f getYAxis()
+
+<!--
 
 _syntax: getYAxis()_
 
@@ -421,6 +540,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -429,7 +550,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f getZAxis()
+
+<!--
 
 _syntax: getZAxis()_
 
@@ -459,6 +589,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -467,7 +599,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f getSideDir()
+
+<!--
 
 _syntax: getSideDir()_
 
@@ -497,6 +638,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -505,7 +648,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f getLookAtDir()
+
+<!--
 
 _syntax: getLookAtDir()_
 
@@ -535,6 +687,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -543,7 +697,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f getUpDir()
+
+<!--
 
 _syntax: getUpDir()_
 
@@ -573,6 +736,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -581,7 +746,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float getPitch()
+
+<!--
 
 _syntax: getPitch()_
 
@@ -611,6 +785,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -619,7 +795,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float getHeading()
+
+<!--
 
 _syntax: getHeading()_
 
@@ -649,6 +834,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -657,7 +844,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float getRoll()
+
+<!--
 
 _syntax: getRoll()_
 
@@ -687,6 +883,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -695,7 +893,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofQuaternion getOrientationQuat()
+
+<!--
 
 _syntax: getOrientationQuat()_
 
@@ -725,6 +932,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -733,7 +942,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f getOrientationEuler()
+
+<!--
 
 _syntax: getOrientationEuler()_
 
@@ -763,6 +981,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -771,7 +991,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f getScale()
+
+<!--
 
 _syntax: getScale()_
 
@@ -801,6 +1030,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -809,7 +1040,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofMatrix4x4 getLocalTransformMatrix()
+
+<!--
 
 _syntax: getLocalTransformMatrix()_
 
@@ -839,6 +1079,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -847,7 +1089,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofMatrix4x4 getGlobalTransformMatrix()
+
+<!--
 
 _syntax: getGlobalTransformMatrix()_
 
@@ -877,6 +1128,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -885,7 +1138,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f getGlobalPosition()
+
+<!--
 
 _syntax: getGlobalPosition()_
 
@@ -915,6 +1177,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -923,7 +1187,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofQuaternion getGlobalOrientation()
+
+<!--
 
 _syntax: getGlobalOrientation()_
 
@@ -953,6 +1226,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -961,7 +1236,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setTransformMatrix(&m44)
+
+<!--
 
 _syntax: setTransformMatrix(&m44)_
 
@@ -991,6 +1275,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -999,7 +1285,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setPosition(px, py, pz)
+
+<!--
 
 _syntax: setPosition(px, py, pz)_
 
@@ -1029,6 +1324,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1037,7 +1334,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setPosition(&p)
+
+<!--
 
 _syntax: setPosition(&p)_
 
@@ -1067,6 +1373,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1075,7 +1383,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setGlobalPosition(px, py, pz)
+
+<!--
 
 _syntax: setGlobalPosition(px, py, pz)_
 
@@ -1105,6 +1422,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1113,7 +1432,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setGlobalPosition(&p)
+
+<!--
 
 _syntax: setGlobalPosition(&p)_
 
@@ -1143,6 +1471,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1151,7 +1481,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setOrientation(&q)
+
+<!--
 
 _syntax: setOrientation(&q)_
 
@@ -1181,6 +1520,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1189,7 +1530,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setOrientation(&eulerAngles)
+
+<!--
 
 _syntax: setOrientation(&eulerAngles)_
 
@@ -1219,6 +1569,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1227,7 +1579,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setGlobalOrientation(&q)
+
+<!--
 
 _syntax: setGlobalOrientation(&q)_
 
@@ -1257,6 +1618,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1265,7 +1628,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setScale(s)
+
+<!--
 
 _syntax: setScale(s)_
 
@@ -1295,6 +1667,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1303,7 +1677,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setScale(sx, sy, sz)
+
+<!--
 
 _syntax: setScale(sx, sy, sz)_
 
@@ -1333,6 +1716,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1341,7 +1726,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setScale(&s)
+
+<!--
 
 _syntax: setScale(&s)_
 
@@ -1371,6 +1765,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1379,7 +1775,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void move(x, y, z)
+
+<!--
 
 _syntax: move(x, y, z)_
 
@@ -1409,6 +1814,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1417,7 +1824,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void move(&offset)
+
+<!--
 
 _syntax: move(&offset)_
 
@@ -1447,6 +1863,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1455,7 +1873,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void truck(amount)
+
+<!--
 
 _syntax: truck(amount)_
 
@@ -1485,6 +1912,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1493,7 +1922,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void boom(amount)
+
+<!--
 
 _syntax: boom(amount)_
 
@@ -1523,6 +1961,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1531,7 +1971,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void dolly(amount)
+
+<!--
 
 _syntax: dolly(amount)_
 
@@ -1561,6 +2010,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1569,7 +2020,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void tilt(degrees)
+
+<!--
 
 _syntax: tilt(degrees)_
 
@@ -1599,6 +2059,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1607,7 +2069,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void pan(degrees)
+
+<!--
 
 _syntax: pan(degrees)_
 
@@ -1637,6 +2108,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1645,7 +2118,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void roll(degrees)
+
+<!--
 
 _syntax: roll(degrees)_
 
@@ -1675,6 +2157,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1683,7 +2167,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void rotate(&q)
+
+<!--
 
 _syntax: rotate(&q)_
 
@@ -1713,6 +2206,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1721,7 +2216,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void rotate(degrees, &v)
+
+<!--
 
 _syntax: rotate(degrees, &v)_
 
@@ -1751,6 +2255,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1759,7 +2265,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void rotate(degrees, vx, vy, vz)
+
+<!--
 
 _syntax: rotate(degrees, vx, vy, vz)_
 
@@ -1789,6 +2304,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1797,7 +2314,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void rotateAround(&q, &point)
+
+<!--
 
 _syntax: rotateAround(&q, &point)_
 
@@ -1827,6 +2353,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1835,7 +2363,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void rotateAround(degrees, &axis, &point)
+
+<!--
 
 _syntax: rotateAround(degrees, &axis, &point)_
 
@@ -1865,6 +2402,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1873,7 +2412,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void lookAt(&lookAtPosition, upVector = ofVec3f(0, 1, 0))
+
+<!--
 
 _syntax: lookAt(&lookAtPosition, upVector = ofVec3f(0, 1, 0))_
 
@@ -1903,6 +2451,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1911,7 +2461,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void lookAt(&lookAtNode, &upVector = ofVec3f(0, 1, 0))
+
+<!--
 
 _syntax: lookAt(&lookAtNode, &upVector = ofVec3f(0, 1, 0))_
 
@@ -1941,6 +2500,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1949,7 +2510,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void orbit(longitude, latitude, radius, &centerPoint = ofVec3f(0, 0, 0))
+
+<!--
 
 _syntax: orbit(longitude, latitude, radius, &centerPoint = ofVec3f(0, 0, 0))_
 
@@ -1979,6 +2549,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1987,7 +2559,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void orbit(longitude, latitude, radius, &centerNode)
+
+<!--
 
 _syntax: orbit(longitude, latitude, radius, &centerNode)_
 
@@ -2017,6 +2598,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2025,7 +2608,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void transformGL()
+
+<!--
 
 _syntax: transformGL()_
 
@@ -2055,6 +2647,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2063,7 +2657,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void restoreTransformGL()
+
+<!--
 
 _syntax: restoreTransformGL()_
 
@@ -2093,6 +2696,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2101,7 +2706,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void resetTransform()
+
+<!--
 
 _syntax: resetTransform()_
 
@@ -2131,6 +2745,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2139,7 +2755,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void customDraw()
+
+<!--
 
 _syntax: customDraw()_
 
@@ -2169,6 +2794,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2177,7 +2804,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void draw()
+
+<!--
 
 _syntax: draw()_
 
@@ -2207,6 +2843,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2215,7 +2853,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void createMatrix()
+
+<!--
 
 _syntax: createMatrix()_
 
@@ -2245,6 +2892,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2253,7 +2902,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void onPositionChanged()
+
+<!--
 
 _syntax: onPositionChanged()_
 
@@ -2283,6 +2941,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2291,7 +2951,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void onOrientationChanged()
+
+<!--
 
 _syntax: onOrientationChanged()_
 
@@ -2321,6 +2990,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2329,7 +3000,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void onScaleChanged()
+
+<!--
 
 _syntax: onScaleChanged()_
 
@@ -2359,7 +3039,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2372,6 +3061,8 @@ _description: _
 
 
 ###ofNode parent
+
+<!--
 
 _name: parent_
 
@@ -2393,6 +3084,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2401,7 +3094,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f position
+
+<!--
 
 _name: position_
 
@@ -2423,6 +3125,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2431,7 +3135,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofQuaternion orientation
+
+<!--
 
 _name: orientation_
 
@@ -2453,6 +3166,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2461,7 +3176,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f scale
+
+<!--
 
 _name: scale_
 
@@ -2483,6 +3207,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2491,7 +3217,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f axis
+
+<!--
 
 _name: axis_
 
@@ -2513,6 +3248,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2521,7 +3258,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofMatrix4x4 localTransformMatrix
+
+<!--
 
 _name: localTransformMatrix_
 
@@ -2543,7 +3289,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

@@ -7,6 +7,9 @@
 
 
 
+
+
+
 Default window manager based on glut. This class provides all the functionality to create a window, change/query it's size, position... and all the keyboard and mouse events.
 
 Introduced in 006 along with ofAppBaseWindow to provide a mean of substituting the underlying windowing toolkit in oF.
@@ -18,11 +21,17 @@ The functionality provided by this class or any other inheriting from ofAppBaseW
 
 
 
+
+
+
+
 ##Methods
 
 
 
 ### ofAppGlutWindow()
+
+<!--
 
 _syntax: ofAppGlutWindow()_
 
@@ -52,6 +61,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -77,7 +88,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void exitApp()
+
+<!--
 
 _syntax: exitApp()_
 
@@ -107,6 +127,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -132,7 +154,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ~ofAppGlutWindow()
+
+<!--
 
 _syntax: ~ofAppGlutWindow()_
 
@@ -162,6 +193,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -187,7 +220,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void display()
+
+<!--
 
 _syntax: display()_
 
@@ -217,6 +259,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -242,7 +286,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setupOpenGL(w, h, screenMode)
+
+<!--
 
 _syntax: setupOpenGL(w, h, screenMode)_
 
@@ -272,6 +325,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -297,7 +352,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void mouse_cb(button, state, x, y)
+
+<!--
 
 _syntax: mouse_cb(button, state, x, y)_
 
@@ -327,6 +391,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -352,7 +418,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void initializeWindow()
+
+<!--
 
 _syntax: initializeWindow()_
 
@@ -382,6 +457,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -407,7 +484,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void motion_cb(x, y)
+
+<!--
 
 _syntax: motion_cb(x, y)_
 
@@ -437,6 +523,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -462,7 +550,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void runAppViaInfiniteLoop(appPtr)
+
+<!--
 
 _syntax: runAppViaInfiniteLoop(appPtr)_
 
@@ -492,6 +589,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -517,7 +616,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void passive_motion_cb(x, y)
+
+<!--
 
 _syntax: passive_motion_cb(x, y)_
 
@@ -547,6 +655,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -572,7 +682,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void hideCursor()
+
+<!--
 
 _syntax: hideCursor()_
 
@@ -602,6 +721,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -627,7 +748,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void idle_cb()
+
+<!--
 
 _syntax: idle_cb()_
 
@@ -657,6 +787,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -682,7 +814,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void showCursor()
+
+<!--
 
 _syntax: showCursor()_
 
@@ -712,6 +853,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -737,7 +880,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void keyboard_cb(key, x, y)
+
+<!--
 
 _syntax: keyboard_cb(key, x, y)_
 
@@ -767,6 +919,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -792,7 +946,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setFullscreen(fullScreen)
+
+<!--
 
 _syntax: setFullscreen(fullScreen)_
 
@@ -822,6 +985,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -847,7 +1012,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void keyboard_up_cb(key, x, y)
+
+<!--
 
 _syntax: keyboard_up_cb(key, x, y)_
 
@@ -877,6 +1051,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -902,7 +1078,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void toggleFullscreen()
+
+<!--
 
 _syntax: toggleFullscreen()_
 
@@ -932,6 +1117,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -957,7 +1144,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void special_key_cb(key, x, y)
+
+<!--
 
 _syntax: special_key_cb(key, x, y)_
 
@@ -987,6 +1183,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1012,7 +1210,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setWindowTitle(title)
+
+<!--
 
 _syntax: setWindowTitle(title)_
 
@@ -1042,6 +1249,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1067,7 +1276,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void special_key_up_cb(key, x, y)
+
+<!--
 
 _syntax: special_key_up_cb(key, x, y)_
 
@@ -1097,6 +1315,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1122,7 +1342,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setWindowPosition(x, y)
+
+<!--
 
 _syntax: setWindowPosition(x, y)_
 
@@ -1152,6 +1381,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1177,7 +1408,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void resize_cb(w, h)
+
+<!--
 
 _syntax: resize_cb(w, h)_
 
@@ -1207,6 +1447,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1232,7 +1474,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setWindowShape(w, h)
+
+<!--
 
 _syntax: setWindowShape(w, h)_
 
@@ -1262,6 +1513,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1287,7 +1540,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofPoint getWindowPosition()
+
+<!--
 
 _syntax: getWindowPosition()_
 
@@ -1317,6 +1579,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1342,7 +1606,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofPoint getWindowSize()
+
+<!--
 
 _syntax: getWindowSize()_
 
@@ -1372,6 +1645,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1397,7 +1672,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofPoint getScreenSize()
+
+<!--
 
 _syntax: getScreenSize()_
 
@@ -1427,6 +1711,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1452,7 +1738,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int getWindowMode()
+
+<!--
 
 _syntax: getWindowMode()_
 
@@ -1482,6 +1777,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1507,7 +1804,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int getFrameNum()
+
+<!--
 
 _syntax: getFrameNum()_
 
@@ -1537,6 +1843,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1562,7 +1870,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float getFrameRate()
+
+<!--
 
 _syntax: getFrameRate()_
 
@@ -1592,6 +1909,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1617,7 +1936,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setFrameRate(targetRate)
+
+<!--
 
 _syntax: setFrameRate(targetRate)_
 
@@ -1647,6 +1975,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1672,7 +2002,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void enableSetupScreen()
+
+<!--
 
 _syntax: enableSetupScreen()_
 
@@ -1702,6 +2041,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1727,7 +2068,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void disableSetupScreen()
+
+<!--
 
 _syntax: disableSetupScreen()_
 
@@ -1757,6 +2107,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1782,7 +2134,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void runAppViaInfiniteLoop(*appPtr)
+
+<!--
 
 _syntax: runAppViaInfiniteLoop(*appPtr)_
 
@@ -1812,6 +2173,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1820,7 +2183,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setGlutDisplayString(str)
+
+<!--
 
 _syntax: setGlutDisplayString(str)_
 
@@ -1850,6 +2222,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1858,7 +2232,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setOrientation(orientation)
+
+<!--
 
 _syntax: setOrientation(orientation)_
 
@@ -1888,6 +2271,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1896,7 +2281,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofOrientation getOrientation()
+
+<!--
 
 _syntax: getOrientation()_
 
@@ -1926,6 +2320,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1934,7 +2330,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int getWidth()
+
+<!--
 
 _syntax: getWidth()_
 
@@ -1964,6 +2369,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1972,7 +2379,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int getHeight()
+
+<!--
 
 _syntax: getHeight()_
 
@@ -2002,6 +2418,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2010,7 +2428,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###double getLastFrameTime()
+
+<!--
 
 _syntax: getLastFrameTime()_
 
@@ -2040,6 +2467,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2048,7 +2477,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void display(void)
+
+<!--
 
 _syntax: display(void)_
 
@@ -2078,6 +2516,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2086,7 +2526,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void idle_cb(void)
+
+<!--
 
 _syntax: idle_cb(void)_
 
@@ -2116,6 +2565,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2124,7 +2575,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void dragEvent(**fileNames, howManyFiles, dragX, dragY)
+
+<!--
 
 _syntax: dragEvent(**fileNames, howManyFiles, dragX, dragY)_
 
@@ -2154,7 +2614,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2167,6 +2636,8 @@ _description: _
 
 
 ###string displayString
+
+<!--
 
 _name: displayString_
 
@@ -2188,7 +2659,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

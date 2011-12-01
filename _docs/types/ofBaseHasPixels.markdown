@@ -13,11 +13,20 @@
 
 
 
+
+
+
+
+
+
+
 ##Methods
 
 
 
 ### ~ofBaseHasPixels()
+
+<!--
 
 _syntax: ~ofBaseHasPixels()_
 
@@ -47,6 +56,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -72,7 +83,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###unsigned char * getPixels()
+
+<!--
 
 _syntax: getPixels()_
 
@@ -102,6 +122,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -127,7 +149,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofPixelsRef getPixelsRef()
+
+<!--
 
 _syntax: getPixelsRef()_
 
@@ -157,6 +188,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -165,7 +198,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float getHeight()
+
+<!--
 
 _syntax: getHeight()_
 
@@ -195,6 +237,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -203,7 +247,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float getWidth()
+
+<!--
 
 _syntax: getWidth()_
 
@@ -233,7 +286,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

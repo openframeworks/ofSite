@@ -7,6 +7,9 @@
 
 
 
+
+
+
 ofCamera provides a camera onto a 3D scene. Some of the different properties of the camera are shown in the picture below:
 
 ![FOV](fov.png)
@@ -21,11 +24,17 @@ The far and near clip planes are the boundaries of what's visible in the camera.
 
 
 
+
+
+
+
 ##Methods
 
 
 
 ###void setFov(f)
+
+<!--
 
 _syntax: setFov(f)_
 
@@ -55,7 +64,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Here you can set the field of view of the camera.
@@ -72,7 +84,15 @@ Here you can set the field of view of the camera.
 
 
 
+
+
+
+
+
+
 ###void setNearClip(f)
+
+<!--
 
 _syntax: setNearClip(f)_
 
@@ -102,7 +122,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 This sets the near clip plane.
@@ -119,7 +142,15 @@ This sets the near clip plane.
 
 
 
+
+
+
+
+
+
 ###void setFarClip(f)
+
+<!--
 
 _syntax: setFarClip(f)_
 
@@ -149,7 +180,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Sets the far clip plane
@@ -166,7 +200,15 @@ Sets the far clip plane
 
 
 
+
+
+
+
+
+
 ###void enableOrtho()
+
+<!--
 
 _syntax: enableOrtho()_
 
@@ -196,7 +238,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Orthographic, or parallel, projections consist of those that involve no perspective correction. There is no adjustment for distance from the camera made in these projections, meaning objects on the screen will appear the same size no matter how close or far away they are. Calling enableOrtho() sets the ofCamera to orthographic mode.
@@ -213,7 +258,15 @@ Orthographic, or parallel, projections consist of those that involve no perspect
 
 
 
+
+
+
+
+
+
 ###void disableOrtho()
+
+<!--
 
 _syntax: disableOrtho()_
 
@@ -243,7 +296,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Calling disableOrtho() turns off the orthographic mode.
@@ -260,7 +316,15 @@ Calling disableOrtho() turns off the orthographic mode.
 
 
 
+
+
+
+
+
+
 ###bool getOrtho()
+
+<!--
 
 _syntax: getOrtho()_
 
@@ -290,7 +354,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Get whether the camera is in orthographic mode.
@@ -307,7 +374,15 @@ Get whether the camera is in orthographic mode.
 
 
 
+
+
+
+
+
+
 ###float getImagePlaneDistance(viewport =  ofGetCurrentViewport)
+
+<!--
 
 _syntax: getImagePlaneDistance(viewport =  ofGetCurrentViewport)_
 
@@ -337,7 +412,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 This allows you to get the image plane distance from any viewport passed in. By default this is the current viewport, but it can be whatever you find useful.
@@ -354,7 +432,15 @@ This allows you to get the image plane distance from any viewport passed in. By 
 
 
 
+
+
+
+
+
+
 ###void begin(viewport =  ofGetCurrentViewport)
+
+<!--
 
 _syntax: begin(viewport =  ofGetCurrentViewport)_
 
@@ -384,7 +470,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 set the matrices that the camera will use.
@@ -401,7 +490,15 @@ set the matrices that the camera will use.
 
 
 
+
+
+
+
+
+
 ###void end()
+
+<!--
 
 _syntax: end()_
 
@@ -431,7 +528,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 set the matrices
@@ -448,7 +548,15 @@ set the matrices
 
 
 
+
+
+
+
+
+
 ###void cacheMatrices(cache = true)
+
+<!--
 
 _syntax: cacheMatrices(cache = true)_
 
@@ -478,7 +586,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 This caches the projection matrix for the ofCamera.
@@ -495,7 +606,15 @@ This caches the projection matrix for the ofCamera.
 
 
 
+
+
+
+
+
+
 ###ofMatrix4x4 getProjectionMatrix(viewport =  ofGetCurrentViewport)
+
+<!--
 
 _syntax: getProjectionMatrix(viewport =  ofGetCurrentViewport)_
 
@@ -525,7 +644,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Access to the projection matrix.
@@ -542,7 +664,15 @@ Access to the projection matrix.
 
 
 
+
+
+
+
+
+
 ###ofMatrix4x4 getModelViewMatrix()
+
+<!--
 
 _syntax: getModelViewMatrix()_
 
@@ -572,7 +702,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Access to the projection matrix.
@@ -589,7 +722,15 @@ Access to the projection matrix.
 
 
 
+
+
+
+
+
+
 ###ofMatrix4x4 getModelViewProjectionMatrix(viewport =  ofGetCurrentViewport)
+
+<!--
 
 _syntax: getModelViewProjectionMatrix(viewport =  ofGetCurrentViewport)_
 
@@ -619,7 +760,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Access to the projection ModelViewProjectionMatrix.
@@ -636,7 +780,15 @@ Access to the projection ModelViewProjectionMatrix.
 
 
 
+
+
+
+
+
+
 ###ofVec3f worldToScreen(WorldXYZ, viewport =  ofGetCurrentViewport)
+
+<!--
 
 _syntax: worldToScreen(WorldXYZ, viewport =  ofGetCurrentViewport)_
 
@@ -666,7 +818,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 When you have a position in world coordinates you can get what it would be in world coordinates, transforming it using the ofCamera.
@@ -683,7 +838,15 @@ When you have a position in world coordinates you can get what it would be in wo
 
 
 
+
+
+
+
+
+
 ###ofVec3f screenToWorld(ScreenXYZ, viewport =  ofGetCurrentViewport)
+
+<!--
 
 _syntax: screenToWorld(ScreenXYZ, viewport =  ofGetCurrentViewport)_
 
@@ -713,7 +876,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 When you have a position in screen coordinates you can get what it would be in world coordinates, transforming it using the ofCamera.
@@ -730,7 +896,15 @@ When you have a position in screen coordinates you can get what it would be in w
 
 
 
+
+
+
+
+
+
 ###ofVec3f worldToCamera(WorldXYZ, viewport =  ofGetCurrentViewport)
+
+<!--
 
 _syntax: worldToCamera(WorldXYZ, viewport =  ofGetCurrentViewport)_
 
@@ -760,7 +934,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 When you have a position in world coordinates you can get what it would be in camera coordinates, transforming it using the ofCamera.
@@ -777,7 +954,15 @@ When you have a position in world coordinates you can get what it would be in ca
 
 
 
+
+
+
+
+
+
 ###ofVec3f cameraToWorld(CameraXYZ, viewport =  ofGetCurrentViewport)
+
+<!--
 
 _syntax: cameraToWorld(CameraXYZ, viewport =  ofGetCurrentViewport)_
 
@@ -807,7 +992,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 When you have a position in camera coordinates you can get what it would be in world coordinates, transforming it using the ofCamera.
@@ -823,7 +1011,15 @@ When you have a position in camera coordinates you can get what it would be in w
 
 
 
+
+
+
+
+
+
 ### ofCamera()
+
+<!--
 
 _syntax: ofCamera()_
 
@@ -853,6 +1049,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -861,7 +1059,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float getFov()
+
+<!--
 
 _syntax: getFov()_
 
@@ -891,6 +1098,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -899,7 +1108,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float getImagePlaneDistance(viewport = ofGetCurrentViewport())
+
+<!--
 
 _syntax: getImagePlaneDistance(viewport = ofGetCurrentViewport())_
 
@@ -929,6 +1147,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -937,7 +1157,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void begin(viewport = ofGetCurrentViewport())
+
+<!--
 
 _syntax: begin(viewport = ofGetCurrentViewport())_
 
@@ -967,6 +1196,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -975,7 +1206,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofMatrix4x4 getProjectionMatrix(viewport = ofGetCurrentViewport())
+
+<!--
 
 _syntax: getProjectionMatrix(viewport = ofGetCurrentViewport())_
 
@@ -1005,6 +1245,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1013,7 +1255,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofMatrix4x4 getModelViewProjectionMatrix(viewport = ofGetCurrentViewport())
+
+<!--
 
 _syntax: getModelViewProjectionMatrix(viewport = ofGetCurrentViewport())_
 
@@ -1043,6 +1294,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1051,7 +1304,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f worldToScreen(WorldXYZ, viewport = ofGetCurrentViewport())
+
+<!--
 
 _syntax: worldToScreen(WorldXYZ, viewport = ofGetCurrentViewport())_
 
@@ -1081,6 +1343,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1089,7 +1353,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f screenToWorld(ScreenXYZ, viewport = ofGetCurrentViewport())
+
+<!--
 
 _syntax: screenToWorld(ScreenXYZ, viewport = ofGetCurrentViewport())_
 
@@ -1119,6 +1392,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1127,7 +1402,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f worldToCamera(WorldXYZ, viewport = ofGetCurrentViewport())
+
+<!--
 
 _syntax: worldToCamera(WorldXYZ, viewport = ofGetCurrentViewport())_
 
@@ -1157,6 +1441,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1165,7 +1451,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f cameraToWorld(CameraXYZ, viewport = ofGetCurrentViewport())
+
+<!--
 
 _syntax: cameraToWorld(CameraXYZ, viewport = ofGetCurrentViewport())_
 
@@ -1195,6 +1490,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1203,7 +1500,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void calcClipPlanes(viewport)
+
+<!--
 
 _syntax: calcClipPlanes(viewport)_
 
@@ -1233,7 +1539,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1246,6 +1561,8 @@ _description: _
 
 
 ###bool isOrtho
+
+<!--
 
 _name: isOrtho_
 
@@ -1267,6 +1584,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1275,7 +1594,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float fov
+
+<!--
 
 _name: fov_
 
@@ -1297,6 +1625,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1305,7 +1635,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float nearClip
+
+<!--
 
 _name: nearClip_
 
@@ -1327,6 +1666,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1335,7 +1676,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float farClip
+
+<!--
 
 _name: farClip_
 
@@ -1357,6 +1707,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1365,7 +1717,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool isActive
+
+<!--
 
 _name: isActive_
 
@@ -1387,6 +1748,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1395,7 +1758,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool hasStoredMatrices
+
+<!--
 
 _name: hasStoredMatrices_
 
@@ -1417,6 +1789,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1425,7 +1799,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofMatrix4x4 matProjection
+
+<!--
 
 _name: matProjection_
 
@@ -1447,6 +1830,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1455,7 +1840,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofMatrix4x4 matModelView
+
+<!--
 
 _name: matModelView_
 
@@ -1477,6 +1871,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1485,7 +1881,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool bCacheMatrices
+
+<!--
 
 _name: bCacheMatrices_
 
@@ -1507,7 +1912,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

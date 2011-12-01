@@ -7,11 +7,20 @@
 
 
 
+
+
+
+
+
+
+
 ##Methods
 
 
 
 ### ~ofBaseSoundInput()
+
+<!--
 
 _syntax: ~ofBaseSoundInput()_
 
@@ -41,6 +50,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -49,7 +60,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void audioIn(*input, bufferSize, nChannels, deviceID, tickCount)
+
+<!--
 
 _syntax: audioIn(*input, bufferSize, nChannels, deviceID, tickCount)_
 
@@ -79,6 +99,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -87,7 +109,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void audioIn(*input, bufferSize, nChannels)
+
+<!--
 
 _syntax: audioIn(*input, bufferSize, nChannels)_
 
@@ -117,6 +148,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -125,7 +158,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void audioReceived(*input, bufferSize, nChannels)
+
+<!--
 
 _syntax: audioReceived(*input, bufferSize, nChannels)_
 
@@ -155,7 +197,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

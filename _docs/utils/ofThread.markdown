@@ -7,11 +7,20 @@
 
 
 
+
+
+
+
+
+
+
 ##Methods
 
 
 
 ### ofThread()
+
+<!--
 
 _syntax: ofThread()_
 
@@ -41,6 +50,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -49,7 +60,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ~ofThread()
+
+<!--
 
 _syntax: ~ofThread()_
 
@@ -79,6 +99,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -87,7 +109,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool isThreadRunning()
+
+<!--
 
 _syntax: isThreadRunning()_
 
@@ -117,6 +148,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -125,7 +158,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void startThread(_blocking = true, _verbose = true)
+
+<!--
 
 _syntax: startThread(_blocking = true, _verbose = true)_
 
@@ -155,6 +197,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -163,7 +207,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool lock()
+
+<!--
 
 _syntax: lock()_
 
@@ -193,6 +246,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -201,7 +256,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool unlock()
+
+<!--
 
 _syntax: unlock()_
 
@@ -231,6 +295,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -239,7 +305,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void stopThread(close = true)
+
+<!--
 
 _syntax: stopThread(close = true)_
 
@@ -269,6 +344,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -277,7 +354,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void waitForThread(stop = true)
+
+<!--
 
 _syntax: waitForThread(stop = true)_
 
@@ -307,6 +393,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -315,7 +403,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void threadedFunction()
+
+<!--
 
 _syntax: threadedFunction()_
 
@@ -345,6 +442,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -353,7 +452,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void * thread(*objPtr)
+
+<!--
 
 _syntax: thread(*objPtr)_
 
@@ -383,7 +491,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -396,6 +513,8 @@ _description: _
 
 
 ###pthread_t myThread
+
+<!--
 
 _name: myThread_
 
@@ -417,6 +536,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -425,7 +546,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofMutex mutex
+
+<!--
 
 _name: mutex_
 
@@ -447,6 +577,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -455,7 +587,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool threadRunning
+
+<!--
 
 _name: threadRunning_
 
@@ -477,6 +618,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -485,7 +628,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool blocking
+
+<!--
 
 _name: blocking_
 
@@ -507,6 +659,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -515,7 +669,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool verbose
+
+<!--
 
 _name: verbose_
 
@@ -537,7 +700,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

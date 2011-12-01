@@ -7,11 +7,20 @@
 
 
 
+
+
+
+
+
+
+
 ##Methods
 
 
 
 ### ofMatrix3x3(_a = 0.0, _b = 0.0, _c = 0.0, _d = 0.0, _e = 0.0, _f = 0.0, _g = 0.0, _h = 0.0, _i = 0.0)
+
+<!--
 
 _syntax: ofMatrix3x3(_a = 0.0, _b = 0.0, _c = 0.0, _d = 0.0, _e = 0.0, _f = 0.0, _g = 0.0, _h = 0.0, _i = 0.0)_
 
@@ -41,6 +50,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -49,7 +60,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void set(_a, _b, _c, _d, _e, _f, _g, _h, _i)
+
+<!--
 
 _syntax: set(_a, _b, _c, _d, _e, _f, _g, _h, _i)_
 
@@ -79,6 +99,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -87,7 +109,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float & operator[](&index)
+
+<!--
 
 _syntax: operator[](&index)_
 
@@ -117,6 +148,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -125,7 +158,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void transpose()
+
+<!--
 
 _syntax: transpose()_
 
@@ -155,6 +197,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -163,7 +207,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofMatrix3x3 transpose(&A)
+
+<!--
 
 _syntax: transpose(&A)_
 
@@ -193,6 +246,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -201,7 +256,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float determinant()
+
+<!--
 
 _syntax: determinant()_
 
@@ -231,6 +295,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -239,7 +305,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float determinant(&A)
+
+<!--
 
 _syntax: determinant(&A)_
 
@@ -269,6 +344,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -277,7 +354,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void invert()
+
+<!--
 
 _syntax: invert()_
 
@@ -307,6 +393,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -315,7 +403,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofMatrix3x3 inverse(&A)
+
+<!--
 
 _syntax: inverse(&A)_
 
@@ -345,6 +442,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -353,7 +452,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofMatrix3x3 operator+(&B)
+
+<!--
 
 _syntax: operator+(&B)_
 
@@ -383,6 +491,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -391,7 +501,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void operator+=(&B)
+
+<!--
 
 _syntax: operator+=(&B)_
 
@@ -421,6 +540,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -429,7 +550,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofMatrix3x3 operator-(&B)
+
+<!--
 
 _syntax: operator-(&B)_
 
@@ -459,6 +589,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -467,7 +599,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void operator-=(&B)
+
+<!--
 
 _syntax: operator-=(&B)_
 
@@ -497,6 +638,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -505,7 +648,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofMatrix3x3 operator*(scalar)
+
+<!--
 
 _syntax: operator*(scalar)_
 
@@ -535,6 +687,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -543,7 +697,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void operator*=(&B)
+
+<!--
 
 _syntax: operator*=(&B)_
 
@@ -573,6 +736,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -581,7 +746,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void operator*=(scalar)
+
+<!--
 
 _syntax: operator*=(scalar)_
 
@@ -611,6 +785,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -619,7 +795,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofMatrix3x3 operator*(&B)
+
+<!--
 
 _syntax: operator*(&B)_
 
@@ -649,6 +834,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -657,7 +844,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofMatrix3x3 operator/(scalar)
+
+<!--
 
 _syntax: operator/(scalar)_
 
@@ -687,6 +883,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -695,7 +893,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void operator/=(&B)
+
+<!--
 
 _syntax: operator/=(&B)_
 
@@ -725,6 +932,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -733,7 +942,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void operator/=(scalar)
+
+<!--
 
 _syntax: operator/=(scalar)_
 
@@ -763,7 +981,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -776,6 +1003,8 @@ _description: _
 
 
 ###float a
+
+<!--
 
 _name: a_
 
@@ -797,6 +1026,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -805,7 +1036,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float b
+
+<!--
 
 _name: b_
 
@@ -827,6 +1067,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -835,7 +1077,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float c
+
+<!--
 
 _name: c_
 
@@ -857,6 +1108,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -865,7 +1118,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float d
+
+<!--
 
 _name: d_
 
@@ -887,6 +1149,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -895,7 +1159,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float e
+
+<!--
 
 _name: e_
 
@@ -917,6 +1190,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -925,7 +1200,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float f
+
+<!--
 
 _name: f_
 
@@ -947,6 +1231,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -955,7 +1241,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float g
+
+<!--
 
 _name: g_
 
@@ -977,6 +1272,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -985,7 +1282,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float h
+
+<!--
 
 _name: h_
 
@@ -1007,6 +1313,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1015,7 +1323,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float i
+
+<!--
 
 _name: i_
 
@@ -1037,7 +1354,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

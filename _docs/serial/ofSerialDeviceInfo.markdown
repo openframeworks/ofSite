@@ -7,11 +7,20 @@
 
 
 
+
+
+
+
+
+
+
 ##Methods
 
 
 
 ### ofSerialDeviceInfo(devicePathIn, deviceNameIn, deviceIDIn)
+
+<!--
 
 _syntax: ofSerialDeviceInfo(devicePathIn, deviceNameIn, deviceIDIn)_
 
@@ -41,6 +50,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -49,7 +60,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ofSerialDeviceInfo()
+
+<!--
 
 _syntax: ofSerialDeviceInfo()_
 
@@ -79,6 +99,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -87,7 +109,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###string getDevicePath()
+
+<!--
 
 _syntax: getDevicePath()_
 
@@ -117,6 +148,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -125,7 +158,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###string getDeviceName()
+
+<!--
 
 _syntax: getDeviceName()_
 
@@ -155,6 +197,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -163,7 +207,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int getDeviceID()
+
+<!--
 
 _syntax: getDeviceID()_
 
@@ -193,7 +246,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -206,6 +268,8 @@ _description: _
 
 
 ###string devicePath
+
+<!--
 
 _name: devicePath_
 
@@ -227,6 +291,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -235,7 +301,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###string deviceName
+
+<!--
 
 _name: deviceName_
 
@@ -257,6 +332,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -265,7 +342,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int deviceID
+
+<!--
 
 _name: deviceID_
 
@@ -287,7 +373,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

@@ -7,11 +7,20 @@
 
 
 
+
+
+
+
+
+
+
 ##Methods
 
 
 
 ### ofxiPhoneSoundStream()
+
+<!--
 
 _syntax: ofxiPhoneSoundStream()_
 
@@ -41,6 +50,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -49,7 +60,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ~ofxiPhoneSoundStream()
+
+<!--
 
 _syntax: ~ofxiPhoneSoundStream()_
 
@@ -79,6 +99,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -87,7 +109,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void listDevices()
+
+<!--
 
 _syntax: listDevices()_
 
@@ -117,6 +148,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -125,7 +158,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setDeviceID(deviceID)
+
+<!--
 
 _syntax: setDeviceID(deviceID)_
 
@@ -155,6 +197,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -163,7 +207,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setInput(*soundInput)
+
+<!--
 
 _syntax: setInput(*soundInput)_
 
@@ -193,6 +246,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -201,7 +256,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setOutput(*soundOutput)
+
+<!--
 
 _syntax: setOutput(*soundOutput)_
 
@@ -231,6 +295,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -239,7 +305,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool setup(outChannels, inChannels, sampleRate, bufferSize, nBuffers)
+
+<!--
 
 _syntax: setup(outChannels, inChannels, sampleRate, bufferSize, nBuffers)_
 
@@ -269,6 +344,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -277,7 +354,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool setup(*app, outChannels, inChannels, sampleRate, bufferSize, nBuffers)
+
+<!--
 
 _syntax: setup(*app, outChannels, inChannels, sampleRate, bufferSize, nBuffers)_
 
@@ -307,6 +393,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -315,7 +403,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void start()
+
+<!--
 
 _syntax: start()_
 
@@ -345,6 +442,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -353,7 +452,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void stop()
+
+<!--
 
 _syntax: stop()_
 
@@ -383,6 +491,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -391,7 +501,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void close()
+
+<!--
 
 _syntax: close()_
 
@@ -421,6 +540,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -429,7 +550,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###long unsigned long getTickCount()
+
+<!--
 
 _syntax: getTickCount()_
 
@@ -459,6 +589,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -467,7 +599,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int getNumInputChannels()
+
+<!--
 
 _syntax: getNumInputChannels()_
 
@@ -497,6 +638,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -505,7 +648,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int getNumOutputChannels()
+
+<!--
 
 _syntax: getNumOutputChannels()_
 
@@ -535,7 +687,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -548,6 +709,8 @@ _description: _
 
 
 ###long unsigned long tickCount
+
+<!--
 
 _name: tickCount_
 
@@ -569,6 +732,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -577,7 +742,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int nInputChannels
+
+<!--
 
 _name: nInputChannels_
 
@@ -599,6 +773,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -607,7 +783,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int nOutputChannels
+
+<!--
 
 _name: nOutputChannels_
 
@@ -629,6 +814,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -637,7 +824,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int sampleRate
+
+<!--
 
 _name: sampleRate_
 
@@ -659,7 +855,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

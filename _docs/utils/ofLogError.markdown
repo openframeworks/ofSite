@@ -7,11 +7,20 @@
 
 
 
+
+
+
+
+
+
+
 ##Methods
 
 
 
 ### ofLogError(&module = "OF")
+
+<!--
 
 _syntax: ofLogError(&module = "OF")_
 
@@ -41,6 +50,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -49,7 +60,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ofLogError(&module, &message)
+
+<!--
 
 _syntax: ofLogError(&module, &message)_
 
@@ -79,7 +99,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

@@ -5,11 +5,20 @@
 
 
 
+
+
+
+
+
+
+
 ##Methods
 
 
 
 ### ofPixels()
+
+<!--
 
 _syntax: ofPixels()_
 
@@ -39,6 +48,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -47,7 +58,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ~ofPixels()
+
+<!--
 
 _syntax: ~ofPixels()_
 
@@ -77,6 +97,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -85,7 +107,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ofPixels(&mom)
+
+<!--
 
 _syntax: ofPixels(&mom)_
 
@@ -115,6 +146,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -123,7 +156,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofPixels operator=(&mom)
+
+<!--
 
 _syntax: operator=(&mom)_
 
@@ -153,6 +195,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -161,7 +205,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void allocate(w, h, bitsPerPixel)
+
+<!--
 
 _syntax: allocate(w, h, bitsPerPixel)_
 
@@ -191,6 +244,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -199,7 +254,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void allocate(w, h, type)
+
+<!--
 
 _syntax: allocate(w, h, type)_
 
@@ -229,6 +293,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -237,7 +303,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void allocate(w, h, type)
+
+<!--
 
 _syntax: allocate(w, h, type)_
 
@@ -267,6 +342,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -275,7 +352,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void set(val)
+
+<!--
 
 _syntax: set(val)_
 
@@ -305,6 +391,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -313,7 +401,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setFromPixels(*newPixels, w, h, newType)
+
+<!--
 
 _syntax: setFromPixels(*newPixels, w, h, newType)_
 
@@ -343,6 +440,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -351,7 +450,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setFromExternalPixels(*newPixels, w, h, newType)
+
+<!--
 
 _syntax: setFromExternalPixels(*newPixels, w, h, newType)_
 
@@ -381,6 +489,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -389,7 +499,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setFromAlignedPixels(*newPixels, w, h, newType, widthStep)
+
+<!--
 
 _syntax: setFromAlignedPixels(*newPixels, w, h, newType, widthStep)_
 
@@ -419,6 +538,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -427,7 +548,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setFromPixels(*newPixels, w, h, bitsPerPixel)
+
+<!--
 
 _syntax: setFromPixels(*newPixels, w, h, bitsPerPixel)_
 
@@ -457,6 +587,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -465,7 +597,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setFromExternalPixels(*newPixels, w, h, bitsPerPixel)
+
+<!--
 
 _syntax: setFromExternalPixels(*newPixels, w, h, bitsPerPixel)_
 
@@ -495,6 +636,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -503,7 +646,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setFromAlignedPixels(*newPixels, w, h, bitsPerPixel, widthStep)
+
+<!--
 
 _syntax: setFromAlignedPixels(*newPixels, w, h, bitsPerPixel, widthStep)_
 
@@ -533,6 +685,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -541,7 +695,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void swapRgb()
+
+<!--
 
 _syntax: swapRgb()_
 
@@ -571,6 +734,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -579,7 +744,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void clear()
+
+<!--
 
 _syntax: clear()_
 
@@ -609,6 +783,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -617,7 +793,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###unsigned char *const getPixels()
+
+<!--
 
 _syntax: getPixels()_
 
@@ -647,6 +832,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -655,7 +842,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int getPixelIndex(x, y)
+
+<!--
 
 _syntax: getPixelIndex(x, y)_
 
@@ -685,6 +881,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -693,7 +891,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofColor getColor(x, y)
+
+<!--
 
 _syntax: getColor(x, y)_
 
@@ -723,6 +930,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -731,7 +940,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setColor(x, y, color)
+
+<!--
 
 _syntax: setColor(x, y, color)_
 
@@ -761,6 +979,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -769,7 +989,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###unsigned char & operator[](pos)
+
+<!--
 
 _syntax: operator[](pos)_
 
@@ -799,6 +1028,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -807,7 +1038,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool isAllocated()
+
+<!--
 
 _syntax: isAllocated()_
 
@@ -837,6 +1077,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -845,7 +1087,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int getWidth()
+
+<!--
 
 _syntax: getWidth()_
 
@@ -875,6 +1126,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -883,7 +1136,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int getHeight()
+
+<!--
 
 _syntax: getHeight()_
 
@@ -913,6 +1175,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -921,7 +1185,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int getBytesPerPixel()
+
+<!--
 
 _syntax: getBytesPerPixel()_
 
@@ -951,6 +1224,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -959,7 +1234,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int getBitsPerPixel()
+
+<!--
 
 _syntax: getBitsPerPixel()_
 
@@ -989,6 +1273,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -997,7 +1283,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofImageType getImageType()
+
+<!--
 
 _syntax: getImageType()_
 
@@ -1027,6 +1322,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1035,7 +1332,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int getGlDataType()
+
+<!--
 
 _syntax: getGlDataType()_
 
@@ -1065,6 +1371,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1073,7 +1381,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void copyFrom(&mom)
+
+<!--
 
 _syntax: copyFrom(&mom)_
 
@@ -1103,7 +1420,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1116,6 +1442,8 @@ _description: _
 
 
 ###unsigned char * pixels
+
+<!--
 
 _name: pixels_
 
@@ -1137,6 +1465,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1145,7 +1475,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int width
+
+<!--
 
 _name: width_
 
@@ -1167,6 +1506,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1175,7 +1516,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int height
+
+<!--
 
 _name: height_
 
@@ -1197,6 +1547,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1205,7 +1557,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int bitsPerPixel
+
+<!--
 
 _name: bitsPerPixel_
 
@@ -1227,6 +1588,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1235,7 +1598,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int bytesPerPixel
+
+<!--
 
 _name: bytesPerPixel_
 
@@ -1257,6 +1629,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1265,7 +1639,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###GLint glDataType
+
+<!--
 
 _name: glDataType_
 
@@ -1287,6 +1670,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1295,7 +1680,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofImageType imageType
+
+<!--
 
 _name: imageType_
 
@@ -1317,6 +1711,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1325,7 +1721,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool bAllocated
+
+<!--
 
 _name: bAllocated_
 
@@ -1347,6 +1752,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1355,7 +1762,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool pixelsOwner
+
+<!--
 
 _name: pixelsOwner_
 
@@ -1377,7 +1793,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

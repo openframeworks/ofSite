@@ -7,11 +7,20 @@
 
 
 
+
+
+
+
+
+
+
 ##Methods
 
 
 
 ### ofHttpRequest()
+
+<!--
 
 _syntax: ofHttpRequest()_
 
@@ -41,6 +50,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -49,7 +60,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ofHttpRequest(url, name, saveTo = false)
+
+<!--
 
 _syntax: ofHttpRequest(url, name, saveTo = false)_
 
@@ -79,6 +99,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -87,7 +109,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int getID()
+
+<!--
 
 _syntax: getID()_
 
@@ -117,7 +148,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -130,6 +170,8 @@ _description: _
 
 
 ###string url
+
+<!--
 
 _name: url_
 
@@ -151,6 +193,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -159,7 +203,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###string name
+
+<!--
 
 _name: name_
 
@@ -181,6 +234,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -189,7 +244,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool saveTo
+
+<!--
 
 _name: saveTo_
 
@@ -211,6 +275,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -219,7 +285,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int id
+
+<!--
 
 _name: id_
 
@@ -241,6 +316,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -249,7 +326,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int nextID
+
+<!--
 
 _name: nextID_
 
@@ -271,7 +357,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

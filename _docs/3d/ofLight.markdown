@@ -7,11 +7,20 @@
 
 
 
+
+
+
+
+
+
+
 ##Methods
 
 
 
 ### ofLight()
+
+<!--
 
 _syntax: ofLight()_
 
@@ -41,6 +50,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -49,7 +60,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ofLight(&mom)
+
+<!--
 
 _syntax: ofLight(&mom)_
 
@@ -79,6 +99,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -87,7 +109,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofLight operator=(&mom)
+
+<!--
 
 _syntax: operator=(&mom)_
 
@@ -117,6 +148,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -125,7 +158,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ~ofLight()
+
+<!--
 
 _syntax: ~ofLight()_
 
@@ -155,6 +197,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -163,7 +207,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void destroy()
+
+<!--
 
 _syntax: destroy()_
 
@@ -193,6 +246,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -201,7 +256,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void enable()
+
+<!--
 
 _syntax: enable()_
 
@@ -231,6 +295,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -239,7 +305,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void disable()
+
+<!--
 
 _syntax: disable()_
 
@@ -269,6 +344,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -277,7 +354,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool getIsEnabled()
+
+<!--
 
 _syntax: getIsEnabled()_
 
@@ -307,6 +393,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -315,7 +403,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setDirectional()
+
+<!--
 
 _syntax: setDirectional()_
 
@@ -345,6 +442,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -353,7 +452,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool getIsDirectional()
+
+<!--
 
 _syntax: getIsDirectional()_
 
@@ -383,6 +491,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -391,7 +501,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setSpotlight(spotCutOff = 45.f, exponent = 0.f)
+
+<!--
 
 _syntax: setSpotlight(spotCutOff = 45.f, exponent = 0.f)_
 
@@ -421,6 +540,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -429,7 +550,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool getIsSpotlight()
+
+<!--
 
 _syntax: getIsSpotlight()_
 
@@ -459,6 +589,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -467,7 +599,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setSpotlightCutOff(spotCutOff)
+
+<!--
 
 _syntax: setSpotlightCutOff(spotCutOff)_
 
@@ -497,6 +638,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -505,7 +648,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setSpotConcentration(exponent)
+
+<!--
 
 _syntax: setSpotConcentration(exponent)_
 
@@ -535,6 +687,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -543,7 +697,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setPointLight()
+
+<!--
 
 _syntax: setPointLight()_
 
@@ -573,6 +736,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -581,7 +746,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool getIsPointLight()
+
+<!--
 
 _syntax: getIsPointLight()_
 
@@ -611,6 +785,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -619,7 +795,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setAttenuation(constant = 2.f, linear = 1.f, quadratic = 0.5f)
+
+<!--
 
 _syntax: setAttenuation(constant = 2.f, linear = 1.f, quadratic = 0.5f)_
 
@@ -649,6 +834,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -657,7 +844,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int getType()
+
+<!--
 
 _syntax: getType()_
 
@@ -687,6 +883,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -695,7 +893,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setAmbientColor(&c)
+
+<!--
 
 _syntax: setAmbientColor(&c)_
 
@@ -725,6 +932,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -733,7 +942,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setDiffuseColor(&c)
+
+<!--
 
 _syntax: setDiffuseColor(&c)_
 
@@ -763,6 +981,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -771,7 +991,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setSpecularColor(&c)
+
+<!--
 
 _syntax: setSpecularColor(&c)_
 
@@ -801,6 +1030,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -809,7 +1040,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofFloatColor getAmbientColor()
+
+<!--
 
 _syntax: getAmbientColor()_
 
@@ -839,6 +1079,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -847,7 +1089,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofFloatColor getDiffuseColor()
+
+<!--
 
 _syntax: getDiffuseColor()_
 
@@ -877,6 +1128,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -885,7 +1138,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofFloatColor getSpecularColor()
+
+<!--
 
 _syntax: getSpecularColor()_
 
@@ -915,6 +1177,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -923,7 +1187,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int getLightID()
+
+<!--
 
 _syntax: getLightID()_
 
@@ -953,6 +1226,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -961,7 +1236,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void customDraw()
+
+<!--
 
 _syntax: customDraw()_
 
@@ -991,6 +1275,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -999,7 +1285,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void onPositionChanged()
+
+<!--
 
 _syntax: onPositionChanged()_
 
@@ -1029,6 +1324,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1037,7 +1334,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void onOrientationChanged()
+
+<!--
 
 _syntax: onOrientationChanged()_
 
@@ -1067,7 +1373,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1080,6 +1395,8 @@ _description: _
 
 
 ###ofFloatColor ambientColor
+
+<!--
 
 _name: ambientColor_
 
@@ -1101,6 +1418,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1109,7 +1428,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofFloatColor diffuseColor
+
+<!--
 
 _name: diffuseColor_
 
@@ -1131,6 +1459,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1139,7 +1469,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofFloatColor specularColor
+
+<!--
 
 _name: specularColor_
 
@@ -1161,6 +1500,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1169,7 +1510,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofLightType lightType
+
+<!--
 
 _name: lightType_
 
@@ -1191,6 +1541,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1199,7 +1551,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int glIndex
+
+<!--
 
 _name: glIndex_
 
@@ -1221,6 +1582,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1229,7 +1592,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int isEnabled
+
+<!--
 
 _name: isEnabled_
 
@@ -1251,6 +1623,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1259,7 +1633,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool isDirectional
+
+<!--
 
 _name: isDirectional_
 
@@ -1281,6 +1664,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1289,7 +1674,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool isSpotlight
+
+<!--
 
 _name: isSpotlight_
 
@@ -1311,7 +1705,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

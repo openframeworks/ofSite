@@ -7,11 +7,20 @@
 
 
 
+
+
+
+
+
+
+
 ##Methods
 
 
 
 ### ofTessellator()
+
+<!--
 
 _syntax: ofTessellator()_
 
@@ -41,6 +50,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -49,7 +60,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ~ofTessellator()
+
+<!--
 
 _syntax: ~ofTessellator()_
 
@@ -79,6 +99,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -87,7 +109,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ofTessellator(&mom)
+
+<!--
 
 _syntax: ofTessellator(&mom)_
 
@@ -117,6 +148,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -125,7 +158,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofTessellator operator=(&mom)
+
+<!--
 
 _syntax: operator=(&mom)_
 
@@ -155,6 +197,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -163,7 +207,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void tessellateToMesh(&src, polyWindingMode, &dstmesh, bIs2D = false)
+
+<!--
 
 _syntax: tessellateToMesh(&src, polyWindingMode, &dstmesh, bIs2D = false)_
 
@@ -193,6 +246,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -201,7 +256,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void tessellateToMesh(&src, polyWindingMode, &dstmesh, bIs2D = false)
+
+<!--
 
 _syntax: tessellateToMesh(&src, polyWindingMode, &dstmesh, bIs2D = false)_
 
@@ -231,6 +295,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -239,7 +305,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void tessellateToPolylines(&src, polyWindingMode, &dstpoly, bIs2D = false)
+
+<!--
 
 _syntax: tessellateToPolylines(&src, polyWindingMode, &dstpoly, bIs2D = false)_
 
@@ -269,6 +344,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -277,7 +354,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void tessellateToPolylines(&src, polyWindingMode, &dstpoly, bIs2D = false)
+
+<!--
 
 _syntax: tessellateToPolylines(&src, polyWindingMode, &dstpoly, bIs2D = false)_
 
@@ -307,6 +393,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -315,7 +403,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void performTessellation(polyWindingMode, &dstmesh, bIs2D)
+
+<!--
 
 _syntax: performTessellation(polyWindingMode, &dstmesh, bIs2D)_
 
@@ -345,6 +442,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -353,7 +452,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void performTessellation(polyWindingMode, &dstpoly, bIs2D)
+
+<!--
 
 _syntax: performTessellation(polyWindingMode, &dstpoly, bIs2D)_
 
@@ -383,6 +491,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -391,7 +501,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void init()
+
+<!--
 
 _syntax: init()_
 
@@ -421,7 +540,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -434,6 +562,8 @@ _description: _
 
 
 ###TESStesselator * cacheTess
+
+<!--
 
 _name: cacheTess_
 
@@ -455,6 +585,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -463,7 +595,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###TESSalloc tessAllocator
+
+<!--
 
 _name: tessAllocator_
 
@@ -485,7 +626,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

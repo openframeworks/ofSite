@@ -7,11 +7,20 @@
 
 
 
+
+
+
+
+
+
+
 ##Methods
 
 
 
 ### ofURLFileLoader()
+
+<!--
 
 _syntax: ofURLFileLoader()_
 
@@ -41,6 +50,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -49,7 +60,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofHttpResponse get(url)
+
+<!--
 
 _syntax: get(url)_
 
@@ -79,6 +99,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -87,7 +109,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int getAsync(url, name = "")
+
+<!--
 
 _syntax: getAsync(url, name = "")_
 
@@ -117,6 +148,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -125,7 +158,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofHttpResponse saveTo(url, path)
+
+<!--
 
 _syntax: saveTo(url, path)_
 
@@ -155,6 +197,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -163,7 +207,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int saveAsync(url, path)
+
+<!--
 
 _syntax: saveAsync(url, path)_
 
@@ -193,6 +246,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -201,7 +256,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void remove(id)
+
+<!--
 
 _syntax: remove(id)_
 
@@ -231,6 +295,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -239,7 +305,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void clear()
+
+<!--
 
 _syntax: clear()_
 
@@ -269,6 +344,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -277,7 +354,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void threadedFunction()
+
+<!--
 
 _syntax: threadedFunction()_
 
@@ -307,6 +393,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -315,7 +403,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void start()
+
+<!--
 
 _syntax: start()_
 
@@ -345,6 +442,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -353,7 +452,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void stop()
+
+<!--
 
 _syntax: stop()_
 
@@ -383,6 +491,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -391,7 +501,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void update(&args)
+
+<!--
 
 _syntax: update(&args)_
 
@@ -421,6 +540,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -429,7 +550,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofHttpResponse handleRequest(request)
+
+<!--
 
 _syntax: handleRequest(request)_
 
@@ -459,7 +589,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -472,6 +611,8 @@ _description: _
 
 
 ###ofHttpRequest requests
+
+<!--
 
 _name: requests_
 
@@ -493,6 +634,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -501,7 +644,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofHttpResponse responses
+
+<!--
 
 _name: responses_
 
@@ -523,6 +675,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -531,11 +685,20 @@ _description: _
 
 
 
-###Poco::Condition condition
+
+
+
+
+
+
+
+###Poco condition
+
+<!--
 
 _name: condition_
 
-_type: Poco::Condition_
+_type: Poco_
 
 _access: private_
 
@@ -553,7 +716,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

@@ -7,11 +7,20 @@
 
 
 
+
+
+
+
+
+
+
 ##Methods
 
 
 
 ### ofGstVideoGrabber()
+
+<!--
 
 _syntax: ofGstVideoGrabber()_
 
@@ -41,6 +50,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -49,7 +60,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ~ofGstVideoGrabber()
+
+<!--
 
 _syntax: ~ofGstVideoGrabber()_
 
@@ -79,6 +99,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -87,7 +109,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setPixelFormat(pixelFormat)
+
+<!--
 
 _syntax: setPixelFormat(pixelFormat)_
 
@@ -117,6 +148,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -125,7 +158,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void videoSettings()
+
+<!--
 
 _syntax: videoSettings()_
 
@@ -155,6 +197,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -163,7 +207,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void listDevices()
+
+<!--
 
 _syntax: listDevices()_
 
@@ -193,6 +246,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -201,7 +256,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setDeviceID(id)
+
+<!--
 
 _syntax: setDeviceID(id)_
 
@@ -231,6 +295,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -239,7 +305,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setDesiredFrameRate(framerate)
+
+<!--
 
 _syntax: setDesiredFrameRate(framerate)_
 
@@ -269,6 +344,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -277,7 +354,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool initGrabber(w, h)
+
+<!--
 
 _syntax: initGrabber(w, h)_
 
@@ -307,6 +393,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -315,7 +403,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void update()
+
+<!--
 
 _syntax: update()_
 
@@ -345,6 +442,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -353,7 +452,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool isFrameNew()
+
+<!--
 
 _syntax: isFrameNew()_
 
@@ -383,6 +491,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -391,7 +501,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###unsigned char * getPixels()
+
+<!--
 
 _syntax: getPixels()_
 
@@ -421,6 +540,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -429,7 +550,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofPixelsRef getPixelsRef()
+
+<!--
 
 _syntax: getPixelsRef()_
 
@@ -459,6 +589,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -467,7 +599,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float getHeight()
+
+<!--
 
 _syntax: getHeight()_
 
@@ -497,6 +638,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -505,7 +648,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float getWidth()
+
+<!--
 
 _syntax: getWidth()_
 
@@ -535,6 +687,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -543,7 +697,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void close()
+
+<!--
 
 _syntax: close()_
 
@@ -573,6 +736,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -581,7 +746,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setVerbose(bVerbose)
+
+<!--
 
 _syntax: setVerbose(bVerbose)_
 
@@ -611,6 +785,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -619,7 +795,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofGstVideoUtils getGstVideoUtils()
+
+<!--
 
 _syntax: getGstVideoUtils()_
 
@@ -649,6 +834,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -657,7 +844,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofGstVideoFormat selectFormat(w, h, desired_framerate)
+
+<!--
 
 _syntax: selectFormat(w, h, desired_framerate)_
 
@@ -687,7 +883,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -700,6 +905,8 @@ _description: _
 
 
 ###ofGstCamData camData
+
+<!--
 
 _name: camData_
 
@@ -721,6 +928,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -729,7 +938,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool bIsCamera
+
+<!--
 
 _name: bIsCamera_
 
@@ -751,6 +969,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -759,7 +979,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int attemptFramerate
+
+<!--
 
 _name: attemptFramerate_
 
@@ -781,6 +1010,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -789,7 +1020,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int deviceID
+
+<!--
 
 _name: deviceID_
 
@@ -811,6 +1051,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -819,7 +1061,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofPixelFormat internalPixelFormat
+
+<!--
 
 _name: internalPixelFormat_
 
@@ -841,6 +1092,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -849,7 +1102,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofGstVideoUtils videoUtils
+
+<!--
 
 _name: videoUtils_
 
@@ -871,7 +1133,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

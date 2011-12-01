@@ -7,7 +7,14 @@
 
 
 
+
+
+
 Extends ofMesh
+
+
+
+
 
 
 
@@ -23,6 +30,8 @@ Extends ofMesh
 
 
 ### 	ofVboMesh()
+
+<!--
 
 _syntax: 	ofVboMesh()_
 
@@ -52,6 +61,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -67,7 +78,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ofVboMesh(mom)
+
+<!--
 
 _syntax: ofVboMesh(mom)_
 
@@ -97,6 +117,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -112,7 +134,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setUsage(usage)
+
+<!--
 
 _syntax: setUsage(usage)_
 
@@ -142,6 +173,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -158,7 +191,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void draw(drawMode)
+
+<!--
 
 _syntax: draw(drawMode)_
 
@@ -188,6 +230,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -203,7 +247,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ofVboMesh()
+
+<!--
 
 _syntax: ofVboMesh()_
 
@@ -233,6 +286,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -241,7 +296,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ofVboMesh(&mom)
+
+<!--
 
 _syntax: ofVboMesh(&mom)_
 
@@ -271,7 +335,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -284,6 +357,8 @@ _description: _
 
 
 ###ofVbo vbo
+
+<!--
 
 _name: vbo_
 
@@ -305,6 +380,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -313,7 +390,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int usage
+
+<!--
 
 _name: usage_
 
@@ -335,6 +421,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -343,7 +431,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int vboNumVerts
+
+<!--
 
 _name: vboNumVerts_
 
@@ -365,6 +462,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -373,7 +472,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int vboNumIndices
+
+<!--
 
 _name: vboNumIndices_
 
@@ -395,6 +503,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -403,7 +513,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int vboNumNormals
+
+<!--
 
 _name: vboNumNormals_
 
@@ -425,6 +544,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -433,7 +554,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int vboNumTexCoords
+
+<!--
 
 _name: vboNumTexCoords_
 
@@ -455,6 +585,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -463,7 +595,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int vboNumColors
+
+<!--
 
 _name: vboNumColors_
 
@@ -485,7 +626,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

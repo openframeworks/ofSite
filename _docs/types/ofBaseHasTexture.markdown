@@ -13,11 +13,20 @@
 
 
 
+
+
+
+
+
+
+
 ##Methods
 
 
 
 ### ~ofBaseHasTexture()
+
+<!--
 
 _syntax: ~ofBaseHasTexture()_
 
@@ -47,6 +56,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -72,7 +83,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofTexture getTextureReference()
+
+<!--
 
 _syntax: getTextureReference()_
 
@@ -102,6 +122,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -127,7 +149,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setUseTexture(bUseTex)
+
+<!--
 
 _syntax: setUseTexture(bUseTex)_
 
@@ -157,7 +188,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

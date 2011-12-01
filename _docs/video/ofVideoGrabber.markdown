@@ -7,8 +7,15 @@
 
 
 
+
+
+
 The ofVideoGrabber class wraps quicktime's sequence grabbing component to provide low level access to live cameras. On windows it now uses the directshow based videoInput library which offers mainy performance advantages over quicktime and does not require quicktime or WinVDig to be installed. A #define in ofConstants.h allows you to choose whether to use quicktime or directshow (default) for windows.
 In linux it uses by default unicap, although you can change to v4l through a #define in ofConstants in case some v4l device doesn't work properly with unicap.
+
+
+
+
 
 
 
@@ -19,6 +26,8 @@ In linux it uses by default unicap, although you can change to v4l through a #de
 
 
 ### ofVideoGrabber()
+
+<!--
 
 _syntax: ofVideoGrabber()_
 
@@ -48,6 +57,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -73,7 +84,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ~ofVideoGrabber()
+
+<!--
 
 _syntax: ~ofVideoGrabber()_
 
@@ -103,6 +123,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -128,7 +150,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void listDevices()
+
+<!--
 
 _syntax: listDevices()_
 
@@ -158,7 +189,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Prints to the console a list of available capture devices with the device ID of each device. The device ID can then be used with setDeviceID() to specify a specific device to capture from.
@@ -183,7 +217,15 @@ Prints to the console a list of available capture devices with the device ID of 
 
 
 
+
+
+
+
+
+
 ###bool isFrameNew()
+
+<!--
 
 _syntax: isFrameNew()_
 
@@ -213,6 +255,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -238,7 +282,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void grabFrame()
+
+<!--
 
 _syntax: grabFrame()_
 
@@ -268,7 +321,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 This function should be called regularly (for example, once per update) if you'd like to get new data from the sequence grabber. It will idle the video grabbing component so that you get new data.
@@ -293,7 +349,15 @@ This function should be called regularly (for example, once per update) if you'd
 
 
 
+
+
+
+
+
+
 ###void close()
+
+<!--
 
 _syntax: close()_
 
@@ -323,7 +387,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Closes the sequence grabber and de-allocates any allocated resources. 
@@ -348,7 +415,15 @@ Closes the sequence grabber and de-allocates any allocated resources.
 
 
 
+
+
+
+
+
+
 ###bool initGrabber(w, h, bTexture)
+
+<!--
 
 _syntax: initGrabber(w, h, bTexture)_
 
@@ -378,7 +453,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Initializes either the default capture device or the capture device specified by setDeviceID. Attempts to setup capture at the width and height specified. If the capture dimensions are not available it will setup capture for the next closest dimensions available. It is good to check what the actual size is before you start processing the pixels.
@@ -418,7 +496,15 @@ bTexture variable tells ofVideoGrabber that it should setup a texture so you can
 
 
 
+
+
+
+
+
+
 ###void videoSettings()
+
+<!--
 
 _syntax: videoSettings()_
 
@@ -448,7 +534,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Loads the video settings on screen. If your opengl application is full screen, this window might appear underneath the main window the first time you call this.
@@ -473,7 +562,15 @@ Loads the video settings on screen. If your opengl application is full screen, t
 
 
 
+
+
+
+
+
+
 ###unsigned char * getPixels()
+
+<!--
 
 _syntax: getPixels()_
 
@@ -503,7 +600,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Returns the pointer to the array of pixels that represents the current frame of live video. the data is stored as RGB, and in an array which is the size: width*height*3.
@@ -528,7 +628,15 @@ Returns the pointer to the array of pixels that represents the current frame of 
 
 
 
+
+
+
+
+
+
 ###ofTexture getTextureReference()
+
+<!--
 
 _syntax: getTextureReference()_
 
@@ -558,6 +666,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -583,7 +693,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setVerbose(bTalkToMe)
+
+<!--
 
 _syntax: setVerbose(bTalkToMe)_
 
@@ -613,7 +732,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Sets the verbosity - this can be useful for debugging the video grabber interface. you can set the verbosity and then try initGrabber();
@@ -648,7 +770,15 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###void setDeviceID(_deviceID)
+
+<!--
 
 _syntax: setDeviceID(_deviceID)_
 
@@ -678,7 +808,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Choose to capture from a specific capture device specified by _deviceID. Use listDevices() to see a list of available capture devices and their device IDs.
@@ -703,7 +836,15 @@ Choose to capture from a specific capture device specified by _deviceID. Use lis
 
 
 
+
+
+
+
+
+
 ###void setUseTexture(bUse)
+
+<!--
 
 _syntax: setUseTexture(bUse)_
 
@@ -733,7 +874,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Set the usage of texture inside this object. Typically, you will want to draw the movie grabber on screen, and so it will be necessary to use a texture, but there may be cases where it helps to not use a texture in order to save memory or for better performance. To disable the internal use of the texture, you can initialize the sequence grabber like this:
@@ -766,7 +910,15 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###void draw(x, y, w, h)
+
+<!--
 
 _syntax: draw(x, y, w, h)_
 
@@ -796,7 +948,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Draws the internal texture of the movie grabber class at the position (x,y) with the given width (w) and height (h). 
@@ -821,7 +976,15 @@ Draws the internal texture of the movie grabber class at the position (x,y) with
 
 
 
+
+
+
+
+
+
 ###void draw(x, y)
+
+<!--
 
 _syntax: draw(x, y)_
 
@@ -851,7 +1014,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Draws the internal texture of the movie grabber class at the position (x,y) with the internal width and height of the movie grabber.
@@ -876,7 +1042,15 @@ Draws the internal texture of the movie grabber class at the position (x,y) with
 
 
 
+
+
+
+
+
+
 ###void update()
+
+<!--
 
 _syntax: update()_
 
@@ -906,7 +1080,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Calls grabframe function.
@@ -931,7 +1108,15 @@ Calls grabframe function.
 
 
 
+
+
+
+
+
+
 ###void setAnchorPercent(xPct, yPct)
+
+<!--
 
 _syntax: setAnchorPercent(xPct, yPct)_
 
@@ -961,6 +1146,8 @@ _advanced: True_
 
 
 
+-->
+
 _description: _
 
 
@@ -986,7 +1173,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setAnchorPoint(x, y)
+
+<!--
 
 _syntax: setAnchorPoint(x, y)_
 
@@ -1016,6 +1212,8 @@ _advanced: True_
 
 
 
+-->
+
 _description: _
 
 
@@ -1041,7 +1239,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void resetAnchor()
+
+<!--
 
 _syntax: resetAnchor()_
 
@@ -1071,6 +1278,8 @@ _advanced: True_
 
 
 
+-->
+
 _description: _
 
 
@@ -1096,7 +1305,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float getHeight()
+
+<!--
 
 _syntax: getHeight()_
 
@@ -1126,6 +1344,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1151,7 +1371,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float getWidth()
+
+<!--
 
 _syntax: getWidth()_
 
@@ -1181,6 +1410,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1206,7 +1437,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setGrabber(newGrabber)
+
+<!--
 
 _syntax: setGrabber(newGrabber)_
 
@@ -1236,6 +1476,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1244,7 +1486,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofPtr getGrabber()
+
+<!--
 
 _syntax: getGrabber()_
 
@@ -1274,6 +1525,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1282,7 +1535,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool initGrabber(w, h)
+
+<!--
 
 _syntax: initGrabber(w, h)_
 
@@ -1312,6 +1574,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1320,7 +1584,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setPixelFormat(pixelFormat)
+
+<!--
 
 _syntax: setPixelFormat(pixelFormat)_
 
@@ -1350,6 +1623,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1358,7 +1633,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofPixelFormat getPixelFormat()
+
+<!--
 
 _syntax: getPixelFormat()_
 
@@ -1388,6 +1672,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1396,7 +1682,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofPixelsRef getPixelsRef()
+
+<!--
 
 _syntax: getPixelsRef()_
 
@@ -1426,6 +1721,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1434,7 +1731,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setDesiredFrameRate(framerate)
+
+<!--
 
 _syntax: setDesiredFrameRate(framerate)_
 
@@ -1464,6 +1770,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1472,7 +1780,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void draw(&p)
+
+<!--
 
 _syntax: draw(&p)_
 
@@ -1502,6 +1819,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1510,7 +1829,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void draw(&r)
+
+<!--
 
 _syntax: draw(&r)_
 
@@ -1540,6 +1868,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1548,7 +1878,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setAnchorPoint(x, y)
+
+<!--
 
 _syntax: setAnchorPoint(x, y)_
 
@@ -1578,6 +1917,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1586,7 +1927,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool isInitialized()
+
+<!--
 
 _syntax: isInitialized()_
 
@@ -1616,7 +1966,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1629,6 +1988,8 @@ _description: _
 
 
 ###int height
+
+<!--
 
 _name: height_
 
@@ -1650,7 +2011,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Variable containing the height of the video grabber.
@@ -1673,7 +2037,15 @@ Variable containing the height of the video grabber.
 
 
 
+
+
+
+
+
+
 ###bool bChooseDevice
+
+<!--
 
 _name: bChooseDevice_
 
@@ -1695,7 +2067,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1720,6 +2101,8 @@ _description: _
 
 ###int width
 
+<!--
+
 _name: width_
 
 _type: int_
@@ -1740,7 +2123,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Variable containing the width of the video grabber.
@@ -1763,7 +2149,15 @@ Variable containing the width of the video grabber.
 
 
 
+
+
+
+
+
+
 ###int deviceID
+
+<!--
 
 _name: deviceID_
 
@@ -1785,7 +2179,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1810,6 +2213,8 @@ _description: _
 
 ###bool bUseTexture
 
+<!--
+
 _name: bUseTexture_
 
 _type: bool_
@@ -1830,7 +2235,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1855,6 +2269,8 @@ _description: _
 
 ###ofTexture tex
 
+<!--
+
 _name: tex_
 
 _type: ofTexture_
@@ -1875,7 +2291,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1900,6 +2325,8 @@ _description: _
 
 ###bool bVerbose
 
+<!--
+
 _name: bVerbose_
 
 _type: bool_
@@ -1920,7 +2347,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1945,6 +2381,8 @@ _description: _
 
 ###bool bGrabberInited
 
+<!--
+
 _name: bGrabberInited_
 
 _type: bool_
@@ -1965,7 +2403,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1990,6 +2437,8 @@ _description: _
 
 ###unsigned char * pixels
 
+<!--
+
 _name: pixels_
 
 _type: unsigned char *_
@@ -2010,7 +2459,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2035,6 +2493,8 @@ _description: _
 
 ###bool bIsFrameNew
 
+<!--
+
 _name: bIsFrameNew_
 
 _type: bool_
@@ -2055,7 +2515,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2080,6 +2549,8 @@ _description: _
 
 ###ofUCUtils ucGrabber
 
+<!--
+
 _name: ucGrabber_
 
 _type: ofUCUtils_
@@ -2100,7 +2571,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2125,6 +2605,8 @@ _description: _
 
 ###bool bInitialized
 
+<!--
+
 _name: bInitialized_
 
 _type: bool_
@@ -2145,6 +2627,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2153,7 +2637,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofPtr grabber
+
+<!--
 
 _name: grabber_
 
@@ -2175,6 +2668,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2183,7 +2678,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int RequestedDeviceID
+
+<!--
 
 _name: RequestedDeviceID_
 
@@ -2205,6 +2709,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2213,7 +2719,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofPixelFormat internalPixelFormat
+
+<!--
 
 _name: internalPixelFormat_
 
@@ -2235,6 +2750,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2243,7 +2760,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int desiredFramerate
+
+<!--
 
 _name: desiredFramerate_
 
@@ -2265,7 +2791,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

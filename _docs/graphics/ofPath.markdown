@@ -15,11 +15,20 @@
 
 
 
+
+
+
+
+
+
+
 ##Methods
 
 
 
 ### ofPath()
+
+<!--
 
 _syntax: ofPath()_
 
@@ -49,6 +58,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -57,7 +68,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void clear()
+
+<!--
 
 _syntax: clear()_
 
@@ -87,6 +107,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -95,7 +117,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void newSubPath()
+
+<!--
 
 _syntax: newSubPath()_
 
@@ -125,6 +156,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -133,7 +166,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void close()
+
+<!--
 
 _syntax: close()_
 
@@ -163,6 +205,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -171,7 +215,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void lineTo(&p)
+
+<!--
 
 _syntax: lineTo(&p)_
 
@@ -201,6 +254,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -209,7 +264,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void lineTo(x, y)
+
+<!--
 
 _syntax: lineTo(x, y)_
 
@@ -239,6 +303,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -247,7 +313,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void lineTo(x, y, z)
+
+<!--
 
 _syntax: lineTo(x, y, z)_
 
@@ -277,6 +352,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -285,7 +362,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void moveTo(&p)
+
+<!--
 
 _syntax: moveTo(&p)_
 
@@ -315,6 +401,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -323,7 +411,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void moveTo(x, y, z = 0)
+
+<!--
 
 _syntax: moveTo(x, y, z = 0)_
 
@@ -353,6 +450,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -361,7 +460,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void curveTo(&p)
+
+<!--
 
 _syntax: curveTo(&p)_
 
@@ -391,6 +499,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -399,7 +509,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void curveTo(x, y)
+
+<!--
 
 _syntax: curveTo(x, y)_
 
@@ -429,6 +548,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -437,7 +558,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void curveTo(x, y, z)
+
+<!--
 
 _syntax: curveTo(x, y, z)_
 
@@ -467,6 +597,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -475,7 +607,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void bezierTo(&cp1, &cp2, &p)
+
+<!--
 
 _syntax: bezierTo(&cp1, &cp2, &p)_
 
@@ -505,6 +646,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -513,7 +656,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void bezierTo(cx1, cy1, cx2, cy2, x, y)
+
+<!--
 
 _syntax: bezierTo(cx1, cy1, cx2, cy2, x, y)_
 
@@ -543,6 +695,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -551,7 +705,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void bezierTo(cx1, cy1, cz1, cx2, cy2, cz2, x, y, z)
+
+<!--
 
 _syntax: bezierTo(cx1, cy1, cz1, cx2, cy2, cz2, x, y, z)_
 
@@ -581,6 +744,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -589,7 +754,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void quadBezierTo(&cp1, &cp2, &p)
+
+<!--
 
 _syntax: quadBezierTo(&cp1, &cp2, &p)_
 
@@ -619,6 +793,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -627,7 +803,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void quadBezierTo(cx1, cy1, cx2, cy2, x, y)
+
+<!--
 
 _syntax: quadBezierTo(cx1, cy1, cx2, cy2, x, y)_
 
@@ -657,6 +842,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -665,7 +852,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void quadBezierTo(cx1, cy1, cz1, cx2, cy2, cz2, x, y, z)
+
+<!--
 
 _syntax: quadBezierTo(cx1, cy1, cz1, cx2, cy2, cz2, x, y, z)_
 
@@ -695,6 +891,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -703,7 +901,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void arc(&centre, radiusX, radiusY, angleBegin, angleEnd)
+
+<!--
 
 _syntax: arc(&centre, radiusX, radiusY, angleBegin, angleEnd)_
 
@@ -733,6 +940,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -741,7 +950,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void arc(x, y, radiusX, radiusY, angleBegin, angleEnd)
+
+<!--
 
 _syntax: arc(x, y, radiusX, radiusY, angleBegin, angleEnd)_
 
@@ -771,6 +989,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -779,7 +999,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void arc(x, y, z, radiusX, radiusY, angleBegin, angleEnd)
+
+<!--
 
 _syntax: arc(x, y, z, radiusX, radiusY, angleBegin, angleEnd)_
 
@@ -809,6 +1038,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -817,7 +1048,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setPolyWindingMode(mode)
+
+<!--
 
 _syntax: setPolyWindingMode(mode)_
 
@@ -847,6 +1087,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -855,7 +1097,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setFilled(hasFill)
+
+<!--
 
 _syntax: setFilled(hasFill)_
 
@@ -885,6 +1136,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -893,7 +1146,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setStrokeWidth(width)
+
+<!--
 
 _syntax: setStrokeWidth(width)_
 
@@ -923,6 +1185,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -931,7 +1195,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setColor(&color)
+
+<!--
 
 _syntax: setColor(&color)_
 
@@ -961,6 +1234,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -969,7 +1244,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setHexColor(hex)
+
+<!--
 
 _syntax: setHexColor(hex)_
 
@@ -999,6 +1283,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1007,7 +1293,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setFillColor(&color)
+
+<!--
 
 _syntax: setFillColor(&color)_
 
@@ -1037,6 +1332,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1045,7 +1342,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setFillHexColor(hex)
+
+<!--
 
 _syntax: setFillHexColor(hex)_
 
@@ -1075,6 +1381,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1083,7 +1391,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setStrokeColor(&color)
+
+<!--
 
 _syntax: setStrokeColor(&color)_
 
@@ -1113,6 +1430,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1121,7 +1440,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setStrokeHexColor(hex)
+
+<!--
 
 _syntax: setStrokeHexColor(hex)_
 
@@ -1151,6 +1479,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1159,7 +1489,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofPolyWindingMode getWindingMode()
+
+<!--
 
 _syntax: getWindingMode()_
 
@@ -1189,6 +1528,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1197,7 +1538,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool isFilled()
+
+<!--
 
 _syntax: isFilled()_
 
@@ -1227,6 +1577,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1235,7 +1587,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofColor getFillColor()
+
+<!--
 
 _syntax: getFillColor()_
 
@@ -1265,6 +1626,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1273,7 +1636,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofColor getStrokeColor()
+
+<!--
 
 _syntax: getStrokeColor()_
 
@@ -1303,6 +1675,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1311,7 +1685,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float getStrokeWidth()
+
+<!--
 
 _syntax: getStrokeWidth()_
 
@@ -1341,6 +1724,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1349,7 +1734,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool hasOutline()
+
+<!--
 
 _syntax: hasOutline()_
 
@@ -1379,6 +1773,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1387,7 +1783,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void draw(x, y)
+
+<!--
 
 _syntax: draw(x, y)_
 
@@ -1417,6 +1822,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1425,7 +1832,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void draw()
+
+<!--
 
 _syntax: draw()_
 
@@ -1455,6 +1871,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1463,7 +1881,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofSubPath getSubPaths()
+
+<!--
 
 _syntax: getSubPaths()_
 
@@ -1493,6 +1920,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1501,7 +1930,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofPolyline getOutline()
+
+<!--
 
 _syntax: getOutline()_
 
@@ -1531,6 +1969,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1539,7 +1979,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofMesh getTessellation()
+
+<!--
 
 _syntax: getTessellation()_
 
@@ -1569,6 +2018,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1577,7 +2028,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void simplify(tolerance = 0.3)
+
+<!--
 
 _syntax: simplify(tolerance = 0.3)_
 
@@ -1607,6 +2067,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1615,7 +2077,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void flagShapeChanged()
+
+<!--
 
 _syntax: flagShapeChanged()_
 
@@ -1645,6 +2116,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1653,7 +2126,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setMode(mode)
+
+<!--
 
 _syntax: setMode(mode)_
 
@@ -1683,6 +2165,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1691,7 +2175,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setCurveResolution(curveResolution)
+
+<!--
 
 _syntax: setCurveResolution(curveResolution)_
 
@@ -1721,6 +2214,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1729,7 +2224,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int getCurveResolution()
+
+<!--
 
 _syntax: getCurveResolution()_
 
@@ -1759,6 +2263,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1767,7 +2273,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setArcResolution(res)
+
+<!--
 
 _syntax: setArcResolution(res)_
 
@@ -1797,6 +2312,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1805,7 +2322,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int getArcResolution()
+
+<!--
 
 _syntax: getArcResolution()_
 
@@ -1835,6 +2361,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1843,7 +2371,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setUseShapeColor(useColor)
+
+<!--
 
 _syntax: setUseShapeColor(useColor)_
 
@@ -1873,6 +2410,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1881,7 +2420,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool getUseShapeColor()
+
+<!--
 
 _syntax: getUseShapeColor()_
 
@@ -1911,6 +2459,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1919,7 +2469,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void tessellate()
+
+<!--
 
 _syntax: tessellate()_
 
@@ -1949,6 +2508,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1957,7 +2518,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void translate(&p)
+
+<!--
 
 _syntax: translate(&p)_
 
@@ -1987,6 +2557,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1995,7 +2567,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void rotate(az, &axis)
+
+<!--
 
 _syntax: rotate(az, &axis)_
 
@@ -2025,6 +2606,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2033,7 +2616,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void scale(x, y)
+
+<!--
 
 _syntax: scale(x, y)_
 
@@ -2063,6 +2655,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2071,7 +2665,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofSubPath lastPath()
+
+<!--
 
 _syntax: lastPath()_
 
@@ -2101,6 +2704,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2109,7 +2714,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofPolyline lastPolyline()
+
+<!--
 
 _syntax: lastPolyline()_
 
@@ -2139,6 +2753,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2147,7 +2763,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void generatePolylinesFromPaths()
+
+<!--
 
 _syntax: generatePolylinesFromPaths()_
 
@@ -2177,7 +2802,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2190,6 +2824,8 @@ _description: _
 
 
 ###ofSubPath paths
+
+<!--
 
 _name: paths_
 
@@ -2211,6 +2847,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2219,7 +2857,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofPolyWindingMode windingMode
+
+<!--
 
 _name: windingMode_
 
@@ -2241,6 +2888,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2249,7 +2898,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofColor fillColor
+
+<!--
 
 _name: fillColor_
 
@@ -2271,6 +2929,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2279,7 +2939,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofColor strokeColor
+
+<!--
 
 _name: strokeColor_
 
@@ -2301,6 +2970,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2309,7 +2980,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float strokeWidth
+
+<!--
 
 _name: strokeWidth_
 
@@ -2331,6 +3011,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2339,7 +3021,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool bFill
+
+<!--
 
 _name: bFill_
 
@@ -2361,6 +3052,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2369,7 +3062,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool bUseShapeColor
+
+<!--
 
 _name: bUseShapeColor_
 
@@ -2391,6 +3093,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2399,7 +3103,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofPolyline polylines
+
+<!--
 
 _name: polylines_
 
@@ -2421,6 +3134,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2429,7 +3144,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofPolyline tessellatedContour
+
+<!--
 
 _name: tessellatedContour_
 
@@ -2451,6 +3175,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2459,7 +3185,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofMesh cachedTessellation
+
+<!--
 
 _name: cachedTessellation_
 
@@ -2481,6 +3216,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2489,7 +3226,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool cachedTessellationValid
+
+<!--
 
 _name: cachedTessellationValid_
 
@@ -2511,6 +3257,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2519,7 +3267,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool hasChanged
+
+<!--
 
 _name: hasChanged_
 
@@ -2541,6 +3298,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2549,7 +3308,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int prevCurveRes
+
+<!--
 
 _name: prevCurveRes_
 
@@ -2571,6 +3339,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2579,7 +3349,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int curveResolution
+
+<!--
 
 _name: curveResolution_
 
@@ -2601,6 +3380,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2609,7 +3390,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int arcResolution
+
+<!--
 
 _name: arcResolution_
 
@@ -2631,6 +3421,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2639,7 +3431,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool bNeedsTessellation
+
+<!--
 
 _name: bNeedsTessellation_
 
@@ -2661,6 +3462,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2669,7 +3472,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###Mode mode
+
+<!--
 
 _name: mode_
 
@@ -2691,6 +3503,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2699,7 +3513,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofTessellator tessellator
+
+<!--
 
 _name: tessellator_
 
@@ -2721,7 +3544,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

@@ -7,11 +7,20 @@
 
 
 
+
+
+
+
+
+
+
 ##Methods
 
 
 
 ### ofLog()
+
+<!--
 
 _syntax: ofLog()_
 
@@ -41,6 +50,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -49,7 +60,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ofLog(logLevel)
+
+<!--
 
 _syntax: ofLog(logLevel)_
 
@@ -79,6 +99,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -87,7 +109,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ofLog(logLevel, &message)
+
+<!--
 
 _syntax: ofLog(logLevel, &message)_
 
@@ -117,6 +148,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -125,7 +158,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ofLog(logLevel, *format, ...)
+
+<!--
 
 _syntax: ofLog(logLevel, *format, ...)_
 
@@ -155,6 +197,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -163,7 +207,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ~ofLog()
+
+<!--
 
 _syntax: ~ofLog()_
 
@@ -193,6 +246,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -201,7 +256,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofLog operator<<(&value)
+
+<!--
 
 _syntax: operator<<(&value)_
 
@@ -231,7 +295,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -241,6 +314,8 @@ _description: _
 
 ###ofLog operator<<(&))
 
+<!--
+
 _syntax: operator<<(&))_
 
 _name: operator<<_
@@ -249,7 +324,7 @@ _returns: ofLog_
 
 _returns_description: _
 
-_parameters: std::ostream &(*func)(std::ostream &)_
+_parameters: std_
 
 _access: public_
 
@@ -261,13 +336,15 @@ _summary: _
 
 _constant: False_
 
-_static: no_
+_static: False_
 
 _visible: True_
 
 _advanced: False_
 
 
+
+-->
 
 _description: _
 
@@ -277,7 +354,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setChannel(channel)
+
+<!--
 
 _syntax: setChannel(channel)_
 
@@ -307,6 +393,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -315,7 +403,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void _log(level, &module, &message)
+
+<!--
 
 _syntax: _log(level, &module, &message)_
 
@@ -345,6 +442,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -353,7 +452,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool checkLog(level, &module)
+
+<!--
 
 _syntax: checkLog(level, &module)_
 
@@ -383,6 +491,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -391,7 +501,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ofLog(&)
+
+<!--
 
 _syntax: ofLog(&)_
 
@@ -421,6 +540,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -429,7 +550,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofLog operator=(&from)
+
+<!--
 
 _syntax: operator=(&from)_
 
@@ -459,6 +589,57 @@ _advanced: False_
 
 
 
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###ofLog operator<<(&))
+
+<!--
+
+_syntax: operator<<(&))_
+
+_name: operator<<_
+
+_returns: ofLog_
+
+_returns_description: _
+
+_parameters: std::ostream &(*func)(std::ostream &)_
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+-->
+
 _description: _
 
 
@@ -472,6 +653,8 @@ _description: _
 
 
 ###ofLogLevel level
+
+<!--
 
 _name: level_
 
@@ -493,6 +676,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -501,7 +686,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool bPrinted
+
+<!--
 
 _name: bPrinted_
 
@@ -523,6 +717,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -531,7 +727,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###string module
+
+<!--
 
 _name: module_
 
@@ -553,6 +758,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -561,11 +768,20 @@ _description: _
 
 
 
-###std::ostringstream message
+
+
+
+
+
+
+
+###std message
+
+<!--
 
 _name: message_
 
-_type: std::ostringstream_
+_type: std_
 
 _access: private_
 
@@ -583,6 +799,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -591,7 +809,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofPtr channel
+
+<!--
 
 _name: channel_
 
@@ -613,7 +840,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

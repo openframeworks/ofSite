@@ -7,11 +7,20 @@
 
 
 
+
+
+
+
+
+
+
 ##Methods
 
 
 
 ### ofPtr()
+
+<!--
 
 _syntax: ofPtr()_
 
@@ -41,6 +50,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -49,7 +60,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ofPtr(*__p)
+
+<!--
 
 _syntax: ofPtr(*__p)_
 
@@ -79,6 +99,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -87,7 +109,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ofPtr(*__p, __d)
+
+<!--
 
 _syntax: ofPtr(*__p, __d)_
 
@@ -117,6 +148,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -125,7 +158,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ofPtr(*__p, __d, &__a)
+
+<!--
 
 _syntax: ofPtr(*__p, __d, &__a)_
 
@@ -155,6 +197,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -163,7 +207,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ofPtr(&__r, *__p)
+
+<!--
 
 _syntax: ofPtr(&__r, *__p)_
 
@@ -193,6 +246,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -201,7 +256,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ofPtr(&__r)
+
+<!--
 
 _syntax: ofPtr(&__r)_
 
@@ -231,6 +295,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -239,7 +305,65 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ofPtr(&__r)
+
+<!--
+
+_syntax: ofPtr(&__r)_
+
+_name: ofPtr_
+
+_returns: _
+
+_returns_description: _
+
+_parameters: const std_
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: False_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### ofPtr(&__r)
+
+<!--
 
 _syntax: ofPtr(&__r)_
 
@@ -268,6 +392,8 @@ _visible: True_
 _advanced: False_
 
 
+
+-->
 
 _description: _
 

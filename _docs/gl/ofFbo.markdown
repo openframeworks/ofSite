@@ -5,6 +5,9 @@
 
 
 
+
+
+
 As an example, with an fbo you can do some drawing to the fbo (instead of to the screen or a texture) and then do some blurring, maybe invert the colors, combine multiple images, all without needing to draw it to the screen until you're ready.
 
 fbos are also used to create views of other scenes, like a TV in a house. A scene can be rendered through an FBO to a texture, then that texture can be applied to the surface of another object.
@@ -55,11 +58,17 @@ $$/code
 
 Bloom effects are also often done with FBO objects as as Multiple Render to Texture or MRT effectrs.
 
+
+
+
+
 ##Methods
 
 
 
 ### ofFbo()
+
+<!--
 
 _syntax: ofFbo()_
 
@@ -89,7 +98,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 This is the default constructor for the ofFbo.
@@ -97,7 +109,15 @@ This is the default constructor for the ofFbo.
 
 
 
+
+
+
+
+
+
 ### ofFbo(&mom)
+
+<!--
 
 _syntax: ofFbo(&mom)_
 
@@ -127,14 +147,25 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 Copies all data from the mom fbo
 
 
 
 
 
+
+
+
+
+
+
 ###ofFbo operator=(&fbo)
+
+<!--
 
 _syntax: operator=(&fbo)_
 
@@ -164,14 +195,25 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 This overloaded operator allows you to set one fbo from another using the = operator. Very convenient.
 
 
 
 
 
+
+
+
+
+
+
 ### ~ofFbo()
+
+<!--
 
 _syntax: ~ofFbo()_
 
@@ -201,6 +243,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -209,7 +253,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void allocate(width, height, internalformat = GL_RGBA, numSamples = 0)
+
+<!--
 
 _syntax: allocate(width, height, internalformat = GL_RGBA, numSamples = 0)_
 
@@ -239,14 +292,25 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 Before you use the fbo you need to allocate it. This sets the width, height, and GL type of the fbo (i.e. whether it has alpha data or not) and the number of samples for MSAA. MSAA is sort of a big topic.
 MSAA is what you typically have in hardware on a modern graphics card. The graphics card renders to a surface that is larger than the final image, but in shading each "cluster" of samples (that will end up in a single pixel on the final screen) the pixel shader is run only once. We save a ton of fill rate, but we still burn memory bandwidth.
 
 This technique does not anti-alias any effects coming out of the shader, because the shader runs at 1x, so alpha cutouts are jagged. This is the most common way to run a forward-rendering game. MSAA does not work for a deferred renderer because lighting decisions are made after the MSAA is "resolved" (down-sized) to its final image size.
 
 
+
+
+
+
+
+
 ###void allocate(settings = Settings())
+
+<!--
 
 _syntax: allocate(settings = Settings())_
 
@@ -276,7 +340,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 You can also allocate the ofFbo using a Settings object
 
@@ -284,7 +351,15 @@ You can also allocate the ofFbo using a Settings object
 
 
 
+
+
+
+
+
+
 ###void draw(x, y)
+
+<!--
 
 _syntax: draw(x, y)_
 
@@ -314,7 +389,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 This allows you draw everything that's in your fbo to the screen using its default height and width at the x, y indicated.
 
@@ -322,7 +400,15 @@ This allows you draw everything that's in your fbo to the screen using its defau
 
 
 
+
+
+
+
+
+
 ###void draw(x, y, width, height)
+
+<!--
 
 _syntax: draw(x, y, width, height)_
 
@@ -352,7 +438,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 This allows you draw everything that's in your fbo to the screen using any height and width. Any stretching is up to you to handle appropriately.
 
 
@@ -360,7 +449,15 @@ This allows you draw everything that's in your fbo to the screen using any heigh
 
 
 
+
+
+
+
+
+
 ###void setAnchorPercent(xPct, yPct)
+
+<!--
 
 _syntax: setAnchorPercent(xPct, yPct)_
 
@@ -390,7 +487,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 You can set the anchor position that the texture will be drawn at. This means that passing 50, 50 will draw the ofFbo center at the point you pass in to the draw() method.
 
@@ -398,7 +498,15 @@ You can set the anchor position that the texture will be drawn at. This means th
 
 
 
+
+
+
+
+
+
 ###void setAnchorPoint(x, y)
+
+<!--
 
 _syntax: setAnchorPoint(x, y)_
 
@@ -428,7 +536,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 This allows you set the anchor position of the texture in the fbo when you draw it.
 
@@ -436,7 +547,15 @@ This allows you set the anchor position of the texture in the fbo when you draw 
 
 
 
+
+
+
+
+
+
 ###void resetAnchor()
+
+<!--
 
 _syntax: resetAnchor()_
 
@@ -466,7 +585,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 This allows you reset the anchor position.
 
 
@@ -474,7 +596,15 @@ This allows you reset the anchor position.
 
 
 
+
+
+
+
+
+
 ###void setDefaultTextureIndex(defaultTexture)
+
+<!--
 
 _syntax: setDefaultTextureIndex(defaultTexture)_
 
@@ -504,7 +634,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 This allows you set the default texture that your fbo will use. If you're using multiple textures, this will return the one that should be draw to, scaled, and positioned.
 
@@ -513,7 +646,15 @@ This allows you set the default texture that your fbo will use. If you're using 
 
 
 
+
+
+
+
+
+
 ###int getDefaultTextureIndex()
+
+<!--
 
 _syntax: getDefaultTextureIndex()_
 
@@ -543,7 +684,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 If you've set the default texture reference, you can get access to it here.
 
@@ -551,7 +695,15 @@ If you've set the default texture reference, you can get access to it here.
 
 
 
+
+
+
+
+
+
 ###ofTexture getTextureReference()
+
+<!--
 
 _syntax: getTextureReference()_
 
@@ -581,7 +733,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 This gives you access to the ofTexture contained w/in the fbo. This returns the texture index returned by setDefaultTextureIndex() if you've set it there.
 
 
@@ -589,7 +744,15 @@ This gives you access to the ofTexture contained w/in the fbo. This returns the 
 
 
 
+
+
+
+
+
+
 ###ofTexture getTextureReference(attachmentPoint)
+
+<!--
 
 _syntax: getTextureReference(attachmentPoint)_
 
@@ -619,7 +782,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 This gives you access to a particular ofTexture if there are more than 1 contained w/in the fbo.
 
@@ -627,7 +793,15 @@ This gives you access to a particular ofTexture if there are more than 1 contain
 
 
 
+
+
+
+
+
+
 ###void setUseTexture(bUseTex)
+
+<!--
 
 _syntax: setUseTexture(bUseTex)_
 
@@ -657,7 +831,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 This method does nothing.
 
@@ -665,7 +842,15 @@ This method does nothing.
 
 
 
+
+
+
+
+
+
 ###void begin()
+
+<!--
 
 _syntax: begin()_
 
@@ -695,7 +880,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 Any drawing that you do after begin() is drawn into the fbo rather than the screen. This is how you draw things into your ofFbo instance.
@@ -703,7 +891,15 @@ Any drawing that you do after begin() is drawn into the fbo rather than the scre
 
 
 
+
+
+
+
+
+
 ###void end()
+
+<!--
 
 _syntax: end()_
 
@@ -733,7 +929,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 Any drawing that you do after end() is drawn into the fbo rather than the screen. This is how you stop drawing things into your ofFbo instance.
 
@@ -741,7 +940,15 @@ Any drawing that you do after end() is drawn into the fbo rather than the screen
 
 
 
+
+
+
+
+
+
 ###void readToPixels(&pixels, attachmentPoint = 0)
+
+<!--
 
 _syntax: readToPixels(&pixels, attachmentPoint = 0)_
 
@@ -771,7 +978,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 This allows you to get the pixels from an ofFbo and store it in an ofPixels instance. The attachmentPoint parameter allows you indicate which of the textures attached to the fbo you want to grab
 
@@ -780,7 +990,15 @@ This allows you to get the pixels from an ofFbo and store it in an ofPixels inst
 
 
 
+
+
+
+
+
+
 ###void readToPixels(&pixels, attachmentPoint = 0)
+
+<!--
 
 _syntax: readToPixels(&pixels, attachmentPoint = 0)_
 
@@ -810,7 +1028,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 This allows you to get the pixels from an ofFbo and store it in an ofShortPixels instance. The attachmentPoint parameter allows you indicate which of the textures attached to the fbo you want to grab. The ofShortPixels instance is useful when you want your image at short ints, or non-floating point values.
@@ -819,7 +1040,15 @@ This allows you to get the pixels from an ofFbo and store it in an ofShortPixels
 
 
 
+
+
+
+
+
+
 ###void readToPixels(&pixels, attachmentPoint = 0)
+
+<!--
 
 _syntax: readToPixels(&pixels, attachmentPoint = 0)_
 
@@ -849,7 +1078,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 This allows you to get the pixels from an ofFbo and store it in an ofShortPixels instance. The attachmentPoint parameter allows you indicate which of the textures attached to the fbo you want to grab. The ofShortPixels instance is useful when you want your image as floating point values.
 
@@ -858,7 +1090,15 @@ This allows you to get the pixels from an ofFbo and store it in an ofShortPixels
 
 
 
+
+
+
+
+
+
 ###float getWidth()
+
+<!--
 
 _syntax: getWidth()_
 
@@ -888,7 +1128,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 This returns the width of the fbo that was set when it was allocated. This is just like width of a texture: it sets how many pixels wide the allocated memory on the graphics card is.
 
@@ -896,7 +1139,15 @@ This returns the width of the fbo that was set when it was allocated. This is ju
 
 
 
+
+
+
+
+
+
 ###float getHeight()
+
+<!--
 
 _syntax: getHeight()_
 
@@ -926,7 +1177,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 This returns the height of the fbo. This is just like height of a texture: it sets how many pixels wide the allocated memory on the graphics card is.
 
@@ -934,7 +1188,15 @@ This returns the height of the fbo. This is just like height of a texture: it se
 
 
 
+
+
+
+
+
+
 ###void bind()
+
+<!--
 
 _syntax: bind()_
 
@@ -964,7 +1226,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 This lets you draw the fbo using vertices to define the area that the fbo will be drawn into. This can be an ofRectangle, ofMesh, or other vertex based drawing technique.
@@ -972,7 +1237,15 @@ This lets you draw the fbo using vertices to define the area that the fbo will b
 
 
 
+
+
+
+
+
+
 ###void unbind()
+
+<!--
 
 _syntax: unbind()_
 
@@ -1002,7 +1275,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 After you bind the fbo and draw with it, call fbo to stop the fbo from being attached to vertices that are created.
 
@@ -1010,7 +1286,15 @@ After you bind the fbo and draw with it, call fbo to stop the fbo from being att
 
 
 
+
+
+
+
+
+
 ###int getNumTextures()
+
+<!--
 
 _syntax: getNumTextures()_
 
@@ -1040,7 +1324,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 This returns the number of textures that the fbo contains.
 
@@ -1048,7 +1335,15 @@ This returns the number of textures that the fbo contains.
 
 
 
+
+
+
+
+
+
 ###GLuint getFbo()
+
+<!--
 
 _syntax: getFbo()_
 
@@ -1078,7 +1373,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 This returnes the GLuint of Fbo for advanced actions, if you're interested in doing something with the FBO id directly.
 
@@ -1086,7 +1384,15 @@ This returnes the GLuint of Fbo for advanced actions, if you're interested in do
 
 
 
+
+
+
+
+
+
 ###GLuint getDepthBuffer()
+
+<!--
 
 _syntax: getDepthBuffer()_
 
@@ -1116,7 +1422,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 This gives you the OpenGL id of the depthBuffer that the fbo contains.
 
@@ -1124,7 +1433,15 @@ This gives you the OpenGL id of the depthBuffer that the fbo contains.
 
 
 
+
+
+
+
+
+
 ###GLuint getStencilBuffer()
+
+<!--
 
 _syntax: getStencilBuffer()_
 
@@ -1154,7 +1471,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 This gives you the OpenGL id of the depthBuffer that the fbo contains.
 
@@ -1162,7 +1482,15 @@ This gives you the OpenGL id of the depthBuffer that the fbo contains.
 
 
 
+
+
+
+
+
+
 ###bool checkGLSupport()
+
+<!--
 
 _syntax: checkGLSupport()_
 
@@ -1192,7 +1520,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 This allows you quickly check whether your graphics card supports FBO objects.
 
@@ -1200,7 +1531,15 @@ This allows you quickly check whether your graphics card supports FBO objects.
 
 
 
+
+
+
+
+
+
 ###int maxColorAttachments()
+
+<!--
 
 _syntax: maxColorAttachments()_
 
@@ -1230,7 +1569,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 This returnes the max number of simultaneous max color attachments, i.e. textures that will just be used for color information.
@@ -1238,7 +1580,15 @@ This returnes the max number of simultaneous max color attachments, i.e. texture
 
 
 
+
+
+
+
+
+
 ###int maxDrawBuffers()
+
+<!--
 
 _syntax: maxDrawBuffers()_
 
@@ -1268,7 +1618,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 This returnes the max number of simultaneous draw buffers that your graphics card supports, i.e. color buffers that can be drawn to simultaneously. This is usually 4 at present.
@@ -1276,7 +1629,15 @@ This returnes the max number of simultaneous draw buffers that your graphics car
 
 
 
+
+
+
+
+
+
 ###int maxSamples()
+
+<!--
 
 _syntax: maxSamples()_
 
@@ -1306,7 +1667,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 This is the maximum number of MSAA samples that your graphic card supports.
 
@@ -1314,7 +1678,15 @@ This is the maximum number of MSAA samples that your graphic card supports.
 
 
 
+
+
+
+
+
+
 ###void destroy()
+
+<!--
 
 _syntax: destroy()_
 
@@ -1344,6 +1716,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1351,7 +1725,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool checkStatus()
+
+<!--
 
 _syntax: checkStatus()_
 
@@ -1381,6 +1764,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1389,7 +1774,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void createAndAttachTexture(attachmentPoint)
+
+<!--
 
 _syntax: createAndAttachTexture(attachmentPoint)_
 
@@ -1419,6 +1813,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1427,7 +1823,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###GLuint createAndAttachRenderbuffer(internalFormat, attachmentPoint)
+
+<!--
 
 _syntax: createAndAttachRenderbuffer(internalFormat, attachmentPoint)_
 
@@ -1457,6 +1862,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1465,7 +1872,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void updateTexture(attachmentPoint)
+
+<!--
 
 _syntax: updateTexture(attachmentPoint)_
 
@@ -1495,7 +1911,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1508,6 +1933,8 @@ _description: _
 
 
 ###Settings settings
+
+<!--
 
 _name: settings_
 
@@ -1529,6 +1956,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1537,7 +1966,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int isBound
+
+<!--
 
 _name: isBound_
 
@@ -1559,6 +1997,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1567,7 +2007,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###GLuint fbo
+
+<!--
 
 _name: fbo_
 
@@ -1589,6 +2038,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1597,7 +2048,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###GLuint fboTextures
+
+<!--
 
 _name: fboTextures_
 
@@ -1619,6 +2079,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1627,7 +2089,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###GLuint depthBuffer
+
+<!--
 
 _name: depthBuffer_
 
@@ -1649,6 +2120,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1657,7 +2130,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###GLuint stencilBuffer
+
+<!--
 
 _name: stencilBuffer_
 
@@ -1679,6 +2161,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1687,7 +2171,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###GLint savedFramebuffer
+
+<!--
 
 _name: savedFramebuffer_
 
@@ -1709,6 +2202,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1717,7 +2212,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###vector< GLuint > colorBuffers
+
+<!--
 
 _name: colorBuffers_
 
@@ -1739,6 +2243,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1747,7 +2253,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofTexture textures
+
+<!--
 
 _name: textures_
 
@@ -1769,6 +2284,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1777,7 +2294,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool dirty
+
+<!--
 
 _name: dirty_
 
@@ -1799,6 +2325,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1807,7 +2335,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int defaultTextureIndex
+
+<!--
 
 _name: defaultTextureIndex_
 
@@ -1829,6 +2366,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1837,7 +2376,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int _maxColorAttachments
+
+<!--
 
 _name: _maxColorAttachments_
 
@@ -1859,6 +2407,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1867,7 +2417,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int _maxDrawBuffers
+
+<!--
 
 _name: _maxDrawBuffers_
 
@@ -1889,6 +2448,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1897,7 +2458,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int _maxSamples
+
+<!--
 
 _name: _maxSamples_
 
@@ -1919,7 +2489,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

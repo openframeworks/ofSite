@@ -13,11 +13,20 @@
 
 
 
+
+
+
+
+
+
+
 ##Methods
 
 
 
 ### ~ofBaseDraws()
+
+<!--
 
 _syntax: ~ofBaseDraws()_
 
@@ -47,6 +56,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -72,7 +83,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void draw(x, y)
+
+<!--
 
 _syntax: draw(x, y)_
 
@@ -102,6 +122,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -127,7 +149,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void draw(x, y, w, h)
+
+<!--
 
 _syntax: draw(x, y, w, h)_
 
@@ -157,6 +188,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -182,7 +215,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float getHeight()
+
+<!--
 
 _syntax: getHeight()_
 
@@ -212,6 +254,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -237,7 +281,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float getWidth()
+
+<!--
 
 _syntax: getWidth()_
 
@@ -267,6 +320,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -292,7 +347,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setAnchorPercent(xPct, yPct)
+
+<!--
 
 _syntax: setAnchorPercent(xPct, yPct)_
 
@@ -322,6 +386,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -347,7 +413,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setAnchorPoint(x, y)
+
+<!--
 
 _syntax: setAnchorPoint(x, y)_
 
@@ -377,6 +452,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -402,7 +479,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void resetAnchor()
+
+<!--
 
 _syntax: resetAnchor()_
 
@@ -432,6 +518,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -457,7 +545,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void draw(&point)
+
+<!--
 
 _syntax: draw(&point)_
 
@@ -487,6 +584,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -495,7 +594,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void draw(&rect)
+
+<!--
 
 _syntax: draw(&rect)_
 
@@ -525,6 +633,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -533,7 +643,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setAnchorPoint(x, y)
+
+<!--
 
 _syntax: setAnchorPoint(x, y)_
 
@@ -563,7 +682,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

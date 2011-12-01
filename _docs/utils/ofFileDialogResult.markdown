@@ -7,11 +7,20 @@
 
 
 
+
+
+
+
+
+
+
 ##Methods
 
 
 
 ### ofFileDialogResult()
+
+<!--
 
 _syntax: ofFileDialogResult()_
 
@@ -41,6 +50,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -49,7 +60,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###string getName()
+
+<!--
 
 _syntax: getName()_
 
@@ -79,6 +99,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -87,7 +109,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###string getPath()
+
+<!--
 
 _syntax: getPath()_
 
@@ -117,7 +148,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -130,6 +170,8 @@ _description: _
 
 
 ###string filePath
+
+<!--
 
 _name: filePath_
 
@@ -151,6 +193,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -159,7 +203,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###string fileName
+
+<!--
 
 _name: fileName_
 
@@ -181,6 +234,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -189,7 +244,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool bSuccess
+
+<!--
 
 _name: bSuccess_
 
@@ -211,7 +275,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

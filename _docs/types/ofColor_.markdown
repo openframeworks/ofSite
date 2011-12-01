@@ -7,15 +7,24 @@
 
 
 
+
+
+
+
+
+
+
 ##Methods
 
 
 
 ### ofColor_()
 
+<!--
+
 _syntax: ofColor_()_
 
-_name: ofColor__
+_name: ofColor_
 
 _returns: _
 
@@ -33,7 +42,7 @@ _summary: _
 
 _constant: False_
 
-_static: no_
+_static: False_
 
 _visible: True_
 
@@ -41,7 +50,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -51,9 +69,11 @@ _description: _
 
 ### ~ofColor_()
 
+<!--
+
 _syntax: ~ofColor_()_
 
-_name: ~ofColor__
+_name: ~ofColor_
 
 _returns: _
 
@@ -71,13 +91,15 @@ _summary: _
 
 _constant: False_
 
-_static: no_
+_static: False_
 
 _visible: True_
 
 _advanced: False_
 
 
+
+-->
 
 _description: _
 
@@ -87,11 +109,20 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ofColor_(_r, _g, _b, _a = limit())
+
+<!--
 
 _syntax: ofColor_(_r, _g, _b, _a = limit())_
 
-_name: ofColor__
+_name: ofColor_
 
 _returns: _
 
@@ -109,13 +140,15 @@ _summary: _
 
 _constant: False_
 
-_static: no_
+_static: False_
 
 _visible: True_
 
 _advanced: False_
 
 
+
+-->
 
 _description: _
 
@@ -125,11 +158,20 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ofColor_(&color)
+
+<!--
 
 _syntax: ofColor_(&color)_
 
-_name: ofColor__
+_name: ofColor_
 
 _returns: _
 
@@ -147,13 +189,15 @@ _summary: _
 
 _constant: False_
 
-_static: no_
+_static: False_
 
 _visible: True_
 
 _advanced: False_
 
 
+
+-->
 
 _description: _
 
@@ -163,11 +207,20 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ofColor_(&color, _a)
+
+<!--
 
 _syntax: ofColor_(&color, _a)_
 
-_name: ofColor__
+_name: ofColor_
 
 _returns: _
 
@@ -185,13 +238,15 @@ _summary: _
 
 _constant: False_
 
-_static: no_
+_static: False_
 
 _visible: True_
 
 _advanced: False_
 
 
+
+-->
 
 _description: _
 
@@ -201,11 +256,20 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ofColor_(gray, _a = limit())
+
+<!--
 
 _syntax: ofColor_(gray, _a = limit())_
 
-_name: ofColor__
+_name: ofColor_
 
 _returns: _
 
@@ -223,13 +287,15 @@ _summary: _
 
 _constant: False_
 
-_static: no_
+_static: False_
 
 _visible: True_
 
 _advanced: False_
 
 
+
+-->
 
 _description: _
 
@@ -239,11 +305,20 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ofColor_(&color)
+
+<!--
 
 _syntax: ofColor_(&color)_
 
-_name: ofColor__
+_name: ofColor_
 
 _returns: _
 
@@ -261,13 +336,15 @@ _summary: _
 
 _constant: False_
 
-_static: no_
+_static: False_
 
 _visible: True_
 
 _advanced: False_
 
 
+
+-->
 
 _description: _
 
@@ -277,7 +354,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void set(_r, _g, _b, _a = limit())
+
+<!--
 
 _syntax: set(_r, _g, _b, _a = limit())_
 
@@ -307,6 +393,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -315,7 +403,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void set(_gray, _a = limit())
+
+<!--
 
 _syntax: set(_gray, _a = limit())_
 
@@ -345,6 +442,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -353,7 +452,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void set(&color)
+
+<!--
 
 _syntax: set(&color)_
 
@@ -383,6 +491,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -391,7 +501,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setHex(hexColor, alpha = limit())
+
+<!--
 
 _syntax: setHex(hexColor, alpha = limit())_
 
@@ -421,6 +540,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -429,7 +550,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int getHex()
+
+<!--
 
 _syntax: getHex()_
 
@@ -459,6 +589,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -467,7 +599,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofColor_ clamp()
+
+<!--
 
 _syntax: clamp()_
 
@@ -497,6 +638,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -505,7 +648,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofColor_ invert()
+
+<!--
 
 _syntax: invert()_
 
@@ -535,6 +687,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -543,7 +697,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofColor_ normalize()
+
+<!--
 
 _syntax: normalize()_
 
@@ -573,6 +736,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -581,7 +746,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofColor_ lerp(&target, amount)
+
+<!--
 
 _syntax: lerp(&target, amount)_
 
@@ -611,6 +785,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -619,7 +795,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofColor_ getClamped()
+
+<!--
 
 _syntax: getClamped()_
 
@@ -649,6 +834,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -657,7 +844,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofColor_ getInverted()
+
+<!--
 
 _syntax: getInverted()_
 
@@ -687,6 +883,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -695,7 +893,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofColor_ getNormalized()
+
+<!--
 
 _syntax: getNormalized()_
 
@@ -725,6 +932,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -733,7 +942,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofColor_ getLerped(&target, amount)
+
+<!--
 
 _syntax: getLerped(&target, amount)_
 
@@ -763,6 +981,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -771,7 +991,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float getHue()
+
+<!--
 
 _syntax: getHue()_
 
@@ -801,6 +1030,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -809,7 +1040,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float getSaturation()
+
+<!--
 
 _syntax: getSaturation()_
 
@@ -839,6 +1079,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -847,7 +1089,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float getBrightness()
+
+<!--
 
 _syntax: getBrightness()_
 
@@ -877,6 +1128,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -885,7 +1138,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float getLightness()
+
+<!--
 
 _syntax: getLightness()_
 
@@ -915,6 +1177,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -923,7 +1187,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void getHsb(&hue, &saturation, &brightness)
+
+<!--
 
 _syntax: getHsb(&hue, &saturation, &brightness)_
 
@@ -953,6 +1226,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -961,7 +1236,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setHue(hue)
+
+<!--
 
 _syntax: setHue(hue)_
 
@@ -991,6 +1275,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -999,7 +1285,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setSaturation(saturation)
+
+<!--
 
 _syntax: setSaturation(saturation)_
 
@@ -1029,6 +1324,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1037,7 +1334,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setBrightness(brightness)
+
+<!--
 
 _syntax: setBrightness(brightness)_
 
@@ -1067,6 +1373,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1075,7 +1383,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setHsb(hue, saturation, brightness, alpha)
+
+<!--
 
 _syntax: setHsb(hue, saturation, brightness, alpha)_
 
@@ -1105,6 +1422,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1113,7 +1432,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setHsb(hue, saturation, brightness)
+
+<!--
 
 _syntax: setHsb(hue, saturation, brightness)_
 
@@ -1143,6 +1471,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1151,7 +1481,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofColor_ operator=(&color)
+
+<!--
 
 _syntax: operator=(&color)_
 
@@ -1181,6 +1520,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1189,7 +1530,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofColor_ operator=(&color)
+
+<!--
 
 _syntax: operator=(&color)_
 
@@ -1219,6 +1569,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1227,7 +1579,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofColor_ operator=(&val)
+
+<!--
 
 _syntax: operator=(&val)_
 
@@ -1257,6 +1618,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1265,7 +1628,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool operator==(&color)
+
+<!--
 
 _syntax: operator==(&color)_
 
@@ -1295,6 +1667,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1303,7 +1677,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool operator!=(&color)
+
+<!--
 
 _syntax: operator!=(&color)_
 
@@ -1333,6 +1716,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1341,7 +1726,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofColor_ operator+(&color)
+
+<!--
 
 _syntax: operator+(&color)_
 
@@ -1371,6 +1765,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1379,7 +1775,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofColor_ operator+(&val)
+
+<!--
 
 _syntax: operator+(&val)_
 
@@ -1409,6 +1814,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1417,7 +1824,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofColor_ operator+=(&color)
+
+<!--
 
 _syntax: operator+=(&color)_
 
@@ -1447,6 +1863,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1455,7 +1873,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofColor_ operator+=(&val)
+
+<!--
 
 _syntax: operator+=(&val)_
 
@@ -1485,6 +1912,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1493,7 +1922,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofColor_ operator-(&color)
+
+<!--
 
 _syntax: operator-(&color)_
 
@@ -1523,6 +1961,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1531,7 +1971,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofColor_ operator-(&val)
+
+<!--
 
 _syntax: operator-(&val)_
 
@@ -1561,6 +2010,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1569,7 +2020,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofColor_ operator-=(&color)
+
+<!--
 
 _syntax: operator-=(&color)_
 
@@ -1599,6 +2059,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1607,7 +2069,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofColor_ operator-=(&val)
+
+<!--
 
 _syntax: operator-=(&val)_
 
@@ -1637,6 +2108,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1645,7 +2118,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofColor_ operator*(&color)
+
+<!--
 
 _syntax: operator*(&color)_
 
@@ -1675,6 +2157,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1683,7 +2167,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofColor_ operator*(&val)
+
+<!--
 
 _syntax: operator*(&val)_
 
@@ -1713,6 +2206,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1721,7 +2216,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofColor_ operator*=(&color)
+
+<!--
 
 _syntax: operator*=(&color)_
 
@@ -1751,6 +2255,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1759,7 +2265,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofColor_ operator*=(&val)
+
+<!--
 
 _syntax: operator*=(&val)_
 
@@ -1789,6 +2304,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1797,7 +2314,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofColor_ operator/(&color)
+
+<!--
 
 _syntax: operator/(&color)_
 
@@ -1827,6 +2353,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1835,7 +2363,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofColor_ operator/(&val)
+
+<!--
 
 _syntax: operator/(&val)_
 
@@ -1865,6 +2402,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1873,7 +2412,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofColor_ operator/=(&color)
+
+<!--
 
 _syntax: operator/=(&color)_
 
@@ -1903,6 +2451,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1911,7 +2461,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofColor_ operator/=(&val)
+
+<!--
 
 _syntax: operator/=(&val)_
 
@@ -1941,6 +2500,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1949,7 +2510,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###PixelType & operator[](n)
+
+<!--
 
 _syntax: operator[](n)_
 
@@ -1979,6 +2549,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1987,7 +2559,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofColor_ fromHsb(hue, saturation, brightness, alpha = limit())
+
+<!--
 
 _syntax: fromHsb(hue, saturation, brightness, alpha = limit())_
 
@@ -2017,6 +2598,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2025,7 +2608,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofColor_ fromHex(hexColor, alpha = limit())
+
+<!--
 
 _syntax: fromHex(hexColor, alpha = limit())_
 
@@ -2055,6 +2647,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2063,7 +2657,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float limit()
+
+<!--
 
 _syntax: limit()_
 
@@ -2093,6 +2696,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2101,7 +2706,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void copyFrom(&mom)
+
+<!--
 
 _syntax: copyFrom(&mom)_
 
@@ -2131,6 +2745,309 @@ _advanced: False_
 
 
 
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### ofColor_()
+
+<!--
+
+_syntax: ofColor_()_
+
+_name: ofColor__
+
+_returns: _
+
+_returns_description: _
+
+_parameters: _
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+-->
+
+_description: _
+
+
+
+
+
+
+
+### ~ofColor_()
+
+<!--
+
+_syntax: ~ofColor_()_
+
+_name: ~ofColor__
+
+_returns: _
+
+_returns_description: _
+
+_parameters: _
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+-->
+
+_description: _
+
+
+
+
+
+
+
+### ofColor_(_r, _g, _b, _a = limit())
+
+<!--
+
+_syntax: ofColor_(_r, _g, _b, _a = limit())_
+
+_name: ofColor__
+
+_returns: _
+
+_returns_description: _
+
+_parameters: float _r, float _g, float _b, float _a=limit()_
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+-->
+
+_description: _
+
+
+
+
+
+
+
+### ofColor_(&color)
+
+<!--
+
+_syntax: ofColor_(&color)_
+
+_name: ofColor__
+
+_returns: _
+
+_returns_description: _
+
+_parameters: const ofColor_< PixelType > &color_
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+-->
+
+_description: _
+
+
+
+
+
+
+
+### ofColor_(&color, _a)
+
+<!--
+
+_syntax: ofColor_(&color, _a)_
+
+_name: ofColor__
+
+_returns: _
+
+_returns_description: _
+
+_parameters: const ofColor_< PixelType > &color, float _a_
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+-->
+
+_description: _
+
+
+
+
+
+
+
+### ofColor_(gray, _a = limit())
+
+<!--
+
+_syntax: ofColor_(gray, _a = limit())_
+
+_name: ofColor__
+
+_returns: _
+
+_returns_description: _
+
+_parameters: float gray, float _a=limit()_
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+-->
+
+_description: _
+
+
+
+
+
+
+
+### ofColor_(&color)
+
+<!--
+
+_syntax: ofColor_(&color)_
+
+_name: ofColor__
+
+_returns: _
+
+_returns_description: _
+
+_parameters: const ofColor_< SrcType > &color_
+
+_access: public_
+
+_version_started: 007_
+
+_version_deprecated: _
+
+_summary: _
+
+_constant: False_
+
+_static: no_
+
+_visible: True_
+
+_advanced: False_
+
+
+
+-->
+
 _description: _
 
 
@@ -2143,11 +3060,13 @@ _description: _
 
 
 
-###ofColor_ white
+###ofColor white
+
+<!--
 
 _name: white_
 
-_type: ofColor__
+_type: ofColor_
 
 _access: public_
 
@@ -2165,6 +3084,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2173,11 +3094,20 @@ _description: _
 
 
 
-###ofColor_ gray
+
+
+
+
+
+
+
+###ofColor gray
+
+<!--
 
 _name: gray_
 
-_type: ofColor__
+_type: ofColor_
 
 _access: public_
 
@@ -2195,6 +3125,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2203,11 +3135,20 @@ _description: _
 
 
 
-###ofColor_ black
+
+
+
+
+
+
+
+###ofColor black
+
+<!--
 
 _name: black_
 
-_type: ofColor__
+_type: ofColor_
 
 _access: public_
 
@@ -2225,6 +3166,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2233,11 +3176,20 @@ _description: _
 
 
 
-###ofColor_ red
+
+
+
+
+
+
+
+###ofColor red
+
+<!--
 
 _name: red_
 
-_type: ofColor__
+_type: ofColor_
 
 _access: public_
 
@@ -2255,6 +3207,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2263,11 +3217,20 @@ _description: _
 
 
 
-###ofColor_ green
+
+
+
+
+
+
+
+###ofColor green
+
+<!--
 
 _name: green_
 
-_type: ofColor__
+_type: ofColor_
 
 _access: public_
 
@@ -2285,6 +3248,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2293,11 +3258,20 @@ _description: _
 
 
 
-###ofColor_ blue
+
+
+
+
+
+
+
+###ofColor blue
+
+<!--
 
 _name: blue_
 
-_type: ofColor__
+_type: ofColor_
 
 _access: public_
 
@@ -2315,6 +3289,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2323,11 +3299,20 @@ _description: _
 
 
 
-###ofColor_ cyan
+
+
+
+
+
+
+
+###ofColor cyan
+
+<!--
 
 _name: cyan_
 
-_type: ofColor__
+_type: ofColor_
 
 _access: public_
 
@@ -2345,6 +3330,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2353,11 +3340,20 @@ _description: _
 
 
 
-###ofColor_ magenta
+
+
+
+
+
+
+
+###ofColor magenta
+
+<!--
 
 _name: magenta_
 
-_type: ofColor__
+_type: ofColor_
 
 _access: public_
 
@@ -2375,6 +3371,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2383,11 +3381,20 @@ _description: _
 
 
 
-###ofColor_ yellow
+
+
+
+
+
+
+
+###ofColor yellow
+
+<!--
 
 _name: yellow_
 
-_type: ofColor__
+_type: ofColor_
 
 _access: public_
 
@@ -2405,7 +3412,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2414,6 +3430,8 @@ _description: _
 
 
 ###PixelType r
+
+<!--
 
 _name: r_
 
@@ -2435,6 +3453,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2443,7 +3463,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###PixelType g
+
+<!--
 
 _name: g_
 
@@ -2465,6 +3494,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2473,7 +3504,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###PixelType b
+
+<!--
 
 _name: b_
 
@@ -2495,6 +3535,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2503,7 +3545,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###PixelType a
+
+<!--
 
 _name: a_
 
@@ -2525,6 +3576,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2533,7 +3586,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###PixelType v
+
+<!--
 
 _name: v_
 
@@ -2555,6 +3617,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2563,11 +3627,20 @@ _description: _
 
 
 
-###union ofColor_::@0 @1
+
+
+
+
+
+
+
+###union ofColor @1
+
+<!--
 
 _name: @1_
 
-_type: union ofColor_::@0_
+_type: union ofColor_
 
 _access: public_
 
@@ -2585,7 +3658,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

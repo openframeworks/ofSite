@@ -7,11 +7,20 @@
 
 
 
+
+
+
+
+
+
+
 ##Methods
 
 
 
 ### ofHttpResponse()
+
+<!--
 
 _syntax: ofHttpResponse()_
 
@@ -41,6 +50,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -49,7 +60,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ofHttpResponse(request, &data, status, error)
+
+<!--
 
 _syntax: ofHttpResponse(request, &data, status, error)_
 
@@ -79,6 +99,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -87,7 +109,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ofHttpResponse(request, status, error)
+
+<!--
 
 _syntax: ofHttpResponse(request, status, error)_
 
@@ -117,6 +148,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -125,7 +158,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### operator ofBuffer &()
+
+<!--
 
 _syntax: operator ofBuffer &()_
 
@@ -155,7 +197,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -168,6 +219,8 @@ _description: _
 
 
 ###ofHttpRequest request
+
+<!--
 
 _name: request_
 
@@ -189,6 +242,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -197,7 +252,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofBuffer data
+
+<!--
 
 _name: data_
 
@@ -219,6 +283,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -227,7 +293,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int status
+
+<!--
 
 _name: status_
 
@@ -249,6 +324,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -257,7 +334,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###string error
+
+<!--
 
 _name: error_
 
@@ -279,7 +365,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

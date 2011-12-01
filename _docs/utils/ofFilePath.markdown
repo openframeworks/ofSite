@@ -7,11 +7,20 @@
 
 
 
+
+
+
+
+
+
+
 ##Methods
 
 
 
 ###string getFileExt(filename)
+
+<!--
 
 _syntax: getFileExt(filename)_
 
@@ -41,6 +50,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -49,7 +60,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###string removeExt(filename)
+
+<!--
 
 _syntax: removeExt(filename)_
 
@@ -79,6 +99,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -87,7 +109,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###string addLeadingSlash(path)
+
+<!--
 
 _syntax: addLeadingSlash(path)_
 
@@ -117,6 +148,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -125,7 +158,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###string addTrailingSlash(path)
+
+<!--
 
 _syntax: addTrailingSlash(path)_
 
@@ -155,6 +197,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -163,7 +207,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###string removeTrailingSlash(path)
+
+<!--
 
 _syntax: removeTrailingSlash(path)_
 
@@ -193,6 +246,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -201,7 +256,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###string getPathForDirectory(path)
+
+<!--
 
 _syntax: getPathForDirectory(path)_
 
@@ -231,6 +295,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -239,7 +305,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###string getAbsolutePath(path, bRelativeToData = true)
+
+<!--
 
 _syntax: getAbsolutePath(path, bRelativeToData = true)_
 
@@ -269,6 +344,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -277,7 +354,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool isAbsolute(path)
+
+<!--
 
 _syntax: isAbsolute(path)_
 
@@ -307,6 +393,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -315,7 +403,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###string getFileName(filePath, bRelativeToData = true)
+
+<!--
 
 _syntax: getFileName(filePath, bRelativeToData = true)_
 
@@ -345,6 +442,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -353,7 +452,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###string getBaseName(filePath)
+
+<!--
 
 _syntax: getBaseName(filePath)_
 
@@ -383,6 +491,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -391,7 +501,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###string getEnclosingDirectory(filePath, bRelativeToData = true)
+
+<!--
 
 _syntax: getEnclosingDirectory(filePath, bRelativeToData = true)_
 
@@ -421,6 +540,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -429,7 +550,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###string getCurrentWorkingDirectory()
+
+<!--
 
 _syntax: getCurrentWorkingDirectory()_
 
@@ -459,7 +589,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

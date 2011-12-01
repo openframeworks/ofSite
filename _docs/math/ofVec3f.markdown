@@ -7,11 +7,20 @@
 
 
 
+
+
+
+
+
+
+
 ##Methods
 
 
 
 ### ofVec3f(_x = 0.f, _y = 0.f, _z = 0.f)
+
+<!--
 
 _syntax: ofVec3f(_x = 0.f, _y = 0.f, _z = 0.f)_
 
@@ -41,6 +50,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -49,7 +60,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ofVec3f(&vec)
+
+<!--
 
 _syntax: ofVec3f(&vec)_
 
@@ -79,6 +99,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -87,7 +109,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ofVec3f(&vec)
+
+<!--
 
 _syntax: ofVec3f(&vec)_
 
@@ -117,6 +148,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -125,7 +158,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###const float * getPtr()
+
+<!--
 
 _syntax: getPtr()_
 
@@ -155,6 +197,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -163,7 +207,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float operator[](n)
+
+<!--
 
 _syntax: operator[](n)_
 
@@ -193,6 +246,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -201,7 +256,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void set(_x, _y, _z = 0)
+
+<!--
 
 _syntax: set(_x, _y, _z = 0)_
 
@@ -231,6 +295,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -239,7 +305,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void set(&vec)
+
+<!--
 
 _syntax: set(&vec)_
 
@@ -269,6 +344,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -277,7 +354,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool operator==(&vec)
+
+<!--
 
 _syntax: operator==(&vec)_
 
@@ -307,6 +393,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -315,7 +403,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool operator!=(&vec)
+
+<!--
 
 _syntax: operator!=(&vec)_
 
@@ -345,6 +442,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -353,7 +452,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool match(&vec, tolerance = 0.0001)
+
+<!--
 
 _syntax: match(&vec, tolerance = 0.0001)_
 
@@ -383,6 +491,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -391,7 +501,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool align(&vec, tolerance = 0.0001)
+
+<!--
 
 _syntax: align(&vec, tolerance = 0.0001)_
 
@@ -421,6 +540,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -429,7 +550,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool alignRad(&vec, tolerance = 0.0001)
+
+<!--
 
 _syntax: alignRad(&vec, tolerance = 0.0001)_
 
@@ -459,6 +589,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -467,7 +599,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f operator+(&pnt)
+
+<!--
 
 _syntax: operator+(&pnt)_
 
@@ -497,6 +638,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -505,7 +648,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f operator+=(&pnt)
+
+<!--
 
 _syntax: operator+=(&pnt)_
 
@@ -535,6 +687,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -543,7 +697,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f operator-(&vec)
+
+<!--
 
 _syntax: operator-(&vec)_
 
@@ -573,6 +736,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -581,7 +746,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f operator-=(&vec)
+
+<!--
 
 _syntax: operator-=(&vec)_
 
@@ -611,6 +785,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -619,7 +795,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f operator*(&vec)
+
+<!--
 
 _syntax: operator*(&vec)_
 
@@ -649,6 +834,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -657,7 +844,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f operator*=(&vec)
+
+<!--
 
 _syntax: operator*=(&vec)_
 
@@ -687,6 +883,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -695,7 +893,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f operator/(&vec)
+
+<!--
 
 _syntax: operator/(&vec)_
 
@@ -725,6 +932,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -733,7 +942,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f operator/=(&vec)
+
+<!--
 
 _syntax: operator/=(&vec)_
 
@@ -763,6 +981,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -771,7 +991,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f operator-()
+
+<!--
 
 _syntax: operator-()_
 
@@ -801,6 +1030,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -809,7 +1040,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f operator+(f)
+
+<!--
 
 _syntax: operator+(f)_
 
@@ -839,6 +1079,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -847,7 +1089,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f operator+=(f)
+
+<!--
 
 _syntax: operator+=(f)_
 
@@ -877,6 +1128,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -885,7 +1138,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f operator-(f)
+
+<!--
 
 _syntax: operator-(f)_
 
@@ -915,6 +1177,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -923,7 +1187,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f operator-=(f)
+
+<!--
 
 _syntax: operator-=(f)_
 
@@ -953,6 +1226,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -961,7 +1236,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f operator*(f)
+
+<!--
 
 _syntax: operator*(f)_
 
@@ -991,6 +1275,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -999,7 +1285,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f operator*=(f)
+
+<!--
 
 _syntax: operator*=(f)_
 
@@ -1029,6 +1324,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1037,7 +1334,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f operator/(f)
+
+<!--
 
 _syntax: operator/(f)_
 
@@ -1067,6 +1373,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1075,7 +1383,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f operator/=(f)
+
+<!--
 
 _syntax: operator/=(f)_
 
@@ -1105,6 +1422,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1113,7 +1432,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f getScaled(length)
+
+<!--
 
 _syntax: getScaled(length)_
 
@@ -1143,6 +1471,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1151,7 +1481,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f scale(length)
+
+<!--
 
 _syntax: scale(length)_
 
@@ -1181,6 +1520,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1189,7 +1530,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f getRotated(angle, &axis)
+
+<!--
 
 _syntax: getRotated(angle, &axis)_
 
@@ -1219,6 +1569,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1227,7 +1579,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f getRotatedRad(angle, &axis)
+
+<!--
 
 _syntax: getRotatedRad(angle, &axis)_
 
@@ -1257,6 +1618,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1265,7 +1628,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f rotate(angle, &axis)
+
+<!--
 
 _syntax: rotate(angle, &axis)_
 
@@ -1295,6 +1667,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1303,7 +1677,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f rotateRad(angle, &axis)
+
+<!--
 
 _syntax: rotateRad(angle, &axis)_
 
@@ -1333,6 +1716,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1341,7 +1726,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f getRotated(ax, ay, az)
+
+<!--
 
 _syntax: getRotated(ax, ay, az)_
 
@@ -1371,6 +1765,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1379,7 +1775,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f getRotatedRad(ax, ay, az)
+
+<!--
 
 _syntax: getRotatedRad(ax, ay, az)_
 
@@ -1409,6 +1814,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1417,7 +1824,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f rotate(ax, ay, az)
+
+<!--
 
 _syntax: rotate(ax, ay, az)_
 
@@ -1447,6 +1863,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1455,7 +1873,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f rotateRad(ax, ay, az)
+
+<!--
 
 _syntax: rotateRad(ax, ay, az)_
 
@@ -1485,6 +1912,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1493,7 +1922,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f getRotated(angle, &pivot, &axis)
+
+<!--
 
 _syntax: getRotated(angle, &pivot, &axis)_
 
@@ -1523,6 +1961,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1531,7 +1971,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f rotate(angle, &pivot, &axis)
+
+<!--
 
 _syntax: rotate(angle, &pivot, &axis)_
 
@@ -1561,6 +2010,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1569,7 +2020,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f getRotatedRad(angle, &pivot, &axis)
+
+<!--
 
 _syntax: getRotatedRad(angle, &pivot, &axis)_
 
@@ -1599,6 +2059,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1607,7 +2069,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f rotateRad(angle, &pivot, &axis)
+
+<!--
 
 _syntax: rotateRad(angle, &pivot, &axis)_
 
@@ -1637,6 +2108,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1645,7 +2118,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f getMapped(&origin, &vx, &vy, &vz)
+
+<!--
 
 _syntax: getMapped(&origin, &vx, &vy, &vz)_
 
@@ -1675,6 +2157,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1683,7 +2167,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f map(&origin, &vx, &vy, &vz)
+
+<!--
 
 _syntax: map(&origin, &vx, &vy, &vz)_
 
@@ -1713,6 +2206,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1721,7 +2216,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float distance(&pnt)
+
+<!--
 
 _syntax: distance(&pnt)_
 
@@ -1751,6 +2255,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1759,7 +2265,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float squareDistance(&pnt)
+
+<!--
 
 _syntax: squareDistance(&pnt)_
 
@@ -1789,6 +2304,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1797,7 +2314,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f getInterpolated(&pnt, p)
+
+<!--
 
 _syntax: getInterpolated(&pnt, p)_
 
@@ -1827,6 +2353,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1835,7 +2363,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f interpolate(&pnt, p)
+
+<!--
 
 _syntax: interpolate(&pnt, p)_
 
@@ -1865,6 +2402,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1873,7 +2412,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f getMiddle(&pnt)
+
+<!--
 
 _syntax: getMiddle(&pnt)_
 
@@ -1903,6 +2451,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1911,7 +2461,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f middle(&pnt)
+
+<!--
 
 _syntax: middle(&pnt)_
 
@@ -1941,6 +2500,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1949,7 +2510,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f average(*points, num)
+
+<!--
 
 _syntax: average(*points, num)_
 
@@ -1979,6 +2549,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1987,7 +2559,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f getNormalized()
+
+<!--
 
 _syntax: getNormalized()_
 
@@ -2017,6 +2598,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2025,7 +2608,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f normalize()
+
+<!--
 
 _syntax: normalize()_
 
@@ -2055,6 +2647,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2063,7 +2657,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f getLimited(max)
+
+<!--
 
 _syntax: getLimited(max)_
 
@@ -2093,6 +2696,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2101,7 +2706,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f limit(max)
+
+<!--
 
 _syntax: limit(max)_
 
@@ -2131,6 +2745,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2139,7 +2755,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f getCrossed(&vec)
+
+<!--
 
 _syntax: getCrossed(&vec)_
 
@@ -2169,6 +2794,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2177,7 +2804,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f cross(&vec)
+
+<!--
 
 _syntax: cross(&vec)_
 
@@ -2207,6 +2843,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2215,7 +2853,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f getPerpendicular(&vec)
+
+<!--
 
 _syntax: getPerpendicular(&vec)_
 
@@ -2245,6 +2892,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2253,7 +2902,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f perpendicular(&vec)
+
+<!--
 
 _syntax: perpendicular(&vec)_
 
@@ -2283,6 +2941,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2291,7 +2951,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float length()
+
+<!--
 
 _syntax: length()_
 
@@ -2321,6 +2990,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2329,7 +3000,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float squareLength()
+
+<!--
 
 _syntax: squareLength()_
 
@@ -2359,6 +3039,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2367,7 +3049,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float angle(&vec)
+
+<!--
 
 _syntax: angle(&vec)_
 
@@ -2397,6 +3088,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2405,7 +3098,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float angleRad(&vec)
+
+<!--
 
 _syntax: angleRad(&vec)_
 
@@ -2435,6 +3137,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2443,7 +3147,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float dot(&vec)
+
+<!--
 
 _syntax: dot(&vec)_
 
@@ -2473,6 +3186,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2481,7 +3196,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f rescaled(length)
+
+<!--
 
 _syntax: rescaled(length)_
 
@@ -2511,6 +3235,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2519,7 +3245,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f rescale(length)
+
+<!--
 
 _syntax: rescale(length)_
 
@@ -2549,6 +3284,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2557,7 +3294,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f rotated(angle, &axis)
+
+<!--
 
 _syntax: rotated(angle, &axis)_
 
@@ -2587,6 +3333,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2595,7 +3343,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f rotated(ax, ay, az)
+
+<!--
 
 _syntax: rotated(ax, ay, az)_
 
@@ -2625,6 +3382,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2633,7 +3392,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f normalized()
+
+<!--
 
 _syntax: normalized()_
 
@@ -2663,6 +3431,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2671,7 +3441,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f limited(max)
+
+<!--
 
 _syntax: limited(max)_
 
@@ -2701,6 +3480,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2709,7 +3490,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f crossed(&vec)
+
+<!--
 
 _syntax: crossed(&vec)_
 
@@ -2739,6 +3529,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2747,7 +3539,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f perpendiculared(&vec)
+
+<!--
 
 _syntax: perpendiculared(&vec)_
 
@@ -2777,6 +3578,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2785,7 +3588,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float lengthSquared()
+
+<!--
 
 _syntax: lengthSquared()_
 
@@ -2815,6 +3627,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2823,7 +3637,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f mapped(&origin, &vx, &vy, &vz)
+
+<!--
 
 _syntax: mapped(&origin, &vx, &vy, &vz)_
 
@@ -2853,6 +3676,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2861,7 +3686,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float distanceSquared(&pnt)
+
+<!--
 
 _syntax: distanceSquared(&pnt)_
 
@@ -2891,6 +3725,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2899,7 +3735,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f interpolated(&pnt, p)
+
+<!--
 
 _syntax: interpolated(&pnt, p)_
 
@@ -2929,6 +3774,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2937,7 +3784,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f middled(&pnt)
+
+<!--
 
 _syntax: middled(&pnt)_
 
@@ -2967,6 +3823,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -2975,7 +3833,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofVec3f rotated(angle, &pivot, &axis)
+
+<!--
 
 _syntax: rotated(angle, &pivot, &axis)_
 
@@ -3005,7 +3872,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -3018,6 +3894,8 @@ _description: _
 
 
 ###float x
+
+<!--
 
 _name: x_
 
@@ -3039,6 +3917,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -3047,7 +3927,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float y
+
+<!--
 
 _name: y_
 
@@ -3069,6 +3958,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -3077,7 +3968,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float z
+
+<!--
 
 _name: z_
 
@@ -3099,7 +3999,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

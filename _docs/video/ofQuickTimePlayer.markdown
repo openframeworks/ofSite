@@ -7,11 +7,20 @@
 
 
 
+
+
+
+
+
+
+
 ##Methods
 
 
 
 ### ofQuickTimePlayer()
+
+<!--
 
 _syntax: ofQuickTimePlayer()_
 
@@ -41,6 +50,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -49,7 +60,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ### ~ofQuickTimePlayer()
+
+<!--
 
 _syntax: ~ofQuickTimePlayer()_
 
@@ -79,6 +99,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -87,7 +109,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool loadMovie(name)
+
+<!--
 
 _syntax: loadMovie(name)_
 
@@ -117,6 +148,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -125,7 +158,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void closeMovie()
+
+<!--
 
 _syntax: closeMovie()_
 
@@ -155,6 +197,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -163,7 +207,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void close()
+
+<!--
 
 _syntax: close()_
 
@@ -193,6 +246,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -201,7 +256,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void update()
+
+<!--
 
 _syntax: update()_
 
@@ -231,6 +295,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -239,7 +305,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void play()
+
+<!--
 
 _syntax: play()_
 
@@ -269,6 +344,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -277,7 +354,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void stop()
+
+<!--
 
 _syntax: stop()_
 
@@ -307,6 +393,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -315,7 +403,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void clearMemory()
+
+<!--
 
 _syntax: clearMemory()_
 
@@ -345,6 +442,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -353,7 +452,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool isFrameNew()
+
+<!--
 
 _syntax: isFrameNew()_
 
@@ -383,6 +491,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -391,7 +501,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###unsigned char * getPixels()
+
+<!--
 
 _syntax: getPixels()_
 
@@ -421,6 +540,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -429,7 +550,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofPixels getPixelsRef()
+
+<!--
 
 _syntax: getPixelsRef()_
 
@@ -459,6 +589,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -467,7 +599,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float getWidth()
+
+<!--
 
 _syntax: getWidth()_
 
@@ -497,6 +638,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -505,7 +648,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float getHeight()
+
+<!--
 
 _syntax: getHeight()_
 
@@ -535,6 +687,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -543,7 +697,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool isPaused()
+
+<!--
 
 _syntax: isPaused()_
 
@@ -573,6 +736,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -581,7 +746,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool isLoaded()
+
+<!--
 
 _syntax: isLoaded()_
 
@@ -611,6 +785,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -619,7 +795,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool isPlaying()
+
+<!--
 
 _syntax: isPlaying()_
 
@@ -649,6 +834,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -657,7 +844,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float getPosition()
+
+<!--
 
 _syntax: getPosition()_
 
@@ -687,6 +883,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -695,7 +893,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float getDuration()
+
+<!--
 
 _syntax: getDuration()_
 
@@ -725,6 +932,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -733,7 +942,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int getTotalNumFrames()
+
+<!--
 
 _syntax: getTotalNumFrames()_
 
@@ -763,6 +981,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -771,7 +991,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float getSpeed()
+
+<!--
 
 _syntax: getSpeed()_
 
@@ -801,6 +1030,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -809,7 +1040,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool getIsMovieDone()
+
+<!--
 
 _syntax: getIsMovieDone()_
 
@@ -839,6 +1079,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -847,7 +1089,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setPosition(pct)
+
+<!--
 
 _syntax: setPosition(pct)_
 
@@ -877,6 +1128,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -885,7 +1138,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setVolume(volume)
+
+<!--
 
 _syntax: setVolume(volume)_
 
@@ -915,6 +1177,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -923,7 +1187,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setLoopState(state)
+
+<!--
 
 _syntax: setLoopState(state)_
 
@@ -953,6 +1226,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -961,7 +1236,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setSpeed(speed)
+
+<!--
 
 _syntax: setSpeed(speed)_
 
@@ -991,6 +1275,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -999,7 +1285,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setFrame(frame)
+
+<!--
 
 _syntax: setFrame(frame)_
 
@@ -1029,6 +1324,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1037,7 +1334,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setPaused(bPause)
+
+<!--
 
 _syntax: setPaused(bPause)_
 
@@ -1067,6 +1373,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1075,7 +1383,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int getCurrentFrame()
+
+<!--
 
 _syntax: getCurrentFrame()_
 
@@ -1105,6 +1422,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1113,7 +1432,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void firstFrame()
+
+<!--
 
 _syntax: firstFrame()_
 
@@ -1143,6 +1471,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1151,7 +1481,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void nextFrame()
+
+<!--
 
 _syntax: nextFrame()_
 
@@ -1181,6 +1520,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1189,7 +1530,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void previousFrame()
+
+<!--
 
 _syntax: previousFrame()_
 
@@ -1219,6 +1569,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1227,7 +1579,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void createImgMemAndGWorld()
+
+<!--
 
 _syntax: createImgMemAndGWorld()_
 
@@ -1257,6 +1618,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1265,7 +1628,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void start()
+
+<!--
 
 _syntax: start()_
 
@@ -1295,7 +1667,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1308,6 +1689,8 @@ _description: _
 
 
 ###bool bHavePixelsChanged
+
+<!--
 
 _name: bHavePixelsChanged_
 
@@ -1329,6 +1712,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1337,7 +1722,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofPixels pixels
+
+<!--
 
 _name: pixels_
 
@@ -1359,6 +1753,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1367,7 +1763,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int width
+
+<!--
 
 _name: width_
 
@@ -1389,6 +1794,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1397,7 +1804,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int height
+
+<!--
 
 _name: height_
 
@@ -1419,6 +1835,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1427,7 +1845,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool bLoaded
+
+<!--
 
 _name: bLoaded_
 
@@ -1449,6 +1876,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1457,7 +1886,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int nFrames
+
+<!--
 
 _name: nFrames_
 
@@ -1479,6 +1917,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1487,7 +1927,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool allocated
+
+<!--
 
 _name: allocated_
 
@@ -1509,6 +1958,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1517,7 +1968,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofLoopType currentLoopState
+
+<!--
 
 _name: currentLoopState_
 
@@ -1539,6 +1999,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1547,7 +2009,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool bStarted
+
+<!--
 
 _name: bStarted_
 
@@ -1569,6 +2040,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1577,7 +2050,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool bPlaying
+
+<!--
 
 _name: bPlaying_
 
@@ -1599,6 +2081,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1607,7 +2091,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool bPaused
+
+<!--
 
 _name: bPaused_
 
@@ -1629,6 +2122,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1637,7 +2132,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool bIsFrameNew
+
+<!--
 
 _name: bIsFrameNew_
 
@@ -1659,6 +2163,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1667,7 +2173,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###float speed
+
+<!--
 
 _name: speed_
 
@@ -1689,7 +2204,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

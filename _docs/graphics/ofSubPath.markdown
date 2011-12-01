@@ -7,11 +7,20 @@
 
 
 
+
+
+
+
+
+
+
 ##Methods
 
 
 
 ### ofSubPath()
+
+<!--
 
 _syntax: ofSubPath()_
 
@@ -41,6 +50,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -49,7 +60,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###Command getCommands()
+
+<!--
 
 _syntax: getCommands()_
 
@@ -79,6 +99,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -87,7 +109,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void addCommand(&command)
+
+<!--
 
 _syntax: addCommand(&command)_
 
@@ -117,6 +148,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -125,7 +158,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool hasChanged()
+
+<!--
 
 _syntax: hasChanged()_
 
@@ -155,6 +197,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -163,7 +207,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void close()
+
+<!--
 
 _syntax: close()_
 
@@ -193,6 +246,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -201,7 +256,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool isClosed()
+
+<!--
 
 _syntax: isClosed()_
 
@@ -231,6 +295,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -239,7 +305,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int size()
+
+<!--
 
 _syntax: size()_
 
@@ -269,7 +344,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -282,6 +366,8 @@ _description: _
 
 
 ###Command commands
+
+<!--
 
 _name: commands_
 
@@ -303,6 +389,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -311,7 +399,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool bClosed
+
+<!--
 
 _name: bClosed_
 
@@ -333,6 +430,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -341,7 +440,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###bool bHasChanged
+
+<!--
 
 _name: bHasChanged_
 
@@ -363,7 +471,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 

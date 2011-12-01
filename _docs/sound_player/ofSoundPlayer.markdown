@@ -10,6 +10,9 @@
 
 
 
+
+
+
 The ofSoundPlayer class wraps fmod, which is a powerful audio utility library. The ofSoundPlayer allows you to load sound files and control and manipulate their playback and properties. 
 
 
@@ -26,11 +29,17 @@ their playback and properties.
 
 
 
+
+
+
+
 ##Methods
 
 
 
 ### ofSoundPlayer()
+
+<!--
 
 _syntax: ofSoundPlayer()_
 
@@ -60,7 +69,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -94,6 +112,8 @@ _description: _
 
 ###void initializeFmod()
 
+<!--
+
 _syntax: initializeFmod()_
 
 _name: initializeFmod_
@@ -122,7 +142,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -154,7 +177,15 @@ Initializes fMod. Should only be called once internally.
 
 
 
+
+
+
+
+
+
 ###void ~ofSoundPlayer()
+
+<!--
 
 _syntax: ~ofSoundPlayer()_
 
@@ -184,7 +215,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -218,6 +258,8 @@ _description: _
 
 ###void closeFmod()
 
+<!--
+
 _syntax: closeFmod()_
 
 _name: closeFmod_
@@ -246,7 +288,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -278,7 +323,15 @@ If Fmod is initialized via initializeFmod we can close it via closeFmod().
 
 
 
+
+
+
+
+
+
 ###void loadSound(fileName, stream)
+
+<!--
 
 _syntax: loadSound(fileName, stream)_
 
@@ -308,7 +361,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -391,7 +447,15 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###void unloadSound()
+
+<!--
 
 _syntax: unloadSound()_
 
@@ -421,7 +485,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -482,7 +549,15 @@ $$/code`
 
 
 
+
+
+
+
+
+
 ###void play()
+
+<!--
 
 _syntax: play()_
 
@@ -512,7 +587,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -604,7 +682,15 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###void stop()
+
+<!--
 
 _syntax: stop()_
 
@@ -634,7 +720,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -694,7 +783,15 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###void setVolume(vol)
+
+<!--
 
 _syntax: setVolume(vol)_
 
@@ -724,7 +821,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -785,7 +885,15 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###void setPan(vol)
+
+<!--
 
 _syntax: setPan(vol)_
 
@@ -815,7 +923,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -882,7 +993,15 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###void setSpeed(spd)
+
+<!--
 
 _syntax: setSpeed(spd)_
 
@@ -912,7 +1031,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -979,7 +1101,15 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###void setPaused(bP)
+
+<!--
 
 _syntax: setPaused(bP)_
 
@@ -1009,7 +1139,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -1071,7 +1204,15 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###void setLoop(bLp)
+
+<!--
 
 _syntax: setLoop(bLp)_
 
@@ -1101,7 +1242,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -1161,7 +1305,15 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###void setMultiPlay(bMp)
+
+<!--
 
 _syntax: setMultiPlay(bMp)_
 
@@ -1191,7 +1343,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -1259,7 +1414,15 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###void setPosition(pct)
+
+<!--
 
 _syntax: setPosition(pct)_
 
@@ -1289,7 +1452,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -1352,7 +1518,15 @@ $$code(lang=c++)
 
 
 
+
+
+
+
+
+
 ###float getPosition()
+
+<!--
 
 _syntax: getPosition()_
 
@@ -1382,7 +1556,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -1442,7 +1619,15 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###bool getIsPlaying()
+
+<!--
 
 _syntax: getIsPlaying()_
 
@@ -1472,7 +1657,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -1533,7 +1721,15 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###float getSpeed()
+
+<!--
 
 _syntax: getSpeed()_
 
@@ -1563,7 +1759,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -1626,7 +1825,15 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###float getPan()
+
+<!--
 
 _syntax: getPan()_
 
@@ -1656,7 +1863,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -1726,7 +1936,15 @@ $$/code
 
 
 
+
+
+
+
+
+
 ###void setPlayer(newPlayer)
+
+<!--
 
 _syntax: setPlayer(newPlayer)_
 
@@ -1756,6 +1974,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1764,7 +1984,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###ofPtr getPlayer()
+
+<!--
 
 _syntax: getPlayer()_
 
@@ -1794,6 +2023,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1802,7 +2033,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###void setPositionMS(ms)
+
+<!--
 
 _syntax: setPositionMS(ms)_
 
@@ -1832,6 +2072,8 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
 
 
@@ -1840,7 +2082,16 @@ _description: _
 
 
 
+
+
+
+
+
+
+
 ###int getPositionMS()
+
+<!--
 
 _syntax: getPositionMS()_
 
@@ -1870,7 +2121,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -1883,6 +2143,8 @@ _description: _
 
 
 ###bool isStreaming
+
+<!--
 
 _name: isStreaming_
 
@@ -1904,7 +2166,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -1934,7 +2199,15 @@ This boolean variable tells if the sound we are using is streaming or not.
 
 
 
+
+
+
+
+
+
 ###bool bMultiPlay
+
+<!--
 
 _name: bMultiPlay_
 
@@ -1956,7 +2229,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -1987,7 +2263,15 @@ Allows a sound to be played multiple times at once. See setMultiPlay(bool bMp) f
 
 
 
+
+
+
+
+
+
 ###bool bLoop
+
+<!--
 
 _name: bLoop_
 
@@ -2009,7 +2293,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -2039,7 +2326,15 @@ bLoop variable controls if we are playing the sound as a loop.
 
 
 
+
+
+
+
+
+
 ###bool bLoadedOk
+
+<!--
 
 _name: bLoadedOk_
 
@@ -2061,7 +2356,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -2091,7 +2389,15 @@ bLoadedOk is a boolean variable containing true if the sound was successfully lo
 
 
 
+
+
+
+
+
+
 ###bool bPaused
+
+<!--
 
 _name: bPaused_
 
@@ -2113,7 +2419,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -2143,7 +2452,15 @@ bPaused contain true if we pause the sound.
 
 
 
+
+
+
+
+
+
 ###float pan
+
+<!--
 
 _name: pan_
 
@@ -2165,7 +2482,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -2195,7 +2515,15 @@ Contains the pan position of the sound. Going from 0 to 1.
 
 
 
+
+
+
+
+
+
 ###float volume
+
+<!--
 
 _name: volume_
 
@@ -2217,7 +2545,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -2247,7 +2578,15 @@ Contains the value of the volume of our sound.
 
 
 
+
+
+
+
+
+
 ###float internalFreq
+
+<!--
 
 _name: internalFreq_
 
@@ -2269,7 +2608,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -2299,7 +2641,15 @@ Contains the frequency value of the sound. It is set by default to 44100.
 
 
 
+
+
+
+
+
+
 ###float speed
+
+<!--
 
 _name: speed_
 
@@ -2321,7 +2671,10 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
 
 
 
@@ -2351,7 +2704,15 @@ Contains the playback speed of the sound. 1.0 is the normal speed. 2.0 is double
 
 
 
+
+
+
+
+
+
 ###unsigned int length
+
+<!--
 
 _name: length_
 
@@ -2373,7 +2734,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2405,6 +2775,8 @@ _description: _
 
 ###FMOD_RESULT result
 
+<!--
+
 _name: result_
 
 _type: FMOD_RESULT_
@@ -2425,7 +2797,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2457,6 +2838,8 @@ _description: _
 
 ###FMOD_CHANNEL * channel
 
+<!--
+
 _name: channel_
 
 _type: FMOD_CHANNEL *_
@@ -2477,7 +2860,16 @@ _advanced: True_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2509,6 +2901,8 @@ _description: _
 
 ###FMOD_SOUND * sound
 
+<!--
+
 _name: sound_
 
 _type: FMOD_SOUND *_
@@ -2529,7 +2923,16 @@ _advanced: True_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
@@ -2561,6 +2964,8 @@ _description: _
 
 ###ofPtr player
 
+<!--
+
 _name: player_
 
 _type: ofPtr_
@@ -2581,7 +2986,16 @@ _advanced: False_
 
 
 
+-->
+
 _description: _
+
+
+
+
+
+
+
 
 
 
