@@ -58,6 +58,16 @@
 		        <h2>addons</h2>
             </div>
         </div><!-- End Page Wide -->
+
+    	<div class="page-wide">
+            % for column in addons_columns:
+            <div class="docs_col">
+                % for block in column:
+                    <%include file="docs_index_block.mako" args="block=block" />
+                % endfor
+            </div>
+            % endfor
+        </div><!-- End Page Wide -->
               
       </div><!-- End Body Wrap -->
       

@@ -94,8 +94,21 @@ def run():
             if b.name is not None and b.name != "":
                 blocks.append(b)
         columns.append(blocks)
+    
+    indexhtml_file = open("_docs/" + "indexAddons.markdown",'r')
+    indexhtml = indexhtml_file.read()
+    addons_columns = []
+    columns_src = indexhtml.split('___column___')
+    for column in columns_src:    
+        blocks_src = column.split('//----------------------')
+        blocks = []
+        for block in blocks_src:
+            b = Block(block)
+            if b.name is not None and b.name != "":
+                blocks.append(b)
+        addons_columns.append(blocks)
         
-    bf.writer.materialize_template("docs.mako", ('docs',"index.html"), {'columns':columns} )
+    bf.writer.materialize_template("docs.mako", ('docs',"index.html"), {'columns':columns,'addons_columns':addons_columns} )
     
     for root, dirs, files in os.walk(directory):
         for name in files:

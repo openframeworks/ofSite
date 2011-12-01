@@ -6,13 +6,29 @@ import os
 
 docs_root = '/home/arturo/Documentos/new_of_site/_docs/'
 
-def list_all_modules():
+def list_all_addons():
     modules = []
-    for root, dirs, files in os.walk(docs_root):
+    for root, dirs, files in os.walk(docs_root+"addons"):
         for name in dirs:
             modules.append(name)
     return modules
     
+def list_all_modules():
+    modules = []
+    for root, dirs, files in os.walk(docs_root):
+        for name in dirs:
+            if name.find("ofx")!=0:
+                modules.append(name)
+    return modules
+    
+def list_all_addon_files(addon=''):
+    module_files = []
+    for root, dirs, files in os.walk(os.path.join(docs_root, 'addons', addon)):
+        for name in files:
+            file_split = os.path.splitext(name)
+            if file_split[1]=='.markdown': 
+                module_files.append(file_split[0])
+    return module_files
             
 def list_all_files(module=''):
     module_files = []

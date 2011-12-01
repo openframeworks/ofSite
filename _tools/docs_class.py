@@ -20,6 +20,7 @@ class DocsClass:
         self.visible = True
         self.example = ""
         self.reference = ""
+        self.addons = False
         self.function_list = []
         self.var_list = []
         
