@@ -20,7 +20,8 @@ body {
 	font-family: 		Arial, sans-serif;
 	font-size: 		0.80em;
 	/*background: 		#E0E1E2;*/
-	background-color: #CCC;
+	/*background-color: #CCC;*/
+	background: url("../backgrounds/body_bg.png");
 	height: 		100%;
 	text-align:     center;
 }
@@ -162,13 +163,13 @@ body {
 	float: 			left;
 	position:		relative;
 	padding:		5px 0px 5px 0px;
-	font-size: 		0.9em;
+	font-size: 		1.2em;
 	font-weight:		bold;
 	color:			#B9BBBD;
 	background:		#565455;
 	/*background-image: url(/backgrounds/bg_bars.png);
 	background-position-x: right;*/
-	height:         1.5em;
+	/*height:         2em;*/
 	width:          100%;
     /*-moz-box-shadow: 0px 2px 2px #555,0px -2px 2px #555;
     -webkit-box-shadow: 0px 2px 2px #555,0px -2px 2px #555;
@@ -221,7 +222,7 @@ body {
 #page-title{
 	float: 			left;
 	width:			940px;
-	padding:		0px 0px 20px 50px;
+	padding:		0px 0px 20px 0px;
 	margin:			0px;
 }
 
@@ -410,8 +411,8 @@ a.nohover {
 
 #nav a:active {
 	text-decoration: 	none;
-	color: 			#D05399;
-	background: 		none;
+	color: 			#FFFFFF;
+	background-color: 	#EE3987;
 }
 
 #nav a.selected{
@@ -630,8 +631,8 @@ hr{
 /*  ************* docs list ************* */
 
 .docs_col{
-	width:			250px;
-	margin:			0px 45px 5px 0px;
+	width:			28%;
+	margin:			0px 5% 5px 0px;
 	float:			left;
 	position:		relative;
 }
@@ -959,6 +960,39 @@ padding-bottom:4px;
     max-width: 100%;
 }
 
+div.galleryItem{
+    width:30%;
+    float:left;
+    background-color:#eee;
+    margin-right:3%;
+    height:350px;
+    margin-bottom:20px;
+    position:relative;
+}
+
+div.galleryItem h2{
+    background-color:#EE3987;
+    color: #fff;
+    font-size:1.3em;
+    width:100%;
+    line-height:1.4em;
+}
+
+div.galleryItem h2 a{
+    color: #fff;
+    padding-left:10px;
+}
+
+div.galleryItem .moreLink{
+    display: block;
+    bottom: 10px;
+    position: absolute;
+}
+
+div.galleryItem p{
+    padding:0 10px 0 10px;
+    text-align:justify;
+}
 
 /*      download        */
 
@@ -969,9 +1003,7 @@ padding-bottom:4px;
 
 #download-latest-header{margin-bottom: 3em;}
 
-#download-latest-platform{
-    float:left; 
-    clear:none;
+#download-latest-platform, #docs-ebook{ 
     width:154px;
     height:154px;
     padding:20px;
@@ -980,11 +1012,24 @@ padding-bottom:4px;
     background-color:#eee;
 }
 
+#download-latest-platform{
+    float:left;
+    clear:none;
+}
+
+#docs-ebook{
+    float:right;
+    margin-right:60px;
+    margin-top:20px;
+}
+
 .download-license{
 clear:both;
 padding-top:1em;
 }
 
+
+/*      flickr bar      */
 
 #flickr h3{
     background-color:#EE3987;
@@ -1029,6 +1074,7 @@ text-decoration:none;
 #community img{width:100px;}
 
 
+/*      twitter bar     */
 .tweet,
 .query {
 	font: .9em sans;
@@ -1089,6 +1135,8 @@ text-decoration:none;
     text-decoration: 	none;
 }
 
+
+/*      github bar      */
  
 div#github, #forum {
     margin: 0px auto;

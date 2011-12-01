@@ -19,7 +19,7 @@
 <div id="head">
 
 		<div id="head-left">
-			<a href="${bf.config.site.url}" title="openFrameworks" class="nohover"><img src="${bf.config.site.url}/images/ofw-logo.png" border="0" width="114" height="60" alt="openFrameworks" /></a>
+			<a href="${bf.config.site.url}" title="openFrameworks" class="nohover"><img src="${bf.config.site.url}/images/ofw-logo.png" border="0" alt="openFrameworks" /></a>
 		</div>
 
 		<div id="head-right">
@@ -32,11 +32,11 @@
 
 <div id="nav">
     <div id="nav-menu">
-	    <a href="${bf.config.site.url}/about" title="about" >about</a> &nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
+	    <a href="${bf.config.site.url}/about" title="about" >about</a> &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
 	    <!--a href="${bf.config.site.url}/setup" title="setup" >setup</a> &nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;-->
-	    <a href="${bf.config.site.url}/download" title="download" >download</a> &nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
-	    <a href="${bf.config.site.url}/docs">docs</a> &nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
-	    <a href="${bf.config.site.url}/gallery" title="gallery" >gallery</a> &nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
+	    <a href="${bf.config.site.url}/download" title="download" >download</a> &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+	    <a href="${bf.config.site.url}/docs">documentation</a> &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+	    <a href="${bf.config.site.url}/gallery" title="gallery" >gallery</a> &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
 	    <a href="${bf.config.site.url}/community" title="community" >community</a> 
 	</div>
 </div><!-- nav -->

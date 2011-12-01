@@ -12,26 +12,36 @@
       <div id="body-wrap">	
 
 	    <div class="page-wide">
-
+            
 		    <div class="page-left-split">
                 <h1>documentation</h1>
 			    <p>This page the start documentation for the main OF api. There are also additional libraries that you can find on the addons page. This api is a work in progress and any corrections, additions or comments are very welcome!</p>
 			    <p>You can contribute to this documentation from github by following this <a href="https://github.com/openframeworks/openFrameworks/wiki/Contributing-documentation">instructions</a> 
 			    <p>This document refers to version <strong>007</strong></p>
-			    <h2>core</h2>
 		    </div>
 		    
 
-		    <!--div class="page-left-right">
-		        <p>
+		    <div class="page-right-narrow">
+		        <!--p>
 			        <strong>Show advanced?</strong><br />
 				        <a href="documentation?adv=yes">yes</a> / no
-		        </p>
-		    </div-->
+		        </p-->
+		        <div id="docs-ebook">
+		        <h2>ebooks</h2>
+		        <p><a href="${bf.config.site.url}/epub/ofReference.epub"><strong>epub</strong></a></p>
+		        <p><a href="${bf.config.site.url}/epub/ofReference.mobi"><strong>mobi (kindle)</strong></a></p>
+		        <p><a href="${bf.config.site.url}/epub/ofReference.pdf"><strong>pdf</strong></a></p>
+		        </div>
+		    </div>
 
     	</div>
 
 
+    	<div class="page-wide">
+            <div class="page-left-split">
+			    <h2>core</h2>
+            </div>
+        </div><!-- End Page Wide -->
 
     	<div class="page-wide">
             % for column in columns:

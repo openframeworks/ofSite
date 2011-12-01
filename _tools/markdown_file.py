@@ -127,6 +127,7 @@ def getclass(clazz):
     
 def serialize_function(f,function):
     f.write('###' + function.returns + " " + function.syntax + "\n\n")
+    f.write("<!--\n\n");
     f.write("_syntax: " + function.syntax + "_\n\n")
     f.write("_name: " + function.name + "_\n\n")
     f.write("_returns: " + function.returns + "_\n\n")
@@ -140,6 +141,7 @@ def serialize_function(f,function):
     f.write("_static: " + str(function.static) + "_\n\n")
     f.write("_visible: " + str(function.visible) + "_\n\n")
     f.write("_advanced: " + str(function.advanced)  + "_\n\n\n\n")
+    f.write("-->\n\n");
     f.write("_description: _\n\n")
     f.write(function.description)
     f.write('\n\n\n\n\n\n')
@@ -147,6 +149,7 @@ def serialize_function(f,function):
 
 def serialize_var(f,var):
     f.write('###' + var.type + " " + var.name + "\n\n")
+    f.write("<!--\n\n");
     f.write("_name: " + var.name + "_\n\n")
     f.write("_type: " + var.type + "_\n\n")
     f.write("_access: " + var.access + "_\n\n")
@@ -156,6 +159,7 @@ def serialize_var(f,var):
     f.write("_visible: " + str(var.visible) + "_\n\n")
     f.write("_constant: " + str(var.constant) + "_\n\n")
     f.write("_advanced: " + str(var.advanced) + "_\n\n\n\n")
+    f.write("-->\n\n");
     f.write("_description: _\n\n")
     f.write(var.description)  
     f.write("\n\n\n\n\n\n")
