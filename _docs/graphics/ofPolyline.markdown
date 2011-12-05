@@ -9,12 +9,46 @@
 
 
 
+ofPolyLine allows you to combine multiple ofPath instance into a single vector data object that can be drawn to the screen, manipulated point by point, and combined with other ofPolyline instances. 
 
 
+$$code(lang=c++)
+void testApp::setup(){
+	float i = 0;
+	while (i < TWO_PI) { // make a heart
+		float r = (2-2*sin(i) + sin(i)*sqrt(abs(cos(i))) / (sin(i)+1.4)) * -80;
+		float x = ofGetWidth()/2 + cos(i) * r;
+		float y = ofGetHeight()/2 + sin(i) * r;
+		line.addVertex(ofVec2f(x,y));
+		i+=0.005*HALF_PI*0.5;
+	}
+	line.close(); // close the shape
+	ofSetLineWidth(2);
+}
 
+void testApp::update(){
+	int i = 0;
+	while( i < line.size() ) { // give it some movement
+		line[i].x += sin(line[i].y) * sin(ofGetElapsedTimef() * 2.f);
+		i++;
+	}
+}
 
-
-
+void testApp::draw(){
+	//ofTranslate(ofGetWidth()/2 - 180, ofGetHeight()/2 - 60);
+	ofSetColor(255, 0, 0);
+	line.draw(); // draw the lines
+	int i = 0;
+	while( i < line.size() ) { // draw each point
+		
+		ofCircle(line[i].x, line[i].y, 3);
+		i++;
+	}
+	
+	ofSetColor(0, 0, 255);
+	ofCircle(line.getClosestPoint(ofPoint(mouseX, mouseY)), 10); // find the closest point to the mouse
+}
+$$/code
 
 
 
@@ -69,7 +103,7 @@ _description: _
 
 
 
-
+Creates an ofPolyline.
 
 
 
@@ -119,12 +153,20 @@ _description: _
 
 
 
+Creates an ofPolyline from a vector of ofVec2f or ofPoint objects.
 
 
+$$code(lang=c++)
+vector<ofPoint> pts;
+	float j = 0;
+	while(j < TWO_PI+0.1) {
+		pts.push_back( ofPoint(cos(j) * 100, sin(j) * 100));
+		j+=0.1;
+	}
+	ofPolyline cp(pts);
+$$/code
 
-
-
-
+There is an easier way to draw circles though, using the arc() method.
 
 
 ###void clear()
@@ -164,7 +206,7 @@ _advanced: False_
 _description: _
 
 
-
+Removes all the points from the ofPolyline.
 
 
 
@@ -217,7 +259,7 @@ _description: _
 
 
 
-
+Adds a point using an ofPoint at the end of the ofPolyline.
 
 
 
@@ -264,7 +306,7 @@ _description: _
 
 
 
-
+Adds a point using floats instead of an ofPoint at the end of the ofPolyline.
 
 
 
@@ -313,12 +355,28 @@ _description: _
 
 
 
+Adds multiple points at the end of the ofPolyline using a vector of ofPoint objects, which can be declared like so:
 
+$$code(lang=c++)
+vector<ofPoint> verts;
 
+// make a pentagon
+float size = 80.f;
+float X1 = 0.125*sqrt(10 + 2*sqrt(5)) * size;
+float X2 = 0.125*sqrt(10 - 2*sqrt(5)) * size;
+float Y1 = 0.125*(sqrt(5) - 1) * size;
+float Y2 = 0.125*(sqrt(5) + 1) * size;
 
+verts.push_back(ofPoint(0, -0.5 * size));
+verts.push_back(ofPoint(-X1, -Y1));
+verts.push_back(ofPoint(-X2, Y2));
+verts.push_back(ofPoint(X2, Y2));
+verts.push_back(ofPoint(X1, -Y1));
 
+ofPolyline p;
+p.addVertexes(verts);
 
-
+$$/code
 
 
 
@@ -363,7 +421,26 @@ _description: _
 
 
 
+$$code(lang=c++)
+ofPoint* verts = new ofPoint[5];
 
+// make a pentagon
+float size = 80.f;
+float X1 = 0.125*sqrt(10 + 2*sqrt(5)) * size;
+float X2 = 0.125*sqrt(10 - 2*sqrt(5)) * size;
+float Y1 = 0.125*(sqrt(5) - 1) * size;
+float Y2 = 0.125*(sqrt(5) + 1) * size;
+
+verts[0] = ofPoint(0, -0.5 * size);
+verts[1] = ofPoint(-X1, -Y1);
+verts[2] = ofPoint(-X2, Y2);
+verts[3] = ofPoint(X2, Y2);
+verts[4] = ofPoint(X1, -Y1);
+
+ofPolyline p;
+p.addVertexes(verts, 5);
+
+$$/code
 
 
 
@@ -411,7 +488,7 @@ _description: _
 
 
 
-
+Add a line from the last point added, or from 0,0 if no point is set, to the point indicated by the ofPoint passesd in.
 
 
 
@@ -460,7 +537,7 @@ _description: _
 
 
 
-
+Add a line from the last point added, or from 0,0 if no point is set, to the point indicated by the floats x,y,z passesd in.
 
 
 
@@ -511,10 +588,17 @@ _description: _
 
 
 
+Draw an arc around the ofPoint p with the width of radiusX and the height of radiusY. The angleBegin and angleEnd indicate how far around you want the arc to extend. For instance, to draw a circle:
 
+$$code(lang=c++)
+ofPoint p(0, 0);
+polyline.arc(p,100,100,0,360,40); // circle with a diameter of 100
+$$/code
 
-
-
+$$code(lang=c++)
+ofPoint p(100, 0);
+polyline.arc(p,100,100,0,180,40); // semi-circle with a diameter of 100
+$$/code
 
 
 
@@ -558,7 +642,15 @@ _description: _
 
 
 
+Draw an arc around the point x,y with the width of radiusX and the height of radiusY. The angleBegin and angleEnd indicate how far around you want the arc to extend. For instance, to draw a circle:
 
+$$code(lang=c++)
+polyline.arc(0,0,100,100,0,360,40); // circle with a diameter of 100
+$$/code
+
+$$code(lang=c++)
+polyline.arc(0,0,100,100,0,180,40); // semi-circle with a diameter of 100
+$$/code
 
 
 
@@ -607,7 +699,17 @@ _description: _
 
 
 
+Draw an arc around the point x,y,z with the width of radiusX and the height of radiusY. The angleBegin and angleEnd indicate how far around you want the arc to extend. For instance, to draw a circle:
 
+$$code(lang=c++)
+// at middle and -100 back
+polyline.arc(ofGetWidth()/2,ofGetHeight()/2,100,100,100,0,360,40); // circle with a diameter of 100
+$$/code
+
+$$code(lang=c++)
+// at middle and -100 back
+polyline.arc(ofGetWidth()/2,ofGetHeight()/2,100,100,100,0,180,40); // semi-circle with a diameter of 100
+$$/code
 
 
 
