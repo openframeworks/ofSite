@@ -70,7 +70,7 @@
   <%include file="head.mako" />
 </%def>
 <%def name="header()">
-  <%include file="header.mako" />
+  <%include file="header.mako"  args="active='docs'"/>
 </%def>
 <%def name="footer()">
   <%include file="footer.mako" />

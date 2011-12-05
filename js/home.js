@@ -4,7 +4,7 @@ function feedGithubLoaded(result) {
   if (!result.error) {
     // Grab the container we will put the results into
     var container = document.getElementById("github");
-    container.innerHTML = '';
+    container.innerHTML = '<h3>github</h3>';
 
     // Loop through the feeds, putting the titles onto the page.
     // Check out the result object for a list of properties returned in each entry.
@@ -42,7 +42,9 @@ function feedForumLoaded(result) {
   if (!result.error) {
     // Grab the container we will put the results into
     var container = document.getElementById("forum");
-    container.innerHTML = '';
+    container.innerHTML = '<h3>forum</h3>';
+    
+    
 
     // Loop through the feeds, putting the titles onto the page.
     // Check out the result object for a list of properties returned in each entry.
@@ -98,13 +100,13 @@ function feedFlickrLoaded(result) {
     
 function OnLoad() {
     var feedGithub = new google.feeds.Feed("https://github.com/openframeworks/openFrameworks/commits/develop.atom");
-    feedGithub.setNumEntries(5);
+    feedGithub.setNumEntries(3);
     feedGithub.setResultFormat(google.feeds.Feed.XML_FORMAT);
     // Calling load sends the request off.  It requires a callback function.
     feedGithub.load(feedGithubLoaded);
 
     var feedForum = new google.feeds.Feed("http://feeds.feedburner.com/openframeworks-forum");
-    feedForum.setNumEntries(5);
+    feedForum.setNumEntries(3);
     // Calling load sends the request off.  It requires a callback function.
     feedForum.load(feedForumLoaded);
 
@@ -112,6 +114,18 @@ function OnLoad() {
     feedFlickr.setNumEntries(20);
     feedFlickr.load(feedFlickrLoaded);
     
+    
+    $(".tweet").tweet({
+      avatar_size: 32,
+      count: 5,
+      query: "openFrameworks",
+      loading_text: "searching twitter...",
+      template: "{avatar} {text}"
+    });
+    $(".tweet").prepend("<h3>twitter</h3>");
+    
 }
 
 google.setOnLoadCallback(OnLoad);
+
+

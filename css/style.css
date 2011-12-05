@@ -33,9 +33,9 @@ body {
     text-align:left;
     margin: auto;
 	width: 			1000px;
-    /*-moz-box-shadow: 5px 5px 5px #ddd, -5px 0 5px #ddd;
-    -webkit-box-shadow: 5px 5px 5px #ddd, -5px 0 5px #ddd;
-    box-shadow: 5px 5px 5px #ddd, -5px 0 5px #ddd;*/
+    -moz-box-shadow: 5px 5px 5px #aaa, -5px 0 5px #aaa;
+    -webkit-box-shadow: 5px 5px 5px #aaa, -5px 0 5px #aaa;
+    box-shadow: 5px 5px 5px #aaa, -5px 0 5px #aaa;
 }
 
 #wrap{
@@ -88,10 +88,12 @@ body {
 #toolbar a, #toolbar a:link, #toolbar a:visited{
 	text-decoration: 	none;
 	color:			#EBEBEB;
+	padding: 0 0.2em 0 0.2em;
 }
-#toolbar a:hover{
+#toolbar a:hover, #head-right a.active{
 	text-decoration: 	none;
 	color:			#FFFFFF;
+	background-color: 	#EE3987;
 }
 
 #toolbar ul{
@@ -108,7 +110,6 @@ body {
 #toolbar-left{
 	float: 		left;
 	text-align:	left;
-	width:		300px;
 }
 
 
@@ -132,7 +133,7 @@ body {
 	height:			120px;
 	float: 			left;
 	position:		relative;
-	padding:		45px 0px 5px 0px;
+	padding:		20px 0px 5px 0px;
 	background-color:	#FFFFFF;
 	/*background-image:	url('/backgrounds/1.jpg');
 	background-repeat:	no-repeat;
@@ -144,7 +145,7 @@ body {
 #head-left{
 	float: 			left;
 	position:		relative;
-	width:			620px;
+	width:			80px;
 	padding:		20px 40px 0px 50px;
 	margin:			0px;
 }
@@ -152,9 +153,42 @@ body {
 #head-right{
 	float: 			left;
 	position:		relative;
-	padding:		30px 0px 0px 0px;
-	width:			280px;
+	padding:		10px 0px 0px 0px;
 	margin:			0px;
+}
+
+#head-right ul{
+    list-style:none;
+}
+
+#head-right li{
+    margin-left:2.4em;
+    display:block;
+    float: left;
+}
+
+#head-right li a{
+    font-size: 2em;
+    color: #333;
+	padding: 0 0.2em 0 0.2em;
+}
+
+#head-right .menu-externals{
+    float: right;
+}
+
+#head-right .menu-externals li a{
+    font-size: 1.2em;
+}
+
+#head-right li a:hover{
+    color: #fff;
+}
+
+hr.header{
+    width: 100%;
+    margin: 0;
+    background-color: #eee;
 }
 
 /*  ************* Top Navigations  ************* */
@@ -505,17 +539,23 @@ h3{
 }
 
 .page-right-narrow h3{
-    text-align: right;
     margin-right: 40px;
     padding-right: 10px;
-    background-color: #ee3987;
+    color: #ee3987;
     line-height: 1.7em;
-    color: #fff
+    font-size:1.8em;
+    /*color: #fff*/
 }
 
 .page-right-narrow h3 a{
-    color: #fff
+    color: #ee3987
 }
+
+
+.page-right-narrow h3 a:hover{
+    background-color:#fff;
+}
+
 
 hr{
 	height: 		1px;
@@ -1029,7 +1069,12 @@ padding-top:1em;
 }
 
 
+#github, .tweet, #forum{
+float:left;
+}
+
 /*      flickr bar      */
+
 
 #flickr h3{
     background-color:#EE3987;
@@ -1049,20 +1094,19 @@ padding-top:1em;
     display: block;
 }
 
-#flickr a img{
-    max-width: 100%;
-    max-height:300px;
+#flickr img{
+    width: 100%;
     margin: auto;
     padding:0
 }
 
-#flickr div{
-    width:100%;
+div#flickr {
+    width:30%;
     background-color:#000;
     text-align:center;
 }
 
-#flickr .divImg{
+#flickr div.divImg{
     /*height:100%;*/
 }
 
@@ -1082,7 +1126,7 @@ text-decoration:none;
 }
 
 .tweet{
-    width: 300px;
+    width: 280px;
 }
 
 .tweet_list {
@@ -1140,14 +1184,15 @@ text-decoration:none;
  
 div#github, #forum {
     margin: 0px auto;
-    width: 300px;
+    width: 280px;
+	margin: 0;
+    margin-left: 20px;
     list-style-type: none;
 	/*-webkit-border-radius: 0.5em;
 	-moz-border-radius: 0.5em;
 	border-radius: 0.5em;*/
 	padding: 0;
 	list-style: none;
-	margin: 0;
 	padding: 5px 0 5px 0;
 	overflow-y: hidden;
 	background-color: #EEEEEE;
@@ -1187,4 +1232,18 @@ div#github .github_avatar img {
     background-color:#ee3987
     text-decoration: 	none;
 }
-.vvqbox { display: block; max-width: 100%; visibility: visible !important; margin: 10px auto 10px 0; } .vvqbox img { max-width: 100%; height: 100%; } .vvqbox object { max-width: 100%; } 
+
+.tweet h3, #forum h3, #github h3{
+    font-size:1.3em;
+    margin:0;
+    padding-left:10px;
+    background-color:#ee3987;
+    color:#fff;
+}
+
+.vvqbox { display: block; max-width: 100%; visibility: visible !important; margin: 10px auto 10px 0; } .vvqbox img { max-width: 100%; height: 100%; } .vvqbox object { max-width: 100%; }
+
+
+.clearboth{
+clear: both;
+} 

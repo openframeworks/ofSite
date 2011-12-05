@@ -86,7 +86,7 @@
 
 
 <%def name="header()">
-  <%include file="header.mako" />
+  <%include file="header.mako" args="active='docs'" />
 </%def>
 
 
