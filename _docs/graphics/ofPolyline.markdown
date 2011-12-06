@@ -12,50 +12,34 @@
 ofPolyLine allows you to combine multiple ofPath instance into a single vector data object that can be drawn to the screen, manipulated point by point, and combined with other ofPolyline instances. 
 
 
+You can add points to an ofPolyline by adding vertices:
+
 $$code(lang=c++)
-void testApp::setup(){
-	float i = 0;
-	while (i < TWO_PI) { // make a heart
-		float r = (2-2*sin(i) + sin(i)*sqrt(abs(cos(i))) / (sin(i)+1.4)) * -80;
-		float x = ofGetWidth()/2 + cos(i) * r;
-		float y = ofGetHeight()/2 + sin(i) * r;
-		line.addVertex(ofVec2f(x,y));
-		i+=0.005*HALF_PI*0.5;
-	}
-	line.close(); // close the shape
-	ofSetLineWidth(2);
+float i = 0;
+while (i < TWO_PI) { // make a heart
+	float r = (2-2*sin(i) + sin(i)*sqrt(abs(cos(i))) / (sin(i)+1.4)) * -80;
+	float x = ofGetWidth()/2 + cos(i) * r;
+	float y = ofGetHeight()/2 + sin(i) * r;
+	line.addVertex(ofVec2f(x,y));
+	i+=0.005*HALF_PI*0.5;
 }
+line.close(); // close the shape
 
-void testApp::update(){
-	int i = 0;
-	while( i < line.size() ) { // give it some movement
-		line[i].x += sin(line[i].y) * sin(ofGetElapsedTimef() * 2.f);
-		i++;
-	}
-}
+$$/code
 
-void testApp::draw(){
-	//ofTranslate(ofGetWidth()/2 - 180, ofGetHeight()/2 - 60);
-	ofSetColor(255, 0, 0);
-	line.draw(); // draw the lines
-	int i = 0;
-	while( i < line.size() ) { // draw each point
-		
-		ofCircle(line[i].x, line[i].y, 3);
-		i++;
-	}
-	
-	ofSetColor(0, 0, 255);
-	ofCircle(line.getClosestPoint(ofPoint(mouseX, mouseY)), 10); // find the closest point to the mouse
+or you can draw lines or curves:
+
+$$code(lang=c++)
+float angle = 0;
+while (angle < TWO_PI ) {
+	b.curveTo(100*cos(angle), 0, 100*sin(angle));
+	b.curveTo(300*cos(angle), 300, 300*sin(angle));
+	angle += TWO_PI / 30;
 }
 $$/code
 
 
-
-
-
-
-
+ofPolyline also includes methods to get the cloeset point, determien whether a point is inside shape, and resample shapes. Along with the ofPath class, it's the best way to draw and manipulate 2D and 3D vector graphics that you'll need to update and manipulate frequently.
 
 
 
@@ -758,9 +742,16 @@ _description: _
 
 
 
+Draws a curve to an ofPoint object passed in:
 
-
-
+$$code(lang=c++)
+float angle = 0;
+while (angle < TWO_PI ) {
+	b.curveTo( ofPoint(100*cos(angle), 100*sin(angle)));
+	b.curveTo( ofPoint(300*cos(angle), 300*sin(angle)));
+	angle += TWO_PI / 30;
+}
+$$/code
 
 
 
@@ -805,9 +796,16 @@ _advanced: False_
 _description: _
 
 
+Draws a curve to the x,y,z points passed in with the optional resolution.
 
-
-
+$$code(lang=c++)
+float angle = 0;
+while (angle < TWO_PI ) {
+	polyline.curveTo(100*cos(angle), 0, 100*sin(angle));
+	polyline.curveTo(300*cos(angle), 300, 300*sin(angle));
+	angle += TWO_PI / 30;
+}
+$$/code
 
 
 
@@ -1590,11 +1588,19 @@ _description: _
 
 
 
+The [] operator allows you to access the points of the ofPolyline just like you would in an array, so to make the points of a line follow the mouse movement, you could do:
 
-
-
-
-
+$$code(lang=c++)
+line[0].set(mouseX, mouseY);
+int i = 1;
+while ( i<bounds.size()) {
+	
+	float angle = atan2(line[i-1].y - line[i].y, line[i-1].x - line[i].x);  
+	bounds[i].set(bounds[i-1].x - cos(angle) * 20, bounds[i-1].y - sin(angle) * 20);
+	
+	i++;
+}
+$$/code
 
 
 
