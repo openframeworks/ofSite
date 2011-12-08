@@ -16,45 +16,7 @@
     <div id="content">
       ${self.header()}
       <div id="body-wrap">
-      		<div class="page-left-medium">
-                  ${next.body()}
-            </div>
-             
-            <div class="page-right-narrow">
-                <br/><br/><br/>
-      		    <h2>openFrameworks is an open source C++ toolkit for creative coding.</h2>
-      		    <br/>
-                <h3><a href="download/">download</a></h3>
-                <h3><a href="docs/">documentation</a></h3>
-                <h3><a href="http://forum.openframeworks.cc">forum</a></h3>
-                <h3><a href="http://github.com/openframeworks/openFrameworks">code</a></h3>
-            </div>
-            
-            <div class="page-wide">
-            
-                <hr/>
-                
-                <!--h3><a href="http://twitter.com/#!/search/openframeworks">twitter</a></h3-->
-                <div class="tweet"></div>
-                
-                <!--h3><a href="http://forum.openframeworks.cc">forum</a></h3-->
-                <div id="forum"></div>
-                
-                <!--h3><a href="http://gihub.com/openframeworks/openFrameworks">github</a></h3-->
-                <div id="github"></div>
-
-                <br class="clearboth">
-                <hr/>
-            </div>
-            
-            <div class="page-wide">
-                            
-                <!--flickr-->
-                <div id="flickr"></div>
-
-                <br class="clearboth">
-                <hr/>
-            </div>
+            ${next.body()}
       </div>
       <div id="footer">
         ${self.footer()}
@@ -62,12 +24,7 @@
     </div> <!-- End Content -->
   </body>
 </html>
-<%def name="head()">
-  <%include file="head.mako" />
-</%def>
+
 <%def name="header()">
   <%include file="header.mako"  args="active='home'"/>
-</%def>
-<%def name="footer()">
-  <%include file="footer.mako" />
 </%def>

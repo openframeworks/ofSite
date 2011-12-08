@@ -10,12 +10,10 @@
     <div id="content">
       ${self.header()}
       <div id="body-wrap">
-      		<div class="page-left-wide">
-      		    <div id="community">
-                <%self:filter chain="markdown_template">
-                  ${next.body()}
-                </%self:filter>
-                </div>
+      		<div class="page-wide">
+      		% for member in members:
+                <a href="user/?user=${member.user}"><img src="${member.avatar}" alt="${member.name}"/></a>
+            % endfor
             </div>
       </div>
       <div id="footer">
@@ -24,12 +22,3 @@
     </div> <!-- End Content -->
   </body>
 </html>
-<%def name="head()">
-  <%include file="head.mako" />
-</%def>
-<%def name="header()">
-  <%include file="header.mako"  args="active='community'"/>
-</%def>
-<%def name="footer()">
-  <%include file="footer.mako" />
-</%def>

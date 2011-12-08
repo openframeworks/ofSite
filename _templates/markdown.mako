@@ -22,9 +22,3 @@
     </div> <!-- End Content -->
   </body>
 </html>
-<%def name="head()">
-  <%include file="head.mako" />
-</%def>
-<%def name="footer()">
-  <%include file="footer.mako" />
-</%def>

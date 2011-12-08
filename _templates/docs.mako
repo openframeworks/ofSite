@@ -15,7 +15,7 @@
             
 		    <div class="page-left-split">
                 <h1>documentation</h1>
-			    <p>This page the start documentation for the main OF api. There are also additional libraries that you can find on the addons page. This api is a work in progress and any corrections, additions or comments are very welcome!</p>
+			    <p>This page is the reference for the OF core and the included addons. There are also additional libraries that you can find on the addons page. This api is a work in progress and any corrections, additions or comments are very welcome!</p>
 			    <p>You can contribute to this documentation from github by following this <a href="https://github.com/openframeworks/openFrameworks/wiki/Contributing-documentation">instructions</a> 
 			    <p>This document refers to version <strong>007</strong></p>
 		    </div>
@@ -27,10 +27,11 @@
 				        <a href="documentation?adv=yes">yes</a> / no
 		        </p-->
 		        <div id="docs-ebook">
-		        <h2>ebooks</h2>
+		        <h2>download</h2>
+		        <p><a href="${bf.config.site.url}/epub/ofReference.zip"><strong>html</strong></a></p>
+		        <p><a href="${bf.config.site.url}/epub/ofReference.pdf"><strong>pdf</strong></a></p>
 		        <p><a href="${bf.config.site.url}/epub/ofReference.epub"><strong>epub</strong></a></p>
 		        <p><a href="${bf.config.site.url}/epub/ofReference.mobi"><strong>mobi (kindle)</strong></a></p>
-		        <p><a href="${bf.config.site.url}/epub/ofReference.pdf"><strong>pdf</strong></a></p>
 		        </div>
 		    </div>
 
@@ -38,6 +39,7 @@
 
 
     	<div class="page-wide">
+    	    <hr/>
             <div class="page-left-split">
 			    <h2>core</h2>
             </div>
@@ -54,6 +56,7 @@
         </div><!-- End Page Wide -->
         
     	<div class="page-wide">
+    	    <hr/>
             <div class="page-left-split">
 		        <h2>addons</h2>
             </div>
@@ -78,19 +81,8 @@
   </body>
 </html>
 
-
-
-<%def name="head()">
-  <%include file="head.mako" />
-</%def>
-
-
 <%def name="header()">
   <%include file="header.mako" args="active='docs'" />
 </%def>
 
-
-<%def name="footer()">
-  <%include file="footer.mako" />
-</%def>
 

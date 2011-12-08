@@ -10,7 +10,8 @@ function feedGithubLoaded(result) {
     // Check out the result object for a list of properties returned in each entry.
     // http://code.google.com/apis/ajaxfeeds/documentation/reference.html#JSON
     var ul = document.createElement("ul");
-    for (var i = 0; i < result.xmlDocument.getElementsByTagName('entry').length; i++) {
+    var totalElements = 0;
+    for (var i = 0; i < result.xmlDocument.getElementsByTagName('entry').length && totalElements<4; i++) {
       var entry = result.xmlDocument.getElementsByTagName('entry')[i];
       var li = document.createElement("li");
       var a = document.createElement("a");
@@ -19,7 +20,11 @@ function feedGithubLoaded(result) {
       div.className="github_avatar";
       img.src = entry.getElementsByTagNameNS("*","thumbnail")[0].getAttribute("url");
       a.href = entry.getElementsByTagName("link")[0].getAttribute("href");
-      a.appendChild(document.createTextNode(entry.getElementsByTagName("title")[0].textContent));
+      var title = entry.getElementsByTagName("title")[0].textContent;
+      if(title.indexOf("Merge") == 0){
+        continue
+      }
+      a.appendChild(document.createTextNode(title));
       //a.appendChild(document.createTextNode(entry.getElementsByTagNameNS("*","thumbnail")[0].getAttribute("url")));
       /*for( p in entry.getElementsByTagName("link")){
          a.appendChild(document.createTextNode(p.tagName));
@@ -30,8 +35,9 @@ function feedGithubLoaded(result) {
       li.appendChild(div);
       li.appendChild(a);
       li.appendChild(document.createElement("br"));
-      li.appendChild(document.createTextNode(entry.getElementsByTagName("updated")[0].textContent));
+      //li.appendChild(document.createTextNode(entry.getElementsByTagName("updated")[0].textContent));
       ul.appendChild(li);
+      totalElements++;
     }
     container.appendChild(ul);
   }
@@ -58,7 +64,7 @@ function feedForumLoaded(result) {
       a.appendChild(document.createTextNode(entry.author + ": " + entry.title));
       li.appendChild(a);
       li.appendChild(document.createElement("br"));
-      li.appendChild(document.createTextNode(Encoder.htmlDecode(entry.contentSnippet)));
+      li.appendChild(document.createTextNode(Encoder.htmlDecode(entry.contentSnippet.substr(0,100)+"...")));
       ul.appendChild(li);
     }
     container.appendChild(ul);
@@ -77,17 +83,23 @@ function feedFlickrLoaded(result) {
     // http://code.google.com/apis/ajaxfeeds/documentation/reference.html#JSON
     for (var i = 0; i < result.feed.entries.length; i++) {
       var entry = result.feed.entries[i];
-      if(entry["mediaGroups"]==undefined || entry.mediaGroups.lenght<1 || entry.mediaGroups[0].lenght < 1)
+      if(entry["mediaGroups"]==undefined || entry.mediaGroups.length<1 || entry.mediaGroups[0].length < 1)
         continue;
       var h3 = document.createElement("h3");
       var a = document.createElement("a");
+      var aText = document.createElement("a");
       var div = document.createElement("div");
       var img = document.createElement("img");
       a.href = entry.link;
+      aText.href = entry.link;
+      aText.className="flickrTitle";
       h3.appendChild(document.createTextNode(entry.title + " by " + entry.author.substr(entry.author.indexOf('(')+1, entry.author.indexOf(')')-entry.author.indexOf('(')-1)))
       a.appendChild(img);
-      a.appendChild(h3)
+      a.className  = "img";
+      aText.appendChild(h3)
       div.appendChild(a);
+      div.appendChild(aText);
+      div.className="imgContainer";
       img.src = entry.mediaGroups[0].contents[0].url;
 
       container.appendChild(div);
@@ -97,16 +109,36 @@ function feedFlickrLoaded(result) {
         fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
     });
 }
+
+// Our callback function, for when a feed is loaded.
+function feedVimeoLoaded(result) {
+  if (!result.error && result.xmlDocument.getElementsByTagName('item').length>0) {
+    // Grab the container we will put the results into
+    var container = document.getElementById("vimeo");
+    container.innerHTML = '';
+    var numEntry = Math.floor(Math.random()*result.xmlDocument.getElementsByTagName('item').length)
+    var entry = result.xmlDocument.getElementsByTagName('item')[numEntry];
+    var url = entry.getElementsByTagName("link")[0].textContent;
+    var id = url.substr(url.lastIndexOf("/")+1);
+    var vidURL = 'http://player.vimeo.com/video/' + id + '?title=1&amp;byline=0&amp;portrait=0';
+
+    var w=440;
+    var h=300;
+
+    var vimHTML = $(document.createElement('iframe')).attr({src:vidURL, width:w, height:h, frameborder:0});
+    $('#vimeo').append(vimHTML);
+  }
+}
     
 function OnLoad() {
     var feedGithub = new google.feeds.Feed("https://github.com/openframeworks/openFrameworks/commits/develop.atom");
-    feedGithub.setNumEntries(3);
+    feedGithub.setNumEntries(10);
     feedGithub.setResultFormat(google.feeds.Feed.XML_FORMAT);
     // Calling load sends the request off.  It requires a callback function.
     feedGithub.load(feedGithubLoaded);
 
     var feedForum = new google.feeds.Feed("http://feeds.feedburner.com/openframeworks-forum");
-    feedForum.setNumEntries(3);
+    feedForum.setNumEntries(4);
     // Calling load sends the request off.  It requires a callback function.
     feedForum.load(feedForumLoaded);
 
@@ -114,15 +146,18 @@ function OnLoad() {
     feedFlickr.setNumEntries(20);
     feedFlickr.load(feedFlickrLoaded);
     
+    var feedVimeo = new google.feeds.Feed("http://vimeo.com/tag:openframeworks/rss");
+    feedVimeo.setNumEntries(20);
+    feedVimeo.setResultFormat(google.feeds.Feed.XML_FORMAT);
+    feedVimeo.load(feedVimeoLoaded);
     
-    $(".tweet").tweet({
+    $(".tweets").tweet({
       avatar_size: 32,
-      count: 5,
+      count: 4,
       query: "openFrameworks",
       loading_text: "searching twitter...",
       template: "{avatar} {text}"
     });
-    $(".tweet").prepend("<h3>twitter</h3>");
     
 }
 

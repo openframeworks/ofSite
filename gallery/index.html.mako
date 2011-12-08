@@ -26,12 +26,6 @@
     </div> <!-- End Content -->
   </body>
 </html>
-<%def name="head()">
-  <%include file="head.mako" />
-</%def>
 <%def name="header()">
   <%include file="header.mako" args="active='gallery'"/>
-</%def>
-<%def name="footer()">
-  <%include file="footer.mako" />
 </%def>

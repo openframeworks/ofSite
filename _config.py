@@ -49,7 +49,9 @@ blog.description = "Your Blog's short description"
 blog.timezone = "US/Eastern"
 
 controllers.docs.enabled = True
-
+controllers.community.enabled = True
 
 docs = controllers.docs
 docs.path = 'docs'
+
+

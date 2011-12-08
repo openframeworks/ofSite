@@ -44,7 +44,7 @@ def addfield(method,line):
     value = line.split(':')[1].lstrip(' ').rstrip('\n').rstrip('_')
     if field=='constant' or field=='advanced' or field=='visible' or field=='static':
         value = ((value == '1') or (value == 'True') or (value=='true') or (value=='TRUE'))
-    print field, "=", value
+    #print field, "=", value
     setattr(method,field,value)
     
 def getclass_list():
@@ -110,7 +110,7 @@ def getclass(clazz):
                         state = 'vars'
                         
                     elif state == 'vars' and line.find('###') == 0:
-                        print line
+                        #print line
                         state = 'var'
                         
                     elif state == 'var' and line.find('_')==0 and line.find('_description')==-1:
@@ -123,7 +123,7 @@ def getclass(clazz):
                         var.description = var.description + line
                         
                     elif state == 'vardescription' and line.find('###') == 0:
-                        print line
+                        #print line
                         state = 'var'
                         docs_clazz.var_list.append(var)
                         var = DocsVar(0)
