@@ -43,9 +43,9 @@ For example, we chose GLUT as the windowing library. Primarily, because it's fai
 
 The most recent release is available from the [downloads](../downloads) page, which is also available on [github](https://github.com/openframeworks/openFrameworks/). The absolutely most recent version of openFrameworks is located in the [develop branch](https://github.com/openframeworks/openFrameworks/tree/develop). For more information about building OF from Github, see the [readme](https://github.com/openframeworks/openFrameworks/blob/master/readme.txt). For more information about contributing to Github, see [this document](https://github.com/openframeworks/openFrameworks/wiki/openFrameworks-git-workflow).
 
-**Who is developing openFrameworks?**
+**How can I help?**
 
-openFrameworks is developed by Zach Lieberman, Theo Watson and Aturo Castro, along with help from collaborators at Parsons School of Design, MediaLabPrado and Hangar Center for the Arts. We also receive love from Eyebeam openLab.
+By making addons, helping improve the documentation and most importantly, by making tutorials or instructions. If you are using OF to make interesting things, post as much source, info and ideas as you can. If you are beginning, take notes about what's confusing and join us on the forum to ask questions and see what people are doing / thinking. 
 
 **The library is distributed non-compiled, why is that?**
 
