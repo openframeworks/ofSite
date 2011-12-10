@@ -16,11 +16,11 @@
         <h2>openFrameworks is an open source C++ toolkit for creative coding.</h2>
         <br/>
         <h3><a href="download/">download</a></h3>
-        Grab the most recent release, <br/><br/>
+        Grab the most recent release and follow the setup guide to get openFrameworks running.<br/><br/>
         <h3><a href="docs/">documentation</a></h3>
-        openFrameworks reference, there's also guides, tutorials and other educational resources in the <a href="http://wiki.openframeworks.cc">wiki</a><br/><br/>
-        <h3><a href="http://forum.openframeworks.cc">forum</a></h3>
-        search and ask in the forum if you don't know how to do something or have problems setting up openFrameworks.
+	Reference for openFrameworks classes, functions and addons. For guides and tutorials, see the <a href="http://wiki.openframeworks.cc/">wiki</a>.<br/><br/>
+        <h3><a href="http://forum.openframeworks.cc/">forum</a></h3>
+	The forum is a place to meet other people working with openFrameworks. It's a place to share your work, or find help solving problems.<br/><br/>
     </div>
 </div>
 
