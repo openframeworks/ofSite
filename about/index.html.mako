@@ -53,18 +53,17 @@ For several reasons -- first, it is practical. Because openFrameworks is still a
 
 **How can I learn C++?**
 
-We don't really expect that openFrameworks should be used as a teaching tool for C++, but we imagine that it might be a "first step" for those interested in dabbling with C++. We will try to promote an active community at the forum, so we would recommend you post some questions there. We would also recommend: 
+We don't really expect that openFrameworks should be used as a teaching tool for C++, but we imagine that it might be a "first step" for those interested in dabbling with C++. We promote an active community on the [forum](http://forum.openframeworks.cc/), so we would recommend you post some questions there. We would also recommend: 
 
-*   this PDF which is one of the best documents we've seen about learning C++ (and in 5 days, no less!): [Philip Machanick -- C and C++ in 5 days.][6] 
-*   this great guide by Zach Gage, [OF for processing users][7], that explains some of the differences to openFrameworks and provides alot of good details. 
-*   Joshua J Noble's Oreilly book "[Programming Interactivity][8]," covers openFrameworks as well as processing and arduino.
-*   cplusplus.com has a great [language tutorial][9] and [reference][10]
-*   [StackOverflow][11] is a great community for asking general and more esoteric questions (search first before you ask!)
-*   a good C++ tutorial for those that know C, [C++ tutorial for C users][12]
-*   some more tutorials on [cprogramming.com][13]
-*   [the lite C++ FAQ][14]
-*   good for STL (Standard Template Library) reference: [cppreference.com/wiki/][15]
-    
+* [C and C++ in 5 days][6] by Philip Machanick, which is one of the best documents we've seen about learning C++ (and in 5 days, no less!).
+* [OF for processing users][7] by Zach Gage, for those transitioning from Processing.
+* [C++ tutorial for C users][12] for those transitioning from C.
+* [Programming Interactivity][8] by Joshua Noble, which covers openFrameworks 0.062 as well as Processing and Arduino.
+* [StackOverflow][11] is a great community for asking general and more esoteric questions.
+* [C++ FAQ](http://www.parashift.com/c++-faq-lite/index.html) by Marshall Cline, and the [C++ FQA Lite](http://yosefk.com/c++fqa/index.html) by Yossi Kreinin.
+* [cppreference.com/wiki/][15] is a good Standard Template Library reference.
+* [cplusplus.com](http://cplusplus.com) has a great [language tutorial][9] and [reference][10].
+* [cprogramming.com][13] has a lot of tutorials.
 
 **Why do you do mostly local linking?**
 
