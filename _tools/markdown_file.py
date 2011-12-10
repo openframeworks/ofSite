@@ -1,4 +1,4 @@
-import docs_files
+#import docs_files
 from docs_members import DocsMethod
 from docs_members import DocsVar
 from docs_class import DocsClass
