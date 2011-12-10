@@ -47,14 +47,6 @@ The most recent release is available from the [downloads](../downloads) page, wh
 
 openFrameworks is developed by Zach Lieberman, Theo Watson and Aturo Castro, along with help from collaborators at Parsons School of Design, MediaLabPrado and Hangar Center for the Arts. We also receive love from Eyebeam openLab.
 
-**What has been made with openFrameworks?**
-
-Plenty of fun and engaging things. See [vimeo][1], [flickr][2], [youtube][3], [twitter][4], [creative applications][5]
-
-**How can I help?**
-
-By making addons, helping improve the documentation and most importantly, by making tutorials or instructions. If you are using OF to make interesting things, post as much source, info and ideas as you can. If you are beginning, take notes about what's confusing and join us on the forum to ask questions and see what people are doing / thinking. 
-
 **The library is distributed non-compiled, why is that?**
 
 For several reasons -- first, it is practical. Because openFrameworks is by all means still a work in progress, we will be making changes to it as we go. By leaving the code visible, it makes those changes alot easier, and we get better feedback about problems and confusions. Second, it's educational, in that it gives the curious a good strating point for learning about C++ library wrangling. Third, it's an active invitation for users of openFrameworks to change, modify and reconfigure the library to their tastes or whims.
