@@ -5,7 +5,6 @@
 
 <p>
 <!-- OF video -->
-    <img src="http://www.openframeworks.cc/wp-content/themes/ofw/images/label_video.gif" width="78" height="31" alt="watch me" />
     <iframe src="http://player.vimeo.com/video/921725?title=0&amp;byline=0&amp;portrait=0" width="550" height="415" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 </p>
 
@@ -17,7 +16,7 @@
         <h2>openFrameworks is an open source C++ toolkit for creative coding.</h2>
         <br/>
         <h3><a href="download/">download</a></h3>
-        don't forget to check the setup guide for your platform<br/><br/>
+        Grab the most recent release, <br/><br/>
         <h3><a href="docs/">documentation</a></h3>
         openFrameworks reference, there's also guides, tutorials and other educational resources in the <a href="http://wiki.openframeworks.cc">wiki</a><br/><br/>
         <h3><a href="http://forum.openframeworks.cc">forum</a></h3>
