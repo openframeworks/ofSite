@@ -41,20 +41,3 @@
 	    <a href="${bf.config.site.url}/community" title="community" >community</a> 
 	</div>
 </div--><!-- nav -->
-
-
-
-	
-<!--div id="sub-nav-empty">
-	&nbsp;
-</div-->
-
-
-
-<!--div id="user-bar">
-							<small><a href="http://www.openframeworks.cc/register">Register</a> / Login</small>
-			
-		<br />
-</div-->
-
-
