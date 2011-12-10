@@ -65,32 +65,6 @@ We don't really expect that openFrameworks should be used as a teaching tool for
 * [cplusplus.com](http://cplusplus.com) has a great [language tutorial][9] and [reference][10].
 * [cprogramming.com][13] has a lot of tutorials.
 
-**Why do you do mostly local linking?**
-
-When you create a C++ application, you wind up having alot of libraries and additonal header code that your projects call. We've felt that the easiest structure to have is the following: 
-
-at one level you have two folders:  
-
-* app  
-* libs  
-
-The libs folder contains the version of openFramework you are using (all of the code) along with the other libraries that openFrameworks links and includes (glut, rtAudio, quicktime, freeImage and freeType).
-
-The apps folder cantains projects that link to those particular libs:  
-ie, search path: "../../libs/xxxxx/includes"
-
-There are a some reasons for this -- first, libraries change (especially openFrameworks!), and if you put them at a root level, instead of a local one, you could be in trouble if you update the library and then try to re-compile old code.
-
-This also makes you projects more portable -- the less libraries you have to install on a given machine, the better.
-
-Also, since the hard drive is not always "c:/" and the folder for program files is not always "Program Files" it can be quite hard for us and other OF users to make projects that can easily compile across different computers.
-
-Finally, it means that beginning users can download the examples and get them to easily compile. It makes the example projecs easier to distribute.
-
-The downside is the added file size to downloads. We will try to keep the examples file size down and in the future we might come up with an "expert" and "beginner" download path.
-
-The trick, when you want to create a new project, is to copy and paste a working poject in the "apps" directory. This trick is described for dev-cpp here, for visual studio here and for xcode here. While we are working on creating wizards or tools for automatically making a good openFrameworks project, for the meantime we will suggest users to use cut and paste for making new projects.
-
 [0]: http://wiki.openframeworks.cc/index.php?title=Svn
 [1]: http://vimeo.com/tag:openFrameworks
 [2]: http://www.flickr.com/search/?q=openFrameworks&s=rec&z=t
