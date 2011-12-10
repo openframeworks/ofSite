@@ -11,8 +11,9 @@
       ${self.header()}
       <div id="body-wrap">
       		<div class="page-wide">
+      		<h1>people</h1>
       		% for member in members:
-                <a href="user/?user=${member.user}"><img src="${member.avatar}" alt="${member.name}"/></a>
+                <a href="user/?user=${member.user}" title="${member.name}"><img width="109" height="109" src="${member.avatar}" alt="${member.name}"/></a>
             % endfor
             </div>
       </div>
