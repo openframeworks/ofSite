@@ -18,9 +18,7 @@ The code is written to be massively cross-compatible. Right now we support five 
 
 Simply put, openFrameworks is a tool that makes it much easier to make things with code. We find it super useful, and we hope you do too.
 
-openFrameworks is actively developed by [Zach Lieberman](http://thesystemis.com/), [Theodore Watson](http://muonics.net/), and [Arturo Castro](http://arturocastro.net/), with help from the [OF community](community/).
-
-openFrameworks is indebted to two significant precursors: the [Processing development environment](http://processing.org/), created by [Casey Reas](http://reas.com/), [Ben Fry](http://benfry.com/) and the Processing community; and the ACU Toolkit, a privately distributed C++ library developed by Ben Fry and others in the [MIT Media Lab's Aesthetics and Computation Group](http://acg.media.mit.edu/).
+openFrameworks is actively developed by [Zach Lieberman](http://thesystemis.com/), [Theodore Watson](http://muonics.net/), and [Arturo Castro](http://arturocastro.net/), with help from the [OF community](../community/). openFrameworks is indebted to two significant precursors: the [Processing development environment](http://processing.org/), created by [Casey Reas](http://reas.com/), [Ben Fry](http://benfry.com/) and the Processing community; and the ACU Toolkit, a privately distributed C++ library developed by Ben Fry and others in the [MIT Media Lab's Aesthetics and Computation Group](http://acg.media.mit.edu/).
 
 ----------------
 
@@ -37,17 +35,13 @@ Over time, openFrameworks has evolved into a much more robust toolkit. Now, one 
 
 **Why did you choose to wrap this library?**
 
-We chose to work with the libraries that in our experience provide the cleanest and simplest API, the best licenses and the easiest integration. 
+We chose to work with the libraries that in our experience provide the cleanest and simplest API, the most generous licenses, and the easiest integration. 
 
-For example, we chose glut as the windowing library. Primarily, because it's fairly universal, has a good license and it's rare to find a compiler or platform that doesn't have a glut library working for it. We have used other windowing toolkits, such as glfw and wxWindows, and even hooked them up with openFrameworks, but in the end, we decided to go with the one of the easiest to get up and running.
+For example, we chose GLUT as the windowing library. Primarily, because it's fairly universal, has a reasonably generous license, and it's rare to find a compiler or platform that is incompatible. We have used other windowing toolkits, such as glfw and wxWindows, and even hooked them up with openFrameworks, but in the end, we decided to go with the one of the easiest to get up and running.
 
-**Where can I see the latest version of the code?**
+**Where can I see the latest version of openFrameworks?**
 
-We have an SVN where you can follow the changes and modifications to openFrameworks. We also have a tarball system so that you could grab an exported version of the SVN as changes are made, if you are interested in following the small, day-to-day updates. We expect to post newer versions of openFrameworks as often as we can online. 
-
-Svn info is here: [http://wiki.openframeworks.cc/index.php?title=Svn][0]
-
-If you are interested in becoming an active developer please let us know. We have a developer mailing list, that has quite an active conversation with addon developers and folks who are interested in discussing the future the OF project.
+The most recent release is available from the [downloads](../downloads) page, which is also available on [github](https://github.com/openframeworks/openFrameworks/). The absolutely most recent version of openFrameworks is located in the [develop branch](https://github.com/openframeworks/openFrameworks/tree/develop). For more information about building OF from Github, see the [readme](https://github.com/openframeworks/openFrameworks/blob/master/readme.txt). For more information about contributing to Github, see [this document](https://github.com/openframeworks/openFrameworks/wiki/openFrameworks-git-workflow).
 
 **Who is developing openFrameworks?**
 
