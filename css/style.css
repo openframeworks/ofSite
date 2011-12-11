@@ -536,7 +536,7 @@ h1{
 	color:			#333333;
 	font-weight:	normal;
 	padding:		10px 0px 5px 0px;
-	margin:			0 0 1em 0;
+	margin:			0;
 }
 
 h2{
@@ -1075,26 +1075,30 @@ div.galleryItem p{
 
 
 #download-latest-header h2{
-	float:          left;
+	float: left;
+	margin-right: 10px;
 }
 
-#download-latest-header{margin-bottom: 3em;}
+#download-latest-header{
+	margin: 0;
+}
 
 #download-latest-platform, #docs-ebook{ 
-    width:154px;
-    height:154px;
-    padding:20px;
-    margin-right: 1em;
-    margin-bottom: 2em;
-    /*background-color:#eee;*/
-	background-color: #F7F7F7;
+	width:150px;
+	height:150px;
+	padding:20px;
+	margin: 0 10px 10px 0;
+	background-color: #eee;
 }
 
 #download-latest-platform{
-    float:left;
-    clear:none;
+	float:left;
+	clear:none;
 }
 
+#download-latest-platform p {
+	margin: 0;
+}
 #docs-ebook{
     float:right;
 
