@@ -1,9 +1,10 @@
 <%inherit file="/_templates/markdown.mako" />
+
 about
 =======
 
 
-openFrameworks is a [C++](https://en.wikipedia.org/wiki/C%2B%2B) toolkit designed to assist the creative process by providing a simple and intuitive framework for experimentation. The toolkit is designed to work as a general purpose glue, and wraps together several commonly used libraries, including:
+openFrameworks is an [open source](license.html) [C++](https://en.wikipedia.org/wiki/C%2B%2B) toolkit designed to assist the creative process by providing a simple and intuitive framework for experimentation. The toolkit is designed to work as a general purpose glue, and wraps together several commonly used libraries, including:
 
 * [OpenGL](http://www.opengl.org/), [GLEW](http://glew.sourceforge.net/) and [GLUT](http://www.opengl.org/resources/libraries/glut/) or [cairo](http://cairographics.org/) for graphics
 * [rtAudio](http://www.music.mcgill.ca/~gary/rtaudio/), [PortAudio](http://www.portaudio.com/) or [FMOD](http://www.fmod.org/) for audio input and output
