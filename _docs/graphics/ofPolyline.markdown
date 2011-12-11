@@ -41,6 +41,8 @@ $$/code
 
 ofPolyline also includes methods to get the cloeset point, determien whether a point is inside shape, and resample shapes. Along with the ofPath class, it's the best way to draw and manipulate 2D and 3D vector graphics that you'll need to update and manipulate frequently.
 
+If you use the line or curveTo or bezierTo functions, you move the drawing point, so that drawing a line to 100,100 means a line from 0,0 to 100, 100. The next line would be a line from 100,100 to whereever you go next. Storing this position means that you can easily create continuous drawings without difficulty.
+
 
 
 ##Methods
@@ -402,7 +404,7 @@ _advanced: False_
 _description: _
 
 
-
+Adds multiple points at the end of the ofPolyline using a pointer to an array of ofPoint objects.
 
 
 $$code(lang=c++)
@@ -853,14 +855,20 @@ _description: _
 
 
 
+Creates a cubic bezier line from the current drawing point with the 2 control points indicated by ofPoint cp1 and cp2, that ends at ofPoint to. For instance, the following:
 
 
+$$code(lang=c++)
+line.addVertex(ofPoint(200, 400));
+line.bezierTo(100, 100, 800, 100, 700, 400);
+$$/code
+
+Creates this:
+
+![polyline bezier](/bezier.png)
 
 
-
-
-
-
+The control points are shown in yellow.
 
 
 
@@ -904,7 +912,7 @@ _description: _
 
 
 
-
+Creates a cubic bezier line from the current drawing point with the 2 control points indicated by the coordinates cx1, cy1 and cx2, cy2, that ends at the coordinates x, y.
 
 
 
@@ -951,13 +959,25 @@ _description: _
 
 
 
+Creates a cubic bezier line in 3D space from the current drawing point with the 2 control points indicated by the coordinates cx1, cy1, cz1 and cx2, cy2, cz2, that ends at the coordinates x, y, z.
 
+$$code(lang=c++)
+float cx = ofGetWidth()/2;
+float cy = 200;
+float step = TWO_PI / 60;
+for (float i = 0.0; i < TWO_PI; i+=step) {
+	
+	
+	if(i == 0.0) {
+		line.addVertex(cx + (400*cos(i)), cy+400, 400 * sin(i));
+	} else {
+		line.bezierTo( cx - (200*cos(i)), cy-100, 400 * sin(i), 
+					   cx + (200*cos(i)), cy+600, 400 * sin(i), 
+					   cx + (400*cos(i)), cy+400, 400 * sin(i));
+	}
+}
 
-
-
-
-
-
+$$/code
 
 
 
@@ -1001,11 +1021,11 @@ _description: _
 
 
 
+Creates a quadratic bezier line in 3D space from the current drawing point with the beginning indicated by the coordinates cx1, cy1, cz1, the control point at cx2, cy2, cz2, and that ends at the coordinates x, y, z.
 
 
 
-
-
+![polyline curves](/curves.png)
 
 
 
@@ -1050,6 +1070,7 @@ _description: _
 
 
 
+Creates a quadratic bezier line in 2D space from the current drawing point with the beginning indicated by the point p1, the control point at p2, and that ends at the point p3.
 
 
 
@@ -1098,7 +1119,7 @@ _description: _
 
 
 
-
+Creates a quadratic bezier line in 3D space from the current drawing point with the beginning indicated by the coordinates cx1, cy1, the control point at cx2, cy2, and that ends at the coordinates x, y.
 
 
 
@@ -1148,7 +1169,7 @@ _description: _
 
 
 
-
+This returns a smoothed version of the ofPolyline.
 
 
 
@@ -1198,14 +1219,16 @@ _description: _
 
 
 
+This resamples the line based on the spacing passed in. The larger the spacing, the more points will be eliminated.
+
+$$code(lang=c++)
+line.draw();
+ofTranslate(400, 0);
+line.getResampledBySpacing(100).draw();
+$$/code
 
 
-
-
-
-
-
-
+![polyline resample](/resample.png)
 
 ###ofPolyline getResampledByCount(count)
 
@@ -1247,6 +1270,7 @@ _description: _
 
 
 
+This resamples the line based on the spacing passed in. The lower the count passed in, the more points will be eliminated. This doesn't add new points to the line though.
 
 
 
@@ -1295,7 +1319,7 @@ _description: _
 
 
 
-
+Returns the bounding box of the shape, taking into account all the points to determine the extents of the polyline.
 
 
 
@@ -1345,7 +1369,7 @@ _description: _
 
 
 
-
+This returns the point on the line closest to the target. You can also optionally pass a pointer to/address of an unsigned int to get the index of the closest vertex.
 
 
 
@@ -1394,7 +1418,7 @@ _description: _
 
 
 
-
+Tests whether the x,y coordinates are within a closed ofPolyline.
 
 
 
@@ -1445,7 +1469,7 @@ _description: _
 
 
 
-
+Tests whether the ofPoint is within a closed ofPolyline.
 
 
 
@@ -1490,7 +1514,7 @@ _description: _
 
 
 
-
+Simplifies the polyline, removing un-necessary vertices. The tolerance determines how dis-similar points need to be to stay in the line. Higher tolerance means more points removed, lower tolerance means less points removed.
 
 
 
@@ -1538,7 +1562,7 @@ _advanced: False_
 _description: _
 
 
-
+The number of points in the ofPolyline.
 
 
 
@@ -1645,7 +1669,7 @@ _description: _
 
 
 
-
+Resize the number of points in the ofPolyline to the value passed in.
 
 
 
@@ -1697,7 +1721,7 @@ _description: _
 
 
 
-
+Closes the ofPolyline, meaning that all the vertices will be linked and can be "walked".
 
 
 
@@ -1743,7 +1767,7 @@ _description: _
 
 
 
-
+Whether the shape is closed or not. Certain operations, like getSmoothed() can only be performed on closed shapes.
 
 
 
@@ -1794,7 +1818,7 @@ _description: _
 
 
 
-
+Closes the ofPolyline, meaning that all the vertices will be linked and can be "walked".
 
 
 
@@ -1845,7 +1869,7 @@ _description: _
 
 
 
-
+Returns whether the vertices within the line have changed.
 
 
 
@@ -1893,7 +1917,7 @@ _description: _
 
 
 
-
+Returns the vector of vertices that the line contains, vector<ofPoint> &.
 
 
 
@@ -1941,7 +1965,7 @@ _description: _
 
 
 
-
+Returns the size of the perimeter of the polyline, good for determining length of the line, rather than just the bounding box shape.
 
 
 
@@ -1987,7 +2011,7 @@ _advanced: False_
 _description: _
 
 
-
+Gets the precise area bounded by the line.
 
 
 
@@ -2040,7 +2064,7 @@ _description: _
 
 
 
-
+Get the center of the area bounded by the line.
 
 
 
@@ -2088,7 +2112,7 @@ _description: _
 
 
 
-
+Draw the line using the current renderer.
 
 
 
@@ -2137,7 +2161,7 @@ _description: _
 
 
 
-
+Test whether the x,y point is within anothe polyline, passed in as ofPolyline&
 
 
 
@@ -2188,7 +2212,7 @@ _description: _
 
 
 
-
+Test whether the ofPoint is within anothe polyline, passed in as ofPolyline&
 
 
 
