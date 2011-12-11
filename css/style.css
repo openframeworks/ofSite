@@ -573,13 +573,12 @@ h3{
 
 
 hr{
-	height: 		1px;
-	background: 	#DADADA;
-	color: 			#DADADA;
-	border: 		0;
-	margin-top:     5em;
-	margin-bottom:  5em;
+	height: 1px;
+	background: #ccc;
+	border: 0;
+	margin: 20px 0;
 }
+
 /*  ************* author ************* */
 
 #author-info-box{
