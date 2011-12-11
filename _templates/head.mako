@@ -8,8 +8,8 @@ href="${bf.util.site_path_helper(bf.config.blog.path,'/feed/atom')}" />
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-<link rel="stylesheet" type="text/css" href="${bf.config.site.url}/css/print.css" media="print" />
-<link rel="stylesheet" type="text/css" href="${bf.config.site.url}/css/style.css" media="all" />
+<link rel="stylesheet" type="text/css" href="../css/print.css" media="print" />
+<link rel="stylesheet" type="text/css" href="../css/style.css" media="all" />
 
 <link rel="search" type="application/opensearchdescription+xml" href="http://www.openframeworks.cc/opensearch.xml" title="openFrameworks" />
 
