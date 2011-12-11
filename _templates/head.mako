@@ -1,6 +1,7 @@
 <title>${bf.config.blog.name}</title>
 
 <link rel="stylesheet" type="text/css" href="../css/style.css" media="all" />
+<link rel="stylesheet" type="text/css" href="../css/print.css" media="print" />
 
 <link rel="search" type="application/opensearchdescription+xml" href="http://www.openframeworks.cc/opensearch.xml" title="openFrameworks" />
 
