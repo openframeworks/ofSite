@@ -8,4 +8,4 @@
 <link rel="shortcut icon" href="http://forum.openframeworks.cc/favicon.ico" />
 <link rel="icon" href="http://forum.openframeworks.cc/favicon.ico" type="image/x-icon" />
 
-<script language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
