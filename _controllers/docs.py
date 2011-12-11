@@ -11,7 +11,6 @@ import argparse
 import shutil
 import glob
 
-print os.path.realpath(__file__)[0:-(len(os.path.join('_controllers','docs.py'))+2)]
 sys.path.append(os.path.join(os.path.realpath(__file__)[0:-(len(os.path.join('_controllers','docs.py'))+1)],'_tools'))
 #sys.path.append( os.path.realpath('')+"/../_tools" )
 import markdown_file
@@ -39,7 +38,7 @@ class Block(object):
             self.name = element[2:-2]
             self.mode = 'clazz'
         elif mode=='clazz' and element is not None and element != "" and element.find('__')==-1 and element.find('###')!=-1:
-            print element[3:-3]
+            #print element[3:-3]
             self.classes.append({'name':element[3:-3]})
         elif mode=='clazz' and element.find('__visible:')!=-1:
             if element.find('false')!=-1:
@@ -73,7 +72,7 @@ def run():
     classes = markdown_file.getclass_list()
     for clazz_name in classes:
         clazz = markdown_file.getclass(clazz_name)
-        print clazz.name
+        #print clazz.name
         #print clazz.function_list
         env = {
             "clazz": clazz
@@ -94,8 +93,21 @@ def run():
             if b.name is not None and b.name != "":
                 blocks.append(b)
         columns.append(blocks)
+    
+    indexhtml_file = open("_docs/" + "indexAddons.markdown",'r')
+    indexhtml = indexhtml_file.read()
+    addons_columns = []
+    columns_src = indexhtml.split('___column___')
+    for column in columns_src:    
+        blocks_src = column.split('//----------------------')
+        blocks = []
+        for block in blocks_src:
+            b = Block(block)
+            if b.name is not None and b.name != "":
+                blocks.append(b)
+        addons_columns.append(blocks)
         
-    bf.writer.materialize_template("docs.mako", ('docs',"index.html"), {'columns':columns} )
+    bf.writer.materialize_template("docs.mako", ('docs',"index.html"), {'columns':columns,'addons_columns':addons_columns} )
     
     for root, dirs, files in os.walk(directory):
         for name in files:

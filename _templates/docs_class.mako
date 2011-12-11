@@ -66,13 +66,7 @@
     </div> <!-- End Content -->
   </body>
 </html>
-<%def name="head()">
-  <%include file="head.mako" />
-</%def>
 <%def name="header()">
-  <%include file="header.mako" />
-</%def>
-<%def name="footer()">
-  <%include file="footer.mako" />
+  <%include file="header.mako"  args="active='docs'"/>
 </%def>
 

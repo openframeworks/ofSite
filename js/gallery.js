@@ -35,9 +35,16 @@ function feedCANLoaded(result) {
       var indexOfSrc = imgHTML.indexOf('src="')+5;
       img.src = imgHTML.substr(indexOfSrc,imgHTML.indexOf('"',indexOfSrc)-indexOfSrc);
      
+      var dot = document.createElement("span");
+      dot.className = "external-dot";
+      dot.appendChild(document.createTextNode("> "));
+      
       aImg.appendChild(img);
-     
+      
+      
       a.appendChild(document.createTextNode(title.substr(0,title.indexOf('['))));
+
+      h2.appendChild(dot);
       h2.appendChild(a)
       var description = entry.getElementsByTagName("description")[0].textContent;
       if(description.indexOf('.')!=-1){
@@ -47,7 +54,7 @@ function feedCANLoaded(result) {
       }
       p.appendChild(document.createTextNode(description));
       p.appendChild(br);
-      p.appendChild(moreLink);
+      //p.appendChild(moreLink);
       
       div.appendChild(h2);
       //div.appendChild(br);

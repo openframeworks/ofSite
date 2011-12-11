@@ -1,4 +1,4 @@
-import docs_files
+#import docs_files
 from docs_members import DocsMethod
 from docs_members import DocsVar
 from docs_class import DocsClass
@@ -6,13 +6,29 @@ import os
 
 docs_root = '/home/arturo/Documentos/new_of_site/_docs/'
 
-def list_all_modules():
+def list_all_addons():
     modules = []
-    for root, dirs, files in os.walk(docs_root):
+    for root, dirs, files in os.walk(docs_root+"addons"):
         for name in dirs:
             modules.append(name)
     return modules
     
+def list_all_modules():
+    modules = []
+    for root, dirs, files in os.walk(docs_root):
+        for name in dirs:
+            if name.find("ofx")!=0:
+                modules.append(name)
+    return modules
+    
+def list_all_addon_files(addon=''):
+    module_files = []
+    for root, dirs, files in os.walk(os.path.join(docs_root, 'addons', addon)):
+        for name in files:
+            file_split = os.path.splitext(name)
+            if file_split[1]=='.markdown': 
+                module_files.append(file_split[0])
+    return module_files
             
 def list_all_files(module=''):
     module_files = []
@@ -28,7 +44,7 @@ def addfield(method,line):
     value = line.split(':')[1].lstrip(' ').rstrip('\n').rstrip('_')
     if field=='constant' or field=='advanced' or field=='visible' or field=='static':
         value = ((value == '1') or (value == 'True') or (value=='true') or (value=='TRUE'))
-    print field, "=", value
+    #print field, "=", value
     setattr(method,field,value)
     
 def getclass_list():
@@ -94,7 +110,7 @@ def getclass(clazz):
                         state = 'vars'
                         
                     elif state == 'vars' and line.find('###') == 0:
-                        print line
+                        #print line
                         state = 'var'
                         
                     elif state == 'var' and line.find('_')==0 and line.find('_description')==-1:
@@ -107,7 +123,7 @@ def getclass(clazz):
                         var.description = var.description + line
                         
                     elif state == 'vardescription' and line.find('###') == 0:
-                        print line
+                        #print line
                         state = 'var'
                         docs_clazz.var_list.append(var)
                         var = DocsVar(0)
