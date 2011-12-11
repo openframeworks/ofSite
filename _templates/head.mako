@@ -1,9 +1,9 @@
 <title>${bf.config.blog.name}</title>
 
-<link rel="stylesheet" type="text/css" href="../css/style.css" media="all" />
-<link rel="stylesheet" type="text/css" href="../css/print.css" media="print" />
+<link rel="stylesheet" type="text/css" href="${bf.config.site.url}/css/style.css" media="all" />
+<link rel="stylesheet" type="text/css" href="${bf.config.site.url}/css/print.css" media="print" />
 
-<link rel="search" type="application/opensearchdescription+xml" href="http://www.openframeworks.cc/opensearch.xml" title="openFrameworks" />
+<link rel="search" type="application/opensearchdescription+xml" href="${bf.config.site.url}/opensearch.xml" title="openFrameworks" />
 
 <link rel="shortcut icon" href="http://forum.openframeworks.cc/favicon.ico" />
 <link rel="icon" href="http://forum.openframeworks.cc/favicon.ico" type="image/x-icon" />

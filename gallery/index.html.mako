@@ -6,8 +6,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     ${self.head()}
     <script src="http://www.google.com/jsapi?key=AIzaSyA5m1Nc8ws2BbmPRwKu5gFradvD_hgq6G0" type="text/javascript"></script>
-    <script type="text/javascript" src="../js/encoder.js"></script>
-    <script type="text/javascript"  src="../js/gallery.js">   </script>
+    <script type="text/javascript" src="${bf.config.site.url}/js/encoder.js"></script>
+    <script type="text/javascript"  src="${bf.config.site.url}/js/gallery.js">   </script>
   </head>
   <body>
     <div id="content">

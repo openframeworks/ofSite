@@ -3,17 +3,17 @@
 <div id="head">
 
 		<div id="head-left">
-			<a href=".." class="nohover"><img src="../images/ofw-logo.png" border="0" alt="openFrameworks" /></a>
+			<a href=".." class="nohover"><img src="${bf.config.site.url}/images/ofw-logo.png" border="0" alt="openFrameworks" /></a>
 		</div>
 
 		<div id="head-right">
 		<ul>
 		
-	        <li><a href="../about" class="${'active' if active=='about' else ''}">about</a></li>
-	        <li><a href="../download" class="${'active' if active=='download' else ''}" >download</a></li>
-	        <li><a href="../docs" class="${'active' if active=='docs' else ''}">documentation</a></li>
-	        <li><a href="../gallery" class="${'active' if active=='gallery' else ''}">gallery</a></li>
-	        <li><a href="../community" class="${'active' if active=='community' else ''}">community</a></li> 
+	        <li><a href="${bf.config.site.url}/about" class="${'active' if active=='about' else ''}">about</a></li>
+	        <li><a href="${bf.config.site.url}/download" class="${'active' if active=='download' else ''}" >download</a></li>
+	        <li><a href="${bf.config.site.url}/docs" class="${'active' if active=='docs' else ''}">documentation</a></li>
+	        <li><a href="${bf.config.site.url}/gallery" class="${'active' if active=='gallery' else ''}">gallery</a></li>
+	        <li><a href="${bf.config.site.url}/community" class="${'active' if active=='community' else ''}">community</a></li> 
 		</ul>
 		
 		<ul class="menu-externals">
