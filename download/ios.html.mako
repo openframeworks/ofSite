@@ -1,6 +1,6 @@
 <%inherit file="/_templates/markdown.mako" />
 
-iphone setup
+ios setup
 ===========
 
 There are a number of tutorials about ofxiPhone and development. We've tried to make it as easy as possible to get your code up and running on the iPhone as quickly as possible, but there's a ton of information to cover. If you need more help after following this tutorial, be sure and check out these others, or check out the iPhone section of the openFrameoworks forum.
