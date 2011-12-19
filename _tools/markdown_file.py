@@ -4,7 +4,7 @@ from docs_members import DocsVar
 from docs_class import DocsClass
 import os
 
-docs_root = '/home/arturo/Documentos/new_of_site/_docs/'
+docs_root = '_docs/'
 
 def list_all_addons():
     modules = []
