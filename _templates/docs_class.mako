@@ -20,7 +20,7 @@
               </%self:filter>
               </p>
               <br/><br/>
-              <h3>${clazz.name} functions list</h3>
+              <h3>${clazz.name} methods list</h3>
               <ul class="functionslist">
               % for method in clazz.function_list:
                   % if method.visible and not method.advanced and method.access=='public':
@@ -42,7 +42,7 @@
               
               <br/><br/>
               
-              <h3>${clazz.name} functions</h3>
+              <h3>${clazz.name} methods</h3>
               % for method in clazz.function_list:
                     % if method.visible and not method.advanced and method.access=='public':
                         <%include file="docs_method.mako" args="method=method" />    
