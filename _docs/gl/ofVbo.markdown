@@ -10,6 +10,15 @@
 
 
 
+
+
+
+
+
+
+
+
+
 First things first: a Vertex Buffer Object (VBO) provides a way for you to create vertices, normals, colors, and texture coordinates on the graphics card for non-immediate mode rendering. This means that you can store it all on the graphics card and then access, update, or draw it, whenever you need. This is pretty convenient when you have something that you want to draw multiple times wihtout changing it much, because it means that, instead of needing to upload new data each time, you can simply draw it without needing to recreate all your vertices and colors, a philosophy which is probably familiar to you from working with the ofFbo or ofTexture.
 
 There are a few things that are important to understand about VBOs:
@@ -125,6 +134,18 @@ $$/code
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 ##Methods
 
 
@@ -132,35 +153,19 @@ $$/code
 ### ofVbo()
 
 <!--
-
 _syntax: ofVbo()_
-
 _name: ofVbo_
-
 _returns: _
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -185,42 +190,54 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ### ofVbo(mom)
 
 <!--
-
 _syntax: ofVbo(mom)_
-
 _name: ofVbo_
-
 _returns: _
-
 _returns_description: _
-
 _parameters: const ofVbo & mom_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -245,41 +262,50 @@ Allows you copy one ofVbo from another ofVbo.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofVbo & &operator=(mom)
 
 <!--
-
 _syntax: &operator=(mom)_
-
 _name: &operator=_
-
 _returns: ofVbo &_
-
 _returns_description: _
-
 _parameters: const ofVbo& mom_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -310,38 +336,44 @@ $$/code
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ### ~ofVbo()
 
 <!--
-
 _syntax: ~ofVbo()_
-
 _name: ~ofVbo_
-
 _returns: _
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -366,42 +398,54 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void setMesh(mesh, usage)
 
 <!--
-
 _syntax: setMesh(mesh, usage)_
-
 _name: setMesh_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: const ofMesh & mesh, int usage_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -433,41 +477,50 @@ This copies all the properties from the mesh, indices, vertices, colors, and tex
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void setVertexData(verts, total, usage)
 
 <!--
-
 _syntax: setVertexData(verts, total, usage)_
-
 _name: setVertexData_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: const ofVec3f * verts, int total, int usage_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -503,41 +556,50 @@ usage Specifies the expected usage pattern of the data store. The symbolic const
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void setVertexData(verts, total, usage)
 
 <!--
-
 _syntax: setVertexData(verts, total, usage)_
-
 _name: setVertexData_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: const ofVec2f * verts, int total, int usage_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -564,42 +626,51 @@ usage Specifies the expected usage pattern of the data store. The symbolic const
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void setColorData(colors, total, usage)
 
 <!--
-
 _syntax: setColorData(colors, total, usage)_
-
 _name: setColorData_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: const ofFloatColor * colors, int total, int usage_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -626,42 +697,51 @@ usage Specifies the expected usage pattern of the data store. The symbolic const
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void setNormalData(normals, total, usage)
 
 <!--
-
 _syntax: setNormalData(normals, total, usage)_
-
 _name: setNormalData_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: const ofVec3f * normals, int total, int usage_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -687,42 +767,51 @@ usage Specifies the expected usage pattern of the data store. The symbolic const
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void setTexCoordData(texCoords, total, usage)
 
 <!--
-
 _syntax: setTexCoordData(texCoords, total, usage)_
-
 _name: setTexCoordData_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: const ofVec2f * texCoords, int total, int usage_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -749,41 +838,50 @@ usage Specifies the expected usage pattern of the data store. The symbolic const
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void setIndexData(indices, total, usage)
 
 <!--
-
 _syntax: setIndexData(indices, total, usage)_
-
 _name: setIndexData_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: const ofIndexType * indices, int total, int usage_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -812,41 +910,50 @@ usage Specifies the expected usage pattern of the data store. The symbolic const
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void setVertexData(vert0x, numCoords, total, usage, stride = 0)
 
 <!--
-
 _syntax: setVertexData(vert0x, numCoords, total, usage, stride = 0)_
-
 _name: setVertexData_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: const float * vert0x, int numCoords, int total, int usage, int stride=0_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -885,41 +992,50 @@ $$/code
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void setColorData(color0r, total, usage, stride = 0)
 
 <!--
-
 _syntax: setColorData(color0r, total, usage, stride = 0)_
-
 _name: setColorData_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: const float * color0r, int total, int usage, int stride=0_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -952,41 +1068,50 @@ $$/code
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void setNormalData(normal0x, total, usage, stride = 0)
 
 <!--
-
 _syntax: setNormalData(normal0x, total, usage, stride = 0)_
-
 _name: setNormalData_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: const float * normal0x, int total, int usage, int stride=0_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -1020,41 +1145,50 @@ $$/code
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void setTexCoordData(texCoord0x, total, usage, stride = 0)
 
 <!--
-
 _syntax: setTexCoordData(texCoord0x, total, usage, stride = 0)_
-
 _name: setTexCoordData_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: const float * texCoord0x, int total, int usage, int stride=0_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -1087,41 +1221,50 @@ $$/code
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void updateMesh(mesh)
 
 <!--
-
 _syntax: updateMesh(mesh)_
-
 _name: updateMesh_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: const ofMesh & mesh_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -1153,41 +1296,50 @@ $$/code
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void updateVertexData(verts, total)
 
 <!--
-
 _syntax: updateVertexData(verts, total)_
-
 _name: updateVertexData_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: const ofVec3f * verts, int total_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -1212,41 +1364,50 @@ If you've created your VBO with vertices that are using GL_DYNAMIC_DRAW then you
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void updateVertexData(verts, total)
 
 <!--
-
 _syntax: updateVertexData(verts, total)_
-
 _name: updateVertexData_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: const ofVec2f * verts, int total_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -1271,41 +1432,50 @@ If you've created your VBO with vertices that are using GL_DYNAMIC_DRAW then you
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void updateColorData(colors, total)
 
 <!--
-
 _syntax: updateColorData(colors, total)_
-
 _name: updateColorData_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: const ofFloatColor * colors, int total_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -1330,41 +1500,50 @@ If you've created your VBO with colors that are using GL_DYNAMIC_DRAW then you c
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void updateNormalData(normals, total)
 
 <!--
-
 _syntax: updateNormalData(normals, total)_
-
 _name: updateNormalData_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: const ofVec3f * normals, int total_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -1389,41 +1568,50 @@ If you've created your VBO with normals that are using GL_DYNAMIC_DRAW then you 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void updateTexCoordData(texCoords, total)
 
 <!--
-
 _syntax: updateTexCoordData(texCoords, total)_
-
 _name: updateTexCoordData_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: const ofVec2f * texCoords, int total_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -1448,41 +1636,50 @@ If you've created your VBO with texture coordinates that are using GL_DYNAMIC_DR
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void updateIndexData(indices, total)
 
 <!--
-
 _syntax: updateIndexData(indices, total)_
-
 _name: updateIndexData_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: const ofIndexType * indices, int total_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -1506,42 +1703,51 @@ If you've created your VBO with indices that are using GL_DYNAMIC_DRAW then you 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void updateVertexData(ver0x, total)
 
 <!--
-
 _syntax: updateVertexData(ver0x, total)_
-
 _name: updateVertexData_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: const float * ver0x, int total_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -1566,41 +1772,50 @@ If you've created your VBO with indices that are using GL_DYNAMIC_DRAW then you 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void updateColorData(color0r, total)
 
 <!--
-
 _syntax: updateColorData(color0r, total)_
-
 _name: updateColorData_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: const float * color0r, int total_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -1625,41 +1840,50 @@ If you've created your VBO with colors that are using GL_DYNAMIC_DRAW then you c
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void updateNormalData(normal0x, total)
 
 <!--
-
 _syntax: updateNormalData(normal0x, total)_
-
 _name: updateNormalData_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: const float * normal0x, int total_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -1684,41 +1908,50 @@ If you've created your VBO with normals that are using GL_DYNAMIC_DRAW then you 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void updateTexCoordData(texCoord0x, total)
 
 <!--
-
 _syntax: updateTexCoordData(texCoord0x, total)_
-
 _name: updateTexCoordData_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: const float * texCoord0x, int total_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -1743,38 +1976,44 @@ If you've created your VBO with texture coordinates that are using GL_DYNAMIC_DR
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###GLuint getVertId()
 
 <!--
-
 _syntax: getVertId()_
-
 _name: getVertId_
-
 _returns: GLuint_
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -1798,39 +2037,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###GLuint getColorId()
 
 <!--
-
 _syntax: getColorId()_
-
 _name: getColorId_
-
 _returns: GLuint_
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -1854,39 +2102,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###GLuint getNormalId()
 
 <!--
-
 _syntax: getNormalId()_
-
 _name: getNormalId_
-
 _returns: GLuint_
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -1910,39 +2167,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###GLuint getTexCoordId()
 
 <!--
-
 _syntax: getTexCoordId()_
-
 _name: getTexCoordId_
-
 _returns: GLuint_
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -1966,39 +2232,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###GLuint getIndexId()
 
 <!--
-
 _syntax: getIndexId()_
-
 _name: getIndexId_
-
 _returns: GLuint_
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -2023,39 +2298,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###bool getIsAllocated()
 
 <!--
-
 _syntax: getIsAllocated()_
-
 _name: getIsAllocated_
-
 _returns: bool_
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -2079,39 +2363,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###bool getUsingVerts()
 
 <!--
-
 _syntax: getUsingVerts()_
-
 _name: getUsingVerts_
-
 _returns: bool_
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -2135,39 +2428,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###bool getUsingColors()
 
 <!--
-
 _syntax: getUsingColors()_
-
 _name: getUsingColors_
-
 _returns: bool_
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -2191,39 +2493,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###bool getUsingNormals()
 
 <!--
-
 _syntax: getUsingNormals()_
-
 _name: getUsingNormals_
-
 _returns: bool_
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -2247,39 +2558,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###bool getUsingTexCoords()
 
 <!--
-
 _syntax: getUsingTexCoords()_
-
 _name: getUsingTexCoords_
-
 _returns: bool_
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -2303,39 +2623,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###bool getUsingIndices()
 
 <!--
-
 _syntax: getUsingIndices()_
-
 _name: getUsingIndices_
-
 _returns: bool_
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -2360,42 +2689,54 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void draw(drawMode, first, total)
 
 <!--
-
 _syntax: draw(drawMode, first, total)_
-
 _name: draw_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: int drawMode, int first, int total_
-
 _access: public_
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -2429,41 +2770,50 @@ Specifies the number of indices to be rendered. This last part is pretty importa
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void drawElements(drawMode, amt)
 
 <!--
-
 _syntax: drawElements(drawMode, amt)_
-
 _name: drawElements_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: int drawMode, int amt_
-
 _access: public_
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -2497,41 +2847,50 @@ amt specifies the number of indices to be rendered. This last part is pretty imp
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void bind()
 
 <!--
-
 _syntax: bind()_
-
 _name: bind_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -2556,41 +2915,50 @@ This is for advanced users who might want to use ways of drawing other than draw
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void unbind()
 
 <!--
-
 _syntax: unbind()_
-
 _name: unbind_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -2615,41 +2983,50 @@ This is for advanced users who might want to use ways of drawing other than draw
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void clear()
 
 <!--
-
 _syntax: clear()_
-
 _name: clear_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -2672,38 +3049,44 @@ This erases your VBO's data from your graphics card, but not the VBO itself, so 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ### ofVbo(&mom)
 
 <!--
-
 _syntax: ofVbo(&mom)_
-
 _name: ofVbo_
-
 _returns: _
-
 _returns_description: _
-
 _parameters: const ofVbo &mom_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -2720,39 +3103,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###ofVbo operator=(&mom)
 
 <!--
-
 _syntax: operator=(&mom)_
-
 _name: operator=_
-
 _returns: ofVbo_
-
 _returns_description: _
-
 _parameters: const ofVbo &mom_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -2769,39 +3161,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void setMesh(&mesh, usage)
 
 <!--
-
 _syntax: setMesh(&mesh, usage)_
-
 _name: setMesh_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: const ofMesh &mesh, int usage_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -2819,38 +3220,47 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void setVertexData(*verts, total, usage)
 
 <!--
-
 _syntax: setVertexData(*verts, total, usage)_
-
 _name: setVertexData_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: const ofVec3f *verts, int total, int usage_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -2867,39 +3277,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void setVertexData(*verts, total, usage)
 
 <!--
-
 _syntax: setVertexData(*verts, total, usage)_
-
 _name: setVertexData_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: const ofVec2f *verts, int total, int usage_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -2916,39 +3335,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void setColorData(*colors, total, usage)
 
 <!--
-
 _syntax: setColorData(*colors, total, usage)_
-
 _name: setColorData_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: const ofFloatColor *colors, int total, int usage_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -2965,39 +3393,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void setNormalData(*normals, total, usage)
 
 <!--
-
 _syntax: setNormalData(*normals, total, usage)_
-
 _name: setNormalData_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: const ofVec3f *normals, int total, int usage_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3014,39 +3451,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void setTexCoordData(*texCoords, total, usage)
 
 <!--
-
 _syntax: setTexCoordData(*texCoords, total, usage)_
-
 _name: setTexCoordData_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: const ofVec2f *texCoords, int total, int usage_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3063,39 +3509,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void setIndexData(*indices, total, usage)
 
 <!--
-
 _syntax: setIndexData(*indices, total, usage)_
-
 _name: setIndexData_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: const ofIndexType *indices, int total, int usage_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3112,39 +3567,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void setVertexData(*vert0x, numCoords, total, usage, stride = 0)
 
 <!--
-
 _syntax: setVertexData(*vert0x, numCoords, total, usage, stride = 0)_
-
 _name: setVertexData_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: const float *vert0x, int numCoords, int total, int usage, int stride=0_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3161,39 +3625,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void setColorData(*color0r, total, usage, stride = 0)
 
 <!--
-
 _syntax: setColorData(*color0r, total, usage, stride = 0)_
-
 _name: setColorData_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: const float *color0r, int total, int usage, int stride=0_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3210,39 +3683,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void setNormalData(*normal0x, total, usage, stride = 0)
 
 <!--
-
 _syntax: setNormalData(*normal0x, total, usage, stride = 0)_
-
 _name: setNormalData_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: const float *normal0x, int total, int usage, int stride=0_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3259,39 +3741,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void setTexCoordData(*texCoord0x, total, usage, stride = 0)
 
 <!--
-
 _syntax: setTexCoordData(*texCoord0x, total, usage, stride = 0)_
-
 _name: setTexCoordData_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: const float *texCoord0x, int total, int usage, int stride=0_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3308,39 +3799,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void updateMesh(&mesh)
 
 <!--
-
 _syntax: updateMesh(&mesh)_
-
 _name: updateMesh_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: const ofMesh &mesh_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3358,38 +3858,47 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void updateVertexData(*verts, total)
 
 <!--
-
 _syntax: updateVertexData(*verts, total)_
-
 _name: updateVertexData_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: const ofVec3f *verts, int total_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3406,39 +3915,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void updateVertexData(*verts, total)
 
 <!--
-
 _syntax: updateVertexData(*verts, total)_
-
 _name: updateVertexData_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: const ofVec2f *verts, int total_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3455,39 +3973,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void updateColorData(*colors, total)
 
 <!--
-
 _syntax: updateColorData(*colors, total)_
-
 _name: updateColorData_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: const ofFloatColor *colors, int total_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3504,39 +4031,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void updateNormalData(*normals, total)
 
 <!--
-
 _syntax: updateNormalData(*normals, total)_
-
 _name: updateNormalData_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: const ofVec3f *normals, int total_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3553,39 +4089,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void updateTexCoordData(*texCoords, total)
 
 <!--
-
 _syntax: updateTexCoordData(*texCoords, total)_
-
 _name: updateTexCoordData_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: const ofVec2f *texCoords, int total_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3602,39 +4147,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void updateIndexData(*indices, total)
 
 <!--
-
 _syntax: updateIndexData(*indices, total)_
-
 _name: updateIndexData_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: const ofIndexType *indices, int total_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3651,39 +4205,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void updateVertexData(*ver0x, total)
 
 <!--
-
 _syntax: updateVertexData(*ver0x, total)_
-
 _name: updateVertexData_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: const float *ver0x, int total_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3700,39 +4263,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void updateColorData(*color0r, total)
 
 <!--
-
 _syntax: updateColorData(*color0r, total)_
-
 _name: updateColorData_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: const float *color0r, int total_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3749,39 +4321,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void updateNormalData(*normal0x, total)
 
 <!--
-
 _syntax: updateNormalData(*normal0x, total)_
-
 _name: updateNormalData_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: const float *normal0x, int total_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3798,39 +4379,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void updateTexCoordData(*texCoord0x, total)
 
 <!--
-
 _syntax: updateTexCoordData(*texCoord0x, total)_
-
 _name: updateTexCoordData_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: const float *texCoord0x, int total_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3847,6 +4437,31 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ##Variables
 
@@ -3855,27 +4470,15 @@ _description: _
 ###GLuint indexId
 
 <!--
-
 _name: indexId_
-
 _type: GLuint_
-
 _access: private_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _visible: True_
-
 _constant: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3892,31 +4495,46 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###GLuint vertId
 
 <!--
-
 _name: vertId_
-
 _type: GLuint_
-
 _access: private_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _visible: True_
-
 _constant: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3933,31 +4551,46 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###GLuint colorId
 
 <!--
-
 _name: colorId_
-
 _type: GLuint_
-
 _access: private_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _visible: True_
-
 _constant: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3974,31 +4607,46 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###GLuint normalId
 
 <!--
-
 _name: normalId_
-
 _type: GLuint_
-
 _access: private_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _visible: True_
-
 _constant: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -4015,31 +4663,46 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###GLuint texCoordId
 
 <!--
-
 _name: texCoordId_
-
 _type: GLuint_
-
 _access: private_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _visible: True_
-
 _constant: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -4056,31 +4719,46 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###bool bAllocated
 
 <!--
-
 _name: bAllocated_
-
 _type: bool_
-
 _access: private_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _visible: True_
-
 _constant: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -4097,31 +4775,46 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###bool bUsingVerts
 
 <!--
-
 _name: bUsingVerts_
-
 _type: bool_
-
 _access: private_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _visible: True_
-
 _constant: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -4138,31 +4831,46 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###bool bUsingTexCoords
 
 <!--
-
 _name: bUsingTexCoords_
-
 _type: bool_
-
 _access: private_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _visible: True_
-
 _constant: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -4179,31 +4887,46 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###bool bUsingColors
 
 <!--
-
 _name: bUsingColors_
-
 _type: bool_
-
 _access: private_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _visible: True_
-
 _constant: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -4220,31 +4943,46 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###bool bUsingNormals
 
 <!--
-
 _name: bUsingNormals_
-
 _type: bool_
-
 _access: private_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _visible: True_
-
 _constant: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -4261,31 +4999,46 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###bool bUsingIndices
 
 <!--
-
 _name: bUsingIndices_
-
 _type: bool_
-
 _access: private_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _visible: True_
-
 _constant: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -4302,31 +5055,46 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###GLsizei vertStride
 
 <!--
-
 _name: vertStride_
-
 _type: GLsizei_
-
 _access: private_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _visible: True_
-
 _constant: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -4343,31 +5111,46 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###GLsizei colorStride
 
 <!--
-
 _name: colorStride_
-
 _type: GLsizei_
-
 _access: private_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _visible: True_
-
 _constant: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -4384,31 +5167,46 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###GLsizei normalStride
 
 <!--
-
 _name: normalStride_
-
 _type: GLsizei_
-
 _access: private_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _visible: True_
-
 _constant: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -4425,31 +5223,46 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###GLsizei texCoordStride
 
 <!--
-
 _name: texCoordStride_
-
 _type: GLsizei_
-
 _access: private_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _visible: True_
-
 _constant: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -4466,31 +5279,46 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###int vertSize
 
 <!--
-
 _name: vertSize_
-
 _type: int_
-
 _access: private_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _visible: True_
-
 _constant: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -4507,31 +5335,46 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###int totalVerts
 
 <!--
-
 _name: totalVerts_
-
 _type: int_
-
 _access: private_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _visible: True_
-
 _constant: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -4548,31 +5391,46 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###int vertUsage
 
 <!--
-
 _name: vertUsage_
-
 _type: int_
-
 _access: private_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _visible: True_
-
 _constant: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -4589,31 +5447,46 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###int colorUsage
 
 <!--
-
 _name: colorUsage_
-
 _type: int_
-
 _access: private_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _visible: True_
-
 _constant: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -4630,31 +5503,46 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###int normUsage
 
 <!--
-
 _name: normUsage_
-
 _type: int_
-
 _access: private_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _visible: True_
-
 _constant: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -4671,31 +5559,46 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###int texUsage
 
 <!--
-
 _name: texUsage_
-
 _type: int_
-
 _access: private_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _visible: True_
-
 _constant: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -4712,4 +5615,31 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 

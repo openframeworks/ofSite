@@ -13,10 +13,31 @@
 
 
 
+
+
+
+
+
+
+
+
+
 oftexture is a wrapper for opengl's texture support. Specifically, it allows to use non power of 2 textures in opengl, and to upload and draw graphical data.
 
 
 oftexture is a wrapper for opengl's texture support. Specifically, it allows to use non power of 2 textures in opengl, and to upload and draw graphical data.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -37,35 +58,19 @@ oftexture is a wrapper for opengl's texture support. Specifically, it allows to 
 ### ofTexture()
 
 <!--
-
 _syntax: ofTexture()_
-
 _name: ofTexture_
-
 _returns: _
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: False_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -107,39 +112,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ### ~ofTexture()
 
 <!--
-
 _syntax: ~ofTexture()_
-
 _name: ~ofTexture_
-
 _returns: _
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: False_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -181,42 +195,54 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void ofTexture(mom)
 
 <!--
-
 _syntax: ofTexture(mom)_
-
 _name: ofTexture_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: const ofTexture & mom_
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -257,41 +283,50 @@ Copy constructor
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofTexture & operator=(mom)
 
 <!--
-
 _syntax: operator=(mom)_
-
 _name: operator=_
-
 _returns: ofTexture &_
-
 _returns_description: _
-
 _parameters: const ofTexture & mom_
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -354,41 +389,50 @@ $$/code
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void allocate(w, h, internalGlDataType)
 
 <!--
-
 _syntax: allocate(w, h, internalGlDataType)_
-
 _name: allocate_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: int w, int h, int internalGlDataType_
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -430,41 +474,50 @@ uses the currently set OF texture type - default ARB texture
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void allocate(w, h, internalGlDataType, bUseARBExtention)
 
 <!--
-
 _syntax: allocate(w, h, internalGlDataType, bUseARBExtention)_
-
 _name: allocate_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: int w, int h, int internalGlDataType, bool bUseARBExtention_
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -505,41 +558,50 @@ You need to allocate the texture before drawing it or loading data into it, lets
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void clear()
 
 <!--
-
 _syntax: clear()_
-
 _name: clear_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -580,41 +642,50 @@ Clears all the data from the texture
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void loadData(data, w, h, glDataType)
 
 <!--
-
 _syntax: loadData(data, w, h, glDataType)_
-
 _name: loadData_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: unsigned char * data, int w, int h, int glDataType_
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -664,41 +735,50 @@ $$/code
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void loadScreenData(x, y, w, h)
 
 <!--
-
 _syntax: loadScreenData(x, y, w, h)_
-
 _name: loadScreenData_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: int x, int y, int w, int h_
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -739,41 +819,50 @@ Load data from the current screen into this texture. Grabs a region of the scree
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void setAnchorPercent(xPct, yPct)
 
 <!--
-
 _syntax: setAnchorPercent(xPct, yPct)_
-
 _name: setAnchorPercent_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: float xPct, float yPct_
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: True_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -815,41 +904,50 @@ The anchor is the point the image is drawn around. This can be useful if you wan
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void setAnchorPoint(x, y)
 
 <!--
-
 _syntax: setAnchorPoint(x, y)_
-
 _name: setAnchorPoint_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: int x, int y_
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: True_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -888,38 +986,44 @@ Sets our texture anchor point and enables the use of it.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void resetAnchor()
 
 <!--
-
 _syntax: resetAnchor()_
-
 _name: resetAnchor_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: True_
-
-
-
 -->
 
 _description: _
@@ -961,42 +1065,54 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void draw(x, y, w, h)
 
 <!--
-
 _syntax: draw(x, y, w, h)_
-
 _name: draw_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: float x, float y, float w, float h_
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -1037,41 +1153,50 @@ Draws the texture at the x, y and w, h.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void draw(x, y)
 
 <!--
-
 _syntax: draw(x, y)_
-
 _name: draw_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: float x, float y_
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -1112,41 +1237,50 @@ Draws the texture at the point passed in.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void bind()
 
 <!--
-
 _syntax: bind()_
-
 _name: bind_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: True_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -1187,41 +1321,50 @@ This is for the advanced user who wants to draw textures in their own way. Each 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void unbind()
 
 <!--
-
 _syntax: unbind()_
-
 _name: unbind_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: True_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -1262,41 +1405,50 @@ This for the advanced user who wants to draw textures in their own way. This sto
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###bool bAllocated()
 
 <!--
-
 _syntax: bAllocated()_
-
 _name: bAllocated_
-
 _returns: bool_
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -1337,38 +1489,44 @@ Get whether the texture has been allocated.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofTextureData getTextureData()
 
 <!--
-
 _syntax: getTextureData()_
-
 _name: getTextureData_
-
 _returns: ofTextureData_
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: True_
-
-
-
 -->
 
 _description: _
@@ -1409,39 +1567,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###float getHeight()
 
 <!--
-
 _syntax: getHeight()_
-
 _name: getHeight_
-
 _returns: float_
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -1482,39 +1649,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###float getWidth()
 
 <!--
-
 _syntax: getWidth()_
-
 _name: getWidth_
-
 _returns: float_
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -1555,42 +1731,54 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void  allocate(textureData)
 
 <!--
-
 _syntax: allocate(textureData)_
-
 _name: allocate_
-
 _returns: void _
-
 _returns_description: _
-
 _parameters: const ofTextureData & textureData_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -1614,41 +1802,50 @@ You need to allocate the texture before drawing it or loading data into it.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void  loadData(data, w, h, glFormat)
 
 <!--
-
 _syntax: loadData(data, w, h, glFormat)_
-
 _name: loadData_
-
 _returns: void _
-
 _returns_description: _
-
 _parameters: float* data, int w, int h, int glFormat_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -1686,41 +1883,50 @@ myTexture.loadData(pixels, 200, 100, GL_RGB);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void  loadData(data, w, h, glFormat)
 
 <!--
-
 _syntax: loadData(data, w, h, glFormat)_
-
 _name: loadData_
-
 _returns: void _
-
 _returns_description: _
-
 _parameters: unsigned char* data, int w, int h, int glFormat_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -1743,42 +1949,51 @@ Loads raw data from an array. Make sure to se the pixel type  in the glFormat co
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void  loadData(data, w, h, glFormat)
 
 <!--
-
 _syntax: loadData(data, w, h, glFormat)_
-
 _name: loadData_
-
 _returns: void _
-
 _returns_description: _
-
 _parameters: unsigned short* data, int w, int h, int glFormat_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -1802,41 +2017,50 @@ Loads raw data from an array. Make sure to se the pixel type  in the glFormat co
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void  loadData(pix)
 
 <!--
-
 _syntax: loadData(pix)_
-
 _name: loadData_
-
 _returns: void _
-
 _returns_description: _
-
 _parameters: ofPixels & pix_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -1860,41 +2084,50 @@ Loads raw data from an ofPixels object.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void  loadData(pix)
 
 <!--
-
 _syntax: loadData(pix)_
-
 _name: loadData_
-
 _returns: void _
-
 _returns_description: _
-
 _parameters: ofShortPixels & pix_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -1917,42 +2150,51 @@ Loads raw data from an ofPixels object.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void  loadData(pix)
 
 <!--
-
 _syntax: loadData(pix)_
-
 _name: loadData_
-
 _returns: void _
-
 _returns_description: _
-
 _parameters: ofFloatPixels & pix_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -1975,42 +2217,51 @@ Loads raw data from an ofPixels object.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void setAnchorPoint(x, y)
 
 <!--
-
 _syntax: setAnchorPoint(x, y)_
-
 _name: setAnchorPoint_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: float x, float y_
-
 _access: public_
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -2034,41 +2285,50 @@ set the anchor point in pixels
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void  draw(r)
 
 <!--
-
 _syntax: draw(r)_
-
 _name: draw_
-
 _returns: void _
-
 _returns_description: _
-
 _parameters: const ofRectangle & r_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -2092,41 +2352,50 @@ Draws the texture into a rectangle.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void  draw(p, w, h)
 
 <!--
-
 _syntax: draw(p, w, h)_
-
 _name: draw_
-
 _returns: void _
-
 _returns_description: _
-
 _parameters: const ofPoint & p, float w, float h_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -2150,41 +2419,50 @@ Draws the texture at the point rpresent by ofPoint
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void draw(x, y, z, w, h)
 
 <!--
-
 _syntax: draw(x, y, z, w, h)_
-
 _name: draw_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: float x, float y, float z, float w, float h_
-
 _access: public_
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -2208,41 +2486,50 @@ Draws the texture at the x, y, z in 3D space with the width and height at w,h.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void  draw(p)
 
 <!--
-
 _syntax: draw(p)_
-
 _name: draw_
-
 _returns: void _
-
 _returns_description: _
-
 _parameters: const ofPoint & p_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -2266,41 +2553,50 @@ Draws the texture at the point passed in.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void draw(x, y, z)
 
 <!--
-
 _syntax: draw(x, y, z)_
-
 _name: draw_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: float x, float y, float z_
-
 _access: public_
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -2324,41 +2620,50 @@ Draws the texture at the point passed in in 3D space.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void draw(p1, p2, p3, p4)
 
 <!--
-
 _syntax: draw(p1, p2, p3, p4)_
-
 _name: draw_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: ofPoint p1, ofPoint p2, ofPoint p3, ofPoint p4_
-
 _access: public_
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -2382,41 +2687,50 @@ Draws the texture at 4 poitns passed in as if you created 4 glVertices.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void  readToPixels(pixels)
 
 <!--
-
 _syntax: readToPixels(pixels)_
-
 _name: readToPixels_
-
 _returns: void _
-
 _returns_description: _
-
 _parameters: ofPixels & pixels_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -2440,41 +2754,50 @@ Reads the data from the texture to an ofPixels object.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void  readToPixels(pixels)
 
 <!--
-
 _syntax: readToPixels(pixels)_
-
 _name: readToPixels_
-
 _returns: void _
-
 _returns_description: _
-
 _parameters: ofShortPixels & pixels_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -2498,41 +2821,50 @@ Reads the data from the texture to an ofShortPixels object.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void  readToPixels(pixels)
 
 <!--
-
 _syntax: readToPixels(pixels)_
-
 _name: readToPixels_
-
 _returns: void _
-
 _returns_description: _
-
 _parameters: ofFloatPixels & pixels_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -2556,41 +2888,50 @@ Reads the data from the texture to an ofFloatPixels object.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofPoint getCoordFromPoint(xPos, yPos)
 
 <!--
-
 _syntax: getCoordFromPoint(xPos, yPos)_
-
 _name: getCoordFromPoint_
-
 _returns: ofPoint_
-
 _returns_description: _
-
 _parameters: float xPos, float yPos_
-
 _access: public_
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -2614,38 +2955,44 @@ these are helpers to allow you to get points for the texture ala "glTexCoordf" b
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofPoint getCoordFromPercent(xPts, yPts)
 
 <!--
-
 _syntax: getCoordFromPercent(xPts, yPts)_
-
 _name: getCoordFromPercent_
-
 _returns: ofPoint_
-
 _returns_description: _
-
 _parameters: float xPts, float yPts_
-
 _access: public_
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -2670,42 +3017,54 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void setTextureWrap(wrapModeHorizontal, wrapModeVertical)
 
 <!--
-
 _syntax: setTextureWrap(wrapModeHorizontal, wrapModeVertical)_
-
 _name: setTextureWrap_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: GLint wrapModeHorizontal, GLint wrapModeVertical_
-
 _access: public_
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -2729,41 +3088,50 @@ Sets how the texture wraps around the edges of the vertices that the texture is 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void setTextureMinMagFilter(minFilter, maxFilter)
 
 <!--
-
 _syntax: setTextureMinMagFilter(minFilter, maxFilter)_
-
 _name: setTextureMinMagFilter_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: GLint minFilter, GLint maxFilter_
-
 _access: public_
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -2787,38 +3155,44 @@ Set how the texture is scaled up and down, when it's being drawn larger or small
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void setCompression(compression)
 
 <!--
-
 _syntax: setCompression(compression)_
-
 _name: setCompression_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: ofTexCompression compression_
-
 _access: public_
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -2843,42 +3217,54 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###bool isAllocated()
 
 <!--
-
 _syntax: isAllocated()_
-
 _name: isAllocated_
-
 _returns: bool_
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -2909,38 +3295,44 @@ float getWidth() ###
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ### ofTexture(&mom)
 
 <!--
-
 _syntax: ofTexture(&mom)_
-
 _name: ofTexture_
-
 _returns: _
-
 _returns_description: _
-
 _parameters: const ofTexture &mom_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -2957,39 +3349,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###ofTexture operator=(&mom)
 
 <!--
-
 _syntax: operator=(&mom)_
-
 _name: operator=_
-
 _returns: ofTexture_
-
 _returns_description: _
-
 _parameters: const ofTexture &mom_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3006,39 +3407,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void allocate(&textureData)
 
 <!--
-
 _syntax: allocate(&textureData)_
-
 _name: allocate_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: const ofTextureData &textureData_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3056,38 +3466,47 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void loadData(*data, w, h, glFormat)
 
 <!--
-
 _syntax: loadData(*data, w, h, glFormat)_
-
 _name: loadData_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: float *data, int w, int h, int glFormat_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3105,38 +3524,47 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void loadData(*data, w, h, glFormat)
 
 <!--
-
 _syntax: loadData(*data, w, h, glFormat)_
-
 _name: loadData_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: unsigned char *data, int w, int h, int glFormat_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3153,39 +3581,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void loadData(*data, w, h, glFormat)
 
 <!--
-
 _syntax: loadData(*data, w, h, glFormat)_
-
 _name: loadData_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: unsigned short *data, int w, int h, int glFormat_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3203,38 +3640,47 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void loadData(&pix)
 
 <!--
-
 _syntax: loadData(&pix)_
-
 _name: loadData_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: ofPixels &pix_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3252,38 +3698,47 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void loadData(&pix)
 
 <!--
-
 _syntax: loadData(&pix)_
-
 _name: loadData_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: ofShortPixels &pix_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3300,39 +3755,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void loadData(&pix)
 
 <!--
-
 _syntax: loadData(&pix)_
-
 _name: loadData_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: ofFloatPixels &pix_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3349,39 +3813,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void draw(&r)
 
 <!--
-
 _syntax: draw(&r)_
-
 _name: draw_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: const ofRectangle &r_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3398,39 +3871,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void draw(&p, w, h)
 
 <!--
-
 _syntax: draw(&p, w, h)_
-
 _name: draw_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: const ofPoint &p, float w, float h_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3447,39 +3929,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void draw(&p)
 
 <!--
-
 _syntax: draw(&p)_
-
 _name: draw_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: const ofPoint &p_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3497,38 +3988,47 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void readToPixels(&pixels)
 
 <!--
-
 _syntax: readToPixels(&pixels)_
-
 _name: readToPixels_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: ofPixels &pixels_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3546,38 +4046,47 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void readToPixels(&pixels)
 
 <!--
-
 _syntax: readToPixels(&pixels)_
-
 _name: readToPixels_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: ofShortPixels &pixels_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3594,39 +4103,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void readToPixels(&pixels)
 
 <!--
-
 _syntax: readToPixels(&pixels)_
-
 _name: readToPixels_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: ofFloatPixels &pixels_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3643,39 +4161,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void loadData(*data, w, h, glFormat)
 
 <!--
-
 _syntax: loadData(*data, w, h, glFormat)_
-
 _name: loadData_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: void *data, int w, int h, int glFormat_
-
 _access: protected_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3692,6 +4219,31 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ##Variables
 
@@ -3700,30 +4252,21 @@ _description: _
 ###ofTextureData texData
 
 <!--
-
 _name: texData_
-
 _type: ofTextureData_
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _visible: True_
-
 _constant: False_
-
 _advanced: True_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -3760,30 +4303,42 @@ texData is a variable type ofTextureData. ofTextureData is a structure containin
 
 
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofPoint anchor
 
 <!--
-
 _name: anchor_
-
 _type: ofPoint_
-
 _access: protected_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _visible: True_
-
 _constant: False_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3822,31 +4377,46 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###bool bAnchorIsPct
 
 <!--
-
 _name: bAnchorIsPct_
-
 _type: bool_
-
 _access: protected_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _visible: True_
-
 _constant: False_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3885,4 +4455,31 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 

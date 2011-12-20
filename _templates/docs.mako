@@ -15,9 +15,9 @@
             
 		    <div class="page-left-split">
                 <h1>documentation</h1>
-			    <p>This page is the reference for the OF core and the included addons. There are also additional libraries that you can find on the addons page. This api is a work in progress and any corrections, additions or comments are very welcome!</p>
-			    <p>You can contribute to this documentation from github by following this <a href="https://github.com/openframeworks/openFrameworks/wiki/Contributing-documentation">instructions</a> 
-			    <p>This document refers to version <strong>007</strong></p>
+			    <p>This page is the reference for the openFrameworks core and included addons. There are also <a href="http://ofxaddons.com/">contributed addons</a>. The openFrameworks API is constantly evolving: any corrections, additions or comments are very welcome!</p>
+			    <p>You can contribute to this documentation from GitHub by following these <a href="https://github.com/openframeworks/openFrameworks/wiki/Contributing-documentation">instructions.</a> 
+			    <p>This documentation refers to the most recent release, version <strong>007</strong>.</p>
 		    </div>
 		    
 
@@ -29,9 +29,9 @@
 		        <div id="docs-ebook">
 		        <h2>download</h2>
 		        <p><a href="${bf.config.site.url}/epub/ofReference.zip"><strong>html</strong></a></p>
-		        <p><a href="${bf.config.site.url}/epub/ofReference.pdf"><strong>pdf</strong></a></p>
+		        <!--p><a href="${bf.config.site.url}/epub/ofReference.pdf"><strong>pdf</strong></a></p>
 		        <p><a href="${bf.config.site.url}/epub/ofReference.epub"><strong>epub</strong></a></p>
-		        <p><a href="${bf.config.site.url}/epub/ofReference.mobi"><strong>mobi (kindle)</strong></a></p>
+		        <p><a href="${bf.config.site.url}/epub/ofReference.mobi"><strong>mobi (kindle)</strong></a></p-->
 		        </div>
 		    </div>
 

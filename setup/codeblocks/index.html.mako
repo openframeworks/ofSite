@@ -8,10 +8,11 @@ We like codeblocks for windows development since it's light weight, and avoids s
 
 **a) download code::blocks binary (latest release)**
 
-[Download Code::Blocks][0] note: download WITH mingw.
+[Download Code::Blocks][0] note: download WITH mingw.   The latest version 10.05, works well. 
 
 
-![a_download](http://www.openframeworks.cc/wp-content/uploads/2009/07/a_download1-640x397.png)  
+![a_download](codeblocks.png)  
+
 
 
 **b) install**
@@ -40,7 +41,7 @@ similar to devcpp, we will have to add a few libraries to devcpp. you can downlo
 > [additions for codeblocks to work with OF][1]
 
 
-in the zip there are two folders, you need to put the contents of them into the contents of folders in mingw.
+in the zip there are two folders, you need to put the **contents** of them into the contents of folders in mingw.
 
 *   add the _contents_ of the folder "**add\_to\_codeblocks\_mingw\_include**" into "**C:\\Program Files\\CodeBlocks\\MinGW\\include**" (or wherever your app\\mingw\\include is)
 *   add the _contents_ of the folder "**add\_to\_codeblocks\_mingw\_lib**" into "**C:\\Program Files\\CodeBlocks\\MinGW\\lib**" (or wherever your app\\mingw\\lib is)
@@ -48,7 +49,9 @@ in the zip there are two folders, you need to put the contents of them into the 
 
 ![e_putInMingw](http://www.openframeworks.cc/wp-content/uploads/2009/07/e_putInMingw-640x446.png)
 
+These are additional libs and header files that need to be added to the MinGW distribution that comes with codeblocks. 
 
+here's a quick video which shows what this should look like:  [copying codeblocks](http://vimeo.com/33985058)
 
 note: if you have already installed dev-c++, make sure that CB picks the right mingw folder (c:/program files/cb/mingw), it has a tendancy to default to c:/mingw, where devc++ installs... [more info on this][2]
 

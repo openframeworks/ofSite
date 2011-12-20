@@ -11,7 +11,7 @@ from docs_members import DocsMethod, DocsVar
 
 of_src = '/home/arturo/Escritorio/openFrameworks/libs/openFrameworks/'
 of_docs = of_src + 'doxygensource/xml/'
-docs_root = '/home/arturo/Documentos/newofsite/docs/'
+docs_root = '/home/arturo/Documentos/new_of_site/docs/'
 #index = open(docs_root + "index.html.mako",'w')
 
 currentversion = "007"

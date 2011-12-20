@@ -76,6 +76,7 @@ def getclass(clazz):
             if file_split[1]=='.markdown' and file_split[0] == clazz: 
                 f = open(os.path.join(root,name),'r')
                 state = 'begin'
+                linenum = 0
                 for line in f:
                     if state == 'begin' and line.find('#class') == 0 and line.find(clazz)!=-1:
                         state = 'class'
@@ -96,14 +97,16 @@ def getclass(clazz):
                     elif state == 'method' and line.find('_description')==0:
                         state = 'description'
                         
-                    elif state == 'description' and line.find('##')!=0:
+                    elif state == 'description' and line.find('##')!=0 and line.find('<!----------------------------------------------------------------------------->')!=0:
                         method.description = method.description + line
                         
                     elif state == 'description' and line.find('###') == 0:
                         state = 'method'
                         docs_clazz.function_list.append(method)
                         method = DocsMethod(0)
-                        method.clazz  = docs_clazz.name
+                        method.clazz = docs_clazz.name
+                        method.linenum = linenum
+                        method.file = os.path.join(root,name)
                         
                     elif state == 'description' and line.rstrip('\n').rstrip(' ') == '##Variables':
                         docs_clazz.function_list.append(method)
@@ -128,10 +131,12 @@ def getclass(clazz):
                         docs_clazz.var_list.append(var)
                         var = DocsVar(0)
                         var.clazz  = docs_clazz.name
+                        var.linenum = linenum
+                        var.file = os.path.join(root,name)
                         
                     elif state == 'class' and line.find('##Description')==-1:
                         docs_clazz.reference  = docs_clazz.reference + line
-                        
+                    linenum = linenum + 1
                 if state == 'vardescription':
                     docs_clazz.var_list.append(var)
                 f.close()
@@ -143,43 +148,43 @@ def getclass(clazz):
     
 def serialize_function(f,function):
     f.write('###' + function.returns + " " + function.syntax + "\n\n")
-    f.write("<!--\n\n");
-    f.write("_syntax: " + function.syntax + "_\n\n")
-    f.write("_name: " + function.name + "_\n\n")
-    f.write("_returns: " + function.returns + "_\n\n")
-    f.write("_returns_description: " + function.returns_description + "_\n\n")
-    f.write("_parameters: " + function.parameters + "_\n\n")
-    f.write("_access: " + function.access + "_\n\n")
-    f.write("_version_started: " + function.version_started + "_\n\n")
-    f.write("_version_deprecated: " + function.version_deprecated + "_\n\n")
-    f.write("_summary: " + function.summary + "_\n\n")
-    f.write("_constant: " + str(function.constant) + "_\n\n")
-    f.write("_static: " + str(function.static) + "_\n\n")
-    f.write("_visible: " + str(function.visible) + "_\n\n")
-    f.write("_advanced: " + str(function.advanced)  + "_\n\n\n\n")
+    f.write("<!--\n");
+    f.write("_syntax: " + function.syntax + "_\n")
+    f.write("_name: " + function.name + "_\n")
+    f.write("_returns: " + function.returns + "_\n")
+    f.write("_returns_description: " + function.returns_description + "_\n")
+    f.write("_parameters: " + function.parameters + "_\n")
+    f.write("_access: " + function.access + "_\n")
+    f.write("_version_started: " + function.version_started + "_\n")
+    f.write("_version_deprecated: " + function.version_deprecated + "_\n")
+    f.write("_summary: " + function.summary + "_\n")
+    f.write("_constant: " + str(function.constant) + "_\n")
+    f.write("_static: " + str(function.static) + "_\n")
+    f.write("_visible: " + str(function.visible) + "_\n")
+    f.write("_advanced: " + str(function.advanced)  + "_\n")
     f.write("-->\n\n");
     f.write("_description: _\n\n")
     f.write(function.description)
     f.write('\n\n\n\n\n\n')
-    #f.write('//----------------------\n\n')
+    f.write('<!----------------------------------------------------------------------------->\n\n')
 
 def serialize_var(f,var):
     f.write('###' + var.type + " " + var.name + "\n\n")
-    f.write("<!--\n\n");
-    f.write("_name: " + var.name + "_\n\n")
-    f.write("_type: " + var.type + "_\n\n")
-    f.write("_access: " + var.access + "_\n\n")
-    f.write("_version_started: " + var.version_started + "_\n\n")
-    f.write("_version_deprecated: " + var.version_deprecated + "_\n\n")
-    f.write("_summary: " + var.summary + "_\n\n")
-    f.write("_visible: " + str(var.visible) + "_\n\n")
-    f.write("_constant: " + str(var.constant) + "_\n\n")
-    f.write("_advanced: " + str(var.advanced) + "_\n\n\n\n")
+    f.write("<!--\n");
+    f.write("_name: " + var.name + "_\n")
+    f.write("_type: " + var.type + "_\n")
+    f.write("_access: " + var.access + "_\n")
+    f.write("_version_started: " + var.version_started + "_\n")
+    f.write("_version_deprecated: " + var.version_deprecated + "_\n")
+    f.write("_summary: " + var.summary + "_\n")
+    f.write("_visible: " + str(var.visible) + "_\n")
+    f.write("_constant: " + str(var.constant) + "_\n")
+    f.write("_advanced: " + str(var.advanced) + "_\n")
     f.write("-->\n\n");
     f.write("_description: _\n\n")
     f.write(var.description)  
     f.write("\n\n\n\n\n\n")
-    #f.write('//----------------------\n\n')
+    f.write('<!----------------------------------------------------------------------------->\n\n')
     
 def setclass(clazz):
     try:
