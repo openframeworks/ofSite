@@ -650,7 +650,7 @@ hr{
 
 /*  ************* docs detail ************* */
 
-.docs_detail_table{
+.docs_detail{
 	width:			650px;
 	margin:			0px 0px 30px 0px;
 	padding:		5px 0px 0px 0px;
@@ -667,7 +667,7 @@ line-height:20px;
 	position:		relative;
 }
 
-.docs_detail_wide_col{
+.docs_detail h1{
 	width:			650px;
 	margin:			0px;
 	padding:		0px 0px 5px 0px;
@@ -681,10 +681,7 @@ border-top-width:1px;
 border-top-style:solid;
 }
 
-
-
-
-.docs_detail_wide_col_tiny{
+.docs_detail h2{
 	width:			600px;
 	margin:			0px;
 	padding:		0px 0px 10px 0px;
@@ -692,7 +689,7 @@ border-top-style:solid;
 	position:		relative;
 	font-size: 		0.84em;
 	font-weight: 		normal;
-	color:			#CCCCCC;
+	color:			#666;
 }
 .docs_detail_wide_col_nav{
 	width:			650px;
@@ -715,7 +712,7 @@ border-top-style:solid;
 	font-weight:		bold;
 }
 
-.docs_detail_right_col{
+.docs_detail_description{
 	width:			480px;
 	margin:			0px;
 	padding:		0px 0px 10px 0px;
