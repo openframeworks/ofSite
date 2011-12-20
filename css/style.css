@@ -536,7 +536,7 @@ h1{
 	color:			#333333;
 	font-weight:	normal;
 	padding:		10px 0px 5px 0px;
-	margin:			0;
+	margin:			0 0 1em 0;
 }
 
 h2{
@@ -972,19 +972,19 @@ div.galleryItem p{
 
 #download-latest-header h2{
 	float: left;
-	margin-right: 10px;
 }
 
 #download-latest-header{
-	margin: 0;
+	margin-bottom: 3em;
 }
 
 #download-latest-platform, #docs-ebook{ 
-	width:150px;
-	height:150px;
+	width:154px;
+	height:154px;
 	padding:20px;
-	margin: 0 10px 10px 0;
 	background-color: #eee;
+	margin-right: 1em;
+	margin-bottom: 2em;
 }
 
 #download-latest-platform{
