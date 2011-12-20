@@ -23,3 +23,11 @@
     </div> <!-- End Content -->
   </body>
 </html>
+
+<%def name="header()">
+  <%
+    active = "community"
+  %>
+  <%include file="header.mako"  args="active=active" />
+</%def>
+
