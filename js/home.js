@@ -24,7 +24,7 @@ function OnLoad() {
     
     $(".tweets").tweet({
       avatar_size: 32,
-      count: 4,
+      count: 5,
       query: "openFrameworks",
       loading_text: "searching twitter...",
       template: "{avatar} {text}"

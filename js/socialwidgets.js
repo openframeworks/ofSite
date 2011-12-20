@@ -12,7 +12,7 @@ function feedGithubLoaded(result) {
     // http://code.google.com/apis/ajaxfeeds/documentation/reference.html#JSON
     var ul = document.createElement("ul");
     var totalElements = 0;
-    for (var i = 0; i < result.xmlDocument.getElementsByTagName('entry').length && totalElements<4; i++) {
+    for (var i = 0; i < result.xmlDocument.getElementsByTagName('entry').length && totalElements<6; i++) {
       var entry = result.xmlDocument.getElementsByTagName('entry')[i];
       var li = document.createElement("li");
       var a = document.createElement("a");
