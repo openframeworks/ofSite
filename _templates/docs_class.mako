@@ -20,44 +20,60 @@
               </%self:filter>
               </p>
               <br/><br/>
-              <h3>${clazz.name} methods list</h3>
-              <ul class="functionslist">
-              <% prevmethod = "" %>
-              % for method in clazz.function_list:
-                  % if prevmethod != method.name and method.visible and not method.advanced and method.access=='public':
-                      <% params = "()" if method.parameters=="" else "(...)" %> 
-                      <li> <a href="#${method.name}">${method.name}${params}</a> </li>
-                  % endif
-                  <% prevmethod = method.name %>
-              % endfor
-              </ul>
+              
+              
+              <!-- list of methods -->
+              % if len([x for x in clazz.function_list if not x.advanced and x.visible and x.access=='public'])>0:
+                  <h3>${clazz.name} methods list</h3>
+
+                  <ul class="functionslist">
+                      <% prevmethod = "" %>
+                      % for method in clazz.function_list:
+                          % if prevmethod != method.name and method.visible and not method.advanced and method.access=='public':
+                              <% params = "()" if method.parameters=="" else "(...)" %> 
+                              <li> <a href="#${method.name}">${method.name}${params}</a> </li>
+                          % endif
+                          <% prevmethod = method.name %>
+                      % endfor
+                  </ul>
+              % endif
               
               <br/><br/>
               
-              <h3>${clazz.name} variables list</h3>
-              <ul class="varslist">
-              % for var in clazz.var_list:
-                  % if var.visible and not var.advanced and var.access=='public':
-                      <li> <a href="#${var.name}">${var.type} ${var.name}</a> </li>
-                  % endif
-              % endfor
-              </ul>
+              <!-- list of variables -->              
+              % if len([x for x in clazz.var_list if not x.advanced and x.visible and x.access=='public'])>0:
+                  <h3>${clazz.name} variables list</h3>
+                  <ul class="varslist">
+                      % for var in clazz.var_list:
+                          % if var.visible and not var.advanced and var.access=='public':
+                              <li> <a href="#${var.name}">${var.type} ${var.name}</a> </li>
+                          % endif
+                      % endfor
+                  </ul>
+              % endif
               
               <br/><br/>
               
-              <h3>${clazz.name} methods</h3>
-              % for method in clazz.function_list:
-                    % if method.visible and not method.advanced and method.access=='public':
-                        <%include file="docs_method.mako" args="method=method" />    
-                    % endif
-              % endfor
+
+              <!-- methods detail -->
+              % if len([x for x in clazz.function_list if not x.advanced and x.visible and x.access=='public'])>0:
+                  <h3>${clazz.name} methods</h3>
+                  % for method in clazz.function_list:
+                        % if method.visible and not method.advanced and method.access=='public':
+                            <%include file="docs_method.mako" args="method=method" />    
+                        % endif
+                  % endfor
+              % endif
               
-              <h3>${clazz.name} variables</h3>
-              % for var in clazz.var_list:
-                    % if var.visible and not var.advanced and var.access=='public':
-                        <%include file="docs_var.mako" args="var=var" />    
-                    % endif
-              % endfor
+              <!-- vars detail -->
+              % if len([x for x in clazz.var_list if not x.advanced and x.visible and x.access=='public'])>0:
+                  <h3>${clazz.name} variables</h3>
+                  % for var in clazz.var_list:
+                        % if var.visible and not var.advanced and var.access=='public':
+                            <%include file="docs_var.mako" args="var=var" />    
+                        % endif
+                  % endfor
+              % endif 
             </div><!-- End Prose Block -->
           </div><!-- End Main Block -->
         </div>
