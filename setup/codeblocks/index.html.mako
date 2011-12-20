@@ -51,7 +51,7 @@ in the zip there are two folders, you need to put the **contents** of them into 
 
 These are additional libs and header files that need to be added to the MinGW distribution that comes with codeblocks. 
 
-here's a quick video which shows what this should look like:  http://vimeo.com/33985058  
+here's a quick video which shows what this should look like:  [copying codeblocks](http://vimeo.com/33985058)
 
 note: if you have already installed dev-c++, make sure that CB picks the right mingw folder (c:/program files/cb/mingw), it has a tendancy to default to c:/mingw, where devc++ installs... [more info on this][2]
 
