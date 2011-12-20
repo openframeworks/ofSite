@@ -1,5 +1,6 @@
 <title>${bf.config.blog.name}</title>
 
+<link rel="stylesheet" type="text/css" href="${bf.config.site.url}/css/pygments_murphy.css" media="all" />
 <link rel="stylesheet" type="text/css" href="${bf.config.site.url}/css/style.css" media="all" />
 <link rel="stylesheet" type="text/css" href="${bf.config.site.url}/css/print.css" media="print" />
 
