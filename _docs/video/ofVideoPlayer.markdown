@@ -1154,14 +1154,13 @@ _description: _
 
 For example, to get the red green and blue of the pixel (100,20):
 
+$$code(lang=c++)
 unsigned char * pixels = myMovie.getPixels();
 int widthOfLine = myMovie.width * w;  // how long is a line of pixels
 int red 	= pixels[(20 * widthOfLine) + 100 * 3    ];
 int green 	= pixels[(20 * widthOfLine) + 100 * 3 + 1];
 int blue 	= pixels[(20 * widthOfLine) + 100 * 3 + 2];
-
-
-
+$$/code
 
 
 
