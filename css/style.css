@@ -195,14 +195,24 @@ hr.header{
     /*background-color: #eee;
     padding:20px;*/
     margin-right: 40px;
-    margin-top: 45px;
     height: 380px;
+}
 
+.page-right-narrow{
+    margin-top: 45px;
+}
+
+.home-links{
+    margin-top: 15px;
 }
 
 .page-right-narrow .home-links h3{
     color: #333;
     line-height:1.2em;
+}
+
+.home-links h2{
+    margin-bottom: 0.8em;
 }
 
 
