@@ -23,7 +23,7 @@
               <div id="methods_list">
               <!-- list of methods -->
               % if len([x for x in clazz.function_list if not x.advanced and x.visible and x.access=='public'])>0:
-                  <h3>${clazz.name} methods list</h3>
+                  <h3>${clazz.name} methods</h3>
 
                   <ul class="functionslist">
                       <% prevmethod = "" %>
@@ -41,7 +41,7 @@
               <div id="variables_list">
               <!-- list of variables -->              
               % if len([x for x in clazz.var_list if not x.advanced and x.visible and x.access=='public'])>0:
-                  <h3>${clazz.name} variables list</h3>
+                  <h3>${clazz.name} variables</h3>
                   <ul class="varslist">
                       % for var in clazz.var_list:
                           % if var.visible and not var.advanced and var.access=='public':
@@ -51,6 +51,8 @@
                   </ul>
               % endif
               </div>
+
+              <br style="clear:both"/>
               
               <!-- methods detail -->
               % if len([x for x in clazz.function_list if not x.advanced and x.visible and x.access=='public'])>0:

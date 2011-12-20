@@ -964,3 +964,11 @@ div#github .github_avatar img {
 .clearboth {
 	clear: both;
 }
+#methods_list {
+	width: 50%;
+	float: left;
+}
+#variables_list {
+	width: 50%;
+	float: left;
+}
