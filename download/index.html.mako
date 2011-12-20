@@ -57,73 +57,9 @@ download
 
 <br class="clearboth"/>
 
---------------------------------
-
-about the release
------------------
-  
 We release openFrameworks as an uncompiled library. This means that when you download and unzip openFrameworks, you will see the following folders: `addons/`, `apps/`, `libs/`, and a few more. These folders contain openFrameworks completely, so if you want to keep multiple versions of openFrameworks on your computer you should just create multiple folders. For example, one `openFrameworks0062/` folder and one `openFrameworks007/` folder, each with their own `apps/` folder. Even when new versions of openFrameworks are released, your old apps will still compile with old versions of openFrameworks.
 
-`apps/` is a great place to start. Inside `apps/` you'll find a variety of examples that show what is possible with openFrameworks. They demonstrate font loading, graphics, audio input and output, sound file playback and fft analysis, video grabbing, movie playing, image loading and saving, event handling and serial communication.  For more examples, see `addonsExamples/`.
-
-<table border="0">
-<tbody>
-<tr>
-<td><img class="size-full wp-image-397 alignnone" title="graphicsAdvExample" src="../images/examples/graphicsAdvExample.gif" alt="graphicsAdvExample" />&nbsp;</p>
-<p><strong>advanced graphics<br />
-</strong></td>
-<td><img class="size-full wp-image-398 alignnone" title="audioInputExample" src="../images/examples/audioInputExample.gif" alt="audioInputExample" />&nbsp;</p>
-<p style="text-align: center;"><strong>audio input</strong></p>
-</td>
-<td><img class="size-full wp-image-399 alignnone" title="audioOutputExample" src="../images/examples/audioOutputExample.gif" alt="audioOutputExample" />&nbsp;</p>
-<p style="text-align: center;"><strong>audio output</strong></p>
-</td>
-<td style="text-align: center;">
-<p style="text-align: center;"><img class="size-full wp-image-400 aligncenter" title="eventExample" src="../images/examples/eventExample.gif" alt="eventExample" /></p>
-<p><strong>event handling</strong></td>
-</tr>
-<tr>
-<td><img class="alignnone size-full wp-image-401" title="fontsExample" src="../images/examples/fontsExample.gif" alt="fontsExample" />&nbsp;</p>
-<p style="text-align: center;"><strong>font loading</strong></p>
-</td>
-<td style="text-align: center;">
-<p style="text-align: center;"><img class="size-full wp-image-402 aligncenter" title="graphicsExample" src="../images/examples/graphicsExample.gif" alt="graphicsExample" /></p>
-<p><strong>graphics</strong></td>
-<td style="text-align: center;">
-<p style="text-align: center;"><img class="size-full wp-image-403 aligncenter" title="imageLoader" src="../images/examples/imageLoader.gif" alt="imageLoader" /></p>
-<p><strong>image loading</strong></td>
-<td style="text-align: center;">
-<p style="text-align: center;"><img class="size-full wp-image-404 aligncenter" title="imageSaverExample" src="../images/examples/imageSaverExample.gif" alt="imageSaverExample" /></p>
-<p><strong>image saving</strong></td>
-</tr>
-<tr>
-<td><img class="alignnone size-full wp-image-407" title="serialExample" src="../images/examples/serialExample1.gif" alt="serialExample" />&nbsp;</p>
-<p style="text-align: center;"><strong>serial i/o</strong></p>
-</td>
-<td>
-<p style="text-align: center;"><img class="size-full wp-image-408 aligncenter" title="soundPlayerExample" src="../images/examples/soundPlayerExample1.gif" alt="soundPlayerExample" /></p>
-<p style="text-align: center;"><strong>soundfile playback</strong></p>
-</td>
-<td><img class="size-full wp-image-409 alignnone" title="fftExample" src="../images/examples/fftExample.gif" alt="fftExample" /><strong> </strong>&nbsp;</p>
-<p style="text-align: center;"><strong>soundfile fft</strong></p>
-</td>
-<td><img class="alignnone size-full wp-image-410" title="screenToTextureExample" src="../images/examples/screenToTextureExample.gif" alt="screenToTextureExample" />&nbsp;</p>
-<p style="text-align: center;"><strong>screen to texture</strong></p>
-</td>
-</tr>
-<tr>
-<td><img class="size-full wp-image-411 alignnone" title="textureExample" src="../images/examples/textureExample.gif" alt="textureExample" />&nbsp;</p>
-<p style="text-align: center;"><strong>textures</strong></p>
-</td>
-<td style="text-align: center;"><img class="size-full wp-image-412 alignnone" title="videoGrabberExample" src="../images/examples/videoGrabberExample.gif" alt="videoGrabberExample" />&nbsp;</p>
-<p><strong>video grabbing</strong></td>
-<td><img class="size-full wp-image-413 alignnone" title="videoPlayerExample" src="../images/examples/videoPlayerExample.gif" alt="videoPlayerExample" />&nbsp;</p>
-<p style="text-align: center;"><strong>video playing</strong></p>
-</td>
-<td></td>
-</tr>
-</tbody>
-</table>
+`apps/examples/` is a great place to start. Inside `apps/examples/` you'll find a variety of examples that show what is possible with openFrameworks. They demonstrate font loading, graphics, audio input and output, sound file playback and FFT analysis, video grabbing, movie playing, image loading and saving, event handling and serial communication.  For more examples, see `apps/addonsExamples/`.
 
 --------------------------------
 
