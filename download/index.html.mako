@@ -12,7 +12,7 @@ download
 <div id="download-latest-platform">
 	<h2>osx</h2>
 	<h3>download</h3>
-	<p><a href="../versions/preRelease_v0.07/of_preRelease_v007_osx.zip">xcode</a></p>
+	<p><a href="../versions/preRelease_v0.07/of_preRelease_v007_osx.zip">xcode</a></p><br/>
 	<h3>setup guide</h3>
 	<p><a href="xcode.html">xcode</a></p>
 </div>
@@ -21,7 +21,7 @@ download
 	<h2>linux</h2>
 	<h3>download</h3>
 	<p><a href="../versions/preRelease_v0.07/of_preRelease_v007_linux.tar.gz">code::blocks</a></p>
-	<p><a href="../versions/preRelease_v0.07/of_preRelease_v007_linux64.tar.gz">code::blocks (64 bit)</a></p>
+	<p><a href="../versions/preRelease_v0.07/of_preRelease_v007_linux64.tar.gz">code::blocks (64 bit)</a></p><br/>
 	<h3>setup guide</h3>
 	<p><a href="linux.html">code::blocks</a></p>
 </div>
@@ -30,7 +30,7 @@ download
 	<h2>windows</h2>
 	<h3>download</h3>
 	<p><a href="../versions/preRelease_v0.07/of_preRelease_v007_win_cb.zip">code::blocks</a></p>
-	<p><a href="../versions/preRelease_v0.07/of_preRelease_v007_vs2010.zip">visual studio 2010</a></p>
+	<p><a href="../versions/preRelease_v0.07/of_preRelease_v007_vs2010.zip">visual studio 2010</a></p><br/>
 	<h3>setup guides</h3>
 	<p><a href="wincb.html">code::blocks</a></p>
 	<p><a href="vs2008.html">visual studio 2008</a></p>
@@ -38,18 +38,18 @@ download
 
 <div id="download-latest-platform">
 	<h2>ios</h2>
-	<p><em>osx only</em></p>
+	<p><em>osx only</em></p><br/>
 	<h3>download</h3>
-	<p><a href="../versions/preRelease_v0.07/of_preRelease_v007_iphone.zip">ios</a></p>
+	<p><a href="../versions/preRelease_v0.07/of_preRelease_v007_iphone.zip">ios</a></p><br/>
 	<h3>setup guide</h3>
 	<p><a href="ios.html">ios</a></p>
 </div>
 
 <div id="download-latest-platform">
 	<h2>android</h2>
-	<p><em>linux + osx only</em></p>
+	<p><em>linux + osx only</em></p><br/>
 	<h3>download</h3>
-	<p><a href="../versions/preRelease_v0.07/of_preRelease_v007_android.tar.gz">eclipse</a></p>
+	<p><a href="../versions/preRelease_v0.07/of_preRelease_v007_android.tar.gz">eclipse</a></p><br/>
 	<h3>setup guide</h3>
 	<p><a href="android.html">eclipse</a></p>
 </div>
