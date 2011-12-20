@@ -25,7 +25,8 @@
               <% prevmethod = "" %>
               % for method in clazz.function_list:
                   % if prevmethod != method.name and method.visible and not method.advanced and method.access=='public':
-                      <li> <a href="#${method.name}">${method.name}</a> </li>
+                      <% params = "()" if method.parameters=="" else "(...)" %> 
+                      <li> <a href="#${method.name}">${method.name}${params}</a> </li>
                   % endif
                   <% prevmethod = method.name %>
               % endfor
