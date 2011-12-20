@@ -9,7 +9,7 @@
 			${method.description}
 		</%self:filter>
 	</div>
-	<div class="docs_detail_wide_col_nav"><a href="../">&larr;INDEX</a>&nbsp;<a href="#top">&uarr;UP</a></div>
+	<div class="docs_detail_wide_col_nav"><a href="#top">&uarr;</a></div>
 </div>
 
 <%def name="filter(chain)">
