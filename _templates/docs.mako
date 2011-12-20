@@ -29,9 +29,9 @@
 		        <div id="docs-ebook">
 		        <h2>download</h2>
 		        <p><a href="${bf.config.site.url}/epub/ofReference.zip"><strong>html</strong></a></p>
-		        <p><a href="${bf.config.site.url}/epub/ofReference.pdf"><strong>pdf</strong></a></p>
+		        <!--p><a href="${bf.config.site.url}/epub/ofReference.pdf"><strong>pdf</strong></a></p>
 		        <p><a href="${bf.config.site.url}/epub/ofReference.epub"><strong>epub</strong></a></p>
-		        <p><a href="${bf.config.site.url}/epub/ofReference.mobi"><strong>mobi (kindle)</strong></a></p>
+		        <p><a href="${bf.config.site.url}/epub/ofReference.mobi"><strong>mobi (kindle)</strong></a></p-->
 		        </div>
 		    </div>
 
