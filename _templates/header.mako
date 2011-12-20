@@ -3,7 +3,7 @@
 <div id="head">
 
 		<div id="head-left">
-			<a href="${bf.config.site.url}" class="nohover"><img src="${bf.config.site.url}/images/ofw-logo.png" border="0" alt="openFrameworks" /></a>
+			<a href=".." class="nohover"><img src="${bf.config.site.url}/images/ofw-logo.png" border="0" alt="openFrameworks" /></a>
 		</div>
 
 		<div id="head-right">
