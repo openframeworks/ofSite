@@ -17,6 +17,8 @@ class DocsMethod:
         self.visible = True
         self.advanced = False
         self.clazz = ""
+        self.linenum = 0
+        self.file = ""
 
 class DocsVar:
     def __init__(self,functionid):
@@ -33,4 +35,6 @@ class DocsVar:
         self.advanced = False
         self.static = False
         self.clazz = ""
+        self.linenum = 0
+        self.file = ""
 
