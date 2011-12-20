@@ -689,18 +689,9 @@ a.docs_class_link, a:link.docs_class_link, a:visited.docs_class_link, a:hover.do
 }
 pre {
 	background-color: #fdfde3;
-	font-family: Courier;
-	font-size: 13px;
-	font-size: 90%;
-	line-height: 120%;
-	line-height: 9px;
-	margin: 0px;
-	margin-left: 10px;
-	margin-top: 15px;
-	padding-bottom: 10px;
-	padding-left: 10px;
-	padding-top: 10px;
+	font-family: Courier, monospace; 
 	white-space: pre-wrap;
+	line-height: normal;
 }
 .faqAnswer {
 	background-color: #FCFCFC;

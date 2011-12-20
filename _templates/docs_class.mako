@@ -19,9 +19,8 @@
                   ${clazz.reference}
               </%self:filter>
               </p>
-              <br/><br/>
               
-              
+              <div id="methods_list">
               <!-- list of methods -->
               % if len([x for x in clazz.function_list if not x.advanced and x.visible and x.access=='public'])>0:
                   <h3>${clazz.name} methods list</h3>
@@ -37,9 +36,9 @@
                       % endfor
                   </ul>
               % endif
+              </div>
               
-              <br/><br/>
-              
+              <div id="variables_list">
               <!-- list of variables -->              
               % if len([x for x in clazz.var_list if not x.advanced and x.visible and x.access=='public'])>0:
                   <h3>${clazz.name} variables list</h3>
@@ -51,10 +50,8 @@
                       % endfor
                   </ul>
               % endif
+              </div>
               
-              <br/><br/>
-              
-
               <!-- methods detail -->
               % if len([x for x in clazz.function_list if not x.advanced and x.visible and x.access=='public'])>0:
                   <h3>${clazz.name} methods</h3>
