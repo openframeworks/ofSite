@@ -13,6 +13,15 @@
 
 
 
+
+
+
+
+
+
+
+
+
 This class contains variables defining a color. We can create a color object containing information about a certain color. 
 For example:
 
@@ -51,6 +60,18 @@ ofColor is templated, which means that it has several different ways it can be c
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 ##Methods
 
 
@@ -58,35 +79,19 @@ ofColor is templated, which means that it has several different ways it can be c
 ### ofColor()
 
 <!--
-
 _syntax: ofColor()_
-
 _name: ofColor_
-
 _returns: _
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -127,39 +132,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ### ~ofColor()
 
 <!--
-
 _syntax: ~ofColor()_
-
 _name: ~ofColor_
-
 _returns: _
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -200,42 +214,54 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ### ofColor_&lt;PixelType&gt;(_r, _g, _b, _a =  255.0f)
 
 <!--
-
 _syntax: ofColor_&lt;PixelType&gt;(_r, _g, _b, _a =  255.0f)_
-
 _name: ofColor_&lt;PixelType&gt;_
-
 _returns: _
-
 _returns_description: _
-
 _parameters: float _r, float _g, float _b, float _a = 255.0f_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -260,41 +286,50 @@ This creates a color using RGB
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ### ofColor_&lt;PixelType&gt;(color)
 
 <!--
-
 _syntax: ofColor_&lt;PixelType&gt;(color)_
-
 _name: ofColor_&lt;PixelType&gt;_
-
 _returns: _
-
 _returns_description: _
-
 _parameters: const ofColor_&lt;PixelType&gt; & color_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -324,41 +359,50 @@ $$/code
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ### ofColor_&lt;PixelType&gt;(color, _a)
 
 <!--
-
 _syntax: ofColor_&lt;PixelType&gt;(color, _a)_
-
 _name: ofColor_&lt;PixelType&gt;_
-
 _returns: _
-
 _returns_description: _
-
 _parameters: const ofColor_&lt;PixelType&gt; & color, float _a_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -386,41 +430,50 @@ $$/code
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ### ofColor_&lt;PixelType&gt;(gray, _a =  255.0f)
 
 <!--
-
 _syntax: ofColor_&lt;PixelType&gt;(gray, _a =  255.0f)_
-
 _name: ofColor_&lt;PixelType&gt;_
-
 _returns: _
-
 _returns_description: _
-
 _parameters: float gray, float _a = 255.0f_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -447,41 +500,50 @@ $$/code
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ### ofColor_&lt;PixelType&gt;(color)
 
 <!--
-
 _syntax: ofColor_&lt;PixelType&gt;(color)_
-
 _name: ofColor_&lt;PixelType&gt;_
-
 _returns: _
-
 _returns_description: _
-
 _parameters: const ofColor_&lt;SrcType&gt; & color_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -509,41 +571,50 @@ $$/code
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofColor_&lt;PixelType&gt; fromHsb(hue, saturation, brightness, alpha =  255.f)
 
 <!--
-
 _syntax: fromHsb(hue, saturation, brightness, alpha =  255.f)_
-
 _name: fromHsb_
-
 _returns: ofColor_&lt;PixelType&gt;_
-
 _returns_description: _
-
 _parameters: float hue, float saturation, float brightness, float alpha = 255.f_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -568,41 +639,50 @@ Allows you create a color from HSB settings. Important to note is that h is betw
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofColor_&lt;PixelType&gt; fromHex(hexColor, alpha =  255.f)
 
 <!--
-
 _syntax: fromHex(hexColor, alpha =  255.f)_
-
 _name: fromHex_
-
 _returns: ofColor_&lt;PixelType&gt;_
-
 _returns_description: _
-
 _parameters: int hexColor, float alpha = 255.f_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -632,41 +712,50 @@ $$/code
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void set(_r, _g, _b, _a =  255.0f)
 
 <!--
-
 _syntax: set(_r, _g, _b, _a =  255.0f)_
-
 _name: set_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: float _r, float _g, float _b, float _a = 255.0f_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -695,41 +784,50 @@ $$/code
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void set(_gray, _a =  255.0f)
 
 <!--
-
 _syntax: set(_gray, _a =  255.0f)_
-
 _name: set_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: float _gray, float _a = 255.0f_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -758,38 +856,44 @@ $$/code
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void set(color)
 
 <!--
-
 _syntax: set(color)_
-
 _name: set_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: ofColor_&lt;PixelType&gt; const & color_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -816,39 +920,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void setHex(hexColor, alpha =  255.0f)
 
 <!--
-
 _syntax: setHex(hexColor, alpha =  255.0f)_
-
 _name: setHex_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: int hexColor, float alpha = 255.0f_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -872,42 +985,54 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###int getHex()
 
 <!--
-
 _syntax: getHex()_
-
 _name: getHex_
-
 _returns: int_
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -932,41 +1057,50 @@ Gets the value of the color as RGB hex, so for instance, 0xffff00, which would b
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofColor clamp()
 
 <!--
-
 _syntax: clamp()_
-
 _name: clamp_
-
 _returns: ofColor_
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -991,41 +1125,50 @@ This clamps the values of your color in case they're too high or low for their t
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofColor invert()
 
 <!--
-
 _syntax: invert()_
-
 _name: invert_
-
 _returns: ofColor_
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -1050,41 +1193,50 @@ Flips your color. You probably can guess what this looks like.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofColor normalize()
 
 <!--
-
 _syntax: normalize()_
-
 _name: normalize_
-
 _returns: ofColor_
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -1124,41 +1276,50 @@ will create this:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofColor_&lt;PixelType&gt;& lerp(target, amount)
 
 <!--
-
 _syntax: lerp(target, amount)_
-
 _name: lerp_
-
 _returns: ofColor_&lt;PixelType&gt;&_
-
 _returns_description: _
-
 _parameters: const ofColor_&lt;PixelType&gt;& target, float amount_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -1189,41 +1350,50 @@ $$/code
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofColor getClamped()
 
 <!--
-
 _syntax: getClamped()_
-
 _name: getClamped_
-
 _returns: ofColor_
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -1248,41 +1418,50 @@ Returns the clamped version of the color.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofColor getInverted()
 
 <!--
-
 _syntax: getInverted()_
-
 _name: getInverted_
-
 _returns: ofColor_
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -1307,41 +1486,50 @@ Returns the inverted version of the color.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofColor getNormalized()
 
 <!--
-
 _syntax: getNormalized()_
-
 _name: getNormalized_
-
 _returns: ofColor_
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -1366,41 +1554,50 @@ Returns the normalized version of the color.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofColor_&lt;PixelType&gt; getLerped(target, amount)
 
 <!--
-
 _syntax: getLerped(target, amount)_
-
 _name: getLerped_
-
 _returns: ofColor_&lt;PixelType&gt;_
-
 _returns_description: _
-
 _parameters: const ofColor_&lt;PixelType&gt;& target, float amount_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -1425,41 +1622,50 @@ Returns the lerped version of the color so you can make a new color from it, whi
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###float getHue()
 
 <!--
-
 _syntax: getHue()_
-
 _name: getHue_
-
 _returns: float_
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -1484,41 +1690,50 @@ Gets the hue of the color, between 0 and 360
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###float getSaturation()
 
 <!--
-
 _syntax: getSaturation()_
-
 _name: getSaturation_
-
 _returns: float_
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -1543,41 +1758,50 @@ Gets the saturation of the color, between 0 and 1, that is, how much hue there i
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###float getBrightness()
 
 <!--
-
 _syntax: getBrightness()_
-
 _name: getBrightness_
-
 _returns: float_
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -1602,41 +1826,50 @@ Gets the brightness of the color, that is, how black it is. No brightness = blac
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###float getLightness()
 
 <!--
-
 _syntax: getLightness()_
-
 _name: getLightness_
-
 _returns: float_
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -1661,38 +1894,44 @@ creates average of the components
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void getHsb(hue, saturation, brightness)
 
 <!--
-
 _syntax: getHsb(hue, saturation, brightness)_
-
 _name: getHsb_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: float& hue, float& saturation, float& brightness_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -1717,42 +1956,54 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void setHue(hue)
 
 <!--
-
 _syntax: setHue(hue)_
-
 _name: setHue_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: float hue_
-
 _access: public_
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -1777,41 +2028,50 @@ Sets the hue. Note the color wheel at the top. Hue values are from 0 to 360.0.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void setSaturation(saturation)
 
 <!--
-
 _syntax: setSaturation(saturation)_
-
 _name: setSaturation_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: float saturation_
-
 _access: public_
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -1836,41 +2096,50 @@ Sets the saturation, note the color, em, diamond at the top. Saturation values a
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void setBrightness(brightness)
 
 <!--
-
 _syntax: setBrightness(brightness)_
-
 _name: setBrightness_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: float brightness_
-
 _access: public_
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -1895,41 +2164,50 @@ Sets the brightness, note the color gem at the top. Saturation values are 0 to 1
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void setHsb(hue, saturation, brightness, alpha)
 
 <!--
-
 _syntax: setHsb(hue, saturation, brightness, alpha)_
-
 _name: setHsb_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: float hue, float saturation, float brightness, float alpha_
-
 _access: public_
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -1954,41 +2232,50 @@ Sets the HSB all at once, with alpha included.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void setHsb(hue, saturation, brightness)
 
 <!--
-
 _syntax: setHsb(hue, saturation, brightness)_
-
 _name: setHsb_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: float hue, float saturation, float brightness_
-
 _access: public_
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -2013,41 +2300,50 @@ Sets the HSB all at once, no need for alpha.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofColor_&lt;PixelType&gt; & operator=(color)
 
 <!--
-
 _syntax: operator=(color)_
-
 _name: operator=_
-
 _returns: ofColor_&lt;PixelType&gt; &_
-
 _returns_description: _
-
 _parameters: ofColor_&lt;PixelType&gt; const & color_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -2075,42 +2371,51 @@ $$/code
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###ofColor_&lt;PixelType&gt; & operator=(color)
 
 <!--
-
 _syntax: operator=(color)_
-
 _name: operator=_
-
 _returns: ofColor_&lt;PixelType&gt; &_
-
 _returns_description: _
-
 _parameters: ofColor_&lt;SrcType&gt; const & color_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -2138,39 +2443,45 @@ $$/code
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###ofColor_&lt;PixelType&gt; & operator=(val)
 
 <!--
-
 _syntax: operator=(val)_
-
 _name: operator=_
-
 _returns: ofColor_&lt;PixelType&gt; &_
-
 _returns_description: _
-
 _parameters: float const & val_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -2195,39 +2506,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###bool operator==(color)
 
 <!--
-
 _syntax: operator==(color)_
-
 _name: operator==_
-
 _returns: bool_
-
 _returns_description: _
-
 _parameters: ofColor_&lt;PixelType&gt; const & color_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -2252,39 +2572,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###bool operator!=(color)
 
 <!--
-
 _syntax: operator!=(color)_
-
 _name: operator!=_
-
 _returns: bool_
-
 _returns_description: _
-
 _parameters: ofColor_&lt;PixelType&gt; const & color_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -2309,39 +2638,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###ofColor_&lt;PixelType&gt; operator+(color)
 
 <!--
-
 _syntax: operator+(color)_
-
 _name: operator+_
-
 _returns: ofColor_&lt;PixelType&gt;_
-
 _returns_description: _
-
 _parameters: ofColor_&lt;PixelType&gt; const & color_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -2366,39 +2704,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###ofColor_&lt;PixelType&gt; operator+(val)
 
 <!--
-
 _syntax: operator+(val)_
-
 _name: operator+_
-
 _returns: ofColor_&lt;PixelType&gt;_
-
 _returns_description: _
-
 _parameters: float const & val_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -2423,39 +2770,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###ofColor_&lt;PixelType&gt; & operator+=(color)
 
 <!--
-
 _syntax: operator+=(color)_
-
 _name: operator+=_
-
 _returns: ofColor_&lt;PixelType&gt; &_
-
 _returns_description: _
-
 _parameters: ofColor_&lt;PixelType&gt; const & color_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -2480,39 +2836,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###ofColor_&lt;PixelType&gt; & operator+=(val)
 
 <!--
-
 _syntax: operator+=(val)_
-
 _name: operator+=_
-
 _returns: ofColor_&lt;PixelType&gt; &_
-
 _returns_description: _
-
 _parameters: float const & val_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -2537,39 +2902,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###ofColor_&lt;PixelType&gt; operator-(color)
 
 <!--
-
 _syntax: operator-(color)_
-
 _name: operator-_
-
 _returns: ofColor_&lt;PixelType&gt;_
-
 _returns_description: _
-
 _parameters: ofColor_&lt;PixelType&gt; const & color_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -2594,39 +2968,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###ofColor_&lt;PixelType&gt; operator-(val)
 
 <!--
-
 _syntax: operator-(val)_
-
 _name: operator-_
-
 _returns: ofColor_&lt;PixelType&gt;_
-
 _returns_description: _
-
 _parameters: float const & val_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -2651,39 +3034,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###ofColor_&lt;PixelType&gt; & operator-=(color)
 
 <!--
-
 _syntax: operator-=(color)_
-
 _name: operator-=_
-
 _returns: ofColor_&lt;PixelType&gt; &_
-
 _returns_description: _
-
 _parameters: ofColor_&lt;PixelType&gt; const & color_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -2708,39 +3100,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###ofColor_&lt;PixelType&gt; & operator-=(val)
 
 <!--
-
 _syntax: operator-=(val)_
-
 _name: operator-=_
-
 _returns: ofColor_&lt;PixelType&gt; &_
-
 _returns_description: _
-
 _parameters: float const & val_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -2765,39 +3166,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###ofColor_&lt;PixelType&gt; operator*(color)
 
 <!--
-
 _syntax: operator*(color)_
-
 _name: operator*_
-
 _returns: ofColor_&lt;PixelType&gt;_
-
 _returns_description: _
-
 _parameters: ofColor_&lt;PixelType&gt; const & color_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -2822,39 +3232,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###ofColor_&lt;PixelType&gt; operator*(val)
 
 <!--
-
 _syntax: operator*(val)_
-
 _name: operator*_
-
 _returns: ofColor_&lt;PixelType&gt;_
-
 _returns_description: _
-
 _parameters: float const & val_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -2879,39 +3298,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###ofColor_&lt;PixelType&gt; & operator*=(color)
 
 <!--
-
 _syntax: operator*=(color)_
-
 _name: operator*=_
-
 _returns: ofColor_&lt;PixelType&gt; &_
-
 _returns_description: _
-
 _parameters: ofColor_&lt;PixelType&gt; const & color_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -2936,39 +3364,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###ofColor_&lt;PixelType&gt; & operator*=(val)
 
 <!--
-
 _syntax: operator*=(val)_
-
 _name: operator*=_
-
 _returns: ofColor_&lt;PixelType&gt; &_
-
 _returns_description: _
-
 _parameters: float const & val_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -2993,39 +3430,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###ofColor_&lt;PixelType&gt; operator/(color)
 
 <!--
-
 _syntax: operator/(color)_
-
 _name: operator/_
-
 _returns: ofColor_&lt;PixelType&gt;_
-
 _returns_description: _
-
 _parameters: ofColor_&lt;PixelType&gt; const & color_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3050,39 +3496,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###ofColor_&lt;PixelType&gt; operator/(val)
 
 <!--
-
 _syntax: operator/(val)_
-
 _name: operator/_
-
 _returns: ofColor_&lt;PixelType&gt;_
-
 _returns_description: _
-
 _parameters: float const & val_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3107,39 +3562,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###ofColor_&lt;PixelType&gt; & operator/=(color)
 
 <!--
-
 _syntax: operator/=(color)_
-
 _name: operator/=_
-
 _returns: ofColor_&lt;PixelType&gt; &_
-
 _returns_description: _
-
 _parameters: ofColor_&lt;PixelType&gt; const & color_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3164,39 +3628,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###ofColor_&lt;PixelType&gt; & operator/=(val)
 
 <!--
-
 _syntax: operator/=(val)_
-
 _name: operator/=_
-
 _returns: ofColor_&lt;PixelType&gt; &_
-
 _returns_description: _
-
 _parameters: float const & val_
-
 _access: _
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3221,39 +3694,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###float & operator[](n)
 
 <!--
-
 _syntax: operator[](n)_
-
 _name: operator[]_
-
 _returns: float &_
-
 _returns_description: _
-
 _parameters: int n_
-
 _access: public_
-
 _version_started: _
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3261,6 +3743,9 @@ _description: _
 
 
 
+
+
+
 Gives you access to the color as an array:
 
 [0] = r
@@ -3294,39 +3779,45 @@ Gives you access to the color as an array:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ### ofColor(_r, _g, _b, _a = 255.0f)
 
 <!--
-
 _syntax: ofColor(_r, _g, _b, _a = 255.0f)_
-
 _name: ofColor_
-
 _returns: _
-
 _returns_description: _
-
 _parameters: float _r, float _g, float _b, float _a=255.0f_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3343,39 +3834,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ### ofColor(&color)
 
 <!--
-
 _syntax: ofColor(&color)_
-
 _name: ofColor_
-
 _returns: _
-
 _returns_description: _
-
 _parameters: ofColor const &color_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3392,39 +3892,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ### ofColor(&color, _a)
 
 <!--
-
 _syntax: ofColor(&color, _a)_
-
 _name: ofColor_
-
 _returns: _
-
 _returns_description: _
-
 _parameters: ofColor const &color, float _a_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3441,39 +3950,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ### ofColor(gray, _a = 255.0f)
 
 <!--
-
 _syntax: ofColor(gray, _a = 255.0f)_
-
 _name: ofColor_
-
 _returns: _
-
 _returns_description: _
-
 _parameters: float gray, float _a=255.0f_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3490,39 +4008,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void set(_r, _g, _b, _a = 255.0f)
 
 <!--
-
 _syntax: set(_r, _g, _b, _a = 255.0f)_
-
 _name: set_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: float _r, float _g, float _b, float _a=255.0f_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3539,39 +4066,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void set(_gray, _a = 255.0f)
 
 <!--
-
 _syntax: set(_gray, _a = 255.0f)_
-
 _name: set_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: float _gray, float _a=255.0f_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3588,39 +4124,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void set(&color)
 
 <!--
-
 _syntax: set(&color)_
-
 _name: set_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: ofColor const &color_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3637,39 +4182,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void setHex(hexColor, alpha = 255.0f)
 
 <!--
-
 _syntax: setHex(hexColor, alpha = 255.0f)_
-
 _name: setHex_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: int hexColor, float alpha=255.0f_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3686,39 +4240,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###ofColor lerp(&target, amount)
 
 <!--
-
 _syntax: lerp(&target, amount)_
-
 _name: lerp_
-
 _returns: ofColor_
-
 _returns_description: _
-
 _parameters: const ofColor &target, float amount_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3735,39 +4298,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###ofColor getLerped(&target, amount)
 
 <!--
-
 _syntax: getLerped(&target, amount)_
-
 _name: getLerped_
-
 _returns: ofColor_
-
 _returns_description: _
-
 _parameters: const ofColor &target, float amount_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3784,39 +4356,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void getHsb(&hue, &saturation, &brightness)
 
 <!--
-
 _syntax: getHsb(&hue, &saturation, &brightness)_
-
 _name: getHsb_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: float &hue, float &saturation, float &brightness_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3833,39 +4414,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###ofColor operator=(&color)
 
 <!--
-
 _syntax: operator=(&color)_
-
 _name: operator=_
-
 _returns: ofColor_
-
 _returns_description: _
-
 _parameters: ofColor const &color_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3882,39 +4472,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###ofColor operator=(&val)
 
 <!--
-
 _syntax: operator=(&val)_
-
 _name: operator=_
-
 _returns: ofColor_
-
 _returns_description: _
-
 _parameters: float const &val_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3931,39 +4530,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###bool operator==(&color)
 
 <!--
-
 _syntax: operator==(&color)_
-
 _name: operator==_
-
 _returns: bool_
-
 _returns_description: _
-
 _parameters: ofColor const &color_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -3980,39 +4588,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###bool operator!=(&color)
 
 <!--
-
 _syntax: operator!=(&color)_
-
 _name: operator!=_
-
 _returns: bool_
-
 _returns_description: _
-
 _parameters: ofColor const &color_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -4029,39 +4646,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###ofColor operator+(&color)
 
 <!--
-
 _syntax: operator+(&color)_
-
 _name: operator+_
-
 _returns: ofColor_
-
 _returns_description: _
-
 _parameters: ofColor const &color_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -4078,39 +4704,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###ofColor operator+(&val)
 
 <!--
-
 _syntax: operator+(&val)_
-
 _name: operator+_
-
 _returns: ofColor_
-
 _returns_description: _
-
 _parameters: float const &val_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -4127,39 +4762,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###ofColor operator+=(&color)
 
 <!--
-
 _syntax: operator+=(&color)_
-
 _name: operator+=_
-
 _returns: ofColor_
-
 _returns_description: _
-
 _parameters: ofColor const &color_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -4176,39 +4820,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###ofColor operator+=(&val)
 
 <!--
-
 _syntax: operator+=(&val)_
-
 _name: operator+=_
-
 _returns: ofColor_
-
 _returns_description: _
-
 _parameters: float const &val_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -4225,39 +4878,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###ofColor operator-(&color)
 
 <!--
-
 _syntax: operator-(&color)_
-
 _name: operator-_
-
 _returns: ofColor_
-
 _returns_description: _
-
 _parameters: ofColor const &color_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -4274,39 +4936,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###ofColor operator-(&val)
 
 <!--
-
 _syntax: operator-(&val)_
-
 _name: operator-_
-
 _returns: ofColor_
-
 _returns_description: _
-
 _parameters: float const &val_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -4323,39 +4994,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###ofColor operator-=(&color)
 
 <!--
-
 _syntax: operator-=(&color)_
-
 _name: operator-=_
-
 _returns: ofColor_
-
 _returns_description: _
-
 _parameters: ofColor const &color_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -4372,39 +5052,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###ofColor operator-=(&val)
 
 <!--
-
 _syntax: operator-=(&val)_
-
 _name: operator-=_
-
 _returns: ofColor_
-
 _returns_description: _
-
 _parameters: float const &val_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -4421,39 +5110,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###ofColor operator*(&color)
 
 <!--
-
 _syntax: operator*(&color)_
-
 _name: operator*_
-
 _returns: ofColor_
-
 _returns_description: _
-
 _parameters: ofColor const &color_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -4470,39 +5168,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###ofColor operator*(&val)
 
 <!--
-
 _syntax: operator*(&val)_
-
 _name: operator*_
-
 _returns: ofColor_
-
 _returns_description: _
-
 _parameters: float const &val_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -4519,39 +5226,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###ofColor operator*=(&color)
 
 <!--
-
 _syntax: operator*=(&color)_
-
 _name: operator*=_
-
 _returns: ofColor_
-
 _returns_description: _
-
 _parameters: ofColor const &color_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -4568,39 +5284,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###ofColor operator*=(&val)
 
 <!--
-
 _syntax: operator*=(&val)_
-
 _name: operator*=_
-
 _returns: ofColor_
-
 _returns_description: _
-
 _parameters: float const &val_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -4617,39 +5342,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###ofColor operator/(&color)
 
 <!--
-
 _syntax: operator/(&color)_
-
 _name: operator/_
-
 _returns: ofColor_
-
 _returns_description: _
-
 _parameters: ofColor const &color_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -4666,39 +5400,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###ofColor operator/(&val)
 
 <!--
-
 _syntax: operator/(&val)_
-
 _name: operator/_
-
 _returns: ofColor_
-
 _returns_description: _
-
 _parameters: float const &val_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -4715,39 +5458,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###ofColor operator/=(&color)
 
 <!--
-
 _syntax: operator/=(&color)_
-
 _name: operator/=_
-
 _returns: ofColor_
-
 _returns_description: _
-
 _parameters: ofColor const &color_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -4764,39 +5516,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###ofColor operator/=(&val)
 
 <!--
-
 _syntax: operator/=(&val)_
-
 _name: operator/=_
-
 _returns: ofColor_
-
 _returns_description: _
-
 _parameters: float const &val_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -4813,39 +5574,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###ofColor fromHsb(hue, saturation, brightness, alpha = 255.f)
 
 <!--
-
 _syntax: fromHsb(hue, saturation, brightness, alpha = 255.f)_
-
 _name: fromHsb_
-
 _returns: ofColor_
-
 _returns_description: _
-
 _parameters: float hue, float saturation, float brightness, float alpha=255.f_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: yes_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -4862,39 +5632,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###ofColor fromHex(hexColor, alpha = 255.f)
 
 <!--
-
 _syntax: fromHex(hexColor, alpha = 255.f)_
-
 _name: fromHex_
-
 _returns: ofColor_
-
 _returns_description: _
-
 _parameters: int hexColor, float alpha=255.f_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: yes_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -4911,6 +5690,31 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ##Variables
 
@@ -4919,30 +5723,21 @@ _description: _
 ###float r
 
 <!--
-
 _name: r_
-
 _type: float_
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _visible: True_
-
 _constant: False_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -4979,33 +5774,48 @@ Variable r contains the amount of red color our color object has. r needs to be 
 
 
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###float g
 
 <!--
-
 _name: g_
-
 _type: float_
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _visible: True_
-
 _constant: False_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -5042,33 +5852,48 @@ Variable g contains the amount of green color our color object has. g needs to b
 
 
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###float b
 
 <!--
-
 _name: b_
-
 _type: float_
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _visible: True_
-
 _constant: False_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -5105,33 +5930,48 @@ Variable b contains the amount of blue color our color object has. b needs to be
 
 
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###float a
 
 <!--
-
 _name: a_
-
 _type: float_
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _visible: True_
-
 _constant: False_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -5168,30 +6008,42 @@ Variable a contains the alpha value of our color object.
 
 
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofColor gray
 
 <!--
-
 _name: gray_
-
 _type: ofColor_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _visible: True_
-
 _constant: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -5208,31 +6060,46 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###ofColor white
 
 <!--
-
 _name: white_
-
 _type: ofColor_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _visible: True_
-
 _constant: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -5249,31 +6116,46 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###ofColor red
 
 <!--
-
 _name: red_
-
 _type: ofColor_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _visible: True_
-
 _constant: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -5290,31 +6172,46 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###ofColor green
 
 <!--
-
 _name: green_
-
 _type: ofColor_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _visible: True_
-
 _constant: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -5331,31 +6228,46 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###ofColor blue
 
 <!--
-
 _name: blue_
-
 _type: ofColor_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _visible: True_
-
 _constant: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -5372,31 +6284,46 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###ofColor cyan
 
 <!--
-
 _name: cyan_
-
 _type: ofColor_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _visible: True_
-
 _constant: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -5413,31 +6340,46 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###ofColor magenta
 
 <!--
-
 _name: magenta_
-
 _type: ofColor_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _visible: True_
-
 _constant: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -5454,31 +6396,46 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###ofColor yellow
 
 <!--
-
 _name: yellow_
-
 _type: ofColor_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _visible: True_
-
 _constant: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -5495,31 +6452,46 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###ofColor black
 
 <!--
-
 _name: black_
-
 _type: ofColor_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _visible: True_
-
 _constant: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -5536,31 +6508,46 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###float v
 
 <!--
-
 _name: v_
-
 _type: float_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _visible: True_
-
 _constant: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -5577,31 +6564,46 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###union ofColor @1
 
 <!--
-
 _name: @1_
-
 _type: union ofColor_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _visible: True_
-
 _constant: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -5618,4 +6620,31 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
