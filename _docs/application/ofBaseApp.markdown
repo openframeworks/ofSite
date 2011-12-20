@@ -10,9 +10,30 @@
 
 
 
+
+
+
+
+
+
+
+
+
 The openframeworks engine is contained in the "app" category. The project works, similar to processing, in that you have a base class which extends a class that already exists. In the case of OF, there is a class called "ofBaseApp" which contains various event driven functions. When you create an OF project, you use a main.cpp which is the boot-strap, that kicks off the application and another class, which inherits the properties of ofBaseApp. Essentially, when you write code in the testApp, you are re-writing already defined functions that exist in OF, such as update, draw, etc. 
 
 In versions pre 0.06 this class was called ofSimpleApp
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -29,38 +50,25 @@ In versions pre 0.06 this class was called ofSimpleApp
 ### ofBaseApp()
 
 <!--
-
 _syntax: ofBaseApp()_
-
 _name: ofBaseApp_
-
 _returns: _
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: False_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -92,38 +100,44 @@ The openframeworks engine is contained in the "app" category. The project works,
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ### ~ofBaseApp()
 
 <!--
-
 _syntax: ~ofBaseApp()_
-
 _name: ~ofBaseApp_
-
 _returns: _
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: False_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -157,42 +171,54 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void setup()
 
 <!--
-
 _syntax: setup()_
-
 _name: setup_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -224,41 +250,50 @@ This function gets called once, just at the start of the app. It would be a good
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void update()
 
 <!--
-
 _syntax: update()_
-
 _name: update_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -309,41 +344,50 @@ $$/code
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void draw()
 
 <!--
-
 _syntax: draw()_
-
 _name: draw_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -387,41 +431,50 @@ $$/code
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void exit()
 
 <!--
-
 _syntax: exit()_
-
 _name: exit_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -453,41 +506,50 @@ Add this function to your testApp to have it called at the moment before the app
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void windowResized(w, h)
 
 <!--
-
 _syntax: windowResized(w, h)_
-
 _name: windowResized_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: int w, int h_
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -521,41 +583,50 @@ This function gets called when ever we resize the application window. You receiv
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void keyPressed(key)
 
 <!--
-
 _syntax: keyPressed(key)_
-
 _name: keyPressed_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: int key_
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -605,41 +676,50 @@ There are more complicated character codes, for keys such as F1-F12, Down, Enter
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void keyReleased(key)
 
 <!--
-
 _syntax: keyReleased(key)_
-
 _name: keyReleased_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: int key_
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -686,41 +766,50 @@ There are more complicated character codes, for keys such as F1-F12, Down, Enter
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void mouseMoved(x, y)
 
 <!--
-
 _syntax: mouseMoved(x, y)_
-
 _name: mouseMoved_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: int x, int y_
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -752,41 +841,50 @@ This function gets when ever the mouse moves. You receive the x and y corrdinate
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void mouseDragged(x, y, button)
 
 <!--
-
 _syntax: mouseDragged(x, y, button)_
-
 _name: mouseDragged_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: int x, int y, int button_
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -818,41 +916,50 @@ This function gets called when the mouse is moving and the button is down. The b
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void mousePressed(x, y, button)
 
 <!--
-
 _syntax: mousePressed(x, y, button)_
-
 _name: mousePressed_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: int x, int y, int button_
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -884,41 +991,50 @@ This function gets called when the mouse is pushed down. The button (left, right
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void mouseReleased()
 
 <!--
-
 _syntax: mouseReleased()_
-
 _name: mouseReleased_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -950,41 +1066,50 @@ This function gets called when the mouse is released.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void mouseReleased(x, y, button)
 
 <!--
-
 _syntax: mouseReleased(x, y, button)_
-
 _name: mouseReleased_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: int x, int y, int button_
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -1016,41 +1141,50 @@ This function gets called when the mouse is released. The button (left, right, c
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void audioReceived(input, bufferSize, nChannels)
 
 <!--
-
 _syntax: audioReceived(input, bufferSize, nChannels)_
-
 _name: audioReceived_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: float * input, int bufferSize, int nChannels_
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -1098,41 +1232,50 @@ $$/code
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void audioRequested(output, bufferSize, nChannels)
 
 <!--
-
 _syntax: audioRequested(output, bufferSize, nChannels)_
-
 _name: audioRequested_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: float * output, int bufferSize, int nChannels_
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -1164,38 +1307,44 @@ If you have setup audio output, via ofSetupAudio, this function will be called w
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void dragEvent(dragInfo)
 
 <!--
-
 _syntax: dragEvent(dragInfo)_
-
 _name: dragEvent_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: ofDragInfo dragInfo_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -1212,39 +1361,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void gotMessage(msg)
 
 <!--
-
 _syntax: gotMessage(msg)_
-
 _name: gotMessage_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: ofMessage msg_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -1261,6 +1419,31 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ##Variables
 
@@ -1269,30 +1452,21 @@ _description: _
 ###int mouseX
 
 <!--
-
 _name: mouseX_
-
 _type: int_
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _visible: True_
-
 _constant: False_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -1322,33 +1496,48 @@ Variable mouseX contains information about the current x coordinate of the mouse
 
 
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###int mouseY
 
 <!--
-
 _name: mouseY_
-
 _type: int_
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _visible: True_
-
 _constant: False_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -1377,4 +1566,28 @@ Variable mouseY contains information about the current y coordinate of the mouse
 
 
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 

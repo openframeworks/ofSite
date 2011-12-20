@@ -6,7 +6,7 @@ RSS feeds for <a href="${bf.util.site_path_helper(bf.config.blog.path,'feed')}">
  and <a
 href="http://${bf.config.blog.disqus.name}.disqus.com/latest.rss">Comments</a>.
 % endif
-<br>
+<br/>
 </p>
 % if bf.config.blog.disqus.enabled:
 <script type="text/javascript">

@@ -4,54 +4,54 @@ download
 =========
 
 <div id="download-latest-header">
-	<h2>0.07</h2>
-	<p><strong>is the most recent release. It has a lot of new features, new interfaces, and probably some new bugs too. 0.07 is not 100% compatible with 0.062 projects. A <a href="http://forum.openframeworks.cc/index.php/topic,7368.0.html">changelog</a> is available on the forum.</strong></p>
+	<h2>007</h2>
+	<p><strong>is the most recent release. It has a lot of new features, new interfaces, and probably some new bugs too. 007 is not 100% compatible with 0062 projects. A <a href="http://forum.openframeworks.cc/index.php/topic,7368.0.html">changelog</a> is available on the forum.</strong></p>
 	<p>To use openFrameworks you will need an IDE, and the setup guide for your platform can walk you through this. Please post any bugs on the <a href="http://github.com/openframeworks/openFrameworks/issues">issues</a> page, and post to the <a href="http://forum.openframeworks.cc">forum</a> if you have any other questions. openFrameworks is distributed under the <a href="../about/license.html">MIT License</a>.</p>
 </div>
 
 <div id="download-latest-platform">
 	<h2>osx</h2>
 	<h3>download</h3>
-	<p><a href="../versions/preRelease_v0.07/of_preRelease_v007_osx.zip">xcode</a></p>
+	<p><a href="../versions/preRelease_v0.07/of_preRelease_v007_osx.zip">xcode</a></p><br/>
 	<h3>setup guide</h3>
-	<p><a href="xcode.html">xcode</a></p>
+	<p><a href="../setup/xcode">xcode</a></p>
 </div>
 
 <div id="download-latest-platform">
 	<h2>linux</h2>
 	<h3>download</h3>
 	<p><a href="../versions/preRelease_v0.07/of_preRelease_v007_linux.tar.gz">code::blocks</a></p>
-	<p><a href="../versions/preRelease_v0.07/of_preRelease_v007_linux64.tar.gz">code::blocks (64 bit)</a></p>
+	<p><a href="../versions/preRelease_v0.07/of_preRelease_v007_linux64.tar.gz">code::blocks (64 bit)</a></p><br/>
 	<h3>setup guide</h3>
-	<p><a href="linux.html">code::blocks</a></p>
+	<p><a href="../setup/linux-codeblocks">code::blocks</a></p>
 </div>
 
 <div id="download-latest-platform">
 	<h2>windows</h2>
 	<h3>download</h3>
 	<p><a href="../versions/preRelease_v0.07/of_preRelease_v007_win_cb.zip">code::blocks</a></p>
-	<p><a href="../versions/preRelease_v0.07/of_preRelease_v007_vs2010.zip">visual studio 2010</a></p>
+	<p><a href="../versions/preRelease_v0.07/of_preRelease_v007_vs2010.zip">visual studio 2010</a></p><br/>
 	<h3>setup guides</h3>
-	<p><a href="wincb.html">code::blocks</a></p>
-	<p><a href="vs2008.html">visual studio 2008</a></p>
+	<p><a href="../setup/codeblocks">code::blocks</a></p>
+	<p><a href="../setup/vs-2008">visual studio 2008</a></p>
 </div>
 
 <div id="download-latest-platform">
 	<h2>ios</h2>
-	<p><em>osx only</em></p>
+	<p><em>osx only</em></p><br/>
 	<h3>download</h3>
-	<p><a href="../versions/preRelease_v0.07/of_preRelease_v007_iphone.zip">ios</a></p>
+	<p><a href="../versions/preRelease_v0.07/of_preRelease_v007_iphone.zip">ios</a></p><br/>
 	<h3>setup guide</h3>
-	<p><a href="ios.html">ios</a></p>
+	<p><a href="../setup/iphone">ios</a></p>
 </div>
 
 <div id="download-latest-platform">
 	<h2>android</h2>
-	<p><em>linux + osx only</em></p>
+	<p><em>linux + osx only</em></p><br/>
 	<h3>download</h3>
-	<p><a href="../versions/preRelease_v0.07/of_preRelease_v007_android.tar.gz">eclipse</a></p>
+	<p><a href="../versions/preRelease_v0.07/of_preRelease_v007_android.tar.gz">eclipse</a></p><br/>
 	<h3>setup guide</h3>
-	<p><a href="android.html">eclipse</a></p>
+	<p><a href="../setup/android-eclipse">eclipse</a></p>
 </div>
 
 <br class="clearboth"/>

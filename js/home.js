@@ -3,7 +3,7 @@
     
 function OnLoad() {
     var feedGithub = new google.feeds.Feed("https://github.com/openframeworks/openFrameworks/commits/develop.atom");
-    feedGithub.setNumEntries(12);
+    feedGithub.setNumEntries(10);
     feedGithub.setResultFormat(google.feeds.Feed.XML_FORMAT);
     // Calling load sends the request off.  It requires a callback function.
     feedGithub.load(feedGithubLoaded);
@@ -24,7 +24,7 @@ function OnLoad() {
     
     $(".tweets").tweet({
       avatar_size: 32,
-      count: 4,
+      count: 5,
       query: "openFrameworks",
       loading_text: "searching twitter...",
       template: "{avatar} {text}"

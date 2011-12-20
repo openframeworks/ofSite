@@ -10,7 +10,28 @@
 
 
 
+
+
+
+
+
+
+
+
+
 ofSerial provides a cross platform system for interfacing with the serial port. You can choose the port and baud rate, and then read and send data. Please note that the port must be set manually in the code, so you should be clear what port your device is on. For example, Arduino users should check the arduino app to see what port their device is on. Alternatively the ofSerial class can attempt to communicate with the first available device it finds.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -27,35 +48,19 @@ ofSerial provides a cross platform system for interfacing with the serial port. 
 ### ofSerial()
 
 <!--
-
 _syntax: ofSerial()_
-
 _name: ofSerial_
-
 _returns: _
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: False_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -89,39 +94,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ### ~ofSerial()
 
 <!--
-
 _syntax: ~ofSerial()_
-
 _name: ~ofSerial_
-
 _returns: _
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: False_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -155,42 +169,54 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void enumerateDevices()
 
 <!--
-
 _syntax: enumerateDevices()_
-
 _name: enumerateDevices_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -240,41 +266,50 @@ $$/code
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void close()
 
 <!--
-
 _syntax: close()_
-
 _name: close_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -306,41 +341,50 @@ Closes the connection to the serial device.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###bool setup()
 
 <!--
-
 _syntax: setup()_
-
 _name: setup_
-
 _returns: bool_
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -383,41 +427,50 @@ $$/code
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###bool setup(portName,baudrate)
 
 <!--
-
 _syntax: setup(portName,baudrate)_
-
 _name: setup_
-
 _returns: bool_
-
 _returns_description: _
-
 _parameters: string portName, int baudrate_
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -466,41 +519,50 @@ $$/code
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###bool setup(deviceNumber,baudrate)
 
 <!--
-
 _syntax: setup(deviceNumber,baudrate)_
-
 _name: setup_
-
 _returns: bool_
-
 _returns_description: _
-
 _parameters: int deviceNumber, int baudrate_
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -540,41 +602,50 @@ $$/code
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###int readBytes(buffer,length)
 
 <!--
-
 _syntax: readBytes(buffer,length)_
-
 _name: readBytes_
-
 _returns: int_
-
 _returns_description: _
-
 _parameters: unsigned char * buffer, int length_
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -651,41 +722,50 @@ $$/code
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###int writeBytes(buffer, length)
 
 <!--
-
 _syntax: writeBytes(buffer, length)_
-
 _name: writeBytes_
-
 _returns: int_
-
 _returns_description: _
-
 _parameters: unsigned char * buffer, int length_
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: False_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -729,41 +809,50 @@ $$/code
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###bool writeByte(singleByte)
 
 <!--
-
 _syntax: writeByte(singleByte)_
-
 _name: writeByte_
-
 _returns: bool_
-
 _returns_description: _
-
 _parameters: unsigned char singleByte_
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -808,41 +897,50 @@ $$/code
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###int readByte()
 
 <!--
-
 _syntax: readByte()_
-
 _name: readByte_
-
 _returns: int_
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -891,41 +989,50 @@ $$/code
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void flush(flushIn, flushOut)
 
 <!--
-
 _syntax: flush(flushIn, flushOut)_
-
 _name: flush_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: bool flushIn, bool flushOut_
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -957,41 +1064,50 @@ Clears data from one or both of the serial buffers. Any data in the cleared buff
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###int available()
 
 <!--
-
 _syntax: available()_
-
 _name: available_
-
 _returns: int_
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -1023,41 +1139,50 @@ Lets you query how many bytes are available.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void setVerbose(bLoudmouth)
 
 <!--
-
 _syntax: setVerbose(bLoudmouth)_
-
 _name: setVerbose_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: bool bLoudmouth_
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: 0.06_
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -1089,38 +1214,44 @@ Enable or disable ofSerial messages and errors being sent to the console.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void listDevices()
 
 <!--
-
 _syntax: listDevices()_
-
 _name: listDevices_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -1137,39 +1268,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###ofSerialDeviceInfo getDeviceList()
 
 <!--
-
 _syntax: getDeviceList()_
-
 _name: getDeviceList_
-
 _returns: ofSerialDeviceInfo_
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -1186,39 +1326,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###int readBytes(*buffer, length)
 
 <!--
-
 _syntax: readBytes(*buffer, length)_
-
 _name: readBytes_
-
 _returns: int_
-
 _returns_description: _
-
 _parameters: unsigned char *buffer, int length_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -1235,39 +1384,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###int writeBytes(*buffer, length)
 
 <!--
-
 _syntax: writeBytes(*buffer, length)_
-
 _name: writeBytes_
-
 _returns: int_
-
 _returns_description: _
-
 _parameters: unsigned char *buffer, int length_
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -1284,39 +1442,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void drain()
 
 <!--
-
 _syntax: drain()_
-
 _name: drain_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: _
-
 _access: public_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -1333,39 +1500,48 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void buildDeviceList()
 
 <!--
-
 _syntax: buildDeviceList()_
-
 _name: buildDeviceList_
-
 _returns: void_
-
 _returns_description: _
-
 _parameters: _
-
 _access: protected_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _constant: False_
-
 _static: no_
-
 _visible: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -1382,6 +1558,31 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ##Variables
 
@@ -1390,30 +1591,21 @@ _description: _
 ###bool bVerbose
 
 <!--
-
 _name: bVerbose_
-
 _type: bool_
-
 _access: public_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _visible: False_
-
 _constant: False_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -1443,33 +1635,48 @@ bVerbose is a boolean varible controlling verbosity on the ofSerial class.
 
 
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###bool bInited
 
 <!--
-
 _name: bInited_
-
 _type: bool_
-
 _access: protected_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _visible: True_
-
 _constant: False_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
+
+
+
 
 
 
@@ -1499,30 +1706,42 @@ h
 
 
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###int fd
 
 <!--
-
 _name: fd_
-
 _type: int_
-
 _access: protected_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _visible: True_
-
 _constant: False_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -1554,31 +1773,46 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###struct termios oldoptions
 
 <!--
-
 _name: oldoptions_
-
 _type: struct termios_
-
 _access: protected_
-
 _version_started: 006_
-
 _version_deprecated: _
-
 _summary: _
-
 _visible: True_
-
 _constant: False_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -1610,31 +1844,46 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###string deviceType
 
 <!--
-
 _name: deviceType_
-
 _type: string_
-
 _access: protected_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _visible: True_
-
 _constant: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -1651,31 +1900,46 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###ofSerialDeviceInfo devices
 
 <!--
-
 _name: devices_
-
 _type: ofSerialDeviceInfo_
-
 _access: protected_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _visible: True_
-
 _constant: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -1692,31 +1956,46 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###bool bHaveEnumeratedDevices
 
 <!--
-
 _name: bHaveEnumeratedDevices_
-
 _type: bool_
-
 _access: protected_
-
 _version_started: 007_
-
 _version_deprecated: _
-
 _summary: _
-
 _visible: True_
-
 _constant: True_
-
 _advanced: False_
-
-
-
 -->
 
 _description: _
@@ -1733,4 +2012,31 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
