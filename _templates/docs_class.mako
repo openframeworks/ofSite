@@ -22,10 +22,12 @@
               <br/><br/>
               <h3>${clazz.name} methods list</h3>
               <ul class="functionslist">
+              <% prevmethod = "" %>
               % for method in clazz.function_list:
-                  % if method.visible and not method.advanced and method.access=='public':
+                  % if prevmethod != method.name and method.visible and not method.advanced and method.access=='public':
                       <li> <a href="#${method.name}">${method.name}</a> </li>
                   % endif
+                  <% prevmethod = method.name %>
               % endfor
               </ul>
               
