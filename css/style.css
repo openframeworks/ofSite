@@ -1126,7 +1126,7 @@ text-decoration:none;
 	overflow-x: hidden;
 	padding: 1em;
 	list-style-type: none;
-	height:60px;
+	/*height:60px;*/
 	border-top: solid 1px #ddd;
 }
 
@@ -1134,9 +1134,9 @@ text-decoration:none;
 		color: #0C717A;
 	}*/
 
-/*.tweet_list .tweet_even {
-	background-color: #F8F8F8;
-}*/
+.tweet_list .tweet_even {
+	background-color: #E7E7E7;
+}
 
 .tweet_list .tweet_avatar {
 	padding-right: .5em; float: left;
@@ -1153,7 +1153,7 @@ text-decoration:none;
 
 .tweet_list a:hover{
     color: #fff;
-    background-color:#ee3987
+    background-color:#ee3987;
     text-decoration: 	none;
 }
 
@@ -1173,7 +1173,7 @@ div#github, #forum {
 }
 
 div#github li:nth-child(2n), #forum  li:nth-child(2n) {
-	background-color: #F8F8F8;
+	background-color: #E7E7E7;
 }
 
 div#github .github_avatar {
@@ -1193,7 +1193,7 @@ div#github .github_avatar img {
 
 #github a:hover, #forum a:hover{
     color: #fff;
-    background-color:#ee3987
+    background-color:#ee3987;
     text-decoration: 	none;
 }
 
