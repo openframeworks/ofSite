@@ -33,7 +33,8 @@ download
 	<p><a href="../versions/preRelease_v0.07/of_preRelease_v007_vs2010.zip">visual studio 2010</a></p><br/>
 	<h3>setup guides</h3>
 	<p><a href="../setup/codeblocks">code::blocks</a></p>
-	<p><a href="../setup/vs-2008">visual studio 2008</a></p>
+	<!--<p><a href="../setup/vs-2008">visual studio 2008</a></p>-->
+	<p><a href="../setup/vs-2010">visual studio 2010</a></p>
 </div>
 
 <div id="download-latest-platform">
