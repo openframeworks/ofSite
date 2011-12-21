@@ -14,20 +14,36 @@
 
 openFrameworks is an [open source](license.html) [C++](https://en.wikipedia.org/wiki/C%2B%2B) toolkit designed to assist the creative process by providing a simple and intuitive framework for experimentation. The toolkit is designed to work as a general purpose glue, and wraps together several commonly used libraries, including:
 
-* [OpenGL](http://www.opengl.org/), [GLEW](http://glew.sourceforge.net/) and [GLUT](http://www.opengl.org/resources/libraries/glut/) or [cairo](http://cairographics.org/) for graphics
-* [rtAudio](http://www.music.mcgill.ca/~gary/rtaudio/), [PortAudio](http://www.portaudio.com/) or [FMOD](http://www.fmod.org/) for audio input and output
-* [Kiss FFT](http://kissfft.sourceforge.net/) for FFT analysis
+* [OpenGL](http://www.opengl.org/), [GLEW](http://glew.sourceforge.net/), [GLUT](http://www.opengl.org/resources/libraries/glut/), [libtess2](https://code.google.com/p/libtess2/) and [cairo](http://cairographics.org/) for graphics
+* [rtAudio](http://www.music.mcgill.ca/~gary/rtaudio/), [PortAudio](http://www.portaudio.com/) or [FMOD](http://www.fmod.org/)  and [Kiss FFT](http://kissfft.sourceforge.net/) for audio input, output and analysis
 * [FreeType](http://freetype.sourceforge.net/index2.html) for fonts
-* [FreeImage](http://freeimage.sourceforge.net/) for image input and output
-* [Quicktime](http://developer.apple.com/quicktime/) and [videoInput](https://github.com/ofTheo/videoInput) for video playing and camera input
+* [FreeImage](http://freeimage.sourceforge.net/) for image saving and loading
+* [Quicktime](http://developer.apple.com/quicktime/) and [videoInput](https://github.com/ofTheo/videoInput) for video playback and grabbing
 * [Poco](http://pocoproject.org/) for a variety of utilities
-* [libtess2](https://code.google.com/p/libtess2/) for 2d tessellation
+*  for 2d tessellation
 
 The code is written to be massively cross-compatible. Right now we support five operating systems (Windows, OSX, Linux, iOS, Android) and four IDEs (XCode, Code::Blocks, and Visual Studio and Eclipse). The API is designed to be minimal and easy to grasp.
 
 Simply put, openFrameworks is a tool that makes it much easier to make things with code. We find it super useful, and we hope you do too.
 
 openFrameworks is actively developed by [Zach Lieberman](http://thesystemis.com/), [Theodore Watson](http://muonics.net/), and [Arturo Castro](http://arturocastro.net/), with help from the [OF community](../community/). openFrameworks is indebted to two significant precursors: the [Processing development environment](http://processing.org/), created by [Casey Reas](http://reas.com/), [Ben Fry](http://benfry.com/) and the Processing community; and the ACU Toolkit, a privately distributed C++ library developed by Ben Fry and others in the [MIT Media Lab's Aesthetics and Computation Group](http://acg.media.mit.edu/).
+
+----------------
+
+design philosophy
+--------
+
+openFrameworks development is **distributed**. It thrives on the contributions of [many people](https://github.com/openframeworks/openFrameworks/contributors), who engage in [frequent discussion](http://forum.openframeworks.cc/), and collaborate on [addons](http://ofxaddons.com/) and [projects](../gallery). We encourage people to make openFrameworks their own, and contribute to the ecosystem.
+
+openFrameworks is **consistent** and **intuitive**: it should operate on the principle of least surprise, so that what you learn about one part of openFrameworks can be applied to other parts of it.
+
+The openFrameworks core is meant to be more **usable** than readable. Earlier versions of openFrameworks were used for teaching C++ and OpenGL, but as openFrameworks has evolved it has sacrificed some readability for usability. When you read a header file, it will still give you an idea of how a class works. But the code is not the primary documentation.
+
+openFrameworks is a **cross-platform** toolkit. openFrameworks supports as many development environments and operating systems as possible. When you download openFrameworks, you can pick your platform and development environment of choice, and have projects and examples ready to learn from and play with. Difficult to port code is kept out of the core, and kept in addons instead.
+
+openFrameworks is **powerful**: it allows you to leverage advanced libraries like OpenCV, use hardware like your graphics card efficiently, and connect peripherals like cameras and other devices.
+
+openFrameworks is **extensible**. When you find something missing from openFrameworks, it's easy to create addons that extend it. The core addons for openFrameworks generally wrap libraries rather than solving problems in novel ways. When openFrameworks wraps libraries, the libraries are left exposed for further hacking.
 
 ----------------
 
