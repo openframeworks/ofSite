@@ -1,8 +1,16 @@
-<%inherit file="/_templates/markdown.mako" />
+<%inherit file="/_templates/slideshow.mako" />
 
-about
-=======
-
+<div id="myslides">
+<img src="0.jpg" />
+<img src="1.jpg" />
+<img src="2.jpg" />
+<img src="3.jpg" />
+<img src="4.jpg" />
+<img src="5.jpg" />
+<img src="6.jpg" />
+<img src="7.jpg" />
+</div>
+<br/>
 
 openFrameworks is an [open source](license.html) [C++](https://en.wikipedia.org/wiki/C%2B%2B) toolkit designed to assist the creative process by providing a simple and intuitive framework for experimentation. The toolkit is designed to work as a general purpose glue, and wraps together several commonly used libraries, including:
 

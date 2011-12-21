@@ -1,7 +1,4 @@
-<%inherit file="/_templates/markdown.mako" />
-
-download
-=========
+<%inherit file="/_templates/slideshow.mako" />
 
 <div id="download-latest-header">
 	<h2>007</h2>
@@ -60,6 +57,17 @@ download
 We release openFrameworks as an uncompiled library. This means that when you download and unzip openFrameworks, you will see the following folders: `addons/`, `apps/`, `libs/`, and a few more. These folders contain openFrameworks completely, so if you want to keep multiple versions of openFrameworks on your computer you should just create multiple folders. For example, one `openFrameworks0062/` folder and one `openFrameworks007/` folder, each with their own `apps/` folder. Even when new versions of openFrameworks are released, your old apps will still compile with old versions of openFrameworks.
 
 `apps/examples/` is a great place to start. Inside `apps/examples/` you'll find a variety of examples that show what is possible with openFrameworks. They demonstrate font loading, graphics, audio input and output, sound file playback and FFT analysis, video grabbing, movie playing, image loading and saving, event handling and serial communication.  For more examples, see `apps/addonsExamples/`.
+
+<br />
+
+*Some new examples with the 007 release: box, assimp loader, shader and floating point images:*
+
+<div id="myslides">
+<img src="0.png" />
+<img src="1.jpg" />
+<img src="2.png" />
+<img src="3.jpg" />
+</div>
 
 --------------------------------
 

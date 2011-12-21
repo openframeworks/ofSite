@@ -5,6 +5,7 @@ body {
 	background-color: #CCC;
 	font-family: Arial, sans-serif;
 	font-size: 0.80em;
+	line-height: 1.5em;
 	height: 100%;
 	margin: 0px;
 	padding: 0px;
@@ -422,6 +423,7 @@ h1 {
 h2 {
 	color: #333333;
 	font-size: 2.3em;
+	line-height: 1.1em;
 	font-weight: normal;
 	margin: 0 1.2em 0 0;
 	padding: 0px 0px 2px 0px;
@@ -775,7 +777,7 @@ div.galleryItem p {
 }
 #download-latest-platform, #docs-ebook {
 	background-color: #eee;
-	height: 150px;
+	height: 175px;
 	margin-bottom: 1em;
 	margin-right: 1em;
 	padding: 20px;
