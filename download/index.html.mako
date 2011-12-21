@@ -1,4 +1,4 @@
-<%inherit file="/_templates/markdown.mako" />
+<%inherit file="/_templates/slideshow.mako" />
 
 download
 =========
@@ -63,13 +63,12 @@ We release openFrameworks as an uncompiled library. This means that when you dow
 
 *Some new examples with the 007 release: box, assimp loader, shader and floating point images:*
 
-![example 0](0.png)
-
-![example 1](1.jpg)
-
-![example 2](2.png)
-
-![example 3](3.jpg)
+<div id="myslides">
+<img src="0.png" />
+<img src="1.jpg" />
+<img src="2.png" />
+<img src="3.jpg" />
+</div>
 
 --------------------------------
 
