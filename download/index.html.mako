@@ -61,6 +61,16 @@ We release openFrameworks as an uncompiled library. This means that when you dow
 
 `apps/examples/` is a great place to start. Inside `apps/examples/` you'll find a variety of examples that show what is possible with openFrameworks. They demonstrate font loading, graphics, audio input and output, sound file playback and FFT analysis, video grabbing, movie playing, image loading and saving, event handling and serial communication.  For more examples, see `apps/addonsExamples/`.
 
+*Some new examples with the 007 release: box, assimp loader, shader and floating point images:*
+
+![example 0](0.png)
+
+![example 1](1.jpg)
+
+![example 2](2.png)
+
+![example 3](3.jpg)
+
 --------------------------------
 
 other releases  
