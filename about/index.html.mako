@@ -34,9 +34,9 @@ design philosophy
 
 openFrameworks development is **distributed**. It thrives on the contributions of [many people](https://github.com/openframeworks/openFrameworks/contributors), who engage in [frequent discussion](http://forum.openframeworks.cc/), and collaborate on [addons](http://ofxaddons.com/) and [projects](../gallery). We encourage people to make openFrameworks their own, and contribute to the ecosystem.
 
-openFrameworks is **consistent** and **intuitive**: it should operate on the principle of least surprise, so that what you learn about one part of openFrameworks can be applied to other parts of it.
+openFrameworks is **consistent** and **intuitive**: it should operate on the principle of least surprise, so that what you learn about one part of openFrameworks can be applied to other parts of it. Beginners can use openFrameworks to learn about common programming patterns, and advanced users will be able to apply their experience from other languages and toolkits.
 
-The openFrameworks core is meant to be more **usable** than readable. Earlier versions of openFrameworks were used for teaching C++ and OpenGL, but as openFrameworks has evolved it has sacrificed some readability for usability. When you read a header file, it will still give you an idea of how a class works. But the code is not the primary documentation.
+openFrameworks tries to balance **usability** and **simplicity**. The earliest versions of openFrameworks used the core as a tool for teaching C++ and OpenGL, but over time the examples have become the best way to learn while the core takes advantage of more advanced features. 
 
 openFrameworks is a **cross-platform** toolkit. openFrameworks supports as many development environments and operating systems as possible. When you download openFrameworks, you can pick your platform and development environment of choice, and have projects and examples ready to learn from and play with. Difficult to port code is kept out of the core, and kept in addons instead.
 
