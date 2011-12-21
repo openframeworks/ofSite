@@ -58,6 +58,9 @@ class Block(object):
         elif mode=='methods' and element.find('__variables__')!=-1:
             self.mode='variables'
             self.classes[-1]['variables']=[]
+        elif mode=='clazz' and element.find('__functions__')!=-1:
+            self.mode='methods'
+            self.classes[-1]['methods']=[]
         elif mode=='variables' and element is not None and element != "" and element.find('__')==-1 and element.find('##')==-1:
             self.classes[-1]['variables'].append(element)
         elif (mode=='methods' or mode=='variables') and element.find('##')!=-1:
@@ -72,10 +75,12 @@ def run():
     classes = markdown_file.getclass_list()
     for clazz_name in classes:
         clazz = markdown_file.getclass(clazz_name)
+        functions_file = markdown_file.getfunctionsfile(clazz_name)
         #print clazz.name
         #print clazz.function_list
         env = {
-            "clazz": clazz
+            "clazz": clazz,
+            "functions": functions_file
         }
         bf.writer.materialize_template("docs_class.mako", ('docs',clazz.module+"/"+clazz.name+".html"), env )
     
