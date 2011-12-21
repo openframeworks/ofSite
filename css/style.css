@@ -692,10 +692,8 @@ a.docs_class_link, a:link.docs_class_link, a:visited.docs_class_link, a:hover.do
 pre {
 	background-color: #fdfde3;
 	font-family: Courier;
-	font-size: 13px;
-	font-size: 90%;
+	font-size: 95%;
 	line-height: 120%;
-	line-height: 9px;
 	margin: 0px;
 	margin-left: 10px;
 	margin-top: 15px;
@@ -786,7 +784,7 @@ div.galleryItem p {
 }
 #download-latest-platform, #docs-ebook {
 	background-color: #eee;
-	height: 175px;
+	height: 150px;
 	margin-bottom: 1em;
 	margin-right: 1em;
 	padding: 20px;
