@@ -19,6 +19,9 @@
 
 
 
+
+
+
 The ofVideoPlayer class loads in a movie file via quicktime in windows and mac  or gstreamer in linux, and offers various controls to play the movie, control the properties of the movie, and to access the pixels of a given frame.
 
 Example:
@@ -26,6 +29,10 @@ Example:
 $$code(lang=c++)
 ofVideoPlayer myPlayer;
 $$/code
+
+
+
+
 
 
 
@@ -78,53 +85,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void start()
@@ -147,53 +107,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Starts the movie, checking for whether the movie has been both loaded and if it has been started. If it has been loaded but not started the movie is initialized and then played, otherwise it is just played.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -221,53 +135,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -303,53 +170,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###bool loadMovie(name)
@@ -372,61 +192,13 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Load a movie file (fileName) into that object. It will look for the movie file inside of the data/ folder. The movie does not automatically play once loaded.
 
 Example:
-
 $$code(lang=c++)
 ofVideoPlayer myPlayer;
 myPlayer.loadMovie('myMovie.mov');
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -461,53 +233,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void closeMovie()
@@ -530,63 +255,15 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Closes the movie file and de-allocates resources.
 
 
 Example:
-
 $$code(lang=c++)
 ofVideoPlayer myPlayer;
 myPlayer.loadMovie("myMovie.mov"); //Loads video resources
 myPlayer.closeMovie(); //Unloads video resources
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -621,53 +298,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void close()
@@ -690,53 +320,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Calls the closeMovie() function, which closes the movie file and de-allocates resources.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -771,53 +355,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void update()
@@ -840,53 +377,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Calls the idleMovie() function. This function idles the movie player, so that the movie can play. If you don't call it, when the movie is playing then you may encounter problems, especially on windows machines. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -921,53 +412,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void idleMovie()
@@ -990,53 +434,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 This function idles the movie player, so that the movie can play. If you don't call it, when the movie is playing then you may encouter problems, especially on winodws machines.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1065,53 +463,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Plays the movie. If the movie has been stopped or paused it will the continue playback at the point it was stopped. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1140,53 +492,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Stops the movie. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1215,62 +521,13 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 For example, if the pixels are new, you could then process them.
-
 $$code(lang=c++)
 
 if (myMovie.isFrameNew()){
 	;	// do something
 }
-
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1299,13 +556,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 For example, to get the red green and blue of the pixel (100,20):
-
 $$code(lang=c++)
 unsigned char * pixels = myMovie.getPixels();
 int widthOfLine = myMovie.width * w;  // how long is a line of pixels
@@ -1313,44 +564,6 @@ int red 	= pixels[(20 * widthOfLine) + 100 * 3    ];
 int green 	= pixels[(20 * widthOfLine) + 100 * 3 + 1];
 int blue 	= pixels[(20 * widthOfLine) + 100 * 3 + 2];
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1385,53 +598,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###float getSpeed()
@@ -1454,53 +620,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 note: 1 = normal speed, 0 = paused, -1 = backwards. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1528,53 +648,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1610,53 +683,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void setPosition(pct)
@@ -1679,53 +705,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Sets the position of the playhead to a given percentage through the movie. Can be used to scrub through a movie. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1754,53 +734,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Sets the volume of a movie - default = 0, silent 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1829,62 +763,13 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Sets the looping state of the movie. Deafult behavior is to loop. There are three options:
-
 $$code(lang=c++)
 
 OF_LOOP_NONE - don't loop, the movie will stop when it gets to the last frame (or first frame, if playing backwards)
 OF_LOOP_NORMAL - loop normally (the last frame loops to the first frame)
 OF_LOOP_PALINDROME - loop back and forth
-
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1913,53 +798,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Sets the speed of the movie that is playing. 1 = normal, 2 = 2x as fast, 0 = stopped, -1 = backwards, etc; 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1988,53 +827,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Sets the current frame of the video. Should be used only if you know the bounds of the movie ( using totalNumberFrames() ) or store a location using getCurrentFrame();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2063,61 +856,12 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Set the usage of texture inside this object. Typically, you will want to draw the movie on screen, and so it will be necessary to use a texture, but there may be cases where it helps to not use a texture in order to save memory or for better performance. To disable the internal use of the texture, you can load the movie like this:
-
 $$code(lang=c++)
 
 myMovie.setUseTexture(false);
 myMovie.loadMovie("blah.mov");
-
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2146,53 +890,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Returns a reference to the videoPlayer's texture.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2221,53 +919,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Draws the texture of the movie player class at the position (x,y) with the given width (w) and height (h). 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2296,53 +948,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Draws the texture of the movie player class as the position (x,y) with the internal width and height of the loaded movie. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2370,53 +976,6 @@ _advanced: True_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2452,53 +1011,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void resetAnchor()
@@ -2520,53 +1032,6 @@ _advanced: True_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2596,53 +1061,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Sets the paused state of the movie. Use "true" to pause and false to unpause. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2670,53 +1089,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2752,53 +1124,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void firstFrame()
@@ -2821,53 +1146,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Moves the playhead to the first frame of the movie. This can also be accomplished using setCurrentFrame(0).
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2896,53 +1175,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Advances the playhead by one frame.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2971,53 +1204,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Reverses the playhead by one frame.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3045,53 +1232,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3127,53 +1267,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void setPlayer(newPlayer)
@@ -3195,36 +1288,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3260,36 +1323,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void setPixelFormat(pixelFormat)
@@ -3311,36 +1344,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3376,36 +1379,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void setLoopState(state)
@@ -3427,36 +1400,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3492,36 +1435,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void draw(&p)
@@ -3543,36 +1456,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3608,36 +1491,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void setAnchorPoint(x, y)
@@ -3659,36 +1512,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3724,36 +1547,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###bool isLoaded()
@@ -3775,36 +1568,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3840,36 +1603,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ##Variables
@@ -3891,6 +1624,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -3922,6 +1656,14 @@ Variable containing the width of the video.
 
 
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 
 
@@ -4000,6 +1742,15 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 
@@ -4039,6 +1790,7 @@ _description: _
 
 
 
+
 Variable containing the height of the video.
 
 
@@ -4064,6 +1816,14 @@ Variable containing the height of the video.
 
 
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 
 
@@ -4142,6 +1902,15 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 
@@ -4181,6 +1950,7 @@ _description: _
 
 
 
+
 Contains the playback speed of the video. 1.0 is the normal speed. 2.0 is double the normal speed, -1 is backwards etc. 
 
 
@@ -4206,6 +1976,14 @@ Contains the playback speed of the video. 1.0 is the normal speed. 2.0 is double
 
 
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 
 
@@ -4284,6 +2062,15 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 
@@ -4323,6 +2110,7 @@ _description: _
 
 
 
+
 A boolean that describes if the movie loaded properly. 
 
 
@@ -4348,6 +2136,14 @@ A boolean that describes if the movie loaded properly.
 
 
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 
 
@@ -4426,6 +2222,15 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 
@@ -4465,6 +2270,7 @@ _description: _
 
 
 
+
 Variable containing the number of frames of the video.
 
 
@@ -4490,6 +2296,14 @@ Variable containing the number of frames of the video.
 
 
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 
 
@@ -4568,6 +2382,15 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 
@@ -4607,6 +2430,7 @@ _description: _
 
 
 
+
 Array of pixels that represents the current frame of live video. The data is stored as RGB in an array which is the size: width*height*3.
 
 
@@ -4632,6 +2456,14 @@ Array of pixels that represents the current frame of live video. The data is sto
 
 
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 
 
@@ -4710,6 +2542,15 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 
@@ -4749,6 +2590,7 @@ _description: _
 
 
 
+
 A boolean controlling if pixels have change.
 
 
@@ -4774,6 +2616,14 @@ A boolean controlling if pixels have change.
 
 
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 
 
@@ -4852,6 +2702,15 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 
@@ -4891,6 +2750,7 @@ _description: _
 
 
 
+
 ofTexture used by the video player class. 
 
 
@@ -4916,6 +2776,14 @@ ofTexture used by the video player class.
 
 
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 
 
@@ -4994,6 +2862,15 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 
@@ -5033,6 +2910,7 @@ _description: _
 
 
 
+
 bUseTexture enables and disables the use of ofTexture in our video player.
 
 
@@ -5058,6 +2936,14 @@ bUseTexture enables and disables the use of ofTexture in our video player.
 
 
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 
 
@@ -5136,6 +3022,15 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 
@@ -5175,6 +3070,7 @@ _description: _
 
 
 
+
 Boolean varible containing true if the texture has been already allocated inside our video player.
 
 
@@ -5200,6 +3096,14 @@ Boolean varible containing true if the texture has been already allocated inside
 
 
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 
 
@@ -5278,6 +3182,15 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 
@@ -5342,6 +3255,15 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 
 
@@ -5420,6 +3342,15 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 
@@ -5491,6 +3422,15 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 
@@ -5540,6 +3480,15 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 
 
@@ -5603,6 +3552,15 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 
@@ -5652,6 +3610,15 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 
 

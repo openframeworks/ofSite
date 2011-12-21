@@ -19,8 +19,15 @@
 
 
 
+
+
+
 The ofVideoGrabber class wraps quicktime's sequence grabbing component to provide low level access to live cameras. On windows it now uses the directshow based videoInput library which offers mainy performance advantages over quicktime and does not require quicktime or WinVDig to be installed. A #define in ofConstants.h allows you to choose whether to use quicktime or directshow (default) for windows.
 In linux it uses by default unicap, although you can change to v4l through a #define in ofConstants in case some v4l device doesn't work properly with unicap.
+
+
+
+
 
 
 
@@ -72,53 +79,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ### ~ofVideoGrabber()
@@ -140,53 +100,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -216,53 +129,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Prints to the console a list of available capture devices with the device ID of each device. The device ID can then be used with setDeviceID() to specify a specific device to capture from.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -297,53 +164,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void grabFrame()
@@ -366,53 +186,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 This function should be called regularly (for example, once per update) if you'd like to get new data from the sequence grabber. It will idle the video grabbing component so that you get new data.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -441,53 +215,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Closes the sequence grabber and de-allocates any allocated resources. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -516,13 +244,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Initializes either the default capture device or the capture device specified by setDeviceID. Attempts to setup capture at the width and height specified. If the capture dimensions are not available it will setup capture for the next closest dimensions available. It is good to check what the actual size is before you start processing the pixels.
-
 $$code(lang=c++)
 
 myGrabber.setVerbose(true);
@@ -532,52 +254,10 @@ int grabW = myGrabber.width;
 int grabH = myGrabber.height;
 printf("asked for 320 by 240 - actual size is %i by %i 
 ", grabW, grabH);
-
 $$/code
 
 
 bTexture variable tells ofVideoGrabber that it should setup a texture so you can display the video on the screen.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -606,53 +286,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Loads the video settings on screen. If your opengl application is full screen, this window might appear underneath the main window the first time you call this.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -681,53 +315,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Returns the pointer to the array of pixels that represents the current frame of live video. the data is stored as RGB, and in an array which is the size: width*height*3.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -762,53 +350,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void setVerbose(bTalkToMe)
@@ -831,63 +372,14 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Sets the verbosity - this can be useful for debugging the video grabber interface. you can set the verbosity and then try initGrabber();
 
 From 0.06 this method has no effect. Use ofSetLogLevel(OF_LOG_VERBOSE) to enable verbose messages.
-
 $$code(lang=c++)
 
 myGrabber.setVerbose(true);
 myGrabber.initGrabber(320,240);
-
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -916,53 +408,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Choose to capture from a specific capture device specified by _deviceID. Use listDevices() to see a list of available capture devices and their device IDs.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -991,61 +437,12 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Set the usage of texture inside this object. Typically, you will want to draw the movie grabber on screen, and so it will be necessary to use a texture, but there may be cases where it helps to not use a texture in order to save memory or for better performance. To disable the internal use of the texture, you can initialize the sequence grabber like this:
-
 $$code(lang=c++)
 
 myGrabber.setUseTexture(false);
 myGrabber.initGrabber(320,240);
-
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1074,53 +471,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Draws the internal texture of the movie grabber class at the position (x,y) with the given width (w) and height (h). 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1149,53 +500,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Draws the internal texture of the movie grabber class at the position (x,y) with the internal width and height of the movie grabber.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1224,53 +529,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Calls grabframe function.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1298,53 +557,6 @@ _advanced: True_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1380,53 +592,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void resetAnchor()
@@ -1448,53 +613,6 @@ _advanced: True_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1530,53 +648,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###float getWidth()
@@ -1598,53 +669,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1680,36 +704,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###ofPtr getGrabber()
@@ -1731,36 +725,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1796,36 +760,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void setPixelFormat(pixelFormat)
@@ -1847,36 +781,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1912,36 +816,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###ofPixelsRef getPixelsRef()
@@ -1963,36 +837,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2028,36 +872,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void draw(&p)
@@ -2079,36 +893,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2144,36 +928,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void setAnchorPoint(x, y)
@@ -2195,36 +949,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2260,36 +984,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ##Variables
@@ -2311,6 +1005,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -2342,6 +1037,14 @@ Variable containing the height of the video grabber.
 
 
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 
 
@@ -2420,6 +1123,15 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 
@@ -2459,6 +1171,7 @@ _description: _
 
 
 
+
 Variable containing the width of the video grabber.
 
 
@@ -2484,6 +1197,14 @@ Variable containing the width of the video grabber.
 
 
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 
 
@@ -2562,6 +1283,15 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 
@@ -2626,6 +1356,15 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 
 
@@ -2704,6 +1443,15 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 
@@ -2768,6 +1516,15 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 
 
@@ -2846,6 +1603,15 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 
@@ -2910,6 +1676,15 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 
 
@@ -2988,6 +1763,15 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 
@@ -3059,6 +1843,15 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 
@@ -3108,6 +1901,15 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 
 
@@ -3171,6 +1973,15 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 
@@ -3220,6 +2031,15 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 
 
@@ -3283,6 +2103,15 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 
@@ -3332,6 +2161,15 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 
 

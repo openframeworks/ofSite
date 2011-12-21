@@ -22,7 +22,14 @@
 
 
 
+
+
+
 The ofImage class wraps a library called "freeImage", and is a useful object for loading, saving and drawing images in OF projects.
+
+
+
+
 
 
 
@@ -75,60 +82,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 The constructor. Called when you create the ofImage object. Internal values are initialized here. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -163,60 +117,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ### ~ofImage()
@@ -239,60 +139,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 The destructor. Calls clear() which cleans up memory and texture data. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -327,60 +174,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void allocate(w,h,type)
@@ -403,60 +196,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 This function allocates an image of width (w) and height (h). The type can be of three types: OF_IMAGE_GRAYSCALE, OF_IMAGE_COLOR, OF_IMAGE_COLOR_ALPHA. You don't need to call this before loading an image, but for when you want to allocate space ahead of when you are going to use the image. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -491,60 +231,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void clear()
@@ -567,60 +253,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Frees pixel data from memory, resets internal variables to default values and clears internal texture if it exists. This function is also called by the destructor. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -655,60 +288,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void ofImage(mom)
@@ -731,14 +310,7 @@ _advanced: True_
 
 _description: _
 
-
-
-
-
-
-
 The copy constructor. Pass in another image and it copies it. 
-
 
 $$code(lang=c++)
 image1.loadImage("face.jpg");
@@ -747,54 +319,6 @@ $$/code
 
 
 image1 and image2 are now identical. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -830,60 +354,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###ofImage & operator=(mom)
@@ -906,14 +376,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Makes the current ofImage a copy of another ofImage. Same as clone(). 
-
 
 $$code(lang=c++)
 
@@ -923,53 +386,6 @@ $$/code
 
 
 image1 and image2 are now identical. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1004,60 +420,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void clone(mom)
@@ -1080,14 +442,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Makes the current ofImage a copy of another ofImage. 
-
 
 $$code(lang=c++)
 
@@ -1097,53 +452,6 @@ $$/code
 
 
 image1 and image2 are now identical. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1178,60 +486,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void setUseTexture(bUse)
@@ -1254,14 +508,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 This turns on or off the allocation and use of a texture. any time you change the image (loading, resizing, converting the type), ofImage will uplaod data to an opengl texture. It may not be necessary, though, and it could be that you need to save memory on the graphics card, or that you don't need to draw this image on the screen. You can call this even before you load an image in to OF:
-
 
 $$code(lang=c++)
 myImage.setUseTexture(false);
@@ -1270,53 +517,6 @@ $$/code
 
 
 Since in the majority of cases, ofImages will be loaded in and drawn onscreen, the default is set to use a texture.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1351,60 +551,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###ofTexture getTextureReference()
@@ -1427,60 +573,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Returns a reference to the internal ofTexture.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1509,74 +602,18 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Loads in an image given by fileName. It will try it's best to guess the filetype based on the name. The program will look for the file relative to the data/ folder. 
 
 For example, to load an image "icon.gif" that is in the data folder you can call:
-
 $$code(lang=c++)
 myImage.load("icon.gif");
 $$/code
 
 
 you can also supply folder paths for subfolders within the data folder:
-
 $$code(lang=c++)
 myImage.load("images/icon.gif");
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1605,16 +642,9 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Saves an image to a file named fileName. It will guess, based on the name, what filetype to save as. This file will be relative to the data folder. 
 
 You can use this, combined with grabSceen, in order to save an image:
-
 $$code(lang=c++)
 myImage.grabScreen(0,0,500,500);
 myImage.saveImage("partOfTheScreen.png");
@@ -1622,60 +652,11 @@ $$/code
 
 
 You can also use dynamically generated names:
-
 $$code(lang=c++)
 myImage.grabScreen(0,0,500,500);
 myImage.saveImage("partOfTheScreen-"+ofToString(snapCounter)+".png");
 snapCounter++;
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1704,60 +685,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 This function will give you access to a continuous block of pixels. you can grab the data and do what you like with it. If you have a grayscale image, you will have (width*height) number of pixels. Color images will have (width*height*3) number of pixels (interlaced R,G,B), and coloralpha images will have (width*height*4) number of pixels (interlaced R,G,B,A).
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1786,12 +714,6 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Copies in the pixel data from  the 'pixels' array. Specify the corresponding width and height of the image you are passing in with 'w' and 'h'. The image type can be OF_IMAGE_GRAYSCALE, OF_IMAGE_COLOR, or OF_IMAGE_COLORALPHA. 
 
 Note: that your array has to be at least as big as [ width * height * bytes per pixel ]. 
@@ -1799,53 +721,6 @@ Note: that your array has to be at least as big as [ width * height * bytes per 
 If you have a grayscale image, you will have (width*height) number of pixels. Color images will have (width*height*3) number of pixels (interlaced R,G,B), and coloralpha images will have (width*height*4) number of pixels (interlaced R,G,B,A).
 
 Note: You do not need to call allocate() before calling setFromPixels() as setFromPixels() re-allocates itself if needed. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1874,68 +749,13 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Converts the image into a different type. 
 
 For example, you can load in a color image, and convert it to grayscale:
-
 $$code(lang=c++)
 myImage.loadImage("somethingColor.jpg");
 myImage.setImageType(OF_IMAGE_GRAYSCALE); 	// now I am grayscale;
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1964,60 +784,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Resizes the image to a new size (w, h); Can be used to scale up or down an image.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2046,61 +813,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Grabs pixels from the opengl window specified by the region (x, y, w, h) and turns them into an image. It resizes or allocates the ofImage if it's necessary.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2130,61 +843,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Updates the image from its internal pixels. Call this if you have changed the values of the pixels using getPixels().
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2215,18 +874,11 @@ _advanced: True_
 
 _description: _
 
-
-
-
-
-
-
 Changes the drawing position specified by draw() from the normal top-left corner of the image to a position specified by xPct and yPct in relation to the dimensions of the image. This can be useful for aligning and centering images as well as rotating an image around its center. 
 
 Note: range of xPct and yPct is 0.0 to 1.0. For xPct, 1.0 represents the width of the image. For yPct, 1.0 represents the height of the image. These values are not capped. 
 
 For example to draw an image so that its center is at 100, 100:
-
 $$code(lang=c++)
 myImage.setAnchorPercent(0.5, 0.5); 
 myImage.draw(100, 100);
@@ -2234,7 +886,6 @@ $$/code
 
 
 To rotate an image around its center at 100, 100:
-
 $$code(lang=c++)
 ofPushMatrix();
   ofTranslate(100, 100, 0);
@@ -2246,59 +897,10 @@ $$/code
 
 
 To align the right side of an image with the right edge of the window:
-
 $$code(lang=c++)
 myImage.setAnchorPercent(1.0, 0.0);
 myImage.draw(ofGetWidth(), 0);
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2327,18 +929,11 @@ _advanced: True_
 
 _description: _
 
-
-
-
-
-
-
 Changes the drawing position specified by draw() from the normal top-left corner of the image to a position specified by x and y, measured in pixels. This can be useful for aligning and centering images as well as rotating an image around its center. 
 
 Note: see also setAnchorPercent() if you want to specify the anchor as a percentage of the image size. 
 
 For example to draw an image so that its center is at 100, 100:
-
 $$code(lang=c++)
 myImage.setAnchorPoint(myImage.getWidth()/2, myImage.getHeight()/2); 
 myImage.draw(100, 100);
@@ -2346,7 +941,6 @@ $$/code
 
 
 To rotate an image around its center at 100, 100:
-
 $$code(lang=c++)
 ofPushMatrix();
   ofTranslate(100, 100, 0);
@@ -2358,59 +952,10 @@ $$/code
 
 
 To align the right side of an image with the right edge of the window:
-
 $$code(lang=c++)
 myImage.setAnchorPercent(myImage.getWidth(), 0.0);
 myImage.draw(ofGetWidth(), 0);
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2439,60 +984,7 @@ _advanced: True_
 
 _description: _
 
-
-
-
-
-
-
 Resets the image's anchor to its default position at the top left corner. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2521,62 +1013,9 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Draws the image (via the internal texture) from point (x,y) with a given width (w) and height (h).
 
 Note: x,y typically reefers to the top left corner of the image.  You can change where on the image the x,y point refers to by using setAnchorPoint() or setAnchorPercent(). 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2605,62 +1044,9 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Draws the image (via the internal texture) from point (x,y) with the image's own width and height.
 
 Note: x,y typically reefers to the top left corner of the image.  You can change where on the image the x,y point refers to by using setAnchorPoint() or setAnchorPercent(). 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2689,60 +1075,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Returns the width of the image.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2771,60 +1104,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Returns the height of the image.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2852,36 +1132,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2917,36 +1167,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###ofImage operator=(&mom)
@@ -2968,36 +1188,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3033,36 +1223,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###bool isUsingTexture()
@@ -3084,36 +1244,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3149,36 +1279,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void unbind()
@@ -3200,36 +1300,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3265,36 +1335,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void saveImage(fileName, compressionLevel = OF_IMAGE_QUALITY_BEST)
@@ -3316,36 +1356,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3381,36 +1391,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void setCompression(compression)
@@ -3432,36 +1412,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3497,36 +1447,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###ofColor getColor(x, y)
@@ -3548,36 +1468,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3613,36 +1503,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void setFromPixels(*pixels, w, h, type, bOrderIsRGB = true)
@@ -3664,36 +1524,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3729,36 +1559,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void crop(x, y, w, h)
@@ -3780,36 +1580,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3845,36 +1615,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void rotate90(rotation)
@@ -3896,36 +1636,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3961,36 +1671,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void setAnchorPoint(x, y)
@@ -4012,36 +1692,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -4077,36 +1727,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void draw(&p, w, h)
@@ -4128,36 +1748,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -4193,36 +1783,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void draw(&p)
@@ -4244,36 +1804,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -4309,36 +1839,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###bool bAllocated()
@@ -4360,36 +1860,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -4425,36 +1895,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void changeTypeOfPixels(&pix, type)
@@ -4476,36 +1916,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -4541,36 +1951,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ##Variables
@@ -4592,6 +1972,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -4630,6 +2011,14 @@ width variable contains the width of our ofImage.
 
 
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 
 
@@ -4715,6 +2104,15 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 
@@ -4748,6 +2146,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -4811,6 +2210,14 @@ height variable contains the height of our ofImage.
 
 <!----------------------------------------------------------------------------->
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###int type
 
 <!--
@@ -4826,6 +2233,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -4864,6 +2272,14 @@ type variable contains information about the kind of image we are using. Possibl
 
 
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 
 
@@ -4949,6 +2365,15 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 
@@ -4989,6 +2414,7 @@ _description: _
 
 
 
+
 bpp contain the number of bits we need to use for every pixel. It will be 8 for a grayscale image (OF_IMAGE_GRAYSCALE), 24 for a color image (OF_IMAGE_COLOR) and 32 for a color image with alpha channel (OF_IMAGE_COLOR_ALPHA).
 
 
@@ -5020,6 +2446,14 @@ bpp contain the number of bits we need to use for every pixel. It will be 8 for 
 
 
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 
 
@@ -5105,6 +2539,15 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 
@@ -5154,6 +2597,15 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 
 

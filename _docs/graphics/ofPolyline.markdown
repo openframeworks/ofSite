@@ -18,6 +18,9 @@
 
 
 
+
+
+
 ofPolyLine allows you to combine multiple ofPath instance into a single vector data object that can be drawn to the screen, manipulated point by point, and combined with other ofPolyline instances. 
 
 
@@ -66,6 +69,10 @@ If you use the line or curveTo or bezierTo functions, you move the drawing point
 
 
 
+
+
+
+
 ##Methods
 
 
@@ -90,36 +97,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
-
 Creates an ofPolyline.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -148,17 +126,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
-
-
 Creates an ofPolyline from a vector of ofVec2f or ofPoint objects.
-
-
 $$code(lang=c++)
 vector<ofPoint> pts;
 	float j = 0;
@@ -168,24 +136,7 @@ vector<ofPoint> pts;
 	}
 	ofPolyline cp(pts);
 $$/code
-
 There is an easier way to draw circles though, using the arc() method.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -214,36 +165,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
 Removes all the points from the ofPolyline.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -272,36 +194,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
-
-
 Adds a point using an ofPoint at the end of the ofPolyline.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -330,36 +223,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Adds a point using floats instead of an ofPoint at the end of the ofPolyline.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -388,52 +252,23 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Adds multiple points at the end of the ofPolyline using a vector of ofPoint objects, which can be declared like so:
-
 $$code(lang=c++)
 vector<ofPoint> verts;
-
 // make a pentagon
 float size = 80.f;
 float X1 = 0.125*sqrt(10 + 2*sqrt(5)) * size;
 float X2 = 0.125*sqrt(10 - 2*sqrt(5)) * size;
 float Y1 = 0.125*(sqrt(5) - 1) * size;
 float Y2 = 0.125*(sqrt(5) + 1) * size;
-
 verts.push_back(ofPoint(0, -0.5 * size));
 verts.push_back(ofPoint(-X1, -Y1));
 verts.push_back(ofPoint(-X2, Y2));
 verts.push_back(ofPoint(X2, Y2));
 verts.push_back(ofPoint(X1, -Y1));
-
 ofPolyline p;
 p.addVertexes(verts);
-
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -462,55 +297,23 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
 Adds multiple points at the end of the ofPolyline using a pointer to an array of ofPoint objects.
-
-
 $$code(lang=c++)
 ofPoint* verts = new ofPoint[5];
-
 // make a pentagon
 float size = 80.f;
 float X1 = 0.125*sqrt(10 + 2*sqrt(5)) * size;
 float X2 = 0.125*sqrt(10 - 2*sqrt(5)) * size;
 float Y1 = 0.125*(sqrt(5) - 1) * size;
 float Y2 = 0.125*(sqrt(5) + 1) * size;
-
 verts[0] = ofPoint(0, -0.5 * size);
 verts[1] = ofPoint(-X1, -Y1);
 verts[2] = ofPoint(-X2, Y2);
 verts[3] = ofPoint(X2, Y2);
 verts[4] = ofPoint(X1, -Y1);
-
 ofPolyline p;
 p.addVertexes(verts, 5);
-
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -539,36 +342,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Add a line from the last point added, or from 0,0 if no point is set, to the point indicated by the ofPoint passesd in.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -597,36 +371,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Add a line from the last point added, or from 0,0 if no point is set, to the point indicated by the floats x,y,z passesd in.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -655,43 +400,15 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
-
-
 Draw an arc around the ofPoint p with the width of radiusX and the height of radiusY. The angleBegin and angleEnd indicate how far around you want the arc to extend. For instance, to draw a circle:
-
 $$code(lang=c++)
 ofPoint p(0, 0);
 polyline.arc(p,100,100,0,360,40); // circle with a diameter of 100
 $$/code
-
 $$code(lang=c++)
 ofPoint p(100, 0);
 polyline.arc(p,100,100,0,180,40); // semi-circle with a diameter of 100
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -720,44 +437,13 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Draw an arc around the point x,y with the width of radiusX and the height of radiusY. The angleBegin and angleEnd indicate how far around you want the arc to extend. For instance, to draw a circle:
-
 $$code(lang=c++)
 polyline.arc(0,0,100,100,0,360,40); // circle with a diameter of 100
 $$/code
-
 $$code(lang=c++)
 polyline.arc(0,0,100,100,0,180,40); // semi-circle with a diameter of 100
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -786,46 +472,15 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Draw an arc around the point x,y,z with the width of radiusX and the height of radiusY. The angleBegin and angleEnd indicate how far around you want the arc to extend. For instance, to draw a circle:
-
 $$code(lang=c++)
 // at middle and -100 back
 polyline.arc(ofGetWidth()/2,ofGetHeight()/2,100,100,100,0,360,40); // circle with a diameter of 100
 $$/code
-
 $$code(lang=c++)
 // at middle and -100 back
 polyline.arc(ofGetWidth()/2,ofGetHeight()/2,100,100,100,0,180,40); // semi-circle with a diameter of 100
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -854,14 +509,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Draws a curve to an ofPoint object passed in:
-
 $$code(lang=c++)
 float angle = 0;
 while (angle < TWO_PI ) {
@@ -870,27 +518,6 @@ while (angle < TWO_PI ) {
 	angle += TWO_PI / 30;
 }
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -919,12 +546,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
 Draws a curve to the x,y,z points passed in with the optional resolution.
-
 $$code(lang=c++)
 float angle = 0;
 while (angle < TWO_PI ) {
@@ -933,29 +555,6 @@ while (angle < TWO_PI ) {
 	angle += TWO_PI / 30;
 }
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -984,42 +583,14 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Creates a cubic bezier line from the current drawing point with the 2 control points indicated by ofPoint cp1 and cp2, that ends at ofPoint to. For instance, the following:
-
-
 $$code(lang=c++)
 line.addVertex(ofPoint(200, 400));
 line.bezierTo(100, 100, 800, 100, 700, 400);
 $$/code
-
 Creates this:
-
 ![polyline bezier](/bezier.png)
-
-
 The control points are shown in yellow.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1048,36 +619,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
-
 Creates a cubic bezier line from the current drawing point with the 2 control points indicated by the coordinates cx1, cy1 and cx2, cy2, that ends at the coordinates x, y.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1106,13 +648,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Creates a cubic bezier line in 3D space from the current drawing point with the 2 control points indicated by the coordinates cx1, cy1, cz1 and cx2, cy2, cz2, that ends at the coordinates x, y, z.
-
 $$code(lang=c++)
 float cx = ofGetWidth()/2;
 float cy = 200;
@@ -1128,26 +664,7 @@ for (float i = 0.0; i < TWO_PI; i+=step) {
 					   cx + (400*cos(i)), cy+400, 400 * sin(i));
 	}
 }
-
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1176,36 +693,8 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Creates a quadratic bezier line in 3D space from the current drawing point with the beginning indicated by the coordinates cx1, cy1, cz1, the control point at cx2, cy2, cz2, and that ends at the coordinates x, y, z.
-
-
-
 ![polyline curves](/curves.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1234,37 +723,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Creates a quadratic bezier line in 2D space from the current drawing point with the beginning indicated by the point p1, the control point at p2, and that ends at the point p3.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1293,36 +752,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Creates a quadratic bezier line in 3D space from the current drawing point with the beginning indicated by the coordinates cx1, cy1, the control point at cx2, cy2, and that ends at the coordinates x, y.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1351,36 +781,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 This returns a smoothed version of the ofPolyline.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1409,38 +810,13 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
-
 This resamples the line based on the spacing passed in. The larger the spacing, the more points will be eliminated.
-
 $$code(lang=c++)
 line.draw();
 ofTranslate(400, 0);
 line.getResampledBySpacing(100).draw();
 $$/code
-
-
 ![polyline resample](/resample.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1469,37 +845,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
-
 This resamples the line based on the spacing passed in. The lower the count passed in, the more points will be eliminated. This doesn't add new points to the line though.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1528,36 +874,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Returns the bounding box of the shape, taking into account all the points to determine the extents of the polyline.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1586,36 +903,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
-
 This returns the point on the line closest to the target. You can also optionally pass a pointer to/address of an unsigned int to get the index of the closest vertex.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1644,36 +932,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
-
 Tests whether the x,y coordinates are within a closed ofPolyline.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1702,36 +961,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
-
-
-
 Tests whether the ofPoint is within a closed ofPolyline.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1760,36 +990,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Simplifies the polyline, removing un-necessary vertices. The tolerance determines how dis-similar points need to be to stay in the line. Higher tolerance means more points removed, lower tolerance means less points removed.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1818,36 +1019,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
 The number of points in the ofPolyline.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1876,13 +1048,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 The [] operator allows you to access the points of the ofPolyline just like you would in an array, so to make the points of a line follow the mouse movement, you could do:
-
 $$code(lang=c++)
 line[0].set(mouseX, mouseY);
 int i = 1;
@@ -1894,26 +1060,6 @@ while ( i<bounds.size()) {
 	i++;
 }
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1942,36 +1088,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Resize the number of points in the ofPolyline to the value passed in.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2000,36 +1117,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
-
-
 Closes the ofPolyline, meaning that all the vertices will be linked and can be "walked".
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2058,36 +1146,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Whether the shape is closed or not. Certain operations, like getSmoothed() can only be performed on closed shapes.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2116,36 +1175,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
-
 Closes the ofPolyline, meaning that all the vertices will be linked and can be "walked".
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2174,36 +1204,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
-
-
-
 Returns whether the vertices within the line have changed.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2232,36 +1233,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
-
-
 Returns the vector of vertices that the line contains, vector<ofPoint> &.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2290,36 +1262,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
-
 Returns the size of the perimeter of the polyline, good for determining length of the line, rather than just the bounding box shape.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2348,36 +1291,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
 Gets the precise area bounded by the line.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2406,36 +1320,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
-
-
 Get the center of the area bounded by the line.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2464,36 +1349,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
-
 Draw the line using the current renderer.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2522,36 +1378,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
-
 Test whether the x,y point is within anothe polyline, passed in as ofPolyline&
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2580,36 +1407,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
-
-
-
 Test whether the ofPoint is within anothe polyline, passed in as ofPolyline&
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2637,36 +1435,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2711,6 +1479,15 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 
 
@@ -2774,6 +1551,15 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 
@@ -2823,6 +1609,15 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 
 
@@ -2886,6 +1681,15 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 
@@ -2935,6 +1739,15 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 
 

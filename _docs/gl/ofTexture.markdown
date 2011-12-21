@@ -22,10 +22,17 @@
 
 
 
+
+
+
 oftexture is a wrapper for opengl's texture support. Specifically, it allows to use non power of 2 textures in opengl, and to upload and draw graphical data.
 
 
 oftexture is a wrapper for opengl's texture support. Specifically, it allows to use non power of 2 textures in opengl, and to upload and draw graphical data.
+
+
+
+
 
 
 
@@ -81,61 +88,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ### ~ofTexture()
@@ -157,61 +109,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -241,62 +138,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Copy constructor
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -325,15 +167,8 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Makes the current ofTexture a copy of another ofTexture.
 e.g:
-
 $$code(lang=c++)
 
 
@@ -342,67 +177,16 @@ ofTexture text1,text2;
 //we modify here text1 texture
 
 text2 = text1;
-
 $$/code
 
 
 
 text2 and text1 are now identical.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Let's you do 
-
 $$code(lang=c++)
 tex2 = tex1;
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -431,63 +215,9 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 This is the call to allocate opengl texture. The width (w) and height (h) do not necessarily need to be powers of 2, but they do need to be large enough to contain the data you will upload to the texture.  The internal data type describes how opengl will store this texture internally. For example, if you want a grayscale texture, you can use "GL_LUMINANCE". You can uplaod what ever type of data you want (using loadData()) but internally, opengl will store the information as grayscale. Other types include: GL_RGB, GL_RGBA. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 You need to allocate the texture before drawing it or loading data into it.
 uses the currently set OF texture type - default ARB texture
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -516,62 +246,8 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 See previous allocate for knowing the behaviour of this function. The parameter bUseARBEExtension allow the user to enable the ARBE extension for this texture.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 You need to allocate the texture before drawing it or loading data into it, lets you overide the default OF texture type
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -600,62 +276,8 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 clears / frees the texture memory, if something was already allocated. useful if you need to control the memory on the graphics card.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Clears all the data from the texture
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -684,14 +306,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Loads into the texture the array of unsigned chars (data), with a given width (w) and height (h). You also pass in the format that the data is stored in (some options: GL_LUMINANCE, GL_RGB, GL_RGBA). For example, to upload a 200*100 pixel RGB array into an already allocated texture:
-
 $$code(lang=c++)
 
 unsigned char pixels[200*100];
@@ -699,56 +314,7 @@ for (int i = 0; i < 200*100; i++){
 	pixels[i] = (int)(255 * ofRandomuf());
 }
 myTexture.loadData(pixels, 200, 100, GL_RGB);
-
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -777,62 +343,8 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Grabs a region of the screen and loads it into the texture. Specifiy the position (x,y) you wish to grab from, with the width (w) and height (h) of the region. Make sure that you have allocated your texture (using allocate()) to be large enough to hold the region of the screen you wish to load.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Load data from the current screen into this texture. Grabs a region of the screen and loads it into the texture. Specifiy the position (x,y) you wish to grab from, with the width (w) and height (h) of the region. Make sure that you have allocated your texture (using allocate()) to be large enough to hold the region of the screen you wish to load.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -861,63 +373,7 @@ _advanced: True_
 
 _description: _
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 The anchor is the point the image is drawn around. This can be useful if you want to rotate an image around a particular point, allowing you to set the anchor as a percentage of the image width/height ( 0.0-1.0 range )
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -946,60 +402,7 @@ _advanced: True_
 
 _description: _
 
-
-
-
-
-
-
 Sets our texture anchor point and enables the use of it.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1034,61 +437,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void draw(x, y, w, h)
@@ -1111,62 +459,8 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 draws the texture at a given point (x,y), with a given width (w) and height (h). 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Draws the texture at the x, y and w, h.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1195,62 +489,8 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Draws the texture at a given point (x,y), using the textures true width and height.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Draws the texture at the point passed in.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1279,62 +519,7 @@ _advanced: True_
 
 _description: _
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 This is for the advanced user who wants to draw textures in their own way. Each set of vertices that you draw after calling bind() will be textured using this texture.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1363,62 +548,7 @@ _advanced: True_
 
 _description: _
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 This for the advanced user who wants to draw textures in their own way. This stops vertices from being textured using this texture.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1447,62 +577,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Get whether the texture has been allocated.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1530,60 +605,6 @@ _advanced: True_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1619,60 +640,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###float getWidth()
@@ -1694,60 +661,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1777,45 +690,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 You need to allocate the texture before drawing it or loading data into it.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1844,59 +719,13 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Loads raw data from an array. Make sure to se the pixel type in the glFormat correctly.
-
 Loads into the texture the array of unsigned chars (data), with a given width (w) and height (h). You also pass in the format that the data is stored in (some options: GL_LUMINANCE, GL_RGB, GL_RGBA). For example, to upload a 200*100 pixel RGB array into an already allocated texture:
-
-
 unsigned char pixels[200*100];
-
 for (int i = 0; i < 200*100; i++){
-
 	pixels[i] = (int)(255 * ofRandomuf());
-
 }
-
 myTexture.loadData(pixels, 200, 100, GL_RGB);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1925,45 +754,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Loads raw data from an array. Make sure to se the pixel type  in the glFormat correctly.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1992,45 +783,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Loads raw data from an array. Make sure to se the pixel type  in the glFormat correctly.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2059,45 +812,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Loads raw data from an ofPixels object.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2126,45 +841,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Loads raw data from an ofPixels object.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2193,45 +870,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Loads raw data from an ofPixels object.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2260,45 +899,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 set the anchor point in pixels
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2327,45 +928,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Draws the texture into a rectangle.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2394,45 +957,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Draws the texture at the point rpresent by ofPoint
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2461,45 +986,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Draws the texture at the x, y, z in 3D space with the width and height at w,h.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2528,45 +1015,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Draws the texture at the point passed in.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2595,45 +1044,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Draws the texture at the point passed in in 3D space.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2662,45 +1073,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Draws the texture at 4 poitns passed in as if you created 4 glVertices.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2729,45 +1102,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Reads the data from the texture to an ofPixels object.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2796,45 +1131,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Reads the data from the texture to an ofShortPixels object.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2863,45 +1160,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Reads the data from the texture to an ofFloatPixels object.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2930,45 +1189,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 these are helpers to allow you to get points for the texture ala "glTexCoordf" but are texture type independent. use them for immediate or non immediate mode
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3003,44 +1224,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void setTextureWrap(wrapModeHorizontal, wrapModeVertical)
@@ -3063,45 +1246,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Sets how the texture wraps around the edges of the vertices that the texture is being drawn to.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3130,45 +1275,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Set how the texture is scaled up and down, when it's being drawn larger or smaller than it's actual size.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3203,44 +1310,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###bool isAllocated()
@@ -3263,52 +1332,13 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Get whether the texture has been allocated.
-
 ofTextureData getTextureData() ###
-
 // reference to the actual textureData inside the smart pointer
 // for backwards compatibility
 ofTextureData texData ###
-
 float getHeight() ###
 float getWidth() ###
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3336,36 +1366,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3401,36 +1401,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void allocate(&textureData)
@@ -3452,36 +1422,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3517,36 +1457,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void loadData(*data, w, h, glFormat)
@@ -3568,36 +1478,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3633,36 +1513,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void loadData(&pix)
@@ -3684,36 +1534,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3749,36 +1569,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void loadData(&pix)
@@ -3800,36 +1590,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3865,36 +1625,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void draw(&p, w, h)
@@ -3916,36 +1646,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3981,36 +1681,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void readToPixels(&pixels)
@@ -4032,36 +1702,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -4097,36 +1737,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void readToPixels(&pixels)
@@ -4148,36 +1758,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -4213,36 +1793,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ##Variables
@@ -4264,6 +1814,7 @@ _advanced: True_
 -->
 
 _description: _
+
 
 
 
@@ -4302,6 +1853,14 @@ texData is a variable type ofTextureData. ofTextureData is a structure containin
 
 
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 
 
@@ -4387,6 +1946,15 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 
@@ -4458,6 +2026,15 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 
 

@@ -22,6 +22,9 @@
 
 
 
+
+
+
 This class contains variables defining a color. We can create a color object containing information about a certain color. 
 For example:
 
@@ -47,6 +50,10 @@ The saturation determines how much of the hue versus white is present and bright
 ![SB](../types/hsb-cone.jpg)
 
 ofColor is templated, which means that it has several different ways it can be created. These are probably best to leave as they are because there's already a few kinds type-deffed for you. You can make an ofFloatColor if you want to work with floating point numbers, ofShortColor if you want to work with ints, or the default ofColor, which uses unsigned char values.
+
+
+
+
 
 
 
@@ -102,60 +109,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ### ~ofColor()
@@ -177,60 +130,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -260,46 +159,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 This creates a color using RGB
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -328,51 +188,11 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 This copies a color:
-
 $$code(lang=c++)
 ofColor mom(255, 0, 0);
 ofColor c(mom);
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -401,49 +221,10 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 $$code(lang=c++)
 ofColor mom(255, 0, 0);
 ofColor c(mom, 122); // now c is 50% alpha red
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -472,48 +253,9 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 $$code(lang=c++)
 ofColor c(0.5, 122); // now c is 50% alpha gray, ooh, dismal
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -542,49 +284,10 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 $$code(lang=c++)
 ofColor mom(255, 0, 0);
 ofColor c(mom, 122); // now c is 50% alpha red
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -613,46 +316,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Allows you create a color from HSB settings. Important to note is that h is between 0 and 360, while s and b are between 0 and 1. The f
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -681,51 +345,11 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 This allows you to create a color from a hexadecimal value like 0xffffff (white) or oxff000088 (red with 1/2 alpha). You get an ofColor instance back from the method so you can use it like:
-
 $$code(lang=c++)
 ofColor yellow = ofColor::fromHex(0xffff00);
 ofColor halfYellow = ofColor::fromHex(0xffff00, 122);
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -754,50 +378,10 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Set a color using RGB.
-
 $$code(lang=c++)
 ofColor c(255, 0, 0); // red
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -826,50 +410,10 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Grayscale, for the emo among us.
-
 $$code(lang=c++)
 ofColor c(0.5, 122); // now c is 50% alpha gray
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -897,46 +441,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -972,43 +476,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###int getHex()
@@ -1031,46 +498,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Gets the value of the color as RGB hex, so for instance, 0xffff00, which would be yellow. Usually when we look at these colors in print they're hex, so don't be surprised if they don't look familiar when you print them as decimal.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1099,46 +527,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 This clamps the values of your color in case they're too high or low for their types, in case you go negative or too use values that are too high, like anything >255.0.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1167,46 +556,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Flips your color. You probably can guess what this looks like.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1235,14 +585,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 The following
-
 $$code(lang=c++)
 	ofColor c(122, 122, 0);
 	ofSetColor(c);
@@ -1251,45 +594,8 @@ $$code(lang=c++)
 	ofSetColor(c);
 	ofCircle(300, 100, 100);
 $$/code
-
 will create this:
-
 ![ofNorm](../types/ofNormalize.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1318,52 +624,12 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 This awesome method allows you set a color based on a another color and the amount of that color that you want it to be set to, so for instance, if you had red and wanted halfway between red and blue, you could do this:
-
 $$code(lang=c++)
 ofColor r = ofColor::red;
 ofColor b = ofColor::blue;
 b.lerp(r, 0.5); // now purple!
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1392,46 +658,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Returns the clamped version of the color.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1460,46 +687,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Returns the inverted version of the color.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1528,46 +716,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Returns the normalized version of the color.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1596,46 +745,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Returns the lerped version of the color so you can make a new color from it, which is fun.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1664,46 +774,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Gets the hue of the color, between 0 and 360
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1732,46 +803,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Gets the saturation of the color, between 0 and 1, that is, how much hue there is. No saturation and full brightness = white.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1800,46 +832,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Gets the brightness of the color, that is, how black it is. No brightness = black.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1868,46 +861,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 creates average of the components
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1942,44 +896,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void setHue(hue)
@@ -2002,46 +918,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Sets the hue. Note the color wheel at the top. Hue values are from 0 to 360.0.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2070,46 +947,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Sets the saturation, note the color, em, diamond at the top. Saturation values are 0 to 1.0
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2138,46 +976,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Sets the brightness, note the color gem at the top. Saturation values are 0 to 1.0
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2206,46 +1005,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Sets the HSB all at once, with alpha included.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2274,46 +1034,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Sets the HSB all at once, no need for alpha.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2342,50 +1063,10 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Operator overloading for a color, so you can do:
-
 $$code(lang=c++)
 ofColor newRed = ofColor::red;
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2414,50 +1095,10 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Operator overloading for a color, so you can do:
-
 $$code(lang=c++)
 ofColor newRed = ofColor::red;
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2485,44 +1126,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2558,44 +1161,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###bool operator!=(color)
@@ -2617,44 +1182,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2690,44 +1217,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###ofColor_&lt;PixelType&gt; operator+(val)
@@ -2749,44 +1238,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2822,44 +1273,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###ofColor_&lt;PixelType&gt; & operator+=(val)
@@ -2881,44 +1294,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2954,44 +1329,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###ofColor_&lt;PixelType&gt; operator-(val)
@@ -3013,44 +1350,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3086,44 +1385,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###ofColor_&lt;PixelType&gt; & operator-=(val)
@@ -3145,44 +1406,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3218,44 +1441,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###ofColor_&lt;PixelType&gt; operator*(val)
@@ -3277,44 +1462,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3350,44 +1497,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###ofColor_&lt;PixelType&gt; & operator*=(val)
@@ -3409,44 +1518,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3482,44 +1553,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###ofColor_&lt;PixelType&gt; operator/(val)
@@ -3541,44 +1574,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3614,44 +1609,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###ofColor_&lt;PixelType&gt; & operator/=(val)
@@ -3673,44 +1630,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3740,60 +1659,16 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Gives you access to the color as an array:
-
 [0] = r
 [1] = g
 [2] = b
 [3] = a
-
-
 Gives you access to the color as an array:
-
 [0] = r
 [1] = g
 [2] = b
 [3] = a
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3821,36 +1696,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3886,36 +1731,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ### ofColor(&color, _a)
@@ -3937,36 +1752,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -4002,36 +1787,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void set(_r, _g, _b, _a = 255.0f)
@@ -4053,36 +1808,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -4118,36 +1843,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void set(&color)
@@ -4169,36 +1864,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -4234,36 +1899,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###ofColor lerp(&target, amount)
@@ -4285,36 +1920,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -4350,36 +1955,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void getHsb(&hue, &saturation, &brightness)
@@ -4401,36 +1976,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -4466,36 +2011,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###ofColor operator=(&val)
@@ -4517,36 +2032,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -4582,36 +2067,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###bool operator!=(&color)
@@ -4633,36 +2088,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -4698,36 +2123,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###ofColor operator+(&val)
@@ -4749,36 +2144,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -4814,36 +2179,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###ofColor operator+=(&val)
@@ -4865,36 +2200,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -4930,36 +2235,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###ofColor operator-(&val)
@@ -4981,36 +2256,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -5046,36 +2291,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###ofColor operator-=(&val)
@@ -5097,36 +2312,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -5162,36 +2347,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###ofColor operator*(&val)
@@ -5213,36 +2368,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -5278,36 +2403,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###ofColor operator*=(&val)
@@ -5329,36 +2424,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -5394,36 +2459,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###ofColor operator/(&val)
@@ -5445,36 +2480,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -5510,36 +2515,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###ofColor operator/=(&val)
@@ -5561,36 +2536,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -5626,36 +2571,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###ofColor fromHex(hexColor, alpha = 255.f)
@@ -5684,36 +2599,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ##Variables
@@ -5735,6 +2620,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -5798,6 +2684,14 @@ Variable r contains the amount of red color our color object has. r needs to be 
 
 <!----------------------------------------------------------------------------->
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###float g
 
 <!--
@@ -5813,6 +2707,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -5876,6 +2771,14 @@ Variable g contains the amount of green color our color object has. g needs to b
 
 <!----------------------------------------------------------------------------->
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###float b
 
 <!--
@@ -5891,6 +2794,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -5954,6 +2858,14 @@ Variable b contains the amount of blue color our color object has. b needs to be
 
 <!----------------------------------------------------------------------------->
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###float a
 
 <!--
@@ -5969,6 +2881,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -6032,6 +2945,14 @@ Variable a contains the alpha value of our color object.
 
 <!----------------------------------------------------------------------------->
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofColor gray
 
 <!--
@@ -6063,6 +2984,15 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 
 
@@ -6126,6 +3056,15 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 
@@ -6175,6 +3114,15 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 
 
@@ -6238,6 +3186,15 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 
@@ -6287,6 +3244,15 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 
 
@@ -6350,6 +3316,15 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 
@@ -6399,6 +3374,15 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 
 
@@ -6462,6 +3446,15 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 
@@ -6511,6 +3504,15 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 
 
@@ -6574,6 +3576,15 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 
@@ -6623,6 +3634,15 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 
 

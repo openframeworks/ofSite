@@ -19,11 +19,18 @@
 
 
 
+
+
+
 ofCamera provides a camera onto a 3D scene. Some of the different properties of the camera are shown in the picture below:
 
 ![FOV](fov.png)
 
 The far and near clip planes are the boundaries of what's visible in the camera. If you need more information on these, check http://www.falloutsoftware.com/tutorials/gl/gl0.htm
+
+
+
+
 
 
 
@@ -73,45 +80,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Here you can set the field of view of the camera.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -140,45 +109,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 This sets the near clip plane.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -207,45 +138,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Sets the far clip plane
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -274,45 +167,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Orthographic, or parallel, projections consist of those that involve no perspective correction. There is no adjustment for distance from the camera made in these projections, meaning objects on the screen will appear the same size no matter how close or far away they are. Calling enableOrtho() sets the ofCamera to orthographic mode.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -341,45 +196,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Calling disableOrtho() turns off the orthographic mode.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -408,45 +225,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Get whether the camera is in orthographic mode.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -475,45 +254,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 This allows you to get the image plane distance from any viewport passed in. By default this is the current viewport, but it can be whatever you find useful.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -542,45 +283,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 set the matrices that the camera will use.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -609,45 +312,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 set the matrices
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -676,45 +341,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 This caches the projection matrix for the ofCamera.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -743,45 +370,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Access to the projection matrix.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -810,45 +399,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Access to the projection matrix.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -877,45 +428,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Access to the projection ModelViewProjectionMatrix.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -944,45 +457,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 When you have a position in world coordinates you can get what it would be in world coordinates, transforming it using the ofCamera.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1011,45 +486,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 When you have a position in screen coordinates you can get what it would be in world coordinates, transforming it using the ofCamera.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1078,45 +515,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 When you have a position in world coordinates you can get what it would be in camera coordinates, transforming it using the ofCamera.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1145,44 +544,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 When you have a position in camera coordinates you can get what it would be in world coordinates, transforming it using the ofCamera.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1210,36 +572,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1275,36 +607,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###float getImagePlaneDistance(viewport = ofGetCurrentViewport())
@@ -1326,36 +628,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1391,36 +663,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###ofMatrix4x4 getProjectionMatrix(viewport = ofGetCurrentViewport())
@@ -1442,36 +684,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1507,36 +719,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###ofVec3f worldToScreen(WorldXYZ, viewport = ofGetCurrentViewport())
@@ -1558,36 +740,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1623,36 +775,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###ofVec3f worldToCamera(WorldXYZ, viewport = ofGetCurrentViewport())
@@ -1674,36 +796,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1739,36 +831,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void calcClipPlanes(viewport)
@@ -1790,36 +852,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1864,6 +896,15 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 
 
@@ -1927,6 +968,15 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 
@@ -1976,6 +1026,15 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 
 
@@ -2039,6 +1098,15 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 
@@ -2088,6 +1156,15 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 
 
@@ -2151,6 +1228,15 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 
@@ -2200,6 +1286,15 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 
 
@@ -2263,6 +1358,15 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 
@@ -2312,6 +1416,15 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 
 

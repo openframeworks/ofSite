@@ -19,6 +19,9 @@
 
 
 
+
+
+
 First things first: a Vertex Buffer Object (VBO) provides a way for you to create vertices, normals, colors, and texture coordinates on the graphics card for non-immediate mode rendering. This means that you can store it all on the graphics card and then access, update, or draw it, whenever you need. This is pretty convenient when you have something that you want to draw multiple times wihtout changing it much, because it means that, instead of needing to upload new data each time, you can simply draw it without needing to recreate all your vertices and colors, a philosophy which is probably familiar to you from working with the ofFbo or ofTexture.
 
 There are a few things that are important to understand about VBOs:
@@ -146,6 +149,10 @@ $$/code
 
 
 
+
+
+
+
 ##Methods
 
 
@@ -176,44 +183,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ### ofVbo(mom)
@@ -236,46 +205,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Allows you copy one ofVbo from another ofVbo.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -304,52 +234,12 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Allows you copy one ofVbo from another ofVbo using the = operator:
-
 $$code(lang=c++)
 ofVbo one, two;
 //add some vertices and texcoords to one
 two = one;
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -384,44 +274,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void setMesh(mesh, usage)
@@ -444,53 +296,12 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 This copies an ofMesh into an ofVbo, which is a very easy way of creating a VBO.
-
 $$code(lang=c++)
 ofMesh m;
 vbo.setMesh(m, GL_DYNAMIC_DRAW);
 $$/code
-
 This copies all the properties from the mesh, indices, vertices, colors, and texcoords, into the VBO.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -519,57 +330,13 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Sets vertices using ofVec3f objects. You pass a pointer to ofVec3fs, a int saying how many are in the pointer, and what kind of array you want to be created on the graphics card for the VBO to use.
-
 $$code(lang=c++)
 ofVec3f *v = new ofVec3f[12];
 vbo.setVertexData(v, 12, GL_DYNAMIC_DRAW);
-
 $$/code
-
 total Specifies the number of objects that you're passing in.
-
 usage Specifies the expected usage pattern of the data store. The symbolic constant must be GL_STREAM_DRAW, GL_STREAM_READ, GL_STREAM_COPY, GL_STATIC_DRAW, GL_STATIC_READ, GL_STATIC_COPY, GL_DYNAMIC_DRAW, GL_DYNAMIC_READ, or GL_DYNAMIC_COPY.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -598,49 +365,8 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 total Specifies the number of objects that you're passing in.
-
 usage Specifies the expected usage pattern of the data store. The symbolic constant must be GL_STREAM_DRAW, GL_STREAM_READ, GL_STREAM_COPY, GL_STATIC_DRAW, GL_STATIC_READ, GL_STATIC_COPY, GL_DYNAMIC_DRAW, GL_DYNAMIC_READ, or GL_DYNAMIC_COPY.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -669,49 +395,8 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 total Specifies the number of objects that you're passing in.
-
 usage Specifies the expected usage pattern of the data store. The symbolic constant must be GL_STREAM_DRAW, GL_STREAM_READ, GL_STREAM_COPY, GL_STATIC_DRAW, GL_STATIC_READ, GL_STATIC_COPY, GL_DYNAMIC_DRAW, GL_DYNAMIC_READ, or GL_DYNAMIC_COPY.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -740,48 +425,8 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 total Specifies the number of objects that you're passing in.
-
 usage Specifies the expected usage pattern of the data store. The symbolic constant must be GL_STREAM_DRAW, GL_STREAM_READ, GL_STREAM_COPY, GL_STATIC_DRAW, GL_STATIC_READ, GL_STATIC_COPY, GL_DYNAMIC_DRAW, GL_DYNAMIC_READ, or GL_DYNAMIC_COPY.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -810,48 +455,8 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 total Specifies the number of objects that you're passing in.
-
 usage Specifies the expected usage pattern of the data store. The symbolic constant must be GL_STREAM_DRAW, GL_STREAM_READ, GL_STREAM_COPY, GL_STATIC_DRAW, GL_STATIC_READ, GL_STATIC_COPY, GL_DYNAMIC_DRAW, GL_DYNAMIC_READ, or GL_DYNAMIC_COPY.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -880,50 +485,9 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Indices are the indices of vertices that you want used to create your polygons, so like {1, 2, 3} for a triangle, would make a triangle out of vertexs at positions 1, 2, and 3 in the vertex array. QUADS need 4 indices per primitive, LINES need 2.
-
 total Specifies the number of objects that you're passing in.
-
 usage Specifies the expected usage pattern of the data store. The symbolic constant must be GL_STREAM_DRAW, GL_STREAM_READ, GL_STREAM_COPY, GL_STATIC_DRAW, GL_STATIC_READ, GL_STATIC_COPY, GL_DYNAMIC_DRAW, GL_DYNAMIC_READ, or GL_DYNAMIC_COPY.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -952,60 +516,14 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 vert0x Specifies a pointer to data that will be copied into the data store for initialization.
-
 numCoords This is the number of complete coordinates that youre adding to the VBO
-
 total Specifies the number of objects that you're passing in.
-
 usage Specifies the expected usage pattern of the data store. The symbolic constant must be GL_STREAM_DRAW, GL_STREAM_READ, GL_STREAM_COPY, GL_STATIC_DRAW, GL_STATIC_READ, GL_STATIC_COPY, GL_DYNAMIC_DRAW, GL_DYNAMIC_READ, or GL_DYNAMIC_COPY.
-
-
 $$code(lang=c++)
-
 float Verts[] = {...};
 vbo.setVertexData(&Verts[0], 12, 36, GL_DYNAMIC_DRAW);
-
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1034,54 +552,11 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 This sets the colors for a VBO by using 3 floats for the color RGB rather than an ofFloatColor instance.
-
-
 $$code(lang=c++)
-
 float Colors[] = {...};
 vbo.setVertexData(&Colors[0], 12, 36, GL_DYNAMIC_DRAW); //use GL_DYNAMIC_DRAW if you want to update it later
-
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1110,55 +585,11 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 This sets the normals for a VBO by using 3 floats for the normal rather than an ofVec3f
-
-
 $$code(lang=c++)
-
 float Norms[] = {...};
 vbo.setNormalData(&Norms[0], 12, 36, GL_DYNAMIC_DRAW); //use GL_DYNAMIC_DRAW if you want to update it later
-
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1187,54 +618,11 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 This sets the texcoords for a VBO by using 2 floats for the texture coordinates rather than an ofVec2f
-
-
 $$code(lang=c++)
-
 float Norms[] = {...};
 vbo.setNormalData(&Norms[0], 12, 36, GL_DYNAMIC_DRAW); //use GL_DYNAMIC_DRAW if you want to update it later
-
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1263,53 +651,13 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 This allows you add a mesh to to the VBO, like so:
-
 $$code(lang=c++)
 ofMesh m;
 /// fill out the mesh
 ofVbo v;
 v.updateMesh(mesh);
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1338,46 +686,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 If you've created your VBO with vertices that are using GL_DYNAMIC_DRAW then you can update the vertices at any time. This is for 3D VBOs.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1406,46 +715,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 If you've created your VBO with vertices that are using GL_DYNAMIC_DRAW then you can update the vertices at any time. This is for 2D VBOs as it only uses ofVe2f.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1474,46 +744,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 If you've created your VBO with colors that are using GL_DYNAMIC_DRAW then you can update the vertices at any time.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1542,46 +773,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 If you've created your VBO with normals that are using GL_DYNAMIC_DRAW then you can update the vertices at any time.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1610,46 +802,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 If you've created your VBO with texture coordinates that are using GL_DYNAMIC_DRAW then you can update the vertices at any time.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1678,46 +831,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 If you've created your VBO with indices that are using GL_DYNAMIC_DRAW then you can update the vertices at any time. Note that if you're not adding or removing vertices you probably don't need to update the vertices.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1746,46 +860,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 If you've created your VBO with indices that are using GL_DYNAMIC_DRAW then you can update the vertices at any time. Note that if you're not adding or removing vertices you probably don't need to update the vertices.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1814,46 +889,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 If you've created your VBO with colors that are using GL_DYNAMIC_DRAW then you can update the vertices at any time. This version uses 3 floats for the RGB of each color instead of ofColor.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1882,46 +918,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 If you've created your VBO with normals that are using GL_DYNAMIC_DRAW then you can update the vertices at any time. This version uses 3 floats for each normal instead of an ofVec3f.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1950,46 +947,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 If you've created your VBO with texture coordinates that are using GL_DYNAMIC_DRAW then you can update the vertices at any time. This version uses 2 floats for each tex coord instead of an ofVec2f.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2017,43 +975,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2089,43 +1010,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###GLuint getNormalId()
@@ -2147,43 +1031,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2219,43 +1066,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###GLuint getIndexId()
@@ -2277,44 +1087,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2350,43 +1122,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###bool getUsingVerts()
@@ -2408,43 +1143,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2480,43 +1178,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###bool getUsingNormals()
@@ -2538,43 +1199,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2610,43 +1234,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###bool getUsingIndices()
@@ -2668,44 +1255,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2735,55 +1284,13 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 This method allows you to draw your VBO but unlike drawElements() ignores any indices that you might have set up. This is an important distinction between the two methods.
-
 mode
 Specifies what kind of primitives to render. Symbolic constants GL_POINTS, GL_LINE_STRIP, GL_LINE_LOOP, GL_LINES, GL_TRIANGLE_STRIP, GL_TRIANGLE_FAN, GL_TRIANGLES, GL_QUAD_STRIP, GL_QUADS, and GL_POLYGON are accepted.
-
 first
 Specifies the starting index in the enabled arrays.
-
 total
 Specifies the number of indices to be rendered. This last part is pretty important: if you have more indices than vertices you'll want to make sure that you pass the number of indices, not the number of vertices.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2812,55 +1319,13 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 drawElements allows you use indices, unlike draw() which ignores them.
-
 drawMode
 Specifies what kind of primitives to render. Symbolic constants GL_POINTS, GL_LINE_STRIP, GL_LINE_LOOP, GL_LINES, GL_TRIANGLE_STRIP, GL_TRIANGLE_FAN, GL_TRIANGLES, GL_QUAD_STRIP, GL_QUADS, and GL_POLYGON are accepted.
-
 $$code(lang=c++)
 vbo.drawElements( GL_TRIANGLES, 60);
 $$/code
-
 amt specifies the number of indices to be rendered. This last part is pretty important: if you have more indices than vertices you'll want to make sure that you pass the number of indices, not the number of vertices.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2889,46 +1354,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 This is for advanced users who might want to use ways of drawing other than draw() or drawElements(), it simply binds all the arrays for the VBO.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2957,46 +1383,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 This is for advanced users who might want to use ways of drawing other than draw() or drawElements(), it simply unbinds all the arrays for the VBO.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3025,44 +1412,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 This erases your VBO's data from your graphics card, but not the VBO itself, so you can fill it with data again.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3090,36 +1440,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3155,36 +1475,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void setMesh(&mesh, usage)
@@ -3206,36 +1496,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3271,36 +1531,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void setVertexData(*verts, total, usage)
@@ -3322,36 +1552,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3387,36 +1587,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void setNormalData(*normals, total, usage)
@@ -3438,36 +1608,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3503,36 +1643,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void setIndexData(*indices, total, usage)
@@ -3554,36 +1664,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3619,36 +1699,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void setColorData(*color0r, total, usage, stride = 0)
@@ -3670,36 +1720,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3735,36 +1755,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void setTexCoordData(*texCoord0x, total, usage, stride = 0)
@@ -3786,36 +1776,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3851,36 +1811,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void updateVertexData(*verts, total)
@@ -3902,36 +1832,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3967,36 +1867,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void updateColorData(*colors, total)
@@ -4018,36 +1888,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -4083,36 +1923,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void updateTexCoordData(*texCoords, total)
@@ -4134,36 +1944,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -4199,36 +1979,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void updateVertexData(*ver0x, total)
@@ -4250,36 +2000,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -4315,36 +2035,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void updateNormalData(*normal0x, total)
@@ -4373,36 +2063,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void updateTexCoordData(*texCoord0x, total)
@@ -4424,36 +2084,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -4498,6 +2128,15 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 
 
@@ -4561,6 +2200,15 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 
@@ -4610,6 +2258,15 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 
 
@@ -4673,6 +2330,15 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 
@@ -4722,6 +2388,15 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 
 
@@ -4785,6 +2460,15 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 
@@ -4834,6 +2518,15 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 
 
@@ -4897,6 +2590,15 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 
@@ -4946,6 +2648,15 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 
 
@@ -5009,6 +2720,15 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 
@@ -5058,6 +2778,15 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 
 
@@ -5121,6 +2850,15 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 
@@ -5170,6 +2908,15 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 
 
@@ -5233,6 +2980,15 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 
@@ -5282,6 +3038,15 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 
 
@@ -5345,6 +3110,15 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 
@@ -5394,6 +3168,15 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 
 
@@ -5457,6 +3240,15 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 
@@ -5506,6 +3298,15 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 
 
@@ -5569,6 +3370,15 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 
@@ -5618,6 +3428,15 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 
 
