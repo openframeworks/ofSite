@@ -691,7 +691,7 @@ a.docs_class_link, a:link.docs_class_link, a:visited.docs_class_link, a:hover.do
 }
 pre {
 	background-color: #fdfde3;
-	font-family: Courier;
+	font-family: Courier,  monospace; 
 	font-size: 95%;
 	line-height: 120%;
 	margin: 0px;
@@ -701,6 +701,7 @@ pre {
 	padding-left: 10px;
 	padding-top: 10px;
 	white-space: pre-wrap;
+	line-height: normal;
 }
 .faqAnswer {
 	background-color: #FCFCFC;
@@ -972,4 +973,12 @@ div#github .github_avatar img {
 }
 .clearboth {
 	clear: both;
+}
+#methods_list {
+	width: 50%;
+	float: left;
+}
+#variables_list {
+	width: 50%;
+	float: left;
 }
