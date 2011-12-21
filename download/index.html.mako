@@ -1,8 +1,5 @@
 <%inherit file="/_templates/slideshow.mako" />
 
-download
-=========
-
 <div id="download-latest-header">
 	<h2>007</h2>
 	<p><strong>is the most recent release. It has a lot of new features, new interfaces, and probably some new bugs too. 007 is not 100% compatible with 0062 projects. A <a href="http://forum.openframeworks.cc/index.php/topic,7368.0.html">changelog</a> is available on the forum.</strong></p>
