@@ -401,17 +401,32 @@ a.nohover {
 	color: white;
 	text-decoration: none;
 }
-.functionslist a, .varslist a {
+
+#top_list {
+	//background: #DDD;
+	margin: 30px 0 30px 0;
+}
+
+.top_list_header {
+	display: inline;
+	background: #EEE;
+	padding: 8px;
+	font-size: 1.2em;
+	font-weight: bold;
+		
+}
+.functionslist a {
 	color: #444;
 }
-.functionslist a:hover, .varslist a:hover {
+.functionslist a:hover {
 	color: white;
 }
-ul.functionslist, ul.varslist {
+ul.functionslist {
 	line-height: 1.7em
- color: #444;
+	color: #444;
 	list-style: none;
 	padding: 0;
+	padding-left: 8px;
 }
 h1 {
 	color: #333333;
