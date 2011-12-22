@@ -11,6 +11,8 @@ import argparse
 import shutil
 import glob
 
+import sets
+
 sys.path.append(os.path.join(os.path.realpath(__file__)[0:-(len(os.path.join('_controllers','documentation.py'))+1)],'_tools'))
 #sys.path.append( os.path.realpath('')+"/../_tools" )
 import markdown_file
@@ -31,6 +33,11 @@ class Block(object):
         src_list = self.source.split('\n')
         for element in src_list:
             self.__parse_element(element)
+        for clazz in self.classes:
+            if 'methods' in clazz:
+                clazz['methods'] = sets.Set(clazz['methods']) 
+            if 'variables' in clazz:
+                clazz['vars'] = sets.Set(clazz['variables'])
                 
     def __parse_element(self, element):
         mode = self.mode
