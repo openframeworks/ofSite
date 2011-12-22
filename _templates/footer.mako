@@ -1,10 +1,3 @@
-<%inherit file="base.mako" />
-
-<script type="text/javascript">
-	SyntaxHighlighter.tagName = "code";
-	SyntaxHighlighter.all()
-</script>
-
 <p id="credits">
 
 Last updated ${self.getTime()}
@@ -35,3 +28,13 @@ href="http://${bf.config.blog.disqus.name}.disqus.com/latest.rss">Comments</a>.
 //]]>
 </script>
 % endif
+
+
+
+<%def name="getTime()">
+  <% 
+    from time import gmtime, strftime
+    currentTime = strftime("%A, %d %B %Y %H:%M:%S UTC", gmtime())
+  %>
+  ${currentTime}
+</%def>

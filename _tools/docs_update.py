@@ -71,7 +71,7 @@ def serialize_functionsfile(filename):
                         params = argstring[argstring.find('(')+1:argstring.rfind(')')]
                         returns = xmlfunction.type.ref.text if hasattr(xmlfunction.type,'ref') else xmlfunction.type.text
                         function = functionsfile.function_by_signature(xmlfunction.name.text, returns, params)
-                        function.description = function.description.replace('<pre class="brush: cpp">',"~~~~{.cpp}").replace('</pre>',"~~~~")
+                        #function.description = function.description.replace("~~~~{.brush cpp}","~~~~{.cpp}").replace('</pre>',"~~~~")
                         function.description = function.description.replace('<p>','').replace('</p>','').replace('<code>','').replace('</code>','').replace('<pre>','')
                         function.returns = returns
                         functions_fromxml.append(function.name)
@@ -145,7 +145,7 @@ def serialize_class(filename):
                         method.clazz = docs_class.name
                         method.access = member.get("prot")
                         method.returns = returns
-                        method.description = method.description.replace('<pre class="brush: cpp">',"~~~~{.cpp}").replace('</pre>',"~~~~")
+                        #method.description = method.description.replace("~~~~{.brush: cpp}","~~~~{.cpp}").replace('</pre>',"~~~~")
                         method.description = method.description.replace('<p>','').replace('</p>','').replace('<code>','').replace('</code>','').replace('<pre>','')
                         if method.new:
                             method.version_started = currentversion

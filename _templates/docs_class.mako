@@ -5,6 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     ${self.head()}
+    <script src="${bf.config.site.url}/js/docs.js"></script>
   </head>
   <body>
     <div id="content">
