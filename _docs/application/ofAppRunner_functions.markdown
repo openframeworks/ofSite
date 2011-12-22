@@ -27,8 +27,6 @@ _advanced: False_
 
 _description: _
 
-
-
 note: this code is implemented inside the ofAppRunner.
 
 
@@ -113,8 +111,6 @@ _advanced: True_
 _description: _
 
 Makes the app or a thread sleep for some time expressed in ms. Usually used inside threads when we want to wait till something happens to continue the process to run instead of making it running continously. This way the thread doesn't consume processor time while it's aslept.
-
-
 Forces the app to pause execution ( or 'sleep' ) for the specfied number of milliseconds.
 note: this code is implemented inside the ofAppRunner
 
@@ -276,7 +272,7 @@ Useful to access the variables in the main app from other classes.
 
 ie:
 
-$$code(lang=c++)
+<pre class="brush: cpp">
 
 //testApp.h
 
@@ -291,7 +287,7 @@ class testApp: public ofBaseApp{
 void myClass::method(){
    doSomething( ofGetAppPtr()->someVar );
 }
-$$/code
+</pre>
 
 
 
@@ -320,8 +316,6 @@ _advanced: False_
 _description: _
 
 Hides the mouse cursor
-
-
 makes the cursor invisible.
 note: this code is implemented inside the ofAppRunner.
 
@@ -352,8 +346,6 @@ _advanced: False_
 _description: _
 
 Shows the mouse cursor again when it's been hidden with ofHideCursor
-
-
 makes the cursor visible.
 note: this code is implemented inside the ofAppRunner
 
@@ -383,8 +375,6 @@ _advanced: False_
 
 _description: _
 
-
-
 note: this code is implemented inside the ofAppRunner
 
 
@@ -412,8 +402,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
 
 note: this code is implemented inside the ofAppRunner
 
@@ -443,8 +431,6 @@ _advanced: False_
 
 _description: _
 
-
-
 note: this code is implemented inside the ofAppRunner
 
 
@@ -472,8 +458,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
 
 note: this code is implemented inside the ofAppRunner
 
@@ -503,10 +487,8 @@ _advanced: False_
 
 _description: _
 
-
-
 eg:
-$$code(lang=c++)
+<pre class="brush: cpp">
 
 int mode = ofGetWindowMode();
 		
@@ -520,7 +502,7 @@ if(mode == OF_WINDOW){
 	printf("mode is: game mode
 ");	
 }
-$$/code
+</pre>
 
 note: this code is implemented inside the ofAppRunner
 	
@@ -557,8 +539,6 @@ _description: _
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
 ###int ofGetHeight()
@@ -579,8 +559,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
 
 
 
@@ -749,8 +727,6 @@ _advanced: False_
 _description: _
 
 Change the app window mode to fullscreen or window depending on the boolean parameter.
-
-
 Enables or disables fullscreen mode for your app's window.
 note: this code is implemented inside the ofAppRunner.
 
@@ -781,8 +757,6 @@ _advanced: False_
 _description: _
 
 Toggles the window between fullscreen and window modes.
-
-
 Toggles fullscreen mode for your app's window. Useful for hooking up to a keypress so you don't have to keep track of the window state.
 note: this code is implemented inside the ofAppRunner
 
@@ -973,8 +947,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
 
 Attempts to set the frame rate to a given target by sleeping a certain amount per frame. The results of this may vary based if vertical sync is enabled or disabled (either at the card level or via code), because this locks the drawing to intervals where the screen refreshes.
 note: this code is implemented inside the ofAppRunner
@@ -1221,8 +1193,6 @@ _advanced: False_
 
 _description: _
 
-
-
 Moves the app window to the x and y coordinates specified. For example: coordinates of (0,0) would set the top-left corner of your app window to the top-left corner of the screen.
 note: this code is implemented inside the ofAppRunner
 
@@ -1251,8 +1221,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
 
 Sets the dimension of your app's window.
 note: this code is implemented inside the ofAppRunner
@@ -1283,40 +1251,7 @@ _advanced: False_
 
 _description: _
 
-
-
 Sets the title string at the top of your app's window.
-note: this code is implemented inside the ofAppRunner
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofSetVerticalSync(bSync)
-
-<!--
-_syntax: ofSetVerticalSync(bSync)_
-_name: ofSetVerticalSync_
-_returns: void_
-_returns_description: _
-_parameters: bool bSync_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-Sets the vertical sync of the graphics card to true or false. In some instances, this may be over-ridden by the card itself. Check the advanced opengl options for the card, and allow "software" to choose vertical sync in order to allow this functional call to work.
 note: this code is implemented inside the ofAppRunner
 
 

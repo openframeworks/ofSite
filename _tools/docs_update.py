@@ -71,8 +71,10 @@ def serialize_functionsfile(filename):
                         params = argstring[argstring.find('(')+1:argstring.rfind(')')]
                         returns = xmlfunction.type.ref.text if hasattr(xmlfunction.type,'ref') else xmlfunction.type.text
                         function = functionsfile.function_by_signature(xmlfunction.name.text, returns, params)
+                        function.description = function.description.replace('$$code(lang=c++)','<pre class="brush: cpp">').replace('$$/code','</pre>')
                         function.returns = returns
                         functions_fromxml.append(function.name)
+                        
                         #print function.returns + " " + function.name + xmlfunction.argsstring.text + " new: " + str(function.new)
             
             print "missing functions"
@@ -142,6 +144,7 @@ def serialize_class(filename):
                         method.clazz = docs_class.name
                         method.access = member.get("prot")
                         method.returns = returns
+                        method.description = method.description.replace('$$code(lang=c++)','<pre class="brush: cpp">').replace('$$/code','</pre>')
                         if method.new:
                             method.version_started = currentversion
                         #f.write( str(member.type.text) + " " + str(member.name.text) + str(member.argsstring.text) + "\n" )

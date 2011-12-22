@@ -22,7 +22,14 @@
 
 
 
+
+
+
 ofSerial provides a cross platform system for interfacing with the serial port. You can choose the port and baud rate, and then read and send data. Please note that the port must be set manually in the code, so you should be clear what port your device is on. For example, Arduino users should check the arduino app to see what port their device is on. Alternatively the ofSerial class can attempt to communicate with the first available device it finds.
+
+
+
+
 
 
 
@@ -130,18 +137,18 @@ _description: _
 
 Prints out the available serial devices:
 On mac and linux it might list something like this:
-$$code(lang=c++)
+<pre class="brush: cpp">
 
 device 0 - cu.modem 
 device 1 - cu.USA19H181P1.1
-$$/code
+</pre>
 
 and on a pc, like:
-$$code(lang=c++)
+<pre class="brush: cpp">
 
 device 0 - COM2 
 device 1 - COM4
-$$/code
+</pre>
 
 
 
@@ -200,14 +207,14 @@ _advanced: False_
 _description: _
 
 Attempts to setup the first available device at a baud rate of 9600. 
-$$code(lang=c++)
+<pre class="brush: cpp">
 
 ofSerial mySerial;
 if( mySerial.setup() ){
 	printf("serial is setup!
 ");	
 }
-$$/code
+</pre>
 
 
 
@@ -237,18 +244,18 @@ _advanced: False_
 _description: _
 
 Opens the serial port, with the given name and baud rate. On mac and linux, it might look like:
-$$code(lang=c++)
+<pre class="brush: cpp">
 
 ofSerial mySerial;
 mySerial.setup("/dev/cu.USA19H181P1.1", 9600);
-$$/code
+</pre>
 
 and on a pc, like:
-$$code(lang=c++)
+<pre class="brush: cpp">
 
 ofSerial mySerial;
 mySerial.setup("COM4", 9600);
-$$/code
+</pre>
 
 
 
@@ -278,11 +285,11 @@ _advanced: False_
 _description: _
 
 Opens the serial port based on the order in which is listed and sets the baud rate. The code bellow would open the first serial device found by the system:
-$$code(lang=c++)
+<pre class="brush: cpp">
 
 ofSerial mySerial;
 mySerial.setup(0, 9600);
-$$/code
+</pre>
 
 
 
@@ -421,7 +428,7 @@ _advanced: False_
 _description: _
 
 Writes a single byte to the connected serial device. Check the return value to be sure the data was written.
-$$code(lang=c++)
+<pre class="brush: cpp">
 
 ofSerial mySerial;
 mySerial.setup(0, 9600);
@@ -429,7 +436,7 @@ unsigned char myByte = 225;
 bool byteWasWritten = mySerial.writeByte(myByte);
 if ( !byteWasWritten )
   printf("byte was not written to serial port");
-$$/code
+</pre>
 
 
 
@@ -460,7 +467,7 @@ _advanced: False_
 _description: _
 
 Reads and returns a single byte from the requested device. 
-$$code(lang=c++)
+<pre class="brush: cpp">
 
 ofSerial mySerial;
 mySerial.setup(0, 9600);
@@ -472,7 +479,7 @@ else if ( myByte == OF_SERIAL_ERROR )
   printf("an error occurred");
 else
   printf("myByte is %d", myByte);
-$$/code
+</pre>
 
 
 
@@ -757,62 +764,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 bVerbose is a boolean varible controlling verbosity on the ofSerial class. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 
 
 
@@ -837,62 +789,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 h
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 
 
 
@@ -916,62 +813,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
 
 
 
@@ -1003,62 +844,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###string deviceType
@@ -1076,47 +861,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
 
 
 
@@ -1148,47 +892,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###bool bHaveEnumeratedDevices
@@ -1206,47 +909,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
 
 
 
