@@ -28,10 +28,10 @@ _advanced: False_
 _description: _
 
 Sets up the audio, with nOutputs channels of audio out, nInputs channels of audio in. You also must pass in a pointer to the ofSimpleApp, so you can just use the word "this". For example, for 2 channel output, call in the setup function:
-$$code(lang=c++)
+~~~~{.cpp}
 
 ofSoundStreamSetup(2,0,this);
-$$/code
+~~~~
 
 In this simplified call, the bufferSize, sampleRate, and number of buffers (for latency) are all set to defaults.
 

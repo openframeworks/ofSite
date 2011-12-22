@@ -13,6 +13,7 @@
 
 	    <div class="page-wide">
             
+            <h1>documentation</h1>
 		    <div class="page-left-split">
 			    <p>This page is the reference for the openFrameworks core and included addons. There are also <a href="http://ofxaddons.com/">contributed addons</a>. The openFrameworks API is constantly evolving: any corrections, additions or comments are very welcome!</p>
 			    <p>You can contribute to this documentation from GitHub by following these <a href="https://github.com/openframeworks/openFrameworks/wiki/Contributing-documentation">instructions.</a> 

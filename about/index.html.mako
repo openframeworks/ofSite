@@ -1,5 +1,6 @@
 <%inherit file="/_templates/slideshow.mako" />
 
+<h1>about</h1>
 <div id="myslides">
 <img src="0.jpg" />
 <img src="1.jpg" />

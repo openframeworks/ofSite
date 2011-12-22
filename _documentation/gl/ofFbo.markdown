@@ -3,63 +3,24 @@
 
 ##Description
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 As an example, with an fbo you can do some drawing to the fbo (instead of to the screen or a texture) and then do some blurring, maybe invert the colors, combine multiple images, all without needing to draw it to the screen until you're ready.
-
 fbos are also used to create views of other scenes, like a TV in a house. A scene can be rendered through an FBO to a texture, then that texture can be applied to the surface of another object.
-
 You can also create a depth buffer within your fbo to figure out which objects should go in front of which other objects.
-
 As an example of an advanced usage:
-
 Create an ofFbo.
 Attach the color buffer of the ofFbo to a texture.
 Attach the depth buffer of the ofFbo to a texture.
 Render the texture to screen with a pixel shader using ofShader.
-
 Rad!
-
 The following code snippet shows ping-ponging, a common technique with FBOs that involves adding two textures to the FBO and blurring one then the other in succession to create a blur effect.
-
-$$code(lang=c++)
-
+~~~~{.cpp}
 // draw scene into fbo
 fbo.begin();
 vidGrabber.draw(0, 0, fbo.getWidth(), fbo.getHeight());
 fbo.end();
-
 // ping pong between two attachments using shader
 fbo.begin();
 shader.begin();
-
 // the fbo contains two textures, so we blur one
 // then copy it to the other and repeat 8 times
 for(int i=0; i<8; i++) {
@@ -72,48 +33,11 @@ for(int i=0; i<8; i++) {
 	shader.setUniform1f("sampleOffset", i*2+1);
 	fbo.getTextureReference(srcPos).draw(0, 0);
 }
-
 shader.end();
 fbo.end();
-
 fbo.draw(0, 0);
-
-$$/code
-
+~~~~
 Bloom effects are also often done with FBO objects as as Multiple Render to Texture or MRT effectrs.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -600,7 +524,7 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -1201,6 +1125,34 @@ _returns: void_
 _returns_description: _
 _parameters: int attachmentPoint_
 _access: private_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void begin(setupScreen = true)
+
+<!--
+_syntax: begin(setupScreen = true)_
+_name: begin_
+_returns: void_
+_returns_description: _
+_parameters: bool setupScreen=true_
+_access: public_
 _version_started: 007_
 _version_deprecated: _
 _summary: _

@@ -251,13 +251,13 @@ To make adding numbers to a string easy we have the ofToString object which take
 
 
 This example makes a custom string to show the framerate in the window title. 
-$$code(lang=c++)
+~~~~{.cpp}
 
 string str = "framerate is "; 						
 str += ofToString(ofGetFrameRate(), 2)+"fps"; 
 ofSetWindowTitle(str);
 //set the window title to "framerate is 45.30fps"
-$$/code
+~~~~
 
 
 
@@ -432,10 +432,10 @@ _advanced: False_
 _description: _
 
 This function is used to delete some parts of a given string (str). We set in delimiter the parts we want to delete. For example if we call ofSplitSpring in my setup function:
-$$code(lang=c++)
+~~~~{.cpp}
 
 result=ofSplitString("of rocks", "of");
-$$/code
+~~~~
 
 we obtain:
 result[0]=r
@@ -443,10 +443,10 @@ result[1]=cks
 this is the result of deleting o and f letters in the string.
 
 We can find a very useful application if we use delimiter = " ":
-$$code(lang=c++)
+~~~~{.cpp}
 
 result=ofSplitString("of rocks", " ");
-$$/code
+~~~~
 
 we obtain:
 result[0]=of

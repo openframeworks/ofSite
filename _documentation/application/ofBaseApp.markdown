@@ -3,77 +3,9 @@
 
 ##Description
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 The openframeworks engine is contained in the "app" category. The project works, similar to processing, in that you have a base class which extends a class that already exists. In the case of OF, there is a class called "ofBaseApp" which contains various event driven functions. When you create an OF project, you use a main.cpp which is the boot-strap, that kicks off the application and another class, which inherits the properties of ofBaseApp. Essentially, when you write code in the testApp, you are re-writing already defined functions that exist in OF, such as update, draw, etc. 
 
 In versions pre 0.06 this class was called ofSimpleApp
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -562,17 +494,17 @@ _advanced: False_
 _description: _
 
 If you have setup audio input, via ofSetupAudio, this function will be called when you have one buffers worth of audio. Since you may have requested mutli-channel audio (for example, stereo input), you get not only an array of floating point info, also the size of the buffer, and the number of channels. The size of input (the float array with audio data) is: bufferSize * nChannels; The data will come interleaved, so if, for example, you request 2 channel (left / right) input, the samples come:
-$$code(lang=c++)
+~~~~{.cpp}
 
 l r l r l r l r l r ....
 0 1 2 3 4 5 6 7 8 9 ....
-$$/code
+~~~~
 
 so to access an individual sample "n" for channel "j" , you could write something like:
-$$code(lang=c++)
+~~~~{.cpp}
 
 input[n*(nChannels) + j];
-$$/code
+~~~~
 
 
 
@@ -646,6 +578,34 @@ _name: gotMessage_
 _returns: void_
 _returns_description: _
 _parameters: ofMessage msg_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void windowEntry(state)
+
+<!--
+_syntax: windowEntry(state)_
+_name: windowEntry_
+_returns: void_
+_returns_description: _
+_parameters: int state_
 _access: public_
 _version_started: 007_
 _version_deprecated: _

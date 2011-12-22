@@ -156,11 +156,11 @@ screenMode can be one of:
 From 0.06 you can also pass a diferent version of ofAppBaseWindow than the default glut one. To pass a different windowing toolkit than glut, first create an instance of it, and then pass a pointer to it to ofSetupOpenGL.
 
 ie:
-$$code(lang=c++)
+~~~~{.cpp}
 
 ofAppCocoaWindow window;
 ofSetupOpenGL(&window, 800, 600, OF_WINDOW);
-[/CODE]
+~~~~
 
 You need to have the windowing toolkit files included in your project.
 
@@ -230,9 +230,9 @@ Begins the openGL cycle of the application. It's only called once from main func
 
 From 0.06 the app is deleted on exit, so you need to call this function as shown in syntax:
 
-$$code(lang=c++)
+~~~~{.cpp}
 ofRunApp(new testApp);
-$$/code
+~~~~
 
 
 Previous versions of the examples can be using this syntax:

@@ -7,69 +7,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ##Methods
 
 
@@ -1488,6 +1425,90 @@ _version_deprecated: _
 _summary: _
 _constant: False_
 _static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofFile getFile(position, mode = ofFile
+
+<!--
+_syntax: getFile(position, mode = ofFile_
+_name: getFile_
+_returns: ofFile_
+_returns_description: _
+_parameters: unsigned int position, ofFile_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofFile getFile(position, mode = ofFile
+
+<!--
+_syntax: getFile(position, mode = ofFile_
+_name: getFile_
+_returns: ofFile_
+_returns_description: _
+_parameters: unsigned int position, ofFile_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string getOriginalDirectory()
+
+<!--
+_syntax: getOriginalDirectory()_
+_name: getOriginalDirectory_
+_returns: string_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
 _visible: True_
 _advanced: False_
 -->

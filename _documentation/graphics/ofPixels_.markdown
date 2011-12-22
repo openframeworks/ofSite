@@ -3,54 +3,20 @@
 
 ##Description
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ofPixels is an object for working with blocks of pixels, those pixels can be copied from an image that you've loaded, something that you've drawn using ofGraphics, or a ofVideoGrabber instance. You can create an image from pixels, using on ofPixels object like so:
-
-$$code(lang=c++)
+~~~~{.cpp}
 ofPixels p;
 ofLoadImage(p, "pathToImage.jpg");
-$$/code
-
+~~~~
 ofPixels represents pixels data on the CPU as opposed to an ofTexture which represents pixel data on the GPU. They can easily be made inter-operational though:
-
-$$code(lang=c++)
+~~~~{.cpp}
 ofTexture tex;
 // do some stuff with t
 ofPixels pix;
 tex.readToPixels(pix); // now all the pixels from tex are in pix
-$$/code
-
+~~~~
 You can access the pixels in an ofPixels object with the [] operator.
-
-$$code(lang=c++)
+~~~~{.cpp}
 ofPixels pix;
 // put some stuff in the pixels
 int i = 0;
@@ -58,42 +24,7 @@ while( i < pix.size()) {
 	char c = pix[i];
 	i++;
 }
-$$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+~~~~
 
 
 
@@ -1385,6 +1316,230 @@ _version_deprecated: _
 _summary: _
 _constant: False_
 _static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofPixels_()
+
+<!--
+_syntax: ofPixels_()_
+_name: ofPixels_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ~ofPixels_()
+
+<!--
+_syntax: ~ofPixels_()_
+_name: ~ofPixels_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofPixels_(&mom)
+
+<!--
+_syntax: ofPixels_(&mom)_
+_name: ofPixels_
+_returns: _
+_returns_description: _
+_parameters: const ofPixels_< PixelType > &mom_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofPixels_(&mom)
+
+<!--
+_syntax: ofPixels_(&mom)_
+_name: ofPixels_
+_returns: _
+_returns_description: _
+_parameters: const ofPixels_< SrcType > &mom_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofPixels_()
+
+<!--
+_syntax: ofPixels_()_
+_name: ofPixels_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ~ofPixels_()
+
+<!--
+_syntax: ~ofPixels_()_
+_name: ~ofPixels_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofPixels_(&mom)
+
+<!--
+_syntax: ofPixels_(&mom)_
+_name: ofPixels_
+_returns: _
+_returns_description: _
+_parameters: const ofPixels_< PixelType > &mom_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofPixels_(&mom)
+
+<!--
+_syntax: ofPixels_(&mom)_
+_name: ofPixels_
+_returns: _
+_returns_description: _
+_parameters: const ofPixels_< SrcType > &mom_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
 _visible: True_
 _advanced: False_
 -->

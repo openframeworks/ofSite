@@ -3,60 +3,19 @@
 
 ##Description
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 First things first: a Vertex Buffer Object (VBO) provides a way for you to create vertices, normals, colors, and texture coordinates on the graphics card for non-immediate mode rendering. This means that you can store it all on the graphics card and then access, update, or draw it, whenever you need. This is pretty convenient when you have something that you want to draw multiple times wihtout changing it much, because it means that, instead of needing to upload new data each time, you can simply draw it without needing to recreate all your vertices and colors, a philosophy which is probably familiar to you from working with the ofFbo or ofTexture.
-
 There are a few things that are important to understand about VBOs:
-
 Each property of the VBO - vertices, texCoords, normals, colors - can be either dynamic or static. You set it to static when you know that you won't be updating it later on. You set it to dynamic when you know you will be updating it later on.
-
 Just like with ofMesh, you need to keep track of the vertices and their indices in order to make shapes and you can draw a VBO in any one of the OpenGL drawing modes, GL_LINE_STRIP, GL_POINTS, GL_QUADS, GL_TRIANGLES and GL_TRIANGLE_STRIP.
-
 Vertices are passed to your graphics card and your graphics card fills in the spaces in between them in a process usually called the rendering pipeline. The rendering pipeline goes more or less like this:
 1. Say how youre going to connect all the points.
 2. Make some points.
 3. Say that youre done making points.
-
 You may be thinking: Ill just make eight vertices and voila: a cube. Not so quick. Theres a hitch and that hitch is that the OpenGL renderer has different ways of connecting the vertices that you pass to it and none are as efficient as to only need eight vertices to create a cube. Youve probably seen a version of the following image somewhere before.
-
 ![gl vertices](gl_vertices_options.jpg)
-
 Generally, you have to create your points to fit the drawing mode that youve selected because of whats called winding. A vertex gets connected to another vertex in the order that the mode does its winding and this means that you might need multiple vertices in a given location to create the shape you want. The cube, for example, requires eighteen vertices, not the eight that you would expect. If you note the order of vertices in the GL chart above youll see that all of them use their vertices slightly differently (in particular you should make note of the GL_TRIANGLE_STRIP example). Drawing a shape requires that you keep track of which drawing mode is being used and which order your vertices are declared in. If youre thinking it would be nice if there were an abstraction layer for this, youre thinking right. Enter the mesh, which is really just an abstraction of the vertex and drawing mode that we started with but which has the added bonus of managing the draw order for you. That may seem insignificant at first, but it provides some real benefits when working with complex geometry.
-
 The following example shows an ofVbo representing an icosahedron:
-
-$$code(lang=c++)
-
+~~~~{.cpp}
 const ofIndexType Faces[] = {
 	2, 1, 0,
 	3, 2, 0,
@@ -78,7 +37,6 @@ const ofIndexType Faces[] = {
 	4,  9, 8,
 	5, 10, 9,
 	1, 6, 10 };
-
 const float Verts[] = {
 	0.000f,  0.000f,  1.000f,
 	0.894f,  0.000f,  0.447f,
@@ -92,18 +50,13 @@ const float Verts[] = {
 	-0.276f, -0.851f, -0.447f,
 	0.724f, -0.526f, -0.447f,
 	0.000f,  0.000f, -1.000f };
-
 ofVec3f v[12];
 ofVec3f n[12];
 ofFloatColor c[12];
-
 ofVbo vbo;
-
 void HelloWorldApp::setup()
 {	
-
 	int i, j = 0;
-
 	for ( i = 0; i < 12; i++ )
 	{
 		
@@ -126,57 +79,14 @@ void HelloWorldApp::setup()
 	
 	glEnable(GL_DEPTH_TEST);
 }
-
 void HelloWorldApp::draw(){
 	ofTranslate(ofGetWidth()/2, ofGetHeight()/2, 100);
 	ofRotate(ofGetElapsedTimef() * 20.0, 1, 1, 0);
 	glPointSize(10.f);
 	vbo.drawElements( GL_TRIANGLES, 60);
 }
-
-$$/code
+~~~~
 ![vbo result](vbo.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -263,11 +173,11 @@ _advanced: False_
 _description: _
 
 Allows you copy one ofVbo from another ofVbo using the = operator:
-$$code(lang=c++)
+~~~~{.cpp}
 ofVbo one, two;
 //add some vertices and texcoords to one
 two = one;
-$$/code
+~~~~
 
 
 
@@ -325,10 +235,10 @@ _advanced: False_
 _description: _
 
 This copies an ofMesh into an ofVbo, which is a very easy way of creating a VBO.
-$$code(lang=c++)
+~~~~{.cpp}
 ofMesh m;
 vbo.setMesh(m, GL_DYNAMIC_DRAW);
-$$/code
+~~~~
 This copies all the properties from the mesh, indices, vertices, colors, and texcoords, into the VBO.
 
 
@@ -359,10 +269,10 @@ _advanced: False_
 _description: _
 
 Sets vertices using ofVec3f objects. You pass a pointer to ofVec3fs, a int saying how many are in the pointer, and what kind of array you want to be created on the graphics card for the VBO to use.
-$$code(lang=c++)
+~~~~{.cpp}
 ofVec3f *v = new ofVec3f[12];
 vbo.setVertexData(v, 12, GL_DYNAMIC_DRAW);
-$$/code
+~~~~
 total Specifies the number of objects that you're passing in.
 usage Specifies the expected usage pattern of the data store. The symbolic constant must be GL_STREAM_DRAW, GL_STREAM_READ, GL_STREAM_COPY, GL_STATIC_DRAW, GL_STATIC_READ, GL_STATIC_COPY, GL_DYNAMIC_DRAW, GL_DYNAMIC_READ, or GL_DYNAMIC_COPY.
 
@@ -548,10 +458,10 @@ vert0x Specifies a pointer to data that will be copied into the data store for i
 numCoords This is the number of complete coordinates that youre adding to the VBO
 total Specifies the number of objects that you're passing in.
 usage Specifies the expected usage pattern of the data store. The symbolic constant must be GL_STREAM_DRAW, GL_STREAM_READ, GL_STREAM_COPY, GL_STATIC_DRAW, GL_STATIC_READ, GL_STATIC_COPY, GL_DYNAMIC_DRAW, GL_DYNAMIC_READ, or GL_DYNAMIC_COPY.
-$$code(lang=c++)
+~~~~{.cpp}
 float Verts[] = {...};
 vbo.setVertexData(&Verts[0], 12, 36, GL_DYNAMIC_DRAW);
-$$/code
+~~~~
 
 
 
@@ -581,10 +491,10 @@ _advanced: False_
 _description: _
 
 This sets the colors for a VBO by using 3 floats for the color RGB rather than an ofFloatColor instance.
-$$code(lang=c++)
+~~~~{.cpp}
 float Colors[] = {...};
 vbo.setVertexData(&Colors[0], 12, 36, GL_DYNAMIC_DRAW); //use GL_DYNAMIC_DRAW if you want to update it later
-$$/code
+~~~~
 
 
 
@@ -614,10 +524,10 @@ _advanced: False_
 _description: _
 
 This sets the normals for a VBO by using 3 floats for the normal rather than an ofVec3f
-$$code(lang=c++)
+~~~~{.cpp}
 float Norms[] = {...};
 vbo.setNormalData(&Norms[0], 12, 36, GL_DYNAMIC_DRAW); //use GL_DYNAMIC_DRAW if you want to update it later
-$$/code
+~~~~
 
 
 
@@ -647,10 +557,10 @@ _advanced: False_
 _description: _
 
 This sets the texcoords for a VBO by using 2 floats for the texture coordinates rather than an ofVec2f
-$$code(lang=c++)
+~~~~{.cpp}
 float Norms[] = {...};
 vbo.setNormalData(&Norms[0], 12, 36, GL_DYNAMIC_DRAW); //use GL_DYNAMIC_DRAW if you want to update it later
-$$/code
+~~~~
 
 
 
@@ -680,12 +590,12 @@ _advanced: False_
 _description: _
 
 This allows you add a mesh to to the VBO, like so:
-$$code(lang=c++)
+~~~~{.cpp}
 ofMesh m;
 /// fill out the mesh
 ofVbo v;
 v.updateMesh(mesh);
-$$/code
+~~~~
 
 
 

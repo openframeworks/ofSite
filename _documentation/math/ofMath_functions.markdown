@@ -224,12 +224,12 @@ _description: _
 
 Re-maps a number from one range to another. We convert the number value where inputMin < value < inputMax into a number beetween outputMin and outputMax.
 e.g:
-$$code(lang=c++)
+~~~~{.cpp}
 float x, newx;
 x=5;
 // 0 < x < 10
 newx = ofMap(x, 0, 10, 21, 22) //newx = 21.5 a value between 21 and 22
-$$/code
+~~~~
 
 
 

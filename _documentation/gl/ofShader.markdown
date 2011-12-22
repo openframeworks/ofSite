@@ -3,82 +3,10 @@
 
 ##Description
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Graphics Language Shading Language (GLSL) can be used in oF by using the ofShader object. Shading happens in two distinct steps: the vertex shader creates values for each vertex in the model, and the fragment shader creates values for each pixel in the rendered object. To define a shader, create a .frag file for the fragment shader and a .vert file for the vertex shader.
 A vertex shader has attributes about a location in space or vertex, which means not only the actual coordinates of that location but also its color, how any textures should be mapped onto it, and how the vertices are modified in the operation. A vertex shader can change the positions of each vertex, the number of lighting computations per vertex, and the color that will be applied to each vertex.
 A geometry shader can generate new graphics primitives like points, lines, and triangles, from those primitives that were sent to the graphics card from the CPU. This means that you could get a point and turn it into a triangle or even a bunch of triangles, or get a line and turn it into a rectangle, or do real-time extrusion. They are very powerful and can be quite tricky to get right, but theyre becoming more popular.
 The fragment shader is somewhat misleadingly named because what it really allows you to do is to change values assigned to each pixel. The vertex shader operates on the vertices, and the fragment shader operates on the pixels. By the time the fragment shader gets information passed into it by the graphics card, the color of a particular pixel has already been computed and in the fragment shader can be combined with an element like a lighting effecting, a fog effect, or a blur among many other options. The usual end result of this stage per fragment is a color value and a depth for the fragment.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -428,9 +356,9 @@ _description: _
 
 set a texture reference
 On your shader it should look like this:
-$$code(lang=c++)
+~~~~{.cpp}
 uniform sampler2DRect texture;
-$$/code
+~~~~
 
 
 
@@ -460,9 +388,9 @@ _advanced: False_
 _description: _
 
 For multi-texturing.
-$$code(lang=c++)
+~~~~{.cpp}
 uniform sampler2DRect texture;
-$$/code
+~~~~
 
 
 
@@ -492,9 +420,9 @@ _advanced: False_
 _description: _
 
 set a single uniform value. On your shader this should look like:
-$$code(lang=c++)
+~~~~{.cpp}
 uniform int texture;
-$$/code
+~~~~
 
 
 
@@ -523,9 +451,9 @@ _advanced: False_
 
 _description: _
 
-$$code(lang=c++)
+~~~~{.cpp}
 uniform ivec2 texture;
-$$/code
+~~~~
 
 
 
@@ -554,9 +482,9 @@ _advanced: False_
 
 _description: _
 
-$$code(lang=c++)
+~~~~{.cpp}
 uniform ivec3 texture;
-$$/code
+~~~~
 
 
 
@@ -585,9 +513,9 @@ _advanced: False_
 
 _description: _
 
-$$code(lang=c++)
+~~~~{.cpp}
 uniform ivec4 texture;
-$$/code
+~~~~
 
 
 
@@ -704,9 +632,9 @@ _advanced: False_
 _description: _
 
 set a vec4 uniform on the shader
-$$code(lang=c++)
+~~~~{.cpp}
 vec4 fv;
-$$/code
+~~~~
 
 
 
@@ -736,13 +664,13 @@ _advanced: False_
 _description: _
 
 set an array of uniform values on the shader, this uses single values, i.e. 
-$$code(lang=c++)
+~~~~{.cpp}
 int ids[4] = {1, 2, 3, 4};
-$$/code
+~~~~
 On the shader side, this is:
-$$code(lang=c++)
+~~~~{.cpp}
 ivec iv[2];
-$$/code
+~~~~
 
 
 
@@ -772,9 +700,9 @@ _advanced: False_
 _description: _
 
 set an array of uniform values on the shader using int[2] value. On the shader this looks like:
-$$code(lang=c++)
+~~~~{.cpp}
 ivec2 iv[2];
-$$/code
+~~~~
 
 
 
@@ -804,9 +732,9 @@ _advanced: False_
 _description: _
 
 set an array of uniform values on the shader using int[2] value. On the shader this looks like:
-$$code(lang=c++)
+~~~~{.cpp}
 ivec3 iv[2];
-$$/code
+~~~~
 
 
 
@@ -836,9 +764,9 @@ _advanced: False_
 _description: _
 
 set an array of uniform values on the shader using int[2] value. On the shader this looks like:
-$$code(lang=c++)
+~~~~{.cpp}
 ivec4 iv[2];
-$$/code
+~~~~
 
 
 
@@ -869,9 +797,9 @@ _description: _
 
 set an array of uniform values on the shader using int[2] value. On the shader this looks like:
 This allows you to set multiple float uniforms.
-$$code(lang=c++)
+~~~~{.cpp}
 float v[2];
-$$/code
+~~~~
 
 
 
@@ -901,9 +829,9 @@ _advanced: False_
 _description: _
 
 This allows you to set multiple vec2 uniforms.
-$$code(lang=c++)
+~~~~{.cpp}
 vec2 v[2];
-$$/code
+~~~~
 
 
 
@@ -933,9 +861,9 @@ _advanced: False_
 _description: _
 
 This allows you to set multiple vec3 uniforms.
-$$code(lang=c++)
+~~~~{.cpp}
 vec3 v[2];
-$$/code
+~~~~
 
 
 
@@ -965,9 +893,9 @@ _advanced: False_
 _description: _
 
 This allows you to set multiple vec4 uniforms.
-$$code(lang=c++)
+~~~~{.cpp}
 vec4 v[2];
-$$/code
+~~~~
 
 
 

@@ -11,6 +11,7 @@
       ${self.header()}
       <div id="body-wrap">
 		   <div class="page-wide">
+		     <h1>community</h1>
 			 <div class="page-left-split">
 				 <p>This community page is auto generated from the most active members on the OF forum.  Please see <a href="https://github.com/openframeworks/ofSite/wiki/community"> this guide</a> for info about how to update your profile.  If you'd like to get added to this page, we will add a forum thread in the near future where you can let us know and we'll manually add you.</p>
 			</div>

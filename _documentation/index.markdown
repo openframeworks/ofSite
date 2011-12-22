@@ -1027,8 +1027,6 @@ ofScale(...)
 
 ofSetupGraphicDefaults()
 
-ofEnableArbTex()
-
 ofSetCurrentRenderer(...)
 
 ofGetCurrentRenderer()
@@ -1038,28 +1036,6 @@ ofGetGLRenderer()
 ofBeginSaveScreenAsPDF(...)
 
 ofEndSaveScreenAsPDF()
-
-ofGetUsingArbTex()
-
-ofDisableArbTex()
-
-ofGetUsingNormalizedTexCoords()
-
-ofEnableNormalizedTexCoords()
-
-ofDisableNormalizedTexCoords()
-
-ofSetTextureWrap(...)
-
-ofGetUsingCustomTextureWrap()
-
-ofRestoreTextureWrap()
-
-ofSetMinMagFilters(...)
-
-ofGetUsingCustomMinMagFilters()
-
-ofRestoreMinMagFilters()
 
 ofPushView()
 
