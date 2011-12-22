@@ -79,11 +79,24 @@ def run():
         #print clazz.name
         #print clazz.function_list
         env = {
+            "modulename": clazz.name,
             "clazz": clazz,
             "functions": functions_file
         }
         bf.writer.materialize_template("docs_class.mako", ('docs',clazz.module+"/"+clazz.name+".html"), env )
     
+    function_files = markdown_file.getfunctionsfiles_list()
+    for functionfile_name in function_files:
+        if functionfile_name in classes:
+            continue
+        functions_file = markdown_file.getfunctionsfile(functionfile_name)
+        env = {
+            "modulename": functions_file.name,
+            "clazz": None,
+            "functions": functions_file
+        }
+        bf.writer.materialize_template("docs_class.mako", ('docs',functions_file.module+"/"+functions_file.name+".html"), env )
+        
 
     # process index file
     indexhtml_file = open("_docs/" + "index.markdown",'r')

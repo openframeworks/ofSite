@@ -13,16 +13,21 @@
         <div class="page-left-wide">
           <div id="main_block">
             <div id="prose_block">
-              <h2>${clazz.name}</h2>
+              <h2>${modulename}</h2>
               <p>
               <%self:filter chain="syntax_highlight,markdown_template">
+              % if not clazz is None:
                   ${clazz.reference}
+              % endif
+              % if not functions is None:
+                  ${functions.description}
+              % endif
               </%self:filter>
               </p>
               
               <div id="methods_list">
               <!-- list of methods -->
-              % if len([x for x in clazz.function_list if not x.advanced and x.visible and x.access=='public'])>0:
+              % if not clazz is None and len([x for x in clazz.function_list if not x.advanced and x.visible and x.access=='public'])>0:
                   <h3>${clazz.name} methods</h3>
 
                   <ul class="functionslist">
@@ -40,7 +45,7 @@
               
               <div id="variables_list">
               <!-- list of variables -->              
-              % if len([x for x in clazz.var_list if not x.advanced and x.visible and x.access=='public'])>0:
+              % if not clazz is None and len([x for x in clazz.var_list if not x.advanced and x.visible and x.access=='public'])>0:
                   <h3>${clazz.name} variables</h3>
                   <ul class="varslist">
                       % for var in clazz.var_list:
@@ -55,7 +60,7 @@
               <div id="functions_list">
               <!-- list of c functions -->              
               % if len([x for x in functions.function_list if not x.advanced and x.visible])>0:
-                  <h3>${clazz.name} c functions</h3>
+                  <h3>${functions.name} c functions</h3>
                   <ul class="functionslist">
                       <% prevmethod = "" %>
                       % for method in functions.function_list:
@@ -72,7 +77,7 @@
               <br style="clear:both"/>
               
               <!-- methods detail -->
-              % if len([x for x in clazz.function_list if not x.advanced and x.visible and x.access=='public'])>0:
+              % if not clazz is None and len([x for x in clazz.function_list if not x.advanced and x.visible and x.access=='public'])>0:
                   <h3>${clazz.name} methods</h3>
                   % for method in clazz.function_list:
                         % if method.visible and not method.advanced and method.access=='public':
@@ -82,7 +87,7 @@
               % endif
               
               <!-- vars detail -->
-              % if len([x for x in clazz.var_list if not x.advanced and x.visible and x.access=='public'])>0:
+              % if not clazz is None and len([x for x in clazz.var_list if not x.advanced and x.visible and x.access=='public'])>0:
                   <h3>${clazz.name} variables</h3>
                   % for var in clazz.var_list:
                         % if var.visible and not var.advanced and var.access=='public':
@@ -93,7 +98,7 @@
               
               <!-- functions detail -->
               % if len([x for x in functions.function_list if not x.advanced and x.visible])>0:
-                  <h3>${clazz.name} c functions</h3>
+                  <h3>${functions.name} c functions</h3>
                   % for method in functions.function_list:
                         % if method.visible and not method.advanced:
                             <%include file="docs_function.mako" args="function=method" />    

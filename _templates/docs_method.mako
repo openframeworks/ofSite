@@ -6,7 +6,7 @@
 	<div class="docs_detail_description">
 		${method.summary}
 		<%self:filter chain="syntax_highlight,markdown_template">
-			${method.description}
+${method.description}
 		</%self:filter>
 	</div>
 	<div class="docs_detail_wide_col_nav"><a href="#top">&uarr;</a>&nbsp;<a href="http://github.com/openframeworks/ofSite/blob/master/${method.file}">GIT</a></div>
