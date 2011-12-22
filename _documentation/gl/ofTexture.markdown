@@ -119,7 +119,7 @@ _description: _
 
 Makes the current ofTexture a copy of another ofTexture.
 e.g:
-$$code(lang=c++)
+~~~~{.cpp}
 
 
 ofTexture text1,text2;
@@ -127,16 +127,16 @@ ofTexture text1,text2;
 //we modify here text1 texture
 
 text2 = text1;
-$$/code
+~~~~
 
 
 
 text2 and text1 are now identical.
 
 Let's you do 
-$$code(lang=c++)
+~~~~{.cpp}
 tex2 = tex1;
-$$/code
+~~~~
 
 
 
@@ -257,14 +257,14 @@ _advanced: False_
 _description: _
 
 Loads into the texture the array of unsigned chars (data), with a given width (w) and height (h). You also pass in the format that the data is stored in (some options: GL_LUMINANCE, GL_RGB, GL_RGBA). For example, to upload a 200*100 pixel RGB array into an already allocated texture:
-$$code(lang=c++)
+~~~~{.cpp}
 
 unsigned char pixels[200*100];
 for (int i = 0; i < 200*100; i++){
 	pixels[i] = (int)(255 * ofRandomuf());
 }
 myTexture.loadData(pixels, 200, 100, GL_RGB);
-$$/code
+~~~~
 
 
 

@@ -36,22 +36,22 @@ This is a templated function so the types of the parameters are not predefined t
 The signature of the listener method depends on the event type. Every event is defined as:
 
 
-$$code(lang=c++)
+~~~~{.cpp}
 ofEvent<type> event;
-$$/code
+~~~~
 
 
 where type is the type of the parameter that is going to be passed when the event is notified. The listener method can have one of this two signatures:
 
 
-$$code(lang=c++)
+~~~~{.cpp}
 void listenerMethod(type & parameter);
-$$/code
+~~~~
 
 
-$$code(lang=c++)
+~~~~{.cpp}
 void listenerMethod(const void * sender, type parameter);
-$$/code
+~~~~
 
 
 Where type must be the same as that of the event it listens to, and sender will be a pointer to the notifying class.

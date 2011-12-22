@@ -148,13 +148,13 @@ _advanced: False_
 _description: _
 
 This creates an ofImage from a file which can be a local string or a URL, allocating space for the pixels, and copying the pixels into the texture that the ofImage instance contains.
-$$code(lang=c++)
+~~~~{.cpp}
 ofImage img("http://www.openframeworks.cc/wp-content/themes/ofw/images/ofw-logo.gif");
-$$/code
+~~~~
 or
-$$code(lang=c++)
+~~~~{.cpp}
 ofImage img("anImage.png"); // assumes this is in bin/data
-$$/code
+~~~~
 
 
 

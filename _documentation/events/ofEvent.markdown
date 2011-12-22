@@ -9,33 +9,33 @@ Class for creating custom events. Also used inside oF for it's own events (see o
 ie: To create a new event:
 
 
-$$code(lang=c++)
+~~~~{.cpp}
 ofEvent<float> onVolumeChange;
-$$/code
+~~~~
 
 
 To notify an event of that type:
 
 
-$$code(lang=c++)
+~~~~{.cpp}
 ofNotifyEvent(onVolumeChange, 10.0);
-$$/code
+~~~~
 
 
 To add a listener to that event, if the event is for example in an object called mySoundObject, and you want to register testApp as a listener for that event:
 
 
-$$code(lang=c++)
+~~~~{.cpp}
 ofAddListener(mySoundObject.onVolumeChange,this, &testApp:onVolumeChange);
-$$/code
+~~~~
 
 
 where testApp::onVolumeChange is a function with the following signature:
 
 
-$$code(lang=c++)
+~~~~{.cpp}
 void onVolumeChange(float & volume);
-$$/code
+~~~~
 
 
 See the advancedEventsExample to see a complete example on how to work with events in oF.
@@ -49,14 +49,14 @@ Events have a private copy constructor to avoid that a copy of an object with an
 ie:
 
 wrong:  
-$$code(lang=c++)
+~~~~{.cpp}
 vector< ofEvent<int> > events;
-$$/code
+~~~~
 
 right:  
-$$code(lang=c++)
+~~~~{.cpp}
 vector< ofEvent<int>* > events;
-$$/code
+~~~~
 
 
 ##Methods

@@ -4,19 +4,19 @@
 ##Description
 
 ofPixels is an object for working with blocks of pixels, those pixels can be copied from an image that you've loaded, something that you've drawn using ofGraphics, or a ofVideoGrabber instance. You can create an image from pixels, using on ofPixels object like so:
-$$code(lang=c++)
+~~~~{.cpp}
 ofPixels p;
 ofLoadImage(p, "pathToImage.jpg");
-$$/code
+~~~~
 ofPixels represents pixels data on the CPU as opposed to an ofTexture which represents pixel data on the GPU. They can easily be made inter-operational though:
-$$code(lang=c++)
+~~~~{.cpp}
 ofTexture tex;
 // do some stuff with t
 ofPixels pix;
 tex.readToPixels(pix); // now all the pixels from tex are in pix
-$$/code
+~~~~
 You can access the pixels in an ofPixels object with the [] operator.
-$$code(lang=c++)
+~~~~{.cpp}
 ofPixels pix;
 // put some stuff in the pixels
 int i = 0;
@@ -24,7 +24,7 @@ while( i < pix.size()) {
 	char c = pix[i];
 	i++;
 }
-$$/code
+~~~~
 
 
 

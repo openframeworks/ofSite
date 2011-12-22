@@ -356,9 +356,9 @@ _description: _
 
 set a texture reference
 On your shader it should look like this:
-$$code(lang=c++)
+~~~~{.cpp}
 uniform sampler2DRect texture;
-$$/code
+~~~~
 
 
 
@@ -388,9 +388,9 @@ _advanced: False_
 _description: _
 
 For multi-texturing.
-$$code(lang=c++)
+~~~~{.cpp}
 uniform sampler2DRect texture;
-$$/code
+~~~~
 
 
 
@@ -420,9 +420,9 @@ _advanced: False_
 _description: _
 
 set a single uniform value. On your shader this should look like:
-$$code(lang=c++)
+~~~~{.cpp}
 uniform int texture;
-$$/code
+~~~~
 
 
 
@@ -451,9 +451,9 @@ _advanced: False_
 
 _description: _
 
-$$code(lang=c++)
+~~~~{.cpp}
 uniform ivec2 texture;
-$$/code
+~~~~
 
 
 
@@ -482,9 +482,9 @@ _advanced: False_
 
 _description: _
 
-$$code(lang=c++)
+~~~~{.cpp}
 uniform ivec3 texture;
-$$/code
+~~~~
 
 
 
@@ -513,9 +513,9 @@ _advanced: False_
 
 _description: _
 
-$$code(lang=c++)
+~~~~{.cpp}
 uniform ivec4 texture;
-$$/code
+~~~~
 
 
 
@@ -632,9 +632,9 @@ _advanced: False_
 _description: _
 
 set a vec4 uniform on the shader
-$$code(lang=c++)
+~~~~{.cpp}
 vec4 fv;
-$$/code
+~~~~
 
 
 
@@ -664,13 +664,13 @@ _advanced: False_
 _description: _
 
 set an array of uniform values on the shader, this uses single values, i.e. 
-$$code(lang=c++)
+~~~~{.cpp}
 int ids[4] = {1, 2, 3, 4};
-$$/code
+~~~~
 On the shader side, this is:
-$$code(lang=c++)
+~~~~{.cpp}
 ivec iv[2];
-$$/code
+~~~~
 
 
 
@@ -700,9 +700,9 @@ _advanced: False_
 _description: _
 
 set an array of uniform values on the shader using int[2] value. On the shader this looks like:
-$$code(lang=c++)
+~~~~{.cpp}
 ivec2 iv[2];
-$$/code
+~~~~
 
 
 
@@ -732,9 +732,9 @@ _advanced: False_
 _description: _
 
 set an array of uniform values on the shader using int[2] value. On the shader this looks like:
-$$code(lang=c++)
+~~~~{.cpp}
 ivec3 iv[2];
-$$/code
+~~~~
 
 
 
@@ -764,9 +764,9 @@ _advanced: False_
 _description: _
 
 set an array of uniform values on the shader using int[2] value. On the shader this looks like:
-$$code(lang=c++)
+~~~~{.cpp}
 ivec4 iv[2];
-$$/code
+~~~~
 
 
 
@@ -797,9 +797,9 @@ _description: _
 
 set an array of uniform values on the shader using int[2] value. On the shader this looks like:
 This allows you to set multiple float uniforms.
-$$code(lang=c++)
+~~~~{.cpp}
 float v[2];
-$$/code
+~~~~
 
 
 
@@ -829,9 +829,9 @@ _advanced: False_
 _description: _
 
 This allows you to set multiple vec2 uniforms.
-$$code(lang=c++)
+~~~~{.cpp}
 vec2 v[2];
-$$/code
+~~~~
 
 
 
@@ -861,9 +861,9 @@ _advanced: False_
 _description: _
 
 This allows you to set multiple vec3 uniforms.
-$$code(lang=c++)
+~~~~{.cpp}
 vec3 v[2];
-$$/code
+~~~~
 
 
 
@@ -893,9 +893,9 @@ _advanced: False_
 _description: _
 
 This allows you to set multiple vec4 uniforms.
-$$code(lang=c++)
+~~~~{.cpp}
 vec4 v[2];
-$$/code
+~~~~
 
 
 

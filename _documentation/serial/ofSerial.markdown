@@ -276,7 +276,7 @@ Tries to read 'length' bytes from the connected serial device. In some cases it 
 This function should only be called when Serial.available() is reporting >0 bytes available.
 
 An example of how to reliably read 8 bytes:
-$$code(lang=c++)
+~~~~{.cpp}
 
 // we want to read 8 bytes
 int bytesRequired = 8;
@@ -313,7 +313,7 @@ while ( bytesRemaining > 0 )
     }
   }
 }
-$$/code
+~~~~
 
 
 
@@ -343,7 +343,7 @@ _advanced: False_
 _description: _
 
 Writes a string of bytes to the connected serial device. As with readBytes() the return code should be checked and the call to writeBytes() repeated with the remaining data until all bytes have been written.
-$$code(lang=c++)
+~~~~{.cpp}
 
 ofSerial mySerial;
 mySerial.setup(0, 9600);
@@ -351,7 +351,7 @@ int numSent = mySerial.writeBytes("Hello World");
 // numSent is how many bytes written; for example if numSent 
 // is 3 then "Hel" has been written and the call should be retried
 // with "lo World" to complete the write.
-$$/code
+~~~~
 
 
 

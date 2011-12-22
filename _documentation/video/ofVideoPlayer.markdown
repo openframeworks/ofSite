@@ -6,9 +6,9 @@
 The ofVideoPlayer class loads in a movie file via quicktime in windows and mac  or gstreamer in linux, and offers various controls to play the movie, control the properties of the movie, and to access the pixels of a given frame.
 
 Example:
-$$code(lang=c++)
+~~~~{.cpp}
 ofVideoPlayer myPlayer;
-$$/code
+~~~~
 
 
 
@@ -722,12 +722,12 @@ _advanced: False_
 _description: _
 
 Sets the looping state of the movie. Deafult behavior is to loop. There are three options:
-$$code(lang=c++)
+~~~~{.cpp}
 
 OF_LOOP_NONE - don't loop, the movie will stop when it gets to the last frame (or first frame, if playing backwards)
 OF_LOOP_NORMAL - loop normally (the last frame loops to the first frame)
 OF_LOOP_PALINDROME - loop back and forth
-$$/code
+~~~~
 
 
 

@@ -340,10 +340,10 @@ _description: _
 
 The copy constructor. Pass in another image and it copies it. 
 
-$$code(lang=c++)
+~~~~{.cpp}
 image1.loadImage("face.jpg");
 ofImage image2(image1);
-$$/code
+~~~~
 
 
 image1 and image2 are now identical. 
@@ -406,11 +406,11 @@ _description: _
 
 Makes the current ofImage a copy of another ofImage. Same as clone(). 
 
-$$code(lang=c++)
+~~~~{.cpp}
 
 image2.loadImage("face.jpg");
 image1 = image2;
-$$/code
+~~~~
 
 
 image1 and image2 are now identical. 
@@ -472,11 +472,11 @@ _description: _
 
 Makes the current ofImage a copy of another ofImage. 
 
-$$code(lang=c++)
+~~~~{.cpp}
 
 image2.loadImage("face.jpg");
 image1.clone(image2);
-$$/code
+~~~~
 
 
 image1 and image2 are now identical. 
@@ -673,18 +673,18 @@ _description: _
 Saves an image to a file named fileName. It will guess, based on the name, what filetype to save as. This file will be relative to the data folder. 
 
 You can use this, combined with grabSceen, in order to save an image:
-$$code(lang=c++)
+~~~~{.cpp}
 myImage.grabScreen(0,0,500,500);
 myImage.saveImage("partOfTheScreen.png");
-$$/code
+~~~~
 
 
 You can also use dynamically generated names:
-$$code(lang=c++)
+~~~~{.cpp}
 myImage.grabScreen(0,0,500,500);
 myImage.saveImage("partOfTheScreen-"+ofToString(snapCounter)+".png");
 snapCounter++;
-$$/code
+~~~~
 
 
 
@@ -780,10 +780,10 @@ _description: _
 Converts the image into a different type. 
 
 For example, you can load in a color image, and convert it to grayscale:
-$$code(lang=c++)
+~~~~{.cpp}
 myImage.loadImage("somethingColor.jpg");
 myImage.setImageType(OF_IMAGE_GRAYSCALE); 	// now I am grayscale;
-$$/code
+~~~~
 
 
 
@@ -962,28 +962,28 @@ Changes the drawing position specified by draw() from the normal top-left corner
 Note: see also setAnchorPercent() if you want to specify the anchor as a percentage of the image size. 
 
 For example to draw an image so that its center is at 100, 100:
-$$code(lang=c++)
+~~~~{.cpp}
 myImage.setAnchorPoint(myImage.getWidth()/2, myImage.getHeight()/2); 
 myImage.draw(100, 100);
-$$/code
+~~~~
 
 
 To rotate an image around its center at 100, 100:
-$$code(lang=c++)
+~~~~{.cpp}
 ofPushMatrix();
   ofTranslate(100, 100, 0);
   ofRotate(45);
   myImage.setAnchorPercent(myImage.getWidth()/2, myImage.getHeight()/2); 
   myImage.draw(0, 0); 
 ofPopMatrix();
-$$/code
+~~~~
 
 
 To align the right side of an image with the right edge of the window:
-$$code(lang=c++)
+~~~~{.cpp}
 myImage.setAnchorPercent(myImage.getWidth(), 0.0);
 myImage.draw(ofGetWidth(), 0);
-$$/code
+~~~~
 
 
 

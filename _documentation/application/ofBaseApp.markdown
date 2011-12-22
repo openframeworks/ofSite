@@ -494,17 +494,17 @@ _advanced: False_
 _description: _
 
 If you have setup audio input, via ofSetupAudio, this function will be called when you have one buffers worth of audio. Since you may have requested mutli-channel audio (for example, stereo input), you get not only an array of floating point info, also the size of the buffer, and the number of channels. The size of input (the float array with audio data) is: bufferSize * nChannels; The data will come interleaved, so if, for example, you request 2 channel (left / right) input, the samples come:
-$$code(lang=c++)
+~~~~{.cpp}
 
 l r l r l r l r l r ....
 0 1 2 3 4 5 6 7 8 9 ....
-$$/code
+~~~~
 
 so to access an individual sample "n" for channel "j" , you could write something like:
-$$code(lang=c++)
+~~~~{.cpp}
 
 input[n*(nChannels) + j];
-$$/code
+~~~~
 
 
 

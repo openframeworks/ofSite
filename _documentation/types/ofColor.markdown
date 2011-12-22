@@ -40,7 +40,7 @@
 This class contains variables defining a color. We can create a color object containing information about a certain color. 
 For example:
 
-$$code(lang=c++)
+~~~~{.cpp}
 
 ofColor red;
 red.r=255;
@@ -48,7 +48,7 @@ red.g=0;
 red.b=0;
 ofSetColor(red.r,red.g,red.b);
 
-$$/code
+~~~~
 
 
 
@@ -217,10 +217,10 @@ _advanced: False_
 _description: _
 
 This copies a color:
-$$code(lang=c++)
+~~~~{.cpp}
 ofColor mom(255, 0, 0);
 ofColor c(mom);
-$$/code
+~~~~
 
 
 
@@ -249,10 +249,10 @@ _advanced: False_
 
 _description: _
 
-$$code(lang=c++)
+~~~~{.cpp}
 ofColor mom(255, 0, 0);
 ofColor c(mom, 122); // now c is 50% alpha red
-$$/code
+~~~~
 
 
 
@@ -281,9 +281,9 @@ _advanced: False_
 
 _description: _
 
-$$code(lang=c++)
+~~~~{.cpp}
 ofColor c(0.5, 122); // now c is 50% alpha gray, ooh, dismal
-$$/code
+~~~~
 
 
 
@@ -312,10 +312,10 @@ _advanced: False_
 
 _description: _
 
-$$code(lang=c++)
+~~~~{.cpp}
 ofColor mom(255, 0, 0);
 ofColor c(mom, 122); // now c is 50% alpha red
-$$/code
+~~~~
 
 
 
@@ -374,10 +374,10 @@ _advanced: False_
 _description: _
 
 This allows you to create a color from a hexadecimal value like 0xffffff (white) or oxff000088 (red with 1/2 alpha). You get an ofColor instance back from the method so you can use it like:
-$$code(lang=c++)
+~~~~{.cpp}
 ofColor yellow = ofColor::fromHex(0xffff00);
 ofColor halfYellow = ofColor::fromHex(0xffff00, 122);
-$$/code
+~~~~
 
 
 
@@ -407,9 +407,9 @@ _advanced: False_
 _description: _
 
 Set a color using RGB.
-$$code(lang=c++)
+~~~~{.cpp}
 ofColor c(255, 0, 0); // red
-$$/code
+~~~~
 
 
 
@@ -439,9 +439,9 @@ _advanced: False_
 _description: _
 
 Grayscale, for the emo among us.
-$$code(lang=c++)
+~~~~{.cpp}
 ofColor c(0.5, 122); // now c is 50% alpha gray
-$$/code
+~~~~
 
 
 
@@ -653,11 +653,11 @@ _advanced: False_
 _description: _
 
 This awesome method allows you set a color based on a another color and the amount of that color that you want it to be set to, so for instance, if you had red and wanted halfway between red and blue, you could do this:
-$$code(lang=c++)
+~~~~{.cpp}
 ofColor r = ofColor::red;
 ofColor b = ofColor::blue;
 b.lerp(r, 0.5); // now purple!
-$$/code
+~~~~
 
 
 
@@ -1092,9 +1092,9 @@ _advanced: False_
 _description: _
 
 Operator overloading for a color, so you can do:
-$$code(lang=c++)
+~~~~{.cpp}
 ofColor newRed = ofColor::red;
-$$/code
+~~~~
 
 
 
@@ -1124,9 +1124,9 @@ _advanced: False_
 _description: _
 
 Operator overloading for a color, so you can do:
-$$code(lang=c++)
+~~~~{.cpp}
 ofColor newRed = ofColor::red;
-$$/code
+~~~~
 
 
 

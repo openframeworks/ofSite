@@ -146,7 +146,7 @@ _description: _
 
 Loads a fonts of a given filename in, and renders it to a texture at a given size (fontsize). It will look for the font file in the data/ folder. For example, to load the font arial at type size 32:
 
-$$code(lang=c++)
+~~~~{.cpp}
 
 // int the h file:
 
@@ -154,7 +154,7 @@ ofFont myFont;
 ...
 
 myFont.loadFont("arial.ttf", 32);
-$$/code
+~~~~
 
 
 

@@ -13,7 +13,7 @@ Attach the depth buffer of the ofFbo to a texture.
 Render the texture to screen with a pixel shader using ofShader.
 Rad!
 The following code snippet shows ping-ponging, a common technique with FBOs that involves adding two textures to the FBO and blurring one then the other in succession to create a blur effect.
-$$code(lang=c++)
+~~~~{.cpp}
 // draw scene into fbo
 fbo.begin();
 vidGrabber.draw(0, 0, fbo.getWidth(), fbo.getHeight());
@@ -36,7 +36,7 @@ for(int i=0; i<8; i++) {
 shader.end();
 fbo.end();
 fbo.draw(0, 0);
-$$/code
+~~~~
 Bloom effects are also often done with FBO objects as as Multiple Render to Texture or MRT effectrs.
 
 
