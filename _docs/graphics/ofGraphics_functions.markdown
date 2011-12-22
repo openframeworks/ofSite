@@ -1077,17 +1077,13 @@ ofPushStyle saves the current style settings for the ofGraphics after its call. 
 In the following example the properties of being red and filled only applies to the ellipse:
 
 <pre class="brush: cpp">
-
-
 void testApp::draw(){
-
-ofCircle(10,10,5);
-
-ofPushStyle();
-ofFill();
-ofsetColor(255,0,0);
-ofEllipse(30,10,40,40);
-ofPopStyle();
+	ofCircle(10,10,5);
+	ofPushStyle();
+	ofFill();
+	ofsetColor(255,0,0);
+	ofEllipse(30,10,40,40);
+	ofPopStyle();
 }    
 </pre>
 

@@ -16,6 +16,7 @@
               <h2>${modulename}</h2>
               <p>
               <%self:filter chain="markdown_template">
+              % if not clazz is None:
                   ${clazz.reference}
               % endif
               % if not functions is None:
