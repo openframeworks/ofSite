@@ -3,16 +3,7 @@
 
 ##Description
 
-
-<<<<<<< Updated upstream
-
-
-
-
-
-=======
 ofPath is a way to create a path or multiple paths consisting of points. It allows you to combine multiple paths consisting of points into a single vector data object that can be drawn to the screen, manipulated point by point, or manipulated with it's child subpaths. It is better at representing and manipulating complex shapes than the [ofPolyline](ofPolyline.htm) and more easily represents multiple child lines or shapes as either ofSubPath or ofPolyline instances. By default ofPath uses ofSubPath instances. Closing the path automatically creates a new path:
->>>>>>> Stashed changes
 
 
 $$code(lang=c++)
@@ -28,62 +19,6 @@ To use ofPolyline instances, simply set the mode to POLYLINES
 $$code(lang=c++)
 path.setMode(POLYLINES);
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-ofPath is a way to create a path or multiple paths consisting of points.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -117,7 +52,7 @@ _advanced: False_
 _description: _
 
 
-
+Creates a new ofPath instance.
 
 
 
@@ -145,7 +80,7 @@ _advanced: False_
 _description: _
 
 
-
+Removes all subpaths from the ofPath instance.
 
 
 
@@ -174,7 +109,7 @@ _description: _
 
 
 
-
+Creates a new subpath, either an ofPolyline instance or an ofSubPath instance. All points added after a call to ofSubPath will be done in the newly created subpath. Calling close() automatically calls create newSubPath(), ensuring that the closed path doesn't have new points added to it.
 
 
 
@@ -202,6 +137,7 @@ _description: _
 
 
 
+Closes the current subpath and creates a new subpath, either an ofPolyline or ofSubPath by calling newSubPath(), ensuring that the closed path doesn't have new points added to it.
 
 
 
@@ -229,7 +165,7 @@ _advanced: False_
 _description: _
 
 
-
+Draws a straight line from the current drawing position to the location indicated by p.
 
 
 
@@ -257,7 +193,7 @@ _advanced: False_
 _description: _
 
 
-
+Draws a straight line from the current drawing position to the location indicated by x,y.
 
 
 
@@ -286,7 +222,7 @@ _description: _
 
 
 
-
+Draws a straight line from the current drawing position to the location indicated by x,y,z.
 
 
 
@@ -313,7 +249,7 @@ _advanced: False_
 _description: _
 
 
-
+Moves the drawing position to p. This means that a subsequent calls to, for instance, lineTo() or curveTo() will connect the location p to the new location.
 
 
 
@@ -342,7 +278,7 @@ _description: _
 
 
 
-
+Moves the drawing position to x,y.z. This means that a subsequent calls to, for instance, lineTo() or curveTo() will connect the location x,y,z to the new location.
 
 
 
@@ -370,7 +306,7 @@ _description: _
 
 
 
-
+Draws a curve to p from the current drawing position.
 
 
 
@@ -397,8 +333,20 @@ _advanced: False_
 _description: _
 
 
+Draws a curve to x,y from the current drawing position. To draw a small rose curves at the mouse position:
 
+$$code(lang=c++)
+float scale = ofDist(mouseX, mouseY, px, py);
 
+for( float theta = 0; theta < TWO_PI; theta += 0.1) 
+{
+	float r =  cos(theta * (scale/6)) * scale; 
+	path.curveTo(mouseX + r * cos(theta), mouseY + r * sin(theta));
+}
+
+px = mouseX;
+py = mouseY;
+$$/code
 
 
 
@@ -425,7 +373,7 @@ _advanced: False_
 _description: _
 
 
-
+Draws a curve to x,y,z from the current drawing position.
 
 
 
@@ -453,7 +401,14 @@ _advanced: False_
 _description: _
 
 
-
+Creates a cubic bezier line from the current drawing point with the 2 control points indicated by ofPoint cp1 and cp2, that ends at ofPoint to. For instance, the following:
+~~~~{.cpp}
+line.addVertex(ofPoint(200, 400));
+line.bezierTo(100, 100, 800, 100, 700, 400);
+~~~~
+Creates this:
+![polyline bezier](/bezier.png)
+The control points are shown in yellow.
 
 
 
@@ -482,6 +437,8 @@ _description: _
 
 
 
+Creates a cubic bezier line from the current drawing point with the 2 control points indicated by the coordinates cx1, cy1 and cx2, cy2, that ends at the coordinates x, y.
+
 
 
 
@@ -509,7 +466,23 @@ _advanced: False_
 _description: _
 
 
-
+Creates a cubic bezier line in 3D space from the current drawing point with the 2 control points indicated by the coordinates cx1, cy1, cz1 and cx2, cy2, cz2, that ends at the coordinates x, y, z.
+~~~~{.cpp}
+float cx = ofGetWidth()/2;
+float cy = 200;
+float step = TWO_PI / 60;
+for (float i = 0.0; i < TWO_PI; i+=step) {
+	
+	
+	if(i == 0.0) {
+		line.addVertex(cx + (400*cos(i)), cy+400, 400 * sin(i));
+	} else {
+		line.bezierTo( cx - (200*cos(i)), cy-100, 400 * sin(i), 
+					   cx + (200*cos(i)), cy+600, 400 * sin(i), 
+					   cx + (400*cos(i)), cy+400, 400 * sin(i));
+	}
+}
+~~~~
 
 
 
@@ -538,6 +511,8 @@ _description: _
 
 
 
+Creates a quadratic bezier line in 3D space from the current drawing point with the beginning indicated by the coordinates cx1, cy1, cz1, the control point at cx2, cy2, cz2, and that ends at the coordinates x, y, z.
+![polyline curves](/curves.png)
 
 
 
@@ -565,6 +540,7 @@ _advanced: False_
 _description: _
 
 
+Creates a quadratic bezier line in 2D space from the current drawing point with the beginning indicated by the point p1, the control point at p2, and that ends at the point p3.
 
 
 
@@ -592,6 +568,9 @@ _advanced: False_
 
 _description: _
 
+
+
+Creates a quadratic bezier line in 3D space from the current drawing point with the beginning indicated by the coordinates cx1, cy1, the control point at cx2, cy2, and that ends at the coordinates x, y.
 
 
 
@@ -623,7 +602,13 @@ _description: _
 
 
 
+Creates an arc at centre, which has the radiusX, radiusY, and begins at angleBegin and ends at angleEnd. To draw a circle with a radius of 50 pixels at 100, 100:
 
+$$code(lang=c++)
+path.arc( 100, 100, 50, 50, 0, 360);
+$$/code
+
+Note that angleBegin needs to be larger than angleEnd, i.e. 0, 180 is ok, while 180,0 is not.
 
 
 <!----------------------------------------------------------------------------->
@@ -649,9 +634,16 @@ _advanced: False_
 _description: _
 
 
+Creates an arc at x,y, which has the radiusX, radiusY, and begins at angleBegin and ends at angleEnd. To draws a shape with a radius of 200 pixels at 300, 300:
 
+$$code(lang=c++)
+path.moveTo(300, 300);
+path.arc( 300, 300, 200, 200, 0, 271); // note 271, not 270 for precision
+$$/code
 
+![ofPath arc](/ofPath_arc.png)
 
+Note that angleBegin needs to be larger than angleEnd, i.e. 0, 180 is ok, while 180,0 is not.
 
 
 <!----------------------------------------------------------------------------->
@@ -677,7 +669,7 @@ _advanced: False_
 _description: _
 
 
-
+Creates an arc at x,y,z, which has the radiusX, radiusY, and begins at angleBegin and ends at angleEnd.
 
 
 
@@ -705,8 +697,81 @@ _advanced: False_
 _description: _
 
 
+This sets the way that the points in the sub paths are connected. OpenGL can only render convex polygons which means that any shape that isn't convex, i.e. that has points which are concave, going inwards, need to be tessellated into triangles so that OpenGL can render them. If you're using filled shapes with your ofPath this is done automatically for you. The possible options you can pass in are:
 
+OF_POLY_WINDING_ODD
+OF_POLY_WINDING_NONZERO
+OF_POLY_WINDING_POSITIVE
+OF_POLY_WINDING_NEGATIVE
+OF_POLY_WINDING_ABS_GEQ_TWO
 
+![ofPath winding modes](/windingModes.gif)
+
+So adding the following points:
+
+$$code(lang=c++)
+void testApp::setup(){
+	
+	path.lineTo(0, 400);
+	path.lineTo(400, 400);
+	path.lineTo(400, 0);
+	path.lineTo(0, 0); // outer
+	path.close();
+	path.moveTo(100, 100);
+	path.lineTo(100, 300);
+	path.lineTo(300, 300);
+	path.lineTo(300, 100); 
+	path.lineTo(100, 100); // inner 1
+	path.close();
+	path.moveTo(250, 150);
+	path.lineTo(150, 150);
+	path.lineTo(150, 250);
+	path.lineTo(250, 250); 
+	path.lineTo(250, 150); // inner 2 (backwards)
+	
+	
+	path2.lineTo(0, 400);
+	path2.lineTo(400, 400);
+	path2.lineTo(400, 0);
+	path2.lineTo(0, 0); // outer
+	path2.close();
+	path2.moveTo(100, 100);
+	path2.lineTo(300, 100);
+	path2.lineTo(300, 300);
+	path2.lineTo(100, 300); 
+	path2.lineTo(100, 100); // inner 1
+	path2.close();
+	path2.moveTo(150, 150);
+	path2.lineTo(250, 150);
+	path2.lineTo(250, 250);
+	path2.lineTo(150, 250); 
+	path2.lineTo(150, 150); // inner 2 (fwds)
+
+}
+
+void testApp::draw(){
+	
+	ofTranslate(40,40);
+	path.draw();
+	ofTranslate(410, 0);
+	path2.draw();
+	
+}
+
+void testApp::keyPressed(int key){
+	
+	mode++;
+	if( mode > 4 ) mode = 0;
+	
+	path.setPolyWindingMode((ofPolyWindingMode) mode);
+	path2.setPolyWindingMode((ofPolyWindingMode) mode);
+
+}
+$$/code
+
+we can see non zero and positive handle the winding differently:
+
+![ofPath winding](path_winding.png)
 
 
 
@@ -733,7 +798,7 @@ _advanced: False_
 _description: _
 
 
-
+Sets whether the path should be drawn as wireframes or filled.
 
 
 
@@ -761,7 +826,7 @@ _advanced: False_
 _description: _
 
 
-
+Sets the stroke width of the line if the ofPath is to be drawn not in wireframe.
 
 
 
@@ -789,7 +854,7 @@ _advanced: False_
 _description: _
 
 
-
+This sets the color of the path. This affects both the line if the path is drawn as wireframe and the fill if the path is drawn with fill. All subpaths are affeted.
 
 
 
@@ -818,7 +883,7 @@ _description: _
 
 
 
-
+This sets the color of the path. This affects both the line if the path is drawn as wireframe and the fill if the path is drawn with fill. All subpaths are affeted.
 
 
 
@@ -845,7 +910,7 @@ _advanced: False_
 _description: _
 
 
-
+This sets the fill color of the path. This has no affect if the path is drawn as wireframe.
 
 
 
@@ -874,7 +939,7 @@ _description: _
 
 
 
-
+This sets the fill color of the path. This has no affect if the path is drawn as wireframe.
 
 
 
@@ -902,7 +967,7 @@ _description: _
 
 
 
-
+This sets the stroke color of the path. This has no affect if the path is drawn filled.
 
 
 
@@ -928,7 +993,7 @@ _advanced: False_
 
 _description: _
 
-
+This sets the stroke color of the path. This has no affect if the path is drawn filled.
 
 
 
@@ -957,7 +1022,7 @@ _advanced: False_
 _description: _
 
 
-
+Returns the poly winding mode currently in use.
 
 
 
@@ -987,7 +1052,7 @@ _description: _
 
 
 
-
+Whether the path is using a fill or not.
 
 
 <!----------------------------------------------------------------------------->
@@ -1014,7 +1079,7 @@ _description: _
 
 
 
-
+Returns the ofColor that the ofPath is using.
 
 
 
@@ -1041,7 +1106,7 @@ _advanced: False_
 _description: _
 
 
-
+Returns the stroke color that the ofPath is using.
 
 
 
@@ -1070,7 +1135,7 @@ _description: _
 
 
 
-
+Returns the stroke width.
 
 
 
@@ -1126,7 +1191,7 @@ _description: _
 
 
 
-
+Draws the path at x,y. Calling draw() also calls tessllate().
 
 
 
