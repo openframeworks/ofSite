@@ -981,3 +981,8 @@ div#github .github_avatar img {
 	width: 50%;
 	float: left;
 }
+#credits {
+	text-align: center;
+	color: #666;
+	font-size: .8em;
+}

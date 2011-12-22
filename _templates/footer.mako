@@ -1,14 +1,17 @@
-
 <p id="credits">
 
-<!--br/>
-RSS feeds for <a href="${bf.util.site_path_helper(bf.config.blog.path,'feed')}">Entries</a-->
+Last updated ${self.getTime()}
+
+<!--br/>RSS feeds for <a href="${bf.util.site_path_helper(bf.config.blog.path,'feed')}">Entries</a-->
+
 % if bf.config.blog.disqus.enabled:
  and <a
 href="http://${bf.config.blog.disqus.name}.disqus.com/latest.rss">Comments</a>.
 % endif
 <br/>
+
 </p>
+
 % if bf.config.blog.disqus.enabled:
 <script type="text/javascript">
 //<![CDATA[
