@@ -2,6 +2,7 @@
 from docs_members import DocsMethod
 from docs_members import DocsVar
 from docs_class import DocsClass
+from docs_function import DocsFunctionsFile, DocsFunction
 import os
 
 docs_root = '_docs/'
@@ -46,7 +47,59 @@ def addfield(method,line):
         value = ((value == '1') or (value == 'True') or (value=='true') or (value=='TRUE'))
     #print field, "=", value
     setattr(method,field,value)
+
+
+def getfunctionsfiles_list():
+    functionsfiles_list = []
+    for root, dirs, files in os.walk(os.path.join(docs_root)):
+        for name in files:
+            file_split = os.path.splitext(name)
+            if file_split[1]=='.markdown':
+                f = open(os.path.join(root,name),'r')
+                state = 'begin'
+                for line in f:
+                    if state == 'begin' and line.find('#functions') == 0:
+                        functionsfile = file_split[0].replace('_functions','')
+                        functionsfiles_list.append(functionsfile)
+                        f.close()
+                        break
+    return functionsfiles_list
     
+def getfunctionsfile(filename):
+    functionsfile = DocsFunctionsFile(0)
+    functionsfile.name = filename
+    functionsfile.new = 1                        
+    function = DocsFunction(0)
+    for root, dirs, files in os.walk(os.path.join(docs_root)):
+        for name in files:
+            file_split = os.path.splitext(name)
+            if file_split[1]=='.markdown' and file_split[0] == filename+"_functions": 
+                f = open(os.path.join(root,name),'r')
+                state = 'begin'
+                linenum = 0
+                for line in f:
+                    if state == 'begin' and line.find('#functions') == 0:
+                        state = 'functionsfile'
+                        functionsfile.module = os.path.basename(root)
+                        functionsfile.new = False
+                    elif state == 'functionsfile' and line.find('##Description') == 0:
+                        state = 'filedescription'
+                    elif state == 'filedescription' and line.find('<!----------------------------------------------------------------------------->')!=0 and line!='\n':
+                        functionsfile.description = functionsfile.description + line
+                    elif state == 'filedescription' or state=='description' and line.find('###')==0:
+                        if(state=='description'):
+                            functionsfile.function_list.append(function)
+                        state = 'function'
+                        function = DocsFunction(0)
+                    elif state == 'function' and line.find('_')==0 and line.find('_description')==-1:
+                        #print "##########field: " + line
+                        addfield(function,line)
+                    elif state == 'function' and line.find('_description')==0:
+                        state = 'description'
+                    elif state == 'description' and line.find('<!----------------------------------------------------------------------------->')!=0 and line!='\n':
+                        function.description = function.description + line
+    return functionsfile
+
 def getclass_list():
     class_list = []
     for root, dirs, files in os.walk(os.path.join(docs_root)):
@@ -97,7 +150,7 @@ def getclass(clazz):
                     elif state == 'method' and line.find('_description')==0:
                         state = 'description'
                         
-                    elif state == 'description' and line.find('##')!=0 and line.find('<!----------------------------------------------------------------------------->')!=0:
+                    elif state == 'description' and line.find('##')!=0 and line.find('<!----------------------------------------------------------------------------->')!=0 and line!='\n':
                         method.description = method.description + line
                         
                     elif state == 'description' and line.find('###') == 0:
@@ -146,7 +199,7 @@ def getclass(clazz):
     return docs_clazz
     
     
-def serialize_function(f,function):
+def serialize_function(f,function,member):
     f.write('###' + function.returns + " " + function.syntax + "\n\n")
     f.write("<!--\n");
     f.write("_syntax: " + function.syntax + "_\n")
@@ -154,7 +207,8 @@ def serialize_function(f,function):
     f.write("_returns: " + function.returns + "_\n")
     f.write("_returns_description: " + function.returns_description + "_\n")
     f.write("_parameters: " + function.parameters + "_\n")
-    f.write("_access: " + function.access + "_\n")
+    if(member):
+        f.write("_access: " + function.access + "_\n")
     f.write("_version_started: " + function.version_started + "_\n")
     f.write("_version_deprecated: " + function.version_deprecated + "_\n")
     f.write("_summary: " + function.summary + "_\n")
@@ -205,7 +259,7 @@ def setclass(clazz):
     
     #f.write('//----------------------\n\n')
     for method in clazz.function_list:
-        serialize_function(f,method)
+        serialize_function(f,method,True)
 
     f.write('##Variables\n\n\n\n')
     
@@ -214,3 +268,17 @@ def setclass(clazz):
         serialize_var(f,var)
     f.close()
     return
+    
+def setfunctionsfile(functionfile):
+    try:
+        os.mkdir(os.path.join(docs_root,functionfile.module))
+    except:
+        pass
+    f = open(os.path.join(docs_root,functionfile.module,functionfile.name)+"_functions.markdown",'w')
+    f.write('#functions\n\n')
+    f.write('##Description\n\n' + functionfile.description + '\n\n\n\n')
+    
+    f.write('<!----------------------------------------------------------------------------->\n\n')
+    for function in functionfile.function_list:
+        serialize_function(f,function,False)
+        

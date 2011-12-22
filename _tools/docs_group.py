@@ -1,5 +1,4 @@
 import docs_class
-import docs_files
 
 class DocsGroup:
     def __init__(self,groupid):

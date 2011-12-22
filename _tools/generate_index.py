@@ -7,7 +7,27 @@ for module in modules:
     print "##" + module + "##\n\n"
     files = markdown_file.list_all_files(module)
     for f in files:
-        print "###" + f + "###\n\n"
-        print "__visible: true__\n\n"
-        print "__advanced: false__\n\n"
+        onlyfunctionsfile = False
+        if f.endswith("_functions"):
+            if f[:-10] in files:
+                continue
+            else:
+                f = f[:-10]
+                onlyfunctionsfile = True
+        print "###" + f + "###\n"
+        print "__visible: true__\n"
+        print "__advanced: false__\n"
+        
+        if onlyfunctionsfile:
+            functionsfile = markdown_file.getfunctionsfile(f)
+            prevfunction = ""
+            print '__functions__'
+            for function in functionsfile.function_list:
+                if prevfunction == function.name:
+                    continue
+                params = "()" if function.parameters=="" else "(...)"
+                print function.name + params + '\n'
+                prevfunction = function.name
+        print '\n\n\n'
+            
     
