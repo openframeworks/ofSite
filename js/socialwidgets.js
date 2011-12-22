@@ -25,7 +25,14 @@ function feedGithubLoaded(result) {
       if(title.indexOf("Merge") == 0){
         continue
       }
+			var date = entry.getElementsByTagName("updated")[0].textContent;
+			// <abbr class="timeago" title="2008-07-17T09:24:17Z">July 17, 2008</abbr>
+			var dateTag = document.createElement("span");
+			dateTag.className = "github_time";
+			dateTag.title = date;
+			dateTag.appendChild(document.createTextNode(jQuery.timeago(date)));
       a.appendChild(document.createTextNode(title));
+			a.appendChild(dateTag);
       //a.appendChild(document.createTextNode(entry.getElementsByTagNameNS("*","thumbnail")[0].getAttribute("url")));
       /*for( p in entry.getElementsByTagName("link")){
          a.appendChild(document.createTextNode(p.tagName));

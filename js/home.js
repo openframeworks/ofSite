@@ -29,7 +29,6 @@ function OnLoad() {
       loading_text: "searching twitter...",
       template: "{avatar} {text}"
     });
-    
 }
 
 google.setOnLoadCallback(OnLoad);

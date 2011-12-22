@@ -987,3 +987,7 @@ div#github .github_avatar img {
 	color: #666;
 	font-size: .8em;
 }
+.github_time {
+	font-size: .8em;
+	margin-left: 5px;
+}
