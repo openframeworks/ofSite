@@ -1,3 +1,5 @@
+from docs_group import DocsGroup
+import dbtools_files
 
 def list_all(db,type,advanced):
     cursor=db.cursor()
@@ -8,7 +10,7 @@ def list_all(db,type,advanced):
     for dbgroup in groups:
         group = DocsGroup(dbgroup[0])
         group.name = dbgroup[1]
-        group.class_list = docs_files.list_all_classes(db,dbgroup[0])
-        group.function_list = docs_files.list_all_functions(db,dbgroup[0],advanced)
+        group.class_list = dbtools_files.list_all_classes(db,dbgroup[0])
+        group.function_list = dbtools_files.list_all_functions(db,dbgroup[0],advanced)
         groups_list.append(group)
     return groups_list

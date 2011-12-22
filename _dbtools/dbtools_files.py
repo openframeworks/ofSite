@@ -9,6 +9,14 @@ def names(db,advanced):
     cursor.execute(sql,(advanced,))
     files=cursor.fetchall()
     return files
+    
+def list_all(db,groupid):
+    cursor=db.cursor()
+    sql='SELECT id,name,description FROM docs_files WHERE groupid=%s'
+    cursor.execute(sql,(groupid,))
+    files=cursor.fetchall()
+    return files
+    
 
 def list_all_classes(db,groupid):
     cursor=db.cursor()
