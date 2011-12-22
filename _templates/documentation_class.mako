@@ -18,10 +18,10 @@
               <p>
               <%self:filter chain="markdown_template">
               % if not clazz is None:
-                  ${clazz.reference}
+${clazz.reference}
               % endif
               % if not functions is None:
-                  ${functions.description}
+${functions.description}
               % endif
               </%self:filter>
               </p>
