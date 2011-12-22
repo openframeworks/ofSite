@@ -3,82 +3,12 @@
 
 ##Description
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 The ofVideoPlayer class loads in a movie file via quicktime in windows and mac  or gstreamer in linux, and offers various controls to play the movie, control the properties of the movie, and to access the pixels of a given frame.
 
 Example:
-
 $$code(lang=c++)
 ofVideoPlayer myPlayer;
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

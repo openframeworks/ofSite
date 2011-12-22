@@ -521,3 +521,30 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void ofNotifyWindowEntry(state)
+
+<!--
+_syntax: ofNotifyWindowEntry(state)_
+_name: ofNotifyWindowEntry_
+_returns: void_
+_returns_description: _
+_parameters: int state_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
