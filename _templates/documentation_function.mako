@@ -9,7 +9,7 @@
 ${function.description}
 		</%self:filter>
 	</div>
-	<div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a>&nbsp;<a href="http://github.com/openframeworks/ofSite/blob/master/${function.file}">GIT</a></div>
+	<div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div>
 </div>
 
 <%def name="filter(chain)">

@@ -15,7 +15,6 @@
           <div id="main_block">
             <div id="prose_block">
               <h2>${modulename}</h2>
-              <p><a href="http://github.com/openframeworks/ofSite/blob/master/${clazz.name}">Edit this page on GitHub</a><p>
               <p>
               <%self:filter chain="markdown_template">
               % if not clazz is None:
@@ -30,8 +29,7 @@ ${functions.description}
               <div id="methods_list">
               <!-- list of methods -->
               % if not clazz is None and len([x for x in clazz.function_list if not x.advanced and x.visible and x.access=='public'])>0:
-                  <h3>${clazz.name} methods</h3>
-
+                  <h3>${clazz.name} methods <a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/${clazz.module}/${clazz.name}.markdown">edit</a></h3>
                   <ul class="functionslist">
                       <% prevmethod = "" %>
                       % for method in clazz.function_list:
@@ -48,7 +46,7 @@ ${functions.description}
               <div id="variables_list">
               <!-- list of variables -->              
               % if not clazz is None and len([x for x in clazz.var_list if not x.advanced and x.visible and x.access=='public'])>0:
-                  <h3>${clazz.name} variables</h3>
+                  <h3>${clazz.name} variables <a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/${clazz.module}/${clazz.name}.markdown">edit</a></h3>
                   <ul class="varslist">
                       % for var in clazz.var_list:
                           % if var.visible and not var.advanced and var.access=='public':
@@ -62,7 +60,7 @@ ${functions.description}
               <div id="functions_list">
               <!-- list of c functions -->              
               % if len([x for x in functions.function_list if not x.advanced and x.visible])>0:
-                  <h3>${functions.name} functions</h3>
+                  <h3>${functions.name} functions <a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/${functions.module}/${functions.name}_functions.markdown">edit</a></h3>
                   <ul class="functionslist">
                       <% prevmethod = "" %>
                       % for method in functions.function_list:
