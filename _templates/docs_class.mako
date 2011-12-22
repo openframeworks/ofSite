@@ -51,6 +51,23 @@
                   </ul>
               % endif
               </div>
+              
+              <div id="functions_list">
+              <!-- list of c functions -->              
+              % if len([x for x in functions.function_list if not x.advanced and x.visible])>0:
+                  <h3>${clazz.name} c functions</h3>
+                  <ul class="functionslist">
+                      <% prevmethod = "" %>
+                      % for method in functions.function_list:
+                          % if prevmethod != method.name and method.visible and not method.advanced:
+                              <% params = "()" if method.parameters=="" else "(...)" %> 
+                              <li> <a href="#${method.name}">${method.name}${params}</a> </li>
+                          % endif
+                          <% prevmethod = method.name %>
+                      % endfor
+                  </ul>
+              % endif
+              </div>
 
               <br style="clear:both"/>
               
@@ -73,6 +90,16 @@
                         % endif
                   % endfor
               % endif 
+              
+              <!-- functions detail -->
+              % if len([x for x in functions.function_list if not x.advanced and x.visible])>0:
+                  <h3>${clazz.name} c functions</h3>
+                  % for method in functions.function_list:
+                        % if method.visible and not method.advanced:
+                            <%include file="docs_function.mako" args="function=method" />    
+                        % endif
+                  % endfor
+              % endif
             </div><!-- End Prose Block -->
           </div><!-- End Main Block -->
         </div>
