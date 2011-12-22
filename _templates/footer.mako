@@ -28,3 +28,13 @@ href="http://${bf.config.blog.disqus.name}.disqus.com/latest.rss">Comments</a>.
 //]]>
 </script>
 % endif
+
+
+
+<%def name="getTime()">
+  <% 
+    from time import gmtime, strftime
+    currentTime = strftime("%A, %d %B %Y %H:%M:%S UTC", gmtime())
+  %>
+  ${currentTime}
+</%def>
