@@ -3,41 +3,8 @@
 
 ##Description
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ofPolyLine allows you to combine multiple ofPath instance into a single vector data object that can be drawn to the screen, manipulated point by point, and combined with other ofPolyline instances. 
-
-
 You can add points to an ofPolyline by adding vertices:
-
 $$code(lang=c++)
 float i = 0;
 while (i < TWO_PI) { // make a heart
@@ -48,11 +15,8 @@ while (i < TWO_PI) { // make a heart
 	i+=0.005*HALF_PI*0.5;
 }
 line.close(); // close the shape
-
 $$/code
-
 or you can draw lines or curves:
-
 $$code(lang=c++)
 float angle = 0;
 while (angle < TWO_PI ) {
@@ -61,42 +25,8 @@ while (angle < TWO_PI ) {
 	angle += TWO_PI / 30;
 }
 $$/code
-
-
 ofPolyline also includes methods to get the cloeset point, determien whether a point is inside shape, and resample shapes. Along with the ofPath class, it's the best way to draw and manipulate 2D and 3D vector graphics that you'll need to update and manipulate frequently.
-
 If you use the line or curveTo or bezierTo functions, you move the drawing point, so that drawing a line to 100,100 means a line from 0,0 to 100, 100. The next line would be a line from 100,100 to whereever you go next. Storing this position means that you can easily create continuous drawings without difficulty.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

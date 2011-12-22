@@ -7,69 +7,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ##Methods
 
 
@@ -2359,6 +2296,54 @@ _description: _
 <!--
 _name: currentFbo_
 _type: ofFbo_
+_access: private_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofMatrix4x4 modelViewStack
+
+<!--
+_name: modelViewStack_
+_type: ofMatrix4x4_
+_access: private_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofMatrix4x4 projectionStack
+
+<!--
+_name: projectionStack_
+_type: ofMatrix4x4_
 _access: private_
 _version_started: 007_
 _version_deprecated: _

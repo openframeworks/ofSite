@@ -7,69 +7,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ##Methods
 
 
@@ -396,6 +333,62 @@ _version_deprecated: _
 _summary: _
 _constant: False_
 _static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofLog operator<<(&))
+
+<!--
+_syntax: operator<<(&))_
+_name: operator<<_
+_returns: ofLog_
+_returns_description: _
+_parameters: std_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofLog operator<<(&))
+
+<!--
+_syntax: operator<<(&))_
+_name: operator<<_
+_returns: ofLog_
+_returns_description: _
+_parameters: std_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
 _visible: True_
 _advanced: False_
 -->

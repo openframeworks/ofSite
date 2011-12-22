@@ -3,80 +3,11 @@
 
 ##Description
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Default window manager based on glut. This class provides all the functionality to create a window, change/query it's size, position... and all the keyboard and mouse events.
 
 Introduced in 006 along with ofAppBaseWindow to provide a mean of substituting the underlying windowing toolkit in oF.
 
 The functionality provided by this class or any other inheriting from ofAppBaseWindow should not be accessed directly but through the functions available in ofAppRunner.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1241,6 +1172,34 @@ _name: dragEvent_
 _returns: void_
 _returns_description: _
 _parameters: char **fileNames, int howManyFiles, int dragX, int dragY_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: yes_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void entry_cb(state)
+
+<!--
+_syntax: entry_cb(state)_
+_name: entry_cb_
+_returns: void_
+_returns_description: _
+_parameters: int state_
 _access: public_
 _version_started: 007_
 _version_deprecated: _

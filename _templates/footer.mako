@@ -1,6 +1,6 @@
 <p id="credits">
 
-Last updated ${self.getTime()}
+Last updated ${self.getTime()}&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/openframeworks/ofSite/commit/${self.getLastCommitHash()}">${self.getLastCommitHash()}</a>
 
 <!--br/>RSS feeds for <a href="${bf.util.site_path_helper(bf.config.blog.path,'feed')}">Entries</a-->
 
@@ -36,5 +36,15 @@ href="http://${bf.config.blog.disqus.name}.disqus.com/latest.rss">Comments</a>.
     from time import gmtime, strftime
     currentTime = strftime("%A, %d %B %Y %H:%M:%S UTC", gmtime())
   %>
-  ${currentTime}
+${currentTime}
+</%def>
+
+<%def name="getLastCommitHash()">
+<% 
+    import subprocess
+    p1 = subprocess.Popen(["git", "log", "-1"], stdout=subprocess.PIPE)
+    out = p1.communicate()
+    hash = out[0][len("commit "):out[0].find('\n')].strip()
+%>
+${hash}
 </%def>
