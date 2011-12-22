@@ -23,6 +23,15 @@
 
 
 
+
+
+
+
+
+
+
+
+
 As an example, with an fbo you can do some drawing to the fbo (instead of to the screen or a texture) and then do some blurring, maybe invert the colors, combine multiple images, all without needing to draw it to the screen until you're ready.
 
 fbos are also used to create views of other scenes, like a TV in a house. A scene can be rendered through an FBO to a texture, then that texture can be applied to the surface of another object.
@@ -72,6 +81,18 @@ fbo.draw(0, 0);
 $$/code
 
 Bloom effects are also often done with FBO objects as as Multiple Render to Texture or MRT effectrs.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

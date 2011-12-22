@@ -57,15 +57,14 @@ _description: _
 
 Gets the background color.
 eg:
-<pre class="brush: cpp">
-
+~~~~{.cpp}
 float * bgColor = ofBgColorPtr();
 //lets get the individual values!
 float r = bgColor[0];
 float g = bgColor[1];
 float b = bgColor[2];
 float a = bgColor[3];
-</pre>
+~~~~
 
 
 
@@ -463,8 +462,7 @@ _advanced: False_
 _description: _
 
 Call this to start drawing a new shape. Needs to be followed by a list of vertex points and lastly a call to ofEndShape().
-<pre class="brush: cpp">
-
+~~~~{.cpp}
 //draws a star
 ofSetPolyMode(OF_POLY_WINDING_NONZERO);
 ofBeginShape();
@@ -474,7 +472,7 @@ ofBeginShape();
   ofVertex(305,200);
   ofVertex(250,25);
 ofEndShape();
-</pre>
+~~~~
 
 
 
@@ -727,13 +725,12 @@ _advanced: False_
 _description: _
 
 sets the draw color with r,g,b,a 0-255. For alpha (transparency), you must first enable transparent blending (turned off by default for performance reasons), and draw in the proper z-order (objects in the back drawn first). For example, to draw a transparent red rectangle: 
-<pre class="brush: cpp">
-
+~~~~{.cpp}
 ofEnableAlphaBlending();	// turn on alpha blending
 ofSetColor(255,0,0,127);	// red, 50% transparent
 ofRect(20,20,100,100);
 ofDisableAlphaBlending();	// turn it back off, if you don't need it
-</pre>
+~~~~
 
 
 
@@ -762,12 +759,11 @@ _advanced: False_
 _description: _
 
 Sets the draw color with r,g,b, passed in as a hex. Hex is a conventient way to write colors. Some examples:
-<pre class="brush: cpp">
-
+~~~~{.cpp}
 ofSetColor(0xffffff);  // white  (255,255,255)
 ofSetColor(0x000000);  // black  (0,0,0);
 ofSetColor(0x00ff00);  // green  (0,255,0);
-</pre>
+~~~~
 
 
 
@@ -908,26 +904,20 @@ _advanced: False_
 _description: _
 
 Draws a bitmapped string, on screen, at point (x,y). For example, you can write some text on screen like this:
-<pre class="brush: cpp">
-
+~~~~{.cpp}
 ofDrawBitmapString("hi!!", 100,100);
-</pre>
-
+~~~~
 Your strings can even be multiline:
-<pre class="brush: cpp">
-
+~~~~{.cpp}
 ofDrawBitmapString("a test
 of multiline
 text", 100,100);
-</pre>
-
+~~~~
 you can also using dynamically generated strings. For example, to print the frame rate:
-<pre class="brush: cpp">
-
+~~~~{.cpp}
 string fpsStr = "frame rate: "+ofToString(ofGetFrameRate(), 2);
 ofDrawBitmapString(fpsStr, 100,100);
-</pre>
-
+~~~~
 Please note, ofDrawBitmapString wraps a glut function that uses glDrawPixels. On some graphics cards, you may discover that glDrawPixels is slow (or even, very slow). If so, you might want to invsetigate using ofTrueTypeFont with a small typeface, non-anti-aliased, as a suitable alternative.
 
 
@@ -1073,10 +1063,8 @@ _advanced: False_
 _description: _
 
 ofPushStyle saves the current style settings for the ofGraphics after its call. Usage of ofPushStyle and ofPopStyle allow users to have more control of certain graphics elements. All the style that applies to certain elements is controled using ofStyle class. See ofStyle type.
-
 In the following example the properties of being red and filled only applies to the ellipse:
-
-<pre class="brush: cpp">
+~~~~{.cpp}
 void testApp::draw(){
 	ofCircle(10,10,5);
 	ofPushStyle();
@@ -1085,8 +1073,7 @@ void testApp::draw(){
 	ofEllipse(30,10,40,40);
 	ofPopStyle();
 }    
-</pre>
-
+~~~~
 
 
 
@@ -1227,18 +1214,15 @@ _description: _
 
 ofPushMatrix saves the current coordinate system allowing users to develop specific movements in some graphic objects. ofPopMatrix needs to be called after.
 In the following example we only rotate the square.
-
-<pre class="brush: cpp">
-
+~~~~{.cpp}
 void testApp::draw(){
-	
 	ofCircle(10, 10, 5);
 	ofPushMatrix();
 	ofRotateX(90);
 	ofRect(10,10,40,40);
 	ofPopMatrix()
 }
-</pre>
+~~~~
 
 
 
@@ -1302,7 +1286,6 @@ Use ofPushMatrix and ofPopMatrix to save and restore the untranslated coordinate
 
 
 
-
 <!----------------------------------------------------------------------------->
 
 ###void ofScale(xAmnt,yAmnt,zAmnt)
@@ -1326,16 +1309,12 @@ _description: _
 
 ofScale produces a nonuniform scaling along the x, y, and z axes. The three parameters xAmnt, yAmnt and zAmnt indicate the desired scale factor along each of the three axes.
 e.g:
-<pre class="brush: cpp">
-
+~~~~{.cpp}
 void testApp::draw(){
-
 	ofScale(0.5,1,1);
 	ofRect(10,10,40,40);	
 }
-</pre>
-
-
+~~~~
 Rectangle width will be now 20px!
 
 

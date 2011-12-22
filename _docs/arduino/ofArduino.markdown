@@ -21,6 +21,15 @@
 
 
 
+
+
+
+
+
+
+
+
+
 This is a way to control an ARduino that has had the firmata library loaded onto it from OF. To load firmata onto your Arduino,  run the Arduino IDE, open the Examples > Firmata > StandardFirmata sketch, and upload it to the Arduino board.
 
 Once the ofArduino instance returns true from isArduinoReady() you can set the mode of the different digital pins using sendDigitalPinMode()
@@ -36,6 +45,18 @@ sendDigitalPinMode(9, ARD_PWM)
 $$/code
 
 sets pin 9 to be a PWM out pin. Note that this only works on pins that are PWM enabled.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1211,13 +1232,13 @@ On the Arduino Uno pin: 2-13
 returns the last received value (if the pin mode is ARD_INPUT) or the last set value (if the pin mode is ARD_OUTPUT) for the given pin
 Note: pin 16-21 can also be used if analog inputs 0-5 are used as digital pins
 Returns whether the pin is reading high or low, 1 or 0. You can test against this with an if() statement which is handy:
-<pre class="brush: cpp">
+~~~~{.cpp}
 if(arduino.getDigital(pin)){
     // do something on high
 }else{
     // do something on low
 }
-</pre>
+~~~~
 
 
 

@@ -28,12 +28,33 @@
 
 
 
+
+
+
+
+
+
+
+
+
 The ofSoundPlayer class wraps fmod, which is a powerful audio utility library. The ofSoundPlayer allows you to load sound files and control and manipulate their playback and properties. 
 
 
 The ofSoundPlayer class wraps fmod, which is a powerful audio utility library.
 The ofSoundPlayer allows you to load sound files and control and manipulate
 their playback and properties.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -211,17 +232,17 @@ Loads a sound file given by fileName. Sound files can be in .wav, .aif, .mp3, .m
 Examples:
 
 Load a Sound
-<pre class="brush: cpp">
+~~~~{.cpp}
 ofSoundPlayer mySound;
 mySound.loadSound("beat.mp3");
-</pre>
+~~~~
 
 
 Load a Sound with Folder Path
-<pre class="brush: cpp">
+~~~~{.cpp}
 ofSoundPlayer mySound;
 mySound.loadSound("sounds/beat.mp3");
-</pre>
+~~~~
 
 
 Loads a sound file given by fileName. Sound files can be in .wav, .aif, .mp3,
@@ -235,21 +256,21 @@ freeze for a short time as the whole sound is read into memory.
 Examples:
   
 Load a Sound
-<pre class="brush: cpp">
+~~~~{.cpp}
     
     ofSoundPlayer mySound;  
     
     mySound.loadSound("beat.mp3");
-</pre>
+~~~~
   
   
 Load a Sound with Folder Path
-<pre class="brush: cpp">
+~~~~{.cpp}
     
     ofSoundPlayer mySound;  
     
     mySound.loadSound("sounds/beat.mp3");
-</pre>
+~~~~
   
   
 
@@ -283,17 +304,17 @@ _description: _
 Stops and unloads the current sound.
 
 Example:
-<pre class="brush: cpp">
+~~~~{.cpp}
 ofSoundPlayer mySound;
 mySound.load("beat.mp3");
 mySound.play();
 mySound.unloadSound(); //Stops sound from playing, unloads "beat.mp3"
-</pre>
+~~~~
 Stops and unloads the current sound.
   
 Example:
-<pre class="brush: cpp">
-<pre class="brush: cpp">
+~~~~{.cpp}
+~~~~{.cpp}
     
     ofSoundPlayer mySound;  
     
@@ -302,7 +323,7 @@ Example:
     mySound.play();  
     
     mySound.unloadSound(); //Stops sound from playing, unloads "beat.mp3"
-</pre>`
+~~~~`
 
 
 
@@ -336,22 +357,22 @@ Plays the sound. If setMultiPlay() has been set to true each play() command will
 Examples:
 
 Normal Playback:
-<pre class="brush: cpp">
+~~~~{.cpp}
 ofSoundPlayer mySound;
 mySound.load("beat.mp3");
 mySound.play(); //Plays sound
 mySound.play(); //Restarts and plays sound
-</pre>
+~~~~
 
 
 Multiplay:
-<pre class="brush: cpp">
+~~~~{.cpp}
 ofSoundPlayer mySound;
 mySound.setMultiPlay(true);
 mySound.load("beat.mp3");
 mySound.play(); //Plays sound
 mySound.play(); //Adds new copy of sound to channel and plays over currently playing sound
-</pre>
+~~~~
 description
 Plays the sound. If setMultiPlay() has been set to true each play() command
 will spawn a new copy of the sound on a new channel, letting the existing
@@ -359,7 +380,7 @@ sounds continue until they are finished. If setMultiPlay() is set to false it
 will restart the playback of the song.
   
 Examples:
-<pre class="brush: cpp">
+~~~~{.cpp}
   
     ofSoundPlayer mySound;  
     
@@ -368,11 +389,11 @@ Examples:
     mySound.play(); //Plays sound  
     
     mySound.play(); //Restarts and plays sound
-</pre>
+~~~~
   
   
 Multiplay:
-<pre class="brush: cpp">
+~~~~{.cpp}
     
     ofSoundPlayer mySound;  
     
@@ -383,7 +404,7 @@ Multiplay:
     mySound.play(); //Plays sound  
     
     mySound.play(); //Adds new copy of sound to channel and plays over currently playing sound
-</pre>
+~~~~
 
 
 
@@ -415,17 +436,17 @@ _description: _
 Stops the sound currently playing. 
 
 Example:
-<pre class="brush: cpp">
+~~~~{.cpp}
 ofSoundPlayer mySound;
 mySound.load("beat.mp3");
 mySound.play(); //Begins playback of sound
 mySound.stop(); //Ends playback, stops audio
-</pre>
+~~~~
 Stops the sound currently playing.
   
 Example:
-<pre class="brush: cpp">
-<pre class="brush: cpp">    
+~~~~{.cpp}
+~~~~{.cpp}    
     ofSoundPlayer mySound;  
     
     mySound.load("beat.mp3");  
@@ -433,7 +454,7 @@ Example:
     mySound.play(); //Begins playback of sound  
     
     mySound.stop(); //Ends playback, stops audio
-</pre>
+~~~~
 
 
 
@@ -465,18 +486,18 @@ _description: _
 Sets the volume (vol) of the sound. 0.0 - 1.0 range. 0.0 is silent and 1.0 is full volume. 
 
 Example:
-<pre class="brush: cpp">
+~~~~{.cpp}
 ofSoundPlayer mySound;
 mySound.load("beat.mp3");
 mySound.play();
 mySound.setVolume(0.1f); //Sets volume at 10% of maximum
-</pre>
+~~~~
 Sets the volume (vol) of the sound. 0.0 - 1.0 range. 0.0 is silent and 1.0 is
 full volume.
   
 Example:
-<pre class="brush: cpp">
-<pre class="brush: cpp">    
+~~~~{.cpp}
+~~~~{.cpp}    
     ofSoundPlayer mySound;  
     
     mySound.load("beat.mp3");  
@@ -484,7 +505,7 @@ Example:
     mySound.play();  
     
     mySound.setVolume(0.1f); //Sets volume at 10% of maximum
-</pre>
+~~~~
 
 
 
@@ -516,20 +537,20 @@ _description: _
 Sets the pan position (pct) of the sound. 0.0 - 1.0 range. 0.5 is center pan, 0.0 is full left pan and 1.0 is full right pan. 
 
 Example:
-<pre class="brush: cpp">
+~~~~{.cpp}
 ofSoundPlayer mySound;
 mySound.load("beat.mp3");
 mySound.play();
 mySound.pan(0.2f); //Pans to the left
 mySound.pan(0.8f); //Pans to the right
 mySound.pan(0.5f); //Back to center
-</pre>
+~~~~
 Sets the pan position (pct) of the sound. 0.0 - 1.0 range. 0.5 is center pan,
 0.0 is full left pan and 1.0 is full right pan.
   
 Example:
-<pre class="brush: cpp">
-<pre class="brush: cpp">
+~~~~{.cpp}
+~~~~{.cpp}
     ofSoundPlayer mySound;  
     
     mySound.load("beat.mp3");  
@@ -541,7 +562,7 @@ Example:
     mySound.pan(0.8f); //Pans to the right  
     
     mySound.pan(0.5f); //Back to center
-</pre>
+~~~~
 
 
 
@@ -573,19 +594,19 @@ _description: _
 Sets the playback speed (spd) of the sound. 1.0 is the normal speed. 2.0 is double the normal speed etc. 
 
 Example:
-<pre class="brush: cpp">
+~~~~{.cpp}
 ofSoundPlayer mySound;
 mySound.loadSound("beat.mp3");
 mySound.play();
 mySound.setSpeed(2.0f); //Chipmunk Voice
 mySound.setSpeed(0.2f); //Isaac Hayes on Muscle Relaxers
 mySound.setSpeed(1.0f); //Normal again
-</pre>
+~~~~
 Sets the playback speed (spd) of the sound. 1.0 is the normal speed. 2.0 is
 double the normal speed etc.
   
 Example:
-<pre class="brush: cpp">
+~~~~{.cpp}
     
     ofSoundPlayer mySound;  
     
@@ -598,7 +619,7 @@ Example:
     mySound.setSpeed(0.2f); //Isaac Hayes on Muscle Relaxers  
     
     mySound.setSpeed(1.0f); //Normal again
-</pre>
+~~~~
 
 
 
@@ -630,17 +651,17 @@ _description: _
 Pauses and un-pauses the playback of the sound. 
 
 Example
-<pre class="brush: cpp">
+~~~~{.cpp}
 ofSoundPlayer mySound;
 mySound.load("beat.mp3");
 mySound.play();
 mySound.setPaused(true); //Sound is paused
 mySound.setPaused(false); //Sound is unpaused, playback continues
-</pre>
+~~~~
 Pauses and un-pauses the playback of the sound.
   
 Example:
-<pre class="brush: cpp">
+~~~~{.cpp}
     
     ofSoundPlayer mySound;  
     
@@ -651,7 +672,7 @@ Example:
     mySound.setPaused(true); //Sound is paused  
     
     mySound.setPaused(false); //Sound is unpaused, playback continues
-</pre>
+~~~~
 
 
 
@@ -683,17 +704,17 @@ _description: _
 Loops the sound if set to true. Does not loop the sound if set to false. Default is false.
 
 Example:
-<pre class="brush: cpp">
+~~~~{.cpp}
 ofSoundPlayer mySound;
 mySound.load("beat.mp3");
 mySound.setLoop(true); //Sound will loop
 mySound.play();
-</pre>
+~~~~
 Loops the sound if set to true. Does not loop the sound if set to false.
 Default is false.
   
 Example:
-<pre class="brush: cpp">
+~~~~{.cpp}
     
     ofSoundPlayer mySound;  
     
@@ -702,7 +723,7 @@ Example:
     mySound.setLoop(true); //Sound will loop  
     
     mySound.play();
-</pre>
+~~~~
 
 
 
@@ -735,20 +756,20 @@ Allows a sound to be played multiple times at once. When set to true the play() 
 
 Example:
 
-<pre class="brush: cpp">
+~~~~{.cpp}
 ofSoundPlayer mySound;
 mySound.setMultiPlay(true);
 mySound.load("beat.mp3");
 mySound.play(); //Plays sound
 mySound.play(); //Adds new copy of sound to channel and plays over currently playing sound
-</pre>
+~~~~
 Allows a sound to be played multiple times at once. When set to true the
 play() function will start playing the sound on a new channel, letting the old
 channels continue until they are done playing. When set to false the play()
 function will stop the channel before playing the sound.
   
 Example:
-<pre class="brush: cpp">
+~~~~{.cpp}
   
     
     ofSoundPlayer mySound;  
@@ -760,7 +781,7 @@ Example:
     mySound.play(); //Plays sound  
     
     mySound.play(); //Adds new copy of sound to channel and plays over currently playing sound
-</pre>
+~~~~
 
 
 
@@ -792,18 +813,18 @@ _description: _
 Sets the playback-head to the position (pct) specified. 0.0 - 1.0 range. 0.0 is the beginning of the sound file and 1.0 is the end.
 
 Example:
-<pre class="brush: cpp">
+~~~~{.cpp}
 ofSoundPlayer mySound;
 mySound.load("beat.mp3");
 mySound.play();
 mySound.setPosition(0.5f); //Moves the playhead to halfway through the sound
 mySound.setPosition(0.0f); //Moves the playhead back to the beginning of the sound
-</pre>
+~~~~
 Sets the playback-head to the position (pct) specified. 0.0 - 1.0 range. 0.0
 is the beginning of the sound file and 1.0 is the end.
   
 Example:
-<pre class="brush: cpp">
+~~~~{.cpp}
     
     ofSoundPlayer mySound;  
     
@@ -846,17 +867,17 @@ _description: _
 
 Example:
 
-<pre class="brush: cpp">
+~~~~{.cpp}
 ofSoundPlayer mySound;
 mySound.load("beat.mp3");
 mySound.play();
 mySound.getPosition(); //Returns the current position as a percent 0.0-1.0
-</pre>
+~~~~
 Returns the current position of the playback-head in the sound. 0.0 - 1.0
 range. 0.0 is the beginning of the sound file and 1.0 is the end.
   
 Example:
-<pre class="brush: cpp">    
+~~~~{.cpp}    
     ofSoundPlayer mySound;  
     
     mySound.load("beat.mp3");  
@@ -864,7 +885,7 @@ Example:
     mySound.play();  
     
     mySound.getPosition(); //Returns the current position as a percent 0.0-1.0
-</pre>
+~~~~
 
 
 
@@ -894,16 +915,16 @@ _advanced: False_
 _description: _
 
 Example:
-<pre class="brush: cpp">
+~~~~{.cpp}
 ofSoundPlayer mySound;
 mySound.load("beat.mp3");
 mySound.getIsPlaying(); //Returns false
 mySound.play();
 mySound.getIsPlaying(); //Returns true
-</pre>
+~~~~
 Returns true if sound is currently playing, otherwise returns false.
 Example:
-<pre class="brush: cpp">
+~~~~{.cpp}
     
     ofSoundPlayer mySound;  
     
@@ -914,7 +935,7 @@ Example:
     mySound.play();  
     
     mySound.getIsPlaying(); //Returns true
-</pre>
+~~~~
 
 
 
@@ -946,18 +967,18 @@ _description: _
 0.5 is center pan, 0.0 is full left pan and 1.0 is full right pan.
 
 Example:
-<pre class="brush: cpp">
+~~~~{.cpp}
 ofSoundPlayer mySound;
 mySound.load("beat.mp3");
 mySound.getSpeed(); //Returns 1.0
 mySound.setSpeed(2.0f);
 mySound.getSpeed(); //Returns 2.0f
-</pre>
+~~~~
 Returns the pan position of the sound. 0.0 - 1.0 range.
 0.5 is center pan, 0.0 is full left pan and 1.0 is full right pan.
   
 Example:
-<pre class="brush: cpp">
+~~~~{.cpp}
     
     ofSoundPlayer mySound;  
     
@@ -968,7 +989,7 @@ Example:
     mySound.setSpeed(2.0f);  
     
     mySound.getSpeed(); //Returns 2.0f
-</pre>
+~~~~
 
 
 
@@ -1000,20 +1021,20 @@ _description: _
 0.5 is center pan, 0.0 is full left pan and 1.0 is full right pan. Default is 0.5
 
 Example:
-<pre class="brush: cpp">
+~~~~{.cpp}
 ofSoundPlayer mySound;
 mySound.load("beat.mp3");
 mySound.play();
 mySound.getPan();//Returns 0.5
 mySound.setPan(0.2f);
 mySound.getPan();//Returns 0.2
-</pre>
+~~~~
 Returns the pan position of the sound. 0.0 - 1.0 range.
 0.5 is center pan, 0.0 is full left pan and 1.0 is full right pan. Default is
 0.5
   
 Example:
-<pre class="brush: cpp">
+~~~~{.cpp}
     
     ofSoundPlayer mySound;  
     
@@ -1026,7 +1047,7 @@ Example:
     mySound.setPan(0.2f);  
     
     mySound.getPan();//Returns 0.2
-</pre>
+~~~~
 
 
 

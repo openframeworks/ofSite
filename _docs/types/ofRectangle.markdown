@@ -28,7 +28,28 @@
 
 
 
+
+
+
+
+
+
+
+
+
 ofRectangle class contains information about how a rectangle is in openFrameworks. Basically the class contains the position and the size of a rectangle. 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

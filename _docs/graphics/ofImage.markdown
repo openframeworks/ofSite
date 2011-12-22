@@ -28,7 +28,28 @@
 
 
 
+
+
+
+
+
+
+
+
+
 The ofImage class wraps a library called "freeImage", and is a useful object for loading, saving and drawing images in OF projects.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -517,10 +538,10 @@ _description: _
 
 This turns on or off the allocation and use of a texture. any time you change the image (loading, resizing, converting the type), ofImage will uplaod data to an opengl texture. It may not be necessary, though, and it could be that you need to save memory on the graphics card, or that you don't need to draw this image on the screen. You can call this even before you load an image in to OF:
 
-<pre class="brush: cpp">
+~~~~{.cpp}
 myImage.setUseTexture(false);
 myImage.loadImage("blah.gif");
-</pre>
+~~~~
 
 
 Since in the majority of cases, ofImages will be loaded in and drawn onscreen, the default is set to use a texture.
@@ -612,15 +633,15 @@ _description: _
 Loads in an image given by fileName. It will try it's best to guess the filetype based on the name. The program will look for the file relative to the data/ folder. 
 
 For example, to load an image "icon.gif" that is in the data folder you can call:
-<pre class="brush: cpp">
+~~~~{.cpp}
 myImage.load("icon.gif");
-</pre>
+~~~~
 
 
 you can also supply folder paths for subfolders within the data folder:
-<pre class="brush: cpp">
+~~~~{.cpp}
 myImage.load("images/icon.gif");
-</pre>
+~~~~
 
 
 
@@ -886,28 +907,28 @@ Changes the drawing position specified by draw() from the normal top-left corner
 Note: range of xPct and yPct is 0.0 to 1.0. For xPct, 1.0 represents the width of the image. For yPct, 1.0 represents the height of the image. These values are not capped. 
 
 For example to draw an image so that its center is at 100, 100:
-<pre class="brush: cpp">
+~~~~{.cpp}
 myImage.setAnchorPercent(0.5, 0.5); 
 myImage.draw(100, 100);
-</pre>
+~~~~
 
 
 To rotate an image around its center at 100, 100:
-<pre class="brush: cpp">
+~~~~{.cpp}
 ofPushMatrix();
   ofTranslate(100, 100, 0);
   ofRotate(45);
   myImage.setAnchorPercent(0.5, 0.5); 
   myImage.draw(0, 0); 
 ofPopMatrix();
-</pre>
+~~~~
 
 
 To align the right side of an image with the right edge of the window:
-<pre class="brush: cpp">
+~~~~{.cpp}
 myImage.setAnchorPercent(1.0, 0.0);
 myImage.draw(ofGetWidth(), 0);
-</pre>
+~~~~
 
 
 

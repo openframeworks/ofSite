@@ -272,7 +272,7 @@ Useful to access the variables in the main app from other classes.
 
 ie:
 
-<pre class="brush: cpp">
+~~~~{.cpp}
 
 //testApp.h
 
@@ -287,7 +287,7 @@ class testApp: public ofBaseApp{
 void myClass::method(){
    doSomething( ofGetAppPtr()->someVar );
 }
-</pre>
+~~~~
 
 
 
@@ -488,7 +488,7 @@ _advanced: False_
 _description: _
 
 eg:
-<pre class="brush: cpp">
+~~~~{.cpp}
 
 int mode = ofGetWindowMode();
 		
@@ -502,7 +502,7 @@ if(mode == OF_WINDOW){
 	printf("mode is: game mode
 ");	
 }
-</pre>
+~~~~
 
 note: this code is implemented inside the ofAppRunner
 	
@@ -1251,8 +1251,6 @@ _advanced: False_
 
 _description: _
 
-Sets the title string at the top of your app's window.
-note: this code is implemented inside the ofAppRunner
 
 
 
