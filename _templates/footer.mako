@@ -1,3 +1,7 @@
+<script type="text/javascript">
+     SyntaxHighlighter.all()
+</script>
+
 <p id="credits">
 
 <!--br/>
