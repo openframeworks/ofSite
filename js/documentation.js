@@ -1,5 +1,6 @@
 $(document).ready(
     function(){
+      $('#top_list').columnize({ columns: 3 });
       $("pre").each(function(){
         children = $(this).children("code");
         if(children.length>0){

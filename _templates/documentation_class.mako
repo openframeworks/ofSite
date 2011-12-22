@@ -5,17 +5,8 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     ${self.head()}
+    <script src="${bf.config.site.url}/js/jquery.columnizer.min.js"></script>
     <script src="${bf.config.site.url}/js/documentation.js"></script>
-	<script src="${bf.config.site.url}/js/jquery.columnizer.min.js"></script>
-	
-	<script>
-			$(function(){
-				$('#top_list').columnize({ columns: 3 });
-			});
-	</script>
-	
-	
-	
   </head>
   <body>
     <div id="content">
