@@ -8,7 +8,8 @@ Step 2 -- Using openFrameworks
 
 Xcode Quirks: Spaces in main project folder name  
 Xcode Quirks: Adding files to project
-Xcode 4.0 Notes
+Xcode 4.0 Notes and 10.7.2 Issues
+
 
 **Step 1: Download and install Xcode 3 or higher**
 
@@ -163,6 +164,7 @@ Xcode 4 has a completely redesigned interface. Here are some important differenc
 
 When you first open an openFrameworks project you might find the files in the sidebar aren't showing up. 
 Click the folder icon at the top of the sidebar to show the traditional file view ( you might need to expand out the list with the sidebar arrows ). 
+
 ![xc4sideBarTop](xc4sideBarTop.png)  
 
 ![xc4sidebarFileSelected](xc4sidebarFileSelected.png)  
@@ -214,6 +216,38 @@ This is actually quite handy and can help you spot mistakes. Also the Errors ico
 ![xc4errors](xc4errors.png)  
 
 
+**Target OS 10.6 / MacSetRect Error:** 
+
+If you get QuickTime MacSetRect errors on 10.7 with Xcode 4.0, this is because a part of your project is set to 10.7 SDK.
+ 
+Currently OF doesn't build against the 10.7 SDK because of QT 7 dependencies. 
+
+To set the project back to 10.6 SDK follow these steps posted [from this blog][2]:
+
+* Switch from the openFrameworks scheme to the project scheme
+
+* Click on the project on the sidebar to bring up the settings
+
+* Change the Base SDK to 10.6
+
+* Repeat the previous line for the build target
+
+* Click on the openFrameworks folder in the sidebar
+
+* Click on the project to bring up the settings
+
+* Change the Base SDK to 10.6 like you did before
+
+* Repeat for the build target
+
+
+**10.7.2 OF Issues**
+
+There are a few issues with OF on 10.7.2 - we will work on getting these fixed for the next release.
+
+In the meantime check [these tips posted on the forum][3].
+
+
 **This is the ideal layout for your Xcode 4 project:**
 
 ![xc4](xc4.png)  
@@ -221,5 +255,5 @@ This is actually quite handy and can help you spot mistakes. Also the Errors ico
 
 [0]: https://connect.apple.com/
 [1]: http://www.openframeworks.cc/download
-
-
+[2]: http://blog.davidpaulrosser.co.uk/2011/08/getting-openframeworks-0-07-compiling-with-osx-10-7/
+[3]: http://forum.openframeworks.cc/index.php/topic,7621.0.html
