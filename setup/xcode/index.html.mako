@@ -158,6 +158,11 @@ The **only files** that should have **absolute paths** are the **System Framewor
 
 **Xcode 4.0 Notes:**
 
+**This is the ideal layout for your Xcode 4 project:**
+
+![xc4](xc4.png)  
+
+
 Xcode 4 has a completely redesigned interface. Here are some important differences:
 
 **Side bar view mode:**
@@ -248,9 +253,6 @@ There are a few issues with OF on 10.7.2 - we will work on getting these fixed f
 In the meantime check [these tips posted on the forum][3].
 
 
-**This is the ideal layout for your Xcode 4 project:**
-
-![xc4](xc4.png)  
 
 
 [0]: https://connect.apple.com/
