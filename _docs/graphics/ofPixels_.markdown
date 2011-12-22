@@ -20,6 +20,9 @@
 
 
 
+
+
+
 ofPixels is an object for working with blocks of pixels, those pixels can be copied from an image that you've loaded, something that you've drawn using ofGraphics, or a ofVideoGrabber instance. You can create an image from pixels, using on ofPixels object like so:
 
 $$code(lang=c++)
@@ -47,6 +50,10 @@ while( i < pix.size()) {
 	i++;
 }
 $$/code
+
+
+
+
 
 
 
@@ -695,14 +702,14 @@ _advanced: False_
 _description: _
 
 This pastes the ofPixels object into another ofPixels object at the specified index, copying data from the ofPixels that the method is being called on to the ofPixels object at &dst. If the data being copied doesn't fit into the dst then the image is cropped.
-$$code(lang=c++)
+<pre class="brush: cpp">
 ofLoadImage(footballPixels, "two.jpg");
 ofLoadImage(fujiPixels, "one.jpg");
 fujiTex.loadData(footballPixels);
 footballTex.loadData(fujiPixels);
 footballPixels.pasteInto(fujiPixels, 150, 100); // now fujiPixels is altered
 mixtureTex.loadData(fujiPixels);
-$$/code
+</pre>
 Drawing the three textures here you can see the ball cropped into the mountain:
 ![crop_demo](ofPixels_crop.png)
 
@@ -792,14 +799,14 @@ _advanced: False_
 _description: _
 
 This returns a raw pointer to the pixel data. Changing this will change the value of the pixels in the ofPixels object. One way to inspect the values returns in this pointer would be:
-$$code(lang=c++)
+<pre class="brush: cpp">
 unsigned char* pixPtr = pix.getPixels();
 while(pixPtr) {
 	// for RGB pixels there will be 3 values for each pixel
 	// for RGBA pixels there will be 4
 	++pixPtr;
 }
-$$/code
+</pre>
 
 
 
@@ -829,11 +836,11 @@ _advanced: False_
 _description: _
 
 This method tells you want pixel index an x, y pair would be at in the index, for instance:
-$$code(lang=c++)
+<pre class="brush: cpp">
 ofColor yellow = ofColor::yellow;
 int ind = pix.getPixelIndex(mouseX, mouseY);
 pix.setPixel(ind, yellow);
-$$/code
+</pre>
 
 
 
@@ -863,9 +870,9 @@ _advanced: False_
 _description: _
 
 This method returns the ofColor that the pixels contains at an x, y pair:
-$$code(lang=c++)
+<pre class="brush: cpp">
 ofColor c = pix.getColor(mouseX, mouseY);
-$$/code
+</pre>
 
 
 
@@ -1187,11 +1194,11 @@ _advanced: False_
 _description: _
 
 This returns a single channel, for instance, the Red pixel values, from the ofPixels object, this gives you a grayscale representation of that one channel.
-$$code(lang=c++)
+<pre class="brush: cpp">
 	ofPixels rpix = pix.getChannel(0);
 	ofPixels gpix = pix.getChannel(1);
 	ofPixels bpix = pix.getChannel(2);
-$$/code
+</pre>
 
 
 
@@ -1823,6 +1830,118 @@ _description: _
 
 <!--
 _syntax: ofPixels_()_
+_name: ofPixels_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ~ofPixels_()
+
+<!--
+_syntax: ~ofPixels_()_
+_name: ~ofPixels_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofPixels_(&mom)
+
+<!--
+_syntax: ofPixels_(&mom)_
+_name: ofPixels_
+_returns: _
+_returns_description: _
+_parameters: const ofPixels_< PixelType > &mom_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofPixels_(&mom)
+
+<!--
+_syntax: ofPixels_(&mom)_
+_name: ofPixels_
+_returns: _
+_returns_description: _
+_parameters: const ofPixels_< SrcType > &mom_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofPixels_()
+
+<!--
+_syntax: ofPixels_()_
 _name: ofPixels__
 _returns: _
 _returns_description: _
@@ -1957,47 +2076,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###int width
@@ -2015,47 +2093,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
 
 
 
@@ -2087,47 +2124,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###int channels
@@ -2145,47 +2141,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
 
 
 
@@ -2217,47 +2172,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###bool pixelsOwner
@@ -2275,47 +2189,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
 
 
 

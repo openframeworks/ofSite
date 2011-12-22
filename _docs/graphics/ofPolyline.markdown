@@ -21,6 +21,9 @@
 
 
 
+
+
+
 ofPolyLine allows you to combine multiple ofPath instance into a single vector data object that can be drawn to the screen, manipulated point by point, and combined with other ofPolyline instances. 
 
 
@@ -54,6 +57,10 @@ $$/code
 ofPolyline also includes methods to get the cloeset point, determien whether a point is inside shape, and resample shapes. Along with the ofPath class, it's the best way to draw and manipulate 2D and 3D vector graphics that you'll need to update and manipulate frequently.
 
 If you use the line or curveTo or bezierTo functions, you move the drawing point, so that drawing a line to 100,100 means a line from 0,0 to 100, 100. The next line would be a line from 100,100 to whereever you go next. Storing this position means that you can easily create continuous drawings without difficulty.
+
+
+
+
 
 
 
@@ -127,7 +134,7 @@ _advanced: False_
 _description: _
 
 Creates an ofPolyline from a vector of ofVec2f or ofPoint objects.
-$$code(lang=c++)
+<pre class="brush: cpp">
 vector<ofPoint> pts;
 	float j = 0;
 	while(j < TWO_PI+0.1) {
@@ -135,7 +142,7 @@ vector<ofPoint> pts;
 		j+=0.1;
 	}
 	ofPolyline cp(pts);
-$$/code
+</pre>
 There is an easier way to draw circles though, using the arc() method.
 
 
@@ -253,7 +260,7 @@ _advanced: False_
 _description: _
 
 Adds multiple points at the end of the ofPolyline using a vector of ofPoint objects, which can be declared like so:
-$$code(lang=c++)
+<pre class="brush: cpp">
 vector<ofPoint> verts;
 // make a pentagon
 float size = 80.f;
@@ -268,7 +275,7 @@ verts.push_back(ofPoint(X2, Y2));
 verts.push_back(ofPoint(X1, -Y1));
 ofPolyline p;
 p.addVertexes(verts);
-$$/code
+</pre>
 
 
 
@@ -298,7 +305,7 @@ _advanced: False_
 _description: _
 
 Adds multiple points at the end of the ofPolyline using a pointer to an array of ofPoint objects.
-$$code(lang=c++)
+<pre class="brush: cpp">
 ofPoint* verts = new ofPoint[5];
 // make a pentagon
 float size = 80.f;
@@ -313,7 +320,7 @@ verts[3] = ofPoint(X2, Y2);
 verts[4] = ofPoint(X1, -Y1);
 ofPolyline p;
 p.addVertexes(verts, 5);
-$$/code
+</pre>
 
 
 
@@ -401,14 +408,14 @@ _advanced: False_
 _description: _
 
 Draw an arc around the ofPoint p with the width of radiusX and the height of radiusY. The angleBegin and angleEnd indicate how far around you want the arc to extend. For instance, to draw a circle:
-$$code(lang=c++)
+<pre class="brush: cpp">
 ofPoint p(0, 0);
 polyline.arc(p,100,100,0,360,40); // circle with a diameter of 100
-$$/code
-$$code(lang=c++)
+</pre>
+<pre class="brush: cpp">
 ofPoint p(100, 0);
 polyline.arc(p,100,100,0,180,40); // semi-circle with a diameter of 100
-$$/code
+</pre>
 
 
 
@@ -438,12 +445,12 @@ _advanced: False_
 _description: _
 
 Draw an arc around the point x,y with the width of radiusX and the height of radiusY. The angleBegin and angleEnd indicate how far around you want the arc to extend. For instance, to draw a circle:
-$$code(lang=c++)
+<pre class="brush: cpp">
 polyline.arc(0,0,100,100,0,360,40); // circle with a diameter of 100
-$$/code
-$$code(lang=c++)
+</pre>
+<pre class="brush: cpp">
 polyline.arc(0,0,100,100,0,180,40); // semi-circle with a diameter of 100
-$$/code
+</pre>
 
 
 
@@ -473,14 +480,14 @@ _advanced: False_
 _description: _
 
 Draw an arc around the point x,y,z with the width of radiusX and the height of radiusY. The angleBegin and angleEnd indicate how far around you want the arc to extend. For instance, to draw a circle:
-$$code(lang=c++)
+<pre class="brush: cpp">
 // at middle and -100 back
 polyline.arc(ofGetWidth()/2,ofGetHeight()/2,100,100,100,0,360,40); // circle with a diameter of 100
-$$/code
-$$code(lang=c++)
+</pre>
+<pre class="brush: cpp">
 // at middle and -100 back
 polyline.arc(ofGetWidth()/2,ofGetHeight()/2,100,100,100,0,180,40); // semi-circle with a diameter of 100
-$$/code
+</pre>
 
 
 
@@ -510,14 +517,14 @@ _advanced: False_
 _description: _
 
 Draws a curve to an ofPoint object passed in:
-$$code(lang=c++)
+<pre class="brush: cpp">
 float angle = 0;
 while (angle < TWO_PI ) {
 	b.curveTo( ofPoint(100*cos(angle), 100*sin(angle)));
 	b.curveTo( ofPoint(300*cos(angle), 300*sin(angle)));
 	angle += TWO_PI / 30;
 }
-$$/code
+</pre>
 
 
 
@@ -547,14 +554,14 @@ _advanced: False_
 _description: _
 
 Draws a curve to the x,y,z points passed in with the optional resolution.
-$$code(lang=c++)
+<pre class="brush: cpp">
 float angle = 0;
 while (angle < TWO_PI ) {
 	polyline.curveTo(100*cos(angle), 0, 100*sin(angle));
 	polyline.curveTo(300*cos(angle), 300, 300*sin(angle));
 	angle += TWO_PI / 30;
 }
-$$/code
+</pre>
 
 
 
@@ -584,10 +591,10 @@ _advanced: False_
 _description: _
 
 Creates a cubic bezier line from the current drawing point with the 2 control points indicated by ofPoint cp1 and cp2, that ends at ofPoint to. For instance, the following:
-$$code(lang=c++)
+<pre class="brush: cpp">
 line.addVertex(ofPoint(200, 400));
 line.bezierTo(100, 100, 800, 100, 700, 400);
-$$/code
+</pre>
 Creates this:
 ![polyline bezier](/bezier.png)
 The control points are shown in yellow.
@@ -649,7 +656,7 @@ _advanced: False_
 _description: _
 
 Creates a cubic bezier line in 3D space from the current drawing point with the 2 control points indicated by the coordinates cx1, cy1, cz1 and cx2, cy2, cz2, that ends at the coordinates x, y, z.
-$$code(lang=c++)
+<pre class="brush: cpp">
 float cx = ofGetWidth()/2;
 float cy = 200;
 float step = TWO_PI / 60;
@@ -664,7 +671,7 @@ for (float i = 0.0; i < TWO_PI; i+=step) {
 					   cx + (400*cos(i)), cy+400, 400 * sin(i));
 	}
 }
-$$/code
+</pre>
 
 
 
@@ -811,11 +818,11 @@ _advanced: False_
 _description: _
 
 This resamples the line based on the spacing passed in. The larger the spacing, the more points will be eliminated.
-$$code(lang=c++)
+<pre class="brush: cpp">
 line.draw();
 ofTranslate(400, 0);
 line.getResampledBySpacing(100).draw();
-$$/code
+</pre>
 ![polyline resample](/resample.png)
 
 
@@ -1049,7 +1056,7 @@ _advanced: False_
 _description: _
 
 The [] operator allows you to access the points of the ofPolyline just like you would in an array, so to make the points of a line follow the mouse movement, you could do:
-$$code(lang=c++)
+<pre class="brush: cpp">
 line[0].set(mouseX, mouseY);
 int i = 1;
 while ( i<bounds.size()) {
@@ -1059,7 +1066,7 @@ while ( i<bounds.size()) {
 	
 	i++;
 }
-$$/code
+</pre>
 
 
 
@@ -1470,47 +1477,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###ofPoint curveVertices
@@ -1528,47 +1494,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
 
 
 
@@ -1600,47 +1525,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###bool bClosed
@@ -1665,47 +1549,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###bool bHasChanged
@@ -1723,47 +1566,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
 
 
 

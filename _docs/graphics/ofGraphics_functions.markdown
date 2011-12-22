@@ -57,7 +57,7 @@ _description: _
 
 Gets the background color.
 eg:
-$$code(lang=c++)
+<pre class="brush: cpp">
 
 float * bgColor = ofBgColorPtr();
 //lets get the individual values!
@@ -65,7 +65,7 @@ float r = bgColor[0];
 float g = bgColor[1];
 float b = bgColor[2];
 float a = bgColor[3];
-$$/code
+</pre>
 
 
 
@@ -463,7 +463,7 @@ _advanced: False_
 _description: _
 
 Call this to start drawing a new shape. Needs to be followed by a list of vertex points and lastly a call to ofEndShape().
-$$code(lang=c++)
+<pre class="brush: cpp">
 
 //draws a star
 ofSetPolyMode(OF_POLY_WINDING_NONZERO);
@@ -474,7 +474,7 @@ ofBeginShape();
   ofVertex(305,200);
   ofVertex(250,25);
 ofEndShape();
-$$/code
+</pre>
 
 
 
@@ -727,13 +727,13 @@ _advanced: False_
 _description: _
 
 sets the draw color with r,g,b,a 0-255. For alpha (transparency), you must first enable transparent blending (turned off by default for performance reasons), and draw in the proper z-order (objects in the back drawn first). For example, to draw a transparent red rectangle: 
-$$code(lang=c++)
+<pre class="brush: cpp">
 
 ofEnableAlphaBlending();	// turn on alpha blending
 ofSetColor(255,0,0,127);	// red, 50% transparent
 ofRect(20,20,100,100);
 ofDisableAlphaBlending();	// turn it back off, if you don't need it
-$$/code
+</pre>
 
 
 
@@ -762,12 +762,12 @@ _advanced: False_
 _description: _
 
 Sets the draw color with r,g,b, passed in as a hex. Hex is a conventient way to write colors. Some examples:
-$$code(lang=c++)
+<pre class="brush: cpp">
 
 ofSetColor(0xffffff);  // white  (255,255,255)
 ofSetColor(0x000000);  // black  (0,0,0);
 ofSetColor(0x00ff00);  // green  (0,255,0);
-$$/code
+</pre>
 
 
 
@@ -908,25 +908,25 @@ _advanced: False_
 _description: _
 
 Draws a bitmapped string, on screen, at point (x,y). For example, you can write some text on screen like this:
-$$code(lang=c++)
+<pre class="brush: cpp">
 
 ofDrawBitmapString("hi!!", 100,100);
-$$/code
+</pre>
 
 Your strings can even be multiline:
-$$code(lang=c++)
+<pre class="brush: cpp">
 
 ofDrawBitmapString("a test
 of multiline
 text", 100,100);
-$$/code
+</pre>
 
 you can also using dynamically generated strings. For example, to print the frame rate:
-$$code(lang=c++)
+<pre class="brush: cpp">
 
 string fpsStr = "frame rate: "+ofToString(ofGetFrameRate(), 2);
 ofDrawBitmapString(fpsStr, 100,100);
-$$/code
+</pre>
 
 Please note, ofDrawBitmapString wraps a glut function that uses glDrawPixels. On some graphics cards, you may discover that glDrawPixels is slow (or even, very slow). If so, you might want to invsetigate using ofTrueTypeFont with a small typeface, non-anti-aliased, as a suitable alternative.
 
@@ -1076,7 +1076,7 @@ ofPushStyle saves the current style settings for the ofGraphics after its call. 
 
 In the following example the properties of being red and filled only applies to the ellipse:
 
-$$code(lang=c++)
+<pre class="brush: cpp">
 
 
 void testApp::draw(){
@@ -1089,7 +1089,7 @@ ofsetColor(255,0,0);
 ofEllipse(30,10,40,40);
 ofPopStyle();
 }    
-$$/code
+</pre>
 
 
 
@@ -1232,7 +1232,7 @@ _description: _
 ofPushMatrix saves the current coordinate system allowing users to develop specific movements in some graphic objects. ofPopMatrix needs to be called after.
 In the following example we only rotate the square.
 
-$$code(lang=c++)
+<pre class="brush: cpp">
 
 void testApp::draw(){
 	
@@ -1242,7 +1242,7 @@ void testApp::draw(){
 	ofRect(10,10,40,40);
 	ofPopMatrix()
 }
-$$/code
+</pre>
 
 
 
@@ -1330,14 +1330,14 @@ _description: _
 
 ofScale produces a nonuniform scaling along the x, y, and z axes. The three parameters xAmnt, yAmnt and zAmnt indicate the desired scale factor along each of the three axes.
 e.g:
-$$code(lang=c++)
+<pre class="brush: cpp">
 
 void testApp::draw(){
 
 	ofScale(0.5,1,1);
 	ofRect(10,10,40,40);	
 }
-$$/code
+</pre>
 
 
 Rectangle width will be now 20px!

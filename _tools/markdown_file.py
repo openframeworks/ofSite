@@ -84,7 +84,7 @@ def getfunctionsfile(filename):
                         functionsfile.new = False
                     elif state == 'functionsfile' and line.find('##Description') == 0:
                         state = 'filedescription'
-                    elif state == 'filedescription' and line.find('<!----------------------------------------------------------------------------->')!=0 and line!='\n':
+                    elif state == 'filedescription' and line.find('<!----------------------------------------------------------------------------->')==-1 and line!='\n':
                         functionsfile.description = functionsfile.description + line
                     elif state == 'filedescription' or state=='description' and line.find('###')==0:
                         if(state=='description'):
@@ -96,7 +96,7 @@ def getfunctionsfile(filename):
                         addfield(function,line)
                     elif state == 'function' and line.find('_description')==0:
                         state = 'description'
-                    elif state == 'description' and line.find('<!----------------------------------------------------------------------------->')!=0 and line!='\n':
+                    elif state == 'description' and line.find('<!----------------------------------------------------------------------------->')==-1 and line!='\n':
                         function.description = function.description + line
     return functionsfile
 
@@ -150,7 +150,7 @@ def getclass(clazz):
                     elif state == 'method' and line.find('_description')==0:
                         state = 'description'
                         
-                    elif state == 'description' and line.find('##')!=0 and line.find('<!----------------------------------------------------------------------------->')!=0 and line!='\n':
+                    elif state == 'description' and line.find('##')!=0 and line.find('<!----------------------------------------------------------------------------->')==-1 and line!='\n':
                         method.description = method.description + line
                         
                     elif state == 'description' and line.find('###') == 0:
@@ -175,7 +175,7 @@ def getclass(clazz):
                     elif state == 'var' and line.find('_description') == 0:
                         state = 'vardescription'
                         
-                    elif state == 'vardescription' and line.find('##')!=0:
+                    elif state == 'vardescription' and line.find('##')!=0 and line.find('<!----------------------------------------------------------------------------->')==-1 and line!='\n':
                         var.description = var.description + line
                         
                     elif state == 'vardescription' and line.find('###') == 0:

@@ -370,12 +370,12 @@ _description: _
 
 Saves the current screen image into a given file name (string filename).
 Example:
-$$code(lang=c++)
+<pre class="brush: cpp">
 
 string filename;
 fileName = "screen1.png";
 ofSaveScreen(fileName);
-$$/code
+</pre>
 
 
 

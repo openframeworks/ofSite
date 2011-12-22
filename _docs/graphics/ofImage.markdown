@@ -25,7 +25,14 @@
 
 
 
+
+
+
 The ofImage class wraps a library called "freeImage", and is a useful object for loading, saving and drawing images in OF projects.
+
+
+
+
 
 
 
@@ -510,10 +517,10 @@ _description: _
 
 This turns on or off the allocation and use of a texture. any time you change the image (loading, resizing, converting the type), ofImage will uplaod data to an opengl texture. It may not be necessary, though, and it could be that you need to save memory on the graphics card, or that you don't need to draw this image on the screen. You can call this even before you load an image in to OF:
 
-$$code(lang=c++)
+<pre class="brush: cpp">
 myImage.setUseTexture(false);
 myImage.loadImage("blah.gif");
-$$/code
+</pre>
 
 
 Since in the majority of cases, ofImages will be loaded in and drawn onscreen, the default is set to use a texture.
@@ -605,15 +612,15 @@ _description: _
 Loads in an image given by fileName. It will try it's best to guess the filetype based on the name. The program will look for the file relative to the data/ folder. 
 
 For example, to load an image "icon.gif" that is in the data folder you can call:
-$$code(lang=c++)
+<pre class="brush: cpp">
 myImage.load("icon.gif");
-$$/code
+</pre>
 
 
 you can also supply folder paths for subfolders within the data folder:
-$$code(lang=c++)
+<pre class="brush: cpp">
 myImage.load("images/icon.gif");
-$$/code
+</pre>
 
 
 
@@ -879,28 +886,28 @@ Changes the drawing position specified by draw() from the normal top-left corner
 Note: range of xPct and yPct is 0.0 to 1.0. For xPct, 1.0 represents the width of the image. For yPct, 1.0 represents the height of the image. These values are not capped. 
 
 For example to draw an image so that its center is at 100, 100:
-$$code(lang=c++)
+<pre class="brush: cpp">
 myImage.setAnchorPercent(0.5, 0.5); 
 myImage.draw(100, 100);
-$$/code
+</pre>
 
 
 To rotate an image around its center at 100, 100:
-$$code(lang=c++)
+<pre class="brush: cpp">
 ofPushMatrix();
   ofTranslate(100, 100, 0);
   ofRotate(45);
   myImage.setAnchorPercent(0.5, 0.5); 
   myImage.draw(0, 0); 
 ofPopMatrix();
-$$/code
+</pre>
 
 
 To align the right side of an image with the right edge of the window:
-$$code(lang=c++)
+<pre class="brush: cpp">
 myImage.setAnchorPercent(1.0, 0.0);
 myImage.draw(ofGetWidth(), 0);
-$$/code
+</pre>
 
 
 
@@ -1973,69 +1980,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
-
 width variable contains the width of our ofImage.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 
 
 
@@ -2066,69 +2011,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###int height
@@ -2147,69 +2029,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
-
 height variable contains the height of our ofImage.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 
 
 
@@ -2234,69 +2054,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
-
 type variable contains information about the kind of image we are using. Possible types are: OF_IMAGE_GRAYSCALE, OF_IMAGE_COLOR, OF_IMAGE_COLOR_ALPHA.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 
 
 
@@ -2327,69 +2085,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###int bpp
@@ -2408,69 +2103,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
-
 bpp contain the number of bits we need to use for every pixel. It will be 8 for a grayscale image (OF_IMAGE_GRAYSCALE), 24 for a color image (OF_IMAGE_COLOR) and 32 for a color image with alpha channel (OF_IMAGE_COLOR_ALPHA).
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 
 
 
@@ -2501,69 +2134,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###ofPixels pixels
@@ -2581,47 +2151,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
 
 
 
