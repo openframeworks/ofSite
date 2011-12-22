@@ -6,12 +6,23 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     ${self.head()}
     <script src="${bf.config.site.url}/js/documentation.js"></script>
+	<script src="${bf.config.site.url}/js/jquery.columnizer.min.js"></script>
+	
+	<script>
+			$(function(){
+				$('#top_list').columnize({ columns: 3 });
+			});
+	</script>
+	
+	
+	
   </head>
   <body>
     <div id="content">
       ${self.header()}
       <div id="body-wrap">
-        <div class="page-left-wide">
+        
+		<div class="page-left-wide">
           <div id="main_block">
             <div id="prose_block">
               <h2>${modulename}</h2>
@@ -25,57 +36,66 @@ ${functions.description}
               % endif
               </%self:filter>
               </p>
-              
-              <div id="methods_list">
-              <!-- list of methods -->
-              % if not clazz is None and len([x for x in clazz.function_list if not x.advanced and x.visible and x.access=='public'])>0:
-                  <h3>${clazz.name} methods</h3>
-
-                  <ul class="functionslist">
-                      <% prevmethod = "" %>
-                      % for method in clazz.function_list:
-                          % if prevmethod != method.name and method.visible and not method.advanced and method.access=='public':
-                              <% params = "()" if method.parameters=="" else "(...)" %> 
-                              <li> <a href="#${method.name}">${method.name}${params}</a> </li>
-                          % endif
-                          <% prevmethod = method.name %>
-                      % endfor
-                  </ul>
-              % endif
-              </div>
-              
-              <div id="variables_list">
-              <!-- list of variables -->              
-              % if not clazz is None and len([x for x in clazz.var_list if not x.advanced and x.visible and x.access=='public'])>0:
-                  <h3>${clazz.name} variables</h3>
-                  <ul class="varslist">
-                      % for var in clazz.var_list:
-                          % if var.visible and not var.advanced and var.access=='public':
-                              <li> <a href="#${var.name}">${var.type} ${var.name}</a> </li>
-                          % endif
-                      % endfor
-                  </ul>
-              % endif
-              </div>
-              
-              <div id="functions_list">
-              <!-- list of c functions -->              
-              % if len([x for x in functions.function_list if not x.advanced and x.visible])>0:
-                  <h3>${functions.name} functions</h3>
-                  <ul class="functionslist">
-                      <% prevmethod = "" %>
-                      % for method in functions.function_list:
-                          % if prevmethod != method.name and method.visible and not method.advanced:
-                              <% params = "()" if method.parameters=="" else "(...)" %> 
-                              <li> <a href="#${method.name}">${method.name}${params}</a> </li>
-                          % endif
-                          <% prevmethod = method.name %>
-                      % endfor
-                  </ul>
-              % endif
-              </div>
-
-              <br style="clear:both"/>
+        	</div><!-- End Prose Block -->
+         </div><!-- End Main Block -->
+	</div>
+		<div class="page-wide">
+      	<div id="top_list">
+             
+             <!-- list of methods -->
+             % if not clazz is None and len([x for x in clazz.function_list if not x.advanced and x.visible and x.access=='public'])>0:
+               
+ 			
+			<p class="top_list_header">${clazz.name} methods</p>
+			
+                 <ul class="functionslist">
+                     <% prevmethod = "" %>
+                     % for method in clazz.function_list:
+                         % if prevmethod != method.name and method.visible and not method.advanced and method.access=='public':
+                             <% params = "()" if method.parameters=="" else "(...)" %> 
+                             <li> <a href="#${method.name}">${method.name}${params}</a> </li>
+                         % endif
+                         <% prevmethod = method.name %>
+                     % endfor
+                 </ul>
+             % endif
+            
+             
+             
+             <!-- list of variables -->              
+             % if not clazz is None and len([x for x in clazz.var_list if not x.advanced and x.visible and x.access=='public'])>0:
+                <p class="top_list_header">${clazz.name} variables</p>
+                <ul class="varslist">
+                     % for var in clazz.var_list:
+                         % if var.visible and not var.advanced and var.access=='public':
+                             <li> <a href="#${var.name}">${var.type} ${var.name}</a> </li>
+                         % endif
+                     % endfor
+                 </ul>
+             % endif
+            
+             
+            
+             <!-- list of c functions -->              
+             % if len([x for x in functions.function_list if not x.advanced and x.visible])>0:
+            <p class="top_list_header">${functions.name} functions</p>
+			     <ul class="functionslist">
+                     <% prevmethod = "" %>
+                     % for method in functions.function_list:
+                         % if prevmethod != method.name and method.visible and not method.advanced:
+                             <% params = "()" if method.parameters=="" else "(...)" %> 
+                             <li> <a href="#${method.name}">${method.name}${params}</a> </li>
+                         % endif
+                         <% prevmethod = method.name %>
+                     % endfor
+                 </ul>
+             % endif
+            
+		</div>
+	</div>
+		<div class="page-left-wide">
+          <div id="main_block">
+            <div id="prose_block">	
               
               <!-- methods detail -->
               % if not clazz is None and len([x for x in clazz.function_list if not x.advanced and x.visible and x.access=='public'])>0:
