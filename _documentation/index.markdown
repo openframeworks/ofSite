@@ -313,141 +313,11 @@ __visible: false__
 __advanced: false__
 
 
-//----------------------
-
-##types##
-
-###ofColor_###
-__visible: true__
-__advanced: false__
-
-
-###ofAbstractHasPixels###
-__visible: true__
-__advanced: true__
-
-
-###ofBaseSoundStream###
-__visible: true__
-__advanced: true__
-
-
-###ofBaseHasTexture###
-__visible: true__
-__advanced: true__
-
-
-###ofBaseImage###
-__visible: true__
-__advanced: true__
-
-
-###ofBaseRenderer###
-__visible: true__
-__advanced: true__
-
-
-###ofBaseUpdates###
-__visible: true__
-__advanced: true__
-
-
-###ofBaseDraws###
-__visible: true__
-__advanced: true__
-
-
-###ofBaseSoundOutput###
-__visible: true__
-__advanced: true__
-
-
-###ofBaseSoundInput###
-__visible: true__
-__advanced: true__
-
-
-###ofBaseLoggerChannel###
-__visible: true__
-__advanced: true__
-
-
-###ofBaseVideoPlayer###
-__visible: true__
-__advanced: true__
-
-
-###ofStyle###
-__visible: true__
-__advanced: false__
-
-
-###ofBaseSoundPlayer###
-__visible: true__
-__advanced: true__
-
-
-###ofBaseVideoGrabber###
-__visible: true__
-__advanced: true__
-
-
-###ofTypes###
-__visible: true__
-__advanced: false__
-
-
-###ofBaseVideoDraws###
-__visible: true__
-__advanced: true__
-
-
-###ofRectangle###
-__visible: true__
-__advanced: false__
-
-
-###ofBaseVideo###
-__visible: true__
-__advanced: true__
-
-
-###ofBaseHasPixels_###
-__visible: true__
-__advanced: true__
-
-
-###ofPoint###
-__visible: true__
-__advanced: false__
-
-
-###ofBaseHasPixels###
-__visible: true__
-__advanced: true__
-
-
-###ofAbstractImage###
-__visible: true__
-__advanced: true__
-
-
-###ofBaseImage_###
-__visible: true__
-__advanced: true__
-
-
-###ofColor###
-__visible: true__
-__advanced: false__
-
-
-###ofBaseTypes###
-__visible: true__
-__advanced: true__
-
 
 ___column___
+
+
+
 
 ##graphics##
 
@@ -630,6 +500,140 @@ __advanced: false__
 
 ___column___
 
+
+
+//----------------------
+
+##types##
+
+###ofColor_###
+__visible: true__
+__advanced: false__
+
+
+###ofAbstractHasPixels###
+__visible: true__
+__advanced: true__
+
+
+###ofBaseSoundStream###
+__visible: true__
+__advanced: true__
+
+
+###ofBaseHasTexture###
+__visible: true__
+__advanced: true__
+
+
+###ofBaseImage###
+__visible: true__
+__advanced: true__
+
+
+###ofBaseRenderer###
+__visible: true__
+__advanced: true__
+
+
+###ofBaseUpdates###
+__visible: true__
+__advanced: true__
+
+
+###ofBaseDraws###
+__visible: true__
+__advanced: true__
+
+
+###ofBaseSoundOutput###
+__visible: true__
+__advanced: true__
+
+
+###ofBaseSoundInput###
+__visible: true__
+__advanced: true__
+
+
+###ofBaseLoggerChannel###
+__visible: true__
+__advanced: true__
+
+
+###ofBaseVideoPlayer###
+__visible: true__
+__advanced: true__
+
+
+###ofStyle###
+__visible: true__
+__advanced: false__
+
+
+###ofBaseSoundPlayer###
+__visible: true__
+__advanced: true__
+
+
+###ofBaseVideoGrabber###
+__visible: true__
+__advanced: true__
+
+
+###ofTypes###
+__visible: true__
+__advanced: false__
+
+
+###ofBaseVideoDraws###
+__visible: true__
+__advanced: true__
+
+
+###ofRectangle###
+__visible: true__
+__advanced: false__
+
+
+###ofBaseVideo###
+__visible: true__
+__advanced: true__
+
+
+###ofBaseHasPixels_###
+__visible: true__
+__advanced: true__
+
+
+###ofPoint###
+__visible: true__
+__advanced: false__
+
+
+###ofBaseHasPixels###
+__visible: true__
+__advanced: true__
+
+
+###ofAbstractImage###
+__visible: true__
+__advanced: true__
+
+
+###ofBaseImage_###
+__visible: true__
+__advanced: true__
+
+
+###ofColor###
+__visible: true__
+__advanced: false__
+
+
+###ofBaseTypes###
+__visible: true__
+__advanced: true__
 
 
 //----------------------
