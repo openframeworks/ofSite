@@ -15,6 +15,7 @@
           <div id="main_block">
             <div id="prose_block">
               <h2>${modulename}</h2>
+              <p><a href="http://github.com/openframeworks/ofSite/blob/master/${clazz.name}">Edit this page on GitHub</a><p>
               <p>
               <%self:filter chain="markdown_template">
               % if not clazz is None:
