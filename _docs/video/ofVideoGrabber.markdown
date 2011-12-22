@@ -25,8 +25,29 @@
 
 
 
+
+
+
+
+
+
+
+
+
 The ofVideoGrabber class wraps quicktime's sequence grabbing component to provide low level access to live cameras. On windows it now uses the directshow based videoInput library which offers mainy performance advantages over quicktime and does not require quicktime or WinVDig to be installed. A #define in ofConstants.h allows you to choose whether to use quicktime or directshow (default) for windows.
 In linux it uses by default unicap, although you can change to v4l through a #define in ofConstants in case some v4l device doesn't work properly with unicap.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -252,7 +273,7 @@ _advanced: False_
 _description: _
 
 Initializes either the default capture device or the capture device specified by setDeviceID. Attempts to setup capture at the width and height specified. If the capture dimensions are not available it will setup capture for the next closest dimensions available. It is good to check what the actual size is before you start processing the pixels.
-<pre class="brush: cpp">
+~~~~{.cpp}
 
 myGrabber.setVerbose(true);
 myGrabber.setDeviceID(1);
@@ -261,7 +282,7 @@ int grabW = myGrabber.width;
 int grabH = myGrabber.height;
 printf("asked for 320 by 240 - actual size is %i by %i 
 ", grabW, grabH);
-</pre>
+~~~~
 
 
 bTexture variable tells ofVideoGrabber that it should setup a texture so you can display the video on the screen.
@@ -382,11 +403,11 @@ _description: _
 Sets the verbosity - this can be useful for debugging the video grabber interface. you can set the verbosity and then try initGrabber();
 
 From 0.06 this method has no effect. Use ofSetLogLevel(OF_LOG_VERBOSE) to enable verbose messages.
-<pre class="brush: cpp">
+~~~~{.cpp}
 
 myGrabber.setVerbose(true);
 myGrabber.initGrabber(320,240);
-</pre>
+~~~~
 
 
 
@@ -445,11 +466,11 @@ _advanced: False_
 _description: _
 
 Set the usage of texture inside this object. Typically, you will want to draw the movie grabber on screen, and so it will be necessary to use a texture, but there may be cases where it helps to not use a texture in order to save memory or for better performance. To disable the internal use of the texture, you can initialize the sequence grabber like this:
-<pre class="brush: cpp">
+~~~~{.cpp}
 
 myGrabber.setUseTexture(false);
 myGrabber.initGrabber(320,240);
-</pre>
+~~~~
 
 
 

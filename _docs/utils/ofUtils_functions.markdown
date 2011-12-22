@@ -370,12 +370,12 @@ _description: _
 
 Saves the current screen image into a given file name (string filename).
 Example:
-<pre class="brush: cpp">
+~~~~{.cpp}
 
 string filename;
 fileName = "screen1.png";
 ofSaveScreen(fileName);
-</pre>
+~~~~
 
 
 

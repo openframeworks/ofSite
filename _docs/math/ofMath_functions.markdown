@@ -259,13 +259,13 @@ _description: _
 
 Restricts a value to be within a specified range defined by values min and max. 
 e.g:
-<pre class="brush: cpp">
+~~~~{.cpp}
 float val, newval;
 val=10;
 newval=ofClamp(val,30,40); //newval = 30
 newval=ofClamp(val,0,5); //newval = 5
 newval=ofClamp(val,0,20); //newval = 10
-</pre>
+~~~~
 
 
 
@@ -296,14 +296,14 @@ _description: _
 Calculates a number between two numbers (start,stop) at a specific increment (amt).
 If we want the new number to be between start,stop numbers amp needs to be a number between 0 and 1. 
 e.g:
-<pre class="brush: cpp">
+~~~~{.cpp}
 float init,end,increment,result;
 increment=0.2;
 init = 1;
 end =2;
 result=ofLerp(init, end, increment); //result = 1.2
 //We are doing init+increment*(end-init)
-</pre>
+~~~~
 
 
 

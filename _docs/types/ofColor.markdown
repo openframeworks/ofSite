@@ -28,6 +28,15 @@
 
 
 
+
+
+
+
+
+
+
+
+
 This class contains variables defining a color. We can create a color object containing information about a certain color. 
 For example:
 
@@ -53,6 +62,18 @@ The saturation determines how much of the hue versus white is present and bright
 ![SB](../types/hsb-cone.jpg)
 
 ofColor is templated, which means that it has several different ways it can be created. These are probably best to leave as they are because there's already a few kinds type-deffed for you. You can make an ofFloatColor if you want to work with floating point numbers, ofShortColor if you want to work with ints, or the default ofColor, which uses unsigned char values.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -593,14 +614,14 @@ _advanced: False_
 _description: _
 
 The following
-<pre class="brush: cpp">
+~~~~{.cpp}
 	ofColor c(122, 122, 0);
 	ofSetColor(c);
 	ofCircle(100, 100, 100);
 	c.normalize();
 	ofSetColor(c);
 	ofCircle(300, 100, 100);
-</pre>
+~~~~
 will create this:
 ![ofNorm](../types/ofNormalize.png)
 

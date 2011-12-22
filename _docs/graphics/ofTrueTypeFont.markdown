@@ -28,7 +28,28 @@
 
 
 
+
+
+
+
+
+
+
+
+
 The ofTrueTypeFont class provides an interface to load fonts into openframeworks. The fonts are converted to textures, and can be drawn on screen. There are some options when you load the font - what size the font is rendered at, wether or not it is anti-aliased, and wether the font object will be the full character set or a subset (ie, extended ascii, which can include accents, umlauts, or normal ascii). The default is anti-aliased, non-full character set. The library uses freetype, which has certain patent problems in regards to true type hinting, especially at small sizes, so non-anti-aliased type doesn't always render beautifully. But we find it quite adequate, and at larger sizes it seems to works well.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -411,7 +432,7 @@ _advanced: False_
 _description: _
 
 e.g:
-<pre class="brush: cpp">
+~~~~{.cpp}
 
 //in setup() 
 
@@ -426,7 +447,7 @@ ofRectangle rect = franklinBook.getStringBoundingBox(tempString, 0,0);
 
 ofSetColor(0xcccccc);
 ofRect(rect.x, rect.y, rect.width, rect.height);
-</pre>
+~~~~
 
 
 
@@ -456,7 +477,7 @@ _advanced: False_
 _description: _
 
 Draws a string with that typeface, on screen, at point(x,y). For example, you can write some text on screen like this:
-<pre class="brush: cpp">
+~~~~{.cpp}
 
 // in the h file:
 ofFont myfont;
@@ -467,21 +488,21 @@ myfont.loadFont("arial.ttf", 32);
 
 // in draw:
 myfont.drawString("hi!!", 100,100);
-</pre>
+~~~~
 
 Your strings can even be multiline:
-<pre class="brush: cpp">
+~~~~{.cpp}
 
 myfont.drawString("a test of multiline text", 300,300);
-</pre>
+~~~~
 
 you can also using dynamically generated strings. For example, to print the frame rate:
-<pre class="brush: cpp">
+~~~~{.cpp}
 
 char fpsStr[255]; // an array of chars
 sprintf(fpsStr, "frame rate: %f", ofGetFrameRate());
 myfont.drawString(fpsStr, 100,100);
-</pre>
+~~~~
 
 
 

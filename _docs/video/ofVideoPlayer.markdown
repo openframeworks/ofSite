@@ -25,6 +25,15 @@
 
 
 
+
+
+
+
+
+
+
+
+
 The ofVideoPlayer class loads in a movie file via quicktime in windows and mac  or gstreamer in linux, and offers various controls to play the movie, control the properties of the movie, and to access the pixels of a given frame.
 
 Example:
@@ -32,6 +41,18 @@ Example:
 $$code(lang=c++)
 ofVideoPlayer myPlayer;
 $$/code
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -202,10 +223,10 @@ _description: _
 Load a movie file (fileName) into that object. It will look for the movie file inside of the data/ folder. The movie does not automatically play once loaded.
 
 Example:
-<pre class="brush: cpp">
+~~~~{.cpp}
 ofVideoPlayer myPlayer;
 myPlayer.loadMovie('myMovie.mov');
-</pre>
+~~~~
 
 
 
@@ -266,11 +287,11 @@ Closes the movie file and de-allocates resources.
 
 
 Example:
-<pre class="brush: cpp">
+~~~~{.cpp}
 ofVideoPlayer myPlayer;
 myPlayer.loadMovie("myMovie.mov"); //Loads video resources
 myPlayer.closeMovie(); //Unloads video resources
-</pre>
+~~~~
 
 
 
@@ -529,12 +550,12 @@ _advanced: False_
 _description: _
 
 For example, if the pixels are new, you could then process them.
-<pre class="brush: cpp">
+~~~~{.cpp}
 
 if (myMovie.isFrameNew()){
 	;	// do something
 }
-</pre>
+~~~~
 
 
 
@@ -564,13 +585,13 @@ _advanced: False_
 _description: _
 
 For example, to get the red green and blue of the pixel (100,20):
-<pre class="brush: cpp">
+~~~~{.cpp}
 unsigned char * pixels = myMovie.getPixels();
 int widthOfLine = myMovie.width * w;  // how long is a line of pixels
 int red 	= pixels[(20 * widthOfLine) + 100 * 3    ];
 int green 	= pixels[(20 * widthOfLine) + 100 * 3 + 1];
 int blue 	= pixels[(20 * widthOfLine) + 100 * 3 + 2];
-</pre>
+~~~~
 
 
 
@@ -864,11 +885,11 @@ _advanced: False_
 _description: _
 
 Set the usage of texture inside this object. Typically, you will want to draw the movie on screen, and so it will be necessary to use a texture, but there may be cases where it helps to not use a texture in order to save memory or for better performance. To disable the internal use of the texture, you can load the movie like this:
-<pre class="brush: cpp">
+~~~~{.cpp}
 
 myMovie.setUseTexture(false);
 myMovie.loadMovie("blah.mov");
-</pre>
+~~~~
 
 
 
