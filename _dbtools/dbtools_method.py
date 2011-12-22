@@ -7,14 +7,14 @@ def tostr(string):
 
 def names(db,classid,advanced):
     cursor=db.cursor()
-    sql='SELECT id,name FROM docs_functions WHERE linktable="class" and linkid= %s and advanced=%s'
+    sql='SELECT id,name FROM documentation_functions WHERE linktable="class" and linkid= %s and advanced=%s'
     cursor.execute(sql,(classid,advanced))
     functions=cursor.fetchall()
     return functions
 
 def list_all(db,classid,advanced):
     cursor=db.cursor()
-    sql='SELECT id,name,returns,parameters,description,syntax,returns_description,extra_description FROM docs_functions WHERE  linktable="class" and linkid=%s and advanced=%s ORDER BY sortid'
+    sql='SELECT id,name,returns,parameters,description,syntax,returns_description,extra_description FROM documentation_functions WHERE  linktable="class" and linkid=%s and advanced=%s ORDER BY sortid'
     cursor.execute(sql,(classid,advanced,))
     functions=cursor.fetchall()
     function_list = []

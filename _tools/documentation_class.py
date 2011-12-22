@@ -1,8 +1,8 @@
 #!/usr/bin/python
-#import docs_functions
+#import documentation_functions
 import sys
-from docs_members import DocsMethod,DocsVar
-#sys.path.append( "/var/www/test_new_docs/" )
+from documentation_members import DocsMethod,DocsVar
+#sys.path.append( "/var/www/test_new_documentation/" )
 
 import os
 import fileinput

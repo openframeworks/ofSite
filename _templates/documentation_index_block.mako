@@ -1,6 +1,6 @@
 <%page args="block"/>
-<div class="docs_group">
-    <div class="docs_group_head">&#160;&#160;
+<div class="documentation_group">
+    <div class="documentation_group_head">&#160;&#160;
 			${block.name}			
 	</div>
 			
@@ -15,15 +15,15 @@
 
     % for clazz in block.classes:   
     	% if clazz['visible'] and not clazz['advanced']:
-    	<div class="docs_class">
+    	<div class="documentation_class">
     	    <!-- class link -->
-            &#160;&#160;&#160;<a href="${block.name + '/' + clazz['name']}.html" class="docs_class_link"><strong>${clazz['name']}</strong></a><br />
+            &#160;&#160;&#160;<a href="${block.name + '/' + clazz['name']}.html" class="documentation_class_link"><strong>${clazz['name']}</strong></a><br />
             
             
     	    <!-- class methods -->
             % if 'methods' in clazz:
                 % for method in clazz['methods']:
-                    &#160;&#160;&#160;&#160;<a href="${block.name + '/' + clazz['name']}.html#${method[:method.find('(')]}" title="${method}" class="docs_func">${method}</a><br />
+                    &#160;&#160;&#160;&#160;<a href="${block.name + '/' + clazz['name']}.html#${method[:method.find('(')]}" title="${method}" class="documentation_func">${method}</a><br />
                 % endfor
             % endif
             
@@ -34,7 +34,7 @@
     	    <!-- class variables -->
             % if 'variables' in clazz:
                 % for variable in clazz['variables']:
-                    &#160;&#160;&#160;&#160;<a href="${block.name + '/' + clazz['name']}.html#${variable[:variable.find('(')]}" title="${variable}" class="docs_func">${variable}</a><br />
+                    &#160;&#160;&#160;&#160;<a href="${block.name + '/' + clazz['name']}.html#${variable[:variable.find('(')]}" title="${variable}" class="documentation_func">${variable}</a><br />
                 % endfor
             % endif
             

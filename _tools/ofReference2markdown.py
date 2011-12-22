@@ -1,12 +1,12 @@
 from markdown_file import getclass, setclass
 import os
-from docs_members import DocsMethod, DocsVar
+from documentation_members import DocsMethod, DocsVar
 import re
 import shutil
 import codecs
 
 ofReference_path = '/home/arturo/Documentos/ofReference'
-docs_root = '/home/arturo/Documentos/new_of_site/_docs/'
+documentation_root = '/home/arturo/Documentos/new_of_site/_documentation/'
 
 def remove_links(string):
     ret = ""
@@ -115,10 +115,10 @@ def ofReferenceConvert():
             file_split = os.path.splitext(name)
             if file_split[1]==".jpeg" or file_split[1]==".jpg" or file_split[1]==".gif" or file_split[1]==".png":
                 try:
-                    os.mkdir(os.path.join(docs_root,os.path.basename(root)))
+                    os.mkdir(os.path.join(documentation_root,os.path.basename(root)))
                 except:
                     pass
-                shutil.copyfile(os.path.join(root,name), os.path.join(docs_root,os.path.basename(root),name))
+                shutil.copyfile(os.path.join(root,name), os.path.join(documentation_root,os.path.basename(root),name))
             if file_split[1]=='.markdown': 
                 print '###################get_class ' + file_split[0]
                 clazz = getclass(file_split[0])

@@ -1,11 +1,11 @@
 #!/usr/bin/python
 
 import sys
-sys.path.append( "/var/www/test_new_docs/" )
+sys.path.append( "/var/www/test_new_documentation/" )
 
 import os
 import fileinput
-import docs_group
+import documentation_group
 
 import MySQLdb
 import traceback
@@ -39,7 +39,7 @@ def index():
         db=MySQLdb.connect(host='localhost',user='root',passwd='asdqwe34',db='of_site09')
 
         template = Template(renderIndex, str(file.read()))
-        groups = docs_group.list_all(db,"core", 0)
+        groups = documentation_group.list_all(db,"core", 0)
         html = str(template.render(groups))
 
     except Exception as inst:

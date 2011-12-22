@@ -25,7 +25,7 @@
 			        <strong>Show advanced?</strong><br />
 				        <a href="documentation?adv=yes">yes</a> / no
 		        </p-->
-		        <div id="docs-ebook">
+		        <div id="documentation-ebook">
 		        <h2>download</h2>
 		        <p><a href="${bf.config.site.url}/epub/ofReference.zip"><strong>html</strong></a></p>
 		        <!--p><a href="${bf.config.site.url}/epub/ofReference.pdf"><strong>pdf</strong></a></p>
@@ -46,9 +46,9 @@
 
     	<div class="page-wide">
             % for column in columns:
-            <div class="docs_col">
+            <div class="documentation_col">
                 % for block in column:
-                    <%include file="docs_index_block.mako" args="block=block" />
+                    <%include file="documentation_index_block.mako" args="block=block" />
                 % endfor
             </div>
             % endfor
@@ -63,9 +63,9 @@
 
     	<div class="page-wide">
             % for column in addons_columns:
-            <div class="docs_col">
+            <div class="documentation_col">
                 % for block in column:
-                    <%include file="docs_index_block.mako" args="block=block" />
+                    <%include file="documentation_index_block.mako" args="block=block" />
                 % endfor
             </div>
             % endfor
@@ -81,7 +81,7 @@
 </html>
 
 <%def name="header()">
-  <%include file="header.mako" args="active='docs'" />
+  <%include file="header.mako" args="active='documentation'" />
 </%def>
 
 

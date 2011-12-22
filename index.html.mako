@@ -14,7 +14,7 @@
         <h3><a href="download/">download</a></h3>
         <p>Grab the most recent release and follow the setup guide to get openFrameworks running.</p>
         
-	<h3><a href="docs/">documentation</a></h3>
+	<h3><a href="documentation/">documentation</a></h3>
 	<p>Reference for openFrameworks classes, functions and addons. For guides and tutorials, see the <a href="http://wiki.openframeworks.cc/">wiki</a>.</p>
         
 	<h3><a href="http://forum.openframeworks.cc/">forum</a></h3>

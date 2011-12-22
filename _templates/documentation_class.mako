@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     ${self.head()}
-    <script src="${bf.config.site.url}/js/docs.js"></script>
+    <script src="${bf.config.site.url}/js/documentation.js"></script>
   </head>
   <body>
     <div id="content">
@@ -82,7 +82,7 @@
                   <h3>${clazz.name} methods</h3>
                   % for method in clazz.function_list:
                         % if method.visible and not method.advanced and method.access=='public':
-                            <%include file="docs_method.mako" args="method=method" />    
+                            <%include file="documentation_method.mako" args="method=method" />    
                         % endif
                   % endfor
               % endif
@@ -92,7 +92,7 @@
                   <h3>${clazz.name} variables</h3>
                   % for var in clazz.var_list:
                         % if var.visible and not var.advanced and var.access=='public':
-                            <%include file="docs_var.mako" args="var=var" />    
+                            <%include file="documentation_var.mako" args="var=var" />    
                         % endif
                   % endfor
               % endif 
@@ -102,7 +102,7 @@
                   <h3>${functions.name} c functions</h3>
                   % for method in functions.function_list:
                         % if method.visible and not method.advanced:
-                            <%include file="docs_function.mako" args="function=method" />    
+                            <%include file="documentation_function.mako" args="function=method" />    
                         % endif
                   % endfor
               % endif
@@ -118,6 +118,6 @@
   </body>
 </html>
 <%def name="header()">
-  <%include file="header.mako"  args="active='docs'"/>
+  <%include file="header.mako"  args="active='documentation'"/>
 </%def>
 

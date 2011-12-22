@@ -1,22 +1,22 @@
-#import docs_files
-from docs_members import DocsMethod
-from docs_members import DocsVar
-from docs_class import DocsClass
-from docs_function import DocsFunctionsFile, DocsFunction
+#import documentation_files
+from documentation_members import DocsMethod
+from documentation_members import DocsVar
+from documentation_class import DocsClass
+from documentation_function import DocsFunctionsFile, DocsFunction
 import os
 
-docs_root = '_docs/'
+documentation_root = '_documentation/'
 
 def list_all_addons():
     modules = []
-    for root, dirs, files in os.walk(docs_root+"addons"):
+    for root, dirs, files in os.walk(documentation_root+"addons"):
         for name in dirs:
             modules.append(name)
     return modules
     
 def list_all_modules():
     modules = []
-    for root, dirs, files in os.walk(docs_root):
+    for root, dirs, files in os.walk(documentation_root):
         for name in dirs:
             if name.find("ofx")!=0:
                 modules.append(name)
@@ -24,7 +24,7 @@ def list_all_modules():
     
 def list_all_addon_files(addon=''):
     module_files = []
-    for root, dirs, files in os.walk(os.path.join(docs_root, 'addons', addon)):
+    for root, dirs, files in os.walk(os.path.join(documentation_root, 'addons', addon)):
         for name in files:
             file_split = os.path.splitext(name)
             if file_split[1]=='.markdown': 
@@ -33,7 +33,7 @@ def list_all_addon_files(addon=''):
             
 def list_all_files(module=''):
     module_files = []
-    for root, dirs, files in os.walk(os.path.join(docs_root, module)):
+    for root, dirs, files in os.walk(os.path.join(documentation_root, module)):
         for name in files:
             file_split = os.path.splitext(name)
             if file_split[1]=='.markdown': 
@@ -51,7 +51,7 @@ def addfield(method,line):
 
 def getfunctionsfiles_list():
     functionsfiles_list = []
-    for root, dirs, files in os.walk(os.path.join(docs_root)):
+    for root, dirs, files in os.walk(os.path.join(documentation_root)):
         for name in files:
             file_split = os.path.splitext(name)
             if file_split[1]=='.markdown':
@@ -70,7 +70,7 @@ def getfunctionsfile(filename):
     functionsfile.name = filename
     functionsfile.new = 1                        
     function = DocsFunction(0)
-    for root, dirs, files in os.walk(os.path.join(docs_root)):
+    for root, dirs, files in os.walk(os.path.join(documentation_root)):
         for name in files:
             file_split = os.path.splitext(name)
             if file_split[1]=='.markdown' and file_split[0] == filename+"_functions": 
@@ -102,7 +102,7 @@ def getfunctionsfile(filename):
 
 def getclass_list():
     class_list = []
-    for root, dirs, files in os.walk(os.path.join(docs_root)):
+    for root, dirs, files in os.walk(os.path.join(documentation_root)):
         for name in files:
             file_split = os.path.splitext(name)
             if file_split[1]=='.markdown':
@@ -119,11 +119,11 @@ def getclass_list():
 def getclass(clazz):
     method = DocsMethod(0)
     var = DocsVar(0)
-    docs_clazz = DocsClass(0)
+    documentation_clazz = DocsClass(0)
     var.clazz  = clazz
-    docs_clazz.name = clazz
-    docs_clazz.new = True
-    for root, dirs, files in os.walk(os.path.join(docs_root)):
+    documentation_clazz.name = clazz
+    documentation_clazz.new = True
+    for root, dirs, files in os.walk(os.path.join(documentation_root)):
         for name in files:
             file_split = os.path.splitext(name)
             if file_split[1]=='.markdown' and file_split[0] == clazz: 
@@ -133,8 +133,8 @@ def getclass(clazz):
                 for line in f:
                     if state == 'begin' and line.find('#class') == 0 and line.find(clazz)!=-1:
                         state = 'class'
-                        docs_clazz.module = os.path.basename(root)
-                        docs_clazz.new = False
+                        documentation_clazz.module = os.path.basename(root)
+                        documentation_clazz.new = False
                         
                     elif state == 'class' and line.rstrip('\n').rstrip(' ') == '##Methods':
                         state = 'methods'
@@ -155,14 +155,14 @@ def getclass(clazz):
                         
                     elif state == 'description' and line.find('###') == 0:
                         state = 'method'
-                        docs_clazz.function_list.append(method)
+                        documentation_clazz.function_list.append(method)
                         method = DocsMethod(0)
-                        method.clazz = docs_clazz.name
+                        method.clazz = documentation_clazz.name
                         method.linenum = linenum
                         method.file = os.path.join(root,name)
                         
                     elif state == 'description' and line.rstrip('\n').rstrip(' ') == '##Variables':
-                        docs_clazz.function_list.append(method)
+                        documentation_clazz.function_list.append(method)
                         state = 'vars'
                         
                     elif state == 'vars' and line.find('###') == 0:
@@ -181,22 +181,22 @@ def getclass(clazz):
                     elif state == 'vardescription' and line.find('###') == 0:
                         #print line
                         state = 'var'
-                        docs_clazz.var_list.append(var)
+                        documentation_clazz.var_list.append(var)
                         var = DocsVar(0)
-                        var.clazz  = docs_clazz.name
+                        var.clazz  = documentation_clazz.name
                         var.linenum = linenum
                         var.file = os.path.join(root,name)
                         
                     elif state == 'class' and line.find('##Description')==-1:
-                        docs_clazz.reference  = docs_clazz.reference + line
+                        documentation_clazz.reference  = documentation_clazz.reference + line
                     linenum = linenum + 1
                 if state == 'vardescription':
-                    docs_clazz.var_list.append(var)
+                    documentation_clazz.var_list.append(var)
                 f.close()
-                return docs_clazz   
+                return documentation_clazz   
 
 
-    return docs_clazz
+    return documentation_clazz
     
     
 def serialize_function(f,function,member):
@@ -242,10 +242,10 @@ def serialize_var(f,var):
     
 def setclass(clazz):
     try:
-        os.mkdir(os.path.join(docs_root,clazz.module))
+        os.mkdir(os.path.join(documentation_root,clazz.module))
     except:
         pass
-    f = open(os.path.join(docs_root,clazz.module,clazz.name)+".markdown",'w')
+    f = open(os.path.join(documentation_root,clazz.module,clazz.name)+".markdown",'w')
     f.write('#class ' + clazz.name + '\n\n\n')
     
     #f.write('//----------------------\n\n')
@@ -271,10 +271,10 @@ def setclass(clazz):
     
 def setfunctionsfile(functionfile):
     try:
-        os.mkdir(os.path.join(docs_root,functionfile.module))
+        os.mkdir(os.path.join(documentation_root,functionfile.module))
     except:
         pass
-    f = open(os.path.join(docs_root,functionfile.module,functionfile.name)+"_functions.markdown",'w')
+    f = open(os.path.join(documentation_root,functionfile.module,functionfile.name)+"_functions.markdown",'w')
     f.write('#functions\n\n')
     f.write('##Description\n\n' + functionfile.description + '\n\n\n\n')
     

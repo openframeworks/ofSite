@@ -3,7 +3,7 @@ from HTMLTemplate import Template
         
 def list_all(db,fileid):
     cursor=db.cursor()
-    sql='SELECT id,name,visible,advanced FROM docs_class WHERE fileid=%s '
+    sql='SELECT id,name,visible,advanced FROM documentation_class WHERE fileid=%s '
     cursor.execute(sql,(fileid,))
     classes=cursor.fetchall()
     class_list = []
@@ -16,13 +16,13 @@ def list_all(db,fileid):
 
 def getClass(db,classid):
     cursor=db.cursor()
-    sql='SELECT name,description FROM docs_class WHERE id=%s'
+    sql='SELECT name,description FROM documentation_class WHERE id=%s'
     cursor.execute(sql,(classid,))
     clazz=cursor.fetchall()
-    docs_class = DocsClass(classid)
-    docs_class.name = clazz[0][0]
-    docs_class.reference = clazz[0][1]
-    return docs_class
+    documentation_class = DocsClass(classid)
+    documentation_class.name = clazz[0][0]
+    documentation_class.reference = clazz[0][1]
+    return documentation_class
 
 def renderFunctionsDetail(htmlFunction, function):
     htmlFunction.name.content = function.name
@@ -30,9 +30,9 @@ def renderFunctionsDetail(htmlFunction, function):
     htmlFunction.syntax.content = function.syntax
 
 def renderClassDetail(tem,clazz):
-    tem.docs_class.name.content = clazz.name
-    tem.docs_class.description.content = clazz.description
-    tem.docs_class.function.repeat(renderFunctionsDetail,clazz.functions())
+    tem.documentation_class.name.content = clazz.name
+    tem.documentation_class.description.content = clazz.description
+    tem.documentation_class.function.repeat(renderFunctionsDetail,clazz.functions())
 
 def class_detail():
     try:

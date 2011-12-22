@@ -2,21 +2,21 @@
 
 import os
 import sys
-import docs_group
-import docs_files
-import docs_function
-import docs_members
+import documentation_group
+import documentation_files
+import documentation_function
+import documentation_members
 import MySQLdb
 
-docs_root = "/home/arturo/Documentos/new_of_site/_docs"
+documentation_root = "/home/arturo/Documentos/new_of_site/_documentation"
 
-index = open(docs_root + "/index.markdown",'w')
+index = open(documentation_root + "/index.markdown",'w')
 db = MySQLdb.connect(host='localhost',user='root',passwd='asdqwe34',db='of_site09')
-adv_groups = docs_group.list_all(db,'core',True)
+adv_groups = documentation_group.list_all(db,'core',True)
 
 
 def export_vars(db,clazz_file,clazz):
-    variables = docs_members.list_all_vars(db,clazz.id)
+    variables = documentation_members.list_all_vars(db,clazz.id)
     for var in variables:
         #if var.visible and not var.advanced
         index.write(var.name+'\n\n')
@@ -39,7 +39,7 @@ def export_vars(db,clazz_file,clazz):
         
         
 def export_methods(db,clazz_file,clazz):
-    methods = docs_members.list_all_methods(db,clazz.id)
+    methods = documentation_members.list_all_methods(db,clazz.id)
     for method in methods:
         #if method.visible and not method.advanced
         if len(method.parameters.replace(' ',''))>0:
@@ -66,7 +66,7 @@ def export_methods(db,clazz_file,clazz):
         clazz_file.write("\n\n\n\n\n\n\n\n\n\n\n\n")
 
 def export_classes(db,group_dir,group):
-    classes = docs_files.list_all_classes(db,group.id)
+    classes = documentation_files.list_all_classes(db,group.id)
     for clazz in classes:
         print str(clazz.id) + " " + clazz.name + " " + str(clazz.new)
         clazz_file = open(group_dir+"/"+clazz.name+".markdown",'w')
@@ -76,7 +76,7 @@ def export_classes(db,group_dir,group):
         index.write('__advanced: ' + ('true' if clazz.advanced else 'false' ) + '__\n\n')            
         index.write('__methods__\n\n')
 	
-        #clazz_file.write( '<%inherit file="_templates/docs.mako" />\n' )
+        #clazz_file.write( '<%inherit file="_templates/documentation.mako" />\n' )
         clazz_file.write( '#class ' + clazz.name + "\n\n" )
         
         
@@ -99,10 +99,10 @@ def export_classes(db,group_dir,group):
         clazz_file.close()	
 
 def export_groups(db,advanced):
-    groups = docs_group.list_all(db,'core',advanced)
+    groups = documentation_group.list_all(db,'core',advanced)
     for group in groups:
         print str(group.id) + " " + group.name
-        group_dir = docs_root + "/" + group.name.replace(' ','_')
+        group_dir = documentation_root + "/" + group.name.replace(' ','_')
         #index.write("//----------------------\n\n")
         index.write("##" + group.name + "##\n\n")
         try:
@@ -113,7 +113,7 @@ def export_groups(db,advanced):
         
 
 
-#index.write( '<%inherit file="_templates/docs.mako" />\n' )
+#index.write( '<%inherit file="_templates/documentation.mako" />\n' )
 index.write( '\n' )
 export_groups(db,False)
 export_groups(db,True)
