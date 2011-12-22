@@ -23,7 +23,7 @@
     	    <!-- class methods -->
             % if 'methods' in clazz:
                 % for method in clazz['methods']:
-                    &#160;&#160;&#160;&#160;<a href="${block.name + '/' + clazz['name']}.html#${clazz['name']}-${method}" title="${method}" class="docs_func">${method}</a><br />
+                    &#160;&#160;&#160;&#160;<a href="${block.name + '/' + clazz['name']}.html#${method[:method.find('(')]}" title="${method}" class="docs_func">${method}</a><br />
                 % endfor
             % endif
             
@@ -34,7 +34,7 @@
     	    <!-- class variables -->
             % if 'variables' in clazz:
                 % for variable in clazz['variables']:
-                    &#160;&#160;&#160;&#160;<a href="${block.name + '/' + clazz['name']}.html#${clazz['name']}-${variable}" title="${variable}" class="docs_func">${variable}</a><br />
+                    &#160;&#160;&#160;&#160;<a href="${block.name + '/' + clazz['name']}.html#${variable[:variable.find('(')]}" title="${variable}" class="docs_func">${variable}</a><br />
                 % endfor
             % endif
             

@@ -60,7 +60,7 @@
               <div id="functions_list">
               <!-- list of c functions -->              
               % if len([x for x in functions.function_list if not x.advanced and x.visible])>0:
-                  <h3>${functions.name} c functions</h3>
+                  <h3>${functions.name} functions</h3>
                   <ul class="functionslist">
                       <% prevmethod = "" %>
                       % for method in functions.function_list:
