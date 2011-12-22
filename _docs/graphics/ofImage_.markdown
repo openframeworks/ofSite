@@ -17,7 +17,42 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 The ofImage class wraps a library called "freeImage", and is a useful object for loading, saving and drawing images in OF projects. ofImage contains both the pixels of an image and the texture used to draw the image. The ofImage allows you to load images =, maniuplate the pixels, and createa n OpenGL texture that you can display and manipulate on the graphics card. Loading a file into the ofImage allocates memory for the pixels and creates the ofTexture to display the pixels.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -60,36 +95,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 This creates an ofImage but doesn't allocate any memory for it, so you can't use the image immediately after creating it.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -124,36 +130,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ### ofImage_(&pix)
@@ -176,36 +152,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 This creates an ofImage from an ofPixels object, allocating space for the pixels, and copying the pixels into the texture that the ofImage instance contains.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -234,35 +181,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 This creates an ofImage from an ofFile instance.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -291,47 +210,14 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 This creates an ofImage from a file which can be a local string or a URL, allocating space for the pixels, and copying the pixels into the texture that the ofImage instance contains.
-
 $$code(lang=c++)
 ofImage img("http://www.openframeworks.cc/wp-content/themes/ofw/images/ofw-logo.gif");
 $$/code
-
 or
-
 $$code(lang=c++)
 ofImage img("anImage.png"); // assumes this is in bin/data
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -360,14 +246,8 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 This allocates space in the ofImage, both the ofPixels and the ofTexture that the ofImage contains.
-
-$$code(lang=c++)
+~~~~{.cpp}
 img.allocate(640, 480, OF_IMAGE_COLOR);
 int i = 0;
 while ( i < img.getPixelsRef().size() ) {
@@ -375,30 +255,7 @@ while ( i < img.getPixelsRef().size() ) {
 	i++;
 }
 img.reloadTexture();
-$$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+~~~~
 
 
 
@@ -427,11 +284,6 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 This clears the texture and pixels contained within the ofImage.
 
 
@@ -439,30 +291,6 @@ This clears the texture and pixels contained within the ofImage.
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ### ofImage_(&mom)
@@ -485,36 +313,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 This allows you to create an ofImage from another ofImage instance, copying all the pixels and the texture data while creating a new textureID.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -543,36 +342,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
-
 This allows you to create an ofImage from another ofImage instance, copying all the pixels and the texture data while creating a new textureID.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -601,36 +371,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 This allows you to create an ofImage from another ofImage instance, copying all the pixels and the texture data while creating a new textureID.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -659,36 +400,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
-
 This allows you to create an ofImage from another ofImage instance, copying all the pixels and the texture data while creating a new textureID.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -717,40 +429,11 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 This allows you to create an ofImage from another ofImage instance, copying all the pixels and the texture data while creating a new textureID.
-
-$$code(lang=c++)
+~~~~{.cpp}
 ofImage second;
 second.clone(first);
-$$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+~~~~
 
 
 
@@ -779,36 +462,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 If you set the ofImage to not use a texture it will contain the pixels of the image but cannot be drawn to the screen without copying its data into an ofTexture instance.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -837,36 +491,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Returns whether the ofImage has a texture or not. If not, nothing will be drawn to the screen if the draw() method is called.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -895,36 +520,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 This returns the texture reference that the ofImage contains. You can use this to directly manipulate the texture itself, but keep in mind that if you manipulate the texture directly, there is no simple way to copy the data from the texture back to the pixels and keep the ofImage in sync.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -953,14 +549,8 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 This binds the ofTexture instance that the ofImage contains so that it can be used for advaned drawing
-
-$$code(lang=c++)
+~~~~{.cpp}
 void ofApp::setup() {
 	img.allocate(256, 256, OF_IMAGE_COLOR);
 	int i = 0;
@@ -984,7 +574,6 @@ void ofApp::setup() {
 	mesh.addTexCoord(ofVec2f(0, 256));
 	mesh.addTexCoord(ofVec2f(0, 0));
 }
-
 void ofApp::draw(){
 	
 	ofBackground(255, 255, 255); // background white
@@ -993,31 +582,7 @@ void ofApp::draw(){
 	mesh.draw();
 	img.unbind();
 }
-$$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+~~~~
 
 
 
@@ -1046,35 +611,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
 This unbinds the ofTexture instance that the ofImage contains. Call this after you call bind().
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1103,36 +640,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Loads an image from a file name.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1161,36 +669,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Loads an image from an ofBuffer instance created by, for instance, ofFile::readToBuffer(). This actually loads the image data into an ofPixels object and then into the texture.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1219,36 +698,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Loads an image from an ofFile instance created by, for instance, ofDirectory::getFiles(). This actually loads the image data into an ofPixels object and then into the texture.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1277,42 +727,12 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 This saves the image to the file path in fileName with the image quality specified by compressionLevel. The different compression levels are:
-
 OF_IMAGE_QUALITY_BEST,
 OF_IMAGE_QUALITY_HIGH,
 OF_IMAGE_QUALITY_MEDIUM,
 OF_IMAGE_QUALITY_LOW,
 OF_IMAGE_QUALITY_WORST
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1341,42 +761,12 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 This saves the image to the ofBuffer passed with the image quality specified by compressionLevel. This is useful when streaming files. The different compression levels are:
-
 OF_IMAGE_QUALITY_BEST,
 OF_IMAGE_QUALITY_HIGH,
 OF_IMAGE_QUALITY_MEDIUM,
 OF_IMAGE_QUALITY_LOW,
 OF_IMAGE_QUALITY_WORST
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1405,42 +795,12 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 This saves the image to the ofFile passed with the image quality specified by compressionLevel. This is useful when streaming files. The different compression levels are:
-
 OF_IMAGE_QUALITY_BEST,
 OF_IMAGE_QUALITY_HIGH,
 OF_IMAGE_QUALITY_MEDIUM,
 OF_IMAGE_QUALITY_LOW,
 OF_IMAGE_QUALITY_WORST
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1469,40 +829,10 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 This sets the compression level used when creating mipmaps for the ofTexture contained by the ofImage. This is quite different than the ofImageQualityType image quality parameter used in saveImage(). The different texture compression levels are:
-
 	OF_COMPRESS_NONE,
 	OF_COMPRESS_SRGB,
 	OF_COMPRESS_ARB
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1531,36 +861,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 This returns a raw pointer to the pixel data.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1589,14 +890,8 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 This returns an ofPixels reference that you can use to manipulate the raw pixel data of the ofImage. Make sure you call either update() or reloadTexture() after making changes to the ofPixels.
-
-$$code(lang=c++)
+~~~~{.cpp}
 int i = 0;
 	while ( i < img.getPixelsRef().size() ) {
 		img.getPixelsRef()[i] = abs(cos( float(i) / (16 * j))) * 512.f;
@@ -1608,29 +903,7 @@ int i = 0;
 		j += 0.025;
 	
 	img.reloadTexture();
-$$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+~~~~
 
 
 
@@ -1665,32 +938,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ getColor(x, y)
@@ -1713,36 +960,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 This returns the ofColor representing the pixels at the x and y position passed in.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1771,36 +989,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
 This sets the pixel at the x,y position passed in. The ofColor type needs to match the ofImage type, i.e. ofFloatImage requires that you use ofFloatPixels.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1829,36 +1018,8 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Set the pixels of the image from an array of values, for an ofFloatImage these need to be floats, for an ofImage these need to be unsigned chars. The w and h values are important so that the correct dimensions are set in the image. This assumes that you're setting the pixels from 0,0 or the upper left hand corner of the image.
-
 The bOrderIsRGB flag allows you pass in pixel data that is BGR by setting bOrderIsRGB=false.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1887,38 +1048,8 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Set the pixels of the image from an ofPixels instance, for an ofFloatImage these need to be ofFloatPixels, for an ofImage these need to be unsigned chars. The w and h values are important so that the correct dimensions are set in the image. This assumes that you're setting the pixels from 0,0 or the upper left hand corner of the image.
-
 The bOrderIsRGB flag allows you pass in pixel data that is BGR by setting bOrderIsRGB=false.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1947,36 +1078,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Set the type of image to one of the following: OF_IMAGE_GRAYSCALE, OF_IMAGE_COLOR, OF_IMAGE_COLOR_ALPHA. This does cause the image to be reallocated and the texture to be updated, so it can be an expensive operation if done frequently. Converting down, for example from color to grayscale, loses information and is a destructive change.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2005,36 +1107,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Resizes the image to the w,h passed in.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2063,36 +1136,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 This grabs the users screen into the image. This is an easy way to copy complex effects or do multiple passes on another image.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2121,36 +1165,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 This crops the image to the w,h passed in from the x,y position.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2179,42 +1194,12 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 This crops another image into the image the cropFrom is being called on to the w,h passed in from the x,y position. The w,h are measured from the x,y, so passing 100, 100, 300, 300 will grab a 300x300 pixel block of data starting from 100, 100.
-
-$$code(lang=c++)
+~~~~{.cpp}
 ofImage img1, img2;
 img1.load("anImage.png");
 img2.cropFrom(img1, 100, 100, 300, 300);
-$$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+~~~~
 
 
 
@@ -2243,36 +1228,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Rotates the image by a multiple of 90 degrees, for instance, if you pass in 2, then the image will be rotated 180 degrees.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2301,36 +1257,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 This reflects the pixels of the image across the vertical and/or horizontal axis.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2359,36 +1286,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 This method should be called after you update the pixels of the image and want to ensure that the changes to the pixels are reflected in the ofTexture of the image. Many of the ofImage methods call this after they change the pixels, but if you directly manipulate the pixels of the ofImage, then you should make sure to call update() before trying to draw the texture of the image to the screen.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2417,36 +1315,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 You can set the anchor position that the texture will be drawn at. This means that passing 50, 50 will draw the ofImage center at the point you pass in to the draw() method.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2475,36 +1344,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 You can set the anchor position that the texture will be drawn at. This means that passing 50, 50 will draw the ofImage at an offset of 50,50 from the point you pass in to the draw() method.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2533,36 +1373,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 This removes any anchor positioning, meaning that the ofImage will be draw with the upper left hand corner at the point passed into draw().
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2591,36 +1402,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Draws the ofImage into the ofRectangle passed in, with any attendant scaling that may occur from fitting the ofImage into the bounds of the ofRectangle.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2649,37 +1431,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Draws the ofImage into the ofVec2f location and with the width and height, with any attendant scaling that may occur from fitting the ofImage into the width and height.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2708,37 +1460,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Draws the ofImage into the x,y location and with the width and height, with any attendant scaling that may occur from fitting the ofImage into the width and height.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2767,37 +1489,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Draws the ofImage into the x,y,z location and with the width and height, with any attendant scaling that may occur from fitting the ofImage into the width and height. You should ensure that you turn on depth sorting using glEnable(GL_DEPTH) before trying to draw multiple objects into z-space.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2826,37 +1518,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Draws the ofImage into the x,y location using the default height and width of the image.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2885,36 +1547,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Draws the ofImage into the x,y location using the default height and width of the image.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2943,37 +1576,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Draws the ofImage into the x,y,z location with the default height and width. You should ensure that you turn on depth sorting using glEnable(GL_DEPTH) before trying to draw multiple objects into z-space.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3002,36 +1605,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Returns the height of the image in pixels.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3060,36 +1634,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Returns the width of the image in pixels.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3118,36 +1663,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Whether the image has been allocated either by a call to allocate or by loading pixel data into the image.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3176,36 +1692,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Returns whether the image has been allocated either by a call to allocate or by loading pixel data into the image.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3234,36 +1721,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Loads any data from the ofPixels that the image contains into the ofTexture so that draw() calls will reflect chagnes to the pixels.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3292,36 +1750,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Allows you to set an image to pixels. This resizes the image to the size of the ofPixels and reallocates all the of the data within the image.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3349,35 +1778,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3413,36 +1813,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ### ofImage_()
@@ -3464,29 +1834,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3522,29 +1869,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ### ofImage_(&pix)
@@ -3566,29 +1890,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3624,29 +1925,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ### ofImage_(&filename)
@@ -3668,29 +1946,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3726,29 +1981,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ### ofImage_(&mom)
@@ -3770,29 +2002,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3828,22 +2037,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ### ~ofImage_()
@@ -3865,22 +2058,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3916,22 +2093,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ### ofImage_(&file)
@@ -3953,22 +2114,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -4004,22 +2149,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ### ofImage_(&mom)
@@ -4048,22 +2177,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ### ofImage_(&mom)
@@ -4085,22 +2198,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -4136,14 +2233,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ### ~ofImage_()
@@ -4165,14 +2254,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
 
 
 
@@ -4208,14 +2289,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ### ofImage_(&file)
@@ -4237,14 +2310,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
 
 
 
@@ -4280,14 +2345,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ### ofImage_(&mom)
@@ -4309,14 +2366,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
 
 
 
@@ -4352,7 +2401,979 @@ _description: _
 
 
 
+<!----------------------------------------------------------------------------->
 
+### ofImage_()
+
+<!--
+_syntax: ofImage_()_
+_name: ofImage_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ~ofImage_()
+
+<!--
+_syntax: ~ofImage_()_
+_name: ~ofImage_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofImage_(&pix)
+
+<!--
+_syntax: ofImage_(&pix)_
+_name: ofImage_
+_returns: _
+_returns_description: _
+_parameters: const ofPixels_< PixelType > &pix_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofImage_(&file)
+
+<!--
+_syntax: ofImage_(&file)_
+_name: ofImage_
+_returns: _
+_returns_description: _
+_parameters: const ofFile &file_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofImage_(&filename)
+
+<!--
+_syntax: ofImage_(&filename)_
+_name: ofImage_
+_returns: _
+_returns_description: _
+_parameters: const string &filename_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofImage_(&mom)
+
+<!--
+_syntax: ofImage_(&mom)_
+_name: ofImage_
+_returns: _
+_returns_description: _
+_parameters: const ofImage_< PixelType > &mom_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofImage_(&mom)
+
+<!--
+_syntax: ofImage_(&mom)_
+_name: ofImage_
+_returns: _
+_returns_description: _
+_parameters: const ofImage_< SrcType > &mom_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofImage_()
+
+<!--
+_syntax: ofImage_()_
+_name: ofImage_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ~ofImage_()
+
+<!--
+_syntax: ~ofImage_()_
+_name: ~ofImage_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofImage_(&pix)
+
+<!--
+_syntax: ofImage_(&pix)_
+_name: ofImage_
+_returns: _
+_returns_description: _
+_parameters: const ofPixels_< PixelType > &pix_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofImage_(&file)
+
+<!--
+_syntax: ofImage_(&file)_
+_name: ofImage_
+_returns: _
+_returns_description: _
+_parameters: const ofFile &file_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofImage_(&filename)
+
+<!--
+_syntax: ofImage_(&filename)_
+_name: ofImage_
+_returns: _
+_returns_description: _
+_parameters: const string &filename_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofImage_(&mom)
+
+<!--
+_syntax: ofImage_(&mom)_
+_name: ofImage_
+_returns: _
+_returns_description: _
+_parameters: const ofImage_< PixelType > &mom_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofImage_(&mom)
+
+<!--
+_syntax: ofImage_(&mom)_
+_name: ofImage_
+_returns: _
+_returns_description: _
+_parameters: const ofImage_< SrcType > &mom_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofImage_()
+
+<!--
+_syntax: ofImage_()_
+_name: ofImage_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ~ofImage_()
+
+<!--
+_syntax: ~ofImage_()_
+_name: ~ofImage_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofImage_(&pix)
+
+<!--
+_syntax: ofImage_(&pix)_
+_name: ofImage_
+_returns: _
+_returns_description: _
+_parameters: const ofPixels_< PixelType > &pix_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofImage_(&file)
+
+<!--
+_syntax: ofImage_(&file)_
+_name: ofImage_
+_returns: _
+_returns_description: _
+_parameters: const ofFile &file_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofImage_(&filename)
+
+<!--
+_syntax: ofImage_(&filename)_
+_name: ofImage_
+_returns: _
+_returns_description: _
+_parameters: const string &filename_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofImage_(&mom)
+
+<!--
+_syntax: ofImage_(&mom)_
+_name: ofImage_
+_returns: _
+_returns_description: _
+_parameters: const ofImage_< PixelType > &mom_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofImage_(&mom)
+
+<!--
+_syntax: ofImage_(&mom)_
+_name: ofImage_
+_returns: _
+_returns_description: _
+_parameters: const ofImage_< SrcType > &mom_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofImage_()
+
+<!--
+_syntax: ofImage_()_
+_name: ofImage_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ~ofImage_()
+
+<!--
+_syntax: ~ofImage_()_
+_name: ~ofImage_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofImage_(&pix)
+
+<!--
+_syntax: ofImage_(&pix)_
+_name: ofImage_
+_returns: _
+_returns_description: _
+_parameters: const ofPixels_< PixelType > &pix_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofImage_(&file)
+
+<!--
+_syntax: ofImage_(&file)_
+_name: ofImage_
+_returns: _
+_returns_description: _
+_parameters: const ofFile &file_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofImage_(&filename)
+
+<!--
+_syntax: ofImage_(&filename)_
+_name: ofImage_
+_returns: _
+_returns_description: _
+_parameters: const string &filename_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofImage_(&mom)
+
+<!--
+_syntax: ofImage_(&mom)_
+_name: ofImage_
+_returns: _
+_returns_description: _
+_parameters: const ofImage_< PixelType > &mom_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofImage_(&mom)
+
+<!--
+_syntax: ofImage_(&mom)_
+_name: ofImage_
+_returns: _
+_returns_description: _
+_parameters: const ofImage_< SrcType > &mom_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofImage_()
+
+<!--
+_syntax: ofImage_()_
+_name: ofImage_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ~ofImage_()
+
+<!--
+_syntax: ~ofImage_()_
+_name: ~ofImage_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofImage_(&pix)
+
+<!--
+_syntax: ofImage_(&pix)_
+_name: ofImage_
+_returns: _
+_returns_description: _
+_parameters: const ofPixels_< PixelType > &pix_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofImage_(&file)
+
+<!--
+_syntax: ofImage_(&file)_
+_name: ofImage_
+_returns: _
+_returns_description: _
+_parameters: const ofFile &file_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofImage_(&filename)
+
+<!--
+_syntax: ofImage_(&filename)_
+_name: ofImage_
+_returns: _
+_returns_description: _
+_parameters: const string &filename_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofImage_(&mom)
+
+<!--
+_syntax: ofImage_(&mom)_
+_name: ofImage_
+_returns: _
+_returns_description: _
+_parameters: const ofImage_< PixelType > &mom_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofImage_(&mom)
+
+<!--
+_syntax: ofImage_(&mom)_
+_name: ofImage_
+_returns: _
+_returns_description: _
+_parameters: const ofImage_< SrcType > &mom_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -4578,38 +3599,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Width of the image in pixels.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 
 
 
@@ -4634,38 +3624,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Height of the image in pixels.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 
 
 
@@ -4690,38 +3649,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Bytes per pixels of the image. This will be 3 for OF_IMAGE_COLOR with unsigned char pixels and 12 for an OF_COLOR_IMAGE with float pixels.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 
 
 
@@ -4746,38 +3674,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Returns the type of image, OF_IMAGE_COLOR, OF_IMAGE_COLOR_ALPHA, or OF_IMAGE_GRAYSCALE
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 
 
 
@@ -4801,38 +3698,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
 
 
 
@@ -4864,38 +3729,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###ofTexture tex
@@ -4913,38 +3746,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
 
 
 

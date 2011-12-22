@@ -19,10 +19,45 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Graphics Language Shading Language (GLSL) can be used in oF by using the ofShader object. Shading happens in two distinct steps: the vertex shader creates values for each vertex in the model, and the fragment shader creates values for each pixel in the rendered object. To define a shader, create a .frag file for the fragment shader and a .vert file for the vertex shader.
 A vertex shader has attributes about a location in space or vertex, which means not only the actual coordinates of that location but also its color, how any textures should be mapped onto it, and how the vertices are modified in the operation. A vertex shader can change the positions of each vertex, the number of lighting computations per vertex, and the color that will be applied to each vertex.
 A geometry shader can generate new graphics primitives like points, lines, and triangles, from those primitives that were sent to the graphics card from the CPU. This means that you could get a point and turn it into a triangle or even a bunch of triangles, or get a line and turn it into a rectangle, or do real-time extrusion. They are very powerful and can be quite tricky to get right, but theyre becoming more popular.
 The fragment shader is somewhat misleadingly named because what it really allows you to do is to change values assigned to each pixel. The vertex shader operates on the vertices, and the fragment shader operates on the pixels. By the time the fragment shader gets information passed into it by the graphics card, the color of a particular pixel has already been computed and in the fragment shader can be combined with an element like a lighting effecting, a fog effect, or a blur among many other options. The usual end result of this stage per fragment is a color value and a depth for the fragment.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -78,43 +113,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ### ~ofShader()
@@ -136,44 +134,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -203,45 +163,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 This assumes that your vertex and fragment shaders have the same name and loads them.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -270,45 +192,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Here you can load shaders with whatever names you choose. The geometry shader is optional, but the vertex and fragment shaders aren't.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -337,46 +221,8 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 You have to call this before linking the program with geometry shaders.
 Possible types are GL_POINTS, GL_LINES, GL_LINES_ADJACENCY_EXT, GL_TRIANGLES, GL_TRIANGLES_ADJACENCY_EXT
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -405,46 +251,8 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 You have to call this before linking the program with geometry shaders.
 type: GL_POINTS, GL_LINE_STRIP or GL_TRIANGLE_STRIP
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -473,45 +281,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 You have to call this before linking the program with geometry shaders to set number of output vertices
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -540,46 +310,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 returns maximum number of supported vertices for your graphics card
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -608,45 +339,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 This unload the shader, which means that it will not be active on the graphics card any longer.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -675,46 +368,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 After you call begin() everything that you draw, vertexes and textures, in your of application have the effects of the shader applied to them.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -743,46 +397,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 After you call end() any drawing, vertexes and textures, do not have the effect of the shader applied to them.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -811,51 +426,11 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 set a texture reference
-
 On your shader it should look like this:
-
 $$code(lang=c++)
 uniform sampler2DRect texture;
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -884,50 +459,10 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 For multi-texturing.
-
 $$code(lang=c++)
 uniform sampler2DRect texture;
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -956,50 +491,10 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 set a single uniform value. On your shader this should look like:
-
 $$code(lang=c++)
 uniform int texture;
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1028,48 +523,9 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 $$code(lang=c++)
 uniform ivec2 texture;
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1098,48 +554,9 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 $$code(lang=c++)
 uniform ivec3 texture;
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1168,48 +585,9 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 $$code(lang=c++)
 uniform ivec4 texture;
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1238,45 +616,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 set a float uniform on the shader
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1305,45 +645,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 set a vec2 uniform on the shader
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1372,46 +674,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 set a vec3 uniform on the shader
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1440,49 +703,10 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 set a vec4 uniform on the shader
-
 $$code(lang=c++)
 vec4 fv;
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1511,55 +735,14 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 set an array of uniform values on the shader, this uses single values, i.e. 
-
 $$code(lang=c++)
 int ids[4] = {1, 2, 3, 4};
 $$/code
 On the shader side, this is:
-
 $$code(lang=c++)
 ivec iv[2];
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1588,49 +771,10 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 set an array of uniform values on the shader using int[2] value. On the shader this looks like:
-
 $$code(lang=c++)
 ivec2 iv[2];
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1659,49 +803,10 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 set an array of uniform values on the shader using int[2] value. On the shader this looks like:
-
 $$code(lang=c++)
 ivec3 iv[2];
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1730,49 +835,10 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 set an array of uniform values on the shader using int[2] value. On the shader this looks like:
-
 $$code(lang=c++)
 ivec4 iv[2];
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1801,52 +867,11 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 set an array of uniform values on the shader using int[2] value. On the shader this looks like:
-
 This allows you to set multiple float uniforms.
-
 $$code(lang=c++)
 float v[2];
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1875,50 +900,10 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 This allows you to set multiple vec2 uniforms.
-
 $$code(lang=c++)
 vec2 v[2];
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1947,50 +932,10 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 This allows you to set multiple vec3 uniforms.
-
 $$code(lang=c++)
 vec3 v[2];
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2019,50 +964,10 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 This allows you to set multiple vec4 uniforms.
-
 $$code(lang=c++)
 vec4 v[2];
 $$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2091,45 +996,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 // set attributes that vary per vertex (look up the location before glBegin)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2158,46 +1025,8 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Set a short attribute, a short int, on the shader.
 Attributes are different than uniforms in that you can pass an attribute to each vertex or fragment that is being shaded.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2226,46 +1055,8 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Set two short attributes, a short int, on the shader.
 Attributes are different than uniforms in that you can pass an attribute to each vertex or fragment that is being shaded.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2294,46 +1085,8 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Set three short attributes, a short int, on the shader.
 Attributes are different than uniforms in that you can pass an attribute to each vertex or fragment that is being shaded.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2362,46 +1115,8 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Set four short attributes, a short int, on the shader.
 Attributes are different than uniforms in that you can pass an attribute to each vertex or fragment that is being shaded.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2430,46 +1145,8 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Set one float attributes on the shader.
 Attributes are different than uniforms in that you can pass an attribute to each vertex or fragment that is being shaded.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2498,46 +1175,8 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Set two float attributes on the shader.
 Attributes are different than uniforms in that you can pass an attribute to each vertex or fragment that is being shaded.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2566,46 +1205,8 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Set three float attributes on the shader.
 Attributes are different than uniforms in that you can pass an attribute to each vertex or fragment that is being shaded.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2634,46 +1235,8 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Set four float attributes on the shader.
 Attributes are different than uniforms in that you can pass an attribute to each vertex or fragment that is being shaded.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2702,46 +1265,8 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Set one double attribute on the shader.
 Attributes are different than uniforms in that you can pass an attribute to each vertex or fragment that is being shaded.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2770,46 +1295,8 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Set two double attribute on the shader.
 Attributes are different than uniforms in that you can pass an attribute to each vertex or fragment that is being shaded.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2838,46 +1325,8 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Set three double attribute on the shader.
 Attributes are different than uniforms in that you can pass an attribute to each vertex or fragment that is being shaded.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2906,46 +1355,8 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Set four double attribute on the shader.
 Attributes are different than uniforms in that you can pass an attribute to each vertex or fragment that is being shaded.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2974,45 +1385,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 This prints out all the active uniforms to the console.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3041,45 +1414,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 This prints out all the active attributes to the console.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3108,45 +1443,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 these methods create and compile a shader from a string, type: GL_VERTEX_SHADER, GL_FRAGMENT_SHADER, GL_GEOMETRY_SHADER_EXT etc.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3175,45 +1472,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 This are more of advanced use function and doesn't need.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3242,45 +1501,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Links program with all compiled shaders. This is more of an advanced use method, as this is done automatically for you.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3309,45 +1530,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 This returns the GLuint for the actual shader object that is active on the graphics card. This is more of an advanced usage method, but can be helpful if you need to do something that the ofShader doesn't support currently. This is all the shaders: vertex, geom, and frag.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3376,45 +1559,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 This returns the GLuint for the actual shader object that is active on the graphics card. This is more of an advanced usage method, but can be helpful if you need to do something that the ofShader doesn't support currently. This returns only one of the shaders. You can pass GL_VERTEX_SHADER, GL_GEOMETRY_SHADER_EXT, GL_FRAGMENT_SHADER
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3442,36 +1587,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3507,36 +1622,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void setUniformTexture(*name, textureTarget, textureID, textureLocation)
@@ -3558,36 +1643,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3623,36 +1678,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void setUniform2i(*name, v1, v2)
@@ -3674,36 +1699,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3739,36 +1734,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void setUniform4i(*name, v1, v2, v3, v4)
@@ -3790,36 +1755,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3855,36 +1790,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void setUniform2f(*name, v1, v2)
@@ -3906,36 +1811,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3971,36 +1846,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void setUniform4f(*name, v1, v2, v3, v4)
@@ -4022,36 +1867,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -4087,36 +1902,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void setUniform2iv(*name, *v, count = 1)
@@ -4138,36 +1923,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -4203,36 +1958,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void setUniform4iv(*name, *v, count = 1)
@@ -4254,36 +1979,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -4319,36 +2014,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void setUniform2fv(*name, *v, count = 1)
@@ -4370,36 +2035,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -4435,36 +2070,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void setUniform4fv(*name, *v, count = 1)
@@ -4486,36 +2091,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -4551,36 +2126,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###GLint getUniformLocation(*name)
@@ -4602,36 +2147,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -4667,36 +2182,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###bool checkShaderLinkStatus(shader, type)
@@ -4718,36 +2203,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -4783,36 +2238,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void checkAndCreateProgram()
@@ -4834,36 +2259,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -4899,36 +2294,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ##Variables
@@ -4950,38 +2315,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
 
 
 
@@ -5013,38 +2346,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###bool bLoaded
@@ -5062,38 +2363,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
 
 
 

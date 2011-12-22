@@ -35,6 +35,41 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ##Methods
 
 
@@ -58,36 +93,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -123,36 +128,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ### ofPtr(*__p, __d)
@@ -174,36 +149,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -239,36 +184,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ### ofPtr(&__r, *__p)
@@ -290,36 +205,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -355,29 +240,27 @@ _description: _
 
 
 
+<!----------------------------------------------------------------------------->
 
+### ofPtr(&__r)
 
+<!--
+_syntax: ofPtr(&__r)_
+_name: ofPtr_
+_returns: _
+_returns_description: _
+_parameters: const std_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+_description: _
 
 
 
@@ -413,29 +296,27 @@ _description: _
 
 
 
+<!----------------------------------------------------------------------------->
 
+### ofPtr(&__r)
 
+<!--
+_syntax: ofPtr(&__r)_
+_name: ofPtr_
+_returns: _
+_returns_description: _
+_parameters: const std_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+_description: _
 
 
 
@@ -471,22 +352,27 @@ _description: _
 
 
 
+<!----------------------------------------------------------------------------->
 
+### ofPtr(&__r)
 
+<!--
+_syntax: ofPtr(&__r)_
+_name: ofPtr_
+_returns: _
+_returns_description: _
+_parameters: const std_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+_description: _
 
 
 
@@ -522,15 +408,27 @@ _description: _
 
 
 
+<!----------------------------------------------------------------------------->
 
+### ofPtr(&__r)
 
+<!--
+_syntax: ofPtr(&__r)_
+_name: ofPtr_
+_returns: _
+_returns_description: _
+_parameters: const std_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
 
-
-
-
-
-
-
+_description: _
 
 
 
@@ -566,7 +464,27 @@ _description: _
 
 
 
+<!----------------------------------------------------------------------------->
 
+### ofPtr(&__r)
+
+<!--
+_syntax: ofPtr(&__r)_
+_name: ofPtr_
+_returns: _
+_returns_description: _
+_parameters: const std_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 

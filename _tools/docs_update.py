@@ -6,15 +6,93 @@ import os
 import sys
 
 from docs_class import DocsClass
-from markdown_file import getclass,setclass
+from markdown_file import getclass,setclass,getfunctionsfile,setfunctionsfile
 from docs_members import DocsMethod, DocsVar
+from docs_function import DocsFunctionsFile, DocsFunction
 
 of_src = '/home/arturo/Escritorio/openFrameworks/libs/openFrameworks/'
 of_docs = of_src + 'doxygensource/xml/'
 docs_root = '/home/arturo/Documentos/new_of_site/docs/'
 #index = open(docs_root + "index.html.mako",'w')
 
+
+missing_functions = []
+
 currentversion = "007"
+
+
+def update_moved_functions(filename):
+    xml = objectify.parse(filename)
+    doxygen = xml.getroot()
+    
+    xmlfunctionsfile = doxygen.compounddef
+
+    
+    if xmlfunctionsfile.find('sectiondef')!=None:
+        if len([ s for s in xmlfunctionsfile.sectiondef if s.get('kind')=='func'])>0:
+            file_split = os.path.splitext(xmlfunctionsfile.compoundname.text)
+            functionsfile = getfunctionsfile(file_split[0])
+            for section in xmlfunctionsfile.sectiondef:
+                if section.get('kind')=='func':
+                    for xmlfunction in section.memberdef:
+                        for function in missing_functions:
+                            if function.name == xmlfunction.name.text:
+                                argstring = str(xmlfunction.argsstring.text)
+                                params = argstring[argstring.find('(')+1:argstring.rfind(')')]
+                                returns = xmlfunction.type.ref.text if hasattr(xmlfunction.type,'ref') else xmlfunction.type.text
+                                moved_function = functionsfile.function_by_signature(xmlfunction.name.text, returns, params)
+                                moved_function.returns = returns
+                                moved_function.description = moved_function.description + '\n\n' + function.description
+                                print "moved function: " + function.name
+                                
+            setfunctionsfile(functionsfile)
+    
+    
+            
+def serialize_functionsfile(filename):
+    xml = objectify.parse(filename)
+    doxygen = xml.getroot()
+    
+    xmlfunctionsfile = doxygen.compounddef
+
+    
+    if xmlfunctionsfile.find('sectiondef')!=None:
+        if len([ s for s in xmlfunctionsfile.sectiondef if s.get('kind')=='func'])>0:
+            print '\n'
+            file_split = os.path.splitext(xmlfunctionsfile.compoundname.text)
+            print file_split[0]
+            functionsfile = getfunctionsfile(file_split[0])
+            print 'new: ' + str(functionsfile.new)
+            functions_fromxml = []
+            for section in xmlfunctionsfile.sectiondef:
+                if section.get('kind')=='func':
+                    for xmlfunction in section.memberdef:
+                        argstring = str(xmlfunction.argsstring.text)
+                        params = argstring[argstring.find('(')+1:argstring.rfind(')')]
+                        returns = xmlfunction.type.ref.text if hasattr(xmlfunction.type,'ref') else xmlfunction.type.text
+                        function = functionsfile.function_by_signature(xmlfunction.name.text, returns, params)
+                        #function.description = function.description.replace("~~~~{.brush cpp}","~~~~{.cpp}").replace('</pre>',"~~~~")
+                        function.description = function.description.replace('<p>','').replace('</p>','').replace('<code>','').replace('</code>','').replace('<pre>','')
+                        function.returns = returns
+                        functions_fromxml.append(function.name)
+                        
+                        #print function.returns + " " + function.name + xmlfunction.argsstring.text + " new: " + str(function.new)
+            
+            print "missing functions"
+            thisfile_missing_functions = []
+            #[f for f in functionsfile.function_list if f not in functions_fromxml.function_list]
+            for function in functionsfile.function_list:
+                if not function.name in functions_fromxml:
+                    print function.name+"("+function.parameters+")"
+                    missing_functions.append(function)
+                    thisfile_missing_functions.append(function)
+            
+            for function in thisfile_missing_functions:
+                functionsfile.function_list.remove(function)
+                        
+            setfunctionsfile(functionsfile)
+                        
+
 
 def serialize_class(filename):
     xml = objectify.parse(filename)
@@ -67,6 +145,8 @@ def serialize_class(filename):
                         method.clazz = docs_class.name
                         method.access = member.get("prot")
                         method.returns = returns
+                        #method.description = method.description.replace("~~~~{.brush: cpp}","~~~~{.cpp}").replace('</pre>',"~~~~")
+                        method.description = method.description.replace('<p>','').replace('</p>','').replace('<code>','').replace('</code>','').replace('<pre>','')
                         if method.new:
                             method.version_started = currentversion
                         #f.write( str(member.type.text) + " " + str(member.name.text) + str(member.argsstring.text) + "\n" )
@@ -81,6 +161,12 @@ for root, dirs, files in os.walk(of_docs):
     for name in files:       
         filename = os.path.join(root, name)
         if name.find('class')==0:
-
             serialize_class(filename)
+        elif name.find('of_')==0 and name.find('8h.xml')!=-1:
+            serialize_functionsfile(filename)
 
+for root, dirs, files in os.walk(of_docs):
+    for name in files:       
+        filename = os.path.join(root, name)
+        if name.find('of_')==0 and name.find('8h.xml')!=-1:
+            update_moved_functions(filename)

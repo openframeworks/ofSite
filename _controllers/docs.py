@@ -58,6 +58,9 @@ class Block(object):
         elif mode=='methods' and element.find('__variables__')!=-1:
             self.mode='variables'
             self.classes[-1]['variables']=[]
+        elif mode=='clazz' and element.find('__functions__')!=-1:
+            self.mode='methods'
+            self.classes[-1]['methods']=[]
         elif mode=='variables' and element is not None and element != "" and element.find('__')==-1 and element.find('##')==-1:
             self.classes[-1]['variables'].append(element)
         elif (mode=='methods' or mode=='variables') and element.find('##')!=-1:
@@ -72,13 +75,28 @@ def run():
     classes = markdown_file.getclass_list()
     for clazz_name in classes:
         clazz = markdown_file.getclass(clazz_name)
+        functions_file = markdown_file.getfunctionsfile(clazz_name)
         #print clazz.name
         #print clazz.function_list
         env = {
-            "clazz": clazz
+            "modulename": clazz.name,
+            "clazz": clazz,
+            "functions": functions_file
         }
         bf.writer.materialize_template("docs_class.mako", ('docs',clazz.module+"/"+clazz.name+".html"), env )
     
+    function_files = markdown_file.getfunctionsfiles_list()
+    for functionfile_name in function_files:
+        if functionfile_name in classes:
+            continue
+        functions_file = markdown_file.getfunctionsfile(functionfile_name)
+        env = {
+            "modulename": functions_file.name,
+            "clazz": None,
+            "functions": functions_file
+        }
+        bf.writer.materialize_template("docs_class.mako", ('docs',functions_file.module+"/"+functions_file.name+".html"), env )
+        
 
     # process index file
     indexhtml_file = open("_docs/" + "index.markdown",'r')

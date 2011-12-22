@@ -561,7 +561,6 @@ hr {
 	margin: 0px;
 	padding: 0px 0px 10px 0px;
 	position: relative;
-	width: 480px;
 }
 .docs_detail_right_col img {
 	max-width: 480px;
@@ -981,4 +980,13 @@ div#github .github_avatar img {
 #variables_list {
 	width: 50%;
 	float: left;
+}
+#credits {
+	text-align: center;
+	color: #666;
+	font-size: .8em;
+}
+.github_time {
+	font-size: .8em;
+	margin-left: 5px;
 }

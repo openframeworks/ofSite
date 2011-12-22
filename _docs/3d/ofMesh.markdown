@@ -19,6 +19,21 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 An ofMesh represents a set of vertices in 3D spaces, and normals at those points, colors at those points, and texture coordinates at those points. Each of these different properties is stored in a vector. 
 
 Vertices are passed to your graphics card and your graphics card fill in the spaces in between them in a processing usually called the rendering pipeline. The rendering pipeline goes more or less like this:
@@ -29,6 +44,26 @@ Vertices are passed to your graphics card and your graphics card fill in the spa
 You may be thinking: Ill just make eight vertices and voila: a cube. Not so quick. Theres a hitch and that hitch is that the OpenGL renderer has different ways of connecting the vertices that you pass to it and none are as efficient as to only need eight vertices to create a cube. Youve probably seen a version of the following image somewhere before.
 
 Generally you have to create your points to fit the drawing mode that youve selected because of whats called winding. A vertex gets connected to another vertex in the order that the mode does its winding and this means that you might need multiple vertices in a given location to create the shape you want. The cube, for example, requires eighteen vertices, not the eight that you would expect. If you note the order of vertices in the GL chart above youll see that all of them use their vertices slightly differently (in particular you should make note of the GL_TRIANGLE_STRIP example). Drawing a shape requires that you keep track of which drawing mode is being used and which order your vertices are declared in. If youre thinking: it would be nice if there were an abstraction layer for this youre thinking right. Enter the mesh, which is really just an abstraction of the vertex and drawing mode that we started with but which has the added bonus of managing the draw order for you. That may seem insignificant at first, but it provides some real benefits when working with complex geometry.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -78,46 +113,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 This creates the mesh, using OF_PRIMITIVE_TRIANGLES and without any initial vertices.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -146,46 +142,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 This allows to you to use one of the other ofPrimitiveModes: OF_PRIMITIVE_TRIANGLES, OF_PRIMITIVE_TRIANGLE_STRIP, OF_PRIMITIVE_TRIANGLE_FAN, OF_PRIMITIVE_LINES, OF_PRIMITIVE_LINE_STRIP, OF_PRIMITIVE_LINE_LOOP, OF_PRIMITIVE_POINTS. See [ofGLUtils](../gl/ofGLUtils.htm) for more information on these types.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -214,45 +171,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Allows you to set the ofPrimitiveMode
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -287,44 +206,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void clear()
@@ -347,45 +228,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 This removes all the vertices, colors, and indices from the mesh.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -414,45 +257,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Allow you to set up the indices automatically when you add a vertex.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -481,45 +286,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Gets the vertex at the index.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -548,45 +315,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Add a vertex.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -615,45 +344,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Add multiple vertices.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -682,45 +373,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Add multiple vertices.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -749,45 +402,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Removes the vertex at the index in the vector.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -816,45 +431,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Updates the vertex at the index in the vector.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -883,45 +460,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Removes all the vertices.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -950,45 +489,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Get the normal at the index in the normals vector.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1017,45 +518,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Adds a normal at the index in the normals vector.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1084,45 +547,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Add normals to the the normals vector.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1151,45 +576,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Add multiple normals at the index in the normals vector.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1218,45 +605,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Remove a normal.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1285,45 +634,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Set the normal at the index.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1352,45 +663,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Remove all the normals.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1419,45 +692,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Get the color at the index in the colors vector.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1486,45 +721,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Add a color at the index in the colors vector.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1553,45 +750,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Add multiple colors at the index in the colors vector.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1620,45 +779,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Add colors to the colors vector.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1687,45 +808,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Remove a color at the index in the colors vector.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1754,45 +837,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Set the color at the index in the colors vector.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1821,45 +866,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Clear all the colors.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1888,45 +895,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Get the Vec2f representing the texture coordinate. Because OF uses ARB textures these are in pixels rather than 0-1 normalized coordinates.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1955,45 +924,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Add a Vec2f representing the texture coordinate. Because OF uses ARB textures these are in pixels rather than 0-1 normalized coordinates.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2022,45 +953,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Add multiple Vec2f representing the texture coordinate. Because OF uses ARB textures these are in pixels rather than 0-1 normalized coordinates.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2089,45 +982,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Add multiple Vec2f representing the texture coordinate. Because OF uses ARB textures these are in pixels rather than 0-1 normalized coordinates.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2156,45 +1011,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Remove a Vec2f representing the texture coordinate.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2223,45 +1040,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Set a Vec2f representing the texture coordinate. Because OF uses ARB textures these are in pixels rather than 0-1 normalized coordinates.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2290,45 +1069,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Clear all the texture coordinates.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2357,45 +1098,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Get the index from the index vector. Each index represents the index of the vertex in the vertices vector. This determines the way that the vertices are connected into the polgoynon type set in the primitiveMode.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2424,45 +1127,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Add an index from the index vector. Each index represents the index of the vertex in the vertices vector. This determines the way that the vertices are connected into the polgoynon type set in the primitiveMode.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2491,45 +1156,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Add multiple indices to the index vector. Each index represents the index of the vertex in the vertices vector. This determines the way that the vertices are connected into the polgoynon type set in the primitiveMode.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2558,45 +1185,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Add multiple indices to the index vector. Each index represents the index of the vertex in the vertices vector. This determines the way that the vertices are connected into the polgoynon type set in the primitiveMode.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2625,45 +1214,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Removes an index.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2692,45 +1243,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 This sets the index at i.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2759,45 +1272,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Remove all the indices of the mesh. This means that your mesh will be a point cloud.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2826,45 +1301,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Adding a triangle means using three of the vertices that have already been added to create a triangle. This is an easy way to create triangles in the mesh. The indices refer to the index of the vertex in the vector of vertices.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2893,45 +1330,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 How many vertices that the mesh contains.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2960,45 +1359,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 How many colors that the mesh contains.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3027,45 +1388,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 How many normals that the mesh contains.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3094,45 +1417,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 How many texture coordinates that the mesh contains.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3161,45 +1446,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 How many indices that the mesh contains.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3228,47 +1475,8 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Get a pointer to the vertices that the mesh contains.
-
 Get a pointer to the vertices that the mesh contains.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3297,47 +1505,8 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Get a pointer to the colors that the mesh contains.
-
 Get a pointer to the colors that the mesh contains.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3366,47 +1535,8 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Get a pointer to the normals that the mesh contains.
-
 Get a pointer to the normals that the mesh contains.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3435,47 +1565,8 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Get a pointer to the texture coords that the mesh contains.
-
 Get a pointer to the ofVec2f texture coordinates that the mesh contains.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3504,47 +1595,8 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Get a pointer to the indices that the mesh contains.
-
 Get a pointer to the indices that the mesh contains.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3573,45 +1625,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Get the vector that contains all of the vertices of the mesh.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3640,45 +1654,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Get the vector that contains all of the colors of the mesh, if it has any.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3707,45 +1683,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Get the vector that contains all of the normals of the mesh, if it has any.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3774,45 +1712,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Get the vector that contains all of the vertices of the tex coords, if it has any.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3841,45 +1741,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Get the vector that contains all of the indices of the mesh, if it has any.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3908,45 +1770,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Get the vector that contains all of the faces of the mesh. This isn't currently implemented.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3975,45 +1799,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Each mesh can have a name, here's where you set it.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -4042,45 +1828,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 If the vertices of the mesh have changed, been added or removed.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -4109,45 +1857,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 If the colors of the mesh have changed, been added or removed.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -4176,45 +1886,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 If the normals of the mesh have changed, been added or removed.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -4243,45 +1915,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 If the texture coords of the mesh have changed, been added or removed.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -4310,45 +1944,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 If the indices of the mesh have changed, been added or removed.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -4377,45 +1973,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Whether the mesh has any vertices.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -4444,45 +2002,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Whether the mesh has any colors.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -4511,45 +2031,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Whether the mesh has any normals.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -4578,45 +2060,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Whether the mesh has any textures assigned to it.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -4645,45 +2089,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 Whether the mesh has any indices assigned to it.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -4718,44 +2124,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void drawVertices()
@@ -4778,45 +2146,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 This allows you draw just the vertices, meaning that you'll have a point cloud.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -4845,45 +2175,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 This draws the mesh as GL_LINES, meaning that you'll have a wireframe.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -4912,45 +2204,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 This draws the mesh as faces, meaning that you'll have a collection of faces.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -4979,45 +2233,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
 This draws the mesh using its primitive type, meaning that if you set them up to be triangles, this will draw the triangles.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -5045,36 +2261,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -5110,36 +2296,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void addVertex(&v)
@@ -5161,36 +2317,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -5226,36 +2352,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void addVertices(*verts, amt)
@@ -5277,36 +2373,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -5342,36 +2408,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void addNormal(&n)
@@ -5393,36 +2429,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -5458,36 +2464,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void addNormals(*norms, amt)
@@ -5509,36 +2485,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -5574,36 +2520,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void addColor(&c)
@@ -5625,36 +2541,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -5690,36 +2576,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void addColors(*cols, amt)
@@ -5741,36 +2597,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -5806,36 +2632,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void addTexCoord(&t)
@@ -5857,36 +2653,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -5922,36 +2688,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void addTexCoords(*tCoords, amt)
@@ -5973,36 +2709,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -6038,36 +2744,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void addIndices(&inds)
@@ -6089,36 +2765,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -6154,36 +2800,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###ofVec3f getCentroid()
@@ -6205,36 +2821,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -6270,36 +2856,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ##Variables
@@ -6321,38 +2877,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
 
 
 
@@ -6384,38 +2908,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###ofVec3f normals
@@ -6433,38 +2925,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
 
 
 
@@ -6496,38 +2956,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###ofIndexType indices
@@ -6545,38 +2973,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
 
 
 
@@ -6608,38 +3004,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###bool bColorsChanged
@@ -6657,38 +3021,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
 
 
 
@@ -6720,38 +3052,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###bool bTexCoordsChanged
@@ -6769,38 +3069,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
 
 
 
@@ -6832,38 +3100,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###ofPrimitiveMode mode
@@ -6888,38 +3124,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###string name
@@ -6937,38 +3141,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
 
 
 

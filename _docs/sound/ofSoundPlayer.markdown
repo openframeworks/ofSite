@@ -22,12 +22,47 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 The ofSoundPlayer class wraps fmod, which is a powerful audio utility library. The ofSoundPlayer allows you to load sound files and control and manipulate their playback and properties. 
 
 
 The ofSoundPlayer class wraps fmod, which is a powerful audio utility library.
 The ofSoundPlayer allows you to load sound files and control and manipulate
 their playback and properties.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -84,60 +119,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void initializeFmod()
@@ -160,60 +141,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Initializes fMod. Should only be called once internally.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -248,60 +176,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void closeFmod()
@@ -324,60 +198,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 If Fmod is initialized via initializeFmod we can close it via closeFmod().
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -406,47 +227,22 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Loads a sound file given by fileName. Sound files can be in .wav, .aif, .mp3, .mp2, .ogg or .raw format. The program will look for the file relative to the data/ folder. If you set the optional 'bool stream' argument to true the file will be streamed from disk instead of being completely loaded into memory. It makes a lot of sense to stream files if you are dynamically loading large sound files into your program, which would normally cause the program to freeze for a short time as the whole sound is read into memory. 
 
 Examples:
 
 Load a Sound
-
-$$code(lang=c++)
+~~~~{.cpp}
 ofSoundPlayer mySound;
 mySound.loadSound("beat.mp3");
-$$/code
+~~~~
 
 
 Load a Sound with Folder Path
-
-$$code(lang=c++)
+~~~~{.cpp}
 ofSoundPlayer mySound;
 mySound.loadSound("sounds/beat.mp3");
-$$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+~~~~
 
 
 Loads a sound file given by fileName. Sound files can be in .wav, .aif, .mp3,
@@ -456,61 +252,27 @@ will be streamed from disk instead of being completely loaded into memory. It
 makes a lot of sense to stream files if you are dynamically loading large
 sound files into your program, which would normally cause the program to
 freeze for a short time as the whole sound is read into memory.
-
   
 Examples:
-
   
 Load a Sound
-$$code(lang=c++)
+~~~~{.cpp}
     
     ofSoundPlayer mySound;  
     
     mySound.loadSound("beat.mp3");
-$$/code
+~~~~
   
   
 Load a Sound with Folder Path
-$$code(lang=c++)
+~~~~{.cpp}
     
     ofSoundPlayer mySound;  
     
     mySound.loadSound("sounds/beat.mp3");
-$$/code
+~~~~
   
   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -539,46 +301,20 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Stops and unloads the current sound.
 
 Example:
-
-$$code(lang=c++)
+~~~~{.cpp}
 ofSoundPlayer mySound;
 mySound.load("beat.mp3");
 mySound.play();
 mySound.unloadSound(); //Stops sound from playing, unloads "beat.mp3"
-$$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+~~~~
 Stops and unloads the current sound.
-
   
 Example:
-$$code(lang=c++)
-$$code(lang=c++)
+~~~~{.cpp}
+~~~~{.cpp}
     
     ofSoundPlayer mySound;  
     
@@ -587,41 +323,7 @@ $$code(lang=c++)
     mySound.play();  
     
     mySound.unloadSound(); //Stops sound from playing, unloads "beat.mp3"
-$$/code`
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+~~~~`
 
 
 
@@ -650,62 +352,35 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Plays the sound. If setMultiPlay() has been set to true each play() command will spawn a new copy of the sound on a new channel, letting the existing sounds continue until they are finished. If setMultiPlay() is set to false it will restart the playback of the song.
 
 Examples:
 
 Normal Playback:
-
-$$code(lang=c++)
+~~~~{.cpp}
 ofSoundPlayer mySound;
 mySound.load("beat.mp3");
 mySound.play(); //Plays sound
 mySound.play(); //Restarts and plays sound
-$$/code
+~~~~
 
 
 Multiplay:
-
-$$code(lang=c++)
+~~~~{.cpp}
 ofSoundPlayer mySound;
 mySound.setMultiPlay(true);
 mySound.load("beat.mp3");
 mySound.play(); //Plays sound
 mySound.play(); //Adds new copy of sound to channel and plays over currently playing sound
-$$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+~~~~
 description
-
 Plays the sound. If setMultiPlay() has been set to true each play() command
 will spawn a new copy of the sound on a new channel, letting the existing
 sounds continue until they are finished. If setMultiPlay() is set to false it
 will restart the playback of the song.
-
   
 Examples:
-$$code(lang=c++)
+~~~~{.cpp}
   
     ofSoundPlayer mySound;  
     
@@ -714,11 +389,11 @@ $$code(lang=c++)
     mySound.play(); //Plays sound  
     
     mySound.play(); //Restarts and plays sound
-$$/code
+~~~~
   
   
 Multiplay:
-$$code(lang=c++)
+~~~~{.cpp}
     
     ofSoundPlayer mySound;  
     
@@ -729,41 +404,7 @@ $$code(lang=c++)
     mySound.play(); //Plays sound  
     
     mySound.play(); //Adds new copy of sound to channel and plays over currently playing sound
-$$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+~~~~
 
 
 
@@ -792,46 +433,20 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Stops the sound currently playing. 
 
 Example:
-
-$$code(lang=c++)
+~~~~{.cpp}
 ofSoundPlayer mySound;
 mySound.load("beat.mp3");
 mySound.play(); //Begins playback of sound
 mySound.stop(); //Ends playback, stops audio
-$$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+~~~~
 Stops the sound currently playing.
-
   
 Example:
-$$code(lang=c++)
-
-$$code(lang=c++)    
+~~~~{.cpp}
+~~~~{.cpp}    
     ofSoundPlayer mySound;  
     
     mySound.load("beat.mp3");  
@@ -839,41 +454,7 @@ $$code(lang=c++)
     mySound.play(); //Begins playback of sound  
     
     mySound.stop(); //Ends playback, stops audio
-$$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+~~~~
 
 
 
@@ -902,47 +483,21 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Sets the volume (vol) of the sound. 0.0 - 1.0 range. 0.0 is silent and 1.0 is full volume. 
 
 Example:
-
-$$code(lang=c++)
+~~~~{.cpp}
 ofSoundPlayer mySound;
 mySound.load("beat.mp3");
 mySound.play();
 mySound.setVolume(0.1f); //Sets volume at 10% of maximum
-$$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+~~~~
 Sets the volume (vol) of the sound. 0.0 - 1.0 range. 0.0 is silent and 1.0 is
 full volume.
-
   
 Example:
-$$code(lang=c++)
-
-$$code(lang=c++)    
+~~~~{.cpp}
+~~~~{.cpp}    
     ofSoundPlayer mySound;  
     
     mySound.load("beat.mp3");  
@@ -950,41 +505,7 @@ $$code(lang=c++)
     mySound.play();  
     
     mySound.setVolume(0.1f); //Sets volume at 10% of maximum
-
-$$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+~~~~
 
 
 
@@ -1013,49 +534,23 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Sets the pan position (pct) of the sound. 0.0 - 1.0 range. 0.5 is center pan, 0.0 is full left pan and 1.0 is full right pan. 
 
 Example:
-
-$$code(lang=c++)
+~~~~{.cpp}
 ofSoundPlayer mySound;
 mySound.load("beat.mp3");
 mySound.play();
 mySound.pan(0.2f); //Pans to the left
 mySound.pan(0.8f); //Pans to the right
 mySound.pan(0.5f); //Back to center
-$$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+~~~~
 Sets the pan position (pct) of the sound. 0.0 - 1.0 range. 0.5 is center pan,
 0.0 is full left pan and 1.0 is full right pan.
-
   
 Example:
-$$code(lang=c++)
-
-$$code(lang=c++)
+~~~~{.cpp}
+~~~~{.cpp}
     ofSoundPlayer mySound;  
     
     mySound.load("beat.mp3");  
@@ -1067,41 +562,7 @@ $$code(lang=c++)
     mySound.pan(0.8f); //Pans to the right  
     
     mySound.pan(0.5f); //Back to center
-$$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+~~~~
 
 
 
@@ -1130,47 +591,22 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Sets the playback speed (spd) of the sound. 1.0 is the normal speed. 2.0 is double the normal speed etc. 
 
 Example:
-
-$$code(lang=c++)
+~~~~{.cpp}
 ofSoundPlayer mySound;
 mySound.loadSound("beat.mp3");
 mySound.play();
 mySound.setSpeed(2.0f); //Chipmunk Voice
 mySound.setSpeed(0.2f); //Isaac Hayes on Muscle Relaxers
 mySound.setSpeed(1.0f); //Normal again
-$$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+~~~~
 Sets the playback speed (spd) of the sound. 1.0 is the normal speed. 2.0 is
 double the normal speed etc.
-
   
 Example:
-$$code(lang=c++)
+~~~~{.cpp}
     
     ofSoundPlayer mySound;  
     
@@ -1183,42 +619,7 @@ $$code(lang=c++)
     mySound.setSpeed(0.2f); //Isaac Hayes on Muscle Relaxers  
     
     mySound.setSpeed(1.0f); //Normal again
-$$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+~~~~
 
 
 
@@ -1247,45 +648,20 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Pauses and un-pauses the playback of the sound. 
 
 Example
-
-$$code(lang=c++)
+~~~~{.cpp}
 ofSoundPlayer mySound;
 mySound.load("beat.mp3");
 mySound.play();
 mySound.setPaused(true); //Sound is paused
 mySound.setPaused(false); //Sound is unpaused, playback continues
-$$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+~~~~
 Pauses and un-pauses the playback of the sound.
-
   
 Example:
-$$code(lang=c++)
+~~~~{.cpp}
     
     ofSoundPlayer mySound;  
     
@@ -1296,41 +672,7 @@ $$code(lang=c++)
     mySound.setPaused(true); //Sound is paused  
     
     mySound.setPaused(false); //Sound is unpaused, playback continues
-$$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+~~~~
 
 
 
@@ -1359,46 +701,20 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Loops the sound if set to true. Does not loop the sound if set to false. Default is false.
 
 Example:
-
-$$code(lang=c++)
+~~~~{.cpp}
 ofSoundPlayer mySound;
 mySound.load("beat.mp3");
 mySound.setLoop(true); //Sound will loop
 mySound.play();
-$$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+~~~~
 Loops the sound if set to true. Does not loop the sound if set to false.
 Default is false.
-
   
 Example:
-$$code(lang=c++)
-
+~~~~{.cpp}
     
     ofSoundPlayer mySound;  
     
@@ -1407,40 +723,7 @@ $$code(lang=c++)
     mySound.setLoop(true); //Sound will loop  
     
     mySound.play();
-$$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+~~~~
 
 
 
@@ -1469,52 +752,25 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Allows a sound to be played multiple times at once. When set to true the play() function will start playing the sound on a new channel, letting the old channels continue until they are done playing. When set to false the play() function will stop the channel before playing the sound.
 
 Example:
 
-
-$$code(lang=c++)
+~~~~{.cpp}
 ofSoundPlayer mySound;
 mySound.setMultiPlay(true);
 mySound.load("beat.mp3");
 mySound.play(); //Plays sound
 mySound.play(); //Adds new copy of sound to channel and plays over currently playing sound
-$$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+~~~~
 Allows a sound to be played multiple times at once. When set to true the
 play() function will start playing the sound on a new channel, letting the old
 channels continue until they are done playing. When set to false the play()
 function will stop the channel before playing the sound.
-
   
 Example:
-$$code(lang=c++)
-
+~~~~{.cpp}
   
-
     
     ofSoundPlayer mySound;  
     
@@ -1525,40 +781,7 @@ $$code(lang=c++)
     mySound.play(); //Plays sound  
     
     mySound.play(); //Adds new copy of sound to channel and plays over currently playing sound
-$$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+~~~~
 
 
 
@@ -1587,47 +810,21 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Sets the playback-head to the position (pct) specified. 0.0 - 1.0 range. 0.0 is the beginning of the sound file and 1.0 is the end.
 
 Example:
-
-$$code(lang=c++)
+~~~~{.cpp}
 ofSoundPlayer mySound;
 mySound.load("beat.mp3");
 mySound.play();
 mySound.setPosition(0.5f); //Moves the playhead to halfway through the sound
 mySound.setPosition(0.0f); //Moves the playhead back to the beginning of the sound
-$$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+~~~~
 Sets the playback-head to the position (pct) specified. 0.0 - 1.0 range. 0.0
 is the beginning of the sound file and 1.0 is the end.
-
   
 Example:
-$$code(lang=c++)
-
+~~~~{.cpp}
     
     ofSoundPlayer mySound;  
     
@@ -1638,40 +835,6 @@ $$code(lang=c++)
     mySound.setPosition(0.5f); //Moves the playhead to halfway through the sound  
     
     mySound.setPosition(0.0f); //Moves the playhead back to the beginning of the sound
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1700,46 +863,21 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 0.0 is the beginning of the sound file and 1.0 is the end.
 
 Example:
 
-
-$$code(lang=c++)
+~~~~{.cpp}
 ofSoundPlayer mySound;
 mySound.load("beat.mp3");
 mySound.play();
 mySound.getPosition(); //Returns the current position as a percent 0.0-1.0
-$$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+~~~~
 Returns the current position of the playback-head in the sound. 0.0 - 1.0
 range. 0.0 is the beginning of the sound file and 1.0 is the end.
-
   
 Example:
-$$code(lang=c++)    
+~~~~{.cpp}    
     ofSoundPlayer mySound;  
     
     mySound.load("beat.mp3");  
@@ -1747,41 +885,7 @@ $$code(lang=c++)
     mySound.play();  
     
     mySound.getPosition(); //Returns the current position as a percent 0.0-1.0
-$$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+~~~~
 
 
 
@@ -1810,44 +914,17 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Example:
-
-$$code(lang=c++)
+~~~~{.cpp}
 ofSoundPlayer mySound;
 mySound.load("beat.mp3");
 mySound.getIsPlaying(); //Returns false
 mySound.play();
 mySound.getIsPlaying(); //Returns true
-$$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+~~~~
 Returns true if sound is currently playing, otherwise returns false.
-
-
 Example:
-$$code(lang=c++)
-
+~~~~{.cpp}
     
     ofSoundPlayer mySound;  
     
@@ -1858,41 +935,7 @@ $$code(lang=c++)
     mySound.play();  
     
     mySound.getIsPlaying(); //Returns true
-$$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+~~~~
 
 
 
@@ -1921,47 +964,21 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 0.5 is center pan, 0.0 is full left pan and 1.0 is full right pan.
 
 Example:
-
-$$code(lang=c++)
+~~~~{.cpp}
 ofSoundPlayer mySound;
 mySound.load("beat.mp3");
 mySound.getSpeed(); //Returns 1.0
 mySound.setSpeed(2.0f);
 mySound.getSpeed(); //Returns 2.0f
-$$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+~~~~
 Returns the pan position of the sound. 0.0 - 1.0 range.
 0.5 is center pan, 0.0 is full left pan and 1.0 is full right pan.
-
   
 Example:
-$$code(lang=c++)
-
+~~~~{.cpp}
     
     ofSoundPlayer mySound;  
     
@@ -1972,40 +989,7 @@ $$code(lang=c++)
     mySound.setSpeed(2.0f);  
     
     mySound.getSpeed(); //Returns 2.0f
-$$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+~~~~
 
 
 
@@ -2034,51 +1018,23 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 0.5 is center pan, 0.0 is full left pan and 1.0 is full right pan. Default is 0.5
 
 Example:
-
-$$code(lang=c++)
+~~~~{.cpp}
 ofSoundPlayer mySound;
 mySound.load("beat.mp3");
 mySound.play();
 mySound.getPan();//Returns 0.5
 mySound.setPan(0.2f);
 mySound.getPan();//Returns 0.2
-$$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+~~~~
 Returns the pan position of the sound. 0.0 - 1.0 range.
-
 0.5 is center pan, 0.0 is full left pan and 1.0 is full right pan. Default is
 0.5
-
   
 Example:
-$$code(lang=c++)
-
+~~~~{.cpp}
     
     ofSoundPlayer mySound;  
     
@@ -2091,41 +1047,7 @@ $$code(lang=c++)
     mySound.setPan(0.2f);  
     
     mySound.getPan();//Returns 0.2
-$$/code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+~~~~
 
 
 
@@ -2153,36 +1075,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2218,36 +1110,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void setPositionMS(ms)
@@ -2269,36 +1131,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2334,36 +1166,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ##Variables
@@ -2386,60 +1188,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 This boolean variable tells if the sound we are using is streaming or not.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 
 
 
@@ -2464,61 +1213,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Allows a sound to be played multiple times at once. See setMultiPlay(bool bMp) function for more info.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 
 
 
@@ -2543,60 +1238,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 bLoop variable controls if we are playing the sound as a loop.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 
 
 
@@ -2621,60 +1263,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 bLoadedOk is a boolean variable containing true if the sound was successfully loaded.  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 
 
 
@@ -2699,60 +1288,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 bPaused contain true if we pause the sound.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 
 
 
@@ -2777,60 +1313,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Contains the pan position of the sound. Going from 0 to 1.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 
 
 
@@ -2855,60 +1338,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Contains the value of the volume of our sound.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 
 
 
@@ -2933,60 +1363,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Contains the frequency value of the sound. It is set by default to 44100.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 
 
 
@@ -3011,60 +1388,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
 Contains the playback speed of the sound. 1.0 is the normal speed. 2.0 is double the normal speed, -1 is backwards etc. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 
 
 
@@ -3088,60 +1412,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
 
 
 
@@ -3173,60 +1443,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###FMOD_CHANNEL * channel
@@ -3244,60 +1460,6 @@ _advanced: True_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
 
 
 
@@ -3329,60 +1491,6 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###ofPtr player
@@ -3400,38 +1508,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
 
 
 
