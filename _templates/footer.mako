@@ -1,7 +1,3 @@
-<script type="text/javascript">
-	SyntaxHighlighter.tagName = "code";
-	SyntaxHighlighter.all()
-</script>
 
 <p id="credits">
 

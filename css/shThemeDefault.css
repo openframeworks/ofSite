@@ -17,12 +17,22 @@
 .syntaxhighlighter {
   background-color: white !important;
 }
-.syntaxhighlighter .line.alt1 {
+.syntaxhighlighter td.code .line.alt1 {
   background-color: white !important;
 }
-.syntaxhighlighter .line.alt2 {
-  background-color: white !important;
+.syntaxhighlighter td.code .line.alt2 {
+  background-color: #f8f8f8 !important;
 }
+
+.syntaxhighlighter td.gutter .line.alt1 {
+  background-color: #eee !important;
+  color: #333;
+}
+.syntaxhighlighter td.gutter .line.alt2 {
+  background-color: #eee !important;
+  color: #333;
+}
+
 .syntaxhighlighter .line.highlighted.alt1, .syntaxhighlighter .line.highlighted.alt2 {
   background-color: #e0e0e0 !important;
 }
