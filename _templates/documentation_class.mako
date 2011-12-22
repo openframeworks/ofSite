@@ -13,10 +13,10 @@
       ${self.header()}
       <div id="body-wrap">
         
-		<div class="page-left-wide">
+          <div class="page-left-wide">
           <div id="main_block">
             <div id="prose_block">
-              <h2>${modulename}</h2>
+              <h1>${modulename}</h1>
               <p>
               <%self:filter chain="markdown_template">
               % if not clazz is None:
@@ -37,7 +37,7 @@ ${functions.description}
              % if not clazz is None and len([x for x in clazz.function_list if not x.advanced and x.visible and x.access=='public'])>0:
                
  			
-			<p class="top_list_header">${clazz.name} methods</p>
+			<p class="top_list_header">${clazz.name} methods <a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/${clazz.module}/${clazz.name}.markdown">edit</a></p>
 			
                  <ul class="functionslist">
                      <% prevmethod = "" %>
@@ -55,8 +55,8 @@ ${functions.description}
              
              <!-- list of variables -->              
              % if not clazz is None and len([x for x in clazz.var_list if not x.advanced and x.visible and x.access=='public'])>0:
-                <p class="top_list_header">${clazz.name} variables</p>
-                <ul class="varslist">
+                <p class="top_list_header">${clazz.name} variables <a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/${clazz.module}/${clazz.name}.markdown">edit</a></p>
+                <ul class="functionslist">
                      % for var in clazz.var_list:
                          % if var.visible and not var.advanced and var.access=='public':
                              <li> <a href="#${var.name}">${var.type} ${var.name}</a> </li>
@@ -69,8 +69,8 @@ ${functions.description}
             
              <!-- list of c functions -->              
              % if len([x for x in functions.function_list if not x.advanced and x.visible])>0:
-            <p class="top_list_header">${functions.name} functions</p>
-			     <ul class="functionslist">
+            <p class="top_list_header">${functions.name} functions <a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/${functions.module}/${functions.name}_functions.markdown">edit</a></p>
+                <ul class="functionslist">
                      <% prevmethod = "" %>
                      % for method in functions.function_list:
                          % if prevmethod != method.name and method.visible and not method.advanced:
@@ -90,7 +90,7 @@ ${functions.description}
               
               <!-- methods detail -->
               % if not clazz is None and len([x for x in clazz.function_list if not x.advanced and x.visible and x.access=='public'])>0:
-                  <h3>${clazz.name} methods</h3>
+                  <h2>${clazz.name} methods</h2>
                   % for method in clazz.function_list:
                         % if method.visible and not method.advanced and method.access=='public':
                             <%include file="documentation_method.mako" args="method=method" />    
@@ -100,7 +100,7 @@ ${functions.description}
               
               <!-- vars detail -->
               % if not clazz is None and len([x for x in clazz.var_list if not x.advanced and x.visible and x.access=='public'])>0:
-                  <h3>${clazz.name} variables</h3>
+                  <h2>${clazz.name} variables</h2>
                   % for var in clazz.var_list:
                         % if var.visible and not var.advanced and var.access=='public':
                             <%include file="documentation_var.mako" args="var=var" />    
@@ -110,7 +110,7 @@ ${functions.description}
               
               <!-- functions detail -->
               % if len([x for x in functions.function_list if not x.advanced and x.visible])>0:
-                  <h3>${functions.name} c functions</h3>
+                  <h2>${functions.name} functions</h2>
                   % for method in functions.function_list:
                         % if method.visible and not method.advanced:
                             <%include file="documentation_function.mako" args="function=method" />    

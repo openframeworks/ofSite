@@ -410,23 +410,23 @@ a.nohover {
 .top_list_header {
 	display: inline;
 	background: #EEE;
-	padding: 10px 10px 10px 2px;
-	//margin: 0 20px 0 0;
+	padding: 8px;
 	font-size: 1.2em;
 	font-weight: bold;
 		
 }
-.functionslist a, .varslist a {
+.functionslist a {
 	color: #444;
 }
-.functionslist a:hover, .varslist a:hover {
+.functionslist a:hover {
 	color: white;
 }
-ul.functionslist, ul.varslist {
+ul.functionslist {
 	line-height: 1.7em
- color: #444;
+	color: #444;
 	list-style: none;
 	padding: 0;
+	padding-left: 8px;
 }
 h1 {
 	color: #333333;
