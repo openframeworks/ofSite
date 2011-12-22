@@ -48,10 +48,10 @@ blog.description = "Your Blog's short description"
 ## blog_timezone -- the timezone that you normally write your blog posts from
 blog.timezone = "US/Eastern"
 
-controllers.docs.enabled = True
+controllers.documentation.enabled = True
 controllers.community.enabled = True
 
-docs = controllers.docs
-docs.path = 'docs'
+documentation = controllers.documentation
+documentation.path = 'documentation'
 
 

@@ -11,7 +11,7 @@ import argparse
 import shutil
 import glob
 
-sys.path.append(os.path.join(os.path.realpath(__file__)[0:-(len(os.path.join('_controllers','docs.py'))+1)],'_tools'))
+sys.path.append(os.path.join(os.path.realpath(__file__)[0:-(len(os.path.join('_controllers','documentation.py'))+1)],'_tools'))
 #sys.path.append( os.path.realpath('')+"/../_tools" )
 import markdown_file
 
@@ -69,8 +69,8 @@ class Block(object):
 
 def run():
     classes = []
-    directory = "_docs"
-    docs = bf.config.controllers.docs
+    directory = "_documentation"
+    documentation = bf.config.controllers.documentation
         
     classes = markdown_file.getclass_list()
     for clazz_name in classes:
@@ -83,7 +83,7 @@ def run():
             "clazz": clazz,
             "functions": functions_file
         }
-        bf.writer.materialize_template("docs_class.mako", ('docs',clazz.module+"/"+clazz.name+".html"), env )
+        bf.writer.materialize_template("documentation_class.mako", ('documentation',clazz.module+"/"+clazz.name+".html"), env )
     
     function_files = markdown_file.getfunctionsfiles_list()
     for functionfile_name in function_files:
@@ -95,11 +95,11 @@ def run():
             "clazz": None,
             "functions": functions_file
         }
-        bf.writer.materialize_template("docs_class.mako", ('docs',functions_file.module+"/"+functions_file.name+".html"), env )
+        bf.writer.materialize_template("documentation_class.mako", ('documentation',functions_file.module+"/"+functions_file.name+".html"), env )
         
 
     # process index file
-    indexhtml_file = open("_docs/" + "index.markdown",'r')
+    indexhtml_file = open("_documentation/" + "index.markdown",'r')
     indexhtml = indexhtml_file.read()
     columns = []
     columns_src = indexhtml.split('___column___')
@@ -112,7 +112,7 @@ def run():
                 blocks.append(b)
         columns.append(blocks)
     
-    indexhtml_file = open("_docs/" + "indexAddons.markdown",'r')
+    indexhtml_file = open("_documentation/" + "indexAddons.markdown",'r')
     indexhtml = indexhtml_file.read()
     addons_columns = []
     columns_src = indexhtml.split('___column___')
@@ -125,19 +125,19 @@ def run():
                 blocks.append(b)
         addons_columns.append(blocks)
         
-    bf.writer.materialize_template("docs.mako", ('docs',"index.html"), {'columns':columns,'addons_columns':addons_columns} )
+    bf.writer.materialize_template("documentation.mako", ('documentation',"index.html"), {'columns':columns,'addons_columns':addons_columns} )
     
     for root, dirs, files in os.walk(directory):
         for name in files:
             file_split = os.path.splitext(name)
             if file_split[1]==".jpeg" or file_split[1]==".jpg" or file_split[1]==".gif" or file_split[1]==".png":
                 try:
-                    os.mkdir(os.path.join('_site','docs',os.path.basename(root)))
+                    os.mkdir(os.path.join('_site','documentation',os.path.basename(root)))
                 except:
                     pass
-                shutil.copyfile(os.path.join(root,name), os.path.join('_site','docs',os.path.basename(root),name))
+                shutil.copyfile(os.path.join(root,name), os.path.join('_site','documentation',os.path.basename(root),name))
                 
-    #html = open(docs.dir + "/" + class_fn + ".html",'w')
+    #html = open(documentation.dir + "/" + class_fn + ".html",'w')
     #html.write(p.content)
     #html.close()
     

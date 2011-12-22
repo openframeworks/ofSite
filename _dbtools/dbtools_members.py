@@ -7,14 +7,14 @@ def tostr(string):
 
 def names(db,classid,advanced):
     cursor=db.cursor()
-    sql='SELECT id,name FROM docs_functions WHERE linktable="class" and linkid= %s and advanced=%s'
+    sql='SELECT id,name FROM documentation_functions WHERE linktable="class" and linkid= %s and advanced=%s'
     cursor.execute(sql,(classid,advanced))
     functions=cursor.fetchall()
     return functions
 
 def list_all_methods(db,classid):
     cursor=db.cursor()
-    sql='SELECT id,name,returns,parameters,description,syntax,returns_description,access,version_started,version_deprecated,extra_description,visible,advanced FROM docs_functions WHERE  linktable="class" and linkid=%s ORDER BY sortid'
+    sql='SELECT id,name,returns,parameters,description,syntax,returns_description,access,version_started,version_deprecated,extra_description,visible,advanced FROM documentation_functions WHERE  linktable="class" and linkid=%s ORDER BY sortid'
     cursor.execute(sql,(classid,))
     functions=cursor.fetchall()
     function_list = []
@@ -45,7 +45,7 @@ def list_all_methods(db,classid):
     
 def list_all_vars(db,classid):
     cursor=db.cursor()
-    sql='SELECT id,name,type,description,access,version_started,version_deprecated,constant,visible,advanced FROM docs_vars WHERE  linktable="class" and linkid=%s ORDER BY sortid'
+    sql='SELECT id,name,type,description,access,version_started,version_deprecated,constant,visible,advanced FROM documentation_vars WHERE  linktable="class" and linkid=%s ORDER BY sortid'
     cursor.execute(sql,(classid,))
     variables=cursor.fetchall()
     variables_list = []

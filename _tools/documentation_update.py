@@ -5,15 +5,15 @@ from lxml import objectify
 import os
 import sys
 
-from docs_class import DocsClass
+from documentation_class import DocsClass
 from markdown_file import getclass,setclass,getfunctionsfile,setfunctionsfile
-from docs_members import DocsMethod, DocsVar
-from docs_function import DocsFunctionsFile, DocsFunction
+from documentation_members import DocsMethod, DocsVar
+from documentation_function import DocsFunctionsFile, DocsFunction
 
 of_src = '/home/arturo/Escritorio/openFrameworks/libs/openFrameworks/'
-of_docs = of_src + 'doxygensource/xml/'
-docs_root = '/home/arturo/Documentos/new_of_site/docs/'
-#index = open(docs_root + "index.html.mako",'w')
+of_documentation = of_src + 'doxygensource/xml/'
+documentation_root = '/home/arturo/Documentos/new_of_site/documentation/'
+#index = open(documentation_root + "index.html.mako",'w')
 
 
 missing_functions = []
@@ -99,13 +99,13 @@ def serialize_class(filename):
     doxygen = xml.getroot()
 
     clazz = doxygen.compounddef
-    docs_class = getclass(clazz.compoundname.text)
+    documentation_class = getclass(clazz.compoundname.text)
     
-    #f = open('docs/' + classname + ".html.mako",'w')
+    #f = open('documentation/' + classname + ".html.mako",'w')
     
     #index.write("[" + classname + "](" + classname + ".html)\n\n")
     
-    #f.write( '<%inherit file="_templates/docs.mako" />\n' )
+    #f.write( '<%inherit file="_templates/documentation.mako" />\n' )
     #f.write( '___' + classname + "___\n" )
     
     inheritsfrom = []
@@ -122,7 +122,7 @@ def serialize_class(filename):
                 else:
                     #f.write( "$$code(lang=c++)\n" )
                     if member.get("kind") == 'variable':
-                        var = docs_class.var_by_name(member.name.text)
+                        var = documentation_class.var_by_name(member.name.text)
                         if not var:
                             var = DocsVar(0)
                             var.name = member.name.text
@@ -131,18 +131,18 @@ def serialize_class(filename):
                             var.version_deprecated = ""
                             var.constant = member.get("mutable")=="no"
                             var.static = member.get("static")
-                            var.clazz = docs_class.name
+                            var.clazz = documentation_class.name
                             var.type = member.type.ref.text if hasattr(member.type,'ref') else member.type.text
-                            docs_class.var_list.append(var)
+                            documentation_class.var_list.append(var)
                         #f.write( str(member.type.text) + " " + str(member.name.text) + "\n" )
                     if member.get("kind") == 'function':
                         argstring = str(member.argsstring.text)
                         params = argstring[argstring.find('(')+1:argstring.rfind(')')]
                         returns = member.type.ref.text if hasattr(member.type,'ref') else member.type.text
                         returns = ("" if returns is None else returns)
-                        method = docs_class.function_by_signature(member.name.text, returns, params)
+                        method = documentation_class.function_by_signature(member.name.text, returns, params)
                         method.static = member.get("static")
-                        method.clazz = docs_class.name
+                        method.clazz = documentation_class.name
                         method.access = member.get("prot")
                         method.returns = returns
                         #method.description = method.description.replace("~~~~{.brush: cpp}","~~~~{.cpp}").replace('</pre>',"~~~~")
@@ -153,11 +153,11 @@ def serialize_class(filename):
                     #f.write( "$$/code\n\n\n\n" )
     
     #f.close()
-    setclass(docs_class)
+    setclass(documentation_class)
 
 
-#index.write( '<%inherit file="_templates/docs.mako" />\n' )
-for root, dirs, files in os.walk(of_docs):
+#index.write( '<%inherit file="_templates/documentation.mako" />\n' )
+for root, dirs, files in os.walk(of_documentation):
     for name in files:       
         filename = os.path.join(root, name)
         if name.find('class')==0:
@@ -165,7 +165,7 @@ for root, dirs, files in os.walk(of_docs):
         elif name.find('of_')==0 and name.find('8h.xml')!=-1:
             serialize_functionsfile(filename)
 
-for root, dirs, files in os.walk(of_docs):
+for root, dirs, files in os.walk(of_documentation):
     for name in files:       
         filename = os.path.join(root, name)
         if name.find('of_')==0 and name.find('8h.xml')!=-1:

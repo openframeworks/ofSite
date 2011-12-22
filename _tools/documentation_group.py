@@ -1,4 +1,4 @@
-import docs_class
+import documentation_class
 
 class DocsGroup:
     def __init__(self,groupid):

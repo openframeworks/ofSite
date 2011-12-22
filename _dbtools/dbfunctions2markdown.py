@@ -5,19 +5,19 @@ import sys
 
 sys.path.append('_tools')
 
-import docs_group
+import documentation_group
 import dbtools_group
 import dbtools_files
 import dbtools_functions
-import docs_members
-from docs_function import DocsFunctionsFile, DocsFunction
+import documentation_members
+from documentation_function import DocsFunctionsFile, DocsFunction
 import MySQLdb
 import markdown_file
 
 
-docs_root = "/home/arturo/Documentos/new_of_site/_docs"
+documentation_root = "/home/arturo/Documentos/new_of_site/_documentation"
 
-#index = open(docs_root + "/index.markdown",'w')
+#index = open(documentation_root + "/index.markdown",'w')
 db = MySQLdb.connect(host='localhost',user='root',passwd='asdqwe34',db='of_site09')
 adv_groups = dbtools_group.list_all(db,'core',True)
 
@@ -45,7 +45,7 @@ def export_groups(db,advanced):
     groups = dbtools_group.list_all(db,'core',advanced)
     for group in groups:
         print str(group.id) + " " + group.name
-        group_dir = docs_root + "/" + group.name.replace(' ','_')
+        group_dir = documentation_root + "/" + group.name.replace(' ','_')
         try:
             os.mkdir(group_dir)
         except:

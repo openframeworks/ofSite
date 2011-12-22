@@ -1,5 +1,5 @@
 import MySQLdb
-from docs_function import DocsFunction
+from documentation_function import DocsFunction
 
         
 def tostr(string):
@@ -10,7 +10,7 @@ def tostr(string):
 
 def names(db,classid,linktable="class"):
     cursor=db.cursor()
-    sql='SELECT name FROM docs_functions WHERE linktable=%s and linkid= %s'
+    sql='SELECT name FROM documentation_functions WHERE linktable=%s and linkid= %s'
     cursor.execute(sql,(linktable,classid,))
     
     functions=cursor.fetchall()
@@ -18,7 +18,7 @@ def names(db,classid,linktable="class"):
     
 def list_all(db,linkid,linktable='class'):
     cursor=db.cursor()
-    sql='SELECT id,name,description,returns,returns_description,parameters,syntax,version_started,version_deprecated,visible,advanced FROM docs_functions WHERE linktable=%s and linkid= %s'
+    sql='SELECT id,name,description,returns,returns_description,parameters,syntax,version_started,version_deprecated,visible,advanced FROM documentation_functions WHERE linktable=%s and linkid= %s'
     cursor.execute(sql,(linktable,linkid,))
     dbfunctions = cursor.fetchall()
     functions = []

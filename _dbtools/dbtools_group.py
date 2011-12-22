@@ -1,9 +1,9 @@
-from docs_group import DocsGroup
+from documentation_group import DocsGroup
 import dbtools_files
 
 def list_all(db,type,advanced):
     cursor=db.cursor()
-    sql='SELECT id,name FROM docs_group WHERE type=%s and advanced=%s and visible=1 ORDER BY sortid'
+    sql='SELECT id,name FROM documentation_group WHERE type=%s and advanced=%s and visible=1 ORDER BY sortid'
     cursor.execute(sql,(type,advanced,))
     groups=cursor.fetchall()
     groups_list = []

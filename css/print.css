@@ -432,16 +432,16 @@ hr{
 }
 */
 
-/*  ************* docs list ************* */
+/*  ************* documentation list ************* */
 
-.docs_col{
+.documentation_col{
 	width:			210px;
 	margin:			0px 20px 5px 0px;
 	float:			left;
 	position:		relative;
 }
 
-.docs_group{
+.documentation_group{
 	width:			210px;
 	
     line-height: 140%;
@@ -451,7 +451,7 @@ hr{
 	position:		relative;
 	/*border:			1px solid #D7D7D7;*/
 }
-.docs_group_head{
+.documentation_group_head{
 	background:		#E1E1E1;
 	width:			210px;
 	float:			left;
@@ -461,7 +461,7 @@ hr{
 	font-weight:    bold;
 }
 
-.docs_class{
+.documentation_class{
 	width:			210px;
 	padding:		10px 0px 15px 0px;
 	margin:			5px 0px 10px 0px;
@@ -471,25 +471,25 @@ hr{
 	background:		#F7F7F7;
 }
 
-.beginners .docs_col{
+.beginners .documentation_col{
 	width:			230px;
 	margin-right:   80px;
 }
 
-.beginners .docs_group{
+.beginners .documentation_group{
 	width:			230px;
 }
-.beginners .docs_group_head{
-	width:			230px;
-}
-
-.beginners .docs_class{
+.beginners .documentation_group_head{
 	width:			230px;
 }
 
-/*  ************* docs detail ************* */
+.beginners .documentation_class{
+	width:			230px;
+}
 
-.docs_detail_table{
+/*  ************* documentation detail ************* */
+
+.documentation_detail_table{
 	width:			650px;
 	margin:			0px 0px 30px 0px;
 	padding:		5px 0px 0px 0px;
@@ -498,7 +498,7 @@ hr{
 line-height:20px;
 }
 
-.docs_detail_table_offset{
+.documentation_detail_table_offset{
 	width:			650px;
 	margin:			0px 0px 25px 0px;
 	padding:		5px 0px 0px 40px;
@@ -506,7 +506,7 @@ line-height:20px;
 	position:		relative;
 }
 
-.docs_detail_wide_col{
+.documentation_detail_wide_col{
 	width:			650px;
 	margin:			0px;
 	padding:		0px 0px 5px 0px;
@@ -523,7 +523,7 @@ border-top-style:solid;
 
 
 
-.docs_detail_wide_col_tiny{
+.documentation_detail_wide_col_tiny{
 	width:			600px;
 	margin:			0px;
 	padding:		0px 0px 10px 0px;
@@ -533,7 +533,7 @@ border-top-style:solid;
 	font-weight: 		normal;
 	color:			#CCCCCC;
 }
-.docs_detail_wide_col_nav{
+.documentation_detail_wide_col_nav{
 	width:			650px;
 	margin:			0px;
 	padding:		0px 0px 5px 0px;
@@ -544,7 +544,7 @@ border-top-style:solid;
 	text-align:		right;
 }
 
-.docs_detail_left_col{
+.documentation_detail_left_col{
 	width:			170px;
 	margin:			0px;
 	padding:		0px 0px 10px 0px;
@@ -554,7 +554,7 @@ border-top-style:solid;
 	font-weight:		bold;
 }
 
-.docs_detail_right_col{
+.documentation_detail_right_col{
 	width:			480px;
 	margin:			0px;
 	padding:		0px 0px 10px 0px;
@@ -564,151 +564,151 @@ font-size:12px;
 }
 
 
-/*  ************* docs links ************* */
+/*  ************* documentation links ************* */
 
 
-a.docs_func{
+a.documentation_func{
 	text-decoration: 	none;
 	color: 			#3A3839;
 	background: 		none;
 }
 
-a:link.docs_func{
+a:link.documentation_func{
 	text-decoration: 	none;
 	color: 			#3A3839;
 	background: 		none;
 }
 
-a:visited.docs_func{
+a:visited.documentation_func{
 	text-decoration: 	none;
 	color: 			#3A3839;
 	background: 		none;
 }
 
-a:hover.docs_func{
+a:hover.documentation_func{
 	text-decoration: 	none;
 	color: 			#FFFFFF;
 	background: 		#3A3839;
 }
 
-a:active.docs_func{
+a:active.documentation_func{
 	text-decoration: 	none;
 	color: 			#3A3839;
 	background: 		none;
 }
 
-a.docs_file_func{
+a.documentation_file_func{
 	text-decoration: 	none;
 	color: 			#00FF00;
 	background: 		none;
 }
 
-a:link.docs_file_func{
+a:link.documentation_file_func{
 	text-decoration: 	none;
 	color: 			#3A3839;
 	background: 		none;
 }
 
-a:visited.docs_file_func{
+a:visited.documentation_file_func{
 	text-decoration: 	none;
 	color: 			#3A3839;
 	background: 		none;
 }
 
-a:hover.docs_file_func{
+a:hover.documentation_file_func{
 	text-decoration: 	none;
 	color: 			#FFFFFF;
 	background: 		#3A3839;
 }
 
-a:active.docs_file_func{
+a:active.documentation_file_func{
 	text-decoration: 	none;
 	color: 			#3A3839;
 	background: 		none;
 }
 
-a.docs_vars{
+a.documentation_vars{
 	text-decoration: 	none;
 	color: 			#565455;
 	background: 		none;
 }
 
-a:link.docs_vars{
+a:link.documentation_vars{
 	text-decoration: 	none;
 	color: 			#565455;
 	background: 		none;
 }
 
-a:visited.docs_vars{
+a:visited.documentation_vars{
 	text-decoration: 	none;
 	color: 			#565455;
 	background: 		none;
 }
 
-a:hover.docs_vars{
+a:hover.documentation_vars{
 	text-decoration: 	none;
 	color: 			#FFFFFF;
 	background: 		#565455;
 }
 
-a:active.docs_vars{
+a:active.documentation_vars{
 	text-decoration: 	none;
 	color: 			#565455;
 	background: 		none;
 }
 
-a.docs_file_vars{
+a.documentation_file_vars{
 	text-decoration: 	none;
 	color: 			#565455;
 	background: 		none;
 }
 
-a:link.docs_file_vars{
+a:link.documentation_file_vars{
 	text-decoration: 	none;
 	color: 			#565455;
 	background: 		none;
 }
 
-a:visited.docs_file_vars{
+a:visited.documentation_file_vars{
 	text-decoration: 	none;
 	color: 			#565455;
 	background: 		none;
 }
 
-a:hover.docs_file_vars{
+a:hover.documentation_file_vars{
 	text-decoration: 	none;
 	color: 			#FFFFFF;
 	background: 		#565455;
 }
 
-a:active.docs_file_vars{
+a:active.documentation_file_vars{
 	text-decoration: 	none;
 	color: 			#565455;
 	background: 		none;
 }
 
-.docs_class_link{line-height:190%;}
+.documentation_class_link{line-height:190%;}
 
-a.docs_class_link, a:link.docs_class_link, a:visited.docs_class_link, a:hover.docs_class_link, a:active.docs_class_link{ text-decoration: none; }
+a.documentation_class_link, a:link.documentation_class_link, a:visited.documentation_class_link, a:hover.documentation_class_link, a:active.documentation_class_link{ text-decoration: none; }
 
-.docs-syntax-text{
+.documentation-syntax-text{
 font-weight:bold;
 }
 
-.docs-description-text{
+.documentation-description-text{
 color:#333333;
 font-size:12px;
 line-height:16px;
 letter-spacing: 0.2px;
 }
 
-.docs-detail-title{
+.documentation-detail-title{
   padding-top:5px;
   padding-bottom:15px;
   font-size:14px;
 }
 
-.docs-returns-type{
+.documentation-returns-type{
 font-weight:bold;
 }
 
