@@ -986,6 +986,12 @@ div#github .github_avatar img {
 	color: #666;
 	font-size: .8em;
 }
+#footer a{
+    color: #666;
+}
+#footer a:hover{
+    color: #fff;
+}
 .github_time {
 	font-size: .8em;
 	margin-left: 5px;

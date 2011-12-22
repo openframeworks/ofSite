@@ -187,7 +187,7 @@ def getclass(clazz):
                         var.linenum = linenum
                         var.file = os.path.join(root,name)
                         
-                    elif state == 'class' and line.find('##Description')==-1:
+                    elif state == 'class' and line.find('##Description')==-1 and line!='\n':
                         documentation_clazz.reference  = documentation_clazz.reference + line
                     linenum = linenum + 1
                 if state == 'vardescription':
