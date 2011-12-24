@@ -11,7 +11,6 @@
     <script type="text/javascript" src="${bf.config.site.url}/js/encoder.js"></script>
     <script type="text/javascript" src="http://cloud.github.com/downloads/malsup/cycle/jquery.cycle.all.latest.js"></script>
     <script type="text/javascript" src="${bf.config.site.url}/js/socialwidgets.js"></script>
-    <script type="text/javascript" src="${bf.config.site.url}/js/jquery.timeago.js" type="text/javascript"></script>
     <script type="text/javascript" src="${bf.config.site.url}/js/home.js"></script>
   </head>
   <body>
