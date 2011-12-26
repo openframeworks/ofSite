@@ -3,7 +3,24 @@
 
 ##Description
 
+
+
+
+
+
 ofSerial provides a cross platform system for interfacing with the serial port. You can choose the port and baud rate, and then read and send data. Please note that the port must be set manually in the code, so you should be clear what port your device is on. For example, Arduino users should check the arduino app to see what port their device is on. Alternatively the ofSerial class can attempt to communicate with the first available device it finds.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -34,7 +51,7 @@ _description: _
 
 
 
-
+This initializes the serial connection, but doesn't actually open the connection to any devices. You'll need to use the setup() method before doing that.
 
 
 
@@ -313,7 +330,7 @@ while ( bytesRemaining > 0 )
     }
   }
 }
-~~~~
+$$/code
 
 
 
@@ -351,7 +368,7 @@ int numSent = mySerial.writeBytes("Hello World");
 // numSent is how many bytes written; for example if numSent 
 // is 3 then "Hel" has been written and the call should be retried
 // with "lo World" to complete the write.
-~~~~
+$$/code
 
 
 
@@ -491,10 +508,16 @@ _advanced: False_
 
 _description: _
 
-Lets you query how many bytes are available.
+The available method is useful when you want to know how many bytes are available in the serial port. For instance, if you only want to read when there are 8 bytes waiting for you, you would do:
 
 
+~~~~{.cpp}
+if(device.available() > 8) {
+  device.readBytes(buffer, 8);
+}
+~~~~
 
+This is useful when you know how long a complete message from a device is going to be.
 
 
 
@@ -551,7 +574,7 @@ _description: _
 
 
 
-
+This lists out all the available serial devices to the console or standard output. On OSX and Linus this will return all the devices listed in /dev tty and cu, so you might want to compare it against a list of devices that you're expecting if you want to use it to dynamically connect to a device.
 
 
 
@@ -577,7 +600,7 @@ _advanced: False_
 
 _description: _
 
-
+This returns a vector of ofSerialDeviceInfo instances with the devicePath, deviceName, deviceID set.
 
 
 
@@ -605,10 +628,23 @@ _advanced: False_
 
 _description: _
 
+This reads bytes from the serial buffer into the buffer pointer passed in:
 
+~~~~{.cpp}
+unsigned char* buf = new unsigned char[4];
+device.readBytes(buf, 4);
+// do something with buf
+delete buf; // clean up
+~~~~
 
+You can also use an array like so:
 
+~~~~{.cpp}
+unsigned char buf[4];
+device.readBytes(&buf[0], 4);
+~~~~
 
+Be aware that the type of your buffer can only be unsigned char. If you're trying to receieve ints or signed chars over a serial connection you'll need to do some bit manipulation to correctly interpret that values.
 
 
 <!----------------------------------------------------------------------------->
@@ -634,8 +670,12 @@ _advanced: False_
 _description: _
 
 
+This writes bytes into the serial buffer from the buffer pointer passed in:
 
-
+~~~~{.cpp}
+unsigned char buf[3] = {'o', 'f', '!'};
+device.writeBytes(&buf[0], 3);
+~~~~
 
 
 
@@ -661,7 +701,7 @@ _advanced: False_
 
 _description: _
 
-
+drain is only available on OSX and Linux and is very similar to flush(), but blocks until all the data has been written to or read from the serial port.
 
 
 

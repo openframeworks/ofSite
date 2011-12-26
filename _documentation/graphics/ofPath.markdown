@@ -335,7 +335,7 @@ _description: _
 
 Draws a curve to x,y from the current drawing position. To draw a small rose curves at the mouse position:
 
-$$code(lang=c++)
+~~~~{.cpp}
 float scale = ofDist(mouseX, mouseY, px, py);
 
 for( float theta = 0; theta < TWO_PI; theta += 0.1) 
@@ -604,7 +604,7 @@ _description: _
 
 Creates an arc at centre, which has the radiusX, radiusY, and begins at angleBegin and ends at angleEnd. To draw a circle with a radius of 50 pixels at 100, 100:
 
-$$code(lang=c++)
+~~~~{.cpp}
 path.arc( 100, 100, 50, 50, 0, 360);
 $$/code
 
@@ -636,7 +636,7 @@ _description: _
 
 Creates an arc at x,y, which has the radiusX, radiusY, and begins at angleBegin and ends at angleEnd. To draws a shape with a radius of 200 pixels at 300, 300:
 
-$$code(lang=c++)
+~~~~{.cpp}
 path.moveTo(300, 300);
 path.arc( 300, 300, 200, 200, 0, 271); // note 271, not 270 for precision
 $$/code
@@ -709,7 +709,7 @@ OF_POLY_WINDING_ABS_GEQ_TWO
 
 So adding the following points:
 
-$$code(lang=c++)
+~~~~{.cpp}
 void testApp::setup(){
 	
 	path.lineTo(0, 400);
