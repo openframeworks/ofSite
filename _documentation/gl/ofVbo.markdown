@@ -4,17 +4,29 @@
 ##Description
 
 First things first: a Vertex Buffer Object (VBO) provides a way for you to create vertices, normals, colors, and texture coordinates on the graphics card for non-immediate mode rendering. This means that you can store it all on the graphics card and then access, update, or draw it, whenever you need. This is pretty convenient when you have something that you want to draw multiple times wihtout changing it much, because it means that, instead of needing to upload new data each time, you can simply draw it without needing to recreate all your vertices and colors, a philosophy which is probably familiar to you from working with the ofFbo or ofTexture.
+
 There are a few things that are important to understand about VBOs:
+
 Each property of the VBO - vertices, texCoords, normals, colors - can be either dynamic or static. You set it to static when you know that you won't be updating it later on. You set it to dynamic when you know you will be updating it later on.
+
 Just like with ofMesh, you need to keep track of the vertices and their indices in order to make shapes and you can draw a VBO in any one of the OpenGL drawing modes, GL_LINE_STRIP, GL_POINTS, GL_QUADS, GL_TRIANGLES and GL_TRIANGLE_STRIP.
+
 Vertices are passed to your graphics card and your graphics card fills in the spaces in between them in a process usually called the rendering pipeline. The rendering pipeline goes more or less like this:
+
 1. Say how youre going to connect all the points.
+
 2. Make some points.
+
 3. Say that youre done making points.
+
 You may be thinking: Ill just make eight vertices and voila: a cube. Not so quick. Theres a hitch and that hitch is that the OpenGL renderer has different ways of connecting the vertices that you pass to it and none are as efficient as to only need eight vertices to create a cube. Youve probably seen a version of the following image somewhere before.
+
 ![gl vertices](gl_vertices_options.jpg)
+
 Generally, you have to create your points to fit the drawing mode that youve selected because of whats called winding. A vertex gets connected to another vertex in the order that the mode does its winding and this means that you might need multiple vertices in a given location to create the shape you want. The cube, for example, requires eighteen vertices, not the eight that you would expect. If you note the order of vertices in the GL chart above youll see that all of them use their vertices slightly differently (in particular you should make note of the GL_TRIANGLE_STRIP example). Drawing a shape requires that you keep track of which drawing mode is being used and which order your vertices are declared in. If youre thinking it would be nice if there were an abstraction layer for this, youre thinking right. Enter the mesh, which is really just an abstraction of the vertex and drawing mode that we started with but which has the added bonus of managing the draw order for you. That may seem insignificant at first, but it provides some real benefits when working with complex geometry.
+
 The following example shows an ofVbo representing an icosahedron:
+
 ~~~~{.cpp}
 const ofIndexType Faces[] = {
 	2, 1, 0,
@@ -86,6 +98,7 @@ void HelloWorldApp::draw(){
 	vbo.drawElements( GL_TRIANGLES, 60);
 }
 ~~~~
+
 ![vbo result](vbo.png)
 
 
