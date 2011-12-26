@@ -16,6 +16,6 @@
 <link rel="icon" href="http://forum.openframeworks.cc/favicon.ico" type="image/x-icon" />
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
-
+<script type="text/javascript" src="${bf.config.site.url}/js/jquery.timeago.js" type="text/javascript"></script>
 
 <meta name="google-site-verification" content="RiGtl9pFuFnUeEQ4MU1miiutTR5mmCPUi38YLCn-M-g" />

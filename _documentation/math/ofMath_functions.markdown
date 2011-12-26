@@ -332,7 +332,7 @@ _advanced: False_
 _description: _
 
 
-
+Calculates the distance between two points, (x1, y1) and (x2, y2).   Uses http://en.wikipedia.org/wiki/Pythagorean_theorem
 
 
 
@@ -360,7 +360,7 @@ _description: _
 
 
 
-
+Calculates the distances between two points, as in ofDist() but doesn't take the sqrt() of the result, which is a faster operation if you need to calculate and compare multiple distances. 
 
 
 
@@ -414,7 +414,7 @@ _description: _
 
 
 
-
+Returns true if the number t is the range of [min - max], false if it's not. 
 
 
 
@@ -497,7 +497,7 @@ _description: _
 
 
 
-
+Picks a random number between 0 and the width of the screen. 
 
 
 
@@ -524,7 +524,7 @@ _description: _
 
 
 
-
+Picks a random number between 0 and max. 
 
 
 
@@ -550,9 +550,12 @@ _advanced: False_
 _description: _
 
 
+ofMap remaps the value passed in "value", calculating it's linear distance between inputMin and inputMax, and remapping it based on that percentage to outputMin and outputMax.  You can choose to clamp the results.  Results are not clamped by dafult.
 
+For example:
 
-
+float color = ofMap(mouseX, 0, ofGetWidth(), 0, 255, true);
+ofBackground(color, color, color);
 
 
 <!----------------------------------------------------------------------------->
