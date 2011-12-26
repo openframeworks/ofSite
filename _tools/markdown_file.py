@@ -117,12 +117,14 @@ def getclass_list():
     return class_list
       
 def getclass(clazz):
-    method = DocsMethod(0)
     var = DocsVar(0)
     documentation_clazz = DocsClass(0)
     var.clazz  = clazz
     documentation_clazz.name = clazz
     documentation_clazz.new = True
+    method = DocsMethod(0)
+    method.clazz = documentation_clazz.name
+    prevBreakLine = False;
     for root, dirs, files in os.walk(os.path.join(documentation_root)):
         for name in files:
             file_split = os.path.splitext(name)
@@ -149,9 +151,11 @@ def getclass(clazz):
                         
                     elif state == 'method' and line.find('_description')==0:
                         state = 'description'
+                        prevBreakLine = False
                         
-                    elif state == 'description' and line.find('##')!=0 and line.find('<!----------------------------------------------------------------------------->')==-1 and line!='\n':
+                    elif state == 'description' and line.find('##')!=0 and line.find('<!----------------------------------------------------------------------------->')==-1 and (line!='\n' or not prevBreakLine):
                         method.description = method.description + line
+                        prevBreakLine = (line=='\n')
                         
                     elif state == 'description' and line.find('###') == 0:
                         state = 'method'
@@ -174,9 +178,11 @@ def getclass(clazz):
                         
                     elif state == 'var' and line.find('_description') == 0:
                         state = 'vardescription'
+                        prevBreakLine = False
                         
-                    elif state == 'vardescription' and line.find('##')!=0 and line.find('<!----------------------------------------------------------------------------->')==-1 and line!='\n':
+                    elif state == 'vardescription' and line.find('##')!=0 and line.find('<!----------------------------------------------------------------------------->')==-1 and (line!='\n' or not prevBreakLine):
                         var.description = var.description + line
+                        prevBreakLine = (line=='\n')
                         
                     elif state == 'vardescription' and line.find('###') == 0:
                         #print line
@@ -187,7 +193,7 @@ def getclass(clazz):
                         var.linenum = linenum
                         var.file = os.path.join(root,name)
                         
-                    elif state == 'class' and line.find('##Description')==-1 and line!='\n':
+                    elif state == 'class' and line.find('##Description')==-1 and (line!='\n' or not prevBreakLine):
                         documentation_clazz.reference  = documentation_clazz.reference + line
                     linenum = linenum + 1
                 if state == 'vardescription':
