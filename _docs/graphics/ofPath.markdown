@@ -1218,7 +1218,7 @@ _advanced: False_
 _description: _
 
 
-
+Draws the path at 0,0. Calling draw() also calls tessllate().
 
 
 
@@ -1246,7 +1246,7 @@ _advanced: False_
 _description: _
 
 
-
+This returns a vector of ofSubPath instances that you can walk to inspect their properties. If you've set your ofPath instance to use ofPolylines then this method does nothing.
 
 
 
@@ -1273,7 +1273,7 @@ _advanced: False_
 
 _description: _
 
-
+This returns an ofPolyline representing the outline of an ofPath.
 
 
 

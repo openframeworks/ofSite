@@ -5,81 +5,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-oftexture is a wrapper for opengl's texture support. Specifically, it allows to use non power of 2 textures in opengl, and to upload and draw graphical data.
-
-
-oftexture is a wrapper for opengl's texture support. Specifically, it allows to use non power of 2 textures in opengl, and to upload and draw graphical data.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ofTexture is used to create textures that live on your graphics card from bitmap data that can then be used to fill other drawn objects, like a bitmap fill on a rectangle. When you draw an ofImage, you're actually just drawing a rectangle of points and then using an ofTexture to fill the space between those points. At it's core, ofTexture is a wrapper for OpenGL textures. It allows us of non-power of 2 textures in opengl, and to upload and draw graphical data. 
 
 
 
@@ -111,7 +37,7 @@ _advanced: False_
 _description: _
 
 
-
+Creates an empty ofTexture instance. You can't draw a texture right after it's been created as it has actually uploaded any data to the graphics card that can be drawn yet.
 
 
 
@@ -166,7 +92,7 @@ _advanced: False_
 
 _description: _
 
-Copy constructor
+Copy constructor, which copies all of the texture data from mom into the ofTexture that the method is being called on.
 
 
 
@@ -635,7 +561,7 @@ _advanced: True_
 _description: _
 
 
-
+This returns the internal texture data for this texture, for instance, its textureID, type of texture, whether it's been allocated, and other data about the state of the texture.
 
 
 
@@ -663,7 +589,7 @@ _advanced: False_
 _description: _
 
 
-
+Returns the height of the texture. This will be in pixels unless you've set your application to use normalized coordinates.
 
 
 
@@ -691,7 +617,7 @@ _advanced: False_
 _description: _
 
 
-
+Returns the width of the texture. This will be in pixels unless you've set your application to use normalized coordinates.
 
 
 
@@ -718,7 +644,7 @@ _advanced: False_
 
 _description: _
 
-You need to allocate the texture before drawing it or loading data into it.
+You need to allocate the texture before drawing it or loading data into it. The allocate method allows you load information about what type of data will be in the texture, its height and width, etc, into the texture, but note that it doesn't actually put any data into the texture, so if you draw it you'll see a black square.
 
 
 
