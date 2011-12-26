@@ -195,6 +195,8 @@ def getclass(clazz):
                         
                     elif state == 'class' and line.find('##Description')==-1 and (line!='\n' or not prevBreakLine):
                         documentation_clazz.reference  = documentation_clazz.reference + line
+                        prevBreakLine = (line=='\n')
+                        
                     linenum = linenum + 1
                 if state == 'vardescription':
                     documentation_clazz.var_list.append(var)
