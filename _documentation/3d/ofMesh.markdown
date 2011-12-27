@@ -130,7 +130,7 @@ _advanced: False_
 _description: _
 
 
-
+This returns the primitive mode that the mesh is using.
 
 
 
