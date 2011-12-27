@@ -101,7 +101,27 @@ void HelloWorldApp::draw(){
 
 ![vbo result](vbo.png)
 
+You'll notice in a lot of the methods that a usage is required, for instance, setNormals(). The possible options are: GL_STREAM_DRAW, GL_STREAM_READ, GL_STREAM_COPY, GL_STATIC_DRAW, GL_STATIC_READ, GL_STATIC_COPY, GL_DYNAMIC_DRAW, GL_DYNAMIC_READ, or GL_DYNAMIC_COPY Each of these affects the speed of operations that you peform with the VBO and whether it's certain operations are allowed. For instance, if the vertices are STATIC, then they cannot be changed after they been loaded the first time, whereas if they're DYNAMIC, then they can be modified at any time later. The different modes can be broken down like so:
 
+STREAM
+The data store contents will be modified once and used at most a few times.
+
+STATIC
+The data store contents will be modified once and used many times.
+
+DYNAMIC
+The data store contents will be modified repeatedly and used many times.
+
+The nature of access may be one of these:
+
+DRAW
+The data store contents are modified by the application, and used as the source for GL drawing and image specification commands.
+
+READ
+The data store contents are modified by reading data from the GL, and used to return that data when queried by the application.
+
+COPY
+The data store contents are modified by reading data from the GL, and used as the source for GL drawing and image specification commands.
 
 
 ##Methods
@@ -130,7 +150,7 @@ _description: _
 
 
 
-
+Simple constructor for the ofVbo. When the ofVbo is first created there are no vertices or normals within it.
 
 
 
@@ -220,7 +240,7 @@ _advanced: False_
 _description: _
 
 
-
+This is the destructor for the ofVbo, it clears all the vertices, texture coordinates, and normals from the graphics card.
 
 
 
@@ -1068,7 +1088,7 @@ _advanced: False_
 _description: _
 
 
-
+Returns whether the ofVbo has been allocated or not. This is important to check before you start drawing or manipulating the vbo.
 
 
 
@@ -1097,7 +1117,7 @@ _description: _
 
 
 
-
+Returns whether the ofVbo is using vertices or not. A VBO can exist without vertices, though it's quite unusual.
 
 
 
@@ -1124,7 +1144,7 @@ _advanced: False_
 _description: _
 
 
-
+Returns whether the vertices within the VBO have colors associated with them or not.
 
 
 
@@ -1152,7 +1172,7 @@ _advanced: False_
 _description: _
 
 
-
+Returns whether the surfaces of the VBO have normals associated with them or not.
 
 
 
@@ -1181,7 +1201,7 @@ _description: _
 
 
 
-
+Returns whether the vertices of the VBO have texture coordinates associated with them or not.
 
 
 
@@ -1208,7 +1228,7 @@ _advanced: False_
 _description: _
 
 
-
+Returns whether the VBO has assigned indices or not.
 
 
 
@@ -1363,7 +1383,7 @@ _advanced: False_
 
 _description: _
 
-This erases your VBO's data from your graphics card, but not the VBO itself, so you can fill it with data again.
+This erases your VBO data from your graphics card, but not the VBO itself, so you can fill it with data again.
 
 
 
@@ -1392,7 +1412,13 @@ _advanced: False_
 
 _description: _
 
+This is the copy constructor, so that you can do the following:
 
+~~~~{.cpp}
+ofVbo v1;
+// filll v1;
+ofVbo v2(v1); // v2 now contains all of v1s properties in a separate VBO
+~~~~
 
 
 
@@ -1422,7 +1448,13 @@ _description: _
 
 
 
+This is the equals operator, so that you can do the following:
 
+~~~~{.cpp}
+ofVbo v1;
+// filll v1;
+ofVbo v2 = v1; // v2 now contains all of v1s properties in a separate VBO
+~~~~
 
 
 
@@ -1449,9 +1481,18 @@ _advanced: False_
 _description: _
 
 
+This allows you to pass a mesh to the ofVbo and populate the vertices, texture coordinates, and other properties of the VBO from the ofMesh instance. You can think of this as essentially moving geometry data from the CPU to the GPU.
+
+~~~~{.cpp}
+ofxAssimpModelLoader model;
+model.loadModel("astroBoy_walk.dae",true);
+ofMesh mesh = model.getMesh(0);
+ofVbo vbo;
+vbo.setMesh(mesh, GL_STATIC_DRAW);
+~~~~
 
 
-
+The possible options for usage are: GL_STREAM_DRAW, GL_STREAM_READ, GL_STREAM_COPY, GL_STATIC_DRAW, GL_STATIC_READ, GL_STATIC_COPY, GL_DYNAMIC_DRAW, GL_DYNAMIC_READ, or GL_DYNAMIC_COPY
 
 
 <!----------------------------------------------------------------------------->
@@ -1476,10 +1517,9 @@ _advanced: False_
 
 _description: _
 
+This sets the vertex data for the ofVbo from a pointer to an array of ofVec3f instances. This creates a 3D vbo.
 
-
-
-
+The possible options for usage are: GL_STREAM_DRAW, GL_STREAM_READ, GL_STREAM_COPY, GL_STATIC_DRAW, GL_STATIC_READ, GL_STATIC_COPY, GL_DYNAMIC_DRAW, GL_DYNAMIC_READ, or GL_DYNAMIC_COPY
 
 
 <!----------------------------------------------------------------------------->
@@ -1504,9 +1544,9 @@ _advanced: False_
 
 _description: _
 
+This sets the vertex data for the ofVbo from a pointer to an array of ofVec2f instances. This creates a 2D vbo.
 
-
-
+The possible options for usage are: GL_STREAM_DRAW, GL_STREAM_READ, GL_STREAM_COPY, GL_STATIC_DRAW, GL_STATIC_READ, GL_STATIC_COPY, GL_DYNAMIC_DRAW, GL_DYNAMIC_READ, or GL_DYNAMIC_COPY
 
 
 
@@ -1532,9 +1572,15 @@ _advanced: False_
 
 _description: _
 
+This allows you to set the colors for a vertex using an array of ofFloatColor instances.
 
+~~~~{.cpp}
+ofFloatColor c[12];
+// fill in the colors and vertices
+vbo.setColorData( &c[0], 12, GL_STATIC_DRAW );
+~~~~
 
-
+The possible options for usage are: GL_STREAM_DRAW, GL_STREAM_READ, GL_STREAM_COPY, GL_STATIC_DRAW, GL_STATIC_READ, GL_STATIC_COPY, GL_DYNAMIC_DRAW, GL_DYNAMIC_READ, or GL_DYNAMIC_COPY
 
 
 
@@ -1560,10 +1606,35 @@ _advanced: False_
 
 _description: _
 
+This sets the normal data for the VBO from a pointer to an array of ofVec3f instances. The normals are calculated as the vector perpendicular to a face. The mathematical definition of a normal is shown on the left, while the way that a normal is calculated for a triangle is shown on the right.
 
+![vbo normals](vboNormals.png)
 
+One technique for calculating normals is something like the following:
 
+~~~~{.cpp}
+int* indices;
+ofVec3f* verts;
+ofVec3f* normals;
+// allocate and create normals, indices, and verts
+for ( int i = 0, int j = 0; i < NUM_INDICES; i+=3, j++) {
+	ofVec3f v[3] = { vertices[i], verts[(i+1)], verts[(i+2)] };
+	ofVec3f temp1 = v[1] - v[0];
+	ofVec3f temp2 = v[2] - v[0];
+	ofVec3f norm = temp1.getCrossed(temp2);
 
+	  for (int j = 0; j < 3; ++j) {
+	    Vector3 a = v[(i+1) % 3] - v[j];
+	    Vector3 b = v[(j+2) % 3] - v[j];
+	    float weight = acos(a.dot(b) / (a.length() * b.length()));
+	    norm += weight * normal;
+  	}
+
+	normals[j] = norm;
+}
+~~~~
+
+The possible options for usage are: GL_STREAM_DRAW, GL_STREAM_READ, GL_STREAM_COPY, GL_STATIC_DRAW, GL_STATIC_READ, GL_STATIC_COPY, GL_DYNAMIC_DRAW, GL_DYNAMIC_READ, or GL_DYNAMIC_COPY
 
 
 <!----------------------------------------------------------------------------->
@@ -1590,8 +1661,9 @@ _description: _
 
 
 
+This sets the texture coordinate data for the VBO from a pointer to an array of ofVec2f instances. Each ofVec2f represents the texture coordinate of a vertex. By default OF uses ARB coords, so you can use pixel coordinates rather than normalized UV coordinates.
 
-
+The possible options for usage are: GL_STREAM_DRAW, GL_STREAM_READ, GL_STREAM_COPY, GL_STATIC_DRAW, GL_STATIC_READ, GL_STATIC_COPY, GL_DYNAMIC_DRAW, GL_DYNAMIC_READ, or GL_DYNAMIC_COPY
 
 
 <!----------------------------------------------------------------------------->
@@ -1617,7 +1689,9 @@ _advanced: False_
 _description: _
 
 
+This sets the index data for the VBO from a pointer to an array of ints. Each int represents the index of a vertex, and when the vbo is drawn the indices are used to generate the geometry from the indices.
 
+The possible options for usage are: GL_STREAM_DRAW, GL_STREAM_READ, GL_STREAM_COPY, GL_STATIC_DRAW, GL_STATIC_READ, GL_STATIC_COPY, GL_DYNAMIC_DRAW, GL_DYNAMIC_READ, or GL_DYNAMIC_COPY
 
 
 
@@ -1645,9 +1719,9 @@ _advanced: False_
 _description: _
 
 
+This sets the vertex data for the ofVbo from a pointer to an array of floats. The numCoords determines whether you're creating a 3D or 2D vbo, i.e. a 3D cube would require an array of 24 floats, and numCoords to be 8.
 
-
-
+The possible options for usage are: GL_STREAM_DRAW, GL_STREAM_READ, GL_STREAM_COPY, GL_STATIC_DRAW, GL_STATIC_READ, GL_STATIC_COPY, GL_DYNAMIC_DRAW, GL_DYNAMIC_READ, or GL_DYNAMIC_COPY
 
 
 <!----------------------------------------------------------------------------->
@@ -1673,7 +1747,9 @@ _advanced: False_
 _description: _
 
 
+This sets the color data for the ofVbo from a pointer to an array of floats. The colors are RGB and are floats from 0.f - 1.f
 
+The possible options for usage are: GL_STREAM_DRAW, GL_STREAM_READ, GL_STREAM_COPY, GL_STATIC_DRAW, GL_STATIC_READ, GL_STATIC_COPY, GL_DYNAMIC_DRAW, GL_DYNAMIC_READ, or GL_DYNAMIC_COPY
 
 
 
@@ -1702,7 +1778,9 @@ _description: _
 
 
 
+This sets the normals data for the ofVbo from a pointer to an array of floats, x,y,z, for each face, so a 3D cube would require an array of 18 floats, 3 for each face.
 
+The possible options for usage are: GL_STREAM_DRAW, GL_STREAM_READ, GL_STREAM_COPY, GL_STATIC_DRAW, GL_STATIC_READ, GL_STATIC_COPY, GL_DYNAMIC_DRAW, GL_DYNAMIC_READ, or GL_DYNAMIC_COPY
 
 
 
@@ -1729,7 +1807,9 @@ _advanced: False_
 _description: _
 
 
+This sets the texCoord data for the ofVbo from a pointer to an array of floats, ST, for each face, so a 3D cube would require an array of 16 floats, 2 for each vertex.
 
+The possible options for usage are: GL_STREAM_DRAW, GL_STREAM_READ, GL_STREAM_COPY, GL_STATIC_DRAW, GL_STATIC_READ, GL_STATIC_COPY, GL_DYNAMIC_DRAW, GL_DYNAMIC_READ, or GL_DYNAMIC_COPY
 
 
 
@@ -1757,7 +1837,7 @@ _advanced: False_
 _description: _
 
 
-
+Updates all the data within the VBO from the data in the ofMesh.
 
 
 
@@ -1785,7 +1865,7 @@ _advanced: False_
 _description: _
 
 
-
+If the vertices of the VBO have been declared as GL_DYNAMIC_DRAW, then you can update the vertices at any time.
 
 
 
@@ -1813,7 +1893,7 @@ _advanced: False_
 _description: _
 
 
-
+If the vertices of the VBO have been declared as GL_DYNAMIC_DRAW, then you can update the vertices at any time.
 
 
 
@@ -1842,7 +1922,7 @@ _description: _
 
 
 
-
+If the color data for each vertex of the VBO have been declared as GL_DYNAMIC_DRAW, then you can update the vertex colors at any time.
 
 
 
@@ -1869,7 +1949,7 @@ _advanced: False_
 _description: _
 
 
-
+If the normals of the VBO have been declared as GL_DYNAMIC_DRAW, then you can update the normals at any time.
 
 
 
@@ -1898,7 +1978,7 @@ _description: _
 
 
 
-
+If the texture coordinates of the VBO have been declared as GL_DYNAMIC_DRAW, then you can update the texcoords at any time.
 
 
 
@@ -1925,7 +2005,7 @@ _advanced: False_
 _description: _
 
 
-
+If the indices of the VBO have been declared as GL_DYNAMIC_DRAW, then you can update the indices at any time.
 
 
 
@@ -1954,7 +2034,7 @@ _description: _
 
 
 
-
+If the vertices of the VBO have been declared as GL_DYNAMIC_DRAW, then you can update the indices at any time using an array of floats.
 
 
 
@@ -1982,7 +2062,7 @@ _description: _
 
 
 
-
+If the vertex colors of the VBO have been declared as GL_DYNAMIC_DRAW, then you can update the colors at any time using an array of floats.
 
 
 
@@ -2010,7 +2090,7 @@ _description: _
 
 
 
-
+If the normals of the VBO have been declared as GL_DYNAMIC_DRAW, then you can update the normal data at any time using an array of floats.
 
 
 
@@ -2037,7 +2117,7 @@ _advanced: False_
 _description: _
 
 
-
+If the texture coords of the VBO have been declared as GL_DYNAMIC_DRAW, then you can update the tex coords at any time using an array of floats.
 
 
 
