@@ -91,7 +91,11 @@ _advanced: False_
 
 _description: _
 
-This assumes that your vertex and fragment shaders have the same name and loads them.
+This assumes that your vertex and fragment shaders have the same name, i.e. "dof.vert" and "dof.frag" and loads them using just the name of the shader:
+
+~~~~{.cpp}
+shader.load("dof"); // assumes the shaders are in /data
+~~~~
 
 
 
@@ -123,7 +127,9 @@ _description: _
 Here you can load shaders with whatever names you choose. The geometry shader is optional, but the vertex and fragment shaders aren't.
 
 
-
+~~~~{.cpp}
+shader.load("dof.vert", "dof.frag"); // assumes the shaders are in /data
+~~~~
 
 
 
@@ -209,7 +215,7 @@ _advanced: False_
 
 _description: _
 
-You have to call this before linking the program with geometry shaders to set number of output vertices
+You have to call this before linking the program with geometry shaders to set the number of output vertices, For quads, this should be 4, for points 1. Triangle strips can use up to the maximum number. You can check the maximum number supported on your graphics cards with getGeometryMaxOutputCount()
 
 
 
