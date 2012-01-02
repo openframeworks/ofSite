@@ -8,6 +8,8 @@ ofTessellator exists for one purpose: to turn ofPolylines into ofMeshes so that 
 
 The fairly simple shape shown on the left needs to be broken into triangles to be displayed, an example of how this might be done is shown on the right.
 
+![tessellation](tessellation.png)
+
 
 ##Methods
 
@@ -91,7 +93,7 @@ _description: _
 
 
 
-
+Copy constructor to copy properties from one tessellator to another. 
 
 
 
@@ -119,7 +121,7 @@ _description: _
 
 
 
-
+Operator overloading to copy properties from one tessellator to another. 
 
 
 
@@ -146,7 +148,7 @@ _advanced: False_
 _description: _
 
 
-
+Tessellates a vector of ofPolyline instances into a single ofMesh instance using the winding mode set in ofPolyWindingMode.
 
 
 
@@ -174,7 +176,7 @@ _advanced: False_
 _description: _
 
 
-
+Tessellates a ofPolyline instance into a single ofMesh instance using the winding mode set in ofPolyWindingMode.
 
 
 
@@ -202,7 +204,7 @@ _advanced: False_
 _description: _
 
 
-
+Tessellates a vector of ofPolyline instances into vector of ofPolyline instances using the winding mode set in ofPolyWindingMode.
 
 
 
@@ -268,8 +270,6 @@ _description: _
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
 ###void performTessellation(polyWindingMode, &dstpoly, bIs2D)
@@ -291,7 +291,6 @@ _advanced: False_
 -->
 
 _description: _
-
 
 
 
