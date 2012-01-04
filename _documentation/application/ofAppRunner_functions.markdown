@@ -128,8 +128,7 @@ _syntax: ofSetupOpenGL(&window, w, h, screenMode)_
 _name: ofSetupOpenGL_
 _returns: void_
 _returns_description: _
-_parameters: ofAppBaseWindow * windowPtr
-_
+_parameters: ofAppBaseWindow * windowPtr_
 _version_started: 0.06_
 _version_deprecated: _
 _summary: _
@@ -576,8 +575,7 @@ _syntax: ofSetWindowPosition(x,y)_
 _name: ofSetWindowPosition_
 _returns: void_
 _returns_description: _
-_parameters: int x
-_
+_parameters: int x_
 _version_started: 006_
 _version_deprecated: _
 _summary: _
@@ -605,8 +603,7 @@ _syntax: ofSetWindowShape(w,h)_
 _name: ofSetWindowShape_
 _returns: void_
 _returns_description: _
-_parameters: int width
-_
+_parameters: int width_
 _version_started: 006_
 _version_deprecated: _
 _summary: _
