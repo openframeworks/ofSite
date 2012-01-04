@@ -63,10 +63,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofSetFrameRate(int targetRate)
+###void ofSetFrameRate(targetRate)
 
 <!--
-_syntax: ofSetFrameRate(int targetRate)_
+_syntax: ofSetFrameRate(targetRate)_
 _name: ofSetFrameRate_
 _returns: void_
 _returns_description: _
@@ -105,7 +105,7 @@ _summary: _
 _constant: False_
 _static: False_
 _visible: True_
-_advanced: True_
+_advanced: False_
 -->
 
 _description: _
@@ -128,14 +128,14 @@ _syntax: ofSetupOpenGL(&window, w, h, screenMode)_
 _name: ofSetupOpenGL_
 _returns: void_
 _returns_description: _
-_parameters: ofAppBaseWindow * windowPtr_
+_parameters: ofAppBaseWindow * windowPtr, int w, int h, int screenMode_
 _version_started: 0.06_
 _version_deprecated: _
 _summary: _
 _constant: False_
 _static: False_
 _visible: True_
-_advanced: True_
+_advanced: False_
 -->
 
 _description: _
@@ -221,7 +221,7 @@ _summary: _
 _constant: False_
 _static: False_
 _visible: True_
-_advanced: True_
+_advanced: False_
 -->
 
 _description: _
@@ -263,7 +263,7 @@ _summary: _
 _constant: False_
 _static: False_
 _visible: True_
-_advanced: True_
+_advanced: False_
 -->
 
 _description: _
