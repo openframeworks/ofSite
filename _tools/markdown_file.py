@@ -42,10 +42,10 @@ def list_all_files(module=''):
     
 def addfield(method,line):
     field = line.split(':')[0].lstrip('_').rstrip(' ')
-    value = line.split(':')[1].lstrip(' ').rstrip('\n').rstrip('_')
+    value = line.split(':')[1].lstrip(' ').rstrip('\n').rstrip('\r').rstrip('_')
     if field=='constant' or field=='advanced' or field=='visible' or field=='static':
         value = ((value == '1') or (value == 'True') or (value=='true') or (value=='TRUE'))
-    #print field, "=", value
+    print field, "=", value
     setattr(method,field,value)
 
 
@@ -91,6 +91,7 @@ def getfunctionsfile(filename):
                             functionsfile.function_list.append(function)
                         state = 'function'
                         function = DocsFunction(0)
+			print line
                     elif state == 'function' and line.find('_')==0 and line.find('_description')==-1:
                         #print "##########field: " + line
                         addfield(function,line)
