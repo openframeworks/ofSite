@@ -115,12 +115,13 @@ body {
 #head-right li {
 	display: block;
 	float: left;
-	margin-left: 2.4em;
+	margin-left: 2.1em;
 }
 #head-right li a {
 	color: #333;
 	font-size: 2em;
 	padding: 0 0.2em 0 0.2em;
+	font-family: 'Questrial', sans-serif;
 }
 #head-right .menu-externals {
 	float: right;
@@ -415,12 +416,12 @@ a.nohover {
 }
 .functionslist a {
 	color: #444;
+	font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
 }
 .functionslist a:hover {
 	color: white;
 }
 ul.functionslist {
-	line-height: 1.7em
 	color: #444;
 	list-style: none;
 	padding: 0;
@@ -432,6 +433,7 @@ h1 {
 	font-weight: normal;
 	margin: 0 0 1em 0;
 	padding: 10px 0px 5px 0px;
+	font-family: 'Questrial', sans-serif;
 }
 h2 {
 	color: #333333;
@@ -440,6 +442,7 @@ h2 {
 	font-weight: normal;
 	margin: 0 1.2em 0 0;
 	padding: 0px 0px 2px 0px;
+	font-family: 'Questrial', sans-serif;
 }
 h3 {
 	color: #333333;
@@ -447,6 +450,7 @@ h3 {
 	font-weight: normal;
 	margin: 0px;
 	padding: 0px 0px 2px 0px;
+	font-family: 'Questrial', sans-serif;
 }
 .page-right-narrow h3 {
 	font-size: 1.8em;
@@ -531,8 +535,9 @@ hr {
 	border-top-style: solid;
 	border-top-width: 1px;
 	float: left;
-	font-size: 1.1em;
+	font-size: 1.3em;
 	font-weight: bold;
+	font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
 	margin: 0px;
 	padding: 0px 0px 5px 0px;
 	padding-top: 10px;
@@ -542,8 +547,9 @@ hr {
 .documentation_detail h2 {
 	color: #666;
 	float: left;
-	font-size: 0.84em;
+	font-size: 0.95em;
 	font-weight: normal;
+	font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
 	margin: 0px;
 	padding: 0px 0px 10px 0px;
 	position: relative;
