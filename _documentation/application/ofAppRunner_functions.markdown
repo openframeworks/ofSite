@@ -63,14 +63,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofSetFrameRate(int targetRate)
+###void ofSetFrameRate(targetRate)
 
 <!--
-_syntax: ofSetFrameRate(int targetRate)_
+_syntax: ofSetFrameRate(targetRate)_
 _name: ofSetFrameRate_
 _returns: void_
 _returns_description: _
-_parameters: _
+_parameters: int targetRate_
 _version_started: 006_
 _version_deprecated: _
 _summary: _
@@ -105,7 +105,7 @@ _summary: _
 _constant: False_
 _static: False_
 _visible: True_
-_advanced: True_
+_advanced: False_
 -->
 
 _description: _
@@ -121,21 +121,21 @@ note: this code is implemented inside the ofAppRunner
 
 <!----------------------------------------------------------------------------->
 
-###void ofSetupOpenGL(&window, w, h, screenMode)
+###void ofSetupOpenGL(*window, w, h, screenMode)
 
 <!--
-_syntax: ofSetupOpenGL(&window, w, h, screenMode)_
+_syntax: ofSetupOpenGL(*window, w, h, screenMode)_
 _name: ofSetupOpenGL_
 _returns: void_
 _returns_description: _
-_parameters: ofAppBaseWindow * windowPtr_
+_parameters: ofAppBaseWindow * windowPtr, int w, int h, int screenMode_
 _version_started: 0.06_
 _version_deprecated: _
 _summary: _
 _constant: False_
 _static: False_
 _visible: True_
-_advanced: True_
+_advanced: False_
 -->
 
 _description: _
@@ -163,6 +163,33 @@ ofSetupOpenGL(&window, 800, 600, OF_WINDOW);
 ~~~~
 
 You need to have the windowing toolkit files included in your project.
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofSetupOpenGL(windowPtr, w, h, screenMode)
+
+<!--
+_syntax: ofSetupOpenGL(windowPtr, w, h, screenMode)_
+_name: ofSetupOpenGL_
+_returns: void_
+_returns_description: _
+_parameters: ofPtr< ofAppBaseWindow > windowPtr, int w, int h, int screenMode_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: True_
+-->
+
+_description: _
+
 
 
 
@@ -221,7 +248,7 @@ _summary: _
 _constant: False_
 _static: False_
 _visible: True_
-_advanced: True_
+_advanced: False_
 -->
 
 _description: _
@@ -263,7 +290,7 @@ _summary: _
 _constant: False_
 _static: False_
 _visible: True_
-_advanced: True_
+_advanced: False_
 -->
 
 _description: _
@@ -575,7 +602,7 @@ _syntax: ofSetWindowPosition(x,y)_
 _name: ofSetWindowPosition_
 _returns: void_
 _returns_description: _
-_parameters: int x_
+_parameters: int x_
 _version_started: 006_
 _version_deprecated: _
 _summary: _
@@ -603,7 +630,7 @@ _syntax: ofSetWindowShape(w,h)_
 _name: ofSetWindowShape_
 _returns: void_
 _returns_description: _
-_parameters: int width_
+_parameters: int width_
 _version_started: 006_
 _version_deprecated: _
 _summary: _
@@ -759,60 +786,6 @@ _description: _
 Toggles the window between fullscreen and window modes.
 Toggles fullscreen mode for your app's window. Useful for hooking up to a keypress so you don't have to keep track of the window state.
 note: this code is implemented inside the ofAppRunner
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofSetupOpenGL(windowPtr, w, h, screenMode)
-
-<!--
-_syntax: ofSetupOpenGL(windowPtr, w, h, screenMode)_
-_name: ofSetupOpenGL_
-_returns: void_
-_returns_description: _
-_parameters: ofPtr< ofAppBaseWindow > windowPtr, int w, int h, int screenMode_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofSetupOpenGL(*windowPtr, w, h, screenMode)
-
-<!--
-_syntax: ofSetupOpenGL(*windowPtr, w, h, screenMode)_
-_name: ofSetupOpenGL_
-_returns: void_
-_returns_description: _
-_parameters: ofAppBaseWindow *windowPtr, int w, int h, int screenMode_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
 
 
 

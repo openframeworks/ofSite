@@ -97,7 +97,7 @@ ${functions.description}
               
               <!-- methods detail -->
               % if not clazz is None and len([x for x in clazz.function_list if not x.advanced and x.visible and x.access=='public'])>0:
-                  <h2><a name="methods">${clazz.name} methods</a></h2>
+                  <h2><a name="methods"></a>${clazz.name} methods</h2>
                   % for method in clazz.function_list:
                         % if method.visible and not method.advanced and method.access=='public':
                             <%include file="documentation_method.mako" args="method=method" />    
@@ -107,7 +107,7 @@ ${functions.description}
               
               <!-- vars detail -->
               % if not clazz is None and len([x for x in clazz.var_list if not x.advanced and x.visible and x.access=='public'])>0:
-                  <h2><a name="variables">${clazz.name} variables</a></h2>
+                  <h2><a name="variables"></a>${clazz.name} variables</h2>
                   % for var in clazz.var_list:
                         % if var.visible and not var.advanced and var.access=='public':
                             <%include file="documentation_var.mako" args="var=var" />    
@@ -117,7 +117,7 @@ ${functions.description}
               
               <!-- functions detail -->
               % if len([x for x in functions.function_list if not x.advanced and x.visible])>0:
-                  <h2><a name="functions">${functions.name} functions</a></h2>
+                  <h2><a name="functions"></a>${functions.name} functions</h2>
                   % for method in functions.function_list:
                         % if method.visible and not method.advanced:
                             <%include file="documentation_function.mako" args="function=method" />    
