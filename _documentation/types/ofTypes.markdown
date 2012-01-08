@@ -56,6 +56,10 @@ When you should use ofPtr:
 *	When you don't need blazing speed for pointer access because a shared pointer is *not* a pointer, it's more complex and slower.
 *	When you don't to have multiple processes handle deleting a resource.
 
+For more info on shared pointers this is an excellent reference:  http://ootips.org/yonat/4dev/smart-pointers.html
+
+or you can look at the Poco implementation of shared pointers: http://pocoproject.org/slides/030-MemoryManagement.pdf (linking into their documenation isn't possible, frame fail)
+
 ##Methods
 
 
