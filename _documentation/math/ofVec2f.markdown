@@ -3,10 +3,10 @@
 
 ##Description
 
-A class to describe a two dimensional vector. This datatype stores two variables (x and y). It´s commonly used as a position, velocity, and/or acceleration. Technically, positions is described as a point (and commonly defined with a ofPoint, that in fact it´s a ofVec3f).
-Vectors in general are entities with magnitude ( also called lenght) and direction. A vector whose magnitude is 1 is a unit or normalized vector.  Witch means that it´s important data that stores it´s the direction of a point. This last practice it´s very well-known on 3D design for defining the direction of a plane by passing-through the normal value of each vertex that conform a triangle or quad mesh. 
+A class to describe a two dimensional vector. This datatype stores two variables (x and y). It's commonly used as a position, velocity, and/or acceleration. Technically, positions is described as a point (and commonly defined with a ofPoint, that in fact it's a ofVec3f).
+Vectors in general are entities with magnitude ( also called lenght) and direction. A vector whose magnitude is 1 is a unit or normalized vector.  Witch means that it's important data that stores it's the direction of a point. This last practice it's very well-known on 3D design for defining the direction of a plane by passing-through the normal value of each vertex that conform a triangle or quad mesh. 
 
-Any way, what´s very handy of this class it´s that you could perform arithmetic operations on vectors really easy, just as you deal with int or floats. This is a substantial difference from the Processing implementation call PVectors.
+Any way, what's very handy of this class it's that you could perform arithmetic operations on vectors really easy, just as you deal with int or floats. This is a substantial difference from the Processing implementation call PVectors.
 
 $$code(lang=c++)
 ofVec2f v1 = ofVec2f(40, 20);   // one way of assignment 
@@ -14,7 +14,7 @@ ofVec2f v1 = ofVec2f(40, 20);   // one way of assignment
 ofVec2f v2;
 v2.set(25,50);                  // other way of assignment
     
-v1 = v1 + v2;	// vector operation also equivalent of: v1 += v2 
+v1 = v1 + v2;    // vector operation also equivalent of: v1 += v2 
 
 cout << v1 << endl;
 $$/code
@@ -171,7 +171,7 @@ _advanced: False_
 
 _description: _
 
-Returns the value corresponding to the allocation position inside this object. In this case: 0 it´s for x and 1 it´s for y
+Returns the value corresponding to the allocation position inside this object. In this case: 0 it's for x and 1 it's for y
 
 $$code(lang=c++)
 ofVec2f v1 = ofVec2f(40, 20);
@@ -351,7 +351,7 @@ _advanced: False_
 
 _description: _
 
-Let´s you check if they both have an alignated direction with a tolerance threshold (default = 0.0001 )
+Let's you check if they both have an alignated direction with a tolerance threshold (default = 0.0001 )
 
 $$code(lang=c++)
 ofVec2f v1 = ofVec2f(40, 20);
