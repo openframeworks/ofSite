@@ -3,12 +3,12 @@
 
 ##Description
 
-A class to describe a two dimensional vector. This datatype stores two variables (x and y). It´s commonly used as a position, velocity, and/or acceleration. Technically, positions is described as a point (and commonly defined with a ofPoint, that in fact it´s a ofVec3f).
-Vectors in general are entities with magnitude ( also called lenght) and direction. A vector whose magnitude is 1 is a unit or normalized vector.  Witch means that it´s important data that stores it´s the direction of a point. This last practice it´s very well-known on 3D design for defining the direction of a plane by passing-through the normal value of each vertex that conform a triangle or quad mesh. 
+A class to describe a two dimensional vector. This datatype stores two variables (x and y). It's commonly used as a position, velocity, and/or acceleration. Technically, positions is described as a point (and commonly defined with a ofPoint, that in fact it's a ofVec3f).
+Vectors in general are entities with magnitude ( also called lenght) and direction. A vector whose magnitude is 1 is a unit or normalized vector.  Witch means that it's important data that stores it's the direction of a point. This last practice it's very well-known on 3D design for defining the direction of a plane by passing-through the normal value of each vertex that conform a triangle or quad mesh. 
 
-Any way, what´s very handy of this class it´s that you could perform arithmetic operations on vectors really easy, just as you deal with int or floats. This is a substantial difference from the Processing implementation call PVectors.
+Any way, what's very handy of this class it's that you could perform arithmetic operations on vectors really easy, just as you deal with int or floats. This is a substantial difference from the Processing implementation call PVectors.
 
-$$code(lang=c++)
+~~~~{.cpp}
 ofVec2f v1 = ofVec2f(40, 20);   // one way of assignment 
     
 ofVec2f v2;
@@ -17,7 +17,7 @@ v2.set(25,50);                  // other way of assignment
 v1 = v1 + v2;	// vector operation also equivalent of: v1 += v2 
 
 cout << v1 << endl;
-$$/code
+~~~~
 
 
 
@@ -47,9 +47,9 @@ _description: _
 
 Values assigment using two floats variables
 
-$$code(lang=c++)
+~~~~{.cpp}
 ofVec2f v1 = ofVec2f(40, 20);
-$$/code
+~~~~
 
 
 
@@ -77,10 +77,10 @@ _description: _
 
 Values assigment using a 3 dimensional vector (ofVec3f)
 
-$$code(lang=c++)
+~~~~{.cpp}
 ofVec3f v1 = ofVec3f(40, 20, 50);
 ofVec2f v2 = ofVec2f(v1);
-$$/code
+~~~~
 
 
 
@@ -108,10 +108,10 @@ _description: _
 
 Values assigment using a 4 dimensional vector (ofVec4f)
 
-$$code(lang=c++)
+~~~~{.cpp}
 ofVec4f v1 = ofVec3f(40, 20, 50, 0);
 ofVec2f v2 = ofVec2f(v1);
-$$/code
+~~~~
 
 
 
@@ -139,7 +139,7 @@ _description: _
 
 Gets the pointer to the memory position of the first element of the vector
 
-$$code(lang=c++)
+~~~~{.cpp}
 ofVec2f v1 = ofVec2f(40, 20);
     
 float *a;
@@ -147,7 +147,7 @@ float *a;
 a = v1.getPtr();
     
 cout << *a << " = 40 ( x value )" << endl;
-$$/code
+~~~~
 
 <!----------------------------------------------------------------------------->
 
@@ -171,13 +171,13 @@ _advanced: False_
 
 _description: _
 
-Returns the value corresponding to the allocation position inside this object. In this case: 0 it´s for x and 1 it´s for y
+Returns the value corresponding to the allocation position inside this object. In this case: 0 it's for x and 1 it's for y
 
-$$code(lang=c++)
+~~~~{.cpp}
 ofVec2f v1 = ofVec2f(40, 20);
     
 cout << v1[1] << " = 20 ( y value )" << endl;
-$$/code
+~~~~
 
 
 <!----------------------------------------------------------------------------->
@@ -204,10 +204,10 @@ _description: _
 
 Setting the values by using two floats variables
 
-$$code(lang=c++)
+~~~~{.cpp}
 ofVec2f v1;
 v1.set(40, 20);
-$$/code
+~~~~
 
 
 
@@ -235,12 +235,12 @@ _description: _
 
 Setting the values by using other 2 dimension vector (ofVec2f)
 
-$$code(lang=c++)
+~~~~{.cpp}
 ofVec2f v1;
 ofVec2f v2;
 v1.set(40, 20);
 v2.set(v1);
-$$/code
+~~~~
 
 
 
@@ -321,12 +321,12 @@ _description: _
 Let you check if two vectors are similar given a tolerance threshold (default = 0.0001 )
 For example this gives true:
 
-$$code(lang=c++)
+~~~~{.cpp}
 ofVec2f v1 = ofVec2f(40, 20);
 ofVec2f v2 = ofVec2f(40.01, 19.999);
     
 cout << v1.match(v2, 0.1) << endl;
-$$/code
+~~~~
 
 
 <!----------------------------------------------------------------------------->
@@ -351,14 +351,14 @@ _advanced: False_
 
 _description: _
 
-Let´s you check if they both have an alignated direction with a tolerance threshold (default = 0.0001 )
+Let's you check if both vectors are alignated with a angular tolerance threshold (default = 0.0001 )
 
-$$code(lang=c++)
+~~~~{.cpp}
 ofVec2f v1 = ofVec2f(40, 20);
 ofVec2f v2 = ofVec2f(4, 2);
 
 cout << v1.align(v2, 0.0) << endl;
-$$/code
+~~~~
 
 
 <!----------------------------------------------------------------------------->
@@ -383,9 +383,14 @@ _advanced: False_
 
 _description: _
 
+Let's you check if both vectors are alignated with a radial tolerance threshold (default = 0.0001 )
 
+~~~~{.cpp}
+ofVec2f v1 = ofVec2f(40, 20);
+ofVec2f v2 = ofVec2f(4, 2);
 
-
+cout << v1.alignRad(v2, 0.0) << endl;
+~~~~
 
 
 
@@ -411,9 +416,14 @@ _advanced: False_
 
 _description: _
 
+Let's you make vectorial addition super easy
 
+~~~~{.cpp}
+ofVec2f v1 = ofVec2f(40, 20); 
+ofVec2f v2 = ofVec2f(25,50);
 
-
+v1 = v1 + v2;
+~~~~
 
 
 
@@ -439,9 +449,14 @@ _advanced: False_
 
 _description: _
 
+Addition assigment of a vector (v2) to it's own data (v1)
 
+~~~~{.cpp}
+ofVec2f v1 = ofVec2f(40, 20); 
+ofVec2f v2 = ofVec2f(25,50);
 
-
+v1 += v2;
+~~~~
 
 
 
@@ -467,9 +482,14 @@ _advanced: False_
 
 _description: _
 
+Let's you make vectorial substraction super easy
 
+~~~~{.cpp}
+ofVec2f v1 = ofVec2f(40, 20); 
+ofVec2f v2 = ofVec2f(25,50);
 
-
+v1 = v1 - v2;
+~~~~
 
 
 
@@ -495,9 +515,14 @@ _advanced: False_
 
 _description: _
 
+Subtraction assigment of a vector (v2) to it's own data (v1)
 
+~~~~{.cpp}
+ofVec2f v1 = ofVec2f(40, 20); 
+ofVec2f v2 = ofVec2f(25,50);
 
-
+v1 -= v2;
+~~~~
 
 
 
@@ -523,9 +548,14 @@ _advanced: False_
 
 _description: _
 
+Let's you make vectorial multiplication super easy
 
+~~~~{.cpp}
+ofVec2f v1 = ofVec2f(40, 20); 
+ofVec2f v2 = ofVec2f(25,50);
 
-
+v1 = v1 * v2;
+~~~~
 
 
 
@@ -551,9 +581,14 @@ _advanced: False_
 
 _description: _
 
+Multiplication assigment of a vector (v2) to it's own data (v1)
 
+~~~~{.cpp}
+ofVec2f v1 = ofVec2f(40, 20); 
+ofVec2f v2 = ofVec2f(25,50);
 
-
+v1 *= v2;
+~~~~
 
 
 
@@ -579,9 +614,14 @@ _advanced: False_
 
 _description: _
 
+Let's you make vectorial division super easy
 
+~~~~{.cpp}
+ofVec2f v1 = ofVec2f(40, 20); 
+ofVec2f v2 = ofVec2f(25,50);
 
-
+v1 = v1 / v2;
+~~~~
 
 
 
@@ -607,9 +647,14 @@ _advanced: False_
 
 _description: _
 
+Division assigment of a vector (v2) to it's own data (v1)
 
+~~~~{.cpp}
+ofVec2f v1 = ofVec2f(40, 20); 
+ofVec2f v2 = ofVec2f(25,50);
 
-
+v1 /= v2;
+~~~~
 
 
 
@@ -888,7 +933,7 @@ _advanced: False_
 _description: _
 
 
-
+Return a 2D vector after scaling it.
 
 
 
@@ -915,8 +960,7 @@ _advanced: False_
 
 _description: _
 
-
-
+Scales the vector some amount of lenght.
 
 
 
@@ -944,7 +988,7 @@ _advanced: False_
 _description: _
 
 
-
+Return a 2D vector after rotating it a given angle
 
 
 
@@ -971,8 +1015,7 @@ _advanced: False_
 
 _description: _
 
-
-
+Return a 2D vector after rotating it a given radio
 
 
 
@@ -999,8 +1042,7 @@ _advanced: False_
 
 _description: _
 
-
-
+Rotates the vector a given amount of angles
 
 
 
@@ -1027,8 +1069,7 @@ _advanced: False_
 
 _description: _
 
-
-
+Rotates the vector a given amount of radial angles
 
 
 
@@ -1055,9 +1096,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
+Return a 2D vector after rotating it with given angle over some pivot (that actually it's another vector)
 
 
 
@@ -1083,9 +1122,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
+Rotates the vector with a given angle over some pivot (that actually it's another vector)
 
 
 
@@ -1111,9 +1148,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
+Return a 2D vector after rotating it with given radial angle over some pivot (that actually it's another vector)
 
 
 
@@ -1139,9 +1174,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
+Rotates the vector over a pivot vector (another ofVec2f) a given amount of radial angles
 
 
 
@@ -1167,9 +1200,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
+Returns a 2D vector that fits on the range of another to 2D vectors that correspond to the x range (max and min) and the y range (max and min) 
 
 
 
@@ -1195,9 +1226,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
+Fits the vector inside the range of two anothers 2D vectors that set the max and the min of X and the max and min of Y.
 
 
 
@@ -1223,7 +1252,7 @@ _advanced: False_
 
 _description: _
 
-
+Returns the distance from the vector to another
 
 
 
@@ -1251,7 +1280,7 @@ _advanced: False_
 
 _description: _
 
-
+Returns the distance from the vector to another
 
 
 
@@ -1335,9 +1364,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
+Returns a 2D vector ( ofVec2f ) that's match the presice middle point between the vector and other one given as parameter
 
 
 
@@ -1363,9 +1390,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
+Set's the value of the vector to the excatly middle point of it with another one given as parameter
 
 
 
@@ -1391,9 +1416,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
+Calculates the average of a given array of vectors (ofVec2f) and the total number of them.
 
 
 
@@ -1419,9 +1442,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
+Return the normalized vector. That means that it will return a vector with the same direction but with lenght equal to 1. This it's preaty handy whene it's not important the magnitud just the direction of a point or plane (surface).
 
 
 
@@ -1447,9 +1468,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
+Normalized the vector. That means that it will return a vector with the same direction but with lenght equal to 1. This it's preaty handy whene it's not important the magnitud just the direction of a point or plane (surface).
 
 
 
@@ -1701,7 +1720,7 @@ _description: _
 
 Dot Product, or less commonly know as Euclidean inner product. It can be used to get the angle between to vectors.
 
-
+![DOT](http://engineeronadisk.com/notes_mechanic/images/statics150.gif)
 
 <!----------------------------------------------------------------------------->
 
