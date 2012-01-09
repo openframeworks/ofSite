@@ -3,7 +3,21 @@
 
 ##Description
 
+A class to describe a two dimensional vector. This datatype stores two variables (x and y). It´s commonly used as a position, velocity, and/or acceleration. Technically, positions is described as a point (and commonly defined with a ofPoint, that in fact it´s a ofVec3f).
+Vectors in general are entities with magnitude ( also called lenght) and direction. A vector whose magnitude is 1 is a unit or normalized vector.  Witch means that it´s important data that stores it´s the direction of a point. This last practice it´s very well-known on 3D design for defining the direction of a plane by passing-through the normal value of each vertex that conform a triangle or quad mesh. 
 
+Any way, what´s very handy of this class it´s that you could perform arithmetic operations on vectors really easy, just as you deal with int or floats. This is a substantial difference from the Processing implementation call PVectors.
+
+$$code(lang=c++)
+ofVec2f v1 = ofVec2f(40, 20);   // one way of assignment 
+    
+ofVec2f v2;
+v2.set(25,50);                  // other way of assignment
+    
+v1 = v1 + v2;	// vector operation also equivalent of: v1 += v2 
+
+cout << v1 << endl;
+$$/code
 
 
 
@@ -31,9 +45,11 @@ _advanced: False_
 
 _description: _
 
+Values assigment using two floats variables
 
-
-
+$$code(lang=c++)
+ofVec2f v1 = ofVec2f(40, 20);
+$$/code
 
 
 
@@ -59,9 +75,12 @@ _advanced: False_
 
 _description: _
 
+Values assigment using a 3 dimensional vector (ofVec3f)
 
-
-
+$$code(lang=c++)
+ofVec3f v1 = ofVec3f(40, 20, 50);
+ofVec2f v2 = ofVec2f(v1);
+$$/code
 
 
 
@@ -87,9 +106,12 @@ _advanced: False_
 
 _description: _
 
+Values assigment using a 4 dimensional vector (ofVec4f)
 
-
-
+$$code(lang=c++)
+ofVec4f v1 = ofVec3f(40, 20, 50, 0);
+ofVec2f v2 = ofVec2f(v1);
+$$/code
 
 
 
@@ -115,11 +137,17 @@ _advanced: False_
 
 _description: _
 
+Gets the pointer to the memory position of the first element of the vector
 
-
-
-
-
+$$code(lang=c++)
+ofVec2f v1 = ofVec2f(40, 20);
+    
+float *a;
+    
+a = v1.getPtr();
+    
+cout << *a << " = 40 ( x value )" << endl;
+$$/code
 
 <!----------------------------------------------------------------------------->
 
@@ -143,10 +171,13 @@ _advanced: False_
 
 _description: _
 
+Returns the value corresponding to the allocation position inside this object. In this case: 0 it´s for x and 1 it´s for y
 
-
-
-
+$$code(lang=c++)
+ofVec2f v1 = ofVec2f(40, 20);
+    
+cout << v1[1] << " = 20 ( y value )" << endl;
+$$/code
 
 
 <!----------------------------------------------------------------------------->
@@ -171,9 +202,12 @@ _advanced: False_
 
 _description: _
 
+Setting the values by using two floats variables
 
-
-
+$$code(lang=c++)
+ofVec2f v1;
+v1.set(40, 20);
+$$/code
 
 
 
@@ -199,9 +233,14 @@ _advanced: False_
 
 _description: _
 
+Setting the values by using other 2 dimension vector (ofVec2f)
 
-
-
+$$code(lang=c++)
+ofVec2f v1;
+ofVec2f v2;
+v1.set(40, 20);
+v2.set(v1);
+$$/code
 
 
 
@@ -227,9 +266,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
+Equal comparison of two vectors
 
 
 
@@ -255,9 +292,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
+Not Equal comparison of two vectors 
 
 
 
@@ -283,10 +318,15 @@ _advanced: False_
 
 _description: _
 
+Let you check if two vectors are similar given a tolerance threshold (default = 0.0001 )
+For example this gives true:
 
-
-
-
+$$code(lang=c++)
+ofVec2f v1 = ofVec2f(40, 20);
+ofVec2f v2 = ofVec2f(40.01, 19.999);
+    
+cout << v1.match(v2, 0.1) << endl;
+$$/code
 
 
 <!----------------------------------------------------------------------------->
@@ -311,10 +351,14 @@ _advanced: False_
 
 _description: _
 
+Let´s you check if they both have an alignated direction with a tolerance threshold (default = 0.0001 )
 
+$$code(lang=c++)
+ofVec2f v1 = ofVec2f(40, 20);
+ofVec2f v2 = ofVec2f(4, 2);
 
-
-
+cout << v1.align(v2, 0.0) << endl;
+$$/code
 
 
 <!----------------------------------------------------------------------------->
@@ -1655,9 +1699,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
+Dot Product, or less commonly know as Euclidean inner product. It can be used to get the angle between to vectors.
 
 
 
