@@ -14,7 +14,7 @@ ofVec2f v1 = ofVec2f(40, 20);   // one way of assignment
 ofVec2f v2;
 v2.set(25,50);                  // other way of assignment
     
-v1 = v1 + v2;	// vector operation also equivalent of: v1 += v2 
+v1 = v1 + v2;    // vector operation also equivalent of: v1 += v2 
 
 cout << v1 << endl;
 ~~~~
@@ -351,12 +351,11 @@ _advanced: False_
 
 _description: _
 
-Let's you check if both vectors are alignated with a angular tolerance threshold (default = 0.0001 )
+Lets you check if their directions are aligned, within a tolerance threshold (default = 0.0001).
 
 ~~~~{.cpp}
 ofVec2f v1 = ofVec2f(40, 20);
 ofVec2f v2 = ofVec2f(4, 2);
-
 cout << v1.align(v2, 0.0) << endl;
 ~~~~
 
