@@ -3,10 +3,7 @@
 
 ##Description
 
-The ofSoundPlayer class wraps fmod, which is a powerful audio utility library. The ofSoundPlayer allows you to load sound files and control and manipulate their playback and properties. 
-The ofSoundPlayer class wraps fmod, which is a powerful audio utility library.
-The ofSoundPlayer allows you to load sound files and control and manipulate
-their playback and properties.
+The ofSoundPlayer class wraps one of several underlying audio utility libraries, depending on your OS and your configuration that can be Fmod, Quicktime, or OpenAL. The ofSoundPlayer is primarily to allow you to load sound files and control and manipulate their playback and properties, if you want more low level access to sound data and to your sound card then you should take a look at the ofSoundStream class. 
 
 
 
@@ -35,35 +32,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void initializeFmod()
-
-<!--
-_syntax: initializeFmod()_
-_name: initializeFmod_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: False_
-_advanced: False_
--->
-
-_description: _
-
-Initializes fMod. Should only be called once internally.
+Creates the ofSoundPlayer instance and initializes the underlying properties in the underlying engine.
 
 
 
@@ -91,36 +60,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void closeFmod()
-
-<!--
-_syntax: closeFmod()_
-_name: closeFmod_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: False_
-_advanced: False_
--->
-
-_description: _
-
-If Fmod is initialized via initializeFmod we can close it via closeFmod().
 
 
 
@@ -999,8 +938,12 @@ _advanced: False_
 _description: _
 
 
+ofSoundPlayer actually wraps a dynamic instance of a sound player, that is, it contains an interface to the sound engine being used to load and playback sounds. If you want to set the interface that your system uses, you can pass an ofPtr to an ofSoundPlayer into the ofSoundPlayer and have the ofSoundPlayer manipulate that one instead.
 
-
+~~~~{.cpp}
+ofPtr<ofBaseSoundPlayer> soundPtr(new ofOpenALSoundPlayer());
+player.setPlayer(soundPtr);
+~~~~
 
 
 
@@ -1026,7 +969,7 @@ _advanced: False_
 
 _description: _
 
-
+ofSoundPlayer actually wraps a dynamic instance of a specific sound player for a specific engine, that is, it contains an interface to the sound engine being used to load and playback sounds. This allows you access to the pointer that contains the specific interface.
 
 
 
@@ -1056,7 +999,7 @@ _description: _
 
 
 
-
+This sets the position of the sound currently playing in milliseconds.
 
 
 
@@ -1083,7 +1026,7 @@ _advanced: False_
 _description: _
 
 
-
+This returns the milliseconds of the sound or file currently playing in milliseconds.
 
 
 
