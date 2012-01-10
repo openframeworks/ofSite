@@ -4,17 +4,15 @@
 ##Description
 
 A class to describe a three dimensional vector. This datatype stores three variables (x, y and z). It's commonly used as a position, velocity, and/or acceleration. Technically, positions is described as a point (and commonly defined with a ofPoint, that in fact it's a ofVec3f).
-Vectors in general are entities with magnitude ( also called lenght) and direction. A vector whose magnitude is 1 is a unit or normalized vector.  Witch means that it's important data that stores it's the direction of a point. This last practice it's very well-known on 3D design for defining the direction of a plane by passing-through the normal value of each vertex that conform a triangle or quad mesh. 
+Vectors in general are entities with magnitude ( also called length) and direction. A vector whose magnitude is 1 is a unit or normalized vector.  Witch means that it's important data that stores it's the direction of a point. This last practice it's very well-known on 3D design for defining the direction of a plane by passing-through the normal value of each vertex that conform a triangle or quad mesh. 
 
 Any way, what's very handy of this class it's that you could perform arithmetic operations on vectors really easy, just as you deal with int or floats. This is a substantial difference from the Processing implementation call PVectors.
 
 ~~~~{.cpp}
-ofVec3f v1 = ofVec3f(40, 20, 70);   // one way of assignment 
-    
+ofVec3f v1 = ofVec3f(40, 20, 70); // one way of assignment 
 ofVec3f v2;
-v2.set(25,50,43);                  // other way of assignment
-    
-v1 = v1 + v2;	// vector operation also equivalent of: v1 += v2 
+v2.set(25,50,43); // other way of assignment
+v1 = v1 + v2; // vector operation also equivalent of: v1 += v2 
 ~~~~
 
 
@@ -139,11 +137,8 @@ Gets the pointer to the memory position of the first element of the vector
 
 ~~~~{.cpp}
 ofVec3f v1 = ofVec3f(40, 20, 70);
-    
 float *a;
-    
 a = v1.getPtr();
-    
 cout << *a << " = 40 ( x value )" << endl;
 ~~~~
 
@@ -174,7 +169,6 @@ Returns the value corresponding to the allocation position inside this object. I
 
 ~~~~{.cpp}
 ofVec3f v1 = ofVec3f(40, 20, 70);
-    
 cout << v1[2] << " = 70 ( z value )" << endl;
 ~~~~
 
@@ -322,7 +316,6 @@ For example this gives true:
 ~~~~{.cpp}
 ofVec3f v1 = ofVec3f(40, 20, 70);
 ofVec3f v2 = ofVec3f(40.01, 19.999, 70.05);
-    
 cout << v1.match(v2, 0.1) << endl;
 ~~~~
 
@@ -350,12 +343,11 @@ _advanced: False_
 
 _description: _
 
-Let's you check if both vectors are alignated with a angular tolerance threshold (default = 0.0001 )
+Let's you check if both vectors are align with a angular tolerance threshold (default = 0.0001 )
 
 ~~~~{.cpp}
 ofVec3f v1 = ofVec3f(40, 20, 70);
 ofVec3f v2 = ofVec3f(4, 2, 7);
-
 cout << v1.align(v2, 0.0) << endl;
 ~~~~
 
@@ -383,12 +375,11 @@ _advanced: False_
 
 _description: _
 
-Let's you check if both vectors are alignated with a radial tolerance threshold (default = 0.0001 )
+Let's you check if both vectors are align with a radial tolerance threshold (default = 0.0001 )
 
 ~~~~{.cpp}
 ofVec3f v1 = ofVec3f(40, 20);
 ofVec3f v2 = ofVec3f(4, 2);
-
 cout << v1.alignRad(v2, 0.0) << endl;
 ~~~~
 
@@ -421,7 +412,6 @@ Let's you make vectorial addition super easy
 ~~~~{.cpp}
 ofVec3f v1 = ofVec3f(40, 20, 70); 
 ofVec3f v2 = ofVec3f(25, 50, 10);
-
 v1 = v1 + v2;
 ~~~~
 
@@ -449,12 +439,11 @@ _advanced: False_
 
 _description: _
 
-Addition assigment of a vector (v2) to it's own data (v1)
+Addition assignment of a vector (v2) to it's own data (v1)
 
 ~~~~{.cpp}
 ofVec3f v1 = ofVec3f(40, 20, 70); 
 ofVec3f v2 = ofVec3f(25, 50, 10);
-
 v1 += v2;
 ~~~~
 
@@ -482,12 +471,11 @@ _advanced: False_
 
 _description: _
 
-Let's you make vectorial substraction super easy
+Let's you make vectorial subtraction super easy
 
 ~~~~{.cpp}
 ofVec3f v1 = ofVec3f(40, 20, 70); 
 ofVec3f v2 = ofVec3f(25, 50, 10);
-
 v1 = v1 - v2;
 ~~~~
 
@@ -515,12 +503,11 @@ _advanced: False_
 
 _description: _
 
-Subtraction assigment of a vector (v2) to it's own data (v1)
+Subtraction assignment of a vector (v2) to it's own data (v1)
 
 ~~~~{.cpp}
 ofVec3f v1 = ofVec3f(40, 20, 70); 
 ofVec3f v2 = ofVec3f(25, 50, 10);
-
 v1 -= v2;
 ~~~~
 
@@ -553,7 +540,6 @@ Let's you make vectorial multiplication super easy
 ~~~~{.cpp}
 ofVec3f v1 = ofVec3f(40, 20, 70); 
 ofVec3f v2 = ofVec3f(25, 50, 10);
-
 v1 = v1 * v2;
 ~~~~
 
@@ -581,12 +567,11 @@ _advanced: False_
 
 _description: _
 
-Multiplication assigment of a vector (v2) to it's own data (v1)
+Multiplication assignment of a vector (v2) to it's own data (v1)
 
 ~~~~{.cpp}
 ofVec3f v1 = ofVec3f(40, 20, 70); 
 ofVec3f v2 = ofVec3f(25, 50, 10);
-
 v1 *= v2;
 ~~~~
 
@@ -619,7 +604,6 @@ Let's you make vectorial division super easy
 ~~~~{.cpp}
 ofVec3f v1 = ofVec3f(40, 20, 70); 
 ofVec3f v2 = ofVec3f(25, 50, 10);
-
 v1 = v1 / v2;
 ~~~~
 
@@ -647,12 +631,11 @@ _advanced: False_
 
 _description: _
 
-Division assigment of a vector (v2) to it's own data (v1)
+Division assignment of a vector (v2) to it's own data (v1)
 
 ~~~~{.cpp}
 ofVec3f v1 = ofVec3f(40, 20, 70); 
 ofVec3f v2 = ofVec3f(25, 50, 10);
-
 v1 /= v2;
 ~~~~
 
@@ -680,7 +663,7 @@ _advanced: False_
 
 _description: _
 
-Substract a value to x, y and z variables
+Subtract a value to x, y and z variables
 
 
 
@@ -758,7 +741,7 @@ _advanced: False_
 
 _description: _
 
-Substracts a value to x, y and z variables
+Subtracts a value to x, y and z variables
 
 
 
@@ -940,7 +923,7 @@ _advanced: False_
 
 _description: _
 
-Scales the vector some amount of lenght.
+Scales the vector some amount of length.
 
 
 
@@ -1446,7 +1429,7 @@ _advanced: False_
 
 _description: _
 
-Returns a 3D vector ( ofVec3f ) that's match the presice middle point between the vector and other one given as parameter
+Returns a 3D vector ( ofVec3f ) that's match the precise middle point between the vector and other one given as parameter
 
 
 
@@ -1472,7 +1455,7 @@ _advanced: False_
 
 _description: _
 
-Set's the value of the vector to the excatly middle point of it with another one given as parameter
+Set's the value of the vector to the exactly middle point of it with another one given as parameter
 
 
 
@@ -1524,7 +1507,7 @@ _advanced: False_
 
 _description: _
 
-Return the normalized vector. That means that it will return a vector with the same direction but with lenght equal to 1. This it's preaty handy whene it's not important the magnitud just the direction of a point or plane (surface).
+Return the normalized vector. That means that it will return a vector with the same direction but with length equal to 1. This it's pretty handy when it's not important the magnitude just the direction of a point or plane (surface).
 
 
 
@@ -1550,7 +1533,7 @@ _advanced: False_
 
 _description: _
 
-Normalized the vector. That means that it will return a vector with the same direction but with lenght equal to 1. This it's preaty handy whene it's not important the magnitud just the direction of a point or plane (surface).
+Normalized the vector. That means that it will return a vector with the same direction but with length equal to 1. This it's pretty handy when it's not important the magnitude just the direction of a point or plane (surface).
 
 
 
@@ -1683,7 +1666,7 @@ _advanced: False_
 
 _description: _
 
-Return a 3D vector (ofVec3f) rotated at 90 degress 
+Return a 3D vector (ofVec3f) rotated at 90 degrees 
 
 ![PERPENDICULAR](http://www.kalipedia.com/kalipediamedia/matematicas/media/200709/26/geometria/20070926klpmatgeo_296.Ges.SCO.png)
 
@@ -1710,7 +1693,7 @@ _advanced: False_
 
 _description: _
 
-Rotates the vector at 90 degress 
+Rotates the vector at 90 degrees 
 
 
 
@@ -1736,7 +1719,7 @@ _advanced: False_
 
 _description: _
 
-Return the magnitud or lenght of the vector
+Return the magnitude or length of the vector
 
 
 
