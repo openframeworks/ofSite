@@ -45,7 +45,7 @@ _advanced: False_
 
 _description: _
 
-Values assigment using two floats variables
+Vector constructor passing two floats variables
 
 ~~~~{.cpp}
 ofVec2f v1 = ofVec2f(40, 20);
@@ -75,7 +75,7 @@ _advanced: False_
 
 _description: _
 
-Values assigment using a 3 dimensional vector (ofVec3f)
+Vector constructor passing a 3 dimensional vector (ofVec3f)
 
 ~~~~{.cpp}
 ofVec3f v1 = ofVec3f(40, 20, 50);
@@ -106,10 +106,10 @@ _advanced: False_
 
 _description: _
 
-Values assigment using a 4 dimensional vector (ofVec4f)
+Vector constructor passing a 4 dimensional vector (ofVec4f)
 
 ~~~~{.cpp}
-ofVec4f v1 = ofVec3f(40, 20, 50, 0);
+ofVec4f v1 = ofVec4f(40, 20, 50, 0);
 ofVec2f v2 = ofVec2f(v1);
 ~~~~
 
@@ -679,9 +679,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
+Adds a value to both x and y variables
 
 
 
@@ -707,9 +705,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
+Adds a value to both x and y variables
 
 
 
@@ -735,9 +731,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
+Substract a value to both x and y variables
 
 
 
@@ -763,9 +757,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
+Substracts a value to both x and y variables
 
 
 
@@ -819,9 +811,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
+Multiply a value to both x and y variables
 
 
 
@@ -847,9 +837,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
+Multiply a value to both x and y variables
 
 
 
@@ -875,9 +863,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
+Devides a value to both x and y variables
 
 
 
@@ -903,9 +889,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
+Devides a value to both x and y variables
 
 
 
@@ -930,7 +914,6 @@ _advanced: False_
 -->
 
 _description: _
-
 
 Return a 2D vector after scaling it.
 
@@ -1549,11 +1532,9 @@ _advanced: False_
 
 _description: _
 
+Return a 2D vector (ofVec2f) rotated at 90 degress 
 
-
-
-
-
+![PERPENDICULAR](http://www.kalipedia.com/kalipediamedia/matematicas/media/200709/26/geometria/20070926klpmatgeo_296.Ges.SCO.png)
 
 <!----------------------------------------------------------------------------->
 
@@ -1577,9 +1558,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
+Rotates the vector at 90 degress 
 
 
 
@@ -1605,9 +1584,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
+Return the magnitud or lenght of the vector
 
 
 
