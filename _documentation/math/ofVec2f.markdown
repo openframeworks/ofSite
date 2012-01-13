@@ -1518,6 +1518,7 @@ _description: _
 Return a 2D vector (ofVec2f) rotated at 90 degrees 
 
 ![PERPENDICULAR](../math/perpendicular.png)
+Image courtesy of Wikipedia
 
 <!----------------------------------------------------------------------------->
 
@@ -1680,6 +1681,7 @@ _description: _
 Dot Product, or less commonly know as Euclidean inner product. It can be used to get the angle between to vectors.
 
 ![DOT](../math/dotproduct.png)
+Image courtesy of Wikipedia
 
 <!----------------------------------------------------------------------------->
 

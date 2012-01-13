@@ -1618,6 +1618,7 @@ _description: _
 Returns the cross product vector product of the vector and the one it's passed as a parameter. This is also call Gibbs vector product and is a binary operation on two vectors in three-dimensional space. It results in a vector which is perpendicular to both of the vectors being multiplied and normal to the plane containing them. The name 'cross product' is derived from the cross symbol X that is often used to designate this operation; the alternative name 'vector product' emphasizes the vector (rather than scalar) nature of the result.
 
 ![CROSS](../math/crossproduct.png)
+Image courtesy of Wikipedia
 
 <!----------------------------------------------------------------------------->
 
@@ -1669,6 +1670,7 @@ _description: _
 Return a 3D vector (ofVec3f) rotated at 90 degrees 
 
 ![PERPENDICULAR](../math/perpendicular.png)
+Image courtesy of Wikipedia
 
 
 <!----------------------------------------------------------------------------->
@@ -1832,6 +1834,7 @@ _description: _
 Dot Product, or less commonly know as Euclidean inner product. It can be used to get the angle between to vectors.
 
 ![DOT](../math/dotproduct.png)
+Image courtesy of Wikipedia
 
 
 <!----------------------------------------------------------------------------->
