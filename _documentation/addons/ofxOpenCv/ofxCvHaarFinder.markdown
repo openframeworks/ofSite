@@ -6,11 +6,28 @@
 
 
 
+ofxCvHaarFinder allows you to check an image for a match to a Haar classifier. The Haar Classifier is a data file generated from a training process where an application is “taught” how to recognize something in different contexts. This can be things like recognizing whether a certain sound is a word being spoken by a user, whether a gesture is a certain shape, or, in the image shown below, whether a pattern of pixels constitute a face.
 
+![face detection](face_detection.jpg "Face detection on a photograph")
 
+A very basic set-up of an application using ofxCvHaarFinder would look like so:
 
+~~~~{.cpp}
+app::setup() {
+   haarFinder.setup("haarcascade.xml"); // must be in /data/
+}
 
+app::update() {
+   haarFinder.findHaarObjects(imageToExamine);
+}
 
+app::draw() {
+  for(int i = 0; i < haarFinder.blobs.size(); i++) {
+     ofRect( haarFinder.blobs[i].boundingRect );
+  }
+}
+
+~~~~
 
 
 
@@ -43,7 +60,7 @@ _description: _
 
 
 
-
+Constructor.
 
 
 
@@ -76,7 +93,7 @@ _description: _
 
 
 
-
+Copy constructor.
 
 
 
@@ -112,7 +129,7 @@ _description: _
 
 
 
-
+Destructor.
 
 
 
@@ -146,7 +163,7 @@ _description: _
 
 
 
-
+This loads a Haar cascade file into the finder. This needs to be done before the Haar finder can be used with images.
 
 
 
@@ -216,7 +233,7 @@ _description: _
 
 
 
-
+Minimum number (minus 1) of neighbor rectangles that makes up an object. All the groups of a smaller number of rectangles than min_neighbors-1 are rejected. If min_neighbors is 0, the function does not any grouping at all and returns all the detected candidate rectangles, that might be useful if you want to do a customized grouping.
 
 
 
@@ -253,6 +270,16 @@ _description: _
 
 
 
+Takes an input ofImage object and allows you to set the minimum width and height of areas that should be returned.
+
+~~~~{.cpp}
+camera.grabFrame();
+if(camera.isFrameNew())
+{
+	img.setFromPixels(grab.getPixelsRef());
+	finder.findHaarObjects(img);
+}
+~~~~
 
 
 
@@ -286,8 +313,7 @@ _description: _
 
 
 
-
-
+Takes an input ofxCvGrayscaleImage object and allows you to set the minimum width and height of areas that should be returned.
 
 
 
@@ -320,9 +346,21 @@ _description: _
 
 
 
+Takes an input ofxCvGrayscaleImage object and allows you to set the minimum width and height of areas that should be returned and a region of interest as an ofRectangle that you would like to limit haar finding to.
 
 
 
+~~~~{.cpp}
+colorImg.setFromPixels(vidGrabber.getPixelsRef());
+grayImage = colorImg; // convert our color image to a grayscale image
+
+faceFinder.findHaarObjects(grayImage);
+
+for(int i = 0; i < faceFinder.blobs.size(); i++) {
+	ofRectangle roi = faceFinder.blobs[i].boundingRect;
+	eyeFinder.findHaarObjects(grayImage, roi);
+}
+~~~~
 
 
 
@@ -356,7 +394,7 @@ _description: _
 
 
 
-
+Takes an input ofxCvGrayscaleImage object and allows you to set the minimum width and height of areas that should be returned and a region of interest as an ofRectangle that you would like to limit haar finding to.
 
 
 
@@ -388,6 +426,10 @@ _advanced: False_
 
 _description: _
 
+
+
+
+Takes an input ofPixels object and allows you to set the minimum width and height of areas that should be returned.
 
 
 
@@ -427,7 +469,7 @@ _description: _
 
 
 
-
+Returns the width of the image area that is being examined.
 
 
 
@@ -460,7 +502,7 @@ _description: _
 
 
 
-
+Returns the height of the image area that is being examined.
 
 
 
@@ -497,10 +539,9 @@ _description: _
 
 
 
+Draws any detected objects to the screen with a rectangle, like so:
 
-
-
-
+![Draw faces](draw_facedetection.jpg "Detecting faces.")
 
 
 
@@ -532,7 +573,7 @@ _description: _
 
 
 
-
+Provides access to the all the blobs detected in the last run of findHaarObjects() via a vector<ofxCvBlob>.
 
 
 
