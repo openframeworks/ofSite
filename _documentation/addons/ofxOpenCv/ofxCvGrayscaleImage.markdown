@@ -5,14 +5,25 @@
 
 
 
+This represents an OpenCV friendly image in grayscale, i.e. without any color data. This is useful because many of the image processing and analysis routines in OpenCV (or OF for that matter) don't require color information. Less information to sort through means faster image analysis and faster applications. You can convert an ofxCvColorImage to an ofxCvGrayscaleImage using the = operator like so:
 
 
+~~~~{.cpp}
+grayscaleImg = colorImg;
+~~~~
 
+A common routine that you'll see is something like the following:
 
+~~~~{.cpp}
+colorImg.setFromPixels(vidGrabber.getPixelsRef());
+grayImage = colorImg; // convert our color image to a grayscale image
+~~~~
 
+The ofxCvGrayscaleImage can then be passed to a ofxCvContourFinder instance for contour and blob detection.
 
-
-
+~~~~{.cpp}
+contourFinder.findContours(grayscaleImage, 5, (340*240)/4, 4, false, true);
+~~~~
 
 ##Methods
 
@@ -44,7 +55,7 @@ _description: _
 
 
 
-
+Constructor.
 
 
 
@@ -75,7 +86,7 @@ _description: _
 
 
 
-
+Destructor.
 
 
 
@@ -112,7 +123,7 @@ _description: _
 
 
 
-
+Copy constructor, allows you copy one ofxCvGrayscaleImage into another.
 
 
 
@@ -149,7 +160,7 @@ _description: _
 
 
 
-
+Set all the pixels in the image to the float value passed in. This is useful for blanking or filling an image quickly. the values are 1.0 to 255.0.
 
 
 
@@ -182,7 +193,7 @@ _description: _
 
 
 
-
+Set all the pixels in a ofxCvGrayscaleImage from an ofPixels instance using the w and h parameters.
 
 
 
@@ -215,7 +226,7 @@ _description: _
 
 
 
-
+This allows you to set the ROI on the image from an ofPixels instance. Region of Interest is a rectangular area in an image, to segment object for further processing. Once the ROI is defined, OpenCV functions will operate on the ROI, reducing the number of pixels that the operation will examine.
 
 
 
@@ -253,7 +264,7 @@ _description: _
 
 
 
-
+Sets the ofxCvGrayscaleImage from the pixels pointer. Be sure that the pixels are the same size and dimensions as the ofxCvGrayscaleImage.
 
 
 
@@ -284,11 +295,11 @@ _advanced: False_
 _description: _
 
 
+Copies one ofxCvGrayscaleImage to another ofxCvGrayscaleImage using the = symbol.
 
-
-
-
-
+~~~~{.cpp}
+imageOne = imageTwo; // make sure that the dimensions and ROI match
+~~~~
 
 
 
@@ -321,6 +332,11 @@ _description: _
 
 
 
+Copies a ofxCvColorImage into a ofxCvGrayscaleImage using the = symbol.
+
+~~~~{.cpp}
+grayImage = colorImage; // make sure that the dimensions and ROI match
+~~~~
 
 
 
@@ -354,6 +370,11 @@ _advanced: False_
 _description: _
 
 
+Copies a ofxCvFloatImage into a ofxCvGrayscaleImage using the = symbol.
+
+~~~~{.cpp}
+grayImage = floatColorImage; // make sure that the dimensions and ROI match
+~~~~
 
 
 
@@ -392,6 +413,12 @@ _description: _
 
 
 
+Copies a ofxCvShortImage into a ofxCvGrayscaleImage using the = symbol.
+
+~~~~{.cpp}
+grayImage = shortColorImage; // make sure that the dimensions and ROI match
+~~~~
+
 
 
 
@@ -426,8 +453,11 @@ _description: _
 
 
 
+Copies a IplImage into a ofxCvGrayscaleImage using the = symbol.
 
-
+~~~~{.cpp}
+grayImage = iplImage; // make sure that the dimensions and ROI match
+~~~~
 
 
 
@@ -460,13 +490,15 @@ _description: _
 
 
 
+Makes a diff of the current image and the mom image. This alters the pixels of the ofxCvGrayscaleImage instance. 
 
+~~~~{.cpp}
+current.absDiff(incoming);
+~~~~
 
+The below image shows how the diff process operates:
 
-
-
-
-
+![Image diff](absdiff.png "Diffing two images")
 
 
 
@@ -496,12 +528,10 @@ _description: _
 
 
 
+Sets the pixels of the images ofxCvGrayscaleImage instance to a diff of the &mom and &dad instance.
 
 
-
-
-
-
+![Image diff](absdiff.png "Diffing two images")
 
 
 
@@ -530,7 +560,7 @@ _description: _
 
 
 
-
+This increases the contrast of the image remapping the brightest points in the image to white and the darkest points in the image to black. Generally on a ofxCvGrayscaleImage it isn't particularly noticeable, though it can have a large effect mathematically.
 
 
 
@@ -563,9 +593,19 @@ _advanced: False_
 
 _description: _
 
+Maps the pixels of an image to the min and max range passed in.
 
+~~~~{.cpp}
 
+colors.setFromPixels(grabber.getPixelsRef());
 
+first = colors; // will leave unaltered
+second = colors; // change it
+second.convertToRange(100, 140); // super low contrast
+
+~~~~
+
+![Image convert to range](convertToRange.png "Converting the range of an image")
 
 
 
@@ -598,11 +638,13 @@ _advanced: False_
 
 _description: _
 
+Increases the contrast of the image. The value is the threshold level applied to the image, for instance:
 
+~~~~{.cpp}
+altered.threshold(30); // super high contrast
+~~~~
 
-
-
-
+![Threshold](threshold.png "Thresholding an image")
 
 
 
@@ -637,7 +679,14 @@ _description: _
 
 
 
+Increases the contrast of the image by blocks, the larger the block, the larger the area that is thresholded at one time. Invert flips the values of the image, making black into white and vice versa. gauss determines whether the image is to be thresholded usinga Gaussian method or simply a plain thresholding. Below you can see the result of using adaptive threshold with two different values.
 
+~~~~{.cpp}
+left.adaptiveThreshold(20);
+right.adaptiveThreshold(50);
+~~~~
+
+![Threshold](threshold.png "Thresholding an image")
 
 
 
@@ -670,7 +719,7 @@ _description: _
 
 
 
-
+Sets the brightness and contrast of an image.
 
 
 
@@ -709,7 +758,7 @@ _description: _
 
 
 
-
+Resizes the image to the w, h passed in.
 
 
 
@@ -739,9 +788,18 @@ _advanced: False_
 _description: _
 
 
+Scales the image passed in to be the size of the current image, 
 
+~~~~{.cpp}
 
+ofxCvImage first;
+first.allocate(640, 480);
+ofxCvImage second;
+second.allocate(320, 240);
 
+second.scaleIntoMe(first); // first is now 320,240
+
+~~~~
 
 
 
@@ -776,7 +834,7 @@ _description: _
 
 
 
-
+Blurs the image using a pre-determine blur amount.
 
 
 
@@ -880,7 +938,7 @@ _description: _
 
 
 
-
+Sets the grayscale image from an ofxCvColorImage.
 
 
 
@@ -914,7 +972,7 @@ _advanced: False_
 _description: _
 
 
-
+Sets the grayscale image from an ofxCvFloatImage.
 
 
 

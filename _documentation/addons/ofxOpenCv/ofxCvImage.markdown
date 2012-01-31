@@ -112,7 +112,7 @@ _description: _
 
 
 
-
+Allocates the image with the w, h passed in. This must be done before the pixels of the image are created.
 
 
 
@@ -145,7 +145,7 @@ _description: _
 
 
 
-
+Clears the pixel data of the image. The image must be allocated again with a call to allocate() before it can be used.
 
 
 
@@ -180,7 +180,7 @@ _description: _
 
 
 
-
+Returns the width of the image in pixels.
 
 
 
@@ -216,7 +216,7 @@ _description: _
 
 
 
-
+Returns the height of the image in pixels.
 
 
 
@@ -252,7 +252,7 @@ _description: _
 
 
 
-
+Sets whether the image is using a texture or not. If the image is not using a texture then calls to getTextureReference() will return null and the image cannot be drawn. This is handy if you know that you won't be displaying the image to the screen.
 
 
 
@@ -286,7 +286,7 @@ _description: _
 
 
 
-
+If the ofxCvImage has an ofTexture texture, then this returns a reference to that texture.
 
 
 
@@ -320,7 +320,7 @@ _description: _
 
 
 
-
+Marks the image as changed so that the ofTexture can be updated, if the image contains one.
 
 
 
@@ -356,7 +356,7 @@ _description: _
 
 
 
-
+Sets the region of interest on the image.  Region of Interest is a rectangular area in an image, to segment object for further processing. Once the ROI is defined, OpenCV functions will operate on the ROI, reducing the number of pixels that the operation will examine.
 
 
 
@@ -392,6 +392,8 @@ _description: _
 
 
 
+Sets the region of interest on the image.  Region of Interest is a rectangular area in an image, to segment object for further processing. Once the ROI is defined, OpenCV functions will operate on the ROI, reducing the number of pixels that the operation will examine.
+
 
 
 
@@ -425,7 +427,7 @@ _description: _
 
 
 
-
+Returns the region of interest in an ofxCvImage.
 
 
 
@@ -461,7 +463,7 @@ _description: _
 
 
 
-
+Removes the region of interest from an ofxCvImage.
 
 
 
@@ -530,7 +532,7 @@ _description: _
 
 
 
-
+Set all the pixels in the image to the float value passed in. This is useful for blanking or filling an image quickly. the values are 1.0 to 255.0.
 
 
 
@@ -565,11 +567,13 @@ _description: _
 
 
 
+Subtracts the pixel data of the right hand side image from the current image:
 
 
 
-
-
+~~~~{.cpp}
+first -= second; // both are ofxCvImage instances
+~~~~
 
 
 
@@ -601,7 +605,13 @@ _description: _
 
 
 
+Adds the pixel data of the right hand side image from the current image:
 
+
+
+~~~~{.cpp}
+first += second; // both are ofxCvImage instances
+~~~~
 
 
 
@@ -636,6 +646,8 @@ _description: _
 
 
 
+Set all the pixels in a ofxCvImage from an ofPixels instance using the w and h parameters.
+
 
 
 
@@ -667,6 +679,12 @@ _advanced: False_
 -->
 
 _description: _
+
+
+
+
+
+Set all the pixels in a ofxCvImage from an ofPixels reference.
 
 
 
@@ -707,7 +725,7 @@ _description: _
 
 
 
-
+Set the Region Of Interest using a pointer to an unsigned char array and a w,h to define the area of the ROI
 
 
 
@@ -739,6 +757,10 @@ _advanced: False_
 _description: _
 
 
+
+
+
+Set the Region Of Interest using an ofPixels reference The w,h of the ofPixels will define the area of the ROI
 
 
 
@@ -779,7 +801,7 @@ _description: _
 
 
 
-
+Copy a ofxCvGrayscaleImage into the current ofxCvImage.
 
 
 
@@ -814,7 +836,7 @@ _description: _
 
 
 
-
+Copy a ofxCvColorImage into the current ofxCvImage.
 
 
 
@@ -846,7 +868,7 @@ _description: _
 
 
 
-
+Copy a ofxCvFloatImage into the current ofxCvImage.
 
 
 
@@ -879,6 +901,8 @@ _advanced: False_
 _description: _
 
 
+
+Copy a ofxCvShortImage into the current ofxCvImage.
 
 
 
@@ -915,6 +939,7 @@ _description: _
 
 
 
+Copy a IplImage into the current ofxCvImage.
 
 
 
@@ -949,9 +974,7 @@ _advanced: False_
 _description: _
 
 
-
-
-
+Copy a ofxCvImage into the current ofxCvImage.
 
 
 
@@ -986,6 +1009,16 @@ _description: _
 
 
 
+
+
+
+Adds the pixel data of the right hand side image from the current image:
+
+
+
+~~~~{.cpp}
+first += second; // both are ofxCvImage instances
+~~~~
 
 
 
@@ -1129,7 +1162,7 @@ _description: _
 
 
 
-
+Returns a raw pointer to the pixel data within the image.
 
 
 
@@ -1162,7 +1195,7 @@ _description: _
 
 
 
-
+Returns an ofPixels reference to the pixel data within the image.
 
 
 
@@ -1197,8 +1230,7 @@ _description: _
 
 
 
-
-
+Returns a raw pointer to the pixel data within the Region of Interest in the ofxCvImage.
 
 
 
@@ -1231,7 +1263,7 @@ _description: _
 
 
 
-
+Returns an ofPixels reference to the pixel data within the Region of Interest in the ofxCvImage.
 
 
 
@@ -1266,7 +1298,7 @@ _description: _
 
 
 
-
+Returns a raw pointer to the OpenCV IplImage.
 
 
 
@@ -1302,7 +1334,7 @@ _description: _
 
 
 
-
+Updates the texture of the ofxCvImage if it contains one. This is handy after you've changed the image pixel data and want it to be uploaded to the texture on the graphics card.
 
 
 
@@ -1337,7 +1369,7 @@ _description: _
 
 
 
-
+Draw the image at the x,y.
 
 
 
@@ -1373,7 +1405,7 @@ _description: _
 
 
 
-
+Draw the image at the x,y with the w,h.
 
 
 
@@ -1408,7 +1440,7 @@ _description: _
 
 
 
-
+Draw the image at the ofPoint passed in.
 
 
 
@@ -1441,7 +1473,7 @@ _description: _
 
 
 
-
+Draw the image into the ofRectangle passed in.
 
 
 
@@ -1476,7 +1508,7 @@ _description: _
 
 
 
-
+Draw just the Region of Interest of the image at the x,y.
 
 
 
@@ -1512,7 +1544,7 @@ _description: _
 
 
 
-
+Draw just the Region of Interest of the image into the x,y with the w,h passed in.
 
 
 
@@ -1549,7 +1581,7 @@ _description: _
 
 
 
-
+Set the anchor point of the image, i.e. the center point for rotations, at the percentage positions passed in.
 
 
 
@@ -1582,7 +1614,7 @@ _description: _
 
 
 
-
+Set the anchor point of the image, i.e. the center point for rotations, at the x,y passed in.
 
 
 
@@ -1618,7 +1650,7 @@ _description: _
 
 
 
-
+Reset the anchor point of the image, i.e. the center point for rotations, 
 
 
 
@@ -1790,7 +1822,7 @@ _description: _
 
 
 
-
+Flip the pixel values of the image.
 
 
 
