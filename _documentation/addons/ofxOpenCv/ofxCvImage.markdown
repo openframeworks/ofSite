@@ -1683,9 +1683,10 @@ _description: _
 
 
 
+Erodes the image.
 
 
-
+![Eroding] (erode.png "Eroding an image, original on Left")
 
 
 
@@ -1718,7 +1719,7 @@ _description: _
 
 
 
-
+![Dilating] (dilate.png "Dilating an image, original on Left")
 
 
 
@@ -1754,10 +1755,10 @@ _description: _
 
 
 
+Blurs the image
 
 
-
-
+![Blurring] (blur.png "Blurring an image original on Left")
 
 
 
@@ -1787,6 +1788,7 @@ _description: _
 
 
 
+Blurs the using Gaussian blurring. Gaussian blurring is typically to reduce image noise and reduce detail.
 
 
 
@@ -1825,7 +1827,7 @@ _description: _
 Flip the pixel values of the image.
 
 
-
+![Inverting an image] (invert.png "Original on Left")
 
 
 
@@ -1856,7 +1858,7 @@ _advanced: False_
 _description: _
 
 
-
+This increases the contrast of the image remapping the brightest points in the image to 255 and the darkest points in the image to 0.
 
 
 
@@ -1891,7 +1893,19 @@ _advanced: False_
 _description: _
 
 
+Maps the pixels of an image to the min and max range passed in.
 
+~~~~{.cpp}
+
+colors.setFromPixels(grabber.getPixelsRef());
+
+first = colors; // will leave unaltered
+second = colors; // change it
+second.convertToRange(100, 140); // super low contrast
+
+~~~~
+
+![Image convert to range](convertToRangeColor.png "Converting the range of an image")
 
 
 
@@ -1929,9 +1943,7 @@ _description: _
 
 
 
-
-
-
+Resizes the image to the w.h passed in.
 
 
 
@@ -1962,6 +1974,18 @@ _description: _
 
 
 
+Scales the image passed in to be the size of the current image, 
+
+~~~~{.cpp}
+
+ofxCvImage first;
+first.allocate(640, 480);
+ofxCvImage second;
+second.allocate(320, 240);
+
+second.scaleIntoMe(first); // first is now 320,240
+
+~~~~
 
 
 
@@ -1998,9 +2022,7 @@ _description: _
 
 
 
-
-
-
+Flips the image horizontally and/or vertically.
 
 
 
@@ -2034,8 +2056,7 @@ _description: _
 
 
 
-
-
+Moves the image by the x,y amount passed in. This is different than the OpenGL rotate as it actually sets the pixel data, rather than just the posotion of the drawing.
 
 
 
@@ -2069,7 +2090,7 @@ _description: _
 
 
 
-
+Rotates the image. This is different than the OpenGL rotate as it actually sets the pixel data, rather than just the posotion of the drawing.
 
 
 
@@ -2102,7 +2123,7 @@ _description: _
 
 
 
-
+Scales the image to the scaleX, scaleY passed in. This is different than the OpenGL rotate as it actually sets the pixel data, rather than just the posotion of the drawing.
 
 
 
@@ -2139,7 +2160,7 @@ _description: _
 
 
 
-
+Transforms the image with the angle, scaling, and transformation passed in. This is different than the OpenGL rotate as it actually sets the pixel data, rather than just the posotion of the drawing.
 
 
 
@@ -2173,7 +2194,7 @@ _description: _
 
 
 
-
+The function cvUnDistortOnce corrects camera lens distortion for the image. It requires that you have an estimate of the camera distortion from a call to cvCalibrateCamera() or other calibration method.
 
 
 
@@ -2207,7 +2228,7 @@ _description: _
 
 
 
-
+This uses a generic geometrical transformation to remap one image to another. This is particularly useful when doing camera calibration.
 
 
 
@@ -2243,7 +2264,9 @@ _description: _
 
 
 
+This warps the image perspective to the four points passed in:
 
+![Warping] (warpPerspective.png "Four corners for warping")
 
 
 
@@ -2277,6 +2300,28 @@ _description: _
 
 
 
+
+This warps the image perspective into the ofxCvImage using two sets four points passed in:
+
+~~~~{.cpp}
+ofPoint[4] src;
+src[0] = ofPoint(0, 0);
+src[1] = ofPoint(320, 0);
+src[2] = ofPoint(320, 240);
+src[3] = ofPoint(0, 240);
+
+ofPoint[4] dst;
+dst[0] = ofPoint(10, 0);
+dst[1] = ofPoint(310, 0);
+dst[2] = ofPoint(310, 230);
+dst[3] = ofPoint(10, 230);
+
+image.warpIntoMe(parent, src, dst);
+
+~~~~
+
+
+![Warping] (warpPerspective.png "Four corners for warping")
 
 
 
@@ -2313,7 +2358,7 @@ _description: _
 
 
 
-
+Returns the number of non-zero pixels in an image.
 
 
 
@@ -2348,7 +2393,7 @@ _description: _
 
 
 
-
+Returns whether the Region of Interests match position and dimension or not.
 
 
 
