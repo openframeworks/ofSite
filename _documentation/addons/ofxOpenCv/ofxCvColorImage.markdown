@@ -6,8 +6,7 @@
 
 
 
-The ofxCvColorImage represents the data of each pixel as float values, on a scale of 0.0 - 1.0. They are a more precise but heavier (i.e. requiring more memory) way representing the data in an image. Keep in mind though that most of the image operations in OpenCV expect a grayscale image, which you can construct using the ofxCvGrayscaleImage. If you're loading image data from another image you might want to check what image scale is being used with the image to ensure that you don't get your scales wrong.
-
+The ofxCvColorImage represents the data of each pixel as unsigned char values, like the ofxCvGrayscaleImage, but has 3 channels, RGB, to represent color images.
 
 
 
@@ -419,6 +418,7 @@ _description: _
 
 
 
+Sets the ofxCvColorImage from the pixels pointer. Be sure that the pixels are the same size and dimensions as the ofxCvColorImage.
 
 
 
@@ -452,6 +452,10 @@ _description: _
 
 
 
+Copies ofxCvGrayscaleImage to another ofxCvShortImage using the = symbol.
+
+~~~~{.cpp}
+imageOne = imageTwo; // make sure that the dimensions and ROI match
 
 
 
@@ -488,7 +492,11 @@ _description: _
 
 
 
+Copies the data from an ofxCvColorImage into the instance using the = symbol.
 
+~~~~{.cpp}
+colorImage1 = colorImage2; // make sure that the dimensions and ROI match
+~~~~
 
 
 
@@ -521,6 +529,12 @@ _description: _
 
 
 
+
+Copies the data from an ofxCvFloatImage into a ofxCvShortImage using the = symbol.
+
+~~~~{.cpp}
+colorImage = floatColorImage; // make sure that the dimensions and ROI match
+~~~~
 
 
 
@@ -556,6 +570,11 @@ _description: _
 
 
 
+Copies the data from a ofxCvShortImage into the ofxCvColorImage using the = symbol.
+
+~~~~{.cpp}
+colorImage = shortColorImage; // make sure that the dimensions and ROI match
+~~~~
 
 
 
@@ -590,7 +609,7 @@ _description: _
 
 
 
-
+Copies the data from an IplImage into the ofxCvColorImage using the = symbol.
 
 
 
@@ -626,7 +645,7 @@ _description: _
 
 
 
-
+Copies the different channels of the ofxCvColorImage into 3 different grayscale images using the R G and B channels of the ofxCvColorImage.
 
 
 
@@ -661,7 +680,7 @@ _description: _
 
 
 
-
+Copies the pixels of the ofxCvColorImage into an ofxCvGrayscale image. You can optionally specify whether you want to use the R G or B channel of the ofxCvColorImage to set the values of the ofxCvGrayscale.
 
 
 
@@ -695,7 +714,7 @@ _description: _
 
 
 
-
+This increases the contrast of the image remapping the brightest points in the image to white and the darkest points in the image to black.
 
 
 
@@ -730,7 +749,19 @@ _description: _
 
 
 
+Maps the pixels of an image to the min and max range passed in.
 
+~~~~{.cpp}
+
+colors.setFromPixels(grabber.getPixelsRef());
+
+first = colors; // will leave unaltered
+second = colors; // change it
+second.convertToRange(100, 140); // super low contrast
+
+~~~~
+
+![Image convert to range](convertToRange.png "Converting the range of an image")
 
 
 
@@ -766,6 +797,8 @@ _description: _
 
 
 
+
+Resizes the image to the w, h passed in.
 
 
 
@@ -845,10 +878,10 @@ _advanced: False_
 _description: _
 
 
+Converts the image from values in the Red Green and Blue color space to values in the Hue Saturation and Value color space (sometimes called Hue Saturation Brightness)
 
 
-
-
+![HSV](../../types/hsb-cone.jpg "HSB")
 
 
 
@@ -883,7 +916,7 @@ _description: _
 
 
 
-
+Converts the image from values in the Hue Saturation and Value color space (sometimes called Hue Saturation Brightness) to values in the Red Green and Blue color space.
 
 
 

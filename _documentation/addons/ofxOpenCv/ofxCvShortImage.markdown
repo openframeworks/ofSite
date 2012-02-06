@@ -334,7 +334,7 @@ _description: _
 
 
 
-Copies one ofxCvShortImage to another ofxCvShortImage using the = symbol.
+Copies ofxCvGrayscaleImage to the ofxCvShortImage using the = symbol.
 
 ~~~~{.cpp}
 imageOne = imageTwo; // make sure that the dimensions and ROI match
