@@ -193,7 +193,7 @@ _description: _
 
 
 
-Set all the pixels in a ofxCvGrayscaleImage from an ofPixels instance using the w and h parameters.
+Set all the pixels in a ofxCvGrayscaleImage from a pointer to an array of unsigned char values, using the w and h parameters to determine the dimensions of the image. The array is assumed to contain grayscale values.
 
 
 

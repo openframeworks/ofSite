@@ -7,7 +7,7 @@
 
 
 
-
+This is the base class for all the ofxOpenCV image types: ofxCvShortImage, ofxCvColorImage, ofxCvFloatImage, ofxCvGrayscaleImage. It's made to provide interoperability between the core OF imaging types, ofImage and ofTexture, and OpenCv.
 
 
 
@@ -42,7 +42,7 @@ _description: _
 
 
 
-
+Constructor.
 
 
 
@@ -78,7 +78,7 @@ _description: _
 
 
 
-
+Destructor.
 
 
 
@@ -645,10 +645,7 @@ _description: _
 
 
 
-
-Set all the pixels in a ofxCvImage from an ofPixels instance using the w and h parameters.
-
-
+Set all the pixels in a ofxCvImage from a pointer to an array of unsigned char values, using the w and h parameters to determine the dimensions of the image.
 
 
 
@@ -836,7 +833,7 @@ _description: _
 
 
 
-Copy a ofxCvColorImage into the current ofxCvImage.
+Copy the image data of an ofxCvColorImage into the ofxCvImage instance.
 
 
 
@@ -868,7 +865,7 @@ _description: _
 
 
 
-Copy a ofxCvFloatImage into the current ofxCvImage.
+Copy the image data ofxCvFloatImage into the ofxCvImage instance.
 
 
 
@@ -902,7 +899,7 @@ _description: _
 
 
 
-Copy a ofxCvShortImage into the current ofxCvImage.
+Copy the image data of a ofxCvShortImage into the ofxCvImage instance.
 
 
 
@@ -939,7 +936,7 @@ _description: _
 
 
 
-Copy a IplImage into the current ofxCvImage.
+Copy the data from an IplImage into the ofxCvImage instance.
 
 
 
@@ -974,7 +971,12 @@ _advanced: False_
 _description: _
 
 
-Copy a ofxCvImage into the current ofxCvImage.
+Subtracts the pixel data of the right hand side image from the current image:
+
+
+~~~~{.cpp}
+first -= second; // both are ofxCvImage instances
+~~~~
 
 
 
@@ -1055,7 +1057,13 @@ _description: _
 
 
 
+Multiplies the pixel data of the right hand side image from the current image:
 
+
+
+~~~~{.cpp}
+first *= second; // both are ofxCvImage instances
+~~~~
 
 
 
@@ -1089,10 +1097,22 @@ _description: _
 
 
 
+Binary & (Logical AND http://en.wikipedia.org/wiki/Bitwise_operation) the pixel data of the right hand side image from the current image:
 
 
 
+~~~~{.cpp}
+cvPuppy.allocate( 320, 240 );    
+cvPuppy = puppyImg.getPixels(); // copy pixels from a loaded image
+    
+andPuppy.allocate( 320, 240 );
+    
+andPuppy.set(255, 0, 0); // make the AND image red
+andPuppy &= cvPuppy; // will & all the bits 
+~~~~
 
+
+![puppy AND](ANDoperation.png "Using the &= operation")
 
 
 
@@ -1124,7 +1144,7 @@ _description: _
 
 
 
-
+Draw the outline of an ofxCvblob into the ofxCvImage.
 
 
 

@@ -6,7 +6,7 @@
 
 
 
-
+The ofxCvColorImage represents the data of each pixel as float values, on a scale of 0.0 - 1.0. They are a more precise but heavier (i.e. requiring more memory) way representing the data in an image. Keep in mind though that most of the image operations in OpenCV expect a grayscale image, which you can construct using the ofxCvGrayscaleImage. If you're loading image data from another image you might want to check what image scale is being used with the image to ensure that you don't get your scales wrong.
 
 
 
@@ -40,7 +40,7 @@ _description: _
 
 
 
-
+Constructor.
 
 
 
@@ -76,7 +76,13 @@ _description: _
 
 
 
+Copy constructor, which allows you to this:
 
+~~~~{.cpp}
+ofxCvShortImage old;
+// allocate old
+ofxCvShortImage new(old);
+~~~~
 
 
 
@@ -111,7 +117,7 @@ _description: _
 
 
 
-
+Clears the pixel data of the image. The image must be allocated again with a call to allocate() before it can be used.
 
 
 
@@ -147,7 +153,7 @@ _description: _
 
 
 
-
+Set all the pixels in the image to the float value passed in. This is useful for blanking or filling an image quickly. The values are 0.0 to 1.0.
 
 
 
@@ -181,7 +187,7 @@ _description: _
 
 
 
-
+Set all the pixels in the image to the float value passed in as a color using 0 to 255 scale for each channel. This is useful for blanking or filling an image quickly.
 
 
 
@@ -217,7 +223,13 @@ _description: _
 
 
 
+Subtracts the pixel data of the right hand side image from the current image:
 
+
+
+~~~~{.cpp}
+first -= second; // both are ofxCvFloatImage instances
+~~~~
 
 
 
@@ -252,6 +264,13 @@ _description: _
 
 
 
+Adds the pixel data of the right hand side image from the current image:
+
+
+
+~~~~{.cpp}
+first += second; // both are ofxCvFloatImage instances
+~~~~
 
 
 
@@ -287,6 +306,8 @@ _description: _
 
 
 
+
+Set all the pixels in a ofxCvShortImage from a pointer to an array of unsigned char values, using the w and h parameters to determine the dimensions of the image.
 
 
 
@@ -324,6 +345,10 @@ _description: _
 
 
 
+Set the Region Of Interest using a pointer to an unsigned char array and a w,h to define the area of the ROI
+
+
+
 
 
 
@@ -356,7 +381,7 @@ _description: _
 
 
 
-
+This method allows you use multiple ofxCvGrayscaleImage images to create a full color image. Each ofxCvGrayscaleImage represents the data of one channel, r, g, b.
 
 
 
