@@ -3,6 +3,7 @@
 
 ##Description
 
+ofxCvFloatImage is an image class that represents the values of each color of each pixel as float values, on a scale of 0.0 - 1.0. They are a more precise but heavier (i.e. requiring more memory) way representing the data in an image. Keep in mind though that most of the image operations in OpenCV expect a grayscale image, which you can construct using the ofxCvGrayscaleImage. If you're loading image data from another image you might want to check what image scale is being used with the image to ensure that you don't get your scales wrong.
 
 
 
@@ -42,7 +43,7 @@ _description: _
 
 
 
-
+Constructor.
 
 
 
@@ -77,7 +78,7 @@ _description: _
 
 
 
-
+Copy constructor.
 
 
 
@@ -109,7 +110,7 @@ _advanced: False_
 _description: _
 
 
-
+Remove all pixel data from the ofxCvFloatImage instance.
 
 
 
@@ -146,7 +147,7 @@ _description: _
 
 
 
-
+Flag whether the image pixel data has changed so that the ofTexture can be updated.
 
 
 
@@ -180,7 +181,7 @@ _description: _
 
 
 
-
+Allows you to set the native scale of your images, for instance, if your images contain values ranging from 0.0 to 255.0 (unlikely, but possible) then you would want to set them to ensure that all image operations complete correctly.
 
 
 
@@ -217,7 +218,7 @@ _description: _
 
 
 
-
+If you've set the native scale max and min using setNativeScale() this returns the minimum value.
 
 
 
@@ -251,7 +252,7 @@ _description: _
 
 
 
-
+If you've set the native scale max and min using setNativeScale() this returns the maximum value.
 
 
 
@@ -285,6 +286,7 @@ _description: _
 
 
 
+Set all the pixels in the image to the float value passed in. This is useful for blanking or filling an image quickly. the values are 0.0 to 1.0.
 
 
 
@@ -321,7 +323,13 @@ _description: _
 
 
 
+Multiplies the pixel data of the right hand side image from the current image:
 
+
+
+~~~~{.cpp}
+first *= second; // both are ofxCvFloatImage instances
+~~~~
 
 
 
@@ -355,7 +363,13 @@ _description: _
 
 
 
+Divides each pixel of the pixel data of the right hand side image from the current image:
 
+
+
+~~~~{.cpp}
+first /= second; // both are ofxCvFloatImage instances
+~~~~
 
 
 
@@ -390,7 +404,7 @@ _description: _
 
 
 
-
+Set all the pixels in a ofxCvGrayscaleImage from a pointer to an array of unsigned char values, using the w and h parameters to determine the dimensions of the image. The array is assumed to contain color values.
 
 
 
@@ -429,6 +443,7 @@ _description: _
 
 
 
+This allows you to set the ROI on the image from an array of pixels. Region of Interest is a rectangular area in an image, to segment object for further processing. Once the ROI is defined, OpenCV functions will operate on the ROI, reducing the number of pixels that the operation will examine.
 
 
 
@@ -463,6 +478,7 @@ _description: _
 
 
 
+This allows you to set the ROI on the image from an array of pixels. Region of Interest is a rectangular area in an image, to segment object for further processing. Once the ROI is defined, OpenCV functions will operate on the ROI, reducing the number of pixels that the operation will examine.
 
 
 
@@ -497,6 +513,7 @@ _description: _
 
 
 
+This allows you to set the ROI on the image from an ofPixels instance. Region of Interest is a rectangular area in an image, to segment object for further processing. Once the ROI is defined, OpenCV functions will operate on the ROI, reducing the number of pixels that the operation will examine.
 
 
 
@@ -534,6 +551,8 @@ _description: _
 
 
 
+Copy the data from an array of unsigned char numbers into the ofxCvFloatImage instance. The dimensions of the array are assumed to match the dimensions of the image. The values will be converted to a 0.0 - 1.0 scale.
+
 
 
 
@@ -566,6 +585,8 @@ _description: _
 
 
 
+
+Copy the data from an array of floating point numbers into the ofxCvFloatImage instance. The dimensions of the array are assumed to match the dimensions of the image.
 
 
 
@@ -601,7 +622,7 @@ _description: _
 
 
 
-
+Copy the data from an ofxCvGrayscaleImage image into the ofxCvFloatImage instance.
 
 
 
@@ -635,7 +656,7 @@ _description: _
 
 
 
-
+Copy the data from an ofxCvColor image into the ofxCvFloatImage instance.
 
 
 
@@ -669,7 +690,7 @@ _advanced: False_
 _description: _
 
 
-
+Copy the data from an ofxCvFloatImage image into the ofxCvFloatImage instance.
 
 
 
@@ -777,6 +798,14 @@ _description: _
 
 
 
+Multiplies the pixel data of the right hand side image from the current image:
+
+
+
+~~~~{.cpp}
+first *= second; // both are ofxCvFloatImage instances
+~~~~
+
 
 
 
@@ -812,7 +841,22 @@ _description: _
 
 
 
+Binary & (Logical AND http://en.wikipedia.org/wiki/Bitwise_operation) the pixel data of the right hand side image from the current image:
 
+
+
+~~~~{.cpp}
+cvPuppy.allocate( 320, 240 );    
+cvPuppy = puppyImg.getPixels(); // copy pixels from a loaded image
+    
+andPuppy.allocate( 320, 240 );
+    
+andPuppy.set(255, 0, 0); // make the AND image red
+andPuppy &= cvPuppy; // will & all the bits 
+~~~~
+
+
+![puppy AND](ANDoperation.png "Using the &= operation")
 
 
 
@@ -848,6 +892,9 @@ _description: _
 
 
 
+Copies the pixel data of an ofxCvGrayscaleImage into the pixel data of the ofxCvShortImage.
+
+
 
 
 
@@ -880,7 +927,7 @@ _description: _
 
 
 
-
+Returns a pointer to an array of floating point numbers that represent the pixels of the image.
 
 
 
@@ -917,7 +964,7 @@ _description: _
 
 
 
-
+Returns a ofFloatPixels that contains the pixels of the image.
 
 
 
@@ -950,9 +997,7 @@ _description: _
 
 
 
-
-
-
+Returns a pointer to an array of floating point numbers that represent the pixels of the ROI of the image.
 
 
 
@@ -986,6 +1031,7 @@ _description: _
 
 
 
+Returns a ofFloatPixels that contains the pixels within the ROI the image.
 
 
 
@@ -1022,7 +1068,7 @@ _description: _
 
 
 
-
+This increases the contrast of the image remapping the brightest points in the image to 255 and the darkest points in the image to 0.
 
 
 
@@ -1054,6 +1100,17 @@ _advanced: False_
 _description: _
 
 
+
+
+Maps the pixels of an image to the min and max range passed in.
+
+~~~~{.cpp}
+
+second.convertToRange(100, 140); // super low contrast
+
+~~~~
+
+![Image convert to range](convertToRangeColor.png "Converting the range of an image")
 
 
 
@@ -1091,7 +1148,7 @@ _description: _
 
 
 
-
+Resizes the image to the w.h passed in.
 
 
 
@@ -1126,6 +1183,19 @@ _description: _
 
 
 
+
+Scales the image passed in to be the size of the current image, 
+
+~~~~{.cpp}
+
+ofxCvImage first;
+first.allocate(640, 480);
+ofxCvImage second;
+second.allocate(320, 240);
+
+second.scaleIntoMe(first); // first is now 320,240
+
+~~~~
 
 
 

@@ -7,7 +7,7 @@
 
 
 
-
+The ofxCvShortImage represents the color data of each pixel as unsigned char variables or values between 0 and 255. They are a slightly smaller (i.e. less data heavy) way of representing the data in an image but they also have less precision than ofxCvFloatImage. Usually when you're capturing from a camera or video into OpenCV, you're using ofxCvShortImage. Keep in mind though that most of the image operations in OpenCV expect a grayscale image, which you can construct using the ofxCvGrayscaleImage.
 
 
 
@@ -42,7 +42,7 @@ _description: _
 
 
 
-
+Constructor.
 
 
 
@@ -77,9 +77,13 @@ _description: _
 
 
 
+Copy constructor, which allows you to this:
 
-
-
+~~~~{.cpp}
+ofxCvShortImage old;
+// allocate old
+ofxCvShortImage new(old);
+~~~~
 
 
 
@@ -113,6 +117,7 @@ _description: _
 
 
 
+Clears the pixel data of the image. The image must be allocated again with a call to allocate() before it can be used.
 
 
 
@@ -148,6 +153,7 @@ _description: _
 
 
 
+Marks the image as changed so that the ofTexture can be updated, if the image contains one.
 
 
 
@@ -181,6 +187,7 @@ _description: _
 
 
 
+Set all the pixels in the image to the float value passed in. This is useful for blanking or filling an image quickly. Possible values are 0 to 255.
 
 
 
@@ -214,7 +221,7 @@ _advanced: False_
 _description: _
 
 
-
+Set all the pixels in a ofxCvShortImage from a pointer to an array of unsigned char values, using the w and h parameters to determine the dimensions of the image. The array is assumed to contain color values.
 
 
 
@@ -250,6 +257,9 @@ _description: _
 
 
 
+
+
+This allows you to set the ROI on the image from an ofPixels instance. Region of Interest is a rectangular area in an image, to segment object for further processing. Once the ROI is defined, OpenCV functions will operate on the ROI, reducing the number of pixels that the operation will examine.
 
 
 
@@ -288,6 +298,8 @@ _description: _
 
 
 
+Sets the ofxCvShortImage from the pixels pointer. Be sure that the pixels are the same size and dimensions as the ofxCvShortImage.
+
 
 
 
@@ -322,6 +334,12 @@ _description: _
 
 
 
+Copies ofxCvGrayscaleImage to the ofxCvShortImage using the = symbol.
+
+~~~~{.cpp}
+imageOne = imageTwo; // make sure that the dimensions and ROI match
+~~~~
+
 
 
 
@@ -354,6 +372,11 @@ _advanced: False_
 _description: _
 
 
+Copies a ofxCvColorImage into a ofxCvShortImage using the = symbol.
+
+~~~~{.cpp}
+grayImage = colorImage; // make sure that the dimensions and ROI match
+~~~~
 
 
 
@@ -391,6 +414,12 @@ _description: _
 
 
 
+opies a ofxCvFloatImage into a ofxCvShortImage using the = symbol.
+
+~~~~{.cpp}
+grayImage = floatColorImage; // make sure that the dimensions and ROI match
+~~~~
+
 
 
 
@@ -425,6 +454,12 @@ _description: _
 
 
 
+
+Copies a ofxCvShortImage into a ofxCvShortImage using the = symbol.
+
+~~~~{.cpp}
+grayImage = shortColorImage; // make sure that the dimensions and ROI match
+~~~~
 
 
 
@@ -463,6 +498,11 @@ _description: _
 
 
 
+Copies a IplImage into a ofxCvShortImage using the = symbol.
+
+~~~~{.cpp}
+grayImage = iplImage; // make sure that the dimensions and ROI match
+~~~~
 
 
 
@@ -495,7 +535,7 @@ _description: _
 
 
 
-
+Copies the pixel data of an ofxCvGrayscaleImage into the pixel data of the ofxCvShortImage.
 
 
 
@@ -533,6 +573,7 @@ _description: _
 
 
 
+This increases the contrast of the image remapping the brightest points in the image to white and the darkest points in the image to black.
 
 
 
@@ -565,6 +606,22 @@ _description: _
 
 
 
+
+
+
+Maps the pixels of an image to the min and max range passed in.
+
+~~~~{.cpp}
+
+colors.setFromPixels(grabber.getPixelsRef());
+
+first = colors; // will leave unaltered
+second = colors; // change it
+second.convertToRange(100, 140); // super low contrast
+
+~~~~
+
+![Image convert to range](convertToRange.png "Converting the range of an image")
 
 
 
@@ -602,6 +659,7 @@ _description: _
 
 
 
+Resizes the image to the w, h passed in.
 
 
 
@@ -637,6 +695,19 @@ _description: _
 
 
 
+Scales the image passed in to be the size of the current image, 
+
+~~~~{.cpp}
+
+ofxCvImage first;
+first.allocate(640, 480);
+ofxCvImage second;
+second.allocate(320, 240);
+
+second.scaleIntoMe(first); // first is now 320,240
+
+~~~~
+
 
 
 
@@ -670,7 +741,7 @@ _description: _
 
 
 
-
+Returns the pixel data of the instance as a ofShortPixels instance.
 
 
 
@@ -704,7 +775,7 @@ _advanced: False_
 _description: _
 
 
-
+Returns the pixel data of the instance as a ofShortPixels reference. This allows you to directly manipulate the pixels of the ofxCvShortImage.
 
 
 
