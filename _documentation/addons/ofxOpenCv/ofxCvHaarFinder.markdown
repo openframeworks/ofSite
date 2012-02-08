@@ -6,7 +6,7 @@
 
 
 
-ofxCvHaarFinder allows you to check an image for a match to a Haar classifier. The Haar Classifier is a data file generated from a training process where an application is “taught” how to recognize something in different contexts. This can be things like recognizing whether a certain sound is a word being spoken by a user, whether a gesture is a certain shape, or, in the image shown below, whether a pattern of pixels constitute a face.
+ofxCvHaarFinder allows you to check an image for a match to a Haar classifier. The Haar Classifier is a data file generated from a training process where an application is "taught" how to recognize something in different contexts. This can be things like recognizing whether a certain sound is a word being spoken by a user, whether a gesture is a certain shape, or, in the image shown below, whether a pattern of pixels constitute a face.
 
 ![face detection](face_detection.jpg "Face detection on a photograph")
 
