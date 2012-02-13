@@ -1672,6 +1672,18 @@ Return a 3D vector (ofVec3f) rotated at 90 degrees
 ![PERPENDICULAR](../math/perpendicular.png)
 Image courtesy of Wikipedia
 
+To use this function, try to imagine that you have to create a plane in space. Your desired vector is then perpendicular to this plane.
+
+Example
+~~~~{.cpp}
+ofSetLogLevel(OF_LOG_NOTICE);
+ofVec3f v1(1,0,0);
+ofVec3f v2(0,1,0);
+ofVec3f p = v1.getPerpendicular(v2);
+ofLog(OF_LOG_NOTICE, "%1.1f, %1.1f, %1.1f\n", p.x, p.y, p.z);
+//returns "OF: OF_LOG_NOTICE: 0.0, 0.0, 1.0"
+~~~~
+
 
 <!----------------------------------------------------------------------------->
 
@@ -1697,6 +1709,17 @@ _description: _
 
 Rotates the vector at 90 degrees 
 
+See getPerpendicular() for more info.
+
+Example
+~~~~{.cpp}
+ofSetLogLevel(OF_LOG_NOTICE);
+ofVec3f v1(1,0,0);
+ofVec3f v2(0,1,0);
+v1.perpendicular(v2);
+ofLog(OF_LOG_NOTICE, "%1.1f, %1.1f, %1.1f\n", v1.x, v1.y, v1.z);
+//returns "OF: OF_LOG_NOTICE: 0.0, 0.0, 1.0"
+~~~~
 
 
 <!----------------------------------------------------------------------------->
