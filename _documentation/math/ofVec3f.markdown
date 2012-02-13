@@ -4,15 +4,15 @@
 ##Description
 
 A class to describe a three dimensional vector. This datatype stores three variables (x, y and z). It's commonly used as a position, velocity, and/or acceleration. Technically, positions is described as a point (and commonly defined with a ofPoint, that in fact it's a ofVec3f).
-Vectors in general are entities with magnitude ( also called length) and direction. A vector whose magnitude is 1 is a unit or normalized vector.  Witch means that it's important data that stores it's the direction of a point. This last practice it's very well-known on 3D design for defining the direction of a plane by passing-through the normal value of each vertex that conform a triangle or quad mesh.
+Vectors in general are entities with magnitude ( also called length) and direction. A vector whose magnitude is 1 is a unit or normalized vector.  Witch means that it's important data that stores it's the direction of a point. This last practice it's very well-known on 3D design for defining the direction of a plane by passing-through the normal value of each vertex that conform a triangle or quad mesh. 
 
 Any way, what's very handy of this class it's that you could perform arithmetic operations on vectors really easy, just as you deal with int or floats. This is a substantial difference from the Processing implementation call PVectors.
 
 ~~~~{.cpp}
-ofVec3f v1 = ofVec3f(40, 20, 70); // one way of assignment
+ofVec3f v1 = ofVec3f(40, 20, 70); // one way of assignment 
 ofVec3f v2;
 v2.set(25,50,43); // other way of assignment
-v1 = v1 + v2; // vector operation also equivalent of: v1 += v2
+v1 = v1 + v2; // vector operation also equivalent of: v1 += v2 
 ~~~~
 
 
@@ -284,7 +284,7 @@ _advanced: False_
 
 _description: _
 
-Not Equal comparison of two 3D vectors
+Not Equal comparison of two 3D vectors 
 
 
 
@@ -410,7 +410,7 @@ _description: _
 Let's you make vectorial addition super easy
 
 ~~~~{.cpp}
-ofVec3f v1 = ofVec3f(40, 20, 70);
+ofVec3f v1 = ofVec3f(40, 20, 70); 
 ofVec3f v2 = ofVec3f(25, 50, 10);
 v1 = v1 + v2;
 ~~~~
@@ -442,7 +442,7 @@ _description: _
 Addition assignment of a vector (v2) to it's own data (v1)
 
 ~~~~{.cpp}
-ofVec3f v1 = ofVec3f(40, 20, 70);
+ofVec3f v1 = ofVec3f(40, 20, 70); 
 ofVec3f v2 = ofVec3f(25, 50, 10);
 v1 += v2;
 ~~~~
@@ -474,7 +474,7 @@ _description: _
 Let's you make vectorial subtraction super easy
 
 ~~~~{.cpp}
-ofVec3f v1 = ofVec3f(40, 20, 70);
+ofVec3f v1 = ofVec3f(40, 20, 70); 
 ofVec3f v2 = ofVec3f(25, 50, 10);
 v1 = v1 - v2;
 ~~~~
@@ -506,7 +506,7 @@ _description: _
 Subtraction assignment of a vector (v2) to it's own data (v1)
 
 ~~~~{.cpp}
-ofVec3f v1 = ofVec3f(40, 20, 70);
+ofVec3f v1 = ofVec3f(40, 20, 70); 
 ofVec3f v2 = ofVec3f(25, 50, 10);
 v1 -= v2;
 ~~~~
@@ -538,7 +538,7 @@ _description: _
 Let's you make vectorial multiplication super easy
 
 ~~~~{.cpp}
-ofVec3f v1 = ofVec3f(40, 20, 70);
+ofVec3f v1 = ofVec3f(40, 20, 70); 
 ofVec3f v2 = ofVec3f(25, 50, 10);
 v1 = v1 * v2;
 ~~~~
@@ -570,7 +570,7 @@ _description: _
 Multiplication assignment of a vector (v2) to it's own data (v1)
 
 ~~~~{.cpp}
-ofVec3f v1 = ofVec3f(40, 20, 70);
+ofVec3f v1 = ofVec3f(40, 20, 70); 
 ofVec3f v2 = ofVec3f(25, 50, 10);
 v1 *= v2;
 ~~~~
@@ -602,7 +602,7 @@ _description: _
 Let's you make vectorial division super easy
 
 ~~~~{.cpp}
-ofVec3f v1 = ofVec3f(40, 20, 70);
+ofVec3f v1 = ofVec3f(40, 20, 70); 
 ofVec3f v2 = ofVec3f(25, 50, 10);
 v1 = v1 / v2;
 ~~~~
@@ -634,7 +634,7 @@ _description: _
 Division assignment of a vector (v2) to it's own data (v1)
 
 ~~~~{.cpp}
-ofVec3f v1 = ofVec3f(40, 20, 70);
+ofVec3f v1 = ofVec3f(40, 20, 70); 
 ofVec3f v2 = ofVec3f(25, 50, 10);
 v1 /= v2;
 ~~~~
@@ -1269,7 +1269,7 @@ _advanced: False_
 
 _description: _
 
-Returns a 3D vector that fits on the range of another to 3D vectors that correspond to the x range (max and min), the y range (max and min) and the z range (max and min)
+Returns a 3D vector that fits on the range of another to 3D vectors that correspond to the x range (max and min), the y range (max and min) and the z range (max and min) 
 
 
 
@@ -1295,7 +1295,7 @@ _advanced: False_
 
 _description: _
 
-Fits the vector inside the range of another to 3D vectors that correspond to the x range (max and min), the y range (max and min) and the z range (max and min)
+Fits the vector inside the range of another to 3D vectors that correspond to the x range (max and min), the y range (max and min) and the z range (max and min) 
 
 
 
@@ -1667,21 +1667,10 @@ _advanced: False_
 
 _description: _
 
-Return a 3D vector (ofVec3f) rotated at 90 degrees
+Return a 3D vector (ofVec3f) rotated at 90 degrees 
 
 ![PERPENDICULAR](../math/perpendicular.png)
 Image courtesy of Wikipedia
-
-To use this function, try to imagine that you have to create a plane in space. Your desired vector is then perpendicular to this plane.
-
-Example
-~~~~{.cpp}
-ofVec3f v1(1,0,0);
-ofVec3f v2(0,1,0);
-ofVec3f p = v1.getPerpendicular(v2);
-printf("%1.1f, %1.1f, %1.1f\n", p.x, p.y, p.z);
-//returns "0.0, 0.0, 1.0"
-~~~~
 
 
 <!----------------------------------------------------------------------------->
@@ -1706,18 +1695,8 @@ _advanced: False_
 
 _description: _
 
-Rotates the vector at 90 degrees
+Rotates the vector at 90 degrees 
 
-See getPerpendicular() for more info.
-
-Example
-~~~~{.cpp}
-ofVec3f v1(1,0,0);
-ofVec3f v2(0,1,0);
-v1.perpendicular(v2);
-printf("%1.1f, %1.1f, %1.1f\n", v1.x, v1.y, v1.z);
-//returns "0.0, 0.0, 1.0"
-~~~~
 
 
 <!----------------------------------------------------------------------------->
