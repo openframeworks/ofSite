@@ -77,7 +77,7 @@ this will tell OF where to find the SDK, NDK and ant
 
 - set paths of SDK & NDK to the uncompressed folders
 
-- set ANT\_HOME:
+- set ANT_HOME:
 Linux: /usr  
 OS X: set it to the folder where you uncompressed ant before
 
@@ -108,7 +108,7 @@ select it and press next till you get to the terms of the license screen, check 
 
 **i) Set Eclipse java compiler compliance to 1.5:**
 
-In the last version of Eclipse the java compatibility is set to version 6 but Android needs version 5\. to change it, in
+In the last version of Eclipse the java compatibility is set to version 6 but Android needs version 5. To change it, in
 Window \> Preferences \> Java \> Compiler 
 
 The compiler compliance settings should be set to 1.5\.
@@ -178,9 +178,9 @@ Select program and press New, name the new configuration: Android Install Main:
 <%text filter="h">
     Location: /usr/bin/make 
     
-    Working Directory: ${project\_loc} 
+    Working Directory: ${project_loc} 
     
-    Arguments: AndroidInstall PROJECT\_PATH=${project\_loc}
+    Arguments: AndroidInstall PROJECT_PATH=${project_loc}
     
     Refresh:
     Mark Refresh resources upon completion  
@@ -249,7 +249,7 @@ You can copy any of the examples and start a new application from there.
 You'll need to change the name of the application in different places:
 
 - when you copy the application from an example set the name you want to use, let's say your application is called myApp  
-- in res/values/strings.xml change app\_name value to the name of your application  
+- in res/values/strings.xml change app_name value to the name of your application  
 - in AndroidManifest.xml change the name of the package from cc.openFrameworks.exampleName to cc.openframeworks.myApp  
 - in srcJava, select the package cc.openFrameworks.exampleName, press F2 to rename it and call it cc.openframeworks.myApp
 
