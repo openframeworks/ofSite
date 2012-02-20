@@ -3,13 +3,13 @@
 android eclipse
 ===============
 
-The Android distribution of openFrameworks is based on the Eclipse IDE. The current version of the Android plugin for Eclipse has several problems with projects that mix C++ and Java code, so the projects are currently using a custom toolchain based on makefiles + ant tasks to compile and install applications. If you are used to Android development in Eclipse, things are a little different. Check the following instructions to know how to install the development environment and compile/install applications.
+The Android distribution of openFrameworks is based on the Eclipse IDE. The current version of the Android plugin for Eclipse has several problems with projects that mix C++ and Java code, so the projects are currently using a custom toolchain based on makefiles + Ant tasks to compile and install applications. If you are used to Android development in Eclipse, things are a little different. Check the following instructions to know how to install the development environment and compile/install applications.
 
 Right now this is only tested on Linux and OS X. To use it on Windows, check the instructions on this link: [http://www.multigesture.net/articles/how-to-setup-openframeworks-for-android-on-windows/][8]
 
-To use it you will need Eclipse, the Android SDK, the Android NDK, the Android Eclipse plugin and the openFrameworks Android package.
+To use it you will need Eclipse, the Android SDK, the Android NDK, the Android Eclipse plugin and the openFrameworks for Android package.
 
-If you have already installed OF for Android before, this instructions have changed quite a bit and it's recommended to start from scratch, even with a new install of Eclipse and it's mandatory to use the latest versions of the Android SDK (10) and NDK (r5b)
+If you have already installed openFrameworks for Android before, the instructions have changed quite a bit and it's recommended to start from scratch, even with a new install of Eclipse. You should use the latest version of the Android SDK (15). As of Feb 19, 2012 the latest Android NDK (r7b) doesn't work, but version r6 should work fine.
 
 **a) Eclipse**: download the C/C++ edition for your platform from here:
 
@@ -17,40 +17,42 @@ If you have already installed OF for Android before, this instructions have chan
 
 ![eclipse_cdt_download](eclipse_cdt_download.png)
 
-Ubuntu users: don't use the version in the repositories is very outdated.
+Ubuntu users: Don't use the version in the repositories because it is very outdated.
 
-Eclipse doesn't have any install, but you will need Java to use it, in case you don't have Java installed in your system, you can download it from:
+You will need Java to use Eclipse, you can download it from:
 
 [http://java.com][1]
 
-in the case of Linux it will be in the official repositories, for example in Ubuntu:
+For Linux, it will probably be in the official repositories. For example, in Ubuntu:
 
     sudo apt-get install openjdk-6-jdk
 
 or
 
-    sudo apt-get install sun-java6-jdk (this doesn't exist from maverick)
+    sudo apt-get install sun-java6-jdk (this doesn't exist as of Ubuntu 10.10 (Maverick Meerkat)
 
-**b) Andorid SDK**: this is the software that allows to develop in Java for Android, even if we are going to program in C/C++ we'll need it. You can download it from:
+**b) Android SDK**: this is the software that allows you to write Android apps. openFrameworks apps are written in C/C++, but you will still need this to interact with the NDK. You can download it from:
 
 [http://developer.android.com/sdk/index.html][2]
 
-uncompress it in any folder on your hard disk, later you'll need to tell the OF makefiles where to find it.
+Uncompress it in any folder on your hard disk. Later you'll need to tell the openFrameworks makefiles where to find it.
 
-**c) Android NDK**: this is the c/c++ compiler, headers and libraries for Android. Download it from:  
+**c) Android NDK**: this is the C/C++ compiler, headers and libraries for Android. Download it from:  
 [http://developer.android.com/sdk/ndk/index.html][3]
 
-There's a bug in the official ndk that makes apps crash on 2.1 and lower versions of Android so by now OF Android will only work in 2.2 and above
+There's a bug in the official NDK that makes apps crash on Android 2.1 and lower versions of Android so by now openFrameworks for Android will only work on Android 2.2 and above.
 
-Also uncompress it to any place in your hd we'll tell later OF where to find it.
+Uncompress this also to any place in your hard disk. We'll tell openFrameworks where to find it later.
 
-**d) openFrameworks for Android package**: download it from the downloads page:
+**d) openFrameworks for Android package**: Download it from the downloads page:
 
 [http://openframeworks.cc/download][4]
 
-**e) Install ant:**
+You may also check out the openFrameworks source from GitHub: [http://github.com/openframeworks/openFrameworks][9]. 
 
-This tool is used internally by Eclipse and the Android tools to set projects, the current OF distribution uses it to install and run things in the phone "manually"
+**e) Install Ant:**
+
+This build tool is used to install and run applications on the Android device from the command line:
 
 - Linux:
 
@@ -62,22 +64,22 @@ or for newer distributions:
 
 - OS X:
 
-download and uncompress 1.8 or greater from [http://ant.apache.org/bindownload.cgi][5]
+Download and uncompress Apache Ant 1.8 or greater from [http://ant.apache.org/bindownload.cgi][5]
 
-**f) Set the paths of the SDK, NDK and ant  
+**f) Set the paths for the SDK, NDK and Ant  
 **
 
-Edit:
+Edit this file:
 
-    OF/libs/openFrameworksCompiled/project/android/paths.make
+    openFrameworks/libs/openFrameworksCompiled/project/android/paths.make
 
-this will tell OF where to find the SDK, NDK and ant
+This will tell openFrameworks where to find the SDK, NDK and Ant.
 
 - set paths of SDK & NDK to the uncompressed folders
 
 - set ANT_HOME:
 Linux: /usr  
-OS X: set it to the folder where you uncompressed ant before
+OS X: set it to the folder where you uncompressed Ant before
 
 **g) Start Eclipse**: you will see a pop up telling what workspace to use, the first time it will create the needed files. just point it to
 openFrameworks/apps/androidExamples.
@@ -138,18 +140,18 @@ Once that is done you can create a new virtual device. Just select a name, the t
 
 **k) Import openFrameworks into Eclipse:** 
 
-Now Eclipse has been completely configured to work with OF for Android, the last step is to import all the projects in the workspace. Go to
+Now Eclipse has been completely configured to work with openFrameworks for Android, the last step is to import all the projects in the workspace. Go to
 File \> Import and select General \> Existing projects in the workspace...
 
 ![import first screen](import0-600x508.png)
 
 Import in this order: 
-OF/libs  
-OF/libs/openFrameworks  
-OF/addons/ofxAndroid/ofAndroidLib  
-OF/apps/androidExamples
+openFrameworks/libs  
+openFrameworks/libs/openFrameworks  
+openFrameworks/addons/ofxAndroid/ofAndroidLib  
+openFrameworks/apps/androidExamples
 
-**l) Compile OF**:
+**l) Compile openFrameworks**:
 
 In the left part of the window, select the openFrameworks project and from the toolbar or the menu build the Android target.
 
@@ -228,9 +230,9 @@ Window \> Show View \> Others \> Android \> LogCat
 
 ![showviewlogcat](showviewlogcat.png)
 
-you can see the output of the compiler in the Console tab and the output of your app in the LogCat one. Everything that is output by OF through ofLog will have an OF tag so you can use filters to see only your application's output.
+you can see the output of the compiler in the Console tab and the output of your app in the LogCat one. Everything that is output by openFrameworks through ofLog will have an openFrameworks tag so you can use filters to see only your application's output.
 
--There's a bug in the Android plugin that makes Eclipse to build every c/c++ project in your workspace before running any app, so try to keep your workspaces small. you can have as many workspaces as you want:
+-There's a bug in the Android plugin that makes Eclipse to build every C/C++ project in your workspace before running any app, so try to keep your workspaces small. you can have as many workspaces as you want:
 
 - create a folder inside apps
 
@@ -258,4 +260,4 @@ It's important to keep the package prefix as cc.openframeworks or somethings can
 [6]: http://developer.android.com/sdk/eclipse-adt.html
 [7]: http://developer.android.com/guide/developing/device.html
 [8]: http://www.multigesture.net/articles/how-to-setup-openframeworks-for-android-on-windows/
-
+[9]: http://github.com/openframeworks/openFrameworks
