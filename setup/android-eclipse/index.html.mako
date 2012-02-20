@@ -73,9 +73,9 @@ Edit:
 
     OF/libs/openFrameworksCompiled/project/android/paths.make
 
-this will tell OF where to find the sdk, ndk and ant
+this will tell OF where to find the SDK, NDK and ant
 
-- set paths of sdk & ndk to the uncompressed folders
+- set paths of SDK & NDK to the uncompressed folders
 
 - set ANT\_HOME:
 Linux: /usr  
@@ -100,7 +100,7 @@ Location: https://dl-ssl.google.com/android/eclipse/
 
 press OK and select the new repository in the "Work with:" drop down box in case it's not already selected
 
-you will see the sdk plugin in the list, called Developer Tools:
+you will see the SDK plugin in the list, called Developer Tools:
 
 ![eclipse_android_plugin2](eclipse_android_plugin2-600x522.png)
 
@@ -120,7 +120,7 @@ The compiler compliance settings should be set to 1.5\.
 
 **j) Configuring the Android plugin**: 
 
-Once we have installed the Android plugin we need to tell it where to find the sdk. In Eclipse go to
+Once we have installed the Android plugin we need to tell it where to find the SDK. In Eclipse go to
 Window \> Preferences \> Android 
 
 and set the SDK location by browsing to the folder where you uncompressed the SDK before.
@@ -136,7 +136,7 @@ Next you'll need to install the api files and optionally create an emulator to b
 
 ![android_button](android_button.png)
 
-First you need to install the api package. Just click on the "Available Packages" tab, and choose the SDK Platform for version 2.2 + the sdk platform tools, it's important to use version 2.2 since the makefiles are configured for that version, it doesn't matter what version of the OS you want to develop for. You can optionally install other versions and change the makefile to use that instead.
+First you need to install the api package. Just click on the "Available Packages" tab, and choose the SDK Platform for version 2.2 + the SDK platform tools, it's important to use version 2.2 since the makefiles are configured for that version, it doesn't matter what version of the OS you want to develop for. You can optionally install other versions and change the makefile to use that instead.
 
 Once that is done you can create a new virtual device. Just select a name, the target and a size for the virtual sd-card.
 
@@ -225,9 +225,9 @@ If you have resources that change like xml config files, it's better to generate
 
 - Naming of resources is really restrictive in Android, for example you cannot have several resources with the same name even if they have different extensions.
 
-- The AndroidDebug target does a different compilation process of the native code that allows to detect linker errors that won't be detected when compiling in AndroidRelease mode. Is recomended to compile your application in AndroidDebug mode at least once or if your application crashes before starting. To install applications on the device or emulator is recommended to use the AndroidRelease mode since it's faster and the applications will be much smaller. There's also no support for debug for native applications in Eclipse but you could theoretically use the ndk tools to debug an application compiled with AndroidDebug.
+- The AndroidDebug target does a different compilation process of the native code that allows to detect linker errors that won't be detected when compiling in AndroidRelease mode. Is recomended to compile your application in AndroidDebug mode at least once or if your application crashes before starting. To install applications on the device or emulator is recommended to use the AndroidRelease mode since it's faster and the applications will be much smaller. There's also no support for debug for native applications in Eclipse but you could theoretically use the NDK tools to debug an application compiled with AndroidDebug.
 
-- Test your application very often, even if the last ndk allows for debugging, there's no support for native debugging in Eclipse and setting it up manually with the ndk is pretty hard. when an application crashes the debugger dies too, so it's hard to debug bad memory accesses and similar bugs.
+- Test your application very often, even if the last ndk allows for debugging, there's no support for native debugging in Eclipse and setting it up manually with the NDK is pretty hard. when an application crashes the debugger dies too, so it's hard to debug bad memory accesses and similar bugs.
 
 - Use the LogCat view in Eclipse. When programming for the Android you cannot see the output of cout or printf, but if you use ofLog you can see it's output in the log cat. to open the view, go to
 Window \> Show View \> Others \> Android \> LogCat
