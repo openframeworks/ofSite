@@ -31,15 +31,15 @@ For Linux, it will probably be in the official repositories. For example, in Ubu
 
 or
 
-    sudo apt-get install sun-java6-jdk (this doesn't exist as of Ubuntu 10.10 (Maverick Meerkat)
+    sudo apt-get install sun-java6-jdk (this doesn't exist as of Ubuntu 10.10 (Maverick Meerkat))
 
-**b) Android SDK**: this is the software that allows you to write Android apps. openFrameworks apps are written in C/C++, but you will still need this to interact with the NDK. You can download it from:
+**b) Android SDK**: This is the software that allows you to write Android apps. openFrameworks apps are written in C/C++, but you will still need this to interact with the NDK. You can download it from:
 
 [http://developer.android.com/sdk/index.html][2]
 
 Uncompress it in any folder on your hard disk. Later you'll need to tell the openFrameworks makefiles where to find it.
 
-**c) Android NDK**: this is the C/C++ compiler, headers and libraries for Android. Download it from:  
+**c) Android NDK**: This is the C/C++ compiler, headers and libraries for Android. Download it from:  
 [http://developer.android.com/sdk/ndk/index.html][3]
 
 There's a bug in the official NDK that makes apps crash on Android 2.1 and lower versions of Android so by now openFrameworks for Android will only work on Android 2.2 and above.
@@ -54,7 +54,7 @@ You may also check out the openFrameworks source from GitHub: [http://github.com
 
 **e) Install Ant:**
 
-This build tool is used to install and run applications on the Android device from the command line:
+This build tool is used to build, install and run applications on the Android device from the command line:
 
 - Linux:
 
