@@ -106,9 +106,9 @@ you will see the SDK plugin in the list, called Developer Tools:
 
 select it and press next till you get to the terms of the license screen, check the "I accept the terms of the license" check button and press Finish. Eclipse will download and install the Android plugin. Once it finishes press yes in the popup to restart Eclipse.
 
-**i) Set Eclipse java compiler compliance to 1.5:**
+**i) Set Eclipse Java compiler compliance to 1.5:**
 
-In the last version of Eclipse the java compatibility is set to version 6 but Android needs version 5. To change it, in
+In the last version of Eclipse the Java compatibility is set to version 6 but Android needs version 5. To change it, in
 Window \> Preferences \> Java \> Compiler 
 
 The compiler compliance settings should be set to 1.5\.
@@ -253,7 +253,9 @@ You'll need to change the name of the application in different places:
 - in AndroidManifest.xml change the name of the package from cc.openFrameworks.exampleName to cc.openframeworks.myApp  
 - in srcJava, select the package cc.openFrameworks.exampleName, press F2 to rename it and call it cc.openframeworks.myApp
 
-It's important to keep the package prefix as cc.openframeworks or somethings can stop working, this will be fixed in future versions when Eclipse support for native code is better[0]: http://www.eclipse.org/downloads/
+It's important to keep the package prefix as cc.openframeworks or somethings can stop working, this will be fixed in future versions when Eclipse support for native code is better
+
+[0]: http://www.eclipse.org/downloads/
 [1]: http://java.com
 [2]: http://personal-editor.com/%20http://developer.android.com/sdk/index.html
 [3]: http://developer.android.com/sdk/ndk/index.html
