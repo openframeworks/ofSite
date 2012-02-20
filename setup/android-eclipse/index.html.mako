@@ -9,13 +9,15 @@ Right now this is only tested on Linux and OS X. To use it on Windows, check the
 
 To use it you will need Eclipse, the Android SDK, the Android NDK, the Android Eclipse plugin and the openFrameworks for Android package.
 
-If you have already installed openFrameworks for Android before, the instructions have changed quite a bit and it's recommended to start from scratch, even with a new install of Eclipse. You should use the latest version of the Android SDK (15). As of Feb 19, 2012 the latest Android NDK (r7b) doesn't work, but version r6 should work fine.
+If you have already installed openFrameworks for Android before, the instructions have changed quite a bit and it's recommended to start from scratch, even with a new install of Eclipse. You should use the latest version of the Android SDK (15). As of Feb 19, 2012 the latest Android NDK (r7b) doesn't work with openFrameworks, but version r6 should work fine.
 
 **a) Eclipse**: download the C/C++ edition for your platform from here:
 
 [http://www.eclipse.org/downloads/][0]
 
 ![eclipse_cdt_download](eclipse_cdt_download.png)
+
+These instructions currently use Eclipse 3.6, although 3.7 will probably work fine.
 
 Ubuntu users: Don't use the version in the repositories because it is very outdated.
 
@@ -75,38 +77,42 @@ Edit this file:
 
 This will tell openFrameworks where to find the SDK, NDK and Ant.
 
-- set paths of SDK & NDK to the uncompressed folders
+- Set the values of SDK_ROOT and NDK_ROOT to their install paths
 
-- set ANT_HOME:
+- Set ANT_HOME:
 Linux: /usr  
-OS X: set it to the folder where you uncompressed Ant before
+OS X: Set it to the folder where you uncompressed Ant before.
 
-**g) Start Eclipse**: you will see a pop up telling what workspace to use, the first time it will create the needed files. just point it to
+**g) Start Eclipse**: You will see a pop up asking you what workspace to use. Just point it to:
 openFrameworks/apps/androidExamples.
 
 **h) Android Eclipse plugin**:
 
 There's detailed instructions here: [http://developer.android.com/sdk/eclipse-adt.html][6]  
+
 To install it, inside Eclipse go to
-Help \> Install new software...
+Help \> Install New Software...
 
 ![eclipse plugins](eclipse_android_plugin0-600x522.png)
 
-press add... and enter the following info:
+Click 'Add...' and enter the following info:
+
 Name: Android SDK  
 Location: https://dl-ssl.google.com/android/eclipse/
 
 ![android eclipse plugin info](eclipse-plugin1.png)
 
-press OK and select the new repository in the "Work with:" drop down box in case it's not already selected
+Press 'OK' and select the new repository in the "Work with:" drop down box in case it's not already selected.
 
-you will see the SDK plugin in the list, called Developer Tools:
+You will see the SDK plugin in the list called "Developer Tools":
 
 ![eclipse_android_plugin2](eclipse_android_plugin2-600x522.png)
 
-select it and press next till you get to the terms of the license screen, check the "I accept the terms of the license" check button and press Finish. Eclipse will download and install the Android plugin. Once it finishes press yes in the popup to restart Eclipse.
+Select it and press 'Next' until you get to the "Review Licenses" screen. Check the "I accept the terms of the license" checkbox and press 'Finish'. Eclipse will download and install the Android plugin. Once it finishes press 'Yes' in the popup to restart Eclipse.
 
 **i) Set Eclipse Java compiler compliance to 1.5:**
+
+*Note:* I didn't need to do this step for SDK version 15.
 
 In the last version of Eclipse the Java compatibility is set to version 6 but Android needs version 5. To change it, in
 Window \> Preferences \> Java \> Compiler 
@@ -117,11 +123,9 @@ The compiler compliance settings should be set to 1.5\.
 
 
 
-
 **j) Configuring the Android plugin**: 
 
-Once we have installed the Android plugin we need to tell it where to find the SDK. In Eclipse go to
-Window \> Preferences \> Android and set the SDK location by browsing to the folder where you uncompressed the SDK before.
+Once we have installed the Android plugin we need to tell it where to find the SDK. In Eclipse go to Window \> Preferences \> Android and set the SDK location by browsing to the folder where you uncompressed the SDK before.
 
 ![android_prefs](android_prefs-600x449.png)
 
@@ -130,17 +134,17 @@ Window \> Preferences \> Android and set the SDK location by browsing to the fol
 
 Now Eclipse knows where the SDK is.
 
-Next you'll need to install the api files and optionally create an emulator to be able to test programs without uploading to the phone. Press the Android button in the Eclipse toolbar:
+Next you'll need to install the API files and optionally create an emulator to be able to test programs without uploading to the phone. Press the Android button in the Eclipse toolbar, or go to Window \> Android SDK Manager:
 
 ![android_button](android_button.png)
 
-First you need to install the api package. Just click on the "Available Packages" tab, and choose the SDK Platform for version 2.2 + the SDK platform tools, it's important to use version 2.2 since the makefiles are configured for that version, it doesn't matter what version of the OS you want to develop for. You can optionally install other versions and change the makefile to use that instead.
+First you need to install the API package. Just click on the "Available Packages" tab, and choose the SDK Platform version 2.2 + the SDK platform tools, it's important to use version 2.2 since the makefiles are configured for that version. It doesn't matter what version of the OS you want to develop for. You can optionally install other versions and change the makefile to use that instead.
 
-Once that is done you can create a new virtual device. Just select a name, the target and a size for the virtual sd-card.
+Once that is done you can create a new virtual device (AVD). Just select a name, the target Android version and a size for the virtual SD card.
 
 **k) Import openFrameworks into Eclipse:** 
 
-Now Eclipse has been completely configured to work with openFrameworks for Android, the last step is to import all the projects in the workspace. Go to
+Now that Eclipse has been completely configured to work with openFrameworks for Android, the last step is to import all the projects in the workspace. Go to
 File \> Import and select General \> Existing projects in the workspace...
 
 ![import first screen](import0-600x508.png)
@@ -153,25 +157,27 @@ openFrameworks/apps/androidExamples
 
 **l) Compile openFrameworks**:
 
-In the left part of the window, select the openFrameworks project and from the toolbar or the menu build the Android target.
+In the "Project Explorer" on the left side of the window, select the openFrameworks project. Choose the Android target in Window \> Build Configurations \> Set Active, and then click Window \> Build Project. You can also do this from the toolbar by switching to the C/C++ perspective and clicking the toolbar button with a hammer.
 
 ![](android-compile-OF.png)
 
 **m) Enable development in your device:**
-Adjustments \> Applications \> Development \> USB Debug (the device needs to be disconnected from the computer)
+Enable USB debugging: Settings \> Applications \> Development \> USB Debug
+(The device needs to be disconnected from the computer while you do this.)
 
 **n) Connect the device now:**
 
-If you don't have a device Eclipse will start the emulator for you
-**Linux users**: adb needs permissions to access the usb device, follow the instructions here to fix your device permissions:
+If you attempt to run your project and you don't have a device attached, Eclipse will start the Android emulator for you.
+
+**Linux users**: adb needs permissions to access the USB device, follow the instructions here to fix your device permissions:
 
 [http://developer.android.com/guide/developing/device.html][7]
 
-**o) Create an install external tool and use it to install and run projects on the device or emulator**
+**o) Create an External Tools Configuration and use it to install and run projects on the device or emulator**
 Run \> External Tools \> External Tools Configuration
 ![](android-external-tools1.png)
 
-Select program and press New, name the new configuration: Android Install Main:
+Select 'Program' and press New. Name the new configuration: Android Install Main:
 
 <%text filter="h">
     Location: /usr/bin/make 
@@ -191,65 +197,65 @@ Select program and press New, name the new configuration: Android Install Main:
 </%text>
 
 
-Press Apply and Close
+Press Apply and Close.
 
 ![](Screenshot-External-Tools-Configurations--600x561.png)
 
-**p) Now to install and run a project in the device:**
+**p) Now install and run an example project on the device:**
 
-- connect the device  
-- check that is being detected and restart adb server if necesary  
-- select the AndroidRelease target
+- Connect the device.
+- Check that it is being detected and restart adb server if necessary.
+- Select the AndroidRelease target. You can pick a target at Project \> Build Configurations \> Set Active. 
 
 ![](android-compile-example.png)
 
-- press the play button with a toolbox or Run \> External Tools \> Android Install
+- Press the play button in the toolbar or Run \> External Tools \> Android Install.
 
 ![](toolbox-button.png)
 
-If everything went ok, the example should start on the device
+If everything went OK, the example should start on the device.
 
-**Useful advices:**
+**Notes:**
 
-- There's no data folder in the Android apps, since Android has it's own method for resources and its really restrictive about it. By now you'll need to put them in
-res/raw Now everything in bin/data will get compressed to res/raw and then uncompressed and automatically copied to:  
+- Data files should go in bin/data. During the build process everything in bin/data will get compressed to a resource in res/raw and then uncompressed and automatically copied to:  
 sdcard/cc.openframeworks.appname 
 before running the app.
+
 If you have resources that change like XML config files, it's better to generate them from the code since uploading them to the phone will overwrite the configuration
 
-- If there's no sd card in the device, examples that have resources won't work by now
+- If there's no SD card in the device, examples that have resources won't work right now.
 
 - Naming of resources is really restrictive in Android, for example you cannot have several resources with the same name even if they have different extensions.
 
-- The AndroidDebug target does a different compilation process of the native code that allows to detect linker errors that won't be detected when compiling in AndroidRelease mode. Is recomended to compile your application in AndroidDebug mode at least once or if your application crashes before starting. To install applications on the device or emulator is recommended to use the AndroidRelease mode since it's faster and the applications will be much smaller. There's also no support for debug for native applications in Eclipse but you could theoretically use the NDK tools to debug an application compiled with AndroidDebug.
+- The AndroidDebug target does a different compilation process of the native code that allows to detect linker errors that won't be detected when compiling in AndroidRelease mode. Is recomended to compile your application in AndroidDebug mode at least once or if your application crashes before starting. When installing applications on the device or emulator it is recommended to use the AndroidRelease mode since it's faster and the applications will be much smaller. There's also no support for debugging NDK applications in Eclipse, but you could theoretically use the NDK tools to debug an application compiled with AndroidDebug.
 
-- Test your application very often, even if the last ndk allows for debugging, there's no support for native debugging in Eclipse and setting it up manually with the NDK is pretty hard. when an application crashes the debugger dies too, so it's hard to debug bad memory accesses and similar bugs.
+- Test your application very often. Even if the last NDK allows for debugging, there's no support for native debugging in Eclipse and setting it up manually with the NDK is pretty hard. When an application crashes the debugger dies too, so it's hard to debug bad memory accesses and similar bugs.
 
-- Use the LogCat view in Eclipse. When programming for the Android you cannot see the output of cout or printf, but if you use ofLog you can see it's output in the log cat. to open the view, go to
+- Use the LogCat view in Eclipse. When programming for Android you cannot see the output of cout or printf, but if you use [ofLog][10] you can see its output in the LogCat. To open the view, go to
 Window \> Show View \> Others \> Android \> LogCat
 
 ![showviewlogcat](showviewlogcat.png)
 
-you can see the output of the compiler in the Console tab and the output of your app in the LogCat one. Everything that is output by openFrameworks through ofLog will have an openFrameworks tag so you can use filters to see only your application's output.
+You can see the output of the compiler in the Console tab and the output of your app in the LogCat one. Everything that is output by openFrameworks through ofLog will have an openFrameworks tag so you can use filters to see only your application's output.
 
--There's a bug in the Android plugin that makes Eclipse to build every C/C++ project in your workspace before running any app, so try to keep your workspaces small. you can have as many workspaces as you want:
+There's a bug in the Android plugin that makes Eclipse to build every C/C++ project in your workspace before running any app, so try to keep your workspaces small. you can have as many workspaces as you want:
 
-- create a folder inside apps
+- Create a folder inside openFrameworks/apps.
 
-- open Eclipse telling it to use this new folder as a workspace and do the import step again for the new folder, including openFrameworks, libs, addons but instead of importing all the examples, import only androidEmptyExample to have a template for your new projects.
+- Open Eclipse and tell it to use this new folder as a workspace. Do the import steps again for the new folder, including openFrameworks, libs, addons but instead of importing all the examples, import only androidEmptyExample to have a template for your new projects.
 
-**- Creating new applications:**
+**Creating new applications:**
 
 You can copy any of the examples and start a new application from there.
 
 You'll need to change the name of the application in different places:
 
-- when you copy the application from an example set the name you want to use, let's say your application is called myApp  
-- in res/values/strings.xml change app_name value to the name of your application  
-- in AndroidManifest.xml change the name of the package from cc.openFrameworks.exampleName to cc.openframeworks.myApp  
-- in srcJava, select the package cc.openFrameworks.exampleName, press F2 to rename it and call it cc.openframeworks.myApp
+- When you copy the application from an example set the name you want to use. Let's say your application is called myApp.
+- In res/values/strings.xml change app_name value to the name of your application.
+- In AndroidManifest.xml change the name of the package from cc.openframeworks.exampleName to cc.openframeworks.myApp  
+- in srcJava, select the package cc.openframeworks.exampleName, press F2 to rename it and call it cc.openframeworks.myApp
 
-It's important to keep the package prefix as cc.openframeworks or somethings can stop working, this will be fixed in future versions when Eclipse support for native code is better
+It's important to keep the package prefix as cc.openframeworks or some things can stop working. This will be fixed in future versions when Eclipse support for native code is better.
 
 [0]: http://www.eclipse.org/downloads/
 [1]: http://java.com
@@ -261,3 +267,4 @@ It's important to keep the package prefix as cc.openframeworks or somethings can
 [7]: http://developer.android.com/guide/developing/device.html
 [8]: http://www.multigesture.net/articles/how-to-setup-openframeworks-for-android-on-windows/
 [9]: http://github.com/openframeworks/openFrameworks
+[10]: http://www.undef.ch/uploads/ofDoc/html/classof_log.html
