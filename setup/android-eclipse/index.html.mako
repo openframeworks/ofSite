@@ -213,6 +213,8 @@ Press Apply and Close.
 
 ![](toolbox-button.png)
 
+If you get an error about an obsolete build.xml, you can safely delete the build.xml file and recreate it using 'android update project'.
+
 If everything went OK, the example should start on the device.
 
 **Notes:**
@@ -238,7 +240,7 @@ Window \> Show View \> Others \> Android \> LogCat
 
 You can see the output of the compiler in the Console tab and the output of your app in the LogCat one. Everything that is output by openFrameworks through ofLog will have an openFrameworks tag so you can use filters to see only your application's output.
 
-There's a bug in the Android plugin that makes Eclipse to build every C/C++ project in your workspace before running any app, so try to keep your workspaces small. you can have as many workspaces as you want:
+There's a bug in the Android plugin that makes Eclipse to build every C/C++ project in your workspace before running any app, so try to keep your workspaces small. You can have as many workspaces as you want:
 
 - Create a folder inside openFrameworks/apps.
 
@@ -246,7 +248,7 @@ There's a bug in the Android plugin that makes Eclipse to build every C/C++ proj
 
 **Creating new applications:**
 
-You can copy any of the examples and start a new application from there.
+You can copy any of the examples and start a new application from there. It's currently far more difficult to create a project from scratch, since the makefiles and project settings contain a lot of details you would need to duplicate.
 
 You'll need to change the name of the application in different places:
 
