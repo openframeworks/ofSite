@@ -3,11 +3,9 @@
 android eclipse
 ===============
 
-The Android distribution of openFrameworks is based on the Eclipse IDE. The current version of the Android plugin for Eclipse has several problems with projects that mix C++ and Java code, so the projects are currently using a custom toolchain based on makefiles + ant tasks to compile and install applications. If you are used  
-to Android development in Eclipse, things are a little different. Check the following instructions to know how to  
-install the development environment and compile/install applications.
+The Android distribution of openFrameworks is based on the Eclipse IDE. The current version of the Android plugin for Eclipse has several problems with projects that mix C++ and Java code, so the projects are currently using a custom toolchain based on makefiles + ant tasks to compile and install applications. If you are used to Android development in Eclipse, things are a little different. Check the following instructions to know how to install the development environment and compile/install applications.
 
-Right now this is only tested on Linux and OS X. To use it on Windows, check the instructions on this link: http://www.multigesture.net/articles/how-to-setup-openframeworks-for-android-on-windows/
+Right now this is only tested on Linux and OS X. To use it on Windows, check the instructions on this link: [http://www.multigesture.net/articles/how-to-setup-openframeworks-for-android-on-windows/][8]
 
 To use it you will need Eclipse, the Android SDK, the Android NDK, the Android Eclipse plugin and the openFrameworks Android package.
 
@@ -121,9 +119,7 @@ The compiler compliance settings should be set to 1.5\.
 **j) Configuring the Android plugin**: 
 
 Once we have installed the Android plugin we need to tell it where to find the SDK. In Eclipse go to
-Window \> Preferences \> Android 
-
-and set the SDK location by browsing to the folder where you uncompressed the SDK before.
+Window \> Preferences \> Android and set the SDK location by browsing to the folder where you uncompressed the SDK before.
 
 ![android_prefs](android_prefs-600x449.png)
 
@@ -216,10 +212,8 @@ If everything went ok, the example should start on the device
 - There's no data folder in the Android apps, since Android has it's own method for resources and its really restrictive about it. By now you'll need to put them in
 res/raw Now everything in bin/data will get compressed to res/raw and then uncompressed and automatically copied to:  
 sdcard/cc.openframeworks.appname 
-
 before running the app.
-
-If you have resources that change like xml config files, it's better to generate them from the code since uploading them to the phone will overwrite the configuration
+If you have resources that change like XML config files, it's better to generate them from the code since uploading them to the phone will overwrite the configuration
 
 - If there's no sd card in the device, examples that have resources won't work by now
 
@@ -263,5 +257,5 @@ It's important to keep the package prefix as cc.openframeworks or somethings can
 [5]: http://ant.apache.org/bindownload.cgi
 [6]: http://developer.android.com/sdk/eclipse-adt.html
 [7]: http://developer.android.com/guide/developing/device.html
-
+[8]: http://www.multigesture.net/articles/how-to-setup-openframeworks-for-android-on-windows/
 
