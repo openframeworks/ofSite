@@ -3,15 +3,15 @@
 android eclipse
 ===============
 
-The Android distribution of openFrameworks is based on the Eclipse IDE, the current version of the Android plugin for eclipse has several problems with projects that mix c++ and java code so the projects are currently using a custom toolchain based on makefiles + ant tasks to compile and install applications. If you are used  
-to android development in eclipse, things are a little different check the following instructions to know how to  
+The Android distribution of openFrameworks is based on the Eclipse IDE. The current version of the Android plugin for Eclipse has several problems with projects that mix C++ and Java code, so the projects are currently using a custom toolchain based on makefiles + ant tasks to compile and install applications. If you are used  
+to Android development in Eclipse, things are a little different. Check the following instructions to know how to  
 install the development environment and compile/install applications.
 
-Right now this is only tested on linux and osx to use it on windows check the instruction on this link: http://www.multigesture.net/articles/how-to-setup-openframeworks-for-android-on-windows/
+Right now this is only tested on Linux and OS X. To use it on Windows, check the instructions on this link: http://www.multigesture.net/articles/how-to-setup-openframeworks-for-android-on-windows/
 
 To use it you will need Eclipse, the Android SDK, the Android NDK, the Android Eclipse plugin and the openFrameworks Android package.
 
-If you have already installed OF for android before, this instructions have changed quite a bit and it's recommended to start from scratch, even with a new install of Eclipse and it's mandatory to use the latest versions of the Android SDK (10) and NDK (r5b)
+If you have already installed OF for Android before, this instructions have changed quite a bit and it's recommended to start from scratch, even with a new install of Eclipse and it's mandatory to use the latest versions of the Android SDK (10) and NDK (r5b)
 
 **a) Eclipse**: download the C/C++ edition for your platform from here:
 
@@ -39,10 +39,10 @@ or
 
 uncompress it in any folder on your hard disk, later you'll need to tell the OF makefiles where to find it.
 
-**c) Android NDK**: this is the c/c++ compiler, headers and libraries for android. Download it from:  
+**c) Android NDK**: this is the c/c++ compiler, headers and libraries for Android. Download it from:  
 [http://developer.android.com/sdk/ndk/index.html][3]
 
-There's a bug in the official ndk that makes apps crash on 2.1 and lower versions of Android so by now OF android will only work in 2.2 and above
+There's a bug in the official ndk that makes apps crash on 2.1 and lower versions of Android so by now OF Android will only work in 2.2 and above
 
 Also uncompress it to any place in your hd we'll tell later OF where to find it.
 
@@ -62,7 +62,7 @@ or for newer distributions:
 
     sudo apt-get install ant
 
-- OSX:
+- OS X:
 
 download and uncompress 1.8 or greater from [http://ant.apache.org/bindownload.cgi][5]
 
@@ -79,9 +79,9 @@ this will tell OF where to find the sdk, ndk and ant
 
 - set ANT\_HOME:
 Linux: /usr  
-OSX: set it to the folder where you uncompressed ant before
+OS X: set it to the folder where you uncompressed ant before
 
-**g) Start eclipse**: you will see a pop up telling what workspace to use, the first time it will create the needed files. just point it to
+**g) Start Eclipse**: you will see a pop up telling what workspace to use, the first time it will create the needed files. just point it to
 openFrameworks/apps/androidExamples.
 
 **h) Android Eclipse plugin**:
@@ -106,9 +106,9 @@ you will see the sdk plugin in the list, called Developer Tools:
 
 select it and press next till you get to the terms of the license screen, check the "I accept the terms of the license" check button and press Finish. Eclipse will download and install the Android plugin. Once it finishes press yes in the popup to restart Eclipse.
 
-**i) Set eclipse java compiler compliance to 1.5:**
+**i) Set Eclipse java compiler compliance to 1.5:**
 
-In the last version of Eclipse the java compatibility is set to version 6 but android needs version 5\. to change it, in
+In the last version of Eclipse the java compatibility is set to version 6 but Android needs version 5\. to change it, in
 Window \> Preferences \> Java \> Compiler 
 
 The compiler compliance settings should be set to 1.5\.
@@ -120,7 +120,7 @@ The compiler compliance settings should be set to 1.5\.
 
 **j) Configuring the Android plugin**: 
 
-Once we have installed the android plugin we need to tell it where to find the sdk. In eclipse go to
+Once we have installed the Android plugin we need to tell it where to find the sdk. In Eclipse go to
 Window \> Preferences \> Android 
 
 and set the SDK location by browsing to the folder where you uncompressed the SDK before.
@@ -164,7 +164,7 @@ Adjustments \> Applications \> Development \> USB Debug (the device needs to be 
 
 **n) Connect the device now:**
 
-If you don't have a device eclipse will start the emulator for you
+If you don't have a device Eclipse will start the emulator for you
 **Linux users**: adb needs permissions to access the usb device, follow the instructions here to fix your device permissions:
 
 [http://developer.android.com/guide/developing/device.html][7]
@@ -213,7 +213,7 @@ If everything went ok, the example should start on the device
 
 **Useful advices:**
 
-- There's no data folder in the android apps, since Android has it's own method for resources and its really restrictive about it. By now you'll need to put them in
+- There's no data folder in the Android apps, since Android has it's own method for resources and its really restrictive about it. By now you'll need to put them in
 res/raw Now everything in bin/data will get compressed to res/raw and then uncompressed and automatically copied to:  
 sdcard/cc.openframeworks.appname 
 
@@ -225,9 +225,9 @@ If you have resources that change like xml config files, it's better to generate
 
 - Naming of resources is really restrictive in Android, for example you cannot have several resources with the same name even if they have different extensions.
 
-- The AndroidDebug target does a different compilation process of the native code that allows to detect linker errors that won't be detected when compiling in AndroidRelease mode. Is recomended to compile your application in AndroidDebug mode at least once or if your application crashes before starting. To install applications on the device or emulator is recommended to use the AndroidRelease mode since it's faster and the applications will be much smaller. There's also no support for debug for native applications in eclipse but you could theoretically use the ndk tools to debug an application compiled with AndroidDebug.
+- The AndroidDebug target does a different compilation process of the native code that allows to detect linker errors that won't be detected when compiling in AndroidRelease mode. Is recomended to compile your application in AndroidDebug mode at least once or if your application crashes before starting. To install applications on the device or emulator is recommended to use the AndroidRelease mode since it's faster and the applications will be much smaller. There's also no support for debug for native applications in Eclipse but you could theoretically use the ndk tools to debug an application compiled with AndroidDebug.
 
-- Test your application very often, even if the last ndk allows for debugging, there's no support for native debugging in eclipse and setting it up manually with the ndk is pretty hard. when an application crashes the debugger dies too, so it's hard to debug bad memory accesses and similar bugs.
+- Test your application very often, even if the last ndk allows for debugging, there's no support for native debugging in Eclipse and setting it up manually with the ndk is pretty hard. when an application crashes the debugger dies too, so it's hard to debug bad memory accesses and similar bugs.
 
 - Use the LogCat view in Eclipse. When programming for the Android you cannot see the output of cout or printf, but if you use ofLog you can see it's output in the log cat. to open the view, go to
 Window \> Show View \> Others \> Android \> LogCat
@@ -236,11 +236,11 @@ Window \> Show View \> Others \> Android \> LogCat
 
 you can see the output of the compiler in the Console tab and the output of your app in the LogCat one. Everything that is output by OF through ofLog will have an OF tag so you can use filters to see only your application's output.
 
--There's a bug in the Android plugin that makes eclipse to build every c/c++ project in your workspace before running any app, so try to keep your workspaces small. you can have as many workspaces as you want:
+-There's a bug in the Android plugin that makes Eclipse to build every c/c++ project in your workspace before running any app, so try to keep your workspaces small. you can have as many workspaces as you want:
 
 - create a folder inside apps
 
-- open eclipse telling it to use this new folder as a workspace and do the import step again for the new folder, including openFrameworks, libs, addons but instead of importing all the examples, import only androidEmptyExample to have a template for your new projects.
+- open Eclipse telling it to use this new folder as a workspace and do the import step again for the new folder, including openFrameworks, libs, addons but instead of importing all the examples, import only androidEmptyExample to have a template for your new projects.
 
 **- Creating new applications:**
 
@@ -253,7 +253,7 @@ You'll need to change the name of the application in different places:
 - in AndroidManifest.xml change the name of the package from cc.openFrameworks.exampleName to cc.openframeworks.myApp  
 - in srcJava, select the package cc.openFrameworks.exampleName, press F2 to rename it and call it cc.openframeworks.myApp
 
-It's important to keep the package prefix as cc.openframeworks or somethings can stop working, this will be fixed in future versions when eclipse support for native code is better[0]: http://www.eclipse.org/downloads/
+It's important to keep the package prefix as cc.openframeworks or somethings can stop working, this will be fixed in future versions when Eclipse support for native code is better[0]: http://www.eclipse.org/downloads/
 [1]: http://java.com
 [2]: http://personal-editor.com/%20http://developer.android.com/sdk/index.html
 [3]: http://developer.android.com/sdk/ndk/index.html
