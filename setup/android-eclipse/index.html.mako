@@ -13,7 +13,7 @@ If you have already installed openFrameworks for Android before, the instruction
 
 **a) Eclipse**: download the C/C++ edition for your platform from here:
 
-[http://www.eclipse.org/downloads/][0]
+[http://www.eclipse.org/downloads/][11]
 
 ![eclipse_cdt_download](eclipse_cdt_download.png)
 
@@ -259,7 +259,6 @@ You'll need to change the name of the application in different places:
 
 It's important to keep the package prefix as cc.openframeworks or some things can stop working. This will be fixed in future versions when Eclipse support for native code is better.
 
-[0]: http://www.eclipse.org/downloads/
 [1]: http://java.com
 [2]: http://personal-editor.com/%20http://developer.android.com/sdk/index.html
 [3]: http://developer.android.com/sdk/ndk/index.html
@@ -270,3 +269,4 @@ It's important to keep the package prefix as cc.openframeworks or some things ca
 [8]: http://www.multigesture.net/articles/how-to-setup-openframeworks-for-android-on-windows/
 [9]: http://github.com/openframeworks/openFrameworks
 [10]: http://www.undef.ch/uploads/ofDoc/html/classof_log.html
+[11]: http://www.eclipse.org/downloads/
