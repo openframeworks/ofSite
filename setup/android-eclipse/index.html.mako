@@ -244,7 +244,7 @@ Notes
 sdcard/cc.openframeworks.appname 
 before running the app.
 
-If you have resources that change like XML config files, it's better to generate them from the code since uploading them to the phone will overwrite the configuration
+    If you have resources that change like XML config files, it's better to generate them from the code since uploading them to the phone will overwrite the configuration
 
 - If there's no SD card in the device, examples that have resources won't work right now.
 
@@ -291,15 +291,13 @@ FAQ
 - If you're getting a bunch of undeclared reference errors, check which version of the NDK you're using. As of Feb 19, 2012 version r7 does not work yet. You'll need to use an earlier version, like version r6 or r5b. The error messages should look similar to this:
 
 
-<%text filter="h">
-    ../../../openFrameworks/gl/ofFbo.cpp:503: error: 'glFramebufferTexture2DOES' was not declared in this scope
-    ../../../openFrameworks/gl/ofFbo.cpp: In member function 'void ofFbo::bind()':
-    ../../../openFrameworks/gl/ofFbo.cpp:543: error: 'glBindFramebufferOES' was not declared in this scope
-    ../../../openFrameworks/gl/ofFbo.cpp: In member function 'void ofFbo::unbind()':
-    ../../../openFrameworks/gl/ofFbo.cpp:551: error: 'glBindFramebufferOES' was not declared in this scope
-    ../../../openFrameworks/gl/ofFbo.cpp: In member function 'bool ofFbo::checkStatus()':
-    ../../../openFrameworks/gl/ofFbo.cpp:690: error: 'glCheckFramebufferStatusOES' was not declared in this scope
-</%text>
+        ../../../openFrameworks/gl/ofFbo.cpp:503: error: 'glFramebufferTexture2DOES' was not declared in this scope
+        ../../../openFrameworks/gl/ofFbo.cpp: In member function 'void ofFbo::bind()':
+        ../../../openFrameworks/gl/ofFbo.cpp:543: error: 'glBindFramebufferOES' was not declared in this scope
+        ../../../openFrameworks/gl/ofFbo.cpp: In member function 'void ofFbo::unbind()':
+        ../../../openFrameworks/gl/ofFbo.cpp:551: error: 'glBindFramebufferOES' was not declared in this scope
+        ../../../openFrameworks/gl/ofFbo.cpp: In member function 'bool ofFbo::checkStatus()':
+        ../../../openFrameworks/gl/ofFbo.cpp:690: error: 'glCheckFramebufferStatusOES' was not declared in this scope
 
 
 **If the build succeeds but the Android Install command doesn't work:**
@@ -312,13 +310,11 @@ FAQ
 - Check the libs folder. It should be populated with a library during the build. On Linux it is a file that ends with .so. If there is no library, the C++ build process is probably failing somewhere, or it is not being triggered at all. You can test the C++ build process separately using 'make AndroidDebug'. You may also see something like this in your LogCat:
 
 
-<%text filter="h">
-    E/AndroidRuntime(20743): Caused by: java.lang.UnsatisfiedLinkError: Couldn't load OFAndroidApp: findLibrary returned null
-    E/AndroidRuntime(20743): 	at java.lang.Runtime.loadLibrary(Runtime.java:425)
-    E/AndroidRuntime(20743): 	at java.lang.System.loadLibrary(System.java:554)
-    E/AndroidRuntime(20743): 	at cc.openframeworks.OFAndroid.<clinit>(OFAndroid.java:535)
-    E/AndroidRuntime(20743): 	... 14 more
-</%text>
+        E/AndroidRuntime(20743): Caused by: java.lang.UnsatisfiedLinkError: Couldn't load OFAndroidApp: findLibrary returned null
+        E/AndroidRuntime(20743): 	at java.lang.Runtime.loadLibrary(Runtime.java:425)
+        E/AndroidRuntime(20743): 	at java.lang.System.loadLibrary(System.java:554)
+        E/AndroidRuntime(20743): 	at cc.openframeworks.OFAndroid.<clinit>(OFAndroid.java:535)
+        E/AndroidRuntime(20743): 	... 14 more
 
 
 - The device must have an SD card if you use resources in your openFrameworks app. Note that some devices have an internal SD card, like the Galaxy Tab 10.1.
