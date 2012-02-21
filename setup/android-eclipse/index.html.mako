@@ -11,6 +11,20 @@ To use it you will need Eclipse, the Android SDK, the Android NDK, the Android E
 
 If you have already installed openFrameworks for Android before, the instructions have changed quite a bit and it's recommended to start from scratch, even with a new install of Eclipse. You should use the latest version of the Android SDK (15). As of Feb 19, 2012 the latest Android NDK (r7b) doesn't work with openFrameworks, but version r6 should work fine.
 
+Summary
+-------
+These instructions go into a lot of important detail, but the main steps are:
+
+- Install Eclipse, Ant and the Android SDK and NDK.
+- Setup the Android Eclipse plugin.
+- Download openFrameworks either from the download page, or clone from git.
+- Set path variables so openFrameworks knows where SDK and NDK are.
+- Import the openFrameworks projects into Eclipse.
+- Compile and install one of the Android openFrameworks examples to confirm that everything works.
+
+Installation
+------------
+
 **a) Eclipse**: download the C/C++ edition for your platform from here:
 
 [http://www.eclipse.org/downloads/][11]
@@ -39,7 +53,12 @@ or
 
 Uncompress it in any folder on your hard disk. Later you'll need to tell the openFrameworks makefiles where to find it.
 
-**c) Android NDK**: This is the C/C++ compiler, headers and libraries for Android. Download it from:  
+**c) Android NDK**: This is the C/C++ compiler, headers and libraries for Android. Note that the latest version (r7b) doesn't work yet as of Feb 19, 2011, so you'll need to download an earlier version. Here are the links for r6:
+OS X: [http://dl.google.com/android/ndk/android-ndk-r6-darwin-x86.tar.bz2][12]
+Linux: [http://dl.google.com/android/ndk/android-ndk-r6-linux-x86.tar.bz2][13]
+Windows: [http://dl.google.com/android/ndk/android-ndk-r6-windows.zip][14]
+
+Later versions are available at:  
 [http://developer.android.com/sdk/ndk/index.html][3]
 
 There's a bug in the official NDK that makes apps crash on Android 2.1 and lower versions of Android so by now openFrameworks for Android will only work on Android 2.2 and above.
@@ -149,11 +168,12 @@ File \> Import and select General \> Existing projects in the workspace...
 
 ![import first screen](import0-600x508.png)
 
-Import in this order: 
-openFrameworks/libs  
-openFrameworks/libs/openFrameworks  
-openFrameworks/addons/ofxAndroid/ofAndroidLib  
-openFrameworks/apps/androidExamples
+Import in this order:
+ 
+- openFrameworks/libs  
+- openFrameworks/libs/openFrameworks  
+- openFrameworks/addons/ofxAndroid/ofAndroidLib  
+- openFrameworks/apps/androidExamples
 
 **l) Compile openFrameworks**:
 
@@ -217,7 +237,8 @@ If you get an error about an obsolete build.xml, you can safely delete the build
 
 If everything went OK, the example should start on the device.
 
-**Notes:**
+Notes
+-----
 
 - Data files should go in bin/data. During the build process everything in bin/data will get compressed to a resource in res/raw and then uncompressed and automatically copied to:  
 sdcard/cc.openframeworks.appname 
@@ -246,21 +267,67 @@ There's a bug in the Android plugin that makes Eclipse to build every C/C++ proj
 
 - Open Eclipse and tell it to use this new folder as a workspace. Do the import steps again for the new folder, including openFrameworks, libs, addons but instead of importing all the examples, import only androidEmptyExample to have a template for your new projects.
 
-**Creating new applications:**
+Creating new applications
+-------------------------
 
 You can copy any of the examples and start a new application from there. It's currently far more difficult to create a project from scratch, since the makefiles and project settings contain a lot of details you would need to duplicate.
 
 You'll need to change the name of the application in different places:
 
-- When you copy the application from an example set the name you want to use. Let's say your application is called myApp.
+- When you copy the application from an example set the name you want to use. Let's say your application is called myApp. This must also be the name of your folder.
 - In res/values/strings.xml change app_name value to the name of your application.
 - In AndroidManifest.xml change the name of the package from cc.openframeworks.exampleName to cc.openframeworks.myApp  
 - in srcJava, select the package cc.openframeworks.exampleName, press F2 to rename it and call it cc.openframeworks.myApp
 
 It's important to keep the package prefix as cc.openframeworks or some things can stop working. This will be fixed in future versions when Eclipse support for native code is better.
 
+FAQ
+---
+
+**If the build fails:**
+
+- If it tells you that you're using an obsolete build.xml, delete it and regenerate it using 'android update project'. The build.xml files in the examples directory should not contain anything especially unique.
+- Are you including addons? They need to be specified in addons.make, and the case of the letters must match exactly (ie, ofxOpenCv works but ofxOpenCV won't work). This error will probably show up as missing header files or symbols.
+- If you're getting a bunch of undeclared reference errors, check which version of the NDK you're using. As of Feb 19, 2012 version r7 does not work yet. You'll need to use an earlier version, like version r6 or r5b. The error messages should look similar to this:
+
+
+<%text filter="h">
+    ../../../openFrameworks/gl/ofFbo.cpp:503: error: 'glFramebufferTexture2DOES' was not declared in this scope
+    ../../../openFrameworks/gl/ofFbo.cpp: In member function 'void ofFbo::bind()':
+    ../../../openFrameworks/gl/ofFbo.cpp:543: error: 'glBindFramebufferOES' was not declared in this scope
+    ../../../openFrameworks/gl/ofFbo.cpp: In member function 'void ofFbo::unbind()':
+    ../../../openFrameworks/gl/ofFbo.cpp:551: error: 'glBindFramebufferOES' was not declared in this scope
+    ../../../openFrameworks/gl/ofFbo.cpp: In member function 'bool ofFbo::checkStatus()':
+    ../../../openFrameworks/gl/ofFbo.cpp:690: error: 'glCheckFramebufferStatusOES' was not declared in this scope
+</%text>
+
+
+**If the build succeeds but the Android Install command doesn't work:**
+
+- If you get a popup saying "Variable references empty selection: ${project_loc}", it means you need to select a project in Project Explorer first, before you run the Android Install command.
+- If you get a message saying "Activity class ... does not exist.", make sure that its namespace is called cc.openframeworks.your_folder_name_here.OFActivity. This is what the Makefile currently expects.
+
+**If the build succeeds but your app crashes:**
+
+- Check the libs folder. It should be populated with a library during the build. On Linux it is a file that ends with .so. If there is no library, the C++ build process is probably failing somewhere, or it is not being triggered at all. You can test the C++ build process separately using 'make AndroidDebug'. You may also see something like this in your LogCat:
+
+
+<%text filter="h">
+    E/AndroidRuntime(20743): Caused by: java.lang.UnsatisfiedLinkError: Couldn't load OFAndroidApp: findLibrary returned null
+    E/AndroidRuntime(20743): 	at java.lang.Runtime.loadLibrary(Runtime.java:425)
+    E/AndroidRuntime(20743): 	at java.lang.System.loadLibrary(System.java:554)
+    E/AndroidRuntime(20743): 	at cc.openframeworks.OFAndroid.<clinit>(OFAndroid.java:535)
+    E/AndroidRuntime(20743): 	... 14 more
+</%text>
+
+
+- The device must have an SD card if you use resources in your openFrameworks app. Note that some devices have an internal SD card, like the Galaxy Tab 10.1.
+- Make sure you've declared the appropriate permissions in AndroidManifest.xml (for instance, android.permission.CAMERA for cameras and android.permission.WRITE_EXTERNAL to interact with the SD card, which is necessary if you have resources.)
+- Was bin/data accidentally erased by something or other? Does res/raw/your_project_name_resources.zip exist, and does it contain your resources?
+
+
 [1]: http://java.com
-[2]: http://personal-editor.com/%20http://developer.android.com/sdk/index.html
+[2]: http://developer.android.com/sdk/index.html
 [3]: http://developer.android.com/sdk/ndk/index.html
 [4]: http://openframeworks.cc/download
 [5]: http://ant.apache.org/bindownload.cgi
@@ -270,3 +337,6 @@ It's important to keep the package prefix as cc.openframeworks or some things ca
 [9]: http://github.com/openframeworks/openFrameworks
 [10]: http://www.undef.ch/uploads/ofDoc/html/classof_log.html
 [11]: http://www.eclipse.org/downloads/
+[12]: http://dl.google.com/android/ndk/android-ndk-r6-darwin-x86.tar.bz2
+[13]: http://dl.google.com/android/ndk/android-ndk-r6-linux-x86.tar.bz2
+[14]: http://dl.google.com/android/ndk/android-ndk-r6-windows.zip
