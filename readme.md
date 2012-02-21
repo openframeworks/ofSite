@@ -19,9 +19,13 @@ To generate and view the site locally, you have to run:
 To insert code snippets use four tildes followed by curly braces with ".cpp" inside, and ending with four tildes:
 
 `~~~~{.cpp}`
+
 `for(int i = 0; i < 16; i++) {`
+
 `	ofLog() << i; `
+
 `}`
+
 `~~~~`
 
 Images are added using normal markdown format:
