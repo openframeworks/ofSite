@@ -304,7 +304,7 @@ FAQ
 
 **If the build succeeds but the Android Install command doesn't work:**
 
-- If you get a popup saying "Variable references empty selection: ${project_loc}", it means you need to select a project in Project Explorer first, before you run the Android Install command.
+- If you get a popup saying "Variable references empty selection: $\{project_loc\}", it means you need to select a project in Project Explorer first, before you run the Android Install command.
 - If you get a message saying "Activity class ... does not exist.", make sure that its namespace is called cc.openframeworks.your_folder_name_here.OFActivity. This is what the Makefile currently expects.
 
 **If the build succeeds but your app crashes:**
