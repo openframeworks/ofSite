@@ -8,6 +8,7 @@ The ofImage class wraps a library called "freeImage", and is a useful object for
 
 
 
+
 ##Methods
 
 
@@ -194,7 +195,7 @@ while ( i < img.getPixelsRef().size() ) {
 img.reloadTexture();
 ~~~~
 
-
+It allocates an image of width (w) and height (h). The type can be of three types: OF_IMAGE_GRAYSCALE, OF_IMAGE_COLOR, OF_IMAGE_COLOR_ALPHA. You don't need to call this before loading an image, but for when you want to allocate space ahead of when you are going to use the image. 
 
 
 
@@ -228,6 +229,7 @@ This clears the texture and pixels contained within the ofImage.
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ### ofImage_(&mom)
@@ -250,9 +252,15 @@ _advanced: False_
 
 _description: _
 
-This allows you to create an ofImage from another ofImage instance, copying all the pixels and the texture data while creating a new textureID.
+The copy constructor. Pass in another image and it copies it. This allows you to create an ofImage from another ofImage instance, copying all the pixels and the texture data while creating a new textureID.
+
+~~~~{.cpp}
+image1.loadImage("face.jpg");
+ofImage image2(image1);
+~~~~
 
 
+image1 and image2 are now identical. 
 
 
 
@@ -281,7 +289,16 @@ _description: _
 
 This allows you to create an ofImage from another ofImage instance, copying all the pixels and the texture data while creating a new textureID.
 
+Makes the current ofImage a copy of another ofImage. Same as clone(). 
 
+~~~~{.cpp}
+
+image2.loadImage("face.jpg");
+image1 = image2;
+~~~~
+
+
+image1 and image2 are now identical. 
 
 
 
@@ -292,8 +309,7 @@ This allows you to create an ofImage from another ofImage instance, copying all 
 
 <!--
 _syntax: ofImage_(&mom)_
-_name: ofImage_
-_returns: _
+_name: ofImage__returns: _
 _returns_description: _
 _parameters: const ofImage_< SrcType > &mom_
 _access: public_
@@ -401,6 +417,16 @@ _description: _
 
 If you set the ofImage to not use a texture it will contain the pixels of the image but cannot be drawn to the screen without copying its data into an ofTexture instance.
 
+
+This turns on or off the allocation and use of a texture. any time you change the image (loading, resizing, converting the type), ofImage will uplaod data to an opengl texture. It may not be necessary, though, and it could be that you need to save memory on the graphics card, or that you don't need to draw this image on the screen. You can call this even before you load an image in to OF:
+
+~~~~{.cpp}
+myImage.setUseTexture(false);
+myImage.loadImage("blah.gif");
+~~~~
+
+
+Since in the majority of cases, ofImages will be loaded in and drawn onscreen, the default is set to use a texture.
 
 
 
@@ -577,9 +603,18 @@ _advanced: False_
 
 _description: _
 
-Loads an image from a file name.
+Loads in an image given by fileName. It will try it's best to guess the filetype based on the name. The program will look for the file relative to the data/ folder. 
+
+For example, to load an image "icon.gif" that is in the data folder you can call:
+~~~~{.cpp}
+myImage.load("icon.gif");
+~~~~
 
 
+you can also supply folder paths for subfolders within the data folder:
+~~~~{.cpp}
+myImage.load("images/icon.gif");
+~~~~
 
 
 
@@ -671,8 +706,21 @@ OF_IMAGE_QUALITY_MEDIUM,
 OF_IMAGE_QUALITY_LOW,
 OF_IMAGE_QUALITY_WORST
 
+It will guess, based on the name, what filetype to save as. This file will be relative to the data folder. 
+
+You can use this, combined with grabSceen, in order to save an image:
+~~~~{.cpp}
+myImage.grabScreen(0,0,500,500);
+myImage.saveImage("partOfTheScreen.png");
+~~~~
 
 
+You can also use dynamically generated names:
+~~~~{.cpp}
+myImage.grabScreen(0,0,500,500);
+myImage.saveImage("partOfTheScreen-"+ofToString(snapCounter)+".png");
+snapCounter++;
+~~~~
 
 
 
@@ -801,6 +849,7 @@ _description: _
 This returns a raw pointer to the pixel data.
 
 
+This function will give you access to a continuous block of pixels. you can grab the data and do what you like with it. If you have a grayscale image, you will have (width*height) number of pixels. Color images will have (width*height*3) number of pixels (interlaced R,G,B), and coloralpha images will have (width*height*4) number of pixels (interlaced R,G,B,A).
 
 
 
@@ -959,6 +1008,13 @@ Set the pixels of the image from an array of values, for an ofFloatImage these n
 The bOrderIsRGB flag allows you pass in pixel data that is BGR by setting bOrderIsRGB=false.
 
 
+Copies in the pixel data from  the 'pixels' array. Specify the corresponding width and height of the image you are passing in with 'w' and 'h'. The image type can be OF_IMAGE_GRAYSCALE, OF_IMAGE_COLOR, or OF_IMAGE_COLORALPHA. 
+
+Note: that your array has to be at least as big as [ width * height * bytes per pixel ]. 
+
+If you have a grayscale image, you will have (width*height) number of pixels. Color images will have (width*height*3) number of pixels (interlaced R,G,B), and coloralpha images will have (width*height*4) number of pixels (interlaced R,G,B,A).
+
+Note: You do not need to call allocate() before calling setFromPixels() as setFromPixels() re-allocates itself if needed. 
 
 
 
@@ -1018,6 +1074,11 @@ _description: _
 Set the type of image to one of the following: OF_IMAGE_GRAYSCALE, OF_IMAGE_COLOR, OF_IMAGE_COLOR_ALPHA. This does cause the image to be reallocated and the texture to be updated, so it can be an expensive operation if done frequently. Converting down, for example from color to grayscale, loses information and is a destructive change.
 
 
+For example, you can load in a color image, and convert it to grayscale:
+~~~~{.cpp}
+myImage.loadImage("somethingColor.jpg");
+myImage.setImageType(OF_IMAGE_GRAYSCALE); 	// now I am grayscale;
+~~~~
 
 
 
@@ -1044,8 +1105,7 @@ _advanced: False_
 
 _description: _
 
-Resizes the image to the w,h passed in.
-
+Resizes the image to a new size (w, h); Can be used to scale up or down an image.
 
 
 
@@ -1073,7 +1133,7 @@ _advanced: False_
 
 _description: _
 
-This grabs the users screen into the image. This is an easy way to copy complex effects or do multiple passes on another image.
+Grabs pixels from the opengl window specified by the region (x, y, w, h) and turns them into an image. It resizes or allocates the ofImage if it's necessary.
 
 
 
@@ -1252,8 +1312,33 @@ _advanced: False_
 
 _description: _
 
-You can set the anchor position that the texture will be drawn at. This means that passing 50, 50 will draw the ofImage center at the point you pass in to the draw() method.
+Changes the drawing position specified by draw() from the normal top-left corner of the image to a position specified by xPct and yPct in relation to the dimensions of the image. This can be useful for aligning and centering images as well as rotating an image around its center. 
 
+Note: range of xPct and yPct is 0.0 to 1.0. For xPct, 1.0 represents the width of the image. For yPct, 1.0 represents the height of the image. These values are not capped. 
+
+For example to draw an image so that its center is at 100, 100:
+~~~~{.cpp}
+myImage.setAnchorPercent(0.5, 0.5); 
+myImage.draw(100, 100);
+~~~~
+
+
+To rotate an image around its center at 100, 100:
+~~~~{.cpp}
+ofPushMatrix();
+  ofTranslate(100, 100, 0);
+  ofRotate(45);
+  myImage.setAnchorPercent(0.5, 0.5); 
+  myImage.draw(0, 0); 
+ofPopMatrix();
+~~~~
+
+
+To align the right side of an image with the right edge of the window:
+~~~~{.cpp}
+myImage.setAnchorPercent(1.0, 0.0);
+myImage.draw(ofGetWidth(), 0);
+~~~~
 
 
 
@@ -1281,8 +1366,33 @@ _advanced: False_
 
 _description: _
 
-You can set the anchor position that the texture will be drawn at. This means that passing 50, 50 will draw the ofImage at an offset of 50,50 from the point you pass in to the draw() method.
+Changes the drawing position specified by draw() from the normal top-left corner of the image to a position specified by x and y, measured in pixels. This can be useful for aligning and centering images as well as rotating an image around its center. 
 
+Note: see also setAnchorPercent() if you want to specify the anchor as a percentage of the image size. 
+
+For example to draw an image so that its center is at 100, 100:
+~~~~{.cpp}
+myImage.setAnchorPoint(myImage.getWidth()/2, myImage.getHeight()/2); 
+myImage.draw(100, 100);
+~~~~
+
+
+To rotate an image around its center at 100, 100:
+~~~~{.cpp}
+ofPushMatrix();
+  ofTranslate(100, 100, 0);
+  ofRotate(45);
+  myImage.setAnchorPercent(myImage.getWidth()/2, myImage.getHeight()/2); 
+  myImage.draw(0, 0); 
+ofPopMatrix();
+~~~~
+
+
+To align the right side of an image with the right edge of the window:
+~~~~{.cpp}
+myImage.setAnchorPercent(myImage.getWidth(), 0.0);
+myImage.draw(ofGetWidth(), 0);
+~~~~
 
 
 
