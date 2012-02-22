@@ -16,19 +16,20 @@ To generate and view the site locally, you have to run:
 
 ## Documentation-style markdown
 
-The documentation portion of the site is written in Markdown, a wiki-style syntax. See details here: http://daringfireball.net/projects/markdown/
+The documentation portion of the site is written in Markdown, a wiki-style syntax. See details on [Daringfireball](http://daringfireball.net/projects/markdown/).
 
 To insert code snippets use four tildes followed by curly braces with ".cpp" inside, and ending with four tildes:
 
-`~~~~{.cpp}`
+	~~~~{.cpp}
+	
+	for(int i = 0; i < 16; i++) {
+	
+		ofLog() << i;
 
-`for(int i = 0; i < 16; i++) {`
+	}
 
-`	ofLog() << i; `
+	~~~~
 
-`}`
-
-`~~~~`
 
 Images are added using normal markdown format:
 
@@ -40,6 +41,6 @@ An alternative to running blogofile locally is to use a Markdown editor that can
 
 * Mac OSX: [Mou](http://mouapp.com/)
 * Windows: [MarkdownPad](http://www.markdownpad.com/)
-* Linux: [Writr](http://antrix.net/pages/writr-markdown/) & [ReText](http://sourceforge.net/p/retext/home/ReText/)
+* Linux: [Writr](http://antrix.net/pages/writr-markdown/), [ReText](http://sourceforge.net/p/retext/home/ReText/), & the [gedit-markdown](http://www.jpfleury.net/en/software/gedit-markdown.php) plugin
 
 Note: The website utilizes some additions to Markdown itself, so specialized functions such as code syntax highlighting may not be available in the editor, even though it will work fine on the site.
