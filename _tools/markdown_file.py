@@ -78,6 +78,7 @@ def getfunctionsfile(filename):
                 state = 'begin'
                 linenum = 0
                 for line in f:
+                    line = line.decode("utf-8", "replace")
                     if state == 'begin' and line.find('#functions') == 0:
                         state = 'functionsfile'
                         functionsfile.module = os.path.basename(root)
@@ -133,6 +134,7 @@ def getclass(clazz):
                 state = 'begin'
                 linenum = 0
                 for line in f:
+                    line = line.decode("utf-8", "replace")
                     if state == 'begin' and line.find('#class') == 0 and line.find(clazz)!=-1:
                         state = 'class'
                         documentation_clazz.module = os.path.basename(root)
