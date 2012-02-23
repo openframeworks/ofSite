@@ -227,6 +227,12 @@ hr.header {
 	padding: 5px 0px 0px 50px;
 	width: 550px;
 }
+.page-right-medium {
+	float: left;
+	margin: 0px;
+	padding: 0px;
+	width: 550px;
+}
 .page-left-wide {
 	float: left;
 	padding: 5px 40px 0px 50px;
@@ -267,6 +273,17 @@ hr.header {
 	margin: 0px;
 	padding: 0px;
 	width: 280px;
+}
+.submenucol-left {
+	float: left;
+	margin: 0px;
+	padding: 0px 50px 0px 0px;
+	width: 150px;
+}
+.submenucol-right {
+	float: left;
+	padding: 5px 0px 0px 50px;
+	width: 650px;
 }
 .search_input {
 	background: #D2D5D7;
@@ -413,6 +430,55 @@ a.nohover {
 	font-size: 1.2em;
 	font-weight: bold;
 		
+}
+
+.submenu{
+    list-style:none;
+    float:right;
+	font-family: 'Questrial', sans-serif;
+	font-size: 1.2em;
+}
+
+.submenu li{
+    display:inline;
+    margin-right:10px;
+}
+.categories{
+	font-family: 'Questrial', sans-serif;
+	font-size: 1.2em;
+	padding:0;
+}
+.categories li{
+    list-style:none;
+	margin-bottom:0.8em;
+}
+.categories a:hover, .categories a.active{
+	background-color: #EE3987;
+	color: white;
+	text-decoration: none;
+}
+.articles{
+    list-style:none;
+    padding:0;
+}
+.articles a{
+	font-family: 'Questrial', sans-serif;
+	font-size: 1.2em;
+}
+.articles p{
+    padding-left:1em;
+}
+.article h2{
+    margin-top:2em;
+}
+.article h3{
+    margin-top:1.6em;
+    font-size:1.5em;
+}
+.article_date{
+    font-size:0.7em;
+    color: #444;
+    margin-bottom:2em;
 }
 .functionslist a {
 	color: #444;
