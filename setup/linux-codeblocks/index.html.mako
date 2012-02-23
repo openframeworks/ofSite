@@ -14,17 +14,18 @@ Codeblocks is a fairly nice IDE for writing code on linux, and we are happy to s
 
 __ubuntu:__ 
 
-- open a terminal from Applications &gt; Accesories &gt; Terminal
+- open a terminal from Applications &gt; Accessories &gt; Terminal
 
 - in the terminal go to the directory where your openframeworks package is.
 
 - ie. if your user name is ofuser and you have uncompressed the oF package in the desktop it should be something like:
 
-        cd /home/ofuser/Desktop/of_preRelease_v0.06_linux_cb_FAT/scripts/ubuntu
+        cd /home/ofuser/Desktop/of_preRelease_v0.06_linux_cb_FAT/scripts/linux/ubuntu
 
 - once in this directory run the scripts with:
 
-        sudo ./install_codeblocks.shsudo ./install_dependencies.sh
+        sudo ./install_codeblocks.sh
+        sudo ./install_dependencies.sh
 
 - _problems with karmic:_ if you were having problems with installing codeblocks, that&#8217;s solved with the new install script, but if you already ran the previous one perhaps you need to clean your apt cache:
 
@@ -34,7 +35,7 @@ and execute again the install_codeblocks script. this will remove any program th
 
 __debian:__
 
-- open a terminal from Applications &gt; Accesories &gt; Root Terminal
+- open a terminal from Applications &gt; Accessories &gt; Root Terminal
 
 - in the terminal go to the directory where your openframeworks package is.
 
