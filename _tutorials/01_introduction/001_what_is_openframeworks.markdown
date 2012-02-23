@@ -20,12 +20,14 @@ Most functionality in openframeworks works using this pattern. In every example 
 The setup method is called only once at the beginning of the application and it's used to initialize other objects or variables usually declared in ofApp.h
 
 __ofApp.h__
+
 ~~~~{.cpp}
 ofVideoPlayer player;
 int counter;
 ~~~~
 
 __ofApp.cpp__
+
 ~~~~{.cpp}
 void ofApp::setup(){
     player.loadMovie("movie.mov");
@@ -46,11 +48,13 @@ In draw we draw to the screen.
 
 
 __ofApp.h__
+
 ~~~~{.cpp}
 float x;
 ~~~~
 
 __ofApp.cpp__
+
 ~~~~{.cpp}
 void ofApp::setup(){
     x = 0;
@@ -80,11 +84,13 @@ This classes also follow a shared pointer pattern. That means that when they are
 For example if you copy a video player and then modify the copy somehow that will also modify the original:
 
 __ofApp.h__
+
 ~~~~{.cpp}
 ofVideoPlayer player;
 ~~~~
 
 __ofApp.cpp__
+
 ~~~~{.cpp}
 void ofApp::update(){
     ofVideoPlayer player2 = player;
@@ -102,12 +108,14 @@ This classes contain data and can do some operations over the data they contain.
 This classes follow an allocate/loadData pattern. allocate reserves memory in the container to then put data in it using loadData. The name of this functions change depending on the class but the functionality is the same. Copying this classes makes a depth copy, that means that a copy is a whole new object with the same contents as the original so modifying the copy won't touch the original.
 
 __ofApp.h__
+
 ~~~~{.cpp}
 ofPixels pixels1, pixels2;
 ofTexture tex1, tex2;
 ~~~~
 
 __ofApp.cpp__
+
 ~~~~{.cpp}
 void ofApp::setup(){
     pixels1.allocate(640,480,OF_IMAGE_COLOR)
@@ -138,11 +146,13 @@ The main difference between GL data containers and other data containers is that
 For example:
 
 __ofApp.h__
+
 ~~~~{.cpp}
 ofTexture tex1, tex2;
 ~~~~
 
 __ofApp.cpp__
+
 ~~~~{.cpp}
 void ofApp::setup(){
     tex1.allocate(640,480,GL_RGB);
