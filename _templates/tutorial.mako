@@ -36,7 +36,7 @@
 
         	<div class="submenucol-right">
         	    <h2>${article.title}</h2>
-        	    <span class="article_date">${article.date}</span>
+        	    <span class="article_meta">${article.date}&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;${article.author}</span><br/>
         	    <div class="article">
         	    <%self:filter chain="markdown_template">
 ${article.body}

@@ -31,6 +31,7 @@ body {
 	margin: 0px;
 	padding: 30px 0px 80px 0px;
 	width: 100%;
+	min-height:500px;
 }
 #footer {
 	background-color: black;
@@ -475,8 +476,8 @@ a.nohover {
     margin-top:1.6em;
     font-size:1.5em;
 }
-.article_date{
-    font-size:0.7em;
+.article_meta{
+    font-size:0.8em;
     color: #444;
     margin-bottom:2em;
 }

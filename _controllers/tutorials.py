@@ -26,6 +26,7 @@ class Article:
         self.date = ''
         self.title = ''
         self.summary = ''
+        self.author = ''
         self.body = ''
         for line in mdfile:
             if state=='begin' and stripFileLine(line) =='---':
@@ -39,6 +40,9 @@ class Article:
                 continue
             if state=='header' and line.find('summary:')==0:
                 self.summary = stripFileLine(line[line.find(':')+1:])
+                continue
+            if state=='header' and line.find('author:')==0:
+                self.author = stripFileLine(line[line.find(':')+1:])
                 continue
             if state=='header' and stripFileLine(line)=='---':
                 state = 'body'

@@ -30,7 +30,7 @@
             </div><!-- End Page Wide -->
 
         	<div class="submenucol-right">
-               <p>.</p>
+               <p>This section contains tutorials about specific tasks in openFrameworks. If you want to contribute a tutorial, fork the <a href="http://github.com/openFrameworks/ofSite">ofSite</a> repository in github and add your tutorial in markdown format inside the _tutorials folder.</p>
             </div><!-- End Page Wide -->
         
     	
