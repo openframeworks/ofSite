@@ -93,3 +93,25 @@ The make targets are:
 __0061 new makefile:__ The makefile has been updated in 0061, now it autodetects the project file name, source files, etc&#8230; so you can just make a copy of any example, rename the folder and it will work. The behaviour of the makefile can be tweaked editing just 4 variables at the beginning of the file. Everything else should work automatically.
 
 You can also tell the makefile to include addons just by creating an addons.make file in the root of your project. Just put the names of the addons that you want to use in one line each and it will do the rest.
+
+FAQ
+---
+
+**The examples aren't compiling! I'm getting errors like this one:**
+
+    ../../../libs/glew/include/GL/glew.h:1172:20: fatal error: GL/glu.h: No such file or directory
+
+- Did you run install_dependencies.sh first? It will install libraries which are needed to compile the examples.
+
+**I got an example to compile, but it's not running correctly. There's a window but nothing is being displayed.**
+
+- Are you using a 3D-accelerated layout manager? Later versions of Ubuntu use one by default. Sometimes this may interfere with the graphics in your openFrameworks program. Try turning it off temporarily.
+
+    If you're using Gnome, type this command in your terminal:
+
+        metacity --replace &
+
+    Or for KDE:
+
+        kwin --replace &
+
