@@ -1,8 +1,9 @@
 ---
 date: 2012/02/23 10:00:00
-title: What is openFrameworks.
+title: How openFrameworks works
 summary: Brief description about common patterns used in the OF code
 author: Arturo Castro
+author_site: http://arturocastro.net
 ---
 
 openFrameworks is an open source C++ toolkit designed to assist the creative process by providing a simple and intuitive framework for experimentation. The toolkit is designed to work as a general purpose glue, and wraps together several commonly used libraries. 

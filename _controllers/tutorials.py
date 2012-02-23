@@ -27,6 +27,7 @@ class Article:
         self.title = ''
         self.summary = ''
         self.author = ''
+        self.author_site = ''
         self.body = ''
         for line in mdfile:
             if state=='begin' and stripFileLine(line) =='---':
@@ -44,6 +45,9 @@ class Article:
             if state=='header' and line.find('author:')==0:
                 self.author = stripFileLine(line[line.find(':')+1:])
                 continue
+            if state=='header' and line.find('author_site:')==0:
+                self.author_site = stripFileLine(line[line.find(':')+1:])
+                continue
             if state=='header' and stripFileLine(line)=='---':
                 state = 'body'
                 continue     
@@ -58,11 +62,11 @@ def run():
     
     categories = []
 
-    for root, dirs, files in os.walk(directory):
-        dirs.sort()
-        for name in dirs:
-            if len(os.listdir(os.path.join(root,name)))>0:
-                categories.append(name[name.find("_")+1:])
+    dirs = os.listdir(directory)
+    dirs.sort()
+    for category in dirs:
+        if os.path.isdir(os.path.join(directory,category)) and len(os.listdir(os.path.join(directory,category)))>0:
+            categories.append(category[category.find("_")+1:])
     
     bf.writer.materialize_template("tutorials.mako", ('tutorials',"index.html"), {'categories':categories} )
     
@@ -71,10 +75,14 @@ def run():
             continue
         articles = []
         category = catfolder[catfolder.find("_")+1:]
-        for article in os.listdir(os.path.join(directory,catfolder)):
+        articlesfiles = os.listdir(os.path.join(directory,catfolder));
+        articlesfiles.sort()
+        for article in articlesfiles:
             file_split = os.path.splitext(article)
             if file_split[1]=='.markdown':
-                article = Article(os.path.join(directory,catfolder,article))
-                bf.writer.materialize_template("tutorial.mako", (os.path.join('tutorials',category),article.file), {'categories':categories,'article':article} )
-                articles.append(article)
+                articleobj = Article(os.path.join(directory,catfolder,article))
+                bf.writer.materialize_template("tutorial.mako", (os.path.join('tutorials',category),articleobj.file), {'categories':categories,'article':articleobj} )
+                articles.append(articleobj)
+            if os.path.isdir(os.path.join(directory,catfolder,article)):
+                shutil.copytree(os.path.join(directory,catfolder,article),os.path.join('_site','tutorials',category,article))
         bf.writer.materialize_template("tutorials_category.mako", (os.path.join('tutorials',category),"index.html"), {'categories':categories,'category':category,'articles':articles} )
