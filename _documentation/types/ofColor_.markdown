@@ -52,10 +52,7 @@ Once you've selected a hue, you can use the *saturation* and *brightness* values
 
 In other words, saturation refers to the intensity of the color: high saturation means intense color, low saturation means washed out or black and white. Brightness refers to how light or dark the color is: high brightness means a bright color, low brightness means a dark color. If the brightness is 0 the resulting color will be black, regardless of the values of hue or saturation.
 
-
-
 ##Methods
-
 
 
 ### ofColor_()
@@ -91,34 +88,6 @@ ofSetColor( c ); // draw color is now white
 
 <!----------------------------------------------------------------------------->
 
-### ~ofColor_()
-
-<!--
-_syntax: ~ofColor_()_
-_name: ~ofColor_
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: False_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ### ofColor_(_r, _g, _b, _a = limit())
 
 <!--
@@ -145,6 +114,67 @@ Creates a color using RGB values and optional alpha value. The default alpha val
 ofColor c1(255, 0, 0); // red with 100% alpha
 ofColor c2(255, 0, 0, 128); // red with 50% alpha.
 ~~~~
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofColor_(gray, _a = limit())
+
+<!--
+_syntax: ofColor_(gray, _a = limit())_
+_name: ofColor_
+_returns: _
+_returns_description: _
+_parameters: float gray, float _a=limit()_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+Creates a gray color from the value of `gray`. `_a` defaults to completely opaque.
+
+~~~~{.cpp}
+ofColor c(0.5, 122); // now c is 50% alpha gray, ooh, dismal
+~~~~
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ~ofColor_()
+
+<!--
+_syntax: ~ofColor_()_
+_name: ~ofColor_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: False_
+_advanced: False_
+-->
+
+_description: _
+
+
 
 
 
@@ -211,39 +241,6 @@ Creates a color by copying another color, overriding the existing alpha value wi
 ~~~~{.cpp}
 ofColor mom(255, 0, 0); // red
 ofColor c(mom, 128); // now c is red with 50% alpha
-~~~~
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofColor_(gray, _a = limit())
-
-<!--
-_syntax: ofColor_(gray, _a = limit())_
-_name: ofColor_
-_returns: _
-_returns_description: _
-_parameters: float gray, float _a=limit()_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-Creates a gray color from the value of `gray`. `_a` defaults to completely opaque.
-
-~~~~{.cpp}
-ofColor c(0.5, 122); // now c is 50% alpha gray, ooh, dismal
 ~~~~
 
 
@@ -428,6 +425,164 @@ c.setHex( 0xFF8000, 128 ); // orange, 50% alpha
 
 <!----------------------------------------------------------------------------->
 
+###void setHsb(hue, saturation, brightness, alpha)
+
+<!--
+_syntax: setHsb(hue, saturation, brightness, alpha)_
+_name: setHsb_
+_returns: void_
+_returns_description: _
+_parameters: float hue, float saturation, float brightness, float alpha_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+Set this color using a HSB representation. Refer the [discussion of HSB](#HSB) above. **Note** that the `hue` value has a range that matches the base data type (ie **0 to 255** for the standard `ofColor`), rather than 0 to 360, 0 to 100 or float 0 to 1, as may be expected.
+
+
+<!----------------------------------------------------------------------------->
+
+###void setHsb(hue, saturation, brightness)
+
+<!--
+_syntax: setHsb(hue, saturation, brightness)_
+_name: setHsb_
+_returns: void_
+_returns_description: _
+_parameters: float hue, float saturation, float brightness_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setHue(hue)
+
+<!--
+_syntax: setHue(hue)_
+_name: setHue_
+_returns: void_
+_returns_description: _
+_parameters: float hue_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+Change the current hue, leaving saturation and brightness intact. 
+
+~~~~{.cpp}
+ofColor c = ofColor::fromHsb( 0, 255, 255 ); // bright red
+c.setHue( 128 ); // now bright cyan
+~~~~
+
+Refer the [discussion of HSB](#HSB) above.
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setSaturation(saturation)
+
+<!--
+_syntax: setSaturation(saturation)_
+_name: setSaturation_
+_returns: void_
+_returns_description: _
+_parameters: float saturation_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+Change the current saturation, leaving hue and brightness intact.
+
+~~~~{.cpp}
+ofColor c( 0, 0, 255 ); // vibrant blue
+c.setSaturation( 128 ); // pale blue
+~~~~
+
+Refer the [discussion of HSB](#HSB) above.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setBrightness(brightness)
+
+<!--
+_syntax: setBrightness(brightness)_
+_name: setBrightness_
+_returns: void_
+_returns_description: _
+_parameters: float brightness_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+Change the current brightness, leaving hue and saturation intact.
+
+~~~~{.cpp}
+ofColor c( 0, 0, 255 ); // bright blue
+c.setBrightness( 128 ); // dark blue
+~~~~
+
+Refer the [discussion of HSB](#HSB) above.
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###int getHex()
 
 <!--
@@ -457,6 +612,156 @@ int hex = c.getHex(); // hex is 0xffff00 (or 16776960 in decimal)
 
 Usually when we look at these colors in print they're hex, so don't be surprised if they don't look familiar when you print them as decimal. 
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void getHsb(&hue, &saturation, &brightness)
+
+<!--
+_syntax: getHsb(&hue, &saturation, &brightness)_
+_name: getHsb_
+_returns: void_
+_returns_description: _
+_parameters: float &hue, float &saturation, float &brightness_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+Return all three components of the HSB representation of this color at the same time.
+
+~~~~{.cpp}
+ofColor red(255,0,0);
+float hue, saturation, brightness;
+red.getHsb( hue, saturation, brightness );
+// hue is now 0 (for red), saturation is 255, brightness is 255
+~~~~
+
+Refer the [discussion of HSB](#HSB) above.
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float getHue()
+
+<!--
+_syntax: getHue()_
+_name: getHue_
+_returns: float_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+Return the hue component of the HSB representation of this color. Refer the [discussion of HSB](#HSB) above.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float getSaturation()
+
+<!--
+_syntax: getSaturation()_
+_name: getSaturation_
+_returns: float_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+Return the saturation component of the HSB representation of this color. Refer the [discussion of HSB](#HSB) above.
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float getBrightness()
+
+<!--
+_syntax: getBrightness()_
+_name: getBrightness_
+_returns: float_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+Return the brightness component of the HSB representation of this color. Refer the [discussion of HSB](#HSB) above.
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float getLightness()
+
+<!--
+_syntax: getLightness()_
+_name: getLightness_
+_returns: float_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+Return the average of the three color components. This is used by the Lab and HSL color spaces.
 
 
 
@@ -720,314 +1025,6 @@ _advanced: False_
 _description: _
 
 Returns this color lerped towards `target` by `amount`, without modifying the original. See [lerp](#lerp) for more info.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float getHue()
-
-<!--
-_syntax: getHue()_
-_name: getHue_
-_returns: float_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-Return the hue component of the HSB representation of this color. Refer the [discussion of HSB](#HSB) above.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float getSaturation()
-
-<!--
-_syntax: getSaturation()_
-_name: getSaturation_
-_returns: float_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-Return the saturation component of the HSB representation of this color. Refer the [discussion of HSB](#HSB) above.
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float getBrightness()
-
-<!--
-_syntax: getBrightness()_
-_name: getBrightness_
-_returns: float_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-Return the brightness component of the HSB representation of this color. Refer the [discussion of HSB](#HSB) above.
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float getLightness()
-
-<!--
-_syntax: getLightness()_
-_name: getLightness_
-_returns: float_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-Return the average of the three color components. This is used by the Lab and HSL color spaces.
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void getHsb(&hue, &saturation, &brightness)
-
-<!--
-_syntax: getHsb(&hue, &saturation, &brightness)_
-_name: getHsb_
-_returns: void_
-_returns_description: _
-_parameters: float &hue, float &saturation, float &brightness_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-Return all three components of the HSB representation of this color at the same time.
-
-~~~~{.cpp}
-ofColor red(255,0,0);
-float hue, saturation, brightness;
-red.getHsb( hue, saturation, brightness );
-// hue is now 0 (for red), saturation is 255, brightness is 255
-~~~~
-
-Refer the [discussion of HSB](#HSB) above.
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setHue(hue)
-
-<!--
-_syntax: setHue(hue)_
-_name: setHue_
-_returns: void_
-_returns_description: _
-_parameters: float hue_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-Change the current hue, leaving saturation and brightness intact. 
-
-~~~~{.cpp}
-ofColor c = ofColor::fromHsb( 0, 255, 255 ); // bright red
-c.setHue( 128 ); // now bright cyan
-~~~~
-
-Refer the [discussion of HSB](#HSB) above.
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setSaturation(saturation)
-
-<!--
-_syntax: setSaturation(saturation)_
-_name: setSaturation_
-_returns: void_
-_returns_description: _
-_parameters: float saturation_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-Change the current saturation, leaving hue and brightness intact.
-
-~~~~{.cpp}
-ofColor c( 0, 0, 255 ); // vibrant blue
-c.setSaturation( 128 ); // pale blue
-~~~~
-
-Refer the [discussion of HSB](#HSB) above.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setBrightness(brightness)
-
-<!--
-_syntax: setBrightness(brightness)_
-_name: setBrightness_
-_returns: void_
-_returns_description: _
-_parameters: float brightness_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-Change the current brightness, leaving hue and saturation intact.
-
-~~~~{.cpp}
-ofColor c( 0, 0, 255 ); // bright blue
-c.setBrightness( 128 ); // dark blue
-~~~~
-
-Refer the [discussion of HSB](#HSB) above.
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setHsb(hue, saturation, brightness, alpha)
-
-<!--
-_syntax: setHsb(hue, saturation, brightness, alpha)_
-_name: setHsb_
-_returns: void_
-_returns_description: _
-_parameters: float hue, float saturation, float brightness, float alpha_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-Set this color using a HSB representation. Refer the [discussion of HSB](#HSB) above. **Note** that the `hue` value has a range that matches the base data type (ie **0 to 255** for the standard `ofColor`), rather than 0 to 360, 0 to 100 or float 0 to 1, as may be expected.
-
-
-<!----------------------------------------------------------------------------->
-
-###void setHsb(hue, saturation, brightness)
-
-<!--
-_syntax: setHsb(hue, saturation, brightness)_
-_name: setHsb_
-_returns: void_
-_returns_description: _
-_parameters: float hue, float saturation, float brightness_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
 
 
 
@@ -4012,7 +4009,6 @@ _description: _
 <!----------------------------------------------------------------------------->
 
 ##Variables
-
 
 
 ###ofColor white
