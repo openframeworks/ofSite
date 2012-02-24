@@ -158,12 +158,12 @@ __advanced: true__
 
 
 ###ofLogError###
-__visible: true__
+__visible: false__
 __advanced: false__
 
 
 ###ofLogWarning###
-__visible: true__
+__visible: false__
 __advanced: false__
 
 
@@ -190,7 +190,7 @@ __advanced: false__
 
 
 ###ofLogNotice###
-__visible: true__
+__visible: false__
 __advanced: false__
 
 
@@ -216,7 +216,7 @@ __advanced: false__
 
 
 ###ofLogVerbose###
-__visible: true__
+__visible: false__
 __advanced: false__
 
 
@@ -246,7 +246,7 @@ __advanced: false__
 
 
 ###ofLogFatalError###
-__visible: true__
+__visible: false__
 __advanced: false__
 
 

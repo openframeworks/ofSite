@@ -2,9 +2,7 @@
 
 ##Description
 
-
-
-
+The ofLog functions provide control of the global logging interface. You can set the overall logging level in order to filter what messages you want to see when debugging or releasing an application. Log messages can also be directed to a file or a custom destination.
 
 <!----------------------------------------------------------------------------->
 
@@ -38,7 +36,7 @@ logLevel values are (in order of priority):
 	OF_LOG_FATAL_ERROR
 	OF_LOG_SILENT
 
-Following priority, setting a log level of OF_LOG_ERROR, means only error & fatal error messages will be printed. Conversely, setting OF_LOG_VERBOSE means **all** log level messages will be printed.
+Following priority, setting a log level of `OF_LOG_ERROR`, means only error & fatal error messages will be printed. Conversely, setting `OF_LOG_VERBOSE` means **all** log level messages will be printed.
 
 Here's a code example:
 
@@ -60,9 +58,9 @@ ofLogVerbose() << "a verbose print";	// this doesn't
 
 ~~~~
 
-The default log level is OF_LOG_NOTICE.
+The default log level is `OF_LOG_NOTICE`.
 
-OF_LOG_SILENT is a special value which disables **all** messages.
+`OF_LOG_SILENT` is a special value which disables **all** messages.
 
 <!----------------------------------------------------------------------------->
 
@@ -85,11 +83,12 @@ _advanced: True_
 
 _description: _
 
-Sets the logging level for a particular "module". A module is a string that is added to the beginning of the log line and can be used to separate logging messages by setting an independent log level for **this module only**. This module-specific log level has no effect on other modules.
+Sets the logging level for a particular "module". A module is a string that is added to the beginning of the log line and can be used to separate logging messages by setting an independent log level for **that module only**. This module-specific log level has no effect on other modules.
 
-For instance, let's say you have an object called "Hello". If you set the log level for "Hello" to OF_LOG_ERROR, no messages to "Hello" with a level below OF_LOG_ERROR will print. However, this has no effect on regular logging messages:
+For instance, let's say you have an object called "Hello". If you set the log level for "Hello" to `OF_LOG_ERROR`, no messages to "Hello" with a level below `OF_LOG_ERROR` will print. However, this has no effect on regular logging messages:
 
 ~~~~{.cpp}
+
 // "Hello" starts at log level notice
 
 // log to the "Hello" module
@@ -111,13 +110,26 @@ ofLogNotice() << "a test print";			// still prints, not affected by "Hello"
 
 ~~~~
 
-The default log level for modules is OF_LOG_NOTICE.
+The default log level for modules is `OF_LOG_NOTICE`.
 
 The default module when logging without setting the module is "OF". So setting the log level for "OF" to OF_LOG_SILENT will disable all non-module log messages.
 
 See ofSetLogLevel for the log level values. 
 
 Note: ofLog() itself cannot accept a module variable. You must use one of the specific log level classes: `ofLogVerbose`, `ofLogNotice`, `ofLogWarning`, `ofLogError`, & `ofLogFatalError`.
+
+~~~~{.cpp}
+
+// this prints a warning message
+ofLogWarning() << "a warning print";
+
+// !!! This does not print a message as the string "a warning print" is the module argument !!!
+ofLogWarning("a warning print");
+
+// this prints a warning message to the "Hello" module
+ofLogWarning("Hello") << "a warning print";
+
+~~~~
 
 <!----------------------------------------------------------------------------->
 
@@ -262,7 +274,7 @@ ofLog() << "The current log level is " << ofGetLogLevelName(currentLevel);
 
 ~~~~
 
-See ofSetLogLevel for the log level values. 
+See [ofSetLogLevel(logLevel)](./ofLog.html#functions) for the log level values. 
 
 <!----------------------------------------------------------------------------->
 
@@ -287,7 +299,7 @@ _description: _
 
 Enable logging to a file instead of the console.
 
-Set the path and name of the log file and it will be created if it doesn't exist. If it does exist, it will be overwritten unless you set **append** to true, whereas new lines will be added to the bottom of the file.
+Set the path and name of the log file and it will be created if it doesn't exist. If it does exist, it will be overwritten unless you set *append* to true, whereas new lines will be added to the bottom of the file.
 
 ~~~~{.cpp}
 
@@ -328,7 +340,11 @@ _description: _
 
 Enable logging to the console instead of a file.
 
-Log messages will be printed to the console (CMD on Win, Terminal/Xcode debug window on Mac, xterm/gnome-terminal etc on Linux). 
+Log messages will be printed to the console:
+
+* Windows: CMD Prompt on Windows
+* Mac: Terminal or the Xcode debug window (when debugging)
+* Linux: xterm, gnome-terminal, etc
 
 Console logging is enabled by default.
 
