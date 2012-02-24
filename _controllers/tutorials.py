@@ -30,6 +30,7 @@ class Article:
         self.author_site = ''
         self.body = ''
         for line in mdfile:
+            line = line.decode('utf-8','replace')
             if state=='begin' and stripFileLine(line) =='---':
                 state='header'
                 continue
