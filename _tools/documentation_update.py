@@ -158,8 +158,12 @@ def serialize_class(filename):
 
 
 #index.write( '<%inherit file="_templates/documentation.mako" />\n' )
+dir_count=0
+file_count=0
 for root, dirs, files in os.walk(of_documentation):
+    dir_count+=1
     for name in files:       
+        file_count+=1
         filename = os.path.join(root, name)
         if name.find('class')==0:
             serialize_class(filename)
@@ -167,7 +171,12 @@ for root, dirs, files in os.walk(of_documentation):
             serialize_functionsfile(filename)
 
 for root, dirs, files in os.walk(of_documentation):
+    dir_count+=1
     for name in files:       
+        file_count+=1
         filename = os.path.join(root, name)
         if name.find('of_')==0 and name.find('8h.xml')!=-1:
             update_moved_functions(filename)
+
+print ""+str(dir_count)+" dirs/"+str(file_count)+" files"
+
