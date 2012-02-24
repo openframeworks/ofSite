@@ -3,7 +3,7 @@
 
 ##Description
 
-ofColor represents a color in openFrameworks. Colors are usually defined by specifying a red, green, and blue component, and a transparency (alpha) component. 
+`ofColor` represents a color in openFrameworks. Colors are usually defined by specifying a red, green, and blue component (RGB), and a transparency (alpha) component. You can also specify colors using hue, saturation and brightness (HSB).
 
 For example: 
 
@@ -26,13 +26,13 @@ ofSetColor( ofColor(0, 0, ofRandom( 128, 255 ) );
 // draw color is now a random blue
 ~~~~
 
-ofColor also enables a lot of extra functionality like using HSB instead of color spectrums, lerping or linearly interpolating between colors, and inverting colors, among other things. 
+`ofColor` also enables a lot of extra functionality like using HSB instead of color spectrums, lerping or linearly interpolating between colors, and inverting colors, among other things. 
 
-ofColor is templated, which means that it has several different ways it can be created. These are probably best to leave as they are because there's already a few kinds type-deffed for you. The default ofColor uses unsigned char values (0 to 255), but you can make an ofFloatColor if you want to work with floating point numbers between 0 and 1, or ofShortColor if you want to work with integers between 0 and 65,535.
+`ofColor` is templated, which means that it has several different ways it can be created. These are probably best to leave as they are because there's already a few kinds `typedef`ed for you. The default `ofColor` uses `unsigned char` values (0 to 255), but you can make an `ofFloatColor` if you want to work with floating point numbers between 0 and 1, or `ofShortColor` if you want to work with integers between 0 and 65,535.
 
-### [HSB]()
+### HSB
 
-You're probably familiar with RGB colors already, but HSB is a big part of ofColor. It uses a *hue* value between 0 and 255 to determine what the hue (the 'color' in the sense of a color in the rainbow) will be:
+You're probably familiar with RGB colors already, but HSB is a big part of `ofColor`. It uses a *hue* value (for the standard `ofColor` the range for this value is between 0 and 255) to determine what the hue (the 'color' in the sense of a color in the rainbow) will be:
 
 ![HSB](../types/hsb.png)
 
@@ -209,8 +209,8 @@ _description: _
 Creates a color by copying another color, overriding the existing alpha value with the value of `_a`:
 
 ~~~~{.cpp}
-ofColor mom(255, 0, 0);
-ofColor c(mom, 122); // now c is 50% alpha red
+ofColor mom(255, 0, 0); // red
+ofColor c(mom, 128); // now c is red with 50% alpha
 ~~~~
 
 
@@ -547,12 +547,12 @@ _summary: _
 _constant: False_
 _static: no_
 _visible: True_
-_advanced: False_
+_advanced: True_
 -->
 
 _description: _
 
-This function is included to satisfy Kyle's Conceptual Completeness Criterion (KCCC).
+Divide all color components by brightness. This has the effect of conforming the color to the outer surface of the hue/saturation/brightness spherical color space, by forcing a unit radius (brightness).
 
 The following
 ~~~~{.cpp}
@@ -563,7 +563,9 @@ The following
 	ofSetColor(c);
 	ofCircle(300, 100, 100);
 ~~~~
+
 will create this:
+
 ![ofNorm](../types/ofNormalize.png)
 
 
@@ -682,12 +684,12 @@ _summary: _
 _constant: False_
 _static: no_
 _visible: True_
-_advanced: False_
+_advanced: True_
 -->
 
 _description: _
 
-Returns the normalized version of this color, without modifying the original. See [invert](#invert) for more info.
+Returns the normalized version of this color, without modifying the original. See [normalize](#normalize) for more info.
 
 
 
