@@ -54,9 +54,10 @@ or
 Uncompress it in any folder on your hard disk. Later you'll need to tell the openFrameworks makefiles where to find it.
 
 **c) Android NDK**: This is the C/C++ compiler, headers and libraries for Android. Note that the latest version (r7b) doesn't work yet as of Feb 19, 2012, so you'll need to download an earlier version. Here are the links for r6:
-OS X: [http://dl.google.com/android/ndk/android-ndk-r6-darwin-x86.tar.bz2][12]
-Linux: [http://dl.google.com/android/ndk/android-ndk-r6-linux-x86.tar.bz2][13]
-Windows: [http://dl.google.com/android/ndk/android-ndk-r6-windows.zip][14]
+
+- OS X: [http://dl.google.com/android/ndk/android-ndk-r6-darwin-x86.tar.bz2][12]
+- Linux: [http://dl.google.com/android/ndk/android-ndk-r6-linux-x86.tar.bz2][13]
+- Windows: [http://dl.google.com/android/ndk/android-ndk-r6-windows.zip][14]
 
 Later versions are available at:  
 [http://developer.android.com/sdk/ndk/index.html][3]
