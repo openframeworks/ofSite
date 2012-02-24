@@ -1,11 +1,10 @@
 ---
 date: 2012/02/23 19:52:00
 title: Basic introduction to git and OF
-summary: Short introduction to git in connection with openFrameworks
+summary: A short introduction to git in connection with openFrameworks
 author: Christoph Buchner
 author_site: 
 ---
-## Basic introduction to git and OF
 
 This tutorial contains a short introduction to the distributed version control system **git**, why it's a good idea to use it when coding, and its usage in connection with openFrameworks and [github](www.github.com).
 
