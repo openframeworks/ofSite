@@ -2,10 +2,24 @@
 
 
 ##Description
+ofDirectory is a class for reading and manipulating directories on the file system through openFrameworks.
 
+Here is a common way to use it:
 
+~~~~{.cpp}
+//some path, may be absolute or relative to bin/data
+string path = "/my/path/file"; 
+ofDirectory dir(path);
+//only show png files
+dir.allowExt("png");
+//populate the directory object
+dir.listDir();
 
-
+//go through and print out all the paths
+for(int i = 0; i < dir.numFiles(); i++){
+	ofLogNotice(dir.getPath(i));
+}
+~~~~
 
 ##Methods
 
@@ -31,7 +45,7 @@ _advanced: False_
 
 _description: _
 
-
+Constructs an empty directory object.
 
 
 
@@ -59,7 +73,7 @@ _advanced: False_
 
 _description: _
 
-
+Constructs a directory object and calls open() on the provided path.  The contents of the path are not accessible until listDir() is called.
 
 
 
@@ -87,10 +101,9 @@ _advanced: False_
 
 _description: _
 
+Opens a path. At this point you can see if the directory exists by calling exists() but the contents of the path are not accessible until listDir() is called.
 
-
-
-
+	
 
 
 <!----------------------------------------------------------------------------->
@@ -116,7 +129,7 @@ _advanced: False_
 _description: _
 
 
-
+Closes the directory.
 
 
 
@@ -143,9 +156,18 @@ _advanced: False_
 
 _description: _
 
+Creates the directory if it doesn't exist already. A common reason to use create is to ensure that you are able to write files to a known path, like so
 
+~~~~{.cpp}
+string path = "/path/to/file";
+ofDirectory dir(path);
+if(!dir.exists()){
+	dir.create(true);
+}
+//now you can be sure that path exists
+~~~~
 
-
+The recursive boolean flag will indicate if you'd like to create directories all the directories required to reach the given path.  In our example, if "/path/to" didn't already exist, the call to create() would also create these. If recursive were set to false, the directory would not be created.
 
 
 
@@ -171,7 +193,7 @@ _advanced: False_
 
 _description: _
 
-
+Returns true if the open directory exists. Great to be used in conjunction with ofDirectory::create()
 
 
 
@@ -199,7 +221,7 @@ _advanced: False_
 
 _description: _
 
-
+Returns the currently opened path.
 
 
 
@@ -227,7 +249,7 @@ _advanced: False_
 
 _description: _
 
-
+Returns true if the open directory can be read.
 
 
 
@@ -255,8 +277,7 @@ _advanced: False_
 
 _description: _
 
-
-
+Returns true if the open directory can be written to.
 
 
 
@@ -283,7 +304,7 @@ _advanced: False_
 
 _description: _
 
-
+Returns true if the current directory is executable. An executable directory can be entered into with command such as cd.
 
 
 
@@ -311,7 +332,7 @@ _advanced: False_
 
 _description: _
 
-
+Returns true if the given path is actually a directory.
 
 
 
@@ -339,7 +360,7 @@ _advanced: False_
 
 _description: _
 
-
+Returns true if the directory is hidden in the file system. 
 
 
 
@@ -367,7 +388,7 @@ _advanced: False_
 
 _description: _
 
-
+Enables or disables writeable on the current open directory.
 
 
 
@@ -395,6 +416,7 @@ _advanced: False_
 
 _description: _
 
+Enables or disables readable on the current open directory.
 
 
 
@@ -423,6 +445,7 @@ _advanced: False_
 
 _description: _
 
+Enables or disables execution on the current open directory. If the directory is executable then it can be entered through commands such as cd.
 
 
 
@@ -451,7 +474,7 @@ _advanced: False_
 
 _description: _
 
-
+Sets whether or not the call to listDir() will return hidden files.
 
 
 
@@ -479,7 +502,7 @@ _advanced: False_
 
 _description: _
 
-
+Copies the directory into path.  If bRelativeToData is set to false then path should be absolute. If overwrite is set to true any existing files with the same name will be overwritten by the copy.
 
 
 
@@ -507,6 +530,7 @@ _advanced: False_
 
 _description: _
 
+Moves the directory into another directory at path.  If bRelativeToData is set to false then path should be absolute. If overwrite is set to true any existing files with the same name will be overwritten by the move.
 
 
 
@@ -535,6 +559,7 @@ _advanced: False_
 
 _description: _
 
+Renames the directory to the path path.  If bRelativeToData is set to false then path should be absolute. If overwrite is set to true any existing files with the same name will be overwritten by the rename.
 
 
 
@@ -563,7 +588,7 @@ _advanced: False_
 
 _description: _
 
-
+Deletes the directory. If recursive is set to false and this directory contains others the remove will fail.
 
 
 
@@ -591,11 +616,18 @@ _advanced: False_
 
 _description: _
 
+Adds an allowed extension to the list of filters when listing directories. Use this to set any number of filters before calling listDir().
 
+For example if you wanted to only get images in a directory, you may set several filters:
 
-
-
-
+~~~~{.cpp}
+string path = "/path/to/images";
+ofDirectory dir(path);
+dir.allowExt("png");
+dir.allowExt("jpg");
+dir.allowExt("gif");
+dir.listDir();
+~~~~
 
 <!----------------------------------------------------------------------------->
 
@@ -619,7 +651,7 @@ _advanced: False_
 
 _description: _
 
-
+Opens and populates the directory with files.  Returns the number of files found.
 
 
 
@@ -647,6 +679,7 @@ _advanced: False_
 
 _description: _
 
+Populates the directory with files. Call this after opening a directory and setting filters. After this call, size(), getPath(position), and getName(position) can be used to access the contents of the directory.
 
 
 
@@ -675,7 +708,7 @@ _advanced: False_
 
 _description: _
 
-
+Returns the file name,(eg "mypicture.png") with extension but not the enclosing path at a given index. Position must be less than the result of numFiles().
 
 
 
@@ -703,7 +736,7 @@ _advanced: False_
 
 _description: _
 
-
+Returns the absolute path,(eg "/path/to/files/mypicture.png"). Position must be less than the result of size().
 
 
 
@@ -731,6 +764,7 @@ _advanced: False_
 
 _description: _
 
+Opens and returns an ofFile object at position.  Mode determines how you may interact with the file, the options being: Reference,ofFile::ReadOnly, ofFile::WriteOnly, ofFile::ReadWrite, ofFile::Append
 
 
 
@@ -759,7 +793,7 @@ _advanced: False_
 
 _description: _
 
-
+Returns a vector of ofFile objects populated by a prior call to listDir().  The files are opened in ofFile::Reference mode.
 
 
 
@@ -787,7 +821,7 @@ _advanced: False_
 
 _description: _
 
-
+Operator for accessing files with array notation syntax. Call is equivalent to ofFile::getFile(position).
 
 
 
@@ -815,7 +849,7 @@ _advanced: False_
 
 _description: _
 
-
+Returns if hidden files are set to be shown or not.
 
 
 
@@ -843,7 +877,7 @@ _advanced: False_
 
 _description: _
 
-
+Resets the current directory. Equivalent to close().
 
 
 
@@ -871,7 +905,7 @@ _advanced: False_
 
 _description: _
 
-
+Sorts the contents of the directory by filename.
 
 
 
@@ -899,7 +933,7 @@ _advanced: False_
 
 _description: _
 
-
+Returns the number of files contained within the directory. Set after listDir() is called.
 
 
 
@@ -927,7 +961,7 @@ _advanced: False_
 
 _description: _
 
-
+deprecated. Use size().
 
 
 
@@ -955,7 +989,7 @@ _advanced: False_
 
 _description: _
 
-
+Accessor to low-level poco file object.
 
 
 
@@ -983,7 +1017,7 @@ _advanced: False_
 
 _description: _
 
-
+Returns true if this directory and another have the same path.
 
 
 
@@ -1011,7 +1045,7 @@ _advanced: False_
 
 _description: _
 
-
+Returns true if this directory and another have different paths.
 
 
 
@@ -1039,7 +1073,7 @@ _advanced: False_
 
 _description: _
 
-
+Returns true if the right hand side directory is alphabetically after the left hand side directory.
 
 
 
@@ -1067,6 +1101,7 @@ _advanced: False_
 
 _description: _
 
+Returns true if the right hand side directory is alphabetically after or equal to the left hand side directory.
 
 
 
@@ -1095,6 +1130,7 @@ _advanced: False_
 
 _description: _
 
+Returns true if the left hand side directory is alphabetically after the right hand side directory.
 
 
 
@@ -1123,7 +1159,7 @@ _advanced: False_
 
 _description: _
 
-
+Returns true if the left hand side directory is alphabetically after or equal to the right hand side directory;
 
 
 
@@ -1151,7 +1187,7 @@ _advanced: False_
 
 _description: _
 
-
+Static method to create a directory at a given path. 
 
 
 
@@ -1179,7 +1215,7 @@ _advanced: False_
 
 _description: _
 
-
+Returns true if the directory at dirPath is empty.
 
 
 
@@ -1207,8 +1243,7 @@ _advanced: False_
 
 _description: _
 
-
-
+Returns true if the directory at dirPath exists.
 
 
 
@@ -1235,7 +1270,7 @@ _advanced: False_
 
 _description: _
 
-
+Removes a directory. If deleteIfNotEmpty is set to false and the directory contains files the call will fail.
 
 
 
@@ -1262,9 +1297,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
 
 
 
