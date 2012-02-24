@@ -16,6 +16,7 @@ Summary
 These instructions go into a lot of important detail, but the main steps are:
 
 - Install Eclipse, Ant and the Android SDK and NDK.
+- If you're using OS X, install the Developer Tools.
 - Setup the Android Eclipse plugin.
 - Download openFrameworks either from the download page, or clone from git.
 - Set path variables so openFrameworks knows where SDK and NDK are.
@@ -88,6 +89,10 @@ or for newer distributions:
 
 Download and uncompress Apache Ant 1.8 or greater from [http://ant.apache.org/bindownload.cgi][5]
 
+**For OSX:**
+
+Install the OS X Developer Tools: TODO
+
 **f) Set the paths for the SDK, NDK and Ant  
 **
 
@@ -100,8 +105,8 @@ This will tell openFrameworks where to find the SDK, NDK and Ant.
 - Set the values of SDK_ROOT and NDK_ROOT to their install paths
 
 - Set ANT_HOME:
-Linux: /usr  
-OS X: Set it to the folder where you uncompressed Ant before.
+-- Linux: /usr  
+-- OS X: Set it to the folder where you uncompressed Ant before.
 
 **g) Start Eclipse**: You will see a pop up asking you what workspace to use. Just point it to:
 openFrameworks/apps/androidExamples.
@@ -134,8 +139,7 @@ Select it and press 'Next' until you get to the "Review Licenses" screen. Check 
 
 *Note:* I didn't need to do this step for SDK version 15.
 
-In the last version of Eclipse the Java compatibility is set to version 6 but Android needs version 5. To change it, in
-Window \> Preferences \> Java \> Compiler 
+In the last version of Eclipse the Java compatibility is set to version 6 but Android needs version 5. You can change this in Window \> Preferences \> Java \> Compiler. (Preferences is in the Eclipse menu for OS X.) 
 
 The compiler compliance settings should be set to 1.5\.
 
@@ -145,7 +149,7 @@ The compiler compliance settings should be set to 1.5\.
 
 **j) Configuring the Android plugin**: 
 
-Once we have installed the Android plugin we need to tell it where to find the SDK. In Eclipse go to Window \> Preferences \> Android and set the SDK location by browsing to the folder where you uncompressed the SDK before.
+Once we have installed the Android plugin we need to tell it where to find the SDK. In Eclipse go to Window \> Preferences \> Android (or Eclipse \> Preferences for OS X) and set the SDK location by browsing to the folder where you uncompressed the SDK before.
 
 ![android_prefs](android_prefs-600x449.png)
 
@@ -178,7 +182,7 @@ Import in this order:
 
 **l) Compile openFrameworks**:
 
-In the "Project Explorer" on the left side of the window, select the openFrameworks project. Choose the Android target in Window \> Build Configurations \> Set Active, and then click Window \> Build Project. You can also do this from the toolbar by switching to the C/C++ perspective and clicking the toolbar button with a hammer.
+In the "Project Explorer" on the left side of the window, select the openFrameworks project. Choose the Android target in Project \> Build Configurations \> Set Active, and then click Project \> Build Project. You can also do this from the toolbar by switching to the C/C++ perspective and clicking the toolbar button with a hammer.
 
 ![](android-compile-OF.png)
 
