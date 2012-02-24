@@ -4,6 +4,7 @@
 <script src="${bf.config.site.url}/js/shCore.js" type="text/javascript"></script>
 <script src="${bf.config.site.url}/js/shAutoloader.js" type="text/javascript"></script>
 <script src="${bf.config.site.url}/js/shBrushCpp.js" type="text/javascript"></script>
+<script src="${bf.config.site.url}/js/shBrushJava.js" type="text/javascript"></script>
 <link href="${bf.config.site.url}/css/shCore.css" rel="stylesheet" type="text/css" />
 <link href="${bf.config.site.url}/css/shThemeDefault.css" rel="stylesheet" type="text/css" />
 

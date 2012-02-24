@@ -1,0 +1,64 @@
+<%inherit file="base.mako" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    ${self.head()}
+    <script src="${bf.config.site.url}/js/jquery.columnizer.min.js"></script>
+    <script src="${bf.config.site.url}/js/documentation.js"></script>
+  </head>
+  <body>
+    <div id="content">
+      ${self.header()}
+      <div id="body-wrap">	
+	    <div class="page-wide">
+            <ul class="submenu">
+                <li><a href="/documentation">reference</a></li>
+                <li><a href="/tutorials">tutorials</a></li>
+            </ul>
+
+            
+            <h1>tutorials</h1>    
+
+
+        	<div class="submenucol-left">
+        	    <ul class="categories">
+                % for lcategory in categories:
+                    % if lcategory == category:
+                        <li><a  class="active" href="/tutorials/${lcategory}">${lcategory}</a></li>
+                    % else:
+                        <li><a href="/tutorials/${lcategory}">${lcategory}</a></li>
+                    % endif
+                % endfor
+                </ul>
+            </div><!-- End Page Wide -->
+
+        	<div class="submenucol-right">
+        	    <h2>${article.title}</h2>
+        	    <span class="article_meta">${article.date}&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="${article.author_site}">${article.author}</a></span><br/>
+        	    <div class="article">
+        	    <%self:filter chain="markdown_template">
+${article.body}
+        		</%self:filter>
+        		</div>
+            </div><!-- End Page Wide -->
+        
+    	
+
+    	</div>
+              
+      </div><!-- End Body Wrap -->
+      
+      <div id="footer">
+        ${self.footer()}
+      </div> <!-- End Footer -->
+    </div> <!-- End Content -->
+  </body>
+</html>
+
+<%def name="header()">
+  <%include file="header.mako" args="active='documentation'" />
+</%def>
+
+

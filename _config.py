@@ -50,8 +50,12 @@ blog.timezone = "US/Eastern"
 
 controllers.documentation.enabled = True
 controllers.community.enabled = True
+controllers.tutorials.enabled = True
 
 documentation = controllers.documentation
 documentation.path = 'documentation'
+
+tutorials = controllers.documentation
+tutorials.path = 'tutorials'
 
 

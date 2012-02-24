@@ -21,13 +21,9 @@ The documentation portion of the site is written in Markdown, a wiki-style synta
 To insert code snippets use four tildes followed by curly braces with ".cpp" inside, and ending with four tildes:
 
 	~~~~{.cpp}
-	
 	for(int i = 0; i < 16; i++) {
-	
 		ofLog() << i;
-
 	}
-
 	~~~~
 
 

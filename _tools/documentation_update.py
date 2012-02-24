@@ -10,9 +10,9 @@ from markdown_file import getclass,setclass,getfunctionsfile,setfunctionsfile
 from documentation_members import DocsMethod, DocsVar
 from documentation_function import DocsFunctionsFile, DocsFunction
 
-of_src = '/home/arturo/Escritorio/openFrameworks/libs/openFrameworks/'
-of_documentation = of_src + 'doxygensource/xml/'
-documentation_root = '/home/arturo/Documentos/new_of_site/documentation/'
+of_src = '/home/arturo/Desktop/openFrameworks/libs/openFrameworks/'
+of_documentation = of_src + 'build/xml/'
+documentation_root = '/home/arturo/Documents/ofSite/documentation/'
 #index = open(documentation_root + "index.html.mako",'w')
 
 
@@ -95,6 +95,7 @@ def serialize_functionsfile(filename):
 
 
 def serialize_class(filename):
+    print filename
     xml = objectify.parse(filename)
     doxygen = xml.getroot()
 
@@ -157,8 +158,12 @@ def serialize_class(filename):
 
 
 #index.write( '<%inherit file="_templates/documentation.mako" />\n' )
+dir_count=0
+file_count=0
 for root, dirs, files in os.walk(of_documentation):
+    dir_count+=1
     for name in files:       
+        file_count+=1
         filename = os.path.join(root, name)
         if name.find('class')==0:
             serialize_class(filename)
@@ -166,7 +171,12 @@ for root, dirs, files in os.walk(of_documentation):
             serialize_functionsfile(filename)
 
 for root, dirs, files in os.walk(of_documentation):
+    dir_count+=1
     for name in files:       
+        file_count+=1
         filename = os.path.join(root, name)
         if name.find('of_')==0 and name.find('8h.xml')!=-1:
             update_moved_functions(filename)
+
+print ""+str(dir_count)+" dirs/"+str(file_count)+" files"
+
