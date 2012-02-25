@@ -242,7 +242,7 @@ __advanced: false__
 
 ###ofThread###
 __visible: true__
-__advanced: false__
+__advanced: true__
 
 
 ###ofLogFatalError###
