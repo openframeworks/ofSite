@@ -340,11 +340,6 @@ __visible: true__
 __advanced: true__
 
 
-###ofPixels###
-__visible: true__
-__advanced: false__
-
-
 ###ofGraphics###
 __visible: true__
 __advanced: false__
@@ -618,11 +613,6 @@ __advanced: true__
 ###ofBaseImage_###
 __visible: true__
 __advanced: true__
-
-
-###ofColor###
-__visible: true__
-__advanced: false__
 
 
 ###ofBaseTypes###
