@@ -3,10 +3,9 @@
 
 ##Description
 
-The ofImage class wraps a library called "freeImage", and is a useful object for loading, saving and drawing images in OF projects. ofImage contains both the pixels of an image and the texture used to draw the image. The ofImage allows you to load images =, maniuplate the pixels, and createa n OpenGL texture that you can display and manipulate on the graphics card. Loading a file into the ofImage allocates memory for the pixels and creates the ofTexture to display the pixels.
+The ofImage and is a useful object for loading, saving and drawing images in openFrameworks. ofImage is a convenient class that let's you both get draw images to the screen and manipulate their pixel data. The ofImage allows you to load image from disk, manipulate the pixels, and create an OpenGL texture that you can display and manipulate on the graphics card. Loading a file into the ofImage allocates an ofPixels and creates the ofTexture to display the pixels.
 
-
-
+ofImage uses a library called "freeImage" under the hood.
 
 
 ##Methods
