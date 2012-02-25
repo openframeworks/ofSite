@@ -4,6 +4,12 @@
 ##Description
 
 
+ofBuffer is a convenience class that provides easy methods for reading from and writing to files. It makes heavy use of the standard C++ ostream and istream classes, but also adds in easy ways to convert file data to strings, like:
+
+~~~~.cpp
+ofBuffer buffer = ofBufferFromFile("someFile.txt"); // reading into the buffer
+cout << buffer.getText(); // let's see what it says
+~~~~
 
 
 
@@ -33,7 +39,7 @@ _description: _
 
 
 
-
+Constructor.
 
 
 
@@ -61,7 +67,12 @@ _description: _
 
 
 
+Create a buffer with a character array.
 
+~~~~.cpp
+string giantDataString;
+ofBuffer buff(giantDataString.c_str(), giantDataString.size());
+~~~~
 
 
 
@@ -89,7 +100,7 @@ _description: _
 
 
 
-
+Construct a buffer from a file stream istream object.
 
 
 
@@ -116,7 +127,13 @@ _advanced: False_
 _description: _
 
 
+Copy constructor, allows you to do:
 
+~~~~.cpp
+ofBuffer aBuff;
+// put some stuff in aBuff
+ofBuffer bBuff(aBuff); // now it's in bBuff as well
+~~~~
 
 
 
@@ -145,7 +162,7 @@ _description: _
 
 
 
-
+Destructor.
 
 
 
@@ -173,7 +190,13 @@ _description: _
 
 
 
+Set the buffer from a string.
 
+~~~~.cpp
+string giantDataString;
+ofBuffer buff;
+buff.set(giantDataString.c_str(), giantDataString.size());
+~~~~
 
 
 
@@ -200,7 +223,13 @@ _advanced: False_
 _description: _
 
 
+Set the buffer from an istream.
 
+~~~~.cpp
+string giantDataString;
+ofBuffer buff;
+buff.set(giantDataString.c_str(), giantDataString.size());
+~~~~
 
 
 
@@ -256,7 +285,7 @@ _advanced: False_
 _description: _
 
 
-
+Clears all the data from the buffer.
 
 
 
@@ -284,7 +313,7 @@ _advanced: False_
 _description: _
 
 
-
+Allocate memory for the buffer to use. This sizes the char vector that the ofBuffer instance contains.
 
 
 
@@ -312,7 +341,7 @@ _advanced: False_
 _description: _
 
 
-
+Returns a pointer into the vector that contains the buffer data.
 
 
 
@@ -340,7 +369,7 @@ _advanced: False_
 _description: _
 
 
-
+Return the buffer data as a string.
 
 
 
@@ -368,7 +397,7 @@ _advanced: False_
 _description: _
 
 
-
+Internally, calls getText()
 
 
 
@@ -396,7 +425,7 @@ _advanced: False_
 _description: _
 
 
-
+Get the size of the buffer data.
 
 
 
@@ -425,7 +454,7 @@ _description: _
 
 
 
-
+If the buffer data contains carriage returns, the '\n' or '\r' character, getNextLine() returns the text up to the next return.
 
 
 
@@ -452,7 +481,7 @@ _advanced: False_
 _description: _
 
 
-
+Returns all the text up to the first carriage return, either the \r or \n character.
 
 
 
@@ -480,7 +509,7 @@ _advanced: False_
 _description: _
 
 
-
+Get whether the current text is the last line in the text file.
 
 
 
@@ -508,7 +537,7 @@ _advanced: False_
 _description: _
 
 
-
+Internally the ofBuffer keeps track of the lines in a file using an index of the \n or \r characters in the data that it contains. resetLineReader() clears this index.
 
 
 
