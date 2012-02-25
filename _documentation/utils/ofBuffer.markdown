@@ -11,7 +11,12 @@ ofBuffer buffer = ofBufferFromFile("someFile.txt"); // reading into the buffer
 cout << buffer.getText(); // let's see what it says
 ~~~~
 
+You can also use the ofBufferFromFile() method to create a buffer from a file:
 
+
+~~~~.cpp
+ofBuffer fileBuffer = ofBufferFromFile("someFile.txt");
+~~~~
 
 ##Methods
 

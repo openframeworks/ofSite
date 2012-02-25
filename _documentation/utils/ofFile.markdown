@@ -5,6 +5,39 @@
 
 
 
+ofFile wraps functionality for opening, reading, writing, and modifying files on your computer.
+
+~~~~.cpp
+
+fFile file;
+
+file.open(ofToDataPath("temp.xml"), ofFile::ReadWrite, false);
+ofBuffer buff = file.readToBuffer();
+~~~~
+
+You can do the same with the bufferFromFile method:
+
+~~~~.cpp
+ofBuffer ofBufferFromFile(const string & path, bool binary=false);
+~~~~
+
+To write a buffer to a file, use ofBufferToFile()
+
+~~~~.cpp
+ofBuffer dataBuffer;
+// fill the buffer with something important
+bool fileWritten = ofBufferToFile("data.dat", dataBuffer); 
+
+~~~~
+
+You can also compare files using the ==, !=, <, >, <=, >= operators. This is done so that the files can be stored in std::containers and sorted.
+
+~~~~.cpp    
+ofFile file(ofToDataPath("foo.xml"));
+ofFile file2(ofToDataPath("foo2.xml"));    
+cout << "is foo less than foo2? " << ((file < file2) ? "true" : "false") << endl;
+~~~~
+
 
 
 ##Methods
@@ -32,7 +65,7 @@ _advanced: False_
 _description: _
 
 
-
+Creates an empty ofFile.
 
 
 
@@ -61,7 +94,17 @@ _description: _
 
 
 
+Creates an ofFile using the file path and mode specified. Note that if the file doesn't actually exist on the file system this doesn't actually create file until you call create().
 
+~~~~.cpp
+ofFile fileToRead(ofToDataPath("dictionary.txt")); // a file that exists
+~~~~
+
+
+~~~~.cpp
+ofFile newFile(ofToDataPath("temp.txt"), ofFile::Write); //file doesn't exist yet
+newFile.create(); // now file doesn't exist 
+~~~~
 
 
 
@@ -88,7 +131,7 @@ _advanced: False_
 _description: _
 
 
-
+Copy constructor for copying one ofFile into another 
 
 
 
@@ -116,7 +159,12 @@ _advanced: False_
 _description: _
 
 
+Equals operator which allows you to do this:
 
+
+~~~~.cpp
+ofFile f1 = f2;
+~~~~
 
 
 
@@ -144,7 +192,7 @@ _advanced: False_
 _description: _
 
 
-
+Destructor
 
 
 
@@ -172,7 +220,7 @@ _advanced: False_
 _description: _
 
 
-
+Opens the file with the file mode, either Reference, ReadOnly, WriteOnly, ReadWrite, Append
 
 
 
@@ -202,7 +250,7 @@ _description: _
 
 
 
-
+Changes the mode of the file from the current mode to the one passed in.
 
 
 <!----------------------------------------------------------------------------->
@@ -229,7 +277,7 @@ _description: _
 
 
 
-
+Closes the ofFile instance.
 
 
 
@@ -256,6 +304,14 @@ _advanced: False_
 _description: _
 
 
+
+If the ofFile contains a file path that doesn't exist yet, calling create() generates the file.
+
+
+~~~~.cpp
+ofFile newFile(ofToDataPath("temp.txt"), ofFile::Write); //file doesn't exist yet
+newFile.create(); // now file doesn't exist 
+~~~~
 
 
 
@@ -284,7 +340,7 @@ _advanced: False_
 _description: _
 
 
-
+Tests whether a file path exists or not.
 
 
 
@@ -313,7 +369,7 @@ _description: _
 
 
 
-
+Returns the string of the ofFile file path.
 
 
 
@@ -341,8 +397,12 @@ _description: _
 
 
 
+Returns the extension of the file.
 
-
+~~~~.cpp
+    ofFile file(ofToDataPath("foo.xml"));
+    cout << file.getExtension();
+~~~~
 
 
 <!----------------------------------------------------------------------------->
@@ -369,7 +429,7 @@ _description: _
 
 
 
-
+Returns the actual file name.
 
 
 
@@ -424,7 +484,14 @@ _advanced: False_
 _description: _
 
 
+Returns the relative path to the directory containing the file, for instance:
 
+~~~~.cpp
+
+ofFile file(ofToDataPath("foo.xml"));
+cout << file.getEnclosingDirectory(); // prints "../../../data/xml"
+
+~~~~
 
 
 
@@ -452,7 +519,7 @@ _advanced: False_
 _description: _
 
 
-
+Returns the absolute path to the file, on OSX this will be something like /Users/name/openFrameworks/apps/app/data/file.xml on Windows it will something like C:\Documents\openframeworks\apps\app\data\file.xml
 
 
 
@@ -481,7 +548,7 @@ _description: _
 
 
 
-
+Whether the file can be read or not.
 
 
 
@@ -509,7 +576,7 @@ _description: _
 
 
 
-
+Whether the file can be written to or not.
 
 
 
@@ -537,7 +604,7 @@ _description: _
 
 
 
-
+Whether the file is an executable file.
 
 
 
@@ -565,7 +632,7 @@ _description: _
 
 
 
-
+Whether the file path points to a file (it could also be a directory)
 
 
 
@@ -594,7 +661,7 @@ _description: _
 
 
 
-
+Returns whether file is an alias or not.
 
 
 <!----------------------------------------------------------------------------->
@@ -621,7 +688,7 @@ _description: _
 
 
 
-
+Returns whether the file path points to a directory or not.
 
 
 
@@ -650,7 +717,7 @@ _description: _
 
 
 
-
+Returns whether the file path points to a mounted device.
 
 
 <!----------------------------------------------------------------------------->
@@ -677,7 +744,7 @@ _description: _
 
 
 
-
+Returns whether the file path points to a hidden file or not.
 
 
 
@@ -706,6 +773,7 @@ _description: _
 
 
 
+Toggles the file as writeable or not writeable.
 
 
 
@@ -732,7 +800,7 @@ _advanced: False_
 _description: _
 
 
-
+Toggles the file as readable or not readable.
 
 
 
@@ -762,6 +830,7 @@ _description: _
 
 
 
+Toggles the file as executable or not executable.
 
 
 
@@ -789,7 +858,7 @@ _description: _
 
 
 
-
+Copy the file from its current location into the path parameter. This is similar to the cp command.
 
 
 
@@ -817,7 +886,7 @@ _description: _
 
 
 
-
+Moves the file to the location specified by path. This is similar to the mv command.
 
 
 
@@ -845,7 +914,7 @@ _description: _
 
 
 
-
+Renames the file with the new file name. If you specify a different path then this will move the file as well.
 
 
 
@@ -872,7 +941,7 @@ _advanced: False_
 _description: _
 
 
-
+deletes a file or folder, be careful as this is not undo-able. 
 
 
 
@@ -902,7 +971,7 @@ _description: _
 
 
 
-
+Gets the size of the file at the file path.
 
 
 <!----------------------------------------------------------------------------->
@@ -929,7 +998,7 @@ _description: _
 
 
 
-
+Returns the poco File instance that the ofFile wraps.
 
 
 
@@ -957,6 +1026,7 @@ _description: _
 
 
 
+Tests whether a file path is equal to the file path of the  ofFile on the right hand side. 
 
 
 
@@ -984,6 +1054,7 @@ _advanced: False_
 _description: _
 
 
+Tests whether a file path is not equal to the file path of the ofFile on the right hand side. 
 
 
 
@@ -1013,6 +1084,8 @@ _description: _
 
 
 
+Tests whether a file path is greater than the file path of the ofFile on the right hand side. 
+
 
 
 
@@ -1041,6 +1114,7 @@ _description: _
 
 
 
+Tests whether a file path is lesser or equal than the file path of the ofFile on the right hand side.
 
 
 
@@ -1068,7 +1142,7 @@ _advanced: False_
 _description: _
 
 
-
+Tests whether a file path is greater than the file path of the ofFile on the right hand side.
 
 
 
@@ -1097,6 +1171,8 @@ _description: _
 
 
 
+Tests whether a file path is greater than or equal to the file path of the ofFile on the right hand side.
+ 
 
 
 
@@ -1125,7 +1201,7 @@ _description: _
 
 
 
-
+Read the file into an ofBuffer object and return it.
 
 
 
@@ -1154,7 +1230,7 @@ _description: _
 
 
 
-
+Write an ofBuffer instance to the file path.
 
 
 <!----------------------------------------------------------------------------->
