@@ -8,17 +8,37 @@ import shutil
 import sys
 
 import argparse
-import shutil
 import glob
 
 import sets
+from asciidocapi import AsciiDocAPI
+import logging
+import StringIO
 
 logger = logging.getLogger("blogofile.post")   
 
 def stripFileLine(line):
     return  line.lstrip(' ').rstrip('\n').rstrip(' ')
-
-class Article:
+    
+class AsciiDocArticle:
+    def __init__(self,asciidocpath):
+        adfile = open(asciidocpath,'r')
+        outfile = StringIO.StringIO()
+        asciidoc = AsciiDocAPI()
+        asciidoc.options('--no-header-footer')
+        asciidoc.execute(adfile, outfile, backend='html4')
+        attributes = asciidoc.asciidoc.document.attributes #.attributes.values
+        #print attributes
+        self.file = os.path.basename(asciidocpath[:asciidocpath.find('.asciidoc')]) + '.html'
+        self.date = attributes['date']
+        self.title = attributes['doctitle']
+        self.summary = attributes['summary']
+        self.author = attributes['author']
+        self.author_site = attributes['author_site']
+        self.body = outfile.getvalue().decode('utf-8','replace')
+        self.type = 'asciidoc'
+        
+class MarkdownArticle:
     def __init__(self,markdown):
         mdfile = open(markdown,'r')
         state = 'begin'
@@ -29,6 +49,7 @@ class Article:
         self.author = ''
         self.author_site = ''
         self.body = ''
+        self.type = 'markdown'
         for line in mdfile:
             line = line.decode('utf-8','replace')
             if state=='begin' and stripFileLine(line) =='---':
@@ -81,7 +102,11 @@ def run():
         for article in articlesfiles:
             file_split = os.path.splitext(article)
             if file_split[1]=='.markdown':
-                articleobj = Article(os.path.join(directory,catfolder,article))
+                articleobj = MarkdownArticle(os.path.join(directory,catfolder,article))
+                bf.writer.materialize_template("tutorial.mako", (os.path.join('tutorials',category),articleobj.file), {'categories':categories,'article':articleobj} )
+                articles.append(articleobj)
+            if file_split[1]=='.asciidoc':
+                articleobj = AsciiDocArticle(os.path.join(directory,catfolder,article))
                 bf.writer.materialize_template("tutorial.mako", (os.path.join('tutorials',category),articleobj.file), {'categories':categories,'article':articleobj} )
                 articles.append(articleobj)
             if os.path.isdir(os.path.join(directory,catfolder,article)):
