@@ -4,28 +4,33 @@ function vec2(x,y){
   this.y = y;
 
   this.plus = function(v){
-    return new vec2(x+v.x,y+v.y);
+    return new vec2(this.x+v.x,this.y+v.y);
   }
 
   this.minus = function(v){
-    return new vec2(x-v.x,y-v.y);
+    return new vec2(this.x-v.x,this.y-v.y);
   }
 
   this.times = function(a){
-    return new vec2(x*a,y*a);
+    return new vec2(this.x*a,this.y*a);
   }
   this.dot = function(v){
-   return x*v.x+y+v.y;
+   return this.x*v.x+this.y*v.y;
   }
 
   this.length = function(){
-    return Math.sqrt(x*x + y*y);
+    return Math.sqrt(this.x*this.x + this.y*this.y);
   }
 
   this.normalize = function(){
-    this.x *= 1./this.length();
-    this.y *= 1./this.length();
+      var l = this.length();
+      this.x = this.x/l;
+      this.y = this.y/l;
   }
+
+    this.copy = function(v){
+        this.x = v.x; this.y = v.y;
+    }
 }
 
 function drawGrid(ctx, origin, wid, ht){
@@ -78,28 +83,30 @@ ctx.stroke();
 }
 
 function drawVector(ctx,origin,v,arrow_len,label, labeloff){
-  ctx.beginPath();
-  ctx.save();
-  ctx.translate(origin.x,origin.y);
-  ctx.moveTo(0,0);
-  ctx.lineTo(v.x,v.y);
-  ctx.stroke();
+    ctx.beginPath();
+    ctx.save();
+    ctx.translate(origin.x,origin.y);
+    ctx.moveTo(0,0);
+    ctx.lineTo(v.x,v.y);
+    ctx.stroke();
 
-  ctx.beginPath();
-  var diff = new vec2(v.x,v.y);
-  diff = diff.times(-1);
-  diff.normalize();
-  var norm = new vec2(v.y,-v.x);
-  norm.normalize();
-  var sz = v.length() < 2*arrow_len ? v.length()*.5 : arrow_len;
-  ctx.moveTo(v.x + sz*norm.x + sz*diff.x, v.y + sz*norm.y + sz*diff.y);
-  ctx.lineTo(v.x, v.y);
-  ctx.lineTo(v.x - sz*norm.x + sz*diff.x, v.y - sz*norm.y + sz*diff.y);
-  ctx.stroke();
+    ctx.beginPath();
+    var diff = new vec2(v.x*-1,v.y*-1);
+    diff.normalize();
+    var norm = new vec2(v.y,v.x*-1);
+    norm.normalize();
+    var sz = v.length() < 2*arrow_len ? v.length()*.5 : arrow_len;
+    ctx.save();
+    ctx.translate(v.x,v.y);
+    ctx.moveTo(sz*norm.x + sz*diff.x, sz*norm.y + sz*diff.y);
+    ctx.lineTo(0, 0);
+    ctx.lineTo(sz*norm.x*-1 + sz*diff.x,sz*norm.y*-1 + sz*diff.y);
+    ctx.stroke();
+    ctx.restore();
 
-  if(label.length){
-    ctx.fillText(label,v.x+labeloff.x,v.y+labeloff.y);
-  }
+    if(label.length){
+        ctx.fillText(label,v.x+labeloff.x,v.y+labeloff.y);
+    }
 
-  ctx.restore();
+    ctx.restore();
 }
