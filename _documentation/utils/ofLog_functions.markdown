@@ -187,11 +187,14 @@ Sets the logging channel that receives log messages. This can be one of the pred
 	ofConsoleLoggerChannel
 	ofFileLoggerChannel
 
-or a custom channel derived from `ofBaseLoggerChannel`. Here is an example that adds a custom header to all messages before printing:
+or a custom channel derived from `ofBaseLoggerChannel`. Here is an example that adds a custom header to all messages before printing.
+
+Declaration in a .h file:
 
 ~~~~{.cpp}
 
-// make a simple custom logging class derived from ofBaseLoggerChannel and put it in a .h file
+// make a simple custom logging class derived from ofBaseLoggerChannel
+
 // see libs/openframeworks/util/ofLog.cpp for a more detailed example
 class MyLoggerChannel: public ofBaseLoggerChannel {
 public:
@@ -225,9 +228,11 @@ protected:
 	string header;
 };
 
-…
+~~~~
 
-// ok let's use it in a .cpp file
+Use it in a .cpp file:
+
+~~~~{.cpp}
 
 // create using an ofPtr smart pointer
 ofPtr<MyLoggerChannel> myChannel(new MyLoggerChannel("this is my header!"));
