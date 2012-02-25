@@ -180,7 +180,10 @@ class AsciiDocAPI(object):
                 for cmd in ['asciidoc.py','asciidoc.pyc','asciidoc']:
                     if os.path.isfile(cmd): break
                 else:
-                    raise AsciiDocError('failed to locate asciidoc')
+                    for cmd in ['_filters/asciidoc.py','_filters/asciidoc.pyc','_filters/asciidoc']:
+                        if os.path.isfile(cmd): break
+                    else:
+                        raise AsciiDocError('failed to locate asciidoc')
         self.cmd = os.path.realpath(cmd)
         self.__import_asciidoc()
 
