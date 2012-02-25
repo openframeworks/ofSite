@@ -1,4 +1,16 @@
-//TODO: when time allows, most of these should be animated, ideally
+var tix = 0;
+
+function init(){
+    setInterval(drawDot, 10);
+    setInterval(drawAim, 10);
+    setInterval(step,10);
+}
+
+init();
+
+function step(){
+    tix+=.004;
+}
 
 function drawMult(){
 	var c =document.getElementById("mult");
@@ -95,6 +107,7 @@ function drawDiff(){
 
     var scl = 4;
     var a = new vec2(31.4*scl,12.7*scl);
+
     var b = new vec2(12.4*scl,-8.7*scl);
 
 	  ctx.strokeStyle= "rgb(37,208,105)";
@@ -135,6 +148,7 @@ function drawDiff(){
 function drawAim(){
 	  var c =document.getElementById("aim");
 	  var ctx= c.getContext("2d");
+    ctx.clearRect(0,0,c.width,c.height);
 	  var origin = new vec2(c.width*.15,c.height*.425);
 	  var zero = new vec2(0,0);
 	  var arrowsz = 8;
@@ -169,7 +183,7 @@ function drawAim(){
 	  drawVector(ctx,zero,b.minus(a),arrowsz,"b + (a*-1) = b-a = c",new vec2(-150,10));
 */
     var i = 0;
-    for (i = 0; i <= 1.; i += .2){
+    for (i = 0; i <= .6*(Math.sin(1.5*tix)+1.); i += .2){
         ctx.globalAlpha = 1;
 	      ctx.strokeStyle= "rgb(238,57,135)";
 	      ctx.fillStyle= "rgb(238,57,135)";
@@ -213,6 +227,7 @@ function drawNorm(){
 function drawDot(){
 	  var c =document.getElementById("dot");
 	  var ctx= c.getContext("2d");
+    ctx.clearRect(0,0,c.width,c.height);
 	  var origin = new vec2(c.width*.5,c.height*.5);
 	  var zero = new vec2(0,0);
 	  var arrowsz = 8;
@@ -229,7 +244,13 @@ function drawDot(){
 
     var scl = 6;
     var b = new vec2(41.4*scl,-6.7*scl);
-    var a = new vec2(18.4*scl,-13.7*scl);
+//    var aa = new vec2(18.4*scl,-13.7*scl);
+    var aa = new vec2(120,0);
+
+    var cs = Math.cos(-Math.PI/6 + (Math.PI/12)*Math.cos(tix));
+    var sn = Math.sin(-Math.PI/6 + (Math.PI/12)*Math.cos(tix));
+
+    var a = new vec2(cs*aa.x - sn*aa.y, sn*aa.x + cs*aa.y);
 
     var b1 = new vec2(-6.7*scl,-41.4*scl);
     b1.normalize();
@@ -270,16 +291,18 @@ function drawDot(){
 	  ctx.fillStyle= "rgb(37,208,105)";
 	  drawVector(ctx,zero,b,arrowsz,"b",new vec2(10,10));
 
-	  ctx.fillStyle= "rgb(238,57,135)";
-	  ctx.strokeStyle= "rgb(238,57,135)";
-    ctx.fillText("theta",60,-25);
-
     var ban = Math.atan2(b.y,b.x);
     var aan = Math.atan2(a.y,a.x);
+
+	  ctx.fillStyle= "rgb(238,57,135)";
+	  ctx.strokeStyle= "rgb(238,57,135)";
 
     ctx.beginPath();
     ctx.arc(0,0,60,ban,aan,true);
     ctx.stroke();
+
+    ctx.fillText("theta", 60*Math.cos(aan)-40,60*Math.sin(aan));
+
 
     ctx.globalAlpha = .3;
 	  drawVector(ctx,zero,b.times(-1),arrowsz,"-b",new vec2(-10,10));
