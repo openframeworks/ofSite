@@ -193,7 +193,6 @@ __advanced: false__
 __visible: false__
 __advanced: false__
 
-
 ###ofFileUtils###
 __visible: true__
 __advanced: false__
@@ -242,7 +241,7 @@ __advanced: false__
 
 ###ofThread###
 __visible: true__
-__advanced: true__
+__advanced: false__
 
 
 ###ofLogFatalError###
