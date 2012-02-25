@@ -89,7 +89,6 @@ function drawVector(ctx,origin,v,arrow_len,label, labeloff){
   var diff = new vec2(v.x,v.y);
   diff = diff.times(-1);
   diff.normalize();
-  console.log(diff);
   var norm = new vec2(v.y,-v.x);
   norm.normalize();
   var sz = v.length() < 2*arrow_len ? v.length()*.5 : arrow_len;
