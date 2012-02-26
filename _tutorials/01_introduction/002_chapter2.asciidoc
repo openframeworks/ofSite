@@ -1,0 +1,12 @@
+ofTutorials - Chapter 2 - Creating Movement
+===========================================
+Jeff Crouse <jeff@crouse.cc>
+v0.1, February 2012:
+:Author Initials: JRC
+:toc:
+:icons:
+:numbered:
+:doctype: book
+
+
+This chapter will introduce methods of animation and making things move. Simple animation techniques.
