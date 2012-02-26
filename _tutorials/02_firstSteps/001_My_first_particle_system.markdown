@@ -1,18 +1,18 @@
 ---
 date: 2012/02/24 10:00:00
-title: You first particle system
-summary: Is there something more fun that a particle system for making your first steps?
+title: Steps to your first particle system
+summary: Is there something more fun than a particle system for making your first steps?
 author: Patricio Gonzalez Vivo
 author_site: http://patriciogonzalezvivo.com
 ---
 
-Well, you probably (and if not you should) read and learn how to install openFrameworks, setup you IDE and compile some project examples.
-So the right next step probably could be jump into the nice stuff and start making things.
+At this point, you should have read how to download openFrameworks, setup your IDE and compile some project examples.
+Now you can jump into the fun stuff and start making things!
 
-## 1. Drawing Something
-Let's start by drawing something. As you know, if we want to draw something we have to put it on `void testApp::draw()` on you ```testApp.cpp```.
+## 1. Draw Something
+Let's start by drawing something. If we want to draw something we have to put it inside the function `void testApp::draw()` in the file ```testApp.cpp```.
  
-Let's a graphic version of a "Hello World". Drawing a blue circle.
+Let's start with a graphic version of "Hello World". This draws a blue circle:
 
 ~~~~{.cpp}
 	void testApp::draw(){
@@ -23,22 +23,22 @@ Let's a graphic version of a "Hello World". Drawing a blue circle.
 	}
 ~~~~
 
-For those that know a little about Processing this probable looks familiar, but probably with a "of" at the beginning. 
+For those that know a little about Processing this may look familiar, the biggest difference being the "of" prefix. 
 
-In the first line we are cleaning the background turning this into a black with `ofBackground(0);`. It's also possible to use RGB Channel by typing `ofBackground(76,63,72);` or something more intuitive like `ofBackground(ofColor::black);`. 
-After drawing the background we are setting up the color that's going to use for drawing from that moment to the very end, unless it's changed. That's  `ofSetColor(int r, int g, int b)` do. This way's of dealing with stuff it's herded from openGL. There everything it's defined and that's applied from that point until it's changed again. Maybe at the beginning seams strange but soon you'll see that's a pretty good and efficient way of dealing with properties. 
-So as we saw with ofBackground you can try doing something like `ofSetColor(ofColor:blue);` and it will work. 
-The next line says `ofFill();` witch defines the drawing type to color filled images. Opposite of that it's `ofNoFill();` witch only draw the contour line. If you are thinking on using just the contour lines you probably want to try `ofSetLineWidth( 4 );`
-So, after setting up our background and drawing color we draw a little circle of 30 pixels of radio at the `100,100` position.
+In the first line we are filling the background with black with `ofBackground(0);`. It's also possible to use RGB values by typing `ofBackground(76,63,72);` or something more intuitive like `ofBackground(ofColor::black);`. 
+After drawing the background we are setting up the color with `ofSetColor(int r, int g, int b)` that will remain from until it is changed. openFramework's origins are based in OpenGL and like OpenGL once a state is applied it will remain in the state from that point until it's changed again. It may seem strange in the beginning but soon you will see that it is a pretty good and efficient way of dealing with properties. 
+So like with ofBackground, you can use options like `ofSetColor(ofColor:blue);` and it will change the color of the circle. 
+The next line, `ofFill();` , defines the fill style of the shape (filling the shape with color). The opposite is `ofNoFill();` that will only draw the outline. You can change the size of the outline with `ofSetLineWidth( 4 );`
+Once we set up our background and drawing color we draw a small circle with a radius of 30 pixels at the `100,100` position.
 
 ![Image: coordinates.jpg](001_images/coordinates.png)
 
-As you notice, `x` and `y` coordinates are setup in one way that the `0,0` position it's the right top corner. 
+As you may notice, `x` and `y` coordinates are setup in a way that the `0,0` position it's the top left corner. 
 
-So if we have a `1024,768` windows and we want to draw something on the middle we can do something like: `ofCircle(1024/2,768/2,30);`. But what happen if the windows it's resized? The circle it's not more in the middle? It's not going to be centered any more, isn't it?
+So if we have a `1024,768` window and we want to draw something on the middle we can do something like: `ofCircle(1024/2, 768/2, 30);`. What happens if the windows is resized? The circle is no longer centered because we used "hardcoded" values.
 
-Where it's where some oF methods becomes very handy. Let me, introduce `ofGetWindowWidth()` and `ofGetWindowHeight()`. This methods return the values of the width and height of the windows, witch it's very very handy from drawing. There are two similar functions call `ofGetScreenWidth()` and `ofGetScreenHeight()` that instead of returning the windows parameters the return the screen ones.
-Let's use some of this new stuff we have learn:
+This is where some the oF methods `ofGetWindowWidth()` and `ofGetWindowHeight()` become very handy. These methods return the current values of the width and height of the windows. There are two similar functions named `ofGetScreenWidth()` and `ofGetScreenHeight()` that instead of returning the windows parameters the return the width and height of the entire screen.
+Let's use some of this new stuff we just learned about:
 
 ~~~~{.cpp}
 	void testApp::draw(){
@@ -48,22 +48,22 @@ Let's use some of this new stuff we have learn:
 		ofCircle( ofGetWindowWidth()*0.5, ofGetWindowHeight()*0.5, 30);
 	}
 ~~~~
-So, now If you try to resize the windows this little blue world it's going to be at the center of the screen. Congratulations!!
+So, now when you resize the window this little blue world remains centered. Congratulations!!
 
-A good next step it could be to take a look at the "Graphics" section on  [www.openframeworks.cc/documentation/](http://www.openframeworks.cc/documentation/) . There you will find lot's of other methods to draw stuff like `ofLine()`, `ofRect()`. 
+Now let's take a look at the "Graphics" section on  [www.openframeworks.cc/documentation/](http://www.openframeworks.cc/documentation/) . There you will find lots of other methods like `ofLine()`, `ofRect()` that are related to drawing. 
 
-On the documentation of oF you will notice that all the functions and classes on openFrameworks have a consistent way of working. The more you try things and play with them sooner you will get this "oF Style" and things will become pretty intuitive. 
+In the documentation of openFrameworks you will notice that all the functions and classes have a consistent way of working. The more you try things and play with them sooner you will get this "oF Style" and things will become pretty intuitive. 
 
-CHALLENGE: Width the things we learn and those you can explore on [www.openframeworks.cc/documentation/](http://www.openframeworks.cc/documentation/) . Try to make your a digital Kandinsky-style art work. A little tip for super awesome results will be the use of: `ofEnableSmoothing();` for making smooth edge on the drawings and something like `ofBackgroundGradient(ofColor::white,ofColor(255,255,200), OF_GRADIENT_CIRCULAR);` for a nice gradient background
+CHALLENGE: Referring to the documention, try and make your a digital Kandinsky-style artwork. [www.openframeworks.cc/documentation/](http://www.openframeworks.cc/documentation/) . A little tip for super awesome results will be the use of: `ofEnableSmoothing();` for making smooth edges and something like `ofBackgroundGradient(ofColor::white,ofColor(255,255,200), OF_GRADIENT_CIRCULAR);` for a nice gradient background.
 
 ![Image:kandisky.jpg](001_images/kandinsky.jpg)
  
 
 ## 2. Moving things around
 
-So far, so good. It's it. but everything seems a little static and the complete absence of interactivity probably it's getting you anxious. So let's start moving things around.   
+So far, so good. Right now everything is a little static and the complete absence of interactivity is probably getting you anxious. Let's start moving things around.   
 
-There are to oF native variables on every testApp class. The are call `mouseX` and `mouseY`. It's not hard to guess what are those for. So let's go back to our previous example. On `draw()` on the `testApp.cpp` and use this variables.
+Two variables available to every openFrameworks application are `mouseX` and `mouseY`. Let's go back to our previous example and use these variables inside `testApp::draw()`.
 
 ~~~~{.cpp}
 	void testApp::draw(){
@@ -74,11 +74,11 @@ There are to oF native variables on every testApp class. The are call `mouseX` a
 	}
 ~~~~
 
-If you try to do the same with a rectangle ( `ofRect(mouseX,mouseY, 30, 30);`) you will notice that the center of the rectangle it just don't fit with the mouse position. That's because rectangles are draw from the top right corner. What's consistent with the way things are draw on the screen isn't? 
-So, if we want to change this and draw the rectangles from the center we will use `ofSetRectMode(OF_RECTMODE_CENTER);`. 
-Probably every time you see something that starts with "OF_" and it's all on capital letters means that you are probably dealing with modes and pre-defined types. This things are every where and we use them for lot's of things. Exploring the auto-completion list of your IDE or use the IDE functions of "Jump to definition".
+If you try to do the same with a rectangle ( `ofRect(mouseX,mouseY, 30, 30);`) you will notice that the center of the rectangle it just don't fit with the mouse position. This is because by default, rectangles are draw from the top left corner.  
+Fortunately we have options and can use `ofSetRectMode(OF_RECTMODE_CENTER);` to set the anchor point to the center of the shape. 
+Probably every time you see something that starts with "OF_" and in all-caps it means that you are dealing with modes and pre-defined types. Feeling adventerous, explore using the auto-completion list of your IDE or options like  "Jump to definition".
 
-By know we are only working on the `draw()` methods, and if we want some oF magic to happen we have to start using `update()` and `setup()`. So let's create two variables that are going to store an `x` and `y` variables for the circle in order to make some simple interactions. The thing here it's that if we create them on the `draw()` o `update()` method the will be created and destroyed every time a loop it's completed. In order to have some sort of "memory" of this variables that survive each loop we need to define them on the owl testApp class. In order to do that we have to jump to the the `testApp.h` , and there add them like this:
+Right now we are only working on the `draw()` methods and if we want some oF magic to happen we have to start using `update()` and `setup()`. So let's create two variables that are going to store the `x` and `y` properties for the circle. If we create them inside the `draw()` or `update()` methods the values will be created and destroyed every time a loop is completed. In order to allow the variables to survive each loop we need to define them at the top of testApp. The best place to do this is inside the file `testApp.h` like this:
 
 
 ~~~~{.cpp}
@@ -103,7 +103,7 @@ By know we are only working on the `draw()` methods, and if we want some oF magi
 	};
 ~~~~
 
-We are going to use this two variables to store the last position of the ball and in each itineration progressively move this parameters where the mouse is.
+We are going to use these two variables to store the last position of the ball and progressively move the ball towards the mouse.
 
 ~~~~{.cpp}
 	void testApp::setup(){
@@ -137,10 +137,11 @@ We are going to use this two variables to store the last position of the ball an
 	}
 ~~~~
 
-Nice, isn't?
-Other very typical way of interaction it's the the keyboard. OpenFrameworks have some default methods for dealing with mouse and keyboard events. Take a look at the bottom of the `testApp.cpp`. You will see `keyPress()`, `keyRelease()`, `mouseMove()`, `mouseDragged()`, `mousePressed()` and `mouseReleased()` events.
-We can use them to make some other interactions. In this point we can add some randomness interaction using `ofRandom()` and `ofNoise()`. I highly recommend you take a look to the documentation ( [www.openframeworks.cc/documentation/](http://www.openframeworks.cc/documentation/) ) and also taking a look to Golan's ofNoise example at `openFrameworks/examples/math` directory.
-So let's add something really simple, here every time you press the mouse the ball get a random new position on the windows.
+Nice, isn't it?
+Other very typical interaction is using the the keyboard. openFrameworks has some default methods for capturing mouse and keyboard events. Take a look at the bottom of the `testApp.cpp`. You will see `keyPress()`, `keyRelease()`, `mouseMove()`, `mouseDragged()`, `mousePressed()` and `mouseReleased()` events.
+
+At this point we can add some randomness interaction using `ofRandom()` and `ofNoise()`. I highly recommend you take a look at the documentation ( [www.openframeworks.cc/documentation/](http://www.openframeworks.cc/documentation/) ) and also taking a look to Golan's ofNoise example at `openFrameworks/examples/math` directory.
+So let's add something really simple. Here every time you press the mouse the ball will go to a random position.
 
 ~~~~{.cpp}
 	void testApp::mousePressed(int x, int y, int button){
@@ -149,15 +150,15 @@ So let's add something really simple, here every time you press the mouse the ba
 	}
 ~~~~
 
-CHALLENGE: Ok, now that we learn how to make variables that can be access from every method on the class we can start thinking on how store information and re use it. The next challenge could be to catch your Kandinsky-style project and make it in some way every time you click the windows all the peaces jump to a new position. Like a Kyndinsky-picture-maker. Also if you feel comfortable with it, you can add some basic animations to them.
+CHALLENGE: Now that we have learned how to make variables that you can access from anywhere in the class we can start thinking what possiblities this opens up. For instance, you could take your Kandinsky-style project and make your shapes jump to a new position every time you press the mouse button. Maybe try adding some basic animations to them.
 
 
-## 3. Thanks God we have classes
+## 3. Thank God we have classes
 
-If you are have doing the challenges you probably with end up with lot's of lines of code that actually look very similar repited several times. The main idea of computers it's to make our job easier, specially the repetitive one. 
-Actually [Alan Kay](http://en.wikipedia.org/wiki/Alan_Kay) comes with this idea of object-oriented-programing ( witch is the main thing about C++ ) in order to make this little abstract object in order to re-use them and makes things easier and flexible.
+If you are have doing the Challenges you have may have ended up with a lot of repeated code. Forutunately computers make repetition easy. 
+Here we will scratch the surface of Object Oriented Programing (a primary feature of C++) in order to make things easier, more readable and less repetitive.
 
-So in order to make and use this "object" we have to make what it's call a class. Let's imagine a ball.
+Let's imagine a ball.
 It's an round object that have some properties like the position and the color, also do things like move around. All this abstract items can be imagined as:
 
 Ball:
@@ -168,7 +169,7 @@ Ball:
 
 - move (function or method)
 
-This exactly what a `.h` it's a list of things that makes an object. So let's add two new files to our project ( this depends on the IDE you are using ), one it's going to be a `.h` file call `ball.h` (here we are going to define the elements of our ball) and the other one a `.cpp` call `ball.cpp` ( here we are going to write how this things are going to work together ).
+This exactly what a `.h` it's a list of things that makes an object. So let's add two new files to our project ( this depends on the IDE you are using ), one it's going to be a `.h` file call `ball.h` (here we are going to define the elements of our ball) and the other one a `.cpp` call `ball.cpp` ( here we are going to write how these things work together ).
 
 ![Image:kandisky.jpg](001_images/newFile.png)
 
@@ -197,14 +198,14 @@ The `ball.h` file should look like:
 	#endif
 ~~~~
 
-Some couple of things are going around here. First note that's follows the `#...` you probably want to leave things that they are. A super simple explanation of it it could be: "Hey compiler, don't compile this stuff two times, and for compiling you will need ofMain.h header file.". The `ofMain.h` have all the methods and objects of openFrameworks. It's what makes your code oF-based and not just C++ code. It's where the magic came from.
+Congratulations, you just created your own Class! There are couple of new things are going on here. The first 2 lines (`#ifndef..` prevent the compiler from using copying the file multiple times. This is a standard practice in C++ and you probably want to leave things the way they are. You are basically saying, "Hey compiler, don't compile this stuff two times, and for compiling you will need ofMain.h header file.". Including `ofMain.h` will give you access to all the methods and objects of openFrameworks. This is what makes your code oF-based and not just C++ code and where the magic happens.
 
-For making a object you need to call the class function and give it a constructor. The constructor it's the method that it will run when you create it. It's like when you write 'int i' and 'i' automatically it's setup to zero. The int constructor did that. 
-Then the rest of the things are the ones we describe before. I add a `draw()` function in order to draw the ball on our "world".
+To create a object you need to call the Class's constructor. The constructor `Ball()` is the first thing that will execute and create the Ball. It's like when you write `int i;` and 'i' automatically is initially set to zero. int's constructor took care of that for you. 
+The properties should look familiar at this point but a new method is the `draw()` function.
 
-IMPORTANT: Take a look to the `};` at the end of the class. That's super important! Without that you probably get some impossible errors to track down.  
+IMPORTANT: Take a look to the `};` at the end of the class. That's super important! Without it you will get annoying errors that are difficult track down.  
 
-On the `ball.cpp` side let's preparing everything for work writing:
+Inside the file `ball.cpp` let's prepare everything:
 
 ~~~~{.cpp}
 	#include "ball.h"
@@ -231,13 +232,14 @@ On the `ball.cpp` side let's preparing everything for work writing:
 	}
 ~~~~
 
-So, as you see here we are going to put the implementation of the methods defined on `ball.h`. Note also that we have to said to the compiler two things:
+As you see here we are going to implement of the methods defined on `ball.h`.
+We have to said to the compiler two things:
 
 - `#include "ball.h"` this stuff responds to "ball.h" file
 
-- `Ball::` this says to the compiler that this method it's from `Ball` class. You can picture it like a last name. And it's use exactly for the same reason. To know where one becomes and not mess up names.
+- `Ball::` tells the compiler that this method is from `Ball` class. You can picture it like a first part of a full name. 
 
-The last step for adding a class on a C++ project it's to add it to the `testApp.h` with a `#include "ball.h"` 
+The last step for adding a Class is to add it to `testApp.h` with a `#include "ball.h"` 
 
 ~~~~{.cpp}
 	#pragma once
@@ -262,12 +264,13 @@ The last step for adding a class on a C++ project it's to add it to the `testApp
     		void dragEvent(ofDragInfo dragInfo);
     		void gotMessage(ofMessage msg);
     
-    		Ball theBall;	// Now let´s try it by replacing the previous variables 
-							// for a object with that information
+    		Ball theBall;	// Replaces the previous variables 
+							// with a new object that contains 
+							// the previous information
 	};
 ~~~~
 
-So on the `testApp.cpp` we can change things to look like this:
+In `testApp.cpp` we can change things to look like this:
 
 ~~~~{.cpp}
 	void testApp::setup(){
@@ -294,10 +297,10 @@ So on the `testApp.cpp` we can change things to look like this:
 	}
 ~~~~
 
-Ok, so now we have a general object that´s automatically is created with some random values, but if we want we can access to the information inside it by using `object.property` or `object.method()`. 
-This means that every time we want a new ball we have just to create it and draw it! It´s not awesome?
+So now we have a general object that´s automatically is created with some random values, but if we want we can access to the information inside it by using `object.property` or `object.method()`. 
+This means that every time we want a new Ball we just to create it and draw it! Is it not awesome?
 
-One last thing, it's to talk about how you can pass some parameters to a object method. If we look to the `testApp::update()` code we are accessing to `x` and `y` information by calling them using the `.`. That's not bad, but it to make things more logical and intuitive if we said something like `myBall.moveTo(mouseX,mouseY)` isn´t it?
+One last thing to talk about how you can pass some parameters to a object method. If we look to the `testApp::update()` code we are changing the `x` and `y` properties by using the dot-syntax `.`. That's not bad, but it to make things more readable and intuitive if it looked like `myBall.moveTo(mouseX,mouseY)`?
 So let´s change `ball.h` and  `ball.cpp`.
 
 ~~~~{.cpp}
@@ -316,11 +319,11 @@ And use it like like this on the testApp project
 ~~~~
 
 
-## 4. Let's go physicaly
+## 4. Let's get physical
 
-Before we continue on our way a to proper particle system. I have good news, You don´t have to deal with heavy maths and lot's of variables for making some nice physics calculations. There some really cool native classes that will help your on that and make's your life really easy. Also you can get very deep in to crazy awesome things taking a look to on Keith´s tutorials at [Math Tutorials](http::/openframeworks.cc/tutorials/maths/)
-Our new things it´s going to be a object call `ofVec2f()` for dealing with two dimensional math vector. This will let us work with forces very easily, and because at the very end it´s a class we are going to use them as object. Just like we do with our bright class call `Ball`.
-Each `ofVec2f` have a `x` and `y` value, and you can access to them in the same way we just do with `ball.x` and `ball.y`. The thing with `ofVec2f` it´s that also have really handy methods like `.dot()` and also operator `+`, `+`, `*` and `/` that get in chard of the maths calculations.
+Before we continue on our way a to proper particle system. I have good news, You don´t have to deal with heavy maths in order to create some nice physics based effects. openFrameworks provides some very nice functionality that makes this much easier. However if you want to dive into the details, take a look at Keith´s tutorials at [Math Tutorials](http::/openframeworks.cc/tutorials/maths/) that can lead you to crazy awesome new things.
+
+Some of the most helpful classes are contained in ofVectorMath that allow us to work with forces very easily. Just like have in our `Ball` class, `ofVec2f` has `x` and `y` values, and you can access to them in the same way we just do with `ball.x` and `ball.y`. `ofVec2f` also have really handy methods like `.dot()` and also operator `+`, `+`, `*` and `/` that do the math for you.
 
  
  
