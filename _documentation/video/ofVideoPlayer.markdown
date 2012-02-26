@@ -3,7 +3,7 @@
 
 ##Description
 
-The ofVideoPlayer class loads in a movie file via quicktime in windows and mac  or gstreamer in linux, and offers various controls to play the movie, control the properties of the movie, and to access the pixels of a given frame.
+The ofVideoPlayer class loads in a movie file via quicktime in windows and OSX or gstreamer in linux, and offers various controls to play the movie, control the properties of the movie, and to access the pixels of a given frame.
 
 Example:
 ~~~~{.cpp}
@@ -155,7 +155,7 @@ Load a movie file (fileName) into that object. It will look for the movie file i
 Example:
 ~~~~{.cpp}
 ofVideoPlayer myPlayer;
-myPlayer.loadMovie('myMovie.mov');
+myPlayer.loadMovie("myMovie.mov");
 ~~~~
 
 
@@ -483,7 +483,7 @@ For example, if the pixels are new, you could then process them.
 ~~~~{.cpp}
 
 if (myMovie.isFrameNew()){
-	;	// do something
+	// do something
 }
 ~~~~
 
@@ -514,10 +514,11 @@ _advanced: False_
 
 _description: _
 
-For example, to get the red green and blue of the pixel (100,20):
+For example, to get the red, green, and blue of the pixel at (100,20):
+
 ~~~~{.cpp}
 unsigned char * pixels = myMovie.getPixels();
-int widthOfLine = myMovie.width * w;  // how long is a line of pixels
+int widthOfLine = myMovie.width;  // how long is a line of pixels
 int red 	= pixels[(20 * widthOfLine) + 100 * 3    ];
 int green 	= pixels[(20 * widthOfLine) + 100 * 3 + 1];
 int blue 	= pixels[(20 * widthOfLine) + 100 * 3 + 2];
@@ -551,7 +552,7 @@ _advanced: False_
 _description: _
 
 
-
+Returns the position of the playhead in seconds.
 
 
 
@@ -578,7 +579,7 @@ _advanced: False_
 
 _description: _
 
-note: 1 = normal speed, 0 = paused, -1 = backwards. 
+Returns the speed that the movie is being played at as a floating point number. 1 = normal speed, 0 = paused, -1 = backwards. 
 
 
 
@@ -608,7 +609,7 @@ _advanced: False_
 _description: _
 
 
-
+Returns the duration of the movie in seconds as a floating number.
 
 
 
@@ -637,7 +638,7 @@ _description: _
 
 
 
-
+Returns whether the movie has played all the way until the end.
 
 
 
@@ -663,7 +664,7 @@ _advanced: False_
 
 _description: _
 
-Sets the position of the playhead to a given percentage through the movie. Can be used to scrub through a movie. 
+Sets the position of the playhead to a given percentage through the movie. This can be used to scrub through a movie. 
 
 
 
@@ -692,7 +693,7 @@ _advanced: False_
 
 _description: _
 
-Sets the volume of a movie - default = 0, silent 
+Sets the volume of a movie as it plays. The maximum values is 100, 0 is silent.
 
 
 
@@ -1077,7 +1078,7 @@ _advanced: False_
 _description: _
 
 
-
+Get the number of frames that the movie file being played contains.
 
 
 
@@ -1192,7 +1193,7 @@ _advanced: False_
 _description: _
 
 
-
+Get the height of the movie file.
 
 
 
@@ -1221,7 +1222,7 @@ _description: _
 
 
 
-
+Get the width of the movie file.
 
 
 
