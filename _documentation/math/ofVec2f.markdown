@@ -8,7 +8,7 @@
 
 Moving through space requires knowledge of where things are and where they are going. Vector Maths is the class of mathematics that gives us control over these things in space, allowing for elegant and intuitive descriptions of complex structures and movement. Vectors are at the heart of animations, particle systems, and 2D and 3D graphics.
 
-Vectors in mathematics in general are entities with magnitude (also called length) and direction. A vector whose magnitude is 1 (ie a vector that is *normalized*) is called a *unit* vector. Unit vectors are very handy for storing directions as they can be easily scaled up (or down) to represent motion in a particular direction with a particular length.
+Vectors in mathematics in general are entities with magnitude (also called length) and direction. A vector whose magnitude is 1 (ie a vector that is *normalized*) is called a *unit vector*. Unit vectors are very handy for storing directions as they can be easily scaled up (or down) to represent motion in a particular direction with a particular length.
 
 *You will also see the term `vector` used to describe an array of objects in C++ (such as text strings). Don't let this confuse you, they are quite different: one of them is a mathematical term for a fixed-length list of numbers that you can do mathematical operations on, the other is a C++-specific term that means 'dynamically sizeable array'.*
 
@@ -19,7 +19,7 @@ ofVec2f v1; // v1.x is 0, v1.y is 0
 v1.set( 10, 50 ); // now v1.x is 10, v1.y is 50
 ~~~~
 
-Using `ofVec2f` greatly simplifies arithmetic operations in two dimensions. For example if you have two vectors `v1` and `v2`, both of which represent a 2D change in position, you can find the total change of position of both of them just by doing a an addition `v1 + v1`:
+Using `ofVec2f` greatly simplifies arithmetic operations in two dimensions. For example if you have two vectors `v1` and `v2`, both of which represent a 2D change in position, you can find the total change of position of both of them just by doing an addition `v1 + v2`:
 
 ~~~~{.cpp}
 ofVec2f v1(5, 2); // v1 represents walking 5 steps forward then 2 steps sideways
@@ -443,7 +443,7 @@ _name: getRotatedRad_
 _returns: ofVec2f_
 _returns_description: _
 _parameters: float angle_
-_access: public_
+_access: public_.
 _version_started: 007_
 _version_deprecated: _
 _summary: _
@@ -1103,11 +1103,6 @@ ofVec2f v2Limited = v2.getLimited(3);
 
 
 
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###ofVec2f limit(max)
@@ -1692,7 +1687,7 @@ Returns a new vector (`x`*`vec.x`,`y`*`vec.y`).
 ~~~~{.cpp}
 ofVec2f v1 = ofVec2f(40, 20); 
 ofVec2f v2 = ofVec2f(2, 4);
-ofVec3f v3 = v1 * v2; // (80, 80)
+ofVec2f v3 = v1 * v2; // (80, 80)
 ~~~~
 
 Useful for scaling a 2D point by a non-uniform scale.
@@ -2037,7 +2032,6 @@ _description: _
 
 Scale this vector by multiplying both `x` and `y` members by `f`.
 
-
 ~~~~{.cpp}
 ofVec2f v1(2, 5);
 v1 *= 4; // (8, 20)
@@ -2101,7 +2095,6 @@ _advanced: False_
 _description: _
 
 Scale this vector by dividing both `x` and `y` members by `f`.
-
 
 ~~~~{.cpp}
 ofVec2f v1(2, 5);
