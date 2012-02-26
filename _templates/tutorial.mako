@@ -35,12 +35,16 @@
             </div><!-- End Page Wide -->
 
         	<div class="submenucol-right">
-        	    <h2>${article.title}</h2>
+        	    <h1>${article.title}</h1>
         	    <span class="article_meta">${article.date}&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="${article.author_site}">${article.author}</a></span><br/>
         	    <div class="article">
+        	    % if article.type == 'markdown':
         	    <%self:filter chain="markdown_template">
 ${article.body}
         		</%self:filter>
+        		% else:
+            		${article.body}
+        		% endif
         		</div>
             </div><!-- End Page Wide -->
         

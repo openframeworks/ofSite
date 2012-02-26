@@ -193,7 +193,6 @@ __advanced: false__
 __visible: false__
 __advanced: false__
 
-
 ###ofFileUtils###
 __visible: true__
 __advanced: false__
@@ -339,11 +338,6 @@ __advanced: false__
 ###ofSubPath###
 __visible: true__
 __advanced: true__
-
-
-###ofPixels###
-__visible: true__
-__advanced: false__
 
 
 ###ofGraphics###
@@ -619,11 +613,6 @@ __advanced: true__
 ###ofBaseImage_###
 __visible: true__
 __advanced: true__
-
-
-###ofColor###
-__visible: true__
-__advanced: false__
 
 
 ###ofBaseTypes###
