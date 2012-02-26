@@ -35,7 +35,7 @@ class AsciiDocArticle:
         self.summary = attributes['summary']
         self.author = attributes['author']
         self.author_site = attributes['author_site']
-        self.body = outfile.getvalue().decode('utf-8','replace')
+        self.body = outfile.getvalue().decode('utf-8','replace').replace('<pre>','<pre><code class="cpp">').replace('</pre>','</code></pre>')
         self.type = 'asciidoc'
         
 class MarkdownArticle:
