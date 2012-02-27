@@ -97,7 +97,7 @@ Certain build tools like make might not be installed by default. To install thes
 
 - Download and install Xcode. It's provided in the Mac App store, among other places
 - Or, just download the build tools separately. These are open source and someone repackaged them and hosts them on GitHub: [https://github.com/kennethreitz/osx-gcc-installer][15]
-    There are pkg files you can install for OS X 10.6 and 10.7.
+    There are pkg files you can install for OS X 10.6 and 10.7. Note that this bundle doesn't include pkg-config, and errors may show up because it is missing, but you can ignore these.
 
 **f) Set the paths for the SDK, NDK and Ant  
 **
