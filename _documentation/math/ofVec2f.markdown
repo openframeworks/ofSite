@@ -443,7 +443,7 @@ _name: getRotatedRad_
 _returns: ofVec2f_
 _returns_description: _
 _parameters: float angle_
-_access: public_.
+_access: public_
 _version_started: 007_
 _version_deprecated: _
 _summary: _
