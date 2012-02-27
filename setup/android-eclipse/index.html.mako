@@ -18,7 +18,7 @@ These instructions go into a lot of important detail, but the main steps are:
 - Install Eclipse, Ant and the Android SDK and NDK.
 - If you're using OS X, install the Developer Tools.
 - Setup the Android Eclipse plugin.
-- Download openFrameworks either from the download page, or clone from git.
+- Download openFrameworks either from the download page, or clone from git. (If you're developing on OS X, you will need to clone from git.)
 - Set path variables so openFrameworks knows where SDK and NDK are.
 - Import the openFrameworks projects into Eclipse.
 - Compile and install one of the Android openFrameworks examples to confirm that everything works.
@@ -71,7 +71,9 @@ Uncompress this also to any place in your hard disk. We'll tell openFrameworks w
 
 [http://openframeworks.cc/download][4]
 
-You may also check out the openFrameworks source from GitHub: [http://github.com/openframeworks/openFrameworks][9]. 
+You may also check out the openFrameworks source from GitHub (under master branch): [http://github.com/openframeworks/openFrameworks][9]. 
+
+**Important:** if you're developing on OS X you must use the source in GitHub, since it contains a bug fix which isn't in the download package.
 
 **e) Install Ant:**
 
@@ -91,7 +93,11 @@ Download and uncompress Apache Ant 1.8 or greater from [http://ant.apache.org/bi
 
 **For OSX:**
 
-Install the OS X Developer Tools: TODO
+Certain build tools like make might not be installed by default. To install these you can either:
+
+- Download and install Xcode. It's provided in the Mac App store, among other places
+- Or, just download the build tools separately. These are open source and someone repackaged them and hosts them on GitHub: [https://github.com/kennethreitz/osx-gcc-installer][15]
+    There are pkg files you can install for OS X 10.6 and 10.7.
 
 **f) Set the paths for the SDK, NDK and Ant  
 **
@@ -341,3 +347,4 @@ FAQ
 [12]: http://dl.google.com/android/ndk/android-ndk-r6-darwin-x86.tar.bz2
 [13]: http://dl.google.com/android/ndk/android-ndk-r6-linux-x86.tar.bz2
 [14]: http://dl.google.com/android/ndk/android-ndk-r6-windows.zip
+[15]: https://github.com/kennethreitz/osx-gcc-installer
