@@ -73,7 +73,7 @@ Uncompress this also to any place in your hard disk. We'll tell openFrameworks w
 
 You may also check out the openFrameworks source from GitHub (under master branch): [http://github.com/openframeworks/openFrameworks][9]. 
 
-**Important:** if you're developing on OS X you must use the source in GitHub, since it contains a bug fix which isn't in the download package.
+**Important:** if you're developing on OS X you must use the source in GitHub, since it contains a bug fix which isn't in the current download package (version 007).
 
 **e) Install Ant:**
 
