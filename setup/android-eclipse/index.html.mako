@@ -192,6 +192,8 @@ In the "Project Explorer" on the left side of the window, select the openFramewo
 
 ![](android-compile-OF.png)
 
+When compiling on OS X I was missing pkg-config. Currently this doesn't seem to affect the build, since these commands were only important in detecting Linux libraries.
+
 **m) Enable development in your device:**
 Enable USB debugging: Settings \> Applications \> Development \> USB Debug
 (The device needs to be disconnected from the computer while you do this.)
@@ -244,7 +246,7 @@ Press Apply and Close.
 
 ![](toolbox-button.png)
 
-If you get an error about an obsolete build.xml, you can safely delete the build.xml file and recreate it using 'android update project'.
+**Note:** If you get an error about an obsolete build.xml, you can safely delete the build.xml file and recreate it using 'android update project'. (The 'android' tool is at SDK_DIR/tools/android.) You may also need to do this for openFrameworks/addons/ofxAndroid/ofAndroidLib.
 
 If everything went OK, the example should start on the device.
 
