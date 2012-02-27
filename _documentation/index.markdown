@@ -158,12 +158,12 @@ __advanced: true__
 
 
 ###ofLogError###
-__visible: true__
+__visible: false__
 __advanced: false__
 
 
 ###ofLogWarning###
-__visible: true__
+__visible: false__
 __advanced: false__
 
 
@@ -190,9 +190,8 @@ __advanced: false__
 
 
 ###ofLogNotice###
-__visible: true__
+__visible: false__
 __advanced: false__
-
 
 ###ofFileUtils###
 __visible: true__
@@ -216,7 +215,7 @@ __advanced: false__
 
 
 ###ofLogVerbose###
-__visible: true__
+__visible: false__
 __advanced: false__
 
 
@@ -246,7 +245,7 @@ __advanced: false__
 
 
 ###ofLogFatalError###
-__visible: true__
+__visible: false__
 __advanced: false__
 
 
@@ -339,11 +338,6 @@ __advanced: false__
 ###ofSubPath###
 __visible: true__
 __advanced: true__
-
-
-###ofPixels###
-__visible: true__
-__advanced: false__
 
 
 ###ofGraphics###
@@ -619,11 +613,6 @@ __advanced: true__
 ###ofBaseImage_###
 __visible: true__
 __advanced: true__
-
-
-###ofColor###
-__visible: true__
-__advanced: false__
 
 
 ###ofBaseTypes###
