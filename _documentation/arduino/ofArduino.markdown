@@ -4,7 +4,7 @@
 ##Description
 
 
-This is a way to control an ARduino that has had the firmata library loaded onto it from OF. To load firmata onto your Arduino,  run the Arduino IDE, open the Examples > Firmata > StandardFirmata sketch, and upload it to the Arduino board.
+This is a way to control an Arduino that has had the firmata library loaded onto it, from OF. To load firmata onto your Arduino,  run the Arduino IDE, open the Examples > Firmata > StandardFirmata sketch, and upload it to the Arduino board.
 Once the ofArduino instance returns true from isArduinoReady() you can set the mode of the different digital pins using sendDigitalPinMode()
    
     ~~~~{.cpp}
