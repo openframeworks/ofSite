@@ -1,5 +1,7 @@
 #functions
-
+ofSystemAlertDialog(...)
+ofSystemLoadDialog(...)
+ofSystemSaveDialog(...)
 ##Description
 
 
@@ -82,10 +84,10 @@ if (openFileResult.bSuccess){
 
 <!----------------------------------------------------------------------------->
 
-###ofFileDialogResult  ofSystemSaveDialog(string defaultName, string messageName)
+###ofFileDialogResult ofSystemSaveDialog(string defaultName, string messageName)
 
 <!--
-_syntax:  ofSystemSaveDialog(string defaultName, string messageName)_
+_syntax: ofSystemSaveDialog(string defaultName, string messageName)_
 _name: ofSystemSaveDialog_
 _returns: ofFileDialogResult_
 _returns_description: _
@@ -125,3 +127,9 @@ if (saveFileResult.bSuccess){
   ofLogVerbose() << "User hit cancel";
 }
 ~~~~
+
+
+
+
+
+<!----------------------------------------------------------------------------->
