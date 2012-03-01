@@ -111,7 +111,7 @@ ofImage image;
 image.loadImage("testImage.jpg");
 
 //Open the Save File Dialog
-string defaultName = ofGetTimestampString() + "." + ".jpg";
+string defaultName = ofGetTimestampString() + ".jpg";
 ofFileDialogResult saveFileResult= ofSystemSaveDialog(defaultName, "Select a file location"); 
 
 //Check if the user selected a location
