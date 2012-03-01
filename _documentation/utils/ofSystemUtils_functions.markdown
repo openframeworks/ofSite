@@ -27,7 +27,11 @@ _advanced: False_
 
 _description: _
 
+Sends the user a system alert with your message
 
+~~~~{.cpp}
+ofSystemAlertDialog("Hello World!");
+~~~~
 
 
 
@@ -54,7 +58,23 @@ _advanced: False_
 
 _description: _
 
+Opens a system dialog box that allows the user to select a single file
 
+~~~~{.cpp}
+ofSetLogLevel(OF_LOG_VERBOSE);
+
+//Open the Open File Dialog
+ofFileDialogResult openFileResult= ofSystemLoadDialog("Select a file", false); 
+
+//Check if the user opened a file
+if (openFileResult.bSuccess){
+  ofLogVerbose() << "User selected a file";
+  ofLogVerbose() << "File name: " << openFileResult.getName();
+  ofLogVerbose() << "Absolute file path: " << openFileResult.getPath();
+} else{
+  ofLogVerbose("User hit cancel");
+}
+~~~~
 
 
 
