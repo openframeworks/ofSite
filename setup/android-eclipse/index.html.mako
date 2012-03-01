@@ -16,8 +16,9 @@ Summary
 These instructions go into a lot of important detail, but the main steps are:
 
 - Install Eclipse, Ant and the Android SDK and NDK.
+- If you're using OS X, install the Developer Tools.
 - Setup the Android Eclipse plugin.
-- Download openFrameworks either from the download page, or clone from git.
+- Download openFrameworks either from the download page, or clone from git. (If you're developing on OS X, you will need to clone from git.)
 - Set path variables so openFrameworks knows where SDK and NDK are.
 - Import the openFrameworks projects into Eclipse.
 - Compile and install one of the Android openFrameworks examples to confirm that everything works.
@@ -54,9 +55,10 @@ or
 Uncompress it in any folder on your hard disk. Later you'll need to tell the openFrameworks makefiles where to find it.
 
 **c) Android NDK**: This is the C/C++ compiler, headers and libraries for Android. Note that the latest version (r7b) doesn't work yet as of Feb 19, 2012, so you'll need to download an earlier version. Here are the links for r6:
-OS X: [http://dl.google.com/android/ndk/android-ndk-r6-darwin-x86.tar.bz2][12]
-Linux: [http://dl.google.com/android/ndk/android-ndk-r6-linux-x86.tar.bz2][13]
-Windows: [http://dl.google.com/android/ndk/android-ndk-r6-windows.zip][14]
+
+- OS X: [http://dl.google.com/android/ndk/android-ndk-r6-darwin-x86.tar.bz2][12]
+- Linux: [http://dl.google.com/android/ndk/android-ndk-r6-linux-x86.tar.bz2][13]
+- Windows: [http://dl.google.com/android/ndk/android-ndk-r6-windows.zip][14]
 
 Later versions are available at:  
 [http://developer.android.com/sdk/ndk/index.html][3]
@@ -69,7 +71,9 @@ Uncompress this also to any place in your hard disk. We'll tell openFrameworks w
 
 [http://openframeworks.cc/download][4]
 
-You may also check out the openFrameworks source from GitHub: [http://github.com/openframeworks/openFrameworks][9]. 
+You may also check out the openFrameworks source from GitHub (under master branch): [http://github.com/openframeworks/openFrameworks][9]. 
+
+**Important:** if you're developing on OS X you must use the source in GitHub, since it contains a bug fix which isn't in the current download package (version 007).
 
 **e) Install Ant:**
 
@@ -87,6 +91,14 @@ or for newer distributions:
 
 Download and uncompress Apache Ant 1.8 or greater from [http://ant.apache.org/bindownload.cgi][5]
 
+**For OSX:**
+
+Certain build tools like make might not be installed by default. To install these you can either:
+
+- Download and install Xcode. It's provided in the Mac App store, among other places.
+- Or, just download the build tools separately. They were repackaged and are hosted on GitHub: [https://github.com/kennethreitz/osx-gcc-installer][15]
+    There are pkg files you can install for OS X 10.6 and 10.7. Note that this bundle doesn't include pkg-config, and errors may show up because it is missing, but you can ignore these.
+
 **f) Set the paths for the SDK, NDK and Ant  
 **
 
@@ -99,8 +111,8 @@ This will tell openFrameworks where to find the SDK, NDK and Ant.
 - Set the values of SDK_ROOT and NDK_ROOT to their install paths
 
 - Set ANT_HOME:
-Linux: /usr  
-OS X: Set it to the folder where you uncompressed Ant before.
+-- Linux: /usr  
+-- OS X: Set it to the folder where you uncompressed Ant before.
 
 **g) Start Eclipse**: You will see a pop up asking you what workspace to use. Just point it to:
 openFrameworks/apps/androidExamples.
@@ -133,8 +145,7 @@ Select it and press 'Next' until you get to the "Review Licenses" screen. Check 
 
 *Note:* I didn't need to do this step for SDK version 15.
 
-In the last version of Eclipse the Java compatibility is set to version 6 but Android needs version 5. To change it, in
-Window \> Preferences \> Java \> Compiler 
+In the last version of Eclipse the Java compatibility is set to version 6 but Android needs version 5. You can change this in Window \> Preferences \> Java \> Compiler. (Preferences is in the Eclipse menu for OS X.) 
 
 The compiler compliance settings should be set to 1.5\.
 
@@ -144,7 +155,7 @@ The compiler compliance settings should be set to 1.5\.
 
 **j) Configuring the Android plugin**: 
 
-Once we have installed the Android plugin we need to tell it where to find the SDK. In Eclipse go to Window \> Preferences \> Android and set the SDK location by browsing to the folder where you uncompressed the SDK before.
+Once we have installed the Android plugin we need to tell it where to find the SDK. In Eclipse go to Window \> Preferences \> Android (or Eclipse \> Preferences for OS X) and set the SDK location by browsing to the folder where you uncompressed the SDK before.
 
 ![android_prefs](android_prefs-600x449.png)
 
@@ -177,9 +188,11 @@ Import in this order:
 
 **l) Compile openFrameworks**:
 
-In the "Project Explorer" on the left side of the window, select the openFrameworks project. Choose the Android target in Window \> Build Configurations \> Set Active, and then click Window \> Build Project. You can also do this from the toolbar by switching to the C/C++ perspective and clicking the toolbar button with a hammer.
+In the "Project Explorer" on the left side of the window, select the openFrameworks project. Choose the Android target in Project \> Build Configurations \> Set Active, and then click Project \> Build Project. You can also do this from the toolbar by switching to the C/C++ perspective and clicking the toolbar button with a hammer.
 
 ![](android-compile-OF.png)
+
+When compiling on OS X I was missing pkg-config. Currently this doesn't seem to affect the build, since these commands were only important in detecting Linux libraries.
 
 **m) Enable development in your device:**
 Enable USB debugging: Settings \> Applications \> Development \> USB Debug
@@ -233,7 +246,7 @@ Press Apply and Close.
 
 ![](toolbox-button.png)
 
-If you get an error about an obsolete build.xml, you can safely delete the build.xml file and recreate it using 'android update project'.
+**Note:** If you get an error about an obsolete build.xml, you can safely delete the build.xml file and recreate it using 'android update project'. (The 'android' tool is at SDK_DIR/tools/android.) You may also need to do this for openFrameworks/addons/ofxAndroid/ofAndroidLib.
 
 If everything went OK, the example should start on the device.
 
@@ -250,7 +263,7 @@ before running the app.
 
 - Naming of resources is really restrictive in Android, for example you cannot have several resources with the same name even if they have different extensions.
 
-- The AndroidDebug target does a different compilation process of the native code that allows to detect linker errors that won't be detected when compiling in AndroidRelease mode. Is recomended to compile your application in AndroidDebug mode at least once or if your application crashes before starting. When installing applications on the device or emulator it is recommended to use the AndroidRelease mode since it's faster and the applications will be much smaller. There's also no support for debugging NDK applications in Eclipse, but you could theoretically use the NDK tools to debug an application compiled with AndroidDebug.
+- The AndroidDebug target does a different compilation process of the native code that allows it to detect linker errors that won't be detected when compiling in AndroidRelease mode. It is recomended to compile your application in AndroidDebug mode at least once or if your application crashes before starting. When installing applications on the device or emulator it is recommended to use the AndroidRelease mode since it's faster and the applications will be much smaller. There's also no support for debugging NDK applications in Eclipse, but you could theoretically use the NDK tools to debug an application compiled with AndroidDebug.
 
 - Test your application very often. Even if the last NDK allows for debugging, there's no support for native debugging in Eclipse and setting it up manually with the NDK is pretty hard. When an application crashes the debugger dies too, so it's hard to debug bad memory accesses and similar bugs.
 
@@ -336,3 +349,4 @@ FAQ
 [12]: http://dl.google.com/android/ndk/android-ndk-r6-darwin-x86.tar.bz2
 [13]: http://dl.google.com/android/ndk/android-ndk-r6-linux-x86.tar.bz2
 [14]: http://dl.google.com/android/ndk/android-ndk-r6-windows.zip
+[15]: https://github.com/kennethreitz/osx-gcc-installer
