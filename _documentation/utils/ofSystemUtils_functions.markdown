@@ -1,7 +1,5 @@
 #functions
-ofSystemAlertDialog(...)
-ofSystemLoadDialog(...)
-ofSystemSaveDialog(...)
+
 ##Description
 
 
@@ -10,7 +8,7 @@ ofSystemSaveDialog(...)
 
 <!----------------------------------------------------------------------------->
 
-###void ofSystemAlertDialog(errorMessage)
+### void ofSystemAlertDialog(errorMessage)
 
 <!--
 _syntax: ofSystemAlertDialog(errorMessage)_
@@ -31,9 +29,9 @@ _description: _
 
 Sends the user a system alert with your message
 
-~~~~{.cpp}
+$$code(lang=c++)
 ofSystemAlertDialog("Hello World!");
-~~~~
+$$/code
 
 
 
@@ -41,7 +39,7 @@ ofSystemAlertDialog("Hello World!");
 
 <!----------------------------------------------------------------------------->
 
-###ofFileDialogResult ofSystemLoadDialog(windowTitle = "", bFolderSelection = false)
+### ofFileDialogResult ofSystemLoadDialog(windowTitle = "", bFolderSelection = false)
 
 <!--
 _syntax: ofSystemLoadDialog(windowTitle = "", bFolderSelection = false)_
@@ -62,7 +60,7 @@ _description: _
 
 Opens a system dialog box that allows the user to select a single file
 
-~~~~{.cpp}
+$$code(lang=c++)
 ofSetLogLevel(OF_LOG_VERBOSE);
 
 //Open the Open File Dialog
@@ -76,7 +74,7 @@ if (openFileResult.bSuccess){
 } else{
   ofLogVerbose("User hit cancel");
 }
-~~~~
+$$/code
 
 
 
@@ -84,7 +82,7 @@ if (openFileResult.bSuccess){
 
 <!----------------------------------------------------------------------------->
 
-###ofFileDialogResult ofSystemSaveDialog(string defaultName, string messageName)
+### ofFileDialogResult ofSystemSaveDialog(string defaultName, string messageName)
 
 <!--
 _syntax: ofSystemSaveDialog(string defaultName, string messageName)_
@@ -105,7 +103,7 @@ _description: _
 
 Opens a system dialog box that allows the user to select a location to save a file
 
-~~~~{.cpp}
+$$code(lang=c++)
 //Snippet loads an image named "testImage.jpg" from the bin/data folder
 //and re-saves it to the file path provided by the user
 ofSetLogLevel(OF_LOG_VERBOSE);
@@ -126,7 +124,7 @@ if (saveFileResult.bSuccess){
 } else{
   ofLogVerbose() << "User hit cancel";
 }
-~~~~
+$$/code
 
 
 
