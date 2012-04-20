@@ -553,7 +553,7 @@ line.addVertex(ofPoint(200, 400));
 line.bezierTo(100, 100, 800, 100, 700, 400);
 ~~~~
 Creates this:
-![polyline bezier](/bezier.png)
+![polyline bezier](bezier.png)
 The control points are shown in yellow.
 
 
@@ -658,7 +658,7 @@ _advanced: False_
 _description: _
 
 Creates a quadratic bezier line in 3D space from the current drawing point with the beginning indicated by the coordinates cx1, cy1, cz1, the control point at cx2, cy2, cz2, and that ends at the coordinates x, y, z.
-![polyline curves](/curves.png)
+![polyline curves](curves.png)
 
 
 
@@ -780,7 +780,7 @@ line.draw();
 ofTranslate(400, 0);
 line.getResampledBySpacing(100).draw();
 ~~~~
-![polyline resample](/resample.png)
+![polyline resample](resample.png)
 
 
 

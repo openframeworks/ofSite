@@ -346,7 +346,7 @@ for( float theta = 0; theta < TWO_PI; theta += 0.1)
 
 px = mouseX;
 py = mouseY;
-$$/code
+~~~~
 
 
 
@@ -407,7 +407,7 @@ line.addVertex(ofPoint(200, 400));
 line.bezierTo(100, 100, 800, 100, 700, 400);
 ~~~~
 Creates this:
-![polyline bezier](/bezier.png)
+![polyline bezier](bezier.png)
 The control points are shown in yellow.
 
 
@@ -512,7 +512,7 @@ _description: _
 
 
 Creates a quadratic bezier line in 3D space from the current drawing point with the beginning indicated by the coordinates cx1, cy1, cz1, the control point at cx2, cy2, cz2, and that ends at the coordinates x, y, z.
-![polyline curves](/curves.png)
+![polyline curves](curves.png)
 
 
 
@@ -606,7 +606,7 @@ Creates an arc at centre, which has the radiusX, radiusY, and begins at angleBeg
 
 ~~~~{.cpp}
 path.arc( 100, 100, 50, 50, 0, 360);
-$$/code
+~~~~
 
 Note that angleBegin needs to be larger than angleEnd, i.e. 0, 180 is ok, while 180,0 is not.
 
@@ -639,9 +639,9 @@ Creates an arc at x,y, which has the radiusX, radiusY, and begins at angleBegin 
 ~~~~{.cpp}
 path.moveTo(300, 300);
 path.arc( 300, 300, 200, 200, 0, 271); // note 271, not 270 for precision
-$$/code
+~~~~
 
-![ofPath arc](/ofPath_arc.png)
+![ofPath arc](ofPath_arc.png)
 
 Note that angleBegin needs to be larger than angleEnd, i.e. 0, 180 is ok, while 180,0 is not.
 
@@ -705,7 +705,7 @@ OF_POLY_WINDING_POSITIVE
 OF_POLY_WINDING_NEGATIVE
 OF_POLY_WINDING_ABS_GEQ_TWO
 
-![ofPath winding modes](/windingModes.gif)
+![ofPath winding modes](winding_modes.gif)
 
 So adding the following points:
 
@@ -767,7 +767,7 @@ void testApp::keyPressed(int key){
 	path2.setPolyWindingMode((ofPolyWindingMode) mode);
 
 }
-$$/code
+~~~~
 
 we can see non zero and positive handle the winding differently:
 
