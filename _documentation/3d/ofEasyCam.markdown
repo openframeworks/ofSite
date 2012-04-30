@@ -103,7 +103,7 @@ ofDrawGrid();
 //draw rest of scene
 
 myCamera.end();
-```c++
+```
 
 
 
