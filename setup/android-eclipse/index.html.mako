@@ -318,6 +318,14 @@ FAQ
 - If you get a popup saying "Variable references empty selection: $\{project_loc\}", it means you need to select a project in Project Explorer first, before you run the Android Install command.
 - If you get a message saying "Activity class ... does not exist.", make sure that its namespace is called cc.openframeworks.your_folder_name_here.OFActivity. This is what the Makefile currently expects.
 
+**If you can't debug**
+
+- If you get a message saying something like "List of devices attached ???????????? no permissions" when you try to debug, you may need to manually restart the adb server:
+
+$ sudo ./adb kill-server
+$ sudo ./adb start-server
+
+
 **If the build succeeds but your app crashes:**
 
 - Check the libs folder. It should be populated with a library during the build. On Linux it is a file that ends with .so. If there is no library, the C++ build process is probably failing somewhere, or it is not being triggered at all. You can test the C++ build process separately using 'make AndroidDebug'. You may also see something like this in your LogCat:
