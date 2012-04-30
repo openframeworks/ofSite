@@ -4,6 +4,13 @@
 ##Description
 
 
+ofCamera objects useful for viewing 3D scenes. ofEasyCam gives you a very simple to use interactive camera to view your scene.
+
+Controls:
+
+* Left click drag = orbit the target
+* Right click drag = dolly in and out
+* Double click = reset camera positon
 
 
 
@@ -87,8 +94,16 @@ _advanced: False_
 
 _description: _
 
+Begin using the camera, e.g.:
 
+```c++
+myCamera.begin();
 
+ofDrawGrid();
+//draw rest of scene
+
+myCamera.end();
+```c++
 
 
 
