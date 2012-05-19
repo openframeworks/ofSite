@@ -34,6 +34,7 @@ contributors
 
 openFrameworks is actively developed by [Zach Lieberman](http://thesystemis.com/), [Theodore Watson](http://muonics.net/), and [Arturo Castro](http://arturocastro.net/) ("the core"), with help from the [OF community](../community/). openFrameworks is indebted to two significant precursors: the [Processing development environment](http://processing.org/), created by [Casey Reas](http://reas.com/), [Ben Fry](http://benfry.com/) and the Processing community; and the ACU Toolkit, a privately distributed C++ library developed by Ben Fry and others in the [MIT Media Lab's Aesthetics and Computation Group](http://acg.media.mit.edu/). A number of community leaders maintain responsibility for subsections of openFrameworks on a rotating basis:
 
+* Addons leader(s): [James George](jamesgeorge.org/) and [Greg Borenstein](http://gregborenstein.com/)
 * 3D leader: [Elliot Woods](http://www.kimchiandchips.com/) (elliotwoods)
 * 2D leader: **none**
 * Sound leader: [Damian Stewart](http://damianstewart.com/) (damian)
@@ -43,6 +44,7 @@ openFrameworks is actively developed by [Zach Lieberman](http://thesystemis.com/
 * iOS leader: [Lukasz Karluk](http://www.julapy.com/blog/) (julapy)
 * Internals/app leader: [Philip Whitfield](http://undef.ch/) (underdoeg)
 * Tutorial leader(s): [Diederick Huijbers](http://www.roxlu.com/) and [Jeff Crouse](http://www.jeffcrouse.info/) (roxlu, jefftimesten)
+* GitHub leader: [Christoph Buchner](https://github.com/bilderbuchi)
 * Community manager: [Kyle McDonald](http://kylemcdonald.net/)
 
 ----------------
