@@ -35,7 +35,7 @@ Images are added using normal markdown format:
 
 An alternative to running blogofile locally is to use a Markdown editor that can show you a rendering as you work.
 
-* Mac OSX: [Mou](http://mouapp.com/)
+* Mac OSX: [Mou](http://mouapp.com/) (OSX 10.7) or [MarkEdit](http://keshiki.net/markdown-editor/) (OSX 10.6+)
 * Windows: [MarkdownPad](http://www.markdownpad.com/)
 * Linux: [Writr](http://antrix.net/pages/writr-markdown/), [ReText](http://sourceforge.net/p/retext/home/ReText/), & the [gedit-markdown](http://www.jpfleury.net/en/software/gedit-markdown.php) plugin
 
