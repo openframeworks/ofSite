@@ -64,10 +64,10 @@ We release openFrameworks as an uncompiled library. This means that when you dow
 *Some new examples with the 007 release: box, assimp loader, shader and floating point images:*
 
 <div id="myslides">
-<img src="0.png" />
-<img src="1.jpg" />
-<img src="2.png" />
-<img src="3.jpg" />
+<img src="0071_0.png" />
+<img src="0071_1.jpg" />
+<img src="0071_2.png" />
+<img src="0071_3.jpg" />
 </div>
 
 --------------------------------
