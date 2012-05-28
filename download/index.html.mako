@@ -2,8 +2,8 @@
 
 <h1>download</h1>
 <div id="download-latest-header">
-	<h2>007</h2>
-	<p><strong>is the most recent release. It has a lot of new features, new interfaces, and probably some new bugs too. 007 is not 100% compatible with 0062 projects. Please see the <a href="https://github.com/openframeworks/openFrameworks/blob/develop/changes.txt">changelog</a> to get an overview of the differences between versions.</strong></p>
+	<h2>0071</h2>
+	<p><strong>is the most recent release. It has a lot of new features, new interfaces, and probably some new bugs too. 0071 is not 100% compatible with older projects. Please see the <a href="https://github.com/openframeworks/openFrameworks/blob/develop/changes.txt">changelog</a> to get an overview of the differences between versions.</strong></p>
 	<p>To use openFrameworks you will need an IDE, and the setup guide for your platform can walk you through this. Please post any bugs on the <a href="http://github.com/openframeworks/openFrameworks/issues">issues</a> page, and post to the <a href="http://forum.openframeworks.cc">forum</a> if you have any other questions. openFrameworks is distributed under the <a href="../about/license.html">MIT License</a>.</p>
 </div>
 
@@ -55,19 +55,19 @@
 
 <br class="clearboth"/>
 
-We release openFrameworks as an uncompiled library. This means that when you download and unzip openFrameworks, you will see the following folders: `addons/`, `apps/`, `libs/`, and a few more. These folders contain openFrameworks completely, so if you want to keep multiple versions of openFrameworks on your computer you should just create multiple folders. For example, one `openFrameworks0062/` folder and one `openFrameworks007/` folder, each with their own `apps/` folder. Even when new versions of openFrameworks are released, your old apps will still compile with old versions of openFrameworks.
+We release openFrameworks as an uncompiled library. This means that when you download and unzip openFrameworks, you will see the following folders: `addons/`, `apps/`, `libs/`, and a few more. These folders contain openFrameworks completely, so if you want to keep multiple versions of openFrameworks on your computer you should just create multiple folders. For example, one `openFrameworks007/` folder and one `openFrameworks0071/` folder, each with their own `apps/` folder. Even when new versions of openFrameworks are released, your old apps will still compile with old versions of openFrameworks.
 
 `apps/examples/` is a great place to start. Inside `apps/examples/` you'll find a variety of examples that show what is possible with openFrameworks. They demonstrate font loading, graphics, audio input and output, sound file playback and FFT analysis, video grabbing, movie playing, image loading and saving, event handling and serial communication.  For more examples, see `apps/addonsExamples/`.
 
 <br />
 
-*Some new examples with the 0071 release: box, assimp loader, shader and floating point images:*
+*Some new examples with the 0071 release: point picker, game events, quaternion placement, points as textures:*
 
 <div id="myslides">
-<img src="0.png" />
-<img src="1.jpg" />
-<img src="2.png" />
-<img src="3.jpg" />
+<img src="0071_0.png" />
+<img src="0071_1.png" />
+<img src="0071_2.png" />
+<img src="0071_3.png" />
 </div>
 
 --------------------------------
