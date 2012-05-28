@@ -65,9 +65,9 @@ We release openFrameworks as an uncompiled library. This means that when you dow
 
 <div id="myslides">
 <img src="0071_0.png" />
-<img src="0071_1.jpg" />
+<img src="0071_1.png" />
 <img src="0071_2.png" />
-<img src="0071_3.jpg" />
+<img src="0071_3.png" />
 </div>
 
 --------------------------------
