@@ -3,7 +3,7 @@
 <h1>download</h1>
 <div id="download-latest-header">
 	<h2>0071</h2>
-	<p><strong>is the most recent release. It has a lot of new features, new interfaces, and probably some new bugs too. 0071 is not 100% compatible with 007 projects. Please see the <a href="https://github.com/openframeworks/openFrameworks/blob/develop/changes.txt">changelog</a> to get an overview of the differences between versions.</strong></p>
+	<p><strong>is the most recent release. It has a lot of new features, new interfaces, and probably some new bugs too. 0071 is not 100% compatible with older projects. Please see the <a href="https://github.com/openframeworks/openFrameworks/blob/develop/changes.txt">changelog</a> to get an overview of the differences between versions.</strong></p>
 	<p>To use openFrameworks you will need an IDE, and the setup guide for your platform can walk you through this. Please post any bugs on the <a href="http://github.com/openframeworks/openFrameworks/issues">issues</a> page, and post to the <a href="http://forum.openframeworks.cc">forum</a> if you have any other questions. openFrameworks is distributed under the <a href="../about/license.html">MIT License</a>.</p>
 </div>
 
@@ -61,7 +61,7 @@ We release openFrameworks as an uncompiled library. This means that when you dow
 
 <br />
 
-*Some new examples with the 0071 release: box, assimp loader, shader and floating point images:*
+*Some new examples with the 0071 release: point picker, game events, quaternion placement, points as textures:*
 
 <div id="myslides">
 <img src="0071_0.png" />
