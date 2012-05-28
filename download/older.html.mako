@@ -7,6 +7,21 @@ as we update and change OF, you can download older versions of the framework her
 
 --------------------------------
 
+**pre release v0.07** 
+
+windows: [code blocks][71] | [visual studio 2010][72] 
+
+mac [x-code (10.6-10.7)][73]
+
+linux: [code blocks][74] | [(64 bit) code blocks][75]
+
+iphone: [iPhone][76] 
+
+android: [Android][77]
+
+
+--------------------------------
+
 **pre release v0.062** 
 
 windows: [code blocks FAT][12] | [visual studio 2010 FAT][13] | [visual studio 2008 FAT][14]
@@ -158,5 +173,11 @@ changes: [changelog for 0.04][67]
 [68]: http://openframeworks.cc/download-v003
 [69]: http://openframeworks.cc/download002
 [70]: http://openframeworks.cc/download001
-
+[71]: http://www.openframeworks.cc/versions/preRelease_v0.07/of_preRelease_v007_win_cb.zip
+[72]: http://www.openframeworks.cc/versions/preRelease_v0.07/of_preRelease_v007_vs2010.zip
+[73]: http://www.openframeworks.cc/versions/preRelease_v0.07/of_preRelease_v007_osx.zip
+[74]: http://www.openframeworks.cc/versions/preRelease_v0.07/of_preRelease_v007_linux.tar.gz
+[75]: http://www.openframeworks.cc/versions/preRelease_v0.07/of_preRelease_v007_linux64.tar.gz
+[76]: http://www.openframeworks.cc/versions/preRelease_v0.07/of_preRelease_v007_iphone.zip
+[77]: http://www.openframeworks.cc/versions/preRelease_v0.07/of_preRelease_v007_android.tar.gz
 
