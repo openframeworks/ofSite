@@ -10,7 +10,7 @@
 <div id="download-latest-platform">
 	<h2>osx</h2>
 	<h3>download</h3>
-	<p><a href="../versions/preRelease_v0.07/of_preRelease_v007_osx.zip">xcode</a></p><br/>
+	<p><a href="http://www.openframeworks.cc/versions/v0.071/of_0071_osx_release.zip">xcode</a></p><br/>
 	<h3>setup guide</h3>
 	<p><a href="../setup/xcode">xcode</a></p>
 </div>
@@ -18,8 +18,8 @@
 <div id="download-latest-platform">
 	<h2>linux</h2>
 	<h3>download</h3>
-	<p><a href="../versions/preRelease_v0.07/of_preRelease_v007_linux.tar.gz">code::blocks</a></p>
-	<p><a href="../versions/preRelease_v0.07/of_preRelease_v007_linux64.tar.gz">code::blocks (64 bit)</a></p><br/>
+	<p><a href="http://www.openframeworks.cc/versions/v0.071/of_v0071_linux_release.tar.gz">code::blocks</a></p>
+	<p><a href="http://www.openframeworks.cc/versions/v0.071/of_v0071_linux64_release.tar.gz">code::blocks (64 bit)</a></p><br/>
 	<h3>setup guide</h3>
 	<p><a href="../setup/linux-codeblocks">code::blocks</a></p>
 </div>
@@ -27,8 +27,8 @@
 <div id="download-latest-platform">
 	<h2>windows</h2>
 	<h3>download</h3>
-	<p><a href="../versions/preRelease_v0.07/of_preRelease_v007_win_cb.zip">code::blocks</a></p>
-	<p><a href="../versions/preRelease_v0.07/of_preRelease_v007_vs2010.zip">visual studio 2010</a></p><br/>
+	<p><a href="http://www.openframeworks.cc/versions/v0.071/of_v0071_win_cb_release.zip">code::blocks</a></p>
+	<p><a href="http://www.openframeworks.cc/versions/v0.071/of_v0071_vs2010_release.zip">visual studio 2010</a></p><br/>
 	<h3>setup guides</h3>
 	<p><a href="../setup/codeblocks">code::blocks</a></p>
 	<!--<p><a href="../setup/vs-2008">visual studio 2008</a></p>-->
@@ -39,7 +39,7 @@
 	<h2>ios</h2>
 	<p><em>osx only</em></p><br/>
 	<h3>download</h3>
-	<p><a href="../versions/preRelease_v0.07/of_preRelease_v007_iphone.zip">ios</a></p><br/>
+	<p><a href="http://www.openframeworks.cc/versions/v0.071/of_0071_iOS_release.zip">ios</a></p><br/>
 	<h3>setup guide</h3>
 	<p><a href="../setup/iphone">ios</a></p>
 </div>
@@ -48,7 +48,7 @@
 	<h2>android</h2>
 	<p><em>linux + osx only</em></p><br/>
 	<h3>download</h3>
-	<p><a href="../versions/preRelease_v0.07/of_preRelease_v007_android.tar.gz">eclipse</a></p><br/>
+	<p><a href="http://www.openframeworks.cc/versions/v0.071/of_v0071_android_release.tar.gz">eclipse</a></p><br/>
 	<h3>setup guide</h3>
 	<p><a href="../setup/android-eclipse">eclipse</a></p>
 </div>
@@ -61,7 +61,7 @@ We release openFrameworks as an uncompiled library. This means that when you dow
 
 <br />
 
-*Some new examples with the 007 release: box, assimp loader, shader and floating point images:*
+*Some new examples with the 0071 release: box, assimp loader, shader and floating point images:*
 
 <div id="myslides">
 <img src="0.png" />
@@ -79,12 +79,12 @@ Older releases of openFrameworks are archived [here](older.html). For the absolu
 
 [0]: http://forum.openframeworks.cc
 [1]: http://github.com/openframeworks/openFrameworks/issues
-[2]: ../versions/preRelease_v0.07/of_preRelease_v007_win_cb.zip
-[3]: ../versions/preRelease_v0.07/of_preRelease_v007_vs2010.zip
-[4]: ../versions/preRelease_v0.07/of_preRelease_v007_osx.zip
-[5]: ../versions/preRelease_v0.07/of_preRelease_v007_linux.tar.gz
-[6]: ../versions/preRelease_v0.07/of_preRelease_v007_linux64.tar.gz
-[7]: ../versions/preRelease_v0.07/of_preRelease_v007_iphone.zip
-[8]: ../versions/preRelease_v0.07/of_preRelease_v007_android.tar.gz
+[2]: http://www.openframeworks.cc/versions/v0.071/of_v0071_win_cb_release.zip
+[3]: http://www.openframeworks.cc/versions/v0.071/of_v0071_vs2010_release.zip
+[4]: http://www.openframeworks.cc/versions/v0.071/of_0071_osx_release.zip
+[5]: http://www.openframeworks.cc/versions/v0.071/of_v0071_linux_release.tar.gz
+[6]: http://www.openframeworks.cc/versions/v0.071/of_v0071_linux64_release.tar.gz
+[7]: http://www.openframeworks.cc/versions/v0.071/of_0071_iOS_release.zip
+[8]: http://www.openframeworks.cc/versions/v0.071/of_v0071_android_release.tar.gz
 [9]: ../license
 [10]: http://openframeworks.cc/setup
