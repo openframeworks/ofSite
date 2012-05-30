@@ -1083,3 +1083,12 @@ div#github .github_avatar img {
 	font-size: .8em;
 	margin-left: 5px;
 }
+
+/* logs */
+label.toggle { cursor: pointer; }
+label.warning { color: #FC0 }
+label.error { color: #F00 }
+.ok { color: #0F0 }
+input.toggle { display: none; }
+input.toggle:checked+div { display: none; }
+div.log {padding-left:2em;}
