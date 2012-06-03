@@ -550,7 +550,7 @@ _advanced: False_
 _description: _
 
 
-ofMap remaps the value passed in "value", calculating it's linear distance between inputMin and inputMax, and remapping it based on that percentage to outputMin and outputMax.  You can choose to clamp the results.  Results are not clamped by dafult.
+ofMap remaps the value passed in "value", calculating it's linear distance between inputMin and inputMax, and remapping it based on that percentage to outputMin and outputMax.  You can choose to clamp the results.  Results are not clamped by default.
 
 For example:
 
