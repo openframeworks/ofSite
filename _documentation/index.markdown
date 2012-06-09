@@ -440,11 +440,6 @@ ofBox(...)
 ofSetDrawBitmapMode(...)
 
 
-###ofPixelUtils###
-__visible: true__
-__advanced: false__
-
-
 ###ofTrueTypeFont###
 __visible: true__
 __advanced: false__
