@@ -28,8 +28,11 @@ _advanced: False_
 _description: _
 
 Sets the background color. It takes as input r,g,b (0-255). The background is cleared automatically, just before the draw() command, so if the background color is not changing, you could call this inside of setup() (once, at the start of the application). If the background color is changing, you can call this inside of update().
-
-
+~~~~{.cpp}
+void testApp::draw(){
+	ofBackground(255,0,0); 	// draws a red background
+}    
+~~~~
 
 
 
@@ -55,7 +58,7 @@ _advanced: False_
 
 _description: _
 
-Gets the background color.
+Gets the current background color that is set by ofBackground() or default.
 eg:
 ~~~~{.cpp}
 float * bgColor = ofBgColorPtr();
@@ -120,7 +123,7 @@ _advanced: False_
 
 _description: _
 
-Tells you if background clearing is set to be automatic or manual
+Tells you if background clearing is set to be automatic or manual.
 
 
 
@@ -149,7 +152,14 @@ _advanced: False_
 _description: _
 
 Sets the resolution for the ofCircle command. By default, the circle is 22 points, but if you need to draw larger circles, you can adjust the resolution using this command. all circles are cached in opengl using a display list for optimization purposes.
-
+~~~~{.cpp}
+void testApp::draw(){
+	ofSetCircleResolution(10);		//draws a rouf circle
+	ofCircle(150,150,100);
+	ofSetCircleResolution(100);
+	ofCircle(450,150,100);			//draws a fine circle
+}    
+~~~~
 
 
 
@@ -177,7 +187,13 @@ _advanced: False_
 _description: _
 
 Sets the mode for drawing rectangles, if they are corner aligned, or drawn so that the x,y position is the center of the rectangle. possible options are OF_RECTMODE_CENTER and OF_RECTMODE_CORNER.
-
+~~~~{.cpp}
+void testApp::draw(){
+	
+	…….
+	
+}    
+~~~~
 
 
 
@@ -204,7 +220,7 @@ _advanced: False_
 
 _description: _
 
-Tells you if rect drawing mode is set to drawn from the center or drawn from the top left corner.
+Tells you if rect drawing mode is set to drawn from the center or drawn from the top left corner, as set with the ofSetRectMode() function.
 
 
 
@@ -233,7 +249,11 @@ _advanced: False_
 _description: _
 
 Draws an rectangle from point x,y with a given width and height. 
-
+~~~~{.cpp}
+void testApp::draw(){
+	ofRect(10,10,100,100);
+}    
+~~~~
 
 
 
@@ -261,7 +281,11 @@ _advanced: False_
 _description: _
 
 Draws a triangle, with the three points: (x1,y1),(x2, y2),(x3, y3). 
-
+~~~~{.cpp}
+void testApp::draw(){
+	ofTriangle(50,10,10,40,90,40);
+}    
+~~~~
 
 
 
@@ -289,7 +313,11 @@ _advanced: False_
 _description: _
 
 Draws a circle, centered at x,y, with a given radius.
-
+~~~~{.cpp}
+void testApp::draw(){
+	ofCircle(150,150,100);			
+}    
+~~~~
 
 
 
@@ -317,7 +345,11 @@ _advanced: False_
 _description: _
 
 Draws an ellipse from point (x,y) with a given width (w) and height (h).
-
+~~~~{.cpp}
+void testApp::draw(){
+	ofEllipse(10,10,50,30);
+}    
+~~~~
 
 
 
@@ -345,7 +377,11 @@ _advanced: False_
 _description: _
 
 Draws a line between two points: (x1,y1),(x2,y2). 
-
+~~~~{.cpp}
+void testApp::draw(){
+	ofLine(10,10,100,100);
+}    
+~~~~
 
 
 
