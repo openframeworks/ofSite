@@ -879,7 +879,7 @@ void testApp::draw(){
 	ofSetColor(255,0,0,127);	// red, 50% transparent
 	ofRect(20,20,100,100);		// draws the rect with alpha
 	ofDisableAlphaBlending();	// turn off alpha
-	ofSetColor(255,0,0,127);	// draws the rect without alpha
+	ofRect(120,20,100,100);	// draws the rect without alpha
 }
 ~~~~
 
@@ -914,7 +914,7 @@ void testApp::draw(){
 	ofSetColor(255,0,0,127);	// red, 50% transparent
 	ofRect(20,20,100,100);		// draws the rect with alpha
 	ofDisableAlphaBlending();	// turn off alpha
-	ofSetColor(255,0,0,127);	// draws the rect without alpha
+	ofRect(120,20,100,100);	// draws the rect without alpha
 }
 ~~~~
 
@@ -1001,7 +1001,9 @@ _description: _
 
 Draws a bitmapped string, on screen, at point (x,y). For example, you can write some text on screen like this:
 ~~~~{.cpp}
-ofDrawBitmapString("hi!!", 100,100);
+void testApp::draw(){
+	ofDrawBitmapString("hi!!", 100,100);
+}
 ~~~~
 Your strings can even be multiline:
 ~~~~{.cpp}
@@ -1043,11 +1045,11 @@ _advanced: False_
 _description: _
 
 ofRotate produces a rotation of angle "degrees"	around the vector (vecX,vecY,vecZ).
-"degrees"specifies the angle of rotation, in degrees. vecX, vecY, vecZ specify the x,	y, and z coordinates of	a vector, respectively.
-All graphics drawn after ofRotate is called are rotated.  Use ofPushMatrix and ofPopMatrix to save and restore the unrotated coordinate system.
+"degrees"specifies the angle of rotation, in degrees. vecX, vecY, vecZ specify the x, y, and z coordinates of a vector, respectively.
+All graphics drawn after ofRotate is called are rotated. Use ofPushMatrix and ofPopMatrix to save and restore the unrotated coordinate system.
 ~~~~{.cpp}
 void testApp::draw(){
-	ofRotate(45,1,0,0); //rotates the coordinate system 45 degrees on the x axe
+	ofRotate(50, 1, 0.5, 0); //rotates the coordinate system 50 degrees along the x-axis and 25 degrees on the y-axis
 	ofRect(20,20,100,100);		
 }
 ~~~~
@@ -1078,8 +1080,12 @@ _advanced: False_
 _description: _
 
 ofRotateX produces a rotation of angle "degrees" around the X-axis of our coordinate system represented by the vector (1,0,0)."degrees"specifies the angle of rotation, in degrees.
-
-
+~~~~{.cpp}
+void testApp::draw(){
+	ofRotateX(45); //rotates the coordinate system 45 degrees around the x-axis
+	ofRect(20,20,100,100);		
+}
+~~~~
 
 
 
@@ -1107,7 +1113,12 @@ _description: _
 
 ofRotateY produces a rotation of angle "degrees" around the Y-axis of our coordinate system represented by the vector (0,1,0).
 "degrees"specifies the angle of rotation, in degrees.
-
+~~~~{.cpp}
+void testApp::draw(){
+	ofRotateY(45); //rotates the coordinate system 45 degrees around the x-axis
+	ofRect(20,20,100,100);		
+}
+~~~~
 
 
 
@@ -1136,7 +1147,12 @@ _description: _
 
 ofRotateZ produces a rotation of angle "degrees" around the Z-axis of our coordinate system represented by the vector (0,0,1).
 "degrees"specifies the angle of rotation, in degrees.
-
+~~~~{.cpp}
+void testApp::draw(){
+	ofRotateZ(45); //rotates the coordinate system 45 degrees around the x-axis
+	ofRect(20,20,100,100);		
+}
+~~~~
 
 
 
@@ -1168,11 +1184,11 @@ In the following example the properties of being red and filled only applies to 
 ~~~~{.cpp}
 void testApp::draw(){
 	ofCircle(10,10,5);
-	ofPushStyle();
+	ofPushStyle();	// push the current style for use later
 	ofFill();
 	ofsetColor(255,0,0);
 	ofEllipse(30,10,40,40);
-	ofPopStyle();
+	ofPopStyle();	// recall the pushed style
 }    
 ~~~~
 
@@ -1202,8 +1218,17 @@ _advanced: False_
 
 _description: _
 
-ofPopStyle() restores the prior style settings. It needs to be called after ofPushStyle. See ofPushStyle for more info.
-
+ofPopStyle() restores the prior style settings. It needs to be called after ofPushStyle. 
+~~~~{.cpp}
+void testApp::draw(){
+	ofCircle(10,10,5);
+	ofPushStyle();	// push the current style for use later
+	ofFill();
+	ofsetColor(255,0,0);
+	ofEllipse(30,10,40,40);
+	ofPopStyle();	// recall the pushed style
+}    
+~~~~
 
 
 
@@ -1286,7 +1311,14 @@ _advanced: False_
 _description: _
 
 ofSetLineWidth sets the width of the ofLines called after.
-
+~~~~{.cpp}
+void testApp::draw(){
+	ofSetLineWidth(1);		// set line width to 1
+	ofLine(10,10,100,100);	// draw thin line
+	ofSetLineWidth(10);		// set line width to 10
+	ofLine(10,100,100,10);	// draw fat line
+}    
+~~~~
 
 
 
@@ -1317,11 +1349,11 @@ ofPushMatrix saves the current coordinate system allowing users to develop speci
 In the following example we only rotate the square.
 ~~~~{.cpp}
 void testApp::draw(){
-	ofCircle(10, 10, 5);
-	ofPushMatrix();
-	ofRotateX(90);
-	ofRect(10,10,40,40);
-	ofPopMatrix()
+	ofCircle(10, 10, 5);	// draw a circle
+	ofPushMatrix();			// push the current coordinate position
+	ofRotateX(90);			// change the coordinate system
+	ofRect(10,10,40,40);	// draw a rect
+	ofPopMatrix()			// recall the pushed coordinate position
 }
 ~~~~
 
@@ -1351,8 +1383,16 @@ _advanced: False_
 
 _description: _
 
-ofPopMatrix() restores the prior coordinate system. See ofPushMatrix for more info.
-
+ofPopMatrix() restores the prior coordinate system. 
+~~~~{.cpp}
+void testApp::draw(){
+	ofCircle(10, 10, 5);	// draw a circle
+	ofPushMatrix();			// push the current coordinate position
+	ofRotateX(90);			// change the coordinate system
+	ofRect(10,10,40,40);	// draw a rect
+	ofPopMatrix()			// recall the pushed coordinate position
+}
+~~~~
 
 
 
@@ -1381,7 +1421,12 @@ _description: _
 
 ofTranslate produces a translation by (x,y,z) vector of our coordinate system. The call of ofTranslate modifies graphics positions.
 Use ofPushMatrix and ofPopMatrix to save and restore the untranslated coordinate system.
-
+~~~~{.cpp}
+void testApp::draw(){
+	ofTranslate(100, 100, 0);	// move the coordinate system to position x 100 and y 100 and make that zero.
+	ofRect(0, 0, 10, 10);		// draw a rect at that position
+}
+~~~~
 
 
 
@@ -1412,11 +1457,11 @@ ofScale produces a nonuniform scaling along the x, y, and z axes. The three para
 e.g:
 ~~~~{.cpp}
 void testApp::draw(){
-	ofScale(0.5,1,1);
-	ofRect(10,10,40,40);	
+	ofScale(0.5,1,1);		// scale 0.5 in height
+	ofRect(10,10,40,40);	// draw a square rectangle	
 }
 ~~~~
-Rectangle width will be now 20px!
+Rectangle width will be now 20px heigh!
 
 
 
@@ -1930,7 +1975,18 @@ _advanced: False_
 -->
 
 _description: _
-
+ofTranslate produces a translation by (x,y,z) vector of our coordinate system. The call of ofTranslate modifies graphics positions.
+Use ofPushMatrix and ofPopMatrix to save and restore the untranslated coordinate system.
+~~~~{.cpp}
+void testApp::draw(){
+	ofPoint point;
+	point.x = 100;
+	point.y = 100;
+	
+	ofTranslate(point);		// move the coordinate system to position of point and make that zero.
+	ofRect(0, 0, 10, 10);	// draw a rect at that position
+}
+~~~~
 
 
 
