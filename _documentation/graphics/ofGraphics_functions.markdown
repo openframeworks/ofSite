@@ -30,7 +30,7 @@ _description: _
 Sets the background color. It takes as input r,g,b (0-255). The background is cleared automatically, just before the draw() command, so if the background color is not changing, you could call this inside of setup() (once, at the start of the application). If the background color is changing, you can call this inside of update().
 ~~~~{.cpp}
 void testApp::setup(){
-	ofBackground(255,0,0); 	// Sets the background color to  red
+	ofBackground(255,0,0); 	// Sets the background color to red
 }    
 ~~~~
 
@@ -168,8 +168,8 @@ _description: _
 Sets the resolution for the ofCircle command. By default, the circle is 22 points, but if you need to draw larger circles, you can adjust the resolution using this command. all circles are cached in opengl using a display list for optimization purposes.
 ~~~~{.cpp}
 void testApp::draw(){
-	ofSetCircleResolution(10);		//draws a rough circle
-	ofCircle(150,150,100);
+	ofSetCircleResolution(10);		
+	ofCircle(150,150,100);			//draws a rough circle
 	ofSetCircleResolution(100);
 	ofCircle(450,150,100);			//draws a fine circle
 }    
@@ -702,7 +702,13 @@ _advanced: False_
 _description: _
 
 Draw shapes as outlines with the current draw color. 
-
+~~~~{.cpp}
+void testApp::draw(){
+	ofSetColor(0,0,255);
+	ofNoFill();
+	ofRect(10,10,100,100); 	//draws only the outline in blue
+}    
+~~~~
 
 
 
@@ -730,7 +736,13 @@ _advanced: False_
 _description: _
 
 Draw shapes filled with the current draw color. 
-
+~~~~{.cpp}
+void testApp::draw(){
+	ofSetColor(0,0,255);
+	ofFill();
+	ofRect(10,10,100,100); 	//draws the rectangle filled in blue
+}    
+~~~~
 
 
 
@@ -758,8 +770,12 @@ _advanced: False_
 _description: _
 
 Sets the draw color with r,g,b, 0-255. For example, red (0xff0000) would be: ofSetColor(255,0,0).
-
-
+~~~~{.cpp}
+void testApp::draw(){
+	ofSetColor(0,0,255); 	//set te color to blue
+	ofRect(10,10,100,100); 
+}    
+~~~~
 
 
 
@@ -787,10 +803,12 @@ _description: _
 
 sets the draw color with r,g,b,a 0-255. For alpha (transparency), you must first enable transparent blending (turned off by default for performance reasons), and draw in the proper z-order (objects in the back drawn first). For example, to draw a transparent red rectangle: 
 ~~~~{.cpp}
-ofEnableAlphaBlending();	// turn on alpha blending
-ofSetColor(255,0,0,127);	// red, 50% transparent
-ofRect(20,20,100,100);
-ofDisableAlphaBlending();	// turn it back off, if you don't need it
+void testApp::draw(){
+	ofEnableAlphaBlending();	// turn on alpha blending
+	ofSetColor(255,0,0,127);	// red, 50% transparent
+	ofRect(20,20,100,100);
+	ofDisableAlphaBlending();	// turn it back off, if you don't need it
+}
 ~~~~
 
 
@@ -821,9 +839,11 @@ _description: _
 
 Sets the draw color with r,g,b, passed in as a hex. Hex is a conventient way to write colors. Some examples:
 ~~~~{.cpp}
-ofSetColor(0xffffff);  // white  (255,255,255)
-ofSetColor(0x000000);  // black  (0,0,0);
-ofSetColor(0x00ff00);  // green  (0,255,0);
+void testApp::draw(){
+	ofSetColor(0xffffff);  // white  (255,255,255)
+	ofSetColor(0x000000);  // black  (0,0,0);
+	ofSetColor(0x00ff00);  // green  (0,255,0);
+}
 ~~~~
 
 
@@ -853,8 +873,15 @@ _advanced: False_
 _description: _
 
 Turns on alpha blending, which is off by default for performance purposes. It simply wraps opengl commands that enable blending, and turn on a common blend mode.
-
-
+~~~~{.cpp}
+void testApp::draw(){
+	ofEnableAlphaBlending();	// turn on alpha blending
+	ofSetColor(255,0,0,127);	// red, 50% transparent
+	ofRect(20,20,100,100);		// draws the rect with alpha
+	ofDisableAlphaBlending();	// turn off alpha
+	ofSetColor(255,0,0,127);	// draws the rect without alpha
+}
+~~~~
 
 
 
@@ -881,7 +908,15 @@ _advanced: False_
 _description: _
 
 Turns off alpha blending. 
-
+~~~~{.cpp}
+void testApp::draw(){
+	ofEnableAlphaBlending();	// turn on alpha blending
+	ofSetColor(255,0,0,127);	// red, 50% transparent
+	ofRect(20,20,100,100);		// draws the rect with alpha
+	ofDisableAlphaBlending();	// turn off alpha
+	ofSetColor(255,0,0,127);	// draws the rect without alpha
+}
+~~~~
 
 
 
@@ -1010,7 +1045,12 @@ _description: _
 ofRotate produces a rotation of angle "degrees"	around the vector (vecX,vecY,vecZ).
 "degrees"specifies the angle of rotation, in degrees. vecX, vecY, vecZ specify the x,	y, and z coordinates of	a vector, respectively.
 All graphics drawn after ofRotate is called are rotated.  Use ofPushMatrix and ofPopMatrix to save and restore the unrotated coordinate system.
-
+~~~~{.cpp}
+void testApp::draw(){
+	ofRotate(45,1,0,0); //rotates the coordinate system 45 degrees on the x axe
+	ofRect(20,20,100,100);		
+}
+~~~~
 
 
 
