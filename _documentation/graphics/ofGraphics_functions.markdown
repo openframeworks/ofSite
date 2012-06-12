@@ -29,8 +29,8 @@ _description: _
 
 Sets the background color. It takes as input r,g,b (0-255). The background is cleared automatically, just before the draw() command, so if the background color is not changing, you could call this inside of setup() (once, at the start of the application). If the background color is changing, you can call this inside of update().
 ~~~~{.cpp}
-void testApp::draw(){
-	ofBackground(255,0,0); 	// draws a red background
+void testApp::setup(){
+	ofBackground(255,0,0); 	// Sets the background color to  red
 }    
 ~~~~
 
@@ -63,10 +63,10 @@ eg:
 ~~~~{.cpp}
 float * bgColor = ofBgColorPtr();
 //lets get the individual values!
-float r = bgColor[0];
-float g = bgColor[1];
-float b = bgColor[2];
-float a = bgColor[3];
+float r = bgColor[0];	//red
+float g = bgColor[1];	//green
+float b = bgColor[2];	//blue
+float a = bgColor[3];	//alpha
 ~~~~
 
 
@@ -96,10 +96,17 @@ _advanced: False_
 _description: _
 
 Sets the background clearing function to be auto (default) or not. If non-auto, then background clearing will not occur per frame (at the start of draw) but rather, whenever ofBackground is called.
-
-
-
-
+~~~~{.cpp}
+void testApp::setup(){
+	ofSetBackgroundAuto(false); //disable automatic background redraw
+}    
+void testApp::draw(){
+	if(ofGetFrameNum() % 10 == 0){
+		// draws a black background every 10 frames
+		ofBackground(0,0,0);
+	}
+}
+~~~~
 
 
 <!----------------------------------------------------------------------------->
@@ -123,8 +130,15 @@ _advanced: False_
 
 _description: _
 
-Tells you if background clearing is set to be automatic or manual.
-
+Tells you if background clearing is set to be automatic or manual by the ofSetBackgroundAuto() function.
+~~~~{.cpp}
+void testApp::draw(){
+	if(!ofbClearBg()){
+		// draws a black background if the background is not drawn automaticly
+		ofBackground(0,0,0);
+	}
+}
+~~~~
 
 
 
@@ -154,7 +168,7 @@ _description: _
 Sets the resolution for the ofCircle command. By default, the circle is 22 points, but if you need to draw larger circles, you can adjust the resolution using this command. all circles are cached in opengl using a display list for optimization purposes.
 ~~~~{.cpp}
 void testApp::draw(){
-	ofSetCircleResolution(10);		//draws a rouf circle
+	ofSetCircleResolution(10);		//draws a rough circle
 	ofCircle(150,150,100);
 	ofSetCircleResolution(100);
 	ofCircle(450,150,100);			//draws a fine circle
@@ -189,9 +203,11 @@ _description: _
 Sets the mode for drawing rectangles, if they are corner aligned, or drawn so that the x,y position is the center of the rectangle. possible options are OF_RECTMODE_CENTER and OF_RECTMODE_CORNER.
 ~~~~{.cpp}
 void testApp::draw(){
-	
-	…….
-	
+	ofSetRectMode(OF_RECTMODE_CORNER); //set rectangle mode to the corner
+	ofRect(10,10,80,80);	
+	ofSetRectMode(OF_RECTMODE_CENTER); //set rectangle mode to the center
+	ofRect(50,50,80,80);
+	// both rectangles are drawn at the same place
 }    
 ~~~~
 
@@ -221,7 +237,16 @@ _advanced: False_
 _description: _
 
 Tells you if rect drawing mode is set to drawn from the center or drawn from the top left corner, as set with the ofSetRectMode() function.
-
+~~~~{.cpp}
+void testApp::draw(){
+	if(ofGetRectMode() == OF_RECTMODE_CORNER){
+		ofRect(10,10,80,80);	
+	}
+	else {
+		ofRect(50,50,80,80);
+	}
+}    
+~~~~
 
 
 
