@@ -2905,7 +2905,17 @@ _advanced: False_
 
 _description: _
 
-
+~~~~{.cpp}
+void testApp::draw(){
+	ofRectangle rect;
+	rect.x = 10;
+	rect.y = 10;
+	rect.width = 100;
+	rect.height = 100;
+	
+	ofRect(rect);
+}    
+~~~~
 
 
 
@@ -2933,8 +2943,17 @@ _advanced: False_
 _description: _
 
 
+Draws an rectangle from point p, with a given width and height.
 
-
+~~~~{.cpp}
+void testApp::draw(){
+	ofPoint p;		// create a point P
+	p.x = 10;		// set the x of the point
+	p.y = 10;		// set the y of the point
+	
+	ofRect(p, 80, 80); // Draw the rectangle
+}    
+~~~~
 
 
 
@@ -2960,9 +2979,13 @@ _advanced: False_
 _description: _
 
 
+Draws an rectangle from point X, Y at depth Z with a given width and height.
 
-
-
+~~~~{.cpp}
+void testApp::draw(){
+	ofRect(10,10,-100, 80, 80); // Draw a rectangle at 100 pixels in depth
+}    
+~~~~
 
 
 <!----------------------------------------------------------------------------->
@@ -2987,7 +3010,7 @@ _advanced: False_
 _description: _
 
 
-
+Draws a 3-dimensional curve from point (x1, y1, z1) to point (x2, y2, z2). The curve is shaped by the two control points (x0, y0, z0) and (x3, y3, z3).
 
 
 
@@ -3231,8 +3254,13 @@ _description: _
 
 
 
+Draws a 3-dimensional sphere at X, Y and Z with the given radius.
 
-
+~~~~{.cpp}
+void testApp::draw(){
+	ofSphere(50,50,-10,40);
+}    
+~~~~
 
 
 <!----------------------------------------------------------------------------->
@@ -3258,8 +3286,12 @@ _description: _
 
 
 
-
-
+Draws a 3-dimensional sphere at X and Y at the current depth with the given radius.
+~~~~{.cpp}
+void testApp::draw(){
+	ofSphere(50,50,40);
+}    
+~~~~
 
 
 <!----------------------------------------------------------------------------->
@@ -3285,8 +3317,15 @@ _description: _
 
 
 
-
-
+Draws a 3-dimensional sphere at position by point with the given radius.
+~~~~{.cpp}
+void testApp::draw(){
+	ofPoint p;
+	p.x = 50;
+	p.y = 50;
+	ofSphere(p, 40);
+}    
+~~~~
 
 
 <!----------------------------------------------------------------------------->
@@ -3312,7 +3351,13 @@ _description: _
 
 
 
-
+Draws a 3-dimensional sphere with the given radius.
+~~~~{.cpp}
+void testApp::draw(){
+	ofTranslate(50,50,0);
+	ofSphere(40);
+}    
+~~~~
 
 
 
@@ -3339,7 +3384,12 @@ _description: _
 
 
 
-
+Draws a 3-dimensional box with equal sides (size) at the position of X and Y and Z.
+~~~~{.cpp}
+void testApp::draw(){
+	ofBox(50,50,-10,40);
+}    
+~~~~
 
 
 
@@ -3366,8 +3416,12 @@ _description: _
 
 
 
-
-
+Draws a 3-dimensional box with equal sides (size) at the position of X and Y, at the current depth.
+~~~~{.cpp}
+void testApp::draw(){
+	ofBox(50,50,40);
+}    
+~~~~
 
 
 <!----------------------------------------------------------------------------->
@@ -3392,8 +3446,15 @@ _advanced: False_
 _description: _
 
 
-
-
+Draws a 3-dimensional box with equal sides (size) at the position of point.
+~~~~{.cpp}
+void testApp::draw(){
+	ofPoint p;
+	p.x = 50;
+	p.y = 50;
+	ofBox(p,40);
+}    
+~~~~
 
 
 
@@ -3419,8 +3480,13 @@ _advanced: False_
 _description: _
 
 
-
-
+Draws a 3-dimensional box with equal sides at the current coordinate point.
+~~~~{.cpp}
+void testApp::draw(){
+	ofTranslate(50,50);
+	ofBox(40);
+}    
+~~~~
 
 
 
@@ -3446,8 +3512,7 @@ _advanced: False_
 _description: _
 
 
-
-
+takes OF_BITMAPMODE_SIMPLE, OF_BITMAPMODE_SCREEN, OF_BITMAPMODE_VIEWPORT, OF_BITMAPMODE_MODEL and OF_BITMAPMODE_MODEL_BILLBOARD
 
 
 
