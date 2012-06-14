@@ -11,10 +11,10 @@
       ${self.header()}
       <div id="body-wrap">	
 	    <div class="page-wide">
-            <ul class="submenu">
+            <!--ul class="submenu">
                 <li><a href="/documentation">reference</a></li>
                 <li><a href="/tutorials">tutorials</a></li>
-            </ul>
+            </ul-->
 
             
             <h1>reference</h1>

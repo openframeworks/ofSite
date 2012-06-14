@@ -97,6 +97,27 @@ body {
 	position: relative;
 	width: 100%;
 }
+#head .submenu{
+    font-size: 1em;
+    margin-right:0px;
+    list-style:none;
+    float:right;
+	font-family: 'Questrial', sans-serif;
+}
+#head .submenu li{
+    display:inline;
+    margin-right:5px;
+}
+#head .submenu li a{
+    font-size: 1em;
+    color: #EE3987;
+}
+#head .a{
+    font-size: 1em;
+    padding:0;
+    margin:0;
+    margin-right:50px;
+}
 #head-left {
 	float: left;
 	margin: 0px;
@@ -112,20 +133,21 @@ body {
 }
 #head-right ul {
 	list-style: none;
+	padding-left:20px;
 }
 #head-right li {
 	display: block;
 	float: left;
-	margin-left: 2.1em;
+	margin-left: 0.9em;
 }
 #head-right li a {
 	color: #333;
-	font-size: 2em;
+	font-size: 1.55em;
 	padding: 0 0.2em 0 0.2em;
 	font-family: 'Questrial', sans-serif;
 }
 #head-right .menu-externals {
-	float: right;
+	float: left;
 }
 #head-right .menu-externals li a {
 	font-size: 1.2em;
