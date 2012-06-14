@@ -9,7 +9,7 @@ Right now this is only tested on Linux and OS X. To use it on Windows, check the
 
 To use it you will need Eclipse, the Android SDK, the Android NDK, the Android Eclipse plugin and the openFrameworks for Android package.
 
-If you have already installed openFrameworks for Android before, the instructions have changed quite a bit and it's recommended to start from scratch, even with a new install of Eclipse. You should use the latest version of the Android SDK (15). As of Feb 19, 2012 the latest Android NDK (r7b) doesn't work with openFrameworks, but version r6 should work fine.
+Because of the custom build system OF uses for android, you'll probably need to use the exact version of the sdk and ndk for which last version was done. For 0071 you'll need sdk 18 and ndk r8. Later versions will probably work but it's not guaranteed.
 
 Summary
 -------
@@ -54,11 +54,11 @@ or
 
 Uncompress it in any folder on your hard disk. Later you'll need to tell the openFrameworks makefiles where to find it.
 
-**c) Android NDK**: This is the C/C++ compiler, headers and libraries for Android. Note that the latest version (r7b) doesn't work yet as of Feb 19, 2012, so you'll need to download an earlier version. Here are the links for r6:
+**c) Android NDK**: This is the C/C++ compiler, headers and libraries for Android. 
 
-- OS X: [http://dl.google.com/android/ndk/android-ndk-r6-darwin-x86.tar.bz2][12]
-- Linux: [http://dl.google.com/android/ndk/android-ndk-r6-linux-x86.tar.bz2][13]
-- Windows: [http://dl.google.com/android/ndk/android-ndk-r6-windows.zip][14]
+- OS X: [http://dl.google.com/android/ndk/android-ndk-r8-darwin-x86.tar.bz2][12]
+- Linux: [http://dl.google.com/android/ndk/android-ndk-r8-linux-x86.tar.bz2][13]
+- Windows: [http://dl.google.com/android/ndk/android-ndk-r8-windows.zip][14]
 
 Later versions are available at:  
 [http://developer.android.com/sdk/ndk/index.html][3]
@@ -301,16 +301,7 @@ FAQ
 
 - If it tells you that you're using an obsolete build.xml, delete it and regenerate it using 'android update project'. The build.xml files in the examples directory should not contain anything especially unique.
 - Are you including addons? They need to be specified in addons.make, and the case of the letters must match exactly (ie, ofxOpenCv works but ofxOpenCV won't work). This error will probably show up as missing header files or symbols.
-- If you're getting a bunch of undeclared reference errors, check which version of the NDK you're using. As of Feb 19, 2012 version r7 does not work yet. You'll need to use an earlier version, like version r6 or r5b. The error messages should look similar to this:
-
-
-        ../../../openFrameworks/gl/ofFbo.cpp:503: error: 'glFramebufferTexture2DOES' was not declared in this scope
-        ../../../openFrameworks/gl/ofFbo.cpp: In member function 'void ofFbo::bind()':
-        ../../../openFrameworks/gl/ofFbo.cpp:543: error: 'glBindFramebufferOES' was not declared in this scope
-        ../../../openFrameworks/gl/ofFbo.cpp: In member function 'void ofFbo::unbind()':
-        ../../../openFrameworks/gl/ofFbo.cpp:551: error: 'glBindFramebufferOES' was not declared in this scope
-        ../../../openFrameworks/gl/ofFbo.cpp: In member function 'bool ofFbo::checkStatus()':
-        ../../../openFrameworks/gl/ofFbo.cpp:690: error: 'glCheckFramebufferStatusOES' was not declared in this scope
+- If you're getting a bunch of undeclared reference errors, check which version of the NDK you're using. For 0071 you should be using NDK r8
 
 
 **If the build succeeds but the Android Install command doesn't work:**
@@ -346,7 +337,7 @@ FAQ
 [9]: http://github.com/openframeworks/openFrameworks
 [10]: http://www.undef.ch/uploads/ofDoc/html/classof_log.html
 [11]: http://www.eclipse.org/downloads/
-[12]: http://dl.google.com/android/ndk/android-ndk-r6-darwin-x86.tar.bz2
-[13]: http://dl.google.com/android/ndk/android-ndk-r6-linux-x86.tar.bz2
-[14]: http://dl.google.com/android/ndk/android-ndk-r6-windows.zip
+[12]: http://dl.google.com/android/ndk/android-ndk-r8-darwin-x86.tar.bz2
+[13]: http://dl.google.com/android/ndk/android-ndk-r8-linux-x86.tar.bz2
+[14]: http://dl.google.com/android/ndk/android-ndk-r8-windows.zip
 [15]: https://github.com/kennethreitz/osx-gcc-installer
