@@ -30,13 +30,13 @@
 			        <strong>Show advanced?</strong><br />
 				        <a href="documentation?adv=yes">yes</a> / no
 		        </p-->
-		        <div id="documentation-ebook">
+		        <!--div id="documentation-ebook">
 		        <h2>download</h2>
-		        <p><a href="${bf.config.site.url}/epub/ofReference.zip"><strong>html</strong></a></p>
+		        <p><a href="${bf.config.site.url}/epub/ofReference.zip"><strong>html</strong></a></p-->
 		        <!--p><a href="${bf.config.site.url}/epub/ofReference.pdf"><strong>pdf</strong></a></p>
 		        <p><a href="${bf.config.site.url}/epub/ofReference.epub"><strong>epub</strong></a></p>
 		        <p><a href="${bf.config.site.url}/epub/ofReference.mobi"><strong>mobi (kindle)</strong></a></p-->
-		        </div>
+		        <!--/div-->
 		    </div>
 
     	</div>
