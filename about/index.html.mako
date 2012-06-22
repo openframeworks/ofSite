@@ -29,7 +29,7 @@ Simply put, openFrameworks is a tool that makes it much easier to make things wi
 
 ----------------
 
-contributors
+contributors and supporters
 --------
 
 openFrameworks is actively developed by [Zach Lieberman](http://thesystemis.com/), [Theodore Watson](http://muonics.net/), and [Arturo Castro](http://arturocastro.net/) ("the core"), with help from the [OF community](../community/). openFrameworks is indebted to two significant precursors: the [Processing development environment](http://processing.org/), created by [Casey Reas](http://reas.com/), [Ben Fry](http://benfry.com/) and the Processing community; and the ACU Toolkit, a privately distributed C++ library developed by Ben Fry and others in the [MIT Media Lab's Aesthetics and Computation Group](http://acg.media.mit.edu/). A number of community leaders maintain responsibility for subsections of openFrameworks on a rotating basis:
@@ -47,6 +47,28 @@ openFrameworks is actively developed by [Zach Lieberman](http://thesystemis.com/
 * Typography leader: [Steve Varga](http://www.vargatron.com/) (stevevarga)
 * Video leader: [James George](http://www.jamesgeorge.org/) (obviousjim)
 * Windows leader: [Matthew Gingold](http://gingold.com.au/) (gameoverhack)
+
+A number of institutions have provided major support for openFrameworks through grants, donations, and as hosting partners for our international developer conferences:
+
+* [Ars Electronica Futurelab and Festival](http://www.aec.at/)
+* [Eyebeam Art & Technology Center](http://eyebeam.org/)
+* [Ford Foundation](http://www.fordfoundation.org/)
+* [Frank-Ratchye STUDIO for Creative Inquiry](http://studioforcreativeinquiry.org/) at CMU
+* [Parsons the New School for Design](http://amt.parsons.edu)
+
+We are proud to acknowledge institutions and organizations which have hosted multi-day educational workshops and "OF Lab" events (see [the wiki](http://wiki.openframeworks.cc/index.php?title=Education) for a more complete list): 
+
+* [Art && Code Festival](http://artandcode.com/)
+* [Eyeo festival](http://eyeofestival.com/)
+* [Fabrica: The Benetton Group Communications Research Center](http://www.fabrica.it/)
+* [Graphic Design Festival Breda](http://www.graphicdesignfestival.nl/en/)
+* [iMAL Center for for Digital Cultures and Technology](http://www.imal.org/)
+* [MediaLab Prado](http://medialab-prado.es/)
+* [New York University Interactive Telecommunication Program](http://itp.nyu.edu/itp/) (ITP)
+* [Pratersauna Digital LAB](https://vimeo.com/psdl)
+* [Resonate.io Festival](http://resonate.io/)
+* [Victoria and Albert Museum](http://www.vam.ac.uk/)
+* [Yamaguchi Center for Arts and Media](http://www.ycam.jp/en/) (YCAM)
 
 ----------------
 
