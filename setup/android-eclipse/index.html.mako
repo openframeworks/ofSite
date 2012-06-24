@@ -195,8 +195,7 @@ In the "Project Explorer" on the left side of the window, select the openFramewo
 When compiling on OS X I was missing pkg-config. Currently this doesn't seem to affect the build, since these commands were only important in detecting Linux libraries.
 
 **m) Enable development in your device:**
-Enable USB debugging: Settings \> Applications \> Development \> USB Debug
-(The device needs to be disconnected from the computer while you do this.)
+Enable USB debugging: Settings \> Applications \> Development \> USB Debug (On Ice Cream Sandwich, this is in Settings \> Developer options \> USB Debugging). The device needs to be disconnected from the computer while you do this.
 
 **n) Connect the device now:**
 
@@ -246,7 +245,7 @@ Press Apply and Close.
 
 ![](toolbox-button.png)
 
-**Note:** If you get an error about an obsolete build.xml, you can safely delete the build.xml file and recreate it using 'android update project'. (The 'android' tool is at SDK_DIR/tools/android.) You may also need to do this for openFrameworks/addons/ofxAndroid/ofAndroidLib.
+**Note:** If you get an error about an obsolete build.xml (or connected with that file), you can safely delete the build.xml file and recreate it using 'android update project -p <path-to-project>'. (The 'android' tool is at SDK_DIR/tools/android.) You may also need to do this for openFrameworks/addons/ofxAndroid/ofAndroidLib.
 
 If everything went OK, the example should start on the device.
 
@@ -299,15 +298,16 @@ FAQ
 
 **If the build fails:**
 
-- If it tells you that you're using an obsolete build.xml, delete it and regenerate it using 'android update project'. The build.xml files in the examples directory should not contain anything especially unique.
+- If it tells you that you're using an obsolete build.xml, delete it and regenerate it using 'android update projec t-p <path-to-project>'. The build.xml files in the examples directory should not contain anything especially unique.
 - Are you including addons? They need to be specified in addons.make, and the case of the letters must match exactly (ie, ofxOpenCv works but ofxOpenCV won't work). This error will probably show up as missing header files or symbols.
 - If you're getting a bunch of undeclared reference errors, check which version of the NDK you're using. For 0071 you should be using NDK r8
+- IF you get 'com.android.sdklib.build.ApkCreationException: Debug Certificate expired on <date>', you have to 'rm ~/.android/debug.keystore'. A new certificate will be generated automatically.
 
 
 **If the build succeeds but the Android Install command doesn't work:**
 
 - If you get a popup saying "Variable references empty selection: $\{project_loc\}", it means you need to select a project in Project Explorer first, before you run the Android Install command.
-- If you get a message saying "Activity class ... does not exist.", make sure that its namespace is called cc.openframeworks.your_folder_name_here.OFActivity. This is what the Makefile currently expects.
+- If you get a message saying "Activity class ... does not exist.", make sure that its namespace is called cc.openframeworks.your_folder_name_here.OFActivity. This is what the Makefile currently expects. If it does not work even with a correct entry, and you are using an emulator, try using a real device instead.
 
 **If the build succeeds but your app crashes:**
 
@@ -315,7 +315,7 @@ FAQ
 
 
         E/AndroidRuntime(20743): Caused by: java.lang.UnsatisfiedLinkError: Couldn't load OFAndroidApp: findLibrary returned null
-        E/AndroidRuntime(20743): 	at java.lang.Runtime.loadLibrary(Runtime.java:425)
+        E/AndroidRuntime(20743):     at java.lang.Runtime.loadLibrary(Runtime.java:425)
         E/AndroidRuntime(20743): 	at java.lang.System.loadLibrary(System.java:554)
         E/AndroidRuntime(20743): 	at cc.openframeworks.OFAndroid.<clinit>(OFAndroid.java:535)
         E/AndroidRuntime(20743): 	... 14 more
