@@ -245,7 +245,7 @@ Press Apply and Close.
 
 ![](toolbox-button.png)
 
-**Note:** If you get an error about an obsolete build.xml (or connected with that file), you can safely delete the build.xml file and recreate it using 'android update project -p <path-to-project>'. (The 'android' tool is at SDK_DIR/tools/android.) You may also need to do this for openFrameworks/addons/ofxAndroid/ofAndroidLib.
+**Note:** If you get an error about an obsolete build.xml (or connected with that file), you can safely delete the build.xml file and recreate it using 'android update project -p \<path-to-project\>'. (The 'android' tool is at SDK_DIR/tools/android.) You may also need to do this for openFrameworks/addons/ofxAndroid/ofAndroidLib.
 
 If everything went OK, the example should start on the device.
 
@@ -298,7 +298,7 @@ FAQ
 
 **If the build fails:**
 
-- If it tells you that you're using an obsolete build.xml, delete it and regenerate it using 'android update projec t-p <path-to-project>'. The build.xml files in the examples directory should not contain anything especially unique.
+- If it tells you that you're using an obsolete build.xml, delete it and regenerate it using 'android update project -p \<path-to-project\>'. The build.xml files in the examples directory should not contain anything especially unique.
 - Are you including addons? They need to be specified in addons.make, and the case of the letters must match exactly (ie, ofxOpenCv works but ofxOpenCV won't work). This error will probably show up as missing header files or symbols.
 - If you're getting a bunch of undeclared reference errors, check which version of the NDK you're using. For 0071 you should be using NDK r8
 - IF you get 'com.android.sdklib.build.ApkCreationException: Debug Certificate expired on <date>', you have to 'rm ~/.android/debug.keystore'. A new certificate will be generated automatically.
