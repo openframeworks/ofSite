@@ -240,7 +240,7 @@ _advanced: False_
 
 _description: _
 
-Return the line height in screen units (pixels). The line height is computed based on the font size, and can be adjusted. Useful if you are print multi-line text.
+The line height is computed, based on the font size, and can be adjusted. Useful if you are print multi-line text.
 
 
 
@@ -269,7 +269,7 @@ _advanced: False_
 
 _description: _
 
-Sets the line height for text that is drawn on screen in screen units (pixels).
+Sets the line height for text that is drawn on screen.
 
 
 
@@ -652,7 +652,7 @@ _advanced: False_
 
 _description: _
 
-Return the spacing (kerning) between letters in the font as a scale relative to the font's normal spacing.
+
 
 
 
@@ -680,7 +680,7 @@ _advanced: False_
 
 _description: _
 
-Set the spacing (kerning) between letters in the font as a scale relative to the font's normal spacing. Default 1.0f.
+
 
 
 
@@ -708,7 +708,7 @@ _advanced: False_
 
 _description: _
 
-Returns the size of a space as a scale relative to the font's default.
+
 
 
 
@@ -736,7 +736,7 @@ _advanced: False_
 
 _description: _
 
-Set the size of a space as a scale relative to the font's default. Default setting is 1.0f.
+
 
 
 
