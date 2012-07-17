@@ -99,6 +99,8 @@ def getfunctionsfile(filename):
                         state = 'description'
                     elif state == 'description' and line.find('<!----------------------------------------------------------------------------->')==-1 and line!='\n':
                         function.description = function.description + line
+                        
+    functionsfile.function_list.sort(key=lambda function: function.name)
     return functionsfile
 
 def getclass_list():
@@ -116,6 +118,12 @@ def getclass_list():
                         f.close()
                         break
     return class_list
+    
+def sort_function(function):
+    if (function.name==function.clazz) or (function.name == "~" + function.clazz):
+        return "0"
+    else:
+        return function.name
       
 def getclass(clazz):
     var = DocsVar(0)
@@ -203,9 +211,11 @@ def getclass(clazz):
                 if state == 'vardescription':
                     documentation_clazz.var_list.append(var)
                 f.close()
+                documentation_clazz.function_list.sort(key= sort_function)
                 return documentation_clazz   
 
 
+    documentation_clazz.function_list.sort(key= sort_function)
     return documentation_clazz
     
     
