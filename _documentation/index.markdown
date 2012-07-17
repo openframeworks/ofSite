@@ -224,11 +224,6 @@ __visible: true__
 __advanced: false__
 
 
-###ofPtr###
-__visible: true__
-__advanced: false__
-
-
 ###ExtensionComparator###
 __visible: true__
 __advanced: true__
@@ -613,6 +608,11 @@ __advanced: true__
 ###ofBaseTypes###
 __visible: true__
 __advanced: true__
+
+
+###ofPtr###
+__visible: true__
+__advanced: false__
 
 
 //----------------------
