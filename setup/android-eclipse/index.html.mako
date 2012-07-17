@@ -3,13 +3,15 @@
 android eclipse
 ===============
 
+**Note**: see the [FAQ](#faq) at the bottom of this page if you're having trouble.
+
 The Android distribution of openFrameworks is based on the Eclipse IDE. The current version of the Android plugin for Eclipse has several problems with projects that mix C++ and Java code, so the projects are currently using a custom toolchain based on makefiles + Ant tasks to compile and install applications. If you are used to Android development in Eclipse, things are a little different. Check the following instructions to know how to install the development environment and compile/install applications.
 
 Right now this is only tested on Linux and OS X. To use it on Windows, check the instructions on this link: [http://www.multigesture.net/articles/how-to-setup-openframeworks-for-android-on-windows/][8]
 
 To use it you will need Eclipse, the Android SDK, the Android NDK, the Android Eclipse plugin and the openFrameworks for Android package.
 
-Because of the custom build system OF uses for android, you'll probably need to use the exact version of the sdk and ndk for which last version was done. For 0071 you'll need sdk 18 and ndk r8. Later versions will probably work but it's not guaranteed.
+Because of the custom build system openFrameworks uses for Android, you may need to use the exact version of the SDK and NDK specified here. For 0071 you should use SDK 18 and NDK R8. Later versions will probably work but it's not guaranteed.
 
 Summary
 -------
@@ -18,7 +20,7 @@ These instructions go into a lot of important detail, but the main steps are:
 - Install Eclipse, Ant and the Android SDK and NDK.
 - If you're using OS X, install the Developer Tools.
 - Setup the Android Eclipse plugin.
-- Download openFrameworks either from the download page, or clone from git. (If you're developing on OS X, you will need to clone from git.)
+- Download openFrameworks either from the download page, or clone from git.
 - Set path variables so openFrameworks knows where SDK and NDK are.
 - Import the openFrameworks projects into Eclipse.
 - Compile and install one of the Android openFrameworks examples to confirm that everything works.
@@ -34,7 +36,7 @@ Installation
 
 These instructions currently use Eclipse 3.6, although 3.7 will probably work fine.
 
-Ubuntu users: Don't use the version in the repositories because it is very outdated.
+Ubuntu users: If downloading from the repositories, double check that the version of Eclipse is 3.6 or higher.
 
 You will need Java to use Eclipse, you can download it from:
 
@@ -73,13 +75,11 @@ Uncompress this also to any place in your hard disk. We'll tell openFrameworks w
 
 You may also check out the openFrameworks source from GitHub (under master branch): [http://github.com/openframeworks/openFrameworks][9]. 
 
-**Important:** if you're developing on OS X you must use the source in GitHub, since it contains a bug fix which isn't in the current download package (version 007).
-
 **e) Install Ant:**
 
 This build tool is used to build, install and run applications on the Android device from the command line:
 
-- Linux:
+- Ubuntu:
 
     sudo apt-get install ant-1.8
 
@@ -87,11 +87,11 @@ or for newer distributions:
 
     sudo apt-get install ant
 
+Other Linux distros have similar installation procedures.
+
 - OS X:
 
-Download and uncompress Apache Ant 1.8 or greater from [http://ant.apache.org/bindownload.cgi][5]
-
-**For OSX:**
+Download and uncompress Apache Ant 1.8 or greater from [http://ant.apache.org/bin/download.cgi][5]
 
 Certain build tools like make might not be installed by default. To install these you can either:
 
@@ -115,11 +115,11 @@ This will tell openFrameworks where to find the SDK, NDK and Ant.
 -- OS X: Set it to the folder where you uncompressed Ant before.
 
 **g) Start Eclipse**: You will see a pop up asking you what workspace to use. Just point it to:
-openFrameworks/apps/androidExamples.
+openFrameworks/examples/android.
 
 **h) Android Eclipse plugin**:
 
-There's detailed instructions here: [http://developer.android.com/sdk/eclipse-adt.html][6]  
+There are detailed instructions here: [http://developer.android.com/sdk/eclipse-adt.html][6]  
 
 To install it, inside Eclipse go to
 Help \> Install New Software...
@@ -168,7 +168,7 @@ Next you'll need to install the API files and optionally create an emulator to b
 
 ![android_button](android_button.png)
 
-First you need to install the API package. Just click on the "Available Packages" tab, and choose the SDK Platform version 2.2 + the SDK platform tools, it's important to use version 2.2 since the makefiles are configured for that version. It doesn't matter what version of the OS you want to develop for. You can optionally install other versions and change the makefile to use that instead.
+First you need to install the API package. Just click on the "Available Packages" tab, and choose the SDK Platform version 2.2 + the SDK platform tools. It's important to use at least version 2.2 since the makefiles are configured for that version. It doesn't matter what version of the OS you want to develop for. You can optionally install other versions and change the makefile to use that instead.
 
 Once that is done you can create a new virtual device (AVD). Just select a name, the target Android version and a size for the virtual SD card.
 
@@ -184,7 +184,7 @@ Import in this order:
 - openFrameworks/libs  
 - openFrameworks/libs/openFrameworks  
 - openFrameworks/addons/ofxAndroid/ofAndroidLib  
-- openFrameworks/apps/androidExamples
+- openFrameworks/examples/android
 
 **l) Compile openFrameworks**:
 
@@ -245,7 +245,7 @@ Press Apply and Close.
 
 ![](toolbox-button.png)
 
-**Note:** If you get an error about an obsolete build.xml (or connected with that file), you can safely delete the build.xml file and recreate it using 'android update project -p \<path-to-project\>'. (The 'android' tool is at SDK_DIR/tools/android.) You may also need to do this for openFrameworks/addons/ofxAndroid/ofAndroidLib.
+**Note:** If you get an error about an obsolete build.xml (or connected with that file), you can safely delete the build.xml file and recreate it using 'android update project -p <path-to-project\>'. (The 'android' tool is at SDK_DIR/tools/android.) You may also need to do this for openFrameworks/addons/ofxAndroid/ofAndroidLib.
 
 If everything went OK, the example should start on the device.
 
@@ -262,7 +262,7 @@ before running the app.
 
 - Naming of resources is really restrictive in Android, for example you cannot have several resources with the same name even if they have different extensions.
 
-- The AndroidDebug target does a different compilation process of the native code that allows it to detect linker errors that won't be detected when compiling in AndroidRelease mode. It is recomended to compile your application in AndroidDebug mode at least once or if your application crashes before starting. When installing applications on the device or emulator it is recommended to use the AndroidRelease mode since it's faster and the applications will be much smaller. There's also no support for debugging NDK applications in Eclipse, but you could theoretically use the NDK tools to debug an application compiled with AndroidDebug.
+- The AndroidDebug target does a different compilation process of the native code that allows it to detect linker errors that won't be detected when compiling in AndroidRelease mode. It is recommended to compile your application in AndroidDebug mode at least once or if your application crashes before starting. When installing applications on the device or emulator it is recommended to use the AndroidRelease mode since it's faster and the applications will be much smaller. There's also no support for debugging NDK applications in Eclipse, but you could theoretically use the NDK tools to debug an application compiled with AndroidDebug.
 
 - Test your application very often. Even if the last NDK allows for debugging, there's no support for native debugging in Eclipse and setting it up manually with the NDK is pretty hard. When an application crashes the debugger dies too, so it's hard to debug bad memory accesses and similar bugs.
 
@@ -293,15 +293,15 @@ You'll need to change the name of the application in different places:
 
 It's important to keep the package prefix as cc.openframeworks or some things can stop working. This will be fixed in future versions when Eclipse support for native code is better.
 
-FAQ
+<a id="faq"></a>FAQ
 ---
 
 **If the build fails:**
 
-- If it tells you that you're using an obsolete build.xml, delete it and regenerate it using 'android update project -p \<path-to-project\>'. The build.xml files in the examples directory should not contain anything especially unique.
+- If it tells you that you're using an obsolete build.xml, delete it and regenerate it using 'android update project -p <path-to-project\>'. The build.xml files in the examples directory should not contain anything especially unique.
 - Are you including addons? They need to be specified in addons.make, and the case of the letters must match exactly (ie, ofxOpenCv works but ofxOpenCV won't work). This error will probably show up as missing header files or symbols.
-- If you're getting a bunch of undeclared reference errors, check which version of the NDK you're using. For 0071 you should be using NDK r8
-- IF you get 'com.android.sdklib.build.ApkCreationException: Debug Certificate expired on <date>', you have to 'rm ~/.android/debug.keystore'. A new certificate will be generated automatically.
+- If you're getting a bunch of undeclared reference errors, check which version of the NDK you're using. For 0071 you should be using NDK r8.
+- If you get 'com.android.sdklib.build.ApkCreationException: Debug Certificate expired on <date>', you have to 'rm ~/.android/debug.keystore'. A new certificate will be generated automatically.
 
 
 **If the build succeeds but the Android Install command doesn't work:**
@@ -330,7 +330,7 @@ FAQ
 [2]: http://developer.android.com/sdk/index.html
 [3]: http://developer.android.com/sdk/ndk/index.html
 [4]: http://openframeworks.cc/download
-[5]: http://ant.apache.org/bindownload.cgi
+[5]: http://ant.apache.org/bin/download.cgi
 [6]: http://developer.android.com/sdk/eclipse-adt.html
 [7]: http://developer.android.com/guide/developing/device.html
 [8]: http://www.multigesture.net/articles/how-to-setup-openframeworks-for-android-on-windows/
