@@ -42,7 +42,7 @@ ${functions.description}
                  <ul class="functionslist">
                      <% prevmethod = "" %>
                      % for method in clazz.function_list:
-                         % if prevmethod != method.name and method.visible and not method.advanced and method.access=='public':
+                         % if prevmethod != method.name and method.visible and not method.advanced and method.access=='public' and (method.name!=method.clazz) and (method.name != "~" + method.clazz):
                              <% params = "()" if method.parameters=="" else "(...)" %> 
                              <li> <a href="#${method.name}">${method.name}${params}</a> </li>
                          % endif
@@ -99,7 +99,7 @@ ${functions.description}
               % if not clazz is None and len([x for x in clazz.function_list if not x.advanced and x.visible and x.access=='public'])>0:
                   <h2><a name="methods"></a>${clazz.name} methods</h2>
                   % for method in clazz.function_list:
-                        % if method.visible and not method.advanced and method.access=='public':
+                        % if method.visible and not method.advanced and method.access=='public' and (method.name!=method.clazz) and (method.name != "~" + method.clazz):
                             <%include file="documentation_method.mako" args="method=method" />    
                         % endif
                   % endfor
