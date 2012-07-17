@@ -56,7 +56,7 @@
 </html>
 
 <%def name="header()">
-  <%include file="header.mako" args="active='documentation'" />
+  <%include file="header.mako" args="active='tutorials'" />
 </%def>
 
 
