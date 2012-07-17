@@ -17,10 +17,10 @@
               <div id="docstitle"><h1>${modulename}</h1></div>
               <div id="editdocs">
                 % if not clazz is None:
-                    <a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/${clazz.module}/${clazz.name}.markdown" class="nohover"><img title="edit class on GitHub" src="/images/editclass.png"/></a>
+                    <a href="https://github.com/openframeworks/ofSite/blob/master/_documentation/${clazz.module}/${clazz.name}.markdown" class="nohover"><img title="edit class on GitHub" src="/images/editclass.png"/></a>
                 % endif
                 % if not functions is None and len(functions.function_list)>0:
-                    <a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/${functions.module}/${functions.name}_functions.markdown" class="nohover"><img title="edit functions on GitHub" src="/images/editfunctions.png"/></a>
+                    <a href="https://github.com/openframeworks/ofSite/blob/master/_documentation/${functions.module}/${functions.name}_functions.markdown" class="nohover"><img title="edit functions on GitHub" src="/images/editfunctions.png"/></a>
                 % endif
               </div>
               
