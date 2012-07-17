@@ -671,6 +671,13 @@ hr {
 	padding: 0px 0px 10px 0px;
 	position: relative;
 }
+#editdocs{
+    float:right;
+}
+#docstitle{
+    width:60%;
+    float:left;
+}
 .documentation_detail_right_col img {
 	max-width: 480px;
 }

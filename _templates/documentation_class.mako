@@ -12,11 +12,23 @@
     <div id="content">
       ${self.header()}
       <div id="body-wrap">
-        
+          <div class="page-wide">
+          
+              <div id="docstitle"><h1>${modulename}</h1></div>
+              <div id="editdocs">
+                % if not clazz is None:
+                    <a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/${clazz.module}/${clazz.name}.markdown" class="nohover"><img title="edit class on GitHub" src="/images/editclass.png"/></a>
+                % endif
+                % if not functions is None and len(functions.function_list)>0:
+                    <a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/${functions.module}/${functions.name}_functions.markdown" class="nohover"><img title="edit functions on GitHub" src="/images/editfunctions.png"/></a>
+                % endif
+              </div>
+              
+          </div>
+          
           <div class="page-left-wide">
           <div id="main_block">
             <div id="prose_block">
-              <h1>${modulename}</h1>
               <p>
               <%self:filter chain="markdown_template">
               % if not clazz is None:
@@ -83,12 +95,6 @@ ${functions.description}
              % endif
             
 		</div>
-% if not clazz is None:
-	<p><a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/${clazz.module}/${clazz.name}.markdown">edit class on GitHub</a></p>
-% endif
-% if not functions is None:
-	<p><a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/${functions.module}/${functions.name}_functions.markdown">edit functions on GitHub</a></p>
-% endif
 
 	</div>
 		<div class="page-left-wide">
