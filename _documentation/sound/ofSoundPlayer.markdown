@@ -293,16 +293,16 @@ _advanced: False_
 
 _description: _
 
-Sets the pan position (pct) of the sound. 0.0 - 1.0 range. 0.5 is center pan, 0.0 is full left pan and 1.0 is full right pan. 
+Sets the pan position (pct) of the sound. -1.0 - 1.0 range. 0.0 is center pan, -1.0 is full left pan and 1.0 is full right pan. 
 
 Example:
 ~~~~{.cpp}
 ofSoundPlayer mySound;
 mySound.load("beat.mp3");
 mySound.play();
-mySound.pan(0.2f); //Pans to the left
-mySound.pan(0.8f); //Pans to the right
-mySound.pan(0.5f); //Back to center
+mySound.pan(-1.0f); //Pans to the left
+mySound.pan(1.0f); //Pans to the right
+mySound.pan(0.0f); //Back to center
 ~~~~
 
 
@@ -599,9 +599,9 @@ _advanced: False_
 
 _description: _
 
-Returns the pan position of the sound. 0.0 - 1.0 range.
-0.5 is center pan, 0.0 is full left pan and 1.0 is full right pan.
-  
+Returns the speed of the sound playback in relation to its normal speed.
+So 2.0 would mean the sound is playing twice as fast. 0.5 would mean half as fast. 
+
 Example:
 ~~~~{.cpp}
     
@@ -639,9 +639,9 @@ _advanced: False_
 
 _description: _
 
-Returns the pan position of the sound. 0.0 - 1.0 range.
-0.5 is center pan, 0.0 is full left pan and 1.0 is full right pan. Default is
-0.5
+Returns the pan position of the sound. -1.0 - 1.0 range.
+0.0 is center pan, -1.0 is full left pan and 1.0 is full right pan. Default is
+0.0
   
 Example:
 ~~~~{.cpp}
@@ -649,9 +649,9 @@ Example:
     ofSoundPlayer mySound;    
     mySound.load("beat.mp3");    
     mySound.play();    
-    mySound.getPan();//Returns 0.5     
-    mySound.setPan(0.2f);     
-    mySound.getPan();//Returns 0.2
+    mySound.getPan();//Returns 0.0     
+    mySound.setPan(1.0f);     
+    mySound.getPan();//Returns 1.0
 ~~~~
 
 
@@ -922,7 +922,7 @@ _advanced: False_
 
 _description: _
 
-Contains the pan position of the sound. Going from 0 to 1.
+Contains the pan position of the sound. Going from -1 to 1.
 
 
 
