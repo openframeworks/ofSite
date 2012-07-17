@@ -41,8 +41,12 @@ function feedCANLoaded(result) {
       
       aImg.appendChild(img);
       
-      
-      a.appendChild(document.createTextNode(title.substr(0,title.indexOf('['))));
+      var shortTitle = "";
+      if(title.indexOf('–')!=-1)
+          shortTitle = title.substr(0,title.indexOf('–'));
+      else
+          shortTitle = title;
+      a.appendChild(document.createTextNode(shortTitle));
 
       h2.appendChild(dot);
       h2.appendChild(a)
