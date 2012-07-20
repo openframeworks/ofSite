@@ -18,14 +18,13 @@ author_site:
 *   [8 make objects from your own Classes - part 4][9]
     
 
-## Overview 
+<h2 id="overview">Overview</h2>
 
 This tutorial is an quick introduction to Object Oriented Programming in OpenFrameworks and a how-to guide to build and use your own classes.  
 
 Examples used are based on Mikkel Koser's ofBall class. [See forum thread here][11]   
 
-  
-## What is OOP 
+<h2 id="oop">What is OOP</h2>
 
 Object Oriented Programming is a programming paradigm based on the use of objects and their interactions.
 some definitions:
@@ -38,14 +37,13 @@ some definitions:
 
 A recurring analogy is to see a Class as a the cookie cutter and the cookies as the Objects.
 
-## How to build your own Classes 
+<h2 id="classes">How to build your own Classes</h2> 
 
 Classes and objects are similar to the concepts of movie clips and instances in Flash and are also a fundamental part of Java programming.
 If you have a background in Java and/or Processing this other tutorial will be useful. [OF\_for\_P5\_users][14]
 
 This is how you declare a Class -\> in the header file (\*.h), otherwise known as the declarations file. In this case, the file name should be ofBall.h
-[![Image:ex1-ball_h.jpg](file:///images/e/e3/Ex1-ball_h.jpg)][15]
-
+[![Image:ex1-ball_h.jpg](003_images/Ex1-ball_h.jpg)][15]
     
 ~~~~{.cpp}
     #ifndef _OF_BALL // if this class hasn't been defined, the program can define it
@@ -53,39 +51,32 @@ This is how you declare a Class -\> in the header file (\*.h), otherwise known a
                      // than once which would confuse the compiler
     
     #include "ofMain.h"
-    
-    
+      
     class ofBall {
     
+        public: // place public functions or variables declarations here
       
-                   public: // place public functions or variables declarations here
-    
-    		// methods, equivalent to specific functions of your class objects
-                   void update(); // update method, used to refresh your objects properties
-    	        void draw(); // draw method, this where you'll do the object's drawing 
-    
-    		// variables
-    		float x; // position
-    		float y;
-    		float speedY; // speed and direction
-    		float speedX;
-    		int dim; // size
-    	
-    
-    
-                          
-    	        ofBall(); // constructor - used to initialize an object, if no properties are passed
-                              //               the program sets them to the default value
-    
+            // methods, equivalent to specific functions of your class objects
+            void update();  // update method, used to refresh your objects properties
+            void draw();    // draw method, this where you'll do the object's drawing 
+      
+            // variables
+            float x;      // position
+            float y;
+            float speedY; // speed and direction
+            float speedX;
+            int dim;      // size
         
-                   private: // place private functions or variables declarations here
+      
+      
+                            
+            ofBall(); // constructor - used to initialize an object, if no properties are passed
+                      //               the program sets them to the default value
+      
+          
+        private: // place private functions or variables declarations here
        
-    
-    
-    
-    
     }; // dont't forget the semicolon!!
-    
     
     #endif 
 ~~~~
@@ -106,92 +97,78 @@ Here's how you can write the class \*.cpp file, the implementation file:
     
     ofBall::ofBall()
     {
-    	x = ofRandom(0, ofGetWidth());      // give some random positioning
-    	y = ofRandom(0, ofGetHeight());
-            speedX = ofRandom(-1, 1);           // and random speed and direction
-    	speedY = ofRandom(-1, 1);
-            dim = 20;
-    
+        x = ofRandom(0, ofGetWidth());      // give some random positioning
+        y = ofRandom(0, ofGetHeight());
+
+        speedX = ofRandom(-1, 1);           // and random speed and direction
+        speedY = ofRandom(-1, 1);
+
+        dim = 20;
     }
-    
     
     void ofBall::update(){
+        if(x < 0 ){
+            x = 0;
+            speedX *= -1;
+        } else if(x > ofGetWidth()){
+            x = ofGetWidth();
+            speedX *= -1;
+        }
     	
-    	if(x < 0 ){
-    			x = 0;
-    			speedX *= -1;
-    	} else if(x > ofGetWidth()){
-    			x = ofGetWidth();
-    			speedX *= -1;
-    	}
+        if(y < 0 ){
+            y = 0;
+            speedY *= -1;
+        } else if(y > ofGetHeight()){
+            y = ofGetHeight();
+            speedY *= -1;
+        } 
     	
-    	
-    	if(y < 0 ){
-    			y = 0;
-    			speedY *= -1;
-    	} else if(y > ofGetHeight()){
-    			y = ofGetHeight();
-    			speedY *= -1;
-    	} 
-    	
-    	x+=speedX;
-    	y+=speedY;
-    	
+        x+=speedX;
+        y+=speedY;
     }
     
-    
     void ofBall::draw(){
-            // values for R, G, B
-    	ofSetColor(120,120,120);
-    	ofCircle(x, y, dim);
-    
+        // values for R, G, B
+        ofSetColor(120,120,120);
+        ofCircle(x, y, dim);
     } 
 ~~~~   
-    
 
 [![Image:ex1-ball_cpp.jpg](003_images/Ex1-ball_cpp.jpg)][17]
 
-## make objects from your own Classes 
+<h2 id="objects-part-1">make objects from your own Classes</h2>
 
 now that we've created a class let's make the real object!
 in your testapp.h (header file) we'll have to add declare a new object and get some free memory for it. this is how we do it:
 
 [![Image:ex1-h.jpg](003_images/Ex1-h.jpg)][19]
-
   
 ~~~~{.cpp} 
     	ofBall myBall;
 ~~~~
-    
-    
-
   
 and finally let's get that ball bouncing on screen!
 go to your project testapp.cpp (implementation) file. now that we've created the object we just need to draw it and update its values by calling its methods.
 in the update() function add:
 
-  
 [![Image:ex1-cpp.jpg](003_images/Ex1-cpp.jpg)][20]
 
 ~~~~{.cpp}    
-            myBall.update();                                // calling the object's update method
+      myBall.update();  // calling the object's update method
 ~~~~    
     
-
 and in the draw() function lets add:
 
 ~~~~{.cpp}    
-            myBall.draw();                                  // call the draw method to draw the object
+      myBall.draw();  // call the draw method to draw the object
 ~~~~    
-    
-    
 
 compile and run!
 by now you must be seeing a bouncing ball on the screen! great!
 
 [source code download here][21]
 
-## make objects from your own Classes - part 2 
+<h2 id="objects-part-2">make objects from your own Classes - part 2</h2>
 
 you're probably asking yourself now why did you have so much trouble just to create a bouncing ball. You could have done this (and you've probably done it!) without using classes. In fact one of the advantages of using classes is to be able to create multiple individual objects with the same characteristics. 
 So, lets do that now!
@@ -202,8 +179,6 @@ going back to your testApp.h file we'll just need to create a couple of new obje
     	 ofBall myBall2;
     	 ofBall myBall3;
 ~~~~    
-    
-    
 
 [![Image:ex2-h.jpg](003_images/Ex2-h.jpg)][23]
 
@@ -216,16 +191,14 @@ in the testApp's update() function:
     	myBall2.update();
     	myBall3.update();
 ~~~~    
-    
 
 and also in the draw() function:
 
-    
+~~~~{.cpp}
     	myBall1.draw();
     	myBall2.draw();
     	myBall3.draw();
-              
-    
+~~~~    
 
 [![Image:ex2-cpp.jpg](003_images/Ex2-cpp.jpg)][24]
 
@@ -233,7 +206,7 @@ and also in the draw() function:
 
 [source code download here][26]
 
-## make objects from your own Classes - part 2.1 
+<h2 id="objects-part-2_1">make objects from your own Classes - part 2.1</h2>
 
 We've just created 3 objects but what if we wanted to created 10, 100 or may be 1000's of them?! hardcoding one by one would be a painful and long process that can be easily solved by automating the object creation and function calls. Just by using a couple for loops we'll be making this process way simpler and cleaner.
 Instead of declaring a list of objects one by one we'll just create an array of objects of type 'ofBall'. We'll also introduce another new element: a constant. Constants are defined after the \#includes as \#define CONSTANT\_NAME value. This is a way of defining a constant value that won't be ever changed in the program:
@@ -241,14 +214,12 @@ Instead of declaring a list of objects one by one we'll just create an array of 
 ~~~~{.cpp}
     	#define NBALLS 5
 ~~~~    
-    
 
 we'll now use the CONSTANT value to define the size of our array of objects:
 
 ~~~~{.cpp}
     	ofBall myBall[NBALLS];
 ~~~~
-    
 
 [![Image:ex21h.jpg](003_images/Ex21h.jpg)][28]
 
@@ -259,30 +230,26 @@ in the update() function:
 ~~~~{.cpp}
     	for(int i=0; i<NBALLS; i++)
     	{
-    		myBall[i].update();
+          myBall[i].update();
     	}
 ~~~~
     
-    
-
 in the draw() function:
 
 ~~~~{.cpp}
     	for(int i=0; i<NBALLS; i++)
     	{
-    		myBall[i].draw();
+          myBall[i].draw();
     	}
 ~~~~    	
     
-    
-
 [![Image:ex21cpp.jpg](003_images/Ex21cpp.jpg)][29]
 
 [![Image:ex21Ball.jpg](003_images/Ex21Ball.jpg)][30]
 
 [source code download here][31]
 
-## make objects from your own Classes - part 3 
+<h2 id="objects-part-3">make objects from your own Classes - part 3</h2>
 
 As we've seen each of the objects has a set of properties defined by its variables (position, speed and direction and dimension).
 Another advantage of object oriented programming is that the objects created can have different values on each of its properties.
@@ -293,30 +260,26 @@ In the ofBall definitions file (\*.h) we can change the constructor to include s
     	ofBall(float x, float y, int dim);
 ~~~~
     
-
 As we've changed the constructor we'll need to update the ofBall implementation (\*.cpp) file to reflect these.
 
 ~~~~{.cpp}
     ofBall::ofBall(float _x, float _y, int _dim)
     {
-    	x = _x;
-    	y = _y;
-    	dim = _dim;
-    	
-    	speedX = ofRandom(-1, 1);
-    	speedY = ofRandom(-1, 1);
-    	
+        x = _x;
+        y = _y;
+        dim = _dim;
+        
+        speedX = ofRandom(-1, 1);
+        speedY = ofRandom(-1, 1);
     }
 ~~~~    
     
-
 By implementing these changes we'll also need to create space in memory for these objects. We'll do this by creating a pointer (a reference in memory) for each object.
 Back to the testApp.h (definitions) file we'll declare a new object like this:
 
 ~~~~{.cpp}  
     	ofBall *myBall;  
 ~~~~  
-    
 
 [![Image:ex3-h.jpg](003_images/Ex3-h.jpg)][33]
 
@@ -326,19 +289,15 @@ Now in the TestApp.cpp file we will need to create the object in the setup and w
 in the setup() :
 
 ~~~~{.cpp}
-    	           // x-position,       y-position,       size
+                            // x-position,        y-position,           size
     myBall = new ofBall(ofRandom(300,400), ofRandom(200,300), ofRandom(10,40));
 ~~~~
     
-    
-
 As you see it is now possible to directly control the objects properties on its creation.
 and now we'll just need to update and draw it.
 
 ~~~~{.cpp}
     myBall->update();
-    
-    
 
     myBall->draw();
 ~~~~ 
@@ -349,7 +308,7 @@ and now we'll just need to update and draw it.
 
 [source code download here][36]
 
-## make objects from your own Classes - part 4 
+<h2 id="objects-part-4">make objects from your own Classes - part 4</h2>
 
 we're now at the last part of this how-to tutorial on classes and objects. this part will now demonstrate an automation process to create objects from our previously built class. We'll be creating objects through arrays as we did in part 2.1 with some minor changes:
 
@@ -358,8 +317,6 @@ we're now at the last part of this how-to tutorial on classes and objects. this 
     	int nBalls;        //variable for the number of balls 
 ~~~~
     
-    
-
 [![Image:ex4-h.jpg](003_images/Ex4-h.jpg)][38]
 
 As we're creating an array of objects, instead of creating one pointer only we'll also have to create an array of pointers. 
@@ -367,84 +324,79 @@ That's why we have two 'stars' and not one in the declarations(\*.h) file. We ha
 Let's see how we'll create and call these objects in the implementation (\*.cpp) file:
 
 ~~~~{.cpp}
-        nBalls = 5; // the number of ball objects we want to create
+      nBalls = 5; // the number of ball objects we want to create
     
-    	myBall = new ofBall*[nBalls];   // an array of pointers for the objects
+    	myBall = new ofBall*[nBalls]; // an array of pointers for the objects
     	
-    		for (int i = 0; i < nBalls; i++){
-    			float x = 20+(100*i);     //using the value of the counter variable(i) to differentiate them
-    			float y = 20+(100*i);
-    			int dim = 10+(i*10);
+      for (int i = 0; i < nBalls; i++){
+          float x = 20+(100*i); // using the value of the counter variable(i) to differentiate them
+          float y = 20+(100*i);
+          int dim = 10+(i*10);
     
-    			myBall[i] = new ofBall(x,y,dim);  //create each object from the array
-    		}
+          myBall[i] = new ofBall(x,y,dim);  // create each object from the array
+      }
 ~~~~  
-    
 
 similarly when we want to draw and update the objects we've created we'll need 'for' loops to run through the array.
 
 ~~~~{.cpp}    
-            for (int i = 0; i < nBalls; i++){
-    			myBall[i]->update();
-    		}
+      for (int i = 0; i < nBalls; i++){
+          myBall[i]->update();
+      }
     
-    
-
-  
-    
-            for (int i = 0; i < nBalls; i++){
-    			myBall[i]->draw();
-    		}
+      for (int i = 0; i < nBalls; i++){
+          myBall[i]->draw();
+      }
 ~~~~    
     
-    
-
 [![Image:ex4-cpp.jpg](003_images/Ex4-cpp.jpg)][39]
 
 [![Image:ex4Ball.jpg](003_images/Ex4Ball.jpg)][40]
 
 [source code download here][41]
-[0]: file:///home/arturo/Downloads/ittyeditor-read-only/ittyeditor-example.html#column-one
-[1]: file:///home/arturo/Downloads/ittyeditor-read-only/ittyeditor-example.html#searchInput
-[2]: file:///home/arturo/Downloads/ittyeditor-read-only/ittyeditor-example.html#Overview
-[3]: file:///home/arturo/Downloads/ittyeditor-read-only/ittyeditor-example.html#What_is_OOP
-[4]: file:///home/arturo/Downloads/ittyeditor-read-only/ittyeditor-example.html#How_to_build_your_own_Classes
-[5]: file:///home/arturo/Downloads/ittyeditor-read-only/ittyeditor-example.html#make_objects_from_your_own_Classes
-[6]: file:///home/arturo/Downloads/ittyeditor-read-only/ittyeditor-example.html#make_objects_from_your_own_Classes_-_part_2
-[7]: file:///home/arturo/Downloads/ittyeditor-read-only/ittyeditor-example.html#make_objects_from_your_own_Classes_-_part_2.1
-[8]: file:///home/arturo/Downloads/ittyeditor-read-only/ittyeditor-example.html#make_objects_from_your_own_Classes_-_part_3
-[9]: file:///home/arturo/Downloads/ittyeditor-read-only/ittyeditor-example.html#make_objects_from_your_own_Classes_-_part_4
-[10]: file:///index.php?title=Ooops%21_%3D_Object_Oriented_Programming_%2B_Classes&action=edit&section=1 "Edit section: Overview"
+
+[2]: #overview "Overview"
+[3]: #oop "What is OOP"
+[4]: #classes "How to build your own Classes"
+[5]: #objects-part-1 "Make objects from your own Classes - Part 1"
+[6]: #objects-part-2 "Make objects from your own Classes - Part 2"
+[7]: #objects-part-2_1 "Make objects from your own Classes - Part 2.1"
+[8]: #objects-part-3 "Make objects from your own Classes - Part 3"
+[9]: #objects-part-4 "Make objects from your own Classes - Part 4"
+
 [11]: http://openframeworks.cc/forum/viewtopic.php?t=428 "http://openframeworks.cc/forum/viewtopic.php?t=428"
-[12]: file:///index.php?title=Ooops%21_%3D_Object_Oriented_Programming_%2B_Classes&action=edit&section=2 "Edit section: What is OOP"
-[13]: file:///index.php?title=Ooops%21_%3D_Object_Oriented_Programming_%2B_Classes&action=edit&section=3 "Edit section: How to build your own Classes"
+
 [14]: http://wiki.openframeworks.cc/index.php?title=OF_for_Processing_users "http://wiki.openframeworks.cc/index.php?title=OF_for_Processing_users"
-[15]: file:///index.php?title=Image:Ex1-ball_h.jpg "Image:ex1-ball_h.jpg"
-[16]: file:///index.php?title=Image:Ex-ifndef.jpg "Image:ex-ifndef.jpg"
-[17]: file:///index.php?title=Image:Ex1-ball_cpp.jpg "Image:ex1-ball_cpp.jpg"
-[18]: file:///index.php?title=Ooops%21_%3D_Object_Oriented_Programming_%2B_Classes&action=edit&section=4 "Edit section: make objects from your own Classes"
-[19]: file:///index.php?title=Image:Ex1-h.jpg "Image:ex1-h.jpg"
-[20]: file:///index.php?title=Image:Ex1-cpp.jpg "Image:ex1-cpp.jpg"
+
+[15]: 003_images/Ex1-ball_h.jpg "Image:ex1-ball_h.jpg"
+[16]: 003_images/Ex-ifndef.jpg "Image:ex-ifndef.jpg"
+[17]: 003_images/Ex1-ball_cpp.jpg "Image:ex1-ball_cpp.jpg"
+
+[19]: 003_images/Ex1-h.jpg "Image:ex1-h.jpg"
+[20]: 003_images/Ex1-cpp.jpg "Image:ex1-cpp.jpg"
+
 [21]: http://www.essaycollective.org/personal/rx/patcher/of-werx/object-ballclass_example1.zip "http://www.essaycollective.org/personal/rx/patcher/of-werx/object-ballclass_example1.zip"
-[22]: file:///index.php?title=Ooops%21_%3D_Object_Oriented_Programming_%2B_Classes&action=edit&section=5 "Edit section: make objects from your own Classes - part 2"
-[23]: file:///index.php?title=Image:Ex2-h.jpg "Image:ex2-h.jpg"
-[24]: file:///index.php?title=Image:Ex2-cpp.jpg "Image:ex2-cpp.jpg"
-[25]: file:///index.php?title=Image:Ex2Ball.jpg "Image:ex2Ball.jpg"
+
+[23]: 003_images/Ex2-h.jpg "Image:ex2-h.jpg"
+[24]: 003_images/Ex2-cpp.jpg "Image:ex2-cpp.jpg"
+[25]: 003_images/Ex2Ball.jpg "Image:ex2Ball.jpg"
+
 [26]: http://www.essaycollective.org/personal/rx/patcher/of-werx/object-ballclass_example2.zip "http://www.essaycollective.org/personal/rx/patcher/of-werx/object-ballclass_example2.zip"
-[27]: file:///index.php?title=Ooops%21_%3D_Object_Oriented_Programming_%2B_Classes&action=edit&section=6 "Edit section: make objects from your own Classes - part 2.1"
-[28]: file:///index.php?title=Image:Ex21h.jpg "Image:ex21h.jpg"
-[29]: file:///index.php?title=Image:Ex21cpp.jpg "Image:ex21cpp.jpg"
-[30]: file:///index.php?title=Image:Ex21Ball.jpg "Image:ex21Ball.jpg"
+
+[28]: 003_images/Ex21h.jpg "Image:ex21h.jpg"
+[29]: 003_images/Ex21cpp.jpg "Image:ex21cpp.jpg"
+[30]: 003_images/Ex21Ball.jpg "Image:ex21Ball.jpg"
+
 [31]: http://www.essaycollective.org/personal/rx/patcher/of-werx/object-ballclass_example2-1.zip "http://www.essaycollective.org/personal/rx/patcher/of-werx/object-ballclass_example2-1.zip"
-[32]: file:///index.php?title=Ooops%21_%3D_Object_Oriented_Programming_%2B_Classes&action=edit&section=7 "Edit section: make objects from your own Classes - part 3"
-[33]: file:///index.php?title=Image:Ex3-h.jpg "Image:ex3-h.jpg"
-[34]: file:///index.php?title=Image:Ex3-cpp.jpg "Image:ex3-cpp.jpg"
-[35]: file:///index.php?title=Image:Ex3Ball.jpg "Image:ex3Ball.jpg"
+
+[33]: 003_images/Ex3-h.jpg "Image:ex3-h.jpg"
+[34]: 003_images/Ex3-cpp.jpg "Image:ex3-cpp.jpg"
+[35]: 003_images/Ex3Ball.jpg "Image:ex3Ball.jpg"
+
 [36]: http://www.essaycollective.org/personal/rx/patcher/of-werx/object-ballclass_example3.zip "http://www.essaycollective.org/personal/rx/patcher/of-werx/object-ballclass_example3.zip"
-[37]: file:///index.php?title=Ooops%21_%3D_Object_Oriented_Programming_%2B_Classes&action=edit&section=8 "Edit section: make objects from your own Classes - part 4"
-[38]: file:///index.php?title=Image:Ex4-h.jpg "Image:ex4-h.jpg"
-[39]: file:///index.php?title=Image:Ex4-cpp.jpg "Image:ex4-cpp.jpg"
-[40]: file:///index.php?title=Image:Ex4Ball.jpg "Image:ex4Ball.jpg"
+
+[38]: 003_images/Ex4-h.jpg "Image:ex4-h.jpg"
+[39]: 003_images/Ex4-cpp.jpg "Image:ex4-cpp.jpg"
+[40]: 003_images/Ex4Ball.jpg "Image:ex4Ball.jpg"
+
 [41]: http://www.essaycollective.org/personal/rx/patcher/of-werx/object-ballclass_example4.zip "http://www.essaycollective.org/personal/rx/patcher/of-werx/object-ballclass_example4.zip"
-
-
