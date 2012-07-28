@@ -246,11 +246,9 @@ To set the project back to 10.6 SDK follow these steps posted [from this blog][2
 * Repeat for the build target
 
 
-**10.7.2 OF Issues**
+**10.8 OF Issues**
 
-There are a few issues with OF on 10.7.2 - we will work on getting these fixed for the next release.
-
-In the meantime check [these tips posted on the forum][3].
+Because 10.8 deprecates the 10.6 SDK, all QuickTime-based code in OF is broken. This means you need to manually install the 10.6 SDK until we have a replacement for quicktime. For instructions, check [this thread on the forum][3].
 
 
 
@@ -258,4 +256,4 @@ In the meantime check [these tips posted on the forum][3].
 [0]: https://connect.apple.com/
 [1]: http://www.openframeworks.cc/download
 [2]: http://blog.davidpaulrosser.co.uk/2011/08/getting-openframeworks-0-07-compiling-with-osx-10-7/
-[3]: http://forum.openframeworks.cc/index.php/topic,7621.0.html
+[3]: http://forum.openframeworks.cc/index.php/topic,10343.msg47100.html
