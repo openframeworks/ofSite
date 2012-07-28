@@ -308,7 +308,8 @@ image1 and image2 are now identical.
 
 <!--
 _syntax: ofImage_(&mom)_
-_name: ofImage__returns: _
+_name: ofImage_
+_returns: _
 _returns_description: _
 _parameters: const ofImage_< SrcType > &mom_
 _access: public_

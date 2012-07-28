@@ -12,11 +12,23 @@
     <div id="content">
       ${self.header()}
       <div id="body-wrap">
-        
+          <div class="page-wide">
+          
+              <div id="docstitle"><h1>${modulename}</h1></div>
+              <div id="editdocs">
+                % if not clazz is None:
+                    <a href="https://github.com/openframeworks/ofSite/blob/master/_documentation/${clazz.module}/${clazz.name}.markdown" class="nohover"><img title="edit class on GitHub" src="/images/editclass.png"/></a>
+                % endif
+                % if not functions is None and len(functions.function_list)>0:
+                    <a href="https://github.com/openframeworks/ofSite/blob/master/_documentation/${functions.module}/${functions.name}_functions.markdown" class="nohover"><img title="edit functions on GitHub" src="/images/editfunctions.png"/></a>
+                % endif
+              </div>
+              
+          </div>
+          
           <div class="page-left-wide">
           <div id="main_block">
             <div id="prose_block">
-              <h1>${modulename}</h1>
               <p>
               <%self:filter chain="markdown_template">
               % if not clazz is None:
@@ -42,7 +54,7 @@ ${functions.description}
                  <ul class="functionslist">
                      <% prevmethod = "" %>
                      % for method in clazz.function_list:
-                         % if prevmethod != method.name and method.visible and not method.advanced and method.access=='public':
+                         % if prevmethod != method.name and method.visible and not method.advanced and method.access=='public' and (method.name!=method.clazz) and (method.name != "~" + method.clazz):
                              <% params = "()" if method.parameters=="" else "(...)" %> 
                              <li> <a href="#${method.name}">${method.name}${params}</a> </li>
                          % endif
@@ -83,12 +95,6 @@ ${functions.description}
              % endif
             
 		</div>
-% if not clazz is None:
-	<p><a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/${clazz.module}/${clazz.name}.markdown">edit class on GitHub</a></p>
-% endif
-% if not functions is None:
-	<p><a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/${functions.module}/${functions.name}_functions.markdown">edit functions on GitHub</a></p>
-% endif
 
 	</div>
 		<div class="page-left-wide">
@@ -99,7 +105,7 @@ ${functions.description}
               % if not clazz is None and len([x for x in clazz.function_list if not x.advanced and x.visible and x.access=='public'])>0:
                   <h2><a name="methods"></a>${clazz.name} methods</h2>
                   % for method in clazz.function_list:
-                        % if method.visible and not method.advanced and method.access=='public':
+                        % if method.visible and not method.advanced and method.access=='public' and (method.name!=method.clazz) and (method.name != "~" + method.clazz):
                             <%include file="documentation_method.mako" args="method=method" />    
                         % endif
                   % endfor

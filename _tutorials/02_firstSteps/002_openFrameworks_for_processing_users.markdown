@@ -5,71 +5,71 @@ summary: An overview of OpenFrameworks for processing junkies
 author: Zach Gage
 author_site: http://www.stfj.net 
 ---
+
 ## Contents
 
-*   [1 An overview of OpenFrameworks for processing junkies.][2]
     
-    *   [1.1 How Processing Actually Works][3]
+*   [1 How Processing Actually Works][3]
+    
+    *   [1.1 What is class extending? (base and sub classes)?][4]
+    *   [1.2 Ok, so what does this have to do with Processing?][5]
         
-        *   [1.1.1 What is class extending? (base and sub classes)?][4]
-        *   [1.1.2 Ok, so what does this have to do with Processing?][5]
+    
+*   [2 How OpenFrameworks Works.][6]
+    
+    *   [2.1 Main.cpp In-depth][7]
+        
+    
+*   [3 Java vs. C++ Compile Processes][8]
+*   [4 How Classes Work in C++ (Two Files!?)][9]
+    
+    *   [4.1 testApp.h][10]
+    *   [4.2 testApp.cpp][11]
+        
+    
+*   [5 What the Fu\*&? (a very basic introduction to pointers).][12]
+    
+    *   [5.1 Value vs. Reference][13]
+    *   [5.2 & and \*][14]
+    *   [5.3 So Where Do I use This?][15]
+    *   [5.4 Basic Data-types][16]
+        
+        *   [5.4.1 The Processing String Exception][17]
             
         
-    *   [1.2 How OpenFrameworks Works.][6]
         
-        *   [1.2.1 Main.cpp In-depth][7]
-            
+    
+*   [6 PImage, updatePixels() vs. ofTexture, pixels\[\]][18]
+    
+    *   [6.1 How are pixel values stored without a Color object?][19]
         
-    *   [1.3 Java vs. C++ Compile Processes][8]
-    *   [1.4 How Classes Work in C++ (Two Files!?)][9]
+    
+*   [7 Common Problems With C++ / Misc. Topics][20]
+    
+    *   [7.1 Expecting implicit data conversion?][21]
+    *   [7.2 Changing window size][22]
+    *   [7.3 Update() and Draw()?][23]
+    *   [7.4 How in the world do I print to the console?][24]
         
-        *   [1.4.1 testApp.h][10]
-        *   [1.4.2 testApp.cpp][11]
-            
-        
-    *   [1.5 What the Fu\*&? (a very basic introduction to pointers).][12]
-        
-        *   [1.5.1 Value vs. Reference][13]
-        *   [1.5.2 & and \*][14]
-        *   [1.5.3 So Where Do I use This?][15]
-        *   [1.5.4 Basic Data-types][16]
-            
-            *   [1.5.4.1 The Processing String Exception][17]
-                
-            
+        *   [7.4.1 printf][25]
+        *   [7.4.2 iostream][26]
             
         
-    *   [1.6 PImage, updatePixels() vs. ofTexture, pixels\[\]][18]
+    *   [7.5 Smoothing not working on filled shapes?][27]
+    *   [7.6 Displaying video problem/feature related to ofSetColor][28]
+    *   [7.7 Processing background() vs. OF ofBackground()][29]
+    *   [7.8 ofFill() / ofNoFill() vs. processing fill() noFill()][30]
+    *   [7.9 Math functions, and where they come from (no more Math.\*)][31]
         
-        *   [1.6.1 How are pixel values stored without a Color object?][19]
+        *   [7.9.1 cmath][32]
+        *   [7.9.2 ofConstants][33]
+        *   [7.9.3 ofMath][34]
             
         
-    *   [1.7 Common Problems With C++ / Misc. Topics][20]
-        
-        *   [1.7.1 Expecting implicit data conversion?][21]
-        *   [1.7.2 Changing window size][22]
-        *   [1.7.3 Update() and Draw()?][23]
-        *   [1.7.4 How in the world do I print to the console?][24]
-            
-            *   [1.7.4.1 printf][25]
-            *   [1.7.4.2 iostream][26]
-                
-            
-        *   [1.7.5 Smoothing not working on filled shapes?][27]
-        *   [1.7.6 Displaying video problem/feature related to ofSetColor][28]
-        *   [1.7.7 Processing background() vs. OF ofBackground()][29]
-        *   [1.7.8 ofFill() / ofNoFill() vs. processing fill() noFill()][30]
-        *   [1.7.9 Math functions, and where they come from (no more Math.\*)][31]
-            
-            *   [1.7.9.1 cmath][32]
-            *   [1.7.9.2 ofConstants][33]
-            *   [1.7.9.3 ofMath][34]
-                
-            
-        *   [1.7.10 Structs, what are they for, and how can we use them?][35]
-        *   [1.7.11 Memory Management and You][36]
-        *   [1.7.12 Basic Logic Problems][37]
-        *   [1.7.13 accidental breakpoints in Xcode and Why Having a Debugger Rocks][38]
+    *   [7.10 Structs, what are they for, and how can we use them?][35]
+    *   [7.11 Memory Management and You][36]
+    *   [7.12 Basic Logic Problems][37]
+    *   [7.13 accidental breakpoints in Xcode and Why Having a Debugger Rocks][38]
             
 
 ## How Processing Actually Works
@@ -872,92 +872,52 @@ your program will stop running whenever it comes across one of these breakpoints
 They're extremely convenient for debugging programs, but they can be confusing if you don't know what they are and they keep stopping your program.
 
 To remove a debug point just click on it and drag it out of the window. You'll get a friendly poof of smoke and it'll be gone.
-[0]: file:///home/arturo/Downloads/ittyeditor-read-only/ittyeditor-example.html#column-one
-[1]: file:///home/arturo/Downloads/ittyeditor-read-only/ittyeditor-example.html#searchInput
-[2]: file:///home/arturo/Downloads/ittyeditor-read-only/ittyeditor-example.html#An_overview_of_OpenFrameworks_for_processing_junkies.
-[3]: file:///home/arturo/Downloads/ittyeditor-read-only/ittyeditor-example.html#How_Processing_Actually_Works
-[4]: file:///home/arturo/Downloads/ittyeditor-read-only/ittyeditor-example.html#What_is_class_extending.3F_.28base_and_sub_classes.29.3F
-[5]: file:///home/arturo/Downloads/ittyeditor-read-only/ittyeditor-example.html#Ok.2C_so_what_does_this_have_to_do_with_Processing.3F
-[6]: file:///home/arturo/Downloads/ittyeditor-read-only/ittyeditor-example.html#How_OpenFrameworks_Works.
-[7]: file:///home/arturo/Downloads/ittyeditor-read-only/ittyeditor-example.html#Main.cpp_In-depth
-[8]: file:///home/arturo/Downloads/ittyeditor-read-only/ittyeditor-example.html#Java_vs._C.2B.2B_Compile_Processes
-[9]: file:///home/arturo/Downloads/ittyeditor-read-only/ittyeditor-example.html#How_Classes_Work_in_C.2B.2B_.28Two_Files.21.3F.29
-[10]: file:///home/arturo/Downloads/ittyeditor-read-only/ittyeditor-example.html#testApp.h
-[11]: file:///home/arturo/Downloads/ittyeditor-read-only/ittyeditor-example.html#testApp.cpp
-[12]: file:///home/arturo/Downloads/ittyeditor-read-only/ittyeditor-example.html#What_the_Fu.2A.26.3F_.28a_very_basic_introduction_to_pointers.29.
-[13]: file:///home/arturo/Downloads/ittyeditor-read-only/ittyeditor-example.html#Value_vs._Reference
-[14]: file:///home/arturo/Downloads/ittyeditor-read-only/ittyeditor-example.html#.26_and_.2A
-[15]: file:///home/arturo/Downloads/ittyeditor-read-only/ittyeditor-example.html#So_Where_Do_I_use_This.3F
-[16]: file:///home/arturo/Downloads/ittyeditor-read-only/ittyeditor-example.html#Basic_Data-types
-[17]: file:///home/arturo/Downloads/ittyeditor-read-only/ittyeditor-example.html#The_Processing_String_Exception
-[18]: file:///home/arturo/Downloads/ittyeditor-read-only/ittyeditor-example.html#PImage.2C_updatePixels.28.29_vs._ofTexture.2C_pixels.5B.5D
-[19]: file:///home/arturo/Downloads/ittyeditor-read-only/ittyeditor-example.html#How_are_pixel_values_stored_without_a_Color_object.3F
-[20]: file:///home/arturo/Downloads/ittyeditor-read-only/ittyeditor-example.html#Common_Problems_With_C.2B.2B_.2F_Misc._Topics
-[21]: file:///home/arturo/Downloads/ittyeditor-read-only/ittyeditor-example.html#Expecting_implicit_data_conversion.3F
-[22]: file:///home/arturo/Downloads/ittyeditor-read-only/ittyeditor-example.html#Changing_window_size
-[23]: file:///home/arturo/Downloads/ittyeditor-read-only/ittyeditor-example.html#Update.28.29_and_Draw.28.29.3F
-[24]: file:///home/arturo/Downloads/ittyeditor-read-only/ittyeditor-example.html#How_in_the_world_do_I_print_to_the_console.3F
-[25]: file:///home/arturo/Downloads/ittyeditor-read-only/ittyeditor-example.html#printf
-[26]: file:///home/arturo/Downloads/ittyeditor-read-only/ittyeditor-example.html#iostream
-[27]: file:///home/arturo/Downloads/ittyeditor-read-only/ittyeditor-example.html#Smoothing_not_working_on_filled_shapes.3F
-[28]: file:///home/arturo/Downloads/ittyeditor-read-only/ittyeditor-example.html#Displaying_video_problem.2Ffeature_related_to_ofSetColor
-[29]: file:///home/arturo/Downloads/ittyeditor-read-only/ittyeditor-example.html#Processing_background.28.29_vs._OF_ofBackground.28.29
-[30]: file:///home/arturo/Downloads/ittyeditor-read-only/ittyeditor-example.html#ofFill.28.29_.2F_ofNoFill.28.29_vs._processing_fill.28.29_noFill.28.29
-[31]: file:///home/arturo/Downloads/ittyeditor-read-only/ittyeditor-example.html#Math_functions.2C_and_where_they_come_from_.28no_more_Math..2A.29
-[32]: file:///home/arturo/Downloads/ittyeditor-read-only/ittyeditor-example.html#cmath
-[33]: file:///home/arturo/Downloads/ittyeditor-read-only/ittyeditor-example.html#ofConstants
-[34]: file:///home/arturo/Downloads/ittyeditor-read-only/ittyeditor-example.html#ofMath
-[35]: file:///home/arturo/Downloads/ittyeditor-read-only/ittyeditor-example.html#Structs.2C_what_are_they_for.2C_and_how_can_we_use_them.3F
-[36]: file:///home/arturo/Downloads/ittyeditor-read-only/ittyeditor-example.html#Memory_Management_and_You
-[37]: file:///home/arturo/Downloads/ittyeditor-read-only/ittyeditor-example.html#Basic_Logic_Problems
-[38]: file:///home/arturo/Downloads/ittyeditor-read-only/ittyeditor-example.html#accidental_breakpoints_in_Xcode_and_Why_Having_a_Debugger_Rocks
-[39]: file:///index.php?title=OF_for_Processing_users&action=edit&section=1 "Edit section: An overview of OpenFrameworks for processing junkies."
-[40]: file:///index.php?title=OF_for_Processing_users&action=edit&section=2 "Edit section: How Processing Actually Works"
-[41]: file:///index.php?title=OF_for_Processing_users&action=edit&section=3 "Edit section: What is class extending? (base and sub classes)?"
-[42]: file:///index.php?title=OF_for_Processing_users&action=edit&section=4 "Edit section: Ok, so what does this have to do with Processing?"
-[43]: file:///index.php?title=OF_for_Processing_users&action=edit&section=5 "Edit section: How OpenFrameworks Works."
-[44]: file:///index.php?title=OF_for_Processing_users&action=edit&section=6 "Edit section: Main.cpp In-depth"
-[45]: file:///index.php?title=OF_for_Processing_users&action=edit&section=7 "Edit section: Java vs. C++ Compile Processes"
-[46]: file:///index.php?title=OF_for_Processing_users&action=edit&section=8 "Edit section: How Classes Work in C++ (Two Files!?)"
-[47]: file:///index.php?title=OF_for_Processing_users&action=edit&section=9 "Edit section: testApp.h"
+[0]: #column-one
+[1]: #searchInput
+[2]: #An-overview-of-OpenFrameworks-for-processing-junkies.
+[3]: #how-processing-actually-works
+[4]: #what-is-class-extending-base-and-sub-classes
+[5]: #ok-so-what-does-this-have-to-do-with-processing
+[6]: #how-openframeworks-works
+[7]: #maincpp-in-depth
+[8]: #java-vs-c-compile-processes
+[9]: #how-classes-work-in-c-two-files
+[10]: #testapph
+[11]: #testappcpp
+[12]: #what-the-fu42-a-very-basic-introduction-to-pointers
+[13]: #value-vs-reference
+[14]: #and-42
+[15]: #so-where-do-i-use-this
+[16]: #basic-data-types
+[17]: #the-processing-string-exception
+[18]: #pimage-updatepixels-vs-oftexture-pixels9193
+[19]: #how-are-pixel-values-stored-without-a-color-object
+[20]: #common-problems-with-c-misc-topic
+[21]: #expecting-implicit-data-conversion
+[22]: #changing-window-size
+[23]: #update-and-draw
+[24]: #how-in-the-world-do-i-print-to-the-console
+[25]: #printf
+[26]: #iostream
+[27]: #smoothing-not-working-on-filled-shapes
+[28]: #displaying-video-problemfeature-related-to-ofsetcolor
+[29]: #processing-background-vs-of-ofbackground
+[30]: #offill-ofnofill-vs-processing-fill-nofill
+[31]: #math-functions-and-where-they-come-from-no-more-math42
+[32]: #cmath
+[33]: #ofconstants
+[34]: #ofmath
+[35]: #structs-what-are-they-for-and-how-can-we-use-them
+[36]: #memory-management-and-you
+[37]: #basic-logic-problems
+[38]: #accidental-breakpoints-in-xcode-and-why-having-a-debugger-rocks
 [48]: http://pages.cs.wisc.edu/~hasti/cs368/CppTutorial/NOTES/CLASSES-INTRO.html "http://pages.cs.wisc.edu/~hasti/cs368/CppTutorial/NOTES/CLASSES-INTRO.html"
-[49]: file:///index.php?title=OF_for_Processing_users&action=edit&section=10 "Edit section: testApp.cpp"
-[50]: file:///index.php?title=OF_for_Processing_users&action=edit&section=11 "Edit section: What the Fu*&? (a very basic introduction to pointers)."
 [51]: http://www.cplusplus.com/doc/tutorial/pointers.html "http://www.cplusplus.com/doc/tutorial/pointers.html"
-[52]: file:///index.php?title=OF_for_Processing_users&action=edit&section=12 "Edit section: Value vs. Reference"
-[53]: file:///index.php?title=OF_for_Processing_users&action=edit&section=13 "Edit section: & and *"
-[54]: file:///index.php?title=OF_for_Processing_users&action=edit&section=14 "Edit section: So Where Do I use This?"
-[55]: file:///index.php?title=OF_for_Processing_users&action=edit&section=15 "Edit section: Basic Data-types"
-[56]: file:///index.php?title=OF_for_Processing_users&action=edit&section=16 "Edit section: The Processing String Exception"
-[57]: file:///index.php?title=OF_for_Processing_users&action=edit&section=17 "Edit section: PImage, updatePixels() vs. ofTexture, pixels[]"
 [58]: http://www.openframeworks.cc/documentation#ofImage-setUseTexture "http://www.openframeworks.cc/documentation#ofImage-setUseTexture"
-[59]: file:///index.php?title=OF_for_Processing_users&action=edit&section=18 "Edit section: How are pixel values stored without a Color object?"
-[60]: file:///index.php?title=OF_for_Processing_users&action=edit&section=19 "Edit section: Common Problems With C++ / Misc. Topics"
-[61]: file:///index.php?title=OF_for_Processing_users&action=edit&section=20 "Edit section: Expecting implicit data conversion?"
-[62]: file:///index.php?title=OF_for_Processing_users&action=edit&section=21 "Edit section: Changing window size"
-[63]: file:///index.php?title=OF_for_Processing_users&action=edit&section=22 "Edit section: Update() and Draw()?"
-[64]: file:///index.php?title=OF_for_Processing_users&action=edit&section=23 "Edit section: How in the world do I print to the console?"
-[65]: file:///index.php?title=OF_for_Processing_users&action=edit&section=24 "Edit section: printf"
 [66]: http://www.cplusplus.com/reference/clibrary/cstdio/printf.html "http://www.cplusplus.com/reference/clibrary/cstdio/printf.html"
-[67]: file:///index.php?title=OF_for_Processing_users&action=edit&section=25 "Edit section: iostream"
 [68]: http://members.gamedev.net/sicrane/articles/iostream.html "http://members.gamedev.net/sicrane/articles/iostream.html"
-[69]: file:///index.php?title=OF_for_Processing_users&action=edit&section=26 "Edit section: Smoothing not working on filled shapes?"
-[70]: file:///index.php?title=OF_for_Processing_users&action=edit&section=27 "Edit section: Displaying video problem/feature related to ofSetColor"
-[71]: file:///index.php?title=OF_for_Processing_users&action=edit&section=28 "Edit section: Processing background() vs. OF ofBackground()"
-[72]: file:///index.php?title=OF_for_Processing_users&action=edit&section=29 "Edit section: ofFill() / ofNoFill() vs. processing fill() noFill()"
-[73]: file:///index.php?title=OF_for_Processing_users&action=edit&section=30 "Edit section: Math functions, and where they come from (no more Math.*)"
-[74]: file:///index.php?title=OF_for_Processing_users&action=edit&section=31 "Edit section: cmath"
 [75]: http://www.cplusplus.com/reference/clibrary/cmath/ "http://www.cplusplus.com/reference/clibrary/cmath/"
-[76]: file:///index.php?title=OF_for_Processing_users&action=edit&section=32 "Edit section: ofConstants"
-[77]: file:///index.php?title=OF_for_Processing_users&action=edit&section=33 "Edit section: ofMath"
 [78]: http://www.openframeworks.cc/documentation#ofMath-about "http://www.openframeworks.cc/documentation#ofMath-about"
-[79]: file:///index.php?title=OF_for_Processing_users&action=edit&section=34 "Edit section: Structs, what are they for, and how can we use them?"
 [80]: http://richardbowles.tripod.com/cpp/linklist/linklist.htm "http://richardbowles.tripod.com/cpp/linklist/linklist.htm"
-[81]: file:///index.php?title=OF_for_Processing_users&action=edit&section=35 "Edit section: Memory Management and You"
-[82]: file:///index.php?title=OF_for_Processing_users&action=edit&section=36 "Edit section: Basic Logic Problems"
-[83]: file:///index.php?title=OF_for_Processing_users&action=edit&section=37 "Edit section: accidental breakpoints in Xcode and Why Having a Debugger Rocks"
-[84]: file:///index.php?title=Image:BkPt.jpg "Image:BkPt.jpg"
-[85]: file:///index.php?title=Image:BuildConf.jpg "Image:BuildConf.jpg"
-[86]: file:///index.php?title=Image:HilightedVar.jpg "Image:HilightedVar.jpg"
 
 
