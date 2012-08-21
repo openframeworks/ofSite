@@ -1141,7 +1141,7 @@ _advanced: False_
 
 _description: _
 
-Sets the draw color with r,g,b, 0-255. For example, red (0xff0000) would be: ofSetColor(255,0,0).
+Sets the draw color with r,g,b, 0-255. For example, red (0xff0000) would be: ofSetColor(255,0,0). This affects not only the color of shapes drawn with ofRect(...), ofCircle(...), etc, but also the tint of images and textures.
 ~~~~{.cpp}
 void testApp::draw(){
 	ofSetColor(0,0,255); 	//set te color to blue
@@ -1751,7 +1751,7 @@ _advanced: False_
 
 _description: _
 
-Sets the mode for drawing rectangles, if they are corner aligned, or drawn so that the x,y position is the center of the rectangle. possible options are OF_RECTMODE_CENTER and OF_RECTMODE_CORNER.
+Sets the mode for drawing rectangles and other rectangular objects, if they are corner aligned, or drawn so that the x,y position is the center of the rectangle. possible options are OF_RECTMODE_CENTER and OF_RECTMODE_CORNER. This afects not only how ofRect() objects are drawn, but also ofTexture (and threfore ofImage) objects. 
 ~~~~{.cpp}
 void testApp::draw(){
 	ofSetRectMode(OF_RECTMODE_CORNER); //set rectangle mode to the corner
