@@ -493,7 +493,7 @@ _advanced: False_
 
 _description: _
 
-If you have setup audio input, via ofSetupAudio, this function will be called when you have one buffers worth of audio. Since you may have requested mutli-channel audio (for example, stereo input), you get not only an array of floating point info, also the size of the buffer, and the number of channels. The size of input (the float array with audio data) is: bufferSize * nChannels; The data will come interleaved, so if, for example, you request 2 channel (left / right) input, the samples come:
+If you have setup audio input, via ofSoundStreamSetup(...), this function will be called when you have one buffers worth of audio. Since you may have requested mutli-channel audio (for example, stereo input), you get not only an array of floating point info, also the size of the buffer, and the number of channels. The size of input (the float array with audio data) is: bufferSize * nChannels; The data will come interleaved, so if, for example, you request 2 channel (left / right) input, the samples come:
 ~~~~{.cpp}
 
 l r l r l r l r l r ....
@@ -533,7 +533,7 @@ _advanced: False_
 
 _description: _
 
-If you have setup audio output, via ofSetupAudio, this function will be called when the system needs one buffers worth of audio. Since you may have requested mutli-channel audio (for example, stereo output), you get not only an array of floating point info, also the size of the buffer, and the number of channels. 
+If you have setup audio output, via ofSoundStreamSetup(...), this function will be called when the system needs one buffers worth of audio. Since you may have requested mutli-channel audio (for example, stereo output), you get not only an array of floating point info, also the size of the buffer, and the number of channels. 
 
 
 
