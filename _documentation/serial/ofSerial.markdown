@@ -330,7 +330,7 @@ while ( bytesRemaining > 0 )
     }
   }
 }
-$$/code
+~~~~
 
 
 
@@ -368,7 +368,7 @@ int numSent = mySerial.writeBytes("Hello World");
 // numSent is how many bytes written; for example if numSent 
 // is 3 then "Hel" has been written and the call should be retried
 // with "lo World" to complete the write.
-$$/code
+~~~~
 
 
 
