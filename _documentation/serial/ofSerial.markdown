@@ -634,7 +634,7 @@ This reads bytes from the serial buffer into the buffer pointer passed in:
 unsigned char* buf = new unsigned char[4];
 device.readBytes(buf, 4);
 // do something with buf
-delete buf; // clean up
+delete [] buf; // clean up
 ~~~~
 
 You can also use an array like so:
