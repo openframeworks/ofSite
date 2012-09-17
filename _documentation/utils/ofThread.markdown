@@ -35,7 +35,7 @@ class MyThread : public ofThread {
 		// done
 	}
 	
-	ofVideoGrabber;	// the cam
+	ofVideoGrabber cam;	// the cam
 	ofImage image;
 };
 
@@ -102,8 +102,8 @@ class MyThread : public ofThread {
 		// done
 	}
 
-	ofVideoGrabber;	// the cam
-	ofImage image;  // the shared resource
+	ofVideoGrabber cam;	// the cam
+	ofImage image;		// the shared resource
 };
 
 ~~~~
