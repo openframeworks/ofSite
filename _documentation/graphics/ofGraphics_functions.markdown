@@ -531,7 +531,7 @@ void testApp::draw(){
 	ofPushMatrix();			// push the current coordinate position
 	ofRotateX(90);			// change the coordinate system
 	ofRect(10,10,40,40);	// draw a rect
-	ofPopMatrix()			// recall the pushed coordinate position
+	ofPopMatrix();			// recall the pushed coordinate position
 }
 ~~~~
 
