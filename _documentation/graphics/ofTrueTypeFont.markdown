@@ -150,7 +150,7 @@ Loads a fonts of a given filename in, and renders it to a texture at a given siz
 
 // int the h file:
 
-ofFont myFont;
+ofTrueTypeFont myFont;
 ...
 
 myFont.loadFont("arial.ttf", 32);
@@ -404,7 +404,7 @@ Draws a string with that typeface, on screen, at point(x,y). For example, you ca
 ~~~~{.cpp}
 
 // in the h file:
-ofFont myfont;
+ofTrueTypeFont myfont;
 .....
 
 // in setup:
