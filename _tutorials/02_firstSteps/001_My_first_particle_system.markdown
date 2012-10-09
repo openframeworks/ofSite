@@ -321,7 +321,7 @@ And use it like like this on the testApp project
 
 ## 4. Let's get physical
 
-Before we continue on our way a to proper particle system. I have good news, You don´t have to deal with heavy maths in order to create some nice physics based effects. openFrameworks provides some very nice functionality that makes this much easier. However if you want to dive into the details, take a look at Keith´s tutorials at [Math Tutorials](http::/openframeworks.cc/tutorials/maths/) that can lead you to crazy awesome new things.
+Before we continue on our way a to proper particle system. I have good news, You don´t have to deal with heavy maths in order to create some nice physics based effects. openFrameworks provides some very nice functionality that makes this much easier. However if you want to dive into the details, take a look at Keith´s tutorials at [Math Tutorials](http://openframeworks.cc/tutorials/maths/) that can lead you to crazy awesome new things.
 
 Some of the most helpful classes are contained in ofVectorMath that allow us to work with forces very easily. Just like have in our `Ball` class, `ofVec2f` has `x` and `y` values, and you can access to them in the same way we just do with `ball.x` and `ball.y`. `ofVec2f` also have really handy methods like `.dot()` and also operator `+`, `+`, `*` and `/` that do the math for you.
 

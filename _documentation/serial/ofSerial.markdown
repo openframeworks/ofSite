@@ -330,7 +330,7 @@ while ( bytesRemaining > 0 )
     }
   }
 }
-$$/code
+~~~~
 
 
 
@@ -368,7 +368,7 @@ int numSent = mySerial.writeBytes("Hello World");
 // numSent is how many bytes written; for example if numSent 
 // is 3 then "Hel" has been written and the call should be retried
 // with "lo World" to complete the write.
-$$/code
+~~~~
 
 
 
@@ -634,7 +634,7 @@ This reads bytes from the serial buffer into the buffer pointer passed in:
 unsigned char* buf = new unsigned char[4];
 device.readBytes(buf, 4);
 // do something with buf
-delete buf; // clean up
+delete [] buf; // clean up
 ~~~~
 
 You can also use an array like so:
