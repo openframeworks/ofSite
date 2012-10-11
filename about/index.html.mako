@@ -22,6 +22,12 @@ openFrameworks is an [open source](license.html) [C++](https://en.wikipedia.org/
 * [FreeImage](http://freeimage.sourceforge.net/) for image saving and loading
 * [Quicktime](http://developer.apple.com/quicktime/), [GStreamer](http://gstreamer.freedesktop.org/) and [videoInput](https://github.com/ofTheo/videoInput) for video playback and grabbing
 * [Poco](http://pocoproject.org/) for a variety of utilities
+* [OpenCV](http://http://opencv.org/) for computer vision
+* [Assimp](http://assimp.sourceforge.net/) for 3D model loading
+* [TinyXml](http://www.grinninglizard.com/tinyxml/) for xml parsing
+* [3DS model loader](http://isg.cs.tcd.ie/cosulliv/Graphics/Labs/Lab4/) for 3DStudio model loading (deprecated by assimp)
+* [CreEPS](http://www.uwefabricius.de/projects/creeps.html) for postscript exporting (deprecated by cairo)
+
 
 The code is written to be massively cross-compatible. Right now we support five operating systems (Windows, OSX, Linux, iOS, Android) and four IDEs (XCode, Code::Blocks, and Visual Studio and Eclipse). The API is designed to be minimal and easy to grasp.
 
