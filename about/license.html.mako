@@ -22,5 +22,5 @@ openFrameworks also ships with a mix of the following libraries, depending on yo
 * [rtAudio](http://www.music.mcgill.ca/~gary/rtaudio/), [PortAudio](http://www.portaudio.com/) or [FMOD](http://www.fmod.org/)  and [Kiss FFT](http://kissfft.sourceforge.net/) for audio input, output and analysis
 * [FreeType](http://freetype.sourceforge.net/index2.html) for fonts
 * [FreeImage](http://freeimage.sourceforge.net/) for image saving and loading
-* [Quicktime](http://developer.apple.com/quicktime/), [Unicap](http://unicap-imaging.org/), [GStreamer](http://gstreamer.freedesktop.org/) and [videoInput](https://github.com/ofTheo/videoInput) for video playback and grabbing
+* [Quicktime](http://developer.apple.com/quicktime/), [GStreamer](http://gstreamer.freedesktop.org/) and [videoInput](https://github.com/ofTheo/videoInput) for video playback and grabbing
 * [Poco](http://pocoproject.org/) for a variety of utilities
