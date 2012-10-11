@@ -12,7 +12,7 @@
         <h2>openFrameworks is an open source C++ toolkit for creative coding.</h2>
 
         <h3><a href="download/">download</a></h3>
-        <p>Grab the most recent release (0071) and follow the setup guide to get openFrameworks running.</p>
+        <p>Grab the most recent release (${bf.config.currentVersion}) and follow the setup guide to get openFrameworks running.</p>
         
 	<h3><a href="documentation/">documentation</a></h3>
 	<p>Reference for openFrameworks classes, functions and addons. For guides and tutorials, see the <a href="http://wiki.openframeworks.cc/">wiki</a>.</p>
