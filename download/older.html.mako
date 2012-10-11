@@ -7,6 +7,20 @@ as we update and change OF, you can download older versions of the framework her
 
 --------------------------------
 
+**pre release v0071** 
+
+windows: [code blocks][78] | [visual studio 2010][79] 
+
+mac [x-code (10.6-10.7)][80]
+
+linux: [code blocks][81] | [(64 bit) code blocks][82]
+
+iphone: [iPhone][83] 
+
+android: [Android][84]
+
+--------------------------------
+
 **pre release v0.07** 
 
 windows: [code blocks][71] | [visual studio 2010][72] 
@@ -180,4 +194,12 @@ changes: [changelog for 0.04][67]
 [75]: http://www.openframeworks.cc/versions/preRelease_v0.07/of_preRelease_v007_linux64.tar.gz
 [76]: http://www.openframeworks.cc/versions/preRelease_v0.07/of_preRelease_v007_iphone.zip
 [77]: http://www.openframeworks.cc/versions/preRelease_v0.07/of_preRelease_v007_android.tar.gz
+[78]: http://www.openframeworks.cc/versions/v0.071/of_v0071_win_cb_release.zip
+[79]: http://www.openframeworks.cc/versions/v0.071/of_v0071_vs2010_release.zip
+[80]: http://www.openframeworks.cc/versions/v0.071/of_0071_osx_release.zip
+[81]: http://www.openframeworks.cc/versions/v0.071/of_v0071_linux_release.tar.gz
+[82]: http://www.openframeworks.cc/versions/v0.071/of_v0071_linux64_release.tar.gz
+[83]: http://www.openframeworks.cc/versions/v0.071/of_0071_iOS_release.zip
+[84]: http://www.openframeworks.cc/versions/v0.071/of_v0071_android_release.tar.gz
+
 

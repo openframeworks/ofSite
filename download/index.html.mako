@@ -10,7 +10,7 @@
 <div id="download-latest-platform">
 	<h2>osx</h2>
 	<h3>download</h3>
-	<p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_${bf.config.currentVersion}_osx_release.zip">xcode</a></p><br/>
+	<p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_osx_release.zip">xcode</a></p><br/>
 	<h3>setup guide</h3>
 	<p><a href="../setup/xcode">xcode</a></p>
 </div>
@@ -39,7 +39,7 @@
 	<h2>ios</h2>
 	<p><em>osx only</em></p><br/>
 	<h3>download</h3>
-	<p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_${bf.config.currentVersion}_iOS_release.zip">ios</a></p><br/>
+	<p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_ios_release.zip">ios</a></p><br/>
 	<h3>setup guide</h3>
 	<p><a href="../setup/iphone">ios</a></p>
 </div>
@@ -81,15 +81,3 @@ other releases
 --------------
 
 Older releases of openFrameworks are archived [here](older.html). For the absolute latest version of openFrameworks, see the [openFrameworks GitHub](https://github.com/openframeworks/openFrameworks/). If you're interested in contributing to openFrameworks, you should fork the GitHub repository and follow the guidelines for the [openFrameworks GitHub workflow](https://github.com/openframeworks/openFrameworks/wiki/openFrameworks-git-workflow).
-
-[0]: http://forum.openframeworks.cc
-[1]: http://github.com/openframeworks/openFrameworks/issues
-[2]: http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_win_cb_release.zip
-[3]: http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_vs2010_release.zip
-[4]: http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_${bf.config.currentVersion}_osx_release.zip
-[5]: http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_linux_release.tar.gz
-[6]: http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_linux64_release.tar.gz
-[7]: http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_${bf.config.currentVersion}_iOS_release.zip
-[8]: http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_android_release.tar.gz
-[9]: ../license
-[10]: http://openframeworks.cc/setup
