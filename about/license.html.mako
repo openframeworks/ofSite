@@ -19,8 +19,13 @@ other libraries
 openFrameworks also ships with a mix of the following libraries, depending on your platform, which may have different licenses.
 
 * [OpenGL](http://www.opengl.org/), [GLEW](http://glew.sourceforge.net/), [GLUT](http://www.opengl.org/resources/libraries/glut/), [libtess2](https://code.google.com/p/libtess2/) and [cairo](http://cairographics.org/) for graphics
-* [rtAudio](http://www.music.mcgill.ca/~gary/rtaudio/), [PortAudio](http://www.portaudio.com/) or [FMOD](http://www.fmod.org/)  and [Kiss FFT](http://kissfft.sourceforge.net/) for audio input, output and analysis
+* [rtAudio](http://www.music.mcgill.ca/~gary/rtaudio/), [PortAudio](http://www.portaudio.com/), [OpenAL](http://connect.creativelabs.com/openal) and [Kiss FFT](http://kissfft.sourceforge.net/) or [FMOD](http://www.fmod.org/) for audio input, output and analysis
 * [FreeType](http://freetype.sourceforge.net/index2.html) for fonts
 * [FreeImage](http://freeimage.sourceforge.net/) for image saving and loading
-* [Quicktime](http://developer.apple.com/quicktime/), [Unicap](http://unicap-imaging.org/), [GStreamer](http://gstreamer.freedesktop.org/) and [videoInput](https://github.com/ofTheo/videoInput) for video playback and grabbing
+* [Quicktime](http://developer.apple.com/quicktime/), [GStreamer](http://gstreamer.freedesktop.org/) and [videoInput](https://github.com/ofTheo/videoInput) for video playback and grabbing
 * [Poco](http://pocoproject.org/) for a variety of utilities
+* [OpenCV](http://http://opencv.org/) for computer vision
+* [Assimp](http://assimp.sourceforge.net/) for 3D model loading
+* [TinyXml](http://www.grinninglizard.com/tinyxml/) for xml parsing
+* [3DS model loader](http://isg.cs.tcd.ie/cosulliv/Graphics/Labs/Lab4/) for 3DStudio model loading (deprecated by assimp)
+* [CreEPS](http://www.uwefabricius.de/projects/creeps.html) for postscript exporting (deprecated by cairo)
