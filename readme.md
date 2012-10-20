@@ -40,3 +40,8 @@ An alternative to running blogofile locally is to use a Markdown editor that can
 * Linux: [Writr](http://antrix.net/pages/writr-markdown/), [ReText](http://sourceforge.net/p/retext/home/ReText/), & the [gedit-markdown](http://www.jpfleury.net/en/software/gedit-markdown.php) plugin
 
 Note: The website utilizes some additions to Markdown itself, so specialized functions such as code syntax highlighting may not be available in the editor, even though it will work fine on the site.
+
+Installation note (mac os x 10.8): If you get errors when building the site, you may need blogofile 0.7.1 (current version is 0.8b). 
+The only way I've found to install the version has been by cloning [https://github.com/EnigmaCurry/blogofile](https://github.com/EnigmaCurry/blogofile) and checking out the 0.7.1 tag. 
+Then run
+	sudo python setup.py install
