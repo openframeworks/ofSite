@@ -6,7 +6,7 @@ v0.1, January 2012:
 :icons:
 :numbered:
 :doctype: book
-:author_site: http://jeffcrouse.com
+:author_site: http://www.jeffcrouse.info
 :summary: This chapter will introduce openFrameworks and prepare you to start your first project.
 
 This chapter will introduce openFrameworks and prepare you to start your first project.
