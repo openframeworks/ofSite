@@ -54,7 +54,7 @@ Here's a suggested file structure
 This should contain the platform you want to build for. Given that there are different distributions for different platforms this is set in your download. This means that if you have, for example, an osx distribution and an ios distribution on mac, you'll have to execute the projectGenerator in their respective folders.
 
 ### 4. Addons
-If you know the addons you're going to need, open the addon selection page where you can check the addons you want.  
+If you know the addons you're going to need, open the addon selection page where you can include them. Click on Back when you're done.
 
 ![Image: projectGenerator - selecting addons](pg_images/pg-02.png)
 
