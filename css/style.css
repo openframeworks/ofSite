@@ -503,6 +503,11 @@ a.nohover {
     color: #444;
     margin-bottom:2em;
 }
+
+.article > p > img{
+	max-width:100%;
+}
+
 .functionslist a {
 	color: #444;
 	font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
