@@ -54,7 +54,7 @@ openFrameworks is actively developed by [Zach Lieberman](http://thesystemis.com/
 
 And previously:
 
-* [Steve Varga](http://www.vargatron.com/) (vargatron)
+* [Steve Varga](http://www.vargatron.com/) (vargatron) as typography leader
 
 A number of institutions have provided major support for openFrameworks through grants, donations, and as hosting partners for our international developer conferences:
 
