@@ -20,6 +20,20 @@ And access the local site in http://localhost:8080/
 
 You can start editing pages right away. In order to see your changes on your local version you'll have always have to run build & serve before.
 
+** Please note, this version of ofSite is built in blogofile v.0.7.1, see the reference for installing on Vanilla Ubuntu [below](#below)
+
+To build the site, you will need to:
+	
+	git clone https://github.com/EnigmaCurry/blogofile
+	git checkout 0.7.1
+	python setup.py install
+
+And run:
+
+	blogofile build
+	blogofile serve
+
+
 ## Documentation-style markdown
 
 The documentation portion of the site is written in Markdown, a wiki-style syntax. See details on [Daringfireball](http://daringfireball.net/projects/markdown/). 
@@ -58,3 +72,20 @@ Then inside the blogofile folder run
 	sudo python setup.py install
 	
 Your may also need to install [asciidoc](http://www.methods.co.nz/asciidoc/manpage.html)
+
+<a id="below"></a>
+
+## Vanilla Ubuntu 12.04 install:
+
+	aptitude install build-essential gcc python-dev libxslt1-dev git python-setuptools python-pip 
+	easy_install lxml
+
+	git clone https://github.com/EnigmaCurry/blogofile
+	cd blogofile
+	git checkout 0.7.1
+	python setup.py install
+
+	cd ..
+	git clone https://github.com/openframeworks/ofSite.git
+	blogofile build
+	blogofile serve
