@@ -70,14 +70,14 @@ We release openFrameworks as an uncompiled library. This means that when you dow
 <img src="0071_3.png" />
 </div>
 
---------------------------------
+-------------------------------
 
 nightly builds  
 --------------
 
 Every night OF is built automatically, <a href="${bf.config.site.url}/nightlybuilds.html">here</a> you can find the latest builds.
 
---------------------------------
+-------------------------------
 
 other releases  
 --------------
