@@ -14,6 +14,8 @@
 # Basic Settings
 #  (almost all sites will want to configure these settings)
 ######################################################################
+from _version import currentVersion 
+
 ## site_url -- Your site's full URL
 # Your "site" is the same thing as your _site directory.
 #  If you're hosting a blogofile powered site as a subdirectory of a larger
@@ -58,4 +60,3 @@ documentation.path = 'documentation'
 tutorials = controllers.documentation
 tutorials.path = 'tutorials'
 
-currentVersion = '0073'
