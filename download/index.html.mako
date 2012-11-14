@@ -9,7 +9,7 @@
 
 <div id="download-latest-platform">
 	<h2>osx</h2>
-	<h3>download OF for</h3>
+	<h3>download openFrameworks for</h3>
 	<p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_osx_release.zip">xcode</a></p><br/>
 	<h3>IDE setup guide</h3>
 	<p><a href="../setup/xcode">xcode</a></p>
@@ -17,7 +17,7 @@
 
 <div id="download-latest-platform">
 	<h2>linux</h2>
-	<h3>download OF for</h3>
+	<h3>download openFrameworks for</h3>
 	<p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_linux_release.tar.gz">code::blocks</a></p>
 	<p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_linux64_release.tar.gz">code::blocks (64 bit)</a></p><br/>
 	<h3>IDE setup guide</h3>
@@ -26,7 +26,7 @@
 
 <div id="download-latest-platform">
 	<h2>windows</h2>
-	<h3>download OF for</h3>
+	<h3>download openFrameworks for</h3>
 	<p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_win_cb_release.zip">code::blocks</a></p>
 	<p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_vs2010_release.zip">visual studio 2010</a></p><br/>
 	<h3>IDE setup guides</h3>
@@ -38,7 +38,7 @@
 <div id="download-latest-platform">
 	<h2>ios</h2>
 	<p><em>osx only</em></p><br/>
-	<h3>download OF for</h3>
+	<h3>download openFrameworks for</h3>
 	<p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_ios_release.zip">ios</a></p><br/>
 	<h3>IDE setup guide</h3>
 	<p><a href="../setup/iphone">ios</a></p>
@@ -47,7 +47,7 @@
 <div id="download-latest-platform">
 	<h2>android</h2>
 	<p><em>linux + osx only</em></p><br/>
-	<h3>download OF for</h3>
+	<h3>download openFrameworks for</h3>
 	<p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_android_release.tar.gz">eclipse</a></p><br/>
 	<h3>IDE setup guide</h3>
 	<p><a href="../setup/android-eclipse">eclipse</a></p>
