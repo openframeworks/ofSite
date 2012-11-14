@@ -9,27 +9,27 @@
 
 <div id="download-latest-platform">
 	<h2>osx</h2>
-	<h3>download</h3>
+	<h3>download OF for</h3>
 	<p><a href="http://www.openframeworks.cc/versions/v0.071/of_0071_osx_release.zip">xcode</a></p><br/>
-	<h3>setup guide</h3>
+	<h3>IDE setup guide</h3>
 	<p><a href="../setup/xcode">xcode</a></p>
 </div>
 
 <div id="download-latest-platform">
 	<h2>linux</h2>
-	<h3>download</h3>
+	<h3>download OF for</h3>
 	<p><a href="http://www.openframeworks.cc/versions/v0.071/of_v0071_linux_release.tar.gz">code::blocks</a></p>
 	<p><a href="http://www.openframeworks.cc/versions/v0.071/of_v0071_linux64_release.tar.gz">code::blocks (64 bit)</a></p><br/>
-	<h3>setup guide</h3>
+	<h3>IDE setup guide</h3>
 	<p><a href="../setup/linux-codeblocks">code::blocks</a></p>
 </div>
 
 <div id="download-latest-platform">
 	<h2>windows</h2>
-	<h3>download</h3>
+	<h3>download OF for</h3>
 	<p><a href="http://www.openframeworks.cc/versions/v0.071/of_v0071_win_cb_release.zip">code::blocks</a></p>
 	<p><a href="http://www.openframeworks.cc/versions/v0.071/of_v0071_vs2010_release.zip">visual studio 2010</a></p><br/>
-	<h3>setup guides</h3>
+	<h3>IDE setup guides</h3>
 	<p><a href="../setup/codeblocks">code::blocks</a></p>
 	<!--<p><a href="../setup/vs-2008">visual studio 2008</a></p>-->
 	<p><a href="../setup/vs-2010">visual studio 2010</a></p>
@@ -38,18 +38,18 @@
 <div id="download-latest-platform">
 	<h2>ios</h2>
 	<p><em>osx only</em></p><br/>
-	<h3>download</h3>
+	<h3>download OF for</h3>
 	<p><a href="http://www.openframeworks.cc/versions/v0.071/of_0071_iOS_release.zip">ios</a></p><br/>
-	<h3>setup guide</h3>
+	<h3>IDE setup guide</h3>
 	<p><a href="../setup/iphone">ios</a></p>
 </div>
 
 <div id="download-latest-platform">
 	<h2>android</h2>
 	<p><em>linux + osx only</em></p><br/>
-	<h3>download</h3>
+	<h3>download OF for</h3>
 	<p><a href="http://www.openframeworks.cc/versions/v0.071/of_v0071_android_release.tar.gz">eclipse</a></p><br/>
-	<h3>setup guide</h3>
+	<h3>IDE setup guide</h3>
 	<p><a href="../setup/android-eclipse">eclipse</a></p>
 </div>
 
