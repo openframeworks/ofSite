@@ -19,7 +19,10 @@ import markdown_file
 
 logger = logging.getLogger("blogofile.post")    
         
-        
+def uniqify(seq):
+    seen = set()
+    seen_add = seen.add
+    return [ x for x in seq if x not in seen and not seen_add(x)]
         
 class Block(object):
     def __init__(self, source):
@@ -35,9 +38,9 @@ class Block(object):
             self.__parse_element(element)
         for clazz in self.classes:
             if 'methods' in clazz:
-                clazz['methods'] = sets.Set(clazz['methods']) 
+                clazz['methods'] = uniqify(clazz['methods']) #sets.Set(clazz['methods']) 
             if 'variables' in clazz:
-                clazz['vars'] = sets.Set(clazz['variables'])
+                clazz['variables'] = uniqify(clazz['variables']) #sets.Set(clazz['variables'])
                 
     def __parse_element(self, element):
         mode = self.mode

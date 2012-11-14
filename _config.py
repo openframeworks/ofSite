@@ -58,4 +58,4 @@ documentation.path = 'documentation'
 tutorials = controllers.documentation
 tutorials.path = 'tutorials'
 
-
+currentVersion = '0072'

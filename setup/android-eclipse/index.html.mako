@@ -58,11 +58,7 @@ Uncompress it in any folder on your hard disk. Later you'll need to tell the ope
 
 **c) Android NDK**: This is the C/C++ compiler, headers and libraries for Android. 
 
-- OS X: [http://dl.google.com/android/ndk/android-ndk-r8-darwin-x86.tar.bz2][12]
-- Linux: [http://dl.google.com/android/ndk/android-ndk-r8-linux-x86.tar.bz2][13]
-- Windows: [http://dl.google.com/android/ndk/android-ndk-r8-windows.zip][14]
-
-Later versions are available at:  
+Latest versions are available at:  
 [http://developer.android.com/sdk/ndk/index.html][3]
 
 There's a bug in the official NDK that makes apps crash on Android 2.1 and lower versions of Android so by now openFrameworks for Android will only work on Android 2.2 and above.
@@ -301,7 +297,13 @@ It's important to keep the package prefix as cc.openframeworks or some things ca
 
 - If it tells you that you're using an obsolete build.xml, delete it and regenerate it using 'android update project -p <path-to-project\>'. The build.xml files in the examples directory should not contain anything especially unique.
 - Are you including addons? They need to be specified in addons.make, and the case of the letters must match exactly (ie, ofxOpenCv works but ofxOpenCV won't work). This error will probably show up as missing header files or symbols.
-- If you're getting a bunch of undeclared reference errors, check which version of the NDK you're using. For 0071 you should be using NDK r8.
+- If you're getting a bunch of undeclared reference errors, check which version of the NDK you're using. For 0071 you should be using NDK r8, for 0072 or GIT version r8b is required.
+- Paths are changed in NDK r8b: you will maybe have errors like missing "arm-linux-androideabi-gcc" or "arm-linux-androideabi-ar". In those cases go to your NDK folder and do
+
+cd toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/
+cp ./arm-linux-androideabi/bin/ar ./bin/arm-linux-androideabi-ar
+cp ./bin/arm-linux-androideabi-gcc-4.6.x-google ./bin/arm-linux-androideabi-gcc
+
 - If you get 'com.android.sdklib.build.ApkCreationException: Debug Certificate expired on <date>', you have to 'rm ~/.android/debug.keystore'. A new certificate will be generated automatically.
 
 
@@ -338,7 +340,4 @@ It's important to keep the package prefix as cc.openframeworks or some things ca
 [9]: http://github.com/openframeworks/openFrameworks
 [10]: http://www.undef.ch/uploads/ofDoc/html/classof_log.html
 [11]: http://www.eclipse.org/downloads/
-[12]: http://dl.google.com/android/ndk/android-ndk-r8-darwin-x86.tar.bz2
-[13]: http://dl.google.com/android/ndk/android-ndk-r8-linux-x86.tar.bz2
-[14]: http://dl.google.com/android/ndk/android-ndk-r8-windows.zip
 [15]: https://github.com/kennethreitz/osx-gcc-installer
