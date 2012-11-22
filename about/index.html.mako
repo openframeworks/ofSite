@@ -46,6 +46,7 @@ openFrameworks is actively developed by [Zach Lieberman](http://thesystemis.com/
 * Hardware leader: [Josh Noble](http://thefactoryfactory.com/) (joshua noble)
 * Internals/app leader: [Philip Whitfield](http://undef.ch/) (underdoeg)
 * iOS leader: [Lukasz Karluk](http://www.julapy.com/blog/) (julapy)
+* Outreach leader: [Caitlin Morris](http://caitlinmorris.net/) (c_tl_n)
 * Sound leader: [Damian Stewart](http://damianstewart.com/) (damian)
 * Tutorial leader(s): [Diederick Huijbers](http://www.roxlu.com/) (roxlu) and [Jeff Crouse](http://www.jeffcrouse.info/) (jefftimesten)
 * Typography leader: [Christopher Baker](http://christopherbaker.net/) (bakercp)
