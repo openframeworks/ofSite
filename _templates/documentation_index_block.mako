@@ -13,7 +13,7 @@
 
 	<!-- CLASSES -->
 
-    % for clazz in block.classes:   
+    % for clazz in sorted(block.classes, key=lambda clazz: clazz['name']):   
     	% if clazz['visible'] and not clazz['advanced']:
     	<div class="documentation_class">
     	    <!-- class link -->
