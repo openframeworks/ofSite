@@ -217,8 +217,6 @@ ofVertices(...)
 
 ofViewport(...)
 
-ofbClearBg()
-
 ###ofTrueTypeFont###
 
 __visible: true__
@@ -1652,8 +1650,6 @@ __visible: true__
 __advanced: false__
 
 __functions__
-exitApp()
-
 ofGetKeyPressed(...)
 
 ofGetMousePressed(...)
@@ -1665,32 +1661,6 @@ ofGetMouseY()
 ofGetPreviousMouseX()
 
 ofGetPreviousMouseY()
-
-ofNotifyDragEvent(...)
-
-ofNotifyDraw()
-
-ofNotifyExit()
-
-ofNotifyKeyPressed(...)
-
-ofNotifyKeyReleased(...)
-
-ofNotifyMouseDragged(...)
-
-ofNotifyMouseMoved(...)
-
-ofNotifyMousePressed(...)
-
-ofNotifyMouseReleased(...)
-
-ofNotifySetup()
-
-ofNotifyUpdate()
-
-ofNotifyWindowEntry(...)
-
-ofNotifyWindowResized(...)
 
 ofSetEscapeQuitsApp(...)
 
