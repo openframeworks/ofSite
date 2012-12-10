@@ -18,7 +18,7 @@ documentation_root = '/home/arturo/Documents/ofSite/documentation/'
 
 missing_functions = []
 
-currentversion = "007"
+currentversion = "0072"
 
 
 def update_moved_functions(filename):
@@ -90,6 +90,7 @@ def serialize_functionsfile(filename):
             for function in thisfile_missing_functions:
                 functionsfile.function_list.remove(function)
                         
+            functionsfile.function_list.sort(key=lambda function: function.name)
             setfunctionsfile(functionsfile)
                         
 
@@ -154,6 +155,8 @@ def serialize_class(filename):
                     #f.write( "$$/code\n\n\n\n" )
     
     #f.close()
+    documentation_class.function_list.sort(key=lambda function: function.name)
+    documentation_class.var_list.sort(key=lambda variable: variable.name)
     setclass(documentation_class)
 
 

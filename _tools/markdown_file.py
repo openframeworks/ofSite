@@ -211,11 +211,15 @@ def getclass(clazz):
                 if state == 'vardescription':
                     documentation_clazz.var_list.append(var)
                 f.close()
-                documentation_clazz.function_list.sort(key= sort_function)
+                documentation_clazz.function_list.sort(key=lambda function: function.name)
+                documentation_clazz.var_list.sort(key=lambda variable: variable.name)
+                #documentation_clazz.function_list.sort(key= sort_function)
                 return documentation_clazz   
 
 
-    documentation_clazz.function_list.sort(key= sort_function)
+    documentation_clazz.function_list.sort(key=lambda function: function.name)
+    documentation_clazz.var_list.sort(key=lambda variable: variable.name)
+    #documentation_clazz.function_list.sort(key= sort_function)
     return documentation_clazz
     
     
@@ -238,7 +242,7 @@ def serialize_function(f,function,member):
     f.write("_advanced: " + str(function.advanced)  + "_\n")
     f.write("-->\n\n");
     f.write("_description: _\n\n")
-    f.write(function.description)
+    f.write(function.description.encode('utf-8'))
     f.write('\n\n\n\n\n\n')
     f.write('<!----------------------------------------------------------------------------->\n\n')
 
@@ -256,7 +260,7 @@ def serialize_var(f,var):
     f.write("_advanced: " + str(var.advanced) + "_\n")
     f.write("-->\n\n");
     f.write("_description: _\n\n")
-    f.write(var.description)  
+    f.write(var.description.encode('utf-8'))  
     f.write("\n\n\n\n\n\n")
     f.write('<!----------------------------------------------------------------------------->\n\n')
     
@@ -272,7 +276,7 @@ def setclass(clazz):
     #f.write('##Example\n\n' + clazz.example + '\n\n\n\n')
     
     #f.write('//----------------------\n\n')
-    f.write('##Description\n\n' + clazz.reference + '\n\n\n\n')
+    f.write('##Description\n\n' + clazz.reference.encode('utf-8') + '\n\n\n\n')
 
     #f.write('//----------------------\n\n')
     f.write('##Methods\n\n\n\n')
@@ -300,5 +304,6 @@ def setfunctionsfile(functionfile):
     
     f.write('<!----------------------------------------------------------------------------->\n\n')
     for function in functionfile.function_list:
-        serialize_function(f,function,False)
+        if function.name.find('OF_DEPRECATED_MSG')==-1:
+            serialize_function(f,function,False)
         
