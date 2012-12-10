@@ -59,7 +59,7 @@ def getfunctionsfiles_list():
                 state = 'begin'
                 for line in f:
                     if state == 'begin' and line.find('#functions') == 0:
-                        functionsfile = file_split[0].replace('_functions','')
+                        functionsfile = file_split[0].replace('_functions','')                        
                         functionsfiles_list.append(functionsfile)
                         f.close()
                         break
@@ -120,7 +120,7 @@ def getclass_list(getTemplated=False):
                             class_name = file_split[0]
                         elif file_split[0][-1]=="_":
                             class_name = file_split[0][:-1]
-                        print class_name
+                        #print class_name
                         class_list.append(class_name)
                         f.close()
                         break
@@ -222,7 +222,7 @@ def getclass(clazz, getTemplated=False):
                 if getTemplated:
                     templatedClazz = getclass(clazz+"_")
                     if not templatedClazz.new:
-                        print "found templated class " + clazz + "_"
+                        #print "found templated class " + clazz + "_"
                         if documentation_clazz.new:
                             documentation_clazz.id = templatedClazz.id
                             documentation_clazz.module = templatedClazz.module
@@ -249,7 +249,7 @@ def getclass(clazz, getTemplated=False):
     if getTemplated:
         templatedClazz = getclass(clazz+"_")
         if not templatedClazz.new:
-            print "found templated class " + clazz + "_"
+            #print "found templated class " + clazz + "_"
             if documentation_clazz.new:
                 documentation_clazz.id = templatedClazz.id
                 documentation_clazz.module = templatedClazz.module
