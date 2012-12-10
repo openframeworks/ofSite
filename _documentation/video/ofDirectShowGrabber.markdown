@@ -7,71 +7,16 @@
 
 
 
+
 ##Methods
 
 
 
-### ofDirectShowGrabber()
+###void clearMemory()
 
 <!--
-_syntax: ofDirectShowGrabber()_
-_name: ofDirectShowGrabber_
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ~ofDirectShowGrabber()
-
-<!--
-_syntax: ~ofDirectShowGrabber()_
-_name: ~ofDirectShowGrabber_
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void listDevices()
-
-<!--
-_syntax: listDevices()_
-_name: listDevices_
+_syntax: clearMemory()_
+_name: clearMemory_
 _returns: void_
 _returns_description: _
 _parameters: _
@@ -87,145 +32,6 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool initGrabber(w, h)
-
-<!--
-_syntax: initGrabber(w, h)_
-_name: initGrabber_
-_returns: bool_
-_returns_description: _
-_parameters: int w, int h_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void update()
-
-<!--
-_syntax: update()_
-_name: update_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool isFrameNew()
-
-<!--
-_syntax: isFrameNew()_
-_name: isFrameNew_
-_returns: bool_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###unsigned char * getPixels()
-
-<!--
-_syntax: getPixels()_
-_name: getPixels_
-_returns: unsigned char *_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofPixelsRef getPixelsRef()
-
-<!--
-_syntax: getPixelsRef()_
-_name: getPixelsRef_
-_returns: ofPixelsRef_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
 
 
 
@@ -261,14 +67,15 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
-###void clearMemory()
+###float getHeight()
 
 <!--
-_syntax: clearMemory()_
-_name: clearMemory_
-_returns: void_
+_syntax: getHeight()_
+_name: getHeight_
+_returns: float_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -289,14 +96,15 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
-###void videoSettings()
+###unsigned char * getPixels()
 
 <!--
-_syntax: videoSettings()_
-_name: videoSettings_
-_returns: void_
+_syntax: getPixels()_
+_name: getPixels_
+_returns: unsigned char *_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -310,6 +118,36 @@ _advanced: False_
 -->
 
 _description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofPixelsRef getPixelsRef()
+
+<!--
+_syntax: getPixelsRef()_
+_name: getPixelsRef_
+_returns: ofPixelsRef_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
 
 
 
@@ -345,14 +183,44 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
-###float getHeight()
+###bool initGrabber(w, h)
 
 <!--
-_syntax: getHeight()_
-_name: getHeight_
-_returns: float_
+_syntax: initGrabber(w, h)_
+_name: initGrabber_
+_returns: bool_
+_returns_description: _
+_parameters: int w, int h_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool isFrameNew()
+
+<!--
+_syntax: isFrameNew()_
+_name: isFrameNew_
+_returns: bool_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -373,16 +241,17 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
-###void setVerbose(bTalkToMe)
+###void listDevices()
 
 <!--
-_syntax: setVerbose(bTalkToMe)_
-_name: setVerbose_
+_syntax: listDevices()_
+_name: listDevices_
 _returns: void_
 _returns_description: _
-_parameters: bool bTalkToMe_
+_parameters: _
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -401,16 +270,17 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
-###void setDeviceID(_deviceID)
+### ofDirectShowGrabber()
 
 <!--
-_syntax: setDeviceID(_deviceID)_
-_name: setDeviceID_
-_returns: void_
+_syntax: ofDirectShowGrabber()_
+_name: ofDirectShowGrabber_
+_returns: _
 _returns_description: _
-_parameters: int _deviceID_
+_parameters: _
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -422,6 +292,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -457,23 +328,24 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
-##Variables
-
-
-
-###bool bChooseDevice
+###void setDeviceID(_deviceID)
 
 <!--
-_name: bChooseDevice_
-_type: bool_
-_access: protected_
+_syntax: setDeviceID(_deviceID)_
+_name: setDeviceID_
+_returns: void_
+_returns_description: _
+_parameters: int _deviceID_
+_access: public_
 _version_started: 007_
 _version_deprecated: _
 _summary: _
+_constant: False_
+_static: no_
 _visible: True_
-_constant: True_
 _advanced: False_
 -->
 
@@ -485,12 +357,133 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
-###int deviceID
+###void setVerbose(bTalkToMe)
 
 <!--
-_name: deviceID_
+_syntax: setVerbose(bTalkToMe)_
+_name: setVerbose_
+_returns: void_
+_returns_description: _
+_parameters: bool bTalkToMe_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void update()
+
+<!--
+_syntax: update()_
+_name: update_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void videoSettings()
+
+<!--
+_syntax: videoSettings()_
+_name: videoSettings_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ~ofDirectShowGrabber()
+
+<!--
+_syntax: ~ofDirectShowGrabber()_
+_name: ~ofDirectShowGrabber_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+##Variables
+
+
+
+###int attemptFramerate
+
+<!--
+_name: attemptFramerate_
 _type: int_
 _access: protected_
 _version_started: 007_
@@ -509,12 +502,13 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
-###bool bVerbose
+###bool bChooseDevice
 
 <!--
-_name: bVerbose_
+_name: bChooseDevice_
 _type: bool_
 _access: protected_
 _version_started: 007_
@@ -526,6 +520,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -557,53 +552,6 @@ _description: _
 
 
 
-<!----------------------------------------------------------------------------->
-
-###ofPixels pixels
-
-<!--
-_name: pixels_
-_type: ofPixels_
-_access: protected_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int attemptFramerate
-
-<!--
-_name: attemptFramerate_
-_type: int_
-_access: protected_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
 
 <!----------------------------------------------------------------------------->
 
@@ -629,12 +577,38 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
-###int width
+###bool bVerbose
 
 <!--
-_name: width_
+_name: bVerbose_
+_type: bool_
+_access: protected_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int deviceID
+
+<!--
+_name: deviceID_
 _type: int_
 _access: protected_
 _version_started: 007_
@@ -646,6 +620,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -670,6 +645,57 @@ _advanced: False_
 -->
 
 _description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofPixels pixels
+
+<!--
+_name: pixels_
+_type: ofPixels_
+_access: protected_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int width
+
+<!--
+_name: width_
+_type: int_
+_access: protected_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
 
 
 

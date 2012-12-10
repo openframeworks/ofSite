@@ -7,37 +7,10 @@
 
 
 
+
 ##Methods
 
 
-
-### ~ofBaseHasPixels_()
-
-<!--
-_syntax: ~ofBaseHasPixels_()_
-_name: ~ofBaseHasPixels_
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
 
 ###T * getPixels()
 
@@ -58,6 +31,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -93,33 +67,6 @@ _description: _
 
 
 
-<!----------------------------------------------------------------------------->
-
-### ~ofBaseHasPixels_()
-
-<!--
-_syntax: ~ofBaseHasPixels_()_
-_name: ~ofBaseHasPixels_
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
 
 <!----------------------------------------------------------------------------->
 
@@ -143,33 +90,6 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ~ofBaseHasPixels_()
-
-<!--
-_syntax: ~ofBaseHasPixels_()_
-_name: ~ofBaseHasPixels_
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
 
 
 
@@ -205,33 +125,6 @@ _description: _
 
 
 
-<!----------------------------------------------------------------------------->
-
-### ~ofBaseHasPixels_()
-
-<!--
-_syntax: ~ofBaseHasPixels_()_
-_name: ~ofBaseHasPixels_
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
 
 <!----------------------------------------------------------------------------->
 
@@ -255,33 +148,6 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ~ofBaseHasPixels_()
-
-<!--
-_syntax: ~ofBaseHasPixels_()_
-_name: ~ofBaseHasPixels_
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
 
 
 
@@ -317,6 +183,36 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+### ~ofBaseHasPixels_()
+
+<!--
+_syntax: ~ofBaseHasPixels_()_
+_name: ~ofBaseHasPixels_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 ### ~ofBaseHasPixels_()
@@ -345,6 +241,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ### ~ofBaseHasPixels_()
@@ -366,6 +263,152 @@ _advanced: False_
 -->
 
 _description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ~ofBaseHasPixels_()
+
+<!--
+_syntax: ~ofBaseHasPixels_()_
+_name: ~ofBaseHasPixels_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ~ofBaseHasPixels_()
+
+<!--
+_syntax: ~ofBaseHasPixels_()_
+_name: ~ofBaseHasPixels_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ~ofBaseHasPixels_()
+
+<!--
+_syntax: ~ofBaseHasPixels_()_
+_name: ~ofBaseHasPixels_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ~ofBaseHasPixels_()
+
+<!--
+_syntax: ~ofBaseHasPixels_()_
+_name: ~ofBaseHasPixels_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ~ofBaseHasPixels_()
+
+<!--
+_syntax: ~ofBaseHasPixels_()_
+_name: ~ofBaseHasPixels_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
 
 
 
@@ -384,7 +427,7 @@ _returns: _
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0071_
 _version_deprecated: _
 _summary: _
 _constant: False_

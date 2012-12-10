@@ -8,14 +8,150 @@
 
 <!----------------------------------------------------------------------------->
 
-###int ofGetGlInternalFormat(&pix)
+###void ofDisableArbTex()
 
 <!--
-_syntax: ofGetGlInternalFormat(&pix)_
-_name: ofGetGlInternalFormat_
-_returns: int_
+_syntax: ofDisableArbTex()_
+_name: ofDisableArbTex_
+_returns: void_
 _returns_description: _
-_parameters: const ofPixels &pix_
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDisableNormalizedTexCoords()
+
+<!--
+_syntax: ofDisableNormalizedTexCoords()_
+_name: ofDisableNormalizedTexCoords_
+_returns: void_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDisableTextureEdgeHack()
+
+<!--
+_syntax: ofDisableTextureEdgeHack()_
+_name: ofDisableTextureEdgeHack_
+_returns: void_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofEnableArbTex()
+
+<!--
+_syntax: ofEnableArbTex()_
+_name: ofEnableArbTex_
+_returns: void_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+ofEnableArbText enables the use of ARB textures. ARB textures enable the creation of non power of 2 sized textures.
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofEnableNormalizedTexCoords()
+
+<!--
+_syntax: ofEnableNormalizedTexCoords()_
+_name: ofEnableNormalizedTexCoords_
+_returns: void_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofEnableTextureEdgeHack()
+
+<!--
+_syntax: ofEnableTextureEdgeHack()_
+_name: ofEnableTextureEdgeHack_
+_returns: void_
+_returns_description: _
+_parameters: _
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -43,6 +179,33 @@ _name: ofGetGlFormatAndType_
 _returns: void_
 _returns_description: _
 _parameters: int glInternalFormat, int &glFormat, int &glType_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int ofGetGlInternalFormat(&pix)
+
+<!--
+_syntax: ofGetGlInternalFormat(&pix)_
+_name: ofGetGlInternalFormat_
+_returns: int_
+_returns_description: _
+_parameters: const ofPixels &pix_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -116,12 +279,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofEnableArbTex()
+###bool ofGetUsingCustomMinMagFilters()
 
 <!--
-_syntax: ofEnableArbTex()_
-_name: ofEnableArbTex_
-_returns: void_
+_syntax: ofGetUsingCustomMinMagFilters()_
+_name: ofGetUsingCustomMinMagFilters_
+_returns: bool_
 _returns_description: _
 _parameters: _
 _version_started: _
@@ -135,7 +298,6 @@ _advanced: False_
 
 _description: _
 
-ofEnableArbText enables the use of ARB textures. ARB textures enable the creation of non power of 2 sized textures.
 
 
 
@@ -144,12 +306,12 @@ ofEnableArbText enables the use of ARB textures. ARB textures enable the creatio
 
 <!----------------------------------------------------------------------------->
 
-###void ofDisableArbTex()
+###bool ofGetUsingCustomTextureWrap()
 
 <!--
-_syntax: ofDisableArbTex()_
-_name: ofDisableArbTex_
-_returns: void_
+_syntax: ofGetUsingCustomTextureWrap()_
+_name: ofGetUsingCustomTextureWrap_
+_returns: bool_
 _returns_description: _
 _parameters: _
 _version_started: _
@@ -198,93 +360,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofEnableNormalizedTexCoords()
+###void ofRestoreMinMagFilters()
 
 <!--
-_syntax: ofEnableNormalizedTexCoords()_
-_name: ofEnableNormalizedTexCoords_
+_syntax: ofRestoreMinMagFilters()_
+_name: ofRestoreMinMagFilters_
 _returns: void_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofDisableNormalizedTexCoords()
-
-<!--
-_syntax: ofDisableNormalizedTexCoords()_
-_name: ofDisableNormalizedTexCoords_
-_returns: void_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofSetTextureWrap(wrapS = GL_CLAMP_TO_EDGE, wrapT = GL_CLAMP_TO_EDGE)
-
-<!--
-_syntax: ofSetTextureWrap(wrapS = GL_CLAMP_TO_EDGE, wrapT = GL_CLAMP_TO_EDGE)_
-_name: ofSetTextureWrap_
-_returns: void_
-_returns_description: _
-_parameters: GLfloat wrapS=GL_CLAMP_TO_EDGE, GLfloat wrapT=GL_CLAMP_TO_EDGE_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool ofGetUsingCustomTextureWrap()
-
-<!--
-_syntax: ofGetUsingCustomTextureWrap()_
-_name: ofGetUsingCustomTextureWrap_
-_returns: bool_
 _returns_description: _
 _parameters: _
 _version_started: _
@@ -341,87 +422,6 @@ _name: ofSetMinMagFilters_
 _returns: void_
 _returns_description: _
 _parameters: GLfloat minFilter=GL_LINEAR, GLfloat maxFilter=GL_LINEAR_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool ofGetUsingCustomMinMagFilters()
-
-<!--
-_syntax: ofGetUsingCustomMinMagFilters()_
-_name: ofGetUsingCustomMinMagFilters_
-_returns: bool_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofRestoreMinMagFilters()
-
-<!--
-_syntax: ofRestoreMinMagFilters()_
-_name: ofRestoreMinMagFilters_
-_returns: void_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofEnableTextureEdgeHack()
-
-<!--
-_syntax: ofEnableTextureEdgeHack()_
-_name: ofEnableTextureEdgeHack_
-_returns: void_
-_returns_description: _
-_parameters: _
 _version_started: _
 _version_deprecated: _
 _summary: _

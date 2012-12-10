@@ -14,65 +14,11 @@ Controls:
 
 
 
+
+
 ##Methods
 
 
-
-### ofEasyCam()
-
-<!--
-_syntax: ofEasyCam()_
-_name: ofEasyCam_
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ~ofEasyCam()
-
-<!--
-_syntax: ~ofEasyCam()_
-_name: ~ofEasyCam_
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
 
 ###void begin(viewport = ofGetCurrentViewport())
 
@@ -94,6 +40,7 @@ _advanced: False_
 
 _description: _
 
+
 Begin using the camera, e.g.:
 
 ```c++
@@ -104,367 +51,6 @@ ofDrawGrid();
 
 myCamera.end();
 ```
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void reset()
-
-<!--
-_syntax: reset()_
-_name: reset_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setTarget(&target)
-
-<!--
-_syntax: setTarget(&target)_
-_name: setTarget_
-_returns: void_
-_returns_description: _
-_parameters: const ofVec3f &target_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setTarget(&target)
-
-<!--
-_syntax: setTarget(&target)_
-_name: setTarget_
-_returns: void_
-_returns_description: _
-_parameters: ofNode &target_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofNode getTarget()
-
-<!--
-_syntax: getTarget()_
-_name: getTarget_
-_returns: ofNode_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setDistance(distance)
-
-<!--
-_syntax: setDistance(distance)_
-_name: setDistance_
-_returns: void_
-_returns_description: _
-_parameters: float distance_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float getDistance()
-
-<!--
-_syntax: getDistance()_
-_name: getDistance_
-_returns: float_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setDrag(drag)
-
-<!--
-_syntax: setDrag(drag)_
-_name: setDrag_
-_returns: void_
-_returns_description: _
-_parameters: float drag_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float getDrag()
-
-<!--
-_syntax: getDrag()_
-_name: getDrag_
-_returns: float_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void mouseDragged(&mouse)
-
-<!--
-_syntax: mouseDragged(&mouse)_
-_name: mouseDragged_
-_returns: void_
-_returns_description: _
-_parameters: ofMouseEventArgs &mouse_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void mouseMoved(&mouse)
-
-<!--
-_syntax: mouseMoved(&mouse)_
-_name: mouseMoved_
-_returns: void_
-_returns_description: _
-_parameters: ofMouseEventArgs &mouse_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void mousePressed(&mouse)
-
-<!--
-_syntax: mousePressed(&mouse)_
-_name: mousePressed_
-_returns: void_
-_returns_description: _
-_parameters: ofMouseEventArgs &mouse_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void mouseReleased(&mouse)
-
-<!--
-_syntax: mouseReleased(&mouse)_
-_name: mouseReleased_
-_returns: void_
-_returns_description: _
-_parameters: ofMouseEventArgs &mouse_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void enableMouseInput()
-
-<!--
-_syntax: enableMouseInput()_
-_name: enableMouseInput_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
 
 
 
@@ -500,6 +86,94 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+###void enableMouseInput()
+
+<!--
+_syntax: enableMouseInput()_
+_name: enableMouseInput_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float getDistance()
+
+<!--
+_syntax: getDistance()_
+_name: getDistance_
+_returns: float_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float getDrag()
+
+<!--
+_syntax: getDrag()_
+_name: getDrag_
+_returns: float_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 ###bool getMouseInputEnabled()
@@ -521,6 +195,239 @@ _advanced: False_
 -->
 
 _description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofNode getTarget()
+
+<!--
+_syntax: getTarget()_
+_name: getTarget_
+_returns: ofNode_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void mouseDragged(&mouse)
+
+<!--
+_syntax: mouseDragged(&mouse)_
+_name: mouseDragged_
+_returns: void_
+_returns_description: _
+_parameters: ofMouseEventArgs &mouse_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void mouseMoved(&mouse)
+
+<!--
+_syntax: mouseMoved(&mouse)_
+_name: mouseMoved_
+_returns: void_
+_returns_description: _
+_parameters: ofMouseEventArgs &mouse_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void mousePressed(&mouse)
+
+<!--
+_syntax: mousePressed(&mouse)_
+_name: mousePressed_
+_returns: void_
+_returns_description: _
+_parameters: ofMouseEventArgs &mouse_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void mouseReleased(&mouse)
+
+<!--
+_syntax: mouseReleased(&mouse)_
+_name: mouseReleased_
+_returns: void_
+_returns_description: _
+_parameters: ofMouseEventArgs &mouse_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofEasyCam()
+
+<!--
+_syntax: ofEasyCam()_
+_name: ofEasyCam_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void reset()
+
+<!--
+_syntax: reset()_
+_name: reset_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setDistance(distance)
+
+<!--
+_syntax: setDistance(distance)_
+_name: setDistance_
+_returns: void_
+_returns_description: _
+_parameters: float distance_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
 
 
 
@@ -556,17 +463,134 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+###void setDrag(drag)
+
+<!--
+_syntax: setDrag(drag)_
+_name: setDrag_
+_returns: void_
+_returns_description: _
+_parameters: float drag_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setTarget(&target)
+
+<!--
+_syntax: setTarget(&target)_
+_name: setTarget_
+_returns: void_
+_returns_description: _
+_parameters: const ofVec3f &target_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setTarget(&target)
+
+<!--
+_syntax: setTarget(&target)_
+_name: setTarget_
+_returns: void_
+_returns_description: _
+_parameters: ofNode &target_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ~ofEasyCam()
+
+<!--
+_syntax: ~ofEasyCam()_
+_name: ~ofEasyCam_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 ##Variables
 
 
 
-###ofNode target
+###bool bDistanceSet
 
 <!--
-_name: target_
-_type: ofNode_
+_name: bDistanceSet_
+_type: bool_
 _access: private_
 _version_started: 007_
 _version_deprecated: _
@@ -578,53 +602,6 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float drag
-
-<!--
-_name: drag_
-_type: float_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float zoomSpeed
-
-<!--
-_name: zoomSpeed_
-_type: float_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
 
 
 
@@ -656,13 +633,14 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
-###ofVec3f mousePosViewPrev
+###float distanceScaleVelocity
 
 <!--
-_name: mousePosViewPrev_
-_type: ofVec3f_
+_name: distanceScaleVelocity_
+_type: float_
 _access: private_
 _version_started: 007_
 _version_deprecated: _
@@ -680,13 +658,14 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
-###ofVec3f mousePosScreenPrev
+###float drag
 
 <!--
-_name: mousePosScreenPrev_
-_type: ofVec3f_
+_name: drag_
+_type: float_
 _access: private_
 _version_started: 007_
 _version_deprecated: _
@@ -698,101 +677,6 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int lastFrame
-
-<!--
-_name: lastFrame_
-_type: int_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###unsigned long lastTap
-
-<!--
-_name: lastTap_
-_type: unsigned long_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool mousePressedPrev
-
-<!--
-_name: mousePressedPrev_
-_type: bool_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool bDistanceSet
-
-<!--
-_name: bDistanceSet_
-_type: bool_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
 
 
 
@@ -824,13 +708,14 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
-###float distanceScaleVelocity
+###int lastFrame
 
 <!--
-_name: distanceScaleVelocity_
-_type: float_
+_name: lastFrame_
+_type: int_
 _access: private_
 _version_started: 007_
 _version_deprecated: _
@@ -841,6 +726,107 @@ _advanced: False_
 -->
 
 _description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###unsigned long lastTap
+
+<!--
+_name: lastTap_
+_type: unsigned long_
+_access: private_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofVec3f mousePosScreenPrev
+
+<!--
+_name: mousePosScreenPrev_
+_type: ofVec3f_
+_access: private_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofVec3f mousePosViewPrev
+
+<!--
+_name: mousePosViewPrev_
+_type: ofVec3f_
+_access: private_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool mousePressedPrev
+
+<!--
+_name: mousePressedPrev_
+_type: bool_
+_access: private_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
 
 
 
@@ -872,6 +858,32 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+###ofNode target
+
+<!--
+_name: target_
+_type: ofNode_
+_access: private_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 ###ofVec3f translation
@@ -889,6 +901,32 @@ _advanced: False_
 -->
 
 _description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float zoomSpeed
+
+<!--
+_name: zoomSpeed_
+_type: float_
+_access: private_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
 
 
 

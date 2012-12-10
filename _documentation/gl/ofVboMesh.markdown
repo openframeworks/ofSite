@@ -3,7 +3,9 @@
 
 ##Description
 
+
 Extends ofMesh
+
 
 
 
@@ -32,61 +34,6 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofVboMesh(mom)
-
-<!--
-_syntax: ofVboMesh(mom)_
-_name: ofVboMesh_
-_returns: _
-_returns_description: _
-_parameters: const ofMesh & mom_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setUsage(usage)
-
-<!--
-_syntax: setUsage(usage)_
-_name: setUsage_
-_returns: void_
-_returns_description: _
-_parameters: int usage_
-_access: public_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
 
 
 
@@ -122,6 +69,36 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+### ofVboMesh(mom)
+
+<!--
+_syntax: ofVboMesh(mom)_
+_name: ofVboMesh_
+_returns: _
+_returns_description: _
+_parameters: const ofMesh & mom_
+_access: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 ### ofVboMesh()
@@ -143,6 +120,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -178,23 +156,24 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
-##Variables
-
-
-
-###ofVbo vbo
+###void setUsage(usage)
 
 <!--
-_name: vbo_
-_type: ofVbo_
-_access: private_
-_version_started: 007_
+_syntax: setUsage(usage)_
+_name: setUsage_
+_returns: void_
+_returns_description: _
+_parameters: int usage_
+_access: public_
+_version_started: _
 _version_deprecated: _
 _summary: _
+_constant: False_
+_static: no_
 _visible: True_
-_constant: True_
 _advanced: False_
 -->
 
@@ -206,7 +185,12 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
+
+##Variables
+
+
 
 ###int usage
 
@@ -230,12 +214,38 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
-###int vboNumVerts
+###ofVbo vbo
 
 <!--
-_name: vboNumVerts_
+_name: vbo_
+_type: ofVbo_
+_access: private_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int vboNumColors
+
+<!--
+_name: vboNumColors_
 _type: int_
 _access: private_
 _version_started: 007_
@@ -247,6 +257,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -278,6 +289,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int vboNumNormals
@@ -295,6 +307,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -326,12 +339,13 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
-###int vboNumColors
+###int vboNumVerts
 
 <!--
-_name: vboNumColors_
+_name: vboNumVerts_
 _type: int_
 _access: private_
 _version_started: 007_
@@ -343,6 +357,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 

@@ -62,68 +62,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofHttpResponse ofSaveURLTo(url, path)
+###void ofRegisterURLNotification(*obj)
 
 <!--
-_syntax: ofSaveURLTo(url, path)_
-_name: ofSaveURLTo_
-_returns: ofHttpResponse_
-_returns_description: _
-_parameters: string url, string path_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int ofSaveURLAsync(url, path)
-
-<!--
-_syntax: ofSaveURLAsync(url, path)_
-_name: ofSaveURLAsync_
-_returns: int_
-_returns_description: _
-_parameters: string url, string path_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofRemoveURLRequest(id)
-
-<!--
-_syntax: ofRemoveURLRequest(id)_
-_name: ofRemoveURLRequest_
+_syntax: ofRegisterURLNotification(*obj)_
+_name: ofRegisterURLNotification_
 _returns: void_
 _returns_description: _
-_parameters: int id_
+_parameters: T *obj_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -170,14 +116,68 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofRegisterURLNotification(*obj)
+###void ofRemoveURLRequest(id)
 
 <!--
-_syntax: ofRegisterURLNotification(*obj)_
-_name: ofRegisterURLNotification_
+_syntax: ofRemoveURLRequest(id)_
+_name: ofRemoveURLRequest_
 _returns: void_
 _returns_description: _
-_parameters: T *obj_
+_parameters: int id_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int ofSaveURLAsync(url, path)
+
+<!--
+_syntax: ofSaveURLAsync(url, path)_
+_name: ofSaveURLAsync_
+_returns: int_
+_returns_description: _
+_parameters: string url, string path_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofHttpResponse ofSaveURLTo(url, path)
+
+<!--
+_syntax: ofSaveURLTo(url, path)_
+_name: ofSaveURLTo_
+_returns: ofHttpResponse_
+_returns_description: _
+_parameters: string url, string path_
 _version_started: _
 _version_deprecated: _
 _summary: _

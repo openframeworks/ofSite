@@ -8,65 +8,11 @@
 
 <!----------------------------------------------------------------------------->
 
-###void ofEnableLighting()
-
-<!--
-_syntax: ofEnableLighting()_
-_name: ofEnableLighting_
-_returns: void_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void ofDisableLighting()
 
 <!--
 _syntax: ofDisableLighting()_
 _name: ofDisableLighting_
-_returns: void_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofEnableSeparateSpecularLight()
-
-<!--
-_syntax: ofEnableSeparateSpecularLight()_
-_name: ofEnableSeparateSpecularLight_
 _returns: void_
 _returns_description: _
 _parameters: _
@@ -116,6 +62,60 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void ofEnableLighting()
+
+<!--
+_syntax: ofEnableLighting()_
+_name: ofEnableLighting_
+_returns: void_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofEnableSeparateSpecularLight()
+
+<!--
+_syntax: ofEnableSeparateSpecularLight()_
+_name: ofEnableSeparateSpecularLight_
+_returns: void_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###bool ofGetLightingEnabled()
 
 <!--
@@ -143,14 +143,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofSetSmoothLighting(b)
+###void ofSetGlobalAmbientColor(&c)
 
 <!--
-_syntax: ofSetSmoothLighting(b)_
-_name: ofSetSmoothLighting_
+_syntax: ofSetGlobalAmbientColor(&c)_
+_name: ofSetGlobalAmbientColor_
 _returns: void_
 _returns_description: _
-_parameters: bool b_
+_parameters: const ofColor &c_
 _version_started: _
 _version_deprecated: _
 _summary: _

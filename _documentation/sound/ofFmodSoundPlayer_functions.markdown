@@ -8,14 +8,14 @@
 
 <!----------------------------------------------------------------------------->
 
-###void ofFmodSoundStopAll()
+###float * ofFmodSoundGetSpectrum(nBands)
 
 <!--
-_syntax: ofFmodSoundStopAll()_
-_name: ofFmodSoundStopAll_
-_returns: void_
+_syntax: ofFmodSoundGetSpectrum(nBands)_
+_name: ofFmodSoundGetSpectrum_
+_returns: float *_
 _returns_description: _
-_parameters: _
+_parameters: int nBands_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -62,11 +62,11 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofFmodSoundUpdate()
+###void ofFmodSoundStopAll()
 
 <!--
-_syntax: ofFmodSoundUpdate()_
-_name: ofFmodSoundUpdate_
+_syntax: ofFmodSoundStopAll()_
+_name: ofFmodSoundStopAll_
 _returns: void_
 _returns_description: _
 _parameters: _
