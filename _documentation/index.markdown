@@ -1,4 +1,6 @@
 //----------------------
+
+
 ##graphics##
 
 
@@ -31,6 +33,8 @@ __visible: true__
 __advanced: false__
 
 __functions__
+
+
 
 
 ###ofSubPath###
@@ -213,6 +217,7 @@ ofVertices(...)
 
 ofViewport(...)
 
+ofbClearBg()
 
 ###ofTrueTypeFont###
 
@@ -273,9 +278,9 @@ __functions__
 
 ###ofImage_###
 
-__visible: true__
+__visible: false__
 
-__advanced: true__
+__advanced: false__
 
 __functions__
 
@@ -287,17 +292,6 @@ __functions__
 __visible: true__
 
 __advanced: true__
-
-__functions__
-
-
-
-
-###ofPixels_###
-
-__visible: true__
-
-__advanced: false__
 
 __functions__
 
@@ -332,9 +326,29 @@ ofGetResampledSpacing(...)
 
 ofGetSmoothed(...)
 
+###ofPixels###
+
+__visible: true__
+
+__advanced: false__
+
+__functions__
+
+
+
+
+###ofPixels_###
+
+__visible: false__
+
+__advanced: false__
+
+__functions__
+
+
+
+
 //----------------------
-
-
 
 
 
@@ -389,6 +403,8 @@ __functions__
 
 
 //----------------------
+
+
 
 
 
@@ -527,7 +543,10 @@ ofSetSmoothLighting(...)
 
 
 
+
+
 ___column___
+
 
 
 
@@ -667,17 +686,7 @@ __visible: true__
 __advanced: false__
 
 __functions__
-operator*(...)
 
-operator+(...)
-
-operator-(...)
-
-operator/(...)
-
-operator<<(...)
-
-operator>>(...)
 
 ###ofNoise###
 
@@ -876,7 +885,10 @@ __functions__
 
 
 
+
 //----------------------
+
+
 
 
 
@@ -1016,6 +1028,9 @@ __visible: true__
 __advanced: false__
 
 __functions__
+ofBufferFromFile(...)
+
+ofBufferToFile(...)
 
 ###ofFilePath###
 
@@ -1233,8 +1248,9 @@ __functions__
 
 
 
-
 //----------------------
+
+
 
 
 
@@ -1531,6 +1547,17 @@ __advanced: false__
 __functions__
 dynamic_pointer_cast(...)
 
+###ofColor_###
+
+__visible: false__
+
+__advanced: false__
+
+__functions__
+
+
+
+
 //----------------------
 
 
@@ -1625,6 +1652,7 @@ __visible: true__
 __advanced: false__
 
 __functions__
+exitApp()
 
 ofGetKeyPressed(...)
 
@@ -1937,7 +1965,13 @@ __advanced: true__
 __functions__
 
 
+
+
 //----------------------
+
+
+
+
 
 
 ##arduino##
@@ -1961,7 +1995,6 @@ __visible: true__
 __advanced: false__
 
 __functions__
-
 
 
 
