@@ -165,6 +165,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool bAllocated()
@@ -624,6 +625,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void drawSubsection(x, y, z, w, h, sx, sy)
@@ -645,6 +647,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -680,6 +683,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void drawSubsection(x, y, z, w, h, sx, sy, sw, sh)
@@ -701,6 +705,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -1920,6 +1925,34 @@ _description: _
 
 
 Sets how the texture wraps around the edges of the vertices that the texture is being drawn to.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setUseExternalTextureID(externTexID)
+
+<!--
+_syntax: setUseExternalTextureID(externTexID)_
+_name: setUseExternalTextureID_
+_returns: void_
+_returns_description: _
+_parameters: GLuint externTexID_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 

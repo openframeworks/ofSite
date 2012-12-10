@@ -230,6 +230,258 @@ This erases your VBO data from your graphics card, but not the VBO itself, so yo
 
 <!----------------------------------------------------------------------------->
 
+###void clearColors()
+
+<!--
+_syntax: clearColors()_
+_name: clearColors_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void clearIndices()
+
+<!--
+_syntax: clearIndices()_
+_name: clearIndices_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void clearNormals()
+
+<!--
+_syntax: clearNormals()_
+_name: clearNormals_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void clearTexCoords()
+
+<!--
+_syntax: clearTexCoords()_
+_name: clearTexCoords_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void clearVertices()
+
+<!--
+_syntax: clearVertices()_
+_name: clearVertices_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void disableColors()
+
+<!--
+_syntax: disableColors()_
+_name: disableColors_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void disableIndices()
+
+<!--
+_syntax: disableIndices()_
+_name: disableIndices_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void disableNormals()
+
+<!--
+_syntax: disableNormals()_
+_name: disableNormals_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void disableTexCoords()
+
+<!--
+_syntax: disableTexCoords()_
+_name: disableTexCoords_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void draw(drawMode, first, total)
 
 <!--
@@ -295,6 +547,118 @@ Specifies what kind of primitives to render. Symbolic constants GL_POINTS, GL_LI
 vbo.drawElements( GL_TRIANGLES, 60);
 ~~~~
 amt specifies the number of indices to be rendered. This last part is pretty important: if you have more indices than vertices you'll want to make sure that you pass the number of indices, not the number of vertices.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void enableColors()
+
+<!--
+_syntax: enableColors()_
+_name: enableColors_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void enableIndices()
+
+<!--
+_syntax: enableIndices()_
+_name: enableIndices_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void enableNormals()
+
+<!--
+_syntax: enableNormals()_
+_name: enableNormals_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void enableTexCoords()
+
+<!--
+_syntax: enableTexCoords()_
+_name: enableTexCoords_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 

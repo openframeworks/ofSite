@@ -212,6 +212,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void initializeFmod()
@@ -269,14 +270,15 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
-###void loadSound(fileName, stream = false)
+###bool loadSound(fileName, stream = false)
 
 <!--
 _syntax: loadSound(fileName, stream = false)_
 _name: loadSound_
-_returns: void_
+_returns: bool_
 _returns_description: _
 _parameters: string fileName, bool stream=false_
 _access: public_

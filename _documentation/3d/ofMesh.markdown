@@ -1143,6 +1143,35 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+###void disableIndices()
+
+<!--
+_syntax: disableIndices()_
+_name: disableIndices_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 ###void disableNormals()
@@ -1171,6 +1200,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void disableTextures()
@@ -1192,6 +1222,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -1380,6 +1411,35 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+###void enableIndices()
+
+<!--
+_syntax: enableIndices()_
+_name: enableIndices_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 ###void enableNormals()
@@ -1408,6 +1468,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void enableTextures()
@@ -1429,6 +1490,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -1480,7 +1542,7 @@ _version_started: _
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -1489,6 +1551,34 @@ _description: _
 
 
 Get the color at the index in the colors vector.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofFloatColor getColor(i)
+
+<!--
+_syntax: getColor(i)_
+_name: getColor_
+_returns: ofFloatColor_
+_returns_description: _
+_parameters: ofIndexType i_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -1605,7 +1695,7 @@ _version_started: _
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -1614,6 +1704,34 @@ _description: _
 
 
 Get the index from the index vector. Each index represents the index of the vertex in the vertices vector. This determines the way that the vertices are connected into the polgoynon type set in the primitiveMode.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofIndexType getIndex(i)
+
+<!--
+_syntax: getIndex(i)_
+_name: getIndex_
+_returns: ofIndexType_
+_returns_description: _
+_parameters: ofIndexType i_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -1730,7 +1848,7 @@ _version_started: _
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -1739,6 +1857,34 @@ _description: _
 
 
 Get the normal at the index in the normals vector.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofVec3f getNormal(i)
+
+<!--
+_syntax: getNormal(i)_
+_name: getNormal_
+_returns: ofVec3f_
+_returns_description: _
+_parameters: ofIndexType i_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -1979,7 +2125,7 @@ _version_started: _
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -1988,6 +2134,34 @@ _description: _
 
 
 Get the Vec2f representing the texture coordinate. Because OF uses ARB textures these are in pixels rather than 0-1 normalized coordinates.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofVec2f getTexCoord(i)
+
+<!--
+_syntax: getTexCoord(i)_
+_name: getTexCoord_
+_returns: ofVec2f_
+_returns_description: _
+_parameters: ofIndexType i_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -2073,7 +2247,7 @@ _version_started: _
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -2082,6 +2256,34 @@ _description: _
 
 
 Gets the vertex at the index.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofVec3f getVertex(i)
+
+<!--
+_syntax: getVertex(i)_
+_name: getVertex_
+_returns: ofVec3f_
+_returns_description: _
+_parameters: ofIndexType i_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -2490,6 +2692,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ### ofMesh()
@@ -2596,7 +2799,7 @@ _version_started: _
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -2605,6 +2808,34 @@ _description: _
 
 
 Remove a color at the index in the colors vector.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void removeColor(index)
+
+<!--
+_syntax: removeColor(index)_
+_name: removeColor_
+_returns: void_
+_returns_description: _
+_parameters: ofIndexType index_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -2627,7 +2858,7 @@ _version_started: _
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -2636,6 +2867,34 @@ _description: _
 
 
 Removes an index.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void removeIndex(index)
+
+<!--
+_syntax: removeIndex(index)_
+_name: removeIndex_
+_returns: void_
+_returns_description: _
+_parameters: ofIndexType index_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -2658,7 +2917,7 @@ _version_started: _
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -2667,6 +2926,34 @@ _description: _
 
 
 Remove a normal.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void removeNormal(index)
+
+<!--
+_syntax: removeNormal(index)_
+_name: removeNormal_
+_returns: void_
+_returns_description: _
+_parameters: ofIndexType index_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -2689,7 +2976,7 @@ _version_started: _
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -2698,6 +2985,34 @@ _description: _
 
 
 Remove a Vec2f representing the texture coordinate.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void removeTexCoord(index)
+
+<!--
+_syntax: removeTexCoord(index)_
+_name: removeTexCoord_
+_returns: void_
+_returns_description: _
+_parameters: ofIndexType index_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -2720,7 +3035,7 @@ _version_started: _
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -2729,6 +3044,34 @@ _description: _
 
 
 Removes the vertex at the index in the vector.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void removeVertex(index)
+
+<!--
+_syntax: removeVertex(index)_
+_name: removeVertex_
+_returns: void_
+_returns_description: _
+_parameters: ofIndexType index_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -2757,6 +3100,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -2810,13 +3154,41 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setColor(index, &c)
+
+<!--
+_syntax: setColor(index, &c)_
+_name: setColor_
+_returns: void_
+_returns_description: _
+_parameters: ofIndexType index, const ofFloatColor &c_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -2839,7 +3211,7 @@ _version_started: _
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -2848,6 +3220,34 @@ _description: _
 
 
 This sets the index at i.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setIndex(index, val)
+
+<!--
+_syntax: setIndex(index, val)_
+_name: setIndex_
+_returns: void_
+_returns_description: _
+_parameters: ofIndexType index, ofIndexType val_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -2963,13 +3363,41 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setNormal(index, &n)
+
+<!--
+_syntax: setNormal(index, &n)_
+_name: setNormal_
+_returns: void_
+_returns_description: _
+_parameters: ofIndexType index, const ofVec3f &n_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -3023,13 +3451,41 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setTexCoord(index, &t)
+
+<!--
+_syntax: setTexCoord(index, &t)_
+_name: setTexCoord_
+_returns: void_
+_returns_description: _
+_parameters: ofIndexType index, const ofVec2f &t_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -3083,13 +3539,41 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setVertex(index, &v)
+
+<!--
+_syntax: setVertex(index, &v)_
+_name: setVertex_
+_returns: void_
+_returns_description: _
+_parameters: ofIndexType index, const ofVec3f &v_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -3185,6 +3669,35 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+###bool usingIndices()
+
+<!--
+_syntax: usingIndices()_
+_name: usingIndices_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 ###bool usingNormals()
@@ -3213,6 +3726,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool usingTextures()
@@ -3234,6 +3748,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -3573,6 +4088,31 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+###bool useIndices
+
+<!--
+_name: useIndices_
+_type: bool_
+_access: private_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 ###bool useNormals
@@ -3597,6 +4137,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool useTextures
@@ -3614,6 +4155,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 

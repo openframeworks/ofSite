@@ -531,6 +531,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void draw(&vertexData, mode, useColors, useTextures, useNormals)
@@ -552,6 +553,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -587,6 +589,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void draw(&img, x, y, z, w, h, sx, sy, sw, sh)
@@ -615,6 +618,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void draw(&img, x, y, z, w, h, sx, sy, sw, sh)
@@ -636,6 +640,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -780,6 +785,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 

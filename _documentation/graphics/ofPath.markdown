@@ -161,6 +161,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void arcNegative(&centre, radiusX, radiusY, angleBegin, angleEnd)
@@ -182,6 +183,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -217,6 +219,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void arcNegative(x, y, z, radiusX, radiusY, angleBegin, angleEnd)
@@ -238,6 +241,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 

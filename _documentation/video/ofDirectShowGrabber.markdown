@@ -99,6 +99,34 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###ofPixelFormat getPixelFormat()
+
+<!--
+_syntax: getPixelFormat()_
+_name: getPixelFormat_
+_returns: ofPixelFormat_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###unsigned char * getPixels()
 
 <!--
@@ -351,6 +379,34 @@ _advanced: False_
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool setPixelFormat(pixelFormat)
+
+<!--
+_syntax: setPixelFormat(pixelFormat)_
+_name: setPixelFormat_
+_returns: bool_
+_returns_description: _
+_parameters: ofPixelFormat pixelFormat_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 

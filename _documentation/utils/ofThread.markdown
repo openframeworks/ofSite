@@ -190,6 +190,35 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+###Poco::Thread & getPocoThread()
+
+<!--
+_syntax: getPocoThread()_
+_name: getPocoThread_
+_returns: Poco::Thread &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 ###int getThreadId()
@@ -211,6 +240,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -246,6 +276,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool isCurrentThread()
@@ -274,6 +305,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool isMainThread()
@@ -295,6 +327,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -448,6 +481,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void sleep(sleepMS)
@@ -469,6 +503,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -526,7 +561,7 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -541,6 +576,34 @@ Set *close* to true if you want the thread to exit immediately.
 Set *close* to false if you want to signal the thread to exit, then wait for it to finish with `waitForThread()`.
 
 **Note**: Calling this function does not guarantee the thread will stop as it may be stuck waiting for a mutex to be unlocked. **Always** make sure to call `unlock()` if you've previously called `lock()`.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void stopThread()
+
+<!--
+_syntax: stopThread()_
+_name: stopThread_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -759,6 +822,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ### ~ofThread()
@@ -873,11 +937,11 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###Poco::Thread thread
+###Poco thread
 
 <!--
 _name: thread_
-_type: Poco::Thread_
+_type: Poco_
 _access: private_
 _version_started: 0071_
 _version_deprecated: _
@@ -888,6 +952,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 

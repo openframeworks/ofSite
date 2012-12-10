@@ -95,6 +95,30 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###bool bUseExternalTextureID
+
+<!--
+_name: bUseExternalTextureID_
+_type: bool_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofTexCompression compressionType
 
 <!--

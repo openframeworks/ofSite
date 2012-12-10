@@ -284,12 +284,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int ofGetElapsedTimeMillis()
+###unsigned long ofGetElapsedTimeMillis()
 
 <!--
 _syntax: ofGetElapsedTimeMillis()_
 _name: ofGetElapsedTimeMillis_
-_returns: int_
+_returns: unsigned long_
 _returns_description: _
 _parameters: _
 _version_started: 006_
@@ -1891,6 +1891,60 @@ vec.push_back(2);
 vec.push_back(3);
 cout << ofToString(vec) << endl; // prints "{1, 2, 3}"
 ~~~~
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string ofToString(&value, width, fill)
+
+<!--
+_syntax: ofToString(&value, width, fill)_
+_name: ofToString_
+_returns: string_
+_returns_description: _
+_parameters: const T &value, int width, char fill_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string ofToString(&value, precision, width, fill)
+
+<!--
+_syntax: ofToString(&value, precision, width, fill)_
+_name: ofToString_
+_returns: string_
+_returns_description: _
+_parameters: const T &value, int precision, int width, char fill_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
 
 
 

@@ -128,12 +128,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###guint64 getDurationNanos()
+###int64_t getDurationNanos()
 
 <!--
 _syntax: getDurationNanos()_
 _name: getDurationNanos_
-_returns: guint64_
+_returns: int64_t_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -186,12 +186,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getLoopState()
+###ofLoopType getLoopState()
 
 <!--
 _syntax: getLoopState()_
 _name: getLoopState_
-_returns: int_
+_returns: ofLoopType_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -241,6 +241,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###unsigned long getMinLatencyNanos()
@@ -269,14 +270,15 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
-###GstElement * getPipeline()
+###GstElement getPipeline()
 
 <!--
 _syntax: getPipeline()_
 _name: getPipeline_
-_returns: GstElement *_
+_returns: GstElement_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -329,12 +331,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###GstElement * getSink()
+###GstElement getSink()
 
 <!--
 _syntax: getSink()_
 _name: getSink_
-_returns: GstElement *_
+_returns: GstElement_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -864,6 +866,35 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setVolume(volume)
+
+<!--
+_syntax: setVolume(volume)_
+_name: setVolume_
+_returns: void_
+_returns_description: _
+_parameters: float volume_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
 _static: no_
 _visible: True_
 _advanced: False_
@@ -871,6 +902,33 @@ _advanced: False_
 
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void startGstMainLoop()
+
+<!--
+_syntax: startGstMainLoop()_
+_name: startGstMainLoop_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: yes_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 

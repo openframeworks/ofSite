@@ -49,6 +49,34 @@ As you can see this really makes dealing with vectors as easy as dealing with si
 
 
 
+### OF_DEPRECATED_MSG(instead.", const)
+
+<!--
+_syntax: OF_DEPRECATED_MSG(instead.", const)_
+_name: OF_DEPRECATED_MSG_
+_returns: _
+_returns_description: _
+_parameters: "Use ofVec2f::lengthSquared() instead.", float squareLength() const_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###bool align(&vec, tolerance = 0.0001)
 
 <!--
@@ -889,6 +917,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool isAlignedRad(&vec, tolerance = 0.0001)
@@ -910,6 +939,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -1303,7 +1333,7 @@ _syntax: ofVec2f(_x = 0.f, _y = 0.f)_
 _name: ofVec2f_
 _returns: _
 _returns_description: _
-_parameters: float _x=0.f, float _y=0.f_
+_parameters: float _x, float _y_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1405,6 +1435,62 @@ ofVec2f v(mom4d); // v.x is 40, v.y is 20
 
 <!----------------------------------------------------------------------------->
 
+### ofVec2f()
+
+<!--
+_syntax: ofVec2f()_
+_name: ofVec2f_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofVec2f(_scalar)
+
+<!--
+_syntax: ofVec2f(_scalar)_
+_name: ofVec2f_
+_returns: _
+_returns_description: _
+_parameters: float _scalar_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofVec2f one()
 
 <!--
@@ -1424,6 +1510,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -2607,6 +2694,34 @@ v2.set(v1); // v2.x is 40, v2.y is 20
 
 <!----------------------------------------------------------------------------->
 
+###void set(_scalar)
+
+<!--
+_syntax: set(_scalar)_
+_name: set_
+_returns: void_
+_returns_description: _
+_parameters: float _scalar_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###float squareDistance(&pnt)
 
 <!--
@@ -2659,7 +2774,7 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -2710,6 +2825,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ##Variables
@@ -2731,6 +2847,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 

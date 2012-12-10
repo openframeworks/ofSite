@@ -198,7 +198,7 @@ _name: ofSetLogLevel_
 _returns: void_
 _returns_description: _
 _parameters: string module, ofLogLevel logLevel_
-_version_started: 007_
+_version_started: _
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -209,35 +209,6 @@ _advanced: False_
 
 _description: _
 
-Sets the logging level for a particular "module". A module is a string that is added to the beginning of the log line and can be used to separate logging messages by setting an independent log level for **that module only**. This module-specific log level has no effect on other modules.
-For instance, let's say you have an object called "Hello". If you set the log level for "Hello" to `OF_LOG_ERROR`, no messages to "Hello" with a level below `OF_LOG_ERROR` will print. However, this has no effect on regular logging messages:
-~~~~{.cpp}
-// "Hello" starts at log level notice
-// log to the "Hello" module
-ofLogWarning("Hello") << "a warning print";	// this prints
-ofLogNotice("Hello") << "test print";		// this doesn't
-ofLogVerbose("Hello") << "a verbose print";	// this doesn't either
-// make a regular log print, not to "Hello"
-ofLogNotice() << "a test print";			// prints
-// set the "Hello" log level to warning
-ofSetLogLevel("Hello", OF_LOG_WARNING);
-ofLogWarning("Hello") << "a warning print";	// this still prints
-ofLogNotice("Hello") << "test print";		// this does too
-ofLogVerbose("Hello") << "a verbose print";	// this doesn't
-ofLogNotice() << "a test print";			// still prints, not affected by "Hello"
-~~~~
-The default log level for modules is `OF_LOG_NOTICE`.
-The default module when logging without setting the module is "OF". So setting the log level for "OF" to OF_LOG_SILENT will disable all non-module log messages.
-See ofSetLogLevel for the log level values. 
-Note: ofLog() itself cannot accept a module variable. You must use one of the specific log level classes: `ofLogVerbose`, `ofLogNotice`, `ofLogWarning`, `ofLogError`, & `ofLogFatalError`.
-~~~~{.cpp}
-// this prints a warning message
-ofLogWarning() << "a warning print";
-// !!! This does not print a message as the string "a warning print" is the module argument !!!
-ofLogWarning("a warning print");
-// this prints a warning message to the "Hello" module
-ofLogWarning("Hello") << "a warning print";
-~~~~
 
 
 

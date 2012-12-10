@@ -560,6 +560,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void draw(&vertexData, mode, useColors = false, useTextures = false, useNormals = false)
@@ -581,6 +582,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -616,6 +618,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void draw(&image, x, y, z, w, h, sx, sy, sw, sh)
@@ -644,6 +647,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void draw(&image, x, y, z, w, h, sx, sy, sw, sh)
@@ -665,6 +669,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -816,6 +821,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void drawString(text, x, y, z, mode)
@@ -867,6 +873,34 @@ _advanced: False_
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void flush()
+
+<!--
+_syntax: flush()_
+_name: flush_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -992,6 +1026,34 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###ofBuffer getContentBuffer()
+
+<!--
+_syntax: getContentBuffer()_
+_name: getContentBuffer_
+_returns: ofBuffer_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofHandednessType getCoordHandedness()
 
 <!--
@@ -1070,6 +1132,34 @@ _advanced: False_
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofPixels getImageSurfacePixels()
+
+<!--
+_syntax: getImageSurfacePixels()_
+_name: getImageSurfacePixels_
+_returns: ofPixels_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -1975,6 +2065,35 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+###void setStyle(&style)
+
+<!--
+_syntax: setStyle(&style)_
+_name: setStyle_
+_returns: void_
+_returns_description: _
+_parameters: const ofStyle &style_
+_access: private_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 ###void setup(filename, type = ofCairoRenderer
@@ -2325,16 +2444,45 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setup(filename, type = ofCairoRenderer::PDF, multiPage = true, b3D = false, viewport = ofRectangle(0, 0, 0, 0))
+###void setup(filename, type = ofCairoRenderer
 
 <!--
-_syntax: setup(filename, type = ofCairoRenderer::PDF, multiPage = true, b3D = false, viewport = ofRectangle(0, 0, 0, 0))_
+_syntax: setup(filename, type = ofCairoRenderer_
 _name: setup_
 _returns: void_
 _returns_description: _
-_parameters: string filename, Type type=ofCairoRenderer::PDF, bool multiPage=true, bool b3D=false, ofRectangle viewport=ofRectangle(0, 0, 0, 0)_
+_parameters: string filename, Type type=ofCairoRenderer_
 _access: public_
 _version_started: 0071_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setup(filename, type = ofCairoRenderer::FROM_FILE_EXTENSION, multiPage = true, b3D = false, viewport = ofRectangle(0, 0, 0, 0))
+
+<!--
+_syntax: setup(filename, type = ofCairoRenderer::FROM_FILE_EXTENSION, multiPage = true, b3D = false, viewport = ofRectangle(0, 0, 0, 0))_
+_name: setup_
+_returns: void_
+_returns_description: _
+_parameters: string filename, Type type=ofCairoRenderer::FROM_FILE_EXTENSION, bool multiPage=true, bool b3D=false, ofRectangle viewport=ofRectangle(0, 0, 0, 0)_
+_access: public_
+_version_started: 0072_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2373,6 +2521,34 @@ _advanced: False_
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setupMemoryOnly(_type, multiPage = true, b3D = false, viewport = ofRectangle(0, 0, 0, 0))
+
+<!--
+_syntax: setupMemoryOnly(_type, multiPage = true, b3D = false, viewport = ofRectangle(0, 0, 0, 0))_
+_name: setupMemoryOnly_
+_returns: void_
+_returns_description: _
+_parameters: Type _type, bool multiPage=true, bool b3D=false, ofRectangle viewport=ofRectangle(0, 0, 0, 0)_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -2460,6 +2636,34 @@ _advanced: False_
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###_cairo_status stream_function(*closure, *data, length)
+
+<!--
+_syntax: stream_function(*closure, *data, length)_
+_name: stream_function_
+_returns: _cairo_status_
+_returns_description: _
+_parameters: void *closure, const unsigned char *data, unsigned int length_
+_access: private_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: yes_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -2851,6 +3055,54 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###string filename
+
+<!--
+_name: filename_
+_type: string_
+_access: private_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofPixels imageBuffer
+
+<!--
+_name: imageBuffer_
+_type: ofPixels_
+_access: private_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###stack< cairo_matrix_t > matrixStack
 
 <!--
@@ -3073,6 +3325,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofPoint sphereVerts
@@ -3082,6 +3335,31 @@ _name: sphereVerts_
 _type: ofPoint_
 _access: private_
 _version_started: 0071_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofBuffer streamBuffer
+
+<!--
+_name: streamBuffer_
+_type: ofBuffer_
+_access: private_
+_version_started: 0072_
 _version_deprecated: _
 _summary: _
 _visible: True_

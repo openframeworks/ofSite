@@ -56,6 +56,34 @@ Allocate memory for the buffer to use. This sizes the char vector that the ofBuf
 
 <!----------------------------------------------------------------------------->
 
+###void append(*_buffer, _size)
+
+<!--
+_syntax: append(*_buffer, _size)_
+_name: append_
+_returns: void_
+_returns_description: _
+_parameters: const char *_buffer, unsigned int _size_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void clear()
 
 <!--
@@ -286,7 +314,7 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -377,6 +405,62 @@ ofBuffer bBuff(aBuff); // now it's in bBuff as well
 
 <!----------------------------------------------------------------------------->
 
+### ofBuffer(*buffer, size)
+
+<!--
+_syntax: ofBuffer(*buffer, size)_
+_name: ofBuffer_
+_returns: _
+_returns_description: _
+_parameters: const char *buffer, unsigned int size_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofBuffer(&text)
+
+<!--
+_syntax: ofBuffer(&text)_
+_name: ofBuffer_
+_returns: _
+_returns_description: _
+_parameters: const string &text_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ### operator string()
 
 <!--
@@ -399,6 +483,34 @@ _description: _
 
 
 Internally, calls getText()
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofBuffer operator=(&text)
+
+<!--
+_syntax: operator=(&text)_
+_name: operator=_
+_returns: ofBuffer_
+_returns_description: _
+_parameters: const string &text_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -452,7 +564,7 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -504,6 +616,62 @@ string giantDataString;
 ofBuffer buff;
 buff.set(giantDataString.c_str(), giantDataString.size());
 ~~~~
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void set(*_buffer, _size)
+
+<!--
+_syntax: set(*_buffer, _size)_
+_name: set_
+_returns: void_
+_returns_description: _
+_parameters: const char *_buffer, unsigned int _size_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void set(&text)
+
+<!--
+_syntax: set(&text)_
+_name: set_
+_returns: void_
+_returns_description: _
+_parameters: const string &text_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 

@@ -302,12 +302,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setPixelFormat(pixelFormat)
+###bool setPixelFormat(pixelFormat)
 
 <!--
 _syntax: setPixelFormat(pixelFormat)_
 _name: setPixelFormat_
-_returns: void_
+_returns: bool_
 _returns_description: _
 _parameters: ofPixelFormat pixelFormat_
 _access: public_

@@ -722,6 +722,33 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void ofClear(&c)
+
+<!--
+_syntax: ofClear(&c)_
+_name: ofClear_
+_returns: void_
+_returns_description: _
+_parameters: const ofColor &c_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void ofClearAlpha()
 
 <!--
@@ -996,11 +1023,11 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofCurveVertexes(&curvePoints)
+###void ofCurveVertices(&curvePoints)
 
 <!--
-_syntax: ofCurveVertexes(&curvePoints)_
-_name: ofCurveVertexes_
+_syntax: ofCurveVertices(&curvePoints)_
+_name: ofCurveVertices_
 _returns: void_
 _returns_description: _
 _parameters: const vector< ofPoint > &curvePoints_
@@ -1222,6 +1249,60 @@ _name: ofDrawBitmapString_
 _returns: void_
 _returns_description: _
 _parameters: string textString, float x, float y, float z_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawBitmapStringHighlight(text, &position, &background = ofColor
+
+<!--
+_syntax: ofDrawBitmapStringHighlight(text, &position, &background = ofColor_
+_name: ofDrawBitmapStringHighlight_
+_returns: void_
+_returns_description: _
+_parameters: string text, const ofPoint &position, const ofColor &background=ofColor_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawBitmapStringHighlight(text, x, y, &background = ofColor
+
+<!--
+_syntax: ofDrawBitmapStringHighlight(text, x, y, &background = ofColor_
+_name: ofDrawBitmapStringHighlight_
+_returns: void_
+_returns_description: _
+_parameters: string text, int x, int y, const ofColor &background=ofColor_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -2362,6 +2443,114 @@ void testApp::draw(){
 	ofRect(10,10,-100, 80, 80); // Draw a rectangle at 100 pixels in depth
 }    
 ~~~~
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofRectRounded(&b, r)
+
+<!--
+_syntax: ofRectRounded(&b, r)_
+_name: ofRectRounded_
+_returns: void_
+_returns_description: _
+_parameters: const ofRectangle &b, float r_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofRectRounded(&p, w, h, r)
+
+<!--
+_syntax: ofRectRounded(&p, w, h, r)_
+_name: ofRectRounded_
+_returns: void_
+_returns_description: _
+_parameters: const ofPoint &p, float w, float h, float r_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofRectRounded(x, y, w, h, r)
+
+<!--
+_syntax: ofRectRounded(x, y, w, h, r)_
+_name: ofRectRounded_
+_returns: void_
+_returns_description: _
+_parameters: float x, float y, float w, float h, float r_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofRectRounded(x, y, z, w, h, r)
+
+<!--
+_syntax: ofRectRounded(x, y, z, w, h, r)_
+_name: ofRectRounded_
+_returns: void_
+_returns_description: _
+_parameters: float x, float y, float z, float w, float h, float r_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
 
 
 
@@ -3754,11 +3943,11 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofVertexes(&polyPoints)
+###void ofVertices(&polyPoints)
 
 <!--
-_syntax: ofVertexes(&polyPoints)_
-_name: ofVertexes_
+_syntax: ofVertices(&polyPoints)_
+_name: ofVertices_
 _returns: void_
 _returns_description: _
 _parameters: const vector< ofPoint > &polyPoints_

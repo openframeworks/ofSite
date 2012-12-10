@@ -1530,15 +1530,15 @@ note: this code is implemented inside the ofAppRunner
 
 <!----------------------------------------------------------------------------->
 
-###void ofSleepMillis(timeMillis)
+###void ofSleepMillis(millis)
 
 <!--
-_syntax: ofSleepMillis(timeMillis)_
+_syntax: ofSleepMillis(millis)_
 _name: ofSleepMillis_
 _returns: void_
 _returns_description: _
 _parameters: int millis_
-_version_started: 006_
+_version_started: _
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1548,17 +1548,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-Makes the app or a thread sleep for some time expressed in ms. Usually used inside threads when we want to wait till something happens to continue the process to run instead of making it running continously. This way the thread doesn't consume processor time while it's aslept.
-Forces the app to pause execution ( or 'sleep' ) for the specfied number of milliseconds.
-note: this code is implemented inside the ofAppRunner
-
-
-
-
-
-
 
 
 

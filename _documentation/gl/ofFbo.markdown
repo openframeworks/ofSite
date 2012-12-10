@@ -74,6 +74,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void allocate(width, height, internalformat = GL_RGBA, numSamples = 0)
@@ -310,6 +311,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -587,6 +589,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###GLuint getFbo()
@@ -825,6 +828,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -1170,6 +1174,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void setActiveDrawBuffers(&i)
@@ -1191,6 +1196,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -1514,6 +1520,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###vector< GLuint > colorBuffers
@@ -1606,6 +1613,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 

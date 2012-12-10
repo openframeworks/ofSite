@@ -15,6 +15,34 @@ In linux it uses by default unicap, although you can change to v4l through a #de
 
 
 
+### OF_DEPRECATED_MSG(instead.", grabFrame())
+
+<!--
+_syntax: OF_DEPRECATED_MSG(instead.", grabFrame())_
+_name: OF_DEPRECATED_MSG_
+_returns: _
+_returns_description: _
+_parameters: "Use ofVideoGrabber::update() instead.", void grabFrame()_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void close()
 
 <!--
@@ -384,7 +412,7 @@ _version_started: 006_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -797,12 +825,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setPixelFormat(pixelFormat)
+###bool setPixelFormat(pixelFormat)
 
 <!--
 _syntax: setPixelFormat(pixelFormat)_
 _name: setPixelFormat_
-_returns: void_
+_returns: bool_
 _returns_description: _
 _parameters: ofPixelFormat pixelFormat_
 _access: public_
@@ -1236,6 +1264,30 @@ _advanced: False_
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool grabberRunning
+
+<!--
+_name: grabberRunning_
+_type: bool_
+_access: private_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 

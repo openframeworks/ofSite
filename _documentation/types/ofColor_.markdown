@@ -2807,12 +2807,186 @@ _description: _
 
 <!--
 _syntax: ofColor_()_
-_name: ofColor__
+_name: ofColor_
 _returns: _
 _returns_description: _
 _parameters: _
 _access: public_
 _version_started: 0071_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofColor_(_r, _g, _b, _a = limit())
+
+<!--
+_syntax: ofColor_(_r, _g, _b, _a = limit())_
+_name: ofColor_
+_returns: _
+_returns_description: _
+_parameters: float _r, float _g, float _b, float _a=limit()_
+_access: public_
+_version_started: 0071_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofColor_(&color)
+
+<!--
+_syntax: ofColor_(&color)_
+_name: ofColor_
+_returns: _
+_returns_description: _
+_parameters: const ofColor_< PixelType > &color_
+_access: public_
+_version_started: 0071_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofColor_(&color, _a)
+
+<!--
+_syntax: ofColor_(&color, _a)_
+_name: ofColor_
+_returns: _
+_returns_description: _
+_parameters: const ofColor_< PixelType > &color, float _a_
+_access: public_
+_version_started: 0071_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofColor_(gray, _a = limit())
+
+<!--
+_syntax: ofColor_(gray, _a = limit())_
+_name: ofColor_
+_returns: _
+_returns_description: _
+_parameters: float gray, float _a=limit()_
+_access: public_
+_version_started: 0071_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofColor_(&color)
+
+<!--
+_syntax: ofColor_(&color)_
+_name: ofColor_
+_returns: _
+_returns_description: _
+_parameters: const ofColor_< SrcType > &color_
+_access: public_
+_version_started: 0071_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofColor_()
+
+<!--
+_syntax: ofColor_()_
+_name: ofColor__
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2840,7 +3014,7 @@ _returns: _
 _returns_description: _
 _parameters: float _r, float _g, float _b, float _a=limit()_
 _access: public_
-_version_started: 0071_
+_version_started: 0072_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2868,7 +3042,7 @@ _returns: _
 _returns_description: _
 _parameters: const ofColor_< PixelType > &color_
 _access: public_
-_version_started: 0071_
+_version_started: 0072_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2896,7 +3070,7 @@ _returns: _
 _returns_description: _
 _parameters: const ofColor_< PixelType > &color, float _a_
 _access: public_
-_version_started: 0071_
+_version_started: 0072_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2924,7 +3098,7 @@ _returns: _
 _returns_description: _
 _parameters: float gray, float _a=limit()_
 _access: public_
-_version_started: 0071_
+_version_started: 0072_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2952,7 +3126,7 @@ _returns: _
 _returns_description: _
 _parameters: const ofColor_< SrcType > &color_
 _access: public_
-_version_started: 0071_
+_version_started: 0072_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -4406,12 +4580,41 @@ _description: _
 
 <!--
 _syntax: ~ofColor_()_
-_name: ~ofColor__
+_name: ~ofColor_
 _returns: _
 _returns_description: _
 _parameters: _
 _access: public_
 _version_started: 0071_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ~ofColor_()
+
+<!--
+_syntax: ~ofColor_()_
+_name: ~ofColor__
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
 _version_deprecated: _
 _summary: _
 _constant: False_

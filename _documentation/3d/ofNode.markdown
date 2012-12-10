@@ -244,6 +244,34 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###ofVec3f getGlobalScale()
+
+<!--
+_syntax: getGlobalScale()_
+_name: getGlobalScale_
+_returns: ofVec3f_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofMatrix4x4 getGlobalTransformMatrix()
 
 <!--
@@ -831,7 +859,7 @@ _syntax: lookAt(&lookAtNode, &upVector = ofVec3f(0, 1, 0))_
 _name: lookAt_
 _returns: void_
 _returns_description: _
-_parameters: ofNode &lookAtNode, const ofVec3f &upVector=ofVec3f(0, 1, 0)_
+_parameters: const ofNode &lookAtNode, const ofVec3f &upVector=ofVec3f(0, 1, 0)_
 _access: public_
 _version_started: 007_
 _version_deprecated: _

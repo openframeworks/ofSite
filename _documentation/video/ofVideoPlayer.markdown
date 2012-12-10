@@ -19,6 +19,34 @@ ofVideoPlayer myPlayer;
 
 
 
+### OF_DEPRECATED_MSG(instead.", idleMovie())
+
+<!--
+_syntax: OF_DEPRECATED_MSG(instead.", idleMovie())_
+_name: OF_DEPRECATED_MSG_
+_returns: _
+_returns_description: _
+_parameters: "Use ofVideoPlayer::update() instead.", void idleMovie()_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###bool allocate()
 
 <!--
@@ -419,12 +447,12 @@ Returns whether the movie has played all the way until the end.
 
 <!----------------------------------------------------------------------------->
 
-###int getLoopState()
+###ofLoopType getLoopState()
 
 <!--
 _syntax: getLoopState()_
 _name: getLoopState_
-_returns: int_
+_returns: ofLoopType_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -439,6 +467,62 @@ _advanced: False_
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string getMoviePath()
+
+<!--
+_syntax: getMoviePath()_
+_name: getMoviePath_
+_returns: string_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofPixelFormat getPixelFormat()
+
+<!--
+_syntax: getPixelFormat()_
+_name: getPixelFormat_
+_returns: ofPixelFormat_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -742,7 +826,7 @@ _version_started: 006_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -1345,12 +1429,12 @@ Sets the paused state of the movie. Use "true" to pause and false to unpause.
 
 <!----------------------------------------------------------------------------->
 
-###void setPixelFormat(pixelFormat)
+###bool setPixelFormat(pixelFormat)
 
 <!--
 _syntax: setPixelFormat(pixelFormat)_
 _name: setPixelFormat_
-_returns: void_
+_returns: bool_
 _returns_description: _
 _parameters: ofPixelFormat pixelFormat_
 _access: public_
@@ -1514,7 +1598,7 @@ _version_started: 006_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -1523,6 +1607,34 @@ _description: _
 
 
 Sets the volume of a movie as it plays. The maximum values is 100, 0 is silent.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setVolume(volume)
+
+<!--
+_syntax: setVolume(volume)_
+_name: setVolume_
+_returns: void_
+_returns_description: _
+_parameters: float volume_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -2084,6 +2196,30 @@ _advanced: False_
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string moviePath
+
+<!--
+_name: moviePath_
+_type: string_
+_access: private_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 

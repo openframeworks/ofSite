@@ -38,6 +38,62 @@ If you use the line or curveTo or bezierTo functions, you move the drawing point
 
 
 
+### OF_DEPRECATED_MSG(instead", &verts))
+
+<!--
+_syntax: OF_DEPRECATED_MSG(instead", &verts))_
+_name: OF_DEPRECATED_MSG_
+_returns: _
+_returns_description: _
+_parameters: "Use ofPolyline::addVertices instead", void addVertexes(const vector< ofPoint > &verts)_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### OF_DEPRECATED_MSG(instead", *verts, numverts))
+
+<!--
+_syntax: OF_DEPRECATED_MSG(instead", *verts, numverts))_
+_name: OF_DEPRECATED_MSG_
+_returns: _
+_returns_description: _
+_parameters: "Use ofPolyline::addVertices instead", void addVertexes(const ofPoint *verts, int numverts)_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void addVertex(&p)
 
 <!--
@@ -113,7 +169,7 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -160,7 +216,7 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -185,6 +241,62 @@ verts[4] = ofPoint(X1, -Y1);
 ofPolyline p;
 p.addVertexes(verts, 5);
 ~~~~
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void addVertices(&verts)
+
+<!--
+_syntax: addVertices(&verts)_
+_name: addVertices_
+_returns: void_
+_returns_description: _
+_parameters: const vector< ofPoint > &verts_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void addVertices(*verts, numverts)
+
+<!--
+_syntax: addVertices(*verts, numverts)_
+_name: addVertices_
+_returns: void_
+_returns_description: _
+_parameters: const ofPoint *verts, int numverts_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -335,6 +447,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void arcNegative(&center, radiusX, radiusY, angleBegin, angleEnd, curveResolution = 20)
@@ -356,6 +469,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -391,6 +505,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void arcNegative(x, y, z, radiusX, radiusY, angleBegin, angleEnd, curveResolution = 20)
@@ -412,6 +527,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -699,6 +815,34 @@ _description: _
 
 
 Draw the line using the current renderer.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofPolyline fromRectangle(&rect)
+
+<!--
+_syntax: fromRectangle(&rect)_
+_name: fromRectangle_
+_returns: ofPolyline_
+_returns_description: _
+_parameters: const ofRectangle &rect_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: yes_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -1621,6 +1765,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 

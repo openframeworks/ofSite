@@ -785,92 +785,6 @@ _description: _
 
 
 
-<!----------------------------------------------------------------------------->
-
-### ofPixels_()
-
-<!--
-_syntax: ofPixels_()_
-_name: ofPixels_
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofPixels_(&mom)
-
-<!--
-_syntax: ofPixels_(&mom)_
-_name: ofPixels_
-_returns: _
-_returns_description: _
-_parameters: const ofPixels_< PixelType > &mom_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofPixels_(&mom)
-
-<!--
-_syntax: ofPixels_(&mom)_
-_name: ofPixels_
-_returns: _
-_returns_description: _
-_parameters: const ofPixels_< SrcType > &mom_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
 
 <!----------------------------------------------------------------------------->
 
@@ -1812,6 +1726,180 @@ _returns_description: _
 _parameters: const ofPixels_< SrcType > &mom_
 _access: public_
 _version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofPixels_()
+
+<!--
+_syntax: ofPixels_()_
+_name: ofPixels_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofPixels_(&mom)
+
+<!--
+_syntax: ofPixels_(&mom)_
+_name: ofPixels_
+_returns: _
+_returns_description: _
+_parameters: const ofPixels_< PixelType > &mom_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofPixels_(&mom)
+
+<!--
+_syntax: ofPixels_(&mom)_
+_name: ofPixels_
+_returns: _
+_returns_description: _
+_parameters: const ofPixels_< SrcType > &mom_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofPixels_()
+
+<!--
+_syntax: ofPixels_()_
+_name: ofPixels_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0071_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofPixels_(&mom)
+
+<!--
+_syntax: ofPixels_(&mom)_
+_name: ofPixels_
+_returns: _
+_returns_description: _
+_parameters: const ofPixels_< PixelType > &mom_
+_access: public_
+_version_started: 0071_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofPixels_(&mom)
+
+<!--
+_syntax: ofPixels_(&mom)_
+_name: ofPixels_
+_returns: _
+_returns_description: _
+_parameters: const ofPixels_< SrcType > &mom_
+_access: public_
+_version_started: 0071_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1840,7 +1928,7 @@ _returns: _
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 0071_
+_version_started: 0072_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1868,7 +1956,7 @@ _returns: _
 _returns_description: _
 _parameters: const ofPixels_< PixelType > &mom_
 _access: public_
-_version_started: 0071_
+_version_started: 0072_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1896,7 +1984,7 @@ _returns: _
 _returns_description: _
 _parameters: const ofPixels_< SrcType > &mom_
 _access: public_
-_version_started: 0071_
+_version_started: 0072_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2170,6 +2258,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void set(val)
@@ -2408,6 +2497,62 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void setImageType(imageType)
+
+<!--
+_syntax: setImageType(imageType)_
+_name: setImageType_
+_returns: void_
+_returns_description: _
+_parameters: ofImageType imageType_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setNumChannels(numChannels)
+
+<!--
+_syntax: setNumChannels(numChannels)_
+_name: setNumChannels_
+_returns: void_
+_returns_description: _
+_parameters: int numChannels_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###int size()
 
 <!--
@@ -2458,6 +2603,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -2850,12 +2996,41 @@ _description: _
 
 <!--
 _syntax: ~ofPixels_()_
-_name: ~ofPixels__
+_name: ~ofPixels_
 _returns: _
 _returns_description: _
 _parameters: _
 _access: public_
 _version_started: 0071_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ~ofPixels_()
+
+<!--
+_syntax: ~ofPixels_()_
+_name: ~ofPixels__
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
 _version_deprecated: _
 _summary: _
 _constant: False_

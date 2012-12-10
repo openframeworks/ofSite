@@ -98,7 +98,7 @@ _name: ofSoundStopAll_
 _returns: void_
 _returns_description: _
 _parameters: _
-_version_started: 006_
+_version_started: _
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -109,7 +109,6 @@ _advanced: False_
 
 _description: _
 
-Stops all sounds being played by all ofSoundPlayer objects.
 
 
 

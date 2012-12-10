@@ -12,6 +12,34 @@
 
 
 
+### OF_DEPRECATED_MSG(instead.", const)
+
+<!--
+_syntax: OF_DEPRECATED_MSG(instead.", const)_
+_name: OF_DEPRECATED_MSG_
+_returns: _
+_returns_description: _
+_parameters: "Use ofVec4f::lengthSquared() instead.", float squareLength() const_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofVec4f average(*points, num)
 
 <!--
@@ -628,7 +656,7 @@ _syntax: ofVec4f(_x = 0.f, _y = 0.f, _z = 0.f, _w = 0.f)_
 _name: ofVec4f_
 _returns: _
 _returns_description: _
-_parameters: float _x=0.f, float _y=0.f, float _z=0.f, float _w=0.f_
+_parameters: float _x, float _y, float _z, float _w_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -708,6 +736,62 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+### ofVec4f()
+
+<!--
+_syntax: ofVec4f()_
+_name: ofVec4f_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofVec4f(_scalar)
+
+<!--
+_syntax: ofVec4f(_scalar)_
+_name: ofVec4f_
+_returns: _
+_returns_description: _
+_parameters: float _scalar_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofVec4f one()
 
 <!--
@@ -727,6 +811,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -1461,6 +1546,34 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void set(_scalar)
+
+<!--
+_syntax: set(_scalar)_
+_name: set_
+_returns: void_
+_returns_description: _
+_parameters: float _scalar_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###float squareDistance(&pnt)
 
 <!--
@@ -1503,7 +1616,7 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -1545,6 +1658,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ##Variables
@@ -1566,6 +1680,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
