@@ -8,6 +8,33 @@
 
 <!----------------------------------------------------------------------------->
 
+###void ofCloseFreeImage()
+
+<!--
+_syntax: ofCloseFreeImage()_
+_name: ofCloseFreeImage_
+_returns: void_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: False_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###bool ofLoadImage(&pix, path)
 
 <!--

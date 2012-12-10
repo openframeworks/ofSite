@@ -64,8 +64,8 @@ class DocsClass:
         found = False
         for function in self.function_list:
             if function.name == name:
-                dst_parameters_types = self.get_parameter_types(function.parameters)
-                src_parameters_types = self.get_parameter_types(parameters)
+                dst_parameters_types = self.get_parameter_types(function.parameters.replace('const ',''))
+                src_parameters_types = self.get_parameter_types(parameters.replace('const ',''))
 
                 if(len(src_parameters_types)==len(dst_parameters_types)):
                     a = -1
@@ -76,6 +76,7 @@ class DocsClass:
                             a = i
                     if a == len(src_parameters_types)-1:
                         function.new = False
+                        function.parameters = parameters
                         return function
                         found = True
                         #print 'found ' + function.name

@@ -1,4 +1,4 @@
-#class ofQuaternion
+#class ofQTKitGrabber
 
 
 ##Description
@@ -12,451 +12,16 @@
 
 
 
-###ofVec3f asVec3()
+###void close()
 
 <!--
-_syntax: asVec3()_
-_name: asVec3_
-_returns: ofVec3f_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofVec4f asVec4()
-
-<!--
-_syntax: asVec4()_
-_name: asVec4_
-_returns: ofVec4f_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofQuaternion conj()
-
-<!--
-_syntax: conj()_
-_name: conj_
-_returns: ofQuaternion_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void get(&matrix)
-
-<!--
-_syntax: get(&matrix)_
-_name: get_
-_returns: void_
-_returns_description: _
-_parameters: ofMatrix4x4 &matrix_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofVec3f getEuler()
-
-<!--
-_syntax: getEuler()_
-_name: getEuler_
-_returns: ofVec3f_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void getRotate(&angle, &x, &y, &z)
-
-<!--
-_syntax: getRotate(&angle, &x, &y, &z)_
-_name: getRotate_
-_returns: void_
-_returns_description: _
-_parameters: float &angle, float &x, float &y, float &z_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void getRotate(&angle, &vec)
-
-<!--
-_syntax: getRotate(&angle, &vec)_
-_name: getRotate_
-_returns: void_
-_returns_description: _
-_parameters: float &angle, ofVec3f &vec_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofQuaternion inverse()
-
-<!--
-_syntax: inverse()_
-_name: inverse_
-_returns: ofQuaternion_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float length()
-
-<!--
-_syntax: length()_
-_name: length_
-_returns: float_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float length2()
-
-<!--
-_syntax: length2()_
-_name: length2_
-_returns: float_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void makeRotate(angle, x, y, z)
-
-<!--
-_syntax: makeRotate(angle, x, y, z)_
-_name: makeRotate_
-_returns: void_
-_returns_description: _
-_parameters: float angle, float x, float y, float z_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void makeRotate(angle, &vec)
-
-<!--
-_syntax: makeRotate(angle, &vec)_
-_name: makeRotate_
-_returns: void_
-_returns_description: _
-_parameters: float angle, const ofVec3f &vec_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void makeRotate(angle1, &axis1, angle2, &axis2, angle3, &axis3)
-
-<!--
-_syntax: makeRotate(angle1, &axis1, angle2, &axis2, angle3, &axis3)_
-_name: makeRotate_
-_returns: void_
-_returns_description: _
-_parameters: float angle1, const ofVec3f &axis1, float angle2, const ofVec3f &axis2, float angle3, const ofVec3f &axis3_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void makeRotate(&vec1, &vec2)
-
-<!--
-_syntax: makeRotate(&vec1, &vec2)_
-_name: makeRotate_
-_returns: void_
-_returns_description: _
-_parameters: const ofVec3f &vec1, const ofVec3f &vec2_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void makeRotate_original(&vec1, &vec2)
-
-<!--
-_syntax: makeRotate_original(&vec1, &vec2)_
-_name: makeRotate_original_
-_returns: void_
-_returns_description: _
-_parameters: const ofVec3f &vec1, const ofVec3f &vec2_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void normalize()
-
-<!--
-_syntax: normalize()_
-_name: normalize_
+_syntax: close()_
+_name: close_
 _returns: void_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 0071_
+_version_started: 0072_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -476,161 +41,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofQuaternion()
+###bool confirmInit()
 
 <!--
-_syntax: ofQuaternion()_
-_name: ofQuaternion_
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofQuaternion(x, y, z, w)
-
-<!--
-_syntax: ofQuaternion(x, y, z, w)_
-_name: ofQuaternion_
-_returns: _
-_returns_description: _
-_parameters: float x, float y, float z, float w_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofQuaternion(&v)
-
-<!--
-_syntax: ofQuaternion(&v)_
-_name: ofQuaternion_
-_returns: _
-_returns_description: _
-_parameters: const ofVec4f &v_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofQuaternion(angle, &axis)
-
-<!--
-_syntax: ofQuaternion(angle, &axis)_
-_name: ofQuaternion_
-_returns: _
-_returns_description: _
-_parameters: float angle, const ofVec3f &axis_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofQuaternion(angle1, &axis1, angle2, &axis2, angle3, &axis3)
-
-<!--
-_syntax: ofQuaternion(angle1, &axis1, angle2, &axis2, angle3, &axis3)_
-_name: ofQuaternion_
-_returns: _
-_returns_description: _
-_parameters: float angle1, const ofVec3f &axis1, float angle2, const ofVec3f &axis2, float angle3, const ofVec3f &axis3_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool operator!=(&q)
-
-<!--
-_syntax: operator!=(&q)_
-_name: operator!=_
+_syntax: confirmInit()_
+_name: confirmInit_
 _returns: bool_
 _returns_description: _
-_parameters: const ofQuaternion &q_
-_access: public_
-_version_started: 007_
+_parameters: _
+_access: protected_
+_version_started: 0072_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -650,248 +70,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofQuaternion operator*(rhs)
+###int getAudioDeviceID()
 
 <!--
-_syntax: operator*(rhs)_
-_name: operator*_
-_returns: ofQuaternion_
-_returns_description: _
-_parameters: float rhs_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofQuaternion operator*(&rhs)
-
-<!--
-_syntax: operator*(&rhs)_
-_name: operator*_
-_returns: ofQuaternion_
-_returns_description: _
-_parameters: const ofQuaternion &rhs_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofVec3f operator*(&v)
-
-<!--
-_syntax: operator*(&v)_
-_name: operator*_
-_returns: ofVec3f_
-_returns_description: _
-_parameters: const ofVec3f &v_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofQuaternion operator*=(rhs)
-
-<!--
-_syntax: operator*=(rhs)_
-_name: operator*=_
-_returns: ofQuaternion_
-_returns_description: _
-_parameters: float rhs_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofQuaternion operator*=(&rhs)
-
-<!--
-_syntax: operator*=(&rhs)_
-_name: operator*=_
-_returns: ofQuaternion_
-_returns_description: _
-_parameters: const ofQuaternion &rhs_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofQuaternion operator+(&rhs)
-
-<!--
-_syntax: operator+(&rhs)_
-_name: operator+_
-_returns: ofQuaternion_
-_returns_description: _
-_parameters: const ofQuaternion &rhs_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofQuaternion operator+=(&rhs)
-
-<!--
-_syntax: operator+=(&rhs)_
-_name: operator+=_
-_returns: ofQuaternion_
-_returns_description: _
-_parameters: const ofQuaternion &rhs_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofQuaternion operator-(&rhs)
-
-<!--
-_syntax: operator-(&rhs)_
-_name: operator-_
-_returns: ofQuaternion_
-_returns_description: _
-_parameters: const ofQuaternion &rhs_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofQuaternion operator-()
-
-<!--
-_syntax: operator-()_
-_name: operator-_
-_returns: ofQuaternion_
+_syntax: getAudioDeviceID()_
+_name: getAudioDeviceID_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0072_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -911,16 +99,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofQuaternion operator-=(&rhs)
+###int getDeviceID()
 
 <!--
-_syntax: operator-=(&rhs)_
-_name: operator-=_
-_returns: ofQuaternion_
+_syntax: getDeviceID()_
+_name: getDeviceID_
+_returns: int_
 _returns_description: _
-_parameters: const ofQuaternion &rhs_
+_parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0072_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -940,393 +128,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofQuaternion operator/(rhs)
+###float getHeight()
 
 <!--
-_syntax: operator/(rhs)_
-_name: operator/_
-_returns: ofQuaternion_
-_returns_description: _
-_parameters: float rhs_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofQuaternion operator/(&denom)
-
-<!--
-_syntax: operator/(&denom)_
-_name: operator/_
-_returns: ofQuaternion_
-_returns_description: _
-_parameters: const ofQuaternion &denom_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofQuaternion operator/=(rhs)
-
-<!--
-_syntax: operator/=(rhs)_
-_name: operator/=_
-_returns: ofQuaternion_
-_returns_description: _
-_parameters: float rhs_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofQuaternion operator/=(&denom)
-
-<!--
-_syntax: operator/=(&denom)_
-_name: operator/=_
-_returns: ofQuaternion_
-_returns_description: _
-_parameters: const ofQuaternion &denom_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ostream & operator<<(&os)
-
-<!--
-_syntax: operator<<(&os)_
-_name: operator<<_
-_returns: ostream &_
-_returns_description: _
-_parameters: ostream &os_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofQuaternion operator=(&q)
-
-<!--
-_syntax: operator=(&q)_
-_name: operator=_
-_returns: ofQuaternion_
-_returns_description: _
-_parameters: const ofQuaternion &q_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool operator==(&q)
-
-<!--
-_syntax: operator==(&q)_
-_name: operator==_
-_returns: bool_
-_returns_description: _
-_parameters: const ofQuaternion &q_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###istream & operator>>(&is)
-
-<!--
-_syntax: operator>>(&is)_
-_name: operator>>_
-_returns: istream &_
-_returns_description: _
-_parameters: istream &is_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float operator[](i)
-
-<!--
-_syntax: operator[](i)_
-_name: operator[]_
-_returns: float_
-_returns_description: _
-_parameters: int i_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void set(x, y, z, w)
-
-<!--
-_syntax: set(x, y, z, w)_
-_name: set_
-_returns: void_
-_returns_description: _
-_parameters: float x, float y, float z, float w_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void set(&v)
-
-<!--
-_syntax: set(&v)_
-_name: set_
-_returns: void_
-_returns_description: _
-_parameters: const ofVec4f &v_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void set(&matrix)
-
-<!--
-_syntax: set(&matrix)_
-_name: set_
-_returns: void_
-_returns_description: _
-_parameters: const ofMatrix4x4 &matrix_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void slerp(t, &from, &to)
-
-<!--
-_syntax: slerp(t, &from, &to)_
-_name: slerp_
-_returns: void_
-_returns_description: _
-_parameters: float t, const ofQuaternion &from, const ofQuaternion &to_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float w()
-
-<!--
-_syntax: w()_
-_name: w_
+_syntax: getHeight()_
+_name: getHeight_
 _returns: float_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0072_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1346,16 +157,132 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###float x()
+###ofPixelFormat getPixelFormat()
 
 <!--
-_syntax: x()_
-_name: x_
+_syntax: getPixelFormat()_
+_name: getPixelFormat_
+_returns: ofPixelFormat_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###unsigned char * getPixels()
+
+<!--
+_syntax: getPixels()_
+_name: getPixels_
+_returns: unsigned char *_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofPixelsRef getPixelsRef()
+
+<!--
+_syntax: getPixelsRef()_
+_name: getPixelsRef_
+_returns: ofPixelsRef_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int getVideoDeviceID()
+
+<!--
+_syntax: getVideoDeviceID()_
+_name: getVideoDeviceID_
+_returns: int_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float getWidth()
+
+<!--
+_syntax: getWidth()_
+_name: getWidth_
 _returns: float_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0072_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1375,74 +302,886 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###float y()
+###bool hasPreview()
 
 <!--
-_syntax: y()_
-_name: y_
-_returns: float_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float z()
-
-<!--
-_syntax: z()_
-_name: z_
-_returns: float_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool zeroRotation()
-
-<!--
-_syntax: zeroRotation()_
-_name: zeroRotation_
+_syntax: hasPreview()_
+_name: hasPreview_
 _returns: bool_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool initGrabber(w, h)
+
+<!--
+_syntax: initGrabber(w, h)_
+_name: initGrabber_
+_returns: bool_
+_returns_description: _
+_parameters: int w, int h_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool initGrabberWithoutPreview()
+
+<!--
+_syntax: initGrabberWithoutPreview()_
+_name: initGrabberWithoutPreview_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool initRecording()
+
+<!--
+_syntax: initRecording()_
+_name: initRecording_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool isFrameNew()
+
+<!--
+_syntax: isFrameNew()_
+_name: isFrameNew_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool isReady()
+
+<!--
+_syntax: isReady()_
+_name: isReady_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool isRecording()
+
+<!--
+_syntax: isRecording()_
+_name: isRecording_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool isRecordingReady()
+
+<!--
+_syntax: isRecordingReady()_
+_name: isRecordingReady_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###vector< string > & listAudioCodecs()
+
+<!--
+_syntax: listAudioCodecs()_
+_name: listAudioCodecs_
+_returns: vector< string > &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###vector< string > & listAudioDevices()
+
+<!--
+_syntax: listAudioDevices()_
+_name: listAudioDevices_
+_returns: vector< string > &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void listDevices()
+
+<!--
+_syntax: listDevices()_
+_name: listDevices_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###vector< string > & listVideoCodecs()
+
+<!--
+_syntax: listVideoCodecs()_
+_name: listVideoCodecs_
+_returns: vector< string > &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###vector< string > & listVideoDevices()
+
+<!--
+_syntax: listVideoDevices()_
+_name: listVideoDevices_
+_returns: vector< string > &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofQTKitGrabber()
+
+<!--
+_syntax: ofQTKitGrabber()_
+_name: ofQTKitGrabber_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setAudioCodec(audioCodecIDString)
+
+<!--
+_syntax: setAudioCodec(audioCodecIDString)_
+_name: setAudioCodec_
+_returns: void_
+_returns_description: _
+_parameters: string audioCodecIDString_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setAudioDeviceID(audioDeviceID)
+
+<!--
+_syntax: setAudioDeviceID(audioDeviceID)_
+_name: setAudioDeviceID_
+_returns: void_
+_returns_description: _
+_parameters: int audioDeviceID_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setAudioDeviceID(audioDeviceIDString)
+
+<!--
+_syntax: setAudioDeviceID(audioDeviceIDString)_
+_name: setAudioDeviceID_
+_returns: void_
+_returns_description: _
+_parameters: string audioDeviceIDString_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setDesiredFrameRate(framerate)
+
+<!--
+_syntax: setDesiredFrameRate(framerate)_
+_name: setDesiredFrameRate_
+_returns: void_
+_returns_description: _
+_parameters: int framerate_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setDeviceID(videoDeviceID)
+
+<!--
+_syntax: setDeviceID(videoDeviceID)_
+_name: setDeviceID_
+_returns: void_
+_returns_description: _
+_parameters: int videoDeviceID_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setDeviceID(videoDeviceIDString)
+
+<!--
+_syntax: setDeviceID(videoDeviceIDString)_
+_name: setDeviceID_
+_returns: void_
+_returns_description: _
+_parameters: string videoDeviceIDString_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool setPixelFormat(pixelFormat)
+
+<!--
+_syntax: setPixelFormat(pixelFormat)_
+_name: setPixelFormat_
+_returns: bool_
+_returns_description: _
+_parameters: ofPixelFormat pixelFormat_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setUseAudio(bUseAudio)
+
+<!--
+_syntax: setUseAudio(bUseAudio)_
+_name: setUseAudio_
+_returns: void_
+_returns_description: _
+_parameters: bool bUseAudio_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setVerbose(bTalkToMe)
+
+<!--
+_syntax: setVerbose(bTalkToMe)_
+_name: setVerbose_
+_returns: void_
+_returns_description: _
+_parameters: bool bTalkToMe_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setVideoCodec(videoCodecIDString)
+
+<!--
+_syntax: setVideoCodec(videoCodecIDString)_
+_name: setVideoCodec_
+_returns: void_
+_returns_description: _
+_parameters: string videoCodecIDString_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setVideoDeviceID(videoDeviceID)
+
+<!--
+_syntax: setVideoDeviceID(videoDeviceID)_
+_name: setVideoDeviceID_
+_returns: void_
+_returns_description: _
+_parameters: int videoDeviceID_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setVideoDeviceID(videoDeviceIDString)
+
+<!--
+_syntax: setVideoDeviceID(videoDeviceIDString)_
+_name: setVideoDeviceID_
+_returns: void_
+_returns_description: _
+_parameters: string videoDeviceIDString_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void startRecording(filePath)
+
+<!--
+_syntax: startRecording(filePath)_
+_name: startRecording_
+_returns: void_
+_returns_description: _
+_parameters: string filePath_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void stopRecording()
+
+<!--
+_syntax: stopRecording()_
+_name: stopRecording_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void update()
+
+<!--
+_syntax: update()_
+_name: update_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void videoSettings()
+
+<!--
+_syntax: videoSettings()_
+_name: videoSettings_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ~ofQTKitGrabber()
+
+<!--
+_syntax: ~ofQTKitGrabber()_
+_name: ~ofQTKitGrabber_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1466,13 +1205,363 @@ _description: _
 
 
 
-###ofVec4f _v
+###string audioCodecIDString
 
 <!--
-_name: _v_
-_type: ofVec4f_
+_name: audioCodecIDString_
+_type: string_
+_access: protected_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###vector< string > audioCodecsVec
+
+<!--
+_name: audioCodecsVec_
+_type: vector< string >_
+_access: protected_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int audioDeviceID
+
+<!--
+_name: audioDeviceID_
+_type: int_
+_access: protected_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###vector< string > audioDeviceVec
+
+<!--
+_name: audioDeviceVec_
+_type: vector< string >_
+_access: protected_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool bPreview
+
+<!--
+_name: bPreview_
+_type: bool_
+_access: protected_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool bUseAudio
+
+<!--
+_name: bUseAudio_
+_type: bool_
+_access: protected_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void * grabber
+
+<!--
+_name: grabber_
+_type: void *_
+_access: protected_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool isInited
+
+<!--
+_name: isInited_
+_type: bool_
+_access: protected_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofPixelFormat pixelFormat
+
+<!--
+_name: pixelFormat_
+_type: ofPixelFormat_
+_access: protected_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofPixels pixels
+
+<!--
+_name: pixels_
+_type: ofPixels_
+_access: protected_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string videoCodecIDString
+
+<!--
+_name: videoCodecIDString_
+_type: string_
+_access: protected_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###vector< string > videoCodecsVec
+
+<!--
+_name: videoCodecsVec_
+_type: vector< string >_
+_access: protected_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int videoDeviceID
+
+<!--
+_name: videoDeviceID_
+_type: int_
+_access: protected_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###vector< string > videoDeviceVec
+
+<!--
+_name: videoDeviceVec_
+_type: vector< string >_
+_access: protected_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofVideoSavedEventArgs videoSavedEvent
+
+<!--
+_name: videoSavedEvent_
+_type: ofVideoSavedEventArgs_
 _access: public_
-_version_started: 007_
+_version_started: 0072_
 _version_deprecated: _
 _summary: _
 _visible: True_

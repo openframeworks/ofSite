@@ -99,11 +99,14 @@ def getfunctionsfile(filename):
                         state = 'description'
                     elif state == 'description' and line.find('<!----------------------------------------------------------------------------->')==-1 and line!='\n':
                         function.description = function.description + line
-                        
+                                    
+                if(state=='description'):
+                    functionsfile.function_list.append(function)
+                    
     functionsfile.function_list.sort(key=lambda function: function.name)
     return functionsfile
 
-def getclass_list():
+def getclass_list(getTemplated=False):
     class_list = []
     for root, dirs, files in os.walk(os.path.join(documentation_root)):
         for name in files:
@@ -112,8 +115,12 @@ def getclass_list():
                 f = open(os.path.join(root,name),'r')
                 state = 'begin'
                 for line in f:
-                    if state == 'begin' and line.find('#class') == 0 and line.find(file_split[0])!=-1:
-                        class_name = file_split[0]
+                    if state == 'begin' and line.find('#class') == 0 and line.find(file_split[0])!=-1 :
+                        if getTemplated or file_split[0][-1]!="_":
+                            class_name = file_split[0]
+                        elif file_split[0][-1]=="_":
+                            class_name = file_split[0][:-1]
+                        print class_name
                         class_list.append(class_name)
                         f.close()
                         break
@@ -125,7 +132,7 @@ def sort_function(function):
     else:
         return function.name
       
-def getclass(clazz):
+def getclass(clazz, getTemplated=False):
     var = DocsVar(0)
     documentation_clazz = DocsClass(0)
     var.clazz  = clazz
@@ -211,11 +218,58 @@ def getclass(clazz):
                 if state == 'vardescription':
                     documentation_clazz.var_list.append(var)
                 f.close()
-                documentation_clazz.function_list.sort(key= sort_function)
+                
+                if getTemplated:
+                    templatedClazz = getclass(clazz+"_")
+                    if not templatedClazz.new:
+                        print "found templated class " + clazz + "_"
+                        if documentation_clazz.new:
+                            documentation_clazz.id = templatedClazz.id
+                            documentation_clazz.module = templatedClazz.module
+                            documentation_clazz.new = False
+                            documentation_clazz.advanced = templatedClazz.advanced
+                            documentation_clazz.visible = templatedClazz.visible
+                            documentation_clazz.example = templatedClazz.example
+                            documentation_clazz.reference = templatedClazz.reference
+                            documentation_clazz.addons = templatedClazz.addons
+                            documentation_clazz.function_list = templatedClazz.function_list
+                            documentation_clazz.var_list = templatedClazz.var_list
+                        else:
+                            documentation_clazz.function_list.extend(templatedClazz.function_list)
+                            documentation_clazz.var_list.extend(templatedClazz.var_list)
+                            documentation_clazz.reference = documentation_clazz.reference + templatedClazz.reference
+                            documentation_clazz.example = documentation_clazz.example + templatedClazz.example
+                            
+                documentation_clazz.function_list.sort(key=lambda function: function.name)
+                documentation_clazz.var_list.sort(key=lambda variable: variable.name)
+                #documentation_clazz.function_list.sort(key= sort_function)
                 return documentation_clazz   
 
 
-    documentation_clazz.function_list.sort(key= sort_function)
+    if getTemplated:
+        templatedClazz = getclass(clazz+"_")
+        if not templatedClazz.new:
+            print "found templated class " + clazz + "_"
+            if documentation_clazz.new:
+                documentation_clazz.id = templatedClazz.id
+                documentation_clazz.module = templatedClazz.module
+                documentation_clazz.new = False
+                documentation_clazz.advanced = templatedClazz.advanced
+                documentation_clazz.visible = templatedClazz.visible
+                documentation_clazz.example = templatedClazz.example
+                documentation_clazz.reference = templatedClazz.reference
+                documentation_clazz.addons = templatedClazz.addons
+                documentation_clazz.function_list = templatedClazz.function_list
+                documentation_clazz.var_list = templatedClazz.var_list
+            else:
+                documentation_clazz.function_list.extend(templatedClazz.function_list)
+                documentation_clazz.var_list.extend(templatedClazz.var_list)
+                documentation_clazz.reference = documentation_clazz.reference + templatedClazz.reference
+                documentation_clazz.example = documentation_clazz.example + templatedClazz.example
+                
+    #documentation_clazz.function_list.sort(key= sort_function)
+    documentation_clazz.function_list.sort(key=lambda function: function.name)
+    documentation_clazz.var_list.sort(key=lambda variable: variable.name)
     return documentation_clazz
     
     
@@ -238,7 +292,7 @@ def serialize_function(f,function,member):
     f.write("_advanced: " + str(function.advanced)  + "_\n")
     f.write("-->\n\n");
     f.write("_description: _\n\n")
-    f.write(function.description)
+    f.write(function.description.encode('utf-8'))
     f.write('\n\n\n\n\n\n')
     f.write('<!----------------------------------------------------------------------------->\n\n')
 
@@ -256,7 +310,7 @@ def serialize_var(f,var):
     f.write("_advanced: " + str(var.advanced) + "_\n")
     f.write("-->\n\n");
     f.write("_description: _\n\n")
-    f.write(var.description)  
+    f.write(var.description.encode('utf-8'))  
     f.write("\n\n\n\n\n\n")
     f.write('<!----------------------------------------------------------------------------->\n\n')
     
@@ -272,7 +326,7 @@ def setclass(clazz):
     #f.write('##Example\n\n' + clazz.example + '\n\n\n\n')
     
     #f.write('//----------------------\n\n')
-    f.write('##Description\n\n' + clazz.reference + '\n\n\n\n')
+    f.write('##Description\n\n' + clazz.reference.encode('utf-8') + '\n\n\n\n')
 
     #f.write('//----------------------\n\n')
     f.write('##Methods\n\n\n\n')
@@ -300,5 +354,6 @@ def setfunctionsfile(functionfile):
     
     f.write('<!----------------------------------------------------------------------------->\n\n')
     for function in functionfile.function_list:
-        serialize_function(f,function,False)
+        if function.name.find('OF_DEPRECATED_MSG')==-1:
+            serialize_function(f,function,False)
         

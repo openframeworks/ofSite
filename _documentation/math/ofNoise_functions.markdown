@@ -8,6 +8,114 @@
 
 <!----------------------------------------------------------------------------->
 
+###float _slang_library_noise1(x)
+
+<!--
+_syntax: _slang_library_noise1(x)_
+_name: _slang_library_noise1_
+_returns: float_
+_returns_description: _
+_parameters: float x_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float _slang_library_noise2(x, y)
+
+<!--
+_syntax: _slang_library_noise2(x, y)_
+_name: _slang_library_noise2_
+_returns: float_
+_returns_description: _
+_parameters: float x, float y_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float _slang_library_noise3(x, y, z)
+
+<!--
+_syntax: _slang_library_noise3(x, y, z)_
+_name: _slang_library_noise3_
+_returns: float_
+_returns_description: _
+_parameters: float x, float y, float z_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float _slang_library_noise4(x, y, z, w)
+
+<!--
+_syntax: _slang_library_noise4(x, y, z, w)_
+_name: _slang_library_noise4_
+_returns: float_
+_returns_description: _
+_parameters: float x, float y, float z, float w_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###float grad1(hash, x)
 
 <!--
@@ -97,87 +205,6 @@ _name: grad4_
 _returns: float_
 _returns_description: _
 _parameters: int hash, float x, float y, float z, float t_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float _slang_library_noise1(x)
-
-<!--
-_syntax: _slang_library_noise1(x)_
-_name: _slang_library_noise1_
-_returns: float_
-_returns_description: _
-_parameters: float x_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float _slang_library_noise2(x, y)
-
-<!--
-_syntax: _slang_library_noise2(x, y)_
-_name: _slang_library_noise2_
-_returns: float_
-_returns_description: _
-_parameters: float x, float y_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float _slang_library_noise3(x, y, z)
-
-<!--
-_syntax: _slang_library_noise3(x, y, z)_
-_name: _slang_library_noise3_
-_returns: float_
-_returns_description: _
-_parameters: float x, float y, float z_
 _version_started: _
 _version_deprecated: _
 _summary: _
