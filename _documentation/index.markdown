@@ -716,175 +716,7 @@ grad4(...)
 
 
 
-##video##
 
-
-###ofGstVideoGrabber###
-
-__visible: false__
-
-__advanced: false__
-
-__functions__
-
-
-
-
-###ofGstAppSink###
-
-__visible: false__
-
-__advanced: false__
-
-__functions__
-
-
-
-
-###ofQuickTimePlayer###
-
-__visible: false__
-
-__advanced: false__
-
-__functions__
-
-
-
-
-###ofGstUtils###
-
-__visible: false__
-
-__advanced: false__
-
-__functions__
-
-
-
-
-###ofiPhoneVideoPlayer###
-
-__visible: false__
-
-__advanced: false__
-
-__functions__
-
-
-
-
-###ofGstVideoPlayer###
-
-__visible: false__
-
-__advanced: false__
-
-__functions__
-
-
-
-
-###ofGstVideoUtils###
-
-__visible: false__
-
-__advanced: false__
-
-__functions__
-
-
-
-
-###ofVideoPlayer###
-
-__visible: true__
-
-__advanced: false__
-
-__functions__
-
-
-
-
-###ofVideoGrabber###
-
-__visible: true__
-
-__advanced: false__
-
-__functions__
-
-
-
-
-###ofDirectShowGrabber###
-
-__visible: false__
-
-__advanced: false__
-
-__functions__
-
-
-
-
-###ofiPhoneVideoGrabber###
-
-__visible: false__
-
-__advanced: false__
-
-__functions__
-
-
-
-
-###ofQuickTimeGrabber###
-
-__visible: true__
-
-__advanced: true__
-
-__functions__
-
-
-
-
-###ofVideoSavedEventArgs###
-
-__visible: true__
-
-__advanced: true__
-
-__functions__
-
-
-
-
-###ofQTKitPlayer###
-
-__visible: true__
-
-__advanced: true__
-
-__functions__
-
-
-
-
-###ofQTKitGrabber###
-
-__visible: true__
-
-__advanced: true__
-
-__functions__
-
-
-
-
-//----------------------
 
 
 
@@ -1558,15 +1390,87 @@ __functions__
 
 //----------------------
 
+##video##
+
+
+###ofGstVideoGrabber###
+
+__visible: false__
+
+__advanced: false__
+
+__functions__
 
 
 
 
+###ofGstAppSink###
 
-##events##
+__visible: false__
+
+__advanced: false__
+
+__functions__
 
 
-###ofKeyEventArgs###
+
+
+###ofQuickTimePlayer###
+
+__visible: false__
+
+__advanced: false__
+
+__functions__
+
+
+
+
+###ofGstUtils###
+
+__visible: false__
+
+__advanced: false__
+
+__functions__
+
+
+
+
+###ofiPhoneVideoPlayer###
+
+__visible: false__
+
+__advanced: false__
+
+__functions__
+
+
+
+
+###ofGstVideoPlayer###
+
+__visible: false__
+
+__advanced: false__
+
+__functions__
+
+
+
+
+###ofGstVideoUtils###
+
+__visible: false__
+
+__advanced: false__
+
+__functions__
+
+
+
+
+###ofVideoPlayer###
 
 __visible: true__
 
@@ -1577,7 +1481,7 @@ __functions__
 
 
 
-###ofAudioEventArgs###
+###ofVideoGrabber###
 
 __visible: true__
 
@@ -1588,20 +1492,9 @@ __functions__
 
 
 
-###ofCoreEvents###
+###ofDirectShowGrabber###
 
-__visible: true__
-
-__advanced: false__
-
-__functions__
-
-
-
-
-###ofEventArgs###
-
-__visible: true__
+__visible: false__
 
 __advanced: false__
 
@@ -1610,20 +1503,9 @@ __functions__
 
 
 
-###ofEvent###
+###ofiPhoneVideoGrabber###
 
-__visible: true__
-
-__advanced: false__
-
-__functions__
-
-
-
-
-###ofMouseEventArgs###
-
-__visible: true__
+__visible: false__
 
 __advanced: false__
 
@@ -1632,52 +1514,56 @@ __functions__
 
 
 
-###ofResizeEventArgs###
+###ofQuickTimeGrabber###
 
 __visible: true__
 
-__advanced: false__
+__advanced: true__
 
 __functions__
 
 
 
 
-###ofEvents###
+###ofVideoSavedEventArgs###
 
 __visible: true__
 
-__advanced: false__
+__advanced: true__
 
 __functions__
-ofGetKeyPressed(...)
 
-ofGetMousePressed(...)
 
-ofGetMouseX()
 
-ofGetMouseY()
 
-ofGetPreviousMouseX()
-
-ofGetPreviousMouseY()
-
-ofSetEscapeQuitsApp(...)
-
-###ofEventUtils###
+###ofQTKitPlayer###
 
 __visible: true__
 
-__advanced: false__
+__advanced: true__
 
 __functions__
-ofAddListener(...)
 
-ofNotifyEvent(...)
 
-ofRemoveListener(...)
+
+
+###ofQTKitGrabber###
+
+__visible: true__
+
+__advanced: true__
+
+__functions__
+
+
+
 
 //----------------------
+
+
+
+
+
 
 
 
@@ -1971,7 +1857,121 @@ __functions__
 
 //----------------------
 
+##events##
 
+
+###ofKeyEventArgs###
+
+__visible: true__
+
+__advanced: false__
+
+__functions__
+
+
+
+
+###ofAudioEventArgs###
+
+__visible: true__
+
+__advanced: false__
+
+__functions__
+
+
+
+
+###ofCoreEvents###
+
+__visible: true__
+
+__advanced: false__
+
+__functions__
+
+
+
+
+###ofEventArgs###
+
+__visible: true__
+
+__advanced: false__
+
+__functions__
+
+
+
+
+###ofEvent###
+
+__visible: true__
+
+__advanced: false__
+
+__functions__
+
+
+
+
+###ofMouseEventArgs###
+
+__visible: true__
+
+__advanced: false__
+
+__functions__
+
+
+
+
+###ofResizeEventArgs###
+
+__visible: true__
+
+__advanced: false__
+
+__functions__
+
+
+
+
+###ofEvents###
+
+__visible: true__
+
+__advanced: false__
+
+__functions__
+ofGetKeyPressed(...)
+
+ofGetMousePressed(...)
+
+ofGetMouseX()
+
+ofGetMouseY()
+
+ofGetPreviousMouseX()
+
+ofGetPreviousMouseY()
+
+ofSetEscapeQuitsApp(...)
+
+###ofEventUtils###
+
+__visible: true__
+
+__advanced: false__
+
+__functions__
+ofAddListener(...)
+
+ofNotifyEvent(...)
+
+ofRemoveListener(...)
+
+//----------------------
 
 
 
