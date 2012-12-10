@@ -1376,6 +1376,60 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void ofDrawBitmapStringHighlight(text, &position, &background = ofColor
+
+<!--
+_syntax: ofDrawBitmapStringHighlight(text, &position, &background = ofColor_
+_name: ofDrawBitmapStringHighlight_
+_returns: void_
+_returns_description: _
+_parameters: string text, const ofPoint &position, const ofColor &background=ofColor_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawBitmapStringHighlight(text, x, y, &background = ofColor
+
+<!--
+_syntax: ofDrawBitmapStringHighlight(text, x, y, &background = ofColor_
+_name: ofDrawBitmapStringHighlight_
+_returns: void_
+_returns_description: _
+_parameters: string text, int x, int y, const ofColor &background=ofColor_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void ofEllipse(x,y,w,h)
 
 <!--
@@ -4005,6 +4059,33 @@ _name: ofViewport_
 _returns: void_
 _returns_description: _
 _parameters: float x=0, float y=0, float width=0, float height=0, bool invertY=true_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool ofbClearBg()
+
+<!--
+_syntax: ofbClearBg()_
+_name: ofbClearBg_
+_returns: bool_
+_returns_description: _
+_parameters: _
 _version_started: _
 _version_deprecated: _
 _summary: _

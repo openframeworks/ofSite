@@ -464,7 +464,7 @@ __advanced: false__
 
 ###ofImage_###
 __visible: true__
-__advanced: false__
+__advanced: true__
 
 
 ###ofCairoRenderer###
@@ -474,7 +474,7 @@ __advanced: true__
 
 ###ofPixels_###
 __visible: true__
-__advanced: false__
+__advanced: true__
 
 
 ###ofRendererCollection###
@@ -492,7 +492,7 @@ ___column___
 
 ###ofColor_###
 __visible: true__
-__advanced: false__
+__advanced: true__
 
 
 ###ofAbstractHasPixels###

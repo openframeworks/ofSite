@@ -2008,3 +2008,30 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###string ofVAArgsToString(*format, args)
+
+<!--
+_syntax: ofVAArgsToString(*format, args)_
+_name: ofVAArgsToString_
+_returns: string_
+_returns_description: _
+_parameters: const char *format, va_list args_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+

@@ -89,3 +89,30 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###string ofSystemTextBoxDialog(question, text = "")
+
+<!--
+_syntax: ofSystemTextBoxDialog(question, text = "")_
+_name: ofSystemTextBoxDialog_
+_returns: string_
+_returns_description: _
+_parameters: string question, string text=""_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+

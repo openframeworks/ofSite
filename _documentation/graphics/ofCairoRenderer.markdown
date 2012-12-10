@@ -908,6 +908,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofFloatColor getBgColor()
@@ -1052,6 +1053,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofHandednessType getCoordHandedness()
@@ -1160,6 +1162,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -2094,6 +2097,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void setup(filename, type = ofCairoRenderer
@@ -2473,6 +2477,35 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void setup(filename, type = ofCairoRenderer
+
+<!--
+_syntax: setup(filename, type = ofCairoRenderer_
+_name: setup_
+_returns: void_
+_returns_description: _
+_parameters: string filename, Type type=ofCairoRenderer_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void setup(filename, type = ofCairoRenderer::FROM_FILE_EXTENSION, multiPage = true, b3D = false, viewport = ofRectangle(0, 0, 0, 0))
 
 <!--
@@ -2549,6 +2582,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -2664,6 +2698,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -3077,6 +3112,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofPixels imageBuffer
@@ -3094,6 +3130,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -3368,6 +3405,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 

@@ -84,7 +84,13 @@ def run():
         
     classes = markdown_file.getclass_list()
     for clazz_name in classes:
-        clazz = markdown_file.getclass(clazz_name)
+        clazz = markdown_file.getclass(clazz_name,True)
+        methods_to_remove = []
+        for method in clazz.function_list:
+            if method.name==clazz.name or method.name[0]=="~":
+                methods_to_remove.append(method)
+        for method in methods_to_remove:
+            clazz.function_list.remove(method)
         functions_file = markdown_file.getfunctionsfile(clazz_name)
         #print clazz.name
         #print clazz.function_list

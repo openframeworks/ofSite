@@ -45,6 +45,64 @@ _syntax: OF_DEPRECATED_MSG(instead", &verts))_
 _name: OF_DEPRECATED_MSG_
 _returns: _
 _returns_description: _
+_parameters: "Use ofPolyline_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### OF_DEPRECATED_MSG(instead", *verts, numverts))
+
+<!--
+_syntax: OF_DEPRECATED_MSG(instead", *verts, numverts))_
+_name: OF_DEPRECATED_MSG_
+_returns: _
+_returns_description: _
+_parameters: "Use ofPolyline_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### OF_DEPRECATED_MSG(instead", &verts))
+
+<!--
+_syntax: OF_DEPRECATED_MSG(instead", &verts))_
+_name: OF_DEPRECATED_MSG_
+_returns: _
+_returns_description: _
 _parameters: "Use ofPolyline::addVertices instead", void addVertexes(const vector< ofPoint > &verts)_
 _access: public_
 _version_started: 0072_
@@ -276,6 +334,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void addVertices(*verts, numverts)
@@ -297,6 +356,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -843,6 +903,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 

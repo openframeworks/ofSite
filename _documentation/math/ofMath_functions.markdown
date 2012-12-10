@@ -1241,3 +1241,30 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###float ofWrapRadians(angle, from = -PI, to = +PI)
+
+<!--
+_syntax: ofWrapRadians(angle, from = -PI, to = +PI)_
+_name: ofWrapRadians_
+_returns: float_
+_returns_description: _
+_parameters: float angle, float from=-PI, float to=+PI_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+

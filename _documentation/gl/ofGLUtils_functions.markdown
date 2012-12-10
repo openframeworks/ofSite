@@ -116,3 +116,30 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###ofPrimitiveMode ofGetOFPrimitiveMode(mode)
+
+<!--
+_syntax: ofGetOFPrimitiveMode(mode)_
+_name: ofGetOFPrimitiveMode_
+_returns: ofPrimitiveMode_
+_returns_description: _
+_parameters: GLuint mode_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+

@@ -40,6 +40,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void alignTo(&targetRect, sharedHorzAnchor = OF_ALIGN_HORZ_CENTER, sharedVertAnchor = OF_ALIGN_VERT_CENTER)
@@ -61,6 +62,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -96,6 +98,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void alignToHorz(&targetX, thisHorzAnchor = OF_ALIGN_HORZ_CENTER)
@@ -117,6 +120,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -152,6 +156,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void alignToHorz(&targetRect, targetHorzAnchor, thisHorzAnchor)
@@ -173,6 +178,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -208,6 +214,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void alignToVert(&targetRect, sharedAnchor = OF_ALIGN_VERT_CENTER)
@@ -229,6 +236,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -264,6 +272,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###float getArea()
@@ -285,6 +294,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -320,6 +330,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###float getBottom()
@@ -341,6 +352,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -376,6 +388,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofPoint getBottomRight()
@@ -397,6 +410,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -461,6 +475,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###float getHorzAnchor(anchor)
@@ -482,6 +497,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -517,6 +533,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###float getLeft()
@@ -538,6 +555,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -573,6 +591,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###float getMaxX()
@@ -594,6 +613,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -629,6 +649,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofPoint getMin()
@@ -650,6 +671,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -685,6 +707,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###float getMinY()
@@ -706,6 +729,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -741,6 +765,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofPoint getPosition()
@@ -762,6 +787,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -797,6 +823,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###float getRight()
@@ -818,6 +845,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -853,6 +881,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###float getTop()
@@ -874,6 +903,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -909,6 +939,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofPoint getTopRight()
@@ -930,6 +961,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -965,6 +997,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###float getVertAnchor(anchor)
@@ -986,6 +1019,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -1021,6 +1055,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###float getX()
@@ -1042,6 +1077,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -1077,6 +1113,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void growToInclude(px, py)
@@ -1098,6 +1135,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -1133,6 +1171,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void growToInclude(&rect)
@@ -1161,6 +1200,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void growToInclude(&p0, &p1)
@@ -1182,6 +1222,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -1275,6 +1316,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool inside(&p0, &p1)
@@ -1296,6 +1338,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -1331,6 +1374,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool intersects(&p0, &p1)
@@ -1352,6 +1396,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -1387,6 +1432,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool isStandardized()
@@ -1408,6 +1454,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -1559,6 +1606,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool operator!=(&r)
@@ -1703,6 +1751,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void scale(sX, sY)
@@ -1724,6 +1773,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -1759,6 +1809,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void scaleFromCenter(s)
@@ -1780,6 +1831,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -1815,6 +1867,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void scaleFromCenter(&s)
@@ -1836,6 +1889,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -1871,6 +1925,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void scaleTo(&targetRect, scaleMode = OF_SCALEMODE_FIT)
@@ -1892,6 +1947,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -1927,6 +1983,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void scaleTo(&targetRect, subjectAspectRatioMode, modelHorzAnchor, modelVertAnchor, subjectHorzAnchor, subjectVertAnchor)
@@ -1955,6 +2012,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void scaleWidth(sX)
@@ -1976,6 +2034,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -2098,6 +2157,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void setFromCenter(px, py, w, h)
@@ -2184,6 +2244,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void setPosition(px, py)
@@ -2205,6 +2266,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -2240,6 +2302,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void setWidth(w)
@@ -2261,6 +2324,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -2296,6 +2360,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void setY(py)
@@ -2317,6 +2382,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -2352,6 +2418,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void translate(dx, dy)
@@ -2373,6 +2440,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -2408,6 +2476,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void translateX(dx)
@@ -2436,6 +2505,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void translateY(dy)
@@ -2457,6 +2527,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -2541,6 +2612,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 

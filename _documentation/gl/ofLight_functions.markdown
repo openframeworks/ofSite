@@ -170,3 +170,30 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void ofSetSmoothLighting(b)
+
+<!--
+_syntax: ofSetSmoothLighting(b)_
+_name: ofSetSmoothLighting_
+_returns: void_
+_returns_description: _
+_parameters: bool b_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+

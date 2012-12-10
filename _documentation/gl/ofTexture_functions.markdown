@@ -441,3 +441,30 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void ofSetTextureWrap(wrapS = GL_CLAMP_TO_EDGE, wrapT = GL_CLAMP_TO_EDGE)
+
+<!--
+_syntax: ofSetTextureWrap(wrapS = GL_CLAMP_TO_EDGE, wrapT = GL_CLAMP_TO_EDGE)_
+_name: ofSetTextureWrap_
+_returns: void_
+_returns_description: _
+_parameters: GLfloat wrapS=GL_CLAMP_TO_EDGE, GLfloat wrapT=GL_CLAMP_TO_EDGE_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+

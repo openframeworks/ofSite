@@ -3368,6 +3368,180 @@ _description: _
 
 <!--
 _syntax: ofImage_()_
+_name: ofImage_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofImage_(&pix)
+
+<!--
+_syntax: ofImage_(&pix)_
+_name: ofImage_
+_returns: _
+_returns_description: _
+_parameters: const ofPixels_< PixelType > &pix_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofImage_(&file)
+
+<!--
+_syntax: ofImage_(&file)_
+_name: ofImage_
+_returns: _
+_returns_description: _
+_parameters: const ofFile &file_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofImage_(&filename)
+
+<!--
+_syntax: ofImage_(&filename)_
+_name: ofImage_
+_returns: _
+_returns_description: _
+_parameters: const string &filename_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofImage_(&mom)
+
+<!--
+_syntax: ofImage_(&mom)_
+_name: ofImage_
+_returns: _
+_returns_description: _
+_parameters: const ofImage_< PixelType > &mom_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofImage_(&mom)
+
+<!--
+_syntax: ofImage_(&mom)_
+_name: ofImage_
+_returns: _
+_returns_description: _
+_parameters: const ofImage_< SrcType > &mom_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofImage_()
+
+<!--
+_syntax: ofImage_()_
 _name: ofImage__
 _returns: _
 _returns_description: _
@@ -4684,6 +4858,35 @@ _returns_description: _
 _parameters: _
 _access: public_
 _version_started: 0071_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ~ofImage_()
+
+<!--
+_syntax: ~ofImage_()_
+_name: ~ofImage_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
 _version_deprecated: _
 _summary: _
 _constant: False_

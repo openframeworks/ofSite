@@ -197,3 +197,30 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###float grad4(hash, x, y, z, t)
+
+<!--
+_syntax: grad4(hash, x, y, z, t)_
+_name: grad4_
+_returns: float_
+_returns_description: _
+_parameters: int hash, float x, float y, float z, float t_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
