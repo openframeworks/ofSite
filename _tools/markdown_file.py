@@ -42,7 +42,7 @@ def list_all_files(module=''):
     
 def addfield(method,line):
     field = line.split(':')[0].lstrip('_').rstrip(' ')
-    value = line.split(':')[1].lstrip(' ').rstrip('\n').rstrip('\r').rstrip('_')
+    value = line.split(':')[1].lstrip(' ').rstrip('\n').rstrip('\r')[:-1]
     if field=='constant' or field=='advanced' or field=='visible' or field=='static':
         value = ((value == '1') or (value == 'True') or (value=='true') or (value=='TRUE'))
     #print field, "=", value
@@ -266,7 +266,7 @@ def getclass(clazz, getTemplated=False):
                 documentation_clazz.var_list.extend(templatedClazz.var_list)
                 documentation_clazz.reference = documentation_clazz.reference + templatedClazz.reference
                 documentation_clazz.example = documentation_clazz.example + templatedClazz.example
-                
+    
     #documentation_clazz.function_list.sort(key= sort_function)
     documentation_clazz.function_list.sort(key=lambda function: function.name)
     documentation_clazz.var_list.sort(key=lambda variable: variable.name)
