@@ -12,63 +12,6 @@
 
 
 
-### OF_DEPRECATED_MSG(instead.", const)
-
-<!--
-_syntax: OF_DEPRECATED_MSG(instead.", const)_
-_name: OF_DEPRECATED_MSG_
-_returns: _
-_returns_description: _
-_parameters: "Use ofVec4f_
-_access: public_
-_version_started: 0072_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### OF_DEPRECATED_MSG(instead.", const)
-
-<!--
-_syntax: OF_DEPRECATED_MSG(instead.", const)_
-_name: OF_DEPRECATED_MSG_
-_returns: _
-_returns_description: _
-_parameters: "Use ofVec4f::lengthSquared() instead.", float squareLength() const_
-_access: public_
-_version_started: 0072_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###ofVec4f average(*points, num)
 
 <!--

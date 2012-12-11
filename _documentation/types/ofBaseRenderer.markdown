@@ -1114,6 +1114,146 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void loadIdentityMatrix(void)
+
+<!--
+_syntax: loadIdentityMatrix(void)_
+_name: loadIdentityMatrix_
+_returns: void_
+_returns_description: _
+_parameters: void_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void loadMatrix(&m)
+
+<!--
+_syntax: loadMatrix(&m)_
+_name: loadMatrix_
+_returns: void_
+_returns_description: _
+_parameters: const ofMatrix4x4 &m_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void loadMatrix(*m)
+
+<!--
+_syntax: loadMatrix(*m)_
+_name: loadMatrix_
+_returns: void_
+_returns_description: _
+_parameters: const float *m_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void multMatrix(&m)
+
+<!--
+_syntax: multMatrix(&m)_
+_name: multMatrix_
+_returns: void_
+_returns_description: _
+_parameters: const ofMatrix4x4 &m_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void multMatrix(*m)
+
+<!--
+_syntax: multMatrix(*m)_
+_name: multMatrix_
+_returns: void_
+_returns_description: _
+_parameters: const float *m_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void popMatrix()
 
 <!--

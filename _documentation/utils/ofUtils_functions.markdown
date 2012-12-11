@@ -257,12 +257,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###unsigned long ofGetElapsedTimeMicros()
+###unsigned long long ofGetElapsedTimeMicros()
 
 <!--
 _syntax: ofGetElapsedTimeMicros()_
 _name: ofGetElapsedTimeMicros_
-_returns: unsigned long_
+_returns: unsigned long long_
 _returns_description: _
 _parameters: _
 _version_started: _
@@ -284,12 +284,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###unsigned long ofGetElapsedTimeMillis()
+###unsigned long long ofGetElapsedTimeMillis()
 
 <!--
 _syntax: ofGetElapsedTimeMillis()_
 _name: ofGetElapsedTimeMillis_
-_returns: unsigned long_
+_returns: unsigned long long_
 _returns_description: _
 _parameters: _
 _version_started: 006_
@@ -473,12 +473,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###unsigned long ofGetSystemTime()
+###unsigned long long ofGetSystemTime()
 
 <!--
 _syntax: ofGetSystemTime()_
 _name: ofGetSystemTime_
-_returns: unsigned long_
+_returns: unsigned long long_
 _returns_description: _
 _parameters: _
 _version_started: 006_
@@ -500,12 +500,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###unsigned long ofGetSystemTimeMicros()
+###unsigned long long ofGetSystemTimeMicros()
 
 <!--
 _syntax: ofGetSystemTimeMicros()_
 _name: ofGetSystemTimeMicros_
-_returns: unsigned long_
+_returns: unsigned long long_
 _returns_description: _
 _parameters: _
 _version_started: _

@@ -1376,14 +1376,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofDrawBitmapStringHighlight(text, &position, &background = ofColor
+###void ofDrawBitmapStringHighlight(text, &position, &background = ofColor::black, &foreground = ofColor::white)
 
 <!--
-_syntax: ofDrawBitmapStringHighlight(text, &position, &background = ofColor_
+_syntax: ofDrawBitmapStringHighlight(text, &position, &background = ofColor::black, &foreground = ofColor::white)_
 _name: ofDrawBitmapStringHighlight_
 _returns: void_
 _returns_description: _
-_parameters: string text, const ofPoint &position, const ofColor &background=ofColor_
+_parameters: string text, const ofPoint &position, const ofColor &background=ofColor::black, const ofColor &foreground=ofColor::white_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -1403,14 +1403,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofDrawBitmapStringHighlight(text, x, y, &background = ofColor
+###void ofDrawBitmapStringHighlight(text, x, y, &background = ofColor::black, &foreground = ofColor::white)
 
 <!--
-_syntax: ofDrawBitmapStringHighlight(text, x, y, &background = ofColor_
+_syntax: ofDrawBitmapStringHighlight(text, x, y, &background = ofColor::black, &foreground = ofColor::white)_
 _name: ofDrawBitmapStringHighlight_
 _returns: void_
 _returns_description: _
-_parameters: string text, int x, int y, const ofColor &background=ofColor_
+_parameters: string text, int x, int y, const ofColor &background=ofColor::black, const ofColor &foreground=ofColor::white_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -2048,6 +2048,141 @@ _name: ofLine_
 _returns: void_
 _returns_description: _
 _parameters: const ofPoint &p1, const ofPoint &p2_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofLoadIdentityMatrix(void)
+
+<!--
+_syntax: ofLoadIdentityMatrix(void)_
+_name: ofLoadIdentityMatrix_
+_returns: void_
+_returns_description: _
+_parameters: void_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofLoadMatrix(&m)
+
+<!--
+_syntax: ofLoadMatrix(&m)_
+_name: ofLoadMatrix_
+_returns: void_
+_returns_description: _
+_parameters: const ofMatrix4x4 &m_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofLoadMatrix(*m)
+
+<!--
+_syntax: ofLoadMatrix(*m)_
+_name: ofLoadMatrix_
+_returns: void_
+_returns_description: _
+_parameters: const float *m_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofMultMatrix(&m)
+
+<!--
+_syntax: ofMultMatrix(&m)_
+_name: ofMultMatrix_
+_returns: void_
+_returns_description: _
+_parameters: const ofMatrix4x4 &m_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofMultMatrix(*m)
+
+<!--
+_syntax: ofMultMatrix(*m)_
+_name: ofMultMatrix_
+_returns: void_
+_returns_description: _
+_parameters: const float *m_
 _version_started: _
 _version_deprecated: _
 _summary: _

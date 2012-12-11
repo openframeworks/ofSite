@@ -19,63 +19,6 @@ ofVideoPlayer myPlayer;
 
 
 
-### OF_DEPRECATED_MSG(instead.", idleMovie())
-
-<!--
-_syntax: OF_DEPRECATED_MSG(instead.", idleMovie())_
-_name: OF_DEPRECATED_MSG_
-_returns: _
-_returns_description: _
-_parameters: "Use ofVideoPlayer_
-_access: public_
-_version_started: 0072_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### OF_DEPRECATED_MSG(instead.", idleMovie())
-
-<!--
-_syntax: OF_DEPRECATED_MSG(instead.", idleMovie())_
-_name: OF_DEPRECATED_MSG_
-_returns: _
-_returns_description: _
-_parameters: "Use ofVideoPlayer::update() instead.", void idleMovie()_
-_access: public_
-_version_started: 0072_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###bool allocate()
 
 <!--

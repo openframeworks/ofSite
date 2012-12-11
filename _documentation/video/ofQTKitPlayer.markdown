@@ -12,64 +12,6 @@
 
 
 
-### OF_DEPRECATED_MSG(! =  OF_QTKIT_DECODE_PIXELS_ONLY.", bind())
-
-<!--
-_syntax: OF_DEPRECATED_MSG(! =  OF_QTKIT_DECODE_PIXELS_ONLY.", bind())_
-_name: OF_DEPRECATED_MSG_
-_returns: _
-_returns_description: _
-_parameters: "Use getTexture()->bind() instead. Ensure decodeMode != OF_QTKIT_DECODE_PIXELS_ONLY.", void bind()_
-_access: public_
-_version_started: 0072_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### OF_DEPRECATED_MSG(! =  OF_QTKIT_DECODE_PIXELS_ONLY.", unbind())
-
-<!--
-_syntax: OF_DEPRECATED_MSG(! =  OF_QTKIT_DECODE_PIXELS_ONLY.", unbind())_
-_name: OF_DEPRECATED_MSG_
-_returns: _
-_returns_description: _
-_parameters: "Use getTexture()->unbind() instead. Ensure decodeMode != OF_QTKIT_DECODE_PIXELS_ONLY.", void unbind()_
-_access: public_
-_version_started: 0072_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void close()
 
 <!--
