@@ -87,7 +87,7 @@ def run():
         clazz = markdown_file.getclass(clazz_name,True)
         methods_to_remove = []
         for method in clazz.function_list:
-            if method.name==clazz.name or method.name[0]=="~":
+            if method.name==clazz.name or method.name[0]=="~" or method.name.find("OF_DEPRECATED_MSG")!=-1:
                 methods_to_remove.append(method)
         for method in methods_to_remove:
             clazz.function_list.remove(method)
@@ -106,6 +106,12 @@ def run():
         if functionfile_name in classes:
             continue
         functions_file = markdown_file.getfunctionsfile(functionfile_name)
+        functions_to_remove = []
+        for function in functions_file.function_list:
+            if function.name.find("OF_DEPRECATED_MSG")!=-1:
+                functions_to_remove.append(method)
+        for function in functions_to_remove:
+            functions_file.function_list.remove(method)
         env = {
             "modulename": functions_file.name,
             "clazz": None,
