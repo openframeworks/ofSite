@@ -42,7 +42,12 @@ def list_all_files(module=''):
     
 def addfield(method,line):
     field = line.split(':')[0].lstrip('_').rstrip(' ')
-    value = line.split(':')[1].lstrip(' ').rstrip('\n').rstrip('\r')[:-1]
+    value = line.split(':')[1]
+    if len(line.split(':'))>2:
+        for text in line.split(':')[2:]:
+            value = value + ":" + text
+    
+    value = value.lstrip(' ').rstrip('\n').rstrip('\r')[:-1]
     if field=='constant' or field=='advanced' or field=='visible' or field=='static':
         value = ((value == '1') or (value == 'True') or (value=='true') or (value=='TRUE'))
     #print field, "=", value
