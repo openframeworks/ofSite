@@ -89,6 +89,13 @@ def serialize_functionsfile(filename):
             
             for function in thisfile_missing_functions:
                 functionsfile.function_list.remove(function)
+                
+            deprecated_functions = []
+            for function in functionsfile.function_list:
+                if function.name.find("OF_DEPRECATED_MSG")!=-1:
+                    deprecated_functions.append(function)
+            for function in deprecated_functions:
+                functionsfile.function_list.remove(function);
                         
             functionsfile.function_list.sort(key=lambda function: function.name)
             setfunctionsfile(functionsfile)
@@ -137,7 +144,7 @@ def serialize_class(filename):
                             var.type = member.type.ref.text if hasattr(member.type,'ref') else member.type.text
                             documentation_class.var_list.append(var)
                         #f.write( str(member.type.text) + " " + str(member.name.text) + "\n" )
-                    if member.get("kind") == 'function':
+                    if member.get("kind") == 'function' and member.name.text.find("OF_DEPRECATED_MSG")==-1:
                         argstring = str(member.argsstring.text)
                         params = argstring[argstring.find('(')+1:argstring.rfind(')')]
                         returns = member.type.ref.text if hasattr(member.type,'ref') else member.type.text
@@ -150,11 +157,25 @@ def serialize_class(filename):
                         #method.description = method.description.replace("~~~~{.brush: cpp}","~~~~{.cpp}").replace('</pre>',"~~~~")
                         method.description = method.description.replace('<p>','').replace('</p>','').replace('<code>','').replace('</code>','').replace('<pre>','')
                         if method.new:
+                            print "new method " + method.name + " in " + method.clazz
                             method.version_started = currentversion
                         #f.write( str(member.type.text) + " " + str(member.name.text) + str(member.argsstring.text) + "\n" )
+                    """if member.name.text.find("OF_DEPRECATED_MSG")!=-1:
+                        print "found deprecated function " + member.name.text
+                        print "argstring = " + str(member.argsstring.text)
+                        print "params = " + member.argsstring.text[member.argsstring.text.find('(')+1:member.argsstring.text.rfind(')')]
+                        returns = member.type.ref.text if hasattr(member.type,'ref') else member.type.text
+                        print "returns = " + ("" if returns is None else returns)"""
                     #f.write( "$$/code\n\n\n\n" )
     
     #f.close()
+    deprecated_methods = []
+    for method in documentation_class.function_list:
+        if method.name.find("OF_DEPRECATED_MSG")!=-1:
+            deprecated_methods.append(method)
+    for method in deprecated_methods:
+        documentation_class.function_list.remove(method);
+        
     documentation_class.function_list.sort(key=lambda function: function.name)
     documentation_class.var_list.sort(key=lambda variable: variable.name)
     setclass(documentation_class)
