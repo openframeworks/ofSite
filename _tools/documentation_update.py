@@ -18,7 +18,7 @@ documentation_root = '/home/arturo/Documents/ofSite/documentation/'
 
 missing_functions = []
 
-currentversion = "0072"
+currentversion = "0073"
 
 
 def update_moved_functions(filename):
