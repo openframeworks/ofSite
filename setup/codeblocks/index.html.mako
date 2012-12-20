@@ -8,9 +8,9 @@ We like codeblocks for windows development since it's light weight, and avoids s
 
 **a) download code::blocks binary (latest release)**
 
-[Download Code::Blocks][0] note: download WITH mingw.   The version 10.05, works well. 
+[Download Code::Blocks][0] note: download WITH mingw.   Codeblocks version 10.05 works well with OF. 
 
-Note: Currently the new C::B build 12.11 doesn't work with OF. We are working on an update to OF to support 12.11, but in the meantime please download version 10.05. 
+Note: The new Codeblocks build (12.11) doesn't work with OF. We are working on an update to support 12.11, but in the meantime please download version 10.05. 
 
 
 ![a_download](codeblocks.png)  
