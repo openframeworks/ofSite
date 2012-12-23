@@ -365,12 +365,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofTTFCharacter getStringAsPoints(str)
+###vector< ofTTFCharacter > getStringAsPoints(str)
 
 <!--
 _syntax: getStringAsPoints(str)_
 _name: getStringAsPoints_
-_returns: ofTTFCharacter_
+_returns: vector< ofTTFCharacter >_
 _returns_description: _
 _parameters: string str_
 _access: public_
