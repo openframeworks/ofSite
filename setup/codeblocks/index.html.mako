@@ -5,10 +5,13 @@ code::blocks setup guide
 
 
 We like codeblocks for windows development since it's light weight, and avoids some of the quirkiness of windows visual studio. here's a step by step tutorial to get up and running.
+Note: Step e) is required to run OF. Please do not skip this step. 
 
 **a) download code::blocks binary (latest release)**
 
-[Download Code::Blocks][0] note: download WITH mingw.   The latest version 10.05, works well. 
+[Download Code::Blocks][0] note: download WITH mingw.   Codeblocks version 10.05 works well with OF. 
+
+Note: The new Codeblocks build (12.11) doesn't work with OF. We are working on an update to support 12.11, but in the meantime please download version 10.05. 
 
 
 ![a_download](codeblocks.png)  
@@ -56,7 +59,7 @@ here's a quick video which shows what this should look like:  [copying codeblock
 
 **As always have fun!**
 
-[0]: http://www.codeblocks.org/downloads/26
+[0]: http://www.codeblocks.org/downloads/5
 [1]: http://www.openframeworks.cc/content/files/codeblocks_additions.zip
 [2]: http://www.openframeworks.cc/forum/viewtopic.php?f=18&t=793
 
