@@ -82,12 +82,12 @@ _advanced: False_
 _description: _
 
 
-This clamps the values of your color in case they're too high or low for their types, in case you go negative or too use values that are too high, like anything >255.0.
+This clamps the values of your color in case they're too high or low for their types, in case you go negative or too use values that are too high, like anything >1.0 in the case of `ofFloatColor`.
 
 ~~~~{.cpp}
-ofColor c( 255, 0, 0 );
-c.g = 500; // g now has 500: this is usually invalid!
-c.clamp(); // c.g has now been clamped so its value is 255.
+ofFloatColor c( 1, 0, 0 );
+c.g = 2; // g now has 2: this is usually invalid!
+c.clamp(); // c.g has now been clamped so its value is 1.
 ~~~~
 
 
@@ -1095,7 +1095,7 @@ _advanced: False_
 _description: _
 
 
-Sum red, green and blue components separately, ignoring alpha. Automatically clamps the result by calling [clamp](#clamp).
+Sum red, green and blue components separately, ignoring alpha. In the case of integer types, like `ofColor` and `ofShortColor` this operation wraps. In the case of `ofFloatColor`, it automatically clamps the result by calling [clamp](#clamp).
 
 ~~~~{.cpp}
 ofColor c1(64, 64, 0, 128);
@@ -1132,7 +1132,7 @@ _advanced: False_
 _description: _
 
 
-Add `val` to all components except alpha. Automatically clamps the result by calling [clamp](#clamp).
+Add `val` to all components except alpha. In the case of integer types, like `ofColor` and `ofShortColor` this operation wraps. In the case of `ofFloatColor`, it automatically clamps the result by calling [clamp](#clamp).
 
 ~~~~{.cpp}
 ofColor c1(128, 64, 0, 128);
@@ -1168,7 +1168,7 @@ _advanced: False_
 _description: _
 
 
-Addition assignment operator. Adds the contents of `color` (except alpha) to this color. Automatically clamps the result by calling [clamp](#clamp).
+Addition assignment operator. Adds the contents of `color` (except alpha) to this color. In the case of integer types, like `ofColor` and `ofShortColor` this operation wraps. In the case of `ofFloatColor`, it automatically clamps the result by calling [clamp](#clamp).
 
 ~~~~{.cpp}
 ofColor c1(0, 64, 0);
@@ -1205,7 +1205,7 @@ _advanced: False_
 _description: _
 
 
-Addition assignment operator. Adds `val` to all components (except alpha) to this color. Automatically clamps the result by calling [clamp](#clamp).
+Addition assignment operator. Adds `val` to all components (except alpha) to this color. In the case of integer types, like `ofColor` and `ofShortColor` this operation wraps. In the case of `ofFloatColor`, it automatically clamps the result by calling [clamp](#clamp).
 
 ~~~~{.cpp}
 ofColor c1(128, 64, 0);
