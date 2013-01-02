@@ -11,7 +11,7 @@ Right now this is only tested on Linux and OS X. To use it on Windows, check the
 
 To use it you will need Eclipse, the Android SDK, the Android NDK, the Android Eclipse plugin and the openFrameworks for Android package.
 
-Because of the custom build system openFrameworks uses for Android, you may need to use the exact version of the SDK and NDK specified here. For this release you should use SDK 21 and NDK r8c. Later versions will probably work but it's not guaranteed.
+Because of the custom build system openFrameworks uses for Android, you may need to use the exact version of the SDK and NDK specified here. For this release you should use SDK 21 and NDK r8d. Later versions will probably work but it's not guaranteed.
 
 Summary
 -------
@@ -28,9 +28,9 @@ These instructions go into a lot of important detail, but the main steps are:
 Installation
 ------------
 
-**a) Eclipse**: download the C/C++ edition for your platform from here:
+**a) Eclipse**: download the C/C++ edition of Eclipse 4.2 (Juno) for your platform from here:
 
-[http://www.eclipse.org/downloads/][11]
+[http://www.eclipse.org/downloads/packages/eclipse-ide-cc-developers/junosr1][11]
 
 ![eclipse_cdt_download](eclipse_cdt_download.png)
 
@@ -58,11 +58,11 @@ Uncompress it in any folder on your hard disk. Later you'll need to tell the ope
 
 **c) Android NDK**: This is the C/C++ compiler, headers and libraries for Android. 
 
-- OS X: [http://dl.google.com/android/ndk/android-ndk-r8c-darwin-x86.tar.bz2][12]
-- Linux: [http://dl.google.com/android/ndk/android-ndk-r8c-linux-x86.tar.bz2][13]
-- Windows: [http://dl.google.com/android/ndk/android-ndk-r8c-windows.zip][14]
+- OS X: [http://dl.google.com/android/ndk/android-ndk-r8d-darwin-x86.tar.bz2][12]
+- Linux: [http://dl.google.com/android/ndk/android-ndk-r8d-linux-x86.tar.bz2][13]
+- Windows: [http://dl.google.com/android/ndk/android-ndk-r8d-windows.zip][14]
 
-Other versions are available here, but we recommend using r8c for now: 
+Other versions are available here, but we recommend using r8d for now: 
 [http://developer.android.com/sdk/ndk/index.html][3]
 
 There's a bug in the official NDK that makes apps crash on Android 2.1 and lower versions of Android so by now openFrameworks for Android will only work on Android 2.2 and above.
@@ -273,7 +273,7 @@ It's important to keep the package prefix as cc.openframeworks or some things ca
 
 - If it tells you that you're using an obsolete build.xml, delete it and regenerate it using 'android update project -p <path-to-project\>'. The build.xml files in the examples directory should not contain anything especially unique.
 - Are you including addons? They need to be specified in addons.make, and the case of the letters must match exactly (ie, ofxOpenCv works but ofxOpenCV won't work). This error will probably show up as missing header files or symbols.
-- If you're getting a bunch of undeclared reference errors, check which version of the NDK you're using. For this version you should be using NDK r8c.
+- If you're getting a bunch of undeclared reference errors, check which version of the NDK you're using. For this version you should be using NDK r8d.
 - If you get 'com.android.sdklib.build.ApkCreationException: Debug Certificate expired on <date>', you have to 'rm ~/.android/debug.keystore'. A new certificate will be generated automatically.
 
 
@@ -309,8 +309,8 @@ It's important to keep the package prefix as cc.openframeworks or some things ca
 [8]: http://www.multigesture.net/articles/how-to-setup-openframeworks-for-android-on-windows/
 [9]: http://github.com/openframeworks/openFrameworks
 [10]: http://www.undef.ch/uploads/ofDoc/html/classof_log.html
-[11]: http://www.eclipse.org/downloads/
-[12]: http://dl.google.com/android/ndk/android-ndk-r8c-darwin-x86.tar.bz2
-[13]: http://dl.google.com/android/ndk/android-ndk-r8c-linux-x86.tar.bz2
-[14]: http://dl.google.com/android/ndk/android-ndk-r8c-windows.zip
+[11]: http://www.eclipse.org/downloads/packages/eclipse-ide-cc-developers/junosr1
+[12]: http://dl.google.com/android/ndk/android-ndk-r8d-darwin-x86.tar.bz2
+[13]: http://dl.google.com/android/ndk/android-ndk-r8d-linux-x86.tar.bz2
+[14]: http://dl.google.com/android/ndk/android-ndk-r8d-windows.zip
 [15]: https://github.com/kennethreitz/osx-gcc-installer
