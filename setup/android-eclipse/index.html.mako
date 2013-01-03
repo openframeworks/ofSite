@@ -274,6 +274,7 @@ It's important to keep the package prefix as cc.openframeworks or some things ca
 **If the build fails:**
 
 - If it tells you that you're using an obsolete build.xml, delete it and regenerate it using 'android update project -p <path-to-project\>'. The build.xml files in the examples directory should not contain anything especially unique.
+- If Eclipse complains about missing gen/ directories on a project, switch to the Java perspective (Window \> Open Perspective \> Other... \> Java), select the project and clean it (Project \> Clean...). It should re-build itself automatically and generate a gen/ directory (make sure Project \> Build Automatically is enabled).
 - Are you including addons? They need to be specified in addons.make, and the case of the letters must match exactly (ie, ofxOpenCv works but ofxOpenCV won't work). This error will probably show up as missing header files or symbols.
 - If you're getting a bunch of undeclared reference errors, check which version of the NDK you're using. For this version you should be using NDK r8d.
 - If you get 'com.android.sdklib.build.ApkCreationException: Debug Certificate expired on <date>', you have to 'rm ~/.android/debug.keystore'. A new certificate will be generated automatically.
