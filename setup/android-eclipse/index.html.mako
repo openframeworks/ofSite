@@ -135,11 +135,13 @@ Location: https://dl-ssl.google.com/android/eclipse/
 
 Press 'OK' and select the new repository in the "Work with:" drop down box in case it's not already selected.
 
-You will see the SDK plugin in the list called "Developer Tools":
+Under the "Developer Tools" section, select "Android Development Tools" and "Android DDMS". It doesn't hurt to have the other ones, but they're not required.
+
+Under "NDK Plugins", select "Android Native Development Tools".
 
 ![eclipse_android_plugin2](eclipse_android_plugin2-600x522.png)
 
-Select it and press 'Next' until you get to the "Review Licenses" screen. Check the "I accept the terms of the license" checkbox and press 'Finish'. Eclipse will download and install the Android plugin. Once it finishes press 'Yes' in the popup to restart Eclipse.
+Press 'Next' until you get to the "Review Licenses" screen. Check the "I accept the terms of the license" checkbox and press 'Finish'. Eclipse will download and install the Android plugins. Once it finishes press 'Yes' in the popup to restart Eclipse.
 
 **i) Set Eclipse Java compiler compliance to 1.6:**
 
