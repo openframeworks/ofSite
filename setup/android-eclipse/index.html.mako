@@ -139,7 +139,7 @@ Under the "Developer Tools" section, select "Android Development Tools" and "And
 
 Under "NDK Plugins", select "Android Native Development Tools".
 
-![eclipse_android_plugin2](eclipse_android_plugin2-600x522.png)
+![eclipse_android_plugin2](android_ndk_plugins-724x612.png)
 
 Press 'Next' until you get to the "Review Licenses" screen. Check the "I accept the terms of the license" checkbox and press 'Finish'. Eclipse will download and install the Android plugins. Once it finishes press 'Yes' in the popup to restart Eclipse.
 
