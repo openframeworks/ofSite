@@ -93,13 +93,6 @@ Import in this order:
 - openFrameworks/libs/openFrameworks
 - openFrameworks/addons/
 
-The packaged version of openframworks does not include the .project file for these three projects. You have to add them to each folder. The symptoms are that Eclipse does not find a project to import. The GitHub version does not have this problem.
-
-- openFrameworks/libs save [this file][libsProjectFile] as .project file
-- openFrameworks/libs/openFrameworks save [this file][ofProjectFile] as .project file
-- openFrameworks/addons/ save [this file][addonsProjectFile] as .project file.
-
-
 **e) Create an External Tools Configuration to run the projectGeneratorSimple**
 
 Run \> External Tools \> External Tools Configuration
