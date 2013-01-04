@@ -4,7 +4,9 @@ linux eclipse
 =============
 **Note**: see the [FAQ](#faq) at the bottom of this page if you're having trouble.
 
-This guide describes how to get started with openframeworks using Eclipse as IDE. This guide was tested on Ubuntu 12.10 64bit installation with Eclipse Juno(4.2 SR!) and the openFrameworks version of_v0073 for 64bit. Eclipse specific steps may apply to other platforms. 
+This guide describes how to get started with openframeworks using Eclipse as IDE. Eclipse is very powerful, however it is a complex and somewhat resource heavy environment. If you are new and/or want to get started quickly, try using the [code::blocks environment][15] first.
+
+This guide was tested on Ubuntu 12.10 64 bit installation with Eclipse Juno(4.2 SR1) and the openFrameworks version of_v0073 for 64bit. Eclipse specific steps may apply to other platforms. 
 
 To use it you will need Eclipse for C++ and openframeworks.
 
@@ -221,6 +223,8 @@ For openFrameworks/addons/ save [this file][addonsProjectFile] as .project file.
 [12]: http://www.ubuntugeek.com/how-to-install-oracle-java-7-in-ubuntu-12-04.html
 [13]: http://askubuntu.com/questions/186299/eclipse-juno-need-root-access-everytime-i-change-the-configuration
 [14]: https://help.ubuntu.com/community/EclipseIDE
+[15]: http://www.openframeworks.cc/setup/linux-codeblocks/
+
 [libsProjectFile]: https://raw.github.com/openframeworks/openFrameworks/master/libs/.project
 [ofProjectFile]: https://raw.github.com/openframeworks/openFrameworks/master/libs/openFrameworks/.project
 [addonsProjectFile]: https://raw.github.com/openframeworks/openFrameworks/master/addons/.project
