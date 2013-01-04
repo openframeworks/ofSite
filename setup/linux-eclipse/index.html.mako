@@ -2,10 +2,9 @@
 
 linux eclipse
 =============
-
 **Note**: see the [FAQ](#faq) at the bottom of this page if you're having trouble.
 
-This guide describes how to get started with openframeworks using Eclipse as IDE. This guide was tested on Ubuntu 12.10 64bit installation with Eclipse Juno and git master branch of openframeworks. Eclipse specific steps may apply to other platforms. 
+This guide describes how to get started with openframeworks using Eclipse as IDE. This guide was tested on Ubuntu 12.10 64bit installation with Eclipse Juno(4.2 SR!) and the openFrameworks version of_v0073 for 64bit. Eclipse specific steps may apply to other platforms. 
 
 To use it you will need Eclipse for C++ and openframeworks.
 
@@ -27,175 +26,188 @@ The main steps are:
 Installation
 ------------
 
-**a) Eclipse**: download the C/C++ edition for your platform from here:
+**a) Eclipse**: Download the C/C++ edition for your platform from the [downloads section on the Eclipse website][11].
 
-[http://www.eclipse.org/downloads/][11]
+![download Eclipse][01downloadEclipse]
 
-![eclipse_cdt_download](eclipse_cdt_download.png)
+These instructions currently use Eclipse Juno 4.2 SR1.
 
-These instructions currently use Eclipse Juno.
-
-Ubuntu users: If downloading from the repositories, double check that the version of Eclipse is 3.6 or higher.
-
-You will need Java to use Eclipse, you can download it from:
-
-[http://java.com][1]
-
-For Linux, it will probably be in the official repositories. For example, in Ubuntu:
-
-    sudo apt-get install openjdk-6-jdk
-
-or
-
-    sudo apt-get install sun-java6-jdk (this doesn't exist as of Ubuntu 10.10 (Maverick Meerkat))
+There are installation [instructions on the eclipse site][1]. You need the official Sun/Oracle version of Java to use eclipse. The Java installation instructions for ubuntu referenced on this page are old and for this installation [these instructions][12] were used. For more ubuntu specific information on how to install eclipse look at the this [question and answer][13] and an [this page which shows where to put executables and how to make a launch icon][14].
 
 
+**b) openFrameworks for linux package**: Download it from the [openFrameworks downloads page][4].
 
-**b) openFrameworks for linux package**: Download it from the downloads page:
+You may also check out the openFrameworks source from [GitHub (under master branch)][9].
 
-[http://openframeworks.cc/download][4]
+- in the scripts/linux folder inside the openFrameworks package you will find a directory with the name of your distribution. There are 2 scripts, install_codeblocks.sh and install_dependencies.sh. You only need to run install_dependencies.sh. Don&#8217;t execute it from the desktop, as it needs root privileges to run, you will need to run it from a terminal. You can execute it more than once without problem if something goes wrong. If you update your openFrameworks version, execute install_dependencies.sh script again. If you are using the tar-zipped downloaded version of openframeworks, at this point, you should be able to build the examples using the makefile from the command line.  If you are using the GitHub version you will have to generate the example projects using projectGenerator if you want to run them.
 
-You may also check out the openFrameworks source from GitHub (under master branch): [http://github.com/openframeworks/openFrameworks][9]. 
+On Ubuntu the exact steps are as follows:
 
-**c) Start Eclipse**: You will see a pop up asking you what workspace to use. Just point it to the default, the openframeworks projects will not end up in this workspace.
+__Ubuntu:__ 
+
+- open a terminal. If you are using unity click on the Dash icon and type term then choosing the appropriate application.
+
+- in the terminal go to the directory where your openFrameworks package is.
+
+- ie. if your user name is ofuser and you have uncompressed the oF package in the desktop it should be something like:
+
+        cd /home/ofuser/Desktop/of_v0073_linux64_release/scripts/linux/ubuntu
+
+- once in this directory run the scripts with:
+
+        sudo ./install_dependencies.sh
+
+- to check if the example works with a make file, go to the example directory and type make.
+
+- ie. if your user name is ofuser and you have uncompressed the oF package in the desktop try the following commands:
+
+        cd /home/ofuser/Desktop/of_v0073_linux64_release/examples/graphics/polygonExample
+        make
+        cd bin
+        ./polygonExample
+    
+
+**c) Start Eclipse**: 
+
+Depending on where you installed eclipse you can start it from the terminal or if you made a launcher icon start it from there. The terminal command may look like this:
+
+        cd /home/ofUser/opt/eclipse
+        ./eclipse
+
+You will see a pop up asking you what workspace to use. Just point it to the default, the openframeworks projects will not end up in this workspace.
+![workspace launcher][01workspaceLauncher]
 
 
 **d) Import openFrameworks into Eclipse:** 
 
-Now that Eclipse has been completely configured to work with openFrameworks for Android, the last step is to import all the projects in the workspace. Go to
 File \> Import and select General \> Existing projects in the workspace...
 
-![import first screen](import0-600x508.png)
+![import projects 1][01importProjects]
+![import projects 2][02importProjects]
 
 Import in this order:
  
-- openFrameworks/libs  
-- openFrameworks/libs/openFrameworks  
-- openFrameworks/addons/ofxAndroid/ofAndroidLib  
-- openFrameworks/examples/android
+- openFrameworks/libs
+- openFrameworks/libs/openFrameworks
+- openFrameworks/addons/
 
-**e) Compile openFrameworks**:
+The packaged version of openframworks does not include the .project file for these three projects. You have to add them to each folder. The symptoms are that Eclipse does not find a project to import. The GitHub version does not have this problem.
 
-In the "Project Explorer" on the left side of the window, select the openFrameworks project. Choose the Android target in Project \> Build Configurations \> Set Active, and then click Project \> Build Project. You can also do this from the toolbar by switching to the C/C++ perspective and clicking the toolbar button with a hammer.
-
-![](android-compile-OF.png)
-
-When compiling on OS X I was missing pkg-config. Currently this doesn't seem to affect the build, since these commands were only important in detecting Linux libraries.
+- openFrameworks/libs save [this file][libsProjectFile] as .project file
+- openFrameworks/libs/openFrameworks save [this file][ofProjectFile] as .project file
+- openFrameworks/addons/ save [this file][addonsProjectFile] as .project file.
 
 
-**f) Create an External Tools Configuration and use it to install and run projects on the device or emulator**
+**e) Create an External Tools Configuration to run the projectGeneratorSimple**
+
 Run \> External Tools \> External Tools Configuration
-![](android-external-tools1.png)
 
-Select 'Program' and press New. Name the new configuration: Android Install Main:
+![add external tool 1][01externalTool]
 
-<%text filter="h">
-    Location: /usr/bin/make 
-    
-    Working Directory: ${project_loc} 
-    
-    Arguments: AndroidInstall PROJECT_PATH=${project_loc}
-    
-    Refresh:
-    Mark Refresh resources upon completion  
-    Select The selected resource
-    
-    Build:
-    Mark Build before launch  
-    Select The project containing the selected resource  
-    Mark Include referenced projects
-</%text>
+Set the Location to 
+        /home/ofUser/of_v0073_linux64_release/apps/projectGenerator/projectGeneratorSimple/bin/projectGeneratorSimple
 
+Set the Working directory to 
+        /home/ofUser/of_v0073_linux64_release/apps/projectGenerator/projectGeneratorSimple/bin
 
-Press Apply and Close.
+![add external tool 2][02externalTool]
 
-![](Screenshot-External-Tools-Configurations--600x561.png)
+Run \> External Tools \> Organize Favourites...
 
+![add external tool 3][03externalTool]
+
+**f) Create a Test project**
+Use the toolbar button to run the external tool or choose from the menus:
+
+Run \> External Tools \> ProjectGeneratorSimple
+
+Fill in the info for your test project
+
+![create a test project][01createTestProject]
+
+**g) Import the test project**
+
+In eclipse import the test project. You can right-click on the project explorer tab or choose 
+
+File \> Import then make sure to choose C/C++ Existing code as makefile project
+
+![import the test project 1][01importTestProject]
+![import the test project 2][02importTestProject]
+
+**h) Set test project references**
+
+Add the references to openFrameworks in the project so that source code is visible in the test code. 
+
+Right click on the test project in the project browser and choose Properties. Choose C/C++ Generatl and choose the References tab. Then select both the addons and the openFrameworks projects.
+
+![set project references][01setReferences]
+
+**i) Add test project debug settings**
+
+The openframeworks project makefile uses the argument "Debug" to compile the code with the correct symbols to allow debugging. The executable it generates for debug ends with _debug. e.g. 
+
+        test_debug 
+
+instead of just 
+
+        test
+
+Change the project properties to use
+
+        make Debug
+
+and to use the executable
+
+        test_debug
+
+by setting up project properties. Right-click on the project in the project browser and choose Properties. Add a new Debug configuration with Manage Configurations. Set the new Debug configuration as the active configuration. Set the Builder settings to call _make Debug_. Then change the Run/Debug Settings to use the _test_debug_ executable.
+
+![add a debug target 1][01debugTarget]
+![add a debug target 2][02debugTarget]
+![add a debug target 3][03debugTarget]
+![add a debug target 4][04debugTarget]
+![add a debug target 5][05debugTarget]
+![add a debug target 6][06debugTarget]
+
+**j) Add code to the test project**
+
+Add some code to the project. In this step you can test if code completion works with Ctrl-Spacebar. e.g. type ofL Ctrl-Space and see if the ofLog method is displayed. You can also see if Eclipse will jump to the declaration of a method or constant by pressing F3. Compile the code using the Hammer icon. For this example I added a log message to the setup method in the testApp.cpp file. Make sure you choose the Debug configuration under the arrow of the Hammer.
+
+![add code 1][01addCode]
+![add code 2][02addCode]
+![add code 3][03addCode]
+
+**k) Run and debug the test project**
+
+Activate a breakpoint in the new code by Right-click in the margin and choosing Toggle Breakpoint or double clicking in the margin. Press the green bug toolbar icon to run in debug mode. The debugger should break at your breakpoint. Use the debug controls to continue or step into the code.
+
+![debug the test project][01debugTestProject]
 
 Notes
 -----
 
-- Data files should go in bin/data. During the build process everything in bin/data will get compressed to a resource in res/raw and then uncompressed and automatically copied to:  
-sdcard/cc.openframeworks.appname 
-before running the app.
+- Data files should go in bin/data. 
 
-    If you have resources that change like XML config files, it's better to generate them from the code since uploading them to the phone will overwrite the configuration
+- Sometimes there are unresolved symbols which look like bugs, red squiggles. The project still compiles and runs correctly. This happens if Eclipse is confused about which symbols it should use. 
 
-- If there's no SD card in the device, examples that have resources won't work right now.
-
-- Naming of resources is really restrictive in Android, for example you cannot have several resources with the same name even if they have different extensions.
-
-- The AndroidDebug target does a different compilation process of the native code that allows it to detect linker errors that won't be detected when compiling in AndroidRelease mode. It is recommended to compile your application in AndroidDebug mode at least once or if your application crashes before starting. When installing applications on the device or emulator it is recommended to use the AndroidRelease mode since it's faster and the applications will be much smaller. There's also no support for debugging NDK applications in Eclipse, but you could theoretically use the NDK tools to debug an application compiled with AndroidDebug.
-
-- Test your application very often. Even if the last NDK allows for debugging, there's no support for native debugging in Eclipse and setting it up manually with the NDK is pretty hard. When an application crashes the debugger dies too, so it's hard to debug bad memory accesses and similar bugs.
-
-- Use the LogCat view in Eclipse. When programming for Android you cannot see the output of cout or printf, but if you use [ofLog][10] you can see its output in the LogCat. To open the view, go to
-Window \> Show View \> Others \> Android \> LogCat
-
-![showviewlogcat](showviewlogcat.png)
-
-You can see the output of the compiler in the Console tab and the output of your app in the LogCat one. Everything that is output by openFrameworks through ofLog will have an openFrameworks tag so you can use filters to see only your application's output.
-
-There's a bug in the Android plugin that makes Eclipse to build every C/C++ project in your workspace before running any app, so try to keep your workspaces small. You can have as many workspaces as you want:
-
-- Create a folder inside openFrameworks/apps.
-
-- Open Eclipse and tell it to use this new folder as a workspace. Do the import steps again for the new folder, including openFrameworks, libs, addons but instead of importing all the examples, import only androidEmptyExample to have a template for your new projects.
-
-Creating new applications
--------------------------
-
-You can copy any of the examples and start a new application from there. It's currently far more difficult to create a project from scratch, since the makefiles and project settings contain a lot of details you would need to duplicate.
-
-You'll need to change the name of the application in different places:
-
-- When you copy the application from an example set the name you want to use. Let's say your application is called myApp. This must also be the name of your folder.
-- In res/values/strings.xml change app_name value to the name of your application.
-- In AndroidManifest.xml change the name of the package from cc.openframeworks.exampleName to cc.openframeworks.myApp  
-- in srcJava, select the package cc.openframeworks.exampleName, press F2 to rename it and call it cc.openframeworks.myApp
-
-It's important to keep the package prefix as cc.openframeworks or some things can stop working. This will be fixed in future versions when Eclipse support for native code is better.
+- You can see the output of the compiler and of the ofLog commands in the Console tab.
 
 <a id="faq"></a>FAQ
 ---
 
-**If the build fails:**
+- If the Import project step does not find a project you are missing a .project file.
+For openFrameworks/libs save [this file][libsProjectFile] as .project file.
+For openFrameworks/libs/openFrameworks save [this file][ofProjectFile] as .project file.
+For openFrameworks/addons/ save [this file][addonsProjectFile] as .project file.
 
-- If it tells you that you're using an obsolete build.xml, delete it and regenerate it using 'android update project -p <path-to-project\>'. The build.xml files in the examples directory should not contain anything especially unique.
-- Are you including addons? They need to be specified in addons.make, and the case of the letters must match exactly (ie, ofxOpenCv works but ofxOpenCV won't work). This error will probably show up as missing header files or symbols.
-- If you're getting a bunch of undeclared reference errors, check which version of the NDK you're using. For 0071 you should be using NDK r8, for 0072 or GIT version r8b is required.
-- Paths are changed in NDK r8b: you will maybe have errors like missing "arm-linux-androideabi-gcc" or "arm-linux-androideabi-ar". In those cases go to your NDK folder and do
+- If nothing happens when you click on the green bug to debug, you may have to choose organise favourites from the green bug arrow and add your test project configuration.
 
-cd toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/
-cp ./arm-linux-androideabi/bin/ar ./bin/arm-linux-androideabi-ar
-cp ./bin/arm-linux-androideabi-gcc-4.6.x-google ./bin/arm-linux-androideabi-gcc
+- If you can't set a breakpoint, check carefully where in the margin you are clicking. The click target isn't all that large.
 
-- If you get 'com.android.sdklib.build.ApkCreationException: Debug Certificate expired on <date>', you have to 'rm ~/.android/debug.keystore'. A new certificate will be generated automatically.
+- Sometimes it helps to refresh the symbols by Right clicking on the project and choosing Index \> Rebuild
 
 
-**If the build succeeds but the Android Install command doesn't work:**
-
-- If you get a popup saying "Variable references empty selection: $\{project_loc\}", it means you need to select a project in Project Explorer first, before you run the Android Install command.
-- If you get a message saying "Activity class ... does not exist.", make sure that its namespace is called cc.openframeworks.your_folder_name_here.OFActivity. This is what the Makefile currently expects. If it does not work even with a correct entry, and you are using an emulator, try using a real device instead.
-
-**If the build succeeds but your app crashes:**
-
-- Check the libs folder. It should be populated with a library during the build. On Linux it is a file that ends with .so. If there is no library, the C++ build process is probably failing somewhere, or it is not being triggered at all. You can test the C++ build process separately using 'make AndroidDebug'. You may also see something like this in your LogCat:
-
-
-        E/AndroidRuntime(20743): Caused by: java.lang.UnsatisfiedLinkError: Couldn't load OFAndroidApp: findLibrary returned null
-        E/AndroidRuntime(20743):     at java.lang.Runtime.loadLibrary(Runtime.java:425)
-        E/AndroidRuntime(20743): 	at java.lang.System.loadLibrary(System.java:554)
-        E/AndroidRuntime(20743): 	at cc.openframeworks.OFAndroid.<clinit>(OFAndroid.java:535)
-        E/AndroidRuntime(20743): 	... 14 more
-
-
-- The device must have an SD card if you use resources in your openFrameworks app. Note that some devices have an internal SD card, like the Galaxy Tab 10.1.
-- Make sure you've declared the appropriate permissions in AndroidManifest.xml (for instance, android.permission.CAMERA for cameras and android.permission.WRITE_EXTERNAL to interact with the SD card, which is necessary if you have resources.)
-- Was bin/data accidentally erased by something or other? Does res/raw/your_project_name_resources.zip exist, and does it contain your resources?
-
-
-[1]: http://java.com
+[1]: http://wiki.eclipse.org/Eclipse/Installation#Install_a_JVM
 [2]: http://developer.android.com/sdk/index.html
 [3]: http://developer.android.com/sdk/ndk/index.html
 [4]: http://openframeworks.cc/download
@@ -206,4 +218,33 @@ cp ./bin/arm-linux-androideabi-gcc-4.6.x-google ./bin/arm-linux-androideabi-gcc
 [9]: http://github.com/openframeworks/openFrameworks
 [10]: http://www.undef.ch/uploads/ofDoc/html/classof_log.html
 [11]: http://www.eclipse.org/downloads/
-[15]: https://github.com/kennethreitz/osx-gcc-installer
+[12]: http://www.ubuntugeek.com/how-to-install-oracle-java-7-in-ubuntu-12-04.html
+[13]: http://askubuntu.com/questions/186299/eclipse-juno-need-root-access-everytime-i-change-the-configuration
+[14]: https://help.ubuntu.com/community/EclipseIDE
+[libsProjectFile]: https://raw.github.com/openframeworks/openFrameworks/master/libs/.project
+[ofProjectFile]: https://raw.github.com/openframeworks/openFrameworks/master/libs/openFrameworks/.project
+[addonsProjectFile]: https://raw.github.com/openframeworks/openFrameworks/master/addons/.project
+
+[01downloadEclipse]: 01downloadEclipse.png
+[01workspaceLauncher]: 01workspaceLauncher.png
+[01importProjects]: 01importProjects.png
+[02importProjects]: 02importProjects.png
+[01externalTool]: 01externalTool.png
+[02externalTool]: 02externalTool.png
+[03externalTool]: 03externalTool.png
+[01createTestProject]: 01createTestProject.png
+[01importTestProject]: 01importTestProject.png
+[02importTestProject]: 02importTestProject.png
+[01setReferences]: 01setReferences.png
+[01debugTarget]: 01debugTarget.png
+[02debugTarget]: 02debugTarget.png
+[03debugTarget]: 03debugTarget.png
+[04debugTarget]: 04debugTarget.png
+[05debugTarget]: 05debugTarget.png
+[06debugTarget]: 06debugTarget.png
+[01addCode]: 01addCode.png
+[02addCode]: 02addCode.png
+[03addCode]: 03addCode.png
+[01debugTestProject]: 01debugTestProject.png
+
+
