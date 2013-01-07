@@ -8,7 +8,7 @@ ofFile wraps functionality for opening, reading, writing, and modifying files on
 
 ~~~~.cpp
 
-fFile file;
+ofFile file;
 
 file.open(ofToDataPath("temp.xml"), ofFile::ReadWrite, false);
 ofBuffer buff = file.readToBuffer();
