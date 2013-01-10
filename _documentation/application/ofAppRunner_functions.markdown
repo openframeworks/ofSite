@@ -170,7 +170,7 @@ _advanced: False_
 _description: _
 
 
-Useful to access the variables in the main app from other classes.
+Useful to access the variables in the main app from other classes. The pointer returned by this function has to be cast from an ofBaseApp pointer, to a pointer to your inherited class, before being used.
 
 ie:
 
@@ -187,7 +187,7 @@ class testApp: public ofBaseApp{
 //myClass.cpp
 
 void myClass::method(){
-   doSomething( ofGetAppPtr()->someVar );
+   doSomething( ((testApp*)ofGetAppPtr())->someVar );
 }
 ~~~~
 
