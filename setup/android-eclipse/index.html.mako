@@ -258,13 +258,14 @@ Creating new applications
 
 You can copy any of the examples and start a new application from there. It's currently far more difficult to create a project from scratch, since the makefiles and project settings contain a lot of details you would need to duplicate.
 
-In Eclipse this is easily done by right-clicking on an existing project, selecting Copy, then right-clicking on the workspace and selecting Paste. A small Copy Project window will pop up for you to pick a new project name and location. For now, project name and directory must have the same name. Let's say your application is called myApp, this must also be the name of your folder.
+In Eclipse this is easily done by right-clicking on an existing project, selecting Copy, then right-clicking on the workspace and selecting Paste. A small Copy Project window will pop up for you to pick a new project name and location. For now, project name and directory must have the same name. Let's say your application is called "myNewAndroidApp", this must also be the name of your folder.
 
 After you're done copying the project, you'll need to change the name of the application in different places:
 
-- In res/values/strings.xml change app_name value to the name of your application.
-- In AndroidManifest.xml change the name of the package from cc.openframeworks.exampleName to cc.openframeworks.myApp  
-- in srcJava, select the package cc.openframeworks.exampleName, press F2 to rename it and call it cc.openframeworks.myApp
+- In res/values/strings.xml change app_name value to the name of your application (myNewAndroidApp, for example).
+- In AndroidManifest.xml change the name of the package from cc.openframeworks.exampleName to cc.openframeworks.myNewAndroidApp  
+- In srcJava, select the package cc.openframeworks.exampleName, press F2 to rename it and call it cc.openframeworks.myNewAndroidApp
+- You might also have to open OFActivity.java inside srcJava/cc/openframeworks/myNewAndroidApp and change cc.openframeworks.exampleName to cc.openframeworks.myNewAndroidApp in the first line. Sometimes Eclipse does this automatically, sometimes it doesn't...
 
 It's important to keep the package prefix as cc.openframeworks or some things can stop working. This will be fixed in future versions when Eclipse support for native code is better.
 
