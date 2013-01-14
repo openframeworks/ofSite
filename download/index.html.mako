@@ -22,7 +22,7 @@
 	<p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_linux64_release.tar.gz">code::blocks (64 bit)</a></p><br/>
 	<h3>IDE setup guide</h3>
 	<p><a href="../setup/linux-codeblocks">code::blocks</a></p>
-	<p><a href="../setup/linux-eclipse">eclipse</a></p>
+	<!--p><a href="../setup/linux-eclipse">eclipse</a></p-->
 </div>
 
 <div id="download-latest-platform">
