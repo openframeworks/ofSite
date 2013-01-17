@@ -850,7 +850,7 @@ _advanced: False_
 
 _description: _
 
-For example, ofRandom(-30,20) will return a random number between -30 and 20.
+For example, ofRandom(-30,20) will return a random float point number between -30 and 20.
 
 
 
@@ -878,7 +878,7 @@ _advanced: False_
 
 _description: _
 
-Picks a random number between 0 and max. 
+Picks a random float point number between 0 and max. 
 
 
 
@@ -961,7 +961,7 @@ _advanced: False_
 
 _description: _
 
-
+Picks a random float point number between -1 and 1. 
 
 
 
@@ -988,7 +988,7 @@ _advanced: False_
 
 _description: _
 
-
+Picks a random float point number between 0 and 1. 
 
 
 
@@ -1043,7 +1043,7 @@ _advanced: False_
 
 _description: _
 
-Seeds the random number generator to a value passed in (val) so that random numbers will always be the same.
+Seeds the random number generator to a value passed in (val), so that random numbers will always be the same using the same seed.
 
 
 
@@ -1071,36 +1071,7 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int ofSign(n)
-
-<!--
-_syntax: ofSign(n)_
-_name: ofSign_
-_returns: int_
-_returns_description: _
-_parameters: float n_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
+Return 1 if n is positive, 0 if n = 0, and -1 if n is negative.
 
 
 
