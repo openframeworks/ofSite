@@ -3,6 +3,8 @@
 code::blocks setup guide
 =========================
 
+**please note: the new version of codeblocks (12.11) is not compatible with openframeworks versions 0.73 and lesser.  It will work with 0.74 (forthcoming) and what's on the develop branch of github.  This is because of a change in the compiler which makes libraries compiled with an older compiler incompatible with the newer compiler.  if you are using OF 0.073 or lesser, use codeblocks 10.05 (http://www.codeblocks.org/downloads/source/5) **
+
 
 We like codeblocks for windows development since it's light weight, and avoids some of the quirkiness of windows visual studio. here's a step by step tutorial to get up and running.
 Note: Step e) is required to run OF. Please do not skip this step. 
