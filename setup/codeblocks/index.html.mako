@@ -15,7 +15,7 @@ Installation
 **a) Download Code::Blocks binary (latest release)**
 
 > [Download Code::Blocks][1] 
-**Note**: download **WITH** MinGM. Code::Blocks version 12.11 works well with openFrameworks 0.7.4+. 
+**Note**: download **WITH** MinGW. Code::Blocks version 12.11 works well with openFrameworks 0.7.4+. 
 
 ![a_download](codeblocks.png)  
 
