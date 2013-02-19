@@ -7,6 +7,34 @@ as we update and change OF, you can download older versions of the framework her
 
 --------------------------------
 
+**pre release v0073** 
+
+windows: [code blocks][92] | [visual studio 2010][93] 
+
+mac [x-code (10.6-10.7)][94]
+
+linux: [code blocks][95] | [(64 bit) code blocks][96]
+
+iphone: [iPhone][97] 
+
+android: [Android][98]
+
+--------------------------------
+
+**pre release v0072** 
+
+windows: [code blocks][85] | [visual studio 2010][86] 
+
+mac [x-code (10.6-10.7)][87]
+
+linux: [code blocks][88] | [(64 bit) code blocks][89]
+
+iphone: [iPhone][90] 
+
+android: [Android][91]
+
+--------------------------------
+
 **pre release v0071** 
 
 windows: [code blocks][78] | [visual studio 2010][79] 
@@ -201,5 +229,26 @@ changes: [changelog for 0.04][67]
 [82]: http://www.openframeworks.cc/versions/v0.071/of_v0071_linux64_release.tar.gz
 [83]: http://www.openframeworks.cc/versions/v0.071/of_0071_iOS_release.zip
 [84]: http://www.openframeworks.cc/versions/v0.071/of_v0071_android_release.tar.gz
+[85]: http://www.openframeworks.cc/versions/v0072/of_v0072_win_cb_release.zip
+[86]: http://www.openframeworks.cc/versions/v0072/of_v0072_vs2010_release.zip
+[87]: http://www.openframeworks.cc/versions/v0072/of_v0072_osx_release.zip
+[88]: http://www.openframeworks.cc/versions/v0072/of_v0072_linux_release.tar.gz
+[89]: http://www.openframeworks.cc/versions/v0072/of_v0072_linux64_release.tar.gz
+[90]: http://www.openframeworks.cc/versions/v0072/of_v0072_iOS_release.zip
+[91]: http://www.openframeworks.cc/versions/v0072/of_v0072_android_release.tar.gz
+[92]: http://www.openframeworks.cc/versions/v0073/of_v0073_win_cb_release.zip
+[93]: http://www.openframeworks.cc/versions/v0073/of_v0073_vs2010_release.zip
+[94]: http://www.openframeworks.cc/versions/v0073/of_v0073_osx_release.zip
+[95]: http://www.openframeworks.cc/versions/v0073/of_v0073_linux_release.tar.gz
+[96]: http://www.openframeworks.cc/versions/v0073/of_v0073_linux64_release.tar.gz
+[97]: http://www.openframeworks.cc/versions/v0073/of_v0073_iOS_release.zip
+[98]: http://www.openframeworks.cc/versions/v0073/of_v0073_android_release.tar.gz
+[99]: http://www.openframeworks.cc/versions/v0.7.4/of_v0.7.4_win_cb_release.zip
+[100]: http://www.openframeworks.cc/versions/v0.7.4/of_v0.7.4_vs2010_release.zip
+[101]: http://www.openframeworks.cc/versions/v0.7.4/of_v0.7.4_osx_release.zip
+[102]: http://www.openframeworks.cc/versions/v0.7.4/of_v0.7.4_linux_release.tar.gz
+[103]: http://www.openframeworks.cc/versions/v0.7.4/of_v0.7.4_linux64_release.tar.gz
+[104]: http://www.openframeworks.cc/versions/v0.7.4/of_v0.7.4_iOS_release.zip
+[105]: http://www.openframeworks.cc/versions/v0.7.4/of_v0.7.4_android_release.tar.gz
 
 
