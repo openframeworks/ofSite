@@ -20,19 +20,6 @@ And access the local site in http://localhost:8080/
 
 You can start editing pages right away. In order to see your changes on your local version you'll have always have to run build & serve before.
 
-** Please note, this version of ofSite is built in blogofile v.0.7.1, see the reference for installing on Vanilla Ubuntu [below](#below)
-
-To build the site, you will need to:
-	
-	git clone https://github.com/EnigmaCurry/blogofile
-	git checkout 0.7.1
-	python setup.py install
-
-And run:
-
-	blogofile build
-	blogofile serve
-
 
 ## Documentation-style markdown
 

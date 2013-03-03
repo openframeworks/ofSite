@@ -14,6 +14,8 @@
 # Basic Settings
 #  (almost all sites will want to configure these settings)
 ######################################################################
+import inspect, os
+sys.path.append( os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe()))) ) # script directory
 from _version import currentVersion 
 
 ## site_url -- Your site's full URL
@@ -29,7 +31,7 @@ blog = controllers.blog
 
 ## blog_enabled -- Should the blog be enabled?
 #  (You don't _have_ to use blogofile to build blogs)
-blog.enabled = True
+blog.enabled = False
 
 ## blog_path -- Blog path.
 #  This is the path of the blog relative to the site_url.
@@ -37,7 +39,7 @@ blog.enabled = True
 #  and you set blog_path to "/blog" your full blog URL would be
 #  "http://www.yoursite.com/~ryan/blog"
 #  Leave blank "" to set to the root of site_url
-blog.path = "/blog"
+#blog.path = "/blog"
 
 ## blog_name -- Your Blog's name.
 # This is used repeatedly in default blog templates
