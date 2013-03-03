@@ -28,5 +28,5 @@ def run():
     for user in xml.member:
         members.append(Member(user.user, user.name, user.image))
 
-    bf.writer.materialize_template("community.mako", ('community',"index.html"), {'members':members} )    
+    bf.template.materialize_template("community.mako", ('community',"index.html"), {'members':members} )    
     

@@ -99,7 +99,7 @@ def run():
             "clazz": clazz,
             "functions": functions_file
         }
-        bf.writer.materialize_template("documentation_class.mako", ('documentation',clazz.module+"/"+clazz.name+".html"), env )
+        bf.template.materialize_template("documentation_class.mako", ('documentation',clazz.module+"/"+clazz.name+".html"), env )
     
     function_files = markdown_file.getfunctionsfiles_list()
     for functionfile_name in function_files:
@@ -117,7 +117,7 @@ def run():
             "clazz": None,
             "functions": functions_file
         }
-        bf.writer.materialize_template("documentation_class.mako", ('documentation',functions_file.module+"/"+functions_file.name+".html"), env )
+        bf.template.materialize_template("documentation_class.mako", ('documentation',functions_file.module+"/"+functions_file.name+".html"), env )
         
 
     # process index file
@@ -147,7 +147,7 @@ def run():
                 blocks.append(b)
         addons_columns.append(blocks)
         
-    bf.writer.materialize_template("documentation.mako", ('documentation',"index.html"), {'columns':columns,'addons_columns':addons_columns} )
+    bf.template.materialize_template("documentation.mako", ('documentation',"index.html"), {'columns':columns,'addons_columns':addons_columns} )
     
     for root, dirs, files in os.walk(directory):
         for name in files:

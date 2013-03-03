@@ -59,6 +59,7 @@ under the terms of the GNU General Public License (GPL).
 """
 
 import sys,os,re,imp
+import inspect
 
 API_VERSION = '0.1.2'
 MIN_ASCIIDOC_VERSION = '8.4.1'  # Minimum acceptable AsciiDoc version.
@@ -172,7 +173,7 @@ class AsciiDocAPI(object):
                 raise AsciiDocError('missing file: %s' % cmd)
         else:
             # Try shell search paths.
-            for fname in ['asciidoc.py','asciidoc.pyc','asciidoc']:
+            for fname in [os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))+'/asciidoc.py',os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))+'/asciidoc.pyc',os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))+'/asciidoc']:
                 cmd = find_in_path(fname)
                 if cmd: break
             else:
