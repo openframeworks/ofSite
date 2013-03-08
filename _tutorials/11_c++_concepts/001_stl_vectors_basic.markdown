@@ -330,7 +330,7 @@ See Arturo Castro's article:
 http://arturocastro.net/blog/2011/10/28/stl::vector/
 
 ----------------------------------------------------------------------------------------------------------------------------
-<a name="deofclaring"/>
+<a name="of"/>
 ## OpenFrameworks Example
 
 testApp.h
