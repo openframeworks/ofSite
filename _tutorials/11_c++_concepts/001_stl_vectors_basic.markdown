@@ -324,7 +324,7 @@ It is very important to remember that when erasing a pointer to an object in a v
 Note that this means erase and remove_if demonstrated above will not be sufficient. If pointers are needed, it is worthwhile to consider using shared pointers instead. See ofPtr: http://www.openframeworks.cc/documentation/types/ofPtr.html
 
 ----------------------------------------------------------------------------------------------------------------------------
-<a name="optimize"/>
+<a name="optimizing"/>
 ## Optimization with resize and reserve
 See Arturo Castro's article:
 http://arturocastro.net/blog/2011/10/28/stl::vector/
