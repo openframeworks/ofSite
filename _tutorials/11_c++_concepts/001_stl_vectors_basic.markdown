@@ -336,51 +336,52 @@ http://arturocastro.net/blog/2011/10/28/stl::vector/
 testApp.h
 ~~~~{.cpp}
     #pragma once
-    
+
     #include "ofMain.h"
-    
+
     // create the particle class in the header for brevity
-    
+
     class Particle{
-    	public:
-    		Particle(){
-    		   pos.set( ofRandom(-200,200), 0, 0 );
-               vel.set( ofRandom(-5,5), ofRandom(5,10), 0);
-    		}
-    		
-            void update(){
-    		   pos += vel;
-     		   vel.y += .1;
-    		}
-    		
-    		void draw(){
-    		  ofEllipse(pos.x,pos.y,10,10);
-    		}
-              
-            ofPoint pos;
-            ofVec3f vel;
-              
+    public:
+    Particle(){
+    		pos.set( 0, 0, 0 );
+    		vel.set( ofRandom(-5,5), ofRandom(-4,-8), 0);
+    	}
+	
+    	void update(){
+    		pos += vel;
+    		vel.y += .1;
+    	}
+	
+    	void draw(){
+    		ofEllipse(pos.x,pos.y,10,10);
+    	}
+	
+    	ofPoint pos;
+    	ofVec3f vel;
+	
     };
-    
+
     class testApp : public ofBaseApp{
-    	public:
-    		void setup();
-    		void update();
-    		void draw();
-    		
-    		void keyPressed(int key);
-    		void keyReleased(int key);
-    		void mouseMoved(int x, int y);
-    		void mouseDragged(int x, int y, int button);
-    		void mousePressed(int x, int y, int button);
-    		void mouseReleased(int x, int y, int button);
-    		void windowResized(int w, int h);
-    		void dragEvent(ofDragInfo dragInfo);
-    		void gotMessage(ofMessage msg);
-    
-    		// declare the vector of particles
-    		vector<Particle> particles;
+    public:
+    	void setup();
+    	void update();
+        void draw();
+	    
+        void keyPressed(int key);
+    	void keyReleased(int key);
+    	void mouseMoved(int x, int y);
+    	void mouseDragged(int x, int y, int button);
+    	void mousePressed(int x, int y, int button);
+    	void mouseReleased(int x, int y, int button);
+    	void windowResized(int w, int h);
+    	void dragEvent(ofDragInfo dragInfo);
+    	void gotMessage(ofMessage msg);
+	
+    	// declare the vector of particles
+    	vector<Particle> particles;
     };
+
 ~~~~    
     
 testApp.cpp
@@ -406,13 +407,15 @@ testApp.cpp
     }
     
     void testApp::draw(){
-    	for(int i = 0; i < particles.size(); i++){
+    	
+        ofTranslate( ofGetWidth()/2, ofGetHeight()/2);
+        for(int i = 0; i < particles.size(); i++){
     		particles[i].draw();
     	}
     }
     
-    void testApp::keyPressed(){
-    	particle.push_back( Particle() );
+    void testApp::keyPressed(int key){
+    	particles.push_back( Particle() );
     }
 ~~~~    
     
@@ -441,13 +444,15 @@ testApp.cpp using iterators
     }
     
     void testApp::draw(){
-    	for(vector<Particle>::iterator it = particle.begin(); it != particles.end(); it++){
+    	
+        ofTranslate( ofGetWidth()/2, ofGetHeight()/2);
+        for(vector<Particle>::iterator it = particle.begin(); it != particles.end(); it++){
     		(*it).draw();
     	}
     }
     
-    void testApp::keyPressed(){
-    	particle.push_back( Particle() );
+    void testApp::keyPressed(int key){
+    	particles.push_back( Particle() );
     }
 ~~~~
 
