@@ -30,7 +30,7 @@ http://www.cplusplus.com/reference/vector/vector/
 
 ----------------------------------------------------------------------------------------------------------------------------
 <a name="quick review"/>
-### Quick Review:
+## Quick Review:
 
 ~~~~{.cpp}
     vector<float> nums;  // create an empty vector of floats     
@@ -53,7 +53,7 @@ http://www.cplusplus.com/reference/vector/vector/
 ~~~~
 ----------------------------------------------------------------------------------------------------------------------------
 <a name="declaring"/>
-### Declaring a vector
+## Declaring a vector
 
 vector< *type* > *name*;
 
@@ -64,9 +64,9 @@ vector< *type* > *name*;
 ~~~~
 ----------------------------------------------------------------------------------------------------------------------------
 <a name="adding"/>
-### Adding elements to a vector
+## Adding elements to a vector
 
-#### push_back
+### push_back
 *push_back* adds a new element to the end of the vector. 
 ~~~~{.cpp}
     vector<string> names; // declare an empty vector
@@ -77,7 +77,7 @@ vector< *type* > *name*;
 
 *push_back* is a very common way to add elements and is useful when adding elements one at a time or only a few (adding objects when an event occurs for example).
 
-#### resize
+### resize
 *resize* allocates memory for the desired number of elements in the vector and adjusts its size accordingly. 
 ~~~~{.cpp}
     vector<int> nums; // declare the vector
@@ -94,7 +94,7 @@ When adding many elements at the same time, using *resize* may be faster than *p
 For more details on this refer to Arturo Castro's tutorial: 
 http://arturocastro.net/blog/2011/10/28/stl::vector/
 
-#### assign
+### assign
 *assign* can be used to create a vector of a given size and populate it with uniform values, or to copy part of an existing vector. It reinitializes the vector deleting any previous elements. 
 
 ~~~~{.cpp}
@@ -110,9 +110,9 @@ http://arturocastro.net/blog/2011/10/28/stl::vector/
 
 ----------------------------------------------------------------------------------------------------------------------------
 <a name="accessing"/>
-### Accessing elements of a vector
+## Accessing elements of a vector
 
-#### operator []
+### operator []
 Elements can be accessed using the [] operator with an index in the same style as c arrays. 
 ~~~~{.cpp}
     cout << names[0] << end; // !if there is no element 0, you have a memory access error
@@ -123,7 +123,7 @@ Elements can be accessed using the [] operator with an index in the same style a
 ~~~~
 
 
-#### at()
+### at()
 Vectors have a function *at()* that will return the value in the same way as the [] operator, however it is slightly slower than []. *at()* checks if the index is in bounds and if not, throws an exception. This can make it useful for debugging, however for clarity and speed [] is usually preferred.
 ~~~~{.cpp}
     cout << names.at(0) << endl;
@@ -131,9 +131,9 @@ Vectors have a function *at()* that will return the value in the same way as the
 
 ----------------------------------------------------------------------------------------------------------------------------
 <a name="erasing"/>
-### Erasing elements of a vector
+## Erasing elements of a vector
 
-#### erase
+### erase
 An element can be removed from a vector using *erase*. This function takes in an iterator to the position in the vector not the index. The function *begin()* returns an iterator to the first element of the vector and can be added to to pass in subsequent positions. Note that erase does not check if the element exists or not, so be sure when erasing!
 ~~~~{.cpp}
     particles.erase( particles.begin() ); // erase first element
@@ -142,14 +142,14 @@ An element can be removed from a vector using *erase*. This function takes in an
 
     particles.erase( particles.begin(), particles.begin()+2 ); // remove first 2 elements
 ~~~~
-#### clear
+### clear
 *clear* removes all elements in the vector reducing its size to 0.
 ~~~~{.cpp}
     particles.clear();
 ~~~~    
 ----------------------------------------------------------------------------------------------------------------------------
 <a name="iterators"/>
-### Iterators
+## Iterators
 An iterator is a class of objects designed to help traverse through a sequence of elements (such as a vector). An iterator for a vector points to an individual element in the vector, and can be incremented to point to the next. As some vector functions take int or return iterators, it is useful to understand how they work. 
 
 Declaring an iterator for a vector:
@@ -213,7 +213,7 @@ When erasing multiple elements with an iterator, it is important that the iterat
 With vectors there is no speed difference between iterators or array-style [] indexes.
 
 ----------------------------------------------------------------------------------------------------------------------------
-#### std::remove_if and ofRemove
+### std::remove_if and ofRemove
 *remove_if* checks conditions defined in a boolean function to determine if each element of the vector should be deleted or not. It moves any that return true to the end of the vector and then returns the iterator to the first element that should be removed. It does not remove anything, but can be used together with *erase* to actually delete the undesired elements. This is useful when all elements in the vector need to be checked to see if they should be deleted or not (for example if a particle has gone off screen or its life timer has reached zero and so on).
 
 The first step is defining a  function that returns a bool and takes in as a parameter a reference to an element of the type the vector contains.
@@ -238,7 +238,7 @@ Be careful that this format is not used with a vector of pointers to objects (se
 
 ----------------------------------------------------------------------------------------------------------------------------
 <a name="sort"/>
-### Sorting and shuffling a vector
+## Sorting and shuffling a vector
 
 c++ has a number of < algorithm > functions that work with vectors and iterators ( *remove_if* is one of these for example). Two very useful functions are *sort* and *random_shuffle*. In openFrameworks they are implemented as *ofSort* and *ofRandomize*.
 
@@ -284,7 +284,7 @@ http://www.cplusplus.com/reference/algorithm/
 
 ----------------------------------------------------------------------------------------------------------------------------
 <a name="vectorsobjects"/>
-### Vectors of objects
+## Vectors of objects
 
 As indicated in the above examples, it is quite common to create vectors of objects. 
 ~~~~{.cpp}
@@ -298,7 +298,7 @@ http://www.learncpp.com/cpp-tutorial/912-shallow-vs-deep-copying/
 
 ----------------------------------------------------------------------------------------------------------------------------
 <a name="vectorspointers"/>
-### Vectors of pointers to objects
+## Vectors of pointers to objects
 
 When using a vector of pointers to objects, the syntax is similar:
 ~~~~{.cpp}
@@ -325,13 +325,13 @@ Note that this means erase and remove_if demonstrated above will not be sufficie
 
 ----------------------------------------------------------------------------------------------------------------------------
 <a name="optimize"/>
-### Optimization with resize and reserve
+## Optimization with resize and reserve
 See Arturo Castro's article:
 http://arturocastro.net/blog/2011/10/28/stl::vector/
 
 ----------------------------------------------------------------------------------------------------------------------------
 <a name="deofclaring"/>
-### OpenFrameworks Example
+## OpenFrameworks Example
 
 testApp.h
 ~~~~{.cpp}
