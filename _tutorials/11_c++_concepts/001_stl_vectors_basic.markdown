@@ -436,7 +436,7 @@ testApp.cpp using iterators
     
     void testApp::update(){
     	
-    	for(vector<Particle>::iterator it = particle.begin(); it != particles.end(); it++){
+    	for(vector<Particle>::iterator it = particles.begin(); it != particles.end(); it++){
     		(*it).update();
     	}
     	
@@ -446,7 +446,7 @@ testApp.cpp using iterators
     void testApp::draw(){
     	
         ofTranslate( ofGetWidth()/2, ofGetHeight()/2);
-        for(vector<Particle>::iterator it = particle.begin(); it != particles.end(); it++){
+        for(vector<Particle>::iterator it = particles.begin(); it != particles.end(); it++){
     		(*it).draw();
     	}
     }
