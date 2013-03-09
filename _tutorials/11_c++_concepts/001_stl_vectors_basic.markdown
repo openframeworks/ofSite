@@ -5,7 +5,7 @@ summary: Overview of the basic use of vectors
 author: Chris Sugrue
 author_site: http://csugrue.com
 ---
-===============
+
 A c++ vector is a type of container (like an array) that allows the storage of multiple elements (numbers, strings, objects etc.) in a format that can grow or shrink dynamically. Once a vector is created, new elements can be added, others erased and the entire vector can be sorted or shuffled. This tutorial is an overview of the basics of using vectors and is geared towards openFrameworks programmers that may be new or coming from other platforms and languages. It is not a comprehensive guide to all the functions of c++ vectors (additional resource links are provided below). 
 
 Contents
@@ -27,7 +27,7 @@ Additional Resources:
 <a href="http://www.cplusplus.com/reference/vector/vector/">C++ Vector Reference</a>
 
 ----------------------------------------------------------------------------------------------------------------------------
-<a name="quick review"/>
+<a name="quick review"></a>
 ## Quick Review:
 
 ~~~~{.cpp}
@@ -50,7 +50,7 @@ Additional Resources:
     cout << *it << end; // print out the value of the element pointed to by the iterator
 ~~~~
 ----------------------------------------------------------------------------------------------------------------------------
-<a name="declaring"/>
+<a name="declaring"></a>
 ## Declaring a vector
 
 vector&#60; *type* &#62; *name*;
@@ -61,7 +61,7 @@ vector&#60; *type* &#62; *name*;
     vector<Particle> particles;
 ~~~~
 ----------------------------------------------------------------------------------------------------------------------------
-<a name="adding"/>
+<a name="adding"></a>
 ## Adding elements to a vector
 
 ### push_back
@@ -107,7 +107,7 @@ For more details on this refer to <a href="http://arturocastro.net/blog/2011/10/
 ~~~~
 
 ----------------------------------------------------------------------------------------------------------------------------
-<a name="accessing"/>
+<a name="accessing"></a>
 ## Accessing elements of a vector
 
 ### operator []
@@ -128,7 +128,7 @@ Vectors have a function *at()* that will return the value in the same way as the
 ~~~~
 
 ----------------------------------------------------------------------------------------------------------------------------
-<a name="erasing"/>
+<a name="erasing"></a>
 ## Erasing elements of a vector
 
 ### erase
@@ -146,7 +146,7 @@ An element can be removed from a vector using *erase*. This function takes in an
     particles.clear();
 ~~~~    
 ----------------------------------------------------------------------------------------------------------------------------
-<a name="iterators"/>
+<a name="iterators"></a>
 ## Iterators
 An iterator is a class of objects designed to help traverse through a sequence of elements (such as a vector). An iterator for a vector points to an individual element in the vector, and can be incremented to point to the next. As some vector functions take int or return iterators, it is useful to understand how they work. 
 
@@ -235,7 +235,7 @@ OpenFrameworks has a function called *ofRemove* that performs similarly. Create 
 Be careful that this format is not used with a vector of pointers to objects (see below).
 
 ----------------------------------------------------------------------------------------------------------------------------
-<a name="sort"/>
+<a name="sort"></a>
 ## Sorting and shuffling a vector
 
 c++ has a number of < algorithm > functions that work with vectors and iterators ( *remove_if* is one of these for example). Two very useful functions are *sort* and *random_shuffle*. In openFrameworks they are implemented as *ofSort* and *ofRandomize*.
@@ -279,7 +279,7 @@ The vector range and boolean function can then be passed to *sort*:
 More information on <a href="http://www.cplusplus.com/reference/algorithm/"> algorithm </a> functions:
 
 ----------------------------------------------------------------------------------------------------------------------------
-<a name="vectorsobjects"/>
+<a name="vectorsobjects"></a>
 ## Vectors of objects
 
 As indicated in the above examples, it is quite common to create vectors of objects. 
@@ -292,7 +292,7 @@ More on <a href="http://www.learncpp.com/cpp-tutorial/912-shallow-vs-deep-copyin
 
 
 ----------------------------------------------------------------------------------------------------------------------------
-<a name="vectorspointers"/>
+<a name="vectorspointers"></a>
 ## Vectors of pointers to objects
 
 When using a vector of pointers to objects, the syntax is similar:
@@ -319,13 +319,13 @@ It is very important to remember that when erasing a pointer to an object in a v
 Note that this means erase and remove_if demonstrated above will not be sufficient. If pointers are needed, it is worthwhile to consider using shared pointers instead. <a href="http://www.openframeworks.cc/documentation/types/ofPtr.html">See ofPtr</a>
 
 ----------------------------------------------------------------------------------------------------------------------------
-<a name="optimizing"/>
+<a name="optimizing"></a>
 ## Optimization with resize and reserve
 See <a href="http://arturocastro.net/blog/2011/10/28/stl::vector/">Arturo Castro's article.</a>
 
 
 ----------------------------------------------------------------------------------------------------------------------------
-<a name="of"/>
+<a name="of"></a>
 ## OpenFrameworks Example
 
 testApp.h
