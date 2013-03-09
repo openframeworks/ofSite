@@ -40,9 +40,9 @@
 	<h2>ios</h2>
 	<p><em>osx only</em></p><br/>
 	<h3>download openFrameworks for</h3>
-	<p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_ios_release.zip">ios</a></p><br/>
+	<p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_ios_release.zip">xcode</a></p><br/>
 	<h3>IDE setup guide</h3>
-	<p><a href="../setup/iphone">ios</a></p>
+	<p><a href="../setup/iphone">xcode</a></p>
 </div>
 
 <div id="download-latest-platform">
