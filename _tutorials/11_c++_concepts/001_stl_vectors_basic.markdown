@@ -5,8 +5,6 @@ summary: Overview of the basic use of vectors
 author: Chris Sugrue
 author_site: http://csugrue.com
 ---
-
-stl::vector basics
 ===============
 A c++ vector is a type of container (like an array) that allows the storage of multiple elements (numbers, strings, objects etc.) in a format that can grow or shrink dynamically. Once a vector is created, new elements can be added, others erased and the entire vector can be sorted or shuffled. This tutorial is an overview of the basics of using vectors and is geared towards openFrameworks programmers that may be new or coming from other platforms and languages. It is not a comprehensive guide to all the functions of c++ vectors (additional resource links are provided below). 
 
@@ -26,7 +24,7 @@ Contents
 
 Additional Resources:
 
-http://www.cplusplus.com/reference/vector/vector/
+<a href="http://www.cplusplus.com/reference/vector/vector/">C++ Vector Reference</a>
 
 ----------------------------------------------------------------------------------------------------------------------------
 <a name="quick review"/>
@@ -55,7 +53,7 @@ http://www.cplusplus.com/reference/vector/vector/
 <a name="declaring"/>
 ## Declaring a vector
 
-vector< *type* > *name*;
+vector&#60; *type* &#62; *name*;
 
 ~~~~{.cpp}
     vector<float> measures;       
@@ -91,8 +89,8 @@ vector< *type* > *name*;
 
 When adding many elements at the same time, using *resize* may be faster than *push_back*. This is because when a new element is added to the end of a vector there might not be enough space in memory at the current location. In this case, the entire vector is moved meaning that it will be copied and new memory allocated in a different location. This can be slow and may occur multiple times when using push_back in a loop. When using *resize* the move would only need to be performed once.  
 
-For more details on this refer to Arturo Castro's tutorial: 
-http://arturocastro.net/blog/2011/10/28/stl::vector/
+For more details on this refer to <a href="http://arturocastro.net/blog/2011/10/28/stl::vector/">Arturo Castro's tutorial</a> 
+
 
 ### assign
 *assign* can be used to create a vector of a given size and populate it with uniform values, or to copy part of an existing vector. It reinitializes the vector deleting any previous elements. 
@@ -154,7 +152,7 @@ An iterator is a class of objects designed to help traverse through a sequence o
 
 Declaring an iterator for a vector:
 
-vector< *type* >::iterator it; // *it* is the name of the iterator but could be called anything we want
+vector&#60; *type* &#62;::iterator it; // *it* is the name of the iterator but could be called anything we want
 ~~~~{.cpp}
     vector<float>::iterator it = nums.begin();
     vector<Particle>::iterator itp = partices.begin();
@@ -278,9 +276,7 @@ The vector range and boolean function can then be passed to *sort*:
     ofRandomize(vals); // pass in just the  vector (all will be shuffled)
 ~~~~
 
-For more information on < algorithm > functions:
-
-http://www.cplusplus.com/reference/algorithm/
+More information on <a href="http://www.cplusplus.com/reference/algorithm/"> algorithm </a> functions:
 
 ----------------------------------------------------------------------------------------------------------------------------
 <a name="vectorsobjects"/>
@@ -292,9 +288,8 @@ As indicated in the above examples, it is quite common to create vectors of obje
 ~~~~
 In many situations this works great and is preferred. However, problems can sometimes arise if the class has member pointers and dynamically allocated memory but not a proper copy constructor. A vector of pointers to objects can be used, although shared pointers are probably best. Shared pointers would also be needed to use polymorphism / base classes.
 
-For more on vectors and copy constructors:
+More on <a href="http://www.learncpp.com/cpp-tutorial/912-shallow-vs-deep-copying/">vectors and copy constructors</a>.
 
-http://www.learncpp.com/cpp-tutorial/912-shallow-vs-deep-copying/
 
 ----------------------------------------------------------------------------------------------------------------------------
 <a name="vectorspointers"/>
@@ -321,13 +316,13 @@ It is very important to remember that when erasing a pointer to an object in a v
     }
 ~~~~ 
 
-Note that this means erase and remove_if demonstrated above will not be sufficient. If pointers are needed, it is worthwhile to consider using shared pointers instead. See ofPtr: http://www.openframeworks.cc/documentation/types/ofPtr.html
+Note that this means erase and remove_if demonstrated above will not be sufficient. If pointers are needed, it is worthwhile to consider using shared pointers instead. <a href="http://www.openframeworks.cc/documentation/types/ofPtr.html">See ofPtr</a>
 
 ----------------------------------------------------------------------------------------------------------------------------
 <a name="optimizing"/>
 ## Optimization with resize and reserve
-See Arturo Castro's article:
-http://arturocastro.net/blog/2011/10/28/stl::vector/
+See <a href="http://arturocastro.net/blog/2011/10/28/stl::vector/">Arturo Castro's article.</a>
+
 
 ----------------------------------------------------------------------------------------------------------------------------
 <a name="of"/>
