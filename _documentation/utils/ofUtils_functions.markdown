@@ -330,7 +330,7 @@ _advanced: False_
 
 _description: _
 
-
+Elapsed time in seconds
 
 
 
@@ -1498,7 +1498,8 @@ _syntax: ofToDataPath(path, absolute)_
 _name: ofToDataPath_
 _returns: string_
 _returns_description: _
-_parameters: string path_
+_parameters: string path
+_
 _version_started: 006_
 _version_deprecated: _
 _summary: _
