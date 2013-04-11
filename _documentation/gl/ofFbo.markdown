@@ -38,7 +38,7 @@ shader.end();
 fbo.end();
 fbo.draw(0, 0);
 ~~~~
-Bloom effects are also often done with FBO objects as as Multiple Render to Texture or MRT effectrs.
+Bloom effects are also often done with FBO objects using Multiple Render to Texture or MRT effects.
 
 
 
