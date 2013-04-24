@@ -53,7 +53,7 @@ blog.description = "Your Blog's short description"
 blog.timezone = "US/Eastern"
 
 controllers.documentation.enabled = True
-controllers.community.enabled = True
+controllers.community.enabled = False
 controllers.tutorials.enabled = True
 
 documentation = controllers.documentation
