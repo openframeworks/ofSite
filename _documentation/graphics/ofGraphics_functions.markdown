@@ -2409,7 +2409,7 @@ _advanced: False_
 
 _description: _
 
-Draws an rectangle from point x,y with a given width and height. 
+Draws a rectangle from point x,y with a given width and height. 
 ~~~~{.cpp}
 void testApp::draw(){
 	ofRect(10,10,100,100);
