@@ -31,23 +31,23 @@
 <li><a href="http://www.vargatron.com/">Steve Varga</a> (vargatron) as typography leader</li>
 </ul>
 
-            </div>
+</div>
             
-            <div class="page-right-narrow">
-    <div class="home-links">
-    <br/>
-    <h1></h1>
-        <h3>Upcoming events</h3>
-        <ul>
-        <li><a href="http://www.gaffta.org/2013/04/24/gray-area-creative-code-meetup/">Gray Area: Creative Code Meetup</a>, San Francisco, 15 May 2013</li>
-        <li><a href="http://eyeofestival.com/">Eyeo festival</a>, Minneapolis, 5-8 June 2013
-        <li><a href="http://push-conference.com/">push.conference</a>, Munich, 25-26 October 2013</li>
-        </ul>
+<div class="page-right-narrow">
+<div class="home-links">
+<br/>
+<h1></h1>
+<h3>Upcoming events</h3>
+<ul>
+<li><a href="http://www.gaffta.org/2013/04/24/gray-area-creative-code-meetup/">Gray Area: Creative Code Meetup</a>, San Francisco, 15 May 2013</li>
+<li><a href="http://eyeofestival.com/">Eyeo festival</a>, Minneapolis, 5-8 June 2013
+<li><a href="http://push-conference.com/">push.conference</a>, Munich, 25-26 October 2013</li>
+</ul>
         
-  <h3>Calls for collaboration</h3>
-	<p>Take a look at the collaboration section on the forum!</p>
+<h3>Calls for collaboration</h3>
+<p>Take a look at the collaboration section on the forum!</p>
         
-	<h3>Questions?</h3>
-	<p>Join the <a href="http://webchat.freenode.net/?channels=openframeworks">IRC channel</a> and introduce yourself! We're all constantly learning and helping each other, and we'd love to help you too.</p>
-    </div>
+<h3>Questions?</h3>
+<p>Join the <a href="http://webchat.freenode.net/?channels=openframeworks">IRC channel</a> and introduce yourself! We're all constantly learning and helping each other, and we'd love to help you too.</p>
+</div>
 </div>
