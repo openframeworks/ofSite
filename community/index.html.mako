@@ -1,4 +1,4 @@
-<%inherit file="/_templates/slideshow.mako" />
+<%inherit file="/_templates/home.mako" />
 
 <div class="page-left-medium">                
 <h1 id="community">community</h1>
