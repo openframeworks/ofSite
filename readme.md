@@ -50,7 +50,14 @@ An alternative to running blogofile locally is to use a Markdown editor that can
 * Windows: [MarkdownPad](http://www.markdownpad.com/)
 * Linux: [Writr](http://antrix.net/pages/writr-markdown/), [ReText](http://sourceforge.net/p/retext/home/ReText/), & the [gedit-markdown](http://www.jpfleury.net/en/software/gedit-markdown.php) plugin
 
-## Notes
+## Notes 
+Latest version of the ofSite works with Blogofile 0.8b1.
+
+Installation notes (Debian testing): You can install it by downloading the [package](http://pypi.python.org/packages/source/B/Blogofile/Blogofile-0.8b1.tar.gz) from the [project's page](http://www.blogofile.com/). Then inside the blogofile folder run (as root)
+
+	python setup.py install
+
+## Notes (before February 2013)
 Note: The website utilizes some additions to Markdown itself, so specialized functions such as code syntax highlighting may not be available in the editor, even though it will work fine on the site.
 
 Installation notes (Mac OSX 10.8): If you get errors when building the site, you may need blogofile 0.7.1 (current version is 0.8b). The only way I've found to install the version has been by cloning [https://github.com/EnigmaCurry/blogofile](https://github.com/EnigmaCurry/blogofile) and checking out the 0.7.1 tag. 
@@ -62,7 +69,7 @@ Your may also need to install [asciidoc](http://www.methods.co.nz/asciidoc/manpa
 
 <a id="below"></a>
 
-## Vanilla Ubuntu 12.04 install:
+## Vanilla Ubuntu 12.04 install (for Blogofile 0.7.1):
 
 	aptitude install build-essential gcc python-dev libxslt1-dev git python-setuptools python-pip 
 	easy_install lxml
