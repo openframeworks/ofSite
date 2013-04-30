@@ -34,7 +34,6 @@
                     </div><!-- End Page Wide -->
                 % endif
             % endfor
-        </div><!-- End Page Wide -->  
               
       </div><!-- End Body Wrap -->
       
