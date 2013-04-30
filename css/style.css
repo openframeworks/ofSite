@@ -274,6 +274,12 @@ hr.header {
 	padding: 0px;
 	width: 340px;
 }
+.page-wide-tutorial {
+	float: left;
+	margin: 0px;
+	padding: 0px 50px 10px 50px;
+	width: 750px;
+}
 #left-contact {
 	float: left;
 	padding: 5px 20px 0px 0px;
@@ -488,7 +494,7 @@ a.nohover {
 }
 .articles{
     list-style:none;
-    padding:0;
+    padding:0 0 3em 0;
 }
 .articles a{
 	font-family: 'Questrial', sans-serif;
@@ -631,11 +637,11 @@ hr {
 .beginners .documentation_class {
 	/*width: 100%;*/
 }
-div.coreaddons{
+div.sectiontitle{
     background-color:#eee;
     margin: 1em 0 1em 0;
 }
-div.coreaddons h2{
+div.sectiontitle h2{
     padding-top:.3em;
 }
 .documentation_detail {
