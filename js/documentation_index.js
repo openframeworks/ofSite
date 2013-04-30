@@ -28,6 +28,7 @@ $(document).ready(
                     currentHidding.removeClass('hide');
                     currentHidding.addClass('show');
                     currentHidding = null;
+                    $('.documentation_index_group').masonry( 'reload' );
                     });
             }
         });
