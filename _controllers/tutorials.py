@@ -16,6 +16,7 @@ sys.path.append(os.getcwd()+"/_filters/asciidoc_template")
 from asciidocapi import AsciiDocAPI
 import logging
 import StringIO
+import collections
 
 
 logger = logging.getLogger("blogofile.post")   
@@ -87,15 +88,15 @@ def run():
     directory = "_tutorials"
     documentation = bf.config.controllers.tutorials
     
-    categories = []
+    categories = collections.OrderedDict()
 
     dirs = os.listdir(directory)
     dirs.sort()
     for category in dirs:
         if os.path.isdir(os.path.join(directory,category)) and len(os.listdir(os.path.join(directory,category)))>0:
-            categories.append(category[category.find("_")+1:])
+            categories[category[category.find("_")+1:]]=[]
     
-    bf.template.materialize_template("tutorials.mako", ('tutorials',"index.html"), {'categories':categories} )
+    #bf.template.materialize_template("tutorials.mako", ('tutorials',"index.html"), {'categories':categories} )
     
     for catfolder in os.listdir(directory):
         if not os.path.isdir(os.path.join(directory,catfolder)):
@@ -108,12 +109,14 @@ def run():
             file_split = os.path.splitext(article)
             if file_split[1]=='.markdown':
                 articleobj = MarkdownArticle(os.path.join(directory,catfolder,article))
-                bf.template.materialize_template("tutorial.mako", (os.path.join('tutorials',category),articleobj.file), {'categories':categories,'article':articleobj} )
+                bf.template.materialize_template("tutorial.mako", (os.path.join('tutorials',category),articleobj.file), {'article':articleobj} )
                 articles.append(articleobj)
             if file_split[1]=='.asciidoc':
                 articleobj = AsciiDocArticle(os.path.join(directory,catfolder,article))
-                bf.template.materialize_template("tutorial.mako", (os.path.join('tutorials',category),articleobj.file), {'categories':categories,'article':articleobj} )
+                bf.template.materialize_template("tutorial.mako", (os.path.join('tutorials',category),articleobj.file), {'article':articleobj} )
                 articles.append(articleobj)
             if os.path.isdir(os.path.join(directory,catfolder,article)):
                 shutil.copytree(os.path.join(directory,catfolder,article),os.path.join('_site','tutorials',category,article))
-        bf.template.materialize_template("tutorials_category.mako", (os.path.join('tutorials',category),"index.html"), {'categories':categories,'category':category,'articles':articles} )
+        categories[category]=articles;
+        #bf.template.materialize_template("tutorials_category.mako", (os.path.join('tutorials',category),"index.html"), {'categories':categories,'category':category,'articles':articles} )
+    bf.template.materialize_template("tutorials.mako", ('tutorials',"index.html"), {'categories':categories} )

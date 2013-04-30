@@ -45,7 +45,7 @@
     	</div>
 
 
-    	<div class="page-wide coreaddons">
+    	<div class="page-wide sectiontitle">
 		    <h2>core</h2> 
 		    <a class="hide_core_functions">hide functions</a>
         </div><!-- End Page Wide -->
@@ -63,7 +63,7 @@
     	<div class="page-wide">
         </div><!-- End Page Wide -->
         
-    	<div class="page-wide coreaddons">
+    	<div class="page-wide sectiontitle">
 		    <h2>addons</h2> <a class="hide_addons_functions">hide functions</a>
         </div><!-- End Page Wide -->
 
