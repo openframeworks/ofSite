@@ -306,8 +306,8 @@ hr.header {
 .submenucol-left {
 	float: left;
 	margin: 0px;
-	padding: 0px 50px 0px 0px;
-	width: 150px;
+	padding: 0px 0px 0px 0px;
+	width: 200px;
 }
 .submenucol-right {
 	float: left;
