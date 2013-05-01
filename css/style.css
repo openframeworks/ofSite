@@ -713,7 +713,7 @@ div.sectiontitle h2{
 	padding: 0px 0px 10px 0px;
 	position: relative;
 }
-.hide_core_functions, .hide_addons_functions{
+.hide_core_functions, .hide_addons_functions, .collapse_core, .collapse_addons{
     cursor:pointer;cursor:hand;
 }
 #editdocs{
