@@ -1,7 +1,7 @@
 <%page args="block"/>
 <div class="documentation_group">
     <div class="documentation_group_head show">
-			<h2>- ${block.name}<h2>
+			<h2>${block.name}<h2>
 	</div>
 			
 	<!-- fileFuncs -->

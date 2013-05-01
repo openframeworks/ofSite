@@ -47,7 +47,7 @@
 
     	<div class="page-wide sectiontitle">
 		    <h2>core</h2> 
-		    <a class="hide_core_functions">hide functions</a>
+		    <a class="hide_core_functions">hide functions</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="collapse_core">collapse all</a>
         </div><!-- End Page Wide -->
 
     	<div class="page-wide core">
@@ -64,7 +64,7 @@
         </div><!-- End Page Wide -->
         
     	<div class="page-wide sectiontitle">
-		    <h2>addons</h2> <a class="hide_addons_functions">hide functions</a>
+		    <h2>addons</h2> <a class="hide_addons_functions">hide functions</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="collapse_addons">collapse all</a>
         </div><!-- End Page Wide -->
 
     	<div class="page-wide addons">
