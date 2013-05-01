@@ -36,7 +36,7 @@
                  <% prevmethod = "" %>
                  % for method in clazz.function_list:
                      % if prevmethod != method.name and method.visible and not method.advanced and method.access=='public' and (method.name!=method.clazz) and (method.name != "~" + method.clazz):
-                         <li> <a class="${method.name}">${method.name}()</a> </li>
+                         <li> <a href="#show_${method.name}" class="${method.name}">${method.name}()</a> </li>
                      % endif
                      <% prevmethod = method.name %>
                  % endfor
@@ -51,7 +51,7 @@
                 <ul class="functionslist">
                      % for var in clazz.var_list:
                          % if var.visible and not var.advanced and var.access=='public':
-                             <li> <a class="${var.name}">${var.type} ${var.name}</a> </li>
+                             <li> <a href="#show_${var.name}" class="${var.name}">${var.type} ${var.name}</a> </li>
                          % endif
                      % endfor
                  </ul>
@@ -66,7 +66,7 @@
                      <% prevmethod = "" %>
                      % for method in functions.function_list:
                          % if prevmethod != method.name and method.visible and not method.advanced:
-                             <li> <a class="${method.name}">${method.name}()</a> </li>
+                             <li> <a href="#show_${method.name}" class="${method.name}">${method.name}()</a> </li>
                          % endif
                          <% prevmethod = method.name %>
                      % endfor
