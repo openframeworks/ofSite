@@ -50,7 +50,7 @@
 <h3>Recurring meetups</h3>
 <p>Gatherings of people working with oF or curious about getting involved.  A great place to meet people and share your ideas and projects!</p>
 <ul>
-<li><a href="http://groups.google.com/group/freakdays/feed/>Amsterdam</a></li>
+<li><a href="http://groups.google.com/group/freakdays/feed/">Amsterdam</a></li>
 <li><a href="https://www.facebook.com/GeneratorLeipzig">Leipzig</a></li>
 </ul>
 
