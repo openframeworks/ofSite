@@ -38,12 +38,22 @@
 <br/>
 <h1></h1>
 <h3>Upcoming events</h3>
+<p>Conferences, workshops, and talks related to oF and the surrounding community</p>
 <ul>
 <li><a href="http://www.gaffta.org/2013/04/24/gray-area-creative-code-meetup/">Gray Area: Creative Code Meetup</a>, San Francisco, 15 May 2013</li>
+<li><a href="http://www.thehacktory.org">The Hacktory: Intro to Interactive Art</a>, Philadelphia, May 22 6-8PM</li>
 <li><a href="http://eyeofestival.com/">Eyeo festival</a>, Minneapolis, 5-8 June 2013
+<li><a href="http://www.athensvideoartfestival.gr">Introduction to openFrameworks, Athens Video Art Festival, Athens, Greece, 7-9 June 2013</a></li>
 <li><a href="http://push-conference.com/">push.conference</a>, Munich, 25-26 October 2013</li>
 </ul>
-        
+
+<h3>Recurring meetups</h3>
+<p>Gatherings of people working with oF or curious about getting involved.  A great place to meet people and share your ideas and projects!</p>
+<ul>
+<li><a href="http://groups.google.com/group/freakdays/feed/>Amsterdam</a></li>
+<li><a href="https://www.facebook.com/GeneratorLeipzig">Leipzig</a></li>
+</ul>
+
 <h3>Calls for collaboration</h3>
 <p>Take a look at the collaboration section on the forum!</p>
         
