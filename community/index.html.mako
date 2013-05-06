@@ -41,9 +41,9 @@
 <p>Conferences, workshops, and talks related to oF and the surrounding community</p>
 <ul>
 <li><a href="http://www.gaffta.org/2013/04/24/gray-area-creative-code-meetup/">Gray Area: Creative Code Meetup</a>, San Francisco, 15 May 2013</li>
-<li><a href="http://www.thehacktory.org">The Hacktory: Intro to Interactive Art</a>, Philadelphia, May 22 6-8PM</li>
+<li><a href="http://www.thehacktory.org">The Hacktory: Intro to Interactive Art</a>, Philadelphia, May 22 2013, 6-8 PM</li>
 <li><a href="http://eyeofestival.com/">Eyeo festival</a>, Minneapolis, 5-8 June 2013
-<li><a href="http://www.athensvideoartfestival.gr">Introduction to openFrameworks, Athens Video Art Festival, Athens, Greece, 7-9 June 2013</a></li>
+<li><a href="http://www.athensvideoartfestival.gr">Introduction to openFrameworks, Athens Video Art Festival</a>, Athens, Greece, 7-9 June 2013</li>
 <li><a href="http://push-conference.com/">push.conference</a>, Munich, 25-26 October 2013</li>
 </ul>
 
