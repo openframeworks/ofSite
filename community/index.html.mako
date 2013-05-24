@@ -20,7 +20,7 @@
 <li>Internals/app leader: <a href="http://undef.ch/">Philip Whitfield</a> (underdoeg)</li>
 <li>iOS leader: <a href="http://www.julapy.com/blog/">Lukasz Karluk</a> (julapy)</li>
 <li>Outreach leader: <a href="http://caitlinmorris.net/">Caitlin Morris</a> (c_tl_n)</li>
-<li>Sound leader: <a href="http://damianstewart.com/">Damian Stewart</a> (damian)</li>
+<li>Sound leader: <a href="https://github.com/admsyn">Adam Carlucci</a> (admsyn)</li>
 <li>Tutorial leader(s): <a href="http://www.roxlu.com/">Diederick Huijbers</a> (roxlu) and <a href="http://www.jeffcrouse.info/">Jeff Crouse</a> (jefftimesten)</li>
 <li>Typography leader: <a href="http://christopherbaker.net/">Christopher Baker</a> (bakercp)</li>
 <li>Video leader: <a href="http://www.jamesgeorge.org/">James George</a> (obviousjim)</li>
@@ -28,6 +28,7 @@
 </ul>
 <p>And previously:</p>
 <ul>
+<li><a href="http://damianstewart.com/">Damian Stewart</a> (damian) as sound leader</li>
 <li><a href="http://www.vargatron.com/">Steve Varga</a> (vargatron) as typography leader</li>
 </ul>
 
