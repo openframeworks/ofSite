@@ -19,7 +19,10 @@ import markdown_file
 
 logger = logging.getLogger("blogofile.post")    
         
-        
+def uniqify(seq):
+    seen = set()
+    seen_add = seen.add
+    return [ x for x in seq if x not in seen and not seen_add(x)]
         
 class Block(object):
     def __init__(self, source):
@@ -35,9 +38,9 @@ class Block(object):
             self.__parse_element(element)
         for clazz in self.classes:
             if 'methods' in clazz:
-                clazz['methods'] = sets.Set(clazz['methods']) 
+                clazz['methods'] = uniqify(clazz['methods']) #sets.Set(clazz['methods']) 
             if 'variables' in clazz:
-                clazz['vars'] = sets.Set(clazz['variables'])
+                clazz['variables'] = uniqify(clazz['variables']) #sets.Set(clazz['variables'])
                 
     def __parse_element(self, element):
         mode = self.mode
@@ -81,7 +84,13 @@ def run():
         
     classes = markdown_file.getclass_list()
     for clazz_name in classes:
-        clazz = markdown_file.getclass(clazz_name)
+        clazz = markdown_file.getclass(clazz_name,True)
+        methods_to_remove = []
+        for method in clazz.function_list:
+            if method.name==clazz.name or method.name[0]=="~" or method.name.find("OF_DEPRECATED_MSG")!=-1:
+                methods_to_remove.append(method)
+        for method in methods_to_remove:
+            clazz.function_list.remove(method)
         functions_file = markdown_file.getfunctionsfile(clazz_name)
         #print clazz.name
         #print clazz.function_list
@@ -90,19 +99,25 @@ def run():
             "clazz": clazz,
             "functions": functions_file
         }
-        bf.writer.materialize_template("documentation_class.mako", ('documentation',clazz.module+"/"+clazz.name+".html"), env )
+        bf.template.materialize_template("documentation_class.mako", ('documentation',clazz.module+"/"+clazz.name+".html"), env )
     
     function_files = markdown_file.getfunctionsfiles_list()
     for functionfile_name in function_files:
         if functionfile_name in classes:
             continue
         functions_file = markdown_file.getfunctionsfile(functionfile_name)
+        functions_to_remove = []
+        for function in functions_file.function_list:
+            if function.name.find("OF_DEPRECATED_MSG")!=-1:
+                functions_to_remove.append(method)
+        for function in functions_to_remove:
+            functions_file.function_list.remove(method)
         env = {
             "modulename": functions_file.name,
             "clazz": None,
             "functions": functions_file
         }
-        bf.writer.materialize_template("documentation_class.mako", ('documentation',functions_file.module+"/"+functions_file.name+".html"), env )
+        bf.template.materialize_template("documentation_class.mako", ('documentation',functions_file.module+"/"+functions_file.name+".html"), env )
         
 
     # process index file
@@ -132,7 +147,7 @@ def run():
                 blocks.append(b)
         addons_columns.append(blocks)
         
-    bf.writer.materialize_template("documentation.mako", ('documentation',"index.html"), {'columns':columns,'addons_columns':addons_columns} )
+    bf.template.materialize_template("documentation.mako", ('documentation',"index.html"), {'columns':columns,'addons_columns':addons_columns} )
     
     for root, dirs, files in os.walk(directory):
         for name in files:

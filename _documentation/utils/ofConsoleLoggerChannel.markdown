@@ -7,37 +7,10 @@
 
 
 
+
 ##Methods
 
 
-
-### ~ofConsoleLoggerChannel()
-
-<!--
-_syntax: ~ofConsoleLoggerChannel()_
-_name: ~ofConsoleLoggerChannel_
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
 
 ###void log(level, &module, &message)
 
@@ -58,6 +31,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -93,6 +67,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void log(logLevel, &module, *format, args)
@@ -114,6 +89,36 @@ _advanced: False_
 -->
 
 _description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ~ofConsoleLoggerChannel()
+
+<!--
+_syntax: ~ofConsoleLoggerChannel()_
+_name: ~ofConsoleLoggerChannel_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
 
 
 

@@ -13,7 +13,8 @@
 		   <div class="page-wide">
 		     <h1>community</h1>
 			 <div class="page-left-split">
-				 <p>This community page is auto generated from the most active members on the OF forum.  Please see <a href="https://github.com/openframeworks/ofSite/wiki/community"> this guide</a> for info about how to update your profile.  If you'd like to get added to this page, we will add a forum thread in the near future where you can let us know and we'll manually add you.</p>
+				 <p>To get more involved in OF, check out the developers mailing list <a href="http://dev.openframeworks.cc/listinfo.cgi/of-dev-openframeworks.cc">of-dev</a>. While the forum is ideal for asking questions and sharing projects, the dev list is a great place for discussion about the direction OF is heading. The list is open to everyone, and we like to foster a diverse crowd to help OF become as useful and interesting as possible!</p>
+				 <p>The list below is auto generated from the most active members on the OF forum.  Please see <a href="https://github.com/openframeworks/ofSite/wiki/community"> this guide</a> for info about how to update your profile.  If you'd like to get added to this page, we will add a forum thread in the near future where you can let us know and we'll manually add you.</p>
 			</div>
 			<br style="clear:both" />
       		<br />

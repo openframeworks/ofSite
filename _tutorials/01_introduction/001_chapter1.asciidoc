@@ -7,7 +7,7 @@ v0.1, February 2012:
 :icons:
 :numbered:
 :doctype: book
-:author_site: http://jeffcrouse.com
+:author_site: http://jeffcrouse.info
 :summary: This chapter will help you get started with the basics of openFrameworks, such as the proper method for creating a project, setting window size, and basic drawing. But first...
 
 This chapter will help you get started with the basics of openFrameworks, such as the proper method for creating a project, setting window size, and basic drawing. But first...

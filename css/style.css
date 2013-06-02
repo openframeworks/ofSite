@@ -97,6 +97,27 @@ body {
 	position: relative;
 	width: 100%;
 }
+#head .submenu{
+    font-size: 1em;
+    margin-right:0px;
+    list-style:none;
+    float:right;
+	font-family: 'Questrial', sans-serif;
+}
+#head .submenu li{
+    display:inline;
+    margin-right:5px;
+}
+#head .submenu li a{
+    font-size: 1em;
+    color: #EE3987;
+}
+#head .a{
+    font-size: 1em;
+    padding:0;
+    margin:0;
+    margin-right:50px;
+}
 #head-left {
 	float: left;
 	margin: 0px;
@@ -112,20 +133,21 @@ body {
 }
 #head-right ul {
 	list-style: none;
+	padding-left:20px;
 }
 #head-right li {
 	display: block;
 	float: left;
-	margin-left: 2.1em;
+	margin-left: 0.9em;
 }
 #head-right li a {
 	color: #333;
-	font-size: 2em;
+	font-size: 1.55em;
 	padding: 0 0.2em 0 0.2em;
 	font-family: 'Questrial', sans-serif;
 }
 #head-right .menu-externals {
-	float: right;
+	float: left;
 }
 #head-right .menu-externals li a {
 	font-size: 1.2em;
@@ -239,12 +261,24 @@ hr.header {
 	padding: 5px 40px 0px 50px;
 	width: 620px;
 }
+.page-left-narrow {
+	clear: left;
+	margin: 0px 0px 0px 0px;
+	padding: 0px;
+	width: 340px;
+}
 .page-right-narrow {
 	clear: right;
 	float: right;
 	margin: 0px 0px 0px 0px;
 	padding: 0px;
 	width: 340px;
+}
+.page-wide-tutorial {
+	float: left;
+	margin: 0px;
+	padding: 0px 50px 10px 50px;
+	width: 750px;
 }
 #left-contact {
 	float: left;
@@ -278,12 +312,12 @@ hr.header {
 .submenucol-left {
 	float: left;
 	margin: 0px;
-	padding: 0px 50px 0px 0px;
-	width: 150px;
+	padding: 0px 0px 0px 0px;
+	width: 200px;
 }
 .submenucol-right {
 	float: left;
-	padding: 5px 0px 0px 50px;
+	padding: 0px 0px 0px 50px;
 	width: 650px;
 }
 .search_input {
@@ -460,7 +494,7 @@ a.nohover {
 }
 .articles{
     list-style:none;
-    padding:0;
+    padding:0 0 3em 0;
 }
 .articles a{
 	font-family: 'Questrial', sans-serif;
@@ -481,19 +515,34 @@ a.nohover {
     color: #444;
     margin-bottom:2em;
 }
-.functionslist a {
+
+.article > p > img{
+	max-width:100%;
+}
+
+.functionslist a{
 	color: #444;
 	font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+	cursor: pointer; cursor:hand;
 }
-.functionslist a:hover {
+.functionslist a:hover, .documentation_index_group a:hover {
 	color: white;
 }
-ul.functionslist {
+.functionslist a.selected{
+    background-color: #EE3987;
+    color: white;
+}
+ul.functionslist, div.documentation_index_group {
 	color: #444;
 	list-style: none;
 	padding: 0;
 	padding-left: 8px;
 }
+.documentation_index_group a{
+	color: #EE3987;
+	font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+}
+
 h1 {
 	color: #333333;
 	font-size: 3.5em;
@@ -554,21 +603,25 @@ hr {
 	width: 100%;
 }
 .documentation_group_head {
-	background: #E1E1E1;
-	color: black000;
-	float: left;
-	font-weight: bold;
+	/*background: #E1E1E1;*/
+	border-bottom: 1px #eee solid;
+	color: black;
+	float: none;
+	/*font-weight: bold;*/
 	margin: 0px 0px 5px 0px;
 	padding: 3px 0px 3px 0px;
 	width: 100%;
+	
 }
 .documentation_class {
-	background: #F7F7F7;
-	float: left;
+	/*background: #F7F7F7;
+	float: left;*/
 	margin: 0px;
 	padding: 5px 0px 5px 0px;
 	position: relative;
-	width: 100%;
+	/*width: 300px;*/
+	list-style:none;
+	float:left;
 }
 .beginners .documentation_col {
 	margin-right: 80px;
@@ -577,19 +630,30 @@ hr {
 .beginners .documentation_group {
 	width: 100%;
 }
-.beginners .documentation_group_head {
+.documentation_group_head {
 	width: 100%;
+	cursor: hand; cursor: pointer;
 }
 .beginners .documentation_class {
-	width: 100%;
+	/*width: 100%;*/
+}
+div.sectiontitle{
+    background-color:#eee;
+    margin: 1em 0 1em 0;
+}
+div.sectiontitle h2{
+    padding-top:.3em;
 }
 .documentation_detail {
 	float: left;
 	line-height: 20px;
 	margin: 0px 0px 30px 0px;
-	padding: 5px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
 	position: relative;
 	width: 650px;
+}
+.documentation_detail.class_documentation p{
+    margin:0;
 }
 .documentation_detail_table_offset {
 	float: left;
@@ -599,16 +663,16 @@ hr {
 	width: 650px;
 }
 .documentation_detail h1 {
-	border-top-color: #EEEEEE;
+	/*border-top-color: #EEEEEE;
 	border-top-style: solid;
-	border-top-width: 1px;
+	border-top-width: 1px;*/
 	float: left;
 	font-size: 1.3em;
 	font-weight: bold;
 	font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
 	margin: 0px;
 	padding: 0px 0px 5px 0px;
-	padding-top: 10px;
+	/*padding-top: 10px;*/
 	position: relative;
 	width: 650px;
 }
@@ -648,6 +712,19 @@ hr {
 	margin: 0px;
 	padding: 0px 0px 10px 0px;
 	position: relative;
+}
+.hide_core_functions, .hide_addons_functions, .collapse_core, .collapse_addons{
+    cursor:pointer;cursor:hand;
+}
+#editdocs{
+    float:right;
+}
+#docstitle{
+    width:60%;
+    float:left;
+}
+#docstitle h1{
+    cursor:pointer; cursor:hand;
 }
 .documentation_detail_right_col img {
 	max-width: 480px;
@@ -871,7 +948,7 @@ div.galleryItem p {
 }
 #download-latest-platform, #documentation-ebook {
 	background-color: #eee;
-	height: 175px;
+	height: 180px;
 	margin-bottom: 1em;
 	margin-right: 1em;
 	padding: 20px;
@@ -1083,3 +1160,12 @@ div#github .github_avatar img {
 	font-size: .8em;
 	margin-left: 5px;
 }
+
+/* logs */
+label.toggle { cursor: pointer; }
+label.warning { color: #FC0 }
+label.error { color: #F00 }
+.ok { color: #0F0 }
+input.toggle { display: none; }
+input.toggle:checked+div { display: none; }
+div.log {padding-left:2em;}

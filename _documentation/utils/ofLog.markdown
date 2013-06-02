@@ -3,6 +3,7 @@
 
 ##Description
 
+
 ofLog provides an interface for writing text output from your app. It's basically a more useful version of cout or printf where output can be filtered and written to the console or to a file. 
 
 Sometimes you want to be able to see when something has happened inside the code, but don't need to draw something visually. Oftentimes it's more then enough to print out the state of a few variables when debugging. Other times you need to know if a crash happened while your app was running somewhere, so you log messages and variables to a file you can read after the program crashes.
@@ -27,7 +28,6 @@ Log levels are (in order of priority):
 There are 2 ways you can use ofLog:
 
 ####Functional: as a function taking a message
-
 
 ~~~~{.cpp}
 
@@ -89,9 +89,71 @@ ofLogWarning("Hello") << "a warning print";
 
 Last, it's useful to be able to record log messages to a file or send them to a custom destination. For log redirection see ofLogToFile(), ofLogToConsole(), & ofSetLoggerChannel() in the [ofLog functions](./ofLog.html#functions).
 
+
+
+
+
 ##Methods
 
 
+
+###void _log(level, &module, &message)
+
+<!--
+_syntax: _log(level, &module, &message)_
+_name: _log_
+_returns: void_
+_returns_description: _
+_parameters: ofLogLevel level, const string &module, const string &message_
+_access: protected_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: False_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool checkLog(level, &module)
+
+<!--
+_syntax: checkLog(level, &module)_
+_name: checkLog_
+_returns: bool_
+_returns_description: _
+_parameters: ofLogLevel level, const string &module_
+_access: protected_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: False_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ### ofLog()
 
@@ -113,6 +175,7 @@ _advanced: False_
 
 _description: _
 
+
 ofLog provides a streaming log interface by accepting variables via the ostream operator << similar to cout and cerr.
 
 It builds a string and logs it when the stream is finished. A newline is printed automatically and all the stream controls (endl, flush, hex, etc) work normally.
@@ -127,6 +190,12 @@ ofLog() << "a string" << 100 << 20.234f;
 The log level is explicitly `OF_LOG_NOTICE`.
 
 See [ofSetLogLevel(logLevel)](./ofLog.html#functions) for more info on log levels.
+
+
+
+
+
+
 
 <!----------------------------------------------------------------------------->
 
@@ -149,6 +218,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 The same as the ofLog() stream interface, except it accepts a log level. 
 
@@ -179,6 +249,12 @@ ofLogWarning() << "a string" << 100 << 20.234f;
 
 See [ofSetLogLevel()](./ofLog.html#functions) for more info on log levels.
 
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 ### ofLog(logLevel, &message)
@@ -201,6 +277,7 @@ _advanced: False_
 
 _description: _
 
+
 Logs a string at a specific log level.
 
 The string message can be concatenated using the ofToString() conversion function in [ofUtils](./ofUtils.html#functions):
@@ -214,6 +291,12 @@ ofLog(OF_LOG_NOTICE, "the number is "
 ~~~~
 
 See [ofSetLogLevel(logLevel)](./ofLog.html#functions) for more info on log levels.
+
+
+
+
+
+
 
 <!----------------------------------------------------------------------------->
 
@@ -236,6 +319,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 Logs a message at a specific log level using the printf interface.
 
@@ -273,17 +357,23 @@ Note: `theNames.c_str()` returns a C string from theNames which is a C++ string 
 
 There are other formatting options such as setting the decimal precision of float objects and the forward padding of numbers (i.e. 0001 instead of 1). See the [Wikipedia printf format string article](http://en.wikipedia.org/wiki/Printf_format_string) for more detailed information.
 
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
-### ~ofLog()
+### ofLog(&)
 
 <!--
-_syntax: ~ofLog()_
-_name: ~ofLog_
+_syntax: ofLog(&)_
+_name: ofLog_
 _returns: _
 _returns_description: _
-_parameters: _
-_access: public_
+_parameters: ofLog const &_
+_access: private_
 _version_started: 007_
 _version_deprecated: _
 _summary: _
@@ -294,6 +384,13 @@ _advanced: False_
 -->
 
 _description: _
+
+
+
+
+
+
+
 
 <!----------------------------------------------------------------------------->
 
@@ -318,97 +415,98 @@ _advanced: False_
 _description: _
 
 
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
-###void setChannel(channel)
+###ofLog operator<<(&))
 
 <!--
-_syntax: setChannel(channel)_
-_name: setChannel_
-_returns: void_
+_syntax: operator<<(&))_
+_name: operator<<_
+_returns: ofLog_
 _returns_description: _
-_parameters: ofPtr< ofBaseLoggerChannel > channel_
+_parameters: std_
 _access: public_
-_version_started: 007_
+_version_started: 0071_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: yes_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _description: _
 
-Sets the logging channel that receives log messages. This is analogous to ofSetLoggerChannel().
 
-See [ofSetLoggerChannel()](./ofLog.html#functions) for more detail.
+
+
+
+
+
 
 <!----------------------------------------------------------------------------->
 
-###void _log(level, &module, &message)
+###ofLog operator<<(&))
 
 <!--
-_syntax: _log(level, &module, &message)_
-_name: _log_
-_returns: void_
+_syntax: operator<<(&))_
+_name: operator<<_
+_returns: ofLog_
 _returns_description: _
-_parameters: ofLogLevel level, const string &module, const string &message_
-_access: protected_
-_version_started: 007_
+_parameters: std_
+_access: public_
+_version_started: 0072_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
-_visible: False_
+_static: False_
+_visible: True_
 _advanced: False_
 -->
 
 _description: _
 
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
-###bool checkLog(level, &module)
+###ofLog operator<<(&))
 
 <!--
-_syntax: checkLog(level, &module)_
-_name: checkLog_
-_returns: bool_
+_syntax: operator<<(&))_
+_name: operator<<_
+_returns: ofLog_
 _returns_description: _
-_parameters: ofLogLevel level, const string &module_
-_access: protected_
-_version_started: 007_
+_parameters: std::ostream &(*func)(std::ostream &)_
+_access: public_
+_version_started: 0072_
 _version_deprecated: _
 _summary: _
 _constant: False_
 _static: no_
-_visible: False_
+_visible: True_
 _advanced: False_
 -->
 
 _description: _
 
-<!----------------------------------------------------------------------------->
 
-### ofLog(&)
 
-<!--
-_syntax: ofLog(&)_
-_name: ofLog_
-_returns: _
-_returns_description: _
-_parameters: ofLog const &_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: False_
-_advanced: False_
--->
 
-_description: _
+
+
+
 
 <!----------------------------------------------------------------------------->
 
@@ -432,27 +530,132 @@ _advanced: False_
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setAutoSpace(autoSpace)
+
+<!--
+_syntax: setAutoSpace(autoSpace)_
+_name: setAutoSpace_
+_returns: void_
+_returns_description: _
+_parameters: bool autoSpace_
+_access: public_
+_version_started: 0071_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: yes_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setChannel(channel)
+
+<!--
+_syntax: setChannel(channel)_
+_name: setChannel_
+_returns: void_
+_returns_description: _
+_parameters: ofPtr< ofBaseLoggerChannel > channel_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: yes_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+Sets the logging channel that receives log messages. This is analogous to ofSetLoggerChannel().
+
+See [ofSetLoggerChannel()](./ofLog.html#functions) for more detail.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ~ofLog()
+
+<!--
+_syntax: ~ofLog()_
+_name: ~ofLog_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: False_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 ##Variables
 
 
 
-###ofLogLevel level
+###bool bAutoSpace
 
 <!--
-_name: level_
-_type: ofLogLevel_
-_access: protected_
-_version_started: 007_
+_name: bAutoSpace_
+_type: bool_
+_access: private_
+_version_started: 0071_
 _version_deprecated: _
 _summary: _
-_visible: False_
+_visible: True_
 _constant: True_
 _advanced: False_
 -->
 
 _description: _
+
+
+
+
+
+
+
 
 <!----------------------------------------------------------------------------->
 
@@ -472,41 +675,12 @@ _advanced: False_
 
 _description: _
 
-<!----------------------------------------------------------------------------->
 
-###string module
 
-<!--
-_name: module_
-_type: string_
-_access: protected_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: False_
-_constant: True_
-_advanced: False_
--->
 
-_description: _
 
-<!----------------------------------------------------------------------------->
 
-###std message
 
-<!--
-_name: message_
-_type: std_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: False_
-_constant: False_
-_advanced: False_
--->
-
-_description: _
 
 <!----------------------------------------------------------------------------->
 
@@ -526,4 +700,112 @@ _advanced: False_
 
 _description: _
 
+
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
+
+###ofLogLevel level
+
+<!--
+_name: level_
+_type: ofLogLevel_
+_access: protected_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_visible: False_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###std message
+
+<!--
+_name: message_
+_type: std_
+_access: private_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_visible: False_
+_constant: False_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string module
+
+<!--
+_name: module_
+_type: string_
+_access: protected_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_visible: False_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string padding
+
+<!--
+_name: padding_
+_type: string_
+_access: private_
+_version_started: 0071_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+

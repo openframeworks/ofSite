@@ -1,64 +1,64 @@
 <%inherit file="/_templates/markdown.mako" />
 
 code::blocks setup guide
-=========================
+========================
 
+We like Code::Blocks for Windows development since it's light weight, and avoids some of the quirkiness of windows visual studio. here's a step by step tutorial to get up and running.
+**Note**: [Step e)](#additions) is required to run openFrameworks. Please do not skip this step. 
 
-We like codeblocks for windows development since it's light weight, and avoids some of the quirkiness of windows visual studio. here's a step by step tutorial to get up and running.
+Version
+------- 
+The new version of Code::Blocks (12.11) is not compatible with openFrameworks versions 0073 and lesser. It will work with 0.7.4 (forthcoming) and what's on the develop branch of github. This is because of a change in the compiler which makes libraries compiled with an older compiler incompatible with the newer compiler. If you are using openFrameworks 0073 or lesser, use [Code::Blocks 10.05][0].
 
-**a) download code::blocks binary (latest release)**
+Installation
+------------ 
+**a) Download Code::Blocks binary (latest release)**
 
-[Download Code::Blocks][0] note: download WITH mingw.   The latest version 10.05, works well. 
-
+> [Download Code::Blocks][1] 
+**Note**: download **WITH** MinGW. Code::Blocks version 12.11 works well with openFrameworks 0.7.4+. 
 
 ![a_download](codeblocks.png)  
 
 
+**b) Install**
 
-**b) install**
-
-
-![b_install](http://www.openframeworks.cc/wp-content/uploads/2009/07/b_install.png)  
+![b_install](b_install.png)  
 
 
-**c) you don't have to change anything**
+**c) You don't have to change anything**
+
+![c_setup](c_setup.png)  
 
 
-![c_setup](http://www.openframeworks.cc/wp-content/uploads/2009/07/c_setup.png)  
+**d) I chose not too, since Code::Blocks is not my primary IDE**
+
+![d_assoc](d_assoc-640x378.png)
 
 
-**d) I chose not too, since code::blocks is not my primary IDE**
+<a id="additions"></a>**e) Add files to MinGW**
+
+Similar to devcpp, we will have to add a few libraries to devcpp. You can download the files:
+
+> [Additions for Code::Blocks to work with openFrameworks][2]
 
 
-![d_assoc](http://www.openframeworks.cc/wp-content/uploads/2009/07/d_assoc-640x378.png)
+In the zip there are two folders, you need to put the **contents** of them into the contents of folders in MinGW.
 
-
-**e) add files to mingw**
-
-
-similar to devcpp, we will have to add a few libraries to devcpp. you can download the files :
-
-> [additions for codeblocks to work with OF][1]
-
-
-in the zip there are two folders, you need to put the **contents** of them into the contents of folders in mingw.
-
-*   add the _contents_ of the folder "**add\_to\_codeblocks\_mingw\_include**" into "**C:\\Program Files\\CodeBlocks\\MinGW\\include**" (or wherever your app\\mingw\\include is)
-*   add the _contents_ of the folder "**add\_to\_codeblocks\_mingw\_lib**" into "**C:\\Program Files\\CodeBlocks\\MinGW\\lib**" (or wherever your app\\mingw\\lib is)
+*   Add the _contents_ of the folder "**add\_to\_codeblocks\_mingw\_include**" into "**C:\\Program Files\\CodeBlocks\\MinGW\\include**" (or wherever your app\\mingw\\include is)
+*   Add the _contents_ of the folder "**add\_to\_codeblocks\_mingw\_lib**" into "**C:\\Program Files\\CodeBlocks\\MinGW\\lib**" (or wherever your app\\mingw\\lib is)
     
+![e_putInMingw](e_putInMingw-640x446.png)
 
-![e_putInMingw](http://www.openframeworks.cc/wp-content/uploads/2009/07/e_putInMingw-640x446.png)
+These are additional libs and header files that need to be added to the MinGW distribution that comes with Code::Blocks. 
 
-These are additional libs and header files that need to be added to the MinGW distribution that comes with codeblocks. 
+Here's a quick video which shows what this should look like: [copy steps for codeblocks][3]
+<iframe src="http://player.vimeo.com/video/33985058" width="500" height="313" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 
-here's a quick video which shows what this should look like:  [copying codeblocks](http://vimeo.com/33985058)
 
-note: if you have already installed dev-c++, make sure that CB picks the right mingw folder (c:/program files/cb/mingw), it has a tendancy to default to c:/mingw, where devc++ installs... [more info on this][2]
 
 **As always have fun!**
 
 [0]: http://www.codeblocks.org/downloads/26
-[1]: http://www.openframeworks.cc/content/files/codeblocks_additions.zip
-[2]: http://www.openframeworks.cc/forum/viewtopic.php?f=18&t=793
-
-
+[1]: http://www.codeblocks.org/downloads/5
+[2]: http://www.openframeworks.cc/content/files/codeblocks_additions.zip
+[3]: http://vimeo.com/33985058

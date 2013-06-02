@@ -28,7 +28,7 @@ function feedCANLoaded(result) {
       moreLink.className = "moreLink";
       moreLink.appendChild(document.createTextNode("  more >>"));
       
-      var content = entry.getElementsByTagNameNS("*","encoded")[0].textContent;
+      var content = entry.getElementsByTagNameNS("*","description")[0].textContent;
       var indexOfFirstImg = content.indexOf('<img');
       var endImg = content.indexOf("/>",indexOfFirstImg);
       var imgHTML = content.substr(indexOfFirstImg,endImg-indexOfFirstImg);
@@ -41,12 +41,16 @@ function feedCANLoaded(result) {
       
       aImg.appendChild(img);
       
-      
-      a.appendChild(document.createTextNode(title.substr(0,title.indexOf('['))));
+      var shortTitle = "";
+      if(title.indexOf('–')!=-1)
+          shortTitle = title.substr(0,title.indexOf('–'));
+      else
+          shortTitle = title;
+      a.appendChild(document.createTextNode(shortTitle));
 
       h2.appendChild(dot);
       h2.appendChild(a)
-      var description = entry.getElementsByTagName("description")[0].textContent;
+      var description = content.substr(content.lastIndexOf("<br/>") + 6);
       if(description.indexOf('.')!=-1){
         description = Encoder.htmlDecode(description.substr(0,description.indexOf('.')+1));
       }else{

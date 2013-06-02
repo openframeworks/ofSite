@@ -17,17 +17,46 @@
 openFrameworks is an [open source](license.html) [C++](https://en.wikipedia.org/wiki/C%2B%2B) toolkit designed to assist the creative process by providing a simple and intuitive framework for experimentation. The toolkit is designed to work as a general purpose glue, and wraps together several commonly used libraries, including:
 
 * [OpenGL](http://www.opengl.org/), [GLEW](http://glew.sourceforge.net/), [GLUT](http://www.opengl.org/resources/libraries/glut/), [libtess2](https://code.google.com/p/libtess2/) and [cairo](http://cairographics.org/) for graphics
-* [rtAudio](http://www.music.mcgill.ca/~gary/rtaudio/), [PortAudio](http://www.portaudio.com/) or [FMOD](http://www.fmod.org/)  and [Kiss FFT](http://kissfft.sourceforge.net/) for audio input, output and analysis
+* [rtAudio](http://www.music.mcgill.ca/~gary/rtaudio/), [PortAudio](http://www.portaudio.com/), [OpenAL](http://http://connect.creativelabs.com/openal) and [Kiss FFT](http://kissfft.sourceforge.net/) or [FMOD](http://www.fmod.org/) for audio input, output and analysis
 * [FreeType](http://freetype.sourceforge.net/index2.html) for fonts
 * [FreeImage](http://freeimage.sourceforge.net/) for image saving and loading
-* [Quicktime](http://developer.apple.com/quicktime/) and [videoInput](https://github.com/ofTheo/videoInput) for video playback and grabbing
+* [Quicktime](http://developer.apple.com/quicktime/), [GStreamer](http://gstreamer.freedesktop.org/) and [videoInput](https://github.com/ofTheo/videoInput) for video playback and grabbing
 * [Poco](http://pocoproject.org/) for a variety of utilities
+* [OpenCV](http://http://opencv.org/) for computer vision
+* [Assimp](http://assimp.sourceforge.net/) for 3D model loading
+
 
 The code is written to be massively cross-compatible. Right now we support five operating systems (Windows, OSX, Linux, iOS, Android) and four IDEs (XCode, Code::Blocks, and Visual Studio and Eclipse). The API is designed to be minimal and easy to grasp.
 
 Simply put, openFrameworks is a tool that makes it much easier to make things with code. We find it super useful, and we hope you do too.
 
-openFrameworks is actively developed by [Zach Lieberman](http://thesystemis.com/), [Theodore Watson](http://muonics.net/), and [Arturo Castro](http://arturocastro.net/), with help from the [OF community](../community/). openFrameworks is indebted to two significant precursors: the [Processing development environment](http://processing.org/), created by [Casey Reas](http://reas.com/), [Ben Fry](http://benfry.com/) and the Processing community; and the ACU Toolkit, a privately distributed C++ library developed by Ben Fry and others in the [MIT Media Lab's Aesthetics and Computation Group](http://acg.media.mit.edu/).
+----------------
+contributors and supporters
+----------------
+
+For more information about openFrameworks contributors, see the [community](../community/) page. 
+
+A number of institutions have provided major support for openFrameworks through grants, donations, and as hosting partners for our international developer conferences:
+
+* [Ars Electronica Futurelab and Festival](http://www.aec.at/)
+* [Eyebeam Art & Technology Center](http://eyebeam.org/)
+* [Ford Foundation](http://www.fordfoundation.org/)
+* [Frank-Ratchye STUDIO for Creative Inquiry](http://studioforcreativeinquiry.org/) at CMU
+* [Parsons the New School for Design](http://amt.parsons.edu)
+
+We are proud to acknowledge institutions and organizations which have hosted multi-day educational workshops and "OF Lab" events (see [the wiki](http://wiki.openframeworks.cc/index.php?title=Education) for a more complete list): 
+
+* [Art && Code Festival](http://artandcode.com/)
+* [Eyeo festival](http://eyeofestival.com/)
+* [Fabrica: The Benetton Group Communications Research Center](http://www.fabrica.it/)
+* [Graphic Design Festival Breda](http://www.graphicdesignfestival.nl/en/)
+* [iMAL Center for for Digital Cultures and Technology](http://www.imal.org/)
+* [MediaLab Prado](http://medialab-prado.es/)
+* [New York University Interactive Telecommunication Program](http://itp.nyu.edu/itp/) (ITP)
+* [Pratersauna Digital LAB](https://vimeo.com/psdl)
+* [Resonate.io Festival](http://resonate.io/)
+* [Victoria and Albert Museum](http://www.vam.ac.uk/)
+* [Yamaguchi Center for Arts and Media](http://www.ycam.jp/en/) (YCAM)
 
 ----------------
 

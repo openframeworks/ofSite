@@ -3,13 +3,15 @@
 android eclipse
 ===============
 
+**Note**: see the [FAQ](#faq) at the bottom of this page if you're having trouble.
+
 The Android distribution of openFrameworks is based on the Eclipse IDE. The current version of the Android plugin for Eclipse has several problems with projects that mix C++ and Java code, so the projects are currently using a custom toolchain based on makefiles + Ant tasks to compile and install applications. If you are used to Android development in Eclipse, things are a little different. Check the following instructions to know how to install the development environment and compile/install applications.
 
 Right now this is only tested on Linux and OS X. To use it on Windows, check the instructions on this link: [http://www.multigesture.net/articles/how-to-setup-openframeworks-for-android-on-windows/][8]
 
 To use it you will need Eclipse, the Android SDK, the Android NDK, the Android Eclipse plugin and the openFrameworks for Android package.
 
-If you have already installed openFrameworks for Android before, the instructions have changed quite a bit and it's recommended to start from scratch, even with a new install of Eclipse. You should use the latest version of the Android SDK (15). As of Feb 19, 2012 the latest Android NDK (r7b) doesn't work with openFrameworks, but version r6 should work fine.
+Because of the custom build system openFrameworks uses for Android, you may need to use the exact version of the SDK and NDK specified here. For this release you should use SDK 21 and NDK r8d. Later versions will probably work but it's not guaranteed.
 
 Summary
 -------
@@ -18,7 +20,7 @@ These instructions go into a lot of important detail, but the main steps are:
 - Install Eclipse, Ant and the Android SDK and NDK.
 - If you're using OS X, install the Developer Tools.
 - Setup the Android Eclipse plugin.
-- Download openFrameworks either from the download page, or clone from git. (If you're developing on OS X, you will need to clone from git.)
+- Download openFrameworks either from the download page, or clone from git.
 - Set path variables so openFrameworks knows where SDK and NDK are.
 - Import the openFrameworks projects into Eclipse.
 - Compile and install one of the Android openFrameworks examples to confirm that everything works.
@@ -26,15 +28,15 @@ These instructions go into a lot of important detail, but the main steps are:
 Installation
 ------------
 
-**a) Eclipse**: download the C/C++ edition for your platform from here:
+**a) Eclipse**: download the C/C++ edition of Eclipse 4.2 (Juno) for your platform from here:
 
-[http://www.eclipse.org/downloads/][11]
+[http://www.eclipse.org/downloads/packages/eclipse-ide-cc-developers/junosr1][11]
 
 ![eclipse_cdt_download](eclipse_cdt_download.png)
 
-These instructions currently use Eclipse 3.6, although 3.7 will probably work fine.
+These instructions were originally written using Eclipse 3.6 (Helios), but have been used for setting up Eclipse 4.2 (Juno).
 
-Ubuntu users: Don't use the version in the repositories because it is very outdated.
+Ubuntu users: If downloading from the repositories, double check that the version of Eclipse is 3.6 (Helios) or higher.
 
 You will need Java to use Eclipse, you can download it from:
 
@@ -54,13 +56,13 @@ or
 
 Uncompress it in any folder on your hard disk. Later you'll need to tell the openFrameworks makefiles where to find it.
 
-**c) Android NDK**: This is the C/C++ compiler, headers and libraries for Android. Note that the latest version (r7b) doesn't work yet as of Feb 19, 2012, so you'll need to download an earlier version. Here are the links for r6:
+**c) Android NDK**: This is the C/C++ compiler, headers and libraries for Android. 
 
-- OS X: [http://dl.google.com/android/ndk/android-ndk-r6-darwin-x86.tar.bz2][12]
-- Linux: [http://dl.google.com/android/ndk/android-ndk-r6-linux-x86.tar.bz2][13]
-- Windows: [http://dl.google.com/android/ndk/android-ndk-r6-windows.zip][14]
+- OS X: [http://dl.google.com/android/ndk/android-ndk-r8d-darwin-x86.tar.bz2][12]
+- Linux: [http://dl.google.com/android/ndk/android-ndk-r8d-linux-x86.tar.bz2][13]
+- Windows: [http://dl.google.com/android/ndk/android-ndk-r8d-windows.zip][14]
 
-Later versions are available at:  
+Other versions are available here, but we recommend using r8d for now: 
 [http://developer.android.com/sdk/ndk/index.html][3]
 
 There's a bug in the official NDK that makes apps crash on Android 2.1 and lower versions of Android so by now openFrameworks for Android will only work on Android 2.2 and above.
@@ -73,13 +75,11 @@ Uncompress this also to any place in your hard disk. We'll tell openFrameworks w
 
 You may also check out the openFrameworks source from GitHub (under master branch): [http://github.com/openframeworks/openFrameworks][9]. 
 
-**Important:** if you're developing on OS X you must use the source in GitHub, since it contains a bug fix which isn't in the current download package (version 007).
-
 **e) Install Ant:**
 
 This build tool is used to build, install and run applications on the Android device from the command line:
 
-- Linux:
+- Ubuntu:
 
     sudo apt-get install ant-1.8
 
@@ -87,11 +87,11 @@ or for newer distributions:
 
     sudo apt-get install ant
 
+Other Linux distros have similar installation procedures.
+
 - OS X:
 
-Download and uncompress Apache Ant 1.8 or greater from [http://ant.apache.org/bindownload.cgi][5]
-
-**For OSX:**
+Download and uncompress Apache Ant 1.8 or greater from [http://ant.apache.org/bin/download.cgi][5]
 
 Certain build tools like make might not be installed by default. To install these you can either:
 
@@ -99,14 +99,14 @@ Certain build tools like make might not be installed by default. To install thes
 - Or, just download the build tools separately. They were repackaged and are hosted on GitHub: [https://github.com/kennethreitz/osx-gcc-installer][15]
     There are pkg files you can install for OS X 10.6 and 10.7. Note that this bundle doesn't include pkg-config, and errors may show up because it is missing, but you can ignore these.
 
-**f) Set the paths for the SDK, NDK and Ant  
-**
+**f) Set the paths for the SDK, NDK and Ant:**
 
 Edit this file:
 
     openFrameworks/libs/openFrameworksCompiled/project/android/paths.make
 
 This will tell openFrameworks where to find the SDK, NDK and Ant.
+If you don't have this file yet, create it from the paths.make.default template in the same directory.
 
 - Set the values of SDK_ROOT and NDK_ROOT to their install paths
 
@@ -115,11 +115,11 @@ This will tell openFrameworks where to find the SDK, NDK and Ant.
 -- OS X: Set it to the folder where you uncompressed Ant before.
 
 **g) Start Eclipse**: You will see a pop up asking you what workspace to use. Just point it to:
-openFrameworks/apps/androidExamples.
+openFrameworks/examples/android.
 
 **h) Android Eclipse plugin**:
 
-There's detailed instructions here: [http://developer.android.com/sdk/eclipse-adt.html][6]  
+There are detailed instructions here: [http://developer.android.com/sdk/eclipse-adt.html][6]  
 
 To install it, inside Eclipse go to
 Help \> Install New Software...
@@ -135,21 +135,21 @@ Location: https://dl-ssl.google.com/android/eclipse/
 
 Press 'OK' and select the new repository in the "Work with:" drop down box in case it's not already selected.
 
-You will see the SDK plugin in the list called "Developer Tools":
+Under the "Developer Tools" section, select "Android Development Tools" and "Android DDMS". It doesn't hurt to have the other ones, but they're not required.
 
-![eclipse_android_plugin2](eclipse_android_plugin2-600x522.png)
+Under "NDK Plugins", select "Android Native Development Tools".
 
-Select it and press 'Next' until you get to the "Review Licenses" screen. Check the "I accept the terms of the license" checkbox and press 'Finish'. Eclipse will download and install the Android plugin. Once it finishes press 'Yes' in the popup to restart Eclipse.
+![eclipse_android_plugin2](android_ndk_plugins-724x612.png)
 
-**i) Set Eclipse Java compiler compliance to 1.5:**
+Press 'Next' until you get to the "Review Licenses" screen. Check the "I accept the terms of the license" checkbox and press 'Finish'. Eclipse will download and install the Android plugins. Once it finishes press 'Yes' in the popup to restart Eclipse.
 
-*Note:* I didn't need to do this step for SDK version 15.
+**i) Set Eclipse Java compiler compliance to 1.6:**
 
-In the last version of Eclipse the Java compatibility is set to version 6 but Android needs version 5. You can change this in Window \> Preferences \> Java \> Compiler. (Preferences is in the Eclipse menu for OS X.) 
+In the last version of Eclipse the Java compatibility should be set to version 6. You can check this in Window \> Preferences \> Java \> Compiler. (Preferences is in the Eclipse menu for OS X.) 
 
-The compiler compliance settings should be set to 1.5\.
+The compiler compliance settings should be set to 1.6\.
 
-![](java_compiler_preferences-600x437.png)
+![](java_compiler_preferences_1_6.png)
 
 
 
@@ -168,7 +168,7 @@ Next you'll need to install the API files and optionally create an emulator to b
 
 ![android_button](android_button.png)
 
-First you need to install the API package. Just click on the "Available Packages" tab, and choose the SDK Platform version 2.2 + the SDK platform tools, it's important to use version 2.2 since the makefiles are configured for that version. It doesn't matter what version of the OS you want to develop for. You can optionally install other versions and change the makefile to use that instead.
+First you need to install the SDK platform-tools and API package. Just click on the "Tools" tab and select the box for Android SDK Platform-tools. Then click on the "Android 4.2 (API 17)" tab and select the box for SDK Platform. It's important to use SDK version 4.2 (API 17) since the makefiles are configured for that version. It doesn't matter what version of the Android OS you want to develop for, apps are compiled using SDK 4.2, but they should work on any phone that is at least 2.2.
 
 Once that is done you can create a new virtual device (AVD). Just select a name, the target Android version and a size for the virtual SD card.
 
@@ -179,12 +179,15 @@ File \> Import and select General \> Existing projects in the workspace...
 
 ![import first screen](import0-600x508.png)
 
+
 Import in this order:
- 
+
+Please note you should not mark "Copy projects into workshpace" on the import screen as this will cause problems building a project.
+
 - openFrameworks/libs  
 - openFrameworks/libs/openFrameworks  
 - openFrameworks/addons/ofxAndroid/ofAndroidLib  
-- openFrameworks/apps/androidExamples
+- openFrameworks/examples/android
 
 **l) Compile openFrameworks**:
 
@@ -192,11 +195,10 @@ In the "Project Explorer" on the left side of the window, select the openFramewo
 
 ![](android-compile-OF.png)
 
-When compiling on OS X I was missing pkg-config. Currently this doesn't seem to affect the build, since these commands were only important in detecting Linux libraries.
+OS X seems to be missing pkg-config. Currently this doesn't seem to affect the build, since these commands were only important in detecting Linux libraries.
 
 **m) Enable development in your device:**
-Enable USB debugging: Settings \> Applications \> Development \> USB Debug
-(The device needs to be disconnected from the computer while you do this.)
+Enable USB debugging: Settings \> Applications \> Development \> USB Debug (On Ice Cream Sandwich, this is in Settings \> Developer options \> USB Debugging). The device needs to be disconnected from the computer while you do this.
 
 **n) Connect the device now:**
 
@@ -206,35 +208,7 @@ If you attempt to run your project and you don't have a device attached, Eclipse
 
 [http://developer.android.com/guide/developing/device.html][7]
 
-**o) Create an External Tools Configuration and use it to install and run projects on the device or emulator**
-Run \> External Tools \> External Tools Configuration
-![](android-external-tools1.png)
-
-Select 'Program' and press New. Name the new configuration: Android Install Main:
-
-<%text filter="h">
-    Location: /usr/bin/make 
-    
-    Working Directory: ${project_loc} 
-    
-    Arguments: AndroidInstall PROJECT_PATH=${project_loc}
-    
-    Refresh:
-    Mark Refresh resources upon completion  
-    Select The selected resource
-    
-    Build:
-    Mark Build before launch  
-    Select The project containing the selected resource  
-    Mark Include referenced projects
-</%text>
-
-
-Press Apply and Close.
-
-![](Screenshot-External-Tools-Configurations--600x561.png)
-
-**p) Now install and run an example project on the device:**
+**o) Now install and run an example project on the device:**
 
 - Connect the device.
 - Check that it is being detected and restart adb server if necessary.
@@ -242,11 +216,11 @@ Press Apply and Close.
 
 ![](android-compile-example.png)
 
-- Press the play button in the toolbar or Run \> External Tools \> Android Install.
+- Make sure you have your project selected and press the play button in the toolbar or Run \> Run As \> Android Application.
 
-![](toolbox-button.png)
+![](run-button.png)
 
-**Note:** If you get an error about an obsolete build.xml, you can safely delete the build.xml file and recreate it using 'android update project'. (The 'android' tool is at SDK_DIR/tools/android.) You may also need to do this for openFrameworks/addons/ofxAndroid/ofAndroidLib.
+**Note:** If you get an error about an obsolete build.xml (or connected with that file), you can safely delete the build.xml file and recreate it using 'android update project -p <path-to-project\>'. (The 'android' tool is at SDK_DIR/tools/android.) You may also need to do this for openFrameworks/addons/ofxAndroid/ofAndroidLib.
 
 If everything went OK, the example should start on the device.
 
@@ -263,7 +237,7 @@ before running the app.
 
 - Naming of resources is really restrictive in Android, for example you cannot have several resources with the same name even if they have different extensions.
 
-- The AndroidDebug target does a different compilation process of the native code that allows it to detect linker errors that won't be detected when compiling in AndroidRelease mode. It is recomended to compile your application in AndroidDebug mode at least once or if your application crashes before starting. When installing applications on the device or emulator it is recommended to use the AndroidRelease mode since it's faster and the applications will be much smaller. There's also no support for debugging NDK applications in Eclipse, but you could theoretically use the NDK tools to debug an application compiled with AndroidDebug.
+- The AndroidDebug target does a different compilation process of the native code that allows it to detect linker errors that won't be detected when compiling in AndroidRelease mode. It is recommended to compile your application in AndroidDebug mode at least once or if your application crashes before starting. When installing applications on the device or emulator it is recommended to use the AndroidRelease mode since it's faster and the applications will be much smaller. There's also no support for debugging NDK applications in Eclipse, but you could theoretically use the NDK tools to debug an application compiled with AndroidDebug.
 
 - Test your application very often. Even if the last NDK allows for debugging, there's no support for native debugging in Eclipse and setting it up manually with the NDK is pretty hard. When an application crashes the debugger dies too, so it's hard to debug bad memory accesses and similar bugs.
 
@@ -274,7 +248,9 @@ Window \> Show View \> Others \> Android \> LogCat
 
 You can see the output of the compiler in the Console tab and the output of your app in the LogCat one. Everything that is output by openFrameworks through ofLog will have an openFrameworks tag so you can use filters to see only your application's output.
 
-There's a bug in the Android plugin that makes Eclipse to build every C/C++ project in your workspace before running any app, so try to keep your workspaces small. You can have as many workspaces as you want:
+There's a bug in the Android plugin that makes Eclipse build every C/C++ project in your workspace before running any app. You can avoid this by closing projects that you're not currently working on (right-click > Close Project).
+
+Alternatively, you can create a separate workspace for your apps:
 
 - Create a folder inside openFrameworks/apps.
 
@@ -285,38 +261,33 @@ Creating new applications
 
 You can copy any of the examples and start a new application from there. It's currently far more difficult to create a project from scratch, since the makefiles and project settings contain a lot of details you would need to duplicate.
 
-You'll need to change the name of the application in different places:
+In Eclipse this is easily done by right-clicking on an existing project, selecting Copy, then right-clicking on the workspace and selecting Paste. A small Copy Project window will pop up for you to pick a new project name and location. For now, project name and directory must have the same name. Let's say your application is called "myNewAndroidApp", this must also be the name of your folder.
 
-- When you copy the application from an example set the name you want to use. Let's say your application is called myApp. This must also be the name of your folder.
-- In res/values/strings.xml change app_name value to the name of your application.
-- In AndroidManifest.xml change the name of the package from cc.openframeworks.exampleName to cc.openframeworks.myApp  
-- in srcJava, select the package cc.openframeworks.exampleName, press F2 to rename it and call it cc.openframeworks.myApp
+After you're done copying the project, you'll need to change the name of the application in different places:
+
+- In res/values/strings.xml change app_name value to the name of your application (myNewAndroidApp, for example).
+- In AndroidManifest.xml change the name of the package from cc.openframeworks.exampleName to cc.openframeworks.myNewAndroidApp  
+- In srcJava, select the package cc.openframeworks.exampleName, press F2 to rename it and call it cc.openframeworks.myNewAndroidApp
+- You might also have to open OFActivity.java inside srcJava/cc/openframeworks/myNewAndroidApp and change cc.openframeworks.exampleName to cc.openframeworks.myNewAndroidApp in the first line. Sometimes Eclipse does this automatically, sometimes it doesn't...
 
 It's important to keep the package prefix as cc.openframeworks or some things can stop working. This will be fixed in future versions when Eclipse support for native code is better.
 
-FAQ
+<a id="faq"></a>FAQ
 ---
 
 **If the build fails:**
 
-- If it tells you that you're using an obsolete build.xml, delete it and regenerate it using 'android update project'. The build.xml files in the examples directory should not contain anything especially unique.
+- If it tells you that you're using an obsolete build.xml, delete it and regenerate it using 'android update project -p <path-to-project\>'. The build.xml files in the examples directory should not contain anything especially unique.
+- If Eclipse complains about missing gen/ directories on a project, switch to the Java perspective (Window \> Open Perspective \> Other... \> Java), select the project and clean it (Project \> Clean...). It should re-build itself automatically and generate a gen/ directory (make sure Project \> Build Automatically is enabled).
 - Are you including addons? They need to be specified in addons.make, and the case of the letters must match exactly (ie, ofxOpenCv works but ofxOpenCV won't work). This error will probably show up as missing header files or symbols.
-- If you're getting a bunch of undeclared reference errors, check which version of the NDK you're using. As of Feb 19, 2012 version r7 does not work yet. You'll need to use an earlier version, like version r6 or r5b. The error messages should look similar to this:
-
-
-        ../../../openFrameworks/gl/ofFbo.cpp:503: error: 'glFramebufferTexture2DOES' was not declared in this scope
-        ../../../openFrameworks/gl/ofFbo.cpp: In member function 'void ofFbo::bind()':
-        ../../../openFrameworks/gl/ofFbo.cpp:543: error: 'glBindFramebufferOES' was not declared in this scope
-        ../../../openFrameworks/gl/ofFbo.cpp: In member function 'void ofFbo::unbind()':
-        ../../../openFrameworks/gl/ofFbo.cpp:551: error: 'glBindFramebufferOES' was not declared in this scope
-        ../../../openFrameworks/gl/ofFbo.cpp: In member function 'bool ofFbo::checkStatus()':
-        ../../../openFrameworks/gl/ofFbo.cpp:690: error: 'glCheckFramebufferStatusOES' was not declared in this scope
+- If you're getting a bunch of undeclared reference errors, check which version of the NDK you're using. For this version you should be using NDK r8d.
+- If you get 'com.android.sdklib.build.ApkCreationException: Debug Certificate expired on <date>', you have to 'rm ~/.android/debug.keystore'. A new certificate will be generated automatically.
 
 
 **If the build succeeds but the Android Install command doesn't work:**
 
-- If you get a popup saying "Variable references empty selection: $\{project_loc\}", it means you need to select a project in Project Explorer first, before you run the Android Install command.
-- If you get a message saying "Activity class ... does not exist.", make sure that its namespace is called cc.openframeworks.your_folder_name_here.OFActivity. This is what the Makefile currently expects.
+- Make sure you have your project selected in the Project Explorer before you tell it to run as an Android Application.
+- If you get a message saying "Activity class ... does not exist.", make sure that its namespace is called cc.openframeworks.your_folder_name_here.OFActivity. This is what the Makefile currently expects. If it does not work even with a correct entry, and you are using an emulator, try using a real device instead.
 
 **If you can't debug**
 
@@ -332,7 +303,7 @@ $ sudo ./adb start-server
 
 
         E/AndroidRuntime(20743): Caused by: java.lang.UnsatisfiedLinkError: Couldn't load OFAndroidApp: findLibrary returned null
-        E/AndroidRuntime(20743): 	at java.lang.Runtime.loadLibrary(Runtime.java:425)
+        E/AndroidRuntime(20743):     at java.lang.Runtime.loadLibrary(Runtime.java:425)
         E/AndroidRuntime(20743): 	at java.lang.System.loadLibrary(System.java:554)
         E/AndroidRuntime(20743): 	at cc.openframeworks.OFAndroid.<clinit>(OFAndroid.java:535)
         E/AndroidRuntime(20743): 	... 14 more
@@ -347,14 +318,14 @@ $ sudo ./adb start-server
 [2]: http://developer.android.com/sdk/index.html
 [3]: http://developer.android.com/sdk/ndk/index.html
 [4]: http://openframeworks.cc/download
-[5]: http://ant.apache.org/bindownload.cgi
+[5]: http://ant.apache.org/bin/download.cgi
 [6]: http://developer.android.com/sdk/eclipse-adt.html
 [7]: http://developer.android.com/guide/developing/device.html
 [8]: http://www.multigesture.net/articles/how-to-setup-openframeworks-for-android-on-windows/
 [9]: http://github.com/openframeworks/openFrameworks
 [10]: http://www.undef.ch/uploads/ofDoc/html/classof_log.html
-[11]: http://www.eclipse.org/downloads/
-[12]: http://dl.google.com/android/ndk/android-ndk-r6-darwin-x86.tar.bz2
-[13]: http://dl.google.com/android/ndk/android-ndk-r6-linux-x86.tar.bz2
-[14]: http://dl.google.com/android/ndk/android-ndk-r6-windows.zip
+[11]: http://www.eclipse.org/downloads/packages/eclipse-ide-cc-developers/junosr1
+[12]: http://dl.google.com/android/ndk/android-ndk-r8d-darwin-x86.tar.bz2
+[13]: http://dl.google.com/android/ndk/android-ndk-r8d-linux-x86.tar.bz2
+[14]: http://dl.google.com/android/ndk/android-ndk-r8d-windows.zip
 [15]: https://github.com/kennethreitz/osx-gcc-installer

@@ -7,16 +7,17 @@
 
 
 
+
 ##Methods
 
 
 
-### ~ofBaseSoundStream()
+###void close()
 
 <!--
-_syntax: ~ofBaseSoundStream()_
-_name: ~ofBaseSoundStream_
-_returns: _
+_syntax: close()_
+_name: close_
+_returns: void_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -30,6 +31,36 @@ _advanced: False_
 -->
 
 _description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###long unsigned long getTickCount()
+
+<!--
+_syntax: getTickCount()_
+_name: getTickCount_
+_returns: long unsigned long_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
 
 
 
@@ -65,6 +96,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void setDeviceID(deviceID)
@@ -87,61 +119,6 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool setup(outChannels, inChannels, sampleRate, bufferSize, nBuffers)
-
-<!--
-_syntax: setup(outChannels, inChannels, sampleRate, bufferSize, nBuffers)_
-_name: setup_
-_returns: bool_
-_returns_description: _
-_parameters: int outChannels, int inChannels, int sampleRate, int bufferSize, int nBuffers_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool setup(*app, outChannels, inChannels, sampleRate, bufferSize, nBuffers)
-
-<!--
-_syntax: setup(*app, outChannels, inChannels, sampleRate, bufferSize, nBuffers)_
-_name: setup_
-_returns: bool_
-_returns_description: _
-_parameters: ofBaseApp *app, int outChannels, int inChannels, int sampleRate, int bufferSize, int nBuffers_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
 
 
 
@@ -177,6 +154,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void setOutput(*soundOutput)
@@ -198,6 +176,65 @@ _advanced: False_
 -->
 
 _description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool setup(outChannels, inChannels, sampleRate, bufferSize, nBuffers)
+
+<!--
+_syntax: setup(outChannels, inChannels, sampleRate, bufferSize, nBuffers)_
+_name: setup_
+_returns: bool_
+_returns_description: _
+_parameters: int outChannels, int inChannels, int sampleRate, int bufferSize, int nBuffers_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool setup(*app, outChannels, inChannels, sampleRate, bufferSize, nBuffers)
+
+<!--
+_syntax: setup(*app, outChannels, inChannels, sampleRate, bufferSize, nBuffers)_
+_name: setup_
+_returns: bool_
+_returns_description: _
+_parameters: ofBaseApp *app, int outChannels, int inChannels, int sampleRate, int bufferSize, int nBuffers_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
 
 
 
@@ -233,6 +270,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void stop()
@@ -261,14 +299,15 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
-###void close()
+### ~ofBaseSoundStream()
 
 <!--
-_syntax: close()_
-_name: close_
-_returns: void_
+_syntax: ~ofBaseSoundStream()_
+_name: ~ofBaseSoundStream_
+_returns: _
 _returns_description: _
 _parameters: _
 _access: public_
@@ -283,33 +322,6 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###long unsigned long getTickCount()
-
-<!--
-_syntax: getTickCount()_
-_name: getTickCount_
-_returns: long unsigned long_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
 
 
 

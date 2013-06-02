@@ -7,35 +7,33 @@
     ${self.head()}
   </head>
   <body>
-    <div id="content">
+    <div id="content" class="tutorial">
       ${self.header()}
       <div id="body-wrap">	
-	    <div class="page-wide">
-            <ul class="submenu">
-                <li><a href="/documentation">reference</a></li>
-                <li><a href="/tutorials">tutorials</a></li>
-            </ul>
-
-            
-            <h1>tutorials</h1>
+	    <div class="page-wide">        
+	        <h1>tutorials</h1>
+            <div class="page-right-medium">
+                <p>This section contains tutorials about specific tasks in openFrameworks. If you want to contribute a tutorial, fork the <a href="http://github.com/openframeworks/ofSite">ofSite repository in github</a> and add your tutorial in markdown or asciidoc format inside the _tutorials folder.
+                </p>
+            </div>
+        </div><!-- End Page Wide -->  
 		    
-
-
-        	<div class="submenucol-left">
-        	    <ul class="categories">
-                % for category in categories:
-                    <li><a href="/tutorials/${category}">${category}</a></li>
-                % endfor
-                </ul>
-            </div><!-- End Page Wide -->
-
-        	<div class="submenucol-right">
-               <p>This section contains tutorials about specific tasks in openFrameworks. If you want to contribute a tutorial, fork the <a href="http://github.com/openFrameworks/ofSite">ofSite</a> repository in github and add your tutorial in markdown format inside the _tutorials folder.</p>
-            </div><!-- End Page Wide -->
-        
-    	
-
-    	</div>
+            % for category in categories.keys():
+                %if len(categories[category])!=0:
+	                <div class="page-wide sectiontitle">  
+                        <h2>${category}</h2>
+                    </div><!-- End Page Wide -->
+	                <div class="page-wide">  
+                        <ul class="articles">
+                        % for article in categories[category]:
+                            <li><span class="external-dot"> ></span>&nbsp;<a href="/tutorials/${category}/${article.file}">${article.title}</a></br>
+                                <p>${article.summary}</p>
+                            </li>
+                        % endfor
+                        </ul>
+                    </div><!-- End Page Wide -->
+                % endif
+            % endfor
               
       </div><!-- End Body Wrap -->
       
@@ -47,7 +45,7 @@
 </html>
 
 <%def name="header()">
-  <%include file="header.mako" args="active='documentation'" />
+  <%include file="header.mako" args="active='tutorials'" />
 </%def>
 
 

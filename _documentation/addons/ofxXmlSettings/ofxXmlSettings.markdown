@@ -52,7 +52,7 @@ positions.pushTag("positions");
 for(int i = 0; i < points.size(); i++){
 	//each position tag represents one point
 	positions.addTag("position");
-	positions.pushTag("position");
+	positions.pushTag("position",i);
 	//so set the three values in the file
 	positions.addValue("X", points[i].x);
 	positions.addValue("Y", points[i].y);
@@ -60,7 +60,6 @@ for(int i = 0; i < points.size(); i++){
 	positions.popTag();//pop position
 }
 positions.popTag(); //pop position
-positions.popTag(); //pop settings
 positions.saveFile("positions.xml");
 
 //This is how you would load that very same file	
