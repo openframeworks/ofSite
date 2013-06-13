@@ -60,7 +60,7 @@ body {
 	padding: 0 0.2em 0 0.2em;
 	text-decoration: none;
 }
-#toolbar a:hover, #head-right a.active {
+#toolbar a:hover, #head-right a.active, .docsadvanced li a.active, .docsadvanced li a:hover{
 	background-color: #EE3987;
 	color: white;
 	text-decoration: none;
@@ -1160,6 +1160,24 @@ div#github .github_avatar img {
 	font-size: .8em;
 	margin-left: 5px;
 }
+ul.docsadvanced{
+    display:block;
+    padding:0;
+	list-style: none;
+    font-family: Questrial;
+}
+ul.docsadvanced li{
+    display:inline;
+    margin-right:20px;
+}
+ul.docsadvanced li a{
+    padding:0 0.5em;
+}
+
+h1.documentation{
+    margin-bottom:5px;
+}
+
 
 /* logs */
 label.toggle { cursor: pointer; }
