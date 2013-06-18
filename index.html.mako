@@ -1,5 +1,13 @@
 <%inherit file="_templates/home.mako" />
 
+<div class="page-wide">
+	<div class="tweet">
+	<p>Do you use OF in any way? Please take a few minutes to <a href="http://bit.ly/17gD3yS">fill out our survey</a> and help shape the future of openFrameworks!</p>
+	</div>
+		
+	<hr/>
+</div>
+
 <div class="page-left-medium">
 	<p>
 		<!-- OF video -->
