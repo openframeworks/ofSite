@@ -48,7 +48,7 @@ The "examples" folder contains openFrameworks projects that illustrate some of t
 XCode
 ~~~~~
 
-Navigate to apps/examples/graphicsExample and double-click on "graphicsExample.xcodeproj". 
+Navigate to examples/graphicsExample and double-click on "graphicsExample.xcodeproj".
 
 image::images/graphicsExample01.png["navigate to graphicsExample",width="800"]
 
@@ -110,27 +110,25 @@ IMPORTANT: By extension, this means that you should never edit any of the exampl
 
 As simple as this seems, this can be a huge stumbling block for a lot of beginners, so first lets agree on some terminology. 
 
-When you open your apps folder, you see 2 folders: _examples_ and _addonsExamples_. Let's call these folders *workspaces*.
+When you open your apps folder, you see a _myApps_ folder. Let's call these folders like this one *workspaces*.
 
-If you open one of those workspaces, you see more folders, like _easyCamExample_, _floatingPointImageExample_, _movieGrabberExample_, and _serialExample_. Each one of those folders is a *project*. Each contains (among other things) an ".xcodeproj" file and a "src" folder. A *project* _must_ be inside a *workspace* and can be compiled into a single application.
+If you open the _myApps_ workspace, you see the _emptyExample_ folder, which we will call a *project*. Each project contains (among other things) an ".xcodeproj" file and a "src" folder. A *project* _must_ be inside a *workspace* and can be compiled into a single application.
 
 image:images/workspace04.png["Workspace terminology"]
 
-We want to create a *project*, but every project has to live inside a *workspace*, and we're not supposed to put anything into the *examples* and *addonsExamples* workspaces, so our first step is going to be to make a new *workspace* by simply creating a folder called "MyFirstWorkspace" in the apps folder. You will probably end up making many workspaces while using openFrameworks. You can use them however you want, but the important thing is that they are directly inside the "apps" folder, ie: you can't have a workspace inside another workspace. 
+We want to create a *project*, but every project has to live inside a *workspace*, so lets use this handy *myApps* workspace. You can use workspaces them however you want, but the important thing is that they are directly inside the "apps" folder, ie: you can't have a workspace inside another workspace.
 
-image:images/workspace01.png["My First Workspace"]
-
-Next we will [underline]#copy# (NOT move) the entire "emptyExample" folder from the "examples" workspace and paste it into "MyFirstWorkspace". On a mac, you can literally click on the emptyExample folder, press apple+C, then navigate to the "MyFirstWorkspace" folder and press apple+V. So the result should look like this:
+First we will [underline]#duplicate# (NOT rename) the entire "emptyExample" folder. On a mac, you can literally right-click on the emptyExample folder, and click 'Duplicate'. So the result should look like this:
 
 image:images/workspace02.png["My First Project"]
 
-Next, we can rename the duplicate project folder from "emptyExample" to "MyFirstProject". 
+Next, we can rename the duplicate project folder from "emptyExample Copy" to "myFirstProject". 
 
 image:images/workspace03.png["My First Project"]
 
 The super important thing here is that your XCode Project file is *exactly* 3 folders "below" the Root Folder (refer to colorful diagram above). So, whenever you make a new project, or if you are suddenly getting thousands of errors for no apparent reason, you should always double check that your XCode Project file is in the correct place.
 
-The reason for this has to do with the 'lib' folder. We previously mentioned that openFrameworks is a "glue" for a bunch of different libraries, and these libraries are located in the 'lib' directory. We also discovered that it is the the job of the IDE know how to find and link together the various libraries. So, when the IDE tries to compile your program, it is set up to look for libraries in "../../../lib", or, in other words: "go back three folders (http://support.dtsearch.com/webhelp/dtsearch/relative_paths.htm[relative] to your .xcodeproj) and then look for a lib directory."  For instance, if you dig deep into the settings of any openFrameworks project, you will find paths like "../../../libs/FreeImage/include" and "../../../libs/poco/include". So, as long as your .xcodeproj file is within of_preRelease_v007_osx/apps/[workspace]/[project], everything will compile. If not, things will get ugly.
+The reason for this has to do with the 'lib' folder. We previously mentioned that openFrameworks is a "glue" for a bunch of different libraries, and these libraries are located in the 'lib' directory. We also discovered that it is the the job of the IDE know how to find and link together the various libraries. So, when the IDE tries to compile your program, it is set up to look for libraries in "../../../lib", or, in other words: "go back three folders (http://support.dtsearch.com/webhelp/dtsearch/relative_paths.htm[relative] to your .xcodeproj) and then look for a lib directory."  For instance, if you dig deep into the settings of any openFrameworks project, you will find paths like "../../../libs/FreeImage/include" and "../../../libs/poco/include". So, as long as your .xcodeproj file is within of_v0.7.4_osx_release/apps/[workspace]/[project], everything will compile. If not, things will get ugly.
 
 Okay!  Now you have created your first very own openFrameworks project. Double click on the XCode Project file in your new "MyFirstProject" and make sure "emptyExample" is selected as the target and click "Run" and you should see:
 
@@ -155,7 +153,7 @@ voila!
 =====================================================================
 
 
-When you click "Run" from within XCode, what actually happens behind the scenes is that your code is compiled into an executable and placed within the "bin" directory. Then that application is run just as if you had double clicked it. So, if you look in "MyFirstWorkspace/MyFirstApplication/bin" folder, you should see an application icon. This is your application! If you double-click on it, you will see the same gray window. Now you can send this application to all of your friends (who use a Mac) and they can launch your wonderful gray window program.
+When you click "Run" from within XCode, what actually happens behind the scenes is that your code is compiled into an executable and placed within the "bin" directory. Then that application is run just as if you had double clicked it. So, if you look in "myApps/MyFirstApplication/bin" folder, you should see an application icon. This is your application! If you double-click on it, you will see the same gray window. Now you can send this application to all of your friends (who use a Mac) and they can launch your wonderful gray window program.
 
 image:images/workspace05.png["Your Executable"]
 
