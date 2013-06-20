@@ -29,7 +29,10 @@ addons;;
     The "core" openFrameworks contains only the most essential functionality. Everything in the addons folder can be added to an application piecemeal. This includes stuff like reading an XML file, loading a 3D model, or using the computer vision library, openCV. 
 
 apps;;
-	This is where the applications that you make will be stored, and where you will be working most of the time. You will notice that there are already 2 folders in "apps": "examples" and "addonExamples". 
+	This is where the applications that you make will be stored, and where you will be working most of the time. You will notice that there are already a folder in "apps" called "myApps".
+
+examples;;
+  This folder contains example applications that illustrate some of the things that openFrameworks can do.
 
 libs;; 
 	This folder contains all the libraries that openFramworks uses as well as the oF core.
@@ -40,7 +43,7 @@ NOTE:  Of course, if you are reading this documentation, you probably also have 
 Take a Tour of the Examples
 ---------------------------
 
-Inside the "apps" folder, you will see 2 sub-folders: "examples" and "addonsExamples". Both of these folders contain openFrameworks projects that illustrate some of the things that openFrameworks can do. Before you get into making your own app, it's a good idea to take a tour of all of the example applications. The process is slightly different depending on which IDE you are using. 
+The "examples" folder contains openFrameworks projects that illustrate some of the things that openFrameworks can do. Before you get into making your own app, it's a good idea to take a tour of all of the example applications. The process is slightly different depending on which IDE you are using.
 
 XCode
 ~~~~~
