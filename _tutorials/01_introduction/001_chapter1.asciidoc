@@ -48,7 +48,7 @@ The "examples" folder contains openFrameworks projects that illustrate some of t
 XCode
 ~~~~~
 
-Navigate to apps/examples/graphicsExample and double-click on "graphicsExample.xcodeproj". 
+Navigate to examples/graphicsExample and double-click on "graphicsExample.xcodeproj".
 
 image::images/graphicsExample01.png["navigate to graphicsExample",width="800"]
 
@@ -110,13 +110,13 @@ IMPORTANT: By extension, this means that you should never edit any of the exampl
 
 As simple as this seems, this can be a huge stumbling block for a lot of beginners, so first lets agree on some terminology. 
 
-When you open your apps folder, you see 2 folders: _examples_ and _addonsExamples_. Let's call these folders *workspaces*.
+When you open your apps folder, you see a _myApps_ folder. Let's call these folders like this one *workspaces*.
 
-If you open one of those workspaces, you see more folders, like _easyCamExample_, _floatingPointImageExample_, _movieGrabberExample_, and _serialExample_. Each one of those folders is a *project*. Each contains (among other things) an ".xcodeproj" file and a "src" folder. A *project* _must_ be inside a *workspace* and can be compiled into a single application.
+If you open the _myApps_ workspace, you see the _emptyExample_ folder, which we will call a *project*. Each project contains (among other things) an ".xcodeproj" file and a "src" folder. A *project* _must_ be inside a *workspace* and can be compiled into a single application.
 
 image:images/workspace04.png["Workspace terminology"]
 
-We want to create a *project*, but every project has to live inside a *workspace*, and we're not supposed to put anything into the *examples* and *addonsExamples* workspaces, so our first step is going to be to make a new *workspace* by simply creating a folder called "MyFirstWorkspace" in the apps folder. You will probably end up making many workspaces while using openFrameworks. You can use them however you want, but the important thing is that they are directly inside the "apps" folder, ie: you can't have a workspace inside another workspace. 
+We want to create a *project*, but every project has to live inside a *workspace*, so lets use this handy *MyApps* workspace. You can use workspaces them however you want, but the important thing is that they are directly inside the "apps" folder, ie: you can't have a workspace inside another workspace.
 
 image:images/workspace01.png["My First Workspace"]
 
