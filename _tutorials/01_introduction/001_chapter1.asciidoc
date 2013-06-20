@@ -153,7 +153,7 @@ voila!
 =====================================================================
 
 
-When you click "Run" from within XCode, what actually happens behind the scenes is that your code is compiled into an executable and placed within the "bin" directory. Then that application is run just as if you had double clicked it. So, if you look in "MyFirstWorkspace/MyFirstApplication/bin" folder, you should see an application icon. This is your application! If you double-click on it, you will see the same gray window. Now you can send this application to all of your friends (who use a Mac) and they can launch your wonderful gray window program.
+When you click "Run" from within XCode, what actually happens behind the scenes is that your code is compiled into an executable and placed within the "bin" directory. Then that application is run just as if you had double clicked it. So, if you look in "myApps/MyFirstApplication/bin" folder, you should see an application icon. This is your application! If you double-click on it, you will see the same gray window. Now you can send this application to all of your friends (who use a Mac) and they can launch your wonderful gray window program.
 
 image:images/workspace05.png["Your Executable"]
 
