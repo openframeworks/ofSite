@@ -41,8 +41,6 @@
 <h3>Upcoming events</h3>
 <p>Conferences, workshops, and talks related to oF and the surrounding community</p>
 <ul>
-<li><a href="http://eyeofestival.com/">Eyeo festival</a>, Minneapolis, 5-8 June 2013
-<li><a href="http://www.athensvideoartfestival.gr">Introduction to openFrameworks, Athens Video Art Festival</a>, Athens, Greece, 7-9 June 2013</li>
 <li><a href="http://push-conference.com/">push.conference</a>, Munich, 25-26 October 2013</li>
 </ul>
 
@@ -52,6 +50,7 @@
 <li><a href="http://groups.google.com/group/freakdays/feed/">Amsterdam</a></li>
 <li><a href="https://groups.google.com/forum/#!forum/boston-creative-coders">Boston</a></li>
 <li><a href="https://www.facebook.com/GeneratorLeipzig">Leipzig</a></li>
+<li><a href="https://groups.google.com/forum/#!forum/nyc-of">NYC</a></li>
 </ul>
 
 <h3>Calls for collaboration</h3>
