@@ -41,7 +41,9 @@
 <h3>Upcoming events</h3>
 <p>Conferences, workshops, and talks related to oF and the surrounding community</p>
 <ul>
+<li><a href="http://www.eyebeam.org/events/rgbdtoolkit-workshop-0">RGB+D workshop, Eyebeam</a>, NYC, 13-14 July 2013</li>
 <li><a href="http://push-conference.com/">push.conference</a>, Munich, 25-26 October 2013</li>
+<li>OF + RaspberryPi unconference and hackathon, CMU, Pittsburgh.  October, date TBA.</li>
 </ul>
 
 <h3>Recurring meetups</h3>
