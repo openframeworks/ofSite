@@ -958,7 +958,7 @@ div.galleryItem p {
 	margin-right: 0;
 	padding: 25px;
 	width: 190px;
-	border-right: solid 1px #ccc;
+	/*border-right: solid 1px #ccc;*/
 }
 #download-latest-platform,#download-latest-platform-title, #download-latest-platform-last {
 	clear: none;
