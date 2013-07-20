@@ -22,7 +22,7 @@
     <div id="content">
       ${self.header()}
       <div id="body-wrap">
-      		<div class="page-left-wide">
+      		<div class="page-left-verywide">
                 <%self:filter chain="markdown_template">
                   ${next.body()}
                 </%self:filter>

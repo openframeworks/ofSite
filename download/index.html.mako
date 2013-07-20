@@ -1,4 +1,4 @@
-<%inherit file="/_templates/slideshow.mako" />
+<%inherit file="/_templates/slideshow_wide.mako" />
 
 <h1>download</h1>
 <div id="download-latest-header">
