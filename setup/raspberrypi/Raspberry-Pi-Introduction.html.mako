@@ -1,14 +1,15 @@
 <%inherit file="/_templates/markdown.mako" />
+${'''
 
 Raspberry Pi
 ============
 
 
-###Welcome to openFrameworks and the RaspberryPi
+## Welcome to openFrameworks and the RaspberryPi
 You are now entering the world of embedded linux development.  You'll be using mostly bash scripts, gcc, and your preferred commandline Text Editor.  It this world `screen` is your friend, from bash type [`man screen`](http://www.rackaid.com/resources/linux-screen-tutorial-and-how-to/) to learn more.  If you are completely new to the idea of doing linux development from a command line and have no idea what a commandline Text Editor is, you're in luck we'll show you how to get started and point you in the right direction to learn more. _Note: If you are a seasoned vet and use vim+regX to refactor your code move along to our [getting started guide](Raspberry-Pi-Getting-Started)_
 
-####The [Bash](http://en.wikipedia.org/wiki/Bash_(Unix_shell) Shell
-Bash is a command-line interpreter or shell that provides a traditional text based user interface to linux or *nix OS. If you use a Mac as your daily computer you have a bash terminal built right in, simply open Applications> Utilities >Terminal.  Bash lets you run command-line applications and utilities such as `mk-dir foo` which makes a new directory named `foo`.  Or you can use the copy command `cp` or move command `mv` to copy or move files or directories from one place to another _Note: for copying directories you will need to use `cp -R` for recursive copying._  You can also find out the IP address of your machine by running `ifconfig` from bash.   This will most likely spit out something like:
+## The Bash Shell
+[Bash](http://en.wikipedia.org/wiki/Bash_\(Unix_shell\)) is a command-line interpreter or shell that provides a traditional text based user interface to linux or *nix OS. If you use a Mac as your daily computer you have a bash terminal built right in, simply open Applications> Utilities >Terminal.  Bash lets you run command-line applications and utilities such as `mk-dir foo` which makes a new directory named `foo`.  Or you can use the copy command `cp` or move command `mv` to copy or move files or directories from one place to another _Note: for copying directories you will need to use `cp -R` for recursive copying._  You can also find out the IP address of your machine by running `ifconfig` from bash.   This will most likely spit out something like:
 
     pi@raspberrypi ~ $ ifconfig
     eth0      Link encap:Ethernet  HWaddr b8:27:eb:ca:c2:da  
@@ -31,11 +32,11 @@ For compiling the openFrameworks Core and an oF App we use `gcc` and GNU `make`.
 
 For more information on bash and [bash scripting](http://linuxconfig.org/Bash_scripting_Tutorial) please read this [bash tutorial](http://tldp.org/LDP/abs/html/) and [this wonderful pdf bash cheat sheet](http://dl.dropbox.com/u/397277/bash_shell_cheat_sheetV2.pdf) make a great reference. 
 
-####Picking a Text Editor 
+## Picking a Text Editor 
 While some hardcore nerds and hackers like to [pick fights](http://en.wikipedia.org/wiki/Editor_war) over text editors, there is no right answer as to which one is the best. You have many to choose from but here are 3 that work very well.  [`nano`](http://en.wikipedia.org/wiki/GNU_nano) is a very simple text editor.  All of your commands are base of a [`control+Key`](http://mintaka.sdsu.edu/reu/nano.html) style, so if `control` is the [right place](http://emacswiki.org/emacs/MovingTheCtrlKey) it is very easy to use.  If you are first starting out I would suggest using `nano`.  [`emacs`](http://www.gnu.org/software/emacs/) is a very powerful text editor that [verges on being a complete IDE or OS](http://en.wikipedia.org/wiki/Emacs#Features).  We could spend weeks talking about Emacs but here is a [nice tutorial](http://www2.lib.uchicago.edu/keith/tcl-course/emacs-tutorial.html) to get started.   You might need to run `sudo apt-get install emacs` if your linux image doesn't include it by default.  Lastly, [`vim`](http://www.vim.org/) is the go to text editor for hardcore linux users.  But you can be hardcore too if you want to learn this [complicated beast](http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html) via this [interactive tutorial](http://www.openvim.com/tutorial.html) or this [fun game](http://vim-adventures.com/).   
 
 
-###What is a RaspberryPi
+## What is a RaspberryPi
 
 The Raspberry Pi is a cheap (~$35) multimedia computer that is capable of running Linux (and other operating systems).  
 
@@ -50,3 +51,6 @@ Currently building apps with the `develop-raspberrypi` branch of this fork is ve
 The main differences include:
 - An new makefile system.  This allows us to more easily configure the oF build environment to reflect the idiosyncrasies of the RPI hardware AND it allows us to quicky and easily exclude certain core oF features, files, headers, etc that won't work (without significant modifications) on the RPI.  The makefiles are heavily commented.
 - A custom EGL-specific windowing and event handling system (via the `ofAppEGLWindow`).  Options for both Native and X11 windowing and input event management are available.
+
+'''}
+

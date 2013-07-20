@@ -1,4 +1,6 @@
 <%inherit file="/_templates/markdown.mako" />
+${'''
+
 
 Raspberry Pi
 ============
@@ -17,3 +19,6 @@ While we don't have section leaders per se, there are a few folks who are partic
 * sander ter braak, http://www.hautetechnique.com. available for testing, feedback etc.. i'm going to try to spend some time on the ofxNetwork addon these weeks. It looks like it's depending on the ofxThread, so i will try to get that up and running as well.
 * Dan Moore, @theDANtheMAN.  former embedded systems engineer and currently a front end android dev. I worked on Set-Top-Boxes arm and mips chips running QTLinux, Android, and plain linux. I'm based out of NYC.
 * Arne Boon, http://www.studioarneboon.nl/, Utrecht, the Netherlands: working on an interactive art+science installation using the RPi and Arduino. Very interested and excited about getting it done on the pi, exhibition opening 7 feb 2013 (http://mediatechnology.leiden.edu/)
+
+'''}
+

@@ -1,4 +1,6 @@
 <%inherit file="/_templates/markdown.mako" />
+${'''
+
 
 Raspberry Pi
 ============
@@ -108,3 +110,6 @@ Note: This is particularly frustrating and does not work so far.  Ideally one ca
 
 ## qemu
 * Nothing yet ...
+
+'''}
+

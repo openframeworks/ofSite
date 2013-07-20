@@ -1,9 +1,10 @@
 <%inherit file="/_templates/markdown.mako" />
+${'''
 
 Raspberry Pi
 ============
 
-### Getting Started
+## Getting Started
 
 * [Raspberry Pi Introduction](Raspberry-Pi-Introduction.html)
 * [Raspberry Pi Getting Started](Raspberry-Pi-Getting-Started.html)
@@ -15,7 +16,7 @@ Raspberry Pi
 * [Raspberry Pi Troubleshooting](Raspberry-Pi-Troubleshooting.html)
 * [Raspberry Pi Tricks and Tips](Raspberry-Pi-Tricks-And-Tips.html)
 
-### Examples
+## Examples
 
 Compiling all examples can be done with the following scripts:
 
@@ -25,14 +26,16 @@ For normal compiling run,
 For `distcc` based compiling:
 * Use the same script as above and make sure your `MAKEFLAGS` are set for distcc (see the  [Raspberry Pi Cross-compiling Guide](Raspberry-Pi-Cross-compiling-guide.html)).
 
-### Arduino
+## Arduino
 * Works with `ofSerial` and `ofArduino`.  Follow the normal instructions.
 
-### GPIO pins
+## GPIO pins
 * [Raspberry Pi Using the GPIO pins with WiringPi and openFrameworks Guide](Raspberry-Pi-Using-the-GPIO-pins-with-Wiring-Pi-and-openFrameworks.html)
 
-#### Advanced
+## Advanced
 
 * [Raspberry Pi Cross-compiling Guide](Raspberry-Pi-Cross-compiling-guide.html)
 
-## openFrameworks + Raspberry Pi = <3
+### openFrameworks + Raspberry Pi = <3
+
+'''}

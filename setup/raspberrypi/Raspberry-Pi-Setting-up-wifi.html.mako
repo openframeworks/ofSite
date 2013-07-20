@@ -1,4 +1,6 @@
 <%inherit file="/_templates/markdown.mako" />
+${'''
+
 
 Raspberry Pi
 ============
@@ -17,4 +19,7 @@ Raspberry Pi
         * Choose your encryption type.
         * Enter your details.
           * **Note**: *If your exact setup does not exist, you can create custom profiles to support any combination of settings supported by `wpa_supplicant`. More information [here](http://wicd.sourceforge.net/templates.php).*
+
+'''}
+
 

@@ -1,5 +1,7 @@
 <%inherit file="/_templates/markdown.mako" />
 
+${'''
+
 Raspberry Pi
 ============
 
@@ -52,3 +54,6 @@ _[ofAppEGLWindow:warning] I'm sorry, i Know you wanted X11, but it's not availab
 
 ### via TTY debugger.
 I took the RCA->Firewire setup one step further and use one of these USB->TTY cables (http://www.adafruit.com/products/954) to log into the RPi. It even provides power for the RPi to run. This means I don't need an internet connection or DHCP server. As long as my laptop battery doesn't run out, I can dev on a desert island (http://www.treehugger.com/solar-technology/5-best-portable-solar-laptop-chargers.html).
+
+'''}
+

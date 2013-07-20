@@ -1,4 +1,5 @@
 <%inherit file="/_templates/markdown.mako" />
+${'''
 
 Raspberry Pi
 ============
@@ -109,3 +110,6 @@ OSX uses the range `192.168.2.2-254` as its DHCP range for devices connected via
 If you have enabled mDNS (see above) or are using an earlier version of Raspbian with mDNS pre-enabled, the board will be reachable at `raspberrypi.local.` (or `raspberry.local.`) and you can SSH with the username pi: `ssh pi@raspberrypi.local.`  If you have changed the name, or can't find it, a program like [Bonjour Browser](http://www.tildesoft.com/files/BonjourBrowser.dmg).
 
 If you haven't enabled mDNS open terminal and run the SSH command `ssh pi@the.ip.address.of.your.pi` if everything went well you should be presented with a password prompt.
+
+'''}
+

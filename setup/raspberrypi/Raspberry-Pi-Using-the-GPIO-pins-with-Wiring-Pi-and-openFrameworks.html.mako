@@ -1,4 +1,6 @@
 <%inherit file="/_templates/markdown.mako" />
+${'''
+
 
 Raspberry Pi
 ============
@@ -112,3 +114,6 @@ And in the draw function:
 
 
 That's it. Note that some of the pins should be treated different than others e.g. pin 8 and 9 have pull-up resistors. In general you should read https://projects.drogon.net/raspberry-pi/wiringpi/special-pin-functions/ to be sure you understand how you are using the pins.
+
+'''}
+
