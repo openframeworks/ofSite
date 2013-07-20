@@ -7,51 +7,85 @@
 	<p>To use openFrameworks you will need an IDE, and the setup guide for your platform can walk you through this. Please post any bugs on the <a href="http://github.com/openframeworks/openFrameworks/issues">issues</a> page, and post to the <a href="http://forum.openframeworks.cc">forum</a> if you have any other questions. openFrameworks is distributed under the <a href="../about/license.html">MIT License</a>.</p>
 </div>
 
-<div id="download-latest-platform">
-	<h2>osx</h2>
-	<h3>download openFrameworks for</h3>
-	<p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_osx_release.zip">xcode</a></p><br/>
-	<h3>IDE setup guide</h3>
-	<p><a href="../setup/xcode">xcode</a></p>
+<div id="download-bg-desktop">
+    <div id="download-latest-platform">
+	    <h2>osx</h2>
+	    <h3>download<br/>openFrameworks for</h3>
+	    <p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_osx_release.zip">xcode</a></p><br/>
+	    <h3>IDE setup guide</h3>
+	    <p><a href="../setup/xcode">xcode</a></p>
+    </div>
+
+    <div id="download-latest-platform">
+	    <h2>linux</h2>
+	    <h3>download<br/>openFrameworks for</h3>
+	    <p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_linux_release.tar.gz">code::blocks</a></p>
+	    <p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_linux64_release.tar.gz">code::blocks (64 bit)</a></p><br/>
+	    <h3>IDE setup guide</h3>
+	    <p><a href="../setup/linux-codeblocks">code::blocks</a></p>
+	    <p><a href="../setup/linux-eclipse">eclipse</a></p>
+    </div>
+
+    <div id="download-latest-platform-last">
+	    <h2>windows</h2>
+	    <h3>download<br/>openFrameworks for</h3>
+	    <p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_win_cb_release.zip">code::blocks</a></p>
+	    <p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_vs2010_release.zip">visual studio 2010</a></p><br/>
+	    <h3>IDE setup guides</h3>
+	    <p><a href="../setup/codeblocks">code::blocks</a></p>
+	    <!--<p><a href="../setup/vs-2008">visual studio 2008</a></p>-->
+	    <p><a href="../setup/vs-2010">visual studio 2010</a></p>
+    </div>
 </div>
 
-<div id="download-latest-platform">
-	<h2>linux</h2>
-	<h3>download openFrameworks for</h3>
-	<p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_linux_release.tar.gz">code::blocks</a></p>
-	<p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_linux64_release.tar.gz">code::blocks (64 bit)</a></p><br/>
-	<h3>IDE setup guide</h3>
-	<p><a href="../setup/linux-codeblocks">code::blocks</a></p>
-	<p><a href="../setup/linux-eclipse">eclipse</a></p>
+<div id="download-bg-mobile">
+    <div id="download-latest-platform-title">
+	    <h2>mobile</h2>
+	    <p><em>openFrameworks for mobile platforms supports the same features as the desktop versions plus mobile specific features like acceleromter, compass, gps...</em></p>
+    </div>
+
+    <div id="download-latest-platform">
+	    <h2>ios</h2>
+	    <p><em>osx only</em></p><br/>
+	    <h3>download<br/>openFrameworks for</h3>
+	    <p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_ios_release.zip">xcode</a></p><br/>
+	    <h3>IDE setup guide</h3>
+	    <p><a href="../setup/iphone">xcode</a></p>
+    </div>
+
+    <div id="download-latest-platform-last">
+	    <h2>android</h2>
+	    <h3>download<br/>openFrameworks for</h3>
+	    <p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_android_release.tar.gz">eclipse</a></p><br/>
+	    <h3>IDE setup guide</h3>
+	    <p><a href="../setup/android-eclipse">eclipse</a></p>
+    </div>
 </div>
 
-<div id="download-latest-platform">
-	<h2>windows</h2>
-	<h3>download openFrameworks for</h3>
-	<p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_win_cb_release.zip">code::blocks</a></p>
-	<p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_vs2010_release.zip">visual studio 2010</a></p><br/>
-	<h3>IDE setup guides</h3>
-	<p><a href="../setup/codeblocks">code::blocks</a></p>
-	<!--<p><a href="../setup/vs-2008">visual studio 2008</a></p>-->
-	<p><a href="../setup/vs-2010">visual studio 2010</a></p>
-</div>
 
-<div id="download-latest-platform">
-	<h2>ios</h2>
-	<p><em>osx only</em></p><br/>
-	<h3>download openFrameworks for</h3>
-	<p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_ios_release.zip">xcode</a></p><br/>
-	<h3>IDE setup guide</h3>
-	<p><a href="../setup/iphone">xcode</a></p>
-</div>
+<div id="download-bg-armlinux">
+    <div id="download-latest-platform-title">
+	    <h2>arm linux</h2>
+	    <p><em>openFrameworks for arm linux boards like Raspberry Pi, Beaglebone (black), Pandaboard, BeagleBoard and others.</em></p>
+	    <p><em>We have setup guides for some of the most common boards but it should work on any armv6 and armv7 board</em></p>
+    </div>
 
-<div id="download-latest-platform">
-	<h2>android</h2>
-	<p><em>linux + osx only</em></p><br/>
-	<h3>download openFrameworks for</h3>
-	<p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_android_release.tar.gz">eclipse</a></p><br/>
-	<h3>IDE setup guide</h3>
-	<p><a href="../setup/android-eclipse">eclipse</a></p>
+    <div id="download-latest-platform">
+	    <h2>linux&nbsp;armv6</h2>
+	    <h3>download<br/>openFrameworks for</h3>
+	    <p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_linuxarmv6_release.tar.gz">linux armv6</a></p><br/>
+	    <h3>IDE setup guide</h3>
+	    <p><a href="../setup/raspberrypi">raspberrypi</a></p>
+    </div>
+
+    <div id="download-latest-platform-last">
+	    <h2>linux&nbsp;armv7</h2>
+	    <h3>download<br/>openFrameworks for</h3>
+	    <p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_linuxarmv7_release.tar.gz">linux armv7</a></p><br/>
+	    <h3>IDE setup guide</h3>
+	    <p><a href="../setup/pandaboard">pandaboard</a></p>
+	    <p><a href="../setup/beaglebone">beaglebone</a></p>
+    </div>
 </div>
 
 <br class="clearboth"/>

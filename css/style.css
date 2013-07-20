@@ -261,6 +261,11 @@ hr.header {
 	padding: 5px 40px 0px 50px;
 	width: 620px;
 }
+.page-left-verywide {
+	float: left;
+	padding: 5px 40px 0px 50px;
+	width: 730px;
+}
 .page-left-narrow {
 	clear: left;
 	margin: 0px 0px 0px 0px;
@@ -946,21 +951,44 @@ div.galleryItem p {
 #download-latest-header {
 	margin-bottom: 3em;
 }
-#download-latest-platform, #documentation-ebook {
+#download-latest-platform, #download-latest-platform-last, #download-latest-platform-title, #documentation-ebook {
 	background-color: #eee;
-	height: 180px;
-	margin-bottom: 1em;
-	margin-right: 1em;
-	padding: 20px;
-	width: 150px;
+	height: 190px;
+	margin-bottom: 0;
+	margin-right: 0;
+	padding: 25px;
+	width: 190px;
+	border-right: solid 1px #ccc;
 }
-#download-latest-platform {
+#download-latest-platform,#download-latest-platform-title, #download-latest-platform-last {
 	clear: none;
 	float: left;
 }
-#download-latest-platform p {
+#download-latest-platform p,#download-latest-platform-title p, #download-latest-platform-last p {
 	margin: 0;
 }
+#download-latest-platform-last{
+    margin-right:0; 
+	border-right: none;
+}
+#download-latest-platform-title{
+    background-color: #f5f5f5
+}
+
+#download-bg-desktop, #download-bg-mobile, #download-bg-armlinux{
+    background-color: #eee;
+    margin:0;
+    padding:0;
+	float: left;
+	margin-bottom: 1em;
+	border:solid 1px #ccc;
+}
+
+
+#download-bg-desktop{
+    background-color: #eee;
+}
+
 #documentation-ebook {
 	float: right;
 	margin-top: 20px;
