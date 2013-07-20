@@ -61,11 +61,10 @@ class DocsClass:
         method.syntax = method.syntax + ")"
         method.returns = returns
         method.new = True
-        found = False
         for function in self.function_list:
             if function.name == name:
-                dst_parameters_types = self.get_parameter_types(function.parameters)
-                src_parameters_types = self.get_parameter_types(parameters)
+                dst_parameters_types = self.get_parameter_types(function.parameters.replace('const ',''))
+                src_parameters_types = self.get_parameter_types(parameters.replace('const ',''))
 
                 if(len(src_parameters_types)==len(dst_parameters_types)):
                     a = -1
@@ -76,14 +75,10 @@ class DocsClass:
                             a = i
                     if a == len(src_parameters_types)-1:
                         function.new = False
+                        function.parameters = parameters
                         return function
-                        found = True
-                        #print 'found ' + function.name
-                        break
-        if not found:
-            #print 'not found ' + method.name
-            #clazzmethod = method
-            self.function_list.append(method)   
+                        
+        self.function_list.append(method)   
         return method
 
     def var_by_name(self, name):

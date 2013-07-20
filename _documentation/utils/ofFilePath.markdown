@@ -7,65 +7,10 @@
 
 
 
+
 ##Methods
 
 
-
-###string getFileExt(filename)
-
-<!--
-_syntax: getFileExt(filename)_
-_name: getFileExt_
-_returns: string_
-_returns_description: _
-_parameters: string filename_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: yes_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###string removeExt(filename)
-
-<!--
-_syntax: removeExt(filename)_
-_name: removeExt_
-_returns: string_
-_returns_description: _
-_parameters: string filename_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: yes_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
 
 ###string addLeadingSlash(path)
 
@@ -86,6 +31,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -121,61 +67,6 @@ _description: _
 
 
 
-<!----------------------------------------------------------------------------->
-
-###string removeTrailingSlash(path)
-
-<!--
-_syntax: removeTrailingSlash(path)_
-_name: removeTrailingSlash_
-_returns: string_
-_returns_description: _
-_parameters: string path_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: yes_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###string getPathForDirectory(path)
-
-<!--
-_syntax: getPathForDirectory(path)_
-_name: getPathForDirectory_
-_returns: string_
-_returns_description: _
-_parameters: string path_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: yes_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
 
 <!----------------------------------------------------------------------------->
 
@@ -199,61 +90,6 @@ _advanced: False_
 
 _description: _
 
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool isAbsolute(path)
-
-<!--
-_syntax: isAbsolute(path)_
-_name: isAbsolute_
-_returns: bool_
-_returns_description: _
-_parameters: string path_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: yes_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###string getFileName(filePath, bRelativeToData = true)
-
-<!--
-_syntax: getFileName(filePath, bRelativeToData = true)_
-_name: getFileName_
-_returns: string_
-_returns_description: _
-_parameters: string filePath, bool bRelativeToData=true_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: yes_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
 
 
 
@@ -289,18 +125,19 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
-###string getEnclosingDirectory(filePath, bRelativeToData = true)
+###string getCurrentExeDir()
 
 <!--
-_syntax: getEnclosingDirectory(filePath, bRelativeToData = true)_
-_name: getEnclosingDirectory_
+_syntax: getCurrentExeDir()_
+_name: getCurrentExeDir_
 _returns: string_
 _returns_description: _
-_parameters: string filePath, bool bRelativeToData=true_
+_parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0071_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -310,6 +147,36 @@ _advanced: False_
 -->
 
 _description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string getCurrentExePath()
+
+<!--
+_syntax: getCurrentExePath()_
+_name: getCurrentExePath_
+_returns: string_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0071_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: yes_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
 
 
 
@@ -338,6 +205,268 @@ _advanced: False_
 -->
 
 _description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string getEnclosingDirectory(filePath, bRelativeToData = true)
+
+<!--
+_syntax: getEnclosingDirectory(filePath, bRelativeToData = true)_
+_name: getEnclosingDirectory_
+_returns: string_
+_returns_description: _
+_parameters: string filePath, bool bRelativeToData=true_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: yes_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string getFileExt(filename)
+
+<!--
+_syntax: getFileExt(filename)_
+_name: getFileExt_
+_returns: string_
+_returns_description: _
+_parameters: string filename_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: yes_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string getFileName(filePath, bRelativeToData = true)
+
+<!--
+_syntax: getFileName(filePath, bRelativeToData = true)_
+_name: getFileName_
+_returns: string_
+_returns_description: _
+_parameters: string filePath, bool bRelativeToData=true_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: yes_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string getPathForDirectory(path)
+
+<!--
+_syntax: getPathForDirectory(path)_
+_name: getPathForDirectory_
+_returns: string_
+_returns_description: _
+_parameters: string path_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: yes_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string getUserHomeDir()
+
+<!--
+_syntax: getUserHomeDir()_
+_name: getUserHomeDir_
+_returns: string_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0071_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: yes_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool isAbsolute(path)
+
+<!--
+_syntax: isAbsolute(path)_
+_name: isAbsolute_
+_returns: bool_
+_returns_description: _
+_parameters: string path_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: yes_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string join(path1, path2)
+
+<!--
+_syntax: join(path1, path2)_
+_name: join_
+_returns: string_
+_returns_description: _
+_parameters: string path1, string path2_
+_access: public_
+_version_started: 0071_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: yes_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string removeExt(filename)
+
+<!--
+_syntax: removeExt(filename)_
+_name: removeExt_
+_returns: string_
+_returns_description: _
+_parameters: string filename_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: yes_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string removeTrailingSlash(path)
+
+<!--
+_syntax: removeTrailingSlash(path)_
+_name: removeTrailingSlash_
+_returns: string_
+_returns_description: _
+_parameters: string path_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: yes_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
 
 
 

@@ -6,7 +6,7 @@ v0.1, January 2012:
 :icons:
 :numbered:
 :doctype: book
-:author_site: http://jeffcrouse.com
+:author_site: http://www.jeffcrouse.info
 :summary: This chapter will introduce openFrameworks and prepare you to start your first project.
 
 This chapter will introduce openFrameworks and prepare you to start your first project.
@@ -187,7 +187,7 @@ Scramble Suit
 ^^^^^^^^^^^^^
 by Arturo Castro and Kyle McDonald
 
-One great thing about openFrameworks is that how easy to incorporate c++ code from pretty much any library. To that end, Arturo and Kyle used a http://web.mac.com/jsaragih/FaceTracker/FaceTracker.html[Face Tracker library by Jason Saragih] to create a face-replacement technique that Kyle named "Scramble Suit" inspired by fictional technology from Philip K. Dick’s 1977 novel, "A Scanner Darkly". It’s effectively a cloak that hides the identify of the wearer by making it impossible to describe or remember them.
+One great thing about openFrameworks is that how easy to incorporate c++ code from pretty much any library. To that end, Arturo and Kyle used a http://web.mac.com/jsaragih/FaceTracker/FaceTracker.html[Face Tracker library by Jason Saragih] to create a face-replacement technique that Kyle named "Scramble Suit" inspired by fictional technology from Philip K. Dick’s 1977 novel, "A Scanner Darkly". It’s effectively a cloak that hides the identity of the wearer by making it impossible to describe or remember them.
 ++++
 <iframe src="http://player.vimeo.com/video/29391633?title=0&amp;byline=0&amp;portrait=0" width="640" height="360" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 ++++

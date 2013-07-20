@@ -1,5 +1,5 @@
 <%page args="method"/>
-<div class="documentation_detail">
+<div class="documentation_detail ${method.name}">
   	<% params = "()" if method.parameters=="" else "(...)" %> 
 	<h1><a name="${method.name}">${method.name}${params}</a></h1>
 	<h2><%self:filter chain="markdown_template">${method.returns} ${method.clazz}::${method.name}(${method.parameters})</%self:filter></h2>
