@@ -1,4 +1,6 @@
 <%inherit file="/_templates/markdown.mako" />
+${'''
+
 
 Raspberry Pi
 ============
@@ -26,3 +28,6 @@ If you run into something that might help others, add it here!
 1.  Edit /boot/config.txt and add or set option "gpu_mem=64". This resets the memory split to 192mb for cpu_mem, reboot after saving file (to edit: $sudo nano /boot/config.txt) ($sudo reboot). 
 1.  Compile the oF core and app using "$make Debug" instead of a release build with "$make".
 1.  More info see: https://github.com/openFrameworks-RaspberryPi/openFrameworks/issues/118
+
+'''}
+

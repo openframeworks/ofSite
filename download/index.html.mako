@@ -65,8 +65,8 @@
 
 <div id="download-bg-armlinux">
     <div id="download-latest-platform-title">
-	    <h2>arm linux</h2>
-	    <p><em>openFrameworks for arm linux boards like Raspberry Pi, Beaglebone (black), Pandaboard, BeagleBoard and others.</em></p>
+	    <h2>linux arm</h2>
+	    <p><em>openFrameworks for arm boards running linux like Raspberry Pi, Beaglebone (black), Pandaboard, BeagleBoard and others.</em></p>
 	    <p><em>We have setup guides for some of the most common boards but it should work on any armv6 and armv7 board.</em></p>
     </div>
 

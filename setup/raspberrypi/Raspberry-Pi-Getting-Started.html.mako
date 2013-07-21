@@ -1,4 +1,5 @@
 <%inherit file="/_templates/markdown.mako" />
+${'''
 
 Raspberry Pi
 ============
@@ -31,17 +32,7 @@ Raspberry Pi
     * install git: `sudo apt-get install git`
     * install and enable Multicast DNS (mDNS) for board to be reachable at `raspberrypi.local.` from machines on the same network: `sudo apt-get install libnss-mdns`
 
-0. Then clone this repo:
-    * `git clone https://github.com/openFrameworks-RaspberryPi/openFrameworks/`
-    * _Note: If you want to contribute code to the this project, create your own branch and submit a pull request to the `develop-raspberrypi` branch of this repo._
-    * _Note: For purposes of discussion below, $(OF_ROOT) is will be the location of the openFrameworks root folder you created during this cloning process._ (suggested root dir ~/src/openFrameworks)
-
-0. Then move into your newly created directory ...
-    * `cd openFrameworks`
-
-0.  ... and checkout the `develop-raspberrypi` branch:
-    * `git checkout develop-raspberrypi` 
-    * _Note: The `master-raspberrypi` is now gone!  Use the `develop-raspberrypi` branch._
+0. Then download OF for linux armv6 if you haven't done it before and uncompress it somewhere on the pi
 
 ## Building openFrameworks and an oF App:
 
@@ -57,43 +48,22 @@ Raspberry Pi
     * `make` to build the Release library.
     * or
     * `make Debug` to build the debug library.
-0. If you have the need for speed and have an Ubuntu desktop machine to spare (or VM!), see the [Raspberry Pi Cross Compiling Guide](Raspberry-Pi-Cross-compiling-guide).
+0. If you have the need for speed and have an Ubuntu desktop machine to spare (or VM!), see the [Raspberry Pi Cross Compiling Guide](Raspberry-Pi-Cross-compiling-guide.html) to compile directly from your computer or [Raspberry Pi DISTCC Guide](Raspberry-Pi-DISTCC-guide.html) to compile from the PI but use your computer to speed up the compiling.
 
 _Note:This will use the new makefile system to automatically detect your system and will load the platform specific configurations found in the `linuxarmv6l` subfolder. This platform specific makefile is used for compiling BOTH core libraries AND compiling specific oF projects.  If you are experimenting with missing features, you may need to modify that file at some point. It is very well documented (in fact all of the new makefile system is heavily commented, so feel free to look around and make suggestions!)._
 
 
 
 ###Compiling Your First App
-We do not support running openFrameworks apps in a X11 window with the Raspberry Pi.  You will not able to use VNC+X11 to view the output of your applications from your host machine.  We currently only support output via the HDMI out or RCA Video out ports.  _Note:We would like to support this in the future and if you would like to contribute please read the guide on [contributing to the project](Raspberry-Pi-Contributing-Code)_
 
-Currently the base Makefile are located in `$(OF_ROOT)/scripts/linux/template/linuxarmv6l` but now we are going to copy the following files to your home directory for easy access.  
-* `cd $(OF_ROOT)/scripts/linux/template/linuxarmv6l`
-* `cp Makefile ~/`
+For example:
 
-Now we are going to navigate to `$(OF_ROOT)/apps/devApps` folder and try out a few simple RPI apps.  You'll find the following apps: 
-* `cd $(OF_ROOT)/apps/devApps`
-* raspberrypi_hello_world
-* raspberrypi_hello_world_gles2 
+* `cd $(OF_ROOT)/examples/graphics/polygonExample`
+* `make`
+* `make run`
 
-If the Makefiles are not present in these projets lets copy our Makefiles from our home directory into these projects and compile the projects:
+To create a new project you can just make a copy of the emptyExample in examples/empty/emotyExample to a path similar to apps/myapps/newApp. It's important that your application directory is 3 levels below OF_ROOT.
 
-_Note: you should do this for any RPI apps you want to build._ 
-* `cp ~/Makefile ./PROJECT_DIRECTORY`
-* type make and follow the instructions on the screen after the successful builds. 
-
-_Note: if you find any errors at this step compiling or running either `raspberrypi_hello_world_gles2` or `raspberrypi_hello_world` please file them on github. Also note that gles2 might work better using `develop-raspberrypi`_ 
-
-After you have built your first app, play around with the examples in `$(OF_ROOT)/examples` some great ones are below: 
-
-* windowExample in `$(OF_ROOT)/examples/utils` on `develop-raspberrypi` 
-* openCVExample in `$(OF_ROOT)/examples/addons/` 
-* soundPlayerExample in `$(OF_ROOT)/examples/sound/`
-* soundPlayerFFTExample in `$(OF_ROOT)/examples/sound/`
-
-_Note: Most of the above apps will require a USB Keyboard and/or USB mouse as it uses our experimental code which currently requires `develop-raspberrypi`.  The experimental code allows for input devices and windowing outside of X11 on the Raspberry Pi so if you find any errors with the above apps please file them on github._
-   
-To run other examples or try out your own program, for the moment we recommend copying the `raspberrypi_hello_world` example.  In the future, a command line or GUI `projectGenerator` will make this easier.
-_Note: If you are a developer, please take a look at the `config.make` file and the `addons.make` files in `$(OF_ROOT)/scripts/linux/template/linuxarmv6l`._
 ##Notes:
 For doing development on your pi from OS X via SSH you should perform the following steps:
 
@@ -106,6 +76,27 @@ For doing development on your pi from OS X via SSH you should perform the follow
 OSX uses the range `192.168.2.2-254` as its DHCP range for devices connected via the ethernet jack your pi will probably be `192.168.2.2` but it could be `192.168.2.7`You might have to run [nmap](http://nmap.org/) to find the IP of your pi if you do not have a USB keyboard handy `nmap  -v -sP 192.168.2.2-254` should do the trick.  Alternatively, you can directly query the current dhcp leases to find your connected ip address with:
 `grep ip_address /private/var/db/dhcpd_leases | cut -d= -f2 | nmap -iL - -sn`
 
-If you have enabled mDNS (see above) or are using an earlier version of Raspbian with mDNS pre-enabled, the board will be reachable at `raspberrypi.local.` (or `raspberry.local.`) and you can SSH with the username pi: `ssh pi@raspberrypi.local.`  If you have changed the name, or can't find it, a program like [Bonjour Browser](http://www.tildesoft.com/files/BonjourBrowser.dmg).
+
+For Linux (with gnome):
+
+* On your Raspberry Pi enable sshd to start at boot 
+* On your Linux machine from the network manager applet, select `Edit connections`
+* Press Add
+* Select Ethernet
+* In the Device MAC Address Select the first one that appears
+* Now select the `IPv4 Settings` tab
+* In method select `Shared to other computers`
+* Press save
+* Plug an ethernet cable from your Raspberry Pi into your computer
+* Restart your Raspberry Pi
+
+Gnome's network manager uses the range `10.0.42.2-254` as its DHCP range for devices connected via the ethernet jack. Your pi will get an address in that range and it'll be always the same but you'll need to check the first time. You might have to run [nmap](http://nmap.org/) to find the IP of your pi if you do not have a USB keyboard handy `nmap  -v -sP 10.42.0.0/24` should do the trick. 
+
+Common to all platforms, mDNS:
+
+If you have enabled mDNS (see above) or are using an earlier version of Raspbian with mDNS pre-enabled, the board will be reachable at `raspberrypi.local.` (or `raspberry.local.`) and you can SSH with the username pi: `ssh pi@raspberrypi.local.`  If you have changed the name, or can't find it, run avahi-discover to check all the available machines in the network
 
 If you haven't enabled mDNS open terminal and run the SSH command `ssh pi@the.ip.address.of.your.pi` if everything went well you should be presented with a password prompt.
+
+'''}
+
