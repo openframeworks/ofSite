@@ -84,7 +84,7 @@
 	    <p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_linuxarmv7_release.tar.gz">linux armv7</a></p><br/>
 	    <h3>setup guide</h3>
 	    <p><a href="../setup/pandaboard">pandaboard</a></p>
-	    <p><a href="../setup/beaglebone">beaglebone</a></p>
+	    <p><a href="../setup/armv7">generic armv7</a></p>
     </div>
 </div>
 
