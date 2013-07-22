@@ -6,63 +6,94 @@ Raspberry Pi
 
 
 ##Getting your Raspberry Pi ready for openFrameworks:
+### Install Raspbian "wheezy"
+0. Install the latest _**Raspbian “wheezy”**_ image from the [Raspberry Pi downloads page](http://www.raspberrypi.org/downloads)
+1. Follow the instructions at [Raspberry Pi Preparing Your SD Card](http://elinux.org/RPi_Easy_SD_Card_Setup) to get Raspbian installed onto your SD Card
+    * **Make sure you are working with the the "hard float" version of Raspbian "wheezy", not the soft-float version (aka "Soft-float Debian "wheezy").**
+         
+### Configure the Raspberry Pi
+This guide assumes you are starting from a fresh Raspian install. With a fresh install the Raspberry Pi configuration is presented at the first boot. You will need to have a USB keyboard and either a HDMI Monitor or a HDMI to DVI||VGA adapter depending on your setup.
 
-0. Install the latest _**Raspbian**_ image, according to the instructions in the [Official Quickstart Guide](http://www.raspberrypi.org/quick-start-guide). More instructions on the page [Raspberry Pi Preparing Your SD Card](Raspberry-Pi-Preparing-Your-SD-Card)
-    * **Make sure you are working with the the "hard float" version of wheezy (aka "Raspbian"), not the soft-float version (aka "Soft-float Debian "wheezy").** 
-0. You might want to [set up wifi on your Raspberry Pi](Raspberry-Pi-Setting-Up-Wifi) (optional)
-0. Please note if you are booting for the first time you will need to have a USB keyboard and either a HDMI Monitor or a HDMI to DVI||VGA adapter depending on your setup.  Please read [this guide](http://www.raspberrypi.org/phpBB3/viewtopic.php?f=26&t=4751&sid=e0ac7081d9cf50ce6f676933b9d5bf03) as it contains a lot of useful information about bringing up your pi for the first time.  Please select the following options from the configuration screen described in this [this guide](http://www.raspberrypi.org/phpBB3/viewtopic.php?f=26&t=4751&sid=e0ac7081d9cf50ce6f676933b9d5bf03).
-    * expand_rootfs, this expands the root file-system to your full SD card. 
-    * ssh, enable sshd at boot (if you wish to ssh into your pi instead of using a USB keyboard)
-    * memory_split, set it to 128 (which is good for both the 256 RPis and later) 
-    * **if you already have a working pi you should do the following**
-    * `sudo apt-get clean`
-    * `sudo apt-get update`
-    * `sudo apt-get upgrade`
-    * `sudo apt-get install git-core binutils`
-    * run `sudo wget http://goo.gl/1BOfJ -O /usr/bin/rpi-update && sudo chmod +x /usr/bin/rpi-update`
-    * then execute the `sudo rpi-update`
-    * **you will need to reboot your pi after this step** `sudo reboot`
-
-0. Once you are logged in to the RPI on the command line (via SSH or plugged into a screen) make sure your system is up-to-date.
+0.  Select `1 Expand Filesytem` and hit Enter
+0.  Select `8 Advanced Options` and hit Enter
+	* Select `A3 Memory Split` and hit Enter
+	* Type `128` and Hit `<ok>`
+	 
+0. Reboot when prompted or `sudo reboot`
+0. Assuming you have internet access run these commands to update the software to the latest packages.
     * `sudo apt-get clean`
     * `sudo apt-get update`
     * `sudo apt-get upgrade`
     * _Note: The above steps may take a little while._
-    * If you are still having issues updating apt-get run the following command then repeat the steps from above: `sudo rm /var/lib/apt/lists/* -vf`
-    * install git: `sudo apt-get install git`
-    * install and enable Multicast DNS (mDNS) for board to be reachable at `raspberrypi.local.` from machines on the same network: `sudo apt-get install libnss-mdns`
 
-0. Then download OF for linux armv6 if you haven't done it before and uncompress it somewhere on the pi
+#### If you have previously booted the Raspberry Pi
 
-## Building openFrameworks and an oF App:
+0. Open up a Shell session (LXTerminal on the Raspberry Pi Desktop) 
+0.  `sudo raspi-config`
+0.  Run the above steps
 
+### Download openFrameworks
+You now can download the Linux armv6 version of openFrameworks and uncompress it into a folder. Using a Shell, The following commands will download openFrameworks and uncompress it into the folder `/home/pi/openFrameworks`
+ 
+0. `cd` 
+0. `wget http://www.openframeworks.cc/versions/v0.8/of_v0.8_linuxarmv6_release.tar.gz` 
+0.  `mkdir openFrameworks`
+0.  `tar xfz of_v0.8_linuxarmv6_release.tar.gz -C openFrameworks --strip-components 1`
 
-### Installing dependencies and Compiling the openFrameworks Core:
+### Compiling openFrameworks:
+This step will take approximately 1 hour when compiling on the Raspberry Pi, Make sure you didn't skip the memory split step above under _**Configure the Raspberry Pi**_ or it will eventually fail.
 
-0. First, you will need to install the dependencies and codecs oF uses using the following commands:
-    * `cd $(OF_ROOT)/scripts/linux/debian_armv6l`
-    * `sudo ./install_codecs.sh`
-    * `sudo ./install_dependencies.sh` 
-0. Next you need to build the core openFrameworks libraries. **Set your gpu_mem=64 in order build without breaking. ** To do so, navigate to the `$(OF_ROOT)/libs/openFrameworksCompiled/project` folder on your RPI and run:
-    _Note: The build takes approximately 1hr to complete. this is going to take a [while](http://xkcd.com/303/)_
-    * `make` to build the Release library.
-    * or
-    * `make Debug` to build the debug library.
-0. If you have the need for speed and have an Ubuntu desktop machine to spare (or VM!), see the [Raspberry Pi Cross Compiling Guide](Raspberry-Pi-Cross-compiling-guide.html) to compile directly from your computer or [Raspberry Pi DISTCC Guide](Raspberry-Pi-DISTCC-guide.html) to compile from the PI but use your computer to speed up the compiling.
+Assuming openFrameworks is located at `/home/pi/openFrameworks` run the following commands to install the necessary packages and compile openFrameworks. 
 
-_Note:This will use the new makefile system to automatically detect your system and will load the platform specific configurations found in the `linuxarmv6l` subfolder. This platform specific makefile is used for compiling BOTH core libraries AND compiling specific oF projects.  If you are experimenting with missing features, you may need to modify that file at some point. It is very well documented (in fact all of the new makefile system is heavily commented, so feel free to look around and make suggestions!)._
+0. `cd /home/pi/openFrameworks/scripts/linux/debian_armv6l` 
+0. `sudo ./install_codecs.sh` 
+0. `sudo ./install_dependencies.sh` 
 
+You are now ready to compile openFrameworks! 
 
+0. `cd` 
+0. `make -C /home/pi/openFrameworks/libs/openFrameworksCompiled/project`
 
-###Compiling Your First App
+As you can see compiling natively on the Raspberry Pi takes a long time. openFrameworks applications typically take much less time than the core library however taking the time to set up a cross-compiling solution will save you enormous amounts of time. 
 
-For example:
+[Raspberry Pi DISTCC Guide](Raspberry-Pi-DISTCC-guide.html)    
+[Raspberry Pi Cross Compiling Guide](Raspberry-Pi-Cross-compiling-guide.html)
 
-* `cd $(OF_ROOT)/examples/graphics/polygonExample`
+### Compiling Your First App
+Like on other platforms, openFrameworks ships with a bunch of examples located in the `openFrameworks/examples` folder. Inside examples the projects are sorted by the categories: 
+
+* 3d 
+* addons 
+* communication 
+* empty
+* events
+* gl
+* gles
+* graphics
+* gui
+* math
+* sound
+* utils
+* video
+
+Inside each category folder are a few examples of each. To run them you need to go into the folder, build and run.
+
+For example, here is how you build and run the polygonExample:
+
+* `cd /home/pi/openFrameworks/examples/graphics/polygonExample`
 * `make`
 * `make run`
 
-To create a new project you can just make a copy of the emptyExample in examples/empty/emotyExample to a path similar to apps/myapps/newApp. It's important that your application directory is 3 levels below OF_ROOT.
+To create your own project from scratch, copy `examples/empty/emptyExample` into `apps/myApps/yourProjectName` folder and start from there
+
+For example:
+
+* `cp -R /home/pi/openFrameworks/examples/empty/emptyExample /home/pi/openFrameworks/apps/myApps/myRpiApp`
+* `cd /home/pi/openFrameworks/apps/myApps/myRpiApp`
+* `make`
+* `make run`
+
+It is critical to keep your application directory 3 levels below the openFrameworks directory.
 
 ##Notes:
 For doing development on your pi from OS X via SSH you should perform the following steps:
