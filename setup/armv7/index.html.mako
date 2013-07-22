@@ -44,16 +44,13 @@ To use it in your main.cpp do:
     //========================================================================
     int main( ){
         ofAppNoWindow w;
-	    ofSetupOpenGL(&w,1024,768, OF_WINDOW);// <-------- setup the GL context
-
-	    // this kicks off the running of my app
-	    // can be OF_WINDOW or OF_FULLSCREEN
-	    // pass in width and height too:
+	    ofSetupOpenGL(&w,1024,768, OF_WINDOW);
 	    ofRunApp( new testApp());
 
     }
 ~~~~
 
+Yes, even if you are not creating an openGL context you need to call ofSetupOpenGL which actually tells OF which window to use.
 
 
 '''}
