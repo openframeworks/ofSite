@@ -7,7 +7,7 @@ Raspberry Pi
 
 ##Getting your Raspberry Pi ready for openFrameworks:
 ### Install Raspbian "wheezy"
-0. Install the latest _**Raspbian “wheezy”**_ image from the [Raspberry Pi downloads page](http://www.raspberrypi.org/downloads)
+0. Install the latest _**Raspbian "wheezy"**_ image from the [Raspberry Pi downloads page](http://www.raspberrypi.org/downloads)
 1. Follow the instructions at [Raspberry Pi Preparing Your SD Card](http://elinux.org/RPi_Easy_SD_Card_Setup) to get Raspbian installed onto your SD Card
     * **Make sure you are working with the the "hard float" version of Raspbian "wheezy", not the soft-float version (aka "Soft-float Debian "wheezy").**
          
@@ -94,6 +94,7 @@ For example:
 * `make run`
 
 It is critical to keep your application directory 3 levels below the openFrameworks directory.
+
 
 '''}
 
