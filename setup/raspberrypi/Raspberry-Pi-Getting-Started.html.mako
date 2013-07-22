@@ -5,7 +5,8 @@ Raspberry Pi
 ============
 
 
-##Getting your Raspberry Pi ready for openFrameworks:
+## Getting your Raspberry Pi ready for openFrameworks
+    
 ### Install Raspbian "wheezy"
 0. Install the latest _**Raspbian "wheezy"**_ image from the [Raspberry Pi downloads page](http://www.raspberrypi.org/downloads)
 1. Follow the instructions at [Raspberry Pi Preparing Your SD Card](http://elinux.org/RPi_Easy_SD_Card_Setup) to get Raspbian installed onto your SD Card
@@ -14,7 +15,7 @@ Raspberry Pi
 ### Configure the Raspberry Pi
 This guide assumes you are starting from a fresh Raspian install. With a fresh install the Raspberry Pi configuration is presented at the first boot. You will need to have a USB keyboard and either a HDMI Monitor or a HDMI to DVI||VGA adapter depending on your setup.
 
-0.  Select `1 Expand Filesytem` and hit Enter
+0.  Select `1 Expand Filesystem` and hit Enter
 0.  Select `8 Advanced Options` and hit Enter
 	* Select `A3 Memory Split` and hit Enter
 	* Type `128` and Hit `<ok>`
@@ -28,7 +29,7 @@ This guide assumes you are starting from a fresh Raspian install. With a fresh i
 
 #### If you have previously booted the Raspberry Pi
 
-0. Open up a Shell session (LXTerminal on the Raspberry Pi Desktop) 
+0. If you are running the X11 window system, Open up a LXTerminal on the Raspberry Pi Desktop
 0.  `sudo raspi-config`
 0.  Run the above steps
 
@@ -94,6 +95,8 @@ For example:
 * `make run`
 
 It is critical to keep your application directory 3 levels below the openFrameworks directory.
+
+Have fun! :)
 
 
 '''}
