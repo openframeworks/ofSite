@@ -6,14 +6,14 @@ Raspberry Pi Workflow
 
 To use openFrameworks on the Raspberry Pi you will be using a few different tools
 
-### Bash Shell    
-A Shell application provides a command line interface to the Raspberry Pi. Mac OS X ships with Terminal.app located at Applications > Utilities > Terminal. Windows users often use [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html). The shell is used to send commands to compile, run and stop applications. 
+## Bash Shell    
+A shell application provides a command line interface to the Raspberry Pi. Mac OS X ships with Terminal.app located at Applications > Utilities > Terminal. Windows users often use [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html). The shell is used to send commands to compile, run and stop applications. 
 
-### Text Editor    
-You will need a text editor to edit source code. If you are already a Linux user you undoubtably have a preferred text editor. For the sake of consistency this guide will use [`nano`](http://en.wikipedia.org/wiki/GNU_nano) as it is popular in the Raspberry Pi community and conveniently has important commands listed at the bottom of the window.
+## Text Editor    
+You will need a text editor to edit source code. If you are already a Linux user you undoubtably have a preferred text editor. For the sake of consistency, this guide will use [`nano`](http://en.wikipedia.org/wiki/GNU_nano) as it is popular in the Raspberry Pi community and conveniently has important commands listed at the bottom of the window.
 
-### File Browser    
-Although you can do all copy/move/edit operations through the Shell you may prefer to use an Desktop text editor to edit source code or the Apple Finder/Windows Explorer to manipulate files. In order to to this you will need to setup some services that allow you to mount the Raspberry Pi as a hard drive. [Samba is a good cross-platform solution](Raspberry-Pi-SMB.html)
+## File Browser    
+Although you can do all copy/move/edit operations through a shell, you may prefer to use an Desktop text editor to edit source code or the Apple Finder/Windows Explorer to manipulate files. In order to to this you will need to setup some services that allow you to mount the Raspberry Pi as a hard drive. [Here is a guide to setting up Samba, a good cross-platform solution.](Raspberry-Pi-SMB.html)
 
 ## Useful resources  
 [make](http://www.gnu.org/software/make/manual/make.html)   
