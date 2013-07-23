@@ -13,7 +13,7 @@ A Shell application provides a command line interface to the Raspberry Pi. Mac O
 You will need a text editor to edit source code. If you are already a Linux user you undoubtably have a preferred text editor. For the sake of consistency this guide will use [`nano`](http://en.wikipedia.org/wiki/GNU_nano) as it is popular in the Raspberry Pi community and conveniently has important commands listed at the bottom of the window.
 
 ### File Browser    
-Although you can do all copy/move/edit operations through the Shell you may prefer to use an Desktop text editor to edit source code or the Apple Finder/Windows Explorer to manipulate files. In order to to this you will need to setup some services that allow you to mount the Raspberry Pi as a hard drive. [TODO ADD INSTRUCTIONS FOR SMB/FTP]
+Although you can do all copy/move/edit operations through the Shell you may prefer to use an Desktop text editor to edit source code or the Apple Finder/Windows Explorer to manipulate files. In order to to this you will need to setup some services that allow you to mount the Raspberry Pi as a hard drive. [Samba is a good cross-platform solution](Raspberry-Pi-SMB.html)
 
 ## Useful resources  
 [make](http://www.gnu.org/software/make/manual/make.html)   
