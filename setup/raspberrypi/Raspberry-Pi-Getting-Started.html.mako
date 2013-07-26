@@ -27,7 +27,7 @@ With a fresh install the Raspberry Pi configuration is presented at the first bo
 	* Select `A3 Memory Split` and hit Enter
 	* Type `128` and Hit `<ok>`
 	 
-0. Reboot when prompted or `sudo reboot`
+0. Reboot when prompted or type `sudo reboot`
 0. Assuming you have internet access run these commands to update the software to the latest packages.
     * `sudo apt-get clean`
     * `sudo apt-get update`
@@ -47,8 +47,7 @@ This step will take approximately 1 hour when compiling on the Raspberry Pi, Mak
 
 Assuming openFrameworks is located at `/home/pi/openFrameworks` run the following commands to install the necessary packages and compile openFrameworks. 
 
-0. `cd /home/pi/openFrameworks/scripts/linux/debian_armv6l` 
-0. `sudo ./install_codecs.sh` 
+0. `cd /home/pi/openFrameworks/scripts/linux/debian_armv6l`  
 0. `sudo ./install_dependencies.sh` 
 
 You are now ready to compile openFrameworks! 
