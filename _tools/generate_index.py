@@ -126,6 +126,7 @@ for module in modules:
         if clazz.endswith("_functions"):
             clazz = clazz[:-10]
             onlyfunctionsfile = True
+        clazzname = clazz
         if clazz.endswith("_"):
             clazz = clazz[:-1]
             if clazz in files:
@@ -133,24 +134,32 @@ for module in modules:
         current_class = get_class(clazz,block_list)
         append_class = False
         if current_class!=None:
-            current_class["methods"]=[]
+            pass
+            #current_class["methods"]=[]
         else:
             current_class = {"name":clazz,"visible":True,"advanced":False,"methods":[]}
             append_class = True
         
         if onlyfunctionsfile:    
-            #sys.stderr.write ("---" + clazz+"\n")
             functionsfile = markdown_file.getfunctionsfile(clazz)
             prevfunction = ""
             for function in functionsfile.function_list:
                 if prevfunction == function.name:
                     continue
-                params = "()" if function.parameters=="" else "(...)"
+                params = "()"
                 current_class["methods"].append(function.name + params)
                 prevfunction = function.name
         else:
-            pass
-             #sys.stderr.write (clazz+"\n")
+            classfile = markdown_file.getclass(clazzname)
+            prevfunction = ""
+            for function in classfile.function_list:
+                if prevfunction == function.name:
+                    continue
+                if function.access!='public' or function.advanced or not function.visible:
+                    continue
+                params = "()"
+                current_class["methods"].append(function.name + params)
+                prevfunction = function.name
         
         if append_class:        
             block.classes.append(current_class)

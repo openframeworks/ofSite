@@ -31,31 +31,10 @@ The code is written to be massively cross-compatible. Right now we support five 
 Simply put, openFrameworks is a tool that makes it much easier to make things with code. We find it super useful, and we hope you do too.
 
 ----------------
-
 contributors and supporters
---------
+----------------
 
-openFrameworks is actively developed by [Zach Lieberman](http://thesystemis.com/), [Theodore Watson](http://muonics.net/), and [Arturo Castro](http://arturocastro.net/) ("the core"), with help from the [OF community](../community/). openFrameworks is indebted to two significant precursors: the [Processing development environment](http://processing.org/), created by [Casey Reas](http://reas.com/), [Ben Fry](http://benfry.com/) and the Processing community; and the ACU Toolkit, a privately distributed C++ library developed by Ben Fry and others in the [MIT Media Lab's Aesthetics and Computation Group](http://acg.media.mit.edu/). A number of community leaders maintain responsibility for subsections of openFrameworks on a rotating basis, currently:
-
-* 3D leader: [Elliot Woods](http://www.kimchiandchips.com/) (elliotwoods)
-* Addons leader(s): [James George](jamesgeorge.org/) (obviousjim) and [Greg Borenstein](http://gregborenstein.com/) (atduskgreg)
-* Community manager: [Kyle McDonald](http://kylemcdonald.net/) (kylemcdonald)
-* Documentation leader: [Dayan Moisa](http://justdayan.com/) (justdayan)
-* Forum leader: [Jason Van Cleave](http://jvcref.com/) (jvcleave)
-* GitHub leader: [Christoph Buchner](https://github.com/bilderbuchi) (bilderbuchi)
-* Hardware leader: [Josh Noble](http://thefactoryfactory.com/) (joshua noble)
-* Internals/app leader: [Philip Whitfield](http://undef.ch/) (underdoeg)
-* iOS leader: [Lukasz Karluk](http://www.julapy.com/blog/) (julapy)
-* Outreach leader: [Caitlin Morris](http://caitlinmorris.net/) (c_tl_n)
-* Sound leader: [Damian Stewart](http://damianstewart.com/) (damian)
-* Tutorial leader(s): [Diederick Huijbers](http://www.roxlu.com/) (roxlu) and [Jeff Crouse](http://www.jeffcrouse.info/) (jefftimesten)
-* Typography leader: [Christopher Baker](http://christopherbaker.net/) (bakercp)
-* Video leader: [James George](http://www.jamesgeorge.org/) (obviousjim)
-* Windows leader: [Matthew Gingold](http://gingold.com.au/) (gameoverhack)
-
-And previously:
-
-* [Steve Varga](http://www.vargatron.com/) (vargatron) as typography leader
+For more information about openFrameworks contributors, see the [community](../community/) page. 
 
 A number of institutions have provided major support for openFrameworks through grants, donations, and as hosting partners for our international developer conferences:
 

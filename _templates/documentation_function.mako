@@ -1,5 +1,5 @@
 <%page args="function"/>
-<div class="documentation_detail">
+<div class="documentation_detail ${function.name}">
   	<% params = "()" if function.parameters=="" else "(...)" %> 
 	<h1><a name="${function.name}">${function.name}${params}</a></h1>
 	<h2><%self:filter chain="markdown_template">${function.returns} ${function.name}(${function.parameters})</%self:filter></h2>

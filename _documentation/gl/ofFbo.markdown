@@ -38,7 +38,7 @@ shader.end();
 fbo.end();
 fbo.draw(0, 0);
 ~~~~
-Bloom effects are also often done with FBO objects as as Multiple Render to Texture or MRT effectrs.
+Bloom effects are also often done with FBO objects using Multiple Render to Texture or MRT effects.
 
 
 
@@ -1227,7 +1227,7 @@ _advanced: False_
 _description: _
 
 
-You can set the anchor position that the texture will be drawn at. This means that passing 50, 50 will draw the ofFbo center at the point you pass in to the draw() method.
+You can set the anchor position that the texture will be drawn at. This means that passing 0.5, 0.5 will draw the ofFbo center at the point you pass in to the draw() method.
 
 
 

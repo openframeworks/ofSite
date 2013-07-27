@@ -12,46 +12,24 @@
     <div id="content">
       ${self.header()}
       <div id="body-wrap">	
-	    <div class="page-wide">
+	    <div class="page-wide-tutorial">
             <!--ul class="submenu">
                 <li><a href="/documentation">reference</a></li>
                 <li><a href="/tutorials">tutorials</a></li>
             </ul-->
-
-            
-            <h1>tutorials</h1>    
-
-
-        	<div class="submenucol-left">
-        	    <ul class="categories">
-                % for lcategory in categories:
-                    % if lcategory == category:
-                        <li><a  class="active" href="/tutorials/${lcategory}">${lcategory}</a></li>
-                    % else:
-                        <li><a href="/tutorials/${lcategory}">${lcategory}</a></li>
-                    % endif
-                % endfor
-                </ul>
-            </div><!-- End Page Wide -->
-
-        	<div class="submenucol-right">
-        	    <h1>${article.title}</h1>
-        	    <span class="article_meta">${article.date}&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="${article.author_site}">${article.author}</a></span><br/>
-        	    <div class="article">
-        	    % if article.type == 'markdown':
-        	    <%self:filter chain="markdown_template">
+    	    <h1>${article.title}</h1>
+    	    <span class="article_meta">${article.date}&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="${article.author_site}">${article.author}</a></span><br/>
+    	    <div class="article">
+    	    % if article.type == 'markdown':
+    	    <%self:filter chain="markdown_template">
 ${article.body}
-        		</%self:filter>
-        		% else:
-            		${article.body}
-        		% endif
-        		</div>
-            </div><!-- End Page Wide -->
-        
-    	
-
-    	</div>
-              
+    		</%self:filter>
+    		% else:
+        		${article.body}
+    		% endif
+    		</div>
+            
+        </div><!-- End Page Wide -->      
       </div><!-- End Body Wrap -->
       
       <div id="footer">

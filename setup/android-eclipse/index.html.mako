@@ -91,7 +91,7 @@ Other Linux distros have similar installation procedures.
 
 - OS X:
 
-Download and uncompress Apache Ant 1.8 or greater from [http://ant.apache.org/bin/download.cgi][5]
+Download and uncompress Apache Ant 1.8 or greater from [http://ant.apache.org/bindownload.cgi][5]
 
 Certain build tools like make might not be installed by default. To install these you can either:
 
@@ -179,8 +179,11 @@ File \> Import and select General \> Existing projects in the workspace...
 
 ![import first screen](import0-600x508.png)
 
+
 Import in this order:
- 
+
+Please note you should not mark "Copy projects into workshpace" on the import screen as this will cause problems building a project.
+
 - openFrameworks/libs  
 - openFrameworks/libs/openFrameworks  
 - openFrameworks/addons/ofxAndroid/ofAndroidLib  
