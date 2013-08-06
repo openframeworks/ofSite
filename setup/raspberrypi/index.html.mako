@@ -26,6 +26,11 @@ openFrameworks supports the Raspberry Pi via the recommended Linux distribution 
 * [Raspberry Pi Cross-compiling Guide](Raspberry-Pi-Cross-compiling-guide.html)
 * [Raspberry Pi DISTCC Guide](Raspberry-Pi-DISTCC-guide.html)
 
+## Community
+* [openFrameworks arm forum](http://forum.openframeworks.cc/index.php/board,32.0.html)
+
+
+
 ### openFrameworks + Raspberry Pi = <3
 
 '''}
