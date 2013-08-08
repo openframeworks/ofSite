@@ -38,9 +38,9 @@ With a fresh install the Raspberry Pi configuration is presented at the first bo
 You now can download the Linux armv6 version of openFrameworks and uncompress it into a folder. Using a Shell, The following commands will download openFrameworks and uncompress it into the folder `/home/pi/openFrameworks`
  
 0. `cd` 
-0. `wget http://www.openframeworks.cc/versions/v0.8/of_v0.8_linuxarmv6_release.tar.gz` 
+0. `wget http://www.openframeworks.cc/versions/v0.8.0/of_v0.8.0_linuxarmv6l_release.tar.gz` 
 0.  `mkdir openFrameworks`
-0.  `tar xfz of_v0.8_linuxarmv6_release.tar.gz -C openFrameworks --strip-components 1`
+0.  `tar vxfz of_v0.8.0_linuxarmv6l_release.tar.gz -C openFrameworks --strip-components 1`
 
 ## Compile openFrameworks:
 This step will take approximately 1 hour when compiling on the Raspberry Pi, Make sure you didn't skip the Memory Split step in the above section _**Configure the Raspberry Pi**_ or it will eventually fail.
@@ -52,7 +52,7 @@ Assuming openFrameworks is located at `/home/pi/openFrameworks` run the followin
 
 You are now ready to compile openFrameworks! 
 
-0. `make -C /home/pi/openFrameworks/libs/openFrameworksCompiled/project`
+0. `make Release -C /home/pi/openFrameworks/libs/openFrameworksCompiled/project`
 
 As you can see compiling natively on the Raspberry Pi takes a long time. openFrameworks applications typically take much less time than the core library however taking the time to set up a cross-compiling solution will save you enormous amounts of time. 
 
