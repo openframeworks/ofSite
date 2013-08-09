@@ -25,8 +25,9 @@ openFrameworks is an [open source](license.html) [C++](https://en.wikipedia.org/
 * [OpenCV](http://http://opencv.org/) for computer vision
 * [Assimp](http://assimp.sourceforge.net/) for 3D model loading
 
-
 The code is written to be massively cross-compatible. Right now we support five operating systems (Windows, OSX, Linux, iOS, Android) and four IDEs (XCode, Code::Blocks, and Visual Studio and Eclipse). The API is designed to be minimal and easy to grasp.
+
+openFrameworks is distributed under the [MIT License](license.html). This gives everyone the freedoms to use openFrameworks in any context: commercial or non-commercial, public or private, open or closed source. While many openFrameworks users give their work back to the community in a similarly free way, there is no obligation to contribute.
 
 Simply put, openFrameworks is a tool that makes it much easier to make things with code. We find it super useful, and we hope you do too.
 
