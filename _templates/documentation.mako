@@ -14,18 +14,23 @@
       ${self.header()}
       <div id="body-wrap">	
 	    <div class="page-wide">
-            <!--ul class="submenu">
-                <li><a href="/documentation">reference</a></li>
-                <li><a href="/tutorials">tutorials</a></li>
-            </ul-->
+	        <div class="page-left-split">
+                <!--ul class="submenu">
+                    <li><a href="/documentation">reference</a></li>
+                    <li><a href="/tutorials">tutorials</a></li>
+                </ul-->
 
-            
-		    <div class="page-left-split">
-            <h1>reference</h1>
+                
+                <h1 class="documentation">reference</h1> <ul class="docsadvanced"><li><a href="/documentation" class="active">basic</a></li> <li><a href="/doxygen/annotated.html">advanced</a></li> </ul>
+            </div>  
+		    <div class="page-right-narrow">
 			    <p>This page is the reference for the openFrameworks core and included addons. There are also <a href="http://ofxaddons.com/">contributed addons</a>. The openFrameworks API is constantly evolving: any corrections, additions or comments are very welcome!</p>
 			    <p>You can contribute to this documentation from GitHub by following these <a href="https://github.com/openframeworks/openFrameworks/wiki/Contributing-documentation">instructions.</a> 
 			    <p>This documentation refers to the most recent release, version <strong>${bf.config.currentVersion}</strong>.</p>
 		    </div>
+	   </div>
+	   
+	    <div class="page-wide">
 		    
 
 		    <div class="page-right-narrow">

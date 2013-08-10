@@ -41,12 +41,9 @@
 <h3>Upcoming events</h3>
 <p>Conferences, workshops, and talks related to oF and the surrounding community</p>
 <ul>
-<li><a href="http://www.gaffta.org/2013/04/24/gray-area-creative-code-meetup/">Gray Area: Creative Code Meetup</a>, San Francisco, 15 May 2013</li>
-<li><a href="http://www.mmmmavenagency.com/fom-workshops/">Wicked Easy Audio Synthesis in C++</a>, Boston, 16 May 2013</li>
-<li><a href="http://www.thehacktory.org">The Hacktory: Intro to Interactive Art</a>, Philadelphia, May 22 2013, 6-8 PM</li>
-<li><a href="http://eyeofestival.com/">Eyeo festival</a>, Minneapolis, 5-8 June 2013
-<li><a href="http://www.athensvideoartfestival.gr">Introduction to openFrameworks, Athens Video Art Festival</a>, Athens, Greece, 7-9 June 2013</li>
+<li><a href="http://www.eyebeam.org/events/rgbdtoolkit-workshop-0">RGB+D workshop, Eyebeam</a>, NYC, 13-14 July 2013</li>
 <li><a href="http://push-conference.com/">push.conference</a>, Munich, 25-26 October 2013</li>
+<li>OF + RaspberryPi unconference and hackathon, CMU, Pittsburgh.  October, date TBA.</li>
 </ul>
 
 <h3>Recurring meetups</h3>
@@ -55,6 +52,7 @@
 <li><a href="http://groups.google.com/group/freakdays/feed/">Amsterdam</a></li>
 <li><a href="https://groups.google.com/forum/#!forum/boston-creative-coders">Boston</a></li>
 <li><a href="https://www.facebook.com/GeneratorLeipzig">Leipzig</a></li>
+<li><a href="https://groups.google.com/forum/#!forum/nyc-of">NYC</a></li>
 </ul>
 
 <h3>Calls for collaboration</h3>

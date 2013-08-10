@@ -10,8 +10,6 @@ import sys
 import argparse
 import glob
 
-import sets
-
 sys.path.append(os.getcwd()+"/_filters/asciidoc_template")
 from asciidocapi import AsciiDocAPI
 import logging
@@ -87,18 +85,11 @@ def run():
     classes = []
     directory = "_tutorials"
     documentation = bf.config.controllers.tutorials
+    categories = []
     
-    categories = collections.OrderedDict()
-
     dirs = os.listdir(directory)
     dirs.sort()
-    for category in dirs:
-        if os.path.isdir(os.path.join(directory,category)) and len(os.listdir(os.path.join(directory,category)))>0:
-            categories[category[category.find("_")+1:]]=[]
-    
-    #bf.template.materialize_template("tutorials.mako", ('tutorials',"index.html"), {'categories':categories} )
-    
-    for catfolder in os.listdir(directory):
+    for catfolder in dirs:
         if not os.path.isdir(os.path.join(directory,catfolder)):
             continue
         articles = []
@@ -117,6 +108,5 @@ def run():
                 articles.append(articleobj)
             if os.path.isdir(os.path.join(directory,catfolder,article)):
                 shutil.copytree(os.path.join(directory,catfolder,article),os.path.join('_site','tutorials',category,article))
-        categories[category]=articles;
-        #bf.template.materialize_template("tutorials_category.mako", (os.path.join('tutorials',category),"index.html"), {'categories':categories,'category':category,'articles':articles} )
+        categories.append({'category': category, 'articles': articles});
     bf.template.materialize_template("tutorials.mako", ('tutorials',"index.html"), {'categories':categories} )

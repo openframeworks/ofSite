@@ -18,21 +18,19 @@
             </div>
         </div><!-- End Page Wide -->  
 		    
-            % for category in categories.keys():
-                %if len(categories[category])!=0:
-	                <div class="page-wide sectiontitle">  
-                        <h2>${category}</h2>
+            % for category in categories:
+	            <div class="page-wide sectiontitle">  
+                        <h2>${category["category"]}</h2>
                     </div><!-- End Page Wide -->
-	                <div class="page-wide">  
-                        <ul class="articles">
-                        % for article in categories[category]:
-                            <li><span class="external-dot"> ></span>&nbsp;<a href="/tutorials/${category}/${article.file}">${article.title}</a></br>
-                                <p>${article.summary}</p>
-                            </li>
-                        % endfor
-                        </ul>
+	            <div class="page-wide">  
+                    <ul class="articles">
+                    % for article in category["articles"]:
+                         <li><span class="external-dot"> ></span>&nbsp;<a href="/tutorials/${category["category"]}/${article.file}">${article.title}</a></br>
+                             <p>${article.summary}</p>
+                         </li>
+                    % endfor
+                    </ul>
                     </div><!-- End Page Wide -->
-                % endif
             % endfor
               
       </div><!-- End Body Wrap -->

@@ -91,7 +91,7 @@ Other Linux distros have similar installation procedures.
 
 - OS X:
 
-Download and uncompress Apache Ant 1.8 or greater from [http://ant.apache.org/bin/download.cgi][5]
+Download and uncompress Apache Ant 1.8 or greater from [http://ant.apache.org/bindownload.cgi][5]
 
 Certain build tools like make might not be installed by default. To install these you can either:
 

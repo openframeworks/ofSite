@@ -1825,9 +1825,7 @@ __visible: true__
 __advanced: false__
 
 __functions__
-ofPtr()
 
-ofPtr()
 
 ###ofBaseVideo###
 
