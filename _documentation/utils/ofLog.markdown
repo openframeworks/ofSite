@@ -39,7 +39,7 @@ ofLog(OF_LOG_NOTICE, "the number is %d", 10);
 
 ~~~~
 
-See [ofLog(logLevel, &message) & ofLog(logLevel, format*, …)](./ofLog.html#methods) for more details.
+See [ofLog(logLevel, &message) & ofLog(logLevel, format*, ...)](./ofLog.html#methods) for more details.
 
 ####Stream: as a stream using the << stream operator
 

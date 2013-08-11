@@ -289,6 +289,14 @@ It's important to keep the package prefix as cc.openframeworks or some things ca
 - Make sure you have your project selected in the Project Explorer before you tell it to run as an Android Application.
 - If you get a message saying "Activity class ... does not exist.", make sure that its namespace is called cc.openframeworks.your_folder_name_here.OFActivity. This is what the Makefile currently expects. If it does not work even with a correct entry, and you are using an emulator, try using a real device instead.
 
+**If you can't debug**
+
+- If you get a message saying something like "List of devices attached ???????????? no permissions" when you try to debug, you may need to manually restart the adb server:
+
+$ sudo ./adb kill-server
+$ sudo ./adb start-server
+
+
 **If the build succeeds but your app crashes:**
 
 - Check the libs folder. It should be populated with a library during the build. On Linux it is a file that ends with .so. If there is no library, the C++ build process is probably failing somewhere, or it is not being triggered at all. You can test the C++ build process separately using 'make AndroidDebug'. You may also see something like this in your LogCat:
