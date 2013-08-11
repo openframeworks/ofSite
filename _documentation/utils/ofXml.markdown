@@ -3,7 +3,63 @@
 
 ##Description
 
+The ofXml is a friendly wrapper around the xml functionality included in the Poco::XML library, in particular the Poco::XML::DOM. You can find some more information on that in the Poco Documentation, but hopefully we've wrapped up everything you might need, so that you don't need to dig into Poco itself. Conceptually you should think of an ofXml object as an XML document, because that's exactly what it is: it has a root element, some number of children, and a current element that you're pointing at. For instance, if your XML looked like this:
 
+<pictures>
+	<picture id="0">
+		<url>http://apicture.co.uk/pic.png</url>
+		<width>100</width>
+		<height>100</height>
+	</picture>
+	<picture id="1">
+		<url>http://apicture.co.uk/pic2.png</url>
+		<width>100</width>
+		<height>100</height>
+	</picture>
+</pictures>
+
+
+You load it into an ofXml document like so:
+
+ofFile file; 
+file.open("pictures.xml"); // open a file
+ofBuffer buffer = file.readToBuffer(); // read to a buffer
+
+ofXml pictures;
+pictures.loadFromBuffer( buffer.getText() ); // now get the buffer as a string and make XML
+
+Now you have an ofXml document, but you're not pointing at anything yet. The way to select which element you're looking at it by setting the current element, using setTo(const string& path), like this:
+
+pictures.setTo("pictures"); // now we're at the root
+
+or
+
+pictures.setTo("pictures/picture[0]"); // now we're at the first picture.
+
+or
+
+pictures.setTo("pictures/picture[1]"); // now we're at the second picture.
+
+or
+
+pictures.setTo("pictures/picture[@id=0]"); // now we're at the first picture with the id of 0
+
+To traverse, we can use the following methods:
+
+int children = pictures.getNumChildren(); // how many do you have?
+
+pictures.setToParent(); // go up a level
+
+pictures.setToSibling(); // go to the next at your level
+pictures.setToPrevSibling(); // go to the previous at your level
+
+To get values, we use getValue(const string& path), like:
+
+pictures.getValue("pictures/picture[0]/url"); // returns "http://apicture.co.uk/pic2.png"
+
+To set values, we use setValue(const string& path, const string& value), like:
+
+pictures.setValue("pictures/picture[0]/url", "http://superpicks.jp/pic1.png"); // sets the element in the DOM
 
 
 
@@ -59,7 +115,36 @@ _advanced: False_
 
 _description: _
 
+Adds a child to the ofXml object. So if you have:
 
+----
+<pictures>
+	<picture id="0">
+		<url>http://apicture.co.uk/pic.png</url>
+		<width>100</width>
+		<height>100</height>
+	</picture>
+</pictures>
+----
+
+you can add a path like so:
+
+----
+xml.addPath("pictures/picture/views");
+----
+
+and that would create:
+
+----
+<pictures>
+	<picture id="0">
+		<url>http://apicture.co.uk/pic.png</url>
+		<width>100</width>
+		<height>100</height>
+		<views/>
+	</picture>
+</pictures>
+----
 
 
 
@@ -87,7 +172,36 @@ _advanced: False_
 
 _description: _
 
+Adds a child to the ofXml object. So if you have:
 
+----
+<pictures>
+	<picture id="0">
+		<url>http://apicture.co.uk/pic.png</url>
+		<width>100</width>
+		<height>100</height>
+	</picture>
+</pictures>
+----
+
+you can add a path like so:
+
+----
+xml.addPath("pictures/picture/views", "100");
+----
+
+and that would create:
+
+----
+<pictures>
+	<picture id="0">
+		<url>http://apicture.co.uk/pic.png</url>
+		<width>100</width>
+		<height>100</height>
+		<views>100</views>
+	</picture>
+</pictures>
+----
 
 
 
@@ -115,10 +229,13 @@ _advanced: False_
 
 _description: _
 
+Adds one ofXml object to another.
 
+----
+firstXml.addXml(secondXml, true);
+----
 
-
-
+The second parameter tells the ofXml whether to add the entire XML document or whether to only add the current element of the XML being added.
 
 
 <!----------------------------------------------------------------------------->
@@ -201,6 +318,20 @@ _description: _
 
 
 
+Returns whether a path exists. This can be a path to a node, like:
+
+xml.exists("picture/pictures[2]/url");
+
+or to an attribute:
+
+xml.exists("picture/pictures[2][@id]");
+
+or even a particular attribute anywhere in the DOM
+
+xml.exists("//[@id='9']");
+
+
+
 
 
 
@@ -226,6 +357,8 @@ _advanced: False_
 -->
 
 _description: _
+
+Returns the value of an attribute or an empty string if it doesn't exist.
 
 
 
@@ -255,6 +388,7 @@ _advanced: False_
 
 _description: _
 
+Returns a map of all the attributes of the current node.
 
 
 
@@ -619,6 +753,8 @@ _advanced: False_
 
 _description: _
 
+Returns the value of the current element in the ofXml.
+
 
 
 
@@ -646,6 +782,14 @@ _advanced: False_
 -->
 
 _description: _
+
+Returns the value at the node indicated by the path. This can be a path that uses an element:
+
+xml.getValue("picture/pictures[2]/url");
+
+or an attribute:
+
+xml.exists("picture/pictures[2][@id]");
 
 
 
@@ -732,6 +876,7 @@ _advanced: False_
 _description: _
 
 
+Loads the XML file from a string. This string needs to be a properly formatted XML document. The method returns false if the document is not correctly created and true if it does.
 
 
 
@@ -759,6 +904,7 @@ _advanced: False_
 
 _description: _
 
+Constructor. On construction a Poco::XML::Document is created, but not an element, so you'll need to append new elements using addChild() and addAttribute().
 
 
 
@@ -788,6 +934,7 @@ _advanced: False_
 _description: _
 
 
+Copy constructor. This clones the Poco::XML::Document so can be a little bit slow but is very safe.
 
 
 
@@ -816,6 +963,7 @@ _advanced: False_
 _description: _
 
 
+Copy constructor. This clones the Poco::XML::Document so can be a little bit slow but is very safe.
 
 
 
@@ -872,6 +1020,7 @@ _advanced: False_
 _description: _
 
 
+Removes an element or attribute using the path. Returns false if the path is not valid. All children of the element are also removed.
 
 
 
@@ -927,6 +1076,18 @@ _advanced: False_
 
 _description: _
 
+Removes all the attributes from a node.
+
+----
+<picture id="0" x="100" y="200">
+----
+
+would become
+
+----
+<picture>
+----
+
 
 
 
@@ -957,6 +1118,20 @@ _description: _
 
 
 
+Removes all the attributes from a node.
+
+----
+<picture id="0" x="100" y="200">
+----
+
+would become
+
+----
+<picture>
+----
+
+
+
 
 
 
@@ -982,6 +1157,26 @@ _advanced: False_
 -->
 
 _description: _
+
+
+
+Removes all the contents from a node.
+
+----
+<picture id="0">
+	<url>http://apicture.co.uk/pic.png</url>
+	<width>100</width>
+	<height>100</height>
+	<views>100</views>
+</picture>
+----
+
+would become
+
+----
+<picture>
+</picture>
+----
 
 
 
@@ -1040,6 +1235,7 @@ _advanced: False_
 _description: _
 
 
+Sets the current element back to the root node of the document, i.e. the first child after the <xml> declaration.
 
 
 
@@ -1124,6 +1320,7 @@ _advanced: False_
 _description: _
 
 
+Sets attribute at the path indicated. If the attribute doesn't already exist, it's created.
 
 
 
@@ -1152,6 +1349,14 @@ _advanced: False_
 _description: _
 
 
+
+
+
+Sets the current element to the path indicated. This can be up or down the DOM:
+
+xml.setTo("pictures[1]/url"); // go down
+xml.setTo("../"); // go up
+xml.setTo("../pictures[0]/url"); // go up and then down
 
 
 
@@ -1208,6 +1413,7 @@ _advanced: False_
 _description: _
 
 
+Sets the current element to the parent of the current element. This returns false if the parent does not exist.
 
 
 
@@ -1237,6 +1443,9 @@ _description: _
 
 
 
+Sets the current element to the numLevelsUp-th parent of the current element.
+
+xml.setCurrentElementToParent(3); // this is the same as xml.setCurrentElementToParent("../../../");
 
 
 
@@ -1264,6 +1473,26 @@ _advanced: False_
 _description: _
 
 
+
+This sets the current element to the previous sibling element. If your document looks like this:
+
+<pictures>
+	<picture id="0">
+		<url>http://apicture.co.uk/pic.png</url>
+		<width>100</width>
+		<height>100</height>
+	</picture>
+	<picture id="1">
+		<url>http://apicture.co.uk/pic2.png</url>
+		<width>100</width>
+		<height>100</height>
+	</picture>
+</pictures>
+
+Then you could do the following:
+
+xml.setCurrentElement("pictures/picture[1]"); // now current element is picture with id=1
+xml.setCurrentElementToPrevSibling(); // now current element is picture with id=0
 
 
 
@@ -1294,6 +1523,26 @@ _description: _
 
 
 
+This sets the current element to the previous sibling element. If your document looks like this:
+
+<pictures>
+	<picture id="0">
+		<url>http://apicture.co.uk/pic.png</url>
+		<width>100</width>
+		<height>100</height>
+	</picture>
+	<picture id="1">
+		<url>http://apicture.co.uk/pic2.png</url>
+		<width>100</width>
+		<height>100</height>
+	</picture>
+</pictures>
+
+Then you could do the following:
+
+xml.setCurrentElement("pictures/picture[0]"); // now current element is picture with id=0
+xml.setCurrentElementToSibling(); // now current element is picture with id=1
+
 
 
 
@@ -1319,6 +1568,21 @@ _advanced: False_
 
 _description: _
 
+
+
+Sets the value of the element pointed at by the path. If the value, or any other element along the path, does not exist then it is created. This means that:
+
+xml.setPath("/foo/bar/baz/quux", "qiix");
+
+will create:
+
+<foo>
+	<bar>
+		<baz>
+			<quux>qiix</quux>
+		</baz>
+	</bar>
+</foo>
 
 
 
@@ -1348,6 +1612,7 @@ _advanced: False_
 _description: _
 
 
+Creates a string from the XML document. Useful for when you want to send or save the document.
 
 
 
@@ -1404,6 +1669,7 @@ _advanced: False_
 _description: _
 
 
+Destructor. Deletes both the current element and the current document.
 
 
 
@@ -1432,6 +1698,7 @@ _advanced: False_
 _description: _
 
 
+This is the XML document that the ofXml object wraps.
 
 
 
@@ -1456,6 +1723,7 @@ _advanced: False_
 _description: _
 
 
+This is the current element that the ofXml object points at.
 
 
 
