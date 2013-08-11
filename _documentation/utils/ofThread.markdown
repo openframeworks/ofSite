@@ -154,7 +154,7 @@ A useful tool in debugging thread timing and access is the ofThread verbose mode
 
 ####HOO RAH
 
-Ok soldier, lock and load … good luck!
+Ok soldier, lock and load ... good luck!
 
 
 

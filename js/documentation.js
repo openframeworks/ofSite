@@ -1,5 +1,7 @@
 $(document).ready(
+
     function(){
+      console.log(" documentation hello ");
       $('#top_list').columnize({ columns: 3 });
       //$('.documentation_index_group').columnize({ width:300, lastNeverTallest: true  });
 
