@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -51,7 +52,6 @@
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#friends">Friends</a> &#124;
 <a href="classof_pixels__-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ofPixels_&lt; PixelType &gt; Class Template Reference</div>  </div>
@@ -126,8 +126,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4c9bd76b744cb393e3ee8fc425ccd0d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a32eba650aa1300338ea910bb434f1522"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_color__.html">ofColor_</a>&lt; PixelType &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_pixels__.html#a32eba650aa1300338ea910bb434f1522">getColor</a> (int x, int y) const </td></tr>
 <tr class="separator:a32eba650aa1300338ea910bb434f1522"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1475bf924dbd75563e660d89a8cd8089"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_pixels__.html#a1475bf924dbd75563e660d89a8cd8089">setColor</a> (int x, int y, <a class="el" href="classof_color__.html">ofColor_</a>&lt; PixelType &gt; color)</td></tr>
-<tr class="separator:a1475bf924dbd75563e660d89a8cd8089"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f8d537a4d8e7af99bd2096f244fab3d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_pixels__.html#a1f8d537a4d8e7af99bd2096f244fab3d">setColor</a> (int x, int y, const <a class="el" href="classof_color__.html">ofColor_</a>&lt; PixelType &gt; &amp;color)</td></tr>
+<tr class="separator:a1f8d537a4d8e7af99bd2096f244fab3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa010cd85f42d64f93a29f632ce2bde3d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_pixels__.html#aa010cd85f42d64f93a29f632ce2bde3d">setColor</a> (int index, const <a class="el" href="classof_color__.html">ofColor_</a>&lt; PixelType &gt; &amp;color)</td></tr>
+<tr class="separator:aa010cd85f42d64f93a29f632ce2bde3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe3bdd7ac9c43449c044ca366ce99567"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_pixels__.html#abe3bdd7ac9c43449c044ca366ce99567">setColor</a> (const <a class="el" href="classof_color__.html">ofColor_</a>&lt; PixelType &gt; &amp;color)</td></tr>
+<tr class="separator:abe3bdd7ac9c43449c044ca366ce99567"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7b5fa45ae78789c5b2fed1a9d82dc67"><td class="memItemLeft" align="right" valign="top">const PixelType &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_pixels__.html#ad7b5fa45ae78789c5b2fed1a9d82dc67">operator[]</a> (int pos) const </td></tr>
 <tr class="separator:ad7b5fa45ae78789c5b2fed1a9d82dc67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac73219eca415b4db3a0258f54ffebbcc"><td class="memItemLeft" align="right" valign="top">PixelType &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_pixels__.html#ac73219eca415b4db3a0258f54ffebbcc">operator[]</a> (int pos)</td></tr>
@@ -160,11 +164,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a572bbb86935dbeb8b2405038664a085b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11f1c38cc853ffedd6b5a3ac1ccdde60"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_pixels__.html#a11f1c38cc853ffedd6b5a3ac1ccdde60">size</a> () const </td></tr>
 <tr class="separator:a11f1c38cc853ffedd6b5a3ac1ccdde60"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
-Friends</h2></td></tr>
-<tr class="memitem:ae17bf43a25e9b7ebddae0de4b7ba66e3"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_pixels__.html#ae17bf43a25e9b7ebddae0de4b7ba66e3">ofPixelUtils</a></td></tr>
-<tr class="separator:ae17bf43a25e9b7ebddae0de4b7ba66e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="af108a001c5dab31e348d39d21cd90798"></a>
@@ -1058,7 +1057,7 @@ template&lt;typename PixelType&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a1475bf924dbd75563e660d89a8cd8089"></a>
+<a class="anchor" id="a1f8d537a4d8e7af99bd2096f244fab3d"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -1079,13 +1078,59 @@ template&lt;typename PixelType&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classof_color__.html">ofColor_</a>&lt; PixelType &gt;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classof_color__.html">ofColor_</a>&lt; PixelType &gt; &amp;&#160;</td>
           <td class="paramname"><em>color</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
           <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa010cd85f42d64f93a29f632ce2bde3d"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PixelType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classof_pixels__.html">ofPixels_</a>&lt; PixelType &gt;::setColor </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classof_color__.html">ofColor_</a>&lt; PixelType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="abe3bdd7ac9c43449c044ca366ce99567"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PixelType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classof_pixels__.html">ofPixels_</a>&lt; PixelType &gt;::setColor </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classof_color__.html">ofColor_</a>&lt; PixelType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1346,32 +1391,9 @@ template&lt;typename PixelType &gt; </div>
 
 </div>
 </div>
-<h2 class="groupheader">Friends And Related Function Documentation</h2>
-<a class="anchor" id="ae17bf43a25e9b7ebddae0de4b7ba66e3"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename PixelType&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">friend class ofPixelUtils</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>graphics/<a class="el" href="of_pixels_8h_source.html">ofPixels.h</a></li>
-<li>graphics/<a class="el" href="of_pixels_8cpp.html">ofPixels.cpp</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/graphics/<a class="el" href="of_pixels_8h_source.html">ofPixels.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/graphics/<a class="el" href="of_pixels_8cpp.html">ofPixels.cpp</a></li>
 </ul>
 </div><!-- contents -->
 

@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -47,7 +48,7 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_e79632891301b850df87e9c0030293fa.html">graphics</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_84d5b34cee6369a03c8d1f3b970ed216.html">openFrameworks</a></li><li class="navelem"><a class="el" href="dir_71ce5ed87e0eac5aae2f3eaf44c16fe2.html">graphics</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -58,6 +59,7 @@
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="of_base_types_8h_source.html">ofBaseTypes.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="of_g_l_renderer_8h_source.html">ofGLRenderer.h</a>&quot;</code><br/>
 </div>
 <p><a href="of_renderer_collection_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">

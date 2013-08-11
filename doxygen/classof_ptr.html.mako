@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -86,12 +87,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aef59cef838e8f2015cd823ce45d72471"><td class="memTemplParams" colspan="2">template&lt;typename Tp1 &gt; </td></tr>
 <tr class="memitem:aef59cef838e8f2015cd823ce45d72471"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classof_ptr.html#aef59cef838e8f2015cd823ce45d72471">ofPtr</a> (const <a class="el" href="classof_ptr.html">ofPtr</a>&lt; Tp1 &gt; &amp;__r)</td></tr>
 <tr class="separator:aef59cef838e8f2015cd823ce45d72471"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13b847b6fb83b97f3783d4ffeb8c6d9c"><td class="memTemplParams" colspan="2">template&lt;typename Tp1 &gt; </td></tr>
-<tr class="memitem:a13b847b6fb83b97f3783d4ffeb8c6d9c"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classof_ptr.html#a13b847b6fb83b97f3783d4ffeb8c6d9c">ofPtr</a> (const std::tr1::weak_ptr&lt; Tp1 &gt; &amp;__r)</td></tr>
-<tr class="separator:a13b847b6fb83b97f3783d4ffeb8c6d9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec576bf80df708937df7eb174e2af3c5"><td class="memTemplParams" colspan="2">template&lt;typename Tp1 &gt; </td></tr>
-<tr class="memitem:aec576bf80df708937df7eb174e2af3c5"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classof_ptr.html#aec576bf80df708937df7eb174e2af3c5">ofPtr</a> (const <a class="el" href="classof_ptr.html">ofPtr</a>&lt; Tp1 &gt; &amp;__r, std::tr1::__dynamic_cast_tag)</td></tr>
-<tr class="separator:aec576bf80df708937df7eb174e2af3c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c176d99344b82c8a0615fcd52799a4b"><td class="memTemplParams" colspan="2">template&lt;typename Tp1 &gt; </td></tr>
+<tr class="memitem:a6c176d99344b82c8a0615fcd52799a4b"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classof_ptr.html#a6c176d99344b82c8a0615fcd52799a4b">ofPtr</a> (const std::shared_ptr&lt; Tp1 &gt; &amp;__r)</td></tr>
+<tr class="separator:a6c176d99344b82c8a0615fcd52799a4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fd7f54ed32c89834961e4dab2b3e843"><td class="memTemplParams" colspan="2">template&lt;typename Tp1 &gt; </td></tr>
+<tr class="memitem:a5fd7f54ed32c89834961e4dab2b3e843"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classof_ptr.html#a5fd7f54ed32c89834961e4dab2b3e843">ofPtr</a> (const std::weak_ptr&lt; Tp1 &gt; &amp;__r)</td></tr>
+<tr class="separator:a5fd7f54ed32c89834961e4dab2b3e843"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a05d5219b549249c3783fa222b0fed1"><td class="memTemplParams" colspan="2">template&lt;typename Tp1 &gt; </td></tr>
+<tr class="memitem:a7a05d5219b549249c3783fa222b0fed1"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classof_ptr.html#a7a05d5219b549249c3783fa222b0fed1">ofPtr</a> (const <a class="el" href="classof_ptr.html">ofPtr</a>&lt; Tp1 &gt; &amp;__r, std::__dynamic_cast_tag)</td></tr>
+<tr class="separator:a7a05d5219b549249c3783fa222b0fed1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a7b4c23bfc2a57f57a7e8c469299033d9"></a>
@@ -295,7 +299,7 @@ template&lt;typename Tp1 &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a13b847b6fb83b97f3783d4ffeb8c6d9c"></a>
+<a class="anchor" id="a6c176d99344b82c8a0615fcd52799a4b"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -309,7 +313,35 @@ template&lt;typename Tp1 &gt; </div>
         <tr>
           <td class="memname"><a class="el" href="classof_ptr.html">ofPtr</a>&lt; T &gt;::<a class="el" href="classof_ptr.html">ofPtr</a> </td>
           <td>(</td>
-          <td class="paramtype">const std::tr1::weak_ptr&lt; Tp1 &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::shared_ptr&lt; Tp1 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>__r</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5fd7f54ed32c89834961e4dab2b3e843"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<div class="memtemplate">
+template&lt;typename Tp1 &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classof_ptr.html">ofPtr</a>&lt; T &gt;::<a class="el" href="classof_ptr.html">ofPtr</a> </td>
+          <td>(</td>
+          <td class="paramtype">const std::weak_ptr&lt; Tp1 &gt; &amp;&#160;</td>
           <td class="paramname"><em>__r</em></td><td>)</td>
           <td></td>
         </tr>
@@ -323,7 +355,7 @@ template&lt;typename Tp1 &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="aec576bf80df708937df7eb174e2af3c5"></a>
+<a class="anchor" id="a7a05d5219b549249c3783fa222b0fed1"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -343,7 +375,7 @@ template&lt;typename Tp1 &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::tr1::__dynamic_cast_tag&#160;</td>
+          <td class="paramtype">std::__dynamic_cast_tag&#160;</td>
           <td class="paramname">&#160;</td>
         </tr>
         <tr>
@@ -362,7 +394,7 @@ template&lt;typename Tp1 &gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>types/<a class="el" href="of_types_8h_source.html">ofTypes.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/types/<a class="el" href="of_types_8h_source.html">ofTypes.h</a></li>
 </ul>
 </div><!-- contents -->
 

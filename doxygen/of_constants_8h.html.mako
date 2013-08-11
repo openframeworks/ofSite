@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -47,7 +48,7 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_cbdb8362360e11eafe2fa3bc74cf0ffd.html">utils</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_84d5b34cee6369a03c8d1f3b970ed216.html">openFrameworks</a></li><li class="navelem"><a class="el" href="dir_526ceb304abbba6426340f0fa9170dbd.html">utils</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -59,7 +60,8 @@
 <div class="title">ofConstants.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;unistd.h&gt;</code><br/>
+<div class="textblock"><code>#include &lt;stdint.h&gt;</code><br/>
+<code>#include &lt;unistd.h&gt;</code><br/>
 <code>#include &lt;GL/glew.h&gt;</code><br/>
 <code>#include &lt;GL/gl.h&gt;</code><br/>
 <code>#include &lt;GL/glx.h&gt;</code><br/>
@@ -85,10 +87,12 @@
 Macros</h2></td></tr>
 <tr class="memitem:a5695305980b78c4cf3eb291ef46fd5a7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_constants_8h.html#a5695305980b78c4cf3eb291ef46fd5a7">OF_VERSION_MAJOR</a>&#160;&#160;&#160;0</td></tr>
 <tr class="separator:a5695305980b78c4cf3eb291ef46fd5a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9788ef9913cbbe6f6dc5337657b79a5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_constants_8h.html#ad9788ef9913cbbe6f6dc5337657b79a5">OF_VERSION_MINOR</a>&#160;&#160;&#160;7</td></tr>
+<tr class="memitem:ad9788ef9913cbbe6f6dc5337657b79a5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_constants_8h.html#ad9788ef9913cbbe6f6dc5337657b79a5">OF_VERSION_MINOR</a>&#160;&#160;&#160;8</td></tr>
 <tr class="separator:ad9788ef9913cbbe6f6dc5337657b79a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13ad8d2b243f70e24e2ef24250161706"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_constants_8h.html#a13ad8d2b243f70e24e2ef24250161706">OF_VERSION_PATCH</a>&#160;&#160;&#160;4</td></tr>
+<tr class="memitem:a13ad8d2b243f70e24e2ef24250161706"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_constants_8h.html#a13ad8d2b243f70e24e2ef24250161706">OF_VERSION_PATCH</a>&#160;&#160;&#160;0</td></tr>
 <tr class="separator:a13ad8d2b243f70e24e2ef24250161706"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d0532c8c60867774d74bf1b10b22d64"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_constants_8h.html#a5d0532c8c60867774d74bf1b10b22d64">OF_TARGET_IPHONE</a>&#160;&#160;&#160;<a class="el" href="of_constants_8h.html#a5d9ba7e6cff71339c6f437f75e2678b5a2634306637fdc68ab75a5ed1c0aeb8ec">OF_TARGET_IOS</a></td></tr>
+<tr class="separator:a5d0532c8c60867774d74bf1b10b22d64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e51d9fabf8fe2428b76edd81b4062b0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_constants_8h.html#a9e51d9fabf8fe2428b76edd81b4062b0">OF_DEPRECATED_MSG</a>(message, func)&#160;&#160;&#160;func</td></tr>
 <tr class="separator:a9e51d9fabf8fe2428b76edd81b4062b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8b08c16f7026d4fd221531582dbc886"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_constants_8h.html#ae8b08c16f7026d4fd221531582dbc886">OF_DEPRECATED</a>(func)&#160;&#160;&#160;func</td></tr>
@@ -109,8 +113,8 @@ Macros</h2></td></tr>
 <tr class="separator:a51decdb0f5ab23e4fc8882e540cd4a28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d300203498cf02630a2ae738540b859"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_constants_8h.html#a6d300203498cf02630a2ae738540b859">OF_VIDEO_PLAYER_GSTREAMER</a></td></tr>
 <tr class="separator:a6d300203498cf02630a2ae738540b859"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a89eb3be279d8310f8ea7672f2e1f5f0f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_constants_8h.html#a89eb3be279d8310f8ea7672f2e1f5f0f">OF_SOUNDSTREAM_PORTAUDIO</a></td></tr>
-<tr class="separator:a89eb3be279d8310f8ea7672f2e1f5f0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bb3d5f417c920f93040bf3b88eb5a26"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_constants_8h.html#a5bb3d5f417c920f93040bf3b88eb5a26">OF_SOUNDSTREAM_RTAUDIO</a></td></tr>
+<tr class="separator:a5bb3d5f417c920f93040bf3b88eb5a26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a140fd45b681120bf430e6073b0954718"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_constants_8h.html#a140fd45b681120bf430e6073b0954718">OF_SOUND_PLAYER_OPENAL</a></td></tr>
 <tr class="separator:a140fd45b681120bf430e6073b0954718"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2869841207607d3b3f524c5f6cf6b26d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_constants_8h.html#a2869841207607d3b3f524c5f6cf6b26d">OF_USING_POCO</a></td></tr>
@@ -137,7 +141,7 @@ Macros</h2></td></tr>
 <tr class="separator:a74e75242132eaabbc1c512488a135926"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aacc3ee1a7f283f8ef65cea31f4436a95"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_constants_8h.html#aacc3ee1a7f283f8ef65cea31f4436a95">MAX</a>(x, y)&#160;&#160;&#160;(((x) &gt; (y)) ? (x) : (y))</td></tr>
 <tr class="separator:aacc3ee1a7f283f8ef65cea31f4436a95"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa46c464f8003d6bc85ccb0d97e7fa481"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_constants_8h.html#aa46c464f8003d6bc85ccb0d97e7fa481">CLAMP</a>(val, min, max)&#160;&#160;&#160;(<a class="el" href="of_constants_8h.html#aacc3ee1a7f283f8ef65cea31f4436a95">MAX</a>(<a class="el" href="of_constants_8h.html#a74e75242132eaabbc1c512488a135926">MIN</a>(val,max),min))</td></tr>
+<tr class="memitem:aa46c464f8003d6bc85ccb0d97e7fa481"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_constants_8h.html#aa46c464f8003d6bc85ccb0d97e7fa481">CLAMP</a>(val, min, max)&#160;&#160;&#160;((val) &lt; (min) ? (min) : ((val &gt; max) ? (max) : (val)))</td></tr>
 <tr class="separator:aa46c464f8003d6bc85ccb0d97e7fa481"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a996f7be338ccb40d1a2a5abc1ad61759"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_constants_8h.html#a996f7be338ccb40d1a2a5abc1ad61759">ABS</a>(x)&#160;&#160;&#160;(((x) &lt; 0) ? -(x) : (x))</td></tr>
 <tr class="separator:a996f7be338ccb40d1a2a5abc1ad61759"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -155,12 +159,10 @@ Macros</h2></td></tr>
 <tr class="separator:a8d25d29f3308a158936e83931caea382"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae984a917bca18cfd18b87c494a7f6c9b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_constants_8h.html#ae984a917bca18cfd18b87c494a7f6c9b">OF_KEY_ESC</a>&#160;&#160;&#160;27</td></tr>
 <tr class="separator:ae984a917bca18cfd18b87c494a7f6c9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af90beeaee76d4b106498379257f1fa87"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_constants_8h.html#af90beeaee76d4b106498379257f1fa87">OF_KEY_CTRL</a>&#160;&#160;&#160;0x0200</td></tr>
-<tr class="separator:af90beeaee76d4b106498379257f1fa87"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2df7d4e115fbb0de439f1e06d9a7f2ba"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_constants_8h.html#a2df7d4e115fbb0de439f1e06d9a7f2ba">OF_KEY_ALT</a>&#160;&#160;&#160;0x0300</td></tr>
-<tr class="separator:a2df7d4e115fbb0de439f1e06d9a7f2ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52661eb67fb1a9a896247687c9d6bbf8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_constants_8h.html#a52661eb67fb1a9a896247687c9d6bbf8">OF_KEY_SHIFT</a>&#160;&#160;&#160;0x0400</td></tr>
-<tr class="separator:a52661eb67fb1a9a896247687c9d6bbf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa643de5b43e3dfccac4ad2603d488bfa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_constants_8h.html#aa643de5b43e3dfccac4ad2603d488bfa">OF_KEY_TAB</a>&#160;&#160;&#160;9</td></tr>
+<tr class="separator:aa643de5b43e3dfccac4ad2603d488bfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa80a8fb512e72a812250c4d6f3b1c0ba"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_constants_8h.html#aa80a8fb512e72a812250c4d6f3b1c0ba">OF_KEY_COMMAND</a>&#160;&#160;&#160;<a class="el" href="of_constants_8h.html#aa57f764716e917d34a1bd2c1721cabd5">OF_KEY_SUPER</a></td></tr>
+<tr class="separator:aa80a8fb512e72a812250c4d6f3b1c0ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a556d8b94f29cede15f1b324008f315a2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_constants_8h.html#a556d8b94f29cede15f1b324008f315a2">OF_KEY_BACKSPACE</a>&#160;&#160;&#160;8</td></tr>
 <tr class="separator:a556d8b94f29cede15f1b324008f315a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43ac1f1c09c1354551f640ed637b70ec"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_constants_8h.html#a43ac1f1c09c1354551f640ed637b70ec">OF_KEY_DEL</a>&#160;&#160;&#160;127</td></tr>
@@ -207,6 +209,58 @@ Macros</h2></td></tr>
 <tr class="separator:a7b37459215e9cdac984ac061ab9468c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4b0e2620a245203dc459769f5513ee7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_constants_8h.html#af4b0e2620a245203dc459769f5513ee7">OF_KEY_INSERT</a>&#160;&#160;&#160;(108 | <a class="el" href="of_constants_8h.html#a9421b31090ece1f78de3f3ec10f104cc">OF_KEY_MODIFIER</a>)</td></tr>
 <tr class="separator:af4b0e2620a245203dc459769f5513ee7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a232b59e5adface3b943c4bbbe00467aa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_constants_8h.html#a232b59e5adface3b943c4bbbe00467aa">OF_KEY_CONTROL</a>&#160;&#160;&#160;(0x200 | OF_KEY_MODIFIER)</td></tr>
+<tr class="separator:a232b59e5adface3b943c4bbbe00467aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2df7d4e115fbb0de439f1e06d9a7f2ba"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_constants_8h.html#a2df7d4e115fbb0de439f1e06d9a7f2ba">OF_KEY_ALT</a>&#160;&#160;&#160;(0x400 | OF_KEY_MODIFIER)</td></tr>
+<tr class="separator:a2df7d4e115fbb0de439f1e06d9a7f2ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52661eb67fb1a9a896247687c9d6bbf8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_constants_8h.html#a52661eb67fb1a9a896247687c9d6bbf8">OF_KEY_SHIFT</a>&#160;&#160;&#160;(0x800 | OF_KEY_MODIFIER)</td></tr>
+<tr class="separator:a52661eb67fb1a9a896247687c9d6bbf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa57f764716e917d34a1bd2c1721cabd5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_constants_8h.html#aa57f764716e917d34a1bd2c1721cabd5">OF_KEY_SUPER</a>&#160;&#160;&#160;(0x1000 | OF_KEY_MODIFIER)</td></tr>
+<tr class="separator:aa57f764716e917d34a1bd2c1721cabd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a723bb7debdfca9addd7af846a401dd08"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_constants_8h.html#a723bb7debdfca9addd7af846a401dd08">OF_KEY_LEFT_SHIFT</a>&#160;&#160;&#160;(0x1 | OF_KEY_SHIFT)</td></tr>
+<tr class="separator:a723bb7debdfca9addd7af846a401dd08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d0ef01f39ccb9ad15a9ee204b65c7e7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_constants_8h.html#a1d0ef01f39ccb9ad15a9ee204b65c7e7">OF_KEY_RIGHT_SHIFT</a>&#160;&#160;&#160;(0x2 | OF_KEY_SHIFT)</td></tr>
+<tr class="separator:a1d0ef01f39ccb9ad15a9ee204b65c7e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a825217257ba899318b1b8760d13e1c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_constants_8h.html#a2a825217257ba899318b1b8760d13e1c">OF_KEY_LEFT_CONTROL</a>&#160;&#160;&#160;(0x1 | OF_KEY_CONTROL)</td></tr>
+<tr class="separator:a2a825217257ba899318b1b8760d13e1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59b605fc8ac087e2c512715e0c69c089"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_constants_8h.html#a59b605fc8ac087e2c512715e0c69c089">OF_KEY_RIGHT_CONTROL</a>&#160;&#160;&#160;(0x2 | OF_KEY_CONTROL)</td></tr>
+<tr class="separator:a59b605fc8ac087e2c512715e0c69c089"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1fc3bfc18b543e9c8f885802381871b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_constants_8h.html#ab1fc3bfc18b543e9c8f885802381871b">OF_KEY_LEFT_ALT</a>&#160;&#160;&#160;(0x1 | OF_KEY_ALT)</td></tr>
+<tr class="separator:ab1fc3bfc18b543e9c8f885802381871b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72795a9763322e696b25e9df5796dfa4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_constants_8h.html#a72795a9763322e696b25e9df5796dfa4">OF_KEY_RIGHT_ALT</a>&#160;&#160;&#160;(0x2 | OF_KEY_ALT)</td></tr>
+<tr class="separator:a72795a9763322e696b25e9df5796dfa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9154c1a9784df27b5f166861a09abf1e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_constants_8h.html#a9154c1a9784df27b5f166861a09abf1e">OF_KEY_LEFT_SUPER</a>&#160;&#160;&#160;(0x1 | OF_KEY_SUPER)</td></tr>
+<tr class="separator:a9154c1a9784df27b5f166861a09abf1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a189af2cb2f82c3534b7453556dab5aca"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_constants_8h.html#a189af2cb2f82c3534b7453556dab5aca">OF_KEY_RIGHT_SUPER</a>&#160;&#160;&#160;(0x2 | OF_KEY_SUPER)</td></tr>
+<tr class="separator:a189af2cb2f82c3534b7453556dab5aca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd1b148103e0cb35fdd0ea7258230026"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_constants_8h.html#afd1b148103e0cb35fdd0ea7258230026">OF_KEY_LEFT_COMMAND</a>&#160;&#160;&#160;<a class="el" href="of_constants_8h.html#a9154c1a9784df27b5f166861a09abf1e">OF_KEY_LEFT_SUPER</a></td></tr>
+<tr class="separator:afd1b148103e0cb35fdd0ea7258230026"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fd4dd5d984b2d02ae0c5002e3d15f49"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_constants_8h.html#a6fd4dd5d984b2d02ae0c5002e3d15f49">OF_KEY_RIGHT_COMMAND</a>&#160;&#160;&#160;<a class="el" href="of_constants_8h.html#a189af2cb2f82c3534b7453556dab5aca">OF_KEY_RIGHT_SUPER</a></td></tr>
+<tr class="separator:a6fd4dd5d984b2d02ae0c5002e3d15f49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af139e71a5e5d997e7cf3754cde73eab9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_constants_8h.html#af139e71a5e5d997e7cf3754cde73eab9">OF_MOUSE_BUTTON_1</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:af139e71a5e5d997e7cf3754cde73eab9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f4b9f1ffef31529172b90452cbf4be7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_constants_8h.html#a8f4b9f1ffef31529172b90452cbf4be7">OF_MOUSE_BUTTON_2</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:a8f4b9f1ffef31529172b90452cbf4be7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bb598d531c30fa3621116b74937c948"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_constants_8h.html#a4bb598d531c30fa3621116b74937c948">OF_MOUSE_BUTTON_3</a>&#160;&#160;&#160;2</td></tr>
+<tr class="separator:a4bb598d531c30fa3621116b74937c948"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af60d0a203bab61cf84cf8acf9a12f042"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_constants_8h.html#af60d0a203bab61cf84cf8acf9a12f042">OF_MOUSE_BUTTON_4</a>&#160;&#160;&#160;3</td></tr>
+<tr class="separator:af60d0a203bab61cf84cf8acf9a12f042"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0fd8ed3a8ee1f17e86a7d011d73ec5a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_constants_8h.html#ab0fd8ed3a8ee1f17e86a7d011d73ec5a">OF_MOUSE_BUTTON_5</a>&#160;&#160;&#160;4</td></tr>
+<tr class="separator:ab0fd8ed3a8ee1f17e86a7d011d73ec5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f5a2b81e974e1f73c0effa54714a9f3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_constants_8h.html#a4f5a2b81e974e1f73c0effa54714a9f3">OF_MOUSE_BUTTON_6</a>&#160;&#160;&#160;5</td></tr>
+<tr class="separator:a4f5a2b81e974e1f73c0effa54714a9f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4b9954eb0cca8e5a6d02e438199a7a2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_constants_8h.html#ae4b9954eb0cca8e5a6d02e438199a7a2">OF_MOUSE_BUTTON_7</a>&#160;&#160;&#160;6</td></tr>
+<tr class="separator:ae4b9954eb0cca8e5a6d02e438199a7a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73968a0e7c90aeb15f334b7ed5eb79d9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_constants_8h.html#a73968a0e7c90aeb15f334b7ed5eb79d9">OF_MOUSE_BUTTON_8</a>&#160;&#160;&#160;7</td></tr>
+<tr class="separator:a73968a0e7c90aeb15f334b7ed5eb79d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56f56b9d1ffa3d444bff598f21381b4a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_constants_8h.html#a56f56b9d1ffa3d444bff598f21381b4a">OF_MOUSE_BUTTON_LAST</a>&#160;&#160;&#160;<a class="el" href="of_constants_8h.html#a73968a0e7c90aeb15f334b7ed5eb79d9">OF_MOUSE_BUTTON_8</a></td></tr>
+<tr class="separator:a56f56b9d1ffa3d444bff598f21381b4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7896bae99ba1b1d18ef5592dc7d6cb45"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_constants_8h.html#a7896bae99ba1b1d18ef5592dc7d6cb45">OF_MOUSE_BUTTON_LEFT</a>&#160;&#160;&#160;<a class="el" href="of_constants_8h.html#af139e71a5e5d997e7cf3754cde73eab9">OF_MOUSE_BUTTON_1</a></td></tr>
+<tr class="separator:a7896bae99ba1b1d18ef5592dc7d6cb45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91e3de67832388ef3916fbb1b45fe818"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_constants_8h.html#a91e3de67832388ef3916fbb1b45fe818">OF_MOUSE_BUTTON_MIDDLE</a>&#160;&#160;&#160;<a class="el" href="of_constants_8h.html#a8f4b9f1ffef31529172b90452cbf4be7">OF_MOUSE_BUTTON_2</a></td></tr>
+<tr class="separator:a91e3de67832388ef3916fbb1b45fe818"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a317ef5589cbc2a9db8118256f15868b6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_constants_8h.html#a317ef5589cbc2a9db8118256f15868b6">OF_MOUSE_BUTTON_RIGHT</a>&#160;&#160;&#160;<a class="el" href="of_constants_8h.html#a4bb598d531c30fa3621116b74937c948">OF_MOUSE_BUTTON_3</a></td></tr>
+<tr class="separator:a317ef5589cbc2a9db8118256f15868b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1caa6df4f6bfee999ffc6aa71648004"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_constants_8h.html#aa1caa6df4f6bfee999ffc6aa71648004">OF_CONSOLE_COLOR_RESTORE</a>&#160;&#160;&#160;(0)</td></tr>
 <tr class="separator:aa1caa6df4f6bfee999ffc6aa71648004"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade1780925eba937c3804c74adbc483a9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_constants_8h.html#ade1780925eba937c3804c74adbc483a9">OF_CONSOLE_COLOR_BLACK</a>&#160;&#160;&#160;(30)</td></tr>
@@ -244,11 +298,14 @@ Enumerations</h2></td></tr>
 &#160;&#160;<a class="el" href="of_constants_8h.html#a5d9ba7e6cff71339c6f437f75e2678b5a43e405c54a78fab1e118a31b0505beb3">OF_TARGET_OSX</a>, 
 <a class="el" href="of_constants_8h.html#a5d9ba7e6cff71339c6f437f75e2678b5a215686cdb0c61c00a745e1e54fcd42da">OF_TARGET_WINGCC</a>, 
 <a class="el" href="of_constants_8h.html#a5d9ba7e6cff71339c6f437f75e2678b5a31bbffa0508f003ecf0c363f72dab10f">OF_TARGET_WINVS</a>, 
-<a class="el" href="of_constants_8h.html#a5d9ba7e6cff71339c6f437f75e2678b5aea2d8e998273d88253158846b1a9ac91">OF_TARGET_IPHONE</a>, 
+<a class="el" href="of_constants_8h.html#a5d9ba7e6cff71339c6f437f75e2678b5a2634306637fdc68ab75a5ed1c0aeb8ec">OF_TARGET_IOS</a>, 
 <br/>
 &#160;&#160;<a class="el" href="of_constants_8h.html#a5d9ba7e6cff71339c6f437f75e2678b5a8ff18e2371fd5897c6ff712b0e28f84c">OF_TARGET_ANDROID</a>, 
 <a class="el" href="of_constants_8h.html#a5d9ba7e6cff71339c6f437f75e2678b5afc1ea31489a6d01c55778e52004d860e">OF_TARGET_LINUX</a>, 
-<a class="el" href="of_constants_8h.html#a5d9ba7e6cff71339c6f437f75e2678b5acb1d72430a005691c871e43dad4a81ab">OF_TARGET_LINUX64</a>
+<a class="el" href="of_constants_8h.html#a5d9ba7e6cff71339c6f437f75e2678b5acb1d72430a005691c871e43dad4a81ab">OF_TARGET_LINUX64</a>, 
+<a class="el" href="of_constants_8h.html#a5d9ba7e6cff71339c6f437f75e2678b5abd837023d42be344b184551a1351126e">OF_TARGET_LINUXARMV6L</a>, 
+<br/>
+&#160;&#160;<a class="el" href="of_constants_8h.html#a5d9ba7e6cff71339c6f437f75e2678b5aed5e1778de46bef2058875afb5987ec8">OF_TARGET_LINUXARMV7L</a>
 <br/>
  }</td></tr>
 <tr class="separator:a5d9ba7e6cff71339c6f437f75e2678b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -300,7 +357,8 @@ Enumerations</h2></td></tr>
 <a class="el" href="of_constants_8h.html#ae227396622740556688053d3dc0f1693a8751ed3001114961e4f909cc3a10553b">OF_PIXELS_RGBA</a>, 
 <a class="el" href="of_constants_8h.html#ae227396622740556688053d3dc0f1693a2fec47e004b55e8111f0f1f8b48e850c">OF_PIXELS_BGRA</a>, 
 <br/>
-&#160;&#160;<a class="el" href="of_constants_8h.html#ae227396622740556688053d3dc0f1693a698ff488f0403b26bb5cbfcd2d16119f">OF_PIXELS_RGB565</a>
+&#160;&#160;<a class="el" href="of_constants_8h.html#ae227396622740556688053d3dc0f1693a698ff488f0403b26bb5cbfcd2d16119f">OF_PIXELS_RGB565</a>, 
+<a class="el" href="of_constants_8h.html#ae227396622740556688053d3dc0f1693a13d49a3d1081f0353218f21a2485e459">OF_PIXELS_UNKNOWN</a>
 <br/>
  }</td></tr>
 <tr class="separator:ae227396622740556688053d3dc0f1693"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -359,6 +417,10 @@ Enumerations</h2></td></tr>
 <br/>
  }</td></tr>
 <tr class="separator:a14966be842b99f71080a7444cebbc0b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4e6cefebff2917f91e999904fa9b17f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_constants_8h.html#ad4e6cefebff2917f91e999904fa9b17f">ofTextEncoding</a> { <a class="el" href="of_constants_8h.html#ad4e6cefebff2917f91e999904fa9b17fa6eaccb5399ab41bc2717f6521223793a">OF_ENCODING_UTF8</a>, 
+<a class="el" href="of_constants_8h.html#ad4e6cefebff2917f91e999904fa9b17fa98678fbbdc0421baf3b866fea132061d">OF_ENCODING_ISO_8859_15</a>
+ }</td></tr>
+<tr class="separator:ad4e6cefebff2917f91e999904fa9b17f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a class="anchor" id="a996f7be338ccb40d1a2a5abc1ad61759"></a>
@@ -426,7 +488,7 @@ Enumerations</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;(<a class="el" href="of_constants_8h.html#aacc3ee1a7f283f8ef65cea31f4436a95">MAX</a>(<a class="el" href="of_constants_8h.html#a74e75242132eaabbc1c512488a135926">MIN</a>(val,max),min))</td>
+          <td></td><td>&#160;&#160;&#160;((val) &lt; (min) ? (min) : ((val &gt; max) ? (max) : (val)))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -728,7 +790,7 @@ Enumerations</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define OF_KEY_ALT&#160;&#160;&#160;0x0300</td>
+          <td class="memname">#define OF_KEY_ALT&#160;&#160;&#160;(0x400 | OF_KEY_MODIFIER)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -747,12 +809,24 @@ Enumerations</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="af90beeaee76d4b106498379257f1fa87"></a>
+<a class="anchor" id="aa80a8fb512e72a812250c4d6f3b1c0ba"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define OF_KEY_CTRL&#160;&#160;&#160;0x0200</td>
+          <td class="memname">#define OF_KEY_COMMAND&#160;&#160;&#160;<a class="el" href="of_constants_8h.html#aa57f764716e917d34a1bd2c1721cabd5">OF_KEY_SUPER</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a232b59e5adface3b943c4bbbe00467aa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OF_KEY_CONTROL&#160;&#160;&#160;(0x200 | OF_KEY_MODIFIER)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -987,6 +1061,66 @@ Enumerations</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ab1fc3bfc18b543e9c8f885802381871b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OF_KEY_LEFT_ALT&#160;&#160;&#160;(0x1 | OF_KEY_ALT)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afd1b148103e0cb35fdd0ea7258230026"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OF_KEY_LEFT_COMMAND&#160;&#160;&#160;<a class="el" href="of_constants_8h.html#a9154c1a9784df27b5f166861a09abf1e">OF_KEY_LEFT_SUPER</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2a825217257ba899318b1b8760d13e1c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OF_KEY_LEFT_CONTROL&#160;&#160;&#160;(0x1 | OF_KEY_CONTROL)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a723bb7debdfca9addd7af846a401dd08"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OF_KEY_LEFT_SHIFT&#160;&#160;&#160;(0x1 | OF_KEY_SHIFT)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9154c1a9784df27b5f166861a09abf1e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OF_KEY_LEFT_SUPER&#160;&#160;&#160;(0x1 | OF_KEY_SUPER)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a9421b31090ece1f78de3f3ec10f104cc"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1047,12 +1181,96 @@ Enumerations</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a72795a9763322e696b25e9df5796dfa4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OF_KEY_RIGHT_ALT&#160;&#160;&#160;(0x2 | OF_KEY_ALT)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6fd4dd5d984b2d02ae0c5002e3d15f49"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OF_KEY_RIGHT_COMMAND&#160;&#160;&#160;<a class="el" href="of_constants_8h.html#a189af2cb2f82c3534b7453556dab5aca">OF_KEY_RIGHT_SUPER</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a59b605fc8ac087e2c512715e0c69c089"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OF_KEY_RIGHT_CONTROL&#160;&#160;&#160;(0x2 | OF_KEY_CONTROL)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1d0ef01f39ccb9ad15a9ee204b65c7e7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OF_KEY_RIGHT_SHIFT&#160;&#160;&#160;(0x2 | OF_KEY_SHIFT)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a189af2cb2f82c3534b7453556dab5aca"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OF_KEY_RIGHT_SUPER&#160;&#160;&#160;(0x2 | OF_KEY_SUPER)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a52661eb67fb1a9a896247687c9d6bbf8"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define OF_KEY_SHIFT&#160;&#160;&#160;0x0400</td>
+          <td class="memname">#define OF_KEY_SHIFT&#160;&#160;&#160;(0x800 | OF_KEY_MODIFIER)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa57f764716e917d34a1bd2c1721cabd5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OF_KEY_SUPER&#160;&#160;&#160;(0x1000 | OF_KEY_MODIFIER)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa643de5b43e3dfccac4ad2603d488bfa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OF_KEY_TAB&#160;&#160;&#160;9</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1107,6 +1325,150 @@ Enumerations</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="af139e71a5e5d997e7cf3754cde73eab9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OF_MOUSE_BUTTON_1&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8f4b9f1ffef31529172b90452cbf4be7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OF_MOUSE_BUTTON_2&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4bb598d531c30fa3621116b74937c948"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OF_MOUSE_BUTTON_3&#160;&#160;&#160;2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af60d0a203bab61cf84cf8acf9a12f042"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OF_MOUSE_BUTTON_4&#160;&#160;&#160;3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab0fd8ed3a8ee1f17e86a7d011d73ec5a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OF_MOUSE_BUTTON_5&#160;&#160;&#160;4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4f5a2b81e974e1f73c0effa54714a9f3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OF_MOUSE_BUTTON_6&#160;&#160;&#160;5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae4b9954eb0cca8e5a6d02e438199a7a2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OF_MOUSE_BUTTON_7&#160;&#160;&#160;6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a73968a0e7c90aeb15f334b7ed5eb79d9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OF_MOUSE_BUTTON_8&#160;&#160;&#160;7</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a56f56b9d1ffa3d444bff598f21381b4a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OF_MOUSE_BUTTON_LAST&#160;&#160;&#160;<a class="el" href="of_constants_8h.html#a73968a0e7c90aeb15f334b7ed5eb79d9">OF_MOUSE_BUTTON_8</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7896bae99ba1b1d18ef5592dc7d6cb45"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OF_MOUSE_BUTTON_LEFT&#160;&#160;&#160;<a class="el" href="of_constants_8h.html#af139e71a5e5d997e7cf3754cde73eab9">OF_MOUSE_BUTTON_1</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a91e3de67832388ef3916fbb1b45fe818"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OF_MOUSE_BUTTON_MIDDLE&#160;&#160;&#160;<a class="el" href="of_constants_8h.html#a8f4b9f1ffef31529172b90452cbf4be7">OF_MOUSE_BUTTON_2</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a317ef5589cbc2a9db8118256f15868b6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OF_MOUSE_BUTTON_RIGHT&#160;&#160;&#160;<a class="el" href="of_constants_8h.html#a4bb598d531c30fa3621116b74937c948">OF_MOUSE_BUTTON_3</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a46d645cf62bc6e98f659b4597e189a66"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1143,12 +1505,24 @@ Enumerations</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a89eb3be279d8310f8ea7672f2e1f5f0f"></a>
+<a class="anchor" id="a5bb3d5f417c920f93040bf3b88eb5a26"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define OF_SOUNDSTREAM_PORTAUDIO</td>
+          <td class="memname">#define OF_SOUNDSTREAM_RTAUDIO</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5d0532c8c60867774d74bf1b10b22d64"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OF_TARGET_IPHONE&#160;&#160;&#160;<a class="el" href="of_constants_8h.html#a5d9ba7e6cff71339c6f437f75e2678b5a2634306637fdc68ab75a5ed1c0aeb8ec">OF_TARGET_IOS</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1184,7 +1558,7 @@ Enumerations</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define OF_VERSION_MINOR&#160;&#160;&#160;7</td>
+          <td class="memname">#define OF_VERSION_MINOR&#160;&#160;&#160;8</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1196,7 +1570,7 @@ Enumerations</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define OF_VERSION_PATCH&#160;&#160;&#160;4</td>
+          <td class="memname">#define OF_VERSION_PATCH&#160;&#160;&#160;0</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1589,6 +1963,8 @@ Enumerations</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="ae227396622740556688053d3dc0f1693a698ff488f0403b26bb5cbfcd2d16119f"></a>OF_PIXELS_RGB565</em>&nbsp;</td><td class="fielddoc">
 </td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ae227396622740556688053d3dc0f1693a13d49a3d1081f0353218f21a2485e459"></a>OF_PIXELS_UNKNOWN</em>&nbsp;</td><td class="fielddoc">
+</td></tr>
 </table>
 
 </div>
@@ -1673,13 +2049,35 @@ Enumerations</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="a5d9ba7e6cff71339c6f437f75e2678b5a31bbffa0508f003ecf0c363f72dab10f"></a>OF_TARGET_WINVS</em>&nbsp;</td><td class="fielddoc">
 </td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="a5d9ba7e6cff71339c6f437f75e2678b5aea2d8e998273d88253158846b1a9ac91"></a>OF_TARGET_IPHONE</em>&nbsp;</td><td class="fielddoc">
+<tr><td class="fieldname"><em><a class="anchor" id="a5d9ba7e6cff71339c6f437f75e2678b5a2634306637fdc68ab75a5ed1c0aeb8ec"></a>OF_TARGET_IOS</em>&nbsp;</td><td class="fielddoc">
 </td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="a5d9ba7e6cff71339c6f437f75e2678b5a8ff18e2371fd5897c6ff712b0e28f84c"></a>OF_TARGET_ANDROID</em>&nbsp;</td><td class="fielddoc">
 </td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="a5d9ba7e6cff71339c6f437f75e2678b5afc1ea31489a6d01c55778e52004d860e"></a>OF_TARGET_LINUX</em>&nbsp;</td><td class="fielddoc">
 </td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="a5d9ba7e6cff71339c6f437f75e2678b5acb1d72430a005691c871e43dad4a81ab"></a>OF_TARGET_LINUX64</em>&nbsp;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a5d9ba7e6cff71339c6f437f75e2678b5abd837023d42be344b184551a1351126e"></a>OF_TARGET_LINUXARMV6L</em>&nbsp;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a5d9ba7e6cff71339c6f437f75e2678b5aed5e1778de46bef2058875afb5987ec8"></a>OF_TARGET_LINUXARMV7L</em>&nbsp;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="ad4e6cefebff2917f91e999904fa9b17f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="of_constants_8h.html#ad4e6cefebff2917f91e999904fa9b17f">ofTextEncoding</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="ad4e6cefebff2917f91e999904fa9b17fa6eaccb5399ab41bc2717f6521223793a"></a>OF_ENCODING_UTF8</em>&nbsp;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ad4e6cefebff2917f91e999904fa9b17fa98678fbbdc0421baf3b866fea132061d"></a>OF_ENCODING_ISO_8859_15</em>&nbsp;</td><td class="fielddoc">
 </td></tr>
 </table>
 

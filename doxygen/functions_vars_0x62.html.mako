@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -52,6 +53,7 @@
       <li><a href="functions.html"><span>All</span></a></li>
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li class="current"><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_type.html"><span>Typedefs</span></a></li>
       <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
       <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
       <li><a href="functions_prop.html"><span>Properties</span></a></li>
@@ -109,12 +111,21 @@
 <li>bAntiAliased
 : <a class="el" href="classof_true_type_font.html#ae0529672211eb65fb3d52d0c3555e764">ofTrueTypeFont</a>
 </li>
+<li>bAvailable
+: <a class="el" href="classof_video_device.html#aacb49834ee06a03cb60d322d217b6ac9">ofVideoDevice</a>
+</li>
+<li>bCapped
+: <a class="el" href="classof_cylinder_primitive.html#a970472866f6978b565d6d35c9349c703">ofCylinderPrimitive</a>
+</li>
 <li>bChooseDevice
-: <a class="el" href="classof_quick_time_grabber.html#ad22297ce804ce3bd815ab4964bed85bc">ofQuickTimeGrabber</a>
-, <a class="el" href="classof_direct_show_grabber.html#a98652e43d56a0ca7348bfb499a358332">ofDirectShowGrabber</a>
+: <a class="el" href="classof_direct_show_grabber.html#a98652e43d56a0ca7348bfb499a358332">ofDirectShowGrabber</a>
+, <a class="el" href="classof_quick_time_grabber.html#ad22297ce804ce3bd815ab4964bed85bc">ofQuickTimeGrabber</a>
 </li>
 <li>beige
 : <a class="el" href="classof_color__.html#a89fe55d7daceb8d71abc35ac84a742f8">ofColor_&lt; PixelType &gt;</a>
+</li>
+<li>bEnableSetupScreen
+: <a class="el" href="classof_app_e_g_l_window.html#a40fd5b2fa334190484cd12b67d0adbab">ofAppEGLWindow</a>
 </li>
 <li>bFill
 : <a class="el" href="classof_style.html#ac97172bc5d117d91fa7fef18b91b58af">ofStyle</a>
@@ -163,8 +174,8 @@
 : <a class="el" href="classof_style.html#aa899b9218eabf5feff0729fba2956e46">ofStyle</a>
 </li>
 <li>bLoadedOk
-: <a class="el" href="classof_true_type_font.html#ae1b94826e0a87e7a9057b2285d1d8f4d">ofTrueTypeFont</a>
-, <a class="el" href="classof_fmod_sound_player.html#a7cd755a467813dc65bba46f534969ac0">ofFmodSoundPlayer</a>
+: <a class="el" href="classof_fmod_sound_player.html#a7cd755a467813dc65bba46f534969ac0">ofFmodSoundPlayer</a>
+, <a class="el" href="classof_true_type_font.html#ae1b94826e0a87e7a9057b2285d1d8f4d">ofTrueTypeFont</a>
 </li>
 <li>blocking
 : <a class="el" href="classof_thread.html#a67cc9e89594ffa191166531ac9e7b6ce">ofThread</a>
@@ -174,6 +185,9 @@
 </li>
 <li>blue
 : <a class="el" href="classof_color__.html#ad554b41b21288b6e692ca5d59295e29a">ofColor_&lt; PixelType &gt;</a>
+</li>
+<li>blueSteel
+: <a class="el" href="classof_color__.html#ab22e7f742bedfbee5f6b3e25e85f31dc">ofColor_&lt; PixelType &gt;</a>
 </li>
 <li>blueViolet
 : <a class="el" href="classof_color__.html#ab2eebb724e4349a5ee7757b276015108">ofColor_&lt; PixelType &gt;</a>
@@ -186,6 +200,9 @@
 </li>
 <li>bNewFrame
 : <a class="el" href="classof_q_t_kit_player.html#ac12d7e3952dab7fffb9df4595d2231ac">ofQTKitPlayer</a>
+</li>
+<li>bNewScreenMode
+: <a class="el" href="classof_app_e_g_l_window.html#aea4a25154ce4009414a41100a143b3c5">ofAppEGLWindow</a>
 </li>
 <li>border
 : <a class="el" href="classof_true_type_font.html#ae09bc97209804f330e79a68512e39520">ofTrueTypeFont</a>
@@ -214,6 +231,9 @@
 </li>
 <li>bSgInited
 : <a class="el" href="classof_quick_time_grabber.html#a222e2296acd1747e9d457dfa32e0a397">ofQuickTimeGrabber</a>
+</li>
+<li>bShowCursor
+: <a class="el" href="classof_app_e_g_l_window.html#a5e06cb7e375a5a7819d0fcd6e7b86125">ofAppEGLWindow</a>
 </li>
 <li>bSuccess
 : <a class="el" href="classof_file_dialog_result.html#a63f36565e8613c7fd654c310ae127204">ofFileDialogResult</a>
@@ -247,6 +267,9 @@
 </li>
 <li>button
 : <a class="el" href="classof_mouse_event_args.html#adc5649c791eef12b6c7042eaefd87b41">ofMouseEventArgs</a>
+</li>
+<li>buttonInUse
+: <a class="el" href="classof_app_e_g_l_window.html#ad5eef9f881e28459b51ef4dd8f8ca395">ofAppEGLWindow</a>
 </li>
 <li>bVerbose
 : <a class="el" href="classof_direct_show_grabber.html#a85b8884f98fafd219ba4dd498009369b">ofDirectShowGrabber</a>

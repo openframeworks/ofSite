@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -52,6 +53,7 @@
       <li><a href="functions.html"><span>All</span></a></li>
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li class="current"><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_type.html"><span>Typedefs</span></a></li>
       <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
       <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
       <li><a href="functions_prop.html"><span>Properties</span></a></li>
@@ -98,6 +100,9 @@
 </li>
 <li>key
 : <a class="el" href="classof_key_event_args.html#a51c166832e41e794963bc7ad6c6dd725">ofKeyEventArgs</a>
+</li>
+<li>keyEvents
+: <a class="el" href="classof_app_e_g_l_window.html#aa2e9546ce1d57dd571da52334afc69e2">ofAppEGLWindow</a>
 </li>
 <li>keyPressed
 : <a class="el" href="classof_core_events.html#a8b28ce66b56319938d2c82d9a25540d3">ofCoreEvents</a>

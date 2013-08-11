@@ -250,6 +250,34 @@ This returns a vector of ofSerialDeviceInfo instances with the devicePath, devic
 
 <!----------------------------------------------------------------------------->
 
+###bool isInitialized()
+
+<!--
+_syntax: isInitialized()_
+_name: isInitialized_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void listDevices()
 
 <!--

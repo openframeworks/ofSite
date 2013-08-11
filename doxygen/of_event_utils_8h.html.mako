@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -47,20 +48,22 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_7d604191edc08013a26f918aa8ef79ad.html">events</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_84d5b34cee6369a03c8d1f3b970ed216.html">openFrameworks</a></li><li class="navelem"><a class="el" href="dir_148891dd0ea53588a5bf71cda57c05aa.html">events</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">ofEventUtils.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="of_constants_8h_source.html">ofConstants.h</a>&quot;</code><br/>
-<code>#include &quot;Poco/FIFOEvent.h&quot;</code><br/>
-<code>#include &quot;Poco/Delegate.h&quot;</code><br/>
+<code>#include &quot;Poco/PriorityEvent.h&quot;</code><br/>
+<code>#include &quot;Poco/PriorityDelegate.h&quot;</code><br/>
+<code>#include &quot;<a class="el" href="of_delegate_8h_source.html">ofDelegate.h</a>&quot;</code><br/>
 <code>#include &lt;stdio.h&gt;</code><br/>
 <code>#include &lt;stdlib.h&gt;</code><br/>
 </div>
@@ -71,32 +74,64 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_event.html">ofEvent&lt; ArgumentsType &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a09bc3e2c6034a656a3bb3da9aff5a42b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42b">ofEventOrder</a> { <a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42bae9b215d18387d657ad4220e481cef412">OF_EVENT_ORDER_BEFORE_APP</a> =0, 
+<a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42bac26edc83f51be01f695ac9989fcf71c2">OF_EVENT_ORDER_APP</a> =100, 
+<a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42ba47e7aa47694dd15c9ead77e15301e5fc">OF_EVENT_ORDER_AFTER_APP</a> =200
+ }</td></tr>
+<tr class="separator:a09bc3e2c6034a656a3bb3da9aff5a42b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:afe9a6389ae9b0ec1a0aa68dc8510d2d5"><td class="memTemplParams" colspan="2">template&lt;class EventType , typename ArgumentsType , class ListenerClass &gt; </td></tr>
-<tr class="memitem:afe9a6389ae9b0ec1a0aa68dc8510d2d5"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_event_utils_8h.html#afe9a6389ae9b0ec1a0aa68dc8510d2d5">ofAddListener</a> (EventType &amp;event, ListenerClass *listener, void(ListenerClass::*listenerMethod)(const void *, ArgumentsType &amp;))</td></tr>
-<tr class="separator:afe9a6389ae9b0ec1a0aa68dc8510d2d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a197c004724cf4cc9413321f519649550"><td class="memTemplParams" colspan="2">template&lt;class EventType , typename ArgumentsType , class ListenerClass &gt; </td></tr>
-<tr class="memitem:a197c004724cf4cc9413321f519649550"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_event_utils_8h.html#a197c004724cf4cc9413321f519649550">ofAddListener</a> (EventType &amp;event, ListenerClass *listener, void(ListenerClass::*listenerMethod)(ArgumentsType &amp;))</td></tr>
-<tr class="separator:a197c004724cf4cc9413321f519649550"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67f4409c8df2af7519e1e91b031fe34f"><td class="memTemplParams" colspan="2">template&lt;class ListenerClass &gt; </td></tr>
-<tr class="memitem:a67f4409c8df2af7519e1e91b031fe34f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_event_utils_8h.html#a67f4409c8df2af7519e1e91b031fe34f">ofAddListener</a> (<a class="el" href="classof_event.html">ofEvent</a>&lt; void &gt; &amp;event, ListenerClass *listener, void(ListenerClass::*listenerMethod)(const void *))</td></tr>
-<tr class="separator:a67f4409c8df2af7519e1e91b031fe34f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c77f3f288a2d8ed148d1cff10d58589"><td class="memTemplParams" colspan="2">template&lt;class ListenerClass &gt; </td></tr>
-<tr class="memitem:a6c77f3f288a2d8ed148d1cff10d58589"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_event_utils_8h.html#a6c77f3f288a2d8ed148d1cff10d58589">ofAddListener</a> (<a class="el" href="classof_event.html">ofEvent</a>&lt; void &gt; &amp;event, ListenerClass *listener, void(ListenerClass::*listenerMethod)())</td></tr>
-<tr class="separator:a6c77f3f288a2d8ed148d1cff10d58589"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e750c11825c889b69989df2aa304cec"><td class="memTemplParams" colspan="2">template&lt;class EventType , typename ArgumentsType , class ListenerClass &gt; </td></tr>
-<tr class="memitem:a4e750c11825c889b69989df2aa304cec"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_event_utils_8h.html#a4e750c11825c889b69989df2aa304cec">ofRemoveListener</a> (EventType &amp;event, ListenerClass *listener, void(ListenerClass::*listenerMethod)(const void *, ArgumentsType &amp;))</td></tr>
-<tr class="separator:a4e750c11825c889b69989df2aa304cec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ed7cdcdd5ef1e4a8739cdb118dbb2b0"><td class="memTemplParams" colspan="2">template&lt;class EventType , typename ArgumentsType , class ListenerClass &gt; </td></tr>
-<tr class="memitem:a2ed7cdcdd5ef1e4a8739cdb118dbb2b0"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_event_utils_8h.html#a2ed7cdcdd5ef1e4a8739cdb118dbb2b0">ofRemoveListener</a> (EventType &amp;event, ListenerClass *listener, void(ListenerClass::*listenerMethod)(ArgumentsType &amp;))</td></tr>
-<tr class="separator:a2ed7cdcdd5ef1e4a8739cdb118dbb2b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d0342054cf5cb4e66082fef9c8743d4"><td class="memTemplParams" colspan="2">template&lt;class ListenerClass &gt; </td></tr>
-<tr class="memitem:a6d0342054cf5cb4e66082fef9c8743d4"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_event_utils_8h.html#a6d0342054cf5cb4e66082fef9c8743d4">ofRemoveListener</a> (<a class="el" href="classof_event.html">ofEvent</a>&lt; void &gt; &amp;event, ListenerClass *listener, void(ListenerClass::*listenerMethod)(const void *))</td></tr>
-<tr class="separator:a6d0342054cf5cb4e66082fef9c8743d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4caeb1d89aa3c421e584b82b649e244b"><td class="memTemplParams" colspan="2">template&lt;class ListenerClass &gt; </td></tr>
-<tr class="memitem:a4caeb1d89aa3c421e584b82b649e244b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_event_utils_8h.html#a4caeb1d89aa3c421e584b82b649e244b">ofRemoveListener</a> (<a class="el" href="classof_event.html">ofEvent</a>&lt; void &gt; &amp;event, ListenerClass *listener, void(ListenerClass::*listenerMethod)())</td></tr>
-<tr class="separator:a4caeb1d89aa3c421e584b82b649e244b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fcc229705279597797cc3fdb7a4a25d"><td class="memTemplParams" colspan="2">template&lt;class EventType , typename ArgumentsType , class ListenerClass &gt; </td></tr>
+<tr class="memitem:a8fcc229705279597797cc3fdb7a4a25d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_event_utils_8h.html#a8fcc229705279597797cc3fdb7a4a25d">ofAddListener</a> (EventType &amp;event, ListenerClass *listener, void(ListenerClass::*listenerMethod)(const void *, ArgumentsType &amp;), int prio=<a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42ba47e7aa47694dd15c9ead77e15301e5fc">OF_EVENT_ORDER_AFTER_APP</a>)</td></tr>
+<tr class="separator:a8fcc229705279597797cc3fdb7a4a25d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a399faed9693dd4a79afd564c4ec92492"><td class="memTemplParams" colspan="2">template&lt;class EventType , typename ArgumentsType , class ListenerClass &gt; </td></tr>
+<tr class="memitem:a399faed9693dd4a79afd564c4ec92492"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_event_utils_8h.html#a399faed9693dd4a79afd564c4ec92492">ofAddListener</a> (EventType &amp;event, ListenerClass *listener, void(ListenerClass::*listenerMethod)(ArgumentsType &amp;), int prio=<a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42ba47e7aa47694dd15c9ead77e15301e5fc">OF_EVENT_ORDER_AFTER_APP</a>)</td></tr>
+<tr class="separator:a399faed9693dd4a79afd564c4ec92492"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed3c12d14d401f240d3090ddb0a99c7b"><td class="memTemplParams" colspan="2">template&lt;class ListenerClass &gt; </td></tr>
+<tr class="memitem:aed3c12d14d401f240d3090ddb0a99c7b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_event_utils_8h.html#aed3c12d14d401f240d3090ddb0a99c7b">ofAddListener</a> (<a class="el" href="classof_event.html">ofEvent</a>&lt; void &gt; &amp;event, ListenerClass *listener, void(ListenerClass::*listenerMethod)(const void *), int prio=<a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42ba47e7aa47694dd15c9ead77e15301e5fc">OF_EVENT_ORDER_AFTER_APP</a>)</td></tr>
+<tr class="separator:aed3c12d14d401f240d3090ddb0a99c7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a749d8ef3e78c9074ad7b5e0e8f500ab6"><td class="memTemplParams" colspan="2">template&lt;class ListenerClass &gt; </td></tr>
+<tr class="memitem:a749d8ef3e78c9074ad7b5e0e8f500ab6"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_event_utils_8h.html#a749d8ef3e78c9074ad7b5e0e8f500ab6">ofAddListener</a> (<a class="el" href="classof_event.html">ofEvent</a>&lt; void &gt; &amp;event, ListenerClass *listener, void(ListenerClass::*listenerMethod)(), int prio=<a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42ba47e7aa47694dd15c9ead77e15301e5fc">OF_EVENT_ORDER_AFTER_APP</a>)</td></tr>
+<tr class="separator:a749d8ef3e78c9074ad7b5e0e8f500ab6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff64abcb7d7738b08d3ffe8945ad12b3"><td class="memTemplParams" colspan="2">template&lt;class EventType , typename ArgumentsType , class ListenerClass &gt; </td></tr>
+<tr class="memitem:aff64abcb7d7738b08d3ffe8945ad12b3"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_event_utils_8h.html#aff64abcb7d7738b08d3ffe8945ad12b3">ofAddListener</a> (EventType &amp;event, ListenerClass *listener, bool(ListenerClass::*listenerMethod)(const void *, ArgumentsType &amp;), int prio=<a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42ba47e7aa47694dd15c9ead77e15301e5fc">OF_EVENT_ORDER_AFTER_APP</a>)</td></tr>
+<tr class="separator:aff64abcb7d7738b08d3ffe8945ad12b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0621b85b7876de16e088cdfdace9c9eb"><td class="memTemplParams" colspan="2">template&lt;class EventType , typename ArgumentsType , class ListenerClass &gt; </td></tr>
+<tr class="memitem:a0621b85b7876de16e088cdfdace9c9eb"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_event_utils_8h.html#a0621b85b7876de16e088cdfdace9c9eb">ofAddListener</a> (EventType &amp;event, ListenerClass *listener, bool(ListenerClass::*listenerMethod)(ArgumentsType &amp;), int prio=<a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42ba47e7aa47694dd15c9ead77e15301e5fc">OF_EVENT_ORDER_AFTER_APP</a>)</td></tr>
+<tr class="separator:a0621b85b7876de16e088cdfdace9c9eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa432a7ef7c17b1aa88c3664bc60a5f13"><td class="memTemplParams" colspan="2">template&lt;class ListenerClass &gt; </td></tr>
+<tr class="memitem:aa432a7ef7c17b1aa88c3664bc60a5f13"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_event_utils_8h.html#aa432a7ef7c17b1aa88c3664bc60a5f13">ofAddListener</a> (<a class="el" href="classof_event.html">ofEvent</a>&lt; void &gt; &amp;event, ListenerClass *listener, bool(ListenerClass::*listenerMethod)(const void *), int prio=<a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42ba47e7aa47694dd15c9ead77e15301e5fc">OF_EVENT_ORDER_AFTER_APP</a>)</td></tr>
+<tr class="separator:aa432a7ef7c17b1aa88c3664bc60a5f13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e9f764368480c2a488758da6c059239"><td class="memTemplParams" colspan="2">template&lt;class ListenerClass &gt; </td></tr>
+<tr class="memitem:a3e9f764368480c2a488758da6c059239"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_event_utils_8h.html#a3e9f764368480c2a488758da6c059239">ofAddListener</a> (<a class="el" href="classof_event.html">ofEvent</a>&lt; void &gt; &amp;event, ListenerClass *listener, bool(ListenerClass::*listenerMethod)(), int prio=<a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42ba47e7aa47694dd15c9ead77e15301e5fc">OF_EVENT_ORDER_AFTER_APP</a>)</td></tr>
+<tr class="separator:a3e9f764368480c2a488758da6c059239"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fcffba7ff95a4bf9ebfb31a3bb694b8"><td class="memTemplParams" colspan="2">template&lt;class EventType , typename ArgumentsType , class ListenerClass &gt; </td></tr>
+<tr class="memitem:a6fcffba7ff95a4bf9ebfb31a3bb694b8"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_event_utils_8h.html#a6fcffba7ff95a4bf9ebfb31a3bb694b8">ofRemoveListener</a> (EventType &amp;event, ListenerClass *listener, void(ListenerClass::*listenerMethod)(const void *, ArgumentsType &amp;), int prio=<a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42ba47e7aa47694dd15c9ead77e15301e5fc">OF_EVENT_ORDER_AFTER_APP</a>)</td></tr>
+<tr class="separator:a6fcffba7ff95a4bf9ebfb31a3bb694b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a767fd48fa6bd5f59c3b6ee92dd8f75d3"><td class="memTemplParams" colspan="2">template&lt;class EventType , typename ArgumentsType , class ListenerClass &gt; </td></tr>
+<tr class="memitem:a767fd48fa6bd5f59c3b6ee92dd8f75d3"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_event_utils_8h.html#a767fd48fa6bd5f59c3b6ee92dd8f75d3">ofRemoveListener</a> (EventType &amp;event, ListenerClass *listener, void(ListenerClass::*listenerMethod)(ArgumentsType &amp;), int prio=<a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42ba47e7aa47694dd15c9ead77e15301e5fc">OF_EVENT_ORDER_AFTER_APP</a>)</td></tr>
+<tr class="separator:a767fd48fa6bd5f59c3b6ee92dd8f75d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8353457999138ecaecbb08d2420b23c"><td class="memTemplParams" colspan="2">template&lt;class ListenerClass &gt; </td></tr>
+<tr class="memitem:ab8353457999138ecaecbb08d2420b23c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_event_utils_8h.html#ab8353457999138ecaecbb08d2420b23c">ofRemoveListener</a> (<a class="el" href="classof_event.html">ofEvent</a>&lt; void &gt; &amp;event, ListenerClass *listener, void(ListenerClass::*listenerMethod)(const void *), int prio=<a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42ba47e7aa47694dd15c9ead77e15301e5fc">OF_EVENT_ORDER_AFTER_APP</a>)</td></tr>
+<tr class="separator:ab8353457999138ecaecbb08d2420b23c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa08911744c04236a1db04e706f15386d"><td class="memTemplParams" colspan="2">template&lt;class ListenerClass &gt; </td></tr>
+<tr class="memitem:aa08911744c04236a1db04e706f15386d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_event_utils_8h.html#aa08911744c04236a1db04e706f15386d">ofRemoveListener</a> (<a class="el" href="classof_event.html">ofEvent</a>&lt; void &gt; &amp;event, ListenerClass *listener, void(ListenerClass::*listenerMethod)(), int prio=<a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42ba47e7aa47694dd15c9ead77e15301e5fc">OF_EVENT_ORDER_AFTER_APP</a>)</td></tr>
+<tr class="separator:aa08911744c04236a1db04e706f15386d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a038bc00bcba900a89007f923906f07"><td class="memTemplParams" colspan="2">template&lt;class EventType , typename ArgumentsType , class ListenerClass &gt; </td></tr>
+<tr class="memitem:a5a038bc00bcba900a89007f923906f07"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_event_utils_8h.html#a5a038bc00bcba900a89007f923906f07">ofRemoveListener</a> (EventType &amp;event, ListenerClass *listener, bool(ListenerClass::*listenerMethod)(const void *, ArgumentsType &amp;), int prio=<a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42ba47e7aa47694dd15c9ead77e15301e5fc">OF_EVENT_ORDER_AFTER_APP</a>)</td></tr>
+<tr class="separator:a5a038bc00bcba900a89007f923906f07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f3c1a90f5752e2eb61d85b0f0d40f1a"><td class="memTemplParams" colspan="2">template&lt;class EventType , typename ArgumentsType , class ListenerClass &gt; </td></tr>
+<tr class="memitem:a3f3c1a90f5752e2eb61d85b0f0d40f1a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_event_utils_8h.html#a3f3c1a90f5752e2eb61d85b0f0d40f1a">ofRemoveListener</a> (EventType &amp;event, ListenerClass *listener, bool(ListenerClass::*listenerMethod)(ArgumentsType &amp;), int prio=<a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42ba47e7aa47694dd15c9ead77e15301e5fc">OF_EVENT_ORDER_AFTER_APP</a>)</td></tr>
+<tr class="separator:a3f3c1a90f5752e2eb61d85b0f0d40f1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48bbed46b923dd41799ba8a3ab997d31"><td class="memTemplParams" colspan="2">template&lt;class ListenerClass &gt; </td></tr>
+<tr class="memitem:a48bbed46b923dd41799ba8a3ab997d31"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_event_utils_8h.html#a48bbed46b923dd41799ba8a3ab997d31">ofRemoveListener</a> (<a class="el" href="classof_event.html">ofEvent</a>&lt; void &gt; &amp;event, ListenerClass *listener, bool(ListenerClass::*listenerMethod)(const void *), int prio=<a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42ba47e7aa47694dd15c9ead77e15301e5fc">OF_EVENT_ORDER_AFTER_APP</a>)</td></tr>
+<tr class="separator:a48bbed46b923dd41799ba8a3ab997d31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe3bb2157e80878ee8de2b42b333817b"><td class="memTemplParams" colspan="2">template&lt;class ListenerClass &gt; </td></tr>
+<tr class="memitem:afe3bb2157e80878ee8de2b42b333817b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_event_utils_8h.html#afe3bb2157e80878ee8de2b42b333817b">ofRemoveListener</a> (<a class="el" href="classof_event.html">ofEvent</a>&lt; void &gt; &amp;event, ListenerClass *listener, bool(ListenerClass::*listenerMethod)(), int prio=<a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42ba47e7aa47694dd15c9ead77e15301e5fc">OF_EVENT_ORDER_AFTER_APP</a>)</td></tr>
+<tr class="separator:afe3bb2157e80878ee8de2b42b333817b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c2c456b4eba98abb9d06646caf238c5"><td class="memTemplParams" colspan="2">template&lt;class EventType , typename ArgumentsType , typename SenderType &gt; </td></tr>
 <tr class="memitem:a4c2c456b4eba98abb9d06646caf238c5"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_event_utils_8h.html#a4c2c456b4eba98abb9d06646caf238c5">ofNotifyEvent</a> (EventType &amp;event, ArgumentsType &amp;args, SenderType *sender)</td></tr>
 <tr class="separator:a4c2c456b4eba98abb9d06646caf238c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -115,8 +150,29 @@ Functions</h2></td></tr>
 <tr class="memitem:af05383f89a63e883ef993fa845ad128c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_event_utils_8h.html#af05383f89a63e883ef993fa845ad128c">ofNotifyEvent</a> (<a class="el" href="classof_event.html">ofEvent</a>&lt; void &gt; &amp;event)</td></tr>
 <tr class="separator:af05383f89a63e883ef993fa845ad128c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a class="anchor" id="a09bc3e2c6034a656a3bb3da9aff5a42b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42b">ofEventOrder</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="a09bc3e2c6034a656a3bb3da9aff5a42bae9b215d18387d657ad4220e481cef412"></a>OF_EVENT_ORDER_BEFORE_APP</em>&nbsp;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a09bc3e2c6034a656a3bb3da9aff5a42bac26edc83f51be01f695ac9989fcf71c2"></a>OF_EVENT_ORDER_APP</em>&nbsp;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a09bc3e2c6034a656a3bb3da9aff5a42ba47e7aa47694dd15c9ead77e15301e5fc"></a>OF_EVENT_ORDER_AFTER_APP</em>&nbsp;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="afe9a6389ae9b0ec1a0aa68dc8510d2d5"></a>
+<a class="anchor" id="a8fcc229705279597797cc3fdb7a4a25d"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -138,7 +194,13 @@ template&lt;class EventType , typename ArgumentsType , class ListenerClass &gt; 
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">void(ListenerClass::*)(const void *, ArgumentsType &amp;)&#160;</td>
-          <td class="paramname"><em>listenerMethod</em>&#160;</td>
+          <td class="paramname"><em>listenerMethod</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>prio</em> = <code><a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42ba47e7aa47694dd15c9ead77e15301e5fc">OF_EVENT_ORDER_AFTER_APP</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -150,7 +212,7 @@ template&lt;class EventType , typename ArgumentsType , class ListenerClass &gt; 
 
 </div>
 </div>
-<a class="anchor" id="a197c004724cf4cc9413321f519649550"></a>
+<a class="anchor" id="a399faed9693dd4a79afd564c4ec92492"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -172,7 +234,13 @@ template&lt;class EventType , typename ArgumentsType , class ListenerClass &gt; 
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">void(ListenerClass::*)(ArgumentsType &amp;)&#160;</td>
-          <td class="paramname"><em>listenerMethod</em>&#160;</td>
+          <td class="paramname"><em>listenerMethod</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>prio</em> = <code><a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42ba47e7aa47694dd15c9ead77e15301e5fc">OF_EVENT_ORDER_AFTER_APP</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -184,7 +252,7 @@ template&lt;class EventType , typename ArgumentsType , class ListenerClass &gt; 
 
 </div>
 </div>
-<a class="anchor" id="a67f4409c8df2af7519e1e91b031fe34f"></a>
+<a class="anchor" id="aed3c12d14d401f240d3090ddb0a99c7b"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -206,7 +274,13 @@ template&lt;class ListenerClass &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">void(ListenerClass::*)(const void *)&#160;</td>
-          <td class="paramname"><em>listenerMethod</em>&#160;</td>
+          <td class="paramname"><em>listenerMethod</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>prio</em> = <code><a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42ba47e7aa47694dd15c9ead77e15301e5fc">OF_EVENT_ORDER_AFTER_APP</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -218,7 +292,7 @@ template&lt;class ListenerClass &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a6c77f3f288a2d8ed148d1cff10d58589"></a>
+<a class="anchor" id="a749d8ef3e78c9074ad7b5e0e8f500ab6"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -240,7 +314,173 @@ template&lt;class ListenerClass &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">void(ListenerClass::*)()&#160;</td>
-          <td class="paramname"><em>listenerMethod</em>&#160;</td>
+          <td class="paramname"><em>listenerMethod</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>prio</em> = <code><a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42ba47e7aa47694dd15c9ead77e15301e5fc">OF_EVENT_ORDER_AFTER_APP</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aff64abcb7d7738b08d3ffe8945ad12b3"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class EventType , typename ArgumentsType , class ListenerClass &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofAddListener </td>
+          <td>(</td>
+          <td class="paramtype">EventType &amp;&#160;</td>
+          <td class="paramname"><em>event</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ListenerClass *&#160;</td>
+          <td class="paramname"><em>listener</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool(ListenerClass::*)(const void *, ArgumentsType &amp;)&#160;</td>
+          <td class="paramname"><em>listenerMethod</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>prio</em> = <code><a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42ba47e7aa47694dd15c9ead77e15301e5fc">OF_EVENT_ORDER_AFTER_APP</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0621b85b7876de16e088cdfdace9c9eb"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class EventType , typename ArgumentsType , class ListenerClass &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofAddListener </td>
+          <td>(</td>
+          <td class="paramtype">EventType &amp;&#160;</td>
+          <td class="paramname"><em>event</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ListenerClass *&#160;</td>
+          <td class="paramname"><em>listener</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool(ListenerClass::*)(ArgumentsType &amp;)&#160;</td>
+          <td class="paramname"><em>listenerMethod</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>prio</em> = <code><a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42ba47e7aa47694dd15c9ead77e15301e5fc">OF_EVENT_ORDER_AFTER_APP</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa432a7ef7c17b1aa88c3664bc60a5f13"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ListenerClass &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofAddListener </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classof_event.html">ofEvent</a>&lt; void &gt; &amp;&#160;</td>
+          <td class="paramname"><em>event</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ListenerClass *&#160;</td>
+          <td class="paramname"><em>listener</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool(ListenerClass::*)(const void *)&#160;</td>
+          <td class="paramname"><em>listenerMethod</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>prio</em> = <code><a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42ba47e7aa47694dd15c9ead77e15301e5fc">OF_EVENT_ORDER_AFTER_APP</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3e9f764368480c2a488758da6c059239"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ListenerClass &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofAddListener </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classof_event.html">ofEvent</a>&lt; void &gt; &amp;&#160;</td>
+          <td class="paramname"><em>event</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ListenerClass *&#160;</td>
+          <td class="paramname"><em>listener</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool(ListenerClass::*)()&#160;</td>
+          <td class="paramname"><em>listenerMethod</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>prio</em> = <code><a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42ba47e7aa47694dd15c9ead77e15301e5fc">OF_EVENT_ORDER_AFTER_APP</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -428,7 +668,7 @@ template&lt;typename SenderType &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a4e750c11825c889b69989df2aa304cec"></a>
+<a class="anchor" id="a6fcffba7ff95a4bf9ebfb31a3bb694b8"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -450,7 +690,13 @@ template&lt;class EventType , typename ArgumentsType , class ListenerClass &gt; 
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">void(ListenerClass::*)(const void *, ArgumentsType &amp;)&#160;</td>
-          <td class="paramname"><em>listenerMethod</em>&#160;</td>
+          <td class="paramname"><em>listenerMethod</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>prio</em> = <code><a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42ba47e7aa47694dd15c9ead77e15301e5fc">OF_EVENT_ORDER_AFTER_APP</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -462,7 +708,7 @@ template&lt;class EventType , typename ArgumentsType , class ListenerClass &gt; 
 
 </div>
 </div>
-<a class="anchor" id="a2ed7cdcdd5ef1e4a8739cdb118dbb2b0"></a>
+<a class="anchor" id="a767fd48fa6bd5f59c3b6ee92dd8f75d3"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -484,7 +730,13 @@ template&lt;class EventType , typename ArgumentsType , class ListenerClass &gt; 
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">void(ListenerClass::*)(ArgumentsType &amp;)&#160;</td>
-          <td class="paramname"><em>listenerMethod</em>&#160;</td>
+          <td class="paramname"><em>listenerMethod</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>prio</em> = <code><a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42ba47e7aa47694dd15c9ead77e15301e5fc">OF_EVENT_ORDER_AFTER_APP</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -496,7 +748,7 @@ template&lt;class EventType , typename ArgumentsType , class ListenerClass &gt; 
 
 </div>
 </div>
-<a class="anchor" id="a6d0342054cf5cb4e66082fef9c8743d4"></a>
+<a class="anchor" id="ab8353457999138ecaecbb08d2420b23c"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -518,7 +770,13 @@ template&lt;class ListenerClass &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">void(ListenerClass::*)(const void *)&#160;</td>
-          <td class="paramname"><em>listenerMethod</em>&#160;</td>
+          <td class="paramname"><em>listenerMethod</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>prio</em> = <code><a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42ba47e7aa47694dd15c9ead77e15301e5fc">OF_EVENT_ORDER_AFTER_APP</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -530,7 +788,7 @@ template&lt;class ListenerClass &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a4caeb1d89aa3c421e584b82b649e244b"></a>
+<a class="anchor" id="aa08911744c04236a1db04e706f15386d"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -552,7 +810,173 @@ template&lt;class ListenerClass &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">void(ListenerClass::*)()&#160;</td>
-          <td class="paramname"><em>listenerMethod</em>&#160;</td>
+          <td class="paramname"><em>listenerMethod</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>prio</em> = <code><a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42ba47e7aa47694dd15c9ead77e15301e5fc">OF_EVENT_ORDER_AFTER_APP</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5a038bc00bcba900a89007f923906f07"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class EventType , typename ArgumentsType , class ListenerClass &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofRemoveListener </td>
+          <td>(</td>
+          <td class="paramtype">EventType &amp;&#160;</td>
+          <td class="paramname"><em>event</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ListenerClass *&#160;</td>
+          <td class="paramname"><em>listener</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool(ListenerClass::*)(const void *, ArgumentsType &amp;)&#160;</td>
+          <td class="paramname"><em>listenerMethod</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>prio</em> = <code><a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42ba47e7aa47694dd15c9ead77e15301e5fc">OF_EVENT_ORDER_AFTER_APP</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3f3c1a90f5752e2eb61d85b0f0d40f1a"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class EventType , typename ArgumentsType , class ListenerClass &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofRemoveListener </td>
+          <td>(</td>
+          <td class="paramtype">EventType &amp;&#160;</td>
+          <td class="paramname"><em>event</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ListenerClass *&#160;</td>
+          <td class="paramname"><em>listener</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool(ListenerClass::*)(ArgumentsType &amp;)&#160;</td>
+          <td class="paramname"><em>listenerMethod</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>prio</em> = <code><a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42ba47e7aa47694dd15c9ead77e15301e5fc">OF_EVENT_ORDER_AFTER_APP</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a48bbed46b923dd41799ba8a3ab997d31"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ListenerClass &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofRemoveListener </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classof_event.html">ofEvent</a>&lt; void &gt; &amp;&#160;</td>
+          <td class="paramname"><em>event</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ListenerClass *&#160;</td>
+          <td class="paramname"><em>listener</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool(ListenerClass::*)(const void *)&#160;</td>
+          <td class="paramname"><em>listenerMethod</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>prio</em> = <code><a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42ba47e7aa47694dd15c9ead77e15301e5fc">OF_EVENT_ORDER_AFTER_APP</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afe3bb2157e80878ee8de2b42b333817b"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ListenerClass &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofRemoveListener </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classof_event.html">ofEvent</a>&lt; void &gt; &amp;&#160;</td>
+          <td class="paramname"><em>event</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ListenerClass *&#160;</td>
+          <td class="paramname"><em>listener</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool(ListenerClass::*)()&#160;</td>
+          <td class="paramname"><em>listenerMethod</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>prio</em> = <code><a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42ba47e7aa47694dd15c9ead77e15301e5fc">OF_EVENT_ORDER_AFTER_APP</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>

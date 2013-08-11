@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -57,6 +58,10 @@
 <p>This is the complete list of members for <a class="el" href="classof_sound_stream.html">ofSoundStream</a>, including all inherited members.</p>
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="classof_sound_stream.html#a4e7be9ede60368dcbe1566b6a7c7937b">close</a>()</td><td class="entry"><a class="el" href="classof_sound_stream.html">ofSoundStream</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classof_sound_stream.html#adac81ab108d13712887591e2985f99b4">getBufferSize</a>()</td><td class="entry"><a class="el" href="classof_sound_stream.html">ofSoundStream</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classof_sound_stream.html#acad14341e4a7eafb7b7b8012d6745feb">getNumInputChannels</a>()</td><td class="entry"><a class="el" href="classof_sound_stream.html">ofSoundStream</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classof_sound_stream.html#a6c5cd61d04e29c2473d2cd1a5a93543a">getNumOutputChannels</a>()</td><td class="entry"><a class="el" href="classof_sound_stream.html">ofSoundStream</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classof_sound_stream.html#a6637b6fc50ffb7df5f32829bc5b6ef50">getSampleRate</a>()</td><td class="entry"><a class="el" href="classof_sound_stream.html">ofSoundStream</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classof_sound_stream.html#a646214476abc2b65545e31fb5a7facd7">getSoundStream</a>()</td><td class="entry"><a class="el" href="classof_sound_stream.html">ofSoundStream</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classof_sound_stream.html#a7987c9afe679fa80a41a622338e181d5">getTickCount</a>()</td><td class="entry"><a class="el" href="classof_sound_stream.html">ofSoundStream</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classof_sound_stream.html#a7ab3c672a357f1b30c8e3b7db6b14fc7">listDevices</a>()</td><td class="entry"><a class="el" href="classof_sound_stream.html">ofSoundStream</a></td><td class="entry"></td></tr>

@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -99,8 +100,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a60fe7e958425a201429c68bd2cb70449"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6fa13f2b93ad6527cfb71afe57b68c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_q_t_kit_grabber.html#ae6fa13f2b93ad6527cfb71afe57b68c0">setVerbose</a> (bool bTalkToMe)</td></tr>
 <tr class="separator:ae6fa13f2b93ad6527cfb71afe57b68c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8ebeb35faa9fe13dbac5889f715248c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_q_t_kit_grabber.html#ad8ebeb35faa9fe13dbac5889f715248c">listDevices</a> ()</td></tr>
-<tr class="separator:ad8ebeb35faa9fe13dbac5889f715248c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b89986c5cac6aa01b1e8c217c7b8877"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="classof_video_device.html">ofVideoDevice</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_q_t_kit_grabber.html#a5b89986c5cac6aa01b1e8c217c7b8877">listDevices</a> ()</td></tr>
+<tr class="separator:a5b89986c5cac6aa01b1e8c217c7b8877"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f0f918e82be2db814ed2594bcbe27f6"><td class="memItemLeft" align="right" valign="top">vector&lt; string &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_q_t_kit_grabber.html#a6f0f918e82be2db814ed2594bcbe27f6">listAudioDevices</a> ()</td></tr>
 <tr class="separator:a6f0f918e82be2db814ed2594bcbe27f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad19c82dfdd26d21cf8d90197fd6377f0"><td class="memItemLeft" align="right" valign="top">vector&lt; string &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_q_t_kit_grabber.html#ad19c82dfdd26d21cf8d90197fd6377f0">listVideoDevices</a> ()</td></tr>
@@ -645,7 +646,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ad8ebeb35faa9fe13dbac5889f715248c"></a>
+<a class="anchor" id="a5b89986c5cac6aa01b1e8c217c7b8877"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -653,7 +654,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void ofQTKitGrabber::listDevices </td>
+          <td class="memname">vector&lt; <a class="el" href="classof_video_device.html">ofVideoDevice</a> &gt; ofQTKitGrabber::listDevices </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -666,7 +667,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classof_base_video_grabber.html#a0ee487203961b1d6b635598a181a9835">ofBaseVideoGrabber</a>.</p>
+<p>Implements <a class="el" href="classof_base_video_grabber.html#ae82f0a1c87fe69c86f1738cae560efb2">ofBaseVideoGrabber</a>.</p>
 
 </div>
 </div>
@@ -765,7 +766,7 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1308,8 +1309,8 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>video/<a class="el" href="of_q_t_kit_grabber_8h_source.html">ofQTKitGrabber.h</a></li>
-<li>video/<a class="el" href="of_q_t_kit_grabber_8mm.html">ofQTKitGrabber.mm</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/video/<a class="el" href="of_q_t_kit_grabber_8h_source.html">ofQTKitGrabber.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/video/<a class="el" href="of_q_t_kit_grabber_8mm.html">ofQTKitGrabber.mm</a></li>
 </ul>
 </div><!-- contents -->
 

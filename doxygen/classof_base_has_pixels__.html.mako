@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -64,26 +65,27 @@ Inheritance diagram for ofBaseHasPixels_&lt; T &gt;:</div>
  <div class="center">
   <img src="classof_base_has_pixels__.png" usemap="#ofBaseHasPixels_&lt; T &gt;_map" alt=""/>
   <map id="ofBaseHasPixels_&lt; T &gt;_map" name="ofBaseHasPixels_&lt; T &gt;_map">
-<area href="classof_abstract_has_pixels.html" alt="ofAbstractHasPixels" shape="rect" coords="385,0,529,24"/>
-<area href="classof_base_image__.html" alt="ofBaseImage_&lt; T &gt;" shape="rect" coords="0,112,144,136"/>
-<area href="classof_base_video.html" alt="ofBaseVideo" shape="rect" coords="770,112,914,136"/>
-<area href="classof_base_video_draws.html" alt="ofBaseVideoDraws" shape="rect" coords="0,168,144,192"/>
-<area href="classof_base_video_draws.html" alt="ofBaseVideoDraws" shape="rect" coords="308,168,452,192"/>
-<area href="classof_base_video_grabber.html" alt="ofBaseVideoGrabber" shape="rect" coords="616,168,760,192"/>
-<area href="classof_base_video_player.html" alt="ofBaseVideoPlayer" shape="rect" coords="924,168,1068,192"/>
-<area href="classof_gst_video_utils.html" alt="ofGstVideoUtils" shape="rect" coords="1078,168,1222,192"/>
-<area href="classof_video_grabber.html" alt="ofVideoGrabber" shape="rect" coords="154,224,298,248"/>
-<area href="classof_video_player.html" alt="ofVideoPlayer" shape="rect" coords="154,280,298,304"/>
-<area href="classof_video_grabber.html" alt="ofVideoGrabber" shape="rect" coords="462,224,606,248"/>
-<area href="classof_video_player.html" alt="ofVideoPlayer" shape="rect" coords="462,280,606,304"/>
-<area href="classof_direct_show_grabber.html" alt="ofDirectShowGrabber" shape="rect" coords="770,224,914,248"/>
-<area href="classof_gst_video_grabber.html" alt="ofGstVideoGrabber" shape="rect" coords="770,280,914,304"/>
-<area href="classof_q_t_kit_grabber.html" alt="ofQTKitGrabber" shape="rect" coords="770,336,914,360"/>
-<area href="classof_quick_time_grabber.html" alt="ofQuickTimeGrabber" shape="rect" coords="770,392,914,416"/>
-<area href="classof_video_grabber.html" alt="ofVideoGrabber" shape="rect" coords="770,448,914,472"/>
-<area href="classof_gst_video_player.html" alt="ofGstVideoPlayer" shape="rect" coords="1078,224,1222,248"/>
-<area href="classof_q_t_kit_player.html" alt="ofQTKitPlayer" shape="rect" coords="1078,280,1222,304"/>
-<area href="classof_video_player.html" alt="ofVideoPlayer" shape="rect" coords="1078,336,1222,360"/>
+<area href="classof_abstract_has_pixels.html" alt="ofAbstractHasPixels" shape="rect" coords="492,0,661,24"/>
+<area href="classof_base_image__.html" alt="ofBaseImage_&lt; T &gt;" shape="rect" coords="89,112,258,136"/>
+<area href="classof_base_video.html" alt="ofBaseVideo" shape="rect" coords="895,112,1064,136"/>
+<area href="classof_base_video_draws.html" alt="ofBaseVideoDraws" shape="rect" coords="0,168,169,192"/>
+<area href="classof_image__.html" alt="ofImage_&lt; unsigned char &gt;" shape="rect" coords="179,168,348,192"/>
+<area href="classof_base_video_draws.html" alt="ofBaseVideoDraws" shape="rect" coords="358,168,527,192"/>
+<area href="classof_base_video_grabber.html" alt="ofBaseVideoGrabber" shape="rect" coords="716,168,885,192"/>
+<area href="classof_base_video_player.html" alt="ofBaseVideoPlayer" shape="rect" coords="1074,168,1243,192"/>
+<area href="classof_gst_video_utils.html" alt="ofGstVideoUtils" shape="rect" coords="1253,168,1422,192"/>
+<area href="classof_video_grabber.html" alt="ofVideoGrabber" shape="rect" coords="179,224,348,248"/>
+<area href="classof_video_player.html" alt="ofVideoPlayer" shape="rect" coords="179,280,348,304"/>
+<area href="classof_video_grabber.html" alt="ofVideoGrabber" shape="rect" coords="537,224,706,248"/>
+<area href="classof_video_player.html" alt="ofVideoPlayer" shape="rect" coords="537,280,706,304"/>
+<area href="classof_direct_show_grabber.html" alt="ofDirectShowGrabber" shape="rect" coords="895,224,1064,248"/>
+<area href="classof_gst_video_grabber.html" alt="ofGstVideoGrabber" shape="rect" coords="895,280,1064,304"/>
+<area href="classof_q_t_kit_grabber.html" alt="ofQTKitGrabber" shape="rect" coords="895,336,1064,360"/>
+<area href="classof_quick_time_grabber.html" alt="ofQuickTimeGrabber" shape="rect" coords="895,392,1064,416"/>
+<area href="classof_video_grabber.html" alt="ofVideoGrabber" shape="rect" coords="895,448,1064,472"/>
+<area href="classof_gst_video_player.html" alt="ofGstVideoPlayer" shape="rect" coords="1253,224,1422,248"/>
+<area href="classof_q_t_kit_player.html" alt="ofQTKitPlayer" shape="rect" coords="1253,280,1422,304"/>
+<area href="classof_video_player.html" alt="ofVideoPlayer" shape="rect" coords="1253,336,1422,360"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -149,7 +151,7 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classof_base_video_player.html#a219fabc2debd7c542e10a56738fe1f5a">ofBaseVideoPlayer</a>, <a class="el" href="classof_base_video_grabber.html#a7a9d9dc85963036f16d937cee730f654">ofBaseVideoGrabber</a>, <a class="el" href="classof_image__.html#ace37e73eb6ca7b8165b790ac7b51e715">ofImage_&lt; PixelType &gt;</a>, <a class="el" href="classof_gst_video_utils.html#a0c7fc633ebf27589941219d99c17f0fa">ofGstVideoUtils</a>, <a class="el" href="classof_video_grabber.html#af0e4656deee139fb550f6feb4e24ecc8">ofVideoGrabber</a>, <a class="el" href="classof_q_t_kit_player.html#a2f3ba09830190f6dc14466f7b593ec59">ofQTKitPlayer</a>, <a class="el" href="classof_video_player.html#af5bd9b31b5d07baeffd5d2f378a21f59">ofVideoPlayer</a>, <a class="el" href="classof_gst_video_grabber.html#a96fb7659d28b1404265d0007f8aff0e5">ofGstVideoGrabber</a>, <a class="el" href="classof_gst_video_player.html#adb8ee823c3f1616c406e0d5d26218953">ofGstVideoPlayer</a>, <a class="el" href="classof_q_t_kit_grabber.html#a8f263d95ef1fd2c5389c021b9c7a9e40">ofQTKitGrabber</a>, <a class="el" href="classof_quick_time_grabber.html#a1c08e8952ff56728fd619c6258479b59">ofQuickTimeGrabber</a>, and <a class="el" href="classof_direct_show_grabber.html#acc815e60b8edd19f443a5e2ac0caa893">ofDirectShowGrabber</a>.</p>
+<p>Implemented in <a class="el" href="classof_base_video_player.html#a219fabc2debd7c542e10a56738fe1f5a">ofBaseVideoPlayer</a>, <a class="el" href="classof_base_video_grabber.html#a7a9d9dc85963036f16d937cee730f654">ofBaseVideoGrabber</a>, <a class="el" href="classof_image__.html#ace37e73eb6ca7b8165b790ac7b51e715">ofImage_&lt; PixelType &gt;</a>, <a class="el" href="classof_image__.html#ace37e73eb6ca7b8165b790ac7b51e715">ofImage_&lt; unsigned char &gt;</a>, <a class="el" href="classof_gst_video_utils.html#a0c7fc633ebf27589941219d99c17f0fa">ofGstVideoUtils</a>, <a class="el" href="classof_video_grabber.html#af0e4656deee139fb550f6feb4e24ecc8">ofVideoGrabber</a>, <a class="el" href="classof_video_player.html#af5bd9b31b5d07baeffd5d2f378a21f59">ofVideoPlayer</a>, <a class="el" href="classof_q_t_kit_player.html#a2f3ba09830190f6dc14466f7b593ec59">ofQTKitPlayer</a>, <a class="el" href="classof_gst_video_grabber.html#a96fb7659d28b1404265d0007f8aff0e5">ofGstVideoGrabber</a>, <a class="el" href="classof_gst_video_player.html#adb8ee823c3f1616c406e0d5d26218953">ofGstVideoPlayer</a>, <a class="el" href="classof_q_t_kit_grabber.html#a8f263d95ef1fd2c5389c021b9c7a9e40">ofQTKitGrabber</a>, <a class="el" href="classof_quick_time_grabber.html#a1c08e8952ff56728fd619c6258479b59">ofQuickTimeGrabber</a>, and <a class="el" href="classof_direct_show_grabber.html#acc815e60b8edd19f443a5e2ac0caa893">ofDirectShowGrabber</a>.</p>
 
 </div>
 </div>
@@ -176,12 +178,12 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classof_image__.html#acfb1f23287b497700e179a5a2dd37f9a">ofImage_&lt; PixelType &gt;</a>, <a class="el" href="classof_gst_video_utils.html#a144c83ce876eca7fac1262f408c8be6f">ofGstVideoUtils</a>, <a class="el" href="classof_video_grabber.html#abf832b3ad4b29aa5f787b66de2a4897a">ofVideoGrabber</a>, <a class="el" href="classof_q_t_kit_player.html#a4aba6e989b316ecc03fb8ed9bfde5c25">ofQTKitPlayer</a>, <a class="el" href="classof_video_player.html#a7702772cc77fd61d2d4e2c2b338b5291">ofVideoPlayer</a>, <a class="el" href="classof_gst_video_grabber.html#a82629d46c4013b68ff18203d62a1f85f">ofGstVideoGrabber</a>, <a class="el" href="classof_gst_video_player.html#a03dd7044e94436eb95db728ff5ab5314">ofGstVideoPlayer</a>, <a class="el" href="classof_q_t_kit_grabber.html#a60fe7e958425a201429c68bd2cb70449">ofQTKitGrabber</a>, <a class="el" href="classof_quick_time_grabber.html#a9dda4485108619ae84cd5425cd5c0ab0">ofQuickTimeGrabber</a>, and <a class="el" href="classof_direct_show_grabber.html#aee0f557356afd74a692e6453277f9d0c">ofDirectShowGrabber</a>.</p>
+<p>Implemented in <a class="el" href="classof_image__.html#acfb1f23287b497700e179a5a2dd37f9a">ofImage_&lt; PixelType &gt;</a>, <a class="el" href="classof_image__.html#acfb1f23287b497700e179a5a2dd37f9a">ofImage_&lt; unsigned char &gt;</a>, <a class="el" href="classof_gst_video_utils.html#a144c83ce876eca7fac1262f408c8be6f">ofGstVideoUtils</a>, <a class="el" href="classof_video_grabber.html#abf832b3ad4b29aa5f787b66de2a4897a">ofVideoGrabber</a>, <a class="el" href="classof_video_player.html#a7702772cc77fd61d2d4e2c2b338b5291">ofVideoPlayer</a>, <a class="el" href="classof_q_t_kit_player.html#a4aba6e989b316ecc03fb8ed9bfde5c25">ofQTKitPlayer</a>, <a class="el" href="classof_gst_video_grabber.html#a82629d46c4013b68ff18203d62a1f85f">ofGstVideoGrabber</a>, <a class="el" href="classof_gst_video_player.html#a03dd7044e94436eb95db728ff5ab5314">ofGstVideoPlayer</a>, <a class="el" href="classof_q_t_kit_grabber.html#a60fe7e958425a201429c68bd2cb70449">ofQTKitGrabber</a>, <a class="el" href="classof_quick_time_grabber.html#a9dda4485108619ae84cd5425cd5c0ab0">ofQuickTimeGrabber</a>, and <a class="el" href="classof_direct_show_grabber.html#aee0f557356afd74a692e6453277f9d0c">ofDirectShowGrabber</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>types/<a class="el" href="of_base_types_8h_source.html">ofBaseTypes.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/types/<a class="el" href="of_base_types_8h_source.html">ofBaseTypes.h</a></li>
 </ul>
 </div><!-- contents -->
 

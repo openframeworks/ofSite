@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -47,7 +48,7 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_e79632891301b850df87e9c0030293fa.html">graphics</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_84d5b34cee6369a03c8d1f3b970ed216.html">openFrameworks</a></li><li class="navelem"><a class="el" href="dir_71ce5ed87e0eac5aae2f3eaf44c16fe2.html">graphics</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -65,6 +66,7 @@
 <code>#include &quot;<a class="el" href="of_g_l_renderer_8h_source.html">ofGLRenderer.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="of_path_8h_source.html">ofPath.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="of_renderer_collection_8h_source.html">ofRendererCollection.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="of_g_l_programmable_renderer_8h_source.html">ofGLProgrammableRenderer.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="of_cairo_renderer_8h_source.html">ofCairoRenderer.h</a>&quot;</code><br/>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
@@ -74,12 +76,12 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a40ae986d8351d342ccab15d1d6dd2d60"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#a40ae986d8351d342ccab15d1d6dd2d60">ofSetCurrentRenderer</a> (<a class="el" href="classof_ptr.html">ofPtr</a>&lt; <a class="el" href="classof_base_renderer.html">ofBaseRenderer</a> &gt; renderer_)</td></tr>
-<tr class="separator:a40ae986d8351d342ccab15d1d6dd2d60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa86681f722b71273e9088c32494e82cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#aa86681f722b71273e9088c32494e82cd">ofSetCurrentRenderer</a> (const string &amp;rendererType, bool setDefaults)</td></tr>
+<tr class="separator:aa86681f722b71273e9088c32494e82cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ec8b13ea8fa76ea7f3eb3cd3975b701"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#a6ec8b13ea8fa76ea7f3eb3cd3975b701">ofSetCurrentRenderer</a> (<a class="el" href="classof_ptr.html">ofPtr</a>&lt; <a class="el" href="classof_base_renderer.html">ofBaseRenderer</a> &gt; renderer_, bool setDefaults)</td></tr>
+<tr class="separator:a6ec8b13ea8fa76ea7f3eb3cd3975b701"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5af4f0d15709b91e778564842e7a6db5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_ptr.html">ofPtr</a>&lt; <a class="el" href="classof_base_renderer.html">ofBaseRenderer</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#a5af4f0d15709b91e778564842e7a6db5">ofGetCurrentRenderer</a> ()</td></tr>
 <tr class="separator:a5af4f0d15709b91e778564842e7a6db5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac11af371124c215495e01a8a3a4eaf3a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_ptr.html">ofPtr</a>&lt; <a class="el" href="classof_g_l_renderer.html">ofGLRenderer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#ac11af371124c215495e01a8a3a4eaf3a">ofGetGLRenderer</a> ()</td></tr>
-<tr class="separator:ac11af371124c215495e01a8a3a4eaf3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb5451c7fce97df115fe8618e6229505"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#abb5451c7fce97df115fe8618e6229505">ofBeginSaveScreenAsPDF</a> (string filename, bool bMultipage, bool b3D, <a class="el" href="classof_rectangle.html">ofRectangle</a> viewport)</td></tr>
 <tr class="separator:abb5451c7fce97df115fe8618e6229505"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a21e5ba201341498a2e2dd1700bdeda"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#a4a21e5ba201341498a2e2dd1700bdeda">ofEndSaveScreenAsPDF</a> ()</td></tr>
@@ -90,24 +92,32 @@ Functions</h2></td></tr>
 <tr class="separator:a2839f3526b16f01c4e06158d6eb00393"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95cb04add69b7de7403d4d022e5f0391"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#a95cb04add69b7de7403d4d022e5f0391">ofViewport</a> (<a class="el" href="classof_rectangle.html">ofRectangle</a> viewport)</td></tr>
 <tr class="separator:a95cb04add69b7de7403d4d022e5f0391"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aead3031118ca164aae1f8b9b00c1b549"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#aead3031118ca164aae1f8b9b00c1b549">ofViewport</a> (float x, float y, float width, float height, bool invertY)</td></tr>
+<tr class="memitem:aead3031118ca164aae1f8b9b00c1b549"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#aead3031118ca164aae1f8b9b00c1b549">ofViewport</a> (float x, float y, float <a class="el" href="of_icon_8h.html#aca34d28e3d8bcbcadb8edb4e3af24f8c">width</a>, float <a class="el" href="of_icon_8h.html#ab2e78c61905b4419fcc7b4cfc500fe85">height</a>, bool invertY)</td></tr>
 <tr class="separator:aead3031118ca164aae1f8b9b00c1b549"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b45fc63c10fdf222fcbf20543183220"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_rectangle.html">ofRectangle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#a9b45fc63c10fdf222fcbf20543183220">ofGetCurrentViewport</a> ()</td></tr>
 <tr class="separator:a9b45fc63c10fdf222fcbf20543183220"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac992a04616c1c5ab63e4f85354f49f85"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_rectangle.html">ofRectangle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#ac992a04616c1c5ab63e4f85354f49f85">ofGetNativeViewport</a> ()</td></tr>
+<tr class="separator:ac992a04616c1c5ab63e4f85354f49f85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afcf3ff3d2b069575405c8b4e15fa5b11"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#afcf3ff3d2b069575405c8b4e15fa5b11">ofGetViewportWidth</a> ()</td></tr>
 <tr class="separator:afcf3ff3d2b069575405c8b4e15fa5b11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e60bc439b7e73b3f7d65927726bc7f1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#a9e60bc439b7e73b3f7d65927726bc7f1">ofGetViewportHeight</a> ()</td></tr>
 <tr class="separator:a9e60bc439b7e73b3f7d65927726bc7f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6021c01064b53d531b82626c1e7478fc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#a6021c01064b53d531b82626c1e7478fc">ofOrientationToDegrees</a> (<a class="el" href="of_constants_8h.html#a85ec4045e22bafeea5c561f9778c1f1c">ofOrientation</a> orientation)</td></tr>
 <tr class="separator:a6021c01064b53d531b82626c1e7478fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a112ebf9b37b365ab634260fa7413d92e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#a112ebf9b37b365ab634260fa7413d92e">ofIsVFlipped</a> ()</td></tr>
+<tr class="separator:a112ebf9b37b365ab634260fa7413d92e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9ef1ea2ced1ba354ff486af1a32348a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#ad9ef1ea2ced1ba354ff486af1a32348a">ofSetCoordHandedness</a> (<a class="el" href="of_constants_8h.html#a35cd63b4a2e112ecf30eaf0542f2388b">ofHandednessType</a> handedness)</td></tr>
 <tr class="separator:ad9ef1ea2ced1ba354ff486af1a32348a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63e641c07db5b649b5be63e9a33ca796"><td class="memItemLeft" align="right" valign="top"><a class="el" href="of_constants_8h.html#a35cd63b4a2e112ecf30eaf0542f2388b">ofHandednessType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#a63e641c07db5b649b5be63e9a33ca796">ofGetCoordHandedness</a> ()</td></tr>
 <tr class="separator:a63e641c07db5b649b5be63e9a33ca796"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1be6a856b84f22aa64ad2a070d442ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#ab1be6a856b84f22aa64ad2a070d442ae">ofSetupScreenPerspective</a> (float width, float height, <a class="el" href="of_constants_8h.html#a85ec4045e22bafeea5c561f9778c1f1c">ofOrientation</a> orientation, bool vFlip, float fov, float nearDist, float farDist)</td></tr>
+<tr class="memitem:ab1be6a856b84f22aa64ad2a070d442ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#ab1be6a856b84f22aa64ad2a070d442ae">ofSetupScreenPerspective</a> (float <a class="el" href="of_icon_8h.html#aca34d28e3d8bcbcadb8edb4e3af24f8c">width</a>, float <a class="el" href="of_icon_8h.html#ab2e78c61905b4419fcc7b4cfc500fe85">height</a>, <a class="el" href="of_constants_8h.html#a85ec4045e22bafeea5c561f9778c1f1c">ofOrientation</a> orientation, bool vFlip, float fov, float nearDist, float farDist)</td></tr>
 <tr class="separator:ab1be6a856b84f22aa64ad2a070d442ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afccdbc0028f6f149731d8c130be7cac6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#afccdbc0028f6f149731d8c130be7cac6">ofSetupScreenOrtho</a> (float width, float height, <a class="el" href="of_constants_8h.html#a85ec4045e22bafeea5c561f9778c1f1c">ofOrientation</a> orientation, bool vFlip, float nearDist, float farDist)</td></tr>
+<tr class="memitem:afccdbc0028f6f149731d8c130be7cac6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#afccdbc0028f6f149731d8c130be7cac6">ofSetupScreenOrtho</a> (float <a class="el" href="of_icon_8h.html#aca34d28e3d8bcbcadb8edb4e3af24f8c">width</a>, float <a class="el" href="of_icon_8h.html#ab2e78c61905b4419fcc7b4cfc500fe85">height</a>, <a class="el" href="of_constants_8h.html#a85ec4045e22bafeea5c561f9778c1f1c">ofOrientation</a> orientation, bool vFlip, float nearDist, float farDist)</td></tr>
 <tr class="separator:afccdbc0028f6f149731d8c130be7cac6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d15135bfbb10dfcc39e8b636a372c84"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#a9d15135bfbb10dfcc39e8b636a372c84">ofSetupScreenPerspective</a> (float <a class="el" href="of_icon_8h.html#aca34d28e3d8bcbcadb8edb4e3af24f8c">width</a>, float <a class="el" href="of_icon_8h.html#ab2e78c61905b4419fcc7b4cfc500fe85">height</a>, float fov, float nearDist, float farDist)</td></tr>
+<tr class="separator:a9d15135bfbb10dfcc39e8b636a372c84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a059b5cdfe5b0eaba895e2aeeab383d31"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#a059b5cdfe5b0eaba895e2aeeab383d31">ofSetupScreenOrtho</a> (float <a class="el" href="of_icon_8h.html#aca34d28e3d8bcbcadb8edb4e3af24f8c">width</a>, float <a class="el" href="of_icon_8h.html#ab2e78c61905b4419fcc7b4cfc500fe85">height</a>, float nearDist, float farDist)</td></tr>
+<tr class="separator:a059b5cdfe5b0eaba895e2aeeab383d31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3bbf989ce19e74eaef8dfd449476faac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#a3bbf989ce19e74eaef8dfd449476faac">ofSetupGraphicDefaults</a> ()</td></tr>
 <tr class="separator:a3bbf989ce19e74eaef8dfd449476faac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff5f29e5fca99e6c6a291bf0d2e3b49a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#aff5f29e5fca99e6c6a291bf0d2e3b49a">ofSetupScreen</a> ()</td></tr>
@@ -158,6 +168,8 @@ Functions</h2></td></tr>
 <tr class="separator:a0c90134d2762b8832dd8caa03363802a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e3654a284e40341185937f3e8d642b2"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#a9e3654a284e40341185937f3e8d642b2">ofBgColorPtr</a> ()</td></tr>
 <tr class="separator:a9e3654a284e40341185937f3e8d642b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68aa5620690e9f82ae61c0a686cc1836"><td class="memItemLeft" align="right" valign="top"><a class="el" href="of_color_8h.html#a7e21e1ce5fd475dd6ffb9124c55e00dd">ofColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#a68aa5620690e9f82ae61c0a686cc1836">ofGetBackground</a> ()</td></tr>
+<tr class="separator:a68aa5620690e9f82ae61c0a686cc1836"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aabf25a8a2256510d38992e4aabfaeb1d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#aabf25a8a2256510d38992e4aabfaeb1d">ofBackground</a> (int brightness, int alpha)</td></tr>
 <tr class="separator:aabf25a8a2256510d38992e4aabfaeb1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a1048c3d0b586a7b78554aff7d62114"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#a4a1048c3d0b586a7b78554aff7d62114">ofBackground</a> (const <a class="el" href="of_color_8h.html#a7e21e1ce5fd475dd6ffb9124c55e00dd">ofColor</a> &amp;<a class="el" href="of_matrix4x4_8cpp.html#aafc737ea9ef91f59cf9acd287fb8d085">c</a>)</td></tr>
@@ -188,10 +200,14 @@ Functions</h2></td></tr>
 <tr class="separator:a93bbf446ab96aa33c097e0992e016c2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa27a9ae972732c266fdbe578e680f716"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#aa27a9ae972732c266fdbe578e680f716">ofSetLineWidth</a> (float lineWidth)</td></tr>
 <tr class="separator:aa27a9ae972732c266fdbe578e680f716"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01ec3beb5e6e90035744cd8597a0d1f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#a01ec3beb5e6e90035744cd8597a0d1f3">ofSetDepthTest</a> (bool depthTest)</td></tr>
+<tr class="separator:a01ec3beb5e6e90035744cd8597a0d1f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3da9d0dd28e688d394880ec458bd2dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#ad3da9d0dd28e688d394880ec458bd2dc">ofEnableDepthTest</a> ()</td></tr>
+<tr class="separator:ad3da9d0dd28e688d394880ec458bd2dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3e099f60c2d9aeabb6cdc51be7494b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#ab3e099f60c2d9aeabb6cdc51be7494b4">ofDisableDepthTest</a> ()</td></tr>
+<tr class="separator:ab3e099f60c2d9aeabb6cdc51be7494b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa92b50be8af6262f9f5795f530c6ecbe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#aa92b50be8af6262f9f5795f530c6ecbe">ofSetCurveResolution</a> (int res)</td></tr>
 <tr class="separator:aa92b50be8af6262f9f5795f530c6ecbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa767c995f535028f7e1eba514a977519"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#aa767c995f535028f7e1eba514a977519">ofSetSphereResolution</a> (int res)</td></tr>
-<tr class="separator:aa767c995f535028f7e1eba514a977519"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2bc6e23441a66d00f428dfd6beff8eba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#a2bc6e23441a66d00f428dfd6beff8eba">ofSetCircleResolution</a> (int res)</td></tr>
 <tr class="separator:a2bc6e23441a66d00f428dfd6beff8eba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf32a6859916c39dfe5e4835c725fb6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#abf32a6859916c39dfe5e4835c725fb6d">ofSetColor</a> (const <a class="el" href="of_color_8h.html#a7e21e1ce5fd475dd6ffb9124c55e00dd">ofColor</a> &amp;color)</td></tr>
@@ -224,6 +240,10 @@ Functions</h2></td></tr>
 <tr class="separator:af356e3766f294f2723047513ba497b1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9798e5e519b1d09351a602ded3468bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#ab9798e5e519b1d09351a602ded3468bd">ofSetPolyMode</a> (<a class="el" href="of_constants_8h.html#aca8e53bffcbd2dd34e724531d8a0f375">ofPolyWindingMode</a> mode)</td></tr>
 <tr class="separator:ab9798e5e519b1d09351a602ded3468bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2d8182cbc044e23ebe9e3934e9da899"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#ac2d8182cbc044e23ebe9e3934e9da899">ofEnableAntiAliasing</a> ()</td></tr>
+<tr class="separator:ac2d8182cbc044e23ebe9e3934e9da899"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af60a7ee63210252ce741d949c8f8f162"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#af60a7ee63210252ce741d949c8f8f162">ofDisableAntiAliasing</a> ()</td></tr>
+<tr class="separator:af60a7ee63210252ce741d949c8f8f162"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7c21bff5f0eec37f9d73f93f83c61be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#ab7c21bff5f0eec37f9d73f93f83c61be">ofSetDrawBitmapMode</a> (<a class="el" href="of_constants_8h.html#a14966be842b99f71080a7444cebbc0b7">ofDrawBitmapMode</a> mode)</td></tr>
 <tr class="separator:ab7c21bff5f0eec37f9d73f93f83c61be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79446443c35a5544832f5064bf21a8b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#a79446443c35a5544832f5064bf21a8b9">ofSetStyle</a> (<a class="el" href="classof_style.html">ofStyle</a> style)</td></tr>
@@ -246,11 +266,11 @@ Functions</h2></td></tr>
 <tr class="separator:a79512e50f3f313c659e7b9c51eecb570"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d218b67bfe70a42bf370aefd9fc14d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#a6d218b67bfe70a42bf370aefd9fc14d2">ofCircle</a> (float x, float y, float z, float radius)</td></tr>
 <tr class="separator:a6d218b67bfe70a42bf370aefd9fc14d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a948ae4bd718b65f1b14636ca8861c711"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#a948ae4bd718b65f1b14636ca8861c711">ofEllipse</a> (const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;p, float width, float height)</td></tr>
+<tr class="memitem:a948ae4bd718b65f1b14636ca8861c711"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#a948ae4bd718b65f1b14636ca8861c711">ofEllipse</a> (const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;p, float <a class="el" href="of_icon_8h.html#aca34d28e3d8bcbcadb8edb4e3af24f8c">width</a>, float <a class="el" href="of_icon_8h.html#ab2e78c61905b4419fcc7b4cfc500fe85">height</a>)</td></tr>
 <tr class="separator:a948ae4bd718b65f1b14636ca8861c711"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a953dc38486403c98fe036e00811c60e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#a953dc38486403c98fe036e00811c60e7">ofEllipse</a> (float x, float y, float width, float height)</td></tr>
+<tr class="memitem:a953dc38486403c98fe036e00811c60e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#a953dc38486403c98fe036e00811c60e7">ofEllipse</a> (float x, float y, float <a class="el" href="of_icon_8h.html#aca34d28e3d8bcbcadb8edb4e3af24f8c">width</a>, float <a class="el" href="of_icon_8h.html#ab2e78c61905b4419fcc7b4cfc500fe85">height</a>)</td></tr>
 <tr class="separator:a953dc38486403c98fe036e00811c60e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f6480a0d262d6ed0e8ad758b23b5344"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#a5f6480a0d262d6ed0e8ad758b23b5344">ofEllipse</a> (float x, float y, float z, float width, float height)</td></tr>
+<tr class="memitem:a5f6480a0d262d6ed0e8ad758b23b5344"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#a5f6480a0d262d6ed0e8ad758b23b5344">ofEllipse</a> (float x, float y, float z, float <a class="el" href="of_icon_8h.html#aca34d28e3d8bcbcadb8edb4e3af24f8c">width</a>, float <a class="el" href="of_icon_8h.html#ab2e78c61905b4419fcc7b4cfc500fe85">height</a>)</td></tr>
 <tr class="separator:a5f6480a0d262d6ed0e8ad758b23b5344"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc4b7173caaa9e04c8965782c6925bdc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#acc4b7173caaa9e04c8965782c6925bdc">ofLine</a> (const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;p1, const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;p2)</td></tr>
 <tr class="separator:acc4b7173caaa9e04c8965782c6925bdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -272,8 +292,12 @@ Functions</h2></td></tr>
 <tr class="separator:ab1f77f677ced364375c6c6a4588c4057"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b0d48d740134b941833c7d5ebd2f80d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#a5b0d48d740134b941833c7d5ebd2f80d">ofRectRounded</a> (float x, float y, float w, float h, float r)</td></tr>
 <tr class="separator:a5b0d48d740134b941833c7d5ebd2f80d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f30e64b22880d15f641e091fbd0052e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#a4f30e64b22880d15f641e091fbd0052e">ofRectRounded</a> (float x, float y, float z, float w, float h, float r)</td></tr>
-<tr class="separator:a4f30e64b22880d15f641e091fbd0052e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61851298db3be49547880923e3e5d7d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#a61851298db3be49547880923e3e5d7d2">ofRectRounded</a> (const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;p, float w, float h, float topLeftRadius, float topRightRadius, float bottomRightRadius, float bottomLeftRadius)</td></tr>
+<tr class="separator:a61851298db3be49547880923e3e5d7d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad74d04835bb164a3534ecefc92f987db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#ad74d04835bb164a3534ecefc92f987db">ofRectRounded</a> (const <a class="el" href="classof_rectangle.html">ofRectangle</a> &amp;<a class="el" href="of_matrix4x4_8cpp.html#ab2d05693952610f937e5acb3c4a8fa1b">b</a>, float topLeftRadius, float topRightRadius, float bottomRightRadius, float bottomLeftRadius)</td></tr>
+<tr class="separator:ad74d04835bb164a3534ecefc92f987db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4735a5befdd7e3ab633f1319809505db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#a4735a5befdd7e3ab633f1319809505db">ofRectRounded</a> (float x, float y, float z, float w, float h, float topLeftRadius, float topRightRadius, float bottomRightRadius, float bottomLeftRadius)</td></tr>
+<tr class="separator:a4735a5befdd7e3ab633f1319809505db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a274546cd382ccb5d5d3e655e6d8fbe1d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#a274546cd382ccb5d5d3e655e6d8fbe1d">ofCurve</a> (float x0, float y0, float x1, float y1, float x2, float y2, float x3, float y3)</td></tr>
 <tr class="separator:a274546cd382ccb5d5d3e655e6d8fbe1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2fab001492dfea2c6c0a4aeafe584568"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#a2fab001492dfea2c6c0a4aeafe584568">ofCurve</a> (float x0, float y0, float z0, float x1, float y1, float z1, float x2, float y2, float z2, float x3, float y3, float z3)</td></tr>
@@ -292,16 +316,12 @@ Functions</h2></td></tr>
 <tr class="separator:a9b19b7c58761f931c5bd72e9fdbf27c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e5de52268948c766e456f08657014ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#a8e5de52268948c766e456f08657014ef">ofVertices</a> (const vector&lt; <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &gt; &amp;polyPoints)</td></tr>
 <tr class="separator:a8e5de52268948c766e456f08657014ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a883ddbba252bf0b17f6f8cb06c001ce5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#a883ddbba252bf0b17f6f8cb06c001ce5">ofVertexes</a> (const vector&lt; <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &gt; &amp;polyPoints)</td></tr>
-<tr class="separator:a883ddbba252bf0b17f6f8cb06c001ce5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acabbc96ee453b107bc1633086f0fff3e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#acabbc96ee453b107bc1633086f0fff3e">ofCurveVertex</a> (float x, float y)</td></tr>
 <tr class="separator:acabbc96ee453b107bc1633086f0fff3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33e2503de07cfda4d0f753e7e96bb343"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#a33e2503de07cfda4d0f753e7e96bb343">ofCurveVertex</a> (float x, float y, float z)</td></tr>
 <tr class="separator:a33e2503de07cfda4d0f753e7e96bb343"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac26a13f6349c18d48b77b32b48ba6c0c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#ac26a13f6349c18d48b77b32b48ba6c0c">ofCurveVertices</a> (const vector&lt; <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &gt; &amp;curvePoints)</td></tr>
 <tr class="separator:ac26a13f6349c18d48b77b32b48ba6c0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afadf4c3f1e84bb5bbb51aa6557215d6a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#afadf4c3f1e84bb5bbb51aa6557215d6a">ofCurveVertexes</a> (const vector&lt; <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &gt; &amp;curvePoints)</td></tr>
-<tr class="separator:afadf4c3f1e84bb5bbb51aa6557215d6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adabfbe46efff249d6afbe7ea917b7d10"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#adabfbe46efff249d6afbe7ea917b7d10">ofCurveVertex</a> (<a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;p)</td></tr>
 <tr class="separator:adabfbe46efff249d6afbe7ea917b7d10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aecf44c0231a1b83b1142f193f982ee49"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#aecf44c0231a1b83b1142f193f982ee49">ofBezierVertex</a> (float x1, float y1, float x2, float y2, float x3, float y3)</td></tr>
@@ -314,30 +334,6 @@ Functions</h2></td></tr>
 <tr class="separator:a43a4a2c9bf99f00af792a9007e15a10d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a504f5620f1d250cdc41dd1ddf79d8294"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#a504f5620f1d250cdc41dd1ddf79d8294">ofEndShape</a> (bool bClose)</td></tr>
 <tr class="separator:a504f5620f1d250cdc41dd1ddf79d8294"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d5e181690ba48905c2353f36e5b05c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#a6d5e181690ba48905c2353f36e5b05c7">ofSphere</a> (float x, float y, float z, float radius)</td></tr>
-<tr class="separator:a6d5e181690ba48905c2353f36e5b05c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2e33027d7461d2eda01a1b957a067fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#af2e33027d7461d2eda01a1b957a067fb">ofSphere</a> (float x, float y, float radius)</td></tr>
-<tr class="separator:af2e33027d7461d2eda01a1b957a067fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a677809831e62d9222a0a98d1e0595233"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#a677809831e62d9222a0a98d1e0595233">ofSphere</a> (const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;position, float radius)</td></tr>
-<tr class="separator:a677809831e62d9222a0a98d1e0595233"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13e2253ccfcdd10d6125868dae1ba08a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#a13e2253ccfcdd10d6125868dae1ba08a">ofSphere</a> (float radius)</td></tr>
-<tr class="separator:a13e2253ccfcdd10d6125868dae1ba08a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31c2ae230b3f8335cb17cd93b9594ad1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#a31c2ae230b3f8335cb17cd93b9594ad1">ofBox</a> (float x, float y, float z, float size)</td></tr>
-<tr class="separator:a31c2ae230b3f8335cb17cd93b9594ad1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab08d3d0b51a094be62b34c645be04f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#aab08d3d0b51a094be62b34c645be04f4">ofBox</a> (float x, float y, float size)</td></tr>
-<tr class="separator:aab08d3d0b51a094be62b34c645be04f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae625d3a1746010dccfa0f2676dbc00b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#ae625d3a1746010dccfa0f2676dbc00b7">ofBox</a> (const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;position, float size)</td></tr>
-<tr class="separator:ae625d3a1746010dccfa0f2676dbc00b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a740be0cd22c13df041616c0e1d88c3be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#a740be0cd22c13df041616c0e1d88c3be">ofBox</a> (float size)</td></tr>
-<tr class="separator:a740be0cd22c13df041616c0e1d88c3be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8609b26e6d2d061af0e191e77c3e4b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#ad8609b26e6d2d061af0e191e77c3e4b1">ofCone</a> (float x, float y, float z, float radius, float height)</td></tr>
-<tr class="separator:ad8609b26e6d2d061af0e191e77c3e4b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e25b99d8f2e9eb179afc0ed21ccfce7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#a7e25b99d8f2e9eb179afc0ed21ccfce7">ofCone</a> (float x, float y, float radius, float height)</td></tr>
-<tr class="separator:a7e25b99d8f2e9eb179afc0ed21ccfce7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa502465daef5f71fda168a3a67a5f346"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#aa502465daef5f71fda168a3a67a5f346">ofCone</a> (const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;position, float radius, float height)</td></tr>
-<tr class="separator:aa502465daef5f71fda168a3a67a5f346"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acba21832f23577ca64122faa8f45fe99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#acba21832f23577ca64122faa8f45fe99">ofCone</a> (float radius, float height)</td></tr>
-<tr class="separator:acba21832f23577ca64122faa8f45fe99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33abcd02d5cb42a23ca19bcfa5c99c32"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#a33abcd02d5cb42a23ca19bcfa5c99c32">ofDrawBitmapString</a> (string textString, const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;p)</td></tr>
 <tr class="separator:a33abcd02d5cb42a23ca19bcfa5c99c32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3cc0899aad51948883a2a1ea6413cce9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_graphics_8cpp.html#a3cc0899aad51948883a2a1ea6413cce9">ofDrawBitmapString</a> (string textString, float x, float y)</td></tr>
@@ -882,118 +878,6 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a31c2ae230b3f8335cb17cd93b9594ad1"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ofBox </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>z</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>size</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="aab08d3d0b51a094be62b34c645be04f4"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ofBox </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>size</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ae625d3a1746010dccfa0f2676dbc00b7"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ofBox </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;&#160;</td>
-          <td class="paramname"><em>position</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>size</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a740be0cd22c13df041616c0e1d88c3be"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ofBox </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>size</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="a934eb636c14de6bd19cd70e25f180f1d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1179,146 +1063,6 @@ Functions</h2></td></tr>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ad8609b26e6d2d061af0e191e77c3e4b1"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ofCone </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>z</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>radius</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>height</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a7e25b99d8f2e9eb179afc0ed21ccfce7"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ofCone </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>radius</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>height</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="aa502465daef5f71fda168a3a67a5f346"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ofCone </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;&#160;</td>
-          <td class="paramname"><em>position</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>radius</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>height</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="acba21832f23577ca64122faa8f45fe99"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ofCone </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>radius</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>height</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1547,22 +1291,6 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="afadf4c3f1e84bb5bbb51aa6557215d6a"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ofCurveVertexes </td>
-          <td>(</td>
-          <td class="paramtype">const vector&lt; <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>curvePoints</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="ac26a13f6349c18d48b77b32b48ba6c0c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1594,12 +1322,42 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="af60a7ee63210252ce741d949c8f8f162"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofDisableAntiAliasing </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="acfd06ec30515dbf0541e65887c7e7332"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void ofDisableBlendMode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab3e099f60c2d9aeabb6cdc51be7494b4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofDisableDepthTest </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1946,6 +1704,21 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ac2d8182cbc044e23ebe9e3934e9da899"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofEnableAntiAliasing </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="ad5249029f45c096dd41d1dd11a134f0e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1955,6 +1728,21 @@ Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype"><a class="el" href="of_constants_8h.html#a5f194ae56b1bc61651eac7184ed1ad2e">ofBlendMode</a>&#160;</td>
           <td class="paramname"><em>blendMode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad3da9d0dd28e688d394880ec458bd2dc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofEnableDepthTest </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -2038,6 +1826,21 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a68aa5620690e9f82ae61c0a686cc1836"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="of_color_8h.html#a7e21e1ce5fd475dd6ffb9124c55e00dd">ofColor</a> ofGetBackground </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a63e641c07db5b649b5be63e9a33ca796"></a>
 <div class="memitem">
 <div class="memproto">
@@ -2098,12 +1901,12 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ac11af371124c215495e01a8a3a4eaf3a"></a>
+<a class="anchor" id="ac992a04616c1c5ab63e4f85354f49f85"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classof_ptr.html">ofPtr</a>&lt;<a class="el" href="classof_g_l_renderer.html">ofGLRenderer</a>&gt; ofGetGLRenderer </td>
+          <td class="memname"><a class="el" href="classof_rectangle.html">ofRectangle</a> ofGetNativeViewport </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -2164,6 +1967,21 @@ Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">int ofGetViewportWidth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a112ebf9b37b365ab634260fa7413d92e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ofIsVFlipped </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -2742,7 +2560,107 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a4f30e64b22880d15f641e091fbd0052e"></a>
+<a class="anchor" id="a61851298db3be49547880923e3e5d7d2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofRectRounded </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>h</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>topLeftRadius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>topRightRadius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>bottomRightRadius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>bottomLeftRadius</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad74d04835bb164a3534ecefc92f987db"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofRectRounded </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classof_rectangle.html">ofRectangle</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>topLeftRadius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>topRightRadius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>bottomRightRadius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>bottomLeftRadius</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4735a5befdd7e3ab633f1319809505db"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -2780,7 +2698,25 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>r</em>&#160;</td>
+          <td class="paramname"><em>topLeftRadius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>topRightRadius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>bottomRightRadius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>bottomLeftRadius</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -3208,7 +3144,33 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a40ae986d8351d342ccab15d1d6dd2d60"></a>
+<a class="anchor" id="aa86681f722b71273e9088c32494e82cd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofSetCurrentRenderer </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>rendererType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>setDefaults</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6ec8b13ea8fa76ea7f3eb3cd3975b701"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -3216,8 +3178,18 @@ Functions</h2></td></tr>
           <td class="memname">void ofSetCurrentRenderer </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classof_ptr.html">ofPtr</a>&lt; <a class="el" href="classof_base_renderer.html">ofBaseRenderer</a> &gt;&#160;</td>
-          <td class="paramname"><em>renderer_</em></td><td>)</td>
+          <td class="paramname"><em>renderer_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>setDefaults</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -3233,6 +3205,22 @@ Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>res</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a01ec3beb5e6e90035744cd8597a0d1f3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofSetDepthTest </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>depthTest</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -3336,22 +3324,6 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aa767c995f535028f7e1eba514a977519"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ofSetSphereResolution </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>res</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="a79446443c35a5544832f5064bf21a8b9"></a>
 <div class="memitem">
 <div class="memproto">
@@ -3448,6 +3420,44 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a059b5cdfe5b0eaba895e2aeeab383d31"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofSetupScreenOrtho </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>nearDist</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>farDist</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="ab1be6a856b84f22aa64ad2a070d442ae"></a>
 <div class="memitem">
 <div class="memproto">
@@ -3504,112 +3514,44 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a6d5e181690ba48905c2353f36e5b05c7"></a>
+<a class="anchor" id="a9d15135bfbb10dfcc39e8b636a372c84"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ofSphere </td>
+          <td class="memname">void ofSetupScreenPerspective </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
+          <td class="paramname"><em>width</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
+          <td class="paramname"><em>height</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>z</em>, </td>
+          <td class="paramname"><em>fov</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>radius</em>&#160;</td>
+          <td class="paramname"><em>nearDist</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>farDist</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
           <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="af2e33027d7461d2eda01a1b957a067fb"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ofSphere </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>radius</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a677809831e62d9222a0a98d1e0595233"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ofSphere </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;&#160;</td>
-          <td class="paramname"><em>position</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>radius</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a13e2253ccfcdd10d6125868dae1ba08a"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ofSphere </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>radius</em></td><td>)</td>
-          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -3881,22 +3823,6 @@ Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype"><a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;&#160;</td>
           <td class="paramname"><em>p</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a883ddbba252bf0b17f6f8cb06c001ce5"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ofVertexes </td>
-          <td>(</td>
-          <td class="paramtype">const vector&lt; <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>polyPoints</em></td><td>)</td>
           <td></td>
         </tr>
       </table>

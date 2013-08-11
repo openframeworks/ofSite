@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -68,6 +69,7 @@
       <li><a href="globals_0x67.html#index_g"><span>g</span></a></li>
       <li><a href="globals_0x68.html#index_h"><span>h</span></a></li>
       <li><a href="globals_0x69.html#index_i"><span>i</span></a></li>
+      <li><a href="globals_0x6c.html#index_l"><span>l</span></a></li>
       <li><a href="globals_0x6d.html#index_m"><span>m</span></a></li>
       <li><a href="globals_0x6e.html#index_n"><span>n</span></a></li>
       <li><a href="globals_0x6f.html#index_o"><span>o</span></a></li>
@@ -76,6 +78,7 @@
       <li class="current"><a href="globals_0x72.html#index_r"><span>r</span></a></li>
       <li><a href="globals_0x73.html#index_s"><span>s</span></a></li>
       <li><a href="globals_0x74.html#index_t"><span>t</span></a></li>
+      <li><a href="globals_0x75.html#index_u"><span>u</span></a></li>
       <li><a href="globals_0x76.html#index_v"><span>v</span></a></li>
       <li><a href="globals_0x77.html#index_w"><span>w</span></a></li>
       <li><a href="globals_0x78.html#index_x"><span>x</span></a></li>
@@ -97,8 +100,9 @@
 <li>reflect_rows()
 : <a class="el" href="of_matrix4x4_8cpp.html#a1b40bdbbdb0987023bea17d9d20d5c69">ofMatrix4x4.cpp</a>
 </li>
-<li>rotateMouseXY()
-: <a class="el" href="of_app_glut_window_8cpp.html#af4882afbe21027c75b5b5bf84a7dd829">ofAppGlutWindow.cpp</a>
+<li>rle_pixel_data
+: <a class="el" href="of_app_e_g_l_window_8cpp.html#a2b73d1773ab2bccb9290f9e3d1042170">ofAppEGLWindow.cpp</a>
+, <a class="el" href="of_icon_8h.html#a3c6d2c99e8265d78e08bb6146bf743ac">ofIcon.h</a>
 </li>
 <li>RtAudioStreamStatus
 : <a class="el" href="of_rt_audio_sound_stream_8h.html#ae36b2728755795523f2ccd92f4b77e1e">ofRtAudioSoundStream.h</a>

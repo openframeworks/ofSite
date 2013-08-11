@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -47,7 +48,7 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_296d53ceaeaa7e099814a6def439fe8a.html">math</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_84d5b34cee6369a03c8d1f3b970ed216.html">openFrameworks</a></li><li class="navelem"><a class="el" href="dir_6b67c3a1fdba4d6b038dad8a0f05d92f.html">math</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -108,6 +109,8 @@ Functions</h2></td></tr>
 <tr class="separator:a10ed9288cb91336033e7c3eeb159f604"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a535e06f6ceacbab6bf7eb1a171b0a71d"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_math_8h.html#a535e06f6ceacbab6bf7eb1a171b0a71d">ofAngleSumRadians</a> (float currentAngle, float targetAngle)</td></tr>
 <tr class="separator:a535e06f6ceacbab6bf7eb1a171b0a71d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11cf9bc2b855744f58aa7f2f174eb657"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_math_8h.html#a11cf9bc2b855744f58aa7f2f174eb657">ofWrap</a> (float value, float from, float to)</td></tr>
+<tr class="separator:a11cf9bc2b855744f58aa7f2f174eb657"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34be4c1bb0fedb406eb7dcfd7cf743bc"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_math_8h.html#a34be4c1bb0fedb406eb7dcfd7cf743bc">ofWrapRadians</a> (float angle, float from=-<a class="el" href="of_constants_8h.html#a598a3330b3c21701223ee0ca14316eca">PI</a>, float to=+<a class="el" href="of_constants_8h.html#a598a3330b3c21701223ee0ca14316eca">PI</a>)</td></tr>
 <tr class="separator:a34be4c1bb0fedb406eb7dcfd7cf743bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33e3f2421ab89bc4ee00a0f67d09aa0a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_math_8h.html#a33e3f2421ab89bc4ee00a0f67d09aa0a">ofWrapDegrees</a> (float angle, float from=-180, float to=+180)</td></tr>
@@ -146,6 +149,21 @@ Functions</h2></td></tr>
 <tr class="separator:af7ef7086c0cb61b4883a15873dd2b87e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae12c7ac240f0bd70fb212c16a9022f0d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_math_8h.html#ae12c7ac240f0bd70fb212c16a9022f0d">ofCurveTangent</a> (<a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> <a class="el" href="of_matrix4x4_8cpp.html#a8d3c3518d793541417a4845125da1ae1">a</a>, <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> <a class="el" href="of_matrix4x4_8cpp.html#ab2d05693952610f937e5acb3c4a8fa1b">b</a>, <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> <a class="el" href="of_matrix4x4_8cpp.html#aafc737ea9ef91f59cf9acd287fb8d085">c</a>, <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> <a class="el" href="of_matrix4x4_8cpp.html#a2530554172d8629149ec56816eeaa947">d</a>, float t)</td></tr>
 <tr class="separator:ae12c7ac240f0bd70fb212c16a9022f0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03ae1b6363bc5768851000d35538066e"><td class="memTemplParams" colspan="2">template&lt;typename Type &gt; </td></tr>
+<tr class="memitem:a03ae1b6363bc5768851000d35538066e"><td class="memTemplItemLeft" align="right" valign="top">Type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_math_8h.html#a03ae1b6363bc5768851000d35538066e">ofInterpolateCosine</a> (Type y1, Type y2, float pct)</td></tr>
+<tr class="separator:a03ae1b6363bc5768851000d35538066e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4fa59b0c4c66e53f4e017923121ea0d"><td class="memTemplParams" colspan="2">template&lt;typename Type &gt; </td></tr>
+<tr class="memitem:ae4fa59b0c4c66e53f4e017923121ea0d"><td class="memTemplItemLeft" align="right" valign="top">Type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_math_8h.html#ae4fa59b0c4c66e53f4e017923121ea0d">ofInterpolateCubic</a> (Type y0, Type y1, Type y2, Type y3, float pct)</td></tr>
+<tr class="separator:ae4fa59b0c4c66e53f4e017923121ea0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91742a5ecd1dd798be415bbc493c22bf"><td class="memTemplParams" colspan="2">template&lt;typename Type &gt; </td></tr>
+<tr class="memitem:a91742a5ecd1dd798be415bbc493c22bf"><td class="memTemplItemLeft" align="right" valign="top">Type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_math_8h.html#a91742a5ecd1dd798be415bbc493c22bf">ofInterpolateCatmullRom</a> (Type y0, Type y1, Type y2, Type y3, float pct)</td></tr>
+<tr class="separator:a91742a5ecd1dd798be415bbc493c22bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5983155f864e82d3f5dfb57d95ff8f27"><td class="memTemplParams" colspan="2">template&lt;typename Type &gt; </td></tr>
+<tr class="memitem:a5983155f864e82d3f5dfb57d95ff8f27"><td class="memTemplItemLeft" align="right" valign="top">Type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_math_8h.html#a5983155f864e82d3f5dfb57d95ff8f27">ofInterpolateHermite</a> (Type y0, Type y1, Type y2, Type y3, float pct)</td></tr>
+<tr class="separator:a5983155f864e82d3f5dfb57d95ff8f27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fff1be1275f2e15198628c0cd15bb4f"><td class="memTemplParams" colspan="2">template&lt;typename Type &gt; </td></tr>
+<tr class="memitem:a2fff1be1275f2e15198628c0cd15bb4f"><td class="memTemplItemLeft" align="right" valign="top">Type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_math_8h.html#a2fff1be1275f2e15198628c0cd15bb4f">ofInterpolateHermite</a> (Type y0, Type y1, Type y2, Type y3, float pct, float tension, float bias)</td></tr>
+<tr class="separator:a2fff1be1275f2e15198628c0cd15bb4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="a9187e3d0572b394eb8f341ec88b575f4"></a>
@@ -605,6 +623,244 @@ Functions</h2></td></tr>
           <td></td>
           <td class="paramtype">const vector&lt; <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>poly</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a91742a5ecd1dd798be415bbc493c22bf"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Type ofInterpolateCatmullRom </td>
+          <td>(</td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>y0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>y1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>y2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>y3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>pct</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a03ae1b6363bc5768851000d35538066e"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Type ofInterpolateCosine </td>
+          <td>(</td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>y1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>y2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>pct</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae4fa59b0c4c66e53f4e017923121ea0d"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Type ofInterpolateCubic </td>
+          <td>(</td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>y0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>y1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>y2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>y3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>pct</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5983155f864e82d3f5dfb57d95ff8f27"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Type ofInterpolateHermite </td>
+          <td>(</td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>y0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>y1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>y2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>y3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>pct</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2fff1be1275f2e15198628c0cd15bb4f"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Type ofInterpolateHermite </td>
+          <td>(</td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>y0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>y1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>y2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>y3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>pct</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>tension</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>bias</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1232,6 +1488,38 @@ Functions</h2></td></tr>
           <td></td>
           <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>w</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a11cf9bc2b855744f58aa7f2f174eb657"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ofWrap </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>from</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>to</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

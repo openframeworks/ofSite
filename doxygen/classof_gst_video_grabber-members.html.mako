@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -65,7 +66,7 @@
   <tr class="even"><td class="entry"><a class="el" href="classof_gst_video_grabber.html#a7fd170dd9f1f740c0c344f9db348f1f8">getWidth</a>()</td><td class="entry"><a class="el" href="classof_gst_video_grabber.html">ofGstVideoGrabber</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="classof_gst_video_grabber.html#a6450e8b568e28e8d5f0559230606ee14">initGrabber</a>(int w, int h)</td><td class="entry"><a class="el" href="classof_gst_video_grabber.html">ofGstVideoGrabber</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classof_gst_video_grabber.html#af3edeb02c89e43dc4ad0a02b376d4a07">isFrameNew</a>()</td><td class="entry"><a class="el" href="classof_gst_video_grabber.html">ofGstVideoGrabber</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classof_gst_video_grabber.html#ab21f6214be63c89a9ae75562ff9bf7a8">listDevices</a>()</td><td class="entry"><a class="el" href="classof_gst_video_grabber.html">ofGstVideoGrabber</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classof_gst_video_grabber.html#a8b9d9b90d76dfb0f72c8d63c2c360811">listDevices</a>()</td><td class="entry"><a class="el" href="classof_gst_video_grabber.html">ofGstVideoGrabber</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classof_gst_video_grabber.html#a7d2490075151f6a65f70462a9f5b7fbd">ofGstVideoGrabber</a>()</td><td class="entry"><a class="el" href="classof_gst_video_grabber.html">ofGstVideoGrabber</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classof_gst_video_grabber.html#a02aeaf88681b341faa1580873a1a273b">setDesiredFrameRate</a>(int framerate)</td><td class="entry"><a class="el" href="classof_gst_video_grabber.html">ofGstVideoGrabber</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classof_gst_video_grabber.html#a2d9434f03798a7217f20d98555130fa3">setDeviceID</a>(int id)</td><td class="entry"><a class="el" href="classof_gst_video_grabber.html">ofGstVideoGrabber</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>

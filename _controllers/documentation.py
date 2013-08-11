@@ -11,8 +11,6 @@ import argparse
 import shutil
 import glob
 
-import sets
-
 sys.path.append(os.path.join(os.path.realpath(__file__)[0:-(len(os.path.join('_controllers','documentation.py'))+1)],'_tools'))
 #sys.path.append( os.path.realpath('')+"/../_tools" )
 import markdown_file
@@ -85,19 +83,26 @@ def run():
     classes = markdown_file.getclass_list()
     for clazz_name in classes:
         clazz = markdown_file.getclass(clazz_name,True)
+
         methods_to_remove = []
         for method in clazz.function_list:
             if method.name==clazz.name or method.name[0]=="~" or method.name.find("OF_DEPRECATED_MSG")!=-1:
                 methods_to_remove.append(method)
         for method in methods_to_remove:
             clazz.function_list.remove(method)
+
+        clazz.reference = str(clazz.reference)
+        for class_name in classes:
+            clazz.reference = str.replace(clazz.reference, class_name, "<a href=\"../"+clazz.module+"/"+class_name+".html\">"+class_name+"</a>")
+
         functions_file = markdown_file.getfunctionsfile(clazz_name)
         #print clazz.name
-        #print clazz.function_list
+        #print clazz.function_list 
         env = {
             "modulename": clazz.name,
             "clazz": clazz,
-            "functions": functions_file
+            "functions": functions_file,
+            "classes_list": classes
         }
         bf.template.materialize_template("documentation_class.mako", ('documentation',clazz.module+"/"+clazz.name+".html"), env )
     
@@ -106,6 +111,13 @@ def run():
         if functionfile_name in classes:
             continue
         functions_file = markdown_file.getfunctionsfile(functionfile_name)
+
+# might be needed at some point?
+#        functions_file.reference = str(functions_file.reference)
+#        for func in function_files:
+#            functions_file.reference = str.replace(functions_file.reference, class_name, "<a href=\"../"+clazz.module+"/"+class_name+".html\">"+class_name+"</a>")
+
+
         functions_to_remove = []
         for function in functions_file.function_list:
             if function.name.find("OF_DEPRECATED_MSG")!=-1:

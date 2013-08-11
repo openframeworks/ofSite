@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -80,8 +81,8 @@ Inheritance diagram for ofBaseVideoGrabber:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae26d74772c498046a1c2f2765b45b77d"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_video_grabber.html#ae26d74772c498046a1c2f2765b45b77d">~ofBaseVideoGrabber</a> ()</td></tr>
 <tr class="separator:ae26d74772c498046a1c2f2765b45b77d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ee487203961b1d6b635598a181a9835"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_video_grabber.html#a0ee487203961b1d6b635598a181a9835">listDevices</a> ()=0</td></tr>
-<tr class="separator:a0ee487203961b1d6b635598a181a9835"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae82f0a1c87fe69c86f1738cae560efb2"><td class="memItemLeft" align="right" valign="top">virtual vector&lt; <a class="el" href="classof_video_device.html">ofVideoDevice</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_video_grabber.html#ae82f0a1c87fe69c86f1738cae560efb2">listDevices</a> ()=0</td></tr>
+<tr class="separator:ae82f0a1c87fe69c86f1738cae560efb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7dc4e14ca5c1bf64f6c9ef49fff421e3"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_video_grabber.html#a7dc4e14ca5c1bf64f6c9ef49fff421e3">initGrabber</a> (int w, int h)=0</td></tr>
 <tr class="separator:a7dc4e14ca5c1bf64f6c9ef49fff421e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa0adff5581f2aeb2f2973a5686097de"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_video_grabber.html#afa0adff5581f2aeb2f2973a5686097de">update</a> ()=0</td></tr>
@@ -336,11 +337,11 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classof_base_video.html#a614f817009e02303e075f7552c78cfb0">ofBaseVideo</a>.</p>
 
-<p>Implemented in <a class="el" href="classof_video_grabber.html#a946631a547cac9c3ebb2e4a7072a9a79">ofVideoGrabber</a>, <a class="el" href="classof_gst_video_grabber.html#af3edeb02c89e43dc4ad0a02b376d4a07">ofGstVideoGrabber</a>, <a class="el" href="classof_q_t_kit_grabber.html#a1c953577936e62ecc50d8319b4270da7">ofQTKitGrabber</a>, <a class="el" href="classof_quick_time_grabber.html#a06bd850a1a2b9eda86040c06d1d46baf">ofQuickTimeGrabber</a>, and <a class="el" href="classof_direct_show_grabber.html#a81859b980eeb27cd285c435f9c500188">ofDirectShowGrabber</a>.</p>
+<p>Implemented in <a class="el" href="classof_gst_video_grabber.html#af3edeb02c89e43dc4ad0a02b376d4a07">ofGstVideoGrabber</a>, <a class="el" href="classof_video_grabber.html#a946631a547cac9c3ebb2e4a7072a9a79">ofVideoGrabber</a>, <a class="el" href="classof_q_t_kit_grabber.html#a1c953577936e62ecc50d8319b4270da7">ofQTKitGrabber</a>, <a class="el" href="classof_quick_time_grabber.html#a06bd850a1a2b9eda86040c06d1d46baf">ofQuickTimeGrabber</a>, and <a class="el" href="classof_direct_show_grabber.html#a81859b980eeb27cd285c435f9c500188">ofDirectShowGrabber</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a0ee487203961b1d6b635598a181a9835"></a>
+<a class="anchor" id="ae82f0a1c87fe69c86f1738cae560efb2"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -348,7 +349,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void ofBaseVideoGrabber::listDevices </td>
+          <td class="memname">virtual vector&lt;<a class="el" href="classof_video_device.html">ofVideoDevice</a>&gt; ofBaseVideoGrabber::listDevices </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -361,7 +362,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classof_video_grabber.html#a4cbf5779fa46c662bbca0832c524946c">ofVideoGrabber</a>, <a class="el" href="classof_gst_video_grabber.html#ab21f6214be63c89a9ae75562ff9bf7a8">ofGstVideoGrabber</a>, <a class="el" href="classof_q_t_kit_grabber.html#ad8ebeb35faa9fe13dbac5889f715248c">ofQTKitGrabber</a>, <a class="el" href="classof_quick_time_grabber.html#a69cba04c77f24d6035fa8003fcbe5f9b">ofQuickTimeGrabber</a>, and <a class="el" href="classof_direct_show_grabber.html#a72c855fb2e216429011e1e872eb59ac9">ofDirectShowGrabber</a>.</p>
+<p>Implemented in <a class="el" href="classof_video_grabber.html#aaedc98da6b8582effda8224b415690ed">ofVideoGrabber</a>, <a class="el" href="classof_gst_video_grabber.html#a8b9d9b90d76dfb0f72c8d63c2c360811">ofGstVideoGrabber</a>, <a class="el" href="classof_q_t_kit_grabber.html#a5b89986c5cac6aa01b1e8c217c7b8877">ofQTKitGrabber</a>, <a class="el" href="classof_quick_time_grabber.html#aff0e2181f033a73f3a0b6034b10c2297">ofQuickTimeGrabber</a>, and <a class="el" href="classof_direct_show_grabber.html#ad3698093f39452d9d0fab8932336d7ca">ofDirectShowGrabber</a>.</p>
 
 </div>
 </div>
@@ -387,7 +388,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classof_video_grabber.html#af1af351daf65526e5be0dc9da61f649b">ofVideoGrabber</a>, <a class="el" href="classof_q_t_kit_grabber.html#aa2f549aa667d86d3282a84418631307a">ofQTKitGrabber</a>, <a class="el" href="classof_gst_video_grabber.html#a02aeaf88681b341faa1580873a1a273b">ofGstVideoGrabber</a>, <a class="el" href="classof_quick_time_grabber.html#a573328a8689c99fa75bb4aad869cb692">ofQuickTimeGrabber</a>, and <a class="el" href="classof_direct_show_grabber.html#ae59bdb914b1419a1f1c51e628b18ce85">ofDirectShowGrabber</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_q_t_kit_grabber.html#aa2f549aa667d86d3282a84418631307a">ofQTKitGrabber</a>, <a class="el" href="classof_video_grabber.html#af1af351daf65526e5be0dc9da61f649b">ofVideoGrabber</a>, <a class="el" href="classof_gst_video_grabber.html#a02aeaf88681b341faa1580873a1a273b">ofGstVideoGrabber</a>, <a class="el" href="classof_quick_time_grabber.html#a573328a8689c99fa75bb4aad869cb692">ofQuickTimeGrabber</a>, and <a class="el" href="classof_direct_show_grabber.html#ae59bdb914b1419a1f1c51e628b18ce85">ofDirectShowGrabber</a>.</p>
 
 </div>
 </div>
@@ -523,8 +524,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>types/<a class="el" href="of_base_types_8h_source.html">ofBaseTypes.h</a></li>
-<li>types/<a class="el" href="of_base_types_8cpp.html">ofBaseTypes.cpp</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/types/<a class="el" href="of_base_types_8h_source.html">ofBaseTypes.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/types/<a class="el" href="of_base_types_8cpp.html">ofBaseTypes.cpp</a></li>
 </ul>
 </div><!-- contents -->
 

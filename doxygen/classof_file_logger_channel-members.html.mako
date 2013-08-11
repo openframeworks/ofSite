@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -58,8 +59,8 @@
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="classof_file_logger_channel.html#a4afd7cfd7aea4071c2d6320e32c157e9">close</a>()</td><td class="entry"><a class="el" href="classof_file_logger_channel.html">ofFileLoggerChannel</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classof_file_logger_channel.html#a6508d0b263dfbb3c3b73f28fed4116e6">log</a>(ofLogLevel level, const string &amp;module, const string &amp;message)</td><td class="entry"><a class="el" href="classof_file_logger_channel.html">ofFileLoggerChannel</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classof_file_logger_channel.html#a3b96503914bb215045b49feb7e43b3b1">log</a>(ofLogLevel logLevel, const string &amp;module, const char *format,...)</td><td class="entry"><a class="el" href="classof_file_logger_channel.html">ofFileLoggerChannel</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classof_file_logger_channel.html#a84e3b3bb3e043388947b966bd7536b2b">log</a>(ofLogLevel logLevel, const string &amp;module, const char *format, va_list args)</td><td class="entry"><a class="el" href="classof_file_logger_channel.html">ofFileLoggerChannel</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classof_file_logger_channel.html#ab18cba0b2ded364630dd9b2230776642">log</a>(ofLogLevel level, const string &amp;module, const char *format,...)</td><td class="entry"><a class="el" href="classof_file_logger_channel.html">ofFileLoggerChannel</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classof_file_logger_channel.html#a7cabc7ebbd2afb8c569c1afeb0e734e8">log</a>(ofLogLevel level, const string &amp;module, const char *format, va_list args)</td><td class="entry"><a class="el" href="classof_file_logger_channel.html">ofFileLoggerChannel</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classof_file_logger_channel.html#a4db912afeff73bff1b44d744252c48c9">ofFileLoggerChannel</a>()</td><td class="entry"><a class="el" href="classof_file_logger_channel.html">ofFileLoggerChannel</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classof_file_logger_channel.html#ab11c2e328867f31d1f71e10a727da468">ofFileLoggerChannel</a>(const string &amp;path, bool append)</td><td class="entry"><a class="el" href="classof_file_logger_channel.html">ofFileLoggerChannel</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classof_file_logger_channel.html#a7f1e7e14ba2b3ee28b4310128acd5796">setFile</a>(const string &amp;path, bool append=false)</td><td class="entry"><a class="el" href="classof_file_logger_channel.html">ofFileLoggerChannel</a></td><td class="entry"></td></tr>

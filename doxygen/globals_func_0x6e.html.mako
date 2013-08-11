@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -81,6 +82,9 @@
 &#160;
 
 <h3><a class="anchor" id="index_n"></a>- n -</h3><ul>
+<li>natural()
+: <a class="el" href="of_file_utils_8cpp.html#a1bc53b88a3bcabad56b429c1e42f1d1c">ofFileUtils.cpp</a>
+</li>
 <li>norm_inf()
 : <a class="el" href="of_matrix4x4_8cpp.html#a4ca81ec6c69c763ea25ffe7130ee2513">ofMatrix4x4.cpp</a>
 </li>

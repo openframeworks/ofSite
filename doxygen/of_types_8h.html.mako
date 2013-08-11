@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -47,12 +48,13 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_5784fb0e3502fad0f55808155bba3d8e.html">types</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_84d5b34cee6369a03c8d1f3b970ed216.html">openFrameworks</a></li><li class="navelem"><a class="el" href="dir_6a067a571c6179e1d7dc1a224573c7c5.html">types</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
@@ -72,13 +74,24 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_style.html">ofStyle</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_video_format.html">ofVideoFormat</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_video_device.html">ofVideoDevice</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_ptr.html">ofPtr&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespacestd"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestd.html">std</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:a14d0290b2d9067f9b5c30fa5e4e56927"><td class="memItemLeft" align="right" valign="top">typedef Poco::FastMutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_types_8h.html#a14d0290b2d9067f9b5c30fa5e4e56927">ofMutex</a></td></tr>
 <tr class="separator:a14d0290b2d9067f9b5c30fa5e4e56927"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3d951970b0edc67af1ebed4aebf815e"><td class="memItemLeft" align="right" valign="top">typedef Poco::FastMutex::ScopedLock&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_types_8h.html#ae3d951970b0edc67af1ebed4aebf815e">ofScopedLock</a></td></tr>
+<tr class="separator:ae3d951970b0edc67af1ebed4aebf815e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -93,6 +106,18 @@ Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">typedef Poco::FastMutex <a class="el" href="of_types_8h.html#a14d0290b2d9067f9b5c30fa5e4e56927">ofMutex</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae3d951970b0edc67af1ebed4aebf815e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef Poco::FastMutex::ScopedLock <a class="el" href="of_types_8h.html#ae3d951970b0edc67af1ebed4aebf815e">ofScopedLock</a></td>
         </tr>
       </table>
 </div><div class="memdoc">

@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -64,12 +65,13 @@ Inheritance diagram for ofAbstractHasPixels:</div>
  <div class="center">
   <img src="classof_abstract_has_pixels.png" usemap="#ofAbstractHasPixels_map" alt=""/>
   <map id="ofAbstractHasPixels_map" name="ofAbstractHasPixels_map">
-<area href="classof_base_has_pixels__.html" alt="ofBaseHasPixels_&lt; T &gt;" shape="rect" coords="505,56,697,80"/>
+<area href="classof_base_has_pixels__.html" alt="ofBaseHasPixels_&lt; T &gt;" shape="rect" coords="555,56,747,80"/>
 <area href="classof_base_has_pixels__.html" alt="ofBaseHasPixels_&lt; PixelType &gt;" shape="rect" coords="1616,56,1808,80"/>
-<area href="classof_base_image__.html" alt="ofBaseImage_&lt; T &gt;" shape="rect" coords="0,112,192,136"/>
+<area href="classof_base_image__.html" alt="ofBaseImage_&lt; T &gt;" shape="rect" coords="101,112,293,136"/>
 <area href="classof_base_video.html" alt="ofBaseVideo" shape="rect" coords="1010,112,1202,136"/>
 <area href="classof_base_image__.html" alt="ofBaseImage_&lt; PixelType &gt;" shape="rect" coords="1616,112,1808,136"/>
 <area href="classof_base_video_draws.html" alt="ofBaseVideoDraws" shape="rect" coords="0,168,192,192"/>
+<area href="classof_image__.html" alt="ofImage_&lt; unsigned char &gt;" shape="rect" coords="202,168,394,192"/>
 <area href="classof_base_video_draws.html" alt="ofBaseVideoDraws" shape="rect" coords="404,168,596,192"/>
 <area href="classof_base_video_grabber.html" alt="ofBaseVideoGrabber" shape="rect" coords="808,168,1000,192"/>
 <area href="classof_base_video_player.html" alt="ofBaseVideoPlayer" shape="rect" coords="1212,168,1404,192"/>
@@ -120,7 +122,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>types/<a class="el" href="of_base_types_8h_source.html">ofBaseTypes.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/types/<a class="el" href="of_base_types_8h_source.html">ofBaseTypes.h</a></li>
 </ul>
 </div><!-- contents -->
 

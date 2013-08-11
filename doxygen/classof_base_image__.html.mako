@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -64,14 +65,15 @@ Inheritance diagram for ofBaseImage_&lt; T &gt;:</div>
  <div class="center">
   <img src="classof_base_image__.png" usemap="#ofBaseImage_&lt; T &gt;_map" alt=""/>
   <map id="ofBaseImage_&lt; T &gt;_map" name="ofBaseImage_&lt; T &gt;_map">
-<area href="classof_abstract_image.html" alt="ofAbstractImage" shape="rect" coords="77,56,221,80"/>
-<area href="classof_base_has_pixels__.html" alt="ofBaseHasPixels_&lt; T &gt;" shape="rect" coords="308,56,452,80"/>
-<area href="classof_base_draws.html" alt="ofBaseDraws" shape="rect" coords="0,0,144,24"/>
-<area href="classof_base_has_texture.html" alt="ofBaseHasTexture" shape="rect" coords="154,0,298,24"/>
-<area href="classof_abstract_has_pixels.html" alt="ofAbstractHasPixels" shape="rect" coords="308,0,452,24"/>
-<area href="classof_base_video_draws.html" alt="ofBaseVideoDraws" shape="rect" coords="192,168,336,192"/>
-<area href="classof_video_grabber.html" alt="ofVideoGrabber" shape="rect" coords="115,224,259,248"/>
-<area href="classof_video_player.html" alt="ofVideoPlayer" shape="rect" coords="269,224,413,248"/>
+<area href="classof_abstract_image.html" alt="ofAbstractImage" shape="rect" coords="89,56,258,80"/>
+<area href="classof_base_has_pixels__.html" alt="ofBaseHasPixels_&lt; T &gt;" shape="rect" coords="358,56,527,80"/>
+<area href="classof_base_draws.html" alt="ofBaseDraws" shape="rect" coords="0,0,169,24"/>
+<area href="classof_base_has_texture.html" alt="ofBaseHasTexture" shape="rect" coords="179,0,348,24"/>
+<area href="classof_abstract_has_pixels.html" alt="ofAbstractHasPixels" shape="rect" coords="358,0,527,24"/>
+<area href="classof_base_video_draws.html" alt="ofBaseVideoDraws" shape="rect" coords="134,168,303,192"/>
+<area href="classof_image__.html" alt="ofImage_&lt; unsigned char &gt;" shape="rect" coords="313,168,482,192"/>
+<area href="classof_video_grabber.html" alt="ofVideoGrabber" shape="rect" coords="44,224,213,248"/>
+<area href="classof_video_player.html" alt="ofVideoPlayer" shape="rect" coords="223,224,392,248"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -150,7 +152,7 @@ template&lt;typename T&gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>types/<a class="el" href="of_base_types_8h_source.html">ofBaseTypes.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/types/<a class="el" href="of_base_types_8h_source.html">ofBaseTypes.h</a></li>
 </ul>
 </div><!-- contents -->
 

@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -52,6 +53,7 @@
       <li><a href="functions.html"><span>All</span></a></li>
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li class="current"><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_type.html"><span>Typedefs</span></a></li>
       <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
       <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
       <li><a href="functions_prop.html"><span>Properties</span></a></li>
@@ -105,6 +107,9 @@
 <li>saveTo
 : <a class="el" href="classof_http_request.html#a89852c913e7b38b19d3e7a3503a63bb3">ofHttpRequest</a>
 </li>
+<li>screenNum
+: <a class="el" href="structof_app_e_g_l_window_1_1_settings.html#a296b4788167ab3916d52e4a32d586468">ofAppEGLWindow::Settings</a>
+</li>
 <li>seaGreen
 : <a class="el" href="classof_color__.html#a3c11cc7f483993e6a336e56371970325">ofColor_&lt; PixelType &gt;</a>
 </li>
@@ -123,6 +128,9 @@
 <li>setWidth
 : <a class="el" href="structchar_props.html#a6e01012c0e3041753df888d3b7d86258">charProps</a>
 </li>
+<li>shiftPressed
+: <a class="el" href="struct_keyboard_state.html#abe50ea762d09221724052862a602d5b8">KeyboardState</a>
+</li>
 <li>sienna
 : <a class="el" href="classof_color__.html#a2e41d833ec2eddfb088e4f1a67fa10f2">ofColor_&lt; PixelType &gt;</a>
 </li>
@@ -131,6 +139,9 @@
 </li>
 <li>simplifyAmt
 : <a class="el" href="classof_true_type_font.html#a8f97cd252e22e135aea3f87b0b18d5c8">ofTrueTypeFont</a>
+</li>
+<li>size
+: <a class="el" href="classof_box_primitive.html#ad6aa171ef9c5584b5743c4fd0d62b535">ofBoxPrimitive</a>
 </li>
 <li>skyBlue
 : <a class="el" href="classof_color__.html#a4389fe6d2a669f0d63c111d586726d6b">ofColor_&lt; PixelType &gt;</a>
@@ -177,6 +188,11 @@
 </li>
 <li>steelBlue
 : <a class="el" href="classof_color__.html#a563ec47ba91b70999563ee2a2f87e9b2">ofColor_&lt; PixelType &gt;</a>
+</li>
+<li>strides
+: <a class="el" href="classof_cylinder_primitive.html#a1c2dba6d6311c295c51ecb8d0e11acf0">ofCylinderPrimitive</a>
+, <a class="el" href="classof_box_primitive.html#a997516b976de26cb7e4a0c9e2ff7de8a">ofBoxPrimitive</a>
+, <a class="el" href="classof_cone_primitive.html#a748c5a11100ee85f814ca1a0e3fd968f">ofConePrimitive</a>
 </li>
 <li>stringQuads
 : <a class="el" href="classof_true_type_font.html#a3aa0ef4fbbac6fca3cdeb5a6345cfc37">ofTrueTypeFont</a>

@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -47,7 +48,7 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_ffe10d808f3b8401de5bc52b90a9fa35.html">gl</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_84d5b34cee6369a03c8d1f3b970ed216.html">openFrameworks</a></li><li class="navelem"><a class="el" href="dir_21a7ba6abdb7e89b57a67631dad1eaf5.html">gl</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -63,6 +64,7 @@
 <code>#include &quot;<a class="el" href="of_rectangle_8h_source.html">ofRectangle.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="of_base_types_8h_source.html">ofBaseTypes.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="of_constants_8h_source.html">ofConstants.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="of_vbo_mesh_8h_source.html">ofVboMesh.h</a>&quot;</code><br/>
 </div>
 <p><a href="of_texture_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -83,16 +85,6 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ab340063d598250e3bf7abc2db7795f3d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_texture_8h.html#ab340063d598250e3bf7abc2db7795f3d">ofGetGlInternalFormat</a> (const <a class="el" href="of_pixels_8h.html#a590f460ea8c9e40214543c26ca3b386a">ofPixels</a> &amp;pix)</td></tr>
-<tr class="separator:ab340063d598250e3bf7abc2db7795f3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af88af7e043899bdecc7b80ce2f27ad1a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_texture_8h.html#af88af7e043899bdecc7b80ce2f27ad1a">ofGetGlInternalFormat</a> (const <a class="el" href="of_pixels_8h.html#ac39b31393829b504dee01ae495ffaaa0">ofShortPixels</a> &amp;pix)</td></tr>
-<tr class="separator:af88af7e043899bdecc7b80ce2f27ad1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9227d2455c596698a482cb9ec22b54b5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_texture_8h.html#a9227d2455c596698a482cb9ec22b54b5">ofGetGlInternalFormat</a> (const <a class="el" href="of_pixels_8h.html#a0b4153db947c5a20408140e5f24ab1e0">ofFloatPixels</a> &amp;pix)</td></tr>
-<tr class="separator:a9227d2455c596698a482cb9ec22b54b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6951b45f3afed2f8ea7afa70e13601e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_texture_8h.html#a6951b45f3afed2f8ea7afa70e13601e2">ofGetGlFormatAndType</a> (int glInternalFormat, int &amp;glFormat, int &amp;glType)</td></tr>
-<tr class="separator:a6951b45f3afed2f8ea7afa70e13601e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae78f1287f515325ceaf71c13f0efdced"><td class="memItemLeft" align="right" valign="top"><a class="el" href="of_constants_8h.html#a9760b6b0bec0314fdc85f44793bbe951">ofImageType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_texture_8h.html#ae78f1287f515325ceaf71c13f0efdced">ofGetImageTypeFromGLType</a> (int glType)</td></tr>
-<tr class="separator:ae78f1287f515325ceaf71c13f0efdced"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0f994e7424dc7c5309aff96109228da"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_texture_8h.html#ae0f994e7424dc7c5309aff96109228da">ofGetUsingArbTex</a> ()</td></tr>
 <tr class="separator:ae0f994e7424dc7c5309aff96109228da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2522ef9f2c9415f8ac2d967c6bb37b01"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_texture_8h.html#a2522ef9f2c9415f8ac2d967c6bb37b01">ofEnableArbTex</a> ()</td></tr>
@@ -121,6 +113,8 @@ Functions</h2></td></tr>
 <tr class="separator:af70a133cd74f4c448e841521287f16b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c85492981b1ecaa449f6a46b2a34673"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_texture_8h.html#a1c85492981b1ecaa449f6a46b2a34673">ofDisableTextureEdgeHack</a> ()</td></tr>
 <tr class="separator:a1c85492981b1ecaa449f6a46b2a34673"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab986ff110085b3cea93e0e705f98cfcd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_texture_8h.html#ab986ff110085b3cea93e0e705f98cfcd">ofIsTextureEdgeHackEnabled</a> ()</td></tr>
+<tr class="separator:ab986ff110085b3cea93e0e705f98cfcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a class="anchor" id="a218c238fdc83c3d9ac235f31dfd3c895"></a>
@@ -234,102 +228,6 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a6951b45f3afed2f8ea7afa70e13601e2"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ofGetGlFormatAndType </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>glInternalFormat</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int &amp;&#160;</td>
-          <td class="paramname"><em>glFormat</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int &amp;&#160;</td>
-          <td class="paramname"><em>glType</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ab340063d598250e3bf7abc2db7795f3d"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int ofGetGlInternalFormat </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="of_pixels_8h.html#a590f460ea8c9e40214543c26ca3b386a">ofPixels</a> &amp;&#160;</td>
-          <td class="paramname"><em>pix</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="af88af7e043899bdecc7b80ce2f27ad1a"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int ofGetGlInternalFormat </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="of_pixels_8h.html#ac39b31393829b504dee01ae495ffaaa0">ofShortPixels</a> &amp;&#160;</td>
-          <td class="paramname"><em>pix</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a9227d2455c596698a482cb9ec22b54b5"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int ofGetGlInternalFormat </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="of_pixels_8h.html#a0b4153db947c5a20408140e5f24ab1e0">ofFloatPixels</a> &amp;&#160;</td>
-          <td class="paramname"><em>pix</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ae78f1287f515325ceaf71c13f0efdced"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="of_constants_8h.html#a9760b6b0bec0314fdc85f44793bbe951">ofImageType</a> ofGetImageTypeFromGLType </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>glType</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="ae0f994e7424dc7c5309aff96109228da"></a>
 <div class="memitem">
 <div class="memproto">
@@ -381,6 +279,21 @@ Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">bool ofGetUsingNormalizedTexCoords </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab986ff110085b3cea93e0e705f98cfcd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ofIsTextureEdgeHackEnabled </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>

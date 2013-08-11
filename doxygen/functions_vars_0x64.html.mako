@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -52,6 +53,7 @@
       <li><a href="functions.html"><span>All</span></a></li>
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li class="current"><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_type.html"><span>Typedefs</span></a></li>
       <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
       <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
       <li><a href="functions_prop.html"><span>Properties</span></a></li>
@@ -180,8 +182,9 @@
 , <a class="el" href="classof_quick_time_grabber.html#a19231f9eb876167962510cb6d1aaf861">ofQuickTimeGrabber</a>
 </li>
 <li>deviceName
-: <a class="el" href="classof_quick_time_grabber.html#a03c67ebffaf370db0a5c867ff9b9af83">ofQuickTimeGrabber</a>
-, <a class="el" href="classof_serial_device_info.html#a0f79add7e2658721d4dda9b9417a27e8">ofSerialDeviceInfo</a>
+: <a class="el" href="classof_serial_device_info.html#a0f79add7e2658721d4dda9b9417a27e8">ofSerialDeviceInfo</a>
+, <a class="el" href="classof_video_device.html#a861349ee34e086a121f9d2a8eee44131">ofVideoDevice</a>
+, <a class="el" href="classof_quick_time_grabber.html#a03c67ebffaf370db0a5c867ff9b9af83">ofQuickTimeGrabber</a>
 </li>
 <li>devicePath
 : <a class="el" href="classof_serial_device_info.html#a1deaf8b2c01372d41c2df925160bd7e7">ofSerialDeviceInfo</a>
@@ -193,9 +196,9 @@
 : <a class="el" href="classof_serial.html#a90744b65810b6783313f8feaf2a41b7f">ofSerial</a>
 </li>
 <li>DIM
-: <a class="el" href="classof_vec2f.html#a4350bcc3bc9a9cb8378bde958d1aec1b">ofVec2f</a>
-, <a class="el" href="classof_vec4f.html#a3632c4cd50429dda0d01e053d6f55677">ofVec4f</a>
+: <a class="el" href="classof_vec4f.html#a3632c4cd50429dda0d01e053d6f55677">ofVec4f</a>
 , <a class="el" href="classof_vec3f.html#a844476d8b273a5aeccc17c7c3904c224">ofVec3f</a>
+, <a class="el" href="classof_vec2f.html#a4350bcc3bc9a9cb8378bde958d1aec1b">ofVec2f</a>
 </li>
 <li>dimGray
 : <a class="el" href="classof_color__.html#a4092832d731b5479f657b2b137ae0edd">ofColor_&lt; PixelType &gt;</a>
@@ -203,8 +206,8 @@
 <li>dimGrey
 : <a class="el" href="classof_color__.html#a3c48a1d43ceb5b186de67986e16e5fe1">ofColor_&lt; PixelType &gt;</a>
 </li>
-<li>displayString
-: <a class="el" href="classof_app_glut_window.html#ab2b4ce19f9d244bd899ab69e6f6d5d08">ofAppGlutWindow</a>
+<li>document
+: <a class="el" href="classof_xml.html#a8fecbdf2a260fc971c7b87cfe1ac7751">ofXml</a>
 </li>
 <li>dodgerBlue
 : <a class="el" href="classof_color__.html#af07ab831f008feef1ed128e42b14a4c9">ofColor_&lt; PixelType &gt;</a>

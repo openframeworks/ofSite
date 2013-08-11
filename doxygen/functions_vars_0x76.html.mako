@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -52,6 +53,7 @@
       <li><a href="functions.html"><span>All</span></a></li>
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li class="current"><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_type.html"><span>Typedefs</span></a></li>
       <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
       <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
       <li><a href="functions_prop.html"><span>Properties</span></a></li>
@@ -104,6 +106,14 @@
 </li>
 <li>verbose
 : <a class="el" href="classof_thread.html#ac4ad0b7c3602106ea883d6a8be791817">ofThread</a>
+</li>
+<li>vertices
+: <a class="el" href="classof_cylinder_primitive.html#affc35a1aeedafc3575ebd0e62f3b3916">ofCylinderPrimitive</a>
+, <a class="el" href="classof_cone_primitive.html#a32274d611424767276097aa1043cb492">ofConePrimitive</a>
+, <a class="el" href="classof_box_primitive.html#a4cd63656526dcd604eecc703ae857823">ofBoxPrimitive</a>
+</li>
+<li>vFlip
+: <a class="el" href="classof_camera.html#ae6a88528d41af6addd75236037fac3ea">ofCamera</a>
 </li>
 <li>video_device
 : <a class="el" href="structof_gst_device.html#a45d87469d12194cc5bcedc2a3029bee8">ofGstDevice</a>

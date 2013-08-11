@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -52,6 +53,7 @@
       <li><a href="functions.html"><span>All</span></a></li>
       <li class="current"><a href="functions_func.html"><span>Functions</span></a></li>
       <li><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_type.html"><span>Typedefs</span></a></li>
       <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
       <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
       <li><a href="functions_prop.html"><span>Properties</span></a></li>
@@ -98,23 +100,30 @@
 <li>activateAllDrawBuffers()
 : <a class="el" href="classof_fbo.html#a10316c7ba46fecab890a3c8584354c77">ofFbo</a>
 </li>
+<li>add()
+: <a class="el" href="classof_parameter_group.html#a7962d8fcbe952c97ceacdfbd7614bdd1">ofParameterGroup</a>
+</li>
+<li>addChild()
+: <a class="el" href="classof_xml.html#a3bb213985b37f809c80a0fd9994ad6bf">ofXml</a>
+</li>
 <li>addColor()
 : <a class="el" href="classof_mesh.html#acbaef665f6314833b590fa4fae9c05ff">ofMesh</a>
 </li>
 <li>addColors()
 : <a class="el" href="classof_mesh.html#a9ac03a1b0b1547909d1cd455c2ca8d6a">ofMesh</a>
 </li>
-<li>addCommand()
-: <a class="el" href="classof_sub_path.html#acc77625b0b10c1f528587b8468e8ad42">ofSubPath</a>
-</li>
 <li>addIndex()
 : <a class="el" href="classof_mesh.html#a1a9c5465e90e7faf40d66a896d0bfc90">ofMesh</a>
 </li>
 <li>addIndices()
-: <a class="el" href="classof_mesh.html#acc02919186820fb6e7b1ef7bc3d8882a">ofMesh</a>
+: <a class="el" href="classof_mesh.html#a1378ca9b5cee56274aee9756668ebfc0">ofMesh</a>
 </li>
 <li>addLeadingSlash()
 : <a class="el" href="classof_file_path.html#af6db42a5bf522daf5bd379b5d1546000">ofFilePath</a>
+</li>
+<li>addListener()
+: <a class="el" href="classof_parameter.html#a8b0512a7e9325827dbabc6342c33db4d">ofParameter&lt; ParameterType &gt;</a>
+, <a class="el" href="classof_read_only_parameter.html#a31b2a1873cd0a77d0aee398977c7f88b">ofReadOnlyParameter&lt; ParameterType, Friend &gt;</a>
 </li>
 <li>addNormal()
 : <a class="el" href="classof_mesh.html#a2a8e205209d7e98538bead28742e2e80">ofMesh</a>
@@ -134,6 +143,9 @@
 <li>addTriangle()
 : <a class="el" href="classof_mesh.html#a1ef8238528c08850c387e7ce57ff0548">ofMesh</a>
 </li>
+<li>addValue()
+: <a class="el" href="classof_xml.html#a12897c3da5490d679f0e9ee2d53c2d86">ofXml</a>
+</li>
 <li>addVertex()
 : <a class="el" href="classof_mesh.html#a14be43bd2e272fed5e030d4f51e61dbf">ofMesh</a>
 , <a class="el" href="classof_polyline.html#a39230dd712cb2e9647ed0679eef06124">ofPolyline</a>
@@ -141,6 +153,9 @@
 <li>addVertices()
 : <a class="el" href="classof_mesh.html#a71e7a3d050abd65ec3cf881535df889e">ofMesh</a>
 , <a class="el" href="classof_polyline.html#a0825db11f31148731aecf1cbb33450de">ofPolyline</a>
+</li>
+<li>addXml()
+: <a class="el" href="classof_xml.html#a6b760b3e7e751bd2a91d2cf0fd65a6b0">ofXml</a>
 </li>
 <li>align()
 : <a class="el" href="classof_vec2f.html#a7e40acde74be0a92399709b69f7b8999">ofVec2f</a>
@@ -160,23 +175,21 @@
 : <a class="el" href="classof_rectangle.html#a08dde2edcebba2f57b30dc52271adc23">ofRectangle</a>
 </li>
 <li>allocate()
-: <a class="el" href="classof_fbo.html#a256abd3a477d164e64409250eba488a5">ofFbo</a>
-, <a class="el" href="classof_pixels__.html#abea72226691ab5c20d9d99b5ee7b4bf4">ofPixels_&lt; PixelType &gt;</a>
-, <a class="el" href="classof_fbo.html#ac2a0263afa943c8cbbebc58bb5dabd39">ofFbo</a>
-, <a class="el" href="classof_p_b_o.html#a3714cc7930eb07159630349dd4037a76">ofPBO</a>
-, <a class="el" href="classof_texture.html#a37e50fcd472023e3879fda915d356d24">ofTexture</a>
-, <a class="el" href="classof_image__.html#a86968a4303907dbaeb008851076eeb8a">ofImage_&lt; PixelType &gt;</a>
-, <a class="el" href="classof_pixels__.html#a02b8aa5dd03f4403e37186c8eadaa872">ofPixels_&lt; PixelType &gt;</a>
-, <a class="el" href="classof_buffer.html#a5c07c6479de366fbf6745d91fc9f0b92">ofBuffer</a>
+: <a class="el" href="classof_buffer.html#a5c07c6479de366fbf6745d91fc9f0b92">ofBuffer</a>
+, <a class="el" href="classof_texture.html#ac2f45380a3c103f7fbe8d223b162b2e6">ofTexture</a>
 , <a class="el" href="classof_gst_video_utils.html#a51fc30c00bfb261a7a2835c2ea6e1cd4">ofGstVideoUtils</a>
 , <a class="el" href="classof_gst_video_player.html#a627aeeec0e6637f46eea99ad37e81798">ofGstVideoPlayer</a>
+, <a class="el" href="classof_image__.html#a86968a4303907dbaeb008851076eeb8a">ofImage_&lt; PixelType &gt;</a>
+, <a class="el" href="classof_fbo.html#a256abd3a477d164e64409250eba488a5">ofFbo</a>
+, <a class="el" href="classof_texture.html#a37e50fcd472023e3879fda915d356d24">ofTexture</a>
+, <a class="el" href="classof_pixels__.html#a02b8aa5dd03f4403e37186c8eadaa872">ofPixels_&lt; PixelType &gt;</a>
 </li>
 <li>allowExt()
 : <a class="el" href="classof_directory.html#a9084fb19ee81529892707a5689263bc0">ofDirectory</a>
 </li>
 <li>angle()
-: <a class="el" href="classof_vec2f.html#acb166e3a03ec85d5ceb5bd299ce86ee0">ofVec2f</a>
-, <a class="el" href="classof_vec3f.html#a0e7eb8a57c80b89434b72ea8d9f5b1de">ofVec3f</a>
+: <a class="el" href="classof_vec3f.html#a0e7eb8a57c80b89434b72ea8d9f5b1de">ofVec3f</a>
+, <a class="el" href="classof_vec2f.html#acb166e3a03ec85d5ceb5bd299ce86ee0">ofVec2f</a>
 </li>
 <li>angleRad()
 : <a class="el" href="classof_vec2f.html#a6b32d05b206620ee5295061ee8206d6b">ofVec2f</a>
@@ -184,21 +197,19 @@
 </li>
 <li>append()
 : <a class="el" href="classof_buffer.html#a684b85e7cff9eb5c89445cccce237d58">ofBuffer</a>
+, <a class="el" href="classof_mesh.html#af54d91dacec03b8db527eff91da6ffbd">ofMesh</a>
 </li>
 <li>arc()
-: <a class="el" href="classof_path.html#ae9d788dc4845b33ca8bd7a26be52e4ef">ofPath</a>
-, <a class="el" href="classof_polyline.html#ad651321496a4cdc7011d44eaacf5159c">ofPolyline</a>
-, <a class="el" href="classof_path.html#a56045c2a6c5daf8834f57312a34631ea">ofPath</a>
-, <a class="el" href="classof_polyline.html#adf4f4f25105a894d696e0e2b9acf7ff6">ofPolyline</a>
+: <a class="el" href="classof_path.html#a56045c2a6c5daf8834f57312a34631ea">ofPath</a>
+, <a class="el" href="classof_polyline.html#a53387470756ad8619854f9597ab86c04">ofPolyline</a>
 , <a class="el" href="classof_path.html#a4cc251c298d9c257aa7d97ccb43fd6fd">ofPath</a>
 </li>
 <li>arcNegative()
-: <a class="el" href="classof_polyline.html#a04c4e9f6dfea9d24a8dd6fbcada01a64">ofPolyline</a>
+: <a class="el" href="classof_path.html#a3790036f5159448eaf2d1011607592ca">ofPath</a>
+, <a class="el" href="classof_polyline.html#a05e0a55228006f4b854c9880a9369fe2">ofPolyline</a>
 , <a class="el" href="classof_path.html#a73a466fb9ec4d80d28ca0115af873a89">ofPath</a>
-, <a class="el" href="classof_polyline.html#a3670ab8a82139711d8f264fc76889539">ofPolyline</a>
+, <a class="el" href="classof_polyline.html#a10e1e5ab940665c49fc6492a97967cda">ofPolyline</a>
 , <a class="el" href="classof_path.html#a5e52e3e8101149fba99929642b939195">ofPath</a>
-, <a class="el" href="classof_polyline.html#ab71bb4c424e087642fe6f2902d033719">ofPolyline</a>
-, <a class="el" href="classof_path.html#a3790036f5159448eaf2d1011607592ca">ofPath</a>
 </li>
 <li>asVec3()
 : <a class="el" href="classof_quaternion.html#a80e1aac743b27f8511faec3b970d0714">ofQuaternion</a>
@@ -207,10 +218,10 @@
 : <a class="el" href="classof_quaternion.html#a0afc1e4dba0677c0907290331c09bfeb">ofQuaternion</a>
 </li>
 <li>audioIn()
-: <a class="el" href="classof_base_sound_input.html#ac30f51b9b092efcbf631a1c1c04ebee5">ofBaseSoundInput</a>
+: <a class="el" href="classof_base_sound_input.html#a27614c83263da3af6ba55f91ec651b70">ofBaseSoundInput</a>
 </li>
 <li>audioOut()
-: <a class="el" href="classof_base_sound_output.html#ab048c968fce86a785d60ee1e51448640">ofBaseSoundOutput</a>
+: <a class="el" href="classof_base_sound_output.html#affbe31ef262e3fad9bbb70538523c191">ofBaseSoundOutput</a>
 </li>
 <li>audioReceived()
 : <a class="el" href="classof_base_sound_input.html#aa25595a25f26bade23a380ec76a52849">ofBaseSoundInput</a>
@@ -222,8 +233,8 @@
 : <a class="el" href="classof_serial.html#ab0b70837b7a0ffc7f71d4ae381857c41">ofSerial</a>
 </li>
 <li>average()
-: <a class="el" href="classof_vec2f.html#a2b5e48a117ad1bc7afc753ecb0665f42">ofVec2f</a>
-, <a class="el" href="classof_vec3f.html#aece369f40d7070c859e684b4160df30d">ofVec3f</a>
+: <a class="el" href="classof_vec3f.html#aece369f40d7070c859e684b4160df30d">ofVec3f</a>
+, <a class="el" href="classof_vec2f.html#a2b5e48a117ad1bc7afc753ecb0665f42">ofVec2f</a>
 , <a class="el" href="classof_vec4f.html#a530bf756668142598effd132e6eebd29">ofVec4f</a>
 </li>
 </ul>

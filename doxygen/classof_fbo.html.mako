@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -86,7 +87,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae08d2e7511193b4208c2490dbed3070b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a501f8613848153f9edf31335a79bf3a5"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_fbo.html#a501f8613848153f9edf31335a79bf3a5">~ofFbo</a> ()</td></tr>
 <tr class="separator:a501f8613848153f9edf31335a79bf3a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a256abd3a477d164e64409250eba488a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_fbo.html#a256abd3a477d164e64409250eba488a5">allocate</a> (int width, int height, int internalformat=GL_RGBA, int numSamples=0)</td></tr>
+<tr class="memitem:a256abd3a477d164e64409250eba488a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_fbo.html#a256abd3a477d164e64409250eba488a5">allocate</a> (int <a class="el" href="of_icon_8h.html#aca34d28e3d8bcbcadb8edb4e3af24f8c">width</a>, int <a class="el" href="of_icon_8h.html#ab2e78c61905b4419fcc7b4cfc500fe85">height</a>, int internalformat=GL_RGBA, int numSamples=0)</td></tr>
 <tr class="separator:a256abd3a477d164e64409250eba488a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2a0263afa943c8cbbebc58bb5dabd39"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_fbo.html#ac2a0263afa943c8cbbebc58bb5dabd39">allocate</a> (<a class="el" href="structof_fbo_1_1_settings.html">Settings</a> settings=<a class="el" href="structof_fbo_1_1_settings.html">Settings</a>())</td></tr>
 <tr class="separator:ac2a0263afa943c8cbbebc58bb5dabd39"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -94,7 +95,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a65e1fc2b851fad11382a4bfaebdadfb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a083acab9d604f1ec41393e9778f7fe6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_fbo.html#a083acab9d604f1ec41393e9778f7fe6d">draw</a> (float x, float y)</td></tr>
 <tr class="separator:a083acab9d604f1ec41393e9778f7fe6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afbfa27be404bd8dc90c4b50efa639c39"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_fbo.html#afbfa27be404bd8dc90c4b50efa639c39">draw</a> (float x, float y, float width, float height)</td></tr>
+<tr class="memitem:afbfa27be404bd8dc90c4b50efa639c39"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_fbo.html#afbfa27be404bd8dc90c4b50efa639c39">draw</a> (float x, float y, float <a class="el" href="of_icon_8h.html#aca34d28e3d8bcbcadb8edb4e3af24f8c">width</a>, float <a class="el" href="of_icon_8h.html#ab2e78c61905b4419fcc7b4cfc500fe85">height</a>)</td></tr>
 <tr class="separator:afbfa27be404bd8dc90c4b50efa639c39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8750a2af0540fac6b7b36cfa795a5570"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_fbo.html#a8750a2af0540fac6b7b36cfa795a5570">setAnchorPercent</a> (float xPct, float yPct)</td></tr>
 <tr class="separator:a8750a2af0540fac6b7b36cfa795a5570"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -132,6 +133,16 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7a482e2c18baeb990f99dbe3718dc0c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3185a7f5f21cfde078f0c6a7fc265bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_fbo.html#ad3185a7f5f21cfde078f0c6a7fc265bf">unbind</a> ()</td></tr>
 <tr class="separator:ad3185a7f5f21cfde078f0c6a7fc265bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86c24d0cb7851189f49afaad2a7e0c0b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_fbo.html#a86c24d0cb7851189f49afaad2a7e0c0b">checkStatus</a> ()</td></tr>
+<tr class="separator:a86c24d0cb7851189f49afaad2a7e0c0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc9a7c3fd3a7173053abf1f0f2cc1a67"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_fbo.html#adc9a7c3fd3a7173053abf1f0f2cc1a67">createAndAttachTexture</a> (GLenum internalFormat, GLenum attachmentPoint)</td></tr>
+<tr class="separator:adc9a7c3fd3a7173053abf1f0f2cc1a67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7afe04b8d372d1988e1f89194c21361a"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_fbo.html#a7afe04b8d372d1988e1f89194c21361a">createAndAttachRenderbuffer</a> (GLenum internalFormat, GLenum attachmentPoint)</td></tr>
+<tr class="separator:a7afe04b8d372d1988e1f89194c21361a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e76cca947b27b4b1cc873d9c75f0e26"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_fbo.html#a9e76cca947b27b4b1cc873d9c75f0e26">createAndAttachDepthStencilTexture</a> (GLenum target, GLint internalformat, GLenum attachment)</td></tr>
+<tr class="separator:a9e76cca947b27b4b1cc873d9c75f0e26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9396c3677c8989f86362f352824d9dd6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_fbo.html#a9396c3677c8989f86362f352824d9dd6">createAndAttachDepthStencilTexture</a> (GLenum target, GLint internalformat, GLenum attachment, GLenum transferFormat, GLenum transferType)</td></tr>
+<tr class="separator:a9396c3677c8989f86362f352824d9dd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33f8fd4b446be38333be97a69431646e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_fbo.html#a33f8fd4b446be38333be97a69431646e">getNumTextures</a> ()</td></tr>
 <tr class="separator:a33f8fd4b446be38333be97a69431646e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b46d411608a0e7595945fc8fdedfb18"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_fbo.html#a0b46d411608a0e7595945fc8fdedfb18">setActiveDrawBuffer</a> (int i)</td></tr>
@@ -345,6 +356,149 @@ Static Public Member Functions</h2></td></tr>
 <span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a86c24d0cb7851189f49afaad2a7e0c0b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ofFbo::checkStatus </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9e76cca947b27b4b1cc873d9c75f0e26"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofFbo::createAndAttachDepthStencilTexture </td>
+          <td>(</td>
+          <td class="paramtype">GLenum&#160;</td>
+          <td class="paramname"><em>target</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLint&#160;</td>
+          <td class="paramname"><em>internalformat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLenum&#160;</td>
+          <td class="paramname"><em>attachment</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9396c3677c8989f86362f352824d9dd6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofFbo::createAndAttachDepthStencilTexture </td>
+          <td>(</td>
+          <td class="paramtype">GLenum&#160;</td>
+          <td class="paramname"><em>target</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLint&#160;</td>
+          <td class="paramname"><em>internalformat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLenum&#160;</td>
+          <td class="paramname"><em>attachment</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLenum&#160;</td>
+          <td class="paramname"><em>transferFormat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLenum&#160;</td>
+          <td class="paramname"><em>transferType</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7afe04b8d372d1988e1f89194c21361a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLuint ofFbo::createAndAttachRenderbuffer </td>
+          <td>(</td>
+          <td class="paramtype">GLenum&#160;</td>
+          <td class="paramname"><em>internalFormat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLenum&#160;</td>
+          <td class="paramname"><em>attachmentPoint</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="adc9a7c3fd3a7173053abf1f0f2cc1a67"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofFbo::createAndAttachTexture </td>
+          <td>(</td>
+          <td class="paramtype">GLenum&#160;</td>
+          <td class="paramname"><em>internalFormat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLenum&#160;</td>
+          <td class="paramname"><em>attachmentPoint</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
 </div><div class="memdoc">
 
 </div>
@@ -1010,8 +1164,8 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>gl/<a class="el" href="of_fbo_8h_source.html">ofFbo.h</a></li>
-<li>gl/<a class="el" href="of_fbo_8cpp.html">ofFbo.cpp</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/gl/<a class="el" href="of_fbo_8h_source.html">ofFbo.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/gl/<a class="el" href="of_fbo_8cpp.html">ofFbo.cpp</a></li>
 </ul>
 </div><!-- contents -->
 

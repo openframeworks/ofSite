@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -81,6 +82,18 @@
 &#160;
 
 <h3><a class="anchor" id="index_c"></a>- c -</h3><ul>
+<li>clampedAdd()
+: <a class="el" href="of_color_8cpp.html#a0eef5d4e1e627c4b6f044155ed9d763b">ofColor.cpp</a>
+</li>
+<li>clampedDivide()
+: <a class="el" href="of_color_8cpp.html#a66f8ced9308d219191074f42bc1f08fb">ofColor.cpp</a>
+</li>
+<li>clampedMultiply()
+: <a class="el" href="of_color_8cpp.html#a603c2035cc6cf3d0003ce58646713b5d">ofColor.cpp</a>
+</li>
+<li>clampedSubtract()
+: <a class="el" href="of_color_8cpp.html#a8a8b56286ac8bd5b729be01c7ae34dc7">ofColor.cpp</a>
+</li>
 <li>compare_cps()
 : <a class="el" href="of_true_type_font_8cpp.html#af542632a820ad282196091ee29c53843">ofTrueTypeFont.cpp</a>
 </li>

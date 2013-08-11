@@ -84,7 +84,7 @@ _name: display_
 _returns: void_
 _returns_description: _
 _parameters: void_
-_access: public_
+_access: private_
 _version_started: 007_
 _version_deprecated: _
 _summary: _
@@ -113,7 +113,7 @@ _name: dragEvent_
 _returns: void_
 _returns_description: _
 _parameters: char **fileNames, int howManyFiles, int dragX, int dragY_
-_access: public_
+_access: private_
 _version_started: 007_
 _version_deprecated: _
 _summary: _
@@ -171,7 +171,7 @@ _name: entry_cb_
 _returns: void_
 _returns_description: _
 _parameters: int state_
-_access: public_
+_access: private_
 _version_started: 007_
 _version_deprecated: _
 _summary: _
@@ -234,7 +234,7 @@ _version_started: 006_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -263,7 +263,7 @@ _version_started: 006_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -321,7 +321,7 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -577,7 +577,7 @@ _name: idle_cb_
 _returns: void_
 _returns_description: _
 _parameters: void_
-_access: public_
+_access: private_
 _version_started: 007_
 _version_deprecated: _
 _summary: _
@@ -635,7 +635,7 @@ _name: keyboard_cb_
 _returns: void_
 _returns_description: _
 _parameters: unsigned char key, int x, int y_
-_access: public_
+_access: private_
 _version_started: 006_
 _version_deprecated: _
 _summary: _
@@ -664,7 +664,7 @@ _name: keyboard_up_cb_
 _returns: void_
 _returns_description: _
 _parameters: unsigned char key, int x, int y_
-_access: public_
+_access: private_
 _version_started: 006_
 _version_deprecated: _
 _summary: _
@@ -693,7 +693,7 @@ _name: motion_cb_
 _returns: void_
 _returns_description: _
 _parameters: int x, int y_
-_access: public_
+_access: private_
 _version_started: 006_
 _version_deprecated: _
 _summary: _
@@ -722,7 +722,7 @@ _name: mouse_cb_
 _returns: void_
 _returns_description: _
 _parameters: int button, int state, int x, int y_
-_access: public_
+_access: private_
 _version_started: 006_
 _version_deprecated: _
 _summary: _
@@ -780,7 +780,7 @@ _name: passive_motion_cb_
 _returns: void_
 _returns_description: _
 _parameters: int x, int y_
-_access: public_
+_access: private_
 _version_started: 006_
 _version_deprecated: _
 _summary: _
@@ -809,7 +809,7 @@ _name: resize_cb_
 _returns: void_
 _returns_description: _
 _parameters: int w, int h_
-_access: public_
+_access: private_
 _version_started: 006_
 _version_deprecated: _
 _summary: _
@@ -930,7 +930,7 @@ _version_started: 006_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -1024,6 +1024,34 @@ _advanced: False_
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setVerticalSync(enabled)
+
+<!--
+_syntax: setVerticalSync(enabled)_
+_name: setVerticalSync_
+_returns: void_
+_returns_description: _
+_parameters: bool enabled_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -1186,7 +1214,7 @@ _name: special_key_cb_
 _returns: void_
 _returns_description: _
 _parameters: int key, int x, int y_
-_access: public_
+_access: private_
 _version_started: 006_
 _version_deprecated: _
 _summary: _
@@ -1215,7 +1243,7 @@ _name: special_key_up_cb_
 _returns: void_
 _returns_description: _
 _parameters: int key, int x, int y_
-_access: public_
+_access: private_
 _version_started: 006_
 _version_deprecated: _
 _summary: _
@@ -1314,6 +1342,30 @@ _advanced: False_
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool iconSet
+
+<!--
+_name: iconSet_
+_type: bool_
+_access: private_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 

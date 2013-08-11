@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -47,7 +48,7 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_cbdb8362360e11eafe2fa3bc74cf0ffd.html">utils</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_84d5b34cee6369a03c8d1f3b970ed216.html">openFrameworks</a></li><li class="navelem"><a class="el" href="dir_526ceb304abbba6426340f0fa9170dbd.html">utils</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -67,6 +68,7 @@
 <code>#include &quot;Poco/String.h&quot;</code><br/>
 <code>#include &quot;Poco/LocalDateTime.h&quot;</code><br/>
 <code>#include &quot;Poco/DateTimeFormatter.h&quot;</code><br/>
+<code>#include &quot;Poco/URI.h&quot;</code><br/>
 <code>#include &lt;cctype&gt;</code><br/>
 <code>#include &lt;sys/time.h&gt;</code><br/>
 </div><table class="memberdecls">
@@ -113,10 +115,22 @@ Functions</h2></td></tr>
 <tr class="separator:a5dd69e44833bd031c2c776804d535146"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc29e22b96ebfb8d5c7588181469cad9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_utils_8cpp.html#abc29e22b96ebfb8d5c7588181469cad9">ofDisableDataPath</a> ()</td></tr>
 <tr class="separator:abc29e22b96ebfb8d5c7588181469cad9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff5233a2522903cdb95a397d3282c1b3"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_utils_8cpp.html#aff5233a2522903cdb95a397d3282c1b3">defaultDataPath</a> ()</td></tr>
+<tr class="separator:aff5233a2522903cdb95a397d3282c1b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3826272bbfd673e69c6d3b600363c548"><td class="memItemLeft" align="right" valign="top">Poco::Path&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_utils_8cpp.html#a3826272bbfd673e69c6d3b600363c548">getWorkingDir</a> ()</td></tr>
+<tr class="separator:a3826272bbfd673e69c6d3b600363c548"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d2223607b65d45e548b331223e7277f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_utils_8cpp.html#a1d2223607b65d45e548b331223e7277f">ofSetWorkingDirectoryToDefault</a> ()</td></tr>
+<tr class="separator:a1d2223607b65d45e548b331223e7277f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae03274e04d163cc47463effa53a1d565"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_utils_8cpp.html#ae03274e04d163cc47463effa53a1d565">ofSetDataPathRoot</a> (string newRoot)</td></tr>
 <tr class="separator:ae03274e04d163cc47463effa53a1d565"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab63c4765a81958e1573817738c684bba"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_utils_8cpp.html#ab63c4765a81958e1573817738c684bba">ofToDataPath</a> (string path, bool makeAbsolute)</td></tr>
 <tr class="separator:ab63c4765a81958e1573817738c684bba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc2eaef18a55b1bf69954b786361eb66"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr class="memitem:adc2eaef18a55b1bf69954b786361eb66"><td class="memTemplItemLeft" align="right" valign="top">string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_utils_8cpp.html#adc2eaef18a55b1bf69954b786361eb66">ofFromString</a> (const string &amp;value)</td></tr>
+<tr class="separator:adc2eaef18a55b1bf69954b786361eb66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b95c188372e3813737d257cfae89a63"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr class="memitem:a9b95c188372e3813737d257cfae89a63"><td class="memTemplItemLeft" align="right" valign="top">const char *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_utils_8cpp.html#a9b95c188372e3813737d257cfae89a63">ofFromString</a> (const string &amp;value)</td></tr>
+<tr class="separator:a9b95c188372e3813737d257cfae89a63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1c1a5e4460f87bfd46eae246d5dad18"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
 <tr class="memitem:ad1c1a5e4460f87bfd46eae246d5dad18"><td class="memTemplItemLeft" align="right" valign="top">string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_utils_8cpp.html#ad1c1a5e4460f87bfd46eae246d5dad18">ofToHex</a> (const string &amp;value)</td></tr>
 <tr class="separator:ad1c1a5e4460f87bfd46eae246d5dad18"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -161,6 +175,8 @@ Functions</h2></td></tr>
 <tr class="separator:a113181215ce9fb80d06b60f9ae09e659"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb1e5425f758ed665faf87d3f29b350c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_utils_8cpp.html#afb1e5425f758ed665faf87d3f29b350c">ofIsStringInString</a> (string haystack, string needle)</td></tr>
 <tr class="separator:afb1e5425f758ed665faf87d3f29b350c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee802a4f063ae9066d25baa84d9502e1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_utils_8cpp.html#aee802a4f063ae9066d25baa84d9502e1">ofStringTimesInString</a> (string haystack, string needle)</td></tr>
+<tr class="separator:aee802a4f063ae9066d25baa84d9502e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a92c303a15a7649f987b8dce1e5eec26c"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_utils_8cpp.html#a92c303a15a7649f987b8dce1e5eec26c">ofToLower</a> (const string &amp;src)</td></tr>
 <tr class="separator:a92c303a15a7649f987b8dce1e5eec26c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac90c47cb2710aa90def41ddef75d5adf"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_utils_8cpp.html#ac90c47cb2710aa90def41ddef75d5adf">ofToUpper</a> (const string &amp;src)</td></tr>
@@ -169,10 +185,16 @@ Functions</h2></td></tr>
 <tr class="separator:a666d0d4cc9f1781386de7a678618b35e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63462eb8758cd1ebf85491c8050f8bb1"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_utils_8cpp.html#a63462eb8758cd1ebf85491c8050f8bb1">ofVAArgsToString</a> (const char *format, va_list args)</td></tr>
 <tr class="separator:a63462eb8758cd1ebf85491c8050f8bb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaec488f8c77857f240dd79ae9f63d0e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_utils_8cpp.html#aaec488f8c77857f240dd79ae9f63d0e6">ofLaunchBrowser</a> (string url)</td></tr>
-<tr class="separator:aaec488f8c77857f240dd79ae9f63d0e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1958248594603e18ae6b2f13ebe4beb8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_utils_8cpp.html#a1958248594603e18ae6b2f13ebe4beb8">ofLaunchBrowser</a> (string _url, bool uriEncodeQuery)</td></tr>
+<tr class="separator:a1958248594603e18ae6b2f13ebe4beb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace6bb3ddbbe185712808047277dab043"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_utils_8cpp.html#ace6bb3ddbbe185712808047277dab043">ofGetVersionInfo</a> ()</td></tr>
 <tr class="separator:ace6bb3ddbbe185712808047277dab043"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bcb56c4f4d807b22afea5b178f65bdc"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_utils_8cpp.html#a6bcb56c4f4d807b22afea5b178f65bdc">ofGetVersionMajor</a> ()</td></tr>
+<tr class="separator:a6bcb56c4f4d807b22afea5b178f65bdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacd9f2aaab3c32a0ef2fa0389ad80c58"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_utils_8cpp.html#aacd9f2aaab3c32a0ef2fa0389ad80c58">ofGetVersionMinor</a> ()</td></tr>
+<tr class="separator:aacd9f2aaab3c32a0ef2fa0389ad80c58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7fce5c6b942eb31e468bf3431c1b343"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_utils_8cpp.html#ad7fce5c6b942eb31e468bf3431c1b343">ofGetVersionPatch</a> ()</td></tr>
+<tr class="separator:ad7fce5c6b942eb31e468bf3431c1b343"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6fff50ce3fcfcb18dc2543d99822d645"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_utils_8cpp.html#a6fff50ce3fcfcb18dc2543d99822d645">ofSaveScreen</a> (string filename)</td></tr>
 <tr class="separator:a6fff50ce3fcfcb18dc2543d99822d645"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a664064ed1310da6b9e5c104ae53862"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_utils_8cpp.html#a4a664064ed1310da6b9e5c104ae53862">ofSaveViewport</a> (string filename)</td></tr>
@@ -203,6 +225,36 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="aff5233a2522903cdb95a397d3282c1b3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string defaultDataPath </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3826272bbfd673e69c6d3b600363c548"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Poco::Path getWorkingDir </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="ade60b17beae5e41cd433975998fef037"></a>
 <div class="memitem">
 <div class="memproto">
@@ -290,6 +342,42 @@ Variables</h2></td></tr>
           <td class="memname">void ofEnableDataPath </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="adc2eaef18a55b1bf69954b786361eb66"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">string ofFromString </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9b95c188372e3813737d257cfae89a63"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* ofFromString </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -523,6 +611,51 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a6bcb56c4f4d807b22afea5b178f65bdc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int ofGetVersionMajor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aacd9f2aaab3c32a0ef2fa0389ad80c58"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int ofGetVersionMinor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad7fce5c6b942eb31e468bf3431c1b343"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int ofGetVersionPatch </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="aedebb8ecdac415d22042d7b681ca1d43"></a>
 <div class="memitem">
 <div class="memproto">
@@ -669,7 +802,7 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aaec488f8c77857f240dd79ae9f63d0e6"></a>
+<a class="anchor" id="a1958248594603e18ae6b2f13ebe4beb8"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -677,8 +810,18 @@ Variables</h2></td></tr>
           <td class="memname">void ofLaunchBrowser </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>url</em></td><td>)</td>
+          <td class="paramname"><em>_url</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>uriEncodeQuery</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -764,6 +907,21 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a1d2223607b65d45e548b331223e7277f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofSetWorkingDirectoryToDefault </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a98dd60cdd03981911102688dd6f1662d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -823,6 +981,32 @@ Variables</h2></td></tr>
           <td></td>
           <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>replaceStr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aee802a4f063ae9066d25baa84d9502e1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ofStringTimesInString </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>haystack</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>needle</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

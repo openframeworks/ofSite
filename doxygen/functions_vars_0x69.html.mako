@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -52,6 +53,7 @@
       <li><a href="functions.html"><span>All</span></a></li>
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li class="current"><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_type.html"><span>Typedefs</span></a></li>
       <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
       <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
       <li><a href="functions_prop.html"><span>Properties</span></a></li>
@@ -98,12 +100,16 @@
 </li>
 <li>id
 : <a class="el" href="classof_touch_event_args.html#aa41f5bcdb6184f176253b43031e92bff">ofTouchEventArgs</a>
+, <a class="el" href="classof_video_device.html#ab38dcd00b739ab634ff51ae029af529c">ofVideoDevice</a>
 </li>
 <li>indianRed
 : <a class="el" href="classof_color__.html#aa3941bcb4ef89928a6632d348491f751">ofColor_&lt; PixelType &gt;</a>
 </li>
 <li>indigo
 : <a class="el" href="classof_color__.html#aaaac18f7583442ce4af49ee34861692c">ofColor_&lt; PixelType &gt;</a>
+</li>
+<li>initialClearColor
+: <a class="el" href="structof_app_e_g_l_window_1_1_settings.html#a7b0ef0b01e024ab22db515d00354331e">ofAppEGLWindow::Settings</a>
 </li>
 <li>internalformat
 : <a class="el" href="structof_fbo_1_1_settings.html#a254bb6170777abb1949c55c94e08342e">ofFbo::Settings</a>
@@ -125,6 +131,15 @@
 </li>
 <li>isStreaming
 : <a class="el" href="classof_fmod_sound_player.html#a14c2dcc99f3a496b03e1f136f714f24d">ofFmodSoundPlayer</a>
+</li>
+<li>isSurfaceInited
+: <a class="el" href="classof_app_e_g_l_window.html#a1d214ab7e0ab1ae0ec64bc943bfe0fd5">ofAppEGLWindow</a>
+</li>
+<li>isUsingX11
+: <a class="el" href="classof_app_e_g_l_window.html#a94e635bde8bdcb4c83d8255b3e5ad9aa">ofAppEGLWindow</a>
+</li>
+<li>isWindowInited
+: <a class="el" href="classof_app_e_g_l_window.html#a5775ed15ecdec5a8cda9ae7cc462094d">ofAppEGLWindow</a>
 </li>
 <li>ivory
 : <a class="el" href="classof_color__.html#a8b96c8290784250c9d71b0b3868e2264">ofColor_&lt; PixelType &gt;</a>

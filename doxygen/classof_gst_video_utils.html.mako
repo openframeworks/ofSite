@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -81,9 +82,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3d2eaed59c04b70a82612a2492f71b46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e2987498c18475966cc62d2e7f7a984"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_gst_video_utils.html#a0e2987498c18475966cc62d2e7f7a984">~ofGstVideoUtils</a> ()</td></tr>
 <tr class="separator:a0e2987498c18475966cc62d2e7f7a984"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aafba2554c03c06cc9278980c11398b88"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_gst_video_utils.html#aafba2554c03c06cc9278980c11398b88">setPipeline</a> (string pipeline, int bpp=24, bool <a class="el" href="classof_gst_utils.html#adc1c7cac61e23ff5ff6c9598742d5cf8">isStream</a>=false, int w=-1, int h=-1)</td></tr>
+<tr class="memitem:aafba2554c03c06cc9278980c11398b88"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_gst_video_utils.html#aafba2554c03c06cc9278980c11398b88">setPipeline</a> (string pipeline, int <a class="el" href="of_app_e_g_l_window_8cpp.html#a54b1f406bd10413e14f8279d45da6e41">bpp</a>=24, bool <a class="el" href="classof_gst_utils.html#adc1c7cac61e23ff5ff6c9598742d5cf8">isStream</a>=false, int w=-1, int h=-1)</td></tr>
 <tr class="separator:aafba2554c03c06cc9278980c11398b88"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51fc30c00bfb261a7a2835c2ea6e1cd4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_gst_video_utils.html#a51fc30c00bfb261a7a2835c2ea6e1cd4">allocate</a> (int w, int h, int bpp)</td></tr>
+<tr class="memitem:a51fc30c00bfb261a7a2835c2ea6e1cd4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_gst_video_utils.html#a51fc30c00bfb261a7a2835c2ea6e1cd4">allocate</a> (int w, int h, int <a class="el" href="of_app_e_g_l_window_8cpp.html#a54b1f406bd10413e14f8279d45da6e41">bpp</a>)</td></tr>
 <tr class="separator:a51fc30c00bfb261a7a2835c2ea6e1cd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af192b063cad4fbea88f290e3b501eb06"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_gst_video_utils.html#af192b063cad4fbea88f290e3b501eb06">isFrameNew</a> ()</td></tr>
 <tr class="separator:af192b063cad4fbea88f290e3b501eb06"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -160,6 +161,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aec932d11872d71fcea8332d0238302d2 inherit pub_methods_classof_gst_utils"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b2b368aaa363fd114671725828abebe inherit pub_methods_classof_gst_utils"><td class="memItemLeft" align="right" valign="top"><a class="el" href="of_gst_utils_8h.html#a8b2d14560b8b4c41de69fe2bd2ce6fa3">GstElement</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_gst_utils.html#a1b2b368aaa363fd114671725828abebe">getSink</a> ()</td></tr>
 <tr class="separator:a1b2b368aaa363fd114671725828abebe inherit pub_methods_classof_gst_utils"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d08aa353ec5a802ccc525988c609107 inherit pub_methods_classof_gst_utils"><td class="memItemLeft" align="right" valign="top"><a class="el" href="of_gst_utils_8h.html#a8b2d14560b8b4c41de69fe2bd2ce6fa3">GstElement</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_gst_utils.html#a4d08aa353ec5a802ccc525988c609107">getGstElementByName</a> (const string &amp;name)</td></tr>
+<tr class="separator:a4d08aa353ec5a802ccc525988c609107 inherit pub_methods_classof_gst_utils"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:addee5eb7880fe0b02b69c047183cd472 inherit pub_methods_classof_gst_utils"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_gst_utils.html#addee5eb7880fe0b02b69c047183cd472">getMinLatencyNanos</a> ()</td></tr>
 <tr class="separator:addee5eb7880fe0b02b69c047183cd472 inherit pub_methods_classof_gst_utils"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75cc29f0b43c455dd36e6fbeba9863b9 inherit pub_methods_classof_gst_utils"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_gst_utils.html#a75cc29f0b43c455dd36e6fbeba9863b9">getMaxLatencyNanos</a> ()</td></tr>
@@ -651,8 +654,8 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>video/<a class="el" href="of_gst_utils_8h_source.html">ofGstUtils.h</a></li>
-<li>video/<a class="el" href="of_gst_utils_8cpp.html">ofGstUtils.cpp</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/video/<a class="el" href="of_gst_utils_8h_source.html">ofGstUtils.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/video/<a class="el" href="of_gst_utils_8cpp.html">ofGstUtils.cpp</a></li>
 </ul>
 </div><!-- contents -->
 

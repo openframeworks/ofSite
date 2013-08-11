@@ -12,7 +12,7 @@ from documentation_members import DocsMethod, DocsVar
 of_src = '/home/arturo/Escritorio/openFrameworks/addons'
 of_documentation = of_src + '/doxygensource/xml/'
 
-currentversion = "007"
+currentversion = "0.8.0"
 
 def serialize_class(filename):
     xml = objectify.parse(filename)

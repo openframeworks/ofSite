@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -105,7 +106,7 @@
   <tr class="even"><td class="entry"><a class="el" href="classof_file.html#a8b838bfe80e9b08a2326a9428a323dd5">setExecutable</a>(bool executable)</td><td class="entry"><a class="el" href="classof_file.html">ofFile</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classof_file.html#a8c5bfcd06a4155e7ea716b7fd58d6bf0">setReadOnly</a>(bool readable)</td><td class="entry"><a class="el" href="classof_file.html">ofFile</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classof_file.html#ad32d5143ed9f7095329a50ec5d750e7b">setWriteable</a>(bool writeable)</td><td class="entry"><a class="el" href="classof_file.html">ofFile</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classof_file.html#a9564d6ef00b79b2c431b132619c3964a">writeFromBuffer</a>(ofBuffer &amp;buffer)</td><td class="entry"><a class="el" href="classof_file.html">ofFile</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classof_file.html#a0505ea6bd750ca7975db1b14bb68b4ec">writeFromBuffer</a>(const ofBuffer &amp;buffer)</td><td class="entry"><a class="el" href="classof_file.html">ofFile</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classof_file.html#afc27b4186457038ca30b5471b497f2a0aff8f040e5a5c98cb4b54586e5e87a9e5">WriteOnly</a> enum value</td><td class="entry"><a class="el" href="classof_file.html">ofFile</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classof_file.html#a35ec4268eb647e175dae6e25599b212f">~ofFile</a>()</td><td class="entry"><a class="el" href="classof_file.html">ofFile</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->

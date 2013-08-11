@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -52,6 +53,7 @@
       <li><a href="functions.html"><span>All</span></a></li>
       <li class="current"><a href="functions_func.html"><span>Functions</span></a></li>
       <li><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_type.html"><span>Typedefs</span></a></li>
       <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
       <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
       <li><a href="functions_prop.html"><span>Properties</span></a></li>
@@ -95,21 +97,29 @@
 &#160;
 
 <h3><a class="anchor" id="index_h"></a>- h -</h3><ul>
+<li>handleX11Event()
+: <a class="el" href="classof_app_e_g_l_window.html#ab5ac1b3beb08b14f9a2fd6e00a12e339">ofAppEGLWindow</a>
+</li>
 <li>hasChanged()
-: <a class="el" href="classof_sub_path.html#a5bf55161fded71ef5c9eb4edc5f06e3c">ofSubPath</a>
+: <a class="el" href="classof_path.html#aedc78d9b0f4f4f8f475aa6b39ff6ef54">ofPath</a>
 , <a class="el" href="classof_polyline.html#abd08a523635b4a9203fb08a1447e9e38">ofPolyline</a>
 </li>
 <li>hasColors()
-: <a class="el" href="classof_mesh.html#a24c09fd7825c947d089487182c56ea45">ofMesh</a>
+: <a class="el" href="classof_mesh.html#ab6be53b0d38750bac37466a2afb80df4">ofMesh</a>
+, <a class="el" href="classof_mesh_face.html#aabbdb2854d98387bbae909d0bcfae424">ofMeshFace</a>
 </li>
 <li>hasFullCharacterSet()
 : <a class="el" href="classof_true_type_font.html#a30ad1c1bd00c8708324463f5d46e466a">ofTrueTypeFont</a>
 </li>
 <li>hasIndices()
-: <a class="el" href="classof_mesh.html#a08150f40370116168878f31dcb5b12b5">ofMesh</a>
+: <a class="el" href="classof_mesh.html#a777bb666983203c64004e54dde51708a">ofMesh</a>
 </li>
 <li>hasNormals()
-: <a class="el" href="classof_mesh.html#a11804f7e3f242e32e5970c2e6e89975d">ofMesh</a>
+: <a class="el" href="classof_mesh.html#a4eac00436a63515c933d91f87d1f8b26">ofMesh</a>
+, <a class="el" href="classof_mesh_face.html#a740008ecdadc58a6a2020fae79a1db56">ofMeshFace</a>
+</li>
+<li>hasNormalsEnabled()
+: <a class="el" href="classof3d_primitive.html#a396eb4253f091751efa9eb63d0885f66">of3dPrimitive</a>
 </li>
 <li>hasOutline()
 : <a class="el" href="classof_path.html#af4ae5d63424ab2d5ed2fba9477887a4b">ofPath</a>
@@ -117,11 +127,17 @@
 <li>hasPreview()
 : <a class="el" href="classof_q_t_kit_grabber.html#a8f31ccd66000d1df22de92eccdc6545f">ofQTKitGrabber</a>
 </li>
+<li>hasScaling()
+: <a class="el" href="classof3d_primitive.html#a20f8e5bc3113ec162d258b24379fca9c">of3dPrimitive</a>
+</li>
+<li>hasTexcoords()
+: <a class="el" href="classof_mesh_face.html#a9c21318112f412c8a68319caf84d0fbe">ofMeshFace</a>
+</li>
 <li>hasTexCoords()
-: <a class="el" href="classof_mesh.html#acde62714579a941f57de587874a4050e">ofMesh</a>
+: <a class="el" href="classof_mesh.html#a3045440dd2c5afefe6966c916ad1799f">ofMesh</a>
 </li>
 <li>hasVertices()
-: <a class="el" href="classof_mesh.html#a07acb9241b3fa789bf6ffb32d31439d8">ofMesh</a>
+: <a class="el" href="classof_mesh.html#ac8ee220b47ff0009c08e3a342c8fde5b">ofMesh</a>
 </li>
 <li>haveColorsChanged()
 : <a class="el" href="classof_mesh.html#a9b8a658247548c364c481c2fefacee95">ofMesh</a>
@@ -141,6 +157,8 @@
 <li>hideCursor()
 : <a class="el" href="classof_app_base_window.html#af4ef05008c4f77e2a0f8c271268ecfc1">ofAppBaseWindow</a>
 , <a class="el" href="classof_app_glut_window.html#a1a3c21c45dbadf7f88c5d43e886c4d38">ofAppGlutWindow</a>
+, <a class="el" href="classof_app_g_l_f_w_window.html#a9554b91e831145792c07e785444f7415">ofAppGLFWWindow</a>
+, <a class="el" href="classof_app_e_g_l_window.html#a65e9f597305f8b2f4c906e5ed0543c76">ofAppEGLWindow</a>
 </li>
 </ul>
 </div><!-- contents -->

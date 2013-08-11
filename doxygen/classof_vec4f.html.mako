@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -159,8 +160,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:abac74250789cbd6fc69c2ca37f5a29dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d3b0cde8a6d349677c03c7826edbde5"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vec4f.html#a4d3b0cde8a6d349677c03c7826edbde5">lengthSquared</a> () const </td></tr>
 <tr class="separator:a4d3b0cde8a6d349677c03c7826edbde5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c3e14018a4cb4c88c654e7897c0c12c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vec4f.html#a9c3e14018a4cb4c88c654e7897c0c12c">OF_DEPRECATED_MSG</a> (&quot;Use <a class="el" href="classof_vec4f.html#a4d3b0cde8a6d349677c03c7826edbde5">ofVec4f::lengthSquared</a>() instead.&quot;, float squareLength() const)</td></tr>
-<tr class="separator:a9c3e14018a4cb4c88c654e7897c0c12c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8d85bd705f13b402fef9f3f9433bd5f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vec4f.html#ad8d85bd705f13b402fef9f3f9433bd5f">dot</a> (const <a class="el" href="classof_vec4f.html">ofVec4f</a> &amp;vec) const </td></tr>
 <tr class="separator:ad8d85bd705f13b402fef9f3f9433bd5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa45517bb850b6730027f896b147aaa3d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_vec4f.html">ofVec4f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vec4f.html#aa45517bb850b6730027f896b147aaa3d">rescaled</a> (const float <a class="el" href="classof_vec4f.html#abac74250789cbd6fc69c2ca37f5a29dc">length</a>) const </td></tr>
@@ -905,32 +904,6 @@ Friends</h2></td></tr>
 <span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a9c3e14018a4cb4c88c654e7897c0c12c"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">ofVec4f::OF_DEPRECATED_MSG </td>
-          <td>(</td>
-          <td class="paramtype">&quot;Use <a class="el" href="classof_vec4f.html#a4d3b0cde8a6d349677c03c7826edbde5">ofVec4f::lengthSquared</a>() instead.&quot;&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float squareLength()&#160;</td>
-          <td class="paramname"><em>const</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
 </div><div class="memdoc">
 
 </div>
@@ -1805,8 +1778,8 @@ Friends</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>math/<a class="el" href="of_vec4f_8h_source.html">ofVec4f.h</a></li>
-<li>math/<a class="el" href="of_vec4f_8cpp.html">ofVec4f.cpp</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/math/<a class="el" href="of_vec4f_8h_source.html">ofVec4f.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/math/<a class="el" href="of_vec4f_8cpp.html">ofVec4f.cpp</a></li>
 </ul>
 </div><!-- contents -->
 

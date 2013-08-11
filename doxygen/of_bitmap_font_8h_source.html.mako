@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -47,7 +48,7 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_e79632891301b850df87e9c0030293fa.html">graphics</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_84d5b34cee6369a03c8d1f3b970ed216.html">openFrameworks</a></li><li class="navelem"><a class="el" href="dir_71ce5ed87e0eac5aae2f3eaf44c16fe2.html">graphics</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -58,22 +59,28 @@
 <a href="of_bitmap_font_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="of_constants_8h.html">ofConstants.h</a>&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="of_rectangle_8h.html">ofRectangle.h</a>&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> </span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> note, the data in this code is taken from freeglut, and included in OF for compatability </span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> with non glut windowing toolkits.  see .cpp for license info</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> </span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> also, note that while this is used internally in ofGraphics, it&#39;s not really useful for end user usage.</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> </span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keywordtype">void</span> <a class="code" href="of_bitmap_font_8cpp.html#a8aed50a1a71aa2f298c8adbc5a7967e7">ofDrawBitmapCharacterStart</a>(<span class="keywordtype">int</span> stringLength);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keywordtype">void</span> <a class="code" href="of_bitmap_font_8cpp.html#a9486c61bc518dbffb0fd0256d46d88a0">ofDrawBitmapCharacter</a>(<span class="keywordtype">int</span> character, <span class="keywordtype">int</span> x , <span class="keywordtype">int</span> y );</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keywordtype">void</span> <a class="code" href="of_bitmap_font_8cpp.html#a8714b17241d96a407484a2e4eab162b7">ofDrawBitmapCharacterEnd</a>();</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">class </span><a class="code" href="classof_mesh.html">ofMesh</a>;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">class </span><a class="code" href="classof_texture.html">ofTexture</a>;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> </span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> note, the data in this code is taken from freeglut, and included in OF for compatability </span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> with non glut windowing toolkits.  see .cpp for license info</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> </span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> also, note that while this is used internally in ofGraphics, it&#39;s not really useful for end user usage.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> </span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordtype">void</span> <a class="code" href="of_bitmap_font_8cpp.html#a8aed50a1a71aa2f298c8adbc5a7967e7">ofDrawBitmapCharacterStart</a>(<span class="keywordtype">int</span> stringLength);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">void</span> <a class="code" href="of_bitmap_font_8cpp.html#a9486c61bc518dbffb0fd0256d46d88a0">ofDrawBitmapCharacter</a>(<span class="keywordtype">int</span> character, <span class="keywordtype">int</span> x , <span class="keywordtype">int</span> y );</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keywordtype">void</span> <a class="code" href="of_bitmap_font_8cpp.html#a8714b17241d96a407484a2e4eab162b7">ofDrawBitmapCharacterEnd</a>();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<a class="code" href="classof_mesh.html">ofMesh</a> &amp; <a class="code" href="of_bitmap_font_8cpp.html#a0f8b919cf6929f177dafc26e0210250f">ofBitmapStringGetMesh</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp; text, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<a class="code" href="classof_texture.html">ofTexture</a> &amp; <a class="code" href="of_bitmap_font_8cpp.html#a1ddf43c67faa9d099c504711bc8156de">ofBitmapStringGetTextureRef</a>();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<a class="code" href="classof_rectangle.html">ofRectangle</a> <a class="code" href="of_bitmap_font_8cpp.html#a40a95815f04bc1280b26be68ab15eaec">ofBitmapStringGetBoundingBox</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp; text, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
 </div><!-- fragment --></div><!-- contents -->
 
             </div>

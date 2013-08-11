@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -60,17 +61,17 @@
   <tr><td class="entry"><a class="el" href="classof_texture_data.html#a0067ab9b185e86e9961336ddb1159b29">bFlipTexture</a></td><td class="entry"><a class="el" href="classof_texture_data.html">ofTextureData</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classof_texture_data.html#a2bf9e98ecdac75499b871bd21da02c74">bUseExternalTextureID</a></td><td class="entry"><a class="el" href="classof_texture_data.html">ofTextureData</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classof_texture_data.html#a5fb03608ad56543ed65caa0c544975d3">compressionType</a></td><td class="entry"><a class="el" href="classof_texture_data.html">ofTextureData</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classof_texture_data.html#aaaf761282f83f19733b844791cce7162">glType</a></td><td class="entry"><a class="el" href="classof_texture_data.html">ofTextureData</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classof_texture_data.html#a2349f7972cb95234e0b726e51d0d8a10">glTypeInternal</a></td><td class="entry"><a class="el" href="classof_texture_data.html">ofTextureData</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classof_texture_data.html#a100f21d392ce8dfb29529a40394f1a16">height</a></td><td class="entry"><a class="el" href="classof_texture_data.html">ofTextureData</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classof_texture_data.html#ae3766bd02c26dbb2f93f2311577b2c15">ofTextureData</a>()</td><td class="entry"><a class="el" href="classof_texture_data.html">ofTextureData</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classof_texture_data.html#a245c1f6982b7fc7d64726608511bc8fa">pixelType</a></td><td class="entry"><a class="el" href="classof_texture_data.html">ofTextureData</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classof_texture_data.html#a2349f7972cb95234e0b726e51d0d8a10">glTypeInternal</a></td><td class="entry"><a class="el" href="classof_texture_data.html">ofTextureData</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classof_texture_data.html#a100f21d392ce8dfb29529a40394f1a16">height</a></td><td class="entry"><a class="el" href="classof_texture_data.html">ofTextureData</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classof_texture_data.html#ae3766bd02c26dbb2f93f2311577b2c15">ofTextureData</a>()</td><td class="entry"><a class="el" href="classof_texture_data.html">ofTextureData</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr><td class="entry"><a class="el" href="classof_texture_data.html#a0127cecdfee0fdf8ec2958a4d5c6a946">tex_h</a></td><td class="entry"><a class="el" href="classof_texture_data.html">ofTextureData</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classof_texture_data.html#ad3d54f040cfac8522bb693904867994b">tex_t</a></td><td class="entry"><a class="el" href="classof_texture_data.html">ofTextureData</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classof_texture_data.html#a64d6c37e0569a8ad8842cef263185c14">tex_u</a></td><td class="entry"><a class="el" href="classof_texture_data.html">ofTextureData</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classof_texture_data.html#a2b9ce30701c4d957a73f7bc17863b569">tex_w</a></td><td class="entry"><a class="el" href="classof_texture_data.html">ofTextureData</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classof_texture_data.html#a8521140c30a62b5cdb0045cd119e396c">textureID</a></td><td class="entry"><a class="el" href="classof_texture_data.html">ofTextureData</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classof_texture_data.html#a5158e9375dc0805de85e9c1553b415eb">textureTarget</a></td><td class="entry"><a class="el" href="classof_texture_data.html">ofTextureData</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classof_texture_data.html#a4ddd93ecf62211d4fd512269d124a5b9">textureMatrix</a></td><td class="entry"><a class="el" href="classof_texture_data.html">ofTextureData</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classof_texture_data.html#a5158e9375dc0805de85e9c1553b415eb">textureTarget</a></td><td class="entry"><a class="el" href="classof_texture_data.html">ofTextureData</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classof_texture_data.html#a283e190f795b68f17c5725e8c5493d0d">useTextureMatrix</a></td><td class="entry"><a class="el" href="classof_texture_data.html">ofTextureData</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classof_texture_data.html#a615b0e90bc4d881ee64b57d4125fb0aa">width</a></td><td class="entry"><a class="el" href="classof_texture_data.html">ofTextureData</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 

@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -57,9 +58,9 @@
 <p>This is the complete list of members for <a class="el" href="classof_node.html">ofNode</a>, including all inherited members.</p>
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="classof_node.html#ad030cd8c55b9df3dbf2786347f62ad3b">boom</a>(float amount)</td><td class="entry"><a class="el" href="classof_node.html">ofNode</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classof_node.html#abab3151dc3a440a630f5782eda3e3111">clearParent</a>()</td><td class="entry"><a class="el" href="classof_node.html">ofNode</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classof_node.html#aa6c41c2d514797f04f162bb323cb4dfa">clearParent</a>(bool bMaintainGlobalTransform=false)</td><td class="entry"><a class="el" href="classof_node.html">ofNode</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classof_node.html#a7619a7cabd3690c782ad10cc13093074">createMatrix</a>()</td><td class="entry"><a class="el" href="classof_node.html">ofNode</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classof_node.html#a82804cbe87f3bce8a5d2d2b89dce5e71">customDraw</a>()</td><td class="entry"><a class="el" href="classof_node.html">ofNode</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classof_node.html#a23a1ca114eeff7e8494cecee90002534">customDraw</a>()</td><td class="entry"><a class="el" href="classof_node.html">ofNode</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classof_node.html#a8ab940d4c166064c8b2e3b4ab237917c">dolly</a>(float amount)</td><td class="entry"><a class="el" href="classof_node.html">ofNode</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classof_node.html#a13c85ec24bc0244ee7e32be7a63f2561">draw</a>()</td><td class="entry"><a class="el" href="classof_node.html">ofNode</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classof_node.html#a427fce44ef9e64b50c223a42d057a700">getGlobalOrientation</a>() const </td><td class="entry"><a class="el" href="classof_node.html">ofNode</a></td><td class="entry"></td></tr>
@@ -109,7 +110,7 @@
   <tr class="even"><td class="entry"><a class="el" href="classof_node.html#a639c866edf3aac3192713dfcdbb2e992">setGlobalPosition</a>(const ofVec3f &amp;p)</td><td class="entry"><a class="el" href="classof_node.html">ofNode</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classof_node.html#a732a883de750dcd157ba03a7a9432f57">setOrientation</a>(const ofQuaternion &amp;q)</td><td class="entry"><a class="el" href="classof_node.html">ofNode</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classof_node.html#a7e7460d86348bc31837271fe30e74b89">setOrientation</a>(const ofVec3f &amp;eulerAngles)</td><td class="entry"><a class="el" href="classof_node.html">ofNode</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classof_node.html#a17c41e855157cc8b896db24f8ba50201">setParent</a>(ofNode &amp;parent)</td><td class="entry"><a class="el" href="classof_node.html">ofNode</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classof_node.html#ad475e04b79cbd1528ae3c59adba0a7c2">setParent</a>(ofNode &amp;parent, bool bMaintainGlobalTransform=false)</td><td class="entry"><a class="el" href="classof_node.html">ofNode</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classof_node.html#a6f5733da97701638ec9e089016d0381a">setPosition</a>(float px, float py, float pz)</td><td class="entry"><a class="el" href="classof_node.html">ofNode</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classof_node.html#ae55d7884cc7193538fddd8071f533379">setPosition</a>(const ofVec3f &amp;p)</td><td class="entry"><a class="el" href="classof_node.html">ofNode</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classof_node.html#a29db49b22f24505ca352ad90a0d9ffd6">setScale</a>(float s)</td><td class="entry"><a class="el" href="classof_node.html">ofNode</a></td><td class="entry"></td></tr>

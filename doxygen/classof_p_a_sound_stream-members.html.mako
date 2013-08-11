@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -57,8 +58,10 @@
 <p>This is the complete list of members for <a class="el" href="classof_p_a_sound_stream.html">ofPASoundStream</a>, including all inherited members.</p>
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="classof_p_a_sound_stream.html#a810c14d4a9f85711e0c212cdeb65fc78">close</a>()</td><td class="entry"><a class="el" href="classof_p_a_sound_stream.html">ofPASoundStream</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classof_p_a_sound_stream.html#a58bfc141545fb3c652c3e8328e2c94c6">getNumInputChannels</a>()</td><td class="entry"><a class="el" href="classof_p_a_sound_stream.html">ofPASoundStream</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classof_p_a_sound_stream.html#a4992eeace6b11736a86b0b965747ec75">getNumOutputChannels</a>()</td><td class="entry"><a class="el" href="classof_p_a_sound_stream.html">ofPASoundStream</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classof_p_a_sound_stream.html#ac47f1957c407278808ce9bfbe007178c">getBufferSize</a>()</td><td class="entry"><a class="el" href="classof_p_a_sound_stream.html">ofPASoundStream</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classof_p_a_sound_stream.html#a58bfc141545fb3c652c3e8328e2c94c6">getNumInputChannels</a>()</td><td class="entry"><a class="el" href="classof_p_a_sound_stream.html">ofPASoundStream</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classof_p_a_sound_stream.html#a4992eeace6b11736a86b0b965747ec75">getNumOutputChannels</a>()</td><td class="entry"><a class="el" href="classof_p_a_sound_stream.html">ofPASoundStream</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classof_p_a_sound_stream.html#a2d9a2a06b0894cfb591c850f000e7679">getSampleRate</a>()</td><td class="entry"><a class="el" href="classof_p_a_sound_stream.html">ofPASoundStream</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="classof_p_a_sound_stream.html#ae883c3960dfe3be43dc7273d746face6">getTickCount</a>()</td><td class="entry"><a class="el" href="classof_p_a_sound_stream.html">ofPASoundStream</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classof_p_a_sound_stream.html#a71ebc79ef330c86ad8448be51ebbf401">listDevices</a>()</td><td class="entry"><a class="el" href="classof_p_a_sound_stream.html">ofPASoundStream</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="classof_p_a_sound_stream.html#aac8f8e80d5b42dd13840c077be5cac27">ofPASoundStream</a>()</td><td class="entry"><a class="el" href="classof_p_a_sound_stream.html">ofPASoundStream</a></td><td class="entry"></td></tr>

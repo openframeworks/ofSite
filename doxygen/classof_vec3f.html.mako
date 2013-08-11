@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -204,8 +205,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a046f6be2f082255de4e99056b2f206fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75342dc9358676de78727817b7f944c2"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vec3f.html#a75342dc9358676de78727817b7f944c2">lengthSquared</a> () const </td></tr>
 <tr class="separator:a75342dc9358676de78727817b7f944c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09199d302fe1c3f49b9301eebc4d2a69"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vec3f.html#a09199d302fe1c3f49b9301eebc4d2a69">OF_DEPRECATED_MSG</a> (&quot;Use <a class="el" href="classof_vec3f.html#a75342dc9358676de78727817b7f944c2">ofVec3f::lengthSquared</a>() instead.&quot;, float squareLength() const)</td></tr>
-<tr class="separator:a09199d302fe1c3f49b9301eebc4d2a69"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e7eb8a57c80b89434b72ea8d9f5b1de"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vec3f.html#a0e7eb8a57c80b89434b72ea8d9f5b1de">angle</a> (const <a class="el" href="classof_vec3f.html">ofVec3f</a> &amp;vec) const </td></tr>
 <tr class="separator:a0e7eb8a57c80b89434b72ea8d9f5b1de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28ac4becf789fbf5e562beaaace2cff5"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vec3f.html#a28ac4becf789fbf5e562beaaace2cff5">angleRad</a> (const <a class="el" href="classof_vec3f.html">ofVec3f</a> &amp;vec) const </td></tr>
@@ -264,8 +263,8 @@ Static Public Attributes</h2></td></tr>
 Friends</h2></td></tr>
 <tr class="memitem:a221bb717e5282907a0d835ff1134a0b6"><td class="memItemLeft" align="right" valign="top">ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vec3f.html#a221bb717e5282907a0d835ff1134a0b6">operator&lt;&lt;</a> (ostream &amp;os, const <a class="el" href="classof_vec3f.html">ofVec3f</a> &amp;vec)</td></tr>
 <tr class="separator:a221bb717e5282907a0d835ff1134a0b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac43c049eb124d26915366a423a358b73"><td class="memItemLeft" align="right" valign="top">istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vec3f.html#ac43c049eb124d26915366a423a358b73">operator&gt;&gt;</a> (istream &amp;is, const <a class="el" href="classof_vec3f.html">ofVec3f</a> &amp;vec)</td></tr>
-<tr class="separator:ac43c049eb124d26915366a423a358b73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a31b5d957af1dda19ce7451a6af9003"><td class="memItemLeft" align="right" valign="top">istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vec3f.html#a3a31b5d957af1dda19ce7451a6af9003">operator&gt;&gt;</a> (istream &amp;is, <a class="el" href="classof_vec3f.html">ofVec3f</a> &amp;vec)</td></tr>
+<tr class="separator:a3a31b5d957af1dda19ce7451a6af9003"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a5190d24dde0f5ea70f85dc5d4e084776"></a>
@@ -1629,32 +1628,6 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a09199d302fe1c3f49b9301eebc4d2a69"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">ofVec3f::OF_DEPRECATED_MSG </td>
-          <td>(</td>
-          <td class="paramtype">&quot;Use <a class="el" href="classof_vec3f.html#a75342dc9358676de78727817b7f944c2">ofVec3f::lengthSquared</a>() instead.&quot;&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float squareLength()&#160;</td>
-          <td class="paramname"><em>const</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="aea4850bb2bc9584b0244a5086ce3f134"></a>
 <div class="memitem">
 <div class="memproto">
@@ -2814,7 +2787,7 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ac43c049eb124d26915366a423a358b73"></a>
+<a class="anchor" id="a3a31b5d957af1dda19ce7451a6af9003"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -2830,7 +2803,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classof_vec3f.html">ofVec3f</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classof_vec3f.html">ofVec3f</a> &amp;&#160;</td>
           <td class="paramname"><em>vec</em>&#160;</td>
         </tr>
         <tr>
@@ -2906,7 +2879,7 @@ Friends</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>math/<a class="el" href="of_vec3f_8h_source.html">ofVec3f.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/math/<a class="el" href="of_vec3f_8h_source.html">ofVec3f.h</a></li>
 </ul>
 </div><!-- contents -->
 

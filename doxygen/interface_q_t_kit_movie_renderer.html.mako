@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -1101,8 +1102,8 @@ Properties</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>video/<a class="el" href="of_q_t_kit_movie_renderer_8h_source.html">ofQTKitMovieRenderer.h</a></li>
-<li>video/<a class="el" href="of_q_t_kit_movie_renderer_8m.html">ofQTKitMovieRenderer.m</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/video/<a class="el" href="of_q_t_kit_movie_renderer_8h_source.html">ofQTKitMovieRenderer.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/video/<a class="el" href="of_q_t_kit_movie_renderer_8m.html">ofQTKitMovieRenderer.m</a></li>
 </ul>
 </div><!-- contents -->
 

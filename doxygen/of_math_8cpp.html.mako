@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -47,7 +48,7 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_296d53ceaeaa7e099814a6def439fe8a.html">math</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_84d5b34cee6369a03c8d1f3b970ed216.html">openFrameworks</a></li><li class="navelem"><a class="el" href="dir_6b67c3a1fdba4d6b038dad8a0f05d92f.html">math</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -101,6 +102,8 @@ Functions</h2></td></tr>
 <tr class="separator:a70a120b33471d10ce0e755ee43c32b25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a851eb0ea11c2bfe151665de8e3c66561"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_math_8cpp.html#a851eb0ea11c2bfe151665de8e3c66561">ofLerp</a> (float start, float stop, float amt)</td></tr>
 <tr class="separator:a851eb0ea11c2bfe151665de8e3c66561"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11cf9bc2b855744f58aa7f2f174eb657"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_math_8cpp.html#a11cf9bc2b855744f58aa7f2f174eb657">ofWrap</a> (float value, float from, float to)</td></tr>
+<tr class="separator:a11cf9bc2b855744f58aa7f2f174eb657"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af727c186564d950c4b65c6a4b4aa276e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_math_8cpp.html#af727c186564d950c4b65c6a4b4aa276e">ofWrapRadians</a> (float angle, float from, float to)</td></tr>
 <tr class="separator:af727c186564d950c4b65c6a4b4aa276e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae4ba80015162a1c7be1cc5eb39e205ef"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_math_8cpp.html#ae4ba80015162a1c7be1cc5eb39e205ef">ofWrapDegrees</a> (float angle, float from, float to)</td></tr>
@@ -1207,6 +1210,38 @@ Functions</h2></td></tr>
           <td></td>
           <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>w</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a11cf9bc2b855744f58aa7f2f174eb657"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ofWrap </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>from</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>to</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

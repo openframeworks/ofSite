@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -70,6 +71,7 @@
   <tr><td class="entry"><a class="el" href="classof_material.html#a7c23e5215e6a6a473ce85b97e72d32d9">setEmissiveColor</a>(ofFloatColor oEmmisive)</td><td class="entry"><a class="el" href="classof_material.html">ofMaterial</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classof_material.html#ad3208cb58a891c4524da923574668f0e">setShininess</a>(float nShininess)</td><td class="entry"><a class="el" href="classof_material.html">ofMaterial</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classof_material.html#a29881de4785f72e8725d342a9e00db57">setSpecularColor</a>(ofFloatColor oSpecular)</td><td class="entry"><a class="el" href="classof_material.html">ofMaterial</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classof_material.html#a78f335ecc99727a979f7756d3db9385a">~ofMaterial</a>()</td><td class="entry"><a class="el" href="classof_material.html">ofMaterial</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
 
             </div>

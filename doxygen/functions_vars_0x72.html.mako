@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -52,6 +53,7 @@
       <li><a href="functions.html"><span>All</span></a></li>
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li class="current"><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_type.html"><span>Typedefs</span></a></li>
       <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
       <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
       <li><a href="functions_prop.html"><span>Properties</span></a></li>
@@ -96,11 +98,17 @@
 <li>r
 : <a class="el" href="classof_color__.html#a6f49bc7e4aec1f65d9598599ade9b692">ofColor_&lt; PixelType &gt;</a>
 </li>
+<li>radius
+: <a class="el" href="classof_sphere_primitive.html#a8082be95d2d205f24e125849aa4bfe75">ofSpherePrimitive</a>
+, <a class="el" href="classof_cylinder_primitive.html#a767a1bc7b356e7d38ce8027beb57cae8">ofCylinderPrimitive</a>
+, <a class="el" href="classof_cone_primitive.html#a4f24d6f9f6ce28fdd8bb91b07087eece">ofConePrimitive</a>
+, <a class="el" href="classof_ico_sphere_primitive.html#a746131cb38a0935eded7c58786594493">ofIcoSpherePrimitive</a>
+</li>
 <li>radiusX
-: <a class="el" href="structof_sub_path_1_1_command.html#a71f680309503e33ce6155d2be41ef70e">ofSubPath::Command</a>
+: <a class="el" href="structof_path_1_1_command.html#aed6a5fef5f92eb60ec2ce10a0159168a">ofPath::Command</a>
 </li>
 <li>radiusY
-: <a class="el" href="structof_sub_path_1_1_command.html#a1639fca98c470d0c4ac480f06a2fb367">ofSubPath::Command</a>
+: <a class="el" href="structof_path_1_1_command.html#afd88ea470df3c2adb92eccab26df854c">ofPath::Command</a>
 </li>
 <li>rectMode
 : <a class="el" href="classof_style.html#ab9a5fe8d4375c9ccc9eb4a69c8476eb5">ofStyle</a>
@@ -113,6 +121,14 @@
 </li>
 <li>request
 : <a class="el" href="classof_http_response.html#a877df00ab4051238516ea795abe20329">ofHttpResponse</a>
+</li>
+<li>resolution
+: <a class="el" href="classof_sphere_primitive.html#a06ee9a845093c48201a1d1e373bb295e">ofSpherePrimitive</a>
+, <a class="el" href="classof_cone_primitive.html#a881883e5124274799ade463980868160">ofConePrimitive</a>
+, <a class="el" href="classof_plane_primitive.html#a0aa541a95389c9566bbef8215cab1754">ofPlanePrimitive</a>
+, <a class="el" href="classof_ico_sphere_primitive.html#a9c9dd339fe6246f7c6af1fd7888fb0e1">ofIcoSpherePrimitive</a>
+, <a class="el" href="classof_box_primitive.html#a843b190c3c67dd0f6c1c2cbe6964277a">ofBoxPrimitive</a>
+, <a class="el" href="classof_cylinder_primitive.html#a2b27347c94323cdd309f5df4748fbff3">ofCylinderPrimitive</a>
 </li>
 <li>result
 : <a class="el" href="classof_fmod_sound_player.html#ac70585c086b000b30b945463a14894e1">ofFmodSoundPlayer</a>

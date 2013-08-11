@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -112,7 +113,9 @@
   <tr><td class="entry"><a class="el" href="classof_image__.html#a6475b2ca00efe1874c3feb5d3952dda6">saveImage</a>(const ofFile &amp;file, ofImageQualityType compressionLevel=OF_IMAGE_QUALITY_BEST)</td><td class="entry"><a class="el" href="classof_image__.html">ofImage_&lt; PixelType &gt;</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classof_image__.html#a9339282eaa5f99419cdc25e739680f65">setAnchorPercent</a>(float xPct, float yPct)</td><td class="entry"><a class="el" href="classof_image__.html">ofImage_&lt; PixelType &gt;</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="classof_image__.html#afb1368077f520e88abae9b4d60870247">setAnchorPoint</a>(float x, float y)</td><td class="entry"><a class="el" href="classof_image__.html">ofImage_&lt; PixelType &gt;</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classof_image__.html#abf6bb7be85569cfce36cdfe557032e04">setColor</a>(int x, int y, ofColor_&lt; PixelType &gt; color)</td><td class="entry"><a class="el" href="classof_image__.html">ofImage_&lt; PixelType &gt;</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classof_image__.html#a3c73d9de844a5c836196e33b9b7f02d8">setColor</a>(int x, int y, const ofColor_&lt; PixelType &gt; &amp;color)</td><td class="entry"><a class="el" href="classof_image__.html">ofImage_&lt; PixelType &gt;</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classof_image__.html#a267edeacc7d5bbe174794f0191d9a42e">setColor</a>(int index, const ofColor_&lt; PixelType &gt; &amp;color)</td><td class="entry"><a class="el" href="classof_image__.html">ofImage_&lt; PixelType &gt;</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classof_image__.html#a0cd0fbeb0127ac1d996a978389bcc2b2">setColor</a>(const ofColor_&lt; PixelType &gt; &amp;color)</td><td class="entry"><a class="el" href="classof_image__.html">ofImage_&lt; PixelType &gt;</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classof_image__.html#ad152464e4b657d848011376cd13966a3">setCompression</a>(ofTexCompression compression)</td><td class="entry"><a class="el" href="classof_image__.html">ofImage_&lt; PixelType &gt;</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classof_image__.html#a6cfcd829bd778c5636cfca83cc53023b">setFromPixels</a>(const PixelType *pixels, int w, int h, ofImageType type, bool bOrderIsRGB=true)</td><td class="entry"><a class="el" href="classof_image__.html">ofImage_&lt; PixelType &gt;</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classof_image__.html#adcd1fe954d8fca4575d7b190add5c6f1">setFromPixels</a>(const ofPixels_&lt; PixelType &gt; &amp;pixels)</td><td class="entry"><a class="el" href="classof_image__.html">ofImage_&lt; PixelType &gt;</a></td><td class="entry"></td></tr>

@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -50,6 +51,7 @@
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classof_path-members.html">List of all members</a>  </div>
@@ -60,9 +62,14 @@
 
 <p><code>#include &lt;<a class="el" href="of_path_8h_source.html">ofPath.h</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structof_path_1_1_command.html">Command</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:aa20ad057e28b19dfa200361fba0bb343"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_path.html#aa20ad057e28b19dfa200361fba0bb343">Mode</a> { <a class="el" href="classof_path.html#aa20ad057e28b19dfa200361fba0bb343a58bb06c6644c1f4044d18f185bc96eb1">PATHS</a>, 
+<tr class="memitem:aa20ad057e28b19dfa200361fba0bb343"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_path.html#aa20ad057e28b19dfa200361fba0bb343">Mode</a> { <a class="el" href="classof_path.html#aa20ad057e28b19dfa200361fba0bb343a763df1901ccbc234ab1207896ab69eec">COMMANDS</a>, 
 <a class="el" href="classof_path.html#aa20ad057e28b19dfa200361fba0bb343a8d1ec0889c2c552c7638db8355fcca95">POLYLINES</a>
  }</td></tr>
 <tr class="separator:aa20ad057e28b19dfa200361fba0bb343"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -119,11 +126,49 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3790036f5159448eaf2d1011607592ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73a466fb9ec4d80d28ca0115af873a89"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_path.html#a73a466fb9ec4d80d28ca0115af873a89">arcNegative</a> (float x, float y, float z, float radiusX, float radiusY, float angleBegin, float angleEnd)</td></tr>
 <tr class="separator:a73a466fb9ec4d80d28ca0115af873a89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cf187234da6755ea79aff72bafd594d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_path.html#a0cf187234da6755ea79aff72bafd594d">triangle</a> (float x1, float y1, float x2, float y2, float x3, float y3)</td></tr>
+<tr class="separator:a0cf187234da6755ea79aff72bafd594d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a942570f3140e2665f077f7e1e5ea3bd9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_path.html#a942570f3140e2665f077f7e1e5ea3bd9">triangle</a> (float x1, float y1, float z1, float x2, float y2, float z2, float x3, float y3, float z3)</td></tr>
+<tr class="separator:a942570f3140e2665f077f7e1e5ea3bd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b6f9d5cf2353ef1934b135e48c98cbc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_path.html#a7b6f9d5cf2353ef1934b135e48c98cbc">triangle</a> (const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;p1, const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;p2, const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;p3)</td></tr>
+<tr class="separator:a7b6f9d5cf2353ef1934b135e48c98cbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60fd37f0667775a68b84ac8eccc6e9c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_path.html#a60fd37f0667775a68b84ac8eccc6e9c6">circle</a> (float x, float y, float radius)</td></tr>
+<tr class="separator:a60fd37f0667775a68b84ac8eccc6e9c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afabf9a73d39434a16d56423459359968"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_path.html#afabf9a73d39434a16d56423459359968">circle</a> (float x, float y, float z, float radius)</td></tr>
+<tr class="separator:afabf9a73d39434a16d56423459359968"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a9ddc8afdb5c0e052b7361158fae593"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_path.html#a1a9ddc8afdb5c0e052b7361158fae593">circle</a> (const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;p, float radius)</td></tr>
+<tr class="separator:a1a9ddc8afdb5c0e052b7361158fae593"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39bd101d3170a1bd3a3b12732408658f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_path.html#a39bd101d3170a1bd3a3b12732408658f">ellipse</a> (float x, float y, float <a class="el" href="of_icon_8h.html#aca34d28e3d8bcbcadb8edb4e3af24f8c">width</a>, float <a class="el" href="of_icon_8h.html#ab2e78c61905b4419fcc7b4cfc500fe85">height</a>)</td></tr>
+<tr class="separator:a39bd101d3170a1bd3a3b12732408658f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd9fcfdfa606dc5c6e2709517b12e5c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_path.html#afd9fcfdfa606dc5c6e2709517b12e5c3">ellipse</a> (float x, float y, float z, float <a class="el" href="of_icon_8h.html#aca34d28e3d8bcbcadb8edb4e3af24f8c">width</a>, float <a class="el" href="of_icon_8h.html#ab2e78c61905b4419fcc7b4cfc500fe85">height</a>)</td></tr>
+<tr class="separator:afd9fcfdfa606dc5c6e2709517b12e5c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cf83b71f7a92d756f2736231cc19a52"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_path.html#a6cf83b71f7a92d756f2736231cc19a52">ellipse</a> (const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;p, float <a class="el" href="of_icon_8h.html#aca34d28e3d8bcbcadb8edb4e3af24f8c">width</a>, float <a class="el" href="of_icon_8h.html#ab2e78c61905b4419fcc7b4cfc500fe85">height</a>)</td></tr>
+<tr class="separator:a6cf83b71f7a92d756f2736231cc19a52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae92f1de9e016b77c0135655410d27e7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_path.html#ae92f1de9e016b77c0135655410d27e7e">rectangle</a> (const <a class="el" href="classof_rectangle.html">ofRectangle</a> &amp;r)</td></tr>
+<tr class="separator:ae92f1de9e016b77c0135655410d27e7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adeb2e6726c3ba6b9c624747f071f36c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_path.html#adeb2e6726c3ba6b9c624747f071f36c2">rectangle</a> (const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;p, float w, float h)</td></tr>
+<tr class="separator:adeb2e6726c3ba6b9c624747f071f36c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc0f34366a246b515283bb049797ca39"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_path.html#abc0f34366a246b515283bb049797ca39">rectangle</a> (float x, float y, float w, float h)</td></tr>
+<tr class="separator:abc0f34366a246b515283bb049797ca39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66c357e37cfaf1edc5799e28764d6e87"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_path.html#a66c357e37cfaf1edc5799e28764d6e87">rectangle</a> (float x, float y, float z, float w, float h)</td></tr>
+<tr class="separator:a66c357e37cfaf1edc5799e28764d6e87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e4cf1e47b17bd19db90ae75c17067d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_path.html#a1e4cf1e47b17bd19db90ae75c17067d1">rectRounded</a> (const <a class="el" href="classof_rectangle.html">ofRectangle</a> &amp;<a class="el" href="of_matrix4x4_8cpp.html#ab2d05693952610f937e5acb3c4a8fa1b">b</a>, float r)</td></tr>
+<tr class="separator:a1e4cf1e47b17bd19db90ae75c17067d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b2c2ffbd7793def966ffbe28035e9cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_path.html#a6b2c2ffbd7793def966ffbe28035e9cc">rectRounded</a> (const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;p, float w, float h, float r)</td></tr>
+<tr class="separator:a6b2c2ffbd7793def966ffbe28035e9cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81c38a8197701ec379a4f5268e3131d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_path.html#a81c38a8197701ec379a4f5268e3131d6">rectRounded</a> (float x, float y, float w, float h, float r)</td></tr>
+<tr class="separator:a81c38a8197701ec379a4f5268e3131d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e1b8570c04cb6b9942f16a1f91ebc0b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_path.html#a8e1b8570c04cb6b9942f16a1f91ebc0b">rectRounded</a> (const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;p, float w, float h, float topLeftRadius, float topRightRadius, float bottomRightRadius, float bottomLeftRadius)</td></tr>
+<tr class="separator:a8e1b8570c04cb6b9942f16a1f91ebc0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afae110b5916b28e7a77571b4cebdb186"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_path.html#afae110b5916b28e7a77571b4cebdb186">rectRounded</a> (const <a class="el" href="classof_rectangle.html">ofRectangle</a> &amp;<a class="el" href="of_matrix4x4_8cpp.html#ab2d05693952610f937e5acb3c4a8fa1b">b</a>, float topLeftRadius, float topRightRadius, float bottomRightRadius, float bottomLeftRadius)</td></tr>
+<tr class="separator:afae110b5916b28e7a77571b4cebdb186"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac68312ffa4f3051157e2b72a8a52adea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_path.html#ac68312ffa4f3051157e2b72a8a52adea">rectRounded</a> (float x, float y, float z, float w, float h, float topLeftRadius, float topRightRadius, float bottomRightRadius, float bottomLeftRadius)</td></tr>
+<tr class="separator:ac68312ffa4f3051157e2b72a8a52adea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29f7455bf947e50f5bbb9ffcae925ef2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_path.html#a29f7455bf947e50f5bbb9ffcae925ef2">setPolyWindingMode</a> (<a class="el" href="of_constants_8h.html#aca8e53bffcbd2dd34e724531d8a0f375">ofPolyWindingMode</a> mode)</td></tr>
 <tr class="separator:a29f7455bf947e50f5bbb9ffcae925ef2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa470f0d1cc5af2369a96e1fcd8e223ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_path.html#aa470f0d1cc5af2369a96e1fcd8e223ed">setFilled</a> (bool hasFill)</td></tr>
 <tr class="separator:aa470f0d1cc5af2369a96e1fcd8e223ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5407cf0f483c657aca3d7b82cee5c0b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_path.html#a5407cf0f483c657aca3d7b82cee5c0b6">setStrokeWidth</a> (float width)</td></tr>
+<tr class="memitem:a5407cf0f483c657aca3d7b82cee5c0b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_path.html#a5407cf0f483c657aca3d7b82cee5c0b6">setStrokeWidth</a> (float <a class="el" href="of_icon_8h.html#aca34d28e3d8bcbcadb8edb4e3af24f8c">width</a>)</td></tr>
 <tr class="separator:a5407cf0f483c657aca3d7b82cee5c0b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9bc4e6a5ce711a5082edba79d1ae34e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_path.html#a9bc4e6a5ce711a5082edba79d1ae34e2">setColor</a> (const <a class="el" href="of_color_8h.html#a7e21e1ce5fd475dd6ffb9124c55e00dd">ofColor</a> &amp;color)</td></tr>
 <tr class="separator:a9bc4e6a5ce711a5082edba79d1ae34e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -153,10 +198,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a982c7b6f6c0970e2b69b6b100c724c60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08d62c014fddc97736be9459e7a585c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_path.html#a08d62c014fddc97736be9459e7a585c4">draw</a> ()</td></tr>
 <tr class="separator:a08d62c014fddc97736be9459e7a585c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca66484d50116ce87cb9b310739b05dc"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="classof_sub_path.html">ofSubPath</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_path.html#aca66484d50116ce87cb9b310739b05dc">getSubPaths</a> ()</td></tr>
-<tr class="separator:aca66484d50116ce87cb9b310739b05dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5301a3202cf7079e9e372bc12b5212a1"><td class="memItemLeft" align="right" valign="top">const vector&lt; <a class="el" href="classof_sub_path.html">ofSubPath</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_path.html#a5301a3202cf7079e9e372bc12b5212a1">getSubPaths</a> () const </td></tr>
-<tr class="separator:a5301a3202cf7079e9e372bc12b5212a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b5304ad80fd0a9a2891d72f1d602e27"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="classof_polyline.html">ofPolyline</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_path.html#a9b5304ad80fd0a9a2891d72f1d602e27">getOutline</a> ()</td></tr>
 <tr class="separator:a9b5304ad80fd0a9a2891d72f1d602e27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16310bf2bdf92f89eca68440f36b5f05"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_mesh.html">ofMesh</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_path.html#a16310bf2bdf92f89eca68440f36b5f05">getTessellation</a> ()</td></tr>
@@ -165,20 +206,28 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7fb4475f27f424887fd3739066b180ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a740471f9e57701c0af59f9b6abc38787"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_path.html#a740471f9e57701c0af59f9b6abc38787">flagShapeChanged</a> ()</td></tr>
 <tr class="separator:a740471f9e57701c0af59f9b6abc38787"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedc78d9b0f4f4f8f475aa6b39ff6ef54"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_path.html#aedc78d9b0f4f4f8f475aa6b39ff6ef54">hasChanged</a> ()</td></tr>
+<tr class="separator:aedc78d9b0f4f4f8f475aa6b39ff6ef54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95bdbcb31dee7fd65c0f02ce0be29834"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_path.html#a95bdbcb31dee7fd65c0f02ce0be29834">setMode</a> (<a class="el" href="classof_path.html#aa20ad057e28b19dfa200361fba0bb343">Mode</a> mode)</td></tr>
 <tr class="separator:a95bdbcb31dee7fd65c0f02ce0be29834"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c31c00931b89c4f579f2ce0fc917b80"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_path.html#aa20ad057e28b19dfa200361fba0bb343">Mode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_path.html#a2c31c00931b89c4f579f2ce0fc917b80">getMode</a> ()</td></tr>
+<tr class="separator:a2c31c00931b89c4f579f2ce0fc917b80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a2aa3d688dd5a0d8cc40f131c86dc6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_path.html#a5a2aa3d688dd5a0d8cc40f131c86dc6d">setCurveResolution</a> (int curveResolution)</td></tr>
 <tr class="separator:a5a2aa3d688dd5a0d8cc40f131c86dc6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9987954e17062c3df0028616482aa2bd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_path.html#a9987954e17062c3df0028616482aa2bd">getCurveResolution</a> ()</td></tr>
-<tr class="separator:a9987954e17062c3df0028616482aa2bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada1670a182e09db27590054e448c2fa6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_path.html#ada1670a182e09db27590054e448c2fa6">setArcResolution</a> (int res)</td></tr>
-<tr class="separator:ada1670a182e09db27590054e448c2fa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf69fa219bc7dfbc1fe6c7d9f2fbed7e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_path.html#acf69fa219bc7dfbc1fe6c7d9f2fbed7e">getArcResolution</a> ()</td></tr>
-<tr class="separator:acf69fa219bc7dfbc1fe6c7d9f2fbed7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9755efac8d7edc3de10806293b7187a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_path.html#ae9755efac8d7edc3de10806293b7187a">getCurveResolution</a> () const </td></tr>
+<tr class="separator:ae9755efac8d7edc3de10806293b7187a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d22c744db22847616098b4994871e1f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_path.html#a2d22c744db22847616098b4994871e1f">setCircleResolution</a> (int circleResolution)</td></tr>
+<tr class="separator:a2d22c744db22847616098b4994871e1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff8be3cf953743ec73d04d4e9ab0f169"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_path.html#aff8be3cf953743ec73d04d4e9ab0f169">getCircleResolution</a> () const </td></tr>
+<tr class="separator:aff8be3cf953743ec73d04d4e9ab0f169"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabdf6804aa8dd1d4b85af53d9e009a9f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_path.html#aabdf6804aa8dd1d4b85af53d9e009a9f">OF_DEPRECATED_MSG</a> (&quot;Use <a class="el" href="classof_path.html#a2d22c744db22847616098b4994871e1f">setCircleResolution</a> instead.&quot;, void setArcResolution(int res))</td></tr>
+<tr class="separator:aabdf6804aa8dd1d4b85af53d9e009a9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e091ab70cad46df5b354623b03fc8ae"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_path.html#a2e091ab70cad46df5b354623b03fc8ae">OF_DEPRECATED_MSG</a> (&quot;Use <a class="el" href="classof_path.html#aff8be3cf953743ec73d04d4e9ab0f169">getCircleResolution</a> instead.&quot;, int getArcResolution() const)</td></tr>
+<tr class="separator:a2e091ab70cad46df5b354623b03fc8ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aedd36f8faf69ae9f99898a2f46659430"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_path.html#aedd36f8faf69ae9f99898a2f46659430">setUseShapeColor</a> (bool useColor)</td></tr>
 <tr class="separator:aedd36f8faf69ae9f99898a2f46659430"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ceb034e8a7264204e33a0022aa48e32"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_path.html#a3ceb034e8a7264204e33a0022aa48e32">getUseShapeColor</a> ()</td></tr>
-<tr class="separator:a3ceb034e8a7264204e33a0022aa48e32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c004a84e56d29ff87dd61e5cfefde86"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_path.html#a0c004a84e56d29ff87dd61e5cfefde86">getUseShapeColor</a> () const </td></tr>
+<tr class="separator:a0c004a84e56d29ff87dd61e5cfefde86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0af9ebdbe2bc60422fdd3b3cd05dd870"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_path.html#a0af9ebdbe2bc60422fdd3b3cd05dd870">tessellate</a> ()</td></tr>
 <tr class="separator:a0af9ebdbe2bc60422fdd3b3cd05dd870"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a32ca65c1f1043662292888982cca526a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_path.html#a32ca65c1f1043662292888982cca526a">translate</a> (const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;p)</td></tr>
@@ -187,6 +236,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9f29f576beeb9745c86f9af88681a62b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74449f5b6f444b881a7671dc12a4d40b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_path.html#a74449f5b6f444b881a7671dc12a4d40b">scale</a> (float x, float y)</td></tr>
 <tr class="separator:a74449f5b6f444b881a7671dc12a4d40b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fb89b82aba288cd77d9c2a7688a7756"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="structof_path_1_1_command.html">Command</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_path.html#a3fb89b82aba288cd77d9c2a7688a7756">getCommands</a> ()</td></tr>
+<tr class="separator:a3fb89b82aba288cd77d9c2a7688a7756"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0d0c8b51f9207861b4a56a071a2c62d"><td class="memItemLeft" align="right" valign="top">const vector&lt; <a class="el" href="structof_path_1_1_command.html">Command</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_path.html#ad0d0c8b51f9207861b4a56a071a2c62d">getCommands</a> () const </td></tr>
+<tr class="separator:ad0d0c8b51f9207861b4a56a071a2c62d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Enumeration Documentation</h2>
 <a class="anchor" id="aa20ad057e28b19dfa200361fba0bb343"></a>
@@ -199,7 +252,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="aa20ad057e28b19dfa200361fba0bb343a58bb06c6644c1f4044d18f185bc96eb1"></a>PATHS</em>&nbsp;</td><td class="fielddoc">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="aa20ad057e28b19dfa200361fba0bb343a763df1901ccbc234ab1207896ab69eec"></a>COMMANDS</em>&nbsp;</td><td class="fielddoc">
 </td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="aa20ad057e28b19dfa200361fba0bb343a8d1ec0889c2c552c7638db8355fcca95"></a>POLYLINES</em>&nbsp;</td><td class="fielddoc">
 </td></tr>
@@ -724,6 +777,102 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a60fd37f0667775a68b84ac8eccc6e9c6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofPath::circle </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>radius</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afabf9a73d39434a16d56423459359968"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofPath::circle </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>z</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>radius</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1a9ddc8afdb5c0e052b7361158fae593"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofPath::circle </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>radius</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a52ee0333f743cc11c4d450cac3fe60b4"></a>
 <div class="memitem">
 <div class="memproto">
@@ -869,6 +1018,120 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a39bd101d3170a1bd3a3b12732408658f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofPath::ellipse </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afd9fcfdfa606dc5c6e2709517b12e5c3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofPath::ellipse </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>z</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6cf83b71f7a92d756f2736231cc19a52"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofPath::ellipse </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a740471f9e57701c0af59f9b6abc38787"></a>
 <div class="memitem">
 <div class="memproto">
@@ -884,12 +1147,27 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="acf69fa219bc7dfbc1fe6c7d9f2fbed7e"></a>
+<a class="anchor" id="aff8be3cf953743ec73d04d4e9ab0f169"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int ofPath::getArcResolution </td>
+          <td class="memname">int ofPath::getCircleResolution </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3fb89b82aba288cd77d9c2a7688a7756"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; <a class="el" href="structof_path_1_1_command.html">ofPath::Command</a> &gt; &amp; ofPath::getCommands </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -899,7 +1177,22 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a9987954e17062c3df0028616482aa2bd"></a>
+<a class="anchor" id="ad0d0c8b51f9207861b4a56a071a2c62d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const vector&lt; <a class="el" href="structof_path_1_1_command.html">ofPath::Command</a> &gt; &amp; ofPath::getCommands </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae9755efac8d7edc3de10806293b7187a"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -907,7 +1200,7 @@ Public Member Functions</h2></td></tr>
           <td class="memname">int ofPath::getCurveResolution </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -923,6 +1216,21 @@ Public Member Functions</h2></td></tr>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2c31c00931b89c4f579f2ce0fc917b80"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classof_path.html#aa20ad057e28b19dfa200361fba0bb343">ofPath::Mode</a> ofPath::getMode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -974,36 +1282,6 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aca66484d50116ce87cb9b310739b05dc"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">vector&lt; <a class="el" href="classof_sub_path.html">ofSubPath</a> &gt; &amp; ofPath::getSubPaths </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a5301a3202cf7079e9e372bc12b5212a1"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const vector&lt; <a class="el" href="classof_sub_path.html">ofSubPath</a> &gt; &amp; ofPath::getSubPaths </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="a16310bf2bdf92f89eca68440f36b5f05"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1019,7 +1297,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a3ceb034e8a7264204e33a0022aa48e32"></a>
+<a class="anchor" id="a0c004a84e56d29ff87dd61e5cfefde86"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -1027,7 +1305,7 @@ Public Member Functions</h2></td></tr>
           <td class="memname">bool ofPath::getUseShapeColor </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1043,6 +1321,21 @@ Public Member Functions</h2></td></tr>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aedc78d9b0f4f4f8f475aa6b39ff6ef54"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ofPath::hasChanged </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1224,6 +1517,58 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="aabdf6804aa8dd1d4b85af53d9e009a9f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ofPath::OF_DEPRECATED_MSG </td>
+          <td>(</td>
+          <td class="paramtype">&quot;Use <a class="el" href="classof_path.html#a2d22c744db22847616098b4994871e1f">setCircleResolution</a> instead.&quot;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void &#160;</td>
+          <td class="paramname"><em>setArcResolution</em>int res&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2e091ab70cad46df5b354623b03fc8ae"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ofPath::OF_DEPRECATED_MSG </td>
+          <td>(</td>
+          <td class="paramtype">&quot;Use <a class="el" href="classof_path.html#aff8be3cf953743ec73d04d4e9ab0f169">getCircleResolution</a> instead.&quot;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int getArcResolution()&#160;</td>
+          <td class="paramname"><em>const</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a14bc5570b79816809d85fb4f1fb51ff8"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1374,6 +1719,412 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ae92f1de9e016b77c0135655410d27e7e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofPath::rectangle </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classof_rectangle.html">ofRectangle</a> &amp;&#160;</td>
+          <td class="paramname"><em>r</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="adeb2e6726c3ba6b9c624747f071f36c2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofPath::rectangle </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>h</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="abc0f34366a246b515283bb049797ca39"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofPath::rectangle </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>h</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a66c357e37cfaf1edc5799e28764d6e87"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofPath::rectangle </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>z</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>h</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1e4cf1e47b17bd19db90ae75c17067d1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofPath::rectRounded </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classof_rectangle.html">ofRectangle</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>r</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6b2c2ffbd7793def966ffbe28035e9cc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofPath::rectRounded </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>h</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>r</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a81c38a8197701ec379a4f5268e3131d6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofPath::rectRounded </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>h</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>r</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8e1b8570c04cb6b9942f16a1f91ebc0b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofPath::rectRounded </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>h</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>topLeftRadius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>topRightRadius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>bottomRightRadius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>bottomLeftRadius</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afae110b5916b28e7a77571b4cebdb186"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofPath::rectRounded </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classof_rectangle.html">ofRectangle</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>topLeftRadius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>topRightRadius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>bottomRightRadius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>bottomLeftRadius</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac68312ffa4f3051157e2b72a8a52adea"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofPath::rectRounded </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>z</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>h</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>topLeftRadius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>topRightRadius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>bottomRightRadius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>bottomLeftRadius</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a9f29f576beeb9745c86f9af88681a62b"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1426,15 +2177,15 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ada1670a182e09db27590054e448c2fa6"></a>
+<a class="anchor" id="a2d22c744db22847616098b4994871e1f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ofPath::setArcResolution </td>
+          <td class="memname">void ofPath::setCircleResolution </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>res</em></td><td>)</td>
+          <td class="paramname"><em>circleResolution</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1681,9 +2432,159 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a0cf187234da6755ea79aff72bafd594d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofPath::triangle </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y3</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a942570f3140e2665f077f7e1e5ea3bd9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofPath::triangle </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>z1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>z2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>z3</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7b6f9d5cf2353ef1934b135e48c98cbc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofPath::triangle </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;&#160;</td>
+          <td class="paramname"><em>p1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;&#160;</td>
+          <td class="paramname"><em>p2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;&#160;</td>
+          <td class="paramname"><em>p3</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>graphics/<a class="el" href="of_path_8h_source.html">ofPath.h</a></li>
-<li>graphics/<a class="el" href="of_path_8cpp.html">ofPath.cpp</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/graphics/<a class="el" href="of_path_8h_source.html">ofPath.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/graphics/<a class="el" href="of_path_8cpp.html">ofPath.cpp</a></li>
 </ul>
 </div><!-- contents -->
 

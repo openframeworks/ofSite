@@ -70,6 +70,34 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###bool createEnclosingDirectory(filePath, bRelativeToData = true, bRecursive = true)
+
+<!--
+_syntax: createEnclosingDirectory(filePath, bRelativeToData = true, bRecursive = true)_
+_name: createEnclosingDirectory_
+_returns: bool_
+_returns_description: _
+_parameters: string filePath, bool bRelativeToData=true, bool bRecursive=true_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: yes_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###string getAbsolutePath(path, bRelativeToData = true)
 
 <!--

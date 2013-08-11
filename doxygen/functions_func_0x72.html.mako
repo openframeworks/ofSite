@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -52,6 +53,7 @@
       <li><a href="functions.html"><span>All</span></a></li>
       <li class="current"><a href="functions_func.html"><span>Functions</span></a></li>
       <li><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_type.html"><span>Typedefs</span></a></li>
       <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
       <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
       <li><a href="functions_prop.html"><span>Properties</span></a></li>
@@ -101,17 +103,34 @@
 <li>readBytes()
 : <a class="el" href="classof_serial.html#ad81fa0fda972ef28778e9e016f2ad24a">ofSerial</a>
 </li>
+<li>readNativeKeyboardEvents()
+: <a class="el" href="classof_app_e_g_l_window.html#a34c83aed92e8f4384b7499def9c0d262">ofAppEGLWindow</a>
+</li>
+<li>readNativeMouseEvents()
+: <a class="el" href="classof_app_e_g_l_window.html#ae75871a1c31ccdd0d4e04585dcc416da">ofAppEGLWindow</a>
+</li>
+<li>readNativeUDevEvents()
+: <a class="el" href="classof_app_e_g_l_window.html#ac404002771cb080aa70f7c70e4e110d6">ofAppEGLWindow</a>
+</li>
 <li>readToBuffer()
 : <a class="el" href="classof_file.html#a8376d6fa18ad17657aa8456d4e4a1a01">ofFile</a>
 </li>
 <li>readToPixels()
-: <a class="el" href="classof_fbo.html#ac16fac735802e72c2f6c930f4468c8c3">ofFbo</a>
-, <a class="el" href="classof_texture.html#aa05fb3c4efbb3c12a92173d599c412fb">ofTexture</a>
-, <a class="el" href="classof_fbo.html#a35d4844cf7000d91a8c2b4c1f45acb45">ofFbo</a>
+: <a class="el" href="classof_fbo.html#a35d4844cf7000d91a8c2b4c1f45acb45">ofFbo</a>
 , <a class="el" href="classof_texture.html#a81005e21996bb1c08ee46119d9b496cc">ofTexture</a>
+, <a class="el" href="classof_fbo.html#ac16fac735802e72c2f6c930f4468c8c3">ofFbo</a>
 </li>
 <li>reallocatePixels()
 : <a class="el" href="classof_q_t_kit_player.html#a3c1655984a2029afecb062252bdaed5f">ofQTKitPlayer</a>
+</li>
+<li>rectangle()
+: <a class="el" href="classof_path.html#abc0f34366a246b515283bb049797ca39">ofPath</a>
+</li>
+<li>rectRounded()
+: <a class="el" href="classof_path.html#a1e4cf1e47b17bd19db90ae75c17067d1">ofPath</a>
+</li>
+<li>releaseAll()
+: <a class="el" href="classof_xml.html#ae9ec2bad52525108f3ca7770db73e68f">ofXml</a>
 </li>
 <li>reloadTexture()
 : <a class="el" href="classof_image__.html#a39101e7401e3708dba08bba4c95b46de">ofImage_&lt; PixelType &gt;</a>
@@ -120,9 +139,16 @@
 : <a class="el" href="classof_file.html#a1ada95ac9e0857f715e48601a22890f3">ofFile</a>
 , <a class="el" href="classof_directory.html#a81a223d5f587a5fdb8edcdc93d7e60ec">ofDirectory</a>
 , <a class="el" href="classof_u_r_l_file_loader.html#ad7b956750adfc8d3be3f2b54dedda1b1">ofURLFileLoader</a>
+, <a class="el" href="classof_xml.html#a66303fed6e2a370c2d2bca3e761665f8">ofXml</a>
+</li>
+<li>removeAttributes()
+: <a class="el" href="classof_xml.html#ac52cf9c15b7b15696bfd3563e7b5a7ba">ofXml</a>
 </li>
 <li>removeColor()
 : <a class="el" href="classof_mesh.html#a0a7904c14b66ad0774d0ed5e7a7af153">ofMesh</a>
+</li>
+<li>removeContents()
+: <a class="el" href="classof_xml.html#a78dda271e2d5f6cb3e534982b049cab6">ofXml</a>
 </li>
 <li>removeDirectory()
 : <a class="el" href="classof_directory.html#a5249380873c1ed7da418b21095b4c725">ofDirectory</a>
@@ -136,11 +162,21 @@
 <li>removeIndex()
 : <a class="el" href="classof_mesh.html#a0f01675297cabeca6993526b5986c937">ofMesh</a>
 </li>
+<li>removeListener()
+: <a class="el" href="classof_parameter.html#ad280997ee0d794f3ff5325892c05cafe">ofParameter&lt; ParameterType &gt;</a>
+, <a class="el" href="classof_read_only_parameter.html#a0c175a7e2dc832619befc0c66712e15d">ofReadOnlyParameter&lt; ParameterType, Friend &gt;</a>
+</li>
+<li>removeMesh()
+: <a class="el" href="classof3d_primitive.html#a0f570870b5d7e287570fe4ea0d29a3e2">of3dPrimitive</a>
+</li>
 <li>removeNormal()
 : <a class="el" href="classof_mesh.html#ae9b1c46faa53adb1e05da9e1e1dce688">ofMesh</a>
 </li>
 <li>removeTexCoord()
 : <a class="el" href="classof_mesh.html#a467daea580754129a7d64dc91c674939">ofMesh</a>
+</li>
+<li>removeTexture()
+: <a class="el" href="classof3d_primitive.html#a3d372c0c126f770b79e1e55e123ed4cd">of3dPrimitive</a>
 </li>
 <li>removeTrailingSlash()
 : <a class="el" href="classof_file_path.html#a58414cf9cf8aa9f150b39e2dc1f0ad00">ofFilePath</a>
@@ -153,15 +189,16 @@
 , <a class="el" href="classof_directory.html#a608c7b6290b5bc8dfc5beba1cddb5503">ofDirectory</a>
 </li>
 <li>rendersPathPrimitives()
-: <a class="el" href="classof_g_l_renderer.html#a34735b5f64b528d0f3103a5e37103b45">ofGLRenderer</a>
+: <a class="el" href="classof_g_l_programmable_renderer.html#a99fde856d9fd5813871d31588caa8ee8">ofGLProgrammableRenderer</a>
+, <a class="el" href="classof_g_l_renderer.html#a34735b5f64b528d0f3103a5e37103b45">ofGLRenderer</a>
 , <a class="el" href="classof_cairo_renderer.html#a933632be24a7f9ee8175c3660a263c24">ofCairoRenderer</a>
 , <a class="el" href="classof_renderer_collection.html#a0fea7627d79f0c77a8b101c4eb5bd577">ofRendererCollection</a>
 , <a class="el" href="classof_base_renderer.html#abdaece01a43329ef7769615cd958b7e2">ofBaseRenderer</a>
 </li>
 <li>rescale()
-: <a class="el" href="classof_vec4f.html#aef73185fb09653228e7e7f47b6bc69bb">ofVec4f</a>
-, <a class="el" href="classof_vec2f.html#aa02edc366ac39d9bc74e4527c51891ef">ofVec2f</a>
+: <a class="el" href="classof_vec2f.html#aa02edc366ac39d9bc74e4527c51891ef">ofVec2f</a>
 , <a class="el" href="classof_vec3f.html#af66cfe1db8dd18a16ae6506565e930b1">ofVec3f</a>
+, <a class="el" href="classof_vec4f.html#aef73185fb09653228e7e7f47b6bc69bb">ofVec4f</a>
 </li>
 <li>rescaled()
 : <a class="el" href="classof_vec2f.html#a97240f6d5a01e831d843277b36b98bc8">ofVec2f</a>
@@ -171,6 +208,7 @@
 <li>reset()
 : <a class="el" href="classof_easy_cam.html#a8833ae781975911013b5f6aa3bec32cd">ofEasyCam</a>
 , <a class="el" href="classof_directory.html#a5f3cd0db7a454115fb7223630168fd66">ofDirectory</a>
+, <a class="el" href="classof_xml.html#a74a14f705916cdbcb2899216f064103a">ofXml</a>
 </li>
 <li>resetAnchor()
 : <a class="el" href="classof_fbo.html#adc4416303195844582849bd0c879c142">ofFbo</a>
@@ -191,14 +229,15 @@
 , <a class="el" href="classof_pixels__.html#acc59c5ccd146c119de24192ee8d9864d">ofPixels_&lt; PixelType &gt;</a>
 , <a class="el" href="classof_polyline.html#a49e172bae1f49fce0b763fe05b33c53e">ofPolyline</a>
 </li>
-<li>resize_cb()
-: <a class="el" href="classof_app_glut_window.html#aa4686f016e2f36ab1523e058bad6a17a">ofAppGlutWindow</a>
-</li>
 <li>resizePixels()
 : <a class="el" href="classof_image__.html#ad70c45ca878848e888f1d2f83a985eb1">ofImage_&lt; PixelType &gt;</a>
 </li>
 <li>resizeTo()
 : <a class="el" href="classof_pixels__.html#a4ede495923b45be203974b82f17efd80">ofPixels_&lt; PixelType &gt;</a>
+</li>
+<li>resizeToTexture()
+: <a class="el" href="classof_plane_primitive.html#a335fa0dc7bde05aee562045502ba4383">ofPlanePrimitive</a>
+, <a class="el" href="classof_box_primitive.html#ad08fb2ca46975a55275ea20c16a86993">ofBoxPrimitive</a>
 </li>
 <li>restoreTransformGL()
 : <a class="el" href="classof_node.html#a9d09e55a671dae12c64b18215f2cd08c">ofNode</a>
@@ -207,23 +246,29 @@
 : <a class="el" href="classof_node.html#a6eabc08d0e5ec0f8e7b6d2931531e400">ofNode</a>
 </li>
 <li>rotate()
-: <a class="el" href="classof_base_renderer.html#a76ea3a2691d80054696f41aa7069231d">ofBaseRenderer</a>
-, <a class="el" href="classof_matrix4x4.html#aedb7120a5f6fbd9c27d5c05dc5f513ac">ofMatrix4x4</a>
-, <a class="el" href="classof_vec2f.html#a3e1840cb1f02984824c3b0cb1ee57cf3">ofVec2f</a>
-, <a class="el" href="classof_vec3f.html#a6881fef8b4a7693fb4378ca2bf183574">ofVec3f</a>
-, <a class="el" href="classof_vec2f.html#a916fea4c82415c03cf0e0afbdcb80df7">ofVec2f</a>
+: <a class="el" href="classof_vec3f.html#a52e4913d555208571306f0ef7bcfbc35">ofVec3f</a>
+, <a class="el" href="classof_node.html#a1334bc48d4dbbc8d769ce42ee82fdf96">ofNode</a>
+, <a class="el" href="classof_g_l_programmable_renderer.html#a0f5a3546a53cd19f7ae41c6dc5c18c89">ofGLProgrammableRenderer</a>
 , <a class="el" href="classof_base_renderer.html#a54e1bb2754e2764301ac3a7de13852d1">ofBaseRenderer</a>
-, <a class="el" href="classof_renderer_collection.html#a8621b6d166d85783d16f159c334dce31">ofRendererCollection</a>
+, <a class="el" href="classof_vec2f.html#a3e1840cb1f02984824c3b0cb1ee57cf3">ofVec2f</a>
 , <a class="el" href="classof_cairo_renderer.html#a8822b11dafbe4649824e1abaa2d90377">ofCairoRenderer</a>
-, <a class="el" href="classof_node.html#ae5d336038ea9a78223218183bbc446f0">ofNode</a>
-, <a class="el" href="classof_g_l_renderer.html#aa19c82279ab5c15c8c1c8dd79e18cf4f">ofGLRenderer</a>
+, <a class="el" href="classof_matrix_stack.html#abd3467db3338d99669f8a06231c249e2">ofMatrixStack</a>
 , <a class="el" href="classof_cairo_renderer.html#a851fe7d8806fdbc44e4c1a44cc4c1ddf">ofCairoRenderer</a>
+, <a class="el" href="classof_vec3f.html#a21e8896b65db61653dbeec9eb6f83331">ofVec3f</a>
 , <a class="el" href="classof_path.html#a9f29f576beeb9745c86f9af88681a62b">ofPath</a>
+, <a class="el" href="classof_renderer_collection.html#a8621b6d166d85783d16f159c334dce31">ofRendererCollection</a>
+, <a class="el" href="classof_matrix4x4.html#aedb7120a5f6fbd9c27d5c05dc5f513ac">ofMatrix4x4</a>
+, <a class="el" href="classof_g_l_renderer.html#aa19c82279ab5c15c8c1c8dd79e18cf4f">ofGLRenderer</a>
 , <a class="el" href="classof_renderer_collection.html#adf166761a6667c2a02e0474c51a1c5f4">ofRendererCollection</a>
+, <a class="el" href="classof_vec2f.html#a916fea4c82415c03cf0e0afbdcb80df7">ofVec2f</a>
+, <a class="el" href="classof_vec3f.html#a6881fef8b4a7693fb4378ca2bf183574">ofVec3f</a>
+, <a class="el" href="classof_base_renderer.html#a76ea3a2691d80054696f41aa7069231d">ofBaseRenderer</a>
+, <a class="el" href="classof_g_l_renderer.html#a81627f064a499681e8321b5ee8294a6f">ofGLRenderer</a>
+, <a class="el" href="classof_node.html#a567e36b8f19965cb37b093283f7fcf09">ofNode</a>
 </li>
 <li>rotate90()
-: <a class="el" href="classof_pixels__.html#a3c1bae7e9a6df9f4b221842a347ab1e6">ofPixels_&lt; PixelType &gt;</a>
-, <a class="el" href="classof_image__.html#a0bd4aa6e16a115a17a74be01b785fa9a">ofImage_&lt; PixelType &gt;</a>
+: <a class="el" href="classof_image__.html#a0bd4aa6e16a115a17a74be01b785fa9a">ofImage_&lt; PixelType &gt;</a>
+, <a class="el" href="classof_pixels__.html#a3c1bae7e9a6df9f4b221842a347ab1e6">ofPixels_&lt; PixelType &gt;</a>
 </li>
 <li>rotate90To()
 : <a class="el" href="classof_pixels__.html#a6c8de8804b4138993e7c08249a327c8d">ofPixels_&lt; PixelType &gt;</a>
@@ -232,38 +277,43 @@
 : <a class="el" href="classof_node.html#a99683f424fc89553cfbdab53d52a1e7f">ofNode</a>
 </li>
 <li>rotated()
-: <a class="el" href="classof_vec3f.html#ad0bb4f269fb038f6dffecf692fdb0e86">ofVec3f</a>
-, <a class="el" href="classof_vec2f.html#a0341654ad81521acfae8797064854e97">ofVec2f</a>
+: <a class="el" href="classof_vec2f.html#a6144aa1b43585b770ad7533da3c7f62d">ofVec2f</a>
+, <a class="el" href="classof_vec3f.html#ad0bb4f269fb038f6dffecf692fdb0e86">ofVec3f</a>
 </li>
 <li>rotateRad()
-: <a class="el" href="classof_vec3f.html#ab239b862d150aebc87d9f749eecaed00">ofVec3f</a>
-, <a class="el" href="classof_vec2f.html#ab4a02caec83e1a71528c23293232b34d">ofVec2f</a>
+: <a class="el" href="classof_vec2f.html#ab4a02caec83e1a71528c23293232b34d">ofVec2f</a>
 , <a class="el" href="classof_vec3f.html#add16594c6697cf5ca8169df110534290">ofVec3f</a>
 , <a class="el" href="classof_vec2f.html#a1aa96117ea3a121fc9cb6136a895e4b9">ofVec2f</a>
-, <a class="el" href="classof_vec3f.html#a8edf39d6f9aa7f2e702fac23eae5bb81">ofVec3f</a>
 , <a class="el" href="classof_matrix4x4.html#a2c321f006edb3e828c4ff7534f95c5ea">ofMatrix4x4</a>
+, <a class="el" href="classof_vec3f.html#ab239b862d150aebc87d9f749eecaed00">ofVec3f</a>
 </li>
 <li>rotateX()
-: <a class="el" href="classof_cairo_renderer.html#a95e2617b09a278951a9da61b84dd73f4">ofCairoRenderer</a>
-, <a class="el" href="classof_renderer_collection.html#a0c5e97089208e52f40e26ec6aba6cc96">ofRendererCollection</a>
-, <a class="el" href="classof_base_renderer.html#ac52830fd0ab1f62f9f094f9501156fee">ofBaseRenderer</a>
+: <a class="el" href="classof_renderer_collection.html#a0c5e97089208e52f40e26ec6aba6cc96">ofRendererCollection</a>
 , <a class="el" href="classof_g_l_renderer.html#ad97908ef76005fca1fdca3149e3811ad">ofGLRenderer</a>
+, <a class="el" href="classof_g_l_programmable_renderer.html#a268d9a77bb71a50d181552dd540e97b5">ofGLProgrammableRenderer</a>
+, <a class="el" href="classof_base_renderer.html#ac52830fd0ab1f62f9f094f9501156fee">ofBaseRenderer</a>
+, <a class="el" href="classof_cairo_renderer.html#a95e2617b09a278951a9da61b84dd73f4">ofCairoRenderer</a>
 </li>
 <li>rotateY()
-: <a class="el" href="classof_renderer_collection.html#a46a99e4166855b99a115db39a89b2b91">ofRendererCollection</a>
-, <a class="el" href="classof_base_renderer.html#aeb7dd85ce856ff9510f6bc0159ba834f">ofBaseRenderer</a>
+: <a class="el" href="classof_cairo_renderer.html#a8708e85a264993c6a1c17a603f5c3622">ofCairoRenderer</a>
+, <a class="el" href="classof_g_l_programmable_renderer.html#a46cb50c6b2334ec6c91632db85f57e3e">ofGLProgrammableRenderer</a>
 , <a class="el" href="classof_g_l_renderer.html#abc15d35c7c3dcdcd8292905dc4c68555">ofGLRenderer</a>
-, <a class="el" href="classof_cairo_renderer.html#a8708e85a264993c6a1c17a603f5c3622">ofCairoRenderer</a>
+, <a class="el" href="classof_base_renderer.html#aeb7dd85ce856ff9510f6bc0159ba834f">ofBaseRenderer</a>
+, <a class="el" href="classof_renderer_collection.html#a46a99e4166855b99a115db39a89b2b91">ofRendererCollection</a>
 </li>
 <li>rotateZ()
-: <a class="el" href="classof_cairo_renderer.html#ae49c0dd54cc8eeededda39ce57df3958">ofCairoRenderer</a>
+: <a class="el" href="classof_base_renderer.html#acbbd19ddcddf7118d8e5d501054a706e">ofBaseRenderer</a>
+, <a class="el" href="classof_g_l_programmable_renderer.html#ab0ab97453f0850bf084476d50202bf8a">ofGLProgrammableRenderer</a>
+, <a class="el" href="classof_cairo_renderer.html#ae49c0dd54cc8eeededda39ce57df3958">ofCairoRenderer</a>
 , <a class="el" href="classof_renderer_collection.html#a63aafe2a1d81345e52fb402e4fd0390d">ofRendererCollection</a>
-, <a class="el" href="classof_base_renderer.html#acbbd19ddcddf7118d8e5d501054a706e">ofBaseRenderer</a>
 , <a class="el" href="classof_g_l_renderer.html#adaddc8874c08b0e488c4fcbac4f828af">ofGLRenderer</a>
 </li>
 <li>runAppViaInfiniteLoop()
-: <a class="el" href="classof_app_glut_window.html#a52733b702e7f2b7ff42b8c128111c91d">ofAppGlutWindow</a>
+: <a class="el" href="classof_app_no_window.html#afbeafd41baf1f6a5aeb6b15b14b165f5">ofAppNoWindow</a>
+, <a class="el" href="classof_app_glut_window.html#a52733b702e7f2b7ff42b8c128111c91d">ofAppGlutWindow</a>
+, <a class="el" href="classof_app_e_g_l_window.html#a5f831606f6e445b84a762591887e6ef9">ofAppEGLWindow</a>
 , <a class="el" href="classof_app_base_window.html#a039ff5b4950c30ea0416dfa32031736e">ofAppBaseWindow</a>
+, <a class="el" href="classof_app_g_l_f_w_window.html#a2c48b71b768436a7b0125e32ced9a6f8">ofAppGLFWWindow</a>
 </li>
 </ul>
 </div><!-- contents -->

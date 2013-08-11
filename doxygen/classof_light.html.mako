@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -139,10 +140,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa2b223ca1f8560ef193eb7bde666d758 inherit pub_methods_classof_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0f916a28a08c95064e89bdc5131b923 inherit pub_methods_classof_node"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_node.html#ad0f916a28a08c95064e89bdc5131b923">~ofNode</a> ()</td></tr>
 <tr class="separator:ad0f916a28a08c95064e89bdc5131b923 inherit pub_methods_classof_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17c41e855157cc8b896db24f8ba50201 inherit pub_methods_classof_node"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_node.html#a17c41e855157cc8b896db24f8ba50201">setParent</a> (<a class="el" href="classof_node.html">ofNode</a> &amp;<a class="el" href="classof_node.html#a9fa60edff25434ada1671e837335fbdf">parent</a>)</td></tr>
-<tr class="separator:a17c41e855157cc8b896db24f8ba50201 inherit pub_methods_classof_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abab3151dc3a440a630f5782eda3e3111 inherit pub_methods_classof_node"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_node.html#abab3151dc3a440a630f5782eda3e3111">clearParent</a> ()</td></tr>
-<tr class="separator:abab3151dc3a440a630f5782eda3e3111 inherit pub_methods_classof_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad475e04b79cbd1528ae3c59adba0a7c2 inherit pub_methods_classof_node"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_node.html#ad475e04b79cbd1528ae3c59adba0a7c2">setParent</a> (<a class="el" href="classof_node.html">ofNode</a> &amp;<a class="el" href="classof_node.html#a9fa60edff25434ada1671e837335fbdf">parent</a>, bool bMaintainGlobalTransform=false)</td></tr>
+<tr class="separator:ad475e04b79cbd1528ae3c59adba0a7c2 inherit pub_methods_classof_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6c41c2d514797f04f162bb323cb4dfa inherit pub_methods_classof_node"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_node.html#aa6c41c2d514797f04f162bb323cb4dfa">clearParent</a> (bool bMaintainGlobalTransform=false)</td></tr>
+<tr class="separator:aa6c41c2d514797f04f162bb323cb4dfa inherit pub_methods_classof_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08d61ddc77fd655780a7c269756b7ecb inherit pub_methods_classof_node"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_node.html">ofNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_node.html#a08d61ddc77fd655780a7c269756b7ecb">getParent</a> () const </td></tr>
 <tr class="separator:a08d61ddc77fd655780a7c269756b7ecb inherit pub_methods_classof_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89350f61b536e5f64dc13682a6aee97d inherit pub_methods_classof_node"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_vec3f.html">ofVec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_node.html#a89350f61b536e5f64dc13682a6aee97d">getPosition</a> () const </td></tr>
@@ -340,7 +341,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classof_node.html#a82804cbe87f3bce8a5d2d2b89dce5e71">ofNode</a>.</p>
+<p>Reimplemented from <a class="el" href="classof_node.html#a23a1ca114eeff7e8494cecee90002534">ofNode</a>.</p>
 
 </div>
 </div>
@@ -799,8 +800,8 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>gl/<a class="el" href="of_light_8h_source.html">ofLight.h</a></li>
-<li>gl/<a class="el" href="of_light_8cpp.html">ofLight.cpp</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/gl/<a class="el" href="of_light_8h_source.html">ofLight.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/gl/<a class="el" href="of_light_8cpp.html">ofLight.cpp</a></li>
 </ul>
 </div><!-- contents -->
 

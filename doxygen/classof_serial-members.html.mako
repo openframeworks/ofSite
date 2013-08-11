@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -68,17 +69,18 @@
   <tr><td class="entry"><a class="el" href="classof_serial.html#ad12e815bc9db088ce073e2ba629d8d85">fd</a></td><td class="entry"><a class="el" href="classof_serial.html">ofSerial</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classof_serial.html#ab42518349fd4cfc963c8412c55419ea8">flush</a>(bool flushIn=true, bool flushOut=true)</td><td class="entry"><a class="el" href="classof_serial.html">ofSerial</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classof_serial.html#a059cbbddc7e20d965a4a0c0d8a6dd5ba">getDeviceList</a>()</td><td class="entry"><a class="el" href="classof_serial.html">ofSerial</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classof_serial.html#aba21737b03fbafd2bdf79e35e28477ec">listDevices</a>()</td><td class="entry"><a class="el" href="classof_serial.html">ofSerial</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classof_serial.html#ae6a6a1d5912cce9d4d7256b0ce4ba624">ofSerial</a>()</td><td class="entry"><a class="el" href="classof_serial.html">ofSerial</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classof_serial.html#a5595ce6d3541a1b2bc52d2977e5afd04">oldoptions</a></td><td class="entry"><a class="el" href="classof_serial.html">ofSerial</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classof_serial.html#aa368e0f97f7c0c4f6542d94091740e5f">readByte</a>()</td><td class="entry"><a class="el" href="classof_serial.html">ofSerial</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classof_serial.html#ad81fa0fda972ef28778e9e016f2ad24a">readBytes</a>(unsigned char *buffer, int length)</td><td class="entry"><a class="el" href="classof_serial.html">ofSerial</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classof_serial.html#a78e4db149824ed686a0135ca95f4c5e6">setup</a>()</td><td class="entry"><a class="el" href="classof_serial.html">ofSerial</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classof_serial.html#a37ca92dbb34b23d8600db8bdb6a7e24a">setup</a>(string portName, int baudrate)</td><td class="entry"><a class="el" href="classof_serial.html">ofSerial</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classof_serial.html#a62dd07d5be97bb9ae2a1eb11a7a4d513">setup</a>(int deviceNumber, int baudrate)</td><td class="entry"><a class="el" href="classof_serial.html">ofSerial</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classof_serial.html#aacce7088833acbe9b0825b2cab14eea4">writeByte</a>(unsigned char singleByte)</td><td class="entry"><a class="el" href="classof_serial.html">ofSerial</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classof_serial.html#aba92e180e606f798070f4c04bb9e7a8b">writeBytes</a>(unsigned char *buffer, int length)</td><td class="entry"><a class="el" href="classof_serial.html">ofSerial</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classof_serial.html#a6782e4b91f611e7a64659dbd4bd569c6">~ofSerial</a>()</td><td class="entry"><a class="el" href="classof_serial.html">ofSerial</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classof_serial.html#a3a5ebd9289fc408f8ddb77e4cdc4c2d1">isInitialized</a>() const </td><td class="entry"><a class="el" href="classof_serial.html">ofSerial</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classof_serial.html#aba21737b03fbafd2bdf79e35e28477ec">listDevices</a>()</td><td class="entry"><a class="el" href="classof_serial.html">ofSerial</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classof_serial.html#ae6a6a1d5912cce9d4d7256b0ce4ba624">ofSerial</a>()</td><td class="entry"><a class="el" href="classof_serial.html">ofSerial</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classof_serial.html#a5595ce6d3541a1b2bc52d2977e5afd04">oldoptions</a></td><td class="entry"><a class="el" href="classof_serial.html">ofSerial</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classof_serial.html#aa368e0f97f7c0c4f6542d94091740e5f">readByte</a>()</td><td class="entry"><a class="el" href="classof_serial.html">ofSerial</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classof_serial.html#ad81fa0fda972ef28778e9e016f2ad24a">readBytes</a>(unsigned char *buffer, int length)</td><td class="entry"><a class="el" href="classof_serial.html">ofSerial</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classof_serial.html#a78e4db149824ed686a0135ca95f4c5e6">setup</a>()</td><td class="entry"><a class="el" href="classof_serial.html">ofSerial</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classof_serial.html#a37ca92dbb34b23d8600db8bdb6a7e24a">setup</a>(string portName, int baudrate)</td><td class="entry"><a class="el" href="classof_serial.html">ofSerial</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classof_serial.html#a62dd07d5be97bb9ae2a1eb11a7a4d513">setup</a>(int deviceNumber, int baudrate)</td><td class="entry"><a class="el" href="classof_serial.html">ofSerial</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classof_serial.html#aacce7088833acbe9b0825b2cab14eea4">writeByte</a>(unsigned char singleByte)</td><td class="entry"><a class="el" href="classof_serial.html">ofSerial</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classof_serial.html#aba92e180e606f798070f4c04bb9e7a8b">writeBytes</a>(unsigned char *buffer, int length)</td><td class="entry"><a class="el" href="classof_serial.html">ofSerial</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classof_serial.html#a6782e4b91f611e7a64659dbd4bd569c6">~ofSerial</a>()</td><td class="entry"><a class="el" href="classof_serial.html">ofSerial</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
 
             </div>

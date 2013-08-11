@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -94,8 +95,6 @@
   <tr><td class="entry"><a class="el" href="classof_q_t_kit_player.html#a929a210b4b9f3e17e8596669bc2de4ba">moviePath</a></td><td class="entry"><a class="el" href="classof_q_t_kit_player.html">ofQTKitPlayer</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classof_q_t_kit_player.html#ae0f6ee52793544e33b0f45e09a037246">moviePlayer</a></td><td class="entry"><a class="el" href="classof_q_t_kit_player.html">ofQTKitPlayer</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
   <tr><td class="entry"><a class="el" href="classof_q_t_kit_player.html#a36ec05d764c6ae3a27c81f6f445406fd">nextFrame</a>()</td><td class="entry"><a class="el" href="classof_q_t_kit_player.html">ofQTKitPlayer</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classof_q_t_kit_player.html#a977c9d964bb057c807d22044737a4225">OF_DEPRECATED_MSG</a>(&quot;Use getTexture()-&gt;bind() instead. Ensure decodeMode != OF_QTKIT_DECODE_PIXELS_ONLY.&quot;, void bind())</td><td class="entry"><a class="el" href="classof_q_t_kit_player.html">ofQTKitPlayer</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classof_q_t_kit_player.html#a0aab8454c447cdf0fda3f7ac2e64de86">OF_DEPRECATED_MSG</a>(&quot;Use getTexture()-&gt;unbind() instead. Ensure decodeMode != OF_QTKIT_DECODE_PIXELS_ONLY.&quot;, void unbind())</td><td class="entry"><a class="el" href="classof_q_t_kit_player.html">ofQTKitPlayer</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classof_q_t_kit_player.html#a36ddc5fa4bb4d7be6da035eceb780bea">ofQTKitPlayer</a>()</td><td class="entry"><a class="el" href="classof_q_t_kit_player.html">ofQTKitPlayer</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classof_q_t_kit_player.html#a48018ed416374b2c041b5af2e6aa824c">pixelFormat</a></td><td class="entry"><a class="el" href="classof_q_t_kit_player.html">ofQTKitPlayer</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classof_q_t_kit_player.html#ac81d5fd5fed2308c050057ed289f0a52">pixels</a></td><td class="entry"><a class="el" href="classof_q_t_kit_player.html">ofQTKitPlayer</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>

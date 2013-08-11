@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -51,8 +52,6 @@
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="classof_app_glut_window-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ofAppGlutWindow Class Reference</div>  </div>
@@ -116,18 +115,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a13bd98a9f21be288ccc273bcb4938cb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f22f0bb8ec81dd32e7dadbf623b8563"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_app_glut_window.html#a4f22f0bb8ec81dd32e7dadbf623b8563">getWindowMode</a> ()</td></tr>
 <tr class="separator:a4f22f0bb8ec81dd32e7dadbf623b8563"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c9b0b4f4fb8e3bf0c0a534868e738e1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_app_glut_window.html#a1c9b0b4f4fb8e3bf0c0a534868e738e1">getFrameNum</a> ()</td></tr>
-<tr class="separator:a1c9b0b4f4fb8e3bf0c0a534868e738e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd6b8dbc1e8a7aa985858b28c9e3cda9"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_app_glut_window.html#acd6b8dbc1e8a7aa985858b28c9e3cda9">getFrameRate</a> ()</td></tr>
-<tr class="separator:acd6b8dbc1e8a7aa985858b28c9e3cda9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70ce41329c3060d85f389920f21d6b35"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_app_glut_window.html#a70ce41329c3060d85f389920f21d6b35">getLastFrameTime</a> ()</td></tr>
-<tr class="separator:a70ce41329c3060d85f389920f21d6b35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65901e3c14e5664d6434c996f4534419"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_app_glut_window.html#a65901e3c14e5664d6434c996f4534419">setFrameRate</a> (float targetRate)</td></tr>
-<tr class="separator:a65901e3c14e5664d6434c996f4534419"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa20121ddf3f4b3c2f8e60788c0ea902f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_app_glut_window.html#aa20121ddf3f4b3c2f8e60788c0ea902f">enableSetupScreen</a> ()</td></tr>
 <tr class="separator:aa20121ddf3f4b3c2f8e60788c0ea902f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9ed83c7199f400f9a97667c332d5db8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_app_glut_window.html#af9ed83c7199f400f9a97667c332d5db8">disableSetupScreen</a> ()</td></tr>
 <tr class="separator:af9ed83c7199f400f9a97667c332d5db8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5956787e7dbba549d894c84107287ef1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_app_glut_window.html#a5956787e7dbba549d894c84107287ef1">setVerticalSync</a> (bool enabled)</td></tr>
+<tr class="separator:a5956787e7dbba549d894c84107287ef1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classof_app_base_window"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classof_app_base_window')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classof_app_base_window.html">ofAppBaseWindow</a></td></tr>
 <tr class="memitem:a434ff7f77c33c507a9ea2144f9a13a3d inherit pub_methods_classof_app_base_window"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_app_base_window.html#a434ff7f77c33c507a9ea2144f9a13a3d">ofAppBaseWindow</a> ()</td></tr>
 <tr class="separator:a434ff7f77c33c507a9ea2144f9a13a3d inherit pub_methods_classof_app_base_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -135,38 +128,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad77f4c6d448b1450bff55331657b8f3d inherit pub_methods_classof_app_base_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7bb214b855429ac2ddf1091d93cfb4a8 inherit pub_methods_classof_app_base_window"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_app_base_window.html#a7bb214b855429ac2ddf1091d93cfb4a8">doesHWOrientation</a> ()</td></tr>
 <tr class="separator:a7bb214b855429ac2ddf1091d93cfb4a8 inherit pub_methods_classof_app_base_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a11746cee44d391949d28db099c6482c1"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_app_glut_window.html#a11746cee44d391949d28db099c6482c1">display</a> (void)</td></tr>
-<tr class="separator:a11746cee44d391949d28db099c6482c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a61a60c00bfada0e89e1a2b4dc2e959b3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_app_glut_window.html#a61a60c00bfada0e89e1a2b4dc2e959b3">mouse_cb</a> (int button, int state, int x, int y)</td></tr>
-<tr class="separator:a61a60c00bfada0e89e1a2b4dc2e959b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a28c5a86eb6a3728cfce48505c9184d02"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_app_glut_window.html#a28c5a86eb6a3728cfce48505c9184d02">motion_cb</a> (int x, int y)</td></tr>
-<tr class="separator:a28c5a86eb6a3728cfce48505c9184d02"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a8a8db0a2b819b45a7187992c1f35f3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_app_glut_window.html#a3a8a8db0a2b819b45a7187992c1f35f3">passive_motion_cb</a> (int x, int y)</td></tr>
-<tr class="separator:a3a8a8db0a2b819b45a7187992c1f35f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2cbf3f2a707a6200a0d943651ecb20c6"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_app_glut_window.html#a2cbf3f2a707a6200a0d943651ecb20c6">idle_cb</a> (void)</td></tr>
-<tr class="separator:a2cbf3f2a707a6200a0d943651ecb20c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab967cc46541fccebe49a885b3792e5cc"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_app_glut_window.html#ab967cc46541fccebe49a885b3792e5cc">keyboard_cb</a> (unsigned char key, int x, int y)</td></tr>
-<tr class="separator:ab967cc46541fccebe49a885b3792e5cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3e302aa946799079bbb9bb787bb88d7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_app_glut_window.html#ab3e302aa946799079bbb9bb787bb88d7">keyboard_up_cb</a> (unsigned char key, int x, int y)</td></tr>
-<tr class="separator:ab3e302aa946799079bbb9bb787bb88d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a441ee80c69d926baa8f21ac56616ea63"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_app_glut_window.html#a441ee80c69d926baa8f21ac56616ea63">special_key_cb</a> (int key, int x, int y)</td></tr>
-<tr class="separator:a441ee80c69d926baa8f21ac56616ea63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3962778c8c58b98366aa9b4a07ef01a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_app_glut_window.html#ac3962778c8c58b98366aa9b4a07ef01a">special_key_up_cb</a> (int key, int x, int y)</td></tr>
-<tr class="separator:ac3962778c8c58b98366aa9b4a07ef01a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4686f016e2f36ab1523e058bad6a17a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_app_glut_window.html#aa4686f016e2f36ab1523e058bad6a17a">resize_cb</a> (int w, int h)</td></tr>
-<tr class="separator:aa4686f016e2f36ab1523e058bad6a17a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7dabf44997bdd16aba18869815cf424"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_app_glut_window.html#ae7dabf44997bdd16aba18869815cf424">entry_cb</a> (int state)</td></tr>
-<tr class="separator:ae7dabf44997bdd16aba18869815cf424"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2602070291bca9b8bc9afe6cdd645e73"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_app_glut_window.html#a2602070291bca9b8bc9afe6cdd645e73">dragEvent</a> (char **fileNames, int howManyFiles, int dragX, int dragY)</td></tr>
-<tr class="separator:a2602070291bca9b8bc9afe6cdd645e73"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:ab2b4ce19f9d244bd899ab69e6f6d5d08"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_app_glut_window.html#ab2b4ce19f9d244bd899ab69e6f6d5d08">displayString</a></td></tr>
-<tr class="separator:ab2b4ce19f9d244bd899ab69e6f6d5d08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="afda73b6b69e66540ee144a88e7bee66b"></a>
@@ -233,76 +194,6 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a11746cee44d391949d28db099c6482c1"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ofAppGlutWindow::display </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a2602070291bca9b8bc9afe6cdd645e73"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ofAppGlutWindow::dragEvent </td>
-          <td>(</td>
-          <td class="paramtype">char **&#160;</td>
-          <td class="paramname"><em>fileNames</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>howManyFiles</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>dragX</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>dragY</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="aa20121ddf3f4b3c2f8e60788c0ea902f"></a>
 <div class="memitem">
 <div class="memproto">
@@ -328,80 +219,6 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ae7dabf44997bdd16aba18869815cf424"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ofAppGlutWindow::entry_cb </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>state</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a1c9b0b4f4fb8e3bf0c0a534868e738e1"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int ofAppGlutWindow::getFrameNum </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Reimplemented from <a class="el" href="classof_app_base_window.html#ac6553f116e21ac34f6f35af9f2629d84">ofAppBaseWindow</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="acd6b8dbc1e8a7aa985858b28c9e3cda9"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">float ofAppGlutWindow::getFrameRate </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Reimplemented from <a class="el" href="classof_app_base_window.html#a8bd75700687d9b9b47477a02f58bf125">ofAppBaseWindow</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a13bd98a9f21be288ccc273bcb4938cb5"></a>
 <div class="memitem">
 <div class="memproto">
@@ -424,31 +241,6 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Reimplemented from <a class="el" href="classof_app_base_window.html#aef76e7138aef773ee573b23d42947ae9">ofAppBaseWindow</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a70ce41329c3060d85f389920f21d6b35"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double ofAppGlutWindow::getLastFrameTime </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Reimplemented from <a class="el" href="classof_app_base_window.html#ae5c3432bc9c7aa2fd720c4d9c500a63e">ofAppBaseWindow</a>.</p>
 
 </div>
 </div>
@@ -627,30 +419,6 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a2cbf3f2a707a6200a0d943651ecb20c6"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ofAppGlutWindow::idle_cb </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="a71a97b33e147d22a619fa7fe7f3721f7"></a>
 <div class="memitem">
 <div class="memproto">
@@ -673,234 +441,6 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Reimplemented from <a class="el" href="classof_app_base_window.html#a4a4d7346e04b0f9292c8c92449269ec4">ofAppBaseWindow</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ab967cc46541fccebe49a885b3792e5cc"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ofAppGlutWindow::keyboard_cb </td>
-          <td>(</td>
-          <td class="paramtype">unsigned char&#160;</td>
-          <td class="paramname"><em>key</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>y</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ab3e302aa946799079bbb9bb787bb88d7"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ofAppGlutWindow::keyboard_up_cb </td>
-          <td>(</td>
-          <td class="paramtype">unsigned char&#160;</td>
-          <td class="paramname"><em>key</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>y</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a28c5a86eb6a3728cfce48505c9184d02"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ofAppGlutWindow::motion_cb </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>y</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a61a60c00bfada0e89e1a2b4dc2e959b3"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ofAppGlutWindow::mouse_cb </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>button</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>state</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>y</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a3a8a8db0a2b819b45a7187992c1f35f3"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ofAppGlutWindow::passive_motion_cb </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>y</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="aa4686f016e2f36ab1523e058bad6a17a"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ofAppGlutWindow::resize_cb </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>w</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>h</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
 
 </div>
 </div>
@@ -943,32 +483,6 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a65901e3c14e5664d6434c996f4534419"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ofAppGlutWindow::setFrameRate </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>targetRate</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Reimplemented from <a class="el" href="classof_app_base_window.html#abd35c26a978c0838670800c498c1a573">ofAppBaseWindow</a>.</p>
 
 </div>
 </div>
@@ -1079,6 +593,32 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Reimplemented from <a class="el" href="classof_app_base_window.html#a9711b1ab1fe2e765eace3e7fb64f011b">ofAppBaseWindow</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5956787e7dbba549d894c84107287ef1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofAppGlutWindow::setVerticalSync </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>enabled</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classof_app_base_window.html#a2dd72cfdb062e9d1cd92c38abb626780">ofAppBaseWindow</a>.</p>
 
 </div>
 </div>
@@ -1205,86 +745,6 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a441ee80c69d926baa8f21ac56616ea63"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ofAppGlutWindow::special_key_cb </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>key</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>y</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ac3962778c8c58b98366aa9b4a07ef01a"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ofAppGlutWindow::special_key_up_cb </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>key</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>y</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="a7854c88880586b16f915bdb8e515cd6e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1310,22 +770,9 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="ab2b4ce19f9d244bd899ab69e6f6d5d08"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">string ofAppGlutWindow::displayString</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>app/<a class="el" href="of_app_glut_window_8h_source.html">ofAppGlutWindow.h</a></li>
-<li>app/<a class="el" href="of_app_glut_window_8cpp.html">ofAppGlutWindow.cpp</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/app/<a class="el" href="of_app_glut_window_8h_source.html">ofAppGlutWindow.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/app/<a class="el" href="of_app_glut_window_8cpp.html">ofAppGlutWindow.cpp</a></li>
 </ul>
 </div><!-- contents -->
 

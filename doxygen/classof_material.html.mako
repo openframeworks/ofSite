@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -63,6 +64,8 @@
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a836158031f0b3e24f06833f513197b64"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_material.html#a836158031f0b3e24f06833f513197b64">ofMaterial</a> ()</td></tr>
 <tr class="separator:a836158031f0b3e24f06833f513197b64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78f335ecc99727a979f7756d3db9385a"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_material.html#a78f335ecc99727a979f7756d3db9385a">~ofMaterial</a> ()</td></tr>
+<tr class="separator:a78f335ecc99727a979f7756d3db9385a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc3e3f6f1bd89c1d18fa2993795694bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_material.html#acc3e3f6f1bd89c1d18fa2993795694bb">setColors</a> (<a class="el" href="of_color_8h.html#a9ae60244b89debdb4901ef09e7f47434">ofFloatColor</a> oDiffuse, <a class="el" href="of_color_8h.html#a9ae60244b89debdb4901ef09e7f47434">ofFloatColor</a> oAmbient, <a class="el" href="of_color_8h.html#a9ae60244b89debdb4901ef09e7f47434">ofFloatColor</a> oSpecular, <a class="el" href="of_color_8h.html#a9ae60244b89debdb4901ef09e7f47434">ofFloatColor</a> emissive)</td></tr>
 <tr class="separator:acc3e3f6f1bd89c1d18fa2993795694bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1916597b2a4107544e83803abdc96364"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_material.html#a1916597b2a4107544e83803abdc96364">setDiffuseColor</a> (<a class="el" href="of_color_8h.html#a9ae60244b89debdb4901ef09e7f47434">ofFloatColor</a> oDiffuse)</td></tr>
@@ -106,6 +109,29 @@ Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a78f335ecc99727a979f7756d3db9385a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual ofMaterial::~ofMaterial </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -351,8 +377,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>gl/<a class="el" href="of_material_8h_source.html">ofMaterial.h</a></li>
-<li>gl/<a class="el" href="of_material_8cpp.html">ofMaterial.cpp</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/gl/<a class="el" href="of_material_8h_source.html">ofMaterial.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/gl/<a class="el" href="of_material_8cpp.html">ofMaterial.cpp</a></li>
 </ul>
 </div><!-- contents -->
 

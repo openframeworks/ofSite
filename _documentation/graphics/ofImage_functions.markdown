@@ -143,6 +143,114 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###bool ofLoadImage(&pix, path)
+
+<!--
+_syntax: ofLoadImage(&pix, path)_
+_name: ofLoadImage_
+_returns: bool_
+_returns_description: _
+_parameters: ofFloatPixels &pix, string path_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool ofLoadImage(&pix, &buffer)
+
+<!--
+_syntax: ofLoadImage(&pix, &buffer)_
+_name: ofLoadImage_
+_returns: bool_
+_returns_description: _
+_parameters: ofFloatPixels &pix, const ofBuffer &buffer_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool ofLoadImage(&pix, path)
+
+<!--
+_syntax: ofLoadImage(&pix, path)_
+_name: ofLoadImage_
+_returns: bool_
+_returns_description: _
+_parameters: ofShortPixels &pix, string path_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool ofLoadImage(&pix, &buffer)
+
+<!--
+_syntax: ofLoadImage(&pix, &buffer)_
+_name: ofLoadImage_
+_returns: bool_
+_returns_description: _
+_parameters: ofShortPixels &pix, const ofBuffer &buffer_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void ofSaveImage(&pix, path, qualityLevel = OF_IMAGE_QUALITY_BEST)
 
 <!--
@@ -178,6 +286,114 @@ _name: ofSaveImage_
 _returns: void_
 _returns_description: _
 _parameters: ofPixels &pix, ofBuffer &buffer, ofImageFormat format=OF_IMAGE_FORMAT_PNG, ofImageQualityType qualityLevel=OF_IMAGE_QUALITY_BEST_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofSaveImage(&pix, path, qualityLevel = OF_IMAGE_QUALITY_BEST)
+
+<!--
+_syntax: ofSaveImage(&pix, path, qualityLevel = OF_IMAGE_QUALITY_BEST)_
+_name: ofSaveImage_
+_returns: void_
+_returns_description: _
+_parameters: ofFloatPixels &pix, string path, ofImageQualityType qualityLevel=OF_IMAGE_QUALITY_BEST_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofSaveImage(&pix, &buffer, format = OF_IMAGE_FORMAT_PNG, qualityLevel = OF_IMAGE_QUALITY_BEST)
+
+<!--
+_syntax: ofSaveImage(&pix, &buffer, format = OF_IMAGE_FORMAT_PNG, qualityLevel = OF_IMAGE_QUALITY_BEST)_
+_name: ofSaveImage_
+_returns: void_
+_returns_description: _
+_parameters: ofFloatPixels &pix, ofBuffer &buffer, ofImageFormat format=OF_IMAGE_FORMAT_PNG, ofImageQualityType qualityLevel=OF_IMAGE_QUALITY_BEST_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofSaveImage(&pix, path, qualityLevel = OF_IMAGE_QUALITY_BEST)
+
+<!--
+_syntax: ofSaveImage(&pix, path, qualityLevel = OF_IMAGE_QUALITY_BEST)_
+_name: ofSaveImage_
+_returns: void_
+_returns_description: _
+_parameters: ofShortPixels &pix, string path, ofImageQualityType qualityLevel=OF_IMAGE_QUALITY_BEST_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofSaveImage(&pix, &buffer, format = OF_IMAGE_FORMAT_PNG, qualityLevel = OF_IMAGE_QUALITY_BEST)
+
+<!--
+_syntax: ofSaveImage(&pix, &buffer, format = OF_IMAGE_FORMAT_PNG, qualityLevel = OF_IMAGE_QUALITY_BEST)_
+_name: ofSaveImage_
+_returns: void_
+_returns_description: _
+_parameters: ofShortPixels &pix, ofBuffer &buffer, ofImageFormat format=OF_IMAGE_FORMAT_PNG, ofImageQualityType qualityLevel=OF_IMAGE_QUALITY_BEST_
 _version_started: _
 _version_deprecated: _
 _summary: _

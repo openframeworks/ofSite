@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -52,6 +53,7 @@
       <li class="current"><a href="functions.html"><span>All</span></a></li>
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_type.html"><span>Typedefs</span></a></li>
       <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
       <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
       <li><a href="functions_prop.html"><span>Properties</span></a></li>
@@ -95,20 +97,32 @@
 <div class="textblock">Here is a list of all class members with links to the classes they belong to:</div>
 
 <h3><a class="anchor" id="index_o"></a>- o -</h3><ul>
+<li>of3dPrimitive()
+: <a class="el" href="classof3d_primitive.html#af2f40819bcf5c442496dab452fa91eae">of3dPrimitive</a>
+</li>
 <li>OF_DEPRECATED_MSG()
-: <a class="el" href="classof_polyline.html#a54c18b6cbc55bf56ca34352b62a2e8f2">ofPolyline</a>
-, <a class="el" href="classof_vec3f.html#a09199d302fe1c3f49b9301eebc4d2a69">ofVec3f</a>
-, <a class="el" href="classof_video_grabber.html#aff3ccae0298fe1b664f2518b5fd82205">ofVideoGrabber</a>
-, <a class="el" href="classof_video_player.html#a9f352ce3c150089203df2553c1632051">ofVideoPlayer</a>
-, <a class="el" href="classof_vec4f.html#a9c3e14018a4cb4c88c654e7897c0c12c">ofVec4f</a>
-, <a class="el" href="classof_vec2f.html#aba65f7c31e6d02c1e44205ffffebd110">ofVec2f</a>
-, <a class="el" href="classof_q_t_kit_player.html#a977c9d964bb057c807d22044737a4225">ofQTKitPlayer</a>
+: <a class="el" href="classof_path.html#a2e091ab70cad46df5b354623b03fc8ae">ofPath</a>
+</li>
+<li>ofAbstractParameter()
+: <a class="el" href="classof_abstract_parameter.html#a999650a36fee7b7af6a0e666400cb67b">ofAbstractParameter</a>
 </li>
 <li>ofAppBaseWindow()
 : <a class="el" href="classof_app_base_window.html#a434ff7f77c33c507a9ea2144f9a13a3d">ofAppBaseWindow</a>
 </li>
+<li>ofAppEGLWindow()
+: <a class="el" href="classof_app_e_g_l_window.html#a5d97acacd49814cefb4b27f0c619a90e">ofAppEGLWindow</a>
+</li>
+<li>ofAppGLFWWindow()
+: <a class="el" href="classof_app_g_l_f_w_window.html#a15823c8ce09a7434d05f7fa31be5c248">ofAppGLFWWindow</a>
+</li>
 <li>ofAppGlutWindow()
 : <a class="el" href="classof_app_glut_window.html#afda73b6b69e66540ee144a88e7bee66b">ofAppGlutWindow</a>
+</li>
+<li>ofAppNoWindow()
+: <a class="el" href="classof_app_no_window.html#a4cfc17dd670a751adedca4e51e580f34">ofAppNoWindow</a>
+</li>
+<li>ofAppPtr
+: <a class="el" href="classof_app_e_g_l_window.html#a65af76e8eb2a47b123dc301cc95b0d7d">ofAppEGLWindow</a>
 </li>
 <li>ofArduino()
 : <a class="el" href="classof_arduino.html#a0439de433dec757c82f6d689f519119f">ofArduino</a>
@@ -119,8 +133,11 @@
 <li>ofBaseSoundPlayer()
 : <a class="el" href="classof_base_sound_player.html#ad705fe243610e1b203fe38b13b264cb6">ofBaseSoundPlayer</a>
 </li>
+<li>ofBoxPrimitive()
+: <a class="el" href="classof_box_primitive.html#a4af8709c6d56a7c7f0ce84d847b1e487">ofBoxPrimitive</a>
+</li>
 <li>ofBuffer()
-: <a class="el" href="classof_buffer.html#afe44ca7ac1d93f127e9b10821740d28a">ofBuffer</a>
+: <a class="el" href="classof_buffer.html#a38fa5ffd31f6100353ac59a3a9353f70">ofBuffer</a>
 </li>
 <li>ofCairoRenderer()
 : <a class="el" href="classof_cairo_renderer.html#ad079c5691b32f860b4c2fb8875c9ebe2">ofCairoRenderer</a>
@@ -130,6 +147,18 @@
 </li>
 <li>ofColor_()
 : <a class="el" href="classof_color__.html#a08a59b4376aa75de38276ba3b069c3b1">ofColor_&lt; PixelType &gt;</a>
+</li>
+<li>ofConePrimitive()
+: <a class="el" href="classof_cone_primitive.html#a6e17d94d75e7f09e60e74d5671480761">ofConePrimitive</a>
+</li>
+<li>ofCylinderPrimitive()
+: <a class="el" href="classof_cylinder_primitive.html#a1ba54f8afec1180c03a1a74cdf2b5430">ofCylinderPrimitive</a>
+</li>
+<li>ofDelegate()
+: <a class="el" href="classof_delegate.html#a4f0b3b14165da84ad23db475e2122017">ofDelegate&lt; TObj, TArgs, useSender &gt;</a>
+, <a class="el" href="classof_delegate_3_01_t_obj_00_01_t_args_00_01false_01_4.html#a892b26902cfdc8fe44a397dfe5ff5ab6">ofDelegate&lt; TObj, TArgs, false &gt;</a>
+, <a class="el" href="classof_delegate_3_01_t_obj_00_01void_00_01true_01_4.html#a1a0be45e3521eb24dfb95cc72f97876e">ofDelegate&lt; TObj, void, true &gt;</a>
+, <a class="el" href="classof_delegate_3_01_t_obj_00_01void_00_01false_01_4.html#abe1c2a2b51f71d3a99ae72d819595e81">ofDelegate&lt; TObj, void, false &gt;</a>
 </li>
 <li>ofDirectory()
 : <a class="el" href="classof_directory.html#a6ee431852c1f91b0b3cc4b52993a919a">ofDirectory</a>
@@ -142,6 +171,9 @@
 </li>
 <li>ofEvent()
 : <a class="el" href="classof_event.html#ac6586b0bbcea9aa3c7bd0704d18d6afa">ofEvent&lt; ArgumentsType &gt;</a>
+</li>
+<li>ofExitCallback
+: <a class="el" href="classof_true_type_font.html#a82de6327bc237de1f9520cf07bec83f3">ofTrueTypeFont</a>
 </li>
 <li>ofFbo()
 : <a class="el" href="classof_fbo.html#a0ebdaf2661312825f4af08429fb30f50">ofFbo</a>
@@ -160,6 +192,9 @@
 </li>
 <li>offscreenGWorldPixels
 : <a class="el" href="classof_quick_time_grabber.html#a838b6e689ea5db15cacb9b471ae17862">ofQuickTimeGrabber</a>
+</li>
+<li>ofGLProgrammableRenderer()
+: <a class="el" href="classof_g_l_programmable_renderer.html#a26972dca19b8e31f2478f1be1fc550c4">ofGLProgrammableRenderer</a>
 </li>
 <li>ofGLRenderer()
 : <a class="el" href="classof_g_l_renderer.html#ae86a2c8a19a32135bc8755c08e216635">ofGLRenderer</a>
@@ -182,6 +217,9 @@
 <li>ofHttpResponse()
 : <a class="el" href="classof_http_response.html#acdabad0c6f691b944640da366bf4fa44">ofHttpResponse</a>
 </li>
+<li>ofIcoSpherePrimitive()
+: <a class="el" href="classof_ico_sphere_primitive.html#a44281f13fc2fc0a84682218d8c76dd0f">ofIcoSpherePrimitive</a>
+</li>
 <li>ofImage_()
 : <a class="el" href="classof_image__.html#a251b6453435475cb53d4aea13aae236f">ofImage_&lt; PixelType &gt;</a>
 </li>
@@ -189,22 +227,22 @@
 : <a class="el" href="classof_light.html#a71100c53734281ec7cdc32c41b7dd22b">ofLight</a>
 </li>
 <li>ofLog()
-: <a class="el" href="classof_log.html#abe0d0cbf4f049f3f9841bf9f31b7ceb3">ofLog</a>
+: <a class="el" href="classof_log.html#a11a926adbe4ef4bfbee393345f5df1cc">ofLog</a>
 </li>
 <li>ofLogError()
-: <a class="el" href="classof_log_error.html#afbd09ef9f8ff7928bad308e5c5723dc2">ofLogError</a>
+: <a class="el" href="classof_log_error.html#a5d595a6ff1fd74b962dc90a410d5e956">ofLogError</a>
 </li>
 <li>ofLogFatalError()
-: <a class="el" href="classof_log_fatal_error.html#a83f0acc3197e3a2148329424d7de5496">ofLogFatalError</a>
+: <a class="el" href="classof_log_fatal_error.html#a36491d3a10c051583e400b032e24ab1a">ofLogFatalError</a>
 </li>
 <li>ofLogNotice()
-: <a class="el" href="classof_log_notice.html#ad37dd2a80050670ceef61d115d76a70c">ofLogNotice</a>
+: <a class="el" href="classof_log_notice.html#a6729c589b2c946748c9b59015a1328e5">ofLogNotice</a>
 </li>
 <li>ofLogVerbose()
-: <a class="el" href="classof_log_verbose.html#a3d7015d7e3195a40aff9d2ec5bdaa1ee">ofLogVerbose</a>
+: <a class="el" href="classof_log_verbose.html#a285461612136b05e9b9abbc9ebd2a0f3">ofLogVerbose</a>
 </li>
 <li>ofLogWarning()
-: <a class="el" href="classof_log_warning.html#af4c6960bca72b79d68b3412d42b00c67">ofLogWarning</a>
+: <a class="el" href="classof_log_warning.html#a9679a4b19eb6707ae13aa644daf56b42">ofLogWarning</a>
 </li>
 <li>ofMaterial()
 : <a class="el" href="classof_material.html#a836158031f0b3e24f06833f513197b64">ofMaterial</a>
@@ -215,8 +253,14 @@
 <li>ofMatrix4x4()
 : <a class="el" href="classof_matrix4x4.html#ad75d4fc13d259fc3d23634f90c9370eb">ofMatrix4x4</a>
 </li>
+<li>ofMatrixStack()
+: <a class="el" href="classof_matrix_stack.html#aa7ee107fb6e9439a063a7436522a2da8">ofMatrixStack</a>
+</li>
 <li>ofMesh()
 : <a class="el" href="classof_mesh.html#a3ffeb1343321a13b07250eae05ce357e">ofMesh</a>
+</li>
+<li>ofMeshFace()
+: <a class="el" href="classof_mesh_face.html#afbd95446679119997fe54d5d57b51eed">ofMeshFace</a>
 </li>
 <li>ofMessage()
 : <a class="el" href="classof_message.html#a9bfb07923993d384decd98a570504f57">ofMessage</a>
@@ -224,20 +268,24 @@
 <li>ofNode()
 : <a class="el" href="classof_node.html#aa2b223ca1f8560ef193eb7bde666d758">ofNode</a>
 </li>
+<li>ofParameter()
+: <a class="el" href="classof_parameter.html#a5d90deb22f307d8d45a6dacf2cdb1786">ofParameter&lt; ParameterType &gt;</a>
+</li>
+<li>ofParameterGroup
+: <a class="el" href="classof_read_only_parameter.html#a0863f498b74ce8f9098e41ac2587523c">ofReadOnlyParameter&lt; ParameterType, Friend &gt;</a>
+, <a class="el" href="classof_parameter_group.html#aaf54f58bcda1902734b5b033432479a8">ofParameterGroup</a>
+</li>
 <li>ofPASoundStream()
 : <a class="el" href="classof_p_a_sound_stream.html#aac8f8e80d5b42dd13840c077be5cac27">ofPASoundStream</a>
 </li>
 <li>ofPath()
 : <a class="el" href="classof_path.html#abf008d9a4e5d2ba92e5046286acebe29">ofPath</a>
 </li>
-<li>ofPBO()
-: <a class="el" href="classof_p_b_o.html#a1965b415346255c7c5417e122ce05706">ofPBO</a>
-</li>
 <li>ofPixels_()
 : <a class="el" href="classof_pixels__.html#af108a001c5dab31e348d39d21cd90798">ofPixels_&lt; PixelType &gt;</a>
 </li>
-<li>ofPixelUtils
-: <a class="el" href="classof_pixels__.html#ae17bf43a25e9b7ebddae0de4b7ba66e3">ofPixels_&lt; PixelType &gt;</a>
+<li>ofPlanePrimitive()
+: <a class="el" href="classof_plane_primitive.html#a919d0844a80acc5672076d1777e66f03">ofPlanePrimitive</a>
 </li>
 <li>ofPolyline()
 : <a class="el" href="classof_polyline.html#ab8b6c33d5cb672d393aa107434d908c2">ofPolyline</a>
@@ -256,6 +304,9 @@
 </li>
 <li>ofQuickTimeGrabber()
 : <a class="el" href="classof_quick_time_grabber.html#a202fe7a11c80ee95496392f6cdd7d5e0">ofQuickTimeGrabber</a>
+</li>
+<li>ofReadOnlyParameter()
+: <a class="el" href="classof_read_only_parameter.html#a4f91e4fddee588e774339a7d7e0e97a4">ofReadOnlyParameter&lt; ParameterType, Friend &gt;</a>
 </li>
 <li>ofRectangle()
 : <a class="el" href="classof_rectangle.html#a9118ecf471c26e8e4c08a4cf8fc2b844">ofRectangle</a>
@@ -279,14 +330,14 @@
 <li>ofSoundStream()
 : <a class="el" href="classof_sound_stream.html#a47d4cd0827208597bf116bc6fd954c00">ofSoundStream</a>
 </li>
+<li>ofSpherePrimitive()
+: <a class="el" href="classof_sphere_primitive.html#a9cbb8c3ee011414f82293d134adaf898">ofSpherePrimitive</a>
+</li>
 <li>ofStyle()
 : <a class="el" href="classof_style.html#a7d1443b11025e5321d810a618491e79a">ofStyle</a>
 </li>
-<li>ofSubPath()
-: <a class="el" href="classof_sub_path.html#ab785c40cdb6e1e6d1ec7d77fd6baa180">ofSubPath</a>
-</li>
 <li>ofTessellator()
-: <a class="el" href="classof_tessellator.html#a7bfa3bf637d252bc59c61e3ade453632">ofTessellator</a>
+: <a class="el" href="classof_tessellator.html#aeb1a9b4fea623ce67f313bbf564c6900">ofTessellator</a>
 </li>
 <li>ofTexture()
 : <a class="el" href="classof_texture.html#ae091e52a2a4a86bc57bf8f17833bbfb8">ofTexture</a>
@@ -323,6 +374,9 @@
 </li>
 <li>ofVideoPlayer()
 : <a class="el" href="classof_video_player.html#a2aa827cace796093f66abdefc990dd0c">ofVideoPlayer</a>
+</li>
+<li>ofXml()
+: <a class="el" href="classof_xml.html#adb9a12f4b8a3b7d0873924c1890b8729">ofXml</a>
 </li>
 <li>oldLace
 : <a class="el" href="classof_color__.html#a36dbfcaae27ec86cc7bc07a0568756fa">ofColor_&lt; PixelType &gt;</a>
@@ -371,6 +425,10 @@
 : <a class="el" href="classof_file.html#aa4caa47cb239adb19d4a62999468d98e">ofFile</a>
 , <a class="el" href="classof_directory.html#ad28de9ed742100e299a621dfc49cfe69">ofDirectory</a>
 </li>
+<li>operator const ParameterType &amp;()
+: <a class="el" href="classof_parameter.html#acf0996284206ad8a55b6bd7039f1473d">ofParameter&lt; ParameterType &gt;</a>
+, <a class="el" href="classof_read_only_parameter.html#aa2c8cd0f307d006f14e4dc8cfbc034d8">ofReadOnlyParameter&lt; ParameterType, Friend &gt;</a>
+</li>
 <li>operator ofBuffer &amp;()
 : <a class="el" href="classof_http_response.html#a3f422a14dceafa38c9efb89c7453959b">ofHttpResponse</a>
 </li>
@@ -381,7 +439,8 @@
 : <a class="el" href="classof_buffer.html#aed1256dccbb0f9fc90e66a29a27aec75">ofBuffer</a>
 </li>
 <li>operator!=()
-: <a class="el" href="classof_quaternion.html#afab0bac3e5c4a79ce47e2652cc9250e0">ofQuaternion</a>
+: <a class="el" href="classof_shader.html#a41324f504084099a4b84fd54d08789d4">ofShader</a>
+, <a class="el" href="classof_quaternion.html#afab0bac3e5c4a79ce47e2652cc9250e0">ofQuaternion</a>
 , <a class="el" href="classof_vec2f.html#ad536effee9421766fd8881cf50aef3f4">ofVec2f</a>
 , <a class="el" href="classof_vec3f.html#a5461275a762169fd8be3ad4b82244588">ofVec3f</a>
 , <a class="el" href="classof_vec4f.html#aa6bf6b7595bee62833bd45474f376f8a">ofVec4f</a>
@@ -390,182 +449,244 @@
 , <a class="el" href="classof_file.html#aa27d1f6ac56f1560a49fbfb9e402ba80">ofFile</a>
 , <a class="el" href="classof_directory.html#aa0098f0ac9e0262b57bb6dcca9738245">ofDirectory</a>
 </li>
+<li>operator%=()
+: <a class="el" href="classof_parameter.html#a74d5f43b337ff1f6fad17f9b0fdfc295">ofParameter&lt; ParameterType &gt;</a>
+, <a class="el" href="classof_read_only_parameter.html#a0ef34ded3e5e0d4ad71cff48ad7df802">ofReadOnlyParameter&lt; ParameterType, Friend &gt;</a>
+</li>
+<li>operator&amp;=()
+: <a class="el" href="classof_parameter.html#ac10c5d6bd21e6ccd5b4a5fa655af9e7b">ofParameter&lt; ParameterType &gt;</a>
+, <a class="el" href="classof_read_only_parameter.html#addaa8c583bf816bd7ac9aa20e2a402b9">ofReadOnlyParameter&lt; ParameterType, Friend &gt;</a>
+</li>
 <li>operator()()
-: <a class="el" href="classof_matrix4x4.html#a1ec09b25f7e28cdf5a25a656c1ff3eb1">ofMatrix4x4</a>
+: <a class="el" href="classof_matrix4x4.html#a691c2a5a1d99340b7d470de5ff2a346e">ofMatrix4x4</a>
 , <a class="el" href="class_extension_comparator.html#a215f44113a42ec040c717b6697de2343">ExtensionComparator</a>
 </li>
 <li>operator*()
-: <a class="el" href="classof_color__.html#a7b9fd729d4dc2de68fc28a16764a3767">ofColor_&lt; PixelType &gt;</a>
-, <a class="el" href="classof_vec3f.html#ac15ec38fca841d6ffd5ee3c3ff621eba">ofVec3f</a>
+: <a class="el" href="classof_vec4f.html#aa21a775b91c7584a488d310881dd2be3">ofVec4f</a>
+, <a class="el" href="classof_vec2f.html#a0d3fbf067ad20cbea4c2ce82acee040b">ofVec2f</a>
+, <a class="el" href="classof_matrix3x3.html#a5a7b30409c9121080666229a17f3eba5">ofMatrix3x3</a>
 , <a class="el" href="classof_matrix4x4.html#aaf3e0f2c6c7c7db8e2b559e4a3e9a157">ofMatrix4x4</a>
-, <a class="el" href="classof_matrix3x3.html#a14ed2bf93542c3d540365443df6ae95a">ofMatrix3x3</a>
-, <a class="el" href="classof_matrix4x4.html#a6de2cc82dd097fa391e5c064894bfa24">ofMatrix4x4</a>
 , <a class="el" href="classof_quaternion.html#ac6faabefadebda67810c179e1eadac43">ofQuaternion</a>
 , <a class="el" href="classof_vec2f.html#ab3fc2ebbd6a48a5be7bb8b50ef81d2a9">ofVec2f</a>
-, <a class="el" href="classof_vec3f.html#ab2547105d95aae78d9f23081e9e77b6c">ofVec3f</a>
+, <a class="el" href="classof_vec3f.html#ac15ec38fca841d6ffd5ee3c3ff621eba">ofVec3f</a>
 , <a class="el" href="classof_vec4f.html#a45fac834ed07e3f9698177d48b18807a">ofVec4f</a>
-, <a class="el" href="classof_color__.html#ab001c05790362e0d5616dd071bc4e556">ofColor_&lt; PixelType &gt;</a>
+, <a class="el" href="classof_color__.html#a7b9fd729d4dc2de68fc28a16764a3767">ofColor_&lt; PixelType &gt;</a>
 </li>
 <li>operator*=()
-: <a class="el" href="classof_vec4f.html#a7fdf1c8068347b6f70391783a6869065">ofVec4f</a>
-, <a class="el" href="classof_matrix4x4.html#a0bb3fb7cbf6d5794a26fdce5c4b1fb69">ofMatrix4x4</a>
-, <a class="el" href="classof_matrix3x3.html#a86c70609d64198aa25d9d24bdd437610">ofMatrix3x3</a>
+: <a class="el" href="classof_matrix4x4.html#a0bb3fb7cbf6d5794a26fdce5c4b1fb69">ofMatrix4x4</a>
 , <a class="el" href="classof_quaternion.html#ada1a66e0205575f85ac25d049c4c1d33">ofQuaternion</a>
 , <a class="el" href="classof_vec2f.html#a251a8f90ae2e75298315023d411be0b5">ofVec2f</a>
 , <a class="el" href="classof_vec3f.html#a4d1799b24cb6b83a9dc586be4ffdd4e8">ofVec3f</a>
-, <a class="el" href="classof_vec4f.html#a426cb99901d3adf0530cb43b225aad50">ofVec4f</a>
+, <a class="el" href="classof_vec4f.html#a7fdf1c8068347b6f70391783a6869065">ofVec4f</a>
 , <a class="el" href="classof_color__.html#a1bffa15b76e7469bf7007730f937e7b9">ofColor_&lt; PixelType &gt;</a>
+, <a class="el" href="classof_read_only_parameter.html#a4e5c8aec63ed3173c7792d3448e9667d">ofReadOnlyParameter&lt; ParameterType, Friend &gt;</a>
+, <a class="el" href="classof_parameter.html#ad0446a2103d1a77720f9848e09ceee3e">ofParameter&lt; ParameterType &gt;</a>
+, <a class="el" href="classof_vec4f.html#a426cb99901d3adf0530cb43b225aad50">ofVec4f</a>
+, <a class="el" href="classof_matrix3x3.html#a527b5b937243b20adde4b709c2cd96b5">ofMatrix3x3</a>
 </li>
 <li>operator+()
-: <a class="el" href="classof_vec3f.html#ac9069307510893d6fb02c7fc5029502b">ofVec3f</a>
+: <a class="el" href="classof_matrix3x3.html#ae671d83fa87bea0a606b3e2076afaa38">ofMatrix3x3</a>
 , <a class="el" href="classof_quaternion.html#a8cad4ddd9eae2958f1567fccd824adb7">ofQuaternion</a>
-, <a class="el" href="classof_matrix3x3.html#ae671d83fa87bea0a606b3e2076afaa38">ofMatrix3x3</a>
-, <a class="el" href="classof_vec2f.html#a9e3db42e0ba1027a40852d22c9f55497">ofVec2f</a>
+, <a class="el" href="classof_vec2f.html#adbdc4a57ecd9a3e4ea8fa4e4059eda69">ofVec2f</a>
 , <a class="el" href="classof_vec3f.html#a1df8bd17884034c580d62c3abf74d8fc">ofVec3f</a>
 , <a class="el" href="classof_vec4f.html#a6538a9a00a2dc33d7dfef1edd32cffa6">ofVec4f</a>
 , <a class="el" href="classof_color__.html#a16bc606ecf656647fe0dfd4919f23245">ofColor_&lt; PixelType &gt;</a>
-, <a class="el" href="classof_rectangle.html#a513d2c964f138e87f452f333d0377973">ofRectangle</a>
+, <a class="el" href="classof_rectangle.html#a1a222c223e735d02508f0d5ce819ad83">ofRectangle</a>
+, <a class="el" href="classof_vec2f.html#a9e3db42e0ba1027a40852d22c9f55497">ofVec2f</a>
+</li>
+<li>operator++()
+: <a class="el" href="classof_parameter.html#a6bc946ea1e0193a651c8985a18cde837">ofParameter&lt; ParameterType &gt;</a>
+, <a class="el" href="classof_read_only_parameter.html#adf6a77292011923ff20305c2cb95bec4">ofReadOnlyParameter&lt; ParameterType, Friend &gt;</a>
 </li>
 <li>operator+=()
-: <a class="el" href="classof_vec2f.html#a1a0c9d66e8e97371aaaa0fa6cd58d008">ofVec2f</a>
-, <a class="el" href="classof_vec4f.html#aecf77fd4b4168c45dec5481d94cd36e3">ofVec4f</a>
-, <a class="el" href="classof_matrix3x3.html#af6f2911e272cf537159886be3a54a2d5">ofMatrix3x3</a>
+: <a class="el" href="classof_matrix3x3.html#af6f2911e272cf537159886be3a54a2d5">ofMatrix3x3</a>
 , <a class="el" href="classof_quaternion.html#a774ebcc5bbbc7ac40749fc78cb8e5061">ofQuaternion</a>
-, <a class="el" href="classof_vec2f.html#af4e4ac29984ad83575462172afef2819">ofVec2f</a>
+, <a class="el" href="classof_vec2f.html#a1a0c9d66e8e97371aaaa0fa6cd58d008">ofVec2f</a>
 , <a class="el" href="classof_vec3f.html#a3c7c470cf01b47aa29a25af4d5492da7">ofVec3f</a>
-, <a class="el" href="classof_vec4f.html#a7b1e79d778131298315d496cada97ad3">ofVec4f</a>
+, <a class="el" href="classof_vec4f.html#aecf77fd4b4168c45dec5481d94cd36e3">ofVec4f</a>
 , <a class="el" href="classof_color__.html#a4516998e1fb72ba30ed8a965fcfcdf26">ofColor_&lt; PixelType &gt;</a>
+, <a class="el" href="classof_parameter.html#a9407b9aa7af59c83dd7fb26fc2e02acd">ofParameter&lt; ParameterType &gt;</a>
+, <a class="el" href="classof_read_only_parameter.html#ae85a6ba514e2922caddb5627ce102f8b">ofReadOnlyParameter&lt; ParameterType, Friend &gt;</a>
+, <a class="el" href="classof_vec2f.html#af4e4ac29984ad83575462172afef2819">ofVec2f</a>
 </li>
 <li>operator-()
-: <a class="el" href="classof_vec4f.html#aaa0f0c9b4d7b689758659c9d3bb8d84f">ofVec4f</a>
-, <a class="el" href="classof_vec2f.html#a6c4fcca742de2ea2cdb4a1e8d8d10b1d">ofVec2f</a>
-, <a class="el" href="classof_color__.html#af10f9b4f4dfc0ca9565f0d36b1ff301f">ofColor_&lt; PixelType &gt;</a>
-, <a class="el" href="classof_vec3f.html#ad8f24e646458318e4e211b8c4a45e5bf">ofVec3f</a>
+: <a class="el" href="classof_vec2f.html#afce65102de5b382b62191f63289f356e">ofVec2f</a>
+, <a class="el" href="classof_color__.html#a33584398ac5dbe5b0a36abee27149786">ofColor_&lt; PixelType &gt;</a>
+, <a class="el" href="classof_matrix3x3.html#a6c5c067925a3d87bdf30e0ed85b86613">ofMatrix3x3</a>
 , <a class="el" href="classof_quaternion.html#a3e2aa42f5e01b6b29a417ff6d3be7438">ofQuaternion</a>
 , <a class="el" href="classof_vec2f.html#a38443579661966fec31a6df708b9f69d">ofVec2f</a>
+, <a class="el" href="classof_vec3f.html#ad8f24e646458318e4e211b8c4a45e5bf">ofVec3f</a>
 , <a class="el" href="classof_vec4f.html#a18403fdda86f8dcc7179a159ae0f14e1">ofVec4f</a>
-, <a class="el" href="classof_matrix3x3.html#a6c5c067925a3d87bdf30e0ed85b86613">ofMatrix3x3</a>
+, <a class="el" href="classof_color__.html#af10f9b4f4dfc0ca9565f0d36b1ff301f">ofColor_&lt; PixelType &gt;</a>
+, <a class="el" href="classof_vec3f.html#a1297c38a109bffd866d000cf96568d09">ofVec3f</a>
+</li>
+<li>operator--()
+: <a class="el" href="classof_parameter.html#a2c6b80725bdcb9a955a8d8db2a61c7da">ofParameter&lt; ParameterType &gt;</a>
+, <a class="el" href="classof_read_only_parameter.html#af06d5710ad03cf885e6694c155eb2c5c">ofReadOnlyParameter&lt; ParameterType, Friend &gt;</a>
 </li>
 <li>operator-=()
-: <a class="el" href="classof_vec2f.html#ab4106805fbfcdd225345160f6a4f0320">ofVec2f</a>
-, <a class="el" href="classof_vec3f.html#ab25ec6f86cf63e077caab134b7394f8f">ofVec3f</a>
-, <a class="el" href="classof_vec4f.html#adc73ca3763dd6fed322c064d881e8c23">ofVec4f</a>
-, <a class="el" href="classof_vec2f.html#a03c4210e1902bc43be9ce96794a939f8">ofVec2f</a>
+: <a class="el" href="classof_vec3f.html#ab25ec6f86cf63e077caab134b7394f8f">ofVec3f</a>
 , <a class="el" href="classof_matrix3x3.html#a59f42dee005190722b8e54355836ca74">ofMatrix3x3</a>
+, <a class="el" href="classof_read_only_parameter.html#a3af8e4d4c905831cc5cb94d95b1f8661">ofReadOnlyParameter&lt; ParameterType, Friend &gt;</a>
+, <a class="el" href="classof_vec2f.html#a03c4210e1902bc43be9ce96794a939f8">ofVec2f</a>
 , <a class="el" href="classof_vec4f.html#ab8efb9ca9d366e6aad93f1bef4cbcb6a">ofVec4f</a>
+, <a class="el" href="classof_color__.html#aa6b761178c49b2e3f0ff0552cff66f0c">ofColor_&lt; PixelType &gt;</a>
+, <a class="el" href="classof_parameter.html#a69e847e2322409460f12b8eb27c23c6e">ofParameter&lt; ParameterType &gt;</a>
 , <a class="el" href="classof_quaternion.html#adfcbaf0970f5371ff2e34ce647a79675">ofQuaternion</a>
+, <a class="el" href="classof_vec3f.html#a266fb7dbb05abe2060764d3ef33530b0">ofVec3f</a>
 , <a class="el" href="classof_color__.html#aebfb1006ff964bd0a34506cac8840088">ofColor_&lt; PixelType &gt;</a>
+, <a class="el" href="classof_vec2f.html#ab4106805fbfcdd225345160f6a4f0320">ofVec2f</a>
+</li>
+<li>operator-&gt;()
+: <a class="el" href="classof_parameter.html#a0291073254d5fb7f6ed6af0416ff25aa">ofParameter&lt; ParameterType &gt;</a>
+, <a class="el" href="classof_read_only_parameter.html#a1bcfe6dd54e76f4666216eb80fc2941c">ofReadOnlyParameter&lt; ParameterType, Friend &gt;</a>
 </li>
 <li>operator/()
-: <a class="el" href="classof_vec2f.html#a41372483e1bbc7ee4c709e08966f8b79">ofVec2f</a>
-, <a class="el" href="classof_quaternion.html#aa87455e07579f3cd11e996e3f00e97fa">ofQuaternion</a>
-, <a class="el" href="classof_vec2f.html#a5a897beb0a2b3762f380af317c32a11c">ofVec2f</a>
-, <a class="el" href="classof_vec3f.html#a23a66aba58cf1841f4ad3f003389278c">ofVec3f</a>
-, <a class="el" href="classof_color__.html#aea43d230654067bf71e09d457c6566bd">ofColor_&lt; PixelType &gt;</a>
+: <a class="el" href="classof_quaternion.html#aa87455e07579f3cd11e996e3f00e97fa">ofQuaternion</a>
+, <a class="el" href="classof_color__.html#aff3d7a52171a095af355aa5cfbf3cf2d">ofColor_&lt; PixelType &gt;</a>
 , <a class="el" href="classof_matrix3x3.html#adcf2270544195d4f525ceb741b9319d5">ofMatrix3x3</a>
+, <a class="el" href="classof_vec2f.html#a41372483e1bbc7ee4c709e08966f8b79">ofVec2f</a>
 , <a class="el" href="classof_vec4f.html#a1a04d592b63fbcf6bca402be0e033aa9">ofVec4f</a>
+, <a class="el" href="classof_color__.html#aea43d230654067bf71e09d457c6566bd">ofColor_&lt; PixelType &gt;</a>
 , <a class="el" href="classof_vec3f.html#a5971860a45d80d69086c5c74b7d8f941">ofVec3f</a>
 , <a class="el" href="classof_vec4f.html#af6442ec4e3e525fdc48a5d849779913d">ofVec4f</a>
-, <a class="el" href="classof_quaternion.html#a7b890891550e8a5eda04be85f19d5703">ofQuaternion</a>
-, <a class="el" href="classof_color__.html#aff3d7a52171a095af355aa5cfbf3cf2d">ofColor_&lt; PixelType &gt;</a>
+, <a class="el" href="classof_vec2f.html#a5a897beb0a2b3762f380af317c32a11c">ofVec2f</a>
+, <a class="el" href="classof_vec3f.html#a23a66aba58cf1841f4ad3f003389278c">ofVec3f</a>
 </li>
 <li>operator/=()
-: <a class="el" href="classof_quaternion.html#a484f9e9ce91f24b9ad43993756c04f24">ofQuaternion</a>
-, <a class="el" href="classof_vec3f.html#a751e8359ef525115799ea22fc9dfd5ff">ofVec3f</a>
+: <a class="el" href="classof_matrix3x3.html#a9062fd8ddd5b8136cc77d8c4a590f99b">ofMatrix3x3</a>
+, <a class="el" href="classof_vec2f.html#aa5a5439a484a4832b0b1182d04aacba1">ofVec2f</a>
+, <a class="el" href="classof_vec3f.html#a2811fd7f2925f7851b1aef87e9e22134">ofVec3f</a>
+, <a class="el" href="classof_vec4f.html#a7263ac24cbba962a1758a895d8b6c73a">ofVec4f</a>
+, <a class="el" href="classof_read_only_parameter.html#ab58f92d34c71b7478f267d3efb327e3d">ofReadOnlyParameter&lt; ParameterType, Friend &gt;</a>
 , <a class="el" href="classof_vec4f.html#a67a97e91f6eb607fb5c73584fb65e3cd">ofVec4f</a>
+, <a class="el" href="classof_matrix3x3.html#ac4ad50cae99696ab3514fa2ab44c94be">ofMatrix3x3</a>
 , <a class="el" href="classof_color__.html#ae2f677d1f6966e9dcb147802f6570069">ofColor_&lt; PixelType &gt;</a>
 , <a class="el" href="classof_quaternion.html#afbe116fb57777b2f1c13ac5d4b572baa">ofQuaternion</a>
-, <a class="el" href="classof_vec4f.html#a7263ac24cbba962a1758a895d8b6c73a">ofVec4f</a>
+, <a class="el" href="classof_color__.html#a49ee40436700f2ddccdd4d082a758015">ofColor_&lt; PixelType &gt;</a>
 , <a class="el" href="classof_vec2f.html#aab3e21f32c19043b9f39acd9d70100a2">ofVec2f</a>
-, <a class="el" href="classof_vec3f.html#a2811fd7f2925f7851b1aef87e9e22134">ofVec3f</a>
-, <a class="el" href="classof_vec2f.html#aa5a5439a484a4832b0b1182d04aacba1">ofVec2f</a>
-, <a class="el" href="classof_matrix3x3.html#a9062fd8ddd5b8136cc77d8c4a590f99b">ofMatrix3x3</a>
+, <a class="el" href="classof_vec3f.html#a751e8359ef525115799ea22fc9dfd5ff">ofVec3f</a>
+, <a class="el" href="classof_parameter.html#a11bb508a21633701028436eb55bed1ee">ofParameter&lt; ParameterType &gt;</a>
+, <a class="el" href="classof_quaternion.html#a484f9e9ce91f24b9ad43993756c04f24">ofQuaternion</a>
 </li>
 <li>operator&lt;()
 : <a class="el" href="classof_file.html#a7286772fb88b2a0510d92d905c93f085">ofFile</a>
 , <a class="el" href="classof_directory.html#a1c583924ea0befd2ba5aa2b243f2c0d7">ofDirectory</a>
 </li>
 <li>operator&lt;&lt;
-: <a class="el" href="classof_matrix4x4.html#a7b8e55ff0129b7914cef141df5384b22">ofMatrix4x4</a>
-, <a class="el" href="classof_matrix3x3.html#a3a751851e70f7d08933a8bb74ae79b7d">ofMatrix3x3</a>
-, <a class="el" href="classof_vec3f.html#a221bb717e5282907a0d835ff1134a0b6">ofVec3f</a>
-, <a class="el" href="classof_log.html#a2f19640fb8269ff470f9941eca0d39b2">ofLog</a>
+: <a class="el" href="classof_parameter_group.html#af4c2c7cd9dff39ccf3fec82693012cba">ofParameterGroup</a>
 , <a class="el" href="classof_vec2f.html#a8d8d86b805b7897418a316313db81aba">ofVec2f</a>
-, <a class="el" href="classof_log.html#a10502cf2a6a2ad636e5f1c4058bd037f">ofLog</a>
-, <a class="el" href="classof_buffer.html#ac2361b6e648b909436795e2d76f39bef">ofBuffer</a>
+, <a class="el" href="classof_abstract_parameter.html#a207f0b2cbad99a6e213f7c7c6667f65f">ofAbstractParameter</a>
+, <a class="el" href="classof_matrix4x4.html#a7b8e55ff0129b7914cef141df5384b22">ofMatrix4x4</a>
 , <a class="el" href="classof_vec4f.html#a8289bccf1213ee971abf219d35a3cd5b">ofVec4f</a>
+, <a class="el" href="classof_buffer.html#ac2361b6e648b909436795e2d76f39bef">ofBuffer</a>
+, <a class="el" href="classof_log.html#a2f19640fb8269ff470f9941eca0d39b2">ofLog</a>
 , <a class="el" href="classof_color__.html#a555fbf0f2cce3a33dae1e873f11d4883">ofColor_&lt; PixelType &gt;</a>
 , <a class="el" href="classof_quaternion.html#a4f5d77351d6aeec11a18edc746542032">ofQuaternion</a>
+, <a class="el" href="classof_vec3f.html#a221bb717e5282907a0d835ff1134a0b6">ofVec3f</a>
+, <a class="el" href="classof_matrix3x3.html#a3a751851e70f7d08933a8bb74ae79b7d">ofMatrix3x3</a>
+</li>
+<li>operator&lt;&lt;=()
+: <a class="el" href="classof_read_only_parameter.html#a468459456795ad4ef42404b7cc986d81">ofReadOnlyParameter&lt; ParameterType, Friend &gt;</a>
+, <a class="el" href="classof_parameter.html#a8db6e6e689529674fbfaba02e0d60a8c">ofParameter&lt; ParameterType &gt;</a>
 </li>
 <li>operator&lt;=()
 : <a class="el" href="classof_directory.html#a5cdbad28e37861262d2329fe8b93d8dd">ofDirectory</a>
 , <a class="el" href="classof_file.html#a873775a8d455be8f7f91b4e73c89e69e">ofFile</a>
 </li>
 <li>operator=()
-: <a class="el" href="classof_fbo.html#ae08d2e7511193b4208c2490dbed3070b">ofFbo</a>
-, <a class="el" href="classof_color__.html#a8ec698a0fce1c4cacf0096e1dd8ef453">ofColor_&lt; PixelType &gt;</a>
-, <a class="el" href="classof_buffer.html#af4cd13d6542d6e4dd7275dcfc7a3d297">ofBuffer</a>
+: <a class="el" href="classof_tessellator.html#add15d7ab4c86b31ebbb078068156e377">ofTessellator</a>
+, <a class="el" href="classof_shader.html#abe78f7292a99e590663523280301b669">ofShader</a>
+, <a class="el" href="classof_pixels__.html#af2d2767e42fdae80b312fde713ded3ee">ofPixels_&lt; PixelType &gt;</a>
 , <a class="el" href="classof_event.html#a36c6c7348e9c536123d0a5b455c5b1b9">ofEvent&lt; ArgumentsType &gt;</a>
-, <a class="el" href="classof_vbo.html#a7d2e7620537a1fd2e0359e25be1d86c9">ofVbo</a>
+, <a class="el" href="classof_vbo_mesh.html#ad8a9255bf34b592407ec60a4a8b7df05">ofVboMesh</a>
+, <a class="el" href="classof_pixels__.html#a35977692439e2876f79fb0caded22ec7">ofPixels_&lt; PixelType &gt;</a>
+, <a class="el" href="classof_texture.html#a152b6e78436b0525f2d2688fd6304338">ofTexture</a>
+, <a class="el" href="classof_color__.html#a8ec698a0fce1c4cacf0096e1dd8ef453">ofColor_&lt; PixelType &gt;</a>
 , <a class="el" href="classof_quaternion.html#a592466c425cd8660757421a718c9f298">ofQuaternion</a>
-, <a class="el" href="classof_color__.html#a1d3d6748f1ece266e60ed702c78057fb">ofColor_&lt; PixelType &gt;</a>
+, <a class="el" href="classof_vbo.html#a7d2e7620537a1fd2e0359e25be1d86c9">ofVbo</a>
+, <a class="el" href="classof_image__.html#a86c24e92b9a3ccd113f7fa37f50b5b4d">ofImage_&lt; PixelType &gt;</a>
 , <a class="el" href="classof_matrix4x4.html#a2536ae222f0f1ae9dd7efb3ae909190a">ofMatrix4x4</a>
+, <a class="el" href="classof_image__.html#a92aa7c4dc1f969f4e0a9154515210de4">ofImage_&lt; PixelType &gt;</a>
+, <a class="el" href="classof_parameter.html#a77454bcf61e6ff115654ad9f356d5223">ofParameter&lt; ParameterType &gt;</a>
+, <a class="el" href="classof_fbo.html#ae08d2e7511193b4208c2490dbed3070b">ofFbo</a>
+, <a class="el" href="classof_parameter.html#a2820ef5c8e5c675dc9ed7b174cce566a">ofParameter&lt; ParameterType &gt;</a>
+, <a class="el" href="classof_delegate.html#a08e4376e9a0033d89924120372024956">ofDelegate&lt; TObj, TArgs, useSender &gt;</a>
+, <a class="el" href="classof_read_only_parameter.html#a4109095773348b852fe3dd6071366cdd">ofReadOnlyParameter&lt; ParameterType, Friend &gt;</a>
+, <a class="el" href="classof_light.html#a295bcb04f705beb81a7a098920e8f83b">ofLight</a>
+, <a class="el" href="classof_color__.html#a1d3d6748f1ece266e60ed702c78057fb">ofColor_&lt; PixelType &gt;</a>
+, <a class="el" href="classof_buffer.html#af4cd13d6542d6e4dd7275dcfc7a3d297">ofBuffer</a>
+, <a class="el" href="classof_image__.html#a4af95d2dcba2a9fb04d68ecf45af2f3f">ofImage_&lt; PixelType &gt;</a>
+, <a class="el" href="classof_color__.html#a50d9d9c7a4830d1119b8ef3eccb401a3">ofColor_&lt; PixelType &gt;</a>
+, <a class="el" href="classof_delegate_3_01_t_obj_00_01void_00_01false_01_4.html#ac485b8a19c135e5611d7380084eddd99">ofDelegate&lt; TObj, void, false &gt;</a>
+, <a class="el" href="classof_read_only_parameter.html#a3a288d9a5ddf8be8459f0e0adb327b4c">ofReadOnlyParameter&lt; ParameterType, Friend &gt;</a>
+, <a class="el" href="classof_xml.html#a608d219ae347578f0413afb49cbcec65">ofXml</a>
 , <a class="el" href="classof_rectangle.html#adc469e3b0470821b9827d0d4d33d8455">ofRectangle</a>
 , <a class="el" href="classof_file.html#af4173dc17b2f6e1cb732b853c36c2db5">ofFile</a>
-, <a class="el" href="classof_pixels__.html#af2d2767e42fdae80b312fde713ded3ee">ofPixels_&lt; PixelType &gt;</a>
-, <a class="el" href="classof_image__.html#a92aa7c4dc1f969f4e0a9154515210de4">ofImage_&lt; PixelType &gt;</a>
-, <a class="el" href="classof_color__.html#a50d9d9c7a4830d1119b8ef3eccb401a3">ofColor_&lt; PixelType &gt;</a>
-, <a class="el" href="classof_texture.html#a152b6e78436b0525f2d2688fd6304338">ofTexture</a>
-, <a class="el" href="classof_pixels__.html#a35977692439e2876f79fb0caded22ec7">ofPixels_&lt; PixelType &gt;</a>
-, <a class="el" href="classof_tessellator.html#add15d7ab4c86b31ebbb078068156e377">ofTessellator</a>
-, <a class="el" href="classof_light.html#a295bcb04f705beb81a7a098920e8f83b">ofLight</a>
-, <a class="el" href="classof_image__.html#a4af95d2dcba2a9fb04d68ecf45af2f3f">ofImage_&lt; PixelType &gt;</a>
+, <a class="el" href="classof_delegate_3_01_t_obj_00_01void_00_01true_01_4.html#adec1ca0bfbfe699d1c9605bd7e97a3e3">ofDelegate&lt; TObj, void, true &gt;</a>
+, <a class="el" href="classof_delegate_3_01_t_obj_00_01_t_args_00_01false_01_4.html#a3d9383df3bbd9f2dc4ce2b763699f156">ofDelegate&lt; TObj, TArgs, false &gt;</a>
+, <a class="el" href="classof3d_primitive.html#a190fc8fe46186cdb4bca8a4206046bfd">of3dPrimitive</a>
 </li>
 <li>operator==()
-: <a class="el" href="classof_color__.html#afce42ff7645e7cd486c0e730c0c39b12">ofColor_&lt; PixelType &gt;</a>
-, <a class="el" href="classof_vec2f.html#a6f9a39674f9f0ec5e5a30090eb4a55bd">ofVec2f</a>
+: <a class="el" href="classof_rectangle.html#acf9e6372fd763b26aeeba3b47b49614a">ofRectangle</a>
 , <a class="el" href="classof_directory.html#af3babd21f107ee5dd194bc3b3ce2105d">ofDirectory</a>
-, <a class="el" href="classof_vec3f.html#a6ddf9d22b2c04096509711bc551e7c93">ofVec3f</a>
-, <a class="el" href="classof_vec4f.html#aff4072323903139109b35c1e14d4cc39">ofVec4f</a>
-, <a class="el" href="classof_rectangle.html#acf9e6372fd763b26aeeba3b47b49614a">ofRectangle</a>
 , <a class="el" href="classof_file.html#a4e92e06c38febba5bec7283e9bcf1216">ofFile</a>
+, <a class="el" href="classof_color__.html#afce42ff7645e7cd486c0e730c0c39b12">ofColor_&lt; PixelType &gt;</a>
+, <a class="el" href="classof_vec2f.html#a6f9a39674f9f0ec5e5a30090eb4a55bd">ofVec2f</a>
 , <a class="el" href="classof_quaternion.html#ad298750d0652d3c99217232ca778bc08">ofQuaternion</a>
+, <a class="el" href="classof_vec4f.html#aff4072323903139109b35c1e14d4cc39">ofVec4f</a>
+, <a class="el" href="classof_vec3f.html#a6ddf9d22b2c04096509711bc551e7c93">ofVec3f</a>
+, <a class="el" href="classof_shader.html#a5174910279fb251688f635d060abaa6a">ofShader</a>
 </li>
 <li>operator&gt;()
 : <a class="el" href="classof_directory.html#aad86ef4ad00eea46055d215b3d878e5b">ofDirectory</a>
 , <a class="el" href="classof_file.html#a8f4bca14bbf82a2776845bc8e50a1cb9">ofFile</a>
 </li>
 <li>operator&gt;=()
-: <a class="el" href="classof_file.html#a85a68df822547812728cf9c5e7971b86">ofFile</a>
-, <a class="el" href="classof_directory.html#a18eeccccc9112d2c2bcf884efd4cb0c6">ofDirectory</a>
+: <a class="el" href="classof_directory.html#a18eeccccc9112d2c2bcf884efd4cb0c6">ofDirectory</a>
+, <a class="el" href="classof_file.html#a85a68df822547812728cf9c5e7971b86">ofFile</a>
 </li>
 <li>operator&gt;&gt;
-: <a class="el" href="classof_vec2f.html#a709840a8a109a25af48973f8514cff3d">ofVec2f</a>
-, <a class="el" href="classof_buffer.html#a5768a499dc84fb7d542c1885dccd6b1e">ofBuffer</a>
-, <a class="el" href="classof_quaternion.html#af815e32922d3c6b46bf084cc8d57f968">ofQuaternion</a>
-, <a class="el" href="classof_color__.html#a33614cc8b66824683b616558fd43e835">ofColor_&lt; PixelType &gt;</a>
-, <a class="el" href="classof_matrix4x4.html#a9099b5cd49312f96b803f1f9034695ac">ofMatrix4x4</a>
+: <a class="el" href="classof_abstract_parameter.html#a80b71a9031de018c02c0e4a34e53422a">ofAbstractParameter</a>
+, <a class="el" href="classof_vec3f.html#a3a31b5d957af1dda19ce7451a6af9003">ofVec3f</a>
 , <a class="el" href="classof_vec4f.html#a91a9875bc771f0efb76517899a35a554">ofVec4f</a>
-, <a class="el" href="classof_vec3f.html#ac43c049eb124d26915366a423a358b73">ofVec3f</a>
+, <a class="el" href="classof_color__.html#a33614cc8b66824683b616558fd43e835">ofColor_&lt; PixelType &gt;</a>
+, <a class="el" href="classof_vec2f.html#a709840a8a109a25af48973f8514cff3d">ofVec2f</a>
 , <a class="el" href="classof_matrix3x3.html#abf46313577c6b9cd10201245f1e46f87">ofMatrix3x3</a>
+, <a class="el" href="classof_quaternion.html#af815e32922d3c6b46bf084cc8d57f968">ofQuaternion</a>
+, <a class="el" href="classof_matrix4x4.html#a9099b5cd49312f96b803f1f9034695ac">ofMatrix4x4</a>
+, <a class="el" href="classof_buffer.html#a5768a499dc84fb7d542c1885dccd6b1e">ofBuffer</a>
+</li>
+<li>operator&gt;&gt;=()
+: <a class="el" href="classof_read_only_parameter.html#a7316cfc822bedfc58e4dee3ddec823c6">ofReadOnlyParameter&lt; ParameterType, Friend &gt;</a>
+, <a class="el" href="classof_parameter.html#a33e4e96c1eccc3e6f5ae1d728d12a496">ofParameter&lt; ParameterType &gt;</a>
 </li>
 <li>operator[]()
-: <a class="el" href="classof_color__.html#ac7d336bf3fac6e2e04f77751d9d7e0fc">ofColor_&lt; PixelType &gt;</a>
-, <a class="el" href="classof_vec3f.html#a07a62ff70335de0e81707cb8f356c646">ofVec3f</a>
-, <a class="el" href="classof_vec4f.html#a52ca52b9f50699269ebb368354e02c7a">ofVec4f</a>
-, <a class="el" href="classof_pixels__.html#ac73219eca415b4db3a0258f54ffebbcc">ofPixels_&lt; PixelType &gt;</a>
-, <a class="el" href="classof_polyline.html#ae9f50c6662aa5e344092cbc574ba751d">ofPolyline</a>
-, <a class="el" href="classof_quaternion.html#a1a4c11305826bdbae49076b3f2ad231d">ofQuaternion</a>
-, <a class="el" href="classof_vec3f.html#a026f7d3b34f8ddbff5d828ad5a2d9cd4">ofVec3f</a>
-, <a class="el" href="classof_vec2f.html#a0dfa358c9bc465ddc5dcf6f92e351bd7">ofVec2f</a>
+: <a class="el" href="classof_vec4f.html#a1f3321d0e6712fc18d879a74f00313f6">ofVec4f</a>
 , <a class="el" href="classof_polyline.html#a2ad4d76dc14ddaa777e5326466bc43ef">ofPolyline</a>
-, <a class="el" href="classof_vec4f.html#a1f3321d0e6712fc18d879a74f00313f6">ofVec4f</a>
+, <a class="el" href="classof_parameter_group.html#a4c9275941bac73c221f123fa9cba4cf9">ofParameterGroup</a>
+, <a class="el" href="classof_color__.html#ac7d336bf3fac6e2e04f77751d9d7e0fc">ofColor_&lt; PixelType &gt;</a>
 , <a class="el" href="classof_vec2f.html#adb621a099381a546c8821a11e13e1bd6">ofVec2f</a>
-, <a class="el" href="classof_directory.html#a7476c09b775096e862f0eb9013bf939e">ofDirectory</a>
 , <a class="el" href="classof_quaternion.html#ac03b642d172c552ccf6ffe71e5bad052">ofQuaternion</a>
+, <a class="el" href="classof_vec3f.html#a026f7d3b34f8ddbff5d828ad5a2d9cd4">ofVec3f</a>
+, <a class="el" href="classof_polyline.html#ae9f50c6662aa5e344092cbc574ba751d">ofPolyline</a>
+, <a class="el" href="classof_vec4f.html#a52ca52b9f50699269ebb368354e02c7a">ofVec4f</a>
+, <a class="el" href="classof_vec3f.html#a07a62ff70335de0e81707cb8f356c646">ofVec3f</a>
+, <a class="el" href="classof_vec2f.html#a0dfa358c9bc465ddc5dcf6f92e351bd7">ofVec2f</a>
+, <a class="el" href="classof_quaternion.html#a1a4c11305826bdbae49076b3f2ad231d">ofQuaternion</a>
+, <a class="el" href="classof_directory.html#a7476c09b775096e862f0eb9013bf939e">ofDirectory</a>
+, <a class="el" href="classof_matrix3x3.html#ae5bcdcb54eca1001086d3e763e3cd01d">ofMatrix3x3</a>
+, <a class="el" href="classof_pixels__.html#ac73219eca415b4db3a0258f54ffebbcc">ofPixels_&lt; PixelType &gt;</a>
 , <a class="el" href="classof_color__.html#a4aa6cd7ee596bfcaa1504487349ec775">ofColor_&lt; PixelType &gt;</a>
 , <a class="el" href="classof_pixels__.html#ad7b5fa45ae78789c5b2fed1a9d82dc67">ofPixels_&lt; PixelType &gt;</a>
-, <a class="el" href="classof_matrix3x3.html#ae5bcdcb54eca1001086d3e763e3cd01d">ofMatrix3x3</a>
+</li>
+<li>operator^=()
+: <a class="el" href="classof_parameter.html#a927042a668f5c847f6c6e5306c2f6473">ofParameter&lt; ParameterType &gt;</a>
+, <a class="el" href="classof_read_only_parameter.html#ad62d6a45b0a44222a5f432a56314497b">ofReadOnlyParameter&lt; ParameterType, Friend &gt;</a>
+</li>
+<li>operator|=()
+: <a class="el" href="classof_parameter.html#aae55b14a231d29c5970040b90372ad5b">ofParameter&lt; ParameterType &gt;</a>
+, <a class="el" href="classof_read_only_parameter.html#a1424f7c44a6178a2453b1ce2b8237c8d">ofReadOnlyParameter&lt; ParameterType, Friend &gt;</a>
 </li>
 <li>orange
 : <a class="el" href="classof_color__.html#accefb140d17bec3aa2411e3174a1e6fc">ofColor_&lt; PixelType &gt;</a>
@@ -578,6 +699,9 @@
 </li>
 <li>orchid
 : <a class="el" href="classof_color__.html#ab11e6f47e886e022830407b0458c6631">ofColor_&lt; PixelType &gt;</a>
+</li>
+<li>orientation
+: <a class="el" href="classof_app_e_g_l_window.html#a78ad61b0ac123fde29888cb5fc8c08d7">ofAppEGLWindow</a>
 </li>
 <li>outputVideoFrame:withSampleBuffer:fromConnection:
 : <a class="el" href="interface_q_t_kit_video_grabber.html#ac12a230c3cc43068d9a37ea4db588160">QTKitVideoGrabber</a>
