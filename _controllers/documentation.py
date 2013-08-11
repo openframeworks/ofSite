@@ -11,8 +11,6 @@ import argparse
 import shutil
 import glob
 
-import sets
-
 sys.path.append(os.path.join(os.path.realpath(__file__)[0:-(len(os.path.join('_controllers','documentation.py'))+1)],'_tools'))
 #sys.path.append( os.path.realpath('')+"/../_tools" )
 import markdown_file
