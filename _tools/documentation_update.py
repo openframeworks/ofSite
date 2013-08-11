@@ -10,8 +10,8 @@ from markdown_file import getclass,setclass,getfunctionsfile,setfunctionsfile
 from documentation_members import DocsMethod, DocsVar
 from documentation_function import DocsFunctionsFile, DocsFunction
 
-of_src = '/home/arturo/Desktop/openFrameworks/libs/openFrameworks/'
-of_documentation = of_src + 'build/xml/'
+of_root = "/home/arturo/Desktop/openFrameworks/"
+of_documentation = of_root + 'libs/openFrameworksCompiled/project/doxygen/build/xml/'
 documentation_root = '/home/arturo/Documents/ofSite/documentation/'
 #index = open(documentation_root + "index.html.mako",'w')
 
