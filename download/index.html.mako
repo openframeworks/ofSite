@@ -73,7 +73,7 @@
     <div id="download-latest-platform">
 	    <h2>linux&nbsp;armv6</h2>
 	    <h3>download<br/>openFrameworks for</h3>
-	    <p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_linuxarmv6_release.tar.gz">linux armv6</a></p><br/>
+	    <p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_linuxarmv6l_release.tar.gz">linux armv6</a></p><br/>
 	    <h3>setup guide</h3>
 	    <p><a href="../setup/raspberrypi">raspberry pi</a></p>
     </div>
@@ -81,7 +81,7 @@
     <div id="download-latest-platform-last">
 	    <h2>linux&nbsp;armv7</h2>
 	    <h3>download<br/>openFrameworks for</h3>
-	    <p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_linuxarmv7_release.tar.gz">linux armv7</a></p><br/>
+	    <p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_linuxarmv7l_release.tar.gz">linux armv7</a></p><br/>
 	    <h3>setup guide</h3>
 	    <p><a href="../setup/pandaboard">pandaboard</a></p>
 	    <p><a href="../setup/armv7">generic armv7</a></p>
