@@ -30,11 +30,11 @@
 	    <h2>windows</h2>
 	    <h3>download<br/>openFrameworks for</h3>
 	    <p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_win_cb_release.zip">code::blocks</a></p>
-	    <p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_vs2010_release.zip">visual studio 2010</a></p><br/>
+	    <p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_vs_release.zip">visual studio</a></p><br/>
 	    <h3>IDE setup guides</h3>
 	    <p><a href="../setup/codeblocks">code::blocks</a></p>
 	    <!--<p><a href="../setup/vs-2008">visual studio 2008</a></p>-->
-	    <p><a href="../setup/vs-2010">visual studio 2010</a></p>
+	    <p><a href="../setup/vs">visual studio</a></p>
     </div>
 </div>
 
