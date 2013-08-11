@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -52,6 +53,7 @@
       <li><a href="functions.html"><span>All</span></a></li>
       <li class="current"><a href="functions_func.html"><span>Functions</span></a></li>
       <li><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_type.html"><span>Typedefs</span></a></li>
       <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
       <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
       <li><a href="functions_prop.html"><span>Properties</span></a></li>
@@ -105,9 +107,9 @@
 : <a class="el" href="classof_quick_time_grabber.html#a4ae9c4a971a64db1134aaacc1a5e6aa9">ofQuickTimeGrabber</a>
 </li>
 <li>quadBezierTo()
-: <a class="el" href="classof_polyline.html#a0a85cd8239ccdc4ccc7cb9c040aeda5e">ofPolyline</a>
+: <a class="el" href="classof_polyline.html#a532915efc6f31d1f3968a96026ae20ff">ofPolyline</a>
 , <a class="el" href="classof_path.html#a37de06d66626c505f68e8c0555c28e01">ofPath</a>
-, <a class="el" href="classof_polyline.html#ab47724b26a9dfbd6081b52f6574896d6">ofPolyline</a>
+, <a class="el" href="classof_polyline.html#a8cbfb4e9dc77210fc505b0b5424a7b68">ofPolyline</a>
 </li>
 </ul>
 </div><!-- contents -->

@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -88,7 +89,10 @@
 : <a class="el" href="of_image_8cpp.html#abeedbca6c5bb4b54eb9d8d9623fc40dd">ofImage.cpp</a>
 </li>
 <li>getFreeImageType()
-: <a class="el" href="of_image_8cpp.html#a7d9958f5b159a82afb5344fd79753a14">ofImage.cpp</a>
+: <a class="el" href="of_image_8cpp.html#a492a14ea33582146260dd9f7f2504b0d">ofImage.cpp</a>
+</li>
+<li>getWorkingDir()
+: <a class="el" href="of_utils_8cpp.html#a3826272bbfd673e69c6d3b600363c548">ofUtils.cpp</a>
 </li>
 </ul>
 </div><!-- contents -->

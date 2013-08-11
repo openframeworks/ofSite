@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -52,6 +53,7 @@
       <li class="current"><a href="functions.html"><span>All</span></a></li>
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_type.html"><span>Typedefs</span></a></li>
       <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
       <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
       <li><a href="functions_prop.html"><span>Properties</span></a></li>
@@ -107,10 +109,14 @@
 <li>qtSelectDevice()
 : <a class="el" href="classof_quick_time_grabber.html#a4ae9c4a971a64db1134aaacc1a5e6aa9">ofQuickTimeGrabber</a>
 </li>
+<li>quad
+: <a class="el" href="classof_texture.html#a1fa7514f50f2fca63c94554fa37d3201">ofTexture</a>
+</li>
 <li>quadBezierTo()
-: <a class="el" href="classof_path.html#a37de06d66626c505f68e8c0555c28e01">ofPath</a>
-, <a class="el" href="structof_sub_path_1_1_command.html#adb590e1f3aca1797cf1d23fa33e50557a5ad5c0aa4118d577211e78b694033135">ofSubPath::Command</a>
-, <a class="el" href="classof_polyline.html#ae41accef12a150b3697adf712face9d2">ofPolyline</a>
+: <a class="el" href="classof_path.html#acf304a15986d74ed02ee8e1611c79e50">ofPath</a>
+, <a class="el" href="structof_path_1_1_command.html#a3cf8602f5114fa60143fd1992e239f6aa3f270ad74953d0df31e66798fe3e0a30">ofPath::Command</a>
+, <a class="el" href="classof_polyline.html#a532915efc6f31d1f3968a96026ae20ff">ofPolyline</a>
+, <a class="el" href="classof_path.html#a37de06d66626c505f68e8c0555c28e01">ofPath</a>
 </li>
 </ul>
 </div><!-- contents -->

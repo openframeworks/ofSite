@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -72,7 +73,7 @@
   <tr><td class="entry"><a class="el" href="classof_direct_show_grabber.html#ab1764d4234140856765aa119ee641626">height</a></td><td class="entry"><a class="el" href="classof_direct_show_grabber.html">ofDirectShowGrabber</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classof_direct_show_grabber.html#a185b01c9f15aa39113c4c9cdc093f05f">initGrabber</a>(int w, int h)</td><td class="entry"><a class="el" href="classof_direct_show_grabber.html">ofDirectShowGrabber</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="classof_direct_show_grabber.html#a81859b980eeb27cd285c435f9c500188">isFrameNew</a>()</td><td class="entry"><a class="el" href="classof_direct_show_grabber.html">ofDirectShowGrabber</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classof_direct_show_grabber.html#a72c855fb2e216429011e1e872eb59ac9">listDevices</a>()</td><td class="entry"><a class="el" href="classof_direct_show_grabber.html">ofDirectShowGrabber</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classof_direct_show_grabber.html#ad3698093f39452d9d0fab8932336d7ca">listDevices</a>()</td><td class="entry"><a class="el" href="classof_direct_show_grabber.html">ofDirectShowGrabber</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="classof_direct_show_grabber.html#ad72b0b119b33d4c8272738392b906814">ofDirectShowGrabber</a>()</td><td class="entry"><a class="el" href="classof_direct_show_grabber.html">ofDirectShowGrabber</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classof_direct_show_grabber.html#a1e60bb08d30b40b2077f1bb2621145fb">pixels</a></td><td class="entry"><a class="el" href="classof_direct_show_grabber.html">ofDirectShowGrabber</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
   <tr><td class="entry"><a class="el" href="classof_direct_show_grabber.html#ae59bdb914b1419a1f1c51e628b18ce85">setDesiredFrameRate</a>(int framerate)</td><td class="entry"><a class="el" href="classof_direct_show_grabber.html">ofDirectShowGrabber</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>

@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -47,7 +48,7 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_296d53ceaeaa7e099814a6def439fe8a.html">math</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_84d5b34cee6369a03c8d1f3b970ed216.html">openFrameworks</a></li><li class="navelem"><a class="el" href="dir_6b67c3a1fdba4d6b038dad8a0f05d92f.html">math</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -521,12 +522,12 @@
 <div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;}</div>
 <div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;</div>
 <div class="line"><a name="l00466"></a><span class="lineno"><a class="code" href="classof_quaternion.html#ac26874bac00aaabf30c20d0c95ff0d5f">  466</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classof_quaternion.html#ac26874bac00aaabf30c20d0c95ff0d5f">ofQuaternion::normalize</a>(){</div>
-<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;        <span class="keywordtype">float</span> len = <a class="code" href="classof_quaternion.html#ab982b5638bed96d546f666393f4e2183">_v</a>.<a class="code" href="classof_vec4f.html#a0b55d23e9fa321c34a60752605c19bae">w</a>*<a class="code" href="classof_quaternion.html#ab982b5638bed96d546f666393f4e2183">_v</a>.<a class="code" href="classof_vec4f.html#a0b55d23e9fa321c34a60752605c19bae">w</a> + <a class="code" href="classof_quaternion.html#ab982b5638bed96d546f666393f4e2183">_v</a>.<a class="code" href="classof_vec4f.html#a20598461757aaad1950614d7b42954d7">x</a>*<a class="code" href="classof_quaternion.html#ab982b5638bed96d546f666393f4e2183">_v</a>.<a class="code" href="classof_vec4f.html#a20598461757aaad1950614d7b42954d7">x</a> + <a class="code" href="classof_quaternion.html#ab982b5638bed96d546f666393f4e2183">_v</a>.<a class="code" href="classof_vec4f.html#a6660d60e0af7f9db6d224061dabd4cae">y</a>*<a class="code" href="classof_quaternion.html#ab982b5638bed96d546f666393f4e2183">_v</a>.<a class="code" href="classof_vec4f.html#a6660d60e0af7f9db6d224061dabd4cae">y</a> + <a class="code" href="classof_quaternion.html#ab982b5638bed96d546f666393f4e2183">_v</a>.<a class="code" href="classof_vec4f.html#a2fffa6cc623c8f6d7e60aa9f9c7ae9d0">z</a>*<a class="code" href="classof_quaternion.html#ab982b5638bed96d546f666393f4e2183">_v</a>.<a class="code" href="classof_vec4f.html#a2fffa6cc623c8f6d7e60aa9f9c7ae9d0">z</a>;</div>
-<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;        <span class="keywordtype">float</span> factor = 1.0f / sqrt(len);</div>
-<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;        <a class="code" href="classof_quaternion.html#ab982b5638bed96d546f666393f4e2183">_v</a>.<a class="code" href="classof_vec4f.html#a20598461757aaad1950614d7b42954d7">x</a> *= factor;</div>
-<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;        <a class="code" href="classof_quaternion.html#ab982b5638bed96d546f666393f4e2183">_v</a>.<a class="code" href="classof_vec4f.html#a6660d60e0af7f9db6d224061dabd4cae">y</a> *= factor;</div>
-<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;        <a class="code" href="classof_quaternion.html#ab982b5638bed96d546f666393f4e2183">_v</a>.<a class="code" href="classof_vec4f.html#a2fffa6cc623c8f6d7e60aa9f9c7ae9d0">z</a> *= factor;</div>
-<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;        <a class="code" href="classof_quaternion.html#ab982b5638bed96d546f666393f4e2183">_v</a>.<a class="code" href="classof_vec4f.html#a0b55d23e9fa321c34a60752605c19bae">w</a> *= factor;</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;    <span class="keywordtype">float</span> len = <a class="code" href="classof_quaternion.html#ab982b5638bed96d546f666393f4e2183">_v</a>.<a class="code" href="classof_vec4f.html#a0b55d23e9fa321c34a60752605c19bae">w</a>*<a class="code" href="classof_quaternion.html#ab982b5638bed96d546f666393f4e2183">_v</a>.<a class="code" href="classof_vec4f.html#a0b55d23e9fa321c34a60752605c19bae">w</a> + <a class="code" href="classof_quaternion.html#ab982b5638bed96d546f666393f4e2183">_v</a>.<a class="code" href="classof_vec4f.html#a20598461757aaad1950614d7b42954d7">x</a>*<a class="code" href="classof_quaternion.html#ab982b5638bed96d546f666393f4e2183">_v</a>.<a class="code" href="classof_vec4f.html#a20598461757aaad1950614d7b42954d7">x</a> + <a class="code" href="classof_quaternion.html#ab982b5638bed96d546f666393f4e2183">_v</a>.<a class="code" href="classof_vec4f.html#a6660d60e0af7f9db6d224061dabd4cae">y</a>*<a class="code" href="classof_quaternion.html#ab982b5638bed96d546f666393f4e2183">_v</a>.<a class="code" href="classof_vec4f.html#a6660d60e0af7f9db6d224061dabd4cae">y</a> + <a class="code" href="classof_quaternion.html#ab982b5638bed96d546f666393f4e2183">_v</a>.<a class="code" href="classof_vec4f.html#a2fffa6cc623c8f6d7e60aa9f9c7ae9d0">z</a>*<a class="code" href="classof_quaternion.html#ab982b5638bed96d546f666393f4e2183">_v</a>.<a class="code" href="classof_vec4f.html#a2fffa6cc623c8f6d7e60aa9f9c7ae9d0">z</a>;</div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;    <span class="keywordtype">float</span> factor = 1.0f / sqrt(len);</div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;    <a class="code" href="classof_quaternion.html#ab982b5638bed96d546f666393f4e2183">_v</a>.<a class="code" href="classof_vec4f.html#a20598461757aaad1950614d7b42954d7">x</a> *= factor;</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;    <a class="code" href="classof_quaternion.html#ab982b5638bed96d546f666393f4e2183">_v</a>.<a class="code" href="classof_vec4f.html#a6660d60e0af7f9db6d224061dabd4cae">y</a> *= factor;</div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;    <a class="code" href="classof_quaternion.html#ab982b5638bed96d546f666393f4e2183">_v</a>.<a class="code" href="classof_vec4f.html#a2fffa6cc623c8f6d7e60aa9f9c7ae9d0">z</a> *= factor;</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;    <a class="code" href="classof_quaternion.html#ab982b5638bed96d546f666393f4e2183">_v</a>.<a class="code" href="classof_vec4f.html#a0b55d23e9fa321c34a60752605c19bae">w</a> *= factor;</div>
 <div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 

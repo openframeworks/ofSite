@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -47,13 +48,14 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_5784fb0e3502fad0f55808155bba3d8e.html">types</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_84d5b34cee6369a03c8d1f3b970ed216.html">openFrameworks</a></li><li class="navelem"><a class="el" href="dir_6a067a571c6179e1d7dc1a224573c7c5.html">types</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#typedef-members">Typedefs</a>  </div>
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">ofBaseTypes.h File Reference</div>  </div>
 </div><!--header-->
@@ -65,6 +67,7 @@
 <code>#include &quot;<a class="el" href="of_mesh_8h_source.html">ofMesh.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="of_pixels_8h_source.html">ofPixels.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="of_matrix4x4_8h_source.html">ofMatrix4x4.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="of_types_8h_source.html">ofTypes.h</a>&quot;</code><br/>
 </div>
 <p><a href="of_base_types_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -100,6 +103,12 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html">ofBaseRenderer</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_g_l_renderer.html">ofBaseGLRenderer</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_serializer.html">ofBaseSerializer</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_file_serializer.html">ofBaseFileSerializer</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -116,11 +125,22 @@ Typedefs</h2></td></tr>
 <tr class="separator:a9ebae0a9acee84a5a54968c6aa12b4dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae386cc9f24adcddf83adc66cf34bf7f2"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classof_base_has_pixels__.html">ofBaseHasPixels_</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_base_types_8h.html#ae386cc9f24adcddf83adc66cf34bf7f2">ofBaseHasFloatPixels</a></td></tr>
 <tr class="separator:ae386cc9f24adcddf83adc66cf34bf7f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99da2dc3e01a1ca6262941a3019878e6"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classof_base_has_pixels__.html">ofBaseHasPixels_</a><br class="typebreak"/>
+&lt; unsigned short &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_base_types_8h.html#a99da2dc3e01a1ca6262941a3019878e6">ofBaseHasShortPixels</a></td></tr>
+<tr class="separator:a99da2dc3e01a1ca6262941a3019878e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a154499fb65440e31fcb4aec0605e0acc"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classof_base_image__.html">ofBaseImage_</a>&lt; unsigned <br class="typebreak"/>
 char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_base_types_8h.html#a154499fb65440e31fcb4aec0605e0acc">ofBaseImage</a></td></tr>
 <tr class="separator:a154499fb65440e31fcb4aec0605e0acc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a034c3d9757a0fbc1c4afba088af2e52d"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classof_base_image__.html">ofBaseImage_</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_base_types_8h.html#a034c3d9757a0fbc1c4afba088af2e52d">ofBaseFloatImage</a></td></tr>
 <tr class="separator:a034c3d9757a0fbc1c4afba088af2e52d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0171bdb7c2c240d01518e55463937ce5"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classof_base_image__.html">ofBaseImage_</a>&lt; unsigned <br class="typebreak"/>
+short &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_base_types_8h.html#a0171bdb7c2c240d01518e55463937ce5">ofBaseShortImage</a></td></tr>
+<tr class="separator:a0171bdb7c2c240d01518e55463937ce5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a112ebf9b37b365ab634260fa7413d92e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_base_types_8h.html#a112ebf9b37b365ab634260fa7413d92e">ofIsVFlipped</a> ()</td></tr>
+<tr class="separator:a112ebf9b37b365ab634260fa7413d92e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a class="anchor" id="a034c3d9757a0fbc1c4afba088af2e52d"></a>
@@ -159,12 +179,36 @@ char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
 
 </div>
 </div>
+<a class="anchor" id="a99da2dc3e01a1ca6262941a3019878e6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classof_base_has_pixels__.html">ofBaseHasPixels_</a>&lt;unsigned short&gt; <a class="el" href="of_base_types_8h.html#a99da2dc3e01a1ca6262941a3019878e6">ofBaseHasShortPixels</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a154499fb65440e31fcb4aec0605e0acc"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">typedef <a class="el" href="classof_base_image__.html">ofBaseImage_</a>&lt;unsigned char&gt; <a class="el" href="of_base_types_8h.html#a154499fb65440e31fcb4aec0605e0acc">ofBaseImage</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0171bdb7c2c240d01518e55463937ce5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classof_base_image__.html">ofBaseImage_</a>&lt;unsigned short&gt; <a class="el" href="of_base_types_8h.html#a0171bdb7c2c240d01518e55463937ce5">ofBaseShortImage</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -213,6 +257,22 @@ char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
       <table class="memname">
         <tr>
           <td class="memname">typedef <a class="el" href="classof_image__.html">ofImage_</a>&lt;unsigned short&gt; <a class="el" href="of_image_8h.html#af9ba34edb661acdf2b5c05d9813dacc2">ofShortImage</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="a112ebf9b37b365ab634260fa7413d92e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ofIsVFlipped </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">

@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -50,6 +51,7 @@
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="classof_key_event_args-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -68,11 +70,39 @@ Inheritance diagram for ofKeyEventArgs:</div>
 </map>
  </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a551471a78845484004332f64798ab8a5"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_key_event_args.html#a551471a78845484004332f64798ab8a5">Type</a> { <a class="el" href="classof_key_event_args.html#a551471a78845484004332f64798ab8a5a793b23692a3ec9b6ff62ecae1f8404b9">Pressed</a>, 
+<a class="el" href="classof_key_event_args.html#a551471a78845484004332f64798ab8a5a496274fd747ced32ddc7dbcd4defc563">Released</a>
+ }</td></tr>
+<tr class="separator:a551471a78845484004332f64798ab8a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
+<tr class="memitem:a1a9ba222d3203fe630cfe2ce2323f4b4"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="classof_key_event_args.html#a551471a78845484004332f64798ab8a5">ofKeyEventArgs::Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_key_event_args.html#a1a9ba222d3203fe630cfe2ce2323f4b4">type</a></td></tr>
+<tr class="separator:a1a9ba222d3203fe630cfe2ce2323f4b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51c166832e41e794963bc7ad6c6dd725"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_key_event_args.html#a51c166832e41e794963bc7ad6c6dd725">key</a></td></tr>
 <tr class="separator:a51c166832e41e794963bc7ad6c6dd725"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Enumeration Documentation</h2>
+<a class="anchor" id="a551471a78845484004332f64798ab8a5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classof_key_event_args.html#a551471a78845484004332f64798ab8a5">ofKeyEventArgs::Type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="a551471a78845484004332f64798ab8a5a793b23692a3ec9b6ff62ecae1f8404b9"></a>Pressed</em>&nbsp;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a551471a78845484004332f64798ab8a5a496274fd747ced32ddc7dbcd4defc563"></a>Released</em>&nbsp;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a class="anchor" id="a51c166832e41e794963bc7ad6c6dd725"></a>
 <div class="memitem">
@@ -86,8 +116,20 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a1a9ba222d3203fe630cfe2ce2323f4b4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classof_key_event_args.html#a551471a78845484004332f64798ab8a5">ofKeyEventArgs::Type</a>  ofKeyEventArgs::type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>events/<a class="el" href="of_events_8h_source.html">ofEvents.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/events/<a class="el" href="of_events_8h_source.html">ofEvents.h</a></li>
 </ul>
 </div><!-- contents -->
 

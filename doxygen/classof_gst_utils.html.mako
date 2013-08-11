@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -50,6 +51,7 @@
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
@@ -120,6 +122,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aec932d11872d71fcea8332d0238302d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b2b368aaa363fd114671725828abebe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="of_gst_utils_8h.html#a8b2d14560b8b4c41de69fe2bd2ce6fa3">GstElement</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_gst_utils.html#a1b2b368aaa363fd114671725828abebe">getSink</a> ()</td></tr>
 <tr class="separator:a1b2b368aaa363fd114671725828abebe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d08aa353ec5a802ccc525988c609107"><td class="memItemLeft" align="right" valign="top"><a class="el" href="of_gst_utils_8h.html#a8b2d14560b8b4c41de69fe2bd2ce6fa3">GstElement</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_gst_utils.html#a4d08aa353ec5a802ccc525988c609107">getGstElementByName</a> (const string &amp;name)</td></tr>
+<tr class="separator:a4d08aa353ec5a802ccc525988c609107"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:addee5eb7880fe0b02b69c047183cd472"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_gst_utils.html#addee5eb7880fe0b02b69c047183cd472">getMinLatencyNanos</a> ()</td></tr>
 <tr class="separator:addee5eb7880fe0b02b69c047183cd472"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75cc29f0b43c455dd36e6fbeba9863b9"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_gst_utils.html#a75cc29f0b43c455dd36e6fbeba9863b9">getMaxLatencyNanos</a> ()</td></tr>
@@ -286,6 +290,22 @@ Protected Attributes</h2></td></tr>
           <td class="memname">int64_t ofGstUtils::getDurationNanos </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4d08aa353ec5a802ccc525988c609107"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="of_gst_utils_8h.html#a8b2d14560b8b4c41de69fe2bd2ce6fa3">GstElement</a> * ofGstUtils::getGstElementByName </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -802,8 +822,8 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>video/<a class="el" href="of_gst_utils_8h_source.html">ofGstUtils.h</a></li>
-<li>video/<a class="el" href="of_gst_utils_8cpp.html">ofGstUtils.cpp</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/video/<a class="el" href="of_gst_utils_8h_source.html">ofGstUtils.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/video/<a class="el" href="of_gst_utils_8cpp.html">ofGstUtils.cpp</a></li>
 </ul>
 </div><!-- contents -->
 

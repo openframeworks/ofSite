@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -83,6 +84,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:adf33d82dfa12e7dc014d75633b01a4de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd1c8b5311f26361711b4b03831d47d9"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_file_path.html#afd1c8b5311f26361711b4b03831d47d9">getEnclosingDirectory</a> (string filePath, bool bRelativeToData=true)</td></tr>
 <tr class="separator:afd1c8b5311f26361711b4b03831d47d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9c0144eb3898719b363206843e256c8"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_file_path.html#ab9c0144eb3898719b363206843e256c8">createEnclosingDirectory</a> (string filePath, bool bRelativeToData=true, bool bRecursive=true)</td></tr>
+<tr class="separator:ab9c0144eb3898719b363206843e256c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aece3f049fb90793dccb9531799158167"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_file_path.html#aece3f049fb90793dccb9531799158167">getCurrentWorkingDirectory</a> ()</td></tr>
 <tr class="separator:aece3f049fb90793dccb9531799158167"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62625a351488f27e3bf74b551eaacf3f"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_file_path.html#a62625a351488f27e3bf74b551eaacf3f">join</a> (string path1, string path2)</td></tr>
@@ -132,6 +135,46 @@ Static Public Member Functions</h2></td></tr>
           <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>path</em></td><td>)</td>
           <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab9c0144eb3898719b363206843e256c8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ofFilePath::createEnclosingDirectory </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>filePath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bRelativeToData</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bRecursive</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -516,8 +559,8 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>utils/<a class="el" href="of_file_utils_8h_source.html">ofFileUtils.h</a></li>
-<li>utils/<a class="el" href="of_file_utils_8cpp.html">ofFileUtils.cpp</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/utils/<a class="el" href="of_file_utils_8h_source.html">ofFileUtils.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/utils/<a class="el" href="of_file_utils_8cpp.html">ofFileUtils.cpp</a></li>
 </ul>
 </div><!-- contents -->
 

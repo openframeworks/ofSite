@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -47,7 +48,7 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_296d53ceaeaa7e099814a6def439fe8a.html">math</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_84d5b34cee6369a03c8d1f3b970ed216.html">openFrameworks</a></li><li class="navelem"><a class="el" href="dir_6b67c3a1fdba4d6b038dad8a0f05d92f.html">math</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -93,9 +94,9 @@
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">float</span>&amp; <a class="code" href="classof_matrix3x3.html#ae5bcdcb54eca1001086d3e763e3cd01d">operator[]</a>( <span class="keyword">const</span> <span class="keywordtype">int</span>&amp; index );</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classof_matrix3x3.html#ab6a97a494d36b7839f7476caeb4b3de4">transpose</a>();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classof_matrix3x3.html#ab6a97a494d36b7839f7476caeb4b3de4">transpose</a>();</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <a class="code" href="classof_matrix3x3.html">ofMatrix3x3</a> <a class="code" href="classof_matrix3x3.html#ab6a97a494d36b7839f7476caeb4b3de4">transpose</a>(<span class="keyword">const</span> <a class="code" href="classof_matrix3x3.html">ofMatrix3x3</a>&amp; A);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="classof_matrix3x3.html">ofMatrix3x3</a> <a class="code" href="classof_matrix3x3.html#ab6a97a494d36b7839f7476caeb4b3de4">transpose</a>(<span class="keyword">const</span> <a class="code" href="classof_matrix3x3.html">ofMatrix3x3</a>&amp; A);</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
@@ -116,26 +117,26 @@
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <a class="code" href="classof_matrix3x3.html">ofMatrix3x3</a> <a class="code" href="classof_matrix3x3.html#a6c5c067925a3d87bdf30e0ed85b86613">operator-</a>(<span class="keyword">const</span> <a class="code" href="classof_matrix3x3.html">ofMatrix3x3</a>&amp; B);</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classof_matrix3x3.html#a59f42dee005190722b8e54355836ca74">operator-=</a>(<span class="keyword">const</span> <a class="code" href="classof_matrix3x3.html">ofMatrix3x3</a>&amp; B);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classof_matrix3x3.html#a59f42dee005190722b8e54355836ca74">operator-=</a>(<span class="keyword">const</span> <a class="code" href="classof_matrix3x3.html">ofMatrix3x3</a>&amp; B);</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <a class="code" href="classof_matrix3x3.html">ofMatrix3x3</a> <a class="code" href="classof_matrix3x3.html#a14ed2bf93542c3d540365443df6ae95a">operator*</a>(<span class="keywordtype">float</span> scalar);</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classof_matrix3x3.html#a86c70609d64198aa25d9d24bdd437610">operator*=</a>(<span class="keyword">const</span> <a class="code" href="classof_matrix3x3.html">ofMatrix3x3</a>&amp; B);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classof_matrix3x3.html#a86c70609d64198aa25d9d24bdd437610">operator*=</a>(<span class="keyword">const</span> <a class="code" href="classof_matrix3x3.html">ofMatrix3x3</a>&amp; B);</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <a class="code" href="classof_matrix3x3.html">ofMatrix3x3</a> <a class="code" href="classof_matrix3x3.html#ab631a19db59ea167d18bbe4cd4a5e5fe">entrywiseTimes</a>(<span class="keyword">const</span> <a class="code" href="classof_matrix3x3.html">ofMatrix3x3</a>&amp; A);</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classof_matrix3x3.html#a86c70609d64198aa25d9d24bdd437610">operator*=</a>(<span class="keywordtype">float</span> scalar);</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keyword">friend</span> ostream&amp; <a class="code" href="classof_matrix3x3.html#a3a751851e70f7d08933a8bb74ae79b7d">operator&lt;&lt;</a>(ostream&amp; os, <span class="keyword">const</span> <a class="code" href="classof_matrix3x3.html">ofMatrix3x3</a>&amp; M);</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <span class="keyword">friend</span> istream&amp; <a class="code" href="classof_matrix3x3.html#abf46313577c6b9cd10201245f1e46f87">operator&gt;&gt;</a>(istream&amp; is, <a class="code" href="classof_matrix3x3.html">ofMatrix3x3</a>&amp; M);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keyword">friend</span> ostream&amp; <a class="code" href="classof_matrix3x3.html#a3a751851e70f7d08933a8bb74ae79b7d">operator&lt;&lt;</a>(ostream&amp; os, <span class="keyword">const</span> <a class="code" href="classof_matrix3x3.html">ofMatrix3x3</a>&amp; M);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keyword">friend</span> istream&amp; <a class="code" href="classof_matrix3x3.html#abf46313577c6b9cd10201245f1e46f87">operator&gt;&gt;</a>(istream&amp; is, <a class="code" href="classof_matrix3x3.html">ofMatrix3x3</a>&amp; M);</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <a class="code" href="classof_matrix3x3.html">ofMatrix3x3</a> <a class="code" href="classof_matrix3x3.html#a14ed2bf93542c3d540365443df6ae95a">operator*</a>(<span class="keyword">const</span> <a class="code" href="classof_matrix3x3.html">ofMatrix3x3</a>&amp; B);</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <a class="code" href="classof_matrix3x3.html">ofMatrix3x3</a> <a class="code" href="classof_matrix3x3.html#adcf2270544195d4f525ceb741b9319d5">operator/</a>(<span class="keywordtype">float</span> scalar);</div>
 <div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
 <div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classof_matrix3x3.html#ac4ad50cae99696ab3514fa2ab44c94be">operator/=</a>(<span class="keyword">const</span> <a class="code" href="classof_matrix3x3.html">ofMatrix3x3</a>&amp; B);</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classof_matrix3x3.html#ac4ad50cae99696ab3514fa2ab44c94be">operator/=</a>(<span class="keyword">const</span> <a class="code" href="classof_matrix3x3.html">ofMatrix3x3</a>&amp; B);</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classof_matrix3x3.html#ac4ad50cae99696ab3514fa2ab44c94be">operator/=</a>(<span class="keywordtype">float</span> scalar);</div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>

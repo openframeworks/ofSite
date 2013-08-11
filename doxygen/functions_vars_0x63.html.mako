@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -52,6 +53,7 @@
       <li><a href="functions.html"><span>All</span></a></li>
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li class="current"><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_type.html"><span>Typedefs</span></a></li>
       <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
       <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
       <li><a href="functions_prop.html"><span>Properties</span></a></li>
@@ -99,14 +101,21 @@
 <li>cadetBlue
 : <a class="el" href="classof_color__.html#a0221d3b2ff273b666bc37f659c7f5554">ofColor_&lt; PixelType &gt;</a>
 </li>
+<li>capsLocked
+: <a class="el" href="struct_keyboard_state.html#a57daa11d1fc047217efd8aa25dba23ed">KeyboardState</a>
+</li>
 <li>channel
 : <a class="el" href="classof_fmod_sound_player.html#afa7d8b9b27883bec0e0f18ae7dd4484e">ofFmodSoundPlayer</a>
+, <a class="el" href="classof_log.html#aed77492f4cecb6d7304717e64643564e">ofLog</a>
 </li>
 <li>character
 : <a class="el" href="structchar_props.html#add93b5dc8ccb5dd0222182a48542215e">charProps</a>
 </li>
 <li>charOutlines
 : <a class="el" href="classof_true_type_font.html#a0d2c3da16937f1b2be80a02c055f12b4">ofTrueTypeFont</a>
+</li>
+<li>charOutlinesNonVFlipped
+: <a class="el" href="classof_true_type_font.html#aa988e4d74fd73397e17ce6ad23b4a924">ofTrueTypeFont</a>
 </li>
 <li>chartreuse
 : <a class="el" href="classof_color__.html#a4434fd851dd302e8c13210d59b696ea1">ofColor_&lt; PixelType &gt;</a>
@@ -122,6 +131,9 @@
 </li>
 <li>color
 : <a class="el" href="classof_style.html#a71c0e855729b8db2f0aec16a939051dd">ofStyle</a>
+</li>
+<li>colorFormats
+: <a class="el" href="structof_fbo_1_1_settings.html#a971cdf30cb9d36468ec293468b9a1fbf">ofFbo::Settings</a>
 </li>
 <li>compressionType
 : <a class="el" href="classof_texture_data.html#a5fb03608ad56543ed65caa0c544975d3">ofTextureData</a>
@@ -142,10 +154,10 @@
 : <a class="el" href="classof_color__.html#a925f566361af74e032fabc67785f7874">ofColor_&lt; PixelType &gt;</a>
 </li>
 <li>cp1
-: <a class="el" href="structof_sub_path_1_1_command.html#a75eb3d6ae9b1272abdb357bddde1fa00">ofSubPath::Command</a>
+: <a class="el" href="structof_path_1_1_command.html#a4f1991975c654ca0d7357df81929a73d">ofPath::Command</a>
 </li>
 <li>cp2
-: <a class="el" href="structof_sub_path_1_1_command.html#a44d1efaf7807a74ff42dfb7a73e9eaf4">ofSubPath::Command</a>
+: <a class="el" href="structof_path_1_1_command.html#aa230fb98261565315c948f5dca96f757">ofPath::Command</a>
 </li>
 <li>cps
 : <a class="el" href="classof_true_type_font.html#a2d1b89d3dc046e97f4ee716b0e65cbf6">ofTrueTypeFont</a>
@@ -158,6 +170,9 @@
 </li>
 <li>currentLoopState
 : <a class="el" href="classof_q_t_kit_player.html#a188fb1f22440a47ab44304fee50aa0f6">ofQTKitPlayer</a>
+</li>
+<li>currentWindowRect
+: <a class="el" href="classof_app_e_g_l_window.html#adbaad1c82e84916228ed5ae13bb0bc4e">ofAppEGLWindow</a>
 </li>
 <li>curveResolution
 : <a class="el" href="classof_style.html#a68fd3b1c7873c5121975acebc4b7e002">ofStyle</a>

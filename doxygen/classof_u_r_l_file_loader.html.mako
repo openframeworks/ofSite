@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -85,6 +86,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad7b956750adfc8d3be3f2b54dedda1b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2552a824a5a84d0fd0dffb9db9b36b0e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_u_r_l_file_loader.html#a2552a824a5a84d0fd0dffb9db9b36b0e">clear</a> ()</td></tr>
 <tr class="separator:a2552a824a5a84d0fd0dffb9db9b36b0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3397a3985ff8c7bb57b6fd83cc722dba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_u_r_l_file_loader.html#a3397a3985ff8c7bb57b6fd83cc722dba">stop</a> ()</td></tr>
+<tr class="separator:a3397a3985ff8c7bb57b6fd83cc722dba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classof_thread"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classof_thread')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classof_thread.html">ofThread</a></td></tr>
 <tr class="memitem:a6e9afd83f8dd763f7230d13286611a9c inherit pub_methods_classof_thread"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_thread.html#a6e9afd83f8dd763f7230d13286611a9c">ofThread</a> ()</td></tr>
 <tr class="separator:a6e9afd83f8dd763f7230d13286611a9c inherit pub_methods_classof_thread"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -125,8 +128,6 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:ab2f0c21ed1cb176e86761370297d573f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a450eb5217fce065a9e8dc765bab1dd1d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_u_r_l_file_loader.html#a450eb5217fce065a9e8dc765bab1dd1d">start</a> ()</td></tr>
 <tr class="separator:a450eb5217fce065a9e8dc765bab1dd1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3397a3985ff8c7bb57b6fd83cc722dba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_u_r_l_file_loader.html#a3397a3985ff8c7bb57b6fd83cc722dba">stop</a> ()</td></tr>
-<tr class="separator:a3397a3985ff8c7bb57b6fd83cc722dba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89aba392823ab3a6ddae0bbf8f2161cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_u_r_l_file_loader.html#a89aba392823ab3a6ddae0bbf8f2161cf">update</a> (<a class="el" href="classof_event_args.html">ofEventArgs</a> &amp;args)</td></tr>
 <tr class="separator:a89aba392823ab3a6ddae0bbf8f2161cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -320,9 +321,6 @@ Additional Inherited Members</h2></td></tr>
 <a class="anchor" id="a3397a3985ff8c7bb57b6fd83cc722dba"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void ofURLFileLoader::stop </td>
@@ -331,11 +329,6 @@ Additional Inherited Members</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>
@@ -365,14 +358,14 @@ Additional Inherited Members</h2></td></tr>
 <p>if you do not have a loop inside this function, it will run once then exit</p>
 <p>if you want the thread to run until you signal it to stop, use a while loop inside that checks if the thread is should keep running:</p>
 <p>void myClass::threadedFunction(){ </p>
-<pre class="fragment">    // start
+<pre class="fragment">// start
 
-    while(isThreadRunning()){
+while(isThreadRunning()){
 
-            // do stuff
-    }
+    // do stuff
+}
 
-    // done
+// done
 </pre> 
 <p>Reimplemented from <a class="el" href="classof_thread.html#a7e90ddaf0113435c451e6daf600c33f1">ofThread</a>.</p>
 
@@ -403,8 +396,8 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>utils/<a class="el" href="of_u_r_l_file_loader_8h_source.html">ofURLFileLoader.h</a></li>
-<li>utils/<a class="el" href="of_u_r_l_file_loader_8cpp.html">ofURLFileLoader.cpp</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/utils/<a class="el" href="of_u_r_l_file_loader_8h_source.html">ofURLFileLoader.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/utils/<a class="el" href="of_u_r_l_file_loader_8cpp.html">ofURLFileLoader.cpp</a></li>
 </ul>
 </div><!-- contents -->
 

@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -52,6 +53,7 @@
       <li class="current"><a href="functions.html"><span>All</span></a></li>
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_type.html"><span>Typedefs</span></a></li>
       <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
       <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
       <li><a href="functions_prop.html"><span>Properties</span></a></li>
@@ -96,17 +98,27 @@
 
 <h3><a class="anchor" id="index_x"></a>- x -</h3><ul>
 <li>x
-: <a class="el" href="classof_mouse_event_args.html#a3ec51700b95c1681ac1ee022bc25e516">ofMouseEventArgs</a>
-, <a class="el" href="classof_touch_event_args.html#a65000c377c82e9539a753a5fbab034b7">ofTouchEventArgs</a>
+: <a class="el" href="classof_vec2f.html#a81763bfaf27b7db5f734055212ca6ec5">ofVec2f</a>
 , <a class="el" href="classof_vec3f.html#aa69e24cc27cb6dda01d1e4c69e18f682">ofVec3f</a>
-, <a class="el" href="classof_quaternion.html#a6c09964ebebdbce304d3b7d89e1aba54">ofQuaternion</a>
-, <a class="el" href="classof_vec4f.html#a20598461757aaad1950614d7b42954d7">ofVec4f</a>
-, <a class="el" href="classof_vec2f.html#a81763bfaf27b7db5f734055212ca6ec5">ofVec2f</a>
-, <a class="el" href="classof_quaternion.html#aa3730ef64c850701efaff85f0b8461f3">ofQuaternion</a>
 , <a class="el" href="classof_rectangle.html#a42b50bd5cdfc633ddf41f04b1ab06e1f">ofRectangle</a>
+, <a class="el" href="classof_quaternion.html#aa3730ef64c850701efaff85f0b8461f3">ofQuaternion</a>
+, <a class="el" href="classof_vec4f.html#a20598461757aaad1950614d7b42954d7">ofVec4f</a>
+, <a class="el" href="classof_quaternion.html#a6c09964ebebdbce304d3b7d89e1aba54">ofQuaternion</a>
 </li>
 <li>x1
 : <a class="el" href="structchar_props.html#a1a7c4050d67607482ab5fc73dc48b766">charProps</a>
+</li>
+<li>x11Display
+: <a class="el" href="classof_app_e_g_l_window.html#aab1f26f664d71b50853c2a4003e1906b">ofAppEGLWindow</a>
+</li>
+<li>x11Screen
+: <a class="el" href="classof_app_e_g_l_window.html#af067ce6d16f064e33c9fe86992903aa1">ofAppEGLWindow</a>
+</li>
+<li>x11ScreenNum
+: <a class="el" href="classof_app_e_g_l_window.html#a2421a0b26d07f8f620e78b101dc2fd88">ofAppEGLWindow</a>
+</li>
+<li>x11Window
+: <a class="el" href="classof_app_e_g_l_window.html#a72dea66f2a244ad9563c26d953fb729c">ofAppEGLWindow</a>
 </li>
 <li>x2
 : <a class="el" href="structchar_props.html#a48894e5c09c412444b2928c8fc7e8f28">charProps</a>

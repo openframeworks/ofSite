@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -106,8 +107,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:afda9f40e959588862cff21a02de95886"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c690759b70c7041fbd839f049adbb1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_video_player.html#a9c690759b70c7041fbd839f049adbb1e">update</a> ()</td></tr>
 <tr class="separator:a9c690759b70c7041fbd839f049adbb1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f352ce3c150089203df2553c1632051"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_video_player.html#a9f352ce3c150089203df2553c1632051">OF_DEPRECATED_MSG</a> (&quot;Use <a class="el" href="classof_video_player.html#a9c690759b70c7041fbd839f049adbb1e">ofVideoPlayer::update</a>() instead.&quot;, void idleMovie())</td></tr>
-<tr class="separator:a9f352ce3c150089203df2553c1632051"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab50668f50a7326a8fdd54c5ab5d3f24"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_video_player.html#aab50668f50a7326a8fdd54c5ab5d3f24">play</a> ()</td></tr>
 <tr class="separator:aab50668f50a7326a8fdd54c5ab5d3f24"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f324b141bccedd87975848dcea0012a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_video_player.html#a1f324b141bccedd87975848dcea0012a">stop</a> ()</td></tr>
@@ -892,32 +891,6 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a9f352ce3c150089203df2553c1632051"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">ofVideoPlayer::OF_DEPRECATED_MSG </td>
-          <td>(</td>
-          <td class="paramtype">&quot;Use <a class="el" href="classof_video_player.html#a9c690759b70c7041fbd839f049adbb1e">ofVideoPlayer::update</a>() instead.&quot;&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void &#160;</td>
-          <td class="paramname"><em>idleMovie</em>()&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="aab50668f50a7326a8fdd54c5ab5d3f24"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1365,8 +1338,8 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>video/<a class="el" href="of_video_player_8h_source.html">ofVideoPlayer.h</a></li>
-<li>video/<a class="el" href="of_video_player_8cpp.html">ofVideoPlayer.cpp</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/video/<a class="el" href="of_video_player_8h_source.html">ofVideoPlayer.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/video/<a class="el" href="of_video_player_8cpp.html">ofVideoPlayer.cpp</a></li>
 </ul>
 </div><!-- contents -->
 

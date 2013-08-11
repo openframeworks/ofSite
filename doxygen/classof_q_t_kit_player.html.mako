@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -96,10 +97,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a55c09bc65efe5b6c9c4de3b0f387c237"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c5e1f80f3a2637e385817260f1c43a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_q_t_kit_player.html#a0c5e1f80f3a2637e385817260f1c43a8">stop</a> ()</td></tr>
 <tr class="separator:a0c5e1f80f3a2637e385817260f1c43a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a977c9d964bb057c807d22044737a4225"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_q_t_kit_player.html#a977c9d964bb057c807d22044737a4225">OF_DEPRECATED_MSG</a> (&quot;Use <a class="el" href="classof_q_t_kit_player.html#a30ceb2d94f957d7560872f45aa24293d">getTexture</a>()-&gt;bind() instead. Ensure <a class="el" href="classof_q_t_kit_player.html#a17fbafa21842825bfa8853dfb0ccfb81">decodeMode</a> != OF_QTKIT_DECODE_PIXELS_ONLY.&quot;, void bind())</td></tr>
-<tr class="separator:a977c9d964bb057c807d22044737a4225"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0aab8454c447cdf0fda3f7ac2e64de86"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_q_t_kit_player.html#a0aab8454c447cdf0fda3f7ac2e64de86">OF_DEPRECATED_MSG</a> (&quot;Use <a class="el" href="classof_q_t_kit_player.html#a30ceb2d94f957d7560872f45aa24293d">getTexture</a>()-&gt;unbind() instead. Ensure <a class="el" href="classof_q_t_kit_player.html#a17fbafa21842825bfa8853dfb0ccfb81">decodeMode</a> != OF_QTKIT_DECODE_PIXELS_ONLY.&quot;, void unbind())</td></tr>
-<tr class="separator:a0aab8454c447cdf0fda3f7ac2e64de86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a443fedb4f66d9374fb305d9740441a46"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_q_t_kit_player.html#a443fedb4f66d9374fb305d9740441a46">isFrameNew</a> ()</td></tr>
 <tr class="separator:a443fedb4f66d9374fb305d9740441a46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f3ba09830190f6dc14466f7b593ec59"><td class="memItemLeft" align="right" valign="top">unsigned char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_q_t_kit_player.html#a2f3ba09830190f6dc14466f7b593ec59">getPixels</a> ()</td></tr>
@@ -951,36 +948,6 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a977c9d964bb057c807d22044737a4225"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">ofQTKitPlayer::OF_DEPRECATED_MSG </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a0aab8454c447cdf0fda3f7ac2e64de86"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">ofQTKitPlayer::OF_DEPRECATED_MSG </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="a55c09bc65efe5b6c9c4de3b0f387c237"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1603,8 +1570,8 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>video/<a class="el" href="of_q_t_kit_player_8h_source.html">ofQTKitPlayer.h</a></li>
-<li>video/<a class="el" href="of_q_t_kit_player_8mm.html">ofQTKitPlayer.mm</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/video/<a class="el" href="of_q_t_kit_player_8h_source.html">ofQTKitPlayer.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/video/<a class="el" href="of_q_t_kit_player_8mm.html">ofQTKitPlayer.mm</a></li>
 </ul>
 </div><!-- contents -->
 

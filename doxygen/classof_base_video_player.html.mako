@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -203,7 +204,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classof_base_video.html#af21eaad083952a7daf955042551a773e">ofBaseVideo</a>.</p>
 
-<p>Implemented in <a class="el" href="classof_gst_video_player.html#a3c6486852eecbf2873b456eda03f8879">ofGstVideoPlayer</a>, <a class="el" href="classof_video_player.html#afda9f40e959588862cff21a02de95886">ofVideoPlayer</a>, and <a class="el" href="classof_q_t_kit_player.html#a8e83323f66e1c6d3bac1f6794ea33f12">ofQTKitPlayer</a>.</p>
+<p>Implemented in <a class="el" href="classof_video_player.html#afda9f40e959588862cff21a02de95886">ofVideoPlayer</a>, <a class="el" href="classof_gst_video_player.html#a3c6486852eecbf2873b456eda03f8879">ofGstVideoPlayer</a>, and <a class="el" href="classof_q_t_kit_player.html#a8e83323f66e1c6d3bac1f6794ea33f12">ofQTKitPlayer</a>.</p>
 
 </div>
 </div>
@@ -405,7 +406,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classof_base_has_pixels__.html#a680c5d134ff80d892abbe681fa5ce2e0">ofBaseHasPixels_&lt; T &gt;</a>.</p>
 
-<p>Implemented in <a class="el" href="classof_q_t_kit_player.html#a2f3ba09830190f6dc14466f7b593ec59">ofQTKitPlayer</a>, <a class="el" href="classof_video_player.html#af5bd9b31b5d07baeffd5d2f378a21f59">ofVideoPlayer</a>, and <a class="el" href="classof_gst_video_player.html#adb8ee823c3f1616c406e0d5d26218953">ofGstVideoPlayer</a>.</p>
+<p>Implemented in <a class="el" href="classof_video_player.html#af5bd9b31b5d07baeffd5d2f378a21f59">ofVideoPlayer</a>, <a class="el" href="classof_q_t_kit_player.html#a2f3ba09830190f6dc14466f7b593ec59">ofQTKitPlayer</a>, and <a class="el" href="classof_gst_video_player.html#adb8ee823c3f1616c406e0d5d26218953">ofGstVideoPlayer</a>.</p>
 
 </div>
 </div>
@@ -557,7 +558,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classof_base_video.html#a614f817009e02303e075f7552c78cfb0">ofBaseVideo</a>.</p>
 
-<p>Implemented in <a class="el" href="classof_q_t_kit_player.html#a443fedb4f66d9374fb305d9740441a46">ofQTKitPlayer</a>, <a class="el" href="classof_video_player.html#a73119c8aaa8ca9fb7890668d4d9479c6">ofVideoPlayer</a>, and <a class="el" href="classof_gst_video_player.html#a47c80f4972596eeba56af266c20a1206">ofGstVideoPlayer</a>.</p>
+<p>Implemented in <a class="el" href="classof_video_player.html#a73119c8aaa8ca9fb7890668d4d9479c6">ofVideoPlayer</a>, <a class="el" href="classof_q_t_kit_player.html#a443fedb4f66d9374fb305d9740441a46">ofQTKitPlayer</a>, and <a class="el" href="classof_gst_video_player.html#a47c80f4972596eeba56af266c20a1206">ofGstVideoPlayer</a>.</p>
 
 </div>
 </div>
@@ -658,7 +659,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classof_q_t_kit_player.html#ad7e2cb0294bcb75d131ce24e3c44c415">ofQTKitPlayer</a>, <a class="el" href="classof_video_player.html#a48bac06cc3be16f380000889a9cbdb5b">ofVideoPlayer</a>, and <a class="el" href="classof_gst_video_player.html#a55638695b70894345e2ff837afb2cc92">ofGstVideoPlayer</a>.</p>
+<p>Implemented in <a class="el" href="classof_video_player.html#a48bac06cc3be16f380000889a9cbdb5b">ofVideoPlayer</a>, <a class="el" href="classof_q_t_kit_player.html#ad7e2cb0294bcb75d131ce24e3c44c415">ofQTKitPlayer</a>, and <a class="el" href="classof_gst_video_player.html#a55638695b70894345e2ff837afb2cc92">ofGstVideoPlayer</a>.</p>
 
 </div>
 </div>
@@ -967,13 +968,13 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classof_base_updates.html#aafe52b53362bf3401d666970557d5250">ofBaseUpdates</a>.</p>
 
-<p>Implemented in <a class="el" href="classof_q_t_kit_player.html#aeb87faafc521fc27d2efe518f16177ae">ofQTKitPlayer</a>, <a class="el" href="classof_video_player.html#a9c690759b70c7041fbd839f049adbb1e">ofVideoPlayer</a>, and <a class="el" href="classof_gst_video_player.html#a178d0a9ed961c7d7e8415b8413ddf073">ofGstVideoPlayer</a>.</p>
+<p>Implemented in <a class="el" href="classof_video_player.html#a9c690759b70c7041fbd839f049adbb1e">ofVideoPlayer</a>, <a class="el" href="classof_q_t_kit_player.html#aeb87faafc521fc27d2efe518f16177ae">ofQTKitPlayer</a>, and <a class="el" href="classof_gst_video_player.html#a178d0a9ed961c7d7e8415b8413ddf073">ofGstVideoPlayer</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>types/<a class="el" href="of_base_types_8h_source.html">ofBaseTypes.h</a></li>
-<li>types/<a class="el" href="of_base_types_8cpp.html">ofBaseTypes.cpp</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/types/<a class="el" href="of_base_types_8h_source.html">ofBaseTypes.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/types/<a class="el" href="of_base_types_8cpp.html">ofBaseTypes.cpp</a></li>
 </ul>
 </div><!-- contents -->
 

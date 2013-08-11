@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -58,18 +59,19 @@
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="classof_log.html#a1d4ece9af238988b484420a2422c69e9">_log</a>(ofLogLevel level, const string &amp;module, const string &amp;message)</td><td class="entry"><a class="el" href="classof_log.html">ofLog</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
   <tr><td class="entry"><a class="el" href="classof_log.html#adfeb1385b39fad45477eb0bc1f70fdb4">bPrinted</a></td><td class="entry"><a class="el" href="classof_log.html">ofLog</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classof_log.html#a3288e9556cd90f363a1575ef3ec2ed0d">checkLog</a>(ofLogLevel level, const string &amp;module)</td><td class="entry"><a class="el" href="classof_log.html">ofLog</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classof_log.html#ae6e5efb037f89eec86c478c7501b7f11">level</a></td><td class="entry"><a class="el" href="classof_log.html">ofLog</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classof_log.html#aa1f61b048422566b8bdd9c50f5a05f44">module</a></td><td class="entry"><a class="el" href="classof_log.html">ofLog</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classof_log.html#a11a926adbe4ef4bfbee393345f5df1cc">ofLog</a>()</td><td class="entry"><a class="el" href="classof_log.html">ofLog</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classof_log.html#a3a439e9fcf3792ef557342efade73bf4">ofLog</a>(ofLogLevel logLevel)</td><td class="entry"><a class="el" href="classof_log.html">ofLog</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classof_log.html#abe0d0cbf4f049f3f9841bf9f31b7ceb3">ofLog</a>(ofLogLevel logLevel, const string &amp;message)</td><td class="entry"><a class="el" href="classof_log.html">ofLog</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classof_log.html#a0504f3f900ba5be220363662a639b170">ofLog</a>(ofLogLevel logLevel, const char *format,...)</td><td class="entry"><a class="el" href="classof_log.html">ofLog</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classof_log.html#a2f19640fb8269ff470f9941eca0d39b2">operator&lt;&lt;</a>(const T &amp;value)</td><td class="entry"><a class="el" href="classof_log.html">ofLog</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classof_log.html#a10502cf2a6a2ad636e5f1c4058bd037f">operator&lt;&lt;</a>(std::ostream &amp;(*func)(std::ostream &amp;))</td><td class="entry"><a class="el" href="classof_log.html">ofLog</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classof_log.html#acd753685ca548b145fd33301abe63433">setAutoSpace</a>(bool autoSpace)</td><td class="entry"><a class="el" href="classof_log.html">ofLog</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classof_log.html#a4b80260a00625c5eb189d6377a96dc82">setChannel</a>(ofPtr&lt; ofBaseLoggerChannel &gt; channel)</td><td class="entry"><a class="el" href="classof_log.html">ofLog</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classof_log.html#a8b9d6e1110e97f1c70c6c0f1c1997db1">~ofLog</a>()</td><td class="entry"><a class="el" href="classof_log.html">ofLog</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classof_log.html#aed77492f4cecb6d7304717e64643564e">channel</a></td><td class="entry"><a class="el" href="classof_log.html">ofLog</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classof_log.html#a3288e9556cd90f363a1575ef3ec2ed0d">checkLog</a>(ofLogLevel level, const string &amp;module)</td><td class="entry"><a class="el" href="classof_log.html">ofLog</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classof_log.html#ae6e5efb037f89eec86c478c7501b7f11">level</a></td><td class="entry"><a class="el" href="classof_log.html">ofLog</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classof_log.html#aa1f61b048422566b8bdd9c50f5a05f44">module</a></td><td class="entry"><a class="el" href="classof_log.html">ofLog</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classof_log.html#a11a926adbe4ef4bfbee393345f5df1cc">ofLog</a>()</td><td class="entry"><a class="el" href="classof_log.html">ofLog</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classof_log.html#a8df66599c4ab1c9d0ebdb379871da3f0">ofLog</a>(ofLogLevel level)</td><td class="entry"><a class="el" href="classof_log.html">ofLog</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classof_log.html#a23271f8fa71758dc7b81b695d36a8df9">ofLog</a>(ofLogLevel level, const string &amp;message)</td><td class="entry"><a class="el" href="classof_log.html">ofLog</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classof_log.html#af7e945ece7482d7d334f5ff328e8ab24">ofLog</a>(ofLogLevel level, const char *format,...)</td><td class="entry"><a class="el" href="classof_log.html">ofLog</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classof_log.html#a2f19640fb8269ff470f9941eca0d39b2">operator&lt;&lt;</a>(const T &amp;value)</td><td class="entry"><a class="el" href="classof_log.html">ofLog</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classof_log.html#a10502cf2a6a2ad636e5f1c4058bd037f">operator&lt;&lt;</a>(std::ostream &amp;(*func)(std::ostream &amp;))</td><td class="entry"><a class="el" href="classof_log.html">ofLog</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classof_log.html#acd753685ca548b145fd33301abe63433">setAutoSpace</a>(bool autoSpace)</td><td class="entry"><a class="el" href="classof_log.html">ofLog</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classof_log.html#a4b80260a00625c5eb189d6377a96dc82">setChannel</a>(ofPtr&lt; ofBaseLoggerChannel &gt; channel)</td><td class="entry"><a class="el" href="classof_log.html">ofLog</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classof_log.html#a8b9d6e1110e97f1c70c6c0f1c1997db1">~ofLog</a>()</td><td class="entry"><a class="el" href="classof_log.html">ofLog</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
 
             </div>

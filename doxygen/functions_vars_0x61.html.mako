@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -52,6 +53,7 @@
       <li><a href="functions.html"><span>All</span></a></li>
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li class="current"><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_type.html"><span>Typedefs</span></a></li>
       <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
       <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
       <li><a href="functions_prop.html"><span>Properties</span></a></li>
@@ -107,10 +109,10 @@
 : <a class="el" href="classof_touch_event_args.html#ad0a0da3f6cffc88256c08e2c283f9b62">ofTouchEventArgs</a>
 </li>
 <li>angleBegin
-: <a class="el" href="structof_sub_path_1_1_command.html#a8a4c870606039afc0bfdc8993788d359">ofSubPath::Command</a>
+: <a class="el" href="structof_path_1_1_command.html#afa56809613ff1abf5ddb21e197c709f0">ofPath::Command</a>
 </li>
 <li>angleEnd
-: <a class="el" href="structof_sub_path_1_1_command.html#ad2f9e94ab933873580374c75190ccd20">ofSubPath::Command</a>
+: <a class="el" href="structof_path_1_1_command.html#a057970c33f3a6107720849a6625cbe5f">ofPath::Command</a>
 </li>
 <li>antiqueWhite
 : <a class="el" href="classof_color__.html#ac4d4e1b8b7f3ab0c1359373cf7f8e8c6">ofColor_&lt; PixelType &gt;</a>

@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -180,7 +181,7 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a627aeeec0e6637f46eea99ad37e81798"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_gst_video_player.html#a627aeeec0e6637f46eea99ad37e81798">allocate</a> (int bpp)</td></tr>
+<tr class="memitem:a627aeeec0e6637f46eea99ad37e81798"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_gst_video_player.html#a627aeeec0e6637f46eea99ad37e81798">allocate</a> (int <a class="el" href="of_app_e_g_l_window_8cpp.html#a54b1f406bd10413e14f8279d45da6e41">bpp</a>)</td></tr>
 <tr class="separator:a627aeeec0e6637f46eea99ad37e81798"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3d97ba6cd0b922dab0fe8c4717d8071"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_gst_video_player.html#ac3d97ba6cd0b922dab0fe8c4717d8071">on_stream_prepared</a> ()</td></tr>
 <tr class="separator:ac3d97ba6cd0b922dab0fe8c4717d8071"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1142,8 +1143,8 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>video/<a class="el" href="of_gst_video_player_8h_source.html">ofGstVideoPlayer.h</a></li>
-<li>video/<a class="el" href="of_gst_video_player_8cpp.html">ofGstVideoPlayer.cpp</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/video/<a class="el" href="of_gst_video_player_8h_source.html">ofGstVideoPlayer.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/video/<a class="el" href="of_gst_video_player_8cpp.html">ofGstVideoPlayer.cpp</a></li>
 </ul>
 </div><!-- contents -->
 

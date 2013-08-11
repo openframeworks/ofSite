@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -154,7 +155,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classof_base_video_player.html#a36a8d556e9e5a92c5f9415e14ca15deb">ofBaseVideoPlayer</a>, <a class="el" href="classof_base_video_grabber.html#a8c7237c2cf5d2aac261d37a0fc22a2a3">ofBaseVideoGrabber</a>, <a class="el" href="classof_gst_video_utils.html#a9c455d0326dd313597b31111d321c357">ofGstVideoUtils</a>, <a class="el" href="classof_gst_video_grabber.html#aba7ede0a638a3f61c628f86f4e409406">ofGstVideoGrabber</a>, <a class="el" href="classof_video_grabber.html#a7f848dbcbab3c49abc82b5c97df0fba4">ofVideoGrabber</a>, <a class="el" href="classof_q_t_kit_grabber.html#a7c2ead7863189fcbc7e069ba57c32ba0">ofQTKitGrabber</a>, <a class="el" href="classof_gst_video_player.html#a3c6486852eecbf2873b456eda03f8879">ofGstVideoPlayer</a>, <a class="el" href="classof_video_player.html#afda9f40e959588862cff21a02de95886">ofVideoPlayer</a>, <a class="el" href="classof_q_t_kit_player.html#a8e83323f66e1c6d3bac1f6794ea33f12">ofQTKitPlayer</a>, <a class="el" href="classof_quick_time_grabber.html#a82b7004cb9da462391efff82bd484fcb">ofQuickTimeGrabber</a>, and <a class="el" href="classof_direct_show_grabber.html#a28a14fb712670f3adb146cea7301c0a5">ofDirectShowGrabber</a>.</p>
+<p>Implemented in <a class="el" href="classof_base_video_player.html#a36a8d556e9e5a92c5f9415e14ca15deb">ofBaseVideoPlayer</a>, <a class="el" href="classof_base_video_grabber.html#a8c7237c2cf5d2aac261d37a0fc22a2a3">ofBaseVideoGrabber</a>, <a class="el" href="classof_gst_video_utils.html#a9c455d0326dd313597b31111d321c357">ofGstVideoUtils</a>, <a class="el" href="classof_gst_video_grabber.html#aba7ede0a638a3f61c628f86f4e409406">ofGstVideoGrabber</a>, <a class="el" href="classof_video_grabber.html#a7f848dbcbab3c49abc82b5c97df0fba4">ofVideoGrabber</a>, <a class="el" href="classof_q_t_kit_grabber.html#a7c2ead7863189fcbc7e069ba57c32ba0">ofQTKitGrabber</a>, <a class="el" href="classof_video_player.html#afda9f40e959588862cff21a02de95886">ofVideoPlayer</a>, <a class="el" href="classof_gst_video_player.html#a3c6486852eecbf2873b456eda03f8879">ofGstVideoPlayer</a>, <a class="el" href="classof_q_t_kit_player.html#a8e83323f66e1c6d3bac1f6794ea33f12">ofQTKitPlayer</a>, <a class="el" href="classof_quick_time_grabber.html#a82b7004cb9da462391efff82bd484fcb">ofQuickTimeGrabber</a>, and <a class="el" href="classof_direct_show_grabber.html#a28a14fb712670f3adb146cea7301c0a5">ofDirectShowGrabber</a>.</p>
 
 </div>
 </div>
@@ -179,12 +180,12 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classof_base_video_player.html#a0490cb3fdf0a98aed9232fd14fd8873d">ofBaseVideoPlayer</a>, <a class="el" href="classof_base_video_grabber.html#a49571efac6ac055c07b5147e15a98643">ofBaseVideoGrabber</a>, <a class="el" href="classof_gst_video_utils.html#af192b063cad4fbea88f290e3b501eb06">ofGstVideoUtils</a>, <a class="el" href="classof_q_t_kit_player.html#a443fedb4f66d9374fb305d9740441a46">ofQTKitPlayer</a>, <a class="el" href="classof_video_player.html#a73119c8aaa8ca9fb7890668d4d9479c6">ofVideoPlayer</a>, <a class="el" href="classof_video_grabber.html#a946631a547cac9c3ebb2e4a7072a9a79">ofVideoGrabber</a>, <a class="el" href="classof_gst_video_grabber.html#af3edeb02c89e43dc4ad0a02b376d4a07">ofGstVideoGrabber</a>, <a class="el" href="classof_gst_video_player.html#a47c80f4972596eeba56af266c20a1206">ofGstVideoPlayer</a>, <a class="el" href="classof_q_t_kit_grabber.html#a1c953577936e62ecc50d8319b4270da7">ofQTKitGrabber</a>, <a class="el" href="classof_quick_time_grabber.html#a06bd850a1a2b9eda86040c06d1d46baf">ofQuickTimeGrabber</a>, and <a class="el" href="classof_direct_show_grabber.html#a81859b980eeb27cd285c435f9c500188">ofDirectShowGrabber</a>.</p>
+<p>Implemented in <a class="el" href="classof_base_video_player.html#a0490cb3fdf0a98aed9232fd14fd8873d">ofBaseVideoPlayer</a>, <a class="el" href="classof_base_video_grabber.html#a49571efac6ac055c07b5147e15a98643">ofBaseVideoGrabber</a>, <a class="el" href="classof_gst_video_utils.html#af192b063cad4fbea88f290e3b501eb06">ofGstVideoUtils</a>, <a class="el" href="classof_video_player.html#a73119c8aaa8ca9fb7890668d4d9479c6">ofVideoPlayer</a>, <a class="el" href="classof_gst_video_grabber.html#af3edeb02c89e43dc4ad0a02b376d4a07">ofGstVideoGrabber</a>, <a class="el" href="classof_q_t_kit_player.html#a443fedb4f66d9374fb305d9740441a46">ofQTKitPlayer</a>, <a class="el" href="classof_video_grabber.html#a946631a547cac9c3ebb2e4a7072a9a79">ofVideoGrabber</a>, <a class="el" href="classof_gst_video_player.html#a47c80f4972596eeba56af266c20a1206">ofGstVideoPlayer</a>, <a class="el" href="classof_q_t_kit_grabber.html#a1c953577936e62ecc50d8319b4270da7">ofQTKitGrabber</a>, <a class="el" href="classof_quick_time_grabber.html#a06bd850a1a2b9eda86040c06d1d46baf">ofQuickTimeGrabber</a>, and <a class="el" href="classof_direct_show_grabber.html#a81859b980eeb27cd285c435f9c500188">ofDirectShowGrabber</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>types/<a class="el" href="of_base_types_8h_source.html">ofBaseTypes.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/types/<a class="el" href="of_base_types_8h_source.html">ofBaseTypes.h</a></li>
 </ul>
 </div><!-- contents -->
 

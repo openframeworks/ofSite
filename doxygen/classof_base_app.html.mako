@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -106,6 +107,34 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a898de8b201e826b275383aef939766c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab074562a262bac0a254d5030b7aed083"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_app.html#ab074562a262bac0a254d5030b7aed083">windowEntry</a> (int state)</td></tr>
 <tr class="separator:ab074562a262bac0a254d5030b7aed083"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa63884c2e05deb6e75037ccd95396dbd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_app.html#aa63884c2e05deb6e75037ccd95396dbd">setup</a> (<a class="el" href="classof_event_args.html">ofEventArgs</a> &amp;args)</td></tr>
+<tr class="separator:aa63884c2e05deb6e75037ccd95396dbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00bad37a34c7151c5bac509789d319cc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_app.html#a00bad37a34c7151c5bac509789d319cc">update</a> (<a class="el" href="classof_event_args.html">ofEventArgs</a> &amp;args)</td></tr>
+<tr class="separator:a00bad37a34c7151c5bac509789d319cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae57f17feb9950e0820906ee0ecfe631a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_app.html#ae57f17feb9950e0820906ee0ecfe631a">draw</a> (<a class="el" href="classof_event_args.html">ofEventArgs</a> &amp;args)</td></tr>
+<tr class="separator:ae57f17feb9950e0820906ee0ecfe631a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7281538f57fe5ad31936038b43cfd640"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_app.html#a7281538f57fe5ad31936038b43cfd640">exit</a> (<a class="el" href="classof_event_args.html">ofEventArgs</a> &amp;args)</td></tr>
+<tr class="separator:a7281538f57fe5ad31936038b43cfd640"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43f1c88bd9b098c2871248362a1537fb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_app.html#a43f1c88bd9b098c2871248362a1537fb">windowResized</a> (<a class="el" href="classof_resize_event_args.html">ofResizeEventArgs</a> &amp;resize)</td></tr>
+<tr class="separator:a43f1c88bd9b098c2871248362a1537fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a004e6473e09b9c0386cdaf49302c12e6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_app.html#a004e6473e09b9c0386cdaf49302c12e6">keyPressed</a> (<a class="el" href="classof_key_event_args.html">ofKeyEventArgs</a> &amp;key)</td></tr>
+<tr class="separator:a004e6473e09b9c0386cdaf49302c12e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21c96953218cbe1532da898a2bcff891"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_app.html#a21c96953218cbe1532da898a2bcff891">keyReleased</a> (<a class="el" href="classof_key_event_args.html">ofKeyEventArgs</a> &amp;key)</td></tr>
+<tr class="separator:a21c96953218cbe1532da898a2bcff891"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a952b06a0a1fc535aace0675e4012ae12"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_app.html#a952b06a0a1fc535aace0675e4012ae12">mouseMoved</a> (<a class="el" href="classof_mouse_event_args.html">ofMouseEventArgs</a> &amp;mouse)</td></tr>
+<tr class="separator:a952b06a0a1fc535aace0675e4012ae12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5120c8d7cce29dafc7a2707f0f073e6b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_app.html#a5120c8d7cce29dafc7a2707f0f073e6b">mouseDragged</a> (<a class="el" href="classof_mouse_event_args.html">ofMouseEventArgs</a> &amp;mouse)</td></tr>
+<tr class="separator:a5120c8d7cce29dafc7a2707f0f073e6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa186ea56006c8d11b029256255a3f19d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_app.html#aa186ea56006c8d11b029256255a3f19d">mousePressed</a> (<a class="el" href="classof_mouse_event_args.html">ofMouseEventArgs</a> &amp;mouse)</td></tr>
+<tr class="separator:aa186ea56006c8d11b029256255a3f19d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5005427b2a4eed5a3296b08ebe2026c3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_app.html#a5005427b2a4eed5a3296b08ebe2026c3">mouseReleased</a> (<a class="el" href="classof_mouse_event_args.html">ofMouseEventArgs</a> &amp;mouse)</td></tr>
+<tr class="separator:a5005427b2a4eed5a3296b08ebe2026c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8031f1e66c71689419727a4280f61661"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_app.html#a8031f1e66c71689419727a4280f61661">windowEntry</a> (<a class="el" href="classof_entry_event_args.html">ofEntryEventArgs</a> &amp;entry)</td></tr>
+<tr class="separator:a8031f1e66c71689419727a4280f61661"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bdf6a06cf2e307d8a9de8b8f2697667"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_app.html#a6bdf6a06cf2e307d8a9de8b8f2697667">dragged</a> (<a class="el" href="classof_drag_info.html">ofDragInfo</a> &amp;drag)</td></tr>
+<tr class="separator:a6bdf6a06cf2e307d8a9de8b8f2697667"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a234a38923637dceef6d254c9414cac09"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_app.html#a234a38923637dceef6d254c9414cac09">messageReceived</a> (<a class="el" href="classof_message.html">ofMessage</a> &amp;message)</td></tr>
+<tr class="separator:a234a38923637dceef6d254c9414cac09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classof_base_sound_input"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classof_base_sound_input')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classof_base_sound_input.html">ofBaseSoundInput</a></td></tr>
 <tr class="memitem:a430cbf02af4a2a14767b53fcc5cc1383 inherit pub_methods_classof_base_sound_input"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_sound_input.html#a430cbf02af4a2a14767b53fcc5cc1383">~ofBaseSoundInput</a> ()</td></tr>
 <tr class="separator:a430cbf02af4a2a14767b53fcc5cc1383 inherit pub_methods_classof_base_sound_input"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -204,6 +233,30 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a6bdf6a06cf2e307d8a9de8b8f2697667"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ofBaseApp::dragged </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classof_drag_info.html">ofDragInfo</a> &amp;&#160;</td>
+          <td class="paramname"><em>drag</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a3b01a548b72abc506e8cfbfefeff8c13"></a>
 <div class="memitem">
 <div class="memproto">
@@ -227,6 +280,30 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ae57f17feb9950e0820906ee0ecfe631a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ofBaseApp::draw </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classof_event_args.html">ofEventArgs</a> &amp;&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a9a0e95c48962da71745e68bef8dca77f"></a>
 <div class="memitem">
 <div class="memproto">
@@ -238,6 +315,30 @@ Public Attributes</h2></td></tr>
           <td class="memname">virtual void ofBaseApp::exit </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7281538f57fe5ad31936038b43cfd640"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ofBaseApp::exit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classof_event_args.html">ofEventArgs</a> &amp;&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -298,6 +399,30 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a004e6473e09b9c0386cdaf49302c12e6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ofBaseApp::keyPressed </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classof_key_event_args.html">ofKeyEventArgs</a> &amp;&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a4bd70cdd1ef0b2cca3f0e6b055b30322"></a>
 <div class="memitem">
 <div class="memproto">
@@ -310,6 +435,54 @@ Public Attributes</h2></td></tr>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a21c96953218cbe1532da898a2bcff891"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ofBaseApp::keyReleased </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classof_key_event_args.html">ofKeyEventArgs</a> &amp;&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a234a38923637dceef6d254c9414cac09"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ofBaseApp::messageReceived </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classof_message.html">ofMessage</a> &amp;&#160;</td>
+          <td class="paramname"><em>message</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -362,6 +535,30 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a5120c8d7cce29dafc7a2707f0f073e6b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ofBaseApp::mouseDragged </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classof_mouse_event_args.html">ofMouseEventArgs</a> &amp;&#160;</td>
+          <td class="paramname"><em>mouse</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a0fc599786edddffb75e0b9c961cd8225"></a>
 <div class="memitem">
 <div class="memproto">
@@ -385,6 +582,30 @@ Public Attributes</h2></td></tr>
           <td></td>
           <td>)</td>
           <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a952b06a0a1fc535aace0675e4012ae12"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ofBaseApp::mouseMoved </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classof_mouse_event_args.html">ofMouseEventArgs</a> &amp;&#160;</td>
+          <td class="paramname"><em>mouse</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>
@@ -425,6 +646,30 @@ Public Attributes</h2></td></tr>
           <td></td>
           <td>)</td>
           <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa186ea56006c8d11b029256255a3f19d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ofBaseApp::mousePressed </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classof_mouse_event_args.html">ofMouseEventArgs</a> &amp;&#160;</td>
+          <td class="paramname"><em>mouse</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>
@@ -499,6 +744,30 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a5005427b2a4eed5a3296b08ebe2026c3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ofBaseApp::mouseReleased </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classof_mouse_event_args.html">ofMouseEventArgs</a> &amp;&#160;</td>
+          <td class="paramname"><em>mouse</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a3130c459242740d4745dfa39bc0778a2"></a>
 <div class="memitem">
 <div class="memproto">
@@ -510,6 +779,30 @@ Public Attributes</h2></td></tr>
           <td class="memname">virtual void ofBaseApp::setup </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa63884c2e05deb6e75037ccd95396dbd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ofBaseApp::setup </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classof_event_args.html">ofEventArgs</a> &amp;&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -545,6 +838,30 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a00bad37a34c7151c5bac509789d319cc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ofBaseApp::update </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classof_event_args.html">ofEventArgs</a> &amp;&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="ab074562a262bac0a254d5030b7aed083"></a>
 <div class="memitem">
 <div class="memproto">
@@ -557,6 +874,30 @@ Public Attributes</h2></td></tr>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8031f1e66c71689419727a4280f61661"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ofBaseApp::windowEntry </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classof_entry_event_args.html">ofEntryEventArgs</a> &amp;&#160;</td>
+          <td class="paramname"><em>entry</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -603,6 +944,30 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a43f1c88bd9b098c2871248362a1537fb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ofBaseApp::windowResized </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classof_resize_event_args.html">ofResizeEventArgs</a> &amp;&#160;</td>
+          <td class="paramname"><em>resize</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a class="anchor" id="a00bda1b05dcf99834d4a0c96c170f11b"></a>
 <div class="memitem">
@@ -629,7 +994,7 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>app/<a class="el" href="of_base_app_8h_source.html">ofBaseApp.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/app/<a class="el" href="of_base_app_8h_source.html">ofBaseApp.h</a></li>
 </ul>
 </div><!-- contents -->
 

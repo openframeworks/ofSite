@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -86,9 +87,6 @@
 </li>
 <li>reflect_rows()
 : <a class="el" href="of_matrix4x4_8cpp.html#a1b40bdbbdb0987023bea17d9d20d5c69">ofMatrix4x4.cpp</a>
-</li>
-<li>rotateMouseXY()
-: <a class="el" href="of_app_glut_window_8cpp.html#af4882afbe21027c75b5b5bf84a7dd829">ofAppGlutWindow.cpp</a>
 </li>
 </ul>
 </div><!-- contents -->

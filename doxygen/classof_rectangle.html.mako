@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -232,8 +233,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4a2368685282328e3c83e26ff95b4b2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc469e3b0470821b9827d0d4d33d8455"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_rectangle.html">ofRectangle</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_rectangle.html#adc469e3b0470821b9827d0d4d33d8455">operator=</a> (const <a class="el" href="classof_rectangle.html">ofRectangle</a> &amp;rect)</td></tr>
 <tr class="separator:adc469e3b0470821b9827d0d4d33d8455"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a513d2c964f138e87f452f333d0377973"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_rectangle.html">ofRectangle</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_rectangle.html#a513d2c964f138e87f452f333d0377973">operator+</a> (const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;p)</td></tr>
-<tr class="separator:a513d2c964f138e87f452f333d0377973"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a222c223e735d02508f0d5ce819ad83"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_rectangle.html">ofRectangle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_rectangle.html#a1a222c223e735d02508f0d5ce819ad83">operator+</a> (const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;p)</td></tr>
+<tr class="separator:a1a222c223e735d02508f0d5ce819ad83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf9e6372fd763b26aeeba3b47b49614a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_rectangle.html#acf9e6372fd763b26aeeba3b47b49614a">operator==</a> (const <a class="el" href="classof_rectangle.html">ofRectangle</a> &amp;rect) const </td></tr>
 <tr class="separator:acf9e6372fd763b26aeeba3b47b49614a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33011fbd4aa2974d14ec55dc1c76cd9a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_rectangle.html#a33011fbd4aa2974d14ec55dc1c76cd9a">operator!=</a> (const <a class="el" href="classof_rectangle.html">ofRectangle</a> &amp;rect) const </td></tr>
@@ -1375,12 +1376,12 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a513d2c964f138e87f452f333d0377973"></a>
+<a class="anchor" id="a1a222c223e735d02508f0d5ce819ad83"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classof_rectangle.html">ofRectangle</a> &amp; ofRectangle::operator+ </td>
+          <td class="memname"><a class="el" href="classof_rectangle.html">ofRectangle</a> ofRectangle::operator+ </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;&#160;</td>
           <td class="paramname"><em>p</em></td><td>)</td>
@@ -2124,8 +2125,8 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>types/<a class="el" href="of_rectangle_8h_source.html">ofRectangle.h</a></li>
-<li>types/<a class="el" href="of_rectangle_8cpp.html">ofRectangle.cpp</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/types/<a class="el" href="of_rectangle_8h_source.html">ofRectangle.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/types/<a class="el" href="of_rectangle_8cpp.html">ofRectangle.cpp</a></li>
 </ul>
 </div><!-- contents -->
 

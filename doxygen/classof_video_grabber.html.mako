@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -94,14 +95,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a009de9482ea4ee985de1947cbf339ad9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a886108dd0d5fb4bd110d922f7690ba80"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_ptr.html">ofPtr</a>&lt; <a class="el" href="classof_base_video_grabber.html">ofBaseVideoGrabber</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_video_grabber.html#a886108dd0d5fb4bd110d922f7690ba80">getGrabber</a> ()</td></tr>
 <tr class="separator:a886108dd0d5fb4bd110d922f7690ba80"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4cbf5779fa46c662bbca0832c524946c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_video_grabber.html#a4cbf5779fa46c662bbca0832c524946c">listDevices</a> ()</td></tr>
-<tr class="separator:a4cbf5779fa46c662bbca0832c524946c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaedc98da6b8582effda8224b415690ed"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="classof_video_device.html">ofVideoDevice</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_video_grabber.html#aaedc98da6b8582effda8224b415690ed">listDevices</a> ()</td></tr>
+<tr class="separator:aaedc98da6b8582effda8224b415690ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a946631a547cac9c3ebb2e4a7072a9a79"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_video_grabber.html#a946631a547cac9c3ebb2e4a7072a9a79">isFrameNew</a> ()</td></tr>
 <tr class="separator:a946631a547cac9c3ebb2e4a7072a9a79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aced0c426fd6967ac2c21900ac1e43823"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_video_grabber.html#aced0c426fd6967ac2c21900ac1e43823">update</a> ()</td></tr>
 <tr class="separator:aced0c426fd6967ac2c21900ac1e43823"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff3ccae0298fe1b664f2518b5fd82205"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_video_grabber.html#aff3ccae0298fe1b664f2518b5fd82205">OF_DEPRECATED_MSG</a> (&quot;Use <a class="el" href="classof_video_grabber.html#aced0c426fd6967ac2c21900ac1e43823">ofVideoGrabber::update</a>() instead.&quot;, void grabFrame())</td></tr>
-<tr class="separator:aff3ccae0298fe1b664f2518b5fd82205"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f848dbcbab3c49abc82b5c97df0fba4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_video_grabber.html#a7f848dbcbab3c49abc82b5c97df0fba4">close</a> ()</td></tr>
 <tr class="separator:a7f848dbcbab3c49abc82b5c97df0fba4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a9697fb37dbdbd76f256bb845b2b33f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_video_grabber.html#a7a9697fb37dbdbd76f256bb845b2b33f">initGrabber</a> (int w, int h)</td></tr>
@@ -610,7 +609,7 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a4cbf5779fa46c662bbca0832c524946c"></a>
+<a class="anchor" id="aaedc98da6b8582effda8224b415690ed"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -618,7 +617,7 @@ Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void ofVideoGrabber::listDevices </td>
+          <td class="memname">vector&lt; <a class="el" href="classof_video_device.html">ofVideoDevice</a> &gt; ofVideoGrabber::listDevices </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -631,33 +630,7 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classof_base_video_grabber.html#a0ee487203961b1d6b635598a181a9835">ofBaseVideoGrabber</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="aff3ccae0298fe1b664f2518b5fd82205"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">ofVideoGrabber::OF_DEPRECATED_MSG </td>
-          <td>(</td>
-          <td class="paramtype">&quot;Use <a class="el" href="classof_video_grabber.html#aced0c426fd6967ac2c21900ac1e43823">ofVideoGrabber::update</a>() instead.&quot;&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void &#160;</td>
-          <td class="paramname"><em>grabFrame</em>()&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p>Implements <a class="el" href="classof_base_video_grabber.html#ae82f0a1c87fe69c86f1738cae560efb2">ofBaseVideoGrabber</a>.</p>
 
 </div>
 </div>
@@ -981,8 +954,8 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>video/<a class="el" href="of_video_grabber_8h_source.html">ofVideoGrabber.h</a></li>
-<li>video/<a class="el" href="of_video_grabber_8cpp.html">ofVideoGrabber.cpp</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/video/<a class="el" href="of_video_grabber_8h_source.html">ofVideoGrabber.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/video/<a class="el" href="of_video_grabber_8cpp.html">ofVideoGrabber.cpp</a></li>
 </ul>
 </div><!-- contents -->
 

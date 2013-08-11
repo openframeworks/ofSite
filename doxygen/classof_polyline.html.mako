@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -64,7 +65,7 @@
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab8b6c33d5cb672d393aa107434d908c2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#ab8b6c33d5cb672d393aa107434d908c2">ofPolyline</a> ()</td></tr>
 <tr class="separator:ab8b6c33d5cb672d393aa107434d908c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5867bbb1004e1957dc3804f328e59c25"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#a5867bbb1004e1957dc3804f328e59c25">ofPolyline</a> (const vector&lt; <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &gt; &amp;<a class="el" href="of_bitmap_font_8cpp.html#aaebd14048566bff4d6920e945b7de664">verts</a>)</td></tr>
+<tr class="memitem:a5867bbb1004e1957dc3804f328e59c25"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#a5867bbb1004e1957dc3804f328e59c25">ofPolyline</a> (const vector&lt; <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &gt; &amp;verts)</td></tr>
 <tr class="separator:a5867bbb1004e1957dc3804f328e59c25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8087ebabf60380f8736282d0e98118bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#a8087ebabf60380f8736282d0e98118bc">clear</a> ()</td></tr>
 <tr class="memdesc:a8087ebabf60380f8736282d0e98118bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">remove all the points  <a href="#a8087ebabf60380f8736282d0e98118bc">More...</a><br/></td></tr>
@@ -74,66 +75,66 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a39230dd712cb2e9647ed0679eef06124"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1616ebeee425ab5f8e03853d2a83c4c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#a1616ebeee425ab5f8e03853d2a83c4c4">addVertex</a> (float x, float y, float z=0)</td></tr>
 <tr class="separator:a1616ebeee425ab5f8e03853d2a83c4c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0825db11f31148731aecf1cbb33450de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#a0825db11f31148731aecf1cbb33450de">addVertices</a> (const vector&lt; <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &gt; &amp;<a class="el" href="of_bitmap_font_8cpp.html#aaebd14048566bff4d6920e945b7de664">verts</a>)</td></tr>
+<tr class="memitem:a0825db11f31148731aecf1cbb33450de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#a0825db11f31148731aecf1cbb33450de">addVertices</a> (const vector&lt; <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &gt; &amp;verts)</td></tr>
 <tr class="separator:a0825db11f31148731aecf1cbb33450de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54c18b6cbc55bf56ca34352b62a2e8f2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#a54c18b6cbc55bf56ca34352b62a2e8f2">OF_DEPRECATED_MSG</a> (&quot;Use <a class="el" href="classof_polyline.html#a0825db11f31148731aecf1cbb33450de">ofPolyline::addVertices</a> instead&quot;, void addVertexes(const vector&lt; <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &gt; &amp;<a class="el" href="of_bitmap_font_8cpp.html#aaebd14048566bff4d6920e945b7de664">verts</a>))</td></tr>
-<tr class="separator:a54c18b6cbc55bf56ca34352b62a2e8f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f55273bea4c37d295d4d40d84b594bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#a4f55273bea4c37d295d4d40d84b594bc">addVertices</a> (const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> *<a class="el" href="of_bitmap_font_8cpp.html#aaebd14048566bff4d6920e945b7de664">verts</a>, int numverts)</td></tr>
+<tr class="memitem:a4f55273bea4c37d295d4d40d84b594bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#a4f55273bea4c37d295d4d40d84b594bc">addVertices</a> (const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> *verts, int numverts)</td></tr>
 <tr class="separator:a4f55273bea4c37d295d4d40d84b594bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ec0e046fc413e4fb7a3e3e7e7e642b8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#a1ec0e046fc413e4fb7a3e3e7e7e642b8">OF_DEPRECATED_MSG</a> (&quot;Use <a class="el" href="classof_polyline.html#a0825db11f31148731aecf1cbb33450de">ofPolyline::addVertices</a> instead&quot;, void addVertexes(const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> *<a class="el" href="of_bitmap_font_8cpp.html#aaebd14048566bff4d6920e945b7de664">verts</a>, int numverts))</td></tr>
-<tr class="separator:a1ec0e046fc413e4fb7a3e3e7e7e642b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c7d5b95780ebf1aefb079f55bcf8d7a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#a4c7d5b95780ebf1aefb079f55bcf8d7a">lineTo</a> (const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;to)</td></tr>
 <tr class="separator:a4c7d5b95780ebf1aefb079f55bcf8d7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb12c5445d0f02e5dc7fbdeb9b91925e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#afb12c5445d0f02e5dc7fbdeb9b91925e">lineTo</a> (float x, float y, float z=0)</td></tr>
 <tr class="separator:afb12c5445d0f02e5dc7fbdeb9b91925e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad87e96f81bcdb53e49a842825e3eba3c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#ad87e96f81bcdb53e49a842825e3eba3c">arc</a> (const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;center, float radiusX, float radiusY, float angleBegin, float angleEnd, bool clockwise, int curveResolution=20)</td></tr>
-<tr class="separator:ad87e96f81bcdb53e49a842825e3eba3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad651321496a4cdc7011d44eaacf5159c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#ad651321496a4cdc7011d44eaacf5159c">arc</a> (const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;center, float radiusX, float radiusY, float angleBegin, float angleEnd, int curveResolution=20)</td></tr>
-<tr class="separator:ad651321496a4cdc7011d44eaacf5159c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4676b5961f01a5c7faab2da4aae0581c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#a4676b5961f01a5c7faab2da4aae0581c">arc</a> (float x, float y, float radiusX, float radiusY, float angleBegin, float angleEnd, int curveResolution=20)</td></tr>
-<tr class="separator:a4676b5961f01a5c7faab2da4aae0581c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf4f4f25105a894d696e0e2b9acf7ff6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#adf4f4f25105a894d696e0e2b9acf7ff6">arc</a> (float x, float y, float z, float radiusX, float radiusY, float angleBegin, float angleEnd, int curveResolution=20)</td></tr>
-<tr class="separator:adf4f4f25105a894d696e0e2b9acf7ff6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3670ab8a82139711d8f264fc76889539"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#a3670ab8a82139711d8f264fc76889539">arcNegative</a> (const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;center, float radiusX, float radiusY, float angleBegin, float angleEnd, int curveResolution=20)</td></tr>
-<tr class="separator:a3670ab8a82139711d8f264fc76889539"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab71bb4c424e087642fe6f2902d033719"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#ab71bb4c424e087642fe6f2902d033719">arcNegative</a> (float x, float y, float radiusX, float radiusY, float angleBegin, float angleEnd, int curveResolution=20)</td></tr>
-<tr class="separator:ab71bb4c424e087642fe6f2902d033719"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04c4e9f6dfea9d24a8dd6fbcada01a64"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#a04c4e9f6dfea9d24a8dd6fbcada01a64">arcNegative</a> (float x, float y, float z, float radiusX, float radiusY, float angleBegin, float angleEnd, int curveResolution=20)</td></tr>
-<tr class="separator:a04c4e9f6dfea9d24a8dd6fbcada01a64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f749f4980bf8f1d5e6485c60c427881"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#a8f749f4980bf8f1d5e6485c60c427881">curveTo</a> (const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;to, int curveResolution=16)</td></tr>
-<tr class="separator:a8f749f4980bf8f1d5e6485c60c427881"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acfb0eb1be03677ef522bab2af60929c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#acfb0eb1be03677ef522bab2af60929c0">curveTo</a> (float x, float y, float z=0, int curveResolution=16)</td></tr>
-<tr class="separator:acfb0eb1be03677ef522bab2af60929c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adcb0cecaf02bd617b2dd0e1dad9f1d37"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#adcb0cecaf02bd617b2dd0e1dad9f1d37">bezierTo</a> (const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;cp1, const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;cp2, const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;to, int curveResolution=16)</td></tr>
-<tr class="memdesc:adcb0cecaf02bd617b2dd0e1dad9f1d37"><td class="mdescLeft">&#160;</td><td class="mdescRight">cubic bezier  <a href="#adcb0cecaf02bd617b2dd0e1dad9f1d37">More...</a><br/></td></tr>
-<tr class="separator:adcb0cecaf02bd617b2dd0e1dad9f1d37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ae7caff9acd3e4e019a0bb9745ef0cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#a6ae7caff9acd3e4e019a0bb9745ef0cd">bezierTo</a> (float cx1, float cy1, float cx2, float cy2, float x, float y, int curveResolution=16)</td></tr>
-<tr class="separator:a6ae7caff9acd3e4e019a0bb9745ef0cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a357b5cf46f75c823159c9dc6679088f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#a357b5cf46f75c823159c9dc6679088f3">bezierTo</a> (float cx1, float cy1, float cz1, float cx2, float cy2, float cz2, float x, float y, float z, int curveResolution=16)</td></tr>
-<tr class="separator:a357b5cf46f75c823159c9dc6679088f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a85cd8239ccdc4ccc7cb9c040aeda5e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#a0a85cd8239ccdc4ccc7cb9c040aeda5e">quadBezierTo</a> (float cx1, float cy1, float cz1, float cx2, float cy2, float cz2, float x, float y, float z, int curveResolution=16)</td></tr>
-<tr class="memdesc:a0a85cd8239ccdc4ccc7cb9c040aeda5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">quadratic bezier (lower resolution than cubic)  <a href="#a0a85cd8239ccdc4ccc7cb9c040aeda5e">More...</a><br/></td></tr>
-<tr class="separator:a0a85cd8239ccdc4ccc7cb9c040aeda5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab47724b26a9dfbd6081b52f6574896d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#ab47724b26a9dfbd6081b52f6574896d6">quadBezierTo</a> (const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;p1, const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;p2, const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;p3, int curveResolution=16)</td></tr>
-<tr class="separator:ab47724b26a9dfbd6081b52f6574896d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae41accef12a150b3697adf712face9d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#ae41accef12a150b3697adf712face9d2">quadBezierTo</a> (float cx1, float cy1, float cx2, float cy2, float x, float y, int curveResolution=16)</td></tr>
-<tr class="separator:ae41accef12a150b3697adf712face9d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9dd4d7bd3893646a2113d34031065449"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_polyline.html">ofPolyline</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#a9dd4d7bd3893646a2113d34031065449">getSmoothed</a> (int smoothingSize, float smoothingShape=0)</td></tr>
-<tr class="separator:a9dd4d7bd3893646a2113d34031065449"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90c7d2040aff73aa29b68754f54ddfdb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_polyline.html">ofPolyline</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#a90c7d2040aff73aa29b68754f54ddfdb">getResampledBySpacing</a> (float spacing)</td></tr>
-<tr class="separator:a90c7d2040aff73aa29b68754f54ddfdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6eeaa3a902be5a10ca2267e29f668621"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_polyline.html">ofPolyline</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#a6eeaa3a902be5a10ca2267e29f668621">getResampledByCount</a> (int count)</td></tr>
-<tr class="separator:a6eeaa3a902be5a10ca2267e29f668621"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa7b17651f31e3c2e86f62ffec7ce256"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#afa7b17651f31e3c2e86f62ffec7ce256">insertVertex</a> (const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;p, int index)</td></tr>
+<tr class="separator:afa7b17651f31e3c2e86f62ffec7ce256"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bc4b0b979c5bdb1ab5736825882600e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#a9bc4b0b979c5bdb1ab5736825882600e">insertVertex</a> (float x, float y, float z, int index)</td></tr>
+<tr class="separator:a9bc4b0b979c5bdb1ab5736825882600e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cd721b87265d0e7b9fa0cd1581f0dd5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#a9cd721b87265d0e7b9fa0cd1581f0dd5">arc</a> (const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;center, float radiusX, float radiusY, float angleBegin, float angleEnd, bool clockwise, int circleResolution=20)</td></tr>
+<tr class="separator:a9cd721b87265d0e7b9fa0cd1581f0dd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53387470756ad8619854f9597ab86c04"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#a53387470756ad8619854f9597ab86c04">arc</a> (const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;center, float radiusX, float radiusY, float angleBegin, float angleEnd, int circleResolution=20)</td></tr>
+<tr class="separator:a53387470756ad8619854f9597ab86c04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a629b25b525f86b77f0981f3bdb8ffe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#a2a629b25b525f86b77f0981f3bdb8ffe">arc</a> (float x, float y, float radiusX, float radiusY, float angleBegin, float angleEnd, int circleResolution=20)</td></tr>
+<tr class="separator:a2a629b25b525f86b77f0981f3bdb8ffe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad77909422e95a49bbfb1ac9ac34af5f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#ad77909422e95a49bbfb1ac9ac34af5f5">arc</a> (float x, float y, float z, float radiusX, float radiusY, float angleBegin, float angleEnd, int circleResolution=20)</td></tr>
+<tr class="separator:ad77909422e95a49bbfb1ac9ac34af5f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79cdf2e59d8666befde309b0cb49f181"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#a79cdf2e59d8666befde309b0cb49f181">arcNegative</a> (const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;center, float radiusX, float radiusY, float angleBegin, float angleEnd, int circleResolution=20)</td></tr>
+<tr class="separator:a79cdf2e59d8666befde309b0cb49f181"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05e0a55228006f4b854c9880a9369fe2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#a05e0a55228006f4b854c9880a9369fe2">arcNegative</a> (float x, float y, float radiusX, float radiusY, float angleBegin, float angleEnd, int circleResolution=20)</td></tr>
+<tr class="separator:a05e0a55228006f4b854c9880a9369fe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10e1e5ab940665c49fc6492a97967cda"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#a10e1e5ab940665c49fc6492a97967cda">arcNegative</a> (float x, float y, float z, float radiusX, float radiusY, float angleBegin, float angleEnd, int circleResolution=20)</td></tr>
+<tr class="separator:a10e1e5ab940665c49fc6492a97967cda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a566c26e3765c088511f654b7d9f1f5b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#a566c26e3765c088511f654b7d9f1f5b2">curveTo</a> (const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;to, int curveResolution=20)</td></tr>
+<tr class="separator:a566c26e3765c088511f654b7d9f1f5b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fdf5d5e0239d6e0f2f4ed56a64cfde4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#a0fdf5d5e0239d6e0f2f4ed56a64cfde4">curveTo</a> (float x, float y, float z=0, int curveResolution=20)</td></tr>
+<tr class="separator:a0fdf5d5e0239d6e0f2f4ed56a64cfde4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaccdc777a1b32940484f1a780acb1492"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#aaccdc777a1b32940484f1a780acb1492">bezierTo</a> (const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;cp1, const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;cp2, const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;to, int curveResolution=20)</td></tr>
+<tr class="memdesc:aaccdc777a1b32940484f1a780acb1492"><td class="mdescLeft">&#160;</td><td class="mdescRight">cubic bezier  <a href="#aaccdc777a1b32940484f1a780acb1492">More...</a><br/></td></tr>
+<tr class="separator:aaccdc777a1b32940484f1a780acb1492"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e5eec46d2c61416fe375f96447cce6c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#a3e5eec46d2c61416fe375f96447cce6c">bezierTo</a> (float cx1, float cy1, float cx2, float cy2, float x, float y, int curveResolution=20)</td></tr>
+<tr class="separator:a3e5eec46d2c61416fe375f96447cce6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a868f7fa20057694121126ecc3ea51fc6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#a868f7fa20057694121126ecc3ea51fc6">bezierTo</a> (float cx1, float cy1, float cz1, float cx2, float cy2, float cz2, float x, float y, float z, int curveResolution=20)</td></tr>
+<tr class="separator:a868f7fa20057694121126ecc3ea51fc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a532915efc6f31d1f3968a96026ae20ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#a532915efc6f31d1f3968a96026ae20ff">quadBezierTo</a> (float cx1, float cy1, float cz1, float cx2, float cy2, float cz2, float x, float y, float z, int curveResolution=20)</td></tr>
+<tr class="memdesc:a532915efc6f31d1f3968a96026ae20ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">quadratic bezier (lower resolution than cubic)  <a href="#a532915efc6f31d1f3968a96026ae20ff">More...</a><br/></td></tr>
+<tr class="separator:a532915efc6f31d1f3968a96026ae20ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cbfb4e9dc77210fc505b0b5424a7b68"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#a8cbfb4e9dc77210fc505b0b5424a7b68">quadBezierTo</a> (const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;p1, const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;p2, const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;p3, int curveResolution=20)</td></tr>
+<tr class="separator:a8cbfb4e9dc77210fc505b0b5424a7b68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4357915f0e81d0714b1c0cb93b88227"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#ab4357915f0e81d0714b1c0cb93b88227">quadBezierTo</a> (float cx1, float cy1, float cx2, float cy2, float x, float y, int curveResolution=20)</td></tr>
+<tr class="separator:ab4357915f0e81d0714b1c0cb93b88227"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a210cb3ce4ff24dbc32204e98f4ab6c6d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_polyline.html">ofPolyline</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#a210cb3ce4ff24dbc32204e98f4ab6c6d">getSmoothed</a> (int smoothingSize, float smoothingShape=0) const </td></tr>
+<tr class="separator:a210cb3ce4ff24dbc32204e98f4ab6c6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0987281d3104d0d3a5d820972e7f3a0f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_polyline.html">ofPolyline</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#a0987281d3104d0d3a5d820972e7f3a0f">getResampledBySpacing</a> (float spacing) const </td></tr>
+<tr class="separator:a0987281d3104d0d3a5d820972e7f3a0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9356891853d247bfb7ecb6fce9226ecb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_polyline.html">ofPolyline</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#a9356891853d247bfb7ecb6fce9226ecb">getResampledByCount</a> (int count) const </td></tr>
+<tr class="separator:a9356891853d247bfb7ecb6fce9226ecb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99254796152ccddebb114dc743a11f7c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_rectangle.html">ofRectangle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#a99254796152ccddebb114dc743a11f7c">getBoundingBox</a> () const </td></tr>
 <tr class="separator:a99254796152ccddebb114dc743a11f7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9da6811ca1a47f4f303dfe7c4522e8cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#a9da6811ca1a47f4f303dfe7c4522e8cb">getClosestPoint</a> (const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;target, unsigned int *nearestIndex=NULL)</td></tr>
-<tr class="separator:a9da6811ca1a47f4f303dfe7c4522e8cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32408db0b6c76c79f1f1e4ba5c774a2e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#a32408db0b6c76c79f1f1e4ba5c774a2e">inside</a> (float x, float y)</td></tr>
-<tr class="separator:a32408db0b6c76c79f1f1e4ba5c774a2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4309b07a962a7603a809409f52168f8f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#a4309b07a962a7603a809409f52168f8f">inside</a> (const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;p)</td></tr>
-<tr class="separator:a4309b07a962a7603a809409f52168f8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aadbd40bd1205fbe5106ed42e79243ee7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#aadbd40bd1205fbe5106ed42e79243ee7">simplify</a> (float tolerance=0.3)</td></tr>
-<tr class="separator:aadbd40bd1205fbe5106ed42e79243ee7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a635a23041c5458fc958b7856ec1c849c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#a635a23041c5458fc958b7856ec1c849c">getClosestPoint</a> (const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;target, unsigned int *nearestIndex=NULL) const </td></tr>
+<tr class="separator:a635a23041c5458fc958b7856ec1c849c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d10c5c4bd02dc66fc6836de10901768"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#a8d10c5c4bd02dc66fc6836de10901768">inside</a> (float x, float y) const </td></tr>
+<tr class="separator:a8d10c5c4bd02dc66fc6836de10901768"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae32631eac0ef11b570d74ad4f636b86a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#ae32631eac0ef11b570d74ad4f636b86a">inside</a> (const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;p) const </td></tr>
+<tr class="separator:ae32631eac0ef11b570d74ad4f636b86a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5fcfc5805b9d37836d829ecc5ddd28f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#ab5fcfc5805b9d37836d829ecc5ddd28f">simplify</a> (float tolerance=0.3f)</td></tr>
+<tr class="separator:ab5fcfc5805b9d37836d829ecc5ddd28f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad88dd26a8298d54abb9dd3b1f55d00f8"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#ad88dd26a8298d54abb9dd3b1f55d00f8">size</a> () const </td></tr>
 <tr class="memdesc:ad88dd26a8298d54abb9dd3b1f55d00f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">points vector access  <a href="#ad88dd26a8298d54abb9dd3b1f55d00f8">More...</a><br/></td></tr>
 <tr class="separator:ad88dd26a8298d54abb9dd3b1f55d00f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -152,8 +153,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1de14888c9c361bbe772789a69dd5e45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd08a523635b4a9203fb08a1447e9e38"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#abd08a523635b4a9203fb08a1447e9e38">hasChanged</a> ()</td></tr>
 <tr class="separator:abd08a523635b4a9203fb08a1447e9e38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2b523cd1d6fb0d422a7f791cd6b3f99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#ae2b523cd1d6fb0d422a7f791cd6b3f99">flagHasChanged</a> ()</td></tr>
+<tr class="separator:ae2b523cd1d6fb0d422a7f791cd6b3f99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a193202a0774fe5509f3b90827201fe8a"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#a193202a0774fe5509f3b90827201fe8a">getVertices</a> ()</td></tr>
 <tr class="separator:a193202a0774fe5509f3b90827201fe8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e6a752ef2428aa128cae4874aa4d83b"><td class="memItemLeft" align="right" valign="top">const vector&lt; <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#a8e6a752ef2428aa128cae4874aa4d83b">getVertices</a> () const </td></tr>
+<tr class="separator:a8e6a752ef2428aa128cae4874aa4d83b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbf01c8cdc85d3f1d88b2bc985498159"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#adbf01c8cdc85d3f1d88b2bc985498159">getPerimeter</a> () const </td></tr>
 <tr class="separator:adbf01c8cdc85d3f1d88b2bc985498159"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6b1b7fc338691bcc897329f2f5137a6"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#af6b1b7fc338691bcc897329f2f5137a6">getArea</a> () const </td></tr>
@@ -162,6 +167,42 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a95c7c97460efb5f91e752ec05dac7897"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6ea639f218d4ccf8ff616d68ec2bfa6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#af6ea639f218d4ccf8ff616d68ec2bfa6">draw</a> ()</td></tr>
 <tr class="separator:af6ea639f218d4ccf8ff616d68ec2bfa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21af340a3554e972843e343cb1ad119e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#a21af340a3554e972843e343cb1ad119e">setRightVector</a> (<a class="el" href="classof_vec3f.html">ofVec3f</a> v=<a class="el" href="classof_vec3f.html">ofVec3f</a>(0, 0,-1))</td></tr>
+<tr class="separator:a21af340a3554e972843e343cb1ad119e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b055ecaca7740143cf64e70a3a0c01f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_vec3f.html">ofVec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#a3b055ecaca7740143cf64e70a3a0c01f">getRightVector</a> () const </td></tr>
+<tr class="separator:a3b055ecaca7740143cf64e70a3a0c01f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1438a222bebc830c432c08596082bc94"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#a1438a222bebc830c432c08596082bc94">getIndexAtLength</a> (float f) const </td></tr>
+<tr class="separator:a1438a222bebc830c432c08596082bc94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca299cdaacbe35c3e969d5d8c1b51b6c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#aca299cdaacbe35c3e969d5d8c1b51b6c">getIndexAtPercent</a> (float f) const </td></tr>
+<tr class="separator:aca299cdaacbe35c3e969d5d8c1b51b6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afda6a7e35eeef92e57c6e9e00e712d2f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#afda6a7e35eeef92e57c6e9e00e712d2f">getLengthAtIndex</a> (int index) const </td></tr>
+<tr class="separator:afda6a7e35eeef92e57c6e9e00e712d2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8174ffb2486f8f2558d4b237c8f60e7"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#ae8174ffb2486f8f2558d4b237c8f60e7">getLengthAtIndexInterpolated</a> (float findex) const </td></tr>
+<tr class="separator:ae8174ffb2486f8f2558d4b237c8f60e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1273aba9390bdfc92dc22007ec17a76"><td class="memItemLeft" align="right" valign="top"><a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#ad1273aba9390bdfc92dc22007ec17a76">getPointAtLength</a> (float f) const </td></tr>
+<tr class="separator:ad1273aba9390bdfc92dc22007ec17a76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37ceb4a7bd30ee829a88a3f4f140eafe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#a37ceb4a7bd30ee829a88a3f4f140eafe">getPointAtPercent</a> (float f) const </td></tr>
+<tr class="separator:a37ceb4a7bd30ee829a88a3f4f140eafe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dd4cdc0902517dea9e5111fa0844adb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#a9dd4cdc0902517dea9e5111fa0844adb">getPointAtIndexInterpolated</a> (float findex) const </td></tr>
+<tr class="separator:a9dd4cdc0902517dea9e5111fa0844adb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeccc459317884111a98da76df6f0405b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#aeccc459317884111a98da76df6f0405b">getAngleAtIndex</a> (int index) const </td></tr>
+<tr class="separator:aeccc459317884111a98da76df6f0405b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa29b1f5bce663ab90aaa7a46870b77c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#aaa29b1f5bce663ab90aaa7a46870b77c">getAngleAtIndexInterpolated</a> (float findex) const </td></tr>
+<tr class="separator:aaa29b1f5bce663ab90aaa7a46870b77c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8b2974144ee3f4e3a5f06c661b092ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_vec3f.html">ofVec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#ab8b2974144ee3f4e3a5f06c661b092ab">getRotationAtIndex</a> (int index) const </td></tr>
+<tr class="separator:ab8b2974144ee3f4e3a5f06c661b092ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac759341115effbf3234a73d161729f10"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_vec3f.html">ofVec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#ac759341115effbf3234a73d161729f10">getRotationAtIndexInterpolated</a> (float findex) const </td></tr>
+<tr class="separator:ac759341115effbf3234a73d161729f10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef401c1ace69cd969a8eb339b2e4225c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_vec3f.html">ofVec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#aef401c1ace69cd969a8eb339b2e4225c">getTangentAtIndex</a> (int index) const </td></tr>
+<tr class="separator:aef401c1ace69cd969a8eb339b2e4225c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a105f490faa3aeb504f8e439f13646859"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_vec3f.html">ofVec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#a105f490faa3aeb504f8e439f13646859">getTangentAtIndexInterpolated</a> (float findex) const </td></tr>
+<tr class="separator:a105f490faa3aeb504f8e439f13646859"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa63d7ccb1eae31feaa16ddfafe28595b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_vec3f.html">ofVec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#aa63d7ccb1eae31feaa16ddfafe28595b">getNormalAtIndex</a> (int index) const </td></tr>
+<tr class="separator:aa63d7ccb1eae31feaa16ddfafe28595b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4eddc4b543100b15388a33d62e7cc8a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_vec3f.html">ofVec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#a4eddc4b543100b15388a33d62e7cc8a4">getNormalAtIndexInterpolated</a> (float findex) const </td></tr>
+<tr class="separator:a4eddc4b543100b15388a33d62e7cc8a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff40c0656eea2064a2e2a2fd1d64fc1c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_polyline.html#aff40c0656eea2064a2e2a2fd1d64fc1c">getWrappedIndex</a> (int index) const </td></tr>
+<tr class="separator:aff40c0656eea2064a2e2a2fd1d64fc1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -297,7 +338,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ad87e96f81bcdb53e49a842825e3eba3c"></a>
+<a class="anchor" id="a9cd721b87265d0e7b9fa0cd1581f0dd5"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -341,7 +382,7 @@ Static Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>curveResolution</em> = <code>20</code>&#160;</td>
+          <td class="paramname"><em>circleResolution</em> = <code>20</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -353,7 +394,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ad651321496a4cdc7011d44eaacf5159c"></a>
+<a class="anchor" id="a53387470756ad8619854f9597ab86c04"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -394,7 +435,7 @@ Static Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>curveResolution</em> = <code>20</code>&#160;</td>
+          <td class="paramname"><em>circleResolution</em> = <code>20</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -411,7 +452,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a4676b5961f01a5c7faab2da4aae0581c"></a>
+<a class="anchor" id="a2a629b25b525f86b77f0981f3bdb8ffe"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -458,7 +499,7 @@ Static Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>curveResolution</em> = <code>20</code>&#160;</td>
+          <td class="paramname"><em>circleResolution</em> = <code>20</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -475,7 +516,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="adf4f4f25105a894d696e0e2b9acf7ff6"></a>
+<a class="anchor" id="ad77909422e95a49bbfb1ac9ac34af5f5"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -528,7 +569,7 @@ Static Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>curveResolution</em> = <code>20</code>&#160;</td>
+          <td class="paramname"><em>circleResolution</em> = <code>20</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -545,7 +586,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a3670ab8a82139711d8f264fc76889539"></a>
+<a class="anchor" id="a79cdf2e59d8666befde309b0cb49f181"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -586,7 +627,7 @@ Static Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>curveResolution</em> = <code>20</code>&#160;</td>
+          <td class="paramname"><em>circleResolution</em> = <code>20</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -603,7 +644,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ab71bb4c424e087642fe6f2902d033719"></a>
+<a class="anchor" id="a05e0a55228006f4b854c9880a9369fe2"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -650,7 +691,7 @@ Static Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>curveResolution</em> = <code>20</code>&#160;</td>
+          <td class="paramname"><em>circleResolution</em> = <code>20</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -667,7 +708,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a04c4e9f6dfea9d24a8dd6fbcada01a64"></a>
+<a class="anchor" id="a10e1e5ab940665c49fc6492a97967cda"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -720,7 +761,7 @@ Static Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>curveResolution</em> = <code>20</code>&#160;</td>
+          <td class="paramname"><em>circleResolution</em> = <code>20</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -737,7 +778,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="adcb0cecaf02bd617b2dd0e1dad9f1d37"></a>
+<a class="anchor" id="aaccdc777a1b32940484f1a780acb1492"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -763,7 +804,7 @@ Static Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>curveResolution</em> = <code>16</code>&#160;</td>
+          <td class="paramname"><em>curveResolution</em> = <code>20</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -777,7 +818,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a6ae7caff9acd3e4e019a0bb9745ef0cd"></a>
+<a class="anchor" id="a3e5eec46d2c61416fe375f96447cce6c"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -824,7 +865,7 @@ Static Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>curveResolution</em> = <code>16</code>&#160;</td>
+          <td class="paramname"><em>curveResolution</em> = <code>20</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -841,7 +882,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a357b5cf46f75c823159c9dc6679088f3"></a>
+<a class="anchor" id="a868f7fa20057694121126ecc3ea51fc6"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -906,7 +947,7 @@ Static Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>curveResolution</em> = <code>16</code>&#160;</td>
+          <td class="paramname"><em>curveResolution</em> = <code>20</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -955,7 +996,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a8f749f4980bf8f1d5e6485c60c427881"></a>
+<a class="anchor" id="a566c26e3765c088511f654b7d9f1f5b2"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -969,7 +1010,7 @@ Static Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>curveResolution</em> = <code>16</code>&#160;</td>
+          <td class="paramname"><em>curveResolution</em> = <code>20</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -981,7 +1022,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="acfb0eb1be03677ef522bab2af60929c0"></a>
+<a class="anchor" id="a0fdf5d5e0239d6e0f2f4ed56a64cfde4"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1010,7 +1051,7 @@ Static Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>curveResolution</em> = <code>16</code>&#160;</td>
+          <td class="paramname"><em>curveResolution</em> = <code>20</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1042,6 +1083,21 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ae2b523cd1d6fb0d422a7f791cd6b3f99"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofPolyline::flagHasChanged </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a8e8213a2ad5b9ddc293d9708a5296009"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1062,6 +1118,38 @@ Static Public Member Functions</h2></td></tr>
 <span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aeccc459317884111a98da76df6f0405b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ofPolyline::getAngleAtIndex </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aaa29b1f5bce663ab90aaa7a46870b77c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ofPolyline::getAngleAtIndexInterpolated </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>findex</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
 </div><div class="memdoc">
 
 </div>
@@ -1111,7 +1199,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a9da6811ca1a47f4f303dfe7c4522e8cb"></a>
+<a class="anchor" id="a635a23041c5458fc958b7856ec1c849c"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -1130,7 +1218,103 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1438a222bebc830c432c08596082bc94"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ofPolyline::getIndexAtLength </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aca299cdaacbe35c3e969d5d8c1b51b6c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ofPolyline::getIndexAtPercent </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afda6a7e35eeef92e57c6e9e00e712d2f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ofPolyline::getLengthAtIndex </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae8174ffb2486f8f2558d4b237c8f60e7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ofPolyline::getLengthAtIndexInterpolated </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>findex</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa63d7ccb1eae31feaa16ddfafe28595b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classof_vec3f.html">ofVec3f</a> ofPolyline::getNormalAtIndex </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4eddc4b543100b15388a33d62e7cc8a4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classof_vec3f.html">ofVec3f</a> ofPolyline::getNormalAtIndexInterpolated </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>findex</em></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1152,7 +1336,55 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a6eeaa3a902be5a10ca2267e29f668621"></a>
+<a class="anchor" id="a9dd4cdc0902517dea9e5111fa0844adb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> ofPolyline::getPointAtIndexInterpolated </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>findex</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad1273aba9390bdfc92dc22007ec17a76"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> ofPolyline::getPointAtLength </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a37ceb4a7bd30ee829a88a3f4f140eafe"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> ofPolyline::getPointAtPercent </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9356891853d247bfb7ecb6fce9226ecb"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -1161,14 +1393,14 @@ Static Public Member Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>count</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="a90c7d2040aff73aa29b68754f54ddfdb"></a>
+<a class="anchor" id="a0987281d3104d0d3a5d820972e7f3a0f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -1177,14 +1409,61 @@ Static Public Member Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>spacing</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="a9dd4d7bd3893646a2113d34031065449"></a>
+<a class="anchor" id="a3b055ecaca7740143cf64e70a3a0c01f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classof_vec3f.html">ofVec3f</a> ofPolyline::getRightVector </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab8b2974144ee3f4e3a5f06c661b092ab"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classof_vec3f.html">ofVec3f</a> ofPolyline::getRotationAtIndex </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac759341115effbf3234a73d161729f10"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classof_vec3f.html">ofVec3f</a> ofPolyline::getRotationAtIndexInterpolated </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>findex</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a210cb3ce4ff24dbc32204e98f4ab6c6d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -1203,7 +1482,39 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aef401c1ace69cd969a8eb339b2e4225c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classof_vec3f.html">ofVec3f</a> ofPolyline::getTangentAtIndex </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a105f490faa3aeb504f8e439f13646859"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classof_vec3f.html">ofVec3f</a> ofPolyline::getTangentAtIndexInterpolated </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>findex</em></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1225,6 +1536,37 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a8e6a752ef2428aa128cae4874aa4d83b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const vector&lt; <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &gt; &amp; ofPolyline::getVertices </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aff40c0656eea2064a2e2a2fd1d64fc1c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ofPolyline::getWrappedIndex </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="abd08a523635b4a9203fb08a1447e9e38"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1234,6 +1576,70 @@ Static Public Member Functions</h2></td></tr>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afa7b17651f31e3c2e86f62ffec7ce256"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofPolyline::insertVertex </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9bc4b0b979c5bdb1ab5736825882600e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofPolyline::insertVertex </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>z</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1314,7 +1720,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a32408db0b6c76c79f1f1e4ba5c774a2e"></a>
+<a class="anchor" id="a8d10c5c4bd02dc66fc6836de10901768"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -1333,14 +1739,14 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="a4309b07a962a7603a809409f52168f8f"></a>
+<a class="anchor" id="ae32631eac0ef11b570d74ad4f636b86a"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -1349,7 +1755,7 @@ Static Public Member Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &amp;&#160;</td>
           <td class="paramname"><em>p</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1435,58 +1841,6 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a54c18b6cbc55bf56ca34352b62a2e8f2"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">ofPolyline::OF_DEPRECATED_MSG </td>
-          <td>(</td>
-          <td class="paramtype">&quot;Use <a class="el" href="classof_polyline.html#a0825db11f31148731aecf1cbb33450de">ofPolyline::addVertices</a> instead&quot;&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void &#160;</td>
-          <td class="paramname"><em>addVertexes</em>const vector&lt; ofPoint &gt; &amp;verts&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a1ec0e046fc413e4fb7a3e3e7e7e642b8"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">ofPolyline::OF_DEPRECATED_MSG </td>
-          <td>(</td>
-          <td class="paramtype">&quot;Use <a class="el" href="classof_polyline.html#a0825db11f31148731aecf1cbb33450de">ofPolyline::addVertices</a> instead&quot;&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void &#160;</td>
-          <td class="paramname"><em>addVertexes</em>const ofPoint *verts, int numverts&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="a2ad4d76dc14ddaa777e5326466bc43ef"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1519,7 +1873,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a0a85cd8239ccdc4ccc7cb9c040aeda5e"></a>
+<a class="anchor" id="a532915efc6f31d1f3968a96026ae20ff"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -1581,7 +1935,7 @@ Static Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>curveResolution</em> = <code>16</code>&#160;</td>
+          <td class="paramname"><em>curveResolution</em> = <code>20</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1595,7 +1949,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ab47724b26a9dfbd6081b52f6574896d6"></a>
+<a class="anchor" id="a8cbfb4e9dc77210fc505b0b5424a7b68"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1624,7 +1978,7 @@ Static Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>curveResolution</em> = <code>16</code>&#160;</td>
+          <td class="paramname"><em>curveResolution</em> = <code>20</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1641,7 +1995,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ae41accef12a150b3697adf712face9d2"></a>
+<a class="anchor" id="ab4357915f0e81d0714b1c0cb93b88227"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1688,7 +2042,7 @@ Static Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>curveResolution</em> = <code>16</code>&#160;</td>
+          <td class="paramname"><em>curveResolution</em> = <code>20</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1739,7 +2093,23 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aadbd40bd1205fbe5106ed42e79243ee7"></a>
+<a class="anchor" id="a21af340a3554e972843e343cb1ad119e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofPolyline::setRightVector </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classof_vec3f.html">ofVec3f</a>&#160;</td>
+          <td class="paramname"><em>v</em> = <code><a class="el" href="classof_vec3f.html">ofVec3f</a>(0,&#160;0,&#160;-1)</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab5fcfc5805b9d37836d829ecc5ddd28f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -1747,7 +2117,7 @@ Static Public Member Functions</h2></td></tr>
           <td class="memname">void ofPolyline::simplify </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>tolerance</em> = <code>0.3</code></td><td>)</td>
+          <td class="paramname"><em>tolerance</em> = <code>0.3f</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1773,8 +2143,8 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>graphics/<a class="el" href="of_polyline_8h_source.html">ofPolyline.h</a></li>
-<li>graphics/<a class="el" href="of_polyline_8cpp.html">ofPolyline.cpp</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/graphics/<a class="el" href="of_polyline_8h_source.html">ofPolyline.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/graphics/<a class="el" href="of_polyline_8cpp.html">ofPolyline.cpp</a></li>
 </ul>
 </div><!-- contents -->
 

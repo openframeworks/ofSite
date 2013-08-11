@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -130,8 +131,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aaadfb76b67b5839bb595066e7a2f0274"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0533e0a00e3e36a380d0c5419939849d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_matrix4x4.html#a0533e0a00e3e36a380d0c5419939849d">makeFromMultiplicationOf</a> (const <a class="el" href="classof_matrix4x4.html">ofMatrix4x4</a> &amp;, const <a class="el" href="classof_matrix4x4.html">ofMatrix4x4</a> &amp;)</td></tr>
 <tr class="separator:a0533e0a00e3e36a380d0c5419939849d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb2492d77ffa5e4fa70b378874d81fe3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_matrix4x4.html">ofMatrix4x4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_matrix4x4.html#acb2492d77ffa5e4fa70b378874d81fe3">getInverse</a> ()</td></tr>
-<tr class="separator:acb2492d77ffa5e4fa70b378874d81fe3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba6946166a88e0d6c5d182f56ab01bbd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_matrix4x4.html">ofMatrix4x4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_matrix4x4.html#aba6946166a88e0d6c5d182f56ab01bbd">getInverse</a> () const </td></tr>
+<tr class="separator:aba6946166a88e0d6c5d182f56ab01bbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4308822795d32eaa2d4c5fffd5a59b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_matrix4x4.html#ac4308822795d32eaa2d4c5fffd5a59b2">makeOrthoMatrix</a> (double left, double right, double bottom, double top, double zNear, double zFar)</td></tr>
 <tr class="separator:ac4308822795d32eaa2d4c5fffd5a59b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17ee33c3195f1ad0c756c45359d64ab6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_matrix4x4.html#a17ee33c3195f1ad0c756c45359d64ab6">makeOrtho2DMatrix</a> (double left, double right, double bottom, double top)</td></tr>
@@ -606,7 +607,7 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="acb2492d77ffa5e4fa70b378874d81fe3"></a>
+<a class="anchor" id="aba6946166a88e0d6c5d182f56ab01bbd"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -614,7 +615,7 @@ Friends</h2></td></tr>
           <td class="memname"><a class="el" href="classof_matrix4x4.html">ofMatrix4x4</a> ofMatrix4x4::getInverse </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -3684,8 +3685,8 @@ Friends</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>math/<a class="el" href="of_matrix4x4_8h_source.html">ofMatrix4x4.h</a></li>
-<li>math/<a class="el" href="of_matrix4x4_8cpp.html">ofMatrix4x4.cpp</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/math/<a class="el" href="of_matrix4x4_8h_source.html">ofMatrix4x4.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/math/<a class="el" href="of_matrix4x4_8cpp.html">ofMatrix4x4.cpp</a></li>
 </ul>
 </div><!-- contents -->
 

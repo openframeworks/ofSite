@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -45,6 +46,10 @@
       <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_84d5b34cee6369a03c8d1f3b970ed216.html">openFrameworks</a></li>  </ul>
+</div>
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
@@ -63,6 +68,9 @@
 <code>#include &quot;<a class="el" href="of_color_8h_source.html">ofColor.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="of_point_8h_source.html">ofPoint.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="of_rectangle_8h_source.html">ofRectangle.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="of_xml_8h_source.html">ofXml.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="of_parameter_8h_source.html">ofParameter.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="of_parameter_group_8h_source.html">ofParameterGroup.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="of_math_8h_source.html">ofMath.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="of_vector_math_8h_source.html">ofVectorMath.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="of_serial_8h_source.html">ofSerial.h</a>&quot;</code><br/>
@@ -76,6 +84,7 @@
 <code>#include &quot;<a class="el" href="of_texture_8h_source.html">ofTexture.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="of_vbo_8h_source.html">ofVbo.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="of_vbo_mesh_8h_source.html">ofVboMesh.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="of_g_l_programmable_renderer_8h_source.html">ofGLProgrammableRenderer.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="of_cairo_renderer_8h_source.html">ofCairoRenderer.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="of_graphics_8h_source.html">ofGraphics.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="of_image_8h_source.html">ofImage.h</a>&quot;</code><br/>

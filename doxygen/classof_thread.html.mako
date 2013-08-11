@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -67,7 +68,8 @@ Inheritance diagram for ofThread:</div>
  <div class="center">
   <img src="classof_thread.png" usemap="#ofThread_map" alt=""/>
   <map id="ofThread_map" name="ofThread_map">
-<area href="classof_u_r_l_file_loader.html" alt="ofURLFileLoader" shape="rect" coords="0,112,107,136"/>
+<area href="classof_app_e_g_l_window.html" alt="ofAppEGLWindow" shape="rect" coords="0,112,114,136"/>
+<area href="classof_u_r_l_file_loader.html" alt="ofURLFileLoader" shape="rect" coords="124,112,238,136"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -348,26 +350,26 @@ Protected Attributes</h2></td></tr>
 <p>tell the thread to sleep for a certain amount of milliseconds</p>
 <p>this is useful inside the <a class="el" href="classof_thread.html#a7e90ddaf0113435c451e6daf600c33f1">threadedFunction()</a> when a thread is waiting for input to process:</p>
 <p>void myClass::threadedFunction(){ </p>
-<pre class="fragment">    // start
+<pre class="fragment">// start
 
-    while(isThreadRunning()){
+while(isThreadRunning()){
 
-            if(bReadyToProcess == true){
+    if(bReadyToProcess == true){
 
-                    // do some time intensive processing
+        // do some time intensive processing
 
-                    bReadyToProcess = false;
-            }
-            else{
-
-                    // sleep the thread to give up some cpu
-                    sleep(20);
-            }
+        bReadyToProcess = false;
     }
+    else{
 
-    // done
+        // sleep the thread to give up some cpu
+        sleep(20);
+    }
 }
-</pre><p>not sleeping the thread means the thread will take 100% of the cpu while it's waiting and will impact performance of your app </p>
+
+// done
+</pre><p> }</p>
+<p>not sleeping the thread means the thread will take 100% of the cpu while it's waiting and will impact performance of your app </p>
 
 </div>
 </div>
@@ -442,16 +444,16 @@ Protected Attributes</h2></td></tr>
 <p>if you do not have a loop inside this function, it will run once then exit</p>
 <p>if you want the thread to run until you signal it to stop, use a while loop inside that checks if the thread is should keep running:</p>
 <p>void myClass::threadedFunction(){ </p>
-<pre class="fragment">    // start
+<pre class="fragment">// start
 
-    while(isThreadRunning()){
+while(isThreadRunning()){
 
-            // do stuff
-    }
+    // do stuff
+}
 
-    // done
+// done
 </pre> 
-<p>Reimplemented in <a class="el" href="classof_u_r_l_file_loader.html#ab2f0c21ed1cb176e86761370297d573f">ofURLFileLoader</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_app_e_g_l_window.html#a3ae549b0d4f26ba0ba3200554dd659d2">ofAppEGLWindow</a>, and <a class="el" href="classof_u_r_l_file_loader.html#ab2f0c21ed1cb176e86761370297d573f">ofURLFileLoader</a>.</p>
 
 </div>
 </div>
@@ -487,8 +489,8 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>wait for the thread to exit</p>
 <p>this function waits for the thread to exit before it returns to make sure the thread is cleaned up, otherwise you will get errors on exit</p>
-<p>set stop to true if you want to signal the thread to exit before waiting, this is the equivalent to calling stopThread(false)</p>
-<p>set stop to false if you have already signalled the thread to exit by calling stopThread(false) and only need to wait for it to finish </p>
+<p>set stop to true if you want to signal the thread to exit before waiting, this is the equivalent to calling <a class="el" href="classof_thread.html#a3102a3bf7897f579d70a418ae3ed010b" title="stop the thread">stopThread()</a></p>
+<p>set stop to false if you have already signalled the thread to exit by calling <a class="el" href="classof_thread.html#a3102a3bf7897f579d70a418ae3ed010b" title="stop the thread">stopThread()</a> and only need to wait for it to finish </p>
 
 </div>
 </div>
@@ -600,8 +602,8 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>utils/<a class="el" href="of_thread_8h_source.html">ofThread.h</a></li>
-<li>utils/<a class="el" href="of_thread_8cpp.html">ofThread.cpp</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/utils/<a class="el" href="of_thread_8h_source.html">ofThread.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/utils/<a class="el" href="of_thread_8cpp.html">ofThread.cpp</a></li>
 </ul>
 </div><!-- contents -->
 

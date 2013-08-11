@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -113,7 +114,7 @@
   <tr class="even"><td class="entry"><a class="el" href="classof_rectangle.html#a6a64a83bf46f32b1223769e9bb562870">ofRectangle</a>(const ofRectangle &amp;rect)</td><td class="entry"><a class="el" href="classof_rectangle.html">ofRectangle</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classof_rectangle.html#a35a7edcb07fba3c3fdd2ea7e20d48927">ofRectangle</a>(const ofPoint &amp;p0, const ofPoint &amp;p1)</td><td class="entry"><a class="el" href="classof_rectangle.html">ofRectangle</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classof_rectangle.html#a33011fbd4aa2974d14ec55dc1c76cd9a">operator!=</a>(const ofRectangle &amp;rect) const </td><td class="entry"><a class="el" href="classof_rectangle.html">ofRectangle</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classof_rectangle.html#a513d2c964f138e87f452f333d0377973">operator+</a>(const ofPoint &amp;p)</td><td class="entry"><a class="el" href="classof_rectangle.html">ofRectangle</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classof_rectangle.html#a1a222c223e735d02508f0d5ce819ad83">operator+</a>(const ofPoint &amp;p)</td><td class="entry"><a class="el" href="classof_rectangle.html">ofRectangle</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classof_rectangle.html#adc469e3b0470821b9827d0d4d33d8455">operator=</a>(const ofRectangle &amp;rect)</td><td class="entry"><a class="el" href="classof_rectangle.html">ofRectangle</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classof_rectangle.html#acf9e6372fd763b26aeeba3b47b49614a">operator==</a>(const ofRectangle &amp;rect) const </td><td class="entry"><a class="el" href="classof_rectangle.html">ofRectangle</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classof_rectangle.html#a191e7c2fa179310eb3376e2607499a9e">position</a></td><td class="entry"><a class="el" href="classof_rectangle.html">ofRectangle</a></td><td class="entry"></td></tr>

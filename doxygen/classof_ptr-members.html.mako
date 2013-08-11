@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -62,8 +63,9 @@
   <tr><td class="entry"><a class="el" href="classof_ptr.html#a59c263a28ab0f17fc49c9b75a454bdc4">ofPtr</a>(Tp1 *__p, _Deleter __d, const _Alloc &amp;__a)</td><td class="entry"><a class="el" href="classof_ptr.html">ofPtr&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classof_ptr.html#ac1043031a4318e83d7cbf10bb377f3e5">ofPtr</a>(const ofPtr&lt; Tp1 &gt; &amp;__r, T *__p)</td><td class="entry"><a class="el" href="classof_ptr.html">ofPtr&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr><td class="entry"><a class="el" href="classof_ptr.html#aef59cef838e8f2015cd823ce45d72471">ofPtr</a>(const ofPtr&lt; Tp1 &gt; &amp;__r)</td><td class="entry"><a class="el" href="classof_ptr.html">ofPtr&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classof_ptr.html#a13b847b6fb83b97f3783d4ffeb8c6d9c">ofPtr</a>(const std::tr1::weak_ptr&lt; Tp1 &gt; &amp;__r)</td><td class="entry"><a class="el" href="classof_ptr.html">ofPtr&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">explicit</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classof_ptr.html#aec576bf80df708937df7eb174e2af3c5">ofPtr</a>(const ofPtr&lt; Tp1 &gt; &amp;__r, std::tr1::__dynamic_cast_tag)</td><td class="entry"><a class="el" href="classof_ptr.html">ofPtr&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classof_ptr.html#a6c176d99344b82c8a0615fcd52799a4b">ofPtr</a>(const std::shared_ptr&lt; Tp1 &gt; &amp;__r)</td><td class="entry"><a class="el" href="classof_ptr.html">ofPtr&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classof_ptr.html#a5fd7f54ed32c89834961e4dab2b3e843">ofPtr</a>(const std::weak_ptr&lt; Tp1 &gt; &amp;__r)</td><td class="entry"><a class="el" href="classof_ptr.html">ofPtr&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">explicit</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classof_ptr.html#a7a05d5219b549249c3783fa222b0fed1">ofPtr</a>(const ofPtr&lt; Tp1 &gt; &amp;__r, std::__dynamic_cast_tag)</td><td class="entry"><a class="el" href="classof_ptr.html">ofPtr&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
 </table></div><!-- contents -->
 
             </div>

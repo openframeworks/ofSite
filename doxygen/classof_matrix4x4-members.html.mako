@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -59,7 +60,7 @@
   <tr class="even"><td class="entry"><a class="el" href="classof_matrix4x4.html#a28dd7ff5eee745c3ccd17e706fb7df54">_mat</a></td><td class="entry"><a class="el" href="classof_matrix4x4.html">ofMatrix4x4</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classof_matrix4x4.html#a5256e32314e5b0a6010ea12b7a8b245e">decompose</a>(ofVec3f &amp;translation, ofQuaternion &amp;rotation, ofVec3f &amp;scale, ofQuaternion &amp;so) const </td><td class="entry"><a class="el" href="classof_matrix4x4.html">ofMatrix4x4</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classof_matrix4x4.html#aa191919c9afb4ac6091bd0febf9d34e7">getFrustum</a>(double &amp;left, double &amp;right, double &amp;bottom, double &amp;top, double &amp;zNear, double &amp;zFar) const </td><td class="entry"><a class="el" href="classof_matrix4x4.html">ofMatrix4x4</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classof_matrix4x4.html#acb2492d77ffa5e4fa70b378874d81fe3">getInverse</a>()</td><td class="entry"><a class="el" href="classof_matrix4x4.html">ofMatrix4x4</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classof_matrix4x4.html#aba6946166a88e0d6c5d182f56ab01bbd">getInverse</a>() const </td><td class="entry"><a class="el" href="classof_matrix4x4.html">ofMatrix4x4</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classof_matrix4x4.html#ae59b7e1c6c41c84d2cfa348f65e0b1ac">getInverseOf</a>(const ofMatrix4x4 &amp;matrix)</td><td class="entry"><a class="el" href="classof_matrix4x4.html">ofMatrix4x4</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
   <tr><td class="entry"><a class="el" href="classof_matrix4x4.html#ad801b4c6615433196a95f6ee3bdae5db">getLookAt</a>(ofVec3f &amp;eye, ofVec3f &amp;center, ofVec3f &amp;up, float lookDistance=1.0f) const </td><td class="entry"><a class="el" href="classof_matrix4x4.html">ofMatrix4x4</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classof_matrix4x4.html#a9cd4cf708daabc929d99cf1b5e626bf8">getOrtho</a>(double &amp;left, double &amp;right, double &amp;bottom, double &amp;top, double &amp;zNear, double &amp;zFar) const </td><td class="entry"><a class="el" href="classof_matrix4x4.html">ofMatrix4x4</a></td><td class="entry"></td></tr>

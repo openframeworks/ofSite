@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -102,6 +103,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3728964558ff782a60b3d4803ee97474"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c4fad72682be9a13f1911d0dfed1470"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_rt_audio_sound_stream.html#a3c4fad72682be9a13f1911d0dfed1470">getNumOutputChannels</a> ()</td></tr>
 <tr class="separator:a3c4fad72682be9a13f1911d0dfed1470"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61af6a27eece9597bdd9102f67cdfc6b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_rt_audio_sound_stream.html#a61af6a27eece9597bdd9102f67cdfc6b">getSampleRate</a> ()</td></tr>
+<tr class="separator:a61af6a27eece9597bdd9102f67cdfc6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a473a0a802d9c8aa65b22a8ca2fd8d162"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_rt_audio_sound_stream.html#a473a0a802d9c8aa65b22a8ca2fd8d162">getBufferSize</a> ()</td></tr>
+<tr class="separator:a473a0a802d9c8aa65b22a8ca2fd8d162"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classof_base_sound_stream"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classof_base_sound_stream')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classof_base_sound_stream.html">ofBaseSoundStream</a></td></tr>
 <tr class="memitem:a238e638c8990dce27b1b2f2774f0aa68 inherit pub_methods_classof_base_sound_stream"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_sound_stream.html#a238e638c8990dce27b1b2f2774f0aa68">~ofBaseSoundStream</a> ()</td></tr>
 <tr class="separator:a238e638c8990dce27b1b2f2774f0aa68 inherit pub_methods_classof_base_sound_stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -163,9 +168,37 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a473a0a802d9c8aa65b22a8ca2fd8d162"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ofRtAudioSoundStream::getBufferSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classof_base_sound_stream.html#a85b3a2824024b23b52ab1ce921177806">ofBaseSoundStream</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a3728964558ff782a60b3d4803ee97474"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">int ofRtAudioSoundStream::getNumInputChannels </td>
@@ -174,13 +207,23 @@ Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>Implements <a class="el" href="classof_base_sound_stream.html#ac23ff27d95054eecae6134e43ead00b9">ofBaseSoundStream</a>.</p>
 
 </div>
 </div>
 <a class="anchor" id="a3c4fad72682be9a13f1911d0dfed1470"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">int ofRtAudioSoundStream::getNumOutputChannels </td>
@@ -189,7 +232,39 @@ Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>Implements <a class="el" href="classof_base_sound_stream.html#a0b88f70e31f1852ddfa024a991a05e92">ofBaseSoundStream</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a61af6a27eece9597bdd9102f67cdfc6b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ofRtAudioSoundStream::getSampleRate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classof_base_sound_stream.html#a9dc79623984eaad86a6da8703b788a22">ofBaseSoundStream</a>.</p>
 
 </div>
 </div>
@@ -518,7 +593,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>sound/<a class="el" href="of_rt_audio_sound_stream_8h_source.html">ofRtAudioSoundStream.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/sound/<a class="el" href="of_rt_audio_sound_stream_8h_source.html">ofRtAudioSoundStream.h</a></li>
 </ul>
 </div><!-- contents -->
 

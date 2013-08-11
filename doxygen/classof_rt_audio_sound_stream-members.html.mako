@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -57,8 +58,10 @@
 <p>This is the complete list of members for <a class="el" href="classof_rt_audio_sound_stream.html">ofRtAudioSoundStream</a>, including all inherited members.</p>
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="classof_rt_audio_sound_stream.html#a454268c55f545e2b4b0680c27bc50522">close</a>()</td><td class="entry"><a class="el" href="classof_rt_audio_sound_stream.html">ofRtAudioSoundStream</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classof_rt_audio_sound_stream.html#a3728964558ff782a60b3d4803ee97474">getNumInputChannels</a>()</td><td class="entry"><a class="el" href="classof_rt_audio_sound_stream.html">ofRtAudioSoundStream</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classof_rt_audio_sound_stream.html#a3c4fad72682be9a13f1911d0dfed1470">getNumOutputChannels</a>()</td><td class="entry"><a class="el" href="classof_rt_audio_sound_stream.html">ofRtAudioSoundStream</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classof_rt_audio_sound_stream.html#a473a0a802d9c8aa65b22a8ca2fd8d162">getBufferSize</a>()</td><td class="entry"><a class="el" href="classof_rt_audio_sound_stream.html">ofRtAudioSoundStream</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classof_rt_audio_sound_stream.html#a3728964558ff782a60b3d4803ee97474">getNumInputChannels</a>()</td><td class="entry"><a class="el" href="classof_rt_audio_sound_stream.html">ofRtAudioSoundStream</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classof_rt_audio_sound_stream.html#a3c4fad72682be9a13f1911d0dfed1470">getNumOutputChannels</a>()</td><td class="entry"><a class="el" href="classof_rt_audio_sound_stream.html">ofRtAudioSoundStream</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classof_rt_audio_sound_stream.html#a61af6a27eece9597bdd9102f67cdfc6b">getSampleRate</a>()</td><td class="entry"><a class="el" href="classof_rt_audio_sound_stream.html">ofRtAudioSoundStream</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="classof_rt_audio_sound_stream.html#a6b1399641eb902fd6d665eb4105802ff">getTickCount</a>()</td><td class="entry"><a class="el" href="classof_rt_audio_sound_stream.html">ofRtAudioSoundStream</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classof_rt_audio_sound_stream.html#a377ca55a46d54a373e225916d0ed43e8">listDevices</a>()</td><td class="entry"><a class="el" href="classof_rt_audio_sound_stream.html">ofRtAudioSoundStream</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="classof_rt_audio_sound_stream.html#ad754f07225da3ed88ed675da8847dc2b">ofRtAudioSoundStream</a>()</td><td class="entry"><a class="el" href="classof_rt_audio_sound_stream.html">ofRtAudioSoundStream</a></td><td class="entry"></td></tr>

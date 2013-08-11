@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -657,7 +658,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>sound/<a class="el" href="of_base_sound_player_8h_source.html">ofBaseSoundPlayer.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/sound/<a class="el" href="of_base_sound_player_8h_source.html">ofBaseSoundPlayer.h</a></li>
 </ul>
 </div><!-- contents -->
 

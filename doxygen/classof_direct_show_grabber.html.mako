@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -79,8 +80,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad72b0b119b33d4c8272738392b906814"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e543194a4bff70a5707ed3fbc518e5e"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_direct_show_grabber.html#a3e543194a4bff70a5707ed3fbc518e5e">~ofDirectShowGrabber</a> ()</td></tr>
 <tr class="separator:a3e543194a4bff70a5707ed3fbc518e5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72c855fb2e216429011e1e872eb59ac9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_direct_show_grabber.html#a72c855fb2e216429011e1e872eb59ac9">listDevices</a> ()</td></tr>
-<tr class="separator:a72c855fb2e216429011e1e872eb59ac9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3698093f39452d9d0fab8932336d7ca"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="classof_video_device.html">ofVideoDevice</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_direct_show_grabber.html#ad3698093f39452d9d0fab8932336d7ca">listDevices</a> ()</td></tr>
+<tr class="separator:ad3698093f39452d9d0fab8932336d7ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a185b01c9f15aa39113c4c9cdc093f05f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_direct_show_grabber.html#a185b01c9f15aa39113c4c9cdc093f05f">initGrabber</a> (int w, int h)</td></tr>
 <tr class="separator:a185b01c9f15aa39113c4c9cdc093f05f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1038c645d3d298f22e28789ae923c21a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_direct_show_grabber.html#a1038c645d3d298f22e28789ae923c21a">update</a> ()</td></tr>
@@ -414,7 +415,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a72c855fb2e216429011e1e872eb59ac9"></a>
+<a class="anchor" id="ad3698093f39452d9d0fab8932336d7ca"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -422,7 +423,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void ofDirectShowGrabber::listDevices </td>
+          <td class="memname">vector&lt;<a class="el" href="classof_video_device.html">ofVideoDevice</a>&gt; ofDirectShowGrabber::listDevices </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -435,7 +436,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classof_base_video_grabber.html#a0ee487203961b1d6b635598a181a9835">ofBaseVideoGrabber</a>.</p>
+<p>Implements <a class="el" href="classof_base_video_grabber.html#ae82f0a1c87fe69c86f1738cae560efb2">ofBaseVideoGrabber</a>.</p>
 
 </div>
 </div>
@@ -775,7 +776,7 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>video/<a class="el" href="of_direct_show_grabber_8h_source.html">ofDirectShowGrabber.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/video/<a class="el" href="of_direct_show_grabber_8h_source.html">ofDirectShowGrabber.h</a></li>
 </ul>
 </div><!-- contents -->
 

@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -95,6 +96,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab0b70837b7a0ffc7f71d4ae381857c41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a082ecb9268694059d511274c3730f196"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_serial.html#a082ecb9268694059d511274c3730f196">drain</a> ()</td></tr>
 <tr class="separator:a082ecb9268694059d511274c3730f196"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a5ebd9289fc408f8ddb77e4cdc4c2d1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_serial.html#a3a5ebd9289fc408f8ddb77e4cdc4c2d1">isInitialized</a> () const </td></tr>
+<tr class="separator:a3a5ebd9289fc408f8ddb77e4cdc4c2d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -274,6 +277,21 @@ Protected Attributes</h2></td></tr>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3a5ebd9289fc408f8ddb77e4cdc4c2d1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ofSerial::isInitialized </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -567,8 +585,8 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>communication/<a class="el" href="of_serial_8h_source.html">ofSerial.h</a></li>
-<li>communication/<a class="el" href="of_serial_8cpp.html">ofSerial.cpp</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/communication/<a class="el" href="of_serial_8h_source.html">ofSerial.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/communication/<a class="el" href="of_serial_8cpp.html">ofSerial.cpp</a></li>
 </ul>
 </div><!-- contents -->
 

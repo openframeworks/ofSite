@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -47,7 +48,7 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_5784fb0e3502fad0f55808155bba3d8e.html">types</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_84d5b34cee6369a03c8d1f3b970ed216.html">openFrameworks</a></li><li class="navelem"><a class="el" href="dir_6a067a571c6179e1d7dc1a224573c7c5.html">types</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -111,7 +112,7 @@
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">// to ensure that the rectangle is &quot;standardized&quot;.</span></div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
 <div class="line"><a name="l00056"></a><span class="lineno"><a class="code" href="classof_rectangle.html">   56</a></span>&#160;<span class="keyword">class </span><a class="code" href="classof_rectangle.html">ofRectangle</a> {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    </div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="classof_rectangle.html#a9118ecf471c26e8e4c08a4cf8fc2b844">ofRectangle</a>();</div>
@@ -263,7 +264,7 @@
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classof_rectangle.html#a4a2368685282328e3c83e26ff95b4b2d">getHeight</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <a class="code" href="classof_rectangle.html">ofRectangle</a>&amp; <a class="code" href="classof_rectangle.html#adc469e3b0470821b9827d0d4d33d8455">operator = </a>(<span class="keyword">const</span> <a class="code" href="classof_rectangle.html">ofRectangle</a>&amp; rect);</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <a class="code" href="classof_rectangle.html">ofRectangle</a>&amp; <a class="code" href="classof_rectangle.html#a513d2c964f138e87f452f333d0377973">operator + </a>(<span class="keyword">const</span> <a class="code" href="classof_vec3f.html">ofPoint</a>&amp; p);</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <a class="code" href="classof_rectangle.html">ofRectangle</a> <a class="code" href="classof_rectangle.html#a1a222c223e735d02508f0d5ce819ad83">operator + </a>(<span class="keyword">const</span> <a class="code" href="classof_vec3f.html">ofPoint</a>&amp; p);</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    </div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classof_rectangle.html#acf9e6372fd763b26aeeba3b47b49614a">operator == </a>(<span class="keyword">const</span> <a class="code" href="classof_rectangle.html">ofRectangle</a>&amp; rect) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classof_rectangle.html#a33011fbd4aa2974d14ec55dc1c76cd9a">operator != </a>(<span class="keyword">const</span> <a class="code" href="classof_rectangle.html">ofRectangle</a>&amp; rect) <span class="keyword">const</span>;</div>
@@ -275,6 +276,9 @@
 <div class="line"><a name="l00218"></a><span class="lineno"><a class="code" href="classof_rectangle.html#abed860bfcf89865186c704ddc1fec3a9">  218</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classof_rectangle.html#abed860bfcf89865186c704ddc1fec3a9">height</a>;</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;};</div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;ostream&amp; <a class="code" href="of_matrix3x3_8cpp.html#a3a751851e70f7d08933a8bb74ae79b7d">operator&lt;&lt;</a>(ostream&amp; os, <span class="keyword">const</span> <a class="code" href="classof_rectangle.html">ofRectangle</a>&amp; rect);</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;istream&amp; <a class="code" href="of_matrix3x3_8cpp.html#abf46313577c6b9cd10201245f1e46f87">operator&gt;&gt;</a>(istream&amp; is, <a class="code" href="classof_rectangle.html">ofRectangle</a>&amp; rect);</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;</div>
 </div><!-- fragment --></div><!-- contents -->
 
             </div>

@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -137,8 +138,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa97e3525b2bb863329a6e6441b1195b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c4a07097120233cc46526f367e5bc67"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_color__.html">ofColor_</a>&lt; PixelType &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_image__.html#a5c4a07097120233cc46526f367e5bc67">getColor</a> (int x, int y) const </td></tr>
 <tr class="separator:a5c4a07097120233cc46526f367e5bc67"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf6bb7be85569cfce36cdfe557032e04"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_image__.html#abf6bb7be85569cfce36cdfe557032e04">setColor</a> (int x, int y, <a class="el" href="classof_color__.html">ofColor_</a>&lt; PixelType &gt; color)</td></tr>
-<tr class="separator:abf6bb7be85569cfce36cdfe557032e04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c73d9de844a5c836196e33b9b7f02d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_image__.html#a3c73d9de844a5c836196e33b9b7f02d8">setColor</a> (int x, int y, const <a class="el" href="classof_color__.html">ofColor_</a>&lt; PixelType &gt; &amp;color)</td></tr>
+<tr class="separator:a3c73d9de844a5c836196e33b9b7f02d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a267edeacc7d5bbe174794f0191d9a42e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_image__.html#a267edeacc7d5bbe174794f0191d9a42e">setColor</a> (int index, const <a class="el" href="classof_color__.html">ofColor_</a>&lt; PixelType &gt; &amp;color)</td></tr>
+<tr class="separator:a267edeacc7d5bbe174794f0191d9a42e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cd0fbeb0127ac1d996a978389bcc2b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_image__.html#a0cd0fbeb0127ac1d996a978389bcc2b2">setColor</a> (const <a class="el" href="classof_color__.html">ofColor_</a>&lt; PixelType &gt; &amp;color)</td></tr>
+<tr class="separator:a0cd0fbeb0127ac1d996a978389bcc2b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6cfcd829bd778c5636cfca83cc53023b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_image__.html#a6cfcd829bd778c5636cfca83cc53023b">setFromPixels</a> (const PixelType *<a class="el" href="classof_image__.html#a3424a431902ee97f6b152aca1867e30e">pixels</a>, int w, int h, <a class="el" href="of_constants_8h.html#a9760b6b0bec0314fdc85f44793bbe951">ofImageType</a> <a class="el" href="classof_image__.html#aaa7a448bc54c19e95f7417a5fb1c4da3">type</a>, bool bOrderIsRGB=true)</td></tr>
 <tr class="separator:a6cfcd829bd778c5636cfca83cc53023b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adcd1fe954d8fca4575d7b190add5c6f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_image__.html#adcd1fe954d8fca4575d7b190add5c6f1">setFromPixels</a> (const <a class="el" href="classof_pixels__.html">ofPixels_</a>&lt; PixelType &gt; &amp;<a class="el" href="classof_image__.html#a3424a431902ee97f6b152aca1867e30e">pixels</a>)</td></tr>
@@ -292,7 +297,7 @@ template&lt;typename PixelType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename PixelType &gt; </div>
+template&lt;typename PixelType&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classof_image__.html">ofImage_</a>&lt; PixelType &gt;::<a class="el" href="classof_image__.html">ofImage_</a> </td>
@@ -310,7 +315,7 @@ template&lt;typename PixelType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename PixelType &gt; </div>
+template&lt;typename PixelType&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classof_image__.html">ofImage_</a>&lt; PixelType &gt;::<a class="el" href="classof_image__.html">ofImage_</a> </td>
@@ -328,7 +333,7 @@ template&lt;typename PixelType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename PixelType &gt; </div>
+template&lt;typename PixelType&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classof_image__.html">ofImage_</a>&lt; PixelType &gt;::<a class="el" href="classof_image__.html">ofImage_</a> </td>
@@ -346,7 +351,7 @@ template&lt;typename PixelType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename PixelType &gt; </div>
+template&lt;typename PixelType&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classof_image__.html">ofImage_</a>&lt; PixelType &gt;::<a class="el" href="classof_image__.html">ofImage_</a> </td>
@@ -461,7 +466,7 @@ template&lt;typename PixelType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename PixelType &gt; </div>
+template&lt;typename PixelType&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -574,7 +579,7 @@ template&lt;typename PixelType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename PixelType &gt; </div>
+template&lt;typename PixelType&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">void <a class="el" href="classof_image__.html">ofImage_</a>&lt; PixelType &gt;::cropFrom </td>
@@ -1376,7 +1381,7 @@ template&lt;typename PixelType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename PixelType &gt; </div>
+template&lt;typename PixelType&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classof_image__.html">ofImage_</a>&lt; PixelType &gt; &amp; <a class="el" href="classof_image__.html">ofImage_</a>&lt; PixelType &gt;::operator= </td>
@@ -1414,7 +1419,7 @@ template&lt;typename SrcType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename PixelType &gt; </div>
+template&lt;typename PixelType&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classof_image__.html">ofImage_</a>&lt; PixelType &gt; &amp; <a class="el" href="classof_image__.html">ofImage_</a>&lt; PixelType &gt;::operator= </td>
@@ -1504,7 +1509,7 @@ template&lt;typename PixelType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename PixelType &gt; </div>
+template&lt;typename PixelType&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1720,11 +1725,11 @@ template&lt;typename PixelType &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="abf6bb7be85569cfce36cdfe557032e04"></a>
+<a class="anchor" id="a3c73d9de844a5c836196e33b9b7f02d8"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename PixelType &gt; </div>
+template&lt;typename PixelType&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">void <a class="el" href="classof_image__.html">ofImage_</a>&lt; PixelType &gt;::setColor </td>
@@ -1741,13 +1746,59 @@ template&lt;typename PixelType &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classof_color__.html">ofColor_</a>&lt; PixelType &gt;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classof_color__.html">ofColor_</a>&lt; PixelType &gt; &amp;&#160;</td>
           <td class="paramname"><em>color</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
           <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a267edeacc7d5bbe174794f0191d9a42e"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PixelType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classof_image__.html">ofImage_</a>&lt; PixelType &gt;::setColor </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classof_color__.html">ofColor_</a>&lt; PixelType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0cd0fbeb0127ac1d996a978389bcc2b2"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PixelType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classof_image__.html">ofImage_</a>&lt; PixelType &gt;::setColor </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classof_color__.html">ofColor_</a>&lt; PixelType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1776,7 +1827,7 @@ template&lt;typename PixelType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename PixelType &gt; </div>
+template&lt;typename PixelType&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">void <a class="el" href="classof_image__.html">ofImage_</a>&lt; PixelType &gt;::setFromPixels </td>
@@ -1822,7 +1873,7 @@ template&lt;typename PixelType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename PixelType &gt; </div>
+template&lt;typename PixelType&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">void <a class="el" href="classof_image__.html">ofImage_</a>&lt; PixelType &gt;::setFromPixels </td>
@@ -2040,8 +2091,8 @@ template&lt;typename PixelType&gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>graphics/<a class="el" href="of_image_8h_source.html">ofImage.h</a></li>
-<li>graphics/<a class="el" href="of_image_8cpp.html">ofImage.cpp</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/graphics/<a class="el" href="of_image_8h_source.html">ofImage.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/graphics/<a class="el" href="of_image_8cpp.html">ofImage.cpp</a></li>
 </ul>
 </div><!-- contents -->
 

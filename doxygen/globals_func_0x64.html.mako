@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -83,6 +84,9 @@
 <h3><a class="anchor" id="index_d"></a>- d -</h3><ul>
 <li>decompAffine()
 : <a class="el" href="of_matrix4x4_8cpp.html#a4753de909467e775a7ae42f2c2256639">ofMatrix4x4.cpp</a>
+</li>
+<li>defaultDataPath()
+: <a class="el" href="of_utils_8cpp.html#aff5233a2522903cdb95a397d3282c1b3">ofUtils.cpp</a>
 </li>
 <li>do_rank1()
 : <a class="el" href="of_matrix4x4_8cpp.html#ac0861013e63b003e1fecc2c0d78ee609">ofMatrix4x4.cpp</a>

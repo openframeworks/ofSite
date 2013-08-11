@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -164,8 +165,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a85a68df822547812728cf9c5e7971b86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8376d6fa18ad17657aa8456d4e4a1a01"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_buffer.html">ofBuffer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_file.html#a8376d6fa18ad17657aa8456d4e4a1a01">readToBuffer</a> ()</td></tr>
 <tr class="separator:a8376d6fa18ad17657aa8456d4e4a1a01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9564d6ef00b79b2c431b132619c3964a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_file.html#a9564d6ef00b79b2c431b132619c3964a">writeFromBuffer</a> (<a class="el" href="classof_buffer.html">ofBuffer</a> &amp;buffer)</td></tr>
-<tr class="separator:a9564d6ef00b79b2c431b132619c3964a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0505ea6bd750ca7975db1b14bb68b4ec"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_file.html#a0505ea6bd750ca7975db1b14bb68b4ec">writeFromBuffer</a> (const <a class="el" href="classof_buffer.html">ofBuffer</a> &amp;buffer)</td></tr>
+<tr class="separator:a0505ea6bd750ca7975db1b14bb68b4ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07b752e9070d2254210a83bdc98f96fe"><td class="memItemLeft" align="right" valign="top">filebuf *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_file.html#a07b752e9070d2254210a83bdc98f96fe">getFileBuffer</a> () const </td></tr>
 <tr class="separator:a07b752e9070d2254210a83bdc98f96fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -1090,14 +1091,14 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a9564d6ef00b79b2c431b132619c3964a"></a>
+<a class="anchor" id="a0505ea6bd750ca7975db1b14bb68b4ec"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool ofFile::writeFromBuffer </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classof_buffer.html">ofBuffer</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classof_buffer.html">ofBuffer</a> &amp;&#160;</td>
           <td class="paramname"><em>buffer</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1107,8 +1108,8 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>utils/<a class="el" href="of_file_utils_8h_source.html">ofFileUtils.h</a></li>
-<li>utils/<a class="el" href="of_file_utils_8cpp.html">ofFileUtils.cpp</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/utils/<a class="el" href="of_file_utils_8h_source.html">ofFileUtils.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/utils/<a class="el" href="of_file_utils_8cpp.html">ofFileUtils.cpp</a></li>
 </ul>
 </div><!-- contents -->
 

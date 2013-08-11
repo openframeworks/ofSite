@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -52,6 +53,7 @@
       <li class="current"><a href="functions.html"><span>All</span></a></li>
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_type.html"><span>Typedefs</span></a></li>
       <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
       <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
       <li><a href="functions_prop.html"><span>Properties</span></a></li>
@@ -167,11 +169,29 @@
 <li>_multiByteChannel
 : <a class="el" href="classof_arduino.html#a1c273197e5668853062054e04c7c3a58">ofArduino</a>
 </li>
+<li>_mutex
+: <a class="el" href="classof_delegate.html#ae421e97d0d743d63a5c8151db39ddfdf">ofDelegate&lt; TObj, TArgs, useSender &gt;</a>
+, <a class="el" href="classof_delegate_3_01_t_obj_00_01_t_args_00_01false_01_4.html#a489d77e597cbeeb84e7b345ad0f6509a">ofDelegate&lt; TObj, TArgs, false &gt;</a>
+, <a class="el" href="classof_delegate_3_01_t_obj_00_01void_00_01true_01_4.html#a0aba3ebb4ebb8d4dfd46da9c9f106fe5">ofDelegate&lt; TObj, void, true &gt;</a>
+, <a class="el" href="classof_delegate_3_01_t_obj_00_01void_00_01false_01_4.html#abc50ace2647e4d194cabbd7134952b01">ofDelegate&lt; TObj, void, false &gt;</a>
+</li>
 <li>_port
 : <a class="el" href="classof_arduino.html#ab492a5558cca3f440e9592bcbdde4609">ofArduino</a>
 </li>
 <li>_portStatus
 : <a class="el" href="classof_arduino.html#a1998e90ce22b81c0a51a4199d34714a3">ofArduino</a>
+</li>
+<li>_receiverMethod
+: <a class="el" href="classof_delegate_3_01_t_obj_00_01_t_args_00_01false_01_4.html#a657b471e7def9c437fe942344fb060db">ofDelegate&lt; TObj, TArgs, false &gt;</a>
+, <a class="el" href="classof_delegate_3_01_t_obj_00_01void_00_01true_01_4.html#a7f09d48a1fadd41e57cc85be6721c5cf">ofDelegate&lt; TObj, void, true &gt;</a>
+, <a class="el" href="classof_delegate_3_01_t_obj_00_01void_00_01false_01_4.html#abef4066d3a20b9c0fa939b05d6ed2518">ofDelegate&lt; TObj, void, false &gt;</a>
+, <a class="el" href="classof_delegate.html#ab02b1b5b5fe31306c7a69c9db9d4d3a7">ofDelegate&lt; TObj, TArgs, useSender &gt;</a>
+</li>
+<li>_receiverObject
+: <a class="el" href="classof_delegate_3_01_t_obj_00_01_t_args_00_01false_01_4.html#a87913990f98494f49f29d4a5e7695d15">ofDelegate&lt; TObj, TArgs, false &gt;</a>
+, <a class="el" href="classof_delegate_3_01_t_obj_00_01void_00_01false_01_4.html#a3725aa5e02a929c577c9c8782007bf95">ofDelegate&lt; TObj, void, false &gt;</a>
+, <a class="el" href="classof_delegate.html#ac653635506343fd5589b8491e33b479e">ofDelegate&lt; TObj, TArgs, useSender &gt;</a>
+, <a class="el" href="classof_delegate_3_01_t_obj_00_01void_00_01true_01_4.html#a1ae6a9d1e90d2f57f1ea4eeb0fdb957f">ofDelegate&lt; TObj, void, true &gt;</a>
 </li>
 <li>_servoValue
 : <a class="el" href="classof_arduino.html#a9e714f11a9cee3103dae053a3fec759f">ofArduino</a>

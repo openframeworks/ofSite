@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -101,10 +102,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ace8154b357e9b6f285d34c067c1555ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0554203893a0d40d40f46ee70ca6d41"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_camera.html#ad0554203893a0d40d40f46ee70ca6d41">getAspectRatio</a> () const </td></tr>
 <tr class="separator:ad0554203893a0d40d40f46ee70ca6d41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72cedd2a056d8bf460c2add5cc607179"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_camera.html#a72cedd2a056d8bf460c2add5cc607179">setupPerspective</a> (bool vFlip=true, float <a class="el" href="classof_camera.html#a34bc96c4a0fce3ec78b33db6be83b4fb">fov</a>=60, float nearDist=0, float farDist=0, const <a class="el" href="classof_vec2f.html">ofVec2f</a> &amp;<a class="el" href="classof_camera.html#a54570e367b902a61cbcbadf4a8ebbd16">lensOffset</a>=<a class="el" href="classof_vec2f.html">ofVec2f</a>(0.0f, 0.0f))</td></tr>
+<tr class="memitem:a72cedd2a056d8bf460c2add5cc607179"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_camera.html#a72cedd2a056d8bf460c2add5cc607179">setupPerspective</a> (bool <a class="el" href="classof_camera.html#ae6a88528d41af6addd75236037fac3ea">vFlip</a>=true, float <a class="el" href="classof_camera.html#a34bc96c4a0fce3ec78b33db6be83b4fb">fov</a>=60, float nearDist=0, float farDist=0, const <a class="el" href="classof_vec2f.html">ofVec2f</a> &amp;<a class="el" href="classof_camera.html#a54570e367b902a61cbcbadf4a8ebbd16">lensOffset</a>=<a class="el" href="classof_vec2f.html">ofVec2f</a>(0.0f, 0.0f))</td></tr>
 <tr class="separator:a72cedd2a056d8bf460c2add5cc607179"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae73c73a3552e34d043ad90d0bd42b240"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_camera.html#ae73c73a3552e34d043ad90d0bd42b240">setupOffAxisViewPortal</a> (const <a class="el" href="classof_vec3f.html">ofVec3f</a> &amp;topLeft, const <a class="el" href="classof_vec3f.html">ofVec3f</a> &amp;bottomLeft, const <a class="el" href="classof_vec3f.html">ofVec3f</a> &amp;bottomRight)</td></tr>
 <tr class="separator:ae73c73a3552e34d043ad90d0bd42b240"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa77a0f8af4aa2be652a4c8dcd9628c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_camera.html#afa77a0f8af4aa2be652a4c8dcd9628c4">setVFlip</a> (bool vflip)</td></tr>
+<tr class="separator:afa77a0f8af4aa2be652a4c8dcd9628c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6409c2eebe415a9f1a145286fe6e6f5f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_camera.html#a6409c2eebe415a9f1a145286fe6e6f5f">isVFlipped</a> ()</td></tr>
+<tr class="separator:a6409c2eebe415a9f1a145286fe6e6f5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3188281a0708f7ed030b0742ff2d3f6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_camera.html#a3188281a0708f7ed030b0742ff2d3f6d">enableOrtho</a> ()</td></tr>
 <tr class="separator:a3188281a0708f7ed030b0742ff2d3f6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b9f8d32444f72544b3a05e6646fcdfc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_camera.html#a8b9f8d32444f72544b3a05e6646fcdfc">disableOrtho</a> ()</td></tr>
@@ -136,10 +141,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa2b223ca1f8560ef193eb7bde666d758 inherit pub_methods_classof_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0f916a28a08c95064e89bdc5131b923 inherit pub_methods_classof_node"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_node.html#ad0f916a28a08c95064e89bdc5131b923">~ofNode</a> ()</td></tr>
 <tr class="separator:ad0f916a28a08c95064e89bdc5131b923 inherit pub_methods_classof_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17c41e855157cc8b896db24f8ba50201 inherit pub_methods_classof_node"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_node.html#a17c41e855157cc8b896db24f8ba50201">setParent</a> (<a class="el" href="classof_node.html">ofNode</a> &amp;<a class="el" href="classof_node.html#a9fa60edff25434ada1671e837335fbdf">parent</a>)</td></tr>
-<tr class="separator:a17c41e855157cc8b896db24f8ba50201 inherit pub_methods_classof_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abab3151dc3a440a630f5782eda3e3111 inherit pub_methods_classof_node"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_node.html#abab3151dc3a440a630f5782eda3e3111">clearParent</a> ()</td></tr>
-<tr class="separator:abab3151dc3a440a630f5782eda3e3111 inherit pub_methods_classof_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad475e04b79cbd1528ae3c59adba0a7c2 inherit pub_methods_classof_node"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_node.html#ad475e04b79cbd1528ae3c59adba0a7c2">setParent</a> (<a class="el" href="classof_node.html">ofNode</a> &amp;<a class="el" href="classof_node.html#a9fa60edff25434ada1671e837335fbdf">parent</a>, bool bMaintainGlobalTransform=false)</td></tr>
+<tr class="separator:ad475e04b79cbd1528ae3c59adba0a7c2 inherit pub_methods_classof_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6c41c2d514797f04f162bb323cb4dfa inherit pub_methods_classof_node"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_node.html#aa6c41c2d514797f04f162bb323cb4dfa">clearParent</a> (bool bMaintainGlobalTransform=false)</td></tr>
+<tr class="separator:aa6c41c2d514797f04f162bb323cb4dfa inherit pub_methods_classof_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08d61ddc77fd655780a7c269756b7ecb inherit pub_methods_classof_node"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_node.html">ofNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_node.html#a08d61ddc77fd655780a7c269756b7ecb">getParent</a> () const </td></tr>
 <tr class="separator:a08d61ddc77fd655780a7c269756b7ecb inherit pub_methods_classof_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89350f61b536e5f64dc13682a6aee97d inherit pub_methods_classof_node"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_vec3f.html">ofVec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_node.html#a89350f61b536e5f64dc13682a6aee97d">getPosition</a> () const </td></tr>
@@ -246,8 +251,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9d09e55a671dae12c64b18215f2cd08c inherit pub_methods_classof_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace344f081aa534670949ae9e03374626 inherit pub_methods_classof_node"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_node.html#ace344f081aa534670949ae9e03374626">resetTransform</a> ()</td></tr>
 <tr class="separator:ace344f081aa534670949ae9e03374626 inherit pub_methods_classof_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82804cbe87f3bce8a5d2d2b89dce5e71 inherit pub_methods_classof_node"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_node.html#a82804cbe87f3bce8a5d2d2b89dce5e71">customDraw</a> ()</td></tr>
-<tr class="separator:a82804cbe87f3bce8a5d2d2b89dce5e71 inherit pub_methods_classof_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23a1ca114eeff7e8494cecee90002534 inherit pub_methods_classof_node"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_node.html#a23a1ca114eeff7e8494cecee90002534">customDraw</a> ()</td></tr>
+<tr class="separator:a23a1ca114eeff7e8494cecee90002534 inherit pub_methods_classof_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13c85ec24bc0244ee7e32be7a63f2561 inherit pub_methods_classof_node"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_node.html#a13c85ec24bc0244ee7e32be7a63f2561">draw</a> ()</td></tr>
 <tr class="separator:a13c85ec24bc0244ee7e32be7a63f2561 inherit pub_methods_classof_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -283,6 +288,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a6dfc2ca4d2b9920888f5d2df0cd21413"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a960e80a1ae5ac42560a4b01c63b62e49"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_camera.html#a960e80a1ae5ac42560a4b01c63b62e49">isActive</a></td></tr>
 <tr class="separator:a960e80a1ae5ac42560a4b01c63b62e49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6a88528d41af6addd75236037fac3ea"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_camera.html#ae6a88528d41af6addd75236037fac3ea">vFlip</a></td></tr>
+<tr class="separator:ae6a88528d41af6addd75236037fac3ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classof_node"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classof_node')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classof_node.html">ofNode</a></td></tr>
 <tr class="memitem:a9fa60edff25434ada1671e837335fbdf inherit pro_attribs_classof_node"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_node.html">ofNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_node.html#a9fa60edff25434ada1671e837335fbdf">parent</a></td></tr>
 <tr class="separator:a9fa60edff25434ada1671e837335fbdf inherit pro_attribs_classof_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -672,6 +679,21 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a6409c2eebe415a9f1a145286fe6e6f5f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ofCamera::isVFlipped </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a2d561fd8fb958c9512d576ed54129a73"></a>
 <div class="memitem">
 <div class="memproto">
@@ -864,6 +886,22 @@ Protected Attributes</h2></td></tr>
           <td></td>
           <td>)</td>
           <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afa77a0f8af4aa2be652a4c8dcd9628c4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofCamera::setVFlip </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>vflip</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1083,9 +1121,29 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ae6a88528d41af6addd75236037fac3ea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ofCamera::vFlip</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>3d/<a class="el" href="of_camera_8h_source.html">ofCamera.h</a></li>
-<li>3d/<a class="el" href="of_camera_8cpp.html">ofCamera.cpp</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/3d/<a class="el" href="of_camera_8h_source.html">ofCamera.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/3d/<a class="el" href="of_camera_8cpp.html">ofCamera.cpp</a></li>
 </ul>
 </div><!-- contents -->
 

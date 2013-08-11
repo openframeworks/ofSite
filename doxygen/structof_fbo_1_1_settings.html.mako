@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -77,6 +78,8 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a460d5444b21aa03ee600e3e7c9b6b8bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab85dc36f71b6ea5dd3bbd0f50e600f91"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structof_fbo_1_1_settings.html#ab85dc36f71b6ea5dd3bbd0f50e600f91">numColorbuffers</a></td></tr>
 <tr class="separator:ab85dc36f71b6ea5dd3bbd0f50e600f91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a971cdf30cb9d36468ec293468b9a1fbf"><td class="memItemLeft" align="right" valign="top">vector&lt; GLint &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structof_fbo_1_1_settings.html#a971cdf30cb9d36468ec293468b9a1fbf">colorFormats</a></td></tr>
+<tr class="separator:a971cdf30cb9d36468ec293468b9a1fbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e0502aec7fe715ba4bc1430434148f1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structof_fbo_1_1_settings.html#a6e0502aec7fe715ba4bc1430434148f1">useDepth</a></td></tr>
 <tr class="separator:a6e0502aec7fe715ba4bc1430434148f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97523c603e7e0accd8a03badecfda4f8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structof_fbo_1_1_settings.html#a97523c603e7e0accd8a03badecfda4f8">useStencil</a></td></tr>
@@ -117,6 +120,18 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a971cdf30cb9d36468ec293468b9a1fbf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;GLint&gt; ofFbo::Settings::colorFormats</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="ad37ebd3e9660640f34b4ec0676012111"></a>
 <div class="memitem">
 <div class="memproto">
@@ -286,8 +301,8 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following files:<ul>
-<li>gl/<a class="el" href="of_fbo_8h_source.html">ofFbo.h</a></li>
-<li>gl/<a class="el" href="of_fbo_8cpp.html">ofFbo.cpp</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/gl/<a class="el" href="of_fbo_8h_source.html">ofFbo.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/gl/<a class="el" href="of_fbo_8cpp.html">ofFbo.cpp</a></li>
 </ul>
 </div><!-- contents -->
 

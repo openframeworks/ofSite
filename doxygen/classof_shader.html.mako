@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -50,6 +51,7 @@
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classof_shader-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -59,12 +61,25 @@
 
 <p><code>#include &lt;<a class="el" href="of_shader_8h_source.html">ofShader.h</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a9f35d6011294c2e93d33d5d5eb65f4dd"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#a9f35d6011294c2e93d33d5d5eb65f4dd">defaultAttributes</a> { <a class="el" href="classof_shader.html#a9f35d6011294c2e93d33d5d5eb65f4dda4c0cb04f031969394a81ae621f524f85">POSITION_ATTRIBUTE</a> =0, 
+<a class="el" href="classof_shader.html#a9f35d6011294c2e93d33d5d5eb65f4ddae648d060d89b376077d31ba9a9eebc29">COLOR_ATTRIBUTE</a>, 
+<a class="el" href="classof_shader.html#a9f35d6011294c2e93d33d5d5eb65f4dda0db8ee2b57038410042266ee3cabb5c7">NORMAL_ATTRIBUTE</a>, 
+<a class="el" href="classof_shader.html#a9f35d6011294c2e93d33d5d5eb65f4dda7225a7535a27ab8a589e81dec085d37e">TEXCOORD_ATTRIBUTE</a>
+ }</td></tr>
+<tr class="separator:a9f35d6011294c2e93d33d5d5eb65f4dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a73584392e61ecc25d966ae14a13f23ec"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#a73584392e61ecc25d966ae14a13f23ec">ofShader</a> ()</td></tr>
 <tr class="separator:a73584392e61ecc25d966ae14a13f23ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee5d2be9eab7b3385685be54e5010c96"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#aee5d2be9eab7b3385685be54e5010c96">~ofShader</a> ()</td></tr>
 <tr class="separator:aee5d2be9eab7b3385685be54e5010c96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e5125a83fc82c5232d24ccbf883ba4a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#a1e5125a83fc82c5232d24ccbf883ba4a">ofShader</a> (const <a class="el" href="classof_shader.html">ofShader</a> &amp;shader)</td></tr>
+<tr class="separator:a1e5125a83fc82c5232d24ccbf883ba4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe78f7292a99e590663523280301b669"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_shader.html">ofShader</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#abe78f7292a99e590663523280301b669">operator=</a> (const <a class="el" href="classof_shader.html">ofShader</a> &amp;shader)</td></tr>
+<tr class="separator:abe78f7292a99e590663523280301b669"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abba5155402a941f1b8b638afae439ffe"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#abba5155402a941f1b8b638afae439ffe">load</a> (string shaderName)</td></tr>
 <tr class="separator:abba5155402a941f1b8b638afae439ffe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a703bcdfcee143c325a2187e061bc2044"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#a703bcdfcee143c325a2187e061bc2044">load</a> (string vertName, string fragName, string geomName=&quot;&quot;)</td></tr>
@@ -79,52 +94,54 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aabeb035a6f923127a058da522bd842c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a197c00e9547fc5962c7318c13fa5ba0d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#a197c00e9547fc5962c7318c13fa5ba0d">unload</a> ()</td></tr>
 <tr class="separator:a197c00e9547fc5962c7318c13fa5ba0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc5a0cc4424e03b9a052927f3d581841"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#acc5a0cc4424e03b9a052927f3d581841">isLoaded</a> ()</td></tr>
+<tr class="separator:acc5a0cc4424e03b9a052927f3d581841"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54bff8ba8e22f85d9be9fbb47430a73d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#a54bff8ba8e22f85d9be9fbb47430a73d">begin</a> ()</td></tr>
 <tr class="separator:a54bff8ba8e22f85d9be9fbb47430a73d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3892fee400619365da5d5724a957a001"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#a3892fee400619365da5d5724a957a001">end</a> ()</td></tr>
 <tr class="separator:a3892fee400619365da5d5724a957a001"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c5e410acb05fc81527a2b2d2b8c236e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#a7c5e410acb05fc81527a2b2d2b8c236e">setUniformTexture</a> (const char *name, <a class="el" href="classof_base_has_texture.html">ofBaseHasTexture</a> &amp;img, int textureLocation)</td></tr>
-<tr class="separator:a7c5e410acb05fc81527a2b2d2b8c236e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88692a914fe689606f5f52785357fd31"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#a88692a914fe689606f5f52785357fd31">setUniformTexture</a> (const char *name, <a class="el" href="classof_texture.html">ofTexture</a> &amp;img, int textureLocation)</td></tr>
-<tr class="separator:a88692a914fe689606f5f52785357fd31"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64e2c1571d5599b7a5fb7a6531c2caf5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#a64e2c1571d5599b7a5fb7a6531c2caf5">setUniformTexture</a> (const char *name, int textureTarget, GLint textureID, int textureLocation)</td></tr>
-<tr class="separator:a64e2c1571d5599b7a5fb7a6531c2caf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ff9f9ad9165480c4e2818defc1a5dc1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#a1ff9f9ad9165480c4e2818defc1a5dc1">setUniform1i</a> (const char *name, int v1)</td></tr>
-<tr class="separator:a1ff9f9ad9165480c4e2818defc1a5dc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a652abc6adb3d2a4d38b9fcb74ed4ab1c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#a652abc6adb3d2a4d38b9fcb74ed4ab1c">setUniform2i</a> (const char *name, int v1, int v2)</td></tr>
-<tr class="separator:a652abc6adb3d2a4d38b9fcb74ed4ab1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae74401136d950fff044d4ca141c744da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#ae74401136d950fff044d4ca141c744da">setUniform3i</a> (const char *name, int v1, int v2, int v3)</td></tr>
-<tr class="separator:ae74401136d950fff044d4ca141c744da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16c3aecbb2c4a854e06e6fa68a6d3c61"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#a16c3aecbb2c4a854e06e6fa68a6d3c61">setUniform4i</a> (const char *name, int v1, int v2, int v3, int v4)</td></tr>
-<tr class="separator:a16c3aecbb2c4a854e06e6fa68a6d3c61"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a973146a9199d850fb376a293fcb8b6e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#a973146a9199d850fb376a293fcb8b6e5">setUniform1f</a> (const char *name, float v1)</td></tr>
-<tr class="separator:a973146a9199d850fb376a293fcb8b6e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c20c1667720b7e3112504f2fdfb67e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#a0c20c1667720b7e3112504f2fdfb67e4">setUniform2f</a> (const char *name, float v1, float v2)</td></tr>
-<tr class="separator:a0c20c1667720b7e3112504f2fdfb67e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d6d3fa495a7ef5d1147c9ab00814161"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#a0d6d3fa495a7ef5d1147c9ab00814161">setUniform3f</a> (const char *name, float v1, float v2, float v3)</td></tr>
-<tr class="separator:a0d6d3fa495a7ef5d1147c9ab00814161"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e1dac261ead2e60da74a3368dd00b29"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#a8e1dac261ead2e60da74a3368dd00b29">setUniform4f</a> (const char *name, float v1, float v2, float v3, float v4)</td></tr>
-<tr class="separator:a8e1dac261ead2e60da74a3368dd00b29"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a833fa69a860a01ce3693e9452196e171"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#a833fa69a860a01ce3693e9452196e171">setUniform1iv</a> (const char *name, int *v, int count=1)</td></tr>
-<tr class="separator:a833fa69a860a01ce3693e9452196e171"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a484bfb8ef015af278c9c185a90857c76"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#a484bfb8ef015af278c9c185a90857c76">setUniform2iv</a> (const char *name, int *v, int count=1)</td></tr>
-<tr class="separator:a484bfb8ef015af278c9c185a90857c76"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3eb9a2258d7362bc41bc421722a6ea6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#a3eb9a2258d7362bc41bc421722a6ea6d">setUniform3iv</a> (const char *name, int *v, int count=1)</td></tr>
-<tr class="separator:a3eb9a2258d7362bc41bc421722a6ea6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae91c769da59df3010e34ea98e655b23d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#ae91c769da59df3010e34ea98e655b23d">setUniform4iv</a> (const char *name, int *v, int count=1)</td></tr>
-<tr class="separator:ae91c769da59df3010e34ea98e655b23d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a117f44fa7997e1a66cc4eed28b4b4c75"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#a117f44fa7997e1a66cc4eed28b4b4c75">setUniform1fv</a> (const char *name, float *v, int count=1)</td></tr>
-<tr class="separator:a117f44fa7997e1a66cc4eed28b4b4c75"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe6e5ad7de98d2ee682230564d7cd636"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#abe6e5ad7de98d2ee682230564d7cd636">setUniform2fv</a> (const char *name, float *v, int count=1)</td></tr>
-<tr class="separator:abe6e5ad7de98d2ee682230564d7cd636"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac32ca0b1b149970f7ffc96dc0deb6704"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#ac32ca0b1b149970f7ffc96dc0deb6704">setUniform3fv</a> (const char *name, float *v, int count=1)</td></tr>
-<tr class="separator:ac32ca0b1b149970f7ffc96dc0deb6704"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7005b4074d17d5ac424c6adf7d1d24f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#a7005b4074d17d5ac424c6adf7d1d24f9">setUniform4fv</a> (const char *name, float *v, int count=1)</td></tr>
-<tr class="separator:a7005b4074d17d5ac424c6adf7d1d24f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0700b100df56744c164197691ed49e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#ad0700b100df56744c164197691ed49e1">setUniformMatrix4f</a> (const char *name, const <a class="el" href="classof_matrix4x4.html">ofMatrix4x4</a> &amp;m)</td></tr>
-<tr class="separator:ad0700b100df56744c164197691ed49e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a7c1181de27ec4d8340162ca1f31d73"><td class="memItemLeft" align="right" valign="top">GLint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#a6a7c1181de27ec4d8340162ca1f31d73">getAttributeLocation</a> (const char *name)</td></tr>
-<tr class="separator:a6a7c1181de27ec4d8340162ca1f31d73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b3dfcd48f67ce173318ad4846974bb5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#a8b3dfcd48f67ce173318ad4846974bb5">setUniformTexture</a> (const string &amp;name, <a class="el" href="classof_base_has_texture.html">ofBaseHasTexture</a> &amp;img, int textureLocation)</td></tr>
+<tr class="separator:a8b3dfcd48f67ce173318ad4846974bb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d937c1481c8848bdae8dba76d84b8bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#a8d937c1481c8848bdae8dba76d84b8bc">setUniformTexture</a> (const string &amp;name, <a class="el" href="classof_texture.html">ofTexture</a> &amp;img, int textureLocation)</td></tr>
+<tr class="separator:a8d937c1481c8848bdae8dba76d84b8bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a652320f948d0108ad77b4d5c6f83c765"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#a652320f948d0108ad77b4d5c6f83c765">setUniformTexture</a> (const string &amp;name, int textureTarget, GLint textureID, int textureLocation)</td></tr>
+<tr class="separator:a652320f948d0108ad77b4d5c6f83c765"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a6aef6460a60cbdd877a7978e315ddd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#a9a6aef6460a60cbdd877a7978e315ddd">setUniform1i</a> (const string &amp;name, int v1)</td></tr>
+<tr class="separator:a9a6aef6460a60cbdd877a7978e315ddd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2179e58133437c2869c1fe15fa0f143d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#a2179e58133437c2869c1fe15fa0f143d">setUniform2i</a> (const string &amp;name, int v1, int v2)</td></tr>
+<tr class="separator:a2179e58133437c2869c1fe15fa0f143d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3648f39ed9a3b07c065f25fe579ab2d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#a3648f39ed9a3b07c065f25fe579ab2d5">setUniform3i</a> (const string &amp;name, int v1, int v2, int v3)</td></tr>
+<tr class="separator:a3648f39ed9a3b07c065f25fe579ab2d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c4f4b804919be7ca21bc24b0acf04d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#a5c4f4b804919be7ca21bc24b0acf04d8">setUniform4i</a> (const string &amp;name, int v1, int v2, int v3, int v4)</td></tr>
+<tr class="separator:a5c4f4b804919be7ca21bc24b0acf04d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3f452decf2dd384143e0f58c740ef97"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#ad3f452decf2dd384143e0f58c740ef97">setUniform1f</a> (const string &amp;name, float v1)</td></tr>
+<tr class="separator:ad3f452decf2dd384143e0f58c740ef97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae739f5c2b3d93ad33bbfe2f433464fd6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#ae739f5c2b3d93ad33bbfe2f433464fd6">setUniform2f</a> (const string &amp;name, float v1, float v2)</td></tr>
+<tr class="separator:ae739f5c2b3d93ad33bbfe2f433464fd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a076becb85c27f56bf2d14cb4f99320be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#a076becb85c27f56bf2d14cb4f99320be">setUniform3f</a> (const string &amp;name, float v1, float v2, float v3)</td></tr>
+<tr class="separator:a076becb85c27f56bf2d14cb4f99320be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d8da00e3724c9991481f6d395b30c63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#a3d8da00e3724c9991481f6d395b30c63">setUniform4f</a> (const string &amp;name, float v1, float v2, float v3, float v4)</td></tr>
+<tr class="separator:a3d8da00e3724c9991481f6d395b30c63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e171fe26ef79246730d60b01615823d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#a9e171fe26ef79246730d60b01615823d">setUniform1iv</a> (const string &amp;name, int *v, int count=1)</td></tr>
+<tr class="separator:a9e171fe26ef79246730d60b01615823d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c7a353b6b205e011e0c139ae877d79c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#a1c7a353b6b205e011e0c139ae877d79c">setUniform2iv</a> (const string &amp;name, int *v, int count=1)</td></tr>
+<tr class="separator:a1c7a353b6b205e011e0c139ae877d79c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81aa1221a1137afad914d874ec48588a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#a81aa1221a1137afad914d874ec48588a">setUniform3iv</a> (const string &amp;name, int *v, int count=1)</td></tr>
+<tr class="separator:a81aa1221a1137afad914d874ec48588a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b30daa9ae3c7f235c4eb21db67f761b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#a3b30daa9ae3c7f235c4eb21db67f761b">setUniform4iv</a> (const string &amp;name, int *v, int count=1)</td></tr>
+<tr class="separator:a3b30daa9ae3c7f235c4eb21db67f761b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09b6ded4f3c4e407014ec4aadb9f7f95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#a09b6ded4f3c4e407014ec4aadb9f7f95">setUniform1fv</a> (const string &amp;name, float *v, int count=1)</td></tr>
+<tr class="separator:a09b6ded4f3c4e407014ec4aadb9f7f95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae567162bd4b52a612bfee9d5e76df108"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#ae567162bd4b52a612bfee9d5e76df108">setUniform2fv</a> (const string &amp;name, float *v, int count=1)</td></tr>
+<tr class="separator:ae567162bd4b52a612bfee9d5e76df108"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a187b3480cf31fa5547aa4741c30a66c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#a187b3480cf31fa5547aa4741c30a66c8">setUniform3fv</a> (const string &amp;name, float *v, int count=1)</td></tr>
+<tr class="separator:a187b3480cf31fa5547aa4741c30a66c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0a0a91f5b2efa85200c005ff9216413"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#af0a0a91f5b2efa85200c005ff9216413">setUniform4fv</a> (const string &amp;name, float *v, int count=1)</td></tr>
+<tr class="separator:af0a0a91f5b2efa85200c005ff9216413"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a912e561494906eee7eb826d9ed782317"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#a912e561494906eee7eb826d9ed782317">setUniformMatrix4f</a> (const string &amp;name, const <a class="el" href="classof_matrix4x4.html">ofMatrix4x4</a> &amp;m)</td></tr>
+<tr class="separator:a912e561494906eee7eb826d9ed782317"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d31c520f0c79ccfca473e21fc00e573"><td class="memItemLeft" align="right" valign="top">GLint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#a0d31c520f0c79ccfca473e21fc00e573">getAttributeLocation</a> (const string &amp;name)</td></tr>
+<tr class="separator:a0d31c520f0c79ccfca473e21fc00e573"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55bf8d9beaf7994ba9c47b95e699c1ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#a55bf8d9beaf7994ba9c47b95e699c1ab">setAttribute1s</a> (GLint location, short v1)</td></tr>
 <tr class="separator:a55bf8d9beaf7994ba9c47b95e699c1ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af401014dd74a493445b73f69564722bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#af401014dd74a493445b73f69564722bf">setAttribute2s</a> (GLint location, short v1, short v2)</td></tr>
@@ -149,6 +166,16 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1505e9dcc966de5d1af30cb303cc37d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5c3a280e90330004c5d1cbc516618b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#ab5c3a280e90330004c5d1cbc516618b7">setAttribute4d</a> (GLint location, double v1, double v2, double v3, double v4)</td></tr>
 <tr class="separator:ab5c3a280e90330004c5d1cbc516618b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e3fb11082b7c60645f40889d03c1c48"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#a0e3fb11082b7c60645f40889d03c1c48">setAttribute1fv</a> (const string &amp;name, float *v, GLsizei stride=sizeof(float))</td></tr>
+<tr class="separator:a0e3fb11082b7c60645f40889d03c1c48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f4f9266ab62ecc01c683b1ccddc28a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#a2f4f9266ab62ecc01c683b1ccddc28a5">setAttribute2fv</a> (const string &amp;name, float *v, GLsizei stride=sizeof(float)*2)</td></tr>
+<tr class="separator:a2f4f9266ab62ecc01c683b1ccddc28a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ebbc2466fa8206b6cc5f602f162a9b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#a3ebbc2466fa8206b6cc5f602f162a9b2">setAttribute3fv</a> (const string &amp;name, float *v, GLsizei stride=sizeof(float)*3)</td></tr>
+<tr class="separator:a3ebbc2466fa8206b6cc5f602f162a9b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad28fb55122698873bf449b5abbd9f7ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#ad28fb55122698873bf449b5abbd9f7ea">setAttribute4fv</a> (const string &amp;name, float *v, GLsizei stride=sizeof(float)*4)</td></tr>
+<tr class="separator:ad28fb55122698873bf449b5abbd9f7ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7f2a37ea7d9e9da43f7b669d8640b3b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#ac7f2a37ea7d9e9da43f7b669d8640b3b">bindAttribute</a> (GLuint location, const string &amp;name)</td></tr>
+<tr class="separator:ac7f2a37ea7d9e9da43f7b669d8640b3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab968eeb48a0026e6f50b92a90c7792d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#ab968eeb48a0026e6f50b92a90c7792d2">printActiveUniforms</a> ()</td></tr>
 <tr class="separator:ab968eeb48a0026e6f50b92a90c7792d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7408b9e71d74dff3feb5f2248350cab8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#a7408b9e71d74dff3feb5f2248350cab8">printActiveAttributes</a> ()</td></tr>
@@ -159,11 +186,40 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:adef2885e7dc9e3875ed62b886a3f9695"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ea39cb41a521e637a641354299ccfb6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#a0ea39cb41a521e637a641354299ccfb6">linkProgram</a> ()</td></tr>
 <tr class="separator:a0ea39cb41a521e637a641354299ccfb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1f468e84f688a0e2871d9e3efbbacd8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#af1f468e84f688a0e2871d9e3efbbacd8">bindDefaults</a> ()</td></tr>
+<tr class="separator:af1f468e84f688a0e2871d9e3efbbacd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf00bced0081d73f5108bcfafbdbcaf7"><td class="memItemLeft" align="right" valign="top">GLuint &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#acf00bced0081d73f5108bcfafbdbcaf7">getProgram</a> ()</td></tr>
 <tr class="separator:acf00bced0081d73f5108bcfafbdbcaf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3cc99d7a15f939c958a5839a06152686"><td class="memItemLeft" align="right" valign="top">GLuint &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#a3cc99d7a15f939c958a5839a06152686">getShader</a> (GLenum type)</td></tr>
 <tr class="separator:a3cc99d7a15f939c958a5839a06152686"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5174910279fb251688f635d060abaa6a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#a5174910279fb251688f635d060abaa6a">operator==</a> (const <a class="el" href="classof_shader.html">ofShader</a> &amp;other)</td></tr>
+<tr class="separator:a5174910279fb251688f635d060abaa6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41324f504084099a4b84fd54d08789d4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_shader.html#a41324f504084099a4b84fd54d08789d4">operator!=</a> (const <a class="el" href="classof_shader.html">ofShader</a> &amp;other)</td></tr>
+<tr class="separator:a41324f504084099a4b84fd54d08789d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Enumeration Documentation</h2>
+<a class="anchor" id="a9f35d6011294c2e93d33d5d5eb65f4dd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classof_shader.html#a9f35d6011294c2e93d33d5d5eb65f4dd">ofShader::defaultAttributes</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="a9f35d6011294c2e93d33d5d5eb65f4dda4c0cb04f031969394a81ae621f524f85"></a>POSITION_ATTRIBUTE</em>&nbsp;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a9f35d6011294c2e93d33d5d5eb65f4ddae648d060d89b376077d31ba9a9eebc29"></a>COLOR_ATTRIBUTE</em>&nbsp;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a9f35d6011294c2e93d33d5d5eb65f4dda0db8ee2b57038410042266ee3cabb5c7"></a>NORMAL_ATTRIBUTE</em>&nbsp;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a9f35d6011294c2e93d33d5d5eb65f4dda7225a7535a27ab8a589e81dec085d37e"></a>TEXCOORD_ATTRIBUTE</em>&nbsp;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a73584392e61ecc25d966ae14a13f23ec"></a>
 <div class="memitem">
@@ -195,6 +251,22 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a1e5125a83fc82c5232d24ccbf883ba4a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ofShader::ofShader </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classof_shader.html">ofShader</a> &amp;&#160;</td>
+          <td class="paramname"><em>shader</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a54bff8ba8e22f85d9be9fbb47430a73d"></a>
 <div class="memitem">
@@ -202,6 +274,47 @@ Public Member Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">void ofShader::begin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac7f2a37ea7d9e9da43f7b669d8640b3b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofShader::bindAttribute </td>
+          <td>(</td>
+          <td class="paramtype">GLuint&#160;</td>
+          <td class="paramname"><em>location</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af1f468e84f688a0e2871d9e3efbbacd8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ofShader::bindDefaults </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -226,14 +339,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a6a7c1181de27ec4d8340162ca1f31d73"></a>
+<a class="anchor" id="a0d31c520f0c79ccfca473e21fc00e573"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">GLint ofShader::getAttributeLocation </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
+          <td class="paramtype">const string &amp;&#160;</td>
           <td class="paramname"><em>name</em></td><td>)</td>
           <td></td>
         </tr>
@@ -281,6 +394,21 @@ Public Member Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">GLenum&#160;</td>
           <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="acc5a0cc4424e03b9a052927f3d581841"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ofShader::isLoaded </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -345,6 +473,54 @@ Public Member Functions</h2></td></tr>
           <td></td>
           <td>)</td>
           <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a41324f504084099a4b84fd54d08789d4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ofShader::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classof_shader.html">ofShader</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="abe78f7292a99e590663523280301b669"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classof_shader.html">ofShader</a> &amp; ofShader::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classof_shader.html">ofShader</a> &amp;&#160;</td>
+          <td class="paramname"><em>shader</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5174910279fb251688f635d060abaa6a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ofShader::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classof_shader.html">ofShader</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -422,6 +598,38 @@ Public Member Functions</h2></td></tr>
           <td></td>
           <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>v1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0e3fb11082b7c60645f40889d03c1c48"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofShader::setAttribute1fv </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLsizei&#160;</td>
+          <td class="paramname"><em>stride</em> = <code>sizeof(float)</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -512,6 +720,38 @@ Public Member Functions</h2></td></tr>
           <td></td>
           <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>v2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2f4f9266ab62ecc01c683b1ccddc28a5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofShader::setAttribute2fv </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLsizei&#160;</td>
+          <td class="paramname"><em>stride</em> = <code>sizeof(float)*2</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -620,6 +860,38 @@ Public Member Functions</h2></td></tr>
           <td></td>
           <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>v3</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3ebbc2466fa8206b6cc5f602f162a9b2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofShader::setAttribute3fv </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLsizei&#160;</td>
+          <td class="paramname"><em>stride</em> = <code>sizeof(float)*3</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -757,6 +1029,38 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ad28fb55122698873bf449b5abbd9f7ea"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofShader::setAttribute4fv </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLsizei&#160;</td>
+          <td class="paramname"><em>stride</em> = <code>sizeof(float)*4</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="af17f9c18017c6a795dc17e54238eaebb"></a>
 <div class="memitem">
 <div class="memproto">
@@ -849,14 +1153,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a973146a9199d850fb376a293fcb8b6e5"></a>
+<a class="anchor" id="ad3f452decf2dd384143e0f58c740ef97"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void ofShader::setUniform1f </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
+          <td class="paramtype">const string &amp;&#160;</td>
           <td class="paramname"><em>name</em>, </td>
         </tr>
         <tr>
@@ -875,14 +1179,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a117f44fa7997e1a66cc4eed28b4b4c75"></a>
+<a class="anchor" id="a09b6ded4f3c4e407014ec4aadb9f7f95"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void ofShader::setUniform1fv </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
+          <td class="paramtype">const string &amp;&#160;</td>
           <td class="paramname"><em>name</em>, </td>
         </tr>
         <tr>
@@ -907,14 +1211,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a1ff9f9ad9165480c4e2818defc1a5dc1"></a>
+<a class="anchor" id="a9a6aef6460a60cbdd877a7978e315ddd"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void ofShader::setUniform1i </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
+          <td class="paramtype">const string &amp;&#160;</td>
           <td class="paramname"><em>name</em>, </td>
         </tr>
         <tr>
@@ -933,14 +1237,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a833fa69a860a01ce3693e9452196e171"></a>
+<a class="anchor" id="a9e171fe26ef79246730d60b01615823d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void ofShader::setUniform1iv </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
+          <td class="paramtype">const string &amp;&#160;</td>
           <td class="paramname"><em>name</em>, </td>
         </tr>
         <tr>
@@ -965,14 +1269,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a0c20c1667720b7e3112504f2fdfb67e4"></a>
+<a class="anchor" id="ae739f5c2b3d93ad33bbfe2f433464fd6"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void ofShader::setUniform2f </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
+          <td class="paramtype">const string &amp;&#160;</td>
           <td class="paramname"><em>name</em>, </td>
         </tr>
         <tr>
@@ -997,14 +1301,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="abe6e5ad7de98d2ee682230564d7cd636"></a>
+<a class="anchor" id="ae567162bd4b52a612bfee9d5e76df108"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void ofShader::setUniform2fv </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
+          <td class="paramtype">const string &amp;&#160;</td>
           <td class="paramname"><em>name</em>, </td>
         </tr>
         <tr>
@@ -1029,14 +1333,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a652abc6adb3d2a4d38b9fcb74ed4ab1c"></a>
+<a class="anchor" id="a2179e58133437c2869c1fe15fa0f143d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void ofShader::setUniform2i </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
+          <td class="paramtype">const string &amp;&#160;</td>
           <td class="paramname"><em>name</em>, </td>
         </tr>
         <tr>
@@ -1061,14 +1365,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a484bfb8ef015af278c9c185a90857c76"></a>
+<a class="anchor" id="a1c7a353b6b205e011e0c139ae877d79c"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void ofShader::setUniform2iv </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
+          <td class="paramtype">const string &amp;&#160;</td>
           <td class="paramname"><em>name</em>, </td>
         </tr>
         <tr>
@@ -1093,14 +1397,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a0d6d3fa495a7ef5d1147c9ab00814161"></a>
+<a class="anchor" id="a076becb85c27f56bf2d14cb4f99320be"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void ofShader::setUniform3f </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
+          <td class="paramtype">const string &amp;&#160;</td>
           <td class="paramname"><em>name</em>, </td>
         </tr>
         <tr>
@@ -1131,14 +1435,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ac32ca0b1b149970f7ffc96dc0deb6704"></a>
+<a class="anchor" id="a187b3480cf31fa5547aa4741c30a66c8"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void ofShader::setUniform3fv </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
+          <td class="paramtype">const string &amp;&#160;</td>
           <td class="paramname"><em>name</em>, </td>
         </tr>
         <tr>
@@ -1163,14 +1467,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ae74401136d950fff044d4ca141c744da"></a>
+<a class="anchor" id="a3648f39ed9a3b07c065f25fe579ab2d5"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void ofShader::setUniform3i </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
+          <td class="paramtype">const string &amp;&#160;</td>
           <td class="paramname"><em>name</em>, </td>
         </tr>
         <tr>
@@ -1201,14 +1505,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a3eb9a2258d7362bc41bc421722a6ea6d"></a>
+<a class="anchor" id="a81aa1221a1137afad914d874ec48588a"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void ofShader::setUniform3iv </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
+          <td class="paramtype">const string &amp;&#160;</td>
           <td class="paramname"><em>name</em>, </td>
         </tr>
         <tr>
@@ -1233,14 +1537,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a8e1dac261ead2e60da74a3368dd00b29"></a>
+<a class="anchor" id="a3d8da00e3724c9991481f6d395b30c63"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void ofShader::setUniform4f </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
+          <td class="paramtype">const string &amp;&#160;</td>
           <td class="paramname"><em>name</em>, </td>
         </tr>
         <tr>
@@ -1277,14 +1581,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a7005b4074d17d5ac424c6adf7d1d24f9"></a>
+<a class="anchor" id="af0a0a91f5b2efa85200c005ff9216413"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void ofShader::setUniform4fv </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
+          <td class="paramtype">const string &amp;&#160;</td>
           <td class="paramname"><em>name</em>, </td>
         </tr>
         <tr>
@@ -1309,14 +1613,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a16c3aecbb2c4a854e06e6fa68a6d3c61"></a>
+<a class="anchor" id="a5c4f4b804919be7ca21bc24b0acf04d8"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void ofShader::setUniform4i </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
+          <td class="paramtype">const string &amp;&#160;</td>
           <td class="paramname"><em>name</em>, </td>
         </tr>
         <tr>
@@ -1353,14 +1657,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ae91c769da59df3010e34ea98e655b23d"></a>
+<a class="anchor" id="a3b30daa9ae3c7f235c4eb21db67f761b"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void ofShader::setUniform4iv </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
+          <td class="paramtype">const string &amp;&#160;</td>
           <td class="paramname"><em>name</em>, </td>
         </tr>
         <tr>
@@ -1385,14 +1689,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ad0700b100df56744c164197691ed49e1"></a>
+<a class="anchor" id="a912e561494906eee7eb826d9ed782317"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void ofShader::setUniformMatrix4f </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
+          <td class="paramtype">const string &amp;&#160;</td>
           <td class="paramname"><em>name</em>, </td>
         </tr>
         <tr>
@@ -1411,14 +1715,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a7c5e410acb05fc81527a2b2d2b8c236e"></a>
+<a class="anchor" id="a8b3dfcd48f67ce173318ad4846974bb5"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void ofShader::setUniformTexture </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
+          <td class="paramtype">const string &amp;&#160;</td>
           <td class="paramname"><em>name</em>, </td>
         </tr>
         <tr>
@@ -1443,14 +1747,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a88692a914fe689606f5f52785357fd31"></a>
+<a class="anchor" id="a8d937c1481c8848bdae8dba76d84b8bc"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void ofShader::setUniformTexture </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
+          <td class="paramtype">const string &amp;&#160;</td>
           <td class="paramname"><em>name</em>, </td>
         </tr>
         <tr>
@@ -1475,14 +1779,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a64e2c1571d5599b7a5fb7a6531c2caf5"></a>
+<a class="anchor" id="a652320f948d0108ad77b4d5c6f83c765"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void ofShader::setUniformTexture </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
+          <td class="paramtype">const string &amp;&#160;</td>
           <td class="paramname"><em>name</em>, </td>
         </tr>
         <tr>
@@ -1581,8 +1885,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>gl/<a class="el" href="of_shader_8h_source.html">ofShader.h</a></li>
-<li>gl/<a class="el" href="of_shader_8cpp.html">ofShader.cpp</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/gl/<a class="el" href="of_shader_8h_source.html">ofShader.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/gl/<a class="el" href="of_shader_8cpp.html">ofShader.cpp</a></li>
 </ul>
 </div><!-- contents -->
 

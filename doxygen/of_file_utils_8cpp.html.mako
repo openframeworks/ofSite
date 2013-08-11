@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -47,7 +48,7 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_cbdb8362360e11eafe2fa3bc74cf0ffd.html">utils</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_84d5b34cee6369a03c8d1f3b970ed216.html">openFrameworks</a></li><li class="navelem"><a class="el" href="dir_526ceb304abbba6426340f0fa9170dbd.html">utils</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -87,6 +88,8 @@ Functions</h2></td></tr>
 <tr class="separator:a9b12341421fa4342c641ba03772f87d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae60ccf41acded243caa1e10657c81a2c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_file_utils_8cpp.html#ae60ccf41acded243caa1e10657c81a2c">hiddenFile</a> (<a class="el" href="classof_file.html">ofFile</a> file)</td></tr>
 <tr class="separator:ae60ccf41acded243caa1e10657c81a2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bc53b88a3bcabad56b429c1e42f1d1c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_file_utils_8cpp.html#a1bc53b88a3bcabad56b429c1e42f1d1c">natural</a> (const <a class="el" href="classof_file.html">ofFile</a> &amp;<a class="el" href="of_matrix4x4_8cpp.html#a8d3c3518d793541417a4845125da1ae1">a</a>, const <a class="el" href="classof_file.html">ofFile</a> &amp;<a class="el" href="of_matrix4x4_8cpp.html#ab2d05693952610f937e5acb3c4a8fa1b">b</a>)</td></tr>
+<tr class="separator:a1bc53b88a3bcabad56b429c1e42f1d1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="ae60ccf41acded243caa1e10657c81a2c"></a>
@@ -99,6 +102,32 @@ Functions</h2></td></tr>
           <td class="paramtype"><a class="el" href="classof_file.html">ofFile</a>&#160;</td>
           <td class="paramname"><em>file</em></td><td>)</td>
           <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1bc53b88a3bcabad56b429c1e42f1d1c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool natural </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classof_file.html">ofFile</a> &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classof_file.html">ofFile</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">

@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -52,6 +53,7 @@
       <li><a href="functions.html"><span>All</span></a></li>
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li class="current"><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_type.html"><span>Typedefs</span></a></li>
       <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
       <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
       <li><a href="functions_prop.html"><span>Properties</span></a></li>
@@ -95,6 +97,9 @@
 <h3><a class="anchor" id="index_q"></a>- q -</h3><ul>
 <li>q
 : <a class="el" href="struct__affine_parts.html#a8216eff6db4e9608fb8dd3a607d74a1a">_affineParts</a>
+</li>
+<li>quad
+: <a class="el" href="classof_texture.html#a1fa7514f50f2fca63c94554fa37d3201">ofTexture</a>
 </li>
 </ul>
 </div><!-- contents -->

@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -47,14 +48,16 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_e79632891301b850df87e9c0030293fa.html">graphics</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_84d5b34cee6369a03c8d1f3b970ed216.html">openFrameworks</a></li><li class="navelem"><a class="el" href="dir_71ce5ed87e0eac5aae2f3eaf44c16fe2.html">graphics</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
-<a href="#enum-members">Enumerations</a>  </div>
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">ofPixels.h File Reference</div>  </div>
 </div><!--header-->
@@ -72,6 +75,11 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_pixels__.html">ofPixels_&lt; PixelType &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespacestd"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestd.html">std</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:a590f460ea8c9e40214543c26ca3b386a"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classof_pixels__.html">ofPixels_</a>&lt; unsigned char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_pixels_8h.html#a590f460ea8c9e40214543c26ca3b386a">ofPixels</a></td></tr>
@@ -82,6 +90,10 @@ Typedefs</h2></td></tr>
 <tr class="separator:ac39b31393829b504dee01ae495ffaaa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af934cec3ae4fc641202e2c1f48c182db"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="of_pixels_8h.html#a590f460ea8c9e40214543c26ca3b386a">ofPixels</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_pixels_8h.html#af934cec3ae4fc641202e2c1f48c182db">ofPixelsRef</a></td></tr>
 <tr class="separator:af934cec3ae4fc641202e2c1f48c182db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfbcf3c65d94b673fd0d3e484f640b6d"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="of_pixels_8h.html#a0b4153db947c5a20408140e5f24ab1e0">ofFloatPixels</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_pixels_8h.html#acfbcf3c65d94b673fd0d3e484f640b6d">ofFloatPixelsRef</a></td></tr>
+<tr class="separator:acfbcf3c65d94b673fd0d3e484f640b6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee3275d64adf459ecf37f95fa1a994fd"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="of_pixels_8h.html#ac39b31393829b504dee01ae495ffaaa0">ofShortPixels</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_pixels_8h.html#aee3275d64adf459ecf37f95fa1a994fd">ofShortPixelsRef</a></td></tr>
+<tr class="separator:aee3275d64adf459ecf37f95fa1a994fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -90,6 +102,12 @@ Enumerations</h2></td></tr>
 <a class="el" href="of_pixels_8h.html#a50ccb4005c338a4abfadca9101d45019a7b22cedb1e15377da2a2094907e5dcb3">OF_INTERPOLATE_BICUBIC</a> =3
  }</td></tr>
 <tr class="separator:a50ccb4005c338a4abfadca9101d45019"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a08edfd20a72c3d81da8646e1fced27dc"><td class="memTemplParams" colspan="2">template&lt;typename PixelType &gt; </td></tr>
+<tr class="memitem:a08edfd20a72c3d81da8646e1fced27dc"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacestd.html#a08edfd20a72c3d81da8646e1fced27dc">std::swap</a> (<a class="el" href="classof_pixels__.html">ofPixels_</a>&lt; PixelType &gt; &amp;src, <a class="el" href="classof_pixels__.html">ofPixels_</a>&lt; PixelType &gt; &amp;dst)</td></tr>
+<tr class="separator:a08edfd20a72c3d81da8646e1fced27dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a class="anchor" id="a0b4153db947c5a20408140e5f24ab1e0"></a>
@@ -98,6 +116,18 @@ Enumerations</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">typedef <a class="el" href="classof_pixels__.html">ofPixels_</a>&lt;float&gt; <a class="el" href="of_pixels_8h.html#a0b4153db947c5a20408140e5f24ab1e0">ofFloatPixels</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="acfbcf3c65d94b673fd0d3e484f640b6d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="of_pixels_8h.html#a0b4153db947c5a20408140e5f24ab1e0">ofFloatPixels</a>&amp; <a class="el" href="of_pixels_8h.html#acfbcf3c65d94b673fd0d3e484f640b6d">ofFloatPixelsRef</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -134,6 +164,18 @@ Enumerations</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">typedef <a class="el" href="classof_pixels__.html">ofPixels_</a>&lt;unsigned short&gt; <a class="el" href="of_pixels_8h.html#ac39b31393829b504dee01ae495ffaaa0">ofShortPixels</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aee3275d64adf459ecf37f95fa1a994fd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="of_pixels_8h.html#ac39b31393829b504dee01ae495ffaaa0">ofShortPixels</a>&amp; <a class="el" href="of_pixels_8h.html#aee3275d64adf459ecf37f95fa1a994fd">ofShortPixelsRef</a></td>
         </tr>
       </table>
 </div><div class="memdoc">

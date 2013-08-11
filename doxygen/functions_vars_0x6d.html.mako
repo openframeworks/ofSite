@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -52,6 +53,7 @@
       <li><a href="functions.html"><span>All</span></a></li>
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li class="current"><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_type.html"><span>Typedefs</span></a></li>
       <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
       <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
       <li><a href="functions_prop.html"><span>Properties</span></a></li>
@@ -132,6 +134,9 @@
 <li>mediumVioletRed
 : <a class="el" href="classof_color__.html#a5f7081094b478d2a3b06cd2dc79564e9">ofColor_&lt; PixelType &gt;</a>
 </li>
+<li>mesh
+: <a class="el" href="classof3d_primitive.html#a23397519eb4a50bd68660a1e9aba6cd4">of3dPrimitive</a>
+</li>
 <li>message
 : <a class="el" href="classof_message.html#a2eae6184444083429375719072de2018">ofMessage</a>
 </li>
@@ -162,8 +167,17 @@
 <li>module
 : <a class="el" href="classof_log.html#aa1f61b048422566b8bdd9c50f5a05f44">ofLog</a>
 </li>
+<li>mouseButtonState
+: <a class="el" href="struct_mouse_state.html#a921df33bfcd6af9e2c88382b4de042ab">MouseState</a>
+</li>
+<li>mouseCursor
+: <a class="el" href="classof_app_e_g_l_window.html#af4ee9fdaa49f4d25a85ef913b2234eb9">ofAppEGLWindow</a>
+</li>
 <li>mouseDragged
 : <a class="el" href="classof_core_events.html#a872532213d623e1da1bb63f288031b46">ofCoreEvents</a>
+</li>
+<li>mouseEvents
+: <a class="el" href="classof_app_e_g_l_window.html#a1c23bbd631b42d90ff25bcabd4bd6bf5">ofAppEGLWindow</a>
 </li>
 <li>mouseMoved
 : <a class="el" href="classof_core_events.html#a41bc8bca4209d5bb113c8b6277f3ae37">ofCoreEvents</a>
@@ -173,6 +187,12 @@
 </li>
 <li>mouseReleased
 : <a class="el" href="classof_core_events.html#a4756e0e3e8f5d5867997d4aaa4f82e0e">ofCoreEvents</a>
+</li>
+<li>mouseScaleX
+: <a class="el" href="classof_app_e_g_l_window.html#a24de484b1850a7316c66aa7ea7b33fe7">ofAppEGLWindow</a>
+</li>
+<li>mouseScaleY
+: <a class="el" href="classof_app_e_g_l_window.html#a8a8d78c3283f2000d126772fb7c16686">ofAppEGLWindow</a>
 </li>
 <li>mouseX
 : <a class="el" href="classof_base_app.html#a00bda1b05dcf99834d4a0c96c170f11b">ofBaseApp</a>

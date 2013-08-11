@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -52,6 +53,7 @@
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="classof_renderer_collection-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ofRendererCollection Class Reference</div>  </div>
@@ -73,10 +75,10 @@ Inheritance diagram for ofRendererCollection:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aaf5600ac2d258d7fd2f2f3cf802b6441"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_renderer_collection.html#aaf5600ac2d258d7fd2f2f3cf802b6441">~ofRendererCollection</a> ()</td></tr>
 <tr class="separator:aaf5600ac2d258d7fd2f2f3cf802b6441"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a967ed7b5f8985510418b73a51d184879"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_renderer_collection.html#a967ed7b5f8985510418b73a51d184879">getType</a> ()</td></tr>
-<tr class="separator:a967ed7b5f8985510418b73a51d184879"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27bfbb1ff196ad463f92195698cf29df"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_ptr.html">ofPtr</a>&lt; <a class="el" href="classof_g_l_renderer.html">ofGLRenderer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_renderer_collection.html#a27bfbb1ff196ad463f92195698cf29df">getGLRenderer</a> ()</td></tr>
-<tr class="separator:a27bfbb1ff196ad463f92195698cf29df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a309c30d102a933ac44389225aabc183c"><td class="memItemLeft" align="right" valign="top">const string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_renderer_collection.html#a309c30d102a933ac44389225aabc183c">getType</a> ()</td></tr>
+<tr class="separator:a309c30d102a933ac44389225aabc183c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7078f7cab24c94972c05d52b72e4ef22"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_ptr.html">ofPtr</a>&lt; <a class="el" href="classof_base_g_l_renderer.html">ofBaseGLRenderer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_renderer_collection.html#a7078f7cab24c94972c05d52b72e4ef22">getGLRenderer</a> ()</td></tr>
+<tr class="separator:a7078f7cab24c94972c05d52b72e4ef22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0fea7627d79f0c77a8b101c4eb5bd577"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_renderer_collection.html#a0fea7627d79f0c77a8b101c4eb5bd577">rendersPathPrimitives</a> ()</td></tr>
 <tr class="separator:a0fea7627d79f0c77a8b101c4eb5bd577"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ba4dcfc37cf724bcc1b8e2362b366fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_renderer_collection.html#a4ba4dcfc37cf724bcc1b8e2362b366fc">update</a> ()</td></tr>
@@ -89,8 +91,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad4459c22170c3bfaf48e629fb6d7e879"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5825da0a3ff641d229e57a2d3cc8ebd8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_renderer_collection.html#a5825da0a3ff641d229e57a2d3cc8ebd8">draw</a> (<a class="el" href="classof_mesh.html">ofMesh</a> &amp;vertexData, <a class="el" href="of_g_l_utils_8h.html#a6beb1fbbaba728909c78cda1eadfe28e">ofPolyRenderMode</a> mode, bool useColors, bool useTextures, bool useNormals)</td></tr>
 <tr class="separator:a5825da0a3ff641d229e57a2d3cc8ebd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af588a83a91489cc870c8163e12985282"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_renderer_collection.html#af588a83a91489cc870c8163e12985282">draw</a> (vector&lt; <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &gt; &amp;vertexData, <a class="el" href="of_g_l_utils_8h.html#a0f71f0b23a18629a446952d5540e16e0">ofPrimitiveMode</a> drawMode)</td></tr>
-<tr class="separator:af588a83a91489cc870c8163e12985282"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a205a903411f0544081392875d080ae16"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_renderer_collection.html#a205a903411f0544081392875d080ae16">draw</a> (<a class="el" href="classof3d_primitive.html">of3dPrimitive</a> &amp;model, <a class="el" href="of_g_l_utils_8h.html#a6beb1fbbaba728909c78cda1eadfe28e">ofPolyRenderMode</a> renderType)</td></tr>
+<tr class="separator:a205a903411f0544081392875d080ae16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64ed11c4baff34287573fdb20abfd12a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_renderer_collection.html#a64ed11c4baff34287573fdb20abfd12a">draw</a> (<a class="el" href="of_image_8h.html#afefad955db3b51212caad74105ca7871">ofImage</a> &amp;img, float x, float y, float z, float w, float h, float sx, float sy, float sw, float sh)</td></tr>
 <tr class="separator:a64ed11c4baff34287573fdb20abfd12a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba3efd6c8b9e664f56aaca4f5ca5a304"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_renderer_collection.html#aba3efd6c8b9e664f56aaca4f5ca5a304">draw</a> (<a class="el" href="of_image_8h.html#a5c3f1af668e7fb77902f6fb84c9bab5b">ofFloatImage</a> &amp;img, float x, float y, float z, float w, float h, float sx, float sy, float sw, float sh)</td></tr>
@@ -103,12 +105,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac1eb3d18b17c8483f0c9022d3f0c46b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa5cf782b4da20f9e72665dc50d41370f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_renderer_collection.html#aa5cf782b4da20f9e72665dc50d41370f">viewport</a> (<a class="el" href="classof_rectangle.html">ofRectangle</a> viewport)</td></tr>
 <tr class="separator:aa5cf782b4da20f9e72665dc50d41370f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0fdf138f4cfa91948cea6774ec52e9a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_renderer_collection.html#ae0fdf138f4cfa91948cea6774ec52e9a">viewport</a> (float x=0, float y=0, float width=0, float height=0, bool invertY=true)</td></tr>
-<tr class="separator:ae0fdf138f4cfa91948cea6774ec52e9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51e9b3a6f217b2a28e89720c324b8a3d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_renderer_collection.html#a51e9b3a6f217b2a28e89720c324b8a3d">setupScreenPerspective</a> (float width=0, float height=0, <a class="el" href="of_constants_8h.html#a85ec4045e22bafeea5c561f9778c1f1c">ofOrientation</a> orientation=<a class="el" href="of_constants_8h.html#a85ec4045e22bafeea5c561f9778c1f1caa38a6f3fee424ea35be626cb0b6e423b">OF_ORIENTATION_UNKNOWN</a>, bool vFlip=true, float fov=60, float nearDist=0, float farDist=0)</td></tr>
-<tr class="separator:a51e9b3a6f217b2a28e89720c324b8a3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2542ea52e2ccc5e95f345c6a27459b86"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_renderer_collection.html#a2542ea52e2ccc5e95f345c6a27459b86">setupScreenOrtho</a> (float width=0, float height=0, <a class="el" href="of_constants_8h.html#a85ec4045e22bafeea5c561f9778c1f1c">ofOrientation</a> orientation=<a class="el" href="of_constants_8h.html#a85ec4045e22bafeea5c561f9778c1f1caa38a6f3fee424ea35be626cb0b6e423b">OF_ORIENTATION_UNKNOWN</a>, bool vFlip=true, float nearDist=-1, float farDist=1)</td></tr>
-<tr class="separator:a2542ea52e2ccc5e95f345c6a27459b86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e1631a78cdbfccbf7892456d8b0f71a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_renderer_collection.html#a3e1631a78cdbfccbf7892456d8b0f71a">viewport</a> (float x=0, float y=0, float <a class="el" href="of_icon_8h.html#aca34d28e3d8bcbcadb8edb4e3af24f8c">width</a>=0, float <a class="el" href="of_icon_8h.html#ab2e78c61905b4419fcc7b4cfc500fe85">height</a>=0, bool vflip=<a class="el" href="of_base_types_8h.html#a112ebf9b37b365ab634260fa7413d92e">ofIsVFlipped</a>())</td></tr>
+<tr class="separator:a3e1631a78cdbfccbf7892456d8b0f71a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac8008a2a6b2571b55c244c27eb0028d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_renderer_collection.html#aac8008a2a6b2571b55c244c27eb0028d">setupScreenPerspective</a> (float <a class="el" href="of_icon_8h.html#aca34d28e3d8bcbcadb8edb4e3af24f8c">width</a>=0, float <a class="el" href="of_icon_8h.html#ab2e78c61905b4419fcc7b4cfc500fe85">height</a>=0, float fov=60, float nearDist=0, float farDist=0)</td></tr>
+<tr class="separator:aac8008a2a6b2571b55c244c27eb0028d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25e18d874e6102f41123abcb06c74fa5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_renderer_collection.html#a25e18d874e6102f41123abcb06c74fa5">setupScreenOrtho</a> (float <a class="el" href="of_icon_8h.html#aca34d28e3d8bcbcadb8edb4e3af24f8c">width</a>=0, float <a class="el" href="of_icon_8h.html#ab2e78c61905b4419fcc7b4cfc500fe85">height</a>=0, float nearDist=-1, float farDist=1)</td></tr>
+<tr class="separator:a25e18d874e6102f41123abcb06c74fa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1dfb552dd9741caf98b8cbf7282923d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_rectangle.html">ofRectangle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_renderer_collection.html#aa1dfb552dd9741caf98b8cbf7282923d">getCurrentViewport</a> ()</td></tr>
 <tr class="separator:aa1dfb552dd9741caf98b8cbf7282923d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afdcacbf9bdad63c006c1e57717599246"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_renderer_collection.html#afdcacbf9bdad63c006c1e57717599246">getViewportWidth</a> ()</td></tr>
@@ -195,6 +197,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3d04dc6a68993bed2e9044b9829b73f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0165e4121b7fd166d0563366046014f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_renderer_collection.html#a0165e4121b7fd166d0563366046014f1">setLineWidth</a> (float lineWidth)</td></tr>
 <tr class="separator:a0165e4121b7fd166d0563366046014f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad63ff2777fdf4da89124998722b28daa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_renderer_collection.html#ad63ff2777fdf4da89124998722b28daa">setDepthTest</a> (bool depthTest)</td></tr>
+<tr class="separator:ad63ff2777fdf4da89124998722b28daa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb323c4a55fb32c3e84cb2d54949b2f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_renderer_collection.html#acb323c4a55fb32c3e84cb2d54949b2f2">setBlendMode</a> (<a class="el" href="of_constants_8h.html#a5f194ae56b1bc61651eac7184ed1ad2e">ofBlendMode</a> blendMode)</td></tr>
 <tr class="separator:acb323c4a55fb32c3e84cb2d54949b2f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c88c2af62cbe79bbad5ac6bbd80ffd9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_renderer_collection.html#a2c88c2af62cbe79bbad5ac6bbd80ffd9">setLineSmoothing</a> (bool smooth)</td></tr>
@@ -205,6 +209,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae9d52e4565be0d80c54fc96f3d8b0933"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ac870644ba4dce8f2d4b46796ad572e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_renderer_collection.html#a3ac870644ba4dce8f2d4b46796ad572e">disablePointSprites</a> ()</td></tr>
 <tr class="separator:a3ac870644ba4dce8f2d4b46796ad572e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb1924650df655b53fdce8dc1e02e98d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_renderer_collection.html#acb1924650df655b53fdce8dc1e02e98d">enableAntiaAliasing</a> ()</td></tr>
+<tr class="separator:acb1924650df655b53fdce8dc1e02e98d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4606293d7928cf5058f2fc2fa64b897f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_renderer_collection.html#a4606293d7928cf5058f2fc2fa64b897f">disableAntiAliasing</a> ()</td></tr>
+<tr class="separator:a4606293d7928cf5058f2fc2fa64b897f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6dd8837b75c9db536f1ae0fa5e48465b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_renderer_collection.html#a6dd8837b75c9db536f1ae0fa5e48465b">drawLine</a> (float x1, float y1, float z1, float x2, float y2, float z2)</td></tr>
 <tr class="separator:a6dd8837b75c9db536f1ae0fa5e48465b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6bed8a7799f27fc5a301c3f362fcf26"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_renderer_collection.html#aa6bed8a7799f27fc5a301c3f362fcf26">drawRectangle</a> (float x, float y, float z, float w, float h)</td></tr>
@@ -213,24 +221,33 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a34aedb0a2eb0d855d1a96945e602559b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00e13ab5e85c771e8753563de38e3b49"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_renderer_collection.html#a00e13ab5e85c771e8753563de38e3b49">drawCircle</a> (float x, float y, float z, float radius)</td></tr>
 <tr class="separator:a00e13ab5e85c771e8753563de38e3b49"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4efdbb9a824536b143da0213fe2ce3b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_renderer_collection.html#a4efdbb9a824536b143da0213fe2ce3b6">drawSphere</a> (float x, float y, float z, float radius)</td></tr>
-<tr class="separator:a4efdbb9a824536b143da0213fe2ce3b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f22b60a3a88f5aa23b3b15e685db047"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_renderer_collection.html#a4f22b60a3a88f5aa23b3b15e685db047">drawEllipse</a> (float x, float y, float z, float width, float height)</td></tr>
+<tr class="memitem:a4f22b60a3a88f5aa23b3b15e685db047"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_renderer_collection.html#a4f22b60a3a88f5aa23b3b15e685db047">drawEllipse</a> (float x, float y, float z, float <a class="el" href="of_icon_8h.html#aca34d28e3d8bcbcadb8edb4e3af24f8c">width</a>, float <a class="el" href="of_icon_8h.html#ab2e78c61905b4419fcc7b4cfc500fe85">height</a>)</td></tr>
 <tr class="separator:a4f22b60a3a88f5aa23b3b15e685db047"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1393cf51a9b203b88dcedc2235fdb7da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_renderer_collection.html#a1393cf51a9b203b88dcedc2235fdb7da">drawString</a> (string text, float x, float y, float z, <a class="el" href="of_constants_8h.html#a14966be842b99f71080a7444cebbc0b7">ofDrawBitmapMode</a> mode)</td></tr>
 <tr class="separator:a1393cf51a9b203b88dcedc2235fdb7da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classof_base_renderer"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classof_base_renderer')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classof_base_renderer.html">ofBaseRenderer</a></td></tr>
 <tr class="memitem:a162ef56f1fa1ee5e245c47c24c76a54e inherit pub_methods_classof_base_renderer"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#a162ef56f1fa1ee5e245c47c24c76a54e">~ofBaseRenderer</a> ()</td></tr>
 <tr class="separator:a162ef56f1fa1ee5e245c47c24c76a54e inherit pub_methods_classof_base_renderer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77eac56c4f6eedf37809cd432b2e0924 inherit pub_methods_classof_base_renderer"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#a77eac56c4f6eedf37809cd432b2e0924">setOrientation</a> (<a class="el" href="of_constants_8h.html#a85ec4045e22bafeea5c561f9778c1f1c">ofOrientation</a> orientation, bool vFlip)</td></tr>
+<tr class="separator:a77eac56c4f6eedf37809cd432b2e0924 inherit pub_methods_classof_base_renderer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7698ce8d1e17235de9684c96dad1c27d inherit pub_methods_classof_base_renderer"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classof_rectangle.html">ofRectangle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#a7698ce8d1e17235de9684c96dad1c27d">getNativeViewport</a> ()</td></tr>
+<tr class="separator:a7698ce8d1e17235de9684c96dad1c27d inherit pub_methods_classof_base_renderer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4bd6773b94a4d7ac7de2fcdf9f01234 inherit pub_methods_classof_base_renderer"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#aa4bd6773b94a4d7ac7de2fcdf9f01234">isVFlipped</a> () const </td></tr>
+<tr class="separator:aa4bd6773b94a4d7ac7de2fcdf9f01234 inherit pub_methods_classof_base_renderer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af7417990c697218e2106991b1214641f inherit pub_methods_classof_base_renderer"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#af7417990c697218e2106991b1214641f">matrixMode</a> (<a class="el" href="of_constants_8h.html#a2d00334d4ec22117e5bfcafb5570263d">ofMatrixMode</a> mode)</td></tr>
 <tr class="separator:af7417990c697218e2106991b1214641f inherit pub_methods_classof_base_renderer"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aedbb0446e84b7c4337c5ae1bbb842889 inherit pub_methods_classof_base_renderer"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#aedbb0446e84b7c4337c5ae1bbb842889">setSphereResolution</a> (int res)</td></tr>
-<tr class="separator:aedbb0446e84b7c4337c5ae1bbb842889 inherit pub_methods_classof_base_renderer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab469558bbb12da5204ecae64a7427b5f inherit pub_methods_classof_base_renderer"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#ab469558bbb12da5204ecae64a7427b5f">enableAntiAliasing</a> ()</td></tr>
+<tr class="separator:ab469558bbb12da5204ecae64a7427b5f inherit pub_methods_classof_base_renderer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a543b096f54ca63b5bb802edd95de1d0d"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="classof_ptr.html">ofPtr</a>&lt; <a class="el" href="classof_base_renderer.html">ofBaseRenderer</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_renderer_collection.html#a543b096f54ca63b5bb802edd95de1d0d">renderers</a></td></tr>
 <tr class="separator:a543b096f54ca63b5bb802edd95de1d0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:af3c89a6a93c21944b002aebd3858dc20"><td class="memItemLeft" align="right" valign="top">static const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_renderer_collection.html#af3c89a6a93c21944b002aebd3858dc20">TYPE</a> =&quot;collection&quot;</td></tr>
+<tr class="separator:af3c89a6a93c21944b002aebd3858dc20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="aaf5600ac2d258d7fd2f2f3cf802b6441"></a>
@@ -527,6 +544,31 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a4606293d7928cf5058f2fc2fa64b897f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofRendererCollection::disableAntiAliasing </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classof_base_renderer.html#abe79cc46867fa6d35dfc9a28e6305314">ofBaseRenderer</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a3ac870644ba4dce8f2d4b46796ad572e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -706,7 +748,7 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="af588a83a91489cc870c8163e12985282"></a>
+<a class="anchor" id="a205a903411f0544081392875d080ae16"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -716,14 +758,14 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="memname">void ofRendererCollection::draw </td>
           <td>(</td>
-          <td class="paramtype">vector&lt; <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>vertexData</em>, </td>
+          <td class="paramtype"><a class="el" href="classof3d_primitive.html">of3dPrimitive</a> &amp;&#160;</td>
+          <td class="paramname"><em>model</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="of_g_l_utils_8h.html#a0f71f0b23a18629a446952d5540e16e0">ofPrimitiveMode</a>&#160;</td>
-          <td class="paramname"><em>drawMode</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="of_g_l_utils_8h.html#a6beb1fbbaba728909c78cda1eadfe28e">ofPolyRenderMode</a>&#160;</td>
+          <td class="paramname"><em>renderType</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -738,7 +780,7 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classof_base_renderer.html#a7884c6bf187a0449ce3aa8052c6056bc">ofBaseRenderer</a>.</p>
+<p>Implements <a class="el" href="classof_base_renderer.html#a64d298806404e33ed73b6ed5003c1efc">ofBaseRenderer</a>.</p>
 
 </div>
 </div>
@@ -1210,54 +1252,6 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a4efdbb9a824536b143da0213fe2ce3b6"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ofRendererCollection::drawSphere </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>z</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>radius</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implements <a class="el" href="classof_base_renderer.html#aa4658513f1b116c7b45db85a7a01ced3">ofBaseRenderer</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a1393cf51a9b203b88dcedc2235fdb7da"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1390,6 +1384,29 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="acb1924650df655b53fdce8dc1e02e98d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofRendererCollection::enableAntiaAliasing </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="ae9d52e4565be0d80c54fc96f3d8b0933"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1515,7 +1532,7 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a27bfbb1ff196ad463f92195698cf29df"></a>
+<a class="anchor" id="a7078f7cab24c94972c05d52b72e4ef22"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1523,7 +1540,7 @@ Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classof_ptr.html">ofPtr</a>&lt;<a class="el" href="classof_g_l_renderer.html">ofGLRenderer</a>&gt; ofRendererCollection::getGLRenderer </td>
+          <td class="memname"><a class="el" href="classof_ptr.html">ofPtr</a>&lt;<a class="el" href="classof_base_g_l_renderer.html">ofBaseGLRenderer</a>&gt; ofRendererCollection::getGLRenderer </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1563,7 +1580,7 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a967ed7b5f8985510418b73a51d184879"></a>
+<a class="anchor" id="a309c30d102a933ac44389225aabc183c"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1571,7 +1588,7 @@ Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">string ofRendererCollection::getType </td>
+          <td class="memname">const string&amp; ofRendererCollection::getType </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1584,7 +1601,7 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classof_base_renderer.html#ab04ab2e86135ab95b598f2d9c4929e7c">ofBaseRenderer</a>.</p>
+<p>Implements <a class="el" href="classof_base_renderer.html#a2f2aaeb89ebad3ff2cc4ce9bca5e1c20">ofBaseRenderer</a>.</p>
 
 </div>
 </div>
@@ -2369,6 +2386,32 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ad63ff2777fdf4da89124998722b28daa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofRendererCollection::setDepthTest </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>depthTest</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classof_base_renderer.html#abafdfd8b8e4bebc219e8550174c74837">ofBaseRenderer</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="aa3489b59899b540ce86e8c228330b02b"></a>
 <div class="memitem">
 <div class="memproto">
@@ -2549,7 +2592,7 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a2542ea52e2ccc5e95f345c6a27459b86"></a>
+<a class="anchor" id="a25e18d874e6102f41123abcb06c74fa5"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -2567,18 +2610,6 @@ Public Attributes</h2></td></tr>
           <td></td>
           <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>height</em> = <code>0</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="of_constants_8h.html#a85ec4045e22bafeea5c561f9778c1f1c">ofOrientation</a>&#160;</td>
-          <td class="paramname"><em>orientation</em> = <code><a class="el" href="of_constants_8h.html#a85ec4045e22bafeea5c561f9778c1f1caa38a6f3fee424ea35be626cb0b6e423b">OF_ORIENTATION_UNKNOWN</a></code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>vFlip</em> = <code>true</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -2605,11 +2636,11 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classof_base_renderer.html#a78aaffdae40b4a568b011171fc8556a6">ofBaseRenderer</a>.</p>
+<p>Reimplemented from <a class="el" href="classof_base_renderer.html#ab7c2a1204bfcc49732683ed613e93737">ofBaseRenderer</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a51e9b3a6f217b2a28e89720c324b8a3d"></a>
+<a class="anchor" id="aac8008a2a6b2571b55c244c27eb0028d"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -2627,18 +2658,6 @@ Public Attributes</h2></td></tr>
           <td></td>
           <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>height</em> = <code>0</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="of_constants_8h.html#a85ec4045e22bafeea5c561f9778c1f1c">ofOrientation</a>&#160;</td>
-          <td class="paramname"><em>orientation</em> = <code><a class="el" href="of_constants_8h.html#a85ec4045e22bafeea5c561f9778c1f1caa38a6f3fee424ea35be626cb0b6e423b">OF_ORIENTATION_UNKNOWN</a></code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>vFlip</em> = <code>true</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -2671,7 +2690,7 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classof_base_renderer.html#aefb98b7ef168dbff450f6054bf00d406">ofBaseRenderer</a>.</p>
+<p>Reimplemented from <a class="el" href="classof_base_renderer.html#ac9ab11780ce5d6a2270a94c51e8f3d2f">ofBaseRenderer</a>.</p>
 
 </div>
 </div>
@@ -2794,7 +2813,7 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ae0fdf138f4cfa91948cea6774ec52e9a"></a>
+<a class="anchor" id="a3e1631a78cdbfccbf7892456d8b0f71a"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -2829,7 +2848,7 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>invertY</em> = <code>true</code>&#160;</td>
+          <td class="paramname"><em>vflip</em> = <code><a class="el" href="of_base_types_8h.html#a112ebf9b37b365ab634260fa7413d92e">ofIsVFlipped</a>()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -2844,7 +2863,7 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classof_base_renderer.html#a300bd8d884c882a8ae3539367b0b7d9f">ofBaseRenderer</a>.</p>
+<p>Reimplemented from <a class="el" href="classof_base_renderer.html#afd5e7cedc203340a02448a4c5656a3ce">ofBaseRenderer</a>.</p>
 
 </div>
 </div>
@@ -2861,8 +2880,29 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>graphics/<a class="el" href="of_renderer_collection_8h_source.html">ofRendererCollection.h</a></li>
+<a class="anchor" id="af3c89a6a93c21944b002aebd3858dc20"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const string ofRendererCollection::TYPE =&quot;collection&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/graphics/<a class="el" href="of_renderer_collection_8h_source.html">ofRendererCollection.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/graphics/<a class="el" href="of_renderer_collection_8cpp.html">ofRendererCollection.cpp</a></li>
 </ul>
 </div><!-- contents -->
 

@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -88,6 +89,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4e7be9ede60368dcbe1566b6a7c7937b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7987c9afe679fa80a41a622338e181d5"><td class="memItemLeft" align="right" valign="top">long unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_sound_stream.html#a7987c9afe679fa80a41a622338e181d5">getTickCount</a> ()</td></tr>
 <tr class="separator:a7987c9afe679fa80a41a622338e181d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acad14341e4a7eafb7b7b8012d6745feb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_sound_stream.html#acad14341e4a7eafb7b7b8012d6745feb">getNumInputChannels</a> ()</td></tr>
+<tr class="separator:acad14341e4a7eafb7b7b8012d6745feb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c5cd61d04e29c2473d2cd1a5a93543a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_sound_stream.html#a6c5cd61d04e29c2473d2cd1a5a93543a">getNumOutputChannels</a> ()</td></tr>
+<tr class="separator:a6c5cd61d04e29c2473d2cd1a5a93543a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6637b6fc50ffb7df5f32829bc5b6ef50"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_sound_stream.html#a6637b6fc50ffb7df5f32829bc5b6ef50">getSampleRate</a> ()</td></tr>
+<tr class="separator:a6637b6fc50ffb7df5f32829bc5b6ef50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adac81ab108d13712887591e2985f99b4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_sound_stream.html#adac81ab108d13712887591e2985f99b4">getBufferSize</a> ()</td></tr>
+<tr class="separator:adac81ab108d13712887591e2985f99b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -117,6 +126,66 @@ Protected Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">void ofSoundStream::close </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="adac81ab108d13712887591e2985f99b4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ofSoundStream::getBufferSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="acad14341e4a7eafb7b7b8012d6745feb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ofSoundStream::getNumInputChannels </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6c5cd61d04e29c2473d2cd1a5a93543a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ofSoundStream::getNumOutputChannels </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6637b6fc50ffb7df5f32829bc5b6ef50"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ofSoundStream::getSampleRate </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -381,8 +450,8 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>sound/<a class="el" href="of_sound_stream_8h_source.html">ofSoundStream.h</a></li>
-<li>sound/<a class="el" href="of_sound_stream_8cpp.html">ofSoundStream.cpp</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/sound/<a class="el" href="of_sound_stream_8h_source.html">ofSoundStream.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/sound/<a class="el" href="of_sound_stream_8cpp.html">ofSoundStream.cpp</a></li>
 </ul>
 </div><!-- contents -->
 
