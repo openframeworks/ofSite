@@ -118,6 +118,34 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void dragged(&drag)
+
+<!--
+_syntax: dragged(&drag)_
+_name: dragged_
+_returns: void_
+_returns_description: _
+_parameters: ofDragInfo &drag_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void draw()
 
 <!--
@@ -158,6 +186,34 @@ void draw(){
 
 <!----------------------------------------------------------------------------->
 
+###void draw(&args)
+
+<!--
+_syntax: draw(&args)_
+_name: draw_
+_returns: void_
+_returns_description: _
+_parameters: ofEventArgs &args_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void exit()
 
 <!--
@@ -180,6 +236,34 @@ _description: _
 
 
 Add this function to your testApp to have it called at the moment before the app is terminated. This is useful for doing cleanup stuff or making sure files are saved before the app terminates. 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void exit(&args)
+
+<!--
+_syntax: exit(&args)_
+_name: exit_
+_returns: void_
+_returns_description: _
+_parameters: ofEventArgs &args_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -264,6 +348,34 @@ There are more complicated character codes, for keys such as F1-F12, Down, Enter
 
 <!----------------------------------------------------------------------------->
 
+###void keyPressed(&key)
+
+<!--
+_syntax: keyPressed(&key)_
+_name: keyPressed_
+_returns: void_
+_returns_description: _
+_parameters: ofKeyEventArgs &key_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void keyReleased(key)
 
 <!--
@@ -308,6 +420,62 @@ There are more complicated character codes, for keys such as F1-F12, Down, Enter
 
 <!----------------------------------------------------------------------------->
 
+###void keyReleased(&key)
+
+<!--
+_syntax: keyReleased(&key)_
+_name: keyReleased_
+_returns: void_
+_returns_description: _
+_parameters: ofKeyEventArgs &key_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void messageReceived(&message)
+
+<!--
+_syntax: messageReceived(&message)_
+_name: messageReceived_
+_returns: void_
+_returns_description: _
+_parameters: ofMessage &message_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void mouseDragged(x, y, button)
 
 <!--
@@ -330,6 +498,34 @@ _description: _
 
 
 This function gets called when the mouse is moving and the button is down. The button variable can be used to test against left or right button drags. You also receive the x and y corrdinates of the mouse.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void mouseDragged(&mouse)
+
+<!--
+_syntax: mouseDragged(&mouse)_
+_name: mouseDragged_
+_returns: void_
+_returns_description: _
+_parameters: ofMouseEventArgs &mouse_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -370,6 +566,34 @@ This function gets when ever the mouse moves. You receive the x and y corrdinate
 
 <!----------------------------------------------------------------------------->
 
+###void mouseMoved(&mouse)
+
+<!--
+_syntax: mouseMoved(&mouse)_
+_name: mouseMoved_
+_returns: void_
+_returns_description: _
+_parameters: ofMouseEventArgs &mouse_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void mousePressed(x, y, button)
 
 <!--
@@ -392,6 +616,34 @@ _description: _
 
 
 This function gets called when the mouse is pushed down. The button (left, right, center) is passed in, along with the x and y corrdinate. 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void mousePressed(&mouse)
+
+<!--
+_syntax: mousePressed(&mouse)_
+_name: mousePressed_
+_returns: void_
+_returns_description: _
+_parameters: ofMouseEventArgs &mouse_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -463,6 +715,34 @@ This function gets called when the mouse is released. The button (left, right, c
 
 <!----------------------------------------------------------------------------->
 
+###void mouseReleased(&mouse)
+
+<!--
+_syntax: mouseReleased(&mouse)_
+_name: mouseReleased_
+_returns: void_
+_returns_description: _
+_parameters: ofMouseEventArgs &mouse_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ### ofBaseApp()
 
 <!--
@@ -525,6 +805,34 @@ This function gets called once, just at the start of the app. It would be a good
 
 <!----------------------------------------------------------------------------->
 
+###void setup(&args)
+
+<!--
+_syntax: setup(&args)_
+_name: setup_
+_returns: void_
+_returns_description: _
+_parameters: ofEventArgs &args_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void update()
 
 <!--
@@ -572,6 +880,34 @@ void draw(){
 
 <!----------------------------------------------------------------------------->
 
+###void update(&args)
+
+<!--
+_syntax: update(&args)_
+_name: update_
+_returns: void_
+_returns_description: _
+_parameters: ofEventArgs &args_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void windowEntry(state)
 
 <!--
@@ -592,6 +928,34 @@ _advanced: False_
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void windowEntry(&entry)
+
+<!--
+_syntax: windowEntry(&entry)_
+_name: windowEntry_
+_returns: void_
+_returns_description: _
+_parameters: ofEntryEventArgs &entry_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -624,6 +988,34 @@ _description: _
 
 This function gets called when ever we resize the application window. You receive the new width (w) and the new height (h) of the window.
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void windowResized(&resize)
+
+<!--
+_syntax: windowResized(&resize)_
+_name: windowResized_
+_returns: void_
+_returns_description: _
+_parameters: ofResizeEventArgs &resize_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 

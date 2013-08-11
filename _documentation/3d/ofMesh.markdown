@@ -931,6 +931,62 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void append(&mesh)
+
+<!--
+_syntax: append(&mesh)_
+_name: append_
+_returns: void_
+_returns_description: _
+_parameters: ofMesh &mesh_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofMesh box(width, height, depth, resX = 2, resY = 2, resZ = 2)
+
+<!--
+_syntax: box(width, height, depth, resX = 2, resY = 2, resZ = 2)_
+_name: box_
+_returns: ofMesh_
+_returns_description: _
+_parameters: float width, float height, float depth, int resX=2, int resY=2, int resZ=2_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: yes_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void clear()
 
 <!--
@@ -1117,6 +1173,62 @@ Removes all the vertices.
 
 <!----------------------------------------------------------------------------->
 
+###ofMesh cone(radius, height, radiusSegments = 12, heightSegments = 6, capSegments = 2, mode = OF_PRIMITIVE_TRIANGLE_STRIP)
+
+<!--
+_syntax: cone(radius, height, radiusSegments = 12, heightSegments = 6, capSegments = 2, mode = OF_PRIMITIVE_TRIANGLE_STRIP)_
+_name: cone_
+_returns: ofMesh_
+_returns_description: _
+_parameters: float radius, float height, int radiusSegments=12, int heightSegments=6, int capSegments=2, ofPrimitiveMode mode=OF_PRIMITIVE_TRIANGLE_STRIP_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: yes_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofMesh cylinder(radius, height, radiusSegments = 12, heightSegments = 6, numCapSegments = 2, bCapped = true, mode = OF_PRIMITIVE_TRIANGLE_STRIP)
+
+<!--
+_syntax: cylinder(radius, height, radiusSegments = 12, heightSegments = 6, numCapSegments = 2, bCapped = true, mode = OF_PRIMITIVE_TRIANGLE_STRIP)_
+_name: cylinder_
+_returns: ofMesh_
+_returns_description: _
+_parameters: float radius, float height, int radiusSegments=12, int heightSegments=6, int numCapSegments=2, bool bCapped=true, ofPrimitiveMode mode=OF_PRIMITIVE_TRIANGLE_STRIP_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: yes_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void disableColors()
 
 <!--
@@ -1272,7 +1384,7 @@ _name: draw_
 _returns: void_
 _returns_description: _
 _parameters: ofPolyRenderMode renderType_
-_access: protected_
+_access: public_
 _version_started: 007_
 _version_deprecated: _
 _summary: _
@@ -1685,6 +1797,34 @@ Get the vector that contains all of the faces of the mesh. This isn't currently 
 
 <!----------------------------------------------------------------------------->
 
+###ofVec3f getFaceNormals(perVetex = false)
+
+<!--
+_syntax: getFaceNormals(perVetex = false)_
+_name: getFaceNormals_
+_returns: ofVec3f_
+_returns_description: _
+_parameters: bool perVetex=false_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofIndexType getIndex(i)
 
 <!--
@@ -1799,6 +1939,62 @@ _description: _
 
 
 Get the vector that contains all of the indices of the mesh, if it has any.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofMesh getMeshForIndices(startIndex, endIndex)
+
+<!--
+_syntax: getMeshForIndices(startIndex, endIndex)_
+_name: getMeshForIndices_
+_returns: ofMesh_
+_returns_description: _
+_parameters: int startIndex, int endIndex_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofMesh getMeshForIndices(startIndex, endIndex, startVertIndex, endVertIndex)
+
+<!--
+_syntax: getMeshForIndices(startIndex, endIndex, startVertIndex, endVertIndex)_
+_name: getMeshForIndices_
+_returns: ofMesh_
+_returns_description: _
+_parameters: int startIndex, int endIndex, int startVertIndex, int endVertIndex_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -2231,6 +2427,34 @@ _description: _
 
 Get a pointer to the texture coords that the mesh contains.
 Get a pointer to the ofVec2f texture coordinates that the mesh contains.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofMeshFace getUniqueFaces()
+
+<!--
+_syntax: getUniqueFaces()_
+_name: getUniqueFaces_
+_returns: ofMeshFace_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -2673,6 +2897,62 @@ If the vertices of the mesh have changed, been added or removed.
 
 <!----------------------------------------------------------------------------->
 
+###ofMesh icosahedron(radius)
+
+<!--
+_syntax: icosahedron(radius)_
+_name: icosahedron_
+_returns: ofMesh_
+_returns_description: _
+_parameters: float radius_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: yes_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofMesh icosphere(radius, iterations = 2)
+
+<!--
+_syntax: icosphere(radius, iterations = 2)_
+_name: icosphere_
+_returns: ofMesh_
+_returns_description: _
+_parameters: float radius, int iterations=2_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: yes_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void load(path)
 
 <!--
@@ -2693,6 +2973,34 @@ _advanced: False_
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void mergeDuplicateVertices()
+
+<!--
+_syntax: mergeDuplicateVertices()_
+_name: mergeDuplicateVertices_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -2784,6 +3092,34 @@ _advanced: False_
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofMesh plane(width, height, columns = 2, rows = 2, mode = OF_PRIMITIVE_TRIANGLE_STRIP)
+
+<!--
+_syntax: plane(width, height, columns = 2, rows = 2, mode = OF_PRIMITIVE_TRIANGLE_STRIP)_
+_name: plane_
+_returns: ofMesh_
+_returns_description: _
+_parameters: float width, float height, int columns=2, int rows=2, ofPrimitiveMode mode=OF_PRIMITIVE_TRIANGLE_STRIP_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: yes_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -3202,6 +3538,62 @@ _advanced: False_
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setColorForIndices(startIndex, endIndex, color)
+
+<!--
+_syntax: setColorForIndices(startIndex, endIndex, color)_
+_name: setColorForIndices_
+_returns: void_
+_returns_description: _
+_parameters: int startIndex, int endIndex, ofColor color_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setFromTriangles(&tris, bUseFaceNormal = false)
+
+<!--
+_syntax: setFromTriangles(&tris, bUseFaceNormal = false)_
+_name: setFromTriangles_
+_returns: void_
+_returns_description: _
+_parameters: const vector< ofMeshFace > &tris, bool bUseFaceNormal=false_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -3631,6 +4023,62 @@ Allow you to set up the indices automatically when you add a vertex.
 
 <!----------------------------------------------------------------------------->
 
+###void smoothNormals(angle)
+
+<!--
+_syntax: smoothNormals(angle)_
+_name: smoothNormals_
+_returns: void_
+_returns_description: _
+_parameters: float angle_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofMesh sphere(radius, res = 12, mode = OF_PRIMITIVE_TRIANGLE_STRIP)
+
+<!--
+_syntax: sphere(radius, res = 12, mode = OF_PRIMITIVE_TRIANGLE_STRIP)_
+_name: sphere_
+_returns: ofMesh_
+_returns_description: _
+_parameters: float radius, int res=12, ofPrimitiveMode mode=OF_PRIMITIVE_TRIANGLE_STRIP_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: yes_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###friend std std
 
 <!--
@@ -3834,6 +4282,30 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###bool bFacesDirty
+
+<!--
+_name: bFacesDirty_
+_type: bool_
+_access: private_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###bool bIndicesChanged
 
 <!--
@@ -3950,6 +4422,30 @@ _advanced: False_
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofMeshFace faces
+
+<!--
+_name: faces_
+_type: ofMeshFace_
+_access: private_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_description: _
 
 
 

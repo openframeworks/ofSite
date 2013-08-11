@@ -532,12 +532,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void listDevices()
+###ofVideoDevice listDevices()
 
 <!--
 _syntax: listDevices()_
 _name: listDevices_
-_returns: void_
+_returns: ofVideoDevice_
 _returns_description: _
 _parameters: _
 _access: public_

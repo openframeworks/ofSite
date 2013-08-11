@@ -370,6 +370,30 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###ofMatrix4x4 textureMatrix
+
+<!--
+_name: textureMatrix_
+_type: ofMatrix4x4_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###int textureTarget
 
 <!--
@@ -386,6 +410,30 @@ _advanced: False_
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool useTextureMatrix
+
+<!--
+_name: useTextureMatrix_
+_type: bool_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 

@@ -230,6 +230,33 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###const char * ofFromString(&value)
+
+<!--
+_syntax: ofFromString(&value)_
+_name: ofFromString_
+_returns: const char *_
+_returns_description: _
+_parameters: const string &value_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###int ofGetDay()
 
 <!--
@@ -662,6 +689,87 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###unsigned int ofGetVersionMajor()
+
+<!--
+_syntax: ofGetVersionMajor()_
+_name: ofGetVersionMajor_
+_returns: unsigned int_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###unsigned int ofGetVersionMinor()
+
+<!--
+_syntax: ofGetVersionMinor()_
+_name: ofGetVersionMinor_
+_returns: unsigned int_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###unsigned int ofGetVersionPatch()
+
+<!--
+_syntax: ofGetVersionPatch()_
+_name: ofGetVersionPatch_
+_returns: unsigned int_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###int ofGetWeekday()
 
 <!--
@@ -904,6 +1012,33 @@ _advanced: False_
 _description: _
 
 Opens your computer's default browser and loads the specified url. 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofLaunchBrowser(url, uriEncodeQuery = false)
+
+<!--
+_syntax: ofLaunchBrowser(url, uriEncodeQuery = false)_
+_name: ofLaunchBrowser_
+_returns: void_
+_returns_description: _
+_parameters: string url, bool uriEncodeQuery=false_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
 
 
 
@@ -1164,6 +1299,33 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void ofSetWorkingDirectoryToDefault()
+
+<!--
+_syntax: ofSetWorkingDirectoryToDefault()_
+_name: ofSetWorkingDirectoryToDefault_
+_returns: void_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void ofSort(&values)
 
 <!--
@@ -1316,6 +1478,33 @@ _advanced: False_
 _description: _
 
 Searches `input` for instances of `searchStr` and replaces them with `replaceStr`.
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int ofStringTimesInString(haystack, needle)
+
+<!--
+_syntax: ofStringTimesInString(haystack, needle)_
+_name: ofStringTimesInString_
+_returns: int_
+_returns_description: _
+_parameters: string haystack, string needle_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
 
 
 
@@ -1529,6 +1718,33 @@ _name: ofToDataPath_
 _returns: string_
 _returns_description: _
 _parameters: string path, bool absolute=false_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###double ofToDouble(&doubleString)
+
+<!--
+_syntax: ofToDouble(&doubleString)_
+_name: ofToDouble_
+_returns: double_
+_returns_description: _
+_parameters: const string &doubleString_
 _version_started: _
 _version_deprecated: _
 _summary: _

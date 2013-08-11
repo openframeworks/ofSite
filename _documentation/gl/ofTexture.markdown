@@ -168,6 +168,230 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void allocate(&textureData, glFormat, pixelType)
+
+<!--
+_syntax: allocate(&textureData, glFormat, pixelType)_
+_name: allocate_
+_returns: void_
+_returns_description: _
+_parameters: const ofTextureData &textureData, int glFormat, int pixelType_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void allocate(w, h, glInternalFormat, glFormat, pixelType)
+
+<!--
+_syntax: allocate(w, h, glInternalFormat, glFormat, pixelType)_
+_name: allocate_
+_returns: void_
+_returns_description: _
+_parameters: int w, int h, int glInternalFormat, int glFormat, int pixelType_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void allocate(w, h, glInternalFormat, bUseARBExtention, glFormat, pixelType)
+
+<!--
+_syntax: allocate(w, h, glInternalFormat, bUseARBExtention, glFormat, pixelType)_
+_name: allocate_
+_returns: void_
+_returns_description: _
+_parameters: int w, int h, int glInternalFormat, bool bUseARBExtention, int glFormat, int pixelType_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void allocate(&pix, bUseARBExtention)
+
+<!--
+_syntax: allocate(&pix, bUseARBExtention)_
+_name: allocate_
+_returns: void_
+_returns_description: _
+_parameters: const ofPixels &pix, bool bUseARBExtention_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void allocate(&pix)
+
+<!--
+_syntax: allocate(&pix)_
+_name: allocate_
+_returns: void_
+_returns_description: _
+_parameters: const ofShortPixels &pix_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void allocate(&pix, bUseARBExtention)
+
+<!--
+_syntax: allocate(&pix, bUseARBExtention)_
+_name: allocate_
+_returns: void_
+_returns_description: _
+_parameters: const ofShortPixels &pix, bool bUseARBExtention_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void allocate(&pix)
+
+<!--
+_syntax: allocate(&pix)_
+_name: allocate_
+_returns: void_
+_returns_description: _
+_parameters: const ofFloatPixels &pix_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void allocate(&pix, bUseARBExtention)
+
+<!--
+_syntax: allocate(&pix, bUseARBExtention)_
+_name: allocate_
+_returns: void_
+_returns_description: _
+_parameters: const ofFloatPixels &pix, bool bUseARBExtention_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###bool bAllocated()
 
 <!--
@@ -253,6 +477,34 @@ _description: _
 
 clears / frees the texture memory, if something was already allocated. useful if you need to control the memory on the graphics card.
 Clears all the data from the texture
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void disableTextureTarget()
+
+<!--
+_syntax: disableTextureTarget()_
+_name: disableTextureTarget_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: protected_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -706,6 +958,34 @@ _advanced: False_
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void enableTextureTarget()
+
+<!--
+_syntax: enableTextureTarget()_
+_name: enableTextureTarget_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: protected_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -1323,6 +1603,35 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void loadData(&pix, glFormat)
+
+<!--
+_syntax: loadData(&pix, glFormat)_
+_name: loadData_
+_returns: void_
+_returns_description: _
+_parameters: const ofPixels &pix, int glFormat_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
 _static: no_
 _visible: True_
 _advanced: False_
@@ -1330,6 +1639,89 @@ _advanced: False_
 
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void loadData(&pix, glFormat)
+
+<!--
+_syntax: loadData(&pix, glFormat)_
+_name: loadData_
+_returns: void_
+_returns_description: _
+_parameters: const ofShortPixels &pix, int glFormat_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void loadData(&pix, glFormat)
+
+<!--
+_syntax: loadData(&pix, glFormat)_
+_name: loadData_
+_returns: void_
+_returns_description: _
+_parameters: const ofFloatPixels &pix, int glFormat_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void loadData(*data, w, h, glFormat, glType)
+
+<!--
+_syntax: loadData(*data, w, h, glFormat, glType)_
+_name: loadData_
+_returns: void_
+_returns_description: _
+_parameters: const void *data, int w, int h, int glFormat, int glType_
+_access: protected_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -1872,6 +2264,34 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void setRGToRGBASwizzles(rToRGBSwizzles)
+
+<!--
+_syntax: setRGToRGBASwizzles(rToRGBSwizzles)_
+_name: setRGToRGBASwizzles_
+_returns: void_
+_returns_description: _
+_parameters: bool rToRGBSwizzles_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void setTextureMinMagFilter(minFilter, maxFilter)
 
 <!--
@@ -2068,6 +2488,30 @@ _advanced: False_
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofMesh quad
+
+<!--
+_name: quad_
+_type: ofMesh_
+_access: protected_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 

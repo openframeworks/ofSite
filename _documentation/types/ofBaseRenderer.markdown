@@ -244,6 +244,34 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void disableAntiAliasing()
+
+<!--
+_syntax: disableAntiAliasing()_
+_name: disableAntiAliasing_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void disablePointSprites()
 
 <!--
@@ -402,7 +430,7 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -650,6 +678,34 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void draw(&model, renderType)
+
+<!--
+_syntax: draw(&model, renderType)_
+_name: draw_
+_returns: void_
+_returns_description: _
+_parameters: of3dPrimitive &model, ofPolyRenderMode renderType_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void drawCircle(x, y, z, radius)
 
 <!--
@@ -779,7 +835,7 @@ _version_started: 0071_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -844,6 +900,34 @@ _advanced: False_
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void enableAntiAliasing()
+
+<!--
+_syntax: enableAntiAliasing()_
+_name: enableAntiAliasing_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -998,6 +1082,34 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###ofRectangle getNativeViewport()
+
+<!--
+_syntax: getNativeViewport()_
+_name: getNativeViewport_
+_returns: ofRectangle_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofRectMode getRectMode()
 
 <!--
@@ -1027,12 +1139,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###string getType()
+###const string & getType()
 
 <!--
 _syntax: getType()_
 _name: getType_
-_returns: string_
+_returns: const string &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1114,6 +1226,34 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###bool isVFlipped()
+
+<!--
+_syntax: isVFlipped()_
+_name: isVFlipped_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void loadIdentityMatrix(void)
 
 <!--
@@ -1133,6 +1273,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -1168,6 +1309,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void loadMatrix(*m)
@@ -1180,6 +1322,35 @@ _returns_description: _
 _parameters: const float *m_
 _access: public_
 _version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void matrixMode(mode)
+
+<!--
+_syntax: matrixMode(mode)_
+_name: matrixMode_
+_returns: void_
+_returns_description: _
+_parameters: ofMatrixMode mode_
+_access: public_
+_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1224,6 +1395,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void multMatrix(*m)
@@ -1245,6 +1417,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -1834,6 +2007,34 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void setDepthTest(depthTest)
+
+<!--
+_syntax: setDepthTest(depthTest)_
+_name: setDepthTest_
+_returns: void_
+_returns_description: _
+_parameters: bool depthTest_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void setFillMode(fill)
 
 <!--
@@ -1950,6 +2151,34 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void setOrientation(orientation, vFlip)
+
+<!--
+_syntax: setOrientation(orientation, vFlip)_
+_name: setOrientation_
+_returns: void_
+_returns_description: _
+_parameters: ofOrientation orientation, bool vFlip_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void setRectMode(mode)
 
 <!--
@@ -1992,7 +2221,7 @@ _version_started: 0071_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -2079,13 +2308,41 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setupScreenOrtho(width = 0, height = 0, nearDist = -1, farDist = 1)
+
+<!--
+_syntax: setupScreenOrtho(width = 0, height = 0, nearDist = -1, farDist = 1)_
+_name: setupScreenOrtho_
+_returns: void_
+_returns_description: _
+_parameters: float width=0, float height=0, float nearDist=-1, float farDist=1_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -2108,13 +2365,41 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setupScreenPerspective(width = 0, height = 0, fov = 60, nearDist = 0, farDist = 0)
+
+<!--
+_syntax: setupScreenPerspective(width = 0, height = 0, fov = 60, nearDist = 0, farDist = 0)_
+_name: setupScreenPerspective_
+_returns: void_
+_returns_description: _
+_parameters: float width=0, float height=0, float fov=60, float nearDist=0, float farDist=0_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -2247,7 +2532,7 @@ _syntax: viewport(x = 0, y = 0, width = 0, height = 0, invertY = true)_
 _name: viewport_
 _returns: void_
 _returns_description: _
-_parameters: float x=0, float y=0, float width=0, float height=0, bool invertY=true_
+_parameters: float x=0, float y=0, float width=0, float height=0, bool vflip=ofIsVFlipped()_
 _access: public_
 _version_started: 007_
 _version_deprecated: _

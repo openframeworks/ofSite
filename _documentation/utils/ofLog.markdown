@@ -206,7 +206,7 @@ _syntax: ofLog(logLevel)_
 _name: ofLog_
 _returns: _
 _returns_description: _
-_parameters: ofLogLevel logLevel_
+_parameters: ofLogLevel level_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -264,7 +264,7 @@ _syntax: ofLog(logLevel, &message)_
 _name: ofLog_
 _returns: _
 _returns_description: _
-_parameters: ofLogLevel logLevel, const string &message_
+_parameters: ofLogLevel level, const string &message_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -307,7 +307,7 @@ _syntax: ofLog(logLevel, *format, ...)_
 _name: ofLog_
 _returns: _
 _returns_description: _
-_parameters: ofLogLevel logLevel, const char *format,..._
+_parameters: ofLogLevel level, const char *format,..._
 _access: public_
 _version_started: 007_
 _version_deprecated: _

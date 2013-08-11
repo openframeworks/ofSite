@@ -27,6 +27,34 @@ path.setMode(POLYLINES);
 
 
 
+###void addCommand(&command)
+
+<!--
+_syntax: addCommand(&command)_
+_name: addCommand_
+_returns: void_
+_returns_description: _
+_parameters: const Command &command_
+_access: private_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void arc(&centre, radiusX, radiusY, angleBegin, angleEnd)
 
 <!--
@@ -367,6 +395,90 @@ for (float i = 0.0; i < TWO_PI; i+=step) {
 
 <!----------------------------------------------------------------------------->
 
+###void circle(x, y, radius)
+
+<!--
+_syntax: circle(x, y, radius)_
+_name: circle_
+_returns: void_
+_returns_description: _
+_parameters: float x, float y, float radius_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void circle(x, y, z, radius)
+
+<!--
+_syntax: circle(x, y, z, radius)_
+_name: circle_
+_returns: void_
+_returns_description: _
+_parameters: float x, float y, float z, float radius_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void circle(&p, radius)
+
+<!--
+_syntax: circle(&p, radius)_
+_name: circle_
+_returns: void_
+_returns_description: _
+_parameters: const ofPoint &p, float radius_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void clear()
 
 <!--
@@ -597,6 +709,90 @@ Draws the path at 0,0. Calling draw() also calls tessllate().
 
 <!----------------------------------------------------------------------------->
 
+###void ellipse(x, y, width, height)
+
+<!--
+_syntax: ellipse(x, y, width, height)_
+_name: ellipse_
+_returns: void_
+_returns_description: _
+_parameters: float x, float y, float width, float height_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ellipse(x, y, z, width, height)
+
+<!--
+_syntax: ellipse(x, y, z, width, height)_
+_name: ellipse_
+_returns: void_
+_returns_description: _
+_parameters: float x, float y, float z, float width, float height_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ellipse(&p, width, height)
+
+<!--
+_syntax: ellipse(&p, width, height)_
+_name: ellipse_
+_returns: void_
+_returns_description: _
+_parameters: const ofPoint &p, float width, float height_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void flagShapeChanged()
 
 <!--
@@ -626,6 +822,34 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void generatePolylinesFromCommands()
+
+<!--
+_syntax: generatePolylinesFromCommands()_
+_name: generatePolylinesFromCommands_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: private_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void generatePolylinesFromPaths()
 
 <!--
@@ -639,7 +863,7 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -668,6 +892,35 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int getCircleResolution()
+
+<!--
+_syntax: getCircleResolution()_
+_name: getCircleResolution_
+_returns: int_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
 _static: no_
 _visible: True_
 _advanced: False_
@@ -675,6 +928,33 @@ _advanced: False_
 
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###Command getCommands()
+
+<!--
+_syntax: getCommands()_
+_name: getCommands_
+_returns: Command_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -735,6 +1015,34 @@ _description: _
 
 
 Returns the ofColor that the ofPath is using.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###Mode getMode()
+
+<!--
+_syntax: getMode()_
+_name: getMode_
+_returns: Mode_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -850,7 +1158,7 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -957,6 +1265,34 @@ Returns the poly winding mode currently in use.
 
 <!----------------------------------------------------------------------------->
 
+###bool hasChanged()
+
+<!--
+_syntax: hasChanged()_
+_name: hasChanged_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###bool hasOutline()
 
 <!--
@@ -1030,7 +1366,7 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -1386,6 +1722,286 @@ Creates a quadratic bezier line in 3D space from the current drawing point with 
 
 <!----------------------------------------------------------------------------->
 
+###void rectRounded(&b, r)
+
+<!--
+_syntax: rectRounded(&b, r)_
+_name: rectRounded_
+_returns: void_
+_returns_description: _
+_parameters: const ofRectangle &b, float r_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void rectRounded(&p, w, h, r)
+
+<!--
+_syntax: rectRounded(&p, w, h, r)_
+_name: rectRounded_
+_returns: void_
+_returns_description: _
+_parameters: const ofPoint &p, float w, float h, float r_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void rectRounded(x, y, w, h, r)
+
+<!--
+_syntax: rectRounded(x, y, w, h, r)_
+_name: rectRounded_
+_returns: void_
+_returns_description: _
+_parameters: float x, float y, float w, float h, float r_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void rectRounded(&p, w, h, topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius)
+
+<!--
+_syntax: rectRounded(&p, w, h, topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius)_
+_name: rectRounded_
+_returns: void_
+_returns_description: _
+_parameters: const ofPoint &p, float w, float h, float topLeftRadius, float topRightRadius, float bottomRightRadius, float bottomLeftRadius_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void rectRounded(&b, topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius)
+
+<!--
+_syntax: rectRounded(&b, topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius)_
+_name: rectRounded_
+_returns: void_
+_returns_description: _
+_parameters: const ofRectangle &b, float topLeftRadius, float topRightRadius, float bottomRightRadius, float bottomLeftRadius_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void rectRounded(x, y, z, w, h, topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius)
+
+<!--
+_syntax: rectRounded(x, y, z, w, h, topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius)_
+_name: rectRounded_
+_returns: void_
+_returns_description: _
+_parameters: float x, float y, float z, float w, float h, float topLeftRadius, float topRightRadius, float bottomRightRadius, float bottomLeftRadius_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void rectangle(&r)
+
+<!--
+_syntax: rectangle(&r)_
+_name: rectangle_
+_returns: void_
+_returns_description: _
+_parameters: const ofRectangle &r_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void rectangle(&p, w, h)
+
+<!--
+_syntax: rectangle(&p, w, h)_
+_name: rectangle_
+_returns: void_
+_returns_description: _
+_parameters: const ofPoint &p, float w, float h_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void rectangle(x, y, w, h)
+
+<!--
+_syntax: rectangle(x, y, w, h)_
+_name: rectangle_
+_returns: void_
+_returns_description: _
+_parameters: float x, float y, float w, float h_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void rectangle(x, y, z, w, h)
+
+<!--
+_syntax: rectangle(x, y, z, w, h)_
+_name: rectangle_
+_returns: void_
+_returns_description: _
+_parameters: float x, float y, float z, float w, float h_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void rotate(az, &axis)
 
 <!--
@@ -1459,13 +2075,41 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setCircleResolution(circleResolution)
+
+<!--
+_syntax: setCircleResolution(circleResolution)_
+_name: setCircleResolution_
+_returns: void_
+_returns_description: _
+_parameters: int circleResolution_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -2002,6 +2646,90 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void triangle(x1, y1, x2, y2, x3, y3)
+
+<!--
+_syntax: triangle(x1, y1, x2, y2, x3, y3)_
+_name: triangle_
+_returns: void_
+_returns_description: _
+_parameters: float x1, float y1, float x2, float y2, float x3, float y3_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void triangle(x1, y1, z1, x2, y2, z2, x3, y3, z3)
+
+<!--
+_syntax: triangle(x1, y1, z1, x2, y2, z2, x3, y3, z3)_
+_name: triangle_
+_returns: void_
+_returns_description: _
+_parameters: float x1, float y1, float z1, float x2, float y2, float z2, float x3, float y3, float z3_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void triangle(&p1, &p2, &p3)
+
+<!--
+_syntax: triangle(&p1, &p2, &p3)_
+_name: triangle_
+_returns: void_
+_returns_description: _
+_parameters: const ofPoint &p1, const ofPoint &p2, const ofPoint &p3_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ##Variables
 
 
@@ -2047,6 +2775,54 @@ _advanced: False_
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool bHasChanged
+
+<!--
+_name: bHasChanged_
+_type: bool_
+_access: private_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool bNeedsPolylinesGeneration
+
+<!--
+_name: bNeedsPolylinesGeneration_
+_type: bool_
+_access: private_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -2147,6 +2923,54 @@ _advanced: False_
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int circleResolution
+
+<!--
+_name: circleResolution_
+_type: int_
+_access: private_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###Command commands
+
+<!--
+_name: commands_
+_type: Command_
+_access: private_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 

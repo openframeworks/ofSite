@@ -281,7 +281,7 @@ _name: stop_
 _returns: void_
 _returns_description: _
 _parameters: _
-_access: protected_
+_access: public_
 _version_started: 007_
 _version_deprecated: _
 _summary: _

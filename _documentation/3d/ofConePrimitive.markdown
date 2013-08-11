@@ -1,0 +1,809 @@
+#class ofConePrimitive
+
+
+##Description
+
+
+
+
+
+##Methods
+
+
+
+###ofIndexType getCapIndices()
+
+<!--
+_syntax: getCapIndices()_
+_name: getCapIndices_
+_returns: ofIndexType_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofMesh getCapMesh()
+
+<!--
+_syntax: getCapMesh()_
+_name: getCapMesh_
+_returns: ofMesh_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofIndexType getConeIndices()
+
+<!--
+_syntax: getConeIndices()_
+_name: getConeIndices_
+_returns: ofIndexType_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofMesh getConeMesh()
+
+<!--
+_syntax: getConeMesh()_
+_name: getConeMesh_
+_returns: ofMesh_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float getHeight()
+
+<!--
+_syntax: getHeight()_
+_name: getHeight_
+_returns: float_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float getRadius()
+
+<!--
+_syntax: getRadius()_
+_name: getRadius_
+_returns: float_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofVec3f getResolution()
+
+<!--
+_syntax: getResolution()_
+_name: getResolution_
+_returns: ofVec3f_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int getResolutionCap()
+
+<!--
+_syntax: getResolutionCap()_
+_name: getResolutionCap_
+_returns: int_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int getResolutionHeight()
+
+<!--
+_syntax: getResolutionHeight()_
+_name: getResolutionHeight_
+_returns: int_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int getResolutionRadius()
+
+<!--
+_syntax: getResolutionRadius()_
+_name: getResolutionRadius_
+_returns: int_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofConePrimitive()
+
+<!--
+_syntax: ofConePrimitive()_
+_name: ofConePrimitive_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofConePrimitive(radius, height, radiusSegments, heightSegments, capSegments = 2, mode = OF_PRIMITIVE_TRIANGLE_STRIP)
+
+<!--
+_syntax: ofConePrimitive(radius, height, radiusSegments, heightSegments, capSegments = 2, mode = OF_PRIMITIVE_TRIANGLE_STRIP)_
+_name: ofConePrimitive_
+_returns: _
+_returns_description: _
+_parameters: float radius, float height, int radiusSegments, int heightSegments, int capSegments=2, ofPrimitiveMode mode=OF_PRIMITIVE_TRIANGLE_STRIP_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void set(radius, height, radiusSegments, heightSegments, capSegments = 2, mode = OF_PRIMITIVE_TRIANGLE_STRIP)
+
+<!--
+_syntax: set(radius, height, radiusSegments, heightSegments, capSegments = 2, mode = OF_PRIMITIVE_TRIANGLE_STRIP)_
+_name: set_
+_returns: void_
+_returns_description: _
+_parameters: float radius, float height, int radiusSegments, int heightSegments, int capSegments=2, ofPrimitiveMode mode=OF_PRIMITIVE_TRIANGLE_STRIP_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void set(radius, height)
+
+<!--
+_syntax: set(radius, height)_
+_name: set_
+_returns: void_
+_returns_description: _
+_parameters: float radius, float height_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setCapColor(color)
+
+<!--
+_syntax: setCapColor(color)_
+_name: setCapColor_
+_returns: void_
+_returns_description: _
+_parameters: ofColor color_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setHeight(height)
+
+<!--
+_syntax: setHeight(height)_
+_name: setHeight_
+_returns: void_
+_returns_description: _
+_parameters: float height_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setMode(mode)
+
+<!--
+_syntax: setMode(mode)_
+_name: setMode_
+_returns: void_
+_returns_description: _
+_parameters: ofPrimitiveMode mode_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setRadius(radius)
+
+<!--
+_syntax: setRadius(radius)_
+_name: setRadius_
+_returns: void_
+_returns_description: _
+_parameters: float radius_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setResolution(radiusRes, heightRes, capRes)
+
+<!--
+_syntax: setResolution(radiusRes, heightRes, capRes)_
+_name: setResolution_
+_returns: void_
+_returns_description: _
+_parameters: int radiusRes, int heightRes, int capRes_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setResolutionCap(capRes)
+
+<!--
+_syntax: setResolutionCap(capRes)_
+_name: setResolutionCap_
+_returns: void_
+_returns_description: _
+_parameters: int capRes_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setResolutionHeight(heightRes)
+
+<!--
+_syntax: setResolutionHeight(heightRes)_
+_name: setResolutionHeight_
+_returns: void_
+_returns_description: _
+_parameters: int heightRes_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setResolutionRadius(radiusRes)
+
+<!--
+_syntax: setResolutionRadius(radiusRes)_
+_name: setResolutionRadius_
+_returns: void_
+_returns_description: _
+_parameters: int radiusRes_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setTopColor(color)
+
+<!--
+_syntax: setTopColor(color)_
+_name: setTopColor_
+_returns: void_
+_returns_description: _
+_parameters: ofColor color_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ~ofConePrimitive()
+
+<!--
+_syntax: ~ofConePrimitive()_
+_name: ~ofConePrimitive_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+##Variables
+
+
+
+###float height
+
+<!--
+_name: height_
+_type: float_
+_access: protected_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float radius
+
+<!--
+_name: radius_
+_type: float_
+_access: protected_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofVec3f resolution
+
+<!--
+_name: resolution_
+_type: ofVec3f_
+_access: protected_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int strides
+
+<!--
+_name: strides_
+_type: int_
+_access: protected_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int vertices
+
+<!--
+_name: vertices_
+_type: int_
+_access: protected_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+

@@ -2030,6 +2030,30 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###union ofColor_::@3 @4
+
+<!--
+_name: @4_
+_type: union ofColor_::@3_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###PixelType a
 
 <!--
@@ -2048,6 +2072,126 @@ _description: _
 
 
 The alpha value (transparency) of a color. 0 is completely transparent, 255 is completely opaque.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ aliceBlue
+
+<!--
+_name: aliceBlue_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ antiqueWhite
+
+<!--
+_name: antiqueWhite_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ aqua
+
+<!--
+_name: aqua_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ aquamarine
+
+<!--
+_name: aquamarine_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ azure
+
+<!--
+_name: azure_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -2089,6 +2233,54 @@ float blue = c.b; // 255
 
 <!----------------------------------------------------------------------------->
 
+###ofColor_ beige
+
+<!--
+_name: beige_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ bisque
+
+<!--
+_name: bisque_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofColor black
 
 <!--
@@ -2111,6 +2303,30 @@ Pre-iniatilized black color.
 ~~~~{.cpp}
 ofColor c = ofColor::black; // (0, 0, 0)
 ~~~~
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ blanchedAlmond
+
+<!--
+_name: blanchedAlmond_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -2151,6 +2367,270 @@ ofColor c = ofColor::blue; // (0, 0, 255)
 
 <!----------------------------------------------------------------------------->
 
+###ofColor_ blueSteel
+
+<!--
+_name: blueSteel_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ blueViolet
+
+<!--
+_name: blueViolet_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ brown
+
+<!--
+_name: brown_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ burlyWood
+
+<!--
+_name: burlyWood_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ cadetBlue
+
+<!--
+_name: cadetBlue_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ chartreuse
+
+<!--
+_name: chartreuse_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ chocolate
+
+<!--
+_name: chocolate_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ coral
+
+<!--
+_name: coral_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ cornflowerBlue
+
+<!--
+_name: cornflowerBlue_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ cornsilk
+
+<!--
+_name: cornsilk_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ crimson
+
+<!--
+_name: crimson_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofColor cyan
 
 <!--
@@ -2173,6 +2653,678 @@ Pre-iniatilized cyan color.
 ~~~~{.cpp}
 ofColor c = ofColor::cyan; // (0, 255, 255)
 ~~~~
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ darkBlue
+
+<!--
+_name: darkBlue_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ darkCyan
+
+<!--
+_name: darkCyan_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ darkGoldenRod
+
+<!--
+_name: darkGoldenRod_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ darkGray
+
+<!--
+_name: darkGray_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ darkGreen
+
+<!--
+_name: darkGreen_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ darkGrey
+
+<!--
+_name: darkGrey_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ darkKhaki
+
+<!--
+_name: darkKhaki_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ darkMagenta
+
+<!--
+_name: darkMagenta_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ darkOliveGreen
+
+<!--
+_name: darkOliveGreen_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ darkOrchid
+
+<!--
+_name: darkOrchid_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ darkRed
+
+<!--
+_name: darkRed_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ darkSalmon
+
+<!--
+_name: darkSalmon_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ darkSeaGreen
+
+<!--
+_name: darkSeaGreen_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ darkSlateBlue
+
+<!--
+_name: darkSlateBlue_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ darkSlateGray
+
+<!--
+_name: darkSlateGray_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ darkSlateGrey
+
+<!--
+_name: darkSlateGrey_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ darkTurquoise
+
+<!--
+_name: darkTurquoise_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ darkViolet
+
+<!--
+_name: darkViolet_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ darkorange
+
+<!--
+_name: darkorange_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ deepPink
+
+<!--
+_name: deepPink_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ deepSkyBlue
+
+<!--
+_name: deepSkyBlue_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ dimGray
+
+<!--
+_name: dimGray_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ dimGrey
+
+<!--
+_name: dimGrey_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ dodgerBlue
+
+<!--
+_name: dodgerBlue_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ fireBrick
+
+<!--
+_name: fireBrick_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ floralWhite
+
+<!--
+_name: floralWhite_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ forestGreen
+
+<!--
+_name: forestGreen_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ fuchsia
+
+<!--
+_name: fuchsia_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -2205,6 +3357,102 @@ The green component of this color.
 ofColor c = ofColor::yellow;
 float green = c.g; // 255
 ~~~~
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ gainsboro
+
+<!--
+_name: gainsboro_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ ghostWhite
+
+<!--
+_name: ghostWhite_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ gold
+
+<!--
+_name: gold_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ goldenRod
+
+<!--
+_name: goldenRod_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -2276,6 +3524,726 @@ ofColor c = ofColor::green; // (0, 255, 0)
 
 <!----------------------------------------------------------------------------->
 
+###ofColor_ greenYellow
+
+<!--
+_name: greenYellow_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ grey
+
+<!--
+_name: grey_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ honeyDew
+
+<!--
+_name: honeyDew_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ hotPink
+
+<!--
+_name: hotPink_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ indianRed
+
+<!--
+_name: indianRed_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ indigo
+
+<!--
+_name: indigo_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ ivory
+
+<!--
+_name: ivory_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ khaki
+
+<!--
+_name: khaki_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ lavender
+
+<!--
+_name: lavender_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ lavenderBlush
+
+<!--
+_name: lavenderBlush_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ lawnGreen
+
+<!--
+_name: lawnGreen_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ lemonChiffon
+
+<!--
+_name: lemonChiffon_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ lightBlue
+
+<!--
+_name: lightBlue_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ lightCoral
+
+<!--
+_name: lightCoral_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ lightCyan
+
+<!--
+_name: lightCyan_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ lightGoldenRodYellow
+
+<!--
+_name: lightGoldenRodYellow_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ lightGray
+
+<!--
+_name: lightGray_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ lightGreen
+
+<!--
+_name: lightGreen_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ lightGrey
+
+<!--
+_name: lightGrey_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ lightPink
+
+<!--
+_name: lightPink_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ lightSalmon
+
+<!--
+_name: lightSalmon_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ lightSeaGreen
+
+<!--
+_name: lightSeaGreen_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ lightSkyBlue
+
+<!--
+_name: lightSkyBlue_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ lightSlateGray
+
+<!--
+_name: lightSlateGray_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ lightSlateGrey
+
+<!--
+_name: lightSlateGrey_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ lightSteelBlue
+
+<!--
+_name: lightSteelBlue_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ lightYellow
+
+<!--
+_name: lightYellow_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ lime
+
+<!--
+_name: lime_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ limeGreen
+
+<!--
+_name: limeGreen_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ linen
+
+<!--
+_name: linen_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofColor magenta
 
 <!--
@@ -2298,6 +4266,798 @@ Pre-iniatilized magenta color.
 ~~~~{.cpp}
 ofColor c = ofColor::magenta; // (255, 0, 255)
 ~~~~
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ maroon
+
+<!--
+_name: maroon_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ mediumAquaMarine
+
+<!--
+_name: mediumAquaMarine_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ mediumBlue
+
+<!--
+_name: mediumBlue_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ mediumOrchid
+
+<!--
+_name: mediumOrchid_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ mediumPurple
+
+<!--
+_name: mediumPurple_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ mediumSeaGreen
+
+<!--
+_name: mediumSeaGreen_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ mediumSlateBlue
+
+<!--
+_name: mediumSlateBlue_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ mediumSpringGreen
+
+<!--
+_name: mediumSpringGreen_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ mediumTurquoise
+
+<!--
+_name: mediumTurquoise_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ mediumVioletRed
+
+<!--
+_name: mediumVioletRed_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ midnightBlue
+
+<!--
+_name: midnightBlue_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ mintCream
+
+<!--
+_name: mintCream_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ mistyRose
+
+<!--
+_name: mistyRose_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ moccasin
+
+<!--
+_name: moccasin_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ navajoWhite
+
+<!--
+_name: navajoWhite_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ navy
+
+<!--
+_name: navy_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ oldLace
+
+<!--
+_name: oldLace_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ olive
+
+<!--
+_name: olive_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ oliveDrab
+
+<!--
+_name: oliveDrab_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ orange
+
+<!--
+_name: orange_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ orangeRed
+
+<!--
+_name: orangeRed_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ orchid
+
+<!--
+_name: orchid_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ paleGoldenRod
+
+<!--
+_name: paleGoldenRod_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ paleGreen
+
+<!--
+_name: paleGreen_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ paleTurquoise
+
+<!--
+_name: paleTurquoise_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ paleVioletRed
+
+<!--
+_name: paleVioletRed_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ papayaWhip
+
+<!--
+_name: papayaWhip_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ peachPuff
+
+<!--
+_name: peachPuff_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ peru
+
+<!--
+_name: peru_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ pink
+
+<!--
+_name: pink_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ plum
+
+<!--
+_name: plum_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ powderBlue
+
+<!--
+_name: powderBlue_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ purple
+
+<!--
+_name: purple_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -2370,6 +5130,510 @@ ofColor c = ofColor::red; // (255, 0, 0)
 
 <!----------------------------------------------------------------------------->
 
+###ofColor_ rosyBrown
+
+<!--
+_name: rosyBrown_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ royalBlue
+
+<!--
+_name: royalBlue_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ saddleBrown
+
+<!--
+_name: saddleBrown_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ salmon
+
+<!--
+_name: salmon_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ sandyBrown
+
+<!--
+_name: sandyBrown_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ seaGreen
+
+<!--
+_name: seaGreen_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ seaShell
+
+<!--
+_name: seaShell_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ sienna
+
+<!--
+_name: sienna_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ silver
+
+<!--
+_name: silver_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ skyBlue
+
+<!--
+_name: skyBlue_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ slateBlue
+
+<!--
+_name: slateBlue_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ slateGray
+
+<!--
+_name: slateGray_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ slateGrey
+
+<!--
+_name: slateGrey_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ snow
+
+<!--
+_name: snow_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ springGreen
+
+<!--
+_name: springGreen_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ steelBlue
+
+<!--
+_name: steelBlue_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ tan
+
+<!--
+_name: tan_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ teal
+
+<!--
+_name: teal_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ thistle
+
+<!--
+_name: thistle_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ tomato
+
+<!--
+_name: tomato_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ turquoise
+
+<!--
+_name: turquoise_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###PixelType v
 
 <!--
@@ -2388,6 +5652,54 @@ _description: _
 
 
 Array/pointer access. Allows the r, g, b, a components to be accessed as a pointer to an array of PixelType.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ violet
+
+<!--
+_name: violet_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ wheat
+
+<!--
+_name: wheat_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -2428,6 +5740,30 @@ ofColor c = ofColor::white;
 
 <!----------------------------------------------------------------------------->
 
+###ofColor_ whiteSmoke
+
+<!--
+_name: whiteSmoke_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofColor yellow
 
 <!--
@@ -2450,6 +5786,30 @@ Pre-iniatilized yellow color.
 ~~~~{.cpp}
 ofColor c = ofColor::yellow; // (255, 255, 0)
 ~~~~
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor_ yellowGreen
+
+<!--
+_name: yellowGreen_
+_type: ofColor__
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 

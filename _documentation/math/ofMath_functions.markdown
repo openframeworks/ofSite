@@ -453,6 +453,141 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###Type ofInterpolateCatmullRom(y0, y1, y2, y3, pct)
+
+<!--
+_syntax: ofInterpolateCatmullRom(y0, y1, y2, y3, pct)_
+_name: ofInterpolateCatmullRom_
+_returns: Type_
+_returns_description: _
+_parameters: Type y0, Type y1, Type y2, Type y3, float pct_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###Type ofInterpolateCosine(y1, y2, pct)
+
+<!--
+_syntax: ofInterpolateCosine(y1, y2, pct)_
+_name: ofInterpolateCosine_
+_returns: Type_
+_returns_description: _
+_parameters: Type y1, Type y2, float pct_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###Type ofInterpolateCubic(y0, y1, y2, y3, pct)
+
+<!--
+_syntax: ofInterpolateCubic(y0, y1, y2, y3, pct)_
+_name: ofInterpolateCubic_
+_returns: Type_
+_returns_description: _
+_parameters: Type y0, Type y1, Type y2, Type y3, float pct_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###Type ofInterpolateHermite(y0, y1, y2, y3, pct)
+
+<!--
+_syntax: ofInterpolateHermite(y0, y1, y2, y3, pct)_
+_name: ofInterpolateHermite_
+_returns: Type_
+_returns_description: _
+_parameters: Type y0, Type y1, Type y2, Type y3, float pct_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###Type ofInterpolateHermite(y0, y1, y2, y3, pct, tension, bias)
+
+<!--
+_syntax: ofInterpolateHermite(y0, y1, y2, y3, pct, tension, bias)_
+_name: ofInterpolateHermite_
+_returns: Type_
+_returns_description: _
+_parameters: Type y0, Type y1, Type y2, Type y3, float pct, float tension, float bias_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###float ofLerp(start,stop,amt)
 
 <!--
@@ -967,6 +1102,7 @@ Picks a random float point number between -1 and 1.
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###float ofRandomuf()
@@ -989,6 +1125,7 @@ _advanced: False_
 _description: _
 
 Picks a random float point number between 0 and 1. 
+
 
 
 
@@ -1072,6 +1209,36 @@ _advanced: False_
 _description: _
 
 Return 1 if n is positive, 0 if n = 0, and -1 if n is negative.
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int ofSign(n)
+
+<!--
+_syntax: ofSign(n)_
+_name: ofSign_
+_returns: int_
+_returns_description: _
+_parameters: float n_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
 
 
 
@@ -1166,6 +1333,33 @@ _name: ofSignedNoise_
 _returns: float_
 _returns_description: _
 _parameters: float x, float y, float z, float w_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float ofWrap(value, from, to)
+
+<!--
+_syntax: ofWrap(value, from, to)_
+_name: ofWrap_
+_returns: float_
+_returns_description: _
+_parameters: float value, float from, float to_
 _version_started: _
 _version_deprecated: _
 _summary: _

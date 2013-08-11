@@ -418,6 +418,34 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+### ~ofMaterial()
+
+<!--
+_syntax: ~ofMaterial()_
+_name: ~ofMaterial_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ##Variables
 
 
@@ -522,6 +550,30 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###ofFloatColor prev_ambient_back
+
+<!--
+_name: prev_ambient_back_
+_type: ofFloatColor_
+_access: private_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofFloatColor prev_diffuse
 
 <!--
@@ -538,6 +590,30 @@ _advanced: False_
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofFloatColor prev_diffuse_back
+
+<!--
+_name: prev_diffuse_back_
+_type: ofFloatColor_
+_access: private_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -572,6 +648,30 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###ofFloatColor prev_emissive_back
+
+<!--
+_name: prev_emissive_back_
+_type: ofFloatColor_
+_access: private_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###float prev_shininess
 
 <!--
@@ -597,6 +697,30 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###float prev_shininess_back
+
+<!--
+_name: prev_shininess_back_
+_type: float_
+_access: private_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofFloatColor prev_specular
 
 <!--
@@ -613,6 +737,30 @@ _advanced: False_
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofFloatColor prev_specular_back
+
+<!--
+_name: prev_specular_back_
+_type: ofFloatColor_
+_access: private_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 

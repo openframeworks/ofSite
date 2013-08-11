@@ -1522,7 +1522,7 @@ _syntax: writeFromBuffer(&buffer)_
 _name: writeFromBuffer_
 _returns: bool_
 _returns_description: _
-_parameters: ofBuffer &buffer_
+_parameters: const ofBuffer &buffer_
 _access: public_
 _version_started: 007_
 _version_deprecated: _

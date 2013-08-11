@@ -453,6 +453,33 @@ note: this code is implemented inside the ofAppRunner
 
 <!----------------------------------------------------------------------------->
 
+###float ofGetTargetFrameRate()
+
+<!--
+_syntax: ofGetTargetFrameRate()_
+_name: ofGetTargetFrameRate_
+_returns: float_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###int ofGetWidth()
 
 <!--
@@ -640,6 +667,33 @@ note: this code is implemented inside the ofAppRunner
 
 
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofAppBaseWindow ofGetWindowPtr()
+
+<!--
+_syntax: ofGetWindowPtr()_
+_name: ofGetWindowPtr_
+_returns: ofAppBaseWindow_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -1084,6 +1138,33 @@ _description: _
 
 
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofSetOrientation(orientation, vFlip = true)
+
+<!--
+_syntax: ofSetOrientation(orientation, vFlip = true)_
+_name: ofSetOrientation_
+_returns: void_
+_returns_description: _
+_parameters: ofOrientation orientation, bool vFlip=true_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
