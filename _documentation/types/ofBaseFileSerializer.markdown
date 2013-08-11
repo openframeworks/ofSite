@@ -1,0 +1,101 @@
+#class ofBaseFileSerializer
+
+
+##Description
+
+
+
+
+
+##Methods
+
+
+
+###bool load(&path)
+
+<!--
+_syntax: load(&path)_
+_name: load_
+_returns: bool_
+_returns_description: _
+_parameters: const string &path_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool save(&path)
+
+<!--
+_syntax: save(&path)_
+_name: save_
+_returns: bool_
+_returns_description: _
+_parameters: const string &path_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ~ofBaseFileSerializer()
+
+<!--
+_syntax: ~ofBaseFileSerializer()_
+_name: ~ofBaseFileSerializer_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+##Variables
+
+
+

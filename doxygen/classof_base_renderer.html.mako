@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -64,9 +65,12 @@ Inheritance diagram for ofBaseRenderer:</div>
  <div class="center">
   <img src="classof_base_renderer.png" usemap="#ofBaseRenderer_map" alt=""/>
   <map id="ofBaseRenderer_map" name="ofBaseRenderer_map">
-<area href="classof_cairo_renderer.html" alt="ofCairoRenderer" shape="rect" coords="0,56,132,80"/>
-<area href="classof_g_l_renderer.html" alt="ofGLRenderer" shape="rect" coords="142,56,274,80"/>
-<area href="classof_renderer_collection.html" alt="ofRendererCollection" shape="rect" coords="284,56,416,80"/>
+<area href="classof_base_g_l_renderer.html" alt="ofBaseGLRenderer" shape="rect" coords="91,56,264,80"/>
+<area href="classof_cairo_renderer.html" alt="ofCairoRenderer" shape="rect" coords="274,56,447,80"/>
+<area href="classof_noop_renderer.html" alt="ofNoopRenderer" shape="rect" coords="457,56,630,80"/>
+<area href="classof_renderer_collection.html" alt="ofRendererCollection" shape="rect" coords="640,56,813,80"/>
+<area href="classof_g_l_programmable_renderer.html" alt="ofGLProgrammableRenderer" shape="rect" coords="0,112,173,136"/>
+<area href="classof_g_l_renderer.html" alt="ofGLRenderer" shape="rect" coords="183,112,356,136"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -74,8 +78,8 @@ Inheritance diagram for ofBaseRenderer:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a162ef56f1fa1ee5e245c47c24c76a54e"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#a162ef56f1fa1ee5e245c47c24c76a54e">~ofBaseRenderer</a> ()</td></tr>
 <tr class="separator:a162ef56f1fa1ee5e245c47c24c76a54e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab04ab2e86135ab95b598f2d9c4929e7c"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#ab04ab2e86135ab95b598f2d9c4929e7c">getType</a> ()=0</td></tr>
-<tr class="separator:ab04ab2e86135ab95b598f2d9c4929e7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f2aaeb89ebad3ff2cc4ce9bca5e1c20"><td class="memItemLeft" align="right" valign="top">virtual const string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#a2f2aaeb89ebad3ff2cc4ce9bca5e1c20">getType</a> ()=0</td></tr>
+<tr class="separator:a2f2aaeb89ebad3ff2cc4ce9bca5e1c20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6c14407372ca754bb0112bb0874dc57"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#af6c14407372ca754bb0112bb0874dc57">update</a> ()=0</td></tr>
 <tr class="separator:af6c14407372ca754bb0112bb0874dc57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afffdfdf65fd5f954a2a4e264e6bc40a8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#afffdfdf65fd5f954a2a4e264e6bc40a8">draw</a> (<a class="el" href="classof_polyline.html">ofPolyline</a> &amp;poly)=0</td></tr>
@@ -86,8 +90,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab55e2153a227d0afc85856a5c1f8999a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeaff17c906bcbf2f4678a4e6f90fecdb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#aeaff17c906bcbf2f4678a4e6f90fecdb">draw</a> (<a class="el" href="classof_mesh.html">ofMesh</a> &amp;vertexData, <a class="el" href="of_g_l_utils_8h.html#a6beb1fbbaba728909c78cda1eadfe28e">ofPolyRenderMode</a> renderType, bool useColors, bool useTextures, bool useNormals)=0</td></tr>
 <tr class="separator:aeaff17c906bcbf2f4678a4e6f90fecdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7884c6bf187a0449ce3aa8052c6056bc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#a7884c6bf187a0449ce3aa8052c6056bc">draw</a> (vector&lt; <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &gt; &amp;vertexData, <a class="el" href="of_g_l_utils_8h.html#a0f71f0b23a18629a446952d5540e16e0">ofPrimitiveMode</a> drawMode)=0</td></tr>
-<tr class="separator:a7884c6bf187a0449ce3aa8052c6056bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64d298806404e33ed73b6ed5003c1efc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#a64d298806404e33ed73b6ed5003c1efc">draw</a> (<a class="el" href="classof3d_primitive.html">of3dPrimitive</a> &amp;model, <a class="el" href="of_g_l_utils_8h.html#a6beb1fbbaba728909c78cda1eadfe28e">ofPolyRenderMode</a> renderType)=0</td></tr>
+<tr class="separator:a64d298806404e33ed73b6ed5003c1efc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0fa3cf3014a2ae74a99c2a8e423e6350"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#a0fa3cf3014a2ae74a99c2a8e423e6350">draw</a> (<a class="el" href="of_image_8h.html#afefad955db3b51212caad74105ca7871">ofImage</a> &amp;image, float x, float y, float z, float w, float h, float sx, float sy, float sw, float sh)=0</td></tr>
 <tr class="separator:a0fa3cf3014a2ae74a99c2a8e423e6350"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa12e4b502953aa9ff0602274a64e5bb4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#aa12e4b502953aa9ff0602274a64e5bb4">draw</a> (<a class="el" href="of_image_8h.html#a5c3f1af668e7fb77902f6fb84c9bab5b">ofFloatImage</a> &amp;image, float x, float y, float z, float w, float h, float sx, float sy, float sw, float sh)=0</td></tr>
@@ -100,18 +104,24 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a99baa88fbb41b5cb57ae7d6a670738c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:affffe2c452504484f1e465f16893ab60"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#affffe2c452504484f1e465f16893ab60">viewport</a> (<a class="el" href="classof_rectangle.html">ofRectangle</a> viewport)</td></tr>
 <tr class="separator:affffe2c452504484f1e465f16893ab60"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a300bd8d884c882a8ae3539367b0b7d9f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#a300bd8d884c882a8ae3539367b0b7d9f">viewport</a> (float x=0, float y=0, float width=0, float height=0, bool invertY=true)</td></tr>
-<tr class="separator:a300bd8d884c882a8ae3539367b0b7d9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefb98b7ef168dbff450f6054bf00d406"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#aefb98b7ef168dbff450f6054bf00d406">setupScreenPerspective</a> (float width=0, float height=0, <a class="el" href="of_constants_8h.html#a85ec4045e22bafeea5c561f9778c1f1c">ofOrientation</a> orientation=<a class="el" href="of_constants_8h.html#a85ec4045e22bafeea5c561f9778c1f1caa38a6f3fee424ea35be626cb0b6e423b">OF_ORIENTATION_UNKNOWN</a>, bool vFlip=true, float fov=60, float nearDist=0, float farDist=0)</td></tr>
-<tr class="separator:aefb98b7ef168dbff450f6054bf00d406"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78aaffdae40b4a568b011171fc8556a6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#a78aaffdae40b4a568b011171fc8556a6">setupScreenOrtho</a> (float width=0, float height=0, <a class="el" href="of_constants_8h.html#a85ec4045e22bafeea5c561f9778c1f1c">ofOrientation</a> orientation=<a class="el" href="of_constants_8h.html#a85ec4045e22bafeea5c561f9778c1f1caa38a6f3fee424ea35be626cb0b6e423b">OF_ORIENTATION_UNKNOWN</a>, bool vFlip=true, float nearDist=-1, float farDist=1)</td></tr>
-<tr class="separator:a78aaffdae40b4a568b011171fc8556a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd5e7cedc203340a02448a4c5656a3ce"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#afd5e7cedc203340a02448a4c5656a3ce">viewport</a> (float x=0, float y=0, float <a class="el" href="of_icon_8h.html#aca34d28e3d8bcbcadb8edb4e3af24f8c">width</a>=0, float <a class="el" href="of_icon_8h.html#ab2e78c61905b4419fcc7b4cfc500fe85">height</a>=0, bool vflip=<a class="el" href="of_base_types_8h.html#a112ebf9b37b365ab634260fa7413d92e">ofIsVFlipped</a>())</td></tr>
+<tr class="separator:afd5e7cedc203340a02448a4c5656a3ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9ab11780ce5d6a2270a94c51e8f3d2f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#ac9ab11780ce5d6a2270a94c51e8f3d2f">setupScreenPerspective</a> (float <a class="el" href="of_icon_8h.html#aca34d28e3d8bcbcadb8edb4e3af24f8c">width</a>=0, float <a class="el" href="of_icon_8h.html#ab2e78c61905b4419fcc7b4cfc500fe85">height</a>=0, float fov=60, float nearDist=0, float farDist=0)</td></tr>
+<tr class="separator:ac9ab11780ce5d6a2270a94c51e8f3d2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7c2a1204bfcc49732683ed613e93737"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#ab7c2a1204bfcc49732683ed613e93737">setupScreenOrtho</a> (float <a class="el" href="of_icon_8h.html#aca34d28e3d8bcbcadb8edb4e3af24f8c">width</a>=0, float <a class="el" href="of_icon_8h.html#ab2e78c61905b4419fcc7b4cfc500fe85">height</a>=0, float nearDist=-1, float farDist=1)</td></tr>
+<tr class="separator:ab7c2a1204bfcc49732683ed613e93737"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77eac56c4f6eedf37809cd432b2e0924"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#a77eac56c4f6eedf37809cd432b2e0924">setOrientation</a> (<a class="el" href="of_constants_8h.html#a85ec4045e22bafeea5c561f9778c1f1c">ofOrientation</a> orientation, bool vFlip)</td></tr>
+<tr class="separator:a77eac56c4f6eedf37809cd432b2e0924"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c143444f0f3db1982a19abbc4777ddd"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classof_rectangle.html">ofRectangle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#a6c143444f0f3db1982a19abbc4777ddd">getCurrentViewport</a> ()</td></tr>
 <tr class="separator:a6c143444f0f3db1982a19abbc4777ddd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7698ce8d1e17235de9684c96dad1c27d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classof_rectangle.html">ofRectangle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#a7698ce8d1e17235de9684c96dad1c27d">getNativeViewport</a> ()</td></tr>
+<tr class="separator:a7698ce8d1e17235de9684c96dad1c27d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abef959b1493b9f2ccaaf00a8a75d6218"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#abef959b1493b9f2ccaaf00a8a75d6218">getViewportWidth</a> ()</td></tr>
 <tr class="separator:abef959b1493b9f2ccaaf00a8a75d6218"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a026faf25094809f38e9d0eab2f7e09b6"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#a026faf25094809f38e9d0eab2f7e09b6">getViewportHeight</a> ()</td></tr>
 <tr class="separator:a026faf25094809f38e9d0eab2f7e09b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4bd6773b94a4d7ac7de2fcdf9f01234"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#aa4bd6773b94a4d7ac7de2fcdf9f01234">isVFlipped</a> () const </td></tr>
+<tr class="separator:aa4bd6773b94a4d7ac7de2fcdf9f01234"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4501fbf80f10f4e6ab0d59a890e4117"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#ab4501fbf80f10f4e6ab0d59a890e4117">setCoordHandedness</a> (<a class="el" href="of_constants_8h.html#a35cd63b4a2e112ecf30eaf0542f2388b">ofHandednessType</a> handedness)</td></tr>
 <tr class="separator:ab4501fbf80f10f4e6ab0d59a890e4117"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad5f5cd75cc18f229a9fdae1e352b71db"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="of_constants_8h.html#a35cd63b4a2e112ecf30eaf0542f2388b">ofHandednessType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#ad5f5cd75cc18f229a9fdae1e352b71db">getCoordHandedness</a> ()</td></tr>
@@ -162,18 +172,22 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa840440af71eb0663f2943d48df00360"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46a712e72a2f812fdc7c6658ee29498d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#a46a712e72a2f812fdc7c6658ee29498d">setLineWidth</a> (float lineWidth)=0</td></tr>
 <tr class="separator:a46a712e72a2f812fdc7c6658ee29498d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abafdfd8b8e4bebc219e8550174c74837"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#abafdfd8b8e4bebc219e8550174c74837">setDepthTest</a> (bool depthTest)=0</td></tr>
+<tr class="separator:abafdfd8b8e4bebc219e8550174c74837"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0bb776a37e221e48da6f75cffc6a3e8c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#a0bb776a37e221e48da6f75cffc6a3e8c">setBlendMode</a> (<a class="el" href="of_constants_8h.html#a5f194ae56b1bc61651eac7184ed1ad2e">ofBlendMode</a> blendMode)=0</td></tr>
 <tr class="separator:a0bb776a37e221e48da6f75cffc6a3e8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acbe8f9dee80dce144e225a60bbb1db77"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#acbe8f9dee80dce144e225a60bbb1db77">setLineSmoothing</a> (bool smooth)=0</td></tr>
 <tr class="separator:acbe8f9dee80dce144e225a60bbb1db77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f3753a0264093b42a0a5b59359f5142"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#a0f3753a0264093b42a0a5b59359f5142">setCircleResolution</a> (int res)</td></tr>
 <tr class="separator:a0f3753a0264093b42a0a5b59359f5142"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aedbb0446e84b7c4337c5ae1bbb842889"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#aedbb0446e84b7c4337c5ae1bbb842889">setSphereResolution</a> (int res)</td></tr>
-<tr class="separator:aedbb0446e84b7c4337c5ae1bbb842889"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba08589f0c9394a6a2fa89aa1b746a21"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#aba08589f0c9394a6a2fa89aa1b746a21">enablePointSprites</a> ()</td></tr>
 <tr class="separator:aba08589f0c9394a6a2fa89aa1b746a21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a78fd8d5b4864b1277fa8208c09d5d242"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#a78fd8d5b4864b1277fa8208c09d5d242">disablePointSprites</a> ()</td></tr>
 <tr class="separator:a78fd8d5b4864b1277fa8208c09d5d242"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab469558bbb12da5204ecae64a7427b5f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#ab469558bbb12da5204ecae64a7427b5f">enableAntiAliasing</a> ()</td></tr>
+<tr class="separator:ab469558bbb12da5204ecae64a7427b5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe79cc46867fa6d35dfc9a28e6305314"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#abe79cc46867fa6d35dfc9a28e6305314">disableAntiAliasing</a> ()</td></tr>
+<tr class="separator:abe79cc46867fa6d35dfc9a28e6305314"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aafcf166497ea6350488fe5ac22343c64"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#aafcf166497ea6350488fe5ac22343c64">setColor</a> (int r, int g, int <a class="el" href="of_matrix4x4_8cpp.html#ab2d05693952610f937e5acb3c4a8fa1b">b</a>)</td></tr>
 <tr class="separator:aafcf166497ea6350488fe5ac22343c64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca859e4f28406b9b03b57accf389e8fe"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#aca859e4f28406b9b03b57accf389e8fe">setColor</a> (int r, int g, int <a class="el" href="of_matrix4x4_8cpp.html#ab2d05693952610f937e5acb3c4a8fa1b">b</a>, int <a class="el" href="of_matrix4x4_8cpp.html#a8d3c3518d793541417a4845125da1ae1">a</a>)</td></tr>
@@ -214,9 +228,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aaf947850edf68e5a92da374d4347492d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9858e271b9a3e53c79a3e7b4b495ca93"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#a9858e271b9a3e53c79a3e7b4b495ca93">drawCircle</a> (float x, float y, float z, float radius)=0</td></tr>
 <tr class="separator:a9858e271b9a3e53c79a3e7b4b495ca93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4658513f1b116c7b45db85a7a01ced3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#aa4658513f1b116c7b45db85a7a01ced3">drawSphere</a> (float x, float y, float z, float radius)=0</td></tr>
-<tr class="separator:aa4658513f1b116c7b45db85a7a01ced3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71a1a82945587067107f6dbae14e95a6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#a71a1a82945587067107f6dbae14e95a6">drawEllipse</a> (float x, float y, float z, float width, float height)=0</td></tr>
+<tr class="memitem:a71a1a82945587067107f6dbae14e95a6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#a71a1a82945587067107f6dbae14e95a6">drawEllipse</a> (float x, float y, float z, float <a class="el" href="of_icon_8h.html#aca34d28e3d8bcbcadb8edb4e3af24f8c">width</a>, float <a class="el" href="of_icon_8h.html#ab2e78c61905b4419fcc7b4cfc500fe85">height</a>)=0</td></tr>
 <tr class="separator:a71a1a82945587067107f6dbae14e95a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29897c32df48511a61d32a1bf8ae614a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#a29897c32df48511a61d32a1bf8ae614a">drawString</a> (string text, float x, float y, float z, <a class="el" href="of_constants_8h.html#a14966be842b99f71080a7444cebbc0b7">ofDrawBitmapMode</a> mode)=0</td></tr>
 <tr class="separator:a29897c32df48511a61d32a1bf8ae614a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -270,7 +282,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#a7c660859c37d6ce0d87ff287f0153a3b">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#afe6b29f670e797e1cab85562ae365372">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#af6e5ccbc3e326071a7cbc6ddc3396e5e">ofGLRenderer</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#a7c660859c37d6ce0d87ff287f0153a3b">ofRendererCollection</a>, <a class="el" href="classof_g_l_programmable_renderer.html#a7d1ecf5b46be4597b203f657e9ddaa17">ofGLProgrammableRenderer</a>, <a class="el" href="classof_cairo_renderer.html#afe6b29f670e797e1cab85562ae365372">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#af6e5ccbc3e326071a7cbc6ddc3396e5e">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -296,7 +308,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#ad72e46c9c739c319cebef3cba720cdf2">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a55ee27e3f9b943c50d011ff5a038e995">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a85246318e21a701975ffb7653821c175">ofGLRenderer</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#ad72e46c9c739c319cebef3cba720cdf2">ofRendererCollection</a>, <a class="el" href="classof_g_l_programmable_renderer.html#acce70f81673b24b4fcfa71761c1e5e3e">ofGLProgrammableRenderer</a>, <a class="el" href="classof_cairo_renderer.html#a55ee27e3f9b943c50d011ff5a038e995">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a85246318e21a701975ffb7653821c175">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -332,7 +344,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#a399467b010c7bffb8c68f6254cd1403b">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a8fa6a2ca6fdefd7008eb85cffef2447a">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a0ca4eb5d33451a27bc3ecfbee06ba8d4">ofGLRenderer</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#a399467b010c7bffb8c68f6254cd1403b">ofRendererCollection</a>, <a class="el" href="classof_g_l_programmable_renderer.html#acb60d89fbbee2e5ea7bfb02afd523a63">ofGLProgrammableRenderer</a>, <a class="el" href="classof_cairo_renderer.html#a8fa6a2ca6fdefd7008eb85cffef2447a">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a0ca4eb5d33451a27bc3ecfbee06ba8d4">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -380,7 +392,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#abfad33e9148287de46953db0443d0d3d">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a1e21b211773d1dd77d668835f964e811">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#ad83bc3d1980ee121f9936b0ef20207b1">ofGLRenderer</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#abfad33e9148287de46953db0443d0d3d">ofRendererCollection</a>, <a class="el" href="classof_g_l_programmable_renderer.html#a8eaa71b129cd681b725c760f86fd246b">ofGLProgrammableRenderer</a>, <a class="el" href="classof_cairo_renderer.html#a1e21b211773d1dd77d668835f964e811">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#ad83bc3d1980ee121f9936b0ef20207b1">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -405,7 +417,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#a45bfc8647080bf08f00473f11cbb3939">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#adbd43a9920495d686c9381e44c723c68">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a7948f0d1aa7c192b4cee992001536cb8">ofGLRenderer</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#a45bfc8647080bf08f00473f11cbb3939">ofRendererCollection</a>, <a class="el" href="classof_g_l_programmable_renderer.html#a47063b0616038a8aa4153c0c94269b8c">ofGLProgrammableRenderer</a>, <a class="el" href="classof_cairo_renderer.html#adbd43a9920495d686c9381e44c723c68">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a7948f0d1aa7c192b4cee992001536cb8">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -453,7 +465,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#a7940fb36045037c38c0a8706968735e2">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a08f08fcdb8864fde81872d1f3b2308c9">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#ab0a453bcb7d5c7b981a0c01104735633">ofGLRenderer</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#a7940fb36045037c38c0a8706968735e2">ofRendererCollection</a>, <a class="el" href="classof_g_l_programmable_renderer.html#ab2961fb8b54755dcb3cd53568314be77">ofGLProgrammableRenderer</a>, <a class="el" href="classof_cairo_renderer.html#a08f08fcdb8864fde81872d1f3b2308c9">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#ab0a453bcb7d5c7b981a0c01104735633">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -489,7 +501,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#a9b492380fb0424bb838c1a67d279b886">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a475f7c41e13ffe154ed353c4b2e836e9">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a6b2b684fb5450c3ac1e196927dac6be9">ofGLRenderer</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#a9b492380fb0424bb838c1a67d279b886">ofRendererCollection</a>, <a class="el" href="classof_g_l_programmable_renderer.html#a534f3fd18ac2991ae33e80d013d7eda6">ofGLProgrammableRenderer</a>, <a class="el" href="classof_cairo_renderer.html#a475f7c41e13ffe154ed353c4b2e836e9">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a6b2b684fb5450c3ac1e196927dac6be9">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -514,7 +526,32 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#a5980b28671336d94afcf9a513c747797">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#ad3a309e756af77fa962928018e1caeee">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a9c39e468eb9116eeb69ea41676fbe68e">ofGLRenderer</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#a5980b28671336d94afcf9a513c747797">ofRendererCollection</a>, <a class="el" href="classof_g_l_programmable_renderer.html#a5bde54faac8cc1afcc672695d3a046fb">ofGLProgrammableRenderer</a>, <a class="el" href="classof_cairo_renderer.html#ad3a309e756af77fa962928018e1caeee">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a9c39e468eb9116eeb69ea41676fbe68e">ofGLRenderer</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abe79cc46867fa6d35dfc9a28e6305314"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ofBaseRenderer::disableAntiAliasing </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#a4606293d7928cf5058f2fc2fa64b897f">ofRendererCollection</a>, <a class="el" href="classof_g_l_programmable_renderer.html#afdcada0070fb89f0526eb4605b5a289d">ofGLProgrammableRenderer</a>, <a class="el" href="classof_g_l_renderer.html#ae3e9b74cdb5588ef1b7bd88007c8c982">ofGLRenderer</a>, and <a class="el" href="classof_cairo_renderer.html#a8532f4c77724902b2ccfc1a5c4932d85">ofCairoRenderer</a>.</p>
 
 </div>
 </div>
@@ -539,7 +576,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#a3ac870644ba4dce8f2d4b46796ad572e">ofRendererCollection</a>, and <a class="el" href="classof_g_l_renderer.html#ab8d4e88def4a5b3300aab3ba1c597bc4">ofGLRenderer</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#a3ac870644ba4dce8f2d4b46796ad572e">ofRendererCollection</a>, <a class="el" href="classof_g_l_programmable_renderer.html#ad01942315d1e4148452b4ec863c9eb14">ofGLProgrammableRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#ab8d4e88def4a5b3300aab3ba1c597bc4">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -565,7 +602,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classof_cairo_renderer.html#a19cdf25f21b91f6073cc257ea6bd1c84">ofCairoRenderer</a>, <a class="el" href="classof_renderer_collection.html#a461d69215d57fcb31c693f111226e512">ofRendererCollection</a>, and <a class="el" href="classof_g_l_renderer.html#aeab57aee5cec6c0fc78328b23863ed72">ofGLRenderer</a>.</p>
+<p>Implemented in <a class="el" href="classof_cairo_renderer.html#a19cdf25f21b91f6073cc257ea6bd1c84">ofCairoRenderer</a>, <a class="el" href="classof_g_l_programmable_renderer.html#a25d3274a5fc6b967eda36d6dc1e7cc36">ofGLProgrammableRenderer</a>, <a class="el" href="classof_renderer_collection.html#a461d69215d57fcb31c693f111226e512">ofRendererCollection</a>, and <a class="el" href="classof_g_l_renderer.html#aeab57aee5cec6c0fc78328b23863ed72">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -591,7 +628,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classof_cairo_renderer.html#a7b07626fdbc8410889ee9884ce471fa0">ofCairoRenderer</a>, <a class="el" href="classof_renderer_collection.html#a6e33aa059ef70b0184e9eb860ab629f5">ofRendererCollection</a>, and <a class="el" href="classof_g_l_renderer.html#a7394f6dabb7e5e580e5a285c4ca0981a">ofGLRenderer</a>.</p>
+<p>Implemented in <a class="el" href="classof_g_l_programmable_renderer.html#af32f9f81a215b88db9f12b55e194ef66">ofGLProgrammableRenderer</a>, <a class="el" href="classof_renderer_collection.html#a6e33aa059ef70b0184e9eb860ab629f5">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a7b07626fdbc8410889ee9884ce471fa0">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a7394f6dabb7e5e580e5a285c4ca0981a">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -639,7 +676,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classof_renderer_collection.html#ad4459c22170c3bfaf48e629fb6d7e879">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a7cc473f11aee40a4404fca95cfed7537">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a46bccb765506aac481d740f19e1a2753">ofGLRenderer</a>.</p>
+<p>Implemented in <a class="el" href="classof_renderer_collection.html#ad4459c22170c3bfaf48e629fb6d7e879">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a7cc473f11aee40a4404fca95cfed7537">ofCairoRenderer</a>, <a class="el" href="classof_g_l_programmable_renderer.html#acf25b11a3a036a662ddbfae7534d2bca">ofGLProgrammableRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a46bccb765506aac481d740f19e1a2753">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -693,11 +730,11 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classof_renderer_collection.html#a5825da0a3ff641d229e57a2d3cc8ebd8">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#ac4dc19bf99398191d17efe41618be411">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a5b407740e6ed6c2c43749e8c5c35ba15">ofGLRenderer</a>.</p>
+<p>Implemented in <a class="el" href="classof_renderer_collection.html#a5825da0a3ff641d229e57a2d3cc8ebd8">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#ac4dc19bf99398191d17efe41618be411">ofCairoRenderer</a>, <a class="el" href="classof_g_l_programmable_renderer.html#a9a3a2a8fe4fc0a33e0fb9b18d2ffbbee">ofGLProgrammableRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a5b407740e6ed6c2c43749e8c5c35ba15">ofGLRenderer</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a7884c6bf187a0449ce3aa8052c6056bc"></a>
+<a class="anchor" id="a64d298806404e33ed73b6ed5003c1efc"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -707,14 +744,14 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual void ofBaseRenderer::draw </td>
           <td>(</td>
-          <td class="paramtype">vector&lt; <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>vertexData</em>, </td>
+          <td class="paramtype"><a class="el" href="classof3d_primitive.html">of3dPrimitive</a> &amp;&#160;</td>
+          <td class="paramname"><em>model</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="of_g_l_utils_8h.html#a0f71f0b23a18629a446952d5540e16e0">ofPrimitiveMode</a>&#160;</td>
-          <td class="paramname"><em>drawMode</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="of_g_l_utils_8h.html#a6beb1fbbaba728909c78cda1eadfe28e">ofPolyRenderMode</a>&#160;</td>
+          <td class="paramname"><em>renderType</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -729,7 +766,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classof_renderer_collection.html#af588a83a91489cc870c8163e12985282">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a77a40bd7d26d58d68a65928070580140">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#ad5ac4d18c1f2b484a6ab090efcd79898">ofGLRenderer</a>.</p>
+<p>Implemented in <a class="el" href="classof_renderer_collection.html#a205a903411f0544081392875d080ae16">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#ab428a44e5987f1005bc3e08eb8d6bcfe">ofCairoRenderer</a>, <a class="el" href="classof_g_l_programmable_renderer.html#abdcad623c70d89751d36ddc8868adc2c">ofGLProgrammableRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a17b91a03eae536830f524592f21632f2">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -813,7 +850,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classof_renderer_collection.html#a64ed11c4baff34287573fdb20abfd12a">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a0b1f35f442f4dbf8461e261cca89aa4a">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a95dbb77346e113e489826244bb4ee6ff">ofGLRenderer</a>.</p>
+<p>Implemented in <a class="el" href="classof_renderer_collection.html#a64ed11c4baff34287573fdb20abfd12a">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a0b1f35f442f4dbf8461e261cca89aa4a">ofCairoRenderer</a>, <a class="el" href="classof_g_l_programmable_renderer.html#a8109f250f57f86aab4c280930688a57c">ofGLProgrammableRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a95dbb77346e113e489826244bb4ee6ff">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -897,7 +934,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classof_renderer_collection.html#aba3efd6c8b9e664f56aaca4f5ca5a304">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a7715d4f743c2816367f8d1a3806b37da">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#ae6dbef867f31b855847f478bcad5e848">ofGLRenderer</a>.</p>
+<p>Implemented in <a class="el" href="classof_renderer_collection.html#aba3efd6c8b9e664f56aaca4f5ca5a304">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a7715d4f743c2816367f8d1a3806b37da">ofCairoRenderer</a>, <a class="el" href="classof_g_l_programmable_renderer.html#ad39f59574c0e04dd79a8259cb11bb5ac">ofGLProgrammableRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#ae6dbef867f31b855847f478bcad5e848">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -981,7 +1018,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classof_renderer_collection.html#a9f030271e38177bab89bb623b16b63ab">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a22a3a391b17f7403894000817f1020c9">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a021cdc9240d9a555e71176f621da29c7">ofGLRenderer</a>.</p>
+<p>Implemented in <a class="el" href="classof_renderer_collection.html#a9f030271e38177bab89bb623b16b63ab">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a22a3a391b17f7403894000817f1020c9">ofCairoRenderer</a>, <a class="el" href="classof_g_l_programmable_renderer.html#a702f0cc41ff161d0cf233de3c5de3af3">ofGLProgrammableRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a021cdc9240d9a555e71176f621da29c7">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -1029,7 +1066,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classof_renderer_collection.html#a00e13ab5e85c771e8753563de38e3b49">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a92e52d81d4aee42ee2444a82bf85d748">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a8995251bacac0eca21a1586794f99dfc">ofGLRenderer</a>.</p>
+<p>Implemented in <a class="el" href="classof_renderer_collection.html#a00e13ab5e85c771e8753563de38e3b49">ofRendererCollection</a>, <a class="el" href="classof_g_l_programmable_renderer.html#afbd46d94d13679c0505a4051c971c427">ofGLProgrammableRenderer</a>, <a class="el" href="classof_cairo_renderer.html#a92e52d81d4aee42ee2444a82bf85d748">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a8995251bacac0eca21a1586794f99dfc">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -1083,7 +1120,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classof_renderer_collection.html#a4f22b60a3a88f5aa23b3b15e685db047">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a8641b0baf1a323a1371a025ecc844eb5">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a38808615f4653987ca0cb206c727d800">ofGLRenderer</a>.</p>
+<p>Implemented in <a class="el" href="classof_renderer_collection.html#a4f22b60a3a88f5aa23b3b15e685db047">ofRendererCollection</a>, <a class="el" href="classof_g_l_programmable_renderer.html#a6e4c61a77b51c0f9d9fef3d2642f34f9">ofGLProgrammableRenderer</a>, <a class="el" href="classof_cairo_renderer.html#a8641b0baf1a323a1371a025ecc844eb5">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a38808615f4653987ca0cb206c727d800">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -1143,7 +1180,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classof_renderer_collection.html#a6dd8837b75c9db536f1ae0fa5e48465b">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#af8f5534e273d3e480e983e49cb25416b">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#ad99745cf58b3d20fd4aa6a875f5b631c">ofGLRenderer</a>.</p>
+<p>Implemented in <a class="el" href="classof_renderer_collection.html#a6dd8837b75c9db536f1ae0fa5e48465b">ofRendererCollection</a>, <a class="el" href="classof_g_l_programmable_renderer.html#a500bbefad08e52a475fb92ebb99085d7">ofGLProgrammableRenderer</a>, <a class="el" href="classof_cairo_renderer.html#af8f5534e273d3e480e983e49cb25416b">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#ad99745cf58b3d20fd4aa6a875f5b631c">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -1197,55 +1234,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classof_renderer_collection.html#aa6bed8a7799f27fc5a301c3f362fcf26">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a87ca38cd07aad94f36d3bc0aa9bab757">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a4641d1dad06be90318f95bd134bd8070">ofGLRenderer</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="aa4658513f1b116c7b45db85a7a01ced3"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void ofBaseRenderer::drawSphere </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>z</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>radius</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implemented in <a class="el" href="classof_renderer_collection.html#a4efdbb9a824536b143da0213fe2ce3b6">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a70ee8a6229af5c0dfe30b241a83f3480">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#afa771df4c29faa6136f5680f15c64f42">ofGLRenderer</a>.</p>
+<p>Implemented in <a class="el" href="classof_renderer_collection.html#aa6bed8a7799f27fc5a301c3f362fcf26">ofRendererCollection</a>, <a class="el" href="classof_g_l_programmable_renderer.html#a24cb2f798f7c05b6694f0c279421ff0f">ofGLProgrammableRenderer</a>, <a class="el" href="classof_cairo_renderer.html#a87ca38cd07aad94f36d3bc0aa9bab757">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a4641d1dad06be90318f95bd134bd8070">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -1299,7 +1288,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classof_renderer_collection.html#a1393cf51a9b203b88dcedc2235fdb7da">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a686cd4854a5e1fb94a16386728d6c695">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a6f724c04b47a855d528e489d68054678">ofGLRenderer</a>.</p>
+<p>Implemented in <a class="el" href="classof_renderer_collection.html#a1393cf51a9b203b88dcedc2235fdb7da">ofRendererCollection</a>, <a class="el" href="classof_g_l_programmable_renderer.html#aa11a68ba61473d2dc82383d0f693b885">ofGLProgrammableRenderer</a>, <a class="el" href="classof_cairo_renderer.html#a686cd4854a5e1fb94a16386728d6c695">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a6f724c04b47a855d528e489d68054678">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -1377,7 +1366,32 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classof_renderer_collection.html#a34aedb0a2eb0d855d1a96945e602559b">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a7437fda0cc3291a4734c30d5215cb304">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#aa6d9513ab328063dc0a13975ff0bf196">ofGLRenderer</a>.</p>
+<p>Implemented in <a class="el" href="classof_renderer_collection.html#a34aedb0a2eb0d855d1a96945e602559b">ofRendererCollection</a>, <a class="el" href="classof_g_l_programmable_renderer.html#a2c33dd48745f8dbdb71fd3a0546358f4">ofGLProgrammableRenderer</a>, <a class="el" href="classof_cairo_renderer.html#a7437fda0cc3291a4734c30d5215cb304">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#aa6d9513ab328063dc0a13975ff0bf196">ofGLRenderer</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab469558bbb12da5204ecae64a7427b5f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ofBaseRenderer::enableAntiAliasing </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="classof_g_l_programmable_renderer.html#a71f4d8c5d583abc93b091bd49a2598fd">ofGLProgrammableRenderer</a>, <a class="el" href="classof_g_l_renderer.html#ada4496f2dc3530030282e50eca74fc64">ofGLRenderer</a>, and <a class="el" href="classof_cairo_renderer.html#a7c74b7dba42387e54164b32f9edcbe41">ofCairoRenderer</a>.</p>
 
 </div>
 </div>
@@ -1402,7 +1416,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#ae9d52e4565be0d80c54fc96f3d8b0933">ofRendererCollection</a>, and <a class="el" href="classof_g_l_renderer.html#a8b1c399f9c11276a73c588aaf9f1a1de">ofGLRenderer</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#ae9d52e4565be0d80c54fc96f3d8b0933">ofRendererCollection</a>, <a class="el" href="classof_g_l_programmable_renderer.html#a3f3b0228f291161a05009f54b9768c20">ofGLProgrammableRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a8b1c399f9c11276a73c588aaf9f1a1de">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -1427,7 +1441,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classof_renderer_collection.html#a147997dc7ce238bca9bec801811f99a1">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a2abf80732d95985707631620284b547b">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#ad45a0a0435b39aaa8ff0a4ad68a35564">ofGLRenderer</a>.</p>
+<p>Implemented in <a class="el" href="classof_renderer_collection.html#a147997dc7ce238bca9bec801811f99a1">ofRendererCollection</a>, <a class="el" href="classof_g_l_programmable_renderer.html#ac5f5122612a9f4a5ed9392542b2746a2">ofGLProgrammableRenderer</a>, <a class="el" href="classof_cairo_renderer.html#a2abf80732d95985707631620284b547b">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#ad45a0a0435b39aaa8ff0a4ad68a35564">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -1452,7 +1466,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#aed50113ca95678d9d21547f0d4a9ab61">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#ad4dfd1712d8a302c4191fcd0c5ede706">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a64f0ffe7d2b90f1501046f5e3a4a23a6">ofGLRenderer</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#aed50113ca95678d9d21547f0d4a9ab61">ofRendererCollection</a>, <a class="el" href="classof_g_l_programmable_renderer.html#afbbffaf418e86980b68b4a44b84952a1">ofGLProgrammableRenderer</a>, <a class="el" href="classof_cairo_renderer.html#ad4dfd1712d8a302c4191fcd0c5ede706">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a64f0ffe7d2b90f1501046f5e3a4a23a6">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -1477,7 +1491,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#aa1dfb552dd9741caf98b8cbf7282923d">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a34b2cf0594a8e0eb0a0e646ac2042ec7">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a6ff4e1eabd8bb996b5fad20b2a981c2b">ofGLRenderer</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#aa1dfb552dd9741caf98b8cbf7282923d">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a34b2cf0594a8e0eb0a0e646ac2042ec7">ofCairoRenderer</a>, <a class="el" href="classof_g_l_programmable_renderer.html#afbe5a632d0c419d68b84060100f5f440">ofGLProgrammableRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a6ff4e1eabd8bb996b5fad20b2a981c2b">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -1502,7 +1516,32 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classof_renderer_collection.html#a3d04dc6a68993bed2e9044b9829b73f8">ofRendererCollection</a>, <a class="el" href="classof_g_l_renderer.html#ae4233d9a6b431f1a50118bc84ec414d7">ofGLRenderer</a>, and <a class="el" href="classof_cairo_renderer.html#a2e3ec897cb1c67bce8e99900c50cc8af">ofCairoRenderer</a>.</p>
+<p>Implemented in <a class="el" href="classof_renderer_collection.html#a3d04dc6a68993bed2e9044b9829b73f8">ofRendererCollection</a>, <a class="el" href="classof_g_l_programmable_renderer.html#a8bb9296f9ec81e72b8d138bfdd611ce3">ofGLProgrammableRenderer</a>, <a class="el" href="classof_g_l_renderer.html#ae4233d9a6b431f1a50118bc84ec414d7">ofGLRenderer</a>, and <a class="el" href="classof_cairo_renderer.html#a2e3ec897cb1c67bce8e99900c50cc8af">ofCairoRenderer</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7698ce8d1e17235de9684c96dad1c27d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classof_rectangle.html">ofRectangle</a> ofBaseRenderer::getNativeViewport </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="classof_g_l_programmable_renderer.html#a01f2f45a628855c53950fc8f3d4bb998">ofGLProgrammableRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a13ae2b7cad9cd20727295260150720a6">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -1527,11 +1566,11 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classof_renderer_collection.html#a390d672492f82ffb4257babe87669c24">ofRendererCollection</a>, <a class="el" href="classof_g_l_renderer.html#a8e63b294df9f4a84f636b85c00469d3d">ofGLRenderer</a>, and <a class="el" href="classof_cairo_renderer.html#ad53c213918dd9a3011788ac36ed21f28">ofCairoRenderer</a>.</p>
+<p>Implemented in <a class="el" href="classof_renderer_collection.html#a390d672492f82ffb4257babe87669c24">ofRendererCollection</a>, <a class="el" href="classof_g_l_programmable_renderer.html#a9d2e509a2841e8333af641b9fcb9bbe7">ofGLProgrammableRenderer</a>, <a class="el" href="classof_g_l_renderer.html#a8e63b294df9f4a84f636b85c00469d3d">ofGLRenderer</a>, and <a class="el" href="classof_cairo_renderer.html#ad53c213918dd9a3011788ac36ed21f28">ofCairoRenderer</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ab04ab2e86135ab95b598f2d9c4929e7c"></a>
+<a class="anchor" id="a2f2aaeb89ebad3ff2cc4ce9bca5e1c20"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1539,7 +1578,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual string ofBaseRenderer::getType </td>
+          <td class="memname">virtual const string&amp; ofBaseRenderer::getType </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1552,7 +1591,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classof_cairo_renderer.html#a800e09830220c5ba4819fe4ad0ce0cf0">ofCairoRenderer</a>, <a class="el" href="classof_g_l_renderer.html#af72653efa2cac57a844a14b40bdb9953">ofGLRenderer</a>, and <a class="el" href="classof_renderer_collection.html#a967ed7b5f8985510418b73a51d184879">ofRendererCollection</a>.</p>
+<p>Implemented in <a class="el" href="classof_g_l_programmable_renderer.html#aba82dd4c4b2b9c4b801bad017f9efa08">ofGLProgrammableRenderer</a>, <a class="el" href="classof_g_l_renderer.html#a309a7532a184f6fa20a27690f8fc5135">ofGLRenderer</a>, <a class="el" href="classof_cairo_renderer.html#a069ceb0e7e8566f9aeca00f94bf6c66b">ofCairoRenderer</a>, and <a class="el" href="classof_renderer_collection.html#a309c30d102a933ac44389225aabc183c">ofRendererCollection</a>.</p>
 
 </div>
 </div>
@@ -1577,7 +1616,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#af0a664370365173bf092709e64ffeecc">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#ac1f2e3922892ab6c6dd4482f1a259ff4">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#af34194f145634e2c2cfd345a74601141">ofGLRenderer</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#af0a664370365173bf092709e64ffeecc">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#ac1f2e3922892ab6c6dd4482f1a259ff4">ofCairoRenderer</a>, <a class="el" href="classof_g_l_programmable_renderer.html#a145914ecba62d4022e4c14f3c7baa440">ofGLProgrammableRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#af34194f145634e2c2cfd345a74601141">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -1602,7 +1641,32 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#afdcacbf9bdad63c006c1e57717599246">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a888924ffc3a037f67eb67dd3d4641329">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a9337400ddb5654e03f8ad1a699a48a31">ofGLRenderer</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#afdcacbf9bdad63c006c1e57717599246">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a888924ffc3a037f67eb67dd3d4641329">ofCairoRenderer</a>, <a class="el" href="classof_g_l_programmable_renderer.html#ae1821984c69eb3338dfeb9d0155e7bfe">ofGLProgrammableRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a9337400ddb5654e03f8ad1a699a48a31">ofGLRenderer</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa4bd6773b94a4d7ac7de2fcdf9f01234"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool ofBaseRenderer::isVFlipped </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="classof_g_l_programmable_renderer.html#a45380dff6c35caf8cc72a61fc88178e3">ofGLProgrammableRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#ab2a40dc1e616a36ff1f5045860dd7a28">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -1628,7 +1692,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#a8267a32444a4c3bf3ae7ec8328f42a04">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#adebe606824f8a55acfb755590e8de7ff">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a8ffc12a22ed8898ebdc6c7343c732fb8">ofGLRenderer</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#a8267a32444a4c3bf3ae7ec8328f42a04">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#adebe606824f8a55acfb755590e8de7ff">ofCairoRenderer</a>, <a class="el" href="classof_g_l_programmable_renderer.html#a3b0884f80f0c4aec91667c1803e63279">ofGLProgrammableRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a8ffc12a22ed8898ebdc6c7343c732fb8">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -1654,7 +1718,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#aedd86da6d906a1aae877177854c6c8cf">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a12e2466567bf1e322f09ef5bdf6c07e2">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#ab0d3a8eee5902bff267c7c874d684b5d">ofGLRenderer</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#aedd86da6d906a1aae877177854c6c8cf">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a12e2466567bf1e322f09ef5bdf6c07e2">ofCairoRenderer</a>, <a class="el" href="classof_g_l_programmable_renderer.html#a24e929f48598ca71b3a0a9efebb4f88c">ofGLProgrammableRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#ab0d3a8eee5902bff267c7c874d684b5d">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -1680,7 +1744,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#a02191cd3485f00f4047768b09cd720a9">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a4008bd4d2425e4633e3ef5c9c7f7290a">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a385e468989bd43ee68553d0bbd3e4ae5">ofGLRenderer</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#a02191cd3485f00f4047768b09cd720a9">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a4008bd4d2425e4633e3ef5c9c7f7290a">ofCairoRenderer</a>, <a class="el" href="classof_g_l_programmable_renderer.html#a8b881662039cf6ba27da667bb1156b99">ofGLProgrammableRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a385e468989bd43ee68553d0bbd3e4ae5">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -1706,7 +1770,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classof_cairo_renderer.html#a315d7ce4683c7f914d3f9eaae7e49714">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#afbe4f888d9554763b24a585b41949f14">ofGLRenderer</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_cairo_renderer.html#a315d7ce4683c7f914d3f9eaae7e49714">ofCairoRenderer</a>, <a class="el" href="classof_g_l_programmable_renderer.html#abe28e6ae5e58c022642545d530a71cff">ofGLProgrammableRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#afbe4f888d9554763b24a585b41949f14">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -1732,7 +1796,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#a6d6ba27b14e1d2fe2a96678ed11d3570">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a21933eedef7fe07dce06776cedeb6100">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a42edcb41199ad1422c73b605596202d8">ofGLRenderer</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#a6d6ba27b14e1d2fe2a96678ed11d3570">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a21933eedef7fe07dce06776cedeb6100">ofCairoRenderer</a>, <a class="el" href="classof_g_l_programmable_renderer.html#a912855a626c68ceb31db22f264556c10">ofGLProgrammableRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a42edcb41199ad1422c73b605596202d8">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -1758,7 +1822,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#abe071e501788e21e22bb098ba35c3b9c">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a02ec53edba9b748ae22897bd8875f024">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a2444b7f7346f0e6172f709dc9995f233">ofGLRenderer</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#abe071e501788e21e22bb098ba35c3b9c">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a02ec53edba9b748ae22897bd8875f024">ofCairoRenderer</a>, <a class="el" href="classof_g_l_programmable_renderer.html#a2e4381580c03330f1dc802b79d365211">ofGLProgrammableRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a2444b7f7346f0e6172f709dc9995f233">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -1783,7 +1847,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#ad9330053dcf587bbc803757ea109afaa">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a14b22e5b97713bd80adc129923a33fbe">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a64d1caafe69099c73802652d39588e91">ofGLRenderer</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#ad9330053dcf587bbc803757ea109afaa">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a14b22e5b97713bd80adc129923a33fbe">ofCairoRenderer</a>, <a class="el" href="classof_g_l_programmable_renderer.html#ac31d19ef0fdc861d4aab5f80e577ce54">ofGLProgrammableRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a64d1caafe69099c73802652d39588e91">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -1808,7 +1872,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#ac1eb3d18b17c8483f0c9022d3f0c46b8">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a95e3b1bf17c56b334ae9b265d0caf971">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a5f69c59637e3a9a3677a7985ac878a44">ofGLRenderer</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#ac1eb3d18b17c8483f0c9022d3f0c46b8">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a95e3b1bf17c56b334ae9b265d0caf971">ofCairoRenderer</a>, <a class="el" href="classof_g_l_programmable_renderer.html#aaf8de522277cc6265b488595f0cc847c">ofGLProgrammableRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a5f69c59637e3a9a3677a7985ac878a44">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -1833,7 +1897,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#a048730d889a884ef335b381a91788c72">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#ae80318ec09fad18566517d1034fa7bec">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#aa2afddce8fd2a7870521dd47c74af7a0">ofGLRenderer</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#a048730d889a884ef335b381a91788c72">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#ae80318ec09fad18566517d1034fa7bec">ofCairoRenderer</a>, <a class="el" href="classof_g_l_programmable_renderer.html#a8959526c4205c9330014b1de4064410d">ofGLProgrammableRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#aa2afddce8fd2a7870521dd47c74af7a0">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -1858,7 +1922,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#abad3fe83c7977d5723b1674b3b26fa03">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#acf52b56ca3516c61f81ccc08cfadced1">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a3535890cc1da307bc78f8f9fe60d3294">ofGLRenderer</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#abad3fe83c7977d5723b1674b3b26fa03">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#acf52b56ca3516c61f81ccc08cfadced1">ofCairoRenderer</a>, <a class="el" href="classof_g_l_programmable_renderer.html#a58a5d45df5ac88ca2055abf7aa5235b9">ofGLProgrammableRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a3535890cc1da307bc78f8f9fe60d3294">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -1883,7 +1947,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classof_cairo_renderer.html#a933632be24a7f9ee8175c3660a263c24">ofCairoRenderer</a>, <a class="el" href="classof_g_l_renderer.html#a34735b5f64b528d0f3103a5e37103b45">ofGLRenderer</a>, and <a class="el" href="classof_renderer_collection.html#a0fea7627d79f0c77a8b101c4eb5bd577">ofRendererCollection</a>.</p>
+<p>Implemented in <a class="el" href="classof_cairo_renderer.html#a933632be24a7f9ee8175c3660a263c24">ofCairoRenderer</a>, <a class="el" href="classof_g_l_programmable_renderer.html#a99fde856d9fd5813871d31588caa8ee8">ofGLProgrammableRenderer</a>, <a class="el" href="classof_g_l_renderer.html#a34735b5f64b528d0f3103a5e37103b45">ofGLRenderer</a>, and <a class="el" href="classof_renderer_collection.html#a0fea7627d79f0c77a8b101c4eb5bd577">ofRendererCollection</a>.</p>
 
 </div>
 </div>
@@ -1931,7 +1995,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#adf166761a6667c2a02e0474c51a1c5f4">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a8822b11dafbe4649824e1abaa2d90377">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#aa19c82279ab5c15c8c1c8dd79e18cf4f">ofGLRenderer</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#adf166761a6667c2a02e0474c51a1c5f4">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a8822b11dafbe4649824e1abaa2d90377">ofCairoRenderer</a>, <a class="el" href="classof_g_l_programmable_renderer.html#a0f5a3546a53cd19f7ae41c6dc5c18c89">ofGLProgrammableRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#aa19c82279ab5c15c8c1c8dd79e18cf4f">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -1957,7 +2021,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#a8621b6d166d85783d16f159c334dce31">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a851fe7d8806fdbc44e4c1a44cc4c1ddf">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a81627f064a499681e8321b5ee8294a6f">ofGLRenderer</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#a8621b6d166d85783d16f159c334dce31">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a851fe7d8806fdbc44e4c1a44cc4c1ddf">ofCairoRenderer</a>, <a class="el" href="classof_g_l_programmable_renderer.html#a047a8fe48837e0dc8bd5d80c1aeda244">ofGLProgrammableRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a81627f064a499681e8321b5ee8294a6f">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -1983,7 +2047,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#a0c5e97089208e52f40e26ec6aba6cc96">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a95e2617b09a278951a9da61b84dd73f4">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#ad97908ef76005fca1fdca3149e3811ad">ofGLRenderer</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#a0c5e97089208e52f40e26ec6aba6cc96">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a95e2617b09a278951a9da61b84dd73f4">ofCairoRenderer</a>, <a class="el" href="classof_g_l_programmable_renderer.html#a268d9a77bb71a50d181552dd540e97b5">ofGLProgrammableRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#ad97908ef76005fca1fdca3149e3811ad">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -2009,7 +2073,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#a46a99e4166855b99a115db39a89b2b91">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a8708e85a264993c6a1c17a603f5c3622">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#abc15d35c7c3dcdcd8292905dc4c68555">ofGLRenderer</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#a46a99e4166855b99a115db39a89b2b91">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a8708e85a264993c6a1c17a603f5c3622">ofCairoRenderer</a>, <a class="el" href="classof_g_l_programmable_renderer.html#a46cb50c6b2334ec6c91632db85f57e3e">ofGLProgrammableRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#abc15d35c7c3dcdcd8292905dc4c68555">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -2035,7 +2099,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#a63aafe2a1d81345e52fb402e4fd0390d">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#ae49c0dd54cc8eeededda39ce57df3958">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#adaddc8874c08b0e488c4fcbac4f828af">ofGLRenderer</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#a63aafe2a1d81345e52fb402e4fd0390d">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#ae49c0dd54cc8eeededda39ce57df3958">ofCairoRenderer</a>, <a class="el" href="classof_g_l_programmable_renderer.html#ab0ab97453f0850bf084476d50202bf8a">ofGLProgrammableRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#adaddc8874c08b0e488c4fcbac4f828af">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -2077,7 +2141,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#a1968fe3b2f2033a0ab53a9c07172bd9c">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a02195750c37c906936670424102c2cf4">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a771ba672fc6434ea280a520d133f632c">ofGLRenderer</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#a1968fe3b2f2033a0ab53a9c07172bd9c">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a02195750c37c906936670424102c2cf4">ofCairoRenderer</a>, <a class="el" href="classof_g_l_programmable_renderer.html#ad38756c681297105187c2f6a0cb114e2">ofGLProgrammableRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a771ba672fc6434ea280a520d133f632c">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -2103,7 +2167,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#aa275d00cea2a518a86524ca275fd5d19">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a3c095b39a1fa8f7af272331c88a559c0">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a0e52b69e3652bf1d72e1736b52cc9886">ofGLRenderer</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#aa275d00cea2a518a86524ca275fd5d19">ofRendererCollection</a>, <a class="el" href="classof_g_l_programmable_renderer.html#a63625fb7cfd8500a8f14de6f2ba18668">ofGLProgrammableRenderer</a>, <a class="el" href="classof_cairo_renderer.html#a3c095b39a1fa8f7af272331c88a559c0">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a0e52b69e3652bf1d72e1736b52cc9886">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -2129,7 +2193,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classof_renderer_collection.html#acb323c4a55fb32c3e84cb2d54949b2f2">ofRendererCollection</a>, <a class="el" href="classof_g_l_renderer.html#ac3c8e88601fd476d18f6165f8c7d318d">ofGLRenderer</a>, and <a class="el" href="classof_cairo_renderer.html#ad17ae254ba8de9f79708149a78fc26eb">ofCairoRenderer</a>.</p>
+<p>Implemented in <a class="el" href="classof_renderer_collection.html#acb323c4a55fb32c3e84cb2d54949b2f2">ofRendererCollection</a>, <a class="el" href="classof_g_l_programmable_renderer.html#a50813f8e079df479c0765df62fc1c6f5">ofGLProgrammableRenderer</a>, <a class="el" href="classof_g_l_renderer.html#ac3c8e88601fd476d18f6165f8c7d318d">ofGLRenderer</a>, and <a class="el" href="classof_cairo_renderer.html#ad17ae254ba8de9f79708149a78fc26eb">ofCairoRenderer</a>.</p>
 
 </div>
 </div>
@@ -2155,7 +2219,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#afc948a9f1f9a025530731693157d3b0a">ofRendererCollection</a>, and <a class="el" href="classof_g_l_renderer.html#a14db8e625b98e472a945bd6e9f7e19dc">ofGLRenderer</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#afc948a9f1f9a025530731693157d3b0a">ofRendererCollection</a>, <a class="el" href="classof_g_l_programmable_renderer.html#a3a245f97d96f92e78543f87bd3a9e67f">ofGLProgrammableRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a14db8e625b98e472a945bd6e9f7e19dc">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -2197,7 +2261,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#a716ce382e6ac92a64cc5d62c46cbc3d9">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#aae49df33ec0e2e50b192d02bc9254329">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a3c1195df49743118619b099a77a74a11">ofGLRenderer</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#a716ce382e6ac92a64cc5d62c46cbc3d9">ofRendererCollection</a>, <a class="el" href="classof_g_l_programmable_renderer.html#a1f7ca4cbe94d014246f6dfe807ff1bf9">ofGLProgrammableRenderer</a>, <a class="el" href="classof_cairo_renderer.html#aae49df33ec0e2e50b192d02bc9254329">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a3c1195df49743118619b099a77a74a11">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -2245,7 +2309,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#ac7eb16d71c34915a020b45e66dbde7b2">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#ae73b748777bf75fb64ed1d5f6f5db023">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a0ea5b1baf697b63cd38d9fe0e5ea88e8">ofGLRenderer</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#ac7eb16d71c34915a020b45e66dbde7b2">ofRendererCollection</a>, <a class="el" href="classof_g_l_programmable_renderer.html#a9804ea8b061bc1f813e10e88646112a8">ofGLProgrammableRenderer</a>, <a class="el" href="classof_cairo_renderer.html#ae73b748777bf75fb64ed1d5f6f5db023">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a0ea5b1baf697b63cd38d9fe0e5ea88e8">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -2271,7 +2335,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#a7af63c0b192fca3b52780884b812c11d">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a1cf81f64f592e2277b88bfeb5cbd6aa7">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a43aca9fa8ea97a1db2ed51c7b2b6b0d6">ofGLRenderer</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#a7af63c0b192fca3b52780884b812c11d">ofRendererCollection</a>, <a class="el" href="classof_g_l_programmable_renderer.html#a5f7045cb762cfd9491104416395ce4f2">ofGLProgrammableRenderer</a>, <a class="el" href="classof_cairo_renderer.html#a1cf81f64f592e2277b88bfeb5cbd6aa7">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a43aca9fa8ea97a1db2ed51c7b2b6b0d6">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -2307,7 +2371,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#aa825e39c553e6b7967fa7d1adb2a1a7c">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a0912699ae36ae6108f65e0c271a13b31">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a7d256ba490f4afc6214ca203b2750473">ofGLRenderer</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#aa825e39c553e6b7967fa7d1adb2a1a7c">ofRendererCollection</a>, <a class="el" href="classof_g_l_programmable_renderer.html#a3f6e9dc3159eb790066081c6a3af3e2f">ofGLProgrammableRenderer</a>, <a class="el" href="classof_cairo_renderer.html#a0912699ae36ae6108f65e0c271a13b31">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a7d256ba490f4afc6214ca203b2750473">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -2333,7 +2397,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#aa0841ea3dd7853753afe816a80c51cbc">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#aaf5079ce467b4741ee9beea895e09109">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a12b306db178d8ddca5c3976dbbd7956e">ofGLRenderer</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#aa0841ea3dd7853753afe816a80c51cbc">ofRendererCollection</a>, <a class="el" href="classof_g_l_programmable_renderer.html#af9a4cf313e6acd6626f919df241b5ddb">ofGLProgrammableRenderer</a>, <a class="el" href="classof_cairo_renderer.html#aaf5079ce467b4741ee9beea895e09109">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a12b306db178d8ddca5c3976dbbd7956e">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -2359,7 +2423,33 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#a273509bd5f629a0a568c1332a2f4f82b">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a97610b9999e6e5831d88ff65926eeb33">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a499821d78e1e602de2f3ed3e31cecb8c">ofGLRenderer</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#a273509bd5f629a0a568c1332a2f4f82b">ofRendererCollection</a>, <a class="el" href="classof_g_l_programmable_renderer.html#ab79be1ba065a16aadc3a0dcd19132b9c">ofGLProgrammableRenderer</a>, <a class="el" href="classof_cairo_renderer.html#a97610b9999e6e5831d88ff65926eeb33">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a499821d78e1e602de2f3ed3e31cecb8c">ofGLRenderer</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abafdfd8b8e4bebc219e8550174c74837"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ofBaseRenderer::setDepthTest </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>depthTest</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classof_renderer_collection.html#ad63ff2777fdf4da89124998722b28daa">ofRendererCollection</a>, <a class="el" href="classof_g_l_programmable_renderer.html#a85570e112fe3e51b2d4ed66fb6785fdd">ofGLProgrammableRenderer</a>, <a class="el" href="classof_g_l_renderer.html#a2443d36e15744d240cc7d9e6f98d6d76">ofGLRenderer</a>, and <a class="el" href="classof_cairo_renderer.html#ac8fc19498897ad69011ee7db5420558f">ofCairoRenderer</a>.</p>
 
 </div>
 </div>
@@ -2385,7 +2475,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classof_renderer_collection.html#aa3489b59899b540ce86e8c228330b02b">ofRendererCollection</a>, <a class="el" href="classof_g_l_renderer.html#aacc0eab2f3d4e7e6f2ac425b209ef596">ofGLRenderer</a>, and <a class="el" href="classof_cairo_renderer.html#a535bf1e13b51d0a5d4de152a94382c15">ofCairoRenderer</a>.</p>
+<p>Implemented in <a class="el" href="classof_renderer_collection.html#aa3489b59899b540ce86e8c228330b02b">ofRendererCollection</a>, <a class="el" href="classof_g_l_programmable_renderer.html#a0c042ea8766c81f7527a03584b85b20f">ofGLProgrammableRenderer</a>, <a class="el" href="classof_g_l_renderer.html#aacc0eab2f3d4e7e6f2ac425b209ef596">ofGLRenderer</a>, and <a class="el" href="classof_cairo_renderer.html#a535bf1e13b51d0a5d4de152a94382c15">ofCairoRenderer</a>.</p>
 
 </div>
 </div>
@@ -2411,7 +2501,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#aa701e4549e4597ba2c70a3b8ad9876a5">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a12eb0672c7053617129837077700fbe4">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#accb8795036878d6c3b32283b31746967">ofGLRenderer</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#aa701e4549e4597ba2c70a3b8ad9876a5">ofRendererCollection</a>, <a class="el" href="classof_g_l_programmable_renderer.html#a75fda5c23db3663198bb90ef997a6d10">ofGLProgrammableRenderer</a>, <a class="el" href="classof_cairo_renderer.html#a12eb0672c7053617129837077700fbe4">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#accb8795036878d6c3b32283b31746967">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -2437,7 +2527,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classof_renderer_collection.html#a2c88c2af62cbe79bbad5ac6bbd80ffd9">ofRendererCollection</a>, <a class="el" href="classof_g_l_renderer.html#af6f3b671e6583114c5589551915c3f94">ofGLRenderer</a>, and <a class="el" href="classof_cairo_renderer.html#a1901f46679555e72239d24807a269081">ofCairoRenderer</a>.</p>
+<p>Implemented in <a class="el" href="classof_renderer_collection.html#a2c88c2af62cbe79bbad5ac6bbd80ffd9">ofRendererCollection</a>, <a class="el" href="classof_g_l_programmable_renderer.html#a3ceb25eb72a02f7f2c3c239c395b0d0e">ofGLProgrammableRenderer</a>, <a class="el" href="classof_g_l_renderer.html#af6f3b671e6583114c5589551915c3f94">ofGLRenderer</a>, and <a class="el" href="classof_cairo_renderer.html#a1901f46679555e72239d24807a269081">ofCairoRenderer</a>.</p>
 
 </div>
 </div>
@@ -2463,7 +2553,43 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classof_renderer_collection.html#a0165e4121b7fd166d0563366046014f1">ofRendererCollection</a>, <a class="el" href="classof_g_l_renderer.html#a2d6b8de48998dc05fc023a3ca41ef135">ofGLRenderer</a>, and <a class="el" href="classof_cairo_renderer.html#aa23662a69a84b60b645b0b732eb69796">ofCairoRenderer</a>.</p>
+<p>Implemented in <a class="el" href="classof_renderer_collection.html#a0165e4121b7fd166d0563366046014f1">ofRendererCollection</a>, <a class="el" href="classof_g_l_programmable_renderer.html#a160b105a46a2c4add0ceee28d981efe6">ofGLProgrammableRenderer</a>, <a class="el" href="classof_g_l_renderer.html#a2d6b8de48998dc05fc023a3ca41ef135">ofGLRenderer</a>, and <a class="el" href="classof_cairo_renderer.html#aa23662a69a84b60b645b0b732eb69796">ofCairoRenderer</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a77eac56c4f6eedf37809cd432b2e0924"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ofBaseRenderer::setOrientation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="of_constants_8h.html#a85ec4045e22bafeea5c561f9778c1f1c">ofOrientation</a>&#160;</td>
+          <td class="paramname"><em>orientation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>vFlip</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="classof_g_l_programmable_renderer.html#ae49bf62e4d0959eb40411fcf1e59ddbe">ofGLProgrammableRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a2da5a5a079be7ce18369e8d1879e9e2a">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -2489,33 +2615,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classof_renderer_collection.html#aa86ada3e4a6ac351c1ae9b11aaad95e6">ofRendererCollection</a>, <a class="el" href="classof_g_l_renderer.html#ad5915cd57862078d500efaf5c7b994ed">ofGLRenderer</a>, and <a class="el" href="classof_cairo_renderer.html#a0b4c7064a42559a09763c60489c9ee37">ofCairoRenderer</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="aedbb0446e84b7c4337c5ae1bbb842889"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void ofBaseRenderer::setSphereResolution </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>res</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Reimplemented in <a class="el" href="classof_g_l_renderer.html#af205a68cf901864b1be55c1f5baf0c60">ofGLRenderer</a>, and <a class="el" href="classof_cairo_renderer.html#a32514b1bf58a003af06a2cab45fe592f">ofCairoRenderer</a>.</p>
+<p>Implemented in <a class="el" href="classof_renderer_collection.html#aa86ada3e4a6ac351c1ae9b11aaad95e6">ofRendererCollection</a>, <a class="el" href="classof_g_l_programmable_renderer.html#a78f300ae32ba4868a1d9ce562960d1dd">ofGLProgrammableRenderer</a>, <a class="el" href="classof_g_l_renderer.html#ad5915cd57862078d500efaf5c7b994ed">ofGLRenderer</a>, and <a class="el" href="classof_cairo_renderer.html#a0b4c7064a42559a09763c60489c9ee37">ofCairoRenderer</a>.</p>
 
 </div>
 </div>
@@ -2540,7 +2640,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#acc8c68cb89db19f3dd2de0ab4ca60a34">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a067de4b242130b80d9e07617eda7dd37">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a788951d57f6e4698b5e28d1684b771df">ofGLRenderer</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#acc8c68cb89db19f3dd2de0ab4ca60a34">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a067de4b242130b80d9e07617eda7dd37">ofCairoRenderer</a>, <a class="el" href="classof_g_l_programmable_renderer.html#adab61f9a13aee91893bd7578b71a583d">ofGLProgrammableRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a788951d57f6e4698b5e28d1684b771df">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -2565,11 +2665,11 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#a01d89c4fa1210bc14e38d16d00728985">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#aff0476945a318bc4580e639b60017338">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#adf20fa42653709d3c6ae3aa53ae67974">ofGLRenderer</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#a01d89c4fa1210bc14e38d16d00728985">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#aff0476945a318bc4580e639b60017338">ofCairoRenderer</a>, <a class="el" href="classof_g_l_programmable_renderer.html#a9b940285f6e7414f8218cc6fa2dc7292">ofGLProgrammableRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#adf20fa42653709d3c6ae3aa53ae67974">ofGLRenderer</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a78aaffdae40b4a568b011171fc8556a6"></a>
+<a class="anchor" id="ab7c2a1204bfcc49732683ed613e93737"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -2587,18 +2687,6 @@ Public Member Functions</h2></td></tr>
           <td></td>
           <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>height</em> = <code>0</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="of_constants_8h.html#a85ec4045e22bafeea5c561f9778c1f1c">ofOrientation</a>&#160;</td>
-          <td class="paramname"><em>orientation</em> = <code><a class="el" href="of_constants_8h.html#a85ec4045e22bafeea5c561f9778c1f1caa38a6f3fee424ea35be626cb0b6e423b">OF_ORIENTATION_UNKNOWN</a></code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>vFlip</em> = <code>true</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -2625,11 +2713,11 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#a2542ea52e2ccc5e95f345c6a27459b86">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a20f0da734ea37ef4d25a1a4dd67181e1">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a9ecded5227f06ddb41067436e7f27aa2">ofGLRenderer</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#a25e18d874e6102f41123abcb06c74fa5">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a573712d889284c0b84765dbeb0ba2785">ofCairoRenderer</a>, <a class="el" href="classof_g_l_programmable_renderer.html#a79b36d455b03a6b12e95203eb312e7ec">ofGLProgrammableRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a04fadcbff9663519b96d12bf4f7ef4e4">ofGLRenderer</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aefb98b7ef168dbff450f6054bf00d406"></a>
+<a class="anchor" id="ac9ab11780ce5d6a2270a94c51e8f3d2f"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -2647,18 +2735,6 @@ Public Member Functions</h2></td></tr>
           <td></td>
           <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>height</em> = <code>0</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="of_constants_8h.html#a85ec4045e22bafeea5c561f9778c1f1c">ofOrientation</a>&#160;</td>
-          <td class="paramname"><em>orientation</em> = <code><a class="el" href="of_constants_8h.html#a85ec4045e22bafeea5c561f9778c1f1caa38a6f3fee424ea35be626cb0b6e423b">OF_ORIENTATION_UNKNOWN</a></code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>vFlip</em> = <code>true</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -2691,7 +2767,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#a51e9b3a6f217b2a28e89720c324b8a3d">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#a2d2544d8f0ecef5d3728f45a8d4229d9">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#acab0c2098ecfa732191427c79a82dc6a">ofGLRenderer</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#aac8008a2a6b2571b55c244c27eb0028d">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#afe9b17e8a0585eae43cb00c6c9996c12">ofCairoRenderer</a>, <a class="el" href="classof_g_l_programmable_renderer.html#a58264ac387b91b742a06e8c526a9d5c9">ofGLProgrammableRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a48eed92a36e107be155ebd0036de0adc">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -2733,7 +2809,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#a9c0d3a09db035e040041bbee4636168d">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#ac7767ad5bc65fe42932d8043ffccd699">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#ac90b43ad1bb96f962af54f1488e0e819">ofGLRenderer</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#a9c0d3a09db035e040041bbee4636168d">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#ac7767ad5bc65fe42932d8043ffccd699">ofCairoRenderer</a>, <a class="el" href="classof_g_l_programmable_renderer.html#a0293e9bd63be6837e6cd670d0f8457c9">ofGLProgrammableRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#ac90b43ad1bb96f962af54f1488e0e819">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -2759,7 +2835,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#a3cfe7642e1c12374db588e345102f071">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#acc56715da18f40bc224dc3caca21b6b1">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a2e254123fc865dd0a8f5133f185b2cbc">ofGLRenderer</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#a3cfe7642e1c12374db588e345102f071">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#acc56715da18f40bc224dc3caca21b6b1">ofCairoRenderer</a>, <a class="el" href="classof_g_l_programmable_renderer.html#a70ff1f06a92a236fa74ffa9440c09428">ofGLProgrammableRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a2e254123fc865dd0a8f5133f185b2cbc">ofGLRenderer</a>.</p>
 
 </div>
 </div>
@@ -2784,7 +2860,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classof_cairo_renderer.html#a57f44289cb55fb1c6601b456f1c06f06">ofCairoRenderer</a>, <a class="el" href="classof_renderer_collection.html#a4ba4dcfc37cf724bcc1b8e2362b366fc">ofRendererCollection</a>, and <a class="el" href="classof_g_l_renderer.html#ac705138071cc37cb5faeb84cee284c9b">ofGLRenderer</a>.</p>
+<p>Implemented in <a class="el" href="classof_cairo_renderer.html#a57f44289cb55fb1c6601b456f1c06f06">ofCairoRenderer</a>, <a class="el" href="classof_g_l_programmable_renderer.html#ac74b69424bb51eac83da81ea030b4f1b">ofGLProgrammableRenderer</a>, <a class="el" href="classof_g_l_renderer.html#ac705138071cc37cb5faeb84cee284c9b">ofGLRenderer</a>, and <a class="el" href="classof_renderer_collection.html#a4ba4dcfc37cf724bcc1b8e2362b366fc">ofRendererCollection</a>.</p>
 
 </div>
 </div>
@@ -2810,11 +2886,11 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#aa5cf782b4da20f9e72665dc50d41370f">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#aeb4bdbd4882a0846cdd95d4a17c981a3">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a57e0572c4ce586b77b1157b9f6ff0f96">ofGLRenderer</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#aa5cf782b4da20f9e72665dc50d41370f">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#aeb4bdbd4882a0846cdd95d4a17c981a3">ofCairoRenderer</a>, <a class="el" href="classof_g_l_programmable_renderer.html#a89da006b34bf51edec21a78791690e87">ofGLProgrammableRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a57e0572c4ce586b77b1157b9f6ff0f96">ofGLRenderer</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a300bd8d884c882a8ae3539367b0b7d9f"></a>
+<a class="anchor" id="afd5e7cedc203340a02448a4c5656a3ce"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -2849,7 +2925,7 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>invertY</em> = <code>true</code>&#160;</td>
+          <td class="paramname"><em>vflip</em> = <code><a class="el" href="of_base_types_8h.html#a112ebf9b37b365ab634260fa7413d92e">ofIsVFlipped</a>()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -2864,12 +2940,12 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#ae0fdf138f4cfa91948cea6774ec52e9a">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#acae2134144ce0e7e328ffba50d867189">ofCairoRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a159bb20585175eddb16c70aa262f392f">ofGLRenderer</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_renderer_collection.html#a3e1631a78cdbfccbf7892456d8b0f71a">ofRendererCollection</a>, <a class="el" href="classof_cairo_renderer.html#acae2134144ce0e7e328ffba50d867189">ofCairoRenderer</a>, <a class="el" href="classof_g_l_programmable_renderer.html#ad739dc4cf14702d72d1f46594925773f">ofGLProgrammableRenderer</a>, and <a class="el" href="classof_g_l_renderer.html#a65c0d756d7ff268c784c639bd48a4d59">ofGLRenderer</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>types/<a class="el" href="of_base_types_8h_source.html">ofBaseTypes.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/types/<a class="el" href="of_base_types_8h_source.html">ofBaseTypes.h</a></li>
 </ul>
 </div><!-- contents -->
 

@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -66,9 +67,16 @@ Inheritance diagram for ofNode:</div>
  <div class="center">
   <img src="classof_node.png" usemap="#ofNode_map" alt=""/>
   <map id="ofNode_map" name="ofNode_map">
-<area href="classof_camera.html" alt="ofCamera" shape="rect" coords="0,56,76,80"/>
-<area href="classof_light.html" alt="ofLight" shape="rect" coords="86,56,162,80"/>
-<area href="classof_easy_cam.html" alt="ofEasyCam" shape="rect" coords="0,112,76,136"/>
+<area href="classof3d_primitive.html" alt="of3dPrimitive" shape="rect" coords="347,56,476,80"/>
+<area href="classof_camera.html" alt="ofCamera" shape="rect" coords="834,56,963,80"/>
+<area href="classof_light.html" alt="ofLight" shape="rect" coords="973,56,1102,80"/>
+<area href="classof_box_primitive.html" alt="ofBoxPrimitive" shape="rect" coords="0,112,129,136"/>
+<area href="classof_cone_primitive.html" alt="ofConePrimitive" shape="rect" coords="139,112,268,136"/>
+<area href="classof_cylinder_primitive.html" alt="ofCylinderPrimitive" shape="rect" coords="278,112,407,136"/>
+<area href="classof_ico_sphere_primitive.html" alt="ofIcoSpherePrimitive" shape="rect" coords="417,112,546,136"/>
+<area href="classof_plane_primitive.html" alt="ofPlanePrimitive" shape="rect" coords="556,112,685,136"/>
+<area href="classof_sphere_primitive.html" alt="ofSpherePrimitive" shape="rect" coords="695,112,824,136"/>
+<area href="classof_easy_cam.html" alt="ofEasyCam" shape="rect" coords="834,112,963,136"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -78,10 +86,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa2b223ca1f8560ef193eb7bde666d758"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0f916a28a08c95064e89bdc5131b923"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_node.html#ad0f916a28a08c95064e89bdc5131b923">~ofNode</a> ()</td></tr>
 <tr class="separator:ad0f916a28a08c95064e89bdc5131b923"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17c41e855157cc8b896db24f8ba50201"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_node.html#a17c41e855157cc8b896db24f8ba50201">setParent</a> (<a class="el" href="classof_node.html">ofNode</a> &amp;<a class="el" href="classof_node.html#a9fa60edff25434ada1671e837335fbdf">parent</a>)</td></tr>
-<tr class="separator:a17c41e855157cc8b896db24f8ba50201"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abab3151dc3a440a630f5782eda3e3111"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_node.html#abab3151dc3a440a630f5782eda3e3111">clearParent</a> ()</td></tr>
-<tr class="separator:abab3151dc3a440a630f5782eda3e3111"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad475e04b79cbd1528ae3c59adba0a7c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_node.html#ad475e04b79cbd1528ae3c59adba0a7c2">setParent</a> (<a class="el" href="classof_node.html">ofNode</a> &amp;<a class="el" href="classof_node.html#a9fa60edff25434ada1671e837335fbdf">parent</a>, bool bMaintainGlobalTransform=false)</td></tr>
+<tr class="separator:ad475e04b79cbd1528ae3c59adba0a7c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6c41c2d514797f04f162bb323cb4dfa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_node.html#aa6c41c2d514797f04f162bb323cb4dfa">clearParent</a> (bool bMaintainGlobalTransform=false)</td></tr>
+<tr class="separator:aa6c41c2d514797f04f162bb323cb4dfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08d61ddc77fd655780a7c269756b7ecb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_node.html">ofNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_node.html#a08d61ddc77fd655780a7c269756b7ecb">getParent</a> () const </td></tr>
 <tr class="separator:a08d61ddc77fd655780a7c269756b7ecb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89350f61b536e5f64dc13682a6aee97d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_vec3f.html">ofVec3f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_node.html#a89350f61b536e5f64dc13682a6aee97d">getPosition</a> () const </td></tr>
@@ -188,8 +196,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9d09e55a671dae12c64b18215f2cd08c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace344f081aa534670949ae9e03374626"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_node.html#ace344f081aa534670949ae9e03374626">resetTransform</a> ()</td></tr>
 <tr class="separator:ace344f081aa534670949ae9e03374626"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82804cbe87f3bce8a5d2d2b89dce5e71"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_node.html#a82804cbe87f3bce8a5d2d2b89dce5e71">customDraw</a> ()</td></tr>
-<tr class="separator:a82804cbe87f3bce8a5d2d2b89dce5e71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23a1ca114eeff7e8494cecee90002534"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_node.html#a23a1ca114eeff7e8494cecee90002534">customDraw</a> ()</td></tr>
+<tr class="separator:a23a1ca114eeff7e8494cecee90002534"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13c85ec24bc0244ee7e32be7a63f2561"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_node.html#a13c85ec24bc0244ee7e32be7a63f2561">draw</a> ()</td></tr>
 <tr class="separator:a13c85ec24bc0244ee7e32be7a63f2561"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -265,14 +273,15 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="abab3151dc3a440a630f5782eda3e3111"></a>
+<a class="anchor" id="aa6c41c2d514797f04f162bb323cb4dfa"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void ofNode::clearParent </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bMaintainGlobalTransform</em> = <code>false</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -303,7 +312,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a82804cbe87f3bce8a5d2d2b89dce5e71"></a>
+<a class="anchor" id="a23a1ca114eeff7e8494cecee90002534"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -311,7 +320,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void ofNode::customDraw </td>
+          <td class="memname">void ofNode::customDraw </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -319,7 +328,7 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1230,7 +1239,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a17c41e855157cc8b896db24f8ba50201"></a>
+<a class="anchor" id="ad475e04b79cbd1528ae3c59adba0a7c2"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -1238,8 +1247,18 @@ Protected Attributes</h2></td></tr>
           <td class="memname">void ofNode::setParent </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classof_node.html">ofNode</a> &amp;&#160;</td>
-          <td class="paramname"><em>parent</em></td><td>)</td>
+          <td class="paramname"><em>parent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bMaintainGlobalTransform</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1443,8 +1462,8 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>3d/<a class="el" href="of_node_8h_source.html">ofNode.h</a></li>
-<li>3d/<a class="el" href="of_node_8cpp.html">ofNode.cpp</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/3d/<a class="el" href="of_node_8h_source.html">ofNode.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/3d/<a class="el" href="of_node_8cpp.html">ofNode.cpp</a></li>
 </ul>
 </div><!-- contents -->
 

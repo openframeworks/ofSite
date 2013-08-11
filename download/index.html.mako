@@ -1,64 +1,98 @@
-<%inherit file="/_templates/slideshow.mako" />
+<%inherit file="/_templates/slideshow_wide.mako" />
 
 <h1>download</h1>
 <div id="download-latest-header">
 	<h2>${bf.config.currentVersion}</h2>
-	<p><strong>is the most recent release. It has a lot of new features, new interfaces, and probably some new bugs too. ${bf.config.currentVersion} is not 100% compatible with older projects. Please see the <a href="https://raw.github.com/openframeworks/openFrameworks/master/changes.txt">changelog</a> to get an overview of the differences between versions.</strong></p>
+	<p><strong>is the most recent release. It has a lot of new features, new interfaces, and probably some new bugs too. ${bf.config.currentVersion} is not 100% compatible with older projects. Please see the <a href="https://raw.github.com/openframeworks/openFrameworks/master/CHANGELOG.md">changelog</a> to get an overview of the differences between versions.</strong></p>
 	<p>To use openFrameworks you will need an IDE, and the setup guide for your platform can walk you through this. Please post any bugs on the <a href="http://github.com/openframeworks/openFrameworks/issues">issues</a> page, and post to the <a href="http://forum.openframeworks.cc">forum</a> if you have any other questions. openFrameworks is distributed under the <a href="../about/license.html">MIT License</a>.</p>
 </div>
 
-<div id="download-latest-platform">
-	<h2>osx</h2>
-	<h3>download openFrameworks for</h3>
-	<p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_osx_release.zip">xcode</a></p><br/>
-	<h3>IDE setup guide</h3>
-	<p><a href="../setup/xcode">xcode</a></p>
+<div id="download-bg-desktop">
+    <div id="download-latest-platform">
+	    <h2>osx</h2>
+	    <h3>download<br/>openFrameworks for</h3>
+	    <p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_osx_release.zip">xcode</a></p><br/>
+	    <h3>IDE setup guide</h3>
+	    <p><a href="../setup/xcode">xcode</a></p>
+    </div>
+
+    <div id="download-latest-platform">
+	    <h2>linux</h2>
+	    <h3>download<br/>openFrameworks for</h3>
+	    <p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_linux_release.tar.gz">code::blocks</a></p>
+	    <p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_linux64_release.tar.gz">code::blocks (64 bit)</a></p><br/>
+	    <h3>IDE setup guide</h3>
+	    <p><a href="../setup/linux-codeblocks">code::blocks</a></p>
+	    <p><a href="../setup/linux-eclipse">eclipse</a></p>
+    </div>
+
+    <div id="download-latest-platform-last">
+	    <h2>windows</h2>
+	    <h3>download<br/>openFrameworks for</h3>
+	    <p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_win_cb_release.zip">code::blocks</a></p>
+	    <p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_vs2010_release.zip">visual studio 2010</a></p><br/>
+	    <h3>IDE setup guides</h3>
+	    <p><a href="../setup/codeblocks">code::blocks</a></p>
+	    <!--<p><a href="../setup/vs-2008">visual studio 2008</a></p>-->
+	    <p><a href="../setup/vs-2010">visual studio 2010</a></p>
+    </div>
 </div>
 
-<div id="download-latest-platform">
-	<h2>linux</h2>
-	<h3>download openFrameworks for</h3>
-	<p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_linux_release.tar.gz">code::blocks</a></p>
-	<p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_linux64_release.tar.gz">code::blocks (64 bit)</a></p><br/>
-	<h3>IDE setup guide</h3>
-	<p><a href="../setup/linux-codeblocks">code::blocks</a></p>
-	<p><a href="../setup/linux-eclipse">eclipse</a></p>
+<div id="download-bg-mobile">
+    <div id="download-latest-platform-title">
+	    <h2>mobile</h2>
+	    <p><em>openFrameworks for mobile platforms supports the same features as the desktop versions plus mobile specific features like acceleromter, compass, gps...</em></p>
+    </div>
+
+    <div id="download-latest-platform">
+	    <h2>ios</h2>
+	    <p><em>osx only</em></p><br/>
+	    <h3>download<br/>openFrameworks for</h3>
+	    <p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_ios_release.zip">xcode</a></p><br/>
+	    <h3>IDE setup guide</h3>
+	    <p><a href="../setup/iphone">xcode</a></p>
+    </div>
+
+    <div id="download-latest-platform-last">
+	    <h2>android</h2>
+	    <h3>download<br/>openFrameworks for</h3>
+	    <p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_android_release.tar.gz">eclipse</a></p><br/>
+	    <h3>IDE setup guide</h3>
+	    <p><a href="../setup/android-eclipse">eclipse</a></p>
+    </div>
 </div>
 
-<div id="download-latest-platform">
-	<h2>windows</h2>
-	<h3>download openFrameworks for</h3>
-	<p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_win_cb_release.zip">code::blocks</a></p>
-	<p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_vs2010_release.zip">visual studio 2010</a></p><br/>
-	<h3>IDE setup guides</h3>
-	<p><a href="../setup/codeblocks">code::blocks</a></p>
-	<!--<p><a href="../setup/vs-2008">visual studio 2008</a></p>-->
-	<p><a href="../setup/vs-2010">visual studio 2010</a></p>
-</div>
 
-<div id="download-latest-platform">
-	<h2>ios</h2>
-	<p><em>osx only</em></p><br/>
-	<h3>download openFrameworks for</h3>
-	<p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_ios_release.zip">xcode</a></p><br/>
-	<h3>IDE setup guide</h3>
-	<p><a href="../setup/iphone">xcode</a></p>
-</div>
+<div id="download-bg-armlinux">
+    <div id="download-latest-platform-title">
+	    <h2>linux arm</h2>
+	    <p><em>openFrameworks for arm boards running linux like Raspberry Pi, Beaglebone (black), Pandaboard, BeagleBoard and others.</em></p>
+	    <p><em>We have setup guides for some of the most common boards but it should work on any armv6 and armv7 board.</em></p>
+    </div>
 
-<div id="download-latest-platform">
-	<h2>android</h2>
-	<p><em>linux + osx only</em></p><br/>
-	<h3>download openFrameworks for</h3>
-	<p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_android_release.tar.gz">eclipse</a></p><br/>
-	<h3>IDE setup guide</h3>
-	<p><a href="../setup/android-eclipse">eclipse</a></p>
+    <div id="download-latest-platform">
+	    <h2>linux&nbsp;armv6</h2>
+	    <h3>download<br/>openFrameworks for</h3>
+	    <p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_linuxarmv6_release.tar.gz">linux armv6</a></p><br/>
+	    <h3>setup guide</h3>
+	    <p><a href="../setup/raspberrypi">raspberry pi</a></p>
+    </div>
+
+    <div id="download-latest-platform-last">
+	    <h2>linux&nbsp;armv7</h2>
+	    <h3>download<br/>openFrameworks for</h3>
+	    <p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_linuxarmv7_release.tar.gz">linux armv7</a></p><br/>
+	    <h3>setup guide</h3>
+	    <p><a href="../setup/pandaboard">pandaboard</a></p>
+	    <p><a href="../setup/armv7">generic armv7</a></p>
+    </div>
 </div>
 
 <br class="clearboth"/>
 
 We release openFrameworks as an uncompiled library. This means that when you download and unzip openFrameworks, you will see the following folders: `addons/`, `apps/`, `libs/`, and a few more. These folders contain openFrameworks completely, so if you want to keep multiple versions of openFrameworks on your computer you should just create multiple folders. For example, one `openFrameworks007/` folder and one `openFrameworks0071/` folder, each with their own `apps/` folder. Even when new versions of openFrameworks are released, your old apps will still compile with old versions of openFrameworks.
 
-`apps/examples/` is a great place to start. Inside `apps/examples/` you'll find a variety of examples that show what is possible with openFrameworks. They demonstrate font loading, graphics, audio input and output, sound file playback and FFT analysis, video grabbing, movie playing, image loading and saving, event handling and serial communication.  For more examples, see `apps/addonsExamples/`.
+The examples folder is a great place to start. Inside examples you'll find a variety of examples that show what is possible with openFrameworks. They demonstrate font loading, graphics, audio input and output, sound file playback and FFT analysis, video grabbing, movie playing, image loading and saving, event handling and serial communication.  For more examples, see `apps/addonsExamples/`.
 
 <br />
 

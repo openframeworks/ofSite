@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -52,6 +53,7 @@
       <li><a href="functions.html"><span>All</span></a></li>
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li class="current"><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_type.html"><span>Typedefs</span></a></li>
       <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
       <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
       <li><a href="functions_prop.html"><span>Properties</span></a></li>
@@ -105,8 +107,38 @@
 <li>EFirmwareVersionReceived
 : <a class="el" href="classof_arduino.html#a3bb33d77bad1d29e9b2ec29199aa5b26">ofArduino</a>
 </li>
+<li>eglConfig
+: <a class="el" href="classof_app_e_g_l_window.html#a47a8e8ac9ae6343c49b0697aaadd35e6">ofAppEGLWindow</a>
+</li>
+<li>eglContext
+: <a class="el" href="classof_app_e_g_l_window.html#a89c3f48c626fb8d16109803b77adb26c">ofAppEGLWindow</a>
+</li>
+<li>eglDisplay
+: <a class="el" href="classof_app_e_g_l_window.html#ac968862a3c1d8bf2d501455a4b9aebbe">ofAppEGLWindow</a>
+</li>
+<li>eglDisplayString
+: <a class="el" href="classof_app_e_g_l_window.html#aac3c4c4785c7bc78e4703d8bc907540a">ofAppEGLWindow</a>
+</li>
+<li>eglSurface
+: <a class="el" href="classof_app_e_g_l_window.html#a38db30b65ba8723a562ff6a7bc8170d0">ofAppEGLWindow</a>
+</li>
+<li>eglVersionMajor
+: <a class="el" href="classof_app_e_g_l_window.html#a2230450c04b51cbca1f5b8d3c8c0741c">ofAppEGLWindow</a>
+</li>
+<li>eglVersionMinor
+: <a class="el" href="classof_app_e_g_l_window.html#a7479de6fa5077c9ca2368ee9cbef637f">ofAppEGLWindow</a>
+</li>
+<li>eglWindowOpacity
+: <a class="el" href="structof_app_e_g_l_window_1_1_settings.html#a7540e10f3099e6f490b77ad7406bd93b">ofAppEGLWindow::Settings</a>
+</li>
+<li>eglWindowPreference
+: <a class="el" href="structof_app_e_g_l_window_1_1_settings.html#a9ac76cb4a1d57398df743ab8ceb166f9">ofAppEGLWindow::Settings</a>
+</li>
 <li>EInitialized
 : <a class="el" href="classof_arduino.html#a362c423aa519dcfca35b6dae26c3a997">ofArduino</a>
+</li>
+<li>element
+: <a class="el" href="classof_xml.html#a2fa0c3c16c1e24c0aebf09f1a9096807">ofXml</a>
 </li>
 <li>eosEvent
 : <a class="el" href="classof_gst_video_utils.html#a5d9fe5f720c9ff9612913fa0ae895d9f">ofGstVideoUtils</a>

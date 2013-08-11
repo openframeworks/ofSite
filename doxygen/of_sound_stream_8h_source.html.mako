@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -47,7 +48,7 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_1d1792b8a04e5b5f576b922cbfbb9e15.html">sound</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_84d5b34cee6369a03c8d1f3b970ed216.html">openFrameworks</a></li><li class="navelem"><a class="el" href="dir_1da621c91f0645d0fe4b08b87824f157.html">sound</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -64,17 +65,17 @@
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="of_base_sound_stream_8h.html">ofBaseSoundStream.h</a>&quot;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifdef OF_SOUNDSTREAM_RTAUDIO</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor"></span><span class="preprocessor">        #include &quot;<a class="code" href="of_rt_audio_sound_stream_8h.html">ofRtAudioSoundStream.h</a>&quot;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">        #define OF_SOUND_STREAM_TYPE ofRtAudioSoundStream</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor"></span><span class="preprocessor">    #include &quot;<a class="code" href="of_rt_audio_sound_stream_8h.html">ofRtAudioSoundStream.h</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">    #define OF_SOUND_STREAM_TYPE ofRtAudioSoundStream</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#elif defined(OF_SOUNDSTREAM_PORTAUDIO)</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor"></span><span class="preprocessor">        #include &quot;<a class="code" href="of_p_a_sound_stream_8h.html">ofPASoundStream.h</a>&quot;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">        #define OF_SOUND_STREAM_TYPE ofPASoundStream</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor"></span><span class="preprocessor">    #include &quot;<a class="code" href="of_p_a_sound_stream_8h.html">ofPASoundStream.h</a>&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">    #define OF_SOUND_STREAM_TYPE ofPASoundStream</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#elif defined(OF_SOUNDSTREAM_ANDROID)</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor"></span><span class="preprocessor">        #include &quot;ofxAndroidSoundStream.h&quot;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">        #define OF_SOUND_STREAM_TYPE ofxAndroidSoundStream</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#elif defined(OF_SOUNDSTREAM_IPHONE)</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor"></span><span class="preprocessor">        #include &quot;ofxiPhoneSoundStream.h&quot;</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">        #define OF_SOUND_STREAM_TYPE ofxiPhoneSoundStream</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor"></span><span class="preprocessor">    #include &quot;ofxAndroidSoundStream.h&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">    #define OF_SOUND_STREAM_TYPE ofxAndroidSoundStream</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#elif defined(OF_SOUNDSTREAM_IOS)</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor"></span><span class="preprocessor">    #include &quot;ofxiOSSoundStream.h&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">    #define OF_SOUND_STREAM_TYPE ofxiOSSoundStream</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#endif </span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keywordtype">void</span> <a class="code" href="of_sound_stream_8cpp.html#a80beb9b0117e2ce24c6a54cf2404185c">ofSoundStreamSetup</a>(<span class="keywordtype">int</span> nOutputChannels, <span class="keywordtype">int</span> nInputChannels, <a class="code" href="classof_base_app.html">ofBaseApp</a> * appPtr = NULL);</div>
@@ -86,31 +87,35 @@
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keywordtype">void</span> <a class="code" href="of_sound_stream_8cpp.html#a57a71c540e5af2821bdffe33377565b3">ofSoundStreamListDevices</a>();</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
 <div class="line"><a name="l00031"></a><span class="lineno"><a class="code" href="classof_sound_stream.html">   31</a></span>&#160;<span class="keyword">class </span><a class="code" href="classof_sound_stream.html">ofSoundStream</a>{</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                <a class="code" href="classof_sound_stream.html#a47d4cd0827208597bf116bc6fd954c00">ofSoundStream</a>();</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                <span class="keywordtype">void</span> <a class="code" href="classof_sound_stream.html#ade40e7f39e918994c45c82121e341643">setSoundStream</a>(<a class="code" href="classof_ptr.html">ofPtr&lt;ofBaseSoundStream&gt;</a> soundStreamPtr);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                <a class="code" href="classof_ptr.html">ofPtr&lt;ofBaseSoundStream&gt;</a> <a class="code" href="classof_sound_stream.html#a646214476abc2b65545e31fb5a7facd7">getSoundStream</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <a class="code" href="classof_sound_stream.html#a47d4cd0827208597bf116bc6fd954c00">ofSoundStream</a>();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classof_sound_stream.html#ade40e7f39e918994c45c82121e341643">setSoundStream</a>(<a class="code" href="classof_ptr.html">ofPtr&lt;ofBaseSoundStream&gt;</a> soundStreamPtr);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <a class="code" href="classof_ptr.html">ofPtr&lt;ofBaseSoundStream&gt;</a> <a class="code" href="classof_sound_stream.html#a646214476abc2b65545e31fb5a7facd7">getSoundStream</a>();</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                <span class="keywordtype">void</span> <a class="code" href="classof_sound_stream.html#a7ab3c672a357f1b30c8e3b7db6b14fc7">listDevices</a>();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                <span class="keywordtype">void</span> <a class="code" href="classof_sound_stream.html#ab09bcde2d99186c5a5889da94fec5132">setDeviceID</a>(<span class="keywordtype">int</span> deviceID);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classof_sound_stream.html#a7ab3c672a357f1b30c8e3b7db6b14fc7">listDevices</a>();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classof_sound_stream.html#ab09bcde2d99186c5a5889da94fec5132">setDeviceID</a>(<span class="keywordtype">int</span> deviceID);</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                <span class="keywordtype">bool</span> <a class="code" href="classof_sound_stream.html#a6e608c0034437ca0152a1fce35c11af5">setup</a>(<a class="code" href="classof_base_app.html">ofBaseApp</a> * app, <span class="keywordtype">int</span> outChannels, <span class="keywordtype">int</span> inChannels, <span class="keywordtype">int</span> sampleRate, <span class="keywordtype">int</span> bufferSize, <span class="keywordtype">int</span> nBuffers);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                <span class="keywordtype">void</span> <a class="code" href="classof_sound_stream.html#ab7d7d424d44688489a79e53e3faf1131">setInput</a>(<a class="code" href="classof_base_sound_input.html">ofBaseSoundInput</a> * soundInput);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                <span class="keywordtype">void</span> <a class="code" href="classof_sound_stream.html#abc67980c13dd58bd16c3362c1d87c28e">setOutput</a>(<a class="code" href="classof_base_sound_output.html">ofBaseSoundOutput</a> * soundOutput);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                <span class="keywordtype">bool</span> <a class="code" href="classof_sound_stream.html#a6e608c0034437ca0152a1fce35c11af5">setup</a>(<span class="keywordtype">int</span> outChannels, <span class="keywordtype">int</span> inChannels, <span class="keywordtype">int</span> sampleRate, <span class="keywordtype">int</span> bufferSize, <span class="keywordtype">int</span> nBuffers);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                <span class="keywordtype">void</span> <a class="code" href="classof_sound_stream.html#a841b585c0c00e5c1475462cee9c86455">start</a>();</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                <span class="keywordtype">void</span> <a class="code" href="classof_sound_stream.html#a7204c4627954ec04e6fd86d3f1b05400">stop</a>();</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                <span class="keywordtype">void</span> <a class="code" href="classof_sound_stream.html#a4e7be9ede60368dcbe1566b6a7c7937b">close</a>();</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                <span class="keywordtype">long</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <a class="code" href="classof_sound_stream.html#a7987c9afe679fa80a41a622338e181d5">getTickCount</a>();</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                </div>
-<div class="line"><a name="l00055"></a><span class="lineno"><a class="code" href="classof_sound_stream.html#a9360c4f62ffaafa2f0eede977b57ad05">   55</a></span>&#160;                <a class="code" href="classof_ptr.html">ofPtr&lt;ofBaseSoundStream&gt;</a> <a class="code" href="classof_sound_stream.html#a9360c4f62ffaafa2f0eede977b57ad05">soundStream</a>;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;};</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classof_sound_stream.html#a6e608c0034437ca0152a1fce35c11af5">setup</a>(<a class="code" href="classof_base_app.html">ofBaseApp</a> * app, <span class="keywordtype">int</span> outChannels, <span class="keywordtype">int</span> inChannels, <span class="keywordtype">int</span> sampleRate, <span class="keywordtype">int</span> bufferSize, <span class="keywordtype">int</span> nBuffers);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classof_sound_stream.html#ab7d7d424d44688489a79e53e3faf1131">setInput</a>(<a class="code" href="classof_base_sound_input.html">ofBaseSoundInput</a> * soundInput);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classof_sound_stream.html#abc67980c13dd58bd16c3362c1d87c28e">setOutput</a>(<a class="code" href="classof_base_sound_output.html">ofBaseSoundOutput</a> * soundOutput);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classof_sound_stream.html#a6e608c0034437ca0152a1fce35c11af5">setup</a>(<span class="keywordtype">int</span> outChannels, <span class="keywordtype">int</span> inChannels, <span class="keywordtype">int</span> sampleRate, <span class="keywordtype">int</span> bufferSize, <span class="keywordtype">int</span> nBuffers);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classof_sound_stream.html#a841b585c0c00e5c1475462cee9c86455">start</a>();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classof_sound_stream.html#a7204c4627954ec04e6fd86d3f1b05400">stop</a>();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classof_sound_stream.html#a4e7be9ede60368dcbe1566b6a7c7937b">close</a>();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordtype">long</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <a class="code" href="classof_sound_stream.html#a7987c9afe679fa80a41a622338e181d5">getTickCount</a>();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classof_sound_stream.html#acad14341e4a7eafb7b7b8012d6745feb">getNumInputChannels</a>();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classof_sound_stream.html#a6c5cd61d04e29c2473d2cd1a5a93543a">getNumOutputChannels</a>();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classof_sound_stream.html#a6637b6fc50ffb7df5f32829bc5b6ef50">getSampleRate</a>();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classof_sound_stream.html#adac81ab108d13712887591e2985f99b4">getBufferSize</a>();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        </div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="code" href="classof_sound_stream.html#a9360c4f62ffaafa2f0eede977b57ad05">   59</a></span>&#160;        <a class="code" href="classof_ptr.html">ofPtr&lt;ofBaseSoundStream&gt;</a> <a class="code" href="classof_sound_stream.html#a9360c4f62ffaafa2f0eede977b57ad05">soundStream</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
 
             </div>

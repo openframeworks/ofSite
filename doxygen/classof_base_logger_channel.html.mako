@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -75,12 +76,16 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad25596521f5df6c781fd2668c829c50e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41859e4af28dd6263df054666a5fe58f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_logger_channel.html#a41859e4af28dd6263df054666a5fe58f">log</a> (<a class="el" href="of_log_8h.html#a6b3aba959377cae6ed3afbb9d5826fe4">ofLogLevel</a> level, const string &amp;module, const string &amp;message)=0</td></tr>
 <tr class="separator:a41859e4af28dd6263df054666a5fe58f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71b1b3361092015cdfb3b3b485b008d9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_logger_channel.html#a71b1b3361092015cdfb3b3b485b008d9">log</a> (<a class="el" href="of_log_8h.html#a6b3aba959377cae6ed3afbb9d5826fe4">ofLogLevel</a> logLevel, const string &amp;module, const char *format,...)=0</td></tr>
-<tr class="separator:a71b1b3361092015cdfb3b3b485b008d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3bcaaf2a15f4bfd417f8f8b4e72a8c3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_logger_channel.html#ac3bcaaf2a15f4bfd417f8f8b4e72a8c3">log</a> (<a class="el" href="of_log_8h.html#a6b3aba959377cae6ed3afbb9d5826fe4">ofLogLevel</a> logLevel, const string &amp;module, const char *format, va_list args)=0</td></tr>
-<tr class="separator:ac3bcaaf2a15f4bfd417f8f8b4e72a8c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8730d4e192935d84238b645d0866548f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_logger_channel.html#a8730d4e192935d84238b645d0866548f">log</a> (<a class="el" href="of_log_8h.html#a6b3aba959377cae6ed3afbb9d5826fe4">ofLogLevel</a> level, const string &amp;module, const char *format,...)=0</td></tr>
+<tr class="separator:a8730d4e192935d84238b645d0866548f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83ff10e99279f145285daa1e096bbeaa"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_logger_channel.html#a83ff10e99279f145285daa1e096bbeaa">log</a> (<a class="el" href="of_log_8h.html#a6b3aba959377cae6ed3afbb9d5826fe4">ofLogLevel</a> level, const string &amp;module, const char *format, va_list args)=0</td></tr>
+<tr class="separator:a83ff10e99279f145285daa1e096bbeaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h1><a class="anchor" id="Logger"></a>
+Channels</h1>
+<p>swappable logging destinations, derive your own for custom logging </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ad25596521f5df6c781fd2668c829c50e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -147,7 +152,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a71b1b3361092015cdfb3b3b485b008d9"></a>
+<a class="anchor" id="a8730d4e192935d84238b645d0866548f"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -158,7 +163,7 @@ Public Member Functions</h2></td></tr>
           <td class="memname">virtual void ofBaseLoggerChannel::log </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="of_log_8h.html#a6b3aba959377cae6ed3afbb9d5826fe4">ofLogLevel</a>&#160;</td>
-          <td class="paramname"><em>logLevel</em>, </td>
+          <td class="paramname"><em>level</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -191,11 +196,11 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classof_file_logger_channel.html#a3b96503914bb215045b49feb7e43b3b1">ofFileLoggerChannel</a>, and <a class="el" href="classof_console_logger_channel.html#a1566895d3ae76fe6280a14da10948bf7">ofConsoleLoggerChannel</a>.</p>
+<p>Implemented in <a class="el" href="classof_file_logger_channel.html#ab18cba0b2ded364630dd9b2230776642">ofFileLoggerChannel</a>, and <a class="el" href="classof_console_logger_channel.html#ad47d80b1bc4a21c0df60d70f6f39cf75">ofConsoleLoggerChannel</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ac3bcaaf2a15f4bfd417f8f8b4e72a8c3"></a>
+<a class="anchor" id="a83ff10e99279f145285daa1e096bbeaa"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -206,7 +211,7 @@ Public Member Functions</h2></td></tr>
           <td class="memname">virtual void ofBaseLoggerChannel::log </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="of_log_8h.html#a6b3aba959377cae6ed3afbb9d5826fe4">ofLogLevel</a>&#160;</td>
-          <td class="paramname"><em>logLevel</em>, </td>
+          <td class="paramname"><em>level</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -239,12 +244,12 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classof_file_logger_channel.html#a84e3b3bb3e043388947b966bd7536b2b">ofFileLoggerChannel</a>, and <a class="el" href="classof_console_logger_channel.html#a6862457a576aa2c0be4b6e17a933d078">ofConsoleLoggerChannel</a>.</p>
+<p>Implemented in <a class="el" href="classof_file_logger_channel.html#a7cabc7ebbd2afb8c569c1afeb0e734e8">ofFileLoggerChannel</a>, and <a class="el" href="classof_console_logger_channel.html#a9ccdb08eec51a78e0b8126c67014ec55">ofConsoleLoggerChannel</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>utils/<a class="el" href="of_log_8h_source.html">ofLog.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/utils/<a class="el" href="of_log_8h_source.html">ofLog.h</a></li>
 </ul>
 </div><!-- contents -->
 

@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -57,6 +58,10 @@
 <p>This is the complete list of members for <a class="el" href="classof_base_sound_stream.html">ofBaseSoundStream</a>, including all inherited members.</p>
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="classof_base_sound_stream.html#a972327e868ca15ecc79476919fbd25bf">close</a>()=0</td><td class="entry"><a class="el" href="classof_base_sound_stream.html">ofBaseSoundStream</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classof_base_sound_stream.html#a85b3a2824024b23b52ab1ce921177806">getBufferSize</a>()=0</td><td class="entry"><a class="el" href="classof_base_sound_stream.html">ofBaseSoundStream</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classof_base_sound_stream.html#ac23ff27d95054eecae6134e43ead00b9">getNumInputChannels</a>()=0</td><td class="entry"><a class="el" href="classof_base_sound_stream.html">ofBaseSoundStream</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classof_base_sound_stream.html#a0b88f70e31f1852ddfa024a991a05e92">getNumOutputChannels</a>()=0</td><td class="entry"><a class="el" href="classof_base_sound_stream.html">ofBaseSoundStream</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classof_base_sound_stream.html#a9dc79623984eaad86a6da8703b788a22">getSampleRate</a>()=0</td><td class="entry"><a class="el" href="classof_base_sound_stream.html">ofBaseSoundStream</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="classof_base_sound_stream.html#a8f0693f0fb84d3a83763b32e3ee8496c">getTickCount</a>()=0</td><td class="entry"><a class="el" href="classof_base_sound_stream.html">ofBaseSoundStream</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classof_base_sound_stream.html#aec4462be763b5b784a91aa569733d94e">listDevices</a>()=0</td><td class="entry"><a class="el" href="classof_base_sound_stream.html">ofBaseSoundStream</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="classof_base_sound_stream.html#a309be9bbda641649d801093359a3b2c5">setDeviceID</a>(int deviceID)=0</td><td class="entry"><a class="el" href="classof_base_sound_stream.html">ofBaseSoundStream</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>

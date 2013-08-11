@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -47,7 +48,7 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_ffe10d808f3b8401de5bc52b90a9fa35.html">gl</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_84d5b34cee6369a03c8d1f3b970ed216.html">openFrameworks</a></li><li class="navelem"><a class="el" href="dir_21a7ba6abdb7e89b57a67631dad1eaf5.html">gl</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -60,6 +61,7 @@
 <code>#include &quot;<a class="el" href="of_path_8h_source.html">ofPath.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="of_graphics_8h_source.html">ofGraphics.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="of_app_runner_8h_source.html">ofAppRunner.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="of3d_primitives_8h_source.html">of3dPrimitives.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="of_bitmap_font_8h_source.html">ofBitmapFont.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="of_g_l_utils_8h_source.html">ofGLUtils.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="of_image_8h_source.html">ofImage.h</a>&quot;</code><br/>

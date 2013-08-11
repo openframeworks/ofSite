@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -52,6 +53,7 @@
       <li><a href="functions.html"><span>All</span></a></li>
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_type.html"><span>Typedefs</span></a></li>
       <li class="current"><a href="functions_enum.html"><span>Enumerations</span></a></li>
       <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
       <li><a href="functions_prop.html"><span>Properties</span></a></li>
@@ -61,14 +63,22 @@
 </div><!-- top -->
 <div class="contents">
 &#160;<ul>
+<li>BoxSides
+: <a class="el" href="classof_box_primitive.html#a7c0ed28dfe97e1e1434b1c1c64ff04bd">ofBoxPrimitive</a>
+</li>
+<li>defaultAttributes
+: <a class="el" href="classof_shader.html#a9f35d6011294c2e93d33d5d5eb65f4dd">ofShader</a>
+</li>
 <li>Mode
 : <a class="el" href="classof_path.html#aa20ad057e28b19dfa200361fba0bb343">ofPath</a>
 , <a class="el" href="classof_file.html#afc27b4186457038ca30b5471b497f2a0">ofFile</a>
 </li>
 <li>Type
-: <a class="el" href="classof_touch_event_args.html#a9e8f73205b3915bfac3c90aa035f561e">ofTouchEventArgs</a>
-, <a class="el" href="structof_sub_path_1_1_command.html#adb590e1f3aca1797cf1d23fa33e50557">ofSubPath::Command</a>
+: <a class="el" href="classof_key_event_args.html#a551471a78845484004332f64798ab8a5">ofKeyEventArgs</a>
+, <a class="el" href="structof_path_1_1_command.html#a3cf8602f5114fa60143fd1992e239f6a">ofPath::Command</a>
 , <a class="el" href="classof_cairo_renderer.html#aa4f542abccc80b9288466943a947ac55">ofCairoRenderer</a>
+, <a class="el" href="classof_touch_event_args.html#a9e8f73205b3915bfac3c90aa035f561e">ofTouchEventArgs</a>
+, <a class="el" href="classof_mouse_event_args.html#a47a5a6f0fad3aebbcd4187c4364faf51">ofMouseEventArgs</a>
 </li>
 </ul>
 </div><!-- contents -->

@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -47,7 +48,7 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_cbdb8362360e11eafe2fa3bc74cf0ffd.html">utils</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_84d5b34cee6369a03c8d1f3b970ed216.html">openFrameworks</a></li><li class="navelem"><a class="el" href="dir_526ceb304abbba6426340f0fa9170dbd.html">utils</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -59,16 +60,16 @@
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
 <div class="line"><a name="l00004"></a><span class="lineno"><a class="code" href="classof_file_dialog_result.html">    4</a></span>&#160;<span class="keyword">class </span><a class="code" href="classof_file_dialog_result.html">ofFileDialogResult</a>{</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;                <a class="code" href="classof_file_dialog_result.html#a1dc2551f2b1f749291f25f750dc9831c">ofFileDialogResult</a>();</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;                </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;                <span class="comment">//TODO: only 1 file for now</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;                <span class="keywordtype">string</span> <a class="code" href="classof_file_dialog_result.html#a80fd7a5c48d882cc6c93c0aa4675b5a2">getName</a>();</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;                <span class="keywordtype">string</span> <a class="code" href="classof_file_dialog_result.html#ad410507288163f82834434ac7ede39a5">getPath</a>();</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;                </div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="code" href="classof_file_dialog_result.html#a10333951dbf932e377a866e290bea374">   12</a></span>&#160;                <span class="keywordtype">string</span> <a class="code" href="classof_file_dialog_result.html#a10333951dbf932e377a866e290bea374">filePath</a>;</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="code" href="classof_file_dialog_result.html#ae23f66d2b7acca659640bed99850b462">   13</a></span>&#160;                <span class="keywordtype">string</span> <a class="code" href="classof_file_dialog_result.html#ae23f66d2b7acca659640bed99850b462">fileName</a>;</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="code" href="classof_file_dialog_result.html#a63f36565e8613c7fd654c310ae127204">   14</a></span>&#160;                <span class="keywordtype">bool</span> <a class="code" href="classof_file_dialog_result.html#a63f36565e8613c7fd654c310ae127204">bSuccess</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;        <a class="code" href="classof_file_dialog_result.html#a1dc2551f2b1f749291f25f750dc9831c">ofFileDialogResult</a>();</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;        </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        <span class="comment">//TODO: only 1 file for now</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <span class="keywordtype">string</span> <a class="code" href="classof_file_dialog_result.html#a80fd7a5c48d882cc6c93c0aa4675b5a2">getName</a>();</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <span class="keywordtype">string</span> <a class="code" href="classof_file_dialog_result.html#ad410507288163f82834434ac7ede39a5">getPath</a>();</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="code" href="classof_file_dialog_result.html#a10333951dbf932e377a866e290bea374">   12</a></span>&#160;        <span class="keywordtype">string</span> <a class="code" href="classof_file_dialog_result.html#a10333951dbf932e377a866e290bea374">filePath</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="code" href="classof_file_dialog_result.html#ae23f66d2b7acca659640bed99850b462">   13</a></span>&#160;        <span class="keywordtype">string</span> <a class="code" href="classof_file_dialog_result.html#ae23f66d2b7acca659640bed99850b462">fileName</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="code" href="classof_file_dialog_result.html#a63f36565e8613c7fd654c310ae127204">   14</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classof_file_dialog_result.html#a63f36565e8613c7fd654c310ae127204">bSuccess</a>;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;};</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keywordtype">void</span> <a class="code" href="of_system_utils_8cpp.html#af5a9f8b8d9fffde3fadbb5fd000598d1">ofSystemAlertDialog</a>(<span class="keywordtype">string</span> errorMessage);</div>

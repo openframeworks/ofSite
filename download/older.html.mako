@@ -7,6 +7,20 @@ as we update and change OF, you can download older versions of the framework her
 
 --------------------------------
 
+**pre release v0074** 
+
+windows: [code blocks][99] | [visual studio 2010][100] 
+
+mac [x-code (10.6-10.7)][101]
+
+linux: [code blocks][102] | [(64 bit) code blocks][103]
+
+iphone: [iPhone][104] 
+
+android: [Android][105]
+
+--------------------------------
+
 **pre release v0073** 
 
 windows: [code blocks][92] | [visual studio 2010][93] 

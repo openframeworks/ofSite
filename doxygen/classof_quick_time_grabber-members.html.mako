@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -76,7 +77,7 @@
   <tr><td class="entry"><a class="el" href="classof_quick_time_grabber.html#a2582a42cdee02f3f07203fd212bec52f">gVideoChannel</a></td><td class="entry"><a class="el" href="classof_quick_time_grabber.html">ofQuickTimeGrabber</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classof_quick_time_grabber.html#a7b5b519e5fcbd70ff1eedf71ab376731">initGrabber</a>(int w, int h)</td><td class="entry"><a class="el" href="classof_quick_time_grabber.html">ofQuickTimeGrabber</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="classof_quick_time_grabber.html#a06bd850a1a2b9eda86040c06d1d46baf">isFrameNew</a>()</td><td class="entry"><a class="el" href="classof_quick_time_grabber.html">ofQuickTimeGrabber</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classof_quick_time_grabber.html#a69cba04c77f24d6035fa8003fcbe5f9b">listDevices</a>()</td><td class="entry"><a class="el" href="classof_quick_time_grabber.html">ofQuickTimeGrabber</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classof_quick_time_grabber.html#aff0e2181f033a73f3a0b6034b10c2297">listDevices</a>()</td><td class="entry"><a class="el" href="classof_quick_time_grabber.html">ofQuickTimeGrabber</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="classof_quick_time_grabber.html#a35ee7928acf6d043f479e0d9b6c272d9">loadSettings</a>()</td><td class="entry"><a class="el" href="classof_quick_time_grabber.html">ofQuickTimeGrabber</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classof_quick_time_grabber.html#ad8928b8d6530837f919da494987cc82f">myGrabCompleteProc</a></td><td class="entry"><a class="el" href="classof_quick_time_grabber.html">ofQuickTimeGrabber</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
   <tr><td class="entry"><a class="el" href="classof_quick_time_grabber.html#a838b6e689ea5db15cacb9b471ae17862">offscreenGWorldPixels</a></td><td class="entry"><a class="el" href="classof_quick_time_grabber.html">ofQuickTimeGrabber</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>

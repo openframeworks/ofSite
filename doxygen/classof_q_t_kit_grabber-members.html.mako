@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -84,7 +85,7 @@
   <tr><td class="entry"><a class="el" href="classof_q_t_kit_grabber.html#a715e66ef26853d9fb139f2c3c3bff256">isRecordingReady</a>()</td><td class="entry"><a class="el" href="classof_q_t_kit_grabber.html">ofQTKitGrabber</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classof_q_t_kit_grabber.html#af7811f78e9ee87377c298da95afbdb5a">listAudioCodecs</a>()</td><td class="entry"><a class="el" href="classof_q_t_kit_grabber.html">ofQTKitGrabber</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classof_q_t_kit_grabber.html#a6f0f918e82be2db814ed2594bcbe27f6">listAudioDevices</a>()</td><td class="entry"><a class="el" href="classof_q_t_kit_grabber.html">ofQTKitGrabber</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classof_q_t_kit_grabber.html#ad8ebeb35faa9fe13dbac5889f715248c">listDevices</a>()</td><td class="entry"><a class="el" href="classof_q_t_kit_grabber.html">ofQTKitGrabber</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classof_q_t_kit_grabber.html#a5b89986c5cac6aa01b1e8c217c7b8877">listDevices</a>()</td><td class="entry"><a class="el" href="classof_q_t_kit_grabber.html">ofQTKitGrabber</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="classof_q_t_kit_grabber.html#a520c045a639875379b895d24498a1cb7">listVideoCodecs</a>()</td><td class="entry"><a class="el" href="classof_q_t_kit_grabber.html">ofQTKitGrabber</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classof_q_t_kit_grabber.html#ad19c82dfdd26d21cf8d90197fd6377f0">listVideoDevices</a>()</td><td class="entry"><a class="el" href="classof_q_t_kit_grabber.html">ofQTKitGrabber</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classof_q_t_kit_grabber.html#a0473ba04a0db5838077487a904ad5700">ofQTKitGrabber</a>()</td><td class="entry"><a class="el" href="classof_q_t_kit_grabber.html">ofQTKitGrabber</a></td><td class="entry"></td></tr>
@@ -93,7 +94,7 @@
   <tr class="even"><td class="entry"><a class="el" href="classof_q_t_kit_grabber.html#aab526a3921eaa3851e87e1a3752a4db1">setAudioCodec</a>(string audioCodecIDString)</td><td class="entry"><a class="el" href="classof_q_t_kit_grabber.html">ofQTKitGrabber</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classof_q_t_kit_grabber.html#a1dec4098ac2d021c5ce7d6591b4f127f">setAudioDeviceID</a>(int audioDeviceID)</td><td class="entry"><a class="el" href="classof_q_t_kit_grabber.html">ofQTKitGrabber</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classof_q_t_kit_grabber.html#adda4d4fc667183abb1e935f7a60c497b">setAudioDeviceID</a>(string audioDeviceIDString)</td><td class="entry"><a class="el" href="classof_q_t_kit_grabber.html">ofQTKitGrabber</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classof_q_t_kit_grabber.html#aa2f549aa667d86d3282a84418631307a">setDesiredFrameRate</a>(int framerate)</td><td class="entry"><a class="el" href="classof_q_t_kit_grabber.html">ofQTKitGrabber</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classof_q_t_kit_grabber.html#aa2f549aa667d86d3282a84418631307a">setDesiredFrameRate</a>(int framerate)</td><td class="entry"><a class="el" href="classof_q_t_kit_grabber.html">ofQTKitGrabber</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classof_q_t_kit_grabber.html#aec1fbf875d817e24d329630e526e1726">setDeviceID</a>(int videoDeviceID)</td><td class="entry"><a class="el" href="classof_q_t_kit_grabber.html">ofQTKitGrabber</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="classof_q_t_kit_grabber.html#aeaaf8b13c13458ef4d2c23608f0d0c66">setDeviceID</a>(string videoDeviceIDString)</td><td class="entry"><a class="el" href="classof_q_t_kit_grabber.html">ofQTKitGrabber</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classof_q_t_kit_grabber.html#a0f3697e1636d5dea8415cffe4336eebb">setPixelFormat</a>(ofPixelFormat pixelFormat)</td><td class="entry"><a class="el" href="classof_q_t_kit_grabber.html">ofQTKitGrabber</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>

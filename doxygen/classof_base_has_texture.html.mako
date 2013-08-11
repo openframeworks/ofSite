@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -64,12 +65,13 @@ Inheritance diagram for ofBaseHasTexture:</div>
  <div class="center">
   <img src="classof_base_has_texture.png" usemap="#ofBaseHasTexture_map" alt=""/>
   <map id="ofBaseHasTexture_map" name="ofBaseHasTexture_map">
-<area href="classof_abstract_image.html" alt="ofAbstractImage" shape="rect" coords="180,56,350,80"/>
-<area href="classof_fbo.html" alt="ofFbo" shape="rect" coords="360,56,530,80"/>
-<area href="classof_base_image__.html" alt="ofBaseImage_&lt; T &gt;" shape="rect" coords="90,112,260,136"/>
-<area href="classof_base_image__.html" alt="ofBaseImage_&lt; PixelType &gt;" shape="rect" coords="270,112,440,136"/>
+<area href="classof_abstract_image.html" alt="ofAbstractImage" shape="rect" coords="315,56,485,80"/>
+<area href="classof_fbo.html" alt="ofFbo" shape="rect" coords="495,56,665,80"/>
+<area href="classof_base_image__.html" alt="ofBaseImage_&lt; T &gt;" shape="rect" coords="180,112,350,136"/>
+<area href="classof_base_image__.html" alt="ofBaseImage_&lt; PixelType &gt;" shape="rect" coords="450,112,620,136"/>
 <area href="classof_base_video_draws.html" alt="ofBaseVideoDraws" shape="rect" coords="90,168,260,192"/>
-<area href="classof_image__.html" alt="ofImage_&lt; PixelType &gt;" shape="rect" coords="270,168,440,192"/>
+<area href="classof_image__.html" alt="ofImage_&lt; unsigned char &gt;" shape="rect" coords="270,168,440,192"/>
+<area href="classof_image__.html" alt="ofImage_&lt; PixelType &gt;" shape="rect" coords="450,168,620,192"/>
 <area href="classof_video_grabber.html" alt="ofVideoGrabber" shape="rect" coords="0,224,170,248"/>
 <area href="classof_video_player.html" alt="ofVideoPlayer" shape="rect" coords="180,224,350,248"/>
 </map>
@@ -130,7 +132,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classof_image__.html#a0a8e31f169d9d28dfeb98cce55492ce9">ofImage_&lt; PixelType &gt;</a>, <a class="el" href="classof_video_player.html#ada9a59b45aca15e990d99dc6cf3fcca9">ofVideoPlayer</a>, <a class="el" href="classof_video_grabber.html#a50fccf0206304b7960f2eaf7fe8402a8">ofVideoGrabber</a>, and <a class="el" href="classof_fbo.html#a04f7e27fd798152232ae2e1752771e10">ofFbo</a>.</p>
+<p>Implemented in <a class="el" href="classof_image__.html#a0a8e31f169d9d28dfeb98cce55492ce9">ofImage_&lt; PixelType &gt;</a>, <a class="el" href="classof_image__.html#a0a8e31f169d9d28dfeb98cce55492ce9">ofImage_&lt; unsigned char &gt;</a>, <a class="el" href="classof_video_player.html#ada9a59b45aca15e990d99dc6cf3fcca9">ofVideoPlayer</a>, <a class="el" href="classof_video_grabber.html#a50fccf0206304b7960f2eaf7fe8402a8">ofVideoGrabber</a>, and <a class="el" href="classof_fbo.html#a04f7e27fd798152232ae2e1752771e10">ofFbo</a>.</p>
 
 </div>
 </div>
@@ -156,12 +158,12 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classof_image__.html#aaa44423f95ea0539c98feb848c00433f">ofImage_&lt; PixelType &gt;</a>, <a class="el" href="classof_video_grabber.html#a49dcd268d47664979c5adcf5d9a0826a">ofVideoGrabber</a>, <a class="el" href="classof_video_player.html#a8123063e80de2710185200f6650ec213">ofVideoPlayer</a>, and <a class="el" href="classof_fbo.html#ae20f7a35e53ff60eb8f6e8bf83aa1f67">ofFbo</a>.</p>
+<p>Implemented in <a class="el" href="classof_image__.html#aaa44423f95ea0539c98feb848c00433f">ofImage_&lt; PixelType &gt;</a>, <a class="el" href="classof_image__.html#aaa44423f95ea0539c98feb848c00433f">ofImage_&lt; unsigned char &gt;</a>, <a class="el" href="classof_video_player.html#a8123063e80de2710185200f6650ec213">ofVideoPlayer</a>, <a class="el" href="classof_video_grabber.html#a49dcd268d47664979c5adcf5d9a0826a">ofVideoGrabber</a>, and <a class="el" href="classof_fbo.html#ae20f7a35e53ff60eb8f6e8bf83aa1f67">ofFbo</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>types/<a class="el" href="of_base_types_8h_source.html">ofBaseTypes.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/types/<a class="el" href="of_base_types_8h_source.html">ofBaseTypes.h</a></li>
 </ul>
 </div><!-- contents -->
 

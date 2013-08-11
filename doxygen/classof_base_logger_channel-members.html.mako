@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -57,8 +58,8 @@
 <p>This is the complete list of members for <a class="el" href="classof_base_logger_channel.html">ofBaseLoggerChannel</a>, including all inherited members.</p>
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="classof_base_logger_channel.html#a41859e4af28dd6263df054666a5fe58f">log</a>(ofLogLevel level, const string &amp;module, const string &amp;message)=0</td><td class="entry"><a class="el" href="classof_base_logger_channel.html">ofBaseLoggerChannel</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classof_base_logger_channel.html#a71b1b3361092015cdfb3b3b485b008d9">log</a>(ofLogLevel logLevel, const string &amp;module, const char *format,...)=0</td><td class="entry"><a class="el" href="classof_base_logger_channel.html">ofBaseLoggerChannel</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classof_base_logger_channel.html#ac3bcaaf2a15f4bfd417f8f8b4e72a8c3">log</a>(ofLogLevel logLevel, const string &amp;module, const char *format, va_list args)=0</td><td class="entry"><a class="el" href="classof_base_logger_channel.html">ofBaseLoggerChannel</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classof_base_logger_channel.html#a8730d4e192935d84238b645d0866548f">log</a>(ofLogLevel level, const string &amp;module, const char *format,...)=0</td><td class="entry"><a class="el" href="classof_base_logger_channel.html">ofBaseLoggerChannel</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classof_base_logger_channel.html#a83ff10e99279f145285daa1e096bbeaa">log</a>(ofLogLevel level, const string &amp;module, const char *format, va_list args)=0</td><td class="entry"><a class="el" href="classof_base_logger_channel.html">ofBaseLoggerChannel</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="classof_base_logger_channel.html#ad25596521f5df6c781fd2668c829c50e">~ofBaseLoggerChannel</a>()</td><td class="entry"><a class="el" href="classof_base_logger_channel.html">ofBaseLoggerChannel</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
 

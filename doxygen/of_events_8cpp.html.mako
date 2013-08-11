@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -47,7 +48,7 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_7d604191edc08013a26f918aa8ef79ad.html">events</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_84d5b34cee6369a03c8d1f3b970ed216.html">openFrameworks</a></li><li class="navelem"><a class="el" href="dir_148891dd0ea53588a5bf71cda57c05aa.html">events</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -69,6 +70,16 @@
 Functions</h2></td></tr>
 <tr class="memitem:a1835ac2da59fdf532924f05058001e97"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_core_events.html">ofCoreEvents</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_events_8cpp.html#a1835ac2da59fdf532924f05058001e97">ofEvents</a> ()</td></tr>
 <tr class="separator:a1835ac2da59fdf532924f05058001e97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83d3478ee5c4bb1cc240966f9fb1a579"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_events_8cpp.html#a83d3478ee5c4bb1cc240966f9fb1a579">ofSetFrameRate</a> (int _targetRate)</td></tr>
+<tr class="separator:a83d3478ee5c4bb1cc240966f9fb1a579"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01080ea3b88e20894224b28caa46fd25"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_events_8cpp.html#a01080ea3b88e20894224b28caa46fd25">ofGetFrameRate</a> ()</td></tr>
+<tr class="separator:a01080ea3b88e20894224b28caa46fd25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81f6b99f285f59ed64b527875c07dda6"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_events_8cpp.html#a81f6b99f285f59ed64b527875c07dda6">ofGetTargetFrameRate</a> ()</td></tr>
+<tr class="separator:a81f6b99f285f59ed64b527875c07dda6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac97a55114e95bc13a43afd95a5da043a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_events_8cpp.html#ac97a55114e95bc13a43afd95a5da043a">ofGetLastFrameTime</a> ()</td></tr>
+<tr class="separator:ac97a55114e95bc13a43afd95a5da043a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fe28889b15534a5a1c827a4ecb2ef26"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_events_8cpp.html#a3fe28889b15534a5a1c827a4ecb2ef26">ofGetFrameNum</a> ()</td></tr>
+<tr class="separator:a3fe28889b15534a5a1c827a4ecb2ef26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c9ca14506005e0204e75d2bd6f5ba4f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_events_8cpp.html#a0c9ca14506005e0204e75d2bd6f5ba4f">ofGetMousePressed</a> (int button)</td></tr>
 <tr class="separator:a0c9ca14506005e0204e75d2bd6f5ba4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1fe39d7eb47898819680385244d1f148"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_events_8cpp.html#a1fe39d7eb47898819680385244d1f148">ofGetKeyPressed</a> (int key)</td></tr>
@@ -95,6 +106,10 @@ Functions</h2></td></tr>
 <tr class="separator:a9fc0c4294b2f7799a90dc7b41faf1b5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa23941dd9572998234e61687e7c35f18"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_events_8cpp.html#aa23941dd9572998234e61687e7c35f18">ofNotifyKeyReleased</a> (int key)</td></tr>
 <tr class="separator:aa23941dd9572998234e61687e7c35f18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d1fb124fea0a1a7831ebbe72559d114"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_events_8cpp.html#a5d1fb124fea0a1a7831ebbe72559d114">ofNotifyKeyEvent</a> (const <a class="el" href="classof_key_event_args.html">ofKeyEventArgs</a> &amp;keyEvent)</td></tr>
+<tr class="separator:a5d1fb124fea0a1a7831ebbe72559d114"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16d77d7ade05fc248aee9659bc4491ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_events_8cpp.html#a16d77d7ade05fc248aee9659bc4491ab">ofNotifyMouseEvent</a> (const <a class="el" href="classof_mouse_event_args.html">ofMouseEventArgs</a> &amp;mouseEvent)</td></tr>
+<tr class="separator:a16d77d7ade05fc248aee9659bc4491ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a832c15d79e80920bdc18b0e99c6f1bc0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_events_8cpp.html#a832c15d79e80920bdc18b0e99c6f1bc0">ofNotifyMousePressed</a> (int x, int y, int button)</td></tr>
 <tr class="separator:a832c15d79e80920bdc18b0e99c6f1bc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0d4cb37b3fcdc62e525ff087c7fd1cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_events_8cpp.html#aa0d4cb37b3fcdc62e525ff087c7fd1cb">ofNotifyMouseReleased</a> (int x, int y, int button)</td></tr>
@@ -105,7 +120,7 @@ Functions</h2></td></tr>
 <tr class="separator:af53b6bc8471de39c38f8b2970e81b58f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b4bcb608363760a96730bfd405610c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_events_8cpp.html#a4b4bcb608363760a96730bfd405610c4">ofNotifyExit</a> ()</td></tr>
 <tr class="separator:a4b4bcb608363760a96730bfd405610c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeefd3c70e905e7b8001278e1dddcac93"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_events_8cpp.html#aeefd3c70e905e7b8001278e1dddcac93">ofNotifyWindowResized</a> (int width, int height)</td></tr>
+<tr class="memitem:aeefd3c70e905e7b8001278e1dddcac93"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_events_8cpp.html#aeefd3c70e905e7b8001278e1dddcac93">ofNotifyWindowResized</a> (int <a class="el" href="of_icon_8h.html#aca34d28e3d8bcbcadb8edb4e3af24f8c">width</a>, int <a class="el" href="of_icon_8h.html#ab2e78c61905b4419fcc7b4cfc500fe85">height</a>)</td></tr>
 <tr class="separator:aeefd3c70e905e7b8001278e1dddcac93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95339e4f3f60d9c4f9e1808b0359041f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_events_8cpp.html#a95339e4f3f60d9c4f9e1808b0359041f">ofNotifyDragEvent</a> (<a class="el" href="classof_drag_info.html">ofDragInfo</a> info)</td></tr>
 <tr class="separator:a95339e4f3f60d9c4f9e1808b0359041f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -152,6 +167,36 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a3fe28889b15534a5a1c827a4ecb2ef26"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ofGetFrameNum </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a01080ea3b88e20894224b28caa46fd25"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ofGetFrameRate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a1fe39d7eb47898819680385244d1f148"></a>
 <div class="memitem">
 <div class="memproto">
@@ -161,6 +206,21 @@ Variables</h2></td></tr>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac97a55114e95bc13a43afd95a5da043a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double ofGetLastFrameTime </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -244,6 +304,21 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a81f6b99f285f59ed64b527875c07dda6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ofGetTargetFrameRate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a95339e4f3f60d9c4f9e1808b0359041f"></a>
 <div class="memitem">
 <div class="memproto">
@@ -283,6 +358,22 @@ Variables</h2></td></tr>
           <td class="memname">void ofNotifyExit </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5d1fb124fea0a1a7831ebbe72559d114"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofNotifyKeyEvent </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classof_key_event_args.html">ofKeyEventArgs</a> &amp;&#160;</td>
+          <td class="paramname"><em>keyEvent</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -348,6 +439,22 @@ Variables</h2></td></tr>
           <td></td>
           <td>)</td>
           <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a16d77d7ade05fc248aee9659bc4491ab"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofNotifyMouseEvent </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classof_mouse_event_args.html">ofMouseEventArgs</a> &amp;&#160;</td>
+          <td class="paramname"><em>mouseEvent</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -557,6 +664,22 @@ Variables</h2></td></tr>
           <td>(</td>
           <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>bQuitOnEsc</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a83d3478ee5c4bb1cc240966f9fb1a579"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofSetFrameRate </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>_targetRate</em></td><td>)</td>
           <td></td>
         </tr>
       </table>

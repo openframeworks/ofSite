@@ -48,7 +48,7 @@ _syntax: log(logLevel, &module, *format, ...)_
 _name: log_
 _returns: void_
 _returns_description: _
-_parameters: ofLogLevel logLevel, const string &module, const char *format,..._
+_parameters: ofLogLevel level, const string &module, const char *format,..._
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -77,7 +77,7 @@ _syntax: log(logLevel, &module, *format, args)_
 _name: log_
 _returns: void_
 _returns_description: _
-_parameters: ofLogLevel logLevel, const string &module, const char *format, va_list args_
+_parameters: ofLogLevel level, const string &module, const char *format, va_list args_
 _access: public_
 _version_started: 007_
 _version_deprecated: _

@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -51,6 +52,7 @@
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classof_vbo-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ofVbo Class Reference</div>  </div>
@@ -71,9 +73,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1d4461c6bacdc97a50407dd48e03723b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b006f7ec9d6da4ab852e9592157e0df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo.html#a7b006f7ec9d6da4ab852e9592157e0df">setMesh</a> (const <a class="el" href="classof_mesh.html">ofMesh</a> &amp;mesh, int usage)</td></tr>
 <tr class="separator:a7b006f7ec9d6da4ab852e9592157e0df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56b0d11cae3bb66e76e78c57d52041a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo.html#a56b0d11cae3bb66e76e78c57d52041a4">setVertexData</a> (const <a class="el" href="classof_vec3f.html">ofVec3f</a> *<a class="el" href="of_bitmap_font_8cpp.html#aaebd14048566bff4d6920e945b7de664">verts</a>, int total, int usage)</td></tr>
+<tr class="memitem:a831ceba46f9e0e78dee6776627145fa6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo.html#a831ceba46f9e0e78dee6776627145fa6">setMesh</a> (const <a class="el" href="classof_mesh.html">ofMesh</a> &amp;mesh, int usage, bool useColors, bool useTextures, bool useNormals)</td></tr>
+<tr class="separator:a831ceba46f9e0e78dee6776627145fa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56b0d11cae3bb66e76e78c57d52041a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo.html#a56b0d11cae3bb66e76e78c57d52041a4">setVertexData</a> (const <a class="el" href="classof_vec3f.html">ofVec3f</a> *verts, int total, int usage)</td></tr>
 <tr class="separator:a56b0d11cae3bb66e76e78c57d52041a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d1b18119de2626afeeb6e2e72c528ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo.html#a9d1b18119de2626afeeb6e2e72c528ba">setVertexData</a> (const <a class="el" href="classof_vec2f.html">ofVec2f</a> *<a class="el" href="of_bitmap_font_8cpp.html#aaebd14048566bff4d6920e945b7de664">verts</a>, int total, int usage)</td></tr>
+<tr class="memitem:a9d1b18119de2626afeeb6e2e72c528ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo.html#a9d1b18119de2626afeeb6e2e72c528ba">setVertexData</a> (const <a class="el" href="classof_vec2f.html">ofVec2f</a> *verts, int total, int usage)</td></tr>
 <tr class="separator:a9d1b18119de2626afeeb6e2e72c528ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9d907d11e66989fabf9c618224ad71e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo.html#ae9d907d11e66989fabf9c618224ad71e">setColorData</a> (const <a class="el" href="of_color_8h.html#a9ae60244b89debdb4901ef09e7f47434">ofFloatColor</a> *colors, int total, int usage)</td></tr>
 <tr class="separator:ae9d907d11e66989fabf9c618224ad71e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -91,11 +95,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a883b47f14db91aaf6a97a8c5832e0cc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30993eec23997da4010354912e63078a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo.html#a30993eec23997da4010354912e63078a">setTexCoordData</a> (const float *texCoord0x, int total, int usage, int stride=0)</td></tr>
 <tr class="separator:a30993eec23997da4010354912e63078a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af18567664375a35e1535e517faf49c41"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo.html#af18567664375a35e1535e517faf49c41">setAttributeData</a> (int location, const float *vert0x, int numCoords, int total, int usage, int stride=sizeof(float))</td></tr>
+<tr class="separator:af18567664375a35e1535e517faf49c41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2bbf602f80c8fff31417f34ea05b59d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo.html#a2bbf602f80c8fff31417f34ea05b59d5">updateMesh</a> (const <a class="el" href="classof_mesh.html">ofMesh</a> &amp;mesh)</td></tr>
 <tr class="separator:a2bbf602f80c8fff31417f34ea05b59d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab243e68e338fe4f1762d0a804713ea3b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo.html#ab243e68e338fe4f1762d0a804713ea3b">updateVertexData</a> (const <a class="el" href="classof_vec3f.html">ofVec3f</a> *<a class="el" href="of_bitmap_font_8cpp.html#aaebd14048566bff4d6920e945b7de664">verts</a>, int total)</td></tr>
+<tr class="memitem:ab243e68e338fe4f1762d0a804713ea3b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo.html#ab243e68e338fe4f1762d0a804713ea3b">updateVertexData</a> (const <a class="el" href="classof_vec3f.html">ofVec3f</a> *verts, int total)</td></tr>
 <tr class="separator:ab243e68e338fe4f1762d0a804713ea3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9621e647a75b448c55b82b81af8f13db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo.html#a9621e647a75b448c55b82b81af8f13db">updateVertexData</a> (const <a class="el" href="classof_vec2f.html">ofVec2f</a> *<a class="el" href="of_bitmap_font_8cpp.html#aaebd14048566bff4d6920e945b7de664">verts</a>, int total)</td></tr>
+<tr class="memitem:a9621e647a75b448c55b82b81af8f13db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo.html#a9621e647a75b448c55b82b81af8f13db">updateVertexData</a> (const <a class="el" href="classof_vec2f.html">ofVec2f</a> *verts, int total)</td></tr>
 <tr class="separator:a9621e647a75b448c55b82b81af8f13db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99bc260586e7686f50cc40d998cd96d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo.html#a99bc260586e7686f50cc40d998cd96d1">updateColorData</a> (const <a class="el" href="of_color_8h.html#a9ae60244b89debdb4901ef09e7f47434">ofFloatColor</a> *colors, int total)</td></tr>
 <tr class="separator:a99bc260586e7686f50cc40d998cd96d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -113,6 +119,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a292b1681f93ba160afc6d325ff8a70e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab570cac69fbea4c2428116b1fde81fb0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo.html#ab570cac69fbea4c2428116b1fde81fb0">updateTexCoordData</a> (const float *texCoord0x, int total)</td></tr>
 <tr class="separator:ab570cac69fbea4c2428116b1fde81fb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bb0dc3dbd2059cad9e3cabc9818f52f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo.html#a8bb0dc3dbd2059cad9e3cabc9818f52f">updateAttributeData</a> (int location, const float *vert0x, int total)</td></tr>
+<tr class="separator:a8bb0dc3dbd2059cad9e3cabc9818f52f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b61ffb8cad3ac5d32edb05cc46f88d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo.html#a5b61ffb8cad3ac5d32edb05cc46f88d9">enableColors</a> ()</td></tr>
 <tr class="separator:a5b61ffb8cad3ac5d32edb05cc46f88d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6e7ea63fdc4ce21c60482b21d8711cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo.html#ab6e7ea63fdc4ce21c60482b21d8711cf">enableNormals</a> ()</td></tr>
@@ -129,32 +137,36 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a41ab296d8a95f0b40859e07352bd9a38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac34735dd715c19cbd26808ced4d35ecf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo.html#ac34735dd715c19cbd26808ced4d35ecf">disableIndices</a> ()</td></tr>
 <tr class="separator:ac34735dd715c19cbd26808ced4d35ecf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa59f76aa83cc14b431deacfba6eaef2c"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo.html#aa59f76aa83cc14b431deacfba6eaef2c">getVertId</a> ()</td></tr>
-<tr class="separator:aa59f76aa83cc14b431deacfba6eaef2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afca502c9aa0ce7d83e9e70a41388c39d"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo.html#afca502c9aa0ce7d83e9e70a41388c39d">getColorId</a> ()</td></tr>
-<tr class="separator:afca502c9aa0ce7d83e9e70a41388c39d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:accffaabb5d98df22d509a56cbbd2a4bb"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo.html#accffaabb5d98df22d509a56cbbd2a4bb">getNormalId</a> ()</td></tr>
-<tr class="separator:accffaabb5d98df22d509a56cbbd2a4bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae444d0a466df0454361facf0951424d6"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo.html#ae444d0a466df0454361facf0951424d6">getTexCoordId</a> ()</td></tr>
-<tr class="separator:ae444d0a466df0454361facf0951424d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14b921b9401f3707b3b201a69c159207"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo.html#a14b921b9401f3707b3b201a69c159207">getIndexId</a> ()</td></tr>
-<tr class="separator:a14b921b9401f3707b3b201a69c159207"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab570340b58e08f01cc13b14c3aec32ee"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo.html#ab570340b58e08f01cc13b14c3aec32ee">getIsAllocated</a> ()</td></tr>
-<tr class="separator:ab570340b58e08f01cc13b14c3aec32ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2125d38064f5a414c9c9e418e77f51d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo.html#ab2125d38064f5a414c9c9e418e77f51d">getUsingVerts</a> ()</td></tr>
-<tr class="separator:ab2125d38064f5a414c9c9e418e77f51d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6224c7d43017c5efcb0c69a1930e3b2f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo.html#a6224c7d43017c5efcb0c69a1930e3b2f">getUsingColors</a> ()</td></tr>
-<tr class="separator:a6224c7d43017c5efcb0c69a1930e3b2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6e0840d3ae2526d8e5aaaaab89881e0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo.html#af6e0840d3ae2526d8e5aaaaab89881e0">getUsingNormals</a> ()</td></tr>
-<tr class="separator:af6e0840d3ae2526d8e5aaaaab89881e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d039312de6896c915fde05b9e952c89"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo.html#a2d039312de6896c915fde05b9e952c89">getUsingTexCoords</a> ()</td></tr>
-<tr class="separator:a2d039312de6896c915fde05b9e952c89"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a666907e4dcd20ae80e762b67eac595bb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo.html#a666907e4dcd20ae80e762b67eac595bb">getUsingIndices</a> ()</td></tr>
-<tr class="separator:a666907e4dcd20ae80e762b67eac595bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2af5a46f912b761510123f0cc2006ac6"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo.html#a2af5a46f912b761510123f0cc2006ac6">getVertId</a> () const </td></tr>
+<tr class="separator:a2af5a46f912b761510123f0cc2006ac6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ba68ff9240bb8b44de22fef88c6b87a"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo.html#a8ba68ff9240bb8b44de22fef88c6b87a">getColorId</a> () const </td></tr>
+<tr class="separator:a8ba68ff9240bb8b44de22fef88c6b87a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4725389653037a81793d515a75270dec"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo.html#a4725389653037a81793d515a75270dec">getNormalId</a> () const </td></tr>
+<tr class="separator:a4725389653037a81793d515a75270dec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a645b6d4da4fb0a329c08fdf0f4308336"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo.html#a645b6d4da4fb0a329c08fdf0f4308336">getTexCoordId</a> () const </td></tr>
+<tr class="separator:a645b6d4da4fb0a329c08fdf0f4308336"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a620e1349a54b644130fcc42d4bafd89b"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo.html#a620e1349a54b644130fcc42d4bafd89b">getIndexId</a> () const </td></tr>
+<tr class="separator:a620e1349a54b644130fcc42d4bafd89b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c9a45f028d3fd113932fe2a77a2d88f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo.html#a2c9a45f028d3fd113932fe2a77a2d88f">getIsAllocated</a> () const </td></tr>
+<tr class="separator:a2c9a45f028d3fd113932fe2a77a2d88f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af17e20a106f5010d4dc3bbfd920744ac"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo.html#af17e20a106f5010d4dc3bbfd920744ac">getUsingVerts</a> () const </td></tr>
+<tr class="separator:af17e20a106f5010d4dc3bbfd920744ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85d35af9177674d254d5542c29258963"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo.html#a85d35af9177674d254d5542c29258963">getUsingColors</a> () const </td></tr>
+<tr class="separator:a85d35af9177674d254d5542c29258963"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a908922516fd2ad297624ddf7d8b80e12"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo.html#a908922516fd2ad297624ddf7d8b80e12">getUsingNormals</a> () const </td></tr>
+<tr class="separator:a908922516fd2ad297624ddf7d8b80e12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21aa3c43b6f878c43697c3289b0b6c03"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo.html#a21aa3c43b6f878c43697c3289b0b6c03">getUsingTexCoords</a> () const </td></tr>
+<tr class="separator:a21aa3c43b6f878c43697c3289b0b6c03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3eaf590787b331fd818c10fbfa0d617"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo.html#ab3eaf590787b331fd818c10fbfa0d617">getUsingIndices</a> () const </td></tr>
+<tr class="separator:ab3eaf590787b331fd818c10fbfa0d617"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53d346c3087ad113ecf2cf24162abc5f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo.html#a53d346c3087ad113ecf2cf24162abc5f">draw</a> (int drawMode, int first, int total)</td></tr>
 <tr class="separator:a53d346c3087ad113ecf2cf24162abc5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa963a1a6941e42c917d47ca8322242f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo.html#aa963a1a6941e42c917d47ca8322242f1">drawElements</a> (int drawMode, int amt)</td></tr>
 <tr class="separator:aa963a1a6941e42c917d47ca8322242f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38f70678d8608ac97ae7aaf40f20f97c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo.html#a38f70678d8608ac97ae7aaf40f20f97c">drawInstanced</a> (int drawMode, int first, int total, int primCount)</td></tr>
+<tr class="separator:a38f70678d8608ac97ae7aaf40f20f97c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90dfca17b1137106a71fc5fe7620cb5d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo.html#a90dfca17b1137106a71fc5fe7620cb5d">drawElementsInstanced</a> (int drawMode, int amt, int primCount)</td></tr>
+<tr class="separator:a90dfca17b1137106a71fc5fe7620cb5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a669ef62d998a8a30492bb155a885b80c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo.html#a669ef62d998a8a30492bb155a885b80c">bind</a> ()</td></tr>
 <tr class="separator:a669ef62d998a8a30492bb155a885b80c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8443a60bf4108b625e806f0a413d7f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo.html#aa8443a60bf4108b625e806f0a413d7f4">unbind</a> ()</td></tr>
@@ -171,6 +183,17 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a60dd5da81fdd2e8cb631c8a131102072"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4731c2eb3fda90b7399547c9f76b3bcd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo.html#a4731c2eb3fda90b7399547c9f76b3bcd">clearIndices</a> ()</td></tr>
 <tr class="separator:a4731c2eb3fda90b7399547c9f76b3bcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fe89783910af4b343c2afbe00180e73"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo.html#a6fe89783910af4b343c2afbe00180e73">getNumVertices</a> () const </td></tr>
+<tr class="separator:a6fe89783910af4b343c2afbe00180e73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a463d6a8c33de52fb89f9021c90a82268"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo.html#a463d6a8c33de52fb89f9021c90a82268">getNumIndices</a> () const </td></tr>
+<tr class="separator:a463d6a8c33de52fb89f9021c90a82268"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a066d5f7bda01d2c551cd72c040a5ae61"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo.html#a066d5f7bda01d2c551cd72c040a5ae61">disableVAOs</a> ()</td></tr>
+<tr class="separator:a066d5f7bda01d2c551cd72c040a5ae61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bf40c06e86bd51df5396544d4b4f428"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo.html#a4bf40c06e86bd51df5396544d4b4f428">enableVAOs</a> ()</td></tr>
+<tr class="separator:a4bf40c06e86bd51df5396544d4b4f428"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="aff203260b1f4e8d7a650045014b8e8da"></a>
@@ -385,6 +408,29 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a066d5f7bda01d2c551cd72c040a5ae61"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofVbo::disableVAOs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a53d346c3087ad113ecf2cf24162abc5f"></a>
 <div class="memitem">
 <div class="memproto">
@@ -432,6 +478,76 @@ Public Member Functions</h2></td></tr>
           <td></td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>amt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a90dfca17b1137106a71fc5fe7620cb5d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofVbo::drawElementsInstanced </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>drawMode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>amt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>primCount</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a38f70678d8608ac97ae7aaf40f20f97c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofVbo::drawInstanced </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>drawMode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>total</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>primCount</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -503,7 +619,30 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="afca502c9aa0ce7d83e9e70a41388c39d"></a>
+<a class="anchor" id="a4bf40c06e86bd51df5396544d4b4f428"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofVbo::enableVAOs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8ba68ff9240bb8b44de22fef88c6b87a"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -511,14 +650,14 @@ Public Member Functions</h2></td></tr>
           <td class="memname">GLuint ofVbo::getColorId </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="a14b921b9401f3707b3b201a69c159207"></a>
+<a class="anchor" id="a620e1349a54b644130fcc42d4bafd89b"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -526,14 +665,14 @@ Public Member Functions</h2></td></tr>
           <td class="memname">GLuint ofVbo::getIndexId </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="ab570340b58e08f01cc13b14c3aec32ee"></a>
+<a class="anchor" id="a2c9a45f028d3fd113932fe2a77a2d88f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -541,14 +680,14 @@ Public Member Functions</h2></td></tr>
           <td class="memname">bool ofVbo::getIsAllocated </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="accffaabb5d98df22d509a56cbbd2a4bb"></a>
+<a class="anchor" id="a4725389653037a81793d515a75270dec"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -556,14 +695,44 @@ Public Member Functions</h2></td></tr>
           <td class="memname">GLuint ofVbo::getNormalId </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="ae444d0a466df0454361facf0951424d6"></a>
+<a class="anchor" id="a463d6a8c33de52fb89f9021c90a82268"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ofVbo::getNumIndices </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6fe89783910af4b343c2afbe00180e73"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ofVbo::getNumVertices </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a645b6d4da4fb0a329c08fdf0f4308336"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -571,14 +740,14 @@ Public Member Functions</h2></td></tr>
           <td class="memname">GLuint ofVbo::getTexCoordId </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="a6224c7d43017c5efcb0c69a1930e3b2f"></a>
+<a class="anchor" id="a85d35af9177674d254d5542c29258963"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -586,14 +755,14 @@ Public Member Functions</h2></td></tr>
           <td class="memname">bool ofVbo::getUsingColors </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="a666907e4dcd20ae80e762b67eac595bb"></a>
+<a class="anchor" id="ab3eaf590787b331fd818c10fbfa0d617"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -601,14 +770,14 @@ Public Member Functions</h2></td></tr>
           <td class="memname">bool ofVbo::getUsingIndices </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="af6e0840d3ae2526d8e5aaaaab89881e0"></a>
+<a class="anchor" id="a908922516fd2ad297624ddf7d8b80e12"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -616,14 +785,14 @@ Public Member Functions</h2></td></tr>
           <td class="memname">bool ofVbo::getUsingNormals </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="a2d039312de6896c915fde05b9e952c89"></a>
+<a class="anchor" id="a21aa3c43b6f878c43697c3289b0b6c03"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -631,14 +800,14 @@ Public Member Functions</h2></td></tr>
           <td class="memname">bool ofVbo::getUsingTexCoords </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="ab2125d38064f5a414c9c9e418e77f51d"></a>
+<a class="anchor" id="af17e20a106f5010d4dc3bbfd920744ac"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -646,14 +815,14 @@ Public Member Functions</h2></td></tr>
           <td class="memname">bool ofVbo::getUsingVerts </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="aa59f76aa83cc14b431deacfba6eaef2c"></a>
+<a class="anchor" id="a2af5a46f912b761510123f0cc2006ac6"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -661,7 +830,7 @@ Public Member Functions</h2></td></tr>
           <td class="memname">GLuint ofVbo::getVertId </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -678,6 +847,56 @@ Public Member Functions</h2></td></tr>
           <td class="paramtype">const <a class="el" href="classof_vbo.html">ofVbo</a> &amp;&#160;</td>
           <td class="paramname"><em>mom</em></td><td>)</td>
           <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af18567664375a35e1535e517faf49c41"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofVbo::setAttributeData </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>location</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float *&#160;</td>
+          <td class="paramname"><em>vert0x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>numCoords</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>total</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>usage</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>stride</em> = <code>sizeof(float)</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -801,6 +1020,50 @@ Public Member Functions</h2></td></tr>
           <td></td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>usage</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a831ceba46f9e0e78dee6776627145fa6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofVbo::setMesh </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classof_mesh.html">ofMesh</a> &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>usage</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>useColors</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>useTextures</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>useNormals</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1069,6 +1332,38 @@ Public Member Functions</h2></td></tr>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8bb0dc3dbd2059cad9e3cabc9818f52f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofVbo::updateAttributeData </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>location</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float *&#160;</td>
+          <td class="paramname"><em>vert0x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>total</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1352,8 +1647,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>gl/<a class="el" href="of_vbo_8h_source.html">ofVbo.h</a></li>
-<li>gl/<a class="el" href="of_vbo_8cpp.html">ofVbo.cpp</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/gl/<a class="el" href="of_vbo_8h_source.html">ofVbo.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/gl/<a class="el" href="of_vbo_8cpp.html">ofVbo.cpp</a></li>
 </ul>
 </div><!-- contents -->
 

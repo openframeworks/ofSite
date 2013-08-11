@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -68,6 +69,7 @@
       <li><a href="globals_0x67.html#index_g"><span>g</span></a></li>
       <li><a href="globals_0x68.html#index_h"><span>h</span></a></li>
       <li><a href="globals_0x69.html#index_i"><span>i</span></a></li>
+      <li><a href="globals_0x6c.html#index_l"><span>l</span></a></li>
       <li><a href="globals_0x6d.html#index_m"><span>m</span></a></li>
       <li><a href="globals_0x6e.html#index_n"><span>n</span></a></li>
       <li><a href="globals_0x6f.html#index_o"><span>o</span></a></li>
@@ -76,6 +78,7 @@
       <li><a href="globals_0x72.html#index_r"><span>r</span></a></li>
       <li><a href="globals_0x73.html#index_s"><span>s</span></a></li>
       <li><a href="globals_0x74.html#index_t"><span>t</span></a></li>
+      <li><a href="globals_0x75.html#index_u"><span>u</span></a></li>
       <li><a href="globals_0x76.html#index_v"><span>v</span></a></li>
       <li><a href="globals_0x77.html#index_w"><span>w</span></a></li>
       <li><a href="globals_0x78.html#index_x"><span>x</span></a></li>
@@ -100,6 +103,9 @@
 <li>CAPABILITY_RESPONSE
 : <a class="el" href="of_arduino_8h.html#a18014587c29c9ed92c025e38827bd30a">ofArduino.h</a>
 </li>
+<li>CASE_STR
+: <a class="el" href="of_app_e_g_l_window_8cpp.html#a35cccdef676e52fba888decc7a2dd2e3">ofAppEGLWindow.cpp</a>
+</li>
 <li>caseMacro
 : <a class="el" href="of_matrix4x4_8cpp.html#a680c8bc94fb11bd684b4edab2d6e48d3">ofMatrix4x4.cpp</a>
 </li>
@@ -109,14 +115,23 @@
 <li>CLAMP
 : <a class="el" href="of_constants_8h.html#aa46c464f8003d6bc85ccb0d97e7fa481">ofConstants.h</a>
 </li>
+<li>clampedAdd()
+: <a class="el" href="of_color_8cpp.html#a0eef5d4e1e627c4b6f044155ed9d763b">ofColor.cpp</a>
+</li>
+<li>clampedDivide()
+: <a class="el" href="of_color_8cpp.html#a66f8ced9308d219191074f42bc1f08fb">ofColor.cpp</a>
+</li>
+<li>clampedMultiply()
+: <a class="el" href="of_color_8cpp.html#a603c2035cc6cf3d0003ce58646713b5d">ofColor.cpp</a>
+</li>
+<li>clampedSubtract()
+: <a class="el" href="of_color_8cpp.html#a8a8b56286ac8bd5b729be01c7ae34dc7">ofColor.cpp</a>
+</li>
 <li>compare_cps()
 : <a class="el" href="of_true_type_font_8cpp.html#af542632a820ad282196091ee29c53843">ofTrueTypeFont.cpp</a>
 </li>
 <li>COMPILE_getRotate_Original
 : <a class="el" href="of_matrix4x4_8cpp.html#a4936835e8c1ab959e4c49f528cd215d6">ofMatrix4x4.cpp</a>
-</li>
-<li>coords
-: <a class="el" href="of_bitmap_font_8cpp.html#a6b47debd3e66fb49969e94cd79327c1a">ofBitmapFont.cpp</a>
 </li>
 <li>cycle
 : <a class="el" href="of_matrix4x4_8cpp.html#a439791da41fdc56e3544e3012da5e78b">ofMatrix4x4.cpp</a>

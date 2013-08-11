@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -47,7 +48,7 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_296d53ceaeaa7e099814a6def439fe8a.html">math</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_84d5b34cee6369a03c8d1f3b970ed216.html">openFrameworks</a></li><li class="navelem"><a class="el" href="dir_6b67c3a1fdba4d6b038dad8a0f05d92f.html">math</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -294,13 +295,13 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">case</span> I:\</div>
-<div class="line">                                  s = sqrt( (mat[I][I] - (mat[J][J]+mat[K][K])) + mat[<a class="code" href="of_matrix4x4_8cpp.html#a4bf755a23876ecc5d9b3897316b968e6ab722ceeb601c72cd78fbd35f3581fdf7">W</a>][<a class="code" href="of_matrix4x4_8cpp.html#a4bf755a23876ecc5d9b3897316b968e6ab722ceeb601c72cd78fbd35f3581fdf7">W</a>] );\</div>
-<div class="line">                   qu.i() = s*0.5;\</div>
-<div class="line">                   s = 0.5 / s;\</div>
-<div class="line">                   qu.j() = (mat[I][J] + mat[J][I]) * s;\</div>
-<div class="line">                   qu.k() = (mat[K][I] + mat[I][K]) * s;\</div>
-<div class="line">                   qu.w() = (mat[K][J] - mat[J][K]) * s;\</div>
-<div class="line">                   break</div>
+<div class="line">                  s = sqrt( (mat[I][I] - (mat[J][J]+mat[K][K])) + mat[<a class="code" href="of_matrix4x4_8cpp.html#a4bf755a23876ecc5d9b3897316b968e6ab722ceeb601c72cd78fbd35f3581fdf7">W</a>][<a class="code" href="of_matrix4x4_8cpp.html#a4bf755a23876ecc5d9b3897316b968e6ab722ceeb601c72cd78fbd35f3581fdf7">W</a>] );\</div>
+<div class="line">           qu.i() = s*0.5;\</div>
+<div class="line">           s = 0.5 / s;\</div>
+<div class="line">           qu.j() = (mat[I][J] + mat[J][I]) * s;\</div>
+<div class="line">           qu.k() = (mat[K][I] + mat[I][K]) * s;\</div>
+<div class="line">           qu.w() = (mat[K][J] - mat[J][K]) * s;\</div>
+<div class="line">           break</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -340,7 +341,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">if</span> (p) {<a class="code" href="of_matrix4x4_8cpp.html#a8d3c3518d793541417a4845125da1ae1">a</a>[3]=<a class="code" href="of_matrix4x4_8cpp.html#a8d3c3518d793541417a4845125da1ae1">a</a>[0]; <a class="code" href="of_matrix4x4_8cpp.html#a8d3c3518d793541417a4845125da1ae1">a</a>[0]=<a class="code" href="of_matrix4x4_8cpp.html#a8d3c3518d793541417a4845125da1ae1">a</a>[1]; <a class="code" href="of_matrix4x4_8cpp.html#a8d3c3518d793541417a4845125da1ae1">a</a>[1]=<a class="code" href="of_matrix4x4_8cpp.html#a8d3c3518d793541417a4845125da1ae1">a</a>[2]; <a class="code" href="of_matrix4x4_8cpp.html#a8d3c3518d793541417a4845125da1ae1">a</a>[2]=<a class="code" href="of_matrix4x4_8cpp.html#a8d3c3518d793541417a4845125da1ae1">a</a>[3];}\</div>
-<div class="line">        else   {<a class="code" href="of_matrix4x4_8cpp.html#a8d3c3518d793541417a4845125da1ae1">a</a>[3]=<a class="code" href="of_matrix4x4_8cpp.html#a8d3c3518d793541417a4845125da1ae1">a</a>[2]; <a class="code" href="of_matrix4x4_8cpp.html#a8d3c3518d793541417a4845125da1ae1">a</a>[2]=<a class="code" href="of_matrix4x4_8cpp.html#a8d3c3518d793541417a4845125da1ae1">a</a>[1]; <a class="code" href="of_matrix4x4_8cpp.html#a8d3c3518d793541417a4845125da1ae1">a</a>[1]=<a class="code" href="of_matrix4x4_8cpp.html#a8d3c3518d793541417a4845125da1ae1">a</a>[0]; <a class="code" href="of_matrix4x4_8cpp.html#a8d3c3518d793541417a4845125da1ae1">a</a>[0]=<a class="code" href="of_matrix4x4_8cpp.html#a8d3c3518d793541417a4845125da1ae1">a</a>[3];}</div>
+<div class="line">    else   {<a class="code" href="of_matrix4x4_8cpp.html#a8d3c3518d793541417a4845125da1ae1">a</a>[3]=<a class="code" href="of_matrix4x4_8cpp.html#a8d3c3518d793541417a4845125da1ae1">a</a>[2]; <a class="code" href="of_matrix4x4_8cpp.html#a8d3c3518d793541417a4845125da1ae1">a</a>[2]=<a class="code" href="of_matrix4x4_8cpp.html#a8d3c3518d793541417a4845125da1ae1">a</a>[1]; <a class="code" href="of_matrix4x4_8cpp.html#a8d3c3518d793541417a4845125da1ae1">a</a>[1]=<a class="code" href="of_matrix4x4_8cpp.html#a8d3c3518d793541417a4845125da1ae1">a</a>[0]; <a class="code" href="of_matrix4x4_8cpp.html#a8d3c3518d793541417a4845125da1ae1">a</a>[0]=<a class="code" href="of_matrix4x4_8cpp.html#a8d3c3518d793541417a4845125da1ae1">a</a>[3];}</div>
 </div><!-- fragment -->
 </div>
 </div>

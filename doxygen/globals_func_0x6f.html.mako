@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -82,14 +83,17 @@
 
 <h3><a class="anchor" id="index_o"></a>- o -</h3><ul>
 <li>OF_DEPRECATED_MSG()
-: <a class="el" href="of_graphics_8h.html#a2a41f3b9dfe9372567841aecdbc64a8d">ofGraphics.h</a>
+: <a class="el" href="of3d_graphics_8h.html#a6e7ca3777b49cb439883ff5c152cdac1">of3dGraphics.h</a>
+, <a class="el" href="of_graphics_8h.html#a8ddfbbc6dbe31ba792ef2ee594a8962b">ofGraphics.h</a>
+, <a class="el" href="of3d_graphics_8h.html#a5da66b937d0da64949619019280df0be">of3dGraphics.h</a>
+, <a class="el" href="of_graphics_8h.html#a07833902eaab731456302ba54ccfbd79">ofGraphics.h</a>
 </li>
 <li>ofAddListener()
-: <a class="el" href="of_event_utils_8h.html#a197c004724cf4cc9413321f519649550">ofEventUtils.h</a>
+: <a class="el" href="of_event_utils_8h.html#a8fcc229705279597797cc3fdb7a4a25d">ofEventUtils.h</a>
 </li>
 <li>ofAngleDifferenceDegrees()
-: <a class="el" href="of_math_8h.html#a9187e3d0572b394eb8f341ec88b575f4">ofMath.h</a>
-, <a class="el" href="of_math_8cpp.html#a9187e3d0572b394eb8f341ec88b575f4">ofMath.cpp</a>
+: <a class="el" href="of_math_8cpp.html#a9187e3d0572b394eb8f341ec88b575f4">ofMath.cpp</a>
+, <a class="el" href="of_math_8h.html#a9187e3d0572b394eb8f341ec88b575f4">ofMath.h</a>
 </li>
 <li>ofAngleDifferenceRadians()
 : <a class="el" href="of_math_8cpp.html#a10ed9288cb91336033e7c3eeb159f604">ofMath.cpp</a>
@@ -99,9 +103,9 @@
 : <a class="el" href="of_math_8h.html#a535e06f6ceacbab6bf7eb1a171b0a71d">ofMath.h</a>
 </li>
 <li>ofBackground()
-: <a class="el" href="of_graphics_8h.html#a199c074a7e395185cba8b505521688f2">ofGraphics.h</a>
-, <a class="el" href="of_graphics_8cpp.html#aabf25a8a2256510d38992e4aabfaeb1d">ofGraphics.cpp</a>
+: <a class="el" href="of_graphics_8cpp.html#a21ced6f74cdeba0d3052859804879fb1">ofGraphics.cpp</a>
 , <a class="el" href="of_graphics_8h.html#a1e43615fcc671d11a6a42570146283e7">ofGraphics.h</a>
+, <a class="el" href="of_graphics_8cpp.html#aabf25a8a2256510d38992e4aabfaeb1d">ofGraphics.cpp</a>
 </li>
 <li>ofBackgroundGradient()
 : <a class="el" href="of_graphics_8cpp.html#ab493180579b488aae768f96e3bdcbfcc">ofGraphics.cpp</a>
@@ -159,9 +163,20 @@
 : <a class="el" href="of_utils_8cpp.html#ad930367d2a3bd2514f0a6d5516fd855e">ofUtils.cpp</a>
 , <a class="el" href="of_utils_8h.html#ad930367d2a3bd2514f0a6d5516fd855e">ofUtils.h</a>
 </li>
+<li>ofBitmapStringGetBoundingBox()
+: <a class="el" href="of_bitmap_font_8cpp.html#a40a95815f04bc1280b26be68ab15eaec">ofBitmapFont.cpp</a>
+, <a class="el" href="of_bitmap_font_8h.html#a40a95815f04bc1280b26be68ab15eaec">ofBitmapFont.h</a>
+</li>
+<li>ofBitmapStringGetMesh()
+: <a class="el" href="of_bitmap_font_8cpp.html#a0f8b919cf6929f177dafc26e0210250f">ofBitmapFont.cpp</a>
+, <a class="el" href="of_bitmap_font_8h.html#a0f8b919cf6929f177dafc26e0210250f">ofBitmapFont.h</a>
+</li>
+<li>ofBitmapStringGetTextureRef()
+: <a class="el" href="of_bitmap_font_8cpp.html#a1ddf43c67faa9d099c504711bc8156de">ofBitmapFont.cpp</a>
+, <a class="el" href="of_bitmap_font_8h.html#a1ddf43c67faa9d099c504711bc8156de">ofBitmapFont.h</a>
+</li>
 <li>ofBox()
-: <a class="el" href="of_graphics_8cpp.html#a31c2ae230b3f8335cb17cd93b9594ad1">ofGraphics.cpp</a>
-, <a class="el" href="of_graphics_8h.html#a31c2ae230b3f8335cb17cd93b9594ad1">ofGraphics.h</a>
+: <a class="el" href="of3d_graphics_8cpp.html#a0eca5e5f91a3e5c27b13d829d89fed8e">of3dGraphics.cpp</a>
 </li>
 <li>ofBufferFromFile()
 : <a class="el" href="of_file_utils_8cpp.html#a15a9aed70e5043b36dd62249677c763b">ofFileUtils.cpp</a>
@@ -192,8 +207,7 @@
 , <a class="el" href="of_image_8h.html#a1976545686819727475b2aa4774eb6b2">ofImage.h</a>
 </li>
 <li>ofCone()
-: <a class="el" href="of_graphics_8cpp.html#ad8609b26e6d2d061af0e191e77c3e4b1">ofGraphics.cpp</a>
-, <a class="el" href="of_graphics_8h.html#ad8609b26e6d2d061af0e191e77c3e4b1">ofGraphics.h</a>
+: <a class="el" href="of3d_graphics_8cpp.html#ad8609b26e6d2d061af0e191e77c3e4b1">of3dGraphics.cpp</a>
 </li>
 <li>ofContains()
 : <a class="el" href="of_utils_8h.html#ad039a52955251f83c2d7c7c4f8920573">ofUtils.h</a>
@@ -214,9 +228,6 @@
 : <a class="el" href="of_graphics_8cpp.html#acabbc96ee453b107bc1633086f0fff3e">ofGraphics.cpp</a>
 , <a class="el" href="of_graphics_8h.html#acabbc96ee453b107bc1633086f0fff3e">ofGraphics.h</a>
 </li>
-<li>ofCurveVertexes()
-: <a class="el" href="of_graphics_8cpp.html#afadf4c3f1e84bb5bbb51aa6557215d6a">ofGraphics.cpp</a>
-</li>
 <li>ofCurveVertices()
 : <a class="el" href="of_graphics_8cpp.html#ac26a13f6349c18d48b77b32b48ba6c0c">ofGraphics.cpp</a>
 , <a class="el" href="of_graphics_8h.html#ac26a13f6349c18d48b77b32b48ba6c0c">ofGraphics.h</a>
@@ -226,8 +237,12 @@
 , <a class="el" href="of_math_8h.html#a70a120b33471d10ce0e755ee43c32b25">ofMath.h</a>
 </li>
 <li>ofDisableAlphaBlending()
-: <a class="el" href="of_graphics_8cpp.html#ab45f91c85107f9ed11033605225334bc">ofGraphics.cpp</a>
-, <a class="el" href="of_graphics_8h.html#ab45f91c85107f9ed11033605225334bc">ofGraphics.h</a>
+: <a class="el" href="of_graphics_8h.html#ab45f91c85107f9ed11033605225334bc">ofGraphics.h</a>
+, <a class="el" href="of_graphics_8cpp.html#ab45f91c85107f9ed11033605225334bc">ofGraphics.cpp</a>
+</li>
+<li>ofDisableAntiAliasing()
+: <a class="el" href="of_graphics_8cpp.html#af60a7ee63210252ce741d949c8f8f162">ofGraphics.cpp</a>
+, <a class="el" href="of_graphics_8h.html#af60a7ee63210252ce741d949c8f8f162">ofGraphics.h</a>
 </li>
 <li>ofDisableArbTex()
 : <a class="el" href="of_texture_8cpp.html#a6b679cd9538f7a1399cec6078c227c71">ofTexture.cpp</a>
@@ -240,6 +255,10 @@
 <li>ofDisableDataPath()
 : <a class="el" href="of_utils_8cpp.html#abc29e22b96ebfb8d5c7588181469cad9">ofUtils.cpp</a>
 , <a class="el" href="of_utils_8h.html#abc29e22b96ebfb8d5c7588181469cad9">ofUtils.h</a>
+</li>
+<li>ofDisableDepthTest()
+: <a class="el" href="of_graphics_8cpp.html#ab3e099f60c2d9aeabb6cdc51be7494b4">ofGraphics.cpp</a>
+, <a class="el" href="of_graphics_8h.html#ab3e099f60c2d9aeabb6cdc51be7494b4">ofGraphics.h</a>
 </li>
 <li>ofDisableLighting()
 : <a class="el" href="of_light_8cpp.html#a8ae721c8e56f051fbc6371c72fabaa20">ofLight.cpp</a>
@@ -309,6 +328,18 @@
 : <a class="el" href="of_graphics_8cpp.html#a90933552f37acdb6c21f5e6fd0c7dae0">ofGraphics.cpp</a>
 , <a class="el" href="of_graphics_8h.html#a971b0712ad87a97db18763ca01d791f3">ofGraphics.h</a>
 </li>
+<li>ofDrawBox()
+: <a class="el" href="of3d_graphics_8cpp.html#ab07a06a80ae6068d6d29cc5e4be30eaa">of3dGraphics.cpp</a>
+, <a class="el" href="of3d_graphics_8h.html#ab07a06a80ae6068d6d29cc5e4be30eaa">of3dGraphics.h</a>
+</li>
+<li>ofDrawCone()
+: <a class="el" href="of3d_graphics_8cpp.html#a1937585d9ebb2acaa8d8b8c71aba8d05">of3dGraphics.cpp</a>
+, <a class="el" href="of3d_graphics_8h.html#a1937585d9ebb2acaa8d8b8c71aba8d05">of3dGraphics.h</a>
+</li>
+<li>ofDrawCylinder()
+: <a class="el" href="of3d_graphics_8cpp.html#a251fd02adc7a6291c043cda8a33645e9">of3dGraphics.cpp</a>
+, <a class="el" href="of3d_graphics_8h.html#a251fd02adc7a6291c043cda8a33645e9">of3dGraphics.h</a>
+</li>
 <li>ofDrawGrid()
 : <a class="el" href="of3d_utils_8cpp.html#a93d38191e03f046766297da6a3fbf506">of3dUtils.cpp</a>
 , <a class="el" href="of3d_utils_8h.html#a121a7268ae088ebcf1d6730e0891ea8f">of3dUtils.h</a>
@@ -317,9 +348,21 @@
 : <a class="el" href="of3d_utils_8cpp.html#a55b70a1c148e2cd73ff7c2034d7041e3">of3dUtils.cpp</a>
 , <a class="el" href="of3d_utils_8h.html#a37e58812f9a8fbf46531aee61abbe5f7">of3dUtils.h</a>
 </li>
+<li>ofDrawIcoSphere()
+: <a class="el" href="of3d_graphics_8cpp.html#aa857630c7382aea4f077fb51458f5f94">of3dGraphics.cpp</a>
+, <a class="el" href="of3d_graphics_8h.html#aa857630c7382aea4f077fb51458f5f94">of3dGraphics.h</a>
+</li>
+<li>ofDrawPlane()
+: <a class="el" href="of3d_graphics_8cpp.html#ab9c66ddfb49c01c4536b6cf6e6879ee8">of3dGraphics.cpp</a>
+, <a class="el" href="of3d_graphics_8h.html#ab9c66ddfb49c01c4536b6cf6e6879ee8">of3dGraphics.h</a>
+</li>
 <li>ofDrawRotationAxes()
 : <a class="el" href="of3d_utils_8cpp.html#a89f9223dde35bc7158b25164ead2bc82">of3dUtils.cpp</a>
 , <a class="el" href="of3d_utils_8h.html#a8dba2f5056d15d74d2e4acc58967003d">of3dUtils.h</a>
+</li>
+<li>ofDrawSphere()
+: <a class="el" href="of3d_graphics_8cpp.html#a653115b244f7086eb259f2797310f669">of3dGraphics.cpp</a>
+, <a class="el" href="of3d_graphics_8h.html#a050a3ed205805d7a294269558bb3b6a6">of3dGraphics.h</a>
 </li>
 <li>ofEllipse()
 : <a class="el" href="of_graphics_8cpp.html#a948ae4bd718b65f1b14636ca8861c711">ofGraphics.cpp</a>
@@ -328,6 +371,10 @@
 <li>ofEnableAlphaBlending()
 : <a class="el" href="of_graphics_8cpp.html#a9e5b48d175f4210922a647cb6f9cdfd9">ofGraphics.cpp</a>
 , <a class="el" href="of_graphics_8h.html#a9e5b48d175f4210922a647cb6f9cdfd9">ofGraphics.h</a>
+</li>
+<li>ofEnableAntiAliasing()
+: <a class="el" href="of_graphics_8cpp.html#ac2d8182cbc044e23ebe9e3934e9da899">ofGraphics.cpp</a>
+, <a class="el" href="of_graphics_8h.html#ac2d8182cbc044e23ebe9e3934e9da899">ofGraphics.h</a>
 </li>
 <li>ofEnableArbTex()
 : <a class="el" href="of_texture_8cpp.html#a2522ef9f2c9415f8ac2d967c6bb37b01">ofTexture.cpp</a>
@@ -341,9 +388,13 @@
 : <a class="el" href="of_utils_8cpp.html#a5dd69e44833bd031c2c776804d535146">ofUtils.cpp</a>
 , <a class="el" href="of_utils_8h.html#a5dd69e44833bd031c2c776804d535146">ofUtils.h</a>
 </li>
+<li>ofEnableDepthTest()
+: <a class="el" href="of_graphics_8cpp.html#ad3da9d0dd28e688d394880ec458bd2dc">ofGraphics.cpp</a>
+, <a class="el" href="of_graphics_8h.html#ad3da9d0dd28e688d394880ec458bd2dc">ofGraphics.h</a>
+</li>
 <li>ofEnableLighting()
-: <a class="el" href="of_light_8cpp.html#a96c503f3a7f6c70d3ec3b24e85874ada">ofLight.cpp</a>
-, <a class="el" href="of_light_8h.html#a96c503f3a7f6c70d3ec3b24e85874ada">ofLight.h</a>
+: <a class="el" href="of_light_8h.html#a96c503f3a7f6c70d3ec3b24e85874ada">ofLight.h</a>
+, <a class="el" href="of_light_8cpp.html#a96c503f3a7f6c70d3ec3b24e85874ada">ofLight.cpp</a>
 </li>
 <li>ofEnableNormalizedTexCoords()
 : <a class="el" href="of_texture_8cpp.html#a444caf6c6cb03c61bcd569345ee0fbe9">ofTexture.cpp</a>
@@ -411,9 +462,25 @@
 : <a class="el" href="of_fmod_sound_player_8cpp.html#a64e5035ef720d2e112890385853d37f4">ofFmodSoundPlayer.cpp</a>
 , <a class="el" href="of_fmod_sound_player_8h.html#a64e5035ef720d2e112890385853d37f4">ofFmodSoundPlayer.h</a>
 </li>
+<li>ofFromString()
+: <a class="el" href="of_utils_8cpp.html#adc2eaef18a55b1bf69954b786361eb66">ofUtils.cpp</a>
+, <a class="el" href="of_utils_8h.html#aa65109e95b2ea4dd339cdfb819265e40">ofUtils.h</a>
+</li>
 <li>ofGetAppPtr()
 : <a class="el" href="of_app_runner_8cpp.html#a52ce629d4d97b252f9d1391aa2e172aa">ofAppRunner.cpp</a>
 , <a class="el" href="of_app_runner_8h.html#a52ce629d4d97b252f9d1391aa2e172aa">ofAppRunner.h</a>
+</li>
+<li>ofGetBackground()
+: <a class="el" href="of_graphics_8cpp.html#a68aa5620690e9f82ae61c0a686cc1836">ofGraphics.cpp</a>
+, <a class="el" href="of_graphics_8h.html#a68aa5620690e9f82ae61c0a686cc1836">ofGraphics.h</a>
+</li>
+<li>ofGetBoxResolution()
+: <a class="el" href="of3d_graphics_8cpp.html#a83c211f6692dca8b6893bdbc5a136385">of3dGraphics.cpp</a>
+, <a class="el" href="of3d_graphics_8h.html#a83c211f6692dca8b6893bdbc5a136385">of3dGraphics.h</a>
+</li>
+<li>ofGetConeResolution()
+: <a class="el" href="of3d_graphics_8cpp.html#a3a205235a3884861580bd0b3a2ad854f">of3dGraphics.cpp</a>
+, <a class="el" href="of3d_graphics_8h.html#a3a205235a3884861580bd0b3a2ad854f">of3dGraphics.h</a>
 </li>
 <li>ofGetCoordHandedness()
 : <a class="el" href="of_graphics_8cpp.html#a63e641c07db5b649b5be63e9a33ca796">ofGraphics.cpp</a>
@@ -426,6 +493,10 @@
 <li>ofGetCurrentViewport()
 : <a class="el" href="of_graphics_8cpp.html#a9b45fc63c10fdf222fcbf20543183220">ofGraphics.cpp</a>
 , <a class="el" href="of_graphics_8h.html#a9b45fc63c10fdf222fcbf20543183220">ofGraphics.h</a>
+</li>
+<li>ofGetCylinderResolution()
+: <a class="el" href="of3d_graphics_8cpp.html#abe4888edd182a20a80a8f71b8ee4373d">of3dGraphics.cpp</a>
+, <a class="el" href="of3d_graphics_8h.html#abe4888edd182a20a80a8f71b8ee4373d">of3dGraphics.h</a>
 </li>
 <li>ofGetDay()
 : <a class="el" href="of_utils_8cpp.html#aa655e6ae2ab15b03f3429432fb4fbbc8">ofUtils.cpp</a>
@@ -448,40 +519,60 @@
 , <a class="el" href="of_graphics_8h.html#a93bbf446ab96aa33c097e0992e016c2a">ofGraphics.h</a>
 </li>
 <li>ofGetFrameNum()
-: <a class="el" href="of_app_runner_8cpp.html#a3fe28889b15534a5a1c827a4ecb2ef26">ofAppRunner.cpp</a>
-, <a class="el" href="of_app_runner_8h.html#a3fe28889b15534a5a1c827a4ecb2ef26">ofAppRunner.h</a>
+: <a class="el" href="of_app_runner_8h.html#a3fe28889b15534a5a1c827a4ecb2ef26">ofAppRunner.h</a>
+, <a class="el" href="of_events_8cpp.html#a3fe28889b15534a5a1c827a4ecb2ef26">ofEvents.cpp</a>
 , <a class="el" href="of_utils_8h.html#a3fe28889b15534a5a1c827a4ecb2ef26">ofUtils.h</a>
 </li>
 <li>ofGetFrameRate()
-: <a class="el" href="of_app_runner_8cpp.html#a01080ea3b88e20894224b28caa46fd25">ofAppRunner.cpp</a>
-, <a class="el" href="of_app_runner_8h.html#a01080ea3b88e20894224b28caa46fd25">ofAppRunner.h</a>
+: <a class="el" href="of_app_runner_8h.html#a01080ea3b88e20894224b28caa46fd25">ofAppRunner.h</a>
+, <a class="el" href="of_events_8cpp.html#a01080ea3b88e20894224b28caa46fd25">ofEvents.cpp</a>
 </li>
 <li>ofGetGlFormat()
-: <a class="el" href="of_texture_8cpp.html#a4540906c150bb622d720681160025d09">ofTexture.cpp</a>
+: <a class="el" href="of_g_l_utils_8h.html#ad8d341ae3f11412f3d4a3cc2b7806cae">ofGLUtils.h</a>
 </li>
-<li>ofGetGlFormatAndType()
-: <a class="el" href="of_texture_8cpp.html#a6951b45f3afed2f8ea7afa70e13601e2">ofTexture.cpp</a>
-, <a class="el" href="of_texture_8h.html#a6951b45f3afed2f8ea7afa70e13601e2">ofTexture.h</a>
+<li>ofGetGLFormatFromInternal()
+: <a class="el" href="of_g_l_utils_8cpp.html#a4987bca4320975b612ae8f503545160c">ofGLUtils.cpp</a>
+, <a class="el" href="of_g_l_utils_8h.html#a4987bca4320975b612ae8f503545160c">ofGLUtils.h</a>
 </li>
 <li>ofGetGlInternalFormat()
-: <a class="el" href="of_texture_8cpp.html#ab340063d598250e3bf7abc2db7795f3d">ofTexture.cpp</a>
-, <a class="el" href="of_texture_8h.html#ab340063d598250e3bf7abc2db7795f3d">ofTexture.h</a>
+: <a class="el" href="of_g_l_utils_8cpp.html#ab340063d598250e3bf7abc2db7795f3d">ofGLUtils.cpp</a>
+, <a class="el" href="of_g_l_utils_8h.html#ab340063d598250e3bf7abc2db7795f3d">ofGLUtils.h</a>
+</li>
+<li>ofGetGLInternalFormatFromPixelFormat()
+: <a class="el" href="of_g_l_utils_8cpp.html#afe1b791ecb013737e7c48fa1ffaae1c3">ofGLUtils.cpp</a>
+, <a class="el" href="of_g_l_utils_8h.html#afe1b791ecb013737e7c48fa1ffaae1c3">ofGLUtils.h</a>
 </li>
 <li>ofGetGlInternalFormatName()
-: <a class="el" href="of_texture_8cpp.html#a0503e381b76eb22135d81a2524ac39f4">ofTexture.cpp</a>
+: <a class="el" href="of_g_l_utils_8cpp.html#a0503e381b76eb22135d81a2524ac39f4">ofGLUtils.cpp</a>
+, <a class="el" href="of_g_l_utils_8h.html#a0503e381b76eb22135d81a2524ac39f4">ofGLUtils.h</a>
 </li>
 <li>ofGetGLPolyMode()
-: <a class="el" href="of_g_l_utils_8h.html#ab4c3ae872231262c88bf73881a6e7ec3">ofGLUtils.h</a>
+: <a class="el" href="of_g_l_utils_8cpp.html#ab4c3ae872231262c88bf73881a6e7ec3">ofGLUtils.cpp</a>
+, <a class="el" href="of_g_l_utils_8h.html#ab4c3ae872231262c88bf73881a6e7ec3">ofGLUtils.h</a>
 </li>
 <li>ofGetGLPrimitiveMode()
-: <a class="el" href="of_g_l_utils_8h.html#a4355b78c04af2c5253f518847449c8e2">ofGLUtils.h</a>
+: <a class="el" href="of_g_l_utils_8cpp.html#a4355b78c04af2c5253f518847449c8e2">ofGLUtils.cpp</a>
+, <a class="el" href="of_g_l_utils_8h.html#a4355b78c04af2c5253f518847449c8e2">ofGLUtils.h</a>
+</li>
+<li>ofGetGLProgrammableRenderer()
+: <a class="el" href="of_g_l_utils_8cpp.html#a118b93df7ce96453d5be331dce28ad62">ofGLUtils.cpp</a>
+, <a class="el" href="of_g_l_utils_8h.html#a118b93df7ce96453d5be331dce28ad62">ofGLUtils.h</a>
 </li>
 <li>ofGetGLRenderer()
-: <a class="el" href="of_graphics_8cpp.html#ac11af371124c215495e01a8a3a4eaf3a">ofGraphics.cpp</a>
-, <a class="el" href="of_graphics_8h.html#ac11af371124c215495e01a8a3a4eaf3a">ofGraphics.h</a>
+: <a class="el" href="of_g_l_utils_8cpp.html#adeeec52fbcf4b74798a1d9ddccecc49f">ofGLUtils.cpp</a>
+, <a class="el" href="of_g_l_utils_8h.html#adeeec52fbcf4b74798a1d9ddccecc49f">ofGLUtils.h</a>
+</li>
+<li>ofGetGlType()
+: <a class="el" href="of_g_l_utils_8cpp.html#ab5cf4d820fc257824a7a8dcaa267378b">ofGLUtils.cpp</a>
+, <a class="el" href="of_g_l_utils_8h.html#ab5cf4d820fc257824a7a8dcaa267378b">ofGLUtils.h</a>
+</li>
+<li>ofGetGlTypeFromInternal()
+: <a class="el" href="of_g_l_utils_8cpp.html#acefe9b25ade306d37ad28f1286455b54">ofGLUtils.cpp</a>
+, <a class="el" href="of_g_l_utils_8h.html#acefe9b25ade306d37ad28f1286455b54">ofGLUtils.h</a>
 </li>
 <li>ofGetGLTypeFromPixelFormat()
-: <a class="el" href="of_g_l_utils_8h.html#a9e61c82188155f957c8b7561670dfd6d">ofGLUtils.h</a>
+: <a class="el" href="of_g_l_utils_8cpp.html#a9e61c82188155f957c8b7561670dfd6d">ofGLUtils.cpp</a>
+, <a class="el" href="of_g_l_utils_8h.html#a9e61c82188155f957c8b7561670dfd6d">ofGLUtils.h</a>
 </li>
 <li>ofGetHeight()
 : <a class="el" href="of_app_runner_8cpp.html#a415b5eadf885ebd1f4799cc40e5db137">ofAppRunner.cpp</a>
@@ -491,17 +582,21 @@
 : <a class="el" href="of_utils_8cpp.html#a6ccd64cce2cd952ba3d92ec3c7d3fdcd">ofUtils.cpp</a>
 , <a class="el" href="of_utils_8h.html#a6ccd64cce2cd952ba3d92ec3c7d3fdcd">ofUtils.h</a>
 </li>
+<li>ofGetIcoSphereResolution()
+: <a class="el" href="of3d_graphics_8cpp.html#a28de1439dd7e7d4575826aeddfc824c1">of3dGraphics.cpp</a>
+, <a class="el" href="of3d_graphics_8h.html#a28de1439dd7e7d4575826aeddfc824c1">of3dGraphics.h</a>
+</li>
 <li>ofGetImageTypeFromGLType()
-: <a class="el" href="of_texture_8cpp.html#ae78f1287f515325ceaf71c13f0efdced">ofTexture.cpp</a>
-, <a class="el" href="of_texture_8h.html#ae78f1287f515325ceaf71c13f0efdced">ofTexture.h</a>
+: <a class="el" href="of_g_l_utils_8cpp.html#ae78f1287f515325ceaf71c13f0efdced">ofGLUtils.cpp</a>
+, <a class="el" href="of_g_l_utils_8h.html#ae78f1287f515325ceaf71c13f0efdced">ofGLUtils.h</a>
 </li>
 <li>ofGetKeyPressed()
 : <a class="el" href="of_events_8cpp.html#a1fe39d7eb47898819680385244d1f148">ofEvents.cpp</a>
 , <a class="el" href="of_events_8h.html#a2185b30acc5d8e0f8b07bb869fafe696">ofEvents.h</a>
 </li>
 <li>ofGetLastFrameTime()
-: <a class="el" href="of_app_runner_8cpp.html#ac97a55114e95bc13a43afd95a5da043a">ofAppRunner.cpp</a>
-, <a class="el" href="of_app_runner_8h.html#ac97a55114e95bc13a43afd95a5da043a">ofAppRunner.h</a>
+: <a class="el" href="of_app_runner_8h.html#ac97a55114e95bc13a43afd95a5da043a">ofAppRunner.h</a>
+, <a class="el" href="of_events_8cpp.html#ac97a55114e95bc13a43afd95a5da043a">ofEvents.cpp</a>
 </li>
 <li>ofGetLightingEnabled()
 : <a class="el" href="of_light_8cpp.html#ae83accacf45312755ae30c1db1823147">ofLight.cpp</a>
@@ -512,8 +607,8 @@
 , <a class="el" href="of_log_8h.html#ac6e0d81bf5142843892fe54908399794">ofLog.h</a>
 </li>
 <li>ofGetLogLevelName()
-: <a class="el" href="of_log_8cpp.html#ae02174a9ed5d36407a67514553677628">ofLog.cpp</a>
-, <a class="el" href="of_log_8h.html#ae02174a9ed5d36407a67514553677628">ofLog.h</a>
+: <a class="el" href="of_log_8cpp.html#ab103279b3ebaa7c6a351520005749e60">ofLog.cpp</a>
+, <a class="el" href="of_log_8h.html#a18730a546b3c27723dc95ecf1a5e55b7">ofLog.h</a>
 </li>
 <li>ofGetMinutes()
 : <a class="el" href="of_utils_8cpp.html#a24d379ebf610c2819476ccb509290008">ofUtils.cpp</a>
@@ -535,15 +630,29 @@
 : <a class="el" href="of_events_8cpp.html#ab205175067dbc32f79858a3903f052aa">ofEvents.cpp</a>
 , <a class="el" href="of_events_8h.html#ab205175067dbc32f79858a3903f052aa">ofEvents.h</a>
 </li>
+<li>ofGetNativeViewport()
+: <a class="el" href="of_graphics_8cpp.html#ac992a04616c1c5ab63e4f85354f49f85">ofGraphics.cpp</a>
+, <a class="el" href="of_graphics_8h.html#ac992a04616c1c5ab63e4f85354f49f85">ofGraphics.h</a>
+</li>
+<li>ofGetNumChannelsFromGLFormat()
+: <a class="el" href="of_g_l_utils_8cpp.html#ada1bb64729cf66d868248f666ef05aee">ofGLUtils.cpp</a>
+, <a class="el" href="of_g_l_utils_8h.html#ada1bb64729cf66d868248f666ef05aee">ofGLUtils.h</a>
+</li>
 <li>ofGetOFPolyMode()
-: <a class="el" href="of_g_l_utils_8h.html#a7d86d2bb2f1a0352cbd917f1eb1cf636">ofGLUtils.h</a>
+: <a class="el" href="of_g_l_utils_8cpp.html#a7d86d2bb2f1a0352cbd917f1eb1cf636">ofGLUtils.cpp</a>
+, <a class="el" href="of_g_l_utils_8h.html#a7d86d2bb2f1a0352cbd917f1eb1cf636">ofGLUtils.h</a>
 </li>
 <li>ofGetOFPrimitiveMode()
-: <a class="el" href="of_g_l_utils_8h.html#ab60a9f964930c5c42e895c4a2987a42d">ofGLUtils.h</a>
+: <a class="el" href="of_g_l_utils_8cpp.html#ab60a9f964930c5c42e895c4a2987a42d">ofGLUtils.cpp</a>
+, <a class="el" href="of_g_l_utils_8h.html#ab60a9f964930c5c42e895c4a2987a42d">ofGLUtils.h</a>
 </li>
 <li>ofGetOrientation()
 : <a class="el" href="of_app_runner_8cpp.html#a75e931c0927886f0587578cdd331533f">ofAppRunner.cpp</a>
 , <a class="el" href="of_app_runner_8h.html#a75e931c0927886f0587578cdd331533f">ofAppRunner.h</a>
+</li>
+<li>ofGetPlaneResolution()
+: <a class="el" href="of3d_graphics_8cpp.html#a7e8f3c7ea98b5bfcbc2be437ea762e5d">of3dGraphics.cpp</a>
+, <a class="el" href="of3d_graphics_8h.html#a7e8f3c7ea98b5bfcbc2be437ea762e5d">of3dGraphics.h</a>
 </li>
 <li>ofGetPreviousMouseX()
 : <a class="el" href="of_events_8cpp.html#a81884d66fa5ecca3eb9451b49cb9892b">ofEvents.cpp</a>
@@ -569,6 +678,10 @@
 : <a class="el" href="of_utils_8cpp.html#aa70e381f3cd98884c5b9a048dc327e93">ofUtils.cpp</a>
 , <a class="el" href="of_utils_8h.html#aa70e381f3cd98884c5b9a048dc327e93">ofUtils.h</a>
 </li>
+<li>ofGetSphereResolution()
+: <a class="el" href="of3d_graphics_8cpp.html#ab810516ee79b0bbaa3509521633ac9cf">of3dGraphics.cpp</a>
+, <a class="el" href="of3d_graphics_8h.html#ab810516ee79b0bbaa3509521633ac9cf">of3dGraphics.h</a>
+</li>
 <li>ofGetStyle()
 : <a class="el" href="of_graphics_8cpp.html#accbcb856bf7135705117d5f8f13e05dd">ofGraphics.cpp</a>
 , <a class="el" href="of_graphics_8h.html#accbcb856bf7135705117d5f8f13e05dd">ofGraphics.h</a>
@@ -580,6 +693,10 @@
 <li>ofGetSystemTimeMicros()
 : <a class="el" href="of_utils_8cpp.html#a5c90cd191a5033c2d2e92e2acf3db660">ofUtils.cpp</a>
 , <a class="el" href="of_utils_8h.html#a5c90cd191a5033c2d2e92e2acf3db660">ofUtils.h</a>
+</li>
+<li>ofGetTargetFrameRate()
+: <a class="el" href="of_app_runner_8h.html#a81f6b99f285f59ed64b527875c07dda6">ofAppRunner.h</a>
+, <a class="el" href="of_events_8cpp.html#a81f6b99f285f59ed64b527875c07dda6">ofEvents.cpp</a>
 </li>
 <li>ofGetTargetPlatform()
 : <a class="el" href="of_utils_8cpp.html#ab790b10d5c2913ddb8d29b7e272f24d3">ofUtils.cpp</a>
@@ -613,6 +730,18 @@
 : <a class="el" href="of_utils_8cpp.html#ace6bb3ddbbe185712808047277dab043">ofUtils.cpp</a>
 , <a class="el" href="of_utils_8h.html#ace6bb3ddbbe185712808047277dab043">ofUtils.h</a>
 </li>
+<li>ofGetVersionMajor()
+: <a class="el" href="of_utils_8cpp.html#a6bcb56c4f4d807b22afea5b178f65bdc">ofUtils.cpp</a>
+, <a class="el" href="of_utils_8h.html#a6bcb56c4f4d807b22afea5b178f65bdc">ofUtils.h</a>
+</li>
+<li>ofGetVersionMinor()
+: <a class="el" href="of_utils_8cpp.html#aacd9f2aaab3c32a0ef2fa0389ad80c58">ofUtils.cpp</a>
+, <a class="el" href="of_utils_8h.html#aacd9f2aaab3c32a0ef2fa0389ad80c58">ofUtils.h</a>
+</li>
+<li>ofGetVersionPatch()
+: <a class="el" href="of_utils_8cpp.html#ad7fce5c6b942eb31e468bf3431c1b343">ofUtils.cpp</a>
+, <a class="el" href="of_utils_8h.html#ad7fce5c6b942eb31e468bf3431c1b343">ofUtils.h</a>
+</li>
 <li>ofGetViewportHeight()
 : <a class="el" href="of_graphics_8cpp.html#a9e60bc439b7e73b3f7d65927726bc7f1">ofGraphics.cpp</a>
 , <a class="el" href="of_graphics_8h.html#a9e60bc439b7e73b3f7d65927726bc7f1">ofGraphics.h</a>
@@ -645,6 +774,10 @@
 : <a class="el" href="of_app_runner_8cpp.html#aaa444f2765437c2a4833f98c0b1c34da">ofAppRunner.cpp</a>
 , <a class="el" href="of_app_runner_8h.html#aaa444f2765437c2a4833f98c0b1c34da">ofAppRunner.h</a>
 </li>
+<li>ofGetWindowPtr()
+: <a class="el" href="of_app_runner_8cpp.html#a20cb291563cb20a754c4a65ddbf89f7a">ofAppRunner.cpp</a>
+, <a class="el" href="of_app_runner_8h.html#a20cb291563cb20a754c4a65ddbf89f7a">ofAppRunner.h</a>
+</li>
 <li>ofGetWindowRect()
 : <a class="el" href="of_app_runner_8cpp.html#ae36085b0acc3c1873549154d57a590cf">ofAppRunner.cpp</a>
 , <a class="el" href="of_app_runner_8h.html#ae36085b0acc3c1873549154d57a590cf">ofAppRunner.h</a>
@@ -660,6 +793,24 @@
 <li>ofGetYear()
 : <a class="el" href="of_utils_8cpp.html#a5e8e9c0b83e712a9a69c6a50f21a3950">ofUtils.cpp</a>
 , <a class="el" href="of_utils_8h.html#a5e8e9c0b83e712a9a69c6a50f21a3950">ofUtils.h</a>
+</li>
+<li>ofGLCheckExtension()
+: <a class="el" href="of_g_l_utils_8cpp.html#a120d0e60118efdcc7ded705a6ebe994a">ofGLUtils.cpp</a>
+, <a class="el" href="of_g_l_utils_8h.html#a120d0e60118efdcc7ded705a6ebe994a">ofGLUtils.h</a>
+</li>
+<li>ofGLReadyCallback()
+: <a class="el" href="of_app_e_g_l_window_8cpp.html#a6c869c53f463ceb202c2ba0ed12e792f">ofAppEGLWindow.cpp</a>
+, <a class="el" href="of_app_g_l_f_w_window_8cpp.html#a6c869c53f463ceb202c2ba0ed12e792f">ofAppGLFWWindow.cpp</a>
+, <a class="el" href="of_app_glut_window_8cpp.html#a6c869c53f463ceb202c2ba0ed12e792f">ofAppGlutWindow.cpp</a>
+, <a class="el" href="of_app_runner_8cpp.html#a6c869c53f463ceb202c2ba0ed12e792f">ofAppRunner.cpp</a>
+</li>
+<li>ofGLSupportedExtensions()
+: <a class="el" href="of_g_l_utils_8cpp.html#a4c215b36743e3b094f61285e23942050">ofGLUtils.cpp</a>
+, <a class="el" href="of_g_l_utils_8h.html#a4c215b36743e3b094f61285e23942050">ofGLUtils.h</a>
+</li>
+<li>ofGLSupportsNPOTTextures()
+: <a class="el" href="of_g_l_utils_8cpp.html#a5e45e6a96cfd84f21c9cf599800ec7c8">ofGLUtils.cpp</a>
+, <a class="el" href="of_g_l_utils_8h.html#a5e45e6a96cfd84f21c9cf599800ec7c8">ofGLUtils.h</a>
 </li>
 <li>ofHexToChar()
 : <a class="el" href="of_utils_8cpp.html#af10a159a72a7ffe2e21a7f0e524d2647">ofUtils.cpp</a>
@@ -692,17 +843,42 @@
 : <a class="el" href="of_math_8cpp.html#ac178b7fee13d26870dbbe2af54778785">ofMath.cpp</a>
 , <a class="el" href="of_math_8h.html#ade445c844b18f82fdf311268eec5400c">ofMath.h</a>
 </li>
+<li>ofInterpolateCatmullRom()
+: <a class="el" href="of_math_8h.html#a91742a5ecd1dd798be415bbc493c22bf">ofMath.h</a>
+</li>
+<li>ofInterpolateCosine()
+: <a class="el" href="of_math_8h.html#a03ae1b6363bc5768851000d35538066e">ofMath.h</a>
+</li>
+<li>ofInterpolateCubic()
+: <a class="el" href="of_math_8h.html#ae4fa59b0c4c66e53f4e017923121ea0d">ofMath.h</a>
+</li>
+<li>ofInterpolateHermite()
+: <a class="el" href="of_math_8h.html#a5983155f864e82d3f5dfb57d95ff8f27">ofMath.h</a>
+</li>
+<li>ofIsGLProgrammableRenderer()
+: <a class="el" href="of_g_l_utils_8cpp.html#a5c3ef000b7f74eeb87209ac699f115e5">ofGLUtils.cpp</a>
+, <a class="el" href="of_g_l_utils_8h.html#a5c3ef000b7f74eeb87209ac699f115e5">ofGLUtils.h</a>
+</li>
 <li>ofIsStringInString()
 : <a class="el" href="of_utils_8cpp.html#afb1e5425f758ed665faf87d3f29b350c">ofUtils.cpp</a>
 , <a class="el" href="of_utils_8h.html#afb1e5425f758ed665faf87d3f29b350c">ofUtils.h</a>
+</li>
+<li>ofIsTextureEdgeHackEnabled()
+: <a class="el" href="of_texture_8cpp.html#ab986ff110085b3cea93e0e705f98cfcd">ofTexture.cpp</a>
+, <a class="el" href="of_texture_8h.html#ab986ff110085b3cea93e0e705f98cfcd">ofTexture.h</a>
+</li>
+<li>ofIsVFlipped()
+: <a class="el" href="of_graphics_8cpp.html#a112ebf9b37b365ab634260fa7413d92e">ofGraphics.cpp</a>
+, <a class="el" href="of_graphics_8h.html#a112ebf9b37b365ab634260fa7413d92e">ofGraphics.h</a>
+, <a class="el" href="of_base_types_8h.html#a112ebf9b37b365ab634260fa7413d92e">ofBaseTypes.h</a>
 </li>
 <li>ofJoinString()
 : <a class="el" href="of_utils_8cpp.html#a3c4fbf2edf8845a96811f96127c19df6">ofUtils.cpp</a>
 , <a class="el" href="of_utils_8h.html#a3c4fbf2edf8845a96811f96127c19df6">ofUtils.h</a>
 </li>
 <li>ofLaunchBrowser()
-: <a class="el" href="of_utils_8cpp.html#aaec488f8c77857f240dd79ae9f63d0e6">ofUtils.cpp</a>
-, <a class="el" href="of_utils_8h.html#aaec488f8c77857f240dd79ae9f63d0e6">ofUtils.h</a>
+: <a class="el" href="of_utils_8h.html#ac76897e475bff2ac009eb45b8d6d9e4b">ofUtils.h</a>
+, <a class="el" href="of_utils_8cpp.html#a1958248594603e18ae6b2f13ebe4beb8">ofUtils.cpp</a>
 </li>
 <li>ofLerp()
 : <a class="el" href="of_math_8cpp.html#a851eb0ea11c2bfe151665de8e3c66561">ofMath.cpp</a>
@@ -725,12 +901,13 @@
 , <a class="el" href="of_math_8h.html#a6dc7132fb85eb90d7cf3194ad6c054cc">ofMath.h</a>
 </li>
 <li>ofLoadIdentityMatrix()
-: <a class="el" href="of_graphics_8cpp.html#a982d8bdf171f632cb61b4d0c80024d1b">ofGraphics.cpp</a>
-, <a class="el" href="of_graphics_8h.html#a982d8bdf171f632cb61b4d0c80024d1b">ofGraphics.h</a>
+: <a class="el" href="of_graphics_8h.html#a982d8bdf171f632cb61b4d0c80024d1b">ofGraphics.h</a>
+, <a class="el" href="of_graphics_8cpp.html#a982d8bdf171f632cb61b4d0c80024d1b">ofGraphics.cpp</a>
 </li>
 <li>ofLoadImage()
 : <a class="el" href="of_image_8cpp.html#aee9c5e6c0f5e0a76c12f5116d8e6869b">ofImage.cpp</a>
 , <a class="el" href="of_image_8h.html#a12ddf90853e8b58c6b7bf0bdbbc42b94">ofImage.h</a>
+, <a class="el" href="of_image_8cpp.html#a59635ff18c96ddbbfaea39716e63f9e5">ofImage.cpp</a>
 </li>
 <li>ofLoadMatrix()
 : <a class="el" href="of_graphics_8cpp.html#a6e963008d5f3d5e2d4cece485f992866">ofGraphics.cpp</a>
@@ -741,24 +918,25 @@
 , <a class="el" href="of_u_r_l_file_loader_8h.html#aec7231f38cb45134601a635d4bd96e9a">ofURLFileLoader.h</a>
 </li>
 <li>ofLoadURLAsync()
-: <a class="el" href="of_u_r_l_file_loader_8cpp.html#a8ad9b795d5809a8aed9c2a8d74cdc95b">ofURLFileLoader.cpp</a>
-, <a class="el" href="of_u_r_l_file_loader_8h.html#aca5f1b06b6fdfeb41d19104df9ea80df">ofURLFileLoader.h</a>
+: <a class="el" href="of_u_r_l_file_loader_8h.html#aca5f1b06b6fdfeb41d19104df9ea80df">ofURLFileLoader.h</a>
+, <a class="el" href="of_u_r_l_file_loader_8cpp.html#a8ad9b795d5809a8aed9c2a8d74cdc95b">ofURLFileLoader.cpp</a>
 </li>
 <li>ofLogToConsole()
 : <a class="el" href="of_log_8cpp.html#aeaeb5016cb838a99e88502a57d8b2cb6">ofLog.cpp</a>
 , <a class="el" href="of_log_8h.html#aeaeb5016cb838a99e88502a57d8b2cb6">ofLog.h</a>
 </li>
 <li>ofLogToFile()
-: <a class="el" href="of_log_8cpp.html#ac959dbd02c61030a231530c30f2b1305">ofLog.cpp</a>
-, <a class="el" href="of_log_8h.html#a1ed956aa67bdd9871b2839ead0dc1191">ofLog.h</a>
+: <a class="el" href="of_log_8h.html#a1ed956aa67bdd9871b2839ead0dc1191">ofLog.h</a>
+, <a class="el" href="of_log_8cpp.html#ac959dbd02c61030a231530c30f2b1305">ofLog.cpp</a>
 </li>
 <li>ofMap()
 : <a class="el" href="of_math_8cpp.html#aa36b88c917a1cebc82570eed1641120f">ofMath.cpp</a>
 , <a class="el" href="of_math_8h.html#aed7db854914e53ba53ded1f9a4ff47da">ofMath.h</a>
 </li>
 <li>ofMultMatrix()
-: <a class="el" href="of_graphics_8cpp.html#a0672657408e1426d2dc875d1b2071649">ofGraphics.cpp</a>
+: <a class="el" href="of_graphics_8cpp.html#a353323be16826ffd67d48fbb194d6f1a">ofGraphics.cpp</a>
 , <a class="el" href="of_graphics_8h.html#a0672657408e1426d2dc875d1b2071649">ofGraphics.h</a>
+, <a class="el" href="of_graphics_8cpp.html#a0672657408e1426d2dc875d1b2071649">ofGraphics.cpp</a>
 </li>
 <li>ofNextContour()
 : <a class="el" href="of_graphics_8cpp.html#a43a4a2c9bf99f00af792a9007e15a10d">ofGraphics.cpp</a>
@@ -774,40 +952,48 @@
 , <a class="el" href="of_graphics_8h.html#a13ed7d6bb39a2dfc6f9a4170d8db7f15">ofGraphics.h</a>
 </li>
 <li>ofNoise()
-: <a class="el" href="of_math_8h.html#ac27bf743a5ae09ec44fbf95969f031ab">ofMath.h</a>
-, <a class="el" href="of_math_8cpp.html#ac27bf743a5ae09ec44fbf95969f031ab">ofMath.cpp</a>
+: <a class="el" href="of_math_8cpp.html#a94cb5392d5d0a5ed7908c5fd31ae97d2">ofMath.cpp</a>
 , <a class="el" href="of_math_8h.html#a94cb5392d5d0a5ed7908c5fd31ae97d2">ofMath.h</a>
+, <a class="el" href="of_math_8cpp.html#a21b4f1d491303ad4a36d892a2ab4f4be">ofMath.cpp</a>
 </li>
 <li>ofNormalize()
 : <a class="el" href="of_math_8cpp.html#aeda138c0500e2d10b0763e4c1ac1cc53">ofMath.cpp</a>
 , <a class="el" href="of_math_8h.html#aeda138c0500e2d10b0763e4c1ac1cc53">ofMath.h</a>
 </li>
 <li>ofNotifyDragEvent()
-: <a class="el" href="of_events_8h.html#a95339e4f3f60d9c4f9e1808b0359041f">ofEvents.h</a>
-, <a class="el" href="of_events_8cpp.html#a95339e4f3f60d9c4f9e1808b0359041f">ofEvents.cpp</a>
+: <a class="el" href="of_events_8cpp.html#a95339e4f3f60d9c4f9e1808b0359041f">ofEvents.cpp</a>
+, <a class="el" href="of_events_8h.html#a95339e4f3f60d9c4f9e1808b0359041f">ofEvents.h</a>
 </li>
 <li>ofNotifyDraw()
 : <a class="el" href="of_events_8cpp.html#ac555c35d45378268731260eb2d3f5e54">ofEvents.cpp</a>
 , <a class="el" href="of_events_8h.html#ac555c35d45378268731260eb2d3f5e54">ofEvents.h</a>
 </li>
 <li>ofNotifyEvent()
-: <a class="el" href="of_event_utils_8h.html#af05383f89a63e883ef993fa845ad128c">ofEventUtils.h</a>
+: <a class="el" href="of_event_utils_8h.html#a4c2c456b4eba98abb9d06646caf238c5">ofEventUtils.h</a>
 </li>
 <li>ofNotifyExit()
 : <a class="el" href="of_events_8cpp.html#a4b4bcb608363760a96730bfd405610c4">ofEvents.cpp</a>
 , <a class="el" href="of_events_8h.html#a4b4bcb608363760a96730bfd405610c4">ofEvents.h</a>
 </li>
+<li>ofNotifyKeyEvent()
+: <a class="el" href="of_events_8cpp.html#a5d1fb124fea0a1a7831ebbe72559d114">ofEvents.cpp</a>
+, <a class="el" href="of_events_8h.html#a5d1fb124fea0a1a7831ebbe72559d114">ofEvents.h</a>
+</li>
 <li>ofNotifyKeyPressed()
-: <a class="el" href="of_events_8h.html#a9fc0c4294b2f7799a90dc7b41faf1b5c">ofEvents.h</a>
-, <a class="el" href="of_events_8cpp.html#a9fc0c4294b2f7799a90dc7b41faf1b5c">ofEvents.cpp</a>
+: <a class="el" href="of_events_8cpp.html#a9fc0c4294b2f7799a90dc7b41faf1b5c">ofEvents.cpp</a>
+, <a class="el" href="of_events_8h.html#a9fc0c4294b2f7799a90dc7b41faf1b5c">ofEvents.h</a>
 </li>
 <li>ofNotifyKeyReleased()
 : <a class="el" href="of_events_8cpp.html#aa23941dd9572998234e61687e7c35f18">ofEvents.cpp</a>
 , <a class="el" href="of_events_8h.html#aa23941dd9572998234e61687e7c35f18">ofEvents.h</a>
 </li>
 <li>ofNotifyMouseDragged()
-: <a class="el" href="of_events_8h.html#a38fcaeb649ce5115f804fc07687bcc51">ofEvents.h</a>
-, <a class="el" href="of_events_8cpp.html#a38fcaeb649ce5115f804fc07687bcc51">ofEvents.cpp</a>
+: <a class="el" href="of_events_8cpp.html#a38fcaeb649ce5115f804fc07687bcc51">ofEvents.cpp</a>
+, <a class="el" href="of_events_8h.html#a38fcaeb649ce5115f804fc07687bcc51">ofEvents.h</a>
+</li>
+<li>ofNotifyMouseEvent()
+: <a class="el" href="of_events_8cpp.html#a16d77d7ade05fc248aee9659bc4491ab">ofEvents.cpp</a>
+, <a class="el" href="of_events_8h.html#a16d77d7ade05fc248aee9659bc4491ab">ofEvents.h</a>
 </li>
 <li>ofNotifyMouseMoved()
 : <a class="el" href="of_events_8cpp.html#af53b6bc8471de39c38f8b2970e81b58f">ofEvents.cpp</a>
@@ -822,56 +1008,59 @@
 , <a class="el" href="of_events_8h.html#aa0d4cb37b3fcdc62e525ff087c7fd1cb">ofEvents.h</a>
 </li>
 <li>ofNotifySetup()
-: <a class="el" href="of_events_8h.html#a66d9e7889b2000628b73192cb3a1372f">ofEvents.h</a>
-, <a class="el" href="of_events_8cpp.html#a66d9e7889b2000628b73192cb3a1372f">ofEvents.cpp</a>
+: <a class="el" href="of_events_8cpp.html#a66d9e7889b2000628b73192cb3a1372f">ofEvents.cpp</a>
+, <a class="el" href="of_events_8h.html#a66d9e7889b2000628b73192cb3a1372f">ofEvents.h</a>
 </li>
 <li>ofNotifyUpdate()
 : <a class="el" href="of_events_8cpp.html#a4b7f4e1f2a818e07abcc30b773f5d256">ofEvents.cpp</a>
 , <a class="el" href="of_events_8h.html#a4b7f4e1f2a818e07abcc30b773f5d256">ofEvents.h</a>
 </li>
 <li>ofNotifyWindowEntry()
-: <a class="el" href="of_events_8h.html#a5d3cb530b0ada0dddc2d6f2d870a4c37">ofEvents.h</a>
-, <a class="el" href="of_events_8cpp.html#a5d3cb530b0ada0dddc2d6f2d870a4c37">ofEvents.cpp</a>
+: <a class="el" href="of_events_8cpp.html#a5d3cb530b0ada0dddc2d6f2d870a4c37">ofEvents.cpp</a>
+, <a class="el" href="of_events_8h.html#a5d3cb530b0ada0dddc2d6f2d870a4c37">ofEvents.h</a>
 </li>
 <li>ofNotifyWindowResized()
 : <a class="el" href="of_events_8cpp.html#aeefd3c70e905e7b8001278e1dddcac93">ofEvents.cpp</a>
 , <a class="el" href="of_events_8h.html#aeefd3c70e905e7b8001278e1dddcac93">ofEvents.h</a>
 </li>
 <li>ofOrientationToDegrees()
-: <a class="el" href="of_graphics_8h.html#a6021c01064b53d531b82626c1e7478fc">ofGraphics.h</a>
-, <a class="el" href="of_graphics_8cpp.html#a6021c01064b53d531b82626c1e7478fc">ofGraphics.cpp</a>
+: <a class="el" href="of_graphics_8cpp.html#a6021c01064b53d531b82626c1e7478fc">ofGraphics.cpp</a>
+, <a class="el" href="of_graphics_8h.html#a6021c01064b53d531b82626c1e7478fc">ofGraphics.h</a>
+</li>
+<li>ofPixelFormatFromGstFormat()
+: <a class="el" href="of_gst_video_grabber_8cpp.html#a1381db915b92887846c4005ceef16156">ofGstVideoGrabber.cpp</a>
 </li>
 <li>ofPopMatrix()
-: <a class="el" href="of_graphics_8cpp.html#a72fb7d61d2c4dccbd5b73d9ae270d98b">ofGraphics.cpp</a>
-, <a class="el" href="of_graphics_8h.html#a72fb7d61d2c4dccbd5b73d9ae270d98b">ofGraphics.h</a>
+: <a class="el" href="of_graphics_8h.html#a72fb7d61d2c4dccbd5b73d9ae270d98b">ofGraphics.h</a>
+, <a class="el" href="of_graphics_8cpp.html#a72fb7d61d2c4dccbd5b73d9ae270d98b">ofGraphics.cpp</a>
 </li>
 <li>ofPopStyle()
 : <a class="el" href="of_graphics_8cpp.html#afb73a699845d394eb8aca21772d22ac2">ofGraphics.cpp</a>
 , <a class="el" href="of_graphics_8h.html#afb73a699845d394eb8aca21772d22ac2">ofGraphics.h</a>
 </li>
 <li>ofPopView()
-: <a class="el" href="of_graphics_8cpp.html#a2839f3526b16f01c4e06158d6eb00393">ofGraphics.cpp</a>
-, <a class="el" href="of_graphics_8h.html#a2839f3526b16f01c4e06158d6eb00393">ofGraphics.h</a>
+: <a class="el" href="of_graphics_8h.html#a2839f3526b16f01c4e06158d6eb00393">ofGraphics.h</a>
+, <a class="el" href="of_graphics_8cpp.html#a2839f3526b16f01c4e06158d6eb00393">ofGraphics.cpp</a>
 </li>
 <li>ofPushMatrix()
-: <a class="el" href="of_graphics_8h.html#a0c763071df1c6d7b7ef78b968c3c1846">ofGraphics.h</a>
-, <a class="el" href="of_graphics_8cpp.html#a0c763071df1c6d7b7ef78b968c3c1846">ofGraphics.cpp</a>
+: <a class="el" href="of_graphics_8cpp.html#a0c763071df1c6d7b7ef78b968c3c1846">ofGraphics.cpp</a>
+, <a class="el" href="of_graphics_8h.html#a0c763071df1c6d7b7ef78b968c3c1846">ofGraphics.h</a>
 </li>
 <li>ofPushStyle()
 : <a class="el" href="of_graphics_8cpp.html#a6e09db8026bfe44d1ed68e5b56603c17">ofGraphics.cpp</a>
 , <a class="el" href="of_graphics_8h.html#a6e09db8026bfe44d1ed68e5b56603c17">ofGraphics.h</a>
 </li>
 <li>ofPushView()
-: <a class="el" href="of_graphics_8h.html#a68017a9ee9223c29e2c87f13f98e4503">ofGraphics.h</a>
-, <a class="el" href="of_graphics_8cpp.html#a68017a9ee9223c29e2c87f13f98e4503">ofGraphics.cpp</a>
+: <a class="el" href="of_graphics_8cpp.html#a68017a9ee9223c29e2c87f13f98e4503">ofGraphics.cpp</a>
+, <a class="el" href="of_graphics_8h.html#a68017a9ee9223c29e2c87f13f98e4503">ofGraphics.h</a>
 </li>
 <li>ofRadToDeg()
-: <a class="el" href="of_math_8cpp.html#a7d02e72641780bca037f6c63f7b6e508">ofMath.cpp</a>
-, <a class="el" href="of_math_8h.html#a7d02e72641780bca037f6c63f7b6e508">ofMath.h</a>
+: <a class="el" href="of_math_8h.html#a7d02e72641780bca037f6c63f7b6e508">ofMath.h</a>
+, <a class="el" href="of_math_8cpp.html#a7d02e72641780bca037f6c63f7b6e508">ofMath.cpp</a>
 </li>
 <li>ofRandom()
-: <a class="el" href="of_math_8cpp.html#a216b84e8f3d48ac59fcd86c0c9d94a64">ofMath.cpp</a>
-, <a class="el" href="of_math_8h.html#ae93bfe2a2080f0e2a03df835e72c7521">ofMath.h</a>
+: <a class="el" href="of_math_8cpp.html#ae93bfe2a2080f0e2a03df835e72c7521">ofMath.cpp</a>
+, <a class="el" href="of_math_8h.html#a4f89011a70f981bab979cc82b9713f85">ofMath.h</a>
 </li>
 <li>ofRandomf()
 : <a class="el" href="of_math_8cpp.html#aea7a1685224b49b4949899d4b283af51">ofMath.cpp</a>
@@ -893,29 +1082,29 @@
 , <a class="el" href="of_math_8h.html#a9a9226ad2046591bf4aa5d2707ebba2f">ofMath.h</a>
 </li>
 <li>ofRect()
-: <a class="el" href="of_graphics_8h.html#a0ca9ec6a10421a180331cdaaab40e181">ofGraphics.h</a>
-, <a class="el" href="of_graphics_8cpp.html#a41e5fdef42e0eb1cd15aaf5f9479d5c3">ofGraphics.cpp</a>
-, <a class="el" href="of_graphics_8h.html#a41e5fdef42e0eb1cd15aaf5f9479d5c3">ofGraphics.h</a>
+: <a class="el" href="of_graphics_8cpp.html#a41e5fdef42e0eb1cd15aaf5f9479d5c3">ofGraphics.cpp</a>
+, <a class="el" href="of_graphics_8h.html#a0ca9ec6a10421a180331cdaaab40e181">ofGraphics.h</a>
+, <a class="el" href="of_graphics_8cpp.html#a994b1258f917100f23cee819979405d6">ofGraphics.cpp</a>
 </li>
 <li>ofRectRounded()
-: <a class="el" href="of_graphics_8h.html#afd4a14eee177afea236e175e6cc2a7c6">ofGraphics.h</a>
-, <a class="el" href="of_graphics_8cpp.html#afd4a14eee177afea236e175e6cc2a7c6">ofGraphics.cpp</a>
-, <a class="el" href="of_graphics_8h.html#ab1f77f677ced364375c6c6a4588c4057">ofGraphics.h</a>
+: <a class="el" href="of_graphics_8cpp.html#afd4a14eee177afea236e175e6cc2a7c6">ofGraphics.cpp</a>
+, <a class="el" href="of_graphics_8h.html#afd4a14eee177afea236e175e6cc2a7c6">ofGraphics.h</a>
+, <a class="el" href="of_graphics_8cpp.html#ab1f77f677ced364375c6c6a4588c4057">ofGraphics.cpp</a>
 </li>
 <li>ofRegisterDragEvents()
-: <a class="el" href="of_events_8h.html#a4713b8f09c12a9d8ceee456815384eaa">ofEvents.h</a>
+: <a class="el" href="of_events_8h.html#ab1062d54fb05e604805d35b1e5a43b23">ofEvents.h</a>
 </li>
 <li>ofRegisterGetMessages()
-: <a class="el" href="of_events_8h.html#a1d50eb3f9ea131df334def7b97262052">ofEvents.h</a>
+: <a class="el" href="of_events_8h.html#a7708c50603a2dcf8e5d8973327d0a596">ofEvents.h</a>
 </li>
 <li>ofRegisterKeyEvents()
-: <a class="el" href="of_events_8h.html#a4b4c1190eaecad88e191341979af9eac">ofEvents.h</a>
+: <a class="el" href="of_events_8h.html#a73e1d729cec3d3678c8f67caab7edd23">ofEvents.h</a>
 </li>
 <li>ofRegisterMouseEvents()
-: <a class="el" href="of_events_8h.html#aa1f1c58a1b16244ee844ded62d1fa095">ofEvents.h</a>
+: <a class="el" href="of_events_8h.html#a739527c2c5fca2da0ac7375cb5684316">ofEvents.h</a>
 </li>
 <li>ofRegisterTouchEvents()
-: <a class="el" href="of_events_8h.html#a544f34e5a88cd3a1bdbc321dfc625a15">ofEvents.h</a>
+: <a class="el" href="of_events_8h.html#a605cfbc58656c036b9f38a1b1d2784f1">ofEvents.h</a>
 </li>
 <li>ofRegisterURLNotification()
 : <a class="el" href="of_u_r_l_file_loader_8h.html#a7e374b24b8559702bc060ab71c29fe2e">ofURLFileLoader.h</a>
@@ -928,26 +1117,27 @@
 , <a class="el" href="of_u_r_l_file_loader_8h.html#afd2a31da593d20eb5f88e39281addc9c">ofURLFileLoader.h</a>
 </li>
 <li>ofRemoveListener()
-: <a class="el" href="of_event_utils_8h.html#a4e750c11825c889b69989df2aa304cec">ofEventUtils.h</a>
+: <a class="el" href="of_event_utils_8h.html#a6fcffba7ff95a4bf9ebfb31a3bb694b8">ofEventUtils.h</a>
 </li>
 <li>ofRemoveURLRequest()
 : <a class="el" href="of_u_r_l_file_loader_8cpp.html#a7fd0bfe54ea212ec613472e805760dc4">ofURLFileLoader.cpp</a>
 , <a class="el" href="of_u_r_l_file_loader_8h.html#a7fd0bfe54ea212ec613472e805760dc4">ofURLFileLoader.h</a>
 </li>
 <li>ofResetElapsedTimeCounter()
-: <a class="el" href="of_utils_8cpp.html#aea0bc115291cf9119ea1b9f5ac70ca56">ofUtils.cpp</a>
-, <a class="el" href="of_utils_8h.html#aea0bc115291cf9119ea1b9f5ac70ca56">ofUtils.h</a>
+: <a class="el" href="of_utils_8h.html#aea0bc115291cf9119ea1b9f5ac70ca56">ofUtils.h</a>
+, <a class="el" href="of_utils_8cpp.html#aea0bc115291cf9119ea1b9f5ac70ca56">ofUtils.cpp</a>
 </li>
 <li>ofRestoreMinMagFilters()
-: <a class="el" href="of_texture_8cpp.html#acb822a64ba1482a7f69cf4d7c1cb4d7c">ofTexture.cpp</a>
-, <a class="el" href="of_texture_8h.html#acb822a64ba1482a7f69cf4d7c1cb4d7c">ofTexture.h</a>
+: <a class="el" href="of_texture_8h.html#acb822a64ba1482a7f69cf4d7c1cb4d7c">ofTexture.h</a>
+, <a class="el" href="of_texture_8cpp.html#acb822a64ba1482a7f69cf4d7c1cb4d7c">ofTexture.cpp</a>
 </li>
 <li>ofRestoreTextureWrap()
-: <a class="el" href="of_texture_8cpp.html#aaee286a4bb9632c17544ae330eee8cea">ofTexture.cpp</a>
-, <a class="el" href="of_texture_8h.html#aaee286a4bb9632c17544ae330eee8cea">ofTexture.h</a>
+: <a class="el" href="of_texture_8h.html#aaee286a4bb9632c17544ae330eee8cea">ofTexture.h</a>
+, <a class="el" href="of_texture_8cpp.html#aaee286a4bb9632c17544ae330eee8cea">ofTexture.cpp</a>
 </li>
 <li>ofRotate()
-: <a class="el" href="of_graphics_8cpp.html#af731d6cc02492931cf2da415a5b5f11e">ofGraphics.cpp</a>
+: <a class="el" href="of_graphics_8h.html#afe3e6fef5775190decd800f75a214e92">ofGraphics.h</a>
+, <a class="el" href="of_graphics_8cpp.html#af731d6cc02492931cf2da415a5b5f11e">ofGraphics.cpp</a>
 , <a class="el" href="of_graphics_8h.html#af731d6cc02492931cf2da415a5b5f11e">ofGraphics.h</a>
 </li>
 <li>ofRotateX()
@@ -955,55 +1145,59 @@
 , <a class="el" href="of_graphics_8h.html#ac5a060b746c81b0b1d860dbca5a8ec8c">ofGraphics.h</a>
 </li>
 <li>ofRotateY()
-: <a class="el" href="of_graphics_8cpp.html#a4137b614c8727203accc8b94e423d91a">ofGraphics.cpp</a>
-, <a class="el" href="of_graphics_8h.html#a4137b614c8727203accc8b94e423d91a">ofGraphics.h</a>
+: <a class="el" href="of_graphics_8h.html#a4137b614c8727203accc8b94e423d91a">ofGraphics.h</a>
+, <a class="el" href="of_graphics_8cpp.html#a4137b614c8727203accc8b94e423d91a">ofGraphics.cpp</a>
 </li>
 <li>ofRotateZ()
 : <a class="el" href="of_graphics_8cpp.html#a5786f2c380cd20f0944d0fd2bea722a8">ofGraphics.cpp</a>
 , <a class="el" href="of_graphics_8h.html#a5786f2c380cd20f0944d0fd2bea722a8">ofGraphics.h</a>
 </li>
 <li>ofRunApp()
-: <a class="el" href="of_app_runner_8cpp.html#af89f854854e3e17081e4c947bb83f2b6">ofAppRunner.cpp</a>
+: <a class="el" href="of_app_runner_8cpp.html#af532809a23cc7d2f46ad6af75e299278">ofAppRunner.cpp</a>
 , <a class="el" href="of_app_runner_8h.html#af532809a23cc7d2f46ad6af75e299278">ofAppRunner.h</a>
-, <a class="el" href="of_app_runner_8cpp.html#af532809a23cc7d2f46ad6af75e299278">ofAppRunner.cpp</a>
+, <a class="el" href="of_app_runner_8cpp.html#af89f854854e3e17081e4c947bb83f2b6">ofAppRunner.cpp</a>
 </li>
 <li>ofSaveFrame()
-: <a class="el" href="of_utils_8cpp.html#aeae0d89876f81c5b4062b4a72ca76253">ofUtils.cpp</a>
-, <a class="el" href="of_utils_8h.html#aab3fb9d1d4dbd94705f8853d4288dbf0">ofUtils.h</a>
+: <a class="el" href="of_utils_8h.html#aab3fb9d1d4dbd94705f8853d4288dbf0">ofUtils.h</a>
+, <a class="el" href="of_utils_8cpp.html#aeae0d89876f81c5b4062b4a72ca76253">ofUtils.cpp</a>
 </li>
 <li>ofSaveImage()
-: <a class="el" href="of_image_8cpp.html#a25907f6de5c59f6e47f79791ceb45d87">ofImage.cpp</a>
+: <a class="el" href="of_image_8h.html#a078b405dd133ea0b28266fc8c7a1e8c6">ofImage.h</a>
+, <a class="el" href="of_image_8cpp.html#a7cc335de8c7d4d4731643dd57b50a3fd">ofImage.cpp</a>
 , <a class="el" href="of_image_8h.html#a082ed7689229b78e139bc33772a6a23e">ofImage.h</a>
+, <a class="el" href="of_image_8cpp.html#aa762b70c2505415fe4429ba89873f8c5">ofImage.cpp</a>
+, <a class="el" href="of_image_8h.html#a1ea6c7e2ef0baa2e1ed38face84fdf1b">ofImage.h</a>
+, <a class="el" href="of_image_8cpp.html#a0ae1b527a1661d2ee68e7683ac139148">ofImage.cpp</a>
+, <a class="el" href="of_image_8h.html#af76355a486069c65f0fb1fc6d3cf063c">ofImage.h</a>
 </li>
 <li>ofSaveScreen()
-: <a class="el" href="of_utils_8h.html#a6fff50ce3fcfcb18dc2543d99822d645">ofUtils.h</a>
-, <a class="el" href="of_utils_8cpp.html#a6fff50ce3fcfcb18dc2543d99822d645">ofUtils.cpp</a>
+: <a class="el" href="of_utils_8cpp.html#a6fff50ce3fcfcb18dc2543d99822d645">ofUtils.cpp</a>
+, <a class="el" href="of_utils_8h.html#a6fff50ce3fcfcb18dc2543d99822d645">ofUtils.h</a>
 </li>
 <li>ofSaveURLAsync()
 : <a class="el" href="of_u_r_l_file_loader_8h.html#a8775ed7718c1e74e6cc8807b869ce44d">ofURLFileLoader.h</a>
 , <a class="el" href="of_u_r_l_file_loader_8cpp.html#a8775ed7718c1e74e6cc8807b869ce44d">ofURLFileLoader.cpp</a>
 </li>
 <li>ofSaveURLTo()
-: <a class="el" href="of_u_r_l_file_loader_8h.html#ac5ef2e1c45ebf7030948c7a5426dd1c3">ofURLFileLoader.h</a>
-, <a class="el" href="of_u_r_l_file_loader_8cpp.html#ac5ef2e1c45ebf7030948c7a5426dd1c3">ofURLFileLoader.cpp</a>
+: <a class="el" href="of_u_r_l_file_loader_8cpp.html#ac5ef2e1c45ebf7030948c7a5426dd1c3">ofURLFileLoader.cpp</a>
+, <a class="el" href="of_u_r_l_file_loader_8h.html#ac5ef2e1c45ebf7030948c7a5426dd1c3">ofURLFileLoader.h</a>
 </li>
 <li>ofSaveViewport()
 : <a class="el" href="of_utils_8h.html#a4a664064ed1310da6b9e5c104ae53862">ofUtils.h</a>
 , <a class="el" href="of_utils_8cpp.html#a4a664064ed1310da6b9e5c104ae53862">ofUtils.cpp</a>
 </li>
 <li>ofScale()
-: <a class="el" href="of_graphics_8h.html#a8feef254ff98a5f70a4c48d669b228af">ofGraphics.h</a>
-, <a class="el" href="of_graphics_8cpp.html#af930795d3650b86c582d899c6633ae7e">ofGraphics.cpp</a>
+: <a class="el" href="of_graphics_8cpp.html#af930795d3650b86c582d899c6633ae7e">ofGraphics.cpp</a>
+, <a class="el" href="of_graphics_8h.html#a8feef254ff98a5f70a4c48d669b228af">ofGraphics.h</a>
 </li>
 <li>ofSeedRandom()
-: <a class="el" href="of_math_8h.html#a54f5c56b8cfc33bbc059aeb147d4bbef">ofMath.h</a>
-, <a class="el" href="of_math_8cpp.html#a0df526ceae8b4f80f169d6d3918540e5">ofMath.cpp</a>
+: <a class="el" href="of_math_8cpp.html#a54f5c56b8cfc33bbc059aeb147d4bbef">ofMath.cpp</a>
+, <a class="el" href="of_math_8h.html#a0df526ceae8b4f80f169d6d3918540e5">ofMath.h</a>
 </li>
 <li>ofSendMessage()
-: <a class="el" href="of_events_8cpp.html#a490426d882a9a31ea86f96fceb29aa22">ofEvents.cpp</a>
+: <a class="el" href="of_events_8cpp.html#a667ac66d9dd3fe5d0043a707a5f92159">ofEvents.cpp</a>
 , <a class="el" href="of_events_8h.html#a490426d882a9a31ea86f96fceb29aa22">ofEvents.h</a>
-, <a class="el" href="of_events_8cpp.html#a667ac66d9dd3fe5d0043a707a5f92159">ofEvents.cpp</a>
-, <a class="el" href="of_events_8h.html#a667ac66d9dd3fe5d0043a707a5f92159">ofEvents.h</a>
+, <a class="el" href="of_events_8cpp.html#a490426d882a9a31ea86f96fceb29aa22">ofEvents.cpp</a>
 </li>
 <li>ofSetAppPtr()
 : <a class="el" href="of_app_runner_8h.html#a7165451596d189b061eae4787bb4ec84">ofAppRunner.h</a>
@@ -1014,55 +1208,73 @@
 , <a class="el" href="of_graphics_8h.html#a519a4feeeeb6c0764abdab9e662c16b6">ofGraphics.h</a>
 </li>
 <li>ofSetBackgroundColor()
-: <a class="el" href="of_graphics_8h.html#afa9cad8b41e96533c7bbf8a32174fc2b">ofGraphics.h</a>
-, <a class="el" href="of_graphics_8cpp.html#a13cc72a9bded8be3fb68f9f4729cc3ff">ofGraphics.cpp</a>
-, <a class="el" href="of_graphics_8h.html#ad011f9151ceec976235fca248a22a722">ofGraphics.h</a>
+: <a class="el" href="of_graphics_8h.html#ad011f9151ceec976235fca248a22a722">ofGraphics.h</a>
 , <a class="el" href="of_graphics_8cpp.html#ad011f9151ceec976235fca248a22a722">ofGraphics.cpp</a>
+, <a class="el" href="of_graphics_8h.html#a3e508c99afcadce37317065d10ebfe11">ofGraphics.h</a>
+, <a class="el" href="of_graphics_8cpp.html#a13cc72a9bded8be3fb68f9f4729cc3ff">ofGraphics.cpp</a>
+, <a class="el" href="of_graphics_8h.html#afa9cad8b41e96533c7bbf8a32174fc2b">ofGraphics.h</a>
 </li>
 <li>ofSetBackgroundColorHex()
 : <a class="el" href="of_graphics_8cpp.html#a24d3d617f1ca4d0a03fa1bfa25db664c">ofGraphics.cpp</a>
 , <a class="el" href="of_graphics_8h.html#ac67fc47ba1ba94b6f379fe285c7bb534">ofGraphics.h</a>
 </li>
+<li>ofSetBoxResolution()
+: <a class="el" href="of3d_graphics_8cpp.html#a64f2c5649c2591e8fb035e11faf109c0">of3dGraphics.cpp</a>
+, <a class="el" href="of3d_graphics_8h.html#a861f991666ab44bbeb2cb703a18c8d1e">of3dGraphics.h</a>
+, <a class="el" href="of3d_graphics_8cpp.html#a861f991666ab44bbeb2cb703a18c8d1e">of3dGraphics.cpp</a>
+</li>
 <li>ofSetCircleResolution()
-: <a class="el" href="of_graphics_8cpp.html#a2bc6e23441a66d00f428dfd6beff8eba">ofGraphics.cpp</a>
-, <a class="el" href="of_graphics_8h.html#a2bc6e23441a66d00f428dfd6beff8eba">ofGraphics.h</a>
+: <a class="el" href="of_graphics_8h.html#a2bc6e23441a66d00f428dfd6beff8eba">ofGraphics.h</a>
+, <a class="el" href="of_graphics_8cpp.html#a2bc6e23441a66d00f428dfd6beff8eba">ofGraphics.cpp</a>
 </li>
 <li>ofSetColor()
-: <a class="el" href="of_graphics_8h.html#a6ab858e059a27466a832624bd3ebcee4">ofGraphics.h</a>
-, <a class="el" href="of_graphics_8cpp.html#abf32a6859916c39dfe5e4835c725fb6d">ofGraphics.cpp</a>
-, <a class="el" href="of_graphics_8h.html#ac492a05b947b4cb9910e8840c9ef2102">ofGraphics.h</a>
-, <a class="el" href="of_graphics_8cpp.html#ac492a05b947b4cb9910e8840c9ef2102">ofGraphics.cpp</a>
-, <a class="el" href="of_graphics_8h.html#a4b66e961a224f0efc86da661bc83c522">ofGraphics.h</a>
+: <a class="el" href="of_graphics_8h.html#abf32a6859916c39dfe5e4835c725fb6d">ofGraphics.h</a>
 , <a class="el" href="of_graphics_8cpp.html#af6955737513495badbadc723dc0eea33">ofGraphics.cpp</a>
-, <a class="el" href="of_graphics_8h.html#abf32a6859916c39dfe5e4835c725fb6d">ofGraphics.h</a>
+, <a class="el" href="of_graphics_8h.html#af6955737513495badbadc723dc0eea33">ofGraphics.h</a>
+, <a class="el" href="of_graphics_8cpp.html#ac492a05b947b4cb9910e8840c9ef2102">ofGraphics.cpp</a>
+, <a class="el" href="of_graphics_8h.html#a6ab858e059a27466a832624bd3ebcee4">ofGraphics.h</a>
+</li>
+<li>ofSetConeResolution()
+: <a class="el" href="of3d_graphics_8h.html#a83f93e69a0f38939b992960454f142f2">of3dGraphics.h</a>
+, <a class="el" href="of3d_graphics_8cpp.html#a0df88f1ef5ab02908131a57a9015a9ac">of3dGraphics.cpp</a>
 </li>
 <li>ofSetCoordHandedness()
 : <a class="el" href="of_graphics_8cpp.html#ad9ef1ea2ced1ba354ff486af1a32348a">ofGraphics.cpp</a>
 , <a class="el" href="of_graphics_8h.html#ad9ef1ea2ced1ba354ff486af1a32348a">ofGraphics.h</a>
 </li>
 <li>ofSetCurrentRenderer()
-: <a class="el" href="of_graphics_8cpp.html#a40ae986d8351d342ccab15d1d6dd2d60">ofGraphics.cpp</a>
-, <a class="el" href="of_graphics_8h.html#af2d7e3b10b28a0513bdf5925a7f2fb5e">ofGraphics.h</a>
+: <a class="el" href="of_graphics_8h.html#a59806a4b4ef865edd23c9ea56bbcce9d">ofGraphics.h</a>
+, <a class="el" href="of_graphics_8cpp.html#aa86681f722b71273e9088c32494e82cd">ofGraphics.cpp</a>
+, <a class="el" href="of_graphics_8h.html#ae6564645d91f2ce16d197bc59a1fe62f">ofGraphics.h</a>
+, <a class="el" href="of_graphics_8cpp.html#a6ec8b13ea8fa76ea7f3eb3cd3975b701">ofGraphics.cpp</a>
 </li>
 <li>ofSetCurveResolution()
 : <a class="el" href="of_graphics_8cpp.html#aa92b50be8af6262f9f5795f530c6ecbe">ofGraphics.cpp</a>
 , <a class="el" href="of_graphics_8h.html#aa92b50be8af6262f9f5795f530c6ecbe">ofGraphics.h</a>
 </li>
+<li>ofSetCylinderResolution()
+: <a class="el" href="of3d_graphics_8cpp.html#a5e2527218667821aca66ba3302ed0bb6">of3dGraphics.cpp</a>
+, <a class="el" href="of3d_graphics_8h.html#ae75b717062df3a9a777c7a4e2759afdf">of3dGraphics.h</a>
+</li>
 <li>ofSetDataPathRoot()
 : <a class="el" href="of_utils_8cpp.html#ae03274e04d163cc47463effa53a1d565">ofUtils.cpp</a>
 , <a class="el" href="of_utils_8h.html#a291ee9dd260f01969aa29e0d76d07295">ofUtils.h</a>
 </li>
+<li>ofSetDepthTest()
+: <a class="el" href="of_graphics_8cpp.html#a01ec3beb5e6e90035744cd8597a0d1f3">ofGraphics.cpp</a>
+, <a class="el" href="of_graphics_8h.html#a01ec3beb5e6e90035744cd8597a0d1f3">ofGraphics.h</a>
+</li>
 <li>ofSetDrawBitmapMode()
-: <a class="el" href="of_graphics_8h.html#ab7c21bff5f0eec37f9d73f93f83c61be">ofGraphics.h</a>
-, <a class="el" href="of_graphics_8cpp.html#ab7c21bff5f0eec37f9d73f93f83c61be">ofGraphics.cpp</a>
+: <a class="el" href="of_graphics_8cpp.html#ab7c21bff5f0eec37f9d73f93f83c61be">ofGraphics.cpp</a>
+, <a class="el" href="of_graphics_8h.html#ab7c21bff5f0eec37f9d73f93f83c61be">ofGraphics.h</a>
 </li>
 <li>ofSetEscapeQuitsApp()
 : <a class="el" href="of_events_8cpp.html#a70ed709d73aba34104d1e42205719aa0">ofEvents.cpp</a>
 , <a class="el" href="of_events_8h.html#a70ed709d73aba34104d1e42205719aa0">ofEvents.h</a>
 </li>
 <li>ofSetFrameRate()
-: <a class="el" href="of_app_runner_8cpp.html#a05ccd47836ca8951e53e9f636d64105d">ofAppRunner.cpp</a>
-, <a class="el" href="of_app_runner_8h.html#a05ccd47836ca8951e53e9f636d64105d">ofAppRunner.h</a>
+: <a class="el" href="of_app_runner_8h.html#a05ccd47836ca8951e53e9f636d64105d">ofAppRunner.h</a>
+, <a class="el" href="of_events_8cpp.html#a83d3478ee5c4bb1cc240966f9fb1a579">ofEvents.cpp</a>
 </li>
 <li>ofSetFullscreen()
 : <a class="el" href="of_app_runner_8cpp.html#a8b3b777aa5bf1283b109761a5b55938c">ofAppRunner.cpp</a>
@@ -1076,17 +1288,21 @@
 : <a class="el" href="of_graphics_8cpp.html#a6abdc4a3fa97f5c5f1022d1996bfdbff">ofGraphics.cpp</a>
 , <a class="el" href="of_graphics_8h.html#a6abdc4a3fa97f5c5f1022d1996bfdbff">ofGraphics.h</a>
 </li>
+<li>ofSetIcoSphereResolution()
+: <a class="el" href="of3d_graphics_8cpp.html#acd3b735afad0cbac2cea18fb9005a81e">of3dGraphics.cpp</a>
+, <a class="el" href="of3d_graphics_8h.html#acd3b735afad0cbac2cea18fb9005a81e">of3dGraphics.h</a>
+</li>
 <li>ofSetLineWidth()
 : <a class="el" href="of_graphics_8cpp.html#aa27a9ae972732c266fdbe578e680f716">ofGraphics.cpp</a>
 , <a class="el" href="of_graphics_8h.html#aa27a9ae972732c266fdbe578e680f716">ofGraphics.h</a>
 </li>
 <li>ofSetLoggerChannel()
-: <a class="el" href="of_log_8cpp.html#a669a0da89a1dbc61c35aeb5b02d5b21c">ofLog.cpp</a>
-, <a class="el" href="of_log_8h.html#a669a0da89a1dbc61c35aeb5b02d5b21c">ofLog.h</a>
+: <a class="el" href="of_log_8h.html#a669a0da89a1dbc61c35aeb5b02d5b21c">ofLog.h</a>
+, <a class="el" href="of_log_8cpp.html#a669a0da89a1dbc61c35aeb5b02d5b21c">ofLog.cpp</a>
 </li>
 <li>ofSetLogLevel()
-: <a class="el" href="of_log_8h.html#a18dbcd116b6de7fdd84a2699bbb935fa">ofLog.h</a>
-, <a class="el" href="of_log_8cpp.html#a18dbcd116b6de7fdd84a2699bbb935fa">ofLog.cpp</a>
+: <a class="el" href="of_log_8cpp.html#a7a1aca68c925a0cf024a14fc70fb7417">ofLog.cpp</a>
+, <a class="el" href="of_log_8h.html#a7a1aca68c925a0cf024a14fc70fb7417">ofLog.h</a>
 </li>
 <li>ofSetMatrixMode()
 : <a class="el" href="of_graphics_8cpp.html#aa86758f6e2479fbbdebc8b08d327aded">ofGraphics.cpp</a>
@@ -1097,8 +1313,16 @@
 , <a class="el" href="of_texture_8h.html#a1d8492e4ce3782bb7647e7b5a1f049bb">ofTexture.h</a>
 </li>
 <li>ofSetOrientation()
-: <a class="el" href="of_app_runner_8h.html#acec0e8bc26f96ca7bc9ee48fb0a6e80c">ofAppRunner.h</a>
-, <a class="el" href="of_app_runner_8cpp.html#acec0e8bc26f96ca7bc9ee48fb0a6e80c">ofAppRunner.cpp</a>
+: <a class="el" href="of_app_runner_8cpp.html#aab3da21f71ec80a2c678d4782850e93f">ofAppRunner.cpp</a>
+, <a class="el" href="of_app_runner_8h.html#a7c539c69e5ba83d9f5ca331b88f2c0af">ofAppRunner.h</a>
+</li>
+<li>ofSetPixelStorei()
+: <a class="el" href="of_g_l_utils_8cpp.html#ab67523f45c66cb2e38b61b2837033b06">ofGLUtils.cpp</a>
+, <a class="el" href="of_g_l_utils_8h.html#ab67523f45c66cb2e38b61b2837033b06">ofGLUtils.h</a>
+</li>
+<li>ofSetPlaneResolution()
+: <a class="el" href="of3d_graphics_8cpp.html#a18e69981f51d49f4fd2f7d6b30e4e060">of3dGraphics.cpp</a>
+, <a class="el" href="of3d_graphics_8h.html#a18e69981f51d49f4fd2f7d6b30e4e060">of3dGraphics.h</a>
 </li>
 <li>ofSetPolyMode()
 : <a class="el" href="of_graphics_8cpp.html#ab9798e5e519b1d09351a602ded3468bd">ofGraphics.cpp</a>
@@ -1113,80 +1337,82 @@
 , <a class="el" href="of_light_8h.html#a9991c3bdf3e8822190a7c5c5b615a587">ofLight.h</a>
 </li>
 <li>ofSetSphereResolution()
-: <a class="el" href="of_graphics_8cpp.html#aa767c995f535028f7e1eba514a977519">ofGraphics.cpp</a>
-, <a class="el" href="of_graphics_8h.html#aa767c995f535028f7e1eba514a977519">ofGraphics.h</a>
+: <a class="el" href="of3d_graphics_8cpp.html#aa767c995f535028f7e1eba514a977519">of3dGraphics.cpp</a>
+, <a class="el" href="of3d_graphics_8h.html#aa767c995f535028f7e1eba514a977519">of3dGraphics.h</a>
 </li>
 <li>ofSetStyle()
-: <a class="el" href="of_graphics_8cpp.html#a79446443c35a5544832f5064bf21a8b9">ofGraphics.cpp</a>
-, <a class="el" href="of_graphics_8h.html#a79446443c35a5544832f5064bf21a8b9">ofGraphics.h</a>
+: <a class="el" href="of_graphics_8h.html#a79446443c35a5544832f5064bf21a8b9">ofGraphics.h</a>
+, <a class="el" href="of_graphics_8cpp.html#a79446443c35a5544832f5064bf21a8b9">ofGraphics.cpp</a>
 </li>
 <li>ofSetTextureWrap()
 : <a class="el" href="of_texture_8cpp.html#a4804b412c789b866234f3049de856883">ofTexture.cpp</a>
 , <a class="el" href="of_texture_8h.html#a8bb3844b5e80005c2ac2fea35a00365f">ofTexture.h</a>
 </li>
 <li>ofSetupGraphicDefaults()
-: <a class="el" href="of_graphics_8cpp.html#a3bbf989ce19e74eaef8dfd449476faac">ofGraphics.cpp</a>
-, <a class="el" href="of_graphics_8h.html#a3bbf989ce19e74eaef8dfd449476faac">ofGraphics.h</a>
+: <a class="el" href="of_graphics_8h.html#a3bbf989ce19e74eaef8dfd449476faac">ofGraphics.h</a>
+, <a class="el" href="of_graphics_8cpp.html#a3bbf989ce19e74eaef8dfd449476faac">ofGraphics.cpp</a>
 </li>
 <li>ofSetupOpenGL()
-: <a class="el" href="of_app_runner_8cpp.html#a61769ac0b23361b70da289893d61a5e2">ofAppRunner.cpp</a>
-, <a class="el" href="of_app_runner_8h.html#a511d8fda301e560a5ab40a4d5eee3de7">ofAppRunner.h</a>
-, <a class="el" href="of_app_runner_8cpp.html#af9d3c7c6b70ac1d8a63781e9204f9672">ofAppRunner.cpp</a>
-, <a class="el" href="of_app_runner_8h.html#a61769ac0b23361b70da289893d61a5e2">ofAppRunner.h</a>
+: <a class="el" href="of_app_runner_8h.html#af9d3c7c6b70ac1d8a63781e9204f9672">ofAppRunner.h</a>
 , <a class="el" href="of_app_runner_8cpp.html#a511d8fda301e560a5ab40a4d5eee3de7">ofAppRunner.cpp</a>
 </li>
 <li>ofSetupScreen()
-: <a class="el" href="of_graphics_8cpp.html#aff5f29e5fca99e6c6a291bf0d2e3b49a">ofGraphics.cpp</a>
-, <a class="el" href="of_graphics_8h.html#aff5f29e5fca99e6c6a291bf0d2e3b49a">ofGraphics.h</a>
+: <a class="el" href="of_graphics_8h.html#aff5f29e5fca99e6c6a291bf0d2e3b49a">ofGraphics.h</a>
+, <a class="el" href="of_graphics_8cpp.html#aff5f29e5fca99e6c6a291bf0d2e3b49a">ofGraphics.cpp</a>
 </li>
 <li>ofSetupScreenOrtho()
-: <a class="el" href="of_graphics_8h.html#a58b64d97b51cf94b1a5e212e9db491cd">ofGraphics.h</a>
+: <a class="el" href="of_graphics_8h.html#a1696ac939e6e7f22b3149065928d66fc">ofGraphics.h</a>
 , <a class="el" href="of_graphics_8cpp.html#afccdbc0028f6f149731d8c130be7cac6">ofGraphics.cpp</a>
 </li>
 <li>ofSetupScreenPerspective()
-: <a class="el" href="of_graphics_8cpp.html#ab1be6a856b84f22aa64ad2a070d442ae">ofGraphics.cpp</a>
-, <a class="el" href="of_graphics_8h.html#a03cfd0494bd86be61c553d3df46d9928">ofGraphics.h</a>
+: <a class="el" href="of_graphics_8h.html#a9621d29bc74e236026295fde55f5d094">ofGraphics.h</a>
+, <a class="el" href="of_graphics_8cpp.html#a9d15135bfbb10dfcc39e8b636a372c84">ofGraphics.cpp</a>
 </li>
 <li>ofSetVerticalSync()
 : <a class="el" href="of_app_runner_8cpp.html#afb7dd1ecdd02fa8aceb9d8158e0a4d46">ofAppRunner.cpp</a>
 , <a class="el" href="of_app_runner_8h.html#afb7dd1ecdd02fa8aceb9d8158e0a4d46">ofAppRunner.h</a>
 </li>
 <li>ofSetWindowPosition()
-: <a class="el" href="of_app_runner_8cpp.html#a88bc1b7781188142c9aeb0828f685b7e">ofAppRunner.cpp</a>
-, <a class="el" href="of_app_runner_8h.html#a88bc1b7781188142c9aeb0828f685b7e">ofAppRunner.h</a>
+: <a class="el" href="of_app_runner_8h.html#a88bc1b7781188142c9aeb0828f685b7e">ofAppRunner.h</a>
+, <a class="el" href="of_app_runner_8cpp.html#a88bc1b7781188142c9aeb0828f685b7e">ofAppRunner.cpp</a>
 </li>
 <li>ofSetWindowShape()
-: <a class="el" href="of_app_runner_8cpp.html#a72e76aeeb21937a7ff129711d103e680">ofAppRunner.cpp</a>
-, <a class="el" href="of_app_runner_8h.html#a72e76aeeb21937a7ff129711d103e680">ofAppRunner.h</a>
+: <a class="el" href="of_app_runner_8h.html#a72e76aeeb21937a7ff129711d103e680">ofAppRunner.h</a>
+, <a class="el" href="of_app_runner_8cpp.html#a72e76aeeb21937a7ff129711d103e680">ofAppRunner.cpp</a>
 </li>
 <li>ofSetWindowTitle()
 : <a class="el" href="of_app_runner_8cpp.html#aceb06b5dbf68c6e94878401190e485b2">ofAppRunner.cpp</a>
 , <a class="el" href="of_app_runner_8h.html#aceb06b5dbf68c6e94878401190e485b2">ofAppRunner.h</a>
 </li>
+<li>ofSetWorkingDirectoryToDefault()
+: <a class="el" href="of_utils_8cpp.html#a1d2223607b65d45e548b331223e7277f">ofUtils.cpp</a>
+, <a class="el" href="of_utils_8h.html#a1d2223607b65d45e548b331223e7277f">ofUtils.h</a>
+</li>
 <li>ofShowCursor()
-: <a class="el" href="of_app_runner_8cpp.html#afbfcb3ab84f840d3c668ad33cd0cc019">ofAppRunner.cpp</a>
-, <a class="el" href="of_app_runner_8h.html#afbfcb3ab84f840d3c668ad33cd0cc019">ofAppRunner.h</a>
+: <a class="el" href="of_app_runner_8h.html#afbfcb3ab84f840d3c668ad33cd0cc019">ofAppRunner.h</a>
+, <a class="el" href="of_app_runner_8cpp.html#afbfcb3ab84f840d3c668ad33cd0cc019">ofAppRunner.cpp</a>
 </li>
 <li>ofSign()
-: <a class="el" href="of_math_8h.html#a7f39494418fc89efee2378ec2ac989f8">ofMath.h</a>
-, <a class="el" href="of_math_8cpp.html#a7f39494418fc89efee2378ec2ac989f8">ofMath.cpp</a>
+: <a class="el" href="of_math_8cpp.html#a7f39494418fc89efee2378ec2ac989f8">ofMath.cpp</a>
+, <a class="el" href="of_math_8h.html#a7f39494418fc89efee2378ec2ac989f8">ofMath.h</a>
 </li>
 <li>ofSignedNoise()
-: <a class="el" href="of_math_8h.html#a95e125e2fb6e73c3fcda31baebef2c69">ofMath.h</a>
-, <a class="el" href="of_math_8cpp.html#a95e125e2fb6e73c3fcda31baebef2c69">ofMath.cpp</a>
-, <a class="el" href="of_math_8h.html#a29682c90a71c5931f30e855b35014b4c">ofMath.h</a>
+: <a class="el" href="of_math_8h.html#a29682c90a71c5931f30e855b35014b4c">ofMath.h</a>
 , <a class="el" href="of_math_8cpp.html#a16196baebc57f663f27f9aff40c518e3">ofMath.cpp</a>
+, <a class="el" href="of_math_8h.html#a95e125e2fb6e73c3fcda31baebef2c69">ofMath.h</a>
+, <a class="el" href="of_math_8cpp.html#a95e125e2fb6e73c3fcda31baebef2c69">ofMath.cpp</a>
+, <a class="el" href="of_math_8h.html#a7850c901fdde189ca52645017fa55c4b">ofMath.h</a>
 </li>
 <li>ofSleepMillis()
-: <a class="el" href="of_app_runner_8cpp.html#a58fb7f5c12bf9d507f09da1a41041312">ofAppRunner.cpp</a>
-, <a class="el" href="of_app_runner_8h.html#a58fb7f5c12bf9d507f09da1a41041312">ofAppRunner.h</a>
+: <a class="el" href="of_app_runner_8h.html#a58fb7f5c12bf9d507f09da1a41041312">ofAppRunner.h</a>
+, <a class="el" href="of_app_runner_8cpp.html#a58fb7f5c12bf9d507f09da1a41041312">ofAppRunner.cpp</a>
 </li>
 <li>ofSort()
 : <a class="el" href="of_utils_8h.html#add54b6eb9cc810f885e7b89b6388dba7">ofUtils.h</a>
 </li>
 <li>ofSoundGetSpectrum()
-: <a class="el" href="of_sound_player_8h.html#aac163678c22b1b80addb29ad6bf62ebb">ofSoundPlayer.h</a>
-, <a class="el" href="of_sound_player_8cpp.html#aac163678c22b1b80addb29ad6bf62ebb">ofSoundPlayer.cpp</a>
+: <a class="el" href="of_sound_player_8cpp.html#aac163678c22b1b80addb29ad6bf62ebb">ofSoundPlayer.cpp</a>
+, <a class="el" href="of_sound_player_8h.html#aac163678c22b1b80addb29ad6bf62ebb">ofSoundPlayer.h</a>
 </li>
 <li>ofSoundSetVolume()
 : <a class="el" href="of_sound_player_8cpp.html#abc2ae62ed625b27bba334d3123cb6e89">ofSoundPlayer.cpp</a>
@@ -1205,52 +1431,55 @@
 , <a class="el" href="of_sound_stream_8cpp.html#a9681a1a9df2e76b3bc178e509aebeb2f">ofSoundStream.cpp</a>
 </li>
 <li>ofSoundStreamListDevices()
-: <a class="el" href="of_sound_stream_8h.html#a57a71c540e5af2821bdffe33377565b3">ofSoundStream.h</a>
-, <a class="el" href="of_sound_stream_8cpp.html#a57a71c540e5af2821bdffe33377565b3">ofSoundStream.cpp</a>
+: <a class="el" href="of_sound_stream_8cpp.html#a57a71c540e5af2821bdffe33377565b3">ofSoundStream.cpp</a>
+, <a class="el" href="of_sound_stream_8h.html#a57a71c540e5af2821bdffe33377565b3">ofSoundStream.h</a>
 </li>
 <li>ofSoundStreamSetup()
-: <a class="el" href="of_sound_stream_8cpp.html#a0c56700090e9220c980d65388cd32945">ofSoundStream.cpp</a>
+: <a class="el" href="of_sound_stream_8h.html#a9cc30053279fe0af218834ef4f5216b4">ofSoundStream.h</a>
+, <a class="el" href="of_sound_stream_8cpp.html#a9cc30053279fe0af218834ef4f5216b4">ofSoundStream.cpp</a>
 , <a class="el" href="of_sound_stream_8h.html#a0c56700090e9220c980d65388cd32945">ofSoundStream.h</a>
 , <a class="el" href="of_sound_stream_8cpp.html#a80beb9b0117e2ce24c6a54cf2404185c">ofSoundStream.cpp</a>
-, <a class="el" href="of_sound_stream_8h.html#a9cc30053279fe0af218834ef4f5216b4">ofSoundStream.h</a>
-, <a class="el" href="of_sound_stream_8cpp.html#a9cc30053279fe0af218834ef4f5216b4">ofSoundStream.cpp</a>
+, <a class="el" href="of_sound_stream_8h.html#a0c047cfad99e651f9338b2c01e9f35af">ofSoundStream.h</a>
+, <a class="el" href="of_sound_stream_8cpp.html#a0c56700090e9220c980d65388cd32945">ofSoundStream.cpp</a>
 </li>
 <li>ofSoundStreamStart()
-: <a class="el" href="of_sound_stream_8h.html#ad4409c1a9f960b81d21c2488e6bb2658">ofSoundStream.h</a>
-, <a class="el" href="of_sound_stream_8cpp.html#ad4409c1a9f960b81d21c2488e6bb2658">ofSoundStream.cpp</a>
+: <a class="el" href="of_sound_stream_8cpp.html#ad4409c1a9f960b81d21c2488e6bb2658">ofSoundStream.cpp</a>
+, <a class="el" href="of_sound_stream_8h.html#ad4409c1a9f960b81d21c2488e6bb2658">ofSoundStream.h</a>
 </li>
 <li>ofSoundStreamStop()
 : <a class="el" href="of_sound_stream_8cpp.html#a05edcafc2e2e3c07edaf1dd27a470126">ofSoundStream.cpp</a>
 , <a class="el" href="of_sound_stream_8h.html#a05edcafc2e2e3c07edaf1dd27a470126">ofSoundStream.h</a>
 </li>
 <li>ofSoundUpdate()
-: <a class="el" href="of_sound_player_8cpp.html#a83ae465cfdff3b3bc4fbb3d814feadf3">ofSoundPlayer.cpp</a>
-, <a class="el" href="of_sound_player_8h.html#a83ae465cfdff3b3bc4fbb3d814feadf3">ofSoundPlayer.h</a>
+: <a class="el" href="of_sound_player_8h.html#a83ae465cfdff3b3bc4fbb3d814feadf3">ofSoundPlayer.h</a>
+, <a class="el" href="of_sound_player_8cpp.html#a83ae465cfdff3b3bc4fbb3d814feadf3">ofSoundPlayer.cpp</a>
 </li>
 <li>ofSphere()
-: <a class="el" href="of_graphics_8cpp.html#a6d5e181690ba48905c2353f36e5b05c7">ofGraphics.cpp</a>
-, <a class="el" href="of_graphics_8h.html#a6d5e181690ba48905c2353f36e5b05c7">ofGraphics.h</a>
-, <a class="el" href="of_graphics_8cpp.html#a677809831e62d9222a0a98d1e0595233">ofGraphics.cpp</a>
-, <a class="el" href="of_graphics_8h.html#a677809831e62d9222a0a98d1e0595233">ofGraphics.h</a>
-, <a class="el" href="of_graphics_8cpp.html#af2e33027d7461d2eda01a1b957a067fb">ofGraphics.cpp</a>
-, <a class="el" href="of_graphics_8h.html#a13e2253ccfcdd10d6125868dae1ba08a">ofGraphics.h</a>
-, <a class="el" href="of_graphics_8cpp.html#a13e2253ccfcdd10d6125868dae1ba08a">ofGraphics.cpp</a>
+: <a class="el" href="of3d_graphics_8cpp.html#a13e2253ccfcdd10d6125868dae1ba08a">of3dGraphics.cpp</a>
 </li>
 <li>ofSplitString()
 : <a class="el" href="of_utils_8cpp.html#a98dd60cdd03981911102688dd6f1662d">ofUtils.cpp</a>
 , <a class="el" href="of_utils_8h.html#ab145673fc8b58076ed7a55eb26911a08">ofUtils.h</a>
 </li>
+<li>ofStopURLLoader()
+: <a class="el" href="of_app_runner_8cpp.html#ae4bb67c141481d1d14f9125e5b0ffc20">ofAppRunner.cpp</a>
+, <a class="el" href="of_u_r_l_file_loader_8cpp.html#ae4bb67c141481d1d14f9125e5b0ffc20">ofURLFileLoader.cpp</a>
+</li>
 <li>ofStringReplace()
-: <a class="el" href="of_utils_8cpp.html#a113181215ce9fb80d06b60f9ae09e659">ofUtils.cpp</a>
-, <a class="el" href="of_utils_8h.html#a113181215ce9fb80d06b60f9ae09e659">ofUtils.h</a>
+: <a class="el" href="of_utils_8h.html#a113181215ce9fb80d06b60f9ae09e659">ofUtils.h</a>
+, <a class="el" href="of_utils_8cpp.html#a113181215ce9fb80d06b60f9ae09e659">ofUtils.cpp</a>
+</li>
+<li>ofStringTimesInString()
+: <a class="el" href="of_utils_8h.html#aee802a4f063ae9066d25baa84d9502e1">ofUtils.h</a>
+, <a class="el" href="of_utils_8cpp.html#aee802a4f063ae9066d25baa84d9502e1">ofUtils.cpp</a>
 </li>
 <li>ofSystem()
 : <a class="el" href="of_utils_8cpp.html#a8469f57a08232f84e0f8cad84aa334c6">ofUtils.cpp</a>
 , <a class="el" href="of_utils_8h.html#a8469f57a08232f84e0f8cad84aa334c6">ofUtils.h</a>
 </li>
 <li>ofSystemAlertDialog()
-: <a class="el" href="of_system_utils_8cpp.html#af5a9f8b8d9fffde3fadbb5fd000598d1">ofSystemUtils.cpp</a>
-, <a class="el" href="of_system_utils_8h.html#af5a9f8b8d9fffde3fadbb5fd000598d1">ofSystemUtils.h</a>
+: <a class="el" href="of_system_utils_8h.html#af5a9f8b8d9fffde3fadbb5fd000598d1">ofSystemUtils.h</a>
+, <a class="el" href="of_system_utils_8cpp.html#af5a9f8b8d9fffde3fadbb5fd000598d1">ofSystemUtils.cpp</a>
 </li>
 <li>ofSystemLoadDialog()
 : <a class="el" href="of_system_utils_8cpp.html#a75562c27b6f9273d8497f9a16317bd77">ofSystemUtils.cpp</a>
@@ -1265,18 +1494,16 @@
 , <a class="el" href="of_system_utils_8h.html#ac1d706e0db9670eb9a0febd2b3b5cf7b">ofSystemUtils.h</a>
 </li>
 <li>ofToBinary()
-: <a class="el" href="of_utils_8h.html#a8ca987c0317c097a52c74d16fac874cf">ofUtils.h</a>
+: <a class="el" href="of_utils_8h.html#a34178745620084ba8450a8b4f2ef0dba">ofUtils.h</a>
 , <a class="el" href="of_utils_8cpp.html#a8ca987c0317c097a52c74d16fac874cf">ofUtils.cpp</a>
-, <a class="el" href="of_utils_8h.html#a8faf52968694f975c39c45fab82aa0bc">ofUtils.h</a>
-, <a class="el" href="of_utils_8cpp.html#a34178745620084ba8450a8b4f2ef0dba">ofUtils.cpp</a>
 </li>
 <li>ofToBool()
 : <a class="el" href="of_utils_8h.html#acd94e88f1393f0a00e4e6a3c85d88433">ofUtils.h</a>
 , <a class="el" href="of_utils_8cpp.html#acd94e88f1393f0a00e4e6a3c85d88433">ofUtils.cpp</a>
 </li>
 <li>ofToChar()
-: <a class="el" href="of_utils_8h.html#a4b1ca14d38d0fd9f224de0d9c7c4df80">ofUtils.h</a>
-, <a class="el" href="of_utils_8cpp.html#a4b1ca14d38d0fd9f224de0d9c7c4df80">ofUtils.cpp</a>
+: <a class="el" href="of_utils_8cpp.html#a4b1ca14d38d0fd9f224de0d9c7c4df80">ofUtils.cpp</a>
+, <a class="el" href="of_utils_8h.html#a4b1ca14d38d0fd9f224de0d9c7c4df80">ofUtils.h</a>
 </li>
 <li>ofToDataPath()
 : <a class="el" href="of_utils_8cpp.html#ab63c4765a81958e1573817738c684bba">ofUtils.cpp</a>
@@ -1287,56 +1514,60 @@
 , <a class="el" href="of_utils_8cpp.html#a508566c98064b13201ba05760d71d110">ofUtils.cpp</a>
 </li>
 <li>ofToFloat()
-: <a class="el" href="of_utils_8cpp.html#a9b92372035fbb1582c8d8a4fc0bcb132">ofUtils.cpp</a>
-, <a class="el" href="of_utils_8h.html#a9b92372035fbb1582c8d8a4fc0bcb132">ofUtils.h</a>
+: <a class="el" href="of_utils_8h.html#a9b92372035fbb1582c8d8a4fc0bcb132">ofUtils.h</a>
+, <a class="el" href="of_utils_8cpp.html#a9b92372035fbb1582c8d8a4fc0bcb132">ofUtils.cpp</a>
 </li>
 <li>ofToggleFullscreen()
-: <a class="el" href="of_app_runner_8cpp.html#afee3042f322f35b3bcd1d82031037283">ofAppRunner.cpp</a>
-, <a class="el" href="of_app_runner_8h.html#afee3042f322f35b3bcd1d82031037283">ofAppRunner.h</a>
+: <a class="el" href="of_app_runner_8h.html#afee3042f322f35b3bcd1d82031037283">ofAppRunner.h</a>
+, <a class="el" href="of_app_runner_8cpp.html#afee3042f322f35b3bcd1d82031037283">ofAppRunner.cpp</a>
 </li>
 <li>ofToHex()
-: <a class="el" href="of_utils_8h.html#ae89db4d890bd5857bfb9fc3f7934af0f">ofUtils.h</a>
-, <a class="el" href="of_utils_8cpp.html#ad1c1a5e4460f87bfd46eae246d5dad18">ofUtils.cpp</a>
-, <a class="el" href="of_utils_8h.html#aaaebd3cb263c8e3da496a9c5e243e7fa">ofUtils.h</a>
+: <a class="el" href="of_utils_8h.html#aaaebd3cb263c8e3da496a9c5e243e7fa">ofUtils.h</a>
 , <a class="el" href="of_utils_8cpp.html#ae89db4d890bd5857bfb9fc3f7934af0f">ofUtils.cpp</a>
+, <a class="el" href="of_utils_8h.html#ae89db4d890bd5857bfb9fc3f7934af0f">ofUtils.h</a>
+, <a class="el" href="of_utils_8cpp.html#ad1c1a5e4460f87bfd46eae246d5dad18">ofUtils.cpp</a>
 </li>
 <li>ofToInt()
 : <a class="el" href="of_utils_8cpp.html#a02ff3334da0e43587cc19190433fa77b">ofUtils.cpp</a>
 , <a class="el" href="of_utils_8h.html#a02ff3334da0e43587cc19190433fa77b">ofUtils.h</a>
 </li>
 <li>ofToLower()
-: <a class="el" href="of_utils_8cpp.html#a92c303a15a7649f987b8dce1e5eec26c">ofUtils.cpp</a>
-, <a class="el" href="of_utils_8h.html#a92c303a15a7649f987b8dce1e5eec26c">ofUtils.h</a>
+: <a class="el" href="of_utils_8h.html#a92c303a15a7649f987b8dce1e5eec26c">ofUtils.h</a>
+, <a class="el" href="of_utils_8cpp.html#a92c303a15a7649f987b8dce1e5eec26c">ofUtils.cpp</a>
 </li>
 <li>ofToString()
-: <a class="el" href="of_utils_8h.html#ad8546950ade203f82e532c8222fcf5a4">ofUtils.h</a>
+: <a class="el" href="of_utils_8h.html#aa1bef13b6ce48c7e3ef0c43caac92f87">ofUtils.h</a>
 </li>
 <li>ofToUpper()
 : <a class="el" href="of_utils_8cpp.html#ac90c47cb2710aa90def41ddef75d5adf">ofUtils.cpp</a>
 , <a class="el" href="of_utils_8h.html#ac90c47cb2710aa90def41ddef75d5adf">ofUtils.h</a>
 </li>
 <li>ofTranslate()
-: <a class="el" href="of_graphics_8cpp.html#af8406ae299b6ddfe7c4885eefae8c48a">ofGraphics.cpp</a>
-, <a class="el" href="of_graphics_8h.html#a7b51429deac71536624b02f377e412f5">ofGraphics.h</a>
+: <a class="el" href="of_graphics_8h.html#a7b51429deac71536624b02f377e412f5">ofGraphics.h</a>
+, <a class="el" href="of_graphics_8cpp.html#afade63126a54cef55aac8bd41748e05f">ofGraphics.cpp</a>
+, <a class="el" href="of_graphics_8h.html#af8406ae299b6ddfe7c4885eefae8c48a">ofGraphics.h</a>
+, <a class="el" href="of_graphics_8cpp.html#af8406ae299b6ddfe7c4885eefae8c48a">ofGraphics.cpp</a>
 </li>
 <li>ofTriangle()
-: <a class="el" href="of_graphics_8cpp.html#a905c399f74eaf561028b2b28e19a3dfa">ofGraphics.cpp</a>
+: <a class="el" href="of_graphics_8h.html#a67e825427915c4736cdf3a2e2f73cfe5">ofGraphics.h</a>
+, <a class="el" href="of_graphics_8cpp.html#af339ec5ece01a864124a3c091cf363fc">ofGraphics.cpp</a>
 , <a class="el" href="of_graphics_8h.html#af339ec5ece01a864124a3c091cf363fc">ofGraphics.h</a>
+, <a class="el" href="of_graphics_8cpp.html#a905c399f74eaf561028b2b28e19a3dfa">ofGraphics.cpp</a>
 </li>
 <li>ofUnregisterDragEvents()
-: <a class="el" href="of_events_8h.html#a4ae358fbe23b50305dcd0a2db00b6d25">ofEvents.h</a>
+: <a class="el" href="of_events_8h.html#a1becdb667da5250c4f9104958204b2a4">ofEvents.h</a>
 </li>
 <li>ofUnregisterGetMessages()
-: <a class="el" href="of_events_8h.html#a21b40c5f707eb0da47115e111762c4a4">ofEvents.h</a>
+: <a class="el" href="of_events_8h.html#aeffc80f44dd6fbc2fb04c85e46c62b44">ofEvents.h</a>
 </li>
 <li>ofUnregisterKeyEvents()
-: <a class="el" href="of_events_8h.html#a13bf0da65f3efc18f3e8d9259ca53499">ofEvents.h</a>
+: <a class="el" href="of_events_8h.html#a1cdd22fb4b625ba7dbbf3445ac748f6b">ofEvents.h</a>
 </li>
 <li>ofUnregisterMouseEvents()
-: <a class="el" href="of_events_8h.html#a0d92bedd931367224435de8c7a386da5">ofEvents.h</a>
+: <a class="el" href="of_events_8h.html#a02798981b6f5dad9c46556ae1019a747">ofEvents.h</a>
 </li>
 <li>ofUnregisterTouchEvents()
-: <a class="el" href="of_events_8h.html#aabe748f3e24b303cce65be34e53ddd57">ofEvents.h</a>
+: <a class="el" href="of_events_8h.html#a3ca22957c68e9fdada9b812c1c2f9f16">ofEvents.h</a>
 </li>
 <li>ofUnregisterURLNotification()
 : <a class="el" href="of_u_r_l_file_loader_8h.html#ac2a1c05a709841b7683795f6c050f62f">ofURLFileLoader.h</a>
@@ -1346,71 +1577,82 @@
 , <a class="el" href="of_u_r_l_file_loader_8h.html#a1aaf6e1513bdf2f7a30dd1e6dd5a927c">ofURLFileLoader.h</a>
 </li>
 <li>ofVAArgsToString()
-: <a class="el" href="of_utils_8h.html#a666d0d4cc9f1781386de7a678618b35e">ofUtils.h</a>
+: <a class="el" href="of_utils_8cpp.html#a666d0d4cc9f1781386de7a678618b35e">ofUtils.cpp</a>
+, <a class="el" href="of_utils_8h.html#a63462eb8758cd1ebf85491c8050f8bb1">ofUtils.h</a>
 , <a class="el" href="of_utils_8cpp.html#a63462eb8758cd1ebf85491c8050f8bb1">ofUtils.cpp</a>
 </li>
 <li>ofVertex()
-: <a class="el" href="of_graphics_8cpp.html#ac172be5d25d76f28961d8419c7b4a07b">ofGraphics.cpp</a>
-, <a class="el" href="of_graphics_8h.html#a9b19b7c58761f931c5bd72e9fdbf27c7">ofGraphics.h</a>
+: <a class="el" href="of_graphics_8h.html#ac172be5d25d76f28961d8419c7b4a07b">ofGraphics.h</a>
 , <a class="el" href="of_graphics_8cpp.html#a9b19b7c58761f931c5bd72e9fdbf27c7">ofGraphics.cpp</a>
+, <a class="el" href="of_graphics_8h.html#a9b19b7c58761f931c5bd72e9fdbf27c7">ofGraphics.h</a>
+, <a class="el" href="of_graphics_8cpp.html#a66ca0f76c8baf52d86bb241e909f632a">ofGraphics.cpp</a>
 , <a class="el" href="of_graphics_8h.html#a66ca0f76c8baf52d86bb241e909f632a">ofGraphics.h</a>
 </li>
-<li>ofVertexes()
-: <a class="el" href="of_graphics_8cpp.html#a883ddbba252bf0b17f6f8cb06c001ce5">ofGraphics.cpp</a>
-</li>
 <li>ofVertices()
-: <a class="el" href="of_graphics_8cpp.html#a8e5de52268948c766e456f08657014ef">ofGraphics.cpp</a>
-, <a class="el" href="of_graphics_8h.html#a8e5de52268948c766e456f08657014ef">ofGraphics.h</a>
+: <a class="el" href="of_graphics_8h.html#a8e5de52268948c766e456f08657014ef">ofGraphics.h</a>
+, <a class="el" href="of_graphics_8cpp.html#a8e5de52268948c766e456f08657014ef">ofGraphics.cpp</a>
 </li>
 <li>ofViewport()
 : <a class="el" href="of_graphics_8cpp.html#a95cb04add69b7de7403d4d022e5f0391">ofGraphics.cpp</a>
-, <a class="el" href="of_graphics_8h.html#a9433e80f3f9535d2d1b2a747d64ab98f">ofGraphics.h</a>
+, <a class="el" href="of_graphics_8h.html#a95cb04add69b7de7403d4d022e5f0391">ofGraphics.h</a>
 , <a class="el" href="of_graphics_8cpp.html#aead3031118ca164aae1f8b9b00c1b549">ofGraphics.cpp</a>
 </li>
+<li>ofWrap()
+: <a class="el" href="of_math_8h.html#a11cf9bc2b855744f58aa7f2f174eb657">ofMath.h</a>
+, <a class="el" href="of_math_8cpp.html#a11cf9bc2b855744f58aa7f2f174eb657">ofMath.cpp</a>
+</li>
 <li>ofWrapDegrees()
-: <a class="el" href="of_math_8cpp.html#ae4ba80015162a1c7be1cc5eb39e205ef">ofMath.cpp</a>
-, <a class="el" href="of_math_8h.html#a33e3f2421ab89bc4ee00a0f67d09aa0a">ofMath.h</a>
+: <a class="el" href="of_math_8h.html#a33e3f2421ab89bc4ee00a0f67d09aa0a">ofMath.h</a>
+, <a class="el" href="of_math_8cpp.html#ae4ba80015162a1c7be1cc5eb39e205ef">ofMath.cpp</a>
 </li>
 <li>ofWrapRadians()
 : <a class="el" href="of_math_8cpp.html#af727c186564d950c4b65c6a4b4aa276e">ofMath.cpp</a>
 , <a class="el" href="of_math_8h.html#a34be4c1bb0fedb406eb7dcfd7cf743bc">ofMath.h</a>
 </li>
 <li>operator*()
-: <a class="el" href="of_vec4f_8h.html#a9760891cfe5db0e55a73b7a97a6d39d4">ofVec4f.h</a>
-, <a class="el" href="of_vec2f_8h.html#a998bac4b1fe96213dac1b69f761c07f9">ofVec2f.h</a>
-, <a class="el" href="of_matrix4x4_8h.html#ab8a41dec03bde6633c0c56884173f837">ofMatrix4x4.h</a>
+: <a class="el" href="of_matrix4x4_8h.html#ab8a41dec03bde6633c0c56884173f837">ofMatrix4x4.h</a>
 , <a class="el" href="of_vec3f_8h.html#a9f9a892c3e0d1af0890d6d007c86fe0b">ofVec3f.h</a>
+, <a class="el" href="of_matrix4x4_8h.html#a2b8431068efe296c811142a8c1871f46">ofMatrix4x4.h</a>
+, <a class="el" href="of_vec4f_8h.html#a9760891cfe5db0e55a73b7a97a6d39d4">ofVec4f.h</a>
+, <a class="el" href="of_vec2f_8h.html#a998bac4b1fe96213dac1b69f761c07f9">ofVec2f.h</a>
 </li>
 <li>operator+()
 : <a class="el" href="of_vec2f_8h.html#a9e1df79bc9ab4266abbd03c1a0cad7e3">ofVec2f.h</a>
-, <a class="el" href="of_vec3f_8h.html#ab460048e6ace983d8313a374a75a624b">ofVec3f.h</a>
 , <a class="el" href="of_vec4f_8h.html#a29548a594e0f8f2a71df6d92934c129b">ofVec4f.h</a>
+, <a class="el" href="of_vec3f_8h.html#ab460048e6ace983d8313a374a75a624b">ofVec3f.h</a>
 </li>
 <li>operator-()
-: <a class="el" href="of_vec3f_8h.html#adb40a5682d818d27650753b8ad672e0c">ofVec3f.h</a>
+: <a class="el" href="of_vec2f_8h.html#afd63c656c641803159c93478485aa58e">ofVec2f.h</a>
 , <a class="el" href="of_vec4f_8h.html#aaa28bd3d8e1a3b3ac1f3d1a07796ac0e">ofVec4f.h</a>
-, <a class="el" href="of_vec2f_8h.html#afd63c656c641803159c93478485aa58e">ofVec2f.h</a>
+, <a class="el" href="of_vec3f_8h.html#adb40a5682d818d27650753b8ad672e0c">ofVec3f.h</a>
 </li>
 <li>operator/()
-: <a class="el" href="of_vec2f_8h.html#a73f103d8ea6d9a986f4dd55998408d30">ofVec2f.h</a>
-, <a class="el" href="of_vec3f_8h.html#ad929a8f97ea303b288a3fc33ded76403">ofVec3f.h</a>
+: <a class="el" href="of_vec3f_8h.html#ad929a8f97ea303b288a3fc33ded76403">ofVec3f.h</a>
+, <a class="el" href="of_vec2f_8h.html#a73f103d8ea6d9a986f4dd55998408d30">ofVec2f.h</a>
 , <a class="el" href="of_vec4f_8h.html#a8247407c772261b6490e4d572d10d820">ofVec4f.h</a>
 </li>
 <li>operator&lt;&lt;()
-: <a class="el" href="of_vec3f_8h.html#a221bb717e5282907a0d835ff1134a0b6">ofVec3f.h</a>
-, <a class="el" href="of_matrix4x4_8h.html#a7b8e55ff0129b7914cef141df5384b22">ofMatrix4x4.h</a>
-, <a class="el" href="of_vec2f_8h.html#a8d8d86b805b7897418a316313db81aba">ofVec2f.h</a>
-, <a class="el" href="of_matrix3x3_8cpp.html#a3a751851e70f7d08933a8bb74ae79b7d">ofMatrix3x3.cpp</a>
-, <a class="el" href="of_file_utils_8cpp.html#ac2361b6e648b909436795e2d76f39bef">ofFileUtils.cpp</a>
+: <a class="el" href="of_rectangle_8cpp.html#a940ea1d005fcc7ac1799844c6ad12a80">ofRectangle.cpp</a>
+, <a class="el" href="of_rectangle_8h.html#a940ea1d005fcc7ac1799844c6ad12a80">ofRectangle.h</a>
 , <a class="el" href="of_vec4f_8h.html#a8289bccf1213ee971abf219d35a3cd5b">ofVec4f.h</a>
+, <a class="el" href="of_vec3f_8h.html#a221bb717e5282907a0d835ff1134a0b6">ofVec3f.h</a>
+, <a class="el" href="of_matrix4x4_8h.html#a7b8e55ff0129b7914cef141df5384b22">ofMatrix4x4.h</a>
+, <a class="el" href="of_file_utils_8cpp.html#ac2361b6e648b909436795e2d76f39bef">ofFileUtils.cpp</a>
+, <a class="el" href="of_parameter_group_8cpp.html#af4c2c7cd9dff39ccf3fec82693012cba">ofParameterGroup.cpp</a>
+, <a class="el" href="of_matrix3x3_8cpp.html#a3a751851e70f7d08933a8bb74ae79b7d">ofMatrix3x3.cpp</a>
+, <a class="el" href="of_parameter_8cpp.html#a207f0b2cbad99a6e213f7c7c6667f65f">ofParameter.cpp</a>
+, <a class="el" href="of_vec2f_8h.html#a8d8d86b805b7897418a316313db81aba">ofVec2f.h</a>
 </li>
 <li>operator&gt;&gt;()
-: <a class="el" href="of_matrix4x4_8h.html#a9099b5cd49312f96b803f1f9034695ac">ofMatrix4x4.h</a>
-, <a class="el" href="of_file_utils_8cpp.html#a5768a499dc84fb7d542c1885dccd6b1e">ofFileUtils.cpp</a>
-, <a class="el" href="of_vec4f_8h.html#a10031564d03c096fb82d9f4b0cf6005b">ofVec4f.h</a>
-, <a class="el" href="of_vec2f_8h.html#a4ad726f903f25dce290671839061246e">ofVec2f.h</a>
-, <a class="el" href="of_vec3f_8h.html#a3a31b5d957af1dda19ce7451a6af9003">ofVec3f.h</a>
+: <a class="el" href="of_parameter_8cpp.html#a80b71a9031de018c02c0e4a34e53422a">ofParameter.cpp</a>
 , <a class="el" href="of_matrix3x3_8cpp.html#abf46313577c6b9cd10201245f1e46f87">ofMatrix3x3.cpp</a>
+, <a class="el" href="of_rectangle_8h.html#a0cc259ec4213f3e4df6fd006f228d64f">ofRectangle.h</a>
+, <a class="el" href="of_vec3f_8h.html#a3a31b5d957af1dda19ce7451a6af9003">ofVec3f.h</a>
+, <a class="el" href="of_matrix4x4_8h.html#a9099b5cd49312f96b803f1f9034695ac">ofMatrix4x4.h</a>
+, <a class="el" href="of_vec4f_8h.html#a10031564d03c096fb82d9f4b0cf6005b">ofVec4f.h</a>
+, <a class="el" href="of_file_utils_8cpp.html#a5768a499dc84fb7d542c1885dccd6b1e">ofFileUtils.cpp</a>
+, <a class="el" href="of_vec2f_8h.html#a4ad726f903f25dce290671839061246e">ofVec2f.h</a>
+, <a class="el" href="of_rectangle_8cpp.html#a0cc259ec4213f3e4df6fd006f228d64f">ofRectangle.cpp</a>
 </li>
 </ul>
 </div><!-- contents -->

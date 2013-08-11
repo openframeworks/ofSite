@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -62,6 +63,16 @@
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="of_vec2f_8h_source.html">ofVec2f.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for ofVec2f:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classof_vec2f.png" usemap="#ofVec2f_map" alt=""/>
+  <map id="ofVec2f_map" name="ofVec2f_map">
+<area href="classof_mouse_event_args.html" alt="ofMouseEventArgs" shape="rect" coords="0,56,120,80"/>
+<area href="classof_touch_event_args.html" alt="ofTouchEventArgs" shape="rect" coords="130,56,250,80"/>
+</map>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -191,8 +202,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a04bd477dc0a1e2951b3de90a21bbfff7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea7962354cc720744f5f07a069f4d954"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vec2f.html#aea7962354cc720744f5f07a069f4d954">lengthSquared</a> () const </td></tr>
 <tr class="separator:aea7962354cc720744f5f07a069f4d954"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba65f7c31e6d02c1e44205ffffebd110"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vec2f.html#aba65f7c31e6d02c1e44205ffffebd110">OF_DEPRECATED_MSG</a> (&quot;Use <a class="el" href="classof_vec2f.html#aea7962354cc720744f5f07a069f4d954">ofVec2f::lengthSquared</a>() instead.&quot;, float squareLength() const)</td></tr>
-<tr class="separator:aba65f7c31e6d02c1e44205ffffebd110"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb166e3a03ec85d5ceb5bd299ce86ee0"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vec2f.html#acb166e3a03ec85d5ceb5bd299ce86ee0">angle</a> (const <a class="el" href="classof_vec2f.html">ofVec2f</a> &amp;vec) const </td></tr>
 <tr class="separator:acb166e3a03ec85d5ceb5bd299ce86ee0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b32d05b206620ee5295061ee8206d6b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vec2f.html#a6b32d05b206620ee5295061ee8206d6b">angleRad</a> (const <a class="el" href="classof_vec2f.html">ofVec2f</a> &amp;vec) const </td></tr>
@@ -1383,32 +1392,6 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aba65f7c31e6d02c1e44205ffffebd110"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">ofVec2f::OF_DEPRECATED_MSG </td>
-          <td>(</td>
-          <td class="paramtype">&quot;Use <a class="el" href="classof_vec2f.html#aea7962354cc720744f5f07a069f4d954">ofVec2f::lengthSquared</a>() instead.&quot;&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float squareLength()&#160;</td>
-          <td class="paramname"><em>const</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="a75dac7c00c6568d6bb785e805204741a"></a>
 <div class="memitem">
 <div class="memproto">
@@ -2471,8 +2454,8 @@ Friends</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>math/<a class="el" href="of_vec2f_8h_source.html">ofVec2f.h</a></li>
-<li>math/<a class="el" href="of_vec2f_8cpp.html">ofVec2f.cpp</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/math/<a class="el" href="of_vec2f_8h_source.html">ofVec2f.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/math/<a class="el" href="of_vec2f_8cpp.html">ofVec2f.cpp</a></li>
 </ul>
 </div><!-- contents -->
 

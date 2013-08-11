@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -57,6 +58,10 @@
 <p>This is the complete list of members for <a class="el" href="classof_key_event_args.html">ofKeyEventArgs</a>, including all inherited members.</p>
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="classof_key_event_args.html#a51c166832e41e794963bc7ad6c6dd725">key</a></td><td class="entry"><a class="el" href="classof_key_event_args.html">ofKeyEventArgs</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classof_key_event_args.html#a551471a78845484004332f64798ab8a5a793b23692a3ec9b6ff62ecae1f8404b9">Pressed</a> enum value</td><td class="entry"><a class="el" href="classof_key_event_args.html">ofKeyEventArgs</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classof_key_event_args.html#a551471a78845484004332f64798ab8a5a496274fd747ced32ddc7dbcd4defc563">Released</a> enum value</td><td class="entry"><a class="el" href="classof_key_event_args.html">ofKeyEventArgs</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classof_key_event_args.html#a551471a78845484004332f64798ab8a5">Type</a> enum name</td><td class="entry"><a class="el" href="classof_key_event_args.html">ofKeyEventArgs</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classof_key_event_args.html#a1a9ba222d3203fe630cfe2ce2323f4b4">type</a></td><td class="entry"><a class="el" href="classof_key_event_args.html">ofKeyEventArgs</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 
             </div>

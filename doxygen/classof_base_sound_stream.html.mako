@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -93,6 +94,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a972327e868ca15ecc79476919fbd25bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f0693f0fb84d3a83763b32e3ee8496c"><td class="memItemLeft" align="right" valign="top">virtual long unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_sound_stream.html#a8f0693f0fb84d3a83763b32e3ee8496c">getTickCount</a> ()=0</td></tr>
 <tr class="separator:a8f0693f0fb84d3a83763b32e3ee8496c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac23ff27d95054eecae6134e43ead00b9"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_sound_stream.html#ac23ff27d95054eecae6134e43ead00b9">getNumInputChannels</a> ()=0</td></tr>
+<tr class="separator:ac23ff27d95054eecae6134e43ead00b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b88f70e31f1852ddfa024a991a05e92"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_sound_stream.html#a0b88f70e31f1852ddfa024a991a05e92">getNumOutputChannels</a> ()=0</td></tr>
+<tr class="separator:a0b88f70e31f1852ddfa024a991a05e92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dc79623984eaad86a6da8703b788a22"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_sound_stream.html#a9dc79623984eaad86a6da8703b788a22">getSampleRate</a> ()=0</td></tr>
+<tr class="separator:a9dc79623984eaad86a6da8703b788a22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85b3a2824024b23b52ab1ce921177806"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_sound_stream.html#a85b3a2824024b23b52ab1ce921177806">getBufferSize</a> ()=0</td></tr>
+<tr class="separator:a85b3a2824024b23b52ab1ce921177806"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a238e638c8990dce27b1b2f2774f0aa68"></a>
@@ -141,6 +150,106 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implemented in <a class="el" href="classof_rt_audio_sound_stream.html#a454268c55f545e2b4b0680c27bc50522">ofRtAudioSoundStream</a>, and <a class="el" href="classof_p_a_sound_stream.html#a810c14d4a9f85711e0c212cdeb65fc78">ofPASoundStream</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a85b3a2824024b23b52ab1ce921177806"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int ofBaseSoundStream::getBufferSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classof_rt_audio_sound_stream.html#a473a0a802d9c8aa65b22a8ca2fd8d162">ofRtAudioSoundStream</a>, and <a class="el" href="classof_p_a_sound_stream.html#ac47f1957c407278808ce9bfbe007178c">ofPASoundStream</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac23ff27d95054eecae6134e43ead00b9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int ofBaseSoundStream::getNumInputChannels </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classof_rt_audio_sound_stream.html#a3728964558ff782a60b3d4803ee97474">ofRtAudioSoundStream</a>, and <a class="el" href="classof_p_a_sound_stream.html#a58bfc141545fb3c652c3e8328e2c94c6">ofPASoundStream</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0b88f70e31f1852ddfa024a991a05e92"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int ofBaseSoundStream::getNumOutputChannels </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classof_rt_audio_sound_stream.html#a3c4fad72682be9a13f1911d0dfed1470">ofRtAudioSoundStream</a>, and <a class="el" href="classof_p_a_sound_stream.html#a4992eeace6b11736a86b0b965747ec75">ofPASoundStream</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9dc79623984eaad86a6da8703b788a22"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int ofBaseSoundStream::getSampleRate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classof_rt_audio_sound_stream.html#a61af6a27eece9597bdd9102f67cdfc6b">ofRtAudioSoundStream</a>, and <a class="el" href="classof_p_a_sound_stream.html#a2d9a2a06b0894cfb591c850f000e7679">ofPASoundStream</a>.</p>
 
 </div>
 </div>
@@ -437,7 +546,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>sound/<a class="el" href="of_base_sound_stream_8h_source.html">ofBaseSoundStream.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/sound/<a class="el" href="of_base_sound_stream_8h_source.html">ofBaseSoundStream.h</a></li>
 </ul>
 </div><!-- contents -->
 

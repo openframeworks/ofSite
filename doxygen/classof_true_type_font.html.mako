@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -54,6 +55,7 @@
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="classof_true_type_font-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ofTrueTypeFont Class Reference</div>  </div>
@@ -80,7 +82,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:adbb80647aa21a907250af47d5a3fcc6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3bc6e1c7a358236094471e85556fa70"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_true_type_font.html#ab3bc6e1c7a358236094471e85556fa70">getLineHeight</a> ()</td></tr>
 <tr class="separator:ab3bc6e1c7a358236094471e85556fa70"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c7fa9a7f2e681af2ceb6bb2f5b24788"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_true_type_font.html#a4c7fa9a7f2e681af2ceb6bb2f5b24788">setLineHeight</a> (float height)</td></tr>
+<tr class="memitem:a4c7fa9a7f2e681af2ceb6bb2f5b24788"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_true_type_font.html#a4c7fa9a7f2e681af2ceb6bb2f5b24788">setLineHeight</a> (float <a class="el" href="of_icon_8h.html#ab2e78c61905b4419fcc7b4cfc500fe85">height</a>)</td></tr>
 <tr class="separator:a4c7fa9a7f2e681af2ceb6bb2f5b24788"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a634099486e62ef1b02f74efc57f2d9ae"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_true_type_font.html#a634099486e62ef1b02f74efc57f2d9ae">getLetterSpacing</a> ()</td></tr>
 <tr class="separator:a634099486e62ef1b02f74efc57f2d9ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -102,14 +104,22 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab2351167f6a15eea29e8fea7ae8ed632"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37523f38c5be929f82d87bac15308f03"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_true_type_font.html#a37523f38c5be929f82d87bac15308f03">getNumCharacters</a> ()</td></tr>
 <tr class="separator:a37523f38c5be929f82d87bac15308f03"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac4a60f9cc402458811b6b236b40779ce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="of_true_type_font_8h.html#a82ccc235db2f74dfdc922b67748791cf">ofTTFCharacter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_true_type_font.html#ac4a60f9cc402458811b6b236b40779ce">getCharacterAsPoints</a> (int character)</td></tr>
-<tr class="separator:ac4a60f9cc402458811b6b236b40779ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af369319c0cd37cd3e9b593ebc31d102c"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="of_true_type_font_8h.html#a82ccc235db2f74dfdc922b67748791cf">ofTTFCharacter</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_true_type_font.html#af369319c0cd37cd3e9b593ebc31d102c">getStringAsPoints</a> (string str)</td></tr>
-<tr class="separator:af369319c0cd37cd3e9b593ebc31d102c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01515b9294356ddba2eae222c214fb95"><td class="memItemLeft" align="right" valign="top"><a class="el" href="of_true_type_font_8h.html#a82ccc235db2f74dfdc922b67748791cf">ofTTFCharacter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_true_type_font.html#a01515b9294356ddba2eae222c214fb95">getCharacterAsPoints</a> (int character, bool vflip=<a class="el" href="of_base_types_8h.html#a112ebf9b37b365ab634260fa7413d92e">ofIsVFlipped</a>())</td></tr>
+<tr class="separator:a01515b9294356ddba2eae222c214fb95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d020d826d0427240dcaf029d83dfd50"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="of_true_type_font_8h.html#a82ccc235db2f74dfdc922b67748791cf">ofTTFCharacter</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_true_type_font.html#a6d020d826d0427240dcaf029d83dfd50">getStringAsPoints</a> (string str, bool vflip=<a class="el" href="of_base_types_8h.html#a112ebf9b37b365ab634260fa7413d92e">ofIsVFlipped</a>())</td></tr>
+<tr class="separator:a6d020d826d0427240dcaf029d83dfd50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54032e60371b4a8b854b9a91c3e46cd7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_mesh.html">ofMesh</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_true_type_font.html#a54032e60371b4a8b854b9a91c3e46cd7">getStringMesh</a> (string s, float x, float y)</td></tr>
+<tr class="separator:a54032e60371b4a8b854b9a91c3e46cd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a043c3e871e6d8c1b32e7697ac4411eb0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_texture.html">ofTexture</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_true_type_font.html#a043c3e871e6d8c1b32e7697ac4411eb0">getFontTexture</a> ()</td></tr>
+<tr class="separator:a043c3e871e6d8c1b32e7697ac4411eb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8101f091667f0033e5e03ade307f48d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_true_type_font.html#a8101f091667f0033e5e03ade307f48d7">bind</a> ()</td></tr>
 <tr class="separator:a8101f091667f0033e5e03ade307f48d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1270a90ae2a39acd665f9187f5dbf6c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_true_type_font.html#a1270a90ae2a39acd665f9187f5dbf6c3">unbind</a> ()</td></tr>
 <tr class="separator:a1270a90ae2a39acd665f9187f5dbf6c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ae68744a50f815cf68cc3836dfba94d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="of_constants_8h.html#ad4e6cefebff2917f91e999904fa9b17f">ofTextEncoding</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_true_type_font.html#a8ae68744a50f815cf68cc3836dfba94d">getEncoding</a> () const </td></tr>
+<tr class="separator:a8ae68744a50f815cf68cc3836dfba94d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcb3ec25a1d51bb2f6945742b71dda23"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_true_type_font.html#abcb3ec25a1d51bb2f6945742b71dda23">setEncoding</a> (<a class="el" href="of_constants_8h.html#ad4e6cefebff2917f91e999904fa9b17f">ofTextEncoding</a> encoding)</td></tr>
+<tr class="separator:abcb3ec25a1d51bb2f6945742b71dda23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -122,6 +132,8 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:ad36450962da531f43d40bf3eea34619e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e6acb96718ed85be4a345c05203c3f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_true_type_font.html#a2e6acb96718ed85be4a345c05203c3f3">drawCharAsShape</a> (int <a class="el" href="of_matrix4x4_8cpp.html#aafc737ea9ef91f59cf9acd287fb8d085">c</a>, float x, float y)</td></tr>
 <tr class="separator:a2e6acb96718ed85be4a345c05203c3f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafa7bfe43f45c70e843eda0c5c321c63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_true_type_font.html#aafa7bfe43f45c70e843eda0c5c321c63">createStringMesh</a> (string s, float x, float y)</td></tr>
+<tr class="separator:aafa7bfe43f45c70e843eda0c5c321c63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -135,6 +147,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:aac4b8c9259c44c1f8cb8f38c884a94c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d2c3da16937f1b2be80a02c055f12b4"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="of_true_type_font_8h.html#a82ccc235db2f74dfdc922b67748791cf">ofTTFCharacter</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_true_type_font.html#a0d2c3da16937f1b2be80a02c055f12b4">charOutlines</a></td></tr>
 <tr class="separator:a0d2c3da16937f1b2be80a02c055f12b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa988e4d74fd73397e17ce6ad23b4a924"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="of_true_type_font_8h.html#a82ccc235db2f74dfdc922b67748791cf">ofTTFCharacter</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_true_type_font.html#aa988e4d74fd73397e17ce6ad23b4a924">charOutlinesNonVFlipped</a></td></tr>
+<tr class="separator:aa988e4d74fd73397e17ce6ad23b4a924"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a013460cfe40116939f07374222cd3c17"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_true_type_font.html#a013460cfe40116939f07374222cd3c17">lineHeight</a></td></tr>
 <tr class="separator:a013460cfe40116939f07374222cd3c17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8cf821087583ddaba20d4318ff1374c3"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_true_type_font.html#a8cf821087583ddaba20d4318ff1374c3">letterSpacing</a></td></tr>
@@ -161,6 +175,11 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a31d43872f74737dff07d7a7af8da0b37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3aa0ef4fbbac6fca3cdeb5a6345cfc37"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_mesh.html">ofMesh</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_true_type_font.html#a3aa0ef4fbbac6fca3cdeb5a6345cfc37">stringQuads</a></td></tr>
 <tr class="separator:a3aa0ef4fbbac6fca3cdeb5a6345cfc37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a82de6327bc237de1f9520cf07bec83f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_true_type_font.html#a82de6327bc237de1f9520cf07bec83f3">ofExitCallback</a> ()</td></tr>
+<tr class="separator:a82de6327bc237de1f9520cf07bec83f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a5af9f717ceaa6f53e7b8c100b40ef923"></a>
@@ -213,6 +232,46 @@ Protected Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aafa7bfe43f45c70e843eda0c5c321c63"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofTrueTypeFont::createStringMesh </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -361,7 +420,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ac4a60f9cc402458811b6b236b40779ce"></a>
+<a class="anchor" id="a01515b9294356ddba2eae222c214fb95"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -369,7 +428,47 @@ Protected Attributes</h2></td></tr>
           <td class="memname"><a class="el" href="of_true_type_font_8h.html#a82ccc235db2f74dfdc922b67748791cf">ofTTFCharacter</a> ofTrueTypeFont::getCharacterAsPoints </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>character</em></td><td>)</td>
+          <td class="paramname"><em>character</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>vflip</em> = <code><a class="el" href="of_base_types_8h.html#a112ebf9b37b365ab634260fa7413d92e">ofIsVFlipped</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8ae68744a50f815cf68cc3836dfba94d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="of_constants_8h.html#ad4e6cefebff2917f91e999904fa9b17f">ofTextEncoding</a> ofTrueTypeFont::getEncoding </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a043c3e871e6d8c1b32e7697ac4411eb0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classof_texture.html">ofTexture</a> &amp; ofTrueTypeFont::getFontTexture </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -452,7 +551,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="af369319c0cd37cd3e9b593ebc31d102c"></a>
+<a class="anchor" id="a6d020d826d0427240dcaf029d83dfd50"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -460,8 +559,18 @@ Protected Attributes</h2></td></tr>
           <td class="memname">vector&lt; <a class="el" href="of_true_type_font_8h.html#a82ccc235db2f74dfdc922b67748791cf">ofTTFCharacter</a> &gt; ofTrueTypeFont::getStringAsPoints </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>str</em></td><td>)</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>vflip</em> = <code><a class="el" href="of_base_types_8h.html#a112ebf9b37b365ab634260fa7413d92e">ofIsVFlipped</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -474,6 +583,38 @@ Protected Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classof_rectangle.html">ofRectangle</a> ofTrueTypeFont::getStringBoundingBox </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a54032e60371b4a8b854b9a91c3e46cd7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classof_mesh.html">ofMesh</a> &amp; ofTrueTypeFont::getStringMesh </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>s</em>, </td>
@@ -601,6 +742,22 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="abcb3ec25a1d51bb2f6945742b71dda23"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofTrueTypeFont::setEncoding </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="of_constants_8h.html#ad4e6cefebff2917f91e999904fa9b17f">ofTextEncoding</a>&#160;</td>
+          <td class="paramname"><em>encoding</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a3fc29ab51f9fc87b321f9c70c2168aa5"></a>
 <div class="memitem">
 <div class="memproto">
@@ -716,6 +873,30 @@ Protected Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a class="anchor" id="a82de6327bc237de1f9520cf07bec83f3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofExitCallback </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -850,6 +1031,26 @@ Protected Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">vector&lt;<a class="el" href="of_true_type_font_8h.html#a82ccc235db2f74dfdc922b67748791cf">ofTTFCharacter</a>&gt; ofTrueTypeFont::charOutlines</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa988e4d74fd73397e17ce6ad23b4a924"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="of_true_type_font_8h.html#a82ccc235db2f74dfdc922b67748791cf">ofTTFCharacter</a>&gt; ofTrueTypeFont::charOutlinesNonVFlipped</td>
         </tr>
       </table>
   </td>
@@ -1082,8 +1283,8 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>graphics/<a class="el" href="of_true_type_font_8h_source.html">ofTrueTypeFont.h</a></li>
-<li>graphics/<a class="el" href="of_true_type_font_8cpp.html">ofTrueTypeFont.cpp</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/graphics/<a class="el" href="of_true_type_font_8h_source.html">ofTrueTypeFont.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/graphics/<a class="el" href="of_true_type_font_8cpp.html">ofTrueTypeFont.cpp</a></li>
 </ul>
 </div><!-- contents -->
 

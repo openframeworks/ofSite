@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -70,22 +71,24 @@ Inheritance diagram for ofLogNotice:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad37dd2a80050670ceef61d115d76a70c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_log_notice.html#ad37dd2a80050670ceef61d115d76a70c">ofLogNotice</a> (const string &amp;<a class="el" href="classof_log.html#aa1f61b048422566b8bdd9c50f5a05f44">module</a>=&quot;OF&quot;)</td></tr>
-<tr class="separator:ad37dd2a80050670ceef61d115d76a70c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6729c589b2c946748c9b59015a1328e5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_log_notice.html#a6729c589b2c946748c9b59015a1328e5">ofLogNotice</a> (const string &amp;<a class="el" href="classof_log.html#aa1f61b048422566b8bdd9c50f5a05f44">module</a>=&quot;&quot;)</td></tr>
+<tr class="separator:a6729c589b2c946748c9b59015a1328e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa2ff966bcf0054038a7caf9fe99882d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_log_notice.html#afa2ff966bcf0054038a7caf9fe99882d">ofLogNotice</a> (const string &amp;<a class="el" href="classof_log.html#aa1f61b048422566b8bdd9c50f5a05f44">module</a>, const string &amp;message)</td></tr>
 <tr class="separator:afa2ff966bcf0054038a7caf9fe99882d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6670a6f68df0c914955eb322727e273b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_log_notice.html#a6670a6f68df0c914955eb322727e273b">ofLogNotice</a> (const string &amp;<a class="el" href="classof_log.html#aa1f61b048422566b8bdd9c50f5a05f44">module</a>, const char *format,...)</td></tr>
+<tr class="separator:a6670a6f68df0c914955eb322727e273b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classof_log"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classof_log')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classof_log.html">ofLog</a></td></tr>
 <tr class="memitem:a11a926adbe4ef4bfbee393345f5df1cc inherit pub_methods_classof_log"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_log.html#a11a926adbe4ef4bfbee393345f5df1cc">ofLog</a> ()</td></tr>
 <tr class="memdesc:a11a926adbe4ef4bfbee393345f5df1cc inherit pub_methods_classof_log"><td class="mdescLeft">&#160;</td><td class="mdescRight">log at notice level  <a href="#a11a926adbe4ef4bfbee393345f5df1cc">More...</a><br/></td></tr>
 <tr class="separator:a11a926adbe4ef4bfbee393345f5df1cc inherit pub_methods_classof_log"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a439e9fcf3792ef557342efade73bf4 inherit pub_methods_classof_log"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_log.html#a3a439e9fcf3792ef557342efade73bf4">ofLog</a> (<a class="el" href="of_log_8h.html#a6b3aba959377cae6ed3afbb9d5826fe4">ofLogLevel</a> logLevel)</td></tr>
-<tr class="memdesc:a3a439e9fcf3792ef557342efade73bf4 inherit pub_methods_classof_log"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the log level  <a href="#a3a439e9fcf3792ef557342efade73bf4">More...</a><br/></td></tr>
-<tr class="separator:a3a439e9fcf3792ef557342efade73bf4 inherit pub_methods_classof_log"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe0d0cbf4f049f3f9841bf9f31b7ceb3 inherit pub_methods_classof_log"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_log.html#abe0d0cbf4f049f3f9841bf9f31b7ceb3">ofLog</a> (<a class="el" href="of_log_8h.html#a6b3aba959377cae6ed3afbb9d5826fe4">ofLogLevel</a> logLevel, const string &amp;message)</td></tr>
-<tr class="memdesc:abe0d0cbf4f049f3f9841bf9f31b7ceb3 inherit pub_methods_classof_log"><td class="mdescLeft">&#160;</td><td class="mdescRight">the legacy <a class="el" href="classof_log.html" title="a streaming log interface">ofLog</a> interfaces  <a href="#abe0d0cbf4f049f3f9841bf9f31b7ceb3">More...</a><br/></td></tr>
-<tr class="separator:abe0d0cbf4f049f3f9841bf9f31b7ceb3 inherit pub_methods_classof_log"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0504f3f900ba5be220363662a639b170 inherit pub_methods_classof_log"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_log.html#a0504f3f900ba5be220363662a639b170">ofLog</a> (<a class="el" href="of_log_8h.html#a6b3aba959377cae6ed3afbb9d5826fe4">ofLogLevel</a> logLevel, const char *format,...)</td></tr>
-<tr class="separator:a0504f3f900ba5be220363662a639b170 inherit pub_methods_classof_log"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8df66599c4ab1c9d0ebdb379871da3f0 inherit pub_methods_classof_log"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_log.html#a8df66599c4ab1c9d0ebdb379871da3f0">ofLog</a> (<a class="el" href="of_log_8h.html#a6b3aba959377cae6ed3afbb9d5826fe4">ofLogLevel</a> <a class="el" href="classof_log.html#ae6e5efb037f89eec86c478c7501b7f11">level</a>)</td></tr>
+<tr class="memdesc:a8df66599c4ab1c9d0ebdb379871da3f0 inherit pub_methods_classof_log"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the log level  <a href="#a8df66599c4ab1c9d0ebdb379871da3f0">More...</a><br/></td></tr>
+<tr class="separator:a8df66599c4ab1c9d0ebdb379871da3f0 inherit pub_methods_classof_log"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23271f8fa71758dc7b81b695d36a8df9 inherit pub_methods_classof_log"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_log.html#a23271f8fa71758dc7b81b695d36a8df9">ofLog</a> (<a class="el" href="of_log_8h.html#a6b3aba959377cae6ed3afbb9d5826fe4">ofLogLevel</a> <a class="el" href="classof_log.html#ae6e5efb037f89eec86c478c7501b7f11">level</a>, const string &amp;message)</td></tr>
+<tr class="memdesc:a23271f8fa71758dc7b81b695d36a8df9 inherit pub_methods_classof_log"><td class="mdescLeft">&#160;</td><td class="mdescRight">the legacy <a class="el" href="classof_log.html" title="a streaming log interface">ofLog</a> interfaces  <a href="#a23271f8fa71758dc7b81b695d36a8df9">More...</a><br/></td></tr>
+<tr class="separator:a23271f8fa71758dc7b81b695d36a8df9 inherit pub_methods_classof_log"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7e945ece7482d7d334f5ff328e8ab24 inherit pub_methods_classof_log"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_log.html#af7e945ece7482d7d334f5ff328e8ab24">ofLog</a> (<a class="el" href="of_log_8h.html#a6b3aba959377cae6ed3afbb9d5826fe4">ofLogLevel</a> <a class="el" href="classof_log.html#ae6e5efb037f89eec86c478c7501b7f11">level</a>, const char *format,...)</td></tr>
+<tr class="separator:af7e945ece7482d7d334f5ff328e8ab24 inherit pub_methods_classof_log"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b9d6e1110e97f1c70c6c0f1c1997db1 inherit pub_methods_classof_log"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_log.html#a8b9d6e1110e97f1c70c6c0f1c1997db1">~ofLog</a> ()</td></tr>
 <tr class="memdesc:a8b9d6e1110e97f1c70c6c0f1c1997db1 inherit pub_methods_classof_log"><td class="mdescLeft">&#160;</td><td class="mdescRight">does the actual printing when the ostream is done  <a href="#a8b9d6e1110e97f1c70c6c0f1c1997db1">More...</a><br/></td></tr>
 <tr class="separator:a8b9d6e1110e97f1c70c6c0f1c1997db1 inherit pub_methods_classof_log"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -103,7 +106,7 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:acd753685ca548b145fd33301abe63433 inherit pub_static_methods_classof_log"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_log.html#acd753685ca548b145fd33301abe63433">setAutoSpace</a> (bool autoSpace)</td></tr>
 <tr class="memdesc:acd753685ca548b145fd33301abe63433 inherit pub_static_methods_classof_log"><td class="mdescLeft">&#160;</td><td class="mdescRight">put a space between stream operator calls?  <a href="#acd753685ca548b145fd33301abe63433">More...</a><br/></td></tr>
 <tr class="separator:acd753685ca548b145fd33301abe63433 inherit pub_static_methods_classof_log"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b80260a00625c5eb189d6377a96dc82 inherit pub_static_methods_classof_log"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_log.html#a4b80260a00625c5eb189d6377a96dc82">setChannel</a> (<a class="el" href="classof_ptr.html">ofPtr</a>&lt; <a class="el" href="classof_base_logger_channel.html">ofBaseLoggerChannel</a> &gt; channel)</td></tr>
+<tr class="memitem:a4b80260a00625c5eb189d6377a96dc82 inherit pub_static_methods_classof_log"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_log.html#a4b80260a00625c5eb189d6377a96dc82">setChannel</a> (<a class="el" href="classof_ptr.html">ofPtr</a>&lt; <a class="el" href="classof_base_logger_channel.html">ofBaseLoggerChannel</a> &gt; <a class="el" href="classof_log.html#aed77492f4cecb6d7304717e64643564e">channel</a>)</td></tr>
 <tr class="memdesc:a4b80260a00625c5eb189d6377a96dc82 inherit pub_static_methods_classof_log"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the logging channel destinations for messages  <a href="#a4b80260a00625c5eb189d6377a96dc82">More...</a><br/></td></tr>
 <tr class="separator:a4b80260a00625c5eb189d6377a96dc82 inherit pub_static_methods_classof_log"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classof_log"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classof_log')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classof_log.html">ofLog</a></td></tr>
@@ -122,9 +125,13 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:aa1f61b048422566b8bdd9c50f5a05f44 inherit pro_attribs_classof_log"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_log.html#aa1f61b048422566b8bdd9c50f5a05f44">module</a></td></tr>
 <tr class="memdesc:aa1f61b048422566b8bdd9c50f5a05f44 inherit pro_attribs_classof_log"><td class="mdescLeft">&#160;</td><td class="mdescRight">the destination module for this message  <a href="#aa1f61b048422566b8bdd9c50f5a05f44">More...</a><br/></td></tr>
 <tr class="separator:aa1f61b048422566b8bdd9c50f5a05f44 inherit pro_attribs_classof_log"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_static_attribs_classof_log"><td colspan="2" onclick="javascript:toggleInherit('pro_static_attribs_classof_log')"><img src="closed.png" alt="-"/>&#160;Static Protected Attributes inherited from <a class="el" href="classof_log.html">ofLog</a></td></tr>
+<tr class="memitem:aed77492f4cecb6d7304717e64643564e inherit pro_static_attribs_classof_log"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classof_ptr.html">ofPtr</a>&lt; <a class="el" href="classof_base_logger_channel.html">ofBaseLoggerChannel</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_log.html#aed77492f4cecb6d7304717e64643564e">channel</a> = <a class="el" href="classof_ptr.html">ofPtr</a>&lt;<a class="el" href="classof_console_logger_channel.html">ofConsoleLoggerChannel</a>&gt;(new <a class="el" href="classof_console_logger_channel.html">ofConsoleLoggerChannel</a>,std::ptr_fun(noopDeleter))</td></tr>
+<tr class="memdesc:aed77492f4cecb6d7304717e64643564e inherit pro_static_attribs_classof_log"><td class="mdescLeft">&#160;</td><td class="mdescRight">the message destination  <a href="#aed77492f4cecb6d7304717e64643564e">More...</a><br/></td></tr>
+<tr class="separator:aed77492f4cecb6d7304717e64643564e inherit pro_static_attribs_classof_log"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ad37dd2a80050670ceef61d115d76a70c"></a>
+<a class="anchor" id="a6729c589b2c946748c9b59015a1328e5"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -132,7 +139,7 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname">ofLogNotice::ofLogNotice </td>
           <td>(</td>
           <td class="paramtype">const string &amp;&#160;</td>
-          <td class="paramname"><em>module</em> = <code>&quot;OF&quot;</code></td><td>)</td>
+          <td class="paramname"><em>module</em> = <code>&quot;&quot;</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -166,9 +173,41 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a6670a6f68df0c914955eb322727e273b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ofLogNotice::ofLogNotice </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>module</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>utils/<a class="el" href="of_log_8h_source.html">ofLog.h</a></li>
-<li>utils/<a class="el" href="of_log_8cpp.html">ofLog.cpp</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/utils/<a class="el" href="of_log_8h_source.html">ofLog.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/utils/<a class="el" href="of_log_8cpp.html">ofLog.cpp</a></li>
 </ul>
 </div><!-- contents -->
 

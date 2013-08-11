@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -80,8 +81,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a202fe7a11c80ee95496392f6cdd7d5e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abfd28d60cd8eeba34ce94ed1bc502ba9"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_quick_time_grabber.html#abfd28d60cd8eeba34ce94ed1bc502ba9">~ofQuickTimeGrabber</a> ()</td></tr>
 <tr class="separator:abfd28d60cd8eeba34ce94ed1bc502ba9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69cba04c77f24d6035fa8003fcbe5f9b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_quick_time_grabber.html#a69cba04c77f24d6035fa8003fcbe5f9b">listDevices</a> ()</td></tr>
-<tr class="separator:a69cba04c77f24d6035fa8003fcbe5f9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff0e2181f033a73f3a0b6034b10c2297"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="classof_video_device.html">ofVideoDevice</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_quick_time_grabber.html#aff0e2181f033a73f3a0b6034b10c2297">listDevices</a> ()</td></tr>
+<tr class="separator:aff0e2181f033a73f3a0b6034b10c2297"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b5b519e5fcbd70ff1eedf71ab376731"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_quick_time_grabber.html#a7b5b519e5fcbd70ff1eedf71ab376731">initGrabber</a> (int w, int h)</td></tr>
 <tr class="separator:a7b5b519e5fcbd70ff1eedf71ab376731"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad83a7982a79ac87d486452afbe5278bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_quick_time_grabber.html#ad83a7982a79ac87d486452afbe5278bb">update</a> ()</td></tr>
@@ -442,7 +443,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a69cba04c77f24d6035fa8003fcbe5f9b"></a>
+<a class="anchor" id="aff0e2181f033a73f3a0b6034b10c2297"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -450,7 +451,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void ofQuickTimeGrabber::listDevices </td>
+          <td class="memname">vector&lt; <a class="el" href="classof_video_device.html">ofVideoDevice</a> &gt; ofQuickTimeGrabber::listDevices </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -463,7 +464,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classof_base_video_grabber.html#a0ee487203961b1d6b635598a181a9835">ofBaseVideoGrabber</a>.</p>
+<p>Implements <a class="el" href="classof_base_video_grabber.html#ae82f0a1c87fe69c86f1738cae560efb2">ofBaseVideoGrabber</a>.</p>
 
 </div>
 </div>
@@ -1070,8 +1071,8 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>video/<a class="el" href="of_quick_time_grabber_8h_source.html">ofQuickTimeGrabber.h</a></li>
-<li>video/<a class="el" href="of_quick_time_grabber_8cpp.html">ofQuickTimeGrabber.cpp</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/video/<a class="el" href="of_quick_time_grabber_8h_source.html">ofQuickTimeGrabber.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/video/<a class="el" href="of_quick_time_grabber_8cpp.html">ofQuickTimeGrabber.cpp</a></li>
 </ul>
 </div><!-- contents -->
 

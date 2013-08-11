@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -52,6 +53,7 @@
       <li class="current"><a href="functions.html"><span>All</span></a></li>
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_type.html"><span>Typedefs</span></a></li>
       <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
       <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
       <li><a href="functions_prop.html"><span>Properties</span></a></li>
@@ -107,26 +109,29 @@
 <li>lawnGreen
 : <a class="el" href="classof_color__.html#aad2c8b34474eeaaa0ff0458331386c65">ofColor_&lt; PixelType &gt;</a>
 </li>
+<li>layer
+: <a class="el" href="structof_app_e_g_l_window_1_1_settings.html#a8e914a6e8abd5cafbf62710d16b92384">ofAppEGLWindow::Settings</a>
+</li>
 <li>leftExtent
 : <a class="el" href="structchar_props.html#aec1939811534ecd96d0dff264a01d6dc">charProps</a>
 </li>
 <li>lemonChiffon
 : <a class="el" href="classof_color__.html#a4e404c7cbe6d068d50c9d237859979b5">ofColor_&lt; PixelType &gt;</a>
 </li>
-<li>length()
-: <a class="el" href="classof_quaternion.html#af57e2004c17df8531fb171c6faa0770b">ofQuaternion</a>
+<li>length
+: <a class="el" href="classof_fmod_sound_player.html#a484e583e9f62defcee6cce48878e2a60">ofFmodSoundPlayer</a>
+, <a class="el" href="classof_quaternion.html#af57e2004c17df8531fb171c6faa0770b">ofQuaternion</a>
 , <a class="el" href="classof_vec2f.html#a04bd477dc0a1e2951b3de90a21bbfff7">ofVec2f</a>
 , <a class="el" href="classof_vec3f.html#a046f6be2f082255de4e99056b2f206fa">ofVec3f</a>
 , <a class="el" href="classof_vec4f.html#abac74250789cbd6fc69c2ca37f5a29dc">ofVec4f</a>
-, <a class="el" href="classof_fmod_sound_player.html#a484e583e9f62defcee6cce48878e2a60">ofFmodSoundPlayer</a>
 </li>
 <li>length2()
 : <a class="el" href="classof_quaternion.html#afbe5ae05c94c7a768bb34f05156fe950">ofQuaternion</a>
 </li>
 <li>lengthSquared()
-: <a class="el" href="classof_vec2f.html#aea7962354cc720744f5f07a069f4d954">ofVec2f</a>
+: <a class="el" href="classof_vec4f.html#a4d3b0cde8a6d349677c03c7826edbde5">ofVec4f</a>
+, <a class="el" href="classof_vec2f.html#aea7962354cc720744f5f07a069f4d954">ofVec2f</a>
 , <a class="el" href="classof_vec3f.html#a75342dc9358676de78727817b7f944c2">ofVec3f</a>
-, <a class="el" href="classof_vec4f.html#a4d3b0cde8a6d349677c03c7826edbde5">ofVec4f</a>
 </li>
 <li>lensOffset
 : <a class="el" href="classof_camera.html#a54570e367b902a61cbcbadf4a8ebbd16">ofCamera</a>
@@ -209,7 +214,7 @@
 : <a class="el" href="classof_color__.html#a9f9761a3a31516a55d87239e987d176c">ofColor_&lt; PixelType &gt;</a>
 </li>
 <li>lineTo
-: <a class="el" href="structof_sub_path_1_1_command.html#adb590e1f3aca1797cf1d23fa33e50557ae1c84a8bf7004dad12c5afb7cdad37b4">ofSubPath::Command</a>
+: <a class="el" href="structof_path_1_1_command.html#a3cf8602f5114fa60143fd1992e239f6aa8ba00296900784595b7b5b63cd2e188f">ofPath::Command</a>
 , <a class="el" href="classof_path.html#aebe447c51e0a62dc3dba6355cea6c587">ofPath</a>
 , <a class="el" href="classof_polyline.html#a4c7d5b95780ebf1aefb079f55bcf8d7a">ofPolyline</a>
 </li>
@@ -228,36 +233,41 @@
 , <a class="el" href="interface_q_t_kit_video_grabber.html#a19269d7143bb7940959b1fca87d7b421">QTKitVideoGrabber</a>
 </li>
 <li>listDevices()
-: <a class="el" href="classof_direct_show_grabber.html#a72c855fb2e216429011e1e872eb59ac9">ofDirectShowGrabber</a>
-, <a class="el" href="classof_gst_video_grabber.html#ab21f6214be63c89a9ae75562ff9bf7a8">ofGstVideoGrabber</a>
-, <a class="el" href="classof_q_t_kit_grabber.html#ad8ebeb35faa9fe13dbac5889f715248c">ofQTKitGrabber</a>
-, <a class="el" href="classof_quick_time_grabber.html#a69cba04c77f24d6035fa8003fcbe5f9b">ofQuickTimeGrabber</a>
-, <a class="el" href="classof_video_grabber.html#a4cbf5779fa46c662bbca0832c524946c">ofVideoGrabber</a>
+: <a class="el" href="classof_base_video_grabber.html#ae82f0a1c87fe69c86f1738cae560efb2">ofBaseVideoGrabber</a>
+, <a class="el" href="classof_direct_show_grabber.html#ad3698093f39452d9d0fab8932336d7ca">ofDirectShowGrabber</a>
+, <a class="el" href="classof_gst_video_grabber.html#a8b9d9b90d76dfb0f72c8d63c2c360811">ofGstVideoGrabber</a>
+, <a class="el" href="classof_q_t_kit_grabber.html#a5b89986c5cac6aa01b1e8c217c7b8877">ofQTKitGrabber</a>
+, <a class="el" href="classof_quick_time_grabber.html#aff0e2181f033a73f3a0b6034b10c2297">ofQuickTimeGrabber</a>
+, <a class="el" href="classof_video_grabber.html#aaedc98da6b8582effda8224b415690ed">ofVideoGrabber</a>
 , <a class="el" href="classof_serial.html#aba21737b03fbafd2bdf79e35e28477ec">ofSerial</a>
 , <a class="el" href="classof_base_sound_stream.html#aec4462be763b5b784a91aa569733d94e">ofBaseSoundStream</a>
 , <a class="el" href="classof_p_a_sound_stream.html#a71ebc79ef330c86ad8448be51ebbf401">ofPASoundStream</a>
 , <a class="el" href="classof_rt_audio_sound_stream.html#a377ca55a46d54a373e225916d0ed43e8">ofRtAudioSoundStream</a>
 , <a class="el" href="classof_sound_stream.html#a7ab3c672a357f1b30c8e3b7db6b14fc7">ofSoundStream</a>
-, <a class="el" href="classof_base_video_grabber.html#a0ee487203961b1d6b635598a181a9835">ofBaseVideoGrabber</a>
 </li>
 <li>listDir()
 : <a class="el" href="classof_directory.html#a13f19e4c59dc88844d19183ceff1da3f">ofDirectory</a>
 </li>
-<li>listVideoCodecs
-: <a class="el" href="interface_q_t_kit_video_grabber.html#a47ffef3cf210c799211a493699948b71">QTKitVideoGrabber</a>
-, <a class="el" href="classof_q_t_kit_grabber.html#a520c045a639875379b895d24498a1cb7">ofQTKitGrabber</a>
+<li>listVideoCodecs()
+: <a class="el" href="classof_q_t_kit_grabber.html#a520c045a639875379b895d24498a1cb7">ofQTKitGrabber</a>
+, <a class="el" href="interface_q_t_kit_video_grabber.html#a47ffef3cf210c799211a493699948b71">QTKitVideoGrabber</a>
 </li>
 <li>listVideoDevices()
 : <a class="el" href="classof_q_t_kit_grabber.html#ad19c82dfdd26d21cf8d90197fd6377f0">ofQTKitGrabber</a>
 , <a class="el" href="interface_q_t_kit_video_grabber.html#aaae0e50541c19c5a23dbb009c5f7366d">QTKitVideoGrabber</a>
 </li>
+<li>listVideoModes()
+: <a class="el" href="classof_app_g_l_f_w_window.html#a031a416a94776c2b33264940f15df1bf">ofAppGLFWWindow</a>
+</li>
 <li>load()
-: <a class="el" href="classof_shader.html#abba5155402a941f1b8b638afae439ffe">ofShader</a>
+: <a class="el" href="classof_shader.html#a703bcdfcee143c325a2187e061bc2044">ofShader</a>
 , <a class="el" href="classof_mesh.html#acb6eef7eab7f4e7295f9da212c3c9aeb">ofMesh</a>
+, <a class="el" href="classof_shader.html#abba5155402a941f1b8b638afae439ffe">ofShader</a>
+, <a class="el" href="classof_base_file_serializer.html#a1fcbab9f39315cd23526aa63e16c4833">ofBaseFileSerializer</a>
+, <a class="el" href="classof_xml.html#a0ff6b179d0eb1299c8de93a29ec86d4b">ofXml</a>
 </li>
 <li>loadData()
-: <a class="el" href="classof_p_b_o.html#aec9ad2cfc2e7e76c1851b8e3fb95ad74">ofPBO</a>
-, <a class="el" href="classof_texture.html#a727eb6afa39f86bf0fdc755d436dc35e">ofTexture</a>
+: <a class="el" href="classof_texture.html#a4d480834af11e4016652d7f729264df7">ofTexture</a>
 </li>
 <li>loadedFirstFrame
 : <a class="el" href="interface_q_t_kit_movie_renderer.html#a5ed0610eb4d60ba650158c88976bfad5">QTKitMovieRenderer</a>
@@ -265,27 +275,35 @@
 <li>loadFont()
 : <a class="el" href="classof_true_type_font.html#a55cc803d12857a970408f2e14b6b568c">ofTrueTypeFont</a>
 </li>
+<li>loadFromBuffer()
+: <a class="el" href="classof_xml.html#a581d7ebd03d8d452c863e40fd417b0b4">ofXml</a>
+</li>
 <li>loadIdentityMatrix()
 : <a class="el" href="classof_base_renderer.html#a76eb3bc1d6f3162ae34818ebc5c2315a">ofBaseRenderer</a>
-, <a class="el" href="classof_renderer_collection.html#a8267a32444a4c3bf3ae7ec8328f42a04">ofRendererCollection</a>
-, <a class="el" href="classof_cairo_renderer.html#adebe606824f8a55acfb755590e8de7ff">ofCairoRenderer</a>
+, <a class="el" href="classof_g_l_programmable_renderer.html#a3b0884f80f0c4aec91667c1803e63279">ofGLProgrammableRenderer</a>
 , <a class="el" href="classof_g_l_renderer.html#a8ffc12a22ed8898ebdc6c7343c732fb8">ofGLRenderer</a>
+, <a class="el" href="classof_cairo_renderer.html#adebe606824f8a55acfb755590e8de7ff">ofCairoRenderer</a>
+, <a class="el" href="classof_renderer_collection.html#a8267a32444a4c3bf3ae7ec8328f42a04">ofRendererCollection</a>
+, <a class="el" href="classof_matrix_stack.html#a296f40a7d772bd80c8fd2dc49458d1f1">ofMatrixStack</a>
 </li>
 <li>loadImage()
-: <a class="el" href="classof_image__.html#aca661aecbda7615879dbfb57609400df">ofImage_&lt; PixelType &gt;</a>
+: <a class="el" href="classof_image__.html#abd944cd213109f0046b36bc76dc318aa">ofImage_&lt; PixelType &gt;</a>
 </li>
 <li>loadMatrix()
-: <a class="el" href="classof_g_l_renderer.html#ab0d3a8eee5902bff267c7c874d684b5d">ofGLRenderer</a>
+: <a class="el" href="classof_g_l_renderer.html#a385e468989bd43ee68553d0bbd3e4ae5">ofGLRenderer</a>
 , <a class="el" href="classof_cairo_renderer.html#a4008bd4d2425e4633e3ef5c9c7f7290a">ofCairoRenderer</a>
+, <a class="el" href="classof_g_l_programmable_renderer.html#a8b881662039cf6ba27da667bb1156b99">ofGLProgrammableRenderer</a>
 , <a class="el" href="classof_base_renderer.html#ad9aa1f3e26fae4c5c37c32cffa65ca2e">ofBaseRenderer</a>
-, <a class="el" href="classof_g_l_renderer.html#a385e468989bd43ee68553d0bbd3e4ae5">ofGLRenderer</a>
-, <a class="el" href="classof_renderer_collection.html#a02191cd3485f00f4047768b09cd720a9">ofRendererCollection</a>
+, <a class="el" href="classof_g_l_programmable_renderer.html#a24e929f48598ca71b3a0a9efebb4f88c">ofGLProgrammableRenderer</a>
+, <a class="el" href="classof_g_l_renderer.html#ab0d3a8eee5902bff267c7c874d684b5d">ofGLRenderer</a>
 , <a class="el" href="classof_cairo_renderer.html#a12e2466567bf1e322f09ef5bdf6c07e2">ofCairoRenderer</a>
-, <a class="el" href="classof_base_renderer.html#a2795c44e17f73e17b12a14ede8fc0642">ofBaseRenderer</a>
+, <a class="el" href="classof_matrix_stack.html#a672766f99c3c957225721ed2e547d3c8">ofMatrixStack</a>
 , <a class="el" href="classof_renderer_collection.html#aedd86da6d906a1aae877177854c6c8cf">ofRendererCollection</a>
+, <a class="el" href="classof_base_renderer.html#a2795c44e17f73e17b12a14ede8fc0642">ofBaseRenderer</a>
+, <a class="el" href="classof_renderer_collection.html#a02191cd3485f00f4047768b09cd720a9">ofRendererCollection</a>
 </li>
 <li>loadMovie()
-: <a class="el" href="classof_q_t_kit_player.html#ad7e2cb0294bcb75d131ce24e3c44c415">ofQTKitPlayer</a>
+: <a class="el" href="classof_q_t_kit_player.html#a63632254ac950a57f3ed328f706ce1fa">ofQTKitPlayer</a>
 , <a class="el" href="classof_video_player.html#a48bac06cc3be16f380000889a9cbdb5b">ofVideoPlayer</a>
 , <a class="el" href="classof_base_video_player.html#a5729b23ec498767da1439d272456b982">ofBaseVideoPlayer</a>
 , <a class="el" href="classof_gst_video_player.html#a55638695b70894345e2ff837afb2cc92">ofGstVideoPlayer</a>
@@ -308,15 +326,14 @@
 : <a class="el" href="classof_thread.html#a8b682673b3d11225785b74f68fc3ce96">ofThread</a>
 </li>
 <li>log()
-: <a class="el" href="classof_base_logger_channel.html#a41859e4af28dd6263df054666a5fe58f">ofBaseLoggerChannel</a>
-, <a class="el" href="classof_file_logger_channel.html#a6508d0b263dfbb3c3b73f28fed4116e6">ofFileLoggerChannel</a>
-, <a class="el" href="classof_base_logger_channel.html#ac3bcaaf2a15f4bfd417f8f8b4e72a8c3">ofBaseLoggerChannel</a>
-, <a class="el" href="classof_file_logger_channel.html#a84e3b3bb3e043388947b966bd7536b2b">ofFileLoggerChannel</a>
+: <a class="el" href="classof_file_logger_channel.html#a7cabc7ebbd2afb8c569c1afeb0e734e8">ofFileLoggerChannel</a>
+, <a class="el" href="classof_base_logger_channel.html#a41859e4af28dd6263df054666a5fe58f">ofBaseLoggerChannel</a>
+, <a class="el" href="classof_console_logger_channel.html#ad47d80b1bc4a21c0df60d70f6f39cf75">ofConsoleLoggerChannel</a>
+, <a class="el" href="classof_base_logger_channel.html#a83ff10e99279f145285daa1e096bbeaa">ofBaseLoggerChannel</a>
+, <a class="el" href="classof_console_logger_channel.html#a9ccdb08eec51a78e0b8126c67014ec55">ofConsoleLoggerChannel</a>
+, <a class="el" href="classof_file_logger_channel.html#ab18cba0b2ded364630dd9b2230776642">ofFileLoggerChannel</a>
 , <a class="el" href="classof_console_logger_channel.html#aa07ecce14277c0eaeae57c2078619394">ofConsoleLoggerChannel</a>
-, <a class="el" href="classof_file_logger_channel.html#a3b96503914bb215045b49feb7e43b3b1">ofFileLoggerChannel</a>
-, <a class="el" href="classof_console_logger_channel.html#a1566895d3ae76fe6280a14da10948bf7">ofConsoleLoggerChannel</a>
-, <a class="el" href="classof_base_logger_channel.html#a71b1b3361092015cdfb3b3b485b008d9">ofBaseLoggerChannel</a>
-, <a class="el" href="classof_console_logger_channel.html#a6862457a576aa2c0be4b6e17a933d078">ofConsoleLoggerChannel</a>
+, <a class="el" href="classof_file_logger_channel.html#a6508d0b263dfbb3c3b73f28fed4116e6">ofFileLoggerChannel</a>
 </li>
 <li>lookAt()
 : <a class="el" href="classof_node.html#a039b31630ea3fc3718da43e23ecd7ef3">ofNode</a>

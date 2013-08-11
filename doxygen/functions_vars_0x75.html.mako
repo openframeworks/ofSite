@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -52,6 +53,7 @@
       <li><a href="functions.html"><span>All</span></a></li>
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li class="current"><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_type.html"><span>Typedefs</span></a></li>
       <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
       <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
       <li><a href="functions_prop.html"><span>Properties</span></a></li>
@@ -107,6 +109,12 @@
 </li>
 <li>useStencil
 : <a class="el" href="structof_fbo_1_1_settings.html#a97523c603e7e0accd8a03badecfda4f8">ofFbo::Settings</a>
+</li>
+<li>useTextureMatrix
+: <a class="el" href="classof_texture_data.html#a283e190f795b68f17c5725e8c5493d0d">ofTextureData</a>
+</li>
+<li>usingVbo
+: <a class="el" href="classof3d_primitive.html#aec45d7e4d1055f4374b9ee6d44de82ae">of3dPrimitive</a>
 </li>
 </ul>
 </div><!-- contents -->

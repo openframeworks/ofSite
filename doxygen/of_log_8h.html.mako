@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -47,7 +48,7 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_cbdb8362360e11eafe2fa3bc74cf0ffd.html">utils</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_84d5b34cee6369a03c8d1f3b970ed216.html">openFrameworks</a></li><li class="navelem"><a class="el" href="dir_526ceb304abbba6426340f0fa9170dbd.html">utils</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -103,20 +104,20 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a18dbcd116b6de7fdd84a2699bbb935fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_log_8h.html#a18dbcd116b6de7fdd84a2699bbb935fa">ofSetLogLevel</a> (<a class="el" href="of_log_8h.html#a6b3aba959377cae6ed3afbb9d5826fe4">ofLogLevel</a> logLevel)</td></tr>
-<tr class="separator:a18dbcd116b6de7fdd84a2699bbb935fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85cc790951f666d190149e09b836ba01"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_log_8h.html#a85cc790951f666d190149e09b836ba01">ofSetLogLevel</a> (string module, <a class="el" href="of_log_8h.html#a6b3aba959377cae6ed3afbb9d5826fe4">ofLogLevel</a> logLevel)</td></tr>
-<tr class="separator:a85cc790951f666d190149e09b836ba01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a1aca68c925a0cf024a14fc70fb7417"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_log_8h.html#a7a1aca68c925a0cf024a14fc70fb7417">ofSetLogLevel</a> (<a class="el" href="of_log_8h.html#a6b3aba959377cae6ed3afbb9d5826fe4">ofLogLevel</a> level)</td></tr>
+<tr class="separator:a7a1aca68c925a0cf024a14fc70fb7417"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09c666d27421420d54459f65bf69562f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_log_8h.html#a09c666d27421420d54459f65bf69562f">ofSetLogLevel</a> (string module, <a class="el" href="of_log_8h.html#a6b3aba959377cae6ed3afbb9d5826fe4">ofLogLevel</a> level)</td></tr>
+<tr class="separator:a09c666d27421420d54459f65bf69562f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6e0d81bf5142843892fe54908399794"><td class="memItemLeft" align="right" valign="top"><a class="el" href="of_log_8h.html#a6b3aba959377cae6ed3afbb9d5826fe4">ofLogLevel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_log_8h.html#ac6e0d81bf5142843892fe54908399794">ofGetLogLevel</a> ()</td></tr>
 <tr class="separator:ac6e0d81bf5142843892fe54908399794"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a669a0da89a1dbc61c35aeb5b02d5b21c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_log_8h.html#a669a0da89a1dbc61c35aeb5b02d5b21c">ofSetLoggerChannel</a> (<a class="el" href="classof_ptr.html">ofPtr</a>&lt; <a class="el" href="classof_base_logger_channel.html">ofBaseLoggerChannel</a> &gt; loggerChannel)</td></tr>
-<tr class="separator:a669a0da89a1dbc61c35aeb5b02d5b21c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae02174a9ed5d36407a67514553677628"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_log_8h.html#ae02174a9ed5d36407a67514553677628">ofGetLogLevelName</a> (<a class="el" href="of_log_8h.html#a6b3aba959377cae6ed3afbb9d5826fe4">ofLogLevel</a> level)</td></tr>
-<tr class="separator:ae02174a9ed5d36407a67514553677628"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18730a546b3c27723dc95ecf1a5e55b7"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_log_8h.html#a18730a546b3c27723dc95ecf1a5e55b7">ofGetLogLevelName</a> (<a class="el" href="of_log_8h.html#a6b3aba959377cae6ed3afbb9d5826fe4">ofLogLevel</a> level, bool pad=false)</td></tr>
+<tr class="separator:a18730a546b3c27723dc95ecf1a5e55b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ed956aa67bdd9871b2839ead0dc1191"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_log_8h.html#a1ed956aa67bdd9871b2839ead0dc1191">ofLogToFile</a> (const string &amp;path, bool append=false)</td></tr>
 <tr class="separator:a1ed956aa67bdd9871b2839ead0dc1191"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeaeb5016cb838a99e88502a57d8b2cb6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_log_8h.html#aeaeb5016cb838a99e88502a57d8b2cb6">ofLogToConsole</a> ()</td></tr>
 <tr class="separator:aeaeb5016cb838a99e88502a57d8b2cb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a669a0da89a1dbc61c35aeb5b02d5b21c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_log_8h.html#a669a0da89a1dbc61c35aeb5b02d5b21c">ofSetLoggerChannel</a> (<a class="el" href="classof_ptr.html">ofPtr</a>&lt; <a class="el" href="classof_base_logger_channel.html">ofBaseLoggerChannel</a> &gt; loggerChannel)</td></tr>
+<tr class="separator:a669a0da89a1dbc61c35aeb5b02d5b21c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a class="anchor" id="a6b3aba959377cae6ed3afbb9d5826fe4"></a>
@@ -161,7 +162,7 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ae02174a9ed5d36407a67514553677628"></a>
+<a class="anchor" id="a18730a546b3c27723dc95ecf1a5e55b7"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -169,11 +170,22 @@ Functions</h2></td></tr>
           <td class="memname">string ofGetLogLevelName </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="of_log_8h.html#a6b3aba959377cae6ed3afbb9d5826fe4">ofLogLevel</a>&#160;</td>
-          <td class="paramname"><em>level</em></td><td>)</td>
+          <td class="paramname"><em>level</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>pad</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>get log level name as a string set pad to true if you want all log level names to be the same length </p>
 
 </div>
 </div>
@@ -234,7 +246,7 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a18dbcd116b6de7fdd84a2699bbb935fa"></a>
+<a class="anchor" id="a7a1aca68c925a0cf024a14fc70fb7417"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -242,7 +254,7 @@ Functions</h2></td></tr>
           <td class="memname">void ofSetLogLevel </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="of_log_8h.html#a6b3aba959377cae6ed3afbb9d5826fe4">ofLogLevel</a>&#160;</td>
-          <td class="paramname"><em>logLevel</em></td><td>)</td>
+          <td class="paramname"><em>level</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -250,7 +262,7 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a85cc790951f666d190149e09b836ba01"></a>
+<a class="anchor" id="a09c666d27421420d54459f65bf69562f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -264,7 +276,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="of_log_8h.html#a6b3aba959377cae6ed3afbb9d5826fe4">ofLogLevel</a>&#160;</td>
-          <td class="paramname"><em>logLevel</em>&#160;</td>
+          <td class="paramname"><em>level</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

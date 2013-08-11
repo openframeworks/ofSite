@@ -41,6 +41,34 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###bool busFunction(*bus, *message, *app)
+
+<!--
+_syntax: busFunction(*bus, *message, *app)_
+_name: busFunction_
+_returns: bool_
+_returns_description: _
+_parameters: GstBus *bus, GstMessage *message, ofGstUtils *app_
+_access: private_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: yes_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void close()
 
 <!--
@@ -148,6 +176,34 @@ _advanced: False_
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###GstElement getGstElementByName(&name)
+
+<!--
+_syntax: getGstElementByName(&name)_
+_name: getGstElementByName_
+_returns: GstElement_
+_returns_description: _
+_parameters: const string &name_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -402,13 +458,41 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool gstHandleMessage(*bus, *message)
+
+<!--
+_syntax: gstHandleMessage(*bus, *message)_
+_name: gstHandleMessage_
+_returns: bool_
+_returns_description: _
+_parameters: GstBus *bus, GstMessage *message_
+_access: private_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -1011,7 +1095,7 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -1210,6 +1294,30 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###GstBus * bus
+
+<!--
+_name: bus_
+_type: GstBus *_
+_access: private_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###gint64 durationNanos
 
 <!--
@@ -1351,6 +1459,30 @@ _advanced: False_
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofGstMainLoopThread * mainLoop
+
+<!--
+_name: mainLoop_
+_type: ofGstMainLoopThread *_
+_access: private_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 

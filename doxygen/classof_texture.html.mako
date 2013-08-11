@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -83,12 +84,28 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9d0bbb24231157b2795b99241183b297"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37e50fcd472023e3879fda915d356d24"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_texture.html#a37e50fcd472023e3879fda915d356d24">allocate</a> (const <a class="el" href="classof_texture_data.html">ofTextureData</a> &amp;textureData)</td></tr>
 <tr class="separator:a37e50fcd472023e3879fda915d356d24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e577b1f78804018969e751f9edf44e9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_texture.html#a3e577b1f78804018969e751f9edf44e9">allocate</a> (const <a class="el" href="classof_texture_data.html">ofTextureData</a> &amp;textureData, int glFormat, int pixelType)</td></tr>
+<tr class="separator:a3e577b1f78804018969e751f9edf44e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae4ddaaa00ce5a7a3989630dfa7eb88df"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_texture.html#ae4ddaaa00ce5a7a3989630dfa7eb88df">allocate</a> (int w, int h, int glInternalFormat)</td></tr>
 <tr class="separator:ae4ddaaa00ce5a7a3989630dfa7eb88df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73bc53727f871cd9d441ec77ef9ceb20"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_texture.html#a73bc53727f871cd9d441ec77ef9ceb20">allocate</a> (int w, int h, int glInternalFormat, int glFormat, int pixelType)</td></tr>
+<tr class="separator:a73bc53727f871cd9d441ec77ef9ceb20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3e13abdd1b384df4c70c479c96e9297"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_texture.html#ad3e13abdd1b384df4c70c479c96e9297">allocate</a> (int w, int h, int glInternalFormat, bool bUseARBExtention)</td></tr>
 <tr class="separator:ad3e13abdd1b384df4c70c479c96e9297"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a679f4795f8551cb70b313f6cddc7c165"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_texture.html#a679f4795f8551cb70b313f6cddc7c165">allocate</a> (int w, int h, int glInternalFormat, bool bUseARBExtention, int glFormat, int pixelType)</td></tr>
+<tr class="separator:a679f4795f8551cb70b313f6cddc7c165"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6b53932ec9c7aec68faeca9fdd72124"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_texture.html#af6b53932ec9c7aec68faeca9fdd72124">allocate</a> (const <a class="el" href="of_pixels_8h.html#a590f460ea8c9e40214543c26ca3b386a">ofPixels</a> &amp;pix)</td></tr>
 <tr class="separator:af6b53932ec9c7aec68faeca9fdd72124"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cc40775f462f7ee8124ab6da58f2797"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_texture.html#a3cc40775f462f7ee8124ab6da58f2797">allocate</a> (const <a class="el" href="of_pixels_8h.html#a590f460ea8c9e40214543c26ca3b386a">ofPixels</a> &amp;pix, bool bUseARBExtention)</td></tr>
+<tr class="separator:a3cc40775f462f7ee8124ab6da58f2797"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2f45380a3c103f7fbe8d223b162b2e6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_texture.html#ac2f45380a3c103f7fbe8d223b162b2e6">allocate</a> (const <a class="el" href="of_pixels_8h.html#ac39b31393829b504dee01ae495ffaaa0">ofShortPixels</a> &amp;pix)</td></tr>
+<tr class="separator:ac2f45380a3c103f7fbe8d223b162b2e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae849eb2dc05407b5b2692354349c0889"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_texture.html#ae849eb2dc05407b5b2692354349c0889">allocate</a> (const <a class="el" href="of_pixels_8h.html#ac39b31393829b504dee01ae495ffaaa0">ofShortPixels</a> &amp;pix, bool bUseARBExtention)</td></tr>
+<tr class="separator:ae849eb2dc05407b5b2692354349c0889"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fd3931d5d62eb0d23c5e218954db8fe"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_texture.html#a5fd3931d5d62eb0d23c5e218954db8fe">allocate</a> (const <a class="el" href="of_pixels_8h.html#a0b4153db947c5a20408140e5f24ab1e0">ofFloatPixels</a> &amp;pix)</td></tr>
+<tr class="separator:a5fd3931d5d62eb0d23c5e218954db8fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8ec9a76d58d8da391350c84b060a3a3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_texture.html#ab8ec9a76d58d8da391350c84b060a3a3">allocate</a> (const <a class="el" href="of_pixels_8h.html#a0b4153db947c5a20408140e5f24ab1e0">ofFloatPixels</a> &amp;pix, bool bUseARBExtention)</td></tr>
+<tr class="separator:ab8ec9a76d58d8da391350c84b060a3a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c220c8be60de9261f1e4788e1a418b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_texture.html#a3c220c8be60de9261f1e4788e1a418b7">clear</a> ()</td></tr>
 <tr class="separator:a3c220c8be60de9261f1e4788e1a418b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f645f148af58d295cc2c1c07b8be9e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_texture.html#a3f645f148af58d295cc2c1c07b8be9e5">setUseExternalTextureID</a> (GLuint externTexID)</td></tr>
@@ -105,6 +122,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2a6d50c8ac5cf629a6aca4e9e4519532"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b40d097c58d89f5910b09e7c66a49cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_texture.html#a7b40d097c58d89f5910b09e7c66a49cb">loadData</a> (const <a class="el" href="of_pixels_8h.html#a0b4153db947c5a20408140e5f24ab1e0">ofFloatPixels</a> &amp;pix)</td></tr>
 <tr class="separator:a7b40d097c58d89f5910b09e7c66a49cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d026729f29aca4acd9c93812a374fb9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_texture.html#a1d026729f29aca4acd9c93812a374fb9">loadData</a> (const <a class="el" href="of_pixels_8h.html#a590f460ea8c9e40214543c26ca3b386a">ofPixels</a> &amp;pix, int glFormat)</td></tr>
+<tr class="separator:a1d026729f29aca4acd9c93812a374fb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36745ba0eae08db1c071956e17c03cc3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_texture.html#a36745ba0eae08db1c071956e17c03cc3">loadData</a> (const <a class="el" href="of_pixels_8h.html#ac39b31393829b504dee01ae495ffaaa0">ofShortPixels</a> &amp;pix, int glFormat)</td></tr>
+<tr class="separator:a36745ba0eae08db1c071956e17c03cc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a564956df72b8f6de80d15c173c68cbd5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_texture.html#a564956df72b8f6de80d15c173c68cbd5">loadData</a> (const <a class="el" href="of_pixels_8h.html#a0b4153db947c5a20408140e5f24ab1e0">ofFloatPixels</a> &amp;pix, int glFormat)</td></tr>
+<tr class="separator:a564956df72b8f6de80d15c173c68cbd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5831aacf2d29722b0f9a583f44745eff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_texture.html#a5831aacf2d29722b0f9a583f44745eff">setRGToRGBASwizzles</a> (bool rToRGBSwizzles)</td></tr>
+<tr class="separator:a5831aacf2d29722b0f9a583f44745eff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a514787330456b4f5962091a7ee434a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_texture.html#a0a514787330456b4f5962091a7ee434a">loadScreenData</a> (int x, int y, int w, int h)</td></tr>
 <tr class="separator:a0a514787330456b4f5962091a7ee434a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5409b3dfe503bc05d7e06c1977ead2ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_texture.html#a5409b3dfe503bc05d7e06c1977ead2ac">setAnchorPercent</a> (float xPct, float yPct)</td></tr>
@@ -180,8 +205,12 @@ Public Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a8e3b7e9da2cfaad45e5b9aec139b4364"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_texture.html#a8e3b7e9da2cfaad45e5b9aec139b4364">loadData</a> (void *data, int w, int h, int glFormat)</td></tr>
-<tr class="separator:a8e3b7e9da2cfaad45e5b9aec139b4364"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73c8e8c7177b2df1e766bf3e9c4408ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_texture.html#a73c8e8c7177b2df1e766bf3e9c4408ff">loadData</a> (const void *data, int w, int h, int glFormat, int glType)</td></tr>
+<tr class="separator:a73c8e8c7177b2df1e766bf3e9c4408ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b4f74e2732f10cacfbef59092479f5d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_texture.html#a2b4f74e2732f10cacfbef59092479f5d">enableTextureTarget</a> ()</td></tr>
+<tr class="separator:a2b4f74e2732f10cacfbef59092479f5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9adefd2409184d3a4e775f02acdbe783"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_texture.html#a9adefd2409184d3a4e775f02acdbe783">disableTextureTarget</a> ()</td></tr>
+<tr class="separator:a9adefd2409184d3a4e775f02acdbe783"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -189,6 +218,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:afa0a8aa4148384f2f4590873781915d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab70fdce4a1a2af7d3992400d571254f3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_texture.html#ab70fdce4a1a2af7d3992400d571254f3">bAnchorIsPct</a></td></tr>
 <tr class="separator:ab70fdce4a1a2af7d3992400d571254f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fa7514f50f2fca63c94554fa37d3201"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_mesh.html">ofMesh</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_texture.html#a1fa7514f50f2fca63c94554fa37d3201">quad</a></td></tr>
+<tr class="separator:a1fa7514f50f2fca63c94554fa37d3201"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ae091e52a2a4a86bc57bf8f17833bbfb8"></a>
@@ -270,6 +301,46 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a3e577b1f78804018969e751f9edf44e9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofTexture::allocate </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classof_texture_data.html">ofTextureData</a> &amp;&#160;</td>
+          <td class="paramname"><em>textureData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>glFormat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pixelType</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="ae4ddaaa00ce5a7a3989630dfa7eb88df"></a>
 <div class="memitem">
 <div class="memproto">
@@ -294,6 +365,58 @@ Protected Attributes</h2></td></tr>
           <td></td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>glInternalFormat</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a73bc53727f871cd9d441ec77ef9ceb20"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofTexture::allocate </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>h</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>glInternalFormat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>glFormat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pixelType</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -356,6 +479,64 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a679f4795f8551cb70b313f6cddc7c165"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofTexture::allocate </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>h</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>glInternalFormat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bUseARBExtention</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>glFormat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pixelType</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="af6b53932ec9c7aec68faeca9fdd72124"></a>
 <div class="memitem">
 <div class="memproto">
@@ -369,6 +550,156 @@ Protected Attributes</h2></td></tr>
           <td class="paramtype">const <a class="el" href="of_pixels_8h.html#a590f460ea8c9e40214543c26ca3b386a">ofPixels</a> &amp;&#160;</td>
           <td class="paramname"><em>pix</em></td><td>)</td>
           <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3cc40775f462f7ee8124ab6da58f2797"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofTexture::allocate </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="of_pixels_8h.html#a590f460ea8c9e40214543c26ca3b386a">ofPixels</a> &amp;&#160;</td>
+          <td class="paramname"><em>pix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bUseARBExtention</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac2f45380a3c103f7fbe8d223b162b2e6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofTexture::allocate </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="of_pixels_8h.html#ac39b31393829b504dee01ae495ffaaa0">ofShortPixels</a> &amp;&#160;</td>
+          <td class="paramname"><em>pix</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae849eb2dc05407b5b2692354349c0889"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofTexture::allocate </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="of_pixels_8h.html#ac39b31393829b504dee01ae495ffaaa0">ofShortPixels</a> &amp;&#160;</td>
+          <td class="paramname"><em>pix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bUseARBExtention</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5fd3931d5d62eb0d23c5e218954db8fe"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofTexture::allocate </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="of_pixels_8h.html#a0b4153db947c5a20408140e5f24ab1e0">ofFloatPixels</a> &amp;&#160;</td>
+          <td class="paramname"><em>pix</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab8ec9a76d58d8da391350c84b060a3a3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofTexture::allocate </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="of_pixels_8h.html#a0b4153db947c5a20408140e5f24ab1e0">ofFloatPixels</a> &amp;&#160;</td>
+          <td class="paramname"><em>pix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bUseARBExtention</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -421,6 +752,29 @@ Protected Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9adefd2409184d3a4e775f02acdbe783"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofTexture::disableTextureTarget </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -861,6 +1215,29 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a2b4f74e2732f10cacfbef59092479f5d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofTexture::enableTextureTarget </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="afcca2b15db836fe03c9a965b477f2f89"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1170,7 +1547,85 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a8e3b7e9da2cfaad45e5b9aec139b4364"></a>
+<a class="anchor" id="a1d026729f29aca4acd9c93812a374fb9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofTexture::loadData </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="of_pixels_8h.html#a590f460ea8c9e40214543c26ca3b386a">ofPixels</a> &amp;&#160;</td>
+          <td class="paramname"><em>pix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>glFormat</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a36745ba0eae08db1c071956e17c03cc3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofTexture::loadData </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="of_pixels_8h.html#ac39b31393829b504dee01ae495ffaaa0">ofShortPixels</a> &amp;&#160;</td>
+          <td class="paramname"><em>pix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>glFormat</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a564956df72b8f6de80d15c173c68cbd5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofTexture::loadData </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="of_pixels_8h.html#a0b4153db947c5a20408140e5f24ab1e0">ofFloatPixels</a> &amp;&#160;</td>
+          <td class="paramname"><em>pix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>glFormat</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a73c8e8c7177b2df1e766bf3e9c4408ff"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1180,7 +1635,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">void ofTexture::loadData </td>
           <td>(</td>
-          <td class="paramtype">void *&#160;</td>
+          <td class="paramtype">const void *&#160;</td>
           <td class="paramname"><em>data</em>, </td>
         </tr>
         <tr>
@@ -1199,7 +1654,13 @@ Protected Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>glFormat</em>&#160;</td>
+          <td class="paramname"><em>glFormat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>glType</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1431,6 +1892,22 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a5831aacf2d29722b0f9a583f44745eff"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofTexture::setRGToRGBASwizzles </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>rToRGBSwizzles</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a71bf583e729e1510cc32d0358a60d72f"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1555,6 +2032,26 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a1fa7514f50f2fca63c94554fa37d3201"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classof_mesh.html">ofMesh</a> ofTexture::quad</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a4c203e4b4c0516e8ee8ebe11de63eb95"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1568,8 +2065,8 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>gl/<a class="el" href="of_texture_8h_source.html">ofTexture.h</a></li>
-<li>gl/<a class="el" href="of_texture_8cpp.html">ofTexture.cpp</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/gl/<a class="el" href="of_texture_8h_source.html">ofTexture.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/gl/<a class="el" href="of_texture_8cpp.html">ofTexture.cpp</a></li>
 </ul>
 </div><!-- contents -->
 

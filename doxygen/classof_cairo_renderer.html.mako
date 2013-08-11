@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -52,6 +53,7 @@
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="classof_cairo_renderer-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ofCairoRenderer Class Reference</div>  </div>
@@ -84,8 +86,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad079c5691b32f860b4c2fb8875c9ebe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e6a6b041771a84b52dee3bf7599854e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_cairo_renderer.html#a3e6a6b041771a84b52dee3bf7599854e">~ofCairoRenderer</a> ()</td></tr>
 <tr class="separator:a3e6a6b041771a84b52dee3bf7599854e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a800e09830220c5ba4819fe4ad0ce0cf0"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_cairo_renderer.html#a800e09830220c5ba4819fe4ad0ce0cf0">getType</a> ()</td></tr>
-<tr class="separator:a800e09830220c5ba4819fe4ad0ce0cf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a069ceb0e7e8566f9aeca00f94bf6c66b"><td class="memItemLeft" align="right" valign="top">const string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_cairo_renderer.html#a069ceb0e7e8566f9aeca00f94bf6c66b">getType</a> ()</td></tr>
+<tr class="separator:a069ceb0e7e8566f9aeca00f94bf6c66b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ccf5482431574783cdecc8e1110ec44"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_cairo_renderer.html#a3ccf5482431574783cdecc8e1110ec44">setup</a> (string filename, <a class="el" href="classof_cairo_renderer.html#aa4f542abccc80b9288466943a947ac55">Type</a> type=<a class="el" href="classof_cairo_renderer.html#aa4f542abccc80b9288466943a947ac55ad223e1e16cd4dce5d2c403d020d5f501">ofCairoRenderer::FROM_FILE_EXTENSION</a>, bool multiPage=true, bool b3D=false, <a class="el" href="classof_rectangle.html">ofRectangle</a> <a class="el" href="classof_cairo_renderer.html#aeb4bdbd4882a0846cdd95d4a17c981a3">viewport</a>=<a class="el" href="classof_rectangle.html">ofRectangle</a>(0, 0, 0, 0))</td></tr>
 <tr class="separator:a3ccf5482431574783cdecc8e1110ec44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7823ed5070209eefa4cd682a280c4f5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_cairo_renderer.html#a7823ed5070209eefa4cd682a280c4f5a">setupMemoryOnly</a> (<a class="el" href="classof_cairo_renderer.html#aa4f542abccc80b9288466943a947ac55">Type</a> _type, bool multiPage=true, bool b3D=false, <a class="el" href="classof_rectangle.html">ofRectangle</a> <a class="el" href="classof_cairo_renderer.html#aeb4bdbd4882a0846cdd95d4a17c981a3">viewport</a>=<a class="el" href="classof_rectangle.html">ofRectangle</a>(0, 0, 0, 0))</td></tr>
@@ -98,14 +100,16 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a57f44289cb55fb1c6601b456f1c06f06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b07626fdbc8410889ee9884ce471fa0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_cairo_renderer.html#a7b07626fdbc8410889ee9884ce471fa0">draw</a> (<a class="el" href="classof_path.html">ofPath</a> &amp;shape)</td></tr>
 <tr class="separator:a7b07626fdbc8410889ee9884ce471fa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1cad4fc7ea663f4bb42c8d4f0322ee49"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_cairo_renderer.html#a1cad4fc7ea663f4bb42c8d4f0322ee49">draw</a> (<a class="el" href="classof_sub_path.html">ofSubPath</a> &amp;path)</td></tr>
-<tr class="separator:a1cad4fc7ea663f4bb42c8d4f0322ee49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04c9a32aecc4ba225319ab2e86a88523"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_cairo_renderer.html#a04c9a32aecc4ba225319ab2e86a88523">draw</a> (<a class="el" href="structof_path_1_1_command.html">ofPath::Command</a> &amp;path)</td></tr>
+<tr class="separator:a04c9a32aecc4ba225319ab2e86a88523"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19cdf25f21b91f6073cc257ea6bd1c84"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_cairo_renderer.html#a19cdf25f21b91f6073cc257ea6bd1c84">draw</a> (<a class="el" href="classof_polyline.html">ofPolyline</a> &amp;poly)</td></tr>
 <tr class="separator:a19cdf25f21b91f6073cc257ea6bd1c84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7cc473f11aee40a4404fca95cfed7537"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_cairo_renderer.html#a7cc473f11aee40a4404fca95cfed7537">draw</a> (<a class="el" href="classof_mesh.html">ofMesh</a> &amp;vertexData, bool useColors=true, bool useTextures=true, bool useNormals=true)</td></tr>
 <tr class="separator:a7cc473f11aee40a4404fca95cfed7537"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4dc19bf99398191d17efe41618be411"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_cairo_renderer.html#ac4dc19bf99398191d17efe41618be411">draw</a> (<a class="el" href="classof_mesh.html">ofMesh</a> &amp;vertexData, <a class="el" href="of_g_l_utils_8h.html#a6beb1fbbaba728909c78cda1eadfe28e">ofPolyRenderMode</a> mode, bool useColors=false, bool useTextures=false, bool useNormals=false)</td></tr>
 <tr class="separator:ac4dc19bf99398191d17efe41618be411"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab428a44e5987f1005bc3e08eb8d6bcfe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_cairo_renderer.html#ab428a44e5987f1005bc3e08eb8d6bcfe">draw</a> (<a class="el" href="classof3d_primitive.html">of3dPrimitive</a> &amp;model, <a class="el" href="of_g_l_utils_8h.html#a6beb1fbbaba728909c78cda1eadfe28e">ofPolyRenderMode</a> renderType)</td></tr>
+<tr class="separator:ab428a44e5987f1005bc3e08eb8d6bcfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77a40bd7d26d58d68a65928070580140"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_cairo_renderer.html#a77a40bd7d26d58d68a65928070580140">draw</a> (vector&lt; <a class="el" href="of_point_8h.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> &gt; &amp;vertexData, <a class="el" href="of_g_l_utils_8h.html#a0f71f0b23a18629a446952d5540e16e0">ofPrimitiveMode</a> drawMode)</td></tr>
 <tr class="separator:a77a40bd7d26d58d68a65928070580140"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b1f35f442f4dbf8461e261cca89aa4a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_cairo_renderer.html#a0b1f35f442f4dbf8461e261cca89aa4a">draw</a> (<a class="el" href="of_image_8h.html#afefad955db3b51212caad74105ca7871">ofImage</a> &amp;img, float x, float y, float z, float w, float h, float sx, float sy, float sw, float sh)</td></tr>
@@ -122,12 +126,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a95e3b1bf17c56b334ae9b265d0caf971"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb4bdbd4882a0846cdd95d4a17c981a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_cairo_renderer.html#aeb4bdbd4882a0846cdd95d4a17c981a3">viewport</a> (<a class="el" href="classof_rectangle.html">ofRectangle</a> viewport)</td></tr>
 <tr class="separator:aeb4bdbd4882a0846cdd95d4a17c981a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acae2134144ce0e7e328ffba50d867189"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_cairo_renderer.html#acae2134144ce0e7e328ffba50d867189">viewport</a> (float x=0, float y=0, float width=0, float height=0, bool invertY=true)</td></tr>
+<tr class="memitem:acae2134144ce0e7e328ffba50d867189"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_cairo_renderer.html#acae2134144ce0e7e328ffba50d867189">viewport</a> (float x=0, float y=0, float <a class="el" href="of_icon_8h.html#aca34d28e3d8bcbcadb8edb4e3af24f8c">width</a>=0, float <a class="el" href="of_icon_8h.html#ab2e78c61905b4419fcc7b4cfc500fe85">height</a>=0, bool invertY=true)</td></tr>
 <tr class="separator:acae2134144ce0e7e328ffba50d867189"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d2544d8f0ecef5d3728f45a8d4229d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_cairo_renderer.html#a2d2544d8f0ecef5d3728f45a8d4229d9">setupScreenPerspective</a> (float width=0, float height=0, <a class="el" href="of_constants_8h.html#a85ec4045e22bafeea5c561f9778c1f1c">ofOrientation</a> orientation=<a class="el" href="of_constants_8h.html#a85ec4045e22bafeea5c561f9778c1f1caa38a6f3fee424ea35be626cb0b6e423b">OF_ORIENTATION_UNKNOWN</a>, bool vFlip=true, float fov=60, float nearDist=0, float farDist=0)</td></tr>
-<tr class="separator:a2d2544d8f0ecef5d3728f45a8d4229d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20f0da734ea37ef4d25a1a4dd67181e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_cairo_renderer.html#a20f0da734ea37ef4d25a1a4dd67181e1">setupScreenOrtho</a> (float width=0, float height=0, <a class="el" href="of_constants_8h.html#a85ec4045e22bafeea5c561f9778c1f1c">ofOrientation</a> orientation=<a class="el" href="of_constants_8h.html#a85ec4045e22bafeea5c561f9778c1f1caa38a6f3fee424ea35be626cb0b6e423b">OF_ORIENTATION_UNKNOWN</a>, bool vFlip=true, float nearDist=-1, float farDist=1)</td></tr>
-<tr class="separator:a20f0da734ea37ef4d25a1a4dd67181e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe9b17e8a0585eae43cb00c6c9996c12"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_cairo_renderer.html#afe9b17e8a0585eae43cb00c6c9996c12">setupScreenPerspective</a> (float <a class="el" href="of_icon_8h.html#aca34d28e3d8bcbcadb8edb4e3af24f8c">width</a>=0, float <a class="el" href="of_icon_8h.html#ab2e78c61905b4419fcc7b4cfc500fe85">height</a>=0, float fov=60, float nearDist=0, float farDist=0)</td></tr>
+<tr class="separator:afe9b17e8a0585eae43cb00c6c9996c12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a573712d889284c0b84765dbeb0ba2785"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_cairo_renderer.html#a573712d889284c0b84765dbeb0ba2785">setupScreenOrtho</a> (float <a class="el" href="of_icon_8h.html#aca34d28e3d8bcbcadb8edb4e3af24f8c">width</a>=0, float <a class="el" href="of_icon_8h.html#ab2e78c61905b4419fcc7b4cfc500fe85">height</a>=0, float nearDist=-1, float farDist=1)</td></tr>
+<tr class="separator:a573712d889284c0b84765dbeb0ba2785"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34b2cf0594a8e0eb0a0e646ac2042ec7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_rectangle.html">ofRectangle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_cairo_renderer.html#a34b2cf0594a8e0eb0a0e646ac2042ec7">getCurrentViewport</a> ()</td></tr>
 <tr class="separator:a34b2cf0594a8e0eb0a0e646ac2042ec7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a888924ffc3a037f67eb67dd3d4641329"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_cairo_renderer.html#a888924ffc3a037f67eb67dd3d4641329">getViewportWidth</a> ()</td></tr>
@@ -148,12 +152,18 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2e3ec897cb1c67bce8e99900c50cc8af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa23662a69a84b60b645b0b732eb69796"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_cairo_renderer.html#aa23662a69a84b60b645b0b732eb69796">setLineWidth</a> (float lineWidth)</td></tr>
 <tr class="separator:aa23662a69a84b60b645b0b732eb69796"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8fc19498897ad69011ee7db5420558f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_cairo_renderer.html#ac8fc19498897ad69011ee7db5420558f">setDepthTest</a> (bool depthTest)</td></tr>
+<tr class="separator:ac8fc19498897ad69011ee7db5420558f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad17ae254ba8de9f79708149a78fc26eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_cairo_renderer.html#ad17ae254ba8de9f79708149a78fc26eb">setBlendMode</a> (<a class="el" href="of_constants_8h.html#a5f194ae56b1bc61651eac7184ed1ad2e">ofBlendMode</a> blendMode)</td></tr>
 <tr class="separator:ad17ae254ba8de9f79708149a78fc26eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1901f46679555e72239d24807a269081"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_cairo_renderer.html#a1901f46679555e72239d24807a269081">setLineSmoothing</a> (bool smooth)</td></tr>
 <tr class="separator:a1901f46679555e72239d24807a269081"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a32514b1bf58a003af06a2cab45fe592f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_cairo_renderer.html#a32514b1bf58a003af06a2cab45fe592f">setSphereResolution</a> (int res)</td></tr>
 <tr class="separator:a32514b1bf58a003af06a2cab45fe592f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c74b7dba42387e54164b32f9edcbe41"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_cairo_renderer.html#a7c74b7dba42387e54164b32f9edcbe41">enableAntiAliasing</a> ()</td></tr>
+<tr class="separator:a7c74b7dba42387e54164b32f9edcbe41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8532f4c77724902b2ccfc1a5c4932d85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_cairo_renderer.html#a8532f4c77724902b2ccfc1a5c4932d85">disableAntiAliasing</a> ()</td></tr>
+<tr class="separator:a8532f4c77724902b2ccfc1a5c4932d85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae80318ec09fad18566517d1034fa7bec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_cairo_renderer.html#ae80318ec09fad18566517d1034fa7bec">pushMatrix</a> ()</td></tr>
 <tr class="separator:ae80318ec09fad18566517d1034fa7bec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14b22e5b97713bd80adc129923a33fbe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_cairo_renderer.html#a14b22e5b97713bd80adc129923a33fbe">popMatrix</a> ()</td></tr>
@@ -232,7 +242,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a92e52d81d4aee42ee2444a82bf85d748"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70ee8a6229af5c0dfe30b241a83f3480"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_cairo_renderer.html#a70ee8a6229af5c0dfe30b241a83f3480">drawSphere</a> (float x, float y, float z, float radius)</td></tr>
 <tr class="separator:a70ee8a6229af5c0dfe30b241a83f3480"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8641b0baf1a323a1371a025ecc844eb5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_cairo_renderer.html#a8641b0baf1a323a1371a025ecc844eb5">drawEllipse</a> (float x, float y, float z, float width, float height)</td></tr>
+<tr class="memitem:a8641b0baf1a323a1371a025ecc844eb5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_cairo_renderer.html#a8641b0baf1a323a1371a025ecc844eb5">drawEllipse</a> (float x, float y, float z, float <a class="el" href="of_icon_8h.html#aca34d28e3d8bcbcadb8edb4e3af24f8c">width</a>, float <a class="el" href="of_icon_8h.html#ab2e78c61905b4419fcc7b4cfc500fe85">height</a>)</td></tr>
 <tr class="separator:a8641b0baf1a323a1371a025ecc844eb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a686cd4854a5e1fb94a16386728d6c695"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_cairo_renderer.html#a686cd4854a5e1fb94a16386728d6c695">drawString</a> (string text, float x, float y, float z, <a class="el" href="of_constants_8h.html#a14966be842b99f71080a7444cebbc0b7">ofDrawBitmapMode</a> mode)</td></tr>
 <tr class="separator:a686cd4854a5e1fb94a16386728d6c695"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -247,12 +257,23 @@ Public Member Functions</h2></td></tr>
 <tr class="inherit_header pub_methods_classof_base_renderer"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classof_base_renderer')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classof_base_renderer.html">ofBaseRenderer</a></td></tr>
 <tr class="memitem:a162ef56f1fa1ee5e245c47c24c76a54e inherit pub_methods_classof_base_renderer"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#a162ef56f1fa1ee5e245c47c24c76a54e">~ofBaseRenderer</a> ()</td></tr>
 <tr class="separator:a162ef56f1fa1ee5e245c47c24c76a54e inherit pub_methods_classof_base_renderer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77eac56c4f6eedf37809cd432b2e0924 inherit pub_methods_classof_base_renderer"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#a77eac56c4f6eedf37809cd432b2e0924">setOrientation</a> (<a class="el" href="of_constants_8h.html#a85ec4045e22bafeea5c561f9778c1f1c">ofOrientation</a> orientation, bool vFlip)</td></tr>
+<tr class="separator:a77eac56c4f6eedf37809cd432b2e0924 inherit pub_methods_classof_base_renderer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7698ce8d1e17235de9684c96dad1c27d inherit pub_methods_classof_base_renderer"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classof_rectangle.html">ofRectangle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#a7698ce8d1e17235de9684c96dad1c27d">getNativeViewport</a> ()</td></tr>
+<tr class="separator:a7698ce8d1e17235de9684c96dad1c27d inherit pub_methods_classof_base_renderer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4bd6773b94a4d7ac7de2fcdf9f01234 inherit pub_methods_classof_base_renderer"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#aa4bd6773b94a4d7ac7de2fcdf9f01234">isVFlipped</a> () const </td></tr>
+<tr class="separator:aa4bd6773b94a4d7ac7de2fcdf9f01234 inherit pub_methods_classof_base_renderer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f3753a0264093b42a0a5b59359f5142 inherit pub_methods_classof_base_renderer"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#a0f3753a0264093b42a0a5b59359f5142">setCircleResolution</a> (int res)</td></tr>
 <tr class="separator:a0f3753a0264093b42a0a5b59359f5142 inherit pub_methods_classof_base_renderer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba08589f0c9394a6a2fa89aa1b746a21 inherit pub_methods_classof_base_renderer"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#aba08589f0c9394a6a2fa89aa1b746a21">enablePointSprites</a> ()</td></tr>
 <tr class="separator:aba08589f0c9394a6a2fa89aa1b746a21 inherit pub_methods_classof_base_renderer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a78fd8d5b4864b1277fa8208c09d5d242 inherit pub_methods_classof_base_renderer"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_renderer.html#a78fd8d5b4864b1277fa8208c09d5d242">disablePointSprites</a> ()</td></tr>
 <tr class="separator:a78fd8d5b4864b1277fa8208c09d5d242 inherit pub_methods_classof_base_renderer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a91646f95cafb8c580de77a151a19081a"><td class="memItemLeft" align="right" valign="top">static const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_cairo_renderer.html#a91646f95cafb8c580de77a151a19081a">TYPE</a> =&quot;cairo&quot;</td></tr>
+<tr class="separator:a91646f95cafb8c580de77a151a19081a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Enumeration Documentation</h2>
 <a class="anchor" id="aa4f542abccc80b9288466943a947ac55"></a>
@@ -594,6 +615,31 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a8532f4c77724902b2ccfc1a5c4932d85"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofCairoRenderer::disableAntiAliasing </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classof_base_renderer.html#abe79cc46867fa6d35dfc9a28e6305314">ofBaseRenderer</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a7b07626fdbc8410889ee9884ce471fa0"></a>
 <div class="memitem">
 <div class="memproto">
@@ -620,14 +666,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a1cad4fc7ea663f4bb42c8d4f0322ee49"></a>
+<a class="anchor" id="a04c9a32aecc4ba225319ab2e86a88523"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void ofCairoRenderer::draw </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classof_sub_path.html">ofSubPath</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="structof_path_1_1_command.html">ofPath::Command</a> &amp;&#160;</td>
           <td class="paramname"><em>path</em></td><td>)</td>
           <td></td>
         </tr>
@@ -764,12 +810,45 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a77a40bd7d26d58d68a65928070580140"></a>
+<a class="anchor" id="ab428a44e5987f1005bc3e08eb8d6bcfe"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofCairoRenderer::draw </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classof3d_primitive.html">of3dPrimitive</a> &amp;&#160;</td>
+          <td class="paramname"><em>model</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="of_g_l_utils_8h.html#a6beb1fbbaba728909c78cda1eadfe28e">ofPolyRenderMode</a>&#160;</td>
+          <td class="paramname"><em>renderType</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classof_base_renderer.html#a64d298806404e33ed73b6ed5003c1efc">ofBaseRenderer</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a77a40bd7d26d58d68a65928070580140"></a>
+<div class="memitem">
+<div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void ofCairoRenderer::draw </td>
@@ -789,14 +868,7 @@ Public Member Functions</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
-
-<p>Implements <a class="el" href="classof_base_renderer.html#a7884c6bf187a0449ce3aa8052c6056bc">ofBaseRenderer</a>.</p>
 
 </div>
 </div>
@@ -1271,9 +1343,6 @@ Public Member Functions</h2></td></tr>
 <a class="anchor" id="a70ee8a6229af5c0dfe30b241a83f3480"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void ofCairoRenderer::drawSphere </td>
@@ -1305,14 +1374,7 @@ Public Member Functions</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
-
-<p>Implements <a class="el" href="classof_base_renderer.html#aa4658513f1b116c7b45db85a7a01ced3">ofBaseRenderer</a>.</p>
 
 </div>
 </div>
@@ -1445,6 +1507,31 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="classof_base_renderer.html#aaf947850edf68e5a92da374d4347492d">ofBaseRenderer</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7c74b7dba42387e54164b32f9edcbe41"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofCairoRenderer::enableAntiAliasing </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classof_base_renderer.html#ab469558bbb12da5204ecae64a7427b5f">ofBaseRenderer</a>.</p>
 
 </div>
 </div>
@@ -1648,7 +1735,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a800e09830220c5ba4819fe4ad0ce0cf0"></a>
+<a class="anchor" id="a069ceb0e7e8566f9aeca00f94bf6c66b"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1656,7 +1743,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">string ofCairoRenderer::getType </td>
+          <td class="memname">const string&amp; ofCairoRenderer::getType </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1669,7 +1756,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classof_base_renderer.html#ab04ab2e86135ab95b598f2d9c4929e7c">ofBaseRenderer</a>.</p>
+<p>Implements <a class="el" href="classof_base_renderer.html#a2f2aaeb89ebad3ff2cc4ce9bca5e1c20">ofBaseRenderer</a>.</p>
 
 </div>
 </div>
@@ -2454,6 +2541,32 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ac8fc19498897ad69011ee7db5420558f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofCairoRenderer::setDepthTest </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>depthTest</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classof_base_renderer.html#abafdfd8b8e4bebc219e8550174c74837">ofBaseRenderer</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a535bf1e13b51d0a5d4de152a94382c15"></a>
 <div class="memitem">
 <div class="memproto">
@@ -2587,9 +2700,6 @@ Public Member Functions</h2></td></tr>
 <a class="anchor" id="a32514b1bf58a003af06a2cab45fe592f"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void ofCairoRenderer::setSphereResolution </td>
@@ -2599,14 +2709,7 @@ Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
-
-<p>Reimplemented from <a class="el" href="classof_base_renderer.html#aedbb0446e84b7c4337c5ae1bbb842889">ofBaseRenderer</a>.</p>
 
 </div>
 </div>
@@ -2742,7 +2845,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a20f0da734ea37ef4d25a1a4dd67181e1"></a>
+<a class="anchor" id="a573712d889284c0b84765dbeb0ba2785"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -2760,18 +2863,6 @@ Public Member Functions</h2></td></tr>
           <td></td>
           <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>height</em> = <code>0</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="of_constants_8h.html#a85ec4045e22bafeea5c561f9778c1f1c">ofOrientation</a>&#160;</td>
-          <td class="paramname"><em>orientation</em> = <code><a class="el" href="of_constants_8h.html#a85ec4045e22bafeea5c561f9778c1f1caa38a6f3fee424ea35be626cb0b6e423b">OF_ORIENTATION_UNKNOWN</a></code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>vFlip</em> = <code>true</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -2798,11 +2889,11 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classof_base_renderer.html#a78aaffdae40b4a568b011171fc8556a6">ofBaseRenderer</a>.</p>
+<p>Reimplemented from <a class="el" href="classof_base_renderer.html#ab7c2a1204bfcc49732683ed613e93737">ofBaseRenderer</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a2d2544d8f0ecef5d3728f45a8d4229d9"></a>
+<a class="anchor" id="afe9b17e8a0585eae43cb00c6c9996c12"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -2820,18 +2911,6 @@ Public Member Functions</h2></td></tr>
           <td></td>
           <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>height</em> = <code>0</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="of_constants_8h.html#a85ec4045e22bafeea5c561f9778c1f1c">ofOrientation</a>&#160;</td>
-          <td class="paramname"><em>orientation</em> = <code><a class="el" href="of_constants_8h.html#a85ec4045e22bafeea5c561f9778c1f1caa38a6f3fee424ea35be626cb0b6e423b">OF_ORIENTATION_UNKNOWN</a></code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>vFlip</em> = <code>true</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -2864,7 +2943,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classof_base_renderer.html#aefb98b7ef168dbff450f6054bf00d406">ofBaseRenderer</a>.</p>
+<p>Reimplemented from <a class="el" href="classof_base_renderer.html#ac9ab11780ce5d6a2270a94c51e8f3d2f">ofBaseRenderer</a>.</p>
 
 </div>
 </div>
@@ -3037,13 +3116,34 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classof_base_renderer.html#a300bd8d884c882a8ae3539367b0b7d9f">ofBaseRenderer</a>.</p>
+<p>Reimplemented from <a class="el" href="classof_base_renderer.html#afd5e7cedc203340a02448a4c5656a3ce">ofBaseRenderer</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a91646f95cafb8c580de77a151a19081a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const string ofCairoRenderer::TYPE =&quot;cairo&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>graphics/<a class="el" href="of_cairo_renderer_8h_source.html">ofCairoRenderer.h</a></li>
-<li>graphics/<a class="el" href="of_cairo_renderer_8cpp.html">ofCairoRenderer.cpp</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/graphics/<a class="el" href="of_cairo_renderer_8h_source.html">ofCairoRenderer.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/graphics/<a class="el" href="of_cairo_renderer_8cpp.html">ofCairoRenderer.cpp</a></li>
 </ul>
 </div><!-- contents -->
 

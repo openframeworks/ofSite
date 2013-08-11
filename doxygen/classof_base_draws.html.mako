@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -64,13 +65,14 @@ Inheritance diagram for ofBaseDraws:</div>
  <div class="center">
   <img src="classof_base_draws.png" usemap="#ofBaseDraws_map" alt=""/>
   <map id="ofBaseDraws_map" name="ofBaseDraws_map">
-<area href="classof_abstract_image.html" alt="ofAbstractImage" shape="rect" coords="180,56,350,80"/>
-<area href="classof_fbo.html" alt="ofFbo" shape="rect" coords="360,56,530,80"/>
-<area href="classof_texture.html" alt="ofTexture" shape="rect" coords="540,56,710,80"/>
-<area href="classof_base_image__.html" alt="ofBaseImage_&lt; T &gt;" shape="rect" coords="90,112,260,136"/>
-<area href="classof_base_image__.html" alt="ofBaseImage_&lt; PixelType &gt;" shape="rect" coords="270,112,440,136"/>
+<area href="classof_abstract_image.html" alt="ofAbstractImage" shape="rect" coords="315,56,485,80"/>
+<area href="classof_fbo.html" alt="ofFbo" shape="rect" coords="495,56,665,80"/>
+<area href="classof_texture.html" alt="ofTexture" shape="rect" coords="675,56,845,80"/>
+<area href="classof_base_image__.html" alt="ofBaseImage_&lt; T &gt;" shape="rect" coords="180,112,350,136"/>
+<area href="classof_base_image__.html" alt="ofBaseImage_&lt; PixelType &gt;" shape="rect" coords="450,112,620,136"/>
 <area href="classof_base_video_draws.html" alt="ofBaseVideoDraws" shape="rect" coords="90,168,260,192"/>
-<area href="classof_image__.html" alt="ofImage_&lt; PixelType &gt;" shape="rect" coords="270,168,440,192"/>
+<area href="classof_image__.html" alt="ofImage_&lt; unsigned char &gt;" shape="rect" coords="270,168,440,192"/>
+<area href="classof_image__.html" alt="ofImage_&lt; PixelType &gt;" shape="rect" coords="450,168,620,192"/>
 <area href="classof_video_grabber.html" alt="ofVideoGrabber" shape="rect" coords="0,224,170,248"/>
 <area href="classof_video_player.html" alt="ofVideoPlayer" shape="rect" coords="180,224,350,248"/>
 </map>
@@ -158,7 +160,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classof_image__.html#a0b1b3cbe3443fd7aa31f80a6eb6fa2bd">ofImage_&lt; PixelType &gt;</a>, <a class="el" href="classof_texture.html#ac01ca3d49b6c3fa875c657d90d2080a9">ofTexture</a>, <a class="el" href="classof_video_grabber.html#ad650d9f550f9750ea1ed94364495c44d">ofVideoGrabber</a>, <a class="el" href="classof_video_player.html#aafccb79dd9407583af71afb0b622bd8b">ofVideoPlayer</a>, and <a class="el" href="classof_fbo.html#a083acab9d604f1ec41393e9778f7fe6d">ofFbo</a>.</p>
+<p>Implemented in <a class="el" href="classof_image__.html#a0b1b3cbe3443fd7aa31f80a6eb6fa2bd">ofImage_&lt; PixelType &gt;</a>, <a class="el" href="classof_image__.html#a0b1b3cbe3443fd7aa31f80a6eb6fa2bd">ofImage_&lt; unsigned char &gt;</a>, <a class="el" href="classof_texture.html#ac01ca3d49b6c3fa875c657d90d2080a9">ofTexture</a>, <a class="el" href="classof_video_player.html#aafccb79dd9407583af71afb0b622bd8b">ofVideoPlayer</a>, <a class="el" href="classof_video_grabber.html#ad650d9f550f9750ea1ed94364495c44d">ofVideoGrabber</a>, and <a class="el" href="classof_fbo.html#a083acab9d604f1ec41393e9778f7fe6d">ofFbo</a>.</p>
 
 </div>
 </div>
@@ -206,7 +208,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classof_image__.html#a6656ffac4fcf989d97ab15bb42501af3">ofImage_&lt; PixelType &gt;</a>, <a class="el" href="classof_texture.html#a2babfbe0a2a8d99571aa683623c99be5">ofTexture</a>, <a class="el" href="classof_video_grabber.html#a1d2887efcde17ebab37daa845eede3fe">ofVideoGrabber</a>, <a class="el" href="classof_video_player.html#acc2ec4614bd20d0a906fdc36bc6f4713">ofVideoPlayer</a>, and <a class="el" href="classof_fbo.html#afbfa27be404bd8dc90c4b50efa639c39">ofFbo</a>.</p>
+<p>Implemented in <a class="el" href="classof_image__.html#a6656ffac4fcf989d97ab15bb42501af3">ofImage_&lt; PixelType &gt;</a>, <a class="el" href="classof_image__.html#a6656ffac4fcf989d97ab15bb42501af3">ofImage_&lt; unsigned char &gt;</a>, <a class="el" href="classof_texture.html#a2babfbe0a2a8d99571aa683623c99be5">ofTexture</a>, <a class="el" href="classof_video_player.html#acc2ec4614bd20d0a906fdc36bc6f4713">ofVideoPlayer</a>, <a class="el" href="classof_video_grabber.html#a1d2887efcde17ebab37daa845eede3fe">ofVideoGrabber</a>, and <a class="el" href="classof_fbo.html#afbfa27be404bd8dc90c4b50efa639c39">ofFbo</a>.</p>
 
 </div>
 </div>
@@ -319,7 +321,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classof_image__.html#af39591f8ff0e19177725ccfd379063f9">ofImage_&lt; PixelType &gt;</a>, <a class="el" href="classof_texture.html#ac14833c0221c45645d3ca16d3687a613">ofTexture</a>, <a class="el" href="classof_video_player.html#af4d9762abaf3a390886bff3e48286455">ofVideoPlayer</a>, <a class="el" href="classof_video_grabber.html#afb6570df9cbb25c38c3fa149700f1af9">ofVideoGrabber</a>, and <a class="el" href="classof_fbo.html#a8b7ed597edaf8d76f5a7c1d49ef8d0b1">ofFbo</a>.</p>
+<p>Implemented in <a class="el" href="classof_texture.html#ac14833c0221c45645d3ca16d3687a613">ofTexture</a>, <a class="el" href="classof_image__.html#af39591f8ff0e19177725ccfd379063f9">ofImage_&lt; PixelType &gt;</a>, <a class="el" href="classof_image__.html#af39591f8ff0e19177725ccfd379063f9">ofImage_&lt; unsigned char &gt;</a>, <a class="el" href="classof_video_player.html#af4d9762abaf3a390886bff3e48286455">ofVideoPlayer</a>, <a class="el" href="classof_video_grabber.html#afb6570df9cbb25c38c3fa149700f1af9">ofVideoGrabber</a>, and <a class="el" href="classof_fbo.html#a8b7ed597edaf8d76f5a7c1d49ef8d0b1">ofFbo</a>.</p>
 
 </div>
 </div>
@@ -344,7 +346,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classof_image__.html#a298b4bbeb121ad7285e82f6df9e64068">ofImage_&lt; PixelType &gt;</a>, <a class="el" href="classof_texture.html#a45d8511f11af12cfebd04ebcaadba12f">ofTexture</a>, <a class="el" href="classof_video_player.html#af98dc59bae16394353b0d43090d14d36">ofVideoPlayer</a>, <a class="el" href="classof_video_grabber.html#abfe4a8329f1eef52cc42903040c63baf">ofVideoGrabber</a>, and <a class="el" href="classof_fbo.html#acc0fd73ba942a85500931ee2f62d398e">ofFbo</a>.</p>
+<p>Implemented in <a class="el" href="classof_texture.html#a45d8511f11af12cfebd04ebcaadba12f">ofTexture</a>, <a class="el" href="classof_image__.html#a298b4bbeb121ad7285e82f6df9e64068">ofImage_&lt; PixelType &gt;</a>, <a class="el" href="classof_image__.html#a298b4bbeb121ad7285e82f6df9e64068">ofImage_&lt; unsigned char &gt;</a>, <a class="el" href="classof_video_player.html#af98dc59bae16394353b0d43090d14d36">ofVideoPlayer</a>, <a class="el" href="classof_video_grabber.html#abfe4a8329f1eef52cc42903040c63baf">ofVideoGrabber</a>, and <a class="el" href="classof_fbo.html#acc0fd73ba942a85500931ee2f62d398e">ofFbo</a>.</p>
 
 </div>
 </div>
@@ -369,7 +371,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classof_image__.html#a40741723f2ef1f969e7fbba3fa20c29c">ofImage_&lt; PixelType &gt;</a>, <a class="el" href="classof_texture.html#abc09e6df3f365142faff8b929a846bab">ofTexture</a>, <a class="el" href="classof_video_grabber.html#a6ed806a21364bca25177b2b178ecb0db">ofVideoGrabber</a>, <a class="el" href="classof_video_player.html#a6e1feaa83809bdc5b8b412b77b645597">ofVideoPlayer</a>, and <a class="el" href="classof_fbo.html#adc4416303195844582849bd0c879c142">ofFbo</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_image__.html#a40741723f2ef1f969e7fbba3fa20c29c">ofImage_&lt; PixelType &gt;</a>, <a class="el" href="classof_image__.html#a40741723f2ef1f969e7fbba3fa20c29c">ofImage_&lt; unsigned char &gt;</a>, <a class="el" href="classof_texture.html#abc09e6df3f365142faff8b929a846bab">ofTexture</a>, <a class="el" href="classof_video_player.html#a6e1feaa83809bdc5b8b412b77b645597">ofVideoPlayer</a>, <a class="el" href="classof_video_grabber.html#a6ed806a21364bca25177b2b178ecb0db">ofVideoGrabber</a>, and <a class="el" href="classof_fbo.html#adc4416303195844582849bd0c879c142">ofFbo</a>.</p>
 
 </div>
 </div>
@@ -405,7 +407,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classof_image__.html#a9339282eaa5f99419cdc25e739680f65">ofImage_&lt; PixelType &gt;</a>, <a class="el" href="classof_texture.html#a5409b3dfe503bc05d7e06c1977ead2ac">ofTexture</a>, <a class="el" href="classof_video_grabber.html#a542277985c3820a48801c1502827c9b4">ofVideoGrabber</a>, <a class="el" href="classof_video_player.html#a79ca310c6bf6a1db4eef74594f1e2b81">ofVideoPlayer</a>, and <a class="el" href="classof_fbo.html#a8750a2af0540fac6b7b36cfa795a5570">ofFbo</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_image__.html#a9339282eaa5f99419cdc25e739680f65">ofImage_&lt; PixelType &gt;</a>, <a class="el" href="classof_image__.html#a9339282eaa5f99419cdc25e739680f65">ofImage_&lt; unsigned char &gt;</a>, <a class="el" href="classof_texture.html#a5409b3dfe503bc05d7e06c1977ead2ac">ofTexture</a>, <a class="el" href="classof_video_player.html#a79ca310c6bf6a1db4eef74594f1e2b81">ofVideoPlayer</a>, <a class="el" href="classof_video_grabber.html#a542277985c3820a48801c1502827c9b4">ofVideoGrabber</a>, and <a class="el" href="classof_fbo.html#a8750a2af0540fac6b7b36cfa795a5570">ofFbo</a>.</p>
 
 </div>
 </div>
@@ -441,12 +443,12 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classof_image__.html#afb1368077f520e88abae9b4d60870247">ofImage_&lt; PixelType &gt;</a>, <a class="el" href="classof_texture.html#a294061077b44d033ee778615679d5b78">ofTexture</a>, <a class="el" href="classof_video_grabber.html#ac1680df9d3d19130af0594e37b80487f">ofVideoGrabber</a>, <a class="el" href="classof_video_player.html#a42462f21cc6ce547c0525928cd814e67">ofVideoPlayer</a>, and <a class="el" href="classof_fbo.html#a8d72faa9d813033b4fad5e5bdf0edc4a">ofFbo</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_image__.html#afb1368077f520e88abae9b4d60870247">ofImage_&lt; PixelType &gt;</a>, <a class="el" href="classof_image__.html#afb1368077f520e88abae9b4d60870247">ofImage_&lt; unsigned char &gt;</a>, <a class="el" href="classof_texture.html#a294061077b44d033ee778615679d5b78">ofTexture</a>, <a class="el" href="classof_video_player.html#a42462f21cc6ce547c0525928cd814e67">ofVideoPlayer</a>, <a class="el" href="classof_video_grabber.html#ac1680df9d3d19130af0594e37b80487f">ofVideoGrabber</a>, and <a class="el" href="classof_fbo.html#a8d72faa9d813033b4fad5e5bdf0edc4a">ofFbo</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>types/<a class="el" href="of_base_types_8h_source.html">ofBaseTypes.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/types/<a class="el" href="of_base_types_8h_source.html">ofBaseTypes.h</a></li>
 </ul>
 </div><!-- contents -->
 

@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -47,7 +48,7 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_d422163b96683743ed3963d4aac17747.html">app</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_84d5b34cee6369a03c8d1f3b970ed216.html">openFrameworks</a></li><li class="navelem"><a class="el" href="dir_3d61728365befb8ad4d1b5c4df7b5fcd.html">app</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -68,7 +69,11 @@
 <code>#include &quot;<a class="el" href="of_math_8h_source.html">ofMath.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="of_graphics_8h_source.html">ofGraphics.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="of_g_l_renderer_8h_source.html">ofGLRenderer.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="of_app_glut_window_8h_source.html">ofAppGlutWindow.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="of_g_l_programmable_renderer_8h_source.html">ofGLProgrammableRenderer.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="of_true_type_font_8h_source.html">ofTrueTypeFont.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="of_u_r_l_file_loader_8h_source.html">ofURLFileLoader.h</a>&quot;</code><br/>
+<code>#include &quot;Poco/Net/SSLManager.h&quot;</code><br/>
+<code>#include &quot;<a class="el" href="of_app_g_l_f_w_window_8h_source.html">ofAppGLFWWindow.h</a>&quot;</code><br/>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -80,37 +85,35 @@ Functions</h2></td></tr>
 <tr class="separator:af89f854854e3e17081e4c947bb83f2b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9d3c7c6b70ac1d8a63781e9204f9672"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_app_runner_8cpp.html#af9d3c7c6b70ac1d8a63781e9204f9672">ofSetupOpenGL</a> (<a class="el" href="classof_ptr.html">ofPtr</a>&lt; <a class="el" href="classof_app_base_window.html">ofAppBaseWindow</a> &gt; windowPtr, int w, int h, int screenMode)</td></tr>
 <tr class="separator:af9d3c7c6b70ac1d8a63781e9204f9672"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c869c53f463ceb202c2ba0ed12e792f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_app_runner_8cpp.html#a6c869c53f463ceb202c2ba0ed12e792f">ofGLReadyCallback</a> ()</td></tr>
+<tr class="separator:a6c869c53f463ceb202c2ba0ed12e792f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61769ac0b23361b70da289893d61a5e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_app_runner_8cpp.html#a61769ac0b23361b70da289893d61a5e2">ofSetupOpenGL</a> (int w, int h, int screenMode)</td></tr>
 <tr class="separator:a61769ac0b23361b70da289893d61a5e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4bb67c141481d1d14f9125e5b0ffc20"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_app_runner_8cpp.html#ae4bb67c141481d1d14f9125e5b0ffc20">ofStopURLLoader</a> ()</td></tr>
+<tr class="separator:ae4bb67c141481d1d14f9125e5b0ffc20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af532809a23cc7d2f46ad6af75e299278"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_app_runner_8cpp.html#af532809a23cc7d2f46ad6af75e299278">ofRunApp</a> (<a class="el" href="classof_ptr.html">ofPtr</a>&lt; <a class="el" href="classof_base_app.html">ofBaseApp</a> &gt; OFSA)</td></tr>
 <tr class="separator:af532809a23cc7d2f46ad6af75e299278"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52ce629d4d97b252f9d1391aa2e172aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_base_app.html">ofBaseApp</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_app_runner_8cpp.html#a52ce629d4d97b252f9d1391aa2e172aa">ofGetAppPtr</a> ()</td></tr>
 <tr class="separator:a52ce629d4d97b252f9d1391aa2e172aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20cb291563cb20a754c4a65ddbf89f7a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_app_base_window.html">ofAppBaseWindow</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_app_runner_8cpp.html#a20cb291563cb20a754c4a65ddbf89f7a">ofGetWindowPtr</a> ()</td></tr>
+<tr class="separator:a20cb291563cb20a754c4a65ddbf89f7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7165451596d189b061eae4787bb4ec84"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_app_runner_8cpp.html#a7165451596d189b061eae4787bb4ec84">ofSetAppPtr</a> (<a class="el" href="classof_ptr.html">ofPtr</a>&lt; <a class="el" href="classof_base_app.html">ofBaseApp</a> &gt; appPtr)</td></tr>
 <tr class="separator:a7165451596d189b061eae4787bb4ec84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a842f9a3b37ae03404e2274e640919ad0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_app_runner_8cpp.html#a842f9a3b37ae03404e2274e640919ad0">ofExit</a> (int status)</td></tr>
 <tr class="separator:a842f9a3b37ae03404e2274e640919ad0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3fe28889b15534a5a1c827a4ecb2ef26"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_app_runner_8cpp.html#a3fe28889b15534a5a1c827a4ecb2ef26">ofGetFrameNum</a> ()</td></tr>
-<tr class="separator:a3fe28889b15534a5a1c827a4ecb2ef26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01080ea3b88e20894224b28caa46fd25"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_app_runner_8cpp.html#a01080ea3b88e20894224b28caa46fd25">ofGetFrameRate</a> ()</td></tr>
-<tr class="separator:a01080ea3b88e20894224b28caa46fd25"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac97a55114e95bc13a43afd95a5da043a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_app_runner_8cpp.html#ac97a55114e95bc13a43afd95a5da043a">ofGetLastFrameTime</a> ()</td></tr>
-<tr class="separator:ac97a55114e95bc13a43afd95a5da043a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05ccd47836ca8951e53e9f636d64105d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_app_runner_8cpp.html#a05ccd47836ca8951e53e9f636d64105d">ofSetFrameRate</a> (int targetRate)</td></tr>
-<tr class="separator:a05ccd47836ca8951e53e9f636d64105d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58fb7f5c12bf9d507f09da1a41041312"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_app_runner_8cpp.html#a58fb7f5c12bf9d507f09da1a41041312">ofSleepMillis</a> (int millis)</td></tr>
 <tr class="separator:a58fb7f5c12bf9d507f09da1a41041312"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95c68fd842d7b1e2c743f94bd1cbd264"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_app_runner_8cpp.html#a95c68fd842d7b1e2c743f94bd1cbd264">ofHideCursor</a> ()</td></tr>
 <tr class="separator:a95c68fd842d7b1e2c743f94bd1cbd264"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afbfcb3ab84f840d3c668ad33cd0cc019"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_app_runner_8cpp.html#afbfcb3ab84f840d3c668ad33cd0cc019">ofShowCursor</a> ()</td></tr>
 <tr class="separator:afbfcb3ab84f840d3c668ad33cd0cc019"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acec0e8bc26f96ca7bc9ee48fb0a6e80c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_app_runner_8cpp.html#acec0e8bc26f96ca7bc9ee48fb0a6e80c">ofSetOrientation</a> (<a class="el" href="of_constants_8h.html#a85ec4045e22bafeea5c561f9778c1f1c">ofOrientation</a> orientation)</td></tr>
-<tr class="separator:acec0e8bc26f96ca7bc9ee48fb0a6e80c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab3da21f71ec80a2c678d4782850e93f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_app_runner_8cpp.html#aab3da21f71ec80a2c678d4782850e93f">ofSetOrientation</a> (<a class="el" href="of_constants_8h.html#a85ec4045e22bafeea5c561f9778c1f1c">ofOrientation</a> orientation, bool vFlip)</td></tr>
+<tr class="separator:aab3da21f71ec80a2c678d4782850e93f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75e931c0927886f0587578cdd331533f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="of_constants_8h.html#a85ec4045e22bafeea5c561f9778c1f1c">ofOrientation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_app_runner_8cpp.html#a75e931c0927886f0587578cdd331533f">ofGetOrientation</a> ()</td></tr>
 <tr class="separator:a75e931c0927886f0587578cdd331533f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88bc1b7781188142c9aeb0828f685b7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_app_runner_8cpp.html#a88bc1b7781188142c9aeb0828f685b7e">ofSetWindowPosition</a> (int x, int y)</td></tr>
 <tr class="separator:a88bc1b7781188142c9aeb0828f685b7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72e76aeeb21937a7ff129711d103e680"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_app_runner_8cpp.html#a72e76aeeb21937a7ff129711d103e680">ofSetWindowShape</a> (int width, int height)</td></tr>
+<tr class="memitem:a72e76aeeb21937a7ff129711d103e680"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_app_runner_8cpp.html#a72e76aeeb21937a7ff129711d103e680">ofSetWindowShape</a> (int <a class="el" href="of_icon_8h.html#aca34d28e3d8bcbcadb8edb4e3af24f8c">width</a>, int <a class="el" href="of_icon_8h.html#ab2e78c61905b4419fcc7b4cfc500fe85">height</a>)</td></tr>
 <tr class="separator:a72e76aeeb21937a7ff129711d103e680"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1df3a8886f89826773dce84e18dbf25a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_app_runner_8cpp.html#a1df3a8886f89826773dce84e18dbf25a">ofGetWindowPositionX</a> ()</td></tr>
 <tr class="separator:a1df3a8886f89826773dce84e18dbf25a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -241,57 +244,12 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a3fe28889b15534a5a1c827a4ecb2ef26"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int ofGetFrameNum </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a01080ea3b88e20894224b28caa46fd25"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float ofGetFrameRate </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="a415b5eadf885ebd1f4799cc40e5db137"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">int ofGetHeight </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ac97a55114e95bc13a43afd95a5da043a"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double ofGetLastFrameTime </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -421,6 +379,21 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a20cb291563cb20a754c4a65ddbf89f7a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classof_app_base_window.html">ofAppBaseWindow</a>* ofGetWindowPtr </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="ae36085b0acc3c1873549154d57a590cf"></a>
 <div class="memitem">
 <div class="memproto">
@@ -457,6 +430,21 @@ Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">int ofGetWindowWidth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6c869c53f463ceb202c2ba0ed12e792f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofGLReadyCallback </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -529,22 +517,6 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a05ccd47836ca8951e53e9f636d64105d"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ofSetFrameRate </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>targetRate</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="a8b3b777aa5bf1283b109761a5b55938c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -561,7 +533,7 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="acec0e8bc26f96ca7bc9ee48fb0a6e80c"></a>
+<a class="anchor" id="aab3da21f71ec80a2c678d4782850e93f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -569,8 +541,18 @@ Functions</h2></td></tr>
           <td class="memname">void ofSetOrientation </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="of_constants_8h.html#a85ec4045e22bafeea5c561f9778c1f1c">ofOrientation</a>&#160;</td>
-          <td class="paramname"><em>orientation</em></td><td>)</td>
+          <td class="paramname"><em>orientation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>vFlip</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -793,6 +775,21 @@ Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>millis</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae4bb67c141481d1d14f9125e5b0ffc20"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofStopURLLoader </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>

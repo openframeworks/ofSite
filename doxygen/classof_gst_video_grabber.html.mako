@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -85,8 +86,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4aca3ec0b7d0176ce8cd1f47dbb95672"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abac46aa81c7a50386398f9f358615c8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_gst_video_grabber.html#abac46aa81c7a50386398f9f358615c8b">videoSettings</a> ()</td></tr>
 <tr class="separator:abac46aa81c7a50386398f9f358615c8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab21f6214be63c89a9ae75562ff9bf7a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_gst_video_grabber.html#ab21f6214be63c89a9ae75562ff9bf7a8">listDevices</a> ()</td></tr>
-<tr class="separator:ab21f6214be63c89a9ae75562ff9bf7a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b9d9b90d76dfb0f72c8d63c2c360811"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="classof_video_device.html">ofVideoDevice</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_gst_video_grabber.html#a8b9d9b90d76dfb0f72c8d63c2c360811">listDevices</a> ()</td></tr>
+<tr class="separator:a8b9d9b90d76dfb0f72c8d63c2c360811"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d9434f03798a7217f20d98555130fa3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_gst_video_grabber.html#a2d9434f03798a7217f20d98555130fa3">setDeviceID</a> (int id)</td></tr>
 <tr class="separator:a2d9434f03798a7217f20d98555130fa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02aeaf88681b341faa1580873a1a273b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_gst_video_grabber.html#a02aeaf88681b341faa1580873a1a273b">setDesiredFrameRate</a> (int framerate)</td></tr>
@@ -385,7 +386,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ab21f6214be63c89a9ae75562ff9bf7a8"></a>
+<a class="anchor" id="a8b9d9b90d76dfb0f72c8d63c2c360811"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -393,7 +394,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void ofGstVideoGrabber::listDevices </td>
+          <td class="memname">vector&lt; <a class="el" href="classof_video_device.html">ofVideoDevice</a> &gt; ofGstVideoGrabber::listDevices </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -406,7 +407,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classof_base_video_grabber.html#a0ee487203961b1d6b635598a181a9835">ofBaseVideoGrabber</a>.</p>
+<p>Implements <a class="el" href="classof_base_video_grabber.html#ae82f0a1c87fe69c86f1738cae560efb2">ofBaseVideoGrabber</a>.</p>
 
 </div>
 </div>
@@ -568,8 +569,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>video/<a class="el" href="of_gst_video_grabber_8h_source.html">ofGstVideoGrabber.h</a></li>
-<li>video/<a class="el" href="of_gst_video_grabber_8cpp.html">ofGstVideoGrabber.cpp</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/video/<a class="el" href="of_gst_video_grabber_8h_source.html">ofGstVideoGrabber.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/video/<a class="el" href="of_gst_video_grabber_8cpp.html">ofGstVideoGrabber.cpp</a></li>
 </ul>
 </div><!-- contents -->
 

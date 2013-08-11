@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -64,12 +65,13 @@ Inheritance diagram for ofAbstractImage:</div>
  <div class="center">
   <img src="classof_abstract_image.png" usemap="#ofAbstractImage_map" alt=""/>
   <map id="ofAbstractImage_map" name="ofAbstractImage_map">
-<area href="classof_base_draws.html" alt="ofBaseDraws" shape="rect" coords="90,0,260,24"/>
-<area href="classof_base_has_texture.html" alt="ofBaseHasTexture" shape="rect" coords="270,0,440,24"/>
-<area href="classof_base_image__.html" alt="ofBaseImage_&lt; T &gt;" shape="rect" coords="90,112,260,136"/>
-<area href="classof_base_image__.html" alt="ofBaseImage_&lt; PixelType &gt;" shape="rect" coords="270,112,440,136"/>
+<area href="classof_base_draws.html" alt="ofBaseDraws" shape="rect" coords="225,0,395,24"/>
+<area href="classof_base_has_texture.html" alt="ofBaseHasTexture" shape="rect" coords="405,0,575,24"/>
+<area href="classof_base_image__.html" alt="ofBaseImage_&lt; T &gt;" shape="rect" coords="180,112,350,136"/>
+<area href="classof_base_image__.html" alt="ofBaseImage_&lt; PixelType &gt;" shape="rect" coords="450,112,620,136"/>
 <area href="classof_base_video_draws.html" alt="ofBaseVideoDraws" shape="rect" coords="90,168,260,192"/>
-<area href="classof_image__.html" alt="ofImage_&lt; PixelType &gt;" shape="rect" coords="270,168,440,192"/>
+<area href="classof_image__.html" alt="ofImage_&lt; unsigned char &gt;" shape="rect" coords="270,168,440,192"/>
+<area href="classof_image__.html" alt="ofImage_&lt; PixelType &gt;" shape="rect" coords="450,168,620,192"/>
 <area href="classof_video_grabber.html" alt="ofVideoGrabber" shape="rect" coords="0,224,170,248"/>
 <area href="classof_video_player.html" alt="ofVideoPlayer" shape="rect" coords="180,224,350,248"/>
 </map>
@@ -135,7 +137,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>types/<a class="el" href="of_base_types_8h_source.html">ofBaseTypes.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/types/<a class="el" href="of_base_types_8h_source.html">ofBaseTypes.h</a></li>
 </ul>
 </div><!-- contents -->
 

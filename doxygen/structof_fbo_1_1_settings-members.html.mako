@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -60,21 +61,22 @@
 
 <p>This is the complete list of members for <a class="el" href="structof_fbo_1_1_settings.html">ofFbo::Settings</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html#ad37ebd3e9660640f34b4ec0676012111">depthStencilAsTexture</a></td><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html">ofFbo::Settings</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html#a506842ce5949d16b144f02433cf1d1fc">depthStencilInternalFormat</a></td><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html">ofFbo::Settings</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html#a460d5444b21aa03ee600e3e7c9b6b8bd">height</a></td><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html">ofFbo::Settings</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html#a254bb6170777abb1949c55c94e08342e">internalformat</a></td><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html">ofFbo::Settings</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html#adf363d44cf83cf3a1e7ff9182ceeac36">maxFilter</a></td><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html">ofFbo::Settings</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html#ab1b7e85b72d3b1c287a77a00fee1a844">minFilter</a></td><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html">ofFbo::Settings</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html#ab85dc36f71b6ea5dd3bbd0f50e600f91">numColorbuffers</a></td><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html">ofFbo::Settings</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html#a83180a9ba5323bbad457ed644b9dff72">numSamples</a></td><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html">ofFbo::Settings</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html#a0fe5841154bd24a2aef970d42a273f4a">Settings</a>()</td><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html">ofFbo::Settings</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html#aceab3e3c3142d889a2a7c0aed56f5b23">textureTarget</a></td><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html">ofFbo::Settings</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html#a6e0502aec7fe715ba4bc1430434148f1">useDepth</a></td><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html">ofFbo::Settings</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html#a97523c603e7e0accd8a03badecfda4f8">useStencil</a></td><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html">ofFbo::Settings</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html#a697662cf9724b38894be08178e34a6f5">width</a></td><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html">ofFbo::Settings</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html#a26ae391c6dbe6360357946b7b1004e6d">wrapModeHorizontal</a></td><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html">ofFbo::Settings</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html#a175aa9e841b76ab80fac11a98a5efa8c">wrapModeVertical</a></td><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html">ofFbo::Settings</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html#a971cdf30cb9d36468ec293468b9a1fbf">colorFormats</a></td><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html">ofFbo::Settings</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html#ad37ebd3e9660640f34b4ec0676012111">depthStencilAsTexture</a></td><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html">ofFbo::Settings</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html#a506842ce5949d16b144f02433cf1d1fc">depthStencilInternalFormat</a></td><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html">ofFbo::Settings</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html#a460d5444b21aa03ee600e3e7c9b6b8bd">height</a></td><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html">ofFbo::Settings</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html#a254bb6170777abb1949c55c94e08342e">internalformat</a></td><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html">ofFbo::Settings</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html#adf363d44cf83cf3a1e7ff9182ceeac36">maxFilter</a></td><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html">ofFbo::Settings</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html#ab1b7e85b72d3b1c287a77a00fee1a844">minFilter</a></td><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html">ofFbo::Settings</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html#ab85dc36f71b6ea5dd3bbd0f50e600f91">numColorbuffers</a></td><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html">ofFbo::Settings</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html#a83180a9ba5323bbad457ed644b9dff72">numSamples</a></td><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html">ofFbo::Settings</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html#a0fe5841154bd24a2aef970d42a273f4a">Settings</a>()</td><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html">ofFbo::Settings</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html#aceab3e3c3142d889a2a7c0aed56f5b23">textureTarget</a></td><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html">ofFbo::Settings</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html#a6e0502aec7fe715ba4bc1430434148f1">useDepth</a></td><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html">ofFbo::Settings</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html#a97523c603e7e0accd8a03badecfda4f8">useStencil</a></td><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html">ofFbo::Settings</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html#a697662cf9724b38894be08178e34a6f5">width</a></td><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html">ofFbo::Settings</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html#a26ae391c6dbe6360357946b7b1004e6d">wrapModeHorizontal</a></td><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html">ofFbo::Settings</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html#a175aa9e841b76ab80fac11a98a5efa8c">wrapModeVertical</a></td><td class="entry"><a class="el" href="structof_fbo_1_1_settings.html">ofFbo::Settings</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 
             </div>

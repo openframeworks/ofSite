@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -57,8 +58,8 @@
 <p>This is the complete list of members for <a class="el" href="classof_console_logger_channel.html">ofConsoleLoggerChannel</a>, including all inherited members.</p>
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="classof_console_logger_channel.html#aa07ecce14277c0eaeae57c2078619394">log</a>(ofLogLevel level, const string &amp;module, const string &amp;message)</td><td class="entry"><a class="el" href="classof_console_logger_channel.html">ofConsoleLoggerChannel</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classof_console_logger_channel.html#a1566895d3ae76fe6280a14da10948bf7">log</a>(ofLogLevel logLevel, const string &amp;module, const char *format,...)</td><td class="entry"><a class="el" href="classof_console_logger_channel.html">ofConsoleLoggerChannel</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classof_console_logger_channel.html#a6862457a576aa2c0be4b6e17a933d078">log</a>(ofLogLevel logLevel, const string &amp;module, const char *format, va_list args)</td><td class="entry"><a class="el" href="classof_console_logger_channel.html">ofConsoleLoggerChannel</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classof_console_logger_channel.html#ad47d80b1bc4a21c0df60d70f6f39cf75">log</a>(ofLogLevel level, const string &amp;module, const char *format,...)</td><td class="entry"><a class="el" href="classof_console_logger_channel.html">ofConsoleLoggerChannel</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classof_console_logger_channel.html#a9ccdb08eec51a78e0b8126c67014ec55">log</a>(ofLogLevel level, const string &amp;module, const char *format, va_list args)</td><td class="entry"><a class="el" href="classof_console_logger_channel.html">ofConsoleLoggerChannel</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="classof_base_logger_channel.html#ad25596521f5df6c781fd2668c829c50e">~ofBaseLoggerChannel</a>()</td><td class="entry"><a class="el" href="classof_base_logger_channel.html">ofBaseLoggerChannel</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classof_console_logger_channel.html#a4eadfde9d9789bff8eee8bb8949aed97">~ofConsoleLoggerChannel</a>()</td><td class="entry"><a class="el" href="classof_console_logger_channel.html">ofConsoleLoggerChannel</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->

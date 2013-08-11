@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -52,6 +53,7 @@
       <li class="current"><a href="functions.html"><span>All</span></a></li>
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_type.html"><span>Typedefs</span></a></li>
       <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
       <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
       <li><a href="functions_prop.html"><span>Properties</span></a></li>
@@ -104,16 +106,21 @@
 </li>
 <li>get()
 : <a class="el" href="classof_quaternion.html#a8fd7a5fdcfbea7c7eb075eb0656cb087">ofQuaternion</a>
+, <a class="el" href="classof_parameter_group.html#abcac6ba183848b84bc71576ac57bb2d1">ofParameterGroup</a>
+, <a class="el" href="classof_parameter.html#a2a345abafaa9dd7b072c9ec6af83699e">ofParameter&lt; ParameterType &gt;</a>
+, <a class="el" href="classof_parameter_group.html#afb3e055415130bdcfbd94f1e1557c660">ofParameterGroup</a>
 , <a class="el" href="classof_u_r_l_file_loader.html#a393b123f73281dd774c0ee80cc4de1e1">ofURLFileLoader</a>
+, <a class="el" href="classof_read_only_parameter.html#a403946689912664efb0a1843495f8879">ofReadOnlyParameter&lt; ParameterType, Friend &gt;</a>
+, <a class="el" href="classof_parameter_group.html#a40d55258126f712ce5782b1e29fe2716">ofParameterGroup</a>
 </li>
 <li>getAbsolutePath()
-: <a class="el" href="classof_directory.html#a5a54048619a9b53be7c82e546503e020">ofDirectory</a>
-, <a class="el" href="classof_file_path.html#a5fbe70a8325424e3f45778c90627ae96">ofFilePath</a>
+: <a class="el" href="classof_file_path.html#a5fbe70a8325424e3f45778c90627ae96">ofFilePath</a>
 , <a class="el" href="classof_file.html#a9610b1be8e7fa935a5017e575c6cbced">ofFile</a>
+, <a class="el" href="classof_directory.html#a5a54048619a9b53be7c82e546503e020">ofDirectory</a>
 </li>
 <li>getAmbientColor()
-: <a class="el" href="classof_light.html#a91ce4a5f3da8f34ce691159a855174f3">ofLight</a>
-, <a class="el" href="classof_material.html#a04bb61813039acb6e9d0d9fa71f34bb2">ofMaterial</a>
+: <a class="el" href="classof_material.html#a04bb61813039acb6e9d0d9fa71f34bb2">ofMaterial</a>
+, <a class="el" href="classof_light.html#a91ce4a5f3da8f34ce691159a855174f3">ofLight</a>
 </li>
 <li>getAnalog()
 : <a class="el" href="classof_arduino.html#abffaf4629be953e258c1a7e9c0116ead">ofArduino</a>
@@ -124,12 +131,15 @@
 <li>getAnalogPinReporting()
 : <a class="el" href="classof_arduino.html#ac7c64a83fbc798e9f2e49db63923c8fc">ofArduino</a>
 </li>
-<li>getArcResolution()
-: <a class="el" href="classof_path.html#acf69fa219bc7dfbc1fe6c7d9f2fbed7e">ofPath</a>
+<li>getAngleAtIndex()
+: <a class="el" href="classof_polyline.html#aeccc459317884111a98da76df6f0405b">ofPolyline</a>
+</li>
+<li>getAngleAtIndexInterpolated()
+: <a class="el" href="classof_polyline.html#aaa29b1f5bce663ab90aaa7a46870b77c">ofPolyline</a>
 </li>
 <li>getArea()
-: <a class="el" href="classof_rectangle.html#a907d1f32669218913546fb96644b72b0">ofRectangle</a>
-, <a class="el" href="classof_polyline.html#af6b1b7fc338691bcc897329f2f5137a6">ofPolyline</a>
+: <a class="el" href="classof_polyline.html#af6b1b7fc338691bcc897329f2f5137a6">ofPolyline</a>
+, <a class="el" href="classof_rectangle.html#a907d1f32669218913546fb96644b72b0">ofRectangle</a>
 </li>
 <li>getAspectRatio()
 : <a class="el" href="classof_camera.html#ad0554203893a0d40d40f46ee70ca6d41">ofCamera</a>
@@ -147,8 +157,14 @@
 <li>getAttenuationQuadratic()
 : <a class="el" href="classof_light.html#a5c2cc97af421acc4aaa33e215fe25288">ofLight</a>
 </li>
+<li>getAttribute()
+: <a class="el" href="classof_xml.html#a7e8c7f883bac3c202aea5b09192370e1">ofXml</a>
+</li>
 <li>getAttributeLocation()
-: <a class="el" href="classof_shader.html#a6a7c1181de27ec4d8340162ca1f31d73">ofShader</a>
+: <a class="el" href="classof_shader.html#a0d31c520f0c79ccfca473e21fc00e573">ofShader</a>
+</li>
+<li>getAttributes()
+: <a class="el" href="classof_xml.html#a56885824aff18eeb18c59fb2de2ffa17">ofXml</a>
 </li>
 <li>getAudioDeviceID()
 : <a class="el" href="classof_q_t_kit_grabber.html#a22bc1c23bb8f9f224f8df427c85bbef2">ofQTKitGrabber</a>
@@ -158,13 +174,14 @@
 , <a class="el" href="classof_file.html#a9fdcdd4323dbafa6d6b39fa56d948d13">ofFile</a>
 </li>
 <li>getBgColor()
-: <a class="el" href="classof_g_l_renderer.html#ad45a0a0435b39aaa8ff0a4ad68a35564">ofGLRenderer</a>
+: <a class="el" href="classof_g_l_programmable_renderer.html#ac5f5122612a9f4a5ed9392542b2746a2">ofGLProgrammableRenderer</a>
+, <a class="el" href="classof_g_l_renderer.html#ad45a0a0435b39aaa8ff0a4ad68a35564">ofGLRenderer</a>
 , <a class="el" href="classof_cairo_renderer.html#a2abf80732d95985707631620284b547b">ofCairoRenderer</a>
 , <a class="el" href="classof_renderer_collection.html#a147997dc7ce238bca9bec801811f99a1">ofRendererCollection</a>
 , <a class="el" href="classof_base_renderer.html#a91919a80d1e097a2d2dd2cb9ffde155c">ofBaseRenderer</a>
 </li>
 <li>getBinaryBuffer()
-: <a class="el" href="classof_buffer.html#ac63998ff625543379155cf8fa197babb">ofBuffer</a>
+: <a class="el" href="classof_buffer.html#a2f353ddfef01561e6c6b1b29941b2579">ofBuffer</a>
 </li>
 <li>getBitsPerChannel()
 : <a class="el" href="classof_pixels__.html#affd985c1637d8a601db45bcdb6bb9646">ofPixels_&lt; PixelType &gt;</a>
@@ -172,8 +189,20 @@
 <li>getBitsPerPixel()
 : <a class="el" href="classof_pixels__.html#a3ca4f9d3e99c837403e1fa0502cd9349">ofPixels_&lt; PixelType &gt;</a>
 </li>
+<li>getBool()
+: <a class="el" href="classof_parameter_group.html#a13f96196b8f608673c8fcb58f0fe3f27">ofParameterGroup</a>
+</li>
+<li>getBoolValue()
+: <a class="el" href="classof_xml.html#a539f1cf62aaa8dac1b614c93aecf2d3b">ofXml</a>
+</li>
 <li>getBottom()
 : <a class="el" href="classof_rectangle.html#a76a57d495ffaf9b79a0fe124c6302f00">ofRectangle</a>
+</li>
+<li>getBottomCapIndices()
+: <a class="el" href="classof_cylinder_primitive.html#a8217bdf7ee42842653c80e3226032ed8">ofCylinderPrimitive</a>
+</li>
+<li>getBottomCapMesh()
+: <a class="el" href="classof_cylinder_primitive.html#af3df6c1b35e998fdbfe67d4fa8a1a352">ofCylinderPrimitive</a>
 </li>
 <li>getBottomLeft()
 : <a class="el" href="classof_rectangle.html#abd6665ed1c44e8677523e4236bce2a36">ofRectangle</a>
@@ -187,6 +216,12 @@
 <li>getBrightness()
 : <a class="el" href="classof_color__.html#a7b73e7b52d0e967277c034d9e539d7b7">ofColor_&lt; PixelType &gt;</a>
 </li>
+<li>getBufferSize()
+: <a class="el" href="classof_base_sound_stream.html#a85b3a2824024b23b52ab1ce921177806">ofBaseSoundStream</a>
+, <a class="el" href="classof_p_a_sound_stream.html#ac47f1957c407278808ce9bfbe007178c">ofPASoundStream</a>
+, <a class="el" href="classof_rt_audio_sound_stream.html#a473a0a802d9c8aa65b22a8ca2fd8d162">ofRtAudioSoundStream</a>
+, <a class="el" href="classof_sound_stream.html#adac81ab108d13712887591e2985f99b4">ofSoundStream</a>
+</li>
 <li>getBytesPerChannel()
 : <a class="el" href="classof_pixels__.html#ac91a10893be297b566c32e979ff88f3c">ofPixels_&lt; PixelType &gt;</a>
 </li>
@@ -198,6 +233,15 @@
 </li>
 <li>getCairoSurface()
 : <a class="el" href="classof_cairo_renderer.html#aa7eb68c44314f33c1b4e2b99fe52c242">ofCairoRenderer</a>
+</li>
+<li>getCapIndices()
+: <a class="el" href="classof_cone_primitive.html#af58ebeab69974c6d9e3759bdc9955edd">ofConePrimitive</a>
+</li>
+<li>getCapMesh()
+: <a class="el" href="classof_cone_primitive.html#a8643e1604d6e9528852f894bd10328b3">ofConePrimitive</a>
+</li>
+<li>getCapped()
+: <a class="el" href="classof_cylinder_primitive.html#a03c02ecbb6f5fee4c31072136c921a3e">ofCylinderPrimitive</a>
 </li>
 <li>getCenter()
 : <a class="el" href="classof_rectangle.html#a4f9c3aa33b1b1e477bf6e8492ea9e9a6">ofRectangle</a>
@@ -211,22 +255,30 @@
 <li>getChannel()
 : <a class="el" href="classof_pixels__.html#accb34589c1e0413470a8076868e50907">ofPixels_&lt; PixelType &gt;</a>
 </li>
+<li>getChar()
+: <a class="el" href="classof_parameter_group.html#ae9fc67feee27a723eb824fda51415c49">ofParameterGroup</a>
+</li>
 <li>getCharacterAsPoints()
-: <a class="el" href="classof_true_type_font.html#ac4a60f9cc402458811b6b236b40779ce">ofTrueTypeFont</a>
+: <a class="el" href="classof_true_type_font.html#a01515b9294356ddba2eae222c214fb95">ofTrueTypeFont</a>
+</li>
+<li>getCircleResolution()
+: <a class="el" href="classof_path.html#aff8be3cf953743ec73d04d4e9ab0f169">ofPath</a>
 </li>
 <li>getClamped()
 : <a class="el" href="classof_color__.html#a756c104c401ec4e42d27ee5b7d8a3912">ofColor_&lt; PixelType &gt;</a>
 </li>
 <li>getClosestPoint()
-: <a class="el" href="classof_polyline.html#a9da6811ca1a47f4f303dfe7c4522e8cb">ofPolyline</a>
+: <a class="el" href="classof_polyline.html#a635a23041c5458fc958b7856ec1c849c">ofPolyline</a>
 </li>
 <li>getColor()
 : <a class="el" href="classof_mesh.html#ae4668a95cbeb3148195345b46215cad2">ofMesh</a>
+, <a class="el" href="classof_mesh_face.html#a4605a115c9918d96aed1ba43825220d4">ofMeshFace</a>
 , <a class="el" href="classof_image__.html#a5c4a07097120233cc46526f367e5bc67">ofImage_&lt; PixelType &gt;</a>
 , <a class="el" href="classof_pixels__.html#a32eba650aa1300338ea910bb434f1522">ofPixels_&lt; PixelType &gt;</a>
+, <a class="el" href="classof_parameter_group.html#a78373bd779486fff617a5fcccaa7ad5c">ofParameterGroup</a>
 </li>
 <li>getColorId()
-: <a class="el" href="classof_vbo.html#afca502c9aa0ce7d83e9e70a41388c39d">ofVbo</a>
+: <a class="el" href="classof_vbo.html#a8ba68ff9240bb8b44de22fef88c6b87a">ofVbo</a>
 </li>
 <li>getColors()
 : <a class="el" href="classof_mesh.html#a0fae8088852c05a58b22afeb9d5d8102">ofMesh</a>
@@ -235,7 +287,13 @@
 : <a class="el" href="classof_mesh.html#a2a197f2dda30372b8886207468aa30a8">ofMesh</a>
 </li>
 <li>getCommands()
-: <a class="el" href="classof_sub_path.html#a739e173da984e176785bb6d09ea91654">ofSubPath</a>
+: <a class="el" href="classof_path.html#a3fb89b82aba288cd77d9c2a7688a7756">ofPath</a>
+</li>
+<li>getConeIndices()
+: <a class="el" href="classof_cone_primitive.html#ac58ce8f3a8f78a11312d2930fdd365f0">ofConePrimitive</a>
+</li>
+<li>getConeMesh()
+: <a class="el" href="classof_cone_primitive.html#abf620a4bdf9c6cab2eeaf8efb4abe44a">ofConePrimitive</a>
 </li>
 <li>getContentBuffer()
 : <a class="el" href="classof_cairo_renderer.html#a138eb08ac625f4d01da957ea5275b7c4">ofCairoRenderer</a>
@@ -247,7 +305,8 @@
 : <a class="el" href="classof_texture.html#a699da66185cd0b61eaf2aa4b76da7a4b">ofTexture</a>
 </li>
 <li>getCoordHandedness()
-: <a class="el" href="classof_g_l_renderer.html#a64f0ffe7d2b90f1501046f5e3a4a23a6">ofGLRenderer</a>
+: <a class="el" href="classof_g_l_programmable_renderer.html#afbbffaf418e86980b68b4a44b84952a1">ofGLProgrammableRenderer</a>
+, <a class="el" href="classof_g_l_renderer.html#a64f0ffe7d2b90f1501046f5e3a4a23a6">ofGLRenderer</a>
 , <a class="el" href="classof_cairo_renderer.html#ad4dfd1712d8a302c4191fcd0c5ede706">ofCairoRenderer</a>
 , <a class="el" href="classof_renderer_collection.html#aed50113ca95678d9d21547f0d4a9ab61">ofRendererCollection</a>
 , <a class="el" href="classof_base_renderer.html#ad5f5cd75cc18f229a9fdae1e352b71db">ofBaseRenderer</a>
@@ -267,26 +326,46 @@
 , <a class="el" href="classof_q_t_kit_player.html#acf8b988763502781e9ff1fa5251a4b27">ofQTKitPlayer</a>
 , <a class="el" href="classof_video_player.html#a43fa58cf0bcda38da046700d343e9c38">ofVideoPlayer</a>
 </li>
+<li>getCurrentMatrix()
+: <a class="el" href="classof_matrix_stack.html#aa901545737ccc5e014db4b0d4ce78218">ofMatrixStack</a>
+</li>
+<li>getCurrentMatrixMode()
+: <a class="el" href="classof_matrix_stack.html#a003ea89176592768439f73538e4887be">ofMatrixStack</a>
+</li>
+<li>getCurrentShader()
+: <a class="el" href="classof_g_l_programmable_renderer.html#a0798e73bc5dd2f966cb2a311310c090c">ofGLProgrammableRenderer</a>
+</li>
 <li>getCurrentThread()
 : <a class="el" href="classof_thread.html#a59b5c5dd68cb4d98daba351f2f6997d8">ofThread</a>
 </li>
 <li>getCurrentViewport()
-: <a class="el" href="classof_g_l_renderer.html#a6ff4e1eabd8bb996b5fad20b2a981c2b">ofGLRenderer</a>
+: <a class="el" href="classof_g_l_programmable_renderer.html#afbe5a632d0c419d68b84060100f5f440">ofGLProgrammableRenderer</a>
+, <a class="el" href="classof_g_l_renderer.html#a6ff4e1eabd8bb996b5fad20b2a981c2b">ofGLRenderer</a>
 , <a class="el" href="classof_cairo_renderer.html#a34b2cf0594a8e0eb0a0e646ac2042ec7">ofCairoRenderer</a>
 , <a class="el" href="classof_renderer_collection.html#aa1dfb552dd9741caf98b8cbf7282923d">ofRendererCollection</a>
 , <a class="el" href="classof_base_renderer.html#a6c143444f0f3db1982a19abbc4777ddd">ofBaseRenderer</a>
+, <a class="el" href="classof_matrix_stack.html#a632555b0899bcf11506e3d8f9dcf22a0">ofMatrixStack</a>
 </li>
 <li>getCurrentWorkingDirectory()
 : <a class="el" href="classof_file_path.html#aece3f049fb90793dccb9531799158167">ofFilePath</a>
 </li>
 <li>getCurveResolution()
-: <a class="el" href="classof_path.html#a9987954e17062c3df0028616482aa2bd">ofPath</a>
+: <a class="el" href="classof_path.html#ae9755efac8d7edc3de10806293b7187a">ofPath</a>
+</li>
+<li>getCylinderIndices()
+: <a class="el" href="classof_cylinder_primitive.html#aad9bf3414fe01e444d694620ea6be9b4">ofCylinderPrimitive</a>
+</li>
+<li>getCylinderMesh()
+: <a class="el" href="classof_cylinder_primitive.html#afdc96249f21f5a58090f8a1f8509bb3f">ofCylinderPrimitive</a>
 </li>
 <li>getDecodeMode()
 : <a class="el" href="classof_q_t_kit_player.html#a96658d31bf2adffd2dc72c1a592f9b93">ofQTKitPlayer</a>
 </li>
 <li>getDefaultTextureIndex()
 : <a class="el" href="classof_fbo.html#af27140e3df40b7c1ebb1458e7210f5c3">ofFbo</a>
+</li>
+<li>getDepth()
+: <a class="el" href="classof_box_primitive.html#abf1f11886a63a8fc33f47cda10c84f3f">ofBoxPrimitive</a>
 </li>
 <li>getDepthBuffer()
 : <a class="el" href="classof_fbo.html#ac6545752c14e97d876995b793396fd2c">ofFbo</a>
@@ -336,12 +415,37 @@
 <li>getDurationNanos()
 : <a class="el" href="classof_gst_utils.html#a0f997aa4476cef978745fdd339f44cc8">ofGstUtils</a>
 </li>
+<li>getEglConfig()
+: <a class="el" href="classof_app_e_g_l_window.html#ab506da1593727c659a6b6d0a3bd260bc">ofAppEGLWindow</a>
+</li>
+<li>getEglContext()
+: <a class="el" href="classof_app_e_g_l_window.html#ae9dac20442c3d913c37852c573be7359">ofAppEGLWindow</a>
+</li>
+<li>getEglDisplay()
+: <a class="el" href="classof_app_e_g_l_window.html#a31a2b4cbf0aa4cba412464f656e9586c">ofAppEGLWindow</a>
+</li>
+<li>getEglSurface()
+: <a class="el" href="classof_app_e_g_l_window.html#afea46c60e78e83679fc80d2128415500">ofAppEGLWindow</a>
+</li>
+<li>getEglVersionMajor()
+: <a class="el" href="classof_app_e_g_l_window.html#a2bf633e5d6c8eb57e9732d846393c112">ofAppEGLWindow</a>
+</li>
+<li>getEglVersionMinor()
+: <a class="el" href="classof_app_e_g_l_window.html#a669a3ae100b045fd25de22e100b71024">ofAppEGLWindow</a>
+</li>
 <li>getEmissiveColor()
 : <a class="el" href="classof_material.html#a250ba78d554ca163023dcad20295d433">ofMaterial</a>
 </li>
 <li>getEnclosingDirectory()
 : <a class="el" href="classof_file_path.html#afd1c8b5311f26361711b4b03831d47d9">ofFilePath</a>
 , <a class="el" href="classof_file.html#a1e2dffe5af0ed290ec069d75ad0abd8c">ofFile</a>
+</li>
+<li>getEncoding()
+: <a class="el" href="classof_true_type_font.html#a8ae68744a50f815cf68cc3836dfba94d">ofTrueTypeFont</a>
+</li>
+<li>getEscapedName()
+: <a class="el" href="classof_abstract_parameter.html#a6f551b616064a7dec0f00111b7bdc1f0">ofAbstractParameter</a>
+, <a class="el" href="classof_parameter_group.html#a9a2dda7864bf80a20490d5d710628948">ofParameterGroup</a>
 </li>
 <li>getEuler()
 : <a class="el" href="classof_quaternion.html#a8b0ed0f29b9b21c8af859dd6524ac501">ofQuaternion</a>
@@ -351,6 +455,12 @@
 </li>
 <li>getFace()
 : <a class="el" href="classof_mesh.html#ad1b2bf3302c51306e17df889d1bbaf0d">ofMesh</a>
+</li>
+<li>getFaceNormal()
+: <a class="el" href="classof_mesh_face.html#a6f2dba813abef9df9800d6799584434c">ofMeshFace</a>
+</li>
+<li>getFaceNormals()
+: <a class="el" href="classof_mesh.html#ab7f92489a2476fc476c0f95231e16a7a">ofMesh</a>
 </li>
 <li>getFarClip()
 : <a class="el" href="classof_camera.html#ac6f4f04a10cb800ad525f5e9cc7813a6">ofCamera</a>
@@ -378,7 +488,8 @@
 : <a class="el" href="classof_path.html#a0ea62d736ab934fdf0e9c3e2a52a55c6">ofPath</a>
 </li>
 <li>getFillMode()
-: <a class="el" href="classof_g_l_renderer.html#ae4233d9a6b431f1a50118bc84ec414d7">ofGLRenderer</a>
+: <a class="el" href="classof_g_l_programmable_renderer.html#a8bb9296f9ec81e72b8d138bfdd611ce3">ofGLProgrammableRenderer</a>
+, <a class="el" href="classof_g_l_renderer.html#ae4233d9a6b431f1a50118bc84ec414d7">ofGLRenderer</a>
 , <a class="el" href="classof_cairo_renderer.html#a2e3ec897cb1c67bce8e99900c50cc8af">ofCairoRenderer</a>
 , <a class="el" href="classof_renderer_collection.html#a3d04dc6a68993bed2e9044b9829b73f8">ofRendererCollection</a>
 , <a class="el" href="classof_base_renderer.html#aa840440af71eb0663f2943d48df00360">ofBaseRenderer</a>
@@ -389,19 +500,23 @@
 <li>getFirstLine()
 : <a class="el" href="classof_buffer.html#a6d7fb51231e1672ca05c6d2e03ff9e6c">ofBuffer</a>
 </li>
+<li>getFloat()
+: <a class="el" href="classof_parameter_group.html#abe4e6f2c2abb6e9239a2844e7e88c896">ofParameterGroup</a>
+</li>
+<li>getFloatColor()
+: <a class="el" href="classof_parameter_group.html#a9fae5a68637b66295962db36c5dc385c">ofParameterGroup</a>
+</li>
+<li>getFloatValue()
+: <a class="el" href="classof_xml.html#af8690ac25fd447ba10be18de55e2a088">ofXml</a>
+</li>
+<li>getFontTexture()
+: <a class="el" href="classof_true_type_font.html#a043c3e871e6d8c1b32e7697ac4411eb0">ofTrueTypeFont</a>
+</li>
 <li>getForceAspectRatio()
 : <a class="el" href="classof_camera.html#ace8154b357e9b6f285d34c067c1555ee">ofCamera</a>
 </li>
 <li>getFov()
 : <a class="el" href="classof_camera.html#ae53ac9b4daf751eeb549e7d74fa2080b">ofCamera</a>
-</li>
-<li>getFrameNum()
-: <a class="el" href="classof_app_glut_window.html#a1c9b0b4f4fb8e3bf0c0a534868e738e1">ofAppGlutWindow</a>
-, <a class="el" href="classof_app_base_window.html#ac6553f116e21ac34f6f35af9f2629d84">ofAppBaseWindow</a>
-</li>
-<li>getFrameRate()
-: <a class="el" href="classof_app_base_window.html#a8bd75700687d9b9b47477a02f58bf125">ofAppBaseWindow</a>
-, <a class="el" href="classof_app_glut_window.html#acd6b8dbc1e8a7aa985858b28c9e3cda9">ofAppGlutWindow</a>
 </li>
 <li>getFrustum()
 : <a class="el" href="classof_matrix4x4.html#aa191919c9afb4ac6091bd0febf9d34e7">ofMatrix4x4</a>
@@ -422,21 +537,40 @@
 : <a class="el" href="classof_node.html#a78a98aca9e6d389ae4918ad9783f3bf7">ofNode</a>
 </li>
 <li>getGLRenderer()
-: <a class="el" href="classof_renderer_collection.html#a27bfbb1ff196ad463f92195698cf29df">ofRendererCollection</a>
+: <a class="el" href="classof_renderer_collection.html#a7078f7cab24c94972c05d52b72e4ef22">ofRendererCollection</a>
 </li>
 <li>getGrabber()
 : <a class="el" href="classof_video_grabber.html#a886108dd0d5fb4bd110d922f7690ba80">ofVideoGrabber</a>
+</li>
+<li>getGroup()
+: <a class="el" href="classof_parameter_group.html#a179ab4f612314f6647c8a021ff884a7b">ofParameterGroup</a>
+</li>
+<li>getGroupHierarchyNames()
+: <a class="el" href="classof_abstract_parameter.html#ae1163059d5965b71bb1102e8e39e3b43">ofAbstractParameter</a>
+</li>
+<li>getGstElementByName()
+: <a class="el" href="classof_gst_utils.html#a4d08aa353ec5a802ccc525988c609107">ofGstUtils</a>
 </li>
 <li>getGstVideoUtils()
 : <a class="el" href="classof_gst_video_grabber.html#af081ee1025e25b5c41ab9b76e5e54e5c">ofGstVideoGrabber</a>
 , <a class="el" href="classof_gst_video_player.html#ab7aa5de40584696a9a98158d5bbb6da0">ofGstVideoPlayer</a>
 </li>
+<li>getHandedness()
+: <a class="el" href="classof_matrix_stack.html#ac90a3737b9f5a38701a8a07a7d404847">ofMatrixStack</a>
+</li>
 <li>getHeading()
 : <a class="el" href="classof_node.html#a91b332c93dd0da7c289ffcc95ccc5a46">ofNode</a>
 </li>
 <li>getHeight()
-: <a class="el" href="classof_app_base_window.html#aef76e7138aef773ee573b23d42947ae9">ofAppBaseWindow</a>
+: <a class="el" href="classof_plane_primitive.html#a3e56c657d5a868ef59171b06cf6175b3">ofPlanePrimitive</a>
+, <a class="el" href="classof_cylinder_primitive.html#a55ced5b9f2e5d475e477e4877432f5b1">ofCylinderPrimitive</a>
+, <a class="el" href="classof_cone_primitive.html#ad9244de5db097535cd716e4ccedb02c8">ofConePrimitive</a>
+, <a class="el" href="classof_box_primitive.html#ab3f3ba62397180358a93b35d4fc5d502">ofBoxPrimitive</a>
+, <a class="el" href="classof_app_base_window.html#aef76e7138aef773ee573b23d42947ae9">ofAppBaseWindow</a>
+, <a class="el" href="classof_app_e_g_l_window.html#a142d6edb9e16e078a6d6634fe0148029">ofAppEGLWindow</a>
+, <a class="el" href="classof_app_g_l_f_w_window.html#a8303a025bc49258ea1e093769e43b6ac">ofAppGLFWWindow</a>
 , <a class="el" href="classof_app_glut_window.html#a13bd98a9f21be288ccc273bcb4938cb5">ofAppGlutWindow</a>
+, <a class="el" href="classof_app_no_window.html#a13a86b6a13b6d4b6b6f5550075be6779">ofAppNoWindow</a>
 , <a class="el" href="classof_fbo.html#a8b7ed597edaf8d76f5a7c1d49ef8d0b1">ofFbo</a>
 , <a class="el" href="classof_texture.html#ac14833c0221c45645d3ca16d3687a613">ofTexture</a>
 , <a class="el" href="classof_image__.html#af39591f8ff0e19177725ccfd379063f9">ofImage_&lt; PixelType &gt;</a>
@@ -482,8 +616,14 @@
 <li>getIndex()
 : <a class="el" href="classof_mesh.html#aac2a306dca03af3ff00493992a2aa830">ofMesh</a>
 </li>
+<li>getIndexAtLength()
+: <a class="el" href="classof_polyline.html#a1438a222bebc830c432c08596082bc94">ofPolyline</a>
+</li>
+<li>getIndexAtPercent()
+: <a class="el" href="classof_polyline.html#aca299cdaacbe35c3e969d5d8c1b51b6c">ofPolyline</a>
+</li>
 <li>getIndexId()
-: <a class="el" href="classof_vbo.html#a14b921b9401f3707b3b201a69c159207">ofVbo</a>
+: <a class="el" href="classof_vbo.html#a620e1349a54b644130fcc42d4bafd89b">ofVbo</a>
 </li>
 <li>getIndexofStringInArray:stringToFind:
 : <a class="el" href="interface_q_t_kit_video_grabber.html#afac28610ec99a6ba5a99361c55bf304b">QTKitVideoGrabber</a>
@@ -492,7 +632,11 @@
 : <a class="el" href="classof_mesh.html#aff81d2d6063f10bb3907c57a05ba5760">ofMesh</a>
 </li>
 <li>getIndices()
-: <a class="el" href="classof_mesh.html#acf727a93d0e042c855583fcb949380cf">ofMesh</a>
+: <a class="el" href="classof3d_primitive.html#a6627d5e861d4c7d898b3e927b6ddc70e">of3dPrimitive</a>
+, <a class="el" href="classof_mesh.html#acf727a93d0e042c855583fcb949380cf">ofMesh</a>
+</li>
+<li>getInt()
+: <a class="el" href="classof_parameter_group.html#ac0e8764ef345e623b13a57663bf3c8f7">ofParameterGroup</a>
 </li>
 <li>getInterpolated()
 : <a class="el" href="classof_vec2f.html#a9c2a407610a1276b76a2762872aa14ac">ofVec2f</a>
@@ -502,8 +646,11 @@
 <li>getIntersection()
 : <a class="el" href="classof_rectangle.html#aa069e4e17ccde316315a49f637f8d3a2">ofRectangle</a>
 </li>
+<li>getIntValue()
+: <a class="el" href="classof_xml.html#a7446944b49006aa4a743fa3ef54101b9">ofXml</a>
+</li>
 <li>getInverse()
-: <a class="el" href="classof_matrix4x4.html#acb2492d77ffa5e4fa70b378874d81fe3">ofMatrix4x4</a>
+: <a class="el" href="classof_matrix4x4.html#aba6946166a88e0d6c5d182f56ab01bbd">ofMatrix4x4</a>
 </li>
 <li>getInverseOf()
 : <a class="el" href="classof_matrix4x4.html#ae59b7e1c6c41c84d2cfa348f65e0b1ac">ofMatrix4x4</a>
@@ -512,7 +659,7 @@
 : <a class="el" href="classof_color__.html#a11bc8c7ef629174d09fd3168c18660e9">ofColor_&lt; PixelType &gt;</a>
 </li>
 <li>getIsAllocated()
-: <a class="el" href="classof_vbo.html#ab570340b58e08f01cc13b14c3aec32ee">ofVbo</a>
+: <a class="el" href="classof_vbo.html#a2c9a45f028d3fd113932fe2a77a2d88f">ofVbo</a>
 </li>
 <li>getIsDirectional()
 : <a class="el" href="classof_light.html#a29b80e6a41e9cb221472c478490a4330">ofLight</a>
@@ -538,12 +685,14 @@
 <li>getIsSpotlight()
 : <a class="el" href="classof_light.html#a6ed913ca4846378603471a28fe45637e">ofLight</a>
 </li>
-<li>getLastFrameTime()
-: <a class="el" href="classof_app_base_window.html#ae5c3432bc9c7aa2fd720c4d9c500a63e">ofAppBaseWindow</a>
-, <a class="el" href="classof_app_glut_window.html#a70ce41329c3060d85f389920f21d6b35">ofAppGlutWindow</a>
-</li>
 <li>getLeft()
 : <a class="el" href="classof_rectangle.html#a9ed5b5f51c58880d9dde25c7d631074a">ofRectangle</a>
+</li>
+<li>getLengthAtIndex()
+: <a class="el" href="classof_polyline.html#afda6a7e35eeef92e57c6e9e00e712d2f">ofPolyline</a>
+</li>
+<li>getLengthAtIndexInterpolated()
+: <a class="el" href="classof_polyline.html#ae8174ffb2486f8f2558d4b237c8f60e7">ofPolyline</a>
 </li>
 <li>getLensOffset()
 : <a class="el" href="classof_camera.html#afa1f9852946d33e0817e4ffc5835c3d9">ofCamera</a>
@@ -595,7 +744,9 @@
 , <a class="el" href="classof_vec3f.html#a54142598bf93736463c9c619ca18d675">ofVec3f</a>
 </li>
 <li>getMax()
-: <a class="el" href="classof_rectangle.html#a2f51c1efc2a72c21d6b44d5f8ce841ad">ofRectangle</a>
+: <a class="el" href="classof_parameter.html#a7d78cc3d55a97fa57d1b0801c3c1feea">ofParameter&lt; ParameterType &gt;</a>
+, <a class="el" href="classof_read_only_parameter.html#a746cabdac0b8843a567fb5014261d226">ofReadOnlyParameter&lt; ParameterType, Friend &gt;</a>
+, <a class="el" href="classof_rectangle.html#a2f51c1efc2a72c21d6b44d5f8ce841ad">ofRectangle</a>
 </li>
 <li>getMaxLatencyNanos()
 : <a class="el" href="classof_gst_utils.html#a75cc29f0b43c455dd36e6fbeba9863b9">ofGstUtils</a>
@@ -606,13 +757,24 @@
 <li>getMaxY()
 : <a class="el" href="classof_rectangle.html#a62b5332fe1fee810e154962e053d1404">ofRectangle</a>
 </li>
+<li>getMesh()
+: <a class="el" href="classof3d_primitive.html#a83846bb15db870f7bca03b653e33ebd4">of3dPrimitive</a>
+</li>
+<li>getMeshForIndices()
+: <a class="el" href="classof_mesh.html#a4fbb52b77cfef1a78234cd6e9ab960cf">ofMesh</a>
+</li>
+<li>getMeshPtr()
+: <a class="el" href="classof3d_primitive.html#a587142eae702b12669a369a8130bb3ad">of3dPrimitive</a>
+</li>
 <li>getMiddle()
 : <a class="el" href="classof_vec2f.html#a40500665496c359beec61087d4e73809">ofVec2f</a>
 , <a class="el" href="classof_vec3f.html#a4e3fb3637936593506e8d269ce7ec611">ofVec3f</a>
 , <a class="el" href="classof_vec4f.html#a1cfeb2672d0063eb6e490afbab9793d0">ofVec4f</a>
 </li>
 <li>getMin()
-: <a class="el" href="classof_rectangle.html#adb87ec91d21c22905553bfc55aa3a2b0">ofRectangle</a>
+: <a class="el" href="classof_parameter.html#a71723255e645d5260313cb493cad7bb3">ofParameter&lt; ParameterType &gt;</a>
+, <a class="el" href="classof_read_only_parameter.html#a04392e6730ce650db4d134b4e82c2ff9">ofReadOnlyParameter&lt; ParameterType, Friend &gt;</a>
+, <a class="el" href="classof_rectangle.html#adb87ec91d21c22905553bfc55aa3a2b0">ofRectangle</a>
 </li>
 <li>getMinLatencyNanos()
 : <a class="el" href="classof_gst_utils.html#addee5eb7880fe0b02b69c047183cd472">ofGstUtils</a>
@@ -631,12 +793,15 @@
 </li>
 <li>getMode()
 : <a class="el" href="classof_mesh.html#a9ecefc7c940cc76fc6c9e3648d73d99d">ofMesh</a>
+, <a class="el" href="classof_path.html#a2c31c00931b89c4f579f2ce0fc917b80">ofPath</a>
 </li>
 <li>getModelViewMatrix()
 : <a class="el" href="classof_camera.html#aef9fc0a70e89d6807db26d17304c7aa2">ofCamera</a>
+, <a class="el" href="classof_matrix_stack.html#a2381d5fc375c71285d8df453f1501ccf">ofMatrixStack</a>
 </li>
 <li>getModelViewProjectionMatrix()
 : <a class="el" href="classof_camera.html#a03586331b2309433c3a8842f6bc333b1">ofCamera</a>
+, <a class="el" href="classof_matrix_stack.html#a3fc5072f12c5a2deb765ead5926428d0">ofMatrixStack</a>
 </li>
 <li>getMouseInputEnabled()
 : <a class="el" href="classof_easy_cam.html#a47affec73161672979f9ae3e826702d6">ofEasyCam</a>
@@ -648,8 +813,25 @@
 : <a class="el" href="classof_video_player.html#a983ddf3503e794e48a6c0b237c0171a6">ofVideoPlayer</a>
 </li>
 <li>getName()
-: <a class="el" href="classof_directory.html#adbb4d42ee13348c8eb3622c6df805c8f">ofDirectory</a>
+: <a class="el" href="classof_abstract_parameter.html#ad48af3aa34c920787cd96e8435b2bd2d">ofAbstractParameter</a>
+, <a class="el" href="classof_parameter.html#a790541069a07e7e7d1730b25071e168b">ofParameter&lt; ParameterType &gt;</a>
+, <a class="el" href="classof_read_only_parameter.html#a3053255908e30f89a886686a43592de0">ofReadOnlyParameter&lt; ParameterType, Friend &gt;</a>
+, <a class="el" href="classof_parameter_group.html#af963c11c4550bcaa5c3fd14729d46245">ofParameterGroup</a>
+, <a class="el" href="classof_directory.html#adbb4d42ee13348c8eb3622c6df805c8f">ofDirectory</a>
 , <a class="el" href="classof_file_dialog_result.html#a80fd7a5c48d882cc6c93c0aa4675b5a2">ofFileDialogResult</a>
+, <a class="el" href="classof_xml.html#ac7141cf9cbaea3cd81f53e04947c31ff">ofXml</a>
+</li>
+<li>getNativeDisplay()
+: <a class="el" href="classof_app_e_g_l_window.html#a8f380c64b68b0051f95f2a61c73e4eff">ofAppEGLWindow</a>
+</li>
+<li>getNativeViewport()
+: <a class="el" href="classof_g_l_programmable_renderer.html#a01f2f45a628855c53950fc8f3d4bb998">ofGLProgrammableRenderer</a>
+, <a class="el" href="classof_g_l_renderer.html#a13ae2b7cad9cd20727295260150720a6">ofGLRenderer</a>
+, <a class="el" href="classof_base_renderer.html#a7698ce8d1e17235de9684c96dad1c27d">ofBaseRenderer</a>
+, <a class="el" href="classof_matrix_stack.html#a0540420a6b4e4bb2ad8efccd9e086732">ofMatrixStack</a>
+</li>
+<li>getNativeWindow()
+: <a class="el" href="classof_app_e_g_l_window.html#abf506cc3c5b8b27bb7a1c761cb817a72">ofAppEGLWindow</a>
 </li>
 <li>getNearClip()
 : <a class="el" href="classof_camera.html#a1a30c9b9a1cff8efa6d2cda3fea34a89">ofCamera</a>
@@ -659,9 +841,16 @@
 </li>
 <li>getNormal()
 : <a class="el" href="classof_mesh.html#aca4d16af25141116f2395f5ab746b392">ofMesh</a>
+, <a class="el" href="classof_mesh_face.html#a5903c85e56bed47bdee5363729504473">ofMeshFace</a>
+</li>
+<li>getNormalAtIndex()
+: <a class="el" href="classof_polyline.html#aa63d7ccb1eae31feaa16ddfafe28595b">ofPolyline</a>
+</li>
+<li>getNormalAtIndexInterpolated()
+: <a class="el" href="classof_polyline.html#a4eddc4b543100b15388a33d62e7cc8a4">ofPolyline</a>
 </li>
 <li>getNormalId()
-: <a class="el" href="classof_vbo.html#accffaabb5d98df22d509a56cbbd2a4bb">ofVbo</a>
+: <a class="el" href="classof_vbo.html#a4725389653037a81793d515a75270dec">ofVbo</a>
 </li>
 <li>getNormalized()
 : <a class="el" href="classof_vec2f.html#a0dce03f931c60e149d08d831dcf708bd">ofVec2f</a>
@@ -681,22 +870,36 @@
 <li>getNumCharacters()
 : <a class="el" href="classof_true_type_font.html#a37523f38c5be929f82d87bac15308f03">ofTrueTypeFont</a>
 </li>
+<li>getNumChildren()
+: <a class="el" href="classof_xml.html#a375083dc6db07944d0162e8bb6777465">ofXml</a>
+</li>
 <li>getNumColors()
 : <a class="el" href="classof_mesh.html#a8be552e86134942fe574c39237da6f92">ofMesh</a>
 </li>
+<li>getNumColumns()
+: <a class="el" href="classof_plane_primitive.html#ad48aaa88d9e6ea1364702eff5cc161ea">ofPlanePrimitive</a>
+</li>
 <li>getNumIndices()
 : <a class="el" href="classof_mesh.html#a566c70e505b5270d281c65b80c160e1d">ofMesh</a>
+, <a class="el" href="classof_vbo.html#a463d6a8c33de52fb89f9021c90a82268">ofVbo</a>
 </li>
 <li>getNumInputChannels()
-: <a class="el" href="classof_p_a_sound_stream.html#a58bfc141545fb3c652c3e8328e2c94c6">ofPASoundStream</a>
+: <a class="el" href="classof_base_sound_stream.html#ac23ff27d95054eecae6134e43ead00b9">ofBaseSoundStream</a>
+, <a class="el" href="classof_p_a_sound_stream.html#a58bfc141545fb3c652c3e8328e2c94c6">ofPASoundStream</a>
 , <a class="el" href="classof_rt_audio_sound_stream.html#a3728964558ff782a60b3d4803ee97474">ofRtAudioSoundStream</a>
+, <a class="el" href="classof_sound_stream.html#acad14341e4a7eafb7b7b8012d6745feb">ofSoundStream</a>
 </li>
 <li>getNumNormals()
 : <a class="el" href="classof_mesh.html#a4c483a94a87485b5c90b9180f6fdc7e0">ofMesh</a>
 </li>
 <li>getNumOutputChannels()
-: <a class="el" href="classof_p_a_sound_stream.html#a4992eeace6b11736a86b0b965747ec75">ofPASoundStream</a>
+: <a class="el" href="classof_base_sound_stream.html#a0b88f70e31f1852ddfa024a991a05e92">ofBaseSoundStream</a>
+, <a class="el" href="classof_p_a_sound_stream.html#a4992eeace6b11736a86b0b965747ec75">ofPASoundStream</a>
 , <a class="el" href="classof_rt_audio_sound_stream.html#a3c4fad72682be9a13f1911d0dfed1470">ofRtAudioSoundStream</a>
+, <a class="el" href="classof_sound_stream.html#a6c5cd61d04e29c2473d2cd1a5a93543a">ofSoundStream</a>
+</li>
+<li>getNumRows()
+: <a class="el" href="classof_plane_primitive.html#a5d28da050d483f65deb1d3607dbafc3f">ofPlanePrimitive</a>
 </li>
 <li>getNumTexCoords()
 : <a class="el" href="classof_mesh.html#ac101b06ebefb3905fff8ce0947e26435">ofMesh</a>
@@ -706,13 +909,23 @@
 </li>
 <li>getNumVertices()
 : <a class="el" href="classof_mesh.html#ae2d9f9ca63ae1f5febd68b00ebd3a371">ofMesh</a>
+, <a class="el" href="classof_vbo.html#a6fe89783910af4b343c2afbe00180e73">ofVbo</a>
 </li>
 <li>getOrientation()
 : <a class="el" href="classof_app_base_window.html#addb4b11af8f02dd874bc34deed4b207f">ofAppBaseWindow</a>
+, <a class="el" href="classof_app_e_g_l_window.html#aa6ff8cfc7d01dc3eff7ee4efb751a4dd">ofAppEGLWindow</a>
+, <a class="el" href="classof_app_g_l_f_w_window.html#afe8b7742f750be65e2c6aa4064b1798f">ofAppGLFWWindow</a>
 , <a class="el" href="classof_app_glut_window.html#a20aa6e576abce9c595ff60c51c650ca7">ofAppGlutWindow</a>
+, <a class="el" href="classof_matrix_stack.html#add77b3e68972d804f3482b273912e752">ofMatrixStack</a>
 </li>
 <li>getOrientationEuler()
 : <a class="el" href="classof_node.html#a105586cd87594a6ab0841e39f474e70e">ofNode</a>
+</li>
+<li>getOrientationMatrix()
+: <a class="el" href="classof_matrix_stack.html#a3ea3430035c414f5600908cbd6b03055">ofMatrixStack</a>
+</li>
+<li>getOrientationMatrixInverse()
+: <a class="el" href="classof_matrix_stack.html#aa3d6a4cdeec1d499f07baaa433e17726">ofMatrixStack</a>
 </li>
 <li>getOrientationQuat()
 : <a class="el" href="classof_node.html#ae8ca41c6f9eac9a64d7c19a6811f66b5">ofNode</a>
@@ -731,12 +944,13 @@
 : <a class="el" href="classof_path.html#a9b5304ad80fd0a9a2891d72f1d602e27">ofPath</a>
 </li>
 <li>getPan()
-: <a class="el" href="classof_base_sound_player.html#ab17c0b5c5684ce988eb1f52259477aae">ofBaseSoundPlayer</a>
+: <a class="el" href="classof_sound_player.html#a45fae5c6233c598671bbce9ecac9e017">ofSoundPlayer</a>
+, <a class="el" href="classof_base_sound_player.html#ab17c0b5c5684ce988eb1f52259477aae">ofBaseSoundPlayer</a>
 , <a class="el" href="classof_fmod_sound_player.html#a280fcf4cb1e63a083d5a5f17bf4d7789">ofFmodSoundPlayer</a>
-, <a class="el" href="classof_sound_player.html#a45fae5c6233c598671bbce9ecac9e017">ofSoundPlayer</a>
 </li>
 <li>getParent()
 : <a class="el" href="classof_node.html#a08d61ddc77fd655780a7c269756b7ecb">ofNode</a>
+, <a class="el" href="classof_abstract_parameter.html#a17714d848ae7f712c122855b8002f216">ofAbstractParameter</a>
 </li>
 <li>getPath()
 : <a class="el" href="classof_directory.html#a026fb80addec0a2d1eeecb2aebb4780e">ofDirectory</a>
@@ -746,8 +960,8 @@
 : <a class="el" href="classof_file_path.html#a512f6639001b0800d66cef0cf1b3e9e9">ofFilePath</a>
 </li>
 <li>getPerimeter()
-: <a class="el" href="classof_polyline.html#adbf01c8cdc85d3f1d88b2bc985498159">ofPolyline</a>
-, <a class="el" href="classof_rectangle.html#ad423e71c1a26e8602b3cf796259d5197">ofRectangle</a>
+: <a class="el" href="classof_rectangle.html#ad423e71c1a26e8602b3cf796259d5197">ofRectangle</a>
+, <a class="el" href="classof_polyline.html#adbf01c8cdc85d3f1d88b2bc985498159">ofPolyline</a>
 </li>
 <li>getPerpendicular()
 : <a class="el" href="classof_vec2f.html#a6b2cabfe71daf7c6ad8e2df2fd9f549f">ofVec2f</a>
@@ -763,14 +977,14 @@
 : <a class="el" href="classof_node.html#a4f52fa48348f59307623c7a7bb4ef59f">ofNode</a>
 </li>
 <li>getPixelFormat()
-: <a class="el" href="classof_quick_time_grabber.html#a9dbabbda60623f1c86f265c86479830a">ofQuickTimeGrabber</a>
+: <a class="el" href="classof_q_t_kit_player.html#ab201067165a8a12118da5a79670c5a00">ofQTKitPlayer</a>
+, <a class="el" href="classof_direct_show_grabber.html#a7f810d2c52b46e099ab4231b24951b93">ofDirectShowGrabber</a>
 , <a class="el" href="classof_base_video_grabber.html#a12a7f28ad6d9b0c98233aa43468ec188">ofBaseVideoGrabber</a>
 , <a class="el" href="classof_base_video_player.html#ad4c3d7397b11aa2e19acbe825fe891db">ofBaseVideoPlayer</a>
-, <a class="el" href="classof_direct_show_grabber.html#a7f810d2c52b46e099ab4231b24951b93">ofDirectShowGrabber</a>
 , <a class="el" href="classof_gst_video_grabber.html#a4aca3ec0b7d0176ce8cd1f47dbb95672">ofGstVideoGrabber</a>
 , <a class="el" href="classof_gst_video_player.html#a10615eacdc500b1500616b8ca4ac7c05">ofGstVideoPlayer</a>
 , <a class="el" href="classof_q_t_kit_grabber.html#ae8b8d1dd56bd898683ee963ddbb3ed88">ofQTKitGrabber</a>
-, <a class="el" href="classof_q_t_kit_player.html#ab201067165a8a12118da5a79670c5a00">ofQTKitPlayer</a>
+, <a class="el" href="classof_quick_time_grabber.html#a9dbabbda60623f1c86f265c86479830a">ofQuickTimeGrabber</a>
 , <a class="el" href="classof_video_grabber.html#a5af35e197b1dca488b9dc803f6b41964">ofVideoGrabber</a>
 , <a class="el" href="classof_video_player.html#aecbb3cdf5b2931bcbad96d030e4d395e">ofVideoPlayer</a>
 </li>
@@ -778,63 +992,82 @@
 : <a class="el" href="classof_pixels__.html#a4c9bd76b744cb393e3ee8fc425ccd0d1">ofPixels_&lt; PixelType &gt;</a>
 </li>
 <li>getPixels()
-: <a class="el" href="classof_image__.html#ace37e73eb6ca7b8165b790ac7b51e715">ofImage_&lt; PixelType &gt;</a>
+: <a class="el" href="classof_q_t_kit_player.html#a2f3ba09830190f6dc14466f7b593ec59">ofQTKitPlayer</a>
+, <a class="el" href="classof_gst_video_utils.html#a0c7fc633ebf27589941219d99c17f0fa">ofGstVideoUtils</a>
+, <a class="el" href="classof_image__.html#ace37e73eb6ca7b8165b790ac7b51e715">ofImage_&lt; PixelType &gt;</a>
 , <a class="el" href="classof_pixels__.html#a0293aef85bbef5d929c20a3307b84c90">ofPixels_&lt; PixelType &gt;</a>
 , <a class="el" href="classof_base_has_pixels__.html#a680c5d134ff80d892abbe681fa5ce2e0">ofBaseHasPixels_&lt; T &gt;</a>
+, <a class="el" href="classof_base_video_grabber.html#a7a9d9dc85963036f16d937cee730f654">ofBaseVideoGrabber</a>
 , <a class="el" href="classof_base_video_player.html#a219fabc2debd7c542e10a56738fe1f5a">ofBaseVideoPlayer</a>
 , <a class="el" href="classof_direct_show_grabber.html#acc815e60b8edd19f443a5e2ac0caa893">ofDirectShowGrabber</a>
-, <a class="el" href="classof_gst_video_utils.html#a0c7fc633ebf27589941219d99c17f0fa">ofGstVideoUtils</a>
 , <a class="el" href="classof_gst_video_grabber.html#a96fb7659d28b1404265d0007f8aff0e5">ofGstVideoGrabber</a>
 , <a class="el" href="classof_gst_video_player.html#adb8ee823c3f1616c406e0d5d26218953">ofGstVideoPlayer</a>
 , <a class="el" href="classof_q_t_kit_grabber.html#a8f263d95ef1fd2c5389c021b9c7a9e40">ofQTKitGrabber</a>
-, <a class="el" href="classof_q_t_kit_player.html#a2f3ba09830190f6dc14466f7b593ec59">ofQTKitPlayer</a>
+, <a class="el" href="classof_quick_time_grabber.html#a1c08e8952ff56728fd619c6258479b59">ofQuickTimeGrabber</a>
 , <a class="el" href="classof_video_grabber.html#af0e4656deee139fb550f6feb4e24ecc8">ofVideoGrabber</a>
 , <a class="el" href="classof_video_player.html#af5bd9b31b5d07baeffd5d2f378a21f59">ofVideoPlayer</a>
-, <a class="el" href="classof_base_video_grabber.html#a7a9d9dc85963036f16d937cee730f654">ofBaseVideoGrabber</a>
-, <a class="el" href="classof_quick_time_grabber.html#a1c08e8952ff56728fd619c6258479b59">ofQuickTimeGrabber</a>
 </li>
 <li>getPixelsRef()
-: <a class="el" href="classof_image__.html#acfb1f23287b497700e179a5a2dd37f9a">ofImage_&lt; PixelType &gt;</a>
+: <a class="el" href="classof_quick_time_grabber.html#a9dda4485108619ae84cd5425cd5c0ab0">ofQuickTimeGrabber</a>
+, <a class="el" href="classof_image__.html#acfb1f23287b497700e179a5a2dd37f9a">ofImage_&lt; PixelType &gt;</a>
+, <a class="el" href="classof_base_has_pixels__.html#a0e74503eeea2afb44a8f5d6b65422f45">ofBaseHasPixels_&lt; T &gt;</a>
 , <a class="el" href="classof_direct_show_grabber.html#aee0f557356afd74a692e6453277f9d0c">ofDirectShowGrabber</a>
 , <a class="el" href="classof_gst_video_utils.html#a144c83ce876eca7fac1262f408c8be6f">ofGstVideoUtils</a>
 , <a class="el" href="classof_gst_video_grabber.html#a82629d46c4013b68ff18203d62a1f85f">ofGstVideoGrabber</a>
+, <a class="el" href="classof_gst_video_player.html#a03dd7044e94436eb95db728ff5ab5314">ofGstVideoPlayer</a>
 , <a class="el" href="classof_q_t_kit_grabber.html#a60fe7e958425a201429c68bd2cb70449">ofQTKitGrabber</a>
 , <a class="el" href="classof_q_t_kit_player.html#a4aba6e989b316ecc03fb8ed9bfde5c25">ofQTKitPlayer</a>
-, <a class="el" href="classof_quick_time_grabber.html#a9dda4485108619ae84cd5425cd5c0ab0">ofQuickTimeGrabber</a>
 , <a class="el" href="classof_video_grabber.html#abf832b3ad4b29aa5f787b66de2a4897a">ofVideoGrabber</a>
 , <a class="el" href="classof_video_player.html#a7702772cc77fd61d2d4e2c2b338b5291">ofVideoPlayer</a>
-, <a class="el" href="classof_gst_video_player.html#a03dd7044e94436eb95db728ff5ab5314">ofGstVideoPlayer</a>
-, <a class="el" href="classof_base_has_pixels__.html#a0e74503eeea2afb44a8f5d6b65422f45">ofBaseHasPixels_&lt; T &gt;</a>
 </li>
 <li>getPlayer()
-: <a class="el" href="classof_sound_player.html#ae4c3635f6bb5ad7960cd5e77f438dd9a">ofSoundPlayer</a>
-, <a class="el" href="classof_video_player.html#a0c7d4e6549c38547a58bbef4c8c3dfda">ofVideoPlayer</a>
+: <a class="el" href="classof_video_player.html#a0c7d4e6549c38547a58bbef4c8c3dfda">ofVideoPlayer</a>
+, <a class="el" href="classof_sound_player.html#ae4c3635f6bb5ad7960cd5e77f438dd9a">ofSoundPlayer</a>
+</li>
+<li>getPocoDocument()
+: <a class="el" href="classof_xml.html#a8aa58e9804fd66708e69126e88eea55b">ofXml</a>
+</li>
+<li>getPocoElement()
+: <a class="el" href="classof_xml.html#afa2f91325563280c0955aa63bfe0a4d0">ofXml</a>
 </li>
 <li>getPocoFile()
-: <a class="el" href="classof_directory.html#a27ea22732195089bfb60d101e8dc8cf5">ofDirectory</a>
-, <a class="el" href="classof_file.html#a4e2aa817edd0168fe721b4b6f6a13077">ofFile</a>
+: <a class="el" href="classof_file.html#a4e2aa817edd0168fe721b4b6f6a13077">ofFile</a>
+, <a class="el" href="classof_directory.html#a27ea22732195089bfb60d101e8dc8cf5">ofDirectory</a>
 </li>
 <li>getPocoThread()
 : <a class="el" href="classof_thread.html#a3b607a4239526df49fb23738453645ef">ofThread</a>
 </li>
+<li>getPoint()
+: <a class="el" href="classof_parameter_group.html#a558b17748465aebe618b20c71ac09966">ofParameterGroup</a>
+</li>
+<li>getPointAtIndexInterpolated()
+: <a class="el" href="classof_polyline.html#a9dd4cdc0902517dea9e5111fa0844adb">ofPolyline</a>
+</li>
+<li>getPointAtLength()
+: <a class="el" href="classof_polyline.html#ad1273aba9390bdfc92dc22007ec17a76">ofPolyline</a>
+</li>
+<li>getPointAtPercent()
+: <a class="el" href="classof_polyline.html#a37ceb4a7bd30ee829a88a3f4f140eafe">ofPolyline</a>
+</li>
 <li>getPosition()
-: <a class="el" href="classof_node.html#a89350f61b536e5f64dc13682a6aee97d">ofNode</a>
+: <a class="el" href="classof_parameter_group.html#ae9b82660be36b51bd52f363a25dcb319">ofParameterGroup</a>
+, <a class="el" href="classof_base_sound_player.html#aa397af6f05c4451866bd343692c1aa33">ofBaseSoundPlayer</a>
+, <a class="el" href="classof_node.html#a89350f61b536e5f64dc13682a6aee97d">ofNode</a>
 , <a class="el" href="classof_fmod_sound_player.html#a82cf6a361d806526f66458b4540bafbc">ofFmodSoundPlayer</a>
 , <a class="el" href="classof_sound_player.html#ab323f725c722b7c858e5fb2cd26d054e">ofSoundPlayer</a>
 , <a class="el" href="classof_base_video_player.html#af5a4ba704173ba96aa204b34068b0843">ofBaseVideoPlayer</a>
+, <a class="el" href="classof_rectangle.html#acb808178333422a5133173ba45153907">ofRectangle</a>
 , <a class="el" href="classof_gst_utils.html#a0f56586ff19e8cc7c256793eb75c94af">ofGstUtils</a>
 , <a class="el" href="classof_gst_video_player.html#acfe19cff475b4b25d622c3c341d38809">ofGstVideoPlayer</a>
 , <a class="el" href="classof_q_t_kit_player.html#aaf4c82eaf7d4cd0b05724b4e6ff5421c">ofQTKitPlayer</a>
 , <a class="el" href="classof_video_player.html#aba3c6653625a62d0aad8e481af2c65f3">ofVideoPlayer</a>
-, <a class="el" href="classof_rectangle.html#acb808178333422a5133173ba45153907">ofRectangle</a>
-, <a class="el" href="classof_base_sound_player.html#aa397af6f05c4451866bd343692c1aa33">ofBaseSoundPlayer</a>
 </li>
 <li>getPositionInSeconds()
 : <a class="el" href="classof_q_t_kit_player.html#a4b654d4a1791d324ff3686a8967ce56f">ofQTKitPlayer</a>
 </li>
 <li>getPositionMS()
-: <a class="el" href="classof_base_sound_player.html#a03deb9c7833a9e765e885c68214559b5">ofBaseSoundPlayer</a>
-, <a class="el" href="classof_fmod_sound_player.html#a76f7e6d7800fe3203de9cefe7e4e8fc8">ofFmodSoundPlayer</a>
+: <a class="el" href="classof_fmod_sound_player.html#a76f7e6d7800fe3203de9cefe7e4e8fc8">ofFmodSoundPlayer</a>
+, <a class="el" href="classof_base_sound_player.html#a03deb9c7833a9e765e885c68214559b5">ofBaseSoundPlayer</a>
 , <a class="el" href="classof_sound_player.html#a030e9784d82c0e5e100f88c3c24a4209">ofSoundPlayer</a>
 </li>
 <li>getPositionRef()
@@ -845,32 +1078,71 @@
 </li>
 <li>getProjectionMatrix()
 : <a class="el" href="classof_camera.html#a69c858a6ecd8f140ac114cec108b3499">ofCamera</a>
+, <a class="el" href="classof_matrix_stack.html#afdcfefe3074e78dacd4f4153624d3d80">ofMatrixStack</a>
+</li>
+<li>getProjectionMatrixNoOrientation()
+: <a class="el" href="classof_matrix_stack.html#ab0de8d9eab65e1dcfbc66453ec005020">ofMatrixStack</a>
 </li>
 <li>getPtr()
 : <a class="el" href="classof_matrix4x4.html#ab48e307be029df1290aff334ff032113">ofMatrix4x4</a>
 , <a class="el" href="classof_vec2f.html#a136ca01a1e0ab4c7eeed7c9940ca0f00">ofVec2f</a>
-, <a class="el" href="classof_vec3f.html#a0524a45c347d84ca4154eb7b6d5afc71">ofVec3f</a>
-, <a class="el" href="classof_vec4f.html#a80c0c2753d5c6980457ebcbc3ce9ac91">ofVec4f</a>
 , <a class="el" href="classof_vec3f.html#a224d6448415fe4cb729f18d7281329d4">ofVec3f</a>
-, <a class="el" href="classof_matrix4x4.html#af8c05f9cf9470646fc0915e8b163068f">ofMatrix4x4</a>
+, <a class="el" href="classof_vec4f.html#a80c0c2753d5c6980457ebcbc3ce9ac91">ofVec4f</a>
 </li>
 <li>getPwm()
 : <a class="el" href="classof_arduino.html#ab82dbac608973e717d87db3c9d1ad9af">ofArduino</a>
 </li>
+<li>getRadius()
+: <a class="el" href="classof_sphere_primitive.html#a50e5615c42068b3aea7dc8c8ccf264a0">ofSpherePrimitive</a>
+, <a class="el" href="classof_ico_sphere_primitive.html#a0685699f64872d972392a6898d0f8d13">ofIcoSpherePrimitive</a>
+, <a class="el" href="classof_cylinder_primitive.html#a4671c9044890333fde41b5c19e742d07">ofCylinderPrimitive</a>
+, <a class="el" href="classof_cone_primitive.html#aba9e94a3b0146e43d871b75558d81f72">ofConePrimitive</a>
+</li>
 <li>getRectMode()
-: <a class="el" href="classof_g_l_renderer.html#a8e63b294df9f4a84f636b85c00469d3d">ofGLRenderer</a>
+: <a class="el" href="classof_base_renderer.html#a08d589a5bdf58fe755604a3500b5d171">ofBaseRenderer</a>
+, <a class="el" href="classof_g_l_programmable_renderer.html#a9d2e509a2841e8333af641b9fcb9bbe7">ofGLProgrammableRenderer</a>
+, <a class="el" href="classof_g_l_renderer.html#a8e63b294df9f4a84f636b85c00469d3d">ofGLRenderer</a>
 , <a class="el" href="classof_cairo_renderer.html#ad53c213918dd9a3011788ac36ed21f28">ofCairoRenderer</a>
 , <a class="el" href="classof_renderer_collection.html#a390d672492f82ffb4257babe87669c24">ofRendererCollection</a>
-, <a class="el" href="classof_base_renderer.html#a08d589a5bdf58fe755604a3500b5d171">ofBaseRenderer</a>
 </li>
 <li>getResampledByCount()
-: <a class="el" href="classof_polyline.html#a6eeaa3a902be5a10ca2267e29f668621">ofPolyline</a>
+: <a class="el" href="classof_polyline.html#a9356891853d247bfb7ecb6fce9226ecb">ofPolyline</a>
 </li>
 <li>getResampledBySpacing()
-: <a class="el" href="classof_polyline.html#a90c7d2040aff73aa29b68754f54ddfdb">ofPolyline</a>
+: <a class="el" href="classof_polyline.html#a0987281d3104d0d3a5d820972e7f3a0f">ofPolyline</a>
+</li>
+<li>getResolution()
+: <a class="el" href="classof_box_primitive.html#a2d17a74a93ef7063e6ff230336ce0a40">ofBoxPrimitive</a>
+, <a class="el" href="classof_plane_primitive.html#a47d8ec95627c40a3ea94795a22324bd3">ofPlanePrimitive</a>
+, <a class="el" href="classof_sphere_primitive.html#aac3ef7ea1c0c8a19cd4d5f340cc5d662">ofSpherePrimitive</a>
+, <a class="el" href="classof_ico_sphere_primitive.html#ac7d51d6e86cf69f89738c37017255de4">ofIcoSpherePrimitive</a>
+, <a class="el" href="classof_cylinder_primitive.html#a4d07d99feed6706bb3e2b071cdec4d0b">ofCylinderPrimitive</a>
+, <a class="el" href="classof_cone_primitive.html#ac8c4f4a30ac66005d2116176e05a5781">ofConePrimitive</a>
+</li>
+<li>getResolutionCap()
+: <a class="el" href="classof_cylinder_primitive.html#a051d2b94e13f09bfda4181d8779d5d89">ofCylinderPrimitive</a>
+, <a class="el" href="classof_cone_primitive.html#a67560a1296f553c2c31d54ea906fda0b">ofConePrimitive</a>
+</li>
+<li>getResolutionDepth()
+: <a class="el" href="classof_box_primitive.html#a5df3451739f67d7a6bca736dcc701624">ofBoxPrimitive</a>
+</li>
+<li>getResolutionHeight()
+: <a class="el" href="classof_cylinder_primitive.html#a2eb96817e4a760fd198e5e35243d88e2">ofCylinderPrimitive</a>
+, <a class="el" href="classof_cone_primitive.html#ad51dbd06e540f308eb001a721b2d8a9a">ofConePrimitive</a>
+, <a class="el" href="classof_box_primitive.html#a57f54c500ca724dd7cd7f53653ee202e">ofBoxPrimitive</a>
+</li>
+<li>getResolutionRadius()
+: <a class="el" href="classof_cone_primitive.html#aae75f7451c476bacf4f900d6fce3c715">ofConePrimitive</a>
+, <a class="el" href="classof_cylinder_primitive.html#ab2ceb1a2715abdd07e9ef0f7e61bba73">ofCylinderPrimitive</a>
+</li>
+<li>getResolutionWidth()
+: <a class="el" href="classof_box_primitive.html#a2312bcadbea7f1776f709cb724555d83">ofBoxPrimitive</a>
 </li>
 <li>getRight()
 : <a class="el" href="classof_rectangle.html#a0977f5bf0b50903c0ef423c91be89194">ofRectangle</a>
+</li>
+<li>getRightVector()
+: <a class="el" href="classof_polyline.html#a3b055ecaca7740143cf64e70a3a0c01f">ofPolyline</a>
 </li>
 <li>getRoll()
 : <a class="el" href="classof_node.html#a0336b1426c2bc493bc15a7093fb35b5a">ofNode</a>
@@ -880,15 +1152,21 @@
 , <a class="el" href="classof_quaternion.html#a785d6dda9fd0a9c7643c39ce125f3f54">ofQuaternion</a>
 </li>
 <li>getRotated()
-: <a class="el" href="classof_vec2f.html#aee2e05a46e550dcd3c1c15f2d0cc02a7">ofVec2f</a>
+: <a class="el" href="classof_vec2f.html#aecea9827d62898012ae8c684e8ec43cd">ofVec2f</a>
 , <a class="el" href="classof_vec3f.html#aba7b483d6f2a46f8af531dce5a59947f">ofVec3f</a>
+, <a class="el" href="classof_vec2f.html#aee2e05a46e550dcd3c1c15f2d0cc02a7">ofVec2f</a>
 </li>
 <li>getRotatedRad()
-: <a class="el" href="classof_vec3f.html#a27d8471678c9729a9df2400b762bdf9a">ofVec3f</a>
-, <a class="el" href="classof_vec2f.html#aab0574bd9a07def5c008aa642dae3415">ofVec2f</a>
-, <a class="el" href="classof_vec3f.html#a64df2ca50d1705ab4806a6dfdda44324">ofVec3f</a>
-, <a class="el" href="classof_vec2f.html#a9af064d5d3206e60ed0e6e5f8a26dcd0">ofVec2f</a>
+: <a class="el" href="classof_vec2f.html#aab0574bd9a07def5c008aa642dae3415">ofVec2f</a>
 , <a class="el" href="classof_vec3f.html#a5eca94a62833a7b2f90cfa65ba107f89">ofVec3f</a>
+, <a class="el" href="classof_vec2f.html#a9af064d5d3206e60ed0e6e5f8a26dcd0">ofVec2f</a>
+, <a class="el" href="classof_vec3f.html#a64df2ca50d1705ab4806a6dfdda44324">ofVec3f</a>
+</li>
+<li>getRotationAtIndex()
+: <a class="el" href="classof_polyline.html#ab8b2974144ee3f4e3a5f06c661b092ab">ofPolyline</a>
+</li>
+<li>getRotationAtIndexInterpolated()
+: <a class="el" href="classof_polyline.html#ac759341115effbf3234a73d161729f10">ofPolyline</a>
 </li>
 <li>getRowAsVec3f()
 : <a class="el" href="classof_matrix4x4.html#a82fee95169c0cc34dac1eadbf46015b8">ofMatrix4x4</a>
@@ -896,21 +1174,33 @@
 <li>getRowAsVec4f()
 : <a class="el" href="classof_matrix4x4.html#a6182c5d366afbc0d9af8dace499a1d3e">ofMatrix4x4</a>
 </li>
+<li>getSampleRate()
+: <a class="el" href="classof_sound_stream.html#a6637b6fc50ffb7df5f32829bc5b6ef50">ofSoundStream</a>
+, <a class="el" href="classof_base_sound_stream.html#a9dc79623984eaad86a6da8703b788a22">ofBaseSoundStream</a>
+, <a class="el" href="classof_p_a_sound_stream.html#a2d9a2a06b0894cfb591c850f000e7679">ofPASoundStream</a>
+, <a class="el" href="classof_rt_audio_sound_stream.html#a61af6a27eece9597bdd9102f67cdfc6b">ofRtAudioSoundStream</a>
+</li>
 <li>getSaturation()
 : <a class="el" href="classof_color__.html#a0569370be88bfa5fddbd6529b5230de3">ofColor_&lt; PixelType &gt;</a>
 </li>
 <li>getScale()
-: <a class="el" href="classof_matrix4x4.html#a8d542990c386724cbd3f388dd6bd6b15">ofMatrix4x4</a>
-, <a class="el" href="classof_node.html#a7dd2e9bbcc2c8ce02317892b40793a0f">ofNode</a>
+: <a class="el" href="classof_node.html#a7dd2e9bbcc2c8ce02317892b40793a0f">ofNode</a>
+, <a class="el" href="classof_matrix4x4.html#a8d542990c386724cbd3f388dd6bd6b15">ofMatrix4x4</a>
 </li>
 <li>getScaled()
 : <a class="el" href="classof_vec2f.html#a8f6769c1cfbb4018a18065d4249d7c19">ofVec2f</a>
-, <a class="el" href="classof_vec4f.html#a92b84576ebb89dfa74a5f1b206089992">ofVec4f</a>
 , <a class="el" href="classof_vec3f.html#af043cfa3a6a8977c7ad6525131efd7d7">ofVec3f</a>
+, <a class="el" href="classof_vec4f.html#a92b84576ebb89dfa74a5f1b206089992">ofVec4f</a>
+</li>
+<li>getScreenRect()
+: <a class="el" href="classof_app_e_g_l_window.html#ae45909d702bc8b23d03e5747712400aa">ofAppEGLWindow</a>
 </li>
 <li>getScreenSize()
 : <a class="el" href="classof_app_base_window.html#aa30f7ba6708173a82d8a774de3169f02">ofAppBaseWindow</a>
+, <a class="el" href="classof_app_e_g_l_window.html#a92d2b1b7c60ff619dbef69fc27f9d300">ofAppEGLWindow</a>
+, <a class="el" href="classof_app_no_window.html#a63cd6db20ddd23bab9c8482f01063a20">ofAppNoWindow</a>
 , <a class="el" href="classof_app_glut_window.html#a44b3f4a8d1d7ab66e360ac4861bac00b">ofAppGlutWindow</a>
+, <a class="el" href="classof_app_g_l_f_w_window.html#adee3624e92aa53362812da2f878d1b4e">ofAppGLFWWindow</a>
 </li>
 <li>getServo()
 : <a class="el" href="classof_arduino.html#acce1efc957c62247f8a58c65031a0321">ofArduino</a>
@@ -921,11 +1211,20 @@
 <li>getShininess()
 : <a class="el" href="classof_material.html#a7e5b3feec51113f102c1cdf61e69c4c9">ofMaterial</a>
 </li>
+<li>getShortColor()
+: <a class="el" href="classof_parameter_group.html#a58d8b6e7e7da3c9dc760aee47d01e921">ofParameterGroup</a>
+</li>
 <li>getShowHidden()
 : <a class="el" href="classof_directory.html#a0012ca47639c4129d951e5145a5ad5ba">ofDirectory</a>
 </li>
 <li>getSideDir()
 : <a class="el" href="classof_node.html#aaa10e7761bcbfc1c504c6312c52f833a">ofNode</a>
+</li>
+<li>getSideIndices()
+: <a class="el" href="classof_box_primitive.html#aa30d6cbc1788ba437fecc63f2b8ea5ae">ofBoxPrimitive</a>
+</li>
+<li>getSideMesh()
+: <a class="el" href="classof_box_primitive.html#aba00277bd90c709ed280b9a959aa134a">ofBoxPrimitive</a>
 </li>
 <li>getSink()
 : <a class="el" href="classof_gst_utils.html#a1b2b368aaa363fd114671725828abebe">ofGstUtils</a>
@@ -933,9 +1232,10 @@
 <li>getSize()
 : <a class="el" href="classof_true_type_font.html#adbb80647aa21a907250af47d5a3fcc6f">ofTrueTypeFont</a>
 , <a class="el" href="classof_file.html#ac43ee53e818d89472b842b5a01d05bbc">ofFile</a>
+, <a class="el" href="classof_box_primitive.html#ab89e2e5a648e5935915a74ac33f47057">ofBoxPrimitive</a>
 </li>
 <li>getSmoothed()
-: <a class="el" href="classof_polyline.html#a9dd4d7bd3893646a2113d34031065449">ofPolyline</a>
+: <a class="el" href="classof_polyline.html#a210cb3ce4ff24dbc32204e98f4ab6c6d">ofPolyline</a>
 </li>
 <li>getSoundStream()
 : <a class="el" href="classof_sound_stream.html#a646214476abc2b65545e31fb5a7facd7">ofSoundStream</a>
@@ -944,18 +1244,18 @@
 : <a class="el" href="classof_true_type_font.html#a1aa32271150b500832930386c6f3d698">ofTrueTypeFont</a>
 </li>
 <li>getSpecularColor()
-: <a class="el" href="classof_material.html#a60c6885bb1daf29da3c07973d5d065d2">ofMaterial</a>
-, <a class="el" href="classof_light.html#abca524247cc0043ce6a31bdc4008f294">ofLight</a>
+: <a class="el" href="classof_light.html#abca524247cc0043ce6a31bdc4008f294">ofLight</a>
+, <a class="el" href="classof_material.html#a60c6885bb1daf29da3c07973d5d065d2">ofMaterial</a>
 </li>
 <li>getSpeed()
-: <a class="el" href="classof_q_t_kit_player.html#aca412163e2cc9947d56c2d8725aa7373">ofQTKitPlayer</a>
+: <a class="el" href="classof_fmod_sound_player.html#a5aa8f07d031387925ad3fe824b7cc159">ofFmodSoundPlayer</a>
+, <a class="el" href="classof_base_video_player.html#a377aa69703bc5459b64f2b673f1a552a">ofBaseVideoPlayer</a>
 , <a class="el" href="classof_gst_video_player.html#addca94081de9976988edc0a363b0c593">ofGstVideoPlayer</a>
 , <a class="el" href="classof_sound_player.html#a7ce70d482070ef585016d4a47b016a04">ofSoundPlayer</a>
-, <a class="el" href="classof_base_sound_player.html#ac81d07b18bde46e618ca026e088b1e19">ofBaseSoundPlayer</a>
-, <a class="el" href="classof_fmod_sound_player.html#a5aa8f07d031387925ad3fe824b7cc159">ofFmodSoundPlayer</a>
-, <a class="el" href="classof_gst_utils.html#a60751245ec54e52314ba9abfc4b2adc4">ofGstUtils</a>
-, <a class="el" href="classof_base_video_player.html#a377aa69703bc5459b64f2b673f1a552a">ofBaseVideoPlayer</a>
+, <a class="el" href="classof_q_t_kit_player.html#aca412163e2cc9947d56c2d8725aa7373">ofQTKitPlayer</a>
 , <a class="el" href="classof_video_player.html#a53033996f7e5ecaeafde2d53d2040834">ofVideoPlayer</a>
+, <a class="el" href="classof_gst_utils.html#a60751245ec54e52314ba9abfc4b2adc4">ofGstUtils</a>
+, <a class="el" href="classof_base_sound_player.html#ac81d07b18bde46e618ca026e088b1e19">ofBaseSoundPlayer</a>
 </li>
 <li>getSpotConcentration()
 : <a class="el" href="classof_light.html#ad14f93d7b81e93d77fef008bf066f167">ofLight</a>
@@ -970,10 +1270,12 @@
 : <a class="el" href="classof_fbo.html#a66661609bbd4ee177b70dc56767ac46f">ofFbo</a>
 </li>
 <li>getString()
-: <a class="el" href="classof_arduino.html#a9d5c874ecf1c077c87ba2de4c446f6c2">ofArduino</a>
+: <a class="el" href="classof_parameter_group.html#aa010d99fd37df1d0e90cf6fc302cb0db">ofParameterGroup</a>
+, <a class="el" href="classof_arduino.html#a9d5c874ecf1c077c87ba2de4c446f6c2">ofArduino</a>
+, <a class="el" href="classof_parameter_group.html#a9ba1b6aade490f6ecc28ad783fd8f207">ofParameterGroup</a>
 </li>
 <li>getStringAsPoints()
-: <a class="el" href="classof_true_type_font.html#af369319c0cd37cd3e9b593ebc31d102c">ofTrueTypeFont</a>
+: <a class="el" href="classof_true_type_font.html#a6d020d826d0427240dcaf029d83dfd50">ofTrueTypeFont</a>
 </li>
 <li>getStringBoundingBox()
 : <a class="el" href="classof_true_type_font.html#abdd3e920bdd44cef5e7aa05db0907cc4">ofTrueTypeFont</a>
@@ -981,14 +1283,14 @@
 <li>getStringHistory()
 : <a class="el" href="classof_arduino.html#a85c38dd1fae8702005c4cd422c5318e9">ofArduino</a>
 </li>
+<li>getStringMesh()
+: <a class="el" href="classof_true_type_font.html#a54032e60371b4a8b854b9a91c3e46cd7">ofTrueTypeFont</a>
+</li>
 <li>getStrokeColor()
 : <a class="el" href="classof_path.html#a3aae4f748cdc408e1f61458b3572e56f">ofPath</a>
 </li>
 <li>getStrokeWidth()
 : <a class="el" href="classof_path.html#adf29ae43e44502ac1554457f232f8538">ofPath</a>
-</li>
-<li>getSubPaths()
-: <a class="el" href="classof_path.html#a5301a3202cf7079e9e372bc12b5212a1">ofPath</a>
 </li>
 <li>getSynchronousSeeking()
 : <a class="el" href="classof_q_t_kit_player.html#aa44c6dc8ba3bdcaa1bc9a5f349b2665c">ofQTKitPlayer</a>
@@ -999,6 +1301,12 @@
 <li>getSysExHistory()
 : <a class="el" href="classof_arduino.html#afe3d7fcc3521b512c17602ac57545579">ofArduino</a>
 </li>
+<li>getTangentAtIndex()
+: <a class="el" href="classof_polyline.html#aef401c1ace69cd969a8eb339b2e4225c">ofPolyline</a>
+</li>
+<li>getTangentAtIndexInterpolated()
+: <a class="el" href="classof_polyline.html#a105f490faa3aeb504f8e439f13646859">ofPolyline</a>
+</li>
 <li>getTarget()
 : <a class="el" href="classof_easy_cam.html#afbf5951608a33ebd3c5f32b9fd0f2b1d">ofEasyCam</a>
 </li>
@@ -1006,16 +1314,21 @@
 : <a class="el" href="classof_path.html#a16310bf2bdf92f89eca68440f36b5f05">ofPath</a>
 </li>
 <li>getTexCoord()
-: <a class="el" href="classof_mesh.html#a749be937f57bd2663feacd5534aa6f92">ofMesh</a>
+: <a class="el" href="classof_mesh_face.html#a4aa95d8211732a7a7431d49711f27415">ofMeshFace</a>
+, <a class="el" href="classof_mesh.html#a749be937f57bd2663feacd5534aa6f92">ofMesh</a>
 </li>
 <li>getTexCoordId()
-: <a class="el" href="classof_vbo.html#ae444d0a466df0454361facf0951424d6">ofVbo</a>
+: <a class="el" href="classof_vbo.html#a645b6d4da4fb0a329c08fdf0f4308336">ofVbo</a>
 </li>
 <li>getTexCoords()
-: <a class="el" href="classof_mesh.html#a943c41c666988c7a36b9dc633f019484">ofMesh</a>
+: <a class="el" href="classof_mesh.html#a55684fd802ef1d3702d8aaf494969f77">ofMesh</a>
+, <a class="el" href="classof3d_primitive.html#a646d09ddf195b48811ffada059f23ff7">of3dPrimitive</a>
 </li>
 <li>getTexCoordsPointer()
 : <a class="el" href="classof_mesh.html#a82c6a4e52374e38b33befb2d3c6fe684">ofMesh</a>
+</li>
+<li>getTexCoordsPtr()
+: <a class="el" href="classof3d_primitive.html#a65f754444368b9a7e3c96d7032106ff9">of3dPrimitive</a>
 </li>
 <li>getText()
 : <a class="el" href="classof_buffer.html#a8f29fce1c8241d49032f8d69be0bf654">ofBuffer</a>
@@ -1025,15 +1338,17 @@
 , <a class="el" href="classof_q_t_kit_player.html#a30ceb2d94f957d7560872f45aa24293d">ofQTKitPlayer</a>
 </li>
 <li>getTextureData()
-: <a class="el" href="classof_texture.html#ab8852339546c4bbf87b5a5a463cc8ec8">ofTexture</a>
+: <a class="el" href="classof_texture.html#a2032ce2c2a1bb7c51957b040d7636088">ofTexture</a>
+</li>
+<li>getTextureMatrix()
+: <a class="el" href="classof_matrix_stack.html#acda4cc480e3dceabf1b55bf0ebce3a1c">ofMatrixStack</a>
 </li>
 <li>getTextureReference()
-: <a class="el" href="classof_fbo.html#a04f7e27fd798152232ae2e1752771e10">ofFbo</a>
-, <a class="el" href="classof_video_grabber.html#a50fccf0206304b7960f2eaf7fe8402a8">ofVideoGrabber</a>
+: <a class="el" href="classof_image__.html#a0a8e31f169d9d28dfeb98cce55492ce9">ofImage_&lt; PixelType &gt;</a>
 , <a class="el" href="classof_video_player.html#ada9a59b45aca15e990d99dc6cf3fcca9">ofVideoPlayer</a>
-, <a class="el" href="classof_fbo.html#aec84a7876f14b96fd7ab12f30135fb36">ofFbo</a>
-, <a class="el" href="classof_image__.html#a0a8e31f169d9d28dfeb98cce55492ce9">ofImage_&lt; PixelType &gt;</a>
 , <a class="el" href="classof_base_has_texture.html#ae0f27d5ca6d5a92ee3d9b3d6088745f6">ofBaseHasTexture</a>
+, <a class="el" href="classof_video_grabber.html#a50fccf0206304b7960f2eaf7fe8402a8">ofVideoGrabber</a>
+, <a class="el" href="classof_fbo.html#aec84a7876f14b96fd7ab12f30135fb36">ofFbo</a>
 </li>
 <li>getThreadId()
 : <a class="el" href="classof_thread.html#af3ec42e047b36cf5b7fed9be2a497cde">ofThread</a>
@@ -1042,13 +1357,19 @@
 : <a class="el" href="classof_thread.html#aa4c73ba359f9e16a339bedafec8666d6">ofThread</a>
 </li>
 <li>getTickCount()
-: <a class="el" href="classof_sound_stream.html#a7987c9afe679fa80a41a622338e181d5">ofSoundStream</a>
-, <a class="el" href="classof_base_sound_stream.html#a8f0693f0fb84d3a83763b32e3ee8496c">ofBaseSoundStream</a>
-, <a class="el" href="classof_p_a_sound_stream.html#ae883c3960dfe3be43dc7273d746face6">ofPASoundStream</a>
+: <a class="el" href="classof_base_sound_stream.html#a8f0693f0fb84d3a83763b32e3ee8496c">ofBaseSoundStream</a>
+, <a class="el" href="classof_sound_stream.html#a7987c9afe679fa80a41a622338e181d5">ofSoundStream</a>
 , <a class="el" href="classof_rt_audio_sound_stream.html#a6b1399641eb902fd6d665eb4105802ff">ofRtAudioSoundStream</a>
+, <a class="el" href="classof_p_a_sound_stream.html#ae883c3960dfe3be43dc7273d746face6">ofPASoundStream</a>
 </li>
 <li>getTop()
 : <a class="el" href="classof_rectangle.html#a6e0e31165ab8e6596c037c86dee36aaa">ofRectangle</a>
+</li>
+<li>getTopCapIndices()
+: <a class="el" href="classof_cylinder_primitive.html#ac7ae835264f7b2acf495a09cf67f319a">ofCylinderPrimitive</a>
+</li>
+<li>getTopCapMesh()
+: <a class="el" href="classof_cylinder_primitive.html#a4dbb4afd0cbb39d0d233357870bcca18">ofCylinderPrimitive</a>
 </li>
 <li>getTopLeft()
 : <a class="el" href="classof_rectangle.html#ab851043b1000a6c32031aecd4b5112c9">ofRectangle</a>
@@ -1057,10 +1378,10 @@
 : <a class="el" href="classof_rectangle.html#a82d4d25b51db3b76c80111c5a2ba70b4">ofRectangle</a>
 </li>
 <li>getTotalNumFrames()
-: <a class="el" href="classof_video_player.html#a8adb473c579b336a1913dc4e7667ad10">ofVideoPlayer</a>
-, <a class="el" href="classof_q_t_kit_player.html#afd5bd7f0cc5ba8764d6c852ec1acfec4">ofQTKitPlayer</a>
-, <a class="el" href="classof_gst_video_player.html#aba35b5c598886831d836dca32c7b46ff">ofGstVideoPlayer</a>
+: <a class="el" href="classof_gst_video_player.html#aba35b5c598886831d836dca32c7b46ff">ofGstVideoPlayer</a>
 , <a class="el" href="classof_base_video_player.html#ac2a301490ba1a12e108fe1fd69a3825c">ofBaseVideoPlayer</a>
+, <a class="el" href="classof_video_player.html#a8adb473c579b336a1913dc4e7667ad10">ofVideoPlayer</a>
+, <a class="el" href="classof_q_t_kit_player.html#afd5bd7f0cc5ba8764d6c852ec1acfec4">ofQTKitPlayer</a>
 </li>
 <li>getTranslation()
 : <a class="el" href="classof_matrix4x4.html#a0249ee3888d9be0a9a25c1590b04fc80">ofMatrix4x4</a>
@@ -1072,14 +1393,19 @@
 : <a class="el" href="classof_matrix4x4.html#a887dc656af941ee26c0371820127b066">ofMatrix4x4</a>
 </li>
 <li>getType()
-: <a class="el" href="classof_base_renderer.html#ab04ab2e86135ab95b598f2d9c4929e7c">ofBaseRenderer</a>
-, <a class="el" href="classof_g_l_renderer.html#af72653efa2cac57a844a14b40bdb9953">ofGLRenderer</a>
-, <a class="el" href="classof_cairo_renderer.html#a800e09830220c5ba4819fe4ad0ce0cf0">ofCairoRenderer</a>
-, <a class="el" href="classof_renderer_collection.html#a967ed7b5f8985510418b73a51d184879">ofRendererCollection</a>
+: <a class="el" href="classof_parameter_group.html#a4f009b43cf5bacf9c3036ede616b5ce5">ofParameterGroup</a>
+, <a class="el" href="classof_g_l_programmable_renderer.html#aba82dd4c4b2b9c4b801bad017f9efa08">ofGLProgrammableRenderer</a>
+, <a class="el" href="classof_base_renderer.html#a2f2aaeb89ebad3ff2cc4ce9bca5e1c20">ofBaseRenderer</a>
+, <a class="el" href="classof_renderer_collection.html#a309c30d102a933ac44389225aabc183c">ofRendererCollection</a>
+, <a class="el" href="classof_cairo_renderer.html#a069ceb0e7e8566f9aeca00f94bf6c66b">ofCairoRenderer</a>
 , <a class="el" href="classof_light.html#a8e9440f7b8f523f1cd8a55a27207aa2a">ofLight</a>
+, <a class="el" href="classof_g_l_renderer.html#a309a7532a184f6fa20a27690f8fc5135">ofGLRenderer</a>
 </li>
 <li>getUnion()
 : <a class="el" href="classof_rectangle.html#a5bf441febad1f6f83941a789f5637c82">ofRectangle</a>
+</li>
+<li>getUniqueFaces()
+: <a class="el" href="classof_mesh.html#ade10f4e157ed99e74a1f3f0bc0823a43">ofMesh</a>
 </li>
 <li>getUpDir()
 : <a class="el" href="classof_node.html#ae24a97f7de20c48a5f75d82fb12577cf">ofNode</a>
@@ -1088,47 +1414,66 @@
 : <a class="el" href="classof_file_path.html#a5db140ce29c0a6d906f80625838f59bd">ofFilePath</a>
 </li>
 <li>getUseShapeColor()
-: <a class="el" href="classof_path.html#a3ceb034e8a7264204e33a0022aa48e32">ofPath</a>
+: <a class="el" href="classof_path.html#a0c004a84e56d29ff87dd61e5cfefde86">ofPath</a>
 </li>
 <li>getUsingColors()
-: <a class="el" href="classof_vbo.html#a6224c7d43017c5efcb0c69a1930e3b2f">ofVbo</a>
+: <a class="el" href="classof_vbo.html#a85d35af9177674d254d5542c29258963">ofVbo</a>
 </li>
 <li>getUsingIndices()
-: <a class="el" href="classof_vbo.html#a666907e4dcd20ae80e762b67eac595bb">ofVbo</a>
+: <a class="el" href="classof_vbo.html#ab3eaf590787b331fd818c10fbfa0d617">ofVbo</a>
 </li>
 <li>getUsingNormals()
-: <a class="el" href="classof_vbo.html#af6e0840d3ae2526d8e5aaaaab89881e0">ofVbo</a>
+: <a class="el" href="classof_vbo.html#a908922516fd2ad297624ddf7d8b80e12">ofVbo</a>
 </li>
 <li>getUsingTexCoords()
-: <a class="el" href="classof_vbo.html#a2d039312de6896c915fde05b9e952c89">ofVbo</a>
+: <a class="el" href="classof_vbo.html#a21aa3c43b6f878c43697c3289b0b6c03">ofVbo</a>
 </li>
 <li>getUsingVerts()
-: <a class="el" href="classof_vbo.html#ab2125d38064f5a414c9c9e418e77f51d">ofVbo</a>
+: <a class="el" href="classof_vbo.html#af17e20a106f5010d4dc3bbfd920744ac">ofVbo</a>
+</li>
+<li>getValue()
+: <a class="el" href="classof_xml.html#a5e1d423f6bd22eecc159023791fb838d">ofXml</a>
 </li>
 <li>getValueFromTwo7bitBytes()
 : <a class="el" href="classof_arduino.html#a9274015efc67484e92cdf28cdb6753fc">ofArduino</a>
+</li>
+<li>getVbo()
+: <a class="el" href="classof_vbo_mesh.html#ab4a96e9b2b52c36e851b3b3352dd28ad">ofVboMesh</a>
+</li>
+<li>getVec2f()
+: <a class="el" href="classof_parameter_group.html#a26023a343046b0a0166e6bbefd72afbb">ofParameterGroup</a>
+</li>
+<li>getVec3f()
+: <a class="el" href="classof_parameter_group.html#ac7318e4dae86f86125f5bfbe58d2f155">ofParameterGroup</a>
+</li>
+<li>getVec4f()
+: <a class="el" href="classof_parameter_group.html#a25c278576b415a542920da663fdf531f">ofParameterGroup</a>
 </li>
 <li>getVertAnchor()
 : <a class="el" href="classof_rectangle.html#ad26e3547b804338dd7ad76c1364b21ef">ofRectangle</a>
 </li>
 <li>getVertex()
-: <a class="el" href="classof_mesh.html#a57998157b1b7e041930ad775c5d5ffc8">ofMesh</a>
+: <a class="el" href="classof_mesh_face.html#a8ad92b879616c42e1503b1b88cd23275">ofMeshFace</a>
+, <a class="el" href="classof_mesh.html#a57998157b1b7e041930ad775c5d5ffc8">ofMesh</a>
 </li>
 <li>getVertices()
-: <a class="el" href="classof_mesh.html#ada0d7a5f3c7813f6414c32b46987e7e1">ofMesh</a>
+: <a class="el" href="classof_polyline.html#a8e6a752ef2428aa128cae4874aa4d83b">ofPolyline</a>
+, <a class="el" href="classof_mesh.html#a37350ffc014d2fff17390b084462079a">ofMesh</a>
 , <a class="el" href="classof_polyline.html#a193202a0774fe5509f3b90827201fe8a">ofPolyline</a>
+, <a class="el" href="classof_mesh.html#ada0d7a5f3c7813f6414c32b46987e7e1">ofMesh</a>
 </li>
 <li>getVerticesPointer()
-: <a class="el" href="classof_mesh.html#a93fa8715a095c965da8665d63f49b9e3">ofMesh</a>
+: <a class="el" href="classof_mesh.html#add367fe228c4ed4f8293caad2caac06d">ofMesh</a>
 </li>
 <li>getVertId()
-: <a class="el" href="classof_vbo.html#aa59f76aa83cc14b431deacfba6eaef2c">ofVbo</a>
+: <a class="el" href="classof_vbo.html#a2af5a46f912b761510123f0cc2006ac6">ofVbo</a>
 </li>
 <li>getVideoDeviceID()
 : <a class="el" href="classof_q_t_kit_grabber.html#a74623d24cd5ecbfc2b507f206abb2da0">ofQTKitGrabber</a>
 </li>
 <li>getViewportHeight()
 : <a class="el" href="classof_base_renderer.html#a026faf25094809f38e9d0eab2f7e09b6">ofBaseRenderer</a>
+, <a class="el" href="classof_g_l_programmable_renderer.html#a145914ecba62d4022e4c14f3c7baa440">ofGLProgrammableRenderer</a>
 , <a class="el" href="classof_cairo_renderer.html#ac1f2e3922892ab6c6dd4482f1a259ff4">ofCairoRenderer</a>
 , <a class="el" href="classof_renderer_collection.html#af0a664370365173bf092709e64ffeecc">ofRendererCollection</a>
 , <a class="el" href="classof_g_l_renderer.html#af34194f145634e2c2cfd345a74601141">ofGLRenderer</a>
@@ -1138,6 +1483,7 @@
 , <a class="el" href="classof_cairo_renderer.html#a888924ffc3a037f67eb67dd3d4641329">ofCairoRenderer</a>
 , <a class="el" href="classof_g_l_renderer.html#a9337400ddb5654e03f8ad1a699a48a31">ofGLRenderer</a>
 , <a class="el" href="classof_renderer_collection.html#afdcacbf9bdad63c006c1e57717599246">ofRendererCollection</a>
+, <a class="el" href="classof_g_l_programmable_renderer.html#ae1821984c69eb3338dfeb9d0155e7bfe">ofGLProgrammableRenderer</a>
 </li>
 <li>getVolume()
 : <a class="el" href="classof_sound_player.html#a75236eacf64de363550781b979d728c7">ofSoundPlayer</a>
@@ -1145,44 +1491,72 @@
 , <a class="el" href="classof_fmod_sound_player.html#a01959e3c400207fb478809cef111db3e">ofFmodSoundPlayer</a>
 </li>
 <li>getWidth()
-: <a class="el" href="classof_app_base_window.html#a4cbd97f9295367d64a3047e4545a35bc">ofAppBaseWindow</a>
-, <a class="el" href="classof_gst_video_utils.html#a2dbacae8afcfbe29dc7972c3ac8d8320">ofGstVideoUtils</a>
-, <a class="el" href="classof_q_t_kit_grabber.html#ae369abd2d137b64224a2f96a2aeae184">ofQTKitGrabber</a>
-, <a class="el" href="classof_video_grabber.html#abfe4a8329f1eef52cc42903040c63baf">ofVideoGrabber</a>
-, <a class="el" href="classof_pixels__.html#a4bd70bd65600e800cbe7e4368c7343ed">ofPixels_&lt; PixelType &gt;</a>
-, <a class="el" href="classof_quick_time_grabber.html#a890e789907e0d63d694e77db55722e64">ofQuickTimeGrabber</a>
+: <a class="el" href="classof_quick_time_grabber.html#a890e789907e0d63d694e77db55722e64">ofQuickTimeGrabber</a>
 , <a class="el" href="classof_gst_video_grabber.html#a7fd170dd9f1f740c0c344f9db348f1f8">ofGstVideoGrabber</a>
-, <a class="el" href="classof_gst_video_player.html#a6fa5ad3b8cd0d9f1f64020e9494ad545">ofGstVideoPlayer</a>
-, <a class="el" href="classof_base_video_grabber.html#a92e4e75c73b92c7eb3da31cdfbf9927e">ofBaseVideoGrabber</a>
-, <a class="el" href="classof_fbo.html#acc0fd73ba942a85500931ee2f62d398e">ofFbo</a>
+, <a class="el" href="classof_pixels__.html#a4bd70bd65600e800cbe7e4368c7343ed">ofPixels_&lt; PixelType &gt;</a>
 , <a class="el" href="classof_video_player.html#af98dc59bae16394353b0d43090d14d36">ofVideoPlayer</a>
-, <a class="el" href="classof_q_t_kit_player.html#aa2b6a28d710dcfbeec0e5ca5f0b595fc">ofQTKitPlayer</a>
-, <a class="el" href="classof_texture.html#a45d8511f11af12cfebd04ebcaadba12f">ofTexture</a>
-, <a class="el" href="classof_base_video_player.html#aa641fa782033d2f46f09970d2f94a57f">ofBaseVideoPlayer</a>
-, <a class="el" href="classof_rectangle.html#a288e1471c45a01be526bced79f1f1b58">ofRectangle</a>
 , <a class="el" href="classof_direct_show_grabber.html#af3506788cee6a2dae8e4c7c3425a8a05">ofDirectShowGrabber</a>
-, <a class="el" href="classof_base_draws.html#ab85c73ed90a60ab75453f1e9ca831a84">ofBaseDraws</a>
+, <a class="el" href="classof_box_primitive.html#a66ae283836bdc797a66d5f117594172b">ofBoxPrimitive</a>
+, <a class="el" href="classof_base_video_grabber.html#a92e4e75c73b92c7eb3da31cdfbf9927e">ofBaseVideoGrabber</a>
+, <a class="el" href="classof_base_video_player.html#aa641fa782033d2f46f09970d2f94a57f">ofBaseVideoPlayer</a>
+, <a class="el" href="classof_video_grabber.html#abfe4a8329f1eef52cc42903040c63baf">ofVideoGrabber</a>
+, <a class="el" href="classof_gst_video_utils.html#a2dbacae8afcfbe29dc7972c3ac8d8320">ofGstVideoUtils</a>
+, <a class="el" href="classof_texture.html#a45d8511f11af12cfebd04ebcaadba12f">ofTexture</a>
+, <a class="el" href="classof_gst_video_player.html#a6fa5ad3b8cd0d9f1f64020e9494ad545">ofGstVideoPlayer</a>
+, <a class="el" href="classof_app_base_window.html#a4cbd97f9295367d64a3047e4545a35bc">ofAppBaseWindow</a>
+, <a class="el" href="classof_app_g_l_f_w_window.html#a925241256dc1b8218982ac901eff63c1">ofAppGLFWWindow</a>
+, <a class="el" href="classof_rectangle.html#a288e1471c45a01be526bced79f1f1b58">ofRectangle</a>
+, <a class="el" href="classof_fbo.html#acc0fd73ba942a85500931ee2f62d398e">ofFbo</a>
 , <a class="el" href="classof_app_glut_window.html#a8b3e0b32065891d25b0d54ad55d288b8">ofAppGlutWindow</a>
 , <a class="el" href="classof_image__.html#a298b4bbeb121ad7285e82f6df9e64068">ofImage_&lt; PixelType &gt;</a>
+, <a class="el" href="classof_base_draws.html#ab85c73ed90a60ab75453f1e9ca831a84">ofBaseDraws</a>
+, <a class="el" href="classof_app_no_window.html#aeef41ee688b3f5eacfb0948976953301">ofAppNoWindow</a>
+, <a class="el" href="classof_q_t_kit_grabber.html#ae369abd2d137b64224a2f96a2aeae184">ofQTKitGrabber</a>
+, <a class="el" href="classof_plane_primitive.html#a20dce4ead87020fb49fdc5ae613dd97f">ofPlanePrimitive</a>
+, <a class="el" href="classof_q_t_kit_player.html#aa2b6a28d710dcfbeec0e5ca5f0b595fc">ofQTKitPlayer</a>
+, <a class="el" href="classof_app_e_g_l_window.html#a3b5313ae50414ee50b6984bfd8b3fbd4">ofAppEGLWindow</a>
 </li>
 <li>getWindingMode()
 : <a class="el" href="classof_path.html#a3e9e31ca27d8bac11a52de7f057acd9e">ofPath</a>
 </li>
+<li>getWindowHeight()
+: <a class="el" href="classof_app_e_g_l_window.html#abe4473cf265d0748a3c785bced031882">ofAppEGLWindow</a>
+</li>
 <li>getWindowMode()
-: <a class="el" href="classof_app_base_window.html#ad8f46154fee1ad30cea04552125236db">ofAppBaseWindow</a>
+: <a class="el" href="classof_app_g_l_f_w_window.html#ab3fc3701c1269f9db577659f824aa7f9">ofAppGLFWWindow</a>
+, <a class="el" href="classof_app_base_window.html#ad8f46154fee1ad30cea04552125236db">ofAppBaseWindow</a>
 , <a class="el" href="classof_app_glut_window.html#a4f22f0bb8ec81dd32e7dadbf623b8563">ofAppGlutWindow</a>
+, <a class="el" href="classof_app_e_g_l_window.html#ae5857bec7ce03a095ce7bab0520e894f">ofAppEGLWindow</a>
 </li>
 <li>getWindowPosition()
 : <a class="el" href="classof_app_base_window.html#ae974e4e85cb4ffb0ebe767550420b1a0">ofAppBaseWindow</a>
+, <a class="el" href="classof_app_e_g_l_window.html#ae4b80d63f2e85f572d0b539dccf5dabe">ofAppEGLWindow</a>
 , <a class="el" href="classof_app_glut_window.html#a2e04950e05339ead6441943fd86fdc6f">ofAppGlutWindow</a>
+, <a class="el" href="classof_app_g_l_f_w_window.html#abc5d3b97b68f0962084339fd2f1364c6">ofAppGLFWWindow</a>
+, <a class="el" href="classof_app_no_window.html#a42f209f0f39a9f4af96349bd9bef0c56">ofAppNoWindow</a>
 </li>
 <li>getWindowSize()
-: <a class="el" href="classof_app_glut_window.html#a2d76bf1ec3a2aeebced7a7b540105a7d">ofAppGlutWindow</a>
+: <a class="el" href="classof_app_e_g_l_window.html#ae13bcbc3cf0a877b78944654e09bdcd9">ofAppEGLWindow</a>
 , <a class="el" href="classof_app_base_window.html#a40c5c710165d97f0e7102ceec8b99f39">ofAppBaseWindow</a>
+, <a class="el" href="classof_app_glut_window.html#a2d76bf1ec3a2aeebced7a7b540105a7d">ofAppGlutWindow</a>
+, <a class="el" href="classof_app_g_l_f_w_window.html#abce0dc446e2d19642c28e683de5e4760">ofAppGLFWWindow</a>
+, <a class="el" href="classof_app_no_window.html#a3d6ef1a15706979f6764dee17d35aee7">ofAppNoWindow</a>
+</li>
+<li>getWindowWidth()
+: <a class="el" href="classof_app_e_g_l_window.html#aa1f2b074af710ed2c2042824e7561c30">ofAppEGLWindow</a>
+</li>
+<li>getWrappedIndex()
+: <a class="el" href="classof_polyline.html#aff40c0656eea2064a2e2a2fd1d64fc1c">ofPolyline</a>
 </li>
 <li>getX()
-: <a class="el" href="classof_node.html#a819b96492b11250d5682e7853c5b753c">ofNode</a>
-, <a class="el" href="classof_rectangle.html#a22eeb65d916fe83c793f2b3d7047b319">ofRectangle</a>
+: <a class="el" href="classof_rectangle.html#a22eeb65d916fe83c793f2b3d7047b319">ofRectangle</a>
+, <a class="el" href="classof_node.html#a819b96492b11250d5682e7853c5b753c">ofNode</a>
+</li>
+<li>getX11Display()
+: <a class="el" href="classof_app_e_g_l_window.html#a99028a6c3a21d0aab40f956c9c6e0a64">ofAppEGLWindow</a>
+</li>
+<li>getX11Window()
+: <a class="el" href="classof_app_e_g_l_window.html#a4d751c639d47103c238a622f9cf1de51">ofAppEGLWindow</a>
 </li>
 <li>getXAxis()
 : <a class="el" href="classof_node.html#a75af589eae2b502216acad4668edf43b">ofNode</a>
@@ -1204,19 +1578,16 @@
 : <a class="el" href="classof_color__.html#ac95ceea32f0320aa549f73b00df2e7e4">ofColor_&lt; PixelType &gt;</a>
 </li>
 <li>glRotate()
-: <a class="el" href="classof_matrix4x4.html#ae9ff49e22938a030c765a8395749d2f0">ofMatrix4x4</a>
+: <a class="el" href="classof_matrix4x4.html#acfbc717c88e333ceaaa3c07682e028a3">ofMatrix4x4</a>
 </li>
 <li>glRotateRad()
 : <a class="el" href="classof_matrix4x4.html#a0bbe3d306138e9a743104c3e83bf0582">ofMatrix4x4</a>
 </li>
 <li>glScale()
-: <a class="el" href="classof_matrix4x4.html#a48b10eae3dcba3acbc29156cb3c5cbe8">ofMatrix4x4</a>
+: <a class="el" href="classof_matrix4x4.html#ad41f7b1bd1ad5723d49d979d91b4fe01">ofMatrix4x4</a>
 </li>
 <li>glTranslate()
-: <a class="el" href="classof_matrix4x4.html#a18f55fddc66f1df002dfa5cd22d94a5f">ofMatrix4x4</a>
-</li>
-<li>glType
-: <a class="el" href="classof_texture_data.html#aaaf761282f83f19733b844791cce7162">ofTextureData</a>
+: <a class="el" href="classof_matrix4x4.html#afbd09d2e364ae4f567f4448476cc0030">ofMatrix4x4</a>
 </li>
 <li>glTypeInternal
 : <a class="el" href="classof_texture_data.html#a2349f7972cb95234e0b726e51d0d8a10">ofTextureData</a>
@@ -1234,8 +1605,8 @@
 : <a class="el" href="interface_q_t_kit_movie_renderer.html#a54bd32583a3894dfa9bfccb5539d65af">QTKitMovieRenderer</a>
 </li>
 <li>grabber
-: <a class="el" href="classof_q_t_kit_grabber.html#a1fe5e3ff2afc7e35be0fcd826d8f22a3">ofQTKitGrabber</a>
-, <a class="el" href="classof_video_saved_event_args.html#a5e4adf6736c0b1e31acecffe20926afd">ofVideoSavedEventArgs</a>
+: <a class="el" href="classof_video_saved_event_args.html#a5e4adf6736c0b1e31acecffe20926afd">ofVideoSavedEventArgs</a>
+, <a class="el" href="classof_q_t_kit_grabber.html#a1fe5e3ff2afc7e35be0fcd826d8f22a3">ofQTKitGrabber</a>
 , <a class="el" href="interface_q_t_kit_video_grabber.html#a9d25b815d12caa38db711f039cade4ed">QTKitVideoGrabber</a>
 </li>
 <li>grabScreen()
@@ -1254,7 +1625,7 @@
 : <a class="el" href="classof_color__.html#aa8b87db25bf267185a2699a02f960fea">ofColor_&lt; PixelType &gt;</a>
 </li>
 <li>growToInclude()
-: <a class="el" href="classof_rectangle.html#aceaf40fe9746d70bd958add8e4f484f9">ofRectangle</a>
+: <a class="el" href="classof_rectangle.html#a02462bdfec6104b2a323f4e2254226bd">ofRectangle</a>
 </li>
 <li>gSeqGrabber
 : <a class="el" href="classof_quick_time_grabber.html#a0a9949516bd9a502c921c2105fa4759c">ofQuickTimeGrabber</a>

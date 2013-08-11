@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -73,10 +74,6 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a5158e9375dc0805de85e9c1553b415eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2349f7972cb95234e0b726e51d0d8a10"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_texture_data.html#a2349f7972cb95234e0b726e51d0d8a10">glTypeInternal</a></td></tr>
 <tr class="separator:a2349f7972cb95234e0b726e51d0d8a10"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaaf761282f83f19733b844791cce7162"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_texture_data.html#aaaf761282f83f19733b844791cce7162">glType</a></td></tr>
-<tr class="separator:aaaf761282f83f19733b844791cce7162"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a245c1f6982b7fc7d64726608511bc8fa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_texture_data.html#a245c1f6982b7fc7d64726608511bc8fa">pixelType</a></td></tr>
-<tr class="separator:a245c1f6982b7fc7d64726608511bc8fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3d54f040cfac8522bb693904867994b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_texture_data.html#ad3d54f040cfac8522bb693904867994b">tex_t</a></td></tr>
 <tr class="separator:ad3d54f040cfac8522bb693904867994b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64d6c37e0569a8ad8842cef263185c14"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_texture_data.html#a64d6c37e0569a8ad8842cef263185c14">tex_u</a></td></tr>
@@ -97,6 +94,10 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a5dee9955398c2f5c9b244c019b38265e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2bf9e98ecdac75499b871bd21da02c74"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_texture_data.html#a2bf9e98ecdac75499b871bd21da02c74">bUseExternalTextureID</a></td></tr>
 <tr class="separator:a2bf9e98ecdac75499b871bd21da02c74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ddd93ecf62211d4fd512269d124a5b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_matrix4x4.html">ofMatrix4x4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_texture_data.html#a4ddd93ecf62211d4fd512269d124a5b9">textureMatrix</a></td></tr>
+<tr class="separator:a4ddd93ecf62211d4fd512269d124a5b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a283e190f795b68f17c5725e8c5493d0d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_texture_data.html#a283e190f795b68f17c5725e8c5493d0d">useTextureMatrix</a></td></tr>
+<tr class="separator:a283e190f795b68f17c5725e8c5493d0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ae3766bd02c26dbb2f93f2311577b2c15"></a>
@@ -171,18 +172,6 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aaaf761282f83f19733b844791cce7162"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int ofTextureData::glType</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="a2349f7972cb95234e0b726e51d0d8a10"></a>
 <div class="memitem">
 <div class="memproto">
@@ -201,18 +190,6 @@ Public Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">float ofTextureData::height</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a245c1f6982b7fc7d64726608511bc8fa"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int ofTextureData::pixelType</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -279,12 +256,36 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a4ddd93ecf62211d4fd512269d124a5b9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classof_matrix4x4.html">ofMatrix4x4</a> ofTextureData::textureMatrix</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a5158e9375dc0805de85e9c1553b415eb"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">int ofTextureData::textureTarget</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a283e190f795b68f17c5725e8c5493d0d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ofTextureData::useTextureMatrix</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -304,7 +305,7 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>gl/<a class="el" href="of_texture_8h_source.html">ofTexture.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/gl/<a class="el" href="of_texture_8h_source.html">ofTexture.h</a></li>
 </ul>
 </div><!-- contents -->
 

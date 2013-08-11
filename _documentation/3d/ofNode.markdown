@@ -54,13 +54,41 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void clearParent(bMaintainGlobalTransform = false)
+
+<!--
+_syntax: clearParent(bMaintainGlobalTransform = false)_
+_name: clearParent_
+_returns: void_
+_returns_description: _
+_parameters: bool bMaintainGlobalTransform=false_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -1533,13 +1561,41 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setParent(&parent, bMaintainGlobalTransform = false)
+
+<!--
+_syntax: setParent(&parent, bMaintainGlobalTransform = false)_
+_name: setParent_
+_returns: void_
+_returns_description: _
+_parameters: ofNode &parent, bool bMaintainGlobalTransform=false_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 

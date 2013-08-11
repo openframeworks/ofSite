@@ -73,6 +73,33 @@ See [ofSetLogLevel(logLevel)](./ofLog.html#functions) for the log level values.
 
 <!----------------------------------------------------------------------------->
 
+###string ofGetLogLevelName(level, pad = false)
+
+<!--
+_syntax: ofGetLogLevelName(level, pad = false)_
+_name: ofGetLogLevelName_
+_returns: string_
+_returns_description: _
+_parameters: ofLogLevel level, bool pad=false_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void ofLogToConsole()
 
 <!--
@@ -146,7 +173,7 @@ _syntax: ofSetLogLevel(logLevel)_
 _name: ofSetLogLevel_
 _returns: void_
 _returns_description: _
-_parameters: ofLogLevel logLevel_
+_parameters: ofLogLevel level_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -197,7 +224,7 @@ _syntax: ofSetLogLevel(module, logLevel)_
 _name: ofSetLogLevel_
 _returns: void_
 _returns_description: _
-_parameters: string module, ofLogLevel logLevel_
+_parameters: string module, ofLogLevel level_
 _version_started: _
 _version_deprecated: _
 _summary: _

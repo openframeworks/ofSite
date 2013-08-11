@@ -445,142 +445,6 @@ float a = bgColor[3];	//alpha
 
 <!----------------------------------------------------------------------------->
 
-###void ofBox(x, y, z, size)
-
-<!--
-_syntax: ofBox(x, y, z, size)_
-_name: ofBox_
-_returns: void_
-_returns_description: _
-_parameters: float x, float y, float z, float size_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-Draws a 3-dimensional box with equal sides (size) at the position of X and Y and Z.
-~~~~{.cpp}
-void testApp::draw(){
-	ofBox(50,50,-10,40);
-}    
-~~~~
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofBox(x, y, size)
-
-<!--
-_syntax: ofBox(x, y, size)_
-_name: ofBox_
-_returns: void_
-_returns_description: _
-_parameters: float x, float y, float size_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-Draws a 3-dimensional box with equal sides (size) at the position of X and Y, at the current depth.
-~~~~{.cpp}
-void testApp::draw(){
-	ofBox(50,50,40);
-}    
-~~~~
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofBox(&position, size)
-
-<!--
-_syntax: ofBox(&position, size)_
-_name: ofBox_
-_returns: void_
-_returns_description: _
-_parameters: const ofPoint &position, float size_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-Draws a 3-dimensional box with equal sides (size) at the position of point.
-~~~~{.cpp}
-void testApp::draw(){
-	ofPoint p;
-	p.x = 50;
-	p.y = 50;
-	ofBox(p,40);
-}    
-~~~~
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofBox(size)
-
-<!--
-_syntax: ofBox(size)_
-_name: ofBox_
-_returns: void_
-_returns_description: _
-_parameters: float size_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-Draws a 3-dimensional box with equal sides at the current coordinate point.
-~~~~{.cpp}
-void testApp::draw(){
-	ofTranslate(50,50);
-	ofBox(40);
-}    
-~~~~
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void ofCircle(x,y,radius)
 
 <!--
@@ -776,142 +640,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofCone(size)
-
-<!--
-_syntax: ofCone(size)_
-_name: ofCone_
-_returns: void_
-_returns_description: _
-_parameters: float size_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-undocumented!
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofCone(x, y, z, radius, height)
-
-<!--
-_syntax: ofCone(x, y, z, radius, height)_
-_name: ofCone_
-_returns: void_
-_returns_description: _
-_parameters: float x, float y, float z, float radius, float height_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofCone(x, y, radius, height)
-
-<!--
-_syntax: ofCone(x, y, radius, height)_
-_name: ofCone_
-_returns: void_
-_returns_description: _
-_parameters: float x, float y, float radius, float height_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofCone(&position, radius, height)
-
-<!--
-_syntax: ofCone(&position, radius, height)_
-_name: ofCone_
-_returns: void_
-_returns_description: _
-_parameters: const ofPoint &position, float radius, float height_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofCone(radius, height)
-
-<!--
-_syntax: ofCone(radius, height)_
-_name: ofCone_
-_returns: void_
-_returns_description: _
-_parameters: float radius, float height_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void ofCurve(x0,y0,x1,y1,x2,y2,x3,y3)
 
 <!--
@@ -1023,6 +751,33 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void ofCurveVertex(x, y, z)
+
+<!--
+_syntax: ofCurveVertex(x, y, z)_
+_name: ofCurveVertex_
+_returns: void_
+_returns_description: _
+_parameters: float x, float y, float z_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void ofCurveVertices(&curvePoints)
 
 <!--
@@ -1087,11 +842,65 @@ void testApp::draw(){
 
 <!----------------------------------------------------------------------------->
 
+###void ofDisableAntiAliasing()
+
+<!--
+_syntax: ofDisableAntiAliasing()_
+_name: ofDisableAntiAliasing_
+_returns: void_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void ofDisableBlendMode()
 
 <!--
 _syntax: ofDisableBlendMode()_
 _name: ofDisableBlendMode_
+_returns: void_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDisableDepthTest()
+
+<!--
+_syntax: ofDisableDepthTest()_
+_name: ofDisableDepthTest_
 _returns: void_
 _returns_description: _
 _parameters: _
@@ -1446,6 +1255,33 @@ void testApp::draw(){
 
 <!----------------------------------------------------------------------------->
 
+###void ofEnableAntiAliasing()
+
+<!--
+_syntax: ofEnableAntiAliasing()_
+_name: ofEnableAntiAliasing_
+_returns: void_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void ofEnableBlendMode(blendMode)
 
 <!--
@@ -1454,6 +1290,33 @@ _name: ofEnableBlendMode_
 _returns: void_
 _returns_description: _
 _parameters: ofBlendMode blendMode_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofEnableDepthTest()
+
+<!--
+_syntax: ofEnableDepthTest()_
+_name: ofEnableDepthTest_
+_returns: void_
+_returns_description: _
+_parameters: _
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -1618,6 +1481,33 @@ void testApp::draw(){
 
 <!----------------------------------------------------------------------------->
 
+###ofColor ofGetBackground()
+
+<!--
+_syntax: ofGetBackground()_
+_name: ofGetBackground_
+_returns: ofColor_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofHandednessType ofGetCoordHandedness()
 
 <!--
@@ -1726,12 +1616,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofPtr ofGetGLRenderer()
+###ofRectangle ofGetNativeViewport()
 
 <!--
-_syntax: ofGetGLRenderer()_
-_name: ofGetGLRenderer_
-_returns: ofPtr_
+_syntax: ofGetNativeViewport()_
+_name: ofGetNativeViewport_
+_returns: ofRectangle_
 _returns_description: _
 _parameters: _
 _version_started: _
@@ -1851,6 +1741,33 @@ _description: _
 _syntax: ofGetViewportWidth()_
 _name: ofGetViewportWidth_
 _returns: int_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool ofIsVFlipped()
+
+<!--
+_syntax: ofIsVFlipped()_
+_name: ofIsVFlipped_
+_returns: bool_
 _returns_description: _
 _parameters: _
 _version_started: _
@@ -2640,6 +2557,87 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void ofRectRounded(&p, w, h, topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius)
+
+<!--
+_syntax: ofRectRounded(&p, w, h, topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius)_
+_name: ofRectRounded_
+_returns: void_
+_returns_description: _
+_parameters: const ofPoint &p, float w, float h, float topLeftRadius, float topRightRadius, float bottomRightRadius, float bottomLeftRadius_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofRectRounded(&b, topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius)
+
+<!--
+_syntax: ofRectRounded(&b, topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius)_
+_name: ofRectRounded_
+_returns: void_
+_returns_description: _
+_parameters: const ofRectangle &b, float topLeftRadius, float topRightRadius, float bottomRightRadius, float bottomLeftRadius_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofRectRounded(x, y, z, w, h, topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius)
+
+<!--
+_syntax: ofRectRounded(x, y, z, w, h, topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius)_
+_name: ofRectRounded_
+_returns: void_
+_returns_description: _
+_parameters: float x, float y, float z, float w, float h, float topLeftRadius, float topRightRadius, float bottomRightRadius, float bottomLeftRadius_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void ofRotate(degrees,vecX,vecY,vecZ)
 
 <!--
@@ -3239,6 +3237,60 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void ofSetCurrentRenderer(renderer, setDefaults = false)
+
+<!--
+_syntax: ofSetCurrentRenderer(renderer, setDefaults = false)_
+_name: ofSetCurrentRenderer_
+_returns: void_
+_returns_description: _
+_parameters: ofPtr< ofBaseRenderer > renderer, bool setDefaults=false_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofSetCurrentRenderer(&rendererType, setDefaults = false)
+
+<!--
+_syntax: ofSetCurrentRenderer(&rendererType, setDefaults = false)_
+_name: ofSetCurrentRenderer_
+_returns: void_
+_returns_description: _
+_parameters: const string &rendererType, bool setDefaults=false_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void ofSetCurveResolution(res)
 
 <!--
@@ -3247,6 +3299,33 @@ _name: ofSetCurveResolution_
 _returns: void_
 _returns_description: _
 _parameters: int res_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofSetDepthTest(depthTest)
+
+<!--
+_syntax: ofSetDepthTest(depthTest)_
+_name: ofSetDepthTest_
+_returns: void_
+_returns_description: _
+_parameters: bool depthTest_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -3349,6 +3428,33 @@ void testApp::draw(){
 	ofLine(10,100,100,10);	// draw fat line
 }    
 ~~~~
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofSetMatrixMode(matrixMode)
+
+<!--
+_syntax: ofSetMatrixMode(matrixMode)_
+_name: ofSetMatrixMode_
+_returns: void_
+_returns_description: _
+_parameters: ofMatrixMode matrixMode_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
 
 
 
@@ -3481,33 +3587,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofSetSphereResolution(res)
-
-<!--
-_syntax: ofSetSphereResolution(res)_
-_name: ofSetSphereResolution_
-_returns: void_
-_returns_description: _
-_parameters: int res_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void ofSetStyle(style)
 
 <!--
@@ -3618,6 +3697,33 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void ofSetupScreenOrtho(width = 0, height = 0, nearDist = -1, farDist = 1)
+
+<!--
+_syntax: ofSetupScreenOrtho(width = 0, height = 0, nearDist = -1, farDist = 1)_
+_name: ofSetupScreenOrtho_
+_returns: void_
+_returns_description: _
+_parameters: float width=0, float height=0, float nearDist=-1, float farDist=1_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void ofSetupScreenPerspective(width = 0, height = 0, orientation = OF_ORIENTATION_UNKNOWN, vFlip = true, fov = 60, nearDist = 0, farDist = 0)
 
 <!--
@@ -3645,14 +3751,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofSphere(x, y, z, radius)
+###void ofSetupScreenPerspective(width = 0, height = 0, fov = 60, nearDist = 0, farDist = 0)
 
 <!--
-_syntax: ofSphere(x, y, z, radius)_
-_name: ofSphere_
+_syntax: ofSetupScreenPerspective(width = 0, height = 0, fov = 60, nearDist = 0, farDist = 0)_
+_name: ofSetupScreenPerspective_
 _returns: void_
 _returns_description: _
-_parameters: float x, float y, float z, float radius_
+_parameters: float width=0, float height=0, float fov=60, float nearDist=0, float farDist=0_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -3664,115 +3770,6 @@ _advanced: False_
 
 _description: _
 
-Draws a 3-dimensional sphere at X, Y and Z with the given radius.
-~~~~{.cpp}
-void testApp::draw(){
-	ofSphere(50,50,-10,40);
-}    
-~~~~
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofSphere(x, y, radius)
-
-<!--
-_syntax: ofSphere(x, y, radius)_
-_name: ofSphere_
-_returns: void_
-_returns_description: _
-_parameters: float x, float y, float radius_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-Draws a 3-dimensional sphere at X and Y at the current depth with the given radius.
-~~~~{.cpp}
-void testApp::draw(){
-	ofSphere(50,50,40);
-}    
-~~~~
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofSphere(&position, radius)
-
-<!--
-_syntax: ofSphere(&position, radius)_
-_name: ofSphere_
-_returns: void_
-_returns_description: _
-_parameters: const ofPoint &position, float radius_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-Draws a 3-dimensional sphere at position by point with the given radius.
-~~~~{.cpp}
-void testApp::draw(){
-	ofPoint p;
-	p.x = 50;
-	p.y = 50;
-	ofSphere(p, 40);
-}    
-~~~~
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofSphere(radius)
-
-<!--
-_syntax: ofSphere(radius)_
-_name: ofSphere_
-_returns: void_
-_returns_description: _
-_parameters: float radius_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-Draws a 3-dimensional sphere with the given radius.
-~~~~{.cpp}
-void testApp::draw(){
-	ofTranslate(50,50,0);
-	ofSphere(40);
-}    
-~~~~
 
 
 
@@ -4085,7 +4082,7 @@ _syntax: ofViewport(x = 0, y = 0, width = 0, height = 0, invertY = true)_
 _name: ofViewport_
 _returns: void_
 _returns_description: _
-_parameters: float x=0, float y=0, float width=0, float height=0, bool invertY=true_
+_parameters: float x=0, float y=0, float width=0, float height=0, bool vflip=ofIsVFlipped()_
 _version_started: _
 _version_deprecated: _
 _summary: _

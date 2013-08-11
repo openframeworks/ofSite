@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -183,22 +184,22 @@ Static Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ac32822b87ddcf4aad7e17bfa2ff043bf"><td class="memItemLeft" >union {</td></tr>
-<tr class="memitem:a0d9a5d6a399d54b1ae4c32d7ac64697c"><td class="memItemLeft" >&#160;&#160;&#160;struct {</td></tr>
-<tr class="memitem:ac2bcf39f1815685241c5eb56d0495f48"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;PixelType&#160;&#160;&#160;<a class="el" href="classof_color__.html#a6f49bc7e4aec1f65d9598599ade9b692">r</a></td></tr>
-<tr class="separator:ac2bcf39f1815685241c5eb56d0495f48"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86124d90b6ef8e64dd38b0611e3a229d"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;PixelType&#160;&#160;&#160;<a class="el" href="classof_color__.html#a699d911542ce1f27122fb5c375ab3530">g</a></td></tr>
-<tr class="separator:a86124d90b6ef8e64dd38b0611e3a229d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca684421ceba5f9efaa5075d2da417ee"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;PixelType&#160;&#160;&#160;<a class="el" href="classof_color__.html#af302cc728daa97b0b5a858271c273000">b</a></td></tr>
-<tr class="separator:aca684421ceba5f9efaa5075d2da417ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aabeac994a1be47da0237297ccac94cf8"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;PixelType&#160;&#160;&#160;<a class="el" href="classof_color__.html#a840394f5ccf4d3f4012ec09d320fa7c7">a</a></td></tr>
-<tr class="separator:aabeac994a1be47da0237297ccac94cf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d9a5d6a399d54b1ae4c32d7ac64697c"><td class="memItemLeft" valign="top">&#160;&#160;&#160;}&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:a0d9a5d6a399d54b1ae4c32d7ac64697c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07bd32f4fb77400d5bf1a7463e599820"><td class="memItemLeft" >&#160;&#160;&#160;PixelType&#160;&#160;&#160;<a class="el" href="classof_color__.html#a36bbabc2239993534dee47bc7b9f524c">v</a> [4]</td></tr>
-<tr class="separator:a07bd32f4fb77400d5bf1a7463e599820"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac32822b87ddcf4aad7e17bfa2ff043bf"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:ac32822b87ddcf4aad7e17bfa2ff043bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4edd9361422c9489fe690d6d58f600b0"><td class="memItemLeft" >union {</td></tr>
+<tr class="memitem:a8f90a2391c6d890f45b835a79d8d1622"><td class="memItemLeft" >&#160;&#160;&#160;struct {</td></tr>
+<tr class="memitem:af52f4a5c489ec4e048ce135667e176d4"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;PixelType&#160;&#160;&#160;<a class="el" href="classof_color__.html#a6f49bc7e4aec1f65d9598599ade9b692">r</a></td></tr>
+<tr class="separator:af52f4a5c489ec4e048ce135667e176d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc409767d2f2d9f7da710c46e9f97797"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;PixelType&#160;&#160;&#160;<a class="el" href="classof_color__.html#a699d911542ce1f27122fb5c375ab3530">g</a></td></tr>
+<tr class="separator:adc409767d2f2d9f7da710c46e9f97797"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af54674b763786027173a90a9a6ea5e53"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;PixelType&#160;&#160;&#160;<a class="el" href="classof_color__.html#af302cc728daa97b0b5a858271c273000">b</a></td></tr>
+<tr class="separator:af54674b763786027173a90a9a6ea5e53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc106e1b1feba26908d87ac854f5889e"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;PixelType&#160;&#160;&#160;<a class="el" href="classof_color__.html#a840394f5ccf4d3f4012ec09d320fa7c7">a</a></td></tr>
+<tr class="separator:abc106e1b1feba26908d87ac854f5889e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f90a2391c6d890f45b835a79d8d1622"><td class="memItemLeft" valign="top">&#160;&#160;&#160;}&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:a8f90a2391c6d890f45b835a79d8d1622"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa62b381b424165eb5f751c6c5afd609a"><td class="memItemLeft" >&#160;&#160;&#160;PixelType&#160;&#160;&#160;<a class="el" href="classof_color__.html#a36bbabc2239993534dee47bc7b9f524c">v</a> [4]</td></tr>
+<tr class="separator:aa62b381b424165eb5f751c6c5afd609a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4edd9361422c9489fe690d6d58f600b0"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:a4edd9361422c9489fe690d6d58f600b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -478,6 +479,8 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:a1b6d8941da005f7b3b1b37d35e7336c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a563ec47ba91b70999563ee2a2f87e9b2"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classof_color__.html">ofColor_</a>&lt; PixelType &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_color__.html#a563ec47ba91b70999563ee2a2f87e9b2">steelBlue</a></td></tr>
 <tr class="separator:a563ec47ba91b70999563ee2a2f87e9b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab22e7f742bedfbee5f6b3e25e85f31dc"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classof_color__.html">ofColor_</a>&lt; PixelType &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_color__.html#ab22e7f742bedfbee5f6b3e25e85f31dc">blueSteel</a></td></tr>
+<tr class="separator:ab22e7f742bedfbee5f6b3e25e85f31dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6639fab6270be6a6600c1a2e5f7f61e"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classof_color__.html">ofColor_</a>&lt; PixelType &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_color__.html#ab6639fab6270be6a6600c1a2e5f7f61e">tan</a></td></tr>
 <tr class="separator:ab6639fab6270be6a6600c1a2e5f7f61e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55bd981975144d40ce404ba2a954d5e4"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classof_color__.html">ofColor_</a>&lt; PixelType &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_color__.html#a55bd981975144d40ce404ba2a954d5e4">teal</a></td></tr>
@@ -1758,7 +1761,7 @@ template&lt;typename PixelType&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="ac32822b87ddcf4aad7e17bfa2ff043bf"></a>
+<a class="anchor" id="a4edd9361422c9489fe690d6d58f600b0"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -2007,6 +2010,28 @@ template&lt;typename PixelType&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">const <a class="el" href="classof_color__.html">ofColor_</a>&lt; PixelType &gt; <a class="el" href="classof_color__.html">ofColor_</a>&lt; PixelType &gt;::blue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab22e7f742bedfbee5f6b3e25e85f31dc"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PixelType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classof_color__.html">ofColor_</a>&lt; PixelType &gt; <a class="el" href="classof_color__.html">ofColor_</a>&lt; PixelType &gt;::blueSteel</td>
         </tr>
       </table>
   </td>
@@ -5075,8 +5100,8 @@ template&lt;typename PixelType&gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>types/<a class="el" href="of_color_8h_source.html">ofColor.h</a></li>
-<li>types/<a class="el" href="of_color_8cpp.html">ofColor.cpp</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/types/<a class="el" href="of_color_8h_source.html">ofColor.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/types/<a class="el" href="of_color_8cpp.html">ofColor.cpp</a></li>
 </ul>
 </div><!-- contents -->
 

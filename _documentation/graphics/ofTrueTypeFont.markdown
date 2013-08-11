@@ -43,6 +43,34 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void createStringMesh(s, x, y)
+
+<!--
+_syntax: createStringMesh(s, x, y)_
+_name: createStringMesh_
+_returns: void_
+_returns_description: _
+_parameters: string s, float x, float y_
+_access: protected_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void drawChar(c, x, y)
 
 <!--
@@ -189,6 +217,34 @@ drawStringAsShapes function draws the s string as if it was a geometrical shapes
 
 <!----------------------------------------------------------------------------->
 
+###void finishLibraries()
+
+<!--
+_syntax: finishLibraries()_
+_name: finishLibraries_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: private_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: yes_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofTTFCharacter getCharacterAsPoints(character)
 
 <!--
@@ -202,13 +258,97 @@ _version_started: 006_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: True_
 -->
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofTTFCharacter getCharacterAsPoints(character, vflip = ofIsVFlipped())
+
+<!--
+_syntax: getCharacterAsPoints(character, vflip = ofIsVFlipped())_
+_name: getCharacterAsPoints_
+_returns: ofTTFCharacter_
+_returns_description: _
+_parameters: int character, bool vflip=ofIsVFlipped()_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofTextEncoding getEncoding()
+
+<!--
+_syntax: getEncoding()_
+_name: getEncoding_
+_returns: ofTextEncoding_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofTexture getFontTexture()
+
+<!--
+_syntax: getFontTexture()_
+_name: getFontTexture_
+_returns: ofTexture_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -378,13 +518,41 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofTTFCharacter getStringAsPoints(str, vflip = ofIsVFlipped())
+
+<!--
+_syntax: getStringAsPoints(str, vflip = ofIsVFlipped())_
+_name: getStringAsPoints_
+_returns: ofTTFCharacter_
+_returns_description: _
+_parameters: string str, bool vflip=ofIsVFlipped()_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -441,6 +609,34 @@ ofRect(rect.x, rect.y, rect.width, rect.height);
 
 <!----------------------------------------------------------------------------->
 
+###ofMesh getStringMesh(s, x, y)
+
+<!--
+_syntax: getStringMesh(s, x, y)_
+_name: getStringMesh_
+_returns: ofMesh_
+_returns_description: _
+_parameters: string s, float x, float y_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###bool hasFullCharacterSet()
 
 <!--
@@ -461,6 +657,34 @@ _advanced: False_
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool initLibraries()
+
+<!--
+_syntax: initLibraries()_
+_name: initLibraries_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: private_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: yes_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -707,6 +931,34 @@ _advanced: False_
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setEncoding(encoding)
+
+<!--
+_syntax: setEncoding(encoding)_
+_name: setEncoding_
+_returns: void_
+_returns_description: _
+_parameters: ofTextEncoding encoding_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -1141,6 +1393,78 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###GLint blend_dst
+
+<!--
+_name: blend_dst_
+_type: GLint_
+_access: private_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###GLboolean blend_enabled
+
+<!--
+_name: blend_enabled_
+_type: GLboolean_
+_access: private_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###GLint blend_src
+
+<!--
+_name: blend_src_
+_type: GLint_
+_access: private_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###int border
 
 <!--
@@ -1191,6 +1515,30 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###ofTTFCharacter charOutlinesNonVFlipped
+
+<!--
+_name: charOutlinesNonVFlipped_
+_type: ofTTFCharacter_
+_access: protected_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###charProps * cps
 
 <!--
@@ -1232,6 +1580,30 @@ _advanced: False_
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofTextEncoding encoding
+
+<!--
+_name: encoding_
+_type: ofTextEncoding_
+_access: private_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -1484,6 +1856,30 @@ _advanced: False_
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###GLboolean texture_2d_enabled
+
+<!--
+_name: texture_2d_enabled_
+_type: GLboolean_
+_access: private_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 

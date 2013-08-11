@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -47,7 +48,7 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_cbdb8362360e11eafe2fa3bc74cf0ffd.html">utils</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_84d5b34cee6369a03c8d1f3b970ed216.html">openFrameworks</a></li><li class="navelem"><a class="el" href="dir_526ceb304abbba6426340f0fa9170dbd.html">utils</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -60,6 +61,7 @@
 <div class="textblock"><code>#include &quot;<a class="el" href="of_constants_8h_source.html">ofConstants.h</a>&quot;</code><br/>
 <code>#include &lt;bitset&gt;</code><br/>
 <code>#include &quot;<a class="el" href="of_log_8h_source.html">ofLog.h</a>&quot;</code><br/>
+<code>#include &quot;Poco/Path.h&quot;</code><br/>
 </div>
 <p><a href="of_utils_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -101,8 +103,8 @@ Functions</h2></td></tr>
 <tr class="separator:aa655e6ae2ab15b03f3429432fb4fbbc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aedebb8ecdac415d22042d7b681ca1d43"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_utils_8h.html#aedebb8ecdac415d22042d7b681ca1d43">ofGetWeekday</a> ()</td></tr>
 <tr class="separator:aedebb8ecdac415d22042d7b681ca1d43"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaec488f8c77857f240dd79ae9f63d0e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_utils_8h.html#aaec488f8c77857f240dd79ae9f63d0e6">ofLaunchBrowser</a> (string url)</td></tr>
-<tr class="separator:aaec488f8c77857f240dd79ae9f63d0e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac76897e475bff2ac009eb45b8d6d9e4b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_utils_8h.html#ac76897e475bff2ac009eb45b8d6d9e4b">ofLaunchBrowser</a> (string url, bool uriEncodeQuery=false)</td></tr>
+<tr class="separator:ac76897e475bff2ac009eb45b8d6d9e4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5dd69e44833bd031c2c776804d535146"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_utils_8h.html#a5dd69e44833bd031c2c776804d535146">ofEnableDataPath</a> ()</td></tr>
 <tr class="separator:a5dd69e44833bd031c2c776804d535146"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc29e22b96ebfb8d5c7588181469cad9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_utils_8h.html#abc29e22b96ebfb8d5c7588181469cad9">ofDisableDataPath</a> ()</td></tr>
@@ -127,6 +129,8 @@ Functions</h2></td></tr>
 <tr class="memitem:ad039a52955251f83c2d7c7c4f8920573"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:ad039a52955251f83c2d7c7c4f8920573"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_utils_8h.html#ad039a52955251f83c2d7c7c4f8920573">ofContains</a> (const vector&lt; T &gt; &amp;values, const T &amp;target)</td></tr>
 <tr class="separator:ad039a52955251f83c2d7c7c4f8920573"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d2223607b65d45e548b331223e7277f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_utils_8h.html#a1d2223607b65d45e548b331223e7277f">ofSetWorkingDirectoryToDefault</a> ()</td></tr>
+<tr class="separator:a1d2223607b65d45e548b331223e7277f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a291ee9dd260f01969aa29e0d76d07295"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_utils_8h.html#a291ee9dd260f01969aa29e0d76d07295">ofSetDataPathRoot</a> (string root)</td></tr>
 <tr class="separator:a291ee9dd260f01969aa29e0d76d07295"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31a70a3bfddaf5bd90084e59188f9d59"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
@@ -137,16 +141,25 @@ Functions</h2></td></tr>
 <tr class="memdesc:ad8546950ade203f82e532c8222fcf5a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">like sprintf "%4f" format, in this example precision=4  <a href="#ad8546950ade203f82e532c8222fcf5a4">More...</a><br/></td></tr>
 <tr class="separator:ad8546950ade203f82e532c8222fcf5a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4486891d5c138bf6ad58003ae621941a"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
-<tr class="memitem:a4486891d5c138bf6ad58003ae621941a"><td class="memTemplItemLeft" align="right" valign="top">string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_utils_8h.html#a4486891d5c138bf6ad58003ae621941a">ofToString</a> (const T &amp;value, int width, char fill)</td></tr>
+<tr class="memitem:a4486891d5c138bf6ad58003ae621941a"><td class="memTemplItemLeft" align="right" valign="top">string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_utils_8h.html#a4486891d5c138bf6ad58003ae621941a">ofToString</a> (const T &amp;value, int <a class="el" href="of_icon_8h.html#aca34d28e3d8bcbcadb8edb4e3af24f8c">width</a>, char fill)</td></tr>
 <tr class="memdesc:a4486891d5c138bf6ad58003ae621941a"><td class="mdescLeft">&#160;</td><td class="mdescRight">like sprintf "% 4d" or "% 4f" format, in this example width=4, fill=' '  <a href="#a4486891d5c138bf6ad58003ae621941a">More...</a><br/></td></tr>
 <tr class="separator:a4486891d5c138bf6ad58003ae621941a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d2b85fafbdaf30d2231aad8e66d8a57"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
-<tr class="memitem:a9d2b85fafbdaf30d2231aad8e66d8a57"><td class="memTemplItemLeft" align="right" valign="top">string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_utils_8h.html#a9d2b85fafbdaf30d2231aad8e66d8a57">ofToString</a> (const T &amp;value, int precision, int width, char fill)</td></tr>
+<tr class="memitem:a9d2b85fafbdaf30d2231aad8e66d8a57"><td class="memTemplItemLeft" align="right" valign="top">string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_utils_8h.html#a9d2b85fafbdaf30d2231aad8e66d8a57">ofToString</a> (const T &amp;value, int precision, int <a class="el" href="of_icon_8h.html#aca34d28e3d8bcbcadb8edb4e3af24f8c">width</a>, char fill)</td></tr>
 <tr class="memdesc:a9d2b85fafbdaf30d2231aad8e66d8a57"><td class="mdescLeft">&#160;</td><td class="mdescRight">like sprintf "%04.2d" or "%04.2f" format, in this example precision=2, width=4, fill='0'  <a href="#a9d2b85fafbdaf30d2231aad8e66d8a57">More...</a><br/></td></tr>
 <tr class="separator:a9d2b85fafbdaf30d2231aad8e66d8a57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1bef13b6ce48c7e3ef0c43caac92f87"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:aa1bef13b6ce48c7e3ef0c43caac92f87"><td class="memTemplItemLeft" align="right" valign="top">string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_utils_8h.html#aa1bef13b6ce48c7e3ef0c43caac92f87">ofToString</a> (const vector&lt; T &gt; &amp;values)</td></tr>
 <tr class="separator:aa1bef13b6ce48c7e3ef0c43caac92f87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa65109e95b2ea4dd339cdfb819265e40"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:aa65109e95b2ea4dd339cdfb819265e40"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_utils_8h.html#aa65109e95b2ea4dd339cdfb819265e40">ofFromString</a> (const string &amp;value)</td></tr>
+<tr class="separator:aa65109e95b2ea4dd339cdfb819265e40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc2eaef18a55b1bf69954b786361eb66"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr class="memitem:adc2eaef18a55b1bf69954b786361eb66"><td class="memTemplItemLeft" align="right" valign="top">string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_utils_8h.html#adc2eaef18a55b1bf69954b786361eb66">ofFromString</a> (const string &amp;value)</td></tr>
+<tr class="separator:adc2eaef18a55b1bf69954b786361eb66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b95c188372e3813737d257cfae89a63"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr class="memitem:a9b95c188372e3813737d257cfae89a63"><td class="memTemplItemLeft" align="right" valign="top">const char *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_utils_8h.html#a9b95c188372e3813737d257cfae89a63">ofFromString</a> (const string &amp;value)</td></tr>
+<tr class="separator:a9b95c188372e3813737d257cfae89a63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaaebd3cb263c8e3da496a9c5e243e7fa"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:aaaebd3cb263c8e3da496a9c5e243e7fa"><td class="memTemplItemLeft" align="right" valign="top">string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_utils_8h.html#aaaebd3cb263c8e3da496a9c5e243e7fa">ofToHex</a> (const T &amp;value)</td></tr>
 <tr class="separator:aaaebd3cb263c8e3da496a9c5e243e7fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -191,6 +204,12 @@ Functions</h2></td></tr>
 <tr class="separator:ad930367d2a3bd2514f0a6d5516fd855e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace6bb3ddbbe185712808047277dab043"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_utils_8h.html#ace6bb3ddbbe185712808047277dab043">ofGetVersionInfo</a> ()</td></tr>
 <tr class="separator:ace6bb3ddbbe185712808047277dab043"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bcb56c4f4d807b22afea5b178f65bdc"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_utils_8h.html#a6bcb56c4f4d807b22afea5b178f65bdc">ofGetVersionMajor</a> ()</td></tr>
+<tr class="separator:a6bcb56c4f4d807b22afea5b178f65bdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacd9f2aaab3c32a0ef2fa0389ad80c58"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_utils_8h.html#aacd9f2aaab3c32a0ef2fa0389ad80c58">ofGetVersionMinor</a> ()</td></tr>
+<tr class="separator:aacd9f2aaab3c32a0ef2fa0389ad80c58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7fce5c6b942eb31e468bf3431c1b343"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_utils_8h.html#ad7fce5c6b942eb31e468bf3431c1b343">ofGetVersionPatch</a> ()</td></tr>
+<tr class="separator:ad7fce5c6b942eb31e468bf3431c1b343"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6fff50ce3fcfcb18dc2543d99822d645"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_utils_8h.html#a6fff50ce3fcfcb18dc2543d99822d645">ofSaveScreen</a> (string filename)</td></tr>
 <tr class="separator:a6fff50ce3fcfcb18dc2543d99822d645"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab3fb9d1d4dbd94705f8853d4288dbf0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_utils_8h.html#aab3fb9d1d4dbd94705f8853d4288dbf0">ofSaveFrame</a> (bool bUseViewport=false)</td></tr>
@@ -205,6 +224,8 @@ Functions</h2></td></tr>
 <tr class="separator:a113181215ce9fb80d06b60f9ae09e659"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb1e5425f758ed665faf87d3f29b350c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_utils_8h.html#afb1e5425f758ed665faf87d3f29b350c">ofIsStringInString</a> (string haystack, string needle)</td></tr>
 <tr class="separator:afb1e5425f758ed665faf87d3f29b350c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee802a4f063ae9066d25baa84d9502e1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_utils_8h.html#aee802a4f063ae9066d25baa84d9502e1">ofStringTimesInString</a> (string haystack, string needle)</td></tr>
+<tr class="separator:aee802a4f063ae9066d25baa84d9502e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a92c303a15a7649f987b8dce1e5eec26c"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_utils_8h.html#a92c303a15a7649f987b8dce1e5eec26c">ofToLower</a> (const string &amp;src)</td></tr>
 <tr class="separator:a92c303a15a7649f987b8dce1e5eec26c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac90c47cb2710aa90def41ddef75d5adf"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_utils_8h.html#ac90c47cb2710aa90def41ddef75d5adf">ofToUpper</a> (const string &amp;src)</td></tr>
@@ -363,6 +384,60 @@ template&lt;class T &gt; </div>
           <td></td>
           <td>)</td>
           <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa65109e95b2ea4dd339cdfb819265e40"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T ofFromString </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="adc2eaef18a55b1bf69954b786361eb66"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">string ofFromString </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9b95c188372e3813737d257cfae89a63"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* ofFromString </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -610,6 +685,51 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a6bcb56c4f4d807b22afea5b178f65bdc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int ofGetVersionMajor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aacd9f2aaab3c32a0ef2fa0389ad80c58"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int ofGetVersionMinor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad7fce5c6b942eb31e468bf3431c1b343"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int ofGetVersionPatch </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="aedebb8ecdac415d22042d7b681ca1d43"></a>
 <div class="memitem">
 <div class="memproto">
@@ -756,7 +876,7 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="aaec488f8c77857f240dd79ae9f63d0e6"></a>
+<a class="anchor" id="ac76897e475bff2ac009eb45b8d6d9e4b"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -764,8 +884,18 @@ template&lt;class T &gt; </div>
           <td class="memname">void ofLaunchBrowser </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>url</em></td><td>)</td>
+          <td class="paramname"><em>url</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>uriEncodeQuery</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -913,6 +1043,21 @@ template&lt;class T , class BoolFunction &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a1d2223607b65d45e548b331223e7277f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofSetWorkingDirectoryToDefault </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="add54b6eb9cc810f885e7b89b6388dba7"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1018,6 +1163,32 @@ template&lt;class T , class BoolFunction &gt; </div>
           <td></td>
           <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>replaceStr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aee802a4f063ae9066d25baa84d9502e1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ofStringTimesInString </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>haystack</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>needle</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

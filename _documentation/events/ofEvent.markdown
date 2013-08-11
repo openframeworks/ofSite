@@ -1,7 +1,7 @@
 #class ofEvent
 
-##Description
 
+##Description
 
 
 Class for creating custom events. Also used inside oF for it's own events (see ofCoreEvents).
@@ -59,9 +59,96 @@ vector< ofEvent<int>* > events;
 ~~~~
 
 
+
+
+
 ##Methods
 
 
+
+### ofEvent()
+
+<!--
+_syntax: ofEvent()_
+_name: ofEvent_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofEvent(&mom)
+
+<!--
+_syntax: ofEvent(&mom)_
+_name: ofEvent_
+_returns: _
+_returns_description: _
+_parameters: const ofEvent< ArgumentsType > &mom_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofEvent operator=(&mom)
+
+<!--
+_syntax: operator=(&mom)_
+_name: operator=_
+_returns: ofEvent_
+_returns_description: _
+_parameters: const ofEvent< ArgumentsType > &mom_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ##Variables
 

@@ -491,6 +491,34 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void disableVAOs()
+
+<!--
+_syntax: disableVAOs()_
+_name: disableVAOs_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: yes_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void draw(drawMode, first, total)
 
 <!--
@@ -556,6 +584,62 @@ Specifies what kind of primitives to render. Symbolic constants GL_POINTS, GL_LI
 vbo.drawElements( GL_TRIANGLES, 60);
 ~~~~
 amt specifies the number of indices to be rendered. This last part is pretty important: if you have more indices than vertices you'll want to make sure that you pass the number of indices, not the number of vertices.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void drawElementsInstanced(drawMode, amt, primCount)
+
+<!--
+_syntax: drawElementsInstanced(drawMode, amt, primCount)_
+_name: drawElementsInstanced_
+_returns: void_
+_returns_description: _
+_parameters: int drawMode, int amt, int primCount_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void drawInstanced(drawMode, first, total, primCount)
+
+<!--
+_syntax: drawInstanced(drawMode, first, total, primCount)_
+_name: drawInstanced_
+_returns: void_
+_returns_description: _
+_parameters: int drawMode, int first, int total, int primCount_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -681,6 +765,34 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void enableVAOs()
+
+<!--
+_syntax: enableVAOs()_
+_name: enableVAOs_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: yes_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###GLuint getColorId()
 
 <!--
@@ -790,6 +902,62 @@ _advanced: False_
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int getNumIndices()
+
+<!--
+_syntax: getNumIndices()_
+_name: getNumIndices_
+_returns: int_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int getNumVertices()
+
+<!--
+_syntax: getNumVertices()_
+_name: getNumVertices_
+_returns: int_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -1148,6 +1316,34 @@ ofVbo v2 = v1; // v2 now contains all of v1s properties in a separate VBO
 
 <!----------------------------------------------------------------------------->
 
+###void setAttributeData(location, *vert0x, numCoords, total, usage, stride = sizeof(float))
+
+<!--
+_syntax: setAttributeData(location, *vert0x, numCoords, total, usage, stride = sizeof(float))_
+_name: setAttributeData_
+_returns: void_
+_returns_description: _
+_parameters: int location, const float *vert0x, int numCoords, int total, int usage, int stride=sizeof(float)_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void setColorData(colors, total, usage)
 
 <!--
@@ -1421,6 +1617,34 @@ vbo.setMesh(mesh, GL_STATIC_DRAW);
 ~~~~
 
 The possible options for usage are: GL_STREAM_DRAW, GL_STREAM_READ, GL_STREAM_COPY, GL_STATIC_DRAW, GL_STATIC_READ, GL_STATIC_COPY, GL_DYNAMIC_DRAW, GL_DYNAMIC_READ, or GL_DYNAMIC_COPY
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setMesh(&mesh, usage, useColors, useTextures, useNormals)
+
+<!--
+_syntax: setMesh(&mesh, usage, useColors, useTextures, useNormals)_
+_name: setMesh_
+_returns: void_
+_returns_description: _
+_parameters: const ofMesh &mesh, int usage, bool useColors, bool useTextures, bool useNormals_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -1950,6 +2174,34 @@ _description: _
 
 
 This is for advanced users who might want to use ways of drawing other than draw() or drawElements(), it simply unbinds all the arrays for the VBO.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void updateAttributeData(location, *vert0x, total)
+
+<!--
+_syntax: updateAttributeData(location, *vert0x, total)_
+_name: updateAttributeData_
+_returns: void_
+_returns_description: _
+_parameters: int location, const float *vert0x, int total_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -2682,6 +2934,78 @@ This is the destructor for the ofVbo, it clears all the vertices, texture coordi
 
 
 
+###map< int, GLuint > attributeIds
+
+<!--
+_name: attributeIds_
+_type: map< int, GLuint >_
+_access: private_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###map< int, int > attributeNumCoords
+
+<!--
+_name: attributeNumCoords_
+_type: map< int, int >_
+_access: private_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###map< int, int > attributeStrides
+
+<!--
+_name: attributeStrides_
+_type: map< int, int >_
+_access: private_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###bool bAllocated
 
 <!--
@@ -2698,6 +3022,30 @@ _advanced: False_
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool bBound
+
+<!--
+_name: bBound_
+_type: bool_
+_access: private_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -3007,6 +3355,30 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###bool supportVAOs
+
+<!--
+_name: supportVAOs_
+_type: bool_
+_access: private_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###GLuint texCoordId
 
 <!--
@@ -3082,6 +3454,30 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###int totalIndices
+
+<!--
+_name: totalIndices_
+_type: int_
+_access: private_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###int totalVerts
 
 <!--
@@ -3098,6 +3494,78 @@ _advanced: False_
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool vaoChanged
+
+<!--
+_name: vaoChanged_
+_type: bool_
+_access: private_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool vaoChecked
+
+<!--
+_name: vaoChecked_
+_type: bool_
+_access: private_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###GLuint vaoID
+
+<!--
+_name: vaoID_
+_type: GLuint_
+_access: private_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 

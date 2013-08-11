@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -77,7 +78,7 @@
   <tr class="even"><td class="entry"><a class="el" href="classof_thread.html#a0dc237ee24fb925ec091f85c436548ac">sleep</a>(int sleepMS)</td><td class="entry"><a class="el" href="classof_thread.html">ofThread</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classof_u_r_l_file_loader.html#a450eb5217fce065a9e8dc765bab1dd1d">start</a>()</td><td class="entry"><a class="el" href="classof_u_r_l_file_loader.html">ofURLFileLoader</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classof_thread.html#acfce104f0683849e7aba0c57ff4d5cf9">startThread</a>(bool blocking=true, bool verbose=false)</td><td class="entry"><a class="el" href="classof_thread.html">ofThread</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classof_u_r_l_file_loader.html#a3397a3985ff8c7bb57b6fd83cc722dba">stop</a>()</td><td class="entry"><a class="el" href="classof_u_r_l_file_loader.html">ofURLFileLoader</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classof_u_r_l_file_loader.html#a3397a3985ff8c7bb57b6fd83cc722dba">stop</a>()</td><td class="entry"><a class="el" href="classof_u_r_l_file_loader.html">ofURLFileLoader</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classof_thread.html#a3102a3bf7897f579d70a418ae3ed010b">stopThread</a>()</td><td class="entry"><a class="el" href="classof_thread.html">ofThread</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classof_u_r_l_file_loader.html#ab2f0c21ed1cb176e86761370297d573f">threadedFunction</a>()</td><td class="entry"><a class="el" href="classof_u_r_l_file_loader.html">ofURLFileLoader</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classof_thread.html#adbcdde30d1304bd2b61de8c30237a417">threadRunning</a></td><td class="entry"><a class="el" href="classof_thread.html">ofThread</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>

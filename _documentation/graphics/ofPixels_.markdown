@@ -1229,7 +1229,7 @@ _syntax: setColor(x, y, color)_
 _name: setColor_
 _returns: void_
 _returns_description: _
-_parameters: int x, int y, ofColor_< PixelType > color_
+_parameters: int x, int y, const ofColor_< PixelType > &color_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1244,6 +1244,62 @@ _description: _
 
 
 Sets the color of the pixel at the x,y location.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setColor(index, &color)
+
+<!--
+_syntax: setColor(index, &color)_
+_name: setColor_
+_returns: void_
+_returns_description: _
+_parameters: int index, const ofColor_< PixelType > &color_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setColor(&color)
+
+<!--
+_syntax: setColor(&color)_
+_name: setColor_
+_returns: void_
+_returns_description: _
+_parameters: const ofColor_< PixelType > &color_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 

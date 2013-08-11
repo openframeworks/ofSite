@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -64,7 +65,7 @@
   <tr><td class="entry"><a class="el" href="classof_base_video_grabber.html#a92e4e75c73b92c7eb3da31cdfbf9927e">getWidth</a>()=0</td><td class="entry"><a class="el" href="classof_base_video_grabber.html">ofBaseVideoGrabber</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classof_base_video_grabber.html#a7dc4e14ca5c1bf64f6c9ef49fff421e3">initGrabber</a>(int w, int h)=0</td><td class="entry"><a class="el" href="classof_base_video_grabber.html">ofBaseVideoGrabber</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="classof_base_video_grabber.html#a49571efac6ac055c07b5147e15a98643">isFrameNew</a>()=0</td><td class="entry"><a class="el" href="classof_base_video_grabber.html">ofBaseVideoGrabber</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classof_base_video_grabber.html#a0ee487203961b1d6b635598a181a9835">listDevices</a>()=0</td><td class="entry"><a class="el" href="classof_base_video_grabber.html">ofBaseVideoGrabber</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classof_base_video_grabber.html#ae82f0a1c87fe69c86f1738cae560efb2">listDevices</a>()=0</td><td class="entry"><a class="el" href="classof_base_video_grabber.html">ofBaseVideoGrabber</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="classof_base_video_grabber.html#a16846e532be7f6e80516cc12568afd00">setDesiredFrameRate</a>(int framerate)</td><td class="entry"><a class="el" href="classof_base_video_grabber.html">ofBaseVideoGrabber</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classof_base_video_grabber.html#a557779bf16372e5fe66a401606780954">setDeviceID</a>(int _deviceID)</td><td class="entry"><a class="el" href="classof_base_video_grabber.html">ofBaseVideoGrabber</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="classof_base_video_grabber.html#aff13867515988c85201029f07be63c6d">setPixelFormat</a>(ofPixelFormat pixelFormat)=0</td><td class="entry"><a class="el" href="classof_base_video_grabber.html">ofBaseVideoGrabber</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>

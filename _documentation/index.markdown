@@ -280,6 +280,8 @@ getDuration()
 
 getDurationNanos()
 
+getGstElementByName()
+
 getIsMovieDone()
 
 getLoopState()
@@ -461,6 +463,17 @@ setVolume()
 stop()
 
 update()
+
+###ofGstUtils::ofGstMainLoopThread###
+
+__visible: true__
+
+__advanced: true__
+
+__functions__
+start()
+
+threadedFunction()
 
 ###ofQTKitPlayer###
 
@@ -717,6 +730,8 @@ on_preroll()
 
 on_stream_prepared()
 
+~ofGstAppSink()
+
 ###ofDirectShowGrabber###
 
 __visible: true__
@@ -811,6 +826,36 @@ update()
 
 ~ofiPhoneVideoPlayer()
 
+
+###ofVideoDevice###
+
+__visible: true__
+
+__advanced: true__
+
+__functions__
+bAvailable()
+
+deviceName()
+
+formats()
+
+hardwareName()
+
+
+###ofVideoFormat###
+
+__visible: true__
+
+__advanced: true__
+
+__functions__
+framerates()
+
+height()
+
+pixelFormat()
+
 //----------------------
 
 
@@ -863,6 +908,8 @@ flush()
 
 getDeviceList()
 
+isInitialized()
+
 listDevices()
 
 readByte()
@@ -895,6 +942,44 @@ __advanced: false__
 
 __functions__
 files()
+
+###ofNoopRenderer###
+
+__visible: true__
+
+__advanced: true__
+
+__functions__
+
+
+
+
+###ofAppNoWindow###
+
+__visible: true__
+
+__advanced: true__
+
+__functions__
+exitApp()
+
+getHeight()
+
+getScreenSize()
+
+getWidth()
+
+getWindowPosition()
+
+getWindowSize()
+
+ofAppNoWindow()
+
+runAppViaInfiniteLoop()
+
+setupOpenGL()
+
+~ofAppNoWindow()
 
 ###ofAppBaseWindow###
 
@@ -941,6 +1026,8 @@ setFullscreen()
 
 setOrientation()
 
+setVerticalSync()
+
 setWindowPosition()
 
 setWindowShape()
@@ -964,11 +1051,7 @@ disableSetupScreen()
 
 display()
 
-dragEvent()
-
 enableSetupScreen()
-
-entry_cb()
 
 exitApp()
 
@@ -998,18 +1081,6 @@ idle_cb()
 
 initializeWindow()
 
-keyboard_cb()
-
-keyboard_up_cb()
-
-motion_cb()
-
-mouse_cb()
-
-passive_motion_cb()
-
-resize_cb()
-
 runAppViaInfiniteLoop()
 
 setDoubleBuffering()
@@ -1022,6 +1093,8 @@ setGlutDisplayString()
 
 setOrientation()
 
+setVerticalSync()
+
 setWindowPosition()
 
 setWindowShape()
@@ -1031,10 +1104,6 @@ setWindowTitle()
 setupOpenGL()
 
 showCursor()
-
-special_key_cb()
-
-special_key_up_cb()
 
 toggleFullscreen()
 
@@ -1069,6 +1138,8 @@ ofGetScreenHeight()
 
 ofGetScreenWidth()
 
+ofGetTargetFrameRate()
+
 ofGetWidth()
 
 ofGetWindowHeight()
@@ -1078,6 +1149,8 @@ ofGetWindowMode()
 ofGetWindowPositionX()
 
 ofGetWindowPositionY()
+
+ofGetWindowPtr()
 
 ofGetWindowRect()
 
@@ -1113,6 +1186,160 @@ ofSleepMillis()
 
 ofToggleFullscreen()
 
+###ofAppGLFWWindow###
+
+__visible: true__
+
+__advanced: true__
+
+__functions__
+disableSetupScreen()
+
+enableSetupScreen()
+
+getHeight()
+
+getOrientation()
+
+getScreenSize()
+
+getWidth()
+
+getWindowMode()
+
+getWindowPosition()
+
+getWindowSize()
+
+hideCursor()
+
+iconify()
+
+initializeWindow()
+
+isWindowActive()
+
+isWindowIconified()
+
+isWindowResizeable()
+
+listVideoModes()
+
+ofAppGLFWWindow()
+
+runAppViaInfiniteLoop()
+
+setAlphaBits()
+
+setColorBits()
+
+setDepthBits()
+
+setDoubleBuffering()
+
+setFullscreen()
+
+setMultiDisplayFullscreen()
+
+setNumSamples()
+
+setOpenGLVersion()
+
+setOrientation()
+
+setStencilBits()
+
+setVerticalSync()
+
+setWindowPosition()
+
+setWindowShape()
+
+setWindowTitle()
+
+setupOpenGL()
+
+showCursor()
+
+toggleFullscreen()
+
+~ofAppGLFWWindow()
+
+###ofAppEGLWindow###
+
+__visible: true__
+
+__advanced: true__
+
+__functions__
+disableSetupScreen()
+
+doesHWOrientation()
+
+enableSetupScreen()
+
+exit()
+
+getEglConfig()
+
+getEglContext()
+
+getEglDisplay()
+
+getEglSurface()
+
+getEglVersionMajor()
+
+getEglVersionMinor()
+
+getHeight()
+
+getOrientation()
+
+getScreenSize()
+
+getWidth()
+
+getWindowMode()
+
+getWindowPosition()
+
+getWindowSize()
+
+getX11Display()
+
+getX11Window()
+
+hideCursor()
+
+initializeWindow()
+
+ofAppEGLWindow()
+
+runAppViaInfiniteLoop()
+
+setFullscreen()
+
+setGLESVersion()
+
+setOrientation()
+
+setVerticalSync()
+
+setWindowPosition()
+
+setWindowShape()
+
+setWindowTitle()
+
+setupOpenGL()
+
+showCursor()
+
+toggleFullscreen()
+
+~ofAppEGLWindow()
+
 ###ofBaseApp###
 
 __visible: true__
@@ -1126,6 +1353,8 @@ audioRequested()
 
 dragEvent()
 
+dragged()
+
 draw()
 
 exit()
@@ -1135,6 +1364,8 @@ gotMessage()
 keyPressed()
 
 keyReleased()
+
+messageReceived()
 
 mouseDragged()
 
@@ -1171,9 +1402,13 @@ __advanced: true__
 __functions__
 close()
 
+getBufferSize()
+
 getNumInputChannels()
 
 getNumOutputChannels()
+
+getSampleRate()
 
 getTickCount()
 
@@ -1288,6 +1523,14 @@ ofSoundStreamStop()
 
 close()
 
+getBufferSize()
+
+getNumInputChannels()
+
+getNumOutputChannels()
+
+getSampleRate()
+
 getSoundStream()
 
 getTickCount()
@@ -1320,9 +1563,13 @@ __advanced: true__
 __functions__
 close()
 
+getBufferSize()
+
 getNumInputChannels()
 
 getNumOutputChannels()
+
+getSampleRate()
 
 getTickCount()
 
@@ -1495,6 +1742,39 @@ stop()
 ##types##
 
 
+###ofAbstractParameter###
+
+__visible: true__
+
+__advanced: true__
+
+__functions__
+cast()
+
+fromString()
+
+getEscapedName()
+
+getGroupHierarchyNames()
+
+getName()
+
+getParent()
+
+isSerializable()
+
+ofAbstractParameter()
+
+setName()
+
+setParent()
+
+toString()
+
+type()
+
+~ofAbstractParameter()
+
 ###ofBaseSoundOutput###
 
 __visible: true__
@@ -1637,6 +1917,14 @@ __advanced: true__
 __functions__
 close()
 
+getBufferSize()
+
+getNumInputChannels()
+
+getNumOutputChannels()
+
+getSampleRate()
+
 getTickCount()
 
 listDevices()
@@ -1683,6 +1971,19 @@ __advanced: false__
 
 __functions__
 
+###ofBaseFileSerializer###
+
+__visible: true__
+
+__advanced: true__
+
+__functions__
+load()
+
+save()
+
+~ofBaseFileSerializer()
+
 ###ofBaseRenderer###
 
 __visible: true__
@@ -1697,6 +1998,8 @@ background()
 clear()
 
 clearAlpha()
+
+disableAntiAliasing()
 
 disablePointSprites()
 
@@ -1716,6 +2019,8 @@ drawString()
 
 drawTriangle()
 
+enableAntiAliasing()
+
 enablePointSprites()
 
 getBgColor()
@@ -1726,6 +2031,8 @@ getCurrentViewport()
 
 getFillMode()
 
+getNativeViewport()
+
 getRectMode()
 
 getType()
@@ -1734,9 +2041,13 @@ getViewportHeight()
 
 getViewportWidth()
 
+isVFlipped()
+
 loadIdentityMatrix()
 
 loadMatrix()
+
+matrixMode()
 
 multMatrix()
 
@@ -1770,6 +2081,8 @@ setColor()
 
 setCoordHandedness()
 
+setDepthTest()
+
 setFillMode()
 
 setHexColor()
@@ -1777,6 +2090,8 @@ setHexColor()
 setLineSmoothing()
 
 setLineWidth()
+
+setOrientation()
 
 setRectMode()
 
@@ -1879,6 +2194,15 @@ videoSettings()
 
 ~ofBaseVideoGrabber()
 
+###ofParameterGroup::Value###
+
+__visible: true__
+
+__advanced: true__
+
+__functions__
+Value()
+
 ###ofStyle###
 
 __visible: true__
@@ -1898,6 +2222,119 @@ __advanced: true__
 
 __functions__
 ~ofBaseVideoDraws()
+
+###ofBaseSerializer###
+
+__visible: true__
+
+__advanced: true__
+
+__functions__
+deserialize()
+
+serialize()
+
+~ofBaseSerializer()
+
+###ofParameter###
+
+__visible: true__
+
+__advanced: false__
+
+__functions__
+addListener()
+
+disableEvents()
+
+enableEvents()
+
+fromString()
+
+get()
+
+getMax()
+
+getMin()
+
+getName()
+
+isSerializable()
+
+makeReferenceTo()
+
+ofParameter()
+
+operator const ParameterType &()
+
+operator%=()
+
+operator&=()
+
+operator*=()
+
+operator++()
+
+operator+=()
+
+operator--()
+
+operator-=()
+
+operator->()
+
+operator/=()
+
+operator<<=()
+
+operator=()
+
+operator>>=()
+
+operator^=()
+
+operator|=()
+
+removeListener()
+
+set()
+
+setMax()
+
+setMin()
+
+setName()
+
+setSerializable()
+
+toString()
+
+###ofReadOnlyParameter###
+
+__visible: true__
+
+__advanced: false__
+
+__functions__
+addListener()
+
+get()
+
+getMax()
+
+getMin()
+
+getName()
+
+ofReadOnlyParameter()
+
+operator const ParameterType &()
+
+operator->()
+
+removeListener()
+
+toString()
 
 ###ofColor###
 
@@ -1974,6 +2411,75 @@ setHue()
 
 setSaturation()
 
+###ofParameterGroup###
+
+__visible: true__
+
+__advanced: false__
+
+__functions__
+add()
+
+back()
+
+clear()
+
+contains()
+
+front()
+
+get()
+
+getBool()
+
+getChar()
+
+getColor()
+
+getEscapedName()
+
+getFloat()
+
+getFloatColor()
+
+getGroup()
+
+getInt()
+
+getName()
+
+getPoint()
+
+getPosition()
+
+getShortColor()
+
+getString()
+
+getType()
+
+getVec2f()
+
+getVec3f()
+
+getVec4f()
+
+isSerializable()
+
+notifyParameterChanged()
+
+ofParameterGroup()
+
+operator[]()
+
+setName()
+
+setSerializable()
+
+size()
+
+toString()
+
 ###ofBaseLoggerChannel###
 
 __visible: true__
@@ -1984,6 +2490,15 @@ __functions__
 log()
 
 ~ofBaseLoggerChannel()
+
+###ofParameter::Value###
+
+__visible: true__
+
+__advanced: true__
+
+__functions__
+Value()
 
 ###ofBaseHasTexture###
 
@@ -2183,6 +2698,19 @@ __advanced: true__
 __functions__
 ~ofAbstractImage()
 
+###ofBaseGLRenderer###
+
+__visible: true__
+
+__advanced: true__
+
+__functions__
+disableTextureTarget()
+
+enableTextureTarget()
+
+setCurrentFBO()
+
 ###ofBaseImage###
 
 __visible: true__
@@ -2219,6 +2747,8 @@ clear()
 
 clearAlpha()
 
+disableAntiAliasing()
+
 disablePointSprites()
 
 draw()
@@ -2236,6 +2766,8 @@ drawSphere()
 drawString()
 
 drawTriangle()
+
+enableAntiaAliasing()
 
 enablePointSprites()
 
@@ -2293,6 +2825,8 @@ setColor()
 
 setCoordHandedness()
 
+setDepthTest()
+
 setFillMode()
 
 setHexColor()
@@ -2344,6 +2878,12 @@ __visible: true__
 __advanced: true__
 
 __functions__
+ofBitmapStringGetBoundingBox()
+
+ofBitmapStringGetMesh()
+
+ofBitmapStringGetTextureRef()
+
 ofDrawBitmapCharacter()
 
 ofDrawBitmapCharacterEnd()
@@ -2384,15 +2924,11 @@ ofBezierVertex()
 
 ofBgColorPtr()
 
-ofBox()
-
 ofCircle()
 
 ofClear()
 
 ofClearAlpha()
-
-ofCone()
 
 ofCurve()
 
@@ -2402,7 +2938,11 @@ ofCurveVertices()
 
 ofDisableAlphaBlending()
 
+ofDisableAntiAliasing()
+
 ofDisableBlendMode()
+
+ofDisableDepthTest()
 
 ofDisablePointSprites()
 
@@ -2416,7 +2956,11 @@ ofEllipse()
 
 ofEnableAlphaBlending()
 
+ofEnableAntiAliasing()
+
 ofEnableBlendMode()
+
+ofEnableDepthTest()
 
 ofEnablePointSprites()
 
@@ -2428,6 +2972,8 @@ ofEndShape()
 
 ofFill()
 
+ofGetBackground()
+
 ofGetCoordHandedness()
 
 ofGetCurrentRenderer()
@@ -2436,7 +2982,7 @@ ofGetCurrentViewport()
 
 ofGetFill()
 
-ofGetGLRenderer()
+ofGetNativeViewport()
 
 ofGetRectMode()
 
@@ -2445,6 +2991,8 @@ ofGetStyle()
 ofGetViewportHeight()
 
 ofGetViewportWidth()
+
+ofIsVFlipped()
 
 ofLine()
 
@@ -2502,17 +3050,19 @@ ofSetCurrentRenderer()
 
 ofSetCurveResolution()
 
+ofSetDepthTest()
+
 ofSetDrawBitmapMode()
 
 ofSetHexColor()
 
 ofSetLineWidth()
 
+ofSetMatrixMode()
+
 ofSetPolyMode()
 
 ofSetRectMode()
-
-ofSetSphereResolution()
 
 ofSetStyle()
 
@@ -2523,8 +3073,6 @@ ofSetupScreen()
 ofSetupScreenOrtho()
 
 ofSetupScreenPerspective()
-
-ofSphere()
 
 ofTranslate()
 
@@ -2630,7 +3178,7 @@ update()
 
 __visible: true__
 
-__advanced: true__
+__advanced: false__
 
 __functions__
 
@@ -2735,6 +3283,8 @@ arcNegative()
 
 bezierTo()
 
+circle()
+
 clear()
 
 close()
@@ -2743,13 +3293,21 @@ curveTo()
 
 draw()
 
+ellipse()
+
 flagShapeChanged()
 
 getArcResolution()
 
+getCircleResolution()
+
+getCommands()
+
 getCurveResolution()
 
 getFillColor()
+
+getMode()
 
 getOutline()
 
@@ -2765,6 +3323,8 @@ getUseShapeColor()
 
 getWindingMode()
 
+hasChanged()
+
 hasOutline()
 
 isFilled()
@@ -2779,11 +3339,17 @@ ofPath()
 
 quadBezierTo()
 
+rectRounded()
+
+rectangle()
+
 rotate()
 
 scale()
 
 setArcResolution()
+
+setCircleResolution()
 
 setColor()
 
@@ -2815,6 +3381,8 @@ tessellate()
 
 translate()
 
+triangle()
+
 ###ofTrueTypeFont###
 
 __visible: true__
@@ -2827,6 +3395,12 @@ bind()
 drawString()
 
 drawStringAsShapes()
+
+getCharacterAsPoints()
+
+getEncoding()
+
+getFontTexture()
 
 getLetterSpacing()
 
@@ -2842,6 +3416,8 @@ getStringAsPoints()
 
 getStringBoundingBox()
 
+getStringMesh()
+
 hasFullCharacterSet()
 
 isAntiAliased()
@@ -2849,6 +3425,8 @@ isAntiAliased()
 isLoaded()
 
 loadFont()
+
+setEncoding()
 
 setGlobalDpi()
 
@@ -2908,7 +3486,13 @@ curveTo()
 
 draw()
 
+flagHasChanged()
+
 fromRectangle()
+
+getAngleAtIndex()
+
+getAngleAtIndexInterpolated()
 
 getArea()
 
@@ -2918,17 +3502,49 @@ getCentroid2D()
 
 getClosestPoint()
 
+getIndexAtLength()
+
+getIndexAtPercent()
+
+getLengthAtIndex()
+
+getLengthAtIndexInterpolated()
+
+getNormalAtIndex()
+
+getNormalAtIndexInterpolated()
+
 getPerimeter()
+
+getPointAtIndexInterpolated()
+
+getPointAtLength()
+
+getPointAtPercent()
 
 getResampledByCount()
 
 getResampledBySpacing()
 
+getRightVector()
+
+getRotationAtIndex()
+
+getRotationAtIndexInterpolated()
+
 getSmoothed()
+
+getTangentAtIndex()
+
+getTangentAtIndexInterpolated()
 
 getVertices()
 
+getWrappedIndex()
+
 hasChanged()
+
+insertVertex()
 
 inside()
 
@@ -2945,6 +3561,8 @@ quadBezierTo()
 resize()
 
 setClosed()
+
+setRightVector()
 
 simplify()
 
@@ -2967,6 +3585,8 @@ clearAlpha()
 
 close()
 
+disableAntiAliasing()
+
 draw()
 
 drawCircle()
@@ -2982,6 +3602,8 @@ drawSphere()
 drawString()
 
 drawTriangle()
+
+enableAntiAliasing()
 
 flush()
 
@@ -3008,6 +3630,14 @@ getType()
 getViewportHeight()
 
 getViewportWidth()
+
+loadIdentityMatrix()
+
+loadMatrix()
+
+matrixMode()
+
+multMatrix()
 
 ofCairoRenderer()
 
@@ -3038,6 +3668,8 @@ setBlendMode()
 setColor()
 
 setCoordHandedness()
+
+setDepthTest()
 
 setFillMode()
 
@@ -3113,6 +3745,27 @@ disable()
 
 enable()
 
+###ofDelegate< TObj, TArgs, false >###
+
+__visible: true__
+
+__advanced: true__
+
+__functions__
+clone()
+
+disable()
+
+equals()
+
+notify()
+
+ofDelegate()
+
+operator=()
+
+~ofDelegate()
+
 ###ofEventUtils###
 
 __visible: true__
@@ -3124,6 +3777,38 @@ __functions__
 
 
 
+###ofEntryEventArgs###
+
+__visible: true__
+
+__advanced: true__
+
+__functions__
+
+
+
+
+###ofDelegate< TObj, void, false >###
+
+__visible: true__
+
+__advanced: true__
+
+__functions__
+clone()
+
+disable()
+
+equals()
+
+notify()
+
+ofDelegate()
+
+operator=()
+
+~ofDelegate()
+
 ###ofResizeEventArgs###
 
 __visible: true__
@@ -3132,6 +3817,27 @@ __advanced: true__
 
 __functions__
 width()
+
+###ofDelegate< TObj, void, true >###
+
+__visible: true__
+
+__advanced: true__
+
+__functions__
+clone()
+
+disable()
+
+equals()
+
+notify()
+
+ofDelegate()
+
+operator=()
+
+~ofDelegate()
 
 ###ofAudioEventArgs###
 
@@ -3143,6 +3849,27 @@ __functions__
 buffer()
 
 bufferSize()
+
+###ofDelegate###
+
+__visible: true__
+
+__advanced: true__
+
+__functions__
+clone()
+
+disable()
+
+equals()
+
+notify()
+
+ofDelegate()
+
+operator=()
+
+~ofDelegate()
 
 ###ofMouseEventArgs###
 
@@ -3162,9 +3889,53 @@ __visible: true__
 __advanced: true__
 
 __functions__
+ofEvent()
+
+operator=()
+
+###ofEventAttendedException###
+
+__visible: true__
+
+__advanced: true__
+
+__functions__
 
 
 
+
+###ofTouchEventArgs###
+
+__visible: true__
+
+__advanced: true__
+
+__functions__
+angle()
+
+height()
+
+id()
+
+majoraxis()
+
+minoraxis()
+
+numTouches()
+
+pressure()
+
+time()
+
+type()
+
+width()
+
+xaccel()
+
+xspeed()
+
+yaccel()
 
 ###ofEvents###
 
@@ -3173,6 +3944,9 @@ __visible: true__
 __advanced: false__
 
 __functions__
+exitApp()
+
+ofEvents()
 
 ofGetKeyPressed()
 
@@ -3186,7 +3960,29 @@ ofGetPreviousMouseX()
 
 ofGetPreviousMouseY()
 
+ofRegisterDragEvents()
+
+ofRegisterGetMessages()
+
+ofRegisterKeyEvents()
+
+ofRegisterMouseEvents()
+
+ofRegisterTouchEvents()
+
+ofSendMessage()
+
 ofSetEscapeQuitsApp()
+
+ofUnregisterDragEvents()
+
+ofUnregisterGetMessages()
+
+ofUnregisterKeyEvents()
+
+ofUnregisterMouseEvents()
+
+ofUnregisterTouchEvents()
 
 ###ofEventArgs###
 
@@ -3206,9 +4002,16 @@ __visible: true__
 __advanced: true__
 
 __functions__
+key()
 
+###ofMessage###
 
+__visible: true__
 
+__advanced: true__
+
+__functions__
+ofMessage()
 
 ###ofEventUtils###
 
@@ -3299,6 +4102,69 @@ __functions__
 ##3d##
 
 
+###of3dPrimitive###
+
+__visible: true__
+
+__advanced: false__
+
+__functions__
+clear()
+
+disableColors()
+
+disableNormals()
+
+disableTextures()
+
+draw()
+
+drawAxes()
+
+drawFaces()
+
+drawNormals()
+
+drawVertices()
+
+drawWireframe()
+
+enableColors()
+
+enableNormals()
+
+enableTextures()
+
+getMesh()
+
+getMeshPtr()
+
+getTexCoords()
+
+getTexCoordsPtr()
+
+hasNormalsEnabled()
+
+hasScaling()
+
+isUsingVbo()
+
+mapTexCoords()
+
+mapTexCoordsFromTexture()
+
+of3dPrimitive()
+
+operator=()
+
+removeMesh()
+
+removeTexture()
+
+setUseVbo()
+
+~of3dPrimitive()
+
 ###ofEasyCam###
 
 __visible: true__
@@ -3340,6 +4206,8 @@ ofEasyCam()
 
 reset()
 
+setAutoDistance()
+
 setDistance()
 
 setDrag()
@@ -3349,6 +4217,29 @@ setTarget()
 setTranslationKey()
 
 ~ofEasyCam()
+
+###ofSpherePrimitive###
+
+__visible: true__
+
+__advanced: false__
+
+__functions__
+getRadius()
+
+getResolution()
+
+ofSpherePrimitive()
+
+set()
+
+setMode()
+
+setRadius()
+
+setResolution()
+
+~ofSpherePrimitive()
 
 ###ofMesh###
 
@@ -3379,6 +4270,10 @@ addVertex()
 
 addVertices()
 
+append()
+
+box()
+
 clear()
 
 clearColors()
@@ -3390,6 +4285,10 @@ clearNormals()
 clearTexCoords()
 
 clearVertices()
+
+cone()
+
+cylinder()
 
 disableColors()
 
@@ -3425,11 +4324,15 @@ getColorsPointer()
 
 getFace()
 
+getFaceNormals()
+
 getIndex()
 
 getIndexPointer()
 
 getIndices()
+
+getMeshForIndices()
 
 getMode()
 
@@ -3454,6 +4357,8 @@ getTexCoord()
 getTexCoords()
 
 getTexCoordsPointer()
+
+getUniqueFaces()
 
 getVertex()
 
@@ -3481,9 +4386,17 @@ haveTexCoordsChanged()
 
 haveVertsChanged()
 
+icosahedron()
+
+icosphere()
+
 load()
 
+mergeDuplicateVertices()
+
 ofMesh()
+
+plane()
 
 removeColor()
 
@@ -3499,6 +4412,10 @@ save()
 
 setColor()
 
+setColorForIndices()
+
+setFromTriangles()
+
 setIndex()
 
 setMode()
@@ -3512,6 +4429,10 @@ setTexCoord()
 setVertex()
 
 setupIndicesAuto()
+
+smoothNormals()
+
+sphere()
 
 usingColors()
 
@@ -3542,11 +4463,17 @@ enableOrtho()
 
 end()
 
+getAspectRatio()
+
 getFarClip()
+
+getForceAspectRatio()
 
 getFov()
 
 getImagePlaneDistance()
+
+getLensOffset()
 
 getModelViewMatrix()
 
@@ -3558,21 +4485,260 @@ getOrtho()
 
 getProjectionMatrix()
 
+isVFlipped()
+
 ofCamera()
 
 screenToWorld()
 
+setAspectRatio()
+
 setFarClip()
+
+setForceAspectRatio()
 
 setFov()
 
+setLensOffset()
+
 setNearClip()
+
+setVFlip()
+
+setupOffAxisViewPortal()
 
 setupPerspective()
 
 worldToCamera()
 
 worldToScreen()
+
+~ofCamera()
+
+###ofPlanePrimitive###
+
+__visible: true__
+
+__advanced: false__
+
+__functions__
+getHeight()
+
+getNumColumns()
+
+getNumRows()
+
+getResolution()
+
+getWidth()
+
+ofPlanePrimitive()
+
+resizeToTexture()
+
+set()
+
+setColumns()
+
+setHeight()
+
+setMode()
+
+setResolution()
+
+setRows()
+
+setWidth()
+
+~ofPlanePrimitive()
+
+###ofCylinderPrimitive###
+
+__visible: true__
+
+__advanced: false__
+
+__functions__
+getBottomCapIndices()
+
+getBottomCapMesh()
+
+getCapped()
+
+getCylinderIndices()
+
+getCylinderMesh()
+
+getHeight()
+
+getRadius()
+
+getResolution()
+
+getResolutionCap()
+
+getResolutionHeight()
+
+getResolutionRadius()
+
+getTopCapIndices()
+
+getTopCapMesh()
+
+ofCylinderPrimitive()
+
+set()
+
+setBottomCapColor()
+
+setCapped()
+
+setCylinderColor()
+
+setHeight()
+
+setMode()
+
+setRadius()
+
+setResolution()
+
+setResolutionCap()
+
+setResolutionHeight()
+
+setResolutionRadius()
+
+setTopCapColor()
+
+~ofCylinderPrimitive()
+
+###ofBoxPrimitive###
+
+__visible: true__
+
+__advanced: false__
+
+__functions__
+getDepth()
+
+getHeight()
+
+getResolution()
+
+getResolutionDepth()
+
+getResolutionHeight()
+
+getResolutionWidth()
+
+getSideIndices()
+
+getSideMesh()
+
+getSize()
+
+getWidth()
+
+ofBoxPrimitive()
+
+resizeToTexture()
+
+set()
+
+setDepth()
+
+setHeight()
+
+setMode()
+
+setResolution()
+
+setResolutionDepth()
+
+setResolutionHeight()
+
+setResolutionWidth()
+
+setSideColor()
+
+setWidth()
+
+~ofBoxPrimitive()
+
+###ofIcoSpherePrimitive###
+
+__visible: true__
+
+__advanced: false__
+
+__functions__
+getRadius()
+
+getResolution()
+
+ofIcoSpherePrimitive()
+
+set()
+
+setMode()
+
+setRadius()
+
+setResolution()
+
+~ofIcoSpherePrimitive()
+
+###ofConePrimitive###
+
+__visible: true__
+
+__advanced: false__
+
+__functions__
+getCapIndices()
+
+getCapMesh()
+
+getConeIndices()
+
+getConeMesh()
+
+getHeight()
+
+getRadius()
+
+getResolution()
+
+getResolutionCap()
+
+getResolutionHeight()
+
+getResolutionRadius()
+
+ofConePrimitive()
+
+set()
+
+setCapColor()
+
+setHeight()
+
+setMode()
+
+setRadius()
+
+setResolution()
+
+setResolutionCap()
+
+setResolutionHeight()
+
+setResolutionRadius()
+
+setTopColor()
+
+~ofConePrimitive()
 
 ###ofNode###
 
@@ -3676,6 +4842,45 @@ transformGL()
 truck()
 
 ~ofNode()
+
+###ofMeshFace###
+
+__visible: true__
+
+__advanced: false__
+
+__functions__
+getColor()
+
+getFaceNormal()
+
+getNormal()
+
+getTexCoord()
+
+getVertex()
+
+hasColors()
+
+hasNormals()
+
+hasTexcoords()
+
+ofMeshFace()
+
+setColor()
+
+setHasColors()
+
+setHasNormals()
+
+setHasTexcoords()
+
+setNormal()
+
+setTexCoord()
+
+setVertex()
 
 //----------------------
 
@@ -4262,6 +5467,14 @@ ofInRange()
 
 ofInsidePoly()
 
+ofInterpolateCatmullRom()
+
+ofInterpolateCosine()
+
+ofInterpolateCubic()
+
+ofInterpolateHermite()
+
 ofLerp()
 
 ofLerpDegrees()
@@ -4295,6 +5508,8 @@ ofSeedRandom()
 ofSign()
 
 ofSignedNoise()
+
+ofWrap()
 
 ofWrapDegrees()
 
@@ -4354,6 +5569,8 @@ ofSaveURLAsync()
 
 ofSaveURLTo()
 
+ofURLResponseEvent()
+
 ofUnregisterURLNotification()
 
 ###ofLogFatalError###
@@ -4375,6 +5592,77 @@ __functions__
 ofHttpResponse()
 
 operator ofBuffer &()
+
+###ofMatrixStack###
+
+__visible: true__
+
+__advanced: true__
+
+__functions__
+clearStacks()
+
+customMatrixNeedsFlip()
+
+getCurrentMatrix()
+
+getCurrentMatrixMode()
+
+getCurrentViewport()
+
+getHandedness()
+
+getModelViewMatrix()
+
+getModelViewProjectionMatrix()
+
+getNativeViewport()
+
+getOrientation()
+
+getOrientationMatrix()
+
+getOrientationMatrixInverse()
+
+getProjectionMatrix()
+
+getProjectionMatrixNoOrientation()
+
+getTextureMatrix()
+
+isVFlipped()
+
+loadIdentityMatrix()
+
+loadMatrix()
+
+matrixMode()
+
+multMatrix()
+
+nativeViewport()
+
+ofMatrixStack()
+
+popMatrix()
+
+popView()
+
+pushMatrix()
+
+pushView()
+
+rotate()
+
+scale()
+
+setOrientation()
+
+setRenderSurface()
+
+translate()
+
+viewport()
 
 ###ofFileDialogResult###
 
@@ -4443,6 +5731,85 @@ ofSystemSaveDialog()
 
 ofSystemTextBoxDialog()
 
+###ofXml###
+
+__visible: true__
+
+__advanced: false__
+
+__functions__
+addChild()
+
+addValue()
+
+addXml()
+
+clear()
+
+deserialize()
+
+exists()
+
+getAttribute()
+
+getAttributes()
+
+getBoolValue()
+
+getFloatValue()
+
+getIntValue()
+
+getName()
+
+getNumChildren()
+
+getPocoDocument()
+
+getPocoElement()
+
+getValue()
+
+load()
+
+loadFromBuffer()
+
+ofXml()
+
+operator=()
+
+remove()
+
+removeAttributes()
+
+removeContents()
+
+reset()
+
+save()
+
+serialize()
+
+setAttribute()
+
+setTo()
+
+setToChild()
+
+setToParent()
+
+setToPrevSibling()
+
+setToSibling()
+
+setValue()
+
+toString()
+
+tokenize()
+
+~ofXml()
+
 ###ofUtils###
 
 __visible: true__
@@ -4465,6 +5832,8 @@ ofDisableDataPath()
 ofEnableDataPath()
 
 ofFind()
+
+ofFromString()
 
 ofGetDay()
 
@@ -4495,6 +5864,12 @@ ofGetTimestampString()
 ofGetUnixTime()
 
 ofGetVersionInfo()
+
+ofGetVersionMajor()
+
+ofGetVersionMinor()
+
+ofGetVersionPatch()
 
 ofGetWeekday()
 
@@ -4530,11 +5905,15 @@ ofSaveViewport()
 
 ofSetDataPathRoot()
 
+ofSetWorkingDirectoryToDefault()
+
 ofSort()
 
 ofSplitString()
 
 ofStringReplace()
+
+ofStringTimesInString()
 
 ofSystem()
 
@@ -4545,6 +5924,8 @@ ofToBool()
 ofToChar()
 
 ofToDataPath()
+
+ofToDouble()
 
 ofToFloat()
 
@@ -4685,6 +6066,8 @@ __functions__
 addLeadingSlash()
 
 addTrailingSlash()
+
+createEnclosingDirectory()
 
 getAbsolutePath()
 
@@ -4969,6 +6352,8 @@ saveAsync()
 
 saveTo()
 
+stop()
+
 ###ofLogNotice###
 
 __visible: true__
@@ -5017,9 +6402,15 @@ disableNormals()
 
 disableTexCoords()
 
+disableVAOs()
+
 draw()
 
 drawElements()
+
+drawElementsInstanced()
+
+drawInstanced()
 
 enableColors()
 
@@ -5029,6 +6420,8 @@ enableNormals()
 
 enableTexCoords()
 
+enableVAOs()
+
 getColorId()
 
 getIndexId()
@@ -5036,6 +6429,10 @@ getIndexId()
 getIsAllocated()
 
 getNormalId()
+
+getNumIndices()
+
+getNumVertices()
 
 getTexCoordId()
 
@@ -5055,6 +6452,8 @@ ofVbo()
 
 operator=()
 
+setAttributeData()
+
 setColorData()
 
 setIndexData()
@@ -5069,6 +6468,8 @@ setVertexData()
 
 unbind()
 
+updateAttributeData()
+
 updateColorData()
 
 updateIndexData()
@@ -5082,6 +6483,173 @@ updateTexCoordData()
 updateVertexData()
 
 ~ofVbo()
+
+###ofGLProgrammableRenderer###
+
+__visible: true__
+
+__advanced: true__
+
+__functions__
+bClearBg()
+
+background()
+
+beginCustomShader()
+
+bitmapStringShader()
+
+clear()
+
+clearAlpha()
+
+defaultNoTexColor()
+
+defaultNoTexNoColor()
+
+defaultTex2DColor()
+
+defaultTex2DNoColor()
+
+defaultTexColor()
+
+defaultTexNoColor()
+
+defaultUniqueShader()
+
+disableAntiAliasing()
+
+disablePointSprites()
+
+disableTextureTarget()
+
+draw()
+
+drawCircle()
+
+drawEllipse()
+
+drawLine()
+
+drawRectangle()
+
+drawString()
+
+drawTriangle()
+
+enableAntiAliasing()
+
+enablePointSprites()
+
+enableTextureTarget()
+
+endCustomShader()
+
+finishRender()
+
+getBgColor()
+
+getCoordHandedness()
+
+getCurrentShader()
+
+getCurrentViewport()
+
+getFillMode()
+
+getNativeViewport()
+
+getRectMode()
+
+getType()
+
+getViewportHeight()
+
+getViewportWidth()
+
+isVFlipped()
+
+loadIdentityMatrix()
+
+loadMatrix()
+
+matrixMode()
+
+multMatrix()
+
+ofGLProgrammableRenderer()
+
+popMatrix()
+
+popView()
+
+pushMatrix()
+
+pushView()
+
+rendersPathPrimitives()
+
+rotate()
+
+rotateX()
+
+rotateY()
+
+rotateZ()
+
+scale()
+
+setAlphaBitmapText()
+
+setAttributes()
+
+setBackgroundAuto()
+
+setBlendMode()
+
+setCircleResolution()
+
+setColor()
+
+setCoordHandedness()
+
+setCurrentFBO()
+
+setDepthTest()
+
+setFillMode()
+
+setHexColor()
+
+setLineSmoothing()
+
+setLineWidth()
+
+setOrientation()
+
+setRectMode()
+
+setSphereResolution()
+
+setup()
+
+setupGraphicDefaults()
+
+setupScreen()
+
+setupScreenOrtho()
+
+setupScreenPerspective()
+
+startRender()
+
+translate()
+
+update()
+
+viewport()
+
+~ofGLProgrammableRenderer()
 
 ###ofTextureData###
 
@@ -5099,15 +6667,47 @@ __visible: true__
 __advanced: true__
 
 __functions__
+ofGLCheckExtension()
+
+ofGLSupportedExtensions()
+
+ofGLSupportsNPOTTextures()
+
+ofGetGLFormatFromInternal()
+
+ofGetGLInternalFormatFromPixelFormat()
+
 ofGetGLPolyMode()
 
 ofGetGLPrimitiveMode()
 
+ofGetGLProgrammableRenderer()
+
+ofGetGLRenderer()
+
 ofGetGLTypeFromPixelFormat()
+
+ofGetGlFormat()
+
+ofGetGlInternalFormat()
+
+ofGetGlInternalFormatName()
+
+ofGetGlType()
+
+ofGetGlTypeFromInternal()
+
+ofGetImageTypeFromGLType()
+
+ofGetNumChannelsFromGLFormat()
 
 ofGetOFPolyMode()
 
 ofGetOFPrimitiveMode()
+
+ofIsGLProgrammableRenderer()
+
+ofSetPixelStorei()
 
 ###ofLight###
 
@@ -5116,6 +6716,7 @@ __visible: true__
 __advanced: false__
 
 __functions__
+
 ofDisableLighting()
 
 ofDisableSeparateSpecularLight()
@@ -5199,6 +6800,7 @@ __visible: true__
 __advanced: false__
 
 __functions__
+
 ofDisableArbTex()
 
 ofDisableNormalizedTexCoords()
@@ -5211,12 +6813,6 @@ ofEnableNormalizedTexCoords()
 
 ofEnableTextureEdgeHack()
 
-ofGetGlFormatAndType()
-
-ofGetGlInternalFormat()
-
-ofGetImageTypeFromGLType()
-
 ofGetUsingArbTex()
 
 ofGetUsingCustomMinMagFilters()
@@ -5224,6 +6820,8 @@ ofGetUsingCustomMinMagFilters()
 ofGetUsingCustomTextureWrap()
 
 ofGetUsingNormalizedTexCoords()
+
+ofIsTextureEdgeHackEnabled()
 
 ofRestoreMinMagFilters()
 
@@ -5267,6 +6865,8 @@ setAnchorPoint()
 
 setCompression()
 
+setRGToRGBASwizzles()
+
 setTextureMinMagFilter()
 
 setTextureWrap()
@@ -5282,6 +6882,10 @@ __advanced: false__
 __functions__
 begin()
 
+bindAttribute()
+
+bindDefaults()
+
 end()
 
 getAttributeLocation()
@@ -5292,11 +6896,19 @@ getProgram()
 
 getShader()
 
+isLoaded()
+
 linkProgram()
 
 load()
 
 ofShader()
+
+operator!=()
+
+operator=()
+
+operator==()
 
 printActiveAttributes()
 
@@ -5306,11 +6918,15 @@ setAttribute1d()
 
 setAttribute1f()
 
+setAttribute1fv()
+
 setAttribute1s()
 
 setAttribute2d()
 
 setAttribute2f()
+
+setAttribute2fv()
 
 setAttribute2s()
 
@@ -5318,11 +6934,15 @@ setAttribute3d()
 
 setAttribute3f()
 
+setAttribute3fv()
+
 setAttribute3s()
 
 setAttribute4d()
 
 setAttribute4f()
+
+setAttribute4fv()
 
 setAttribute4s()
 
@@ -5393,6 +7013,14 @@ bind()
 
 checkGLSupport()
 
+checkStatus()
+
+createAndAttachDepthStencilTexture()
+
+createAndAttachRenderbuffer()
+
+createAndAttachTexture()
+
 draw()
 
 end()
@@ -5462,6 +7090,10 @@ disableNormals()
 
 disableTextures()
 
+draw()
+
+drawInstanced()
+
 enableColors()
 
 enableIndices()
@@ -5470,7 +7102,11 @@ enableNormals()
 
 enableTextures()
 
+getVbo()
+
 ofVboMesh()
+
+operator=()
 
 setUsage()
 
@@ -5497,7 +7133,11 @@ clear()
 
 clearAlpha()
 
+disableAntiAliasing()
+
 disablePointSprites()
+
+disableTextureTarget()
 
 draw()
 
@@ -5515,7 +7155,11 @@ drawString()
 
 drawTriangle()
 
+enableAntiAliasing()
+
 enablePointSprites()
+
+enableTextureTarget()
 
 getBgColor()
 
@@ -5525,6 +7169,8 @@ getCurrentViewport()
 
 getFillMode()
 
+getNativeViewport()
+
 getRectMode()
 
 getType()
@@ -5533,9 +7179,13 @@ getViewportHeight()
 
 getViewportWidth()
 
+isVFlipped()
+
 loadIdentityMatrix()
 
 loadMatrix()
+
+matrixMode()
 
 multMatrix()
 
@@ -5573,6 +7223,8 @@ setCoordHandedness()
 
 setCurrentFBO()
 
+setDepthTest()
+
 setFillMode()
 
 setHexColor()
@@ -5580,6 +7232,8 @@ setHexColor()
 setLineSmoothing()
 
 setLineWidth()
+
+setOrientation()
 
 setRectMode()
 
@@ -5592,6 +7246,8 @@ setupScreen()
 setupScreenOrtho()
 
 setupScreenPerspective()
+
+texturesNeedVFlip()
 
 translate()
 
@@ -5636,6 +7292,8 @@ setEmissiveColor()
 setShininess()
 
 setSpecularColor()
+
+~ofMaterial()
 
 //----------------------
 

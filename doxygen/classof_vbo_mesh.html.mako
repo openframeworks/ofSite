@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -51,7 +52,6 @@
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="classof_vbo_mesh-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ofVboMesh Class Reference</div>  </div>
@@ -75,6 +75,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af148219c2bf064301d81403b0582abb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeeba79d4aa3c81e2723d0bb715a4fad3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo_mesh.html#aeeba79d4aa3c81e2723d0bb715a4fad3">ofVboMesh</a> (const <a class="el" href="classof_mesh.html">ofMesh</a> &amp;mom)</td></tr>
 <tr class="separator:aeeba79d4aa3c81e2723d0bb715a4fad3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8a9255bf34b592407ec60a4a8b7df05"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo_mesh.html#ad8a9255bf34b592407ec60a4a8b7df05">operator=</a> (const <a class="el" href="classof_mesh.html">ofMesh</a> &amp;mom)</td></tr>
+<tr class="separator:ad8a9255bf34b592407ec60a4a8b7df05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac02e0fd9f08d40fb9d8cc63838654fd8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo_mesh.html#ac02e0fd9f08d40fb9d8cc63838654fd8">setUsage</a> (int usage)</td></tr>
 <tr class="separator:ac02e0fd9f08d40fb9d8cc63838654fd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a944e9c341cfbc9d5f58b4adbef5a504d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo_mesh.html#a944e9c341cfbc9d5f58b4adbef5a504d">enableColors</a> ()</td></tr>
@@ -93,18 +95,24 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a45273d9354958b9d12db86b7ab2f9ccf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5dceef973800c07e2ae8521ce5ae2565"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo_mesh.html#a5dceef973800c07e2ae8521ce5ae2565">disableIndices</a> ()</td></tr>
 <tr class="separator:a5dceef973800c07e2ae8521ce5ae2565"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acfd2524c03259af19530a0dea79b7176"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo_mesh.html#acfd2524c03259af19530a0dea79b7176">usingColors</a> ()</td></tr>
-<tr class="separator:acfd2524c03259af19530a0dea79b7176"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:affa61252a0e089429d2d02de95f75ba3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo_mesh.html#affa61252a0e089429d2d02de95f75ba3">usingTextures</a> ()</td></tr>
-<tr class="separator:affa61252a0e089429d2d02de95f75ba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45b858facc3cd6d488516f8f94e6084c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo_mesh.html#a45b858facc3cd6d488516f8f94e6084c">usingNormals</a> ()</td></tr>
-<tr class="separator:a45b858facc3cd6d488516f8f94e6084c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59a6365925e91d14ed543c03e2d4af77"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo_mesh.html#a59a6365925e91d14ed543c03e2d4af77">usingIndices</a> ()</td></tr>
-<tr class="separator:a59a6365925e91d14ed543c03e2d4af77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e6921c032ff4965492145c3a250e053"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo_mesh.html#a5e6921c032ff4965492145c3a250e053">usingColors</a> () const </td></tr>
+<tr class="separator:a5e6921c032ff4965492145c3a250e053"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23aff6537576e58b00ba3467e87e0d65"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo_mesh.html#a23aff6537576e58b00ba3467e87e0d65">usingTextures</a> () const </td></tr>
+<tr class="separator:a23aff6537576e58b00ba3467e87e0d65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9024f6fa98bb129872230a14575bb390"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo_mesh.html#a9024f6fa98bb129872230a14575bb390">usingNormals</a> () const </td></tr>
+<tr class="separator:a9024f6fa98bb129872230a14575bb390"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab037c349d5079cdf8d21288461c7f30"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo_mesh.html#aab037c349d5079cdf8d21288461c7f30">usingIndices</a> () const </td></tr>
+<tr class="separator:aab037c349d5079cdf8d21288461c7f30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a2216a500fc32692d02e78f0405e801"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo_mesh.html#a5a2216a500fc32692d02e78f0405e801">draw</a> (<a class="el" href="of_g_l_utils_8h.html#a6beb1fbbaba728909c78cda1eadfe28e">ofPolyRenderMode</a> drawMode)</td></tr>
+<tr class="separator:a5a2216a500fc32692d02e78f0405e801"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2d320054647766b1006a7c51dd48c43"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo_mesh.html#ab2d320054647766b1006a7c51dd48c43">drawInstanced</a> (<a class="el" href="of_g_l_utils_8h.html#a6beb1fbbaba728909c78cda1eadfe28e">ofPolyRenderMode</a> drawMode, int primCount)</td></tr>
+<tr class="separator:ab2d320054647766b1006a7c51dd48c43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4a96e9b2b52c36e851b3b3352dd28ad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_vbo.html">ofVbo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo_mesh.html#ab4a96e9b2b52c36e851b3b3352dd28ad">getVbo</a> ()</td></tr>
+<tr class="separator:ab4a96e9b2b52c36e851b3b3352dd28ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classof_mesh"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classof_mesh')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classof_mesh.html">ofMesh</a></td></tr>
 <tr class="memitem:a3ffeb1343321a13b07250eae05ce357e inherit pub_methods_classof_mesh"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a3ffeb1343321a13b07250eae05ce357e">ofMesh</a> ()</td></tr>
 <tr class="separator:a3ffeb1343321a13b07250eae05ce357e inherit pub_methods_classof_mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a519331c973bbf145a43edfa6636f7fd2 inherit pub_methods_classof_mesh"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a519331c973bbf145a43edfa6636f7fd2">ofMesh</a> (<a class="el" href="of_g_l_utils_8h.html#a0f71f0b23a18629a446952d5540e16e0">ofPrimitiveMode</a> mode, const vector&lt; <a class="el" href="classof_vec3f.html">ofVec3f</a> &gt; &amp;<a class="el" href="of_bitmap_font_8cpp.html#aaebd14048566bff4d6920e945b7de664">verts</a>)</td></tr>
+<tr class="memitem:a519331c973bbf145a43edfa6636f7fd2 inherit pub_methods_classof_mesh"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a519331c973bbf145a43edfa6636f7fd2">ofMesh</a> (<a class="el" href="of_g_l_utils_8h.html#a0f71f0b23a18629a446952d5540e16e0">ofPrimitiveMode</a> mode, const vector&lt; <a class="el" href="classof_vec3f.html">ofVec3f</a> &gt; &amp;verts)</td></tr>
 <tr class="separator:a519331c973bbf145a43edfa6636f7fd2 inherit pub_methods_classof_mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7caa88fce14c9aa5b5f67a094b6233ba inherit pub_methods_classof_mesh"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a7caa88fce14c9aa5b5f67a094b6233ba">~ofMesh</a> ()</td></tr>
 <tr class="separator:a7caa88fce14c9aa5b5f67a094b6233ba inherit pub_methods_classof_mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -120,9 +128,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a57998157b1b7e041930ad775c5d5ffc8 inherit pub_methods_classof_mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14be43bd2e272fed5e030d4f51e61dbf inherit pub_methods_classof_mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a14be43bd2e272fed5e030d4f51e61dbf">addVertex</a> (const <a class="el" href="classof_vec3f.html">ofVec3f</a> &amp;v)</td></tr>
 <tr class="separator:a14be43bd2e272fed5e030d4f51e61dbf inherit pub_methods_classof_mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71e7a3d050abd65ec3cf881535df889e inherit pub_methods_classof_mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a71e7a3d050abd65ec3cf881535df889e">addVertices</a> (const vector&lt; <a class="el" href="classof_vec3f.html">ofVec3f</a> &gt; &amp;<a class="el" href="of_bitmap_font_8cpp.html#aaebd14048566bff4d6920e945b7de664">verts</a>)</td></tr>
+<tr class="memitem:a71e7a3d050abd65ec3cf881535df889e inherit pub_methods_classof_mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a71e7a3d050abd65ec3cf881535df889e">addVertices</a> (const vector&lt; <a class="el" href="classof_vec3f.html">ofVec3f</a> &gt; &amp;verts)</td></tr>
 <tr class="separator:a71e7a3d050abd65ec3cf881535df889e inherit pub_methods_classof_mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a5b693358f1771b6c8f150303c52655 inherit pub_methods_classof_mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a9a5b693358f1771b6c8f150303c52655">addVertices</a> (const <a class="el" href="classof_vec3f.html">ofVec3f</a> *<a class="el" href="of_bitmap_font_8cpp.html#aaebd14048566bff4d6920e945b7de664">verts</a>, int amt)</td></tr>
+<tr class="memitem:a9a5b693358f1771b6c8f150303c52655 inherit pub_methods_classof_mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a9a5b693358f1771b6c8f150303c52655">addVertices</a> (const <a class="el" href="classof_vec3f.html">ofVec3f</a> *verts, int amt)</td></tr>
 <tr class="separator:a9a5b693358f1771b6c8f150303c52655 inherit pub_methods_classof_mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93e16441ec4d64399e2a73d2078c1521 inherit pub_methods_classof_mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a93e16441ec4d64399e2a73d2078c1521">removeVertex</a> (<a class="el" href="of_constants_8h.html#ad4acc3774c730c65a67b4419154717d3">ofIndexType</a> index)</td></tr>
 <tr class="separator:a93e16441ec4d64399e2a73d2078c1521 inherit pub_methods_classof_mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -254,16 +262,16 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:acd571a2fb9cf9c3eb4baa7db60097e49 inherit pub_methods_classof_mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a720d91d34321fb273c585b8469215efd inherit pub_methods_classof_mesh"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a720d91d34321fb273c585b8469215efd">haveIndicesChanged</a> ()</td></tr>
 <tr class="separator:a720d91d34321fb273c585b8469215efd inherit pub_methods_classof_mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07acb9241b3fa789bf6ffb32d31439d8 inherit pub_methods_classof_mesh"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a07acb9241b3fa789bf6ffb32d31439d8">hasVertices</a> ()</td></tr>
-<tr class="separator:a07acb9241b3fa789bf6ffb32d31439d8 inherit pub_methods_classof_mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24c09fd7825c947d089487182c56ea45 inherit pub_methods_classof_mesh"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a24c09fd7825c947d089487182c56ea45">hasColors</a> ()</td></tr>
-<tr class="separator:a24c09fd7825c947d089487182c56ea45 inherit pub_methods_classof_mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11804f7e3f242e32e5970c2e6e89975d inherit pub_methods_classof_mesh"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a11804f7e3f242e32e5970c2e6e89975d">hasNormals</a> ()</td></tr>
-<tr class="separator:a11804f7e3f242e32e5970c2e6e89975d inherit pub_methods_classof_mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acde62714579a941f57de587874a4050e inherit pub_methods_classof_mesh"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#acde62714579a941f57de587874a4050e">hasTexCoords</a> ()</td></tr>
-<tr class="separator:acde62714579a941f57de587874a4050e inherit pub_methods_classof_mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08150f40370116168878f31dcb5b12b5 inherit pub_methods_classof_mesh"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a08150f40370116168878f31dcb5b12b5">hasIndices</a> ()</td></tr>
-<tr class="separator:a08150f40370116168878f31dcb5b12b5 inherit pub_methods_classof_mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8ee220b47ff0009c08e3a342c8fde5b inherit pub_methods_classof_mesh"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#ac8ee220b47ff0009c08e3a342c8fde5b">hasVertices</a> () const </td></tr>
+<tr class="separator:ac8ee220b47ff0009c08e3a342c8fde5b inherit pub_methods_classof_mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6be53b0d38750bac37466a2afb80df4 inherit pub_methods_classof_mesh"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#ab6be53b0d38750bac37466a2afb80df4">hasColors</a> () const </td></tr>
+<tr class="separator:ab6be53b0d38750bac37466a2afb80df4 inherit pub_methods_classof_mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4eac00436a63515c933d91f87d1f8b26 inherit pub_methods_classof_mesh"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a4eac00436a63515c933d91f87d1f8b26">hasNormals</a> () const </td></tr>
+<tr class="separator:a4eac00436a63515c933d91f87d1f8b26 inherit pub_methods_classof_mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3045440dd2c5afefe6966c916ad1799f inherit pub_methods_classof_mesh"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a3045440dd2c5afefe6966c916ad1799f">hasTexCoords</a> () const </td></tr>
+<tr class="separator:a3045440dd2c5afefe6966c916ad1799f inherit pub_methods_classof_mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a777bb666983203c64004e54dde51708a inherit pub_methods_classof_mesh"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a777bb666983203c64004e54dde51708a">hasIndices</a> () const </td></tr>
+<tr class="separator:a777bb666983203c64004e54dde51708a inherit pub_methods_classof_mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acefb2d5ed24498988ecbf4f5dc5fa898 inherit pub_methods_classof_mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#acefb2d5ed24498988ecbf4f5dc5fa898">drawVertices</a> ()</td></tr>
 <tr class="separator:acefb2d5ed24498988ecbf4f5dc5fa898 inherit pub_methods_classof_mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbcca7869370497dd2d9b486ec4898a6 inherit pub_methods_classof_mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#adbcca7869370497dd2d9b486ec4898a6">drawWireframe</a> ()</td></tr>
@@ -274,13 +282,44 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa97850592c56c4e52492afe0a5643c93 inherit pub_methods_classof_mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb6eef7eab7f4e7295f9da212c3c9aeb inherit pub_methods_classof_mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#acb6eef7eab7f4e7295f9da212c3c9aeb">load</a> (string path)</td></tr>
 <tr class="separator:acb6eef7eab7f4e7295f9da212c3c9aeb inherit pub_methods_classof_mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96651b29dff40248e2334da73e33e728 inherit pub_methods_classof_mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a96651b29dff40248e2334da73e33e728">save</a> (string path, bool useBinary=false)</td></tr>
-<tr class="separator:a96651b29dff40248e2334da73e33e728 inherit pub_methods_classof_mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae945f4e97fce6c90bb39b0c3e1928b2b inherit pub_methods_classof_mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#ae945f4e97fce6c90bb39b0c3e1928b2b">save</a> (string path, bool useBinary=false) const </td></tr>
+<tr class="separator:ae945f4e97fce6c90bb39b0c3e1928b2b inherit pub_methods_classof_mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af54d91dacec03b8db527eff91da6ffbd inherit pub_methods_classof_mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#af54d91dacec03b8db527eff91da6ffbd">append</a> (<a class="el" href="classof_mesh.html">ofMesh</a> &amp;mesh)</td></tr>
+<tr class="separator:af54d91dacec03b8db527eff91da6ffbd inherit pub_methods_classof_mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f0875a7da176aa4a7c4c656a46385bf inherit pub_methods_classof_mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a8f0875a7da176aa4a7c4c656a46385bf">setColorForIndices</a> (int startIndex, int endIndex, <a class="el" href="of_color_8h.html#a7e21e1ce5fd475dd6ffb9124c55e00dd">ofColor</a> color)</td></tr>
+<tr class="separator:a8f0875a7da176aa4a7c4c656a46385bf inherit pub_methods_classof_mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fbb52b77cfef1a78234cd6e9ab960cf inherit pub_methods_classof_mesh"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_mesh.html">ofMesh</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a4fbb52b77cfef1a78234cd6e9ab960cf">getMeshForIndices</a> (int startIndex, int endIndex) const </td></tr>
+<tr class="separator:a4fbb52b77cfef1a78234cd6e9ab960cf inherit pub_methods_classof_mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a840c3e2a213e01af9b190152ecbfa27c inherit pub_methods_classof_mesh"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_mesh.html">ofMesh</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a840c3e2a213e01af9b190152ecbfa27c">getMeshForIndices</a> (int startIndex, int endIndex, int startVertIndex, int endVertIndex) const </td></tr>
+<tr class="separator:a840c3e2a213e01af9b190152ecbfa27c inherit pub_methods_classof_mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ad0c698acc3c5dfc9fe33ddc9eef291 inherit pub_methods_classof_mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a9ad0c698acc3c5dfc9fe33ddc9eef291">mergeDuplicateVertices</a> ()</td></tr>
+<tr class="separator:a9ad0c698acc3c5dfc9fe33ddc9eef291 inherit pub_methods_classof_mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade10f4e157ed99e74a1f3f0bc0823a43 inherit pub_methods_classof_mesh"><td class="memItemLeft" align="right" valign="top">const vector&lt; <a class="el" href="classof_mesh_face.html">ofMeshFace</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#ade10f4e157ed99e74a1f3f0bc0823a43">getUniqueFaces</a> () const </td></tr>
+<tr class="separator:ade10f4e157ed99e74a1f3f0bc0823a43 inherit pub_methods_classof_mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7f92489a2476fc476c0f95231e16a7a inherit pub_methods_classof_mesh"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="classof_vec3f.html">ofVec3f</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#ab7f92489a2476fc476c0f95231e16a7a">getFaceNormals</a> (bool perVetex=false) const </td></tr>
+<tr class="separator:ab7f92489a2476fc476c0f95231e16a7a inherit pub_methods_classof_mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afeb448ae4f175099f6cc36106e5d4279 inherit pub_methods_classof_mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#afeb448ae4f175099f6cc36106e5d4279">setFromTriangles</a> (const vector&lt; <a class="el" href="classof_mesh_face.html">ofMeshFace</a> &gt; &amp;tris, bool bUseFaceNormal=false)</td></tr>
+<tr class="separator:afeb448ae4f175099f6cc36106e5d4279 inherit pub_methods_classof_mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8f5b239deb5f0e06a02f0c82fc84957 inherit pub_methods_classof_mesh"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#ab8f5b239deb5f0e06a02f0c82fc84957">smoothNormals</a> (float angle)</td></tr>
+<tr class="separator:ab8f5b239deb5f0e06a02f0c82fc84957 inherit pub_methods_classof_mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr class="memitem:a5a2216a500fc32692d02e78f0405e801"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_vbo_mesh.html#a5a2216a500fc32692d02e78f0405e801">draw</a> (<a class="el" href="of_g_l_utils_8h.html#a6beb1fbbaba728909c78cda1eadfe28e">ofPolyRenderMode</a> drawMode)</td></tr>
-<tr class="separator:a5a2216a500fc32692d02e78f0405e801"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_static_methods_classof_mesh"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classof_mesh')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classof_mesh.html">ofMesh</a></td></tr>
+<tr class="memitem:a6af08c9c7a3f557b10b2fa29ed1246bf inherit pub_static_methods_classof_mesh"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classof_mesh.html">ofMesh</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a6af08c9c7a3f557b10b2fa29ed1246bf">plane</a> (float <a class="el" href="of_icon_8h.html#aca34d28e3d8bcbcadb8edb4e3af24f8c">width</a>, float <a class="el" href="of_icon_8h.html#ab2e78c61905b4419fcc7b4cfc500fe85">height</a>, int columns=2, int rows=2, <a class="el" href="of_g_l_utils_8h.html#a0f71f0b23a18629a446952d5540e16e0">ofPrimitiveMode</a> mode=<a class="el" href="of_g_l_utils_8h.html#a0f71f0b23a18629a446952d5540e16e0a5799605679284702ca188191180c44c6">OF_PRIMITIVE_TRIANGLE_STRIP</a>)</td></tr>
+<tr class="separator:a6af08c9c7a3f557b10b2fa29ed1246bf inherit pub_static_methods_classof_mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12a08517b4c200b159f78f4594c95469 inherit pub_static_methods_classof_mesh"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classof_mesh.html">ofMesh</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a12a08517b4c200b159f78f4594c95469">sphere</a> (float radius, int res=12, <a class="el" href="of_g_l_utils_8h.html#a0f71f0b23a18629a446952d5540e16e0">ofPrimitiveMode</a> mode=<a class="el" href="of_g_l_utils_8h.html#a0f71f0b23a18629a446952d5540e16e0a5799605679284702ca188191180c44c6">OF_PRIMITIVE_TRIANGLE_STRIP</a>)</td></tr>
+<tr class="separator:a12a08517b4c200b159f78f4594c95469 inherit pub_static_methods_classof_mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a045e6acc171f203e4eebf089f0905fdf inherit pub_static_methods_classof_mesh"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classof_mesh.html">ofMesh</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a045e6acc171f203e4eebf089f0905fdf">icosahedron</a> (float radius)</td></tr>
+<tr class="separator:a045e6acc171f203e4eebf089f0905fdf inherit pub_static_methods_classof_mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeff5b066cc0ce3121946c534572618e3 inherit pub_static_methods_classof_mesh"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classof_mesh.html">ofMesh</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#aeff5b066cc0ce3121946c534572618e3">icosphere</a> (float radius, int iterations=2)</td></tr>
+<tr class="separator:aeff5b066cc0ce3121946c534572618e3 inherit pub_static_methods_classof_mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ea7154b0a3bc98680813ef1dbf0cbda inherit pub_static_methods_classof_mesh"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classof_mesh.html">ofMesh</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a2ea7154b0a3bc98680813ef1dbf0cbda">cylinder</a> (float radius, float <a class="el" href="of_icon_8h.html#ab2e78c61905b4419fcc7b4cfc500fe85">height</a>, int radiusSegments=12, int heightSegments=6, int numCapSegments=2, bool bCapped=true, <a class="el" href="of_g_l_utils_8h.html#a0f71f0b23a18629a446952d5540e16e0">ofPrimitiveMode</a> mode=<a class="el" href="of_g_l_utils_8h.html#a0f71f0b23a18629a446952d5540e16e0a5799605679284702ca188191180c44c6">OF_PRIMITIVE_TRIANGLE_STRIP</a>)</td></tr>
+<tr class="separator:a2ea7154b0a3bc98680813ef1dbf0cbda inherit pub_static_methods_classof_mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41c4a867973347df2662c9273ee82067 inherit pub_static_methods_classof_mesh"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classof_mesh.html">ofMesh</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a41c4a867973347df2662c9273ee82067">cone</a> (float radius, float <a class="el" href="of_icon_8h.html#ab2e78c61905b4419fcc7b4cfc500fe85">height</a>, int radiusSegments=12, int heightSegments=6, int capSegments=2, <a class="el" href="of_g_l_utils_8h.html#a0f71f0b23a18629a446952d5540e16e0">ofPrimitiveMode</a> mode=<a class="el" href="of_g_l_utils_8h.html#a0f71f0b23a18629a446952d5540e16e0a5799605679284702ca188191180c44c6">OF_PRIMITIVE_TRIANGLE_STRIP</a>)</td></tr>
+<tr class="separator:a41c4a867973347df2662c9273ee82067 inherit pub_static_methods_classof_mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b134e9f9570c68a0ddf0fbb2e4ba2c1 inherit pub_static_methods_classof_mesh"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classof_mesh.html">ofMesh</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a1b134e9f9570c68a0ddf0fbb2e4ba2c1">box</a> (float <a class="el" href="of_icon_8h.html#aca34d28e3d8bcbcadb8edb4e3af24f8c">width</a>, float <a class="el" href="of_icon_8h.html#ab2e78c61905b4419fcc7b4cfc500fe85">height</a>, float depth, int resX=2, int resY=2, int resZ=2)</td></tr>
+<tr class="separator:a1b134e9f9570c68a0ddf0fbb2e4ba2c1 inherit pub_static_methods_classof_mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="af148219c2bf064301d81403b0582abb5"></a>
@@ -432,12 +471,38 @@ Protected Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Reimplemented from <a class="el" href="classof_mesh.html#aa69e4d157ce3f84cad22fbf996b5f11c">ofMesh</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab2d320054647766b1006a7c51dd48c43"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofVboMesh::drawInstanced </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="of_g_l_utils_8h.html#a6beb1fbbaba728909c78cda1eadfe28e">ofPolyRenderMode</a>&#160;</td>
+          <td class="paramname"><em>drawMode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>primCount</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -541,6 +606,37 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ab4a96e9b2b52c36e851b3b3352dd28ad"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classof_vbo.html">ofVbo</a> &amp; ofVboMesh::getVbo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad8a9255bf34b592407ec60a4a8b7df05"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofVboMesh::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classof_mesh.html">ofMesh</a> &amp;&#160;</td>
+          <td class="paramname"><em>mom</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="ac02e0fd9f08d40fb9d8cc63838654fd8"></a>
 <div class="memitem">
 <div class="memproto">
@@ -557,7 +653,7 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="acfd2524c03259af19530a0dea79b7176"></a>
+<a class="anchor" id="a5e6921c032ff4965492145c3a250e053"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -568,7 +664,7 @@ Protected Member Functions</h2></td></tr>
           <td class="memname">bool ofVboMesh::usingColors </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -578,11 +674,11 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classof_mesh.html#a5df118b768d5a0fbea4a049f51e416b9">ofMesh</a>.</p>
+<p>Reimplemented from <a class="el" href="classof_mesh.html#a930ae5dfae694b50444fe57472ee040d">ofMesh</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a59a6365925e91d14ed543c03e2d4af77"></a>
+<a class="anchor" id="aab037c349d5079cdf8d21288461c7f30"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -593,7 +689,7 @@ Protected Member Functions</h2></td></tr>
           <td class="memname">bool ofVboMesh::usingIndices </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -603,11 +699,11 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classof_mesh.html#a6f0709db4b821a089315c08a8242334f">ofMesh</a>.</p>
+<p>Reimplemented from <a class="el" href="classof_mesh.html#ad4a3190b6464e5ea653e7c74c47d5bec">ofMesh</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a45b858facc3cd6d488516f8f94e6084c"></a>
+<a class="anchor" id="a9024f6fa98bb129872230a14575bb390"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -618,7 +714,7 @@ Protected Member Functions</h2></td></tr>
           <td class="memname">bool ofVboMesh::usingNormals </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -628,11 +724,11 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classof_mesh.html#ac3e2bf43f4a562c6de7c339f613410af">ofMesh</a>.</p>
+<p>Reimplemented from <a class="el" href="classof_mesh.html#a006a5c8f5f504680ea11592dd827b414">ofMesh</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="affa61252a0e089429d2d02de95f75ba3"></a>
+<a class="anchor" id="a23aff6537576e58b00ba3467e87e0d65"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -643,7 +739,7 @@ Protected Member Functions</h2></td></tr>
           <td class="memname">bool ofVboMesh::usingTextures </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -653,13 +749,13 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classof_mesh.html#a46ec7b2c0a666d25fed456efa77736a1">ofMesh</a>.</p>
+<p>Reimplemented from <a class="el" href="classof_mesh.html#ac929f150c5a0b97208bf1e395b3fb57f">ofMesh</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>gl/<a class="el" href="of_vbo_mesh_8h_source.html">ofVboMesh.h</a></li>
-<li>gl/<a class="el" href="of_vbo_mesh_8cpp.html">ofVboMesh.cpp</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/gl/<a class="el" href="of_vbo_mesh_8h_source.html">ofVboMesh.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/gl/<a class="el" href="of_vbo_mesh_8cpp.html">ofVboMesh.cpp</a></li>
 </ul>
 </div><!-- contents -->
 

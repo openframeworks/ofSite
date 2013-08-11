@@ -167,7 +167,7 @@ _name: draw_
 _returns: void_
 _returns_description: _
 _parameters: ofPolyRenderMode drawMode_
-_access: protected_
+_access: public_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -179,6 +179,34 @@ _advanced: False_
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void drawInstanced(drawMode, primCount)
+
+<!--
+_syntax: drawInstanced(drawMode, primCount)_
+_name: drawInstanced_
+_returns: void_
+_returns_description: _
+_parameters: ofPolyRenderMode drawMode, int primCount_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -304,6 +332,34 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###ofVbo getVbo()
+
+<!--
+_syntax: getVbo()_
+_name: getVbo_
+_returns: ofVbo_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ### ofVboMesh(mom)
 
 <!--
@@ -391,6 +447,34 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void operator=(&mom)
+
+<!--
+_syntax: operator=(&mom)_
+_name: operator=_
+_returns: void_
+_returns_description: _
+_parameters: const ofMesh &mom_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void setUsage(usage)
 
 <!--
@@ -411,6 +495,34 @@ _advanced: False_
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void updateVbo()
+
+<!--
+_syntax: updateVbo()_
+_name: updateVbo_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: private_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 

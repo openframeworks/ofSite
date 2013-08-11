@@ -524,6 +524,34 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void setAutoDistance(bAutoDistance)
+
+<!--
+_syntax: setAutoDistance(bAutoDistance)_
+_name: setAutoDistance_
+_returns: void_
+_returns_description: _
+_parameters: bool bAutoDistance_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void setDistance(distance)
 
 <!--
@@ -863,6 +891,30 @@ _advanced: False_
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool bAutoDistance
+
+<!--
+_name: bAutoDistance_
+_type: bool_
+_access: private_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 

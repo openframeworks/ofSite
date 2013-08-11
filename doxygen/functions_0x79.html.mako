@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -52,6 +53,7 @@
       <li class="current"><a href="functions.html"><span>All</span></a></li>
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_type.html"><span>Typedefs</span></a></li>
       <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
       <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
       <li><a href="functions_prop.html"><span>Properties</span></a></li>
@@ -96,14 +98,12 @@
 
 <h3><a class="anchor" id="index_y"></a>- y -</h3><ul>
 <li>y
-: <a class="el" href="classof_mouse_event_args.html#a21ec4225aa52dfd393bf26db59421756">ofMouseEventArgs</a>
-, <a class="el" href="classof_touch_event_args.html#a43699b7fac9385dc3eaf12948cf7354f">ofTouchEventArgs</a>
+: <a class="el" href="classof_vec2f.html#a4be985445b601e54d3ca5917c3d7ac8d">ofVec2f</a>
 , <a class="el" href="classof_vec3f.html#aa6ae388131850902c9de244d12931f49">ofVec3f</a>
-, <a class="el" href="classof_quaternion.html#aa17e4332c00adca6d87480c564a0e86c">ofQuaternion</a>
-, <a class="el" href="classof_vec4f.html#a6660d60e0af7f9db6d224061dabd4cae">ofVec4f</a>
-, <a class="el" href="classof_vec2f.html#a4be985445b601e54d3ca5917c3d7ac8d">ofVec2f</a>
 , <a class="el" href="classof_rectangle.html#a3eb931b086dc743355b7e1c06ff0ffcf">ofRectangle</a>
 , <a class="el" href="classof_quaternion.html#a9c8f391cfb5b60171d7d394fcb93ad00">ofQuaternion</a>
+, <a class="el" href="classof_vec4f.html#a6660d60e0af7f9db6d224061dabd4cae">ofVec4f</a>
+, <a class="el" href="classof_quaternion.html#aa17e4332c00adca6d87480c564a0e86c">ofQuaternion</a>
 </li>
 <li>y1
 : <a class="el" href="structchar_props.html#adb4ee878b12e5c0f0581c35adb654bf4">charProps</a>

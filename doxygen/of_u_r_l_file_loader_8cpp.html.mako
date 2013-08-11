@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -47,7 +48,7 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_cbdb8362360e11eafe2fa3bc74cf0ffd.html">utils</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_84d5b34cee6369a03c8d1f3b970ed216.html">openFrameworks</a></li><li class="navelem"><a class="el" href="dir_526ceb304abbba6426340f0fa9170dbd.html">utils</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -57,10 +58,9 @@
 <div class="title">ofURLFileLoader.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="of_u_r_l_file_loader_8h_source.html">ofURLFileLoader.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="of_app_runner_8h_source.html">ofAppRunner.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="of_utils_8h_source.html">ofUtils.h</a>&quot;</code><br/>
+<div class="textblock"><code>#include &quot;Poco/Net/HTTPSession.h&quot;</code><br/>
 <code>#include &quot;Poco/Net/HTTPClientSession.h&quot;</code><br/>
+<code>#include &quot;Poco/Net/HTTPSClientSession.h&quot;</code><br/>
 <code>#include &quot;Poco/Net/HTTPRequest.h&quot;</code><br/>
 <code>#include &quot;Poco/Net/HTTPResponse.h&quot;</code><br/>
 <code>#include &quot;Poco/StreamCopier.h&quot;</code><br/>
@@ -69,6 +69,13 @@
 <code>#include &quot;Poco/Exception.h&quot;</code><br/>
 <code>#include &quot;Poco/URIStreamOpener.h&quot;</code><br/>
 <code>#include &quot;Poco/Net/HTTPStreamFactory.h&quot;</code><br/>
+<code>#include &quot;Poco/Net/HTTPSStreamFactory.h&quot;</code><br/>
+<code>#include &quot;Poco/Net/SSLManager.h&quot;</code><br/>
+<code>#include &quot;Poco/Net/KeyConsoleHandler.h&quot;</code><br/>
+<code>#include &quot;Poco/Net/ConsoleCertificateHandler.h&quot;</code><br/>
+<code>#include &quot;<a class="el" href="of_u_r_l_file_loader_8h_source.html">ofURLFileLoader.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="of_app_runner_8h_source.html">ofAppRunner.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="of_utils_8h_source.html">ofUtils.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="of_constants_8h_source.html">ofConstants.h</a>&quot;</code><br/>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -87,6 +94,8 @@ Functions</h2></td></tr>
 <tr class="separator:a7fd0bfe54ea212ec613472e805760dc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd2a31da593d20eb5f88e39281addc9c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_u_r_l_file_loader_8cpp.html#afd2a31da593d20eb5f88e39281addc9c">ofRemoveAllURLRequests</a> ()</td></tr>
 <tr class="separator:afd2a31da593d20eb5f88e39281addc9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4bb67c141481d1d14f9125e5b0ffc20"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_u_r_l_file_loader_8cpp.html#ae4bb67c141481d1d14f9125e5b0ffc20">ofStopURLLoader</a> ()</td></tr>
+<tr class="separator:ae4bb67c141481d1d14f9125e5b0ffc20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="aec7231f38cb45134601a635d4bd96e9a"></a>
@@ -208,6 +217,21 @@ Functions</h2></td></tr>
           <td></td>
           <td>)</td>
           <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae4bb67c141481d1d14f9125e5b0ffc20"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofStopURLLoader </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">

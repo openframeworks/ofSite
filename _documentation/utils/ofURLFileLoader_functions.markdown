@@ -197,6 +197,33 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###ofEvent ofURLResponseEvent()
+
+<!--
+_syntax: ofURLResponseEvent()_
+_name: ofURLResponseEvent_
+_returns: ofEvent_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void ofUnregisterURLNotification(*obj)
 
 <!--

@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -47,19 +48,20 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_e79632891301b850df87e9c0030293fa.html">graphics</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_84d5b34cee6369a03c8d1f3b970ed216.html">openFrameworks</a></li><li class="navelem"><a class="el" href="dir_71ce5ed87e0eac5aae2f3eaf44c16fe2.html">graphics</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">ofBitmapFont.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="of_bitmap_font_8h_source.html">ofBitmapFont.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="of_graphics_8h_source.html">ofGraphics.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="of_texture_8h_source.html">ofTexture.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="of_g_l_programmable_renderer_8h_source.html">ofGLProgrammableRenderer.h</a>&quot;</code><br/>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -69,19 +71,93 @@ Functions</h2></td></tr>
 <tr class="separator:a8aed50a1a71aa2f298c8adbc5a7967e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8714b17241d96a407484a2e4eab162b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_bitmap_font_8cpp.html#a8714b17241d96a407484a2e4eab162b7">ofDrawBitmapCharacterEnd</a> ()</td></tr>
 <tr class="separator:a8714b17241d96a407484a2e4eab162b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:a142ab4a9356936e33a61a3a075d94d0e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_texture.html">ofTexture</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_bitmap_font_8cpp.html#a142ab4a9356936e33a61a3a075d94d0e">glesBitmappedFontTexture</a></td></tr>
-<tr class="separator:a142ab4a9356936e33a61a3a075d94d0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ea4d76650ae78b4121335b9c947fb0d"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_bitmap_font_8cpp.html#a6ea4d76650ae78b4121335b9c947fb0d">myLetterPixels</a> [16 *16 *16 *16 *2]</td></tr>
-<tr class="separator:a6ea4d76650ae78b4121335b9c947fb0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b47debd3e66fb49969e94cd79327c1a"><td class="memItemLeft" align="right" valign="top">vector&lt; GLfloat &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_bitmap_font_8cpp.html#a6b47debd3e66fb49969e94cd79327c1a">coords</a></td></tr>
-<tr class="separator:a6b47debd3e66fb49969e94cd79327c1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaebd14048566bff4d6920e945b7de664"><td class="memItemLeft" align="right" valign="top">vector&lt; GLfloat &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_bitmap_font_8cpp.html#aaebd14048566bff4d6920e945b7de664">verts</a></td></tr>
-<tr class="separator:aaebd14048566bff4d6920e945b7de664"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f8b919cf6929f177dafc26e0210250f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_mesh.html">ofMesh</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_bitmap_font_8cpp.html#a0f8b919cf6929f177dafc26e0210250f">ofBitmapStringGetMesh</a> (const string &amp;text, int x, int y)</td></tr>
+<tr class="separator:a0f8b919cf6929f177dafc26e0210250f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ddf43c67faa9d099c504711bc8156de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_texture.html">ofTexture</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_bitmap_font_8cpp.html#a1ddf43c67faa9d099c504711bc8156de">ofBitmapStringGetTextureRef</a> ()</td></tr>
+<tr class="separator:a1ddf43c67faa9d099c504711bc8156de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40a95815f04bc1280b26be68ab15eaec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_rectangle.html">ofRectangle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_bitmap_font_8cpp.html#a40a95815f04bc1280b26be68ab15eaec">ofBitmapStringGetBoundingBox</a> (const string &amp;text, int x, int y)</td></tr>
+<tr class="separator:a40a95815f04bc1280b26be68ab15eaec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="a40a95815f04bc1280b26be68ab15eaec"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classof_rectangle.html">ofRectangle</a> ofBitmapStringGetBoundingBox </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0f8b919cf6929f177dafc26e0210250f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classof_mesh.html">ofMesh</a>&amp; ofBitmapStringGetMesh </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1ddf43c67faa9d099c504711bc8156de"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classof_texture.html">ofTexture</a>&amp; ofBitmapStringGetTextureRef </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a9486c61bc518dbffb0fd0256d46d88a0"></a>
 <div class="memitem">
 <div class="memproto">
@@ -139,55 +215,6 @@ Variables</h2></td></tr>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>stringLength</em></td><td>)</td>
           <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a class="anchor" id="a6b47debd3e66fb49969e94cd79327c1a"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">vector&lt;GLfloat&gt; coords</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a142ab4a9356936e33a61a3a075d94d0e"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classof_texture.html">ofTexture</a> glesBitmappedFontTexture</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a6ea4d76650ae78b4121335b9c947fb0d"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned char myLetterPixels[16 *16 *16 *16 *2]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="aaebd14048566bff4d6920e945b7de664"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">vector&lt;GLfloat&gt; verts</td>
         </tr>
       </table>
 </div><div class="memdoc">

@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -47,17 +48,42 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_597f6a792ff7cba98dd4f9f2210b5255.html">video</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_84d5b34cee6369a03c8d1f3b970ed216.html">openFrameworks</a></li><li class="navelem"><a class="el" href="dir_270bbad7e353bbf13b71b43b7eff9656.html">video</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">ofGstVideoGrabber.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="of_gst_video_grabber_8h_source.html">ofGstVideoGrabber.h</a>&quot;</code><br/>
 <code>#include &lt;gst/video/video.h&gt;</code><br/>
-</div></div><!-- contents -->
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a1381db915b92887846c4005ceef16156"><td class="memItemLeft" align="right" valign="top"><a class="el" href="of_constants_8h.html#ae227396622740556688053d3dc0f1693">ofPixelFormat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_gst_video_grabber_8cpp.html#a1381db915b92887846c4005ceef16156">ofPixelFormatFromGstFormat</a> (string format)</td></tr>
+<tr class="separator:a1381db915b92887846c4005ceef16156"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="a1381db915b92887846c4005ceef16156"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="of_constants_8h.html#ae227396622740556688053d3dc0f1693">ofPixelFormat</a> ofPixelFormatFromGstFormat </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>format</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
 
             </div>
       </div>

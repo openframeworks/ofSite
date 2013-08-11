@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -68,6 +69,7 @@
       <li><a href="globals_0x67.html#index_g"><span>g</span></a></li>
       <li><a href="globals_0x68.html#index_h"><span>h</span></a></li>
       <li><a href="globals_0x69.html#index_i"><span>i</span></a></li>
+      <li><a href="globals_0x6c.html#index_l"><span>l</span></a></li>
       <li><a href="globals_0x6d.html#index_m"><span>m</span></a></li>
       <li><a href="globals_0x6e.html#index_n"><span>n</span></a></li>
       <li><a href="globals_0x6f.html#index_o"><span>o</span></a></li>
@@ -76,6 +78,7 @@
       <li><a href="globals_0x72.html#index_r"><span>r</span></a></li>
       <li><a href="globals_0x73.html#index_s"><span>s</span></a></li>
       <li><a href="globals_0x74.html#index_t"><span>t</span></a></li>
+      <li><a href="globals_0x75.html#index_u"><span>u</span></a></li>
       <li class="current"><a href="globals_0x76.html#index_v"><span>v</span></a></li>
       <li><a href="globals_0x77.html#index_w"><span>w</span></a></li>
       <li><a href="globals_0x78.html#index_x"><span>x</span></a></li>
@@ -93,9 +96,6 @@
 </li>
 <li>vdot()
 : <a class="el" href="of_matrix4x4_8cpp.html#a21e03864a3b2b737d198703aed86974c">ofMatrix4x4.cpp</a>
-</li>
-<li>verts
-: <a class="el" href="of_bitmap_font_8cpp.html#aaebd14048566bff4d6920e945b7de664">ofBitmapFont.cpp</a>
 </li>
 <li>voidEventArgs
 : <a class="el" href="of_events_8cpp.html#abd186b37aefc99240e7496cb1591488b">ofEvents.cpp</a>

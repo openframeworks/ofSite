@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -47,7 +48,7 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_7d604191edc08013a26f918aa8ef79ad.html">events</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_84d5b34cee6369a03c8d1f3b970ed216.html">openFrameworks</a></li><li class="navelem"><a class="el" href="dir_148891dd0ea53588a5bf71cda57c05aa.html">events</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -111,36 +112,36 @@ Functions</h2></td></tr>
 <tr class="separator:a667ac66d9dd3fe5d0043a707a5f92159"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1835ac2da59fdf532924f05058001e97"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_core_events.html">ofCoreEvents</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_events_8h.html#a1835ac2da59fdf532924f05058001e97">ofEvents</a> ()</td></tr>
 <tr class="separator:a1835ac2da59fdf532924f05058001e97"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1f1c58a1b16244ee844ded62d1fa095"><td class="memTemplParams" colspan="2">template&lt;class ListenerClass &gt; </td></tr>
-<tr class="memitem:aa1f1c58a1b16244ee844ded62d1fa095"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_events_8h.html#aa1f1c58a1b16244ee844ded62d1fa095">ofRegisterMouseEvents</a> (ListenerClass *listener)</td></tr>
-<tr class="separator:aa1f1c58a1b16244ee844ded62d1fa095"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b4c1190eaecad88e191341979af9eac"><td class="memTemplParams" colspan="2">template&lt;class ListenerClass &gt; </td></tr>
-<tr class="memitem:a4b4c1190eaecad88e191341979af9eac"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_events_8h.html#a4b4c1190eaecad88e191341979af9eac">ofRegisterKeyEvents</a> (ListenerClass *listener)</td></tr>
-<tr class="separator:a4b4c1190eaecad88e191341979af9eac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a544f34e5a88cd3a1bdbc321dfc625a15"><td class="memTemplParams" colspan="2">template&lt;class ListenerClass &gt; </td></tr>
-<tr class="memitem:a544f34e5a88cd3a1bdbc321dfc625a15"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_events_8h.html#a544f34e5a88cd3a1bdbc321dfc625a15">ofRegisterTouchEvents</a> (ListenerClass *listener)</td></tr>
-<tr class="separator:a544f34e5a88cd3a1bdbc321dfc625a15"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d50eb3f9ea131df334def7b97262052"><td class="memTemplParams" colspan="2">template&lt;class ListenerClass &gt; </td></tr>
-<tr class="memitem:a1d50eb3f9ea131df334def7b97262052"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_events_8h.html#a1d50eb3f9ea131df334def7b97262052">ofRegisterGetMessages</a> (ListenerClass *listener)</td></tr>
-<tr class="separator:a1d50eb3f9ea131df334def7b97262052"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4713b8f09c12a9d8ceee456815384eaa"><td class="memTemplParams" colspan="2">template&lt;class ListenerClass &gt; </td></tr>
-<tr class="memitem:a4713b8f09c12a9d8ceee456815384eaa"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_events_8h.html#a4713b8f09c12a9d8ceee456815384eaa">ofRegisterDragEvents</a> (ListenerClass *listener)</td></tr>
-<tr class="separator:a4713b8f09c12a9d8ceee456815384eaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d92bedd931367224435de8c7a386da5"><td class="memTemplParams" colspan="2">template&lt;class ListenerClass &gt; </td></tr>
-<tr class="memitem:a0d92bedd931367224435de8c7a386da5"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_events_8h.html#a0d92bedd931367224435de8c7a386da5">ofUnregisterMouseEvents</a> (ListenerClass *listener)</td></tr>
-<tr class="separator:a0d92bedd931367224435de8c7a386da5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13bf0da65f3efc18f3e8d9259ca53499"><td class="memTemplParams" colspan="2">template&lt;class ListenerClass &gt; </td></tr>
-<tr class="memitem:a13bf0da65f3efc18f3e8d9259ca53499"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_events_8h.html#a13bf0da65f3efc18f3e8d9259ca53499">ofUnregisterKeyEvents</a> (ListenerClass *listener)</td></tr>
-<tr class="separator:a13bf0da65f3efc18f3e8d9259ca53499"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aabe748f3e24b303cce65be34e53ddd57"><td class="memTemplParams" colspan="2">template&lt;class ListenerClass &gt; </td></tr>
-<tr class="memitem:aabe748f3e24b303cce65be34e53ddd57"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_events_8h.html#aabe748f3e24b303cce65be34e53ddd57">ofUnregisterTouchEvents</a> (ListenerClass *listener)</td></tr>
-<tr class="separator:aabe748f3e24b303cce65be34e53ddd57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21b40c5f707eb0da47115e111762c4a4"><td class="memTemplParams" colspan="2">template&lt;class ListenerClass &gt; </td></tr>
-<tr class="memitem:a21b40c5f707eb0da47115e111762c4a4"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_events_8h.html#a21b40c5f707eb0da47115e111762c4a4">ofUnregisterGetMessages</a> (ListenerClass *listener)</td></tr>
-<tr class="separator:a21b40c5f707eb0da47115e111762c4a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ae358fbe23b50305dcd0a2db00b6d25"><td class="memTemplParams" colspan="2">template&lt;class ListenerClass &gt; </td></tr>
-<tr class="memitem:a4ae358fbe23b50305dcd0a2db00b6d25"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_events_8h.html#a4ae358fbe23b50305dcd0a2db00b6d25">ofUnregisterDragEvents</a> (ListenerClass *listener)</td></tr>
-<tr class="separator:a4ae358fbe23b50305dcd0a2db00b6d25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a739527c2c5fca2da0ac7375cb5684316"><td class="memTemplParams" colspan="2">template&lt;class ListenerClass &gt; </td></tr>
+<tr class="memitem:a739527c2c5fca2da0ac7375cb5684316"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_events_8h.html#a739527c2c5fca2da0ac7375cb5684316">ofRegisterMouseEvents</a> (ListenerClass *listener, int prio=<a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42ba47e7aa47694dd15c9ead77e15301e5fc">OF_EVENT_ORDER_AFTER_APP</a>)</td></tr>
+<tr class="separator:a739527c2c5fca2da0ac7375cb5684316"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73e1d729cec3d3678c8f67caab7edd23"><td class="memTemplParams" colspan="2">template&lt;class ListenerClass &gt; </td></tr>
+<tr class="memitem:a73e1d729cec3d3678c8f67caab7edd23"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_events_8h.html#a73e1d729cec3d3678c8f67caab7edd23">ofRegisterKeyEvents</a> (ListenerClass *listener, int prio=<a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42ba47e7aa47694dd15c9ead77e15301e5fc">OF_EVENT_ORDER_AFTER_APP</a>)</td></tr>
+<tr class="separator:a73e1d729cec3d3678c8f67caab7edd23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a605cfbc58656c036b9f38a1b1d2784f1"><td class="memTemplParams" colspan="2">template&lt;class ListenerClass &gt; </td></tr>
+<tr class="memitem:a605cfbc58656c036b9f38a1b1d2784f1"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_events_8h.html#a605cfbc58656c036b9f38a1b1d2784f1">ofRegisterTouchEvents</a> (ListenerClass *listener, int prio=<a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42ba47e7aa47694dd15c9ead77e15301e5fc">OF_EVENT_ORDER_AFTER_APP</a>)</td></tr>
+<tr class="separator:a605cfbc58656c036b9f38a1b1d2784f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7708c50603a2dcf8e5d8973327d0a596"><td class="memTemplParams" colspan="2">template&lt;class ListenerClass &gt; </td></tr>
+<tr class="memitem:a7708c50603a2dcf8e5d8973327d0a596"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_events_8h.html#a7708c50603a2dcf8e5d8973327d0a596">ofRegisterGetMessages</a> (ListenerClass *listener, int prio=<a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42ba47e7aa47694dd15c9ead77e15301e5fc">OF_EVENT_ORDER_AFTER_APP</a>)</td></tr>
+<tr class="separator:a7708c50603a2dcf8e5d8973327d0a596"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1062d54fb05e604805d35b1e5a43b23"><td class="memTemplParams" colspan="2">template&lt;class ListenerClass &gt; </td></tr>
+<tr class="memitem:ab1062d54fb05e604805d35b1e5a43b23"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_events_8h.html#ab1062d54fb05e604805d35b1e5a43b23">ofRegisterDragEvents</a> (ListenerClass *listener, int prio=<a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42ba47e7aa47694dd15c9ead77e15301e5fc">OF_EVENT_ORDER_AFTER_APP</a>)</td></tr>
+<tr class="separator:ab1062d54fb05e604805d35b1e5a43b23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02798981b6f5dad9c46556ae1019a747"><td class="memTemplParams" colspan="2">template&lt;class ListenerClass &gt; </td></tr>
+<tr class="memitem:a02798981b6f5dad9c46556ae1019a747"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_events_8h.html#a02798981b6f5dad9c46556ae1019a747">ofUnregisterMouseEvents</a> (ListenerClass *listener, int prio=<a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42ba47e7aa47694dd15c9ead77e15301e5fc">OF_EVENT_ORDER_AFTER_APP</a>)</td></tr>
+<tr class="separator:a02798981b6f5dad9c46556ae1019a747"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cdd22fb4b625ba7dbbf3445ac748f6b"><td class="memTemplParams" colspan="2">template&lt;class ListenerClass &gt; </td></tr>
+<tr class="memitem:a1cdd22fb4b625ba7dbbf3445ac748f6b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_events_8h.html#a1cdd22fb4b625ba7dbbf3445ac748f6b">ofUnregisterKeyEvents</a> (ListenerClass *listener, int prio=<a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42ba47e7aa47694dd15c9ead77e15301e5fc">OF_EVENT_ORDER_AFTER_APP</a>)</td></tr>
+<tr class="separator:a1cdd22fb4b625ba7dbbf3445ac748f6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ca22957c68e9fdada9b812c1c2f9f16"><td class="memTemplParams" colspan="2">template&lt;class ListenerClass &gt; </td></tr>
+<tr class="memitem:a3ca22957c68e9fdada9b812c1c2f9f16"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_events_8h.html#a3ca22957c68e9fdada9b812c1c2f9f16">ofUnregisterTouchEvents</a> (ListenerClass *listener, int prio=<a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42ba47e7aa47694dd15c9ead77e15301e5fc">OF_EVENT_ORDER_AFTER_APP</a>)</td></tr>
+<tr class="separator:a3ca22957c68e9fdada9b812c1c2f9f16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeffc80f44dd6fbc2fb04c85e46c62b44"><td class="memTemplParams" colspan="2">template&lt;class ListenerClass &gt; </td></tr>
+<tr class="memitem:aeffc80f44dd6fbc2fb04c85e46c62b44"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_events_8h.html#aeffc80f44dd6fbc2fb04c85e46c62b44">ofUnregisterGetMessages</a> (ListenerClass *listener, int prio=<a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42ba47e7aa47694dd15c9ead77e15301e5fc">OF_EVENT_ORDER_AFTER_APP</a>)</td></tr>
+<tr class="separator:aeffc80f44dd6fbc2fb04c85e46c62b44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1becdb667da5250c4f9104958204b2a4"><td class="memTemplParams" colspan="2">template&lt;class ListenerClass &gt; </td></tr>
+<tr class="memitem:a1becdb667da5250c4f9104958204b2a4"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="of_events_8h.html#a1becdb667da5250c4f9104958204b2a4">ofUnregisterDragEvents</a> (ListenerClass *listener, int prio=<a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42ba47e7aa47694dd15c9ead77e15301e5fc">OF_EVENT_ORDER_AFTER_APP</a>)</td></tr>
+<tr class="separator:a1becdb667da5250c4f9104958204b2a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66d9e7889b2000628b73192cb3a1372f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_events_8h.html#a66d9e7889b2000628b73192cb3a1372f">ofNotifySetup</a> ()</td></tr>
 <tr class="separator:a66d9e7889b2000628b73192cb3a1372f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b7f4e1f2a818e07abcc30b773f5d256"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_events_8h.html#a4b7f4e1f2a818e07abcc30b773f5d256">ofNotifyUpdate</a> ()</td></tr>
@@ -151,6 +152,8 @@ Functions</h2></td></tr>
 <tr class="separator:a9fc0c4294b2f7799a90dc7b41faf1b5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa23941dd9572998234e61687e7c35f18"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_events_8h.html#aa23941dd9572998234e61687e7c35f18">ofNotifyKeyReleased</a> (int key)</td></tr>
 <tr class="separator:aa23941dd9572998234e61687e7c35f18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d1fb124fea0a1a7831ebbe72559d114"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_events_8h.html#a5d1fb124fea0a1a7831ebbe72559d114">ofNotifyKeyEvent</a> (const <a class="el" href="classof_key_event_args.html">ofKeyEventArgs</a> &amp;keyEvent)</td></tr>
+<tr class="separator:a5d1fb124fea0a1a7831ebbe72559d114"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a832c15d79e80920bdc18b0e99c6f1bc0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_events_8h.html#a832c15d79e80920bdc18b0e99c6f1bc0">ofNotifyMousePressed</a> (int x, int y, int button)</td></tr>
 <tr class="separator:a832c15d79e80920bdc18b0e99c6f1bc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0d4cb37b3fcdc62e525ff087c7fd1cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_events_8h.html#aa0d4cb37b3fcdc62e525ff087c7fd1cb">ofNotifyMouseReleased</a> (int x, int y, int button)</td></tr>
@@ -159,9 +162,11 @@ Functions</h2></td></tr>
 <tr class="separator:a38fcaeb649ce5115f804fc07687bcc51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af53b6bc8471de39c38f8b2970e81b58f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_events_8h.html#af53b6bc8471de39c38f8b2970e81b58f">ofNotifyMouseMoved</a> (int x, int y)</td></tr>
 <tr class="separator:af53b6bc8471de39c38f8b2970e81b58f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16d77d7ade05fc248aee9659bc4491ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_events_8h.html#a16d77d7ade05fc248aee9659bc4491ab">ofNotifyMouseEvent</a> (const <a class="el" href="classof_mouse_event_args.html">ofMouseEventArgs</a> &amp;mouseEvent)</td></tr>
+<tr class="separator:a16d77d7ade05fc248aee9659bc4491ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b4bcb608363760a96730bfd405610c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_events_8h.html#a4b4bcb608363760a96730bfd405610c4">ofNotifyExit</a> ()</td></tr>
 <tr class="separator:a4b4bcb608363760a96730bfd405610c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeefd3c70e905e7b8001278e1dddcac93"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_events_8h.html#aeefd3c70e905e7b8001278e1dddcac93">ofNotifyWindowResized</a> (int width, int height)</td></tr>
+<tr class="memitem:aeefd3c70e905e7b8001278e1dddcac93"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_events_8h.html#aeefd3c70e905e7b8001278e1dddcac93">ofNotifyWindowResized</a> (int <a class="el" href="of_icon_8h.html#aca34d28e3d8bcbcadb8edb4e3af24f8c">width</a>, int <a class="el" href="of_icon_8h.html#ab2e78c61905b4419fcc7b4cfc500fe85">height</a>)</td></tr>
 <tr class="separator:aeefd3c70e905e7b8001278e1dddcac93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d3cb530b0ada0dddc2d6f2d870a4c37"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_events_8h.html#a5d3cb530b0ada0dddc2d6f2d870a4c37">ofNotifyWindowEntry</a> (int state)</td></tr>
 <tr class="separator:a5d3cb530b0ada0dddc2d6f2d870a4c37"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -337,6 +342,22 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a5d1fb124fea0a1a7831ebbe72559d114"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofNotifyKeyEvent </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classof_key_event_args.html">ofKeyEventArgs</a> &amp;&#160;</td>
+          <td class="paramname"><em>keyEvent</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a9fc0c4294b2f7799a90dc7b41faf1b5c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -395,6 +416,22 @@ Functions</h2></td></tr>
           <td></td>
           <td>)</td>
           <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a16d77d7ade05fc248aee9659bc4491ab"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofNotifyMouseEvent </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classof_mouse_event_args.html">ofMouseEventArgs</a> &amp;&#160;</td>
+          <td class="paramname"><em>mouseEvent</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -563,7 +600,7 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a4713b8f09c12a9d8ceee456815384eaa"></a>
+<a class="anchor" id="ab1062d54fb05e604805d35b1e5a43b23"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -573,15 +610,25 @@ template&lt;class ListenerClass &gt; </div>
           <td class="memname">void ofRegisterDragEvents </td>
           <td>(</td>
           <td class="paramtype">ListenerClass *&#160;</td>
-          <td class="paramname"><em>listener</em></td><td>)</td>
+          <td class="paramname"><em>listener</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>prio</em> = <code><a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42ba47e7aa47694dd15c9ead77e15301e5fc">OF_EVENT_ORDER_AFTER_APP</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="a1d50eb3f9ea131df334def7b97262052"></a>
+<a class="anchor" id="a7708c50603a2dcf8e5d8973327d0a596"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -591,15 +638,25 @@ template&lt;class ListenerClass &gt; </div>
           <td class="memname">void ofRegisterGetMessages </td>
           <td>(</td>
           <td class="paramtype">ListenerClass *&#160;</td>
-          <td class="paramname"><em>listener</em></td><td>)</td>
+          <td class="paramname"><em>listener</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>prio</em> = <code><a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42ba47e7aa47694dd15c9ead77e15301e5fc">OF_EVENT_ORDER_AFTER_APP</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="a4b4c1190eaecad88e191341979af9eac"></a>
+<a class="anchor" id="a73e1d729cec3d3678c8f67caab7edd23"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -609,15 +666,25 @@ template&lt;class ListenerClass &gt; </div>
           <td class="memname">void ofRegisterKeyEvents </td>
           <td>(</td>
           <td class="paramtype">ListenerClass *&#160;</td>
-          <td class="paramname"><em>listener</em></td><td>)</td>
+          <td class="paramname"><em>listener</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>prio</em> = <code><a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42ba47e7aa47694dd15c9ead77e15301e5fc">OF_EVENT_ORDER_AFTER_APP</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="aa1f1c58a1b16244ee844ded62d1fa095"></a>
+<a class="anchor" id="a739527c2c5fca2da0ac7375cb5684316"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -627,15 +694,25 @@ template&lt;class ListenerClass &gt; </div>
           <td class="memname">void ofRegisterMouseEvents </td>
           <td>(</td>
           <td class="paramtype">ListenerClass *&#160;</td>
-          <td class="paramname"><em>listener</em></td><td>)</td>
+          <td class="paramname"><em>listener</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>prio</em> = <code><a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42ba47e7aa47694dd15c9ead77e15301e5fc">OF_EVENT_ORDER_AFTER_APP</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="a544f34e5a88cd3a1bdbc321dfc625a15"></a>
+<a class="anchor" id="a605cfbc58656c036b9f38a1b1d2784f1"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -645,8 +722,18 @@ template&lt;class ListenerClass &gt; </div>
           <td class="memname">void ofRegisterTouchEvents </td>
           <td>(</td>
           <td class="paramtype">ListenerClass *&#160;</td>
-          <td class="paramname"><em>listener</em></td><td>)</td>
+          <td class="paramname"><em>listener</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>prio</em> = <code><a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42ba47e7aa47694dd15c9ead77e15301e5fc">OF_EVENT_ORDER_AFTER_APP</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -701,7 +788,7 @@ template&lt;class ListenerClass &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a4ae358fbe23b50305dcd0a2db00b6d25"></a>
+<a class="anchor" id="a1becdb667da5250c4f9104958204b2a4"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -711,15 +798,25 @@ template&lt;class ListenerClass &gt; </div>
           <td class="memname">void ofUnregisterDragEvents </td>
           <td>(</td>
           <td class="paramtype">ListenerClass *&#160;</td>
-          <td class="paramname"><em>listener</em></td><td>)</td>
+          <td class="paramname"><em>listener</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>prio</em> = <code><a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42ba47e7aa47694dd15c9ead77e15301e5fc">OF_EVENT_ORDER_AFTER_APP</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="a21b40c5f707eb0da47115e111762c4a4"></a>
+<a class="anchor" id="aeffc80f44dd6fbc2fb04c85e46c62b44"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -729,15 +826,25 @@ template&lt;class ListenerClass &gt; </div>
           <td class="memname">void ofUnregisterGetMessages </td>
           <td>(</td>
           <td class="paramtype">ListenerClass *&#160;</td>
-          <td class="paramname"><em>listener</em></td><td>)</td>
+          <td class="paramname"><em>listener</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>prio</em> = <code><a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42ba47e7aa47694dd15c9ead77e15301e5fc">OF_EVENT_ORDER_AFTER_APP</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="a13bf0da65f3efc18f3e8d9259ca53499"></a>
+<a class="anchor" id="a1cdd22fb4b625ba7dbbf3445ac748f6b"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -747,15 +854,25 @@ template&lt;class ListenerClass &gt; </div>
           <td class="memname">void ofUnregisterKeyEvents </td>
           <td>(</td>
           <td class="paramtype">ListenerClass *&#160;</td>
-          <td class="paramname"><em>listener</em></td><td>)</td>
+          <td class="paramname"><em>listener</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>prio</em> = <code><a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42ba47e7aa47694dd15c9ead77e15301e5fc">OF_EVENT_ORDER_AFTER_APP</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="a0d92bedd931367224435de8c7a386da5"></a>
+<a class="anchor" id="a02798981b6f5dad9c46556ae1019a747"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -765,15 +882,25 @@ template&lt;class ListenerClass &gt; </div>
           <td class="memname">void ofUnregisterMouseEvents </td>
           <td>(</td>
           <td class="paramtype">ListenerClass *&#160;</td>
-          <td class="paramname"><em>listener</em></td><td>)</td>
+          <td class="paramname"><em>listener</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>prio</em> = <code><a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42ba47e7aa47694dd15c9ead77e15301e5fc">OF_EVENT_ORDER_AFTER_APP</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="aabe748f3e24b303cce65be34e53ddd57"></a>
+<a class="anchor" id="a3ca22957c68e9fdada9b812c1c2f9f16"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -783,8 +910,18 @@ template&lt;class ListenerClass &gt; </div>
           <td class="memname">void ofUnregisterTouchEvents </td>
           <td>(</td>
           <td class="paramtype">ListenerClass *&#160;</td>
-          <td class="paramname"><em>listener</em></td><td>)</td>
+          <td class="paramname"><em>listener</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>prio</em> = <code><a class="el" href="of_event_utils_8h.html#a09bc3e2c6034a656a3bb3da9aff5a42ba47e7aa47694dd15c9ead77e15301e5fc">OF_EVENT_ORDER_AFTER_APP</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">

@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -52,6 +53,7 @@
       <li><a href="functions.html"><span>All</span></a></li>
       <li class="current"><a href="functions_func.html"><span>Functions</span></a></li>
       <li><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_type.html"><span>Typedefs</span></a></li>
       <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
       <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
       <li><a href="functions_prop.html"><span>Properties</span></a></li>
@@ -120,7 +122,7 @@
 : <a class="el" href="classof_serial.html#aba92e180e606f798070f4c04bb9e7a8b">ofSerial</a>
 </li>
 <li>writeFromBuffer()
-: <a class="el" href="classof_file.html#a9564d6ef00b79b2c431b132619c3964a">ofFile</a>
+: <a class="el" href="classof_file.html#a0505ea6bd750ca7975db1b14bb68b4ec">ofFile</a>
 </li>
 <li>writeTo()
 : <a class="el" href="classof_buffer.html#a0cdd668fb1780e8512d4a3c1b2931d8b">ofBuffer</a>

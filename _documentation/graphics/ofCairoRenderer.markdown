@@ -273,6 +273,34 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void disableAntiAliasing()
+
+<!--
+_syntax: disableAntiAliasing()_
+_name: disableAntiAliasing_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void draw(&shape)
 
 <!--
@@ -315,7 +343,7 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -679,6 +707,62 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void draw(&path)
+
+<!--
+_syntax: draw(&path)_
+_name: draw_
+_returns: void_
+_returns_description: _
+_parameters: ofPath::Command &path_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void draw(&model, renderType)
+
+<!--
+_syntax: draw(&model, renderType)_
+_name: draw_
+_returns: void_
+_returns_description: _
+_parameters: of3dPrimitive &model, ofPolyRenderMode renderType_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void drawCircle(x, y, z, radius)
 
 <!--
@@ -873,6 +957,34 @@ _advanced: False_
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void enableAntiAliasing()
+
+<!--
+_syntax: enableAntiAliasing()_
+_name: enableAntiAliasing_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -1201,12 +1313,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###string getType()
+###const string & getType()
 
 <!--
 _syntax: getType()_
 _name: getType_
-_returns: string_
+_returns: const string &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1279,6 +1391,174 @@ _advanced: False_
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void loadIdentityMatrix(void)
+
+<!--
+_syntax: loadIdentityMatrix(void)_
+_name: loadIdentityMatrix_
+_returns: void_
+_returns_description: _
+_parameters: void_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void loadMatrix(&m)
+
+<!--
+_syntax: loadMatrix(&m)_
+_name: loadMatrix_
+_returns: void_
+_returns_description: _
+_parameters: const ofMatrix4x4 &m_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void loadMatrix(*m)
+
+<!--
+_syntax: loadMatrix(*m)_
+_name: loadMatrix_
+_returns: void_
+_returns_description: _
+_parameters: const float *m_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void matrixMode(mode)
+
+<!--
+_syntax: matrixMode(mode)_
+_name: matrixMode_
+_returns: void_
+_returns_description: _
+_parameters: ofMatrixMode mode_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void multMatrix(&m)
+
+<!--
+_syntax: multMatrix(&m)_
+_name: multMatrix_
+_returns: void_
+_returns_description: _
+_parameters: const ofMatrix4x4 &m_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void multMatrix(*m)
+
+<!--
+_syntax: multMatrix(*m)_
+_name: multMatrix_
+_returns: void_
+_returns_description: _
+_parameters: const float *m_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -1888,6 +2168,34 @@ _advanced: False_
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setDepthTest(depthTest)
+
+<!--
+_syntax: setDepthTest(depthTest)_
+_name: setDepthTest_
+_returns: void_
+_returns_description: _
+_parameters: bool depthTest_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -2635,13 +2943,41 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setupScreenOrtho(width = 0, height = 0, nearDist = -1, farDist = 1)
+
+<!--
+_syntax: setupScreenOrtho(width = 0, height = 0, nearDist = -1, farDist = 1)_
+_name: setupScreenOrtho_
+_returns: void_
+_returns_description: _
+_parameters: float width=0, float height=0, float nearDist=-1, float farDist=1_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -2664,13 +3000,41 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setupScreenPerspective(width = 0, height = 0, fov = 60, nearDist = 0, farDist = 0)
+
+<!--
+_syntax: setupScreenPerspective(width = 0, height = 0, fov = 60, nearDist = 0, farDist = 0)_
+_name: setupScreenPerspective_
+_returns: void_
+_returns_description: _
+_parameters: float width=0, float height=0, float fov=60, float nearDist=0, float farDist=0_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -2916,6 +3280,30 @@ _description: _
 
 
 
+###const string TYPE
+
+<!--
+_name: TYPE_
+_type: const string_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###bool b3D
 
 <!--
@@ -3057,6 +3445,30 @@ _advanced: False_
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofMatrixMode currentMatrixMode
+
+<!--
+_name: currentMatrixMode_
+_type: ofMatrixMode_
+_access: private_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 

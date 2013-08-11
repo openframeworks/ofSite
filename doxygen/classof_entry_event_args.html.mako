@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -87,7 +88,7 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>events/<a class="el" href="of_events_8h_source.html">ofEvents.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/events/<a class="el" href="of_events_8h_source.html">ofEvents.h</a></li>
 </ul>
 </div><!-- contents -->
 

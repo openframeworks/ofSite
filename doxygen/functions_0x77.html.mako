@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -52,6 +53,7 @@
       <li class="current"><a href="functions.html"><span>All</span></a></li>
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_type.html"><span>Typedefs</span></a></li>
       <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
       <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
       <li><a href="functions_prop.html"><span>Properties</span></a></li>
@@ -115,7 +117,10 @@
 : <a class="el" href="classof_color__.html#ace7bee79705df8c09161ccfd0cdd13c2">ofColor_&lt; PixelType &gt;</a>
 </li>
 <li>width
-: <a class="el" href="classof_direct_show_grabber.html#a0a11fb872c39fd7b9da44392fedd1073">ofDirectShowGrabber</a>
+: <a class="el" href="classof_rectangle.html#a8aff8758d86d6fc920131a1932d193e2">ofRectangle</a>
+, <a class="el" href="classof_video_format.html#a7845583ee39df945eb3a1cdbe6baeeed">ofVideoFormat</a>
+, <a class="el" href="classof_plane_primitive.html#aa5d0b08cfff2e1265fe3681c68b2eb1b">ofPlanePrimitive</a>
+, <a class="el" href="classof_direct_show_grabber.html#a0a11fb872c39fd7b9da44392fedd1073">ofDirectShowGrabber</a>
 , <a class="el" href="structof_gst_video_format.html#a1b8646ae51a9f3a7c0e9ffccbada3d63">ofGstVideoFormat</a>
 , <a class="el" href="classof_touch_event_args.html#ac99b601e7b0d20f78493173fb92b5dcf">ofTouchEventArgs</a>
 , <a class="el" href="interface_q_t_kit_video_grabber.html#a31304c149f6f69b241264e74630b2f1d">QTKitVideoGrabber</a>
@@ -126,17 +131,23 @@
 , <a class="el" href="classof_texture_data.html#a615b0e90bc4d881ee64b57d4125fb0aa">ofTextureData</a>
 , <a class="el" href="classof_image__.html#a3231ef055c1a443e932b0b5b5089b682">ofImage_&lt; PixelType &gt;</a>
 , <a class="el" href="structchar_props.html#abfc5bd615c705713bda6c79691fb5189">charProps</a>
-, <a class="el" href="classof_rectangle.html#a8aff8758d86d6fc920131a1932d193e2">ofRectangle</a>
 </li>
 <li>windowEntered
 : <a class="el" href="classof_core_events.html#a4edca28a549b856dc138727b33f448ac">ofCoreEvents</a>
 </li>
 <li>windowEntry()
-: <a class="el" href="classof_base_app.html#ab074562a262bac0a254d5030b7aed083">ofBaseApp</a>
+: <a class="el" href="classof_base_app.html#a8031f1e66c71689419727a4280f61661">ofBaseApp</a>
 </li>
-<li>windowResized
-: <a class="el" href="classof_core_events.html#ab8e510b563df9a2a6c759e4e20b24b43">ofCoreEvents</a>
+<li>windowMode
+: <a class="el" href="classof_app_e_g_l_window.html#a26e0169842d53929436cb4c90b900b72">ofAppEGLWindow</a>
+</li>
+<li>windowResized()
+: <a class="el" href="classof_base_app.html#a43f1c88bd9b098c2871248362a1537fb">ofBaseApp</a>
+, <a class="el" href="classof_core_events.html#ab8e510b563df9a2a6c759e4e20b24b43">ofCoreEvents</a>
 , <a class="el" href="classof_base_app.html#a6ebb5e7ceb00e55eaf28f8f8065cb189">ofBaseApp</a>
+</li>
+<li>windowSurfaceAttributes
+: <a class="el" href="structof_app_e_g_l_window_1_1_settings.html#a53d7b493da4e4cc0864485ff28ffd0f0">ofAppEGLWindow::Settings</a>
 </li>
 <li>worldToCamera()
 : <a class="el" href="classof_camera.html#a32da4f33ddc9b4ee49aed5f5840813e1">ofCamera</a>
@@ -157,7 +168,7 @@
 : <a class="el" href="classof_serial.html#aba92e180e606f798070f4c04bb9e7a8b">ofSerial</a>
 </li>
 <li>writeFromBuffer()
-: <a class="el" href="classof_file.html#a9564d6ef00b79b2c431b132619c3964a">ofFile</a>
+: <a class="el" href="classof_file.html#a0505ea6bd750ca7975db1b14bb68b4ec">ofFile</a>
 </li>
 <li>WriteOnly
 : <a class="el" href="classof_file.html#afc27b4186457038ca30b5471b497f2a0aff8f040e5a5c98cb4b54586e5e87a9e5">ofFile</a>

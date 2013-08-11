@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -51,7 +52,7 @@
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classof_mesh-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ofMesh Class Reference</div>  </div>
@@ -73,7 +74,7 @@ Inheritance diagram for ofMesh:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a3ffeb1343321a13b07250eae05ce357e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a3ffeb1343321a13b07250eae05ce357e">ofMesh</a> ()</td></tr>
 <tr class="separator:a3ffeb1343321a13b07250eae05ce357e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a519331c973bbf145a43edfa6636f7fd2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a519331c973bbf145a43edfa6636f7fd2">ofMesh</a> (<a class="el" href="of_g_l_utils_8h.html#a0f71f0b23a18629a446952d5540e16e0">ofPrimitiveMode</a> mode, const vector&lt; <a class="el" href="classof_vec3f.html">ofVec3f</a> &gt; &amp;<a class="el" href="of_bitmap_font_8cpp.html#aaebd14048566bff4d6920e945b7de664">verts</a>)</td></tr>
+<tr class="memitem:a519331c973bbf145a43edfa6636f7fd2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a519331c973bbf145a43edfa6636f7fd2">ofMesh</a> (<a class="el" href="of_g_l_utils_8h.html#a0f71f0b23a18629a446952d5540e16e0">ofPrimitiveMode</a> mode, const vector&lt; <a class="el" href="classof_vec3f.html">ofVec3f</a> &gt; &amp;verts)</td></tr>
 <tr class="separator:a519331c973bbf145a43edfa6636f7fd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7caa88fce14c9aa5b5f67a094b6233ba"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a7caa88fce14c9aa5b5f67a094b6233ba">~ofMesh</a> ()</td></tr>
 <tr class="separator:a7caa88fce14c9aa5b5f67a094b6233ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -89,9 +90,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a57998157b1b7e041930ad775c5d5ffc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14be43bd2e272fed5e030d4f51e61dbf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a14be43bd2e272fed5e030d4f51e61dbf">addVertex</a> (const <a class="el" href="classof_vec3f.html">ofVec3f</a> &amp;v)</td></tr>
 <tr class="separator:a14be43bd2e272fed5e030d4f51e61dbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71e7a3d050abd65ec3cf881535df889e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a71e7a3d050abd65ec3cf881535df889e">addVertices</a> (const vector&lt; <a class="el" href="classof_vec3f.html">ofVec3f</a> &gt; &amp;<a class="el" href="of_bitmap_font_8cpp.html#aaebd14048566bff4d6920e945b7de664">verts</a>)</td></tr>
+<tr class="memitem:a71e7a3d050abd65ec3cf881535df889e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a71e7a3d050abd65ec3cf881535df889e">addVertices</a> (const vector&lt; <a class="el" href="classof_vec3f.html">ofVec3f</a> &gt; &amp;verts)</td></tr>
 <tr class="separator:a71e7a3d050abd65ec3cf881535df889e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a5b693358f1771b6c8f150303c52655"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a9a5b693358f1771b6c8f150303c52655">addVertices</a> (const <a class="el" href="classof_vec3f.html">ofVec3f</a> *<a class="el" href="of_bitmap_font_8cpp.html#aaebd14048566bff4d6920e945b7de664">verts</a>, int amt)</td></tr>
+<tr class="memitem:a9a5b693358f1771b6c8f150303c52655"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a9a5b693358f1771b6c8f150303c52655">addVertices</a> (const <a class="el" href="classof_vec3f.html">ofVec3f</a> *verts, int amt)</td></tr>
 <tr class="separator:a9a5b693358f1771b6c8f150303c52655"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93e16441ec4d64399e2a73d2078c1521"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a93e16441ec4d64399e2a73d2078c1521">removeVertex</a> (<a class="el" href="of_constants_8h.html#ad4acc3774c730c65a67b4419154717d3">ofIndexType</a> index)</td></tr>
 <tr class="separator:a93e16441ec4d64399e2a73d2078c1521"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -223,16 +224,16 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:acd571a2fb9cf9c3eb4baa7db60097e49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a720d91d34321fb273c585b8469215efd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a720d91d34321fb273c585b8469215efd">haveIndicesChanged</a> ()</td></tr>
 <tr class="separator:a720d91d34321fb273c585b8469215efd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07acb9241b3fa789bf6ffb32d31439d8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a07acb9241b3fa789bf6ffb32d31439d8">hasVertices</a> ()</td></tr>
-<tr class="separator:a07acb9241b3fa789bf6ffb32d31439d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24c09fd7825c947d089487182c56ea45"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a24c09fd7825c947d089487182c56ea45">hasColors</a> ()</td></tr>
-<tr class="separator:a24c09fd7825c947d089487182c56ea45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11804f7e3f242e32e5970c2e6e89975d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a11804f7e3f242e32e5970c2e6e89975d">hasNormals</a> ()</td></tr>
-<tr class="separator:a11804f7e3f242e32e5970c2e6e89975d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acde62714579a941f57de587874a4050e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#acde62714579a941f57de587874a4050e">hasTexCoords</a> ()</td></tr>
-<tr class="separator:acde62714579a941f57de587874a4050e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08150f40370116168878f31dcb5b12b5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a08150f40370116168878f31dcb5b12b5">hasIndices</a> ()</td></tr>
-<tr class="separator:a08150f40370116168878f31dcb5b12b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8ee220b47ff0009c08e3a342c8fde5b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#ac8ee220b47ff0009c08e3a342c8fde5b">hasVertices</a> () const </td></tr>
+<tr class="separator:ac8ee220b47ff0009c08e3a342c8fde5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6be53b0d38750bac37466a2afb80df4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#ab6be53b0d38750bac37466a2afb80df4">hasColors</a> () const </td></tr>
+<tr class="separator:ab6be53b0d38750bac37466a2afb80df4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4eac00436a63515c933d91f87d1f8b26"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a4eac00436a63515c933d91f87d1f8b26">hasNormals</a> () const </td></tr>
+<tr class="separator:a4eac00436a63515c933d91f87d1f8b26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3045440dd2c5afefe6966c916ad1799f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a3045440dd2c5afefe6966c916ad1799f">hasTexCoords</a> () const </td></tr>
+<tr class="separator:a3045440dd2c5afefe6966c916ad1799f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a777bb666983203c64004e54dde51708a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a777bb666983203c64004e54dde51708a">hasIndices</a> () const </td></tr>
+<tr class="separator:a777bb666983203c64004e54dde51708a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acefb2d5ed24498988ecbf4f5dc5fa898"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#acefb2d5ed24498988ecbf4f5dc5fa898">drawVertices</a> ()</td></tr>
 <tr class="separator:acefb2d5ed24498988ecbf4f5dc5fa898"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbcca7869370497dd2d9b486ec4898a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#adbcca7869370497dd2d9b486ec4898a6">drawWireframe</a> ()</td></tr>
@@ -243,8 +244,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa97850592c56c4e52492afe0a5643c93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb6eef7eab7f4e7295f9da212c3c9aeb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#acb6eef7eab7f4e7295f9da212c3c9aeb">load</a> (string path)</td></tr>
 <tr class="separator:acb6eef7eab7f4e7295f9da212c3c9aeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96651b29dff40248e2334da73e33e728"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a96651b29dff40248e2334da73e33e728">save</a> (string path, bool useBinary=false)</td></tr>
-<tr class="separator:a96651b29dff40248e2334da73e33e728"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae945f4e97fce6c90bb39b0c3e1928b2b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#ae945f4e97fce6c90bb39b0c3e1928b2b">save</a> (string path, bool useBinary=false) const </td></tr>
+<tr class="separator:ae945f4e97fce6c90bb39b0c3e1928b2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19c5ae303039851e14cf8756b0867bbd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a19c5ae303039851e14cf8756b0867bbd">enableColors</a> ()</td></tr>
 <tr class="separator:a19c5ae303039851e14cf8756b0867bbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6efd5afdf5e30ac8d3838adb1418443d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a6efd5afdf5e30ac8d3838adb1418443d">enableTextures</a> ()</td></tr>
@@ -261,19 +262,51 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa67975cdd6e76929ff0f8269be6a3073"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83a91dc93279f489718fe9938a6e8f42"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a83a91dc93279f489718fe9938a6e8f42">disableIndices</a> ()</td></tr>
 <tr class="separator:a83a91dc93279f489718fe9938a6e8f42"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5df118b768d5a0fbea4a049f51e416b9"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a5df118b768d5a0fbea4a049f51e416b9">usingColors</a> ()</td></tr>
-<tr class="separator:a5df118b768d5a0fbea4a049f51e416b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46ec7b2c0a666d25fed456efa77736a1"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a46ec7b2c0a666d25fed456efa77736a1">usingTextures</a> ()</td></tr>
-<tr class="separator:a46ec7b2c0a666d25fed456efa77736a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3e2bf43f4a562c6de7c339f613410af"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#ac3e2bf43f4a562c6de7c339f613410af">usingNormals</a> ()</td></tr>
-<tr class="separator:ac3e2bf43f4a562c6de7c339f613410af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f0709db4b821a089315c08a8242334f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a6f0709db4b821a089315c08a8242334f">usingIndices</a> ()</td></tr>
-<tr class="separator:a6f0709db4b821a089315c08a8242334f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
+<tr class="memitem:a930ae5dfae694b50444fe57472ee040d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a930ae5dfae694b50444fe57472ee040d">usingColors</a> () const </td></tr>
+<tr class="separator:a930ae5dfae694b50444fe57472ee040d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac929f150c5a0b97208bf1e395b3fb57f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#ac929f150c5a0b97208bf1e395b3fb57f">usingTextures</a> () const </td></tr>
+<tr class="separator:ac929f150c5a0b97208bf1e395b3fb57f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a006a5c8f5f504680ea11592dd827b414"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a006a5c8f5f504680ea11592dd827b414">usingNormals</a> () const </td></tr>
+<tr class="separator:a006a5c8f5f504680ea11592dd827b414"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4a3190b6464e5ea653e7c74c47d5bec"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#ad4a3190b6464e5ea653e7c74c47d5bec">usingIndices</a> () const </td></tr>
+<tr class="separator:ad4a3190b6464e5ea653e7c74c47d5bec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af54d91dacec03b8db527eff91da6ffbd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#af54d91dacec03b8db527eff91da6ffbd">append</a> (<a class="el" href="classof_mesh.html">ofMesh</a> &amp;mesh)</td></tr>
+<tr class="separator:af54d91dacec03b8db527eff91da6ffbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f0875a7da176aa4a7c4c656a46385bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a8f0875a7da176aa4a7c4c656a46385bf">setColorForIndices</a> (int startIndex, int endIndex, <a class="el" href="of_color_8h.html#a7e21e1ce5fd475dd6ffb9124c55e00dd">ofColor</a> color)</td></tr>
+<tr class="separator:a8f0875a7da176aa4a7c4c656a46385bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fbb52b77cfef1a78234cd6e9ab960cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_mesh.html">ofMesh</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a4fbb52b77cfef1a78234cd6e9ab960cf">getMeshForIndices</a> (int startIndex, int endIndex) const </td></tr>
+<tr class="separator:a4fbb52b77cfef1a78234cd6e9ab960cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a840c3e2a213e01af9b190152ecbfa27c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_mesh.html">ofMesh</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a840c3e2a213e01af9b190152ecbfa27c">getMeshForIndices</a> (int startIndex, int endIndex, int startVertIndex, int endVertIndex) const </td></tr>
+<tr class="separator:a840c3e2a213e01af9b190152ecbfa27c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ad0c698acc3c5dfc9fe33ddc9eef291"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a9ad0c698acc3c5dfc9fe33ddc9eef291">mergeDuplicateVertices</a> ()</td></tr>
+<tr class="separator:a9ad0c698acc3c5dfc9fe33ddc9eef291"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade10f4e157ed99e74a1f3f0bc0823a43"><td class="memItemLeft" align="right" valign="top">const vector&lt; <a class="el" href="classof_mesh_face.html">ofMeshFace</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#ade10f4e157ed99e74a1f3f0bc0823a43">getUniqueFaces</a> () const </td></tr>
+<tr class="separator:ade10f4e157ed99e74a1f3f0bc0823a43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7f92489a2476fc476c0f95231e16a7a"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="classof_vec3f.html">ofVec3f</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#ab7f92489a2476fc476c0f95231e16a7a">getFaceNormals</a> (bool perVetex=false) const </td></tr>
+<tr class="separator:ab7f92489a2476fc476c0f95231e16a7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afeb448ae4f175099f6cc36106e5d4279"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#afeb448ae4f175099f6cc36106e5d4279">setFromTriangles</a> (const vector&lt; <a class="el" href="classof_mesh_face.html">ofMeshFace</a> &gt; &amp;tris, bool bUseFaceNormal=false)</td></tr>
+<tr class="separator:afeb448ae4f175099f6cc36106e5d4279"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8f5b239deb5f0e06a02f0c82fc84957"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#ab8f5b239deb5f0e06a02f0c82fc84957">smoothNormals</a> (float angle)</td></tr>
+<tr class="separator:ab8f5b239deb5f0e06a02f0c82fc84957"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa69e4d157ce3f84cad22fbf996b5f11c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#aa69e4d157ce3f84cad22fbf996b5f11c">draw</a> (<a class="el" href="of_g_l_utils_8h.html#a6beb1fbbaba728909c78cda1eadfe28e">ofPolyRenderMode</a> renderType)</td></tr>
 <tr class="separator:aa69e4d157ce3f84cad22fbf996b5f11c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a6af08c9c7a3f557b10b2fa29ed1246bf"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classof_mesh.html">ofMesh</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a6af08c9c7a3f557b10b2fa29ed1246bf">plane</a> (float <a class="el" href="of_icon_8h.html#aca34d28e3d8bcbcadb8edb4e3af24f8c">width</a>, float <a class="el" href="of_icon_8h.html#ab2e78c61905b4419fcc7b4cfc500fe85">height</a>, int columns=2, int rows=2, <a class="el" href="of_g_l_utils_8h.html#a0f71f0b23a18629a446952d5540e16e0">ofPrimitiveMode</a> mode=<a class="el" href="of_g_l_utils_8h.html#a0f71f0b23a18629a446952d5540e16e0a5799605679284702ca188191180c44c6">OF_PRIMITIVE_TRIANGLE_STRIP</a>)</td></tr>
+<tr class="separator:a6af08c9c7a3f557b10b2fa29ed1246bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12a08517b4c200b159f78f4594c95469"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classof_mesh.html">ofMesh</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a12a08517b4c200b159f78f4594c95469">sphere</a> (float radius, int res=12, <a class="el" href="of_g_l_utils_8h.html#a0f71f0b23a18629a446952d5540e16e0">ofPrimitiveMode</a> mode=<a class="el" href="of_g_l_utils_8h.html#a0f71f0b23a18629a446952d5540e16e0a5799605679284702ca188191180c44c6">OF_PRIMITIVE_TRIANGLE_STRIP</a>)</td></tr>
+<tr class="separator:a12a08517b4c200b159f78f4594c95469"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a045e6acc171f203e4eebf089f0905fdf"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classof_mesh.html">ofMesh</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a045e6acc171f203e4eebf089f0905fdf">icosahedron</a> (float radius)</td></tr>
+<tr class="separator:a045e6acc171f203e4eebf089f0905fdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeff5b066cc0ce3121946c534572618e3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classof_mesh.html">ofMesh</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#aeff5b066cc0ce3121946c534572618e3">icosphere</a> (float radius, int iterations=2)</td></tr>
+<tr class="separator:aeff5b066cc0ce3121946c534572618e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ea7154b0a3bc98680813ef1dbf0cbda"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classof_mesh.html">ofMesh</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a2ea7154b0a3bc98680813ef1dbf0cbda">cylinder</a> (float radius, float <a class="el" href="of_icon_8h.html#ab2e78c61905b4419fcc7b4cfc500fe85">height</a>, int radiusSegments=12, int heightSegments=6, int numCapSegments=2, bool bCapped=true, <a class="el" href="of_g_l_utils_8h.html#a0f71f0b23a18629a446952d5540e16e0">ofPrimitiveMode</a> mode=<a class="el" href="of_g_l_utils_8h.html#a0f71f0b23a18629a446952d5540e16e0a5799605679284702ca188191180c44c6">OF_PRIMITIVE_TRIANGLE_STRIP</a>)</td></tr>
+<tr class="separator:a2ea7154b0a3bc98680813ef1dbf0cbda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41c4a867973347df2662c9273ee82067"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classof_mesh.html">ofMesh</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a41c4a867973347df2662c9273ee82067">cone</a> (float radius, float <a class="el" href="of_icon_8h.html#ab2e78c61905b4419fcc7b4cfc500fe85">height</a>, int radiusSegments=12, int heightSegments=6, int capSegments=2, <a class="el" href="of_g_l_utils_8h.html#a0f71f0b23a18629a446952d5540e16e0">ofPrimitiveMode</a> mode=<a class="el" href="of_g_l_utils_8h.html#a0f71f0b23a18629a446952d5540e16e0a5799605679284702ca188191180c44c6">OF_PRIMITIVE_TRIANGLE_STRIP</a>)</td></tr>
+<tr class="separator:a41c4a867973347df2662c9273ee82067"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b134e9f9570c68a0ddf0fbb2e4ba2c1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classof_mesh.html">ofMesh</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_mesh.html#a1b134e9f9570c68a0ddf0fbb2e4ba2c1">box</a> (float <a class="el" href="of_icon_8h.html#aca34d28e3d8bcbcadb8edb4e3af24f8c">width</a>, float <a class="el" href="of_icon_8h.html#ab2e78c61905b4419fcc7b4cfc500fe85">height</a>, float depth, int resX=2, int resY=2, int resZ=2)</td></tr>
+<tr class="separator:a1b134e9f9570c68a0ddf0fbb2e4ba2c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a3ffeb1343321a13b07250eae05ce357e"></a>
@@ -663,6 +696,80 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="af54d91dacec03b8db527eff91da6ffbd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofMesh::append </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classof_mesh.html">ofMesh</a> &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1b134e9f9570c68a0ddf0fbb2e4ba2c1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classof_mesh.html">ofMesh</a> ofMesh::box </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>depth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>resX</em> = <code>2</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>resY</em> = <code>2</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>resZ</em> = <code>2</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a3f84e571d711ee21c45ebaa11bde422e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -749,6 +856,128 @@ Protected Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a41c4a867973347df2662c9273ee82067"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classof_mesh.html">ofMesh</a> ofMesh::cone </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>radiusSegments</em> = <code>12</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>heightSegments</em> = <code>6</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>capSegments</em> = <code>2</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="of_g_l_utils_8h.html#a0f71f0b23a18629a446952d5540e16e0">ofPrimitiveMode</a>&#160;</td>
+          <td class="paramname"><em>mode</em> = <code><a class="el" href="of_g_l_utils_8h.html#a0f71f0b23a18629a446952d5540e16e0a5799605679284702ca188191180c44c6">OF_PRIMITIVE_TRIANGLE_STRIP</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2ea7154b0a3bc98680813ef1dbf0cbda"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classof_mesh.html">ofMesh</a> ofMesh::cylinder </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>radiusSegments</em> = <code>12</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>heightSegments</em> = <code>6</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>numCapSegments</em> = <code>2</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bCapped</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="of_g_l_utils_8h.html#a0f71f0b23a18629a446952d5540e16e0">ofPrimitiveMode</a>&#160;</td>
+          <td class="paramname"><em>mode</em> = <code><a class="el" href="of_g_l_utils_8h.html#a0f71f0b23a18629a446952d5540e16e0a5799605679284702ca188191180c44c6">OF_PRIMITIVE_TRIANGLE_STRIP</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -885,7 +1114,7 @@ Protected Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1146,6 +1375,22 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ab7f92489a2476fc476c0f95231e16a7a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; <a class="el" href="classof_vec3f.html">ofVec3f</a> &gt; ofMesh::getFaceNormals </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>perVetex</em> = <code>false</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="aac2a306dca03af3ff00493992a2aa830"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1216,6 +1461,70 @@ Protected Member Functions</h2></td></tr>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4fbb52b77cfef1a78234cd6e9ab960cf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classof_mesh.html">ofMesh</a> ofMesh::getMeshForIndices </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>startIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>endIndex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a840c3e2a213e01af9b190152ecbfa27c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classof_mesh.html">ofMesh</a> ofMesh::getMeshForIndices </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>startIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>endIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>startVertIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>endVertIndex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1464,6 +1773,21 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ade10f4e157ed99e74a1f3f0bc0823a43"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const vector&lt; <a class="el" href="classof_mesh_face.html">ofMeshFace</a> &gt; &amp; ofMesh::getUniqueFaces </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a57998157b1b7e041930ad775c5d5ffc8"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1540,7 +1864,7 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a24c09fd7825c947d089487182c56ea45"></a>
+<a class="anchor" id="ab6be53b0d38750bac37466a2afb80df4"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -1548,14 +1872,14 @@ Protected Member Functions</h2></td></tr>
           <td class="memname">bool ofMesh::hasColors </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="a08150f40370116168878f31dcb5b12b5"></a>
+<a class="anchor" id="a777bb666983203c64004e54dde51708a"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -1563,14 +1887,14 @@ Protected Member Functions</h2></td></tr>
           <td class="memname">bool ofMesh::hasIndices </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="a11804f7e3f242e32e5970c2e6e89975d"></a>
+<a class="anchor" id="a4eac00436a63515c933d91f87d1f8b26"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -1578,14 +1902,14 @@ Protected Member Functions</h2></td></tr>
           <td class="memname">bool ofMesh::hasNormals </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="acde62714579a941f57de587874a4050e"></a>
+<a class="anchor" id="a3045440dd2c5afefe6966c916ad1799f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -1593,14 +1917,14 @@ Protected Member Functions</h2></td></tr>
           <td class="memname">bool ofMesh::hasTexCoords </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="a07acb9241b3fa789bf6ffb32d31439d8"></a>
+<a class="anchor" id="ac8ee220b47ff0009c08e3a342c8fde5b"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -1608,7 +1932,7 @@ Protected Member Functions</h2></td></tr>
           <td class="memname">bool ofMesh::hasVertices </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1690,6 +2014,68 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a045e6acc171f203e4eebf089f0905fdf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classof_mesh.html">ofMesh</a> ofMesh::icosahedron </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>radius</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Step 1 : Generate icosahedron </p>
+
+</div>
+</div>
+<a class="anchor" id="aeff5b066cc0ce3121946c534572618e3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classof_mesh.html">ofMesh</a> ofMesh::icosphere </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>iterations</em> = <code>2</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Step 2 : tessellate</p>
+<p>Step 3 : generate texcoords</p>
+<p>Step 4 : fix texcoords </p>
+
+</div>
+</div>
 <a class="anchor" id="acb6eef7eab7f4e7295f9da212c3c9aeb"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1702,6 +2088,73 @@ Protected Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9ad0c698acc3c5dfc9fe33ddc9eef291"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofMesh::mergeDuplicateVertices </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6af08c9c7a3f557b10b2fa29ed1246bf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classof_mesh.html">ofMesh</a> ofMesh::plane </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>columns</em> = <code>2</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rows</em> = <code>2</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="of_g_l_utils_8h.html#a0f71f0b23a18629a446952d5540e16e0">ofPrimitiveMode</a>&#160;</td>
+          <td class="paramname"><em>mode</em> = <code><a class="el" href="of_g_l_utils_8h.html#a0f71f0b23a18629a446952d5540e16e0a5799605679284702ca188191180c44c6">OF_PRIMITIVE_TRIANGLE_STRIP</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -1786,7 +2239,7 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a96651b29dff40248e2334da73e33e728"></a>
+<a class="anchor" id="ae945f4e97fce6c90bb39b0c3e1928b2b"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -1805,7 +2258,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1827,6 +2280,64 @@ Protected Member Functions</h2></td></tr>
           <td></td>
           <td class="paramtype">const <a class="el" href="of_color_8h.html#a9ae60244b89debdb4901ef09e7f47434">ofFloatColor</a> &amp;&#160;</td>
           <td class="paramname"><em>c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8f0875a7da176aa4a7c4c656a46385bf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofMesh::setColorForIndices </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>startIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>endIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="of_color_8h.html#a7e21e1ce5fd475dd6ffb9124c55e00dd">ofColor</a>&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afeb448ae4f175099f6cc36106e5d4279"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofMesh::setFromTriangles </td>
+          <td>(</td>
+          <td class="paramtype">const vector&lt; <a class="el" href="classof_mesh_face.html">ofMeshFace</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>tris</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bUseFaceNormal</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1989,7 +2500,63 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a5df118b768d5a0fbea4a049f51e416b9"></a>
+<a class="anchor" id="ab8f5b239deb5f0e06a02f0c82fc84957"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ofMesh::smoothNormals </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>angle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a12a08517b4c200b159f78f4594c95469"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classof_mesh.html">ofMesh</a> ofMesh::sphere </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>res</em> = <code>12</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="of_g_l_utils_8h.html#a0f71f0b23a18629a446952d5540e16e0">ofPrimitiveMode</a>&#160;</td>
+          <td class="paramname"><em>mode</em> = <code><a class="el" href="of_g_l_utils_8h.html#a0f71f0b23a18629a446952d5540e16e0a5799605679284702ca188191180c44c6">OF_PRIMITIVE_TRIANGLE_STRIP</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a930ae5dfae694b50444fe57472ee040d"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -2000,7 +2567,7 @@ Protected Member Functions</h2></td></tr>
           <td class="memname">bool ofMesh::usingColors </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -2010,11 +2577,11 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classof_vbo_mesh.html#acfd2524c03259af19530a0dea79b7176">ofVboMesh</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_vbo_mesh.html#a5e6921c032ff4965492145c3a250e053">ofVboMesh</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a6f0709db4b821a089315c08a8242334f"></a>
+<a class="anchor" id="ad4a3190b6464e5ea653e7c74c47d5bec"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -2025,7 +2592,7 @@ Protected Member Functions</h2></td></tr>
           <td class="memname">bool ofMesh::usingIndices </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -2035,11 +2602,11 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classof_vbo_mesh.html#a59a6365925e91d14ed543c03e2d4af77">ofVboMesh</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_vbo_mesh.html#aab037c349d5079cdf8d21288461c7f30">ofVboMesh</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ac3e2bf43f4a562c6de7c339f613410af"></a>
+<a class="anchor" id="a006a5c8f5f504680ea11592dd827b414"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -2050,7 +2617,7 @@ Protected Member Functions</h2></td></tr>
           <td class="memname">bool ofMesh::usingNormals </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -2060,11 +2627,11 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classof_vbo_mesh.html#a45b858facc3cd6d488516f8f94e6084c">ofVboMesh</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_vbo_mesh.html#a9024f6fa98bb129872230a14575bb390">ofVboMesh</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a46ec7b2c0a666d25fed456efa77736a1"></a>
+<a class="anchor" id="ac929f150c5a0b97208bf1e395b3fb57f"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -2075,7 +2642,7 @@ Protected Member Functions</h2></td></tr>
           <td class="memname">bool ofMesh::usingTextures </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -2085,13 +2652,13 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classof_vbo_mesh.html#affa61252a0e089429d2d02de95f75ba3">ofVboMesh</a>.</p>
+<p>Reimplemented in <a class="el" href="classof_vbo_mesh.html#a23aff6537576e58b00ba3467e87e0d65">ofVboMesh</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>3d/<a class="el" href="of_mesh_8h_source.html">ofMesh.h</a></li>
-<li>3d/<a class="el" href="of_mesh_8cpp.html">ofMesh.cpp</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/3d/<a class="el" href="of_mesh_8h_source.html">ofMesh.h</a></li>
+<li>/home/arturo/Desktop/openFrameworks/libs/openFrameworks/3d/<a class="el" href="of_mesh_8cpp.html">ofMesh.cpp</a></li>
 </ul>
 </div><!-- contents -->
 

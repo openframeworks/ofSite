@@ -41,6 +41,118 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###int getBufferSize()
+
+<!--
+_syntax: getBufferSize()_
+_name: getBufferSize_
+_returns: int_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int getNumInputChannels()
+
+<!--
+_syntax: getNumInputChannels()_
+_name: getNumInputChannels_
+_returns: int_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int getNumOutputChannels()
+
+<!--
+_syntax: getNumOutputChannels()_
+_name: getNumOutputChannels_
+_returns: int_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int getSampleRate()
+
+<!--
+_syntax: getSampleRate()_
+_name: getSampleRate_
+_returns: int_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###long unsigned long getTickCount()
 
 <!--

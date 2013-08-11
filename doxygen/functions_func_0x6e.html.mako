@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -52,6 +53,7 @@
       <li><a href="functions.html"><span>All</span></a></li>
       <li class="current"><a href="functions_func.html"><span>Functions</span></a></li>
       <li><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_type.html"><span>Typedefs</span></a></li>
       <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
       <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
       <li><a href="functions_prop.html"><span>Properties</span></a></li>
@@ -95,6 +97,9 @@
 &#160;
 
 <h3><a class="anchor" id="index_n"></a>- n -</h3><ul>
+<li>nativeViewport()
+: <a class="el" href="classof_matrix_stack.html#afe507d78e726f6513e90028cce9cfcf3">ofMatrixStack</a>
+</li>
 <li>newFrustumMatrix()
 : <a class="el" href="classof_matrix4x4.html#a5286c58f3ebf08fca0956f7ed707607d">ofMatrix4x4</a>
 </li>
@@ -114,7 +119,7 @@
 : <a class="el" href="classof_matrix4x4.html#aa396844090e1bb55493d40069e581522">ofMatrix4x4</a>
 </li>
 <li>newRotationMatrix()
-: <a class="el" href="classof_matrix4x4.html#af8e391f447240ef16bde99bc2c06be83">ofMatrix4x4</a>
+: <a class="el" href="classof_matrix4x4.html#aacb01604b5478f3f189f7fef2b147040">ofMatrix4x4</a>
 </li>
 <li>newScaleMatrix()
 : <a class="el" href="classof_matrix4x4.html#a523850a2fbde8e8bf2f1c7e67b818608">ofMatrix4x4</a>
@@ -123,25 +128,40 @@
 : <a class="el" href="classof_path.html#abfe7284268e42ffcea066c9ffbe9a596">ofPath</a>
 </li>
 <li>newTranslationMatrix()
-: <a class="el" href="classof_matrix4x4.html#a86c1b2df50ca25c63a36d7f39268c25b">ofMatrix4x4</a>
+: <a class="el" href="classof_matrix4x4.html#a21d86ff138b1764fd5b7d9be3788839f">ofMatrix4x4</a>
 </li>
 <li>nextFrame()
 : <a class="el" href="classof_base_video_player.html#a8a929bba80365434a072cbf7e2d8b7d9">ofBaseVideoPlayer</a>
 , <a class="el" href="classof_gst_video_player.html#a411a60389cbdff46723bab0d8f12b866">ofGstVideoPlayer</a>
-, <a class="el" href="classof_video_player.html#a899fccde364c629262508a7a5347f698">ofVideoPlayer</a>
 , <a class="el" href="classof_q_t_kit_player.html#a36ec05d764c6ae3a27c81f6f445406fd">ofQTKitPlayer</a>
+, <a class="el" href="classof_video_player.html#a899fccde364c629262508a7a5347f698">ofVideoPlayer</a>
 </li>
 <li>normalize()
-: <a class="el" href="classof_quaternion.html#ac26874bac00aaabf30c20d0c95ff0d5f">ofQuaternion</a>
-, <a class="el" href="classof_vec2f.html#adaa0832bfedd859adb9df1616a4384c8">ofVec2f</a>
+: <a class="el" href="classof_vec2f.html#adaa0832bfedd859adb9df1616a4384c8">ofVec2f</a>
+, <a class="el" href="classof_quaternion.html#ac26874bac00aaabf30c20d0c95ff0d5f">ofQuaternion</a>
 , <a class="el" href="classof_vec3f.html#a878f3aee3675df4b81ac0f9c42ebc609">ofVec3f</a>
-, <a class="el" href="classof_color__.html#a383be8c22b569253381ea7e5ed80f51d">ofColor_&lt; PixelType &gt;</a>
 , <a class="el" href="classof_vec4f.html#a0901c68e2a9a4095221dfb7c5de1ef87">ofVec4f</a>
+, <a class="el" href="classof_color__.html#a383be8c22b569253381ea7e5ed80f51d">ofColor_&lt; PixelType &gt;</a>
+</li>
+<li>normalizeAndApplySavedTexCoords()
+: <a class="el" href="classof3d_primitive.html#a157ddb6ce88f87553e45c04b79fa7b85">of3dPrimitive</a>
 </li>
 <li>normalized()
 : <a class="el" href="classof_vec3f.html#a603c4fee6795cab3335be5542633f328">ofVec3f</a>
 , <a class="el" href="classof_vec4f.html#a1520795684fd967171758cdea8180212">ofVec4f</a>
 , <a class="el" href="classof_vec2f.html#a5bc256605f4abb393adbfa2714bb43f6">ofVec2f</a>
+</li>
+<li>notify()
+: <a class="el" href="classof_delegate_3_01_t_obj_00_01_t_args_00_01false_01_4.html#a9299e2c68a3766ac10a71a740d33b376">ofDelegate&lt; TObj, TArgs, false &gt;</a>
+, <a class="el" href="classof_delegate_3_01_t_obj_00_01void_00_01true_01_4.html#ad07b9aff61f6f6dd173aa0215a1f6aee">ofDelegate&lt; TObj, void, true &gt;</a>
+, <a class="el" href="classof_delegate.html#aabe8c8db8d4473af8b8846a8cea2395e">ofDelegate&lt; TObj, TArgs, useSender &gt;</a>
+, <a class="el" href="classof_delegate_3_01_t_obj_00_01void_00_01false_01_4.html#a6c8b0747723e68ae87b3b7d078bdbd84">ofDelegate&lt; TObj, void, false &gt;</a>
+</li>
+<li>notifyParameterChanged()
+: <a class="el" href="classof_parameter_group.html#a879025d16a12cbf64b2bcf0f07754e33">ofParameterGroup</a>
+</li>
+<li>notifyParent()
+: <a class="el" href="classof_abstract_parameter.html#a7f73e294af3bb01969fa7d8f21afb269">ofAbstractParameter</a>
 </li>
 <li>numFiles()
 : <a class="el" href="classof_directory.html#a791eb3d185cf3f9578cef92a39afc913">ofDirectory</a>

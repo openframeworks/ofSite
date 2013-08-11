@@ -271,7 +271,7 @@ _name: checkStatus_
 _returns: bool_
 _returns_description: _
 _parameters: _
-_access: private_
+_access: public_
 _version_started: 007_
 _version_deprecated: _
 _summary: _
@@ -299,8 +299,8 @@ _syntax: createAndAttachDepthStencilTexture(target, internalformat, format, type
 _name: createAndAttachDepthStencilTexture_
 _returns: void_
 _returns_description: _
-_parameters: GLenum target, GLint internalformat, GLenum format, GLenum type, GLenum attachment_
-_access: private_
+_parameters: GLenum target, GLint internalformat, GLenum attachment, GLenum transferFormat, GLenum transferType_
+_access: public_
 _version_started: 0071_
 _version_deprecated: _
 _summary: _
@@ -321,6 +321,34 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void createAndAttachDepthStencilTexture(target, internalformat, attachment)
+
+<!--
+_syntax: createAndAttachDepthStencilTexture(target, internalformat, attachment)_
+_name: createAndAttachDepthStencilTexture_
+_returns: void_
+_returns_description: _
+_parameters: GLenum target, GLint internalformat, GLenum attachment_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###GLuint createAndAttachRenderbuffer(internalFormat, attachmentPoint)
 
 <!--
@@ -329,7 +357,7 @@ _name: createAndAttachRenderbuffer_
 _returns: GLuint_
 _returns_description: _
 _parameters: GLenum internalFormat, GLenum attachmentPoint_
-_access: private_
+_access: public_
 _version_started: 007_
 _version_deprecated: _
 _summary: _
@@ -363,13 +391,41 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void createAndAttachTexture(internalFormat, attachmentPoint)
+
+<!--
+_syntax: createAndAttachTexture(internalFormat, attachmentPoint)_
+_name: createAndAttachTexture_
+_returns: void_
+_returns_description: _
+_parameters: GLenum internalFormat, GLenum attachmentPoint_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: no_
+_visible: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
