@@ -21,8 +21,31 @@ Generally you have to create your points to fit the drawing mode that you've sel
 
 If you're thinking: it would be nice if there were an abstraction layer for this you're thinking right. Enter the mesh, which is really just an abstraction of the vertex and drawing mode that we started with but which has the added bonus of managing the draw order for you. That may seem insignificant at first, but it provides some real benefits when working with complex geometry.
 
+A very typical usage is something like the following:
 
+~~~~{.cpp}
+ofMesh mesh;
+for (int y = 0; y < height; y++){
+	for (int x = 0; x<width; x++){
+		mesh.addVertex(ofPoint(x,y,0)); // make a new vertex
+		mesh.addColor(ofFloatColor(0,0,0));  // add a color at that vertex
+	}
+}
 
+// now it's important to make sure that each vertex is correctly connected with the
+// other vertices around it. This is done using indices, which you can set up like so:	
+for (int y = 0; y<height-1; y++){
+	for (int x=0; x<width-1; x++){
+		mesh.addIndex(x+y*width);				// 0
+		mesh.addIndex((x+1)+y*width);			// 1
+		mesh.addIndex(x+(y+1)*width);			// 10
+		
+		mesh.addIndex((x+1)+y*width);			// 1
+		mesh.addIndex((x+1)+(y+1)*width);		// 11
+		mesh.addIndex(x+(y+1)*width);			// 10
+	}
+}
+~~~~
 
 
 ##Methods
@@ -82,7 +105,7 @@ _description: _
 
 
 
-
+This adds a single color to all vertices.
 
 
 
@@ -141,7 +164,7 @@ _advanced: False_
 _description: _
 
 
-Add colors to the colors vector.
+Add colors to the colors vector using a pointer. The second parameter is always the number of colors that you're adding to the ofMesh.
 
 
 
@@ -172,7 +195,7 @@ _advanced: False_
 _description: _
 
 
-
+This adds colors using a reference to a vector of ofColors. For each color in the vector, this will put the colors at the corresponding vertex.
 
 
 
@@ -202,6 +225,7 @@ _description: _
 
 
 
+This adds a pointer of colors to the ofMesh instance with the amount passed as the second parameter.
 
 
 
@@ -323,7 +347,7 @@ _advanced: False_
 _description: _
 
 
-
+This adds a vector of indices.
 
 
 
@@ -352,7 +376,7 @@ _advanced: False_
 _description: _
 
 
-
+This adds indices to the ofMesh. 
 
 
 

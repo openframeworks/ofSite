@@ -72,7 +72,7 @@ void testApp::draw(){
 }
 ~~~~
 
-We can use model.setScale() to change the size and setRotation() to rotate the model. The next snippet, for instance, draws the model half it’s size and if it was looking at you, now is showing it’s back:
+We can use model.setScale() to change the size and setRotation() to rotate the model. The next snippet, for instance, draws the model half it's size and if it was looking at you, now is showing it's back:
 
 ~~~~{.cpp}
 model.setRotation(0,90,0,1,0);
