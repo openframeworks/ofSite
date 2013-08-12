@@ -1,4 +1,4 @@
-<title>${bf.config.blog.name}</title>
+<title>${bf.config.blog.name + pageargs['subtitle']}</title>
 
 <!-- syntax highlighting for the documentation -->
 <script src="${bf.config.site.url}/js/shCore.js" type="text/javascript"></script>
