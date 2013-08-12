@@ -93,11 +93,12 @@ def run():
 
         clazz.reference = str(clazz.reference)
         for class_name in classes:
+                ref_clazz = markdown_file.getclass(class_name,True)
                 rep = class_name + "[\s]"
-                clazz.reference = re.sub(rep, "<a href=\"../"+clazz.module+"/"+class_name+".html\">"+class_name+"</a> ", clazz.reference)
+                clazz.reference = re.sub(rep, "<a href=\"../"+ref_clazz.module+"/"+class_name+".html\">"+class_name+"</a> ", clazz.reference)
                 rep = class_name + "[(]"
-                clazz.reference = re.sub(rep, "<a href=\"../"+clazz.module+"/"+class_name+".html\">"+class_name+"</a>(", clazz.reference)
-        
+                clazz.reference = re.sub(rep, "<a href=\"../"+ref_clazz.module+"/"+class_name+".html\">"+class_name+"</a>(", clazz.reference)
+                #print "Going through " + clazz.module + ":" + clazz.name +", replacing " + ref_clazz.module + ":" + class_name
 
         functions_file = markdown_file.getfunctionsfile(clazz_name)
         #print clazz.name
