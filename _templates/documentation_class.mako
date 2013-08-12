@@ -31,7 +31,7 @@
 		    <div class="submenucol-left">
 		     <!-- list of methods -->
              % if not clazz is None and len([x for x in clazz.function_list if not x.advanced and x.visible and x.access=='public'])>0:
-		     <p class="top_list_header">methods</p>
+		     <p class="top_list_header">class methods</p>
              <ul class="functionslist">
                  <% prevmethod = "" %>
                  % for method in clazz.function_list:
@@ -61,7 +61,7 @@
             
              <!-- list of functions -->              
              % if len([x for x in functions.function_list if not x.advanced and x.visible])>0:
-            <p class="top_list_header">functions</p>
+            <p class="top_list_header">global functions</p>
                 <ul class="functionslist">
                      <% prevmethod = "" %>
                      % for method in functions.function_list:
