@@ -1,17 +1,25 @@
-<%inherit file="/_templates/home.mako" />
+<%inherit file="/_templates/fullpage.mako" />
 
 <div class="page-left-medium">                
 <h1 id="community">development</h1>
 
 <p>openFrameworks development is collaborative. It thrives on the contributions of <a href="https://github.com/openframeworks/openFrameworks/contributors">many people</a>, who engage in frequent discussion on the <a href="http://forum.openframeworks.cc/">forums</a>, <a href="http://webchat.freenode.net/?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39">IRC</a>, and the <a href="http://dev.openframeworks.cc/listinfo.cgi/of-dev-openframeworks.cc">of-dev mailing list</a>. We use git, a distributed versioning system, which means also that people can branch, experiment, and make suggestions. If you look at the network diagram on <a href="http://github.com/openframeworks/openFrameworks">GitHub</a>, it's looks like some alien diagram, full of weaving branches, code pulling apart and coming together. There's a huge community, all over the world, working on the core code: fixing bugs, submitting pull requests, and shaping the tool the way they want to see it.</p>
 <p>Visit the <a href="../community">community page</a> for other ways to contribute.</p>
-<br>
-<p><h3 style="font-size:1.8em"><a href="http://dev.openframeworks.cc/listinfo.cgi/of-dev-openframeworks.cc">> of-dev mailing list</a></h3></p>
-<p><h3 style="font-size:1.8em"><a href="http://webchat.freenode.net/?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39">> IRC</a></h3></p>
-<p><h3 style="font-size:1.8em"><a href="http://forum.openframeworks.cc/">> forum</a></h3></p>
-<p><h3 style="font-size:1.8em"><a href="http://github.com/openframeworks/openFrameworks">> github</a></h3></p>
+
+
+<ul class="external_links" >
+    <li><a href="http://dev.openframeworks.cc/listinfo.cgi/of-dev-openframeworks.cc">of-dev mailing list</a></li>
+    <li><a href="http://webchat.freenode.net/?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39">IRC</a></li>
+    <li><a href="http://forum.openframeworks.cc/">forum</a></li>
+    <li><a href="http://github.com/openframeworks/openFrameworks">github</a></li>
+    <li><a href="http://openframeworks.cc/ofbuild.html">continuous integration</a></li>
+</ul>
+
+
 
 <hr>
+
+
 <h2 id="documents">documents</h2>
 <p><a href="https://github.com/openframeworks/openFrameworks/wiki">developer wiki</a> - central location for links to relevant openFrameworks developer docs</p>
 <p><a href="https://github.com/openframeworks/openFrameworks/wiki/openFrameworks-git-workflow">git workflow</a> - the version control workflow followed by the openFrameworks community when dealing with the development of openFrameworks</p>
