@@ -141,6 +141,7 @@ _description: _
 Closes the movie file and de-allocates resources.
 
 Example:
+
 ~~~~{.cpp}
 ofVideoPlayer myPlayer;
 myPlayer.loadMovie("myMovie.mov"); //Loads video resources
@@ -633,7 +634,7 @@ _advanced: False_
 _description: _
 
 
-
+This returns a [shared pointer](http://thenewcpp.wordpress.com/2012/06/21/shared-pointers/) to the particular implementation of ofVideoPlayer that your system is using.
 
 
 
@@ -916,7 +917,7 @@ _advanced: False_
 _description: _
 
 
-
+Whether the resources that you've tried to load into your ofVideoPlayer have been loaded yet.
 
 
 
@@ -945,7 +946,7 @@ _description: _
 
 
 
-
+Whether the the ofVideoPlayer is currently paused.
 
 
 
@@ -974,7 +975,7 @@ _description: _
 
 
 
-
+Whether the the ofVideoPlayer is currently playing.
 
 
 
@@ -1071,7 +1072,7 @@ _description: _
 
 
 
-
+Constructor.
 
 
 
@@ -1099,7 +1100,7 @@ _advanced: False_
 _description: _
 
 
-Plays the movie. If the movie has been stopped or paused it will the continue playback at the point it was stopped. 
+Plays the movie. If the movie has been stopped or paused it will the continue playback at the point it was stopped. You still need to call update() periodically to ensure that you're copying frames to an ofTexture so that they can be drawn.
 
 
 
@@ -1162,7 +1163,7 @@ _description: _
 
 
 
-
+Resets the ancher point of this ofVideoPlayer, if one has been set.
 
 
 
@@ -1249,7 +1250,7 @@ _description: _
 
 
 
-
+Sets an anchor percentage for this ofVideoPlayer instance
 
 
 
@@ -1278,7 +1279,7 @@ _description: _
 
 
 
-
+Sets anchor points for this ofVideoPlayer instance.
 
 
 
@@ -1306,7 +1307,7 @@ _advanced: False_
 _description: _
 
 
-
+Sets anchor points for this ofVideoPlayer instance.
 
 
 
@@ -1403,6 +1404,13 @@ _advanced: False_
 _description: _
 
 
+Sets the looping state of the movie. Deafult behavior is to loop. There are three options:
+~~~~{.cpp}
+
+OF_LOOP_NONE - don't loop, the movie will stop when it gets to the last frame (or first frame, if playing backwards)
+OF_LOOP_NORMAL - loop normally (the last frame loops to the first frame)
+OF_LOOP_PALINDROME - loop back and forth
+~~~~
 
 
 
@@ -1464,7 +1472,7 @@ _description: _
 
 
 
-
+Sets the pixel format for the 
 
 
 
