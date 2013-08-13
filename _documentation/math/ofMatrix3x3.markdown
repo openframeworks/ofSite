@@ -5,7 +5,7 @@
 
 
 
-
+The 3x3 matrix can hold the values needed to transform a 2d vertex, which is pretty handy when you want to do things like move vertices around, rotate them, etc. The 3x3 is pretty important because it allows you to have both a rotation and a transformation in the same little old object. You won't see them used a great deal because it's usually easier to use the rotate() and translate() methods of ofVec2f but they are handy sometimes. You'll probably see the ofMatrix4x4 used more often, because it allows you to represent a camera or a projection mathematically, and that's pretty useful in doing 3d graphics. They're also used in ofxOpenCv sometimes to represent information about cameras.
 
 
 ##Methods
