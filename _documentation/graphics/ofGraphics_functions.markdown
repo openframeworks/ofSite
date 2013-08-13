@@ -197,7 +197,7 @@ _advanced: False_
 
 _description: _
 
-Sets the background color. It takes as input a hex color value. 
+Sets the background color using a hex color value. 
 
 ~~~~{.cpp}
 void testApp::setup(){
@@ -230,7 +230,7 @@ _advanced: False_
 
 _description: _
 
-Begins render to pdf. OpenFrameworks allows rendering of 2D graphics to pdf via the ofCairoRenderer. ofBeginSaveScreenAsPDF is called before drawing to start the pdf render. 
+Begins render to pdf. OpenFrameworks allows rendering of 2D graphics to pdf via the ofCairoRenderer. ofBeginSaveScreenAsPDF is called before drawing. When done drawing call ofEndSaveScreenAsPDF() to output the file. 
 
 ~~~~{.cpp}
 void testApp::setup(){
@@ -936,7 +936,7 @@ _advanced: False_
 
 _description: _
 
-Turns of depth testing so rendering happens in drawing order of draw rather than by z-depth. Turning off depth test is useful for combining 3d scenes with 2d overlays such as a control panel.
+Turns off depth testing so rendering happens in draw order rather than by z-depth. Turning off depth test is useful for combining 3d scenes with 2d overlays such as a control panel.
 ~~~~{.cpp}
 void testApp::draw(){
     
@@ -3074,7 +3074,7 @@ _advanced: False_
 
 _description: _
 
-Sets the background color. It takes as input a hex color value. 
+Sets the background color using a hex color value. 
 
 ~~~~{.cpp}
 void testApp::setup(){
