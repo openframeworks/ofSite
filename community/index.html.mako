@@ -15,7 +15,11 @@
 
 <p><b><a href="http://ofxaddons.com">Create addons</a></b> - An addon is code that extends openFrameworks in some way, allowing more advanced functionality. Help teach others by creating a tutorial. Visit <a href="http://ofxaddons.com">ofxaddons.com</a> to view all addons and the <a href="http://ofxaddons.com/howto/">tutorial on making an addon</a> to get started.</p>
 
+<p><b>Teach OF</b> - Are you teaching an upcoming workshop, class, or event? Post it to the <a href="http://www.openframeworks.cc/list-info/">OF mailing list</a> and it will be added to this page. Share workshops and classes you have already taught on the <a href="http://wiki.openframeworks.cc/index.php?title=Education">education wiki</a> page. Check out the <a href="http://forum.openframeworks.cc/index.php">forum</a> for other teaching opportunities.</p>
+
 <p><b><a href="/development">Develop OF</a></b> - To get more in-depth information about OF, join the <a href="http://dev.openframeworks.cc/listinfo.cgi/of-dev-openframeworks.cc">of-dev list</a>! The dev list is a great place for discussion about the direction OF is heading. The list is open to everyone, and we like to foster a diverse crowd to help OF become as useful and interesting as possible!</p>
+
+<p><b>Other contributions</b> - The OF community is always looking for developers, designers, writers, event organizers, and general enthusiasts to help build a better experience. Stay tuned on the <a href="http://www.openframeworks.cc/list-info/">mailing list</a> and <a href="http://twitter.com/openFrameworks"> twitter</a> for opportunities.</p>
 
 </div>
             
