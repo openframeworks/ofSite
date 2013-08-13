@@ -661,6 +661,9 @@ div.sectiontitle h2{
     background-color:#f8f8f9;
     padding: 1em;
 }
+a.docs_class{
+    font-family: "Consolas","Bitstream Vera Sans Mono","Courier New",Courier,monospace;
+}
 .documentation_detail_table_offset {
 	float: left;
 	margin: 0px 0px 25px 0px;
