@@ -1,8 +1,16 @@
 #class ofTrueTypeFont
 
 
-##Description
+##InlineDescription
 
+
+
+
+
+
+
+
+##Description
 
 The ofTrueTypeFont class provides an interface to load fonts into openframeworks. The fonts are converted to textures, and can be drawn on screen. There are some options when you load the font - what size the font is rendered at, wether or not it is anti-aliased, and wether the font object will be the full character set or a subset (ie, extended ascii, which can include accents, umlauts, or normal ascii). The default is anti-aliased, non-full character set. The library uses freetype, which has certain patent problems in regards to true type hinting, especially at small sizes, so non-anti-aliased type doesn't always render beautifully. But we find it quite adequate, and at larger sizes it seems to works well.
 
@@ -31,6 +39,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -61,7 +79,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -88,6 +117,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -118,6 +157,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -146,6 +195,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -204,6 +263,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -235,7 +304,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -262,6 +342,14 @@ _static: False_
 _visible: True_
 _advanced: True_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
 
 _description: _
 
@@ -292,7 +380,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -320,7 +419,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -330,12 +440,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofTexture getFontTexture()
+###ofTexture & getFontTexture()
 
 <!--
 _syntax: getFontTexture()_
 _name: getFontTexture_
-_returns: ofTexture_
+_returns: ofTexture &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -348,7 +458,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -375,6 +496,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -404,6 +535,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -436,6 +577,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -464,6 +615,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -494,6 +655,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -523,6 +694,14 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
 
 
@@ -534,12 +713,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofTTFCharacter getStringAsPoints(str, vflip = ofIsVFlipped())
+###vector< ofTTFCharacter > getStringAsPoints(str, vflip = ofIsVFlipped())
 
 <!--
 _syntax: getStringAsPoints(str, vflip = ofIsVFlipped())_
 _name: getStringAsPoints_
-_returns: ofTTFCharacter_
+_returns: vector< ofTTFCharacter >_
 _returns_description: _
 _parameters: string str, bool vflip=ofIsVFlipped()_
 _access: public_
@@ -552,7 +731,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -579,6 +769,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -609,12 +809,12 @@ ofRect(rect.x, rect.y, rect.width, rect.height);
 
 <!----------------------------------------------------------------------------->
 
-###ofMesh getStringMesh(s, x, y)
+###ofMesh & getStringMesh(s, x, y)
 
 <!--
 _syntax: getStringMesh(s, x, y)_
 _name: getStringMesh_
-_returns: ofMesh_
+_returns: ofMesh &_
 _returns_description: _
 _parameters: string s, float x, float y_
 _access: public_
@@ -627,7 +827,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -654,6 +865,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -684,7 +905,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -711,6 +943,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -741,6 +983,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -769,6 +1021,14 @@ _static: False_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
 
 _description: _
 
@@ -811,6 +1071,14 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
 
 
@@ -842,6 +1110,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -870,6 +1148,14 @@ _static: False_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
 
 _description: _
 
@@ -900,6 +1186,16 @@ _visible: False_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -928,6 +1224,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -958,7 +1264,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -985,6 +1302,16 @@ _static: yes_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1015,6 +1342,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1043,6 +1380,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1075,6 +1422,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1104,6 +1461,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1132,6 +1499,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1164,6 +1541,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1193,6 +1580,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1221,6 +1618,16 @@ _static: no_
 _visible: False_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1415,6 +1822,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###GLboolean blend_enabled
@@ -1439,6 +1847,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###GLint blend_src
@@ -1456,6 +1865,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -1537,6 +1947,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###charProps * cps
@@ -1604,6 +2015,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -1880,6 +2292,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 

@@ -1,8 +1,16 @@
 #class ofEasyCam
 
 
-##Description
+##InlineDescription
 
+
+
+
+
+
+
+
+##Description
 
 ofCamera objects useful for viewing 3D scenes. ofEasyCam gives you a very simple to use interactive camera to view your scene. It's based more or less on PeasyCam from Processing.
 
@@ -38,6 +46,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -50,7 +68,6 @@ ofDrawGrid();
 //draw rest of scene
 
 myCamera.end();
-
 
 
 
@@ -77,6 +94,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -107,6 +134,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -135,6 +172,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -165,6 +212,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -193,6 +250,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -223,6 +290,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -251,6 +328,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -281,6 +368,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -292,12 +389,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofNode getTarget()
+###ofNode & getTarget()
 
 <!--
 _syntax: getTarget()_
 _name: getTarget_
-_returns: ofNode_
+_returns: ofNode &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -309,6 +406,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -339,6 +446,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -367,6 +484,14 @@ _static: False_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
 
 _description: _
 
@@ -397,6 +522,14 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
 
 
@@ -425,6 +558,14 @@ _static: False_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
 
 _description: _
 
@@ -455,6 +596,14 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
 
 
@@ -483,6 +632,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -513,6 +672,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -542,7 +711,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -569,6 +749,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -599,6 +789,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -627,6 +827,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -657,6 +867,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -685,6 +905,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -715,6 +945,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -743,6 +983,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -773,6 +1023,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -801,6 +1061,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -831,6 +1101,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -859,6 +1139,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -915,6 +1205,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 

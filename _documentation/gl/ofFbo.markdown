@@ -1,8 +1,16 @@
 #class ofFbo
 
 
-##Description
+##InlineDescription
 
+
+
+
+
+
+
+
+##Description
 
 As an example, with an fbo you can do some drawing to the fbo (instead of to the screen or a texture) and then do some blurring, maybe invert the colors, combine multiple images, all without needing to draw it to the screen until you're ready.
 fbos are also used to create views of other scenes, like a TV in a house. A scene can be rendered through an FBO to a texture, then that texture can be applied to the surface of another object.
@@ -66,6 +74,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -94,6 +112,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -128,6 +156,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -158,6 +196,14 @@ _static: False_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
 
 _description: _
 
@@ -190,6 +236,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -218,6 +274,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -250,6 +316,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -281,6 +357,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -309,6 +395,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -339,7 +435,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -366,6 +473,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -396,6 +513,14 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
 
 
@@ -425,7 +550,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -452,6 +588,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -481,6 +627,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -513,6 +669,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -543,6 +709,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -575,6 +751,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -606,6 +792,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -619,12 +815,12 @@ This gives you the OpenGL id of the depthBuffer that the fbo contains.
 
 <!----------------------------------------------------------------------------->
 
-###ofTexture getDepthTexture()
+###ofTexture & getDepthTexture()
 
 <!--
 _syntax: getDepthTexture()_
 _name: getDepthTexture_
-_returns: ofTexture_
+_returns: ofTexture &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -636,6 +832,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -665,6 +871,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -697,6 +913,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -727,6 +953,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -759,6 +995,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -772,12 +1018,12 @@ This gives you the OpenGL id of the depthBuffer that the fbo contains.
 
 <!----------------------------------------------------------------------------->
 
-###ofTexture getTextureReference()
+###ofTexture & getTextureReference()
 
 <!--
 _syntax: getTextureReference()_
 _name: getTextureReference_
-_returns: ofTexture_
+_returns: ofTexture &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -789,6 +1035,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -803,12 +1059,12 @@ This gives you access to the ofTexture contained w/in the fbo. This returns the 
 
 <!----------------------------------------------------------------------------->
 
-###ofTexture getTextureReference(attachmentPoint)
+###ofTexture & getTextureReference(attachmentPoint)
 
 <!--
 _syntax: getTextureReference(attachmentPoint)_
 _name: getTextureReference_
-_returns: ofTexture_
+_returns: ofTexture &_
 _returns_description: _
 _parameters: int attachmentPoint_
 _access: public_
@@ -820,6 +1076,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -852,6 +1118,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -883,6 +1159,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -911,6 +1197,16 @@ _static: yes_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -943,6 +1239,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -973,6 +1279,16 @@ _static: yes_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1005,6 +1321,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1036,6 +1362,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1049,12 +1385,12 @@ Copies all data from the mom fbo
 
 <!----------------------------------------------------------------------------->
 
-###ofFbo operator=(&fbo)
+###ofFbo & operator=(&fbo)
 
 <!--
 _syntax: operator=(&fbo)_
 _name: operator=_
-_returns: ofFbo_
+_returns: ofFbo &_
 _returns_description: _
 _parameters: const ofFbo &fbo_
 _access: public_
@@ -1066,6 +1402,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1098,6 +1444,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1128,6 +1484,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1160,6 +1526,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1190,6 +1566,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1222,6 +1608,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1251,6 +1647,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1279,6 +1685,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1311,6 +1727,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1341,6 +1767,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1373,6 +1809,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1403,6 +1849,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1435,6 +1891,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1463,6 +1929,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 

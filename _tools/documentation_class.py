@@ -21,6 +21,7 @@ class DocsClass:
         self.addons = False
         self.function_list = []
         self.var_list = []
+        self.detailed_inline_description = ""
         
 
     def functions(self):
@@ -65,7 +66,6 @@ class DocsClass:
             if function.name == name:
                 dst_parameters_types = self.get_parameter_types(function.parameters.replace('const ',''))
                 src_parameters_types = self.get_parameter_types(parameters.replace('const ',''))
-
                 if(len(src_parameters_types)==len(dst_parameters_types)):
                     a = -1
                     for i in range(len(src_parameters_types)):

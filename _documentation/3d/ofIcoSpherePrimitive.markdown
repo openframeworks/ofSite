@@ -1,8 +1,16 @@
 #class ofIcoSpherePrimitive
 
 
-##Description
+##InlineDescription
 
+
+
+
+
+
+
+
+##Description
 
 The ofIcoSpherePrimitive allows you to create an icosphere, which is a sphere not based on UV slices like the ofSpherePrimitive, but rather faces. Like this:
 
@@ -33,6 +41,9 @@ void draw()
 ~~~~
 
 
+
+
+
 ##Methods
 
 
@@ -55,7 +66,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -83,7 +105,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -111,7 +144,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -139,7 +183,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -167,7 +222,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -195,7 +261,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -223,7 +300,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -251,7 +339,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -279,7 +378,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -315,6 +425,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int resolution
@@ -332,6 +443,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 

@@ -1,8 +1,16 @@
 #class ofRectangle
 
 
-##Description
+##InlineDescription
 
+
+
+
+
+
+
+
+##Description
 
 ofRectangle class contains information about how a rectangle is in openFrameworks. Basically the class contains the position and the size of a rectangle. 
 
@@ -31,6 +39,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -61,6 +79,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -89,6 +117,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -119,6 +157,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -147,6 +195,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -177,6 +235,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -205,6 +273,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -235,6 +313,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -263,6 +351,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -293,6 +391,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -321,6 +429,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -351,6 +469,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -379,6 +507,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -409,6 +547,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -437,6 +585,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -467,6 +625,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -495,6 +663,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -525,6 +703,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -553,6 +741,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -583,6 +781,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -611,6 +819,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -641,6 +859,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -669,6 +897,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -699,6 +937,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -727,6 +975,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -757,6 +1015,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -786,6 +1054,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -797,12 +1075,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofPoint getPositionRef()
+###ofPoint & getPositionRef()
 
 <!--
 _syntax: getPositionRef()_
 _name: getPositionRef_
-_returns: ofPoint_
+_returns: ofPoint &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -814,6 +1092,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -844,6 +1132,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -872,6 +1170,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -902,6 +1210,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -930,6 +1248,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -960,6 +1288,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -988,6 +1326,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1018,6 +1366,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1046,6 +1404,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1076,6 +1444,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1104,6 +1482,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1134,6 +1522,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1162,6 +1560,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1192,6 +1600,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1220,6 +1638,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1250,6 +1678,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1278,6 +1716,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1308,6 +1756,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1336,6 +1794,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1366,6 +1834,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1394,6 +1872,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1424,6 +1912,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1452,6 +1950,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1482,6 +1990,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1510,6 +2028,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1540,6 +2068,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1568,6 +2106,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1598,6 +2146,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1626,6 +2184,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1656,6 +2224,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1667,12 +2245,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofRectangle operator=(&rect)
+###ofRectangle & operator=(&rect)
 
 <!--
 _syntax: operator=(&rect)_
 _name: operator=_
-_returns: ofRectangle_
+_returns: ofRectangle &_
 _returns_description: _
 _parameters: const ofRectangle &rect_
 _access: public_
@@ -1684,6 +2262,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1714,6 +2302,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1742,6 +2340,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1772,6 +2380,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1800,6 +2418,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1830,6 +2458,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1858,6 +2496,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1888,6 +2536,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1916,6 +2574,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1946,6 +2614,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1974,6 +2652,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -2004,6 +2692,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -2032,6 +2730,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -2062,6 +2770,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -2090,6 +2808,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -2120,6 +2848,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -2148,6 +2886,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -2178,6 +2926,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -2206,6 +2964,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -2236,6 +3004,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -2264,6 +3042,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -2294,6 +3082,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -2322,6 +3120,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -2352,6 +3160,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -2380,6 +3198,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -2410,6 +3238,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -2438,6 +3276,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -2468,6 +3316,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -2496,6 +3354,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -2526,6 +3394,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -2554,6 +3432,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 

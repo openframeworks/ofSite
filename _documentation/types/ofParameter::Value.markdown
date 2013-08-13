@@ -1,6 +1,15 @@
 #class ofParameter::Value
 
 
+##InlineDescription
+
+
+
+
+
+
+
+
 ##Description
 
 
@@ -29,7 +38,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -57,7 +77,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -85,7 +116,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -113,7 +155,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -149,6 +202,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofEvent changedE
@@ -166,6 +220,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -197,6 +252,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ParameterType min
@@ -214,6 +270,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -245,6 +302,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ParameterType prevValue
@@ -262,6 +320,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -293,6 +352,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ParameterType value
@@ -310,6 +370,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 

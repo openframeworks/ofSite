@@ -1,8 +1,16 @@
 #class ofPath
 
 
-##Description
+##InlineDescription
 
+
+
+
+
+
+
+
+##Description
 
 ofPath is a way to create a path or multiple paths consisting of points. It allows you to combine multiple paths consisting of points into a single vector data object that can be drawn to the screen, manipulated point by point, or manipulated with it's child subpaths. It is better at representing and manipulating complex shapes than the [ofPolyline](ofPolyline.html) and more easily represents multiple child lines or shapes as either ofSubPath or ofPolyline instances. By default ofPath uses ofSubPath instances. Closing the path automatically creates a new path:
 
@@ -45,7 +53,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -72,6 +91,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -109,6 +138,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -150,6 +189,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -181,6 +230,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -209,6 +268,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -239,6 +308,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -268,6 +347,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -296,6 +385,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -335,6 +434,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -365,6 +474,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -413,7 +532,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -441,7 +571,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -469,7 +610,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -496,6 +648,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -528,6 +690,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -559,6 +731,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -589,6 +771,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -634,6 +826,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -664,6 +866,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -696,6 +908,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -727,7 +949,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -755,7 +988,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -783,7 +1027,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -810,6 +1065,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -840,7 +1105,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -867,6 +1143,14 @@ _static: False_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
 
 _description: _
 
@@ -897,6 +1181,14 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
 
 
@@ -926,7 +1218,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -936,12 +1239,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###Command getCommands()
+###const vector< Command > & getCommands()
 
 <!--
 _syntax: getCommands()_
 _name: getCommands_
-_returns: Command_
+_returns: const vector< Command > &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -954,7 +1257,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -981,6 +1295,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1010,6 +1334,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1042,7 +1376,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1052,12 +1397,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofPolyline getOutline()
+###vector< ofPolyline > & getOutline()
 
 <!--
 _syntax: getOutline()_
 _name: getOutline_
-_returns: ofPolyline_
+_returns: vector< ofPolyline > &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1069,6 +1414,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1101,6 +1456,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1131,6 +1496,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1163,6 +1538,14 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1176,12 +1559,12 @@ This returns a vector of ofSubPath instances that you can walk to inspect their 
 
 <!----------------------------------------------------------------------------->
 
-###ofMesh getTessellation()
+###ofMesh & getTessellation()
 
 <!--
 _syntax: getTessellation()_
 _name: getTessellation_
-_returns: ofMesh_
+_returns: ofMesh &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1193,6 +1576,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1223,6 +1616,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1251,6 +1654,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1283,7 +1696,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1310,6 +1734,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1339,6 +1773,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1371,6 +1815,14 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1382,12 +1834,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofPolyline lastPolyline()
+###ofPolyline & lastPolyline()
 
 <!--
 _syntax: lastPolyline()_
 _name: lastPolyline_
-_returns: ofPolyline_
+_returns: ofPolyline &_
 _returns_description: _
 _parameters: _
 _access: private_
@@ -1399,6 +1851,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1428,6 +1890,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1460,6 +1932,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1490,6 +1972,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1522,6 +2014,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1552,6 +2054,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1584,6 +2096,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1615,6 +2137,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1645,6 +2177,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1678,6 +2220,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1708,6 +2260,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1740,7 +2302,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1768,7 +2341,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1796,7 +2380,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1824,7 +2419,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1852,7 +2458,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1880,7 +2497,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1908,7 +2536,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1936,7 +2575,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1964,7 +2614,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1992,7 +2653,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -2019,6 +2691,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -2048,6 +2730,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -2080,6 +2772,14 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
 
 
@@ -2109,7 +2809,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -2136,6 +2847,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -2168,6 +2889,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -2196,6 +2927,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -2228,6 +2969,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -2258,6 +3009,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -2290,6 +3051,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -2321,6 +3092,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -2349,6 +3130,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -2455,6 +3246,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -2485,6 +3286,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -2517,6 +3328,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -2548,6 +3369,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -2576,6 +3407,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -2606,6 +3447,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -2634,6 +3485,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -2664,7 +3525,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -2692,7 +3564,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -2720,7 +3603,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -2806,6 +3700,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool bNeedsPolylinesGeneration
@@ -2823,6 +3718,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -2954,6 +3850,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###Command commands
@@ -2971,6 +3868,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 

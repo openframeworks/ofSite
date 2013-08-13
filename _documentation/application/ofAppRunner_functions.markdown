@@ -25,17 +25,17 @@ _visible: True_
 _advanced: True_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
 
-
 Every update/draw cycle, the function ofSetupScreen is called. That function sets the perspective, coordinate system, and some other openGL parameters. If you need to use your own parameters, the call to that function can be disabled with ofDisableSetupScreen.
-
-
-
-
-
-
-
 
 
 
@@ -61,16 +61,17 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
 
-
-
-
-
 This returns whether your current device does hardware orientation. An iPhone, for instance, does hardware orientation, which you might notice when you tilt your iPhone to the side, hence ofDoesHWOrientation() would return true. Tilting your laptop to the side does not do the same thing, hence ofDoesHWOrientation() would return false.
-
-
-
 
 
 
@@ -96,17 +97,17 @@ _visible: True_
 _advanced: True_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
 
-
 Re-enables the call to ofSetupScreen after being disabled with ofDisableSetupScreen
-
-
-
-
-
-
-
 
 
 
@@ -132,16 +133,17 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
 
-
-
-
-
-
 This actually exits your app, like, for real. Gone.
-
-
 
 
 
@@ -167,36 +169,29 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
 
-
 Useful to access the variables in the main app from other classes. The pointer returned by this function has to be cast from an ofBaseApp pointer, to a pointer to your inherited class, before being used.
-
 ie:
-
 ~~~~{.cpp}
-
 //testApp.h
-
 class testApp: public ofBaseApp{
 ...
-
    int someVar;
 }
-
 //myClass.cpp
-
 void myClass::method(){
    doSomething( ((testApp*)ofGetAppPtr())->someVar );
 }
 ~~~~
-
-
-
-
-
-
-
 
 
 
@@ -222,16 +217,17 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
 
-
-
-
-
 This returns the current frame as an int, counting up to (depending on your system) 2147483647 before rolling over back to 0. Don't worry though, at 60 frames a second you have 68 years until it rolls over though.
-
-
-
 
 
 
@@ -257,17 +253,17 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
 
-
 note: this code is implemented inside the ofAppRunner.
-
-
-
-
-
-
-
 
 
 
@@ -293,16 +289,17 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
 
-
-
-
 This gets the height of your ofApp window. Useful for finding the middle of the screen like so: ofVec2f middle(ofGetWidth()/2, ofGetHeight()/2)
-
-
-
-
 
 
 
@@ -328,15 +325,15 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
-
-
-
-
-
-
-
-
 
 
 
@@ -363,15 +360,15 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
-
-
-
-
-
-
-
-
 
 
 
@@ -398,17 +395,17 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
 
-
 note: this code is implemented inside the ofAppRunner
-
-
-
-
-
-
-
 
 
 
@@ -434,17 +431,17 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
 
-
 note: this code is implemented inside the ofAppRunner
-
-
-
-
-
-
-
 
 
 
@@ -469,6 +466,14 @@ _static: False_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
 
 _description: _
 
@@ -497,16 +502,17 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
 
-
-
-
 This gets the width of your ofApp window. Useful for finding the middle of the screen like so: ofVec2f middle(ofGetWidth()/2, ofGetHeight()/2)
-
-
-
-
 
 
 
@@ -532,15 +538,15 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
-
-
-
-
-
-
-
-
 
 
 
@@ -567,12 +573,18 @@ _visible: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 eg:
 ~~~~{.cpp}
-
 int mode = ofGetWindowMode();
 		
 if(mode == OF_WINDOW){
@@ -583,16 +595,8 @@ if(mode == OF_WINDOW){
 	cout << "mode is: game mode" << endl;	
 }
 ~~~~
-
 note: this code is implemented inside the ofAppRunner
 	
-
-
-
-
-
-
-
 
 
 
@@ -618,20 +622,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
 
-
 This is the x position of your window inside your screen. How exactly this is returned is dependent on your operating system but it's pretty consistent across platforms.
-
-
 note: this code is implemented inside the ofAppRunner
-
-
-
-
-
-
-
 
 
 
@@ -657,20 +659,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
 
-
 This is the y position of your window inside your screen. How exactly this is returned is dependent on your operating system but it's pretty consistent across platforms.
-
-
 note: this code is implemented inside the ofAppRunner
-
-
-
-
-
-
-
 
 
 
@@ -695,6 +695,14 @@ _static: False_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
 
 _description: _
 
@@ -723,15 +731,15 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
-
-
-
-
-
-
-
-
 
 
 
@@ -758,16 +766,17 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
 
-
-
-
-
 This is the size of your window as it's drawn on your screen. How exactly this is returned is dependent on your operating system but it's pretty consistent across platforms.
-
-
-
 
 
 
@@ -793,15 +802,15 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
-
-
-
-
-
-
-
-
 
 
 
@@ -828,19 +837,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
 
-
 This hides the mouse cursor, useful if you're doing a clever app that has no need for mouse interaction, evil if you are.
-
 note: this code is implemented inside the ofAppRunner.
-
-
-
-
-
-
-
 
 
 
@@ -866,31 +874,25 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
 
-
 Begins the openGL cycle of the application. It's only called once from main function in main.cpp after setting the window with ofSetupOpenGL.
-
 From 0.06 the app is deleted on exit, so you need to call this function as shown in syntax:
-
 ~~~~{.cpp}
 ofRunApp(new testApp);
 ~~~~
-
-
 Previous versions of the examples can be using this syntax:
-
 testApp app;
 ofRunApp(&app);
-
 which will make the app crash when closing it.
-
-
-
-
-
-
-
 
 
 
@@ -916,15 +918,15 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
-
-
-
-
-
-
-
-
 
 
 
@@ -951,15 +953,15 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
-
-
-
-
-
-
-
-
 
 
 
@@ -986,15 +988,15 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
-
-
-
-
-
-
-
-
 
 
 
@@ -1021,17 +1023,17 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
 
-
 Attempts to set the frame rate to a given target by sleeping a certain amount per frame. The results of this may vary based if vertical sync is enabled or disabled (either at the card level or via code), because this locks the drawing to intervals where the screen refreshes.
-
-
-
-
-
-
-
 
 
 
@@ -1057,18 +1059,18 @@ _visible: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 Attempts to set the frame rate to a given target by sleeping a certain amount per frame. The results of this may vary based if vertical sync is enabled or disabled (either at the card level or via code), because this locks the drawing to intervals where the screen refreshes.
 note: this code is implemented inside the ofAppRunner
-
-
-
-
-
-
-
 
 
 
@@ -1094,19 +1096,19 @@ _visible: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 Change the app window mode to fullscreen or window depending on the boolean parameter.
 Enables or disables fullscreen mode for your app's window.
 note: this code is implemented inside the ofAppRunner.
-
-
-
-
-
-
-
 
 
 
@@ -1132,15 +1134,15 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
-
-
-
-
-
-
-
-
 
 
 
@@ -1166,6 +1168,14 @@ _static: False_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
 
 _description: _
 
@@ -1194,6 +1204,14 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1221,17 +1239,17 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
 
-
 Sets the window position in the screen to x,y expressed in pixels.
-
-
-
-
-
-
-
 
 
 
@@ -1257,19 +1275,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
 
-
 Moves the app window to the x and y coordinates specified. For example: coordinates of (0,0) would set the top-left corner of your app window to the top-left corner of the screen.
-
 note: this code is implemented inside the ofAppRunner
-
-
-
-
-
-
-
 
 
 
@@ -1295,17 +1312,17 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
 
-
 Sets the window size to w,h expressed in pixels. This size is that of the drawable area, doesn't include the borders of the window.
-
-
-
-
-
-
-
 
 
 
@@ -1331,18 +1348,18 @@ _visible: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 Sets the dimension of your app's window.
 note: this code is implemented inside the ofAppRunner
-
-
-
-
-
-
-
 
 
 
@@ -1368,15 +1385,15 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
-
-
-
-
-
-
-
-
 
 
 
@@ -1402,6 +1419,14 @@ _static: False_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
 
 _description: _
 
@@ -1430,39 +1455,29 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
 
-
 Sets up the window aspect and mode. This function should be called only from the main function in main.cpp.
-
 w and h are the width and height of the window.
-
 screenMode can be one of:
-
 - OF_WINDOW: normal window
-
 - OF_FULLSCREEN: fullscreen, the size of the app will be that of the current screen resolution. The w and h parameters will be ignored. This mode with the default glut window is just a window of the size of the screen without borders.
-
 - OF_GAME_MODE: fullscreen, the size of the app will be that passed as an argument to the function. The screen resolution will be also changed to fit that size so if the computer doesn't support that resolution, chances are that it won't work. Under glut this is real fullscreen and it's meant to be faster than window and fullscreen modes. Under linux this is the only way of getting fullscreen.
-
-
 From 0.06 you can also pass a diferent version of ofAppBaseWindow than the default glut one. To pass a different windowing toolkit than glut, first create an instance of it, and then pass a pointer to it to ofSetupOpenGL.
-
 ie:
 ~~~~{.cpp}
-
 ofAppCocoaWindow window;
 ofSetupOpenGL(&window, 800, 600, OF_WINDOW);
 ~~~~
-
 You need to have the windowing toolkit files included in your project.
-
-
-
-
-
-
-
 
 
 
@@ -1488,15 +1503,15 @@ _visible: True_
 _advanced: True_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
-
-
-
-
-
-
-
-
 
 
 
@@ -1523,25 +1538,21 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
 
-
 Sets up the window aspect and mode. This function should be called only from the main function in main.cpp.
-
 w and h are the width and height of the window.
-
 screenMode can be one of:
-
 - OF_WINDOW: normal window
-
 - OF_FULLSCREEN: fullscreen, the size of the app will be that of the current screen resolution. The w and h parameters will be ignored. 
-
-
-
-
-
-
-
 
 
 
@@ -1566,6 +1577,14 @@ _static: False_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
 
 _description: _
 
@@ -1594,19 +1613,19 @@ _visible: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 Shows the mouse cursor again when it's been hidden with ofHideCursor
 makes the cursor visible.
 note: this code is implemented inside the ofAppRunner
-
-
-
-
-
-
-
 
 
 
@@ -1631,6 +1650,14 @@ _static: False_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
 
 _description: _
 
@@ -1658,6 +1685,14 @@ _static: False_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
 
 _description: _
 

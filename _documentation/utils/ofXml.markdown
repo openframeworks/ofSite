@@ -1,6 +1,15 @@
 #class ofXml
 
 
+##InlineDescription
+
+
+
+
+
+
+
+
 ##Description
 
 The ofXml is a friendly wrapper around the xml functionality included in the Poco::XML library, in particular the Poco::XML::DOM. You can find some more information on that in the Poco Documentation, but hopefully we've wrapped up everything you might need, so that you don't need to dig into Poco itself. Conceptually you should think of an ofXml object as an XML document, because that's exactly what it is: it has a root element, some number of children, and a current element that you're pointing at. For instance, if your XML looked like this:
@@ -17,7 +26,6 @@ The ofXml is a friendly wrapper around the xml functionality included in the Poc
 		<height>100</height>
 	</picture>
 </pictures>
-
 
 You load it into an ofXml document like so:
 
@@ -63,6 +71,8 @@ pictures.setValue("pictures/picture[0]/url", "http://superpicks.jp/pic1.png"); /
 
 
 
+
+
 ##Methods
 
 
@@ -85,7 +95,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -113,7 +134,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 Adds a child to the ofXml object. So if you have:
 
@@ -150,6 +182,8 @@ and that would create:
 
 
 
+
+
 <!----------------------------------------------------------------------------->
 
 ###bool addValue(&path, data = T(), createEntirePath = false)
@@ -170,7 +204,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 Adds a child to the ofXml object. So if you have:
 
@@ -207,6 +252,8 @@ and that would create:
 
 
 
+
+
 <!----------------------------------------------------------------------------->
 
 ###void addXml(&xml, copyAll = false)
@@ -227,7 +274,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 Adds one ofXml object to another.
 
@@ -236,6 +294,11 @@ firstXml.addXml(secondXml, true);
 ----
 
 The second parameter tells the ofXml whether to add the entire XML document or whether to only add the current element of the XML being added.
+
+
+
+
+
 
 
 <!----------------------------------------------------------------------------->
@@ -258,7 +321,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -286,7 +360,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -314,8 +399,17 @@ _visible: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+
+
+_description: _
 
 
 Returns whether a path exists. This can be a path to a node, like:
@@ -356,7 +450,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 Returns the value of an attribute or an empty string if it doesn't exist.
 
@@ -386,9 +491,21 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
+
 Returns a map of all the attributes of the current node.
+
 
 
 
@@ -415,7 +532,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -443,7 +571,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -471,7 +610,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -499,7 +649,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -527,7 +688,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -555,7 +727,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -583,7 +766,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -611,7 +805,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -639,7 +844,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -667,7 +883,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -695,7 +922,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -723,7 +961,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -751,7 +1000,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 Returns the value of the current element in the ofXml.
 
@@ -781,7 +1041,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 Returns the value at the node indicated by the path. This can be a path that uses an element:
 
@@ -817,7 +1088,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -845,7 +1127,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -873,10 +1166,22 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
 Loads the XML file from a string. This string needs to be a properly formatted XML document. The method returns false if the document is not correctly created and true if it does.
+
+
 
 
 
@@ -902,9 +1207,21 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
+
 Constructor. On construction a Poco::XML::Document is created, but not an element, so you'll need to append new elements using addChild() and addAttribute().
+
 
 
 
@@ -931,6 +1248,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -940,14 +1267,16 @@ Copy constructor. This clones the Poco::XML::Document so can be a little bit slo
 
 
 
+
+
 <!----------------------------------------------------------------------------->
 
-###ofXml operator=(&rhs)
+###const ofXml & operator=(&rhs)
 
 <!--
 _syntax: operator=(&rhs)_
 _name: operator=_
-_returns: ofXml_
+_returns: const ofXml &_
 _returns_description: _
 _parameters: const ofXml &rhs_
 _access: public_
@@ -960,10 +1289,22 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
 Copy constructor. This clones the Poco::XML::Document so can be a little bit slow but is very safe.
+
+
 
 
 
@@ -989,7 +1330,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1017,10 +1369,22 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
 Removes an element or attribute using the path. Returns false if the path is not valid. All children of the element are also removed.
+
+
 
 
 
@@ -1046,7 +1410,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1074,7 +1449,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 Removes all the attributes from a node.
 
@@ -1114,8 +1500,17 @@ _visible: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+
+
+_description: _
 
 
 Removes all the attributes from a node.
@@ -1156,8 +1551,17 @@ _visible: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+
+
+_description: _
 
 
 Removes all the contents from a node.
@@ -1204,7 +1608,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1232,10 +1647,22 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
 Sets the current element back to the root node of the document, i.e. the first child after the <xml> declaration.
+
+
 
 
 
@@ -1261,7 +1688,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1289,7 +1727,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1317,10 +1766,22 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
 Sets attribute at the path indicated. If the attribute doesn't already exist, it's created.
+
+
 
 
 
@@ -1346,10 +1807,17 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
-
-
-
 
 
 Sets the current element to the path indicated. This can be up or down the DOM:
@@ -1357,6 +1825,8 @@ Sets the current element to the path indicated. This can be up or down the DOM:
 xml.setTo("pictures[1]/url"); // go down
 xml.setTo("../"); // go up
 xml.setTo("../pictures[0]/url"); // go up and then down
+
+
 
 
 
@@ -1382,7 +1852,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1410,10 +1891,22 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
 Sets the current element to the parent of the current element. This returns false if the parent does not exist.
+
+
 
 
 
@@ -1439,13 +1932,25 @@ _visible: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+
+
+_description: _
 
 
 Sets the current element to the numLevelsUp-th parent of the current element.
 
 xml.setCurrentElementToParent(3); // this is the same as xml.setCurrentElementToParent("../../../");
+
+
+
 
 
 
@@ -1470,8 +1975,17 @@ _visible: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+
+
+_description: _
 
 
 This sets the current element to the previous sibling element. If your document looks like this:
@@ -1498,6 +2012,8 @@ xml.setCurrentElementToPrevSibling(); // now current element is picture with id=
 
 
 
+
+
 <!----------------------------------------------------------------------------->
 
 ###bool setToSibling()
@@ -1518,9 +2034,17 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
-
-
 
 
 This sets the current element to the previous sibling element. If your document looks like this:
@@ -1546,6 +2070,9 @@ xml.setCurrentElementToSibling(); // now current element is picture with id=1
 
 
 
+
+
+
 <!----------------------------------------------------------------------------->
 
 ###bool setValue(&path, &value)
@@ -1566,8 +2093,17 @@ _visible: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+
+
+_description: _
 
 
 Sets the value of the element pointed at by the path. If the value, or any other element along the path, does not exist then it is created. This means that:
@@ -1583,6 +2119,7 @@ will create:
 		</baz>
 	</bar>
 </foo>
+
 
 
 
@@ -1609,10 +2146,22 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
 Creates a string from the XML document. Useful for when you want to send or save the document.
+
+
 
 
 
@@ -1638,7 +2187,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1666,10 +2226,22 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
 Destructor. Deletes both the current element and the current document.
+
+
 
 
 
@@ -1704,6 +2276,8 @@ This is the XML document that the ofXml object wraps.
 
 
 
+
+
 <!----------------------------------------------------------------------------->
 
 ###Poco::XML::Element * element
@@ -1724,6 +2298,8 @@ _description: _
 
 
 This is the current element that the ofXml object points at.
+
+
 
 
 

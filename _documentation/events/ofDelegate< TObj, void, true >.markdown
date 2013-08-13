@@ -1,6 +1,15 @@
 #class ofDelegate< TObj, void, true >
 
 
+##InlineDescription
+
+
+
+
+
+
+
+
 ##Description
 
 
@@ -29,7 +38,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -57,7 +77,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -85,7 +116,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -113,7 +155,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -141,7 +194,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -169,7 +233,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -197,7 +272,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -207,12 +293,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofDelegate operator=(&delegate)
+###ofDelegate & operator=(&delegate)
 
 <!--
 _syntax: operator=(&delegate)_
 _name: operator=_
-_returns: ofDelegate_
+_returns: ofDelegate &_
 _returns_description: _
 _parameters: const ofDelegate &delegate_
 _access: public_
@@ -225,7 +311,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -253,7 +350,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -289,6 +397,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###NotifyMethod _receiverMethod
@@ -313,6 +422,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###TObj * _receiverObject
@@ -330,6 +440,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 

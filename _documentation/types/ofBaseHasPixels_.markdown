@@ -1,8 +1,16 @@
 #class ofBaseHasPixels_
 
 
-##Description
+##InlineDescription
 
+
+
+
+
+
+
+
+##Description
 
 
 
@@ -30,6 +38,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -41,12 +59,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofPixels_ getPixelsRef()
+###ofPixels_< T > & getPixelsRef()
 
 <!--
 _syntax: getPixelsRef()_
 _name: getPixelsRef_
-_returns: ofPixels__
+_returns: ofPixels_< T > &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -58,6 +76,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -87,6 +115,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 

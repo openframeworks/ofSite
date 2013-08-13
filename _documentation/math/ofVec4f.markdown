@@ -1,8 +1,16 @@
 #class ofVec4f
 
 
-##Description
+##InlineDescription
 
+
+
+
+
+
+
+
+##Description
 
 
 
@@ -12,12 +20,12 @@
 
 
 
-###ofVec4f average(*points, num)
+###ofVec4f & average(*points, num)
 
 <!--
 _syntax: average(*points, num)_
 _name: average_
-_returns: ofVec4f_
+_returns: ofVec4f &_
 _returns_description: _
 _parameters: const ofVec4f *points, int num_
 _access: public_
@@ -29,6 +37,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -59,6 +77,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -87,6 +115,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -117,6 +155,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+Dot Product. 
+
+
+
+
+
+
+
 _description: _
 
 
@@ -145,6 +195,18 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+p==0.0 results in this point, p==0.5 results in the midpoint, and p==1.0 results in pnt being returned. 
+
+
+
+
+
+
 
 _description: _
 
@@ -175,6 +237,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -203,6 +275,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -233,6 +315,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -261,6 +353,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -291,6 +393,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -302,12 +414,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec4f interpolate(&pnt, p)
+###ofVec4f & interpolate(&pnt, p)
 
 <!--
 _syntax: interpolate(&pnt, p)_
 _name: interpolate_
-_returns: ofVec4f_
+_returns: ofVec4f &_
 _returns_description: _
 _parameters: const ofVec4f &pnt, float p_
 _access: public_
@@ -319,6 +431,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -349,6 +471,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+p==0.0 results in this point, p==0.5 results in the midpoint, and p==1.0 results in pnt being returned. 
+
+
+
+
+
+
+
 _description: _
 
 
@@ -377,6 +511,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -407,6 +551,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -418,12 +572,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec4f limit(max)
+###ofVec4f & limit(max)
 
 <!--
 _syntax: limit(max)_
 _name: limit_
-_returns: ofVec4f_
+_returns: ofVec4f &_
 _returns_description: _
 _parameters: float max_
 _access: public_
@@ -435,6 +589,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -465,6 +629,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -494,6 +668,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -505,12 +689,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec4f middle(&pnt)
+###ofVec4f & middle(&pnt)
 
 <!--
 _syntax: middle(&pnt)_
 _name: middle_
-_returns: ofVec4f_
+_returns: ofVec4f &_
 _returns_description: _
 _parameters: const ofVec4f &pnt_
 _access: public_
@@ -522,6 +706,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -552,6 +746,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -563,12 +767,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec4f normalize()
+###ofVec4f & normalize()
 
 <!--
 _syntax: normalize()_
 _name: normalize_
-_returns: ofVec4f_
+_returns: ofVec4f &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -580,6 +784,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -610,6 +824,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -638,6 +862,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -668,6 +902,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -696,6 +940,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -726,6 +980,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -754,6 +1018,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -784,6 +1058,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -812,6 +1096,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -842,6 +1136,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -871,6 +1175,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -882,12 +1196,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec4f operator*=(&vec)
+###ofVec4f & operator*=(&vec)
 
 <!--
 _syntax: operator*=(&vec)_
 _name: operator*=_
-_returns: ofVec4f_
+_returns: ofVec4f &_
 _returns_description: _
 _parameters: const ofVec4f &vec_
 _access: public_
@@ -900,6 +1214,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -911,12 +1235,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec4f operator*=(f)
+###ofVec4f & operator*=(f)
 
 <!--
 _syntax: operator*=(f)_
 _name: operator*=_
-_returns: ofVec4f_
+_returns: ofVec4f &_
 _returns_description: _
 _parameters: const float f_
 _access: public_
@@ -928,6 +1252,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -958,6 +1292,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -987,6 +1331,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -998,12 +1352,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec4f operator+=(&vec)
+###ofVec4f & operator+=(&vec)
 
 <!--
 _syntax: operator+=(&vec)_
 _name: operator+=_
-_returns: ofVec4f_
+_returns: ofVec4f &_
 _returns_description: _
 _parameters: const ofVec4f &vec_
 _access: public_
@@ -1016,6 +1370,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1027,12 +1391,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec4f operator+=(f)
+###ofVec4f & operator+=(f)
 
 <!--
 _syntax: operator+=(f)_
 _name: operator+=_
-_returns: ofVec4f_
+_returns: ofVec4f &_
 _returns_description: _
 _parameters: const float f_
 _access: public_
@@ -1044,6 +1408,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1074,6 +1448,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1102,6 +1486,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1132,6 +1526,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1143,12 +1547,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec4f operator-=(f)
+###ofVec4f & operator-=(f)
 
 <!--
 _syntax: operator-=(f)_
 _name: operator-=_
-_returns: ofVec4f_
+_returns: ofVec4f &_
 _returns_description: _
 _parameters: const float f_
 _access: public_
@@ -1161,6 +1565,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1172,12 +1586,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec4f operator-=(&vec)
+###ofVec4f & operator-=(&vec)
 
 <!--
 _syntax: operator-=(&vec)_
 _name: operator-=_
-_returns: ofVec4f_
+_returns: ofVec4f &_
 _returns_description: _
 _parameters: const ofVec4f &vec_
 _access: public_
@@ -1189,6 +1603,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1219,6 +1643,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1248,6 +1682,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1259,12 +1703,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec4f operator/=(&vec)
+###ofVec4f & operator/=(&vec)
 
 <!--
 _syntax: operator/=(&vec)_
 _name: operator/=_
-_returns: ofVec4f_
+_returns: ofVec4f &_
 _returns_description: _
 _parameters: const ofVec4f &vec_
 _access: public_
@@ -1277,6 +1721,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1288,12 +1742,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec4f operator/=(f)
+###ofVec4f & operator/=(f)
 
 <!--
 _syntax: operator/=(f)_
 _name: operator/=_
-_returns: ofVec4f_
+_returns: ofVec4f &_
 _returns_description: _
 _parameters: const float f_
 _access: public_
@@ -1305,6 +1759,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1335,6 +1799,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1364,6 +1838,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1375,12 +1859,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec4f rescale(length)
+###ofVec4f & rescale(length)
 
 <!--
 _syntax: rescale(length)_
 _name: rescale_
-_returns: ofVec4f_
+_returns: ofVec4f &_
 _returns_description: _
 _parameters: const float length_
 _access: public_
@@ -1392,6 +1876,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1422,6 +1916,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1433,12 +1937,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec4f scale(length)
+###ofVec4f & scale(length)
 
 <!--
 _syntax: scale(length)_
 _name: scale_
-_returns: ofVec4f_
+_returns: ofVec4f &_
 _returns_description: _
 _parameters: const float length_
 _access: public_
@@ -1450,6 +1954,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1480,6 +1994,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1508,6 +2032,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1538,6 +2072,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1566,6 +2110,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1596,6 +2150,14 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1624,6 +2186,16 @@ _static: yes_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 

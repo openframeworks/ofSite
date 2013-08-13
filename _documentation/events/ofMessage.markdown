@@ -1,10 +1,20 @@
 #class ofMessage
 
 
+##InlineDescription
+
+
+
+
+
+
+
+
 ##Description
 
-
 The ofMessage is an event that contains a string message that will be sent when you're send an event. The ofSendMessage() method allows you send both an event to any listeners and a message along with it. Usually custom events will get more data, a vector or a buffer of information or pictures of you looking handsome (just an example) but in case you just need to send a string along with your event, the ofMessage is there for you.
+
+
 
 
 
@@ -30,7 +40,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -59,6 +80,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 

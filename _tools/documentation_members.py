@@ -6,6 +6,7 @@ class DocsMethod:
         self.description = ""
         self.returns = ""
         self.returns_description = ""
+        self.inlined_description = ""
         self.parameters = ""
         self.syntax = ""
         self.access = ""

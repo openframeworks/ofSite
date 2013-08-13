@@ -7,6 +7,9 @@
 		${method.summary}
 		<%self:filter chain="markdown_template">
 ${method.description}
+
+#Documentation from code comments
+${method.inlined_description}
 		</%self:filter>
 	</div>
 	<div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div>

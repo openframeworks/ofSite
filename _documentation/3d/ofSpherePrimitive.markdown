@@ -1,8 +1,16 @@
 #class ofSpherePrimitive
 
 
-##Description
+##InlineDescription
 
+
+
+
+
+
+
+
+##Description
 
 The ofSpherePrimitive allows you to create an UV sphere, which is a sphere based on UV slices rather than faces like the ofIcoSpherePrimitive. Note this:
 
@@ -42,8 +50,11 @@ sphere.draw();
 
 ~~~~
 
-
 The sphere can look a little weird if you don't do ofEnabledDepthTesting() and ofDisableAlphaBlending().
+
+
+
+
 
 ##Methods
 
@@ -67,7 +78,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -95,7 +117,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -123,7 +156,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -151,7 +195,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -179,7 +234,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -207,7 +273,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -235,7 +312,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -263,7 +351,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -291,7 +390,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -327,6 +437,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int resolution
@@ -344,6 +455,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 

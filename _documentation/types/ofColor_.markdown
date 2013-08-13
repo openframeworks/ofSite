@@ -1,8 +1,16 @@
 #class ofColor_
 
 
-##Description
+##InlineDescription
 
+
+
+
+
+
+
+
+##Description
 
 ofColor represents a color in openFrameworks. Colors are usually defined by specifying a red, green, and blue component (RGB), and a transparency (alpha) component. You can also specify colors using hue, saturation and brightness (HSB).
 
@@ -61,12 +69,12 @@ In other words, saturation refers to the intensity of the color: high saturation
 
 
 
-###ofColor_ clamp()
+###ofColor_< PixelType > & clamp()
 
 <!--
 _syntax: clamp()_
 _name: clamp_
-_returns: ofColor__
+_returns: ofColor_< PixelType > &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -78,6 +86,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -116,6 +134,16 @@ _visible: False_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -127,12 +155,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofColor_ fromHex(hexColor, alpha = limit())
+###ofColor_< PixelType > fromHex(hexColor, alpha = limit())
 
 <!--
 _syntax: fromHex(hexColor, alpha = limit())_
 _name: fromHex_
-_returns: ofColor__
+_returns: ofColor_< PixelType >_
 _returns_description: _
 _parameters: int hexColor, float alpha=limit()_
 _access: public_
@@ -144,6 +172,16 @@ _static: yes_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -162,12 +200,12 @@ ofColor c = ofColor::fromHex(0xFFFF00); // c is yellow
 
 <!----------------------------------------------------------------------------->
 
-###ofColor_ fromHsb(hue, saturation, brightness, alpha = limit())
+###ofColor_< PixelType > fromHsb(hue, saturation, brightness, alpha = limit())
 
 <!--
 _syntax: fromHsb(hue, saturation, brightness, alpha = limit())_
 _name: fromHsb_
-_returns: ofColor__
+_returns: ofColor_< PixelType >_
 _returns_description: _
 _parameters: float hue, float saturation, float brightness, float alpha=limit()_
 _access: public_
@@ -179,6 +217,16 @@ _static: yes_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -215,6 +263,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -228,12 +286,12 @@ Return the brightness component of the HSB representation of this color. Refer t
 
 <!----------------------------------------------------------------------------->
 
-###ofColor_ getClamped()
+###ofColor_< PixelType > getClamped()
 
 <!--
 _syntax: getClamped()_
 _name: getClamped_
-_returns: ofColor__
+_returns: ofColor_< PixelType >_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -245,6 +303,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -276,6 +344,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -314,6 +392,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -355,6 +443,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -368,12 +466,12 @@ Return the hue component of the HSB representation of this color. Refer the [dis
 
 <!----------------------------------------------------------------------------->
 
-###ofColor_ getInverted()
+###ofColor_< PixelType > getInverted()
 
 <!--
 _syntax: getInverted()_
 _name: getInverted_
-_returns: ofColor__
+_returns: ofColor_< PixelType >_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -385,6 +483,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -399,12 +507,12 @@ Returns the color that is the inverted version (complement) to this color, witho
 
 <!----------------------------------------------------------------------------->
 
-###ofColor_ getLerped(&target, amount)
+###ofColor_< PixelType > getLerped(&target, amount)
 
 <!--
 _syntax: getLerped(&target, amount)_
 _name: getLerped_
-_returns: ofColor__
+_returns: ofColor_< PixelType >_
 _returns_description: _
 _parameters: const ofColor_< PixelType > &target, float amount_
 _access: public_
@@ -416,6 +524,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -448,6 +566,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -461,12 +589,12 @@ Return the average of the three color components. This is used by the Lab and HS
 
 <!----------------------------------------------------------------------------->
 
-###ofColor_ getNormalized()
+###ofColor_< PixelType > getNormalized()
 
 <!--
 _syntax: getNormalized()_
 _name: getNormalized_
-_returns: ofColor__
+_returns: ofColor_< PixelType >_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -478,6 +606,16 @@ _static: no_
 _visible: True_
 _advanced: True_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -510,6 +648,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -523,12 +671,12 @@ Return the saturation component of the HSB representation of this color. Refer t
 
 <!----------------------------------------------------------------------------->
 
-###ofColor_ invert()
+###ofColor_< PixelType > & invert()
 
 <!--
 _syntax: invert()_
 _name: invert_
-_returns: ofColor__
+_returns: ofColor_< PixelType > &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -540,6 +688,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -559,12 +717,12 @@ c.invert(); // c is now (255,255,0), or yellow, which is blue's complement
 
 <!----------------------------------------------------------------------------->
 
-###ofColor_ lerp(&target, amount)
+###ofColor_< PixelType > & lerp(&target, amount)
 
 <!--
 _syntax: lerp(&target, amount)_
 _name: lerp_
-_returns: ofColor__
+_returns: ofColor_< PixelType > &_
 _returns_description: _
 _parameters: const ofColor_< PixelType > &target, float amount_
 _access: public_
@@ -576,6 +734,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -615,6 +783,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -628,12 +806,12 @@ Returns the maximum value for a component for this color. For standard ofColor r
 
 <!----------------------------------------------------------------------------->
 
-###ofColor_ normalize()
+###ofColor_< PixelType > & normalize()
 
 <!--
 _syntax: normalize()_
 _name: normalize_
-_returns: ofColor__
+_returns: ofColor_< PixelType > &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -645,6 +823,16 @@ _static: no_
 _visible: True_
 _advanced: True_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -691,6 +879,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -726,6 +924,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -763,6 +971,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -797,6 +1015,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -834,6 +1062,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -869,6 +1107,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -907,6 +1155,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -928,12 +1186,12 @@ ofColor c3(255, 0, 0); // red
 
 <!----------------------------------------------------------------------------->
 
-###ofColor_ operator*(&color)
+###ofColor_< PixelType > operator*(&color)
 
 <!--
 _syntax: operator*(&color)_
 _name: operator*_
-_returns: ofColor__
+_returns: ofColor_< PixelType >_
 _returns_description: _
 _parameters: ofColor_< PixelType > const &color_
 _access: public_
@@ -945,6 +1203,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -965,12 +1233,12 @@ ofColor c3 = c2*c1; // c3 is (128, 0, 0)
 
 <!----------------------------------------------------------------------------->
 
-###ofColor_ operator*(&val)
+###ofColor_< PixelType > operator*(&val)
 
 <!--
 _syntax: operator*(&val)_
 _name: operator*_
-_returns: ofColor__
+_returns: ofColor_< PixelType >_
 _returns_description: _
 _parameters: float const &val_
 _access: public_
@@ -982,6 +1250,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1001,12 +1279,12 @@ ofColor c2 = c1*0.5; // c2 is (127, 64, 0)
 
 <!----------------------------------------------------------------------------->
 
-###ofColor_ operator*=(&color)
+###ofColor_< PixelType > & operator*=(&color)
 
 <!--
 _syntax: operator*=(&color)_
 _name: operator*=_
-_returns: ofColor__
+_returns: ofColor_< PixelType > &_
 _returns_description: _
 _parameters: ofColor_< PixelType > const &color_
 _access: public_
@@ -1018,6 +1296,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1038,12 +1326,12 @@ ofColor c2 *= c1; // c2 is now (128, 0, 0)
 
 <!----------------------------------------------------------------------------->
 
-###ofColor_ operator*=(&val)
+###ofColor_< PixelType > & operator*=(&val)
 
 <!--
 _syntax: operator*=(&val)_
 _name: operator*=_
-_returns: ofColor__
+_returns: ofColor_< PixelType > &_
 _returns_description: _
 _parameters: float const &val_
 _access: public_
@@ -1055,6 +1343,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1074,12 +1372,12 @@ ofColor c1*=0.5; // c2 is (127, 64, 0)
 
 <!----------------------------------------------------------------------------->
 
-###ofColor_ operator+(&color)
+###ofColor_< PixelType > operator+(&color)
 
 <!--
 _syntax: operator+(&color)_
 _name: operator+_
-_returns: ofColor__
+_returns: ofColor_< PixelType >_
 _returns_description: _
 _parameters: ofColor_< PixelType > const &color_
 _access: public_
@@ -1091,6 +1389,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1111,12 +1419,12 @@ ofColor c3 = c1 + c2; // c3 is (64, 128, 64) with alpha 128
 
 <!----------------------------------------------------------------------------->
 
-###ofColor_ operator+(&val)
+###ofColor_< PixelType > operator+(&val)
 
 <!--
 _syntax: operator+(&val)_
 _name: operator+_
-_returns: ofColor__
+_returns: ofColor_< PixelType >_
 _returns_description: _
 _parameters: float const &val_
 _access: public_
@@ -1128,6 +1436,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1147,12 +1465,12 @@ ofColor c2 = c1 + 64; // c3 is (192, 128, 64) with alpha 128
 
 <!----------------------------------------------------------------------------->
 
-###ofColor_ operator+=(&color)
+###ofColor_< PixelType > & operator+=(&color)
 
 <!--
 _syntax: operator+=(&color)_
 _name: operator+=_
-_returns: ofColor__
+_returns: ofColor_< PixelType > &_
 _returns_description: _
 _parameters: ofColor_< PixelType > const &color_
 _access: public_
@@ -1164,6 +1482,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1184,12 +1512,12 @@ c1 += c2; // c1 is now (64, 128, 0);
 
 <!----------------------------------------------------------------------------->
 
-###ofColor_ operator+=(&val)
+###ofColor_< PixelType > & operator+=(&val)
 
 <!--
 _syntax: operator+=(&val)_
 _name: operator+=_
-_returns: ofColor__
+_returns: ofColor_< PixelType > &_
 _returns_description: _
 _parameters: float const &val_
 _access: public_
@@ -1201,6 +1529,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1220,12 +1558,12 @@ c1 += 128; // c1 is now (255, 192, 128)
 
 <!----------------------------------------------------------------------------->
 
-###ofColor_ operator-(&color)
+###ofColor_< PixelType > operator-(&color)
 
 <!--
 _syntax: operator-(&color)_
 _name: operator-_
-_returns: ofColor__
+_returns: ofColor_< PixelType >_
 _returns_description: _
 _parameters: ofColor_< PixelType > const &color_
 _access: public_
@@ -1237,6 +1575,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1251,12 +1599,12 @@ Subtraction operator. Works like [the addition operator](#operator+).
 
 <!----------------------------------------------------------------------------->
 
-###ofColor_ operator-(&val)
+###ofColor_< PixelType > operator-(&val)
 
 <!--
 _syntax: operator-(&val)_
 _name: operator-_
-_returns: ofColor__
+_returns: ofColor_< PixelType >_
 _returns_description: _
 _parameters: float const &val_
 _access: public_
@@ -1268,6 +1616,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1282,12 +1640,12 @@ Subtraction operator. Works like [the addition operator](#operator+).
 
 <!----------------------------------------------------------------------------->
 
-###ofColor_ operator-=(&color)
+###ofColor_< PixelType > & operator-=(&color)
 
 <!--
 _syntax: operator-=(&color)_
 _name: operator-=_
-_returns: ofColor__
+_returns: ofColor_< PixelType > &_
 _returns_description: _
 _parameters: ofColor_< PixelType > const &color_
 _access: public_
@@ -1299,6 +1657,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1313,12 +1681,12 @@ Subtraction assignment operator. Works like [the addition assignment operator](#
 
 <!----------------------------------------------------------------------------->
 
-###ofColor_ operator-=(&val)
+###ofColor_< PixelType > & operator-=(&val)
 
 <!--
 _syntax: operator-=(&val)_
 _name: operator-=_
-_returns: ofColor__
+_returns: ofColor_< PixelType > &_
 _returns_description: _
 _parameters: float const &val_
 _access: public_
@@ -1330,6 +1698,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1344,12 +1722,12 @@ Subtraction assignment operator. Works like [the addition assignment operator](#
 
 <!----------------------------------------------------------------------------->
 
-###ofColor_ operator/(&color)
+###ofColor_< PixelType > operator/(&color)
 
 <!--
 _syntax: operator/(&color)_
 _name: operator/_
-_returns: ofColor__
+_returns: ofColor_< PixelType >_
 _returns_description: _
 _parameters: ofColor_< PixelType > const &color_
 _access: public_
@@ -1361,6 +1739,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1375,12 +1763,12 @@ Division operator. Works similar to [the * operator](#operator*) but divides ins
 
 <!----------------------------------------------------------------------------->
 
-###ofColor_ operator/(&val)
+###ofColor_< PixelType > operator/(&val)
 
 <!--
 _syntax: operator/(&val)_
 _name: operator/_
-_returns: ofColor__
+_returns: ofColor_< PixelType >_
 _returns_description: _
 _parameters: float const &val_
 _access: public_
@@ -1392,6 +1780,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1406,12 +1804,12 @@ Division operator. Works similar to [the * operator](#operator*) but divides ins
 
 <!----------------------------------------------------------------------------->
 
-###ofColor_ operator/=(&color)
+###ofColor_< PixelType > & operator/=(&color)
 
 <!--
 _syntax: operator/=(&color)_
 _name: operator/=_
-_returns: ofColor__
+_returns: ofColor_< PixelType > &_
 _returns_description: _
 _parameters: ofColor_< PixelType > const &color_
 _access: public_
@@ -1423,6 +1821,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1437,12 +1845,12 @@ Division assignment operator. Works similar to [the *= operator](#operator*=) bu
 
 <!----------------------------------------------------------------------------->
 
-###ofColor_ operator/=(&val)
+###ofColor_< PixelType > & operator/=(&val)
 
 <!--
 _syntax: operator/=(&val)_
 _name: operator/=_
-_returns: ofColor__
+_returns: ofColor_< PixelType > &_
 _returns_description: _
 _parameters: float const &val_
 _access: public_
@@ -1455,6 +1863,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1468,12 +1886,12 @@ Division assignment operator. Works similar to [the *= operator](#operator*=) bu
 
 <!----------------------------------------------------------------------------->
 
-###ofColor_ operator=(&color)
+###ofColor_< PixelType > & operator=(&color)
 
 <!--
 _syntax: operator=(&color)_
 _name: operator=_
-_returns: ofColor__
+_returns: ofColor_< PixelType > &_
 _returns_description: _
 _parameters: ofColor_< PixelType > const &color_
 _access: public_
@@ -1485,6 +1903,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1513,12 +1941,12 @@ c2 = c1; // c2 is now red (255, 0, 0)
 
 <!----------------------------------------------------------------------------->
 
-###ofColor_ operator=(&color)
+###ofColor_< PixelType > & operator=(&color)
 
 <!--
 _syntax: operator=(&color)_
 _name: operator=_
-_returns: ofColor__
+_returns: ofColor_< PixelType > &_
 _returns_description: _
 _parameters: ofColor_< SrcType > const &color_
 _access: public_
@@ -1531,6 +1959,16 @@ _visible: False_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1542,12 +1980,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofColor_ operator=(&val)
+###ofColor_< PixelType > & operator=(&val)
 
 <!--
 _syntax: operator=(&val)_
 _name: operator=_
-_returns: ofColor__
+_returns: ofColor_< PixelType > &_
 _returns_description: _
 _parameters: float const &val_
 _access: public_
@@ -1559,6 +1997,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1595,6 +2043,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1635,6 +2093,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1670,6 +2138,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1707,6 +2185,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1741,6 +2229,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1778,6 +2276,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1817,6 +2325,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1854,6 +2372,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1885,6 +2413,14 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1913,6 +2449,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1952,6 +2498,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1989,6 +2545,16 @@ _static: no_
 _visible: False_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -2052,6 +2618,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###PixelType a
@@ -2103,6 +2670,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ antiqueWhite
@@ -2120,6 +2688,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -2151,6 +2720,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ aquamarine
@@ -2175,6 +2745,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ azure
@@ -2192,6 +2763,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -2255,6 +2827,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ bisque
@@ -2272,6 +2845,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -2334,6 +2908,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor blue
@@ -2389,6 +2964,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ blueViolet
@@ -2406,6 +2982,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -2437,6 +3014,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ burlyWood
@@ -2454,6 +3032,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -2485,6 +3064,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ chartreuse
@@ -2502,6 +3082,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -2533,6 +3114,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ coral
@@ -2550,6 +3132,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -2581,6 +3164,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ cornsilk
@@ -2605,6 +3189,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ crimson
@@ -2622,6 +3207,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -2684,6 +3270,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ darkCyan
@@ -2701,6 +3288,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -2732,6 +3320,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ darkGray
@@ -2749,6 +3338,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -2780,6 +3370,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ darkGrey
@@ -2797,6 +3388,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -2828,6 +3420,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ darkMagenta
@@ -2845,6 +3438,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -2876,6 +3470,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ darkOrchid
@@ -2893,6 +3488,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -2924,6 +3520,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ darkSalmon
@@ -2941,6 +3538,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -2972,6 +3570,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ darkSlateBlue
@@ -2989,6 +3588,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -3020,6 +3620,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ darkSlateGrey
@@ -3037,6 +3638,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -3068,6 +3670,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ darkViolet
@@ -3085,6 +3688,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -3116,6 +3720,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ deepPink
@@ -3133,6 +3738,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -3164,6 +3770,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ dimGray
@@ -3181,6 +3788,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -3212,6 +3820,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ dodgerBlue
@@ -3229,6 +3838,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -3260,6 +3870,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ floralWhite
@@ -3277,6 +3888,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -3308,6 +3920,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ fuchsia
@@ -3325,6 +3938,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -3388,6 +4002,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ ghostWhite
@@ -3405,6 +4020,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -3436,6 +4052,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ goldenRod
@@ -3453,6 +4070,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -3546,6 +4164,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ grey
@@ -3563,6 +4182,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -3594,6 +4214,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ hotPink
@@ -3611,6 +4232,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -3642,6 +4264,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ indigo
@@ -3659,6 +4282,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -3690,6 +4314,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ khaki
@@ -3707,6 +4332,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -3738,6 +4364,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ lavenderBlush
@@ -3755,6 +4382,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -3786,6 +4414,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ lemonChiffon
@@ -3803,6 +4432,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -3834,6 +4464,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ lightCoral
@@ -3851,6 +4482,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -3882,6 +4514,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ lightGoldenRodYellow
@@ -3899,6 +4532,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -3930,6 +4564,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ lightGreen
@@ -3947,6 +4582,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -3978,6 +4614,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ lightPink
@@ -3995,6 +4632,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -4026,6 +4664,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ lightSeaGreen
@@ -4043,6 +4682,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -4074,6 +4714,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ lightSlateGray
@@ -4091,6 +4732,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -4122,6 +4764,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ lightSteelBlue
@@ -4139,6 +4782,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -4170,6 +4814,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ lime
@@ -4187,6 +4832,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -4218,6 +4864,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ linen
@@ -4235,6 +4882,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -4297,6 +4945,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ mediumAquaMarine
@@ -4314,6 +4963,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -4345,6 +4995,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ mediumOrchid
@@ -4362,6 +5013,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -4393,6 +5045,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ mediumSeaGreen
@@ -4410,6 +5063,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -4441,6 +5095,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ mediumSpringGreen
@@ -4458,6 +5113,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -4489,6 +5145,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ mediumVioletRed
@@ -4506,6 +5163,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -4537,6 +5195,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ mintCream
@@ -4554,6 +5213,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -4585,6 +5245,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ moccasin
@@ -4602,6 +5263,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -4633,6 +5295,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ navy
@@ -4650,6 +5313,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -4681,6 +5345,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ olive
@@ -4698,6 +5363,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -4729,6 +5395,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ orange
@@ -4746,6 +5413,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -4777,6 +5445,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ orchid
@@ -4794,6 +5463,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -4825,6 +5495,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ paleGreen
@@ -4842,6 +5513,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -4873,6 +5545,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ paleVioletRed
@@ -4890,6 +5563,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -4921,6 +5595,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ peachPuff
@@ -4938,6 +5613,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -4969,6 +5645,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ pink
@@ -4986,6 +5663,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -5017,6 +5695,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ powderBlue
@@ -5041,6 +5720,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ purple
@@ -5058,6 +5738,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -5152,6 +5833,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ royalBlue
@@ -5169,6 +5851,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -5200,6 +5883,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ salmon
@@ -5217,6 +5901,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -5248,6 +5933,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ seaGreen
@@ -5265,6 +5951,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -5296,6 +5983,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ sienna
@@ -5313,6 +6001,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -5344,6 +6033,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ skyBlue
@@ -5361,6 +6051,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -5392,6 +6083,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ slateGray
@@ -5409,6 +6101,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -5440,6 +6133,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ snow
@@ -5457,6 +6151,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -5488,6 +6183,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ steelBlue
@@ -5505,6 +6201,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -5536,6 +6233,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ teal
@@ -5553,6 +6251,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -5584,6 +6283,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ tomato
@@ -5608,6 +6308,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ turquoise
@@ -5625,6 +6326,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -5683,6 +6385,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor_ wheat
@@ -5700,6 +6403,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -5762,6 +6466,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor yellow
@@ -5810,6 +6515,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 

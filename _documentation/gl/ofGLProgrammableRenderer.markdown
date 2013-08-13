@@ -1,6 +1,15 @@
 #class ofGLProgrammableRenderer
 
 
+##InlineDescription
+
+
+
+
+
+
+
+
 ##Description
 
 
@@ -29,7 +38,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -57,7 +77,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -85,7 +116,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -113,7 +155,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -141,7 +194,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -169,7 +233,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -197,7 +272,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -207,12 +293,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofShader bitmapStringShader()
+###ofShader & bitmapStringShader()
 
 <!--
 _syntax: bitmapStringShader()_
 _name: bitmapStringShader_
-_returns: ofShader_
+_returns: ofShader &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -225,7 +311,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -253,7 +350,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -281,7 +389,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -309,7 +428,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -319,12 +449,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofShader defaultNoTexColor()
+###ofShader & defaultNoTexColor()
 
 <!--
 _syntax: defaultNoTexColor()_
 _name: defaultNoTexColor_
-_returns: ofShader_
+_returns: ofShader &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -337,7 +467,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -347,12 +488,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofShader defaultNoTexNoColor()
+###ofShader & defaultNoTexNoColor()
 
 <!--
 _syntax: defaultNoTexNoColor()_
 _name: defaultNoTexNoColor_
-_returns: ofShader_
+_returns: ofShader &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -365,7 +506,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -375,12 +527,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofShader defaultTex2DColor()
+###ofShader & defaultTex2DColor()
 
 <!--
 _syntax: defaultTex2DColor()_
 _name: defaultTex2DColor_
-_returns: ofShader_
+_returns: ofShader &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -393,7 +545,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -403,12 +566,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofShader defaultTex2DNoColor()
+###ofShader & defaultTex2DNoColor()
 
 <!--
 _syntax: defaultTex2DNoColor()_
 _name: defaultTex2DNoColor_
-_returns: ofShader_
+_returns: ofShader &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -421,7 +584,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -431,12 +605,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofShader defaultTexColor()
+###ofShader & defaultTexColor()
 
 <!--
 _syntax: defaultTexColor()_
 _name: defaultTexColor_
-_returns: ofShader_
+_returns: ofShader &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -449,7 +623,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -459,12 +644,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofShader defaultTexNoColor()
+###ofShader & defaultTexNoColor()
 
 <!--
 _syntax: defaultTexNoColor()_
 _name: defaultTexNoColor_
-_returns: ofShader_
+_returns: ofShader &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -477,7 +662,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -487,12 +683,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofShader defaultUniqueShader()
+###ofShader & defaultUniqueShader()
 
 <!--
 _syntax: defaultUniqueShader()_
 _name: defaultUniqueShader_
-_returns: ofShader_
+_returns: ofShader &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -505,7 +701,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -533,7 +740,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -561,7 +779,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -589,7 +818,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -617,7 +857,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -645,7 +896,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -673,7 +935,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -701,7 +974,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -729,7 +1013,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -757,7 +1052,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -785,7 +1091,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -813,7 +1130,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -841,7 +1169,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -869,7 +1208,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -897,7 +1247,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -925,7 +1286,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -953,7 +1325,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -981,7 +1364,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1009,7 +1403,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1037,7 +1442,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1065,7 +1481,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1093,7 +1520,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1121,7 +1559,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1149,7 +1598,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1159,12 +1619,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofFloatColor getBgColor()
+###ofFloatColor & getBgColor()
 
 <!--
 _syntax: getBgColor()_
 _name: getBgColor_
-_returns: ofFloatColor_
+_returns: ofFloatColor &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1177,7 +1637,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1205,7 +1676,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1215,12 +1697,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofShader getCurrentShader()
+###ofShader & getCurrentShader()
 
 <!--
 _syntax: getCurrentShader()_
 _name: getCurrentShader_
-_returns: ofShader_
+_returns: ofShader &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1233,7 +1715,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1261,7 +1754,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1289,7 +1793,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1317,7 +1832,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1345,7 +1871,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1373,7 +1910,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1401,7 +1949,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1429,7 +1988,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1457,7 +2027,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1485,7 +2066,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1513,7 +2105,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1541,7 +2144,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1569,7 +2183,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1597,7 +2222,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1625,7 +2261,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1653,7 +2300,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1681,7 +2339,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1709,7 +2378,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1737,7 +2417,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1765,7 +2456,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1793,7 +2495,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1821,7 +2534,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1849,7 +2573,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1877,7 +2612,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1905,7 +2651,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1933,7 +2690,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1961,7 +2729,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1989,7 +2768,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -2017,7 +2807,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -2045,7 +2846,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -2073,7 +2885,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -2101,7 +2924,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -2129,7 +2963,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -2157,7 +3002,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -2185,7 +3041,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -2213,7 +3080,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -2241,7 +3119,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -2269,7 +3158,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -2297,7 +3197,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -2325,7 +3236,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -2353,7 +3275,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -2381,7 +3314,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -2409,7 +3353,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -2437,7 +3392,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -2465,7 +3431,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -2493,7 +3470,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -2521,7 +3509,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -2549,7 +3548,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -2577,7 +3587,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -2605,7 +3626,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -2633,7 +3665,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -2661,7 +3704,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -2689,7 +3743,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -2717,7 +3782,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -2745,7 +3821,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -2773,7 +3860,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -2801,7 +3899,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -2829,7 +3938,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -2857,7 +3977,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -2885,7 +4016,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -2913,7 +4055,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -2941,7 +4094,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -2969,7 +4133,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -3005,6 +4180,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool bBackgroundAuto
@@ -3022,6 +4198,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -3053,6 +4230,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool bSmoothHinted
@@ -3070,6 +4248,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -3101,6 +4280,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool bitmapStringEnabled
@@ -3118,6 +4298,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -3149,6 +4330,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofPolyline circlePolyline
@@ -3166,6 +4348,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -3197,6 +4380,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor currentColor
@@ -3214,6 +4398,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -3245,6 +4430,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int currentTextureTarget
@@ -3262,6 +4448,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -3293,6 +4480,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofMatrixStack matrixStack
@@ -3310,6 +4498,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -3341,6 +4530,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool normalsEnabled
@@ -3358,6 +4548,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -3389,6 +4580,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofRectMode rectMode
@@ -3406,6 +4598,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -3437,6 +4630,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool texCoordsEnabled
@@ -3454,6 +4648,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -3485,6 +4680,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool uniqueShader
@@ -3502,6 +4698,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -3533,6 +4730,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofVbo vertexDataVbo
@@ -3550,6 +4748,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -3581,6 +4780,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool wrongUseLoggedOnce
@@ -3598,6 +4798,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 

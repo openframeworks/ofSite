@@ -1,6 +1,15 @@
 #class ofEventAttendedException
 
 
+##InlineDescription
+
+
+
+
+
+
+
+
 ##Description
 
 

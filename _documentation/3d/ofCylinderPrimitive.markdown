@@ -1,8 +1,16 @@
 #class ofCylinderPrimitive
 
 
-##Description
+##InlineDescription
 
+
+
+
+
+
+
+
+##Description
 
 The ofCylinderPrimitive allows you to create an cylinder mesh.
 
@@ -44,16 +52,18 @@ cylinder.draw();
 
 
 
+
+
 ##Methods
 
 
 
-###ofIndexType getBottomCapIndices()
+###vector< ofIndexType > getBottomCapIndices()
 
 <!--
 _syntax: getBottomCapIndices()_
 _name: getBottomCapIndices_
-_returns: ofIndexType_
+_returns: vector< ofIndexType >_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -66,7 +76,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -94,7 +115,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -122,7 +154,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -132,12 +175,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofIndexType getCylinderIndices()
+###vector< ofIndexType > getCylinderIndices()
 
 <!--
 _syntax: getCylinderIndices()_
 _name: getCylinderIndices_
-_returns: ofIndexType_
+_returns: vector< ofIndexType >_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -150,7 +193,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -178,7 +232,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -206,7 +271,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -234,7 +310,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -262,7 +349,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -290,7 +388,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -318,7 +427,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -346,7 +466,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -356,12 +487,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofIndexType getTopCapIndices()
+###vector< ofIndexType > getTopCapIndices()
 
 <!--
 _syntax: getTopCapIndices()_
 _name: getTopCapIndices_
-_returns: ofIndexType_
+_returns: vector< ofIndexType >_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -374,7 +505,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -402,7 +544,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -430,7 +583,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -458,7 +622,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -486,7 +661,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -514,7 +700,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -542,7 +739,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -570,7 +778,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -598,7 +817,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -626,7 +856,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -654,7 +895,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -682,7 +934,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -710,7 +973,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -738,7 +1012,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -766,7 +1051,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -794,7 +1090,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -822,7 +1129,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -850,7 +1168,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -886,6 +1215,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###float height
@@ -903,6 +1233,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -934,6 +1265,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofVec3f resolution
@@ -951,6 +1283,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -982,6 +1315,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int vertices
@@ -999,6 +1333,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 

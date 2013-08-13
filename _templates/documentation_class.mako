@@ -80,6 +80,9 @@
                       <%self:filter chain="markdown_template">
                       % if not clazz is None:
 ${clazz.reference}
+
+#Documentation from code comments
+${clazz.detailed_inline_description}
                       % endif
                       % if not functions is None:
 ${functions.description}
