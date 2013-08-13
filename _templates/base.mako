@@ -10,8 +10,11 @@
   <%include file="header.mako"  args="active=active" />
 </%def>
 
-<%def name="head()">
-  <%include file="head.mako" />
+<%def name="head(subtitle='')">
+	<% 
+		subtitle = ('' if subtitle == '' else " - " + subtitle)
+	%>
+  <%include file="head.mako" args="subtitle=subtitle"/>
 </%def>
 
 <%def name="footer()">

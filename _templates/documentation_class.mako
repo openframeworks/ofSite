@@ -4,7 +4,7 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    ${self.head()}
+    ${self.head(modulename)}
     <script src="${bf.config.site.url}/js/jquery.columnizer.min.js"></script>
     <script src="${bf.config.site.url}/js/documentation.js"></script>
   </head>
