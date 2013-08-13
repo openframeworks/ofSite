@@ -3,7 +3,7 @@
 <h1>download</h1>
 <div id="download-latest-header">
 	<h2>${bf.config.currentVersion}</h2>
-	<p><strong>is the most recent release. It has a lot of new features, new interfaces, and probably some new bugs too. ${bf.config.currentVersion} is not 100% compatible with older projects. Please see the <a href="https://raw.github.com/openframeworks/openFrameworks/master/CHANGELOG.md">changelog</a> to get an overview of the differences between versions.</strong></p>
+	<p><strong>is the most recent release. It has a lot of new features, new interfaces, and probably some new bugs too. ${bf.config.currentVersion} is not 100% compatible with older projects. Please see the <a href="https://raw.github.com/openframeworks/openFrameworks/0.8.0/CHANGELOG.md">changelog</a> to get an overview of the differences between versions.</strong></p>
 	<p>To use openFrameworks you will need an IDE, and the setup guide for your platform can walk you through this. Please post any bugs on the <a href="http://github.com/openframeworks/openFrameworks/issues">issues</a> page, and post to the <a href="http://forum.openframeworks.cc">forum</a> if you have any other questions. openFrameworks is distributed under the <a href="../about/license.html">MIT License</a>.</p>
 </div>
 
