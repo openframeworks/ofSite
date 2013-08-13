@@ -54,7 +54,18 @@ You are now ready to compile openFrameworks!
 
 0. `make Release -C /home/pi/openFrameworks/libs/openFrameworksCompiled/project`
 
-As you can see compiling natively on the Raspberry Pi takes a long time. openFrameworks applications typically take much less time than the core library however taking the time to set up a cross-compiling solution will save you enormous amounts of time. 
+## Known issue with updated firmware
+If you have ran [rpi-update](http://raspberrypi.stackexchange.com/questions/4355/do-i-still-need-rpi-update-if-i-am-using-the-latest-version-of-raspbian) recently you may get the error containing      
+`../../../libs/openFrameworks/app/ofAppEGLWindow.cpp:1073:66: error: cannot convert 'VC_IMAGE_TRANSFORM_T' to 'DISPMANX_TRANSFORM_T'`
+
+Assuming that the openFrameworks folder is at `/home/pi/openFrameworks` you can fix it with this command:   
+
+`sed -i 's/VC_IMAGE_TRANSFORM_T/DISPMANX_TRANSFORM_T/g' /home/pi/openFrameworks/libs/openFrameworks/app/ofAppEGLWindow.cpp`
+
+Then re-run the `make` command above.
+
+## Speeding up compiling
+Compiling natively on the Raspberry Pi takes a long time. openFrameworks applications typically take much less time than the core library. Taking the time to set up a cross-compiling solution will save you enormous amounts of time. 
 
 [Raspberry Pi DISTCC Guide](Raspberry-Pi-DISTCC-guide.html)    
 [Raspberry Pi Cross Compiling Guide](Raspberry-Pi-Cross-compiling-guide.html)
