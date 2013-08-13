@@ -77,17 +77,26 @@
 		    <div id="main_block">
                 <div id="prose_block">
                     <div class="documentation_detail class_documentation">
-                      <%self:filter chain="markdown_template">
                       % if not clazz is None:
+                      <%self:filter chain="markdown_template">
 ${clazz.reference}
-
-#Documentation from code comments
-${clazz.detailed_inline_description}
-                      % endif
-                      % if not functions is None:
-${functions.description}
-                      % endif
                       </%self:filter>
+                      % endif
+
+                      % if not clazz is None and clazz.detailed_inline_description.strip("\n").strip(" ") != "":
+                      <div class="inlined_docs">
+                            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+                            <%self:filter chain="markdown_template">
+${clazz.detailed_inline_description}
+                            </%self:filter>
+                      </div>                      
+                      % endif
+                      
+                      % if not functions is None:
+                      <%self:filter chain="markdown_template">
+${functions.description}
+                      </%self:filter>
+                      % endif
                    </div>
                   
                   <!-- methods detail -->

@@ -657,12 +657,10 @@ div.sectiontitle h2{
 	position: relative;
 	width: 650px;
 }
-/*.documentation_detail.class_documentation p{
-    margin:0;
+.inlined_docs{
+    background-color:#f8f8f9;
+    padding: 1em;
 }
-.inline_docs p{
-    margin-bottom:1em;
-}*/
 .documentation_detail_table_offset {
 	float: left;
 	margin: 0px 0px 25px 0px;
