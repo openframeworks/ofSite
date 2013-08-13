@@ -6,7 +6,7 @@
 
 ofFile wraps functionality for opening, reading, writing, and modifying files on your computer.
 
-~~~~.cpp
+~~~~{.cpp}
 
 ofFile file;
 
@@ -16,13 +16,13 @@ ofBuffer buff = file.readToBuffer();
 
 You can do the same with the bufferFromFile method:
 
-~~~~.cpp
+~~~~{.cpp}
 ofBuffer ofBufferFromFile(const string & path, bool binary=false);
 ~~~~
 
 To write a buffer to a file, use ofBufferToFile()
 
-~~~~.cpp
+~~~~{.cpp}
 ofBuffer dataBuffer;
 // fill the buffer with something important
 bool fileWritten = ofBufferToFile("data.dat", dataBuffer); 
@@ -31,7 +31,7 @@ bool fileWritten = ofBufferToFile("data.dat", dataBuffer);
 
 You can also compare files using the ==, !=, <, >, <=, >= operators. This is done so that the files can be stored in std::containers and sorted.
 
-~~~~.cpp    
+~~~~{.cpp}    
 ofFile file(ofToDataPath("foo.xml"));
 ofFile file2(ofToDataPath("foo2.xml"));    
 cout << "is foo less than foo2? " << ((file < file2) ? "true" : "false") << endl;
@@ -312,7 +312,7 @@ _description: _
 
 If the ofFile contains a file path that doesn't exist yet, calling create() generates the file.
 
-~~~~.cpp
+~~~~{.cpp}
 ofFile newFile(ofToDataPath("temp.txt"), ofFile::Write); //file doesn't exist yet
 newFile.create(); // now file doesn't exist 
 ~~~~
@@ -468,7 +468,7 @@ _description: _
 
 Returns the relative path to the directory containing the file, for instance:
 
-~~~~.cpp
+~~~~{.cpp}
 
 ofFile file(ofToDataPath("foo.xml"));
 cout << file.getEnclosingDirectory(); // prints "../../../data/xml"
@@ -506,7 +506,7 @@ _description: _
 
 Returns the extension of the file.
 
-~~~~.cpp
+~~~~{.cpp}
     ofFile file(ofToDataPath("foo.xml"));
     cout << file.getExtension();
 ~~~~
@@ -939,11 +939,11 @@ _description: _
 
 Creates an ofFile using the file path and mode specified. Note that if the file doesn't actually exist on the file system this doesn't actually create file until you call create().
 
-~~~~.cpp
+~~~~{.cpp}
 ofFile fileToRead(ofToDataPath("dictionary.txt")); // a file that exists
 ~~~~
 
-~~~~.cpp
+~~~~{.cpp}
 ofFile newFile(ofToDataPath("temp.txt"), ofFile::Write); //file doesn't exist yet
 newFile.create(); // now file doesn't exist 
 ~~~~
@@ -1163,7 +1163,7 @@ _description: _
 
 Equals operator which allows you to do this:
 
-~~~~.cpp
+~~~~{.cpp}
 ofFile f1 = f2;
 ~~~~
 

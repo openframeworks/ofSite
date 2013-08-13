@@ -67,7 +67,7 @@ _description: _
 
 
 
-
+This returns whether your current device does hardware orientation. An iPhone, for instance, does hardware orientation, which you might notice when you tilt your iPhone to the side, hence ofDoesHWOrientation() would return true. Tilting your laptop to the side does not do the same thing, hence ofDoesHWOrientation() would return false.
 
 
 
@@ -139,7 +139,7 @@ _description: _
 
 
 
-
+This actually exits your app, like, for real. Gone.
 
 
 
@@ -228,7 +228,7 @@ _description: _
 
 
 
-
+This returns the current frame as an int, counting up to (depending on your system) 2147483647 before rolling over back to 0. Don't worry though, at 60 frames a second you have 68 years until it rolls over though.
 
 
 
@@ -298,7 +298,7 @@ _description: _
 
 
 
-
+This gets the height of your ofApp window. Useful for finding the middle of the screen like so: ofVec2f middle(ofGetWidth()/2, ofGetHeight()/2)
 
 
 
@@ -502,7 +502,7 @@ _description: _
 
 
 
-
+This gets the width of your ofApp window. Useful for finding the middle of the screen like so: ofVec2f middle(ofGetWidth()/2, ofGetHeight()/2)
 
 
 
@@ -576,14 +576,11 @@ eg:
 int mode = ofGetWindowMode();
 		
 if(mode == OF_WINDOW){
-	printf("mode is: window mode
-");	
+	cout << "mode is: window mode " << endl;
 }else if(mode == OF_FULLSCREEN){
-	printf("mode is: fullscreen mode
-");		
+	cout << "mode is: fullscreen mode" << endl;
 }else if(mode == OF_GAME_MODE){
-	printf("mode is: game mode
-");	
+	cout << "mode is: game mode" << endl;	
 }
 ~~~~
 
@@ -624,6 +621,9 @@ _advanced: False_
 _description: _
 
 
+This is the x position of your window inside your screen. How exactly this is returned is dependent on your operating system but it's pretty consistent across platforms.
+
+
 note: this code is implemented inside the ofAppRunner
 
 
@@ -658,6 +658,9 @@ _advanced: False_
 -->
 
 _description: _
+
+
+This is the y position of your window inside your screen. How exactly this is returned is dependent on your operating system but it's pretty consistent across platforms.
 
 
 note: this code is implemented inside the ofAppRunner
@@ -761,7 +764,7 @@ _description: _
 
 
 
-
+This is the size of your window as it's drawn on your screen. How exactly this is returned is dependent on your operating system but it's pretty consistent across platforms.
 
 
 
@@ -828,8 +831,8 @@ _advanced: False_
 _description: _
 
 
-Hides the mouse cursor
-makes the cursor invisible.
+This hides the mouse cursor, useful if you're doing a clever app that has no need for mouse interaction, evil if you are.
+
 note: this code is implemented inside the ofAppRunner.
 
 
@@ -1258,6 +1261,7 @@ _description: _
 
 
 Moves the app window to the x and y coordinates specified. For example: coordinates of (0,0) would set the top-left corner of your app window to the top-left corner of the screen.
+
 note: this code is implemented inside the ofAppRunner
 
 
