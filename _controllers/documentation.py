@@ -90,7 +90,14 @@ def run():
                 methods_to_remove.append(method)
         for method in methods_to_remove:
             clazz.function_list.remove(method)
-
+        
+        clazz.detailed_inline_description = str(clazz.detailed_inline_description)
+        for class_name in classes:
+                rep = class_name + "[\s]"
+                clazz.detailed_inline_description = re.sub(rep, "<a href=\"../"+clazz.module+"/"+class_name+".html\">"+class_name+"</a> ", clazz.detailed_inline_description)
+                rep = class_name + "[(]"
+                clazz.detailed_inline_description = re.sub(rep, "<a href=\"../"+clazz.module+"/"+class_name+".html\">"+class_name+"</a>(", clazz.detailed_inline_description)
+        
         clazz.reference = str(clazz.reference)
         for class_name in classes:
                 rep = class_name + "[\s]"

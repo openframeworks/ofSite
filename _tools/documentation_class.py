@@ -21,6 +21,7 @@ class DocsClass:
         self.addons = False
         self.function_list = []
         self.var_list = []
+        self.detailed_inline_description = ""
         
 
     def functions(self):
