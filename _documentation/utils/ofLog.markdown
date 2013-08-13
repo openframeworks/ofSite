@@ -21,7 +21,7 @@ Log levels are (in order of priority):
 	OF_LOG_FATAL_ERROR
 	OF_LOG_SILENT
 
-**Note**: `OF_LOG_SILENT` is a special value which disables **all** messages.
+**Note**: OF_LOG_SILENT is a special value which disables **all** messages.
 
 ####Usage
 
@@ -187,7 +187,7 @@ ofLog() << "a string" << 100 << 20.234f;
 
 ~~~~
 
-The log level is explicitly `OF_LOG_NOTICE`.
+The log level is explicitly OF_LOG_NOTICE.
 
 See [ofSetLogLevel(logLevel)](./ofLog.html#functions) for more info on log levels.
 
@@ -353,7 +353,7 @@ ofLog(OF_LOG_NOTICE, "we've got %d & %f, we got everything you want honey, we kn
 
 ~~~~
 
-Note: `theNames.c_str()` returns a C string from theNames which is a C++ string object.
+Note: theNames.c_str() returns a C string from theNames which is a C++ string object.
 
 There are other formatting options such as setting the decimal precision of float objects and the forward padding of numbers (i.e. 0001 instead of 1). See the [Wikipedia printf format string article](http://en.wikipedia.org/wiki/Printf_format_string) for more detailed information.
 

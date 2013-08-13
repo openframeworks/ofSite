@@ -4,7 +4,7 @@
 ##Description
 
 
-`ofColor` represents a color in openFrameworks. Colors are usually defined by specifying a red, green, and blue component (RGB), and a transparency (alpha) component. You can also specify colors using hue, saturation and brightness (HSB).
+ofColor represents a color in openFrameworks. Colors are usually defined by specifying a red, green, and blue component (RGB), and a transparency (alpha) component. You can also specify colors using hue, saturation and brightness (HSB).
 
 For example: 
 
@@ -27,13 +27,13 @@ ofSetColor( ofColor(0, 0, ofRandom( 128, 255 ) );
 // draw color is now a random blue
 ~~~~
 
-`ofColor` also enables a lot of extra functionality like using HSB instead of color spectrums, lerping or linearly interpolating between colors, and inverting colors, among other things. 
+ofColor also enables a lot of extra functionality like using HSB instead of color spectrums, lerping or linearly interpolating between colors, and inverting colors, among other things. 
 
-`ofColor` is templated, which means that it has several different ways it can be created. These are probably best to leave as they are because there's already a few kinds `typedef`ed for you. The default `ofColor` uses `unsigned char` values (0 to 255), but you can make an `ofFloatColor` if you want to work with floating point numbers between 0 and 1, or `ofShortColor` if you want to work with integers between 0 and 65,535.
+ofColor is templated, which means that it has several different ways it can be created. These are probably best to leave as they are because there's already a few kinds typedefed for you. The default ofColor uses unsigned char values (0 to 255), but you can make an ofFloatColor if you want to work with floating point numbers between 0 and 1, or ofShortColor if you want to work with integers between 0 and 65,535.
 
 ### HSB
 
-You're probably familiar with RGB colors already, but HSB is a big part of `ofColor`. It uses a *hue* value (for the standard `ofColor` the range for this value is between 0 and 255) to determine what the hue (the 'color' in the sense of a color in the rainbow) will be:
+You're probably familiar with RGB colors already, but HSB is a big part of ofColor. It uses a *hue* value (for the standard ofColor the range for this value is between 0 and 255) to determine what the hue (the 'color' in the sense of a color in the rainbow) will be:
 
 ![HSB](../types/hsb.png)
 
@@ -82,7 +82,7 @@ _advanced: False_
 _description: _
 
 
-This clamps the values of your color in case they're too high or low for their types, in case you go negative or too use values that are too high, like anything >1.0 in the case of `ofFloatColor`.
+This clamps the values of your color in case they're too high or low for their types, in case you go negative or too use values that are too high, like anything >1.0 in the case of ofFloatColor.
 
 ~~~~{.cpp}
 ofFloatColor c( 1, 0, 0 );
@@ -420,7 +420,7 @@ _advanced: False_
 _description: _
 
 
-Returns this color lerped towards `target` by `amount`, without modifying the original. See [lerp](#lerp) for more info.
+Returns this color lerped towards target by amount, without modifying the original. See [lerp](#lerp) for more info.
 
 
 
@@ -618,7 +618,7 @@ _advanced: False_
 _description: _
 
 
-Returns the maximum value for a component for this color. For standard `ofColor` returns 255, for `ofFloatColor` returns 1.0, for `ofShortColor` returns 65,536.
+Returns the maximum value for a component for this color. For standard ofColor returns 255, for ofFloatColor returns 1.0, for ofShortColor returns 65,536.
 
 
 
@@ -766,7 +766,7 @@ _advanced: False_
 _description: _
 
 
-Creates a gray color from the value of `gray`. `_a` defaults to completely opaque.
+Creates a gray color from the value of gray. _a defaults to completely opaque.
 
 ~~~~{.cpp}
 ofColor c(0.5, 122); // now c is 50% alpha gray, ooh, dismal
@@ -837,7 +837,7 @@ _advanced: False_
 _description: _
 
 
-Creates a color by copying another color, overriding the existing alpha value with the value of `_a`:
+Creates a color by copying another color, overriding the existing alpha value with the value of _a:
 
 ~~~~{.cpp}
 ofColor mom(255, 0, 0); // red
@@ -873,7 +873,7 @@ _advanced: False_
 _description: _
 
 
-Creates a color by copying another color with a different type (for example when copying from a standard `ofColor` using `unsigned char`s to an `ofFloatColor`):
+Creates a color by copying another color with a different type (for example when copying from a standard ofColor using unsigned chars to an ofFloatColor):
 
 ~~~~{.cpp}
 ofColor c1(255, 128, 0); // orange
@@ -910,7 +910,7 @@ _advanced: False_
 _description: _
 
 
-Non-equivalence operator. Returns `true` if any RGB component is different from its equivalent in `color`, otherwise returns `false`.
+Non-equivalence operator. Returns true if any RGB component is different from its equivalent in color, otherwise returns false.
 
 ~~~~{.cpp}
 ofColor c1(255, 0, 0); // red
@@ -949,7 +949,7 @@ _advanced: False_
 _description: _
 
 
-Returns a new color where each channel has been multiplied by its parallel in `color`, with 100% alpha. Behaves like a multiply blend in a photo editing app: if the red channel in `color` is 50%, the output red channel will be 50% of the input red channel.
+Returns a new color where each channel has been multiplied by its parallel in color, with 100% alpha. Behaves like a multiply blend in a photo editing app: if the red channel in color is 50%, the output red channel will be 50% of the input red channel.
 
 ~~~~{.cpp}
 ofColor c1(128, 0, 0); // 50% red
@@ -986,7 +986,7 @@ _advanced: False_
 _description: _
 
 
-Returns a new color where each channel has been multiplied by `val`, with alpha 100% alpha. Before multiplying, `val` is clamped to a range of 0 to 1.
+Returns a new color where each channel has been multiplied by val, with alpha 100% alpha. Before multiplying, val is clamped to a range of 0 to 1.
 
 ~~~~{.cpp}
 ofColor c1(255, 128, 0);
@@ -1022,7 +1022,7 @@ _advanced: False_
 _description: _
 
 
-Multiplication assignment operator. Multiplies each channel by its parallel in `color`, without touching alpha. Behaves like a multiply blend in a photo editing app: if the red channel in `color` is 50%, the red channel in this color will be reduced to 50% of its input value.
+Multiplication assignment operator. Multiplies each channel by its parallel in color, without touching alpha. Behaves like a multiply blend in a photo editing app: if the red channel in color is 50%, the red channel in this color will be reduced to 50% of its input value.
 
 ~~~~{.cpp}
 ofColor c1(128, 0, 0); // 50% red
@@ -1059,7 +1059,7 @@ _advanced: False_
 _description: _
 
 
-Multiplication assignment operator. Multiplies each channel by `val`, without touching alpha. Before multiplying, `val` is clamped to a range of 0 to 1.
+Multiplication assignment operator. Multiplies each channel by val, without touching alpha. Before multiplying, val is clamped to a range of 0 to 1.
 
 ~~~~{.cpp}
 ofColor c1(255, 128, 0);
@@ -1095,7 +1095,7 @@ _advanced: False_
 _description: _
 
 
-Sum red, green and blue components separately, ignoring alpha. In the case of integer types, like `ofColor` and `ofShortColor` this operation wraps. In the case of `ofFloatColor`, it automatically clamps the result by calling [clamp](#clamp).
+Sum red, green and blue components separately, ignoring alpha. In the case of integer types, like ofColor and ofShortColor this operation wraps. In the case of ofFloatColor, it automatically clamps the result by calling [clamp](#clamp).
 
 ~~~~{.cpp}
 ofColor c1(64, 64, 0, 128);
@@ -1132,7 +1132,7 @@ _advanced: False_
 _description: _
 
 
-Add `val` to all components except alpha. In the case of integer types, like `ofColor` and `ofShortColor` this operation wraps. In the case of `ofFloatColor`, it automatically clamps the result by calling [clamp](#clamp).
+Add val to all components except alpha. In the case of integer types, like ofColor and ofShortColor this operation wraps. In the case of ofFloatColor, it automatically clamps the result by calling [clamp](#clamp).
 
 ~~~~{.cpp}
 ofColor c1(128, 64, 0, 128);
@@ -1168,7 +1168,7 @@ _advanced: False_
 _description: _
 
 
-Addition assignment operator. Adds the contents of `color` (except alpha) to this color. In the case of integer types, like `ofColor` and `ofShortColor` this operation wraps. In the case of `ofFloatColor`, it automatically clamps the result by calling [clamp](#clamp).
+Addition assignment operator. Adds the contents of color (except alpha) to this color. In the case of integer types, like ofColor and ofShortColor this operation wraps. In the case of ofFloatColor, it automatically clamps the result by calling [clamp](#clamp).
 
 ~~~~{.cpp}
 ofColor c1(0, 64, 0);
@@ -1205,7 +1205,7 @@ _advanced: False_
 _description: _
 
 
-Addition assignment operator. Adds `val` to all components (except alpha) to this color. In the case of integer types, like `ofColor` and `ofShortColor` this operation wraps. In the case of `ofFloatColor`, it automatically clamps the result by calling [clamp](#clamp).
+Addition assignment operator. Adds val to all components (except alpha) to this color. In the case of integer types, like ofColor and ofShortColor this operation wraps. In the case of ofFloatColor, it automatically clamps the result by calling [clamp](#clamp).
 
 ~~~~{.cpp}
 ofColor c1(128, 64, 0);
@@ -1497,7 +1497,7 @@ ofColor c2; // default white
 c2 = c1; // c2 is now red
 ~~~~
 
-The color types can be different: you can assign an `ofFloatColor` to an `ofColor`:
+The color types can be different: you can assign an ofFloatColor to an ofColor:
 
 ~~~~{.cpp}
 ofFloatColor c1(1.0, 0.0, 0.0); // red
@@ -1563,7 +1563,7 @@ _advanced: False_
 _description: _
 
 
-Assigns `val` to all components, including alpha. Has the same effect as calling [`set(val,val)`](#set).
+Assigns val to all components, including alpha. Has the same effect as calling [set(val,val)](#set).
 
 ~~~~{.cpp}
 ofColor c;
@@ -1599,7 +1599,7 @@ _advanced: False_
 _description: _
 
 
-Equivalence operator. Returns `true` if every RGB component is the same as its equivalent in `color`, otherwise returns `false`. 
+Equivalence operator. Returns true if every RGB component is the same as its equivalent in color, otherwise returns false. 
 
 ~~~~{.cpp}
 ofColor c1(255, 0, 0); // red
@@ -1638,7 +1638,7 @@ _advanced: False_
 _description: _
 
 
-Array subscript operator. If `n` is 0 returns .r, if 1 returns .g, if 2 returns .b, if 3 returns alpha.
+Array subscript operator. If n is 0 returns .r, if 1 returns .g, if 2 returns .b, if 3 returns alpha.
 
 ~~~~{.cpp}
 ofColor c(128, 64, 255);
@@ -1710,7 +1710,7 @@ _advanced: False_
 _description: _
 
 
-Creates a gray color from the value of `gray`. `_a` defaults to completely opaque.
+Creates a gray color from the value of gray. _a defaults to completely opaque.
 ~~~~{.cpp}
 ofColor c(255, 0, 0); // red
 c.set( 128, 128 ); // now 50% gray with 50% alpha
@@ -1745,7 +1745,7 @@ _advanced: False_
 _description: _
 
 
-Set this color to be the same as `color`.
+Set this color to be the same as color.
 
 ~~~~{.cpp}
 ofColor c1(255, 0, 0); // red
@@ -1820,7 +1820,7 @@ _advanced: False_
 _description: _
 
 
-Set this color to `hexColor` using a 24 bit hex-style color as normally used in web development.  `alpha` defaults to completely opaque.
+Set this color to hexColor using a 24 bit hex-style color as normally used in web development.  alpha defaults to completely opaque.
 ~~~~{.cpp}
 ofColor c;
 c.setHex( 0xFFFFFF ); // white
@@ -1857,7 +1857,7 @@ _advanced: False_
 _description: _
 
 
-Set this color using a HSB representation. Refer the [discussion of HSB](#HSB) above. **Note** that the `hue` value has a range that matches the base data type (ie **0 to 255** for the standard `ofColor`), rather than 0 to 360, 0 to 100 or float 0 to 1, as may be expected.
+Set this color using a HSB representation. Refer the [discussion of HSB](#HSB) above. **Note** that the hue value has a range that matches the base data type (ie **0 to 255** for the standard ofColor), rather than 0 to 360, 0 to 100 or float 0 to 1, as may be expected.
 
 
 

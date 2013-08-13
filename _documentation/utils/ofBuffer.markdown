@@ -6,14 +6,14 @@
 
 ofBuffer is a convenience class that provides easy methods for reading from and writing to files. It makes heavy use of the standard C++ ostream and istream classes, but also adds in easy ways to convert file data to strings, like:
 
-~~~~.cpp
+~~~~{.cpp}
 ofBuffer buffer = ofBufferFromFile("someFile.txt"); // reading into the buffer
 cout << buffer.getText(); // let's see what it says
 ~~~~
 
 You can also use the ofBufferFromFile() method to create a buffer from a file:
 
-~~~~.cpp
+~~~~{.cpp}
 ofBuffer fileBuffer = ofBufferFromFile("someFile.txt");
 ~~~~
 
@@ -353,7 +353,7 @@ _description: _
 
 Create a buffer with a character array.
 
-~~~~.cpp
+~~~~{.cpp}
 string giantDataString;
 ofBuffer buff(giantDataString.c_str(), giantDataString.size());
 ~~~~
@@ -420,7 +420,7 @@ _description: _
 
 Copy constructor, allows you to do:
 
-~~~~.cpp
+~~~~{.cpp}
 ofBuffer aBuff;
 // put some stuff in aBuff
 ofBuffer bBuff(aBuff); // now it's in bBuff as well
@@ -606,7 +606,7 @@ _description: _
 
 Set the buffer from a string.
 
-~~~~.cpp
+~~~~{.cpp}
 string giantDataString;
 ofBuffer buff;
 buff.set(giantDataString.c_str(), giantDataString.size());
@@ -643,7 +643,7 @@ _description: _
 
 Set the buffer from an istream.
 
-~~~~.cpp
+~~~~{.cpp}
 string giantDataString;
 ofBuffer buff;
 buff.set(giantDataString.c_str(), giantDataString.size());

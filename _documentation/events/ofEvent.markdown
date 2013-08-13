@@ -38,7 +38,7 @@ void onVolumeChange(float & volume);
 ~~~~
 
 
-See the advancedEventsExample to see a complete example on how to work with events in oF.
+See the advancedEventsExample to see a complete example of how to work with events in oF.
 
 Be careful when using events, it's a powerful structure but can also lead to really confusing code as there's no direct calls to an object. 
 

@@ -27,7 +27,7 @@ while( i < pix.size()) {
 }
 ~~~~
 
-
+You can think of the ofPixels as the CPU side representation of pixel data that can be sent to the GPU as an ofTexture object. To draw pixels, you need to put them into an ofTexture and to manipulate an ofTextures pixel data you need an ofPixels object.
 
 
 
