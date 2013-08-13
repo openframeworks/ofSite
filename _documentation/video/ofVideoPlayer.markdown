@@ -7,13 +7,51 @@
 The ofVideoPlayer class loads in a movie file via quicktime in windows and OSX or gstreamer in linux, and offers various controls to play the movie, control the properties of the movie, and to access the pixels of a given frame.
 
 Example:
+
 ~~~~{.cpp}
 ofVideoPlayer myPlayer;
+myPlayer.loadMovie("movies/fingers.mov");
+~~~~
+
+You need to call play() for your video to begin playing:
+
+~~~~{.cpp}
+myPlayer.play();
+~~~~
+
+and update to ensure that you're grabbing new frames from the file as the video library decodes them and serves them up as textures:
+
+~~~~{.cpp}
+
+void myApp::update(){
+    myPlayer.update(); // get all the new frames
+}
+
 ~~~~
 
 
+Just like the ofImage, the ofVideoPlayer can be drawn:
 
+~~~~{.cpp}
 
+myPlayer.draw(20,20); // draw at 20, 20 from the current transform matrix
+
+~~~~
+
+or you can just get the pixels from the player, as we do in the videoGrabberExample in the examples:
+
+~~~~{.cpp}
+
+if (vidGrabber.isFrameNew()){
+	int totalPixels = camWidth*camHeight*3;
+	unsigned char * pixels = vidGrabber.getPixels();
+	for (int i = 0; i < totalPixels; i++){
+		videoInverted[i] = 255 - pixels[i];
+	}
+	texture.loadData(videoInverted, camWidth,camHeight, GL_RGB);
+}
+
+~~~~
 
 ##Methods
 
@@ -259,7 +297,7 @@ _description: _
 
 
 
-
+Draw into a rectangle that defines the screen size and the upper left hand corner of where the video frames should be drawn
 
 
 
@@ -318,7 +356,7 @@ _advanced: False_
 _description: _
 
 
-
+Get the current frame number.
 
 
 
@@ -440,7 +478,7 @@ _advanced: False_
 _description: _
 
 
-
+Returns whether the video is looping or not.
 
 
 
@@ -469,7 +507,7 @@ _advanced: False_
 _description: _
 
 
-
+Returns the path to the file that the ofVideoPlayer is currently playing. If it's not playing any files, then this returns a blank string.
 
 
 
@@ -839,11 +877,13 @@ _advanced: False_
 _description: _
 
 
-For example, if the pixels are new, you could then process them.
+This gets whether there are new pixels in your movies player. This is a way to poll the library that's actually reading your video file to see whether there's something new: For example, if the pixels are new, you could then process them.
+
 ~~~~{.cpp}
 
 if (myMovie.isFrameNew()){
-	// do something
+	ofPixels p = myPlayer.getPixelsRef();
+	// walk over each pixel and make something fun
 }
 ~~~~
 
@@ -874,7 +914,6 @@ _advanced: False_
 -->
 
 _description: _
-
 
 
 

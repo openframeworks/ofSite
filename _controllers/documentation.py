@@ -96,7 +96,7 @@ def run():
         for method in methods_to_remove:
             clazz.function_list.remove(method)
 
-        clazz.reference = str(clazz.reference)
+        clazz.reference = str(clazz.reference.encode('ascii', 'ignore'))
         for class_name in classes:
                 rep = class_name + "[\s]"
                 clazz.reference = re.sub(rep, "<a href=\"../"+module_lookup[class_name]+"/"+class_name+".html\">"+class_name+"</a> ", clazz.reference)
