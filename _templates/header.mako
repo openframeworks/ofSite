@@ -14,7 +14,7 @@
 	        <li><a href="${bf.config.site.url}/tutorials" class="${'active' if active=='tutorials' else ''}">tutorials</a></li>
 	        <li><a href="${bf.config.site.url}/gallery" class="${'active' if active=='gallery' else ''}">gallery</a></li>
 	        <li><a href="${bf.config.site.url}/community" class="${'active' if active=='community' else ''}">community</a></li> 
-	        <li><a href="${bf.config.site.url}/ofbuild.html" class="${'active' if active=='development' else ''}" >development</a></li>
+	        <li><a href="${bf.config.site.url}/development" class="${'active' if active=='development' else ''}" >development</a></li>
 		</ul>
 		
 		<ul class="menu-externals">
