@@ -38,7 +38,7 @@ To insert code snippets use four tildes followed by curly braces with ".cpp" ins
 
 Images are added using normal markdown format:
 
-`![Image Title](filename.png "alt text")`
+![Image Title](filename.png "alt text")
 
 Additional tips can be found in [Contributing Documentation](https://github.com/openframeworks/ofSite/wiki/Contributing-documentation) on the [ofSite wiki](https://github.com/openframeworks/ofSite/wiki)
 

@@ -197,7 +197,13 @@ _advanced: False_
 
 _description: _
 
+Sets the background color using a hex color value. 
 
+~~~~{.cpp}
+void testApp::setup(){
+	ofBackgroundHex(0xff0000); 	// Sets the background color to red
+}    
+~~~~
 
 
 
@@ -224,9 +230,24 @@ _advanced: False_
 
 _description: _
 
+Begins render to pdf. OpenFrameworks allows rendering of 2D graphics to pdf via the ofCairoRenderer. ofBeginSaveScreenAsPDF is called before drawing. When done drawing call ofEndSaveScreenAsPDF() to output the file. 
 
+~~~~{.cpp}
+void testApp::setup(){
+	if( oneShot ){
+		ofBeginSaveScreenAsPDF("screenshot-"+ofGetTimestampString()+".pdf", false);
+	}
+	
+	ofSetColor(54,54,54);
+	ofEllipse(100,100,200,200);
 
+	if( oneShot ){
+		ofEndSaveScreenAsPDF();
+		oneShot = false;
+	}
+}
 
+~~~~
 
 
 
@@ -797,7 +818,7 @@ _advanced: False_
 
 _description: _
 
-
+Draws a curve through a series of vertices stored as a vector of ofPoints. Should be called between ofBeginShape() and ofEndShape().
 
 
 
@@ -860,7 +881,7 @@ _advanced: False_
 -->
 
 _description: _
-
+Turns off anti-aliasing (smoothing). 
 
 
 
@@ -888,7 +909,7 @@ _advanced: False_
 
 _description: _
 
-
+Disables the current blend mode.
 
 
 
@@ -915,9 +936,30 @@ _advanced: False_
 
 _description: _
 
-
-
-
+Turns off depth testing so rendering happens in draw order rather than by z-depth. Turning off depth test is useful for combining 3d scenes with 2d overlays such as a control panel.
+~~~~{.cpp}
+void testApp::draw(){
+    
+    ofPushMatrix();
+    
+        ofTranslate( ofGetWidth()/2, ofGetHeight()/2, 0 );
+    
+        ofEnableDepthTest();
+        ofSetColor(255);
+        ofDrawSphere(0,0,100,60);
+        ofSetColor(255,0,255);
+        ofDrawSphere(50,0,50,100);
+        ofDisableDepthTest();
+    
+        ofSetColor(0);
+        ofRect(75,75,120,30);
+        ofSetColor(255);
+        ofDrawBitmapString("Some bubbles.",85,90);
+    
+    ofPopMatrix();
+}
+~~~~
+ 
 
 
 
@@ -1273,7 +1315,7 @@ _advanced: False_
 -->
 
 _description: _
-
+Enables anti-aliasing (smoothing) for lines.
 
 
 
@@ -1301,8 +1343,16 @@ _advanced: False_
 
 _description: _
 
+Sets and enables the blend mode for drawing. The options are:
+	
+	OF_BLENDMODE_DISABLED
+	OF_BLENDMODE_ALPHA
+	OF_BLENDMODE_ADD
+	OF_BLENDMODE_SUBTRACT
+	OF_BLENDMODE_MULTIPLY
+	OF_BLENDMODE_SCREEN 
 
-
+There is a blendingExample in the openFrameworks examples > graphics
 
 
 
@@ -1328,7 +1378,30 @@ _advanced: False_
 
 _description: _
 
-
+Turns on depth testing so rendering happens according to z-depth rather than draw order. 
+~~~~{.cpp}
+void testApp::draw(){
+    
+    ofPushMatrix();
+    
+        ofTranslate( ofGetWidth()/2, ofGetHeight()/2, 0 );
+    
+        ofEnableDepthTest(); // enable depth test
+        ofSetColor(255);
+        ofDrawSphere(0,0,100,60); // draw 3d sphere
+        ofSetColor(255,0,255);
+        ofDrawSphere(50,0,50,100);
+        ofDisableDepthTest(); // disable depth test
+    	
+    	// draw 2d overlay
+        ofSetColor(0);
+        ofRect(75,75,120,30);
+        ofSetColor(255);
+        ofDrawBitmapString("Some bubbles.",85,90);
+    
+    ofPopMatrix();
+}
+~~~~
 
 
 
@@ -1410,8 +1483,24 @@ _advanced: False_
 
 _description: _
 
+Terminates draw to pdf through ofCairoRenderer and outputs the pdf file.
 
+~~~~{.cpp}
+void testApp::setup(){
+	if( oneShot ){
+		ofBeginSaveScreenAsPDF("screenshot-"+ofGetTimestampString()+".pdf", false);
+	}
+	
+	ofSetColor(54,54,54);
+	ofEllipse(100,100,200,200);
 
+	if( oneShot ){
+		ofEndSaveScreenAsPDF();
+		oneShot = false;
+	}
+}
+
+~~~~
 
 
 
@@ -1500,7 +1589,7 @@ _advanced: False_
 
 _description: _
 
-
+Returns the current background color as an ofColor.
 
 
 
@@ -2868,7 +2957,7 @@ void testApp::setup(){
 void testApp::draw(){
 	if(ofGetFrameNum() % 10 == 0){
 		// draws a black background every 10 frames
-		ofBackground(0,0,0);
+		ofSetBackground(0,0,0);
 	}
 }
 ~~~~
@@ -2899,7 +2988,12 @@ _advanced: False_
 
 _description: _
 
-
+Sets the background color. It takes as input r,g,b (0-255). The background is cleared automatically, just before the draw() command, so if the background color is not changing, you could call this inside of setup() (once, at the start of the application). If the background color is changing, you can call this inside of update().
+~~~~{.cpp}
+void testApp::setup(){
+	ofSetBackgroundColor(255,0,0); 	// Sets the background color to red
+}    
+~~~~
 
 
 
@@ -2980,7 +3074,13 @@ _advanced: False_
 
 _description: _
 
+Sets the background color using a hex color value. 
 
+~~~~{.cpp}
+void testApp::setup(){
+	ofSetBackgroundColorHex(0xff0000); 	// Sets the background color to red
+}    
+~~~~
 
 
 
@@ -3337,7 +3437,7 @@ _advanced: False_
 
 _description: _
 
-
+Set depth testing on or off to either sort by z-depth (true) or draw order (false). 
 
 
 
@@ -3392,7 +3492,13 @@ _advanced: False_
 
 _description: _
 
-
+Sets the draw color with a hex value. 
+~~~~{.cpp}
+void testApp::draw(){
+	ofSetHexColor(0xff0000); 	//set te color to red
+	ofRect(10,10,100,100); 
+}    
+~~~~
 
 
 

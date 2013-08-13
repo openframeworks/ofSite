@@ -6,7 +6,17 @@
 
 ofSerial provides a cross platform system for interfacing with the serial port. You can choose the port and baud rate, and then read and send data. Please note that the port must be set manually in the code, so you should be clear what port your device is on. For example, Arduino users should check the arduino app to see what port their device is on. Alternatively the ofSerial class can attempt to communicate with the first available device it finds.
 
+To start up a serial connection to another device you do the following:
 
+~~~~{.cpp}
+
+serial.listDevices();
+vector <ofSerialDeviceInfo> deviceList = serial.getDeviceList();
+  
+int baud = 57600;
+serial.setup(0, 57600); //open the first device and talk to it at 57600 baud
+
+~~~~
 
 
 
@@ -362,10 +372,11 @@ _description: _
 
 
 Reads and returns a single byte from the requested device. 
+
 ~~~~{.cpp}
 
 ofSerial mySerial;
-mySerial.setup(0, 9600);
+mySerial.setup(0, 57600);
 int myByte = 0;
 myByte = mySerial.readByte();
 if ( myByte == OF_SERIAL_NO_DATA )
@@ -599,14 +610,14 @@ Opens the serial port, with the given name and baud rate. On mac and linux, it m
 ~~~~{.cpp}
 
 ofSerial mySerial;
-mySerial.setup("/dev/cu.USA19H181P1.1", 9600);
+mySerial.setup("/dev/cu.USA19H181P1.1", 57600);
 ~~~~
 
 and on a pc, like:
 ~~~~{.cpp}
 
 ofSerial mySerial;
-mySerial.setup("COM4", 9600);
+mySerial.setup("COM4", 57600);
 ~~~~
 
 
@@ -678,7 +689,7 @@ Writes a single byte to the connected serial device. Check the return value to b
 ~~~~{.cpp}
 
 ofSerial mySerial;
-mySerial.setup(0, 9600);
+mySerial.setup(0, 57600);
 unsigned char myByte = 225;
 bool byteWasWritten = mySerial.writeByte(myByte);
 if ( !byteWasWritten )
@@ -718,7 +729,7 @@ Writes a string of bytes to the connected serial device. As with readBytes() the
 ~~~~{.cpp}
 
 ofSerial mySerial;
-mySerial.setup(0, 9600);
+mySerial.setup(0, 57600);
 int numSent = mySerial.writeBytes("Hello World");
 // numSent is how many bytes written; for example if numSent 
 // is 3 then "Hel" has been written and the call should be retried

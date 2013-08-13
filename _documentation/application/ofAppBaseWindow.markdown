@@ -4,7 +4,7 @@
 ##Description
 
 
-Base class for all windowing classes. Extend this to create a different version of the default glut window in oF.
+Base class for all windowing classes. In OF we're extending this to create a different version of the default window in oF, like the ofAppEGLWindow or the ofAppGLFWWindow instances. For those interested in the under-the-hood details, you can always get a reference to the base graphics context from the ofAppBaseWindow, like getEGLContext() for those on Linux or getGLXContext() for those using GLFW. This is where your methods like setFullscreen() are implemented but other than that you're probably not going to be deeply interested in the ofAppBaseWindow since it's extended by every window system that you actually use (i.e. getX11Display() and getWin32Window()).
 
 
 

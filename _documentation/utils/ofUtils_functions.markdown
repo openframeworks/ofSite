@@ -27,7 +27,7 @@ _advanced: False_
 
 _description: _
 
-Interprets a string consisting only of 1s and 0s as a `char`, and returns the corresponding `char` value.
+Interprets a string consisting only of 1s and 0s as a char, and returns the corresponding char value.
 
 
 
@@ -55,7 +55,7 @@ _advanced: False_
 
 _description: _
 
-Interprets a string consisting only of 1s and 0s as a `float` (little-endian, 32-bit IEEE 754), and returns the corresponding `float` value.
+Interprets a string consisting only of 1s and 0s as a float (little-endian, 32-bit IEEE 754), and returns the corresponding float value.
 
 
 
@@ -83,7 +83,7 @@ _advanced: False_
 
 _description: _
 
-Interprets a string consisting only of 1s and 0s as an `int` (little-endian, 32-bit), and returns the corresponding `int` value.
+Interprets a string consisting only of 1s and 0s as an int (little-endian, 32-bit), and returns the corresponding int value.
 
 
 
@@ -843,7 +843,7 @@ _advanced: False_
 
 _description: _
 
-Converts a hexadecimal representation of an `char` (e.g., "61") to an actual `char` (e.g., a).
+Converts a hexadecimal representation of an char (e.g., "61") to an actual char (e.g., a).
 
 
 
@@ -871,7 +871,7 @@ _advanced: False_
 
 _description: _
 
-Converts a hexadecimal representation of an `float` (little-endian, 32-bit IEEE 754, e.g., "4060000000000000") to an actual `float` (e.g., 128.f).
+Converts a hexadecimal representation of an float (little-endian, 32-bit IEEE 754, e.g., "4060000000000000") to an actual float (e.g., 128.f).
 
 
 
@@ -899,7 +899,7 @@ _advanced: False_
 
 _description: _
 
-Converts a hexadecimal representation of an `int` (little-endian, 32-bit, e.g., "0xbadf00d" or "badf00d") to an actual `int`.
+Converts a hexadecimal representation of an int (little-endian, 32-bit, e.g., "0xbadf00d" or "badf00d") to an actual int.
 
 
 
@@ -927,7 +927,7 @@ _advanced: False_
 
 _description: _
 
-Converts a hexadecimal representation of an `string` (e.g., "61626364656667") to an actual `string` ("abcdefg");
+Converts a hexadecimal representation of an string (e.g., "61626364656667") to an actual string ("abcdefg");
 
 
 
@@ -955,7 +955,7 @@ _advanced: False_
 
 _description: _
 
-Checks if the string `needle` exists in the string `haystack`.
+Checks if the string needle exists in the string haystack.
 
 
 
@@ -983,7 +983,7 @@ _advanced: False_
 
 _description: _
 
-Turns a `stringElements` into a single string, with an instance of `delimiter` between all the elements.
+Turns a stringElements into a single string, with an instance of delimiter between all the elements.
 
 
 
@@ -1449,7 +1449,7 @@ _advanced: False_
 
 _description: _
 
-Splits `source` using `delimiter` and returns the separate tokens. In modern versions of openFrameworks, `delimiter` can be a multi-character string. In older versions of openFrameworks, `delimiter` was interpreted as multiple single-character delimiters.
+Splits source using delimiter and returns the separate tokens. In modern versions of openFrameworks, delimiter can be a multi-character string. In older versions of openFrameworks, delimiter was interpreted as multiple single-character delimiters.
 
 
 
@@ -1477,7 +1477,7 @@ _advanced: False_
 
 _description: _
 
-Searches `input` for instances of `searchStr` and replaces them with `replaceStr`.
+Searches input for instances of searchStr and replaces them with replaceStr.
 
 
 
@@ -1559,7 +1559,7 @@ _advanced: False_
 
 _description: _
 
-Converts any datatype `value` to a string of only 1s and 0s corresponding to the way `value` is stored in memory.
+Converts any datatype value to a string of only 1s and 0s corresponding to the way value is stored in memory.
 
 
 
@@ -1587,7 +1587,7 @@ _advanced: False_
 
 _description: _
 
-Converts a string `value` to a string of only 1s and 0s corresponding to the way `value` is stored in memory.
+Converts a string value to a string of only 1s and 0s corresponding to the way value is stored in memory.
 
 
 
@@ -1615,7 +1615,7 @@ _advanced: False_
 
 _description: _
 
-Converts any C-style string `value` to a string of only 1s and 0s corresponding to the way `value` is stored in memory.
+Converts any C-style string value to a string of only 1s and 0s corresponding to the way value is stored in memory.
 
 
 
@@ -1643,7 +1643,7 @@ _advanced: False_
 
 _description: _
 
-Converts a string representation `boolString` (e.g., "TRUE") to an actual `bool` using a case-insensitive comparison against the words "true" and "false". 
+Converts a string representation boolString (e.g., "TRUE") to an actual bool using a case-insensitive comparison against the words "true" and "false". 
 
 
 
@@ -1671,7 +1671,7 @@ _advanced: False_
 
 _description: _
 
-Converts a string representation of a single `char` (e.g., " c ") to an actual `char`.
+Converts a string representation of a single char (e.g., " c ") to an actual char.
 
 
 
@@ -1811,7 +1811,7 @@ _advanced: False_
 
 _description: _
 
-Converts a string representation `floatString` (e.g., "3.14") to an actual `float`.
+Converts a string representation floatString (e.g., "3.14") to an actual float.
 
 
 
@@ -1951,7 +1951,7 @@ _advanced: False_
 
 _description: _
 
-Converts a string representation of an `int` (e.g., "2012") to an actual `int`.
+Converts a string representation of an int (e.g., "2012") to an actual int.
 
 
 
@@ -1979,7 +1979,7 @@ _advanced: False_
 
 _description: _
 
-Converts all characters in the string `src` to lowercase.
+Converts all characters in the string src to lowercase.
 
 
 
@@ -2099,7 +2099,7 @@ _advanced: False_
 
 _description: _
 
-Converts a vector of values to a single `string` representation. 
+Converts a vector of values to a single string representation. 
 ~~~~{.cpp}
 vector<int> vec;
 vec.push_back(1);
@@ -2188,7 +2188,7 @@ _advanced: False_
 
 _description: _
 
-Converts all characters in the string `src` to uppercase.
+Converts all characters in the string src to uppercase.
 
 
 
