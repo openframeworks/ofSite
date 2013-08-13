@@ -1,8 +1,20 @@
 #class ofThread
 
 
-##Description
+##InlineDescription
 
+
+
+
+a thread base class with a built in mutex
+
+derive this class and implement threadedFunction() 
+
+
+
+
+
+##Description
 
 ofThread is a thread base class with a built in mutex. A [thread](http://en.wikipedia.org/wiki/Thread_(computing)) is essentially a mini processing object you can run in parallel to your main application loop and is useful for running time intensive operations without slowing down your app.
 
@@ -164,12 +176,12 @@ Ok soldier, lock and load ... good luck!
 
 
 
-###ofThread getCurrentThread()
+###ofThread * getCurrentThread()
 
 <!--
 _syntax: getCurrentThread()_
 _name: getCurrentThread_
-_returns: ofThread_
+_returns: ofThread *_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -181,6 +193,22 @@ _static: yes_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+get the current thread, returns NULL if in the main app thread
+
+this is useful if you want to access the currently active thread:
+
+ofThread* myThread = ofThread::getCurrentThread(); if(myThread != NULL){ ofLog() << "Current thread is " << myThread->getThreadName(); } else{ ofLog() << "Current thread is the main app thread"; } 
+
+
+
+
+
+
 
 _description: _
 
@@ -211,6 +239,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -239,6 +277,20 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+get the unique thread id
+
+note: this is not the OS thread id! 
+
+
+
+
+
+
 
 _description: _
 
@@ -269,6 +321,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+get the unique thread name, in the form of "Thread id#" 
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -297,6 +361,24 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+returns true if this the currently active thread 
+
+
+
+in multithreaded situations, it can be useful to know which thread is currently running some code in order to make sure only certain threads can do certain things ...
+
+this is especially useful with graphics as resources must be allocated and updated inside the main app thread only:
+
+if(myThread.isCurrentThread()){ // do some myThread things, keep your hands off my resources! } else if(ofThread::isMainThread()){ // pheew! ok, update those graphics resources } 
+
+
+
+
+
+
 
 _description: _
 
@@ -327,6 +409,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+returns true if the main app thread is the currently active thread 
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -355,6 +449,18 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+returns true if the thread is currently running 
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -410,6 +516,22 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+try to lock the mutex
+
+if the thread is blocking, this call will wait until the mutex is available
+
+if the thread is non-blocking, this call will return a true or false if the mutex is available 
+
+
+
+
+
+
+
 _description: _
 
 
@@ -445,6 +567,16 @@ _visible: False_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -473,6 +605,18 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+runs the user thread function 
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -503,6 +647,42 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+tell the thread to sleep for a certain amount of milliseconds
+
+this is useful inside the threadedFunction() when a thread is waiting for input to process:
+
+void myClass::threadedFunction(){ // start
+
+while(isThreadRunning()){
+
+    if(bReadyToProcess == true){
+
+        // do some time intensive processing
+
+        bReadyToProcess = false;
+    }
+    else{
+
+        // sleep the thread to give up some cpu
+        sleep(20);
+    }
+}
+
+// done
+ }
+
+not sleeping the thread means the thread will take 100% of the cpu while it's waiting and will impact performance of your app 
+
+
+
+
+
+
+
 _description: _
 
 
@@ -531,6 +711,22 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+start the thread
+
+set blocking to true if you want the mutex to block on lock()
+
+set verbose to true if you want detailed logging on thread and mutex events 
+
+
+
+
+
+
 
 _description: _
 
@@ -566,6 +762,14 @@ _static: False_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
 
 _description: _
 
@@ -604,6 +808,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+stop the thread 
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -633,6 +849,14 @@ _visible: False_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
 
 
@@ -661,6 +885,34 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+this is the thread run function
+
+you need to overide this in your derived class and implement your thread stuff inside
+
+if you do not have a loop inside this function, it will run once then exit
+
+if you want the thread to run until you signal it to stop, use a while loop inside that checks if the thread is should keep running:
+
+void myClass::threadedFunction(){ // start
+
+while(isThreadRunning()){
+
+    // do stuff
+}
+
+// done
+ 
+
+
+
+
+
+
 
 _description: _
 
@@ -746,6 +998,20 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+unlock the mutex
+
+only unlocks the mutex if it had been locked previously by the calling thread 
+
+
+
+
+
+
+
 _description: _
 
 
@@ -778,6 +1044,24 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+wait for the thread to exit
+
+this function waits for the thread to exit before it returns to make sure the thread is cleaned up, otherwise you will get errors on exit
+
+set stop to true if you want to signal the thread to exit before waiting, this is the equivalent to calling stopThread()
+
+set stop to false if you have already signalled the thread to exit by calling stopThread() and only need to wait for it to finish 
+
+
+
+
+
+
 
 _description: _
 
@@ -816,6 +1100,22 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+tell the thread to give up the cpu to other threads
+
+this function is similar to sleep() and can be used in the same way, the main difference is that 1 ms is a long time on modern processors and yield() simply gives up processing time to the next thread instead of waiting for a certain amount of time
+
+this can be faster in some circumstances 
+
+
+
+
+
+
+
 _description: _
 
 
@@ -844,6 +1144,16 @@ _static: no_
 _visible: False_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 

@@ -1,8 +1,16 @@
 #class ofMouseEventArgs
 
 
-##Description
+##InlineDescription
 
+
+
+
+
+
+
+
+##Description
 
 This class is integrated into the openframeworks events system. When a mouse event (mouse pressed, mouse released...) happens we record mouse information inside an object of the class. Used to send event messages. In the new openFrameworks release we can find a very ilustrative example about how to use events in openFrameworks.
 
@@ -31,6 +39,14 @@ _static: False_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
 
 _description: _
 
@@ -62,6 +78,14 @@ _static: False_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
 
 _description: _
 
@@ -102,6 +126,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofMouseEventArgs::Type type
@@ -119,6 +144,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 

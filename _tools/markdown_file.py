@@ -175,7 +175,7 @@ def getclass(clazz, getTemplated=False):
                         state = 'inlined_description'
                         prevBreakLine = False
                         
-                    elif state == 'inlined_description' and line.find('_description')==0:
+                    elif (state == 'inlined_description' or state=='method') and line.find('_description')==0:
                         state = 'description'
                         prevBreakLine = False
                         
@@ -231,7 +231,7 @@ def getclass(clazz, getTemplated=False):
                         documentation_clazz.detailed_inline_description  = documentation_clazz.detailed_inline_description + line
                         prevBreakLine = (line=='\n')
                         
-                    elif state == 'classinlinedescription' and line.rstrip('\n').rstrip(' ') == '##Description':
+                    elif (state == 'classinlinedescription' or state == 'class') and line.rstrip('\n').rstrip(' ') == '##Description':
                         state = "classdescription"
                         
                     elif state == 'classdescription' and (line!='\n' or not prevBreakLine):

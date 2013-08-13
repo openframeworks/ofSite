@@ -1,6 +1,15 @@
 #class ofReadOnlyParameter
 
 
+##InlineDescription
+
+
+
+
+
+
+
+
 ##Description
 
 
@@ -29,7 +38,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -57,7 +77,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -85,7 +116,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -113,7 +155,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -141,7 +194,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -169,7 +233,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -197,7 +272,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -225,7 +311,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -253,7 +350,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -281,7 +389,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -309,7 +428,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -337,7 +467,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -365,7 +506,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -393,7 +545,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -421,7 +584,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -449,7 +623,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -477,7 +662,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -487,12 +683,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofReadOnlyParameter operator%=(&v)
+###ofReadOnlyParameter< ParameterType, Friend > & operator%=(&v)
 
 <!--
 _syntax: operator%=(&v)_
 _name: operator%=_
-_returns: ofReadOnlyParameter_
+_returns: ofReadOnlyParameter< ParameterType, Friend > &_
 _returns_description: _
 _parameters: const OtherType &v_
 _access: protected_
@@ -505,7 +701,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -515,12 +722,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofReadOnlyParameter operator&=(&v)
+###ofReadOnlyParameter< ParameterType, Friend > & operator&=(&v)
 
 <!--
 _syntax: operator&=(&v)_
 _name: operator&=_
-_returns: ofReadOnlyParameter_
+_returns: ofReadOnlyParameter< ParameterType, Friend > &_
 _returns_description: _
 _parameters: const OtherType &v_
 _access: protected_
@@ -533,7 +740,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -543,12 +761,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofReadOnlyParameter operator*=(&v)
+###ofReadOnlyParameter< ParameterType, Friend > & operator*=(&v)
 
 <!--
 _syntax: operator*=(&v)_
 _name: operator*=_
-_returns: ofReadOnlyParameter_
+_returns: ofReadOnlyParameter< ParameterType, Friend > &_
 _returns_description: _
 _parameters: const OtherType &v_
 _access: protected_
@@ -561,7 +779,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -589,7 +818,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -599,12 +839,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofReadOnlyParameter operator++()
+###ofReadOnlyParameter< ParameterType, Friend > & operator++()
 
 <!--
 _syntax: operator++()_
 _name: operator++_
-_returns: ofReadOnlyParameter_
+_returns: ofReadOnlyParameter< ParameterType, Friend > &_
 _returns_description: _
 _parameters: _
 _access: protected_
@@ -617,7 +857,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -627,12 +878,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofReadOnlyParameter operator+=(&v)
+###ofReadOnlyParameter< ParameterType, Friend > & operator+=(&v)
 
 <!--
 _syntax: operator+=(&v)_
 _name: operator+=_
-_returns: ofReadOnlyParameter_
+_returns: ofReadOnlyParameter< ParameterType, Friend > &_
 _returns_description: _
 _parameters: const OtherType &v_
 _access: protected_
@@ -645,7 +896,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -673,7 +935,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -683,12 +956,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofReadOnlyParameter operator--()
+###ofReadOnlyParameter< ParameterType, Friend > & operator--()
 
 <!--
 _syntax: operator--()_
 _name: operator--_
-_returns: ofReadOnlyParameter_
+_returns: ofReadOnlyParameter< ParameterType, Friend > &_
 _returns_description: _
 _parameters: _
 _access: protected_
@@ -701,7 +974,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -711,12 +995,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofReadOnlyParameter operator-=(&v)
+###ofReadOnlyParameter< ParameterType, Friend > & operator-=(&v)
 
 <!--
 _syntax: operator-=(&v)_
 _name: operator-=_
-_returns: ofReadOnlyParameter_
+_returns: ofReadOnlyParameter< ParameterType, Friend > &_
 _returns_description: _
 _parameters: const OtherType &v_
 _access: protected_
@@ -729,7 +1013,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -757,7 +1052,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -767,12 +1073,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofReadOnlyParameter operator/=(&v)
+###ofReadOnlyParameter< ParameterType, Friend > & operator/=(&v)
 
 <!--
 _syntax: operator/=(&v)_
 _name: operator/=_
-_returns: ofReadOnlyParameter_
+_returns: ofReadOnlyParameter< ParameterType, Friend > &_
 _returns_description: _
 _parameters: const OtherType &v_
 _access: protected_
@@ -785,7 +1091,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -795,12 +1112,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofReadOnlyParameter operator<<=(&v)
+###ofReadOnlyParameter< ParameterType, Friend > & operator<<=(&v)
 
 <!--
 _syntax: operator<<=(&v)_
 _name: operator<<=_
-_returns: ofReadOnlyParameter_
+_returns: ofReadOnlyParameter< ParameterType, Friend > &_
 _returns_description: _
 _parameters: const OtherType &v_
 _access: protected_
@@ -813,7 +1130,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -823,12 +1151,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofReadOnlyParameter operator=(ParameterType, &v)
+###ofReadOnlyParameter< ParameterType, Friend > & operator=(ParameterType, &v)
 
 <!--
 _syntax: operator=(ParameterType, &v)_
 _name: operator=_
-_returns: ofReadOnlyParameter_
+_returns: ofReadOnlyParameter< ParameterType, Friend > &_
 _returns_description: _
 _parameters: const ofReadOnlyParameter< ParameterType, Friend > &v_
 _access: protected_
@@ -841,7 +1169,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -851,12 +1190,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofReadOnlyParameter operator=(&v)
+###ofReadOnlyParameter< ParameterType, Friend > & operator=(&v)
 
 <!--
 _syntax: operator=(&v)_
 _name: operator=_
-_returns: ofReadOnlyParameter_
+_returns: ofReadOnlyParameter< ParameterType, Friend > &_
 _returns_description: _
 _parameters: const ofParameter< ParameterType > &v_
 _access: protected_
@@ -869,7 +1208,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -897,7 +1247,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -907,12 +1268,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofReadOnlyParameter operator>>=(&v)
+###ofReadOnlyParameter< ParameterType, Friend > & operator>>=(&v)
 
 <!--
 _syntax: operator>>=(&v)_
 _name: operator>>=_
-_returns: ofReadOnlyParameter_
+_returns: ofReadOnlyParameter< ParameterType, Friend > &_
 _returns_description: _
 _parameters: const OtherType &v_
 _access: protected_
@@ -925,7 +1286,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -935,12 +1307,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofReadOnlyParameter operator^=(&v)
+###ofReadOnlyParameter< ParameterType, Friend > & operator^=(&v)
 
 <!--
 _syntax: operator^=(&v)_
 _name: operator^=_
-_returns: ofReadOnlyParameter_
+_returns: ofReadOnlyParameter< ParameterType, Friend > &_
 _returns_description: _
 _parameters: const OtherType &v_
 _access: protected_
@@ -953,7 +1325,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -963,12 +1346,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofReadOnlyParameter operator|=(&v)
+###ofReadOnlyParameter< ParameterType, Friend > & operator|=(&v)
 
 <!--
 _syntax: operator|=(&v)_
 _name: operator|=_
-_returns: ofReadOnlyParameter_
+_returns: ofReadOnlyParameter< ParameterType, Friend > &_
 _returns_description: _
 _parameters: const OtherType &v_
 _access: protected_
@@ -981,7 +1364,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1009,7 +1403,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1019,12 +1424,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofReadOnlyParameter set(v)
+###ofReadOnlyParameter< ParameterType, Friend > & set(v)
 
 <!--
 _syntax: set(v)_
 _name: set_
-_returns: ofReadOnlyParameter_
+_returns: ofReadOnlyParameter< ParameterType, Friend > &_
 _returns_description: _
 _parameters: ParameterType v_
 _access: protected_
@@ -1037,7 +1442,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1047,12 +1463,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofReadOnlyParameter set(name, value)
+###ofReadOnlyParameter< ParameterType, Friend > & set(name, value)
 
 <!--
 _syntax: set(name, value)_
 _name: set_
-_returns: ofReadOnlyParameter_
+_returns: ofReadOnlyParameter< ParameterType, Friend > &_
 _returns_description: _
 _parameters: string name, ParameterType value_
 _access: protected_
@@ -1065,7 +1481,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1075,12 +1502,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofReadOnlyParameter set(name, value, min, max)
+###ofReadOnlyParameter< ParameterType, Friend > & set(name, value, min, max)
 
 <!--
 _syntax: set(name, value, min, max)_
 _name: set_
-_returns: ofReadOnlyParameter_
+_returns: ofReadOnlyParameter< ParameterType, Friend > &_
 _returns_description: _
 _parameters: string name, ParameterType value, ParameterType min, ParameterType max_
 _access: protected_
@@ -1093,7 +1520,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1121,7 +1559,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1149,7 +1598,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1177,7 +1637,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1205,7 +1676,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1234,6 +1716,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 

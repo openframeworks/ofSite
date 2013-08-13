@@ -1,6 +1,15 @@
 #class ofParameterGroup
 
 
+##InlineDescription
+
+
+
+
+
+
+
+
 ##Description
 
 
@@ -29,7 +38,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -57,7 +77,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -85,7 +116,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -95,12 +137,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofAbstractParameter back()
+###const ofAbstractParameter & back()
 
 <!--
 _syntax: back()_
 _name: back_
-_returns: ofAbstractParameter_
+_returns: const ofAbstractParameter &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -113,7 +155,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -141,7 +194,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -169,7 +233,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -179,12 +254,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofAbstractParameter front()
+###const ofAbstractParameter & front()
 
 <!--
 _syntax: front()_
 _name: front_
-_returns: ofAbstractParameter_
+_returns: const ofAbstractParameter &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -197,7 +272,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -207,12 +293,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofParameter get(name)
+###ofParameter< ParameterType > get(name)
 
 <!--
 _syntax: get(name)_
 _name: get_
-_returns: ofParameter_
+_returns: ofParameter< ParameterType >_
 _returns_description: _
 _parameters: string name_
 _access: public_
@@ -225,7 +311,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -235,12 +332,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofParameter get(pos)
+###ofParameter< ParameterType > get(pos)
 
 <!--
 _syntax: get(pos)_
 _name: get_
-_returns: ofParameter_
+_returns: ofParameter< ParameterType >_
 _returns_description: _
 _parameters: int pos_
 _access: public_
@@ -253,7 +350,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -263,12 +371,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofParameter getBool(name)
+###ofParameter< bool > getBool(name)
 
 <!--
 _syntax: getBool(name)_
 _name: getBool_
-_returns: ofParameter_
+_returns: ofParameter< bool >_
 _returns_description: _
 _parameters: string name_
 _access: public_
@@ -281,7 +389,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -291,12 +410,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofParameter getBool(pos)
+###ofParameter< bool > getBool(pos)
 
 <!--
 _syntax: getBool(pos)_
 _name: getBool_
-_returns: ofParameter_
+_returns: ofParameter< bool >_
 _returns_description: _
 _parameters: int pos_
 _access: public_
@@ -309,7 +428,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -319,12 +449,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofParameter getChar(name)
+###ofParameter< char > getChar(name)
 
 <!--
 _syntax: getChar(name)_
 _name: getChar_
-_returns: ofParameter_
+_returns: ofParameter< char >_
 _returns_description: _
 _parameters: string name_
 _access: public_
@@ -337,7 +467,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -347,12 +488,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofParameter getChar(pos)
+###ofParameter< char > getChar(pos)
 
 <!--
 _syntax: getChar(pos)_
 _name: getChar_
-_returns: ofParameter_
+_returns: ofParameter< char >_
 _returns_description: _
 _parameters: int pos_
 _access: public_
@@ -365,7 +506,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -375,12 +527,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofParameter getColor(name)
+###ofParameter< ofColor > getColor(name)
 
 <!--
 _syntax: getColor(name)_
 _name: getColor_
-_returns: ofParameter_
+_returns: ofParameter< ofColor >_
 _returns_description: _
 _parameters: string name_
 _access: public_
@@ -393,7 +545,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -403,12 +566,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofParameter getColor(pose)
+###ofParameter< ofColor > getColor(pose)
 
 <!--
 _syntax: getColor(pose)_
 _name: getColor_
-_returns: ofParameter_
+_returns: ofParameter< ofColor >_
 _returns_description: _
 _parameters: int pose_
 _access: public_
@@ -421,7 +584,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -449,7 +623,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -459,12 +644,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofParameter getFloat(name)
+###ofParameter< float > getFloat(name)
 
 <!--
 _syntax: getFloat(name)_
 _name: getFloat_
-_returns: ofParameter_
+_returns: ofParameter< float >_
 _returns_description: _
 _parameters: string name_
 _access: public_
@@ -477,7 +662,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -487,12 +683,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofParameter getFloat(pos)
+###ofParameter< float > getFloat(pos)
 
 <!--
 _syntax: getFloat(pos)_
 _name: getFloat_
-_returns: ofParameter_
+_returns: ofParameter< float >_
 _returns_description: _
 _parameters: int pos_
 _access: public_
@@ -505,7 +701,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -515,12 +722,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofParameter getFloatColor(name)
+###ofParameter< ofFloatColor > getFloatColor(name)
 
 <!--
 _syntax: getFloatColor(name)_
 _name: getFloatColor_
-_returns: ofParameter_
+_returns: ofParameter< ofFloatColor >_
 _returns_description: _
 _parameters: string name_
 _access: public_
@@ -533,7 +740,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -543,12 +761,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofParameter getFloatColor(pos)
+###ofParameter< ofFloatColor > getFloatColor(pos)
 
 <!--
 _syntax: getFloatColor(pos)_
 _name: getFloatColor_
-_returns: ofParameter_
+_returns: ofParameter< ofFloatColor >_
 _returns_description: _
 _parameters: int pos_
 _access: public_
@@ -561,7 +779,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -589,7 +818,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -617,7 +857,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -627,12 +878,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofParameter getInt(name)
+###ofParameter< int > getInt(name)
 
 <!--
 _syntax: getInt(name)_
 _name: getInt_
-_returns: ofParameter_
+_returns: ofParameter< int >_
 _returns_description: _
 _parameters: string name_
 _access: public_
@@ -645,7 +896,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -655,12 +917,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofParameter getInt(pos)
+###ofParameter< int > getInt(pos)
 
 <!--
 _syntax: getInt(pos)_
 _name: getInt_
-_returns: ofParameter_
+_returns: ofParameter< int >_
 _returns_description: _
 _parameters: int pos_
 _access: public_
@@ -673,7 +935,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -701,7 +974,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -729,7 +1013,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -739,12 +1034,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofParameter getPoint(name)
+###ofParameter< ofPoint > getPoint(name)
 
 <!--
 _syntax: getPoint(name)_
 _name: getPoint_
-_returns: ofParameter_
+_returns: ofParameter< ofPoint >_
 _returns_description: _
 _parameters: string name_
 _access: public_
@@ -757,7 +1052,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -767,12 +1073,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofParameter getPoint(pos)
+###ofParameter< ofPoint > getPoint(pos)
 
 <!--
 _syntax: getPoint(pos)_
 _name: getPoint_
-_returns: ofParameter_
+_returns: ofParameter< ofPoint >_
 _returns_description: _
 _parameters: int pos_
 _access: public_
@@ -785,7 +1091,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -813,7 +1130,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -823,12 +1151,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofParameter getShortColor(name)
+###ofParameter< ofShortColor > getShortColor(name)
 
 <!--
 _syntax: getShortColor(name)_
 _name: getShortColor_
-_returns: ofParameter_
+_returns: ofParameter< ofShortColor >_
 _returns_description: _
 _parameters: string name_
 _access: public_
@@ -841,7 +1169,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -851,12 +1190,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofParameter getShortColor(pos)
+###ofParameter< ofShortColor > getShortColor(pos)
 
 <!--
 _syntax: getShortColor(pos)_
 _name: getShortColor_
-_returns: ofParameter_
+_returns: ofParameter< ofShortColor >_
 _returns_description: _
 _parameters: int pos_
 _access: public_
@@ -869,7 +1208,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -879,12 +1229,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofParameter getString(name)
+###ofParameter< string > getString(name)
 
 <!--
 _syntax: getString(name)_
 _name: getString_
-_returns: ofParameter_
+_returns: ofParameter< string >_
 _returns_description: _
 _parameters: string name_
 _access: public_
@@ -897,7 +1247,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -907,12 +1268,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofParameter getString(pos)
+###ofParameter< string > getString(pos)
 
 <!--
 _syntax: getString(pos)_
 _name: getString_
-_returns: ofParameter_
+_returns: ofParameter< string >_
 _returns_description: _
 _parameters: int pos_
 _access: public_
@@ -925,7 +1286,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -953,7 +1325,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -963,12 +1346,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofParameter getVec2f(name)
+###ofParameter< ofVec2f > getVec2f(name)
 
 <!--
 _syntax: getVec2f(name)_
 _name: getVec2f_
-_returns: ofParameter_
+_returns: ofParameter< ofVec2f >_
 _returns_description: _
 _parameters: string name_
 _access: public_
@@ -981,7 +1364,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -991,12 +1385,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofParameter getVec2f(pos)
+###ofParameter< ofVec2f > getVec2f(pos)
 
 <!--
 _syntax: getVec2f(pos)_
 _name: getVec2f_
-_returns: ofParameter_
+_returns: ofParameter< ofVec2f >_
 _returns_description: _
 _parameters: int pos_
 _access: public_
@@ -1009,7 +1403,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1019,12 +1424,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofParameter getVec3f(name)
+###ofParameter< ofVec3f > getVec3f(name)
 
 <!--
 _syntax: getVec3f(name)_
 _name: getVec3f_
-_returns: ofParameter_
+_returns: ofParameter< ofVec3f >_
 _returns_description: _
 _parameters: string name_
 _access: public_
@@ -1037,7 +1442,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1047,12 +1463,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofParameter getVec3f(pos)
+###ofParameter< ofVec3f > getVec3f(pos)
 
 <!--
 _syntax: getVec3f(pos)_
 _name: getVec3f_
-_returns: ofParameter_
+_returns: ofParameter< ofVec3f >_
 _returns_description: _
 _parameters: int pos_
 _access: public_
@@ -1065,7 +1481,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1075,12 +1502,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofParameter getVec4f(name)
+###ofParameter< ofVec4f > getVec4f(name)
 
 <!--
 _syntax: getVec4f(name)_
 _name: getVec4f_
-_returns: ofParameter_
+_returns: ofParameter< ofVec4f >_
 _returns_description: _
 _parameters: string name_
 _access: public_
@@ -1093,7 +1520,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1103,12 +1541,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofParameter getVec4f(pos)
+###ofParameter< ofVec4f > getVec4f(pos)
 
 <!--
 _syntax: getVec4f(pos)_
 _name: getVec4f_
-_returns: ofParameter_
+_returns: ofParameter< ofVec4f >_
 _returns_description: _
 _parameters: int pos_
 _access: public_
@@ -1121,7 +1559,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1149,7 +1598,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1177,7 +1637,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1205,7 +1676,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1215,12 +1697,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofAbstractParameter operator[](name)
+###ofAbstractParameter & operator[](name)
 
 <!--
 _syntax: operator[](name)_
 _name: operator[]_
-_returns: ofAbstractParameter_
+_returns: ofAbstractParameter &_
 _returns_description: _
 _parameters: string name_
 _access: public_
@@ -1233,7 +1715,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1243,12 +1736,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofAbstractParameter operator[](pos)
+###ofAbstractParameter & operator[](pos)
 
 <!--
 _syntax: operator[](pos)_
 _name: operator[]_
-_returns: ofAbstractParameter_
+_returns: ofAbstractParameter &_
 _returns_description: _
 _parameters: int pos_
 _access: public_
@@ -1261,7 +1754,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1289,7 +1793,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1317,7 +1832,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1345,7 +1871,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1373,7 +1910,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1409,6 +1957,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofEvent parameterChangedE
@@ -1426,6 +1975,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 

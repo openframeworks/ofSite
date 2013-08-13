@@ -1,6 +1,15 @@
 #class ofAppEGLWindow
 
 
+##InlineDescription
+
+
+
+
+
+
+
+
 ##Description
 
 
@@ -29,7 +38,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -57,7 +77,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -85,7 +116,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -113,7 +155,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -141,7 +194,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -169,7 +233,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -197,7 +272,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -225,7 +311,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -253,7 +350,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -281,7 +389,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -309,7 +428,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -337,7 +467,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -365,7 +506,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -393,7 +545,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -421,7 +584,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -449,7 +623,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -477,7 +662,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -505,7 +701,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -533,7 +740,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -561,7 +779,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -589,7 +818,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -617,7 +857,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -645,7 +896,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -673,7 +935,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -701,7 +974,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -729,7 +1013,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -757,7 +1052,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -785,7 +1091,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -813,7 +1130,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -841,7 +1169,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -869,7 +1208,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -897,7 +1247,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -925,7 +1286,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -953,7 +1325,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -981,7 +1364,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1009,7 +1403,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1037,7 +1442,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1065,7 +1481,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1093,7 +1520,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1121,7 +1559,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1149,7 +1598,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1177,7 +1637,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1205,7 +1676,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1233,7 +1715,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1261,7 +1754,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1289,7 +1793,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1317,7 +1832,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1345,7 +1871,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1373,7 +1910,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1401,7 +1949,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1429,7 +1988,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1457,7 +2027,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1485,7 +2066,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1513,7 +2105,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1541,7 +2144,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1569,7 +2183,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1597,7 +2222,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1625,7 +2261,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1653,7 +2300,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1681,7 +2339,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1709,7 +2378,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1737,7 +2417,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1765,7 +2456,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1793,7 +2495,36 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+this is the thread run function
+
+you need to overide this in your derived class and implement your thread stuff inside
+
+if you do not have a loop inside this function, it will run once then exit
+
+if you want the thread to run until you signal it to stop, use a while loop inside that checks if the thread is should keep running:
+
+void myClass::threadedFunction(){ // start
+
+while(isThreadRunning()){
+
+    // do stuff
+}
+
+// done
+ 
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1821,7 +2552,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1849,7 +2591,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1885,6 +2638,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool bNewScreenMode
@@ -1902,6 +2656,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -1933,6 +2688,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int buttonInUse
@@ -1950,6 +2706,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -1981,6 +2738,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###EGLConfig eglConfig
@@ -1998,6 +2756,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -2029,6 +2788,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###EGLDisplay eglDisplay
@@ -2046,6 +2806,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -2077,6 +2838,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###EGLSurface eglSurface
@@ -2094,6 +2856,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -2125,6 +2888,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###EGLint eglVersionMinor
@@ -2142,6 +2906,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -2173,6 +2938,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool isSurfaceInited
@@ -2190,6 +2956,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -2221,6 +2988,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool isWindowInited
@@ -2238,6 +3006,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -2269,6 +3038,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofImage mouseCursor
@@ -2286,6 +3056,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -2317,6 +3088,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###float mouseScaleX
@@ -2334,6 +3106,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -2365,6 +3138,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int nFramesSinceWindowResized
@@ -2382,6 +3156,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -2413,6 +3188,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofBaseApp ofAppPtr
@@ -2430,6 +3206,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -2461,6 +3238,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###Settings settings
@@ -2478,6 +3256,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -2509,6 +3288,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int windowMode
@@ -2526,6 +3306,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -2557,6 +3338,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###Screen * x11Screen
@@ -2574,6 +3356,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -2605,6 +3388,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###Window x11Window
@@ -2622,6 +3406,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
