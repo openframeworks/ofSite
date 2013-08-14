@@ -6,7 +6,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     ${self.head()}
 
-    <script type="text/javascript" src="${bf.config.site.url}/js/jquery.tweet.js" ></script>
     <script type="text/javascript" src="http://www.google.com/jsapi?key=AIzaSyA5m1Nc8ws2BbmPRwKu5gFradvD_hgq6G0"></script>
     <script type="text/javascript" src="${bf.config.site.url}/js/encoder.js"></script>
     <script type="text/javascript" src="http://cloud.github.com/downloads/malsup/cycle/jquery.cycle.all.latest.js"></script>

@@ -1031,6 +1031,12 @@ a.noLine {
 #community img {
 	width: 100px;
 }
+
+/* hacking twitter app display */
+.timeline-header { display:none;}
+
+
+
 .tweet,
 .query {
 	background-color: #EEEEEE;
@@ -1095,13 +1101,20 @@ div#github .github_avatar img {
 	vertical-align: middle;
 	width: 32px;
 }
-#github a, #forum a {
-	color: black;
+
+#tweets {
+	padding: 0 1em;
+	font-size: 13px;
+}
+
+#tweets a, #github a, #forum a {
+	color: #EE3987;
 	text-decoration: none;
 }
-#github a:hover, #forum a:hover {
-	background-color: #ee3987;
+
+#tweets a:hover, #github a:hover, #forum a:hover {
 	color: white;
+	background-color: #EE3987;
 	text-decoration: none;
 }
 .tweet h3, #forum h3, #github h3 {
