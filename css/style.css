@@ -1246,3 +1246,7 @@ label.error { color: #F00 }
 input.toggle { display: none; }
 input.toggle:checked+div { display: none; }
 div.log {padding-left:2em;}
+
+.noDocIcon{
+	width: 10px;
+}
