@@ -21,14 +21,6 @@ function OnLoad() {
     feedVimeo.setNumEntries(20);
     feedVimeo.setResultFormat(google.feeds.Feed.XML_FORMAT);
     feedVimeo.load(feedVimeoLoaded);
-    
-    $(".tweets").tweet({
-      avatar_size: 32,
-      count: 5,
-      query: "openFrameworks",
-      loading_text: "searching twitter...",
-      template: "{avatar} {text}"
-    });
 }
 
 google.setOnLoadCallback(OnLoad);
