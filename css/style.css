@@ -1270,6 +1270,9 @@ input.toggle { display: none; }
 input.toggle:checked+div { display: none; }
 div.log {padding-left:2em;}
 
-.noDocIcon{
-	width: 10px;
+
+#body-wrap ul li.noDoc:before{
+    content: '> ';
+    padding-right: 0.3em;
+    color: #999;
 }
