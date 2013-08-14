@@ -24,7 +24,7 @@ openFrameworks also ships with a mix of the following libraries, depending on yo
 * [FreeImage](http://freeimage.sourceforge.net/) for image saving and loading
 * [Quicktime](http://developer.apple.com/quicktime/), [GStreamer](http://gstreamer.freedesktop.org/) and [videoInput](https://github.com/ofTheo/videoInput) for video playback and grabbing
 * [Poco](http://pocoproject.org/) for a variety of utilities
-* [OpenCV](http://http://opencv.org/) for computer vision
+* [OpenCV](http://opencv.org/) for computer vision
 * [Assimp](http://assimp.sourceforge.net/) for 3D model loading
 * [TinyXml](http://www.grinninglizard.com/tinyxml/) for xml parsing
 * [3DS model loader](http://isg.cs.tcd.ie/cosulliv/Graphics/Labs/Lab4/) for 3DStudio model loading (deprecated by assimp)
