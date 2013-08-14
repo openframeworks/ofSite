@@ -115,10 +115,14 @@ _inlined_description: _
 
 _description: _
 ofPixelFormat:
-OF_PIXELS_RGB
-OF_PIXELS_RGBA
-OF_PIXELS_BGRA
-OF_PIXELS_MONO
+
+	OF_PIXELS_RGB
+
+	OF_PIXELS_RGBA
+
+	OF_PIXELS_BGRA
+
+	OF_PIXELS_MONO
 
 
 
@@ -158,9 +162,12 @@ _inlined_description: _
 
 _description: _
 ofImageType:
-OF_IMAGE_GRAYSCALE
-OF_IMAGE_COLOR
-OF_IMAGE_COLOR_ALPHA
+	
+	OF_IMAGE_GRAYSCALE
+	
+	OF_IMAGE_COLOR
+	
+	OF_IMAGE_COLOR_ALPHA
 
 
 
