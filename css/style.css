@@ -22,6 +22,16 @@ body {
     padding-right: 0.3em;
     color: #009bca;
 }
+#body-wrap ul li:before {
+    content: '> ';
+    padding-right: 0.3em;
+    color: #009bca;
+}
+#body-wrap ul li.docs-module-title:before{
+    content: '';
+    padding-right: 0.3em;
+    color: #009bca;
+}
 #content {
 	box-shadow: 5px 5px 5px #aaa, -5px 0 5px #aaa;
 	margin: auto;
