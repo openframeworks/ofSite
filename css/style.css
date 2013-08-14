@@ -541,6 +541,9 @@ a.nohover {
 	font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
 	cursor: pointer; cursor:hand;
 }
+.functionslist .nodocs a{
+  color: #888;
+}
 .functionslist a:hover, .documentation_index_group a:hover {
 	color: white;
 }
