@@ -1269,3 +1269,10 @@ label.error { color: #F00 }
 input.toggle { display: none; }
 input.toggle:checked+div { display: none; }
 div.log {padding-left:2em;}
+
+
+#body-wrap ul li.noDoc:before{
+    content: '> ';
+    padding-right: 0.3em;
+    color: #999;
+}

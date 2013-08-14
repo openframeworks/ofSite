@@ -74,6 +74,7 @@ _inlined_description: _
 
 
 _description: _
+Allocates space for pixel data of the given width (w), height (h) and number of channels (channels). If an ofImageType or ofPixelFormat is passed in, it will allocate based on the required number of channels.
 
 
 
@@ -113,7 +114,15 @@ _inlined_description: _
 
 
 _description: _
+ofPixelFormat:
 
+	OF_PIXELS_RGB
+
+	OF_PIXELS_RGBA
+
+	OF_PIXELS_BGRA
+
+	OF_PIXELS_MONO
 
 
 
@@ -152,8 +161,13 @@ _inlined_description: _
 
 
 _description: _
-
-
+ofImageType:
+	
+	OF_IMAGE_GRAYSCALE
+	
+	OF_IMAGE_COLOR
+	
+	OF_IMAGE_COLOR_ALPHA
 
 
 
