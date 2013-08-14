@@ -32,7 +32,7 @@ function feedGithubLoaded(result) {
 			dateTag.title = date;
 			dateTag.appendChild(document.createTextNode(jQuery.timeago(date)));
       a.appendChild(document.createTextNode(title));
-			a.appendChild(dateTag);
+			//a.appendChild(dateTag);
       //a.appendChild(document.createTextNode(entry.getElementsByTagNameNS("*","thumbnail")[0].getAttribute("url")));
       /*for( p in entry.getElementsByTagName("link")){
          a.appendChild(document.createTextNode(p.tagName));
@@ -42,6 +42,7 @@ function feedGithubLoaded(result) {
       div.appendChild(img);
       li.appendChild(div);
       li.appendChild(a);
+      li.appendChild(dateTag);
       li.appendChild(document.createElement("br"));
       //li.appendChild(document.createTextNode(entry.getElementsByTagName("updated")[0].textContent));
       ul.appendChild(li);
