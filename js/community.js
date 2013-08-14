@@ -101,16 +101,6 @@ function parseXML(xml){
     $("#user").append('<img src="'+$(member).find("image").text()+'"/>');
     $("#user").append('<p><a href="'+$(member).find("website").text()+'">'+$(member).find("website").text()+'</a></p>');
     
-    if($(member).find("twitter").text() != ""){
-        $(".tweet").prepend("<h3>twitter</h3>");
-        $(".tweets").tweet({
-          avatar_size: 32,
-          count: 4,
-          username: $(member).find("twitter").text(),
-          loading_text: "searching twitter...",
-          template: "{avatar} {text}"
-        });
-    }
     
     if($(member).find("github").text() != ""){
         var feedGithub = new google.feeds.Feed("https://github.com/" + $(member).find("github").text() + ".atom");
