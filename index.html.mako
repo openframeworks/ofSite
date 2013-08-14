@@ -30,7 +30,7 @@
         <h3>twitter</h3>
         <div id="tweets">
         <div class="tweets">
-            <a data-chrome="noheader noscrollbar nofooter transparent" data-tweet-limit="5" data-link-color="#EE3987"  class="twitter-timeline" href="https://twitter.com/search?q=%23openframeworks" data-widget-id="367489340693176321">Tweets about "#openframeworks"</a>
+            <a data-chrome="noheader noscrollbar nofooter transparent"  data-show-replies="false" data-tweet-limit="4" data-link-color="#EE3987"  class="twitter-timeline" href="https://twitter.com/search?q=openframeworks" data-widget-id="367489340693176321">Tweets about "#openframeworks"</a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
         </div>
         </div>
