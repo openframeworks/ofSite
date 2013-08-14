@@ -3,13 +3,24 @@ html {
 }
 body {
 	background-color: #CCC;
-	font-family: Arial, sans-serif;
+	font-family: Helvetica, Ubuntu Regular, FreeSans, Arial, sans-serif;
 	font-size: 0.80em;
 	line-height: 1.5em;
 	height: 100%;
 	margin: 0px;
 	padding: 0px;
 	text-align: center;
+}
+#body-wrap ul li {
+    /* Text color */
+    color: black;
+    list-style-type: none;
+}
+
+#body-wrap ul li:before {
+    content: '> ';
+    padding-right: 0.3em;
+    color: #009bca;
 }
 #content {
 	box-shadow: 5px 5px 5px #aaa, -5px 0 5px #aaa;
@@ -657,12 +668,13 @@ div.sectiontitle h2{
 	position: relative;
 	width: 650px;
 }
-/*.documentation_detail.class_documentation p{
-    margin:0;
+.inlined_docs{
+    background-color:#f8f8f9;
+    padding: 1em;
 }
-.inline_docs p{
-    margin-bottom:1em;
-}*/
+a.docs_class{
+    font-family: "Consolas","Bitstream Vera Sans Mono","Courier New",Courier,monospace;
+}
 .documentation_detail_table_offset {
 	float: left;
 	margin: 0px 0px 25px 0px;
@@ -1206,6 +1218,23 @@ ul.docsadvanced li a{
 
 h1.documentation{
     margin-bottom:5px;
+}
+
+ul.external_links li{
+    margin-bottom:0.5em;
+}
+
+ul.external_links a{
+    font-size:1.3em;
+	font-family: 'Questrial', sans-serif;
+}
+
+ul.external_links{
+    margin-top:3em;
+    margin-bottom:3em;
+}
+div.home-links ul{
+    padding-left:20px;
 }
 
 

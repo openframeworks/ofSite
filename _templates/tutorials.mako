@@ -18,21 +18,38 @@
             </div>
         </div><!-- End Page Wide -->  
 		    
-            % for category in categories:
-	            <div class="page-wide sectiontitle">  
+        % for category in categories:
+            % if len(category["articles"]) > 0:
+                <div class="page-wide sectiontitle">  
                         <h2>${category["category"]}</h2>
                     </div><!-- End Page Wide -->
-	            <div class="page-wide">  
+                <div class="page-wide">  
                     <ul class="articles">
                     % for article in category["articles"]:
-                         <li><span class="external-dot"> ></span>&nbsp;<a href="/tutorials/${category["category"]}/${article.file}">${article.title}</a></br>
+                         <li><a href="/tutorials/${category["category"]}/${article.file}">${article.title}</a></br>
                              <p>${article.summary}</p>
                          </li>
                     % endfor
                     </ul>
-                    </div><!-- End Page Wide -->
-            % endfor
-              
+                </div><!-- End Page Wide -->
+            % endif
+        % endfor
+          
+
+        <div id="wishlist" class="page-wide sectiontitle">  
+          <h2>tutorial wish list</h2>
+        </div>
+        <div class="page-wide">
+          <p>These are highly desired tutorials. To contribute a tutorial, fork the <a href="http://github.com/openframeworks/ofSite">ofSite repository in github</a> and add your tutorial in markdown or asciidoc format inside the _tutorials folder.</p>
+          <ul>
+            <li>basics of graphics - how to draw things</li>
+            <li>ofPixels, ofTexture, ofImage</li>
+            <li>gl - getting started, ofFbo, ofVbo</li>
+            <li>cameras - basics of ofEasyCam, ofCamera</li>
+            <li>std::map</li>
+          </ul>
+        </div>
+
       </div><!-- End Body Wrap -->
       
       <div id="footer">
