@@ -59,16 +59,49 @@ And previously:
 
 * [Damian Stewart](http://damianstewart.com/) (damian) as sound leader</li>
 * [Steve Varga](http://www.vargatron.com/) (vargatron) as typography leader</li>
-. 
 
+A number of institutions have provided major support for openFrameworks through grants, donations, and as hosting partners for our international developer conferences. These events often require significant resources to bring together participants from many countries to a single location for multiple days.
 
-A number of institutions have provided major support for openFrameworks through grants, donations, and as hosting partners for our international developer conferences:
+<style>
+img {
+	text-align: center;
+	margin: auto;
+	display: block;
+	border: 0;
+};
+</style>
 
-* [Ars Electronica Futurelab and Festival](http://www.aec.at/)
-* [Eyebeam Art & Technology Center](http://eyebeam.org/)
-* [Ford Foundation](http://www.fordfoundation.org/)
-* [Frank-Ratchye STUDIO for Creative Inquiry](http://studioforcreativeinquiry.org/) at CMU
-* [Parsons the New School for Design](http://amt.parsons.edu)
+**[Ars Electronica Festival and Futurelab](http://www.aec.at/)**
+
+[![](logo-ars.png)](http://www.aec.at/)
+
+We would like to thank the [Ars Electronica Festival and Futurelab](http://www.aec.at/) for sponsoring the OF Lab at Ars Electronica 2008.
+
+**[Eyebeam](http://eyebeam.org/)**
+
+[![](logo-eyebeam.png)](http://eyebeam.org/)
+
+**[Ford Foundation](http://www.fordfoundation.org/)**
+
+[![](logo-fordfoundation.gif)](http://www.fordfoundation.org/)
+
+We would like to thank the [Ford Foundation](http://www.fordfoundation.org/) for sponsoring the second openFrameworks developers conference.
+
+**[Parsons the New School for Design](http://amt.parsons.edu)**
+
+[![](logo-parsons.png)](http://amt.parsons.edu)
+
+**[Frank-Ratchye STUDIO for Creative Inquiry](http://studioforcreativeinquiry.org/)**
+
+[![](logo-sfci.png)](http://studioforcreativeinquiry.org/)
+
+We would like to thank the [Frank-Ratchye STUDIO for Creative Inquiry](http://studioforcreativeinquiry.org/) for hosting the first openFrameworks developers conference, and providing other small grants and support to openFrameworks developers.
+
+**[Yamaguchi Center for Arts and Media](http://www.ycam.jp/en/)**
+
+[![](logo-ycam.png)](http://www.ycam.jp/en/)
+
+We would like to thank [YCAM](http://www.ycam.jp/en/) for their ongoing support for OF. In 2008 YCAM hosted the first [OF workshop](http://wiki.openframeworks.cc/index.php?title=OfYcam) in Asia, and have since hosted many OF-related events such as: the [LabACT series](http://interlab.ycam.jp/en/projects/labact/eye-tracking-study) exploring uses of the EyeWriter, the first two [Guest Research Projects](http://interlab.ycam.jp/en/projects/guestresearch) which featured OF developers working on open source arts engineering tools like [ofxTimeline](http://interlab.ycam.jp/en/projects/guestresearch/vol2) and [mapamok](http://interlab.ycam.jp/en/projects/guestresearch/vol1), and most recently YCAM has hosted the [third openFrameworks developers conference](http://interlab.ycam.jp/en/projects/of-devcon2013).
 
 We are proud to acknowledge institutions and organizations which have hosted multi-day educational workshops and "OF Lab" events (see [the wiki](http://wiki.openframeworks.cc/index.php?title=Education) for a more complete list): 
 
@@ -82,7 +115,6 @@ We are proud to acknowledge institutions and organizations which have hosted mul
 * [Pratersauna Digital LAB](https://vimeo.com/psdl)
 * [Resonate.io Festival](http://resonate.io/)
 * [Victoria and Albert Museum](http://www.vam.ac.uk/)
-* [Yamaguchi Center for Arts and Media](http://www.ycam.jp/en/) (YCAM)
 
 ----------------
 
