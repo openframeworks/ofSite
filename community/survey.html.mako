@@ -12,15 +12,33 @@
 <img src="../about/lang-total.png" />
 <img src="../about/language.png" />
 
-*Raw numbers of most common languages from survey respondents*
+<i>Raw numbers of most common languages from survey respondents</i>
 
-<p>Languages with less than 5 representatives each include: Albanian, Bengali, Bulgarian, Czech, Farsi, Hungarian, Kannada, Lithuanian, Macedonian, Persian, Norwegian, Serbo-Croatian, Slovak, Thai, Turkish, Vietnamese, Gujarati, Hindi, Norwegian, Russian, Swedish, Tamil, Greek, Hebrew, Korean, Danish, and Polish (in increasing order of language speakers in the community, up to five).</p>
+<p>Languages with 5 or fewer representatives each include: Albanian, Bengali, Bulgarian, Czech, Farsi, Hungarian, Kannada, Lithuanian, Macedonian, Persian, Norwegian, Serbo-Croatian, Slovak, Thai, Turkish, Vietnamese, Gujarati, Hindi, Norwegian, Russian, Swedish, Tamil, Greek, Hebrew, Korean, Danish, and Polish (in increasing order of language speakers in the community, up to five).</p>
 
 <p>Supporting the diversity of languages, OF users hail from the following locations worldwide:</p>
 
 <img src="../about/of-map.jpg" />
 
-<p><strong>gender</strong></p>
+<p><strong>Gender</strong></p>
+
+<p>Of the survey respondents, 329 were male and 28 female (11 unspecified / no response).</p>
+
+<img src="../about/gender.png" />
+
+<p>Among the self-identified women in the community, range of programming experience is evenly varied:</p>
+
+<img src="../about/experience-females.png" />
+
+<p>The gender divide is more clear when broken down by years of programming experience (non-OF-specific). Proportionally within each gender, significantly more females rank themselves at 6 years or less of programming experience, whereas significantly more males (per the male population of the survey) have had more than six years of programming experience.</p>
+
+<img src="../about/male-female.png" />
+
+<p><strong>Professional Categorization</strong></p>
+
+<p>Answers to the question of "what do you do / how would you define yourself?" Distribution as a percentage of all survey respondents.  Many people selected multiple labels, thus, there can be overlap between the 66% of respondents who identify as "developer" and the 14% who identify as "musician".</p>
+
+<img src="../about/labels.png" />
 
 </div>
 
