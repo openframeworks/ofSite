@@ -1,9 +1,11 @@
 <%inherit file="/_templates/fullpage.mako" />
 
 <div class="page-left-medium">                
-<h1 id="survey">survey</h1>
+<h2 id="survey"> survey
 
-<h1 id="survey"> DEMOGRAPHICS </h1>
+<h2 id="survey"> demographics </h2>
+
+<p><strong>Location and Language</strong></p>
 
 <p>The majority of OF code and documentation is written in English (as was the survey).  Interestingly, the sum total of all languages shows more non-native-English speakers than native English speakers:</p>
 
@@ -17,6 +19,8 @@
 <p>Supporting the diversity of languages, OF users hail from the following locations worldwide:</p>
 
 <img src="../about/of-map.jpg" />
+
+<p><strong>gender</strong></p>
 
 </div>
 
