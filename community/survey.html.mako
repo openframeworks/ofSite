@@ -68,8 +68,13 @@
 
 <h2 id="survey"> operating system / IDE stats </h2>
 
-<p>A slight majority of community members are doing most of their OF coding on OSX, with Windows and Linux also representing significant and nearly equal amounts of the community.  Other platforms making up the remainder include Raspberry Pi and iOS platforms.</p>
+<p>A slight majority of community members are doing most of their OF coding on OSX, with Windows and Linux also representing significant and nearly equal amounts of the community.  Other platforms making up the remainder include Raspberry Pi and iOS platforms. (Percentages out of total respondents; a number of people use multiple platforms.)</p>
 
+<img src="../about/os-distribution.png" />
+
+<p>As you’d expect, this leads to a significantly higher usage of XCode than other IDEs, with XCode as the dominant IDE for OSX programming.</p>
+
+<img src="../about/ide-distibution.png" />
 
 </div>
 
