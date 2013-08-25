@@ -47,6 +47,7 @@
 
 <img src="../about/labels.png" />
 
+
 <h2 id="survey"> openframeworks-specific experiences </h2>
 
 <p>Amount of time using OF, in years.  OpenFrameworks was first developed in 2005, so "since the start" is about 8 years.</p>
