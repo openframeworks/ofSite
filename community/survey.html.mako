@@ -76,6 +76,14 @@
 
 <img src="../about/ide-distibution.png" />
 
+<p>On Windows, Visual Studio is the dominant environment, with Code::Blocks filling in the remaining 30% among Windows users.</p>
+
+<img src="../about/windows-ide.png" />
+
+<p>Code::Blocks accounts for the majority of Linux users at 55%, with the remaining 45% distributed between other editors.</p>
+
+<img src="../about/linux-ide.png" />
+
 </div>
 
 
