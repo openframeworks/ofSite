@@ -3,13 +3,20 @@
 <div class="page-left-medium">                
 <h1 id="survey">survey</h1>
 
-<p>This is a placeholder for the survey results.</p>
+<h1 id="survey"> DEMOGRAPHICS </h1>
 
-<img src="../about/0.jpg" />
+<p>The majority of OF code and documentation is written in English (as was the survey).  Interestingly, the sum total of all languages shows more non-native-English speakers than native English speakers:</p>
 
-<p>This is a placeholder for the survey results.</p>
+<img src="../about/lang-total.png" />
+<img src="../about/language.png" />
 
-<img src="../about/1.jpg" />
+*Raw numbers of most common languages from survey respondents*
+
+<p>Languages with less than 5 representatives each include: Albanian, Bengali, Bulgarian, Czech, Farsi, Hungarian, Kannada, Lithuanian, Macedonian, Persian, Norwegian, Serbo-Croatian, Slovak, Thai, Turkish, Vietnamese, Gujarati, Hindi, Norwegian, Russian, Swedish, Tamil, Greek, Hebrew, Korean, Danish, and Polish (in increasing order of language speakers in the community, up to five).</p>
+
+<p>Supporting the diversity of languages, OF users hail from the following locations worldwide:</p>
+
+<img src="../about/of-map.jpg" />
 
 </div>
 
