@@ -55,11 +55,13 @@
 <img src="../about/of-years.png" />
 
 <p>Unsurprisingly, the most common uses of OF are for interactives and graphics programming.  A surprisingly high percentage of users are also working with computer vision.  Common answers in the "other" category include game development, networking, HCI applications, and iOS apps.</p>
-</div>
 
 <img src="../about/applications.png" />
 
 <p>A majority of OF users are also actively using other creative coding tools or platforms.  ¾ of respondents use Processing in addition to OF.  Common responses to “other” include PureData, SuperCollider, and Python-related tools.</p>
 
 <img src="../about/toolkits.png" />
+
+</div>
+
 
