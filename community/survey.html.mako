@@ -58,3 +58,7 @@
 
 <img src="../about/applications.png" />
 
+<p>A majority of OF users are also actively using other creative coding tools or platforms.  ¾ of respondents use Processing in addition to OF.  Common responses to “other” include PureData, SuperCollider, and Python-related tools.</p>
+
+<img src="../about/toolkits.png" />
+
