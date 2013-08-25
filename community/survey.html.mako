@@ -12,8 +12,8 @@
 
 <p>The majority of OF code and documentation is written in English (as was the survey).  Interestingly, the sum total of all languages shows more non-native-English speakers than native English speakers:</p>
 
-<img src="../about/lang-total.png" />
-<img src="../about/language.png" />
+<img src="../about/language-total.png" />
+<img src="../about/language-primary.png" />
 
 <i>Raw numbers of most common languages from survey respondents</i>
 
@@ -61,6 +61,15 @@
 <p>A majority of OF users are also actively using other creative coding tools or platforms.  ¾ of respondents use Processing in addition to OF.  Common responses to “other” include PureData, SuperCollider, and Python-related tools.</p>
 
 <img src="../about/toolkits.png" />
+
+<p>A majority of OF users are also actively using other creative coding tools or platforms.  ¾ of respondents use Processing in addition to OF.  Common responses to “other” include PureData, SuperCollider, and Python-related tools.</p>
+
+<img src="../about/toolkits.png" />
+
+<h2 id="survey"> operating system / IDE stats </h2>
+
+<p>A slight majority of community members are doing most of their OF coding on OSX, with Windows and Linux also representing significant and nearly equal amounts of the community.  Other platforms making up the remainder include Raspberry Pi and iOS platforms.</p>
+
 
 </div>
 
