@@ -1,9 +1,10 @@
 <%inherit file="/_templates/fullpage.mako" />
 
 <div class="page-left-medium">                
-<h2 id="survey"> survey
+<h2 id="survey"> survey </h2>
 
-<p>In June 2013, the OF community and outreach team sent a survey out to the community to gather information which can help us be better informed as we move forward with building both the toolkit and the surrounding community.  Below are a number of results from the survey, aggregated from 367 responses in total.  We acknowledge that the survey responses are in a way self-selecting: we promoted the survey as much as possible through mailing lists, Twitter, the OF site, forum, etc, but it's entirely possible there are communities separate from those means which we've unfortunately left out.  Still, we're excited about the responses that we got, and we're excited to share them with you here and give you a closer glimpse into the community you're a part of.</p>
+<p>In June 2013, the OF community and outreach team sent a survey out to the community to gather information which can help us be better informed as we move forward with building both the toolkit and the surrounding community.</p>
+<p>Below are a number of results from the survey, aggregated from 367 responses in total.  We acknowledge that the survey responses are in a way self-selecting: we promoted the survey as much as possible through mailing lists, Twitter, the OF site, forum, etc, but it's entirely possible there are communities separate from those means which we've unfortunately left out.  Still, we're excited about the responses that we got, and we're excited to share them with you here and give you a closer glimpse into the community you're a part of.</p>
 
 <h2 id="survey"> demographics </h2>
 
@@ -46,5 +47,21 @@
 
 <img src="../about/labels.png" />
 
+
+<h2 id="survey"> openframeworks-specific experiences </h2>
+
+<p>Amount of time using OF, in years.  OpenFrameworks was first developed in 2005, so "since the start" is about 8 years.</p>
+
+<img src="../about/of-years.png" />
+
+<p>Unsurprisingly, the most common uses of OF are for interactives and graphics programming.  A surprisingly high percentage of users are also working with computer vision.  Common answers in the "other" category include game development, networking, HCI applications, and iOS apps.</p>
+
+<img src="../about/applications.png" />
+
+<p>A majority of OF users are also actively using other creative coding tools or platforms.  ¾ of respondents use Processing in addition to OF.  Common responses to “other” include PureData, SuperCollider, and Python-related tools.</p>
+
+<img src="../about/toolkits.png" />
+
 </div>
+
 
