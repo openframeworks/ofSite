@@ -51,5 +51,10 @@
 
 <p>Amount of time using OF, in years.  OpenFrameworks was first developed in 2005, so "since the start" is about 8 years.</p>
 
+<img src="../about/of-years.png" />
+
+<p>Unsurprisingly, the most common uses of OF are for interactives and graphics programming.  A surprisingly high percentage of users are also working with computer vision.  Common answers in the "other" category include game development, networking, HCI applications, and iOS apps.</p>
 </div>
+
+<img src="../about/applications.png" />
 
