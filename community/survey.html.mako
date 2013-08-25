@@ -20,7 +20,11 @@
 
 <img src="../about/of-map.jpg" />
 
-<p><strong>Gender</strong></p>
+<p><strong>Age and Gender</strong></p>
+
+<p>Age distribution across all respondents, by percentage of the total.  High-fives to the single person under 18 and three people over 60 for rounding out the bell curve. </p>
+
+<img src="../about/age-bar.png" />
 
 <p>Of the survey respondents, 329 were male and 28 female (11 unspecified / no response).</p>
 
