@@ -34,5 +34,11 @@
 
 <img src="../about/male-female.png" />
 
+<p><strong>Professional Categorization</strong></p>
+
+<p>Answers to the question of "what do you do / how would you define yourself?" Distribution as a percentage of all survey respondents.  Many people selected multiple labels, thus, there can be overlap between the 66% of respondents who identify as "developer" and the 14% who identify as "musician".</p>
+
+<img src="../about/labels.png" />
+
 </div>
 
