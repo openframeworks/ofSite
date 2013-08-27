@@ -62,26 +62,6 @@ And previously:
 
 A number of institutions have provided major support for openFrameworks through grants, donations, and as hosting partners for our international developer conferences. These events often require significant resources to bring together participants from many countries to a single location for multiple days.
 
-<style>
-/* Sponsor Logos */
-.sponsors {
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-	display: block;
-	margin: 30px auto 0;
-	padding: 0;
-}
-
-.sponsors a {
-	background: #FFF;
-	display: inline-block;
-	margin: 14px 24px 14px 0;
-	padding: 0;
-	text-align: center;
-};
-</style>
-
 <span class="sponsors">
   <a href="http://amt.parsons.edu"><img alt="sponsor_logo" src="logo-parsons.png" style="display: block; height: 58px;padding-bottom: 3px;"></a>
   <a href="http://www.ycam.jp/en/"><img alt="sponsor_logo" src="logo-ycam.png" style="display: block; height: 69px; /* padding-bottom: 8px; */"></a>
