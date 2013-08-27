@@ -74,13 +74,22 @@ A number of institutions have provided major support for openFrameworks through 
 }
 
 .sponsors a {
+/*	background: #FFF;
+	display: inline-block;
+	height: 37px;
+	margin: 15px 0;
+	padding: 0;
+	text-align: center;
+	width: 50%;*/
+
 	background: #FFF;
 	display: inline-block;
-	margin: 15px 15px 15px 0;
+	margin: 14px 24px 14px 0;
 	padding: 0;
+	text-align: center;
 };
 
-img {
+img[alt=sponsor_logo] {
 	display: inline-block;
 	height: 37px;
 	padding: 0;
@@ -88,7 +97,16 @@ img {
 </style>
 
 
-<span class="sponsors">[![](logo_arselectronica.png)](http://www.aec.at/)[![](logo_eyebeam.png)](http://eyebeam.org/)[![](logo_fordfoundation.png)](http://www.fordfoundation.org/)[![](logo_parsons.png)](http://amt.parsons.edu)[![](logo_sfci.png)](http://studioforcreativeinquiry.org/)[![](logo_ycam.png)](http://www.ycam.jp/en/)</span>
+<!-- <span class="sponsors">[![sponsor_logo](logo_arselectronica.png)](http://www.aec.at/)[![sponsor_logo](logo_eyebeam.png)](http://eyebeam.org/)[![sponsor_logo](logo_fordfoundation.png)](http://www.fordfoundation.org/)[![sponsor_logo](logo_sfci.png)](http://studioforcreativeinquiry.org/)[![sponsor_logo](logo_parsons.png)](http://amt.parsons.edu)[![sponsor_logo](logo_ycam_w.png)](http://www.ycam.jp/en/)</span> -->
+
+<span class="sponsors">
+  <a href="http://www.aec.at/"><img alt="sponsor_logo" src="logo_arselectronica.png" style="display: block; height: 30px; padding-bottom: 11px;"></a>
+  <a href="http://studioforcreativeinquiry.org/"><img alt="sponsor_logo" src="logo_sfci.png" style="display: block; height: 50px;"></a>
+  <a href="http://www.fordfoundation.org/"><img alt="sponsor_logo" src="logo_fordfoundation.png" style="display: block; height: 28px; padding-bottom: 11px;"></a>
+  <a href="http://eyebeam.org/"><img alt="sponsor_logo" src="logo_eyebeam.png" style="display: block; height: 35px; padding-bottom: 8px;"></a>
+  <a href="http://amt.parsons.edu"><img alt="sponsor_logo" src="logo_parsons.png" style="display: block; height: 50px;"></a>
+  <a href="http://www.ycam.jp/en/"><img alt="sponsor_logo" src="logo_ycam_w.png" style="display: block; height: 35px; padding-bottom: 11px;"></a>
+</span>
 
 
 **[Ars Electronica Festival and Futurelab](http://www.aec.at/)**
