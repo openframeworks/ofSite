@@ -69,7 +69,7 @@ A number of institutions have provided major support for openFrameworks through 
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	display: block;
-	margin: 30px auto;
+	margin: 30px auto 0;
 	padding: 0;
 }
 
@@ -99,13 +99,22 @@ img[alt=sponsor_logo] {
 
 <!-- <span class="sponsors">[![sponsor_logo](logo_arselectronica.png)](http://www.aec.at/)[![sponsor_logo](logo_eyebeam.png)](http://eyebeam.org/)[![sponsor_logo](logo_fordfoundation.png)](http://www.fordfoundation.org/)[![sponsor_logo](logo_sfci.png)](http://studioforcreativeinquiry.org/)[![sponsor_logo](logo_parsons.png)](http://amt.parsons.edu)[![sponsor_logo](logo_ycam_w.png)](http://www.ycam.jp/en/)</span> -->
 
-<span class="sponsors">
-  <a href="http://www.aec.at/"><img alt="sponsor_logo" src="logo_arselectronica.png" style="display: block; height: 30px; padding-bottom: 11px;"></a>
+<!-- <span class="sponsors">
+  <a href="http://www.aec.at/"><img alt="sponsor_logo" src="logo_arselectronica.png" style="display: block; height: 30px; padding-bottom: 14px;"></a>
   <a href="http://studioforcreativeinquiry.org/"><img alt="sponsor_logo" src="logo_sfci.png" style="display: block; height: 50px;"></a>
-  <a href="http://www.fordfoundation.org/"><img alt="sponsor_logo" src="logo_fordfoundation.png" style="display: block; height: 28px; padding-bottom: 11px;"></a>
+  <a href="http://www.fordfoundation.org/"><img alt="sponsor_logo" src="logo_fordfoundation.png" style="display: block; height: 28px; padding-bottom: 10px;"></a>
   <a href="http://eyebeam.org/"><img alt="sponsor_logo" src="logo_eyebeam.png" style="display: block; height: 35px; padding-bottom: 8px;"></a>
   <a href="http://amt.parsons.edu"><img alt="sponsor_logo" src="logo_parsons.png" style="display: block; height: 50px;"></a>
-  <a href="http://www.ycam.jp/en/"><img alt="sponsor_logo" src="logo_ycam_w.png" style="display: block; height: 35px; padding-bottom: 11px;"></a>
+  <a href="http://www.ycam.jp/en/"><img alt="sponsor_logo" src="logo_ycam_w.png" style="display: block; height: 35px; padding-bottom: 8px;"></a>
+</span> -->
+
+<span class="sponsors">
+  <a href="http://amt.parsons.edu"><img alt="sponsor_logo" src="logo-parsons.png" style="display: block; height: 58px;padding-bottom: 3px;"></a>
+  <a href="http://www.ycam.jp/en/"><img alt="sponsor_logo" src="logo-ycam.png" style="display: block; height: 69px; /* padding-bottom: 8px; */"></a>
+  <a href="http://eyebeam.org/"><img alt="sponsor_logo" src="logo-eyebeam.png" style="display: block; height: 30px; padding-bottom: 18px;"></a>
+  <a href="http://studioforcreativeinquiry.org/"><img alt="sponsor_logo" src="logo-sfci.png" style="display: block; height: 69px;"></a>
+  <a href="http://www.aec.at/"><img alt="sponsor_logo" src="logo-ars.png" style="display: block; height: 41px; padding-bottom: 14px;"></a>
+  <a href="http://www.fordfoundation.org/"><img alt="sponsor_logo" src="logo-fordfoundation.png" style="display: block; height: 42px; padding-bottom: 13px;"></a>
 </span>
 
 
