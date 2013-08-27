@@ -62,10 +62,6 @@
 
 <img src="../about/toolkits.png" />
 
-<p>A majority of OF users are also actively using other creative coding tools or platforms.  ¾ of respondents use Processing in addition to OF.  Common responses to “other” include PureData, SuperCollider, and Python-related tools.</p>
-
-<img src="../about/toolkits.png" />
-
 <h2 id="survey"> operating system / IDE stats </h2>
 
 <p>A slight majority of community members are doing most of their OF coding on OSX, with Windows and Linux also representing significant and nearly equal amounts of the community.  Other platforms making up the remainder include Raspberry Pi and iOS platforms. (Percentages out of total respondents; a number of people use multiple platforms.)</p>
