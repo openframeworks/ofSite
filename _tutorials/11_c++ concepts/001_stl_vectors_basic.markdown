@@ -328,7 +328,7 @@ See <a href="http://arturocastro.net/blog/2011/10/28/stl::vector/">Arturo Castro
 <a name="of"></a>
 ## OpenFrameworks Example
 
-testApp.h
+ofApp.h
 ~~~~{.cpp}
     #pragma once
 
@@ -357,7 +357,7 @@ testApp.h
 	
     };
 
-    class testApp : public ofBaseApp{
+    class ofApp : public ofBaseApp{
     public:
     	void setup();
     	void update();
@@ -379,9 +379,9 @@ testApp.h
 
 ~~~~    
     
-testApp.cpp
+ofApp.cpp
 ~~~~{.cpp}
-    #include "testApp.h"
+    #include "ofApp.h"
     
     // write our boolean remove function
     bool shouldRemove(Particle &p){
@@ -389,11 +389,11 @@ testApp.cpp
     	else return false;
     }
     
-    void testApp::setup(){
+    void ofApp::setup(){
     	ofSetFrameRate(60);
     }
     
-    void testApp::update(){
+    void ofApp::update(){
     	for(int i = 0; i < particles.size(); i++){
     		particles[i].update();
     	}
@@ -401,7 +401,7 @@ testApp.cpp
     	ofRemove(particles,shouldRemove);
     }
     
-    void testApp::draw(){
+    void ofApp::draw(){
     	
         ofTranslate( ofGetWidth()/2, ofGetHeight()/2);
         for(int i = 0; i < particles.size(); i++){
@@ -409,15 +409,15 @@ testApp.cpp
     	}
     }
     
-    void testApp::keyPressed(int key){
+    void ofApp::keyPressed(int key){
     	particles.push_back( Particle() );
     }
 ~~~~    
     
     
-testApp.cpp using iterators
+ofApp.cpp using iterators
 ~~~~{.cpp}
-    #include "testApp.h"
+    #include "ofApp.h"
     
     // write our boolean remove function
     bool shouldRemove(Particle &p){
@@ -425,11 +425,11 @@ testApp.cpp using iterators
     	else return false;
     }
     
-    void testApp::setup(){
+    void ofApp::setup(){
     	ofSetFrameRate(60);
     }
     
-    void testApp::update(){
+    void ofApp::update(){
     	
     	for(vector<Particle>::iterator it = particles.begin(); it != particles.end(); it++){
     		(*it).update();
@@ -438,7 +438,7 @@ testApp.cpp using iterators
     	ofRemove(particles,shouldRemove);
     }
     
-    void testApp::draw(){
+    void ofApp::draw(){
     	
         ofTranslate( ofGetWidth()/2, ofGetHeight()/2);
         for(vector<Particle>::iterator it = particles.begin(); it != particles.end(); it++){
@@ -446,7 +446,7 @@ testApp.cpp using iterators
     	}
     }
     
-    void testApp::keyPressed(int key){
+    void ofApp::keyPressed(int key){
     	particles.push_back( Particle() );
     }
 ~~~~

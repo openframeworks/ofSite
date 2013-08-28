@@ -48,7 +48,7 @@ Then in your projects config.make-file include the following line (in bold) in t
     PROJECT_LDFLAGS += -lwiringPi
     
 
-Then in your testApp.h include the library by placing the following line near the top:
+Then in your ofApp.h include the library by placing the following line near the top:
 
     #include "wiringPi.h"
 
@@ -58,7 +58,7 @@ and while you're in there let's prepare the example:
     bool sensor3;
     bool sensor7;
 
-Now in your testApp.cpp an example of the use could be the following.
+Now in your ofApp.cpp an example of the use could be the following.
 In the setup-function put:
 
     if(wiringPiSetup() == -1){

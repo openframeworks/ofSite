@@ -73,7 +73,7 @@ Before we go get into trouble, there's something that I want to explain that mig
 ~~~~{.cpp}
 
 #include "ofMain.h"
-#include "testApp.h"
+#include "ofApp.h"
 // import the fancy new renderer
 #include "ofGlProgrammableRenderer.h"
 
@@ -86,7 +86,7 @@ int main( ){
     // this kicks off the running of my app
     // can be OF_WINDOW or OF_FULLSCREEN
     // pass in width and height too:
-    ofRunApp( new testApp());
+    ofRunApp( new ofApp());
 
 }
 

@@ -10,12 +10,12 @@ At this point, you should have read how to download openFrameworks, setup your I
 Now you can jump into the fun stuff and start making things!
 
 ## 1. Draw Something
-Let's start by drawing something. If we want to draw something we have to put it inside the function `void testApp::draw()` in the file ```testApp.cpp```.
+Let's start by drawing something. If we want to draw something we have to put it inside the function `void ofApp::draw()` in the file ```ofApp.cpp```.
  
 Let's start with a graphic version of "Hello World". This draws a blue circle:
 
 ~~~~{.cpp}
-	void testApp::draw(){
+	void ofApp::draw(){
 		ofBackground(0);
 		ofSetColor(0,0,255);
 		ofFill();
@@ -41,7 +41,7 @@ This is where some the oF methods `ofGetWindowWidth()` and `ofGetWindowHeight()`
 Let's use some of this new stuff we just learned about:
 
 ~~~~{.cpp}
-	void testApp::draw(){
+	void ofApp::draw(){
 		ofBackground(30,10,30);
 		ofSetColor(ofColor::blue);
 		ofFill();
@@ -63,10 +63,10 @@ CHALLENGE: Referring to the documention, try and make your a digital Kandinsky-s
 
 So far, so good. Right now everything is a little static and the complete absence of interactivity is probably getting you anxious. Let's start moving things around.   
 
-Two variables available to every openFrameworks application are `mouseX` and `mouseY`. Let's go back to our previous example and use these variables inside `testApp::draw()`.
+Two variables available to every openFrameworks application are `mouseX` and `mouseY`. Let's go back to our previous example and use these variables inside `ofApp::draw()`.
 
 ~~~~{.cpp}
-	void testApp::draw(){
+	void ofApp::draw(){
 		ofBackground(30,10,30);
 		ofSetColor(ofColor::blue);
 		ofFill();
@@ -78,11 +78,11 @@ If you try to do the same with a rectangle ( `ofRect(mouseX,mouseY, 30, 30);`) y
 Fortunately we have options and can use `ofSetRectMode(OF_RECTMODE_CENTER);` to set the anchor point to the center of the shape. 
 Probably every time you see something that starts with "OF_" and in all-caps it means that you are dealing with modes and pre-defined types. Feeling adventerous, explore using the auto-completion list of your IDE or options like  "Jump to definition".
 
-Right now we are only working on the `draw()` methods and if we want some oF magic to happen we have to start using `update()` and `setup()`. So let's create two variables that are going to store the `x` and `y` properties for the circle. If we create them inside the `draw()` or `update()` methods the values will be created and destroyed every time a loop is completed. In order to allow the variables to survive each loop we need to define them at the top of testApp. The best place to do this is inside the file `testApp.h` like this:
+Right now we are only working on the `draw()` methods and if we want some oF magic to happen we have to start using `update()` and `setup()`. So let's create two variables that are going to store the `x` and `y` properties for the circle. If we create them inside the `draw()` or `update()` methods the values will be created and destroyed every time a loop is completed. In order to allow the variables to survive each loop we need to define them at the top of ofApp. The best place to do this is inside the file `ofApp.h` like this:
 
 
 ~~~~{.cpp}
-	class testApp : public ofBaseApp{
+	class ofApp : public ofBaseApp{
 	public:
 		void setup();
 		void update();
@@ -106,7 +106,7 @@ Right now we are only working on the `draw()` methods and if we want some oF mag
 We are going to use these two variables to store the last position of the ball and progressively move the ball towards the mouse.
 
 ~~~~{.cpp}
-	void testApp::setup(){
+	void ofApp::setup(){
 		// Smooth edges
 		ofEnableSmoothing();
 
@@ -120,7 +120,7 @@ We are going to use these two variables to store the last position of the ball a
 		yPos = ofGetWindowHeight()*0.5; 
 	}
 
-	void testApp::update(){
+	void ofApp::update(){
 		xPos += ( mouseX - xPos )*0.1;
 		yPos += ( mouseY - yPos )*0.1;
 		// We calculate the x and y distance 
@@ -129,7 +129,7 @@ We are going to use these two variables to store the last position of the ball a
 		// variables
 	}
 
-	void testApp::draw(){
+	void ofApp::draw(){
 		ofBackgroundGradient(ofColor::gray,ofColor(30,10,30), OF_GRADIENT_CIRCULAR);
 		ofSetColor(200,200,124);
 		ofFill();
@@ -138,13 +138,13 @@ We are going to use these two variables to store the last position of the ball a
 ~~~~
 
 Nice, isn't it?
-Other very typical interaction is using the the keyboard. openFrameworks has some default methods for capturing mouse and keyboard events. Take a look at the bottom of the `testApp.cpp`. You will see `keyPress()`, `keyRelease()`, `mouseMove()`, `mouseDragged()`, `mousePressed()` and `mouseReleased()` events.
+Other very typical interaction is using the the keyboard. openFrameworks has some default methods for capturing mouse and keyboard events. Take a look at the bottom of the `ofApp.cpp`. You will see `keyPress()`, `keyRelease()`, `mouseMove()`, `mouseDragged()`, `mousePressed()` and `mouseReleased()` events.
 
 At this point we can add some randomness interaction using `ofRandom()` and `ofNoise()`. I highly recommend you take a look at the documentation ( [www.openframeworks.cc/documentation/](http://www.openframeworks.cc/documentation/) ) and also taking a look to Golan's ofNoise example at `openFrameworks/examples/math` directory.
 So let's add something really simple. Here every time you press the mouse the ball will go to a random position.
 
 ~~~~{.cpp}
-	void testApp::mousePressed(int x, int y, int button){
+	void ofApp::mousePressed(int x, int y, int button){
 		xPos = ofRandom( ofGetWindowWidth() );
 		yPos = ofRandom( ofGetWindowHeight() );
 	}
@@ -239,7 +239,7 @@ We have to said to the compiler two things:
 
 - `Ball::` tells the compiler that this method is from `Ball` class. You can picture it like a first part of a full name. 
 
-The last step for adding a Class is to add it to `testApp.h` with a `#include "ball.h"` 
+The last step for adding a Class is to add it to `ofApp.h` with a `#include "ball.h"` 
 
 ~~~~{.cpp}
 	#pragma once
@@ -248,7 +248,7 @@ The last step for adding a Class is to add it to `testApp.h` with a `#include "b
 
 	#include "ball.h" // Add this
 
-	class testApp : public ofBaseApp{
+	class ofApp : public ofBaseApp{
   	public:
     		void setup();
     		void update();
@@ -270,10 +270,10 @@ The last step for adding a Class is to add it to `testApp.h` with a `#include "b
 	};
 ~~~~
 
-In `testApp.cpp` we can change things to look like this:
+In `ofApp.cpp` we can change things to look like this:
 
 ~~~~{.cpp}
-	void testApp::setup(){
+	void ofApp::setup(){
 		// Smooth edges
 		ofEnableSmoothing();
 
@@ -284,12 +284,12 @@ In `testApp.cpp` we can change things to look like this:
 		// because the Ball constructor does it for you     
 	}
 
-	void testApp::update(){
+	void ofApp::update(){
 		theBall.x += ( mouseX - theBall.x )*0.1;    
 		theBall.y += ( mouseY - theBall.y )*0.1;
 	}
 
-	void testApp::draw(){
+	void ofApp::draw(){
 		ofBackgroundGradient(ofColor::gray,ofColor(30,10,30), OF_GRADIENT_CIRCULAR);
     		
 		// Now we have a method that does the drawing stuff
@@ -300,7 +300,7 @@ In `testApp.cpp` we can change things to look like this:
 So now we have a general object that´s automatically is created with some random values, but if we want we can access to the information inside it by using `object.property` or `object.method()`. 
 This means that every time we want a new Ball we just to create it and draw it! Is it not awesome?
 
-One last thing to talk about how you can pass some parameters to a object method. If we look to the `testApp::update()` code we are changing the `x` and `y` properties by using the dot-syntax `.`. That's not bad, but it to make things more readable and intuitive if it looked like `myBall.moveTo(mouseX,mouseY)`?
+One last thing to talk about how you can pass some parameters to a object method. If we look to the `ofApp::update()` code we are changing the `x` and `y` properties by using the dot-syntax `.`. That's not bad, but it to make things more readable and intuitive if it looked like `myBall.moveTo(mouseX,mouseY)`?
 So let´s change `ball.h` and  `ball.cpp`.
 
 ~~~~{.cpp}
@@ -310,10 +310,10 @@ So let´s change `ball.h` and  `ball.cpp`.
 	}
 ~~~~
 
-And use it like like this on the testApp project
+And use it like like this on the ofApp project
 
 ~~~~{.cpp}
-	void testApp::update(){
+	void ofApp::update(){
     		theBall.moveTo(mouseX,mouseY);
 	}
 ~~~~

@@ -23,8 +23,8 @@ author_site: http://www.stfj.net
 *   [3 Java vs. C++ Compile Processes][8]
 *   [4 How Classes Work in C++ (Two Files!?)][9]
     
-    *   [4.1 testApp.h][10]
-    *   [4.2 testApp.cpp][11]
+    *   [4.1 ofApp.h][10]
+    *   [4.2 ofApp.cpp][11]
         
     
 *   [5 What the Fu\*&? (a very basic introduction to pointers).][12]
@@ -149,9 +149,9 @@ Although Processing hides it from you through their compiler, Processing is actu
 
 ## How OpenFrameworks Works.
 
-OpenFrameworks is built in much the same way as Processing. It just doesn't hide any of the complicated parts from you. However, if you open up testApp.h, right under the \#include "ofMain.h" line, you will see a line that says: "class TestApp : public ofSimpleApp{". 
+OpenFrameworks is built in much the same way as Processing. It just doesn't hide any of the complicated parts from you. However, if you open up ofApp.h, right under the \#include "ofMain.h" line, you will see a line that says: "class TestApp : public ofSimpleApp{". 
 
-This means, the testApp class extends the ofSimpleApp class, just like in processing. Right under that, under "Public:" are all of the functions that testApp is inheriting from ofSimpleApp that it needs to re-write, like in processing.
+This means, the ofApp class extends the ofSimpleApp class, just like in processing. Right under that, under "Public:" are all of the functions that ofApp is inheriting from ofSimpleApp that it needs to re-write, like in processing.
 
 Every C++ application needs a function called int main() to define where the program starts. Java requires this as well, but Processing hides this fact from you since anything you write is only extending a larger class with that main being called elsewhere. 
 
@@ -174,27 +174,27 @@ adds the entire OpenFrameworks library to the main.cpp class. This allows the cl
 If you notice, ofRunApp() is passing a parameter, 
 
 ~~~~{.cpp}
-    new testApp()
+    new ofApp()
 ~~~~
 
-ofRunApp() is passing an instance of the testApp class, which happens to be the second thing included up at the top of main.cpp. ( \#include "testApp.h" ) 
+ofRunApp() is passing an instance of the ofApp class, which happens to be the second thing included up at the top of main.cpp. ( \#include "ofApp.h" ) 
 
-ofRunApp requires the passed parameter to be a type of ofSimpleApp, which is why when we looked at testApp.h earlier, we noticed it extended ofSimpleApp.
+ofRunApp requires the passed parameter to be a type of ofSimpleApp, which is why when we looked at ofApp.h earlier, we noticed it extended ofSimpleApp.
 
 To recap, 
-we have main.cpp which includes ofMain and testApp.
+we have main.cpp which includes ofMain and ofApp.
 
 *   It includes ofMain to set the screenSize and to call ofRunApp
     
 
-(It includes testApp to have a class to pass ofRunApp.
+(It includes ofApp to have a class to pass ofRunApp.
 
-We also have testApp which includes ofMain
+We also have ofApp which includes ofMain
 
-*   It includes ofMain so that any code you write in testApp can benefit from the OpenFrameworks Library.
+*   It includes ofMain so that any code you write in ofApp can benefit from the OpenFrameworks Library.
     
 
-Until you start writing your own classes, it might help to think of testApp.cpp and testApp.h as the main window in Processing. Meaning, any code you write will go into one of those two files, and until you feel comfortable, you won't have to look at anything else in Xcode.
+Until you start writing your own classes, it might help to think of ofApp.cpp and ofApp.h as the main window in Processing. Meaning, any code you write will go into one of those two files, and until you feel comfortable, you won't have to look at anything else in Xcode.
 
 ## Java vs. C++ Compile Processes 
 
@@ -216,7 +216,7 @@ C++ is a bit more complicated.
 *   and Lastly, these Object Files are linked together to create your .exe or .app file
     
 
-One particular advantage that you will notice right away of the C++ compiler style is that when compiling huge programs (like OpenFrameworks applications), sections that have not been updated won't need to be re-compiled. This is easy to understand by opening any example and compiling it. Your first compilation could take 30 seconds to a minute. If you then make changes to testApp.cpp and compile again, compilation should go much quicker. This is because Xcode no longer needs to compile the entire OpenFrameworks library, only your small bit of code that changed.
+One particular advantage that you will notice right away of the C++ compiler style is that when compiling huge programs (like OpenFrameworks applications), sections that have not been updated won't need to be re-compiled. This is easy to understand by opening any example and compiling it. Your first compilation could take 30 seconds to a minute. If you then make changes to ofApp.cpp and compile again, compilation should go much quicker. This is because Xcode no longer needs to compile the entire OpenFrameworks library, only your small bit of code that changed.
 
 ## How Classes Work in C++ (Two Files!?)
 
@@ -239,15 +239,15 @@ and a body file (.cpp) which is like the instructions on what to do with the ing
 *   All of the code to fill in the function prototypes.
     
 
-To explore this more, open up the testApp.cpp and testApp.h files.
+To explore this more, open up the ofApp.cpp and ofApp.h files.
 
-### testApp.h
+### ofApp.h
 
-All of the code in testApp.h is wrapped in a large if statement called \#ifndef. This statement is designed explicitly for the preProcessor stage of compilation. Basically, when the compiler runs through your code before it compiles, it copies and pastes code to make all of the include statements work. If you have included the same header file in multiple places, this can cause a problem for compilation. \#ifndef tells the compiler that if whatever variable name you have decided, in this case, \_TEST\_APP, has already been defined somewhere in the code, not to define it again. It's sort of a hack to make organizing code easier, and is good practice to include in any custom classes you make (with a different variable name obviously).
+All of the code in ofApp.h is wrapped in a large if statement called \#ifndef. This statement is designed explicitly for the preProcessor stage of compilation. Basically, when the compiler runs through your code before it compiles, it copies and pastes code to make all of the include statements work. If you have included the same header file in multiple places, this can cause a problem for compilation. \#ifndef tells the compiler that if whatever variable name you have decided, in this case, \_TEST\_APP, has already been defined somewhere in the code, not to define it again. It's sort of a hack to make organizing code easier, and is good practice to include in any custom classes you make (with a different variable name obviously).
 
 After this comes the \#include statement that brings in all of the OpenFrameworks functionality.
 
-Then comes the class testApp : public ofSimpleApp{ line which is very similar to java's class declaration structure. To compare the two:
+Then comes the class ofApp : public ofSimpleApp{ line which is very similar to java's class declaration structure. To compare the two:
 C++  :
 class \[className\] : \[privacy\] \[extendedClass\]
 
@@ -263,7 +263,7 @@ It is important to note that classes end with a curly bracket and semi-colon "};
 More information on C++ classes can be found at:
 [http://pages.cs.wisc.edu/~hasti/cs368/CppTutorial/NOTES/CLASSES-INTRO.html][48]
 
-### testApp.cpp
+### ofApp.cpp
 
 This is where you write the actual code for your class. The syntax for class functions is slightly different than Processing.
 C++  :

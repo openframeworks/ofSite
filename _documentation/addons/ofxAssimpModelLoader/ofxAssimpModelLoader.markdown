@@ -36,7 +36,7 @@ model.loadModel("file_name.3DS");
 You could draw it using:
 
 ~~~~{.cpp}
-void testApp::draw(){
+void ofApp::draw(){
    ofBackground(50, 50, 50, 0);
    ofSetColor(255, 255, 255, 255);
 
@@ -47,7 +47,7 @@ void testApp::draw(){
 But probably you would not see the entire model. In the next snippet it appears centered:
 
 ~~~~{.cpp}
-void testApp::draw(){
+void ofApp::draw(){
    ofBackground(50, 50, 50, 0);
    ofSetColor(255, 255, 255, 255);
 
@@ -59,7 +59,7 @@ void testApp::draw(){
 There are other two ways to represent the model, by its points or by the wiring between the points. In the next snippet the three ways are represented:
 
 ~~~~{.cpp}
-void testApp::draw(){
+void ofApp::draw(){
    ofBackground(50, 50, 50, 0);
    ofSetColor(255, 255, 255, 255);
 
