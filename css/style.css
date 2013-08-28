@@ -1276,3 +1276,22 @@ div.log {padding-left:2em;}
     padding-right: 0.3em;
     color: #999;
 }
+
+
+/* Sponsor Logos */
+.sponsors {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	display: block;
+	margin: 30px auto 0;
+	padding: 0;
+}
+
+.sponsors a {
+	background: #FFF;
+	display: inline-block;
+	margin: 14px 24px 14px 0;
+	padding: 0;
+	text-align: center;
+};
