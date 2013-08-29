@@ -182,14 +182,14 @@ _description: _
 Useful to access the variables in the main app from other classes. The pointer returned by this function has to be cast from an ofBaseApp pointer, to a pointer to your inherited class, before being used.
 ie:
 ~~~~{.cpp}
-//testApp.h
-class testApp: public ofBaseApp{
+//ofApp.h
+class ofApp: public ofBaseApp{
 ...
    int someVar;
 }
 //myClass.cpp
 void myClass::method(){
-   doSomething( ((testApp*)ofGetAppPtr())->someVar );
+   doSomething( ((ofApp*)ofGetAppPtr())->someVar );
 }
 ~~~~
 
@@ -857,10 +857,10 @@ note: this code is implemented inside the ofAppRunner.
 
 <!----------------------------------------------------------------------------->
 
-###void ofRunApp(new testApp)
+###void ofRunApp(new ofApp)
 
 <!--
-_syntax: ofRunApp(new testApp)_
+_syntax: ofRunApp(new ofApp)_
 _name: ofRunApp_
 _returns: void_
 _returns_description: _
@@ -887,10 +887,10 @@ _description: _
 Begins the openGL cycle of the application. It's only called once from main function in main.cpp after setting the window with ofSetupOpenGL.
 From 0.06 the app is deleted on exit, so you need to call this function as shown in syntax:
 ~~~~{.cpp}
-ofRunApp(new testApp);
+ofRunApp(new ofApp);
 ~~~~
 Previous versions of the examples can be using this syntax:
-testApp app;
+ofApp app;
 ofRunApp(&app);
 which will make the app crash when closing it.
 

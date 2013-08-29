@@ -58,7 +58,7 @@ In the .cpp file:
 
 ~~~~{.cpp}
 
-void testApp::setup() {
+void ofApp::setup() {
 	
 	// create object
 	MyThread thread;
@@ -67,12 +67,12 @@ void testApp::setup() {
 	thread.startThread(true, false);	// blocking, non verbose
 }
 
-void testApp::update() {
+void ofApp::update() {
 	
 	// do something with the thread is running
 }
 
-void testApp::exit() {
+void ofApp::exit() {
 
 	// stop the thread
 	thread.stopThread();
@@ -125,7 +125,7 @@ In the .cpp file:
 
 ~~~~{.cpp}
 
-void testApp::setup() {
+void ofApp::setup() {
 	
 	// create object
 	MyThread thread;
@@ -134,7 +134,7 @@ void testApp::setup() {
 	thread.startThread(true, false);	// blocking, non verbose
 }
 
-void testApp::update() {
+void ofApp::update() {
 	
 	// lock access to the resource
 	thread.lock();
@@ -146,7 +146,7 @@ void testApp::update() {
 	thread.unlock();
 }
 
-void testApp::exit() {
+void ofApp::exit() {
 
 	// stop the thread
 	thread.stopThread();
@@ -950,7 +950,7 @@ In the .cpp file:
 
 ~~~~{.cpp}
 
-void testApp::setup() {
+void ofApp::setup() {
 
 	// create object
 	MyThread thread;
@@ -959,12 +959,12 @@ void testApp::setup() {
 	thread.startThread(true, false);	// blocking, non verbose
 }
 
-void testApp::update() {
+void ofApp::update() {
 
 	// do something else while the thread is running
 }
 
-void testApp::exit() {
+void ofApp::exit() {
 	
 	// stop the thread
 	thread.stopThread();

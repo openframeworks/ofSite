@@ -38,14 +38,14 @@ To use it in your main.cpp do:
 
 ~~~~{.cpp}
     #include "ofMain.h"
-    #include "testApp.h"
+    #include "ofApp.h"
     #include "ofAppNoWindow.h"
 
     //========================================================================
     int main( ){
         ofAppNoWindow w;
 	    ofSetupOpenGL(&w,1024,768, OF_WINDOW);
-	    ofRunApp( new testApp());
+	    ofRunApp( new ofApp());
 
     }
 ~~~~

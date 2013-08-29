@@ -86,7 +86,7 @@ This is how you declare a Class -\> in the header file (\*.h), otherwise known a
 We have declared the Ball class header filer (the list of ingredients) and now lets get to the cooking part -\> what to do with the ingredients!
 Please notice the '\#include' tag, this is a way to tell the compiler which file to include for each implementation file. When the program is compiled these '\#include' tags will be replaced by the original file they're referring to.
 The 'if statement' (\#ifndef) is a way to prevent the repetition of header files which could easily occur. Here's an example of how easily this could happen due to the recursive structure of the program:
-Lets say we're building a Pool game, we'll have the testApp class, dependent on this there will be the pool table class and also the pool stick class and as both of these will be needed for our balls colision detection function both will refer to the ball class individually. If we didn't use the '\#ifndef' 'if' statement the compiler would try to compile the ball class repeatedly and would find some conflicts.
+Lets say we're building a Pool game, we'll have the ofApp class, dependent on this there will be the pool table class and also the pool stick class and as both of these will be needed for our balls colision detection function both will refer to the ball class individually. If we didn't use the '\#ifndef' 'if' statement the compiler would try to compile the ball class repeatedly and would find some conflicts.
 
 [![Image:ex-ifndef.jpg](003_images/Ex-ifndef.jpg)][16]
 
@@ -172,7 +172,7 @@ by now you must be seeing a bouncing ball on the screen! great!
 
 you're probably asking yourself now why did you have so much trouble just to create a bouncing ball. You could have done this (and you've probably done it!) without using classes. In fact one of the advantages of using classes is to be able to create multiple individual objects with the same characteristics. 
 So, lets do that now!
-going back to your testApp.h file we'll just need to create a couple of new objects:
+going back to your ofApp.h file we'll just need to create a couple of new objects:
 
 ~~~~{.cpp}   
     	 ofBall myBall1;
@@ -184,7 +184,7 @@ going back to your testApp.h file we'll just need to create a couple of new obje
 
 And in the implementation file (\*.cpp) just call the corresponding methods for each of the objects.
 
-in the testApp's update() function:
+in the ofApp's update() function:
 
 ~~~~{.cpp}
     	myBall1.update();
@@ -275,7 +275,7 @@ As we've changed the constructor we'll need to update the ofBall implementation 
 ~~~~    
     
 By implementing these changes we'll also need to create space in memory for these objects. We'll do this by creating a pointer (a reference in memory) for each object.
-Back to the testApp.h (definitions) file we'll declare a new object like this:
+Back to the ofApp.h (definitions) file we'll declare a new object like this:
 
 ~~~~{.cpp}  
     	ofBall *myBall;  

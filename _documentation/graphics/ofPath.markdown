@@ -3157,7 +3157,7 @@ OF_POLY_WINDING_ABS_GEQ_TWO
 So adding the following points:
 
 ~~~~{.cpp}
-void testApp::setup(){
+void ofApp::setup(){
 	
 	path.lineTo(0, 400);
 	path.lineTo(400, 400);
@@ -3196,7 +3196,7 @@ void testApp::setup(){
 
 }
 
-void testApp::draw(){
+void ofApp::draw(){
 	
 	ofTranslate(40,40);
 	path.draw();
@@ -3205,7 +3205,7 @@ void testApp::draw(){
 	
 }
 
-void testApp::keyPressed(int key){
+void ofApp::keyPressed(int key){
 	
 	mode++;
 	if( mode > 4 ) mode = 0;
