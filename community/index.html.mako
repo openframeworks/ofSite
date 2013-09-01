@@ -34,7 +34,7 @@
         <p>Conferences, workshops, and talks related to oF and the surrounding community</p>
         <ul>
         <li><a href="http://push-conference.com/">push.conference</a>, Munich, 25-26 October 2013</li>
-        <li><a href="http://studioforcreativeinquiry.org/events/creative-coding-on-the-raspberry-pi-with-openframeworks"OF + RaspberryPi workshop and hackathon</a>, CMU, Pittsburgh.  11-13 October 2013.</li>
+        <li><a href="http://studioforcreativeinquiry.org/events/creative-coding-on-the-raspberry-pi-with-openframeworks">OF + RaspberryPi workshop and hackathon</a>, CMU, Pittsburgh.  11-13 October 2013.</li>
         </ul>
 
         <h3 style="padding-top:30px">recurring meetups</h3>
