@@ -2,7 +2,7 @@
 
     
 function OnLoad() {
-    var feedGithub = new google.feeds.Feed("https://github.com/openframeworks/openFrameworks/commits/develop.atom");
+    var feedGithub = new google.feeds.Feed("https://github.com/openframeworks/openFrameworks/commits/master.atom");
     feedGithub.setNumEntries(10);
     feedGithub.setResultFormat(google.feeds.Feed.XML_FORMAT);
     // Calling load sends the request off.  It requires a callback function.
