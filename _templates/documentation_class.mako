@@ -41,7 +41,7 @@
                          % else:
                          <li>
                          % endif
-                         <a href="#show_${method.name}" class="${method.name}">${method.name}()</a></li>
+                         <a href="#show_${method.name}" class="${method.name}" data-lookup="${method.name}">${method.name}()</a></li>
                      % endif
                      <% prevmethod = method.name %>
                  % endfor
@@ -61,7 +61,7 @@
                             % else:
                             <li>
                             % endif
-                            <a href="#show_${var.name}" class="${var.name}">${var.type} ${var.name}</a> </li>
+                            <a href="#show_${var.name}" class="${var.name}" data-lookup="${var.name}">${var.type} ${var.name}</a> </li>
                          % endif
                      % endfor
                  </ul>
@@ -81,7 +81,7 @@
                             % else:
                             <li>
                             % endif
-                            <a href="#show_${method.name}" class="${method.name}">${method.name}()</a></li>
+                            <a href="#show_${method.name}" class="${method.name}" data-lookup="${method.name}">${method.name}()</a></li>
                          % endif
                          <% prevmethod = method.name %>
                      % endfor
