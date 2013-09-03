@@ -22,16 +22,12 @@ body {
     padding-right: 0.3em;
     color: #009bca;
 }
-#body-wrap ul li:before {
-    content: '> ';
-    padding-right: 0.3em;
-    color: #009bca;
-}
 #body-wrap ul li.docs-module-title:before{
     content: '';
     padding-right: 0.3em;
     color: #009bca;
 }
+
 #content {
 	box-shadow: 5px 5px 5px #aaa, -5px 0 5px #aaa;
 	margin: auto;
@@ -743,6 +739,17 @@ a.docs_class{
 	padding: 0px 0px 10px 0px;
 	position: relative;
 }
+
+/* BEGIN Fixes for documentation containing unordered lists */
+#body-wrap .documentation_detail_description li:before {
+  content: none;
+}
+#body-wrap .documentation_detail_description li {
+  list-style-type: disc;
+}
+/* END Fixes for documentation containing unordered lists */
+
+
 .hide_core_functions, .hide_addons_functions, .collapse_core, .collapse_addons{
     cursor:pointer;cursor:hand;
 }
@@ -1274,7 +1281,7 @@ div.log {padding-left:2em;}
 #body-wrap ul li.noDoc:before{
     content: '> ';
     padding-right: 0.3em;
-    color: #999;
+    color: #bbb;
 }
 
 
