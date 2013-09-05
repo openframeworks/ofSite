@@ -1,10 +1,19 @@
 #class ofAppNoWindow
 
 
+##InlineDescription
+
+
+
+
+
+
+
+
 ##Description
 
 
-
+Sometimes you might want to run your OF application without a window at all, for instance on a server where it's simply doing image processing and file IO or on a device that doesn't have a monitor attached to it at all. In that case, you might want to make an OF app with no window, which is what this class allows you to do. We call it "headless mode" sometimes, and it's a powerful tool.
 
 
 ##Methods
@@ -29,7 +38,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -57,7 +77,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -85,7 +116,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -113,7 +155,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -141,7 +194,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -169,7 +233,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -197,7 +272,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -225,7 +311,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -253,7 +350,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -281,7 +389,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -317,6 +436,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofBaseApp ofAppPtr
@@ -341,6 +461,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int width
@@ -358,6 +479,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 

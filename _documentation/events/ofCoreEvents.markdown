@@ -1,8 +1,16 @@
 #class ofCoreEvents
 
 
-##Description
+##InlineDescription
 
+
+
+
+
+
+
+
+##Description
 
 Class for the core events in oF. This is used inside oF to create the global var ofEvents that can be used to register any class to the core events setup, update, draw, exit, keyPressed, keyReleased, mousePressed, mouseReleased, mouseDragged, mouseMoved and windowResize.
 
@@ -36,6 +44,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -64,6 +82,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -202,6 +230,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofEvent< ofKeyEventArgs > keyPressed
@@ -269,6 +298,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -425,6 +455,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofEvent touchDoubleTap
@@ -442,6 +473,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -473,6 +505,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofEvent touchMoved
@@ -497,6 +530,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofEvent touchUp
@@ -514,6 +548,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -563,6 +598,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 

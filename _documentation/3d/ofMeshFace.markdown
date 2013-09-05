@@ -1,8 +1,16 @@
 #class ofMeshFace
 
 
-##Description
+##InlineDescription
 
+
+
+
+
+
+
+
+##Description
 
 An ofMeshFace is a face on one of the ofPrimitive instances. In the ofPrimitive a face consists of 3 points connected together, like in the following image:
 
@@ -15,6 +23,9 @@ vector<ofMeshFace> triangles = box.getMesh().getUniqueFaces();
 ~~~~
 
 They're very handy for manipulating individual vertices or doing strange/fun things with intersection and boundary testing, among many many other things.
+
+
+
 
 
 ##Methods
@@ -39,7 +50,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -49,12 +71,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofFloatColor getColor(index)
+###const ofFloatColor & getColor(index)
 
 <!--
 _syntax: getColor(index)_
 _name: getColor_
-_returns: ofFloatColor_
+_returns: const ofFloatColor &_
 _returns_description: _
 _parameters: int index_
 _access: public_
@@ -67,7 +89,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -77,12 +110,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec3f getFaceNormal()
+###const ofVec3f & getFaceNormal()
 
 <!--
 _syntax: getFaceNormal()_
 _name: getFaceNormal_
-_returns: ofVec3f_
+_returns: const ofVec3f &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -95,7 +128,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -105,12 +149,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec3f getNormal(index)
+###const ofVec3f & getNormal(index)
 
 <!--
 _syntax: getNormal(index)_
 _name: getNormal_
-_returns: ofVec3f_
+_returns: const ofVec3f &_
 _returns_description: _
 _parameters: int index_
 _access: public_
@@ -123,7 +167,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -133,12 +188,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec2f getTexCoord(index)
+###const ofVec2f & getTexCoord(index)
 
 <!--
 _syntax: getTexCoord(index)_
 _name: getTexCoord_
-_returns: ofVec2f_
+_returns: const ofVec2f &_
 _returns_description: _
 _parameters: int index_
 _access: public_
@@ -151,7 +206,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -161,12 +227,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec3f getVertex(index)
+###const ofVec3f & getVertex(index)
 
 <!--
 _syntax: getVertex(index)_
 _name: getVertex_
-_returns: ofVec3f_
+_returns: const ofVec3f &_
 _returns_description: _
 _parameters: int index_
 _access: public_
@@ -179,7 +245,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -207,7 +284,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -235,7 +323,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -263,7 +362,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -291,7 +401,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -319,7 +440,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -347,7 +479,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -375,7 +518,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -403,7 +557,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -431,7 +596,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -459,7 +635,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -487,7 +674,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -523,6 +721,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool bHasColors
@@ -540,6 +739,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -571,6 +771,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool bHasTexcoords
@@ -588,6 +789,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -619,6 +821,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofVec3f faceNormal
@@ -636,6 +839,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -667,6 +871,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofVec2f texCoords
@@ -691,6 +896,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofVec3f vertices
@@ -708,6 +914,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 

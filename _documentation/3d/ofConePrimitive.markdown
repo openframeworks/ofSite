@@ -1,22 +1,70 @@
 #class ofConePrimitive
 
 
+##InlineDescription
+
+
+
+
+
+
+
+
 ##Description
 
+The ofConePrimitive allows you to create a 3D cone. Note this:
 
 
+
+Like all primitives it allows you to set the size, draw it, set positions, etc, as a simple example:
+
+~~~~{.cpp}
+
+void setup()
+{
+
+	cone.set( coneRadius, coneHeight, coneRadiusSegments, coneHeightSegments );
+}
+
+void draw()
+{
+
+	cone.setPosition(ofGetWidth()*.2, ofGetHeight()*.75, 0);
+	cone.rotate(spinX, 1.0, 0.0, 0.0);
+	cone.rotate(spinY, 0, 1.0, 0.0);
+
+	// get all the faces from the cpme, handy when you want to copy
+	// individual vertices or tweak them a little ;)
+	vector<ofMeshFace> triangles = cone.getMesh().getUniqueFaces();
+
+	// now draw
+	cone.draw();
+}
+~~~~
+
+To draw a texture over any primitive, simply bind the ofTexture instance and then draw your primitive:
+
+~~~~{.cpp}
+
+texture.getTextureReference().bind();
+// now draw
+cone.draw();
+
+~~~~
+
+Beware of the cone texture coordinates, they're a little strange.
 
 
 ##Methods
 
 
 
-###ofIndexType getCapIndices()
+###vector< ofIndexType > getCapIndices()
 
 <!--
 _syntax: getCapIndices()_
 _name: getCapIndices_
-_returns: ofIndexType_
+_returns: vector< ofIndexType >_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -29,10 +77,21 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
 
+This returns a vector of the indices of vertices that make up the cap (as opposed to the cone indices)
 
 
 
@@ -57,22 +116,33 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
 
+This returns an ofMesh made up of the cap (as opposed to the cone)
 
 
 
 
 <!----------------------------------------------------------------------------->
 
-###ofIndexType getConeIndices()
+###vector< ofIndexType > getConeIndices()
 
 <!--
 _syntax: getConeIndices()_
 _name: getConeIndices_
-_returns: ofIndexType_
+_returns: vector< ofIndexType >_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -85,11 +155,22 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
 
 
+This returns a vector of the indices of vertices that make up the cone (as opposed to the cap indices)
 
 
 
@@ -113,10 +194,22 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
 
+
+This returns an ofMesh made up of the cone (as opposed to the cap)
 
 
 
@@ -141,11 +234,23 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
 
 
+
+This returns the height of the cone.
 
 
 
@@ -169,9 +274,21 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
+
+This returns the radius of the cap
 
 
 
@@ -197,11 +314,22 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
 
 
+This returns the resolution of the cone (rather than the cap)
 
 
 
@@ -225,11 +353,23 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
 
 
+
+This returns the resolution of the cap (rather than the cone)
 
 
 
@@ -253,7 +393,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -281,7 +432,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -309,7 +471,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -337,7 +510,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -365,7 +549,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -393,7 +588,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -421,7 +627,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -449,7 +666,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -477,7 +705,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -505,7 +744,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -533,7 +783,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -561,7 +822,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -589,7 +861,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -617,7 +900,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -645,7 +939,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -673,7 +978,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -709,6 +1025,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###float radius
@@ -726,6 +1043,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -757,6 +1075,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int strides
@@ -781,6 +1100,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int vertices
@@ -798,6 +1118,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 

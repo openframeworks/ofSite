@@ -1,9 +1,17 @@
 #class ofAppGLFWWindow
 
 
+##InlineDescription
+
+
+
+
+
 ##Description
 
 
+
+This is the base class for the [GLFW](https://github.com/glfw) renderer that you can optionally use with openFrameworks. We've moved away from GLUT and towards GLFW for our windowing system. You probably won't deal with this a great deal (hopefully).
 
 
 
@@ -29,7 +37,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -57,8 +76,17 @@ _visible: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -85,10 +113,21 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
 
+This is the drag and drop callback. This should be handled in your ofBaseApp instance.
 
 
 
@@ -113,7 +152,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -141,7 +191,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -169,10 +230,21 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
 
+This is the exit callback that is called by your the ofAppRunner [exit()](../ofAppRunner_functions.html#ofExit) method.
 
 
 
@@ -197,7 +269,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -225,10 +308,21 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
 
+Gets the height of the current window and is mirrored in the ofGetScreenHeight() method.
 
 
 
@@ -253,7 +347,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -281,10 +386,21 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
 
+Gets the height of the current window and is mirrored in the ofGetWindowSize() method.
 
 
 
@@ -309,9 +425,20 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
+Gets the height of the current window and is mirrored in the ofGetScreenWidth() method.
 
 
 
@@ -337,10 +464,21 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
 
+Returns one of the following: OF_FULLSCREEN or OF_WINDOW.
 
 
 
@@ -365,10 +503,21 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
 
+This returns the location of the window relative to the deivce that it's being displayed on.
 
 
 
@@ -393,7 +542,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -421,7 +581,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -449,7 +620,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -477,7 +659,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -505,10 +698,21 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
 
+Hardcoded to return true right now.
 
 
 
@@ -533,7 +737,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -561,7 +776,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -589,7 +815,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -617,7 +854,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -645,7 +893,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -673,7 +932,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -701,7 +971,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -729,7 +1010,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -757,7 +1049,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -785,7 +1088,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -813,7 +1127,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -841,7 +1166,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -869,7 +1205,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -897,7 +1244,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -925,7 +1283,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -953,7 +1322,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -981,7 +1361,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1009,7 +1400,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1037,7 +1439,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1065,7 +1478,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1093,7 +1517,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1121,7 +1556,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1149,7 +1595,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1177,7 +1634,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1205,7 +1673,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1233,7 +1712,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1261,7 +1751,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1289,7 +1790,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1325,6 +1837,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int bBits
@@ -1342,6 +1855,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -1373,6 +1887,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool bEnableSetupScreen
@@ -1390,6 +1905,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -1421,6 +1937,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int buttonInUse
@@ -1438,6 +1955,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -1469,6 +1987,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int depthBits
@@ -1486,6 +2005,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -1517,6 +2037,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int glVersionMajor
@@ -1534,6 +2055,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -1565,6 +2087,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool iconSet
@@ -1582,6 +2105,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -1613,6 +2137,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int nFramesSinceWindowResized
@@ -1630,6 +2155,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -1661,6 +2187,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int nonFullScreenW
@@ -1678,6 +2205,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -1709,6 +2237,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int nonFullScreenY
@@ -1726,6 +2255,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -1757,6 +2287,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofOrientation orientation
@@ -1774,6 +2305,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -1805,6 +2337,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int requestedHeight
@@ -1822,6 +2355,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -1853,6 +2387,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int samples
@@ -1870,6 +2405,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -1901,6 +2437,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int windowH
@@ -1918,6 +2455,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -1949,6 +2487,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###GLFWwindow * windowP
@@ -1973,6 +2512,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int windowW
@@ -1990,6 +2530,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 

@@ -1,8 +1,16 @@
 #class ofVec2f
 
 
-##Description
+##InlineDescription
 
+
+
+
+
+
+
+
+##Description
 
 ofVec2f is a class for storing a two dimensional vector. 
 
@@ -67,6 +75,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -104,6 +122,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -134,6 +162,18 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+Angle (deg) between two vectors. This is a signed relative angle between -180 and 180. 
+
+
+
+
+
+
 
 _description: _
 
@@ -172,6 +212,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+Angle (deg) between two vectors. This is a signed relative angle between -180 and 180. 
+
+
+
+
+
+
+
 _description: _
 
 
@@ -191,12 +243,12 @@ float angle = v1.angleRad(v2); // angle is HALF_PI
 
 <!----------------------------------------------------------------------------->
 
-###ofVec2f average(*points, num)
+###ofVec2f & average(*points, num)
 
 <!--
 _syntax: average(*points, num)_
 _name: average_
-_returns: ofVec2f_
+_returns: ofVec2f &_
 _returns_description: _
 _parameters: const ofVec2f *points, int num_
 _access: public_
@@ -208,6 +260,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -251,6 +313,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -290,6 +362,16 @@ _visible: False_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -320,6 +402,18 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+Dot Product. 
+
+
+
+
+
+
 
 _description: _
 
@@ -372,6 +466,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+p==0.0 results in this point, p==0.5 results in the midpoint, and p==1.0 results in pnt being returned. 
+
+
+
+
+
+
+
 _description: _
 
 
@@ -409,6 +515,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -450,6 +566,16 @@ _visible: True_
 _advanced: True_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -482,6 +608,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -519,6 +655,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -560,6 +706,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -598,6 +754,16 @@ _static: no_
 _visible: True_
 _advanced: True_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -639,6 +805,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -676,6 +852,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -706,6 +892,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -744,6 +940,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -775,6 +981,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -793,12 +1009,12 @@ ofVec2f v2 = v1.getScaled( 15 ); // ( 9, 12 ), length is now 15
 
 <!----------------------------------------------------------------------------->
 
-###ofVec2f interpolate(&pnt, p)
+###ofVec2f & interpolate(&pnt, p)
 
 <!--
 _syntax: interpolate(&pnt, p)_
 _name: interpolate_
-_returns: ofVec2f_
+_returns: ofVec2f &_
 _returns_description: _
 _parameters: const ofVec2f &pnt, float p_
 _access: public_
@@ -810,6 +1026,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -852,6 +1078,18 @@ _visible: False_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+p==0.0 results in this point, p==0.5 results in the midpoint, and p==1.0 results in pnt being returned. 
+
+
+
+
+
+
+
 _description: _
 
 
@@ -880,6 +1118,18 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+Checks if vectors look in the same direction. Tolerance is specified in degree. 
+
+
+
+
+
+
 
 _description: _
 
@@ -910,6 +1160,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -938,6 +1198,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -977,6 +1247,16 @@ _visible: False_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -988,12 +1268,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec2f limit(max)
+###ofVec2f & limit(max)
 
 <!--
 _syntax: limit(max)_
 _name: limit_
-_returns: ofVec2f_
+_returns: ofVec2f &_
 _returns_description: _
 _parameters: float max_
 _access: public_
@@ -1005,6 +1285,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1046,6 +1336,16 @@ _visible: False_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1057,12 +1357,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec2f map(&origin, &vx, &vy)
+###ofVec2f & map(&origin, &vx, &vy)
 
 <!--
 _syntax: map(&origin, &vx, &vy)_
 _name: map_
-_returns: ofVec2f_
+_returns: ofVec2f &_
 _returns_description: _
 _parameters: const ofVec2f &origin, const ofVec2f &vx, const ofVec2f &vy_
 _access: public_
@@ -1074,6 +1374,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1108,6 +1418,16 @@ _visible: False_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1137,6 +1457,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1159,12 +1489,12 @@ This is handy if, for example, you want to find out when a point becomes *close 
 
 <!----------------------------------------------------------------------------->
 
-###ofVec2f middle(&pnt)
+###ofVec2f & middle(&pnt)
 
 <!--
 _syntax: middle(&pnt)_
 _name: middle_
-_returns: ofVec2f_
+_returns: ofVec2f &_
 _returns_description: _
 _parameters: const ofVec2f &pnt_
 _access: public_
@@ -1176,6 +1506,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1218,6 +1558,16 @@ _visible: False_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1229,12 +1579,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec2f normalize()
+###ofVec2f & normalize()
 
 <!--
 _syntax: normalize()_
 _name: normalize_
-_returns: ofVec2f_
+_returns: ofVec2f &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1246,6 +1596,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1287,6 +1647,16 @@ _visible: False_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1315,6 +1685,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1353,6 +1733,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1388,6 +1778,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1425,6 +1825,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1453,6 +1863,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1483,6 +1903,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1511,6 +1941,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1551,6 +1991,16 @@ _visible: True_
 _advanced: True_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1590,6 +2040,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1608,12 +2068,12 @@ ofVec2f v2 = v1 * 4; // (8, 20)
 
 <!----------------------------------------------------------------------------->
 
-###ofVec2f operator*=(&vec)
+###ofVec2f & operator*=(&vec)
 
 <!--
 _syntax: operator*=(&vec)_
 _name: operator*=_
-_returns: ofVec2f_
+_returns: ofVec2f &_
 _returns_description: _
 _parameters: const ofVec2f &vec_
 _access: public_
@@ -1625,6 +2085,16 @@ _static: no_
 _visible: True_
 _advanced: True_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1647,12 +2117,12 @@ Useful for scaling a 2D point by a non-uniform scale.
 
 <!----------------------------------------------------------------------------->
 
-###ofVec2f operator*=(f)
+###ofVec2f & operator*=(f)
 
 <!--
 _syntax: operator*=(f)_
 _name: operator*=_
-_returns: ofVec2f_
+_returns: ofVec2f &_
 _returns_description: _
 _parameters: const float f_
 _access: public_
@@ -1664,6 +2134,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1700,6 +2180,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1738,6 +2228,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1756,12 +2256,12 @@ ofVec2f v2 = v1 + 10; // (12, 15)
 
 <!----------------------------------------------------------------------------->
 
-###ofVec2f operator+=(&vec)
+###ofVec2f & operator+=(&vec)
 
 <!--
 _syntax: operator+=(&vec)_
 _name: operator+=_
-_returns: ofVec2f_
+_returns: ofVec2f &_
 _returns_description: _
 _parameters: const ofVec2f &vec_
 _access: public_
@@ -1773,6 +2273,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1793,12 +2303,12 @@ v1 += v2; // v1 is (65, 70)
 
 <!----------------------------------------------------------------------------->
 
-###ofVec2f operator+=(f)
+###ofVec2f & operator+=(f)
 
 <!--
 _syntax: operator+=(f)_
 _name: operator+=_
-_returns: ofVec2f_
+_returns: ofVec2f &_
 _returns_description: _
 _parameters: const float f_
 _access: public_
@@ -1810,6 +2320,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1846,6 +2366,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1884,6 +2414,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1920,6 +2460,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1938,12 +2488,12 @@ ofVec2f v2 = -v1; // (-2, -5)
 
 <!----------------------------------------------------------------------------->
 
-###ofVec2f operator-=(&vec)
+###ofVec2f & operator-=(&vec)
 
 <!--
 _syntax: operator-=(&vec)_
 _name: operator-=_
-_returns: ofVec2f_
+_returns: ofVec2f &_
 _returns_description: _
 _parameters: const ofVec2f &vec_
 _access: public_
@@ -1955,6 +2505,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1975,12 +2535,12 @@ v1 -= v2; // v1 is (15, -30)
 
 <!----------------------------------------------------------------------------->
 
-###ofVec2f operator-=(f)
+###ofVec2f & operator-=(f)
 
 <!--
 _syntax: operator-=(f)_
 _name: operator-=_
-_returns: ofVec2f_
+_returns: ofVec2f &_
 _returns_description: _
 _parameters: const float f_
 _access: public_
@@ -1992,6 +2552,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -2028,6 +2598,16 @@ _static: no_
 _visible: True_
 _advanced: True_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -2068,6 +2648,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -2086,12 +2676,12 @@ ofVec2f v2 = v1 / 4; // (0.5, 1.25)
 
 <!----------------------------------------------------------------------------->
 
-###ofVec2f operator/=(&vec)
+###ofVec2f & operator/=(&vec)
 
 <!--
 _syntax: operator/=(&vec)_
 _name: operator/=_
-_returns: ofVec2f_
+_returns: ofVec2f &_
 _returns_description: _
 _parameters: const ofVec2f &vec_
 _access: public_
@@ -2103,6 +2693,16 @@ _static: no_
 _visible: True_
 _advanced: True_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -2125,12 +2725,12 @@ Useful for scaling a 2D point by a non-uniform scale.
 
 <!----------------------------------------------------------------------------->
 
-###ofVec2f operator/=(f)
+###ofVec2f & operator/=(f)
 
 <!--
 _syntax: operator/=(f)_
 _name: operator/=_
-_returns: ofVec2f_
+_returns: ofVec2f &_
 _returns_description: _
 _parameters: const float f_
 _access: public_
@@ -2142,6 +2742,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -2178,6 +2788,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -2218,6 +2838,16 @@ _visible: True_
 _advanced: True_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -2239,12 +2869,12 @@ This function can be handy if you want to do the same operation to both x and y 
 
 <!----------------------------------------------------------------------------->
 
-###ofVec2f perpendicular()
+###ofVec2f & perpendicular()
 
 <!--
 _syntax: perpendicular()_
 _name: perpendicular_
-_returns: ofVec2f_
+_returns: ofVec2f &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -2256,6 +2886,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -2296,6 +2936,16 @@ _visible: False_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -2307,12 +2957,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec2f rescale(length)
+###ofVec2f & rescale(length)
 
 <!--
 _syntax: rescale(length)_
 _name: rescale_
-_returns: ofVec2f_
+_returns: ofVec2f &_
 _returns_description: _
 _parameters: const float length_
 _access: public_
@@ -2324,6 +2974,16 @@ _static: no_
 _visible: False_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -2354,6 +3014,16 @@ _visible: False_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -2365,12 +3035,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec2f rotate(angle)
+###ofVec2f & rotate(angle)
 
 <!--
 _syntax: rotate(angle)_
 _name: rotate_
-_returns: ofVec2f_
+_returns: ofVec2f &_
 _returns_description: _
 _parameters: float angle_
 _access: public_
@@ -2382,6 +3052,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -2402,12 +3082,12 @@ v1.rotate( 45 ); // (0, 1)
 
 <!----------------------------------------------------------------------------->
 
-###ofVec2f rotate(angle, &pivot)
+###ofVec2f & rotate(angle, &pivot)
 
 <!--
 _syntax: rotate(angle, &pivot)_
 _name: rotate_
-_returns: ofVec2f_
+_returns: ofVec2f &_
 _returns_description: _
 _parameters: float angle, const ofVec2f &pivot_
 _access: public_
@@ -2419,6 +3099,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -2433,12 +3123,12 @@ Like [rotate](#rotate) but rotates around pivot rather than around the origin.
 
 <!----------------------------------------------------------------------------->
 
-###ofVec2f rotateRad(angle)
+###ofVec2f & rotateRad(angle)
 
 <!--
 _syntax: rotateRad(angle)_
 _name: rotateRad_
-_returns: ofVec2f_
+_returns: ofVec2f &_
 _returns_description: _
 _parameters: float angle_
 _access: public_
@@ -2450,6 +3140,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -2470,12 +3170,12 @@ v1.rotate( PI/4 ); // (0, 1)
 
 <!----------------------------------------------------------------------------->
 
-###ofVec2f rotateRad(angle, &pivot)
+###ofVec2f & rotateRad(angle, &pivot)
 
 <!--
 _syntax: rotateRad(angle, &pivot)_
 _name: rotateRad_
-_returns: ofVec2f_
+_returns: ofVec2f &_
 _returns_description: _
 _parameters: float angle, const ofVec2f &pivot_
 _access: public_
@@ -2487,6 +3187,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -2519,6 +3229,16 @@ _visible: False_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -2548,6 +3268,16 @@ _visible: False_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -2559,12 +3289,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec2f scale(length)
+###ofVec2f & scale(length)
 
 <!--
 _syntax: scale(length)_
 _name: scale_
-_returns: ofVec2f_
+_returns: ofVec2f &_
 _returns_description: _
 _parameters: const float length_
 _access: public_
@@ -2576,6 +3306,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -2613,6 +3353,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -2648,6 +3398,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -2686,6 +3446,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -2714,6 +3484,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -2754,6 +3534,14 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
 
 
@@ -2791,6 +3579,16 @@ _static: yes_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 

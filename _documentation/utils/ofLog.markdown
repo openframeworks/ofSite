@@ -1,8 +1,34 @@
 #class ofLog
 
 
-##Description
+##InlineDescription
 
+a streaming log interface 
+
+
+
+
+ofLog accepts variables via the ostream operator << and builds a string and logs it when the stream is finished (via the destructor). A newline is printed automatically and all the stream controls (endl, flush, hex, etc) work normally. The log level is explicitly OF_LOG_NOTICE unless set, see the derived wrapper classes:
+
+Usage: ofLog() << "a string" << 100 << 20.234f;
+
+It also accepts the legacy ofLog interface: ofLog(ofLogLevel level, string message):
+
+Usage: ofLog(OF_LOG_ERROR, "another string");
+
+class idea from: [http://www.gamedev.net/community/forums/topic.asp?topic_id=525405&whichpage=1&#3406418](http://www.gamedev.net/community/forums/topic.asp?topic_id=525405&whichpage=1&#3406418) how to catch std::endl (which is actually a func pointer): [http://yvan.seth.id.au/Entries/Technology/Code/std__endl.html](http://yvan.seth.id.au/Entries/Technology/Code/std__endl.html)
+
+***author:*** 
+	Dan Wilcox [danomatika@gmail.com](danomatika@gmail.com) danomatika.com 
+
+
+
+
+
+
+
+
+##Description
 
 ofLog provides an interface for writing text output from your app. It's basically a more useful version of cout or printf where output can be filtered and written to the console or to a file. 
 
@@ -115,6 +141,18 @@ _visible: False_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+print a log line 
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -144,6 +182,16 @@ _visible: False_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -172,6 +220,18 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+log at notice level 
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -216,6 +276,18 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+set the log level 
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -275,6 +347,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+the legacy ofLog interfaces 
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -317,6 +401,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -383,6 +477,16 @@ _visible: False_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -394,12 +498,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofLog operator<<(&value)
+###ofLog & operator<<(&value)
 
 <!--
 _syntax: operator<<(&value)_
 _name: operator<<_
-_returns: ofLog_
+_returns: ofLog &_
 _returns_description: _
 _parameters: const T &value_
 _access: public_
@@ -411,6 +515,18 @@ _static: no_
 _visible: False_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+catch the << ostream with a template class to read any type of data 
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -441,6 +557,14 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
 
 
@@ -470,6 +594,14 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
 
 
@@ -481,12 +613,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofLog operator<<(&))
+###ofLog & operator<<(&))
 
 <!--
 _syntax: operator<<(&))_
 _name: operator<<_
-_returns: ofLog_
+_returns: ofLog &_
 _returns_description: _
 _parameters: std::ostream &(*func)(std::ostream &)_
 _access: public_
@@ -499,6 +631,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+catch the << ostream function pointers such as std::endl and std::hex 
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -510,12 +654,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofLog operator=(&from)
+###ofLog & operator=(&from)
 
 <!--
 _syntax: operator=(&from)_
 _name: operator=_
-_returns: ofLog_
+_returns: ofLog &_
 _returns_description: _
 _parameters: ofLog &from_
 _access: private_
@@ -527,6 +671,16 @@ _static: no_
 _visible: False_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -557,6 +711,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+put a space between stream operator calls? 
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -585,6 +751,18 @@ _static: yes_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+set the logging channel destinations for messages 
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -618,6 +796,18 @@ _static: no_
 _visible: False_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+does the actual printing when the ostream is done 
+
+
+
+
+
+
+
+
 
 _description: _
 

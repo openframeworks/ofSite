@@ -1,6 +1,15 @@
 #class ofMatrixStack
 
 
+##InlineDescription
+
+
+
+
+
+
+
+
 ##Description
 
 
@@ -29,7 +38,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -57,7 +77,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -85,7 +116,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -95,12 +137,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofMatrix4x4 getCurrentMatrix()
+###const ofMatrix4x4 & getCurrentMatrix()
 
 <!--
 _syntax: getCurrentMatrix()_
 _name: getCurrentMatrix_
-_returns: ofMatrix4x4_
+_returns: const ofMatrix4x4 &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -113,7 +155,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -141,7 +194,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -169,7 +233,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -197,7 +272,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -207,12 +293,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofMatrix4x4 getModelViewMatrix()
+###const ofMatrix4x4 & getModelViewMatrix()
 
 <!--
 _syntax: getModelViewMatrix()_
 _name: getModelViewMatrix_
-_returns: ofMatrix4x4_
+_returns: const ofMatrix4x4 &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -225,7 +311,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -235,12 +332,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofMatrix4x4 getModelViewProjectionMatrix()
+###const ofMatrix4x4 & getModelViewProjectionMatrix()
 
 <!--
 _syntax: getModelViewProjectionMatrix()_
 _name: getModelViewProjectionMatrix_
-_returns: ofMatrix4x4_
+_returns: const ofMatrix4x4 &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -253,7 +350,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -281,7 +389,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -309,7 +428,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -319,12 +449,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofMatrix4x4 getOrientationMatrix()
+###const ofMatrix4x4 & getOrientationMatrix()
 
 <!--
 _syntax: getOrientationMatrix()_
 _name: getOrientationMatrix_
-_returns: ofMatrix4x4_
+_returns: const ofMatrix4x4 &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -337,7 +467,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -347,12 +488,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofMatrix4x4 getOrientationMatrixInverse()
+###const ofMatrix4x4 & getOrientationMatrixInverse()
 
 <!--
 _syntax: getOrientationMatrixInverse()_
 _name: getOrientationMatrixInverse_
-_returns: ofMatrix4x4_
+_returns: const ofMatrix4x4 &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -365,7 +506,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -375,12 +527,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofMatrix4x4 getProjectionMatrix()
+###const ofMatrix4x4 & getProjectionMatrix()
 
 <!--
 _syntax: getProjectionMatrix()_
 _name: getProjectionMatrix_
-_returns: ofMatrix4x4_
+_returns: const ofMatrix4x4 &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -393,7 +545,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -403,12 +566,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofMatrix4x4 getProjectionMatrixNoOrientation()
+###const ofMatrix4x4 & getProjectionMatrixNoOrientation()
 
 <!--
 _syntax: getProjectionMatrixNoOrientation()_
 _name: getProjectionMatrixNoOrientation_
-_returns: ofMatrix4x4_
+_returns: const ofMatrix4x4 &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -421,7 +584,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -449,7 +623,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -477,7 +662,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -487,12 +683,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofMatrix4x4 getTextureMatrix()
+###const ofMatrix4x4 & getTextureMatrix()
 
 <!--
 _syntax: getTextureMatrix()_
 _name: getTextureMatrix_
-_returns: ofMatrix4x4_
+_returns: const ofMatrix4x4 &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -505,7 +701,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -533,7 +740,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -561,7 +779,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -589,7 +818,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -617,7 +857,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -645,7 +896,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -673,7 +935,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -701,7 +974,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -729,7 +1013,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -757,7 +1052,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -785,7 +1091,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -813,7 +1130,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -841,7 +1169,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -869,7 +1208,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -897,7 +1247,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -925,7 +1286,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -953,7 +1325,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -981,7 +1364,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1009,7 +1403,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1037,7 +1442,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -1073,6 +1489,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofMatrix4x4 currentMatrix
@@ -1090,6 +1507,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -1121,6 +1539,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofRectangle currentViewport
@@ -1138,6 +1557,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -1169,6 +1589,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofHandednessType handedness
@@ -1186,6 +1607,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -1217,6 +1639,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofMatrix4x4 modelViewMatrixStack
@@ -1234,6 +1657,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -1265,6 +1689,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofOrientation orientation
@@ -1282,6 +1707,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -1313,6 +1739,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofMatrix4x4 orientationMatrixInverse
@@ -1330,6 +1757,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -1361,6 +1789,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofMatrix4x4 orientedProjectionMatrix
@@ -1378,6 +1807,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -1409,6 +1839,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofMatrix4x4 projectionMatrixStack
@@ -1426,6 +1857,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -1457,6 +1889,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofMatrix4x4 textureMatrixStack
@@ -1474,6 +1907,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -1505,6 +1939,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofRectangle viewportHistory
@@ -1522,6 +1957,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 

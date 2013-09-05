@@ -1,8 +1,16 @@
 #class ofGstVideoGrabber
 
 
-##Description
+##InlineDescription
 
+
+
+
+
+
+
+
+##Description
 
 
 
@@ -30,6 +38,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -41,12 +59,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofGstVideoUtils getGstVideoUtils()
+###ofGstVideoUtils * getGstVideoUtils()
 
 <!--
 _syntax: getGstVideoUtils()_
 _name: getGstVideoUtils_
-_returns: ofGstVideoUtils_
+_returns: ofGstVideoUtils *_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -58,6 +76,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -88,6 +116,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -116,6 +154,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -146,6 +194,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -174,6 +232,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -204,6 +272,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -232,6 +310,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -262,6 +350,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -273,12 +371,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVideoDevice listDevices()
+###vector< ofVideoDevice > listDevices()
 
 <!--
 _syntax: listDevices()_
 _name: listDevices_
-_returns: ofVideoDevice_
+_returns: vector< ofVideoDevice >_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -290,6 +388,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -320,6 +428,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -331,12 +449,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofGstVideoFormat selectFormat(w, h, desired_framerate)
+###ofGstVideoFormat & selectFormat(w, h, desired_framerate)
 
 <!--
 _syntax: selectFormat(w, h, desired_framerate)_
 _name: selectFormat_
-_returns: ofGstVideoFormat_
+_returns: ofGstVideoFormat &_
 _returns_description: _
 _parameters: int w, int h, int desired_framerate_
 _access: private_
@@ -348,6 +466,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -378,6 +506,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -406,6 +544,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -436,6 +584,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+needs to be called before initGrabber 
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -464,6 +624,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -494,6 +664,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -523,6 +703,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -551,6 +741,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 

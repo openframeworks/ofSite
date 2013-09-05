@@ -1,8 +1,16 @@
 #class ofAudioEventArgs
 
 
-##Description
+##InlineDescription
 
+
+
+
+
+
+
+
+##Description
 
 This class is integrated into the openframeworks events system. When an audio event (audio received, audio requested) happens we record audio  information inside an object of the class. Used to send event messages. In the new openFrameworks release we can find a very ilustrative example about how to use events in openFrameworks.
 
@@ -31,6 +39,14 @@ _static: False_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
 
 _description: _
 
@@ -62,6 +78,14 @@ _static: False_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
 
 _description: _
 
@@ -102,6 +126,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int bufferSize
@@ -126,6 +151,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int nChannels
@@ -143,6 +169,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 

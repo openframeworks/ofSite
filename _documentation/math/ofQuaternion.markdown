@@ -1,8 +1,16 @@
 #class ofQuaternion
 
 
-##Description
+##InlineDescription
 
+
+
+
+
+
+
+
+##Description
 
 
 
@@ -29,6 +37,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -59,6 +77,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -87,6 +115,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -117,6 +155,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -145,6 +193,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -175,6 +233,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -204,6 +272,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -215,12 +293,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofQuaternion inverse()
+###const ofQuaternion inverse()
 
 <!--
 _syntax: inverse()_
 _name: inverse_
-_returns: ofQuaternion_
+_returns: const ofQuaternion_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -232,6 +310,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -262,6 +350,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -290,6 +388,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -320,6 +428,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+Set the elements of the Quat to represent a rotation of angle (degrees) around the axis (x,y,z) 
+
+
+
+
+
+
+
 _description: _
 
 
@@ -348,6 +468,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -378,6 +508,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -406,6 +546,32 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+Make a rotation Quat which will rotate vec1 to vec2
+
+This routine uses only fast geometric transforms, without costly acos/sin computations. It's exact, fast, and with less degenerate cases than the acos/sin method.
+
+For an explanation of the math used, you may see for example: [http://logiciels.cnes.fr/MARMOTTES/marmottes-mathematique.pdf](http://logiciels.cnes.fr/MARMOTTES/marmottes-mathematique.pdf)
+
+***note:*** 
+	This is the rotation with shortest angle, which is the one equivalent to the acos/sin transform method. Other rotations exists, for example to additionally keep a local horizontal attitude.
+
+
+***author:*** 
+	Nicolas Brodu 
+
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -436,6 +602,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -464,6 +640,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -494,6 +680,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -522,6 +718,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -552,6 +758,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -580,6 +796,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -610,6 +836,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -639,6 +875,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -650,12 +896,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofQuaternion operator*(rhs)
+###const ofQuaternion operator*(rhs)
 
 <!--
 _syntax: operator*(rhs)_
 _name: operator*_
-_returns: ofQuaternion_
+_returns: const ofQuaternion_
 _returns_description: _
 _parameters: float rhs_
 _access: public_
@@ -668,6 +914,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -679,12 +935,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofQuaternion operator*(&rhs)
+###const ofQuaternion operator*(&rhs)
 
 <!--
 _syntax: operator*(&rhs)_
 _name: operator*_
-_returns: ofQuaternion_
+_returns: const ofQuaternion_
 _returns_description: _
 _parameters: const ofQuaternion &rhs_
 _access: public_
@@ -696,6 +952,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -726,6 +992,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -737,12 +1013,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofQuaternion operator*=(rhs)
+###ofQuaternion & operator*=(rhs)
 
 <!--
 _syntax: operator*=(rhs)_
 _name: operator*=_
-_returns: ofQuaternion_
+_returns: ofQuaternion &_
 _returns_description: _
 _parameters: float rhs_
 _access: public_
@@ -755,6 +1031,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -766,12 +1052,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofQuaternion operator*=(&rhs)
+###ofQuaternion & operator*=(&rhs)
 
 <!--
 _syntax: operator*=(&rhs)_
 _name: operator*=_
-_returns: ofQuaternion_
+_returns: ofQuaternion &_
 _returns_description: _
 _parameters: const ofQuaternion &rhs_
 _access: public_
@@ -784,6 +1070,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -795,12 +1091,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofQuaternion operator+(&rhs)
+###const ofQuaternion operator+(&rhs)
 
 <!--
 _syntax: operator+(&rhs)_
 _name: operator+_
-_returns: ofQuaternion_
+_returns: const ofQuaternion_
 _returns_description: _
 _parameters: const ofQuaternion &rhs_
 _access: public_
@@ -813,6 +1109,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -824,12 +1130,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofQuaternion operator+=(&rhs)
+###ofQuaternion & operator+=(&rhs)
 
 <!--
 _syntax: operator+=(&rhs)_
 _name: operator+=_
-_returns: ofQuaternion_
+_returns: ofQuaternion &_
 _returns_description: _
 _parameters: const ofQuaternion &rhs_
 _access: public_
@@ -842,6 +1148,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -853,12 +1169,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofQuaternion operator-(&rhs)
+###const ofQuaternion operator-(&rhs)
 
 <!--
 _syntax: operator-(&rhs)_
 _name: operator-_
-_returns: ofQuaternion_
+_returns: const ofQuaternion_
 _returns_description: _
 _parameters: const ofQuaternion &rhs_
 _access: public_
@@ -871,6 +1187,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -882,12 +1208,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofQuaternion operator-()
+###const ofQuaternion operator-()
 
 <!--
 _syntax: operator-()_
 _name: operator-_
-_returns: ofQuaternion_
+_returns: const ofQuaternion_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -900,6 +1226,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -911,12 +1247,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofQuaternion operator-=(&rhs)
+###ofQuaternion & operator-=(&rhs)
 
 <!--
 _syntax: operator-=(&rhs)_
 _name: operator-=_
-_returns: ofQuaternion_
+_returns: ofQuaternion &_
 _returns_description: _
 _parameters: const ofQuaternion &rhs_
 _access: public_
@@ -928,6 +1264,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -958,6 +1304,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -969,12 +1325,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofQuaternion operator/(&denom)
+###const ofQuaternion operator/(&denom)
 
 <!--
 _syntax: operator/(&denom)_
 _name: operator/_
-_returns: ofQuaternion_
+_returns: const ofQuaternion_
 _returns_description: _
 _parameters: const ofQuaternion &denom_
 _access: public_
@@ -987,6 +1343,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -998,12 +1364,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofQuaternion operator/=(rhs)
+###ofQuaternion & operator/=(rhs)
 
 <!--
 _syntax: operator/=(rhs)_
 _name: operator/=_
-_returns: ofQuaternion_
+_returns: ofQuaternion &_
 _returns_description: _
 _parameters: float rhs_
 _access: public_
@@ -1016,6 +1382,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1027,12 +1403,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofQuaternion operator/=(&denom)
+###ofQuaternion & operator/=(&denom)
 
 <!--
 _syntax: operator/=(&denom)_
 _name: operator/=_
-_returns: ofQuaternion_
+_returns: ofQuaternion &_
 _returns_description: _
 _parameters: const ofQuaternion &denom_
 _access: public_
@@ -1044,6 +1420,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1074,6 +1460,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1085,12 +1481,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofQuaternion operator=(&q)
+###ofQuaternion & operator=(&q)
 
 <!--
 _syntax: operator=(&q)_
 _name: operator=_
-_returns: ofQuaternion_
+_returns: ofQuaternion &_
 _returns_description: _
 _parameters: const ofQuaternion &q_
 _access: public_
@@ -1102,6 +1498,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1132,6 +1538,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1160,6 +1576,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1190,6 +1616,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1218,6 +1654,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1248,6 +1694,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1276,6 +1732,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1306,6 +1772,18 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+Spherical Linear Interpolation As t goes from 0 to 1, the Quat object goes from "from" to "to" Reference: Shoemake at SIGGRAPH 89 See also [http://www.gamasutra.com/features/programming/19980703/quaternions_01.htm](http://www.gamasutra.com/features/programming/19980703/quaternions_01.htm) 
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1334,6 +1812,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1364,6 +1852,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1392,6 +1890,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1422,6 +1930,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
+
 _description: _
 
 
@@ -1450,6 +1968,16 @@ _static: no_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
 
 _description: _
 
