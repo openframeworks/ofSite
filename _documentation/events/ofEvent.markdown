@@ -12,7 +12,7 @@
 
 ##Description
 
-Class for creating custom events. Also used inside oF for it's own events (see ofCoreEvents).
+Class for creating custom events. Also used inside oF for its own events (see ofCoreEvents).
 
 ie: To create a new event:
 
@@ -25,6 +25,7 @@ To notify an event of that type:
 ~~~~{.cpp}
 ofNotifyEvent(onVolumeChange, 10.0);
 ~~~~
+
 
 To add a listener to that event, if the event is for example in an object called mySoundObject, and you want to register ofApp as a listener for that event:
 
