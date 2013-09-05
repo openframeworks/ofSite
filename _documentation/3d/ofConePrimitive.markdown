@@ -12,11 +12,7 @@
 
 ##Description
 
-The ofConePrimitive allows you to create a 3D cone. Note this:
-
-
-
-Like all primitives it allows you to set the size, draw it, set positions, etc, as a simple example:
+The ofConePrimitive allows you to create a 3D cone. Like all primitives it allows you to set the size, draw it, set positions, etc, as a simple example:
 
 ~~~~{.cpp}
 
