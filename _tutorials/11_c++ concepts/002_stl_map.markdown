@@ -1,6 +1,6 @@
 ---
 date: 2013/03/07 10:00:00
-title: stl::containers
+title: Having fun with Maps, specifically std::map
 summary: Overview of the non-vector containers in std::
 author: Joshua Noble
 ---
