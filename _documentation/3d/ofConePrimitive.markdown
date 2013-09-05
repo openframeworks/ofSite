@@ -96,6 +96,7 @@ This returns a vector of the indices of vertices that make up the cap (as oppose
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofMesh getCapMesh()
@@ -131,6 +132,7 @@ _description: _
 
 
 This returns an ofMesh made up of the cap (as opposed to the cone)
+
 
 
 
@@ -174,6 +176,7 @@ This returns a vector of the indices of vertices that make up the cone (as oppos
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofMesh getConeMesh()
@@ -210,6 +213,7 @@ _description: _
 
 
 This returns an ofMesh made up of the cone (as opposed to the cap)
+
 
 
 
@@ -254,6 +258,7 @@ This returns the height of the cone.
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###float getRadius()
@@ -289,6 +294,7 @@ _description: _
 
 
 This returns the radius of the cap
+
 
 
 
@@ -333,6 +339,7 @@ This returns the resolution of the cone (rather than the cap)
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int getResolutionCap()
@@ -370,6 +377,7 @@ _description: _
 
 
 This returns the resolution of the cap (rather than the cone)
+
 
 
 

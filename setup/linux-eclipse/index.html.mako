@@ -166,7 +166,7 @@ by setting up project properties. Right-click on the project in the project brow
 
 **j) Add code to the test project**
 
-Add some code to the project. In this step you can test if code completion works with Ctrl-Spacebar. e.g. type ofL Ctrl-Space and see if the ofLog method is displayed. You can also see if Eclipse will jump to the declaration of a method or constant by pressing F3. Compile the code using the Hammer icon. For this example I added a log message to the setup method in the testApp.cpp file. Make sure you choose the Debug configuration under the arrow of the Hammer.
+Add some code to the project. In this step you can test if code completion works with Ctrl-Spacebar. e.g. type ofL Ctrl-Space and see if the ofLog method is displayed. You can also see if Eclipse will jump to the declaration of a method or constant by pressing F3. Compile the code using the Hammer icon. For this example I added a log message to the setup method in the ofApp.cpp file. Make sure you choose the Debug configuration under the arrow of the Hammer.
 
 ![add code 1][01addCode]
 ![add code 2][02addCode]

@@ -19,7 +19,7 @@
         	<div class="box">
         	<ul class="documentation_class">
         	    <!-- class link -->
-                <li><a href="${block.name + '/' + clazz['name']}.html" class="documentation_class_link"><strong>${clazz['name']}</strong></a></li>
+                <li class="docs-module-title"><a href="${block.name + '/' + clazz['name']}.html" class="documentation_class_link"><strong>${clazz['name']}</strong></a></li>
                 
                 
         	    <!-- class methods -->

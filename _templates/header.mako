@@ -14,16 +14,16 @@
 	        <li><a href="${bf.config.site.url}/tutorials" class="${'active' if active=='tutorials' else ''}">tutorials</a></li>
 	        <li><a href="${bf.config.site.url}/gallery" class="${'active' if active=='gallery' else ''}">gallery</a></li>
 	        <li><a href="${bf.config.site.url}/community" class="${'active' if active=='community' else ''}">community</a></li> 
-	        <li><a href="${bf.config.site.url}/ofbuild.html" class="${'active' if active=='development' else ''}" >development</a></li>
+	        <li><a href="${bf.config.site.url}/development" class="${'active' if active=='development' else ''}" >development</a></li>
 		</ul>
 		
 		<ul class="menu-externals">
 			<li><span class="external-dot"> ></span>&nbsp;<a href="http://forum.openframeworks.cc/index.php" target="_blank">forum</a></li>
 			<li><span class="external-dot"> ></span>&nbsp;<a href="http://ofxaddons.com" target="_blank">addons</a></li>
-			<li><span class="external-dot"> ></span>&nbsp;<a href="http://wiki.openframeworks.cc/" target="_blank">wiki</a></li>
 			<li><span class="external-dot"> ></span>&nbsp;<a href="http://github.com/openframeworks/openFrameworks" target="_blank">github</a></li>
 			<li><span class="external-dot"> ></span>&nbsp;<a href="http://openframeworks.cc/list-info" target="_blank">mailing list</a></li>
 			<li><span class="external-dot"> ></span>&nbsp;<a href="http://webchat.freenode.net?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39" target="_blank">IRC</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://blog.openframeworks.cc/" target="_blank">blog</a></li>
 		</ul>
 		
 			<!--form method="get" id="searchform" action="/index.php">

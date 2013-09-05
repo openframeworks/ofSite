@@ -3,7 +3,7 @@ html {
 }
 body {
 	background-color: #CCC;
-	font-family: Arial, sans-serif;
+	font-family: Helvetica, Ubuntu Regular, FreeSans, Arial, sans-serif;
 	font-size: 0.80em;
 	line-height: 1.5em;
 	height: 100%;
@@ -11,6 +11,23 @@ body {
 	padding: 0px;
 	text-align: center;
 }
+#body-wrap ul li {
+    /* Text color */
+    color: black;
+    list-style-type: none;
+}
+
+#body-wrap ul li:before {
+    content: '> ';
+    padding-right: 0.3em;
+    color: #009bca;
+}
+#body-wrap ul li.docs-module-title:before{
+    content: '';
+    padding-right: 0.3em;
+    color: #009bca;
+}
+
 #content {
 	box-shadow: 5px 5px 5px #aaa, -5px 0 5px #aaa;
 	margin: auto;
@@ -657,8 +674,12 @@ div.sectiontitle h2{
 	position: relative;
 	width: 650px;
 }
-.documentation_detail.class_documentation p{
-    margin:0;
+.inlined_docs{
+    background-color:#f8f8f9;
+    padding: 1em;
+}
+a.docs_class{
+    font-family: "Consolas","Bitstream Vera Sans Mono","Courier New",Courier,monospace;
 }
 .documentation_detail_table_offset {
 	float: left;
@@ -718,6 +739,17 @@ div.sectiontitle h2{
 	padding: 0px 0px 10px 0px;
 	position: relative;
 }
+
+/* BEGIN Fixes for documentation containing unordered lists */
+#body-wrap .documentation_detail_description li:before {
+  content: none;
+}
+#body-wrap .documentation_detail_description li {
+  list-style-type: disc;
+}
+/* END Fixes for documentation containing unordered lists */
+
+
 .hide_core_functions, .hide_addons_functions, .collapse_core, .collapse_addons{
     cursor:pointer;cursor:hand;
 }
@@ -1058,6 +1090,12 @@ a.noLine {
 #community img {
 	width: 100px;
 }
+
+/* hacking twitter app display */
+.timeline-header { display:none;}
+
+
+
 .tweet,
 .query {
 	background-color: #EEEEEE;
@@ -1122,13 +1160,20 @@ div#github .github_avatar img {
 	vertical-align: middle;
 	width: 32px;
 }
-#github a, #forum a {
-	color: black;
+
+#tweets {
+	padding: 0 1em;
+	font-size: 13px;
+}
+
+#tweets a, #github a, #forum a {
+	color: #EE3987;
 	text-decoration: none;
 }
-#github a:hover, #forum a:hover {
-	background-color: #ee3987;
+
+#tweets a:hover, #github a:hover, #forum a:hover {
 	color: white;
+	background-color: #EE3987;
 	text-decoration: none;
 }
 .tweet h3, #forum h3, #github h3 {
@@ -1205,6 +1250,23 @@ h1.documentation{
     margin-bottom:5px;
 }
 
+ul.external_links li{
+    margin-bottom:0.5em;
+}
+
+ul.external_links a{
+    font-size:1.3em;
+	font-family: 'Questrial', sans-serif;
+}
+
+ul.external_links{
+    margin-top:3em;
+    margin-bottom:3em;
+}
+div.home-links ul{
+    padding-left:20px;
+}
+
 
 /* logs */
 label.toggle { cursor: pointer; }
@@ -1214,3 +1276,29 @@ label.error { color: #F00 }
 input.toggle { display: none; }
 input.toggle:checked+div { display: none; }
 div.log {padding-left:2em;}
+
+
+#body-wrap ul li.noDoc:before{
+    content: '> ';
+    padding-right: 0.3em;
+    color: #bbb;
+}
+
+
+/* Sponsor Logos */
+.sponsors {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	display: block;
+	margin: 30px auto 0;
+	padding: 0;
+}
+
+.sponsors a {
+	background: #FFF;
+	display: inline-block;
+	margin: 14px 24px 14px 0;
+	padding: 0;
+	text-align: center;
+};

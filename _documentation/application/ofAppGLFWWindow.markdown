@@ -76,10 +76,6 @@ _visible: True_
 _advanced: False_
 -->
 
-_inlined_description: _
-
-
-
 
 
 
@@ -87,6 +83,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -128,6 +125,7 @@ _description: _
 
 
 This is the drag and drop callback. This should be handled in your ofBaseApp instance.
+
 
 
 
@@ -249,6 +247,7 @@ This is the exit callback that is called by your the ofAppRunner [exit()](../ofA
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int getCurrentMonitor()
@@ -323,6 +322,7 @@ _description: _
 
 
 Gets the height of the current window and is mirrored in the ofGetScreenHeight() method.
+
 
 
 
@@ -405,6 +405,7 @@ Gets the height of the current window and is mirrored in the ofGetWindowSize() m
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int getWidth()
@@ -439,6 +440,7 @@ _description: _
 
 
 Gets the height of the current window and is mirrored in the ofGetScreenWidth() method.
+
 
 
 
@@ -483,6 +485,7 @@ Returns one of the following: OF_FULLSCREEN or OF_WINDOW.
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofVec3f getWindowPosition()
@@ -518,6 +521,7 @@ _description: _
 
 
 This returns the location of the window relative to the deivce that it's being displayed on.
+
 
 
 
@@ -713,6 +717,7 @@ _description: _
 
 
 Hardcoded to return true right now.
+
 
 
 

@@ -36,7 +36,12 @@
                  <% prevmethod = "" %>
                  % for method in clazz.function_list:
                      % if prevmethod != method.name and method.visible and not method.advanced and method.access=='public' and (method.name!=method.clazz) and (method.name != "~" + method.clazz):
-                         <li> <a href="#show_${method.name}" class="${method.name}">${method.name}()</a> </li>
+                         % if len(method.description) <= 1 and len(method.inlined_description) <= 1:
+                         <li class="noDoc">
+                         % else:
+                         <li>
+                         % endif
+                         <a href="#show_${method.name}" class="${method.name}" data-lookup="${method.name}">${method.name}()</a></li>
                      % endif
                      <% prevmethod = method.name %>
                  % endfor
@@ -51,7 +56,12 @@
                 <ul class="functionslist">
                      % for var in clazz.var_list:
                          % if var.visible and not var.advanced and var.access=='public':
-                             <li> <a href="#show_${var.name}" class="${var.name}">${var.type} ${var.name}</a> </li>
+                             % if len(var.description) <= 1:
+                            <li class="noDoc">
+                            % else:
+                            <li>
+                            % endif
+                            <a href="#show_${var.name}" class="${var.name}" data-lookup="${var.name}">${var.type} ${var.name}</a> </li>
                          % endif
                      % endfor
                  </ul>
@@ -66,7 +76,12 @@
                      <% prevmethod = "" %>
                      % for method in functions.function_list:
                          % if prevmethod != method.name and method.visible and not method.advanced:
-                             <li> <a href="#show_${method.name}" class="${method.name}">${method.name}()</a> </li>
+                             % if len(method.description) <= 1 and len(method.inlined_description) <= 1:
+                            <li class="noDoc">
+                            % else:
+                            <li>
+                            % endif
+                            <a href="#show_${method.name}" class="${method.name}" data-lookup="${method.name}">${method.name}()</a></li>
                          % endif
                          <% prevmethod = method.name %>
                      % endfor
@@ -77,14 +92,26 @@
 		    <div id="main_block">
                 <div id="prose_block">
                     <div class="documentation_detail class_documentation">
-                      <%self:filter chain="markdown_template">
                       % if not clazz is None:
+                      <%self:filter chain="markdown_template">
 ${clazz.reference}
-                      % endif
-                      % if not functions is None:
-${functions.description}
-                      % endif
                       </%self:filter>
+                      % endif
+
+                      % if not clazz is None and clazz.detailed_inline_description.strip("\n").strip(" ") != "":
+                      <div class="inlined_docs">
+                            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+                            <%self:filter chain="markdown_template">
+${clazz.detailed_inline_description}
+                            </%self:filter>
+                      </div>                      
+                      % endif
+                      
+                      % if not functions is None:
+                      <%self:filter chain="markdown_template">
+${functions.description}
+                      </%self:filter>
+                      % endif
                    </div>
                   
                   <!-- methods detail -->

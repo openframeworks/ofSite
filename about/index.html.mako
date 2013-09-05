@@ -22,7 +22,7 @@ openFrameworks is an [open source](license.html) [C++](https://en.wikipedia.org/
 * [FreeImage](http://freeimage.sourceforge.net/) for image saving and loading
 * [Quicktime](http://developer.apple.com/quicktime/), [GStreamer](http://gstreamer.freedesktop.org/) and [videoInput](https://github.com/ofTheo/videoInput) for video playback and grabbing
 * [Poco](http://pocoproject.org/) for a variety of utilities
-* [OpenCV](http://http://opencv.org/) for computer vision
+* [OpenCV](http://opencv.org/) for computer vision
 * [Assimp](http://assimp.sourceforge.net/) for 3D model loading
 
 The code is written to be massively cross-compatible. Right now we support five operating systems (Windows, OSX, Linux, iOS, Android) and four IDEs (XCode, Code::Blocks, and Visual Studio and Eclipse). The API is designed to be minimal and easy to grasp.
@@ -35,15 +35,62 @@ Simply put, openFrameworks is a tool that makes it much easier to make things wi
 contributors and supporters
 ----------------
 
-For more information about openFrameworks contributors, see the [community](../community/) page. 
+openFrameworks is actively developed by [Zach Lieberman](http://thesystemis.com/), [Theodore Watson](http://muonics.net/), and [Arturo Castro](http://arturocastro.net/) ("the core"), with help from the [OF community](../community/). openFrameworks is indebted to two significant precursors: the [Processing development environment](http://processing.org/), created by [Casey Reas](http://reas.com/), [Ben Fry](http://benfry.com/) and the Processing community; and the ACU Toolkit, a privately distributed C++ library developed by Ben Fry and others in the [>MIT Media Lab's Aesthetics and Computation Group](http://acg.media.mit.edu/). A number of community leaders maintain responsibility for subsections of openFrameworks on a rotating basis, currently:
 
-A number of institutions have provided major support for openFrameworks through grants, donations, and as hosting partners for our international developer conferences:
 
-* [Ars Electronica Futurelab and Festival](http://www.aec.at/)
-* [Eyebeam Art & Technology Center](http://eyebeam.org/)
-* [Ford Foundation](http://www.fordfoundation.org/)
-* [Frank-Ratchye STUDIO for Creative Inquiry](http://studioforcreativeinquiry.org/) at CMU
-* [Parsons the New School for Design](http://amt.parsons.edu)
+* 3D leader: [Elliot Woods](http://www.kimchiandchips.com/) (elliotwoods)</li>
+* Addons leader(s): [James George](http://jamesgeorge.org/) (obviousjim) and [Greg Borenstein](http://gregborenstein.com/) (atduskgreg)</li>
+* Community manager: [Kyle McDonald](http://kylemcdonald.net/) (kylemcdonald)</li>
+* Documentation leader: [Dayan Moisa](http://justdayan.com/) (justdayan)</li>
+* Forum leader: [Jason Van Cleave](http://jvcref.com/) (jvcleave)</li>
+* GitHub leader: [Christoph Buchner](https://github.com/bilderbuchi) (bilderbuchi)</li>
+* Hardware leader: [Josh Noble](http://thefactoryfactory.com/) (joshua noble)</li>
+* Internals/app leader: [Philip Whitfield](http://undef.ch/) (underdoeg)</li>
+* iOS leader: [Lukasz Karluk](http://www.julapy.com/blog/) (julapy)</li>
+* Outreach leader: [Caitlin Morris](http://caitlinmorris.net/) (c_tl_n)</li>
+* Sound leader: [Adam Carlucci](https://github.com/admsyn) (admsyn)</li>
+* Tutorial leader(s): [Diederick Huijbers](http://www.roxlu.com/) (roxlu) and [Jeff Crouse](http://www.jeffcrouse.info/) (jefftimesten)</li>
+* Typography leader: [Christopher Baker](http://christopherbaker.net/) (bakercp)</li>
+* Video leader: [James George](http://www.jamesgeorge.org/) (obviousjim)</li>
+* Windows leader: [Matthew Gingold](http://gingold.com.au/) (gameoverhack)</li>
+
+
+And previously:
+
+* [Damian Stewart](http://damianstewart.com/) (damian) as sound leader</li>
+* [Steve Varga](http://www.vargatron.com/) (vargatron) as typography leader</li>
+
+A number of institutions have provided major support for openFrameworks through grants, donations, and as hosting partners for our international developer conferences. These events often require significant resources to bring together participants from many countries to a single location for multiple days.
+
+<span class="sponsors">
+  <a href="http://amt.parsons.edu"><img alt="sponsor_logo" src="logo-parsons.png" style="display: block; height: 58px;padding-bottom: 3px;"></a>
+  <a href="http://www.ycam.jp/en/"><img alt="sponsor_logo" src="logo-ycam.png" style="display: block; height: 69px; /* padding-bottom: 8px; */"></a>
+  <a href="http://eyebeam.org/"><img alt="sponsor_logo" src="logo-eyebeam.png" style="display: block; height: 30px; padding-bottom: 18px;"></a>
+  <a href="http://studioforcreativeinquiry.org/"><img alt="sponsor_logo" src="logo-sfci.png" style="display: block; height: 69px;"></a>
+  <a href="http://www.aec.at/"><img alt="sponsor_logo" src="logo-ars.png" style="display: block; height: 41px; padding-bottom: 14px;"></a>
+  <a href="http://www.fordfoundation.org/"><img alt="sponsor_logo" src="logo-fordfoundation.png" style="display: block; height: 42px; padding-bottom: 13px;"></a>
+</span>
+
+
+**[Ars Electronica Festival and Futurelab](http://www.aec.at/)**
+
+We would like to thank the [Ars Electronica Festival and Futurelab](http://www.aec.at/) for sponsoring the OF Lab at Ars Electronica 2008.
+
+**[Eyebeam](http://eyebeam.org/)**
+
+**[Ford Foundation](http://www.fordfoundation.org/)**
+
+We would like to thank the [Ford Foundation](http://www.fordfoundation.org/) for sponsoring the second openFrameworks developers conference.
+
+**[Parsons the New School for Design](http://amt.parsons.edu)**
+
+**[Frank-Ratchye STUDIO for Creative Inquiry](http://studioforcreativeinquiry.org/)**
+
+We would like to thank the [Frank-Ratchye STUDIO for Creative Inquiry](http://studioforcreativeinquiry.org/) for hosting the first openFrameworks developers conference, and providing other small grants and support to openFrameworks developers.
+
+**[Yamaguchi Center for Arts and Media](http://www.ycam.jp/en/)**
+
+We would like to thank [YCAM](http://www.ycam.jp/en/) for their ongoing support for OF. In 2008 YCAM hosted the first [OF workshop](http://wiki.openframeworks.cc/index.php?title=OfYcam) in Asia, and have since hosted many OF-related events such as: the [LabACT series](http://interlab.ycam.jp/en/projects/labact/eye-tracking-study) exploring uses of the EyeWriter, the first two [Guest Research Projects](http://interlab.ycam.jp/en/projects/guestresearch) which featured OF developers working on open source arts engineering tools like [ofxTimeline](http://interlab.ycam.jp/en/projects/guestresearch/vol2) and [mapamok](http://interlab.ycam.jp/en/projects/guestresearch/vol1), and most recently YCAM has hosted the [third openFrameworks developers conference](http://interlab.ycam.jp/en/projects/of-devcon2013).
 
 We are proud to acknowledge institutions and organizations which have hosted multi-day educational workshops and "OF Lab" events (see [the wiki](http://wiki.openframeworks.cc/index.php?title=Education) for a more complete list): 
 
@@ -57,7 +104,6 @@ We are proud to acknowledge institutions and organizations which have hosted mul
 * [Pratersauna Digital LAB](https://vimeo.com/psdl)
 * [Resonate.io Festival](http://resonate.io/)
 * [Victoria and Albert Museum](http://www.vam.ac.uk/)
-* [Yamaguchi Center for Arts and Media](http://www.ycam.jp/en/) (YCAM)
 
 ----------------
 

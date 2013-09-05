@@ -160,20 +160,28 @@ def getclass(clazz, getTemplated=False):
                         documentation_clazz.module = os.path.basename(root)
                         documentation_clazz.new = False
                         
-                    elif state == 'class' and line.rstrip('\n').rstrip(' ') == '##Methods':
+                    elif state == 'classdescription' and line.rstrip('\n').rstrip(' ') == '##Methods':
                         state = 'methods'
                         
                     elif state == 'methods' and line.find('###') == 0:
                         #print "##########method: " + line
                         state = 'method'
                         
-                    elif state == 'method' and line.find('_')==0 and line.find('_description')==-1:
+                    elif state == 'method' and line.find('_')==0 and line.find('_description')==-1 and line.find('_inlined_description')==-1:
                         #print "##########field: " + line
                         addfield(method,line)
                         
-                    elif state == 'method' and line.find('_description')==0:
+                    elif state == 'method' and line.find('_inlined_description')==0:
+                        state = 'inlined_description'
+                        prevBreakLine = False
+                        
+                    elif (state == 'inlined_description' or state=='method') and line.find('_description')==0:
                         state = 'description'
                         prevBreakLine = False
+                        
+                    elif state == 'inlined_description' and line.find('##')!=0 and line.find('_description')==-1 and (line!='\n' or not prevBreakLine):
+                        method.inlined_description = method.inlined_description + line
+                        prevBreakLine = (line=='\n')
                         
                     elif state == 'description' and line.find('##')!=0 and line.find('<!----------------------------------------------------------------------------->')==-1 and (line!='\n' or not prevBreakLine):
                         method.description = method.description + line
@@ -215,7 +223,18 @@ def getclass(clazz, getTemplated=False):
                         var.linenum = linenum
                         var.file = os.path.join(root,name)
                         
-                    elif state == 'class' and line.find('##Description')==-1 and (line!='\n' or not prevBreakLine):
+                    elif state == 'class' and line.find('##InlineDescription'):
+                        state = 'classinlinedescription'
+                        documentation_clazz.detailed_inline_description = ""
+                        
+                    elif state == 'classinlinedescription' and line.find('##Description')==-1 and line.find('##InlineDescription')==-1 and (line!='\n' or not prevBreakLine):
+                        documentation_clazz.detailed_inline_description  = documentation_clazz.detailed_inline_description + line
+                        prevBreakLine = (line=='\n')
+                        
+                    elif (state == 'classinlinedescription' or state == 'class') and line.rstrip('\n').rstrip(' ') == '##Description':
+                        state = "classdescription"
+                        
+                    elif state == 'classdescription' and (line!='\n' or not prevBreakLine):
                         documentation_clazz.reference  = documentation_clazz.reference + line
                         prevBreakLine = (line=='\n')
                         
@@ -296,6 +315,9 @@ def serialize_function(f,function,member):
     f.write("_visible: " + str(function.visible) + "_\n")
     f.write("_advanced: " + str(function.advanced)  + "_\n")
     f.write("-->\n\n");
+    f.write("_inlined_description: _\n\n")
+    f.write(function.inlined_description.encode('utf-8'))
+    f.write('\n\n\n\n\n\n')
     f.write("_description: _\n\n")
     f.write(function.description.encode('utf-8'))
     f.write('\n\n\n\n\n\n')
@@ -329,6 +351,7 @@ def setclass(clazz):
     
     #f.write('//----------------------\n\n')
     #f.write('##Example\n\n' + clazz.example + '\n\n\n\n')
+    f.write('##InlineDescription\n\n' + clazz.detailed_inline_description.encode('utf-8') + '\n\n\n\n')
     
     #f.write('//----------------------\n\n')
     f.write('##Description\n\n' + clazz.reference.encode('utf-8') + '\n\n\n\n')

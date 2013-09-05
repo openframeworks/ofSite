@@ -65,7 +65,7 @@ Download the openFrameworks examples from the [download][1] section of this webs
 
 The examples are located within the `examples` folder. Within each example folder is an Xcode project file (e.g. `graphicsExample.xcodeproj`) This file will open the Xcode project for that example.
 
-When the example opens in Xcode, you will see a list of files in the left column and the content of the currently selected file (in this case `testApp.cpp`) in the right panel.
+When the example opens in Xcode, you will see a list of files in the left column and the content of the currently selected file (in this case `ofApp.cpp`) in the right panel.
 
 ![xcodeLeftSide](xcodeLeftSide.jpg)  
 
