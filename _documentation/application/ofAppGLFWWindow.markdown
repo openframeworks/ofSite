@@ -7,12 +7,11 @@
 
 
 
-
-
-
 ##Description
 
 
+
+This is the base class for the [GLFW](https://github.com/glfw) renderer that you can optionally use with openFrameworks. We've moved away from GLUT and towards GLFW for our windowing system. You probably won't deal with this a great deal (hopefully).
 
 
 
@@ -77,10 +76,6 @@ _visible: True_
 _advanced: False_
 -->
 
-_inlined_description: _
-
-
-
 
 
 
@@ -88,7 +83,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -130,6 +124,7 @@ _description: _
 
 
 
+This is the drag and drop callback. This should be handled in your ofBaseApp instance.
 
 
 
@@ -247,6 +242,7 @@ _description: _
 
 
 
+This is the exit callback that is called by your the ofAppRunner [exit()](../ofAppRunner_functions.html#ofExit) method.
 
 
 
@@ -325,6 +321,7 @@ _description: _
 
 
 
+Gets the height of the current window and is mirrored in the ofGetScreenHeight() method.
 
 
 
@@ -403,6 +400,7 @@ _description: _
 
 
 
+Gets the height of the current window and is mirrored in the ofGetWindowSize() method.
 
 
 
@@ -441,6 +439,7 @@ _inlined_description: _
 _description: _
 
 
+Gets the height of the current window and is mirrored in the ofGetScreenWidth() method.
 
 
 
@@ -481,6 +480,7 @@ _description: _
 
 
 
+Returns one of the following: OF_FULLSCREEN or OF_WINDOW.
 
 
 
@@ -520,6 +520,7 @@ _description: _
 
 
 
+This returns the location of the window relative to the deivce that it's being displayed on.
 
 
 
@@ -715,6 +716,7 @@ _description: _
 
 
 
+Hardcoded to return true right now.
 
 
 

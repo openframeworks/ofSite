@@ -4,7 +4,7 @@
 ##InlineDescription
 
 
-
+##Description
 
 
 
@@ -688,10 +688,6 @@ _inlined_description: _
 
 
 
-
-
-
-
 _description: _
 
 
@@ -1241,11 +1237,8 @@ _inlined_description: _
 
 
 
-
-
-
-
 _description: _
+
 
 Returns the current (x,y) position of the ofRectangle as an ofPoint. 
 
@@ -1451,8 +1444,6 @@ _inlined_description: _
 
 
 
-
-
 _description: _
 
 
@@ -1490,7 +1481,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -1519,10 +1509,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
-
-
-
 
 
 
@@ -1614,6 +1600,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -1692,8 +1679,6 @@ _inlined_description: _
 
 
 
-
-
 _description: _
 
 Modify the ofRectangle so that the x and y coordinates given are both enclosed within the rectangle.
@@ -1734,6 +1719,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -1765,7 +1751,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2111,6 +2096,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -2140,7 +2126,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2426,6 +2411,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -2534,8 +2520,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
-
 
 
 
@@ -2694,6 +2678,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 
@@ -2891,9 +2876,6 @@ _inlined_description: _
 
 
 
-
-
-
 _description: _
 
 Adjusts the ofRectangle to match the passed-in ofRectangle.  It will use the ofAspectRatioMode to scale the ofRectangle, and will use the use the alignment anchor parameters to position the rectangle.
@@ -3032,8 +3014,6 @@ _inlined_description: _
 
 
 
-
-
 _description: _
 
 Sets the x position, y position, width, and height of the ofRectangle.
@@ -3073,6 +3053,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -3103,7 +3084,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -3272,8 +3252,6 @@ _inlined_description: _
 
 
 
-
-
 _description: _
 
 
@@ -3304,8 +3282,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
-
 
 
 
@@ -3392,6 +3368,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -3431,6 +3408,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -3461,6 +3439,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 
@@ -3571,6 +3550,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -3600,6 +3580,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 
@@ -3645,8 +3626,6 @@ _inlined_description: _
 
 
 
-
-
 _description: _
 
 Offsets the position of the ofRectangle in the x dimension by a given amount. 
@@ -3677,6 +3656,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 
