@@ -4,12 +4,43 @@
 ##Description
 
 
+The ofxTCPClient is what you used to connect to another server and request information. This other server could be a service running on your local machine, or it could somewhere out there in the internet. As of version 0.8 it doesn't do SSL or other tricky things well, nor does it handle forms or GET and POST requests but you can handle strings or raw bytes. A trivial usage might look like the following:
+
+~~~~{.cpp}
+void ofApp::setup()
+{
+	bool connected = tcpClient.setup("127.0.0.1", 11999);
+}
+
+void ofApp::update()
+{
+	if(tcpClient.isConnected()) {
+		string str = tcpClient.receive(); // did anything come in
+	}
+}
 
 
+void ofApp::keyReleased(int key)
+{
+	if(tcpClient.isConnected()) {
+		tcpClient.send("HELLO WORLD!");
+	}
+}
+~~~~
 
+To receive something meaningful from a regular webserver you'll want to at least do something like the following:
 
+~~~~{.cpp}
+string msg = "GET /index.html HTTP/1.1\r\n";
+tcpClient.send(msg);
 
+~~~~
 
+but if you're using ofxTCPServer, then you're free to invent whatever sort of low level communication you'd like. Another important element of the ofxTCPClient and of TCP communication in general, is the message delimiter. You can see that using:
+
+tcpClient.setMessageDelimiter("\n");
+
+This is important because the message delimiter used by your client has to match what your sever is using. If the server uses '\r\n', then your client needs to do the same so that the server knows when a message has ended.
 
 
 
@@ -43,7 +74,7 @@ _description: _
 
 
 
-
+Constructor. This doesn't prepare your client to send and receive information though, you need to call the setup() method for that.
 
 
 
@@ -184,7 +215,13 @@ _description: _
 
 
 
+You call this to setup what IP and port your client will try to connect to:
 
+~~~~{.cpp}
+tcpClient.setup("127.0.0.1", 11999);
+~~~~
+
+It returns whether the connection has successfully been made. Don't mistake this for a URI or URL, it comes before that, where the connection is made so that files or data streams can be requested.
 
 
 
@@ -216,7 +253,7 @@ _description: _
 
 
 
-
+This is important because the message delimiter used by your client has to match what your sever is using. If the server uses '\r\n', then your client needs to do the same so that the server knows when a message has ended. ofxTCPServer allows you to use whatever delimiter you want but you'll find that many servers use '\r\n'
 
 
 
@@ -253,7 +290,7 @@ _description: _
 
 
 
-
+This closes any open connection to a server.
 
 
 
@@ -288,7 +325,7 @@ _description: _
 
 
 
-
+Send the message, which can be as complex as a full GET request or as simple as raw string.
 
 
 
@@ -324,7 +361,7 @@ _description: _
 
 
 
-
+This sends the message as raw, i.e. not ASCII encoded. This is what you'll want to do if you're sending bitmap data or other kinds of non-text information.
 
 
 
@@ -356,7 +393,7 @@ _description: _
 
 
 
-
+Returns the number of bytes that a single call to receive has gotten.
 
 
 
@@ -394,7 +431,7 @@ _description: _
 
 
 
-
+This method sends raw bytes (i.e. not ASCII encoded bytes) to the server.
 
 
 
@@ -428,7 +465,14 @@ _description: _
 
 
 
+Receives ASCII encoded data from the server. You should make sure you check that the client is connected before calling this.
 
+~~~~{.cpp}
+if(tcpClient.isConnected()) {
+        string str = tcpClient.receive();
+        cout << str << endl;
+}
+~~~~
 
 
 
@@ -461,7 +505,18 @@ _description: _
 
 
 
+This receives the raw bytes from a server. Like with receive(), you should check that the client is connected before calling this.
 
+
+~~~~{.cpp}
+
+if(tcpClient.isConnected()) {
+        string s = tcpClient.receive();
+        
+        cout << str << endl;
+
+
+~~~~
 
 
 
@@ -532,7 +587,7 @@ _description: _
 
 
 
-
+Returns whether the client is currently connected to a server.
 
 
 
@@ -569,7 +624,7 @@ _description: _
 
 
 
-
+Returns the port number set in the setup() method of the client.
 
 
 
@@ -603,7 +658,7 @@ _description: _
 
 
 
-
+Returns the IP address number set in the setup() method of the client.
 
 
 
