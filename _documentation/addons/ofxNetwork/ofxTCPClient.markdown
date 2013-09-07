@@ -253,7 +253,7 @@ _description: _
 
 
 
-This is important because the message delimiter used by your client has to match what your sever is using. If the server uses '\r\n', then your client needs to do the same so that the server knows when a message has ended. ofxTCPServer allows you to use whatever delimiter you want but you'll find that many servers use '\r\n'
+This is important because the message delimiter used by your client has to match what your sever is using. If the server uses '[\TCP]', which is the default for ofxTCPClient and ofxTCPServer, then your client needs to do the same so that the server knows when a message has ended. ofxTCPServer allows you to use whatever delimiter you want.
 
 
 
