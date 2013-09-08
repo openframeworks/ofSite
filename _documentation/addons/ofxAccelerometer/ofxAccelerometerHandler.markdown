@@ -27,7 +27,7 @@ void testApp::update()
 To register an event handler for the accelerometer values changing, do something like the following:
 
 ~~~~{.cpp}
-ofAddListener(ofxAccelerometer.accelChanged,listener,&ofApp::accelerationChanged);
+ofAddListener(ofxAccelerometer.accelChanged,this,&ofApp::accelerationChanged);
 ~~~~
 
 ##Methods
