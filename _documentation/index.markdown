@@ -6655,7 +6655,7 @@ viewport()
 
 __visible: true__
 
-__advanced: false__
+__advanced: true__
 
 __functions__
 ofTextureData()
@@ -7122,7 +7122,7 @@ usingTextures()
 
 __visible: true__
 
-__advanced: true__
+__advanced: false__
 
 __functions__
 bClearBg()
@@ -7256,6 +7256,145 @@ update()
 viewport()
 
 ~ofGLRenderer()
+
+###ofGLProgrammableRenderer###
+
+__visible: true__
+
+__advanced: false__
+
+__functions__
+bClearBg()
+
+background()
+
+clear()
+
+clearAlpha()
+
+disableAntiAliasing()
+
+disablePointSprites()
+
+disableTextureTarget()
+
+draw()
+
+drawCircle()
+
+drawEllipse()
+
+drawLine()
+
+drawRectangle()
+
+drawSphere()
+
+drawString()
+
+drawTriangle()
+
+enableAntiAliasing()
+
+enablePointSprites()
+
+enableTextureTarget()
+
+getBgColor()
+
+getCoordHandedness()
+
+getCurrentViewport()
+
+getFillMode()
+
+getNativeViewport()
+
+getRectMode()
+
+getType()
+
+getViewportHeight()
+
+getViewportWidth()
+
+isVFlipped()
+
+loadIdentityMatrix()
+
+loadMatrix()
+
+matrixMode()
+
+multMatrix()
+
+ofGLProgrammableRenderer()
+
+popMatrix()
+
+popView()
+
+pushMatrix()
+
+pushView()
+
+rendersPathPrimitives()
+
+rotate()
+
+rotateX()
+
+rotateY()
+
+rotateZ()
+
+scale()
+
+setBackgroundAuto()
+
+setBlendMode()
+
+setCircleResolution()
+
+setColor()
+
+setCoordHandedness()
+
+setCurrentFBO()
+
+setDepthTest()
+
+setFillMode()
+
+setHexColor()
+
+setLineSmoothing()
+
+setLineWidth()
+
+setOrientation()
+
+setRectMode()
+
+setSphereResolution()
+
+setupGraphicDefaults()
+
+setupScreen()
+
+setupScreenOrtho()
+
+setupScreenPerspective()
+
+texturesNeedVFlip()
+
+translate()
+
+update()
+
+viewport()
+
+~ofGLProgrammableRenderer()
 
 
 ###ofMaterial###
