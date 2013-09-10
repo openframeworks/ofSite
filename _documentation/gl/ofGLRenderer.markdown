@@ -13,7 +13,19 @@
 ##Description
 
 
+The ofGLRenderer is a renderer for OF that supports OpenGL 2 and lower. It's the more classic, "direct mode" version of OpenGL that you may be familiar with but that also uses vertex arrays underneath to store all of the vertices that you create for the basic OF drawing operations. This is the default renderer that is created when you create your OF app:
 
+~~~~{.cpp}
+ofSetupOpenGL(1024,768, OF_WINDOW);			// by default this makes a ofGLRenderer
+
+// this kicks off the running of my app
+// can be OF_WINDOW or OF_FULLSCREEN
+// pass in width and height too:
+ofRunApp( new testApp());
+
+~~~~
+
+This renderer does not work so well with mobile devices (more specifically with GLES) or on ARM6/7 Linux devices (Raspberry Pi, for instance) but it is the classic version that will be supported on all laptops and desktop machines. Most of the calls to this renderer are handled by other functions, so most of this documenation will simply link to the end user functions that you should call, since you probably don't want to call the renderer directly. 
 
 
 ##Methods
@@ -52,7 +64,7 @@ _description: _
 
 
 
-
+Whether you want to clear the background or not.
 
 
 
@@ -90,7 +102,7 @@ _inlined_description: _
 _description: _
 
 
-
+See [ofBackground](ofGraphics.html#show_ofBackground)
 
 
 
@@ -169,7 +181,7 @@ _description: _
 
 
 
-
+See [ofBackground](ofGraphics.html#show_ofBackground)
 
 
 
@@ -208,7 +220,7 @@ _description: _
 
 
 
-
+See [ofBackground](ofGraphics.html#show_ofBackground)
 
 
 
@@ -247,7 +259,7 @@ _description: _
 
 
 
-
+See [ofClear](ofGraphics.html#show_ofClear)
 
 
 
@@ -286,7 +298,7 @@ _description: _
 
 
 
-
+See [ofClear](ofGraphics.html#show_ofClear)
 
 
 
@@ -325,7 +337,7 @@ _description: _
 
 
 
-
+See [ofClear](ofGraphics.html#show_ofClear)
 
 
 
@@ -364,7 +376,7 @@ _description: _
 
 
 
-
+See [ofDisableAntiAliasing](ofGraphics.html#show_ofDisableAntiAliasing)
 
 
 
@@ -479,7 +491,7 @@ _description: _
 
 
 
-
+Handles drawing vertex data. This is called when you call ofRect() or draw a mesh.
 
 
 
@@ -518,7 +530,7 @@ _description: _
 
 
 
-
+Handles drawing vertex data. This is called when you call ofRect() or draw a mesh.
 
 
 <!----------------------------------------------------------------------------->
@@ -554,7 +566,7 @@ _inlined_description: _
 _description: _
 
 
-
+Handles drawing ofPolylines. This is called when you call line.draw().
 
 
 
@@ -593,7 +605,7 @@ _inlined_description: _
 _description: _
 
 
-
+Handles drawing ofPath. This is called when you call ofPath::draw().
 
 
 
@@ -630,7 +642,7 @@ _inlined_description: _
 _description: _
 
 
-
+Draws a vertex data using the primitive mode passed in. This is called by some drawing functions.
 
 
 
@@ -667,7 +679,7 @@ _inlined_description: _
 _description: _
 
 
-
+Draws a texture.
 
 
 
@@ -705,7 +717,7 @@ _description: _
 
 
 
-
+Draws a texture.
 
 
 
@@ -742,7 +754,7 @@ _description: _
 
 
 
-
+Draws a texture.
 
 
 
@@ -781,7 +793,7 @@ _description: _
 
 
 
-
+Draws an ofMesh.
 
 
 
@@ -821,7 +833,7 @@ _description: _
 
 
 
-
+Draws an ofMesh.
 
 
 
@@ -859,7 +871,7 @@ _description: _
 
 
 
-
+Draws an texture.
 
 
 
@@ -898,7 +910,7 @@ _description: _
 
 
 
-
+Draws an texture.
 
 
 
@@ -937,7 +949,7 @@ _description: _
 
 
 
-
+Draws an texture.
 
 
 
@@ -976,7 +988,7 @@ _description: _
 
 
 
-
+Draws a of3dPrimitive. Called internally.
 
 
 
@@ -1015,7 +1027,7 @@ _description: _
 
 
 
-
+See [ofCircle](ofGraphics.html#show_ofCircle)
 
 
 
@@ -1053,7 +1065,7 @@ _inlined_description: _
 _description: _
 
 
-
+See [ofEllipse](ofGraphics.html#show_ofEllipse)
 
 
 
@@ -1093,7 +1105,7 @@ _description: _
 
 
 
-
+See [ofLine](ofGraphics.html#show_ofLine)
 
 
 
@@ -1132,7 +1144,7 @@ _description: _
 
 
 
-
+See [ofRect](ofGraphics.html#show_ofRect)
 
 
 
@@ -1169,7 +1181,7 @@ _description: _
 
 
 
-
+Draws a UV sphere. See [ofSpherePrimitive](../3d/ofSpherePrimitive.html)
 
 
 
@@ -1207,7 +1219,7 @@ _inlined_description: _
 _description: _
 
 
-
+Draws a characters to the screen.
 
 
 
@@ -1247,7 +1259,7 @@ _description: _
 
 
 
-
+Draw a Triangle.
 
 
 
@@ -1286,7 +1298,7 @@ _description: _
 
 
 
-
+See [ofEnableAntiAliasing](ofGraphics.html#show_ofEnableAntiAliasing)
 
 
 
@@ -1480,7 +1492,7 @@ _inlined_description: _
 _description: _
 
 
-
+See [ofGetCoordHandedness](ofGraphics.html#show_ofGetCoordHandedness)
 
 
 
@@ -1520,7 +1532,7 @@ _description: _
 
 
 
-
+See [ofGetCurrentViewport](ofGraphics.html#show_ofGetCurrentViewport)
 
 
 
@@ -1559,7 +1571,7 @@ _description: _
 
 
 
-
+See [ofGetFill](ofGraphics.html#show_ofGetFill)
 
 
 
@@ -1598,7 +1610,7 @@ _description: _
 
 
 
-
+See [ofGetNativeViewport](ofGraphics.html#show_ofGetNativeViewport)
 
 
 
@@ -1637,7 +1649,7 @@ _description: _
 
 
 
-
+See [ofGetRectMode](ofGraphics.html#show_ofGetRectMode)
 
 
 
@@ -1715,7 +1727,7 @@ _description: _
 
 
 
-
+See [ofGetViewportHeight](ofGraphics.html#show_ofGetViewportHeight)
 
 
 
@@ -1755,7 +1767,7 @@ _description: _
 
 
 
-
+See [ofGetViewportWidth](ofGraphics.html#show_ofGetViewportWidth)
 
 
 
@@ -1793,7 +1805,7 @@ _description: _
 
 
 
-
+See [ofIsVFlipped](ofGraphics.html#show_ofIsVFlipped)
 
 
 
@@ -1832,7 +1844,7 @@ _description: _
 
 
 
-
+See [ofLoadIdentityMatrix](ofGraphics.html#show_ofLoadIdentityMatrix)
 
 
 
@@ -1871,7 +1883,7 @@ _description: _
 
 
 
-
+See [ofLoadMatrix](ofGraphics.html#show_ofLoadMatrix)
 
 
 
@@ -1910,7 +1922,7 @@ _description: _
 
 
 
-
+See [ofLoadMatrix](ofGraphics.html#show_ofLoadMatrix)
 
 
 
@@ -2105,7 +2117,7 @@ _description: _
 
 
 
-
+See [ofPopMatrix](ofGraphics.html#show_ofPopMatrix)
 
 
 
@@ -2183,7 +2195,7 @@ _description: _
 
 
 
-
+See [ofPushMatrix](ofGraphics.html#show_ofPushMatrix)
 
 
 
@@ -2300,7 +2312,7 @@ _description: _
 
 
 
-
+See [ofRotate](ofGraphics.html#show_ofRotate)
 
 
 
@@ -2339,7 +2351,7 @@ _description: _
 
 
 
-
+See [ofRotate](ofGraphics.html#show_ofRotate)
 
 
 
@@ -2378,7 +2390,7 @@ _description: _
 
 
 
-
+See [ofRotate](ofGraphics.html#show_ofRotate)
 
 
 
@@ -2417,8 +2429,7 @@ _description: _
 
 
 
-
-
+See [ofRotate](ofGraphics.html#show_ofRotate)
 
 
 
@@ -2457,7 +2468,7 @@ _description: _
 
 
 
-
+See [ofRotate](ofGraphics.html#show_ofRotate)
 
 
 
@@ -2495,7 +2506,7 @@ _description: _
 
 
 
-
+See [ofScale](ofGraphics.html#show_ofScale)
 
 
 
@@ -2572,7 +2583,7 @@ _inlined_description: _
 _description: _
 
 
-
+See [ofEnableBlendMode](ofGraphics.html#show_ofEnableBlendMode)
 
 
 
@@ -2611,7 +2622,7 @@ _inlined_description: _
 _description: _
 
 
-
+See [ofSetCircleResolution](ofGraphics.html#show_ofSetCircleResolution)
 
 
 
@@ -2651,7 +2662,7 @@ _description: _
 
 
 
-
+See [ofSetColor](ofGraphics.html#show_ofSetColor)
 
 
 
@@ -2690,7 +2701,7 @@ _description: _
 
 
 
-
+See [ofSetColor](ofGraphics.html#show_ofSetColor)
 
 
 
@@ -2729,7 +2740,7 @@ _description: _
 
 
 
-
+See [ofSetColor](ofGraphics.html#show_ofSetColor)
 
 
 
@@ -2768,7 +2779,7 @@ _description: _
 
 
 
-
+See [ofSetColor](ofGraphics.html#show_ofSetColor)
 
 
 
@@ -2807,7 +2818,7 @@ _description: _
 
 
 
-
+See [ofSetColor](ofGraphics.html#show_ofSetColor)
 
 
 
@@ -2845,7 +2856,7 @@ _inlined_description: _
 _description: _
 
 
-
+See [ofSetCoordHandedness](ofGraphics.html#show_ofSetCoordHandedness)
 
 
 
@@ -2924,7 +2935,7 @@ _description: _
 
 
 
-
+See [ofDisableDepthTest](ofGraphics.html#show_ofDisableDepthTest) and [ofEnableDepthTest](ofGraphics.html#show_ofEnableDepthTest)
 
 
 
@@ -3003,7 +3014,7 @@ _description: _
 
 
 
-
+See [ofSetColor](ofGraphics.html#show_ofSetColor)
 
 
 
@@ -3080,7 +3091,7 @@ _description: _
 
 
 
-
+See [ofSetLineWidth](ofGraphics.html#show_ofSetLineWidth)
 
 
 
@@ -3158,7 +3169,7 @@ _description: _
 
 
 
-
+See [ofSetRectMode](ofGraphics.html#show_ofSetRectMode)
 
 
 
@@ -3273,7 +3284,7 @@ _description: _
 
 
 
-
+See [ofSetupScreen](ofGraphics.html#show_ofSetupScreen)
 
 
 
@@ -3310,7 +3321,7 @@ _description: _
 
 
 
-
+See [ofSetupScreenOrth](ofGraphics.html#show_ofSetupScreenOrtho)
 
 
 
@@ -3349,7 +3360,7 @@ _description: _
 
 
 
-
+See [ofSetupScreenOrth](ofGraphics.html#show_ofSetupScreenOrtho)
 
 
 
@@ -3386,7 +3397,7 @@ _description: _
 
 
 
-
+See [ofSetupScreenPerspective](ofGraphics.html#show_ofSetupScreenPerspective)
 
 
 
@@ -3425,7 +3436,7 @@ _description: _
 
 
 
-
+See [ofSetupScreenPerspective](ofGraphics.html#show_ofSetupScreenPerspective)
 
 
 
@@ -3541,7 +3552,7 @@ _inlined_description: _
 _description: _
 
 
-
+See [ofTranslate](ofGraphics.html#show_ofTranslate)
 
 
 
@@ -3581,7 +3592,7 @@ _description: _
 
 
 
-
+See [ofTranslate](ofGraphics.html#show_ofTranslate)
 
 
 
