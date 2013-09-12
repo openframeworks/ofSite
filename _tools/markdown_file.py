@@ -75,6 +75,7 @@ def getfunctionsfile(filename):
     functionsfile.name = filename
     functionsfile.new = 1                        
     function = DocsFunction(0)
+    prevBreakLine = False;
     for root, dirs, files in os.walk(os.path.join(documentation_root)):
         for name in files:
             file_split = os.path.splitext(name)
@@ -90,8 +91,10 @@ def getfunctionsfile(filename):
                         functionsfile.new = False
                     elif state == 'functionsfile' and line.find('##Description') == 0:
                         state = 'filedescription'
-                    elif state == 'filedescription' and line.find('<!----------------------------------------------------------------------------->')==-1 and line!='\n':
+                        prevBreakLine = False
+                    elif state == 'filedescription' and line.find('<!----------------------------------------------------------------------------->')==-1 and (line!='\n' or not prevBreakLine):
                         functionsfile.description = functionsfile.description + line
+                        prevBreakLine = (line=='\n')                        
                     elif state == 'filedescription' or state=='description' and line.find('###')==0:
                         if(state=='description'):
                             functionsfile.function_list.append(function)
@@ -102,8 +105,10 @@ def getfunctionsfile(filename):
                         addfield(function,line)
                     elif state == 'function' and line.find('_description')==0:
                         state = 'description'
-                    elif state == 'description' and line.find('<!----------------------------------------------------------------------------->')==-1 and line!='\n':
+                        prevBreakLine = False
+                    elif state == 'description' and line.find('<!----------------------------------------------------------------------------->')==-1 and (line!='\n' or not prevBreakLine):
                         function.description = function.description + line
+                        prevBreakLine = (line=='\n')                        
                                     
                 if(state=='description'):
                     functionsfile.function_list.append(function)
