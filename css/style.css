@@ -747,6 +747,10 @@ a.docs_class{
 }
 /* END unify formatting for markdown ``inline code blocks`` */
 
+/* prevent images from extending beyond the edge of the documentation */
+.class_documentation img, .documentation_detail_description img{
+  max-width: 100%;
+}
 
 /* BEGIN Fixes for documentation containing unordered lists */
 #body-wrap .documentation_detail_description li:before {
