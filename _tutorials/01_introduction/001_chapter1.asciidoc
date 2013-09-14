@@ -58,11 +58,11 @@ IMPORTANT: Find out which version you are using in the menubar: XCode > About XC
 
 You'll notice a big "Run" button at the top left side of the screen. In XCode 3, it is called "Build & Run". That will run the currently active target. But you might find that, by default, the active target is the openFrameworks library, which, by itself, doesn't do anything. What we want to run is "graphicsExample" program. So if you see this:
 
-image::images/target-bad.png[openFrameworks library chosen,width="400"]
+image::images/target-bad.png["openFrameworks library chosen",width="400"]
 
 Click and drag down so that it looks like this:
 
-image::images/target-good.png[graphicsExample target chosen,width="400"]
+image::images/target-good.png["graphicsExample target chosen",width="400"]
 
 Now click "Run!"  You should see this:
 
