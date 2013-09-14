@@ -91,11 +91,11 @@ Now you should open and run all of the other examples.
 Creating Your First Project
 ---------------------------
 
-As mentioned in the introduction, openFrameworks takes care of most of the tedious work of setting up a c++ project in your IDE of choice. However, unlike programs like Flash or Processing, there is no "File > New" that allows you to create a project. Instead, the preferred method is to duplicate one of the example projects. 
+As mentioned in the introduction, openFrameworks takes care of most of the tedious work of setting up a c++ project in your IDE of choice. However, unlike programs like Flash or Processing, there is no "File > New" that allows you to create a project. Instead, the preferred method is to duplicate one of the example projects.
 
 IMPORTANT: By extension, this means that you should never edit any of the example projects or put your own apps into the examples folders. They are placed there to provide starting points for your own apps, but you'll want to keep them pristene so that you always have a working starting point for your projects. You'll see the importance of this more as you move forward.
 
-As simple as this seems, this can be a huge stumbling block for a lot of beginners, so first lets agree on some terminology. 
+As simple as this seems, this can be a huge stumbling block for a lot of beginners, so first lets agree on some terminology.
 
 When you open your apps folder, you see a _myApps_ folder. Let's call these folders like this one *workspaces*.
 
@@ -109,7 +109,7 @@ First we will [underline]#duplicate# (NOT rename) the entire "emptyExample" fold
 
 image:images/workspace02.png["emptyExample Copy"]
 
-Next, we can rename the duplicate project folder from "emptyExample Copy" to "myFirstProject". 
+Next, we can rename the duplicate project folder from "emptyExample Copy" to "myFirstProject".
 
 image:images/workspace03.png["My First Project"]
 
@@ -468,7 +468,7 @@ This code says:
 Adding Interaction
 ------------------
 
-Now that you are a master of animation, it's time to get the user involved. For this section, we will be focusing on keyboard and mouse interaction. 
+Now that you are a master of animation, it's time to get the user involved. For this section, we will be focusing on keyboard and mouse interaction.
 
 So far, we've been focusing on 3 functions: setup(), update(), and draw(). For interaction, we will start with 2 of the other functions in your testApp.cpp file:
 
@@ -483,7 +483,7 @@ void testApp::keyReleased(int key){
 }
 ---------------------------------------------------------------------
 
-Going back to the producer metaphor can help us understand how these functions work. openFrameworks has done the hard work of setting up your app to know when the user has done some keyboard business. Now, all you have to do is put code into these functions that you want to execute when a particular event occurs: 
+Going back to the producer metaphor can help us understand how these functions work. openFrameworks has done the hard work of setting up your app to know when the user has done some keyboard business. Now, all you have to do is put code into these functions that you want to execute when a particular event occurs:
 
 - user physically presses down on a key
 - user physically releases the key
@@ -497,7 +497,7 @@ image:images/KeyboardInteraction01.png["Keyboard Interaction Project"]
 Introducing, cout!
 ~~~~~~~~~~~~~~~~~~
 
-The easiest way to quickly see how these functions work is to print a message to the console. Remember when we printed "Hello, World!" to the console in the introduction? We did that using a `c++` thing called http://www.cplusplus.com/reference/iostream/cout/["cout"] (pronounced 'c out'). The syntax for using it is a bit weird because it's not technically a function (it's actually an object, which we will talk more about in later chapters), but if you can get beyond the syntax, it's actually very useful for debugging. 
+The easiest way to quickly see how these functions work is to print a message to the console. Remember when we printed "Hello, World!" to the console in the introduction? We did that using a `c++` thing called http://www.cplusplus.com/reference/iostream/cout/["cout"] (pronounced 'c out'). The syntax for using it is a bit weird because it's not technically a function (it's actually an object, which we will talk more about in later chapters), but if you can get beyond the syntax, it's actually very useful for debugging.
 
 But first: you may be asking yourself: how will we see text output? We are dealing with a GUI interface now. Luckily, XCode provdes a window where we can see anything text that your program outputs (also known as http://www.cplusplus.com/reference/clibrary/cstdio/stdout/[stdout]).
 
@@ -524,7 +524,7 @@ void testApp::keyReleased(int key){
 }
 ---------------------------------------------------------------------
 
-As I mentioned before, the syntax for cout is a little strange and, frankly, way beyond the scope of this chapter. In `c++` parlance, cout represents the "standard output stream", and without worrying too much about what that means, "stream" is a nice way to think about it. If you look at the line of code within 'keyPressed', it appears that there is a "stream" of data flowing into the "cout". First we send in the string "keyPressed " down the stream, then we send in a variable: key. Finally, we send http://www.cplusplus.com/reference/iostream/manipulators/endl/[endl] down the stream. endl simply tells the console to go to the next line. 
+As I mentioned before, the syntax for cout is a little strange and, frankly, way beyond the scope of this chapter. In `c++` parlance, cout represents the "standard output stream", and without worrying too much about what that means, "stream" is a nice way to think about it. If you look at the line of code within 'keyPressed', it appears that there is a "stream" of data flowing into the "cout". First we send in the string "keyPressed " down the stream, then we send in a variable: key. Finally, we send http://www.cplusplus.com/reference/iostream/manipulators/endl/[endl] down the stream. endl simply tells the console to go to the next line.
 
 The 'key' variable represents the key that was pressed or released. More about this in a bit.
 
@@ -615,7 +615,7 @@ void testApp::keyPressed(int key){
 }
 ---------------------------------------------------------------------
 
-As we discovered, any time any key is pressed, the keyPressed() function is called. However, we want to be more selective than that. We want to be able to make certain things happen when the 'w' key is pressed, and other things happen when the 'a' key is pressed, etc. So, we need to add some http://www.cprogramming.com/tutorial/lesson2.html[if statements]. When the keyPressed function is called, the first thing that happens is we test if 'key' is equal to 119. 
+As we discovered, any time any key is pressed, the keyPressed() function is called. However, we want to be more selective than that. We want to be able to make certain things happen when the 'w' key is pressed, and other things happen when the 'a' key is pressed, etc. So, we need to add some http://www.cprogramming.com/tutorial/lesson2.html[if statements]. When the keyPressed function is called, the first thing that happens is we test if 'key' is equal to 119.
 
 Notice the double equals sign. This signifies that we are performing a comparison rather than an assignment. In other words, we don't want to assign the value 119 to the variable 'key', we want to test whether key is equal to 119. If this turns out to be true, than the code inside the curly brackets immediately following the if() is executed.
 
@@ -774,15 +774,15 @@ image:images/hit-test-02.png["Hit Test 2"]
 
 In this case, we know that the mouse click was 90 pixels from the center of the circle, so the click was clearly inside the circle.
 
-So how do we measure this distance? openFrameworks provides a function called 
-ofDist([x1], [y1], [x2], [y2]) that will save us from doing any basic trigonometry. All we have to do is give it our two coordinates. 
+So how do we measure this distance? openFrameworks provides a function called
+ofDist([x1], [y1], [x2], [y2]) that will save us from doing any basic trigonometry. All we have to do is give it our two coordinates.
 
 [source,cpp]
 ---------------------------------------------------------------------
 void testApp::mousePressed(int x, int y, int button){
     float distance = ofDist(myCircleX, myCircleY, x, y);
     cout << distance << endl;
-    
+
     myCircleRadius++;
 }
 ---------------------------------------------------------------------
@@ -814,7 +814,7 @@ In the example above, we looked at one of the most basic control structures: the
 Variables
 ~~~~~~~~~
 
-In the "Adding Movement" section, we introduced the idea of using variables to represent values that change over the course of your program. We used 2 integers, or *int*s - 'int myCircleX' and 'int myCircleY' - to represent the location of a circle. When you declare a variable as an 'int', you are telling the computer "I only intend to put whole numbers into this variable."  This made sense in our example because we were moving a circle by a single pixel, so we didn't need to worry about fractions. 
+In the "Adding Movement" section, we introduced the idea of using variables to represent values that change over the course of your program. We used 2 integers, or *int*s - 'int myCircleX' and 'int myCircleY' - to represent the location of a circle. When you declare a variable as an 'int', you are telling the computer "I only intend to put whole numbers into this variable."  This made sense in our example because we were moving a circle by a single pixel, so we didn't need to worry about fractions.
 
 But there will be times when you do need to have a variable that can hold a fraction, or something completely different, such as letters, words, even a location in memory. There are variable types for each of these situations. Here is a short list of some of them from http://www.cplusplus.com/doc/tutorial/variables/[cplusplus.com]
 
@@ -895,7 +895,7 @@ void testApp::draw(){
 }
 ---------------------------------------------------------------------
 
-In some ways, this is even worse. We've turned one line of code per circle into 2 lines of code per circle. However, there is one very important difference: in this case, the 2 lines are identical every time. We have "abstracted" the task -- that is, we have taken out the specifics and made it into a more general form. 
+In some ways, this is even worse. We've turned one line of code per circle into 2 lines of code per circle. However, there is one very important difference: in this case, the 2 lines are identical every time. We have "abstracted" the task -- that is, we have taken out the specifics and made it into a more general form.
 
 So now, all that's left to do is to tell the computer to do those 2 lines of code a bunch of times instead of us pasting it in ourselves. This is where loops come in.
 
@@ -905,7 +905,7 @@ do...while loop
 All loops basically take the same form:
 
 . Set up some initial values (initialization)
-. Execute the body of the loop 
+. Execute the body of the loop
 . Decide whether to go back to step 2 or exit the loop
 
 The simplest loop is the do/while loop. As the name suggests, this loop allows you to ask the computer to "do" something "while" a condition is met. Using a do/while loop, we can easily draw 51 circles
@@ -930,23 +930,23 @@ So what just happened?  Let's go through the code step by step as if we were the
 . Draw a circle at (20, 30) with a radius of 10
 . Increment x by 20 (it now equals 40)
 . Increment i by 1 (it now equals 1)
-. Is 1 less than 51?  
+. Is 1 less than 51?
 .. Yes!  Go back to the beginning of the loop
 . Draw a circle at (40, 30) with a radius of 10
 . Increment x by 20 (it now equals 60)
 . Increment i by 1 (it now equals 2)
-. Is 2 less than 51?  
+. Is 2 less than 51?
 .. Yes!  Go back to the beginning of the loop
 . Draw a circle at (60, 30) with a radius of 10
 . Increment x by 20 (it now equals 80)
 . Increment i by 1 (it now equals 3)
-. Is 3 less than 51? 
+. Is 3 less than 51?
 .. Yes!  Go back to the beginning of the loop
 . [REPEAT 46 TIMES UNTIL i=50 and x=1000]
 . Draw a circle at (1000, 30) with a radius of 10
 . Increment x by 20 (it now equals 1020)
 . Increment i by 1 (it now equals 51)
-. Is 51 less than 51? 
+. Is 51 less than 51?
 .. NO!  Exit out of loop and continue on to whatever comes next
 
 [TIP]
@@ -1084,7 +1084,7 @@ void testApp::draw(){
 
 TIP: Notice the use of ofRandom(). This function will return a random number. It takes 2 arguments: the minimum possible value and the maximum possible value. What I am saying in this code is "give me a number between 0 and the width of the screen."
 
-Technically this works, but we have only drawn 3 circles, and already the code is getting unwieldy. We want to draw 1000! We clearly have a bunch of variables that are used in very similar ways. Why not group, say, all of the x coordinates into a single set, and all of the y coordinates, etc.?  
+Technically this works, but we have only drawn 3 circles, and already the code is getting unwieldy. We want to draw 1000! We clearly have a bunch of variables that are used in very similar ways. Why not group, say, all of the x coordinates into a single set, and all of the y coordinates, etc.?
 
 These sets are called arrays. Check out the following code:
 
@@ -1099,7 +1099,7 @@ void testApp::setup(){
     
     circleX[0] = ofRandom(0, ofGetWidth());
     circleY[0] = ofRandom(0, ofGetHeight());
-    circleRad[0] = ofRandom(10, 40); 
+    circleRad[0] = ofRandom(10, 40);
     
     circleX[1] = ofRandom(0, ofGetWidth());
     circleY[1] = ofRandom(0, ofGetHeight());
@@ -1210,7 +1210,7 @@ void testApp::setup(){
     {
         circleX[i] = ofRandom(0, ofGetWidth());
         circleY[i] = ofRandom(0, ofGetHeight());
-        circleRad[i] = ofRandom(10, 40); 
+        circleRad[i] = ofRandom(10, 40);
         
         circleR[i] = ofRandom(0, 255);
         circleG[i] = ofRandom(0, 255);
@@ -1237,7 +1237,7 @@ void testApp::draw(){
 }
 ---------------------------------------------------------------------
 
-At the very top, notice the line "#define NUM_CIRCLES 500". This isn't technically a line of `c++` code, but rather a message to your compiler. It tells the compiler "before you start compiling code, anywhere you see NUM_CIRCLES, replace it with 500". That's it! A #define is one of a couple messages that you can send to the compiler (or, more accurately, the preprocessor), known more broadly as http://www.cplusplus.com/doc/tutorial/preprocessor/[preprocessor directives]. We will talk more about them at a later date., but for now, all you need to know is that #define is a very simple find/replace procedure. 
+At the very top, notice the line "#define NUM_CIRCLES 500". This isn't technically a line of `c++` code, but rather a message to your compiler. It tells the compiler "before you start compiling code, anywhere you see NUM_CIRCLES, replace it with 500". That's it! A #define is one of a couple messages that you can send to the compiler (or, more accurately, the preprocessor), known more broadly as http://www.cplusplus.com/doc/tutorial/preprocessor/[preprocessor directives]. We will talk more about them at a later date., but for now, all you need to know is that #define is a very simple find/replace procedure.
 
 
 Functions
