@@ -29,13 +29,13 @@ addons;;
     The "core" openFrameworks contains only the most essential functionality. Everything in the addons folder can be added to an application piecemeal. This includes stuff like reading an XML file, loading a 3D model, or using the computer vision library, openCV.
 
 apps;;
-	This is where the applications that you make will be stored, and where you will be working most of the time. You will notice that there are already a folder in "apps" called "myApps".
+    This is where the applications that you make will be stored, and where you will be working most of the time. You will notice that there are already a folder in "apps" called "myApps".
 
 examples;;
   This folder contains example applications that illustrate some of the things that openFrameworks can do.
 
 libs;;
-	This folder contains all the libraries that openFrameworks uses as well as the ofCore.
+    This folder contains all the libraries that openFrameworks uses as well as the ofCore.
 
 
 Take a Tour of the Examples
@@ -198,13 +198,13 @@ If you refer back to the Q&A "What is a software framework?" in the introduction
 These functions will be called by openFrameworks at different points during the execution of your program. Let's take a look at a few of them.
 
 setup;;
-	This function is called (ie: any code that you've put inside the curly brackets runs) at the very beginning of the life of your application, before your program window opens. So, let's say, for instance, you wanted to set the size of the window. You probably want this to happen before the window actually opens, so setup would be a good place for that.
+    This function is called (ie: any code that you've put inside the curly brackets runs) at the very beginning of the life of your application, before your program window opens. So, let's say, for instance, you wanted to set the size of the window. You probably want this to happen before the window actually opens, so setup would be a good place for that.
 
 update, draw;;
-	After the setup function runs, the update and draw functions begin a loop that continues until your program ends. So, after setup() runs, update() runs, then draw(), then update(), then draw(), etc. and by default, this happens as fast as your computer can handle. update() is typically used for updating the state of your program (ie: changing the value of variables), while draw() is used to actually draw things into your window.
+    After the setup function runs, the update and draw functions begin a loop that continues until your program ends. So, after setup() runs, update() runs, then draw(), then update(), then draw(), etc. and by default, this happens as fast as your computer can handle. update() is typically used for updating the state of your program (ie: changing the value of variables), while draw() is used to actually draw things into your window.
 
 keyPressed, keyReleased, mouseMoved, mouseDragged, mousePressed, mouseReleased, windowResized, gotMessage, dragEvent;;
-	Unlike the previous three functions, these functions are called only when a user does something. Can you guess what?
+    Unlike the previous three functions, these functions are called only when a user does something. Can you guess what?
 
 But enough with the reading. Let's see these things in action.
 
@@ -329,7 +329,7 @@ int myCircleX;
 int myCircleY;
 ---------------------------------------------------------------------
 
-In those 2 new lines of code, we "declared" 2 new variables: one called 'myCircleX' and one called 'myCircleY'. You could actually name them whatever you want (within reason), but it's a good idea to name them something that is related to how they will be used. We also said that these variables will be used to hold whole-number integer values, or *int*s. Declaring a variable is an important and necessary step. It's like telling your application "okay, I'm going to need to store a number that might change."
+In those 2 new lines of code, we "declared" 2 new variables: one called 'myCircleX' and one called 'myCircleY'. You could actually name them whatever you want (within reason), but it's a good idea to name them something that is related to how they will be used. We also said that these variables will be used to hold whole-number integer values, or **int**s. Declaring a variable is an important and necessary step. It's like telling your application "okay, I'm going to need to store a number that might change."
 
 The next thing we need to do is give those variables a starting value. We know that the endgame here is to have these variables change over time. But before we can change them, we need to give them an initial value. In other words, before our circle starts moving, where will it appear?
 
