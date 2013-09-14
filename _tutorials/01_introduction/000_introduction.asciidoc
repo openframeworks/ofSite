@@ -143,7 +143,7 @@ Windows
 
 Mac
 ^^^
-- http://www.openframeworks.cc/setup/xcode/[XCode Setup Guide]
+- http://www.openframeworks.cc/setup/xcode/[Xcode Setup Guide]
 
 Linux
 ^^^^^
