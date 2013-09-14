@@ -130,11 +130,11 @@ Press escape or Apple+Q to exit out of the program.
 =====================================================================
 You might be tempted to also rename "emptyExample.xcodeproj" to "myFirstProject.xcodeproj", and if you are using XCode < 4, you can. But as of XCode 4, this seems to cause some problems. So, instead, open up your project in XCode and click on the "emptyExample" title in the upper left as shown here:
 
-image:images/rename01.png["Renaming your Project"]
+image:images/rename01.png["Renaming your Project",width="600"]
 
 After you rename it, you will get a dialog box asking you if you'd like to rename a bunch of other stuff. Click "Rename"
 
-image:images/rename02.png["Renaming your Project"]
+image:images/rename02.png["Renaming your Project",width="600"]
 
 voila!
 =====================================================================
