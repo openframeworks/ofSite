@@ -16,7 +16,10 @@ body {
     color: black;
     list-style-type: none;
 }
-
+/* asciidoc generated paragraphs in lists, this makes them look nice */
+#body-wrap li p {
+	display: inline;
+}
 #body-wrap ul li:before {
     content: '> ';
     padding-right: 0.3em;
