@@ -1,8 +1,8 @@
 ofTutorials - Introduction
 ==========================
 Jeff Crouse <jeff@crouse.cc>
-v0.1, January 2012:
-:Author Initials: JRC
+v0.2, September 2013:
+:Author Initials: JRC, JED
 :icons:
 :numbered:
 :doctype: book
