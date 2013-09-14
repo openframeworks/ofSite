@@ -17,7 +17,7 @@ body {
     list-style-type: none;
 }
 /* asciidoc generated paragraphs in lists, this makes them look nice */
-#body-wrap li p {
+#body-wrap li p:first-child {
 	display: inline;
 }
 #body-wrap ul li:before {
