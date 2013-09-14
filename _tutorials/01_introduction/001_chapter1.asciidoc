@@ -38,8 +38,6 @@ libs;;
 	This folder contains all the libraries that openFrameworks uses as well as the ofCore.
 
 
-NOTE:  Of course, if you are reading this documentation, you probably also have a CodeForArt folder in there with addons, apps, and libs.
-
 Take a Tour of the Examples
 ---------------------------
 
