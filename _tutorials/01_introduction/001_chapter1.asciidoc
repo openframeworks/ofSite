@@ -269,7 +269,7 @@ This last point is important: when we call "ofSetColor", it's like picking a cra
 [source,cpp]
 ---------------------------------------------------------------------
 void testApp::draw(){
-	ofSetColor(255, 0, 255);
+    ofSetColor(255, 0, 255);
     ofCircle(200, 300, 60);
 
     ofCircle(500, 500, 100);
@@ -282,7 +282,7 @@ But if we wanted that circle to be a different color, we would have to call ofSe
 [source,cpp]
 ---------------------------------------------------------------------
 void testApp::draw(){
-	ofSetColor(255, 0, 255);
+    ofSetColor(255, 0, 255);
     ofCircle(200, 300, 60);
 
     ofSetColor(0, 255, 255);
