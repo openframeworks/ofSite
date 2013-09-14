@@ -87,17 +87,6 @@ It's possible that you will have to do this for every project, so you might as w
 
 Now you should open and run all of the other examples.
 
-Code::Blocks
-~~~~~~~~~~~~
-
-coming soon!
-
-Visual Studio
-~~~~~~~~~~~~~
-
-coming soon!
-
-
 
 Creating Your First Project
 ---------------------------
