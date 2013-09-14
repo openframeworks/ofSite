@@ -58,11 +58,11 @@ IMPORTANT: Find out which version you are using in the menubar: XCode > About XC
 
 You'll notice a big "Run" button at the top left side of the screen. In XCode 3, it is called "Build & Run". That will run the currently active target. But you might find that, by default, the active target is the openFrameworks library, which, by itself, doesn't do anything. What we want to run is "graphicsExample" program. So if you see this:
 
-image::images/target-bad.png[openFrameworks library chosen,width="600"]
+image::images/target-bad.png[openFrameworks library chosen,width="400"]
 
 Click and drag down so that it looks like this:
 
-image::images/target-good.png[graphicsExample target chosen,width="600"]
+image::images/target-good.png[graphicsExample target chosen,width="400"]
 
 Now click "Run!"  You should see this:
 
@@ -142,7 +142,7 @@ voila!
 
 When you click "Run" from within XCode, what actually happens behind the scenes is that your code is compiled into an executable and placed within the "bin" directory. Then that application is run just as if you had double clicked it. So, if you look in "myApps/MyFirstApplication/bin" folder, you should see an application icon. This is your application! If you double-click on it, you will see the same gray window. Now you can send this application to all of your friends (who use a Mac) and they can launch your wonderful gray window program.
 
-image:images/workspace05.png["Your Executable"]
+image:images/workspace05.png["Your Executable",width="760"]
 
 Writing Code
 ------------
