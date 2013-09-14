@@ -139,7 +139,7 @@ To get started working with openFrameworks, you will want to download and instal
 Windows
 ^^^^^^^
 - http://www.openframeworks.cc/setup/codeblocks/[code::blocks setup guide]
-- http://www.openframeworks.cc/setup/vs-2010/[vs 2010 setup guide]
+- http://www.openframeworks.cc/setup/vs/[visual studio setup guide]
 
 Mac
 ^^^
