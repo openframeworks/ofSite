@@ -238,7 +238,7 @@ link:/documentation/graphics/ofGraphics.html#show_ofCircle[ofCircle] is a functi
 
 NOTE: The order of the arguments is important. The first argument to ofCircle will always mean "x coordinate" and the third will always mean "radius".
 
-NOTE: There are some functions (such as http://www.openframeworks.cc/documentation/graphics/ofGraphics.html#ofFill[ofFill], which simply tells oF to fill shapes that are drawn) that have 0 arguments, but you still have to put parenthesis after them.
+NOTE: There are some functions (such as link:/documentation/graphics/ofGraphics.html#show_ofFill[ofFill], which simply tells oF to fill shapes that are drawn) that have 0 arguments, but you still have to put parenthesis after them.
 
 If you hadn't just read about it here, you could have found information about ofCircle on the http://www.openframeworks.cc/documentation/[openFrameworks documentation page], which you will be using more as we move on.
 
