@@ -1324,7 +1324,7 @@ _inlined_description: _
 
 _description: _
 
-
+Sets the encoding used by the font object. Can be set to either OF_ENCODING_UTF8 or OF_ENCODING_ISO_8859_15. OF_ENCODING_ISO_8859_15 is an 8-bit single-byte coded graphic character sets, like ASCII while OF_ENCODING_UTF8 is a variable-width encoding that can represent every character in the Unicode character set.  This function is useful if you are trying to draw unicode strings.
 
 
 
@@ -1403,6 +1403,7 @@ _inlined_description: _
 _description: _
 
 
+Sets the letter spacing of the font object.  1.0 = default spacing, less then 1.0 would be tighter spacing, greater then 1.0 would be wider spacing. 
 
 
 
