@@ -5,7 +5,7 @@
 	<h2><%self:filter chain="markdown_template">${function.returns} ${function.name}(${function.parameters})</%self:filter></h2>
 	<div class="documentation_detail_description">
 		${function.summary}
-		<%self:filter chain="syntax_highlight,markdown_template">
+		<%self:filter chain="markdown_template">
 ${function.description}
 		</%self:filter>
 	</div>
