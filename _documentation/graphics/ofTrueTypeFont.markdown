@@ -52,8 +52,7 @@ _inlined_description: _
 
 _description: _
 
-
-
+This function, which is internal to the font object, binds the texture for the font drawing.  
 
 
 
@@ -91,7 +90,7 @@ _inlined_description: _
 
 _description: _
 
-
+This function, which is used internally, builds a mesh representation of the font.  This function is used by ofTrueTypeFont::getStringMesh().
 
 
 
@@ -130,6 +129,7 @@ _inlined_description: _
 
 _description: _
 
+This function draws a character at position x,y.  It uses the texture representation of the font. 
 
 
 
@@ -169,8 +169,7 @@ _inlined_description: _
 
 _description: _
 
-
-
+This function draws a character at position x,y.  It uses the path of the font, which involves 
 
 
 
@@ -229,7 +228,7 @@ Your strings can even be multiline:
 myfont.drawString("a test of multiline text", 300,300);
 ~~~~
 
-you can also using dynamically generated strings. For example, to print the frame rate:
+you can also using dynamically gengerated strings. For example, to print the frame rate:
 ~~~~{.cpp}
 
 char fpsStr[255]; // an array of chars
@@ -431,8 +430,8 @@ _inlined_description: _
 
 _description: _
 
-
-
+Returns the encoding used by the font object.  This is set by ofTrueTypeFont::setEncoding() to either OF_ENCODING_UTF8 or OF_ENCODING_ISO_8859_15. OF_ENCODING_ISO_8859_15 is an 8-bit single-byte coded graphic character sets, like ASCII while 
+ OF_ENCODING_UTF8 is a variable-width encoding that can represent every character in the Unicode character set.
 
 
 
@@ -470,7 +469,7 @@ _inlined_description: _
 
 _description: _
 
-
+Returns the texture (as a reference) that ofTrueTypeFont uses internally.  When you load in a font, it parses the ttf (or .otf) file and rasterizes it to a texture for fast drawing.  This gives you low level access to that texture. 
 
 
 
@@ -509,6 +508,7 @@ _inlined_description: _
 
 _description: _
 
+Returns the letter spacing of the font object.  You can control this by the ofTrueTypeFont::setLetterSpacing() function.  1.0 = default spacing, less then 1.0 would be tighter spacing, greater then 1.0 would be wider spacing. 
 
 
 
@@ -549,7 +549,7 @@ _inlined_description: _
 _description: _
 
 
-The line height is computed, based on the font size, and can be adjusted. Useful if you are print multi-line text.
+The line height is computed, based on the font size, and can be adjusted. Useful if you are print multi-line text.  This function returns the current line height. 
 
 
 
@@ -590,6 +590,8 @@ _inlined_description: _
 _description: _
 
 
+Returns the number of characters this font represents.  If you allocate the font using different paramters, you can load in partial and full character sets, this helps you know how many characters it can represent. 
+
 
 
 
@@ -628,7 +630,7 @@ _inlined_description: _
 
 _description: _
 
-
+Returns the size of the font.  This is set when you load in the font. 
 
 
 
@@ -667,7 +669,7 @@ _inlined_description: _
 
 _description: _
 
-
+This is a variable to represent how wide spaces are sized.   It's a scalar for the width of the letter 'p', so 1.0 means that a space will be the size of the lower case 'p' of that font.  2.0 means that it's 2 times the size of the lower case 'p', etc. 
 
 
 
@@ -703,6 +705,56 @@ _inlined_description: _
 
 
 _description: _
+
+This returns a vector of ofTTFCharacters (which is actually an ofPath) for a given string.  This means you can get access to the point data / outlines of the letter forms. 
+
+
+~~~~{.cpp}
+
+
+//--------------------------------------------------------------
+void testApp::setup(){
+
+    ofBackground(0);
+    font.loadFont("vag.ttf", 100, false, false, true);
+    
+}
+
+//--------------------------------------------------------------
+void testApp::update(){
+
+}
+
+//--------------------------------------------------------------
+void testApp::draw(){
+
+    
+    // get the string as paths
+    vector < ofTTFCharacter > paths = font.getStringAsPoints("hello!");
+
+    
+    ofPushMatrix();
+    ofTranslate(ofGetWidth()/2, ofGetHeight()/2);
+    
+    
+    for (int i = 0; i < paths.size(); i++){
+        
+        // for every character break it out to polylines
+        
+        vector <ofPolyline> polylines = paths[i].getOutline();
+        
+        // for every polyline, draw every fifth point
+        
+        for (int j = 0; j < polylines.size(); j++){
+            for (int k = 0; k < polylines[j].size(); k+=5){         // draw every "fifth" point
+                ofCircle( polylines[j][k], 3);
+            }
+        }
+    }
+    
+    ofPopMatrix();
+}
+~~~~
 
 
 
@@ -743,7 +795,7 @@ _inlined_description: _
 
 _description: _
 
-
+Similar to ofTrueTypeFont::getStringAsPoints() but with a parameter for vertical flip.
 
 
 
@@ -782,6 +834,8 @@ _inlined_description: _
 
 _description: _
 
+
+Returns the bounding box of a string as a retangle, useful if you want to position the type or calculate the size of graphics that relate to the font. 
 
 e.g:
 ~~~~{.cpp}
@@ -839,7 +893,7 @@ _inlined_description: _
 
 _description: _
 
-
+Returns the string as an ofMesh.  
 
 
 
@@ -878,7 +932,7 @@ _inlined_description: _
 
 _description: _
 
-
+Returns true or false if this font was allocated with a full character set. 
 
 
 
@@ -956,6 +1010,7 @@ _inlined_description: _
 
 _description: _
 
+Returns true of false if the font is set to be anti-aliased.  This is set when you load. 
 
 
 
@@ -995,6 +1050,7 @@ _inlined_description: _
 
 _description: _
 
+Returns true or false if the font is loaded properly. 
 
 
 
@@ -1122,6 +1178,7 @@ _inlined_description: _
 
 _description: _
 
+loads a font, and allows you to set the following parameters: the filename, the size, if the font is anti-aliased, if it has a full character set, if you need it to have contrours (for getStringPoints) and paramters that control the simplification amount for those contours and the dpi of the font. 
 
 
 
