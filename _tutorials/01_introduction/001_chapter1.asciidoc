@@ -490,7 +490,7 @@ Going back to the producer metaphor can help us understand how these functions w
 
 This might be a little unintuitive if you are accustomed to thinking about typing a letter as a single action: "I just typed the letter 'o'". But in fact, they are 2 distinct actions, or "events", and eventually you might find it handy to be able to distinguish between them.
 
-Create a new project in "MyFirstWorkspace" called "KeyboardInteraction". If you need to, go back to "Creating your First Project" to see how.
+Create a new project in "myApps" called "keyboardInteraction". If you need to, go back to "Creating your First Project" to see how.
 
 image:images/KeyboardInteraction01.png["Keyboard Interaction Project"]
 
