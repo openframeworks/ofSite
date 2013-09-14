@@ -12,7 +12,7 @@
 
 ##Description
 
-
+When your ofApp has a dragEvent() method, it will give you an ofDragInfo object. This describes the content of the event when someone drags content onto the openFrameworks window.
 
 
 
@@ -77,7 +77,7 @@ _advanced: False_
 
 _description: _
 
-
+A list of the absolute file paths that were drag-and-dropped onto the window. 
 
 
 
@@ -102,7 +102,7 @@ _advanced: False_
 
 _description: _
 
-
+The position where the user dropped the files onto the window.
 
 
 
