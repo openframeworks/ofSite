@@ -250,8 +250,8 @@ Your circle is great, but kind of boring. What if we want to introduce some colo
 [source,cpp]
 ---------------------------------------------------------------------
 void testApp::draw(){
-	ofSetColor(255, 0, 255);
-	ofCircle(200, 300, 60);
+    ofSetColor(255, 0, 255);
+    ofCircle(200, 300, 60);
 }
 ---------------------------------------------------------------------
 
@@ -338,8 +338,8 @@ In a previous section, we learned that the setup() function gets called once whe
 [source,cpp]
 ---------------------------------------------------------------------
 void testApp::setup(){
-	myCircleX = 300;
-	myCircleY = 200;
+    myCircleX = 300;
+    myCircleY = 200;
 }
 ---------------------------------------------------------------------
 
@@ -350,8 +350,8 @@ Now we can edit our ofCircle call a bit :
 [source,cpp]
 ---------------------------------------------------------------------
 void testApp::draw(){
-	ofSetColor(255, 0, 255);
-	ofCircle(myCircleX, myCircleY, 60);
+    ofSetColor(255, 0, 255);
+    ofCircle(myCircleX, myCircleY, 60);
 }
 ---------------------------------------------------------------------
 
@@ -364,10 +364,10 @@ Let's edit our draw function a little so that it looks like this:
 [source,cpp]
 ---------------------------------------------------------------------
 void testApp::draw(){
-	myCircleX = myCircleX + 1;
+    myCircleX = myCircleX + 1;
 
-	ofSetColor(255, 0, 255);
-	ofCircle(myCircleX, myCircleY, 60);
+    ofSetColor(255, 0, 255);
+    ofCircle(myCircleX, myCircleY, 60);
 }
 ---------------------------------------------------------------------
 
@@ -392,8 +392,8 @@ void testApp::update(){
 }
 
 void testApp::draw(){
-	ofSetColor(255, 0, 255);
-	ofCircle(myCircleX, myCircleY, 60);
+    ofSetColor(255, 0, 255);
+    ofCircle(myCircleX, myCircleY, 60);
 }
 ---------------------------------------------------------------------
 
@@ -416,7 +416,7 @@ In the interest of having a smoother, more predictable kind of animation, we wil
 ---------------------------------------------------------------------
 void testApp::setup(){
     ofSetFrameRate(60);
-    
+
     myCircleX = 300;
     myCircleY = 200;
 }
@@ -444,15 +444,15 @@ The Pacman Effect
 
 Let's have one final adventure with our purple circle before saying goodbye. Our application is still a litlte dissapointing because once our circle leaves the screen on the right, it's gone forever. Let's fix that problem by making the circle re-appear on the left side after leaving on the right: the Pacman Effect.
 
-Before we write any code, let's think about what this is going to mean in terms of the variables that we have. In the current state, we have myCircleX acting as the x coordinate for our circle, and it is being incrementing by 1 (or 4, if you followed the tip above) every frame. By default, an openFrameworks window is 1024x768. So, one way we could achieve the Pacman Effect is to reset myCircleX back to 300 once it goes beyond 1024. 
+Before we write any code, let's think about what this is going to mean in terms of the variables that we have. In the current state, we have myCircleX acting as the x coordinate for our circle, and it is being incrementing by 1 (or 4, if you followed the tip above) every frame. By default, an openFrameworks window is 1024x768. So, one way we could achieve the Pacman Effect is to reset myCircleX back to 300 once it goes beyond 1024.
 
 How can we do this? We know that we are supposed to do any variable updating in the update() function, so let's start there. We also know that we *only* want to reset myCircleX *if* it has gone above 1024. So for that, we use the 'if' statement.
 
 [source,cpp]
 ---------------------------------------------------------------------
 void testApp::update(){
-    myCircleX++;		
-    if(myCircleX > 1024) 
+    myCircleX++;
+    if(myCircleX > 1024)
     {
         myCircleX = 300;
     }
@@ -460,7 +460,7 @@ void testApp::update(){
 ---------------------------------------------------------------------
 This code says:
 
-- increment myCircleX by one. 
+- increment myCircleX by one.
 - test if myCircleX is greater than 1024
 - *only* if that test turns out to be true, set myCircleX back to 300;
 
@@ -593,7 +593,7 @@ void testApp::update(){
 
 void testApp::draw(){
     ofSetColor(255, 0, 255);
-	ofCircle(myCircleX, myCircleY, 60);
+    ofCircle(myCircleX, myCircleY, 60);
 }
 ---------------------------------------------------------------------
 
@@ -628,11 +628,11 @@ This also works!
 ---------------------------------------------------------------------
 if(key=='w')
 {
-	myCircleY--;
+    myCircleY--;
 }
 if(key=='a')
 {
-	myCircleX--;
+    myCircleX--;
 }
 ---------------------------------------------------------------------
 =====================================================================
@@ -758,7 +758,7 @@ It's clear that it has something to do with the mousePressed function that we ju
 [source,cpp]
 ---------------------------------------------------------------------
 void testApp::mousePressed(int x, int y, int button){
-	myCircleRadius++;
+    myCircleRadius++;
 }
 ---------------------------------------------------------------------
 
@@ -795,10 +795,10 @@ So the only thing left to do is compare 'myCircleRadius' to 'distance', and we c
 ---------------------------------------------------------------------
 void testApp::mousePressed(int x, int y, int button){
     float distance = ofDist(myCircleX, myCircleY, x, y);
- 	if(distance < myCircleRadius)
- 	{
- 		myCircleRadius++;
- 	}  
+    if(distance < myCircleRadius)
+    {
+        myCircleRadius++;
+    }
 }
 ---------------------------------------------------------------------
 
@@ -837,18 +837,18 @@ using namespace std;
 
 int main ()
 {
-	cout << "type \t\tsize \tmin \t\t\tmax" << endl;
-	cout << "---------------------------------------------------------------" << endl;
-	cout << "bool\t\t" << sizeof(bool) << endl;
-	cout << "char\t\t" << sizeof(char) << "\t" << CHAR_MIN << "\t\t\t" << CHAR_MAX << endl;
-	cout << "unsigned char\t" << sizeof(unsigned char) << "\t\t\t\t" << UCHAR_MAX << endl;
-	cout << "short\t\t" << sizeof(short) << "\t" << INT_MIN << "\t\t" << INT_MAX << endl;
-	cout << "int\t\t" << sizeof(int) << "\t" << INT_MIN << "\t\t" << INT_MAX << endl;
-	cout << "unsigned int\t" << sizeof(unsigned int) << "\t\t\t\t" << UINT_MAX << endl;
-	cout << "float\t\t" << sizeof(float) << "\t" << FLT_MIN << "\t\t" << FLT_MAX << endl;
-	cout << "long\t\t" << sizeof(long) << "\t" << LONG_MIN << "\t" << LONG_MAX << endl;
-	cout << "double\t\t" << sizeof(double) << "\t" << DBL_MIN << "\t\t" << DBL_MAX << endl;
-	return 0;
+    cout << "type \t\tsize \tmin \t\t\tmax" << endl;
+    cout << "---------------------------------------------------------------" << endl;
+    cout << "bool\t\t" << sizeof(bool) << endl;
+    cout << "char\t\t" << sizeof(char) << "\t" << CHAR_MIN << "\t\t\t" << CHAR_MAX << endl;
+    cout << "unsigned char\t" << sizeof(unsigned char) << "\t\t\t\t" << UCHAR_MAX << endl;
+    cout << "short\t\t" << sizeof(short) << "\t" << INT_MIN << "\t\t" << INT_MAX << endl;
+    cout << "int\t\t" << sizeof(int) << "\t" << INT_MIN << "\t\t" << INT_MAX << endl;
+    cout << "unsigned int\t" << sizeof(unsigned int) << "\t\t\t\t" << UINT_MAX << endl;
+    cout << "float\t\t" << sizeof(float) << "\t" << FLT_MIN << "\t\t" << FLT_MAX << endl;
+    cout << "long\t\t" << sizeof(long) << "\t" << LONG_MIN << "\t" << LONG_MAX << endl;
+    cout << "double\t\t" << sizeof(double) << "\t" << DBL_MIN << "\t\t" << DBL_MAX << endl;
+    return 0;
 }
 ---------------------------------------------------------------------
 =====================================================================
@@ -871,7 +871,7 @@ void testApp::draw(){
     ofCircle(80, 300, 10);
     ofCircle(100, 300, 10);
     ofCircle(120, 300, 10);
-    // repeat 
+    // repeat
     ofCircle(1020, 300, 10);
 }
 ---------------------------------------------------------------------
@@ -881,17 +881,17 @@ That would be over 50 lines of code - ugh. And what if you decided you wanted th
 [source,cpp]
 ---------------------------------------------------------------------
 void testApp::draw(){
-	int x = 10;
-	
-	ofCircle(x, 300, 10);
-	x += 20;
-	ofCircle(x, 300, 10);
-	x += 20;
-	ofCircle(x, 300, 10);
-	x += 20;
-	ofCircle(x, 300, 10);
-	x += 20;
-	// copy and paste 47 more times
+    int x = 10;
+
+    ofCircle(x, 300, 10);
+    x += 20;
+    ofCircle(x, 300, 10);
+    x += 20;
+    ofCircle(x, 300, 10);
+    x += 20;
+    ofCircle(x, 300, 10);
+    x += 20;
+    // copy and paste 47 more times
 }
 ---------------------------------------------------------------------
 
@@ -956,8 +956,8 @@ We could actually make this even a bit more efficient and make the 'x' variable 
 ---------------------------------------------------------------------
 int x = 20;
 do {
-	ofCircle(x, 300, 10);
-	x+=20;
+    ofCircle(x, 300, 10);
+    x+=20;
 } while(x < ofGetWidth());
 ---------------------------------------------------------------------
 This has the added advantage of being immune to changes in window size. Try making the window bigger and smaller -- the circles will always be drawn to the end of the window.
@@ -974,9 +974,9 @@ int i = 0;
 int x = 20;
 while(i < 51)
 {
-	ofCircle(x, 300, 10);
-	x+=20;
-	i++;
+    ofCircle(x, 300, 10);
+    x+=20;
+    i++;
 }
 ---------------------------------------------------------------------
 
@@ -986,8 +986,8 @@ The only difference between a do...while loop and a while loop is that the the c
 ---------------------------------------------------------------------
 int x = 10;
 do {
-	ofCircle(x, 300, 10);
-	x += 20;
+    ofCircle(x, 300, 10);
+    x += 20;
 } while( x < mouseX );
 ---------------------------------------------------------------------
 
@@ -998,8 +998,8 @@ Notice how we've changed the condition so that the circles will be drawn until '
 int x = 10;
 while( x < mouseX )
 {
-	ofCircle(x, 300, 10);
-	x += 20;
+    ofCircle(x, 300, 10);
+    x += 20;
 }
 ---------------------------------------------------------------------
 
@@ -1015,8 +1015,8 @@ We've saved the best for last. The for loop is probably the one that you will us
 int x = 20;
 for(int i=0; i<51; i++)
 {
-	ofCircle(x, 300, 10);
-	x+=20;
+    ofCircle(x, 300, 10);
+    x+=20;
 }
 ---------------------------------------------------------------------
 
