@@ -198,8 +198,7 @@ _inlined_description: _
 _description: _
 
 
-Returns the current position of the playback-head in the sound. 0.0 - 1.0
-range. 0.0 is the beginning of the sound file and 1.0 is the end.
+Returns the current position of the playhead as a float between 0.0 and 1.0. 0.0 is the beginning of the sound file and 1.0 is the end.
   
 Example:
 ~~~~{.cpp}    
@@ -248,7 +247,7 @@ _inlined_description: _
 _description: _
 
 
-This returns the milliseconds of the sound or file currently playing in milliseconds.
+This returns the position of the playhead in terms of milliseconds (i.e. 5000 for 5 seconds into the sound).
 
 
 
@@ -341,7 +340,7 @@ _inlined_description: _
 _description: _
 
 
-
+Returns the current volume of the sound player, as set by `setVolume()`. 0.0 is silent and 1.0 is full volume.
 
 
 
@@ -381,7 +380,7 @@ _description: _
 
 
 
-
+Returns whether or not a sound has been successfully loaded into the sound player. 
 
 
 
@@ -727,7 +726,7 @@ _inlined_description: _
 _description: _
 
 
-Pauses and un-pauses the playback of the sound. 
+Pauses and un-pauses the playback of the sound.
 
 Example
 ~~~~{.cpp}
@@ -873,7 +872,7 @@ _inlined_description: _
 _description: _
 
 
-This sets the position of the sound currently playing in milliseconds.
+This sets the position of the playhead in milliseconds.
 
 
 
@@ -914,7 +913,7 @@ _inlined_description: _
 _description: _
 
 
-Sets the playback speed (spd) of the sound. 1.0 is the normal speed. 2.0 is double the normal speed etc. 
+Sets the playback speed of the sound. 1.0 is normal speed. 2.0 is double the normal speed etc. 
 
 Example:
 ~~~~{.cpp}
@@ -965,7 +964,7 @@ _inlined_description: _
 _description: _
 
 
-Sets the volume (vol) of the sound. 0.0 - 1.0 range. 0.0 is silent and 1.0 is full volume. 
+Sets the volume of the sound. 0.0 - 1.0 range. 0.0 is silent and 1.0 is full volume. 
 
 Example:
 ~~~~{.cpp}
