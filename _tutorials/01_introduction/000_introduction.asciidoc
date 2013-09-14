@@ -1,8 +1,8 @@
 ofTutorials - Introduction
 ==========================
 Jeff Crouse <jeff@crouse.cc>
-v0.1, January 2012:
-:Author Initials: JRC
+v0.2, September 2013:
+:Author Initials: JRC, JED
 :icons:
 :numbered:
 :doctype: book
@@ -20,7 +20,7 @@ What is OpenFrameworks?
 __________________________
 openFrameworks is an http://www.openframeworks.cc/about/license.html[open source] http://en.wikipedia.org/wiki/C%2B%2B"[C++] toolkit designed to assist the creative process by providing a simple and intuitive framework for experimentation. The toolkit is designed to work as a general purpose glue, and wraps together several commonly used libraries, including:
 
-- http://www.opengl.org/[OpenGL], http://glew.sourceforge.net/[GLEW], http://www.opengl.org/resources/libraries/glut/[GLUT], https://code.google.com/p/libtess2/[libtess2] and http://cairographics.org/[cairo] for graphics
+- http://www.opengl.org/[OpenGL], http://glew.sourceforge.net/[GLEW], http://www.opengl.org/resources/libraries/glut/[GLUT], http://www.glfw.org/[GLFW], https://code.google.com/p/libtess2/[libtess2] and http://cairographics.org/[cairo] for graphics
 - http://www.music.mcgill.ca/~gary/rtaudio/[rtAudio], http://www.portaudio.com/[PortAudio] or http://www.fmod.org/[FMOD] and http://kissfft.sourceforge.net/[Kiss FFT] for audio input, output and analysis
 - http://freetype.sourceforge.net/index2.html[FreeType] for fonts
 - http://freeimage.sourceforge.net/[FreeImage] for image saving and loading
@@ -139,15 +139,16 @@ To get started working with openFrameworks, you will want to download and instal
 Windows
 ^^^^^^^
 - http://www.openframeworks.cc/setup/codeblocks/[code::blocks setup guide]
-- http://www.openframeworks.cc/setup/vs-2010/[vs 2010 setup guide]
+- http://www.openframeworks.cc/setup/vs/[visual studio setup guide]
 
 Mac
 ^^^
-- http://www.openframeworks.cc/setup/xcode/[XCode Setup Guide]
+- http://www.openframeworks.cc/setup/xcode/[Xcode Setup Guide]
 
 Linux
 ^^^^^
-- http://www.openframeworks.cc/setup/linux-codeblocks/[codeblocks & makefiles]
+- http://www.openframeworks.cc/setup/linux-codeblocks/[linux codeblocks & makefiles]
+- http://www.openframeworks.cc/setup/raspberrypi/[Raspberry Pi]
 
 What Can I Make with oF?
 ~~~~~~~~~~~~~~~~~~~~~~~~
