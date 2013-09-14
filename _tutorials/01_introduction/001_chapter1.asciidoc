@@ -442,7 +442,7 @@ void testApp::update(){
 The Pacman Effect
 ~~~~~~~~~~~~~~~~~
 
-Let's have one final adventure with our purple circle before saying goodbye. Our application is still a litlte dissapointing because once our circle leaves the screen on the right, it's gone forever. Let's fix that problem by making the circle re-appear on the left side after leaving on the right: the Pacman Effect.
+Let's have one final adventure with our purple circle before saying goodbye. Our application is still a little dissapointing because once our circle leaves the screen on the right, it's gone forever. Let's fix that problem by making the circle re-appear on the left side after leaving on the right: the Pacman Effect.
 
 Before we write any code, let's think about what this is going to mean in terms of the variables that we have. In the current state, we have myCircleX acting as the x coordinate for our circle, and it is being incrementing by 1 (or 4, if you followed the tip above) every frame. By default, an openFrameworks window is 1024x768. So, one way we could achieve the Pacman Effect is to reset myCircleX back to 300 once it goes beyond 1024.
 
