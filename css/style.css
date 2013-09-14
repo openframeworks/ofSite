@@ -739,6 +739,14 @@ a.docs_class{
 	position: relative;
 }
 
+/* BEGIN unify formatting for markdown ``inline code blocks`` */
+.class_documentation code, .documentation_detail_description code{
+  font-size: 12px;
+  font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;	
+}
+/* END unify formatting for markdown ``inline code blocks`` */
+
+
 /* BEGIN Fixes for documentation containing unordered lists */
 #body-wrap .documentation_detail_description li:before {
   content: none;
