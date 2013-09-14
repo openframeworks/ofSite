@@ -147,7 +147,8 @@ Mac
 
 Linux
 ^^^^^
-- http://www.openframeworks.cc/setup/linux-codeblocks/[codeblocks & makefiles]
+- http://www.openframeworks.cc/setup/linux-codeblocks/[linux codeblocks & makefiles]
+- http://www.openframeworks.cc/setup/raspberrypi/[Raspberry Pi]
 
 What Can I Make with oF?
 ~~~~~~~~~~~~~~~~~~~~~~~~
