@@ -6,6 +6,7 @@ import logging
 import blogofile_bf as bf
 import shutil
 import sys
+import random
 
 import argparse
 import shutil
@@ -160,7 +161,9 @@ def run():
             b = Block(block)
             if b.name is not None and b.name != "":
                 blocks.append(b)
+        blocks = sorted(blocks, key=lambda block: block.name)
         columns.append(blocks)
+    
     
     indexhtml_file = open("_documentation/" + "indexAddons.markdown",'r')
     indexhtml = indexhtml_file.read()
@@ -173,6 +176,7 @@ def run():
             b = Block(block)
             if b.name is not None and b.name != "":
                 blocks.append(b)
+        blocks = sorted(blocks, key=lambda block: block.name)
         addons_columns.append(blocks)
         
     bf.template.materialize_template("documentation.mako", ('documentation',"index.html"), {'columns':columns,'addons_columns':addons_columns} )
