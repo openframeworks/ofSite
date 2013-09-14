@@ -107,7 +107,7 @@ We want to create a *project*, but every project has to live inside a *workspace
 
 First we will [underline]#duplicate# (NOT rename) the entire "emptyExample" folder. On a mac, you can literally right-click on the emptyExample folder, and click 'Duplicate'. So the result should look like this:
 
-image:images/workspace02.png["My First Project"]
+image:images/workspace02.png["emptyExample Copy"]
 
 Next, we can rename the duplicate project folder from "emptyExample Copy" to "myFirstProject". 
 
