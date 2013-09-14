@@ -149,51 +149,51 @@ Writing Code
 
 Okay, now that you know how to create a project, it's time to start writing some code inside it. The next few sections will introduce you to the structure of an openFrameworks application and a few simple drawing and setup functions.
 
-ofApp.cpp
+testApp.cpp
 ~~~~~~~~~~~
 
-So it's finally time to start looking at some code. The first thing you need to do is open up a project in XCode. I'm going to assume that we are working with "MyFirstProject" inside the workspace "MyFirstWorkspace" from the last section. When you first open it up, take a look in the *Navigator View* (the panel on the far left of XCode) and click the disclosure triangle like this:
+So it's finally time to start looking at some code. The first thing you need to do is open up a project in XCode. I'm going to assume that we are working with "myFirstProject" inside the workspace "myApps" from the last section. When you first open it up, take a look in the *Navigator View* (the panel on the far left of XCode) and click the disclosure triangle like this:
 
 image:images/expand01.gif["Open up the project"]
 
 . Click the disclosure triangle next to "MyFirstProject"
 . Click the disclosure triangle next to "src"
-. Click on ofApp.cpp
+. Click on testApp.cpp
 
-ofApp.cpp is going to become your very good friend over the next few tutorials. In the *Editor Window*, you should see something that starts like this:
+testApp.cpp is going to become your very good friend over the next few tutorials. In the *Editor Window*, you should see something that starts like this:
 
 [source,cpp]
 ---------------------------------------------------------------------
-#include "ofApp.h"
+#include "testApp.h"
 
 //--------------------------------------------------------------
-void ofApp::setup(){
+void testApp::setup(){
 
 }
 
 //--------------------------------------------------------------
-void ofApp::update(){
+void testApp::update(){
 
 }
 
 //--------------------------------------------------------------
-void ofApp::draw(){
+void testApp::draw(){
 
 }
 
 //--------------------------------------------------------------
-void ofApp::keyPressed(int key){
+void testApp::keyPressed(int key){
 
 }
 ---------------------------------------------------------------------
 
 So what is going on here?
 
-In a lot of ways, ofApp.cpp is like hello.cpp, the file that we wrote in the Introduction. It's a plain text file that contains `c++` source code. The difference now is that we are editing it through our IDE, so there is some really nice syntax highlighting that will hopefully make it easier to make sense of the code, and it will be a lot easier to compile and run when we want to.
+In a lot of ways, testApp.cpp is like hello.cpp, the file that we wrote in the Introduction. It's a plain text file that contains `c++` source code. The difference now is that we are editing it through our IDE, so there is some really nice syntax highlighting that will hopefully make it easier to make sense of the code, and it will be a lot easier to compile and run when we want to.
 
 On a very basic level, what you see here is a bunch of empty functions. A http://en.wikipedia.org/wiki/Function_(computer_science)[function] is a set of instructions that make up part of a larger program. Just in the snippet of code above, there are 4 functions: setup, update, draw, and keyPressed. Each of the functions is followed by a set of curly brackets ({}). What usually goes inside of these curly brackets are the instructions (assiging values to variables, loops, and calls to other functions) that make up the functions.
 
-If you refer back to the Q&A "What is a software framework?" in the introduction, the film production company analogy is particularly useful at this point. What you are looking at in ofApp.cpp is how openFrameworks has provided all of the infrastructure and logistical details. Now it's your job to define what happens. You do this by putting code into the fuctions in ofApp.cpp
+If you refer back to the Q&A "What is a software framework?" in the introduction, the film production company analogy is particularly useful at this point. What you are looking at in testApp.cpp is how openFrameworks has provided all of the infrastructure and logistical details. Now it's your job to define what happens. You do this by putting code into the fuctions in testApp.cpp
 
 These functions will be called by openFrameworks at different points during the execution of your program. Let's take a look at a few of them.
 
@@ -215,7 +215,7 @@ We will start by drawing a simple circle in our gray window using the ofCircle f
 
 [source,cpp]
 ---------------------------------------------------------------------
-void ofApp::draw(){
+void testApp::draw(){
     ofCircle(200, 300, 60);
 }
 ---------------------------------------------------------------------
@@ -238,7 +238,7 @@ http://www.openframeworks.cc/documentation/graphics/ofGraphics.html#ofCircle[ofC
 
 NOTE: The order of the arguments is important. The first argument to ofCircle will always mean "x coordinate" and the third will always mean "radius".
 
-NOTE: There are some functions (such as http://www.openframeworks.cc/documentation/graphics/ofGraphics.html#ofFill[ofFill], which simply tells oF to fill shapes that are drawn) that have 0 arguments, but you still have to put parenthesis after them. 
+NOTE: There are some functions (such as http://www.openframeworks.cc/documentation/graphics/ofGraphics.html#ofFill[ofFill], which simply tells oF to fill shapes that are drawn) that have 0 arguments, but you still have to put parenthesis after them.
 
 If you hadn't just read about it here, you could have found information about ofCircle on the http://www.openframeworks.cc/documentation/[openFrameworks documentation page], which you will be using more as we move on.
 
@@ -249,7 +249,7 @@ Your circle is great, but kind of boring. What if we want to introduce some colo
 
 [source,cpp]
 ---------------------------------------------------------------------
-void ofApp::draw(){
+void testApp::draw(){
 	ofSetColor(255, 0, 255);
 	ofCircle(200, 300, 60);
 }
@@ -268,7 +268,7 @@ This last point is important: when we call "ofSetColor", it's like picking a cra
 
 [source,cpp]
 ---------------------------------------------------------------------
-void ofApp::draw(){
+void testApp::draw(){
 	ofSetColor(255, 0, 255);
     ofCircle(200, 300, 60);
 
@@ -281,7 +281,7 @@ But if we wanted that circle to be a different color, we would have to call ofSe
 
 [source,cpp]
 ---------------------------------------------------------------------
-void ofApp::draw(){
+void testApp::draw(){
 	ofSetColor(255, 0, 255);
     ofCircle(200, 300, 60);
 
@@ -319,11 +319,11 @@ In the example above, when we draw our circle, we use two numbers to tell the of
 
 In `c++`, and in programming in general, whenever you have a value that you want to change, you create a "variable". Variables come in different shapes and sizes depending on what they represent, such as decimal numbers, whole numbers, a letter, or a bunch of letters. In this case, we want to create variables that can stand in for coordinates in our ofCircle function, so we will use 2 *int*s.
 
-Put this at the top of your ofApp.cpp, right under the `#include` line, so that your file starts like this:
+Put this at the top of your testApp.cpp, right under the `#include` line, so that your file starts like this:
 
 [source,cpp]
 ---------------------------------------------------------------------
-#include "ofApp.h"
+#include "testApp.h"
 
 int myCircleX;
 int myCircleY;
@@ -337,7 +337,7 @@ In a previous section, we learned that the setup() function gets called once whe
 
 [source,cpp]
 ---------------------------------------------------------------------
-void ofApp::setup(){
+void testApp::setup(){
 	myCircleX = 300;
 	myCircleY = 200;
 }
@@ -349,7 +349,7 @@ Now we can edit our ofCircle call a bit :
 
 [source,cpp]
 ---------------------------------------------------------------------
-void ofApp::draw(){
+void testApp::draw(){
 	ofSetColor(255, 0, 255);
 	ofCircle(myCircleX, myCircleY, 60);
 }
@@ -363,7 +363,7 @@ Let's edit our draw function a little so that it looks like this:
 
 [source,cpp]
 ---------------------------------------------------------------------
-void ofApp::draw(){
+void testApp::draw(){
 	myCircleX = myCircleX + 1;
 
 	ofSetColor(255, 0, 255);
@@ -387,11 +387,11 @@ There is just one thing we need to fix before moving on to more pressing aesthet
 
 [source,cpp]
 ---------------------------------------------------------------------
-void ofApp::update(){
+void testApp::update(){
     myCircleX++;
 }
 
-void ofApp::draw(){
+void testApp::draw(){
 	ofSetColor(255, 0, 255);
 	ofCircle(myCircleX, myCircleY, 60);
 }
@@ -414,7 +414,7 @@ In the interest of having a smoother, more predictable kind of animation, we wil
 
 [source,cpp]
 ---------------------------------------------------------------------
-void ofApp::setup(){
+void testApp::setup(){
     ofSetFrameRate(60);
     
     myCircleX = 300;
@@ -433,7 +433,7 @@ It's true that we now have a good handle on the framerate, but 60px/second turns
 
 [source,cpp]
 ---------------------------------------------------------------------
-void ofApp::update(){
+void testApp::update(){
     myCircleX+=4;
 }
 ---------------------------------------------------------------------
@@ -450,7 +450,7 @@ How can we do this? We know that we are supposed to do any variable updating in 
 
 [source,cpp]
 ---------------------------------------------------------------------
-void ofApp::update(){
+void testApp::update(){
     myCircleX++;		
     if(myCircleX > 1024) 
     {
@@ -470,15 +470,15 @@ Adding Interaction
 
 Now that you are a master of animation, it's time to get the user involved. For this section, we will be focusing on keyboard and mouse interaction. 
 
-So far, we've been focusing on 3 functions: setup(), update(), and draw(). For interaction, we will start with 2 of the other functions in your ofApp.cpp file:
+So far, we've been focusing on 3 functions: setup(), update(), and draw(). For interaction, we will start with 2 of the other functions in your testApp.cpp file:
 
 [source,cpp]
 ---------------------------------------------------------------------
-void ofApp::keyPressed(int key){
+void testApp::keyPressed(int key){
 
 }
 
-void ofApp::keyReleased(int key){
+void testApp::keyReleased(int key){
 
 }
 ---------------------------------------------------------------------
@@ -515,11 +515,11 @@ Excellent! Your output will appear in the pane on the right. Now we will add som
 
 [source,cpp]
 ---------------------------------------------------------------------
-void ofApp::keyPressed(int key){
+void testApp::keyPressed(int key){
     cout << "keyPressed " << key << endl;
 }
 
-void ofApp::keyReleased(int key){
+void testApp::keyReleased(int key){
     cout << "keyReleased " << key << endl;
 }
 ---------------------------------------------------------------------
@@ -573,25 +573,25 @@ More about type casting later in this chapter!
 
 Fantastic. But presumably we want to do more with the key presses than print to the console. Let's use the keys to move a ball around on the screen.
 
-Start by adding two variables to your ofApp and using them to draw a circle, just like we did in the Adding Movement section:
+Start by adding two variables to your testApp and using them to draw a circle, just like we did in the Adding Movement section:
 
 [source,cpp]
 ---------------------------------------------------------------------
-#include "ofApp.h"
+#include "testApp.h"
 
 int myCircleX;
 int myCircleY;
 
-void ofApp::setup(){
+void testApp::setup(){
     myCircleX = 300;
     myCircleY = 200;
 }
 
-void ofApp::update(){
+void testApp::update(){
 
 }
 
-void ofApp::draw(){
+void testApp::draw(){
     ofSetColor(255, 0, 255);
 	ofCircle(myCircleX, myCircleY, 60);
 }
@@ -603,7 +603,7 @@ Let's use a typical computer game keyboard scheme: say we want the ball to move 
 
 [source,cpp]
 ---------------------------------------------------------------------
-void ofApp::keyPressed(int key){
+void testApp::keyPressed(int key){
     if(key==119) // 'w' key
     {
         myCircleY--;
@@ -641,23 +641,23 @@ if(key=='a')
 Mighty Mouse
 ------------
 
-Keyboard interaction is great, but what about the mouse? You might have noticed the following functions hanging out in ofApp also:
+Keyboard interaction is great, but what about the mouse? You might have noticed the following functions hanging out in testApp also:
 
 [source,cpp]
 ---------------------------------------------------------------------
-void ofApp::mouseMoved(int x, int y ){
+void testApp::mouseMoved(int x, int y ){
 
 }
 
-void ofApp::mouseDragged(int x, int y, int button){
+void testApp::mouseDragged(int x, int y, int button){
 
 }
 
-void ofApp::mousePressed(int x, int y, int button){
+void testApp::mousePressed(int x, int y, int button){
 
 }
 
-void ofApp::mouseReleased(int x, int y, int button){
+void testApp::mouseReleased(int x, int y, int button){
 
 }
 ---------------------------------------------------------------------
@@ -670,19 +670,19 @@ Let's do the same thing with the mouse functions that we did with the key functi
 
 [source,cpp]
 ---------------------------------------------------------------------
-void ofApp::mouseMoved(int x, int y){
+void testApp::mouseMoved(int x, int y){
     cout << "mouseMoved: " << x << ", " << y << endl;
 }
 
-void ofApp::mouseDragged(int x, int y, int button){
+void testApp::mouseDragged(int x, int y, int button){
     cout << "mouseDragged: " << x << ", " << y << " button: " << button << endl;
 }
 
-void ofApp::mousePressed(int x, int y, int button){
+void testApp::mousePressed(int x, int y, int button){
     cout << "mousePressed: " << x << ", " << y << " button: " << button << endl;
 }
 
-void ofApp::mouseReleased(int x, int y, int button){
+void testApp::mouseReleased(int x, int y, int button){
      cout << "mouseReleased: " << x << ", " << y << " button: " << button << endl;
 }
 ---------------------------------------------------------------------
@@ -739,13 +739,13 @@ int myCircleX=200;
 int myCircleY=300;
 int myCircleRadius=100;
 
-void ofApp::setup(){
+void testApp::setup(){
 }
 
-void ofApp::update(){
+void testApp::update(){
 }
 
-void ofApp::draw(){
+void testApp::draw(){
     ofSetColor(255, 0, 255);
     ofCircle(myCircleX, myCircleY, myCircleRadius);
 }
@@ -757,7 +757,7 @@ It's clear that it has something to do with the mousePressed function that we ju
 
 [source,cpp]
 ---------------------------------------------------------------------
-void ofApp::mousePressed(int x, int y, int button){
+void testApp::mousePressed(int x, int y, int button){
 	myCircleRadius++;
 }
 ---------------------------------------------------------------------
@@ -779,7 +779,7 @@ ofDist([x1], [y1], [x2], [y2]) that will save us from doing any basic trigonomet
 
 [source,cpp]
 ---------------------------------------------------------------------
-void ofApp::mousePressed(int x, int y, int button){
+void testApp::mousePressed(int x, int y, int button){
     float distance = ofDist(myCircleX, myCircleY, x, y);
     cout << distance << endl;
     
@@ -793,7 +793,7 @@ So the only thing left to do is compare 'myCircleRadius' to 'distance', and we c
 
 [source,cpp]
 ---------------------------------------------------------------------
-void ofApp::mousePressed(int x, int y, int button){
+void testApp::mousePressed(int x, int y, int button){
     float distance = ofDist(myCircleX, myCircleY, x, y);
  	if(distance < myCircleRadius)
  	{
@@ -864,7 +864,7 @@ Suppose you want to a circle every 20 pixels across your window. One option woul
 
 [source,cpp]
 ---------------------------------------------------------------------
-void ofApp::draw(){
+void testApp::draw(){
     ofCircle(20, 300, 10);
     ofCircle(40, 300, 10);
     ofCircle(60, 300, 10);
@@ -880,7 +880,7 @@ That would be over 50 lines of code - ugh. And what if you decided you wanted th
 
 [source,cpp]
 ---------------------------------------------------------------------
-void ofApp::draw(){
+void testApp::draw(){
 	int x = 10;
 	
 	ofCircle(x, 300, 10);
@@ -912,7 +912,7 @@ The simplest loop is the do/while loop. As the name suggests, this loop allows y
 
 [source,cpp]
 ---------------------------------------------------------------------
-void ofApp::draw(){
+void testApp::draw(){
     int i = 0;
     int x = 20;
     do {
@@ -1045,7 +1045,7 @@ float circle3x;
 float circle3y;
 float circle3r;
 
-void ofApp::setup(){
+void testApp::setup(){
     ofSetFrameRate(24);
     
     circle1x = ofRandom(0, ofGetWidth());
@@ -1062,7 +1062,7 @@ void ofApp::setup(){
 
 }
 
-void ofApp::update(){
+void testApp::update(){
     circle1x += ofRandom(-1,1);
     circle1y += ofRandom(-1,1);
     
@@ -1073,7 +1073,7 @@ void ofApp::update(){
     circle3y += ofRandom(-1,1);
 }
 
-void ofApp::draw(){
+void testApp::draw(){
     ofCircle(circle1x, circle1y, circle1r);
     
     ofCircle(circle2x, circle2y, circle2r);
@@ -1094,7 +1094,7 @@ float circleX[3];
 float circleY[3];
 float circleRad[3];
 
-void ofApp::setup(){
+void testApp::setup(){
     ofSetFrameRate(24);
     
     circleX[0] = ofRandom(0, ofGetWidth());
@@ -1110,7 +1110,7 @@ void ofApp::setup(){
     circleRad[2] = ofRandom(10, 40); 
 }
 
-void ofApp::update(){
+void testApp::update(){
     
     circleX[0] += ofRandom(-1,1);
     circleY[0] += ofRandom(-1,1);
@@ -1122,7 +1122,7 @@ void ofApp::update(){
     circleY[2] += ofRandom(-1,1);
 }
 
-void ofApp::draw(){
+void testApp::draw(){
     
     ofCircle(circleX[0], circleY[0], circleRad[0]);
     ofCircle(circleX[1], circleY[1], circleRad[1]);
@@ -1142,7 +1142,7 @@ float circleX[3];
 float circleY[3];
 float circleRad[3];
 
-void ofApp::setup(){
+void testApp::setup(){
     ofSetFrameRate(24);
 
     for(int i=0; i<3; i++)
@@ -1153,7 +1153,7 @@ void ofApp::setup(){
     }
 }
 
-void ofApp::update(){
+void testApp::update(){
     
     for(int i=0; i<3; i++)
     {
@@ -1162,7 +1162,7 @@ void ofApp::update(){
     }
 }
 
-void ofApp::draw(){
+void testApp::draw(){
     
     for(int i=0; i<3; i++)
     {
@@ -1203,7 +1203,7 @@ int circleR[NUM_CIRCLES];
 int circleG[NUM_CIRCLES];
 int circleB[NUM_CIRCLES];
 
-void ofApp::setup(){
+void testApp::setup(){
     ofSetFrameRate(24);
     
     for(int i=0; i<NUM_CIRCLES; i++)
@@ -1218,7 +1218,7 @@ void ofApp::setup(){
     }
 }
 
-void ofApp::update(){
+void testApp::update(){
     
     for(int i=0; i<NUM_CIRCLES; i++)
     {
@@ -1227,7 +1227,7 @@ void ofApp::update(){
     }
 }
 
-void ofApp::draw(){
+void testApp::draw(){
     
     for(int i=0; i<NUM_CIRCLES; i++)
     {
