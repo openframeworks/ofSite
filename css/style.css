@@ -759,6 +759,12 @@ a.docs_class{
 #body-wrap .documentation_detail_description li {
   list-style-type: disc;
 }
+#body-wrap .class_documentation li:before {
+  content: none;
+}
+#body-wrap .class_documentation li {
+  list-style-type: disc;
+}
 /* END Fixes for documentation containing unordered lists */
 
 
