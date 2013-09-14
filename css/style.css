@@ -737,6 +737,19 @@ a.docs_class{
 	margin: 0px;
 	padding: 0px 0px 10px 0px;
 	position: relative;
+	max-width: 100%;
+}
+
+/* BEGIN unify formatting for markdown ``inline code blocks`` */
+.class_documentation code, .documentation_detail_description code{
+  font-size: 12px;
+  font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;	
+}
+/* END unify formatting for markdown ``inline code blocks`` */
+
+/* prevent images from extending beyond the edge of the documentation */
+.class_documentation img, .documentation_detail_description img{
+  max-width: 100%;
 }
 
 /* BEGIN Fixes for documentation containing unordered lists */
