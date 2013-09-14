@@ -26,7 +26,7 @@ image::images/structure1.png[addons, apps, and libs folders]
 So what are these folders?
 
 addons;;
-    The "core" openFrameworks contains only the most essential functionality. Everything in the addons folder can be added to an application piecemeal. This includes stuff like reading an XML file, loading a 3D model, or using the computer vision library, openCV. 
+    The "core" openFrameworks contains only the most essential functionality. Everything in the addons folder can be added to an application piecemeal. This includes stuff like reading an XML file, loading a 3D model, or using the computer vision library, openCV.
 
 apps;;
 	This is where the applications that you make will be stored, and where you will be working most of the time. You will notice that there are already a folder in "apps" called "myApps".
@@ -34,7 +34,7 @@ apps;;
 examples;;
   This folder contains example applications that illustrate some of the things that openFrameworks can do.
 
-libs;; 
+libs;;
 	This folder contains all the libraries that openFrameworks uses as well as the ofCore.
 
 
@@ -191,7 +191,7 @@ So what is going on here?
 
 In a lot of ways, ofApp.cpp is like hello.cpp, the file that we wrote in the Introduction. It's a plain text file that contains `c++` source code. The difference now is that we are editing it through our IDE, so there is some really nice syntax highlighting that will hopefully make it easier to make sense of the code, and it will be a lot easier to compile and run when we want to.
 
-On a very basic level, what you see here is a bunch of empty functions. A http://en.wikipedia.org/wiki/Function_(computer_science)[function] is a set of instructions that make up part of a larger program. Just in the snippet of code above, there are 4 functions: setup, update, draw, and keyPressed. Each of the functions is followed by a set of curly brackets ({}). What usually goes inside of these curly brackets are the instructions (assiging values to variables, loops, and calls to other functions) that make up the functions. 
+On a very basic level, what you see here is a bunch of empty functions. A http://en.wikipedia.org/wiki/Function_(computer_science)[function] is a set of instructions that make up part of a larger program. Just in the snippet of code above, there are 4 functions: setup, update, draw, and keyPressed. Each of the functions is followed by a set of curly brackets ({}). What usually goes inside of these curly brackets are the instructions (assiging values to variables, loops, and calls to other functions) that make up the functions.
 
 If you refer back to the Q&A "What is a software framework?" in the introduction, the film production company analogy is particularly useful at this point. What you are looking at in ofApp.cpp is how openFrameworks has provided all of the infrastructure and logistical details. Now it's your job to define what happens. You do this by putting code into the fuctions in ofApp.cpp
 
@@ -199,13 +199,13 @@ These functions will be called by openFrameworks at different points during the 
 
 setup;;
 	This function is called (ie: any code that you've put inside the curly brackets runs) at the very beginning of the life of your application, before your program window opens. So, let's say, for instance, you wanted to set the size of the window. You probably want this to happen before the window actually opens, so setup would be a good place for that.
-	
+
 update, draw;;
 	After the setup function runs, the update and draw functions begin a loop that continues until your program ends. So, after setup() runs, update() runs, then draw(), then update(), then draw(), etc. and by default, this happens as fast as your computer can handle. update() is typically used for updating the state of your program (ie: changing the value of variables), while draw() is used to actually draw things into your window.
 
 keyPressed, keyReleased, mouseMoved, mouseDragged, mousePressed;;
 	Unlike the previous three functions, these functions are called only when a user does something. Can you guess what?
-	
+
 But enough with the reading. Let's see these things in action.
 
 Making a Mark
@@ -228,7 +228,7 @@ image:images/MyFirstProject01.png["A Plain White Circle", width="500"]
 
 Congratulations!  You just made something appear on the screen! It's all downhill from here.
 
-But what did we just do? 
+But what did we just do?
 
 http://www.openframeworks.cc/documentation/graphics/ofGraphics.html#ofCircle[ofCircle] is a function that comes with openFrameworks (hence the 'of' prefix). You can invoke the ofCircle function inside your draw function as many times as you'd like. The numbers inside of the parenthesis after 'ofCircle' are called http://en.wikipedia.org/wiki/Parameter_(computer_programming)[arguments]. They determine exactly what the function does. They answer the questions: "okay, you want to draw a circle, but where? and how big?" Functions can take any number of arguments, always separated by commas, but ofCircle takes 3: an x coordinate, a y coordinate, and a radius. There are a few things you need to know to make sense of these arguments:
 
@@ -236,7 +236,7 @@ http://www.openframeworks.cc/documentation/graphics/ofGraphics.html#ofCircle[ofC
 . This may seem obvious, but the coordinates refer to the center of the circle. Other shapes (such as rectangles) use the upper left corner.
 . The "origin" of the coordinate system is in the upper left of the window. So, our circle appears 200 pixels from the left side of the screen, and 300 pixels from the top.
 
-NOTE: The order of the arguments is important. The first argument to ofCircle will always mean "x coordinate" and the third will always mean "radius". 
+NOTE: The order of the arguments is important. The first argument to ofCircle will always mean "x coordinate" and the third will always mean "radius".
 
 NOTE: There are some functions (such as http://www.openframeworks.cc/documentation/graphics/ofGraphics.html#ofFill[ofFill], which simply tells oF to fill shapes that are drawn) that have 0 arguments, but you still have to put parenthesis after them. 
 
@@ -255,11 +255,11 @@ void ofApp::draw(){
 }
 ---------------------------------------------------------------------
 
-Now try running your application. 
+Now try running your application.
 
 image:images/MyFirstProject02.png["A purple circle", width="500"]
 
-Similar to ofCircle, the ofSetColor function takes 3 arguments, but the numbers have very different meanings. If you look at the documentation for http://www.openframeworks.cc/documentation/graphics/ofGraphics.html#ofSetColor[ofSetColor], you'll notice that they arguments actually represent the red, green, and blue values for the color that you want to use, on a scale of 0-255. So when we typed `ofSetColor(255, 0, 255);`, we were saying "until further notice, draw everything with 100% red, 0 green, and 100% blue."  
+Similar to ofCircle, the ofSetColor function takes 3 arguments, but the numbers have very different meanings. If you look at the documentation for http://www.openframeworks.cc/documentation/graphics/ofGraphics.html#ofSetColor[ofSetColor], you'll notice that they arguments actually represent the red, green, and blue values for the color that you want to use, on a scale of 0-255. So when we typed `ofSetColor(255, 0, 255);`, we were saying "until further notice, draw everything with 100% red, 0 green, and 100% blue."
 
 TIP: Try changing the values to get different color variations.
 
@@ -271,7 +271,7 @@ This last point is important: when we call "ofSetColor", it's like picking a cra
 void ofApp::draw(){
 	ofSetColor(255, 0, 255);
     ofCircle(200, 300, 60);
-    
+
     ofCircle(500, 500, 100);
 }
 ---------------------------------------------------------------------
@@ -284,7 +284,7 @@ But if we wanted that circle to be a different color, we would have to call ofSe
 void ofApp::draw(){
 	ofSetColor(255, 0, 255);
     ofCircle(200, 300, 60);
-    
+
     ofSetColor(0, 255, 255);
     ofCircle(500, 500, 100);
 }
@@ -296,9 +296,9 @@ image:images/MyFirstProject03.png["Two Colorful Circles", width="500"]
 All The Shapes You Can Handle
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Of course, oF can draw more than circles. 
+Of course, oF can draw more than circles.
 
-. http://www.openframeworks.cc/documentation/graphics/ofGraphics.html#ofRect[ofRect] draws a rectangle. arguments are (x, y, width, height) 
+. http://www.openframeworks.cc/documentation/graphics/ofGraphics.html#ofRect[ofRect] draws a rectangle. arguments are (x, y, width, height)
 . http://www.openframeworks.cc/documentation/graphics/ofGraphics.html#ofTriangle[ofTriangle] draws a triangle. arguments are the coordinates of the three points: (x1, y1, x2, y2, x3, y3)
 . http://www.openframeworks.cc/documentation/graphics/ofGraphics.html#ofLine[ofLine] draws a line. arguments are the start coordinate and the end coordinate (x1, y1, x2, y2)
 . http://www.openframeworks.cc/documentation/graphics/ofGraphics.html#ofEllipse[ofEllipse] arguments are: (x, y, width, height)
@@ -315,7 +315,7 @@ Drawing static shapes is great, but what if we want our shapes to move around th
 
 We mentioned earlier that the draw() function is called repeatedly after the program is started. This is very important because it is how we achieve animation in openFrameworks. It might be a little unintuitive if you are used to  Flash or even something like stop-frame animation, where you can add something to a "stage" and then reposition it as needed. This is *not* how openFrameworks (or most computer animation) works. Actually, openFrameworks is more like traditional (we're talking old-school Disney/Bambi) animation, where we must redraw the frame completely every single "frame". In the parlance of openFrameworks, every time the draw() function is called is one "frame". So, in actuality, when you run the program above and see your purple circle, what you are actually looking at is the circle being drawn, then cleared (a single frame), and then drawn, then cleared, repeatedly. It's just happening so fast that it appears to stay where it is.
 
-In the example above, when we draw our circle, we use two numbers to tell the ofCircle function where to draw the circle within the window. So it follows that, if we want the circle to appear to move, we need to change these numbers over time. Perhaps the first time draw() happens, the circle is drawn at (200, 300), but in the next time, we want it to be one pixel to the right (201, 300), and then another pixel to the right (202, 300), and so on. 
+In the example above, when we draw our circle, we use two numbers to tell the ofCircle function where to draw the circle within the window. So it follows that, if we want the circle to appear to move, we need to change these numbers over time. Perhaps the first time draw() happens, the circle is drawn at (200, 300), but in the next time, we want it to be one pixel to the right (201, 300), and then another pixel to the right (202, 300), and so on.
 
 In `c++`, and in programming in general, whenever you have a value that you want to change, you create a "variable". Variables come in different shapes and sizes depending on what they represent, such as decimal numbers, whole numbers, a letter, or a bunch of letters. In this case, we want to create variables that can stand in for coordinates in our ofCircle function, so we will use 2 *int*s.
 
@@ -331,7 +331,7 @@ int myCircleY;
 
 In those 2 new lines of code, we "declared" 2 new variables: one called 'myCircleX' and one called 'myCircleY'. You could actually name them whatever you want (within reason), but it's a good idea to name them something that is related to how they will be used. We also said that these variables will be used to hold whole-number integer values, or *int*s. Declaring a variable is an important and necessary step. It's like telling your application "okay, I'm going to need to store a number that might change."
 
-The next thing we need to do is give those variables a starting value. We know that the endgame here is to have these variables change over time. But before we can change them, we need to give them an initial value. In other words, before our circle starts moving, where will it appear? 
+The next thing we need to do is give those variables a starting value. We know that the endgame here is to have these variables change over time. But before we can change them, we need to give them an initial value. In other words, before our circle starts moving, where will it appear?
 
 In a previous section, we learned that the setup() function gets called once when the application launches, and then never called again. This sounds like it could be useful for giving our variables some initial values. So in your setup() function, add the following lines.
 
@@ -365,7 +365,7 @@ Let's edit our draw function a little so that it looks like this:
 ---------------------------------------------------------------------
 void ofApp::draw(){
 	myCircleX = myCircleX + 1;
-	
+
 	ofSetColor(255, 0, 255);
 	ofCircle(myCircleX, myCircleY, 60);
 }
