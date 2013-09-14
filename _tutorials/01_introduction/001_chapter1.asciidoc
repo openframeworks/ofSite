@@ -422,7 +422,7 @@ void testApp::setup(){
 }
 ---------------------------------------------------------------------
 
-Add that and then run your program. You will notice that the circle moves considerably slower. Using this function is *not* a guarantee of 60 frames per second, but it is a guarantee that your framerate will be any higher than that. And unless you have a really old computer, or your processor is already extremely taxed by some other program, it should have no problem running consistently at 60fps while doing something a simple as drawing a moving circle.
+Add that and then run your program. You will notice that the circle moves considerably slower. Using this function is *not* a guarantee of 60 frames per second, but it is a guarantee that your framerate won't be any higher than that. And unless you have a really old computer, or your processor is already extremely taxed by some other program, it should have no problem running consistently at 60fps while doing something a simple as drawing a moving circle.
 
 TIP: SAT word problem #1: If we know that the update loop is happening (at most) 60 times/second, and we are incrementing the x coordinate of the circle by 1 pixel every time update is called, how long will it take for the circle to move 240px?
 
