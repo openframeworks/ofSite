@@ -737,6 +737,7 @@ a.docs_class{
 	margin: 0px;
 	padding: 0px 0px 10px 0px;
 	position: relative;
+	max-width: 100%;
 }
 
 /* BEGIN unify formatting for markdown ``inline code blocks`` */
