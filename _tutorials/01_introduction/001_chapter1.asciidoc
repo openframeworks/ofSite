@@ -203,7 +203,7 @@ setup;;
 update, draw;;
 	After the setup function runs, the update and draw functions begin a loop that continues until your program ends. So, after setup() runs, update() runs, then draw(), then update(), then draw(), etc. and by default, this happens as fast as your computer can handle. update() is typically used for updating the state of your program (ie: changing the value of variables), while draw() is used to actually draw things into your window.
 
-keyPressed, keyReleased, mouseMoved, mouseDragged, mousePressed;;
+keyPressed, keyReleased, mouseMoved, mouseDragged, mousePressed, mouseReleased, windowResized, gotMessage, dragEvent;;
 	Unlike the previous three functions, these functions are called only when a user does something. Can you guess what?
 
 But enough with the reading. Let's see these things in action.
