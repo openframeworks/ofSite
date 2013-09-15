@@ -421,7 +421,7 @@ _inlined_description: _
 
 _description: _
 
-Returns the encoding used by the font object.  This is set by ofTrueTypeFont::setEncoding() to either OF_ENCODING_UTF8 or OF_ENCODING_ISO_8859_15. OF_ENCODING_ISO_8859_15 is an 8-bit single-byte coded graphic character sets, like ASCII while 
+Returns the encoding used by the font object.  This is set by ofTrueTypeFont::setEncoding() to either OF_ENCODING_UTF8 or OF_ENCODING_ISO_8859_15. OF_ENCODING_ISO_8859_15 is for an 8-bit single-byte coded graphic character sets, like ASCII while 
  OF_ENCODING_UTF8 is a variable-width encoding that can represent every character in the Unicode character set.
 
 
@@ -884,7 +884,7 @@ _inlined_description: _
 
 _description: _
 
-Returns the string as an ofMesh.  
+Returns the string as an ofMesh.   Note: this is a mesh that contains vertices and texture coordinates for the textured font, not the points of the font that are returned via any of the get points functions.
 
 
 
@@ -1324,7 +1324,7 @@ _inlined_description: _
 
 _description: _
 
-Sets the encoding used by the font object. Can be set to either OF_ENCODING_UTF8 or OF_ENCODING_ISO_8859_15. OF_ENCODING_ISO_8859_15 is an 8-bit single-byte coded graphic character sets, like ASCII while OF_ENCODING_UTF8 is a variable-width encoding that can represent every character in the Unicode character set.  This function is useful if you are trying to draw unicode strings.
+Sets the encoding used by the font object. Can be set to either OF_ENCODING_UTF8 or OF_ENCODING_ISO_8859_15. OF_ENCODING_ISO_8859_15 is for an 8-bit single-byte coded graphic character sets, like ASCII while OF_ENCODING_UTF8 is a variable-width encoding that can represent every character in the Unicode character set.  This function is useful if you are trying to draw unicode strings.
 
 
 
@@ -1443,7 +1443,7 @@ _inlined_description: _
 _description: _
 
 
-Sets the line height for text that is drawn on screen.
+Sets the line height for text that is drawn on screen.   Note the line height is automatically computed based on the font size, when you load in the font. 
 
 
 
@@ -1483,7 +1483,7 @@ _inlined_description: _
 
 _description: _
 
-
+Sets the size of the space ' ' character.  This number, which defaults to 1.0, scales the width of the letter 'p' for the space. 
 
 
 
@@ -1523,7 +1523,7 @@ _inlined_description: _
 _description: _
 
 
-
+Returns the string height.  This is essentially the height component of the ofTrueTypeFont::getStringBoundingBox() rectangle. 
 
 
 
@@ -1561,6 +1561,7 @@ _inlined_description: _
 
 _description: _
 
+Returns the string height.  This is essentially the width component of the ofTrueTypeFont::getStringBoundingBox() rectangle. 
 
  
 
@@ -1602,7 +1603,7 @@ _inlined_description: _
 
 _description: _
 
-
+This internal function unbinds the texture associated with this font.
 
 
 
@@ -1681,7 +1682,7 @@ _inlined_description: _
 _description: _
 
 
-
+The destructor for the font object will clear the resources, such as textures, that have been allocated. 
 
 
 
