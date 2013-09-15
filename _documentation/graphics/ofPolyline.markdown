@@ -35,8 +35,9 @@ while (angle < TWO_PI ) {
 	angle += TWO_PI / 30;
 }
 ~~~~
-ofPolyline also includes methods to get the cloeset point, determien whether a point is inside shape, and resample shapes. Along with the ofPath class, it's the best way to draw and manipulate 2D and 3D vector graphics that you'll need to update and manipulate frequently.
-If you use the line or curveTo or bezierTo functions, you move the drawing point, so that drawing a line to 100,100 means a line from 0,0 to 100, 100. The next line would be a line from 100,100 to whereever you go next. Storing this position means that you can easily create continuous drawings without difficulty.
+ofPolyline also includes methods to get the closest point, determine whether a point is inside shape, and resample shapes. Along with the ofPath class, it's the best way to draw and manipulate 2D and 3D vector graphics that you'll need to update and manipulate frequently.
+
+If you use the lineTo or curveTo or bezierTo functions, you move the drawing point, so that drawing a line to 100,100 means a line from 0,0 to 100, 100. The next line would be a line from 100,100 to wherever you go next. Storing this position means that you can easily create continuous drawings without difficulty.
 
 
 
@@ -349,15 +350,34 @@ _inlined_description: _
 _description: _
 
 
-Draw an arc around the ofPoint p with the width of radiusX and the height of radiusY. The angleBegin and angleEnd indicate how far around you want the arc to extend. For instance, to draw a circle:
+Draws an arc around the ofPoint ``center`` with the width of ``radiusX`` and the height of ``radiusY``. 
+The ``angleBegin`` and ``angleEnd`` indicate the start and end angles of the arc in degrees measured clockwise from the x-axis.
+
+Optionally, you can specify ``circleResolution``, which is the number of line segments a circle would be drawn with.
+A partial arc will be drawn with the same resolution: if circleResolution == 20, a half-circle will be drawn with 10 segments.
+	
+If there are already vertexes in the ofPolyline the arc will extend them;
+a line will be created from the endmost point on the ofPolyline to the beginning point of the arc.
+
+Example:
 ~~~~{.cpp}
-ofPoint p(0, 0);
-polyline.arc(p,100,100,0,360,40); // circle with a diameter of 100
+ofPolyline polyline1, polyline2;
+
+// draw an circle with a diameter of 100 in blue
+ofPoint point1(150,120);
+polyline1.arc(point1,100,100,0,360);
+ofSetColor(ofColor::blue);
+polyline1.draw();
+
+// draw an line, then an semi-circle in red
+polyline2.lineTo(300, 50);
+ofPoint point2(450,120);
+polyline2.arc(point2,100,100,0,180);
+ofSetColor(ofColor::red);
+polyline2.draw();
 ~~~~
-~~~~{.cpp}
-ofPoint p(100, 0);
-polyline.arc(p,100,100,0,180,40); // semi-circle with a diameter of 100
-~~~~
+
+![Arc Example](ofpolyline_arc.png)
 
 
 
@@ -398,13 +418,11 @@ _inlined_description: _
 _description: _
 
 
-Draw an arc around the point x,y with the width of radiusX and the height of radiusY. The angleBegin and angleEnd indicate how far around you want the arc to extend. For instance, to draw a circle:
-~~~~{.cpp}
-polyline.arc(0,0,100,100,0,360,40); // circle with a diameter of 100
-~~~~
-~~~~{.cpp}
-polyline.arc(0,0,100,100,0,180,40); // semi-circle with a diameter of 100
-~~~~
+Draws an arc around the coordinates (``x``,``y``) with the width of ``radiusX`` and the height of ``radiusY``.
+The ``angleBegin`` and ``angleEnd`` indicate the start and end angles of the arc in degrees measured clockwise from the x-axis.
+
+Optionally, you can specify ``circleResolution``, which is the number of line segments a circle would be drawn with.
+
 
 
 
@@ -441,20 +459,13 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
-Draw an arc around the point x,y,z with the width of radiusX and the height of radiusY. The angleBegin and angleEnd indicate how far around you want the arc to extend. For instance, to draw a circle:
-~~~~{.cpp}
-// at middle and -100 back
-polyline.arc(ofGetWidth()/2,ofGetHeight()/2,100,100,100,0,360,40); // circle with a diameter of 100
-~~~~
-~~~~{.cpp}
-// at middle and -100 back
-polyline.arc(ofGetWidth()/2,ofGetHeight()/2,100,100,100,0,180,40); // semi-circle with a diameter of 100
-~~~~
+Draws an arc around the coordinates (``x``,``y``,``z``) with the width of ``radiusX`` and the height of ``radiusY``.
+The ``angleBegin`` and ``angleEnd`` indicate the start and end angles of the arc in degrees measured clockwise from the x-axis.
 
+Optionally, you can specify ``circleResolution``, which is the number of line segments a circle would be drawn with.
 
 
 
@@ -493,6 +504,12 @@ _inlined_description: _
 
 _description: _
 
+
+Draws an arc around the ofPoint ``center`` with the width of ``radiusX`` and the height of ``radiusY``.
+The ``angleBegin`` and ``angleEnd`` indicate the start and end angles of the arc in degrees measured clockwise from the x-axis.
+The ``clockwise`` boolean sets the drawing direction.  Passing 'false' to it will draw the arc counter-clockwise.
+
+Optionally, you can specify ``circleResolution``, which is the number of line segments a circle would be drawn with.
 
 
 
