@@ -777,6 +777,7 @@ a.docs_class{
 }
 #editdocs{
     float:right;
+    margin-top:15px;
 }
 #docstitle{
     width:60%;

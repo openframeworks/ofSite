@@ -18,13 +18,13 @@
               <div id="editdocs">
                 % if not clazz is None:
                   % if is_addon:
-                    <a href="https://github.com/openframeworks/ofSite/blob/master/_documentation/addons/${clazz.module}/${clazz.name}.markdown" class="nohover"><img title="edit class on GitHub" src="/images/editclass.png"/></a>
+                    <a href="https://github.com/openframeworks/ofSite/blob/master/_documentation/addons/${clazz.module}/${clazz.name}.markdown" class="nohover"><img title="edit class on GitHub" src="/images/editclass.png?a=5"/></a>
                   % else:
-                    <a href="https://github.com/openframeworks/ofSite/blob/master/_documentation/${clazz.module}/${clazz.name}.markdown" class="nohover"><img title="edit class on GitHub" src="/images/editclass.png"/></a>
+                    <a href="https://github.com/openframeworks/ofSite/blob/master/_documentation/${clazz.module}/${clazz.name}.markdown" class="nohover"><img title="edit class on GitHub" src="/images/editclass.png?a=5"/></a>
                   % endif
                 % endif
                 % if not functions is None and len(functions.function_list)>0:
-                    <a href="https://github.com/openframeworks/ofSite/blob/master/_documentation/${functions.module}/${functions.name}_functions.markdown" class="nohover"><img title="edit functions on GitHub" src="/images/editfunctions.png"/></a>
+                    <a href="https://github.com/openframeworks/ofSite/blob/master/_documentation/${functions.module}/${functions.name}_functions.markdown" class="nohover"><img title="edit functions on GitHub" src="/images/editfunctions.png?a=5"/></a>
                 % endif
               </div>
               
