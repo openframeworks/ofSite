@@ -25,7 +25,7 @@
         	    <!-- class methods -->
                 % if 'methods' in clazz:
                     % for method in clazz['methods']:
-                        <li class="method"><a href="${block.name + '/' + clazz['name']}.html#show_${method[:method.find('(')]}" title="${method}" class="documentation_func">${method}</a></li>
+                        <li class="method"><a href="${block.name + '/' + clazz['name']}.html#!show_${method[:method.find('(')]}" title="${method}" class="documentation_func">${method}</a></li>
                     % endfor
                 % endif
                 
@@ -36,7 +36,7 @@
         	    <!-- class variables -->
                 % if 'variables' in clazz:
                     % for variable in clazz['variables']:
-                        <li class="variable"><a href="${block.name + '/' + clazz['name']}.html#show_${variable[:variable.find('(')]}" title="${variable}" class="documentation_func">${variable}</a></li>
+                        <li class="variable"><a href="${block.name + '/' + clazz['name']}.html#!show_${variable[:variable.find('(')]}" title="${variable}" class="documentation_func">${variable}</a></li>
                     % endfor
                 % endif
                 

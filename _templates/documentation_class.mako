@@ -14,7 +14,7 @@
       <div id="body-wrap">
           <div class="page-wide">
           
-              <div id="docstitle"><h1>${modulename}</h1></div>
+              <div id="docstitle"><h1 onclick="resetDiscuss('${modulename}','');">${modulename}</h1></div>
               <div id="editdocs">
                 % if not clazz is None:
                   % if is_addon:
@@ -41,11 +41,11 @@
                  % for method in clazz.function_list:
                      % if prevmethod != method.name and method.visible and not method.advanced and method.access=='public' and (method.name!=method.clazz) and (method.name != "~" + method.clazz):
                          % if len(method.description) <= 1 and len(method.inlined_description) <= 1:
-                         <li class="noDoc">
+                         <li class="noDoc" data-lookup="${method.name}" onclick="resetDiscuss('${modulename}','${method.name}');">
                          % else:
                          <li>
                          % endif
-                         <a href="#show_${method.name}" class="${method.name}" data-lookup="${method.name}">${method.name}()</a></li>
+                         <a href="#show_${method.name}" class="${method.name}" data-lookup="${method.name}" onclick="resetDiscuss('${modulename}','${method.name}');">${method.name}()</a></li>
                      % endif
                      <% prevmethod = method.name %>
                  % endfor
@@ -61,11 +61,11 @@
                      % for var in clazz.var_list:
                          % if var.visible and not var.advanced and var.access=='public':
                              % if len(var.description) <= 1:
-                            <li class="noDoc">
+                            <li class="noDoc" data-lookup="${var.name}" onclick="resetDiscuss('${modulename}','${var.name}');">
                             % else:
                             <li>
                             % endif
-                            <a href="#show_${var.name}" class="${var.name}" data-lookup="${var.name}">${var.type} ${var.name}</a> </li>
+                            <a href="#show_${var.name}" class="${var.name}" data-lookup="${var.name}" onclick="resetDiscuss('${modulename}','${var.name}');">${var.type} ${var.name}</a> </li>
                          % endif
                      % endfor
                  </ul>
@@ -81,11 +81,11 @@
                      % for method in functions.function_list:
                          % if prevmethod != method.name and method.visible and not method.advanced:
                              % if len(method.description) <= 1 and len(method.inlined_description) <= 1:
-                            <li class="noDoc">
+                            <li class="noDoc" data-lookup="${method.name}" onclick="resetDiscuss('${modulename}','${method.name}');">
                             % else:
                             <li>
                             % endif
-                            <a href="#show_${method.name}" class="${method.name}" data-lookup="${method.name}">${method.name}()</a></li>
+                            <a href="#show_${method.name}" class="${method.name}" data-lookup="${method.name}" onclick="resetDiscuss('${modulename}','${method.name}');">${method.name}()</a></li>
                          % endif
                          <% prevmethod = method.name %>
                      % endfor
@@ -148,7 +148,44 @@ ${functions.description}
                       % endfor
                   % endif
                 </div><!-- End Prose Block -->
+                <hr/>
+
           </div><!-- End Main Block -->
+                
+            <!--diqus comments for class/functions module description-->
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+            
+             // DISQUS
+             /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+              
+            var disqus_shortname = 'openframeworks'; // required: replace example with your forum shortname
+            //var disqus_developer = 1;
+             
+            location_elements = window.location.pathname.split("/");
+            module_name = location_elements[location_elements.length-1].split(".")[0];
+            section_name = location.hash.split("_")[1];
+            console.log(module_name + " " + section_name);
+            if(section_name!=undefined && section_name!=''){
+                var disqus_identifier = window.location.pathname + "#!show_" + section_name;  
+                var disqus_url = window.location.protocol + "//" + window.location.host + window.location.pathname + "#!show_" + section_name;
+                var discus_title = document.title + " - " + section_name;
+            }else{
+                var disqus_identifier = window.location.pathname;
+                var disqus_url = window.location.protocol + "//" + window.location.host + window.location.pathname;
+                var discus_title = document.title;
+            }
+            
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */   
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 		
         </div><!-- End Submenu right -->
       </div><!-- End page wide -->

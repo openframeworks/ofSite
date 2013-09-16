@@ -4,6 +4,37 @@ var baseTitle =  document.title;
 //setup handler for browser popstate events
 window.onhashchange = loadDocumentationFromLocation;
 
+
+function resetDiscuss(module_name,section_name){
+    console.log(window.location.protocol + "://" + window.location.host + window.location.pathname + "#!show_" + section_name);
+    DISQUS.reset({
+      reload: true,
+      config: function () {  
+        this.page.identifier = window.location.pathname + "#!show_" + section_name;  
+        if(section_name!=''){
+            this.page.url = window.location.protocol + "//" + window.location.host + window.location.pathname + "#!show_" + section_name;
+        }else{
+            this.page.url = window.location.protocol + "//" + window.location.host + window.location.pathname;
+        }
+        
+        var item = $(".documentation_detail[data-lookup='" + section_name +"']");
+        switch(item.data("item-type")) {
+            case "method":
+              this.page.title = baseTitle + "::" + section_name + "()";
+              break;
+            case "var":
+              this.page.title = baseTitle + "." + section_name;
+              break;
+            case "function":
+              this.page.title = baseTitle + "::" + section_name;
+              break;
+            default:
+              this.page.title = baseTitle;
+       };
+    }
+  });
+}
+
 $(document).ready(
 
     function(){
@@ -38,8 +69,8 @@ $(document).ready(
 
 // Handle loading documentation from the location hash
 function loadDocumentationFromLocation() {
-  var currentFunctionName = location.hash.substring(6);
-  if(currentFunctionName.length){  
+  var currentFunctionName = location.hash.split("_")[1];
+  if(currentFunctionName!=undefined && currentFunctionName.length){  
     showFunctionDocumentation(currentFunctionName);
   }else{
     showClassDocumentation();

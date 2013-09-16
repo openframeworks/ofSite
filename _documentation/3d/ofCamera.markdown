@@ -32,7 +32,7 @@ _name: begin_
 _returns: void_
 _returns_description: _
 _parameters: ofRectangle viewport = ofGetCurrentViewport_
-_access: _
+_access: public_
 _version_started: _
 _version_deprecated: _
 _summary: _
