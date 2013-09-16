@@ -874,11 +874,10 @@ _description: _
 
 This returns a raw pointer to the pixel data. Changing this will change the value of the pixels in the ofPixels object. One way to inspect the values returns in this pointer would be:
 ~~~~{.cpp}
-unsigned char* pixPtr = pix.getPixels();
-while(pixPtr) {
+for(int i=0;i<pixels.size();i++) {
 	// for RGB pixels there will be 3 values for each pixel
 	// for RGBA pixels there will be 4
-	++pixPtr;
+	// you can access the pixesl for reading or writing with: pixels[i]
 }
 ~~~~
 
