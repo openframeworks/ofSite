@@ -153,6 +153,13 @@ ${functions.description}
           </div><!-- End Main Block -->
                 
             <!--diqus comments for class/functions module description-->
+            <div id="comments_header">
+                <h2>comments</h2>
+                <p>You can add comments with usage examples or other information for each class, method or variable, for adding documentation to an empty section or reporting errors is better to send a fix or open an issue through <a href="https://github.com/openframeworks/ofSite">github</a>.</p>
+                <p>When posting code enclose it in:</p>
+                <pre><code class="html">&lt;pre&gt;&lt;code class=&quot;cpp&quot;&gt;&nbsp;&lt;/code&gt;&lt;/pre&gt;</code></pre>
+                <br/>
+            </div>
             <div id="disqus_thread"></div>
             <script type="text/javascript">
             
