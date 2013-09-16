@@ -1,9 +1,9 @@
 <%page args="var"/>
-<div class="documentation_detail  ${var.name}">
-	<h1>${var.type} <a name="${var.name}">${var.name}</a></h1>
+<div class="documentation_detail  ${var.name}" data-lookup="${var.name}" data-item-type="var">
+	<h1>${var.type} <a name="show_${var.name}">${var.name}</a></h1>
 	<h2><%self:filter chain="markdown_template">${var.type} ${var.clazz}::${var.name}</%self:filter></h2>
 	<div class="documentation_detail_description">
-		<%self:filter chain="syntax_highlight,markdown_template">
+		<%self:filter chain="markdown_template">
 ${var.description}
 		</%self:filter>
 	</div>

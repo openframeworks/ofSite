@@ -14,6 +14,7 @@
 
 The ofXml is a friendly wrapper around the xml functionality included in the Poco::XML library, in particular the Poco::XML::DOM. You can find some more information on that in the Poco Documentation, but hopefully we've wrapped up everything you might need, so that you don't need to dig into Poco itself. Conceptually you should think of an ofXml object as an XML document, because that's exactly what it is: it has a root element, some number of children, and a current element that you're pointing at. For instance, if your XML looked like this:
 
+~~~~{.cpp}
 <pictures>
 	<picture id="0">
 		<url>http://apicture.co.uk/pic.png</url>
@@ -26,49 +27,56 @@ The ofXml is a friendly wrapper around the xml functionality included in the Poc
 		<height>100</height>
 	</picture>
 </pictures>
+~~~~
 
 You load it into an ofXml document like so:
 
+~~~~{.cpp}
 ofFile file; 
 file.open("pictures.xml"); // open a file
 ofBuffer buffer = file.readToBuffer(); // read to a buffer
 
 ofXml pictures;
 pictures.loadFromBuffer( buffer.getText() ); // now get the buffer as a string and make XML
+~~~~
 
 Now you have an ofXml document, but you're not pointing at anything yet. The way to select which element you're looking at it by setting the current element, using setTo(const string& path), like this:
 
+~~~~{.cpp}
 pictures.setTo("pictures"); // now we're at the root
+~~~~
 
 or
 
+~~~~{.cpp}
 pictures.setTo("pictures/picture[0]"); // now we're at the first picture.
+~~~~
 
 or
-
+~~~~{.cpp}
 pictures.setTo("pictures/picture[1]"); // now we're at the second picture.
-
+~~~~
 or
-
+~~~~{.cpp}
 pictures.setTo("pictures/picture[@id=0]"); // now we're at the first picture with the id of 0
-
+~~~~
 To traverse, we can use the following methods:
-
+~~~~{.cpp}
 int children = pictures.getNumChildren(); // how many do you have?
 
 pictures.setToParent(); // go up a level
 
 pictures.setToSibling(); // go to the next at your level
 pictures.setToPrevSibling(); // go to the previous at your level
-
+~~~~
 To get values, we use getValue(const string& path), like:
-
+~~~~{.cpp}
 pictures.getValue("pictures/picture[0]/url"); // returns "http://apicture.co.uk/pic2.png"
-
+~~~~
 To set values, we use setValue(const string& path, const string& value), like:
-
+~~~~{.cpp}
 pictures.setValue("pictures/picture[0]/url", "http://superpicks.jp/pic1.png"); // sets the element in the DOM
-
+~~~~
 
 
 
@@ -149,7 +157,7 @@ _description: _
 
 Adds a child to the ofXml object. So if you have:
 
-----
+~~~~{.cpp}
 <pictures>
 	<picture id="0">
 		<url>http://apicture.co.uk/pic.png</url>
@@ -157,17 +165,17 @@ Adds a child to the ofXml object. So if you have:
 		<height>100</height>
 	</picture>
 </pictures>
-----
+~~~~
 
 you can add a path like so:
 
-----
+~~~~{.cpp}
 xml.addPath("pictures/picture/views");
-----
+~~~~
 
 and that would create:
 
-----
+~~~~{.cpp}
 <pictures>
 	<picture id="0">
 		<url>http://apicture.co.uk/pic.png</url>
@@ -176,7 +184,7 @@ and that would create:
 		<views/>
 	</picture>
 </pictures>
-----
+~~~~
 
 
 
@@ -219,7 +227,7 @@ _description: _
 
 Adds a child to the ofXml object. So if you have:
 
-----
+~~~~{.cpp}
 <pictures>
 	<picture id="0">
 		<url>http://apicture.co.uk/pic.png</url>
@@ -227,17 +235,17 @@ Adds a child to the ofXml object. So if you have:
 		<height>100</height>
 	</picture>
 </pictures>
-----
+~~~~
 
 you can add a path like so:
 
-----
+~~~~{.cpp}
 xml.addPath("pictures/picture/views", "100");
-----
+~~~~
 
 and that would create:
 
-----
+~~~~{.cpp}
 <pictures>
 	<picture id="0">
 		<url>http://apicture.co.uk/pic.png</url>
@@ -246,7 +254,7 @@ and that would create:
 		<views>100</views>
 	</picture>
 </pictures>
-----
+~~~~
 
 
 
@@ -289,9 +297,9 @@ _description: _
 
 Adds one ofXml object to another.
 
-----
+~~~~{.cpp}
 firstXml.addXml(secondXml, true);
-----
+~~~~
 
 The second parameter tells the ofXml whether to add the entire XML document or whether to only add the current element of the XML being added.
 
@@ -413,17 +421,17 @@ _description: _
 
 
 Returns whether a path exists. This can be a path to a node, like:
-
+~~~~{.cpp}
 xml.exists("picture/pictures[2]/url");
-
+~~~~
 or to an attribute:
-
+~~~~{.cpp}
 xml.exists("picture/pictures[2][@id]");
-
+~~~~
 or even a particular attribute anywhere in the DOM
-
+~~~~{.cpp}
 xml.exists("//[@id='9']");
-
+~~~~
 
 
 
@@ -1056,12 +1064,15 @@ _description: _
 
 Returns the value at the node indicated by the path. This can be a path that uses an element:
 
+~~~~{.cpp}
 xml.getValue("picture/pictures[2]/url");
+~~~~
 
 or an attribute:
 
+~~~~{.cpp}
 xml.exists("picture/pictures[2][@id]");
-
+~~~~
 
 
 
@@ -1464,15 +1475,15 @@ _description: _
 
 Removes all the attributes from a node.
 
-----
+~~~~{.cpp}
 <picture id="0" x="100" y="200">
-----
+~~~~
 
 would become
 
-----
+~~~~{.cpp}
 <picture>
-----
+~~~~
 
 
 
@@ -1515,15 +1526,15 @@ _description: _
 
 Removes all the attributes from a node.
 
-----
+~~~~{.cpp}
 <picture id="0" x="100" y="200">
-----
+~~~~
 
 would become
 
-----
+~~~~{.cpp}
 <picture>
-----
+~~~~
 
 
 
@@ -1566,21 +1577,21 @@ _description: _
 
 Removes all the contents from a node.
 
-----
+~~~~{.cpp}
 <picture id="0">
 	<url>http://apicture.co.uk/pic.png</url>
 	<width>100</width>
 	<height>100</height>
 	<views>100</views>
 </picture>
-----
+~~~~
 
 would become
 
-----
+~~~~{.cpp}
 <picture>
 </picture>
-----
+~~~~
 
 
 
@@ -1701,7 +1712,7 @@ _inlined_description: _
 _description: _
 
 
-
+Save the XML object to a file.
 
 
 
@@ -1822,10 +1833,11 @@ _description: _
 
 Sets the current element to the path indicated. This can be up or down the DOM:
 
+~~~~{.cpp}
 xml.setTo("pictures[1]/url"); // go down
 xml.setTo("../"); // go up
 xml.setTo("../pictures[0]/url"); // go up and then down
-
+~~~~
 
 
 
@@ -1865,7 +1877,7 @@ _inlined_description: _
 _description: _
 
 
-
+Sets the current element to the index-th child.
 
 
 
@@ -1946,9 +1958,9 @@ _description: _
 
 
 Sets the current element to the numLevelsUp-th parent of the current element.
-
+~~~~{.cpp}
 xml.setCurrentElementToParent(3); // this is the same as xml.setCurrentElementToParent("../../../");
-
+~~~~
 
 
 
@@ -1979,7 +1991,12 @@ _inlined_description: _
 
 
 
+This moves the current element to its sibling element, i.e. if the current element is fruit with the id of 2, called setToPrevSibling() will set the current element to fruit with id of 1
 
+~~~~{.cpp}
+<fruit id="1">
+<fruit id="2">
+~~~~
 
 
 
@@ -1990,6 +2007,7 @@ _description: _
 
 This sets the current element to the previous sibling element. If your document looks like this:
 
+~~~~{.cpp}
 <pictures>
 	<picture id="0">
 		<url>http://apicture.co.uk/pic.png</url>
@@ -2002,12 +2020,14 @@ This sets the current element to the previous sibling element. If your document 
 		<height>100</height>
 	</picture>
 </pictures>
+~~~~
 
 Then you could do the following:
 
+~~~~{.cpp}
 xml.setCurrentElement("pictures/picture[1]"); // now current element is picture with id=1
 xml.setCurrentElementToPrevSibling(); // now current element is picture with id=0
-
+~~~~
 
 
 
@@ -2038,7 +2058,12 @@ _inlined_description: _
 
 
 
+This moves the current element to its sibling element, i.e. if the current element is fruit with the id of 1, called setToSibling() will set the current element to fruit with id of 2
 
+~~~~{.cpp}
+<fruit id="1">
+<fruit id="2">
+~~~~
 
 
 
@@ -2049,6 +2074,7 @@ _description: _
 
 This sets the current element to the previous sibling element. If your document looks like this:
 
+~~~~{.cpp}
 <pictures>
 	<picture id="0">
 		<url>http://apicture.co.uk/pic.png</url>
@@ -2061,12 +2087,14 @@ This sets the current element to the previous sibling element. If your document 
 		<height>100</height>
 	</picture>
 </pictures>
+~~~~
 
 Then you could do the following:
 
+~~~~{.cpp}
 xml.setCurrentElement("pictures/picture[0]"); // now current element is picture with id=0
 xml.setCurrentElementToSibling(); // now current element is picture with id=1
-
+~~~~
 
 
 
@@ -2112,6 +2140,7 @@ xml.setPath("/foo/bar/baz/quux", "qiix");
 
 will create:
 
+~~~~{.cpp}
 <foo>
 	<bar>
 		<baz>
@@ -2119,7 +2148,7 @@ will create:
 		</baz>
 	</bar>
 </foo>
-
+~~~~
 
 
 

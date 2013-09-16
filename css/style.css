@@ -16,11 +16,9 @@ body {
     color: black;
     list-style-type: none;
 }
-
-#body-wrap ul li:before {
-    content: '> ';
-    padding-right: 0.3em;
-    color: #009bca;
+/* asciidoc generated paragraphs in lists, this makes them look nice */
+#body-wrap li p:first-child {
+	display: inline;
 }
 #body-wrap ul li:before {
     content: '> ';
@@ -32,6 +30,7 @@ body {
     padding-right: 0.3em;
     color: #009bca;
 }
+
 #content {
 	box-shadow: 5px 5px 5px #aaa, -5px 0 5px #aaa;
 	margin: auto;
@@ -182,7 +181,6 @@ hr.header {
 	width: 100%;
 }
 .page-right-narrow .home-links {
-	height: 380px;
 	margin-right: 40px;
 }
 .page-right-narrow {
@@ -743,7 +741,37 @@ a.docs_class{
 	margin: 0px;
 	padding: 0px 0px 10px 0px;
 	position: relative;
+	max-width: 100%;
 }
+
+/* BEGIN unify formatting for markdown ``inline code blocks`` */
+.class_documentation code, .documentation_detail_description code{
+  font-size: 12px;
+  font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;	
+}
+/* END unify formatting for markdown ``inline code blocks`` */
+
+/* prevent images from extending beyond the edge of the documentation */
+.class_documentation img, .documentation_detail_description img{
+  max-width: 100%;
+}
+
+/* BEGIN Fixes for documentation containing unordered lists */
+#body-wrap .documentation_detail_description li:before {
+  content: none;
+}
+#body-wrap .documentation_detail_description li {
+  list-style-type: disc;
+}
+#body-wrap .class_documentation li:before {
+  content: none;
+}
+#body-wrap .class_documentation li {
+  list-style-type: disc;
+}
+/* END Fixes for documentation containing unordered lists */
+
+
 .hide_core_functions, .hide_addons_functions, .collapse_core, .collapse_addons{
     cursor:pointer;cursor:hand;
 }
@@ -1275,7 +1303,7 @@ div.log {padding-left:2em;}
 #body-wrap ul li.noDoc:before{
     content: '> ';
     padding-right: 0.3em;
-    color: #999;
+    color: #bbb;
 }
 
 

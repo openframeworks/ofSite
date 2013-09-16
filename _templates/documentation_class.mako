@@ -41,7 +41,7 @@
                          % else:
                          <li>
                          % endif
-                         <a href="#!show_${method.name}" class="${method.name}" onclick="resetDiscuss('${modulename}','${method.name}');">${method.name}()</a></li>
+                         <a href="#show_${method.name}" class="${method.name}" data-lookup="${method.name}" onclick="resetDiscuss('${modulename}','${method.name}');">${method.name}()</a></li>
                      % endif
                      <% prevmethod = method.name %>
                  % endfor
@@ -61,7 +61,7 @@
                             % else:
                             <li>
                             % endif
-                            <a href="#show_${var.name}" class="${var.name}" onclick="resetDiscuss('${modulename}','${var.name}');">${var.type} ${var.name}</a> </li>
+                            <a href="#show_${var.name}" class="${var.name}" data-lookup="${var.name}" onclick="resetDiscuss('${modulename}','${var.name}');">${var.type} ${var.name}</a> </li>
                          % endif
                      % endfor
                  </ul>
@@ -81,15 +81,13 @@
                             % else:
                             <li>
                             % endif
-                            <a href="#show_${method.name}" class="${method.name}" onclick="resetDiscuss('${modulename}','${method.name}');">${method.name}()</a></li>
+                            <a href="#show_${method.name}" class="${method.name}" data-lookup="${method.name}" onclick="resetDiscuss('${modulename}','${method.name}');">${method.name}()</a></li>
                          % endif
                          <% prevmethod = method.name %>
                      % endfor
                  </ul>
              % endif
-		</div>
-		    
-		<!-- content -->
+		    </div>
 		<div class="submenucol-right">
 		    <div id="main_block">
                 <div id="prose_block">
@@ -97,7 +95,6 @@
                       % if not clazz is None:
                       <%self:filter chain="markdown_template">
 ${clazz.reference}
-    
                       </%self:filter>
                       % endif
 
@@ -109,15 +106,12 @@ ${clazz.detailed_inline_description}
                             </%self:filter>
                       </div>                      
                       % endif
-
-
+                      
                       % if not functions is None:
                       <%self:filter chain="markdown_template">
 ${functions.description}
                       </%self:filter>
                       % endif
-                      
-                      
                    </div>
                   
                   <!-- methods detail -->

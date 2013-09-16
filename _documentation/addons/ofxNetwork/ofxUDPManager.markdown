@@ -4,8 +4,81 @@
 ##Description
 
 
+UDP is a network protocol that is faster and less rigid in its packet transmission requirements. Unlike TCP, UDP has no notion of connections nor does it check to see if a packet has been successfuly recieved by the client. A UDP socket can receive datagrams from any server on the network and send datagrams to any host on the network. In addition, datagrams may arrive in any order, never arrive at all, or be duplicated in transit. There are three modes of UDP servers: socket (aka unicast), broadcast, and multicast. 
+
+Unicast refers to a unique host-client. This is a one-to one connection between the client and the server 
+
+Multicast is the delivery of a message or information to a group of destination computers simultaneously in a single transmission. A packet sent to a unicast or broadcast address is only delivered to the host identified by that address. To the contrary, when packet is send to a multicast address, all interfaces identified by that address receive the data. However, multicast has the drawback that it is not well supported by routers and NAT.
+
+Broadcast allows you to call every host within a subnet. It's like Multicast but doesn't require that your network infrastructure support it.
+
+A very simple unicast server looks like this:
+
+~~~~{.cpp}
+
+void ofApp::setup()
+{
+
+	//create the socket and set to send to 127.0.0.1:11999
+	udpConnection.Create();
+	udpConnection.Connect("127.0.0.1",11999);
+	udpConnection.SetNonBlocking(true);
+}
+
+void ofApp::keyPressed(int key)
+{
+	string message = "You pressed a key";
+	udpConnection.Send(message.c_str(), message.length());
+}
+~~~~
+
+A very simple unicast client looks like this:
+
+~~~~{.cpp}
+
+void ofApp::setup()
+{
+
+	//create the socket and bind to port 11999
+	udpConnection.Create();
+	udpConnection.Bind(11999);
+	udpConnection.SetNonBlocking(true);
+}
+
+void ofApp::update()
+{
+	char udpMessage[1000];
+	udpConnection.Receive(udpMessage,1000);
+	string message=udpMessage;
+}
+~~~~
+
+Notice that these are quite different than the creation of TCP servers and clients which you might be more familiar with.
+
+The basic usage of UDP for socket servers and clients looks like so:
 
 
+UDP Socket Server (sending):
+1) Create() - initialize the server
+2) Connect() - connect to an IP and a Port that you'll be sending messages on
+3) Send() - send the message
+
+UDP Socket Client (receiving):
+1) Create() - intialize the client
+2) Bind() - bind the client to a port and listen for any UDP messages on that port
+3) Receive() - receive any data broadcast over UDP on the port set up to receive on
+
+The basic usage of UDP for multicast looks like so:
+
+UDP Multicast (sending):
+1) Create() - initialize the server
+2) ConnectMcast() - connect to an IP and a Port that you'll broadcast on
+3) Send() - send a message to any listening clients
+
+UDP Multicast (receiving):
+1) Create() - initialize the client
+2) BindMcast() - bind to a port
+3) Receive() - check to see if any data has been received
 
 
 
@@ -111,7 +184,7 @@ _description: _
 
 
 
-
+Stop listening on a given port. Works with both socket and multicast.
 
 
 
@@ -146,7 +219,7 @@ _description: _
 
 
 
-
+Create the UDP manager. Must be called before binding to any IP or sockets.
 
 
 
@@ -181,10 +254,16 @@ _description: _
 
 
 
+Connect to a socket client to send information.
 
 
+~~~~{.cpp}
 
+udpConnection.Create();
+udpConnection.Connect("127.0.0.1",11999);
+udpConnection.SetNonBlocking(true);
 
+~~~~
 
 
 
@@ -215,7 +294,15 @@ _description: _
 
 
 
+Connect to a multicast address. 
 
+
+~~~~{.cpp}
+
+udpConnection.Create();
+udpConnection.Connect("224.0.0.1",11999);
+
+~~~~
 
 
 
@@ -252,9 +339,15 @@ _description: _
 
 
 
+Bind a port to receive socket/unicast UDP:
 
 
 
+~~~~{.cpp}
+udpConnection.Create();
+udpConnection.Bind(11999);
+udpConnection.SetNonBlocking(true);
+~~~~
 
 
 
@@ -287,8 +380,13 @@ _description: _
 
 
 
+Bind to multicast address to receive data:
 
 
+~~~~{.cpp}
+udpConnection.Create();
+udpConnection.BindMcast("224.0.0.1", 11999);
+~~~~
 
 
 
@@ -320,9 +418,13 @@ _description: _
 
 
 
+Send a char* of data with length of iSize to all listeners.
 
+~~~~{.cpp}
+string message = "A message";
+udpConnection.Send(message.c_str(),message.length());
 
-
+~~~~
 
 
 
@@ -355,7 +457,7 @@ _description: _
 
 
 
-
+The SendAll() method is useful for extremely large data objects that may need multiple sendto() calls to actually be completely.
 
 
 
@@ -393,9 +495,13 @@ _description: _
 
 
 
+Receives a message to a buffer of size iSize. Receive() returns the number of bytes actually received.
 
-
-
+~~~~{.cpp}
+char udpMessage[100000];
+udpConnection.Receive(udpMessage,100000);
+string message=udpMessage;
+~~~~
 
 
 
@@ -426,7 +532,7 @@ _description: _
 
 
 
-
+Set a timeout for any send operations in seconds.
 
 
 
@@ -462,7 +568,7 @@ _description: _
 
 
 
-
+Set a timeout for any receive operations in seconds.
 
 
 
@@ -497,7 +603,7 @@ _description: _
 
 
 
-
+Return the current send timeout.
 
 
 
@@ -533,7 +639,7 @@ _description: _
 
 
 
-
+Return the current receive timeout.
 
 
 
@@ -568,7 +674,7 @@ _description: _
 
 
 
-
+Returns the dots and numbers remote address in a string, 
 
 
 
@@ -601,7 +707,7 @@ _description: _
 
 
 
-
+Set the size of the receive buffer. The minimum (doubled) value for this option is 256. The max is determined by your OS.
 
 
 
@@ -636,6 +742,7 @@ _description: _
 
 
 
+Set the size of the send buffer. The minimum (doubled) value for this option is 256. The max is determined by your OS.
 
 
 
@@ -672,6 +779,7 @@ _description: _
 
 
 
+Get the size of the receive buffer. The minimum (doubled) value for this option is 256. The max is determined by your OS.
 
 
 
@@ -706,7 +814,7 @@ _description: _
 
 
 
-
+Get the size of the send buffer. The minimum (doubled) value for this option is 256. The max is determined by your OS.
 
 
 
@@ -777,7 +885,7 @@ _description: _
 
 
 
-
+Broadcast allows sending of packets to a particular network layer. If you're only using a single local network without a large number of attached machines, using broadcast may make more sense than trying to use multicast.
 
 
 
@@ -811,7 +919,7 @@ _description: _
 
 
 
-
+Determines whether calls to send or receive are allowed to block their thread until they've completed. If your network infrastructure is time critical, then this may be a good choice. Usually though, you should leave it off.
 
 
 
@@ -842,9 +950,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
 
 
 
@@ -917,7 +1022,18 @@ _description: _
 
 
 
+The TTL (Time To Live) field in the IP header has a double significance in multicast. As always, it controls the live time of the datagram to avoid it being looped forever due to routing errors. Routers decrement the TTL of every datagram as it traverses from one network to another and when its value reaches 0 the packet is dropped.
 
+A list of TTL thresholds and their associated scope follows:
+
+TTL     Scope
+----------------------------------------------------------------------
+   0    Restricted to the same host. Won't be output by any interface.
+   1    Restricted to the same subnet. Won't be forwarded by a router.
+ <32         Restricted to the same site, organization or department.
+ <64 Restricted to the same region.
+<128 Restricted to the same continent.
+<255 Unrestricted in scope. Global.
 
 
 

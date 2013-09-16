@@ -25,18 +25,20 @@ _visible: True_
 _advanced: False_
 -->
 
-_inlined_description: _
-
-
-
-
 
 
 
 _description: _
 
+Writes the parameters of the ofRectangle to an ostream.
+Typically used to print or save to a file.
 
-
+Example of storing parameters in rectangle.txt:
+~~~~{.cpp}
+ofFile file("rectangle.txt",ofFile::WriteOnly);
+file << rect;
+file.close();
+~~~~
 
 
 
@@ -71,7 +73,15 @@ _inlined_description: _
 _description: _
 
 
+Reads the parameters of the ofRectangle from an istream and constructs the ofRectangle.
+Typically used to load from a stream or a file.
 
+Example of reading parameters from rectangle.txt:
+~~~~{.cpp}
+ofFile file("rectangle.txt",ofFile::ReadOnly);
+file >> rect;
+file.close();
+~~~~
 
 
 

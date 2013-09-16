@@ -1,7 +1,7 @@
 <%page args="method"/>
-<div class="documentation_detail ${method.name}">
+<div class="documentation_detail ${method.name}" data-lookup="${method.name}" data-item-type="method">
   	<% params = "()" if method.parameters=="" else "(...)" %> 
-	<h1><a name="${method.name}">${method.name}${params}</a></h1>
+	<h1><a name="show_${method.name}">${method.name}${params}</a></h1>
 	<h2><%self:filter chain="markdown_template">${method.returns} ${method.clazz}::${method.name}(${method.parameters})</%self:filter></h2>
 	<div class="documentation_detail_description">
 		${method.summary}
