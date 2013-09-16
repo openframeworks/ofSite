@@ -16,8 +16,23 @@ function resetDiscuss(module_name,section_name){
         }else{
             this.page.url = window.location.protocol + "//" + window.location.host + window.location.pathname;
         }
-      }
-    });
+        
+        var item = $(".documentation_detail[data-lookup='" + section_name +"']");
+        switch(item.data("item-type")) {
+            case "method":
+              this.page.title = baseTitle + "::" + section_name + "()";
+              break;
+            case "var":
+              this.page.title = baseTitle + "." + section_name;
+              break;
+            case "function":
+              this.page.title = baseTitle + "::" + section_name;
+              break;
+            default:
+              this.page.title = baseTitle;
+       };
+    }
+  });
 }
 
 $(document).ready(
@@ -54,8 +69,8 @@ $(document).ready(
 
 // Handle loading documentation from the location hash
 function loadDocumentationFromLocation() {
-  var currentFunctionName = location.hash.substring(6);
-  if(currentFunctionName.length){  
+  var currentFunctionName = location.hash.split("_")[1];
+  if(currentFunctionName!=undefined && currentFunctionName.length){  
     showFunctionDocumentation(currentFunctionName);
   }else{
     showClassDocumentation();

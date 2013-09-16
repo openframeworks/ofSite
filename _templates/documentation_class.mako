@@ -37,7 +37,7 @@
                  % for method in clazz.function_list:
                      % if prevmethod != method.name and method.visible and not method.advanced and method.access=='public' and (method.name!=method.clazz) and (method.name != "~" + method.clazz):
                          % if len(method.description) <= 1 and len(method.inlined_description) <= 1:
-                         <li class="noDoc">
+                         <li class="noDoc" data-lookup="${method.name}" onclick="resetDiscuss('${modulename}','${method.name}');">
                          % else:
                          <li>
                          % endif
@@ -57,7 +57,7 @@
                      % for var in clazz.var_list:
                          % if var.visible and not var.advanced and var.access=='public':
                              % if len(var.description) <= 1:
-                            <li class="noDoc">
+                            <li class="noDoc" data-lookup="${var.name}" onclick="resetDiscuss('${modulename}','${var.name}');">
                             % else:
                             <li>
                             % endif
@@ -77,7 +77,7 @@
                      % for method in functions.function_list:
                          % if prevmethod != method.name and method.visible and not method.advanced:
                              % if len(method.description) <= 1 and len(method.inlined_description) <= 1:
-                            <li class="noDoc">
+                            <li class="noDoc" data-lookup="${method.name}" onclick="resetDiscuss('${modulename}','${method.name}');">
                             % else:
                             <li>
                             % endif
