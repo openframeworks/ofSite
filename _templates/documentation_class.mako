@@ -14,7 +14,7 @@
       <div id="body-wrap">
           <div class="page-wide">
           
-              <div id="docstitle"><h1>${modulename}</h1></div>
+              <div id="docstitle"><h1 onclick="resetDiscuss('${modulename}','');">${modulename}</h1></div>
               <div id="editdocs">
                 % if not clazz is None:
                     <a href="https://github.com/openframeworks/ofSite/blob/master/_documentation/${clazz.module}/${clazz.name}.markdown" class="nohover"><img title="edit class on GitHub" src="/images/editclass.png"/></a>
@@ -41,7 +41,7 @@
                          % else:
                          <li>
                          % endif
-                         <a href="#show_${method.name}" class="${method.name}">${method.name}()</a></li>
+                         <a href="#!show_${method.name}" class="${method.name}" onclick="resetDiscuss('${modulename}','${method.name}');">${method.name}()</a></li>
                      % endif
                      <% prevmethod = method.name %>
                  % endfor
@@ -61,7 +61,7 @@
                             % else:
                             <li>
                             % endif
-                            <a href="#show_${var.name}" class="${var.name}">${var.type} ${var.name}</a> </li>
+                            <a href="#show_${var.name}" class="${var.name}" onclick="resetDiscuss('${modulename}','${var.name}');">${var.type} ${var.name}</a> </li>
                          % endif
                      % endfor
                  </ul>
@@ -81,13 +81,15 @@
                             % else:
                             <li>
                             % endif
-                            <a href="#show_${method.name}" class="${method.name}">${method.name}()</a></li>
+                            <a href="#show_${method.name}" class="${method.name}" onclick="resetDiscuss('${modulename}','${method.name}');">${method.name}()</a></li>
                          % endif
                          <% prevmethod = method.name %>
                      % endfor
                  </ul>
              % endif
-		    </div>
+		</div>
+		    
+		<!-- content -->
 		<div class="submenucol-right">
 		    <div id="main_block">
                 <div id="prose_block">
@@ -95,6 +97,7 @@
                       % if not clazz is None:
                       <%self:filter chain="markdown_template">
 ${clazz.reference}
+    
                       </%self:filter>
                       % endif
 
@@ -106,12 +109,15 @@ ${clazz.detailed_inline_description}
                             </%self:filter>
                       </div>                      
                       % endif
-                      
+
+
                       % if not functions is None:
                       <%self:filter chain="markdown_template">
 ${functions.description}
                       </%self:filter>
                       % endif
+                      
+                      
                    </div>
                   
                   <!-- methods detail -->
@@ -144,7 +150,44 @@ ${functions.description}
                       % endfor
                   % endif
                 </div><!-- End Prose Block -->
+                <hr/>
+
           </div><!-- End Main Block -->
+                
+            <!--diqus comments for class/functions module description-->
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+            
+             // DISQUS
+             /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+              
+            var disqus_shortname = 'openframeworks'; // required: replace example with your forum shortname
+            //var disqus_developer = 1;
+             
+            location_elements = window.location.pathname.split("/");
+            module_name = location_elements[location_elements.length-1].split(".")[0];
+            section_name = location.hash.split("_")[1];
+            console.log(module_name + " " + section_name);
+            if(section_name!=undefined && section_name!=''){
+                var disqus_identifier = window.location.pathname + "#!show_" + section_name;  
+                var disqus_url = window.location.protocol + "//" + window.location.host + window.location.pathname + "#!show_" + section_name;
+                var discus_title = document.title + " - " + section_name;
+            }else{
+                var disqus_identifier = window.location.pathname;
+                var disqus_url = window.location.protocol + "//" + window.location.host + window.location.pathname;
+                var discus_title = document.title;
+            }
+            
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */   
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 		
         </div><!-- End Submenu right -->
       </div><!-- End page wide -->

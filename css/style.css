@@ -610,6 +610,7 @@ hr {
 	height: 1px;
 	margin-bottom: 5em;
 	margin-top: 5em;
+	clear: left;
 }
 .documentation_col {
 	float: left;

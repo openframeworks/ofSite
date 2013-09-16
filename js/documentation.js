@@ -1,8 +1,26 @@
+
+
+function resetDiscuss(module_name,section_name){
+    console.log(window.location.protocol + "://" + window.location.host + window.location.pathname + "#!show_" + section_name);
+    DISQUS.reset({
+      reload: true,
+      config: function () {  
+        this.page.identifier = window.location.pathname + "#!show_" + section_name;  
+        if(section_name!=''){
+            this.page.url = window.location.protocol + "//" + window.location.host + window.location.pathname + "#!show_" + section_name;
+            this.page.title = document.title + " - " + section_name;
+        }else{
+            this.page.url = window.location.protocol + "//" + window.location.host + window.location.pathname;
+            this.page.title = document.title;
+        }
+      }
+    });
+}
+
 $(document).ready(
 
     function(){
-      console.log(" documentation hello ");
-      $('#top_list').columnize({ columns: 3 });
+      //$('#top_list').columnize({ columns: 3 });
       //$('.documentation_index_group').columnize({ width:300, lastNeverTallest: true  });
 
 
@@ -19,28 +37,35 @@ $(document).ready(
       SyntaxHighlighter.all()
       
       $(".documentation_detail").hide();
-      var selected = location.hash.substring(6);
-      if(selected.length){  
+      var selected = location.hash.split("_")[1];
+      if(selected!=undefined && selected.length){  
         $(".documentation_detail."+selected).show();
         $(".functionslist").find('a.'+selected).addClass('selected');
       }else{
         $(".class_documentation").show();
         $("#docstitle h1").addClass('selected');
       }
+        
       $(".functionslist").find('a').click(function(){
         $(".documentation_detail").hide();
         $(".documentation_detail."+$(this).attr('class')).show();
         $(".functionslist").find('a').removeClass('selected');
         $(this).addClass('selected');
         $("#docstitle h1").removeClass('selected');
-        var anchor = $(this)
         $('html, body').animate({scrollTop:0}, 200);
       });
+      
      $("#docstitle h1").click(function(){
         $(".documentation_detail").hide();
         $(".documentation_detail.class_documentation").show();
         $(".functionslist").find('a').removeClass('selected');
         $(this).addClass('selected');
+        location.hash = "";
       });
-    });
+      
+      
+      
+     
+   }
+);
 

@@ -18,6 +18,7 @@ ${method.inlined_description}
 		        </%self:filter>
             </div>
         % endif
+    
 	</div>
 	<div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div>
 </div>
