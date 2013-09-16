@@ -84,6 +84,7 @@ def run():
     module_lookup = dict()
         
     classes = markdown_file.getclass_list()
+    addon_classes = markdown_file.list_all_addons()
       
     for class_name in classes:
         module_lookup[class_name] = markdown_file.getclass(class_name,True).module
@@ -119,7 +120,8 @@ def run():
             "modulename": clazz.name,
             "clazz": clazz,
             "functions": functions_file,
-            "classes_list": classes
+            "classes_list": classes,
+            "is_addon": (clazz.name in addon_classes)
         }
         bf.template.materialize_template("documentation_class.mako", ('documentation',clazz.module+"/"+clazz.name+".html"), env )
     
