@@ -1731,31 +1731,6 @@ _advanced: False_
 _description: _
 
 
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool bAntiAlised
-
-<!--
-_name: bAntiAlised_
-_type: bool_
-_access: public_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: False_
-_advanced: False_
--->
-
-_description: _
-
-
 A variable which tells you if the font is antiAliased.
 
 
@@ -1771,7 +1746,7 @@ A variable which tells you if the font is antiAliased.
 <!--
 _name: bFullCharacterSet_
 _type: bool_
-_access: public_
+_access: protected_
 _version_started: 006_
 _version_deprecated: _
 _summary: _
@@ -1798,7 +1773,7 @@ A variable which tells you if the font contains the full character set, or a sub
 <!--
 _name: bLoadedOk_
 _type: bool_
-_access: public_
+_access: protected_
 _version_started: 006_
 _version_deprecated: _
 _summary: _
@@ -2200,7 +2175,7 @@ _description: _
 <!--
 _name: nCharacters_
 _type: int_
-_access: public_
+_access: protected_
 _version_started: 006_
 _version_deprecated: _
 _summary: _
