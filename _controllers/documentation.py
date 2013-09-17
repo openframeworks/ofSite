@@ -93,7 +93,7 @@ def run():
 
         methods_to_remove = []
         for method in clazz.function_list:
-            if method.name==clazz.name or method.name[0]=="~" or method.name.find("OF_DEPRECATED_MSG")!=-1:
+            if method.name[0]=="~" or method.name.find("OF_DEPRECATED_MSG")!=-1:
                 methods_to_remove.append(method)
         for method in methods_to_remove:
             clazz.function_list.remove(method)

@@ -39,7 +39,7 @@
              <ul class="functionslist">
                  <% prevmethod = "" %>
                  % for method in clazz.function_list:
-                     % if prevmethod != method.name and method.visible and not method.advanced and method.access=='public' and (method.name!=method.clazz) and (method.name != "~" + method.clazz):
+                     % if prevmethod != method.name and method.visible and not method.advanced and method.access=='public':
                          % if len(method.description) <= 1 and len(method.inlined_description) <= 1:
                          <li class="noDoc" data-lookup="${method.name}" onclick="resetDiscuss('${modulename}','${method.name}');">
                          % else:
@@ -120,7 +120,7 @@ ${functions.description}
             % if not clazz is None and len([x for x in clazz.function_list if not x.advanced and x.visible and x.access=='public'])>0:
               <!--h2><a name="methods"></a>${clazz.name} methods</h2-->
               % for method in clazz.function_list:
-                    % if method.visible and not method.advanced and method.access=='public' and (method.name!=method.clazz) and (method.name != "~" + method.clazz):
+                    % if method.visible and not method.advanced and method.access=='public':
                         <%include file="documentation_method.mako" args="method=method" />    
                     % endif
               % endfor

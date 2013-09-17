@@ -653,6 +653,9 @@ hr {
 	list-style:none;
 	float:left;
 }
+#body-wrap ul.docsadvanced li:before{
+    content: none;
+}
 #body-wrap ul.documentation_class li:before{
     /*font-size:0.85em;
     padding-right:0.2em;*/
