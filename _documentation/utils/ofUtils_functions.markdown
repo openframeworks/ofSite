@@ -414,7 +414,7 @@ _inlined_description: _
 
 _description: _
 
-
+returns the elapsed time since the application started in microseconds (1000000 microsecs = 1 second)
 
 
 
@@ -442,6 +442,7 @@ _advanced: False_
 
 _inlined_description: _
 
+returns the elapsed time since the application started in milliseconds (1000 millisecs = 1 second)
 
 
 
@@ -486,7 +487,7 @@ _inlined_description: _
 
 _description: _
 
-
+returns the elapsed time since the application started in seconds as a float
 
 
 
@@ -2257,7 +2258,8 @@ _syntax: ofToDataPath(path, absolute)_
 _name: ofToDataPath_
 _returns: string_
 _returns_description: _
-_parameters: string path_
+_parameters: string path
+_
 _version_started: 006_
 _version_deprecated: _
 _summary: _
