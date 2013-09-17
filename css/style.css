@@ -20,11 +20,13 @@ body {
 #body-wrap li p:first-child {
 	display: inline;
 }
+
 #body-wrap ul li:before {
     content: '> ';
     padding-right: 0.3em;
     color: #009bca;
 }
+
 #body-wrap ul li.docs-module-title:before{
     content: '';
     padding-right: 0.3em;
@@ -337,12 +339,12 @@ hr.header {
 	float: left;
 	margin: 0px;
 	padding: 0px 0px 0px 0px;
-	width: 200px;
+	width: 250px;
 }
 .submenucol-right {
 	float: left;
-	padding: 0px 0px 0px 50px;
-	width: 650px;
+	padding: 0px 0px 0px 30px;
+	width: 600px;
 }
 .search_input {
 	background: #D2D5D7;
@@ -485,7 +487,7 @@ a.nohover {
 
 .top_list_header {
 	display: inline;
-	padding: 8px;
+	padding: 8px 0 8px 0;
 	font-size: 1.2em;
 	font-weight: bold;
 		
@@ -548,6 +550,7 @@ a.nohover {
 	color: #444;
 	font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
 	cursor: pointer; cursor:hand;
+	font-size: 0.85em;
 }
 .functionslist a:hover, .documentation_index_group a:hover {
 	color: white;
@@ -560,8 +563,13 @@ ul.functionslist, div.documentation_index_group {
 	color: #444;
 	list-style: none;
 	padding: 0;
-	padding-left: 8px;
+	/*padding-left: 8px;*/
 }
+#body-warp ul.functionslist li:before {
+    font-size:0.80
+    padding-right: 0.25em;
+}
+
 .documentation_index_group a{
 	color: #EE3987;
 	font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
@@ -639,14 +647,16 @@ hr {
 	
 }
 .documentation_class {
-	/*background: #F7F7F7;
-	float: left;*/
 	margin: 0px;
 	padding: 5px 0px 5px 0px;
 	position: relative;
-	/*width: 300px;*/
 	list-style:none;
 	float:left;
+}
+#body-wrap ul.documentation_class li:before{
+    /*font-size:0.85em;
+    padding-right:0.2em;*/
+    content: none;
 }
 .beginners .documentation_col {
 	margin-right: 80px;
@@ -675,7 +685,7 @@ div.sectiontitle h2{
 	margin: 0px 0px 30px 0px;
 	padding: 0px 0px 0px 0px;
 	position: relative;
-	width: 650px;
+	width: 600px;
 }
 .inlined_docs{
     background-color:#f8f8f9;
@@ -793,6 +803,7 @@ a.documentation_func {
 	background: none;
 	color: #3A3839;
 	text-decoration: none;
+	font-size: 0.85em;
 }
 a:link.documentation_func {
 	background: none;

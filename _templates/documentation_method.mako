@@ -20,7 +20,7 @@ ${method.inlined_description}
         % endif
     
 	</div>
-	<div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div>
+	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
 </div>
 
 <%def name="filter(chain)">
