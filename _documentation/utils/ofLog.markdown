@@ -1,12 +1,15 @@
 #class ofLog
 
 
+<!--
+_visible: True_
+_advanced: False_
+-->
+
 ##InlineDescription
 
+
 a streaming log interface 
-
-
-
 
 ofLog accepts variables via the ostream operator << and builds a string and logs it when the stream is finished (via the destructor). A newline is printed automatically and all the stream controls (endl, flush, hex, etc) work normally. The log level is explicitly OF_LOG_NOTICE unless set, see the derived wrapper classes:
 
@@ -20,9 +23,6 @@ class idea from: [http://www.gamedev.net/community/forums/topic.asp?topic_id=525
 
 ***author:*** 
 	Dan Wilcox [danomatika@gmail.com](danomatika@gmail.com) danomatika.com 
-
-
-
 
 
 
@@ -136,16 +136,15 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: False_
 _advanced: False_
 -->
 
 _inlined_description: _
 
+
 print a log line 
-
-
 
 
 
@@ -177,13 +176,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: False_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -216,16 +214,15 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
 
+
 log at notice level 
-
-
 
 
 
@@ -272,16 +269,15 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
 
+
 set the log level 
-
-
 
 
 
@@ -342,16 +338,15 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
 
+
 the legacy ofLog interfaces 
-
-
 
 
 
@@ -397,13 +392,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -472,13 +466,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: False_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -511,16 +504,15 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: False_
 _advanced: False_
 -->
 
 _inlined_description: _
 
+
 catch the << ostream with a template class to read any type of data 
-
-
 
 
 
@@ -565,6 +557,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -602,6 +595,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -626,16 +620,15 @@ _version_started: 0072_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
 
+
 catch the << ostream function pointers such as std::endl and std::hex 
-
-
 
 
 
@@ -667,13 +660,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: False_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -706,16 +698,15 @@ _version_started: 0071_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: yes_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
 
+
 put a space between stream operator calls? 
-
-
 
 
 
@@ -747,16 +738,15 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: yes_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
 
+
 set the logging channel destinations for messages 
-
-
 
 
 
@@ -792,16 +782,15 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: False_
 _advanced: False_
 -->
 
 _inlined_description: _
 
+
 does the actual printing when the ostream is done 
-
-
 
 
 

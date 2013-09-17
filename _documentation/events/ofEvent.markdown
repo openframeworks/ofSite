@@ -1,9 +1,12 @@
 #class ofEvent
 
 
+<!--
+_visible: True_
+_advanced: False_
+-->
+
 ##InlineDescription
-
-
 
 
 
@@ -25,7 +28,6 @@ To notify an event of that type:
 ~~~~{.cpp}
 ofNotifyEvent(onVolumeChange, 10.0);
 ~~~~
-
 
 To add a listener to that event, if the event is for example in an object called mySoundObject, and you want to register ofApp as a listener for that event:
 
@@ -80,13 +82,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -119,13 +120,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -158,13 +158,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 

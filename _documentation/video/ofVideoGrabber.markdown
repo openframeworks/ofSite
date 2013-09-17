@@ -1,9 +1,12 @@
 #class ofVideoGrabber
 
 
+<!--
+_visible: True_
+_advanced: False_
+-->
+
 ##InlineDescription
-
-
 
 
 
@@ -36,13 +39,12 @@ _version_started: 006_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -77,13 +79,12 @@ _version_started: 006_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -118,13 +119,12 @@ _version_started: 006_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -172,10 +172,13 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
 This is similar to ofVideoGrabber::draw(x,y) except it takes an ofPoint object as a parameter instead of (x,y).  Please see ofVideoGrabber::draw(x,y).
+
+
 
 
 
@@ -209,7 +212,9 @@ _inlined_description: _
 
 
 
+
 _description: _
+
 
 This is similar to ofVideoGrabber::draw(x,y,width, height) except it takes an ofRectangle object as a parameter instead of (x, y, width, height).  Please see ofVideoGrabber::draw(x,y,width, height).
 
@@ -234,7 +239,7 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -248,10 +253,13 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
 getGrabber returns a pointer (ofPtr) to the internally running video grabber.  Since the ofVideoGrabber object has different potential systems for grabbing (quicktime, qtkit, directshow), this ptr gives you access to the underlying video grabber that's running inside of ofVideoGrabber.  Note: use this only if you need low level access to an internal grabbing object, such as to call a specific function.   
+
+
+
 
 
 
@@ -271,7 +279,7 @@ _version_started: 006_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -285,10 +293,11 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
 Returns the height of the video grabber object.  If you initialize the object at 320x240, it will return 240;
+
 
 
 
@@ -310,7 +319,7 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -324,10 +333,11 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
 Returns the height of the video grabber object.  If you initialize the object at 320x240, it will return 240;
+
 
 
 
@@ -349,13 +359,12 @@ _version_started: 006_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -390,7 +399,7 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -404,10 +413,11 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
 This returns an ofPixels reference that you can use to access the raw pixel data of the ofImage.  
+
 
 
 
@@ -429,7 +439,7 @@ _version_started: 006_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -443,10 +453,12 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
 This returns the texture reference that the ofVideoGrabber contains. You can use this to directly manipulate the texture itself.  For example, you could bind the texture yourself and draw it using lower level opengl commands. 
+
+
 
 
 
@@ -467,7 +479,7 @@ _version_started: 006_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -481,10 +493,11 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
 Returns the width of the video grabber object.  If you initialize the object at 320x240, it will return 320.
+
 
 
 
@@ -519,6 +532,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -545,13 +559,12 @@ _version_started: 006_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -598,7 +611,7 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -612,8 +625,8 @@ _inlined_description: _
 
 
 
-
 _description: _
+
 
 Initializes either the default capture device or the capture device specified by setDeviceID. Attempts to setup capture at the width and height specified. If the capture dimensions are not available it will setup capture for the next closest dimensions available. It is good to check what the actual size is before you start processing the pixels.
 ~~~~{.cpp}
@@ -626,6 +639,7 @@ int grabH = myGrabber.height;
 printf("asked for 320 by 240 - actual size is %i by %i 
 ", grabW, grabH);
 ~~~~
+
 
 
 
@@ -647,7 +661,7 @@ _version_started: 006_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -661,8 +675,8 @@ _inlined_description: _
 
 
 
-
 _description: _
+
 
 This function can be called after calling ofImage::update() (or alternatively, ofImage::ofIdleGrabber()) to figure out if a frame is new, ie. if there is a new pixel data.  This is typically because your main frame rate might not be in sync with the video grabber, and you can skip processing on frames where there is no new data.    
 
@@ -683,6 +697,8 @@ void testApp::update(){
 
 
 
+
+
 <!----------------------------------------------------------------------------->
 
 ###bool isInitialized()
@@ -698,7 +714,7 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -712,10 +728,11 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
 Returns a boolean if the video grabber is properly initialized. 
+
 
 
 
@@ -737,7 +754,7 @@ _version_started: 006_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -751,11 +768,12 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
 Prints to the console a list of available capture devices with the device ID of each device. The device ID can then be used with setDeviceID() to specify a specific device to capture from.  This is especially useful if you have multiple devices, or want to see what kind of cameras openframeworks sees. 
+
+
 
 
 
@@ -776,7 +794,7 @@ _version_started: 006_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: False_
 _advanced: False_
 -->
@@ -790,11 +808,14 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
 Initializes the video grabber.  This function doesn't really do any real allocation, which happens in ofVideoGrabber::initGrabber().  In openframeworks we typically use empty constructors so that objects can be defined in h files, ie, you don't need to do dynamic allocation or use pointers as much in your code. 
+
+
+
+
 
 
 
@@ -813,7 +834,7 @@ _version_started: 006_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: True_
 -->
@@ -827,10 +848,12 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
 This removes any anchor positioning, meaning that the ofVideoGrabber will be draw with the upper left hand corner at the point passed into draw().
+
+
 
 
 
@@ -851,7 +874,7 @@ _version_started: 006_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: True_
 -->
@@ -865,10 +888,12 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
 Adjusts ofVideoGrabbers anchor for more drawing control.  see ofImage::setAnchorPercent() for info. 
+
+
 
 
 
@@ -902,10 +927,13 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
 Adjusts ofVideoGrabbers anchor for more drawing control.  see ofImage::setAnchorPoint(x,y) for info. 
+
+
 
 
 
@@ -926,7 +954,7 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -940,11 +968,12 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
 Adjusts ofVideoGrabbers anchor for more drawing control.  see ofImage::setAnchorPoint(x,y) for info. 
+
+
 
 
 
@@ -965,7 +994,7 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -979,11 +1008,13 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
 Set's the desired frame rate of the grabber.  This should be called before initGrabber(), which will try to initialize at the desired frame rate.  Not all frame rates will be supported, but this at least gives you some abilitity to try grab at different rates. 
+
+
+
 
 
 
@@ -1003,13 +1034,12 @@ _version_started: 006_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1044,7 +1074,7 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -1058,10 +1088,12 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
 This function, similar to getGrabber, allows for low level access to the internal grabber object.  This is useful if you want to adjust the internal grabber that ofVideoGrabber is using.
+
+
 
 
 
@@ -1082,7 +1114,7 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -1096,10 +1128,11 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
 Some video grabbers allow you to adjust the pixel format, which might help for optimization.  At the moment, this seems to only apply to the linux video grabber (GST).  For all other grabbers, the only format accepted is OF_PIXELS_RGB
+
 
 
 
@@ -1121,13 +1154,12 @@ _version_started: 006_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1167,13 +1199,12 @@ _version_started: 006_
 _version_deprecated: 0.06_
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1215,13 +1246,12 @@ _version_started: 006_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1256,13 +1286,12 @@ _version_started: 006_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1297,7 +1326,7 @@ _version_started: 006_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: False_
 _advanced: False_
 -->
@@ -1311,10 +1340,11 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
 Destructor for the video grabber, will release any allocated memory. 
+
 
 
 

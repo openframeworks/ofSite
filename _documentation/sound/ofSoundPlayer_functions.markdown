@@ -1,6 +1,13 @@
 #functions
 
+
+<!--
+_visible: True_
+_advanced: False_
+-->
+
 ##Description
+
 
 
 
@@ -41,6 +48,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofSoundSetVolume(vol)
@@ -70,7 +78,9 @@ _inlined_description: _
 
 _description: _
 
+
 Sets the volume of all ofSoundPlayer objects to the volume (vol) specified. 0.0 - 1.0 range. 0.0 is silent and 1.0 is full volume.
+
 
 
 
@@ -105,6 +115,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -147,6 +158,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofSoundUpdate()
@@ -175,6 +187,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 

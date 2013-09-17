@@ -89,23 +89,32 @@ def getfunctionsfile(filename):
                         state = 'functionsfile'
                         functionsfile.module = os.path.basename(root)
                         functionsfile.new = False
+                 
+                    elif state == 'functionsfile' and line.find('_')==0:
+                        addfield(functionsfile,line)
+                        
                     elif state == 'functionsfile' and line.find('##Description') == 0:
                         state = 'filedescription'
                         prevBreakLine = False
+                        
                     elif state == 'filedescription' and line.find('<!----------------------------------------------------------------------------->')==-1 and (line!='\n' or not prevBreakLine):
                         functionsfile.description = functionsfile.description + line
-                        prevBreakLine = (line=='\n')                        
+                        prevBreakLine = (line=='\n')     
+                                           
                     elif state == 'filedescription' or state=='description' and line.find('###')==0:
                         if(state=='description'):
                             functionsfile.function_list.append(function)
                         state = 'function'
                         function = DocsFunction(0)
+                        
                     elif state == 'function' and line.find('_')==0 and line.find('_description')==-1:
                         #print "##########field: " + line
                         addfield(function,line)
+                        
                     elif state == 'function' and line.find('_description')==0:
                         state = 'description'
                         prevBreakLine = False
+                        
                     elif state == 'description' and line.find('<!----------------------------------------------------------------------------->')==-1 and (line!='\n' or not prevBreakLine):
                         function.description = function.description + line
                         prevBreakLine = (line=='\n')                        
@@ -228,7 +237,10 @@ def getclass(clazz, getTemplated=False):
                         var.linenum = linenum
                         var.file = os.path.join(root,name)
                         
-                    elif state == 'class' and line.find('##InlineDescription'):
+                    elif state == 'class' and line.find('_')==0:
+                        addfield(documentation_clazz,line)
+                        
+                    elif state == 'class' and line.find('##InlineDescription')==0:
                         state = 'classinlinedescription'
                         documentation_clazz.detailed_inline_description = ""
                         
@@ -353,6 +365,10 @@ def setclass(clazz):
         pass
     f = open(os.path.join(documentation_root,clazz.module,clazz.name)+".markdown",'w')
     f.write('#class ' + clazz.name + '\n\n\n')
+    f.write("<!--\n");
+    f.write("_visible: " + str(clazz.visible) + "_\n")
+    f.write("_advanced: " + str(clazz.advanced) + "_\n")
+    f.write("-->\n\n");
     
     #f.write('//----------------------\n\n')
     #f.write('##Example\n\n' + clazz.example + '\n\n\n\n')
@@ -382,7 +398,11 @@ def setfunctionsfile(functionfile):
     except:
         pass
     f = open(os.path.join(documentation_root,functionfile.module,functionfile.name)+"_functions.markdown",'w')
-    f.write('#functions\n\n')
+    f.write('#functions\n\n\n')
+    f.write("<!--\n");
+    f.write("_visible: " + str(functionfile.visible) + "_\n")
+    f.write("_advanced: " + str(functionfile.advanced) + "_\n")
+    f.write("-->\n\n");
     f.write('##Description\n\n' + functionfile.description + '\n\n\n\n')
     
     f.write('<!----------------------------------------------------------------------------->\n\n')

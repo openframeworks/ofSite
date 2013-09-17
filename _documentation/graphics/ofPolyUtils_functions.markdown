@@ -1,86 +1,12 @@
 #functions
 
+
+<!--
+_visible: True_
+_advanced: False_
+-->
+
 ##Description
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofPolyline ofGetSmoothed(&polyline, smoothingSize, smoothingShape = 0)
-
-<!--
-_syntax: ofGetSmoothed(&polyline, smoothingSize, smoothingShape = 0)_
-_name: ofGetSmoothed_
-_returns: ofPolyline_
-_returns_description: _
-_parameters: const ofPolyline &polyline, int smoothingSize, float smoothingShape=0_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofPolyline ofGetResampledSpacing(&polyline, spacing)
-
-<!--
-_syntax: ofGetResampledSpacing(&polyline, spacing)_
-_name: ofGetResampledSpacing_
-_returns: ofPolyline_
-_returns_description: _
-_parameters: const ofPolyline &polyline, float spacing_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofPolyline ofGetResampledCount(&polyline, count)
-
-<!--
-_syntax: ofGetResampledCount(&polyline, count)_
-_name: ofGetResampledCount_
-_returns: ofPolyline_
-_returns_description: _
-_parameters: const ofPolyline &polyline, int count_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
 
 
 
@@ -106,7 +32,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
+
 
 
 
@@ -133,7 +68,124 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofPolyline ofGetResampledCount(&polyline, count)
+
+<!--
+_syntax: ofGetResampledCount(&polyline, count)_
+_name: ofGetResampledCount_
+_returns: ofPolyline_
+_returns_description: _
+_parameters: const ofPolyline &polyline, int count_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofPolyline ofGetResampledSpacing(&polyline, spacing)
+
+<!--
+_syntax: ofGetResampledSpacing(&polyline, spacing)_
+_name: ofGetResampledSpacing_
+_returns: ofPolyline_
+_returns_description: _
+_parameters: const ofPolyline &polyline, float spacing_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofPolyline ofGetSmoothed(&polyline, smoothingSize, smoothingShape = 0)
+
+<!--
+_syntax: ofGetSmoothed(&polyline, smoothingSize, smoothingShape = 0)_
+_name: ofGetSmoothed_
+_returns: ofPolyline_
+_returns_description: _
+_parameters: const ofPolyline &polyline, int smoothingSize, float smoothingShape=0_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
 
 
 

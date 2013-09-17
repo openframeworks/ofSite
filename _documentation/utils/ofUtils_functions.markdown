@@ -1,6 +1,13 @@
 #functions
 
+
+<!--
+_visible: True_
+_advanced: False_
+-->
+
 ##Description
+
 
 
 
@@ -35,7 +42,9 @@ _inlined_description: _
 
 _description: _
 
+
 Interprets a string consisting only of 1s and 0s as a char, and returns the corresponding char value.
+
 
 
 
@@ -71,7 +80,9 @@ _inlined_description: _
 
 _description: _
 
+
 Interprets a string consisting only of 1s and 0s as a float (little-endian, 32-bit IEEE 754), and returns the corresponding float value.
+
 
 
 
@@ -107,7 +118,9 @@ _inlined_description: _
 
 _description: _
 
+
 Interprets a string consisting only of 1s and 0s as an int (little-endian, 32-bit), and returns the corresponding int value.
+
 
 
 
@@ -143,7 +156,9 @@ _inlined_description: _
 
 _description: _
 
+
 Interprets a string consisting only of 1s and 0s as 8-bit ASCII characters, and returns the corresponding string.
+
 
 
 
@@ -185,6 +200,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofDisableDataPath()
@@ -214,7 +230,9 @@ _inlined_description: _
 
 _description: _
 
+
 Disables the conversion of paths to realtive to data/
+
 
 
 
@@ -250,7 +268,9 @@ _inlined_description: _
 
 _description: _
 
+
 Enables the conversion of paths to relative to data/  This is enabled by default.
+
 
 
 
@@ -285,6 +305,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -327,6 +348,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int ofGetDay()
@@ -355,6 +377,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -397,6 +420,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###unsigned long long ofGetElapsedTimeMillis()
@@ -425,6 +449,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -467,6 +492,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int ofGetFrameNum()
@@ -495,6 +521,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -537,6 +564,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int ofGetMinutes()
@@ -565,6 +593,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -607,6 +636,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int ofGetSeconds()
@@ -635,6 +665,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -677,6 +708,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###unsigned long long ofGetSystemTimeMicros()
@@ -705,6 +737,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -747,6 +780,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###string ofGetTimestampString()
@@ -775,6 +809,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -817,6 +852,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###unsigned int ofGetUnixTime()
@@ -845,6 +881,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -887,6 +924,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###unsigned int ofGetVersionMajor()
@@ -915,6 +953,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -957,6 +996,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###unsigned int ofGetVersionPatch()
@@ -985,6 +1025,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1027,6 +1068,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int ofGetYear()
@@ -1055,6 +1097,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1091,7 +1134,9 @@ _inlined_description: _
 
 _description: _
 
+
 Converts a hexadecimal representation of an char (e.g., "61") to an actual char (e.g., a).
+
 
 
 
@@ -1127,7 +1172,9 @@ _inlined_description: _
 
 _description: _
 
+
 Converts a hexadecimal representation of an float (little-endian, 32-bit IEEE 754, e.g., "4060000000000000") to an actual float (e.g., 128.f).
+
 
 
 
@@ -1163,7 +1210,9 @@ _inlined_description: _
 
 _description: _
 
+
 Converts a hexadecimal representation of an int (little-endian, 32-bit, e.g., "0xbadf00d" or "badf00d") to an actual int.
+
 
 
 
@@ -1199,7 +1248,9 @@ _inlined_description: _
 
 _description: _
 
+
 Converts a hexadecimal representation of an string (e.g., "61626364656667") to an actual string ("abcdefg");
+
 
 
 
@@ -1235,7 +1286,9 @@ _inlined_description: _
 
 _description: _
 
+
 Checks if the string needle exists in the string haystack.
+
 
 
 
@@ -1271,7 +1324,9 @@ _inlined_description: _
 
 _description: _
 
+
 Turns a stringElements into a single string, with an instance of delimiter between all the elements.
+
 
 
 
@@ -1307,7 +1362,9 @@ _inlined_description: _
 
 _description: _
 
+
 Opens your computer's default browser and loads the specified url. 
+
 
 
 
@@ -1342,6 +1399,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1384,6 +1442,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofRandomize(&values)
@@ -1412,6 +1471,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1454,6 +1514,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofResetElapsedTimeCounter()
@@ -1482,6 +1543,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1518,7 +1580,9 @@ _inlined_description: _
 
 _description: _
 
+
 Saves the current frame as a PNG image.
+
 
 
 
@@ -1560,6 +1624,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofSaveScreen(filename)
@@ -1589,6 +1654,7 @@ _inlined_description: _
 
 _description: _
 
+
 Saves the current screen image into a given file name (string filename).
 Example:
 ~~~~{.cpp}
@@ -1597,6 +1663,7 @@ string filename;
 fileName = "screen1.png";
 ofSaveScreen(fileName);
 ~~~~
+
 
 
 
@@ -1631,6 +1698,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1673,6 +1741,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofSetWorkingDirectoryToDefault()
@@ -1701,6 +1770,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1743,6 +1813,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofSort(&values, compare)
@@ -1771,6 +1842,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1807,6 +1879,7 @@ _inlined_description: _
 
 _description: _
 
+
 This function is used to delete some parts of a given string (str). We set in delimiter the parts we want to delete. For example if we call ofSplitSpring in my setup function:
 ~~~~{.cpp}
 
@@ -1828,6 +1901,7 @@ we obtain:
 result[0]=of
 result[1]=rocks
 Like this we can "cut" a big string and turn it into a vector of words.
+
 
 
 
@@ -1865,7 +1939,9 @@ _inlined_description: _
 
 _description: _
 
+
 Splits source using delimiter and returns the separate tokens. In modern versions of openFrameworks, delimiter can be a multi-character string. In older versions of openFrameworks, delimiter was interpreted as multiple single-character delimiters.
+
 
 
 
@@ -1901,7 +1977,9 @@ _inlined_description: _
 
 _description: _
 
+
 Searches input for instances of searchStr and replaces them with replaceStr.
+
 
 
 
@@ -1936,6 +2014,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1978,6 +2057,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###string ofToBinary(&value)
@@ -2007,7 +2087,9 @@ _inlined_description: _
 
 _description: _
 
+
 Converts any datatype value to a string of only 1s and 0s corresponding to the way value is stored in memory.
+
 
 
 
@@ -2043,7 +2125,9 @@ _inlined_description: _
 
 _description: _
 
+
 Converts a string value to a string of only 1s and 0s corresponding to the way value is stored in memory.
+
 
 
 
@@ -2079,7 +2163,9 @@ _inlined_description: _
 
 _description: _
 
+
 Converts any C-style string value to a string of only 1s and 0s corresponding to the way value is stored in memory.
+
 
 
 
@@ -2115,7 +2201,9 @@ _inlined_description: _
 
 _description: _
 
+
 Converts a string representation boolString (e.g., "TRUE") to an actual bool using a case-insensitive comparison against the words "true" and "false". 
+
 
 
 
@@ -2151,7 +2239,9 @@ _inlined_description: _
 
 _description: _
 
+
 Converts a string representation of a single char (e.g., " c ") to an actual char.
+
 
 
 
@@ -2187,9 +2277,11 @@ _inlined_description: _
 
 _description: _
 
+
 openFrameworks now treats all files in the data/ folder as being at the same level as your app. When a file is loaded using openFrameworks classes (like ofVideoPlayer) the file path is run through this function to turn it into a relative path for the executible. As windows, mac and linux all have different relative paths, it is important to use this function if you have written your own class or addon for openFrameworks and you wish to be able to load files from the data/ folder.
 
 The optional parameter makeAbsolute, if set to true (false by default) returns the generated path as an absolute path starting from the root of your filesystem instead of from the folder your application is run from.
+
 
 
 
@@ -2224,6 +2316,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -2266,6 +2359,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofToFloat(floatString)
@@ -2295,7 +2389,9 @@ _inlined_description: _
 
 _description: _
 
+
 Converts the string "floatString" into a float value.
+
 
 
 
@@ -2331,7 +2427,9 @@ _inlined_description: _
 
 _description: _
 
+
 Converts a string representation floatString (e.g., "3.14") to an actual float.
+
 
 
 
@@ -2367,7 +2465,9 @@ _inlined_description: _
 
 _description: _
 
+
 Converts any value to its equivalent hexadecimal representation corresponding to the way it is stored in memory.
+
 
 
 
@@ -2403,7 +2503,9 @@ _inlined_description: _
 
 _description: _
 
+
 Converts a string (e.g., "abc") to its equivalent hexadecimal representation (e.g., "616263").
+
 
 
 
@@ -2439,7 +2541,9 @@ _inlined_description: _
 
 _description: _
 
+
 Converts a c-style string (e.g., "abc") to its equivalent hexadecimal representation (e.g., "616263").
+
 
 
 
@@ -2475,7 +2579,9 @@ _inlined_description: _
 
 _description: _
 
+
 Converts the string "intString" into an integer value.
+
 
 
 
@@ -2511,7 +2617,9 @@ _inlined_description: _
 
 _description: _
 
+
 Converts a string representation of an int (e.g., "2012") to an actual int.
+
 
 
 
@@ -2547,7 +2655,9 @@ _inlined_description: _
 
 _description: _
 
+
 Converts all characters in the string src to lowercase.
+
 
 
 
@@ -2583,6 +2693,7 @@ _inlined_description: _
 
 _description: _
 
+
 To make adding numbers to a string easy we have the ofToString object which takes a number and turns it into a string representation of that number. For floating point numbers 'precision' is the number of decimal places you want to use. There is a default value for 'precision' of 7 decimal places, so if you don't wish to specify it you can just pass the first argument.
 
 
@@ -2594,6 +2705,7 @@ str += ofToString(ofGetFrameRate(), 2)+"fps";
 ofSetWindowTitle(str);
 //set the window title to "framerate is 45.30fps"
 ~~~~
+
 
 
 
@@ -2628,6 +2740,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -2670,6 +2783,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###string ofToString(&values)
@@ -2699,6 +2813,7 @@ _inlined_description: _
 
 _description: _
 
+
 Converts a vector of values to a single string representation. 
 ~~~~{.cpp}
 vector<int> vec;
@@ -2707,6 +2822,7 @@ vec.push_back(2);
 vec.push_back(3);
 cout << ofToString(vec) << endl; // prints "{1, 2, 3}"
 ~~~~
+
 
 
 
@@ -2741,6 +2857,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -2783,6 +2900,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###string ofToUpper(&src)
@@ -2812,7 +2930,9 @@ _inlined_description: _
 
 _description: _
 
+
 Converts all characters in the string src to uppercase.
+
 
 
 
@@ -2854,6 +2974,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###string ofVAArgsToString(*format, args)
@@ -2882,6 +3003,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 

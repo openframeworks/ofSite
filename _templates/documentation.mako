@@ -56,12 +56,8 @@
         </div><!-- End Page Wide -->
 
     	<div class="page-wide core">
-            % for column in columns:
-            <!--div class="documentation_col"-->
-                % for block in column:
-                    <%include file="documentation_index_block.mako" args="block=block" />
-                % endfor
-            <!--/div-->
+            % for module, classes in sorted(core.items(), key=lambda module: module):
+                <%include file="documentation_index_block.mako" args="module=module,classes=classes" />
             % endfor
         </div><!-- End Page Wide -->
         
@@ -73,12 +69,8 @@
         </div><!-- End Page Wide -->
 
     	<div class="page-wide addons">
-            % for column in addons_columns:
-            <!--div class="documentation_col"-->
-                % for block in column:
-                    <%include file="documentation_index_block.mako" args="block=block" />
-                % endfor
-            <!--/div-->
+            % for module, classes in sorted(addons.items(), key=lambda module: module):
+                <%include file="documentation_index_block.mako" args="module=module,classes=classes" />
             % endfor
         </div><!-- End Page Wide -->
               

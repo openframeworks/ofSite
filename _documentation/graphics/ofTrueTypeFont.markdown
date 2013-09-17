@@ -1,12 +1,24 @@
 #class ofTrueTypeFont
 
 
+<!--
+_visible: True_
+_advanced: False_
+-->
+
 ##InlineDescription
+
+
+
+
 
 
 ##Description
 
 The ofTrueTypeFont class provides an interface to load fonts into openFrameworks. The fonts are converted to textures, and can be drawn on screen. There are some options when you load the font - what size the font is rendered at, wether or not it is anti-aliased, and whether the font object will be the full character set or a subset (i.e., extended ASCII, which can include diacritics like umlauts, or ASCII). The default is anti-aliased, non-full character set. The library uses freetype, which has certain patent problems in regards to true type hinting, especially at small sizes, so non-anti-aliased type doesn't always render beautifully. But we find it quite adequate, and at larger sizes it seems to works well.
+
+
+
 
 
 ##Methods
@@ -26,7 +38,7 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -40,10 +52,12 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
 This function, which is internal to the font object, binds the texture for the font drawing.  
+
+
 
 
 
@@ -64,7 +78,7 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -78,10 +92,11 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
 This function, which is used internally, builds a mesh representation of the font.  This function is used by ofTrueTypeFont::getStringMesh().
+
 
 
 
@@ -103,7 +118,7 @@ _version_started: 006_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -117,8 +132,8 @@ _inlined_description: _
 
 
 
-
 _description: _
+
 
 This function draws a character at position x,y.  It uses the texture representation of the font. 
 
@@ -143,7 +158,7 @@ _version_started: 006_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -157,10 +172,12 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
 This function draws a character at position x,y.  It uses the path of the font, which involves 
+
+
 
 
 
@@ -181,13 +198,12 @@ _version_started: 006_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -248,13 +264,12 @@ _version_started: 006_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -289,13 +304,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: yes_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -341,6 +355,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -365,13 +380,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -404,7 +418,7 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -418,11 +432,13 @@ _inlined_description: _
 
 
 
-
 _description: _
+
 
 Returns the encoding used by the font object.  This is set by ofTrueTypeFont::setEncoding() to either OF_ENCODING_UTF8 or OF_ENCODING_ISO_8859_15. OF_ENCODING_ISO_8859_15 is for an 8-bit single-byte coded graphic character sets, like ASCII while 
  OF_ENCODING_UTF8 is a variable-width encoding that can represent every character in the Unicode character set.
+
+
 
 
 
@@ -443,7 +459,7 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -457,10 +473,11 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
 Returns the texture (as a reference) that ofTrueTypeFont uses internally.  When you load in a font, it parses the ttf (or .otf) file and rasterizes it to a texture for fast drawing.  This gives you low level access to that texture. 
+
 
 
 
@@ -482,7 +499,7 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -496,8 +513,8 @@ _inlined_description: _
 
 
 
-
 _description: _
+
 
 Returns the letter spacing of the font object.  You can control this by the ofTrueTypeFont::setLetterSpacing() function.  1.0 = default spacing, less then 1.0 would be tighter spacing, greater then 1.0 would be wider spacing. 
 
@@ -522,13 +539,12 @@ _version_started: 006_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -563,13 +579,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -604,7 +619,7 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -618,10 +633,11 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
 Returns the size of the font.  This is set when you load in the font. 
+
 
 
 
@@ -643,7 +659,7 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -657,10 +673,11 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
 This is a variable to represent how wide spaces are sized.   It's a scalar for the width of the letter 'p', so 1.0 means that a space will be the size of the lower case 'p' of that font.  2.0 means that it's 2 times the size of the lower case 'p', etc. 
+
 
 
 
@@ -695,13 +712,13 @@ _inlined_description: _
 
 
 
+
 _description: _
+
 
 This returns a vector of ofTTFCharacters (which is actually an ofPath) for a given string.  This means you can get access to the point data / outlines of the letter forms. 
 
-
 ~~~~{.cpp}
-
 
 //--------------------------------------------------------------
 void testApp::setup(){
@@ -753,7 +770,6 @@ void testApp::draw(){
 
 
 
-
 <!----------------------------------------------------------------------------->
 
 ###vector< ofTTFCharacter > getStringAsPoints(str, vflip = ofIsVFlipped())
@@ -769,7 +785,7 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -783,10 +799,11 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
 Similar to ofTrueTypeFont::getStringAsPoints() but with a parameter for vertical flip.
+
 
 
 
@@ -808,13 +825,12 @@ _version_started: 006_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -867,7 +883,7 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -881,10 +897,11 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
 Returns the string as an ofMesh.   Note: this is a mesh that contains vertices and texture coordinates for the textured font, not the points of the font that are returned via any of the get points functions.
+
 
 
 
@@ -906,7 +923,7 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -920,10 +937,11 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
 Returns true or false if this font was allocated with a full character set. 
+
 
 
 
@@ -945,13 +963,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: yes_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -984,7 +1001,7 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -998,8 +1015,8 @@ _inlined_description: _
 
 
 
-
 _description: _
+
 
 Returns true of false if the font is set to be anti-aliased.  This is set when you load. 
 
@@ -1024,7 +1041,7 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -1038,8 +1055,8 @@ _inlined_description: _
 
 
 
-
 _description: _
+
 
 Returns true or false if the font is loaded properly. 
 
@@ -1070,6 +1087,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 
@@ -1126,6 +1144,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -1152,7 +1171,7 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -1166,8 +1185,8 @@ _inlined_description: _
 
 
 
-
 _description: _
+
 
 loads a font, and allows you to set the following parameters: the filename, the size, if the font is anti-aliased, if it has a full character set, if you need it to have contrours (for getStringPoints) and paramters that control the simplification amount for those contours and the dpi of the font. 
 
@@ -1205,6 +1224,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -1229,13 +1249,12 @@ _version_started: 006_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: False_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1268,13 +1287,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1307,7 +1325,7 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -1321,10 +1339,11 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
 Sets the encoding used by the font object. Can be set to either OF_ENCODING_UTF8 or OF_ENCODING_ISO_8859_15. OF_ENCODING_ISO_8859_15 is for an 8-bit single-byte coded graphic character sets, like ASCII while OF_ENCODING_UTF8 is a variable-width encoding that can represent every character in the Unicode character set.  This function is useful if you are trying to draw unicode strings.
+
 
 
 
@@ -1346,13 +1365,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: yes_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1385,7 +1403,7 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -1399,11 +1417,11 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
 Sets the letter spacing of the font object.  1.0 = default spacing, less then 1.0 would be tighter spacing, greater then 1.0 would be wider spacing. 
+
 
 
 
@@ -1425,13 +1443,12 @@ _version_started: 006_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1466,7 +1483,7 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -1480,10 +1497,11 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
 Sets the size of the space ' ' character.  This number, which defaults to 1.0, scales the width of the letter 'p' for the space. 
+
 
 
 
@@ -1505,7 +1523,7 @@ _version_started: 006_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -1519,11 +1537,12 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
 Returns the string height.  This is essentially the height component of the ofTrueTypeFont::getStringBoundingBox() rectangle. 
+
+
 
 
 
@@ -1544,7 +1563,7 @@ _version_started: 006_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -1558,8 +1577,8 @@ _inlined_description: _
 
 
 
-
 _description: _
+
 
 Returns the string height.  This is essentially the width component of the ofTrueTypeFont::getStringBoundingBox() rectangle. 
 
@@ -1586,7 +1605,7 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -1600,10 +1619,11 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
 This internal function unbinds the texture associated with this font.
+
 
 
 
@@ -1625,13 +1645,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1664,7 +1683,7 @@ _version_started: 006_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: False_
 _advanced: False_
 -->
@@ -1678,11 +1697,12 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
 The destructor for the font object will clear the resources, such as textures, that have been allocated. 
+
+
 
 
 

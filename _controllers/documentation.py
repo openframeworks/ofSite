@@ -80,14 +80,13 @@ def run():
     classes = []
     directory = "_documentation"
     documentation = bf.config.controllers.documentation
-    
-    module_lookup = dict()
         
     classes = markdown_file.getclass_list()
     addon_classes = markdown_file.list_all_addons()
-      
-    for class_name in classes:
-        module_lookup[class_name] = markdown_file.getclass(class_name,True).module
+    
+    core_index = dict()
+    addons_index = dict()
+        
     for clazz_name in classes:
         clazz = markdown_file.getclass(clazz_name,True)
 
@@ -100,18 +99,18 @@ def run():
 
         clazz.detailed_inline_description = str(clazz.detailed_inline_description.encode('ascii', 'ignore'))
         for class_name in classes:
-                rep = class_name + "[\s]"
-                clazz.detailed_inline_description = re.sub(rep, "<a href=\"../"+module_lookup[class_name]+"/"+class_name+".html\" class=\"docs_class\" >"+class_name+"</a> ", clazz.detailed_inline_description)
-                rep = class_name + "[(]"
-                clazz.detailed_inline_description = re.sub(rep, "<a href=\"../"+module_lookup[class_name]+"/"+class_name+".html\" class=\"docs_class\" >"+class_name+"</a>(", clazz.detailed_inline_description)
+            rep = class_name + "[\s]"
+            clazz.detailed_inline_description = re.sub(rep, "<a href=\"../"+clazz.module+"/"+class_name+".html\" class=\"docs_class\" >"+class_name+"</a> ", clazz.detailed_inline_description)
+            rep = class_name + "[(]"
+            clazz.detailed_inline_description = re.sub(rep, "<a href=\"../"+clazz.module+"/"+class_name+".html\" class=\"docs_class\" >"+class_name+"</a>(", clazz.detailed_inline_description)
         
         clazz.reference = str(clazz.reference.encode('ascii', 'ignore'))
         for class_name in classes:
-                rep = class_name + "[\s]"
-                clazz.reference = re.sub(rep, "<a href=\"../"+module_lookup[class_name]+"/"+class_name+".html\" class=\"docs_class\" >"+class_name+"</a> ", clazz.reference)
-                rep = class_name + "[(]"
-                clazz.reference = re.sub(rep, "<a href=\"../"+module_lookup[class_name]+"/"+class_name+".html\" class=\"docs_class\" >"+class_name+"</a>(", clazz.reference)
-                #print "Going through " + clazz.module + ":" + clazz.name +", replacing " + module_lookup[class_name] + ":" + class_name
+            rep = class_name + "[\s]"
+            clazz.reference = re.sub(rep, "<a href=\"../"+clazz.module+"/"+class_name+".html\" class=\"docs_class\" >"+class_name+"</a> ", clazz.reference)
+            rep = class_name + "[(]"
+            clazz.reference = re.sub(rep, "<a href=\"../"+clazz.module+"/"+class_name+".html\" class=\"docs_class\" >"+class_name+"</a>(", clazz.reference)
+            #print "Going through " + clazz.module + ":" + clazz.name +", replacing " + module_lookup[class_name] + ":" + class_name
 
         functions_file = markdown_file.getfunctionsfile(clazz_name)
         #print clazz.name
@@ -124,6 +123,22 @@ def run():
             "is_addon": (clazz.name in addon_classes)
         }
         bf.template.materialize_template("documentation_class.mako", ('documentation',clazz.module+"/"+clazz.name+".html"), env )
+        
+        if not clazz.module in addon_classes:
+            if not clazz.module in core_index.keys():
+                core_index[clazz.module] = []
+            if functions_file!=None:
+                for function in functions_file.function_list:
+                    clazz.function_list.append(function)
+            core_index[clazz.module].append(clazz)
+        else:
+            if not clazz.module in addons_index.keys():
+                addons_index[clazz.module] = []
+            if functions_file!=None:
+                for function in functions_file.function_list:
+                    clazz.function_list.append(function)
+            addons_index[clazz.module].append(clazz)
+        
     
     function_files = markdown_file.getfunctionsfiles_list()
     for functionfile_name in function_files:
@@ -150,9 +165,19 @@ def run():
         }
         bf.template.materialize_template("documentation_class.mako", ('documentation',functions_file.module+"/"+functions_file.name+".html"), env )
         
+        if not functions_file.name in addon_classes:
+            if not functions_file.module in core_index:
+                core_index[functions_file.module] = []
+            core_index[functions_file.module].append(functions_file)
+        else:
+            if not functions_file.module in addons_index:
+                addons_index[functions_file.module] = []
+            addons_index[functions_file.module].append(functions_file)
+        
+        
 
     # process index file
-    indexhtml_file = open("_documentation/" + "index.markdown",'r')
+    """indexhtml_file = open("_documentation/" + "index.markdown",'r')
     indexhtml = indexhtml_file.read()
     columns = []
     columns_src = indexhtml.split('___column___')
@@ -179,9 +204,9 @@ def run():
             if b.name is not None and b.name != "":
                 blocks.append(b)
         blocks = sorted(blocks, key=lambda block: block.name)
-        addons_columns.append(blocks)
+        addons_columns.append(blocks)"""
         
-    bf.template.materialize_template("documentation.mako", ('documentation',"index.html"), {'columns':columns,'addons_columns':addons_columns} )
+    bf.template.materialize_template("documentation.mako", ('documentation',"index.html"), {'core':core_index,'addons':addons_index} )
     
     for root, dirs, files in os.walk(directory):
         for name in files:
