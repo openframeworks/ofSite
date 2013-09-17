@@ -117,7 +117,7 @@ _visible: True_
 _advanced: False_
 -->
 
-<<<<<<< HEAD
+
 _visible: 1_
 
 _advanced: 0_
@@ -168,7 +168,7 @@ _parameters: _
 _access: public_
 =======
 _inlined_description: _
->>>>>>> 4f05e99db772215f3767576b7b61fbb0450361d9
+
 
 
 
@@ -178,7 +178,7 @@ _inlined_description: _
 
 _description: _
 
-<<<<<<< HEAD
+
 Calling - operator we turn x,y,z values of a point object into values of  opposite sign.
 e.g:
 
@@ -196,7 +196,7 @@ Now p=(-10,-5,3)
 
 
 =======
->>>>>>> 4f05e99db772215f3767576b7b61fbb0450361d9
+
 
 != operator allow users know if two points are different.
 e.g:
@@ -239,7 +239,7 @@ _visible: True_
 _advanced: False_
 -->
 
-<<<<<<< HEAD
+
 _visible: 1_
 
 _advanced: 0_
@@ -266,7 +266,7 @@ After this equal=false;
 
 =======
 _inlined_description: _
->>>>>>> 4f05e99db772215f3767576b7b61fbb0450361d9
+
 
 
 
@@ -306,7 +306,7 @@ _visible: True_
 _advanced: False_
 -->
 
-<<<<<<< HEAD
+
 _visible: 1_
 
 _advanced: 0_
@@ -332,7 +332,7 @@ After this dif=true;
 
 =======
 _inlined_description: _
->>>>>>> 4f05e99db772215f3767576b7b61fbb0450361d9
+
 
 
 
@@ -376,7 +376,7 @@ _inlined_description: _
 
 
 
-<<<<<<< HEAD
+
 _description: _
 
 = operator makes the current ofPoint a copy of another ofPoint.
@@ -395,7 +395,7 @@ p1 and p2 are now identical.
 =======
 
 
->>>>>>> 4f05e99db772215f3767576b7b61fbb0450361d9
+
 
 
 _description: _
@@ -446,7 +446,7 @@ _inlined_description: _
 
 
 
-<<<<<<< HEAD
+
 = operator sets x, y and z variables of an ofPoint object to val.
 e.g:
 
@@ -462,7 +462,7 @@ p1 = 5.3;
 After this p1=(5.3,5.3,5.3);
 =======
 
->>>>>>> 4f05e99db772215f3767576b7b61fbb0450361d9
+
 
 _description: _
 
@@ -512,7 +512,7 @@ _inlined_description: _
 
 
 
-<<<<<<< HEAD
+
 _description: _
 
 + operator perform the addition between two points. 
@@ -533,7 +533,7 @@ After this result=(3,3,3)
 =======
 
 
->>>>>>> 4f05e99db772215f3767576b7b61fbb0450361d9
+
 
 _description: _
 
@@ -585,7 +585,7 @@ _inlined_description: _
 
 
 
-<<<<<<< HEAD
+
 + Operator performs the arithmetic addition of val and point components.
 Considering p1=(p1x,p1y,p1z);
 
@@ -601,7 +601,7 @@ Now p1=(p1x+5,p1y+5,p1z+5)
 =======
 
 
->>>>>>> 4f05e99db772215f3767576b7b61fbb0450361d9
+
 
 _description: _
 
@@ -650,7 +650,7 @@ _inlined_description: _
 
 
 
-<<<<<<< HEAD
+
 Considering two points p1=(p1x,p1y,p1z) and p2=(p2x,p2y,p2z) the operator += performs the following operation:
 
 ~~~~{.cpp}
@@ -665,7 +665,7 @@ Now p1=(p1x+p2x,p1y+p2y,p1z+p2z);
 =======
 
 
->>>>>>> 4f05e99db772215f3767576b7b61fbb0450361d9
+
 
 _description: _
 
@@ -714,7 +714,7 @@ _inlined_description: _
 
 
 
-<<<<<<< HEAD
+
 Considering a point p1=(p1x,p1y,p1z) and a value val. The operator += performs the following operation:
 
 ~~~~{.cpp}
@@ -728,7 +728,7 @@ p1+=val;
 
 Now p1=(p1x+val,p1y+val,p1z+val);
 =======
->>>>>>> 4f05e99db772215f3767576b7b61fbb0450361d9
+
 
 
 _description: _
@@ -779,11 +779,11 @@ _inlined_description: _
 
 
 
-<<<<<<< HEAD
+
 Considering two points p1=(p1x,p1y,p1z) and p2=(p2x,p2y,p2z) the operator - performs the arithmetic substraction between two points:
 p1-p2=(p1x-p2x,p1y-p2y,p1z-p2z)
 =======
->>>>>>> 4f05e99db772215f3767576b7b61fbb0450361d9
+
 
 
 _description: _
@@ -816,7 +816,7 @@ Now p=(-10,-5,3)
 _syntax: operator-(pnt)_
 _name: operator-_
 _returns: ofPoint_
-<<<<<<< HEAD
+
 
 _returns_description: Return an ofPoint containing the result operation._
 
@@ -867,7 +867,7 @@ _returns_description: Return an ofPoint containing the result operation._
 
 =======
 _returns_description: _
->>>>>>> 4f05e99db772215f3767576b7b61fbb0450361d9
+
 _parameters: const ofPoint & pnt_
 _access: public_
 _version_started: 006_
@@ -879,7 +879,7 @@ _visible: True_
 _advanced: False_
 -->
 
-<<<<<<< HEAD
+
 _visible: 1_
 
 _advanced: 0_
@@ -926,7 +926,7 @@ _returns: ofPoint &_
 _returns_description: Return an ofPoint containing the result operation._
 =======
 _inlined_description: _
->>>>>>> 4f05e99db772215f3767576b7b61fbb0450361d9
+
 
 
 
@@ -936,7 +936,7 @@ _inlined_description: _
 
 _description: _
 
-<<<<<<< HEAD
+
 Considering a point p1=(p1x,p1y,p1z) and a value val. The operator -= performs the following operation:
 
 ~~~~{.cpp}
@@ -959,7 +959,7 @@ Now p1=(p1x-val,p1y-val,p1z-val);
 
 
 =======
->>>>>>> 4f05e99db772215f3767576b7b61fbb0450361d9
+
 
 Considering two points p1=(p1x,p1y,p1z) and p2=(p2x,p2y,p2z) the operator - performs the arithmetic substraction between two points:
 p1-p2=(p1x-p2x,p1y-p2y,p1z-p2z)
@@ -990,7 +990,7 @@ _visible: True_
 _advanced: False_
 -->
 
-<<<<<<< HEAD
+
 _visible: 1_
 
 _advanced: 0_
@@ -1006,7 +1006,7 @@ p1*p2=(p1x*p2x,p1y*p2y,p1z*p2z)
 
 =======
 _inlined_description: _
->>>>>>> 4f05e99db772215f3767576b7b61fbb0450361d9
+
 
 
 
@@ -1051,11 +1051,11 @@ _inlined_description: _
 
 
 
-<<<<<<< HEAD
+
 Considering two points p1=(p1x,p1y,p1z) and a value val the operator * performs the arithmetic multiplication between each point coordinate and the value:
 p1*val=(p1x*val,p1y*val,p1z*val)
 =======
->>>>>>> 4f05e99db772215f3767576b7b61fbb0450361d9
+
 
 
 
@@ -1106,7 +1106,7 @@ _inlined_description: _
 
 
 
-<<<<<<< HEAD
+
 Considering two points p1=(p1x,p1y,p1z) and p2=(p2x,p2y,p2z) the operator *= performs the following operation:
 
 ~~~~{.cpp}
@@ -1123,7 +1123,7 @@ Now p1=(p1x*p2x,p1y*p2y,p1z*p2z);
 
 
 _description: _
->>>>>>> 4f05e99db772215f3767576b7b61fbb0450361d9
+
 
 
 Considering a point p1=(p1x,p1y,p1z) and a value val. The operator -= performs the following operation:
@@ -1183,7 +1183,7 @@ p1/p2=(p1x/p2x,p1y/p2y,p1z/p2z)
 
 
 
-<<<<<<< HEAD
+
 Considering a point p1=(p1x,p1y,p1z) and a value val. The operator *= performs the following operation:
 
 ~~~~{.cpp}
@@ -1200,7 +1200,7 @@ Now p1=(p1x*val,p1y*val,p1z*val)
 =======
 
 
->>>>>>> 4f05e99db772215f3767576b7b61fbb0450361d9
+
 
 <!----------------------------------------------------------------------------->
 
@@ -1266,13 +1266,13 @@ _inlined_description: _
 
 
 
-<<<<<<< HEAD
+
 _description: _
 
 Considering two points p1=(p1x,p1y,p1z) and p2=(p2x,p2y,p2z) the operator / performs the arithmetic division for each point component:
 p1/p2=(p1x/p2x,p1y/p2y,p1z/p2z)
 =======
->>>>>>> 4f05e99db772215f3767576b7b61fbb0450361d9
+
 
 
 
@@ -1324,13 +1324,13 @@ _inlined_description: _
 
 
 
-<<<<<<< HEAD
+
 _description: _
 
 Considering two points p1=(p1x,p1y,p1z) and a value val the operator / performs the arithmetic division between each point coordinate and the value:
 p1/val=(p1x/val,p1y/val,p1z/val)
 =======
->>>>>>> 4f05e99db772215f3767576b7b61fbb0450361d9
+
 
 
 
@@ -1387,18 +1387,18 @@ _inlined_description: _
 
 _description: _
 
-<<<<<<< HEAD
+
 Considering two points p1=(p1x,p1y,p1z) and p2=(p2x,p2y,p2z) the operator /= performs the following operation:
 =======
 
 = operator makes the current ofPoint a copy of another ofPoint.
 e.g:
->>>>>>> 4f05e99db772215f3767576b7b61fbb0450361d9
+
 
 ~~~~{.cpp}
 
 ofPoint p1,p2;
-<<<<<<< HEAD
+
 ...
 p1/=p2;
 
@@ -1411,7 +1411,7 @@ p1.set(10,10,10);
 p2= p1;
 
 ~~~~
->>>>>>> 4f05e99db772215f3767576b7b61fbb0450361d9
+
 
 
 p1 and p2 are now identical. 
@@ -1470,7 +1470,7 @@ After this p1=(5.3,5.3,5.3);
 
 
 
-<<<<<<< HEAD
+
 Considering a point p1=(p1x,p1y,p1z) and a value val. The operator /= performs the following operation:
 
 ~~~~{.cpp}
@@ -1487,7 +1487,7 @@ Now p1=(p1x/val,p1y/val,p1z/val)
 =======
 
 
->>>>>>> 4f05e99db772215f3767576b7b61fbb0450361d9
+
 
 <!----------------------------------------------------------------------------->
 
