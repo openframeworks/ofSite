@@ -1,9 +1,12 @@
 #class ofConePrimitive
 
 
+<!--
+_visible: True_
+_advanced: False_
+-->
+
 ##InlineDescription
-
-
 
 
 
@@ -51,6 +54,9 @@ cone.draw();
 Beware of the cone texture coordinates, they're a little strange.
 
 
+
+
+
 ##Methods
 
 
@@ -68,7 +74,7 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -82,12 +88,12 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
-
 This returns a vector of the indices of vertices that make up the cap (as opposed to the cone indices)
+
+
 
 
 
@@ -108,7 +114,7 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -122,12 +128,12 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
-
 This returns an ofMesh made up of the cap (as opposed to the cone)
+
+
 
 
 
@@ -148,7 +154,7 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -162,13 +168,13 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
-
-
 This returns a vector of the indices of vertices that make up the cone (as opposed to the cap indices)
+
+
+
 
 
 
@@ -188,7 +194,7 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -202,13 +208,12 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
-
-
 This returns an ofMesh made up of the cone (as opposed to the cap)
+
+
 
 
 
@@ -229,7 +234,7 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -243,14 +248,13 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
-
-
-
 This returns the height of the cone.
+
+
+
 
 
 
@@ -270,7 +274,7 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -284,12 +288,11 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
-
 This returns the radius of the cap
+
 
 
 
@@ -311,7 +314,7 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -325,13 +328,13 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
-
-
 This returns the resolution of the cone (rather than the cap)
+
+
+
 
 
 
@@ -351,7 +354,7 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -365,14 +368,13 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
-
-
-
 This returns the resolution of the cap (rather than the cone)
+
+
+
 
 
 
@@ -392,13 +394,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -431,13 +432,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -470,13 +470,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -509,13 +508,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -548,13 +546,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -587,13 +584,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -626,13 +622,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -665,13 +660,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -704,13 +698,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -743,13 +736,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -782,13 +774,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -821,13 +812,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -860,13 +850,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -899,13 +888,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -938,13 +926,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -977,13 +964,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 

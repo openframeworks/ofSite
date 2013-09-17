@@ -1,6 +1,13 @@
 #functions
 
+
+<!--
+_visible: True_
+_advanced: False_
+-->
+
 ##Description
+
 
 
 
@@ -34,6 +41,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -76,6 +84,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool ofLoadImage(&pix, &buffer)
@@ -104,6 +113,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -146,6 +156,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool ofLoadImage(&tex, &buffer)
@@ -174,6 +185,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -216,6 +228,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool ofLoadImage(&pix, &buffer)
@@ -244,6 +257,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -286,6 +300,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool ofLoadImage(&pix, &buffer)
@@ -314,6 +329,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -356,6 +372,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofSaveImage(&pix, &buffer, format = OF_IMAGE_FORMAT_PNG, qualityLevel = OF_IMAGE_QUALITY_BEST)
@@ -384,6 +401,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -426,6 +444,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofSaveImage(&pix, &buffer, format = OF_IMAGE_FORMAT_PNG, qualityLevel = OF_IMAGE_QUALITY_BEST)
@@ -454,6 +473,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -496,6 +516,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofSaveImage(&pix, &buffer, format = OF_IMAGE_FORMAT_PNG, qualityLevel = OF_IMAGE_QUALITY_BEST)
@@ -524,6 +545,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 

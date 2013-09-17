@@ -1,9 +1,12 @@
 #class ofVec2f
 
 
+<!--
+_visible: True_
+_advanced: False_
+-->
+
 ##InlineDescription
-
-
 
 
 
@@ -70,13 +73,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -117,13 +119,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -158,13 +159,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 Angle (deg) between two vectors. This is a signed relative angle between -180 and 180. 
@@ -207,13 +207,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 Angle (deg) between two vectors. This is a signed relative angle between -180 and 180. 
@@ -256,13 +255,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -308,13 +306,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -357,13 +354,12 @@ _version_started: 007_
 _version_deprecated: 007_
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: False_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -398,13 +394,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 Dot Product. 
@@ -461,13 +456,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 p==0.0 results in this point, p==0.5 results in the midpoint, and p==1.0 results in pnt being returned. 
@@ -511,13 +505,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -561,13 +554,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: True_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -604,13 +596,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -651,13 +642,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -701,13 +691,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -750,13 +739,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: True_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -800,13 +788,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -847,13 +834,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -888,13 +874,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -935,13 +920,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -976,13 +960,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1022,13 +1005,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1073,13 +1055,12 @@ _version_started: 007_
 _version_deprecated: 007_
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: False_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 p==0.0 results in this point, p==0.5 results in the midpoint, and p==1.0 results in pnt being returned. 
@@ -1114,13 +1095,12 @@ _version_started: 0071_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 Checks if vectors look in the same direction. Tolerance is specified in degree. 
@@ -1155,13 +1135,12 @@ _version_started: 0071_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1194,13 +1173,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1242,13 +1220,12 @@ _version_started: 007_
 _version_deprecated: 007_
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: False_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1281,13 +1258,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1331,13 +1307,12 @@ _version_started: 007_
 _version_deprecated: 007_
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: False_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1370,13 +1345,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1413,13 +1387,12 @@ _version_started: 007_
 _version_deprecated: 007_
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: False_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1452,13 +1425,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1502,13 +1474,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1553,13 +1524,12 @@ _version_started: 007_
 _version_deprecated: 007_
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: False_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1592,13 +1562,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1642,13 +1611,12 @@ _version_started: 007_
 _version_deprecated: 007_
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: False_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1681,13 +1649,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1728,13 +1695,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1774,13 +1740,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1820,13 +1785,12 @@ _version_started: 0072_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1859,13 +1823,12 @@ _version_started: 0072_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1898,13 +1861,12 @@ _version_started: 0071_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: yes_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1937,13 +1899,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1986,13 +1947,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: True_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2035,13 +1995,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2081,13 +2040,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: True_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2130,13 +2088,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2176,13 +2133,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2223,13 +2179,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2269,13 +2224,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2316,13 +2270,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2362,13 +2315,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2409,13 +2361,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2455,13 +2406,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2501,13 +2451,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2548,13 +2497,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2594,13 +2542,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: True_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2643,13 +2590,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2689,13 +2635,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: True_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2738,13 +2683,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2784,13 +2728,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2833,13 +2776,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: True_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2882,13 +2824,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2931,13 +2872,12 @@ _version_started: 007_
 _version_deprecated: 007_
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: False_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2970,13 +2910,12 @@ _version_started: 007_
 _version_deprecated: 007_
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: False_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -3009,13 +2948,12 @@ _version_started: 007_
 _version_deprecated: 007_
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: False_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -3048,13 +2986,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -3095,13 +3032,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -3136,13 +3072,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -3183,13 +3118,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -3224,13 +3158,12 @@ _version_started: 007_
 _version_deprecated: 007_
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: False_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -3263,13 +3196,12 @@ _version_started: 007_
 _version_deprecated: 007_
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: False_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -3302,13 +3234,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -3348,13 +3279,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -3394,13 +3324,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -3441,13 +3370,12 @@ _version_started: 0072_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -3480,13 +3408,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -3542,6 +3469,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -3575,13 +3503,12 @@ _version_started: 0071_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: yes_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 

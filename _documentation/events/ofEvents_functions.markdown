@@ -1,6 +1,13 @@
 #functions
 
+
+<!--
+_visible: True_
+_advanced: False_
+-->
+
 ##Description
+
 
 
 
@@ -34,6 +41,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -76,6 +84,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool ofGetKeyPressed(key = -1)
@@ -104,6 +113,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -146,6 +156,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int ofGetMouseX()
@@ -174,6 +185,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -216,6 +228,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int ofGetPreviousMouseX()
@@ -244,6 +257,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -286,6 +300,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofNotifyDragEvent(info)
@@ -314,6 +329,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -356,6 +372,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofNotifyExit()
@@ -391,6 +408,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofNotifyKeyEvent(&keyEvent)
@@ -406,7 +424,7 @@ _version_deprecated: _
 _summary: _
 _constant: False_
 _static: False_
-_visible: True_
+_visible: False_
 _advanced: False_
 -->
 
@@ -419,6 +437,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -461,6 +480,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofNotifyKeyReleased(key)
@@ -489,6 +509,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -531,6 +552,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofNotifyMouseEvent(&mouseEvent)
@@ -546,7 +568,7 @@ _version_deprecated: _
 _summary: _
 _constant: False_
 _static: False_
-_visible: True_
+_visible: False_
 _advanced: False_
 -->
 
@@ -559,6 +581,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -601,6 +624,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofNotifyMousePressed(x, y, button)
@@ -629,6 +653,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -671,6 +696,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofNotifySetup()
@@ -699,6 +725,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -741,6 +768,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofNotifyWindowEntry(state)
@@ -769,6 +797,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -811,6 +840,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofRegisterDragEvents(*listener, prio = OF_EVENT_ORDER_AFTER_APP)
@@ -839,6 +869,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -881,6 +912,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofRegisterKeyEvents(*listener, prio = OF_EVENT_ORDER_AFTER_APP)
@@ -909,6 +941,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -951,6 +984,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofRegisterTouchEvents(*listener, prio = OF_EVENT_ORDER_AFTER_APP)
@@ -979,6 +1013,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1021,6 +1056,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofSendMessage(messageString)
@@ -1049,6 +1085,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1091,6 +1128,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofUnregisterDragEvents(*listener, prio = OF_EVENT_ORDER_AFTER_APP)
@@ -1119,6 +1157,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1161,6 +1200,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofUnregisterKeyEvents(*listener, prio = OF_EVENT_ORDER_AFTER_APP)
@@ -1189,6 +1229,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1231,6 +1272,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofUnregisterTouchEvents(*listener, prio = OF_EVENT_ORDER_AFTER_APP)
@@ -1259,6 +1301,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 

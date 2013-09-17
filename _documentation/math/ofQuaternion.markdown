@@ -1,9 +1,12 @@
 #class ofQuaternion
 
 
+<!--
+_visible: True_
+_advanced: False_
+-->
+
 ##InlineDescription
-
-
 
 
 
@@ -33,13 +36,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -72,13 +74,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -111,13 +112,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -150,13 +150,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -189,13 +188,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -228,13 +226,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -267,13 +264,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -306,13 +302,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -345,13 +340,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -384,13 +378,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -423,13 +416,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 Set the elements of the Quat to represent a rotation of angle (degrees) around the axis (x,y,z) 
@@ -464,13 +456,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -503,13 +494,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -542,13 +532,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 Make a rotation Quat which will rotate vec1 to vec2
@@ -560,12 +549,8 @@ For an explanation of the math used, you may see for example: [http://logiciels.
 ***note:*** 
 	This is the rotation with shortest angle, which is the one equivalent to the acos/sin transform method. Other rotations exists, for example to additionally keep a local horizontal attitude.
 
-
 ***author:*** 
 	Nicolas Brodu 
-
-
-
 
 
 
@@ -597,13 +582,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -636,13 +620,12 @@ _version_started: 0071_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -675,13 +658,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -714,13 +696,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -753,13 +734,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -792,13 +772,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -831,13 +810,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -870,13 +848,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -909,13 +886,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -948,13 +924,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -987,13 +962,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1026,13 +1000,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1065,13 +1038,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1104,13 +1076,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1143,13 +1114,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1182,13 +1152,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1221,13 +1190,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1260,13 +1228,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1299,13 +1266,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1338,13 +1304,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1377,13 +1342,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1416,13 +1380,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1455,13 +1418,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1494,13 +1456,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1533,13 +1494,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1572,13 +1532,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1611,13 +1570,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1650,13 +1608,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1689,13 +1646,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1728,13 +1684,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1767,13 +1722,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 Spherical Linear Interpolation As t goes from 0 to 1, the Quat object goes from "from" to "to" Reference: Shoemake at SIGGRAPH 89 See also [http://www.gamasutra.com/features/programming/19980703/quaternions_01.htm](http://www.gamasutra.com/features/programming/19980703/quaternions_01.htm) 
@@ -1808,13 +1762,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1847,13 +1800,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1886,13 +1838,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1925,13 +1876,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1964,13 +1914,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 

@@ -1,6 +1,13 @@
 #functions
 
+
+<!--
+_visible: True_
+_advanced: True_
+-->
+
 ##Description
+
 
 
 
@@ -35,11 +42,13 @@ _inlined_description: _
 
 _description: _
 
+
 Get the current log level. This is useful when combined with ofGetLogLevelName() if you want to print the current log level:
 ~~~~{.cpp}
 ofLogLevel currentLevel = ofGetLogLevel();
 ofLog() << "The current log level is " << ofGetLogLevelName(currentLevel);
 ~~~~
+
 
 
 
@@ -75,12 +84,14 @@ _inlined_description: _
 
 _description: _
 
+
 Returns the given log level as a string. This is useful if you want to print the current log level:
 ~~~~{.cpp}
 ofLogLevel currentLevel = ofGetLogLevel();
 ofLog() << "The current log level is " << ofGetLogLevelName(currentLevel);
 ~~~~
 See [ofSetLogLevel(logLevel)](./ofLog.html#functions) for the log level values. 
+
 
 
 
@@ -115,6 +126,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -157,6 +169,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofLogToFile(&path, append = false)
@@ -186,6 +199,7 @@ _inlined_description: _
 
 _description: _
 
+
 Enable logging to a file instead of the console.
 Set the path and name of the log file and it will be created if it doesn't exist. If it does exist, it will be overwritten unless you set *append* to true, whereas new lines will be added to the bottom of the file.
 ~~~~{.cpp}
@@ -198,6 +212,7 @@ ofLogToFile("myLogFile.txt", true);
 ofLog() << "a test string";
 ~~~~
 Note: When file logging is enabled, will not see log messages on the console!
+
 
 
 
@@ -233,6 +248,7 @@ _inlined_description: _
 
 _description: _
 
+
 Sets the logging level so only messages above a certain priority are shown. This is useful if you want see lots of messages when debugging, but then set a higher level so only warnings and errors appear for users.
 logLevel values are (in order of priority):
 	OF_LOG_VERBOSE
@@ -257,6 +273,7 @@ ofLogVerbose() << "a verbose print";	// this doesn't
 ~~~~
 The default log level is OF_LOG_NOTICE.
 OF_LOG_SILENT is a special value which disables **all** messages.
+
 
 
 
@@ -298,6 +315,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofSetLoggerChannel(loggerChannel)
@@ -326,6 +344,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 

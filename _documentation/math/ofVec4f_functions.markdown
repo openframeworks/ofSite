@@ -1,6 +1,13 @@
 #functions
 
+
+<!--
+_visible: True_
+_advanced: False_
+-->
+
 ##Description
+
 
 
 
@@ -34,6 +41,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -76,6 +84,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofVec4f operator-(f, &vec)
@@ -104,6 +113,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -146,6 +156,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ostream & operator<<(&os, &vec)
@@ -181,6 +192,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###istream & operator>>(&is, &vec)
@@ -209,6 +221,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 

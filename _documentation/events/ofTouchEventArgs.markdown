@@ -1,9 +1,12 @@
 #class ofTouchEventArgs
 
 
+<!--
+_visible: True_
+_advanced: False_
+-->
+
 ##InlineDescription
-
-
 
 
 
@@ -48,6 +51,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -78,6 +82,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 
@@ -122,6 +127,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -152,6 +158,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 
@@ -196,6 +203,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -226,6 +234,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 
@@ -270,6 +279,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -300,6 +310,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 
@@ -344,6 +355,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -374,6 +386,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 
@@ -418,6 +431,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -455,6 +469,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -485,6 +500,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 

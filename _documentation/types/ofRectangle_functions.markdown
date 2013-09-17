@@ -1,6 +1,13 @@
 #functions
 
+
+<!--
+_visible: True_
+_advanced: False_
+-->
+
 ##Description
+
 
 
 
@@ -25,10 +32,16 @@ _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
 
 
 
 _description: _
+
 
 Writes the parameters of the ofRectangle to an ostream.
 Typically used to print or save to a file.
@@ -39,6 +52,9 @@ ofFile file("rectangle.txt",ofFile::WriteOnly);
 file << rect;
 file.close();
 ~~~~
+
+
+
 
 
 
@@ -82,6 +98,9 @@ ofFile file("rectangle.txt",ofFile::ReadOnly);
 file >> rect;
 file.close();
 ~~~~
+
+
+
 
 
 

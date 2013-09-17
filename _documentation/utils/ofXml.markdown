@@ -1,9 +1,12 @@
 #class ofXml
 
 
+<!--
+_visible: True_
+_advanced: False_
+-->
+
 ##InlineDescription
-
-
 
 
 
@@ -81,6 +84,7 @@ pictures.setValue("pictures/picture[0]/url", "http://superpicks.jp/pic1.png"); /
 
 
 
+
 ##Methods
 
 
@@ -98,13 +102,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -137,13 +140,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -207,13 +209,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -277,13 +278,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -324,13 +324,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -363,13 +362,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -402,13 +400,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -438,6 +435,7 @@ xml.exists("//[@id='9']");
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###string getAttribute(&path)
@@ -453,13 +451,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -494,13 +491,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -535,13 +531,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -574,13 +569,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -613,13 +607,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -652,13 +645,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -691,13 +683,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -730,13 +721,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -769,13 +759,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -808,13 +797,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -847,13 +835,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -886,13 +873,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -925,13 +911,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -964,13 +949,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1003,13 +987,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1044,13 +1027,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1079,6 +1061,7 @@ xml.exists("picture/pictures[2][@id]");
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###T getValue(&path, returnVal = T())
@@ -1094,13 +1077,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1133,13 +1115,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1172,13 +1153,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1213,13 +1193,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1254,13 +1233,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1295,13 +1273,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1336,13 +1313,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1375,13 +1351,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1416,13 +1391,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1455,13 +1429,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1506,13 +1479,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1557,13 +1529,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1614,13 +1585,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1653,13 +1623,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1694,7 +1663,7 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -1708,11 +1677,12 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
 Save the XML object to a file.
+
+
 
 
 
@@ -1733,13 +1703,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1772,13 +1741,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1813,13 +1781,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1844,6 +1811,7 @@ xml.setTo("../pictures[0]/url"); // go up and then down
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool setToChild(index)
@@ -1859,7 +1827,7 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -1873,11 +1841,12 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
 Sets the current element to the index-th child.
+
+
 
 
 
@@ -1898,13 +1867,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1939,13 +1907,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1967,6 +1934,7 @@ xml.setCurrentElementToParent(3); // this is the same as xml.setCurrentElementTo
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool setToPrevSibling()
@@ -1982,13 +1950,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 This moves the current element to its sibling element, i.e. if the current element is fruit with the id of 2, called setToPrevSibling() will set the current element to fruit with id of 1
@@ -1997,6 +1964,8 @@ This moves the current element to its sibling element, i.e. if the current eleme
 <fruit id="1">
 <fruit id="2">
 ~~~~
+
+
 
 
 
@@ -2034,6 +2003,7 @@ xml.setCurrentElementToPrevSibling(); // now current element is picture with id=
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool setToSibling()
@@ -2049,13 +2019,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 This moves the current element to its sibling element, i.e. if the current element is fruit with the id of 1, called setToSibling() will set the current element to fruit with id of 2
@@ -2064,6 +2033,8 @@ This moves the current element to its sibling element, i.e. if the current eleme
 <fruit id="1">
 <fruit id="2">
 ~~~~
+
+
 
 
 
@@ -2101,6 +2072,7 @@ xml.setCurrentElementToSibling(); // now current element is picture with id=1
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool setValue(&path, &value)
@@ -2116,13 +2088,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2155,6 +2126,7 @@ will create:
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###string toString()
@@ -2170,13 +2142,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2211,13 +2182,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: yes_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2250,13 +2220,12 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 

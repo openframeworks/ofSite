@@ -1,9 +1,12 @@
 #class ofThread
 
 
+<!--
+_visible: True_
+_advanced: False_
+-->
+
 ##InlineDescription
-
-
 
 
 a thread base class with a built in mutex
@@ -189,13 +192,12 @@ _version_started: 0071_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: yes_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 get the current thread, returns NULL if in the main app thread
@@ -234,13 +236,12 @@ _version_started: 0072_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -273,13 +274,12 @@ _version_started: 0071_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 get the unique thread id
@@ -316,16 +316,15 @@ _version_started: 0071_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
 
+
 get the unique thread name, in the form of "Thread id#" 
-
-
 
 
 
@@ -357,16 +356,15 @@ _version_started: 0071_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
 
+
 returns true if this the currently active thread 
-
-
 
 in multithreaded situations, it can be useful to know which thread is currently running some code in order to make sure only certain threads can do certain things ...
 
@@ -404,16 +402,15 @@ _version_started: 0071_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: yes_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
 
+
 returns true if the main app thread is the currently active thread 
-
-
 
 
 
@@ -445,16 +442,15 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
 
+
 returns true if the thread is currently running 
-
-
 
 
 
@@ -511,13 +507,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 try to lock the mutex
@@ -562,13 +557,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: False_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -601,16 +595,15 @@ _version_started: 0071_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
 
+
 runs the user thread function 
-
-
 
 
 
@@ -642,13 +635,12 @@ _version_started: 0071_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 tell the thread to sleep for a certain amount of milliseconds
@@ -707,13 +699,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 start the thread
@@ -771,6 +762,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -803,16 +795,15 @@ _version_started: 0072_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
 
+
 stop the thread 
-
-
 
 
 
@@ -857,6 +848,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -881,13 +873,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 this is the thread run function
@@ -993,13 +984,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 unlock the mutex
@@ -1040,13 +1030,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 wait for the thread to exit
@@ -1095,13 +1084,12 @@ _version_started: 0071_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 tell the thread to give up the cpu to other threads
@@ -1140,13 +1128,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: False_
 _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 

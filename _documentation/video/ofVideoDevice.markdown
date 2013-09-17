@@ -1,9 +1,12 @@
 #class ofVideoDevice
 
 
+<!--
+_visible: True_
+_advanced: False_
+-->
+
 ##InlineDescription
-
-
 
 
 
@@ -39,6 +42,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 
@@ -83,6 +87,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -120,6 +125,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -150,6 +156,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 

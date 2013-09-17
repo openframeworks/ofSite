@@ -1,6 +1,13 @@
 #functions
 
+
+<!--
+_visible: True_
+_advanced: False_
+-->
+
 ##Description
+
 
 
 
@@ -34,6 +41,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -76,6 +84,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofDisableTextureEdgeHack()
@@ -104,6 +113,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -140,7 +150,9 @@ _inlined_description: _
 
 _description: _
 
+
 ofEnableArbText enables the use of ARB textures. ARB textures enable the creation of non power of 2 sized textures.
+
 
 
 
@@ -175,6 +187,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -217,6 +230,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool ofGetUsingArbTex()
@@ -245,6 +259,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -287,6 +302,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool ofGetUsingCustomTextureWrap()
@@ -315,6 +331,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -357,6 +374,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool ofIsTextureEdgeHackEnabled()
@@ -385,6 +403,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -427,6 +446,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofRestoreTextureWrap()
@@ -455,6 +475,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -497,6 +518,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofSetTextureWrap(wrapS = GL_CLAMP_TO_EDGE, wrapT = GL_CLAMP_TO_EDGE)
@@ -525,6 +547,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 

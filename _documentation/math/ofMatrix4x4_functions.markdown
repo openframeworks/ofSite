@@ -1,6 +1,13 @@
 #functions
 
+
+<!--
+_visible: True_
+_advanced: False_
+-->
+
 ##Description
+
 
 
 
@@ -34,6 +41,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -76,6 +84,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ostream & operator<<(&os, &M)
@@ -111,6 +120,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###istream & operator>>(&is, &M)
@@ -139,6 +149,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 

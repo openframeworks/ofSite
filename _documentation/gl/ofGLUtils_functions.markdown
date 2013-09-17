@@ -1,6 +1,13 @@
 #functions
 
+
+<!--
+_visible: True_
+_advanced: False_
+-->
+
 ##Description
+
 
 
 
@@ -34,6 +41,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -76,6 +84,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool ofGLSupportsNPOTTextures()
@@ -104,6 +113,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -146,6 +156,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int ofGetGLInternalFormatFromPixelFormat(pixelFormat)
@@ -174,6 +185,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -216,6 +228,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###GLuint ofGetGLPrimitiveMode(mode)
@@ -244,6 +257,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -286,6 +300,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofPtr ofGetGLRenderer()
@@ -314,6 +329,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -356,6 +372,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int ofGetGlFormat(&pixels)
@@ -384,6 +401,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -426,6 +444,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int ofGetGlInternalFormat(&pix)
@@ -454,6 +473,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -496,6 +516,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###string ofGetGlInternalFormatName(glInternalFormat)
@@ -524,6 +545,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -566,6 +588,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int ofGetGlType(&pixels)
@@ -594,6 +617,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -636,6 +660,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int ofGetGlTypeFromInternal(glInternalFormat)
@@ -664,6 +689,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -706,6 +732,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int ofGetNumChannelsFromGLFormat(glFormat)
@@ -734,6 +761,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -776,6 +804,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofPrimitiveMode ofGetOFPrimitiveMode(mode)
@@ -804,6 +833,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -846,6 +876,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofSetPixelStorei(w, bpc, numChannels)
@@ -874,6 +905,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 

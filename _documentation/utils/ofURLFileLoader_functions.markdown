@@ -1,6 +1,13 @@
 #functions
 
+
+<!--
+_visible: True_
+_advanced: False_
+-->
+
 ##Description
+
 
 
 
@@ -35,6 +42,7 @@ _inlined_description: _
 
 _description: _
 
+
 Loads content from the specified URL. It makes a synchronous HTTP request and returns the response as an instance of the `ofHttpResponse` class.
 
 For example, this will retrieve the contents of a text file and print the output to the console.
@@ -43,6 +51,10 @@ For example, this will retrieve the contents of a text file and print the output
 ofHttpResponse resp = ofLoadURL("http://www.google.com/robots.txt");
 cout << resp.data << endl;
 ~~~~
+
+
+
+
 
 
 
@@ -75,10 +87,10 @@ _inlined_description: _
 
 _description: _
 
+
 Loads content asynchronously from the specified URL and
 returns the ID of the process. You need to listen for URL notifications
 in `testApp::urlResponse(ofHttpResponse&)`
-
 
 Step 1. Declare urlResponse in the header of the class which should receive
 notifications:
@@ -121,6 +133,11 @@ int id = ofLoadURLAsync("http://www.openframeworks.cc/images/ofw-logo.png",
 Examples based on [http://www.slideshare.net/roxlu/openframworks-007-utils](http://www.slideshare.net/roxlu/openframworks-007-utils)
 
 
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 ###void ofRegisterURLNotification(*obj)
@@ -150,6 +167,7 @@ _inlined_description: _
 
 _description: _
 
+
 Registers a listener to receive notifications from `ofLoadURLAsync()` .
 
 ~~~~{.cpp}
@@ -157,6 +175,9 @@ void testApp::setup() {
   ofRegisterURLNotification(this);
 }
 ~~~~
+
+
+
 
 
 
@@ -197,6 +218,9 @@ Removes all asynchronously loaded URL requests initiated by
 
 
 
+
+
+
 <!----------------------------------------------------------------------------->
 
 ###void ofRemoveURLRequest(id)
@@ -229,6 +253,10 @@ _description: _
 
 Removes a single request initiated by `ofLoadURLAsync()` . The request is
 specified by its ID.
+
+
+
+
 
 
 
@@ -268,6 +296,10 @@ to identify when it has finished.
 
 
 
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 ###ofHttpResponse ofSaveURLTo(url, path)
@@ -298,10 +330,12 @@ _inlined_description: _
 _description: _
 
 
-
 Retrieves a file from a remote URL and saves it locally. This is a synchronous method.
 
 See also: `ofSaveURLAsync()`
+
+
+
 
 
 
@@ -342,6 +376,9 @@ also by `ofThreadedImageLoader` and `ofURLFileLoader`.
 
 
 
+
+
+
 <!----------------------------------------------------------------------------->
 
 ###void ofUnregisterURLNotification(*obj)
@@ -373,6 +410,8 @@ _description: _
 
 
 Unregisters a notification for an `ofLoadURLAsync()` operation.
+
+
 
 
 

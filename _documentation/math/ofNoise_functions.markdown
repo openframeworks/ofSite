@@ -1,6 +1,13 @@
 #functions
 
+
+<!--
+_visible: True_
+_advanced: True_
+-->
+
 ##Description
+
 
 
 
@@ -34,6 +41,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -76,6 +84,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###float _slang_library_noise3(x, y, z)
@@ -104,6 +113,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -146,6 +156,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###float grad1(hash, x)
@@ -174,6 +185,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -216,6 +228,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###float grad3(hash, x, y, z)
@@ -251,6 +264,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###float grad4(hash, x, y, z, t)
@@ -279,6 +293,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 

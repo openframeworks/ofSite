@@ -1,6 +1,13 @@
 #functions
 
+
+<!--
+_visible: True_
+_advanced: False_
+-->
+
 ##Description
+
 
 
 
@@ -41,6 +48,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool ofBufferToFile(&path, &buffer, binary = false)
@@ -69,6 +77,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
