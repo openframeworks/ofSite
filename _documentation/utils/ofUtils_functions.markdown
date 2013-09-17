@@ -194,6 +194,8 @@ _inlined_description: _
 
 _description: _
 
+returns true if the vector values contains target
+
 
 
 
