@@ -23,58 +23,6 @@ def uniqify(seq):
     seen_add = seen.add
     return [ x for x in seq if x not in seen and not seen_add(x)]
         
-class Block(object):
-    def __init__(self, source):
-        self.source = source
-        self.name = None
-        self.classes = []
-        self.mode = 'module'
-        self.__parse()
-    
-    def __parse(self):
-        src_list = self.source.split('\n')
-        for element in src_list:
-            self.__parse_element(element)
-        for clazz in self.classes:
-            if 'methods' in clazz:
-                clazz['methods'] = uniqify(clazz['methods']) #sets.Set(clazz['methods']) 
-            if 'variables' in clazz:
-                clazz['variables'] = uniqify(clazz['variables']) #sets.Set(clazz['variables'])
-                
-    def __parse_element(self, element):
-        mode = self.mode
-        if mode=='module' and element[:2]=='##':
-            self.name = element[2:-2]
-            self.mode = 'clazz'
-        elif mode=='clazz' and element is not None and element != "" and element.find('__')==-1 and element.find('###')!=-1:
-            #print element[3:-3]
-            self.classes.append({'name':element[3:-3]})
-        elif mode=='clazz' and element.find('__visible:')!=-1:
-            if element.find('false')!=-1:
-                self.classes[-1]['visible'] = False
-            else:
-                self.classes[-1]['visible'] = True
-        elif mode=='clazz' and element.find('__advanced:')!=-1:
-            if element.find('false')!=-1:
-                self.classes[-1]['advanced'] = False
-            else:
-                self.classes[-1]['advanced'] = True
-        elif mode=='clazz' and element.find('__methods__')!=-1:
-            self.mode='methods'
-            self.classes[-1]['methods']=[]
-        elif mode=='methods' and element is not None and element != "" and element.find('__')==-1 and element.find('##')==-1:
-            self.classes[-1]['methods'].append(element)
-        elif mode=='methods' and element.find('__variables__')!=-1:
-            self.mode='variables'
-            self.classes[-1]['variables']=[]
-        elif mode=='clazz' and element.find('__functions__')!=-1:
-            self.mode='methods'
-            self.classes[-1]['methods']=[]
-        elif mode=='variables' and element is not None and element != "" and element.find('__')==-1 and element.find('##')==-1:
-            self.classes[-1]['variables'].append(element)
-        elif (mode=='methods' or mode=='variables') and element.find('##')!=-1:
-            self.mode = 'clazz'
-            self.__parse_element(element)
 
 def run():
     classes = []
@@ -176,36 +124,7 @@ def run():
         
         
 
-    # process index file
-    """indexhtml_file = open("_documentation/" + "index.markdown",'r')
-    indexhtml = indexhtml_file.read()
-    columns = []
-    columns_src = indexhtml.split('___column___')
-    for column in columns_src:    
-        blocks_src = column.split('//----------------------')
-        blocks = []
-        for block in blocks_src:
-            b = Block(block)
-            if b.name is not None and b.name != "":
-                blocks.append(b)
-        blocks = sorted(blocks, key=lambda block: block.name)
-        columns.append(blocks)
-    
-    
-    indexhtml_file = open("_documentation/" + "indexAddons.markdown",'r')
-    indexhtml = indexhtml_file.read()
-    addons_columns = []
-    columns_src = indexhtml.split('___column___')
-    for column in columns_src:    
-        blocks_src = column.split('//----------------------')
-        blocks = []
-        for block in blocks_src:
-            b = Block(block)
-            if b.name is not None and b.name != "":
-                blocks.append(b)
-        blocks = sorted(blocks, key=lambda block: block.name)
-        addons_columns.append(blocks)"""
-        
+    # process index file        
     bf.template.materialize_template("documentation.mako", ('documentation',"index.html"), {'core':core_index,'addons':addons_index} )
     
     for root, dirs, files in os.walk(directory):
