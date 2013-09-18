@@ -32,9 +32,14 @@ def run():
     classes = markdown_file.getclass_list()
     addon_classes = markdown_file.list_all_addons()
     
+    
+    module_lookup = dict()
     core_index = dict()
     addons_index = dict()
-        
+    
+    # Create an index of which module each class is in for generated links to other classes
+    for class_name in classes:
+        module_lookup[class_name] = markdown_file.getclass(class_name,True).module    
     for clazz_name in classes:
         clazz = markdown_file.getclass(clazz_name,True)
 
@@ -48,17 +53,16 @@ def run():
         clazz.detailed_inline_description = str(clazz.detailed_inline_description.encode('ascii', 'ignore'))
         for class_name in classes:
             rep = class_name + "[\s]"
-            clazz.detailed_inline_description = re.sub(rep, "<a href=\"../"+clazz.module+"/"+class_name+".html\" class=\"docs_class\" >"+class_name+"</a> ", clazz.detailed_inline_description)
+            clazz.detailed_inline_description = re.sub(rep, "<a href=\"../"+module_lookup[class_name]+"/"+class_name+".html\" class=\"docs_class\" >"+class_name+"</a> ", clazz.detailed_inline_description)
             rep = class_name + "[(]"
-            clazz.detailed_inline_description = re.sub(rep, "<a href=\"../"+clazz.module+"/"+class_name+".html\" class=\"docs_class\" >"+class_name+"</a>(", clazz.detailed_inline_description)
-        
+            clazz.detailed_inline_description = re.sub(rep, "<a href=\"../"+module_lookup[class_name]+"/"+class_name+".html\" class=\"docs_class\" >"+class_name+"</a>(", clazz.detailed_inline_description)
+
         clazz.reference = str(clazz.reference.encode('ascii', 'ignore'))
         for class_name in classes:
             rep = class_name + "[\s]"
-            clazz.reference = re.sub(rep, "<a href=\"../"+clazz.module+"/"+class_name+".html\" class=\"docs_class\" >"+class_name+"</a> ", clazz.reference)
+            clazz.reference = re.sub(rep, "<a href=\"../"+module_lookup[class_name]+"/"+class_name+".html\" class=\"docs_class\" >"+class_name+"</a> ", clazz.reference)
             rep = class_name + "[(]"
-            clazz.reference = re.sub(rep, "<a href=\"../"+clazz.module+"/"+class_name+".html\" class=\"docs_class\" >"+class_name+"</a>(", clazz.reference)
-            #print "Going through " + clazz.module + ":" + clazz.name +", replacing " + module_lookup[class_name] + ":" + class_name
+            clazz.reference = re.sub(rep, "<a href=\"../"+module_lookup[class_name]+"/"+class_name+".html\" class=\"docs_class\" >"+class_name+"</a>(", clazz.reference)
 
         functions_file = markdown_file.getfunctionsfile(clazz_name)
         #print clazz.name
