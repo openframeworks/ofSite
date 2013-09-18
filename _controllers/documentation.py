@@ -40,7 +40,12 @@ def run():
     
     # Create an index of which module each class is in for generated links to other classes
     for class_name in classes:
-        module_lookup[class_name] = markdown_file.getclass(class_name,True).module    
+        clazz = markdown_file.getclass(class_name)
+        if clazz.istemplated:
+            module_lookup[class_name[:-1]] = clazz.module    
+        else:
+            module_lookup[class_name] = clazz.module
+        
     for clazz_name in classes:
         clazz = markdown_file.getclass(clazz_name)
         if clazz.istemplated:
