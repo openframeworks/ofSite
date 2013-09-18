@@ -12,6 +12,7 @@ _advanced: False_
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###JNIEnv * ofGetJNIEnv()
@@ -40,6 +41,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -82,6 +84,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###JavaVM * ofGetJavaVMPtr()
@@ -110,6 +113,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -152,6 +156,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofxAndroidAlertBox(msg)
@@ -180,6 +185,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -222,6 +228,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofxAndroidAlertTextBox(question, text)
@@ -250,6 +257,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -292,6 +300,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofxAndroidDisableMulticast()
@@ -320,6 +329,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -362,6 +372,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofxAndroidEnableMulticast()
@@ -390,6 +401,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -432,6 +444,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###string ofxAndroidGetStringRes(id)
@@ -460,6 +473,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -502,6 +516,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool ofxAndroidIsMobileOnline()
@@ -530,6 +545,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -572,6 +588,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool ofxAndroidIsWifiOnline()
@@ -600,6 +617,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -642,6 +660,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofxAndroidLockScreenSleep()
@@ -670,6 +689,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -712,6 +732,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofxAndroidNotifyLoadPercent(percent)
@@ -740,6 +761,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -782,6 +804,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int ofxAndroidProgressBox(msg)
@@ -810,6 +833,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -852,6 +876,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofxAndroidSetViewItemChecked(item_name, checked)
@@ -880,6 +905,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -922,6 +948,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofxAndroidUnlockScreenSleep()
@@ -950,6 +977,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -992,6 +1020,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofxRegisterMultitouch(*app)
@@ -1020,6 +1049,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 

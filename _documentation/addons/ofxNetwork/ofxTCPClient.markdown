@@ -16,7 +16,6 @@ _istemplated: False_
 
 ##Description
 
-
 The ofxTCPClient is what you used to connect to another server and request information. This other server could be a service running on your local machine, or it could somewhere out there in the internet. As of version 0.8 it doesn't do SSL or other tricky things well, nor does it handle forms or GET and POST requests but you can handle strings or raw bytes. A trivial usage might look like the following:
 
 ~~~~{.cpp}
@@ -337,6 +336,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofxTCPClient & operator=(&mom)
@@ -367,6 +367,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -597,6 +598,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool send(message)
@@ -747,6 +749,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 

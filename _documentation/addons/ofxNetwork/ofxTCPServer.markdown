@@ -16,7 +16,6 @@ _istemplated: False_
 
 ##Description
 
-
 The ofxTCPServer creates a TCP server that will serve up TCP data to any client that can reach it. To set it up you create an instance of an ofxTCPServer and call setup() passing the port number that you want your server to listen on:
 
 ~~~~{.cpp}
@@ -180,6 +179,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -646,6 +646,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofxTCPServer & operator=(&mom)
@@ -676,6 +677,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -811,6 +813,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1027,6 +1030,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool sendRawMsgToAll(*rawMsg, numBytes)
@@ -1057,6 +1061,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 

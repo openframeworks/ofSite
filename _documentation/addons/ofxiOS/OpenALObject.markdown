@@ -1,9 +1,9 @@
-#class ofxAndroidVideoGrabber
+#class OpenALObject
 
 
 <!--
-_visible: True_
-_advanced: True_
+_visible: False_
+_advanced: False_
 _istemplated: False_
 -->
 
@@ -24,16 +24,719 @@ _istemplated: False_
 
 
 
-###void close()
+###float GetEffectPosition(sourceID)
 
 <!--
-_syntax: close()_
-_name: close_
+_syntax: GetEffectPosition(sourceID)_
+_name: GetEffectPosition_
+_returns: float_
+_returns_description: _
+_parameters: ALuint sourceID_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###OSStatus Initialize()
+
+<!--
+_syntax: Initialize()_
+_name: Initialize_
+_returns: OSStatus_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###OSStatus LoadEffect(*inFilePath, *outEffectID)
+
+<!--
+_syntax: LoadEffect(*inFilePath, *outEffectID)_
+_name: LoadEffect_
+_returns: OSStatus_
+_returns_description: _
+_parameters: const char *inFilePath, UInt32 *outEffectID_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### OpenALObject(inMixerOutputRate)
+
+<!--
+_syntax: OpenALObject(inMixerOutputRate)_
+_name: OpenALObject_
+_returns: _
+_returns_description: _
+_parameters: Float32 inMixerOutputRate_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###OSStatus PauseEffect(sourceID)
+
+<!--
+_syntax: PauseEffect(sourceID)_
+_name: PauseEffect_
+_returns: OSStatus_
+_returns_description: _
+_parameters: ALuint sourceID_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int PrimeEffect(inEffectID, *sourceID)
+
+<!--
+_syntax: PrimeEffect(inEffectID, *sourceID)_
+_name: PrimeEffect_
+_returns: int_
+_returns_description: _
+_parameters: UInt32 inEffectID, ALuint *sourceID_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###OSStatus SetEffectLocation(sourceID, inX, inY, inZ)
+
+<!--
+_syntax: SetEffectLocation(sourceID, inX, inY, inZ)_
+_name: SetEffectLocation_
+_returns: OSStatus_
+_returns_description: _
+_parameters: ALuint sourceID, Float32 inX, Float32 inY, Float32 inZ_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###OSStatus SetEffectPitch(sourceID, inValue)
+
+<!--
+_syntax: SetEffectPitch(sourceID, inValue)_
+_name: SetEffectPitch_
+_returns: OSStatus_
+_returns_description: _
+_parameters: ALuint sourceID, Float32 inValue_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void SetEffectPosition(sourceID, position)
+
+<!--
+_syntax: SetEffectPosition(sourceID, position)_
+_name: SetEffectPosition_
+_returns: void_
+_returns_description: _
+_parameters: ALuint sourceID, float position_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###OSStatus SetEffectVolume(sourceID, inValue)
+
+<!--
+_syntax: SetEffectVolume(sourceID, inValue)_
+_name: SetEffectVolume_
+_returns: OSStatus_
+_returns_description: _
+_parameters: ALuint sourceID, Float32 inValue_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###OSStatus SetEffectsVolume(inValue)
+
+<!--
+_syntax: SetEffectsVolume(inValue)_
+_name: SetEffectsVolume_
+_returns: OSStatus_
+_returns_description: _
+_parameters: Float32 inValue_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###OSStatus SetListenerGain(inValue)
+
+<!--
+_syntax: SetListenerGain(inValue)_
+_name: SetListenerGain_
+_returns: OSStatus_
+_returns_description: _
+_parameters: Float32 inValue_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###OSStatus SetListenerPosition(inX, inY, inZ)
+
+<!--
+_syntax: SetListenerPosition(inX, inY, inZ)_
+_name: SetListenerPosition_
+_returns: OSStatus_
+_returns_description: _
+_parameters: Float32 inX, Float32 inY, Float32 inZ_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###OSStatus SetListenerVelocity(inX, inY, inZ)
+
+<!--
+_syntax: SetListenerVelocity(inX, inY, inZ)_
+_name: SetListenerVelocity_
+_returns: OSStatus_
+_returns_description: _
+_parameters: Float32 inX, Float32 inY, Float32 inZ_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###OSStatus SetLooping(looping, _id)
+
+<!--
+_syntax: SetLooping(looping, _id)_
+_name: SetLooping_
+_returns: OSStatus_
+_returns_description: _
+_parameters: bool looping, ALint _id_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###OSStatus SetMaxDistance(inValue)
+
+<!--
+_syntax: SetMaxDistance(inValue)_
+_name: SetMaxDistance_
+_returns: OSStatus_
+_returns_description: _
+_parameters: Float32 inValue_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###OSStatus SetReferenceDistance(inValue)
+
+<!--
+_syntax: SetReferenceDistance(inValue)_
+_name: SetReferenceDistance_
+_returns: OSStatus_
+_returns_description: _
+_parameters: Float32 inValue_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###OSStatus StartEffect(sourceID)
+
+<!--
+_syntax: StartEffect(sourceID)_
+_name: StartEffect_
+_returns: OSStatus_
+_returns_description: _
+_parameters: ALuint sourceID_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###OSStatus StopEffect(sourceID)
+
+<!--
+_syntax: StopEffect(sourceID)_
+_name: StopEffect_
+_returns: OSStatus_
+_returns_description: _
+_parameters: ALuint sourceID_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void Teardown()
+
+<!--
+_syntax: Teardown()_
+_name: Teardown_
 _returns: void_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -59,19 +762,55 @@ _description: _
 
 
 
+<!----------------------------------------------------------------------------->
+
+###OSStatus UnloadEffect(inEffectID)
+
+<!--
+_syntax: UnloadEffect(inEffectID)_
+_name: UnloadEffect_
+_returns: OSStatus_
+_returns_description: _
+_parameters: UInt32 inEffectID_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
 
 <!----------------------------------------------------------------------------->
 
-###ofPixelsRef getAuxBuffer()
+###OSStatus UpdateGain()
 
 <!--
-_syntax: getAuxBuffer()_
-_name: getAuxBuffer_
-_returns: ofPixelsRef_
+_syntax: UpdateGain()_
+_name: UpdateGain_
+_returns: OSStatus_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -97,209 +836,18 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###float getHeight()
+###bool checkToRelease(sourceID, mSource)
 
 <!--
-_syntax: getHeight()_
-_name: getHeight_
-_returns: float_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofPixelFormat getPixelFormat()
-
-<!--
-_syntax: getPixelFormat()_
-_name: getPixelFormat_
-_returns: ofPixelFormat_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###unsigned char * getPixels()
-
-<!--
-_syntax: getPixels()_
-_name: getPixels_
-_returns: unsigned char *_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofPixelsRef getPixelsRef()
-
-<!--
-_syntax: getPixelsRef()_
-_name: getPixelsRef_
-_returns: ofPixelsRef_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float getWidth()
-
-<!--
-_syntax: getWidth()_
-_name: getWidth_
-_returns: float_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool initGrabber(w, h)
-
-<!--
-_syntax: initGrabber(w, h)_
-_name: initGrabber_
+_syntax: checkToRelease(sourceID, mSource)_
+_name: checkToRelease_
 _returns: bool_
 _returns_description: _
-_parameters: int w, int h_
+_parameters: ALuint sourceID, int mSource_
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -325,19 +873,18 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###bool isFrameNew()
+###void clearSources()
 
 <!--
-_syntax: isFrameNew()_
-_name: isFrameNew_
-_returns: bool_
+_syntax: clearSources()_
+_name: clearSources_
+_returns: void_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -363,19 +910,18 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###vector< ofVideoDevice > listDevices()
+###int getEffectLength(effectID)
 
 <!--
-_syntax: listDevices()_
-_name: listDevices_
-_returns: vector< ofVideoDevice >_
+_syntax: getEffectLength(effectID)_
+_name: getEffectLength_
+_returns: int_
 _returns_description: _
-_parameters: _
+_parameters: UInt32 effectID_
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -401,19 +947,18 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-### ofxAndroidVideoGrabber()
+### ~OpenALObject()
 
 <!--
-_syntax: ofxAndroidVideoGrabber()_
-_name: ofxAndroidVideoGrabber_
+_syntax: ~OpenALObject()_
+_name: ~OpenALObject_
 _returns: _
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -432,311 +977,6 @@ _inlined_description: _
 
 
 _description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool setAutoFocus(autofocus)
-
-<!--
-_syntax: setAutoFocus(autofocus)_
-_name: setAutoFocus_
-_returns: bool_
-_returns_description: _
-_parameters: bool autofocus_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setDesiredFrameRate(framerate)
-
-<!--
-_syntax: setDesiredFrameRate(framerate)_
-_name: setDesiredFrameRate_
-_returns: void_
-_returns_description: _
-_parameters: int framerate_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setDeviceID(_deviceID)
-
-<!--
-_syntax: setDeviceID(_deviceID)_
-_name: setDeviceID_
-_returns: void_
-_returns_description: _
-_parameters: int _deviceID_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool setPixelFormat(pixelFormat)
-
-<!--
-_syntax: setPixelFormat(pixelFormat)_
-_name: setPixelFormat_
-_returns: bool_
-_returns_description: _
-_parameters: ofPixelFormat pixelFormat_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setVerbose(bTalkToMe)
-
-<!--
-_syntax: setVerbose(bTalkToMe)_
-_name: setVerbose_
-_returns: void_
-_returns_description: _
-_parameters: bool bTalkToMe_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void update()
-
-<!--
-_syntax: update()_
-_name: update_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void videoSettings()
-
-<!--
-_syntax: videoSettings()_
-_name: videoSettings_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ~ofxAndroidVideoGrabber()
-
-<!--
-_syntax: ~ofxAndroidVideoGrabber()_
-_name: ~ofxAndroidVideoGrabber_
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
 
 
 
@@ -749,179 +989,4 @@ _description: _
 ##Variables
 
 
-
-###int attemptFramerate
-
-<!--
-_name: attemptFramerate_
-_type: int_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofPixels auxBuffer
-
-<!--
-_name: auxBuffer_
-_type: ofPixels_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool bGrabberInited
-
-<!--
-_name: bGrabberInited_
-_type: bool_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool bIsFrameNew
-
-<!--
-_name: bIsFrameNew_
-_type: bool_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofPixelFormat internalPixelFormat
-
-<!--
-_name: internalPixelFormat_
-_type: ofPixelFormat_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofEvent< ofPixels > newFrameE
-
-<!--
-_name: newFrameE_
-_type: ofEvent< ofPixels >_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofPixels pixels
-
-<!--
-_name: pixels_
-_type: ofPixels_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
 

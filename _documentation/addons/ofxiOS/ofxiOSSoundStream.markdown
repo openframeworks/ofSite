@@ -1,14 +1,20 @@
-#class ofxiPhoneCoreLocation
+#class ofxiOSSoundStream
+
+
+<!--
+_visible: True_
+_advanced: True_
+_istemplated: False_
+-->
+
+##InlineDescription
+
+
+
+
 
 
 ##Description
-
-
-
-
-
-
-
 
 
 
@@ -18,128 +24,32 @@
 
 
 
-### ofxiPhoneCoreLocation()
+###void close()
 
 <!--
-_syntax: ofxiPhoneCoreLocation()_
-_name: ofxiPhoneCoreLocation_
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ~ofxiPhoneCoreLocation()
-
-<!--
-_syntax: ~ofxiPhoneCoreLocation()_
-_name: ~ofxiPhoneCoreLocation_
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool startHeading()
-
-<!--
-_syntax: startHeading()_
-_name: startHeading_
-_returns: bool_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void stopHeading()
-
-<!--
-_syntax: stopHeading()_
-_name: stopHeading_
+_syntax: close()_
+_name: close_
 _returns: void_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
 
 _description: _
 
@@ -149,32 +59,34 @@ _description: _
 
 
 
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
-###bool startLocation()
+###int getBufferSize()
 
 <!--
-_syntax: startLocation()_
-_name: startLocation_
-_returns: bool_
+_syntax: getBufferSize()_
+_name: getBufferSize_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
 
 _description: _
 
@@ -184,6 +96,36 @@ _description: _
 
 
 
+<!----------------------------------------------------------------------------->
+
+###int getNumInputChannels()
+
+<!--
+_syntax: getNumInputChannels()_
+_name: getNumInputChannels_
+_returns: int_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -193,32 +135,147 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void stopLocation()
+###int getNumOutputChannels()
 
 <!--
-_syntax: stopLocation()_
-_name: stopLocation_
+_syntax: getNumOutputChannels()_
+_name: getNumOutputChannels_
+_returns: int_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int getSampleRate()
+
+<!--
+_syntax: getSampleRate()_
+_name: getSampleRate_
+_returns: int_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###long unsigned long getTickCount()
+
+<!--
+_syntax: getTickCount()_
+_name: getTickCount_
+_returns: long unsigned long_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void listDevices()
+
+<!--
+_syntax: listDevices()_
+_name: listDevices_
 _returns: void_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+these are not implemented on iOS 
+
+
+
+
+
+
+
+
 _description: _
-
-
-
-
-
-
-
 
 
 
@@ -228,32 +285,34 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###double getLatitude()
+### ofxiOSSoundStream()
 
 <!--
-_syntax: getLatitude()_
-_name: getLatitude_
-_returns: double_
+_syntax: ofxiOSSoundStream()_
+_name: ofxiOSSoundStream_
+_returns: _
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
 _description: _
-
-
-
-
-
-
-
 
 
 
@@ -263,32 +322,34 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###double getLongitude()
+###void setDeviceID(deviceID)
 
 <!--
-_syntax: getLongitude()_
-_name: getLongitude_
-_returns: double_
+_syntax: setDeviceID(deviceID)_
+_name: setDeviceID_
+_returns: void_
 _returns_description: _
-_parameters: _
+_parameters: int deviceID_
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
 _description: _
-
-
-
-
-
-
-
 
 
 
@@ -298,32 +359,34 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###double getLocationAccuracy()
+###void setInput(*soundInput)
 
 <!--
-_syntax: getLocationAccuracy()_
-_name: getLocationAccuracy_
-_returns: double_
+_syntax: setInput(*soundInput)_
+_name: setInput_
+_returns: void_
 _returns_description: _
-_parameters: _
+_parameters: ofBaseSoundInput *soundInput_
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
 _description: _
-
-
-
-
-
-
-
 
 
 
@@ -333,32 +396,34 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###double getAltitude()
+###bool setMixWithOtherApps(bMix)
 
 <!--
-_syntax: getAltitude()_
-_name: getAltitude_
-_returns: double_
+_syntax: setMixWithOtherApps(bMix)_
+_name: setMixWithOtherApps_
+_returns: bool_
 _returns_description: _
-_parameters: _
+_parameters: bool bMix_
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: True_
 _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
 _description: _
-
-
-
-
-
-
-
 
 
 
@@ -368,32 +433,34 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###double getAltitudeAccuracy()
+###void setOutput(*soundOutput)
 
 <!--
-_syntax: getAltitudeAccuracy()_
-_name: getAltitudeAccuracy_
-_returns: double_
+_syntax: setOutput(*soundOutput)_
+_name: setOutput_
+_returns: void_
 _returns_description: _
-_parameters: _
+_parameters: ofBaseSoundOutput *soundOutput_
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
 _description: _
-
-
-
-
-
-
-
 
 
 
@@ -403,32 +470,36 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###double getDistMoved()
+###bool setup(numOfOutChannels, numOfInChannels, sampleRate, bufferSize, numOfBuffers)
 
 <!--
-_syntax: getDistMoved()_
-_name: getDistMoved_
-_returns: double_
+_syntax: setup(numOfOutChannels, numOfInChannels, sampleRate, bufferSize, numOfBuffers)_
+_name: setup_
+_returns: bool_
 _returns_description: _
-_parameters: _
+_parameters: int numOfOutChannels, int numOfInChannels, int sampleRate, int bufferSize, int numOfBuffers_
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+currently, the number of buffers is always 1 on iOS and setting nBuffers has no effect the max buffersize is 4096 
+
+
+
+
+
+
+
 _description: _
-
-
-
-
-
-
-
 
 
 
@@ -438,32 +509,34 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###double getCompassX()
+###bool setup(*app, numOfOutChannels, numOfInChannels, sampleRate, bufferSize, numOfBuffers)
 
 <!--
-_syntax: getCompassX()_
-_name: getCompassX_
-_returns: double_
+_syntax: setup(*app, numOfOutChannels, numOfInChannels, sampleRate, bufferSize, numOfBuffers)_
+_name: setup_
+_returns: bool_
 _returns_description: _
-_parameters: _
+_parameters: ofBaseApp *app, int numOfOutChannels, int numOfInChannels, int sampleRate, int bufferSize, int numOfBuffers_
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
 _description: _
-
-
-
-
-
-
-
 
 
 
@@ -473,32 +546,34 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###double getCompassY()
+###void start()
 
 <!--
-_syntax: getCompassY()_
-_name: getCompassY_
-_returns: double_
+_syntax: start()_
+_name: start_
+_returns: void_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
 _description: _
-
-
-
-
-
-
-
 
 
 
@@ -508,32 +583,34 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###double getCompassZ()
+###void stop()
 
 <!--
-_syntax: getCompassZ()_
-_name: getCompassZ_
-_returns: double_
+_syntax: stop()_
+_name: stop_
+_returns: void_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
 _description: _
-
-
-
-
-
-
-
 
 
 
@@ -543,25 +620,25 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###double getMagneticHeading()
+### ~ofxiOSSoundStream()
 
 <!--
-_syntax: getMagneticHeading()_
-_name: getMagneticHeading_
-_returns: double_
+_syntax: ~ofxiOSSoundStream()_
+_name: ~ofxiOSSoundStream_
+_returns: _
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
 
 
@@ -569,76 +646,8 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###double getTrueHeading()
-
-<!--
-_syntax: getTrueHeading()_
-_name: getTrueHeading_
-_returns: double_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
 
 _description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###double getHeadingAccuracy()
-
-<!--
-_syntax: getHeadingAccuracy()_
-_name: getHeadingAccuracy_
-_returns: double_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
 
 
 
@@ -651,35 +660,4 @@ _description: _
 ##Variables
 
 
-
-###ofxiPhoneCoreLocationDelegate coreLoc
-
-<!--
-_name: coreLoc_
-_type: ofxiPhoneCoreLocationDelegate_
-_access: protected_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
 

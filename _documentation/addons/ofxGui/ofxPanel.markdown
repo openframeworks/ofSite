@@ -59,6 +59,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void loadIcons()
@@ -89,6 +90,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -133,6 +135,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ### ofxPanel()
@@ -163,6 +166,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -207,6 +211,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void render()
@@ -237,6 +242,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -281,6 +287,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofxPanel * setup(collectionName = "", filename = "settings.xml", x = 10, y = 10)
@@ -318,6 +325,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofxPanel * setup(&parameters, filename = "settings.xml", x = 10, y = 10)
@@ -348,6 +356,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 

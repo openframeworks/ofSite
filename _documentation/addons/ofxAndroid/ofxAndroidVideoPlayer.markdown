@@ -59,6 +59,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###float getDuration()
@@ -89,6 +90,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -133,6 +135,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool getIsMovieDone()
@@ -163,6 +166,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -207,6 +211,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofPixelFormat getPixelFormat()
@@ -237,6 +242,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -281,6 +287,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofPixels & getPixelsRef()
@@ -311,6 +318,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -355,6 +363,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofTexture * getTexture()
@@ -385,6 +394,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -429,6 +439,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool isFrameNew()
@@ -459,6 +470,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -503,6 +515,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool isPaused()
@@ -533,6 +546,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -577,6 +591,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool loadMovie(fileName)
@@ -607,6 +622,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -651,6 +667,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void play()
@@ -681,6 +698,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -725,6 +743,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void setLoopState(state)
@@ -755,6 +774,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -799,6 +819,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool setPixelFormat(pixelFormat)
@@ -829,6 +850,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -873,6 +895,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void setVolume(volume)
@@ -903,6 +926,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -947,6 +971,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void unloadTexture()
@@ -977,6 +1002,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1021,6 +1047,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ### ~ofxAndroidVideoPlayer()
@@ -1051,6 +1078,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 

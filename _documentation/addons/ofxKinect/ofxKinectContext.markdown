@@ -65,6 +65,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void clear()
@@ -97,6 +98,7 @@ clear the freenect context closes all currently connected devices
 
 
 _description: _
+
 
 
 
@@ -143,6 +145,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void closeAll()
@@ -175,6 +178,7 @@ closes all currently connected kinects
 
 
 _description: _
+
 
 
 
@@ -221,6 +225,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int getDeviceIndex(id)
@@ -253,6 +258,7 @@ get the deviceList index from an id returns -1 if not found
 
 
 _description: _
+
 
 
 
@@ -299,6 +305,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofxKinect * getKinect(*dev)
@@ -331,6 +338,7 @@ get the kinect object from a device pointer returns NULL if not found
 
 
 _description: _
+
 
 
 
@@ -377,6 +385,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool isConnected(id)
@@ -409,6 +418,7 @@ is a device with this id already connected?
 
 
 _description: _
+
 
 
 
@@ -455,6 +465,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool isInited()
@@ -487,6 +498,7 @@ is the context inited?
 
 
 _description: _
+
 
 
 
@@ -533,6 +545,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int nextAvailableId()
@@ -565,6 +578,7 @@ get the id of the next available device, returns -1 if nothing found
 
 
 _description: _
+
 
 
 
@@ -611,6 +625,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int numAvailable()
@@ -643,6 +658,7 @@ get the number of available devices (not connected)
 
 
 _description: _
+
 
 
 
@@ -689,6 +705,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int numTotal()
@@ -728,6 +745,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ### ofxKinectContext()
@@ -758,6 +776,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -804,6 +823,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool open(&kinect, serial)
@@ -843,6 +863,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ### ~ofxKinectContext()
@@ -873,6 +894,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 

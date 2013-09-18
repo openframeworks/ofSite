@@ -20,7 +20,6 @@ _istemplated: False_
 
 
 
-
 ##Methods
 
 
@@ -60,6 +59,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool hasTexture()
@@ -90,6 +90,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -165,6 +166,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 

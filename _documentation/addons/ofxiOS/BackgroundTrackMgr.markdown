@@ -1,9 +1,9 @@
-#class ofxAndroidVideoGrabber
+#class BackgroundTrackMgr
 
 
 <!--
-_visible: True_
-_advanced: True_
+_visible: False_
+_advanced: False_
 _istemplated: False_
 -->
 
@@ -24,20 +24,20 @@ _istemplated: False_
 
 
 
-###void close()
+###OSStatus AttachNewCookie(inQueue, *inFileInfo)
 
 <!--
-_syntax: close()_
-_name: close_
-_returns: void_
+_syntax: AttachNewCookie(inQueue, *inFileInfo)_
+_name: AttachNewCookie_
+_returns: OSStatus_
 _returns_description: _
-_parameters: _
+_parameters: AudioQueueRef inQueue, BackgroundTrackMgr::BG_FileInfo *inFileInfo_
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: False_
+_static: True_
 _visible: True_
 _advanced: False_
 -->
@@ -59,361 +59,18 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###ofPixelsRef getAuxBuffer()
+### BackgroundTrackMgr()
 
 <!--
-_syntax: getAuxBuffer()_
-_name: getAuxBuffer_
-_returns: ofPixelsRef_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float getHeight()
-
-<!--
-_syntax: getHeight()_
-_name: getHeight_
-_returns: float_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofPixelFormat getPixelFormat()
-
-<!--
-_syntax: getPixelFormat()_
-_name: getPixelFormat_
-_returns: ofPixelFormat_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###unsigned char * getPixels()
-
-<!--
-_syntax: getPixels()_
-_name: getPixels_
-_returns: unsigned char *_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofPixelsRef getPixelsRef()
-
-<!--
-_syntax: getPixelsRef()_
-_name: getPixelsRef_
-_returns: ofPixelsRef_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float getWidth()
-
-<!--
-_syntax: getWidth()_
-_name: getWidth_
-_returns: float_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool initGrabber(w, h)
-
-<!--
-_syntax: initGrabber(w, h)_
-_name: initGrabber_
-_returns: bool_
-_returns_description: _
-_parameters: int w, int h_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool isFrameNew()
-
-<!--
-_syntax: isFrameNew()_
-_name: isFrameNew_
-_returns: bool_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###vector< ofVideoDevice > listDevices()
-
-<!--
-_syntax: listDevices()_
-_name: listDevices_
-_returns: vector< ofVideoDevice >_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofxAndroidVideoGrabber()
-
-<!--
-_syntax: ofxAndroidVideoGrabber()_
-_name: ofxAndroidVideoGrabber_
+_syntax: BackgroundTrackMgr()_
+_name: BackgroundTrackMgr_
 _returns: _
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -439,19 +96,55 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###bool setAutoFocus(autofocus)
+###Boolean DisposeBuffer(inAQ, inDisposeBufferList, inBufferToDispose)
 
 <!--
-_syntax: setAutoFocus(autofocus)_
-_name: setAutoFocus_
-_returns: bool_
+_syntax: DisposeBuffer(inAQ, inDisposeBufferList, inBufferToDispose)_
+_name: DisposeBuffer_
+_returns: Boolean_
 _returns_description: _
-_parameters: bool autofocus_
+_parameters: AudioQueueRef inAQ, std::vector< AudioQueueBufferRef > inDisposeBufferList, AudioQueueBufferRef inBufferToDispose_
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: True_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###UInt32 GetNumPacketsToRead(*inFileInfo)
+
+<!--
+_syntax: GetNumPacketsToRead(*inFileInfo)_
+_name: GetNumPacketsToRead_
+_returns: UInt32_
+_returns_description: _
+_parameters: BackgroundTrackMgr::BG_FileInfo *inFileInfo_
+_access: public_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -477,23 +170,133 @@ _description: _
 
 
 
+<!----------------------------------------------------------------------------->
+
+###AudioStreamPacketDescription * GetPacketDescsPtr()
+
+<!--
+_syntax: GetPacketDescsPtr()_
+_name: GetPacketDescsPtr_
+_returns: AudioStreamPacketDescription *_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
 
 <!----------------------------------------------------------------------------->
 
-###void setDesiredFrameRate(framerate)
+###SInt8 GetQueueStateForNextBuffer(*inFileInfo, *inNextFileInfo)
 
 <!--
-_syntax: setDesiredFrameRate(framerate)_
-_name: setDesiredFrameRate_
+_syntax: GetQueueStateForNextBuffer(*inFileInfo, *inNextFileInfo)_
+_name: GetQueueStateForNextBuffer_
+_returns: SInt8_
+_returns_description: _
+_parameters: BackgroundTrackMgr::BG_FileInfo *inFileInfo, BackgroundTrackMgr::BG_FileInfo *inNextFileInfo_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: True_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###OSStatus LoadTrack(*inFilePath, inAddToQueue, inLoadAtOnce)
+
+<!--
+_syntax: LoadTrack(*inFilePath, inAddToQueue, inLoadAtOnce)_
+_name: LoadTrack_
+_returns: OSStatus_
+_returns_description: _
+_parameters: const char *inFilePath, Boolean inAddToQueue, Boolean inLoadAtOnce_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void QueueCallback(*inUserData, inAQ, inCompleteAQBuffer)
+
+<!--
+_syntax: QueueCallback(*inUserData, inAQ, inCompleteAQBuffer)_
+_name: QueueCallback_
 _returns: void_
 _returns_description: _
-_parameters: int framerate_
+_parameters: void *inUserData, AudioQueueRef inAQ, AudioQueueBufferRef inCompleteAQBuffer_
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: False_
+_static: True_
 _visible: True_
 _advanced: False_
 -->
@@ -515,23 +318,22 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###void setDeviceID(_deviceID)
+###void QueueStoppedProc(*inUserData, inAQ, inID)
 
 <!--
-_syntax: setDeviceID(_deviceID)_
-_name: setDeviceID_
+_syntax: QueueStoppedProc(*inUserData, inAQ, inID)_
+_name: QueueStoppedProc_
 _returns: void_
 _returns_description: _
-_parameters: int _deviceID_
+_parameters: void *inUserData, AudioQueueRef inAQ, AudioQueuePropertyID inID_
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: False_
+_static: True_
 _visible: True_
 _advanced: False_
 -->
@@ -553,19 +355,18 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###bool setPixelFormat(pixelFormat)
+###OSStatus SetVolume(inVolume)
 
 <!--
-_syntax: setPixelFormat(pixelFormat)_
-_name: setPixelFormat_
-_returns: bool_
+_syntax: SetVolume(inVolume)_
+_name: SetVolume_
+_returns: OSStatus_
 _returns_description: _
-_parameters: ofPixelFormat pixelFormat_
+_parameters: Float32 inVolume_
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -591,19 +392,18 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###void setVerbose(bTalkToMe)
+###OSStatus SetupBuffers(*inFileInfo)
 
 <!--
-_syntax: setVerbose(bTalkToMe)_
-_name: setVerbose_
-_returns: void_
+_syntax: SetupBuffers(*inFileInfo)_
+_name: SetupBuffers_
+_returns: OSStatus_
 _returns_description: _
-_parameters: bool bTalkToMe_
+_parameters: BG_FileInfo *inFileInfo_
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -629,19 +429,129 @@ _description: _
 
 
 
+<!----------------------------------------------------------------------------->
+
+###OSStatus SetupQueue(*inFileInfo)
+
+<!--
+_syntax: SetupQueue(*inFileInfo)_
+_name: SetupQueue_
+_returns: OSStatus_
+_returns_description: _
+_parameters: BG_FileInfo *inFileInfo_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
 
 <!----------------------------------------------------------------------------->
 
-###void update()
+###OSStatus Start()
 
 <!--
-_syntax: update()_
-_name: update_
+_syntax: Start()_
+_name: Start_
+_returns: OSStatus_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###OSStatus Stop(inStopAtEnd)
+
+<!--
+_syntax: Stop(inStopAtEnd)_
+_name: Stop_
+_returns: OSStatus_
+_returns_description: _
+_parameters: Boolean inStopAtEnd_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void Teardown()
+
+<!--
+_syntax: Teardown()_
+_name: Teardown_
 _returns: void_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -667,19 +577,18 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###void videoSettings()
+###OSStatus UpdateGain()
 
 <!--
-_syntax: videoSettings()_
-_name: videoSettings_
-_returns: void_
+_syntax: UpdateGain()_
+_name: UpdateGain_
+_returns: OSStatus_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -705,19 +614,166 @@ _description: _
 
 
 
+<!----------------------------------------------------------------------------->
+
+###UInt64 getLength()
+
+<!--
+_syntax: getLength()_
+_name: getLength_
+_returns: UInt64_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
 
 <!----------------------------------------------------------------------------->
 
-### ~ofxAndroidVideoGrabber()
+###bool getStopped()
 
 <!--
-_syntax: ~ofxAndroidVideoGrabber()_
-_name: ~ofxAndroidVideoGrabber_
+_syntax: getStopped()_
+_name: getStopped_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setLooping(inStopAtEnd)
+
+<!--
+_syntax: setLooping(inStopAtEnd)_
+_name: setLooping_
+_returns: void_
+_returns_description: _
+_parameters: Boolean inStopAtEnd_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setPosition(packetNum)
+
+<!--
+_syntax: setPosition(packetNum)_
+_name: setPosition_
+_returns: void_
+_returns_description: _
+_parameters: SInt64 packetNum_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ~BackgroundTrackMgr()
+
+<!--
+_syntax: ~BackgroundTrackMgr()_
+_name: ~BackgroundTrackMgr_
 _returns: _
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -736,7 +792,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -749,179 +804,4 @@ _description: _
 ##Variables
 
 
-
-###int attemptFramerate
-
-<!--
-_name: attemptFramerate_
-_type: int_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofPixels auxBuffer
-
-<!--
-_name: auxBuffer_
-_type: ofPixels_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool bGrabberInited
-
-<!--
-_name: bGrabberInited_
-_type: bool_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool bIsFrameNew
-
-<!--
-_name: bIsFrameNew_
-_type: bool_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofPixelFormat internalPixelFormat
-
-<!--
-_name: internalPixelFormat_
-_type: ofPixelFormat_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofEvent< ofPixels > newFrameE
-
-<!--
-_name: newFrameE_
-_type: ofEvent< ofPixels >_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofPixels pixels
-
-<!--
-_name: pixels_
-_type: ofPixels_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
 

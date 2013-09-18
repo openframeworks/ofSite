@@ -1,14 +1,20 @@
-#class ofxiPhoneImagePicker
+#class ofxiOSSoundPlayer
+
+
+<!--
+_visible: True_
+_advanced: True_
+_istemplated: False_
+-->
+
+##InlineDescription
+
+
+
+
 
 
 ##Description
-
-
-
-
-
-
-
 
 
 
@@ -18,128 +24,32 @@
 
 
 
-### ofxiPhoneImagePicker()
+###bool getIsPlaying()
 
 <!--
-_syntax: ofxiPhoneImagePicker()_
-_name: ofxiPhoneImagePicker_
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ~ofxiPhoneImagePicker()
-
-<!--
-_syntax: ~ofxiPhoneImagePicker()_
-_name: ~ofxiPhoneImagePicker_
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool openCamera(camera = 0)
-
-<!--
-_syntax: openCamera(camera = 0)_
-_name: openCamera_
-_returns: bool_
-_returns_description: _
-_parameters: int camera=0_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool openLibrary()
-
-<!--
-_syntax: openLibrary()_
-_name: openLibrary_
+_syntax: getIsPlaying()_
+_name: getIsPlaying_
 _returns: bool_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
 
 _description: _
 
@@ -149,32 +59,34 @@ _description: _
 
 
 
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
-###bool openSavedPhotos()
+###float getPan()
 
 <!--
-_syntax: openSavedPhotos()_
-_name: openSavedPhotos_
-_returns: bool_
+_syntax: getPan()_
+_name: getPan_
+_returns: float_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
 
 _description: _
 
@@ -184,32 +96,34 @@ _description: _
 
 
 
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
-###void setMaxDimension(_maxDimension)
+###float getPosition()
 
 <!--
-_syntax: setMaxDimension(_maxDimension)_
-_name: setMaxDimension_
-_returns: void_
+_syntax: getPosition()_
+_name: getPosition_
+_returns: float_
 _returns_description: _
-_parameters: int _maxDimension_
+_parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
 
 _description: _
 
@@ -219,41 +133,36 @@ _description: _
 
 
 
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
-###int getOrientation()
+###int getPositionMS()
 
 <!--
-_syntax: getOrientation()_
-_name: getOrientation_
+_syntax: getPositionMS()_
+_name: getPositionMS_
 _returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
 _description: _
-
-
-
-
-
-
-
 
 
 
@@ -263,32 +172,34 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void saveImage()
+###float getSpeed()
 
 <!--
-_syntax: saveImage()_
-_name: saveImage_
-_returns: void_
+_syntax: getSpeed()_
+_name: getSpeed_
+_returns: float_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
 _description: _
-
-
-
-
-
-
-
 
 
 
@@ -298,23 +209,32 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void loadPixels()
+###float getVolume()
 
 <!--
-_syntax: loadPixels()_
-_name: loadPixels_
-_returns: void_
+_syntax: getVolume()_
+_name: getVolume_
+_returns: float_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
 
 _description: _
 
@@ -324,6 +244,554 @@ _description: _
 
 
 
+<!----------------------------------------------------------------------------->
+
+###bool isLoaded()
+
+<!--
+_syntax: isLoaded()_
+_name: isLoaded_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool loadSound(fileName, stream = false)
+
+<!--
+_syntax: loadSound(fileName, stream = false)_
+_name: loadSound_
+_returns: bool_
+_returns_description: _
+_parameters: string fileName, bool stream=false_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofxiOSSoundPlayer()
+
+<!--
+_syntax: ofxiOSSoundPlayer()_
+_name: ofxiOSSoundPlayer_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void play()
+
+<!--
+_syntax: play()_
+_name: play_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setLoop(bLp)
+
+<!--
+_syntax: setLoop(bLp)_
+_name: setLoop_
+_returns: void_
+_returns_description: _
+_parameters: bool bLp_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setMultiPlay(bMp)
+
+<!--
+_syntax: setMultiPlay(bMp)_
+_name: setMultiPlay_
+_returns: void_
+_returns_description: _
+_parameters: bool bMp_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setPan(vol)
+
+<!--
+_syntax: setPan(vol)_
+_name: setPan_
+_returns: void_
+_returns_description: _
+_parameters: float vol_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setPaused(bP)
+
+<!--
+_syntax: setPaused(bP)_
+_name: setPaused_
+_returns: void_
+_returns_description: _
+_parameters: bool bP_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setPosition(pct)
+
+<!--
+_syntax: setPosition(pct)_
+_name: setPosition_
+_returns: void_
+_returns_description: _
+_parameters: float pct_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setPositionMS(ms)
+
+<!--
+_syntax: setPositionMS(ms)_
+_name: setPositionMS_
+_returns: void_
+_returns_description: _
+_parameters: int ms_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setSpeed(spd)
+
+<!--
+_syntax: setSpeed(spd)_
+_name: setSpeed_
+_returns: void_
+_returns_description: _
+_parameters: float spd_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setVolume(vol)
+
+<!--
+_syntax: setVolume(vol)_
+_name: setVolume_
+_returns: void_
+_returns_description: _
+_parameters: float vol_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void stop()
+
+<!--
+_syntax: stop()_
+_name: stop_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void unloadSound()
+
+<!--
+_syntax: unloadSound()_
+_name: unloadSound_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ~ofxiOSSoundPlayer()
+
+<!--
+_syntax: ~ofxiOSSoundPlayer()_
+_name: ~ofxiOSSoundPlayer_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -336,438 +804,4 @@ _description: _
 ##Variables
 
 
-
-###bool cameraIsAvailable
-
-<!--
-_name: cameraIsAvailable_
-_type: bool_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool photoLibraryIsAvailable
-
-<!--
-_name: photoLibraryIsAvailable_
-_type: bool_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool savedPhotosIsAvailable
-
-<!--
-_name: savedPhotosIsAvailable_
-_type: bool_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool imageUpdated
-
-<!--
-_name: imageUpdated_
-_type: bool_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int width
-
-<!--
-_name: width_
-_type: int_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int height
-
-<!--
-_name: height_
-_type: int_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int type
-
-<!--
-_name: type_
-_type: int_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int glType
-
-<!--
-_name: glType_
-_type: int_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int texType
-
-<!--
-_name: texType_
-_type: int_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int bpp
-
-<!--
-_name: bpp_
-_type: int_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool pixelsAllocated
-
-<!--
-_name: pixelsAllocated_
-_type: bool_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int maxDimension
-
-<!--
-_name: maxDimension_
-_type: int_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###unsigned char * pixels
-
-<!--
-_name: pixels_
-_type: unsigned char *_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofxiPhoneImagePickerDelegate imagePicker
-
-<!--
-_name: imagePicker_
-_type: ofxiPhoneImagePickerDelegate_
-_access: protected_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
 

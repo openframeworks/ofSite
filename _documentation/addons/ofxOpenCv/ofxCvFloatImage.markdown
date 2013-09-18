@@ -16,7 +16,6 @@ _istemplated: False_
 
 ##Description
 
-
 ofxCvFloatImage is an image class that represents the values of each color of each pixel as float values, on a scale of 0.0 - 1.0. They are a more precise but heavier (i.e. requiring more memory) way representing the data in an image. Keep in mind though that most of the image operations in OpenCV expect a grayscale image, which you can construct using the ofxCvGrayscaleImage. If you're loading image data from another image you might want to check what image scale is being used with the image to ensure that you don't get your scales wrong.
 
 

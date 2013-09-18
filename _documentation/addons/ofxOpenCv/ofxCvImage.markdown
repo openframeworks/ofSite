@@ -16,7 +16,6 @@ _istemplated: False_
 
 ##Description
 
-
 This is the base class for all the ofxOpenCV image types: ofxCvShortImage, ofxCvColorImage, ofxCvFloatImage, ofxCvGrayscaleImage. It's made to provide interoperability between the core OF imaging types, ofImage and ofTexture, and OpenCv.
 
 

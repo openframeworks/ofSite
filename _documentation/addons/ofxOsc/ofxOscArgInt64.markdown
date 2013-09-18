@@ -61,6 +61,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofxOscArgType getType()
@@ -93,6 +94,7 @@ return the type of this argument
 
 
 _description: _
+
 
 
 
@@ -137,6 +139,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ### ofxOscArgInt64(_value)
@@ -167,6 +170,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -213,6 +217,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ### ~ofxOscArgInt64()
@@ -243,6 +248,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 

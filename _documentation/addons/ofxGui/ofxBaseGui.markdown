@@ -59,6 +59,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void draw()
@@ -89,6 +90,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -133,6 +135,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor getBackgroundColor()
@@ -163,6 +166,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -207,6 +211,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor getFillColor()
@@ -237,6 +242,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -281,6 +287,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###float getHeight()
@@ -311,6 +318,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -355,6 +363,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofAbstractParameter & getParameter()
@@ -385,6 +394,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -429,6 +439,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofRectangle getShape()
@@ -459,6 +470,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -503,6 +515,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor getTextColor()
@@ -533,6 +546,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -577,6 +591,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###float getWidth()
@@ -607,6 +622,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -651,6 +667,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void loadFont(filename, fontsize, _bAntiAliased = true, _bFullCharacterSet = false, dpi = 0)
@@ -681,6 +698,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -725,6 +743,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void loadFromFile(filename)
@@ -755,6 +774,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -799,6 +819,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool mouseDragged(&args)
@@ -829,6 +850,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -873,6 +895,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool mousePressed(&args)
@@ -903,6 +926,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -947,6 +971,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ### ofxBaseGui()
@@ -977,6 +1002,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1021,6 +1047,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###string saveStencilToHex(&img)
@@ -1051,6 +1078,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1095,6 +1123,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void saveToFile(filename)
@@ -1125,6 +1154,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1169,6 +1199,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void setBorderColor(&color)
@@ -1199,6 +1230,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1243,6 +1275,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void setDefaultBorderColor(&color)
@@ -1273,6 +1306,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1317,6 +1351,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void setDefaultHeaderBackgroundColor(&color)
@@ -1347,6 +1382,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1391,6 +1427,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void setDefaultSerializer(serializer)
@@ -1421,6 +1458,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1465,6 +1503,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void setDefaultTextPadding(padding)
@@ -1495,6 +1534,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1539,6 +1579,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void setFillColor(&color)
@@ -1569,6 +1610,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1613,6 +1655,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void setName(name)
@@ -1643,6 +1686,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1687,6 +1731,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void setPosition(x, y)
@@ -1717,6 +1762,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1761,6 +1807,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void setShape(x, y, w, h)
@@ -1791,6 +1838,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1835,6 +1883,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void setTextColor(&color)
@@ -1865,6 +1914,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1909,6 +1959,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool setValue(mx, my, bCheckBounds)
@@ -1939,6 +1990,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1983,6 +2035,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ### ~ofxBaseGui()
@@ -2013,6 +2066,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 

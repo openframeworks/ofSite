@@ -16,7 +16,6 @@ _istemplated: False_
 
 ##Description
 
-
 ofAssimpModelLoader addon permits loading to memory and processing 3D models in a convenient and unified format. This addon is mostly a wrapper of the Open Asset Import Library, assimp, ([http://assimp.sourceforge.net/](http://assimp.sourceforge.net/)) in it s version 2.0. At least, these model formats are supported:
 
 - 3DS
@@ -754,6 +753,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###unsigned int getAnimationCount()
@@ -1010,6 +1010,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -1208,6 +1209,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofxAssimpMeshHelper & getMeshHelper(meshIndex)
@@ -1238,6 +1240,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1313,6 +1316,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1433,6 +1437,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofPoint getPosition()
@@ -1508,6 +1513,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofPoint getRotationAxis(which)
@@ -1538,6 +1544,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1658,6 +1665,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofPoint getSceneMin(bScaled = false)
@@ -1688,6 +1696,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1808,6 +1817,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool hasMeshes()
@@ -1838,6 +1848,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -2034,6 +2045,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void optimizeScene()
@@ -2109,6 +2121,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void resetAllAnimations()
@@ -2146,6 +2159,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void setAnimation(anim)
@@ -2167,6 +2181,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 
@@ -2213,6 +2228,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -2286,6 +2302,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -2325,6 +2342,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -2400,6 +2418,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -2549,6 +2568,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -2595,6 +2615,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void update()
@@ -2625,6 +2646,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -2707,6 +2729,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void updateBones()
@@ -2737,6 +2760,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -2819,6 +2843,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void updateModelMatrix()
@@ -2849,6 +2874,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 

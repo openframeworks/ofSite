@@ -16,7 +16,6 @@ _istemplated: False_
 
 ##Description
 
-
 ofxXmlSettings addon allows for reading and writing of xml files in openFrameworks. Most commonly xml settings are used for storing settings between closing and launching apps. XML has the advantage of being easy for people to read and edit but still convenient for manipulating with code.
 
 An xml document is composed of tags with values and other tags inside of them. A tag has a name, attributes, values. If a tag contains other tags they are called its children. If a tag is inside of another, the enclosing tag is called its parent. The tags next to one another are siblings.  
@@ -776,6 +775,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int getAttribute(&tag, &attribute, defaultValue, which = 0)
@@ -1258,6 +1258,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1776,6 +1777,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool saveFile(&xmlFile)
@@ -1886,6 +1888,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 

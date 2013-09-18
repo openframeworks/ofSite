@@ -16,7 +16,6 @@ _istemplated: False_
 
 ##Description
 
-
 The contour finder allows you to detect objects in a scene by looking contrast caused by the difference between adjoining pixels. For instance, in the image below, the hand is visible and trackable because the contrast between the wall behind it and the arm is quite distinct:
 
 [img src="contour.png"]

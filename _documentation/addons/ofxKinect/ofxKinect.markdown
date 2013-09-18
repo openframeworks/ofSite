@@ -66,6 +66,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void close()
@@ -98,6 +99,7 @@ close the connection and stop grabbing images
 
 
 _description: _
+
 
 
 
@@ -144,6 +146,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void draw(x, y)
@@ -174,6 +177,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -218,6 +222,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void draw(&rect)
@@ -248,6 +253,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -294,6 +300,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void drawDepth(x, y)
@@ -324,6 +331,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -368,6 +376,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void drawDepth(&rect)
@@ -405,6 +414,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void enableDepthNearValueWhite(bEnabled = true)
@@ -435,6 +445,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -483,6 +494,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###float getAccelRoll()
@@ -513,6 +525,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -557,6 +570,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofColor getColorAt(&p)
@@ -587,6 +601,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -626,6 +641,7 @@ get the current angle
 
 
 _description: _
+
 
 
 
@@ -674,6 +690,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofPixels & getDepthPixelsRef()
@@ -708,6 +725,7 @@ grayscale values
 
 
 _description: _
+
 
 
 
@@ -754,6 +772,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int getDeviceId()
@@ -784,6 +803,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -830,6 +850,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###float getDistanceAt(&p)
@@ -860,6 +881,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -906,6 +928,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofFloatPixels & getDistancePixelsRef()
@@ -938,6 +961,7 @@ get the distance in millimeters to a given point as a float array
 
 
 _description: _
+
 
 
 
@@ -982,6 +1006,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###float getHeight()
@@ -1012,6 +1037,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1064,6 +1090,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###float getNearClipping()
@@ -1101,6 +1128,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###unsigned char * getPixels()
@@ -1131,6 +1159,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1177,6 +1206,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofPoint getRawAccel()
@@ -1209,6 +1239,7 @@ raw axis values
 
 
 _description: _
+
 
 
 
@@ -1255,6 +1286,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofShortPixels & getRawDepthPixelsRef()
@@ -1287,6 +1319,7 @@ raw 11 bit values
 
 
 _description: _
+
 
 
 
@@ -1333,6 +1366,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###float getSensorEmitterDistance()
@@ -1365,6 +1399,7 @@ get the distance between the IR sensor and IR emitter in cm
 
 
 _description: _
+
 
 
 
@@ -1413,6 +1448,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###float getTargetCameraTiltAngle()
@@ -1445,6 +1481,7 @@ get the target angle (if the camera is currently moving)
 
 
 _description: _
+
 
 
 
@@ -1491,6 +1528,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###float getWidth()
@@ -1521,6 +1559,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1569,6 +1608,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofVec3f getWorldCoordinateAt(cx, cy, wz)
@@ -1599,6 +1639,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1645,6 +1686,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###float getZeroPlanePixelSize()
@@ -1677,6 +1719,7 @@ get the size of a single pixel on the zero plane in mm
 
 
 _description: _
+
 
 
 
@@ -1723,6 +1766,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void grabVideoFrame(*dev, *video, timestamp)
@@ -1753,6 +1797,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1797,6 +1842,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool hasCamTiltControl()
@@ -1827,6 +1873,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1871,6 +1918,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool init(infrared = false, video = true, texture = true)
@@ -1901,6 +1949,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1947,6 +1996,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool isDepthNearValueWhite()
@@ -1977,6 +2027,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -2023,6 +2074,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool isDeviceConnected(serial)
@@ -2053,6 +2105,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -2099,6 +2152,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool isFrameNewDepth()
@@ -2136,6 +2190,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool isFrameNewVideo()
@@ -2166,6 +2221,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -2212,6 +2268,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int nextAvailableId()
@@ -2244,6 +2301,7 @@ get the id of the next available device, returns -1 if nothing found
 
 
 _description: _
+
 
 
 
@@ -2290,6 +2348,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int numAvailableDevices()
@@ -2322,6 +2381,7 @@ get the number of available devices (not connected)
 
 
 _description: _
+
 
 
 
@@ -2368,6 +2428,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int numTotalDevices()
@@ -2407,6 +2468,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ### ofxKinect()
@@ -2437,6 +2499,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -2487,6 +2550,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool open(serial)
@@ -2528,6 +2592,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool setCameraTiltAngle(angleInDegrees)
@@ -2558,6 +2623,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -2608,6 +2674,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void setLed(mode)
@@ -2640,6 +2707,7 @@ set the current led color and/or blink mode, only applied while the kinect is op
 
 
 _description: _
+
 
 
 
@@ -2690,6 +2758,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void setUseTexture(bUse)
@@ -2729,6 +2798,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void threadedFunction()
@@ -2761,6 +2831,7 @@ thread function
 
 
 _description: _
+
 
 
 
@@ -2809,6 +2880,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void updateDepthLookupTable()
@@ -2839,6 +2911,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -2883,6 +2956,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ### ~ofxKinect()
@@ -2913,6 +2987,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 

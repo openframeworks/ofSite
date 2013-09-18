@@ -59,6 +59,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###std::string getFilename()
@@ -89,6 +90,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -133,6 +135,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void loadModel(*filename, scale = 1)
@@ -163,6 +166,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -207,6 +211,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ### model3DS(&model)
@@ -237,6 +242,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -281,6 +287,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###model3DS & operator=(&model)
@@ -318,6 +325,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void readChunk(*modelFile, objectStart, objectLength)
@@ -348,6 +356,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 

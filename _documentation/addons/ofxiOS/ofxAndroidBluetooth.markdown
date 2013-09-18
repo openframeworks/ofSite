@@ -1,9 +1,9 @@
-#class ofxAndroidVideoGrabber
+#class ofxAndroidBluetooth
 
 
 <!--
 _visible: True_
-_advanced: True_
+_advanced: False_
 _istemplated: False_
 -->
 
@@ -24,16 +24,16 @@ _istemplated: False_
 
 
 
-###void close()
+###void closeClientSocket()
 
 <!--
-_syntax: close()_
-_name: close_
+_syntax: closeClientSocket()_
+_name: closeClientSocket_
 _returns: void_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -59,19 +59,18 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###ofPixelsRef getAuxBuffer()
+###void closeServerSocket()
 
 <!--
-_syntax: getAuxBuffer()_
-_name: getAuxBuffer_
-_returns: ofPixelsRef_
+_syntax: closeServerSocket()_
+_name: closeServerSocket_
+_returns: void_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -97,19 +96,18 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###float getHeight()
+###void discover()
 
 <!--
-_syntax: getHeight()_
-_name: getHeight_
-_returns: float_
+_syntax: discover()_
+_name: discover_
+_returns: void_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -135,19 +133,18 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###ofPixelFormat getPixelFormat()
+###void enableBluetooth()
 
 <!--
-_syntax: getPixelFormat()_
-_name: getPixelFormat_
-_returns: ofPixelFormat_
+_syntax: enableBluetooth()_
+_name: enableBluetooth_
+_returns: void_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -173,19 +170,18 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###unsigned char * getPixels()
+###void enableDiscoverable()
 
 <!--
-_syntax: getPixels()_
-_name: getPixels_
-_returns: unsigned char *_
+_syntax: enableDiscoverable()_
+_name: enableDiscoverable_
+_returns: void_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -211,19 +207,18 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###ofPixelsRef getPixelsRef()
+###string getAdapterAddress()
 
 <!--
-_syntax: getPixelsRef()_
-_name: getPixelsRef_
-_returns: ofPixelsRef_
+_syntax: getAdapterAddress()_
+_name: getAdapterAddress_
+_returns: string_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -249,19 +244,18 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###float getWidth()
+###string getAdapterName()
 
 <!--
-_syntax: getWidth()_
-_name: getWidth_
-_returns: float_
+_syntax: getAdapterName()_
+_name: getAdapterName_
+_returns: string_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -287,19 +281,92 @@ _description: _
 
 
 
+<!----------------------------------------------------------------------------->
+
+###vector< string > getDevicesAddresses()
+
+<!--
+_syntax: getDevicesAddresses()_
+_name: getDevicesAddresses_
+_returns: vector< string >_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
 
 <!----------------------------------------------------------------------------->
 
-###bool initGrabber(w, h)
+###vector< string > getDevicesNames()
 
 <!--
-_syntax: initGrabber(w, h)_
-_name: initGrabber_
+_syntax: getDevicesNames()_
+_name: getDevicesNames_
+_returns: vector< string >_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool isClient()
+
+<!--
+_syntax: isClient()_
+_name: isClient_
 _returns: bool_
 _returns_description: _
-_parameters: int w, int h_
+_parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -325,19 +392,18 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###bool isFrameNew()
+###bool isConnected()
 
 <!--
-_syntax: isFrameNew()_
-_name: isFrameNew_
+_syntax: isConnected()_
+_name: isConnected_
 _returns: bool_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -363,19 +429,18 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###vector< ofVideoDevice > listDevices()
+###bool isEnabled()
 
 <!--
-_syntax: listDevices()_
-_name: listDevices_
-_returns: vector< ofVideoDevice >_
+_syntax: isEnabled()_
+_name: isEnabled_
+_returns: bool_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -401,19 +466,55 @@ _description: _
 
 
 
+<!----------------------------------------------------------------------------->
+
+###bool isServer()
+
+<!--
+_syntax: isServer()_
+_name: isServer_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
 
 <!----------------------------------------------------------------------------->
 
-### ofxAndroidVideoGrabber()
+### ofxAndroidBluetooth()
 
 <!--
-_syntax: ofxAndroidVideoGrabber()_
-_name: ofxAndroidVideoGrabber_
+_syntax: ofxAndroidBluetooth()_
+_name: ofxAndroidBluetooth_
 _returns: _
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -439,19 +540,203 @@ _description: _
 
 
 
+<!----------------------------------------------------------------------------->
+
+###void openClientSocket(deviceName, uuid)
+
+<!--
+_syntax: openClientSocket(deviceName, uuid)_
+_name: openClientSocket_
+_returns: void_
+_returns_description: _
+_parameters: string deviceName, string uuid_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
 
 <!----------------------------------------------------------------------------->
 
-###bool setAutoFocus(autofocus)
+###void openServerSocket(name, uuid)
 
 <!--
-_syntax: setAutoFocus(autofocus)_
-_name: setAutoFocus_
+_syntax: openServerSocket(name, uuid)_
+_name: openServerSocket_
+_returns: void_
+_returns_description: _
+_parameters: string name, string uuid_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int readData(&data)
+
+<!--
+_syntax: readData(&data)_
+_name: readData_
+_returns: int_
+_returns_description: _
+_parameters: vector< unsigned char > &data_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int readData(*data, size)
+
+<!--
+_syntax: readData(*data, size)_
+_name: readData_
+_returns: int_
+_returns_description: _
+_parameters: unsigned char *data, int size_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int readMsg(*data, size)
+
+<!--
+_syntax: readMsg(*data, size)_
+_name: readMsg_
+_returns: int_
+_returns_description: _
+_parameters: unsigned char *data, int size_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool sendData(&data)
+
+<!--
+_syntax: sendData(&data)_
+_name: sendData_
 _returns: bool_
 _returns_description: _
-_parameters: bool autofocus_
+_parameters: const vector< unsigned char > &data_
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -477,95 +762,18 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###void setDesiredFrameRate(framerate)
+###bool sendData(*data, size)
 
 <!--
-_syntax: setDesiredFrameRate(framerate)_
-_name: setDesiredFrameRate_
-_returns: void_
-_returns_description: _
-_parameters: int framerate_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setDeviceID(_deviceID)
-
-<!--
-_syntax: setDeviceID(_deviceID)_
-_name: setDeviceID_
-_returns: void_
-_returns_description: _
-_parameters: int _deviceID_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool setPixelFormat(pixelFormat)
-
-<!--
-_syntax: setPixelFormat(pixelFormat)_
-_name: setPixelFormat_
+_syntax: sendData(*data, size)_
+_name: sendData_
 _returns: bool_
 _returns_description: _
-_parameters: ofPixelFormat pixelFormat_
+_parameters: const unsigned char *data, int size_
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -591,19 +799,55 @@ _description: _
 
 
 
+<!----------------------------------------------------------------------------->
+
+###bool sendMsg(*data, size)
+
+<!--
+_syntax: sendMsg(*data, size)_
+_name: sendMsg_
+_returns: bool_
+_returns_description: _
+_parameters: const unsigned char *data, int size_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
 
 <!----------------------------------------------------------------------------->
 
-###void setVerbose(bTalkToMe)
+###void setUUID(uuid)
 
 <!--
-_syntax: setVerbose(bTalkToMe)_
-_name: setVerbose_
+_syntax: setUUID(uuid)_
+_name: setUUID_
 _returns: void_
 _returns_description: _
-_parameters: bool bTalkToMe_
+_parameters: string uuid_
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -629,19 +873,18 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###void update()
+###void showConnectionGui()
 
 <!--
-_syntax: update()_
-_name: update_
+_syntax: showConnectionGui()_
+_name: showConnectionGui_
 _returns: void_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -667,57 +910,18 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###void videoSettings()
+### ~ofxAndroidBluetooth()
 
 <!--
-_syntax: videoSettings()_
-_name: videoSettings_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ~ofxAndroidVideoGrabber()
-
-<!--
-_syntax: ~ofxAndroidVideoGrabber()_
-_name: ~ofxAndroidVideoGrabber_
+_syntax: ~ofxAndroidBluetooth()_
+_name: ~ofxAndroidBluetooth_
 _returns: _
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -736,7 +940,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -749,179 +952,4 @@ _description: _
 ##Variables
 
 
-
-###int attemptFramerate
-
-<!--
-_name: attemptFramerate_
-_type: int_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofPixels auxBuffer
-
-<!--
-_name: auxBuffer_
-_type: ofPixels_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool bGrabberInited
-
-<!--
-_name: bGrabberInited_
-_type: bool_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool bIsFrameNew
-
-<!--
-_name: bIsFrameNew_
-_type: bool_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofPixelFormat internalPixelFormat
-
-<!--
-_name: internalPixelFormat_
-_type: ofPixelFormat_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofEvent< ofPixels > newFrameE
-
-<!--
-_name: newFrameE_
-_type: ofEvent< ofPixels >_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofPixels pixels
-
-<!--
-_name: pixels_
-_type: ofPixels_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
 

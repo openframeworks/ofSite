@@ -16,7 +16,6 @@ _istemplated: False_
 
 ##Description
 
-
 This addon allows you access to the acceleromete on devices that support one. At the moment both Android and iOS are supported. 
 
 To get values from the accelerometer in polling mode, request them:

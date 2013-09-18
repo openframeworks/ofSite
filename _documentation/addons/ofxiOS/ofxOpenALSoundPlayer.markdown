@@ -1,9 +1,9 @@
-#class ofxGuiGroup
+#class ofxOpenALSoundPlayer
 
 
 <!--
 _visible: True_
-_advanced: False_
+_advanced: True_
 _istemplated: False_
 -->
 
@@ -24,20 +24,20 @@ _istemplated: False_
 
 
 
-###void add(*element)
+###void closeSoundEngine()
 
 <!--
-_syntax: add(*element)_
-_name: add_
+_syntax: closeSoundEngine()_
+_name: closeSoundEngine_
 _returns: void_
 _returns_description: _
-_parameters: ofxBaseGui *element_
+_parameters: _
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: False_
+_static: True_
 _visible: True_
 _advanced: False_
 -->
@@ -59,433 +59,14 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###void add(&parameters)
+###bool getIsPlaying()
 
 <!--
-_syntax: add(&parameters)_
-_name: add_
-_returns: void_
-_returns_description: _
-_parameters: const ofParameterGroup &parameters_
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void add(&parameter)
-
-<!--
-_syntax: add(&parameter)_
-_name: add_
-_returns: void_
-_returns_description: _
-_parameters: ofParameter< float > &parameter_
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void add(&parameter)
-
-<!--
-_syntax: add(&parameter)_
-_name: add_
-_returns: void_
-_returns_description: _
-_parameters: ofParameter< int > &parameter_
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void add(&parameter)
-
-<!--
-_syntax: add(&parameter)_
-_name: add_
-_returns: void_
-_returns_description: _
-_parameters: ofParameter< bool > &parameter_
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void add(&parameter)
-
-<!--
-_syntax: add(&parameter)_
-_name: add_
-_returns: void_
-_returns_description: _
-_parameters: ofParameter< string > &parameter_
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void add(&parameter)
-
-<!--
-_syntax: add(&parameter)_
-_name: add_
-_returns: void_
-_returns_description: _
-_parameters: ofParameter< ofVec2f > &parameter_
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void add(&parameter)
-
-<!--
-_syntax: add(&parameter)_
-_name: add_
-_returns: void_
-_returns_description: _
-_parameters: ofParameter< ofVec3f > &parameter_
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void add(&parameter)
-
-<!--
-_syntax: add(&parameter)_
-_name: add_
-_returns: void_
-_returns_description: _
-_parameters: ofParameter< ofVec4f > &parameter_
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void add(&parameter)
-
-<!--
-_syntax: add(&parameter)_
-_name: add_
-_returns: void_
-_returns_description: _
-_parameters: ofParameter< ofColor > &parameter_
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void add(&parameter)
-
-<!--
-_syntax: add(&parameter)_
-_name: add_
-_returns: void_
-_returns_description: _
-_parameters: ofParameter< ofShortColor > &parameter_
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void add(&parameter)
-
-<!--
-_syntax: add(&parameter)_
-_name: add_
-_returns: void_
-_returns_description: _
-_parameters: ofParameter< ofFloatColor > &parameter_
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void clear()
-
-<!--
-_syntax: clear()_
-_name: clear_
-_returns: void_
+_syntax: getIsPlaying()_
+_name: getIsPlaying_
+_returns: bool_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -515,167 +96,14 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###void generateDraw()
+###float getPan()
 
 <!--
-_syntax: generateDraw()_
-_name: generateDraw_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: protected_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofxButton & getButton(name)
-
-<!--
-_syntax: getButton(name)_
-_name: getButton_
-_returns: ofxButton &_
-_returns_description: _
-_parameters: string name_
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofxBaseGui * getControl(name)
-
-<!--
-_syntax: getControl(name)_
-_name: getControl_
-_returns: ofxBaseGui *_
-_returns_description: _
-_parameters: string name_
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofxBaseGui * getControl(num)
-
-<!--
-_syntax: getControl(num)_
-_name: getControl_
-_returns: ofxBaseGui *_
-_returns_description: _
-_parameters: int num_
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###vector< string > getControlNames()
-
-<!--
-_syntax: getControlNames()_
-_name: getControlNames_
-_returns: vector< string >_
+_syntax: getPan()_
+_name: getPan_
+_returns: float_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -705,55 +133,16 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###ControlType & getControlType(name)
+###float getPitch()
 
 <!--
-_syntax: getControlType(name)_
-_name: getControlType_
-_returns: ControlType &_
+_syntax: getPitch()_
+_name: getPitch_
+_returns: float_
 _returns_description: _
-_parameters: string name_
-_access: protected_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofxFloatSlider & getFloatSlider(name)
-
-<!--
-_syntax: getFloatSlider(name)_
-_name: getFloatSlider_
-_returns: ofxFloatSlider &_
-_returns_description: _
-_parameters: string name_
+_parameters: _
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -781,17 +170,16 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###ofxGuiGroup & getGroup(name)
+###float getPosition()
 
 <!--
-_syntax: getGroup(name)_
-_name: getGroup_
-_returns: ofxGuiGroup &_
+_syntax: getPosition()_
+_name: getPosition_
+_returns: float_
 _returns_description: _
-_parameters: string name_
+_parameters: _
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -819,52 +207,13 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###ofxIntSlider & getIntSlider(name)
+###int getPositionMS()
 
 <!--
-_syntax: getIntSlider(name)_
-_name: getIntSlider_
-_returns: ofxIntSlider &_
-_returns_description: _
-_parameters: string name_
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int getNumControls()
-
-<!--
-_syntax: getNumControls()_
-_name: getNumControls_
+_syntax: getPositionMS()_
+_name: getPositionMS_
 _returns: int_
 _returns_description: _
 _parameters: _
@@ -895,15 +244,14 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###ofAbstractParameter & getParameter()
+###float getSpeed()
 
 <!--
-_syntax: getParameter()_
-_name: getParameter_
-_returns: ofAbstractParameter &_
+_syntax: getSpeed()_
+_name: getSpeed_
+_returns: float_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -933,17 +281,16 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###ofxToggle & getToggle(name)
+###float getVolume()
 
 <!--
-_syntax: getToggle(name)_
-_name: getToggle_
-_returns: ofxToggle &_
+_syntax: getVolume()_
+_name: getVolume_
+_returns: float_
 _returns_description: _
-_parameters: string name_
+_parameters: _
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -971,14 +318,13 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###void maximize()
+###void initializeSoundEngine()
 
 <!--
-_syntax: maximize()_
-_name: maximize_
+_syntax: initializeSoundEngine()_
+_name: initializeSoundEngine_
 _returns: void_
 _returns_description: _
 _parameters: _
@@ -987,7 +333,7 @@ _version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: False_
+_static: True_
 _visible: True_
 _advanced: False_
 -->
@@ -1009,15 +355,14 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###void maximizeAll()
+###bool isLoaded()
 
 <!--
-_syntax: maximizeAll()_
-_name: maximizeAll_
-_returns: void_
+_syntax: isLoaded()_
+_name: isLoaded_
+_returns: bool_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1047,23 +392,96 @@ _description: _
 
 
 
+<!----------------------------------------------------------------------------->
+
+###bool loadBackgroundMusic(fileName, queue, loadAtOnce)
+
+<!--
+_syntax: loadBackgroundMusic(fileName, queue, loadAtOnce)_
+_name: loadBackgroundMusic_
+_returns: bool_
+_returns_description: _
+_parameters: string fileName, bool queue, bool loadAtOnce_
+_access: protected_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
 
 <!----------------------------------------------------------------------------->
 
-###void minimize()
+###bool loadSound(fileName, stream = false)
 
 <!--
-_syntax: minimize()_
-_name: minimize_
+_syntax: loadSound(fileName, stream = false)_
+_name: loadSound_
+_returns: bool_
+_returns_description: _
+_parameters: string fileName, bool stream=false_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofxALSoundSetDistanceModel(model)
+
+<!--
+_syntax: ofxALSoundSetDistanceModel(model)_
+_name: ofxALSoundSetDistanceModel_
 _returns: void_
 _returns_description: _
-_parameters: _
+_parameters: ALenum model_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: False_
+_static: True_
 _visible: True_
 _advanced: False_
 -->
@@ -1085,23 +503,22 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###void minimizeAll()
+###void ofxALSoundSetListenerGain(gain)
 
 <!--
-_syntax: minimizeAll()_
-_name: minimizeAll_
+_syntax: ofxALSoundSetListenerGain(gain)_
+_name: ofxALSoundSetListenerGain_
 _returns: void_
 _returns_description: _
-_parameters: _
+_parameters: float gain_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: False_
+_static: True_
 _visible: True_
 _advanced: False_
 -->
@@ -1123,23 +540,22 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###bool mouseDragged(&args)
+###void ofxALSoundSetListenerLocation(x, y, z)
 
 <!--
-_syntax: mouseDragged(&args)_
-_name: mouseDragged_
-_returns: bool_
+_syntax: ofxALSoundSetListenerLocation(x, y, z)_
+_name: ofxALSoundSetListenerLocation_
+_returns: void_
 _returns_description: _
-_parameters: ofMouseEventArgs &args_
+_parameters: float x, float y, float z_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: False_
+_static: True_
 _visible: True_
 _advanced: False_
 -->
@@ -1161,23 +577,22 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###bool mouseMoved(&args)
+###void ofxALSoundSetListenerVelocity(x, y, z)
 
 <!--
-_syntax: mouseMoved(&args)_
-_name: mouseMoved_
-_returns: bool_
+_syntax: ofxALSoundSetListenerVelocity(x, y, z)_
+_name: ofxALSoundSetListenerVelocity_
+_returns: void_
 _returns_description: _
-_parameters: ofMouseEventArgs &args_
+_parameters: float x, float y, float z_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: False_
+_static: True_
 _visible: True_
 _advanced: False_
 -->
@@ -1199,23 +614,22 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###bool mousePressed(&args)
+###void ofxALSoundSetMaxDistance(dist)
 
 <!--
-_syntax: mousePressed(&args)_
-_name: mousePressed_
-_returns: bool_
+_syntax: ofxALSoundSetMaxDistance(dist)_
+_name: ofxALSoundSetMaxDistance_
+_returns: void_
 _returns_description: _
-_parameters: ofMouseEventArgs &args_
+_parameters: float dist_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: False_
+_static: True_
 _visible: True_
 _advanced: False_
 -->
@@ -1237,23 +651,22 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###bool mouseReleased(&args)
+###void ofxALSoundSetReferenceDistance(dist)
 
 <!--
-_syntax: mouseReleased(&args)_
-_name: mouseReleased_
-_returns: bool_
+_syntax: ofxALSoundSetReferenceDistance(dist)_
+_name: ofxALSoundSetReferenceDistance_
+_returns: void_
 _returns_description: _
-_parameters: ofMouseEventArgs &args_
+_parameters: float dist_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: False_
+_static: True_
 _visible: True_
 _advanced: False_
 -->
@@ -1275,14 +688,13 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-### ofxGuiGroup()
+### ofxOpenALSoundPlayer()
 
 <!--
-_syntax: ofxGuiGroup()_
-_name: ofxGuiGroup_
+_syntax: ofxOpenALSoundPlayer()_
+_name: ofxOpenALSoundPlayer_
 _returns: _
 _returns_description: _
 _parameters: _
@@ -1313,17 +725,16 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-### ofxGuiGroup(&parameters, _filename = "settings.xml", x = 10, y = 10)
+###void play()
 
 <!--
-_syntax: ofxGuiGroup(&parameters, _filename = "settings.xml", x = 10, y = 10)_
-_name: ofxGuiGroup_
-_returns: _
+_syntax: play()_
+_name: play_
+_returns: void_
 _returns_description: _
-_parameters: const ofParameterGroup &parameters, string _filename="settings.xml", float x=10, float y=10_
+_parameters: _
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -1351,15 +762,14 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###void registerMouseEvents()
+###bool prime()
 
 <!--
-_syntax: registerMouseEvents()_
-_name: registerMouseEvents_
-_returns: void_
+_syntax: prime()_
+_name: prime_
+_returns: bool_
 _returns_description: _
 _parameters: _
 _access: protected_
@@ -1389,17 +799,16 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###void render()
+###void setBackgroundMusicVolume(bgVol)
 
 <!--
-_syntax: render()_
-_name: render_
+_syntax: setBackgroundMusicVolume(bgVol)_
+_name: setBackgroundMusicVolume_
 _returns: void_
 _returns_description: _
-_parameters: _
+_parameters: float bgVol_
 _access: protected_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -1427,17 +836,238 @@ _description: _
 
 
 
+<!----------------------------------------------------------------------------->
+
+###void setLocation(x, y, z)
+
+<!--
+_syntax: setLocation(x, y, z)_
+_name: setLocation_
+_returns: void_
+_returns_description: _
+_parameters: float x, float y, float z_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
 
 <!----------------------------------------------------------------------------->
 
-###void setPosition(p)
+###void setLoop(bLp)
 
 <!--
-_syntax: setPosition(p)_
+_syntax: setLoop(bLp)_
+_name: setLoop_
+_returns: void_
+_returns_description: _
+_parameters: bool bLp_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setMultiPlay(bMp)
+
+<!--
+_syntax: setMultiPlay(bMp)_
+_name: setMultiPlay_
+_returns: void_
+_returns_description: _
+_parameters: bool bMp_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setPan(_pan)
+
+<!--
+_syntax: setPan(_pan)_
+_name: setPan_
+_returns: void_
+_returns_description: _
+_parameters: float _pan_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setPaused(bP)
+
+<!--
+_syntax: setPaused(bP)_
+_name: setPaused_
+_returns: void_
+_returns_description: _
+_parameters: bool bP_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setPitch(_pitch)
+
+<!--
+_syntax: setPitch(_pitch)_
+_name: setPitch_
+_returns: void_
+_returns_description: _
+_parameters: float _pitch_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setPosition(pct)
+
+<!--
+_syntax: setPosition(pct)_
 _name: setPosition_
 _returns: void_
 _returns_description: _
-_parameters: ofPoint p_
+_parameters: float pct_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -1465,17 +1095,16 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###void setPosition(x, y)
+###void setPositionMS(ms)
 
 <!--
-_syntax: setPosition(x, y)_
-_name: setPosition_
+_syntax: setPositionMS(ms)_
+_name: setPositionMS_
 _returns: void_
 _returns_description: _
-_parameters: float x, float y_
+_parameters: int ms_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -1503,55 +1132,16 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###bool setValue(mx, my, bCheck)
+###void setSpeed(_speed)
 
 <!--
-_syntax: setValue(mx, my, bCheck)_
-_name: setValue_
-_returns: bool_
-_returns_description: _
-_parameters: float mx, float my, bool bCheck_
-_access: protected_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setWidthElements(w)
-
-<!--
-_syntax: setWidthElements(w)_
-_name: setWidthElements_
+_syntax: setSpeed(_speed)_
+_name: setSpeed_
 _returns: void_
 _returns_description: _
-_parameters: float w_
+_parameters: float _speed_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -1579,17 +1169,16 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###ofxGuiGroup * setup(collectionName = "", filename = "settings.xml", x = 10, y = 10)
+###void setVolume(_vol)
 
 <!--
-_syntax: setup(collectionName = "", filename = "settings.xml", x = 10, y = 10)_
-_name: setup_
-_returns: ofxGuiGroup *_
+_syntax: setVolume(_vol)_
+_name: setVolume_
+_returns: void_
 _returns_description: _
-_parameters: string collectionName="", string filename="settings.xml", float x=10, float y=10_
+_parameters: float _vol_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -1617,52 +1206,13 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###ofxGuiGroup * setup(&parameters, filename = "settings.xml", x = 10, y = 10)
+###void startBackgroundMusic()
 
 <!--
-_syntax: setup(&parameters, filename = "settings.xml", x = 10, y = 10)_
-_name: setup_
-_returns: ofxGuiGroup *_
-_returns_description: _
-_parameters: const ofParameterGroup &parameters, string filename="settings.xml", float x=10, float y=10_
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void sizeChangedCB()
-
-<!--
-_syntax: sizeChangedCB()_
-_name: sizeChangedCB_
+_syntax: startBackgroundMusic()_
+_name: startBackgroundMusic_
 _returns: void_
 _returns_description: _
 _parameters: _
@@ -1693,14 +1243,272 @@ _description: _
 
 
 
+<!----------------------------------------------------------------------------->
+
+###void stop()
+
+<!--
+_syntax: stop()_
+_name: stop_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
 
 <!----------------------------------------------------------------------------->
 
-### ~ofxGuiGroup()
+###void stopBackgroundMusic(stopNow)
 
 <!--
-_syntax: ~ofxGuiGroup()_
-_name: ~ofxGuiGroup_
+_syntax: stopBackgroundMusic(stopNow)_
+_name: stopBackgroundMusic_
+_returns: void_
+_returns_description: _
+_parameters: bool stopNow_
+_access: protected_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void unloadAllBackgroundMusic()
+
+<!--
+_syntax: unloadAllBackgroundMusic()_
+_name: unloadAllBackgroundMusic_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: protected_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void unloadSound()
+
+<!--
+_syntax: unloadSound()_
+_name: unloadSound_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool update()
+
+<!--
+_syntax: update()_
+_name: update_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void updateInternalsForNewPrime()
+
+<!--
+_syntax: updateInternalsForNewPrime()_
+_name: updateInternalsForNewPrime_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: protected_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void vibrate()
+
+<!--
+_syntax: vibrate()_
+_name: vibrate_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: True_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ~ofxOpenALSoundPlayer()
+
+<!--
+_syntax: ~ofxOpenALSoundPlayer()_
+_name: ~ofxOpenALSoundPlayer_
 _returns: _
 _returns_description: _
 _parameters: _
@@ -1724,7 +1532,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 

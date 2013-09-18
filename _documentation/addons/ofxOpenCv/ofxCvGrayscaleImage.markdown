@@ -16,7 +16,6 @@ _istemplated: False_
 
 ##Description
 
-
 This represents an OpenCV friendly image in grayscale, i.e. without any color data. This is useful because many of the image processing and analysis routines in OpenCV (or OF for that matter) don't require color information. Less information to sort through means faster image analysis and faster applications. You can convert an ofxCvColorImage to an ofxCvGrayscaleImage using the = operator like so:
 
 ~~~~{.cpp}

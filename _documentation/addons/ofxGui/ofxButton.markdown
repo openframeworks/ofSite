@@ -59,6 +59,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool mouseDragged(&args)
@@ -89,6 +90,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -133,6 +135,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool mousePressed(&args)
@@ -163,6 +166,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -207,6 +211,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ### ofxButton()
@@ -237,6 +242,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -281,6 +287,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofxButton * setup(toggleName, width = defaultWidth, height = defaultHeight)
@@ -318,6 +325,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void valueChanged(&v)
@@ -348,6 +356,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 

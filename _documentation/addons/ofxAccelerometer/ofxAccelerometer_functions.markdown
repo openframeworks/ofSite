@@ -12,6 +12,7 @@ _advanced: False_
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofxRegisterAccelEvents(*listener)
@@ -40,6 +41,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 

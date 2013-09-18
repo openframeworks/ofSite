@@ -1,4 +1,4 @@
-#class ofx3DBaseLoader
+#class SoundEngineEffect
 
 
 <!--
@@ -24,52 +24,14 @@ _istemplated: False_
 
 
 
-###void draw()
+###ALenum GetALFormat(inFileFormat)
 
 <!--
-_syntax: draw()_
-_name: draw_
-_returns: void_
+_syntax: GetALFormat(inFileFormat)_
+_name: GetALFormat_
+_returns: ALenum_
 _returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void draw(paramModelTexture)
-
-<!--
-_syntax: draw(paramModelTexture)_
-_name: draw_
-_returns: void_
-_returns_description: _
-_parameters: GLint paramModelTexture_
+_parameters: AudioStreamBasicDescription inFileFormat_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -97,19 +59,18 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###void loadModel(model, scale = 1.0)
+###UInt32 GetEffectID()
 
 <!--
-_syntax: loadModel(model, scale = 1.0)_
-_name: loadModel_
-_returns: void_
+_syntax: GetEffectID()_
+_name: GetEffectID_
+_returns: UInt32_
 _returns_description: _
-_parameters: string model, float scale=1.0_
+_parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -135,19 +96,18 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###void loadModel(model)
+###OSStatus LoadFileData(*inFilePath, *&outData, &outDataSize, &outBufferID)
 
 <!--
-_syntax: loadModel(model)_
-_name: loadModel_
-_returns: void_
+_syntax: LoadFileData(*inFilePath, *&outData, &outDataSize, &outBufferID)_
+_name: LoadFileData_
+_returns: OSStatus_
 _returns_description: _
-_parameters: string model_
+_parameters: const char *inFilePath, void *&outData, UInt32 &outDataSize, ALuint &outBufferID_
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -173,19 +133,166 @@ _description: _
 
 
 
+<!----------------------------------------------------------------------------->
+
+### SoundEngineEffect(*inPath)
+
+<!--
+_syntax: SoundEngineEffect(*inPath)_
+_name: SoundEngineEffect_
+_returns: _
+_returns_description: _
+_parameters: const char *inPath_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
 
 <!----------------------------------------------------------------------------->
 
-### ofx3DBaseLoader()
+### SoundEngineEffect(*inPath, inDoLoop)
 
 <!--
-_syntax: ofx3DBaseLoader()_
-_name: ofx3DBaseLoader_
+_syntax: SoundEngineEffect(*inPath, inDoLoop)_
+_name: SoundEngineEffect_
+_returns: _
+_returns_description: _
+_parameters: const char *inPath, bool inDoLoop_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###UInt32 getDataSize()
+
+<!--
+_syntax: getDataSize()_
+_name: getDataSize_
+_returns: UInt32_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###OSStatus initialize()
+
+<!--
+_syntax: initialize()_
+_name: initialize_
+_returns: OSStatus_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ~SoundEngineEffect()
+
+<!--
+_syntax: ~SoundEngineEffect()_
+_name: ~SoundEngineEffect_
 _returns: _
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -204,45 +311,6 @@ _inlined_description: _
 
 
 _description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ~ofx3DBaseLoader()
-
-<!--
-_syntax: ~ofx3DBaseLoader()_
-_name: ~ofx3DBaseLoader_
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
 
 
 
@@ -255,29 +323,4 @@ _description: _
 ##Variables
 
 
-
-###bool hasTexture
-
-<!--
-_name: hasTexture_
-_type: bool_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
 

@@ -12,6 +12,7 @@ _advanced: True_
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofFloatColor aiColorToOfColor(&c)
@@ -40,6 +41,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -82,6 +84,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void aiMatrix4x4ToOfMatrix4x4(&aim, &ofm)
@@ -110,6 +113,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -152,6 +156,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofVec3f aiVecToOfVec(&v)
@@ -187,6 +192,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###vector< ofVec3f > aiVecVecToOfVecVec(&v)
@@ -215,6 +221,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 

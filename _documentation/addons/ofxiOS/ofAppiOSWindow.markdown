@@ -1,14 +1,20 @@
-#class ofxOpenALSoundPlayer
+#class ofAppiOSWindow
+
+
+<!--
+_visible: True_
+_advanced: False_
+_istemplated: False_
+-->
+
+##InlineDescription
+
+
+
+
 
 
 ##Description
-
-
-
-
-
-
-
 
 
 
@@ -18,23 +24,217 @@
 
 
 
-###void initializeSoundEngine()
+###bool disableAntiAliasing()
 
 <!--
-_syntax: initializeSoundEngine()_
-_name: initializeSoundEngine_
+_syntax: disableAntiAliasing()_
+_name: disableAntiAliasing_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool disableDepthBuffer()
+
+<!--
+_syntax: disableDepthBuffer()_
+_name: disableDepthBuffer_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool disableHardwareOrientation()
+
+<!--
+_syntax: disableHardwareOrientation()_
+_name: disableHardwareOrientation_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool disableOrientationAnimation()
+
+<!--
+_syntax: disableOrientationAnimation()_
+_name: disableOrientationAnimation_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool disableRetina()
+
+<!--
+_syntax: disableRetina()_
+_name: disableRetina_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void disableSetupScreen()
+
+<!--
+_syntax: disableSetupScreen()_
+_name: disableSetupScreen_
 _returns: void_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: yes_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
 
 _description: _
 
@@ -44,6 +244,36 @@ _description: _
 
 
 
+<!----------------------------------------------------------------------------->
+
+###bool doesHWOrientation()
+
+<!--
+_syntax: doesHWOrientation()_
+_name: doesHWOrientation_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -53,23 +283,291 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void closeSoundEngine()
+###bool enableAntiAliasing(samples)
 
 <!--
-_syntax: closeSoundEngine()_
-_name: closeSoundEngine_
+_syntax: enableAntiAliasing(samples)_
+_name: enableAntiAliasing_
+_returns: bool_
+_returns_description: _
+_parameters: int samples_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool enableDepthBuffer()
+
+<!--
+_syntax: enableDepthBuffer()_
+_name: enableDepthBuffer_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool enableHardwareOrientation()
+
+<!--
+_syntax: enableHardwareOrientation()_
+_name: enableHardwareOrientation_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool enableOrientationAnimation()
+
+<!--
+_syntax: enableOrientationAnimation()_
+_name: enableOrientationAnimation_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool enableRendererES1()
+
+<!--
+_syntax: enableRendererES1()_
+_name: enableRendererES1_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool enableRendererES2()
+
+<!--
+_syntax: enableRendererES2()_
+_name: enableRendererES2_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool enableRetina()
+
+<!--
+_syntax: enableRetina()_
+_name: enableRetina_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void enableSetupScreen()
+
+<!--
+_syntax: enableSetupScreen()_
+_name: enableSetupScreen_
 _returns: void_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: yes_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
 
 _description: _
 
@@ -79,802 +577,34 @@ _description: _
 
 
 
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
-###void vibrate()
+###int getAntiAliasingSampleCount()
 
 <!--
-_syntax: vibrate()_
-_name: vibrate_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: yes_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofxALSoundSetListenerLocation(x, y, z)
-
-<!--
-_syntax: ofxALSoundSetListenerLocation(x, y, z)_
-_name: ofxALSoundSetListenerLocation_
-_returns: void_
-_returns_description: _
-_parameters: float x, float y, float z_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: yes_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofxALSoundSetListenerGain(gain)
-
-<!--
-_syntax: ofxALSoundSetListenerGain(gain)_
-_name: ofxALSoundSetListenerGain_
-_returns: void_
-_returns_description: _
-_parameters: float gain_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: yes_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofxALSoundSetListenerVelocity(x, y, z)
-
-<!--
-_syntax: ofxALSoundSetListenerVelocity(x, y, z)_
-_name: ofxALSoundSetListenerVelocity_
-_returns: void_
-_returns_description: _
-_parameters: float x, float y, float z_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: yes_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofxALSoundSetReferenceDistance(dist)
-
-<!--
-_syntax: ofxALSoundSetReferenceDistance(dist)_
-_name: ofxALSoundSetReferenceDistance_
-_returns: void_
-_returns_description: _
-_parameters: float dist_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: yes_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofxALSoundSetMaxDistance(dist)
-
-<!--
-_syntax: ofxALSoundSetMaxDistance(dist)_
-_name: ofxALSoundSetMaxDistance_
-_returns: void_
-_returns_description: _
-_parameters: float dist_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: yes_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofxOpenALSoundPlayer()
-
-<!--
-_syntax: ofxOpenALSoundPlayer()_
-_name: ofxOpenALSoundPlayer_
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ~ofxOpenALSoundPlayer()
-
-<!--
-_syntax: ~ofxOpenALSoundPlayer()_
-_name: ~ofxOpenALSoundPlayer_
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void loadSound(fileName, stream = false)
-
-<!--
-_syntax: loadSound(fileName, stream = false)_
-_name: loadSound_
-_returns: void_
-_returns_description: _
-_parameters: string fileName, bool stream=false_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void unloadSound()
-
-<!--
-_syntax: unloadSound()_
-_name: unloadSound_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void play()
-
-<!--
-_syntax: play()_
-_name: play_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void stop()
-
-<!--
-_syntax: stop()_
-_name: stop_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setVolume(_vol)
-
-<!--
-_syntax: setVolume(_vol)_
-_name: setVolume_
-_returns: void_
-_returns_description: _
-_parameters: float _vol_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setPan(_pan)
-
-<!--
-_syntax: setPan(_pan)_
-_name: setPan_
-_returns: void_
-_returns_description: _
-_parameters: float _pan_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setPitch(_pitch)
-
-<!--
-_syntax: setPitch(_pitch)_
-_name: setPitch_
-_returns: void_
-_returns_description: _
-_parameters: float _pitch_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setSpeed(_speed)
-
-<!--
-_syntax: setSpeed(_speed)_
-_name: setSpeed_
-_returns: void_
-_returns_description: _
-_parameters: float _speed_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setPaused(bP)
-
-<!--
-_syntax: setPaused(bP)_
-_name: setPaused_
-_returns: void_
-_returns_description: _
-_parameters: bool bP_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setLoop(bLp)
-
-<!--
-_syntax: setLoop(bLp)_
-_name: setLoop_
-_returns: void_
-_returns_description: _
-_parameters: bool bLp_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setMultiPlay(bMp)
-
-<!--
-_syntax: setMultiPlay(bMp)_
-_name: setMultiPlay_
-_returns: void_
-_returns_description: _
-_parameters: bool bMp_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setPosition(pct)
-
-<!--
-_syntax: setPosition(pct)_
-_name: setPosition_
-_returns: void_
-_returns_description: _
-_parameters: float pct_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setPositionMS(ms)
-
-<!--
-_syntax: setPositionMS(ms)_
-_name: setPositionMS_
-_returns: void_
-_returns_description: _
-_parameters: int ms_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float getPosition()
-
-<!--
-_syntax: getPosition()_
-_name: getPosition_
-_returns: float_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int getPositionMS()
-
-<!--
-_syntax: getPositionMS()_
-_name: getPositionMS_
+_syntax: getAntiAliasingSampleCount()_
+_name: getAntiAliasingSampleCount_
 _returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
 
 _description: _
 
@@ -884,6 +614,36 @@ _description: _
 
 
 
+<!----------------------------------------------------------------------------->
+
+###int getHeight()
+
+<!--
+_syntax: getHeight()_
+_name: getHeight_
+_returns: int_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -893,23 +653,365 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool getIsPlaying()
+###ofAppiOSWindow * getInstance()
 
 <!--
-_syntax: getIsPlaying()_
-_name: getIsPlaying_
+_syntax: getInstance()_
+_name: getInstance_
+_returns: ofAppiOSWindow *_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: True_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofOrientation getOrientation()
+
+<!--
+_syntax: getOrientation()_
+_name: getOrientation_
+_returns: ofOrientation_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofPoint getScreenSize()
+
+<!--
+_syntax: getScreenSize()_
+_name: getScreenSize_
+_returns: ofPoint_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int getWidth()
+
+<!--
+_syntax: getWidth()_
+_name: getWidth_
+_returns: int_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int getWindowMode()
+
+<!--
+_syntax: getWindowMode()_
+_name: getWindowMode_
+_returns: int_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofPoint getWindowPosition()
+
+<!--
+_syntax: getWindowPosition()_
+_name: getWindowPosition_
+_returns: ofPoint_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofPoint getWindowSize()
+
+<!--
+_syntax: getWindowSize()_
+_name: getWindowSize_
+_returns: ofPoint_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void hideCursor()
+
+<!--
+_syntax: hideCursor()_
+_name: hideCursor_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void initializeWindow()
+
+<!--
+_syntax: initializeWindow()_
+_name: initializeWindow_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool isAntiAliasingEnabled()
+
+<!--
+_syntax: isAntiAliasingEnabled()_
+_name: isAntiAliasingEnabled_
 _returns: bool_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
 
 _description: _
 
@@ -919,172 +1021,34 @@ _description: _
 
 
 
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
-###float getPitch()
+###bool isDepthBufferEnabled()
 
 <!--
-_syntax: getPitch()_
-_name: getPitch_
-_returns: float_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float getSpeed()
-
-<!--
-_syntax: getSpeed()_
-_name: getSpeed_
-_returns: float_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float getPan()
-
-<!--
-_syntax: getPan()_
-_name: getPan_
-_returns: float_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setLocation(x, y, z)
-
-<!--
-_syntax: setLocation(x, y, z)_
-_name: setLocation_
-_returns: void_
-_returns_description: _
-_parameters: float x, float y, float z_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool update()
-
-<!--
-_syntax: update()_
-_name: update_
+_syntax: isDepthBufferEnabled()_
+_name: isDepthBufferEnabled_
 _returns: bool_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1094,32 +1058,34 @@ _description: _
 
 
 
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
-###bool prime()
+###bool isRendererES1()
 
 <!--
-_syntax: prime()_
-_name: prime_
+_syntax: isRendererES1()_
+_name: isRendererES1_
 _returns: bool_
 _returns_description: _
 _parameters: _
-_access: protected_
-_version_started: 007_
+_access: public_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1129,6 +1095,36 @@ _description: _
 
 
 
+<!----------------------------------------------------------------------------->
+
+###bool isRendererES2()
+
+<!--
+_syntax: isRendererES2()_
+_name: isRendererES2_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1138,23 +1134,476 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void updateInternalsForNewPrime()
+###bool isRetinaEnabled()
 
 <!--
-_syntax: updateInternalsForNewPrime()_
-_name: updateInternalsForNewPrime_
+_syntax: isRetinaEnabled()_
+_name: isRetinaEnabled_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool isRetinaSupportedOnDevice()
+
+<!--
+_syntax: isRetinaSupportedOnDevice()_
+_name: isRetinaSupportedOnDevice_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool isSetupScreenEnabled()
+
+<!--
+_syntax: isSetupScreenEnabled()_
+_name: isSetupScreenEnabled_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofAppiOSWindow()
+
+<!--
+_syntax: ofAppiOSWindow()_
+_name: ofAppiOSWindow_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void runAppViaInfiniteLoop(*appPtr)
+
+<!--
+_syntax: runAppViaInfiniteLoop(*appPtr)_
+_name: runAppViaInfiniteLoop_
+_returns: void_
+_returns_description: _
+_parameters: ofBaseApp *appPtr_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setFullscreen(fullscreen)
+
+<!--
+_syntax: setFullscreen(fullscreen)_
+_name: setFullscreen_
+_returns: void_
+_returns_description: _
+_parameters: bool fullscreen_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setOrientation(orientation)
+
+<!--
+_syntax: setOrientation(orientation)_
+_name: setOrientation_
+_returns: void_
+_returns_description: _
+_parameters: ofOrientation orientation_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setVerticalSync(enabled)
+
+<!--
+_syntax: setVerticalSync(enabled)_
+_name: setVerticalSync_
+_returns: void_
+_returns_description: _
+_parameters: bool enabled_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setWindowPosition(x, y)
+
+<!--
+_syntax: setWindowPosition(x, y)_
+_name: setWindowPosition_
+_returns: void_
+_returns_description: _
+_parameters: int x, int y_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setWindowShape(w, h)
+
+<!--
+_syntax: setWindowShape(w, h)_
+_name: setWindowShape_
+_returns: void_
+_returns_description: _
+_parameters: int w, int h_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setWindowTitle(title)
+
+<!--
+_syntax: setWindowTitle(title)_
+_name: setWindowTitle_
+_returns: void_
+_returns_description: _
+_parameters: string title_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setupOpenGL(w, h, screenMode)
+
+<!--
+_syntax: setupOpenGL(w, h, screenMode)_
+_name: setupOpenGL_
+_returns: void_
+_returns_description: _
+_parameters: int w, int h, int screenMode_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void showCursor()
+
+<!--
+_syntax: showCursor()_
+_name: showCursor_
 _returns: void_
 _returns_description: _
 _parameters: _
-_access: protected_
-_version_started: 007_
+_access: public_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1164,32 +1613,34 @@ _description: _
 
 
 
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
-###void loadBackgroundMusic(fileName, queue, loadAtOnce)
+###void startAppWithDelegate(appDelegateClassName)
 
 <!--
-_syntax: loadBackgroundMusic(fileName, queue, loadAtOnce)_
-_name: loadBackgroundMusic_
+_syntax: startAppWithDelegate(appDelegateClassName)_
+_name: startAppWithDelegate_
 _returns: void_
 _returns_description: _
-_parameters: string fileName, bool queue, bool loadAtOnce_
-_access: protected_
-_version_started: 007_
+_parameters: string appDelegateClassName_
+_access: public_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
 
 _description: _
 
@@ -1199,76 +1650,36 @@ _description: _
 
 
 
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
-###void unloadAllBackgroundMusic()
+###void toggleFullscreen()
 
 <!--
-_syntax: unloadAllBackgroundMusic()_
-_name: unloadAllBackgroundMusic_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: protected_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void startBackgroundMusic()
-
-<!--
-_syntax: startBackgroundMusic()_
-_name: startBackgroundMusic_
+_syntax: toggleFullscreen()_
+_name: toggleFullscreen_
 _returns: void_
 _returns_description: _
 _parameters: _
-_access: protected_
-_version_started: 007_
+_access: public_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
 _description: _
-
-
-
-
-
-
-
 
 
 
@@ -1278,25 +1689,25 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void stopBackgroundMusic(stopNow)
+### ~ofAppiOSWindow()
 
 <!--
-_syntax: stopBackgroundMusic(stopNow)_
-_name: stopBackgroundMusic_
-_returns: void_
+_syntax: ~ofAppiOSWindow()_
+_name: ~ofAppiOSWindow_
+_returns: _
 _returns_description: _
-_parameters: bool stopNow_
-_access: protected_
-_version_started: 007_
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
 
 
@@ -1304,41 +1715,8 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setBackgroundMusicVolume(bgVol)
-
-<!--
-_syntax: setBackgroundMusicVolume(bgVol)_
-_name: setBackgroundMusicVolume_
-_returns: void_
-_returns_description: _
-_parameters: float bgVol_
-_access: protected_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
 
 _description: _
-
-
-
-
-
-
-
 
 
 
@@ -1351,469 +1729,4 @@ _description: _
 ##Variables
 
 
-
-###bool isStreaming
-
-<!--
-_name: isStreaming_
-_type: bool_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool bMultiPlay
-
-<!--
-_name: bMultiPlay_
-_type: bool_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool bLoop
-
-<!--
-_name: bLoop_
-_type: bool_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool bLoadedOk
-
-<!--
-_name: bLoadedOk_
-_type: bool_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool bPaused
-
-<!--
-_name: bPaused_
-_type: bool_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float pan
-
-<!--
-_name: pan_
-_type: float_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float pitch
-
-<!--
-_name: pitch_
-_type: float_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float volume
-
-<!--
-_name: volume_
-_type: float_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###unsigned int length
-
-<!--
-_name: length_
-_type: unsigned int_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofPoint location
-
-<!--
-_name: location_
-_type: ofPoint_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###UInt32 myId
-
-<!--
-_name: myId_
-_type: UInt32_
-_access: protected_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ALuint myPrimedId
-
-<!--
-_name: myPrimedId_
-_type: ALuint_
-_access: protected_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool stopped
-
-<!--
-_name: stopped_
-_type: bool_
-_access: protected_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool iAmAnMp3
-
-<!--
-_name: iAmAnMp3_
-_type: bool_
-_access: protected_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###multiPlaySource retainedBuffers
-
-<!--
-_name: retainedBuffers_
-_type: multiPlaySource_
-_access: protected_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
 

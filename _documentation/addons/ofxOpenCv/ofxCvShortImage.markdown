@@ -16,7 +16,6 @@ _istemplated: False_
 
 ##Description
 
-
 The ofxCvShortImage represents the color data of each pixel as unsigned char variables or values between 0 and 255. They are a slightly smaller (i.e. less data heavy) way of representing the data in an image but they also have less precision than ofxCvFloatImage. Usually when you're capturing from a camera or video into OpenCV, you're using ofxCvShortImage. Keep in mind though that most of the image operations in OpenCV expect a grayscale image, which you can construct using the ofxCvGrayscaleImage.
 
 

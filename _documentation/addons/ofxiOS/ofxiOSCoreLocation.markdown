@@ -1,9 +1,9 @@
-#class ofxAndroidVideoGrabber
+#class ofxiOSCoreLocation
 
 
 <!--
 _visible: True_
-_advanced: True_
+_advanced: False_
 _istemplated: False_
 -->
 
@@ -24,16 +24,16 @@ _istemplated: False_
 
 
 
-###void close()
+###double getAltitude()
 
 <!--
-_syntax: close()_
-_name: close_
-_returns: void_
+_syntax: getAltitude()_
+_name: getAltitude_
+_returns: double_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -59,19 +59,18 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###ofPixelsRef getAuxBuffer()
+###double getAltitudeAccuracy()
 
 <!--
-_syntax: getAuxBuffer()_
-_name: getAuxBuffer_
-_returns: ofPixelsRef_
+_syntax: getAltitudeAccuracy()_
+_name: getAltitudeAccuracy_
+_returns: double_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -97,19 +96,18 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###float getHeight()
+###double getCompassX()
 
 <!--
-_syntax: getHeight()_
-_name: getHeight_
-_returns: float_
+_syntax: getCompassX()_
+_name: getCompassX_
+_returns: double_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -135,19 +133,18 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###ofPixelFormat getPixelFormat()
+###double getCompassY()
 
 <!--
-_syntax: getPixelFormat()_
-_name: getPixelFormat_
-_returns: ofPixelFormat_
+_syntax: getCompassY()_
+_name: getCompassY_
+_returns: double_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -173,19 +170,18 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###unsigned char * getPixels()
+###double getCompassZ()
 
 <!--
-_syntax: getPixels()_
-_name: getPixels_
-_returns: unsigned char *_
+_syntax: getCompassZ()_
+_name: getCompassZ_
+_returns: double_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -211,19 +207,18 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###ofPixelsRef getPixelsRef()
+###double getDistMoved()
 
 <!--
-_syntax: getPixelsRef()_
-_name: getPixelsRef_
-_returns: ofPixelsRef_
+_syntax: getDistMoved()_
+_name: getDistMoved_
+_returns: double_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -249,19 +244,18 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###float getWidth()
+###double getHeadingAccuracy()
 
 <!--
-_syntax: getWidth()_
-_name: getWidth_
-_returns: float_
+_syntax: getHeadingAccuracy()_
+_name: getHeadingAccuracy_
+_returns: double_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -287,57 +281,18 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###bool initGrabber(w, h)
+###double getLatitude()
 
 <!--
-_syntax: initGrabber(w, h)_
-_name: initGrabber_
-_returns: bool_
-_returns_description: _
-_parameters: int w, int h_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool isFrameNew()
-
-<!--
-_syntax: isFrameNew()_
-_name: isFrameNew_
-_returns: bool_
+_syntax: getLatitude()_
+_name: getLatitude_
+_returns: double_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -363,19 +318,18 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###vector< ofVideoDevice > listDevices()
+###double getLocationAccuracy()
 
 <!--
-_syntax: listDevices()_
-_name: listDevices_
-_returns: vector< ofVideoDevice >_
+_syntax: getLocationAccuracy()_
+_name: getLocationAccuracy_
+_returns: double_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -401,19 +355,129 @@ _description: _
 
 
 
+<!----------------------------------------------------------------------------->
+
+###double getLongitude()
+
+<!--
+_syntax: getLongitude()_
+_name: getLongitude_
+_returns: double_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
 
 <!----------------------------------------------------------------------------->
 
-### ofxAndroidVideoGrabber()
+###double getMagneticHeading()
 
 <!--
-_syntax: ofxAndroidVideoGrabber()_
-_name: ofxAndroidVideoGrabber_
+_syntax: getMagneticHeading()_
+_name: getMagneticHeading_
+_returns: double_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###double getTrueHeading()
+
+<!--
+_syntax: getTrueHeading()_
+_name: getTrueHeading_
+_returns: double_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofxiOSCoreLocation()
+
+<!--
+_syntax: ofxiOSCoreLocation()_
+_name: ofxiOSCoreLocation_
 _returns: _
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -439,19 +503,18 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###bool setAutoFocus(autofocus)
+###bool startHeading()
 
 <!--
-_syntax: setAutoFocus(autofocus)_
-_name: setAutoFocus_
+_syntax: startHeading()_
+_name: startHeading_
 _returns: bool_
 _returns_description: _
-_parameters: bool autofocus_
+_parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -477,95 +540,18 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###void setDesiredFrameRate(framerate)
+###bool startLocation()
 
 <!--
-_syntax: setDesiredFrameRate(framerate)_
-_name: setDesiredFrameRate_
-_returns: void_
-_returns_description: _
-_parameters: int framerate_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setDeviceID(_deviceID)
-
-<!--
-_syntax: setDeviceID(_deviceID)_
-_name: setDeviceID_
-_returns: void_
-_returns_description: _
-_parameters: int _deviceID_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool setPixelFormat(pixelFormat)
-
-<!--
-_syntax: setPixelFormat(pixelFormat)_
-_name: setPixelFormat_
+_syntax: startLocation()_
+_name: startLocation_
 _returns: bool_
 _returns_description: _
-_parameters: ofPixelFormat pixelFormat_
+_parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -591,19 +577,18 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###void setVerbose(bTalkToMe)
+###bool startMonitoringSignificantLocationChanges()
 
 <!--
-_syntax: setVerbose(bTalkToMe)_
-_name: setVerbose_
-_returns: void_
+_syntax: startMonitoringSignificantLocationChanges()_
+_name: startMonitoringSignificantLocationChanges_
+_returns: bool_
 _returns_description: _
-_parameters: bool bTalkToMe_
+_parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -629,19 +614,18 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###void update()
+###void stopHeading()
 
 <!--
-_syntax: update()_
-_name: update_
+_syntax: stopHeading()_
+_name: stopHeading_
 _returns: void_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -667,19 +651,18 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###void videoSettings()
+###void stopLocation()
 
 <!--
-_syntax: videoSettings()_
-_name: videoSettings_
+_syntax: stopLocation()_
+_name: stopLocation_
 _returns: void_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -705,19 +688,55 @@ _description: _
 
 
 
+<!----------------------------------------------------------------------------->
+
+###void stopMonitoringSignificantLocationChanges()
+
+<!--
+_syntax: stopMonitoringSignificantLocationChanges()_
+_name: stopMonitoringSignificantLocationChanges_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
 
 <!----------------------------------------------------------------------------->
 
-### ~ofxAndroidVideoGrabber()
+### ~ofxiOSCoreLocation()
 
 <!--
-_syntax: ~ofxAndroidVideoGrabber()_
-_name: ~ofxAndroidVideoGrabber_
+_syntax: ~ofxiOSCoreLocation()_
+_name: ~ofxiOSCoreLocation_
 _returns: _
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -736,7 +755,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -749,179 +767,4 @@ _description: _
 ##Variables
 
 
-
-###int attemptFramerate
-
-<!--
-_name: attemptFramerate_
-_type: int_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofPixels auxBuffer
-
-<!--
-_name: auxBuffer_
-_type: ofPixels_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool bGrabberInited
-
-<!--
-_name: bGrabberInited_
-_type: bool_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool bIsFrameNew
-
-<!--
-_name: bIsFrameNew_
-_type: bool_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofPixelFormat internalPixelFormat
-
-<!--
-_name: internalPixelFormat_
-_type: ofPixelFormat_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofEvent< ofPixels > newFrameE
-
-<!--
-_name: newFrameE_
-_type: ofEvent< ofPixels >_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofPixels pixels
-
-<!--
-_name: pixels_
-_type: ofPixels_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
 

@@ -12,6 +12,7 @@ _advanced: False_
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofxRegisterMultitouch(*app)
@@ -47,6 +48,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofxUnregisterMultitouch(*app)
@@ -75,6 +77,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 

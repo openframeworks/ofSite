@@ -12,6 +12,7 @@ _advanced: False_
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofxGuiSetBackgroundColor(&color)
@@ -40,6 +41,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -82,6 +84,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofxGuiSetBorderColor(&color)
@@ -110,6 +113,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -152,6 +156,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofxGuiSetDefaultWidth(width)
@@ -180,6 +185,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -222,6 +228,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofxGuiSetFont(&fontPath, fontsize, _bAntiAliased = true, _bFullCharacterSet = false, dpi = 0)
@@ -250,6 +257,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -292,6 +300,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofxGuiSetTextColor(&color)
@@ -327,6 +336,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofxGuiSetTextPadding(padding)
@@ -355,6 +365,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 

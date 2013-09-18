@@ -12,6 +12,7 @@ _advanced: False_
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ostream & operator<<(&ostr, &location)
@@ -47,6 +48,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###istream & operator>>(&istr, &location)
@@ -75,6 +77,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 

@@ -16,7 +16,6 @@ _istemplated: False_
 
 ##Description
 
-
 UDP is a network protocol that is faster and less rigid in its packet transmission requirements. Unlike TCP, UDP has no notion of connections nor does it check to see if a packet has been successfuly recieved by the client. A UDP socket can receive datagrams from any server on the network and send datagrams to any host on the network. In addition, datagrams may arrive in any order, never arrive at all, or be duplicated in transit. There are three modes of UDP servers: socket (aka unicast), broadcast, and multicast. 
 
 Unicast refers to a unique host-client. This is a one-to one connection between the client and the server 

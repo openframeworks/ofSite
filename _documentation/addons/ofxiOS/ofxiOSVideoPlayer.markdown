@@ -1,9 +1,9 @@
-#class ofxGuiGroup
+#class ofxiOSVideoPlayer
 
 
 <!--
 _visible: True_
-_advanced: False_
+_advanced: True_
 _istemplated: False_
 -->
 
@@ -24,467 +24,11 @@ _istemplated: False_
 
 
 
-###void add(*element)
+###void close()
 
 <!--
-_syntax: add(*element)_
-_name: add_
-_returns: void_
-_returns_description: _
-_parameters: ofxBaseGui *element_
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void add(&parameters)
-
-<!--
-_syntax: add(&parameters)_
-_name: add_
-_returns: void_
-_returns_description: _
-_parameters: const ofParameterGroup &parameters_
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void add(&parameter)
-
-<!--
-_syntax: add(&parameter)_
-_name: add_
-_returns: void_
-_returns_description: _
-_parameters: ofParameter< float > &parameter_
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void add(&parameter)
-
-<!--
-_syntax: add(&parameter)_
-_name: add_
-_returns: void_
-_returns_description: _
-_parameters: ofParameter< int > &parameter_
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void add(&parameter)
-
-<!--
-_syntax: add(&parameter)_
-_name: add_
-_returns: void_
-_returns_description: _
-_parameters: ofParameter< bool > &parameter_
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void add(&parameter)
-
-<!--
-_syntax: add(&parameter)_
-_name: add_
-_returns: void_
-_returns_description: _
-_parameters: ofParameter< string > &parameter_
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void add(&parameter)
-
-<!--
-_syntax: add(&parameter)_
-_name: add_
-_returns: void_
-_returns_description: _
-_parameters: ofParameter< ofVec2f > &parameter_
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void add(&parameter)
-
-<!--
-_syntax: add(&parameter)_
-_name: add_
-_returns: void_
-_returns_description: _
-_parameters: ofParameter< ofVec3f > &parameter_
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void add(&parameter)
-
-<!--
-_syntax: add(&parameter)_
-_name: add_
-_returns: void_
-_returns_description: _
-_parameters: ofParameter< ofVec4f > &parameter_
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void add(&parameter)
-
-<!--
-_syntax: add(&parameter)_
-_name: add_
-_returns: void_
-_returns_description: _
-_parameters: ofParameter< ofColor > &parameter_
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void add(&parameter)
-
-<!--
-_syntax: add(&parameter)_
-_name: add_
-_returns: void_
-_returns_description: _
-_parameters: ofParameter< ofShortColor > &parameter_
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void add(&parameter)
-
-<!--
-_syntax: add(&parameter)_
-_name: add_
-_returns: void_
-_returns_description: _
-_parameters: ofParameter< ofFloatColor > &parameter_
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void clear()
-
-<!--
-_syntax: clear()_
-_name: clear_
+_syntax: close()_
+_name: close_
 _returns: void_
 _returns_description: _
 _parameters: _
@@ -515,55 +59,16 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###void generateDraw()
+###void firstFrame()
 
 <!--
-_syntax: generateDraw()_
-_name: generateDraw_
+_syntax: firstFrame()_
+_name: firstFrame_
 _returns: void_
 _returns_description: _
 _parameters: _
-_access: protected_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofxButton & getButton(name)
-
-<!--
-_syntax: getButton(name)_
-_name: getButton_
-_returns: ofxButton &_
-_returns_description: _
-_parameters: string name_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -591,91 +96,14 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###ofxBaseGui * getControl(name)
+###void * getAVFoundationVideoPlayer()
 
 <!--
-_syntax: getControl(name)_
-_name: getControl_
-_returns: ofxBaseGui *_
-_returns_description: _
-_parameters: string name_
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofxBaseGui * getControl(num)
-
-<!--
-_syntax: getControl(num)_
-_name: getControl_
-_returns: ofxBaseGui *_
-_returns_description: _
-_parameters: int num_
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###vector< string > getControlNames()
-
-<!--
-_syntax: getControlNames()_
-_name: getControlNames_
-_returns: vector< string >_
+_syntax: getAVFoundationVideoPlayer()_
+_name: getAVFoundationVideoPlayer_
+_returns: void *_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -705,166 +133,13 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###ControlType & getControlType(name)
+###int getCurrentFrame()
 
 <!--
-_syntax: getControlType(name)_
-_name: getControlType_
-_returns: ControlType &_
-_returns_description: _
-_parameters: string name_
-_access: protected_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofxFloatSlider & getFloatSlider(name)
-
-<!--
-_syntax: getFloatSlider(name)_
-_name: getFloatSlider_
-_returns: ofxFloatSlider &_
-_returns_description: _
-_parameters: string name_
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofxGuiGroup & getGroup(name)
-
-<!--
-_syntax: getGroup(name)_
-_name: getGroup_
-_returns: ofxGuiGroup &_
-_returns_description: _
-_parameters: string name_
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofxIntSlider & getIntSlider(name)
-
-<!--
-_syntax: getIntSlider(name)_
-_name: getIntSlider_
-_returns: ofxIntSlider &_
-_returns_description: _
-_parameters: string name_
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int getNumControls()
-
-<!--
-_syntax: getNumControls()_
-_name: getNumControls_
+_syntax: getCurrentFrame()_
+_name: getCurrentFrame_
 _returns: int_
 _returns_description: _
 _parameters: _
@@ -895,15 +170,14 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###ofAbstractParameter & getParameter()
+###float getDuration()
 
 <!--
-_syntax: getParameter()_
-_name: getParameter_
-_returns: ofAbstractParameter &_
+_syntax: getDuration()_
+_name: getDuration_
+_returns: float_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -933,15 +207,569 @@ _description: _
 
 
 
+<!----------------------------------------------------------------------------->
+
+###float getHeight()
+
+<!--
+_syntax: getHeight()_
+_name: getHeight_
+_returns: float_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
 
 <!----------------------------------------------------------------------------->
 
-###ofxToggle & getToggle(name)
+###bool getIsMovieDone()
 
 <!--
-_syntax: getToggle(name)_
-_name: getToggle_
-_returns: ofxToggle &_
+_syntax: getIsMovieDone()_
+_name: getIsMovieDone_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofLoopType getLoopState()
+
+<!--
+_syntax: getLoopState()_
+_name: getLoopState_
+_returns: ofLoopType_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofPixelFormat getPixelFormat()
+
+<!--
+_syntax: getPixelFormat()_
+_name: getPixelFormat_
+_returns: ofPixelFormat_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###unsigned char * getPixels()
+
+<!--
+_syntax: getPixels()_
+_name: getPixels_
+_returns: unsigned char *_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofPixelsRef getPixelsRef()
+
+<!--
+_syntax: getPixelsRef()_
+_name: getPixelsRef_
+_returns: ofPixelsRef_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float getPosition()
+
+<!--
+_syntax: getPosition()_
+_name: getPosition_
+_returns: float_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float getSpeed()
+
+<!--
+_syntax: getSpeed()_
+_name: getSpeed_
+_returns: float_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofTexture * getTexture()
+
+<!--
+_syntax: getTexture()_
+_name: getTexture_
+_returns: ofTexture *_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int getTotalNumFrames()
+
+<!--
+_syntax: getTotalNumFrames()_
+_name: getTotalNumFrames_
+_returns: int_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float getWidth()
+
+<!--
+_syntax: getWidth()_
+_name: getWidth_
+_returns: float_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool isFrameNew()
+
+<!--
+_syntax: isFrameNew()_
+_name: isFrameNew_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool isLoaded()
+
+<!--
+_syntax: isLoaded()_
+_name: isLoaded_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool isPaused()
+
+<!--
+_syntax: isPaused()_
+_name: isPaused_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool isPlaying()
+
+<!--
+_syntax: isPlaying()_
+_name: isPlaying_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool loadMovie(name)
+
+<!--
+_syntax: loadMovie(name)_
+_name: loadMovie_
+_returns: bool_
 _returns_description: _
 _parameters: string name_
 _access: public_
@@ -971,14 +799,13 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###void maximize()
+###void nextFrame()
 
 <!--
-_syntax: maximize()_
-_name: maximize_
+_syntax: nextFrame()_
+_name: nextFrame_
 _returns: void_
 _returns_description: _
 _parameters: _
@@ -1009,280 +836,13 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###void maximizeAll()
+### ofxiOSVideoPlayer()
 
 <!--
-_syntax: maximizeAll()_
-_name: maximizeAll_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void minimize()
-
-<!--
-_syntax: minimize()_
-_name: minimize_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void minimizeAll()
-
-<!--
-_syntax: minimizeAll()_
-_name: minimizeAll_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool mouseDragged(&args)
-
-<!--
-_syntax: mouseDragged(&args)_
-_name: mouseDragged_
-_returns: bool_
-_returns_description: _
-_parameters: ofMouseEventArgs &args_
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool mouseMoved(&args)
-
-<!--
-_syntax: mouseMoved(&args)_
-_name: mouseMoved_
-_returns: bool_
-_returns_description: _
-_parameters: ofMouseEventArgs &args_
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool mousePressed(&args)
-
-<!--
-_syntax: mousePressed(&args)_
-_name: mousePressed_
-_returns: bool_
-_returns_description: _
-_parameters: ofMouseEventArgs &args_
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool mouseReleased(&args)
-
-<!--
-_syntax: mouseReleased(&args)_
-_name: mouseReleased_
-_returns: bool_
-_returns_description: _
-_parameters: ofMouseEventArgs &args_
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofxGuiGroup()
-
-<!--
-_syntax: ofxGuiGroup()_
-_name: ofxGuiGroup_
+_syntax: ofxiOSVideoPlayer()_
+_name: ofxiOSVideoPlayer_
 _returns: _
 _returns_description: _
 _parameters: _
@@ -1313,17 +873,16 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-### ofxGuiGroup(&parameters, _filename = "settings.xml", x = 10, y = 10)
+###void play()
 
 <!--
-_syntax: ofxGuiGroup(&parameters, _filename = "settings.xml", x = 10, y = 10)_
-_name: ofxGuiGroup_
-_returns: _
+_syntax: play()_
+_name: play_
+_returns: void_
 _returns_description: _
-_parameters: const ofParameterGroup &parameters, string _filename="settings.xml", float x=10, float y=10_
+_parameters: _
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -1351,18 +910,17 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###void registerMouseEvents()
+###void previousFrame()
 
 <!--
-_syntax: registerMouseEvents()_
-_name: registerMouseEvents_
+_syntax: previousFrame()_
+_name: previousFrame_
 _returns: void_
 _returns_description: _
 _parameters: _
-_access: protected_
+_access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
@@ -1389,18 +947,17 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###void render()
+###void setFrame(frame)
 
 <!--
-_syntax: render()_
-_name: render_
+_syntax: setFrame(frame)_
+_name: setFrame_
 _returns: void_
 _returns_description: _
-_parameters: _
-_access: protected_
+_parameters: int frame_
+_access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
@@ -1427,17 +984,127 @@ _description: _
 
 
 
+<!----------------------------------------------------------------------------->
+
+###void setLoopState(state)
+
+<!--
+_syntax: setLoopState(state)_
+_name: setLoopState_
+_returns: void_
+_returns_description: _
+_parameters: ofLoopType state_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
 
 <!----------------------------------------------------------------------------->
 
-###void setPosition(p)
+###void setPaused(bPause)
 
 <!--
-_syntax: setPosition(p)_
+_syntax: setPaused(bPause)_
+_name: setPaused_
+_returns: void_
+_returns_description: _
+_parameters: bool bPause_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool setPixelFormat(pixelFormat)
+
+<!--
+_syntax: setPixelFormat(pixelFormat)_
+_name: setPixelFormat_
+_returns: bool_
+_returns_description: _
+_parameters: ofPixelFormat pixelFormat_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setPosition(pct)
+
+<!--
+_syntax: setPosition(pct)_
 _name: setPosition_
 _returns: void_
 _returns_description: _
-_parameters: ofPoint p_
+_parameters: float pct_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -1465,17 +1132,16 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###void setPosition(x, y)
+###void setSpeed(speed)
 
 <!--
-_syntax: setPosition(x, y)_
-_name: setPosition_
+_syntax: setSpeed(speed)_
+_name: setSpeed_
 _returns: void_
 _returns_description: _
-_parameters: float x, float y_
+_parameters: float speed_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -1503,55 +1169,16 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###bool setValue(mx, my, bCheck)
+###void setVolume(volume)
 
 <!--
-_syntax: setValue(mx, my, bCheck)_
-_name: setValue_
-_returns: bool_
-_returns_description: _
-_parameters: float mx, float my, bool bCheck_
-_access: protected_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setWidthElements(w)
-
-<!--
-_syntax: setWidthElements(w)_
-_name: setWidthElements_
+_syntax: setVolume(volume)_
+_name: setVolume_
 _returns: void_
 _returns_description: _
-_parameters: float w_
+_parameters: float volume_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -1579,17 +1206,16 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###ofxGuiGroup * setup(collectionName = "", filename = "settings.xml", x = 10, y = 10)
+###void stop()
 
 <!--
-_syntax: setup(collectionName = "", filename = "settings.xml", x = 10, y = 10)_
-_name: setup_
-_returns: ofxGuiGroup *_
+_syntax: stop()_
+_name: stop_
+_returns: void_
 _returns_description: _
-_parameters: string collectionName="", string filename="settings.xml", float x=10, float y=10_
+_parameters: _
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -1617,17 +1243,16 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###ofxGuiGroup * setup(&parameters, filename = "settings.xml", x = 10, y = 10)
+###void update()
 
 <!--
-_syntax: setup(&parameters, filename = "settings.xml", x = 10, y = 10)_
-_name: setup_
-_returns: ofxGuiGroup *_
+_syntax: update()_
+_name: update_
+_returns: void_
 _returns_description: _
-_parameters: const ofParameterGroup &parameters, string filename="settings.xml", float x=10, float y=10_
+_parameters: _
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -1655,14 +1280,13 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###void sizeChangedCB()
+###void updatePixelsToRGB()
 
 <!--
-_syntax: sizeChangedCB()_
-_name: sizeChangedCB_
+_syntax: updatePixelsToRGB()_
+_name: updatePixelsToRGB_
 _returns: void_
 _returns_description: _
 _parameters: _
@@ -1693,14 +1317,13 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-### ~ofxGuiGroup()
+### ~ofxiOSVideoPlayer()
 
 <!--
-_syntax: ~ofxGuiGroup()_
-_name: ~ofxGuiGroup_
+_syntax: ~ofxiOSVideoPlayer()_
+_name: ~ofxiOSVideoPlayer_
 _returns: _
 _returns_description: _
 _parameters: _
@@ -1724,7 +1347,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 

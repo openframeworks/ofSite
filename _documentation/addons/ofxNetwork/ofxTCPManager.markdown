@@ -22,7 +22,6 @@ Implementation of a TCP socket.
 
 
 
-
 ##Methods
 
 
@@ -1138,6 +1137,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofxTCPManager & operator=(&mom)
@@ -1168,6 +1168,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
