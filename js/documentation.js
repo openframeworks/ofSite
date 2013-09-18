@@ -10,27 +10,14 @@ function resetDiscuss(section_name){
     DISQUS.reset({
       reload: true,
       config: function () {  
-        this.page.identifier = window.location.pathname + "#!show_" + section_name;  
         if(section_name!=''){
+            this.page.identifier = window.location.pathname + "#!show_" + section_name;  
             this.page.url = window.location.protocol + "//" + window.location.host + window.location.pathname + "#!show_" + section_name;
         }else{
+            this.page.identifier = window.location.pathname;  
             this.page.url = window.location.protocol + "//" + window.location.host + window.location.pathname;
         }
-        
-        var item = $(".documentation_detail[data-lookup='" + section_name +"']");
-        switch(item.data("item-type")) {
-            case "method":
-              this.page.title = baseTitle + "::" + section_name + "()";
-              break;
-            case "var":
-              this.page.title = baseTitle + "." + section_name;
-              break;
-            case "function":
-              this.page.title = baseTitle + "::" + section_name;
-              break;
-            default:
-              this.page.title = baseTitle;
-       };
+        this.page.title = document.title;
     }
   });
 }
