@@ -864,3 +864,291 @@ _description: _
 
 
 
+###float  m_ambientColor
+
+<!--
+_name: m_ambientColor_
+_type: float _
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###GLuint  m_bumpMapId
+
+<!--
+_name: m_bumpMapId_
+_type: GLuint _
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float  m_diffuseColor
+
+<!--
+_name: m_diffuseColor_
+_type: float _
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool  m_hasBumpMap
+
+<!--
+_name: m_hasBumpMap_
+_type: bool _
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool  m_hasTextureMap
+
+<!--
+_name: m_hasTextureMap_
+_type: bool _
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###std::string  m_name
+
+<!--
+_name: m_name_
+_type: std::string _
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float  m_opacity
+
+<!--
+_name: m_opacity_
+_type: float _
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float  m_shininess
+
+<!--
+_name: m_shininess_
+_type: float _
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float  m_specularColor
+
+<!--
+_name: m_specularColor_
+_type: float _
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float  m_specularExponent
+
+<!--
+_name: m_specularExponent_
+_type: float _
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###GLuint  m_textureMapId
+
+<!--
+_name: m_textureMapId_
+_type: GLuint _
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool  m_twoSided
+
+<!--
+_name: m_twoSided_
+_type: bool _
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+

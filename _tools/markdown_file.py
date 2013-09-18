@@ -211,9 +211,10 @@ def getclass(clazz):
                         method.clazz = documentation_clazz.name
                         method.linenum = linenum
                         method.file = os.path.join(root,name)
-                        
-                    elif state == 'description' and line.rstrip('\n').rstrip(' ') == '##Variables':
-                        documentation_clazz.function_list.append(method)
+                    
+                    elif (state == 'description' or state == 'methods') and line.rstrip('\n').rstrip(' ') == '##Variables':
+                        if state == 'description':
+                            documentation_clazz.function_list.append(method)
                         state = 'vars'
                         
                     elif state == 'vars' and line.find('###') == 0:

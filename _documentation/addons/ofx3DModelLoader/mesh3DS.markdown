@@ -636,3 +636,315 @@ _description: _
 
 
 
+###unsigned int  m_drawMode
+
+<!--
+_name: m_drawMode_
+_type: unsigned int _
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###std::vector< unsigned int >  m_faceSmoothing
+
+<!--
+_name: m_faceSmoothing_
+_type: std::vector< unsigned int > _
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###std::vector<  ushort >  m_faces
+
+<!--
+_name: m_faces_
+_type: std::vector<  ushort > _
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###std::map< std::string, std::vector<  ushort > >  m_materialFaces
+
+<!--
+_name: m_materialFaces_
+_type: std::map< std::string, std::vector<  ushort > > _
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###std::string  m_materialName
+
+<!--
+_name: m_materialName_
+_type: std::string _
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###std::string  m_name
+
+<!--
+_name: m_name_
+_type: std::string _
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###std::vector< float >  m_normals
+
+<!--
+_name: m_normals_
+_type: std::vector< float > _
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###GLuint  m_normalsArrayId
+
+<!--
+_name: m_normalsArrayId_
+_type: GLuint _
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###model3DS *  m_parentModel
+
+<!--
+_name: m_parentModel_
+_type: model3DS * _
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###std::vector< float >  m_texcoords
+
+<!--
+_name: m_texcoords_
+_type: std::vector< float > _
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###GLuint  m_texcoordsArrayId
+
+<!--
+_name: m_texcoordsArrayId_
+_type: GLuint _
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###std::vector< float >  m_vertices
+
+<!--
+_name: m_vertices_
+_type: std::vector< float > _
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###GLuint  m_verticesArrayId
+
+<!--
+_name: m_verticesArrayId_
+_type: GLuint _
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+

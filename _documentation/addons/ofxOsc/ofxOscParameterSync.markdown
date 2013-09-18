@@ -220,3 +220,99 @@ _description: _
 
 
 
+###ofxOscReceiver receiver
+
+<!--
+_name: receiver_
+_type: ofxOscReceiver_
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofxOscSender sender
+
+<!--
+_name: sender_
+_type: ofxOscSender_
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofParameterGroup *  syncGroup
+
+<!--
+_name: syncGroup_
+_type: ofParameterGroup * _
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool  updatingParameter
+
+<!--
+_name: updatingParameter_
+_type: bool _
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+

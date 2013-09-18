@@ -480,234 +480,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void draw(&vertexData)
-
-<!--
-_syntax: draw(&vertexData)_
-_name: draw_
-_returns: void_
-_returns_description: _
-_parameters: ofMesh &vertexData_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void draw(&vertexData, renderType)
-
-<!--
-_syntax: draw(&vertexData, renderType)_
-_name: draw_
-_returns: void_
-_returns_description: _
-_parameters: ofMesh &vertexData, ofPolyRenderMode renderType_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void draw(&vertexData, drawMode)
-
-<!--
-_syntax: draw(&vertexData, drawMode)_
-_name: draw_
-_returns: void_
-_returns_description: _
-_parameters: vector< ofPoint > &vertexData, ofPrimitiveMode drawMode_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void draw(&image, x, y, z, w, h)
-
-<!--
-_syntax: draw(&image, x, y, z, w, h)_
-_name: draw_
-_returns: void_
-_returns_description: _
-_parameters: ofImage &image, float x, float y, float z, float w, float h_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void draw(&image, x, y, z, w, h)
-
-<!--
-_syntax: draw(&image, x, y, z, w, h)_
-_name: draw_
-_returns: void_
-_returns_description: _
-_parameters: ofFloatImage &image, float x, float y, float z, float w, float h_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void draw(&image, x, y, z, w, h)
-
-<!--
-_syntax: draw(&image, x, y, z, w, h)_
-_name: draw_
-_returns: void_
-_returns_description: _
-_parameters: ofShortImage &image, float x, float y, float z, float w, float h_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void draw(&vertexData, useColors, useTextures, useNormals)
 
 <!--
@@ -756,6 +528,44 @@ _returns_description: _
 _parameters: ofMesh &vertexData, ofPolyRenderMode renderType, bool useColors, bool useTextures, bool useNormals_
 _access: public_
 _version_started: 0071_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void draw(&model, renderType)
+
+<!--
+_syntax: draw(&model, renderType)_
+_name: draw_
+_returns: void_
+_returns_description: _
+_parameters: of3dPrimitive &model, ofPolyRenderMode renderType_
+_access: public_
+_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -870,44 +680,6 @@ _returns_description: _
 _parameters: ofShortImage &image, float x, float y, float z, float w, float h, float sx, float sy, float sw, float sh_
 _access: public_
 _version_started: 0071_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void draw(&model, renderType)
-
-<!--
-_syntax: draw(&model, renderType)_
-_name: draw_
-_returns: void_
-_returns_description: _
-_parameters: of3dPrimitive &model, ofPolyRenderMode renderType_
-_access: public_
-_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1060,44 +832,6 @@ _returns_description: _
 _parameters: float x, float y, float z, float w, float h_
 _access: public_
 _version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void drawSphere(x, y, z, radius)
-
-<!--
-_syntax: drawSphere(x, y, z, radius)_
-_name: drawSphere_
-_returns: void_
-_returns_description: _
-_parameters: float x, float y, float z, float radius_
-_access: public_
-_version_started: 0071_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2912,44 +2646,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setSphereResolution(res)
-
-<!--
-_syntax: setSphereResolution(res)_
-_name: setSphereResolution_
-_returns: void_
-_returns_description: _
-_parameters: int res_
-_access: public_
-_version_started: 0071_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void setupGraphicDefaults()
 
 <!--
@@ -3026,44 +2722,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setupScreenOrtho(width = 0, height = 0, orientation = OF_ORIENTATION_UNKNOWN, vFlip = true, nearDist = -1, farDist = 1)
-
-<!--
-_syntax: setupScreenOrtho(width = 0, height = 0, orientation = OF_ORIENTATION_UNKNOWN, vFlip = true, nearDist = -1, farDist = 1)_
-_name: setupScreenOrtho_
-_returns: void_
-_returns_description: _
-_parameters: float width=0, float height=0, ofOrientation orientation=OF_ORIENTATION_UNKNOWN, bool vFlip=true, float nearDist=-1, float farDist=1_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void setupScreenOrtho(width = 0, height = 0, nearDist = -1, farDist = 1)
 
 <!--
@@ -3074,44 +2732,6 @@ _returns_description: _
 _parameters: float width=0, float height=0, float nearDist=-1, float farDist=1_
 _access: public_
 _version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setupScreenPerspective(width = 0, height = 0, orientation = OF_ORIENTATION_UNKNOWN, vFlip = true, fov = 60, nearDist = 0, farDist = 0)
-
-<!--
-_syntax: setupScreenPerspective(width = 0, height = 0, orientation = OF_ORIENTATION_UNKNOWN, vFlip = true, fov = 60, nearDist = 0, farDist = 0)_
-_name: setupScreenPerspective_
-_returns: void_
-_returns_description: _
-_parameters: float width=0, float height=0, ofOrientation orientation=OF_ORIENTATION_UNKNOWN, bool vFlip=true, float fov=60, float nearDist=0, float farDist=0_
-_access: public_
-_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_

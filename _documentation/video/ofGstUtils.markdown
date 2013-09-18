@@ -594,44 +594,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void gstHandleMessage()
-
-<!--
-_syntax: gstHandleMessage()_
-_name: gstHandleMessage_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###bool gstHandleMessage(*bus, *message)
 
 <!--
@@ -1247,44 +1209,6 @@ _syntax: setVolume(volume)_
 _name: setVolume_
 _returns: void_
 _returns_description: _
-_parameters: int volume_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setVolume(volume)
-
-<!--
-_syntax: setVolume(volume)_
-_name: setVolume_
-_returns: void_
-_returns_description: _
 _parameters: float volume_
 _access: public_
 _version_started: 0072_
@@ -1401,44 +1325,6 @@ _returns: void_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void update(&args)
-
-<!--
-_syntax: update(&args)_
-_name: update_
-_returns: void_
-_returns_description: _
-_parameters: ofEventArgs &args_
-_access: private_
 _version_started: 007_
 _version_deprecated: _
 _summary: _
@@ -1842,56 +1728,6 @@ _name: mainLoop_
 _type: ofGstMainLoopThread *_
 _access: private_
 _version_started: 0073_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int pipelineState
-
-<!--
-_name: pipelineState_
-_type: int_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool posChangingPaused
-
-<!--
-_name: posChangingPaused_
-_type: bool_
-_access: private_
-_version_started: 007_
 _version_deprecated: _
 _summary: _
 _visible: True_

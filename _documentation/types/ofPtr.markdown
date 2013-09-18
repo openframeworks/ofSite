@@ -293,158 +293,6 @@ _syntax: ofPtr(&__r)_
 _name: ofPtr_
 _returns: _
 _returns_description: _
-_parameters: const std_
-_access: public_
-_version_started: 0071_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofPtr(&__r)
-
-<!--
-_syntax: ofPtr(&__r)_
-_name: ofPtr_
-_returns: _
-_returns_description: _
-_parameters: const std_
-_access: public_
-_version_started: 0072_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofPtr(&__r, std
-
-<!--
-_syntax: ofPtr(&__r, std_
-_name: ofPtr_
-_returns: _
-_returns_description: _
-_parameters: const ofPtr< Tp1 > &__r, std::__dynamic_cast_tag_
-_access: public_
-_version_started: 0072_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofPtr(&__r)
-
-<!--
-_syntax: ofPtr(&__r)_
-_name: ofPtr_
-_returns: _
-_returns_description: _
-_parameters: const std::tr1::weak_ptr< Tp1 > &__r_
-_access: public_
-_version_started: 0072_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofPtr(&__r)
-
-<!--
-_syntax: ofPtr(&__r)_
-_name: ofPtr_
-_returns: _
-_returns_description: _
 _parameters: const std::shared_ptr< Tp1 > &__r_
 _access: public_
 _version_started: 0073_
@@ -486,6 +334,44 @@ _returns_description: _
 _parameters: const std::weak_ptr< Tp1 > &__r_
 _access: public_
 _version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofPtr(&__r, std
+
+<!--
+_syntax: ofPtr(&__r, std_
+_name: ofPtr_
+_returns: _
+_returns_description: _
+_parameters: const ofPtr< Tp1 > &__r, std::__dynamic_cast_tag_
+_access: public_
+_version_started: 0072_
 _version_deprecated: _
 _summary: _
 _constant: False_

@@ -59,6 +59,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###double getAltitudeAccuracy()
@@ -89,6 +90,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -133,6 +135,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###double getCompassY()
@@ -163,6 +166,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -207,6 +211,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###double getDistMoved()
@@ -237,6 +242,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -281,6 +287,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###double getLatitude()
@@ -311,6 +318,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -355,6 +363,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###double getLongitude()
@@ -385,6 +394,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -429,6 +439,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###double getTrueHeading()
@@ -459,6 +470,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -503,6 +515,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool startHeading()
@@ -533,6 +546,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -577,6 +591,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool startMonitoringSignificantLocationChanges()
@@ -607,6 +622,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -651,6 +667,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void stopLocation()
@@ -681,6 +698,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -725,6 +743,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ### ~ofxiOSCoreLocation()
@@ -762,9 +781,34 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ##Variables
 
 
+
+###ofxiOSCoreLocationDelegate *  coreLoc
+
+<!--
+_name: coreLoc_
+_type: ofxiOSCoreLocationDelegate * _
+_access: protected_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 

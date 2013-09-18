@@ -166,31 +166,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int glType
-
-<!--
-_name: glType_
-_type: int_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###int glTypeInternal
 
 <!--
@@ -221,31 +196,6 @@ _description: _
 <!--
 _name: height_
 _type: float_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int pixelType
-
-<!--
-_name: pixelType_
-_type: int_
 _access: public_
 _version_started: 007_
 _version_deprecated: _

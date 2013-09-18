@@ -26,129 +26,6 @@ ofTexture is used to create textures that live on your graphics card from bitmap
 
 
 
-###void allocate(w, h, internalGlDataType)
-
-<!--
-_syntax: allocate(w, h, internalGlDataType)_
-_name: allocate_
-_returns: void_
-_returns_description: _
-_parameters: int w, int h, int glInternalFormat_
-_access: public_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-This is the call to allocate opengl texture. The width (w) and height (h) do not necessarily need to be powers of 2, but they do need to be large enough to contain the data you will upload to the texture.  The internal data type describes how opengl will store this texture internally. For example, if you want a grayscale texture, you can use "GL_LUMINANCE". You can uplaod what ever type of data you want (using loadData()) but internally, opengl will store the information as grayscale. Other types include: GL_RGB, GL_RGBA. 
-You need to allocate the texture before drawing it or loading data into it.
-uses the currently set OF texture type - default ARB texture
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void allocate(w, h, internalGlDataType, bUseARBExtention)
-
-<!--
-_syntax: allocate(w, h, internalGlDataType, bUseARBExtention)_
-_name: allocate_
-_returns: void_
-_returns_description: _
-_parameters: int w, int h, int glInternalFormat, bool bUseARBExtention_
-_access: public_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-See previous allocate for knowing the behaviour of this function. The parameter bUseARBEExtension allow the user to enable the ARBE extension for this texture.
-You need to allocate the texture before drawing it or loading data into it, lets you overide the default OF texture type
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void  allocate(textureData)
-
-<!--
-_syntax: allocate(textureData)_
-_name: allocate_
-_returns: void _
-_returns_description: _
-_parameters: const ofTextureData & textureData_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-You need to allocate the texture before drawing it or loading data into it. The allocate method allows you load information about what type of data will be in the texture, its height and width, etc, into the texture, but note that it doesn't actually put any data into the texture, so if you draw it you'll see a black square.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void allocate(&textureData)
 
 <!--
@@ -159,44 +36,6 @@ _returns_description: _
 _parameters: const ofTextureData &textureData_
 _access: public_
 _version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void allocate(&pix)
-
-<!--
-_syntax: allocate(&pix)_
-_name: allocate_
-_returns: void_
-_returns_description: _
-_parameters: const ofPixels &pix_
-_access: public_
-_version_started: 0071_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -263,6 +102,48 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void allocate(w, h, internalGlDataType)
+
+<!--
+_syntax: allocate(w, h, internalGlDataType)_
+_name: allocate_
+_returns: void_
+_returns_description: _
+_parameters: int w, int h, int glInternalFormat_
+_access: public_
+_version_started: 006_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+This is the call to allocate opengl texture. The width (w) and height (h) do not necessarily need to be powers of 2, but they do need to be large enough to contain the data you will upload to the texture.  The internal data type describes how opengl will store this texture internally. For example, if you want a grayscale texture, you can use "GL_LUMINANCE". You can uplaod what ever type of data you want (using loadData()) but internally, opengl will store the information as grayscale. Other types include: GL_RGB, GL_RGBA. 
+You need to allocate the texture before drawing it or loading data into it.
+uses the currently set OF texture type - default ARB texture
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void allocate(w, h, glInternalFormat, glFormat, pixelType)
 
 <!--
@@ -301,6 +182,47 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void allocate(w, h, internalGlDataType, bUseARBExtention)
+
+<!--
+_syntax: allocate(w, h, internalGlDataType, bUseARBExtention)_
+_name: allocate_
+_returns: void_
+_returns_description: _
+_parameters: int w, int h, int glInternalFormat, bool bUseARBExtention_
+_access: public_
+_version_started: 006_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+See previous allocate for knowing the behaviour of this function. The parameter bUseARBEExtension allow the user to enable the ARBE extension for this texture.
+You need to allocate the texture before drawing it or loading data into it, lets you overide the default OF texture type
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void allocate(w, h, glInternalFormat, bUseARBExtention, glFormat, pixelType)
 
 <!--
@@ -311,6 +233,44 @@ _returns_description: _
 _parameters: int w, int h, int glInternalFormat, bool bUseARBExtention, int glFormat, int pixelType_
 _access: public_
 _version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void allocate(&pix)
+
+<!--
+_syntax: allocate(&pix)_
+_name: allocate_
+_returns: void_
+_returns_description: _
+_parameters: const ofPixels &pix_
+_access: public_
+_version_started: 0071_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -688,16 +648,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void draw(x, y, w, h)
+###void draw(p1, p2, p3, p4)
 
 <!--
-_syntax: draw(x, y, w, h)_
+_syntax: draw(p1, p2, p3, p4)_
 _name: draw_
 _returns: void_
 _returns_description: _
-_parameters: float x, float y, float w, float h_
+_parameters: const ofPoint &p1, const ofPoint &p2, const ofPoint &p3, const ofPoint &p4_
 _access: public_
-_version_started: 006_
+_version_started: _
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -718,8 +678,7 @@ _inlined_description: _
 _description: _
 
 
-draws the texture at a given point (x,y), with a given width (w) and height (h). 
-Draws the texture at the x, y and w, h.
+Draws the texture at 4 poitns passed in as if you created 4 glVertices.
 
 
 
@@ -770,166 +729,6 @@ Draws the texture at the point passed in.
 
 <!----------------------------------------------------------------------------->
 
-###void  draw(r)
-
-<!--
-_syntax: draw(r)_
-_name: draw_
-_returns: void _
-_returns_description: _
-_parameters: const ofRectangle & r_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Draws the texture into a rectangle.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void  draw(p, w, h)
-
-<!--
-_syntax: draw(p, w, h)_
-_name: draw_
-_returns: void _
-_returns_description: _
-_parameters: const ofPoint & p, float w, float h_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Draws the texture at the point rpresent by ofPoint
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void draw(x, y, z, w, h)
-
-<!--
-_syntax: draw(x, y, z, w, h)_
-_name: draw_
-_returns: void_
-_returns_description: _
-_parameters: float x, float y, float z, float w, float h_
-_access: public_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Draws the texture at the x, y, z in 3D space with the width and height at w,h.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void  draw(p)
-
-<!--
-_syntax: draw(p)_
-_name: draw_
-_returns: void _
-_returns_description: _
-_parameters: const ofPoint & p_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Draws the texture at the point passed in.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void draw(x, y, z)
 
 <!--
@@ -970,14 +769,55 @@ Draws the texture at the point passed in in 3D space.
 
 <!----------------------------------------------------------------------------->
 
-###void draw(p1, p2, p3, p4)
+###void draw(x, y, w, h)
 
 <!--
-_syntax: draw(p1, p2, p3, p4)_
+_syntax: draw(x, y, w, h)_
 _name: draw_
 _returns: void_
 _returns_description: _
-_parameters: const ofPoint &p1, const ofPoint &p2, const ofPoint &p3, const ofPoint &p4_
+_parameters: float x, float y, float w, float h_
+_access: public_
+_version_started: 006_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+draws the texture at a given point (x,y), with a given width (w) and height (h). 
+Draws the texture at the x, y and w, h.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void draw(x, y, z, w, h)
+
+<!--
+_syntax: draw(x, y, z, w, h)_
+_name: draw_
+_returns: void_
+_returns_description: _
+_parameters: float x, float y, float z, float w, float h_
 _access: public_
 _version_started: _
 _version_deprecated: _
@@ -1000,121 +840,7 @@ _inlined_description: _
 _description: _
 
 
-Draws the texture at 4 poitns passed in as if you created 4 glVertices.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void draw(&r)
-
-<!--
-_syntax: draw(&r)_
-_name: draw_
-_returns: void_
-_returns_description: _
-_parameters: const ofRectangle &r_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void draw(&p, w, h)
-
-<!--
-_syntax: draw(&p, w, h)_
-_name: draw_
-_returns: void_
-_returns_description: _
-_parameters: const ofPoint &p, float w, float h_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void draw(&p)
-
-<!--
-_syntax: draw(&p)_
-_name: draw_
-_returns: void_
-_returns_description: _
-_parameters: const ofPoint &p_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
+Draws the texture at the x, y, z in 3D space with the width and height at w,h.
 
 
 
@@ -1432,6 +1158,43 @@ Returns the height of the texture. This will be in pixels unless you've set your
 
 <!----------------------------------------------------------------------------->
 
+###ofTextureData & getTextureData()
+
+<!--
+_syntax: getTextureData()_
+_name: getTextureData_
+_returns: ofTextureData &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###const ofTextureData & getTextureData()
 
 <!--
@@ -1558,338 +1321,6 @@ float getWidth() ###
 
 <!----------------------------------------------------------------------------->
 
-###void loadData(data, w, h, glDataType)
-
-<!--
-_syntax: loadData(data, w, h, glDataType)_
-_name: loadData_
-_returns: void_
-_returns_description: _
-_parameters: unsigned char * data, int w, int h, int glDataType_
-_access: public_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Loads into the texture the array of unsigned chars (data), with a given width (w) and height (h). You also pass in the format that the data is stored in (some options: GL_LUMINANCE, GL_RGB, GL_RGBA). For example, to upload a 200*100 pixel RGB array into an already allocated texture:
-~~~~{.cpp}
-
-unsigned char pixels[200*100];
-for (int i = 0; i < 200*100; i++){
-	pixels[i] = (int)(255 * ofRandomuf());
-}
-myTexture.loadData(pixels, 200, 100, GL_RGB);
-~~~~
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void  loadData(data, w, h, glFormat)
-
-<!--
-_syntax: loadData(data, w, h, glFormat)_
-_name: loadData_
-_returns: void _
-_returns_description: _
-_parameters: float* data, int w, int h, int glFormat_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Loads raw data from an array. Make sure to se the pixel type in the glFormat correctly.
-Loads into the texture the array of unsigned chars (data), with a given width (w) and height (h). You also pass in the format that the data is stored in (some options: GL_LUMINANCE, GL_RGB, GL_RGBA). For example, to upload a 200*100 pixel RGB array into an already allocated texture:
-unsigned char pixels[200*100];
-for (int i = 0; i < 200*100; i++){
-	pixels[i] = (int)(255 * ofRandomuf());
-}
-myTexture.loadData(pixels, 200, 100, GL_RGB);
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void  loadData(data, w, h, glFormat)
-
-<!--
-_syntax: loadData(data, w, h, glFormat)_
-_name: loadData_
-_returns: void _
-_returns_description: _
-_parameters: unsigned char* data, int w, int h, int glFormat_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Loads raw data from an array. Make sure to se the pixel type  in the glFormat correctly.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void  loadData(data, w, h, glFormat)
-
-<!--
-_syntax: loadData(data, w, h, glFormat)_
-_name: loadData_
-_returns: void _
-_returns_description: _
-_parameters: unsigned short* data, int w, int h, int glFormat_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Loads raw data from an array. Make sure to se the pixel type  in the glFormat correctly.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void  loadData(pix)
-
-<!--
-_syntax: loadData(pix)_
-_name: loadData_
-_returns: void _
-_returns_description: _
-_parameters: ofPixels & pix_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Loads raw data from an ofPixels object.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void  loadData(pix)
-
-<!--
-_syntax: loadData(pix)_
-_name: loadData_
-_returns: void _
-_returns_description: _
-_parameters: ofShortPixels & pix_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Loads raw data from an ofPixels object.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void  loadData(pix)
-
-<!--
-_syntax: loadData(pix)_
-_name: loadData_
-_returns: void _
-_returns_description: _
-_parameters: ofFloatPixels & pix_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Loads raw data from an ofPixels object.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void loadData(*data, w, h, glFormat)
-
-<!--
-_syntax: loadData(*data, w, h, glFormat)_
-_name: loadData_
-_returns: void_
-_returns_description: _
-_parameters: const float *data, int w, int h, int glFormat_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void loadData(*data, w, h, glFormat)
 
 <!--
@@ -1936,6 +1367,44 @@ _name: loadData_
 _returns: void_
 _returns_description: _
 _parameters: const unsigned short *data, int w, int h, int glFormat_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void loadData(*data, w, h, glFormat)
+
+<!--
+_syntax: loadData(*data, w, h, glFormat)_
+_name: loadData_
+_returns: void_
+_returns_description: _
+_parameters: const float *data, int w, int h, int glFormat_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -2051,44 +1520,6 @@ _returns: void_
 _returns_description: _
 _parameters: const ofFloatPixels &pix_
 _access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void loadData(*data, w, h, glFormat)
-
-<!--
-_syntax: loadData(*data, w, h, glFormat)_
-_name: loadData_
-_returns: void_
-_returns_description: _
-_parameters: void *data, int w, int h, int glFormat_
-_access: protected_
 _version_started: 007_
 _version_deprecated: _
 _summary: _
@@ -2351,46 +1782,6 @@ Creates an empty ofTexture instance. You can't draw a texture right after it's b
 
 <!----------------------------------------------------------------------------->
 
-###void ofTexture(mom)
-
-<!--
-_syntax: ofTexture(mom)_
-_name: ofTexture_
-_returns: void_
-_returns_description: _
-_parameters: const ofTexture & mom_
-_access: public_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Copy constructor, which copies all of the texture data from mom into the ofTexture that the method is being called on.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ### ofTexture(&mom)
 
 <!--
@@ -2429,62 +1820,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofTexture & operator=(mom)
-
-<!--
-_syntax: operator=(mom)_
-_name: operator=_
-_returns: ofTexture &_
-_returns_description: _
-_parameters: const ofTexture & mom_
-_access: public_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Makes the current ofTexture a copy of another ofTexture.
-e.g:
-~~~~{.cpp}
-
-ofTexture text1,text2;
-
-//we modify here text1 texture
-
-text2 = text1;
-~~~~
-
-text2 and text1 are now identical.
-
-Let's you do 
-~~~~{.cpp}
-tex2 = tex1;
-~~~~
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###ofTexture & operator=(&mom)
 
 <!--
@@ -2514,126 +1849,6 @@ _inlined_description: _
 
 _description: _
 
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void  readToPixels(pixels)
-
-<!--
-_syntax: readToPixels(pixels)_
-_name: readToPixels_
-_returns: void _
-_returns_description: _
-_parameters: ofPixels & pixels_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Reads the data from the texture to an ofPixels object.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void  readToPixels(pixels)
-
-<!--
-_syntax: readToPixels(pixels)_
-_name: readToPixels_
-_returns: void _
-_returns_description: _
-_parameters: ofShortPixels & pixels_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Reads the data from the texture to an ofShortPixels object.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void  readToPixels(pixels)
-
-<!--
-_syntax: readToPixels(pixels)_
-_name: readToPixels_
-_returns: void _
-_returns_description: _
-_parameters: ofFloatPixels & pixels_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Reads the data from the texture to an ofFloatPixels object.
 
 
 
@@ -2826,46 +2041,6 @@ _description: _
 
 
 The anchor is the point the image is drawn around. This can be useful if you want to rotate an image around a particular point, allowing you to set the anchor as a percentage of the image width/height ( 0.0-1.0 range )
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setAnchorPoint(x, y)
-
-<!--
-_syntax: setAnchorPoint(x, y)_
-_name: setAnchorPoint_
-_returns: void_
-_returns_description: _
-_parameters: int x, int y_
-_access: public_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: True_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Sets our texture anchor point and enables the use of it.
 
 
 

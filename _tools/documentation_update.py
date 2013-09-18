@@ -180,8 +180,10 @@ def serialize_class(filename,is_addon=False):
     
     clazz = doxygen_compound.parse(filename).compounddef #doxygen.compounddef
         
-    print "class " + clazz.compoundname
     documentation_class = getclass(clazz.compoundname)
+    
+    current_variables_list = []
+    current_methods_list = []
     
     
     #f = open('documentation/' + classname + ".html.mako",'w')
@@ -234,6 +236,7 @@ def serialize_class(filename,is_addon=False):
                                     var.type = var.type + e.value + " "
                         except:
                             pass
+                    current_variables_list.append(var)
                     #f.write( str(member.type.text) + " " + str(member.name.text) + "\n" )
                 if member.kind == 'function' and member.name.find("OF_DEPRECATED_MSG")==-1:
                     #print member.name
@@ -270,6 +273,8 @@ def serialize_class(filename,is_addon=False):
                     for p in member.detaileddescription.get_para():
                         method.inlined_description = method.inlined_description + serialize_doxygen_paragraph(p)
                         
+                    current_methods_list.append(method)
+                        
                     #f.write( str(member.type.text) + " " + str(member.name.text) + str(member.argsstring.text) + "\n" )
                 """if member.name.text.find("OF_DEPRECATED_MSG")!=-1:
                     print "found deprecated function " + member.name.text
@@ -286,6 +291,35 @@ def serialize_class(filename,is_addon=False):
             deprecated_methods.append(method)
     for method in deprecated_methods:
         documentation_class.function_list.remove(method);
+    
+    class_name_printed = False
+    
+    for method in documentation_class.function_list:
+        if not method in current_methods_list:
+            if method.description.strip("\n ") != "":
+                if not class_name_printed:    
+                    print "\n\n\n\n"
+                    print "========================================"
+                    print "class " + documentation_class.name
+                    class_name_printed = True
+                print "\n\n\n\n"
+                print "removing method " + method.returns + " " + method.name + "(" + method.parameters + ")"
+                print "with description:"
+                print method.description
+    documentation_class.function_list = current_methods_list
+    
+    for var in documentation_class.var_list:
+        if not var in current_variables_list:
+            if var.description.strip("\n ") != "":
+                if not class_name_printed:    
+                    print "\n\n\n\n"
+                    print "========================================"
+                    print "class " + documentation_class.name
+                    class_name_printed = True
+                print "removing " + var.name
+                print "with description:"
+                print var.description
+    documentation_class.var_list = current_variables_list
         
     documentation_class.function_list.sort(key=lambda function: function.name)
     documentation_class.var_list.sort(key=lambda variable: variable.name)

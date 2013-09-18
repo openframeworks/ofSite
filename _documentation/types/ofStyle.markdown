@@ -158,33 +158,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool blending
-
-<!--
-_name: blending_
-_type: bool_
-_access: public_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: False_
-_advanced: False_
--->
-
-_description: _
-
-
-blending contains style information about allow the use of alpha channel in our graphics. 
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###ofBlendMode blendingMode
 
 <!--

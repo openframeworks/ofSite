@@ -937,50 +937,6 @@ ofColor c2(255, 0, 0, 128); // red with 50% alpha.
 
 <!----------------------------------------------------------------------------->
 
-### ofColor_(gray, _a = limit())
-
-<!--
-_syntax: ofColor_(gray, _a = limit())_
-_name: ofColor__
-_returns: _
-_returns_description: _
-_parameters: float gray, float _a=limit()_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Creates a gray color from the value of gray. _a defaults to completely opaque.
-
-~~~~{.cpp}
-ofColor c(0.5, 122); // now c is 50% alpha gray, ooh, dismal
-~~~~
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ### ofColor_(&color)
 
 <!--
@@ -1061,6 +1017,50 @@ Creates a color by copying another color, overriding the existing alpha value wi
 ~~~~{.cpp}
 ofColor mom(255, 0, 0); // red
 ofColor c(mom, 128); // now c is red with 50% alpha
+~~~~
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofColor_(gray, _a = limit())
+
+<!--
+_syntax: ofColor_(gray, _a = limit())_
+_name: ofColor__
+_returns: _
+_returns_description: _
+_parameters: float gray, float _a=limit()_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+Creates a gray color from the value of gray. _a defaults to completely opaque.
+
+~~~~{.cpp}
+ofColor c(0.5, 122); // now c is 50% alpha gray, ooh, dismal
 ~~~~
 
 
@@ -2034,6 +2034,43 @@ ofColor c3(255, 0, 0); // red
 
 <!----------------------------------------------------------------------------->
 
+###const PixelType & operator[](n)
+
+<!--
+_syntax: operator[](n)_
+_name: operator[]_
+_returns: const PixelType &_
+_returns_description: _
+_parameters: int n_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###PixelType & operator[](n)
 
 <!--
@@ -2347,44 +2384,6 @@ Set this color using a HSB representation. Refer the [discussion of HSB](#HSB) a
 
 <!----------------------------------------------------------------------------->
 
-###void setHsb(hue, saturation, brightness)
-
-<!--
-_syntax: setHsb(hue, saturation, brightness)_
-_name: setHsb_
-_returns: void_
-_returns_description: _
-_parameters: float hue, float saturation, float brightness_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void setHue(hue)
 
 <!--
@@ -2520,31 +2519,6 @@ _description: _
 ##Variables
 
 
-
-###union ofColor @1
-
-<!--
-_name: @1_
-_type: union ofColor_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: False_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
 
 ###union ofColor_::@3 @4
 

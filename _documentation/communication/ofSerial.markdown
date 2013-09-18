@@ -509,16 +509,16 @@ else
 
 <!----------------------------------------------------------------------------->
 
-###int readBytes(buffer,length)
+###int readBytes(*buffer, length)
 
 <!--
-_syntax: readBytes(buffer,length)_
+_syntax: readBytes(*buffer, length)_
 _name: readBytes_
 _returns: int_
 _returns_description: _
-_parameters: unsigned char * buffer, int length_
+_parameters: unsigned char *buffer, int length_
 _access: public_
-_version_started: 006_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -537,7 +537,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 Tries to read 'length' bytes from the connected serial device. In some cases it may read less than 'length' bytes, so for reliable reading of >1 bytes of data the return value must be checked against the number of bytes requested, and if fewer bytes than requested were read then the call must be tried again.
 
@@ -583,101 +582,7 @@ while ( bytesRemaining > 0 )
 }
 ~~~~
 
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int readBytes(*buffer, length)
-
-<!--
-_syntax: readBytes(*buffer, length)_
-_name: readBytes_
-_returns: int_
-_returns_description: _
-_parameters: unsigned char *buffer, int length_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-This reads bytes from the serial buffer into the buffer pointer passed in:
-
-~~~~{.cpp}
-unsigned char* buf = new unsigned char[4];
-device.readBytes(buf, 4);
-// do something with buf
-delete [] buf; // clean up
-~~~~
-
-You can also use an array like so:
-
-~~~~{.cpp}
-unsigned char buf[4];
-device.readBytes(&buf[0], 4);
-~~~~
-
 Be aware that the type of your buffer can only be unsigned char. If you're trying to receieve ints or signed chars over a serial connection you'll need to do some bit manipulation to correctly interpret that values.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setVerbose(bLoudmouth)
-
-<!--
-_syntax: setVerbose(bLoudmouth)_
-_name: setVerbose_
-_returns: void_
-_returns_description: _
-_parameters: bool bLoudmouth_
-_access: public_
-_version_started: 006_
-_version_deprecated: 0.06_
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Enable or disable ofSerial messages and errors being sent to the console.
 
 
 
@@ -881,55 +786,6 @@ if ( !byteWasWritten )
 
 <!----------------------------------------------------------------------------->
 
-###int writeBytes(buffer, length)
-
-<!--
-_syntax: writeBytes(buffer, length)_
-_name: writeBytes_
-_returns: int_
-_returns_description: _
-_parameters: unsigned char * buffer, int length_
-_access: public_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Writes a string of bytes to the connected serial device. As with readBytes() the return code should be checked and the call to writeBytes() repeated with the remaining data until all bytes have been written.
-~~~~{.cpp}
-
-ofSerial mySerial;
-mySerial.setup(0, 57600);
-int numSent = mySerial.writeBytes("Hello World");
-// numSent is how many bytes written; for example if numSent 
-// is 3 then "Hel" has been written and the call should be retried
-// with "lo World" to complete the write.
-~~~~
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###int writeBytes(*buffer, length)
 
 <!--
@@ -1060,33 +916,6 @@ _description: _
 
 
 h
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool bVerbose
-
-<!--
-_name: bVerbose_
-_type: bool_
-_access: public_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_visible: False_
-_constant: False_
-_advanced: False_
--->
-
-_description: _
-
-
-bVerbose is a boolean varible controlling verbosity on the ofSerial class. 
 
 
 

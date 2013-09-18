@@ -59,6 +59,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool getIsPlaying()
@@ -89,6 +90,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -133,6 +135,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###float getPitch()
@@ -163,6 +166,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -207,6 +211,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int getPositionMS()
@@ -237,6 +242,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -281,6 +287,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###float getVolume()
@@ -311,6 +318,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -355,6 +363,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool isLoaded()
@@ -385,6 +394,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -429,6 +439,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool loadSound(fileName, stream = false)
@@ -459,6 +470,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -503,6 +515,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofxALSoundSetListenerGain(gain)
@@ -533,6 +546,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -577,6 +591,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofxALSoundSetListenerVelocity(x, y, z)
@@ -607,6 +622,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -651,6 +667,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofxALSoundSetReferenceDistance(dist)
@@ -681,6 +698,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -725,6 +743,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void play()
@@ -755,6 +774,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -799,6 +819,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void setBackgroundMusicVolume(bgVol)
@@ -829,6 +850,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -873,6 +895,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void setLoop(bLp)
@@ -903,6 +926,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -947,6 +971,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void setPan(_pan)
@@ -977,6 +1002,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1021,6 +1047,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void setPitch(_pitch)
@@ -1051,6 +1078,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1095,6 +1123,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void setPositionMS(ms)
@@ -1125,6 +1154,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1169,6 +1199,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void setVolume(_vol)
@@ -1199,6 +1230,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1243,6 +1275,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void stop()
@@ -1273,6 +1306,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1317,6 +1351,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void unloadAllBackgroundMusic()
@@ -1347,6 +1382,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1391,6 +1427,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool update()
@@ -1421,6 +1458,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1465,6 +1503,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void vibrate()
@@ -1495,6 +1534,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1539,9 +1579,370 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ##Variables
 
 
+
+###bool  bLoadedOk
+
+<!--
+_name: bLoadedOk_
+_type: bool _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool  bLoop
+
+<!--
+_name: bLoop_
+_type: bool _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool  bMultiPlay
+
+<!--
+_name: bMultiPlay_
+_type: bool _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool  bPaused
+
+<!--
+_name: bPaused_
+_type: bool _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool  iAmAnMp3
+
+<!--
+_name: iAmAnMp3_
+_type: bool _
+_access: protected_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool  isStreaming
+
+<!--
+_name: isStreaming_
+_type: bool _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###unsigned int  length
+
+<!--
+_name: length_
+_type: unsigned int _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofPoint  location
+
+<!--
+_name: location_
+_type: ofPoint _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###UInt32  myId
+
+<!--
+_name: myId_
+_type: UInt32 _
+_access: protected_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ALuint  myPrimedId
+
+<!--
+_name: myPrimedId_
+_type: ALuint _
+_access: protected_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float  pan
+
+<!--
+_name: pan_
+_type: float _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float  pitch
+
+<!--
+_name: pitch_
+_type: float _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###vector<  multiPlaySource * >  retainedBuffers
+
+<!--
+_name: retainedBuffers_
+_type: vector<  multiPlaySource * > _
+_access: protected_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool  stopped
+
+<!--
+_name: stopped_
+_type: bool _
+_access: protected_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float  volume
+
+<!--
+_name: volume_
+_type: float _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 

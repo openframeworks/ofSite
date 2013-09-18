@@ -59,6 +59,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###UInt32 GetEffectID()
@@ -89,6 +90,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -133,6 +135,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ### SoundEngineEffect(*inPath)
@@ -163,6 +166,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -207,6 +211,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###UInt32 getDataSize()
@@ -237,6 +242,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -281,6 +287,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ### ~SoundEngineEffect()
@@ -318,9 +325,130 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ##Variables
 
 
+
+###ALuint  mBufferID
+
+<!--
+_name: mBufferID_
+_type: ALuint _
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void *  mData
+
+<!--
+_name: mData_
+_type: void * _
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###UInt32  mDataSize
+
+<!--
+_name: mDataSize_
+_type: UInt32 _
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###Boolean  mIsLoopingEffect
+
+<!--
+_name: mIsLoopingEffect_
+_type: Boolean _
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const char *  mPath
+
+<!--
+_name: mPath_
+_type: const char * _
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 

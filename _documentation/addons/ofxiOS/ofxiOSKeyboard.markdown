@@ -59,6 +59,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###string getText()
@@ -89,6 +90,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -133,6 +135,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void makeSecure()
@@ -163,6 +166,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -207,6 +211,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void openKeyboard()
@@ -237,6 +242,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -281,6 +287,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void setFontColor(r, g, b, a)
@@ -311,6 +318,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -355,6 +363,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void setMaxChars(max)
@@ -385,6 +394,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -429,6 +439,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void setPosition(_x, _y)
@@ -459,6 +470,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -503,6 +515,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void setText(_text)
@@ -533,6 +546,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -577,6 +591,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void updateOrientation()
@@ -607,6 +622,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -651,9 +667,130 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ##Variables
 
 
+
+###int  h
+
+<!--
+_name: h_
+_type: int _
+_access: protected_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofxiOSKeyboardDelegate *  keyboard
+
+<!--
+_name: keyboard_
+_type: ofxiOSKeyboardDelegate * _
+_access: protected_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int  w
+
+<!--
+_name: w_
+_type: int _
+_access: protected_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int  x
+
+<!--
+_name: x_
+_type: int _
+_access: protected_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int  y
+
+<!--
+_name: y_
+_type: int _
+_access: protected_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 

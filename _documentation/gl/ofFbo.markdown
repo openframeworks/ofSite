@@ -180,46 +180,6 @@ You can also allocate the ofFbo using a Settings object
 
 <!----------------------------------------------------------------------------->
 
-###void begin()
-
-<!--
-_syntax: begin()_
-_name: begin_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Any drawing that you do after begin() is drawn into the fbo rather than the screen. This is how you draw things into your ofFbo instance.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void begin(setupScreen = true)
 
 <!--
@@ -249,7 +209,7 @@ _inlined_description: _
 
 _description: _
 
-
+Any drawing that you do after begin() is drawn into the fbo rather than the screen. This is how you draw things into your ofFbo instance.
 
 
 
@@ -376,44 +336,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void createAndAttachDepthStencilTexture(target, internalformat, format, type, attachment)
-
-<!--
-_syntax: createAndAttachDepthStencilTexture(target, internalformat, format, type, attachment)_
-_name: createAndAttachDepthStencilTexture_
-_returns: void_
-_returns_description: _
-_parameters: GLenum target, GLint internalformat, GLenum attachment, GLenum transferFormat, GLenum transferType_
-_access: public_
-_version_started: 0071_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void createAndAttachDepthStencilTexture(target, internalformat, attachment)
 
 <!--
@@ -452,16 +374,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###GLuint createAndAttachRenderbuffer(internalFormat, attachmentPoint)
+###void createAndAttachDepthStencilTexture(target, internalformat, format, type, attachment)
 
 <!--
-_syntax: createAndAttachRenderbuffer(internalFormat, attachmentPoint)_
-_name: createAndAttachRenderbuffer_
-_returns: GLuint_
+_syntax: createAndAttachDepthStencilTexture(target, internalformat, format, type, attachment)_
+_name: createAndAttachDepthStencilTexture_
+_returns: void_
 _returns_description: _
-_parameters: GLenum internalFormat, GLenum attachmentPoint_
+_parameters: GLenum target, GLint internalformat, GLenum attachment, GLenum transferFormat, GLenum transferType_
 _access: public_
-_version_started: 007_
+_version_started: 0071_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -490,15 +412,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void createAndAttachTexture(attachmentPoint)
+###GLuint createAndAttachRenderbuffer(internalFormat, attachmentPoint)
 
 <!--
-_syntax: createAndAttachTexture(attachmentPoint)_
-_name: createAndAttachTexture_
-_returns: void_
+_syntax: createAndAttachRenderbuffer(internalFormat, attachmentPoint)_
+_name: createAndAttachRenderbuffer_
+_returns: GLuint_
 _returns_description: _
-_parameters: GLenum attachmentPoint_
-_access: private_
+_parameters: GLenum internalFormat, GLenum attachmentPoint_
+_access: public_
 _version_started: 007_
 _version_deprecated: _
 _summary: _

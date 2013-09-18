@@ -77,6 +77,44 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void arc(&centre, radiusX, radiusY, angleBegin, angleEnd, clockwise)
+
+<!--
+_syntax: arc(&centre, radiusX, radiusY, angleBegin, angleEnd, clockwise)_
+_name: arc_
+_returns: void_
+_returns_description: _
+_parameters: const ofPoint &centre, float radiusX, float radiusY, float angleBegin, float angleEnd, bool clockwise_
+_access: public_
+_version_started: 0071_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void arc(&centre, radiusX, radiusY, angleBegin, angleEnd)
 
 <!--
@@ -203,44 +241,6 @@ _description: _
 
 
 Creates an arc at x,y,z, which has the radiusX, radiusY, and begins at angleBegin and ends at angleEnd.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void arc(&centre, radiusX, radiusY, angleBegin, angleEnd, clockwise)
-
-<!--
-_syntax: arc(&centre, radiusX, radiusY, angleBegin, angleEnd, clockwise)_
-_name: arc_
-_returns: void_
-_returns_description: _
-_parameters: const ofPoint &centre, float radiusX, float radiusY, float angleBegin, float angleEnd, bool clockwise_
-_access: public_
-_version_started: 0071_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
 
 
 
@@ -1104,82 +1104,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void generatePolylinesFromPaths()
-
-<!--
-_syntax: generatePolylinesFromPaths()_
-_name: generatePolylinesFromPaths_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int getArcResolution()
-
-<!--
-_syntax: getArcResolution()_
-_name: getArcResolution_
-_returns: int_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###int getCircleResolution()
 
 <!--
@@ -1209,6 +1133,43 @@ _inlined_description: _
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###vector< Command > & getCommands()
+
+<!--
+_syntax: getCommands()_
+_name: getCommands_
+_returns: vector< Command > &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1492,46 +1453,6 @@ Returns the stroke width.
 
 <!----------------------------------------------------------------------------->
 
-###ofSubPath getSubPaths()
-
-<!--
-_syntax: getSubPaths()_
-_name: getSubPaths_
-_returns: ofSubPath_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-This returns a vector of ofSubPath instances that you can walk to inspect their properties. If you've set your ofPath instance to use ofPolylines then this method does nothing.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###ofMesh & getTessellation()
 
 <!--
@@ -1755,44 +1676,6 @@ _description: _
 
 
 Whether the path is using a fill or not.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofSubPath lastPath()
-
-<!--
-_syntax: lastPath()_
-_name: lastPath_
-_returns: ofSubPath_
-_returns_description: _
-_parameters: _
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
 
 
 
@@ -2699,44 +2582,6 @@ Changes the size of either the ofPolyline or ofSubPath instances that the ofPath
 
 <!----------------------------------------------------------------------------->
 
-###void setArcResolution(res)
-
-<!--
-_syntax: setArcResolution(res)_
-_name: setArcResolution_
-_returns: void_
-_returns_description: _
-_parameters: int res_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void setCircleResolution(circleResolution)
 
 <!--
@@ -3555,31 +3400,6 @@ _description: _
 
 
 
-###int arcResolution
-
-<!--
-_name: arcResolution_
-_type: int_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###bool bFill
 
 <!--
@@ -3855,61 +3675,11 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool hasChanged
-
-<!--
-_name: hasChanged_
-_type: bool_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###Mode mode
 
 <!--
 _name: mode_
 _type: Mode_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofSubPath paths
-
-<!--
-_name: paths_
-_type: ofSubPath_
 _access: private_
 _version_started: 007_
 _version_deprecated: _

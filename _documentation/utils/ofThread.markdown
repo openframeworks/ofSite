@@ -737,52 +737,6 @@ Set *verbose* to true if you want detailed logging on thread and mutex events.
 
 <!----------------------------------------------------------------------------->
 
-###void stopThread(close = true)
-
-<!--
-_syntax: stopThread(close = true)_
-_name: stopThread_
-_returns: void_
-_returns_description: _
-_parameters: bool close=true_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Stop the thread.
-
-Set *close* to true if you want the thread to exit immediately.
-
-Set *close* to false if you want to signal the thread to exit, then wait for it to finish with waitForThread().
-
-**Note**: Calling this function does not guarantee the thread will stop as it may be stuck waiting for a mutex to be unlocked. **Always** make sure to call unlock() if you've previously called lock().
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void stopThread()
 
 <!--
@@ -804,44 +758,6 @@ _advanced: False_
 _inlined_description: _
 
 stop the thread 
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void * thread(*objPtr)
-
-<!--
-_syntax: thread(*objPtr)_
-_name: thread_
-_returns: void *_
-_returns_description: _
-_parameters: void *objPtr_
-_access: protected_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: False_
-_advanced: False_
--->
-
-_inlined_description: _
 
 
 
@@ -1203,31 +1119,6 @@ _description: _
 
 
 This is the internal [mutex](http://en.wikipedia.org/wiki/Mutex) called through lock() & unlock(). You can use it manually inside your derived class.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###pthread_t myThread
-
-<!--
-_name: myThread_
-_type: pthread_t_
-_access: protected_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: False_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
 
 
 

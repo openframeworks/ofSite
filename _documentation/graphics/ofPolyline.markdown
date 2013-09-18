@@ -133,16 +133,16 @@ Adds a point using floats instead of an ofPoint at the end of the ofPolyline.
 
 <!----------------------------------------------------------------------------->
 
-###void addVertexes(&verts)
+###void addVertices(&verts)
 
 <!--
-_syntax: addVertexes(&verts)_
-_name: addVertexes_
+_syntax: addVertices(&verts)_
+_name: addVertices_
 _returns: void_
 _returns_description: _
 _parameters: const vector< ofPoint > &verts_
 _access: public_
-_version_started: 007_
+_version_started: 0072_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -189,16 +189,16 @@ p.addVertexes(verts);
 
 <!----------------------------------------------------------------------------->
 
-###void addVertexes(*verts, numverts)
+###void addVertices(*verts, numverts)
 
 <!--
-_syntax: addVertexes(*verts, numverts)_
-_name: addVertexes_
+_syntax: addVertices(*verts, numverts)_
+_name: addVertices_
 _returns: void_
 _returns_description: _
 _parameters: const ofPoint *verts, int numverts_
 _access: public_
-_version_started: 007_
+_version_started: 0072_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -245,16 +245,16 @@ p.addVertexes(verts, 5);
 
 <!----------------------------------------------------------------------------->
 
-###void addVertices(&verts)
+###void arc(&center, radiusX, radiusY, angleBegin, angleEnd, clockwise, curveResolution = 20)
 
 <!--
-_syntax: addVertices(&verts)_
-_name: addVertices_
+_syntax: arc(&center, radiusX, radiusY, angleBegin, angleEnd, clockwise, curveResolution = 20)_
+_name: arc_
 _returns: void_
 _returns_description: _
-_parameters: const vector< ofPoint > &verts_
+_parameters: const ofPoint &center, float radiusX, float radiusY, float angleBegin, float angleEnd, bool clockwise, int circleResolution=20_
 _access: public_
-_version_started: 0072_
+_version_started: 0071_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -275,43 +275,11 @@ _inlined_description: _
 _description: _
 
 
+Draws an arc around the ofPoint ``center`` with the width of ``radiusX`` and the height of ``radiusY``.
+The ``angleBegin`` and ``angleEnd`` indicate the start and end angles of the arc in degrees measured clockwise from the x-axis.
+The ``clockwise`` boolean sets the drawing direction.  Passing 'false' to it will draw the arc counter-clockwise.
 
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void addVertices(*verts, numverts)
-
-<!--
-_syntax: addVertices(*verts, numverts)_
-_name: addVertices_
-_returns: void_
-_returns_description: _
-_parameters: const ofPoint *verts, int numverts_
-_access: public_
-_version_started: 0072_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
+Optionally, you can specify ``circleResolution``, which is the number of line segments a circle would be drawn with.
 
 
 
@@ -463,50 +431,6 @@ _description: _
 
 Draws an arc around the coordinates (``x``,``y``,``z``) with the width of ``radiusX`` and the height of ``radiusY``.
 The ``angleBegin`` and ``angleEnd`` indicate the start and end angles of the arc in degrees measured clockwise from the x-axis.
-
-Optionally, you can specify ``circleResolution``, which is the number of line segments a circle would be drawn with.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void arc(&center, radiusX, radiusY, angleBegin, angleEnd, clockwise, curveResolution = 20)
-
-<!--
-_syntax: arc(&center, radiusX, radiusY, angleBegin, angleEnd, clockwise, curveResolution = 20)_
-_name: arc_
-_returns: void_
-_returns_description: _
-_parameters: const ofPoint &center, float radiusX, float radiusY, float angleBegin, float angleEnd, bool clockwise, int circleResolution=20_
-_access: public_
-_version_started: 0071_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Draws an arc around the ofPoint ``center`` with the width of ``radiusX`` and the height of ``radiusY``.
-The ``angleBegin`` and ``angleEnd`` indicate the start and end angles of the arc in degrees measured clockwise from the x-axis.
-The ``clockwise`` boolean sets the drawing direction.  Passing 'false' to it will draw the arc counter-clockwise.
 
 Optionally, you can specify ``circleResolution``, which is the number of line segments a circle would be drawn with.
 
@@ -2081,6 +2005,43 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###vector< ofPoint > & getVertices()
+
+<!--
+_syntax: getVertices()_
+_name: getVertices_
+_returns: vector< ofPoint > &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###const vector< ofPoint > & getVertices()
 
 <!--
@@ -2636,6 +2597,43 @@ vector<ofPoint> pts;
 	ofPolyline cp(pts);
 ~~~~
 There is an easier way to draw circles though, using the arc() method.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const ofPoint & operator[](index)
+
+<!--
+_syntax: operator[](index)_
+_name: operator[]_
+_returns: const ofPoint &_
+_returns_description: _
+_parameters: int index_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 

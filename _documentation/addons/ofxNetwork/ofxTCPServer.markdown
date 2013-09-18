@@ -1435,6 +1435,30 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###ofMutex  mConnectionsLock
+
+<!--
+_name: mConnectionsLock_
+_type: ofMutex _
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###string messageDelimiter
 
 <!--
@@ -1490,31 +1514,6 @@ _description: _
 <!--
 _name: str_
 _type: string_
-_access: protected_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool verbose
-
-<!--
-_name: verbose_
-_type: bool_
 _access: protected_
 _version_started: 007_
 _version_deprecated: _

@@ -908,3 +908,99 @@ _description: _
 
 
 
+###bool  bInited
+
+<!--
+_name: bInited_
+_type: bool _
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###std::vector<  KinectPair >  deviceList
+
+<!--
+_name: deviceList_
+_type: std::vector<  KinectPair > _
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###freenect_context *  kinectContext
+
+<!--
+_name: kinectContext_
+_type: freenect_context * _
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###std::map< int,  ofxKinect * >  kinects
+
+<!--
+_name: kinects_
+_type: std::map< int,  ofxKinect * > _
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+

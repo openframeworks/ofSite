@@ -138,6 +138,43 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###ofAbstractParameter & back()
+
+<!--
+_syntax: back()_
+_name: back_
+_returns: ofAbstractParameter &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###const ofAbstractParameter & back()
 
 <!--
@@ -252,6 +289,43 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###ofAbstractParameter & front()
+
+<!--
+_syntax: front()_
+_name: front_
+_returns: ofAbstractParameter &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###const ofAbstractParameter & front()
 
 <!--
@@ -281,6 +355,80 @@ _inlined_description: _
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofAbstractParameter & get(name)
+
+<!--
+_syntax: get(name)_
+_name: get_
+_returns: ofAbstractParameter &_
+_returns_description: _
+_parameters: string name_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofAbstractParameter & get(pos)
+
+<!--
+_syntax: get(pos)_
+_name: get_
+_returns: ofAbstractParameter &_
+_returns_description: _
+_parameters: int pos_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 

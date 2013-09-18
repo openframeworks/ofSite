@@ -67,46 +67,6 @@ for (int y = 0; y<height-1; y++){
 
 
 
-###void addColor(c)
-
-<!--
-_syntax: addColor(c)_
-_name: addColor_
-_returns: void_
-_returns_description: _
-_parameters: const ofFloatColor& c_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Add a color at the index in the colors vector.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void addColor(&c)
 
 <!--
@@ -138,86 +98,6 @@ _description: _
 
 
 This adds a single color to all vertices.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void addColors(cols)
-
-<!--
-_syntax: addColors(cols)_
-_name: addColors_
-_returns: void_
-_returns_description: _
-_parameters: const vector&lt;ofFloatColor&gt;& cols_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Add multiple colors at the index in the colors vector.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void addColors(cols, amt)
-
-<!--
-_syntax: addColors(cols, amt)_
-_name: addColors_
-_returns: void_
-_returns_description: _
-_parameters: const ofFloatColor* cols, int amt_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Add colors to the colors vector using a pointer. The second parameter is always the number of colors that you're adding to the ofMesh.
 
 
 
@@ -347,86 +227,6 @@ Add an index from the index vector. Each index represents the index of the verte
 
 <!----------------------------------------------------------------------------->
 
-###void addIndices(inds)
-
-<!--
-_syntax: addIndices(inds)_
-_name: addIndices_
-_returns: void_
-_returns_description: _
-_parameters: const vector&lt;ofIndexType&gt;& inds_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Add multiple indices to the index vector. Each index represents the index of the vertex in the vertices vector. This determines the way that the vertices are connected into the polygon type set in the primitiveMode.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void addIndices(inds, amt)
-
-<!--
-_syntax: addIndices(inds, amt)_
-_name: addIndices_
-_returns: void_
-_returns_description: _
-_parameters: const ofIndexType* inds, int amt_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Add multiple indices to the index vector. Each index represents the index of the vertex in the vertices vector. This determines the way that the vertices are connected into the polygon type set in the primitiveMode.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void addIndices(&inds)
 
 <!--
@@ -507,46 +307,6 @@ This adds indices to the ofMesh.
 
 <!----------------------------------------------------------------------------->
 
-###void addNormal(n)
-
-<!--
-_syntax: addNormal(n)_
-_name: addNormal_
-_returns: void_
-_returns_description: _
-_parameters: const ofVec3f& n_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Adds a normal at the index in the normals vector.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void addNormal(&n)
 
 <!--
@@ -576,86 +336,6 @@ _inlined_description: _
 
 _description: _
 
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void addNormals(norms)
-
-<!--
-_syntax: addNormals(norms)_
-_name: addNormals_
-_returns: void_
-_returns_description: _
-_parameters: const vector&lt;ofVec3f&gt;& norms_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Add normals to the the normals vector.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void addNormals(norms, amt)
-
-<!--
-_syntax: addNormals(norms, amt)_
-_name: addNormals_
-_returns: void_
-_returns_description: _
-_parameters: const ofVec3f* norms, int amt_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Add multiple normals at the index in the normals vector.
 
 
 
@@ -741,46 +421,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void addTexCoord(t)
-
-<!--
-_syntax: addTexCoord(t)_
-_name: addTexCoord_
-_returns: void_
-_returns_description: _
-_parameters: const ofVec2f& t_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Add a Vec2f representing the texture coordinate. Because OF uses ARB textures these are in pixels rather than 0-1 normalized coordinates.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void addTexCoord(&t)
 
 <!--
@@ -810,87 +450,7 @@ _inlined_description: _
 
 _description: _
 
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void addTexCoords(tCoords)
-
-<!--
-_syntax: addTexCoords(tCoords)_
-_name: addTexCoords_
-_returns: void_
-_returns_description: _
-_parameters: const vector&lt;ofVec2f&gt;& tCoords_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Add multiple Vec2f representing the texture coordinate. Because OF uses ARB textures these are in pixels rather than 0-1 normalized coordinates.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void addTexCoords(tCoords, amt)
-
-<!--
-_syntax: addTexCoords(tCoords, amt)_
-_name: addTexCoords_
-_returns: void_
-_returns_description: _
-_parameters: const ofVec2f* tCoords, int amt_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Add multiple Vec2f representing the texture coordinate. Because OF uses ARB textures these are in pixels rather than 0-1 normalized coordinates.
-
+Add a Vec2f representing the texture coordinate. Because OF uses ARB textures these are in pixels rather than 0-1 normalized coordinates.
 
 
 
@@ -1015,46 +575,6 @@ Adding a triangle means using three of the vertices that have already been added
 
 <!----------------------------------------------------------------------------->
 
-###void addVertex(v)
-
-<!--
-_syntax: addVertex(v)_
-_name: addVertex_
-_returns: void_
-_returns_description: _
-_parameters: const ofVec3f& v_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Add a vertex.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void addVertex(&v)
 
 <!--
@@ -1084,86 +604,6 @@ _inlined_description: _
 
 _description: _
 
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void addVertices(verts)
-
-<!--
-_syntax: addVertices(verts)_
-_name: addVertices_
-_returns: void_
-_returns_description: _
-_parameters: const vector&lt;ofVec3f&gt;& verts_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Add multiple vertices.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void addVertices(verts, amt)
-
-<!--
-_syntax: addVertices(verts, amt)_
-_name: addVertices_
-_returns: void_
-_returns_description: _
-_parameters: const ofVec3f* verts, int amt_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Add multiple vertices.
 
 
 
@@ -2188,9 +1628,9 @@ _syntax: getColor(i)_
 _name: getColor_
 _returns: ofFloatColor_
 _returns_description: _
-_parameters: int i_
+_parameters: ofIndexType i_
 _access: public_
-_version_started: _
+_version_started: 0072_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2221,16 +1661,16 @@ Get the color at the index in the colors vector.
 
 <!----------------------------------------------------------------------------->
 
-###ofFloatColor getColor(i)
+###vector< ofFloatColor > & getColors()
 
 <!--
-_syntax: getColor(i)_
-_name: getColor_
-_returns: ofFloatColor_
+_syntax: getColors()_
+_name: getColors_
+_returns: vector< ofFloatColor > &_
 _returns_description: _
-_parameters: ofIndexType i_
+_parameters: _
 _access: public_
-_version_started: 0072_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2249,7 +1689,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -2290,6 +1729,43 @@ _description: _
 
 
 Get the vector that contains all of the colors of the mesh, if it has any.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofFloatColor * getColorsPointer()
+
+<!--
+_syntax: getColorsPointer()_
+_name: getColorsPointer_
+_returns: ofFloatColor *_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2425,9 +1901,9 @@ _syntax: getIndex(i)_
 _name: getIndex_
 _returns: ofIndexType_
 _returns_description: _
-_parameters: int i_
+_parameters: ofIndexType i_
 _access: public_
-_version_started: _
+_version_started: 0072_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2458,16 +1934,16 @@ Get the index from the index vector. Each index represents the index of the vert
 
 <!----------------------------------------------------------------------------->
 
-###ofIndexType getIndex(i)
+###ofIndexType * getIndexPointer()
 
 <!--
-_syntax: getIndex(i)_
-_name: getIndex_
-_returns: ofIndexType_
+_syntax: getIndexPointer()_
+_name: getIndexPointer_
+_returns: ofIndexType *_
 _returns_description: _
-_parameters: ofIndexType i_
+_parameters: _
 _access: public_
-_version_started: 0072_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2486,7 +1962,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -2528,6 +2003,43 @@ _description: _
 
 Get a pointer to the indices that the mesh contains.
 Get a pointer to the indices that the mesh contains.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###vector< ofIndexType > & getIndices()
+
+<!--
+_syntax: getIndices()_
+_name: getIndices_
+_returns: vector< ofIndexType > &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2700,9 +2212,9 @@ _syntax: getNormal(i)_
 _name: getNormal_
 _returns: ofVec3f_
 _returns_description: _
-_parameters: int i_
+_parameters: ofIndexType i_
 _access: public_
-_version_started: _
+_version_started: 0072_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2733,16 +2245,16 @@ Get the normal at the index in the normals vector.
 
 <!----------------------------------------------------------------------------->
 
-###ofVec3f getNormal(i)
+###vector< ofVec3f > & getNormals()
 
 <!--
-_syntax: getNormal(i)_
-_name: getNormal_
-_returns: ofVec3f_
+_syntax: getNormals()_
+_name: getNormals_
+_returns: vector< ofVec3f > &_
 _returns_description: _
-_parameters: ofIndexType i_
+_parameters: _
 _access: public_
-_version_started: 0072_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2761,7 +2273,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -2802,6 +2313,43 @@ _description: _
 
 
 Get the vector that contains all of the normals of the mesh, if it has any.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofVec3f * getNormalsPointer()
+
+<!--
+_syntax: getNormalsPointer()_
+_name: getNormalsPointer_
+_returns: ofVec3f *_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -3059,9 +2607,9 @@ _syntax: getTexCoord(i)_
 _name: getTexCoord_
 _returns: ofVec2f_
 _returns_description: _
-_parameters: int i_
+_parameters: ofIndexType i_
 _access: public_
-_version_started: _
+_version_started: 0072_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -3092,16 +2640,16 @@ Get the Vec2f representing the texture coordinate. Because OF uses ARB textures 
 
 <!----------------------------------------------------------------------------->
 
-###ofVec2f getTexCoord(i)
+###vector< ofVec2f > & getTexCoords()
 
 <!--
-_syntax: getTexCoord(i)_
-_name: getTexCoord_
-_returns: ofVec2f_
+_syntax: getTexCoords()_
+_name: getTexCoords_
+_returns: vector< ofVec2f > &_
 _returns_description: _
-_parameters: ofIndexType i_
+_parameters: _
 _access: public_
-_version_started: 0072_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -3120,7 +2668,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -3161,6 +2708,43 @@ _description: _
 
 
 Get the vector that contains all of the vertices of the tex coords, if it has any.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofVec2f * getTexCoordsPointer()
+
+<!--
+_syntax: getTexCoordsPointer()_
+_name: getTexCoordsPointer_
+_returns: ofVec2f *_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -3256,9 +2840,9 @@ _syntax: getVertex(i)_
 _name: getVertex_
 _returns: ofVec3f_
 _returns_description: _
-_parameters: int i_
+_parameters: ofIndexType i_
 _access: public_
-_version_started: _
+_version_started: 0072_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -3289,16 +2873,16 @@ Gets the vertex at the index.
 
 <!----------------------------------------------------------------------------->
 
-###ofVec3f getVertex(i)
+###vector< ofVec3f > & getVertices()
 
 <!--
-_syntax: getVertex(i)_
-_name: getVertex_
-_returns: ofVec3f_
+_syntax: getVertices()_
+_name: getVertices_
+_returns: vector< ofVec3f > &_
 _returns_description: _
-_parameters: ofIndexType i_
+_parameters: _
 _access: public_
-_version_started: 0072_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -3317,7 +2901,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -3358,6 +2941,43 @@ _description: _
 
 
 Get the vector that contains all of the vertices of the mesh.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofVec3f * getVerticesPointer()
+
+<!--
+_syntax: getVerticesPointer()_
+_name: getVerticesPointer_
+_returns: ofVec3f *_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -4000,46 +3620,6 @@ This creates the mesh, using OF_PRIMITIVE_TRIANGLES and without any initial vert
 
 <!----------------------------------------------------------------------------->
 
-### ofMesh(mode, verts)
-
-<!--
-_syntax: ofMesh(mode, verts)_
-_name: ofMesh_
-_returns: _
-_returns_description: _
-_parameters: ofPrimitiveMode mode, const vector&lt;ofVec3f&gt;& verts_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-This allows to you to use one of the other ofPrimitiveModes: OF_PRIMITIVE_TRIANGLES, OF_PRIMITIVE_TRIANGLE_STRIP, OF_PRIMITIVE_TRIANGLE_FAN, OF_PRIMITIVE_LINES, OF_PRIMITIVE_LINE_STRIP, OF_PRIMITIVE_LINE_LOOP, OF_PRIMITIVE_POINTS. See [ofGLUtils](../gl/ofGLUtils.htm) for more information on these types.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ### ofMesh(mode, &verts)
 
 <!--
@@ -4069,7 +3649,7 @@ _inlined_description: _
 
 _description: _
 
-
+This allows to you to use one of the other ofPrimitiveModes: OF_PRIMITIVE_TRIANGLES, OF_PRIMITIVE_TRIANGLE_STRIP, OF_PRIMITIVE_TRIANGLE_FAN, OF_PRIMITIVE_LINES, OF_PRIMITIVE_LINE_STRIP, OF_PRIMITIVE_LINE_LOOP, OF_PRIMITIVE_POINTS. See [ofGLUtils](../gl/ofGLUtils.htm) for more information on these types.
 
 
 
@@ -4123,46 +3703,6 @@ _syntax: removeColor(index)_
 _name: removeColor_
 _returns: void_
 _returns_description: _
-_parameters: int index_
-_access: public_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Remove a color at the index in the colors vector.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void removeColor(index)
-
-<!--
-_syntax: removeColor(index)_
-_name: removeColor_
-_returns: void_
-_returns_description: _
 _parameters: ofIndexType index_
 _access: public_
 _version_started: 0072_
@@ -4185,47 +3725,7 @@ _inlined_description: _
 
 _description: _
 
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void removeIndex(i)
-
-<!--
-_syntax: removeIndex(i)_
-_name: removeIndex_
-_returns: void_
-_returns_description: _
-_parameters: int i_
-_access: public_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Removes an index.
-
+Remove a color at the index in the colors vector.
 
 
 
@@ -4263,47 +3763,7 @@ _inlined_description: _
 
 _description: _
 
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void removeNormal(index)
-
-<!--
-_syntax: removeNormal(index)_
-_name: removeNormal_
-_returns: void_
-_returns_description: _
-_parameters: int index_
-_access: public_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Remove a normal.
-
+Removes an index.
 
 
 
@@ -4341,7 +3801,7 @@ _inlined_description: _
 
 _description: _
 
-
+Remove a normal.
 
 
 
@@ -4357,9 +3817,9 @@ _syntax: removeTexCoord(index)_
 _name: removeTexCoord_
 _returns: void_
 _returns_description: _
-_parameters: int index_
+_parameters: ofIndexType index_
 _access: public_
-_version_started: _
+_version_started: 0072_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -4386,15 +3846,13 @@ Remove a Vec2f representing the texture coordinate.
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
-###void removeTexCoord(index)
+###void removeVertex(index)
 
 <!--
-_syntax: removeTexCoord(index)_
-_name: removeTexCoord_
+_syntax: removeVertex(index)_
+_name: removeVertex_
 _returns: void_
 _returns_description: _
 _parameters: ofIndexType index_
@@ -4418,86 +3876,8 @@ _inlined_description: _
 
 
 _description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void removeVertex(index)
-
-<!--
-_syntax: removeVertex(index)_
-_name: removeVertex_
-_returns: void_
-_returns_description: _
-_parameters: int index_
-_access: public_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
 
 Removes the vertex at the index in the vector.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void removeVertex(index)
-
-<!--
-_syntax: removeVertex(index)_
-_name: removeVertex_
-_returns: void_
-_returns_description: _
-_parameters: ofIndexType index_
-_access: public_
-_version_started: 0072_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
 
 
 
@@ -4516,84 +3896,6 @@ _returns_description: _
 _parameters: string path, bool useBinary=false_
 _access: public_
 _version_started: 0071_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setColor(index, c)
-
-<!--
-_syntax: setColor(index, c)_
-_name: setColor_
-_returns: void_
-_returns_description: _
-_parameters: int index, const ofFloatColor& c_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Set the color at the index in the colors vector.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setColor(index, &c)
-
-<!--
-_syntax: setColor(index, &c)_
-_name: setColor_
-_returns: void_
-_returns_description: _
-_parameters: int index, const ofFloatColor &c_
-_access: public_
-_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -4651,7 +3953,7 @@ _inlined_description: _
 
 _description: _
 
-
+Set the color at the index in the colors vector.
 
 
 
@@ -4736,46 +4038,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setIndex(i, val)
-
-<!--
-_syntax: setIndex(i, val)_
-_name: setIndex_
-_returns: void_
-_returns_description: _
-_parameters: int i, ofIndexType val_
-_access: public_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-This sets the index at i.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void setIndex(index, val)
 
 <!--
@@ -4805,7 +4067,7 @@ _inlined_description: _
 
 _description: _
 
-
+This sets the index at i.
 
 
 
@@ -4894,84 +4156,6 @@ Each mesh can have a name, here's where you set it.
 
 <!----------------------------------------------------------------------------->
 
-###void setNormal(index, n)
-
-<!--
-_syntax: setNormal(index, n)_
-_name: setNormal_
-_returns: void_
-_returns_description: _
-_parameters: int index, const ofVec3f& n_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Set the normal at the index.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setNormal(index, &n)
-
-<!--
-_syntax: setNormal(index, &n)_
-_name: setNormal_
-_returns: void_
-_returns_description: _
-_parameters: int index, const ofVec3f &n_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void setNormal(index, &n)
 
 <!--
@@ -5010,84 +4194,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setTexCoord(index, t)
-
-<!--
-_syntax: setTexCoord(index, t)_
-_name: setTexCoord_
-_returns: void_
-_returns_description: _
-_parameters: int index, const ofVec2f& t_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Set a Vec2f representing the texture coordinate. Because OF uses ARB textures these are in pixels rather than 0-1 normalized coordinates.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setTexCoord(index, &t)
-
-<!--
-_syntax: setTexCoord(index, &t)_
-_name: setTexCoord_
-_returns: void_
-_returns_description: _
-_parameters: int index, const ofVec2f &t_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void setTexCoord(index, &t)
 
 <!--
@@ -5098,84 +4204,6 @@ _returns_description: _
 _parameters: ofIndexType index, const ofVec2f &t_
 _access: public_
 _version_started: 0072_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setVertex(index, v)
-
-<!--
-_syntax: setVertex(index, v)_
-_name: setVertex_
-_returns: void_
-_returns_description: _
-_parameters: int index, const ofVec3f& v_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Updates the vertex at the index in the vector.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setVertex(index, &v)
-
-<!--
-_syntax: setVertex(index, &v)_
-_name: setVertex_
-_returns: void_
-_returns_description: _
-_parameters: int index, const ofVec3f &v_
-_access: public_
-_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -5334,44 +4362,6 @@ _version_deprecated: _
 _summary: _
 _constant: False_
 _static: True_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###friend std std
-
-<!--
-_syntax: std_
-_name: std_
-_returns: friend std_
-_returns_description: _
-_parameters: std_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
 _visible: True_
 _advanced: False_
 -->

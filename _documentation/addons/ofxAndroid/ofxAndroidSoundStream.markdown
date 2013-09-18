@@ -1077,56 +1077,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###jshortArray jInArray
-
-<!--
-_name: jInArray_
-_type: jshortArray_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###jshortArray jOutArray
-
-<!--
-_name: jOutArray_
-_type: jshortArray_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###int outBufferSize
 
 <!--

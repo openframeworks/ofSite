@@ -28,46 +28,6 @@ The far and near clip planes are the boundaries of what's visible in the camera.
 
 
 
-###void begin(viewport =  ofGetCurrentViewport)
-
-<!--
-_syntax: begin(viewport =  ofGetCurrentViewport)_
-_name: begin_
-_returns: void_
-_returns_description: _
-_parameters: ofRectangle viewport = ofGetCurrentViewport_
-_access: public_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-set the matrices that the camera will use.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void begin(viewport = ofGetCurrentViewport())
 
 <!--
@@ -97,46 +57,7 @@ _inlined_description: _
 
 _description: _
 
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void cacheMatrices(cache = true)
-
-<!--
-_syntax: cacheMatrices(cache = true)_
-_name: cacheMatrices_
-_returns: void_
-_returns_description: _
-_parameters: bool cache=true_
-_access: public_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-This caches the projection matrix for the ofCamera.
+set the matrices that the camera will use.
 
 
 
@@ -184,46 +105,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec3f cameraToWorld(CameraXYZ, viewport =  ofGetCurrentViewport)
-
-<!--
-_syntax: cameraToWorld(CameraXYZ, viewport =  ofGetCurrentViewport)_
-_name: cameraToWorld_
-_returns: ofVec3f_
-_returns_description: _
-_parameters: ofVec3f CameraXYZ, ofRectangle viewport = ofGetCurrentViewport_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-When you have a position in camera coordinates you can get what it would be in world coordinates, transforming it using the ofCamera.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###ofVec3f cameraToWorld(CameraXYZ, viewport = ofGetCurrentViewport())
 
 <!--
@@ -253,7 +134,7 @@ _inlined_description: _
 
 _description: _
 
-
+When you have a position in camera coordinates you can get what it would be in world coordinates, transforming it using the ofCamera.
 
 
 
@@ -534,46 +415,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###float getImagePlaneDistance(viewport =  ofGetCurrentViewport)
-
-<!--
-_syntax: getImagePlaneDistance(viewport =  ofGetCurrentViewport)_
-_name: getImagePlaneDistance_
-_returns: float_
-_returns_description: _
-_parameters: ofRectangle viewport = ofGetCurrentViewport_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-This allows you to get the image plane distance from any viewport passed in. By default this is the current viewport, but it can be whatever you find useful.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###float getImagePlaneDistance(viewport = ofGetCurrentViewport())
 
 <!--
@@ -603,7 +444,7 @@ _inlined_description: _
 
 _description: _
 
-
+This allows you to get the image plane distance from any viewport passed in. By default this is the current viewport, but it can be whatever you find useful.
 
 
 
@@ -690,46 +531,6 @@ Access to the projection matrix.
 
 <!----------------------------------------------------------------------------->
 
-###ofMatrix4x4 getModelViewProjectionMatrix(viewport =  ofGetCurrentViewport)
-
-<!--
-_syntax: getModelViewProjectionMatrix(viewport =  ofGetCurrentViewport)_
-_name: getModelViewProjectionMatrix_
-_returns: ofMatrix4x4_
-_returns_description: _
-_parameters: ofRectangle viewport = ofGetCurrentViewport_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Access to the projection ModelViewProjectionMatrix.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###ofMatrix4x4 getModelViewProjectionMatrix(viewport = ofGetCurrentViewport())
 
 <!--
@@ -759,7 +560,7 @@ _inlined_description: _
 
 _description: _
 
-
+Access to the projection ModelViewProjectionMatrix.
 
 
 
@@ -846,46 +647,6 @@ Get whether the camera is in orthographic mode.
 
 <!----------------------------------------------------------------------------->
 
-###ofMatrix4x4 getProjectionMatrix(viewport =  ofGetCurrentViewport)
-
-<!--
-_syntax: getProjectionMatrix(viewport =  ofGetCurrentViewport)_
-_name: getProjectionMatrix_
-_returns: ofMatrix4x4_
-_returns_description: _
-_parameters: ofRectangle viewport = ofGetCurrentViewport_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Access to the projection matrix.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###ofMatrix4x4 getProjectionMatrix(viewport = ofGetCurrentViewport())
 
 <!--
@@ -916,7 +677,7 @@ _inlined_description: _
 _description: _
 
 
-
+Access to the projection matrix.
 
 
 
@@ -1000,46 +761,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec3f screenToWorld(ScreenXYZ, viewport =  ofGetCurrentViewport)
-
-<!--
-_syntax: screenToWorld(ScreenXYZ, viewport =  ofGetCurrentViewport)_
-_name: screenToWorld_
-_returns: ofVec3f_
-_returns_description: _
-_parameters: ofVec3f ScreenXYZ, ofRectangle viewport = ofGetCurrentViewport_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-When you have a position in screen coordinates you can get what it would be in world coordinates, transforming it using the ofCamera.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###ofVec3f screenToWorld(ScreenXYZ, viewport = ofGetCurrentViewport())
 
 <!--
@@ -1069,7 +790,7 @@ _inlined_description: _
 
 _description: _
 
-
+When you have a position in screen coordinates you can get what it would be in world coordinates, transforming it using the ofCamera.
 
 
 
@@ -1388,44 +1109,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setupPerspective(vFlip = true, fov = 60, nearDist = 0, farDist = 0)
-
-<!--
-_syntax: setupPerspective(vFlip = true, fov = 60, nearDist = 0, farDist = 0)_
-_name: setupPerspective_
-_returns: void_
-_returns_description: _
-_parameters: bool vFlip=true, float fov=60, float nearDist=0, float farDist=0_
-_access: public_
-_version_started: 0071_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void setupPerspective(vFlip = true, fov = 60, nearDist = 0, farDist = 0, &lensOffset = ofVec2f(0.0f, 0.0f))
 
 <!--
@@ -1464,46 +1147,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec3f worldToCamera(WorldXYZ, viewport =  ofGetCurrentViewport)
-
-<!--
-_syntax: worldToCamera(WorldXYZ, viewport =  ofGetCurrentViewport)_
-_name: worldToCamera_
-_returns: ofVec3f_
-_returns_description: _
-_parameters: ofVec3f WorldXYZ, ofRectangle viewport = ofGetCurrentViewport_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-When you have a position in world coordinates you can get what it would be in camera coordinates, transforming it using the ofCamera.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###ofVec3f worldToCamera(WorldXYZ, viewport = ofGetCurrentViewport())
 
 <!--
@@ -1533,47 +1176,7 @@ _inlined_description: _
 
 _description: _
 
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofVec3f worldToScreen(WorldXYZ, viewport =  ofGetCurrentViewport)
-
-<!--
-_syntax: worldToScreen(WorldXYZ, viewport =  ofGetCurrentViewport)_
-_name: worldToScreen_
-_returns: ofVec3f_
-_returns_description: _
-_parameters: ofVec3f WorldXYZ, ofRectangle viewport = ofGetCurrentViewport_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-When you have a position in world coordinates you can get what it would be in world coordinates, transforming it using the ofCamera.
-
+When you have a position in world coordinates you can get what it would be in camera coordinates, transforming it using the ofCamera.
 
 
 
@@ -1611,7 +1214,7 @@ _inlined_description: _
 
 _description: _
 
-
+When you have a position in world coordinates you can get what it would be in world coordinates, transforming it using the ofCamera.
 
 
 
@@ -1669,31 +1272,6 @@ _name: aspectRatio_
 _type: float_
 _access: protected_
 _version_started: 0073_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool bCacheMatrices
-
-<!--
-_name: bCacheMatrices_
-_type: bool_
-_access: private_
-_version_started: 007_
 _version_deprecated: _
 _summary: _
 _visible: True_
@@ -1787,31 +1365,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool hasStoredMatrices
-
-<!--
-_name: hasStoredMatrices_
-_type: bool_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###bool isActive
 
 <!--
@@ -1869,56 +1422,6 @@ _name: lensOffset_
 _type: ofVec2f_
 _access: protected_
 _version_started: 0073_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofMatrix4x4 matModelView
-
-<!--
-_name: matModelView_
-_type: ofMatrix4x4_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofMatrix4x4 matProjection
-
-<!--
-_name: matProjection_
-_type: ofMatrix4x4_
-_access: private_
-_version_started: 007_
 _version_deprecated: _
 _summary: _
 _visible: True_

@@ -72,44 +72,6 @@ if (vidGrabber.isFrameNew()){
 
 
 
-###bool allocate()
-
-<!--
-_syntax: allocate()_
-_name: allocate_
-_returns: bool_
-_returns_description: _
-_parameters: _
-_access: protected_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void close()
 
 <!--
@@ -198,44 +160,6 @@ myPlayer.closeMovie(); //Unloads video resources
 
 <!----------------------------------------------------------------------------->
 
-###void createImgMemAndGWorld()
-
-<!--
-_syntax: createImgMemAndGWorld()_
-_name: createImgMemAndGWorld_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: protected_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void draw(x, y, w, h)
 
 <!--
@@ -307,84 +231,6 @@ _description: _
 
 
 Draws the texture of the movie player class as the position (x,y) with the internal width and height of the loaded movie. 
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void draw(&p)
-
-<!--
-_syntax: draw(&p)_
-_name: draw_
-_returns: void_
-_returns_description: _
-_parameters: const ofPoint &p_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void draw(&r)
-
-<!--
-_syntax: draw(&r)_
-_name: draw_
-_returns: void_
-_returns_description: _
-_parameters: const ofRectangle &r_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Draw into a rectangle that defines the screen size and the upper left hand corner of where the video frames should be drawn
 
 
 
@@ -1038,84 +884,6 @@ Get the width of the movie file.
 
 <!----------------------------------------------------------------------------->
 
-###void gstHandleMessage()
-
-<!--
-_syntax: gstHandleMessage()_
-_name: gstHandleMessage_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: protected_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void idleMovie()
-
-<!--
-_syntax: idleMovie()_
-_name: idleMovie_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-This function idles the movie player, so that the movie can play. If you don't call it, when the movie is playing then you may encouter problems, especially on winodws machines.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###bool isFrameNew()
 
 <!--
@@ -1530,82 +1298,6 @@ Resets the ancher point of this ofVideoPlayer, if one has been set.
 
 <!----------------------------------------------------------------------------->
 
-###void seek_lock()
-
-<!--
-_syntax: seek_lock()_
-_name: seek_lock_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: protected_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void seek_unlock()
-
-<!--
-_syntax: seek_unlock()_
-_name: seek_unlock_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: protected_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void setAnchorPercent(xPct, yPct)
 
 <!--
@@ -1637,46 +1329,6 @@ _description: _
 
 
 Sets an anchor percentage for this ofVideoPlayer instance
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setAnchorPoint(x, y)
-
-<!--
-_syntax: setAnchorPoint(x, y)_
-_name: setAnchorPoint_
-_returns: void_
-_returns_description: _
-_parameters: int x, int y_
-_access: public_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: True_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Sets anchor points for this ofVideoPlayer instance.
 
 
 
@@ -1757,52 +1409,6 @@ _description: _
 
 
 Sets the current frame of the video. Should be used only if you know the bounds of the movie ( using totalNumberFrames() ) or store a location using getCurrentFrame();
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setLoopState(state)
-
-<!--
-_syntax: setLoopState(state)_
-_name: setLoopState_
-_returns: void_
-_returns_description: _
-_parameters: int state_
-_access: public_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Sets the looping state of the movie. Deafult behavior is to loop. There are three options:
-~~~~{.cpp}
-
-OF_LOOP_NONE - don't loop, the movie will stop when it gets to the last frame (or first frame, if playing backwards)
-OF_LOOP_NORMAL - loop normally (the last frame loops to the first frame)
-OF_LOOP_PALINDROME - loop back and forth
-~~~~
 
 
 
@@ -2141,46 +1747,6 @@ Sets the volume of a movie as it plays. The maximum values is 1.0f, 0.0f is sile
 
 <!----------------------------------------------------------------------------->
 
-###void start()
-
-<!--
-_syntax: start()_
-_name: start_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: protected_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Starts the movie, checking for whether the movie has been both loaded and if it has been started. If it has been loaded but not started the movie is initialized and then played, otherwise it is just played.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void stop()
 
 <!--
@@ -2252,44 +1818,6 @@ _description: _
 
 
 Calls the idleMovie() function. This function idles the movie player, so that the movie can play. If you don't call it, when the movie is playing then you may encounter problems, especially on windows machines. 
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ~ofVideoPlayer()
-
-<!--
-_syntax: ~ofVideoPlayer()_
-_name: ~ofVideoPlayer_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: False_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
 
 
 
@@ -2423,6 +1951,30 @@ _advanced: False_
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofTexture *  playerTex
+
+<!--
+_name: playerTex_
+_type: ofTexture * _
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 

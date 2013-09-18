@@ -24,6 +24,43 @@ _istemplated: False_
 
 
 
+###ofParameter< ParameterType > & cast()
+
+<!--
+_syntax: cast()_
+_name: cast_
+_returns: ofParameter< ParameterType > &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###const ofParameter< ParameterType > & cast()
 
 <!--
@@ -243,6 +280,43 @@ _inlined_description: _
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const ofParameterGroup * getParent()
+
+<!--
+_syntax: getParent()_
+_name: getParent_
+_returns: const ofParameterGroup *_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 

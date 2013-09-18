@@ -861,6 +861,43 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###Poco::XML::Document * getPocoDocument()
+
+<!--
+_syntax: getPocoDocument()_
+_name: getPocoDocument_
+_returns: Poco::XML::Document *_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###const Poco::XML::Document * getPocoDocument()
 
 <!--
@@ -890,6 +927,80 @@ _inlined_description: _
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###Poco::XML::Element * getPocoElement()
+
+<!--
+_syntax: getPocoElement()_
+_name: getPocoElement_
+_returns: Poco::XML::Element *_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###Poco::XML::Element * getPocoElement(&path)
+
+<!--
+_syntax: getPocoElement(&path)_
+_name: getPocoElement_
+_returns: Poco::XML::Element *_
+_returns_description: _
+_parameters: const string &path_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 

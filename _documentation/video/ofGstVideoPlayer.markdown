@@ -24,44 +24,6 @@ _istemplated: False_
 
 
 
-###bool allocate()
-
-<!--
-_syntax: allocate()_
-_name: allocate_
-_returns: bool_
-_returns_description: _
-_parameters: _
-_access: protected_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###bool allocate(bpp)
 
 <!--
@@ -1404,44 +1366,6 @@ _returns_description: _
 _parameters: bool threaded_
 _access: public_
 _version_started: 0071_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setVolume(volume)
-
-<!--
-_syntax: setVolume(volume)_
-_name: setVolume_
-_returns: void_
-_returns_description: _
-_parameters: int volume_
-_access: public_
-_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_

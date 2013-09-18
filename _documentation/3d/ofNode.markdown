@@ -66,44 +66,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void clearParent()
-
-<!--
-_syntax: clearParent()_
-_name: clearParent_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void clearParent(bMaintainGlobalTransform = false)
 
 <!--
@@ -2012,44 +1974,6 @@ _name: setOrientation_
 _returns: void_
 _returns_description: _
 _parameters: const ofVec3f &eulerAngles_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setParent(&parent)
-
-<!--
-_syntax: setParent(&parent)_
-_name: setParent_
-_returns: void_
-_returns_description: _
-_parameters: ofNode &parent_
 _access: public_
 _version_started: 007_
 _version_deprecated: _

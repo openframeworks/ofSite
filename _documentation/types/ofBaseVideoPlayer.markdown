@@ -1095,44 +1095,6 @@ _syntax: setVolume(volume)_
 _name: setVolume_
 _returns: void_
 _returns_description: _
-_parameters: int volume_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setVolume(volume)
-
-<!--
-_syntax: setVolume(volume)_
-_name: setVolume_
-_returns: void_
-_returns_description: _
 _parameters: float volume_
 _access: public_
 _version_started: 0072_

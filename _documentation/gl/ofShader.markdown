@@ -259,44 +259,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void checkShaderInfoLog(shader, type)
-
-<!--
-_syntax: checkShaderInfoLog(shader, type)_
-_name: checkShaderInfoLog_
-_returns: void_
-_returns_description: _
-_parameters: GLuint shader, GLenum type_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void checkShaderInfoLog(shader, type, logLevel)
 
 <!--
@@ -307,44 +269,6 @@ _returns_description: _
 _parameters: GLuint shader, GLenum type, ofLogLevel logLevel_
 _access: private_
 _version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool checkShaderLinkStatus(shader, type)
-
-<!--
-_syntax: checkShaderLinkStatus(shader, type)_
-_name: checkShaderLinkStatus_
-_returns: bool_
-_returns_description: _
-_parameters: GLuint shader, GLenum type_
-_access: private_
-_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -404,84 +328,6 @@ _description: _
 
 
 After you call end() any drawing, vertexes and textures, do not have the effect of the shader applied to them.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###GLint getAttributeLocation(name)
-
-<!--
-_syntax: getAttributeLocation(name)_
-_name: getAttributeLocation_
-_returns: GLint_
-_returns_description: _
-_parameters: const char* name_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-// set attributes that vary per vertex (look up the location before glBegin)
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###GLint getAttributeLocation(*name)
-
-<!--
-_syntax: getAttributeLocation(*name)_
-_name: getAttributeLocation_
-_returns: GLint_
-_returns_description: _
-_parameters: const char *name_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
 
 
 
@@ -640,44 +486,6 @@ _description: _
 
 
 This returns the GLuint for the actual shader object that is active on the graphics card. This is more of an advanced usage method, but can be helpful if you need to do something that the ofShader doesn't support currently. This returns only one of the shaders. You can pass GL_VERTEX_SHADER, GL_GEOMETRY_SHADER_EXT, GL_FRAGMENT_SHADER
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###GLint getUniformLocation(*name)
-
-<!--
-_syntax: getUniformLocation(*name)_
-_name: getUniformLocation_
-_returns: GLint_
-_returns_description: _
-_parameters: const char *name_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
 
 
 
@@ -1965,84 +1773,6 @@ type: GL_POINTS, GL_LINE_STRIP or GL_TRIANGLE_STRIP
 
 <!----------------------------------------------------------------------------->
 
-###void setUniform1f(name, v1)
-
-<!--
-_syntax: setUniform1f(name, v1)_
-_name: setUniform1f_
-_returns: void_
-_returns_description: _
-_parameters: const char* name, float v1_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-set a float uniform on the shader
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setUniform1f(*name, v1)
-
-<!--
-_syntax: setUniform1f(*name, v1)_
-_name: setUniform1f_
-_returns: void_
-_returns_description: _
-_parameters: const char *name, float v1_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void setUniform1f(&name, v1)
 
 <!--
@@ -2072,89 +1802,7 @@ _inlined_description: _
 
 _description: _
 
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setUniform1fv(name, v, count =  1)
-
-<!--
-_syntax: setUniform1fv(name, v, count =  1)_
-_name: setUniform1fv_
-_returns: void_
-_returns_description: _
-_parameters: const char* name, float* v, int count = 1_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-set an array of uniform values on the shader using int[2] value. On the shader this looks like:
-This allows you to set multiple float uniforms.
-~~~~{.cpp}
-float v[2];
-~~~~
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setUniform1fv(*name, *v, count = 1)
-
-<!--
-_syntax: setUniform1fv(*name, *v, count = 1)_
-_name: setUniform1fv_
-_returns: void_
-_returns_description: _
-_parameters: const char *name, float *v, int count=1_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
+set a float uniform on the shader
 
 
 
@@ -2173,87 +1821,6 @@ _returns_description: _
 _parameters: const string &name, float *v, int count=1_
 _access: public_
 _version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setUniform1i(name, v1)
-
-<!--
-_syntax: setUniform1i(name, v1)_
-_name: setUniform1i_
-_returns: void_
-_returns_description: _
-_parameters: const char* name, int v1_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-set a single uniform value. On your shader this should look like:
-~~~~{.cpp}
-uniform int texture;
-~~~~
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setUniform1i(*name, v1)
-
-<!--
-_syntax: setUniform1i(*name, v1)_
-_name: setUniform1i_
-_returns: void_
-_returns_description: _
-_parameters: const char *name, int v1_
-_access: public_
-_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2320,91 +1887,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setUniform1iv(name, v, count =  1)
-
-<!--
-_syntax: setUniform1iv(name, v, count =  1)_
-_name: setUniform1iv_
-_returns: void_
-_returns_description: _
-_parameters: const char* name, int* v, int count = 1_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-set an array of uniform values on the shader, this uses single values, i.e. 
-~~~~{.cpp}
-int ids[4] = {1, 2, 3, 4};
-~~~~
-On the shader side, this is:
-~~~~{.cpp}
-ivec iv[2];
-~~~~
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setUniform1iv(*name, *v, count = 1)
-
-<!--
-_syntax: setUniform1iv(*name, *v, count = 1)_
-_name: setUniform1iv_
-_returns: void_
-_returns_description: _
-_parameters: const char *name, int *v, int count=1_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void setUniform1iv(&name, *v, count = 1)
 
 <!--
@@ -2415,84 +1897,6 @@ _returns_description: _
 _parameters: const string &name, int *v, int count=1_
 _access: public_
 _version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setUniform2f(name, v1, v2)
-
-<!--
-_syntax: setUniform2f(name, v1, v2)_
-_name: setUniform2f_
-_returns: void_
-_returns_description: _
-_parameters: const char* name, float v1, float v2_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-set a vec2 uniform on the shader
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setUniform2f(*name, v1, v2)
-
-<!--
-_syntax: setUniform2f(*name, v1, v2)_
-_name: setUniform2f_
-_returns: void_
-_returns_description: _
-_parameters: const char *name, float v1, float v2_
-_access: public_
-_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2559,87 +1963,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setUniform2fv(name, v, count =  1)
-
-<!--
-_syntax: setUniform2fv(name, v, count =  1)_
-_name: setUniform2fv_
-_returns: void_
-_returns_description: _
-_parameters: const char* name, float* v, int count = 1_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-This allows you to set multiple vec2 uniforms.
-~~~~{.cpp}
-vec2 v[2];
-~~~~
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setUniform2fv(*name, *v, count = 1)
-
-<!--
-_syntax: setUniform2fv(*name, *v, count = 1)_
-_name: setUniform2fv_
-_returns: void_
-_returns_description: _
-_parameters: const char *name, float *v, int count=1_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void setUniform2fv(&name, *v, count = 1)
 
 <!--
@@ -2671,85 +1994,10 @@ _description: _
 
 
 
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setUniform2i(name, v1, v2)
-
-<!--
-_syntax: setUniform2i(name, v1, v2)_
-_name: setUniform2i_
-_returns: void_
-_returns_description: _
-_parameters: const char* name, int v1, int v2_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
+This allows you to set multiple vec2 uniforms.
 ~~~~{.cpp}
-uniform ivec2 texture;
+vec2 v[2];
 ~~~~
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setUniform2i(*name, v1, v2)
-
-<!--
-_syntax: setUniform2i(*name, v1, v2)_
-_name: setUniform2i_
-_returns: void_
-_returns_description: _
-_parameters: const char *name, int v1, int v2_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
 
 
 
@@ -2768,87 +2016,6 @@ _returns_description: _
 _parameters: const string &name, int v1, int v2_
 _access: public_
 _version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setUniform2iv(name, v, count =  1)
-
-<!--
-_syntax: setUniform2iv(name, v, count =  1)_
-_name: setUniform2iv_
-_returns: void_
-_returns_description: _
-_parameters: const char* name, int* v, int count = 1_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-set an array of uniform values on the shader using int[2] value. On the shader this looks like:
-~~~~{.cpp}
-ivec2 iv[2];
-~~~~
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setUniform2iv(*name, *v, count = 1)
-
-<!--
-_syntax: setUniform2iv(*name, *v, count = 1)_
-_name: setUniform2iv_
-_returns: void_
-_returns_description: _
-_parameters: const char *name, int *v, int count=1_
-_access: public_
-_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2907,84 +2074,10 @@ _inlined_description: _
 _description: _
 
 
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setUniform3f(name, v1, v2, v3)
-
-<!--
-_syntax: setUniform3f(name, v1, v2, v3)_
-_name: setUniform3f_
-_returns: void_
-_returns_description: _
-_parameters: const char* name, float v1, float v2, float v3_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-set a vec3 uniform on the shader
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setUniform3f(*name, v1, v2, v3)
-
-<!--
-_syntax: setUniform3f(*name, v1, v2, v3)_
-_name: setUniform3f_
-_returns: void_
-_returns_description: _
-_parameters: const char *name, float v1, float v2, float v3_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
+set an array of uniform values on the shader using int[2] value. On the shader this looks like:
+~~~~{.cpp}
+ivec2 iv[2];
+~~~~
 
 
 
@@ -3023,87 +2116,7 @@ _inlined_description: _
 _description: _
 
 
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setUniform3fv(name, v, count =  1)
-
-<!--
-_syntax: setUniform3fv(name, v, count =  1)_
-_name: setUniform3fv_
-_returns: void_
-_returns_description: _
-_parameters: const char* name, float* v, int count = 1_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-This allows you to set multiple vec3 uniforms.
-~~~~{.cpp}
-vec3 v[2];
-~~~~
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setUniform3fv(*name, *v, count = 1)
-
-<!--
-_syntax: setUniform3fv(*name, *v, count = 1)_
-_name: setUniform3fv_
-_returns: void_
-_returns_description: _
-_parameters: const char *name, float *v, int count=1_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
+set a vec3 uniform on the shader
 
 
 
@@ -3142,86 +2155,10 @@ _inlined_description: _
 _description: _
 
 
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setUniform3i(name, v1, v2, v3)
-
-<!--
-_syntax: setUniform3i(name, v1, v2, v3)_
-_name: setUniform3i_
-_returns: void_
-_returns_description: _
-_parameters: const char* name, int v1, int v2, int v3_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
+This allows you to set multiple vec3 uniforms.
 ~~~~{.cpp}
-uniform ivec3 texture;
+vec3 v[2];
 ~~~~
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setUniform3i(*name, v1, v2, v3)
-
-<!--
-_syntax: setUniform3i(*name, v1, v2, v3)_
-_name: setUniform3i_
-_returns: void_
-_returns_description: _
-_parameters: const char *name, int v1, int v2, int v3_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
 
 
 
@@ -3260,87 +2197,9 @@ _inlined_description: _
 _description: _
 
 
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setUniform3iv(name, v, count =  1)
-
-<!--
-_syntax: setUniform3iv(name, v, count =  1)_
-_name: setUniform3iv_
-_returns: void_
-_returns_description: _
-_parameters: const char* name, int* v, int count = 1_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-set an array of uniform values on the shader using int[2] value. On the shader this looks like:
 ~~~~{.cpp}
-ivec3 iv[2];
+uniform ivec3 texture;
 ~~~~
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setUniform3iv(*name, *v, count = 1)
-
-<!--
-_syntax: setUniform3iv(*name, *v, count = 1)_
-_name: setUniform3iv_
-_returns: void_
-_returns_description: _
-_parameters: const char *name, int *v, int count=1_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
 
 
 
@@ -3379,87 +2238,10 @@ _inlined_description: _
 _description: _
 
 
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setUniform4f(name, v1, v2, v3, v4)
-
-<!--
-_syntax: setUniform4f(name, v1, v2, v3, v4)_
-_name: setUniform4f_
-_returns: void_
-_returns_description: _
-_parameters: const char* name, float v1, float v2, float v3, float v4_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-set a vec4 uniform on the shader
+set an array of uniform values on the shader using int[2] value. On the shader this looks like:
 ~~~~{.cpp}
-vec4 fv;
+ivec3 iv[2];
 ~~~~
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setUniform4f(*name, v1, v2, v3, v4)
-
-<!--
-_syntax: setUniform4f(*name, v1, v2, v3, v4)_
-_name: setUniform4f_
-_returns: void_
-_returns_description: _
-_parameters: const char *name, float v1, float v2, float v3, float v4_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
 
 
 
@@ -3498,87 +2280,10 @@ _inlined_description: _
 _description: _
 
 
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setUniform4fv(name, v, count =  1)
-
-<!--
-_syntax: setUniform4fv(name, v, count =  1)_
-_name: setUniform4fv_
-_returns: void_
-_returns_description: _
-_parameters: const char* name, float* v, int count = 1_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-This allows you to set multiple vec4 uniforms.
+set a vec4 uniform on the shader
 ~~~~{.cpp}
-vec4 v[2];
+vec4 fv;
 ~~~~
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setUniform4fv(*name, *v, count = 1)
-
-<!--
-_syntax: setUniform4fv(*name, *v, count = 1)_
-_name: setUniform4fv_
-_returns: void_
-_returns_description: _
-_parameters: const char *name, float *v, int count=1_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
 
 
 
@@ -3618,86 +2323,10 @@ _description: _
 
 
 
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setUniform4i(name, v1, v2, v3, v4)
-
-<!--
-_syntax: setUniform4i(name, v1, v2, v3, v4)_
-_name: setUniform4i_
-_returns: void_
-_returns_description: _
-_parameters: const char* name, int v1, int v2, int v3, int v4_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
+This allows you to set multiple vec4 uniforms.
 ~~~~{.cpp}
-uniform ivec4 texture;
+vec4 v[2];
 ~~~~
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setUniform4i(*name, v1, v2, v3, v4)
-
-<!--
-_syntax: setUniform4i(*name, v1, v2, v3, v4)_
-_name: setUniform4i_
-_returns: void_
-_returns_description: _
-_parameters: const char *name, int v1, int v2, int v3, int v4_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
 
 
 
@@ -3715,87 +2344,6 @@ _returns_description: _
 _parameters: const string &name, int v1, int v2, int v3, int v4_
 _access: public_
 _version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setUniform4iv(name, v, count =  1)
-
-<!--
-_syntax: setUniform4iv(name, v, count =  1)_
-_name: setUniform4iv_
-_returns: void_
-_returns_description: _
-_parameters: const char* name, int* v, int count = 1_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-set an array of uniform values on the shader using int[2] value. On the shader this looks like:
-~~~~{.cpp}
-ivec4 iv[2];
-~~~~
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setUniform4iv(*name, *v, count = 1)
-
-<!--
-_syntax: setUniform4iv(*name, *v, count = 1)_
-_name: setUniform4iv_
-_returns: void_
-_returns_description: _
-_parameters: const char *name, int *v, int count=1_
-_access: public_
-_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -3855,44 +2403,10 @@ _description: _
 
 
 
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setUniformMatrix4f(*name, &m)
-
-<!--
-_syntax: setUniformMatrix4f(*name, &m)_
-_name: setUniformMatrix4f_
-_returns: void_
-_returns_description: _
-_parameters: const char *name, const ofMatrix4x4 &m_
-_access: public_
-_version_started: 0071_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
+set an array of uniform values on the shader using int[2] value. On the shader this looks like:
+~~~~{.cpp}
+ivec4 iv[2];
+~~~~
 
 
 
@@ -3910,207 +2424,6 @@ _returns_description: _
 _parameters: const string &name, const ofMatrix4x4 &m_
 _access: public_
 _version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setUniformTexture(name, img, textureLocation)
-
-<!--
-_syntax: setUniformTexture(name, img, textureLocation)_
-_name: setUniformTexture_
-_returns: void_
-_returns_description: _
-_parameters: const char* name, ofBaseHasTexture& img, int textureLocation_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-set a texture reference
-On your shader it should look like this:
-~~~~{.cpp}
-uniform sampler2DRect texture;
-~~~~
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setUniformTexture(name, img, textureLocation)
-
-<!--
-_syntax: setUniformTexture(name, img, textureLocation)_
-_name: setUniformTexture_
-_returns: void_
-_returns_description: _
-_parameters: const char* name, ofTexture& img, int textureLocation_
-_access: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-For multi-texturing.
-~~~~{.cpp}
-uniform sampler2DRect texture;
-~~~~
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setUniformTexture(*name, &img, textureLocation)
-
-<!--
-_syntax: setUniformTexture(*name, &img, textureLocation)_
-_name: setUniformTexture_
-_returns: void_
-_returns_description: _
-_parameters: const char *name, ofBaseHasTexture &img, int textureLocation_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setUniformTexture(*name, &img, textureLocation)
-
-<!--
-_syntax: setUniformTexture(*name, &img, textureLocation)_
-_name: setUniformTexture_
-_returns: void_
-_returns_description: _
-_parameters: const char *name, ofTexture &img, int textureLocation_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setUniformTexture(*name, textureTarget, textureID, textureLocation)
-
-<!--
-_syntax: setUniformTexture(*name, textureTarget, textureID, textureLocation)_
-_name: setUniformTexture_
-_returns: void_
-_returns_description: _
-_parameters: const char *name, int textureTarget, GLint textureID, int textureLocation_
-_access: public_
-_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -4170,6 +2483,11 @@ _description: _
 
 
 
+set a texture reference
+On your shader it should look like this:
+~~~~{.cpp}
+uniform sampler2DRect texture;
+~~~~
 
 
 

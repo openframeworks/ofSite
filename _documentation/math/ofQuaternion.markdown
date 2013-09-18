@@ -1562,6 +1562,43 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###float & operator[](i)
+
+<!--
+_syntax: operator[](i)_
+_name: operator[]_
+_returns: float &_
+_returns_description: _
+_parameters: int i_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###float operator[](i)
 
 <!--
@@ -1754,6 +1791,43 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###float & w()
+
+<!--
+_syntax: w()_
+_name: w_
+_returns: float &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###float w()
 
 <!--
@@ -1783,6 +1857,43 @@ _inlined_description: _
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float & x()
+
+<!--
+_syntax: x()_
+_name: x_
+_returns: float &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1830,6 +1941,43 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###float & y()
+
+<!--
+_syntax: y()_
+_name: y_
+_returns: float &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###float y()
 
 <!--
@@ -1859,6 +2007,43 @@ _inlined_description: _
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float & z()
+
+<!--
+_syntax: z()_
+_name: z_
+_returns: float &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 

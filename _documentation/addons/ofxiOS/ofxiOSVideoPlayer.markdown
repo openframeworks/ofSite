@@ -59,6 +59,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void firstFrame()
@@ -89,6 +90,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -133,6 +135,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int getCurrentFrame()
@@ -163,6 +166,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -207,6 +211,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###float getHeight()
@@ -237,6 +242,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -281,6 +287,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofLoopType getLoopState()
@@ -311,6 +318,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -355,6 +363,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###unsigned char * getPixels()
@@ -385,6 +394,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -429,6 +439,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###float getPosition()
@@ -459,6 +470,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -503,6 +515,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofTexture * getTexture()
@@ -533,6 +546,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -577,6 +591,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###float getWidth()
@@ -607,6 +622,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -651,6 +667,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool isLoaded()
@@ -681,6 +698,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -725,6 +743,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool isPlaying()
@@ -755,6 +774,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -799,6 +819,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void nextFrame()
@@ -829,6 +850,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -873,6 +895,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void play()
@@ -903,6 +926,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -947,6 +971,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void setFrame(frame)
@@ -977,6 +1002,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1021,6 +1047,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void setPaused(bPause)
@@ -1051,6 +1078,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1095,6 +1123,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void setPosition(pct)
@@ -1125,6 +1154,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1169,6 +1199,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void setVolume(volume)
@@ -1199,6 +1230,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1243,6 +1275,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void update()
@@ -1273,6 +1306,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1317,6 +1351,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ### ~ofxiOSVideoPlayer()
@@ -1354,9 +1389,346 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ##Variables
 
 
+
+###bool  bFrameNew
+
+<!--
+_name: bFrameNew_
+_type: bool _
+_access: protected_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool  bResetPixels
+
+<!--
+_name: bResetPixels_
+_type: bool _
+_access: protected_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool  bResetTexture
+
+<!--
+_name: bResetTexture_
+_type: bool _
+_access: protected_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool  bTextureCacheSupported
+
+<!--
+_name: bTextureCacheSupported_
+_type: bool _
+_access: protected_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool  bTextureHack
+
+<!--
+_name: bTextureHack_
+_type: bool _
+_access: protected_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool  bUpdatePixels
+
+<!--
+_name: bUpdatePixels_
+_type: bool _
+_access: protected_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool  bUpdatePixelsToRgb
+
+<!--
+_name: bUpdatePixelsToRgb_
+_type: bool _
+_access: protected_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool  bUpdateTexture
+
+<!--
+_name: bUpdateTexture_
+_type: bool _
+_access: protected_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###GLint  internalGLFormat
+
+<!--
+_name: internalGLFormat_
+_type: GLint _
+_access: protected_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofPixelFormat  internalPixelFormat
+
+<!--
+_name: internalPixelFormat_
+_type: ofPixelFormat _
+_access: protected_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###GLubyte *  pixelsRGB
+
+<!--
+_name: pixelsRGB_
+_type: GLubyte * _
+_access: protected_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###GLubyte *  pixelsRGBA
+
+<!--
+_name: pixelsRGBA_
+_type: GLubyte * _
+_access: protected_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void *  videoPlayer
+
+<!--
+_name: videoPlayer_
+_type: void * _
+_access: protected_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofTexture  videoTexture
+
+<!--
+_name: videoTexture_
+_type: ofTexture _
+_access: protected_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 

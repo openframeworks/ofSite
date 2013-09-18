@@ -984,44 +984,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###float getDuration(animation)
-
-<!--
-_syntax: getDuration(animation)_
-_name: getDuration_
-_returns: float_
-_returns_description: _
-_parameters: int animation_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###ofMaterial getMaterialForMesh(name)
 
 <!--
@@ -2162,44 +2124,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setAnimation(anim)
-
-<!--
-_syntax: setAnimation(anim)_
-_name: setAnimation_
-_returns: void_
-_returns_description: _
-_parameters: int anim_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void setLoopStateForAllAnimations(state)
 
 <!--
@@ -2246,44 +2170,6 @@ _name: setNormalizationFactor_
 _returns: void_
 _returns_description: _
 _parameters: float factor_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setNormalizedTime(time)
-
-<!--
-_syntax: setNormalizedTime(time)_
-_name: setNormalizedTime_
-_returns: void_
-_returns_description: _
-_parameters: float time_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -2512,44 +2398,6 @@ _name: setScaleNomalization_
 _returns: void_
 _returns_description: _
 _parameters: bool normalize_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setTime(time)
-
-<!--
-_syntax: setTime(time)_
-_name: setTime_
-_returns: void_
-_returns_description: _
-_parameters: float time_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -2926,13 +2774,13 @@ _description: _
 
 
 
-###float animationTime
+###vector<  ofxAssimpAnimation >  animations
 
 <!--
-_name: animationTime_
-_type: float_
+_name: animations_
+_type: vector<  ofxAssimpAnimation > _
 _access: protected_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
@@ -2941,7 +2789,6 @@ _advanced: False_
 -->
 
 _description: _
-
 
 
 
@@ -3076,13 +2923,13 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###string filepath
+###ofFile  file
 
 <!--
-_name: filepath_
-_type: string_
+_name: file_
+_type: ofFile _
 _access: protected_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
@@ -3091,57 +2938,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool hasAnimations
-
-<!--
-_name: hasAnimations_
-_type: bool_
-_access: protected_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float lastAnimationTime
-
-<!--
-_name: lastAnimationTime_
-_type: float_
-_access: protected_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
 
 
 
@@ -3176,13 +2972,13 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###string modelFolder
+###ofMatrix4x4  modelMatrix
 
 <!--
-_name: modelFolder_
-_type: string_
+_name: modelMatrix_
+_type: ofMatrix4x4 _
 _access: protected_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
@@ -3191,7 +2987,6 @@ _advanced: False_
 -->
 
 _description: _
-
 
 
 
@@ -3492,6 +3287,30 @@ _advanced: False_
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###vector<  ofxAssimpTexture * >  textures
+
+<!--
+_name: textures_
+_type: vector<  ofxAssimpTexture * > _
+_access: protected_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 

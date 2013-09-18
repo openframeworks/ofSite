@@ -370,3 +370,51 @@ _description: _
 
 
 
+###bool  sliderChanging
+
+<!--
+_name: sliderChanging_
+_type: bool _
+_access: protected_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofParameter< ofColor_< ColorType > >  value
+
+<!--
+_name: value_
+_type: ofParameter< ofColor_< ColorType > > _
+_access: protected_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+

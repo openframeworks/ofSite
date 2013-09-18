@@ -1863,49 +1863,6 @@ This will potentially change the width, height, x position, and y position of th
 
 <!----------------------------------------------------------------------------->
 
-###bool inside(p)
-
-<!--
-_syntax: inside(p)_
-_name: inside_
-_returns: bool_
-_returns_description: _
-_parameters: const ofPoint &p_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Determines if the passed ofPoint is within the ofRectangle or not.
-Returns true if the point is inside the rectangle, false otherwise.
-
-Note that points on the edge of the ofRectangle are not considered within the rectangle and will return false.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###bool inside(px, py)
 
 <!--
@@ -1940,6 +1897,49 @@ Determines if the passed (x,y) coordinates are within the ofRectangle or not.
 Returns true if the coordinates are inside the ofRectangle, false otherwise.
 
 Note that coordinates on the edge of the ofRectangle are not considered within the rectangle and will return false.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool inside(p)
+
+<!--
+_syntax: inside(p)_
+_name: inside_
+_returns: bool_
+_returns_description: _
+_parameters: const ofPoint &p_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+Determines if the passed ofPoint is within the ofRectangle or not.
+Returns true if the point is inside the rectangle, false otherwise.
+
+Note that points on the edge of the ofRectangle are not considered within the rectangle and will return false.
 
 
 
@@ -2916,9 +2916,9 @@ _syntax: scaleTo(&targetRect, subjectAspectRatioMode, sharedHorzAnchor = OF_ALIG
 _name: scaleTo_
 _returns: void_
 _returns_description: _
-_parameters: const ofRectangle &targetRect, ofAspectRatioMode subjectAspectRatioMode, ofAspectRatioMode sharedHorzAnchor=OF_ALIGN_HORZ_CENTER, ofAlignVert sharedVertAnchor=OF_ALIGN_VERT_CENTER_
+_parameters: const ofRectangle &targetRect, ofAspectRatioMode subjectAspectRatioMode, ofAlignHorz sharedHorzAnchor=OF_ALIGN_HORZ_CENTER, ofAlignVert sharedVertAnchor=OF_ALIGN_VERT_CENTER_
 _access: public_
-_version_started: 0072_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -3006,44 +3006,6 @@ __OF_ALIGN_VERT_BOTTOM__              : Uses the bottom edge of the rectangle to
 __OF_ALIGN_VERT_CENTER__              : Uses the center of the rectangle to vertically anchor the alignment.
 
 For a working example of how to use ofAspectRatioMode, ofAlignVert, and ofAlignHorz, see the *graphics/rectangleAlignmentAndScaling/* example within the examples directory.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void scaleTo(&targetRect, subjectAspectRatioMode, sharedHorzAnchor = OF_ALIGN_HORZ_CENTER, sharedVertAnchor = OF_ALIGN_VERT_CENTER)
-
-<!--
-_syntax: scaleTo(&targetRect, subjectAspectRatioMode, sharedHorzAnchor = OF_ALIGN_HORZ_CENTER, sharedVertAnchor = OF_ALIGN_VERT_CENTER)_
-_name: scaleTo_
-_returns: void_
-_returns_description: _
-_parameters: const ofRectangle &targetRect, ofAspectRatioMode subjectAspectRatioMode, ofAlignHorz sharedHorzAnchor=OF_ALIGN_HORZ_CENTER, ofAlignVert sharedVertAnchor=OF_ALIGN_VERT_CENTER_
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
 
 
 

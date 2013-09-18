@@ -399,14 +399,14 @@ img2.cropFrom(img1, 100, 100, 300, 300);
 
 <!----------------------------------------------------------------------------->
 
-###void draw(&r)
+###void draw(x, y)
 
 <!--
-_syntax: draw(&r)_
+_syntax: draw(x, y)_
 _name: draw_
 _returns: void_
 _returns_description: _
-_parameters: const ofRectangle &r_
+_parameters: float x, float y_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -429,7 +429,7 @@ _inlined_description: _
 _description: _
 
 
-Draws the ofImage into the ofRectangle passed in, with any attendant scaling that may occur from fitting the ofImage into the bounds of the ofRectangle.
+Draws the ofImage into the x,y location using the default height and width of the image.
 
 
 
@@ -439,14 +439,14 @@ Draws the ofImage into the ofRectangle passed in, with any attendant scaling tha
 
 <!----------------------------------------------------------------------------->
 
-###void draw(&p, w, h)
+###void draw(x, y, z)
 
 <!--
-_syntax: draw(&p, w, h)_
+_syntax: draw(x, y, z)_
 _name: draw_
 _returns: void_
 _returns_description: _
-_parameters: const ofPoint &p, float w, float h_
+_parameters: float x, float y, float z_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -469,7 +469,7 @@ _inlined_description: _
 _description: _
 
 
-Draws the ofImage into the ofVec2f location and with the width and height, with any attendant scaling that may occur from fitting the ofImage into the width and height.
+Draws the ofImage into the x,y,z location with the default height and width. You should ensure that you turn on depth sorting using glEnable(GL_DEPTH) before trying to draw multiple objects into z-space.
 
 
 
@@ -550,126 +550,6 @@ _description: _
 
 
 Draws the ofImage into the x,y,z location and with the width and height, with any attendant scaling that may occur from fitting the ofImage into the width and height. You should ensure that you turn on depth sorting using glEnable(GL_DEPTH) before trying to draw multiple objects into z-space.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void draw(&p)
-
-<!--
-_syntax: draw(&p)_
-_name: draw_
-_returns: void_
-_returns_description: _
-_parameters: const ofPoint &p_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Draws the ofImage into the x,y location using the default height and width of the image.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void draw(x, y)
-
-<!--
-_syntax: draw(x, y)_
-_name: draw_
-_returns: void_
-_returns_description: _
-_parameters: float x, float y_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Draws the ofImage into the x,y location using the default height and width of the image.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void draw(x, y, z)
-
-<!--
-_syntax: draw(x, y, z)_
-_name: draw_
-_returns: void_
-_returns_description: _
-_parameters: float x, float y, float z_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Draws the ofImage into the x,y,z location with the default height and width. You should ensure that you turn on depth sorting using glEnable(GL_DEPTH) before trying to draw multiple objects into z-space.
 
 
 

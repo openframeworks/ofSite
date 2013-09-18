@@ -800,31 +800,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int deviceID
-
-<!--
-_name: deviceID_
-_type: int_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###int inDeviceID
 
 <!--

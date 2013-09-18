@@ -59,6 +59,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool disableDepthBuffer()
@@ -89,6 +90,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -133,6 +135,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool disableOrientationAnimation()
@@ -163,6 +166,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -207,6 +211,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void disableSetupScreen()
@@ -237,6 +242,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -281,6 +287,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool enableAntiAliasing(samples)
@@ -311,6 +318,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -355,6 +363,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool enableHardwareOrientation()
@@ -385,6 +394,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -429,6 +439,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool enableRendererES1()
@@ -459,6 +470,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -503,6 +515,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool enableRetina()
@@ -533,6 +546,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -577,6 +591,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int getAntiAliasingSampleCount()
@@ -607,6 +622,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -651,6 +667,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofAppiOSWindow * getInstance()
@@ -681,6 +698,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -725,6 +743,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofPoint getScreenSize()
@@ -755,6 +774,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -799,6 +819,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int getWindowMode()
@@ -829,6 +850,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -873,6 +895,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofPoint getWindowSize()
@@ -903,6 +926,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -947,6 +971,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void initializeWindow()
@@ -977,6 +1002,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1021,6 +1047,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool isDepthBufferEnabled()
@@ -1051,6 +1078,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1095,6 +1123,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool isRendererES2()
@@ -1125,6 +1154,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1169,6 +1199,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool isRetinaSupportedOnDevice()
@@ -1199,6 +1230,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1243,6 +1275,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ### ofAppiOSWindow()
@@ -1273,6 +1306,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1317,6 +1351,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void setFullscreen(fullscreen)
@@ -1347,6 +1382,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1391,6 +1427,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void setVerticalSync(enabled)
@@ -1421,6 +1458,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1465,6 +1503,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void setWindowShape(w, h)
@@ -1495,6 +1534,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1539,6 +1579,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void setupOpenGL(w, h, screenMode)
@@ -1569,6 +1610,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1613,6 +1655,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void startAppWithDelegate(appDelegateClassName)
@@ -1643,6 +1686,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -1687,6 +1731,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ### ~ofAppiOSWindow()
@@ -1724,9 +1769,274 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ##Variables
 
 
+
+###int  antiAliasingSamples
+
+<!--
+_name: antiAliasingSamples_
+_type: int _
+_access: protected_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool  bAntiAliasingEnabled
+
+<!--
+_name: bAntiAliasingEnabled_
+_type: bool _
+_access: protected_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool  bDepthEnabled
+
+<!--
+_name: bDepthEnabled_
+_type: bool _
+_access: protected_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool  bEnableSetupScreen
+
+<!--
+_name: bEnableSetupScreen_
+_type: bool _
+_access: protected_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool  bHardwareOrientation
+
+<!--
+_name: bHardwareOrientation_
+_type: bool _
+_access: protected_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool  bOrientationIsAnimated
+
+<!--
+_name: bOrientationIsAnimated_
+_type: bool _
+_access: protected_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool  bRetinaEnabled
+
+<!--
+_name: bRetinaEnabled_
+_type: bool _
+_access: protected_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool  bRetinaSupportedOnDevice
+
+<!--
+_name: bRetinaSupportedOnDevice_
+_type: bool _
+_access: protected_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool  bRetinaSupportedOnDeviceChecked
+
+<!--
+_name: bRetinaSupportedOnDeviceChecked_
+_type: bool _
+_access: protected_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofOrientation  orientation
+
+<!--
+_name: orientation_
+_type: ofOrientation _
+_access: protected_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int  windowMode
+
+<!--
+_name: windowMode_
+_type: int _
+_access: protected_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 

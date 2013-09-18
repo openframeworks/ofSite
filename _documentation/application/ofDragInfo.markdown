@@ -26,44 +26,6 @@ When your ofApp has a dragEvent() method, it will give you an ofDragInfo object.
 
 
 
-### 
-
-<!--
-_syntax: _
-_name: files_
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: True_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ##Variables
 
 

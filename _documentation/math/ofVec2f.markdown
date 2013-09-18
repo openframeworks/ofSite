@@ -727,6 +727,43 @@ ofVec2f u = v.getPerpendicular(); // u is (0.928, -0.371)
 
 <!----------------------------------------------------------------------------->
 
+###float * getPtr()
+
+<!--
+_syntax: getPtr()_
+_name: getPtr_
+_returns: float *_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###const float * getPtr()
 
 <!--
@@ -1237,6 +1274,14 @@ _inlined_description: _
 
 _description: _
 
+Return the squared length (squared magnitude) of this vector.
+
+~~~~{.cpp}
+ofVec2f v(3, 4);
+float len = v.length(); // len is 5 (3,4,5 triangle)
+~~~~
+
+Use as a much faster alternative to [length](#length) if you don't need to know an accurate length but rather just a rough idea of a length (for example when finding the shortest distance of a bunch of points to a reference point, where it doesn't matter exactly what the lengths are, you just want the shortest). It avoids the square root calculation that is ordinarily required to calculate a length.
 
 
 
@@ -1637,6 +1682,82 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+### ofVec2f()
+
+<!--
+_syntax: ofVec2f()_
+_name: ofVec2f_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofVec2f(_scalar)
+
+<!--
+_syntax: ofVec2f(_scalar)_
+_name: ofVec2f_
+_returns: _
+_returns_description: _
+_parameters: float _scalar_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ### ofVec2f(_x = 0.f, _y = 0.f)
 
 <!--
@@ -1764,82 +1885,6 @@ Create a 2D vector (ofVec2f) from a 4D vector (ofVec4f) by throwing away the z a
 ofVec3f mom4d(40, 20, 50, 80); // 4d vector 
 ofVec2f v(mom4d); // v.x is 40, v.y is 20
 ~~~~
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofVec2f()
-
-<!--
-_syntax: ofVec2f()_
-_name: ofVec2f_
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0072_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofVec2f(_scalar)
-
-<!--
-_syntax: ofVec2f(_scalar)_
-_name: ofVec2f_
-_returns: _
-_returns_description: _
-_parameters: float _scalar_
-_access: public_
-_version_started: 0072_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
 
 
 
@@ -2764,6 +2809,43 @@ ofVec2f v3(40, 20);
 
 <!----------------------------------------------------------------------------->
 
+###float & operator[](n)
+
+<!--
+_syntax: operator[](n)_
+_name: operator[]_
+_returns: float &_
+_returns_description: _
+_parameters: int n_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###float operator[](n)
 
 <!--
@@ -3267,6 +3349,44 @@ v1.scale( 15 ); // v1 is now (9, 12), with length 15
 
 <!----------------------------------------------------------------------------->
 
+###void set(_scalar)
+
+<!--
+_syntax: set(_scalar)_
+_name: set_
+_returns: void_
+_returns_description: _
+_parameters: float _scalar_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void set(_x, _y)
 
 <!--
@@ -3358,44 +3478,6 @@ v2.set(v1); // v2.x is 40, v2.y is 20
 
 <!----------------------------------------------------------------------------->
 
-###void set(_scalar)
-
-<!--
-_syntax: set(_scalar)_
-_name: set_
-_returns: void_
-_returns_description: _
-_parameters: float _scalar_
-_access: public_
-_version_started: 0072_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###float squareDistance(&pnt)
 
 <!--
@@ -3435,53 +3517,6 @@ float distance = p1.distance( p2 ); // distance is 5
 ~~~~
 
 Use as a much faster alternative to [distance](#distance) if you don't need to know an exact number but rather just a rough idea of distance (for example when finding the shortest distance of a bunch of points to a reference point, where it doesn't matter exactly what the distances are, you just want the shortest). It avoids the square root calculation that is ordinarily required to calculate a length.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float squareLength()
-
-<!--
-_syntax: squareLength()_
-_name: squareLength_
-_returns: float_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Return the squared length (squared magnitude) of this vector.
-
-~~~~{.cpp}
-ofVec2f v(3, 4);
-float len = v.length(); // len is 5 (3,4,5 triangle)
-~~~~
-
-Use as a much faster alternative to [length](#length) if you don't need to know an accurate length but rather just a rough idea of a length (for example when finding the shortest distance of a bunch of points to a reference point, where it doesn't matter exactly what the lengths are, you just want the shortest). It avoids the square root calculation that is ordinarily required to calculate a length.
 
 
 

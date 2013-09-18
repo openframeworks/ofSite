@@ -336,6 +336,43 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###float * getPtr()
+
+<!--
+_syntax: getPtr()_
+_name: getPtr_
+_returns: float *_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###const float * getPtr()
 
 <!--
@@ -2455,6 +2492,43 @@ _inlined_description: _
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float & operator()(row, col)
+
+<!--
+_syntax: operator()(row, col)_
+_name: operator()_
+_returns: float &_
+_returns_description: _
+_parameters: int row, int col_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 

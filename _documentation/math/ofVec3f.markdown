@@ -866,6 +866,43 @@ This method is usually used to calculate a normal vector to a surface, which can
 
 <!----------------------------------------------------------------------------->
 
+###float * getPtr()
+
+<!--
+_syntax: getPtr()_
+_name: getPtr_
+_returns: float *_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###const float * getPtr()
 
 <!--
@@ -1478,6 +1515,15 @@ _inlined_description: _
 _description: _
 
 
+Return the squared length (squared magnitude) of this vector.
+
+~~~~{.cpp}
+ofVec3f v(3, 4, 1);
+float len = v.length(); // len is 5.0990
+~~~~
+
+Use as a much faster alternative to ['length'](#length) if you don't need to know an accurate length but rather just a rough idea of a length (for example when finding the shortest distance of a bunch of points to a reference point, where it doesn't matter exactly what the lengths are, you just want the shortest). It avoids the square root calculation that is ordinarily required to calculate a length.
+
 
 
 
@@ -1875,6 +1921,44 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+### ofVec3f()
+
+<!--
+_syntax: ofVec3f()_
+_name: ofVec3f_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ### ofVec3f(_x = 0.f, _y = 0.f, _z = 0.f)
 
 <!--
@@ -1921,16 +2005,16 @@ ofVec3f v3(0.1, 0.3, -1.5); // v3.x is 0.1, v3.y is 0.3, v3.z is -1.5
 
 <!----------------------------------------------------------------------------->
 
-### ofVec3f(&vec)
+### ofVec3f(_scalar)
 
 <!--
-_syntax: ofVec3f(&vec)_
+_syntax: ofVec3f(_scalar)_
 _name: ofVec3f_
 _returns: _
 _returns_description: _
-_parameters: const ofVec3f &vec_
+_parameters: float _scalar_
 _access: public_
-_version_started: 007_
+_version_started: 0072_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1941,50 +2025,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
-
-
-
-
-
-
-_description: _
-
-
-Construct a new 'ofxVec3f' by copying values from 'vec'.
-
-~~~~{.cpp}
-ofVec3f mom = ofVec3f(40, 20, 10);
-ofVec3f v(mom); // v is (40, 20, 10)
-~~~~
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofVec3f(&vec)
-
-<!--
-_syntax: ofVec3f(&vec)_
-_name: ofVec3f_
-_returns: _
-_returns_description: _
-_parameters: const ofVec4f &vec_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
+assigns scalar to x, y, and z 
 
 
 
@@ -1995,13 +2036,6 @@ _inlined_description: _
 
 _description: _
 
-
-Construct a new 3D vector ('ofxVec3f') from a 4D vector 'vec' by throwing away the 'z' component.
-
-~~~~{.cpp}
-ofVec3f mom = ofVec4f(40, 20, 10, 100);
-ofVec3f v(mom); // v is (40, 20, 10)
-~~~~
 
 
 
@@ -2049,16 +2083,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofVec3f()
+### ofVec3f(&vec)
 
 <!--
-_syntax: ofVec3f()_
+_syntax: ofVec3f(&vec)_
 _name: ofVec3f_
 _returns: _
 _returns_description: _
-_parameters: _
+_parameters: const ofVec4f &vec_
 _access: public_
-_version_started: 0072_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2079,45 +2113,12 @@ _inlined_description: _
 _description: _
 
 
+Construct a new 3D vector ('ofxVec3f') from a 4D vector 'vec' by throwing away the 'z' component.
 
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofVec3f(_scalar)
-
-<!--
-_syntax: ofVec3f(_scalar)_
-_name: ofVec3f_
-_returns: _
-_returns_description: _
-_parameters: float _scalar_
-_access: public_
-_version_started: 0072_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-assigns scalar to x, y, and z 
-
-
-
-
-
-
-
-
-_description: _
-
+~~~~{.cpp}
+ofVec3f mom = ofVec4f(40, 20, 10, 100);
+ofVec3f v(mom); // v is (40, 20, 10)
+~~~~
 
 
 
@@ -2627,51 +2628,6 @@ ofVec3f v3 = v1 - v2; // v3 is (15, -30, 0)
 
 <!----------------------------------------------------------------------------->
 
-###ofVec3f operator-(f)
-
-<!--
-_syntax: operator-(f)_
-_name: operator-_
-_returns: ofVec3f_
-_returns_description: _
-_parameters: const float f_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Returns a new vector with a float value 'f' subtracted from 'x', 'y' and 'z' members.
-
-~~~~{.cpp}
-ofVec3f v1(2, 5, 1);
-ofVec3f v2 = v1 - 10; // (-8, -5, -9)
-~~~~
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###ofVec3f operator-()
 
 <!--
@@ -2707,6 +2663,51 @@ Returns a new 'ofVec3f' that is the inverted version (mirrored in X, Y and Z) of
 ~~~~{.cpp}
 ofVec3f v1(2, 5, 1);
 ofVec3f v2 = -v1; // (-2, -5, -1)
+~~~~
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofVec3f operator-(f)
+
+<!--
+_syntax: operator-(f)_
+_name: operator-_
+_returns: ofVec3f_
+_returns_description: _
+_parameters: const float f_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+Returns a new vector with a float value 'f' subtracted from 'x', 'y' and 'z' members.
+
+~~~~{.cpp}
+ofVec3f v1(2, 5, 1);
+ofVec3f v2 = v1 - 10; // (-8, -5, -9)
 ~~~~
 
 
@@ -3033,6 +3034,43 @@ ofVec3f v3(40, 20, 10);
 // ( v1 == v2 ) is false
 // ( v1 == v3 ) is true
 ~~~~
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float & operator[](n)
+
+<!--
+_syntax: operator[](n)_
+_name: operator[]_
+_returns: float &_
+_returns_description: _
+_parameters: int n_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -3862,53 +3900,6 @@ float distance = p1.distance( p2 ); // distance is 5.8310
 ~~~~
 
 Use as a much faster alternative to ['distance'](#distance) if you don't need to know an exact number but rather just a rough idea of distance (for example when finding the shortest distance of a bunch of points to a reference point, where it doesn't matter exactly what the distances are, you just want the shortest). It avoids the square root calculation that is ordinarily required to calculate a length.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float squareLength()
-
-<!--
-_syntax: squareLength()_
-_name: squareLength_
-_returns: float_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Return the squared length (squared magnitude) of this vector.
-
-~~~~{.cpp}
-ofVec3f v(3, 4, 1);
-float len = v.length(); // len is 5.0990
-~~~~
-
-Use as a much faster alternative to ['length'](#length) if you don't need to know an accurate length but rather just a rough idea of a length (for example when finding the shortest distance of a bunch of points to a reference point, where it doesn't matter exactly what the lengths are, you just want the shortest). It avoids the square root calculation that is ordinarily required to calculate a length.
 
 
 

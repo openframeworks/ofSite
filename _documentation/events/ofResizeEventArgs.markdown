@@ -26,46 +26,6 @@ This class is integrated into the openframeworks events system. When a resize ev
 
 
 
-### 
-
-<!--
-_syntax: _
-_name: width_
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-When a window resize event happens (we resize the app window) new window width gets recorded here.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ##Variables
 
 

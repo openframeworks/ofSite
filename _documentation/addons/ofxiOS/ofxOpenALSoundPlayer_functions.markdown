@@ -12,6 +12,7 @@ _advanced: True_
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###float * ofxALSoundGetSpectrum(nBands)
@@ -40,6 +41,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -82,6 +84,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofxALSoundStopAll()
@@ -110,6 +113,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 

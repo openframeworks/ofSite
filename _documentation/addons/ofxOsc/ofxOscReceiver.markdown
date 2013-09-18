@@ -31,44 +31,6 @@ _syntax: ProcessMessage(&m, &remoteEndpoint)_
 _name: ProcessMessage_
 _returns: void_
 _returns_description: _
-_parameters: const osc_
-_access: protected_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ProcessMessage(&m, &remoteEndpoint)
-
-<!--
-_syntax: ProcessMessage(&m, &remoteEndpoint)_
-_name: ProcessMessage_
-_returns: void_
-_returns_description: _
 _parameters: const osc::ReceivedMessage &m, const IpEndpointName &remoteEndpoint_
 _access: protected_
 _version_started: 007_

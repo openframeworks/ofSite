@@ -81,44 +81,6 @@ opens a serial port connection to the arduino
 
 <!----------------------------------------------------------------------------->
 
-###int connect(device, baud)
-
-<!--
-_syntax: connect(device, baud)_
-_name: connect_
-_returns: int_
-_returns_description: _
-_parameters: string device, int baud_
-_access: public_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void disconnect()
 
 <!--
@@ -1049,44 +1011,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofStandardFirmata()
-
-<!--
-_syntax: ofStandardFirmata()_
-_name: ofStandardFirmata_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: False_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void processData(inputData)
 
 <!--
@@ -1133,44 +1057,6 @@ _name: processDigitalPort_
 _returns: void_
 _returns_description: _
 _parameters: int port, unsigned char value_
-_access: protected_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void processSysExData(data)
-
-<!--
-_syntax: processSysExData(data)_
-_name: processSysExData_
-_returns: void_
-_returns_description: _
-_parameters: vector< unsigned char > data_
 _access: protected_
 _version_started: 006_
 _version_deprecated: _
@@ -2212,44 +2098,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ~ofStandardFirmata()
-
-<!--
-_syntax: ~ofStandardFirmata()_
-_name: ~ofStandardFirmata_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: False_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ##Variables
 
 
@@ -2769,31 +2617,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###float _humidity
-
-<!--
-_name: _humidity_
-_type: float_
-_access: protected_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: False_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###bool _initialized
 
 <!--
@@ -3149,31 +2972,6 @@ _description: _
 <!--
 _name: _sysExHistoryLength_
 _type: int_
-_access: protected_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: False_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float _temp
-
-<!--
-_name: _temp_
-_type: float_
 _access: protected_
 _version_started: 006_
 _version_deprecated: _

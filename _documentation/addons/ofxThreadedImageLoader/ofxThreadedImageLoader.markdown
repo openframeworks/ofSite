@@ -62,82 +62,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofImageLoaderEntry getNextImageToLoad()
-
-<!--
-_syntax: getNextImageToLoad()_
-_name: getNextImageToLoad_
-_returns: ofImageLoaderEntry_
-_returns_description: _
-_parameters: _
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofImageLoaderEntry getNextImageToUpdate()
-
-<!--
-_syntax: getNextImageToUpdate()_
-_name: getNextImageToUpdate_
-_returns: ofImageLoaderEntry_
-_returns_description: _
-_parameters: _
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void loadFromDisk(*image, file)
 
 <!--
@@ -220,82 +144,6 @@ _description: _
 _syntax: ofxThreadedImageLoader()_
 _name: ofxThreadedImageLoader_
 _returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool shouldLoadImages()
-
-<!--
-_syntax: shouldLoadImages()_
-_name: shouldLoadImages_
-_returns: bool_
-_returns_description: _
-_parameters: _
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void start()
-
-<!--
-_syntax: start()_
-_name: start_
-_returns: void_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -484,6 +332,30 @@ _description: _
 
 
 
+###Poco::Condition  condition
+
+<!--
+_name: condition_
+_type: Poco::Condition _
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofImageLoaderEntry images_async_loading
 
 <!--
@@ -509,13 +381,13 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofImageLoaderEntry images_to_load
+###deque< ofImageLoaderEntry >  images_to_load_buffer
 
 <!--
-_name: images_to_load_
-_type: ofImageLoaderEntry_
-_access: public_
-_version_started: 007_
+_name: images_to_load_buffer_
+_type: deque< ofImageLoaderEntry > _
+_access: private_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
@@ -524,7 +396,6 @@ _advanced: False_
 -->
 
 _description: _
-
 
 
 
@@ -559,13 +430,13 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int num_loading
+###int  lastUpdate
 
 <!--
-_name: num_loading_
-_type: int_
+_name: lastUpdate_
+_type: int _
 _access: private_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
@@ -575,6 +446,29 @@ _advanced: False_
 
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int  nextID
+
+<!--
+_name: nextID_
+_type: int _
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 

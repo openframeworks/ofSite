@@ -832,6 +832,43 @@ pix.setPixel(ind, yellow);
 
 <!----------------------------------------------------------------------------->
 
+###PixelType * getPixels()
+
+<!--
+_syntax: getPixels()_
+_name: getPixels_
+_returns: PixelType *_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###const PixelType * getPixels()
 
 <!--
@@ -1218,6 +1255,43 @@ _inlined_description: _
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const PixelType & operator[](pos)
+
+<!--
+_syntax: operator[](pos)_
+_name: operator[]_
+_returns: const PixelType &_
+_returns_description: _
+_parameters: int pos_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 

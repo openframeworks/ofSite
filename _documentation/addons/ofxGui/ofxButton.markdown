@@ -370,3 +370,27 @@ _description: _
 
 
 
+###ofEvent< void >  triggerEvent
+
+<!--
+_name: triggerEvent_
+_type: ofEvent< void > _
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+

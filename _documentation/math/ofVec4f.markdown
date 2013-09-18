@@ -332,6 +332,43 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###float * getPtr()
+
+<!--
+_syntax: getPtr()_
+_name: getPtr_
+_returns: float *_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###const float * getPtr()
 
 <!--
@@ -828,6 +865,82 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+### ofVec4f()
+
+<!--
+_syntax: ofVec4f()_
+_name: ofVec4f_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofVec4f(_scalar)
+
+<!--
+_syntax: ofVec4f(_scalar)_
+_name: ofVec4f_
+_returns: _
+_returns_description: _
+_parameters: float _scalar_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ### ofVec4f(_x = 0.f, _y = 0.f, _z = 0.f, _w = 0.f)
 
 <!--
@@ -914,82 +1027,6 @@ _returns_description: _
 _parameters: const ofVec3f &vec_
 _access: public_
 _version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofVec4f()
-
-<!--
-_syntax: ofVec4f()_
-_name: ofVec4f_
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0072_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofVec4f(_scalar)
-
-<!--
-_syntax: ofVec4f(_scalar)_
-_name: ofVec4f_
-_returns: _
-_returns_description: _
-_parameters: float _scalar_
-_access: public_
-_version_started: 0072_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1778,6 +1815,43 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###float & operator[](n)
+
+<!--
+_syntax: operator[](n)_
+_name: operator[]_
+_returns: float &_
+_returns_description: _
+_parameters: int n_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###float operator[](n)
 
 <!--
@@ -1930,6 +2004,44 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void set(_scalar)
+
+<!--
+_syntax: set(_scalar)_
+_name: set_
+_returns: void_
+_returns_description: _
+_parameters: float _scalar_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void set(_x, _y, _z, _w)
 
 <!--
@@ -2006,44 +2118,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void set(_scalar)
-
-<!--
-_syntax: set(_scalar)_
-_name: set_
-_returns: void_
-_returns_description: _
-_parameters: float _scalar_
-_access: public_
-_version_started: 0072_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###float squareDistance(&pnt)
 
 <!--
@@ -2052,44 +2126,6 @@ _name: squareDistance_
 _returns: float_
 _returns_description: _
 _parameters: const ofVec4f &pnt_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float squareLength()
-
-<!--
-_syntax: squareLength()_
-_name: squareLength_
-_returns: float_
-_returns_description: _
-_parameters: _
 _access: public_
 _version_started: 007_
 _version_deprecated: _

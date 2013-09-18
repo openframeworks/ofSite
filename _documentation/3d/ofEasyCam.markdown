@@ -460,158 +460,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void mouseDragged(&mouse)
-
-<!--
-_syntax: mouseDragged(&mouse)_
-_name: mouseDragged_
-_returns: void_
-_returns_description: _
-_parameters: ofMouseEventArgs &mouse_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void mouseMoved(&mouse)
-
-<!--
-_syntax: mouseMoved(&mouse)_
-_name: mouseMoved_
-_returns: void_
-_returns_description: _
-_parameters: ofMouseEventArgs &mouse_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void mousePressed(&mouse)
-
-<!--
-_syntax: mousePressed(&mouse)_
-_name: mousePressed_
-_returns: void_
-_returns_description: _
-_parameters: ofMouseEventArgs &mouse_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void mouseReleased(&mouse)
-
-<!--
-_syntax: mouseReleased(&mouse)_
-_name: mouseReleased_
-_returns: void_
-_returns_description: _
-_parameters: ofMouseEventArgs &mouse_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ### ofEasyCam()
 
 <!--
@@ -1398,31 +1246,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###float distanceScaleVelocity
-
-<!--
-_name: distanceScaleVelocity_
-_type: float_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###char doTranslationKey
 
 <!--
@@ -1478,31 +1301,6 @@ _description: _
 <!--
 _name: lastDistance_
 _type: float_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int lastFrame
-
-<!--
-_name: lastFrame_
-_type: int_
 _access: private_
 _version_started: 007_
 _version_deprecated: _
@@ -1580,81 +1378,6 @@ _name: mouse_
 _type: ofVec2f_
 _access: private_
 _version_started: 0072_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofVec3f mousePosScreenPrev
-
-<!--
-_name: mousePosScreenPrev_
-_type: ofVec3f_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofVec3f mousePosViewPrev
-
-<!--
-_name: mousePosViewPrev_
-_type: ofVec3f_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool mousePressedPrev
-
-<!--
-_name: mousePressedPrev_
-_type: bool_
-_access: private_
-_version_started: 007_
 _version_deprecated: _
 _summary: _
 _visible: True_
@@ -1755,31 +1478,6 @@ _name: moveZ_
 _type: float_
 _access: private_
 _version_started: 0072_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofQuaternion rotation
-
-<!--
-_name: rotation_
-_type: ofQuaternion_
-_access: private_
-_version_started: 007_
 _version_deprecated: _
 _summary: _
 _visible: True_
@@ -1923,31 +1621,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec3f translation
-
-<!--
-_name: translation_
-_type: ofVec3f_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###ofRectangle viewport
 
 <!--
@@ -2030,31 +1703,6 @@ _name: zRot_
 _type: float_
 _access: private_
 _version_started: 0072_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float zoomSpeed
-
-<!--
-_name: zoomSpeed_
-_type: float_
-_access: private_
-_version_started: 007_
 _version_deprecated: _
 _summary: _
 _visible: True_

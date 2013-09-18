@@ -59,6 +59,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int getBufferSize()
@@ -89,6 +90,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -133,6 +135,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int getNumOutputChannels()
@@ -163,6 +166,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -207,6 +211,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###long unsigned long getTickCount()
@@ -237,6 +242,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -283,6 +289,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ### ofxiOSSoundStream()
@@ -313,6 +320,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -357,6 +365,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void setInput(*soundInput)
@@ -387,6 +396,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -431,6 +441,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void setOutput(*soundOutput)
@@ -461,6 +472,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -507,6 +519,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool setup(*app, numOfOutChannels, numOfInChannels, sampleRate, bufferSize, numOfBuffers)
@@ -537,6 +550,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -581,6 +595,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void stop()
@@ -611,6 +626,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -655,9 +671,226 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ##Variables
 
 
+
+###int  bufferSize
+
+<!--
+_name: bufferSize_
+_type: int _
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int  numOfBuffers
+
+<!--
+_name: numOfBuffers_
+_type: int _
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int  numOfInChannels
+
+<!--
+_name: numOfInChannels_
+_type: int _
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int  numOfOutChannels
+
+<!--
+_name: numOfOutChannels_
+_type: int _
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int  sampleRate
+
+<!--
+_name: sampleRate_
+_type: int _
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofBaseSoundInput *  soundInputPtr
+
+<!--
+_name: soundInputPtr_
+_type: ofBaseSoundInput * _
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void *  soundInputStream
+
+<!--
+_name: soundInputStream_
+_type: void * _
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofBaseSoundOutput *  soundOutputPtr
+
+<!--
+_name: soundOutputPtr_
+_type: ofBaseSoundOutput * _
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void *  soundOutputStream
+
+<!--
+_name: soundOutputStream_
+_type: void * _
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 

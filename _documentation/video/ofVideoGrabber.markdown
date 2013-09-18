@@ -147,86 +147,6 @@ Draws the internal texture of the movie grabber class at the position (x,y) with
 
 <!----------------------------------------------------------------------------->
 
-###void draw(&p)
-
-<!--
-_syntax: draw(&p)_
-_name: draw_
-_returns: void_
-_returns_description: _
-_parameters: const ofPoint &p_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-This is similar to ofVideoGrabber::draw(x,y) except it takes an ofPoint object as a parameter instead of (x,y).  Please see ofVideoGrabber::draw(x,y).
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void draw(&r)
-
-<!--
-_syntax: draw(&r)_
-_name: draw_
-_returns: void_
-_returns_description: _
-_parameters: const ofRectangle &r_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-This is similar to ofVideoGrabber::draw(x,y,width, height) except it takes an ofRectangle object as a parameter instead of (x, y, width, height).  Please see ofVideoGrabber::draw(x,y,width, height).
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###ofPtr< ofBaseVideoGrabber > getGrabber()
 
 <!--
@@ -507,16 +427,16 @@ Returns the width of the video grabber object.  If you initialize the object at 
 
 <!----------------------------------------------------------------------------->
 
-###void grabFrame()
+###bool initGrabber(w, h)
 
 <!--
-_syntax: grabFrame()_
-_name: grabFrame_
-_returns: void_
+_syntax: initGrabber(w, h)_
+_name: initGrabber_
+_returns: bool_
 _returns_description: _
-_parameters: _
+_parameters: int w, int h_
 _access: public_
-_version_started: 006_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -537,7 +457,17 @@ _inlined_description: _
 _description: _
 
 
-This function should be called regularly (for example, once per update) if you'd like to get new data from the sequence grabber. It will idle the video grabbing component so that you get new data.   Note: since 007, this can also be written using the update() command, which is the preferred syntax. 
+Initializes either the default capture device or the capture device specified by setDeviceID. Attempts to setup capture at the width and height specified. If the capture dimensions are not available it will setup capture for the next closest dimensions available. It is good to check what the actual size is before you start processing the pixels.
+~~~~{.cpp}
+
+myGrabber.setVerbose(true);
+myGrabber.setDeviceID(1);
+myGrabber.initGrabber(320,240);
+int grabW = myGrabber.width;
+int grabH = myGrabber.height;
+printf("asked for 320 by 240 - actual size is %i by %i 
+", grabW, grabH);
+~~~~
 
 
 
@@ -590,56 +520,6 @@ printf("asked for 320 by 240 - actual size is %i by %i
 ~~~~
 
 bTexture variable tells ofVideoGrabber that it should setup a texture so you can display the video on the screen.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool initGrabber(w, h)
-
-<!--
-_syntax: initGrabber(w, h)_
-_name: initGrabber_
-_returns: bool_
-_returns_description: _
-_parameters: int w, int h_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Initializes either the default capture device or the capture device specified by setDeviceID. Attempts to setup capture at the width and height specified. If the capture dimensions are not available it will setup capture for the next closest dimensions available. It is good to check what the actual size is before you start processing the pixels.
-~~~~{.cpp}
-
-myGrabber.setVerbose(true);
-myGrabber.setDeviceID(1);
-myGrabber.initGrabber(320,240);
-int grabW = myGrabber.width;
-int grabH = myGrabber.height;
-printf("asked for 320 by 240 - actual size is %i by %i 
-", grabW, grabH);
-~~~~
 
 
 
@@ -893,46 +773,6 @@ _description: _
 
 
 Adjusts ofVideoGrabbers anchor for more drawing control.  see ofImage::setAnchorPercent() for info. 
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setAnchorPoint(x, y)
-
-<!--
-_syntax: setAnchorPoint(x, y)_
-_name: setAnchorPoint_
-_returns: void_
-_returns_description: _
-_parameters: int x, int y_
-_access: public_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: True_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Adjusts ofVideoGrabbers anchor for more drawing control.  see ofImage::setAnchorPoint(x,y) for info. 
 
 
 
@@ -1383,56 +1223,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool bChooseDevice
-
-<!--
-_name: bChooseDevice_
-_type: bool_
-_access: protected_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: False_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool bGrabberInited
-
-<!--
-_name: bGrabberInited_
-_type: bool_
-_access: protected_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: False_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###bool bInitialized
 
 <!--
@@ -1444,31 +1234,6 @@ _version_deprecated: _
 _summary: _
 _visible: True_
 _constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool bIsFrameNew
-
-<!--
-_name: bIsFrameNew_
-_type: bool_
-_access: protected_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: False_
 _advanced: False_
 -->
 
@@ -1508,31 +1273,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool bVerbose
-
-<!--
-_name: bVerbose_
-_type: bool_
-_access: protected_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: False_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###int desiredFramerate
 
 <!--
@@ -1544,31 +1284,6 @@ _version_deprecated: _
 _summary: _
 _visible: True_
 _constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int deviceID
-
-<!--
-_name: deviceID_
-_type: int_
-_access: protected_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: False_
 _advanced: False_
 -->
 
@@ -1685,61 +1400,11 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###unsigned char * pixels
-
-<!--
-_name: pixels_
-_type: unsigned char *_
-_access: protected_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: False_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###ofTexture tex
 
 <!--
 _name: tex_
 _type: ofTexture_
-_access: protected_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: False_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofUCUtils ucGrabber
-
-<!--
-_name: ucGrabber_
-_type: ofUCUtils_
 _access: protected_
 _version_started: 006_
 _version_deprecated: _

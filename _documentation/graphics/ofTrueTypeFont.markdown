@@ -330,44 +330,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofTTFCharacter getCharacterAsPoints(character)
-
-<!--
-_syntax: getCharacterAsPoints(character)_
-_name: getCharacterAsPoints_
-_returns: ofTTFCharacter_
-_returns_description: _
-_parameters: int character_
-_access: public_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: True_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###ofTTFCharacter getCharacterAsPoints(character, vflip = ofIsVFlipped())
 
 <!--
@@ -687,16 +649,16 @@ This is a variable to represent how wide spaces are sized.   It's a scalar for t
 
 <!----------------------------------------------------------------------------->
 
-###ofTTFCharacter getStringAsPoints(str)
+###vector< ofTTFCharacter > getStringAsPoints(str, vflip = ofIsVFlipped())
 
 <!--
-_syntax: getStringAsPoints(str)_
+_syntax: getStringAsPoints(str, vflip = ofIsVFlipped())_
 _name: getStringAsPoints_
-_returns: ofTTFCharacter_
+_returns: vector< ofTTFCharacter >_
 _returns_description: _
-_parameters: string str_
+_parameters: string str, bool vflip=ofIsVFlipped()_
 _access: public_
-_version_started: 007_
+_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -764,46 +726,6 @@ void testApp::draw(){
     ofPopMatrix();
 }
 ~~~~
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###vector< ofTTFCharacter > getStringAsPoints(str, vflip = ofIsVFlipped())
-
-<!--
-_syntax: getStringAsPoints(str, vflip = ofIsVFlipped())_
-_name: getStringAsPoints_
-_returns: vector< ofTTFCharacter >_
-_returns_description: _
-_parameters: string str, bool vflip=ofIsVFlipped()_
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Similar to ofTrueTypeFont::getStringAsPoints() but with a parameter for vertical flip.
 
 
 
@@ -1069,96 +991,6 @@ Returns true or false if the font is loaded properly.
 
 <!----------------------------------------------------------------------------->
 
-###void loadFont(filename, fontsize)
-
-<!--
-_syntax: loadFont(filename, fontsize)_
-_name: loadFont_
-_returns: void_
-_returns_description: _
-_parameters: string filename, int fontsize_
-_access: public_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Loads a fonts of a given filename in, and renders it to a texture at a given size (fontsize). It will look for the font file in the data/ folder. For example, to load the font arial at type size 32:
-
-~~~~{.cpp}
-
-// int the h file:
-
-ofTrueTypeFont myFont;
-...
-
-myFont.loadFont("arial.ttf", 32);
-~~~~
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void loadFont(filename, fontsize, _bAntiAliased, _bFullCharacterSet, makeContours)
-
-<!--
-_syntax: loadFont(filename, fontsize, _bAntiAliased, _bFullCharacterSet, makeContours)_
-_name: loadFont_
-_returns: void_
-_returns_description: _
-_parameters: string filename, int fontsize, bool _bAntiAliased, bool _bFullCharacterSet, bool makeContours_
-_access: public_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-This loads a font, but in addition to setting the font name and size, you can also pass in two flags: is this font antiAliased, and does it include the full character set?
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###bool loadFont(filename, fontsize, _bAntiAliased = true, _bFullCharacterSet = false, makeContours = false, simplifyAmt = 0.3, dpi = 0)
 
 <!--
@@ -1190,44 +1022,6 @@ _description: _
 
 
 loads a font, and allows you to set the following parameters: the filename, the size, if the font is anti-aliased, if it has a full character set, if you need it to have contrours (for getStringPoints) and paramters that control the simplification amount for those contours and the dpi of the font. 
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int ofNextPow2(a)
-
-<!--
-_syntax: ofNextPow2(a)_
-_name: ofNextPow2_
-_returns: int_
-_returns_description: _
-_parameters: int a_
-_access: protected_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
 
 
 
@@ -2298,31 +2092,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###GLuint * texNames
-
-<!--
-_name: texNames_
-_type: GLuint *_
-_access: protected_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: False_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###GLboolean texture_2d_enabled
 
 <!--
@@ -2334,31 +2103,6 @@ _version_deprecated: _
 _summary: _
 _visible: True_
 _constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int visibleBorder
-
-<!--
-_name: visibleBorder_
-_type: int_
-_access: protected_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: False_
 _advanced: False_
 -->
 

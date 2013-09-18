@@ -77,16 +77,16 @@ Allocate memory for the buffer to use. This sizes the char vector that the ofBuf
 
 <!----------------------------------------------------------------------------->
 
-###void append(*_buffer, _size)
+###void append(&_buffer)
 
 <!--
-_syntax: append(*_buffer, _size)_
+_syntax: append(&_buffer)_
 _name: append_
 _returns: void_
 _returns_description: _
-_parameters: const char *_buffer, unsigned int _size_
+_parameters: const string &_buffer_
 _access: public_
-_version_started: 0072_
+_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -115,16 +115,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void append(&_buffer)
+###void append(*_buffer, _size)
 
 <!--
-_syntax: append(&_buffer)_
+_syntax: append(*_buffer, _size)_
 _name: append_
 _returns: void_
 _returns_description: _
-_parameters: const string &_buffer_
+_parameters: const char *_buffer, unsigned int _size_
 _access: public_
-_version_started: 0073_
+_version_started: 0072_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -184,6 +184,46 @@ _description: _
 
 
 Clears all the data from the buffer.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###char * getBinaryBuffer()
+
+<!--
+_syntax: getBinaryBuffer()_
+_name: getBinaryBuffer_
+_returns: char *_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+Returns a pointer into the vector that contains the buffer data.
 
 
 
@@ -440,9 +480,9 @@ _syntax: ofBuffer(*buffer, size)_
 _name: ofBuffer_
 _returns: _
 _returns_description: _
-_parameters: const char *buffer, int size_
+_parameters: const char *buffer, unsigned int size_
 _access: public_
-_version_started: 007_
+_version_started: 0072_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -469,6 +509,42 @@ Create a buffer with a character array.
 string giantDataString;
 ofBuffer buff(giantDataString.c_str(), giantDataString.size());
 ~~~~
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofBuffer(&text)
+
+<!--
+_syntax: ofBuffer(&text)_
+_name: ofBuffer_
+_returns: _
+_returns_description: _
+_parameters: const string &text_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
 
 
 
@@ -555,82 +631,6 @@ ofBuffer aBuff;
 // put some stuff in aBuff
 ofBuffer bBuff(aBuff); // now it's in bBuff as well
 ~~~~
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofBuffer(*buffer, size)
-
-<!--
-_syntax: ofBuffer(*buffer, size)_
-_name: ofBuffer_
-_returns: _
-_returns_description: _
-_parameters: const char *buffer, unsigned int size_
-_access: public_
-_version_started: 0072_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofBuffer(&text)
-
-<!--
-_syntax: ofBuffer(&text)_
-_name: ofBuffer_
-_returns: _
-_returns_description: _
-_parameters: const string &text_
-_access: public_
-_version_started: 0072_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
 
 
 
@@ -765,9 +765,9 @@ _syntax: set(*_buffer, _size)_
 _name: set_
 _returns: void_
 _returns_description: _
-_parameters: const char *_buffer, int _size_
+_parameters: const char *_buffer, unsigned int _size_
 _access: public_
-_version_started: 007_
+_version_started: 0072_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -795,6 +795,44 @@ string giantDataString;
 ofBuffer buff;
 buff.set(giantDataString.c_str(), giantDataString.size());
 ~~~~
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void set(&text)
+
+<!--
+_syntax: set(&text)_
+_name: set_
+_returns: void_
+_returns_description: _
+_parameters: const string &text_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
 
 
 
@@ -835,88 +873,6 @@ _description: _
 
 
 Set the buffer from an istream.
-
-~~~~{.cpp}
-string giantDataString;
-ofBuffer buff;
-buff.set(giantDataString.c_str(), giantDataString.size());
-~~~~
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void set(*_buffer, _size)
-
-<!--
-_syntax: set(*_buffer, _size)_
-_name: set_
-_returns: void_
-_returns_description: _
-_parameters: const char *_buffer, unsigned int _size_
-_access: public_
-_version_started: 0072_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void set(&text)
-
-<!--
-_syntax: set(&text)_
-_name: set_
-_returns: void_
-_returns_description: _
-_parameters: const string &text_
-_access: public_
-_version_started: 0072_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
 
 
 

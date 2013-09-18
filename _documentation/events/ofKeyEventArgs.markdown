@@ -26,32 +26,23 @@ This class is integrated into the openframeworks events system. When a key event
 
 
 
-### 
+##Variables
+
+
+
+###int  key
 
 <!--
-_syntax: _
 _name: key_
-_returns: _
-_returns_description: _
-_parameters: _
+_type: int _
 _access: public_
-_version_started: 0073_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
-_constant: True_
-_static: False_
 _visible: True_
+_constant: True_
 _advanced: False_
 -->
-
-_inlined_description: _
-
-
-
-
-
-
-
 
 _description: _
 
@@ -61,10 +52,29 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-##Variables
+###enum  ofKeyEventArgs::Type type
+
+<!--
+_name: type_
+_type: enum  ofKeyEventArgs::Type_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
 
 
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 

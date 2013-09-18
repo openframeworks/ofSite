@@ -230,6 +230,30 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###ofxAssimpTexture *  assimpTexture
+
+<!--
+_name: assimpTexture_
+_type: ofxAssimpTexture * _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofBlendMode blendMode
 
 <!--
@@ -355,13 +379,13 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###aiMesh * mesh
+###ofMatrix4x4  matrix
 
 <!--
-_name: mesh_
-_type: aiMesh *_
+_name: matrix_
+_type: ofMatrix4x4 _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
@@ -377,14 +401,13 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###ofTexture texture
+###aiMesh * mesh
 
 <!--
-_name: texture_
-_type: ofTexture_
+_name: mesh_
+_type: aiMesh *_
 _access: public_
 _version_started: 007_
 _version_deprecated: _

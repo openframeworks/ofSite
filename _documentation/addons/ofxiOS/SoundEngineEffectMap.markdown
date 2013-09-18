@@ -59,6 +59,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool Empty()
@@ -89,6 +90,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -133,6 +135,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###SoundEngineEffect * GetEffectByIndex(inIndex)
@@ -163,6 +166,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -207,6 +211,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void Remove(inSourceToken)
@@ -244,6 +249,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###UInt32 Size()
@@ -274,6 +280,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 

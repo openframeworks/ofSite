@@ -31,83 +31,7 @@ _syntax: appendBundle(&bundle, &p)_
 _name: appendBundle_
 _returns: void_
 _returns_description: _
-_parameters: ofxOscBundle &bundle, osc_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void appendBundle(&bundle, &p)
-
-<!--
-_syntax: appendBundle(&bundle, &p)_
-_name: appendBundle_
-_returns: void_
-_returns_description: _
 _parameters: ofxOscBundle &bundle, osc::OutboundPacketStream &p_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void appendMessage(&message, &p)
-
-<!--
-_syntax: appendMessage(&message, &p)_
-_name: appendMessage_
-_returns: void_
-_returns_description: _
-_parameters: ofxOscMessage &message, osc_
 _access: private_
 _version_started: 007_
 _version_deprecated: _
@@ -391,44 +315,6 @@ _advanced: False_
 _inlined_description: _
 
 creates a message using an ofParameter 
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setup(hostname, port)
-
-<!--
-_syntax: setup(hostname, port)_
-_name: setup_
-_returns: void_
-_returns_description: _
-_parameters: std_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
 
 
 
