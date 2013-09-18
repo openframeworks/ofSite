@@ -5,32 +5,19 @@ var baseTitle =  document.title;
 window.onhashchange = loadDocumentationFromLocation;
 
 
-function resetDiscuss(module_name,section_name){
+function resetDiscuss(section_name){
     console.log(window.location.protocol + "://" + window.location.host + window.location.pathname + "#!show_" + section_name);
     DISQUS.reset({
       reload: true,
       config: function () {  
-        this.page.identifier = window.location.pathname + "#!show_" + section_name;  
         if(section_name!=''){
+            this.page.identifier = window.location.pathname + "#!show_" + section_name;  
             this.page.url = window.location.protocol + "//" + window.location.host + window.location.pathname + "#!show_" + section_name;
         }else{
+            this.page.identifier = window.location.pathname;  
             this.page.url = window.location.protocol + "//" + window.location.host + window.location.pathname;
         }
-        
-        var item = $(".documentation_detail[data-lookup='" + section_name +"']");
-        switch(item.data("item-type")) {
-            case "method":
-              this.page.title = baseTitle + "::" + section_name + "()";
-              break;
-            case "var":
-              this.page.title = baseTitle + "." + section_name;
-              break;
-            case "function":
-              this.page.title = baseTitle + "::" + section_name;
-              break;
-            default:
-              this.page.title = baseTitle;
-       };
+        this.page.title = document.title;
     }
   });
 }
@@ -63,7 +50,7 @@ $(document).ready(
      }
      
      // handle clicking the header containing the class name
-     $("#docstitle h1").click(showClassDocumentation);      
+     $("#docstitle h1").click(showClassDocumentation);
     });
 
 
@@ -102,6 +89,7 @@ function showFunctionDocumentation(functionName) {
     default:
       document.title = baseTitle;
   }
+  if (typeof DISQUS === "object") resetDiscuss(functionName)
 }
 
 // show documentation for the entire class.
@@ -120,4 +108,5 @@ function showClassDocumentation() {
       window.location.hash = "";
     }
   }
+  if (typeof DISQUS === "object") resetDiscuss("")
 }

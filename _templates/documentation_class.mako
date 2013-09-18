@@ -14,7 +14,7 @@
       <div id="body-wrap">
           <div class="page-wide">
           
-              <div id="docstitle"><h1 onclick="resetDiscuss('${modulename}','');">${modulename}</h1></div>
+              <div id="docstitle"><h1>${modulename}</h1></div>
               <div id="editdocs">
                 % if not clazz is None:
                   % if is_addon:
@@ -41,11 +41,11 @@
                  % for method in clazz.function_list:
                      % if prevmethod != method.name and method.visible and not method.advanced and method.access=='public':
                          % if len(method.description) <= 1 and len(method.inlined_description) <= 1:
-                         <li class="noDoc" data-lookup="${method.name}" onclick="resetDiscuss('${modulename}','${method.name}');">
+                         <li class="noDoc">
                          % else:
                          <li>
                          % endif
-                         <a href="#show_${method.name}" class="${method.name}" data-lookup="${method.name}" onclick="resetDiscuss('${modulename}','${method.name}');">${method.name}()</a></li>
+                         <a href="#show_${method.name}" class="${method.name}" data-lookup="${method.name}">${method.name}()</a></li>
                      % endif
                      <% prevmethod = method.name %>
                  % endfor
@@ -61,11 +61,11 @@
                      % for var in clazz.var_list:
                          % if var.visible and not var.advanced and var.access=='public':
                              % if len(var.description) <= 1:
-                            <li class="noDoc" data-lookup="${var.name}" onclick="resetDiscuss('${modulename}','${var.name}');">
+                            <li class="noDoc">
                             % else:
                             <li>
                             % endif
-                            <a href="#show_${var.name}" class="${var.name}" data-lookup="${var.name}" onclick="resetDiscuss('${modulename}','${var.name}');">${var.type} ${var.name}</a> </li>
+                            <a href="#show_${var.name}" class="${var.name}" data-lookup="${var.name}">${var.type} ${var.name}</a> </li>
                          % endif
                      % endfor
                  </ul>
@@ -81,11 +81,11 @@
                      % for method in functions.function_list:
                          % if prevmethod != method.name and method.visible and not method.advanced:
                              % if len(method.description) <= 1 and len(method.inlined_description) <= 1:
-                            <li class="noDoc" data-lookup="${method.name}" onclick="resetDiscuss('${modulename}','${method.name}');">
+                            <li class="noDoc">
                             % else:
                             <li>
                             % endif
-                            <a href="#show_${method.name}" class="${method.name}" data-lookup="${method.name}" onclick="resetDiscuss('${modulename}','${method.name}');">${method.name}()</a></li>
+                            <a href="#show_${method.name}" class="${method.name}" data-lookup="${method.name}">${method.name}()</a></li>
                          % endif
                          <% prevmethod = method.name %>
                      % endfor
