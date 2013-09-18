@@ -4,6 +4,7 @@
 <!--
 _visible: True_
 _advanced: False_
+_istemplated: False_
 -->
 
 ##InlineDescription
@@ -2301,6 +2302,7 @@ _description: _
 ##Variables
 
 
+
 ###bool bUseTexture
 
 <!--
@@ -2402,6 +2404,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofPtr player
@@ -2419,6 +2422,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 

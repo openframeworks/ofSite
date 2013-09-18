@@ -16,6 +16,7 @@ from documentation_function import DocsFunctionsFile, DocsFunction
 
 of_root = "/home/arturo/Desktop/openFrameworks/"
 of_documentation = of_root + 'libs/openFrameworksCompiled/project/doxygen/build/xml/'
+of_addons_documentation = of_root + 'addons/doxygen/xml/'
 documentation_root = '/home/arturo/Documents/ofSite/documentation/'
 #index = open(documentation_root + "index.html.mako",'w')
 
@@ -26,7 +27,7 @@ missing_functions = []
 currentversion = "0.8.0"
 
 
-def update_moved_functions(filename):
+def update_moved_functions(filename,is_addon=False):
     xml = objectify.parse(filename)
     doxygen = xml.getroot()
     
@@ -50,11 +51,11 @@ def update_moved_functions(filename):
                                 moved_function.description = moved_function.description + '\n\n' + function.description
                                 print "moved function: " + function.name
                                 
-            setfunctionsfile(functionsfile)
+            setfunctionsfile(functionsfile,is_addon)
     
     
             
-def serialize_functionsfile(filename):
+def serialize_functionsfile(filename,is_addon=False):
     xml = objectify.parse(filename)
     doxygen = xml.getroot()
     
@@ -103,7 +104,7 @@ def serialize_functionsfile(filename):
                 functionsfile.function_list.remove(function);
                         
             functionsfile.function_list.sort(key=lambda function: function.name)
-            setfunctionsfile(functionsfile)
+            setfunctionsfile(functionsfile,is_addon)
                         
     
 def parse_doxigen_para_element(e):
@@ -151,6 +152,14 @@ def parse_doxigen_para_element(e):
         else:
             return e.value.content_
             
+    elif type(e.value) == doxygen_compound.docListType:
+        ret = ""
+        for l in e.value.listitem:
+            for p in l.para:
+                for c in p.content_:
+                    ret = ret + parse_doxigen_para_element(c)
+        return ret
+            
     else:        
         return  e.value
 
@@ -158,12 +167,14 @@ def serialize_doxygen_paragraph(p):
     ret = ""
     for c in p.content_:
         next_element = parse_doxigen_para_element(c)
-        ret = ret + next_element
+        if type(next_element)!=doxygen_compound.docEmptyType:
+            ret = ret + next_element
             
-    ret = ret + "\n\n"
+    if ret != "":
+        ret = ret + "\n\n"
     return ret
 
-def serialize_class(filename):
+def serialize_class(filename,is_addon=False):
     xml = objectify.parse(filename)
     doxygen = xml.getroot()
     
@@ -189,7 +200,7 @@ def serialize_class(filename):
     #clazz_for_description = doxygen_compound.parse(filename).compounddef 
     for p in clazz.briefdescription.get_para():
         documentation_class.detailed_inline_description = documentation_class.detailed_inline_description + serialize_doxygen_paragraph(p)
-    documentation_class.detailed_inline_description = documentation_class.detailed_inline_description + "\n\n\n"
+    documentation_class.detailed_inline_description = documentation_class.detailed_inline_description + "\n"
         
     for p in clazz.detaileddescription.get_para():
         documentation_class.detailed_inline_description = documentation_class.detailed_inline_description + serialize_doxygen_paragraph(p)
@@ -211,7 +222,7 @@ def serialize_class(filename):
                         var.version_started = currentversion
                         var.version_deprecated = ""
                         var.constant = member.mutable=="no"
-                        var.static = member.static
+                        var.static = member.static!="no"
                         var.clazz = documentation_class.name
                         #member.type.ref.text if hasattr(member.type,'ref') else member.type.text
                         var.type = ""
@@ -225,6 +236,7 @@ def serialize_class(filename):
                             pass
                     #f.write( str(member.type.text) + " " + str(member.name.text) + "\n" )
                 if member.kind == 'function' and member.name.find("OF_DEPRECATED_MSG")==-1:
+                    #print member.name
                     argstring = str(member.argsstring)
                     params = argstring[argstring.find('(')+1:argstring.rfind(')')]
                     
@@ -240,7 +252,7 @@ def serialize_class(filename):
                         
                     returns = ("" if returns is None else returns)
                     method = documentation_class.function_by_signature(member.name, returns, params)
-                    method.static = member.static
+                    method.static = member.static!="no"
                     method.clazz = documentation_class.name
                     method.access = member.prot
                     method.returns = returns
@@ -254,7 +266,7 @@ def serialize_class(filename):
                     for p in member.briefdescription.get_para():
                         method.inlined_description = method.inlined_description + serialize_doxygen_paragraph(p)
                         
-                    method.inlined_description = method.inlined_description + "\n\n"
+                    method.inlined_description = method.inlined_description + "\n"
                     for p in member.detaileddescription.get_para():
                         method.inlined_description = method.inlined_description + serialize_doxygen_paragraph(p)
                         
@@ -277,7 +289,7 @@ def serialize_class(filename):
         
     documentation_class.function_list.sort(key=lambda function: function.name)
     documentation_class.var_list.sort(key=lambda variable: variable.name)
-    setclass(documentation_class)
+    setclass(documentation_class,is_addon)
 
 #serialize_class ("/home/arturo/Desktop/openFrameworks/libs/openFrameworksCompiled/project/doxygen/build/xml/classof_log.xml")
 #quit()
@@ -285,7 +297,7 @@ def serialize_class(filename):
 #index.write( '<%inherit file="_templates/documentation.mako" />\n' )
 dir_count=0
 file_count=0
-for root, dirs, files in os.walk("/home/arturo/Desktop/openFrameworks/libs/openFrameworksCompiled/project/doxygen/build/xml"):
+for root, dirs, files in os.walk(of_documentation):
     dir_count+=1
     for name in files:       
         file_count+=1
@@ -295,7 +307,7 @@ for root, dirs, files in os.walk("/home/arturo/Desktop/openFrameworks/libs/openF
         elif name.find('of_')==0 and name.find('8h.xml')!=-1:
             serialize_functionsfile(filename)
 
-for root, dirs, files in os.walk("/home/arturo/Desktop/openFrameworks/libs/openFrameworksCompiled/project/doxygen/build/xml"):
+for root, dirs, files in os.walk(of_documentation):
     dir_count+=1
     for name in files:       
         file_count+=1
@@ -303,5 +315,23 @@ for root, dirs, files in os.walk("/home/arturo/Desktop/openFrameworks/libs/openF
         if name.find('of_')==0 and name.find('8h.xml')!=-1:
             update_moved_functions(filename)
 
+for root, dirs, files in os.walk(of_addons_documentation):
+    dir_count+=1
+    for name in files:       
+        file_count+=1
+        filename = os.path.join(root, name)
+        if name.find('class')==0:
+            serialize_class(filename,True)
+        elif name.find('ofx_')==0 and name.find('8h.xml')!=-1:
+            serialize_functionsfile(filename,True)
+
+for root, dirs, files in os.walk(of_addons_documentation):
+    dir_count+=1
+    for name in files:       
+        file_count+=1
+        filename = os.path.join(root, name)
+        if name.find('ofx_')==0 and name.find('8h.xml')!=-1:
+            update_moved_functions(filename,True)
+            
 print ""+str(dir_count)+" dirs/"+str(file_count)+" files"
 

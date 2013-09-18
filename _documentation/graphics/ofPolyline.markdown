@@ -4,6 +4,7 @@
 <!--
 _visible: True_
 _advanced: False_
+_istemplated: False_
 -->
 
 ##InlineDescription
@@ -70,8 +71,8 @@ _advanced: False_
 
 _inlined_description: _
 
-
 add a vertex 
+
 
 
 
@@ -651,8 +652,8 @@ _advanced: False_
 
 _inlined_description: _
 
-
 cubic bezier 
+
 
 
 
@@ -834,8 +835,8 @@ _advanced: False_
 
 _inlined_description: _
 
-
 remove all the points 
+
 
 
 
@@ -1083,7 +1084,7 @@ _version_started: 0072_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: False_
+_static: True_
 _visible: True_
 _advanced: False_
 -->
@@ -2367,7 +2368,7 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: False_
+_static: True_
 _visible: True_
 _advanced: False_
 -->
@@ -2407,7 +2408,7 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: False_
+_static: True_
 _visible: True_
 _advanced: False_
 -->
@@ -2715,8 +2716,8 @@ _advanced: False_
 
 _inlined_description: _
 
-
 quadratic bezier (lower resolution than cubic) 
+
 
 
 
@@ -2916,8 +2917,8 @@ _advanced: False_
 
 _inlined_description: _
 
-
 closed 
+
 
 
 
@@ -3036,8 +3037,8 @@ _advanced: False_
 
 _inlined_description: _
 
-
 points vector access 
+
 
 
 

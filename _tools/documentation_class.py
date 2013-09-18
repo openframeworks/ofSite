@@ -22,6 +22,7 @@ class DocsClass:
         self.function_list = []
         self.var_list = []
         self.detailed_inline_description = ""
+        self.istemplated = False
         
 
     def functions(self):

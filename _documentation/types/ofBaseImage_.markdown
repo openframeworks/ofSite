@@ -1,9 +1,10 @@
-#class ofBaseImage
+#class ofBaseImage_
 
 
 <!--
 _visible: True_
 _advanced: True_
+_istemplated: True_
 -->
 
 ##InlineDescription

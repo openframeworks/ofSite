@@ -1,13 +1,20 @@
 #class ofxAndroidLogChannel
 
 
+<!--
+_visible: True_
+_advanced: False_
+_istemplated: False_
+-->
+
+##InlineDescription
+
+
+
+
+
+
 ##Description
-
-
-
-
-
-
 
 
 
@@ -17,41 +24,6 @@
 ##Methods
 
 
-
-### ofxAndroidLogChannel()
-
-<!--
-_syntax: ofxAndroidLogChannel()_
-_name: ofxAndroidLogChannel_
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
 
 ###void log(level, &module, &msg)
 
@@ -66,18 +38,21 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
 _description: _
-
-
-
-
-
-
 
 
 
@@ -101,18 +76,21 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
 _description: _
-
-
-
-
-
-
 
 
 
@@ -136,10 +114,19 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
 
 _description: _
 
@@ -148,6 +135,38 @@ _description: _
 
 
 
+
+
+<!----------------------------------------------------------------------------->
+
+### ofxAndroidLogChannel()
+
+<!--
+_syntax: ofxAndroidLogChannel()_
+_name: ofxAndroidLogChannel_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 

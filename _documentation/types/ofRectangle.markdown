@@ -4,6 +4,7 @@
 <!--
 _visible: True_
 _advanced: False_
+_istemplated: False_
 -->
 
 ##InlineDescription
@@ -3005,6 +3006,43 @@ __OF_ALIGN_VERT_BOTTOM__              : Uses the bottom edge of the rectangle to
 __OF_ALIGN_VERT_CENTER__              : Uses the center of the rectangle to vertically anchor the alignment.
 
 For a working example of how to use ofAspectRatioMode, ofAlignVert, and ofAlignHorz, see the *graphics/rectangleAlignmentAndScaling/* example within the examples directory.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void scaleTo(&targetRect, subjectAspectRatioMode, sharedHorzAnchor = OF_ALIGN_HORZ_CENTER, sharedVertAnchor = OF_ALIGN_VERT_CENTER)
+
+<!--
+_syntax: scaleTo(&targetRect, subjectAspectRatioMode, sharedHorzAnchor = OF_ALIGN_HORZ_CENTER, sharedVertAnchor = OF_ALIGN_VERT_CENTER)_
+_name: scaleTo_
+_returns: void_
+_returns_description: _
+_parameters: const ofRectangle &targetRect, ofAspectRatioMode subjectAspectRatioMode, ofAlignHorz sharedHorzAnchor=OF_ALIGN_HORZ_CENTER, ofAlignVert sharedVertAnchor=OF_ALIGN_VERT_CENTER_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 

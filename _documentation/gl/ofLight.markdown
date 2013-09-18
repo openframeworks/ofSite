@@ -4,6 +4,7 @@
 <!--
 _visible: True_
 _advanced: False_
+_istemplated: False_
 -->
 
 ##InlineDescription
@@ -106,6 +107,7 @@ spotlight.disable();
 ~~~~
 
 (Examples made using LightsCamera example by Pete Werner https://github.com/petewerner/generative/tree/master/lights_camera)
+
 
 
 

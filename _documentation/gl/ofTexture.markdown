@@ -4,6 +4,7 @@
 <!--
 _visible: True_
 _advanced: False_
+_istemplated: False_
 -->
 
 ##InlineDescription
@@ -2462,15 +2463,12 @@ Makes the current ofTexture a copy of another ofTexture.
 e.g:
 ~~~~{.cpp}
 
-
 ofTexture text1,text2;
 
 //we modify here text1 texture
 
 text2 = text1;
 ~~~~
-
-
 
 text2 and text1 are now identical.
 

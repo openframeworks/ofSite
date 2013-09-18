@@ -4,6 +4,7 @@
 <!--
 _visible: True_
 _advanced: False_
+_istemplated: False_
 -->
 
 ##InlineDescription
@@ -192,7 +193,7 @@ _version_started: 0071_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: False_
+_static: True_
 _visible: True_
 _advanced: False_
 -->
@@ -323,8 +324,8 @@ _advanced: False_
 
 _inlined_description: _
 
-
 get the unique thread name, in the form of "Thread id#" 
+
 
 
 
@@ -363,8 +364,8 @@ _advanced: False_
 
 _inlined_description: _
 
-
 returns true if this the currently active thread 
+
 
 in multithreaded situations, it can be useful to know which thread is currently running some code in order to make sure only certain threads can do certain things ...
 
@@ -402,15 +403,15 @@ _version_started: 0071_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: False_
+_static: True_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
 
-
 returns true if the main app thread is the currently active thread 
+
 
 
 
@@ -449,8 +450,8 @@ _advanced: False_
 
 _inlined_description: _
 
-
 returns true if the thread is currently running 
+
 
 
 
@@ -602,8 +603,8 @@ _advanced: False_
 
 _inlined_description: _
 
-
 runs the user thread function 
+
 
 
 
@@ -802,8 +803,8 @@ _advanced: False_
 
 _inlined_description: _
 
-
 stop the thread 
+
 
 
 

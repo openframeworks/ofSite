@@ -1,12 +1,14 @@
-#class ofPixels
+#class ofPixels_
 
 
 <!--
 _visible: True_
 _advanced: False_
+_istemplated: True_
 -->
 
 ##InlineDescription
+
 
 
 
@@ -76,6 +78,7 @@ _inlined_description: _
 
 _description: _
 
+
 Allocates space for pixel data of the given width (w), height (h) and number of channels (channels). If an ofImageType or ofPixelFormat is passed in, it will allocate based on the required number of channels.
 
 
@@ -114,6 +117,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 ofPixelFormat:
 
@@ -161,6 +165,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 ofImageType:
 	

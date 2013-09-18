@@ -4,6 +4,7 @@
 <!--
 _visible: True_
 _advanced: False_
+_istemplated: False_
 -->
 
 ##InlineDescription
@@ -1958,13 +1959,6 @@ _advanced: False_
 _inlined_description: _
 
 
-This moves the current element to its sibling element, i.e. if the current element is fruit with the id of 2, called setToPrevSibling() will set the current element to fruit with id of 1
-
-~~~~{.cpp}
-<fruit id="1">
-<fruit id="2">
-~~~~
-
 
 
 
@@ -2026,13 +2020,6 @@ _advanced: False_
 
 _inlined_description: _
 
-
-This moves the current element to its sibling element, i.e. if the current element is fruit with the id of 1, called setToSibling() will set the current element to fruit with id of 2
-
-~~~~{.cpp}
-<fruit id="1">
-<fruit id="2">
-~~~~
 
 
 
@@ -2182,7 +2169,7 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: False_
+_static: True_
 _visible: True_
 _advanced: False_
 -->

@@ -1,6 +1,19 @@
 #class ofxCvBlob
 
 
+<!--
+_visible: True_
+_advanced: False_
+_istemplated: False_
+-->
+
+##InlineDescription
+
+
+
+
+
+
 ##Description
 
 
@@ -18,41 +31,6 @@ In the image below you can see two blobs detected in the grayscale image:
 
 
 
-### ofxCvBlob()
-
-<!--
-_syntax: ofxCvBlob()_
-_name: ofxCvBlob_
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-Constructor.
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void draw(x = 0, y = 0)
 
 <!--
@@ -66,19 +44,64 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
 _description: _
-
-
 
 
 This method draws the blob to the screen with the upper-left corner located at the point specified by the x and y values.
 
 
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofxCvBlob()
+
+<!--
+_syntax: ofxCvBlob()_
+_name: ofxCvBlob_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+Constructor.
 
 
 
@@ -109,42 +132,7 @@ _advanced: False_
 _description: _
 
 
-
-
 Returns the area of the blob.
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float length
-
-<!--
-_name: length_
-_type: float_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-Returns the perimeter of the blob.
 
 
 
@@ -171,11 +159,7 @@ _advanced: False_
 _description: _
 
 
-
-
 an ofRectangle instance that can be drawn to the screen and that shows the height and width of the blob. This can be helpful to determine large regions of interest, or it can lead to some inaccurate results depending on the shape of your object. For instance, a squarish shape will be well represented by a rectangle, whereas a long thin shape with an angle in the middle will not.
-
-
 
 
 
@@ -210,10 +194,6 @@ This is an ofPoint instance with its x and y positions set at the center of the 
 
 
 
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###bool hole
@@ -241,17 +221,13 @@ This is a Boolean value that indicates whether the blob contains a whole. This i
 
 
 
-
-
-
-
 <!----------------------------------------------------------------------------->
 
-###vector< ofPoint > pts
+###float length
 
 <!--
-_name: pts_
-_type: vector< ofPoint >_
+_name: length_
+_type: float_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -264,11 +240,7 @@ _advanced: False_
 _description: _
 
 
-
-
-
-
-This is a vector of ofPoint objects that represent the contour of the blob. This is different from the bounding rectangle. It's listing the different points around the edge of the blob. The bounding rectangle is a rectangle around the extreme points of the blob.
+Returns the perimeter of the blob.
 
 
 
@@ -295,12 +267,35 @@ _advanced: False_
 _description: _
 
 
-
-
-
-
-
 This is an int that represents the number of points that are contained within the contour.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###vector< ofPoint > pts
+
+<!--
+_name: pts_
+_type: vector< ofPoint >_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+This is a vector of ofPoint objects that represent the contour of the blob. This is different from the bounding rectangle. It's listing the different points around the edge of the blob. The bounding rectangle is a rectangle around the extreme points of the blob.
+
 
 
 

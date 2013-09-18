@@ -1,13 +1,20 @@
 #class ofxOscArgString
 
 
+<!--
+_visible: True_
+_advanced: False_
+_istemplated: False_
+-->
+
+##InlineDescription
+
+
+
+
+
+
 ##Description
-
-
-
-
-
-
 
 
 
@@ -18,47 +25,12 @@
 
 
 
-### ofxOscArgString(_value)
+###string get()
 
 <!--
-_syntax: ofxOscArgString(_value)_
-_name: ofxOscArgString_
-_returns: _
-_returns_description: _
-_parameters: string _value_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ~ofxOscArgString()
-
-<!--
-_syntax: ~ofxOscArgString()_
-_name: ~ofxOscArgString_
-_returns: _
+_syntax: get()_
+_name: get_
+_returns: string_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -66,18 +38,23 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+return value 
+
+
+
+
+
+
+
+
 _description: _
-
-
-
-
-
-
 
 
 
@@ -101,18 +78,23 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+return the type of this argument 
+
+
+
+
+
+
+
+
 _description: _
-
-
-
-
-
-
 
 
 
@@ -136,18 +118,21 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
 _description: _
-
-
-
-
-
-
 
 
 
@@ -158,31 +143,34 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###string get()
+### ofxOscArgString(_value)
 
 <!--
-_syntax: get()_
-_name: get_
-_returns: string_
+_syntax: ofxOscArgString(_value)_
+_name: ofxOscArgString_
+_returns: _
 _returns_description: _
-_parameters: _
+_parameters: string _value_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
 _description: _
-
-
-
-
-
-
 
 
 
@@ -206,10 +194,21 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+set value 
+
+
+
+
+
+
+
 
 _description: _
 
@@ -218,6 +217,38 @@ _description: _
 
 
 
+
+
+<!----------------------------------------------------------------------------->
+
+### ~ofxOscArgString()
+
+<!--
+_syntax: ~ofxOscArgString()_
+_name: ~ofxOscArgString_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -247,12 +278,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
 
 
 

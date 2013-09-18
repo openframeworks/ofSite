@@ -1,13 +1,20 @@
 #class ofx3DBaseLoader
 
 
+<!--
+_visible: True_
+_advanced: False_
+_istemplated: False_
+-->
+
+##InlineDescription
+
+
+
+
+
+
 ##Description
-
-
-
-
-
-
 
 
 
@@ -18,12 +25,12 @@
 
 
 
-### ofx3DBaseLoader()
+###void draw()
 
 <!--
-_syntax: ofx3DBaseLoader()_
-_name: ofx3DBaseLoader_
-_returns: _
+_syntax: draw()_
+_name: draw_
+_returns: void_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -31,10 +38,19 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
 
 _description: _
 
@@ -44,6 +60,37 @@ _description: _
 
 
 
+
+<!----------------------------------------------------------------------------->
+
+###void draw(paramModelTexture)
+
+<!--
+_syntax: draw(paramModelTexture)_
+_name: draw_
+_returns: void_
+_returns_description: _
+_parameters: GLint paramModelTexture_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -66,18 +113,21 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
+
 _description: _
-
-
-
-
-
-
 
 
 
@@ -101,10 +151,19 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
 
 _description: _
 
@@ -113,6 +172,38 @@ _description: _
 
 
 
+
+
+<!----------------------------------------------------------------------------->
+
+### ofx3DBaseLoader()
+
+<!--
+_syntax: ofx3DBaseLoader()_
+_name: ofx3DBaseLoader_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -136,12 +227,12 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: no_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
 
 
@@ -149,40 +240,8 @@ _description: _
 
 
 
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void draw()
-
-<!--
-_syntax: draw()_
-_name: draw_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: no_
-_visible: True_
-_advanced: False_
--->
 
 _description: _
-
-
-
-
-
-
 
 
 
@@ -212,12 +271,6 @@ _advanced: False_
 -->
 
 _description: _
-
-
-
-
-
-
 
 
 

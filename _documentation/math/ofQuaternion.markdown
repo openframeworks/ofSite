@@ -4,6 +4,7 @@
 <!--
 _visible: True_
 _advanced: False_
+_istemplated: False_
 -->
 
 ##InlineDescription
@@ -549,8 +550,12 @@ For an explanation of the math used, you may see for example: [http://logiciels.
 ***note:*** 
 	This is the rotation with shortest angle, which is the one equivalent to the acos/sin transform method. Other rotations exists, for example to additionally keep a local horizontal attitude.
 
+
 ***author:*** 
 	Nicolas Brodu 
+
+
+
 
 
 

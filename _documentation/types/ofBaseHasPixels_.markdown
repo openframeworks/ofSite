@@ -1,12 +1,14 @@
-#class ofBaseHasPixels
+#class ofBaseHasPixels_
 
 
 <!--
 _visible: True_
 _advanced: True_
+_istemplated: True_
 -->
 
 ##InlineDescription
+
 
 
 
@@ -60,12 +62,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###unsigned char * getPixels()
+###T * getPixels()
 
 <!--
 _syntax: getPixels()_
 _name: getPixels_
-_returns: unsigned char *_
+_returns: T *_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -174,12 +176,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofPixelsRef getPixelsRef()
+###ofPixels_< T > & getPixelsRef()
 
 <!--
 _syntax: getPixelsRef()_
 _name: getPixelsRef_
-_returns: ofPixelsRef_
+_returns: ofPixels_< T > &_
 _returns_description: _
 _parameters: _
 _access: public_

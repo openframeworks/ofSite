@@ -1,12 +1,14 @@
-#class ofImage
+#class ofImage_
 
 
 <!--
 _visible: True_
 _advanced: False_
+_istemplated: True_
 -->
 
 ##InlineDescription
+
 
 
 

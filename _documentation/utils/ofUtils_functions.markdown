@@ -194,8 +194,8 @@ _inlined_description: _
 
 _description: _
 
-returns true if the vector values contains target
 
+returns true if the vector values contains target
 
 
 
@@ -416,7 +416,9 @@ _inlined_description: _
 
 _description: _
 
+
 returns the elapsed time since the application started in microseconds (1000000 microsecs = 1 second)
+
 
 
 
@@ -444,7 +446,6 @@ _advanced: False_
 
 _inlined_description: _
 
-returns the elapsed time since the application started in milliseconds (1000 millisecs = 1 second)
 
 
 
@@ -489,7 +490,9 @@ _inlined_description: _
 
 _description: _
 
+
 returns the elapsed time since the application started in seconds as a float
+
 
 
 
@@ -1911,8 +1914,6 @@ Like this we can "cut" a big string and turn it into a vector of words.
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
 ###vector< string > ofSplitString(&source, &delimiter, ignoreEmpty = false, trim = false)
@@ -2698,7 +2699,6 @@ _description: _
 
 
 To make adding numbers to a string easy we have the ofToString object which takes a number and turns it into a string representation of that number. For floating point numbers 'precision' is the number of decimal places you want to use. There is a default value for 'precision' of 7 decimal places, so if you don't wish to specify it you can just pass the first argument.
-
 
 This example makes a custom string to show the framerate in the window title. 
 ~~~~{.cpp}

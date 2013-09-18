@@ -48,7 +48,7 @@ def addfield(method,line):
             value = value + ":" + text
     
     value = value.lstrip(' ').rstrip('\n').rstrip('\r')[:-1]
-    if field=='constant' or field=='advanced' or field=='visible' or field=='static':
+    if field=='constant' or field=='advanced' or field=='visible' or field=='static' or field=='istemplated':
         value = ((value == '1') or (value == 'True') or (value=='true') or (value=='TRUE'))
     #print field, "=", value
     setattr(method,field,value)
@@ -60,7 +60,7 @@ def getfunctionsfiles_list():
         for name in files:
             file_split = os.path.splitext(name)
             if file_split[1]=='.markdown':
-                f = open(os.path.join(root,name),'r')
+                f = open(os.path.join(root,name),'rU')
                 state = 'begin'
                 for line in f:
                     if state == 'begin' and line.find('#functions') == 0:
@@ -80,7 +80,7 @@ def getfunctionsfile(filename):
         for name in files:
             file_split = os.path.splitext(name)
             if file_split[1]=='.markdown' and file_split[0] == filename+"_functions": 
-                f = open(os.path.join(root,name),'r')
+                f = open(os.path.join(root,name),'rU')
                 state = 'begin'
                 linenum = 0
                 for line in f:
@@ -125,13 +125,13 @@ def getfunctionsfile(filename):
     functionsfile.function_list.sort(key=lambda function: function.name)
     return functionsfile
 
-def getclass_list(getTemplated=False):
+def getclass_list(getTemplated=True):
     class_list = []
     for root, dirs, files in os.walk(os.path.join(documentation_root)):
         for name in files:
             file_split = os.path.splitext(name)
             if file_split[1]=='.markdown':
-                f = open(os.path.join(root,name),'r')
+                f = open(os.path.join(root,name),'rU')
                 state = 'begin'
                 for line in f:
                     if state == 'begin' and line.find('#class') == 0 and line.find(file_split[0])!=-1 :
@@ -151,9 +151,12 @@ def sort_function(function):
     else:
         return function.name
       
-def getclass(clazz, getTemplated=False):
+def getclass(clazz):
     var = DocsVar(0)
     documentation_clazz = DocsClass(0)
+    if clazz[-1]=="_":
+        documentation_clazz.istemplated = True
+        
     var.clazz  = clazz
     documentation_clazz.name = clazz
     documentation_clazz.new = True
@@ -164,7 +167,7 @@ def getclass(clazz, getTemplated=False):
         for name in files:
             file_split = os.path.splitext(name)
             if file_split[1]=='.markdown' and file_split[0] == clazz: 
-                f = open(os.path.join(root,name),'r')
+                f = open(os.path.join(root,name),'rU')
                 state = 'begin'
                 linenum = 0
                 for line in f:
@@ -260,7 +263,7 @@ def getclass(clazz, getTemplated=False):
                     documentation_clazz.var_list.append(var)
                 f.close()
                 
-                if getTemplated:
+                """if getTemplated:
                     templatedClazz = getclass(clazz+"_")
                     if not templatedClazz.new:
                         #print "found templated class " + clazz + "_"
@@ -275,11 +278,13 @@ def getclass(clazz, getTemplated=False):
                             documentation_clazz.addons = templatedClazz.addons
                             documentation_clazz.function_list = templatedClazz.function_list
                             documentation_clazz.var_list = templatedClazz.var_list
+                            documentation_clazz.istemplated = True
                         else:
                             documentation_clazz.function_list.extend(templatedClazz.function_list)
                             documentation_clazz.var_list.extend(templatedClazz.var_list)
                             documentation_clazz.reference = documentation_clazz.reference + templatedClazz.reference
                             documentation_clazz.example = documentation_clazz.example + templatedClazz.example
+                            documentation_clazz.istemplated = True"""
                             
                 documentation_clazz.function_list.sort(key=lambda function: function.name)
                 documentation_clazz.var_list.sort(key=lambda variable: variable.name)
@@ -287,7 +292,7 @@ def getclass(clazz, getTemplated=False):
                 return documentation_clazz   
 
 
-    if getTemplated:
+    """if getTemplated:
         templatedClazz = getclass(clazz+"_")
         if not templatedClazz.new:
             #print "found templated class " + clazz + "_"
@@ -302,11 +307,13 @@ def getclass(clazz, getTemplated=False):
                 documentation_clazz.addons = templatedClazz.addons
                 documentation_clazz.function_list = templatedClazz.function_list
                 documentation_clazz.var_list = templatedClazz.var_list
+                documentation_clazz.istemplated = True
             else:
                 documentation_clazz.function_list.extend(templatedClazz.function_list)
                 documentation_clazz.var_list.extend(templatedClazz.var_list)
                 documentation_clazz.reference = documentation_clazz.reference + templatedClazz.reference
                 documentation_clazz.example = documentation_clazz.example + templatedClazz.example
+                documentation_clazz.istemplated = True"""
     
     #documentation_clazz.function_list.sort(key= sort_function)
     documentation_clazz.function_list.sort(key=lambda function: function.name)
@@ -358,16 +365,24 @@ def serialize_var(f,var):
     f.write("\n\n\n\n\n\n")
     f.write('<!----------------------------------------------------------------------------->\n\n')
     
-def setclass(clazz):
+def setclass(clazz,is_addon=False):
+    path = ""
+    if is_addon:
+        path = os.path.join(documentation_root,"addons",clazz.module)
+    else:
+        path = os.path.join(documentation_root,clazz.module)
+        
     try:
-        os.mkdir(os.path.join(documentation_root,clazz.module))
+        os.mkdir(path)
     except:
         pass
-    f = open(os.path.join(documentation_root,clazz.module,clazz.name)+".markdown",'w')
+        
+    f = open(os.path.join(path,clazz.name)+".markdown",'w')
     f.write('#class ' + clazz.name + '\n\n\n')
     f.write("<!--\n");
     f.write("_visible: " + str(clazz.visible) + "_\n")
     f.write("_advanced: " + str(clazz.advanced) + "_\n")
+    f.write("_istemplated: " + str(clazz.istemplated) + "_\n")
     f.write("-->\n\n");
     
     #f.write('//----------------------\n\n')
@@ -392,12 +407,18 @@ def setclass(clazz):
     f.close()
     return
     
-def setfunctionsfile(functionfile):
+def setfunctionsfile(functionfile,is_addon=False):
+    path = ""
+    if is_addon:
+        path = os.path.join(documentation_root,"addons",functionfile.module)
+    else:
+        path = os.path.join(documentation_root,functionfile.module)
+        
     try:
-        os.mkdir(os.path.join(documentation_root,functionfile.module))
+        os.mkdir(path)
     except:
         pass
-    f = open(os.path.join(documentation_root,functionfile.module,functionfile.name)+"_functions.markdown",'w')
+    f = open(os.path.join(path,functionfile.name)+"_functions.markdown",'w')
     f.write('#functions\n\n\n')
     f.write("<!--\n");
     f.write("_visible: " + str(functionfile.visible) + "_\n")

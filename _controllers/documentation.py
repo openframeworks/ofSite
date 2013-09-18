@@ -30,6 +30,7 @@ def run():
     documentation = bf.config.controllers.documentation
         
     classes = markdown_file.getclass_list()
+    classes_simple_name = markdown_file.getclass_list(False)
     addon_classes = markdown_file.list_all_addons()
     
     
@@ -41,7 +42,9 @@ def run():
     for class_name in classes:
         module_lookup[class_name] = markdown_file.getclass(class_name,True).module    
     for clazz_name in classes:
-        clazz = markdown_file.getclass(clazz_name,True)
+        clazz = markdown_file.getclass(clazz_name)
+        if clazz.istemplated:
+            clazz.name = clazz.name[:-1]
 
         methods_to_remove = []
         for method in clazz.function_list:
@@ -51,20 +54,20 @@ def run():
             clazz.function_list.remove(method)
 
         clazz.detailed_inline_description = str(clazz.detailed_inline_description.encode('ascii', 'ignore'))
-        for class_name in classes:
+        for class_name in classes_simple_name:
             rep = class_name + "[\s]"
             clazz.detailed_inline_description = re.sub(rep, "<a href=\"../"+module_lookup[class_name]+"/"+class_name+".html\" class=\"docs_class\" >"+class_name+"</a> ", clazz.detailed_inline_description)
             rep = class_name + "[(]"
             clazz.detailed_inline_description = re.sub(rep, "<a href=\"../"+module_lookup[class_name]+"/"+class_name+".html\" class=\"docs_class\" >"+class_name+"</a>(", clazz.detailed_inline_description)
 
         clazz.reference = str(clazz.reference.encode('ascii', 'ignore'))
-        for class_name in classes:
+        for class_name in classes_simple_name:
             rep = class_name + "[\s]"
             clazz.reference = re.sub(rep, "<a href=\"../"+module_lookup[class_name]+"/"+class_name+".html\" class=\"docs_class\" >"+class_name+"</a> ", clazz.reference)
             rep = class_name + "[(]"
             clazz.reference = re.sub(rep, "<a href=\"../"+module_lookup[class_name]+"/"+class_name+".html\" class=\"docs_class\" >"+class_name+"</a>(", clazz.reference)
 
-        functions_file = markdown_file.getfunctionsfile(clazz_name)
+        functions_file = markdown_file.getfunctionsfile(clazz.name)
         #print clazz.name
         #print clazz.function_list 
         env = {
@@ -94,7 +97,7 @@ def run():
     
     function_files = markdown_file.getfunctionsfiles_list()
     for functionfile_name in function_files:
-        if functionfile_name in classes:
+        if functionfile_name in classes_simple_name:
             continue
         functions_file = markdown_file.getfunctionsfile(functionfile_name)
 
@@ -117,7 +120,7 @@ def run():
         }
         bf.template.materialize_template("documentation_class.mako", ('documentation',functions_file.module+"/"+functions_file.name+".html"), env )
         
-        if not functions_file.name in addon_classes:
+        if not functions_file.module in addon_classes:
             if not functions_file.module in core_index:
                 core_index[functions_file.module] = []
             core_index[functions_file.module].append(functions_file)
