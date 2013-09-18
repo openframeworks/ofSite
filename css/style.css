@@ -31,6 +31,11 @@ body {
     content: none;
 }
 
+.doxy-mainmenu ul li:before,  .doxy-mainmenu ul li:before{
+    content: none !important;
+    padding:0;
+}
+
 #content {
 	box-shadow: 5px 5px 5px #aaa, -5px 0 5px #aaa;
 	margin: auto;
