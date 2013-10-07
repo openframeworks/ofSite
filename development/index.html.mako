@@ -25,7 +25,7 @@
 <p><a href="https://github.com/openframeworks/openFrameworks/wiki/openFrameworks-git-workflow">git workflow</a> - the version control workflow followed by the openFrameworks community when dealing with the development of openFrameworks</p>
 <p><a href="https://github.com/openframeworks/openFrameworks/wiki/openFrameworks-Coding-style-guidelines">coding style guide</a> - guidelines for proper formatting of openFrameworks code</p>
 <p><a href="https://github.com/openframeworks/openFrameworks/wiki/Code-Contribution-Workflow">code contribution workflow</a> - contribution workflow for the openFrameworks core</p>
-
+<p><a href="https://docs.google.com/document/d/1GjgjQZCHTcOD3cT9OFSl0AZ1nhfYwwvxTl5L4OJE6qA/edit?usp=sharing">1.0 roadmap</a> - decisions taken during the last dev conference about the dev style for a future 1.0 version</p>
 
 <hr>
 <h2 id="contributors">contributors</h2>
