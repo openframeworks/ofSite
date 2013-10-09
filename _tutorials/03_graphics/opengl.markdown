@@ -387,7 +387,7 @@ Now here's what that projection matrix does to it. Looks wrong, right?
 
 Looks wrong, right? But when you look at through the camera, it will look right and *that* is the secret of the projection matrix: multiplying everything by it makes it all look correct. The frustum is cube and objects that are near to the camera are big and things far away are smaller. 
 
-![img](002_images/OF_GL_tutorial2.png)
+![img](002_images/OF_GL_tutorial2.jpg)
 
 That reminds me of a [Father Ted joke](http://www.youtube.com/watch?v=vh5kZ4uIUC0). Unlike the toy cows, the projection matrix actually makes things far away small. And with that bit of humor, we dive into math.
 
