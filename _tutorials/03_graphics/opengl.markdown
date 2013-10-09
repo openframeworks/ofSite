@@ -573,7 +573,7 @@ Now we get:
 
 Since we're not using power of two textures, i.e. textures that are strange sizes, we can't use the classic GL_REPEAT, but that's fine, it's not really that useful anyways, honestly.
 
-** Depth v Alpha
+*Depth v Alpha*
 
 What happens if you draw a texture at 100, 100, 100 and then another at 100, 100, 101? Good question. The answer however, is confusing, if you've got alpha blending on, then, em, it's going to look wrong.
 
