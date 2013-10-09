@@ -635,7 +635,7 @@ cam.end();
 
 So, we always have a camera? Yep, and it has a location in space too. Just imagine this:
 
-![img](002_images/cameras.png)
+![img](002_images/camera.png)
 
 What's that -7992 and 79? Well, those are just a guess at a 1024x768 sized window, from the renderers setupScreenPerspective() method:
 
