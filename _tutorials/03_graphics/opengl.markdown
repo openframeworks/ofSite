@@ -335,9 +335,9 @@ Lets create a series of four matrices where each new matrix saves the previous o
 
 openFrameworks has convenience methods that will allow you to transform and alter your drawing in the same way that you’ve seen in Processing. We’ll jump right into how those methods are structured. To push a new set of matrices onto the stack, or pop a matrix off the stack, use the following:
 
-void ofPushMatrix() - Saves the current coordinate system to the matrix stack, making it available for use.
+ofPushMatrix() - Saves the current coordinate system to the matrix stack, making it available for use.
 
-void ofPopMatrix() - Removes the current coordinate system from the matrix stack, removing all of its transformations from any future drawings.
+ofPopMatrix() - Removes the current coordinate system from the matrix stack, removing all of its transformations from any future drawings.
 
 ~~~~{.cpp}
 
@@ -365,19 +365,19 @@ ofPopMatrix();
 
 Alright, so what's going on underneath here? Well actually, there's three matrices that are mucking around. All the transformation stuff that we're doing is messing with the Model matrix, but there's two other ones. We'll lay them all out really quick (not because they're not important but because OF relieves you of having to do a ton of messing with them). 
 
-#The Model matrix
+*The Model matrix*
 
 A model, like an ofBox(), is defined by a set of vertices, which you can think of as ofVec3f objects, but are really just X,Y,Z coordinates of these vertices are defined relative to the center point where the drawing started. For OF, this is the upper left hand  corner of your window. Really these aren't super meaningfull without a view onto them, which is why usually in OpenGL we're talking about the modelView matrix, which begs the question: what's the view matrix. 
 
-#The View matrix
+*The View matrix*
 
 Little known fact: cameras don't move, when you want to look at something new, the world moves around the camera. If I'm standing in Paris and I want to take a picture of a different side of the Eiffel Tower, I just walk around to the other side. Imagine if instead I just made the entire earth spin around so I could see a different side of the Eiffel tower. Totally not practical in real life but really simple and handy in OpenGL.
 
 So initially your openFrameworks camera, an ofCamera instance let's say, is just at 0,0,0. To move the camera, you move the whole world, which is fairly easy because the lcoation and orientation of our world is just matrices. So our ofBox that thinks it's at 100,100, might actually be at 400,100 because of where our camera is located and it never needs to change its actual values. We just multiply everything by the location of the view matrix and voila: it's in the right place. That means this whole "moving the whole world" is really just moving a matrix over by doing a translate. We're going to dig into what that looks like in a second, right now we just want to get to the bottom of what the "camera" is: it's a matrix. And the relationship between a camera and where everything is getting drawn is called the ModelViewMatrix. Super important? Not really, but you're going to run into it now and again and it's good to know what it generally means.
 
-#The Projection matrix
+*The Projection matrix*
 
-Ok, so know what the world space is and what the view space is, how does that end up on the screen? Well, another thing that the camera has, in addition to a location and a thing that it's looking at (aka View Matrix) is the a space that it sees. Just like a movie screen, you've got to at some point turn everything into a 2D screen. A vertex that happens to be at 0, 0 should be rendered at the center of the screen. But! We can’t just use the x and y coordinates to figure out where something should be on screen. We also need to figure out its Z depth because something in front of something should be drawn (and the thing behind it shouldn't) For two vertices with similar x and y coordinates, the vertex with the biggest z coordinate will be more on the center of the screen than the other. This is called a perspective projection and every ofCamera has a perspective transform that it applies to the ModelView matrix that makes it represent not only how to turn a vertex from world space plus camera space but also to add in how a vertex should be shown in the projection that the camera is making. Ok, so before projection, we’ve got stuff in Camera Space: 
+Ok, so know what the world space is and what the view space is, how does that end up on the screen? Well, another thing that the camera has, in addition to a location and a thing that it's looking at (aka View Matrix) is the space that it sees. Just like a movie screen, you've got to at some point turn everything into a 2D screen. A vertex that happens to be at 0, 0 should be rendered at the center of the screen. But! We can’t just use the x and y coordinates to figure out where something should be on screen. We also need to figure out its Z depth because something in front of something should be drawn (and the thing behind it shouldn't) For two vertices with similar x and y coordinates, the vertex with the biggest z coordinate will be more on the center of the screen than the other. This is called a perspective projection and every ofCamera has a perspective transform that it applies to the ModelView matrix that makes it represent not only how to turn a vertex from world space plus camera space but also to add in how a vertex should be shown in the projection that the camera is making. Ok, so before projection, we’ve got stuff in Camera Space: 
 
 ![img](002_images/OF_GL_tutorial.jpg)
 
