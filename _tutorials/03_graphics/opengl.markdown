@@ -23,7 +23,7 @@ author: Joshua Noble
 
 First things first, OpenGL stands for Open Graphics Language but no one ever calls it that, they call it OpenGL, so we're going to do that too. Secondly, at a very high level, OpenGL is how your program on the CPU talks to the program on your GPU. What are those you ask? Well, the thing is that your computer is actually made out of a few different devices that compute, the Central Processing Unit and Graphics Processing Unit among them. The CPU is what runs most of you think of as your OF application, starting up, keeping track of time passing, loading data from the file system, talking to cameras or the sound card, and so on. However, the CPU doesn't know how to draw stuff on the screen. CPUs used to draw things to screen (and still do on some very miniaturized devices) but people realized that it was far faster and more elegant to have another computational device that just handled loading images, handling shaders, and actually drawing stuff to the screen. The thing is that talking from one device to another is kinda hard and weired, luckily, there's OpenGL to make it, em, slightly easier, and OF to handle a lot of the stuff in OpenGL that sucks.
 
-OpenGL’s main job is to help a programmer create code that creates points, lines, and polygons, and then convert those objects into pixels. The conversion of objects into pixels is called the "pipeline" of the OpenGL renderer and how that pipeline works at a high level is actually pretty important to understanding how to make OF do what you want it to and do it quickly. OF uses OpenGL for all of its graphics drawing but most of the calls are hidden. It actually uses an implementation of OpenGL called (GLFW) by default though this changes when you use Android or iPhone (I know, confusing, we'll get to that later). All graphics calls in the ofGraphics class use calls to common OpenGL methods, which you can see if you open the class and take a look at what goes on in some of the methods. So, let's say you want to call OF line. Well, that actually calls ofGLRenderer::drawLine() which contains the following lines:
+OpenGL’s main job is to help a programmer create code that creates points, lines, and polygons, and then convert those objects into pixels. The conversion of objects into pixels is called the "pipeline" of the OpenGL renderer and how that pipeline works at a high level is actually pretty important to understanding how to make OF do what you want it to and do it quickly. OF uses OpenGL for all of its graphics drawing but most of the calls are hidden. It actually uses an implementation of OpenGL called GLFW by default. All graphics calls in the ofGraphics class use calls to common OpenGL methods, which you can see if you open the class and take a look at what goes on in some of the methods. So, let's say you want to call OF line. Well, that actually calls ofGLRenderer::drawLine() which contains the following lines:
 
 ~~~~{.cpp}
 	linePoints[0].set(x1,y1,z1);
@@ -102,9 +102,7 @@ if(!poly.getVertices().empty()) {
   }
 ~~~~
 
-So, really what you're doing is storing vertices and depending on whether you want OpenGL to close your application for you or not, you tell it in the glDrawArrays() method to either a) GL_LINE_LOOP close them all up or b) GL_LINE_STRIP don't close them all up. Again, like before, exactly what's going on there isn't super important, but it is good to understand that lines, rectangles, even meshes are all just vertices. Since I just mentioned meshes, lets talk about those!
-
-[More info](http://www.opengl.org/wiki/Vertex_Specification)
+So, really what you're doing is storing vertices and depending on whether you want OpenGL to close your application for you or not, you tell it in the glDrawArrays() method to either a) GL_LINE_LOOP close them all up or b) GL_LINE_STRIP don't close them all up. Again, like before, exactly what's going on there isn't super important, but it is good to understand that lines, rectangles, even meshes are all just vertices. Since I just mentioned meshes, lets talk about those! If you want some [more info](http://www.opengl.org/wiki/Vertex_Specification).
 
 ###[ofMesh](#meshes)
 
@@ -117,9 +115,7 @@ Vertices are passed to your graphics card and your graphics card fill in the spa
 
 3. Say that you're done making points.
 
-You may be thinking: I'll just make eight vertices and voila: a cube. Not so quick. There's a hitch and that hitch is that the OpenGL renderer has different ways of connecting the vertices that you pass to it and none are as efficient as to only need eight vertices to create a cube. 
-
-You've probably seen a version of the following image somewhere before.
+You may be thinking: I'll just make eight vertices and voila: a cube. Not so quick. There's a hitch and that hitch is that the OpenGL renderer has different ways of connecting the vertices that you pass to it and none are as efficient as to only need eight vertices to create a cube. You've probably seen a version of the following image somewhere before.
 
 ![PRIMATIVES](002_images/gl_vertices_options.jpg)
 
@@ -305,7 +301,7 @@ for( int i = 0; i < mesh.getVertices().size(); i++ )
 }
 ~~~~
  
-There's a few new tricks to VBOs that you can leverage if you have a new enough graphics card, for instance, the ability to draw a single VBO many many times and position them in the vertex shader. This is called instancing and it's available in the ofVboMesh in the drawInstanced() method. You can see an example of this being used in the vboMeshDrawInstancedExample in examples/gl.
+There's a few new tricks to VBOs that you can leverage if you have a new enough graphics card, for instance, the ability to draw a single VBO many many times and position them in the vertex shader. This is called instancing and it's available in the ofVboMesh in the drawInstanced() method. You can see an example of this being used in the vboMeshDrawInstancedExample in examples/gl. Generally speaking, if you have something that you know you're going to keep around for a long time and that you're going to draw lots of times in lots of different places, you'll get a speed increase from using a VBO. This isn't always true, but it's true enough of the time.
 
 Although that's nowhere close to everything about vertices and meshes, we're going to move on to another frequently misunderstood but vital part of OpenGL: matrices.
 
@@ -331,13 +327,28 @@ Alright, so let's dispense with the metaphor: what's the piece of paper? It's a 
 
 Let's get the idea of a matrix stack going first before we dig in deeper. Initially, there is only one transformation in the matrix stack, the original coordinate system. When a call is made to pushMatrix(), a new coordinate system is added to the stack. All drawing goes on in that new coordinate system, and any changes made are made to that system. Next, a translation is made to the coordinate system using the translate() method to move it 30 pixels to the right and 30 pixels down. This affects only the current coordinate system in the matrix stack. Finally, popMatrix() is called, and the translated matrix is removed from the matrix stack, meaning that any changes made to the old coordinate system will not be used in new drawings.
 
-Lets create a series of four matrices where each new matrix saves the previous one and then uses its coordinates as the origin, meaning that changes are cumulative
-
 openFrameworks has convenience methods that will allow you to transform and alter your drawing in the same way that you’ve seen in Processing. We’ll jump right into how those methods are structured. To push a new set of matrices onto the stack, or pop a matrix off the stack, use the following:
 
 ofPushMatrix() - Saves the current coordinate system to the matrix stack, making it available for use.
 
 ofPopMatrix() - Removes the current coordinate system from the matrix stack, removing all of its transformations from any future drawings.
+
+Lets create a series of three matrices where each new matrix saves the previous one and then uses its coordinates as the origin, meaning that changes are cumulative:
+
+~~~~{.cpp}
+
+ofPushMatrix();
+  ofTranslate(30, 0); // everything from here on out is going to be 30 pixels over
+  ofPushMatrix();
+    ofTranslate(0, 30); // everything from here on out is going to be 30 pixels over AND 30 pixels down
+    ofPushMatrix();
+      ofTranslate(60, 0); // everything from here on out is going to be 90 pixels over AND 30 pixels down
+    ofPopMatrix(); // now we're back to 30 pixels over AND 30 pixels down
+  ofPopMatrix(); 30 pixels over
+ofPopMatrix(); // now we're back to 0,0
+~~~~
+
+So every change we make after ofPushMatrix() carries into everything that we do until we call ofPopMatrix();
 
 ~~~~{.cpp}
 
