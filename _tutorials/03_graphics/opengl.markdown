@@ -377,7 +377,7 @@ Alright, so what's going on underneath here? Well actually, there's three matric
 
 *The Model matrix*
 
-A model, like an ofBox(), is defined by a set of vertices, which you can think of as ofVec3f objects, but are really just X,Y,Z coordinates of these vertices are defined relative to the center point where the drawing started. For OF, this is the upper left hand  corner of your window. Really these aren't super meaningfull without a view onto them, which is why usually in OpenGL we're talking about the modelView matrix, which begs the question: what's the view matrix. 
+A model, like an ofBox(), is defined by a set of vertices, which you can think of as ofVec3f objects, but are really just X,Y,Z coordinates of these vertices are defined relative to the center point where the drawing started. You can think of this as the 0,0,0 of your "world space". Imagine someone saying "I'm 10 meters north". If you don't know where they started from, that's not super helpful, but if you did know where they started from, it's pretty handy. That's what the Model matrix is. For OF, this is the upper left hand corner of your window. Really these aren't super meaningful without a view onto them, which is why usually in OpenGL we're talking about the ModelView matrix. That's just the Model matrix time the View matrix, and that begs the question: what's the view matrix?
 
 *The View matrix*
 
@@ -399,9 +399,7 @@ Looks wrong, right? But when you look at through the camera, it will look right 
 
 ![img](002_images/OF_GL_tutorial2.jpg)
 
-That reminds me of a [Father Ted joke](http://www.youtube.com/watch?v=vh5kZ4uIUC0). Unlike the toy cows, the projection matrix actually makes things far away small. And with that bit of humor, we dive into math.
-
-Ok, there's a trick that I've learned to understand matrices which I'm going to borrow from Steve Baker. Here's an OpenGL matrix:
+That reminds me of a [Father Ted joke](http://www.youtube.com/watch?v=vh5kZ4uIUC0). Unlike the toy cows, the projection matrix actually makes things far away small. Lots of times in OpenGL stuff we talk about either the ModelViewMatrix or the ModelViewProjectionMatrix. Both of those are just the different matrices multiplied by one another to get "where things are" and "where things are *on the screen*". Matrices themselves are the subject of a million different tutorials and explanations which range from awesome to useless but there is one thing that I want to put in here to explain a quick way to read and understand them in OpenFrameworks and OpenGL in general. There's a trick that I've learned to understand matrices which I'm going borrowing from Steve Baker for your edification. Here's an OpenGL matrix:
 
 ~~~~{.cpp}
 float m[16];
@@ -422,9 +420,9 @@ So, this is the way that I always visualize this: imagine what happens to four p
 
 ![img](002_images/rotation1.png)
 
-These are four vertices on a 1x1x1 cube that has one corner at the origin. After the matrix has transformed this cube, where does it end up?
+These are four vertices on a unit cube (i.e. what that's 1 x 1 x 1) that has one corner at the origin. So, what we can do is pull apart the matrix and use differents elements to move that little cube around and get a better picture of what that matrix is actually representing.
 
-Well, if we neglect the translation part (the bottom row), then the pure rotation part simply describes the new location of the points on the cube:
+Skipping the translation part (the bottom row, 3, 7, 11), then the rotation part simply describes the new location of the points on the cube. So with no rotation at all, we just have:
 
 
     (1,0,0)  --->  ( m[0], m[1], m[2] )
@@ -432,27 +430,26 @@ Well, if we neglect the translation part (the bottom row), then the pure rotatio
     (0,0,1)  --->  ( m[8], m[9], m[10])
     (0,0,0)  --->  ( 0, 0, 0 )
 
-After that, you just add the translation onto each point so that:
+After that, you just add the translation onto each point so you get:
 
     (1,0,0)  --->  ( m[0], m[1], m[2] ) + ( m[12], m[13], m[14] )
     (0,1,0)  --->  ( m[4], m[5], m[6] ) + ( m[12], m[13], m[14] )
     (0,0,1)  --->  ( m[8], m[9], m[10]) + ( m[12], m[13], m[14] )
     (0,0,0)  --->  ( 0, 0, 0 ) + ( m[12], m[13], m[14] )
 
-Once you know this, it becomes quite easy to use matrices to position objects exactly where you need them without messing around with multiple calls to glRotate.
-Just imagine a little cube at the origin - pretend it's firmly attached to your model. Think about where the cube ends up as the model moves - write down where it's vertices would end up and there is your matrix.
+That may seem a bit abstract but just imagine little cube at the origin. Think about where the cube ends up as the matrix changes. For example, looking at this matrix:
 
-So, looking at this matrix:
-
-   0.707, -0.707, 0,  0
-   0.707,  0.707, 0,  0
-   0    ,  0    , 1,  0
-   0    ,  0    , 0,  1
+    0.707, -0.707, 0,  0
+    0.707,  0.707, 0,  0
+    0    ,  0    , 1,  0
+    0    ,  0    , 0,  1
 
 
-So, when we draw that out, the X axis of our cube is now pointing somewhere between the X and Y axes, the Y axis is pointing somewhere between Y and negative X and the Z axis hasn't moved at all. The entire cube has been moved 1 units in X:
+When we draw that out, the X axis of our cube is now pointing somewhere between the X and Y axes, the Y axis is pointing somewhere between Y and negative X and the Z axis hasn't moved at all. The entire cube has been moved 1 units in X direction and 0 in the Y and Z:
 
 ![img](002_images/rotation2.png)
+
+What you'll tend to see in your ModelView matrix is a lot of rotation and translation to account for the position of your camera and of world space (that is, stuff in the rotation and translation parts of the matrix), what you'll tend to see in your projection matrix is some translation but mostly a lot of skewing (m[3], m[7], m[11]) to show how the camera deforms the world to make it look right on the screen. We're going to come back to matrices a little bit later in this article when we talk about cameras.
 
 There's tons more to know about matrices but we've got to move on to textures!
 
