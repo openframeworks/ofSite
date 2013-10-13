@@ -194,9 +194,59 @@ _inlined_description: _
 _description: _
 
 
-undocumented!!
-notfound:ofBackgroundGradient
+Sets the background color to a gradient. It takes as input 2 ofColor() objects and a Gradient Mode. Must be called in the draw() function. Accepted modes are:
 
+Circular: OF_GRADIENT_CIRCULAR  
+Linear: OF_GRADIENT_LINEAR  
+Bar: OF_GRADIENT_BAR  
+  
+**Background Gradient: Circular:**
+![Background Gradient Circular](bkgGradient_circular.png)
+~~~~{.cpp}
+void ofApp::draw(){
+
+	ofColor colorOne;
+	ofColor colorTwo;
+
+	colorOne.set (255, 0, 0);
+	colorTwo.set (0, 0, 255);
+
+	ofBackgroundGradient(colorOne, colorTwo, OF_GRADIENT_CIRCULAR);  
+	// Sets the background to a circular gradient
+}    
+~~~~
+  
+**Background Gradient: Linear:**
+![Background Gradient Linear](bkgGradient_linear.png)
+~~~~{.cpp}
+void ofApp::draw(){
+
+	ofColor colorOne;
+	ofColor colorTwo;
+
+	colorOne.set (255, 0, 0);
+	colorTwo.set (0, 0, 255);
+
+	ofBackgroundGradient(colorOne, colorTwo, OF_GRADIENT_LINEAR);
+	  // Sets the background to a linear gradient
+}    
+~~~~
+  
+**Background Gradient: Bar:**
+![Background Gradient Bar](bkgGradient_bar.png)
+~~~~{.cpp}
+void ofApp::draw(){
+
+	ofColor colorOne;
+	ofColor colorTwo;
+
+	colorOne.set (255, 0, 0);
+	colorTwo.set (0, 0, 255);
+
+	ofBackgroundGradient(colorOne, colorTwo, OF_GRADIENT_BAR);
+	  // Sets the background to a bar gradient
+}    
+~~~~
 
 
 
@@ -755,12 +805,16 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+Clears the working screen and replaces it with an RGB color. Alpha not allowed.
 
-
-
+~~~~{.cpp}
+void ofApp::draw(){
+	ofClear ( 255, 0, 0 );  
+	// Clears background and replaces it with red.
+}
+~~~~
 
 
 
@@ -794,9 +848,14 @@ _inlined_description: _
 
 _description: _
 
+Clears the working screen and replaces it with a grayscale value. Alpha not allowed.
 
-
-
+~~~~{.cpp}
+void ofApp::draw(){
+	ofClear ( 100 );  
+	// Clears background and replaces it with a gray value.
+}
+~~~~
 
 
 
@@ -830,10 +889,16 @@ _inlined_description: _
 
 _description: _
 
+Clears the working screen and replaces it with an ofColor. Alpha not allowed.
 
-
-
-
+~~~~{.cpp}
+void ofApp::draw(){
+	ofColor myColor;
+	myColor.set ( 0, 0, 255 );
+	ofClear ( myColor );  
+	// Clears background and replaces it with myColor.
+}
+~~~~
 
 
 
@@ -3369,9 +3434,19 @@ _inlined_description: _
 
 _description: _
 
+Draws a rounded rectangle from the given rectangle using given radius.
 
-
-
+~~~~{.cpp}
+void ofApp::draw(){
+	ofRectangle myRect;
+	myRect.x = 10;
+	myRect.y = 10;
+	myRect.width = 100;
+	myRect.height = 100;
+	
+	ofRectRounded( myRect, 10 );
+}    
+~~~~
 
 
 
@@ -3405,6 +3480,15 @@ _inlined_description: _
 
 _description: _
 
+Draws a rectangle from point p with a given width, height and radius of rounded corners.
+  
+~~~~{.cpp}
+void ofApp::draw(){
+	ofPoint p;
+	p.set ( 10, 10 );
+	ofRectRounded( p, 100, 100, 10 );
+}    
+~~~~
 
 
 
@@ -3441,6 +3525,13 @@ _inlined_description: _
 
 _description: _
 
+Draws a rectangle from point X, Y with a given width, height and radius of rounded corners.
+  
+~~~~{.cpp}
+void ofApp::draw(){
+	ofRectRounded(10, 10, 100, 100, 10);
+}    
+~~~~
 
 
 
@@ -3477,7 +3568,13 @@ _inlined_description: _
 
 _description: _
 
-
+Draws a rectangle from point X, Y, at depth Z with a given width, height and radius of rounded corners.
+  
+~~~~{.cpp}
+void ofApp::draw(){
+	ofRectRounded(10, 10, 10, 100, 100, 10);
+}    
+~~~~
 
 
 
@@ -3513,7 +3610,13 @@ _inlined_description: _
 
 _description: _
 
-
+Draws a rounded rectangle from point X, Y, at depth Z with a given width, height and radius of rounded corners.
+  
+~~~~{.cpp}
+void ofApp::draw(){
+	ofRectRounded(10, 10, 10, 100, 100, 10);
+}    
+~~~~
 
 
 
@@ -3549,7 +3652,19 @@ _inlined_description: _
 
 _description: _
 
+Draws a rounded rectangle from the given rectangle using different given radius for each of the corners.
 
+~~~~{.cpp}
+void ofApp::draw(){
+	ofRectangle myRect;
+	myRect.x = 10;
+	myRect.y = 10;
+	myRect.width = 100;
+	myRect.height = 100;
+	
+	ofRectRounded( myRect, 10, 20, 30, 40 );
+}    
+~~~~
 
 
 
@@ -3585,7 +3700,13 @@ _inlined_description: _
 
 _description: _
 
-
+Draws a rounded rectangle from point X, Y, at depth Z with a given width, height and different radius for each rounded corner.
+  
+~~~~{.cpp}
+void ofApp::draw(){
+	ofRectRounded(10, 10, 10, 100, 100, 10, 20, 30, 40);
+}    
+~~~~
 
 
 

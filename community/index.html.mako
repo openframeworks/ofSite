@@ -45,6 +45,7 @@
         <li><a href="https://www.facebook.com/GeneratorLeipzig">Leipzig</a></li>
         <li><a href="https://groups.google.com/forum/#!forum/nyc-of">NYC</a></li>
         <li><a href="https://groups.google.com/forum/#!forum/openframeworks-meetup-to">Toronto</a></li>
+        <li><a href="http://www.meetup.com/Creative-Code-SEA">Seattle</a></li>
         </ul>
                 
         <h3 style="padding-top:30px">questions?</h3>
