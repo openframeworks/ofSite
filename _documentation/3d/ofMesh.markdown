@@ -336,8 +336,8 @@ _inlined_description: _
 
 _description: _
 
-
-
+Add a normal to the mesh as a 3D vector, typically perpendicular to the plane of the face. A normal is a vector that defines how a surface responds to lighting, i.e. how it is lit. The amount of light reflected by a surface is proportional to the angle between the light's direction and the normal. The smaller the angle the brighter the surface will look. See the normalsExample for advice on computing the normals.
+addNormal adds the 3D vector to the end of the list, so you need to make sure you add normals at the same index of the matching face.
 
 
 
@@ -374,7 +374,7 @@ _inlined_description: _
 
 _description: _
 
-
+Add a vector of normals to a mesh, allowing you to push out many normals at once rather than adding one at a time. The vector of normals is added after the end of the current normals list.
 
 
 
@@ -412,7 +412,7 @@ _inlined_description: _
 
 _description: _
 
-
+Add an array of normals to the mesh. Because you are using a pointer to the array you also have to define the length of the array as an int (amt). The normals are added at the end of the current normals list.
 
 
 
@@ -489,7 +489,7 @@ _inlined_description: _
 _description: _
 
 
-
+Add a vector of texture coordinates to a mesh, allowing you to push out many at once rather than adding one at a time. The vector of texture coordinates is added after the end of the current texture coordinates list.
 
 
 
@@ -527,8 +527,7 @@ _inlined_description: _
 _description: _
 
 
-
-
+Add an array of texture coordinates to the mesh. Because you are using a pointer to the array you also have to define the length of the array as an int (amt). The texture coordinates are added at the end of the current texture coordinates list.
 
 
 
@@ -605,7 +604,7 @@ _inlined_description: _
 _description: _
 
 
-
+Add a new vertex at the end of the current list of vertices. It is important to remember that the order the vertices are added to the list determines how they link they form the polygons and strips (assuming you do not change their indeces). See the ofMesh class description for details.
 
 
 
@@ -642,7 +641,7 @@ _inlined_description: _
 
 _description: _
 
-
+Add a vector of vertices to a mesh, allowing you to push out many at once rather than adding one at a time. The vector of vertices is added after the end of the current vertices list.
 
 
 
@@ -680,7 +679,7 @@ _inlined_description: _
 
 _description: _
 
-
+Add an array of vertices to the mesh. Because you are using a pointer to the array you also have to define the length of the array as an int (amt). The vertices are added at the end of the current vertices list.
 
 
 
@@ -719,7 +718,7 @@ _inlined_description: _
 _description: _
 
 
-
+Add the vertices, normals, texture coordinates and indices of one mesh onto another mesh. Everything from the refrenced mesh is simply added at the end of the current mesh's lists.
 
 
 
@@ -756,7 +755,13 @@ _inlined_description: _
 
 _description: _
 
-
+A helper method that returns a box made from triangles. The resolution settings for each axis are optional (they are set at a default of 2 triangles per side).
+~~~~{.cpp}
+ofMesh mesh;
+mesh = ofMesh::box(200.0, 200.0, 200.0);
+~~~~
+ 
+![image of a simple box](box.jpg)
 
 
 
@@ -1035,7 +1040,13 @@ _inlined_description: _
 _description: _
 
 
-
+A helper method that returns a cone made from triangles. The resolution settings for the height and cap are optional (they are set at a default of 12 segments around the radius, 6 segments in the height, and 2 on the cap). The only valid modes are the default OF_PRIMITIVE_TRIANGLE_STRIP and OF_PRIMITIVE_TRIANGLES.
+~~~~{.cpp}
+ofMesh mesh;
+mesh = ofMesh::cone(100.0, 200.0);
+~~~~
+ 
+![image of a simple cone](cone.jpg)
 
 
 
