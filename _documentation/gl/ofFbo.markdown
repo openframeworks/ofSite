@@ -16,45 +16,50 @@ _istemplated: False_
 
 ##Description
 
-As an example, with an fbo you can do some drawing to the fbo (instead of to the screen or a texture) and then do some blurring, maybe invert the colors, combine multiple images, all without needing to draw it to the screen until you're ready.
-fbos are also used to create views of other scenes, like a TV in a house. A scene can be rendered through an FBO to a texture, then that texture can be applied to the surface of another object.
-You can also create a depth buffer within your fbo to figure out which objects should go in front of which other objects.
-As an example of an advanced usage:
-Create an ofFbo.
-Attach the color buffer of the ofFbo to a texture.
-Attach the depth buffer of the ofFbo to a texture.
-Render the texture to screen with a pixel shader using ofShader.
-Rad!
-The following code snippet shows ping-ponging, a common technique with FBOs that involves adding two textures to the FBO and blurring one then the other in succession to create a blur effect.
+At it's core the ofFBO is a container for textures and an optional depth buffer. Kind of like, well, an OpenGL framebuffer, which is what you're normally rendering to. One way, conceptually correct but technically a bit loose, is that it's another renderer that you can write to. You can draw textures to it, draw 3D or 2D objects to it, render the view of cameras inside of it, all with one key difference: it's just an object stored on the graphics card that repreesents a rendered drawing pass. You can have multiple of them, draw all kinds of things inside of them, and then get all the textures out of them to play with in a shader or just draw them directly to the screen. They are, for most purposes, little render buffers that you can render to and store without needing to be drawing to the screen.
+
+To start working with an ofFbo, you have to allocate it, the same way that you would with an ofTexture:
+
 ~~~~{.cpp}
-// draw scene into fbo
-fbo.begin();
-vidGrabber.draw(0, 0, fbo.getWidth(), fbo.getHeight());
-fbo.end();
-// ping pong between two attachments using shader
-fbo.begin();
-shader.begin();
-// the fbo contains two textures, so we blur one
-// then copy it to the other and repeat 8 times
-for(int i=0; i<8; i++) {
-	int srcPos = i % 2;				// attachment to write to
-	int dstPos = 1 - srcPos;		// attachment to read from
-	glDrawBuffer(GL_COLOR_ATTACHMENT0_EXT + dstPos);	// write to this texture
-	ofClear(0, 0, 0, 0);
-	
-	shader.setUniform1i("tex0", 0);
-	shader.setUniform1f("sampleOffset", i*2+1);
-	fbo.getTextureReference(srcPos).draw(0, 0);
-}
-shader.end();
-fbo.end();
-fbo.draw(0, 0);
+fbo.allocate(400, 400, GL_RGBA); // with alpha, 8 bits red, 8 bits green, 8 bits blue, 8 bits alpha, from 0 to 255 in 256 steps	
 ~~~~
-Bloom effects are also often done with FBO objects using Multiple Render to Texture or MRT effects.
 
+Often the FBO will contain artefacts from the memory that the graphics card has just allocated for it, so it's good to clear it before starting to draw it:
 
+~~~~{.cpp}
+    fbo.begin();
+	ofClear(255,255,255, 0);
+    fbo.end();
+~~~~
 
+When you call begin() you're telling the framebuffer to store the rendered results of any drawing calls (or shaders for that matter) in the FBO:
 
+~~~~{.cpp}
+fbo.begin();
+	ofBackground(255, 0, 0);
+	ofSetColor(255,255,255, fadeAmnt);
+	ofRect(0,0,400,400);
+fbo.end();
+~~~~
+
+When it's time to draw your FBO, you can simply call draw:
+
+~~~~{.cpp}
+void ofApp::draw()
+{
+	fbo.draw(0,0);
+}
+~~~~
+
+If you want to pass the FBO to say, an ofShader, you do:
+
+~~~~{.cpp}
+shader.setUniformTexture("fboTexture", fbo.getTextureReference(0), 0);
+~~~~
+
+You can also use the ofFbo::Settings object to create a more customized FBO that allows you to set the internal format of the depth and stencil textures, create multiple textures to render to, and use different texture targets, among other things.
+
+ofFbo can be a little confusing because it wraps two related, but distinct things in OpenGL: Textures and RenderBuffers. The difference conceptually isn't huge, but it's important if you're looking to understand deeply what's going on inside the ofFbo. RenderBuffers are good for rendering to, not drawing, whereas Textures are ok for both but slightly slower. More info on both [here](http://www.opengl.org/wiki/Renderbuffer_Objects) and [here](http://www.opengl.org/wiki/Framebuffer_Object)
 
 ##Methods
 
@@ -91,7 +96,7 @@ _description: _
 
 
 
-
+This method allows you to render the results of a shading pass to all the textures inside the FBO. It's  handy if you have many textures inside your FBO, for instance, a normals texture, a colored depth texture, a color texture, and you want to have a shader render to all of them at once. It calls glDrawBuffers() internally, which you can learn more about [here](http://www.opengl.org/sdk/docs/man/xhtml/glDrawBuffers.xml).
 
 
 
@@ -248,7 +253,7 @@ _inlined_description: _
 _description: _
 
 
-This lets you draw the fbo using vertices to define the area that the fbo will be drawn into. This can be an ofRectangle, ofMesh, or other vertex based drawing technique.
+This lets you draw the fbo using vertices to define the area that the fbo will be drawn into, the same way that you would bind an ofTexture. This can be an ofRectangle, ofMesh, or other vertex based drawing technique.
 
 
 
@@ -328,7 +333,7 @@ _inlined_description: _
 _description: _
 
 
-
+This checks the status of your FBO object.
 
 
 
@@ -366,9 +371,15 @@ _inlined_description: _
 _description: _
 
 
+FBOs usually have two textures that are created inside of them: a color texture to hold all of the colors of objects that are rendered and a depth texture that represents all the depth values of objects that are rendered. While there are more esoteric reasons for generating a depth texture, a common one is that depth textures can be used in a vertex or fragment shader to figure out how far away from the camera (and possibly by extension a light) something is.
 
+These are created with the default ofFbo::Settings, which means that unless you don't want one, you have a depth buffer to play with that you can access with:
 
+~~~~{.cpp}
+fbo.getDepthTexture();
+~~~~
 
+The attachment point is the index of the texture that you're going to be referring to within the FBO. By default this should just be GL_DEPTH_STENCIL but if you know what you're doing and don't want a stencil buffer you can use GL_DEPTH_ATTACHMENT or vice versa, GL_STENCIL_ATTACHMENT.
 
 
 
@@ -405,9 +416,17 @@ _description: _
 
 
 
+FBOs usually have two textures that are created inside of them: a color texture to hold all of the colors of objects that are rendered and a depth texture that represents all the depth values of objects that are rendered. While there are more esoteric reasons for generating a depth texture, a common one is that depth textures can be used in a vertex or fragment shader to figure out how far away from the camera (and possibly by extension a light) something is.
 
+These are created with the default ofFbo::Settings, which means that unless you don't want one, you have a depth buffer to play with that you can access with:
 
+~~~~{.cpp}
+fbo.getDepthTexture();
+~~~~
 
+The attachment point is the index of the texture that you're going to be referring to within the FBO. By default this should just be GL_DEPTH_STENCIL but if you know what you're doing and don't want a stencil buffer you can use GL_DEPTH_ATTACHMENT or vice versa, GL_STENCIL_ATTACHMENT.
+
+The extra parameters on this method allow you to set the type of depth buffer that you want to create, which is handy if you need particular fidelity for depth, for instance, GL_DEPTH32.
 
 
 <!----------------------------------------------------------------------------->
@@ -443,7 +462,7 @@ _description: _
 
 
 
-
+This creates a texture of the specified format and attaches it to the FBO at the index specified. Most of this can be handled for you by using the ofFbo::Settings object. RenderBuffers are slightly different than textures, more info can be found on the [OpenGL Wiki](http://www.opengl.org/wiki/Renderbuffer_Objects).
 
 
 
@@ -482,7 +501,7 @@ _description: _
 
 
 
-
+This creates a texture of the specified format and attaches it to the FBO at the index specified. Most of this can be handled for you by using the ofFbo::Settings object.
 
 
 
@@ -519,7 +538,7 @@ _description: _
 
 
 
-
+Destroys the FBO and releases all textures and renderbuffers created.
 
 
 
@@ -757,7 +776,7 @@ _description: _
 
 
 
-
+Returns a reference to the depth texture, if you've created one.
 
 
 
@@ -994,7 +1013,7 @@ _inlined_description: _
 _description: _
 
 
-This gives you access to a particular ofTexture if there are more than 1 contained w/in the fbo.
+This gives you access to a particular ofTexture contained by the FBO if there are more than 1 contained w/in the FBO. By default you'll have a color texture and a depth texture, though you can configure your FBO to have more.
 
 
 
@@ -1075,7 +1094,7 @@ _description: _
 
 
 
-
+Returns whether your FBO is allocated or not.
 
 
 
@@ -1352,7 +1371,7 @@ _inlined_description: _
 _description: _
 
 
-This allows you to get the pixels from an ofFbo and store it in an ofPixels instance. The attachmentPoint parameter allows you indicate which of the textures attached to the fbo you want to grab
+This allows you to get the pixels from an ofFbo and store it in an ofPixels instance. The attachmentPoint parameter allows you indicate which of the textures attached to the fbo you want to grab.
 
 
 
@@ -1513,7 +1532,7 @@ _description: _
 
 
 
-
+This sets which texture within your FBO is going contain the results of any drawing method or shading pass, particularly useful if you have multiple color textures, for instance, a normals texture and a color value texture. Doing multiple rendering passes on different objects is called [Deferred Shading](http://en.wikipedia.org/wiki/Deferred_shading) and is a tricky but powerful technique.
 
 
 
@@ -1552,6 +1571,7 @@ _description: _
 
 
 
+This sets which texture within your FBO is going contain the results of any drawing method or shading pass, particularly useful if you have multiple color textures, for instance, a normals texture and a color value texture. Doing multiple rendering passes on different objects is called [Deferred Shading](http://en.wikipedia.org/wiki/Deferred_shading) and is a tricky but powerful technique.
 
 
 
