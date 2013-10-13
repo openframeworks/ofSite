@@ -735,7 +735,7 @@ _inlined_description: _
 _description: _
 
 
-This gives you the OpenGL id of the depthBuffer that the fbo contains.
+This gives you the OpenGL id of the depth RenderBuffer that the fbo contains. The depthBuffer will only be created if you pass a Setting object with depthStencilAsTexture = false.
 
 
 
@@ -776,7 +776,7 @@ _description: _
 
 
 
-Returns a reference to the depth texture, if you've created one.
+This gives you the OpenGL id of the depth Texture that the fbo contains. The depthBuffer will be created by default or if you pass a Setting object with depthStencilAsTexture = true.
 
 
 
@@ -933,8 +933,7 @@ _inlined_description: _
 _description: _
 
 
-This gives you the OpenGL id of the depthBuffer that the fbo contains.
-
+This gives you the OpenGL id of the stencil RenderBuffer that the fbo contains. The depthBuffer will only be created if you pass a Setting object with depthStencilAsTexture = false and settings.useStencil = true.
 
 
 
