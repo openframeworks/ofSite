@@ -173,7 +173,7 @@ _syntax: ofBackgroundGradient()_
 _name: ofBackgroundGradient_
 _returns: void_
 _returns_description: _
-_parameters: _
+_parameters: ofColor& start, ofColor& end, ofGradientMode mode_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -194,9 +194,59 @@ _inlined_description: _
 _description: _
 
 
-undocumented!!
-notfound:ofBackgroundGradient
+Sets the background color to a gradient. It takes as input 2 ofColor() objects and a Gradient Mode. Must be called in the draw() function. Accepted modes are:
 
+Circular: OF_GRADIENT_CIRCULAR  
+Linear: OF_GRADIENT_LINEAR  
+Bar: OF_GRADIENT_BAR  
+  
+**Background Gradient: Circular:**
+![Background Gradient Circular](bkgGradient_circular.png)
+~~~~{.cpp}
+void ofApp::draw(){
+
+	ofColor colorOne;
+	ofColor colorTwo;
+
+	colorOne.set (255, 0, 0);
+	colorTwo.set (0, 0, 255);
+
+	ofBackgroundGradient(colorOne, colorTwo, OF_GRADIENT_CIRCULAR);  
+	// Sets the background to a circular gradient
+}    
+~~~~
+  
+**Background Gradient: Linear:**
+![Background Gradient Linear](bkgGradient_linear.png)
+~~~~{.cpp}
+void ofApp::draw(){
+
+	ofColor colorOne;
+	ofColor colorTwo;
+
+	colorOne.set (255, 0, 0);
+	colorTwo.set (0, 0, 255);
+
+	ofBackgroundGradient(colorOne, colorTwo, OF_GRADIENT_LINEAR);
+	  // Sets the background to a linear gradient
+}    
+~~~~
+  
+**Background Gradient: Bar:**
+![Background Gradient Bar](bkgGradient_bar.png)
+~~~~{.cpp}
+void ofApp::draw(){
+
+	ofColor colorOne;
+	ofColor colorTwo;
+
+	colorOne.set (255, 0, 0);
+	colorTwo.set (0, 0, 255);
+
+	ofBackgroundGradient(colorOne, colorTwo, OF_GRADIENT_BAR);
+	  // Sets the background to a bar gradient
+}    
+~~~~
 
 
 
