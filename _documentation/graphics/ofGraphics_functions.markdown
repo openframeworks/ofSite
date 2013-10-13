@@ -805,12 +805,16 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+Clears the working screen and replaces it with an RGB color. Alpha not allowed.
 
-
-
+~~~~{.cpp}
+void ofApp::draw(){
+	ofClear ( 255, 0, 0 );  
+	// Clears background and replaces it with red.
+}
+~~~~
 
 
 
@@ -844,9 +848,14 @@ _inlined_description: _
 
 _description: _
 
+Clears the working screen and replaces it with a grayscale value. Alpha not allowed.
 
-
-
+~~~~{.cpp}
+void ofApp::draw(){
+	ofClear ( 100 );  
+	// Clears background and replaces it with a gray value.
+}
+~~~~
 
 
 
@@ -880,10 +889,16 @@ _inlined_description: _
 
 _description: _
 
+Clears the working screen and replaces it with an ofColor. Alpha not allowed.
 
-
-
-
+~~~~{.cpp}
+void ofApp::draw(){
+	ofColor myColor;
+	myColor.set ( 0, 0, 255 );
+	ofClear ( myColor );  
+	// Clears background and replaces it with myColor.
+}
+~~~~
 
 
 
