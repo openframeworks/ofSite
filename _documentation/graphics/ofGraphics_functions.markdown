@@ -173,7 +173,7 @@ _syntax: ofBackgroundGradient()_
 _name: ofBackgroundGradient_
 _returns: void_
 _returns_description: _
-_parameters: ofColor& start, ofColor& end, ofGradientMode mode_
+_parameters: _
 _version_started: _
 _version_deprecated: _
 _summary: _
