@@ -3434,9 +3434,19 @@ _inlined_description: _
 
 _description: _
 
+Draws a rounded rectangle from the given rectangle using given radius.
 
-
-
+~~~~{.cpp}
+void ofApp::draw(){
+	ofRectangle myRect;
+	myRect.x = 10;
+	myRect.y = 10;
+	myRect.width = 100;
+	myRect.height = 100;
+	
+	ofRectRounded( myRect, 10 );
+}    
+~~~~
 
 
 
@@ -3470,6 +3480,15 @@ _inlined_description: _
 
 _description: _
 
+Draws a rectangle from point p with a given width, height and radius of rounded corners.
+  
+~~~~{.cpp}
+void ofApp::draw(){
+	ofPoint p;
+	p.set ( 10, 10 );
+	ofRectRounded( p, 100, 100, 10 );
+}    
+~~~~
 
 
 
@@ -3506,6 +3525,13 @@ _inlined_description: _
 
 _description: _
 
+Draws a rectangle from point X, Y with a given width, height and radius of rounded corners.
+  
+~~~~{.cpp}
+void ofApp::draw(){
+	ofRectRounded(10, 10, 100, 100, 10);
+}    
+~~~~
 
 
 
@@ -3542,7 +3568,13 @@ _inlined_description: _
 
 _description: _
 
-
+Draws a rectangle from point X, Y, at depth Z with a given width, height and radius of rounded corners.
+  
+~~~~{.cpp}
+void ofApp::draw(){
+	ofRectRounded(10, 10, 10, 100, 100, 10);
+}    
+~~~~
 
 
 
@@ -3578,7 +3610,13 @@ _inlined_description: _
 
 _description: _
 
-
+Draws a rounded rectangle from point X, Y, at depth Z with a given width, height and radius of rounded corners.
+  
+~~~~{.cpp}
+void ofApp::draw(){
+	ofRectRounded(10, 10, 10, 100, 100, 10);
+}    
+~~~~
 
 
 
@@ -3614,7 +3652,19 @@ _inlined_description: _
 
 _description: _
 
+Draws a rounded rectangle from the given rectangle using different given radius for each of the corners.
 
+~~~~{.cpp}
+void ofApp::draw(){
+	ofRectangle myRect;
+	myRect.x = 10;
+	myRect.y = 10;
+	myRect.width = 100;
+	myRect.height = 100;
+	
+	ofRectRounded( myRect, 10, 20, 30, 40 );
+}    
+~~~~
 
 
 
@@ -3650,7 +3700,13 @@ _inlined_description: _
 
 _description: _
 
-
+Draws a rounded rectangle from point X, Y, at depth Z with a given width, height and different radius for each rounded corner.
+  
+~~~~{.cpp}
+void ofApp::draw(){
+	ofRectRounded(10, 10, 10, 100, 100, 10, 20, 30, 40);
+}    
+~~~~
 
 
 
