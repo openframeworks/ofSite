@@ -755,7 +755,7 @@ _inlined_description: _
 
 _description: _
 
-A helper method that returns a box made from triangles. The resolution settings for each axis are optional (they are set at a default of 2 triangles per side).
+A helper method that returns a box made of triangles. The resolution settings for each axis are optional (they are set at a default of 2 triangles per side).
 ~~~~{.cpp}
 ofMesh mesh;
 mesh = ofMesh::box(200.0, 200.0, 200.0);
