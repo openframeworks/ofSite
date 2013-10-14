@@ -801,6 +801,12 @@ a.docs_class{
     float:right;
     margin-top:15px;
 }
+#editdocs img {
+  border: 1px solid rgba(238, 57, 135, 0.3);
+  border-radius: 11px;
+  box-shadow: 2px 2px 2px #eee; 
+}
+
 #docstitle{
     width:60%;
     float:left;
