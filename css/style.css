@@ -1158,6 +1158,7 @@ a.noLine {
 	background-color: #EEEEEE;
 	color: #333333;
 	padding: 0;
+	margin-right:30px;
 }
 .tweet_list, div#github ul, #forum ul {
 	background-color: #F7F7F7;

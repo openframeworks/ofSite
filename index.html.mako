@@ -23,13 +23,13 @@
 </div>
 
 <div class="page-wide">
-
-
 	<span style="font-size:9px; color:rgb(200, 200, 200);">openFrameworks is a proud supporting partner of the inst-int festival:</span>
     <hr/ style="margin-bottom:10px; margin-top:0px;">
 	<a target="_blank" href="http://inst-int.com"><img src="images/promo/inst-int-banner-890x100-v1-eyeo-names-sharp.png" width="890" height="100" border="0"></a>
     <hr/ style="margin-top:10px;">
+</div>
 
+<div class="page-wide">
     <div class="tweet">
         <h3>twitter</h3>
         <div id="tweets">
