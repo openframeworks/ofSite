@@ -24,7 +24,9 @@
 
 <div class="page-wide">
 
-    <hr/>
+    <hr/ style="margin-bottom:10px;">
+	<a target="_blank" href="http://inst-int.com"><img src="images/promo/inst-int-banner-890x100-v1-eyeo-names-sharp.png" width="890" height="100" border="0"></a>
+    <hr/ style="margin-top:10px;">
 
     <div class="tweet">
         <h3>twitter</h3>
