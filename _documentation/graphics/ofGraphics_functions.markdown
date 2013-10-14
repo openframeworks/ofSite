@@ -807,7 +807,7 @@ _inlined_description: _
 
 _description: _
 
-Clears the working screen and replaces it with an RGB color. Alpha not allowed.
+Clears the renderer and replaces it with an RGB color.
 
 ~~~~{.cpp}
 void ofApp::draw(){
@@ -848,7 +848,7 @@ _inlined_description: _
 
 _description: _
 
-Clears the working screen and replaces it with a grayscale value. Alpha not allowed.
+Clears the renderer and replaces it with a grayscale value.
 
 ~~~~{.cpp}
 void ofApp::draw(){
@@ -889,7 +889,7 @@ _inlined_description: _
 
 _description: _
 
-Clears the working screen and replaces it with an ofColor. Alpha not allowed.
+Clears the renderer and replaces it with an ofColor.
 
 ~~~~{.cpp}
 void ofApp::draw(){
