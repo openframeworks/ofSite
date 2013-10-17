@@ -1,3 +1,4 @@
+## -*- coding: utf-8 -*-
 <%page args="method"/>
 <div class="documentation_detail ${method.name}" data-lookup="${method.name}" data-item-type="method">
   	<% params = "()" if method.parameters=="" else "(...)" %> 

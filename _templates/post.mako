@@ -1,3 +1,4 @@
+## -*- coding: utf-8 -*-
 <%page args="post"/>
 <div class="blog_post">
   <a name="${post.slug}"></a>

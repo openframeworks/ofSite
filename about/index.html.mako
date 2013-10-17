@@ -1,3 +1,4 @@
+## -*- coding: utf-8 -*-
 <%inherit file="/_templates/slideshow.mako" />
 
 <h1>about</h1>

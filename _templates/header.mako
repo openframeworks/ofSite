@@ -1,3 +1,4 @@
+## -*- coding: utf-8 -*-
 <%page args="active"/>
 
 <div id="head">

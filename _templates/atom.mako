@@ -1,3 +1,4 @@
+## -*- coding: utf-8 -*-
 <?xml version="1.0" encoding="UTF-8"?><% from datetime import datetime %>
 <feed
   xmlns="http://www.w3.org/2005/Atom"

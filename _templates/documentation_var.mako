@@ -1,3 +1,4 @@
+## -*- coding: utf-8 -*-
 <%page args="var"/>
 <div class="documentation_detail  ${var.name}" data-lookup="${var.name}" data-item-type="var">
 	<h1>${var.type} <a name="show_${var.name}">${var.name}</a></h1>

@@ -1,3 +1,4 @@
+## -*- coding: utf-8 -*-
 <%inherit file="/_templates/markdown.mako" />
 
 Xcode Setup Guide

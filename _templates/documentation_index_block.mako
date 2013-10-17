@@ -1,3 +1,4 @@
+## -*- coding: utf-8 -*-
 <%page args="module,classes"/>
 <div class="documentation_group">
     <div class="documentation_group_head show">

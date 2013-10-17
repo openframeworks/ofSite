@@ -1,3 +1,4 @@
+## -*- coding: utf-8 -*-
 <%inherit file="site.mako" />
 <%include file="post.mako" args="post=post" />
 <div id="disqus_thread"></div>

@@ -1,3 +1,4 @@
+## -*- coding: utf-8 -*-
 <%inherit file="site.mako" />
 % for post in posts:
   <%include file="post.mako" args="post=post" />

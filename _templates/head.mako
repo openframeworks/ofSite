@@ -1,3 +1,4 @@
+## -*- coding: utf-8 -*-
 <title>${bf.config.blog.name + pageargs['subtitle']}</title>
 
 <!-- syntax highlighting for the documentation -->

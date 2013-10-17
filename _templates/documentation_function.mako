@@ -1,3 +1,4 @@
+## -*- coding: utf-8 -*-
 <%page args="function"/>
 <div class="documentation_detail ${function.name}" data-lookup="${function.name}" data-item-type="function">
   	<% params = "()" if function.parameters=="" else "(...)" %> 

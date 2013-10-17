@@ -1,3 +1,4 @@
+## -*- coding: utf-8 -*-
 <%inherit file="/_templates/markdown.mako" />
 
 visual studio setup guide
