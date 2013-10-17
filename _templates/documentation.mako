@@ -25,7 +25,7 @@
             </div>  
 		    <div class="page-right-narrow">
 			    <p>This page is the reference for the openFrameworks core and included addons. There are also <a href="http://ofxaddons.com/">contributed addons</a>. The openFrameworks API is constantly evolving: any corrections, additions or comments are very welcome!</p>
-			    <p>You can contribute to this documentation from GitHub by following these <a href="https://github.com/openframeworks/openFrameworks/wiki/Contributing-documentation">instructions.</a> 
+			    <p>You can contribute to this documentation from GitHub by following the  <a href="/tutorials/developers/003_contributing_to_the_documentation.html">instructions in the documentation tutorial.</a> 
 			    <p>This documentation refers to the most recent release, version <strong>${bf.config.currentVersion}</strong>.</p>
 		    </div>
 	   </div>
