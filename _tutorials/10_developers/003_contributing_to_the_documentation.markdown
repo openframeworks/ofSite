@@ -143,7 +143,7 @@ Directly editing the documentation on Github is a great way to make improvements
 
 If you know what you're doing, skip to the bottom of the section for the TL;DR version of the instructions.
 
-These instructions are Apple OS X specific, and have been tested on OS X 10.8.  
+## OSX instructions
 
 ### Step 1:  Install Python
 
@@ -209,7 +209,34 @@ if you **DO** have git, you should see something like:  ``git version 1.7.12.4 (
 If you **DON'T** have git, you should see ``git: command not found``.  You'll need to install git, which you can get from the [Git website](http://git-scm.com/download).  
 
 
-### Step 4:  Get your own copy of ofSite
+## Linux install instructions
+
+### Step 1: Install blogofile
+
+Blogofile is the tool we use to generate the openFramworks site, to install it under linux you'll need a python tool called pip, most probably you'll have it already installed in the system, but in case it's not you can install it with:
+
+    sudo apt-get install python-pip
+    
+The site also needs a python module for parsing xml called lxml you can install it with:
+
+    sudo apt-get install python-lxml
+    
+Now you can install blogofile doing:
+
+    sudo pip install blogofile
+    
+### Step 2: Install git
+
+In case you don't have git already installed you can install it with:
+
+    sudo apt-get install git
+    
+
+## Downloading and updating the site
+
+From here on the steps are the same for linux and osx
+
+### Step 1:  Get your own copy of ofSite
 
 Much like openFrameworks itself, [ofSite's repository](https://github.com/openframeworks/ofSite)  is hosted on Github.  Github is a massive online code repository built around git, and is a where an increasingly large amount of the open-source software is kept, modified, and updated.
 
@@ -225,7 +252,7 @@ Clicking it will create a your own repository—the only difference is that it w
 
 This is your personal playground—you can make changes here, test them, and when you're satisfied, you can submit them back to the main ofSite repository and have them merged by an admin into the live site.
 
-### Step 5:  Clone the site to your local machine
+### Step 2:  Clone the site to your local machine
 
 On the left side of your ofSite repository, there's a text box marked **clone URL** that looks like:
 
@@ -245,7 +272,7 @@ For example, cloning my copy of the repository would look like:
 This will download your copy of the repository into that directory.  You're almost there!
 
 
-### Step 6:  Build and Run the Site
+### Step 3:  Build and Run the Site
 
 The final step is to actually compile and serve the site.  You'll go into the directory of your the repository and run the build command:
 
@@ -261,7 +288,7 @@ Which will start a web server running on your local machine with your copy of th
 When you're done with the server, you can type ``<control-c>`` into the terminal window to quit.
 
 
-### Step 7:  Make Changes!
+### Step 4:  Make Changes!
 
 Congrats!  You now have a working version of the site running on your local machine.  
 
@@ -295,7 +322,7 @@ When that's completed rebuilding the site, reloading the webpage will show your 
 
 For formatting and syntax of the documentation, see the **Documentation Structure and Formatting** section above.
 
-### Step 8:  Pushing Your Changes Back to your Github Respository
+### Step 5:  Pushing Your Changes Back to your Github Respository
   
 Now that you've made your improvements to the documentation, you'll add and commit your code back into the git repository.
 
@@ -320,7 +347,7 @@ For example,
     
 For more information on forking, pushing, and git, check our the [Fork a Repo](https://help.github.com/articles/fork-a-repo) article on Github.
 
-### Step 9:  Submit a Pull Request
+### Step 6:  Submit a Pull Request
 
 Go back to the Github page for your personal copy of the ofSite repository.   There, you'll see a banner that looks like:
 
@@ -349,11 +376,26 @@ Congratulations!   You've built, modified, tested, and submitted to an open-sour
 
 
 
-### TL;DR instructions:
+### TL;DR instructions for OSX:
 
   * Install Python
   * ``easy_install lxml``
   * ``easy_install blogofile``
+  * fork and clone [https://github.com/openframeworks/ofSite](https://github.com/openframeworks/ofSite)
+  * From the repo directory:  ``blogofile build && blogofile serve``
+  * Go to [http:\\localhost:8080](http:\\localhost:8080)
+  * create a feature branch
+  * modify code
+  * From the repo directory:  ``blogofile build && blogofile serve`` to verify changes
+  * push branch
+  * submit pull request
+  
+  
+### TL;DR instructions for Linux:
+
+  * ``sudo apt-get install python-pip``
+  * ``sudo apt-get install python-lxml``
+  * ``sudo pip install blogofile``
   * fork and clone [https://github.com/openframeworks/ofSite](https://github.com/openframeworks/ofSite)
   * From the repo directory:  ``blogofile build && blogofile serve``
   * Go to [http:\\localhost:8080](http:\\localhost:8080)
