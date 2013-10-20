@@ -20,6 +20,10 @@
         
 	<h3><a href="http://forum.openframeworks.cc/">forum</a></h3>
 	<p>The forum is a place to meet other people working with openFrameworks. It's a place to share your work, or find help solving problems.</p>
+	
+	<p />
+	<a href="http://www.amazon.com/Mastering-openFrameworks-Creative-Coding-Demystified/dp/1849518041" target="_blank"><img style="margin-top:10px;" src="images/promo/mastering-book.jpg" width="300" height="100" border="0"></a>
+
     </div>
 </div>
 
