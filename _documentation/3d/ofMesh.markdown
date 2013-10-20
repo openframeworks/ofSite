@@ -97,7 +97,7 @@ _inlined_description: _
 _description: _
 
 
-This adds a single color to all vertices.
+This adds a color to the mesh, the color will be associated with the vertex in the same position.
 
 
 
