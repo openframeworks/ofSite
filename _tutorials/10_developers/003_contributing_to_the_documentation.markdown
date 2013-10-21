@@ -1,5 +1,5 @@
 ---
-date: 2013/10/14 11:00:00
+date: 2013/10/21 7:40:00
 title: Contributing to the Documentation
 summary: How to modify the documentation and build the openFrameworks website
 author: David Newbury
@@ -143,21 +143,27 @@ Directly editing the documentation on Github is a great way to make improvements
 
 If you know what you're doing, skip to the bottom of the section for the TL;DR version of the instructions.
 
-## OSX instructions
 
-### Step 1:  Install Python
+## Step 1:  Install Requirements
+
+Installing the requirements for the site requires different steps on different operating systems.  Currently we have instructions for OS X and Linux.
+
+### Installing Requirements on OS X 
+
+
+### Step 1.1:  Install Python
 
 [Python](http://www.python.org/) is a programming language used to build and compile the ofSite website.  Most OS X machines have a copy of python, but you'll need to check if yours is one of them.The easiest way to check is to open a terminal window and type:
 
 	python --version
 
-If you **DO** have python installed, you should see ``Python 2.7.5``.  The number might be different, but any number greater than 2.7 is fine.  Congrats!  You're well on your way.  Skip to **Step 2**.
+If you **DO** have python installed, you should see ``Python 2.7.5``.  The number might be different, but any number greater than 2.7 is fine.  Congrats!  You're well on your way.  Skip to **Step 1.4**.
 
 
 If you **DON'T** have python installed, you should see ``python: command not found``.  Follow the next couple steps.
 
 
-#### Step 1.1:  Install Homebrew.
+#### Step 1.2:  Install Homebrew.
 
 [Homebrew](http://brew.sh) is a package manager for OSX.   It allows you to simply install applications onto OSX from the command line.
 
@@ -165,7 +171,7 @@ Again, to determine if you have brew, type into your terminal:
 
     brew -v
  
-If you **DO** have Homebrew installed, you should see ``Homebrew 0.9.4``.  The number might be different, but any number greater than 0.9 is fine.   Go onto **Step 1.2**.  
+If you **DO** have Homebrew installed, you should see ``Homebrew 0.9.4``.  The number might be different, but any number greater than 0.9 is fine.   Go onto **Step 1.3**.  
 
 If you **DON'T** have homebrew installed, you should see ``brew: command not found``. You can install it using a script found at the [homebrew website](http://brew.sh).  Near the bottom of the page, there will be installation instructions: it will be a script that looks something like:
 
@@ -178,14 +184,14 @@ Copy that script and paste in into your terminal.  It will ask for your password
 at the end, which is a good idea, and will give you instructions on what to do next that are specific to your computer.
 
 
-#### Step 1.2:  Actually Install Python
+#### Step 1.3:  Actually Install Python
 Type into your terminal:
 
     brew install python
 
 This should install python.  You're well on your way.
 
-### Step 2:  Install blogofile
+### Step 1.4:  Install blogofile
 
 Now you'll need to actually install the [blogofile](http://www.blogofile.com/) software, which is the blogging framework the openFrameworks website is built with.  The easiest way to do this is with the [easy_install](http://peak.telecommunity.com/DevCenter/EasyInstall) software, which comes as part of Python, to install blogofile onto your local machine.  
 
@@ -196,7 +202,7 @@ Copy and paste the the following two lines into your terminal:
 
 This may prompt you for your password—or it may not, depending on how recently you've used ``sudo``. 
 
-### Step 3: Install Git
+### Step 1.5: Install Git
 
 [Git](http://git-scm.com/) is a distributed version control system used by openFrameworks and most of the open source world.  It's an essential tool for working with code, and a deep topic well worth learning.
 
@@ -204,20 +210,20 @@ Almost all OS X machines have a copy of Git at this point: you can make sure by 
 
     git --version
 
-if you **DO** have git, you should see something like:  ``git version 1.7.12.4 (Apple Git-37)``. Skip to **step 4**!  
+if you **DO** have git, you should see something like:  ``git version 1.7.12.4 (Apple Git-37)``. Skip to **Step 2**!  
 
 If you **DON'T** have git, you should see ``git: command not found``.  You'll need to install git, which you can get from the [Git website](http://git-scm.com/download).  
 
 
-## Linux install instructions
+### Installing Requirements on Linux 
 
-### Step 1: Install blogofile
+### Step 1.1: Install blogofile
 
 Blogofile is the tool we use to generate the openFramworks site, to install it under linux you'll need a python tool called pip, most probably you'll have it already installed in the system, but in case it's not you can install it with:
 
     sudo apt-get install python-pip
     
-The site also needs a python module for parsing xml called lxml you can install it with:
+The site also needs a python module for parsing xml called lxml. You can install it with:
 
     sudo apt-get install python-lxml
     
@@ -225,18 +231,15 @@ Now you can install blogofile doing:
 
     sudo pip install blogofile
     
-### Step 2: Install git
+### Step 1.2: Install git
 
 In case you don't have git already installed you can install it with:
 
     sudo apt-get install git
     
 
-## Downloading and updating the site
 
-From here on the steps are the same for linux and osx
-
-### Step 1:  Get your own copy of ofSite
+### Step 2:  Get your own copy of ofSite
 
 Much like openFrameworks itself, [ofSite's repository](https://github.com/openframeworks/ofSite)  is hosted on Github.  Github is a massive online code repository built around git, and is a where an increasingly large amount of the open-source software is kept, modified, and updated.
 
@@ -252,7 +255,7 @@ Clicking it will create a your own repository—the only difference is that it w
 
 This is your personal playground—you can make changes here, test them, and when you're satisfied, you can submit them back to the main ofSite repository and have them merged by an admin into the live site.
 
-### Step 2:  Clone the site to your local machine
+### Step 3:  Clone the site to your local machine
 
 On the left side of your ofSite repository, there's a text box marked **clone URL** that looks like:
 
@@ -272,12 +275,12 @@ For example, cloning my copy of the repository would look like:
 This will download your copy of the repository into that directory.  You're almost there!
 
 
-### Step 3:  Build and Run the Site
+### Step 4:  Build and Run the Site
 
 The final step is to actually compile and serve the site.  You'll go into the directory of your the repository and run the build command:
 
     cd ofSite
-    blogfile build
+    blogofile build
 
 This will take a few minutes to build the site.  When it's complete, you'll type: 
 
@@ -288,7 +291,7 @@ Which will start a web server running on your local machine with your copy of th
 When you're done with the server, you can type ``<control-c>`` into the terminal window to quit.
 
 
-### Step 4:  Make Changes!
+### Step 5:  Make Changes!
 
 Congrats!  You now have a working version of the site running on your local machine.  
 
@@ -315,14 +318,14 @@ Which will give you a list of all your branches, with an asterisk next to the cu
 
 You can modify the site by making changes to the files in the ``_documentation`` directory, and then, in the terminal window that's running blogofile, you can terminate the web server by pressing ``<control-c>``, and typing:
 
-    blogfile build
-    blogfile serve
+    blogofile build
+    blogofile serve
 
 When that's completed rebuilding the site, reloading the webpage will show your changes!
 
 For formatting and syntax of the documentation, see the **Documentation Structure and Formatting** section above.
 
-### Step 5:  Pushing Your Changes Back to your Github Respository
+### Step 6:  Pushing Your Changes Back to your Github Respository
   
 Now that you've made your improvements to the documentation, you'll add and commit your code back into the git repository.
 
@@ -334,7 +337,7 @@ Then you'll commit your code, with a note describing the modifications you've ma
 
     git commit -m "<A note describing what things you've changed>"
 
-Then you'll push your code back up to the server.  You'll need to remember the branch name you created back in **Step 7**.
+Then you'll push your code back up to the server.  You'll need to remember the branch name you created back in **Step 5**.
 
     git push origin <feature_name>
 
@@ -347,7 +350,7 @@ For example,
     
 For more information on forking, pushing, and git, check our the [Fork a Repo](https://help.github.com/articles/fork-a-repo) article on Github.
 
-### Step 6:  Submit a Pull Request
+### Step 7:  Submit a Pull Request
 
 Go back to the Github page for your personal copy of the ofSite repository.   There, you'll see a banner that looks like:
 
@@ -370,7 +373,7 @@ And continue to make changes.  Remember:
 - push to github
 - request pull on github
 
-If, after the admin reviews your changes, they ask you to make changes to your pull request, you can always check that branch back out and use **Step 8** and **Step 9** to modify and push new changes.  If you push changes on that branch, they'll automatically be appended to your pull request.
+If, after the admin reviews your changes, they ask you to make changes to your pull request, you can always check that branch back out and use **Step 6** and **Step 7** to modify and push new changes.  If you push changes on that branch, they'll automatically be appended to your pull request.
 
 Congratulations!   You've built, modified, tested, and submitted to an open-source project!
 
