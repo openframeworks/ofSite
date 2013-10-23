@@ -35,6 +35,7 @@
         <p>Conferences, workshops, and talks related to oF and the surrounding community</p>
         <ul>
         <li><a href="http://www.mirafestival.com/lab-concept-en?lang=en">OF workshops at Mira Festival</a>, Barcelona, 14-16 November 2013</li>
+        <li><a href="http://www.telenoika.net/tallers/taller-opengl-amb-openframeworks">advance OF workshop at Telenoika</a>, Barcelona, 11-14 November 2013</li>
         <li><a href="http://push-conference.com/">push.conference</a>, Munich, 25-26 October 2013</li>
         <li><a href="http://studioforcreativeinquiry.org/events/creative-coding-on-the-raspberry-pi-with-openframeworks">OF + RaspberryPi workshop and hackathon</a>, CMU, Pittsburgh.  11-13 October 2013.</li>
         </ul>
