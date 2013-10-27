@@ -1,4 +1,3 @@
-
 ---
 date: 2013/09/01 00:00:00
 title: Basics of OpenGL
@@ -753,4 +752,4 @@ As with everything else, there's a ton more to learn, but this tutorial is alrea
 * [Modern OpenGL](http://tomdalling.com/blog/modern-opengl)
 * [Swiftless Tutorials](http://www.swiftless.com)
 
-Have fun, ask questions on the forum, and read our [shader tutorial](../shaders.html) if you want to keep learning more.
+Have fun, ask questions on the forum, and read our [shader tutorial](shaders.html) if you want to keep learning more.
