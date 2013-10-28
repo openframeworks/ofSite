@@ -58,7 +58,7 @@ class MyThread : public ofThread {
 
 ~~~~
 
-In the application declare an object of type MyThread like:
+In the application .h inside the ofApp class declare an object of type MyThread like:
 
 ~~~~{.cpp}
 // create object
@@ -134,9 +134,6 @@ In the .cpp file:
 ~~~~{.cpp}
 
 void ofApp::setup() {
-	
-	// create object
-	MyThread thread;
 	
 	// start the thread
 	thread.startThread(true, false);	// blocking, non verbose
