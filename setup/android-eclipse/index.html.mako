@@ -110,6 +110,8 @@ Please note you should not mark "Copy projects into workshpace" on the import sc
 - openFrameworks/addons/ofxAndroid/ofAndroidLib  
 - openFrameworks/examples/android
 
+If you get a red exclamation mark on the examples and ofAndroidLib, it's usually because the version of the sdk you are using is newer than the one OF was created with, just open the properties of each project by doing right click on it in the project explorer, go to the android section and mark the android version that your adt comes with. After doing this change the exclamation mark should disappear, if after some seconds it doesn't go in the problems view in the bottom part of the ADT window, select all the problems and remove them.
+
 **j) Compile openFrameworks**:
 
 In the "Project Explorer" on the left side of the window, select the openFrameworks project. Choose the Android target in Project \> Build Configurations \> Set Active, and then click Project \> Build Project. You can also do this from the toolbar by switching to the C/C++ perspective and clicking the toolbar button with a hammer.
