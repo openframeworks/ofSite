@@ -59,7 +59,7 @@
 	    <h3>download<br/>openFrameworks for</h3>
 	    <p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_android_release.tar.gz">eclipse</a></p><br/>
 	    <h3>IDE setup guide</h3>
-	    <p><a href="../setup/android-eclipse">eclipse</a></p>
+	    <p><a href="../setup/android-eclipse">ADT</a></p>
     </div>
 </div>
 

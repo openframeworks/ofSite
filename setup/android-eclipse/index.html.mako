@@ -1,7 +1,7 @@
 ## -*- coding: utf-8 -*-
 <%inherit file="/_templates/markdown.mako" />
 
-android eclipse
+android ADT
 ===============
 
 **Note**: see the [FAQ](#faq) at the bottom of this page if you're having trouble.
