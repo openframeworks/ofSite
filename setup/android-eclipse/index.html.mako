@@ -10,7 +10,7 @@ Right now this is only tested on Linux and OS X. To use it on Windows, check the
 
 To use it you will need the Android ADT (android's version of eclipse + the android SDK), the Android NDK and the openFrameworks for Android package.
 
-Because of the custom build system openFrameworks uses for Android, you may need to use the exact version of the NDK specified here. For this release you should use NDK r8d. Later versions will probably work but it's not guaranteed.
+Because of the custom build system openFrameworks uses for Android, you may need to use the exact version of the NDK specified here. For 0.8.0 you can use NDK r8d or r9b if you are using latest for master or follow the instructions in section b about how to setup the android NDK. Later versions will probably work but it's not guaranteed.
 
 Summary
 -------
@@ -49,7 +49,20 @@ or
 - Linux: [http://dl.google.com/android/ndk/android-ndk-r8d-linux-x86.tar.bz2][13]
 - Windows: [http://dl.google.com/android/ndk/android-ndk-r8d-windows.zip][14]
 
-Other versions are available here, but we recommend using r8d for now: 
+
+0.8.0 has been tested and works with ndk r9b but you'll need to modify libs/openFrameworksCompiled/project/android/config.android.default.mk and change line 22 to:
+
+GCC_VERSION = 4.8
+
+NDK r9b can be downloaded from:
+
+- OS X: [http://dl.google.com/android/ndk/android-ndk-r9b-darwin-x86_64.tar.bz2](http://dl.google.com/android/ndk/android-ndk-r9b-darwin-x86_64.tar.bz2)
+- Linux 32bit: [http://dl.google.com/android/ndk/android-ndk-r9b-linux-x86.tar.bz2](http://dl.google.com/android/ndk/android-ndk-r9b-linux-x86.tar.bz2)
+- Linux 64bit: [http://dl.google.com/android/ndk/android-ndk-r9b-linux-x86_64.tar.bz2](http://dl.google.com/android/ndk/android-ndk-r9b-linux-x86_64.tar.bz2)
+- Windows 32bit: [http://dl.google.com/android/ndk/android-ndk-r9b-windows-x86.zip](http://dl.google.com/android/ndk/android-ndk-r9b-windows-x86.zip)
+- Windows 64bit: [http://dl.google.com/android/ndk/android-ndk-r9b-windows-x86_64.zip](http://dl.google.com/android/ndk/android-ndk-r9b-windows-x86_64.zip)
+
+Later versions might be available here, but we recommend using r9b for now: 
 [http://developer.android.com/sdk/ndk/index.html][3]
 
 Uncompress this also to any place in your hard disk. We'll tell openFrameworks where to find it later.
