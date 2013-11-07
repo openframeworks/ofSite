@@ -189,7 +189,7 @@ _inlined_description: _
 _description: _
 
 
-
+Updates sound engine. This should be called every frame.
 
 
 
