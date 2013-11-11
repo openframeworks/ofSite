@@ -700,7 +700,7 @@ void ofApp::draw(){
 	ofCircle(150,150,100);			
 }    
 ~~~~
-
+Please keep in mind that drawing circle with different outline color and fill requires calling ofNoFill and ofSetColor for drawing stroke and ofFill and again ofSetColor for filled solid color circle.
 
 
 
