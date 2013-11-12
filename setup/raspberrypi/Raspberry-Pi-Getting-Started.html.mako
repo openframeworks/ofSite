@@ -39,7 +39,7 @@ With a fresh install the Raspberry Pi configuration is presented at the first bo
 You now can download the Linux armv6 version of openFrameworks and uncompress it into a folder. Using a Shell, The following commands will download openFrameworks and uncompress it into the folder `/home/pi/openFrameworks`
  
 0. `cd` 
-0. `wget http://www.openframeworks.cc/versions/v0.8.0/of_v0.8.0_linuxarmv6l_release.tar.gz` 
+0. `curl -O http://www.openframeworks.cc/versions/v0.8.0/of_v0.8.0_linuxarmv6l_release.tar.gz` 
 0.  `mkdir openFrameworks`
 0.  `tar vxfz of_v0.8.0_linuxarmv6l_release.tar.gz -C openFrameworks --strip-components 1`
 
@@ -56,7 +56,7 @@ You are now ready to compile openFrameworks!
 0. `make Release -C /home/pi/openFrameworks/libs/openFrameworksCompiled/project`
 
 ## Known issue with updated firmware
-If you have ran [rpi-update](http://raspberrypi.stackexchange.com/questions/4355/do-i-still-need-rpi-update-if-i-am-using-the-latest-version-of-raspbian) recently you may get the error containing      
+Since OF 0.8.0 has been released there are newer versions of Raspbian. You may get the the error containing      
 `../../../libs/openFrameworks/app/ofAppEGLWindow.cpp:1073:66: error: cannot convert 'VC_IMAGE_TRANSFORM_T' to 'DISPMANX_TRANSFORM_T'`
 
 Assuming that the openFrameworks folder is at `/home/pi/openFrameworks` you can fix it with this command:   
