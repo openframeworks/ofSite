@@ -2040,6 +2040,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###const vector< ofPoint > & getVertices()
@@ -2634,6 +2635,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 

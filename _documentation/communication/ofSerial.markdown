@@ -538,6 +538,7 @@ _inlined_description: _
 
 _description: _
 
+
 Tries to read 'length' bytes from the connected serial device. In some cases it may read less than 'length' bytes, so for reliable reading of >1 bytes of data the return value must be checked against the number of bytes requested, and if fewer bytes than requested were read then the call must be tried again.
 
 This function should only be called when Serial.available() is reporting >0 bytes available.

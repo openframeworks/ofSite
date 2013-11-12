@@ -97,7 +97,7 @@ _inlined_description: _
 _description: _
 
 
-This adds a color to the mesh, the color will be associated with the vertex in the same position.
+This adds a single color to all vertices.
 
 
 
@@ -238,10 +238,6 @@ Will give you this shape:
 
 
 
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void addIndices(&inds)
@@ -353,11 +349,8 @@ _inlined_description: _
 
 _description: _
 
-
 Add a normal to the mesh as a 3D vector, typically perpendicular to the plane of the face. A normal is a vector that defines how a surface responds to lighting, i.e. how it is lit. The amount of light reflected by a surface is proportional to the angle between the light's direction and the normal. The smaller the angle the brighter the surface will look. See the normalsExample for advice on computing the normals.
 addNormal adds the 3D vector to the end of the list, so you need to make sure you add normals at the same index of the matching face.
-
-
 
 
 
@@ -394,9 +387,7 @@ _inlined_description: _
 
 _description: _
 
-
 Add a vector of normals to a mesh, allowing you to push out many normals at once rather than adding one at a time. The vector of normals is added after the end of the current normals list.
-
 
 
 
@@ -434,9 +425,7 @@ _inlined_description: _
 
 _description: _
 
-
 Add an array of normals to the mesh. Because you are using a pointer to the array you also have to define the length of the array as an int (amt). The normals are added at the end of the current normals list.
-
 
 
 
@@ -474,9 +463,7 @@ _inlined_description: _
 
 _description: _
 
-
 Add a Vec2f representing the texture coordinate. Because OF uses ARB textures these are in pixels rather than 0-1 normalized coordinates.
-
 
 
 
@@ -521,8 +508,6 @@ Add a vector of texture coordinates to a mesh, allowing you to push out many at 
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
 ###void addTexCoords(*tCoords, amt)
@@ -556,9 +541,6 @@ _description: _
 
 
 Add an array of texture coordinates to the mesh. Because you are using a pointer to the array you also have to define the length of the array as an int (amt). The texture coordinates are added at the end of the current texture coordinates list.
-
-
-
 
 
 
@@ -641,8 +623,6 @@ Add a new vertex at the end of the current list of vertices. It is important to 
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
 ###void addVertices(&verts)
@@ -674,9 +654,7 @@ _inlined_description: _
 
 _description: _
 
-
 Add a vector of vertices to a mesh, allowing you to push out many at once rather than adding one at a time. The vector of vertices is added after the end of the current vertices list.
-
 
 
 
@@ -714,9 +692,7 @@ _inlined_description: _
 
 _description: _
 
-
 Add an array of vertices to the mesh. Because you are using a pointer to the array you also have to define the length of the array as an int (amt). The vertices are added at the end of the current vertices list.
-
 
 
 
@@ -761,8 +737,6 @@ Add the vertices, normals, texture coordinates and indices of one mesh onto anot
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
 ###ofMesh box(width, height, depth, resX = 2, resY = 2, resZ = 2)
@@ -794,15 +768,17 @@ _inlined_description: _
 
 _description: _
 
-
+<<<<<<< HEAD
+A helper method that returns a box made of triangles. The resolution settings for each axis are optional (they are set at a default of 2 triangles per side).
+=======
 A helper method that returns a box made of triangles. The resolution settings for the width and height are optional (they are both set at a default of 2 triangles per side).
+>>>>>>> 2a05b313ab72ee9a5ee36f1419184e12bc959ff3
 ~~~~{.cpp}
 ofMesh mesh;
 mesh = ofMesh::box(200.0, 200.0, 200.0);
 ~~~~
  
 ![image of a simple box](box.jpg)
-
 
 
 
@@ -1093,8 +1069,6 @@ mesh = ofMesh::cone(100.0, 200.0);
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
 ###ofMesh cylinder(radius, height, radiusSegments = 12, heightSegments = 6, numCapSegments = 2, bCapped = true, mode = OF_PRIMITIVE_TRIANGLE_STRIP)
@@ -1125,7 +1099,6 @@ _inlined_description: _
 
 
 _description: _
-
 A helper method that returns a cylinder made of triangles. The resolution settings for the radius, height, and cap are optional (they are set at a default of 12 segments around the radius, 6 segments in the height, and 2 on the cap). You have the option to cap the cylinder or not. The only valid modes are the default OF_PRIMITIVE_TRIANGLE_STRIP and OF_PRIMITIVE_TRIANGLES.
 ~~~~{.cpp}
 ofMesh mesh;
@@ -1171,9 +1144,7 @@ _inlined_description: _
 
 _description: _
 
-
 Disable mesh colors. Use enableColors() to turn colors back on.
-
 
 
 
@@ -1211,9 +1182,7 @@ _inlined_description: _
 
 _description: _
 
-
 Disable mesh indices. Use enableIndices() to turn indices back on.
-
 
 
 
@@ -1251,9 +1220,7 @@ _inlined_description: _
 
 _description: _
 
-
 Disable mesh normals. Use enableNormals() to turn normals back on.
-
 
 
 
@@ -1291,9 +1258,7 @@ _inlined_description: _
 
 _description: _
 
-
 Disable mesh textures. Use enableTextures() to turn textures back on.
-
 
 
 
@@ -1371,9 +1336,7 @@ _inlined_description: _
 
 _description: _
 
-
 This draws the mesh using a defined renderType, overriding the renderType defined with setMode().
-
 
 
 
@@ -1538,8 +1501,6 @@ Enable mesh colors. Use disableColors() to turn colors off. Colors are enabled b
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
 ###void enableIndices()
@@ -1570,7 +1531,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 Enable mesh indices. Use disableIndices() to turn indices off. Indices are enabled by default when they are added to the mesh.
 
@@ -1611,9 +1571,7 @@ _inlined_description: _
 
 _description: _
 
-
 Enable mesh normals. Use disableNormals() to turn normals off. Normals are enabled by default when they are added to the mesh.
-
 
 
 
@@ -1651,9 +1609,7 @@ _inlined_description: _
 
 _description: _
 
-
 Enable mesh textures. Use disableTextures() to turn textures off. Textures are enabled by default when they are added to the mesh.
-
 
 
 
@@ -1691,9 +1647,7 @@ _inlined_description: _
 
 _description: _
 
-
 Returns a ofVec3f defining the centroid of all the vetices in the mesh.
-
 
 
 
@@ -1771,10 +1725,7 @@ _inlined_description: _
 
 _description: _
 
-
 Returns the vector that contains all of the colors of the mesh, if it has any. Use this if you plan to change the colors as part of this call as it will force a reset of the cache.
-
-
 
 
 
@@ -1851,10 +1802,7 @@ _inlined_description: _
 
 _description: _
 
-
 Returns a pointer that contains all of the colors of the mesh, if it has any. Use this if you plan to change the colors as part of this call as it will force a reset of the cache.
-
-
 
 
 
@@ -1971,9 +1919,7 @@ _inlined_description: _
 
 _description: _
 
-
 Returns a vector containing the calculated normals of each face in the mesh. As a default it only calculates the normal for the face as a whole but by setting (perVertex = true) it will return the same normal value for each of the three vertices making up a face.
-
 
 
 
@@ -2051,10 +1997,7 @@ _inlined_description: _
 
 _description: _
 
-
 Returns a pointer to the indices that the mesh contains.
-
-
 
 
 
@@ -2131,10 +2074,7 @@ _inlined_description: _
 
 _description: _
 
-
 Returns the vector that contains all of the indices of the mesh, if it has any. Use this if you plan to change the indices as part of this call as it will force a reset of the cache.
-
-
 
 
 
@@ -2211,10 +2151,7 @@ _inlined_description: _
 
 _description: _
 
-
 Returns a mesh made up of a range of indices from startIndex to the endIndex. The new mesh includes the mesh mode, colors, textures, and normals of the original mesh (assuming any were added).  
-
-
 
 
 
@@ -2369,10 +2306,7 @@ _inlined_description: _
 
 _description: _
 
-
 Returns the vector that contains all of the normals of the mesh, if it has any. Use this if you plan to change the normals as part of this call as it will force a reset of the cache.
-
-
 
 
 
@@ -2449,10 +2383,7 @@ _inlined_description: _
 
 _description: _
 
-
 Returns a pointer to the normals that the mesh contains.
-
-
 
 
 
@@ -2769,10 +2700,7 @@ _inlined_description: _
 
 _description: _
 
-
 Returns a vector of Vec2f representing the texture coordinates for the whole mesh. Because OF uses ARB textures these are in pixels rather than 0-1 normalized coordinates. Use this if you plan to change the texture coordinates as part of this call as it will force a reset of the cache.
-
-
 
 
 
@@ -2849,10 +2777,7 @@ _inlined_description: _
 
 _description: _
 
-
 Returns a pointer to the texture coords that the mesh contains.
-
-
 
 
 
@@ -2890,7 +2815,6 @@ _inlined_description: _
 _description: _
 
 
-Get a pointer to the ofVec2f texture coordinates that the mesh contains.
 
 
 
@@ -2929,9 +2853,7 @@ _inlined_description: _
 
 _description: _
 
-
 Returns the mesh as a vector of unique ofMeshFaces.
-
 
 
 
@@ -3009,10 +2931,7 @@ _inlined_description: _
 
 _description: _
 
-
 Returns the vector that contains all of the vertices of the mesh.
-
-
 
 
 
@@ -3089,10 +3008,7 @@ _inlined_description: _
 
 _description: _
 
-
 Returns a pointer to the vertices that the mesh contains.
-
-
 
 
 
@@ -3645,15 +3561,11 @@ _inlined_description: _
 
 _description: _
 
-
 Loads a mesh from a file located at the provided path into the mesh.
 This will replace any existing data within the mesh.
 
 It expects that the file will be in the [PLY Format](http://en.wikipedia.org/wiki/PLY_(file_format)).
 It will only load meshes saved in the PLY ASCII format; the binary format is not supported. 
-
-
-
 
 
 
@@ -3767,9 +3679,7 @@ _inlined_description: _
 
 _description: _
 
-
 This allows to you to use one of the other ofPrimitiveModes: OF_PRIMITIVE_TRIANGLES, OF_PRIMITIVE_TRIANGLE_STRIP, OF_PRIMITIVE_TRIANGLE_FAN, OF_PRIMITIVE_LINES, OF_PRIMITIVE_LINE_STRIP, OF_PRIMITIVE_LINE_LOOP, OF_PRIMITIVE_POINTS. See [ofGLUtils](../gl/ofGLUtils.htm) for more information on these types.
-
 
 
 
@@ -3845,9 +3755,7 @@ _inlined_description: _
 
 _description: _
 
-
 Remove a color at the index in the colors vector.
-
 
 
 
@@ -3885,9 +3793,7 @@ _inlined_description: _
 
 _description: _
 
-
 Removes an index.
-
 
 
 
@@ -3925,9 +3831,7 @@ _inlined_description: _
 
 _description: _
 
-
 Remove a normal.
-
 
 
 
@@ -3972,8 +3876,6 @@ Remove a Vec2f representing the texture coordinate.
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
 ###void removeVertex(index)
@@ -4005,9 +3907,7 @@ _inlined_description: _
 
 _description: _
 
-
 Removes the vertex at the index in the vector.
-
 
 
 
@@ -4045,7 +3945,6 @@ _inlined_description: _
 
 _description: _
 
-
 Saves the mesh at the passed path in the [PLY Format](http://en.wikipedia.org/wiki/PLY_(file_format)).
 
 There are two format options for PLY: a binary format and an ASCII format.
@@ -4055,7 +3954,6 @@ Passing ``true`` into the ``useBinary`` parameter will save it in the binary for
 If you're planning on reloading the mesh into ofMesh, ofMesh currently only supports loading the ASCII format.
 
 For more information, see the [PLY format specification](http://paulbourke.net/dataformats/ply/).
-
 
 
 
@@ -4093,9 +3991,7 @@ _inlined_description: _
 
 _description: _
 
-
 Set the color at the index in the colors vector.
-
 
 
 
@@ -4209,9 +4105,7 @@ _inlined_description: _
 
 _description: _
 
-
 This sets the index at i.
-
 
 
 

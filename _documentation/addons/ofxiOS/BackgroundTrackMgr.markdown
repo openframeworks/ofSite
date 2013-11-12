@@ -848,6 +848,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###UInt32  mBufferByteSize
@@ -865,6 +866,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -896,6 +898,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###std::vector< AudioQueueBufferRef >  mBuffersToDispose
@@ -913,6 +916,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -944,6 +948,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###SInt64  mCurrentPacket
@@ -961,6 +966,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -992,6 +998,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###Boolean  mMakeNewQueueWhenStopped
@@ -1009,6 +1016,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -1040,6 +1048,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###AudioStreamPacketDescription *  mPacketDescs
@@ -1057,6 +1066,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -1088,6 +1098,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###Boolean  mStopAtEnd
@@ -1105,6 +1116,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -1136,6 +1148,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###Float32  mVolume
@@ -1153,6 +1166,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 

@@ -57,6 +57,7 @@ _inlined_description: _
 
 _description: _
 
+
 set the matrices that the camera will use.
 
 
@@ -134,7 +135,9 @@ _inlined_description: _
 
 _description: _
 
+
 When you have a position in camera coordinates you can get what it would be in world coordinates, transforming it using the ofCamera.
+
 
 
 
@@ -444,7 +447,9 @@ _inlined_description: _
 
 _description: _
 
+
 This allows you to get the image plane distance from any viewport passed in. By default this is the current viewport, but it can be whatever you find useful.
+
 
 
 
@@ -560,7 +565,9 @@ _inlined_description: _
 
 _description: _
 
+
 Access to the projection ModelViewProjectionMatrix.
+
 
 
 
@@ -683,6 +690,8 @@ Access to the projection matrix.
 
 
 
+
+
 <!----------------------------------------------------------------------------->
 
 ###bool isVFlipped()
@@ -790,7 +799,9 @@ _inlined_description: _
 
 _description: _
 
+
 When you have a position in screen coordinates you can get what it would be in world coordinates, transforming it using the ofCamera.
+
 
 
 
@@ -1176,7 +1187,9 @@ _inlined_description: _
 
 _description: _
 
+
 When you have a position in world coordinates you can get what it would be in camera coordinates, transforming it using the ofCamera.
+
 
 
 
@@ -1214,7 +1227,9 @@ _inlined_description: _
 
 _description: _
 
+
 When you have a position in world coordinates you can get what it would be in world coordinates, transforming it using the ofCamera.
+
 
 
 

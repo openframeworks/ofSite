@@ -658,6 +658,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###std::vector< unsigned int >  m_faceSmoothing
@@ -675,6 +676,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -706,6 +708,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###std::map< std::string, std::vector<  ushort > >  m_materialFaces
@@ -723,6 +726,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -754,6 +758,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###std::string  m_name
@@ -771,6 +776,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -802,6 +808,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###GLuint  m_normalsArrayId
@@ -819,6 +826,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -850,6 +858,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###std::vector< float >  m_texcoords
@@ -867,6 +876,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -898,6 +908,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###std::vector< float >  m_vertices
@@ -922,6 +933,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###GLuint  m_verticesArrayId
@@ -939,6 +951,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 

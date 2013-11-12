@@ -61,6 +61,10 @@ You can also use the ofFbo::Settings object to create a more customized FBO that
 
 ofFbo can be a little confusing because it wraps two related, but distinct things in OpenGL: Textures and RenderBuffers. The difference conceptually isn't huge, but it's important if you're looking to understand deeply what's going on inside the ofFbo. RenderBuffers are good for rendering to, not drawing, whereas Textures are ok for both but slightly slower. More info on both [here](http://www.opengl.org/wiki/Renderbuffer_Objects) and [here](http://www.opengl.org/wiki/Framebuffer_Object)
 
+
+
+
+
 ##Methods
 
 
@@ -95,8 +99,10 @@ _inlined_description: _
 _description: _
 
 
-
 This method allows you to render the results of a shading pass to all the textures inside the FBO. It's  handy if you have many textures inside your FBO, for instance, a normals texture, a colored depth texture, a color texture, and you want to have a shader render to all of them at once. It calls glDrawBuffers() internally, which you can learn more about [here](http://www.opengl.org/sdk/docs/man/xhtml/glDrawBuffers.xml).
+
+
+
 
 
 
@@ -214,7 +220,9 @@ _inlined_description: _
 
 _description: _
 
+
 Any drawing that you do after begin() is drawn into the fbo rather than the screen. This is how you draw things into your ofFbo instance.
+
 
 
 
@@ -339,6 +347,8 @@ This checks the status of your FBO object.
 
 
 
+
+
 <!----------------------------------------------------------------------------->
 
 ###void createAndAttachDepthStencilTexture(target, internalformat, attachment)
@@ -383,6 +393,10 @@ The attachment point is the index of the texture that you're going to be referri
 
 
 
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 ###void createAndAttachDepthStencilTexture(target, internalformat, format, type, attachment)
@@ -415,7 +429,6 @@ _inlined_description: _
 _description: _
 
 
-
 FBOs usually have two textures that are created inside of them: a color texture to hold all of the colors of objects that are rendered and a depth texture that represents all the depth values of objects that are rendered. While there are more esoteric reasons for generating a depth texture, a common one is that depth textures can be used in a vertex or fragment shader to figure out how far away from the camera (and possibly by extension a light) something is.
 
 These are created with the default ofFbo::Settings, which means that unless you don't want one, you have a depth buffer to play with that you can access with:
@@ -427,6 +440,11 @@ fbo.getDepthTexture();
 The attachment point is the index of the texture that you're going to be referring to within the FBO. By default this should just be GL_DEPTH_STENCIL but if you know what you're doing and don't want a stencil buffer you can use GL_DEPTH_ATTACHMENT or vice versa, GL_STENCIL_ATTACHMENT.
 
 The extra parameters on this method allow you to set the type of depth buffer that you want to create, which is handy if you need particular fidelity for depth, for instance, GL_DEPTH32.
+
+
+
+
+
 
 
 <!----------------------------------------------------------------------------->
@@ -461,8 +479,10 @@ _inlined_description: _
 _description: _
 
 
-
 This creates a texture of the specified format and attaches it to the FBO at the index specified. Most of this can be handled for you by using the ofFbo::Settings object. RenderBuffers are slightly different than textures, more info can be found on the [OpenGL Wiki](http://www.opengl.org/wiki/Renderbuffer_Objects).
+
+
+
 
 
 
@@ -499,9 +519,11 @@ _inlined_description: _
 _description: _
 
 
-
-
 This creates a texture of the specified format and attaches it to the FBO at the index specified. Most of this can be handled for you by using the ofFbo::Settings object.
+
+
+
+
 
 
 
@@ -537,8 +559,10 @@ _inlined_description: _
 _description: _
 
 
-
 Destroys the FBO and releases all textures and renderbuffers created.
+
+
+
 
 
 
@@ -775,8 +799,10 @@ _inlined_description: _
 _description: _
 
 
-
 This gives you the OpenGL id of the depth Texture that the fbo contains. The depthBuffer will be created by default or if you pass a Setting object with depthStencilAsTexture = true.
+
+
+
 
 
 
@@ -940,6 +966,7 @@ This gives you the OpenGL id of the stencil RenderBuffer that the fbo contains. 
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofTexture & getTextureReference()
@@ -1092,8 +1119,10 @@ _inlined_description: _
 _description: _
 
 
-
 Returns whether your FBO is allocated or not.
+
+
+
 
 
 
@@ -1530,8 +1559,10 @@ _inlined_description: _
 _description: _
 
 
-
 This sets which texture within your FBO is going contain the results of any drawing method or shading pass, particularly useful if you have multiple color textures, for instance, a normals texture and a color value texture. Doing multiple rendering passes on different objects is called [Deferred Shading](http://en.wikipedia.org/wiki/Deferred_shading) and is a tricky but powerful technique.
+
+
+
 
 
 
@@ -1568,9 +1599,10 @@ _inlined_description: _
 _description: _
 
 
-
-
 This sets which texture within your FBO is going contain the results of any drawing method or shading pass, particularly useful if you have multiple color textures, for instance, a normals texture and a color value texture. Doing multiple rendering passes on different objects is called [Deferred Shading](http://en.wikipedia.org/wiki/Deferred_shading) and is a tricky but powerful technique.
+
+
+
 
 
 

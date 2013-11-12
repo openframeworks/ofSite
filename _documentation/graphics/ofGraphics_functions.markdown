@@ -253,6 +253,7 @@ void ofApp::draw(){
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofBackgroundGradient(&start, &end, mode = OF_GRADIENT_CIRCULAR)
@@ -707,6 +708,7 @@ Please keep in mind that drawing circle with different outline color and fill re
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofCircle(x, y, z, radius)
@@ -805,7 +807,9 @@ _inlined_description: _
 
 
 
+
 _description: _
+
 
 Clears the color and depth bits of current renderer and replaces it with an RGB color.
 
@@ -836,6 +840,12 @@ void ofApp::draw() {
 
 ofClear(…) is based on glClear (http://www.opengl.org/sdk/docs/man/xhtml/glClear.xml).
 
+
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 ###void ofClear(brightness, a = 0)
@@ -865,6 +875,7 @@ _inlined_description: _
 
 _description: _
 
+
 Clears the color and depth bits of current renderer and replaces it with a grayscale value.
 
 ~~~~{.cpp}
@@ -875,6 +886,12 @@ void ofApp::draw(){
 	// Clears current screen and replaces it with a grayscale value.
 }
 ~~~~
+
+
+
+
+
+
 
 <!----------------------------------------------------------------------------->
 
@@ -905,6 +922,7 @@ _inlined_description: _
 
 _description: _
 
+
 Clears the color and depth bits of current renderer and replaces it with an ofColor.
 
 ~~~~{.cpp}
@@ -915,6 +933,10 @@ void ofApp::draw(){
 	// Clears current screen and replaces it with myColor.
 }
 ~~~~
+
+
+
+
 
 
 
@@ -3450,6 +3472,7 @@ _inlined_description: _
 
 _description: _
 
+
 Draws a rounded rectangle from the given rectangle using given radius.
 
 ~~~~{.cpp}
@@ -3463,6 +3486,9 @@ void ofApp::draw(){
 	ofRectRounded( myRect, 10 );
 }    
 ~~~~
+
+
+
 
 
 
@@ -3495,6 +3521,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 Draws a rectangle from point p with a given width, height and radius of rounded corners.
   
@@ -3541,6 +3568,7 @@ _inlined_description: _
 
 _description: _
 
+
 Draws a rectangle from point X, Y with a given width, height and radius of rounded corners.
   
 ~~~~{.cpp}
@@ -3584,6 +3612,7 @@ _inlined_description: _
 
 _description: _
 
+
 Draws a rectangle from point X, Y, at depth Z with a given width, height and radius of rounded corners.
   
 ~~~~{.cpp}
@@ -3591,6 +3620,7 @@ void ofApp::draw(){
 	ofRectRounded(10, 10, 10, 100, 100, 10);
 }    
 ~~~~
+
 
 
 
@@ -3626,6 +3656,7 @@ _inlined_description: _
 
 _description: _
 
+
 Draws a rounded rectangle from point X, Y, at depth Z with a given width, height and radius of rounded corners.
   
 ~~~~{.cpp}
@@ -3633,6 +3664,7 @@ void ofApp::draw(){
 	ofRectRounded(10, 10, 10, 100, 100, 10);
 }    
 ~~~~
+
 
 
 
@@ -3668,6 +3700,7 @@ _inlined_description: _
 
 _description: _
 
+
 Draws a rounded rectangle from the given rectangle using different given radius for each of the corners.
 
 ~~~~{.cpp}
@@ -3681,6 +3714,7 @@ void ofApp::draw(){
 	ofRectRounded( myRect, 10, 20, 30, 40 );
 }    
 ~~~~
+
 
 
 
@@ -3716,6 +3750,7 @@ _inlined_description: _
 
 _description: _
 
+
 Draws a rounded rectangle from point X, Y, at depth Z with a given width, height and different radius for each rounded corner.
   
 ~~~~{.cpp}
@@ -3723,6 +3758,7 @@ void ofApp::draw(){
 	ofRectRounded(10, 10, 10, 100, 100, 10, 20, 30, 40);
 }    
 ~~~~
+
 
 
 

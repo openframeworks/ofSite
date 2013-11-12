@@ -867,6 +867,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###const PixelType * getPixels()
@@ -1292,6 +1293,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 

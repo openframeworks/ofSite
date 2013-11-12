@@ -1,18 +1,10 @@
-#class ofxOscArgInt64
+#functions
 
 
 <!--
 _visible: True_
-_advanced: True_
-_istemplated: False_
+_advanced: False_
 -->
-
-##InlineDescription
-
-
-
-
-
 
 ##Description
 
@@ -20,176 +12,18 @@ _istemplated: False_
 
 
 
-##Methods
-
-
-
-###uint64_t get()
-
-<!--
-_syntax: get()_
-_name: get_
-_returns: uint64_t_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-return value 
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
 
 <!----------------------------------------------------------------------------->
 
-###ofxOscArgType getType()
+###void ofDrawArrow(&start, &end, headSize = 0.05f)
 
 <!--
-_syntax: getType()_
-_name: getType_
-_returns: ofxOscArgType_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-return the type of this argument 
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###string getTypeName()
-
-<!--
-_syntax: getTypeName()_
-_name: getTypeName_
-_returns: string_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofxOscArgInt64(_value)
-
-<!--
-_syntax: ofxOscArgInt64(_value)_
-_name: ofxOscArgInt64_
-_returns: _
-_returns_description: _
-_parameters: uint64_t _value_
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void set(_value)
-
-<!--
-_syntax: set(_value)_
-_name: set_
+_syntax: ofDrawArrow(&start, &end, headSize = 0.05f)_
+_name: ofDrawArrow_
 _returns: void_
 _returns_description: _
-_parameters: uint64_t _value_
-_access: public_
-_version_started: 0.8.0_
+_parameters: const ofVec3f &start, const ofVec3f &end, float headSize=0.05f_
+_version_started: _
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -199,9 +33,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
-set value 
-
 
 
 
@@ -220,16 +51,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ~ofxOscArgInt64()
+###void ofDrawAxis(size)
 
 <!--
-_syntax: ~ofxOscArgInt64()_
-_name: ~ofxOscArgInt64_
-_returns: _
+_syntax: ofDrawAxis(size)_
+_name: ofDrawAxis_
+_returns: void_
 _returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0.8.0_
+_parameters: float size_
+_version_started: _
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -239,7 +69,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -258,23 +87,102 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-##Variables
-
-
-
-###uint64_t  value
+###void ofDrawGrid(scale = 10.0f, ticks = 8.0f, labels = false, x = true, y = true, z = true)
 
 <!--
-_name: value_
-_type: uint64_t _
-_access: private_
-_version_started: 0.8.0_
+_syntax: ofDrawGrid(scale = 10.0f, ticks = 8.0f, labels = false, x = true, y = true, z = true)_
+_name: ofDrawGrid_
+_returns: void_
+_returns_description: _
+_parameters: float scale=10.0f, float ticks=8.0f, bool labels=false, bool x=true, bool y=true, bool z=true_
+_version_started: _
 _version_deprecated: _
 _summary: _
+_constant: False_
+_static: False_
 _visible: True_
-_constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawGridPlane(scale, ticks = 8.0f, labels = false)
+
+<!--
+_syntax: ofDrawGridPlane(scale, ticks = 8.0f, labels = false)_
+_name: ofDrawGridPlane_
+_returns: void_
+_returns_description: _
+_parameters: float scale, float ticks=8.0f, bool labels=false_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawRotationAxes(radius, stripWidth = 10, circleRes = 60)
+
+<!--
+_syntax: ofDrawRotationAxes(radius, stripWidth = 10, circleRes = 60)_
+_name: ofDrawRotationAxes_
+_returns: void_
+_returns_description: _
+_parameters: float radius, float stripWidth=10, int circleRes=60_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
 
 _description: _
 

@@ -896,6 +896,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###const Poco::XML::Document * getPocoDocument()
@@ -971,6 +972,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###Poco::XML::Element * getPocoElement(&path)
@@ -1001,6 +1003,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 

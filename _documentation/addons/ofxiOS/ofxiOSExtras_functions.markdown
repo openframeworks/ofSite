@@ -1,20 +1,10 @@
-#class ofxTCPManager
+#functions
 
 
 <!--
 _visible: True_
-_advanced: True_
-_istemplated: False_
+_advanced: False_
 -->
-
-##InlineDescription
-
-Implementation of a TCP socket. 
-
-
-
-
-
 
 ##Description
 
@@ -22,20 +12,17 @@ Implementation of a TCP socket.
 
 
 
-##Methods
+<!----------------------------------------------------------------------------->
 
-
-
-###bool Accept(&sock)
+###bool ofxiOSBundleImageToGLTexture(*filename, *spriteTexture)
 
 <!--
-_syntax: Accept(&sock)_
-_name: Accept_
+_syntax: ofxiOSBundleImageToGLTexture(*filename, *spriteTexture)_
+_name: ofxiOSBundleImageToGLTexture_
 _returns: bool_
 _returns_description: _
-_parameters: ofxTCPManager &sock_
-_access: public_
-_version_started: 007_
+_parameters: NSString *filename, GLuint *spriteTexture_
+_version_started: _
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -52,9 +39,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -64,16 +49,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool Bind(usPort)
+###bool ofxiOSCGImageToPixels(&ref, *pixels)
 
 <!--
-_syntax: Bind(usPort)_
-_name: Bind_
+_syntax: ofxiOSCGImageToPixels(&ref, *pixels)_
+_name: ofxiOSCGImageToPixels_
 _returns: bool_
 _returns_description: _
-_parameters: unsigned short usPort_
-_access: public_
-_version_started: 007_
+_parameters: CGImageRef &ref, unsigned char *pixels_
+_version_started: _
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -90,9 +74,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -102,54 +84,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool CheckHost(*pAddrStr)
+###void ofxiOSDisableIdleTimer()
 
 <!--
-_syntax: CheckHost(*pAddrStr)_
-_name: CheckHost_
-_returns: bool_
-_returns_description: _
-_parameters: const char *pAddrStr_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void CleanUp()
-
-<!--
-_syntax: CleanUp()_
-_name: CleanUp_
+_syntax: ofxiOSDisableIdleTimer()_
+_name: ofxiOSDisableIdleTimer_
 _returns: void_
 _returns_description: _
 _parameters: _
-_access: public_
-_version_started: 007_
+_version_started: _
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -166,9 +109,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -178,750 +119,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool Close()
+###void ofxiOSEnableIdleTimer()
 
 <!--
-_syntax: Close()_
-_name: Close_
-_returns: bool_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-Closes an open socket. NOTE: A closed socket cannot be reused again without a call to "Create()". 
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool Connect(*pAddrStr, usPort)
-
-<!--
-_syntax: Connect(*pAddrStr, usPort)_
-_name: Connect_
-_returns: bool_
-_returns_description: _
-_parameters: char *pAddrStr, unsigned short usPort_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool Create()
-
-<!--
-_syntax: Create()_
-_name: Create_
-_returns: bool_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool GetInetAddr(pInetAddr)
-
-<!--
-_syntax: GetInetAddr(pInetAddr)_
-_name: GetInetAddr_
-_returns: bool_
-_returns_description: _
-_parameters: LPINETADDR pInetAddr_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int GetMaxConnections()
-
-<!--
-_syntax: GetMaxConnections()_
-_name: GetMaxConnections_
-_returns: int_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int GetReceiveBufferSize()
-
-<!--
-_syntax: GetReceiveBufferSize()_
-_name: GetReceiveBufferSize_
-_returns: int_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool GetRemoteAddr(pIntAddr)
-
-<!--
-_syntax: GetRemoteAddr(pIntAddr)_
-_name: GetRemoteAddr_
-_returns: bool_
-_returns_description: _
-_parameters: LPINETADDR pIntAddr_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int GetSendBufferSize()
-
-<!--
-_syntax: GetSendBufferSize()_
-_name: GetSendBufferSize_
-_returns: int_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int GetTimeoutAccept()
-
-<!--
-_syntax: GetTimeoutAccept()_
-_name: GetTimeoutAccept_
-_returns: int_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int GetTimeoutReceive()
-
-<!--
-_syntax: GetTimeoutReceive()_
-_name: GetTimeoutReceive_
-_returns: int_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int GetTimeoutSend()
-
-<!--
-_syntax: GetTimeoutSend()_
-_name: GetTimeoutSend_
-_returns: int_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool Listen(iMaxConnections)
-
-<!--
-_syntax: Listen(iMaxConnections)_
-_name: Listen_
-_returns: bool_
-_returns_description: _
-_parameters: int iMaxConnections_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int Receive(*pBuff, iSize)
-
-<!--
-_syntax: Receive(*pBuff, iSize)_
-_name: Receive_
-_returns: int_
-_returns_description: _
-_parameters: char *pBuff, const int iSize_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-Return values: SOCKET_TIMEOUT indicates timeout SOCKET_ERROR in case of a problem. 
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int ReceiveAll(*pBuff, iSize)
-
-<!--
-_syntax: ReceiveAll(*pBuff, iSize)_
-_name: ReceiveAll_
-_returns: int_
-_returns_description: _
-_parameters: char *pBuff, const int iSize_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-Return values: SOCKET_TIMEOUT indicates timeout SOCKET_ERROR in case of a problem. 
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int Send(*pBuff, iSize)
-
-<!--
-_syntax: Send(*pBuff, iSize)_
-_name: Send_
-_returns: int_
-_returns_description: _
-_parameters: const char *pBuff, const int iSize_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-Return values: SOCKET_TIMEOUT indicates timeout SOCKET_ERROR in case of a problem. 
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int SendAll(*pBuff, iSize)
-
-<!--
-_syntax: SendAll(*pBuff, iSize)_
-_name: SendAll_
-_returns: int_
-_returns_description: _
-_parameters: const char *pBuff, const int iSize_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-Return values: SOCKET_TIMEOUT indicates timeout SOCKET_ERROR in case of a problem. 
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool SetNonBlocking(useNonBlocking)
-
-<!--
-_syntax: SetNonBlocking(useNonBlocking)_
-_name: SetNonBlocking_
-_returns: bool_
-_returns_description: _
-_parameters: bool useNonBlocking_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Theo added - Choose to set nonBLocking - default mode is to block. 
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool SetReceiveBufferSize(sizeInByte)
-
-<!--
-_syntax: SetReceiveBufferSize(sizeInByte)_
-_name: SetReceiveBufferSize_
-_returns: bool_
-_returns_description: _
-_parameters: int sizeInByte_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool SetSendBufferSize(sizeInByte)
-
-<!--
-_syntax: SetSendBufferSize(sizeInByte)_
-_name: SetSendBufferSize_
-_returns: bool_
-_returns_description: _
-_parameters: int sizeInByte_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void SetTimeoutAccept(timeoutInSeconds)
-
-<!--
-_syntax: SetTimeoutAccept(timeoutInSeconds)_
-_name: SetTimeoutAccept_
+_syntax: ofxiOSEnableIdleTimer()_
+_name: ofxiOSEnableIdleTimer_
 _returns: void_
 _returns_description: _
-_parameters: int timeoutInSeconds_
-_access: public_
-_version_started: 007_
+_parameters: _
+_version_started: _
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -938,9 +144,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -950,16 +154,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void SetTimeoutReceive(timeoutInSeconds)
+###void ofxiOSEnableLoopInThread()
 
 <!--
-_syntax: SetTimeoutReceive(timeoutInSeconds)_
-_name: SetTimeoutReceive_
+_syntax: ofxiOSEnableLoopInThread()_
+_name: ofxiOSEnableLoopInThread_
 _returns: void_
 _returns_description: _
-_parameters: int timeoutInSeconds_
-_access: public_
-_version_started: 007_
+_parameters: _
+_version_started: _
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -976,9 +179,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -988,16 +189,435 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void SetTimeoutSend(timeoutInSeconds)
+###ofxiOSAppDelegate ofxiOSGetAppDelegate()
 
 <!--
-_syntax: SetTimeoutSend(timeoutInSeconds)_
-_name: SetTimeoutSend_
+_syntax: ofxiOSGetAppDelegate()_
+_name: ofxiOSGetAppDelegate_
+_returns: ofxiOSAppDelegate_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string ofxiOSGetClipboardString()
+
+<!--
+_syntax: ofxiOSGetClipboardString()_
+_name: ofxiOSGetClipboardString_
+_returns: string_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string ofxiOSGetDeviceRevision()
+
+<!--
+_syntax: ofxiOSGetDeviceRevision()_
+_name: ofxiOSGetDeviceRevision_
+_returns: string_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofxiOSDeviceType ofxiOSGetDeviceType()
+
+<!--
+_syntax: ofxiOSGetDeviceType()_
+_name: ofxiOSGetDeviceType_
+_returns: ofxiOSDeviceType_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string ofxiOSGetDocumentsDirectory()
+
+<!--
+_syntax: ofxiOSGetDocumentsDirectory()_
+_name: ofxiOSGetDocumentsDirectory_
+_returns: string_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###UIView * ofxiOSGetGLParentView()
+
+<!--
+_syntax: ofxiOSGetGLParentView()_
+_name: ofxiOSGetGLParentView_
+_returns: UIView *_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofxiOSEAGLView ofxiOSGetGLView()
+
+<!--
+_syntax: ofxiOSGetGLView()_
+_name: ofxiOSGetGLView_
+_returns: ofxiOSEAGLView_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float ofxiOSGetMicAverageLevel()
+
+<!--
+_syntax: ofxiOSGetMicAverageLevel()_
+_name: ofxiOSGetMicAverageLevel_
+_returns: float_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofAppiOSWindow ofxiOSGetOFWindow()
+
+<!--
+_syntax: ofxiOSGetOFWindow()_
+_name: ofxiOSGetOFWindow_
+_returns: ofAppiOSWindow_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###UIWindow * ofxiOSGetUIWindow()
+
+<!--
+_syntax: ofxiOSGetUIWindow()_
+_name: ofxiOSGetUIWindow_
+_returns: UIWindow *_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofxiOSViewController ofxiOSGetViewController()
+
+<!--
+_syntax: ofxiOSGetViewController()_
+_name: ofxiOSGetViewController_
+_returns: ofxiOSViewController_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool ofxiOSHasAudioIn()
+
+<!--
+_syntax: ofxiOSHasAudioIn()_
+_name: ofxiOSHasAudioIn_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofxiOSLaunchBrowser(url)
+
+<!--
+_syntax: ofxiOSLaunchBrowser(url)_
+_name: ofxiOSLaunchBrowser_
 _returns: void_
 _returns_description: _
-_parameters: int timeoutInSeconds_
-_access: public_
-_version_started: 007_
+_parameters: string url_
+_version_started: _
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1014,9 +634,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1026,54 +644,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int Write(*pBuff, iSize)
+###void ofxiOSLockGLContext()
 
 <!--
-_syntax: Write(*pBuff, iSize)_
-_name: Write_
-_returns: int_
-_returns_description: _
-_parameters: const char *pBuff, const int iSize_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofxTCPManager()
-
-<!--
-_syntax: ofxTCPManager()_
-_name: ofxTCPManager_
-_returns: _
+_syntax: ofxiOSLockGLContext()_
+_name: ofxiOSLockGLContext_
+_returns: void_
 _returns_description: _
 _parameters: _
-_access: public_
-_version_started: 007_
+_version_started: _
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1090,9 +669,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1102,16 +679,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofxTCPManager(&mom)
+###string ofxiOSNSStringToString(*s)
 
 <!--
-_syntax: ofxTCPManager(&mom)_
-_name: ofxTCPManager_
-_returns: _
+_syntax: ofxiOSNSStringToString(*s)_
+_name: ofxiOSNSStringToString_
+_returns: string_
 _returns_description: _
-_parameters: const ofxTCPManager &mom_
-_access: private_
-_version_started: 0.8.0_
+_parameters: NSString *s_
+_version_started: _
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1128,9 +704,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1140,16 +714,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofxTCPManager & operator=(&mom)
+###void ofxiOSScreenGrab(delegate)
 
 <!--
-_syntax: operator=(&mom)_
-_name: operator=_
-_returns: ofxTCPManager &_
+_syntax: ofxiOSScreenGrab(delegate)_
+_name: ofxiOSScreenGrab_
+_returns: void_
 _returns_description: _
-_parameters: const ofxTCPManager &mom_
-_access: private_
-_version_started: 0.8.0_
+_parameters: id delegate_
+_version_started: _
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1166,9 +739,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1178,16 +749,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ~ofxTCPManager()
+###void ofxiOSSendGLViewToBack()
 
 <!--
-_syntax: ~ofxTCPManager()_
-_name: ~ofxTCPManager_
-_returns: _
+_syntax: ofxiOSSendGLViewToBack()_
+_name: ofxiOSSendGLViewToBack_
+_returns: void_
 _returns_description: _
 _parameters: _
-_access: public_
-_version_started: 007_
+_version_started: _
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1204,9 +774,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1216,26 +784,32 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-##Variables
-
-
-
-###bool m_bWinsockInit
+###void ofxiOSSendGLViewToFront()
 
 <!--
-_name: m_bWinsockInit_
-_type: bool_
-_access: protected_
-_version_started: 007_
+_syntax: ofxiOSSendGLViewToFront()_
+_name: ofxiOSSendGLViewToFront_
+_returns: void_
+_returns_description: _
+_parameters: _
+_version_started: _
 _version_deprecated: _
 _summary: _
+_constant: False_
+_static: False_
 _visible: True_
-_constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1245,22 +819,32 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool  m_closing
+###void ofxiOSSetClipboardString(clipboardString)
 
 <!--
-_name: m_closing_
-_type: bool _
-_access: private_
-_version_started: 0.8.0_
+_syntax: ofxiOSSetClipboardString(clipboardString)_
+_name: ofxiOSSetClipboardString_
+_returns: void_
+_returns_description: _
+_parameters: string clipboardString_
+_version_started: _
 _version_deprecated: _
 _summary: _
+_constant: False_
+_static: False_
 _visible: True_
-_constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1270,22 +854,32 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###unsigned long m_dwTimeoutAccept
+###void ofxiOSSetGLViewTransparent(b)
 
 <!--
-_name: m_dwTimeoutAccept_
-_type: unsigned long_
-_access: protected_
-_version_started: 007_
+_syntax: ofxiOSSetGLViewTransparent(b)_
+_name: ofxiOSSetGLViewTransparent_
+_returns: void_
+_returns_description: _
+_parameters: bool b_
+_version_started: _
 _version_deprecated: _
 _summary: _
+_constant: False_
+_static: False_
 _visible: True_
-_constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1295,22 +889,32 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###unsigned long m_dwTimeoutReceive
+###void ofxiOSSetGLViewUserInteraction(b)
 
 <!--
-_name: m_dwTimeoutReceive_
-_type: unsigned long_
-_access: protected_
-_version_started: 007_
+_syntax: ofxiOSSetGLViewUserInteraction(b)_
+_name: ofxiOSSetGLViewUserInteraction_
+_returns: void_
+_returns_description: _
+_parameters: bool b_
+_version_started: _
 _version_deprecated: _
 _summary: _
+_constant: False_
+_static: False_
 _visible: True_
-_constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1320,22 +924,32 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###unsigned long m_dwTimeoutSend
+###NSString * ofxiOSStringToNSString(s)
 
 <!--
-_name: m_dwTimeoutSend_
-_type: unsigned long_
-_access: protected_
-_version_started: 007_
+_syntax: ofxiOSStringToNSString(s)_
+_name: ofxiOSStringToNSString_
+_returns: NSString *_
+_returns_description: _
+_parameters: string s_
+_version_started: _
 _version_deprecated: _
 _summary: _
+_constant: False_
+_static: False_
 _visible: True_
-_constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1345,22 +959,32 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int m_hSocket
+###bool ofxiOSUIImageToGLTexture(*uiImage, *spriteTexture)
 
 <!--
-_name: m_hSocket_
-_type: int_
-_access: protected_
-_version_started: 007_
+_syntax: ofxiOSUIImageToGLTexture(*uiImage, *spriteTexture)_
+_name: ofxiOSUIImageToGLTexture_
+_returns: bool_
+_returns_description: _
+_parameters: UIImage *uiImage, GLuint *spriteTexture_
+_version_started: _
 _version_deprecated: _
 _summary: _
+_constant: False_
+_static: False_
 _visible: True_
-_constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1370,22 +994,32 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int m_iListenPort
+###bool ofxiOSUIImageToOFImage(*uiImage, &outImage, targetWidth = 0, targetHeight = 0)
 
 <!--
-_name: m_iListenPort_
-_type: int_
-_access: protected_
-_version_started: 007_
+_syntax: ofxiOSUIImageToOFImage(*uiImage, &outImage, targetWidth = 0, targetHeight = 0)_
+_name: ofxiOSUIImageToOFImage_
+_returns: bool_
+_returns_description: _
+_parameters: UIImage *uiImage, ofImage &outImage, int targetWidth=0, int targetHeight=0_
+_version_started: _
 _version_deprecated: _
 _summary: _
+_constant: False_
+_static: False_
 _visible: True_
-_constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1395,22 +1029,32 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int m_iMaxConnections
+###bool ofxiOSUIImageToPixels(*uiImage, *pix, targetWidth = 0, targetHeight = 0)
 
 <!--
-_name: m_iMaxConnections_
-_type: int_
-_access: protected_
-_version_started: 007_
+_syntax: ofxiOSUIImageToPixels(*uiImage, *pix, targetWidth = 0, targetHeight = 0)_
+_name: ofxiOSUIImageToPixels_
+_returns: bool_
+_returns_description: _
+_parameters: UIImage *uiImage, unsigned char *pix, int targetWidth=0, int targetHeight=0_
+_version_started: _
 _version_deprecated: _
 _summary: _
+_constant: False_
+_static: False_
 _visible: True_
-_constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1420,22 +1064,32 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool nonBlocking
+###void ofxiOSUnlockGLContext()
 
 <!--
-_name: nonBlocking_
-_type: bool_
-_access: protected_
-_version_started: 007_
+_syntax: ofxiOSUnlockGLContext()_
+_name: ofxiOSUnlockGLContext_
+_returns: void_
+_returns_description: _
+_parameters: _
+_version_started: _
 _version_deprecated: _
 _summary: _
+_constant: False_
+_static: False_
 _visible: True_
-_constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 

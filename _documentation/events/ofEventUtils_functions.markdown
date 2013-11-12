@@ -9,7 +9,7 @@ _advanced: False_
 ##Description
 
 
-The functions in ofEventUtils allow you to add and remove event listeners in your application.
+
 
 
 
@@ -102,6 +102,11 @@ The notifying class calls ofNotifyEvent() when it's time to send the event.
 The listening class has its notification method called with the parameters of the ofEvent passed to it.
 
 
+
+
+
+
+
 <!----------------------------------------------------------------------------->
 
 ###void ofAddListener(&event, *listener, *, &), prio = OF_EVENT_ORDER_AFTER_APP)
@@ -130,7 +135,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 Allows you to add a listener method to an event, use it whenever you want a class to be notified about an event.
@@ -194,6 +198,11 @@ The listening class has its notification method called with the parameters of th
 Note that the event is a reference, which means it needs to a member of your class that will not go away in the lifetime of the object.
 
 This version of the method allows you to use the prio to set whether the event should be called before the application events (mouse and key events, for example) with OF_EVENT_ORDER_BEFORE_APP or after with OF_EVENT_ORDER_AFTER_APP.
+
+
+
+
+
 
 
 <!----------------------------------------------------------------------------->
@@ -290,6 +299,8 @@ This version of the method allows you to use the prio to set whether the event s
 
 
 
+
+
 <!----------------------------------------------------------------------------->
 
 ###void ofAddListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)
@@ -318,9 +329,6 @@ _inlined_description: _
 
 
 _description: _
-
-
-
 
 
 Allows you to add a listener method to an event, use it whenever you want a class to be notified about an event.
@@ -382,6 +390,8 @@ The notifying class calls ofNotifyEvent() when it's time to send the event.
 The listening class has its notification method called with the parameters of the ofEvent passed to it.
 
 This version of the method allows you to use the prio to set whether the event should be called before the application events (mouse and key events, for example) with OF_EVENT_ORDER_BEFORE_APP or after with OF_EVENT_ORDER_AFTER_APP.
+
+
 
 
 
@@ -417,8 +427,6 @@ _inlined_description: _
 _description: _
 
 
-
-
 Allows you to add a listener method to an event, use it whenever you want a class to be notified about an event.
 
 This is a templated function so the types of the parameters are not predefined types but can be any type as long as the method is one of the listener class' and it has a particular signature.
@@ -478,6 +486,7 @@ The notifying class calls ofNotifyEvent() when it's time to send the event.
 The listening class has its notification method called with the parameters of the ofEvent passed to it.
 
 This version of the method allows you to use the prio to set whether the event should be called before the application events (mouse and key events, for example) with OF_EVENT_ORDER_BEFORE_APP or after with OF_EVENT_ORDER_AFTER_APP.
+
 
 
 
@@ -514,8 +523,6 @@ _inlined_description: _
 _description: _
 
 
-
-
 Allows you to add a listener method to an event, use it whenever you want a class to be notified about an event.
 
 This is a templated function so the types of the parameters are not predefined types but can be any type as long as the method is one of the listener class' and it has a particular signature.
@@ -575,6 +582,7 @@ The notifying class calls ofNotifyEvent() when it's time to send the event.
 The listening class has its notification method called with the parameters of the ofEvent passed to it.
 
 This version of the method allows you to use the prio to set whether the event should be called before the application events (mouse and key events, for example) with OF_EVENT_ORDER_BEFORE_APP or after with OF_EVENT_ORDER_AFTER_APP.
+
 
 
 
@@ -611,8 +619,6 @@ _inlined_description: _
 _description: _
 
 
-
-
 Allows you to add a listener method to an event, use it whenever you want a class to be notified about an event.
 
 This is a templated function so the types of the parameters are not predefined types but can be any type as long as the method is one of the listener class' and it has a particular signature.
@@ -672,6 +678,7 @@ The notifying class calls ofNotifyEvent() when it's time to send the event.
 The listening class has its notification method called with the parameters of the ofEvent passed to it.
 
 This version of the method allows you to use the prio to set whether the event should be called before the application events (mouse and key events, for example) with OF_EVENT_ORDER_BEFORE_APP or after with OF_EVENT_ORDER_AFTER_APP.
+
 
 
 
@@ -708,8 +715,6 @@ _inlined_description: _
 _description: _
 
 
-
-
 Allows you to add a listener method to an event, use it whenever you want a class to be notified about an event.
 
 This is a templated function so the types of the parameters are not predefined types but can be any type as long as the method is one of the listener class' and it has a particular signature.
@@ -769,6 +774,7 @@ The notifying class calls ofNotifyEvent() when it's time to send the event.
 The listening class has its notification method called with the parameters of the ofEvent passed to it.
 
 This version of the method allows you to use the prio to set whether the event should be called before the application events (mouse and key events, for example) with OF_EVENT_ORDER_BEFORE_APP or after with OF_EVENT_ORDER_AFTER_APP.
+
 
 
 
@@ -813,7 +819,6 @@ The arguments are passed to the listeners by reference so they can modify them.
 
 The listener methods are called in the same order they were registered using ofAddListener.
 
-
 For instance, borrowing from the examples/events/SimpleEventsExample, if we make a class that will broadcast an event:
 
 ~~~~{.cpp}
@@ -842,6 +847,9 @@ void ofApp::haveBeenNotified(float &f){
 }
 
 ~~~~
+
+
+
 
 
 
@@ -886,7 +894,6 @@ The listener methods are called in the same order they were registered using ofA
 
 With this version the listeners also receive a pointer to the notifying class in case the listener method specifies that parameter.
 
-
 For instance, borrowing from the examples/events/SimpleEventsExample, if we make a class that will broadcast an event:
 
 ~~~~{.cpp}
@@ -915,6 +922,9 @@ void ofApp::haveBeenNotified(float &f){
 }
 
 ~~~~
+
+
+
 
 
 
@@ -959,7 +969,6 @@ The listener methods are called in the same order they were registered using ofA
 
 With this version the listeners also receive a pointer to the notifying class in case the listener method specifies that parameter.
 
-
 For instance, borrowing from the examples/events/SimpleEventsExample, if we make a class that will broadcast an event:
 
 ~~~~{.cpp}
@@ -988,6 +997,9 @@ void ofApp::haveBeenNotified(float &f){
 }
 
 ~~~~
+
+
+
 
 
 
@@ -1064,6 +1076,9 @@ void ofApp::haveBeenNotified(float &f){
 
 
 
+
+
+
 <!----------------------------------------------------------------------------->
 
 ###void ofNotifyEvent(&event, *sender)
@@ -1104,7 +1119,6 @@ The listener methods are called in the same order they were registered using ofA
 
 With this version the listeners also receive a pointer to the notifying class in case the listener method specifies that parameter.
 
-
 For instance, borrowing from the examples/events/SimpleEventsExample, if we make a class that will broadcast an event:
 
 ~~~~{.cpp}
@@ -1138,6 +1152,8 @@ void ofApp::haveBeenNotified(float &f){
 
 
 
+
+
 <!----------------------------------------------------------------------------->
 
 ###void ofNotifyEvent(&event)
@@ -1166,7 +1182,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 Notifies an event, what makes all it's registered method listeners to be called with the same argument.
@@ -1205,6 +1220,9 @@ void ofApp::haveBeenNotified(){
 }
 
 ~~~~
+
+
+
 
 
 
@@ -1281,7 +1299,6 @@ _inlined_description: _
 _description: _
 
 
-
 Removes a listener method from an event. Use it whenever you want a class to stop being notified about an event after having registered it to the method with ofAddListener.
 
 Don't forget to call this before deleting any instance that is listening to an event, if not the event will try to notify a non existent instance and the application will crash.
@@ -1322,7 +1339,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 Removes a listener method from an event. Use it whenever you want a class to stop being notified about an event after having registered it to the method with ofAddListener.
@@ -1367,7 +1383,6 @@ _inlined_description: _
 _description: _
 
 
-
 Removes a listener method from an event. Use it whenever you want a class to stop being notified about an event after having registered it to the method with ofAddListener.
 
 Don't forget to call this before deleting any instance that is listening to an event, if not the event will try to notify a non existent instance and the application will crash.
@@ -1408,7 +1423,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 Removes a listener method from an event. Use it whenever you want a class to stop being notified about an event after having registered it to the method with ofAddListener.
@@ -1453,7 +1467,6 @@ _inlined_description: _
 _description: _
 
 
-
 Removes a listener method from an event. Use it whenever you want a class to stop being notified about an event after having registered it to the method with ofAddListener.
 
 Don't forget to call this before deleting any instance that is listening to an event, if not the event will try to notify a non existent instance and the application will crash.
@@ -1496,12 +1509,12 @@ _inlined_description: _
 _description: _
 
 
-
 Removes a listener method from an event. Use it whenever you want a class to stop being notified about an event after having registered it to the method with ofAddListener.
 
 Don't forget to call this before deleting any instance that is listening to an event, if not the event will try to notify a non existent instance and the application will crash.
 
 The syntax is just the same as that of ofAddListener.
+
 
 
 
@@ -1536,7 +1549,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 Removes a listener method from an event. Use it whenever you want a class to stop being notified about an event after having registered it to the method with ofAddListener.

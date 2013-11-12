@@ -762,6 +762,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###const float * getPtr()
@@ -1273,6 +1274,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 Return the squared length (squared magnitude) of this vector.
 
@@ -2837,6 +2839,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 

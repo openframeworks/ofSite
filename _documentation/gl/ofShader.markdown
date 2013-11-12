@@ -1802,7 +1802,9 @@ _inlined_description: _
 
 _description: _
 
+
 set a float uniform on the shader
+
 
 
 
@@ -1993,11 +1995,11 @@ _inlined_description: _
 _description: _
 
 
-
 This allows you to set multiple vec2 uniforms.
 ~~~~{.cpp}
 vec2 v[2];
 ~~~~
+
 
 
 
@@ -2084,6 +2086,7 @@ ivec2 iv[2];
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void setUniform3f(&name, v1, v2, v3)
@@ -2117,6 +2120,7 @@ _description: _
 
 
 set a vec3 uniform on the shader
+
 
 
 
@@ -2165,6 +2169,7 @@ vec3 v[2];
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void setUniform3i(&name, v1, v2, v3)
@@ -2200,6 +2205,7 @@ _description: _
 ~~~~{.cpp}
 uniform ivec3 texture;
 ~~~~
+
 
 
 
@@ -2248,6 +2254,7 @@ ivec3 iv[2];
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void setUniform4f(&name, v1, v2, v3, v4)
@@ -2290,6 +2297,7 @@ vec4 fv;
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void setUniform4fv(&name, *v, count = 1)
@@ -2322,11 +2330,12 @@ _inlined_description: _
 _description: _
 
 
-
 This allows you to set multiple vec4 uniforms.
 ~~~~{.cpp}
 vec4 v[2];
 ~~~~
+
+
 
 
 
@@ -2402,11 +2411,12 @@ _inlined_description: _
 _description: _
 
 
-
 set an array of uniform values on the shader using int[2] value. On the shader this looks like:
 ~~~~{.cpp}
 ivec4 iv[2];
 ~~~~
+
+
 
 
 
@@ -2482,12 +2492,13 @@ _inlined_description: _
 _description: _
 
 
-
 set a texture reference
 On your shader it should look like this:
 ~~~~{.cpp}
 uniform sampler2DRect texture;
 ~~~~
+
+
 
 
 

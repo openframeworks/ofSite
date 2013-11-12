@@ -338,7 +338,7 @@ for root, dirs, files in os.walk(of_documentation):
         filename = os.path.join(root, name)
         if name.find('class')==0:
             serialize_class(filename)
-        elif name.find('of_')==0 and name.find('8h.xml')!=-1:
+        elif name.find('of')==0 and name.find('8h.xml')!=-1:
             serialize_functionsfile(filename)
 
 for root, dirs, files in os.walk(of_documentation):
@@ -346,7 +346,7 @@ for root, dirs, files in os.walk(of_documentation):
     for name in files:       
         file_count+=1
         filename = os.path.join(root, name)
-        if name.find('of_')==0 and name.find('8h.xml')!=-1:
+        if name.find('of')==0 and name.find('8h.xml')!=-1:
             update_moved_functions(filename)
 
 for root, dirs, files in os.walk(of_addons_documentation):
@@ -356,7 +356,7 @@ for root, dirs, files in os.walk(of_addons_documentation):
         filename = os.path.join(root, name)
         if name.find('class')==0:
             serialize_class(filename,True)
-        elif name.find('ofx_')==0 and name.find('8h.xml')!=-1:
+        elif name.find('ofx')==0 and name.find('8h.xml')!=-1:
             serialize_functionsfile(filename,True)
 
 for root, dirs, files in os.walk(of_addons_documentation):
@@ -364,7 +364,7 @@ for root, dirs, files in os.walk(of_addons_documentation):
     for name in files:       
         file_count+=1
         filename = os.path.join(root, name)
-        if name.find('ofx_')==0 and name.find('8h.xml')!=-1:
+        if name.find('ofx')==0 and name.find('8h.xml')!=-1:
             update_moved_functions(filename,True)
             
 print ""+str(dir_count)+" dirs/"+str(file_count)+" files"

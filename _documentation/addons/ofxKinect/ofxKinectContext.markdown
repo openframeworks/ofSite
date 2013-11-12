@@ -930,6 +930,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###std::vector<  KinectPair >  deviceList
@@ -947,6 +948,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
@@ -978,6 +980,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###std::map< int,  ofxKinect * >  kinects
@@ -995,6 +998,7 @@ _advanced: False_
 -->
 
 _description: _
+
 
 
 
