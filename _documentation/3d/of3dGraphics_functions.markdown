@@ -546,7 +546,23 @@ _inlined_description: _
 
 _description: _
 
+Icosphere (from Icosahedron) is sphere made out of triangles, 
+so it is unform and not distorted at poles like regular sphere (which is sometimes problem when applying textures).
+For more informations about icosahedrons see [wikipedia](http://en.wikipedia.org/wiki/Icosahedron)
 
+~~~~{.cpp}
+void ofApp::draw(){
+	ofEnableDepthTest();
+	ofSetIcoSphereResolution(2);
+	ofFill();
+	ofSetColor(100);
+	ofDrawIcoSphere(320, 240, 0, 100);
+	ofNoFill();
+	ofSetColor(169);
+	ofDrawIcoSphere(320, 240, 0, 100);
+}
+~~~~
+![example icosphere](http://i.imgur.com/hMX7NAw.png)
 
 
 
@@ -1306,9 +1322,6 @@ _description: _
 
 
 
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###void ofSetIcoSphereResolution(res)
@@ -1337,6 +1350,32 @@ _inlined_description: _
 
 
 _description: _
+
+
+Sets resolution for ofDrawIcoSphere. 
+
+
+~~~~{.cpp}
+void ofApp::draw(){
+
+	ofNoFill();
+	ofSetIcoSphereResolution(0); 
+	ofDrawIcoSphere(100, 240, 50);
+	ofDrawBitmapStringHighlight("resolution: 0", 50, 350);
+	ofSetIcoSphereResolution(1);
+	ofDrawIcoSphere(250, 240, 50);
+	ofDrawBitmapStringHighlight("resolution: 1", 200, 350);
+	ofSetIcoSphereResolution(2);
+	ofDrawIcoSphere(400, 240, 50);
+	ofDrawBitmapStringHighlight("resolution: 2", 350, 350);
+	ofSetIcoSphereResolution(3);
+	ofDrawIcoSphere(550, 240, 50);
+	ofDrawBitmapStringHighlight("resolution: 3", 500, 350);
+
+}    
+~~~~
+ Try to keep resolution low, resolution set to 3 generates a LOT of triangles (as shown on image below).
+![Icosphere resolution](http://i.imgur.com/kdGLcTw.png)
 
 
 
@@ -1374,7 +1413,22 @@ _inlined_description: _
 
 _description: _
 
+Sets the resolution for ofDrawPlane. Minimal resolution for both rows and columns is 2 (setting one of them to 1 or zero won't draw anything).
 
+~~~~{.cpp}
+void ofApp::draw(){
+	ofNoFill();		// let's see just wireframe
+	ofSetPlaneResolution(2, 2); // mininal resolution
+	ofDrawPlane(300, 200, 100, 100);
+	ofSetPlaneResolution(4, 4); // this is how triangles are placed in plane
+	ofDrawPlane(450, 200, 100, 100);
+	ofSetPlaneResolution(8, 2);	// more columns
+	ofDrawPlane(600, 200, 100, 100);
+	ofSetPlaneResolution(2, 8);// more rows
+	ofDrawPlane(750, 200, 100, 100);
+}  
+~~~~
+![Plane Resolution](http://i.imgur.com/4jIt6no.png)
 
 
 
@@ -1402,9 +1456,26 @@ _advanced: False_
 
 _inlined_description: _
 
+Sets resolution for ofDrawSphere. Minimal resolution is 2 (setting it lower won't draw anything).
 
 
+~~~~{.cpp}
+void ofApp::draw(){
+	ofNoFill();		// let's see just wireframe
+	ofSetSphereResolution(2); // minimal resolution, cube, really...
+	ofDrawSphere(400, 300, 0, 40);
+	ofSetSphereResolution(3);
+	ofDrawSphere(500, 300, 0, 40);
+	ofSetSphereResolution(4);
+	ofDrawSphere(600, 300, 0, 40);
+	ofSetSphereResolution(8);
+	ofDrawSphere(700, 300, 0, 40);
+	ofSetSphereResolution(16);
+	ofDrawSphere(800, 300, 40);
+}
+~~~~
 
+![Sphere resolution](http://i.imgur.com/P7zaPPR.png)
 
 
 
