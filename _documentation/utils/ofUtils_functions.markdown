@@ -856,6 +856,7 @@ Formats the given timestamp according to the given format.
 The format string is used as a template to format the date and
 is copied character by character except for the following special characters,
 which are replaced by the corresponding value.
+
 * %w - abbreviated weekday (Mon, Tue, ...)
 * %W - full weekday (Monday, Tuesday, ...)
 * %b - abbreviated month (Jan, Feb, ...)
