@@ -10,9 +10,12 @@ documentation_root = '_documentation/'
 def list_all_addons():
     modules = []
     for root, dirs, files in os.walk(documentation_root+"addons"):
-        for name in dirs:
-            modules.append(name)
-    return modules
+        for name in files:
+            if (".markdown" in name):
+                name = name.replace(".markdown","")
+                name = name.replace("_functions","")
+                modules.append(name)
+    return set(modules)
     
 def list_all_modules():
     modules = []

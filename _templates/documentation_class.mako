@@ -25,7 +25,11 @@
                   % endif
                 % endif
                 % if not functions is None and len(functions.function_list)>0:
-                    <a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/${functions.module}/${functions.name}_functions.markdown" class="nohover"><img title="edit functions on GitHub" src="/images/editfunctions.png?a=5"/></a>
+                   % if is_addon:
+                     <a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/addons/${functions.module}/${functions.name}_functions.markdown" class="nohover"><img title="edit functions on GitHub" src="/images/editfunctions.png?a=5"/></a>
+                   % else:
+                     <a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/${functions.module}/${functions.name}_functions.markdown" class="nohover"><img title="edit functions on GitHub" src="/images/editfunctions.png?a=5"/></a>
+                   % endif
                 % endif
               </div>
               

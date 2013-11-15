@@ -33,7 +33,6 @@ def run():
     classes_simple_name = markdown_file.getclass_list(False)
     addon_classes = markdown_file.list_all_addons()
     
-    
     module_lookup = dict()
     core_index = dict()
     addons_index = dict()
@@ -82,6 +81,7 @@ def run():
             "classes_list": classes,
             "is_addon": (clazz.name in addon_classes)
         }
+        
         bf.template.materialize_template("documentation_class.mako", ('documentation',clazz.module+"/"+clazz.name+".html"), env )
         
         if not clazz.module in addon_classes:
@@ -121,7 +121,8 @@ def run():
         env = {
             "modulename": functions_file.name,
             "clazz": None,
-            "functions": functions_file
+            "functions": functions_file,
+            "is_addon": (functions_file.name in addon_classes) 
         }
         bf.template.materialize_template("documentation_class.mako", ('documentation',functions_file.module+"/"+functions_file.name+".html"), env )
         
