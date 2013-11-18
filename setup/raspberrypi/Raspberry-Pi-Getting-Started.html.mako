@@ -22,11 +22,11 @@ Options to give commands are:
 	* If the Pi boots the X11 window system, open up LXTerminal from the shortcut on the Raspberry Pi Desktop
 
 With a fresh install the Raspberry Pi configuration is presented at the first boot. Otherwise, you can re-configure with the command `sudo raspi-config`
-
+_We need to make sure the CPU has 192MB of RAM in order to compile openFrameworks. Once you have compiled openFrameworks you may want to repeat this step with 128_
 0.  Select `1 Expand Filesystem` and hit Enter
 0.  Select `8 Advanced Options` and hit Enter
 	* Select `A3 Memory Split` and hit Enter
-	* Type `128` and Hit `<ok>`
+	* Type `64` and Hit `<ok>`
 	 
 0. Reboot when prompted or type `sudo reboot`
 0. Assuming you have internet access run these commands to update the software to the latest packages.
