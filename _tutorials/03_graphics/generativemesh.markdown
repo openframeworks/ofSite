@@ -39,9 +39,9 @@ A mesh is a collection of vertices - points in 3D space - that can be connected 
 * You can choose to draw lines between pairs of vertices (lines mode).   
 * You can draw triangles between sets of three of vertices or quads between sets of four vertices (triangle and quad modes respectively).
 
-To make this a little more concrete, check out the below mesh.  A set of points were defined and sets of three points were joined together to form triangles:
+To make this a little more concrete, check out the below mesh.  The vertices are orange dots.  The vertices are connected up in sets of three points to form triangles which were then colored-in with gray.  
 
-![chrschn's public domain dolphin mesh](003_images/chrschn_dolphin_mesh_small.png) 
+![Keenan Crane's public domain cow shown in wireframe](003_images/Keenan_Crane_Public_Domain_Cow_Small.png) 
 
 For some more depth on what a mesh is and why they are useful, have a look at the [opengl tutorial](http://www.openframeworks.cc/tutorials/graphics/opengl.html).  For this tutorial, we'll focus on two different ways of connecting vertices - points mode and lines mode.  Let's get something drawn on our screen for this to start making some more sense:
 
