@@ -275,3 +275,5 @@ void HubbleMesh::draw(){
 ~~~
 
 ![Thresholded Stars Point Mesh](003_images/ThresholdedStarsSmall.png) 
+
+We created a mesh with points for primitives.  Then we looped through each pixel in the image (using [getWidth()](http://www.openframeworks.cc/documentation/graphics/ofImage.html#show_getWidth) and [getHeight()](http://www.openframeworks.cc/documentation/graphics/ofImage.html#show_getHeight)) and checked the intensity of each pixel's color using [getLightness()](http://www.openframeworks.cc/documentation/types/ofColor.html#!show_getLightness).  If the intensity was exceeded our threshold, we created a vertex at the location of the pixel and colored it with the pixel's color.  When we draw our mesh on a blue background, we can see which pixels from the image were used to generate vertices.
