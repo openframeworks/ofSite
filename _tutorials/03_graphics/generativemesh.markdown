@@ -404,3 +404,16 @@ void HubbleMesh::draw(){
 ##Manipulations: Adding effects that modify the mesh
 
 
+Jitter
+Hmm...gif framerate is no bueno...
+![Jitter](003_images/MeshJitterEndlessSmall.png) 
+
+
+Orbit
+![Orbit1](003_images/Orbit1.png) 
+![Orbit2](003_images/Orbit2.png) 
+
+
+Magnifying
+![Magnified1](003_images/Magnified1.png) 
+![Magnified2](003_images/Magnified2.png) 
