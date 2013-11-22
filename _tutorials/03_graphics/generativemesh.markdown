@@ -26,7 +26,7 @@ The tutorial is broken into three sections:
 	* Loading an image
     * Creating a mesh from the pixels
     * Using ofEasyCam to navigate the mesh
-3. [Manipulations: Adding some effects that modify the mesh](#manipulations)
+3. [Manipulations: Adding effects that modify the mesh](#manipulations)
 	* Making the vertices orbit 
     * Creating an interactive magnifying effect
 
@@ -396,3 +396,8 @@ void HubbleMesh::draw(){
 
 
 ![Line Mesh with Camera](003_images/LineMeshCameraSmall.png) 
+
+
+
+<a name="manipulations"></a>
+##Manipulations: Adding effects that modify the mesh
