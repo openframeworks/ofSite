@@ -260,7 +260,8 @@ void HubbleMesh::setup(){
     for (int x=0; x<w; ++x) {
         for (int y=0; y<h; ++y) {
             ofColor c = image.getColor(x, y);
-            if (c.getLightness() > intensityThreshold) {
+            float intensity = c.getLightness();
+            if (intensity >= intensityThreshold) {
                 ofVec3f pos(x, y, 0.0);
                 mesh.addVertex(pos);
                 mesh.addColor(c);
@@ -276,4 +277,75 @@ void HubbleMesh::draw(){
 
 ![Thresholded Stars Point Mesh](003_images/ThresholdedStarsSmall.png) 
 
-We created a mesh with points for primitives.  Then we looped through each pixel in the image (using [getWidth()](http://www.openframeworks.cc/documentation/graphics/ofImage.html#show_getWidth) and [getHeight()](http://www.openframeworks.cc/documentation/graphics/ofImage.html#show_getHeight)) and checked the intensity of each pixel's color using [getLightness()](http://www.openframeworks.cc/documentation/types/ofColor.html#!show_getLightness).  If the intensity was exceeded our threshold, we created a vertex at the location of the pixel and colored it with the pixel's color.  When we draw our mesh on a blue background, we can see which pixels from the image were used to generate vertices.
+We created a mesh with points for primitives.  Then we looped through each pixel in the image (using [getWidth()](http://www.openframeworks.cc/documentation/graphics/ofImage.html#show_getWidth) and [getHeight()](http://www.openframeworks.cc/documentation/graphics/ofImage.html#show_getHeight)) and checked the intensity of each pixel's color using [getLightness()](http://www.openframeworks.cc/documentation/types/ofColor.html#!show_getLightness).  If the intensity exceeded our threshold, we created a vertex at the location of the pixel and colored it with the pixel's color.  When we draw our mesh on a blue background, we can see which pixels from the image were used to generate vertices.
+
+Let's make that background into something more fitting (using [ofBackgroundGradient](http://www.openframeworks.cc/documentation/graphics/ofGraphics.html#!show_ofBackgroundGradient)...
+
+~~~.cpp
+void HubbleMesh::draw(){
+    ofColor centerColor = ofColor(85, 78, 68); 
+    ofColor edgeColor(0, 0, 0);
+    ofBackgroundGradient(centerColor, edgeColor, OF_GRADIENT_CIRCULAR);
+    mesh.draw();
+}
+~~~
+
+Almost time for lines, lines, lines!  
+
+We have a lot of vertices in our mesh.  You can check the number using [getNumVertices()](http://www.openframeworks.cc/documentation/3d/ofMesh.html#show_getNumVertices) if you like: 
+
+~~~.cpp
+    cout << mesh.getNumVertices() << endl;  // It should be ~64,000
+~~~
+
+If we were to start looping through those each of those 64,000 vertices to connect them up to the other vertices that are close-by, we would spend a lot of time in that loop.  To give our computers a break, we are going to resize our image:
+
+~~~.cpp
+    image.loadImage("stars.png");
+    image.resize(200, 200);
+~~~
+
+And then because our image pixel are no longer one-to-one with our openFrameworks window pixels, we need to adjust the the *pos* variable inside our loop:
+
+~~~.cpp
+            if (c.getLightness() > intensityThreshold) {
+                // We shrunk our image by a factor of 4, so we need to multiply our pixel 
+                // locations by 4 in order to have our mesh cover the openFrameworks window
+                ofVec3f pos(4*x, 4*y, 0.0);
+                mesh.addVertex(pos);
+                mesh.addColor(c);
+            }
+~~~
+
+Now that we have a reasonable number of vertices (around 2000), we can connecting up vertices to form lines.  If we want to only connect vertices that are nearby to each other, then we need to loop through all possible pairs of vertices, check if the distance between them is less than a particular value, and if so, connect them.
+
+~~~.cpp
+    // Don't forget to change to lines mode!
+    mesh.setMode(OF_PRIMITIVE_LINES);
+
+    // Code for finding vertices is the same as above
+
+    // Let's add some lines!
+    float connectionDistance = 30;
+    int numVerts = mesh.getNumVertices();
+    for (int a=0; a<numVerts; ++a) {
+        ofVec3f verta = mesh.getVertex(a);
+        for (int b=a+1; b<numVerts; ++b) {
+            ofVec3f vertb = mesh.getVertex(b);
+            float distance = verta.distance(vertb);
+            if (distance <= connectionDistance) {
+                mesh.addIndex(a);
+                mesh.addIndex(b);
+            }
+        }
+    }
+~~~
+
+You should end up with something link this (if the code is taking too long to run on your machine, try increasing the *intensityThreshold* variable to reduce the number of vertices):
+
+![First Line Mesh](003_images/StarLinesFirstMeshSmall.png) 
+
+Let's look at that code again:
+1. We need to get all unique pairs of vertices.  We can get the position of the *i*th vertex in our mesh using mesh.[getVertex()](http://www.openframeworks.cc/documentation/3d/ofMesh.html#show_getVertex).  Then we can use two for loops to get every pair of vertices.  You might be wondering why the second loop starts *b=a+1*.  Without going into the details - the order of the vertices does not matter when connecting them to form a line, so we can exclude a bunch of values for *b*.
+2. Then, we need to find the distance between those vertices.  ofVec3f has a function to do just that [distance()](http://www.openframeworks.cc/documentation/math/ofVec3f.html#show_distance)).
+3. If they are closer than a value set by *connectionDistance*, then we need to add a line between them.  Adding a line is just a matter of adding the indices *a* and *b* to the mesh.
