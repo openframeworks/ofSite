@@ -39,17 +39,18 @@ A mesh is a collection of vertices - points in 3D space - that can be connected 
 * You can choose to connect pairs of vertices and draw lines as the primitives.
 * You can connect three or four (or more) vertices and draw triangles or quads  (or polygons) as the primitives.
 
-To make this a little more concrete, check out the below mesh.  The vertices are orange dots.  The vertices are connected up in sets of three points to form triangle primitives which were then colored-in with gray.  For some more depth on what a mesh is and why they are useful, have a look at the [opengl tutorial](http://www.openframeworks.cc/tutorials/graphics/opengl.html).
+To make this a little more concrete, check out the below mesh.  The vertices are orange dots.  The vertices are connected up in sets of three points to form triangle primitives which were then colored in gray.  For some more depth on what a mesh is and why they are useful, have a look at the [opengl tutorial](http://www.openframeworks.cc/tutorials/graphics/opengl.html).
 
 ![Keenan Crane's public domain cow shown in wireframe](003_images/Keenan_Crane_Public_Domain_Cow_Small.png) 
 
 In this tutorial, we'll focus on using points and lines as our primitives.  Let's get something drawn on our screen.  When creating a mesh you should:
+
 1. Define an [ofMesh](http://www.openframeworks.cc/documentation/3d/ofMesh.html) variable.  Let's call it mesh.
 2. Specify what primitive mode (points, lines, etc.) that the mesh should use to connect its vertices using mesh.[setMode()](http://www.openframeworks.cc/documentation/3d/ofMesh.html#!show_setMode).  We'll be using points as our primitive, so that means we should use OF_PRIMITIVE_POINTS mode.
-3. Add some vertices!
+3. Add some vertices using mesh.[addVertex()](http://www.openframeworks.cc/documentation/3d/ofMesh.html#show_addVertex).  A vertex is an [ofVec3f](http://www.openframeworks.cc/documentation/math/ofVec3f.html), so if you haven't used that class before, check out the example on the documentation page.
 4. Draw your mesh using mesh.[draw()](http://www.openframeworks.cc/documentation/3d/ofMesh.html#show_draw).
 
-And onto the code:
+And onto the code!
 
 Add a mesh variable to your header file (testApp.h):
 ~~~~{.h}
@@ -77,4 +78,25 @@ If you build and run your project, you should see three white dots that are plac
 
 ![Triangle Points](003_images/TrianglePoints.png) 
 
-(If you haven't used ofVec3f before, check out the example on its [documentation page](http://www.openframeworks.cc/documentation/math/ofVec3f.html).)
+White is boring?  Well, you can add some color by modifying setup:
+
+~~~~{.cpp}
+void testApp::setup() {
+  mesh.setMode(OF_PRIMITIVE_POINTS);
+  mesh.enableColors();
+
+  ofVec3f top(100.0, 50.0, 0.0);    
+  ofVec3f left(50.0, 150.0, 0.0);    
+  ofVec3f right(150.0, 150.0, 0.0);
+
+  mesh.addVertex(top);
+  mesh.addColor(ofFloatColor(1.0, 0.0, 0.0));
+
+  mesh.addVertex(left);
+  mesh.addColor(ofFloatColor(0.0, 1.0, 0.0));
+
+  mesh.addVertex(right);
+  mesh.addColor(ofFloatColor(1.0, 1.0, 0.0));
+}
+~~~~
+
