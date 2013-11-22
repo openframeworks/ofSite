@@ -406,6 +406,7 @@ void HubbleMesh::draw(){
 
 ###Jitter
 Hmm...gif framerate is no bueno...
+
 ![Jitter](003_images/MeshJitterEndlessSmall.gif) 
 
 
