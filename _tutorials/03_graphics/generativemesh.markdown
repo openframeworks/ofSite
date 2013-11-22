@@ -27,9 +27,6 @@ The tutorial is broken into three sections:
     * Creating a mesh from the pixels
     * Using ofEasyCam to navigate the mesh
 3. [Manipulations: Adding effects that modify the mesh](#manipulations)
-	* Loading an image
-    * Creating a mesh from the pixels
-    * Using ofEasyCam to navigate the mesh
     * Adding jitter
     * Making the vertices orbit 
     * Creating an interactive magnifying effect
