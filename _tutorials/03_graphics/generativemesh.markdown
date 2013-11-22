@@ -100,5 +100,19 @@ void testApp::setup() {
 }
 ~~~~
 
-We first enable colors using mesh.[enableColors()](http://www.openframeworks.cc/documentation/3d/ofMesh.html#show_enableColors).  Colors are enabled by default, but it is good practice to include this line.  Then we can add colors using mesh.[addColor()](http://www.openframeworks.cc/documentation/3d/ofMesh.html#show_addColor).  Colors are specified using ofFloatColor which is like [ofColor](http://www.openframeworks.cc/documentation/types/ofColor.html) except that the red, blue, green and alpha channels are specified with a float between 0.0 and 1.0.  (You *can* use ofColor if you really want to do so, but you should use ofFloatColor.)
+We first enable colors using mesh.[enableColors()](http://www.openframeworks.cc/documentation/3d/ofMesh.html#show_enableColors).  Colors are enabled by default, but it is good practice to include this line.  Then we can add colors using mesh.[addColor()](http://www.openframeworks.cc/documentation/3d/ofMesh.html#show_addColor).  Colors are specified using ofFloatColor which is like [ofColor](http://www.openframeworks.cc/documentation/types/ofColor.html) except that the red, blue, green and alpha channels are specified with a float between 0.0 and 1.0.  (You *can* use an ofColor if you really want to do so, but you should use ofFloatColor.)   The first color we add applies to the first vertex, the second color to the second vertex, etc.
 
+You find our point boring?  Time for some some lines.  Try each of these three modes for yourself:
+
+~~~~{.cpp}
+mesh.setMode(OF_PRIMITIVE_LINES);
+mesh.setMode(OF_PRIMITIVE_LINE_STRIP);
+mesh.setMode(OF_PRIMITIVE_LINE_LOOP);
+~~~~
+
+![Triangle Points](003_images/TriangleLineMode.png) 
+
+Each mode uses lines as the graphical primitives, but they each have a different way that they generate lines from the vertices.
+* OF_PRIMITIVE_LINE creates an independent line out of each pair of vertices.  If you have a set of vertices - V<sub>1</sub>, V<sub>2</sub>, V<sub>3</sub>, V<sub>4</sub>, ... - then V<sub>1</sub> will connect to V<sub>2</sub> and V<sub>3</sub> will connect to V<sub>4</sub>.
+* OF_PRIMITIVE_LINE_STRIP will create a set of connected lines out of each pair of vertices.  V<sub>1</sub> will connect with V<sub>2</sub>.   V<sub>2</sub> will connect with  V<sub>3</sub>. Etc.
+* OF_PRIMITIVE_LINE_LOOP will create a set of connected lines, and it will connect the first and last vertices.  
