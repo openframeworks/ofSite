@@ -156,6 +156,7 @@ void testApp::setup() {
   mesh.addIndex(2);
   mesh.addIndex(0);
 }
+~~~
  
 Indices add a layer of abstraction.  Each vertex that you add to a mesh is tacked on to the end of a big old array, so each vertex has a number that uniquely identifies its position (or index) in that array.  There’s the zero-th vertex in the list, the first vertex in the list, the second, etc.  So now you can point to an existing vertex using an index.
 
@@ -165,5 +166,47 @@ So when our mode is OF_PRIMITIVE_LINE and our array of indices is {0, 1, 1, 2, 2
 
 One more thing you might have noticed - the color of the lines.  You can check out the [opengl tutorial](http://www.openframeworks.cc/tutorials/graphics/opengl.html) for a more in-depth explanation, but this is some of the magic that is occurring on your graphics card.  You can tell it that point A is red, point B is blue and that point A and B are connected with a line.  Then, the graphics card will (linearly) interpolate between those colors as it draws the pixels that constitute that line.
 
+As a reward for reading the whole section: 
 
+![Line Mode Smile](003_images/LineModeFace.png) 
 
+I know.  It's not a great reward.  But it does show off something you can do with OF_PRIMITIVE_LINES that you can't do with the two other line primitive modes - you can create separate lines.  We will take advantage of this in the next section.
+
+~~~.cpp
+  mesh.setMode(OF_PRIMITIVE_LINES);
+  mesh.enableColors();
+  mesh.enableIndices();
+
+  ofVec3f eyeLeftTop(50.0, 25.0, 0.0);
+  ofVec3f eyeLeftBottom(50.0, 50.0, 0.0);
+  ofVec3f eyeRightTop(100.0, 25.0, 0.0);
+  ofVec3f eyeRightBottom(100.0, 50.0, 0.0);
+  ofVec3f mouthLeft(50.0, 75.0, 0.0);
+  ofVec3f mouthMiddle(75.0, 100.0, 0.0);
+  ofVec3f mouthRight(100.0, 75.0, 0.0);
+
+  mesh.addVertex(eyeLeftTop);
+  mesh.addVertex(eyeLeftBottom);
+  mesh.addIndex(0);
+  mesh.addIndex(1);
+  mesh.addColor(ofFloatColor(0.0, 1.0, 1.0));
+  mesh.addColor(ofFloatColor(0.0, 1.0, 1.0));
+
+  mesh.addVertex(eyeRightTop);
+  mesh.addVertex(eyeRightBottom);
+  mesh.addIndex(2);
+  mesh.addIndex(3);
+  mesh.addColor(ofFloatColor(0.0, 1.0, 1.0));
+  mesh.addColor(ofFloatColor(0.0, 1.0, 1.0));
+
+  mesh.addVertex(mouthLeft);
+  mesh.addVertex(mouthMiddle);
+  mesh.addVertex(mouthRight);
+  mesh.addIndex(4);
+  mesh.addIndex(5);
+  mesh.addIndex(5);
+  mesh.addIndex(6);
+  mesh.addColor(ofFloatColor(0.0, 1.0, 0.0));
+  mesh.addColor(ofFloatColor(0.0, 1.0, 0.0));
+  mesh.addColor(ofFloatColor(0.0, 1.0, 0.0));
+~~~
