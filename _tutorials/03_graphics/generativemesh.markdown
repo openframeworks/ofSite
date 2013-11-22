@@ -34,16 +34,22 @@ The tutorial is broken into three sections:
 ##Basics: Working with ofMesh
 
 
-A mesh is a collection of vertices - points in 3D space - that can be connected up in different ways:  
-* You can choose to not connect any of your vertices (points mode).  
-* You can choose to draw lines between pairs of vertices (lines mode).   
-* You can draw triangles between sets of three of vertices or quads between sets of four vertices (triangle and quad modes respectively).
+A mesh is a collection of vertices - points in 3D space - that can be connected up in different ways.  The shapes that are formed by connecting these vertices are called primitives.  The primitives are our smallest building blocks that we can put together to form a mesh.
+* You can choose to not connect any of your vertices and just draw points as the primitives.
+* You can choose to connect pairs of vertices and draw lines as the primitives.
+* You can connect three or four (or more) vertices and draw triangles or quads  (or polygons) as the primitives.
 
-To make this a little more concrete, check out the below mesh.  The vertices are orange dots.  The vertices are connected up in sets of three points to form triangles which were then colored-in with gray.  
+To make this a little more concrete, check out the below mesh.  The vertices are orange dots.  The vertices are connected up in sets of three points to form triangle primitives which were then colored-in with gray.  For some more depth on what a mesh is and why they are useful, have a look at the [opengl tutorial](http://www.openframeworks.cc/tutorials/graphics/opengl.html).
 
 ![Keenan Crane's public domain cow shown in wireframe](003_images/Keenan_Crane_Public_Domain_Cow_Small.png) 
 
-For some more depth on what a mesh is and why they are useful, have a look at the [opengl tutorial](http://www.openframeworks.cc/tutorials/graphics/opengl.html).  For this tutorial, we'll focus on two different ways of connecting vertices - points mode and lines mode.  Let's get something drawn on our screen for this to start making some more sense:
+In this tutorial, we'll focus on using points and lines as our primitives.  Let's get something drawn on our screen.  When creating a mesh you should:
+1. Define an [ofMesh](http://www.openframeworks.cc/documentation/3d/ofMesh.html) variable.  Let's call it mesh.
+2. Specify what primitive mode (points, lines, etc.) that the mesh should use to connect its vertices using mesh.[setMode()](http://www.openframeworks.cc/documentation/3d/ofMesh.html#!show_setMode).  We'll be using points as our primitive, so that means we should use OF_PRIMITIVE_POINTS mode.
+3. Add some vertices!
+4. Draw your mesh using mesh.[draw()](http://www.openframeworks.cc/documentation/3d/ofMesh.html#show_draw).
+
+And onto the code:
 
 Add a mesh variable to your header file (testApp.h):
 ~~~~{.h}
@@ -68,5 +74,7 @@ void testApp::draw() {
 }
 ~~~~
 If you build and run your project, you should see three white dots that are placed in a triangular arrangement on top of a black background:
-IMAGE
-We first had to define an [ofMesh](http://www.openframeworks.cc/documentation/3d/ofMesh.html) variable called ‘mesh.’  Then, we needed to specify what mode the ofMesh should use to connect its vertices.  For now we aren't going to connect the vertices (points mode), so we pass in the constant OF_PRIMITIVE_POINTS. Finally, we can finish building our mesh by adding three vertices to it - one for each corner of the triangle.  Drawing our finished mesh is just a matter of calling the mesh's *draw()* function.
+
+![Triangle Points](003_images/TrianglePoints.png) 
+
+(If you haven't used ofVec3f before, check out the example on its [documentation page](http://www.openframeworks.cc/documentation/math/ofVec3f.html).)
