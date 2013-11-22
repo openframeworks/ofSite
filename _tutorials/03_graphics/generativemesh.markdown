@@ -212,4 +212,35 @@ I know.  It's not a great reward.  But it does show off something you can do wit
 ~~~
 
 <a name="Generative"></a>
-##Generative Mesh: Using an image to drive the creation of an mesh
+##Generative Mesh: Using an image to drive the creation of a mesh
+
+Meshes! You now have the basic ingredients to start creating a ‘generative’ mesh.  This is just a type of mesh that is created from a set of *rules* that are applied to some *data*.  
+
+So we need some data and some rules.  Let's grab some 'data' from the Hubble Telescope:
+
+![Original hubble image](003_images/stars.png) 
+
+Create a [new openFrameworks project](http://www.openframeworks.cc/tutorials/introduction/002_projectGenerator.html) called HubbleMesh and save that image as 'stars.png' in your HubbleMesh/bin/data directory.
+
+Now we have some colorful, pixely goodness, but what rules should we use to transform those pixels into a mesh?  We can start with points and work our way back to lines.  Our image has a ton of stars, why don't we create some vertices where those stars are located?  Once we do that, we can connect up nearby vertices with lines in order to create a spindly web our of our stars.
+
+First things first, let's load that image.  Go into the main.cpp file and change the dimensions to match the dimensions of the image you just downloaded:
+~~~.cpp
+ofSetupOpenGL(800,800,OF_WINDOW);
+~~~
+Then go into your HubbleMesh.h file and add:
+~~~.h
+  ofImage image;
+~~~
+And lastly, into your HubbleMesh.cpp file:
+~~~.cpp
+void HubbleMesh::setup(){
+    image.loadImage("stars.png");
+}
+void HubbleMesh::draw(){
+  image.draw(0,0);
+}
+~~~
+
+There is no dedicated [ofImage](http://www.openframeworks.cc/documentation/graphics/ofImage.html) tutorial at the moment, so you will have to poke around the [openFrameworks for Processing users](http://www.openframeworks.cc/tutorials/first%20steps/002_openFrameworks_for_processing_users.html) tutorial or [004 presentation](http://www.openframeworks.cc/tutorials/first%20steps/004_presentations.html)for more information on how to manipulate and draw images.  image.loadImage("stars.png") reads in our Hubble image, and image.draw(0,0) draws the image starting at (0,0).
+We want to create the vertices of our mesh only at the location of stars, and we can accomplish that using image.getColor(x, y) and a simple rule.    
