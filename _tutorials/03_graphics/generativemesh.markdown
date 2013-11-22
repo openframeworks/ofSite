@@ -418,3 +418,7 @@ Hmm...gif framerate is no bueno...
 ###Magnifying
 ![Magnified1](003_images/Magnified1Small.png) 
 ![Magnified2](003_images/Magnified2Small.png) 
+
+...and maybe a quick snippet of code with some keyboard hotkeys to control parameters?
+
+[Insert link to source files?]
