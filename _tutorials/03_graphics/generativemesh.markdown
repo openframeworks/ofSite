@@ -54,24 +54,24 @@ And onto the code!
 
 Add a mesh variable to your header file (testApp.h):
 ~~~~{.h}
-  ofMesh mesh;
+    ofMesh mesh;
 ~~~~
 Append these lines to your *setup()* and *draw()* functions in your source file (testApp.cpp):
 ~~~~{.cpp}
 void testApp::setup() {
-  mesh.setMode(OF_PRIMITIVE_POINTS);
+    mesh.setMode(OF_PRIMITIVE_POINTS);
 
-  ofVec3f top(100.0, 50.0, 0.0);    
-  ofVec3f left(50.0, 150.0, 0.0);    
-  ofVec3f right(150.0, 150.0, 0.0);
+    ofVec3f top(100.0, 50.0, 0.0);    
+    ofVec3f left(50.0, 150.0, 0.0);    
+    ofVec3f right(150.0, 150.0, 0.0);
 
-  mesh.addVertex(top);
-  mesh.addVertex(left);
-  mesh.addVertex(right);
+    mesh.addVertex(top);
+    mesh.addVertex(left);
+    mesh.addVertex(right);
 }
 void testApp::draw() {
-  ofBackground(0);
-  mesh.draw();
+    ofBackground(0);
+    mesh.draw();
 }
 ~~~~
 If you build and run your project, you should see three white dots that are placed in a triangular arrangement on top of a black background:
@@ -82,21 +82,21 @@ White is boring?  Well, you can add some color by modifying setup:
 
 ~~~~{.cpp}
 void testApp::setup() {
-  mesh.setMode(OF_PRIMITIVE_POINTS);
-  mesh.enableColors();
+    mesh.setMode(OF_PRIMITIVE_POINTS);
+    mesh.enableColors();
 
-  ofVec3f top(100.0, 50.0, 0.0);    
-  ofVec3f left(50.0, 150.0, 0.0);    
-  ofVec3f right(150.0, 150.0, 0.0);
+    ofVec3f top(100.0, 50.0, 0.0);    
+    ofVec3f left(50.0, 150.0, 0.0);    
+    ofVec3f right(150.0, 150.0, 0.0);
 
-  mesh.addVertex(top);
-  mesh.addColor(ofFloatColor(1.0, 0.0, 0.0));
+    mesh.addVertex(top);
+    mesh.addColor(ofFloatColor(1.0, 0.0, 0.0));
 
-  mesh.addVertex(left);
-  mesh.addColor(ofFloatColor(0.0, 1.0, 0.0));
+    mesh.addVertex(left);
+    mesh.addColor(ofFloatColor(0.0, 1.0, 0.0));
 
-  mesh.addVertex(right);
-  mesh.addColor(ofFloatColor(1.0, 1.0, 0.0));
+    mesh.addVertex(right);
+    mesh.addColor(ofFloatColor(1.0, 1.0, 0.0));
 }
 ~~~~
 
@@ -105,9 +105,9 @@ We first enable colors using mesh.[enableColors()](http://www.openframeworks.cc/
 You find our point boring?  Time for some some lines.  Try each of these three modes for yourself:
 
 ~~~~{.cpp}
-mesh.setMode(OF_PRIMITIVE_LINES);
-mesh.setMode(OF_PRIMITIVE_LINE_STRIP);
-mesh.setMode(OF_PRIMITIVE_LINE_LOOP);
+    mesh.setMode(OF_PRIMITIVE_LINES);
+    mesh.setMode(OF_PRIMITIVE_LINE_STRIP);
+    mesh.setMode(OF_PRIMITIVE_LINE_LOOP);
 ~~~~
 
 ![Triangle Points](003_images/TriangleLineMode.png) 
@@ -120,41 +120,41 @@ Each mode uses lines as the graphical primitives, but they each have a different
 Only OF_PRIMITIVE_LINE_LOOP outlined the whole triangle. If you wanted to create that same triangle using OF_PRIMITIVE_LINE, you might try adding some more vertices like this:
 
 ~~~~{.cpp}
-mesh.addVertex(top);
-mesh.addVertex(left);
-mesh.addVertex(left);
-mesh.addVertex(right);
-mesh.addVertex(right);
-mesh.addVertex(top);
+    mesh.addVertex(top);
+    mesh.addVertex(left);
+    mesh.addVertex(left);
+    mesh.addVertex(right);
+    mesh.addVertex(right);
+    mesh.addVertex(top);
 ~~~~
 
 You would be right to think that this feels excessive to add duplicate vertices.  Let’s try something else:
 
 ~~~~{.cpp}
 void testApp::setup() {
-  mesh.setMode(OF_PRIMITIVE_LINES);
-  mesh.enableColors();
-  mesh.enableIndices();
+    mesh.setMode(OF_PRIMITIVE_LINES);
+    mesh.enableColors();
+    mesh.enableIndices();
 
-  ofVec3f top(100.0, 50.0, 0.0);    
-  ofVec3f left(50.0, 150.0, 0.0);    
-  ofVec3f right(150.0, 150.0, 0.0);
+    ofVec3f top(100.0, 50.0, 0.0);    
+    ofVec3f left(50.0, 150.0, 0.0);    
+    ofVec3f right(150.0, 150.0, 0.0);
 
-  mesh.addVertex(top);
-  mesh.addColor(ofFloatColor(1.0, 0.0, 0.0));
+    mesh.addVertex(top);
+    mesh.addColor(ofFloatColor(1.0, 0.0, 0.0));
 
-  mesh.addVertex(left);
-  mesh.addColor(ofFloatColor(0.0, 1.0, 0.0));
+    mesh.addVertex(left);
+    mesh.addColor(ofFloatColor(0.0, 1.0, 0.0));
 
-  mesh.addVertex(right);
-  mesh.addColor(ofFloatColor(1.0, 1.0, 0.0));
+    mesh.addVertex(right);
+    mesh.addColor(ofFloatColor(1.0, 1.0, 0.0));
 
-  mesh.addIndex(0);
-  mesh.addIndex(1);
-  mesh.addIndex(1);
-  mesh.addIndex(2);
-  mesh.addIndex(2);
-  mesh.addIndex(0);
+    mesh.addIndex(0);
+    mesh.addIndex(1);
+    mesh.addIndex(1);
+    mesh.addIndex(2);
+    mesh.addIndex(2);
+    mesh.addIndex(0);
 }
 ~~~
  
@@ -173,42 +173,42 @@ As a reward for reading the whole section:
 I know.  It's not a great reward.  But it does show off something you can do with OF_PRIMITIVE_LINES that you can't do with the two other line primitive modes - you can create separate lines.  We will take advantage of this in the next section.
 
 ~~~.cpp
-  mesh.setMode(OF_PRIMITIVE_LINES);
-  mesh.enableColors();
-  mesh.enableIndices();
+    mesh.setMode(OF_PRIMITIVE_LINES);
+    mesh.enableColors();
+    mesh.enableIndices();
 
-  ofVec3f eyeLeftTop(50.0, 25.0, 0.0);
-  ofVec3f eyeLeftBottom(50.0, 50.0, 0.0);
-  ofVec3f eyeRightTop(100.0, 25.0, 0.0);
-  ofVec3f eyeRightBottom(100.0, 50.0, 0.0);
-  ofVec3f mouthLeft(50.0, 75.0, 0.0);
-  ofVec3f mouthMiddle(75.0, 100.0, 0.0);
-  ofVec3f mouthRight(100.0, 75.0, 0.0);
+    ofVec3f eyeLeftTop(50.0, 25.0, 0.0);
+    ofVec3f eyeLeftBottom(50.0, 50.0, 0.0);
+    ofVec3f eyeRightTop(100.0, 25.0, 0.0);
+    ofVec3f eyeRightBottom(100.0, 50.0, 0.0);
+    ofVec3f mouthLeft(50.0, 75.0, 0.0);
+    ofVec3f mouthMiddle(75.0, 100.0, 0.0);
+    ofVec3f mouthRight(100.0, 75.0, 0.0);
 
-  mesh.addVertex(eyeLeftTop);
-  mesh.addVertex(eyeLeftBottom);
-  mesh.addIndex(0);
-  mesh.addIndex(1);
-  mesh.addColor(ofFloatColor(0.0, 1.0, 1.0));
-  mesh.addColor(ofFloatColor(0.0, 1.0, 1.0));
+    mesh.addVertex(eyeLeftTop);
+    mesh.addVertex(eyeLeftBottom);
+    mesh.addIndex(0);
+    mesh.addIndex(1);
+    mesh.addColor(ofFloatColor(0.0, 1.0, 1.0));
+    mesh.addColor(ofFloatColor(0.0, 1.0, 1.0));
 
-  mesh.addVertex(eyeRightTop);
-  mesh.addVertex(eyeRightBottom);
-  mesh.addIndex(2);
-  mesh.addIndex(3);
-  mesh.addColor(ofFloatColor(0.0, 1.0, 1.0));
-  mesh.addColor(ofFloatColor(0.0, 1.0, 1.0));
+    mesh.addVertex(eyeRightTop);
+    mesh.addVertex(eyeRightBottom);
+    mesh.addIndex(2);
+    mesh.addIndex(3);
+    mesh.addColor(ofFloatColor(0.0, 1.0, 1.0));
+    mesh.addColor(ofFloatColor(0.0, 1.0, 1.0));
 
-  mesh.addVertex(mouthLeft);
-  mesh.addVertex(mouthMiddle);
-  mesh.addVertex(mouthRight);
-  mesh.addIndex(4);
-  mesh.addIndex(5);
-  mesh.addIndex(5);
-  mesh.addIndex(6);
-  mesh.addColor(ofFloatColor(0.0, 1.0, 0.0));
-  mesh.addColor(ofFloatColor(0.0, 1.0, 0.0));
-  mesh.addColor(ofFloatColor(0.0, 1.0, 0.0));
+    mesh.addVertex(mouthLeft);
+    mesh.addVertex(mouthMiddle);
+    mesh.addVertex(mouthRight);
+    mesh.addIndex(4);
+    mesh.addIndex(5);
+    mesh.addIndex(5);
+    mesh.addIndex(6);
+    mesh.addColor(ofFloatColor(0.0, 1.0, 0.0));
+    mesh.addColor(ofFloatColor(0.0, 1.0, 0.0));
+    mesh.addColor(ofFloatColor(0.0, 1.0, 0.0));
 ~~~
 
 <a name="Generative"></a>
@@ -226,11 +226,11 @@ Now we have some colorful, pixely goodness, but what rules should we use to tran
 
 First things first, let's load that image.  Go into the main.cpp file and change the dimensions to match the dimensions of the image you just downloaded:
 ~~~.cpp
-ofSetupOpenGL(800,800,OF_WINDOW);
+    ofSetupOpenGL(800,800,OF_WINDOW);
 ~~~
 Then go into your HubbleMesh.h file and add:
 ~~~.h
-  ofImage image;
+    ofImage image;
 ~~~
 And lastly, into your HubbleMesh.cpp file:
 ~~~.cpp
@@ -238,9 +238,40 @@ void HubbleMesh::setup(){
     image.loadImage("stars.png");
 }
 void HubbleMesh::draw(){
-  image.draw(0,0);
+    image.draw(0,0);
 }
 ~~~
 
-There is no dedicated [ofImage](http://www.openframeworks.cc/documentation/graphics/ofImage.html) tutorial at the moment, so you will have to poke around the [openFrameworks for Processing users](http://www.openframeworks.cc/tutorials/first%20steps/002_openFrameworks_for_processing_users.html) tutorial or [004 presentation](http://www.openframeworks.cc/tutorials/first%20steps/004_presentations.html)for more information on how to manipulate and draw images.  image.loadImage("stars.png") reads in our Hubble image, and image.draw(0,0) draws the image starting at (0,0).
-We want to create the vertices of our mesh only at the location of stars, and we can accomplish that using image.getColor(x, y) and a simple rule.    
+There is no dedicated [ofImage](http://www.openframeworks.cc/documentation/graphics/ofImage.html) tutorial at the moment, so you will have to poke around the [openFrameworks for Processing users](http://www.openframeworks.cc/tutorials/first%20steps/002_openFrameworks_for_processing_users.html) tutorial or [004 presentation](http://www.openframeworks.cc/tutorials/first%20steps/004_presentations.html) if you want to know more about what you can do with images.
+
+We just need to load in our image using [loadImage()](http://www.openframeworks.cc/documentation/graphics/ofImage.html#!show_loadImage) and draw it at the top left corner of the screen with [draw(0,0)](http://www.openframeworks.cc/documentation/graphics/ofImage.html#show_draw).
+
+Great! Image loaded.  Now, we want to create a mesh with some vertices. If we only want to create vertices at the location of stars, then we will need to get access to the color information of the pixels using image.[getColor(x, y)](http://www.openframeworks.cc/documentation/graphics/ofImage.html#show_getColor).  We want to loop through the pixels in the image and apply a [threshold](http://en.wikipedia.org/wiki/Thresholding_(image_processing)) such that we only create a vertex at the pixel locations where the intensity of the color is greater than some value. 
+
+~~~.cpp
+void HubbleMesh::setup(){
+    image.loadImage("stars.png");
+
+    mesh.setMode(OF_PRIMITIVE_POINTS);
+
+    float intensityThreshold = 150.0;
+    int w = image.getWidth();
+    int h = image.getHeight();
+    for (int x=0; x<w; ++x) {
+        for (int y=0; y<h; ++y) {
+            ofColor c = image.getColor(x, y);
+            if (c.getLightness() > intensityThreshold) {
+                ofVec3f pos(x, y, 0.0);
+                mesh.addVertex(pos);
+                mesh.addColor(c);
+            }
+        }
+    }
+}
+void HubbleMesh::draw(){
+    ofBackground(0,0,255);
+    mesh.draw();
+}
+~~~
+
+![Thresholded Stars Point Mesh](003_images/ThresholdedStarsSmall.png) 
