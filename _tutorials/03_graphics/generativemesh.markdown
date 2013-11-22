@@ -210,3 +210,6 @@ I know.  It's not a great reward.  But it does show off something you can do wit
   mesh.addColor(ofFloatColor(0.0, 1.0, 0.0));
   mesh.addColor(ofFloatColor(0.0, 1.0, 0.0));
 ~~~
+
+<a name="Generative"></a>
+##Generative Mesh: Using an image to drive the creation of an mesh
