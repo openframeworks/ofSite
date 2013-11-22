@@ -27,10 +27,11 @@ The tutorial is broken into three sections:
     * Creating a mesh from the pixels
     * Using ofEasyCam to navigate the mesh
 3. [Manipulations: Adding effects that modify the mesh](#manipulations)
-	* Making the vertices orbit 
+* Adding jitter	
+* Making the vertices orbit 
     * Creating an interactive magnifying effect
 
-<a name="Basics"></a>
+<a name="basics"></a>
 ##Basics: Working with ofMesh
 
 
@@ -211,7 +212,7 @@ I know.  It's not a great reward.  But it does show off something you can do wit
     mesh.addColor(ofFloatColor(0.0, 1.0, 0.0));
 ~~~
 
-<a name="Generative"></a>
+<a name="generative"></a>
 ##Generative Mesh: Using an image to drive the creation of a mesh
 
 Meshes! You now have the basic ingredients to start creating a ‘generative’ mesh.  This is just a type of mesh that is created from a set of *rules* that are applied to some *data*.  
@@ -401,3 +402,5 @@ void HubbleMesh::draw(){
 
 <a name="manipulations"></a>
 ##Manipulations: Adding effects that modify the mesh
+
+
