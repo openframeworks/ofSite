@@ -248,6 +248,12 @@ We just need to load in our image using [loadImage()](http://www.openframeworks.
 
 Great! Image loaded.  Now, we want to create a mesh with some vertices. If we only want to create vertices at the location of stars, then we will need to get access to the color information of the pixels using image.[getColor(x, y)](http://www.openframeworks.cc/documentation/graphics/ofImage.html#show_getColor).  We want to loop through the pixels in the image and apply a [threshold](http://en.wikipedia.org/wiki/Thresholding_(image_processing)) such that we only create a vertex at the pixel locations where the intensity of the color is greater than some value. 
 
+Add a mesh to HubbleMesh.h:
+~~~.h
+		ofMesh mesh;
+~~~
+
+And add this to HubbleMesh.cpp:
 ~~~.cpp
 void HubbleMesh::setup(){
     image.loadImage("stars.png");
@@ -346,9 +352,47 @@ You should end up with something link this (if the code is taking too long to ru
 ![First Line Mesh](003_images/StarLinesFirstMeshSmall.png) 
 
 Let's look at that code again:
-
 1. We need to get all unique pairs of vertices.  We can get the position of the *i*th vertex in our mesh using mesh.[getVertex()](http://www.openframeworks.cc/documentation/3d/ofMesh.html#show_getVertex).  Then we can use two for loops to get every pair of vertices.  You might be wondering why the second loop starts *b=a+1*.  Without going into the details - the order of the vertices does not matter when connecting them to form a line, so we can exclude a bunch of values for *b*.
-
 2. Then, we need to find the distance between those vertices.  ofVec3f has a function to do just that [distance()](http://www.openframeworks.cc/documentation/math/ofVec3f.html#show_distance)).
-
 3. If they are closer than a value set by *connectionDistance*, then we need to add a line between them.  Adding a line is just a matter of adding the indices *a* and *b* to the mesh.
+
+Boom! Generative mesh.  Let’s add two more tweaks to make this into proper 3D.  Firstly, we can use the saturation of the color to change the z-coordinate.
+
+~~~.cpp
+            if (intensity >= intensityThreshold) {
+                float saturation = c.getSaturation();
+                float z = ofMap(saturation, 0, 255, -100, 100);
+                ofVec3f pos(4*x, 4*y, z);
+                mesh.addVertex(pos);
+                mesh.addColor(c);
+            }
+~~~
+
+This code will push brighter colors in the positive z-direction and whiter colors in the negative-z direction using [ofMap()](http://www.openframeworks.cc/documentation/math/ofMath.html#!show_ofMap).  ofMap allows us to take a value that is within one range (0 to 255) and map it to a new range of values (-100 to 100).
+
+Hm? That didn't change your mesh very much?  Well, now it's time for the last tweak in this section: adding a camera.
+
+Add this to your header:
+~~~.h
+		ofEasyCam easyCam;
+~~~
+And then modify your draw function:
+~~~.cpp
+void HubbleMesh::draw(){
+    ofColor centerColor = ofColor(85, 78, 68);
+    ofColor edgeColor(0, 0, 0);
+    ofBackgroundGradient(centerColor, edgeColor, OF_GRADIENT_CIRCULAR);
+
+    easyCam.begin();
+        ofPushMatrix();
+            ofTranslate(-ofGetWidth()/2, -ofGetHeight()/2);
+            mesh.draw();
+        ofPopMatrix();
+    easyCam.end();
+}
+~~~
+
+[ofEasyCam](http://www.openframeworks.cc/documentation/3d/ofEasyCam.html) is a quick way to get a feel for that elusive 3rd dimension in your generative mesh.  That [opengl tutorial](http://www.openframeworks.cc/tutorials/graphics/opengl.html) goes into cameras, [ofPushMatrix()](http://www.openframeworks.cc/documentation/graphics/ofGraphics.html#!show_ofPushMatrix), [ofPopMatrix()](http://www.openframeworks.cc/documentation/graphics/ofGraphics.html#!show_ofPopMatrix) and [ofTranslate()](http://www.openframeworks.cc/documentation/graphics/ofGraphics.html#!show_ofTranslate).  This code will center you mesh in the camera's view.  Now you can left click and drag to rotate! And right click and drag to zoom!
+
+
+![Line Mesh with Camera](003_images/LineMeshCameraSmall.png) 
