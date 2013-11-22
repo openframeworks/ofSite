@@ -100,3 +100,5 @@ void testApp::setup() {
 }
 ~~~~
 
+We first enable colors using mesh.[enableColors()](http://www.openframeworks.cc/documentation/3d/ofMesh.html#show_enableColors).  Colors are enabled by default, but it is good practice to include this line.  Then we can add colors using mesh.[addColor()](http://www.openframeworks.cc/documentation/3d/ofMesh.html#show_addColor).  Colors are specified using ofFloatColor which is like [ofColor](http://www.openframeworks.cc/documentation/types/ofColor.html) except that the red, blue, green and alpha channels are specified with a float between 0.0 and 1.0.  (You *can* use ofColor if you really want to do so, but you should use ofFloatColor.)
+
