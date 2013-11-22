@@ -396,7 +396,7 @@ void HubbleMesh::draw(){
 [ofEasyCam](http://www.openframeworks.cc/documentation/3d/ofEasyCam.html) is a quick way to get a feel for that elusive 3rd dimension in your generative mesh.  That [opengl tutorial](http://www.openframeworks.cc/tutorials/graphics/opengl.html) goes into cameras, [ofPushMatrix()](http://www.openframeworks.cc/documentation/graphics/ofGraphics.html#!show_ofPushMatrix), [ofPopMatrix()](http://www.openframeworks.cc/documentation/graphics/ofGraphics.html#!show_ofPopMatrix) and [ofTranslate()](http://www.openframeworks.cc/documentation/graphics/ofGraphics.html#!show_ofTranslate).  This code will center you mesh in the camera's view.  Now you can left click and drag to rotate! And right click and drag to zoom!
 
 
-![Line Mesh with Camera](003_images/LineMeshCameraSmall.png) 
+![Line Mesh with Camera](003_images/LineMeshCameraSmall.gif) 
 
 
 
@@ -404,16 +404,16 @@ void HubbleMesh::draw(){
 ##Manipulations: Adding effects that modify the mesh
 
 
-Jitter
+###Jitter
 Hmm...gif framerate is no bueno...
 ![Jitter](003_images/MeshJitterEndlessSmall.png) 
 
 
-Orbit
-![Orbit1](003_images/Orbit1.png) 
-![Orbit2](003_images/Orbit2.png) 
+###Orbit
+![Orbit1](003_images/Orbit1Small.png) 
+![Orbit2](003_images/Orbit2Small.png) 
 
 
-Magnifying
-![Magnified1](003_images/Magnified1.png) 
-![Magnified2](003_images/Magnified2.png) 
+###Magnifying
+![Magnified1](003_images/Magnified1Small.png) 
+![Magnified2](003_images/Magnified2Small.png) 
