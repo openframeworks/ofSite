@@ -346,6 +346,9 @@ You should end up with something link this (if the code is taking too long to ru
 ![First Line Mesh](003_images/StarLinesFirstMeshSmall.png) 
 
 Let's look at that code again:
+
 1. We need to get all unique pairs of vertices.  We can get the position of the *i*th vertex in our mesh using mesh.[getVertex()](http://www.openframeworks.cc/documentation/3d/ofMesh.html#show_getVertex).  Then we can use two for loops to get every pair of vertices.  You might be wondering why the second loop starts *b=a+1*.  Without going into the details - the order of the vertices does not matter when connecting them to form a line, so we can exclude a bunch of values for *b*.
+
 2. Then, we need to find the distance between those vertices.  ofVec3f has a function to do just that [distance()](http://www.openframeworks.cc/documentation/math/ofVec3f.html#show_distance)).
+
 3. If they are closer than a value set by *connectionDistance*, then we need to add a line between them.  Adding a line is just a matter of adding the indices *a* and *b* to the mesh.
