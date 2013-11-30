@@ -2350,7 +2350,9 @@ _inlined_description: _
 _description: _
 
 
+openFrameworks now treats all files in the data/ folder as being at the same level as your app. When a file is loaded using openFrameworks classes (like ofVideoPlayer) the file path is run through this function to turn it into a relative path for the executible. As windows, mac and linux all have different relative paths, it is important to use this function if you have written your own class or addon for openFrameworks and you wish to be able to load files from the data/ folder.
 
+The optional parameter makeAbsolute, if set to true (false by default) returns the generated path as an absolute path starting from the root of your filesystem instead of from the folder your application is run from.
 
 
 
