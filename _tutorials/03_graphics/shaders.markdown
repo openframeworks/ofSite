@@ -20,9 +20,9 @@ author: Lucasz Karluk, Joshua Noble, Jordi Puig
 
 <a name="introducing"></a>
 
-This tutorial comes in two parts: first, this thing, the HTML file and second, nine OF projects that progress along with this tutorial. You can find them in the tutorials folder of your OF download or [on github](https://github.com/openframeworks/openFrameworks/tree/master/tutorials/shader). As you read along with this, you should check the code downloads as well because a lot of the code isn't here, but rather is there. You'll notice that all of those project folders have source code and a data folder that contains 3 different kinds of shaders: GL2, GL3, and GLES2. What these are and how they're different from one another will be 
+This tutorial comes in two parts: first, this thing, the HTML file and second, nine OF projects that progress along with this tutorial. You can find them in the tutorials folder of your OF download or [on github](https://github.com/openframeworks/openFrameworks/tree/master/tutorials/shader). As you read along with this, you should check the code downloads as well because a lot of the code isn't here, but rather is there. You'll notice that all of those project folders have source code and a data folder that contains 3 different kinds of shaders: GL2, GL3, and GLES2. What these are and how they're different from one another will be described below.
 
-You've probably heard somewhere about "shaders", those mystical things that let you render beautiful things at blazing speed. Shaders are not actually mysteical but they are a little tricky t get started with at first because they're working with a different part of the computer than you're usually working with in your openFrameworks application: you're working on the Graphics Processing Unit (as opposed to the Central Processing Unit that you're usually working on in OF). To really get the hang of working with shaders, we need to get you a little background on what the GPU is first. So, without ado, let's go:
+You've probably heard somewhere about "shaders", those mystical things that let you render beautiful things at blazing speed. Shaders are not actually mystical but they are a little tricky to get started with at first because they're working with a different part of the computer than you're usually working with in your openFrameworks application: you're working on the Graphics Processing Unit (as opposed to the Central Processing Unit that you're usually working on in OF). To really get the hang of working with shaders, we need to get you a little background on what the GPU is first. So, without further ado, let's go:
 
 ###The graphics pipeline
 
@@ -45,7 +45,7 @@ Let's get more specific.
 
 ###Vertices
 
-Rendering an ofMesh start out as some vertex buffers on the CPU side that get filled with arrays of vertex attributes like colors or positions or texture coordinates. These attributes are used as the inputs into the vertex shader, this is what you're working with in your vertex shader. When you call draw() on an ofMesh the indexes are control how the vertices get assembled into triangles later on.
+Rendering an ofMesh start out as some vertex buffers on the CPU side that get filled with arrays of vertex attributes like colors or positions or texture coordinates. These attributes are used as the inputs into the vertex shader, this is what you're working with in your vertex shader. When you call draw() on an ofMesh the indexes control how the vertices get assembled into triangles later on.
 
 ###The vertex shader
 
@@ -100,7 +100,7 @@ ofSetCurrentRenderer(ofGLProgrammableRenderer::TYPE);
 ofSetupOpenGL(1024,768, OF_WINDOW);         // <-------- setup the GL context
 ~~~~
 
-Now, what OpenGL3 is an how it's going to change the way that you think about coe and graphics on your cmoputer isn't a topic for this tutorial, but if you want to look up some tutorials on that [please do so](http://www.youtube.com/watch?v=XMgfddy7S7Q). We're working on an OpenGL tutorial but for the the moment we're going to stick with shaders. The OpenGL3 shader which confusingly uses GLSL 1.5, has the following at the top:
+Now, what OpenGL3 is and how it's going to change the way that you think about code and graphics on your computer isn't a topic for this tutorial, but if you want to look up some tutorials on that [please do so](http://www.youtube.com/watch?v=XMgfddy7S7Q). We're working on an OpenGL tutorial but for the the moment we're going to stick with shaders. The OpenGL3 shader which confusingly uses GLSL 1.5, has the following at the top:
 
 ~~~~{.cpp}
 #version 150
@@ -122,7 +122,7 @@ Let's take a look at a very simple example to help you get going with it. First 
 ~~~~{.cpp}
 
 void ofApp::setup(){
-    
+
 #ifdef TARGET_OPENGLES
 	shader.load("shadersES2/shader");
 #else
@@ -188,10 +188,10 @@ void main()
     // we use gl_FragCoord.x position to control the red color value.
     // we use gl_FragCoord.y position to control the green color value.
     // please note that all r, g, b, a values are between 0 and 1.
-    
+
     float windowWidth = 1024.0;
     float windowHeight = 768.0;
-    
+
 	float r = gl_FragCoord.x / windowWidth;
 	float g = gl_FragCoord.y / windowHeight;
 	float b = 1.0;
@@ -205,7 +205,7 @@ That should look like the following when you run it:
 
 ![IMG](001_images/001.png)
 
-Let's break some of the things in there down a little bit. At the top of the fragment and vertex shaders you can see a lot of "uniforms". A uniform is a value passed to each shader from your program that sets some additional values that you use in each stage of your shading. Uniform variables act as constants, at least for the duration of your OF applications *draw()* method. Your OF application feeds these variables to the graphics pipeline so that they're accessible in both stage of shading. Any shader can access any uniform variable as long as it declares the variable, like we do in both shaders in our example. Note though that these variables are read only at least in the shaders. If you want to update the value of a uniform, you can do it in your OF application by calling:
+Let's break some of the things in there down a little bit. At the top of the fragment and vertex shaders you can see a lot of "uniforms". A uniform is a value passed to each shader from your program that sets some additional values that you use in each stage of your shading. Uniform variables act as constants, at least for the duration of your OF applications *draw()* method. Your OF application feeds these variables to the graphics pipeline so that they're accessible in both stages of shading. Any shader can access any uniform variable as long as it declares the variable, like we do in both shaders in our example. Note though that these variables are read-only in the shaders. If you want to update the value of a uniform, you can do it in your OF application by calling:
 
 ~~~~{.cpp}
 shader.setUniform1f("myUniform", 1.f);
@@ -221,7 +221,7 @@ You can set several different kinds of uniforms, vec3, vec4, mat4, even structs.
 
 ###The vertex shader
 
-*modelViewProjectionMatrix* - This is actually a value passed in from OF. You can tell that because it's got a "uniform" in front of it. This means that it's passed in for each vertex with exactly the same value. 
+*modelViewProjectionMatrix* - This is actually a value passed in from OF. You can tell that because it's got a "uniform" in front of it. This means that it's passed in for each vertex with exactly the same value.
 
 Next up in our vertex shader is a different kind of variable: *in vec4 position*. This is called an attribute and every vertex has a different one. That's helpful when you want to have lots of vertices that aren't all in the same place. Each one having its own position means that you can access the location of each vertex within the shader and use it in a calculation or even modify it in place. There are several different kinds of attributes for different kinds of objects in OF: position, color, or texture coordinates, all of which are handy for making complex geometery and shading them.
 
@@ -268,10 +268,10 @@ void ofApp::setup(){
     int planeWidth = ofGetWidth() * planeScale;
     int planeHeight = ofGetHeight() * planeScale;
     int planeGridSize = 20;
-    int planeColums = planeWidth / planeGridSize;
+    int planeColumns = planeWidth / planeGridSize;
     int planeRows = planeHeight / planeGridSize;
-    
-    plane.set(planeWidth, planeHeight, planeColums, planeRows, OF_PRIMITIVE_TRIANGLES);
+
+    plane.set(planeWidth, planeHeight, planeColumns, planeRows, OF_PRIMITIVE_TRIANGLES);
 }
 
 ~~~~
@@ -281,7 +281,7 @@ Next up, we're going to make a mouse-reactive color and set the front color of o
 ~~~~{.cpp}
 
 void ofApp::draw(){
-    
+
     float percentX = mouseX / (float)ofGetWidth();
     percentX = ofClamp(percentX, 0, 1);
 
@@ -292,13 +292,13 @@ void ofApp::draw(){
     ofColor colorRight = ofColor::cyan;
     ofColor colorMix = colorLeft.getLerped(colorRight, percentX);
     ofSetColor(colorMix);
-    
+
     shader.begin(); // start shading!
 
     // a lot of the time you have to pass in variables into the shader.
     // in this case we need to pass it the elapsed time for the sine wave animation.
     shader.setUniform1f("time", ofGetElapsedTimef());
-    
+
     // translate plane into center screen.
     float tx = ofGetWidth() / 2;
     float ty = ofGetHeight() / 2;
@@ -310,7 +310,7 @@ void ofApp::draw(){
     ofRotate(rotation, 1, 0, 0);
 
     plane.drawWireframe();
-    
+
     shader.end(); // end shading!
 }
 ~~~~
@@ -338,7 +338,7 @@ void main()
     // but we displace all the vertex along the y axis (up the screen)/
     float displacementHeight = 100;
     float displacementY = sin(time + (position.x / 100.0)) * displacementHeight;
-	
+
     vec4 modifiedPosition = modelViewProjectionMatrix * position;
 	modifiedPosition.y += displacementY;
 	gl_Position = modifiedPosition;
@@ -352,7 +352,7 @@ As you hopefully recall from the last little section, we have one call to the fr
 #version 150
 uniform vec4 globalColor;
 out vec4 outputColor;
- 
+
 void main()
 {
     outputColor = globalColor;
@@ -369,46 +369,46 @@ This is going to let us use the mouse position in our shader to manipulate verti
 ~~~~{.cpp}
 
 void ofApp::draw(){
-    
+
     shader.begin();
-    
+
     // center screen.
     float cx = ofGetWidth() / 2.0;
     float cy = ofGetHeight() / 2.0;
-    
+
     // the plane is being position in the middle of the screen,
     // so we have to apply the same offset to the mouse coordinates before passing into the shader.
     float mx = mouseX - cx;
     float my = mouseY - cy;
-    
+
     // we can pass in a single value into the shader by using the setUniform1 function.
     // if you want to pass in a float value, use setUniform1f.
     // if you want to pass in a integer value, use setUniform1i.
     shader.setUniform1f("mouseRange", 150); // SET A UNIFORM
-    
+
     // we can pass in two values into the shader at the same time by using the setUniform2 function.
     // inside the shader these two values are set inside a vec2 object.
     shader.setUniform2f("mousePos", mx, my);  // SET A UNIFORM
-    
+
     // color changes from magenta to blue when moving the mouse from left to right.
     float percentX = mouseX / (float)ofGetWidth();
     percentX = ofClamp(percentX, 0, 1);
     ofFloatColor colorLeft = ofColor::magenta;
     ofFloatColor colorRight = ofColor::blue;
     ofFloatColor colorMix = colorLeft.getLerped(colorRight, percentX);
-    
+
     // create a float array with the color values.
     float mouseColor[4] = {colorMix.r, colorMix.g, colorMix.b, colorMix.a};
-    
+
     // we can pass in four values into the shader at the same time as a float array.
     // we do this by passing a pointer reference to the first element in the array.
     // inside the shader these four values are set inside a vec4 object.
     shader.setUniform4fv("mouseColor", &mouseColor[0]);  // SET A UNIFORM
-    
+
     ofTranslate(cx, cy);
 
     plane.drawWireframe();
-    
+
     shader.end();
 }
 
@@ -433,25 +433,25 @@ void main()
 {
     // copy position so we can work with it.
     vec4 pos = position;
-    
+
     // direction vector from mouse position to vertex position.
 	vec2 dir = pos.xy - mousePos;
-    
+
     // distance between the mouse position and vertex position.
 	float dist =  distance(pos.xy, mousePos);
-    
+
     // check vertex is within mouse range.
 	if(dist > 0.0 && dist < mouseRange) {
-		
+
 		// normalise distance between 0 and 1.
 		float distNorm = dist / mouseRange;
-        
+
 		// flip it so the closer we are the greater the repulsion.
 		distNorm = 1.0 - distNorm;
-		
+
         // make the direction vector magnitude fade out the further it gets from mouse position.
         dir *= distNorm;
-        
+
 		// add the direction vector to the vertex position.
 		pos.x += dir.x;
 		pos.y += dir.y;
@@ -473,7 +473,7 @@ Did you catch that? *gl_Position* is modified by the location of the mouse *rela
 
 out vec4 outputColor;
 uniform vec4 mouseColor;
- 
+
 void main()
 {
     outputColor = mouseColor;
@@ -486,7 +486,7 @@ Now you know how to pass a few different values into a shader and use them to dy
 <a name="textures"></a>
 ##Adding Textures
 
-Let's talk about textures: you know textures as what you see on the screen when you draw your ofImage or a frame from your *ofVideo* player. Lots of times in shading, for example, in a vertex array, the data is fed to the vertex shader one element at a time and there's no way for the vertex shader to access other elements. A texture, on the other hand, makes its entire contents available to any vertex or fragment shader. Those shaders sample the texture at one (or a hundred) different texture coordinates. This makes it really powerful for passing data into your shader, first, because uploading a texture is (comparatively) really fast and two, because you can access any point in them. 
+Let's talk about textures: you know textures as what you see on the screen when you draw your ofImage or a frame from your *ofVideo* player. Lots of times in shading, for example, in a vertex array, the data is fed to the vertex shader one element at a time and there's no way for the vertex shader to access other elements. A texture, on the other hand, makes its entire contents available to any vertex or fragment shader. Those shaders sample the texture at one (or a hundred) different texture coordinates. This makes it really powerful for passing data into your shader, first, because uploading a texture is (comparatively) really fast and two, because you can access any point in them.
 
 There's one nice little feature wrapped into the OF application: *mapTexCoordsFromTexture()*. This lets you just pass a texture reference to the plane and auto-calculate where each part of the texture should go. This is nice because it saves you needing to loop through each vertex and assign the texture coordinate. Of course, when you want to start doing tricky things yourself you'll want to do this yourself so you have more control over it, but for a simple ofPlanePrimitive, this is pretty sweet.
 
@@ -504,21 +504,21 @@ void ofApp::setup() {
 }
 
 void ofApp::draw() {
-    
+
     // bind our texture. in our shader this will now be tex0 by default
     // so we can just go ahead and access it there.
     img.getTextureReference().bind();
-    
+
     // start our shader, in our OpenGL3 shader this will automagically set
     // up a lot of matrices that we want for figuring out the texture matrix
     // and the modelView matrix
     shader.begin();
-    
+
     // get mouse position relative to center of screen
     float mousePosition = ofMap(mouseX, 0, ofGetWidth(), plane.getWidth(), -plane.getWidth(), true);
 
     shader.setUniform1f("mouseX", mousePosition);
-    
+
     ofPushMatrix();
     ofTranslate(ofGetWidth()/2, ofGetHeight()/2);
     plane.draw();
@@ -526,7 +526,7 @@ void ofApp::draw() {
 
     shader.end();
     img.getTextureReference().unbind();
-    
+
 }
 
 ~~~~
@@ -577,9 +577,9 @@ You'll notice that the *sampler2DRect* is called "tex0" and that we didn't actua
 
 1) You can bind a texture and access it as *tex0* if it's the only one bound without a uniform name.
 2) You can call *setUniformTexture()* and pass a uniform name and the texture itself
-3) You can call *image.draw()* and access the image as texOne if it's the only one bound without a uniform name.
+3) You can call *image.draw()* and access the image as tex0 if it's the only one bound without a uniform name.
 
-It's good to know all these because they're there and you'll see them out in the wild. 
+It's good to know all these because they're there and you'll see them out in the wild.
 
 ~~~~{.cpp}
 
@@ -590,7 +590,7 @@ It's good to know all these because they're there and you'll see them out in the
 uniform sampler2DRect tex0;
 in vec2 varyingtexcoord;
 out vec4 outputColor;
- 
+
 void main()
 {
     outputColor = texture(tex0, varyingtexcoord);
@@ -609,15 +609,15 @@ Using multiple textures in a shader isn't hard at all, you just need to make sur
 
 ~~~~{.cpp}
 void ofApp::draw(){
-    
+
     // draw a white rectangle for background.
     ofRect(0, 0, image.getWidth(), image.getHeight());
-    
+
     shader.begin();
     shader.setUniformTexture("imageMask", imageMask.getTextureReference(), 1);
 
     image.draw(0, 0);
-    
+
     shader.end();
 }
 ~~~~
@@ -650,7 +650,7 @@ Voila, you're well on your way to recreating Photoshop. Speaking of which, let's
 <a name="multitex"></a>
 ##Multiple Textures
 
-First: what is an FBO? At it's core it’s a container for textures and an optional depth buffer. Kind of like, well, an OpenGL framebuffer, which is what you're normally rendering to. One way, conceptually correct but technically a bit loose, is that it's another renderer that you can write to. You can draw textures to it, draw 3D or 2D objects to it, render the view of cameras inside of it, all with one key difference: it's just an object. You can have multiple of them, draw all kinds of things inside of them, and then get all the textures out of them to play with in a shader or just draw them directly to the screen. They are, for most purposes, little render buffers and as such, they're excellent for doing multiple shader passes. So, we're going to set up two *ofFbo* objects and use them to mask textures using different channels, i.e. RGB elements of the textures. You'll see how this works once you run the application. Those textures are, to make it more interesting, coming from an ofCamera and an ofVideoPlayer, that's actually not a big deal to set up. We'll set up the camera and movie first in the setup() method *and* we'll set up both of the FBO objects that we're going to use:
+First: what is an FBO? At it's core it’s a container for textures and an optional depth buffer. Kind of like, well, an OpenGL framebuffer, which is what you're normally rendering to. One way to think of it, conceptually correct but technically a bit loose, is that it's another renderer that you can write to. You can draw textures to it, draw 3D or 2D objects to it, render the view of cameras inside of it, all with one key difference: it's just an object. You can have multiple of them, draw all kinds of things inside of them, and then get all the textures out of them to play with in a shader or just draw them directly to the screen. They are, for most purposes, little render buffers and as such, they're excellent for doing multiple shader passes. So, we're going to set up two *ofFbo* objects and use them to mask textures using different channels, i.e. RGB elements of the textures. You'll see how this works once you run the application. Those textures are, to make it more interesting, coming from an ofCamera and an ofVideoPlayer, that's actually not a big deal to set up. We'll set up the camera and movie first in the setup() method *and* we'll set up both of the FBO objects that we're going to use:
 
 
 ~~~~{.cpp}
@@ -680,15 +680,15 @@ Calling ofFbo::begin() sets the FBO as the render buffer that everything will be
      //------------------------------------------- draw to fbo.
     fbo.begin();
     ofClear(255, 255, 255, 255);
-    
+
     shader.begin();
     shader.setUniformTexture("redTex", camera.getTextureReference(), 1);
     shader.setUniformTexture("greenTex", greenOF, 2);
     shader.setUniformTexture("blueTex", movie.getTextureReference(), 3);
     shader.setUniformTexture("imageMask", imageMask.getTextureReference(), 4);
-    
+
     imageMask.draw(0, 0);
-    
+
     shader.end();
     fbo.end();
 
@@ -697,26 +697,26 @@ Calling ofFbo::begin() sets the FBO as the render buffer that everything will be
 Now we've just drawn the image mask, camera texture, color texture, and movie texture to the ofFbo, which means that none of them will show up until the second fbo object is drawn. So, continuing down the *draw()* method, we're drawing the camera, the image, the movie, the mask FBO and the final rendered FBO.
 
 ~~~~{.cpp}
-    
+
     ofSetColor(255);
     camera.draw(5,5,320,240);
     ofSetColor(ofColor::red);
     ofDrawBitmapString("RED", 5+30, 5+30);
-    
+
     ofSetColor(255);
     greenOF.draw(320+10,5,320,240);
     ofSetColor(ofColor::green);
     ofDrawBitmapString("GREEN", 320+10+30,5+30);
-    
+
     ofSetColor(255);
     movie.draw(320*2+15,5,320,240);
     ofSetColor(ofColor::blue);
     ofDrawBitmapString("BLUE", 320*2+5+30,5+30);
-    
+
     ofSetColor(255);
     imageMask.draw(320+10,240+10,320,240);
     ofDrawBitmapString("RGB MASK", 320+10+30,240+10+30);
-    
+
     fbo.draw(320+10,240*2+15,320,240);
     ofDrawBitmapString("Final FBO", 320+10+30,240*2+15+30);
 }
@@ -762,19 +762,19 @@ Setup is very similar to the previous example: make two ofFbo objects, allocate 
     backgroundImage.loadImage("A.jpg");
     foregroundImage.loadImage("B.jpg");
     brushImage.loadImage("brush.png");
-    
+
     int width = backgroundImage.getWidth();
     int height = backgroundImage.getHeight();
-    
+
     maskFbo.allocate(width, height);
     fbo.allocate(width, height);
-    
+
     // Clear the FBO's
     // otherwise it will bring some junk with it from the memory
     maskFbo.begin();
     ofClear(0,0,0,255);
     maskFbo.end();
-    
+
     fbo.begin();
     ofClear(0,0,0,255);
     fbo.end();
@@ -788,12 +788,12 @@ The *draw()* method is really just passing data into these two FBO objects:
 // this is our alpha mask which we draw into.
 if(bBrushDown) {
     maskFbo.begin();
-    
+
     int brushImageSize = 50;
     int brushImageX = mouseX - brushImageSize * 0.5;
     int brushImageY = mouseY - brushImageSize * 0.5;
     brushImage.draw(brushImageX, brushImageY, brushImageSize, brushImageSize);
-    
+
     maskFbo.end();
 }
 
@@ -852,7 +852,7 @@ void main()
 
     // get alpha from mask
     float mask = texture(maskTex, texCoordVarying).r;
-    
+
     //mix the rgb from tex0 with the alpha of the mask
     outputColor = vec4(src , mask);
 }
@@ -870,7 +870,7 @@ In this application we're going to generate some noise data and store it in a te
 void ofApp::update(){
     float noiseScale = ofMap(mouseX, 0, ofGetWidth(), 0, 0.1);
     float noiseVel = ofGetElapsedTimef();
-    
+
     unsigned char * pixels = img.getPixels();
     int w = img.getWidth();
     int h = img.getHeight();
@@ -938,10 +938,10 @@ void main()
 {
     // get the position of the vertex relative to the modelViewProjectionMatrix
     vec4 modifiedPosition = modelViewProjectionMatrix * position;
-    
+
     // we need to scale up the values we get from the texture
     float scale = 100;
-    
+
     // here we get the red channel value from the texture
     // to use it as vertical displacement
     float displacementY = texture(tex0, texcoord).r;
@@ -949,7 +949,7 @@ void main()
     // use the displacement we created from the texture data
     // to modify the vertex position
     modifiedPosition.y += displacementY * scale;
-    
+
     // this is the resulting vertex position
     gl_Position = modifiedPosition;
 
@@ -978,33 +978,33 @@ In the draw() we're going to create two *ofFbo*s to draw into, run our *shaderBl
 ~~~~{.cpp}
 
 void ofApp::draw(){
-    
+
     float blur = ofMap(mouseX, 0, ofGetWidth(), 0, 10, true);
-    
+
     //----------------------------------------------------------
     fboBlurOnePass.begin();
-    
+
     shaderBlurX.begin();
     shaderBlurX.setUniform1f("blurAmnt", blur);
 
     image.draw(0, 0);
-    
+
     shaderBlurX.end();
-    
+
     fboBlurOnePass.end();
-    
+
     //----------------------------------------------------------
     fboBlurTwoPass.begin();
-    
+
     shaderBlurY.begin();
     shaderBlurY.setUniform1f("blurAmnt", blur);
-    
+
     fboBlurOnePass.draw(0, 0);
-    
+
     shaderBlurY.end();
-    
+
     fboBlurTwoPass.end();
-    
+
     //----------------------------------------------------------
     ofSetColor(ofColor::white);
     fboBlurTwoPass.draw(0, 0);
@@ -1026,21 +1026,21 @@ out vec4 outputColor;
 void main()
 {
     vec4 color;
-    
+
     color += 1.0 * texture(tex0, texCoordVarying + vec2(blurAmnt * -4.0, 0.0));
     color += 2.0 * texture(tex0, texCoordVarying + vec2(blurAmnt * -3.0, 0.0));
     color += 3.0 * texture(tex0, texCoordVarying + vec2(blurAmnt * -2.0, 0.0));
     color += 4.0 * texture(tex0, texCoordVarying + vec2(blurAmnt * -1.0, 0.0));
-    
+
     color += 5.0 * texture(tex0, texCoordVarying + vec2(blurAmnt, 0));
-    
+
     color += 4.0 * texture(tex0, texCoordVarying + vec2(blurAmnt * 1.0, 0.0));
     color += 3.0 * texture(tex0, texCoordVarying + vec2(blurAmnt * 2.0, 0.0));
     color += 2.0 * texture(tex0, texCoordVarying + vec2(blurAmnt * 3.0, 0.0));
     color += 1.0 * texture(tex0, texCoordVarying + vec2(blurAmnt * 4.0, 0.0));
-    
+
     color /= 25.0;
-    
+
     outputColor = color;
 }
 
