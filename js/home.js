@@ -9,7 +9,7 @@ function OnLoad() {
     feedGithub.load(feedGithubLoaded);
 
     var feedForum = new google.feeds.Feed("http://forum.openframeworks.cc/latest.rss");
-    feedForum.setNumEntries(8);
+    feedForum.setNumEntries(4);
     // Calling load sends the request off.  It requires a callback function.
     feedForum.load(feedForumLoaded);
 

@@ -73,7 +73,9 @@ function feedForumLoaded(result) {
       a.appendChild(document.createTextNode(Encoder.htmlDecode(entry.title)));
       li.appendChild(a);
       li.appendChild(document.createElement("br"));
-      li.appendChild(document.createTextNode(Encoder.htmlDecode(entry.contentSnippet.substr(0,100)+"...")));
+      var span = document.createElement("span")
+      span.innerHTML = entry.content.substr(0,150) + "...</p>"
+      li.appendChild(span);
       ul.appendChild(li);
     }
     container.appendChild(ul);
