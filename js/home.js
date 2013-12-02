@@ -8,8 +8,8 @@ function OnLoad() {
     // Calling load sends the request off.  It requires a callback function.
     feedGithub.load(feedGithubLoaded);
 
-    var feedForum = new google.feeds.Feed("http://feeds.feedburner.com/openframeworks-forum");
-    feedForum.setNumEntries(4);
+    var feedForum = new google.feeds.Feed("http://openframeworks.cc/latest.rss");
+    feedForum.setNumEntries(8);
     // Calling load sends the request off.  It requires a callback function.
     feedForum.load(feedForumLoaded);
 
