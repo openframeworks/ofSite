@@ -70,7 +70,7 @@ function feedForumLoaded(result) {
       var li = document.createElement("li");
       var a = document.createElement("a");
       a.href = entry.link;
-      a.appendChild(document.createTextNode(Encoder.htmlDecode(entry.author) + ": " + Encoder.htmlDecode(entry.title)));
+      a.appendChild(document.createTextNode(Encoder.htmlDecode(entry.title)));
       li.appendChild(a);
       li.appendChild(document.createElement("br"));
       li.appendChild(document.createTextNode(Encoder.htmlDecode(entry.contentSnippet.substr(0,100)+"...")));
