@@ -468,6 +468,7 @@ And finally, add these lines to your update function:
 ~~~
 
 In setup, we do two new things:
+
 1. Specified that our program will be capped at 60 frames per second using [ofSetFrameRate(60)](http://openframeworks.cc/documentation/application/ofAppRunner.html#!show_ofSetFrameRate).  We could get by without doing this, but it is a useful thing to do when you are using time.
 2. We created a variable called offsets.  It is vector of ofVec3fs that contain random values.  These values allow us to move each vertex in a random x, y and z direction seemingly independently of the movement of the other vertices.
 
