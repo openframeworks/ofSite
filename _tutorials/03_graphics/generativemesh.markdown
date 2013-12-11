@@ -410,6 +410,7 @@ We've got ourselves a meshy mesh now, so let's go ahead and some more rules to a
 
 ###Jitter
 The mesh resembles something you might find under a microscope, so let's add some 'organic' movement to the vertices. The motion will likely be much faster on your machine than in the gif below (browsers cap the maximum framerate of gifs), but it will give you an idea of what we are going for:
+
 ![Jitter](003_images/MeshJitterEndlessSmall.gif) 
 
 On each frame, we are going to move each vertex by a small, random amount.  Instead of using [ofRandom()](http://www.openframeworks.cc/documentation/math/ofMath.html#show_ofRandom) to displace our vertices, we are going to use [ofSignedNoise()](http://openframeworks.cc/documentation/math/ofMath.html#!show_ofSignedNoise).  ofSignedNoise() will return random values that are smoothed out in time.  Check out Daniel Shiffman's description of Perlin noise in section [1.6 Perlin Noise (A Smoother Approach)](http://natureofcode.com/book/introduction/) of his online book.
