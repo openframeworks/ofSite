@@ -485,7 +485,21 @@ Next, we can add some swirling orbital motion (these *were* originally stars, so
 ![Orbit1](003_images/Orbit1Small.png) 
 ![Orbit2](003_images/Orbit2Small.png) 
 
-We're going to make use of the sin function to get orbital motion.  If you want a good primer, check out [chapter 3](http://natureofcode.com/book/chapter-3-oscillation/) of The Nature of Code.
+We're going to make use of trigonometric functions to make orbital motion.  If you want a good primer, check out [chapter 3](http://natureofcode.com/book/chapter-3-oscillation/) of The Nature of Code.  
+
+We want our vertices to move circularly around a central location.  Forget about the z-dimension for now.  Imagine a single vertex on the screen.  We are doing to define a circle, centered on the screen
+
+sgsadgsagasfdgadsg
+
+
+We are basically going to represent our vertices in polar coordinates which means that we can locate a vertex in space
+
+Sine and cosine  
+
+You could also check out the [wiki](http://en.wikipedia.org/wiki/Sine) for sine - specifically the "Relation to the unit circle" section.  
+http://en.wikipedia.org/wiki/Polar_coordinate_system "Converting between polar and Cartesian coordinates"
+
+
 
 
 Talk about sin, using time as radians, atan2, phase, copying meshes
