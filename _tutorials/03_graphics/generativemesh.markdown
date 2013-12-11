@@ -413,11 +413,11 @@ The mesh resembles something you might find under a microscope, so let's add som
 
 ![Jitter](003_images/MeshJitterEndlessSmall.gif) 
 
-On each frame, we are going to move each vertex by a small, random amount.  Instead of using [ofRandom()](http://www.openframeworks.cc/documentation/math/ofMath.html#show_ofRandom) to displace our vertices, we are going to use [ofSignedNoise()](http://openframeworks.cc/documentation/math/ofMath.html#!show_ofSignedNoise) which generates a thing called Perlin noise.  Check out Daniel Shiffman's description of Perlin noise in section [1.6 Perlin Noise (A Smoother Approach)](http://natureofcode.com/book/introduction/) of his online book.  Perlin noise yields random values that smoothly vary over time.  You can get a good idea of the difference between random values and perlin noise by checking out figure 1.5 and figure 1.6 of Daniel's book.  
+On each frame, we are going to move each vertex by a small, random amount.  Instead of using [ofRandom()](http://www.openframeworks.cc/documentation/math/ofMath.html#show_ofRandom) to displace our vertices, we are going to use [ofSignedNoise()](http://openframeworks.cc/documentation/math/ofMath.html#!show_ofSignedNoise) which generates a thing called Perlin noise.  Check out Daniel Shiffman's description of Perlin noise in section [1.6 Perlin Noise (A Smoother Approach)](http://natureofcode.com/book/introduction/) of his online book.  Perlin noise yields random values that smoothly vary over time.  You can get a good idea of the difference between random values and perlin noise by checking out [figure 1.5](http://natureofcode.com/book/imgs/intro/intro_05.png) (which shows sequential values of noise) and [figure 1.6](http://natureofcode.com/book/imgs/intro/intro_06.png) (which shows sequential random values) from the book.  
 
 With ofRandom(), you specify a range of values, and it returns a random value within that range.  If you were to call it multiple times in a row, you will (very, very likely) get a new value every time you call it.  Perlin noise works a bit differently.  ofSignedNoise() will always return a value between -1.0 and 1.0, but you still have to pass in an input to the function.  Think of ofSignedNoise() as a squiggly line drawn on graph paper.  You pass in a coordinate, an x value, and it will return the corresponding y value.  If you were to call ofSignedNoise(3.0) multiple times, you would get the same value every time.  
 
-When using Perlin noise to generate motion, it is common to pass in the current time as the input (the x value).  So, in order to displace our vertices, we are going to pass in the time (using [ofGetElapsedTimef()](http://www.openframeworks.cc/documentation/utils/ofUtils.html#!show_ofGetElapsedTimef]) to ofSignedNoise, so that it will give us values that change smoothly over time.  One caveat - we want our vertices to appear to move independently of one another.  If we pass in the same time to ofSignedNoise for every vertex, then every vertex will move in the same direction.  When we displace vertex one, we need to use a different time than when we displace vertex two (and vertex 3, vertex 4, etc.).  
+When using Perlin noise to generate motion, it is common to pass in the current time as the input (the x value).  So, in order to displace our vertices, we are going to pass in the time (using [ofGetElapsedTimef()](http://www.openframeworks.cc/documentation/utils/ofUtils.html#!show_ofGetElapsedTimef]) to ofSignedNoise, so that it will give us values that change smoothly over time.  One caveat - we want our vertices to appear to move independently of one another.  If we pass in the same time to ofSignedNoise for every vertex on a frame, then every vertex will move in the same direction.  When we displace vertex one, we need to use a different time than when we displace vertex two (and vertex 3, vertex 4, etc.).  
 
 Let's jump into the code.  Add this to your header:
 ~~~.h
@@ -443,6 +443,8 @@ And add the following two lines to your setup function:
                 mesh.addColor(c);
 
                 // And add this line:
+                // It will create a ofVec3f with 3 random values 
+                // These will allow us to move the x, y and z coordinates of each vertex independently
                 offsets.push_back(ofVec3f(ofRandom(0,100000), ofRandom(0,100000), ofRandom(0,100000)));
             }
         }
@@ -459,7 +461,15 @@ And finally, add these lines to your update function:
         float timeScale = 5.0;
         float displacementScale = 0.75;
         ofVec3f timeOffsets = offsets[i];
-
+	
+	// A typical design patter for using Perlin noise uses a couple variables:
+	// ofSignedNoise(time*timeScale+timeOffset)*displacementScale
+	//     ofSignedNoise(time) gives us noise values that change smoothly over time
+	//     ofSignedNoise(time*timeScale) allows us to control the smoothness of our noise (smaller timeScale, smoother values)
+	//     ofSignedNoise(time+timeOffset) allows us to use the same Perlin noise function to control multiple things and have them look like they are moving independently
+	//     ofSignedNoise(time)*displacementScale allows us to change the bounds of the noise from [-1, 1] to whatever we want 
+	// Combine all of those parameters together, and you've got some nice control over your noise
+	
         vert.x += (ofSignedNoise(time*timeScale+timeOffsets.x)) * displacementScale;
         vert.y += (ofSignedNoise(time*timeScale+timeOffsets.y)) * displacementScale;
         vert.z += (ofSignedNoise(time*timeScale+timeOffsets.z)) * displacementScale;
@@ -475,7 +485,7 @@ In setup, we do two new things:
 Then in update:
 
 1. We get the location of a vertex using mesh.[getVertex()](http://openframeworks.cc/documentation/3d/ofMesh.html#!show_getVertex) and store it in a variable called vert.
-3. We move the x, y and z values of vert using (ofSignedNoise(time*timeScale+timeOffsets)) * displacementScale.  If we just used ofSignedNoise(time), all the vertices would move the same amount in x, y, z on every frame. ofSignedNoise(time+timeOffsets) allows us to make each vertex move differently.  timeOffsets is a ofVec3f, so that we can move a vertex by a different amount in the x, y and z directions.  We also add in a value called timeScale: ofSignedNoise(time*timeScale+timeOffsets).  This variable allows us to control the smoothness of our random noise.  Lastly, we have a variable called displacementScale.  This will allow us to change the range of our noise values from [-1.0, 1.0] to whatever we want.  So, using ofSignedNoise instead of ofRandom gives you a more fluid looking meshy substance (and allows you a bit more control).  I choose the values of our noise parameters, but play with them and see how the motion changes.  
+3. We move the x, y and z values of vert using ofSignedNoise() with a set of a few parameters.
 4. We update the position of our vertex using [mesh.setVertex()](http://openframeworks.cc/documentation/3d/ofMesh.html#show_setVertex).
 
 Great! Now we have a warbly mesh.
@@ -487,49 +497,60 @@ Next, we can add some swirling orbital motion (these *were* originally stars, so
 
 We're going to make use of trigonometric functions to make orbital motion.  If you want a good primer, check out [chapter 3](http://natureofcode.com/book/chapter-3-oscillation/) of The Nature of Code.  
 
-We want our vertices to move circularly around a central location.  Forget about the z-dimension for now.  Imagine a single vertex on the screen.  We are doing to define a circle, centered on the screen
+Let's forget about the z-dimension for now and focus in on the x- and y-dimensions.  If we want to take a point and have it orbit in a circle, we can make use of angles, sine and cosine to do that.  Check out the [wiki](http://en.wikipedia.org/wiki/Polar_coordinate_system) on polar coordinates - specifically, have a look at the section on "Converting between polar and Cartesian coordinates."  
 
-sgsadgsagasfdgadsg
+If we know how far our point is from the center, we can define its location in space using a distance and an angle (polar coordinates).  We can take that distance and angle and use it to convert to x and y values (Cartesian coordinates):
+x = distance * cos(angle)
+y = distance * sin(angle)
 
+If you want to swing that point in a circle, then you just need to increase the angle over time, and the maths will take care of the rest.  
 
-We are basically going to represent our vertices in polar coordinates which means that we can locate a vertex in space
+So for our purposes, we need to:
 
-Sine and cosine  
+1. Define a center point for our vertices to rotate around
+2. Calculate the initial polar coordinates that our vertices start at
+3. Slowly increase the angle of the polar coordinate for each vertex over time
 
-You could also check out the [wiki](http://en.wikipedia.org/wiki/Sine) for sine - specifically the "Relation to the unit circle" section.  
-http://en.wikipedia.org/wiki/Polar_coordinate_system "Converting between polar and Cartesian coordinates"
-
-
-
-
-Talk about sin, using time as radians, atan2, phase, copying meshes
-
-Let's get some new variables in our header file
+Let's get some new variables in our header file:
 ~~~.h
+		// We are going to use these to allow us to toggle orbiting on and off
 		ofMesh meshCopy;
-		vector<float> distances;
-		vector<float> phases;
-		ofVec3f meshCentroid;
 		bool orbiting;
 		float startOrbitTime;
+		
+		// These variables will let us store the polar coordinates of each vertex
+		vector<float> distances;
+		vector<float> angles;
+		ofVec3f meshCentroid;
 ~~~
 
 Add this at the end of your setup function:
 ~~~.cpp
+   // We need to calculate our center point for the mesh
+   // ofMesh has a method called getCentroid() that will 
+   // find the average location over all of our vertices
+   //    http://en.wikipedia.org/wiki/Centroid
    meshCentroid = mesh.getCentroid();
-    for (int i=0; i<numVerts; ++i) {
+   
+   // Now that we know our centroid, we need to know the polar coordinates (distance and angle)
+   // of each vertex relative to that center point.
+   // We've found the distance between points before, but what about the angle?
+   // This is where atan2 comes in.  atan2(y, x) takes an x and y value and returns the angle relative
+   //     to the origin (0,0).  If we want the angle between two points (x1, y1) and (x2, y2) then we
+   //     just need to use atan2(y2-y1, x2-x1).
+   for (int i=0; i<numVerts; ++i) {
         ofVec3f vert = mesh.getVertex(i);
         float distance = vert.distance(meshCentroid);
-        float phase = atan2(vert.y-meshCentroid.y, vert.x-meshCentroid.x);
+        float angle = atan2(vert.y-meshCentroid.y, vert.x-meshCentroid.x);
         distances.push_back(distance);
-        phases.push_back(phase);
+        angles.push_back(angle);
     }
-
+	
+    // These variables will allow us to toggle orbiting on and off
     orbiting = false;
     startOrbitTime = 0.0;
     meshCopy = mesh;
 ~~~
-
 Add this into your update function:
 ~~~.cpp
     if (orbiting) {
@@ -537,13 +558,22 @@ Add this into your update function:
         for (int i=0; i<numVerts; ++i) {
             ofVec3f vert = mesh.getVertex(i);
             float distance = distances[i];
-            float phase = phases[i];
+            float angle = angles[i];
             float elapsedTime = ofGetElapsedTimef() - startOrbitTime;
-
-            float angle = (elapsedTime * ofMap(distance, 0, 200, 1, 0.25, true)) + phase;
-
+            
+            // Lets adjust the speed of the orbits such that things that are closer to 
+            // the center rotate faster than things that are more distant 
+            float speed = ofMap(distance, 0, 200, 1, 0.25, true);
+            
+            // To find the angular rotation of our vertex, we use the current time and
+            // the starting angular rotation
+            float currentAngle = elapsedTime * speed + angle;
+            
+            // Remember that our distances are calculated relative to the centroid of the mesh, so
+            // we need to shift everything back to screen coordinates by adding the x and y of the centroid 
             vert.x = distance * cos(angle) + meshCentroid.x;
             vert.y = distance * sin(angle) + meshCentroid.y;
+            
             mesh.setVertex(i, vert);
         }
     }
