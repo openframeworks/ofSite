@@ -413,16 +413,18 @@ The mesh resembles something you might find under a microscope, so let's add som
 
 ![Jitter](003_images/MeshJitterEndlessSmall.gif) 
 
-On each frame, we are going to move each vertex by a small, random amount.  Instead of using [ofRandom()](http://www.openframeworks.cc/documentation/math/ofMath.html#show_ofRandom) to displace our vertices, we are going to use [ofSignedNoise()](http://openframeworks.cc/documentation/math/ofMath.html#!show_ofSignedNoise).  ofSignedNoise() will return random values that are smoothed out in time.  Check out Daniel Shiffman's description of Perlin noise in section [1.6 Perlin Noise (A Smoother Approach)](http://natureofcode.com/book/introduction/) of his online book.
+On each frame, we are going to move each vertex by a small, random amount.  Instead of using [ofRandom()](http://www.openframeworks.cc/documentation/math/ofMath.html#show_ofRandom) to displace our vertices, we are going to use [ofSignedNoise()](http://openframeworks.cc/documentation/math/ofMath.html#!show_ofSignedNoise) which generates a thing called Perlin noise.  Check out Daniel Shiffman's description of Perlin noise in section [1.6 Perlin Noise (A Smoother Approach)](http://natureofcode.com/book/introduction/) of his online book.  Perlin noise yields random values that smoothly vary over time.  You can get a good idea of the difference between random values and perlin noise by checking out figure 1.5 and figure 1.6 of Daniel's book.  
 
-In order to displace our vertices, we are going to use the 1D version of ofSignedNoise() which takes a single input and returns a value between -1.0 and 1.0.  We are going to tell ofSignedNoise what time it is, and it will return a smoothly varying random value.  Since we want our vertices to appear to move independently of one another, when we displace vertex one, we need to use a different time than when we displace vertex two.
+With ofRandom(), you specify a range of values, and it returns a random value within that range.  If you were to call it multiple times in a row, you will (very, very likely) get a new value every time you call it.  Perlin noise works a bit differently.  ofSignedNoise() will always return a value between -1.0 and 1.0, but you still have to pass in an input to the function.  Think of ofSignedNoise() as a squiggly line drawn on graph paper.  You pass in a coordinate, an x value, and it will return the corresponding y value.  If you were to call ofSignedNoise(3.0) multiple times, you would get the same value every time.  
 
-Add this to your header:
+When using Perlin noise to generate motion, it is common to pass in the current time as the input (the x value).  So, in order to displace our vertices, we are going to pass in the time (using [ofGetElapsedTimef()](http://www.openframeworks.cc/documentation/utils/ofUtils.html#!show_ofGetElapsedTimef]) to ofSignedNoise, so that it will give us values that change smoothly over time.  One caveat - we want our vertices to appear to move independently of one another.  If we pass in the same time to ofSignedNoise for every vertex, then every vertex will move in the same direction.  When we displace vertex one, we need to use a different time than when we displace vertex two (and vertex 3, vertex 4, etc.).  
+
+Let's jump into the code.  Add this to your header:
 ~~~.h
 		vector<ofVec3f> offsets;
 ~~~
 
-And inside of your setup function add:
+And add the following two lines to your setup function:
 ~~~.cpp
     // Add this line:
     ofSetFrameRate(60);
@@ -447,7 +449,7 @@ And inside of your setup function add:
     }
 ~~~
 
-And finally, inside of your update function add:
+And finally, add these lines to your update function:
 ~~~.cpp
     int numVerts = mesh.getNumVertices();
     for (int i=0; i<numVerts; ++i) {
@@ -465,11 +467,15 @@ And finally, inside of your update function add:
     }
 ~~~
 
-displacementScale will change how far things will move on each frame
-timeScale will determine how smooth the noise is 
-Play with the parameters and see what values you like best
+In setup, we do two new things:
+1. Specified that our program will be capped at 60 frames per second using [ofSetFrameRate(60)](http://openframeworks.cc/documentation/application/ofAppRunner.html#!show_ofSetFrameRate).  We could get by without doing this, but it is a useful thing to do when you are using time.
+2. We created a variable called offsets.  It is vector of ofVec3fs that contain random values.  These values allow us to move each vertex in a random x, y and z direction seemingly independently of the movement of the other vertices.
 
-Using ofSignedNoise instead of ofRandom gives you a more fluid looking meshy substance (and allows you to control the fluidity using *timeScale*).
+Then in update:
+1. We get the location of a vertex using mesh.[getVertex()](http://openframeworks.cc/documentation/3d/ofMesh.html#!show_getVertex) and store it in a variable called vert.
+3. We move the x, y and z values of vert using (ofSignedNoise(time*timeScale+timeOffsets)) * displacementScale.  If we just used ofSignedNoise(time), all the vertices would move the same amount in x, y, z on every frame. ofSignedNoise(time+timeOffsets) allows us to make each vertex move differently.  timeOffsets is a ofVec3f, so that we can move a vertex by a different amount in the x, y and z directions.  We also add in a value called timeScale: ofSignedNoise(time*timeScale+timeOffsets).  This variable allows us to control the smoothness of our random noise.  Lastly, we have a variable called displacementScale.  This will allow us to change the range of our noise values from [-1.0, 1.0] to whatever we want.  So, using ofSignedNoise instead of ofRandom gives you a more fluid looking meshy substance (and allows you a bit more control).  I choose the values of our noise parameters, but play with them and see how the motion changes.  
+4. We update the position of our vertex using [mesh.setVertex()](http://openframeworks.cc/documentation/3d/ofMesh.html#show_setVertex).
+
 
 ###Orbit
 Our wiggly mesh could use some swirling orbiting motion.  
