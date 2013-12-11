@@ -35,7 +35,7 @@ The tutorial is broken into three sections:
 ##Basics: Working with ofMesh
 
 
-A mesh is a collection of **vertices** - points in 3D space - that can be connected up in different ways.  The shapes that are formed by connecting these vertices are called **primitives**.  The primitives are our smallest building blocks that we can put together to form a mesh.
+A mesh is a collection of **vertices** - points in 3D space - that can be connected up in different ways.  The shapes that are formed by connecting these vertices are called **primitives**.  The primitives are our smallest building blocks that we can put together to form a mesh.  We can create a couple different kinds of primitives:
 * You can choose to not connect any of your vertices and just draw points as the primitives.
 * You can choose to connect pairs of vertices and draw lines as the primitives.
 * You can connect three or four (or more) vertices and draw triangles or quads  (or polygons) as the primitives.
@@ -44,10 +44,10 @@ To make this a little more concrete, check out the below mesh.  The vertices are
 
 ![Keenan Crane's public domain cow shown in wireframe](003_images/Keenan_Crane_Public_Domain_Cow_Small.png) 
 
-In this tutorial, we'll focus on using points and lines as our primitives.  Let's get something drawn on our screen.  When creating a mesh you should:
+We are going to focus on using points and lines as our primitives.  Let's get something drawn on our screen.  When creating a mesh you should:
 
 1. Define an [ofMesh](http://www.openframeworks.cc/documentation/3d/ofMesh.html) variable.  Let's call it mesh.
-2. Specify what primitive mode (points, lines, etc.) that the mesh should use to connect its vertices using mesh.[setMode()](http://www.openframeworks.cc/documentation/3d/ofMesh.html#!show_setMode).  We'll be using points as our primitive, so that means we should use **OF_PRIMITIVE_POINTS** mode.
+2. Specify what primitive mode (points, lines, etc.) the mesh should use to connect its vertices using mesh.[setMode()](http://www.openframeworks.cc/documentation/3d/ofMesh.html#!show_setMode).  We'll be using points as our primitive, so that means we should use **OF_PRIMITIVE_POINTS** mode.
 3. Add some vertices using mesh.[addVertex()](http://www.openframeworks.cc/documentation/3d/ofMesh.html#show_addVertex).  A vertex is an [ofVec3f](http://www.openframeworks.cc/documentation/math/ofVec3f.html), so if you haven't used that class before, check out the example on the documentation page.
 4. Draw your mesh using mesh.[draw()](http://www.openframeworks.cc/documentation/3d/ofMesh.html#show_draw).
 
@@ -103,7 +103,7 @@ void testApp::setup() {
 
 We first enable colors using mesh.[enableColors()](http://www.openframeworks.cc/documentation/3d/ofMesh.html#show_enableColors).  Colors are enabled by default, but it is good practice to include this line.  Then we can add colors using mesh.[addColor()](http://www.openframeworks.cc/documentation/3d/ofMesh.html#show_addColor).  Colors are specified using ofFloatColor which is like [ofColor](http://www.openframeworks.cc/documentation/types/ofColor.html) except that the red, blue, green and alpha channels are specified with a float between 0.0 and 1.0.  (You *can* use an ofColor if you really want to do so, but you should use ofFloatColor.)   The first color we add applies to the first vertex, the second color to the second vertex, etc.
 
-You find our point boring?  Time for some some lines.  Try each of these three modes for yourself:
+You find our points boring?  Time for some some lines then.  We need to change the primitive mode to lines, but there are three different line primitive options.  Try each of these them for yourself:
 
 ~~~~{.cpp}
     mesh.setMode(OF_PRIMITIVE_LINES);
@@ -113,7 +113,7 @@ You find our point boring?  Time for some some lines.  Try each of these three m
 
 ![Triangle Points](003_images/TriangleLineMode.png) 
 
-Each mode uses lines as the graphical primitives, but they each have a different way that they generate lines from the vertices.
+The modes each have a different way that they generate lines from the vertices:
 * **OF_PRIMITIVE_LINE** creates an *independent* line out of each pair of vertices.  If you have a set of vertices - V<sub>1</sub>, V<sub>2</sub>, V<sub>3</sub>, V<sub>4</sub>, ... - then V<sub>1</sub> will connect to V<sub>2</sub> and V<sub>3</sub> will connect to V<sub>4</sub>.
 * **OF_PRIMITIVE_LINE_STRIP** will create a set of *connected* lines out of each pair of vertices.  V<sub>1</sub> will connect with V<sub>2</sub>.   V<sub>2</sub> will connect with  V<sub>3</sub>. Etc.
 * **OF_PRIMITIVE_LINE_LOOP** will create a set of connected lines, and it will connect the first and last vertices.  
@@ -129,7 +129,7 @@ Only OF_PRIMITIVE_LINE_LOOP outlined the whole triangle. If you wanted to create
     mesh.addVertex(top);
 ~~~~
 
-You would be right to think that this feels excessive to add duplicate vertices.  Let’s try something else:
+Feels excessive to add duplicate vertices? Let’s try something else:
 
 ~~~~{.cpp}
 void testApp::setup() {
@@ -159,13 +159,13 @@ void testApp::setup() {
 }
 ~~~
  
-Indices add a layer of abstraction.  Each vertex that you add to a mesh is tacked on to the end of a big old array, so each vertex has a number that uniquely identifies its position (or index) in that array.  There’s the zero-th vertex in the list, the first vertex in the list, the second, etc.  So now you can point to an existing vertex using an index.
+Indices add a layer of abstraction.  Each vertex that you add to a mesh is tacked on to the end of a big old array.  That means that each vertex has a number that uniquely identifies its position (or index) in that array.  There’s the zero-th vertex in the list, the first vertex in the list, the second, etc.  So you can point to an existing vertex using its index number.
 
-When you call mesh.[enableIndices()](http://www.openframeworks.cc/documentation/3d/ofMesh.html#!show_enableIndices), openFrameworks creates an empty array of indices.  When you use [addIndex()](http://www.openframeworks.cc/documentation/3d/ofMesh.html#show_addIndex), you are adding values to the end of this array.  When the mesh is about to be drawn to the screen, instead of looking through the vertices array to create primitives, openFrameworks will look through your array of indices to determine how to create the primitives.
+When you call mesh.[enableIndices()](http://www.openframeworks.cc/documentation/3d/ofMesh.html#!show_enableIndices), openFrameworks creates an empty array of indices.  When you use [addIndex()](http://www.openframeworks.cc/documentation/3d/ofMesh.html#show_addIndex), you are adding values to the end of this array.  When the mesh is about to be drawn to the screen, instead of looping through the array of vertices to create graphical primitives, openFrameworks will loop through your array of indices to determine how to create the primitives.
 
-So when our mode is OF_PRIMITIVE_LINE and our array of indices is {0, 1, 1, 2, 2, 0}, then the 0th vertex and the 1st vertex are connected, the 1st vertex and the 2nd vertex are connected, and 2nd vertex and the 0th vertex are connected.  Whew, that’s a lot of work in order to create a single triangle?  Definitely.  But, the concept of indices is powerful and useful.
+So when our mode is OF_PRIMITIVE_LINE and our array of indices is {0, 1, 1, 2, 2, 0}, then the 0th vertex and the 1st vertex are connected, the 1st vertex and the 2nd vertex are connected, and 2nd vertex and the 0th vertex are connected.  Lots of work in order to create a single triangle?  Yup.  But, the concept of indices is powerful and useful.
 
-One more thing you might have noticed - the color of the lines.  You can check out the [opengl tutorial](http://www.openframeworks.cc/tutorials/graphics/opengl.html) for a more in-depth explanation, but this is some of the magic that is occurring on your graphics card.  You can tell it that point A is red, point B is blue and that point A and B are connected with a line.  Then, the graphics card will (linearly) interpolate between those colors as it draws the pixels that constitute that line.
+One more thing you might have noticed - the color of the lines.  You can check out the [opengl tutorial](http://www.openframeworks.cc/tutorials/graphics/opengl.html) for a more in-depth explanation, but this is some of the magic that is happening on your graphics card.  You can tell it that point A is red, point B is blue and that point A and B are connected with a line.  Then, the graphics card will (linearly) interpolate between those colors as it draws the pixels on the screen that constitute that line.
 
 As a reward for reading the whole section: 
 
@@ -223,7 +223,7 @@ So we need some data and some rules.  Let's grab some 'data' from the Hubble Tel
 
 Create a [new openFrameworks project](http://www.openframeworks.cc/tutorials/introduction/002_projectGenerator.html) called HubbleMesh and save that image as 'stars.png' in your HubbleMesh/bin/data directory.
 
-Now we have some colorful, pixely goodness, but what rules should we use to transform those pixels into a mesh?  We can start with points and work our way back to lines.  Our image has a ton of stars, why don't we create some vertices where those stars are located?  Once we do that, we can connect up nearby vertices with lines in order to create a spindly web our of our stars.
+Now we have some colorful, pixely goodness, but what rules should we use to transform those pixels into a mesh?  We can start with drawing points and work our way up to drawing lines.  Our image has a ton of stars, why don't we create some vertices where those stars are located?  Once we do that, we can connect up nearby vertices with lines in order to create a spindly web.
 
 First things first, let's load that image.  Go into the main.cpp file and change the dimensions to match the dimensions of the image you just downloaded:
 ~~~.cpp
@@ -245,9 +245,9 @@ void HubbleMesh::draw(){
 
 There is no dedicated [ofImage](http://www.openframeworks.cc/documentation/graphics/ofImage.html) tutorial at the moment, so you will have to poke around the [openFrameworks for Processing users](http://www.openframeworks.cc/tutorials/first%20steps/002_openFrameworks_for_processing_users.html) tutorial or [004 presentation](http://www.openframeworks.cc/tutorials/first%20steps/004_presentations.html) if you want to know more about what you can do with images.
 
-We just need to load in our image using [loadImage()](http://www.openframeworks.cc/documentation/graphics/ofImage.html#!show_loadImage) and draw it at the top left corner of the screen with [draw(0,0)](http://www.openframeworks.cc/documentation/graphics/ofImage.html#show_draw).
+We just need to load our image using [loadImage()](http://www.openframeworks.cc/documentation/graphics/ofImage.html#!show_loadImage) and draw it at the top left corner of the screen with [draw(0,0)](http://www.openframeworks.cc/documentation/graphics/ofImage.html#show_draw).
 
-Great! Image loaded.  Now, we want to create a mesh with some vertices. If we only want to create vertices at the location of stars, then we will need to get access to the color information of the pixels using image.[getColor(x, y)](http://www.openframeworks.cc/documentation/graphics/ofImage.html#show_getColor).  We want to loop through the pixels in the image and apply a [threshold](http://en.wikipedia.org/wiki/Thresholding_(image_processing)) such that we only create a vertex at the pixel locations where the intensity of the color is greater than some value. 
+Great! Image loaded.  Now, we want to create a mesh with some vertices. If we only want to create vertices at the location of stars, we can do that by searching through our pixels and look for 'bright' colors.  In order to do this, we will need to get access to the color information of the pixels using image.[getColor(x, y)](http://www.openframeworks.cc/documentation/graphics/ofImage.html#show_getColor).  We want to loop through the pixels in the image and apply a [threshold](http://en.wikipedia.org/wiki/Thresholding_(image_processing)) such that we only create a vertex at the pixel locations where the intensity of the color is greater than some value. 
 
 Add a mesh to HubbleMesh.h:
 ~~~.h
@@ -284,7 +284,7 @@ void HubbleMesh::draw(){
 
 ![Thresholded Stars Point Mesh](003_images/ThresholdedStarsSmall.png) 
 
-We created a mesh with points for primitives.  Then we looped through each pixel in the image (using [getWidth()](http://www.openframeworks.cc/documentation/graphics/ofImage.html#show_getWidth) and [getHeight()](http://www.openframeworks.cc/documentation/graphics/ofImage.html#show_getHeight)) and checked the intensity of each pixel's color using [getLightness()](http://www.openframeworks.cc/documentation/types/ofColor.html#!show_getLightness).  If the intensity exceeded our threshold, we created a vertex at the location of the pixel and colored it with the pixel's color.  When we draw our mesh on a blue background, we can see which pixels from the image were used to generate vertices.
+In that code, we created a mesh with points for primitives.  Then we looped through each pixel in the image (using [getWidth()](http://www.openframeworks.cc/documentation/graphics/ofImage.html#show_getWidth) and [getHeight()](http://www.openframeworks.cc/documentation/graphics/ofImage.html#show_getHeight)) and checked the intensity of each pixel's color using [getLightness()](http://www.openframeworks.cc/documentation/types/ofColor.html#!show_getLightness).  If the intensity exceeded our threshold, we created a vertex at the location of the pixel and colored it with the pixel's color.  Then we drew our mesh on a blue background so that we could see which pixels from the image were used to generate vertices.  You can raise or lower the threshold value to decrease or increase (respectively) the number of vertices.
 
 Let's make that background into something more fitting (using [ofBackgroundGradient](http://www.openframeworks.cc/documentation/graphics/ofGraphics.html#!show_ofBackgroundGradient)...
 
@@ -305,14 +305,14 @@ We have a lot of vertices in our mesh.  You can check the number using [getNumVe
     cout << mesh.getNumVertices() << endl;  // It should be ~64,000
 ~~~
 
-If we were to start looping through those each of those 64,000 vertices to connect them up to the other vertices that are close-by, we would spend a lot of time in that loop.  To give our computers a break, we are going to resize our image:
+If we were to start looping through those each of those 64,000 vertices to connect them up to the other vertices that are close-by, we could end up spending a fair chunk of time in that loop.  To speed things up, we are going to shrink our image before we process it:
 
 ~~~.cpp
     image.loadImage("stars.png");
     image.resize(200, 200);
 ~~~
 
-And then because our image pixel are no longer one-to-one with our openFrameworks window pixels, we need to adjust the the *pos* variable inside our loop:
+And then because our image pixel are no longer one-to-one with our openFrameworks window pixels, we need to adjust the the *pos* variable inside of our loop:
 
 ~~~.cpp
             if (c.getLightness() > intensityThreshold) {
@@ -324,13 +324,15 @@ And then because our image pixel are no longer one-to-one with our openFramework
             }
 ~~~
 
-Now that we have a reasonable number of vertices (around 2000), we can connecting up vertices to form lines.  If we want to only connect vertices that are nearby to each other, then we need to loop through all possible pairs of vertices, check if the distance between them is less than a particular value, and if so, connect them.
+Now that we have a reasonable number of vertices (~2000), we can start connecting up vertices to form lines.  If we want to only connect vertices that are nearby to each other, then we need to loop through all possible pairs of vertices, check if the distance between them is less than a particular value, and if so, connect them.
 
 ~~~.cpp
     // Don't forget to change to lines mode!
     mesh.setMode(OF_PRIMITIVE_LINES);
 
-    // Code for finding vertices is the same as above
+    // ...
+    // Omitting the code for creating vertices for clarity
+    // but don't erase it from your file!
 
     // Let's add some lines!
     float connectionDistance = 30;
@@ -348,14 +350,15 @@ Now that we have a reasonable number of vertices (around 2000), we can connectin
     }
 ~~~
 
-You should end up with something link this (if the code is taking too long to run on your machine, try increasing the *intensityThreshold* variable to reduce the number of vertices):
+You should end up with something like this (if the code is taking too long to run on your machine, try increasing the *intensityThreshold* variable to reduce the number of vertices):
 
 ![First Line Mesh](003_images/StarLinesFirstMeshSmall.png) 
 
-Let's look at that code again:
-1. We need to get all unique pairs of vertices.  We can get the position of the *i*th vertex in our mesh using mesh.[getVertex()](http://www.openframeworks.cc/documentation/3d/ofMesh.html#show_getVertex).  Then we can use two for loops to get every pair of vertices.  You might be wondering why the second loop starts *b=a+1*.  Without going into the details - the order of the vertices does not matter when connecting them to form a line, so we can exclude a bunch of values for *b*.
+Let's take a look at that code again:
+
+1. We need to get all unique pairs of vertices.  We can get the position of the *i*th vertex in our mesh using mesh.[getVertex()](http://www.openframeworks.cc/documentation/3d/ofMesh.html#show_getVertex).  Then we can use two for loops to get every pair of vertices.  You might be wondering why the second loop starts *b=a+1*.  The order of the vertices does not matter when connecting them to form a line, so we can exclude a bunch of values for *b*.
 2. Then, we need to find the distance between those vertices.  ofVec3f has a function to do just that [distance()](http://www.openframeworks.cc/documentation/math/ofVec3f.html#show_distance)).
-3. If they are closer than a value set by *connectionDistance*, then we need to add a line between them.  Adding a line is just a matter of adding the indices *a* and *b* to the mesh.
+3. If they are closer than a value set by *connectionDistance*, then we need to add a line between them.  Adding a line is just a matter of adding the indices *a* and *b* to the mesh's array of indices.
 
 Boom! Generative mesh.  Let’s add two more tweaks to make this into proper 3D.  Firstly, we can use the saturation of the color to change the z-coordinate.
 
@@ -369,9 +372,9 @@ Boom! Generative mesh.  Let’s add two more tweaks to make this into proper 3D.
             }
 ~~~
 
-This code will push brighter colors in the positive z-direction and whiter colors in the negative-z direction using [ofMap()](http://www.openframeworks.cc/documentation/math/ofMath.html#!show_ofMap).  ofMap allows us to take a value that is within one range (0 to 255) and map it to a new range of values (-100 to 100).
+This code will push brighter colors in the positive z-direction and whiter colors in the negative-z direction using [ofMap()](http://www.openframeworks.cc/documentation/math/ofMath.html#!show_ofMap).  ofMap allows us to take a value that is within one range (for us, 0 to 255) and map it to a new range of values (again for us, -100 to 100).
 
-Hm? That didn't change your mesh very much?  Well, now it's time for the last tweak in this section: adding a camera.
+Hm...that didn't change your mesh very much?  Well, now it's time for the last tweak in this section: adding a camera.
 
 Add this to your header:
 ~~~.h
@@ -393,7 +396,7 @@ void HubbleMesh::draw(){
 }
 ~~~
 
-[ofEasyCam](http://www.openframeworks.cc/documentation/3d/ofEasyCam.html) is a quick way to get a feel for that elusive 3rd dimension in your generative mesh.  That [opengl tutorial](http://www.openframeworks.cc/tutorials/graphics/opengl.html) goes into cameras, [ofPushMatrix()](http://www.openframeworks.cc/documentation/graphics/ofGraphics.html#!show_ofPushMatrix), [ofPopMatrix()](http://www.openframeworks.cc/documentation/graphics/ofGraphics.html#!show_ofPopMatrix) and [ofTranslate()](http://www.openframeworks.cc/documentation/graphics/ofGraphics.html#!show_ofTranslate).  This code will center you mesh in the camera's view.  Now you can left click and drag to rotate! And right click and drag to zoom!
+[ofEasyCam](http://www.openframeworks.cc/documentation/3d/ofEasyCam.html) is a quick way to get a feel for that elusive 3rd dimension in your generative mesh.  The [opengl tutorial](http://www.openframeworks.cc/tutorials/graphics/opengl.html) goes into cameras, [ofPushMatrix()](http://www.openframeworks.cc/documentation/graphics/ofGraphics.html#!show_ofPushMatrix), [ofPopMatrix()](http://www.openframeworks.cc/documentation/graphics/ofGraphics.html#!show_ofPopMatrix) and [ofTranslate()](http://www.openframeworks.cc/documentation/graphics/ofGraphics.html#!show_ofTranslate).  This code will center you mesh in the camera's view.  Now you can left click and drag to rotate! And right click and drag to zoom!
 
 
 ![Line Mesh with Camera](003_images/LineMeshCameraSmall.png) 
