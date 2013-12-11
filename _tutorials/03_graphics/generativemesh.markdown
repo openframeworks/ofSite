@@ -598,3 +598,46 @@ And lastly, add this chunk of code at that start of our keyPressed function:
 ~~~
 
 [Insert link to source files?]
+
+
+
+
+Where to next?
+
+Go get some different data and rules and make something werid and cool.
+
+Lars Berg 
+Music to drive meshes
+http://vimeo.com/13175129
+
+Marcin Ignac
+Cindermedusae
+http://marcinignac.com/projects/cindermedusae/
+
+Montblanc Generative Artworks
+http://vimeo.com/31471771
+
+10,000 Digital Paintings
+http://www.field.io/project/digitalpaintings
+
+DMesh
+http://www.creativeapplications.net/mac/dmesh-cinder-mac/
+
+UVA vs Massive Attack
+http://www.creativeapplications.net/openframeworks/uva-vs-massive-attack-united-snakes-using-openframeworks/
+
+Hall of Fragments
+http://www.creativeapplications.net/openframeworks/hall-of-fragments-openframeworks/
+
+Ambushes
+http://enohenze.de/ambush/
+
+Growing Data
+http://www.onformative.com/work/growing-data/
+
+Golan Levin
+Segmentation and Symptom
+http://www.flong.com/projects/zoo/
+
+Being Not Truthful
+http://www.youtube.com/watch?v=U--PIzSuOv8
