@@ -406,16 +406,126 @@ void HubbleMesh::draw(){
 <a name="manipulations"></a>
 ##Manipulations: Adding effects that modify the mesh
 
+We've got ourselves a meshy mesh now, so let's go ahead and some more rules to add motion to our mesh.
 
 ###Jitter
-Hmm...gif framerate is no bueno...
-
+The mesh resembles something you might find under a microscope, so let's add some 'organic' movement to the vertices. The motion will likely be much faster on your machine than in the gif below (browsers cap the maximum framerate of gifs), but it will give you an idea of what we are going for:
 ![Jitter](003_images/MeshJitterEndlessSmall.gif) 
+On each frame, we are going to move each vertex by a small, random amount.  Instead of using [ofRandom()](http://www.openframeworks.cc/documentation/math/ofMath.html#show_ofRandom) to displace our vertices, we are going to use [ofSignedNoise()](http://openframeworks.cc/documentation/math/ofMath.html#!show_ofSignedNoise).  ofSignedNoise() will return random values that are smoothed out in time.  Check out Daniel Shiffman's description of Perlin noise in section [1.6 Perlin Noise (A Smoother Approach)](http://natureofcode.com/book/introduction/) of his online book.
 
+In order to displace our vertices, we are going to use the 1D version of ofSignedNoise() which takes a single input and returns a value between -1.0 and 1.0.  We are going to tell ofSignedNoise what time it is, and it will return a smoothly varying random value.  Since we want our vertices to appear to move independently of one another, when we displace vertex one, we need to use a different time than when we displace vertex two.
+
+Add this to your header:
+~~~.h
+		vector<ofVec3f> offsets;
+~~~
+
+And inside of your setup function add:
+~~~.cpp
+    // Add this line:
+    ofSetFrameRate(60);
+    
+    // Code ommitted for clarity...
+
+    for (int x=0; x<w; ++x) {
+        for (int y=0; y<h; ++y) {
+            ofColor c = image.getColor(x, y);
+            float intensity = c.getLightness();
+            if (intensity >= intensityThreshold) {
+                float saturation = c.getSaturation();
+                float z = ofMap(saturation, 0, 255, -100, 100);
+                ofVec3f pos(4*x, 4*y, z);
+                mesh.addVertex(pos);
+                mesh.addColor(c);
+
+                // And add this line:
+                offsets.push_back(ofVec3f(ofRandom(0,100000), ofRandom(0,100000), ofRandom(0,100000)));
+            }
+        }
+    }
+~~~
+
+And finally, inside of your update function add:
+~~~.cpp
+    int numVerts = mesh.getNumVertices();
+    for (int i=0; i<numVerts; ++i) {
+        ofVec3f vert = mesh.getVertex(i);
+
+        float time = ofGetElapsedTimef();
+        float timeScale = 5.0;
+        float displacementScale = 0.75;
+        ofVec3f timeOffsets = offsets[i];
+
+        vert.x += (ofSignedNoise(time*timeScale+timeOffsets.x)) * displacementScale;
+        vert.y += (ofSignedNoise(time*timeScale+timeOffsets.y)) * displacementScale;
+        vert.z += (ofSignedNoise(time*timeScale+timeOffsets.z)) * displacementScale;
+        mesh.setVertex(i, vert);
+    }
+~~~
+
+displacementScale will change how far things will move on each frame
+timeScale will determine how smooth the noise is 
+Play with the parameters and see what values you like best
+
+Using ofSignedNoise instead of ofRandom gives you a more fluid looking meshy substance (and allows you to control the fluidity using *timeScale*).
 
 ###Orbit
+Our wiggly mesh could use some swirling orbiting motion.  
 ![Orbit1](003_images/Orbit1Small.png) 
 ![Orbit2](003_images/Orbit2Small.png) 
+
+Let's get some new variables in our header file
+~~~.h
+		ofMesh meshCopy;
+		vector<float> distances;
+		vector<float> phases;
+		ofVec3f meshCentroid;
+		bool orbiting;
+		float startOrbitTime;
+~~~
+
+Add this at the end of your setup function:
+~~~.cpp
+   meshCentroid = mesh.getCentroid();
+    for (int i=0; i<numVerts; ++i) {
+        ofVec3f vert = mesh.getVertex(i);
+        float distance = vert.distance(meshCentroid);
+        float phase = atan2(vert.y-meshCentroid.y, vert.x-meshCentroid.x);
+        distances.push_back(distance);
+        phases.push_back(phase);
+    }
+
+    orbiting = false;
+    startOrbitTime = 0.0;
+    meshCopy = mesh;
+~~~
+
+Add this into your update function:
+~~~.cpp
+    if (orbiting) {
+        int numVerts = mesh.getNumVertices();
+        for (int i=0; i<numVerts; ++i) {
+            ofVec3f vert = mesh.getVertex(i);
+            float distance = distances[i];
+            float phase = phases[i];
+            float elapsedTime = ofGetElapsedTimef() - startOrbitTime;
+
+            float angle = (elapsedTime * ofMap(distance, 0, 200, 1, 0.25, true)) + phase;
+
+            vert.x = distance * cos(angle) + meshCentroid.x;
+            vert.y = distance * sin(angle) + meshCentroid.y;
+            mesh.setVertex(i, vert);
+        }
+    }
+~~~
+And this into your keyPressed function:
+~~~.cpp
+    if (key == 'o') {
+        orbiting = !orbiting;
+        startOrbitTime = ofGetElapsedTimef();
+        mesh = meshCopy;
+    }
+~~~
 
 
 ###Magnifying
