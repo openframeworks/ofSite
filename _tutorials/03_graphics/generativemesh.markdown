@@ -472,15 +472,20 @@ In setup, we do two new things:
 2. We created a variable called offsets.  It is vector of ofVec3fs that contain random values.  These values allow us to move each vertex in a random x, y and z direction seemingly independently of the movement of the other vertices.
 
 Then in update:
+
 1. We get the location of a vertex using mesh.[getVertex()](http://openframeworks.cc/documentation/3d/ofMesh.html#!show_getVertex) and store it in a variable called vert.
 3. We move the x, y and z values of vert using (ofSignedNoise(time*timeScale+timeOffsets)) * displacementScale.  If we just used ofSignedNoise(time), all the vertices would move the same amount in x, y, z on every frame. ofSignedNoise(time+timeOffsets) allows us to make each vertex move differently.  timeOffsets is a ofVec3f, so that we can move a vertex by a different amount in the x, y and z directions.  We also add in a value called timeScale: ofSignedNoise(time*timeScale+timeOffsets).  This variable allows us to control the smoothness of our random noise.  Lastly, we have a variable called displacementScale.  This will allow us to change the range of our noise values from [-1.0, 1.0] to whatever we want.  So, using ofSignedNoise instead of ofRandom gives you a more fluid looking meshy substance (and allows you a bit more control).  I choose the values of our noise parameters, but play with them and see how the motion changes.  
 4. We update the position of our vertex using [mesh.setVertex()](http://openframeworks.cc/documentation/3d/ofMesh.html#show_setVertex).
 
+Great! Now we have a warbly mesh.
 
 ###Orbit
-Our wiggly mesh could use some swirling orbiting motion.  
+Next, we can add some swirling orbital motion (these *were* originally stars, so it seems fitting).  
 ![Orbit1](003_images/Orbit1Small.png) 
 ![Orbit2](003_images/Orbit2Small.png) 
+
+We're going to make use of the sin function to get orbital motion.  If you want a good primer, check out [chapter 3](http://natureofcode.com/book/chapter-3-oscillation/) of The Nature of Code.
+
 
 Talk about sin, using time as radians, atan2, phase, copying meshes
 
