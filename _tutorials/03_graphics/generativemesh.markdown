@@ -411,6 +411,7 @@ We've got ourselves a meshy mesh now, so let's go ahead and some more rules to a
 ###Jitter
 The mesh resembles something you might find under a microscope, so let's add some 'organic' movement to the vertices. The motion will likely be much faster on your machine than in the gif below (browsers cap the maximum framerate of gifs), but it will give you an idea of what we are going for:
 ![Jitter](003_images/MeshJitterEndlessSmall.gif) 
+
 On each frame, we are going to move each vertex by a small, random amount.  Instead of using [ofRandom()](http://www.openframeworks.cc/documentation/math/ofMath.html#show_ofRandom) to displace our vertices, we are going to use [ofSignedNoise()](http://openframeworks.cc/documentation/math/ofMath.html#!show_ofSignedNoise).  ofSignedNoise() will return random values that are smoothed out in time.  Check out Daniel Shiffman's description of Perlin noise in section [1.6 Perlin Noise (A Smoother Approach)](http://natureofcode.com/book/introduction/) of his online book.
 
 In order to displace our vertices, we are going to use the 1D version of ofSignedNoise() which takes a single input and returns a value between -1.0 and 1.0.  We are going to tell ofSignedNoise what time it is, and it will return a smoothly varying random value.  Since we want our vertices to appear to move independently of one another, when we displace vertex one, we need to use a different time than when we displace vertex two.
@@ -474,6 +475,8 @@ Our wiggly mesh could use some swirling orbiting motion.
 ![Orbit1](003_images/Orbit1Small.png) 
 ![Orbit2](003_images/Orbit2Small.png) 
 
+Talk about sin, using time as radians, atan2, phase, copying meshes
+
 Let's get some new variables in our header file
 ~~~.h
 		ofMesh meshCopy;
@@ -532,6 +535,39 @@ And this into your keyPressed function:
 ![Magnified1](003_images/Magnified1Small.png) 
 ![Magnified2](003_images/Magnified2Small.png) 
 
-...and maybe a quick snippet of code with some keyboard hotkeys to control parameters?
+Add a new variable to your header:
+~~~.h
+		bool mouseDisplacement;
+~~~
+Add a line at the end of our setup function:
+~~~.cpp
+    mouseDisplacement = false;
+~~~
+Add this chunk of code at that start of our update function:
+~~~.cpp
+    if (mouseDisplacement) {
+        // Get the mouse location - it must be relative to the center of our screen because of ofTranslate()
+        ofVec3f mouse(mouseX, ofGetWidth()-mouseY, 0);
+
+        // Loop through all the vertices in the mesh and move them away from the mouses
+        for (int i=0; i<mesh.getNumVertices(); ++i) {
+            // Get a vertex from the mesh
+            ofVec3f vertex = meshCopy.getVertex(i);
+            float distanceToMouse = mouse.distance(vertex);
+            float displacement = ofMap(distanceToMouse, 0, 400, 300.0, 0, true);
+            ofVec3f direction = vertex - mouse;
+            direction.normalize();
+            ofVec3f displacedVertex = vertex + displacement*direction;
+            mesh.setVertex(i, displacedVertex);
+        }
+    }
+~~~
+And lastly, add this chunk of code at that start of our keyPressed function:
+~~~.cpp
+    if (key == 'm') {
+        mouseDisplacement = !mouseDisplacement;
+        mesh = meshCopy;
+    }
+~~~
 
 [Insert link to source files?]
