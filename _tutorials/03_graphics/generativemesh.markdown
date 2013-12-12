@@ -677,7 +677,7 @@ Check out the [opengl tutorial](http://openframeworks.cc/tutorials/graphics/open
 
 Go get some other data.  Make up some new rules.  Make something weird and share it in the forums!
 
-For inspiration, check out these projects:
+For ideas of the types of things you can generate, check out these projects:
 
 Golan Levin used portraits to create a series of lines in [Segmentation and Symptom](http://www.flong.com/projects/zoo/):
 [![GolanSegmentationAndSymptom](003_images/GolanSegmentationAndSymptom.jpg)](http://www.flong.com/projects/zoo/)
@@ -685,7 +685,7 @@ Golan Levin used portraits to create a series of lines in [Segmentation and Symp
 Marcin Ignac created some generative jellyfish creatures in [Cindermedusae](http://marcinignac.com/projects/cindermedusae/):
 [![IgnacCindermedusae](003_images/IgnacCindermedusae.png)](http://marcinignac.com/projects/cindermedusae/)
 
-The Rockwell group used people to change their meshes in [Hall of Fragments](http://lab.rockwellgroup.com/work/venice-biennale.html):
+The Rockwell group used people's movement to change their meshes in [Hall of Fragments](http://lab.rockwellgroup.com/work/venice-biennale.html):
 [![RockwellHallOfFragments](003_images/RockwellHallOfFragments.png)](http://lab.rockwellgroup.com/work/venice-biennale.html)
 
 Onformative played with text in [Growing Data](http://www.onformative.com/work/growing-data/):
