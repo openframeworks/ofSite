@@ -30,6 +30,8 @@ The tutorial is broken into three sections:
     * Adding jitter
     * Making the vertices orbit 
     * Creating an interactive magnifying effect
+4. [Now What?](#nowwhat)
+    * Other meshy projects people have made
 
 <a name="basics"></a>
 ##Basics: Working with ofMesh
@@ -549,7 +551,7 @@ Add this at the end of your setup function:
     // These variables will allow us to toggle orbiting on and off
     orbiting = false;
     startOrbitTime = 0.0;
-    meshCopy = mesh;
+    meshCopy = mesh;		// Store a copy of the mesh, so that we can reload the original state
 ~~~
 Add this into your update function:
 ~~~.cpp
@@ -567,12 +569,12 @@ Add this into your update function:
             
             // To find the angular rotation of our vertex, we use the current time and
             // the starting angular rotation
-            float currentAngle = elapsedTime * speed + angle;
+            float rotatedAngle = elapsedTime * speed + angle;
             
             // Remember that our distances are calculated relative to the centroid of the mesh, so
             // we need to shift everything back to screen coordinates by adding the x and y of the centroid 
-            vert.x = distance * cos(angle) + meshCentroid.x;
-            vert.y = distance * sin(angle) + meshCentroid.y;
+            vert.x = distance * cos(rotatedAngle) + meshCentroid.x;
+            vert.y = distance * sin(rotatedAngle) + meshCentroid.y;
             
             mesh.setVertex(i, vert);
         }
@@ -581,39 +583,77 @@ Add this into your update function:
 And this into your keyPressed function:
 ~~~.cpp
     if (key == 'o') {
-        orbiting = !orbiting;
+        orbiting = !orbiting; 			// This inverts the boolean
         startOrbitTime = ofGetElapsedTimef();
-        mesh = meshCopy;
+        mesh = meshCopy;			// This restores the mesh to its original values
     }
 ~~~
 
+Now you should be able to toggle orbiting on and off using the 'o' key!
+
+One additional programming note: the variable *meshCopy* was used as a backup copy of the original mesh that could be reloaded when needed.  In the setup function when we use the line: 
+~~~.cpp
+meshCopy = mesh;
+~~~
+We are creating a separate copy of the variable *mesh* and storing it in the variable *meshCopy*.  The ofMesh class provides what is called a deep copy in this instance, so if we change some vertices in *mesh* nothing in *meshCopy* will be changed.  Just be wary - not all objects provide deep copies by default.
+
 
 ###Magnifying
+The last tweak we will add gives a bit of interactivity to the mesh.  We will add a magnifying glass effect:
+
 ![Magnified1](003_images/Magnified1Small.png) 
 ![Magnified2](003_images/Magnified2Small.png) 
 
+If you want to nitpick, it's a misnomer to call it a magnifying glass effect. It is really based off of a thing in optics called [barrel distortion](http://en.wikipedia.org/wiki/Distortion_(optics)).
+
+The effect looks like this when we apply it to a grid:
+![Grid](003_images/GridSmall.png) 
+![BarrelDistortedGrid](003_images/BarrelDistortedGridSmall.png) 
+
+What we are going to do is:
+
+1. Find where the mouse is on the screen.
+2. Find the direction that points from the mouse to each vertex.  
+3. Push each vertex away from the mouse in that direction, but push the vertices that are closer to the mouse farther away than the more distant vertices.
+
+This tweak will make use of some vector maths, so check out the [vector tutorial](http://openframeworks.cc/tutorials/maths/001_vector_maths.html) if you are feeling lost).
+
+On to the code!
+
 Add a new variable to your header:
 ~~~.h
+                // Like with the orbiting tweak, this gives us a way to toggle on and off our magnifying effect
 		bool mouseDisplacement;
 ~~~
 Add a line at the end of our setup function:
 ~~~.cpp
+    // We want to start off without the effect turned on
     mouseDisplacement = false;
 ~~~
 Add this chunk of code at that start of our update function:
 ~~~.cpp
     if (mouseDisplacement) {
-        // Get the mouse location - it must be relative to the center of our screen because of ofTranslate()
+        // Get the mouse location - it must be relative to the center of our screen because of the ofTranslate() command in draw()
         ofVec3f mouse(mouseX, ofGetWidth()-mouseY, 0);
 
         // Loop through all the vertices in the mesh and move them away from the mouses
         for (int i=0; i<mesh.getNumVertices(); ++i) {
-            // Get a vertex from the mesh
             ofVec3f vertex = meshCopy.getVertex(i);
             float distanceToMouse = mouse.distance(vertex);
+            
+            // Scale the displacement based on the distance to the mouse
+            // Small distance to mouse should yield a small displacement
             float displacement = ofMap(distanceToMouse, 0, 400, 300.0, 0, true);
+            
+            // Calculate the direction from the mouse to the current vertex
             ofVec3f direction = vertex - mouse;
+            
+            // Normalize the direction so that it has a length of one
+            // This lets us easily change the length of the vector later
             direction.normalize();
+            
+            // Push the vertex in the direction away from the mouse and push it
+            // a distance equal to the value of the variable displacement
             ofVec3f displacedVertex = vertex + displacement*direction;
             mesh.setVertex(i, displacedVertex);
         }
@@ -622,52 +662,35 @@ Add this chunk of code at that start of our update function:
 And lastly, add this chunk of code at that start of our keyPressed function:
 ~~~.cpp
     if (key == 'm') {
-        mouseDisplacement = !mouseDisplacement;
-        mesh = meshCopy;
+        mouseDisplacement = !mouseDisplacement;  // Inverts the boolean
+        mesh = meshCopy;  // Restore the original mesh
     }
 ~~~
+
+You made it through the tutorial! (Or you just scrolled all the way down without doing anything, which is an awful lot of scrolling and should be an accomplishment by itself.)
 
 [Insert link to source files?]
 
 
+<a name="nowwhat"></a>
+##Now What?
 
+Go get some other data.  Make up some new rules.  Make something weird!  Figure out a way to turn a book or a meal into a mesh.
 
-Where to next?
+Check out the [opengl tutorial](http://openframeworks.cc/tutorials/graphics/opengl.html) for getting deeper into meshes.
 
-Go get some different data and rules and make something werid and cool.
+For inspiration, check out these projects:
 
-Lars Berg 
-Music to drive meshes
-http://vimeo.com/13175129
+Golan Levin used portraits to create a series of lines in [Segmentation and Symptom](http://www.flong.com/projects/zoo/)
+[Insert image with Golan's permission?]
 
-Marcin Ignac
-Cindermedusae
-http://marcinignac.com/projects/cindermedusae/
+Lars Berg used music to drive some mesh extrusions in [extruditude](http://vimeo.com/13175129)
 
-Montblanc Generative Artworks
-http://vimeo.com/31471771
+Marcin Ignac created some generative jellyfish creatures in [Cindermedusae](http://marcinignac.com/projects/cindermedusae/)
 
-10,000 Digital Paintings
-http://www.field.io/project/digitalpaintings
+Play around with distorting images like Yong Ho Yun's [DMesh](https://itunes.apple.com/us/app/dmesh/id480992638?mt=12&affId=1671662&ign-mpt=uo%3D4)
 
-DMesh
-http://www.creativeapplications.net/mac/dmesh-cinder-mac/
+Use people to change your mesh, like the Rockwell group's [Hall of Fragments](http://lab.rockwellgroup.com/work/venice-biennale.html)
 
-UVA vs Massive Attack
-http://www.creativeapplications.net/openframeworks/uva-vs-massive-attack-united-snakes-using-openframeworks/
+Use text as an inspiration, like Onformative's [Growing Data](http://www.onformative.com/work/growing-data/)
 
-Hall of Fragments
-http://www.creativeapplications.net/openframeworks/hall-of-fragments-openframeworks/
-
-Ambushes
-http://enohenze.de/ambush/
-
-Growing Data
-http://www.onformative.com/work/growing-data/
-
-Golan Levin
-Segmentation and Symptom
-http://www.flong.com/projects/zoo/
-
-Being Not Truthful
-http://www.youtube.com/watch?v=U--PIzSuOv8
