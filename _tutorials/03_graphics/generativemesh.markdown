@@ -55,11 +55,11 @@ We are going to focus on using points and lines as our primitives.  Let's get so
 And onto the code!
 
 Add a mesh variable to your header file (.h):
-~~~~{.h}
+~~~{.h}
     ofMesh mesh;
-~~~~
+~~~
 Append these lines to your *setup()* and *draw()* functions in your source file (.cpp):
-~~~~{.cpp}
+~~~{.cpp}
 void testApp::setup() {
     mesh.setMode(OF_PRIMITIVE_POINTS);
 
@@ -75,14 +75,14 @@ void testApp::draw() {
     ofBackground(0);
     mesh.draw();
 }
-~~~~
+~~~
 If you build and run your project, you should see three white dots that are placed in a triangular arrangement on top of a black background:
 
 ![Triangle Points](003_images/TrianglePoints.png) 
 
 White is boring?  Well, you can add some color by modifying setup:
 
-~~~~{.cpp}
+~~~{.cpp}
 void testApp::setup() {
     mesh.setMode(OF_PRIMITIVE_POINTS);
     mesh.enableColors();
@@ -100,17 +100,17 @@ void testApp::setup() {
     mesh.addVertex(right);
     mesh.addColor(ofFloatColor(1.0, 1.0, 0.0));
 }
-~~~~
+~~~
 
 We first enable colors using mesh.[enableColors()](http://www.openframeworks.cc/documentation/3d/ofMesh.html#show_enableColors).  Colors are enabled by default, but it is good practice to include this line.  Then we can add colors using mesh.[addColor()](http://www.openframeworks.cc/documentation/3d/ofMesh.html#show_addColor).  Colors are specified using ofFloatColor which is like [ofColor](http://www.openframeworks.cc/documentation/types/ofColor.html) except that the red, blue, green and alpha channels are specified with a float between 0.0 and 1.0.  (You *can* use an ofColor if you really want to do so, but you should use ofFloatColor.)   The first color we add applies to the first vertex, the second color to the second vertex, etc.
 
 You find our points boring?  Time for some some lines then.  We need to change the primitive mode to lines, but there are three different line primitive options.  Try each of them for yourself by changing the first line of your setup function to any of these:
 
-~~~~{.cpp}
+~~~{.cpp}
     mesh.setMode(OF_PRIMITIVE_LINES);
     mesh.setMode(OF_PRIMITIVE_LINE_STRIP);
     mesh.setMode(OF_PRIMITIVE_LINE_LOOP);
-~~~~
+~~~
 
 ![Triangle Points](003_images/TriangleLineMode.png) 
 
@@ -121,18 +121,18 @@ The modes each have a different way that they generate lines from the vertices:
 
 Only OF_PRIMITIVE_LINE_LOOP outlined the whole triangle. If you wanted to create that same triangle using OF_PRIMITIVE_LINE, you might try adding some more vertices like this:
 
-~~~~{.cpp}
+~~~{.cpp}
     mesh.addVertex(top);
     mesh.addVertex(left);
     mesh.addVertex(left);
     mesh.addVertex(right);
     mesh.addVertex(right);
     mesh.addVertex(top);
-~~~~
+~~~
 
 Feels excessive to add duplicate vertices? Let’s try something else:
 
-~~~~{.cpp}
+~~~{.cpp}
 void testApp::setup() {
     mesh.setMode(OF_PRIMITIVE_LINES);
     mesh.enableColors();
