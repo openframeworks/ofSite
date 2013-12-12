@@ -230,16 +230,16 @@ First things first, let's load that image.  Go into the main.cpp file and change
 ~~~.cpp
     ofSetupOpenGL(800,800,OF_WINDOW);
 ~~~
-Then go into your HubbleMesh.h file and add:
+Then go into your header file (testApp.h) and add:
 ~~~.h
     ofImage image;
 ~~~
-And lastly, into your HubbleMesh.cpp file:
+And lastly, into your source file (testApp.cpp):
 ~~~.cpp
-void HubbleMesh::setup(){
+void testApp::setup(){
     image.loadImage("stars.png");
 }
-void HubbleMesh::draw(){
+void testApp::draw(){
     image.draw(0,0);
 }
 ~~~
@@ -250,14 +250,14 @@ We just need to load our image using [loadImage()](http://www.openframeworks.cc/
 
 Great! Image loaded.  Now, we want to create a mesh with some vertices. If we only want to create vertices at the location of stars, we can do that by searching through our pixels and look for 'bright' colors.  In order to do this, we will need to get access to the color information of the pixels using image.[getColor(x, y)](http://www.openframeworks.cc/documentation/graphics/ofImage.html#show_getColor).  We want to loop through the pixels in the image and apply a [threshold](http://en.wikipedia.org/wiki/Thresholding_%28image_processing%29) such that we only create a vertex at the pixel locations where the intensity of the color is greater than some value. 
 
-Add a mesh to HubbleMesh.h:
+Add a mesh to testApp.h:
 ~~~.h
 		ofMesh mesh;
 ~~~
 
-And add this to HubbleMesh.cpp:
+And add this to testApp.cpp:
 ~~~.cpp
-void HubbleMesh::setup(){
+void testApp::setup(){
     image.loadImage("stars.png");
 
     mesh.setMode(OF_PRIMITIVE_POINTS);
@@ -277,7 +277,7 @@ void HubbleMesh::setup(){
         }
     }
 }
-void HubbleMesh::draw(){
+void testApp::draw(){
     ofBackground(0,0,255);
     mesh.draw();
 }
@@ -290,7 +290,7 @@ In that code, we created a mesh with points for primitives.  Then we looped thro
 Let's make that background into something more fitting using [ofBackgroundGradient](http://www.openframeworks.cc/documentation/graphics/ofGraphics.html#!show_ofBackgroundGradient)...
 
 ~~~.cpp
-void HubbleMesh::draw(){
+void testApp::draw(){
     ofColor centerColor = ofColor(85, 78, 68); 
     ofColor edgeColor(0, 0, 0);
     ofBackgroundGradient(centerColor, edgeColor, OF_GRADIENT_CIRCULAR);
@@ -383,7 +383,7 @@ Add this to your header:
 ~~~
 And then modify your draw function:
 ~~~.cpp
-void HubbleMesh::draw(){
+void testApp::draw(){
     ofColor centerColor = ofColor(85, 78, 68);
     ofColor edgeColor(0, 0, 0);
     ofBackgroundGradient(centerColor, edgeColor, OF_GRADIENT_CIRCULAR);
