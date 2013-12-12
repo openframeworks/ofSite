@@ -622,7 +622,7 @@ This tweak will make use of some vector maths, so check out the [vector tutorial
 
 Add a new variable to your header:
 ~~~.h
-            // Like with the orbiting tweak, this gives us a way to toggle on and off our magnifying effect
+        // Like with the orbiting tweak, this gives us a way to toggle on and off our magnifying effect
 		bool mouseDisplacement;
 ~~~
 Add a line at the end of our setup function:
