@@ -675,8 +675,6 @@ You made it through the tutorial! (Or you just scrolled all the way down, which 
 
 Go get some other data.  Make up some new rules.  Make something weird and share it in the forums!
 
-Check out the [opengl tutorial](http://openframeworks.cc/tutorials/graphics/opengl.html) for getting deeper into meshes.
-
 For inspiration, check out these projects:
 
 Golan Levin used portraits to create a series of lines in [Segmentation and Symptom](http://www.flong.com/projects/zoo/):
@@ -690,6 +688,3 @@ The Rockwell group used people to change their meshes in [Hall of Fragments](htt
 
 Onformative played with text in [Growing Data](http://www.onformative.com/work/growing-data/):
 [![onformativeGrowingData](003_images/onformativeGrowingData.png)](http://www.onformative.com/work/growing-data/)
-
-Lars Berg used music to drive some mesh extrusions in [extruditude](http://vimeo.com/13175129):
-[![BergExtruditude](003_images/BergExtruditude.png)](http://vimeo.com/13175129)
