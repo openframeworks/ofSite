@@ -412,7 +412,7 @@ We've got ourselves a meshy mesh now, so let's go ahead and some more rules to a
 ###Jitter
 The mesh resembles something you might find under a microscope, so let's add some 'organic' movement to the vertices. The motion will likely be much faster on your machine than in the gif below (browsers cap the maximum framerate of gifs), but it will give you an idea of what we are going for:
 
-![Jitter](003_images/MeshJitterEndlessSmall.gif) 
+![Jitter](003_images/jitterSmall.gif) 
 
 On each frame, we are going to move each vertex by a small, random amount.  Instead of using [ofRandom()](http://www.openframeworks.cc/documentation/math/ofMath.html#show_ofRandom) to displace our vertices, we are going to use [ofSignedNoise()](http://openframeworks.cc/documentation/math/ofMath.html#!show_ofSignedNoise) which generates a thing called Perlin noise.  Check out Daniel Shiffman's description of Perlin noise in section [1.6 Perlin Noise (A Smoother Approach)](http://natureofcode.com/book/introduction/) of his online book.  Perlin noise yields random values that smoothly vary over time.  You can get a good idea of the difference between random values and perlin noise by checking out [figure 1.5](http://natureofcode.com/book/imgs/intro/intro_05.png) (which shows sequential values of noise) and [figure 1.6](http://natureofcode.com/book/imgs/intro/intro_06.png) (which shows sequential random values) from the book.  
 
@@ -600,8 +600,7 @@ We are creating a separate copy of the variable *mesh* and storing it in the var
 ###Magnifying
 The last tweak we will add gives a bit of interactivity to the mesh.  We will add a magnifying glass effect:
 
-![Magnified1](003_images/Magnified1Small.png) 
-![Magnified2](003_images/Magnified2Small.png) 
+![Magnified](003_images/magniferSmall.gif) 
 
 If you want to nitpick, it's a misnomer to call it a magnifying glass effect. It is really based off of a thing in optics called [barrel distortion](http://en.wikipedia.org/wiki/Distortion_(optics)).
 
