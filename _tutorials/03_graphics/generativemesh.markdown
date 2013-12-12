@@ -673,6 +673,8 @@ You made it through the tutorial! (Or you just scrolled all the way down, which 
 <a name="nextsteps"></a>
 ##Next Steps
 
+Check out the [opengl tutorial](http://openframeworks.cc/tutorials/graphics/opengl.html), and start playing around with the other primitive modes.
+
 Go get some other data.  Make up some new rules.  Make something weird and share it in the forums!
 
 For inspiration, check out these projects:
