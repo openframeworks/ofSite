@@ -618,13 +618,11 @@ What we are going to do is:
     * If a vertex is close to the mouse, push it a large distance.
     * If a vertex is far away from the mouse, push it a small distance.
 
-This tweak will make use of some vector maths, so check out the [vector tutorial](http://openframeworks.cc/tutorials/maths/001_vector_maths.html) if you are feeling lost).
-
-On to the code!
+This tweak will make use of some vector maths, so check out the [vector tutorial](http://openframeworks.cc/tutorials/maths/001_vector_maths.html) if you are feeling lost.  On to the code!
 
 Add a new variable to your header:
 ~~~.h
-                // Like with the orbiting tweak, this gives us a way to toggle on and off our magnifying effect
+            // Like with the orbiting tweak, this gives us a way to toggle on and off our magnifying effect
 		bool mouseDisplacement;
 ~~~
 Add a line at the end of our setup function:
