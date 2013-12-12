@@ -682,6 +682,9 @@ For ideas of the types of things you can generate, check out these projects:
 Golan Levin used portraits to create a series of lines in [Segmentation and Symptom](http://www.flong.com/projects/zoo/):
 [![GolanSegmentationAndSymptom](003_images/GolanSegmentationAndSymptom.jpg)](http://www.flong.com/projects/zoo/)
 
+Quayola explored Flemish paintings in [Strata #4](http://www.quayola.com/strata4/)
+[![QuayolaStrata4](003_images/QuayolaStrata4.png)](http://www.quayola.com/strata4/)
+
 Marcin Ignac created some generative jellyfish creatures in [Cindermedusae](http://marcinignac.com/projects/cindermedusae/):
 [![IgnacCindermedusae](003_images/IgnacCindermedusae.png)](http://marcinignac.com/projects/cindermedusae/)
 
