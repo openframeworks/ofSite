@@ -30,8 +30,7 @@ The tutorial is broken into three sections:
     * Adding jitter
     * Making the vertices orbit 
     * Creating an interactive magnifying effect
-4. [Now What?](#nowwhat)
-    * Other meshy projects people have made
+4. [Next Steps](#nextsteps)
 
 <a name="basics"></a>
 ##Basics: Working with ofMesh
@@ -669,13 +668,11 @@ And lastly, add this chunk of code at that start of our keyPressed function:
 
 You made it through the tutorial! (Or you just scrolled all the way down without doing anything, which is an awful lot of scrolling and should be an accomplishment by itself.)
 
-[Insert link to source files?]
 
+<a name="nextsteps"></a>
+##Next Steps
 
-<a name="nowwhat"></a>
-##Now What?
-
-Go get some other data.  Make up some new rules.  Make something weird!  Figure out a way to turn a book or a meal into a mesh.
+Go get some other data.  Make up some new rules.  Make something weird!  (And send it my way!)
 
 Check out the [opengl tutorial](http://openframeworks.cc/tutorials/graphics/opengl.html) for getting deeper into meshes.
 
