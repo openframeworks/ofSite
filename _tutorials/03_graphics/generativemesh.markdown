@@ -502,17 +502,18 @@ We're going to make use of trigonometric functions to make orbital motion.  If y
 Let's forget about the z-dimension for now and focus in on the x- and y-dimensions.  If we want to take a point and have it orbit in a circle, we can make use of angles, sine and cosine to do that.  Check out the [wiki](http://en.wikipedia.org/wiki/Polar_coordinate_system) on polar coordinates - specifically, have a look at the section on "Converting between polar and Cartesian coordinates."  
 
 If we know how far our point is from the center, we can define its location in space using a distance and an angle (polar coordinates).  We can take that distance and angle and use it to convert to x and y values (Cartesian coordinates):
+~~~.cpp
+    x = distance * cos(angle)
+    y = distance * sin(angle)
+~~~
 
-x = distance * cos(angle)
-y = distance * sin(angle)
+If you want to swing that point around in a circle, then you just need to increase the angle over time, and the maths will take care of the rest.  
 
-If you want to swing that point in a circle, then you just need to increase the angle over time, and the maths will take care of the rest.  
-
-So for our purposes, we need to:
+So for our meshy purposes, we need to:
 
 1. Define a center point for our vertices to rotate around
-2. Calculate the initial polar coordinates that our vertices start at
-3. Slowly increase the angle of the polar coordinate for each vertex over time
+2. Calculate the initial polar coordinates where are vertices are located
+3. Slowly increase the angle of the polar coordinates for each vertex over time
 
 Let's get some new variables in our header file:
 ~~~.h
@@ -592,11 +593,11 @@ And this into your keyPressed function:
 
 Now you should be able to toggle orbiting on and off using the 'o' key!
 
-One additional programming note: the variable *meshCopy* was used as a backup copy of the original mesh that could be reloaded when needed.  In the setup function when we use the line: 
+One additional programming note: the variable *meshCopy* was used as a backup copy of the original mesh that could be reloaded when needed.  In the setup function, when we used the line: 
 ~~~.cpp
 meshCopy = mesh;
 ~~~
-We are creating a separate copy of the variable *mesh* and storing it in the variable *meshCopy*.  The ofMesh class provides what is called a deep copy in this instance, so if we change some vertices in *mesh* nothing in *meshCopy* will be changed.  Just be wary - not all objects provide deep copies by default.
+We were creating a separate copy of the variable *mesh* and storing it in the variable *meshCopy*.  The ofMesh class provides what is called a deep copy in this instance, so if we change some vertices in *mesh* nothing in *meshCopy* will be changed.  Just be wary - not all objects provide deep copies by default.
 
 
 ###Magnifying
@@ -604,9 +605,7 @@ The last tweak we will add gives a bit of interactivity to the mesh.  We will ad
 
 ![Magnified](003_images/magnifierSmall.gif) 
 
-If you want to nitpick, it's a misnomer to call it a magnifying glass effect. It is really based off of a thing in optics called [barrel distortion](http://en.wikipedia.org/wiki/Distortion_(optics)).
-
-The effect looks like this when we apply it to a grid:
+It's technically a misnomer to call it a magnifying glass effect. It is really based off of a thing in optics called [barrel distortion](http://en.wikipedia.org/wiki/Distortion_(optics)).  The effect looks like this when we apply it to a grid:
 
 ![Grid](003_images/GridSmall.png) 
 ![BarrelDistortedGrid](003_images/BarrelDistortedGridSmall.png) 
@@ -615,7 +614,9 @@ What we are going to do is:
 
 1. Find where the mouse is on the screen.
 2. Find the direction that points from the mouse to each vertex.  
-3. Push each vertex away from the mouse in that direction, but push the vertices that are closer to the mouse farther away than the more distant vertices.
+3. Push each vertex away from the mouse in that direction.
+    * If a vertex is close to the mouse, push it a large distance.
+    * If a vertex is far away from the mouse, push it a small distance.
 
 This tweak will make use of some vector maths, so check out the [vector tutorial](http://openframeworks.cc/tutorials/maths/001_vector_maths.html) if you are feeling lost).
 
