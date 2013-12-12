@@ -464,11 +464,11 @@ And finally, add these lines to your update function:
         float displacementScale = 0.75;
         ofVec3f timeOffsets = offsets[i];
 	
-	    // A typical design pattern for using Perlin noise uses a couple variables:
+	    // A typical design pattern for using Perlin noise uses a couple parameters:
 	    // ofSignedNoise(time*timeScale+timeOffset)*displacementScale
 	    //     ofSignedNoise(time) gives us noise values that change smoothly over time
 	    //     ofSignedNoise(time*timeScale) allows us to control the smoothness of our noise (smaller timeScale, smoother values)
-	    //     ofSignedNoise(time+timeOffset) allows us to use the same Perlin noise function to control multiple things and have them look like they are moving independently
+	    //     ofSignedNoise(time+timeOffset) allows us to use the same Perlin noise function to control multiple things and have them look as if they are moving independently
 	    //     ofSignedNoise(time)*displacementScale allows us to change the bounds of the noise from [-1, 1] to whatever we want 
 	    // Combine all of those parameters together, and you've got some nice control over your noise
 	
@@ -479,7 +479,7 @@ And finally, add these lines to your update function:
     }
 ~~~
 
-In setup, we do two new things:
+In setup, we did two new things:
 
 1. Specified that our program will be capped at 60 frames per second using [ofSetFrameRate(60)](http://openframeworks.cc/documentation/application/ofAppRunner.html#!show_ofSetFrameRate).  We could get by without doing this, but it is a useful thing to do when you are using time.
 2. We created a variable called offsets.  It is vector of ofVec3fs that contain random values.  These values allow us to move each vertex in a random x, y and z direction seemingly independently of the movement of the other vertices.
@@ -493,7 +493,8 @@ Then in update:
 Great! Now we have a warbly mesh.
 
 ###Orbit
-Next, we can add some swirling orbital motion (these *were* originally stars, so it seems fitting).  
+Next, we can add some swirling orbital motion.  These *were* originally stars after all, so it seems fitting. 
+
 ![Orbit](003_images/orbitSmall.gif) 
 
 We're going to make use of trigonometric functions to make orbital motion.  If you want a good primer, check out [chapter 3](http://natureofcode.com/book/chapter-3-oscillation/) of The Nature of Code.  
@@ -501,7 +502,9 @@ We're going to make use of trigonometric functions to make orbital motion.  If y
 Let's forget about the z-dimension for now and focus in on the x- and y-dimensions.  If we want to take a point and have it orbit in a circle, we can make use of angles, sine and cosine to do that.  Check out the [wiki](http://en.wikipedia.org/wiki/Polar_coordinate_system) on polar coordinates - specifically, have a look at the section on "Converting between polar and Cartesian coordinates."  
 
 If we know how far our point is from the center, we can define its location in space using a distance and an angle (polar coordinates).  We can take that distance and angle and use it to convert to x and y values (Cartesian coordinates):
+
 x = distance * cos(angle)
+
 y = distance * sin(angle)
 
 If you want to swing that point in a circle, then you just need to increase the angle over time, and the maths will take care of the rest.  
