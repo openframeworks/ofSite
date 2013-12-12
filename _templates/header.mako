@@ -4,7 +4,7 @@
 <div id="head">
 
 		<div id="head-left">
-			<a href="${bf.config.site.url}" class="nohover"><img src="${bf.config.site.url}/images/ofw-logo.png" border="0" alt="openFrameworks" /></a>
+			<a href="${bf.config.site.url}" class="nohover"><img src="${bf.config.site.url}/images/of-logo.svg" border="0" alt="openFrameworks" /></a>
 		</div>
 
 		<div id="head-right">
@@ -19,7 +19,7 @@
 		</ul>
 		
 		<ul class="menu-externals">
-			<li><span class="external-dot"> ></span>&nbsp;<a href="http://forum.openframeworks.cc/index.php" target="_blank">forum</a></li>
+			<li><span class="external-dot"> ></span>&nbsp;<a href="http://forum.openframeworks.cc" target="_blank">forum</a></li>
 			<li><span class="external-dot"> ></span>&nbsp;<a href="http://ofxaddons.com" target="_blank">addons</a></li>
 			<li><span class="external-dot"> ></span>&nbsp;<a href="http://github.com/openframeworks/openFrameworks" target="_blank">github</a></li>
 			<li><span class="external-dot"> ></span>&nbsp;<a href="http://openframeworks.cc/list-info" target="_blank">mailing list</a></li>

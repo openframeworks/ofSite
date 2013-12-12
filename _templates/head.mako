@@ -10,7 +10,7 @@
 <link href="${bf.config.site.url}/css/shCore.css" rel="stylesheet" type="text/css" />
 <link href="${bf.config.site.url}/css/shThemeDefault.css" rel="stylesheet" type="text/css" />
 
-<link rel="stylesheet" type="text/css" href="${bf.config.site.url}/css/style.css?44443" media="all" />
+<link rel="stylesheet" type="text/css" href="${bf.config.site.url}/css/style.css" media="all" />
 <link rel="stylesheet" type="text/css" href="${bf.config.site.url}/css/print.css" media="print" />
 <link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
 <link rel="search" type="application/opensearchdescription+xml" href="${bf.config.site.url}/opensearch.xml" title="openFrameworks" />
