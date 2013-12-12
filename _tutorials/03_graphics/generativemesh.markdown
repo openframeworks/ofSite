@@ -55,11 +55,11 @@ We are going to focus on using points and lines as our primitives.  Let's get so
 And onto the code!
 
 Add a mesh variable to your header file (.h):
-~~~{.h}
+~~~.h
     ofMesh mesh;
 ~~~
 Append these lines to your *setup()* and *draw()* functions in your source file (.cpp):
-~~~{.cpp}
+~~~.cpp
 void testApp::setup() {
     mesh.setMode(OF_PRIMITIVE_POINTS);
 
@@ -82,7 +82,7 @@ If you build and run your project, you should see three white dots that are plac
 
 White is boring?  Well, you can add some color by modifying setup:
 
-~~~{.cpp}
+~~~.cpp
 void testApp::setup() {
     mesh.setMode(OF_PRIMITIVE_POINTS);
     mesh.enableColors();
@@ -106,7 +106,7 @@ We first enable colors using mesh.[enableColors()](http://www.openframeworks.cc/
 
 You find our points boring?  Time for some some lines then.  We need to change the primitive mode to lines, but there are three different line primitive options.  Try each of them for yourself by changing the first line of your setup function to any of these:
 
-~~~{.cpp}
+~~~.cpp
     mesh.setMode(OF_PRIMITIVE_LINES);
     mesh.setMode(OF_PRIMITIVE_LINE_STRIP);
     mesh.setMode(OF_PRIMITIVE_LINE_LOOP);
@@ -121,7 +121,7 @@ The modes each have a different way that they generate lines from the vertices:
 
 Only OF_PRIMITIVE_LINE_LOOP outlined the whole triangle. If you wanted to create that same triangle using OF_PRIMITIVE_LINE, you might try adding some more vertices like this:
 
-~~~{.cpp}
+~~~.cpp
     mesh.addVertex(top);
     mesh.addVertex(left);
     mesh.addVertex(left);
@@ -132,7 +132,7 @@ Only OF_PRIMITIVE_LINE_LOOP outlined the whole triangle. If you wanted to create
 
 Feels excessive to add duplicate vertices? Let’s try something else:
 
-~~~{.cpp}
+~~~.cpp
 void testApp::setup() {
     mesh.setMode(OF_PRIMITIVE_LINES);
     mesh.enableColors();
