@@ -15,7 +15,7 @@ and making something like this:
 
 ![Generative hubble mesh](003_images/mesh_small.png)
 
-The tutorial is broken into three sections:
+The tutorial is broken into four sections:
 
 1. [Basics: Working with ofMesh](#basics)
 	* Points
@@ -665,13 +665,13 @@ And lastly, add this chunk of code at that start of our keyPressed function:
     }
 ~~~
 
-You made it through the tutorial! (Or you just scrolled all the way down without doing anything, which is an awful lot of scrolling and should be an accomplishment by itself.)
+You made it through the tutorial! (Or you just scrolled all the way down, which is an awful lot of scrolling and should be an accomplishment by itself.)
 
 
 <a name="nextsteps"></a>
 ##Next Steps
 
-Go get some other data.  Make up some new rules.  Make something weird!  (And send it my way!)
+Go get some other data.  Make up some new rules.  Make something weird and share it in the forums!
 
 Check out the [opengl tutorial](http://openframeworks.cc/tutorials/graphics/opengl.html) for getting deeper into meshes.
 
@@ -691,4 +691,3 @@ Use people to change your mesh, like the Rockwell group's [Hall of Fragments](ht
 
 Use text as an inspiration, like Onformative's [Growing Data](http://www.onformative.com/work/growing-data/):
 [![onformativeGrowingData](003_images/onformativeGrowingData.png)](http://www.onformative.com/work/growing-data/)
-
