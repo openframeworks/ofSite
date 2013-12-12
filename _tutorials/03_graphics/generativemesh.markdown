@@ -504,7 +504,6 @@ Let's forget about the z-dimension for now and focus in on the x- and y-dimensio
 If we know how far our point is from the center, we can define its location in space using a distance and an angle (polar coordinates).  We can take that distance and angle and use it to convert to x and y values (Cartesian coordinates):
 
 x = distance * cos(angle)
-
 y = distance * sin(angle)
 
 If you want to swing that point in a circle, then you just need to increase the angle over time, and the maths will take care of the rest.  
