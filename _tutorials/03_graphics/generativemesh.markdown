@@ -493,8 +493,7 @@ Great! Now we have a warbly mesh.
 
 ###Orbit
 Next, we can add some swirling orbital motion (these *were* originally stars, so it seems fitting).  
-![Orbit1](003_images/Orbit1Small.png) 
-![Orbit2](003_images/Orbit2Small.png) 
+![Orbit](003_images/orbitSmall.gif) 
 
 We're going to make use of trigonometric functions to make orbital motion.  If you want a good primer, check out [chapter 3](http://natureofcode.com/book/chapter-3-oscillation/) of The Nature of Code.  
 
