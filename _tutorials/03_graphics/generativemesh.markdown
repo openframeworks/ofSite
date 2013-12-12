@@ -679,17 +679,17 @@ Check out the [opengl tutorial](http://openframeworks.cc/tutorials/graphics/open
 For inspiration, check out these projects:
 
 Golan Levin used portraits to create a series of lines in [Segmentation and Symptom](http://www.flong.com/projects/zoo/)
-![GolanSegmentationAndSymptom](003_images/GGolanSegmentationAndSymptom.jpg)
+![GolanSegmentationAndSymptom](003_images/GolanSegmentationAndSymptom.jpg)
 
 Lars Berg used music to drive some mesh extrusions in [extruditude](http://vimeo.com/13175129)
-![BergExtruditude](003_images/GBergExtruditude.png)
+![BergExtruditude](003_images/BergExtruditude.png)
 
 Marcin Ignac created some generative jellyfish creatures in [Cindermedusae](http://marcinignac.com/projects/cindermedusae/)
-![IgnacCindermedusae](003_images/GIgnacCindermedusae.png)
+![IgnacCindermedusae](003_images/IgnacCindermedusae.png)
 
 Use people to change your mesh, like the Rockwell group's [Hall of Fragments](http://lab.rockwellgroup.com/work/venice-biennale.html)
-![RockwellHallOfFragments](003_images/GRockwellHallOfFragments.png)
+![RockwellHallOfFragments](003_images/RockwellHallOfFragments.png)
 
 Use text as an inspiration, like Onformative's [Growing Data](http://www.onformative.com/work/growing-data/)
-![onformativeGrowingData](003_images/GonformativeGrowingData.png)
+![onformativeGrowingData](003_images/onformativeGrowingData.png)
 
