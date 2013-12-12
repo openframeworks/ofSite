@@ -407,7 +407,7 @@ void HubbleMesh::draw(){
 <a name="manipulations"></a>
 ##Manipulations: Adding effects that modify the mesh
 
-We've got ourselves a meshy mesh now, so let's go ahead and some more rules to add motion to our mesh.
+We've got ourselves a meshy mesh now, so let's go ahead and add some more rules to give our mesh some movement.
 
 ###Jitter
 The mesh resembles something you might find under a microscope, so let's add some 'organic' movement to the vertices. The motion will likely be much faster on your machine than in the gif below (browsers cap the maximum framerate of gifs), but it will give you an idea of what we are going for:
@@ -418,7 +418,7 @@ On each frame, we are going to move each vertex by a small, random amount.  Inst
 
 With ofRandom(), you specify a range of values, and it returns a random value within that range.  If you were to call it multiple times in a row, you will (very, very likely) get a new value every time you call it.  Perlin noise works a bit differently.  ofSignedNoise() will always return a value between -1.0 and 1.0, but you still have to pass in an input to the function.  Think of ofSignedNoise() as a squiggly line drawn on graph paper.  You pass in a coordinate, an x value, and it will return the corresponding y value.  If you were to call ofSignedNoise(3.0) multiple times, you would get the same value every time.  
 
-When using Perlin noise to generate motion, it is common to pass in the current time as the input (the x value).  So, in order to displace our vertices, we are going to pass in the time (using [ofGetElapsedTimef()](http://www.openframeworks.cc/documentation/utils/ofUtils.html#!show_ofGetElapsedTimef]) to ofSignedNoise, so that it will give us values that change smoothly over time.  One caveat - we want our vertices to appear to move independently of one another.  If we pass in the same time to ofSignedNoise for every vertex on a frame, then every vertex will move in the same direction.  When we displace vertex one, we need to use a different time than when we displace vertex two (and vertex 3, vertex 4, etc.).  
+When using Perlin noise to generate motion, it is common to pass in the current time as the input (the x value).  So, in order to displace our vertices, we are going to pass in the time (using [ofGetElapsedTimef()](http://www.openframeworks.cc/documentation/utils/ofUtils.html#!show_ofGetElapsedTimef])) to ofSignedNoise, so that it will give us values that change smoothly over time.  One caveat - we want our vertices to appear to move independently of one another.  If we pass in the same time to ofSignedNoise for every vertex on a frame, then every vertex will move in the same direction.  When we displace vertex one, we need to use a different time than when we displace vertex two (and vertex 3, vertex 4, etc.).  
 
 Let's jump into the code.  Add this to your header:
 ~~~.h
@@ -430,7 +430,8 @@ And add the following two lines to your setup function:
     // Add this line:
     ofSetFrameRate(60);
     
-    // Code ommitted for clarity...
+    // Some lines of code omitted for clarity, you should still
+    // keep them in your local version
 
     for (int x=0; x<w; ++x) {
         for (int y=0; y<h; ++y) {
@@ -463,13 +464,13 @@ And finally, add these lines to your update function:
         float displacementScale = 0.75;
         ofVec3f timeOffsets = offsets[i];
 	
-	// A typical design patter for using Perlin noise uses a couple variables:
-	// ofSignedNoise(time*timeScale+timeOffset)*displacementScale
-	//     ofSignedNoise(time) gives us noise values that change smoothly over time
-	//     ofSignedNoise(time*timeScale) allows us to control the smoothness of our noise (smaller timeScale, smoother values)
-	//     ofSignedNoise(time+timeOffset) allows us to use the same Perlin noise function to control multiple things and have them look like they are moving independently
-	//     ofSignedNoise(time)*displacementScale allows us to change the bounds of the noise from [-1, 1] to whatever we want 
-	// Combine all of those parameters together, and you've got some nice control over your noise
+	    // A typical design pattern for using Perlin noise uses a couple variables:
+	    // ofSignedNoise(time*timeScale+timeOffset)*displacementScale
+	    //     ofSignedNoise(time) gives us noise values that change smoothly over time
+	    //     ofSignedNoise(time*timeScale) allows us to control the smoothness of our noise (smaller timeScale, smoother values)
+	    //     ofSignedNoise(time+timeOffset) allows us to use the same Perlin noise function to control multiple things and have them look like they are moving independently
+	    //     ofSignedNoise(time)*displacementScale allows us to change the bounds of the noise from [-1, 1] to whatever we want 
+	    // Combine all of those parameters together, and you've got some nice control over your noise
 	
         vert.x += (ofSignedNoise(time*timeScale+timeOffsets.x)) * displacementScale;
         vert.y += (ofSignedNoise(time*timeScale+timeOffsets.y)) * displacementScale;
