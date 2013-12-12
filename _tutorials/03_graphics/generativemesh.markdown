@@ -600,11 +600,12 @@ We are creating a separate copy of the variable *mesh* and storing it in the var
 ###Magnifying
 The last tweak we will add gives a bit of interactivity to the mesh.  We will add a magnifying glass effect:
 
-![Magnified](003_images/magniferSmall.gif) 
+![Magnified](003_images/magnifierSmall.gif) 
 
 If you want to nitpick, it's a misnomer to call it a magnifying glass effect. It is really based off of a thing in optics called [barrel distortion](http://en.wikipedia.org/wiki/Distortion_(optics)).
 
 The effect looks like this when we apply it to a grid:
+
 ![Grid](003_images/GridSmall.png) 
 ![BarrelDistortedGrid](003_images/BarrelDistortedGridSmall.png) 
 
