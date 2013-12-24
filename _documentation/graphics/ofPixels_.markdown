@@ -905,7 +905,7 @@ This returns a raw pointer to the pixel data. Changing this will change the valu
 for(int i=0;i<pixels.size();i++) {
 	// for RGB pixels there will be 3 values for each pixel
 	// for RGBA pixels there will be 4
-	// you can access the pixesl for reading or writing with: pixels[i]
+	// you can access the pixels for reading or writing with: pixels[i]
 }
 ~~~~
 
