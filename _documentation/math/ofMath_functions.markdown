@@ -818,7 +818,7 @@ _description: _
 
 
 Calculates a number between two numbers (start,stop) at a specific increment (amt).
-If we want the new number to be between start,stop numbers amp needs to be a number between 0 and 1. 
+If we want the new number to be between start and stop numbers, amt needs to be a number between 0 and 1. 
 e.g:
 ~~~~{.cpp}
 float init,end,increment,result;
