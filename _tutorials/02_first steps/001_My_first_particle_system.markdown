@@ -155,7 +155,7 @@ CHALLENGE: Now that we have learned how to make variables that you can access fr
 
 ## 3. Thank God we have classes
 
-If you are have doing the Challenges you have may have ended up with a lot of repeated code. Forutunately computers make repetition easy. 
+If you are doing the Challenges you have may have ended up with a lot of repeated code. Forutunately computers make repetition easy. 
 Here we will scratch the surface of Object Oriented Programing (a primary feature of C++) in order to make things easier, more readable and less repetitive.
 
 Let's imagine a ball.
