@@ -1,4 +1,4 @@
-d#!/usr/bin/python
+#!/usr/bin/python
 
 from lxml import etree
 from lxml import objectify
