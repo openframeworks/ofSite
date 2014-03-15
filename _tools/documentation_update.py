@@ -1,4 +1,4 @@
-#!/usr/bin/python
+d#!/usr/bin/python
 
 from lxml import etree
 from lxml import objectify
@@ -168,7 +168,10 @@ def serialize_doxygen_paragraph(p):
     for c in p.content_:
         next_element = parse_doxigen_para_element(c)
         if type(next_element)!=doxygen_compound.docEmptyType:
-            ret = ret + next_element
+            if type(next_element)==str:
+                ret = ret + next_element;
+            else:
+                print "Next Element: (not str) "+ type(next_element).__name__;
             
     if ret != "":
         ret = ret + "\n\n"
