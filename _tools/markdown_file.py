@@ -107,13 +107,21 @@ def getfunctionsfile(filename):
                         state = 'function'
                         function = DocsFunction(0)
                         
-                    elif state == 'function' and line.find('_')==0 and line.find('_description')==-1:
+                    elif state == 'function' and line.find('_')==0 and line.find('_inlined_description')==-1 and line.find('_description')==-1:
                         #print "##########field: " + line
                         addfield(function,line)
                         
-                    elif state == 'function' and line.find('_description')==0:
+                    elif state == 'function' and line.find('_inlined_description')==0:
+                        state = 'inlined_description'
+                        prevBreakLine = True
+                        
+                    elif (state == 'inlined_description' or state=='function') and line.find('_description')==0:
                         state = 'description'
                         prevBreakLine = False
+                        
+                    elif state == 'inlined_description' and line.find('##')!=0 and line.find('_description')==-1 and (line!='\n' or not prevBreakLine):
+                        function.inlined_description = function.inlined_description + line
+                        prevBreakLine = (line=='\n')
                         
                     elif state == 'description' and line.find('<!----------------------------------------------------------------------------->')==-1 and (line!='\n' or not prevBreakLine):
                         function.description = function.description + line
@@ -419,6 +427,7 @@ def setfunctionsfile(functionfile,is_addon=False):
         os.mkdir(path)
     except:
         pass
+        
     f = open(os.path.join(path,functionfile.name)+"_functions.markdown",'w')
     f.write('#functions\n\n\n')
     f.write("<!--\n");
