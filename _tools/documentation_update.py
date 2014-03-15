@@ -56,6 +56,7 @@ def update_moved_functions(filename,is_addon=False):
     
             
 def serialize_functionsfile(filename,is_addon=False):
+    print("functions file " + filename)
     xml = objectify.parse(filename)
     doxygen = xml.getroot()
     
@@ -81,6 +82,16 @@ def serialize_functionsfile(filename,is_addon=False):
                         function.description = function.description.replace('<p>','').replace('</p>','').replace('<code>','').replace('</code>','').replace('<pre>','')
                         function.returns = returns
                         functions_fromxml.append(function.name)
+                        
+                        if xmlfunction.find("briefdescription")!=None and    xmlfunction.briefdescription.find("para")!=None:
+                            function.inlined_description = ""
+                            for p in xmlfunction.briefdescription.para:
+                                function.inlined_description = function.inlined_description + serialize_doxygen_paragraph(p)
+                            
+                        if xmlfunction.find("detaileddescription")!=None and xmlfunction.detaileddescription.find("para")!=None:
+                            function.inlined_description = function.inlined_description + "\n"
+                            for p in xmlfunction.detaileddescription.para:
+                                function.inlined_description = function.inlined_description + serialize_doxygen_paragraph(p)
                         
                         #print function.returns + " " + function.name + xmlfunction.argsstring.text + " new: " + str(function.new)
             
@@ -165,13 +176,16 @@ def parse_doxigen_para_element(e):
 
 def serialize_doxygen_paragraph(p):
     ret = ""
-    for c in p.content_:
-        next_element = parse_doxigen_para_element(c)
-        if type(next_element)!=doxygen_compound.docEmptyType:
-            if type(next_element)==str:
-                ret = ret + next_element;
-            else:
-                print "Next Element: (not str) "+ type(next_element).__name__;
+    if hasattr(p,"content_"):
+        for c in p.content_:
+            next_element = parse_doxigen_para_element(c)
+            if type(next_element)!=doxygen_compound.docEmptyType:
+                if type(next_element)==str:
+                    ret = ret + next_element;
+                else:
+                    print "Next Element: (not str) "+ type(next_element).__name__;
+    else:
+        ret = str(p)
             
     if ret != "":
         ret = ret + "\n\n"
