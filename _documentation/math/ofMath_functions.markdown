@@ -187,16 +187,6 @@ _inlined_description: _
 _description: _
 
 
-Restricts a value to be within a specified range defined by values min and max. 
-e.g:
-~~~~{.cpp}
-float val, newval;
-val=10;
-newval=ofClamp(val,30,40); //newval = 30
-newval=ofClamp(val,0,5); //newval = 5
-newval=ofClamp(val,0,20); //newval = 10
-~~~~
-
 
 
 
@@ -305,8 +295,6 @@ _inlined_description: _
 _description: _
 
 
-Convert an angle value expressed in Degrees into an angle in Radians. For example if we call this function for degrees=90 we obtain PI/2.
-
 
 
 
@@ -342,8 +330,6 @@ _inlined_description: _
 
 _description: _
 
-
-Calculates the distance between two points, (x1, y1) and (x2, y2).   Uses http://en.wikipedia.org/wiki/Pythagorean_theorem
 
 
 
@@ -417,8 +403,6 @@ _inlined_description: _
 _description: _
 
 
-Calculates the distances between two points, as in ofDist() but doesn't take the sqrt() of the result, which is a faster operation if you need to calculate and compare multiple distances. 
-
 
 
 
@@ -490,8 +474,6 @@ _inlined_description: _
 
 _description: _
 
-
-Returns true if the number t is the range of [min - max], false if it's not. 
 
 
 
@@ -781,18 +763,6 @@ _inlined_description: _
 _description: _
 
 
-Calculates a number between two numbers (start,stop) at a specific increment (amt).
-If we want the new number to be between start and stop numbers, amt needs to be a number between 0 and 1. 
-e.g:
-~~~~{.cpp}
-float init,end,increment,result;
-increment=0.2;
-init = 1;
-end =2;
-result=ofLerp(init, end, increment); //result = 1.2
-//We are doing init+increment*(end-init)
-~~~~
-
 
 
 
@@ -937,15 +907,6 @@ _inlined_description: _
 _description: _
 
 
-Re-maps a number from one range to another. We convert the number value where inputMin < value < inputMax into a number beetween outputMin and outputMax.
-e.g:
-~~~~{.cpp}
-float x, newx;
-x=5;
-// 0 < x < 10
-newx = ofMap(x, 0, 10, 21, 22) //newx = 21.5 a value between 21 and 22
-~~~~
-
 
 
 
@@ -982,11 +943,6 @@ _inlined_description: _
 _description: _
 
 
-ofMap remaps the value passed in "value", calculating it's linear distance between inputMin and inputMax, and remapping it based on that percentage to outputMin and outputMax.  You can choose to clamp the results.  Results are not clamped by default.
-For example:
-float color = ofMap(mouseX, 0, ofGetWidth(), 0, 255, true);
-ofBackground(color, color, color);
-
 
 
 
@@ -1022,8 +978,6 @@ _inlined_description: _
 
 _description: _
 
-
-eg: for an input of 50 ofNextPow2 will return 64 and for an input of 401 it will return 512.
 
 
 
@@ -1205,9 +1159,6 @@ _inlined_description: _
 _description: _
 
 
-Normalizes a number from a given range (min,max) into a value between 0 and 1.
-note: we are getting a clamp number between 0 and 1 of "value-min/max-min"
-
 
 
 
@@ -1243,8 +1194,6 @@ _inlined_description: _
 
 _description: _
 
-
-Convert an angle value expressed in Radians into an angle in Degrees. For example if we call this function for radians=PI/2 we obtain 90. 
 
 
 
@@ -1282,8 +1231,6 @@ _inlined_description: _
 _description: _
 
 
-For example, ofRandom(-30,20) will return a random float point number between -30 and 20.
-
 
 
 
@@ -1319,8 +1266,6 @@ _inlined_description: _
 
 _description: _
 
-
-Picks a random float point number between 0 and max. 
 
 
 
@@ -1394,8 +1339,6 @@ _inlined_description: _
 _description: _
 
 
-Picks a random number between 0 and the width of the screen. 
-
 
 
 
@@ -1431,8 +1374,6 @@ _inlined_description: _
 
 _description: _
 
-
-Picks a random float point number between -1 and 1. 
 
 
 
@@ -1470,8 +1411,6 @@ _inlined_description: _
 _description: _
 
 
-Picks a random float point number between 0 and 1. 
-
 
 
 
@@ -1507,8 +1446,6 @@ _inlined_description: _
 
 _description: _
 
-
-Seeds the random number generator to the clock time, so that random numbers will always be different.
 
 
 
@@ -1546,8 +1483,6 @@ _inlined_description: _
 _description: _
 
 
-Seeds the random number generator to a value passed in (val), so that random numbers will always be the same using the same seed.
-
 
 
 
@@ -1583,8 +1518,6 @@ _inlined_description: _
 
 _description: _
 
-
-Return 1 if n is positive, 0 if n = 0, and -1 if n is negative.
 
 
 

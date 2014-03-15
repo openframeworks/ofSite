@@ -276,7 +276,7 @@
 <div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;    <span class="keywordflow">if</span>(<span class="keyword">sizeof</span>(SrcType) == <span class="keyword">sizeof</span>(<span class="keywordtype">float</span>)) {</div>
 <div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;        <span class="comment">// coming from float we need a special case to clamp the values</span></div>
 <div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 4; i++){</div>
-<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;            v[i] = <a class="code" href="of_math_8cpp.html#a4b2fc21e53bfb8521923300b0d30afdb">ofClamp</a>(mom[i], 0, 1) * factor;</div>
+<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;            v[i] = <a class="code" href="of_math_8cpp.html#a4b2fc21e53bfb8521923300b0d30afdb" title="Clamp a value between min and max. ">ofClamp</a>(mom[i], 0, 1) * factor;</div>
 <div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;        }</div>
 <div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;    } <span class="keywordflow">else</span>{</div>
 <div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;        <span class="comment">// everything else is a straight scaling</span></div>

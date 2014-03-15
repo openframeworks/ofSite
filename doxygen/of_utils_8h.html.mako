@@ -68,6 +68,7 @@
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:addcdb1a477a137f6515917598b4d47b5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_utils_8h.html#addcdb1a477a137f6515917598b4d47b5">ofNextPow2</a> (int input)</td></tr>
+<tr class="memdesc:addcdb1a477a137f6515917598b4d47b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the next larger power of 2.  <a href="#addcdb1a477a137f6515917598b4d47b5">More...</a><br/></td></tr>
 <tr class="separator:addcdb1a477a137f6515917598b4d47b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea0bc115291cf9119ea1b9f5ac70ca56"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_utils_8h.html#aea0bc115291cf9119ea1b9f5ac70ca56">ofResetElapsedTimeCounter</a> ()</td></tr>
 <tr class="separator:aea0bc115291cf9119ea1b9f5ac70ca56"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -915,6 +916,17 @@ template&lt;&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Calculates the next larger power of 2. </p>
+<p>If the input is already a power of 2, it will return itself. Example:</p>
+<p>ofNextPow2(50); // returns 64 ofNextPow2(64); // returns 64 ofNextPow(401)); // returns 512</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value.</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>value^2. </dd></dl>
 
 </div>
 </div>

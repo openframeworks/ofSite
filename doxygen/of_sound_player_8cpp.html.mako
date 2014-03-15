@@ -64,14 +64,19 @@
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a59583d461cb699576ac603fcf1865c3a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_sound_player_8cpp.html#a59583d461cb699576ac603fcf1865c3a">ofSoundStopAll</a> ()</td></tr>
+<tr class="memdesc:a59583d461cb699576ac603fcf1865c3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops all active sound players on FMOD-based systems (windows, osx).  <a href="#a59583d461cb699576ac603fcf1865c3a">More...</a><br/></td></tr>
 <tr class="separator:a59583d461cb699576ac603fcf1865c3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc2ae62ed625b27bba334d3123cb6e89"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_sound_player_8cpp.html#abc2ae62ed625b27bba334d3123cb6e89">ofSoundSetVolume</a> (float vol)</td></tr>
+<tr class="memdesc:abc2ae62ed625b27bba334d3123cb6e89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets global volume for FMOD-based sound players (windows, osx).  <a href="#abc2ae62ed625b27bba334d3123cb6e89">More...</a><br/></td></tr>
 <tr class="separator:abc2ae62ed625b27bba334d3123cb6e89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83ae465cfdff3b3bc4fbb3d814feadf3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_sound_player_8cpp.html#a83ae465cfdff3b3bc4fbb3d814feadf3">ofSoundUpdate</a> ()</td></tr>
+<tr class="memdesc:a83ae465cfdff3b3bc4fbb3d814feadf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call in your app's update() to update FMOD-based sound players.  <a href="#a83ae465cfdff3b3bc4fbb3d814feadf3">More...</a><br/></td></tr>
 <tr class="separator:a83ae465cfdff3b3bc4fbb3d814feadf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5abc9d339d727e188c0dda3bfdcebd1a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_sound_player_8cpp.html#a5abc9d339d727e188c0dda3bfdcebd1a">ofSoundShutdown</a> ()</td></tr>
+<tr class="memdesc:a5abc9d339d727e188c0dda3bfdcebd1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cleans up FMOD (windows, osx).  <a href="#a5abc9d339d727e188c0dda3bfdcebd1a">More...</a><br/></td></tr>
 <tr class="separator:a5abc9d339d727e188c0dda3bfdcebd1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac163678c22b1b80addb29ad6bf62ebb"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_sound_player_8cpp.html#aac163678c22b1b80addb29ad6bf62ebb">ofSoundGetSpectrum</a> (int nBands)</td></tr>
+<tr class="memdesc:aac163678c22b1b80addb29ad6bf62ebb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a frequency spectrum sample, taking all current sound players into account.  <a href="#aac163678c22b1b80addb29ad6bf62ebb">More...</a><br/></td></tr>
 <tr class="separator:aac163678c22b1b80addb29ad6bf62ebb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -89,6 +94,17 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Gets a frequency spectrum sample, taking all current sound players into account. </p>
+<p>Each band will be represented as a float between 0 and 1.</p>
+<dl class="section warning"><dt>Warning</dt><dd>This isn't implemented on mobile &amp; embedded platforms. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nBands</td><td>number of spectrum bands to return, max 512. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>pointer to an FFT sample, sample size is equal to the nBands parameter. </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="abc2ae62ed625b27bba334d3123cb6e89"></a>
@@ -105,6 +121,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Sets global volume for FMOD-based sound players (windows, osx). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vol</td><td>range is 0 to 1. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a5abc9d339d727e188c0dda3bfdcebd1a"></a>
@@ -119,6 +143,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Cleans up FMOD (windows, osx). </p>
 
 </div>
 </div>
@@ -135,6 +161,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Stops all active sound players on FMOD-based systems (windows, osx). </p>
+
 </div>
 </div>
 <a class="anchor" id="a83ae465cfdff3b3bc4fbb3d814feadf3"></a>
@@ -149,6 +177,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Call in your app's update() to update FMOD-based sound players. </p>
 
 </div>
 </div>

@@ -667,7 +667,7 @@
 <li>setLoop()
 : <a class="el" href="classof_base_sound_player.html#af99466881ec3c5b0fb9d374d353ff7b1">ofBaseSoundPlayer</a>
 , <a class="el" href="classof_fmod_sound_player.html#a60120b4b5aa3ecae87078e8f189b76d8">ofFmodSoundPlayer</a>
-, <a class="el" href="classof_sound_player.html#a83b6cdb9c183a25f1f0f3834b0ea75da">ofSoundPlayer</a>
+, <a class="el" href="classof_sound_player.html#aaec50cde0a65da345e27b1f2c3fe71c0">ofSoundPlayer</a>
 </li>
 <li>setLoopState()
 : <a class="el" href="classof_base_video_player.html#a5e9c97d4331aed83db1a7d4594c4e383">ofBaseVideoPlayer</a>
@@ -703,7 +703,7 @@
 <li>setMultiPlay()
 : <a class="el" href="classof_fmod_sound_player.html#a24d7bbe01cc94c31b3b0c8ea32b0285b">ofFmodSoundPlayer</a>
 , <a class="el" href="classof_base_sound_player.html#a576345622ea19d09d5c4e5e3cf6cb653">ofBaseSoundPlayer</a>
-, <a class="el" href="classof_sound_player.html#a05aa20552192e95abc716e426fe2c26e">ofSoundPlayer</a>
+, <a class="el" href="classof_sound_player.html#a966974fb83e033cb299abead57c9010b">ofSoundPlayer</a>
 </li>
 <li>setName()
 : <a class="el" href="classof_read_only_parameter.html#a71a097b6a7ec79048590b95fe7c63d66">ofReadOnlyParameter&lt; ParameterType, Friend &gt;</a>
@@ -752,7 +752,7 @@
 <li>setPan()
 : <a class="el" href="classof_base_sound_player.html#a84e70f38b1ae07380fb2d902f3e21e61">ofBaseSoundPlayer</a>
 , <a class="el" href="classof_fmod_sound_player.html#a051b97f0d757cbbd933ac0cb01446e05">ofFmodSoundPlayer</a>
-, <a class="el" href="classof_sound_player.html#afe9153ef6ccff90698f2c0f32aecf264">ofSoundPlayer</a>
+, <a class="el" href="classof_sound_player.html#a09b4d2544fd2a8996495d86abc6a37b4">ofSoundPlayer</a>
 </li>
 <li>setParent()
 : <a class="el" href="classof_abstract_parameter.html#a3c09bea13abf9524548ae48b6dbf8809">ofAbstractParameter</a>
@@ -762,7 +762,7 @@
 : <a class="el" href="classof_base_video_player.html#a167a3b325c2f034998600b28fce5d0b0">ofBaseVideoPlayer</a>
 , <a class="el" href="classof_base_sound_player.html#ab3a7af6b4cbb14ecaf12f836d05d7c8b">ofBaseSoundPlayer</a>
 , <a class="el" href="classof_fmod_sound_player.html#a0cb0e9743706e6b3699a839713aca892">ofFmodSoundPlayer</a>
-, <a class="el" href="classof_sound_player.html#ad78dcd06f67c3ade7e0f81cf7ec48f7a">ofSoundPlayer</a>
+, <a class="el" href="classof_sound_player.html#acacd7c20575eedd1e76e83690000b531">ofSoundPlayer</a>
 , <a class="el" href="classof_gst_utils.html#afbcc138c11944853635325e693c47666">ofGstUtils</a>
 , <a class="el" href="classof_gst_video_player.html#aae3fa1ecd354237b81521b61ecb4f06a">ofGstVideoPlayer</a>
 , <a class="el" href="classof_q_t_kit_player.html#a29df40d643f894de26e21ba4c8a5222b">ofQTKitPlayer</a>
@@ -802,7 +802,7 @@
 , <a class="el" href="classof_base_sound_player.html#ae302cd3a5f42cef51ea72f950f6a2b10">ofBaseSoundPlayer</a>
 , <a class="el" href="classof_node.html#a6f5733da97701638ec9e089016d0381a">ofNode</a>
 , <a class="el" href="classof_fmod_sound_player.html#ae2cb9b2e9599174f4e4f6f29a99b4c9a">ofFmodSoundPlayer</a>
-, <a class="el" href="classof_sound_player.html#ac9179fcb91159811bee454488b19ba9f">ofSoundPlayer</a>
+, <a class="el" href="classof_sound_player.html#a4603df47fce522ef54b077382d53de9d">ofSoundPlayer</a>
 , <a class="el" href="classof_base_video_player.html#a2b38dc72afcad3afbff761bd4ee15656">ofBaseVideoPlayer</a>
 , <a class="el" href="classof_rectangle.html#a10d17b5bee2998f977ca211e06ebb0b8">ofRectangle</a>
 , <a class="el" href="classof_gst_utils.html#ae97d801679bd1149c272d2bc4256a27e">ofGstUtils</a>
@@ -919,7 +919,7 @@
 , <a class="el" href="classof_fmod_sound_player.html#a543d6d876c39feeb759ebd77c351b36e">ofFmodSoundPlayer</a>
 , <a class="el" href="classof_gst_video_player.html#af3142dc9b500c0bad6071804e6b1451c">ofGstVideoPlayer</a>
 , <a class="el" href="classof_base_sound_player.html#a1b44d5401ee7c0d20fb9d1b9b4d507f9">ofBaseSoundPlayer</a>
-, <a class="el" href="classof_sound_player.html#ad0d545c135fae29a5ae3f53e6b8c5a36">ofSoundPlayer</a>
+, <a class="el" href="classof_sound_player.html#ae53cf7c7dae0dce98b3b2723d2cfc1cc">ofSoundPlayer</a>
 , <a class="el" href="classof_gst_utils.html#a2729352bcf45dbba333f4b2305579873">ofGstUtils</a>
 , <a class="el" href="classof_q_t_kit_player.html#a38ab663e2078da6052bc856d1fa5cd46">ofQTKitPlayer</a>
 </li>

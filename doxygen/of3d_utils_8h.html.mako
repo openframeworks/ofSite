@@ -65,15 +65,19 @@
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a30cb936226988baf93141d8a14eabd31"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of3d_utils_8h.html#a30cb936226988baf93141d8a14eabd31">ofDrawAxis</a> (float size)</td></tr>
-<tr class="memdesc:a30cb936226988baf93141d8a14eabd31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws x,y,z axes representing the current reference frame  Axes are drawn in red (+x), green (+y) and blue (+z)  <a href="#a30cb936226988baf93141d8a14eabd31">More...</a><br/></td></tr>
+<tr class="memdesc:a30cb936226988baf93141d8a14eabd31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws x,y,z axes representing the current reference frame.  <a href="#a30cb936226988baf93141d8a14eabd31">More...</a><br/></td></tr>
 <tr class="separator:a30cb936226988baf93141d8a14eabd31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a121a7268ae088ebcf1d6730e0891ea8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of3d_utils_8h.html#a121a7268ae088ebcf1d6730e0891ea8f">ofDrawGrid</a> (float scale=10.0f, float ticks=8.0f, bool labels=false, bool x=true, bool y=true, bool z=true)</td></tr>
+<tr class="memdesc:a121a7268ae088ebcf1d6730e0891ea8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws grid planes representing the current reference frame, with subdivisions.  <a href="#a121a7268ae088ebcf1d6730e0891ea8f">More...</a><br/></td></tr>
 <tr class="separator:a121a7268ae088ebcf1d6730e0891ea8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37e58812f9a8fbf46531aee61abbe5f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of3d_utils_8h.html#a37e58812f9a8fbf46531aee61abbe5f7">ofDrawGridPlane</a> (float scale, float ticks=8.0f, bool labels=false)</td></tr>
+<tr class="memdesc:a37e58812f9a8fbf46531aee61abbe5f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the YZ grid plane representing the current reference frame, with subdivisions.  <a href="#a37e58812f9a8fbf46531aee61abbe5f7">More...</a><br/></td></tr>
 <tr class="separator:a37e58812f9a8fbf46531aee61abbe5f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52ecf8cf34da4115f243f95a0afd50a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of3d_utils_8h.html#a52ecf8cf34da4115f243f95a0afd50a7">ofDrawArrow</a> (const <a class="el" href="classof_vec3f.html">ofVec3f</a> &amp;start, const <a class="el" href="classof_vec3f.html">ofVec3f</a> &amp;end, float headSize=0.05f)</td></tr>
+<tr class="memdesc:a52ecf8cf34da4115f243f95a0afd50a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws an arrow with the current color.  <a href="#a52ecf8cf34da4115f243f95a0afd50a7">More...</a><br/></td></tr>
 <tr class="separator:a52ecf8cf34da4115f243f95a0afd50a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8dba2f5056d15d74d2e4acc58967003d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of3d_utils_8h.html#a8dba2f5056d15d74d2e4acc58967003d">ofDrawRotationAxes</a> (float radius, float stripWidth=10, int circleRes=60)</td></tr>
+<tr class="memdesc:a8dba2f5056d15d74d2e4acc58967003d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function renders a set of 3 axis-aligned circular bands, centered at the origin.  <a href="#a8dba2f5056d15d74d2e4acc58967003d">More...</a><br/></td></tr>
 <tr class="separator:a8dba2f5056d15d74d2e4acc58967003d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -107,6 +111,21 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Draws an arrow with the current color. </p>
+<p>This function draws an arrow from a start (tail) point to an end (head) point, with a conical arrowhead at the end point. The arrow is drawn in the current color (e.g. set with ofSetColor). Example:</p>
+<div class="fragment"><div class="line"><a class="code" href="of_graphics_8cpp.html#abf32a6859916c39dfe5e4835c725fb6d">ofSetColor</a>(0,0,0);</div>
+<div class="line"><a class="code" href="classof_vec3f.html">ofVec3f</a> arrowTailPoint (0,0,0);</div>
+<div class="line"><a class="code" href="classof_vec3f.html">ofVec3f</a> arrowHeadPoint (100, 150,0);</div>
+<div class="line"><a class="code" href="of3d_utils_8cpp.html#a1651568344a47f4aff53eb15c9d7aa0d" title="Draws an arrow with the current color. ">ofDrawArrow</a> (arrowTailPoint, arrowHeadPoint, 20.0);</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">start</td><td>The start point (tail) of the arrow, expressed as an <a class="el" href="classof_vec3f.html">ofVec3f</a>. </td></tr>
+    <tr><td class="paramname">end</td><td>The end point (head) of the arrow, expressed as an <a class="el" href="classof_vec3f.html">ofVec3f</a>. </td></tr>
+    <tr><td class="paramname">headSize</td><td>The size of the arrowhead. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a30cb936226988baf93141d8a14eabd31"></a>
@@ -123,7 +142,15 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Draws x,y,z axes representing the current reference frame  Axes are drawn in red (+x), green (+y) and blue (+z) </p>
+<p>Draws x,y,z axes representing the current reference frame. </p>
+<p>This function draws a set of x,y,z axes, which can be helpful for understanding which way is up. There are no unit markings nor arrowheads. Axes are not drawn in the negative directions. Axes are drawn in red (+x), green (+y) and blue (+z), starting from the origin. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>The size at which to draw the axes.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Draws x,y,z axes representing the current reference frame.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">size</td><td>size at which to draw the axes </td></tr>
@@ -181,6 +208,21 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Draws grid planes representing the current reference frame, with subdivisions. </p>
+<p>This function draws a set of three double-ended grid planes centered at the origin. Parameters allow each of the grid planes (yz,xz, and xy) to be turned on or off. Optionally, the function can include white numeric labels for grid subdivisions. (Numeric labels are drawn using ofDrawBitmapString internally.)</p>
+<p>The yz plane (at x=0) is drawn in red. The xz plane (at y=0) is drawn in green. The xy plane (at z=0) is drawn in blue.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scale</td><td>The extent of each grid plane, on each side of the origin. A scale of 10 will produce a set of grid which are 20 units wide (10 on the positive side of the origin, 10 on the negative side). </td></tr>
+    <tr><td class="paramname">ticks</td><td>The number of ticks (i.e. subdivisions) on each side of the origin. </td></tr>
+    <tr><td class="paramname">labels</td><td>Whether or not labels are drawn. </td></tr>
+    <tr><td class="paramname">x</td><td>Whether or not the yz plane (at x=0) is drawn. </td></tr>
+    <tr><td class="paramname">y</td><td>Whether or not the xz plane (at y=0) is drawn. </td></tr>
+    <tr><td class="paramname">z</td><td>Whether or not the xy plane (at z=0) is drawn. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a37e58812f9a8fbf46531aee61abbe5f7"></a>
@@ -213,6 +255,17 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Draws the YZ grid plane representing the current reference frame, with subdivisions. </p>
+<p>This function draws the YZ grid plane, at x=0, in a double-ended manner centered at the origin. Optionally, the function can include white numeric labels for grid subdivisions. (Numeric labels are drawn using ofDrawBitmapString internally.) The grid is drawn with the current color (i.e. set with ofSetColor).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scale</td><td>The extent of each grid plane, on each side of the origin. A scale of 10 will produce a grid which is 20 units wide (10 on the positive side of the origin, 10 on the negative side). </td></tr>
+    <tr><td class="paramname">ticks</td><td>The number of ticks (i.e. subdivisions) on each side of the origin. </td></tr>
+    <tr><td class="paramname">labels</td><td>Whether or not labels are drawn. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a8dba2f5056d15d74d2e4acc58967003d"></a>
@@ -244,6 +297,16 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>This function renders a set of 3 axis-aligned circular bands, centered at the origin. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">radius</td><td>The radius of the circular bands. </td></tr>
+    <tr><td class="paramname">stripWidth</td><td>The width of the circular bands. The default is 10 units. </td></tr>
+    <tr><td class="paramname">circleRes</td><td>The resolution of the circular bands. The default is 60 segments. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

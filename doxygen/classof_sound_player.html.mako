@@ -59,6 +59,9 @@
 </div><!--header-->
 <div class="contents">
 
+<p>Plays sound files.  
+ <a href="classof_sound_player.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="of_sound_player_8h_source.html">ofSoundPlayer.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ofSoundPlayer:</div>
@@ -79,42 +82,61 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae4c3635f6bb5ad7960cd5e77f438dd9a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_ptr.html">ofPtr</a>&lt; <a class="el" href="classof_base_sound_player.html">ofBaseSoundPlayer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_sound_player.html#ae4c3635f6bb5ad7960cd5e77f438dd9a">getPlayer</a> ()</td></tr>
 <tr class="separator:ae4c3635f6bb5ad7960cd5e77f438dd9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afaeef912ef8131cf848cfd4822094f00"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_sound_player.html#afaeef912ef8131cf848cfd4822094f00">loadSound</a> (string fileName, bool stream=false)</td></tr>
+<tr class="memdesc:afaeef912ef8131cf848cfd4822094f00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tells the sound player which file to play.  <a href="#afaeef912ef8131cf848cfd4822094f00">More...</a><br/></td></tr>
 <tr class="separator:afaeef912ef8131cf848cfd4822094f00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af34f51c6db954cca3ccf9f0a7f7bdca3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_sound_player.html#af34f51c6db954cca3ccf9f0a7f7bdca3">unloadSound</a> ()</td></tr>
+<tr class="memdesc:af34f51c6db954cca3ccf9f0a7f7bdca3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops and unloads the current sound.  <a href="#af34f51c6db954cca3ccf9f0a7f7bdca3">More...</a><br/></td></tr>
 <tr class="separator:af34f51c6db954cca3ccf9f0a7f7bdca3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b33f32cd5330619a7c4d9a812a201bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_sound_player.html#a0b33f32cd5330619a7c4d9a812a201bf">play</a> ()</td></tr>
+<tr class="memdesc:a0b33f32cd5330619a7c4d9a812a201bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts playback.  <a href="#a0b33f32cd5330619a7c4d9a812a201bf">More...</a><br/></td></tr>
 <tr class="separator:a0b33f32cd5330619a7c4d9a812a201bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47cc0ae78fbb5a8b62f9c9d92279932f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_sound_player.html#a47cc0ae78fbb5a8b62f9c9d92279932f">stop</a> ()</td></tr>
+<tr class="memdesc:a47cc0ae78fbb5a8b62f9c9d92279932f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops playback.  <a href="#a47cc0ae78fbb5a8b62f9c9d92279932f">More...</a><br/></td></tr>
 <tr class="separator:a47cc0ae78fbb5a8b62f9c9d92279932f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acaa80eb92af43c4889a1f2968849dd80"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_sound_player.html#acaa80eb92af43c4889a1f2968849dd80">setVolume</a> (float vol)</td></tr>
+<tr class="memdesc:acaa80eb92af43c4889a1f2968849dd80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets playback volume.  <a href="#acaa80eb92af43c4889a1f2968849dd80">More...</a><br/></td></tr>
 <tr class="separator:acaa80eb92af43c4889a1f2968849dd80"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe9153ef6ccff90698f2c0f32aecf264"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_sound_player.html#afe9153ef6ccff90698f2c0f32aecf264">setPan</a> (float vol)</td></tr>
-<tr class="separator:afe9153ef6ccff90698f2c0f32aecf264"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0d545c135fae29a5ae3f53e6b8c5a36"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_sound_player.html#ad0d545c135fae29a5ae3f53e6b8c5a36">setSpeed</a> (float spd)</td></tr>
-<tr class="separator:ad0d545c135fae29a5ae3f53e6b8c5a36"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad78dcd06f67c3ade7e0f81cf7ec48f7a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_sound_player.html#ad78dcd06f67c3ade7e0f81cf7ec48f7a">setPaused</a> (bool bP)</td></tr>
-<tr class="separator:ad78dcd06f67c3ade7e0f81cf7ec48f7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83b6cdb9c183a25f1f0f3834b0ea75da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_sound_player.html#a83b6cdb9c183a25f1f0f3834b0ea75da">setLoop</a> (bool bLp)</td></tr>
-<tr class="separator:a83b6cdb9c183a25f1f0f3834b0ea75da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05aa20552192e95abc716e426fe2c26e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_sound_player.html#a05aa20552192e95abc716e426fe2c26e">setMultiPlay</a> (bool bMp)</td></tr>
-<tr class="separator:a05aa20552192e95abc716e426fe2c26e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac9179fcb91159811bee454488b19ba9f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_sound_player.html#ac9179fcb91159811bee454488b19ba9f">setPosition</a> (float pct)</td></tr>
-<tr class="separator:ac9179fcb91159811bee454488b19ba9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09b4d2544fd2a8996495d86abc6a37b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_sound_player.html#a09b4d2544fd2a8996495d86abc6a37b4">setPan</a> (float pan)</td></tr>
+<tr class="memdesc:a09b4d2544fd2a8996495d86abc6a37b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets stereo pan.  <a href="#a09b4d2544fd2a8996495d86abc6a37b4">More...</a><br/></td></tr>
+<tr class="separator:a09b4d2544fd2a8996495d86abc6a37b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae53cf7c7dae0dce98b3b2723d2cfc1cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_sound_player.html#ae53cf7c7dae0dce98b3b2723d2cfc1cc">setSpeed</a> (float speed)</td></tr>
+<tr class="memdesc:ae53cf7c7dae0dce98b3b2723d2cfc1cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets playback speed.  <a href="#ae53cf7c7dae0dce98b3b2723d2cfc1cc">More...</a><br/></td></tr>
+<tr class="separator:ae53cf7c7dae0dce98b3b2723d2cfc1cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acacd7c20575eedd1e76e83690000b531"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_sound_player.html#acacd7c20575eedd1e76e83690000b531">setPaused</a> (bool paused)</td></tr>
+<tr class="memdesc:acacd7c20575eedd1e76e83690000b531"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables pause / resume.  <a href="#acacd7c20575eedd1e76e83690000b531">More...</a><br/></td></tr>
+<tr class="separator:acacd7c20575eedd1e76e83690000b531"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaec50cde0a65da345e27b1f2c3fe71c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_sound_player.html#aaec50cde0a65da345e27b1f2c3fe71c0">setLoop</a> (bool loop)</td></tr>
+<tr class="memdesc:aaec50cde0a65da345e27b1f2c3fe71c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether to loop once the end of the file is reached.  <a href="#aaec50cde0a65da345e27b1f2c3fe71c0">More...</a><br/></td></tr>
+<tr class="separator:aaec50cde0a65da345e27b1f2c3fe71c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a966974fb83e033cb299abead57c9010b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_sound_player.html#a966974fb83e033cb299abead57c9010b">setMultiPlay</a> (bool multiplay)</td></tr>
+<tr class="memdesc:a966974fb83e033cb299abead57c9010b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables playing multiple simultaneous copies of the sound.  <a href="#a966974fb83e033cb299abead57c9010b">More...</a><br/></td></tr>
+<tr class="separator:a966974fb83e033cb299abead57c9010b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4603df47fce522ef54b077382d53de9d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_sound_player.html#a4603df47fce522ef54b077382d53de9d">setPosition</a> (float percent)</td></tr>
+<tr class="memdesc:a4603df47fce522ef54b077382d53de9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets position of the playhead within the file (aka "seeking").  <a href="#a4603df47fce522ef54b077382d53de9d">More...</a><br/></td></tr>
+<tr class="separator:a4603df47fce522ef54b077382d53de9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9971abc1e86caf996fa18688cfe3f23"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_sound_player.html#ac9971abc1e86caf996fa18688cfe3f23">setPositionMS</a> (int ms)</td></tr>
+<tr class="memdesc:ac9971abc1e86caf996fa18688cfe3f23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets position of the playhead within the file (aka "seeking").  <a href="#ac9971abc1e86caf996fa18688cfe3f23">More...</a><br/></td></tr>
 <tr class="separator:ac9971abc1e86caf996fa18688cfe3f23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a030e9784d82c0e5e100f88c3c24a4209"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_sound_player.html#a030e9784d82c0e5e100f88c3c24a4209">getPositionMS</a> ()</td></tr>
+<tr class="memdesc:a030e9784d82c0e5e100f88c3c24a4209"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets position of the playhead.  <a href="#a030e9784d82c0e5e100f88c3c24a4209">More...</a><br/></td></tr>
 <tr class="separator:a030e9784d82c0e5e100f88c3c24a4209"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab323f725c722b7c858e5fb2cd26d054e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_sound_player.html#ab323f725c722b7c858e5fb2cd26d054e">getPosition</a> ()</td></tr>
+<tr class="memdesc:ab323f725c722b7c858e5fb2cd26d054e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets position of the playhead.  <a href="#ab323f725c722b7c858e5fb2cd26d054e">More...</a><br/></td></tr>
 <tr class="separator:ab323f725c722b7c858e5fb2cd26d054e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b6d6347a3a94823f64df7c34da29fcb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_sound_player.html#a5b6d6347a3a94823f64df7c34da29fcb">getIsPlaying</a> ()</td></tr>
+<tr class="memdesc:a5b6d6347a3a94823f64df7c34da29fcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets current playback state.  <a href="#a5b6d6347a3a94823f64df7c34da29fcb">More...</a><br/></td></tr>
 <tr class="separator:a5b6d6347a3a94823f64df7c34da29fcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ce70d482070ef585016d4a47b016a04"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_sound_player.html#a7ce70d482070ef585016d4a47b016a04">getSpeed</a> ()</td></tr>
+<tr class="memdesc:a7ce70d482070ef585016d4a47b016a04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets playback speed.  <a href="#a7ce70d482070ef585016d4a47b016a04">More...</a><br/></td></tr>
 <tr class="separator:a7ce70d482070ef585016d4a47b016a04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45fae5c6233c598671bbce9ecac9e017"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_sound_player.html#a45fae5c6233c598671bbce9ecac9e017">getPan</a> ()</td></tr>
+<tr class="memdesc:a45fae5c6233c598671bbce9ecac9e017"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets stereo pan.  <a href="#a45fae5c6233c598671bbce9ecac9e017">More...</a><br/></td></tr>
 <tr class="separator:a45fae5c6233c598671bbce9ecac9e017"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75236eacf64de363550781b979d728c7"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_sound_player.html#a75236eacf64de363550781b979d728c7">getVolume</a> ()</td></tr>
+<tr class="memdesc:a75236eacf64de363550781b979d728c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets current volume.  <a href="#a75236eacf64de363550781b979d728c7">More...</a><br/></td></tr>
 <tr class="separator:a75236eacf64de363550781b979d728c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a517b9a3efc4dc076359d4a5187649343"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_sound_player.html#a517b9a3efc4dc076359d4a5187649343">isLoaded</a> ()</td></tr>
+<tr class="memdesc:a517b9a3efc4dc076359d4a5187649343"><td class="mdescLeft">&#160;</td><td class="mdescRight">Queries the player to see if its file was loaded successfully.  <a href="#a517b9a3efc4dc076359d4a5187649343">More...</a><br/></td></tr>
 <tr class="separator:a517b9a3efc4dc076359d4a5187649343"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classof_base_sound_player"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classof_base_sound_player')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classof_base_sound_player.html">ofBaseSoundPlayer</a></td></tr>
 <tr class="memitem:ad705fe243610e1b203fe38b13b264cb6 inherit pub_methods_classof_base_sound_player"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_base_sound_player.html#ad705fe243610e1b203fe38b13b264cb6">ofBaseSoundPlayer</a> ()</td></tr>
@@ -127,7 +149,10 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:aa8c355f653989106c654f62ed94bf655"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classof_ptr.html">ofPtr</a>&lt; <a class="el" href="classof_base_sound_player.html">ofBaseSoundPlayer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classof_sound_player.html#aa8c355f653989106c654f62ed94bf655">player</a></td></tr>
 <tr class="separator:aa8c355f653989106c654f62ed94bf655"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Plays sound files. </p>
+<p><a class="el" href="classof_sound_player.html" title="Plays sound files. ">ofSoundPlayer</a> handles simple playback of sound files, with controls for volume, pan, speed, seeking and multiplay. This is a common cross-platform sound player interface which is inherited by each of the platform-specific sound player implementations. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a19c22b314803390acc76cc0ec8a0dd08"></a>
 <div class="memitem">
 <div class="memproto">
@@ -165,6 +190,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Gets current playback state. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if the player is currently playing a file. </dd></dl>
+
 <p>Implements <a class="el" href="classof_base_sound_player.html#aa3445838a28c7622edecb778f7400bd6">ofBaseSoundPlayer</a>.</p>
 
 </div>
@@ -189,6 +217,9 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Gets stereo pan. </p>
+<dl class="section return"><dt>Returns</dt><dd>stereo pan in the range -1 to 1. </dd></dl>
 
 <p>Implements <a class="el" href="classof_base_sound_player.html#ab17c0b5c5684ce988eb1f52259477aae">ofBaseSoundPlayer</a>.</p>
 
@@ -230,6 +261,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Gets position of the playhead. </p>
+<dl class="section return"><dt>Returns</dt><dd>playhead position as a float between 0 and 1. </dd></dl>
+
 <p>Implements <a class="el" href="classof_base_sound_player.html#aa397af6f05c4451866bd343692c1aa33">ofBaseSoundPlayer</a>.</p>
 
 </div>
@@ -254,6 +288,9 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Gets position of the playhead. </p>
+<dl class="section return"><dt>Returns</dt><dd>playhead position in milliseconds. </dd></dl>
 
 <p>Implements <a class="el" href="classof_base_sound_player.html#a03deb9c7833a9e765e885c68214559b5">ofBaseSoundPlayer</a>.</p>
 
@@ -280,6 +317,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Gets playback speed. </p>
+<dl class="section return"><dt>Returns</dt><dd>playback speed (see <a class="el" href="classof_sound_player.html#ae53cf7c7dae0dce98b3b2723d2cfc1cc" title="Sets playback speed. ">ofSoundPlayer::setSpeed()</a>). </dd></dl>
+
 <p>Implements <a class="el" href="classof_base_sound_player.html#ac81d07b18bde46e618ca026e088b1e19">ofBaseSoundPlayer</a>.</p>
 
 </div>
@@ -305,6 +345,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Gets current volume. </p>
+<dl class="section return"><dt>Returns</dt><dd>current volume in the range 0 to 1. </dd></dl>
+
 <p>Implements <a class="el" href="classof_base_sound_player.html#aca6bacfc7d14de5c2d02ba47c8a39922">ofBaseSoundPlayer</a>.</p>
 
 </div>
@@ -329,6 +372,9 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Queries the player to see if its file was loaded successfully. </p>
+<dl class="section return"><dt>Returns</dt><dd>whether or not the player is ready to begin playback. </dd></dl>
 
 <p>Implements <a class="el" href="classof_base_sound_player.html#a130cd77db54b76836c7b8da709c03bc8">ofBaseSoundPlayer</a>.</p>
 
@@ -366,6 +412,16 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Tells the sound player which file to play. </p>
+<p>Codec support varies by platform but wav, aif, and mp3 are safe.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileName</td><td>Path to the sound file, relative to your app's data folder. </td></tr>
+    <tr><td class="paramname">stream</td><td>set "true" to enable streaming from disk (for large files). </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Implements <a class="el" href="classof_base_sound_player.html#ac338c40f639d72229c425fb1906a7a21">ofBaseSoundPlayer</a>.</p>
 
 </div>
@@ -391,11 +447,13 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Starts playback. </p>
+
 <p>Implements <a class="el" href="classof_base_sound_player.html#a75724561c5bfd5b36099ae13b4a448ed">ofBaseSoundPlayer</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a83b6cdb9c183a25f1f0f3834b0ea75da"></a>
+<a class="anchor" id="aaec50cde0a65da345e27b1f2c3fe71c0"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -406,7 +464,7 @@ Protected Attributes</h2></td></tr>
           <td class="memname">void ofSoundPlayer::setLoop </td>
           <td>(</td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bLp</em>)</td><td></td>
+          <td class="paramname"><em>loop</em>)</td><td></td>
           <td></td>
         </tr>
       </table>
@@ -417,11 +475,19 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Sets whether to loop once the end of the file is reached. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">loop</td><td>"true" to loop, default is false. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Implements <a class="el" href="classof_base_sound_player.html#af99466881ec3c5b0fb9d374d353ff7b1">ofBaseSoundPlayer</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a05aa20552192e95abc716e426fe2c26e"></a>
+<a class="anchor" id="a966974fb83e033cb299abead57c9010b"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -432,7 +498,7 @@ Protected Attributes</h2></td></tr>
           <td class="memname">void ofSoundPlayer::setMultiPlay </td>
           <td>(</td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bMp</em>)</td><td></td>
+          <td class="paramname"><em>multiplay</em>)</td><td></td>
           <td></td>
         </tr>
       </table>
@@ -443,11 +509,19 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Enables playing multiple simultaneous copies of the sound. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">multiplay</td><td>"true" to enable, default is false. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Implements <a class="el" href="classof_base_sound_player.html#a576345622ea19d09d5c4e5e3cf6cb653">ofBaseSoundPlayer</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="afe9153ef6ccff90698f2c0f32aecf264"></a>
+<a class="anchor" id="a09b4d2544fd2a8996495d86abc6a37b4"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -458,7 +532,7 @@ Protected Attributes</h2></td></tr>
           <td class="memname">void ofSoundPlayer::setPan </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>vol</em>)</td><td></td>
+          <td class="paramname"><em>pan</em>)</td><td></td>
           <td></td>
         </tr>
       </table>
@@ -469,11 +543,19 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Sets stereo pan. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pan</td><td>range is -1 to 1 (-1 is full left, 1 is full right). </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Implements <a class="el" href="classof_base_sound_player.html#a84e70f38b1ae07380fb2d902f3e21e61">ofBaseSoundPlayer</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ad78dcd06f67c3ade7e0f81cf7ec48f7a"></a>
+<a class="anchor" id="acacd7c20575eedd1e76e83690000b531"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -484,7 +566,7 @@ Protected Attributes</h2></td></tr>
           <td class="memname">void ofSoundPlayer::setPaused </td>
           <td>(</td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bP</em>)</td><td></td>
+          <td class="paramname"><em>paused</em>)</td><td></td>
           <td></td>
         </tr>
       </table>
@@ -494,6 +576,14 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Enables pause / resume. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">paused</td><td>"true" to pause, "false" to resume. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implements <a class="el" href="classof_base_sound_player.html#ab3a7af6b4cbb14ecaf12f836d05d7c8b">ofBaseSoundPlayer</a>.</p>
 
@@ -515,7 +605,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ac9179fcb91159811bee454488b19ba9f"></a>
+<a class="anchor" id="a4603df47fce522ef54b077382d53de9d"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -526,7 +616,7 @@ Protected Attributes</h2></td></tr>
           <td class="memname">void ofSoundPlayer::setPosition </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>pct</em>)</td><td></td>
+          <td class="paramname"><em>percent</em>)</td><td></td>
           <td></td>
         </tr>
       </table>
@@ -536,6 +626,14 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Sets position of the playhead within the file (aka "seeking"). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">percent</td><td>range is 0 (beginning of file) to 1 (end of file). </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implements <a class="el" href="classof_base_sound_player.html#ae302cd3a5f42cef51ea72f950f6a2b10">ofBaseSoundPlayer</a>.</p>
 
@@ -563,11 +661,19 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Sets position of the playhead within the file (aka "seeking"). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ms</td><td>number of milliseconds from the start of the file. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Implements <a class="el" href="classof_base_sound_player.html#a39d353e9765a15e18916d2cba4477cf8">ofBaseSoundPlayer</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ad0d545c135fae29a5ae3f53e6b8c5a36"></a>
+<a class="anchor" id="ae53cf7c7dae0dce98b3b2723d2cfc1cc"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -578,7 +684,7 @@ Protected Attributes</h2></td></tr>
           <td class="memname">void ofSoundPlayer::setSpeed </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>spd</em>)</td><td></td>
+          <td class="paramname"><em>speed</em>)</td><td></td>
           <td></td>
         </tr>
       </table>
@@ -588,6 +694,14 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Sets playback speed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">speed</td><td>set &gt; 1 for faster playback, &lt; 1 for slower playback. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implements <a class="el" href="classof_base_sound_player.html#a1b44d5401ee7c0d20fb9d1b9b4d507f9">ofBaseSoundPlayer</a>.</p>
 
@@ -615,6 +729,14 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Sets playback volume. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vol</td><td>range is 0 to 1. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Implements <a class="el" href="classof_base_sound_player.html#a8dd48f4e7cad15d4df5c2ab572a243af">ofBaseSoundPlayer</a>.</p>
 
 </div>
@@ -640,6 +762,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Stops playback. </p>
+
 <p>Implements <a class="el" href="classof_base_sound_player.html#a815bdc74ee89a4953eeb55803d220ad5">ofBaseSoundPlayer</a>.</p>
 
 </div>
@@ -664,6 +788,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Stops and unloads the current sound. </p>
 
 <p>Implements <a class="el" href="classof_base_sound_player.html#a9d4f87a9c835c9521d63677a40cc2378">ofBaseSoundPlayer</a>.</p>
 

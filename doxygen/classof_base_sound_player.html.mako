@@ -66,7 +66,7 @@ Inheritance diagram for ofBaseSoundPlayer:</div>
   <img src="classof_base_sound_player.png" usemap="#ofBaseSoundPlayer_map" alt=""/>
   <map id="ofBaseSoundPlayer_map" name="ofBaseSoundPlayer_map">
 <area href="classof_fmod_sound_player.html" alt="ofFmodSoundPlayer" shape="rect" coords="0,56,127,80"/>
-<area href="classof_sound_player.html" alt="ofSoundPlayer" shape="rect" coords="137,56,264,80"/>
+<area href="classof_sound_player.html" title="Plays sound files. " alt="ofSoundPlayer" shape="rect" coords="137,56,264,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -421,7 +421,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classof_sound_player.html#a83b6cdb9c183a25f1f0f3834b0ea75da">ofSoundPlayer</a>, and <a class="el" href="classof_fmod_sound_player.html#a60120b4b5aa3ecae87078e8f189b76d8">ofFmodSoundPlayer</a>.</p>
+<p>Implemented in <a class="el" href="classof_sound_player.html#aaec50cde0a65da345e27b1f2c3fe71c0">ofSoundPlayer</a>, and <a class="el" href="classof_fmod_sound_player.html#a60120b4b5aa3ecae87078e8f189b76d8">ofFmodSoundPlayer</a>.</p>
 
 </div>
 </div>
@@ -447,7 +447,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classof_sound_player.html#a05aa20552192e95abc716e426fe2c26e">ofSoundPlayer</a>, and <a class="el" href="classof_fmod_sound_player.html#a24d7bbe01cc94c31b3b0c8ea32b0285b">ofFmodSoundPlayer</a>.</p>
+<p>Implemented in <a class="el" href="classof_sound_player.html#a966974fb83e033cb299abead57c9010b">ofSoundPlayer</a>, and <a class="el" href="classof_fmod_sound_player.html#a24d7bbe01cc94c31b3b0c8ea32b0285b">ofFmodSoundPlayer</a>.</p>
 
 </div>
 </div>
@@ -473,7 +473,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classof_sound_player.html#afe9153ef6ccff90698f2c0f32aecf264">ofSoundPlayer</a>, and <a class="el" href="classof_fmod_sound_player.html#a051b97f0d757cbbd933ac0cb01446e05">ofFmodSoundPlayer</a>.</p>
+<p>Implemented in <a class="el" href="classof_sound_player.html#a09b4d2544fd2a8996495d86abc6a37b4">ofSoundPlayer</a>, and <a class="el" href="classof_fmod_sound_player.html#a051b97f0d757cbbd933ac0cb01446e05">ofFmodSoundPlayer</a>.</p>
 
 </div>
 </div>
@@ -499,7 +499,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classof_sound_player.html#ad78dcd06f67c3ade7e0f81cf7ec48f7a">ofSoundPlayer</a>, and <a class="el" href="classof_fmod_sound_player.html#a0cb0e9743706e6b3699a839713aca892">ofFmodSoundPlayer</a>.</p>
+<p>Implemented in <a class="el" href="classof_sound_player.html#acacd7c20575eedd1e76e83690000b531">ofSoundPlayer</a>, and <a class="el" href="classof_fmod_sound_player.html#a0cb0e9743706e6b3699a839713aca892">ofFmodSoundPlayer</a>.</p>
 
 </div>
 </div>
@@ -525,7 +525,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classof_sound_player.html#ac9179fcb91159811bee454488b19ba9f">ofSoundPlayer</a>, and <a class="el" href="classof_fmod_sound_player.html#ae2cb9b2e9599174f4e4f6f29a99b4c9a">ofFmodSoundPlayer</a>.</p>
+<p>Implemented in <a class="el" href="classof_sound_player.html#a4603df47fce522ef54b077382d53de9d">ofSoundPlayer</a>, and <a class="el" href="classof_fmod_sound_player.html#ae2cb9b2e9599174f4e4f6f29a99b4c9a">ofFmodSoundPlayer</a>.</p>
 
 </div>
 </div>
@@ -577,7 +577,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classof_sound_player.html#ad0d545c135fae29a5ae3f53e6b8c5a36">ofSoundPlayer</a>, and <a class="el" href="classof_fmod_sound_player.html#a543d6d876c39feeb759ebd77c351b36e">ofFmodSoundPlayer</a>.</p>
+<p>Implemented in <a class="el" href="classof_sound_player.html#ae53cf7c7dae0dce98b3b2723d2cfc1cc">ofSoundPlayer</a>, and <a class="el" href="classof_fmod_sound_player.html#a543d6d876c39feeb759ebd77c351b36e">ofFmodSoundPlayer</a>.</p>
 
 </div>
 </div>

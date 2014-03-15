@@ -66,38 +66,54 @@
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a0e50654e98b730299945741b53853421"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_math_8h.html#a0e50654e98b730299945741b53853421">ofNextPow2</a> (int <a class="el" href="of_matrix4x4_8cpp.html#a8d3c3518d793541417a4845125da1ae1">a</a>)</td></tr>
+<tr class="memdesc:a0e50654e98b730299945741b53853421"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the next larger power of 2.  <a href="#a0e50654e98b730299945741b53853421">More...</a><br/></td></tr>
 <tr class="separator:a0e50654e98b730299945741b53853421"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0df526ceae8b4f80f169d6d3918540e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_math_8h.html#a0df526ceae8b4f80f169d6d3918540e5">ofSeedRandom</a> ()</td></tr>
+<tr class="memdesc:a0df526ceae8b4f80f169d6d3918540e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Randomly seeds the random number generator.  <a href="#a0df526ceae8b4f80f169d6d3918540e5">More...</a><br/></td></tr>
 <tr class="separator:a0df526ceae8b4f80f169d6d3918540e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54f5c56b8cfc33bbc059aeb147d4bbef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_math_8h.html#a54f5c56b8cfc33bbc059aeb147d4bbef">ofSeedRandom</a> (int val)</td></tr>
+<tr class="memdesc:a54f5c56b8cfc33bbc059aeb147d4bbef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Seeds the random number generator with a value for consistent randomness.  <a href="#a54f5c56b8cfc33bbc059aeb147d4bbef">More...</a><br/></td></tr>
 <tr class="separator:a54f5c56b8cfc33bbc059aeb147d4bbef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae93bfe2a2080f0e2a03df835e72c7521"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_math_8h.html#ae93bfe2a2080f0e2a03df835e72c7521">ofRandom</a> (float max)</td></tr>
+<tr class="memdesc:ae93bfe2a2080f0e2a03df835e72c7521"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a random floating point number between 0 and max.  <a href="#ae93bfe2a2080f0e2a03df835e72c7521">More...</a><br/></td></tr>
 <tr class="separator:ae93bfe2a2080f0e2a03df835e72c7521"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f89011a70f981bab979cc82b9713f85"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_math_8h.html#a4f89011a70f981bab979cc82b9713f85">ofRandom</a> (float val0, float val1)</td></tr>
+<tr class="memdesc:a4f89011a70f981bab979cc82b9713f85"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns a random number between two values. Example:  <a href="#a4f89011a70f981bab979cc82b9713f85">More...</a><br/></td></tr>
 <tr class="separator:a4f89011a70f981bab979cc82b9713f85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea7a1685224b49b4949899d4b283af51"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_math_8h.html#aea7a1685224b49b4949899d4b283af51">ofRandomf</a> ()</td></tr>
 <tr class="separator:aea7a1685224b49b4949899d4b283af51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab701838d1aa2e4ad8f04bad401c21a0a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_math_8h.html#ab701838d1aa2e4ad8f04bad401c21a0a">ofRandomuf</a> ()</td></tr>
+<tr class="memdesc:ab701838d1aa2e4ad8f04bad401c21a0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">a random floating point number between 0 and 1.  <a href="#ab701838d1aa2e4ad8f04bad401c21a0a">More...</a><br/></td></tr>
 <tr class="separator:ab701838d1aa2e4ad8f04bad401c21a0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeda138c0500e2d10b0763e4c1ac1cc53"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_math_8h.html#aeda138c0500e2d10b0763e4c1ac1cc53">ofNormalize</a> (float value, float min, float max)</td></tr>
+<tr class="memdesc:aeda138c0500e2d10b0763e4c1ac1cc53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a value and a range, remap the value to be within 0 and 1.  <a href="#aeda138c0500e2d10b0763e4c1ac1cc53">More...</a><br/></td></tr>
 <tr class="separator:aeda138c0500e2d10b0763e4c1ac1cc53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed7db854914e53ba53ded1f9a4ff47da"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_math_8h.html#aed7db854914e53ba53ded1f9a4ff47da">ofMap</a> (float value, float inputMin, float inputMax, float outputMin, float outputMax, bool clamp=false)</td></tr>
+<tr class="memdesc:aed7db854914e53ba53ded1f9a4ff47da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a value and an input range, remap the value to be within an output range.  <a href="#aed7db854914e53ba53ded1f9a4ff47da">More...</a><br/></td></tr>
 <tr class="separator:aed7db854914e53ba53ded1f9a4ff47da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b2fc21e53bfb8521923300b0d30afdb"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_math_8h.html#a4b2fc21e53bfb8521923300b0d30afdb">ofClamp</a> (float value, float min, float max)</td></tr>
+<tr class="memdesc:a4b2fc21e53bfb8521923300b0d30afdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clamp a value between min and max.  <a href="#a4b2fc21e53bfb8521923300b0d30afdb">More...</a><br/></td></tr>
 <tr class="separator:a4b2fc21e53bfb8521923300b0d30afdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a851eb0ea11c2bfe151665de8e3c66561"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_math_8h.html#a851eb0ea11c2bfe151665de8e3c66561">ofLerp</a> (float start, float stop, float amt)</td></tr>
+<tr class="memdesc:a851eb0ea11c2bfe151665de8e3c66561"><td class="mdescLeft">&#160;</td><td class="mdescRight">Linearly interpolate a value be within a range.  <a href="#a851eb0ea11c2bfe151665de8e3c66561">More...</a><br/></td></tr>
 <tr class="separator:a851eb0ea11c2bfe151665de8e3c66561"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa866e5d80a66299e18b89bf9f879b3f5"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_math_8h.html#aa866e5d80a66299e18b89bf9f879b3f5">ofDist</a> (float x1, float y1, float x2, float y2)</td></tr>
+<tr class="memdesc:aa866e5d80a66299e18b89bf9f879b3f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the distance between two points.  <a href="#aa866e5d80a66299e18b89bf9f879b3f5">More...</a><br/></td></tr>
 <tr class="separator:aa866e5d80a66299e18b89bf9f879b3f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acca6b68f9a67cbc302866c6b60f55899"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_math_8h.html#acca6b68f9a67cbc302866c6b60f55899">ofDistSquared</a> (float x1, float y1, float x2, float y2)</td></tr>
+<tr class="memdesc:acca6b68f9a67cbc302866c6b60f55899"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the distance between two points, without taking the square root of the result.  <a href="#acca6b68f9a67cbc302866c6b60f55899">More...</a><br/></td></tr>
 <tr class="separator:acca6b68f9a67cbc302866c6b60f55899"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f39494418fc89efee2378ec2ac989f8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_math_8h.html#a7f39494418fc89efee2378ec2ac989f8">ofSign</a> (float n)</td></tr>
+<tr class="memdesc:a7f39494418fc89efee2378ec2ac989f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the sign of a number.  <a href="#a7f39494418fc89efee2378ec2ac989f8">More...</a><br/></td></tr>
 <tr class="separator:a7f39494418fc89efee2378ec2ac989f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa078cdd83eb6d3dd355897e7f15a2f33"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_math_8h.html#aa078cdd83eb6d3dd355897e7f15a2f33">ofInRange</a> (float t, float min, float max)</td></tr>
+<tr class="memdesc:aa078cdd83eb6d3dd355897e7f15a2f33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the number t is the range of [min - max], false if it's not.  <a href="#aa078cdd83eb6d3dd355897e7f15a2f33">More...</a><br/></td></tr>
 <tr class="separator:aa078cdd83eb6d3dd355897e7f15a2f33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d02e72641780bca037f6c63f7b6e508"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_math_8h.html#a7d02e72641780bca037f6c63f7b6e508">ofRadToDeg</a> (float radians)</td></tr>
+<tr class="memdesc:a7d02e72641780bca037f6c63f7b6e508"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert radians to degrees.  <a href="#a7d02e72641780bca037f6c63f7b6e508">More...</a><br/></td></tr>
 <tr class="separator:a7d02e72641780bca037f6c63f7b6e508"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70a120b33471d10ce0e755ee43c32b25"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_math_8h.html#a70a120b33471d10ce0e755ee43c32b25">ofDegToRad</a> (float degrees)</td></tr>
+<tr class="memdesc:a70a120b33471d10ce0e755ee43c32b25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert degrees to radiant.  <a href="#a70a120b33471d10ce0e755ee43c32b25">More...</a><br/></td></tr>
 <tr class="separator:a70a120b33471d10ce0e755ee43c32b25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b9d058406f6fc2c2dc378057e789a60"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="of_math_8h.html#a3b9d058406f6fc2c2dc378057e789a60">ofLerpDegrees</a> (float currentAngle, float targetAngle, float pct)</td></tr>
 <tr class="separator:a3b9d058406f6fc2c2dc378057e789a60"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -334,6 +350,23 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Clamp a value between min and max. </p>
+<p>Restricts a value to be within a specified range defined by values min and max. If the value is min &lt;= value &lt;= max, returns value. If the value is greater than max, return max; if the value is less than min, return min. </p>
+<pre class="fragment">float val, newval;
+val=10;
+newval=ofClamp(val,30,40); //newval = 30
+newval=ofClamp(val,0,5); //newval = 5
+newval=ofClamp(val,0,20); //newval = 10
+</pre><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The number to be clamped. </td></tr>
+    <tr><td class="paramname">min</td><td>The floor of the range. </td></tr>
+    <tr><td class="paramname">max</td><td>The ceiling of the range. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A float between min and max. </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="abb059119ae6349bbbde274ac2b1b5e26"></a>
@@ -438,6 +471,16 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Convert degrees to radiant. </p>
+<p>For example: float result; result = ofDegToRad(90); // result will be PI/2</p>
+<dl class="section return"><dt>Returns</dt><dd>float the angle in radians. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">float</td><td>degrees An angle in degrees. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="aa866e5d80a66299e18b89bf9f879b3f5"></a>
@@ -475,6 +518,19 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Calculates the distance between two points. </p>
+<p>Uses <a href="http://en.wikipedia.org/wiki/Pythagorean_theorem">http://en.wikipedia.org/wiki/Pythagorean_theorem</a></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x1</td><td>X position of first point. </td></tr>
+    <tr><td class="paramname">y1</td><td>Y position of first point. </td></tr>
+    <tr><td class="paramname">x2</td><td>X position of second point. </td></tr>
+    <tr><td class="paramname">y2</td><td>Y position of second point. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>float Distance between points. </dd></dl>
 
 </div>
 </div>
@@ -514,6 +570,19 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Calculates the distance between two points, without taking the square root of the result. </p>
+<p>Same as ofMath::ofDist() but doesn't take the sqrt() of the result, which is a faster operation if you need to calculate and compare multiple distances.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x1</td><td>X position of first point. </td></tr>
+    <tr><td class="paramname">y1</td><td>Y position of first point. </td></tr>
+    <tr><td class="paramname">x2</td><td>X position of second point. </td></tr>
+    <tr><td class="paramname">y2</td><td>Y position of second point. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>distance^2 between two points. </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="aa078cdd83eb6d3dd355897e7f15a2f33"></a>
@@ -545,6 +614,17 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Returns true if the number t is the range of [min - max], false if it's not. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">t</td><td>The value to determine </td></tr>
+    <tr><td class="paramname">min</td><td>The floor of the range. </td></tr>
+    <tr><td class="paramname">max</td><td>The ceiling of the range. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if min&lt;=t&lt;=max. </dd></dl>
 
 </div>
 </div>
@@ -874,6 +954,18 @@ template&lt;typename Type &gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Linearly interpolate a value be within a range. </p>
+<p>Calculates a number between two numbers (start,stop) at a specific increment (amt). If we want the new number to be between start and stop numbers, amt needs to be a number between 0 and 1. <a class="el" href="of_math_8cpp.html#a851eb0ea11c2bfe151665de8e3c66561" title="Linearly interpolate a value be within a range. ">ofLerp()</a> does not clamp the values. float init,end,increment,result; increment=0.2; init = 1; end =2; result=ofLerp(init, end, increment); //result = 1.2 // Values outside 0...1 work as well. increment=2; result=ofLerp(init, end, increment); //result = 3</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">start</td><td>The floor of the range. </td></tr>
+    <tr><td class="paramname">stop</td><td>The ceiling of the range. </td></tr>
+    <tr><td class="paramname">amt</td><td>The position within the range to return. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A float between start and stop. </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="a3b9d058406f6fc2c2dc378057e789a60"></a>
@@ -1032,6 +1124,22 @@ template&lt;typename Type &gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Given a value and an input range, remap the value to be within an output range. </p>
+<p>ofMap remaps the value passed in "value", calculating it's linear distance between inputMin and inputMax, and remapping it based on that percentage to outputMin and outputMax. You can choose to clamp the results, which will constrain the results between outputMin and outputMax. Results are not clamped by default.</p>
+<p>Example: float x, newx; x=5; </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The number to be mapped. </td></tr>
+    <tr><td class="paramname">inputMin</td><td>The floor of the input range. </td></tr>
+    <tr><td class="paramname">inputMax</td><td>The ceiling of the input range. </td></tr>
+    <tr><td class="paramname">outputMin</td><td>The floor of the output range. </td></tr>
+    <tr><td class="paramname">outputMax</td><td>The ceiling of the output range. </td></tr>
+    <tr><td class="paramname">clamp</td><td>Should the value be clamped between outputMin and outputMax or allowed to extend beyond? </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a float, mapped between outputMin and outputMax. </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="a0e50654e98b730299945741b53853421"></a>
@@ -1047,6 +1155,17 @@ template&lt;typename Type &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Calculates the next larger power of 2. </p>
+<p>If the input is already a power of 2, it will return itself. Example:</p>
+<p>ofNextPow2(50); // returns 64 ofNextPow2(64); // returns 64 ofNextPow(401)); // returns 512</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value.</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>value^2. </dd></dl>
 
 </div>
 </div>
@@ -1192,6 +1311,18 @@ template&lt;typename Type &gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Given a value and a range, remap the value to be within 0 and 1. </p>
+<p>Often, you'll need to work with percentages or other methods that expect a value between 0 and 1. This function will take a minimum and maximum, and then finds where within that range a value sits. If the value is outside the range, it will be mapped to 0 or 1.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The number to be normalized. </td></tr>
+    <tr><td class="paramname">min</td><td>The floor of the range. </td></tr>
+    <tr><td class="paramname">max</td><td>The ceiling of the range. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A float between 0 and 1. </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="a7d02e72641780bca037f6c63f7b6e508"></a>
@@ -1208,6 +1339,15 @@ template&lt;typename Type &gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Convert radians to degrees. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">radians</td><td>An angle in radians. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the angle in degrees. </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="ae93bfe2a2080f0e2a03df835e72c7521"></a>
@@ -1223,6 +1363,14 @@ template&lt;typename Type &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Returns a random floating point number between 0 and max. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">float</td><td>The maximum value of the random number. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1250,6 +1398,17 @@ template&lt;typename Type &gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>returns a random number between two values. Example: </p>
+<p>ofRandom(-30,20); // will return a random floating point number between -30 and 20. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">val0</td><td>the minimum value of the random number. </td></tr>
+    <tr><td class="paramname">val1</td><td>The maximum value of the random number. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A random floating point number between val0 and val1. </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="aea7a1685224b49b4949899d4b283af51"></a>
@@ -1264,6 +1423,7 @@ template&lt;typename Type &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>A random floating point number between -1 and 1. </dd></dl>
 
 </div>
 </div>
@@ -1279,6 +1439,7 @@ template&lt;typename Type &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>a random number between 0 and the height of the screen. </dd></dl>
 
 </div>
 </div>
@@ -1295,6 +1456,8 @@ template&lt;typename Type &gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>a random floating point number between 0 and 1. </p>
+
 </div>
 </div>
 <a class="anchor" id="a9a9226ad2046591bf4aa5d2707ebba2f"></a>
@@ -1309,6 +1472,7 @@ template&lt;typename Type &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>a random number between 0 and the width of the screen. </dd></dl>
 
 </div>
 </div>
@@ -1324,6 +1488,9 @@ template&lt;typename Type &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Randomly seeds the random number generator. </p>
+<p>This seeds the random number generator with an acceptably random value, generated from clock time and the PID. </p>
 
 </div>
 </div>
@@ -1341,6 +1508,14 @@ template&lt;typename Type &gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Seeds the random number generator with a value for consistent randomness. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">int</td><td>The value with which to seed the generator. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a7f39494418fc89efee2378ec2ac989f8"></a>
@@ -1356,6 +1531,9 @@ template&lt;typename Type &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Returns the sign of a number. </p>
+<dl class="section return"><dt>Returns</dt><dd>int -1 if n is negative, 1 if n is positive, and 0 is n == 0; </dd></dl>
 
 </div>
 </div>

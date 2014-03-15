@@ -69,7 +69,7 @@
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;Poco/Path.h&quot;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keywordtype">int</span>     <a class="code" href="of_math_8cpp.html#a0e50654e98b730299945741b53853421">ofNextPow2</a>(<span class="keywordtype">int</span> input);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keywordtype">int</span>     <a class="code" href="of_math_8cpp.html#a0e50654e98b730299945741b53853421" title="Calculates the next larger power of 2. ">ofNextPow2</a>(<span class="keywordtype">int</span> input);</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keywordtype">void</span>    <a class="code" href="of_utils_8cpp.html#aea0bc115291cf9119ea1b9f5ac70ca56">ofResetElapsedTimeCounter</a>();        <span class="comment">// this happens on the first frame</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keywordtype">float</span>   <a class="code" href="of_utils_8cpp.html#afe74f75f42101a88aa6b91f684484c78">ofGetElapsedTimef</a>();</div>

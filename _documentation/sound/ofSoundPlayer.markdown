@@ -9,6 +9,10 @@ _istemplated: False_
 
 ##InlineDescription
 
+Plays sound files. 
+
+
+ofSoundPlayer handles simple playback of sound files, with controls for volume, pan, speed, seeking and multiplay. This is a common cross-platform sound player interface which is inherited by each of the platform-specific sound player implementations. 
 
 
 
@@ -45,6 +49,14 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Gets current playback state. 
+
+
+***return:*** 
+	true if the player is currently playing a file. 
+
+
 
 
 
@@ -94,6 +106,14 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Gets stereo pan. 
+
+
+***return:*** 
+	stereo pan in the range -1 to 1. 
+
+
 
 
 
@@ -188,6 +208,14 @@ _advanced: False_
 
 _inlined_description: _
 
+Gets position of the playhead. 
+
+
+***return:*** 
+	playhead position as a float between 0 and 1. 
+
+
+
 
 
 
@@ -236,6 +264,14 @@ _advanced: False_
 
 _inlined_description: _
 
+Gets position of the playhead. 
+
+
+***return:*** 
+	playhead position in milliseconds. 
+
+
+
 
 
 
@@ -275,6 +311,14 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Gets playback speed. 
+
+
+***return:*** 
+	playback speed (see ofSoundPlayer::setSpeed()). 
+
+
 
 
 
@@ -327,6 +371,14 @@ _advanced: False_
 
 _inlined_description: _
 
+Gets current volume. 
+
+
+***return:*** 
+	current volume in the range 0 to 1. 
+
+
+
 
 
 
@@ -367,6 +419,14 @@ _advanced: False_
 
 _inlined_description: _
 
+Queries the player to see if its file was loaded successfully. 
+
+
+***return:*** 
+	whether or not the player is ready to begin playback. 
+
+
+
 
 
 
@@ -406,6 +466,13 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Tells the sound player which file to play. 
+
+
+Codec support varies by platform but wav, aif, and mp3 are safe.
+
+
 
 
 
@@ -502,6 +569,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Starts playback. 
+
 
 
 
@@ -548,7 +617,7 @@ _syntax: setLoop(bLp)_
 _name: setLoop_
 _returns: void_
 _returns_description: _
-_parameters: bool bLp_
+_parameters: bool loop_
 _access: public_
 _version_started: 006_
 _version_deprecated: _
@@ -560,6 +629,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Sets whether to loop once the end of the file is reached. 
+
+
+
 
 
 
@@ -596,7 +670,7 @@ _syntax: setMultiPlay(bMp)_
 _name: setMultiPlay_
 _returns: void_
 _returns_description: _
-_parameters: bool bMp_
+_parameters: bool multiplay_
 _access: public_
 _version_started: 006_
 _version_deprecated: _
@@ -608,6 +682,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Enables playing multiple simultaneous copies of the sound. 
+
+
+
 
 
 
@@ -646,7 +725,7 @@ _syntax: setPan(vol)_
 _name: setPan_
 _returns: void_
 _returns_description: _
-_parameters: float vol_
+_parameters: float pan_
 _access: public_
 _version_started: 006_
 _version_deprecated: _
@@ -658,6 +737,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Sets stereo pan. 
+
+
+
 
 
 
@@ -696,7 +780,7 @@ _syntax: setPaused(bP)_
 _name: setPaused_
 _returns: void_
 _returns_description: _
-_parameters: bool bP_
+_parameters: bool paused_
 _access: public_
 _version_started: 006_
 _version_deprecated: _
@@ -708,6 +792,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Enables pause / resume. 
+
+
+
 
 
 
@@ -790,7 +879,7 @@ _syntax: setPosition(pct)_
 _name: setPosition_
 _returns: void_
 _returns_description: _
-_parameters: float pct_
+_parameters: float percent_
 _access: public_
 _version_started: 006_
 _version_deprecated: _
@@ -802,6 +891,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Sets position of the playhead within the file (aka "seeking"). 
+
+
+
 
 
 
@@ -852,6 +946,11 @@ _advanced: False_
 
 _inlined_description: _
 
+Sets position of the playhead within the file (aka "seeking"). 
+
+
+
+
 
 
 
@@ -879,7 +978,7 @@ _syntax: setSpeed(spd)_
 _name: setSpeed_
 _returns: void_
 _returns_description: _
-_parameters: float spd_
+_parameters: float speed_
 _access: public_
 _version_started: 006_
 _version_deprecated: _
@@ -891,6 +990,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Sets playback speed. 
+
+
+
 
 
 
@@ -942,6 +1046,11 @@ _advanced: False_
 
 _inlined_description: _
 
+Sets playback volume. 
+
+
+
+
 
 
 
@@ -990,6 +1099,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Stops playback. 
+
 
 
 
@@ -1037,6 +1148,8 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Stops and unloads the current sound. 
 
 
 
