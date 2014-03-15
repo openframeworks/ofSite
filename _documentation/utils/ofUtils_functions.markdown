@@ -852,6 +852,7 @@ _inlined_description: _
 
 _description: _
 
+
 Formats the given timestamp according to the given format.	
 The format string is used as a template to format the date and
 is copied character by character except for the following special characters,
@@ -882,6 +883,8 @@ which are replaced by the corresponding value.
 * %z - time zone differential in ISO 8601 format (Z or +NN.NN)
 * %Z - time zone differential in RFC format (GMT or +NNNN)
 * %% - percent sign
+
+
 
 
 
@@ -2353,6 +2356,8 @@ _description: _
 openFrameworks now treats all files in the data/ folder as being at the same level as your app. When a file is loaded using openFrameworks classes (like ofVideoPlayer) the file path is run through this function to turn it into a relative path for the executible. As windows, mac and linux all have different relative paths, it is important to use this function if you have written your own class or addon for openFrameworks and you wish to be able to load files from the data/ folder.
 
 The optional parameter makeAbsolute, if set to true (false by default) returns the generated path as an absolute path starting from the root of your filesystem instead of from the folder your application is run from.
+
+
 
 
 

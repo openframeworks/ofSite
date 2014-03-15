@@ -290,6 +290,44 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###GMainLoop * getGstMainLoop()
+
+<!--
+_syntax: getGstMainLoop()_
+_name: getGstMainLoop_
+_returns: GMainLoop *_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: True_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###bool getIsMovieDone()
 
 <!--
@@ -366,16 +404,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###unsigned long getMaxLatencyNanos()
+###uint64_t getMaxLatencyNanos()
 
 <!--
 _syntax: getMaxLatencyNanos()_
 _name: getMaxLatencyNanos_
-_returns: unsigned long_
+_returns: uint64_t_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 0071_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -404,16 +442,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###unsigned long getMinLatencyNanos()
+###uint64_t getMinLatencyNanos()
 
 <!--
 _syntax: getMinLatencyNanos()_
 _name: getMinLatencyNanos_
-_returns: unsigned long_
+_returns: uint64_t_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 0071_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1286,7 +1324,7 @@ _name: startPipeline_
 _returns: bool_
 _returns_description: _
 _parameters: _
-_access: private_
+_access: public_
 _version_started: 007_
 _version_deprecated: _
 _summary: _

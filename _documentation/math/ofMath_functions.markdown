@@ -87,42 +87,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###float ofAngleSumRadians(currentAngle, targetAngle)
-
-<!--
-_syntax: ofAngleSumRadians(currentAngle, targetAngle)_
-_name: ofAngleSumRadians_
-_returns: float_
-_returns_description: _
-_parameters: float currentAngle, float targetAngle_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###ofPoint ofBezierPoint(a, b, c, d, t)
 
 <!--

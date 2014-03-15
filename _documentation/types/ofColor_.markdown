@@ -9,6 +9,24 @@ _istemplated: True_
 
 ##InlineDescription
 
+A class template to represent a color with variable precision. 
+
+
+ofColor_ is a class template for representing a color using the [RGB model](RGB model). Consequently, ofColor_ stores three numbers representing representing the R (red), G (green) and B (blue) color components. In addition to the R, G and B components, ofColor_ represent's a color's opacity with a fourth alpha component. An alpha value of zero represents a completely transparent color. A maximal alpha value (which depends upon the range and precision of the underlying data type) represents an opaque color.
+
+Since each of the R, G, B and A components is represented by any underlying numerical PixelType, the choice of PixelType affects both the range of values and resulting precision of the RGB color representation.
+
+Typically users will not use this class template directly, but will use the convenient pre-defined typedefs.
+
+
+For integral PixelTypes (e.g. unsigned char and unsigned short), the minimum is zero and the maximum is given by: std::numeric_limits<PixelType>::max();
+
+
+For floating point PixelsTypes, the maximum is 1.0.
+
+The ofColor typedef represents an 8-bit RGBA color. Thus, each component has a maximum value of 255 and a minimum value of 0. The ofColor typedef is the default color type in openFrameworks and will work for most user applications.
+
+The ofFloatColor and ofShortColor represent higher precision representations of a given color and are used in special cases where precision color math is required. ofFloatColor might be used for specialized image processing, such as image averaging where rounding errors might otherwise introduce unaccaptable visual artifacts. ofShortColor might be used with depth camera images that can represent the "depth" of each pixel with greater than 256 unique levels. 
 
 
 
@@ -92,6 +110,16 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Clamp values between 0 and the limit(). 
+
+
+Clamps the value of each component, R, G, B and A to a maximum of limit() and a minimum of zero.
+
+***return:*** 
+	A reference to itself. 
+
+
 
 
 
@@ -177,6 +205,15 @@ _advanced: False_
 
 _inlined_description: _
 
+Create an ofColor_ from a hexadecimal value. 
+
+
+In some cases, it is convenient to represent colors using a hexadecimal number. In this case, red, green and blue values are packed into a single integer.
+
+The alpha channel is specified separately and will default to the PixelType's maximum, resulting in an opaque color.
+
+
+
 
 
 
@@ -220,6 +257,17 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Create an ofColor_ from an HSB representation. 
+
+
+While ofColor_ represents color using R, G, B, and A components, other representations are available. This method allows the user to construct an ofColor_ from a Hue (H), Saturation (S), and Brightness (B) and an optional alpha value.
+
+The alpha channel is specified separately and will default to the PixelType's maximum, resulting in an opaque color.
+
+For more information about HSB, see: [http://en.wikipedia.org/wiki/HSV_color_space](http://en.wikipedia.org/wiki/HSV_color_space)
+
+
 
 
 
@@ -265,6 +313,12 @@ _advanced: False_
 
 _inlined_description: _
 
+Calculate the brightness of of the R, G and B components. 
+
+
+Brightness is simply the maximum of the three color components. This method of calculating brightness is used by Photoshop (HSB) and Processing (HSB). Note that brightness is also called "Value".
+
+returns the brightness in the range 0 - limit(). 
 
 
 
@@ -305,6 +359,18 @@ _advanced: False_
 
 _inlined_description: _
 
+A non-destructive version of clamp(). 
+
+
+***return:*** 
+	A copy of this color, clamped. 
+
+
+***see:*** 
+	clamp() 
+
+
+
 
 
 
@@ -344,6 +410,18 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Get a hexadecimal representation of the RGB color. 
+
+
+***warning:*** 
+	This method does not encode the alpha component.
+
+
+***return:*** 
+	An integer representing an RGB color. 
+
+
 
 
 
@@ -391,6 +469,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Extract the hue, saturation and brightness from this color. 
+
+
+
 
 
 
@@ -441,6 +524,16 @@ _advanced: False_
 
 _inlined_description: _
 
+Get the Hue of this color. 
+
+
+The color is converted from the default RGB to an HSB colorspace and the resulting Hue value is returned. The resulting hue value will always be returned in the range 0 - limit().
+
+***return:*** 
+	The Hue value in the range 0 - limit(). 
+
+
+
 
 
 
@@ -452,6 +545,54 @@ _description: _
 
 
 Return the hue component of the HSB representation of this color. Refer the [discussion of HSB](#HSB) above.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float getHueAngle()
+
+<!--
+_syntax: getHueAngle()_
+_name: getHueAngle_
+_returns: float_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Get the Hue angle of this color. 
+
+
+The color is converted from the default RGB to an HSB colorspace and the resulting Hue angle is returned. The resulting hue value will always be returned in degrees in the range 0 - 360.
+
+***return:*** 
+	The Hue angle in the range 0 - 360. 
+
+
+
+
+
+
+
+
+
+
+_description: _
+
 
 
 
@@ -480,6 +621,18 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+A non-destructive version of invert(). 
+
+
+***return:*** 
+	A copy of this color, inverted. 
+
+
+***see:*** 
+	invert() 
+
+
 
 
 
@@ -521,6 +674,18 @@ _advanced: False_
 
 _inlined_description: _
 
+A non-destructive version of lerp(). 
+
+
+***return:*** 
+	A copy of this color, lerped. 
+
+
+***see:*** 
+	lerp() 
+
+
+
 
 
 
@@ -561,6 +726,12 @@ _advanced: False_
 
 _inlined_description: _
 
+Calculate the lightness of the R, G and B components. 
+
+
+Lightness is simply the average of the three color components. This method of calculating lightness is used by the Lab and HSL color spaces.
+
+returns the lightness in the range 0 - limit(). 
 
 
 
@@ -600,6 +771,18 @@ _advanced: True_
 -->
 
 _inlined_description: _
+
+A non-destructive version of normalize(). 
+
+
+***return:*** 
+	A copy of this color, normalized. 
+
+
+***see:*** 
+	normalize() 
+
+
 
 
 
@@ -641,6 +824,16 @@ _advanced: False_
 
 _inlined_description: _
 
+Get the Saturation of this color. 
+
+
+The color is converted from the default RGB to an HSB colorspace and the resulting saturation is returned. The resulting saturation value will always be returned in the range 0 - limit().
+
+***return:*** 
+	The saturation in the range 0 - limit(). 
+
+
+
 
 
 
@@ -680,6 +873,27 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Invert the R, G and B components. 
+
+
+Performs an inversion operation on the color by replacing the red, green and blue components with their original value subtracted from the limit(). For example, an ofColor value of: unsigned char maxValue = limit(); // would return 255
+
+unsigned char r = 255;
+unsigned char g = 255;
+unsigned char b = 0;
+
+unsigned char rNew = maxValue - r; // 255 - 255 = 0
+unsigned char gNew = maxValue - g; // 255 - 255 = 0
+unsigned char bNew = maxValue - b; // 255 - 0   = 255;
+
+
+Thus the inversion of ofColor(255, 255, 0) is ofColor(0, 0, 255);
+
+***return:*** 
+	A reference to itself. 
+
+
 
 
 
@@ -725,6 +939,17 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+A linear interpolation between all components of two colors. 
+
+
+The lerp method performs a linear interpolation (or [lerp](lerp)) between this color and a target color. In contrast to many of the mathematical functions found in ofColor_, The linear interpolation is carried out on all components, R, G, B and A. The amount is typically a value between 0.0 and 1.0, with 0.0 yielding an unchanged color and 1.0 yielding a color identical to the target color.
+
+
+***return:*** 
+	A reference to itself. 
+
+
 
 
 
@@ -773,6 +998,14 @@ _advanced: False_
 
 _inlined_description: _
 
+Return the maximum value of a color. 
+
+
+***return:*** 
+	The value associated with a fully saturated color component. 
+
+
+
 
 
 
@@ -812,6 +1045,24 @@ _advanced: True_
 -->
 
 _inlined_description: _
+
+Normalize the R, G and B components. 
+
+
+Performs a normalization operation on the red, green and blue components by scaling them by brightness of the original color divided by the limit(). The brightness is calculated by finding the maximum of original red, green and blue components. This operation is equivalent to the following: ofColor myColor(127, 0, 0, 127);
+
+float brightness = myColor.getBrightness(); // returns 127.
+float scaleFactor = brightness / limit();   // returns 127 / 255.
+
+ofColor myNormalizedColor = myColor / scaleFactor;
+                            // Divides the red, green and blue
+                            // components by the scale factor.
+
+
+***return:*** 
+	A reference to itself. 
+
+
 
 
 
@@ -867,6 +1118,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Construct an ofColor_ instance. 
+
 
 
 
@@ -899,7 +1152,7 @@ _syntax: ofColor_(_r, _g, _b, _a = limit())_
 _name: ofColor__
 _returns: _
 _returns_description: _
-_parameters: float _r, float _g, float _b, float _a=limit()_
+_parameters: float red, float green, float blue, float alpha=limit()_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -911,6 +1164,13 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Construct an ofColor_ by using channel values. 
+
+
+When creating an instance of ofColor_ the channel values must fall within the range represented by the PixelType. By default, the alpha component will take the PixelType's maximum, producing an opaque color.
+
+
 
 
 
@@ -957,6 +1217,11 @@ _advanced: False_
 
 _inlined_description: _
 
+Construct an ofColor_ from an existing ofColor_. 
+
+
+
+
 
 
 
@@ -989,7 +1254,7 @@ _syntax: ofColor_(&color, _a)_
 _name: ofColor__
 _returns: _
 _returns_description: _
-_parameters: const ofColor_< PixelType > &color, float _a_
+_parameters: const ofColor_< PixelType > &color, float alpha_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1001,6 +1266,13 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Construct an ofColor_ from an existing ofColor_. 
+
+
+This constructor will use the R, G and B components from the passed color ignoring its alpha channel. The provided alpha channel will be used instead.
+
+
 
 
 
@@ -1034,7 +1306,7 @@ _syntax: ofColor_(gray, _a = limit())_
 _name: ofColor__
 _returns: _
 _returns_description: _
-_parameters: float gray, float _a=limit()_
+_parameters: float gray, float alpha=limit()_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1046,6 +1318,13 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Construct a grayscale ofColor_ by specifiying a single number. 
+
+
+This constructor will use a single value to describe a grayscale color. This single value will be taken by each of the R, G and B components. The alpha channel is specified separately and will and will default to the PixelType's maximum resulting in an opaque color.
+
+
 
 
 
@@ -1091,6 +1370,17 @@ _advanced: False_
 
 _inlined_description: _
 
+Construct an ofColor_ from an existing ofColor_. 
+
+
+This constructor will attempt to convert between color instances of differing precision.
+
+***warning:*** 
+	Depending on the PixelType and SrcType used, color precision may be lost when converting a higher precision to a lower precision representation.
+
+
+
+
 
 
 
@@ -1124,9 +1414,9 @@ _syntax: operator!=(&color)_
 _name: operator!=_
 _returns: bool_
 _returns_description: _
-_parameters: ofColor_< PixelType > const &color_
+_parameters: const ofColor_< PixelType > &color_
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1137,6 +1427,14 @@ _advanced: False_
 
 _inlined_description: _
 
+Test two colors for inequality. 
+
+
+***return:*** 
+	true iff any of the R, G, B or A components are not equal. 
+
+
+
 
 
 
@@ -1146,16 +1444,6 @@ _inlined_description: _
 
 _description: _
 
-
-Non-equivalence operator. Returns true if any RGB component is different from its equivalent in color, otherwise returns false.
-
-~~~~{.cpp}
-ofColor c1(255, 0, 0); // red
-ofColor c2(0, 255, 0); // green
-ofColor c3(255, 0, 0); // red
-// ( c1 != c2 ) is true
-// ( c1 != c3 ) is false
-~~~~
 
 
 
@@ -1172,9 +1460,9 @@ _syntax: operator*(&color)_
 _name: operator*_
 _returns: ofColor_< PixelType >_
 _returns_description: _
-_parameters: ofColor_< PixelType > const &color_
+_parameters: const ofColor_< PixelType > &color_
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1194,14 +1482,6 @@ _inlined_description: _
 
 _description: _
 
-
-Returns a new color where each channel has been multiplied by its parallel in color, with 100% alpha. Behaves like a multiply blend in a photo editing app: if the red channel in color is 50%, the output red channel will be 50% of the input red channel.
-
-~~~~{.cpp}
-ofColor c1(128, 0, 0); // 50% red
-ofColor c2(255, 255, 255); // white
-ofColor c3 = c2*c1; // c3 is (128, 0, 0)
-~~~~
 
 
 
@@ -1218,9 +1498,9 @@ _syntax: operator*(&val)_
 _name: operator*_
 _returns: ofColor_< PixelType >_
 _returns_description: _
-_parameters: float const &val_
+_parameters: const float &val_
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1240,13 +1520,6 @@ _inlined_description: _
 
 _description: _
 
-
-Returns a new color where each channel has been multiplied by val, with alpha 100% alpha. Before multiplying, val is clamped to a range of 0 to 1.
-
-~~~~{.cpp}
-ofColor c1(255, 128, 0);
-ofColor c2 = c1*0.5; // c2 is (127, 64, 0)
-~~~~
 
 
 
@@ -1263,9 +1536,9 @@ _syntax: operator*=(&color)_
 _name: operator*=_
 _returns: ofColor_< PixelType > &_
 _returns_description: _
-_parameters: ofColor_< PixelType > const &color_
+_parameters: const ofColor_< PixelType > &color_
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1285,14 +1558,6 @@ _inlined_description: _
 
 _description: _
 
-
-Multiplication assignment operator. Multiplies each channel by its parallel in color, without touching alpha. Behaves like a multiply blend in a photo editing app: if the red channel in color is 50%, the red channel in this color will be reduced to 50% of its input value.
-
-~~~~{.cpp}
-ofColor c1(128, 0, 0); // 50% red
-ofColor c2(255, 255, 255); // white
-ofColor c2 *= c1; // c2 is now (128, 0, 0)
-~~~~
 
 
 
@@ -1309,9 +1574,9 @@ _syntax: operator*=(&val)_
 _name: operator*=_
 _returns: ofColor_< PixelType > &_
 _returns_description: _
-_parameters: float const &val_
+_parameters: const float &val_
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1331,13 +1596,6 @@ _inlined_description: _
 
 _description: _
 
-
-Multiplication assignment operator. Multiplies each channel by val, without touching alpha. Before multiplying, val is clamped to a range of 0 to 1.
-
-~~~~{.cpp}
-ofColor c1(255, 128, 0);
-ofColor c1*=0.5; // c2 is (127, 64, 0)
-~~~~
 
 
 
@@ -1354,9 +1612,9 @@ _syntax: operator+(&color)_
 _name: operator+_
 _returns: ofColor_< PixelType >_
 _returns_description: _
-_parameters: ofColor_< PixelType > const &color_
+_parameters: const ofColor_< PixelType > &color_
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1376,14 +1634,6 @@ _inlined_description: _
 
 _description: _
 
-
-Sum red, green and blue components separately, ignoring alpha. In the case of integer types, like ofColor and ofShortColor this operation wraps. In the case of ofFloatColor, it automatically clamps the result by calling [clamp](#clamp).
-
-~~~~{.cpp}
-ofColor c1(64, 64, 0, 128);
-ofColor c2(0, 64, 64, 64 );
-ofColor c3 = c1 + c2; // c3 is (64, 128, 64) with alpha 128
-~~~~
 
 
 
@@ -1400,9 +1650,9 @@ _syntax: operator+(&val)_
 _name: operator+_
 _returns: ofColor_< PixelType >_
 _returns_description: _
-_parameters: float const &val_
+_parameters: const float &val_
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1422,13 +1672,6 @@ _inlined_description: _
 
 _description: _
 
-
-Add val to all components except alpha. In the case of integer types, like ofColor and ofShortColor this operation wraps. In the case of ofFloatColor, it automatically clamps the result by calling [clamp](#clamp).
-
-~~~~{.cpp}
-ofColor c1(128, 64, 0, 128);
-ofColor c2 = c1 + 64; // c3 is (192, 128, 64) with alpha 128
-~~~~
 
 
 
@@ -1445,9 +1688,9 @@ _syntax: operator+=(&color)_
 _name: operator+=_
 _returns: ofColor_< PixelType > &_
 _returns_description: _
-_parameters: ofColor_< PixelType > const &color_
+_parameters: const ofColor_< PixelType > &color_
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1467,14 +1710,6 @@ _inlined_description: _
 
 _description: _
 
-
-Addition assignment operator. Adds the contents of color (except alpha) to this color. In the case of integer types, like ofColor and ofShortColor this operation wraps. In the case of ofFloatColor, it automatically clamps the result by calling [clamp](#clamp).
-
-~~~~{.cpp}
-ofColor c1(0, 64, 0);
-ofColor c2(64, 64, 0);
-c1 += c2; // c1 is now (64, 128, 0);
-~~~~
 
 
 
@@ -1491,9 +1726,9 @@ _syntax: operator+=(&val)_
 _name: operator+=_
 _returns: ofColor_< PixelType > &_
 _returns_description: _
-_parameters: float const &val_
+_parameters: const float &val_
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1513,13 +1748,6 @@ _inlined_description: _
 
 _description: _
 
-
-Addition assignment operator. Adds val to all components (except alpha) to this color. In the case of integer types, like ofColor and ofShortColor this operation wraps. In the case of ofFloatColor, it automatically clamps the result by calling [clamp](#clamp).
-
-~~~~{.cpp}
-ofColor c1(128, 64, 0);
-c1 += 128; // c1 is now (255, 192, 128)
-~~~~
 
 
 
@@ -1536,9 +1764,9 @@ _syntax: operator-(&color)_
 _name: operator-_
 _returns: ofColor_< PixelType >_
 _returns_description: _
-_parameters: ofColor_< PixelType > const &color_
+_parameters: const ofColor_< PixelType > &color_
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1558,8 +1786,6 @@ _inlined_description: _
 
 _description: _
 
-
-Subtraction operator. Works like [the addition operator](#operator+).
 
 
 
@@ -1576,9 +1802,9 @@ _syntax: operator-(&val)_
 _name: operator-_
 _returns: ofColor_< PixelType >_
 _returns_description: _
-_parameters: float const &val_
+_parameters: const float &val_
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1598,8 +1824,6 @@ _inlined_description: _
 
 _description: _
 
-
-Subtraction operator. Works like [the addition operator](#operator+).
 
 
 
@@ -1616,9 +1840,9 @@ _syntax: operator-=(&color)_
 _name: operator-=_
 _returns: ofColor_< PixelType > &_
 _returns_description: _
-_parameters: ofColor_< PixelType > const &color_
+_parameters: const ofColor_< PixelType > &color_
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1638,8 +1862,6 @@ _inlined_description: _
 
 _description: _
 
-
-Subtraction assignment operator. Works like [the addition assignment operator](#operator+=).
 
 
 
@@ -1656,9 +1878,9 @@ _syntax: operator-=(&val)_
 _name: operator-=_
 _returns: ofColor_< PixelType > &_
 _returns_description: _
-_parameters: float const &val_
+_parameters: const float &val_
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1678,8 +1900,6 @@ _inlined_description: _
 
 _description: _
 
-
-Subtraction assignment operator. Works like [the addition assignment operator](#operator+=).
 
 
 
@@ -1696,9 +1916,9 @@ _syntax: operator/(&color)_
 _name: operator/_
 _returns: ofColor_< PixelType >_
 _returns_description: _
-_parameters: ofColor_< PixelType > const &color_
+_parameters: const ofColor_< PixelType > &color_
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1718,8 +1938,6 @@ _inlined_description: _
 
 _description: _
 
-
-Division operator. Works similar to [the * operator](#operator*) but divides instead of multiplies.
 
 
 
@@ -1736,9 +1954,9 @@ _syntax: operator/(&val)_
 _name: operator/_
 _returns: ofColor_< PixelType >_
 _returns_description: _
-_parameters: float const &val_
+_parameters: const float &val_
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1758,8 +1976,6 @@ _inlined_description: _
 
 _description: _
 
-
-Division operator. Works similar to [the * operator](#operator*) but divides instead of multiplies.
 
 
 
@@ -1776,9 +1992,9 @@ _syntax: operator/=(&color)_
 _name: operator/=_
 _returns: ofColor_< PixelType > &_
 _returns_description: _
-_parameters: ofColor_< PixelType > const &color_
+_parameters: const ofColor_< PixelType > &color_
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1798,8 +2014,6 @@ _inlined_description: _
 
 _description: _
 
-
-Division assignment operator. Works similar to [the *= operator](#operator*=) but divides instead of multiplies.
 
 
 
@@ -1816,9 +2030,9 @@ _syntax: operator/=(&val)_
 _name: operator/=_
 _returns: ofColor_< PixelType > &_
 _returns_description: _
-_parameters: float const &val_
+_parameters: const float &val_
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1839,8 +2053,6 @@ _inlined_description: _
 _description: _
 
 
-Division assignment operator. Works similar to [the *= operator](#operator*=) but divides instead of multiplies.
-
 
 
 
@@ -1856,9 +2068,9 @@ _syntax: operator=(&color)_
 _name: operator=_
 _returns: ofColor_< PixelType > &_
 _returns_description: _
-_parameters: ofColor_< PixelType > const &color_
+_parameters: const ofColor_< PixelType > &color_
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1868,6 +2080,17 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Assign a color using an existing color. 
+
+
+R, G, B and A components are set to the the values of the assigned color.
+
+
+***return:*** 
+	A reference to itself. 
+
+
 
 
 
@@ -1879,22 +2102,6 @@ _inlined_description: _
 _description: _
 
 
-Assignment operator.
-
-~~~~{.cpp}
-ofColor c1(255, 0, 0); // red
-ofColor c2; // default white
-c2 = c1; // c2 is now red
-~~~~
-
-The color types can be different: you can assign an ofFloatColor to an ofColor:
-
-~~~~{.cpp}
-ofFloatColor c1(1.0, 0.0, 0.0); // red
-ofColor c2; // default white
-c2 = c1; // c2 is now red (255, 0, 0)
-~~~~
-
 
 
 
@@ -1910,18 +2117,33 @@ _syntax: operator=(&color)_
 _name: operator=_
 _returns: ofColor_< PixelType > &_
 _returns_description: _
-_parameters: ofColor_< SrcType > const &color_
+_parameters: const ofColor_< SrcType > &color_
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
 _static: False_
-_visible: False_
+_visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
+
+Assign a color using an existing color. 
+
+
+R, G, B and A components are set to the the values of the assigned color.
+
+***warning:*** 
+	Depending on the PixelType and SrcType used, color precision may be lost when converting a higher precision to a lower precision representation.
+
+
+
+***return:*** 
+	A reference to itself. 
+
+
 
 
 
@@ -1948,9 +2170,9 @@ _syntax: operator=(&val)_
 _name: operator=_
 _returns: ofColor_< PixelType > &_
 _returns_description: _
-_parameters: float const &val_
+_parameters: const float &val_
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1961,6 +2183,21 @@ _advanced: False_
 
 _inlined_description: _
 
+Assign a color using a grayscale value. 
+
+
+R, G and B components are set to the grayscale value and alpha is set to limit(). ofColor myColor = 127;
+
+
+is equivalent to: ofColor myColor(127, 127, 127, 255);
+
+
+
+***return:*** 
+	A reference to itself. 
+
+
+
 
 
 
@@ -1970,13 +2207,6 @@ _inlined_description: _
 
 _description: _
 
-
-Assigns val to all components, including alpha. Has the same effect as calling [set(val,val)](#set).
-
-~~~~{.cpp}
-ofColor c;
-c.set( 128 ); // c is RGB (128, 128, 128) with alpha of 128
-~~~~
 
 
 
@@ -1993,9 +2223,9 @@ _syntax: operator==(&color)_
 _name: operator==_
 _returns: bool_
 _returns_description: _
-_parameters: ofColor_< PixelType > const &color_
+_parameters: const ofColor_< PixelType > &color_
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2006,6 +2236,14 @@ _advanced: False_
 
 _inlined_description: _
 
+Test two colors for equality. 
+
+
+***return:*** 
+	true iff the R, G, B and A components are all equal. 
+
+
+
 
 
 
@@ -2015,16 +2253,6 @@ _inlined_description: _
 
 _description: _
 
-
-Equivalence operator. Returns true if every RGB component is the same as its equivalent in color, otherwise returns false. 
-
-~~~~{.cpp}
-ofColor c1(255, 0, 0); // red
-ofColor c2(0, 255, 0); // green
-ofColor c3(255, 0, 0); // red
-// ( c1 == c2 ) is false
-// ( c1 == c3 ) is true
-~~~~
 
 
 
@@ -2124,7 +2352,7 @@ _syntax: set(_r, _g, _b, _a = limit())_
 _name: set_
 _returns: void_
 _returns_description: _
-_parameters: float _r, float _g, float _b, float _a=limit()_
+_parameters: float red, float green, float blue, float alpha=limit()_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -2136,6 +2364,13 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Set an ofColor_ by using channel values. 
+
+
+When modifying an instance of ofColor_ the channel values must fall within the range represented by the PixelType. By default, the alpha component will take the PixelType's maximum, producing an opaque color.
+
+
 
 
 
@@ -2169,7 +2404,7 @@ _syntax: set(_gray, _a = limit())_
 _name: set_
 _returns: void_
 _returns_description: _
-_parameters: float _gray, float _a=limit()_
+_parameters: float gray, float alpha=limit()_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -2181,6 +2416,13 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Set a grayscale ofColor_ by specifiying a single number. 
+
+
+When modifying an instance of ofColor_ you can use a single value to describe a grayscale color. This single value will be taken by each of the R, G and B components. The alpha channel is specified separately and will and will default to the PixelType's maximum resulting in an opaque color.
+
+
 
 
 
@@ -2213,9 +2455,9 @@ _syntax: set(&color)_
 _name: set_
 _returns: void_
 _returns_description: _
-_parameters: ofColor_< PixelType > const &color_
+_parameters: const ofColor_< PixelType > &color_
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2226,6 +2468,13 @@ _advanced: False_
 
 _inlined_description: _
 
+Set an ofColor_ from an existing ofColor_. 
+
+
+This will use the R, G, B and A components from the passed color.
+
+
+
 
 
 
@@ -2235,14 +2484,6 @@ _inlined_description: _
 
 _description: _
 
-
-Set this color to be the same as color.
-
-~~~~{.cpp}
-ofColor c1(255, 0, 0); // red
-ofColor c2(0, 255, 0); // green
-c2.set(c1); // c2 is now red
-~~~~
 
 
 
@@ -2271,6 +2512,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Set the brightness of this color. 
+
+
+
 
 
 
@@ -2319,6 +2565,19 @@ _advanced: False_
 
 _inlined_description: _
 
+Set an ofColor_ from a hexadecimal representation. 
+
+
+In some cases, it is convenient to represent colors using a hexadecimal number. In this case, red, green and blue values are packed into a integer.
+
+The alpha channel is specified separately and will default to the PixelType's maximum, resulting in an opaque color.
+
+***warning:*** 
+	The alpha value should not be packed in the hexColor and must be specified separately.
+
+
+
+
 
 
 
@@ -2365,6 +2624,11 @@ _advanced: False_
 
 _inlined_description: _
 
+Set the color using HSB components. 
+
+
+
+
 
 
 
@@ -2405,6 +2669,11 @@ _advanced: False_
 
 _inlined_description: _
 
+Set the hue of this color. 
+
+
+
+
 
 
 
@@ -2423,6 +2692,49 @@ c.setHue( 128 ); // now bright cyan
 ~~~~
 
 Refer the [discussion of HSB](#HSB) above.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setHueAngle(angle)
+
+<!--
+_syntax: setHueAngle(angle)_
+_name: setHueAngle_
+_returns: void_
+_returns_description: _
+_parameters: float angle_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Set the hue angle of this color. 
+
+
+
+
+
+
+
+
+
+
+
+_description: _
+
 
 
 
@@ -2451,6 +2763,17 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Set the saturation this color. 
+
+
+This method uses HSB not HSL. So red desaturated is white, not gray
+
+
+***see:*** 
+	[http://en.wikipedia.org/wiki/HSL_and_HSV](http://en.wikipedia.org/wiki/HSL_and_HSV) 
+
+
 
 
 
@@ -2498,6 +2821,8 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Destroy an ofColor_ instance. 
 
 
 

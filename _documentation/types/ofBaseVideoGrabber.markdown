@@ -176,6 +176,44 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###ofTexture * getTexture()
+
+<!--
+_syntax: getTexture()_
+_name: getTexture_
+_returns: ofTexture *_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###float getWidth()
 
 <!--

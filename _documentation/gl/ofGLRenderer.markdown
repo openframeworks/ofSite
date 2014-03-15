@@ -1264,6 +1264,57 @@ See [ofGetCoordHandedness](ofGraphics.html#show_ofGetCoordHandedness)
 
 <!----------------------------------------------------------------------------->
 
+###ofMatrix4x4 getCurrentMatrix(matrixMode_)
+
+<!--
+_syntax: getCurrentMatrix(matrixMode_)_
+_name: getCurrentMatrix_
+_returns: ofMatrix4x4_
+_returns_description: _
+_parameters: ofMatrixMode matrixMode__
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Queries the current OpenGL matrix state  Returns the specified matrix as held by the renderer's current matrix stack. 
+
+
+    You can query one of the following:
+
+    [OF_MATRIX_MODELVIEW | OF_MATRIX_PROJECTION | OF_MATRIX_TEXTURE]
+
+    Each query will return the state of the matrix
+    as it was uploaded to the shader currently bound.
+
+
+
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofRectangle getCurrentViewport()
 
 <!--

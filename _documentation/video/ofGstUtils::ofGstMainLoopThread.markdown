@@ -24,6 +24,44 @@ _istemplated: False_
 
 
 
+### ofGstMainLoopThread()
+
+<!--
+_syntax: ofGstMainLoopThread()_
+_name: ofGstMainLoopThread_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void start()
 
 <!--

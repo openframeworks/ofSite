@@ -1420,6 +1420,8 @@ Turns off point sprite.
 
 
 
+
+
 <!----------------------------------------------------------------------------->
 
 ###void ofDisableSmoothing()
@@ -2000,6 +2002,8 @@ Turns on point sprite. Textures can be mapped onto points. By default, point siz
 
 
 
+
+
 <!----------------------------------------------------------------------------->
 
 ###void ofEnableSmoothing()
@@ -2221,6 +2225,42 @@ _name: ofGetCoordHandedness_
 _returns: ofHandednessType_
 _returns_description: _
 _parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofMatrix4x4 ofGetCurrentMatrix(matrixMode_)
+
+<!--
+_syntax: ofGetCurrentMatrix(matrixMode_)_
+_name: ofGetCurrentMatrix_
+_returns: ofMatrix4x4_
+_returns_description: _
+_parameters: ofMatrixMode matrixMode__
 _version_started: _
 _version_deprecated: _
 _summary: _

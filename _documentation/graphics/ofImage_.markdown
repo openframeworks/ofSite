@@ -782,6 +782,14 @@ _advanced: False_
 
 _inlined_description: _
 
+Returns height of image as a float. 
+
+
+***return:*** 
+	float 
+
+
+
 
 
 

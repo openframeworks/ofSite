@@ -31,7 +31,7 @@ _syntax: add(&param)_
 _name: add_
 _returns: void_
 _returns_description: _
-_parameters: ofParameter< ParameterType > &param_
+_parameters: ofParameter< ParameterType > param_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _

@@ -1837,7 +1837,7 @@ _syntax: setExecutable(executable)_
 _name: setExecutable_
 _returns: void_
 _returns_description: _
-_parameters: bool executable_
+_parameters: bool executable=true_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1877,7 +1877,7 @@ _syntax: setReadOnly(readable)_
 _name: setReadOnly_
 _returns: void_
 _returns_description: _
-_parameters: bool readable_
+_parameters: bool readable=true_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1917,7 +1917,7 @@ _syntax: setWriteable(writeable)_
 _name: setWriteable_
 _returns: void_
 _returns_description: _
-_parameters: bool writeable_
+_parameters: bool writeable=true_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -2033,6 +2033,31 @@ Destructor
 ##Variables
 
 
+
+###bool  binary
+
+<!--
+_name: binary_
+_type: bool _
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###Mode mode
 

@@ -765,6 +765,46 @@ Add the vertices, normals, texture coordinates and indices of one mesh onto anot
 
 <!----------------------------------------------------------------------------->
 
+###ofMesh axis(size = 1.0)
+
+<!--
+_syntax: axis(size = 1.0)_
+_name: axis_
+_returns: ofMesh_
+_returns_description: _
+_parameters: float size=1.0_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: True_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Returns an ofMesh representing an XYZ coordinate system. 
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofMesh box(width, height, depth, resX = 2, resY = 2, resZ = 2)
 
 <!--
@@ -1125,6 +1165,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 A helper method that returns a cylinder made of triangles. The resolution settings for the radius, height, and cap are optional (they are set at a default of 12 segments around the radius, 6 segments in the height, and 2 on the cap). You have the option to cap the cylinder or not. The only valid modes are the default OF_PRIMITIVE_TRIANGLE_STRIP and OF_PRIMITIVE_TRIANGLES.
 ~~~~{.cpp}
@@ -4260,46 +4301,6 @@ Allows you to set the ofPrimitiveMode. The available modes are OF_PRIMITIVE_TRIA
 
 <!----------------------------------------------------------------------------->
 
-###void setName(name_)
-
-<!--
-_syntax: setName(name_)_
-_name: setName_
-_returns: void_
-_returns_description: _
-_parameters: string name__
-_access: public_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Each mesh can have a name, here's where you set it.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void setNormal(index, &n)
 
 <!--
@@ -4954,31 +4955,6 @@ _description: _
 <!--
 _name: mode_
 _type: ofPrimitiveMode_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###string name
-
-<!--
-_name: name_
-_type: string_
 _access: private_
 _version_started: 007_
 _version_deprecated: _

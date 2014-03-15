@@ -1335,6 +1335,44 @@ Constructor. On construction a Poco::XML::Document is created, but not an elemen
 
 <!----------------------------------------------------------------------------->
 
+### ofXml(&path)
+
+<!--
+_syntax: ofXml(&path)_
+_name: ofXml_
+_returns: _
+_returns_description: _
+_parameters: const string &path_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ### ofXml(&rhs)
 
 <!--
@@ -1503,6 +1541,44 @@ _returns_description: _
 _parameters: _
 _access: public_
 _version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool removeAttribute(&path)
+
+<!--
+_syntax: removeAttribute(&path)_
+_name: removeAttribute_
+_returns: bool_
+_returns_description: _
+_parameters: const string &path_
+_access: public_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_

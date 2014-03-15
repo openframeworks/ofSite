@@ -180,6 +180,44 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void error_cb(errorCode, *errorDescription)
+
+<!--
+_syntax: error_cb(errorCode, *errorDescription)_
+_name: error_cb_
+_returns: void_
+_returns_description: _
+_parameters: int errorCode, const char *errorDescription_
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: True_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void exitApp()
 
 <!--

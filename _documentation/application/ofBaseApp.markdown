@@ -762,46 +762,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void mouseReleased()
-
-<!--
-_syntax: mouseReleased()_
-_name: mouseReleased_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-This function gets called when the mouse is released.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void mouseReleased(x, y, button)
 
 <!--

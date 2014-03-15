@@ -495,6 +495,49 @@ This returns the GLuint for the actual shader object that is active on the graph
 
 <!----------------------------------------------------------------------------->
 
+###string getShaderSource(type)
+
+<!--
+_syntax: getShaderSource(type)_
+_name: getShaderSource_
+_returns: string_
+_returns_description: _
+_parameters: GLenum type_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+returns the shader source as it was passed to the GLSL compiler 
+
+
+
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###GLint getUniformLocation(&name)
 
 <!--
@@ -899,6 +942,94 @@ _returns_description: _
 _parameters: const ofShader &other_
 _access: public_
 _version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string parseForIncludes(&source, &sourceDirectoryPath = "")
+
+<!--
+_syntax: parseForIncludes(&source, &sourceDirectoryPath = "")_
+_name: parseForIncludes_
+_returns: string_
+_returns_description: _
+_parameters: const string &source, const string &sourceDirectoryPath=""_
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Mimics the #include behaviour of the c preprocessor  Includes files specified using the '#pragma include <filepath>' directive. 
+
+
+***note:*** 
+	Include paths are always specified relative to the including file's current path 
+
+Recursive #pragma include statements are possible 
+
+Includes will be processed up to 32 levels deep 
+
+
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string parseForIncludes(&source, &included, level = 0, &sourceDirectoryPath = "")
+
+<!--
+_syntax: parseForIncludes(&source, &included, level = 0, &sourceDirectoryPath = "")_
+_name: parseForIncludes_
+_returns: string_
+_returns_description: _
+_parameters: const string &source, vector< string > &included, int level=0, const string &sourceDirectoryPath=""_
+_access: private_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2622,16 +2753,16 @@ This are more of advanced use function and doesn't need.
 
 <!----------------------------------------------------------------------------->
 
-###bool setupShaderFromSource(type, source)
+###bool setupShaderFromSource(type, source, sourceDirectoryPath = "")
 
 <!--
-_syntax: setupShaderFromSource(type, source)_
+_syntax: setupShaderFromSource(type, source, sourceDirectoryPath = "")_
 _name: setupShaderFromSource_
 _returns: bool_
 _returns_description: _
-_parameters: GLenum type, string source_
+_parameters: GLenum type, string source, string sourceDirectoryPath=""_
 _access: public_
-_version_started: _
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2651,8 +2782,6 @@ _inlined_description: _
 
 _description: _
 
-
-these methods create and compile a shader from a string, type: GL_VERTEX_SHADER, GL_FRAGMENT_SHADER, GL_GEOMETRY_SHADER_EXT etc.
 
 
 
@@ -2776,6 +2905,31 @@ _name: program_
 _type: GLuint_
 _access: private_
 _version_started: 007_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###map< GLenum, string >  shaderSource
+
+<!--
+_name: shaderSource_
+_type: map< GLenum, string > _
+_access: private_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
