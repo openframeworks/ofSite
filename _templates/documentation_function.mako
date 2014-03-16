@@ -9,6 +9,17 @@
 		<%self:filter chain="markdown_template">
 ${function.description}
 		</%self:filter>
+
+     % if function.inlined_description.strip("\n").strip(" ") != "":
+        <div class="inlined_docs">
+            <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+
+        <%self:filter chain="markdown_template">
+${function.inlined_description}
+        </%self:filter>
+        </div>
+      % endif
+
 	</div>
 	<!--div class="documentation_detail_wide_col_nav"><a href="#top">&uarr;</a></div-->
 </div>
