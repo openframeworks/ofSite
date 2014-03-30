@@ -10,13 +10,13 @@ as we update and change OF, you can download older versions of the framework her
 
 **pre release v0.8.0** 
 
-windows: [code blocks][106] | [visual studio 2010][107] 
+windows: [code blocks][106] | [visual studio 2012][107] 
 
 mac [x-code (10.6-10.9)][108]
 
 linux: [code blocks][109] | [(64 bit) code blocks][110]
 
-iphone: [iPhone][111] 
+iOS: [iOS][111] 
 
 android: [Android][112]
 
