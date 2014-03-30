@@ -24,14 +24,26 @@ _Note: On OS X.  You can install a Ubuntu "helper" machine running inside Parall
     * rename the folder to something more identifiable like rpi-tools, we'll refer to this path as `$RPI_TOOLS` from now on
     
 * With this you are already able to compile armv6 binaries for the PI but we'll also need the libaries. 
-    * in both cases make sure that you've runned the install_dependencies.sh script in the PI
-    * copy the whole /usr folder from the PI's sdcard somewhere in your HD, we'll call this folder `$RPI_ROOT` from now on
+    * run the install_dependencies.sh script in the PI
+    * copy the whole /usr folder from the PI's sdcard into a directory on your Linux host called `rpi-root`. We'll call this folder `$RPI_ROOT` from now on. `usr` should be a _subdirectory_ of `rpi-root`.   
 
 * Uncompress OF for armv6 somewhere in your computer
 
 * Open a terminal and move to one of the examples folders, you can build binaries for the PI using:
-    * `make -j6 RPI_TOOLS=$RPI_TOOLS RPI_ROOT=$RPI_ROOT GST_VERSION=0.10 PLATFORM_OS=Linux PLATFORM_ARCH=armv6l`
+    * `make -j6 RPI_TOOLS=$RPI_TOOLS RPI_ROOT=$RPI_ROOT GST_VERSION=1.0 PLATFORM_OS=Linux PLATFORM_ARCH=armv6l`
     * _Note_: remember that `$RPI_TOOLS` and `$RPI_ROOT` are the folders where you have the raspberry pi's toolchain and the usr folder from the sdcard respectively
+    * You may prefer to add the following to your `config.make`:
+      ```
+      export RPI_TOOLS = <path to RPI_TOOLS>
+      export RPI_ROOT = <path to RPI_ROOT>
+      export GST_VERSION = 1.0
+      export PLATFORM_OS = Linux
+      export PLATFORM_ARCH = armv6l
+      ```
+
+* If you get PKG_CONFIG errors, you should `export PKG_CONFIG_PATH=$RPI_ROOT/usr/lib/arm-linux-gnueabihf/pkgconfig:$RPI_ROOT/usr/share/pkgconfig:$RPI_ROOT/usr/lib/pkgconfig`
+
+* You may get errors related to libdl when linking (depending on how you're accessing `$RPI_ROOT`). There are some absolute symlinks in your `$RPI_ROOT` that are broken. Fix them with [this script](https://gitorious.org/cross-compile-tools/cross-compile-tools/source/98c51c5939d91884b096dd2fbee859803fd34fef:fixQualifiedLibraryPaths). Change the first line to #!/bin/bash. Then `sudo ./fixQualifiedLibraryPaths $RPI_ROOT $RPI_TOOLS/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian/bin/arm-linux-gnueabihf-g++`
 
 * Now you can setup your favourite IDE to use makefiles and compile for the PI from your computer, once you compile an application copy the executable in your_app/bin to the PI and run it
 
