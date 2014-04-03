@@ -1432,6 +1432,80 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###bool hasKeyboard()
+
+<!--
+_syntax: hasKeyboard()_
+_name: hasKeyboard_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: protected_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool hasMouse()
+
+<!--
+_syntax: hasMouse()_
+_name: hasMouse_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: protected_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void hideCursor()
 
 <!--
@@ -1964,6 +2038,43 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void setThreadTimeout(timeOut)
+
+<!--
+_syntax: setThreadTimeout(timeOut)_
+_name: setThreadTimeout_
+_returns: void_
+_returns_description: _
+_parameters: long timeOut_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void setVerticalSync(enabled)
 
 <!--
@@ -2440,23 +2551,31 @@ _advanced: False_
 
 _inlined_description: _
 
+The thread's run function. 
 
-this is the thread run function
 
-you need to overide this in your derived class and implement your thread stuff inside
+Users must overide this in your their derived class and then implement their threaded activity inside the loop. If the the users's threadedFunction does not have a loop, the contents of the threadedFunction will be executed once and the thread will then exit.
 
-if you do not have a loop inside this function, it will run once then exit
+For tasks that must be repeated, the user can use a while loop that will run repeatedly until the thread's threadRunning is set to false via the stopThread() method. void MyThreadedClass::threadedFunction()
+{
+    // Start the loop and continue until
+    // isThreadRunning() returns false.
+    while(isThreadRunning())
+    {
+        // Do activity repeatedly here:
 
-if you want the thread to run until you signal it to stop, use a while loop inside that checks if the thread is should keep running:
+        // int j = 1 + 1;
 
-void myClass::threadedFunction(){ // start
+        // This while loop will run as fast as it possibly
+        // can, consuming as much processor speed as it can.
+        // To help the processor stay cool, users are
+        // encouraged to let the while loop sleep via the
+        // sleep() method, or call the yield() method to let
+        // other threads have a turn.  See the sleep() and
+        // yield() methods for more information.
 
-while(isThreadRunning()){
-
-    // do stuff
-}
-
-// done
+        // sleep(100);
+    }
  
 
 
@@ -2981,6 +3100,30 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###bool  keyboardDetected
+
+<!--
+_name: keyboardDetected_
+_type: bool _
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofImage mouseCursor
 
 <!--
@@ -2997,6 +3140,30 @@ _advanced: False_
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool  mouseDetected
+
+<!--
+_name: mouseDetected_
+_type: bool _
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 
@@ -3222,6 +3389,30 @@ _advanced: False_
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###long  threadTimeout
+
+<!--
+_name: threadTimeout_
+_type: long _
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 

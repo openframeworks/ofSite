@@ -34,6 +34,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Stops the sound stream and also cleans up the stream's resources. 
+
 
 
 
@@ -69,6 +71,8 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Prints a list of available devices to the console. 
 
 
 
@@ -188,6 +192,10 @@ _advanced: False_
 
 _inlined_description: _
 
+Sets up and starts a global 
+
+This will set up a sound stream with a default sample rate of 44100, a buffer size of 256 samples, and a queue of 4 buffers.
+
 
 
 
@@ -223,6 +231,8 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Sets up and starts a global 
 
 
 
@@ -260,6 +270,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Sets up and starts a global 
+
 
 
 
@@ -296,6 +308,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Starts the sound stream (audioIn() / audioOut() will start being called) 
+
 
 
 
@@ -331,6 +345,8 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Stops the sound stream (audioIn() / audioOut() will stop being called) 
 
 
 

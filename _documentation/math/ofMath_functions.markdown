@@ -34,6 +34,10 @@ _advanced: False_
 
 _inlined_description: _
 
+Calculates the difference between two angles in degrees. 
+
+This will calculate the actual difference, taking into account multiple revolutions. For example: 
+
 
 
 
@@ -69,6 +73,10 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Calculates the difference between two angles in radians. 
+
+This will calculate the actual difference, taking into account multiple revolutions. For example: 
 
 
 
@@ -106,6 +114,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Given the four points that determine a bezier curve, return an interpolated point on the curve. 
+
 
 
 
@@ -141,6 +151,8 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Given the four points that determine a bezier curve and an offset along the curve, return an tangent vector to a point on the curve. Currently this is not a normalized point, and will need to be normalized. 
 
 
 
@@ -178,6 +190,10 @@ _advanced: False_
 
 _inlined_description: _
 
+Clamp a value between min and max. 
+
+Restricts a value to be within a specified range defined by values min and max. If the value is min <= value <= max, returns value. If the value is greater than max, return max; if the value is less than min, return min. 
+
 
 
 
@@ -213,6 +229,8 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Given the four points that determine a Catmull Rom curve, return an interpolated point on the curve. 
 
 
 
@@ -250,6 +268,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Return a tangent point for an offset along a Catmull Rom curve. 
+
 
 
 
@@ -285,6 +305,10 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Convert degrees to radians. 
+
+Example: 
 
 
 
@@ -358,6 +382,10 @@ _advanced: False_
 
 _inlined_description: _
 
+Calculates the distance between two points. 
+
+Uses 
+
 
 
 
@@ -430,6 +458,10 @@ _advanced: False_
 
 _inlined_description: _
 
+Calculates the distance between two points, without taking the square root of the result. 
+
+Same as ofMath::ofDist() but doesn't take the sqrt() of the result, which is a faster operation if you need to calculate and compare multiple distances.
+
 
 
 
@@ -465,6 +497,8 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Determines if a number is inside of a given range. 
 
 
 
@@ -502,6 +536,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Determine if an (x,y) coordinate is within the polygon defined by a vector of ofPoints. 
+
 
 
 
@@ -537,6 +573,8 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Determine if an ofPoint is within the polygon defined by a vector of ofPoints. 
 
 
 
@@ -754,6 +792,10 @@ _advanced: False_
 
 _inlined_description: _
 
+Linearly interpolate a value be within a range. 
+
+Calculates a number between two numbers (start,stop) at a specific increment (amt). If we want the new number to be between start and stop numbers, amt needs to be a number between 0 and 1. 
+
 
 
 
@@ -789,6 +831,10 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Linearly interpolate a value between two angles in degrees. 
+
+Calculates a number between two numbers (start, stop) at a specific increment (amt). This does constrain the result into a single rotation, but does not clamp the values
 
 
 
@@ -826,6 +872,10 @@ _advanced: False_
 
 _inlined_description: _
 
+Linearly interpolate a value between two angles in radians. 
+
+Calculates a number between two numbers (start, stop) at a specific increment (amt). This does constrain the result into a single rotation, but does not clamp the values
+
 
 
 
@@ -861,6 +911,8 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Determine the intersection between two lines. 
 
 
 
@@ -934,6 +986,12 @@ _advanced: False_
 
 _inlined_description: _
 
+Given a value and an input range, remap the value to be within an output range. 
+
+ofMap remaps the value passed in "value", calculating it's linear distance between inputMin and inputMax, and remapping it based on that percentage to outputMin and outputMax. You can choose to clamp the results, which will constrain the results between outputMin and outputMax. Results are not clamped by default.
+
+Example: 
+
 
 
 
@@ -969,6 +1027,12 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Calculates the next larger power of 2. 
+
+If the input is already a power of 2, it will return itself. Example:
+
+ofNextPow2(50); // returns 64 ofNextPow2(64); // returns 64 ofNextPow(401)); // returns 512
 
 
 
@@ -1006,6 +1070,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Calculates a one dimensional Perlin noise value between 0.0...1.0. 
+
 
 
 
@@ -1041,6 +1107,8 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Calculates a two dimensional Perlin noise value between 0.0...1.0. 
 
 
 
@@ -1078,6 +1146,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Calculates a three dimensional Perlin noise value between 0.0...1.0. 
+
 
 
 
@@ -1113,6 +1183,8 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Calculates a four dimensional Perlin noise value between 0.0...1.0. 
 
 
 
@@ -1150,6 +1222,10 @@ _advanced: False_
 
 _inlined_description: _
 
+Given a value and a range, remap the value to be within 0 and 1. 
+
+Often, you'll need to work with percentages or other methods that expect a value between 0 and 1. This function will take a minimum and maximum, and then finds where within that range a value sits. If the value is outside the range, it will be mapped to 0 or 1.
+
 
 
 
@@ -1185,6 +1261,8 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Convert radians to degrees. 
 
 
 
@@ -1222,6 +1300,12 @@ _advanced: False_
 
 _inlined_description: _
 
+returns a random number between two values. 
+
+Example:
+
+// Return a random floating point number between -30 and 20. ofRandom(-30, 20);
+
 
 
 
@@ -1257,6 +1341,8 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Returns a random floating point number between 0 and max. 
 
 
 
@@ -1402,6 +1488,8 @@ _advanced: False_
 
 _inlined_description: _
 
+a random floating point number between 0 and 1. 
+
 
 
 
@@ -1438,6 +1526,10 @@ _advanced: False_
 
 _inlined_description: _
 
+Randomly seeds the random number generator. 
+
+This seeds the random number generator with an acceptably random value, generated from clock time and the PID. 
+
 
 
 
@@ -1473,6 +1565,8 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Seeds the random number generator with a value for consistent randomness. 
 
 
 
@@ -1546,6 +1640,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Returns the sign of a number. 
+
 
 
 
@@ -1581,6 +1677,8 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Calculates a one dimensional Perlin noise value between -1.0...1.0. 
 
 
 
@@ -1618,6 +1716,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Calculates a two dimensional Perlin noise value between -1.0...1.0. 
+
 
 
 
@@ -1653,6 +1753,8 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Calculates a three dimensional Perlin noise value between -1.0...1.0. 
 
 
 
@@ -1690,6 +1792,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Calculates a four dimensional Perlin noise value between -1.0...1.0. 
+
 
 
 
@@ -1725,6 +1829,12 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Find a value within a given range, wrapping the value if it overflows. 
+
+If a value is between from and to, return that value. If a value is NOT within that range, wrap it.
+
+For example: 
 
 
 

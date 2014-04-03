@@ -14,10 +14,10 @@ from markdown_file import getclass,setclass,getfunctionsfile,setfunctionsfile
 from documentation_members import DocsMethod, DocsVar
 from documentation_function import DocsFunctionsFile, DocsFunction
 
-of_root = "/Users/david/Documents/opensource/openFrameworks"
+of_root = "/home/arturo/Desktop/openFrameworks"
 of_documentation = of_root + '/libs/openFrameworksCompiled/project/doxygen/build/xml/'
 of_addons_documentation = of_root + 'addons/doxygen/xml/'
-documentation_root = '/Users/david/Documents/opensource//ofSite/documentation/'
+documentation_root = '/home/arturo/Documents/ofSite/documentation/'
 #index = open(documentation_root + "index.html.mako",'w')
 
 print of_documentation

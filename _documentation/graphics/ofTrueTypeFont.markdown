@@ -206,6 +206,11 @@ _advanced: False_
 
 _inlined_description: _
 
+Draw a string s at position x,y. 
+
+
+
+
 
 
 
@@ -271,6 +276,13 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Draws the string as if it was geometrical shapes. 
+
+
+Uses the information contained in ofTTFContour and ofTTFCharacter.
+
+
 
 
 
@@ -388,6 +400,16 @@ _advanced: False_
 
 _inlined_description: _
 
+Get the current font endcoding. 
+
+
+This is set by ofTrueTypeFont::setEncoding() to either OF_ENCODING_UTF8 or OF_ENCODING_ISO_8859_15. OF_ENCODING_ISO_8859_15 is for an 8-bit single-byte coded graphic character sets, like ASCII while OF_ENCODING_UTF8 is a variable-width encoding that can represent every character in the Unicode character set.
+
+***return:*** 
+	encoding used by the font object. 
+
+
+
 
 
 
@@ -469,6 +491,16 @@ _advanced: False_
 
 _inlined_description: _
 
+Returns letter spacing of font object. 
+
+
+You can control this by the ofTrueTypeFont::setLetterSpacing() function. 1.0 = default spacing, less then 1.0 would be tighter spacing, greater then 1.0 would be wider spacing.
+
+***return:*** 
+	Returns letter spacing of font object. 
+
+
+
 
 
 
@@ -508,6 +540,14 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Computes line height based on font size. 
+
+
+***return:*** 
+	Returns current line height. 
+
+
 
 
 
@@ -549,6 +589,16 @@ _advanced: False_
 
 _inlined_description: _
 
+Get the num chars in the loaded character set. 
+
+
+If you allocate the font using different paramters, you can load in partial and full character sets, this helps you know how many characters it can represent.
+
+***return:*** 
+	Number of characters in loaded character set. 
+
+
+
 
 
 
@@ -589,6 +639,14 @@ _advanced: False_
 
 _inlined_description: _
 
+Returns the size of the font. 
+
+
+***return:*** 
+	Size of font, set when font was loaded. 
+
+
+
 
 
 
@@ -628,6 +686,16 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Returns a variable that represents how wide spaces are. 
+
+
+It's a scalar for the width of the letter 'p', so 1.0 means that a space will be the size of the lower case 'p' of that font. 2.0 means that it's 2 times the size of the lower case 'p', etc.
+
+***return:*** 
+	Returns a variable that represents how wide spaces are. 
+
+
 
 
 
@@ -755,6 +823,15 @@ _advanced: False_
 
 _inlined_description: _
 
+Returns the bounding box of a string as a rectangle. 
+
+
+
+***return:*** 
+	Returns the bounding box of a string as a rectangle. 
+
+
+
 
 
 
@@ -853,6 +930,14 @@ _advanced: False_
 
 _inlined_description: _
 
+Does the font have a full character set? 
+
+
+***return:*** 
+	true if the font was allocated with a full character set. 
+
+
+
 
 
 
@@ -931,6 +1016,14 @@ _advanced: False_
 
 _inlined_description: _
 
+Is the font anit-aliased? 
+
+
+***return:*** 
+	true if the font was set to be anti-aliased. 
+
+
+
 
 
 
@@ -971,6 +1064,14 @@ _advanced: False_
 
 _inlined_description: _
 
+Has the font been loaded successfully? 
+
+
+***return:*** 
+	true if the font was loaded. 
+
+
+
 
 
 
@@ -1010,6 +1111,19 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Loads the font specified by filename, allows you to control size, aliasing, and other parameters. 
+
+
+loads a font, and allows you to set the following parameters: the filename, the size, if the font is anti-aliased, if it has a full character set, if you need it to have contours (for getStringPoints) and paramters that control the simplification amount for those contours and the dpi of the font.
+
+default (without dpi), non-full char set, anti aliased, 96 dpi
+
+
+***return:*** 
+	true if the font was loaded correctly. 
+
+
 
 
 
@@ -1127,6 +1241,13 @@ _advanced: False_
 
 _inlined_description: _
 
+Sets the current font encoding. 
+
+
+Can be set to either OF_ENCODING_UTF8 or OF_ENCODING_ISO_8859_15. OF_ENCODING_ISO_8859_15 is for an 8-bit single-byte coded graphic character sets, like ASCII while OF_ENCODING_UTF8 is a variable-width encoding that can represent every character in the Unicode character set. This function is useful if you are trying to draw unicode strings.
+
+
+
 
 
 
@@ -1205,6 +1326,11 @@ _advanced: False_
 
 _inlined_description: _
 
+Sets the letter spacing of the font object. 
+
+
+1.0 = default spacing, less then 1.0 would be tighter spacing, greater then 1.0 would be wider spacing. 
+
 
 
 
@@ -1244,6 +1370,13 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Sets line height for text drawn on screen. 
+
+
+Note the line height is automatically computed based on the font size, when you load in the font.
+
+
 
 
 
@@ -1285,6 +1418,13 @@ _advanced: False_
 
 _inlined_description: _
 
+Sets the size of the space ' ' character. 
+
+
+This number, which defaults to 1.0, scales the width of the letter 'p' for the space.
+
+
+
 
 
 
@@ -1325,6 +1465,17 @@ _advanced: False_
 
 _inlined_description: _
 
+Returns the string height. 
+
+
+This is essentially the height component of the ofTrueTypeFont::getStringBoundingBox() rectangle.
+
+
+***return:*** 
+	Returns the string height. 
+
+
+
 
 
 
@@ -1364,6 +1515,17 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Returns the string width. 
+
+
+This is essentially the width component of the ofTrueTypeFont::getStringBoundingBox() rectangle.
+
+
+***return:*** 
+	Returns the string width. 
+
+
 
 
 

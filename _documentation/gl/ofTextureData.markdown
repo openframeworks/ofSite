@@ -9,6 +9,10 @@ _istemplated: False_
 
 ##InlineDescription
 
+Internal texture settings struct. 
+
+
+Used by ofTexture internally. You won't need to work with this in most cases. 
 
 
 

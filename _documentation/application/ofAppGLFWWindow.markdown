@@ -412,6 +412,43 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###int getPixelScreenCoordScale()
+
+<!--
+_syntax: getPixelScreenCoordScale()_
+_name: getPixelScreenCoordScale_
+_returns: int_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofVec3f getScreenSize()
 
 <!--
@@ -2323,6 +2360,30 @@ _advanced: False_
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int  pixelScreenCoordScale
+
+<!--
+_name: pixelScreenCoordScale_
+_type: int _
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: True_
+_advanced: False_
+-->
+
+_description: _
 
 
 

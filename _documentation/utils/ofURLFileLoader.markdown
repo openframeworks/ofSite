@@ -431,23 +431,31 @@ _advanced: False_
 
 _inlined_description: _
 
+The thread's run function. 
 
-this is the thread run function
 
-you need to overide this in your derived class and implement your thread stuff inside
+Users must overide this in your their derived class and then implement their threaded activity inside the loop. If the the users's threadedFunction does not have a loop, the contents of the threadedFunction will be executed once and the thread will then exit.
 
-if you do not have a loop inside this function, it will run once then exit
+For tasks that must be repeated, the user can use a while loop that will run repeatedly until the thread's threadRunning is set to false via the stopThread() method. void MyThreadedClass::threadedFunction()
+{
+    // Start the loop and continue until
+    // isThreadRunning() returns false.
+    while(isThreadRunning())
+    {
+        // Do activity repeatedly here:
 
-if you want the thread to run until you signal it to stop, use a while loop inside that checks if the thread is should keep running:
+        // int j = 1 + 1;
 
-void myClass::threadedFunction(){ // start
+        // This while loop will run as fast as it possibly
+        // can, consuming as much processor speed as it can.
+        // To help the processor stay cool, users are
+        // encouraged to let the while loop sleep via the
+        // sleep() method, or call the yield() method to let
+        // other threads have a turn.  See the sleep() and
+        // yield() methods for more information.
 
-while(isThreadRunning()){
-
-    // do stuff
-}
-
-// done
+        // sleep(100);
+    }
  
 
 

@@ -119,6 +119,8 @@ _advanced: False_
 
 _inlined_description: _
 
+get log level name as a string set pad to true if you want all log level names to be the same length 
+
 
 
 

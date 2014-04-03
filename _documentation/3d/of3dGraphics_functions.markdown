@@ -34,6 +34,10 @@ _advanced: False_
 
 _inlined_description: _
 
+Draws a rectangular box with the specified dimensions, starting from the specified coordinates. 
+
+A box is a rectangular solid: an extruded rectangle. It is drawn starting from a 3D reference coordinate. It has a width (in x), a height (in y), and a depth (in z). The box is drawn with the current color, e.g. set with 
+
 
 
 
@@ -69,6 +73,12 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Draws a cube with the specified size, starting from the specified coordinates. 
+
+A cube is a rectangular solid bounded by six square faces of equal size. It is also known as a regular hexahedron, a square parallelepiped, an equilateral cuboid and a right rhombohedron. It is a regular square prism in three orientations.
+
+It is drawn starting from a 3D reference coordinate, with the specified size. The cube is drawn with the current color, e.g. set with 
 
 
 
@@ -106,6 +116,10 @@ _advanced: False_
 
 _inlined_description: _
 
+Draws a rectangular box with the specified dimensions, starting from the specified position. 
+
+A box is a rectangular solid: an extruded rectangle. It is drawn starting from a 3D reference coordinate. It has a width (in x), a height (in y), and a depth (in z). The box is drawn with the current color, e.g. set with 
+
 
 
 
@@ -141,6 +155,10 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Draws a cube with the specified size, starting from the specified position. 
+
+A cube is drawn starting from a 3D reference position, with the specified size. The cube is drawn with the current color, e.g. set with 
 
 
 
@@ -178,6 +196,10 @@ _advanced: False_
 
 _inlined_description: _
 
+Draws a cube with the specified size, starting from the origin. 
+
+The cube is drawn with the current color, e.g. set with 
+
 
 
 
@@ -213,6 +235,10 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Draws a rectangular box with the specified dimensions, starting from the origin. 
+
+A box is a rectangular solid: an extruded rectangle. It is drawn starting from the origin of the current reference frame. It has a width (in x), a height (in y), and a depth (in z). The box is drawn with the current color, e.g. set with 
 
 
 
@@ -1006,6 +1032,10 @@ _advanced: False_
 
 _inlined_description: _
 
+Retrieve a data structure describing the resolution with which cones are polygonized. 
+
+Allows you to fetch the resolution with which cones are polygonized. Returns an 
+
 
 
 
@@ -1257,6 +1287,10 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Set the resolution of a polygonized cone. 
+
+Allows you to set the polygonization resolution of any cones you subsequently draw with 
 
 
 

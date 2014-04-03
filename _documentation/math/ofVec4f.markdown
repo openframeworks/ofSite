@@ -44,6 +44,11 @@ _advanced: False_
 
 _inlined_description: _
 
+Sets this vector to be the average (center of gravity or centroid) of a given array of 'ofVec4f's. 
+
+
+
+
 
 
 
@@ -81,6 +86,15 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Treats this vector and 'pnt' as points in 4D space and calculates the distance between them. 
+
+
+
+***return:*** 
+	The distance between the two vectors in 4D space. 
+
+
 
 
 
@@ -158,6 +172,15 @@ _advanced: False_
 
 _inlined_description: _
 
+Calculates and returns the dot product of this vector with 'vec'. 
+
+
+Dot product (less commonly known as Euclidean inner product) expresses the angular relationship between two vectors. In other words it is a measure of how parallel two vectors are. If they are completely perpendicular the dot product is 0; if they are completely parallel their dot product is either 1 if they are pointing in the same direction, or -1 if they are pointing in opposite directions.
+
+
+***return:*** 
+	The dot product of this vector with 'vec'.
+
 
 Dot Product. 
 
@@ -198,8 +221,15 @@ _advanced: False_
 
 _inlined_description: _
 
+Performs a linear interpolation of this vector towards 'pnt'. 
 
-p==0.0 results in this point, p==0.5 results in the midpoint, and p==1.0 results in pnt being returned. 
+
+
+***return:*** 
+	The interpolation as an ofVec4f. 
+
+
+
 
 
 
@@ -237,6 +267,15 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Returns a copy of this vector with its length (magnitude) restricted to a maximum of 'max' units by scaling down if necessary. 
+
+
+
+***return:*** 
+	A copy of the current vector that is at most 'max' units long. 
+
+
 
 
 
@@ -276,6 +315,15 @@ _advanced: False_
 
 _inlined_description: _
 
+Calculates and returns the midpoint (as a vector) between this vector and 'pnt'. 
+
+
+
+***return:*** 
+	The midpoint between this vector and 'pnt' as an ofVec4f. 
+
+
+
 
 
 
@@ -313,6 +361,16 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Returns a normalized copy of this vector. 
+
+
+Normalization means to scale the vector so that its length (magnitude) is exactly 1, at which stage all that is left is the direction. A normalized vector is usually called a unit vector, and can be used to represent a pure direction (heading).
+
+***return:*** 
+	The normalized copy of the current vector. 
+
+
 
 
 
@@ -428,6 +486,15 @@ _advanced: False_
 
 _inlined_description: _
 
+Returns a new ofVec4f that is the result of scaling this vector up or down so that it has the requested length. 
+
+
+
+***return:*** 
+	The result of scaling the this vector up or down. 
+
+
+
 
 
 
@@ -465,6 +532,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Performs a linear interpolation of this vector towards 'pnt'. This modifies the current vector to the interpolated value. 
+
+
+
 
 
 
@@ -544,6 +616,14 @@ _advanced: False_
 
 _inlined_description: _
 
+Returns the length (magnitude) of this vector. 
+
+
+***return:*** 
+	The magnitude of the current vector. 
+
+
+
 
 
 
@@ -619,6 +699,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Restrict the length (magnitude) of this vector to a maximum of 'max' units by scaling down if necessary. 
+
+
+
 
 
 
@@ -734,6 +819,15 @@ _advanced: False_
 
 _inlined_description: _
 
+Calculates and returns the midpoint (as a vector) between this vector and 'pnt'. This modifies the current vector to the midpoint value. 
+
+
+
+***return:*** 
+	The midpoint between this vector and 'pnt' as an ofVec4f. 
+
+
+
 
 
 
@@ -810,6 +904,10 @@ _advanced: False_
 
 _inlined_description: _
 
+Normalizes the vector. This changes the current vector to its normalized value. 
+
+
+Normalization means to scale the vector so that its length (magnitude) is exactly 1, at which stage all that is left is the direction. A normalized vector is usually called a unit vector, and can be used to represent a pure direction (heading). 
 
 
 
@@ -1987,6 +2085,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Scales this vector up or down so that it has the requested length. 
+
+
+
 
 
 

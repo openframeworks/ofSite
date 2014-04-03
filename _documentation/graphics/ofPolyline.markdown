@@ -556,6 +556,43 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###vector< ofVec3f >::iterator begin()
+
+<!--
+_syntax: begin()_
+_name: begin_
+_returns: vector< ofVec3f >::iterator_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void bezierTo(&cp1, &cp2, &to, curveResolution = 16)
 
 <!--
@@ -861,7 +898,6 @@ while (angle < TWO_PI ) {
 }
 ~~~~
 
-
 You need at least 4 points to be able to draw with curveTo, here's an explanation of why this happens:
 
 If we have an empty `ofPolyline` `p`, and we do:
@@ -902,6 +938,8 @@ And now that we have P0 through P4 defined, when we call `curveTo(...)` next:
     curveTo(v4); // Internal vector becomes [v1, v2, v3, v4]
 
 The oldest point, `v0`, was bumped and everything shifted down.  The sampling occurs again, but this time it is between `v2` and `v3`.
+
+
 
 
 
@@ -988,6 +1026,43 @@ _description: _
 
 
 Draw the line using the current renderer.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###vector< ofVec3f >::iterator end()
+
+<!--
+_syntax: end()_
+_name: end_
+_returns: vector< ofVec3f >::iterator_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 

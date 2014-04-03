@@ -1607,7 +1607,7 @@ _syntax: setAttributeData(location, *vert0x, numCoords, total, usage, stride = s
 _name: setAttributeData_
 _returns: void_
 _returns_description: _
-_parameters: int location, const float *vert0x, int numCoords, int total, int usage, int stride=sizeof(float)_
+_parameters: int location, const float *vert0x, int numCoords, int total, int usage, int stride=0_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _

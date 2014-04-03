@@ -9,6 +9,16 @@ _istemplated: False_
 
 ##InlineDescription
 
+An OpenGL image on the the graphics card. 
+
+
+ofTexture is a wrapper for the OpenGL texture API. It allows use of non-power of 2 textures and to upload and draw graphical data.
+
+***see:*** 
+	[https://www.opengl.org/wiki/Texture](https://www.opengl.org/wiki/Texture) 
+
+
+
 
 
 
@@ -45,6 +55,13 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Allocate texture using the given settings. 
+
+
+This is useful if you need manual control over loading a number of textures with the same settings. Make sure to set the parameters first.
+
+
 
 
 
@@ -84,6 +101,11 @@ _advanced: False_
 
 _inlined_description: _
 
+Allocate texture using the given settings & specify the format. 
+
+
+
+
 
 
 
@@ -121,6 +143,13 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Allocate texture of a given size and format. 
+
+
+Uses the currently set OF texture type. Defaults to ARB rectangular textures if they are supported. (They are not supported on OpenGL ES).
+
+
 
 
 
@@ -164,6 +193,13 @@ _advanced: False_
 
 _inlined_description: _
 
+Allocate texture of a given size and format. 
+
+
+Same as allocate(w, h, glInternalFormat) with the addition of:
+
+
+
 
 
 
@@ -201,6 +237,23 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Allocate texture of a given size and format. Specify texture type. 
+
+
+This lets you overide the default OF texture type, in case you need a square GL_TEXTURE_2D texture.
+
+***warning:*** 
+	ARB textures are not available in OpenGL ES. 
+
+
+***see:*** 
+	ofEnableArbTex()
+
+
+Same as allocate(w, h, glInternalFormat) with the addition of:
+
+
 
 
 
@@ -243,6 +296,15 @@ _advanced: False_
 
 _inlined_description: _
 
+Allocate texture of a given size, format, & type. 
+
+
+Not sure how the two texture format parameters are different: glFormat & glInternalFormat.
+
+Same as allocate(w, h, glInternalFormat, bUseARBExtension) with the addition of:
+
+
+
 
 
 
@@ -280,6 +342,13 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Allocate texture using an ofPixels instance. 
+
+
+Pixel type and GL format are determined from pixel settings.
+
+
 
 
 
@@ -319,6 +388,21 @@ _advanced: False_
 
 _inlined_description: _
 
+Allocate texture using an ofPixels instance & type. 
+
+
+This lets you overide the default OF texture type, in case you need a square GL_TEXTURE_2D texture.
+
+***warning:*** 
+	ARB textures are not available in OpenGL ES. 
+
+
+***see:*** 
+	ofEnableArbTex()
+
+
+Same as loadData(ofPixels &) with the addition of: 
+
 
 
 
@@ -356,6 +440,8 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Allocate texture using an ofShortPixels instance. Same as loadData(ofPixels &), except using ofShortPixels. 
 
 
 
@@ -395,6 +481,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Allocate texture using an ofShortPixels instance & type. Same as loadData(ofPixels &, bool), except using ofShortPixels. 
+
 
 
 
@@ -432,6 +520,8 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Allocate texture using an ofFloatPixels instance. Same as loadData(ofPixels &), except using ofFloatPixels. 
 
 
 
@@ -471,6 +561,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Allocate texture using an ofFloatPixels instance & type. Same as loadData(ofPixels &, bool), except using ofFloatPixels. 
+
 
 
 
@@ -508,6 +600,16 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Has the texture been allocated? 
+
+
+Legacy function for backwards compatibility.
+
+***return:*** 
+	true if the texture has been allocated. 
+
+
 
 
 
@@ -549,6 +651,16 @@ _advanced: True_
 
 _inlined_description: _
 
+Bind the texture. 
+
+
+For advanced users who need to manually manage texture drawing without calling ofTexture::draw.
+
+***see:*** 
+	[http://www.opengl.org/sdk/docs/man4/html/glBindTexture.xhtml](http://www.opengl.org/sdk/docs/man4/html/glBindTexture.xhtml) 
+
+
+
 
 
 
@@ -589,6 +701,10 @@ _advanced: False_
 
 _inlined_description: _
 
+Clears the texture. 
+
+
+The internal GL texture ID is only rleased if this is the last texture using it. 
 
 
 
@@ -668,6 +784,11 @@ _advanced: False_
 
 _inlined_description: _
 
+Draw the texture by it's upper left & lower right corners. 
+
+
+
+
 
 
 
@@ -707,6 +828,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Draw the texture at it's normal size. 
+
+
+
 
 
 
@@ -749,6 +875,11 @@ _advanced: False_
 
 _inlined_description: _
 
+Draw the texture at it's normal size with depth. 
+
+
+
+
 
 
 
@@ -788,6 +919,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Draw the texture at a given size. 
+
+
+
 
 
 
@@ -830,6 +966,11 @@ _advanced: False_
 
 _inlined_description: _
 
+Draw the texture at a given size with depth. 
+
+
+
+
 
 
 
@@ -870,6 +1011,18 @@ _advanced: False_
 
 _inlined_description: _
 
+Draw a subsection of the texture. 
+
+
+Like ofRect, (x, y) depend on the current OF_RECT_MODE:OF_RECT_MODE_CORNER: drawn with the upper left corner = (x,y)OF_RECT_MODE_CENTER: drawn centered on (x,y)
+
+
+***see:*** 
+	ofSetRectMode()
+
+
+
+
 
 
 
@@ -907,6 +1060,13 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Draw a subsection of the texture with depth. 
+
+
+Same as drawSubsection(x, y, w, h, sx, sy) with the addition of:
+
+
 
 
 
@@ -946,6 +1106,13 @@ _advanced: False_
 
 _inlined_description: _
 
+Draw a subsection of the texture with an offset. 
+
+
+Same as drawSubsection(x, y, w, h, sx, sy) with the addition of:
+
+
+
 
 
 
@@ -983,6 +1150,13 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Draw a subsection of the texture with an offset and depth. 
+
+
+Same as drawSubsection(x, y, w, h, sx, sy, sw, sh) with the addition of:
+
+
 
 
 
@@ -1060,6 +1234,15 @@ _advanced: False_
 
 _inlined_description: _
 
+Helper to convert display coordinate to texture coordinate. 
+
+
+
+***return:*** 
+	Texture coordinate or (0, 0) if texture is not allocated. 
+
+
+
 
 
 
@@ -1097,6 +1280,15 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Helper to convert display coordinate to texture coordinate. 
+
+
+
+***return:*** 
+	Texture coordinate or (0, 0) if texture is not allocated. 
+
+
 
 
 
@@ -1138,6 +1330,20 @@ _advanced: False_
 
 _inlined_description: _
 
+Display height of texture. 
+
+
+Return value is pixel size (default) or normalized (0 - 1).
+
+***see:*** 
+	ofEnabledNormalizedTextures()
+
+
+***return:*** 
+	Display height of texture in pixels. 
+
+
+
 
 
 
@@ -1178,6 +1384,14 @@ _advanced: False_
 
 _inlined_description: _
 
+Internal texture data access. 
+
+
+***return:*** 
+	a reference to the internal texture data struct. 
+
+
+
 
 
 
@@ -1215,6 +1429,14 @@ _advanced: True_
 -->
 
 _inlined_description: _
+
+Const version of getTextureData(). 
+
+
+***see:*** 
+	ofTextureData::getTextureData() 
+
+
 
 
 
@@ -1256,6 +1478,20 @@ _advanced: False_
 
 _inlined_description: _
 
+Display width of texture. 
+
+
+Return value is pixel size (default) or normalized (0 - 1).
+
+***see:*** 
+	ofEnabledNormalizedTextures()
+
+
+***return:*** 
+	Display width of texture in pixels. 
+
+
+
 
 
 
@@ -1295,6 +1531,14 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Has the texture been allocated? 
+
+
+***return:*** 
+	true if the texture has been allocated. 
+
+
 
 
 
@@ -1342,6 +1586,13 @@ _advanced: False_
 
 _inlined_description: _
 
+Load byte pixel data. 
+
+
+glFormat can be different to the internal format of the texture on each load, ie. we can upload GL_BGRA pixels into a GL_RGBA texture, but the number of channels need to match according to the OpenGL standard.
+
+
+
 
 
 
@@ -1379,6 +1630,8 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Load short (2 byte) pixel data. Same as loadData(unsigned char, ...) but for short pixel data. 
 
 
 
@@ -1418,6 +1671,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Load float pixel data. Same as loadData(unsigned char, ...) but for float pixel data. 
+
 
 
 
@@ -1455,6 +1710,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Load pixels from an ofPixels instance. 
+
+
+
 
 
 
@@ -1494,6 +1754,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Load pixels from an ofShortPixels instance. Same as loadData(ofPixels &) but for ofShortPixels. 
+
 
 
 
@@ -1531,6 +1793,8 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Load pixels from an ofFloatPixels instance. Same as loadData(ofPixels &) but for ofFloatPixels. 
 
 
 
@@ -1570,6 +1834,13 @@ _advanced: False_
 
 _inlined_description: _
 
+Load pixels from an ofPixels instance & specify the format. 
+
+
+glFormat can be different to the internal format of the texture on each load, ie. we can upload GL_BGRA pixels into a GL_RGBA texture, but the number of channels need to match according to the OpenGL standard.
+
+
+
 
 
 
@@ -1608,6 +1879,10 @@ _advanced: False_
 
 _inlined_description: _
 
+Load pixels from an ofShortPixels instance & specify the format. 
+
+
+Similar to loadData(ofPixels &, int). 
 
 
 
@@ -1646,6 +1921,10 @@ _advanced: False_
 
 _inlined_description: _
 
+Load pixels from an ofFloatPixels instance & specify the format. 
+
+
+Similar to loadData(ofPixels &, int). 
 
 
 
@@ -1722,6 +2001,15 @@ _advanced: False_
 
 _inlined_description: _
 
+Copy an area of the screen into this texture. 
+
+
+***see:*** 
+	[http://www.opengl.org/sdk/docs/man4/html/glCopyTexSubImage2D.xhtml](http://www.opengl.org/sdk/docs/man4/html/glCopyTexSubImage2D.xhtml)
+
+
+
+
 
 
 
@@ -1763,6 +2051,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Construct an ofTexture instance. 
+
 
 
 
@@ -1803,6 +2093,11 @@ _advanced: False_
 
 _inlined_description: _
 
+Construct an ofTexture from an existing ofTexture. 
+
+
+
+
 
 
 
@@ -1840,6 +2135,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Copy a given ofTexture into this texture. 
+
+
+
 
 
 
@@ -1879,6 +2179,15 @@ _advanced: False_
 
 _inlined_description: _
 
+Read current texture data from the GPU into pixels. 
+
+
+***warning:*** 
+	This is not supported in OpenGL ES and does nothing.
+
+
+
+
 
 
 
@@ -1916,6 +2225,15 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Read current texture data from the GPU into pixels. 
+
+
+***warning:*** 
+	This is not supported in OpenGL ES and does nothing.
+
+
+
 
 
 
@@ -1955,6 +2273,15 @@ _advanced: False_
 
 _inlined_description: _
 
+Read current texture data from the GPU into pixels. 
+
+
+***warning:*** 
+	This is not supported in OpenGL ES and does nothing.
+
+
+
+
 
 
 
@@ -1993,6 +2320,8 @@ _advanced: True_
 
 _inlined_description: _
 
+Reset the anchor point to (0, 0). 
+
 
 
 
@@ -2030,6 +2359,13 @@ _advanced: True_
 -->
 
 _inlined_description: _
+
+Set the anchor point the texture is drawn around as a percentage. 
+
+
+This can be useful if you want to rotate an image around a particular point.
+
+
 
 
 
@@ -2071,6 +2407,13 @@ _advanced: False_
 
 _inlined_description: _
 
+Set the anchor point the texture is drawn around in pixels. 
+
+
+This can be useful if you want to rotate an image around a particular point.
+
+
+
 
 
 
@@ -2111,6 +2454,16 @@ _advanced: False_
 
 _inlined_description: _
 
+Set the texture compression. 
+
+
+Generates mimaps depending on the compression type.
+
+***see:*** 
+	ofTexCompression 
+
+
+
 
 
 
@@ -2149,6 +2502,16 @@ _advanced: False_
 
 _inlined_description: _
 
+Swizzle RGBA to grayscale with alpha in the red channel. 
+
+
+Use 1 channel GL_R as luminance instead of red channel in OpenGL 3+.
+
+***warning:*** 
+	This is not supported in OpenGL ES and does nothing. 
+
+
+
 
 
 
@@ -2186,6 +2549,23 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Set texture minification/magnification scaling filters. 
+
+
+Controls how OpenGL will scale this texture.
+
+***see:*** 
+	[http://www.opengl.org/sdk/docs/man4/html/glTexParameter.xhtml](http://www.opengl.org/sdk/docs/man4/html/glTexParameter.xhtml) 
+
+ofTextureSetMinMagFilters()
+
+
+***warning:*** 
+	May be overridden.
+
+
+
 
 
 
@@ -2227,6 +2607,23 @@ _advanced: False_
 
 _inlined_description: _
 
+Set texture wrapping. 
+
+
+By default, textures are clamped to their edges with GL_CLAMP_TO_EDGE. Setting a repeat mode like GL_REPEAT allows you to create tiled backgrounds with small textures.
+
+***see:*** 
+	ofTextureSetWrap() 
+
+[http://www.opengl.org/sdk/docs/man4/html/glTexParameter.xhtml](http://www.opengl.org/sdk/docs/man4/html/glTexParameter.xhtml)
+
+
+***warning:*** 
+	May be overridden.
+
+
+
+
 
 
 
@@ -2267,6 +2664,13 @@ _advanced: False_
 
 _inlined_description: _
 
+Set the texture ID. 
+
+
+Allows you to point the texture id to an externally allocated id (perhaps from another texture). Its up to you to set the rest of the textData parameters manually.
+
+
+
 
 
 
@@ -2304,6 +2708,16 @@ _advanced: True_
 -->
 
 _inlined_description: _
+
+Unbind the texture. 
+
+
+For advanced users who need to manually manage texture drawing without calling ofTexture::draw.
+
+***see:*** 
+	[http://www.opengl.org/sdk/docs/man4/html/glBindTexture.xhtml](http://www.opengl.org/sdk/docs/man4/html/glBindTexture.xhtml) 
+
+
 
 
 
@@ -2345,6 +2759,10 @@ _advanced: False_
 
 _inlined_description: _
 
+Destroy an ofTexture instance. 
+
+
+The internal GL texture ID is only rleased if this is the last texture using it. 
 
 
 

@@ -9,6 +9,8 @@ _istemplated: True_
 
 ##InlineDescription
 
+A class representing a collection of pixels. 
+
 
 
 
@@ -889,6 +891,14 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Retrieves pixel data from the ofPixel object. 
+
+
+***return:*** 
+	A raw pointer to the pixel data. 
+
+
 
 
 
@@ -1961,6 +1971,11 @@ _advanced: False_
 
 _inlined_description: _
 
+Changes the image type for the ofPixels object. 
+
+
+
+
 
 
 
@@ -1998,6 +2013,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Sets the number of color channels for the ofPixel object. 
+
+
+
 
 
 

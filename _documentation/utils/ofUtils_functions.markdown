@@ -1465,6 +1465,12 @@ _advanced: False_
 
 _inlined_description: _
 
+Calculates the next larger power of 2. 
+
+If the input is already a power of 2, it will return itself. Example:
+
+ofNextPow2(50); // returns 64 ofNextPow2(64); // returns 64 ofNextPow(401)); // returns 512
+
 
 
 
@@ -2807,6 +2813,8 @@ _advanced: False_
 
 _inlined_description: _
 
+like sprintf "%4f" format, in this example precision=4 
+
 
 
 
@@ -2888,6 +2896,8 @@ _advanced: False_
 
 _inlined_description: _
 
+like sprintf "% 4d" or "% 4f" format, in this example width=4, fill=' ' 
+
 
 
 
@@ -2923,6 +2933,8 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+like sprintf "%04.2d" or "%04.2f" format, in this example precision=2, width=4, fill='0' 
 
 
 

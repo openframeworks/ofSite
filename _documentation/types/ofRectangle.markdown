@@ -9,6 +9,18 @@ _istemplated: False_
 
 ##InlineDescription
 
+A class representing a 2D rectangle. 
+
+
+ofRectangle is a simple container for describing the position and size of a 2D rectangle. Since the width and height variables can be negative, the x/y position is not garanteed to represent the upper right hand corner. For example, two visually identical rectangles can be represented in the following ways: ofRectangle myRect(0, 0, 100, 100);
+
+
+or ofRectangle myRect(100, 100, -100, -100);
+
+
+While both representations will yield the same visual results in all openFrameworks renderers, the results of some method operations that modify x, y, width and height (such as scaling) produce mathematically correct, but visually different results for each of the above representations.
+
+To avoid this ambiguity, users planning to should prefer "standardized" rectangles. "Standardized" rectangles are rectangles whose width >= 0 and height >= 0. The ofRectangle::standardize() method can be used to ensure that the is in it the "standard" form. 
 
 
 
@@ -2223,6 +2235,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Construct a rectangle with zero width and zero height at 0, 0. 
+
 
 
 
@@ -2260,6 +2274,13 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Construct a rectangle using location and size. 
+
+
+To produce consistent results, users are encouraged to initialize rectangles in the standardized form with width >=0 and height >= 0.
+
+
 
 
 
@@ -2299,6 +2320,13 @@ _advanced: False_
 
 _inlined_description: _
 
+Construct a rectangle from a point and dimensions. 
+
+
+To produce consistent results, users are encouraged to initialize rectangles in the standardized form with width >=0 and height >= 0.
+
+
+
 
 
 
@@ -2337,6 +2365,13 @@ _advanced: False_
 
 _inlined_description: _
 
+Construct a rectangle by copying another rectangle. 
+
+
+To produce consistent results, users are encouraged to initialize rectangles in the standardized form with width >=0 and height >= 0.
+
+
+
 
 
 
@@ -2374,6 +2409,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Construct a rectangle by defining two corners. 
+
+
+
 
 
 
@@ -2571,6 +2611,13 @@ _advanced: False_
 
 _inlined_description: _
 
+Scale the rectangle. 
+
+
+Scaling will scale the width and the height, but will not change the position.
+
+
+
 
 
 
@@ -2611,6 +2658,13 @@ _advanced: False_
 
 _inlined_description: _
 
+Scale the rectangle. 
+
+
+Scaling will scale the width and the height, but will not change the position.
+
+
+
 
 
 
@@ -2650,6 +2704,13 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Scale the rectangle. 
+
+
+Scaling will scale the width and the height, but will not change the position.
+
+
 
 
 
@@ -3075,6 +3136,13 @@ _advanced: False_
 
 _inlined_description: _
 
+Set the position and size of a rectangle. 
+
+
+To produce consistent results, users are encouraged to initialize rectangles in the standardized form with width >=0 and height >= 0.
+
+
+
 
 
 
@@ -3114,6 +3182,13 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Set the position and size of a rectangle. 
+
+
+To produce consistent results, users are encouraged to initialize rectangles in the standardized form with width >=0 and height >= 0.
+
+
 
 
 
@@ -3155,6 +3230,11 @@ _advanced: False_
 
 _inlined_description: _
 
+Set the position and size of a rectangle by defining two corners. 
+
+
+
+
 
 
 
@@ -3194,6 +3274,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Set the position and size of a rectangle using corners. 
+
+
+
 
 
 
@@ -3237,6 +3322,13 @@ _advanced: False_
 
 _inlined_description: _
 
+Set position and size of a rectangle from the center. 
+
+
+The center of the rectangle is defined and the width and height grow out around the center.
+
+
+
 
 
 
@@ -3277,6 +3369,13 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Set position and size of a rectangle from the center. 
+
+
+The center of the rectangle is defined and the width and height grow out around the center.
+
+
 
 
 
@@ -3319,6 +3418,11 @@ _advanced: False_
 
 _inlined_description: _
 
+Set the height of a rectangle. 
+
+
+
+
 
 
 
@@ -3358,6 +3462,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Set the position of a rectangle. 
+
+
+
 
 
 
@@ -3399,6 +3508,11 @@ _advanced: False_
 
 _inlined_description: _
 
+Set the position of a rectangle. 
+
+
+
+
 
 
 
@@ -3438,6 +3552,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Set the width of a rectangle. 
+
+
+
 
 
 
@@ -3479,6 +3598,11 @@ _advanced: False_
 
 _inlined_description: _
 
+Set the x position of a rectangle. 
+
+
+
+
 
 
 
@@ -3518,6 +3642,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Set the y position of a rectangle. 
+
+
+
 
 
 
@@ -3624,6 +3753,11 @@ _advanced: False_
 
 _inlined_description: _
 
+Translate the rectangle's position by an x and y amount. 
+
+
+
+
 
 
 
@@ -3663,6 +3797,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Translate the rectangle's position by an x and y amount. 
+
+
+
 
 
 
@@ -3704,6 +3843,11 @@ _advanced: False_
 
 _inlined_description: _
 
+Translate the x position of the rectangle. 
+
+
+
+
 
 
 
@@ -3744,6 +3888,11 @@ _advanced: False_
 
 _inlined_description: _
 
+Translate the y position of the rectangle. 
+
+
+
+
 
 
 
@@ -3783,6 +3932,8 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Destroy the rectangle. 
 
 
 

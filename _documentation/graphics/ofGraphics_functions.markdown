@@ -2272,6 +2272,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Queries the current OpenGL matrix state  Returns the specified matrix as held by the renderer's current matrix stack. 
+
 
 
 

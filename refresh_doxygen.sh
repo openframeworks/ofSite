@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-OF_ROOT=/Users/david/Documents/opensource/openFrameworks
+OF_ROOT=/home/arturo/Desktop/openFrameworks
 OF_SITE_ROOT=$(pwd)
 
 cd $OF_ROOT/libs/openFrameworksCompiled/project/doxygen && doxygen
