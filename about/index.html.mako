@@ -40,7 +40,7 @@ openFrameworks is actively developed by [Zach Lieberman](http://thesystemis.com/
 
 
 * 3D leader: [Elliot Woods](http://www.kimchiandchips.com/) (elliotwoods)</li>
-* Addons leader(s): [James George](http://jamesgeorge.org/) (obviousjim) and [Greg Borenstein](http://gregborenstein.com/) (atduskgreg)</li>
+* Addons leader(s): [James George](http://jamesgeorge.org/) (obviousjim), [Greg Borenstein](http://gregborenstein.com/) (atduskgreg), [Matt Miller](http://mmworks.mattmillerart.com/)</li>
 * Community manager: [Kyle McDonald](http://kylemcdonald.net/) (kylemcdonald)</li>
 * Documentation leader: [Dayan Moisa](http://justdayan.com/) (justdayan)</li>
 * Forum leader: [Jason Van Cleave](http://jvcref.com/) (jvcleave)</li>
