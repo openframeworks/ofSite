@@ -75,7 +75,7 @@ Before we go get into trouble, there's something that I want to explain that mig
 #include "ofMain.h"
 #include "ofApp.h"
 // import the fancy new renderer
-#include "ofGlProgrammableRenderer.h"
+#include "ofGLProgrammableRenderer.h"
 
 int main( ){
 
