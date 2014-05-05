@@ -16,9 +16,9 @@ _istemplated: False_
 
 ##Description
 
-The ofBoxPrimitive allows you to create an UV sphere, which is a sphere based on UV slices rather than faces like the ofIcoSpherePrimitive. Note this:
+The ofBoxPrimitive allows you to create cubes and cuboids.
 
-Like all primitives it allows you to set the size, draw it, set positions, etc, as a simple example:
+Like other primitives, it allows you to set its dimensions and position, draw it, etc. As a simple example:
 
 ~~~~{.cpp}
 
