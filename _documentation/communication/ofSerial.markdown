@@ -577,7 +577,7 @@ while ( bytesRemaining > 0 )
     else
     {
       // we read some data!
-      bytes_remaining -= result;
+      bytesRemaining -= result;
     }
   }
 }
