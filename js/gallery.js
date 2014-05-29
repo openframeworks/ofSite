@@ -50,7 +50,7 @@ function feedCANLoaded(result) {
 
       h2.appendChild(dot);
       h2.appendChild(a)
-      var description = content.substr(content.lastIndexOf("<br/>") + 6);
+      var description = content.substr(content.lastIndexOf("/>")+2);
       if(description.indexOf('.')!=-1){
         description = Encoder.htmlDecode(description.substr(0,description.indexOf('.')+1));
       }else{
