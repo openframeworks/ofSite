@@ -56,7 +56,7 @@ _inlined_description: _
 
 
 _description: _
-
+Move up+down (in local y axis).
 
 
 
@@ -94,7 +94,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -170,7 +169,7 @@ _inlined_description: _
 
 
 _description: _
-
+If you extend ofNode and wish to change the way it draws, extend this.
 
 
 
@@ -208,7 +207,7 @@ _inlined_description: _
 
 
 _description: _
-
+Move forward+backward (in local z axis)
 
 
 
@@ -246,7 +245,7 @@ _inlined_description: _
 
 
 _description: _
-
+Draw function. do NOT override this transforms the node to its position+orientation+scale and calls the virtual 'customDraw' method above which you CAN override.
 
 
 
@@ -512,7 +511,7 @@ _inlined_description: _
 
 
 _description: _
-
+Get -z axis.
 
 
 
@@ -807,7 +806,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
+Get x axis.
 
 
 
@@ -854,7 +853,7 @@ _inlined_description: _
 
 
 _description: _
-
+Get y axis.
 
 
 
@@ -892,7 +891,7 @@ _inlined_description: _
 
 
 _description: _
-
+Get x coodinate.
 
 
 
@@ -930,7 +929,7 @@ _inlined_description: _
 
 
 _description: _
-
+Get x axis.
 
 
 
@@ -968,7 +967,7 @@ _inlined_description: _
 
 
 _description: _
-
+Get y coordinate.
 
 
 
@@ -1006,7 +1005,7 @@ _inlined_description: _
 
 
 _description: _
-
+Get y axis.
 
 
 
@@ -1044,7 +1043,7 @@ _inlined_description: _
 
 
 _description: _
-
+Get z coordinate.
 
 
 
@@ -1082,7 +1081,7 @@ _inlined_description: _
 
 
 _description: _
-
+Get z axis.
 
 
 
@@ -1120,7 +1119,7 @@ _inlined_description: _
 
 
 _description: _
-
+Orient node to look at position (-z axis pointing to position).
 
 
 
@@ -1158,7 +1157,7 @@ _inlined_description: _
 
 
 _description: _
-
+Orient node to look at node (-z axis pointing to node).
 
 
 
@@ -1196,7 +1195,7 @@ _inlined_description: _
 
 
 _description: _
-
+Move by arbitrary amount.
 
 
 
@@ -1234,7 +1233,7 @@ _inlined_description: _
 
 
 _description: _
-
+Move by arbitrary amount.
 
 
 
@@ -1310,7 +1309,7 @@ _inlined_description: _
 
 
 _description: _
-
+Classes extending ofNode can override these methods to get notified when the orientation changed.
 
 
 
@@ -1348,7 +1347,7 @@ _inlined_description: _
 
 
 _description: _
-
+Classes extending ofNode can override these methods to get notified when the position changed.
 
 
 
@@ -1386,7 +1385,7 @@ _inlined_description: _
 
 
 _description: _
-
+Classes extending ofNode can override these methods to get notified when the scale changed.
 
 
 
@@ -1424,7 +1423,7 @@ _inlined_description: _
 
 
 _description: _
-
+Orbit object around target at radius.
 
 
 
@@ -1462,7 +1461,7 @@ _inlined_description: _
 
 
 _description: _
-
+Orbit object around target at radius.
 
 
 
@@ -1500,7 +1499,7 @@ _inlined_description: _
 
 
 _description: _
-
+Rotate left+right (around local y axis).
 
 
 
@@ -1614,7 +1613,7 @@ _inlined_description: _
 
 
 _description: _
-
+roll left+right (around local z axis)
 
 
 
@@ -1652,7 +1651,7 @@ _inlined_description: _
 
 
 _description: _
-
+Rotate by quaternion.
 
 
 
@@ -1690,7 +1689,7 @@ _inlined_description: _
 
 
 _description: _
-
+Rotate around arbitrary axis by angle.
 
 
 
@@ -1728,7 +1727,7 @@ _inlined_description: _
 
 
 _description: _
-
+Rotate around arbitrary axis by angle.
 
 
 
@@ -1766,7 +1765,7 @@ _inlined_description: _
 
 
 _description: _
-
+Rotate by quaternion around point.
 
 
 
@@ -1804,7 +1803,7 @@ _inlined_description: _
 
 
 _description: _
-
+Rotate around arbitrary axis by angle around point.
 
 
 
@@ -2032,7 +2031,7 @@ _inlined_description: _
 
 
 _description: _
-
+Set parent to link nodes transformations are inherited from parent node set to NULL if not needed (default).
 
 
 
@@ -2260,7 +2259,7 @@ _inlined_description: _
 
 
 _description: _
-
+Directly set transformation matrix.
 
 
 
@@ -2298,7 +2297,7 @@ _inlined_description: _
 
 
 _description: _
-
+Tilt up+down (around local x axis)
 
 
 
@@ -2336,7 +2335,10 @@ _inlined_description: _
 
 
 _description: _
-
+Set opengl's modelview matrix to this nodes transform.
+If you want to draw something at the position+orientation+scale of this node...
+...call ofNode::transform(); write your draw code, and ofNode::restoreTransform();
+OR A simpler way is to extend ofNode and override ofNode::customDraw().
 
 
 
@@ -2374,7 +2376,7 @@ _inlined_description: _
 
 
 _description: _
-
+move sideways (in local x axis)
 
 
 
