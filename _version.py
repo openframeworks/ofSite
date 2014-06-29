@@ -1,2 +1,2 @@
-currentVersion = '0.8.1'
+currentVersion = '0.8.2'
 
