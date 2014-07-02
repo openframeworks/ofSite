@@ -8,6 +8,22 @@ as we update and change OF, you can download older versions of the framework her
 
 --------------------------------
 
+**pre release v0.8.2** 
+
+windows: [code blocks][124] | [visual studio 2012][125] 
+
+mac [x-code (10.6-10.9)][126]
+
+linux: [code blocks][127] | [(64 bit) code blocks][128]
+
+iOS: [iOS][129] 
+
+android: [Android][130]
+
+linux arm: [armv6][131] | [armv7][132]
+
+--------------------------------
+
 **pre release v0.8.1** 
 
 windows: [code blocks][115] | [visual studio 2012][116] 
@@ -315,3 +331,12 @@ changes: [changelog for 0.04][67]
 [121]: http://www.openframeworks.cc/versions/v0.8.1/of_v0.8.1_android_release.tar.gz
 [122]: http://www.openframeworks.cc/versions/v0.8.1/of_v0.8.1_linuxarmv6l_release.tar.gz
 [123]: http://www.openframeworks.cc/versions/v0.8.1/of_v0.8.1_linuxarmv7l_release.tar.gz
+[124]: http://www.openframeworks.cc/versions/v0.8.2/of_v0.8.2_win_cb_release.zip
+[125]: http://www.openframeworks.cc/versions/v0.8.2/of_v0.8.2_vs_release.zip
+[126]: http://www.openframeworks.cc/versions/v0.8.2/of_v0.8.2_osx_release.zip
+[127]: http://www.openframeworks.cc/versions/v0.8.2/of_v0.8.2_linux_release.tar.gz
+[128]: http://www.openframeworks.cc/versions/v0.8.2/of_v0.8.2_linux64_release.tar.gz
+[129]: http://www.openframeworks.cc/versions/v0.8.2/of_v0.8.2_ios_release.zip
+[130]: http://www.openframeworks.cc/versions/v0.8.2/of_v0.8.2_android_release.tar.gz
+[131]: http://www.openframeworks.cc/versions/v0.8.2/of_v0.8.2_linuxarmv6l_release.tar.gz
+[132]: http://www.openframeworks.cc/versions/v0.8.2/of_v0.8.2_linuxarmv7l_release.tar.gz
