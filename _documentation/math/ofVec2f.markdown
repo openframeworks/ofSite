@@ -481,8 +481,8 @@ Perform a linear interpolation of this vector's position towards pnt and return 
 ~~~~{.cpp}
 ofVec2f v1( 0, 5 );
 ofVec2f v2( 10, 10 );
-ofVec3f v3 = v1.getInterpolated( p2, 0.5 ); // v3 is (5, 7.5)
-ofVec3f v4 = v1.getInterpolated( p2, 0.8 ); // v4 is (8, 9)
+ofVec3f v3 = v1.getInterpolated( v2, 0.5 ); // v3 is (5, 7.5)
+ofVec3f v4 = v1.getInterpolated( v2, 0.8 ); // v4 is (8, 9)
 ~~~~
 
 
