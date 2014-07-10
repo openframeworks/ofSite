@@ -308,16 +308,13 @@ _visible: True_
 _advanced: False_
 -->
 
-_inlined_description: _ Setup the panel.
+_inlined_description: _
+Setup the panel.
 
 
 
-
-
-
-
-
-_description: _ collectionName is a title that will appear at the top of the panel.
+_description: _
+collectionName is a title that will appear at the top of the panel.
 
 Filename is the name of the xml file that will be used to read and write the panel settings. The default is "settings.xml" and this will be written to the root of your data folder. This file gets written when you click on the save icon in the top-right corner of the panel.
 
