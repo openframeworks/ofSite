@@ -146,7 +146,7 @@ FAQ
 
     ../../../libs/glew/include/GL/glew.h:1172:20: fatal error: GL/glu.h: No such file or directory
 
-- Did you run install_dependencies.sh first? It will install libraries which are needed to compile the examples.
+- Did you run install_dependencies.sh first? It will install the libraries which are needed to compile the examples.
 
 **I got an example to compile, but it's not running correctly. There's a window but nothing is being displayed.**
 
