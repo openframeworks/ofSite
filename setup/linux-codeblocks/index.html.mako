@@ -93,7 +93,7 @@ And use the following script to compile it:
 
         ./compileOF.sh
         
-If you get any error please report it in the linux section in the [forum](http://forum.openframeworks.cc)
+If you get any error please report it in the linux section in the [forum](http://forum.openframeworks.cc).
 
 
 project generator
