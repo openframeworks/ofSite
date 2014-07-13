@@ -21,7 +21,7 @@ __Ubuntu:__
 
 - ie. if your user name is ofuser and you have uncompressed the oF package in the desktop it should be something like:
 
-        cd /home/ofuser/Desktop/of_preRelease_v0.8.0_linux_cb_FAT/scripts/linux/ubuntu
+        cd /home/ofuser/Desktop/of_preRelease_v0.8.0_linux_cb_FAT/scripts/linux/Ubuntu
 
 - once in this directory run the scripts with:
 
@@ -152,5 +152,5 @@ FAQ
 
 - Do you have the graphics card drivers installed? Some openGL functions don't exist in the default software drivers and even if they do you application will be really slow.
 
-- If you get tearing in your applications even with vertical sync enabled and you are in ubuntu try installing gnome shell and using the non-accelerated version of it. Both unity and sometimes the accelerated version of gnome shell have problems with vertical refresh.
+- If you get tearing in your applications even with vertical sync enabled and you are in Ubuntu try installing gnome shell and using the non-accelerated version of it. Both unity and sometimes the accelerated version of gnome shell have problems with vertical refresh.
 
