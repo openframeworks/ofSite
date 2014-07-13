@@ -72,7 +72,7 @@ Now click "Run!"  You should see this:
 
 image::images/graphicsExample03.png["graphicsExample, running",width="800"]
 
-Press escape or Apple+Q to exit out of the program.
+The circle orange circle should constantly change its diameter, the rectangles should be drawn randomly, the upper red bar should fade and the lines should change smoothness. Press escape or Apple+Q to exit out of the program.
 
 [WARNING]
 .Troubleshooting compilation
