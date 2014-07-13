@@ -1,7 +1,7 @@
 ## -*- coding: utf-8 -*-
 <%inherit file="/_templates/markdown.mako" />
 
-linux codeblocks &#038; makefiles
+Linux codeblocks &#038; makefiles
 ================================
 
 
@@ -11,7 +11,7 @@ codeblocks
 
 Codeblocks is a fairly nice IDE for writing code on Linux, and we are happy to support it. Here are some setup instructions for Ubuntu, Debian and Fedora. If you use other distributions please let us know if there are additional steps:
 
-- in the scripts/linux folder inside the openFrameworks package you will find a directory with the name of your distribution. There are 2 scripts, install_codeblocks.sh and install_dependencies.sh. Don&#8217;t execute them from the desktop, as they need root privileges to run, you will need to run them from a terminal. The order of execution doesn&#8217;t matter and you can execute them more than once without problem if something goes wrong. If you update your openFrameworks version or are having problems with codeblocks, execute both scripts. Once you finish these steps, you will find codeblocks under Applications &gt; Development and will be able to open the openFrameworks examples in the apps folder just by double clicking on the .cbp file
+- in the scripts/Linux folder inside the openFrameworks package you will find a directory with the name of your distribution. There are 2 scripts, install_codeblocks.sh and install_dependencies.sh. Don&#8217;t execute them from the desktop, as they need root privileges to run, you will need to run them from a terminal. The order of execution doesn&#8217;t matter and you can execute them more than once without problem if something goes wrong. If you update your openFrameworks version or are having problems with codeblocks, execute both scripts. Once you finish these steps, you will find codeblocks under Applications &gt; Development and will be able to open the openFrameworks examples in the apps folder just by double clicking on the .cbp file
 
 __Ubuntu:__ 
 
@@ -21,7 +21,7 @@ __Ubuntu:__
 
 - ie. if your user name is ofuser and you have uncompressed the oF package in the desktop it should be something like:
 
-        cd /home/ofuser/Desktop/of_preRelease_v0.8.0_linux_cb_FAT/scripts/linux/Ubuntu
+        cd /home/ofuser/Desktop/of_preRelease_v0.8.0_Linux_cb_FAT/scripts/Linux/Ubuntu
 
 - once in this directory run the scripts with:
 
@@ -40,7 +40,7 @@ __Debian:__
 
 - ie. if your user name is ofuser and you have uncompressed the openFrameworks package in the desktop it should be something like:
 
-        cd /home/ofuser/Desktop/of_preRelease_v0.8.0_linux_cb_FAT/scripts/linux/debian
+        cd /home/ofuser/Desktop/of_preRelease_v0.8.0_Linux_cb_FAT/scripts/Linux/debian
 
 - once in this directory run the scripts:
 
@@ -64,7 +64,7 @@ __Fedora:__
 
 - ie. if your user name is ofuser and you have uncompressed the oF package in the desktop it should be something like:
 
-        cd /home/ofuser/Desktop/of_preRelease_v0.8.0_linux_cb_FAT/scripts/linux/fedora
+        cd /home/ofuser/Desktop/of_preRelease_v0.8.0_Linux_cb_FAT/scripts/Linux/fedora
 
 - once in this directory run the scripts with:
 
@@ -85,15 +85,15 @@ In the terminal you have opened, if you were in fedora or debian exit from su wi
 
         exit
         
-now go to scripts/linux
+now go to scripts/Linux
 
-        cd /home/ofuser/Desktop/of_preRelease_v0.8.0_linux_cb_FAT/scripts/linux/
+        cd /home/ofuser/Desktop/of_preRelease_v0.8.0_Linux_cb_FAT/scripts/Linux/
         
 And use the following script to compile it:
 
         ./compileOF.sh
         
-If you get any error please report it in the linux section in the [forum](http://forum.openframeworks.cc).
+If you get any error please report it in the Linux section in the [forum](http://forum.openframeworks.cc).
 
 
 project generator
