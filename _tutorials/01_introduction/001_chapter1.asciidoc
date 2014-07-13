@@ -91,15 +91,38 @@ It's possible that you will have to do this for every project, so you might as w
 
 Now you should open and run all of the other examples.
 
+Code::Blocks
+~~~~~~~~~~~~
+
+Open Code::Blocks. The default screen should look like this:
+
+image::images/oF_codeblocks_1.png["default empty workspace of Code::Blocks",width="800"]
+
+Click on either "Open an existing project" or press Ctrl+O to open a file browser. Now navigate to the openFrameworks example directory and into the graphics/graphicsExample folder. Make sure our view has "All files *.*" selected. Open the "graphicsExample.workspace" (*not* the graphicsExample.cbp, which is a Code::Blocks project).
+
+image::images/oF_codeblocks_2.png["file browser for graphicsExample Code::Blocks workspace",width="400"]
+
+The workspace is needed so that the compiler can find all relevant libraries. If the workspace is not loaded, the environment will lack cruicial information for creating the final executable file. After the workspace is loaded sucessfully, 
+
+image::images/oF_codeblocks_3.png["graphicsExample Code::Blocks workspace",width="800"]
+
+you can press the little gear button at the top or press Ctrl+F9 to build (compile) the project. You can run the project by pressing the little green triangle button or press Ctrl+F10. You can combine both steps later on by pressing F9. The result should look like this:
+
+image::images/graphicsExample03.png["graphicsExample, running",width="800"]
+
+The circle orange circle should constantly change its diameter, the rectangles should be drawn randomly, the upper red bar should fade and the lines should change smoothness. Press escape or Apple+Q to exit out of the program.
+
+
+
 commandline
 ~~~~~~~~~~~
 
-You don't actually need an IDE to build the oF examples since all tools 
-neccessary can be run from the commandline. To build an example open a 
-terminal window and change to where you unpacked openFrameworks. From 
-there change into a directory of the examples e.g. "graphicsExample":
+You don't actually need an IDE to build the oF examples since all tools neccessary can be run from the commandline. To build an example open a terminal window and change to where you unpacked openFrameworks. From there change into a directory of the examples e.g. "graphicsExample":
 
+[source,bash]
+----
 cd examples/graphics/graphicsExample
+----
 
 Now run 
 [source,bash]
@@ -107,20 +130,17 @@ Now run
 $ make
 $ make run
 ---- 
-to build and execute the code. In the end you
-should see the same with the methods pointed out above.
+to build and execute the code. In the end you should see the same with the methods pointed out above.
 
 image::images/graphicsExample03.png["graphicsExample, running",width="800"]
 
-You can close this example by pressing escape or Apple+Q.
+The circle orange circle should constantly change its diameter, the rectangles should be drawn randomly, the upper red bar should fade and the lines should change smoothness. You can close this example by pressing escape or Apple+Q.
 If you run
 [source,bash]
 ----
 $ make clean
 ----
-, everything you build will be removed and the 
-directory will be cleaned out. This is useful when you make changes and 
-ensure that an new build does not reuse any parts compiled previously.
+, everything you build will be removed and the directory will be cleaned out. This is useful when you make changes and ensure that an new build does not reuse any parts compiled previously.
 
 Creating Your First Project
 ---------------------------
