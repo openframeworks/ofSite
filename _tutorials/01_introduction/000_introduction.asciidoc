@@ -51,7 +51,7 @@ So it's a library?::
 What is a software framework?::
 	A http://en.wikipedia.org/wiki/Software_framework[software framework] is a kind of pre-fabricated software infrastructure designed to provide all of the low level functionality needed for an application while allowing a programmer to customize the higher level details of what that application should do. One way that using a framework differs from using a library is that the flow of control is http://en.wikipedia.org/wiki/Inversion_of_control[inverted]. A library can be directly controlled by your code to perform a set of general tasks. In a framework your code responds to events controlled by the framework and uses the framework as an interface to access the functionality of other libraries. 
 	
-Sound complicated?
+Sounds complicated?
 	
 In fact many other multimedia authoring environments work this way even if they do so less transparently.
 	
