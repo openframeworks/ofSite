@@ -91,14 +91,6 @@ It's possible that you will have to do this for every project, so you might as w
 
 Now you should open and run all of the other examples.
 
-Code::Blocks
-~~~~~~~~~~~~
-
-Open Code::Blocks. The default screen should look like this:
-
-image::images/oF_codeblocks1.png["default empty workspace of Code::Blocks",width="800"]
-
-
 commandline
 ~~~~~~~~~~~
 
