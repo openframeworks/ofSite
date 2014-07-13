@@ -21,7 +21,7 @@ __Ubuntu:__
 
 - ie. if your user name is ofuser and you have uncompressed the oF package in the desktop it should be something like:
 
-        cd /home/ofuser/Desktop/of_preRelease_v0.8.0_Linux_cb_FAT/scripts/Linux/Ubuntu
+        cd /home/ofuser/Desktop/of_preRelease_v0.8.0_linux_cb_FAT/scripts/linux/ubuntu
 
 - once in this directory run the scripts with:
 
@@ -40,7 +40,7 @@ __Debian:__
 
 - ie. if your user name is ofuser and you have uncompressed the openFrameworks package in the desktop it should be something like:
 
-        cd /home/ofuser/Desktop/of_preRelease_v0.8.0_Linux_cb_FAT/scripts/Linux/debian
+        cd /home/ofuser/Desktop/of_preRelease_v0.8.0_linux_cb_FAT/scripts/linux/debian
 
 - once in this directory run the scripts:
 
@@ -64,7 +64,7 @@ __Fedora:__
 
 - ie. if your user name is ofuser and you have uncompressed the oF package in the desktop it should be something like:
 
-        cd /home/ofuser/Desktop/of_preRelease_v0.8.0_Linux_cb_FAT/scripts/Linux/fedora
+        cd /home/ofuser/Desktop/of_preRelease_v0.8.0_linux_cb_FAT/scripts/linux/fedora
 
 - once in this directory run the scripts with:
 
@@ -85,9 +85,9 @@ In the terminal you have opened, if you were in fedora or debian exit from su wi
 
         exit
         
-now go to scripts/Linux
+now go to scripts/linux
 
-        cd /home/ofuser/Desktop/of_preRelease_v0.8.0_Linux_cb_FAT/scripts/Linux/
+        cd /home/ofuser/Desktop/of_preRelease_v0.8.0_linux_cb_FAT/scripts/linux/
         
 And use the following script to compile it:
 
