@@ -79,7 +79,7 @@ __Fedora:__
 compiling OF
 ------------
 
-The source of openFrameworks comes uncompiled, by default it'll compile automatically the first time you compile an example but it's recomended to compile it alone in case you get any error:
+The source of openFrameworks comes uncompiled by default. It will compile automatically the first time you compile an example but it's recomended to compile it alone in case you get any error:
 
 In the terminal you have opened, if you were in fedora or debian exit from su with:
 
