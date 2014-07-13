@@ -116,7 +116,7 @@ There you'll find 2 files:
     - *config.make* where you can add include search paths, libraries, change the optimization flags and some other configuration settings
     - *addons.make* where you can add addons to your project. If you are using codeblocks adding a line with the name of the addon you want to use will add the necesary config to be able to use those addons but the files won't appear in codeblocks. You can go to Project > Add files recursively and add the folder of the addons you just added in addons.make
     
-Again, don't try to configure things in codeblocks through its project settings windows or add files to a project in order to compile them. Anything in your src folder will compile by default
+Again, don't try to configure things in codeblocks through its project settings windows or add files to a project in order to compile them. Anything in your src folder will compile by default.
 
 
 makefiles
