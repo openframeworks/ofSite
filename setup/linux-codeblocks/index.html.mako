@@ -150,7 +150,7 @@ FAQ
 
 **I got an example to compile, but it's not running correctly. There's a window but nothing is being displayed.**
 
-- Do you have the graphics card drivers installed? Some openGL functions don't exist in the default software drivers and even if they do you application will be really slow
+- Do you have the graphics card drivers installed? Some openGL functions don't exist in the default software drivers and even if they do you application will be really slow.
 
-- If you get tearing in your applications even with vertical sync enabled and you are in ubuntu try installing gnome shell and using the non-accelerated version of it. both unity and sometimes the accelerated version of gnome shell have problems with vertical refresh
+- If you get tearing in your applications even with vertical sync enabled and you are in ubuntu try installing gnome shell and using the non-accelerated version of it. Both unity and sometimes the accelerated version of gnome shell have problems with vertical refresh.
 
