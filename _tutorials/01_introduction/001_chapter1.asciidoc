@@ -91,6 +91,36 @@ It's possible that you will have to do this for every project, so you might as w
 
 Now you should open and run all of the other examples.
 
+commandline
+~~~~~~~~~~~
+
+You don't actually need an IDE to build the oF examples since all tools 
+neccessary can be run from the commandline. To build an example open a 
+terminal window and change to where you unpacked openFrameworks. From 
+there change into a directory of the examples e.g. "graphicsExample":
+
+cd examples/graphics/graphicsExample
+
+Now run 
+[source,bash]
+----
+$ make
+$ make run
+---- 
+to build and execute the code. In the end you
+should see the same with the methods pointed out above.
+
+image::images/graphicsExample03.png["graphicsExample, running",width="800"]
+
+You can close this example by pressing escape or Apple+Q.
+If you run
+[source,bash]
+----
+$ make clean
+----
+, everything you build will be removed and the 
+directory will be cleaned out. This is useful when you make changes and 
+ensure that an new build does not reuse any parts compiled previously.
 
 Creating Your First Project
 ---------------------------
