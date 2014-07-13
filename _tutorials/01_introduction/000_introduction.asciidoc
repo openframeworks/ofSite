@@ -60,11 +60,11 @@ Consider this loose analogy: You are writing and directing your own film and hav
 C++ is a programming language
 -----------------------------
 
-We learned in the last section that openFrameworks is *not* a programing language, but rather a software framework for creating http://en.wikipedia.org/wiki/C%2B%2B[`c++`] programs. But what is c++?
+We learned in the last section that openFrameworks is *not* a programing language, but rather a software framework for creating http://en.wikipedia.org/wiki/C%2B%2B[`C++`] programs. But what is C++?
 
-NOTE: This documentation aims to guide you through openFrameworks, during which you will become comfortable with the `c++` language. But it is beyond its scope to delve too deeply into a bottom-up introduction to `c++`, so if that is what you are after, you'll have better luck with the sites listed in the Additional Resources appendix. 
+NOTE: This documentation aims to guide you through openFrameworks, during which you will become comfortable with the `C++` language. But it is beyond its scope to delve too deeply into a bottom-up introduction to `C++`, so if that is what you are after, you'll have better luck with the sites listed in the Additional Resources appendix. 
 
-`C++` is an extension of http://en.wikipedia.org/wiki/C_(programming_language)[the C language], which was developed in 1979 at Bell Labs. They are both general purpose computing languages that can be run on virtually any computing platform in the world. The most basic c++ program looks like this:
+`C++` is an extension of http://en.wikipedia.org/wiki/C_(programming_language)[the C language], which was developed in 1979 at Bell Labs. They are both general purpose computing languages that can be run on virtually any computing platform in the world. The most basic C++ program looks like this:
 
 [source,cpp]
 ---------------------------------------------------------------------
@@ -86,7 +86,7 @@ After being run through a compiler, this code will create a fully executable pro
 
 WARNING:  This process will vary slightly depending on platform. The following instructions are for the Mac OS, and you must have XCode installed to run them.
 
-Compiling your First c++ program
+Compiling your First C++ program
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 image::images/PlainText.png["PlainText",float="right"]
@@ -110,13 +110,13 @@ The result should look like this:
 
 image::images/HelloWorld.png["Hello World!"]
 
-Congratulations, you've just created (and then run) your first c++ program!  You should see something that looks like this on your Desktop:
+Congratulations, you've just created (and then run) your first C++ program!  You should see something that looks like this on your Desktop:
 
 image::images/hello.png["Your First Program"]
 
 This might not look like other programs that you are used to -- programs with flashy custom icons that launch windows and use graphics and such -- but it's a program nonetheless. In fact, if you dig deep enough, every program on your computer boils down to a something just like the 'hello' program you just created. The rest is just bells and whistles. 
 
-IMPORTANT: I can hear some people panicing right now, but don't worry! Things get much more exciting when we start playing with oF. This example was only meant to illustrate the low-level basics of c++. Hopefully you will never have to compile a command line program on the command line again. 
+IMPORTANT: I can hear some people panicing right now, but don't worry! Things get much more exciting when we start playing with oF. This example was only meant to illustrate the low-level basics of C++. Hopefully you will never have to compile a command line program on the command line again. 
 
 
 What is a compiler? and an IDE?
@@ -188,7 +188,7 @@ Scramble Suit
 ^^^^^^^^^^^^^
 by Arturo Castro and Kyle McDonald
 
-One great thing about openFrameworks is that how easy to incorporate c++ code from pretty much any library. To that end, Arturo and Kyle used a http://web.mac.com/jsaragih/FaceTracker/FaceTracker.html[Face Tracker library by Jason Saragih] to create a face-replacement technique that Kyle named "Scramble Suit" inspired by fictional technology from Philip K. Dick’s 1977 novel, "A Scanner Darkly". It’s effectively a cloak that hides the identity of the wearer by making it impossible to describe or remember them.
+One great thing about openFrameworks is that how easy to incorporate C++ code from pretty much any library. To that end, Arturo and Kyle used a http://web.mac.com/jsaragih/FaceTracker/FaceTracker.html[Face Tracker library by Jason Saragih] to create a face-replacement technique that Kyle named "Scramble Suit" inspired by fictional technology from Philip K. Dick’s 1977 novel, "A Scanner Darkly". It’s effectively a cloak that hides the identity of the wearer by making it impossible to describe or remember them.
 ++++
 <iframe src="http://player.vimeo.com/video/29391633?title=0&amp;byline=0&amp;portrait=0" width="640" height="360" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 ++++
