@@ -145,12 +145,18 @@ $ make clean
 Creating Your First Project
 ---------------------------
 
+[NOTE]
 .Code::Blocks note
-NOTE: This section focuses on XCode as the example IDE. All the general information provided here also applies to Code::Blocks and can be transferred accordingly. The Code::Blocks project file has the ".workspace" extension and is used instead of ".xcodeproj". Please consult the link:http://www.codeblocks.org/user-manual[Code::Blocks manual] if you have any IDE specific questions.
+=====================================================================
+This section focuses on XCode as the example IDE. All the general information provided here also applies to Code::Blocks and can be transferred accordingly. The Code::Blocks project file has the ".workspace" extension and is used instead of ".xcodeproj". Please consult the link:http://www.codeblocks.org/user-manual[Code::Blocks manual] if you have any IDE specific questions.
+=====================================================================
 
 As mentioned in the introduction, openFrameworks takes care of most of the tedious work of setting up a C++ project in your IDE of choice. However, unlike programs like Flash or Processing, there is no "File > New" that allows you to create a project. You can use the link:http://openframeworks.cc/tutorials/introduction/002_projectGenerator.html[projectGenerator] to generate a new projects. Previously (before openFramworks 0072), the preferred method was to duplicate one of the example projects.
 
-IMPORTANT: By extension, duplicating an example project means that you should never edit any of the example projects or put your own apps into the examples folders. They are placed there to provide starting points for your own apps, but you'll want to keep them pristene so that you always have a working starting point for your projects. You'll see the importance of this more as you move forward ... or better use the link:http://openframeworks.cc/tutorials/introduction/002_projectGenerator.html[projectGenerator] in the first place.
+[IMPORTANT]
+=====================================================================
+By extension, duplicating an example project means that you should never edit any of the example projects or put your own apps into the examples folders. They are placed there to provide starting points for your own apps, but you'll want to keep them pristene so that you always have a working starting point for your projects. You'll see the importance of this more as you move forward ... or better use the link:http://openframeworks.cc/tutorials/introduction/002_projectGenerator.html[projectGenerator] in the first place.
+=====================================================================
 
 As simple as this seems, this can be a huge stumbling block for a lot of beginners, so first lets agree on some terminology.
 
@@ -162,16 +168,19 @@ image:images/workspace04.png["Workspace terminology"]
 
 We want to create a *project*, but every project has to live inside a *workspace*, so lets use this handy *myApps* workspace. You then use workspaces however you want, but the important thing is that they are directly inside the "apps" folder, ie: you can't have a workspace inside another workspace.
 
+[NOTE]
 .deprecated instructions on the old project creation way
-NOTE: First we will [underline]#duplicate# (NOT rename) the entire "emptyExample"
-      folder. On a Mac, you can literally right-click on the emptyExample folder,
-      and click 'Duplicate'. So the result should look like this:
+=====================================================================
+First we will [underline]#duplicate# (NOT rename) the entire "emptyExample"
+folder. On a Mac, you can literally right-click on the emptyExample folder,
+and click 'Duplicate'. So the result should look like this:
 
-      image:images/workspace02.png["emptyExample Copy"]
+image:images/workspace02.png["emptyExample Copy"]
 
-      Next, we can rename the duplicate project folder from "emptyExample Copy" to "myFirstProject".
+Next, we can rename the duplicate project folder from "emptyExample Copy" to "myFirstProject".
 
-      image:images/workspace03.png["My First Project"]
+image:images/workspace03.png["My First Project"]
+=====================================================================
 
 The super important thing here is that your XCode or Code::Blocks project file is *exactly* 3 folders "below" the root folder (refer to colorful diagram above). So, whenever you make a new project, or if you are suddenly getting thousands of errors for no apparent reason, you should always double check that your XCode or Code::Blocks project file is in the correct place.
 
@@ -280,7 +289,10 @@ void testApp::draw(){
 }
 ---------------------------------------------------------------------
 
-NOTE: Notice the semicolon at the end of the line. All function calls must end with a semicolon. In addition, function names are always case sensitive, so OfSetColor will not work, nor OFsetcolor, etc. only ofSetColor.
+[NOTE]
+=====================================================================
+Notice the semicolon at the end of the line. All function calls must end with a semicolon. In addition, function names are always case sensitive, so OfSetColor will not work, nor OFsetcolor, etc. only ofSetColor.
+=====================================================================
 
 Now run your program. You should see something like:
 
@@ -296,9 +308,15 @@ link:/documentation/graphics/ofGraphics.html#show_ofCircle[ofCircle] is a functi
 . This may seem obvious, but the coordinates refer to the center of the circle. Other shapes (such as rectangles) use the upper left corner.
 . The "origin" of the coordinate system is in the upper left of the window. So, our circle appears 200 pixels from the left side of the screen, and 300 pixels from the top.
 
-NOTE: The order of the arguments is important. The first argument to ofCircle will always mean "x coordinate" and the third will always mean "radius".
+[NOTE]
+=====================================================================
+The order of the arguments is important. The first argument to ofCircle will always mean "x coordinate" and the third will always mean "radius".
+=====================================================================
 
-NOTE: There are some functions (such as link:/documentation/graphics/ofGraphics.html#show_ofFill[ofFill], which simply tells oF to fill shapes that are drawn) that have 0 arguments, but you still have to put parenthesis after them.
+[NOTE]
+=====================================================================
+There are some functions (such as link:/documentation/graphics/ofGraphics.html#show_ofFill[ofFill], which simply tells oF to fill shapes that are drawn) that have 0 arguments, but you still have to put parenthesis after them.
+=====================================================================
 
 If you hadn't just read about it here, you could have found information about ofCircle on the link:/documentation/[openFrameworks documentation page], which you will be using more as we move on.
 
@@ -321,7 +339,10 @@ image:images/MyFirstProject02.png["A purple circle", width="500"]
 
 Similar to ofCircle, the ofSetColor function takes 3 arguments, but the numbers have very different meanings. If you look at the documentation for link:/documentation/graphics/ofGraphics.html#show_ofSetColor[ofSetColor], you'll notice that they arguments actually represent the red, green, and blue values for the color that you want to use, on a scale of 0-255. So when we typed `ofSetColor(255, 0, 255);`, we were saying "until further notice, draw everything with 100% red, 0 green, and 100% blue."
 
-TIP: Try changing the values to get different color variations.
+[TIP]
+=====================================================================
+Try changing the values to get different color variations.
+=====================================================================
 
 This last point is important: when we call "ofSetColor", it's like picking a crayon out of a box. Everything that gets drawn after that (below that line of code) will be drawn in that color until we call ofSetColor again. So if we want to draw another circle on the screen, we could simply call the ofCircle function again:
 
@@ -364,9 +385,15 @@ Of course, oF can draw more than circles.
 . link:/documentation/graphics/ofGraphics.html#show_ofEllipse[ofEllipse] arguments are: (x, y, width, height)
 . link:/documentation/graphics/ofGraphics.html#show_ofCurve[ofCurve] Draws a curve from point (x1, y1) to point (x2, y2). The curve is shaped by the two control points (x0,y0) and (x3,y3).
 
-NOTE: Control points can be tricky. If you've used the pen tool in photoshop or illustrator, you probably understand them. If not, check out http://www.actionscript.org/resources/articles/172/1/Understanding-curves-and-control-point-placement/Page1.html[this tutorial]. It's about ActionScript, but it gives a great overiew of the concept of curves and control points.
+[NOTE]
+=====================================================================
+Control points can be tricky. If you've used the pen tool in photoshop or illustrator, you probably understand them. If not, check out http://www.actionscript.org/resources/articles/172/1/Understanding-curves-and-control-point-placement/Page1.html[this tutorial]. It's about ActionScript, but it gives a great overiew of the concept of curves and control points.
+=====================================================================
 
-TIP:  Try making 3 different projects in your "MyFirstWorkspace" workspace. In each one, draw a different shape in a different location using a different color.
+[TIP]
+=====================================================================
+Try making 3 different projects in your "MyFirstWorkspace" workspace. In each one, draw a different shape in a different location using a different color.
+=====================================================================
 
 Adding Movement
 ~~~~~~~~~~~~~~~
@@ -484,7 +511,10 @@ void testApp::setup(){
 
 Add that and then run your program. You will notice that the circle moves considerably slower. Using this function is *not* a guarantee of 60 frames per second, but it is a guarantee that your framerate won't be any higher than that. And unless you have a really old computer, or your processor is already extremely taxed by some other program, it should have no problem running consistently at 60fps while doing something a simple as drawing a moving circle.
 
-TIP: SAT word problem #1: If we know that the update loop is happening (at most) 60 times/second, and we are incrementing the x coordinate of the circle by 1 pixel every time update is called, how long will it take for the circle to move 240px?
+[TIP]
+=====================================================================
+SAT word problem #1: If we know that the update loop is happening (at most) 60 times/second, and we are incrementing the x coordinate of the circle by 1 pixel every time update is called, how long will it take for the circle to move 240px?
+=====================================================================
 
 [TIP]
 .Too bloody slow
@@ -565,7 +595,10 @@ So start by going to View->Debug Area->Activate Console, or press apple+shift+C
 
 image:images/activate-console.png["Activate Console"]
 
-NOTE: For XCode 3 users, use the key command Shift-Cmd-R. There's also a preference in XCode to bring up the console after each launch - Xcode->Preferences->Debugging->On Start Show Console.
+[NOTE]
+=====================================================================
+For XCode 3 users, use the key command Shift-Cmd-R. There's also a preference in XCode to bring up the console after each launch - Xcode->Preferences->Debugging->On Start Show Console.
+=====================================================================
 
 You should see a panel like this appear at the bottom of your XCode window
 
@@ -1142,7 +1175,10 @@ void testApp::draw(){
 }
 ---------------------------------------------------------------------
 
-TIP: Notice the use of ofRandom(). This function will return a random number. It takes 2 arguments: the minimum possible value and the maximum possible value. What I am saying in this code is "give me a number between 0 and the width of the screen."
+[TIP]
+=====================================================================
+Notice the use of ofRandom(). This function will return a random number. It takes 2 arguments: the minimum possible value and the maximum possible value. What I am saying in this code is "give me a number between 0 and the width of the screen."
+=====================================================================
 
 Technically this works, but we have only drawn 3 circles, and already the code is getting unwieldy. We want to draw 1000! We clearly have a bunch of variables that are used in very similar ways. Why not group, say, all of the x coordinates into a single set, and all of the y coordinates, etc.?
 
