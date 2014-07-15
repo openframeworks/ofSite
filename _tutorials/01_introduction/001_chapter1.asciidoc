@@ -159,13 +159,16 @@ image:images/workspace04.png["Workspace terminology"]
 
 We want to create a *project*, but every project has to live inside a *workspace*, so lets use this handy *myApps* workspace. You then use workspaces however you want, but the important thing is that they are directly inside the "apps" folder, ie: you can't have a workspace inside another workspace.
 
-First we will [underline]#duplicate# (NOT rename) the entire "emptyExample" folder. On a mac, you can literally right-click on the emptyExample folder, and click 'Duplicate'. So the result should look like this:
+.deprecated instructions on the old project creation way
+NOTE: First we will [underline]#duplicate# (NOT rename) the entire "emptyExample"
+      folder. On a mac, you can literally right-click on the emptyExample folder,
+      and click 'Duplicate'. So the result should look like this:
 
-image:images/workspace02.png["emptyExample Copy"]
+      image:images/workspace02.png["emptyExample Copy"]
 
-Next, we can rename the duplicate project folder from "emptyExample Copy" to "myFirstProject".
+      Next, we can rename the duplicate project folder from "emptyExample Copy" to "myFirstProject".
 
-image:images/workspace03.png["My First Project"]
+      image:images/workspace03.png["My First Project"]
 
 The super important thing here is that your XCode Project file is *exactly* 3 folders "below" the Root Folder (refer to colorful diagram above). So, whenever you make a new project, or if you are suddenly getting thousands of errors for no apparent reason, you should always double check that your XCode Project file is in the correct place.
 
