@@ -177,7 +177,7 @@ The super important thing here is that your XCode or Code::Blocks project file i
 
 The reason for this has to do with the 'lib' folder. We previously mentioned that openFrameworks is a "glue" for a bunch of different libraries, and these libraries are located in the 'lib' directory. We also discovered that it is the the job of the IDE know how to find and link together the various libraries. So, when the IDE tries to compile your program, it is set up to look for libraries in "../../../lib", or, in other words: "go back three folders (http://support.dtsearch.com/webhelp/dtsearch/relative_paths.htm[relative] to your .xcodeproj) and then look for a lib directory."  For instance, if you dig deep into the settings of any openFrameworks project, you will find paths like "../../../libs/FreeImage/include" and "../../../libs/poco/include". So, as long as your .xcodeproj file is within of_v0.8.0_osx_release/apps/[workspace]/[project], everything will compile. If not, things will get ugly.
 
-Okay!  Now you have created your first very own openFrameworks project. Double click on the XCode Project file in your new "myFirstProject" and make sure "emptyExample" is selected as the target and click "Run" and you should see:
+Okay!  Now you have created your first very own openFrameworks project. Double click on the XCode Project file in your new "myFirstProject" and make sure "emptyExample" is selected as the target and click "Run" (or simply press F9 in Code::Blocks) and you should see:
 
 image:images/PlainGray.png["Plain Gray Window",width="600"]
 
