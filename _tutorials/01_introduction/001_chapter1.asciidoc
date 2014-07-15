@@ -72,7 +72,7 @@ Now click "Run!"  You should see this:
 
 image::images/graphicsExample03.png["graphicsExample, running",width="800"]
 
-The circle orange circle should constantly change its diameter, the rectangles should be drawn randomly, the upper red bar should fade and the lines should change smoothness. Press escape or Apple+Q to exit out of the program.
+The circle orange circle should constantly change its diameter, the rectangles should be drawn randomly, the upper red bar should fade and the lines should change smoothness. Press Escape or Apple+Q to exit out of the program.
 
 [WARNING]
 .Troubleshooting compilation
@@ -110,7 +110,7 @@ you can press the little gear button at the top or press Ctrl+F9 to build (compi
 
 image::images/graphicsExample03.png["graphicsExample, running",width="800"]
 
-The circle orange circle should constantly change its diameter, the rectangles should be drawn randomly, the upper red bar should fade and the lines should change smoothness. Press escape or Apple+Q to exit out of the program.
+The circle orange circle should constantly change its diameter, the rectangles should be drawn randomly, the upper red bar should fade and the lines should change smoothness. Press Escape or Apple+Q to exit out of the program.
 
 
 
@@ -134,7 +134,7 @@ to build and execute the code. In the end you should see the same with the metho
 
 image::images/graphicsExample03.png["graphicsExample, running",width="800"]
 
-The circle orange circle should constantly change its diameter, the rectangles should be drawn randomly, the upper red bar should fade and the lines should change smoothness. You can close this example by pressing escape or Apple+Q.
+The circle orange circle should constantly change its diameter, the rectangles should be drawn randomly, the upper red bar should fade and the lines should change smoothness. You can close this example by pressing Escape or Apple+Q.
 If you run
 [source,bash]
 ----
@@ -183,7 +183,7 @@ image:images/PlainGray.png["Plain Gray Window",width="600"]
 
 Nothing! But that's exactly what you should see. Well, it's not too exciting yet, but you are well on your way.
 
-Press escape or Apple+Q to exit out of the program.
+Press Escape or Apple+Q to exit out of the program.
 
 [WARNING]
 .Renaming your Project in XCode
