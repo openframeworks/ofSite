@@ -153,7 +153,7 @@ As simple as this seems, this can be a huge stumbling block for a lot of beginne
 
 When you open your apps folder, you see a _myApps_ folder. Let's call these folders like this one *workspaces*.
 
-If you open the _myApps_ workspace, you see the _emptyExample_ folder, which we will call a *project*. Each project contains (among other things) an ".xcodeproj" or "..workspace" file (dependening on your IDE chosen) and a "src" folder. A *project* _must_ be inside a *workspace* and can be compiled into a single application.
+If you open the _myApps_ workspace, you see the _emptyExample_ folder, which we will call a *project*. Each project contains (among other things) an ".xcodeproj" or ".workspace" file (dependening on your IDE chosen) and a "src" folder. A *project* _must_ be inside a *workspace* and can be compiled into a single application.
 
 image:images/workspace04.png["Workspace terminology"]
 
