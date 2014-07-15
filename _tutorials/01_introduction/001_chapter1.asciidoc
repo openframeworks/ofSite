@@ -11,7 +11,7 @@ v0.1, February 2012:
 :summary: This chapter will help you get started with the basics of openFrameworks, such as the proper method for creating a project, setting window size, and basic drawing. But first...
 
 ____________
-*Update! New project generator*: _As of openframeworks 0072 we have a link:http://openframeworks.cc/tutorials/introduction/002_projectGenerator.html[new tool called projectGenerator] to create new openframeworks projects, including addons. In previous versions, creating a new openframeworks project involved duplicating an existing example app and adding the addons by hand as described in the tutorial below. With the project generator project creation is faster and less error-prone. We highly recommend it. link:http://openframeworks.cc/tutorials/introduction/002_projectGenerator.html[Check it out now!]_
+*Update! New project generator*: _As of openFrameworks 0072 we have a link:http://openframeworks.cc/tutorials/introduction/002_projectGenerator.html[new tool called projectGenerator] to create new openframeworks projects, including addons. In previous versions, creating a new openframeworks project involved duplicating an existing example app and adding the addons by hand as described in the tutorial below. With the project generator project creation is faster and less error-prone. We highly recommend it. link:http://openframeworks.cc/tutorials/introduction/002_projectGenerator.html[Check it out now!]_
 ____________
 
 This chapter will help you get started with the basics of openFrameworks, such as the proper method for creating a project, setting window size, and basic drawing. But first...
