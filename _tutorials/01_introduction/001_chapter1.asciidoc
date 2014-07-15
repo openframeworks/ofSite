@@ -145,6 +145,9 @@ $ make clean
 Creating Your First Project
 ---------------------------
 
+.Code::Blocks note
+NOTE: This section focuses on XCode as the example IDE. All the general information provided here also applies to Code::Blocks and can be transferred accordingly. The Code::Blocks project file has the ".workspace" extension and is used instead of ".xcodeproj".
+
 As mentioned in the introduction, openFrameworks takes care of most of the tedious work of setting up a C++ project in your IDE of choice. However, unlike programs like Flash or Processing, there is no "File > New" that allows you to create a project. You can use the link:http://openframeworks.cc/tutorials/introduction/002_projectGenerator.html[projectGenerator] to generate a new projects. Previously (before openFramworks 0072), the preferred method was to duplicate one of the example projects.
 
 IMPORTANT: By extension, duplicating an example project means that you should never edit any of the example projects or put your own apps into the examples folders. They are placed there to provide starting points for your own apps, but you'll want to keep them pristene so that you always have a working starting point for your projects. You'll see the importance of this more as you move forward ... or better use the link:http://openframeworks.cc/tutorials/introduction/002_projectGenerator.html[projectGenerator] in the first place.
