@@ -495,7 +495,7 @@ One thing you may notice about your awesome moving circle is that it starts off 
 ofDrawBitmapString(ofToString(ofGetFrameRate())+"fps", 10, 15);
 ....
 
-Most likely, it says something very close to 1000fps. That means that your circle is being drawn close to one thousand times per second. If you were to fire up tons of other applications on your computer and start rendering a huge video in FinalCut, you'd notice this framerate drops. The fact is that your application is simply trying to run as fast as it possibly can.
+Most likely, it says something very close to 1000fps. That means that your circle is being drawn close to one thousand times per second. If you were to fire up tons of other applications on your computer and start rendering a huge video, you'd notice this framerate drops. The fact is that your application is simply trying to run as fast as it possibly can.
 
 In the interest of having a smoother, more predictable kind of animation, we will lower the framerate to something more reasonable, like 60. In order to do this, we will put a new line into our setup() function.
 
