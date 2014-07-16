@@ -337,7 +337,7 @@ Now try running your application.
 
 image:images/MyFirstProject02.png["A purple circle", width="500"]
 
-Similar to ofCircle, the ofSetColor function takes 3 arguments, but the numbers have very different meanings. If you look at the documentation for link:/documentation/graphics/ofGraphics.html#show_ofSetColor[ofSetColor], you'll notice that they arguments actually represent the red, green, and blue values for the color that you want to use, on a scale of 0-255. So when we typed `ofSetColor(255, 0, 255);`, we were saying "until further notice, draw everything with 100% red, 0 green, and 100% blue."
+Similar to ofCircle, the ofSetColor function takes 3 arguments, but the numbers have very different meanings. If you look at the documentation for link:/documentation/graphics/ofGraphics.html#show_ofSetColor[ofSetColor], you'll notice that they arguments actually represent the red, green, and blue values for the color that you want to use, on a scale of 0-255. The red, green and blue make up the https://en.wikipedia.org/w/index.php?title=RGB_color_model[RGB color model or color space]. So when we typed `ofSetColor(255, 0, 255);`, we were saying "until further notice, draw everything with 100% red, 0 green, and 100% blue."
 
 [TIP]
 =====================================================================
