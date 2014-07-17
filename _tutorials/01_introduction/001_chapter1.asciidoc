@@ -1339,6 +1339,8 @@ At the very top, notice the line "#define NUM_CIRCLES 500". This isn't technical
 Functions
 ~~~~~~~~~
 
+In the examples above you had blocks of code enclosed in curly braces. To compose some more abstract functionality you also group instructions and call this group my a name. Look at the following example:
+
 [source,cpp]
 ---------------------------------------------------------------------
 void drawStar(float xpos, float ypos, float radius, int npts)
@@ -1357,3 +1359,4 @@ void drawStar(float xpos, float ypos, float radius, int npts)
 }
 ---------------------------------------------------------------------
 
+Here you see the definition of a http://www.cplusplus.com/doc/tutorial/functions/[function]. A function is a named group of instruction which might takes some input in the form of variables and might returns some output. It might also be called a https://en.wikipedia.org/wiki/Subroutine[subroutine], depending on the context. Line 1 shows what is called the signature of a function. It first names the type of the data returned. Void means no data will be returned, int means a whole number gets returned, and so on. The return data type is followed by the name of the function ("drawStar") and finally a list of arguments.
