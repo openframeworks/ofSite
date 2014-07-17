@@ -1359,4 +1359,38 @@ void drawStar(float xpos, float ypos, float radius, int npts)
 }
 ---------------------------------------------------------------------
 
-Here you see the definition of a http://www.cplusplus.com/doc/tutorial/functions/[function]. A function is a named group of instruction which might takes some input in the form of variables and might returns some output. It might also be called a https://en.wikipedia.org/wiki/Subroutine[subroutine], depending on the context. Line 1 shows what is called the signature of a function. It first names the type of the data returned. Void means no data will be returned, int means a whole number gets returned, and so on. The return data type is followed by the name of the function ("drawStar") and finally a list of arguments.
+Here you see the definition of a http://www.cplusplus.com/doc/tutorial/functions/[function]. A function is a named group of instruction which might takes some input in the form of variables and might returns some output. It might also be called a https://en.wikipedia.org/wiki/Subroutine[subroutine], depending on the context. Line 1 shows what is called the signature of a function. It first names the type of the data returned. Void means no data will be returned, int means a whole number gets returned, and so on. The return data type is followed by the name of the function ("drawStar") and finally a list of arguments. The list of arguments first states the data type (e.g. "int") and then a variable name (e.g. "xpos"). The argument variables are visible by their name inside the function body (aka. the curly braces), but not outside. The following code should make these concepts more clear.
+
+[source,cpp]
+---------------------------------------------------------------------
+int add2(int number)
+{
+        return number + 2;
+}
+
+...
+
+void other(float arg)
+{
+        int ivalue = 4;
+        ivalue = add2(ivalue);
+}
+---------------------------------------------------------------------
+
+The function "add2" takes an integer as an argument ("number") and adds two to it. This value gets returned by the "return" statement. A "void" function (usually) does not have a return statement. The variable "number" can be seen and accessed inside the "add2" function, but not the inside the "other" function. When calling the "add2" function, the value of "ivalue" (4) gets copied over into "number". Then "add2" is executed and the return value (4 + 2 = 6) calculated. This is then passed back add assigned to "ivalue".
+
+There are other noteworthy things about the "drawStar" function. As you can see in the source, a function can have its own variables (like "useInner"), which only exist inside the function body. A function can call other functions, as demonstrated with "ofBeginShape()", "ofDegToRad()" and so on. The line 7 is an abbreviated if statement. A more recognizeable way to write it is:
+
+[source,cpp]
+---------------------------------------------------------------------
+int r;
+if (useInner) {
+   r = radius*.6;
+} else {
+  r = radius;
+}
+---------------------------------------------------------------------
+
+This abbreviated syntax might be useful if each alternative consists of only one statement to be executed, but is also easy to everlook when trying to find bugs (programming errors) in a program. The more verbose version is easier to spot and understand. It also is easier to extend if needed.
+
+All the concepts introduced should give you the basic tools to study and understand the example code provided. We covered a lot of ground, so go and poke at the other examples!
