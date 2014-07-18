@@ -11,7 +11,7 @@ v0.1, February 2012:
 :summary: This chapter will help you get started with the basics of openFrameworks, such as the proper method for creating a project, setting window size, and basic drawing. But first...
 
 ____________
-*Update! New project generator*: _As of openFrameworks 0072 we have a link:http://openframeworks.cc/tutorials/introduction/002_projectGenerator.html[new tool called projectGenerator] to create new openframeworks projects, including addons. In previous versions, creating a new openframeworks project involved duplicating an existing example app and adding the addons by hand as described in the tutorial below. With the project generator project creation is faster and less error-prone. We highly recommend it. link:http://openframeworks.cc/tutorials/introduction/002_projectGenerator.html[Check it out now!]_
+*Update! New project generator*: _As of openFrameworks 0072 we have a link:http://openframeworks.cc/tutorials/introduction/002_projectGenerator.html[new tool called projectGenerator] to create new openFrameworks projects, including addons. In previous versions, creating a new openFrameworks project involved duplicating an existing example app and adding the addons by hand as described in the tutorial below. With the project generator project creation is faster and less error-prone. We highly recommend it. link:http://openframeworks.cc/tutorials/introduction/002_projectGenerator.html[Check it out now!]_
 ____________
 
 This chapter will help you get started with the basics of openFrameworks, such as the proper method for creating a project, setting window size, and basic drawing. But first...
@@ -19,7 +19,7 @@ This chapter will help you get started with the basics of openFrameworks, such a
 Your First Look inside oF
 -------------------------
 
-By this point, I assume that you've http://www.openframeworks.cc/download/[downloaded openFrameworks and followed the appropriate setup guide]. So the first thing you'll want to do is uncompress the openFrameworks archive and place the resulting folder somewhere you can easily access. Personally, I like to drop it in my Documents folder and then put a shortcut in my sidebar, like this:
+By this point, I assume that you've http://www.openframeworks.cc/download/[downloaded openFrameworks and followed the appropriate setup guide]. So the first thing you'll want to do is unpack the openFrameworks archive and place the resulting folder somewhere you can easily access. Personally, I like to drop it in my Documents folder and then put a shortcut in my sidebar, like this:
 
 image:images/shortcut.png["Shortcut",width="600"]
 
@@ -58,7 +58,7 @@ You should see a window that looks something like this:
 
 image::images/graphicsExample02.png["graphicsExample 02",width="800"]
 
-IMPORTANT: Find out which version you are using in the menubar: XCode > About XCode. If you are using XCode < 4.0 the window will look significantly different, but don't panic -- it should be fairly easy to find the corresponding interface features.
+IMPORTANT: Find out which version you are using in the menu-bar: XCode > About XCode. If you are using XCode < 4.0 the window will look significantly different, but don't panic -- it should be fairly easy to find the corresponding interface features.
 
 You'll notice a big "Run" button at the top left side of the screen. In XCode 3, it is called "Build & Run". That will run the currently active target. But you might find that, by default, the active target is the openFrameworks library, which, by itself, doesn't do anything. What we want to run is "graphicsExample" program. So if you see this:
 
@@ -102,7 +102,7 @@ Click on either "Open an existing project" or press Ctrl+O to open a file browse
 
 image::images/oF_codeblocks_2.png["file browser for graphicsExample Code::Blocks workspace",width="400"]
 
-The workspace is needed so that the compiler can find all relevant libraries. If the workspace is not loaded, the environment will lack cruicial information for creating the final executable file. After the workspace is loaded sucessfully, 
+The workspace is needed so that the compiler can find all relevant libraries. If the workspace is not loaded, the environment will lack crucial information for creating the final executable file. After the workspace is loaded successfully, 
 
 image::images/oF_codeblocks_3.png["graphicsExample Code::Blocks workspace",width="800"]
 
@@ -114,10 +114,10 @@ The circle orange circle should constantly change its diameter, the rectangles s
 
 
 
-commandline
+command-line
 ~~~~~~~~~~~
 
-You don't actually need an IDE to build the oF examples since all tools neccessary can be run from the commandline. To build an example open a terminal window and change to where you unpacked openFrameworks. From there change into a directory of the examples e.g. "graphicsExample":
+You don't actually need an IDE to build the oF examples since all tools necessary can be run from the command-line. To build an example open a terminal window and change to where you unpacked openFrameworks. From there change into a directory of the examples e.g. "graphicsExample":
 
 [source,bash]
 ----
@@ -151,22 +151,22 @@ Creating Your First Project
 This section focuses on XCode as the example IDE. All the general information provided here also applies to Code::Blocks and can be transferred accordingly. The Code::Blocks project file has the ".workspace" extension and is used instead of ".xcodeproj". Please consult the link:http://www.codeblocks.org/user-manual[Code::Blocks manual] if you have any IDE specific questions.
 =====================================================================
 
-As mentioned in the introduction, openFrameworks takes care of most of the tedious work of setting up a C++ project in your IDE of choice. However, unlike programs like Flash or Processing, there is no "File > New" that allows you to create a project. You can use the link:http://openframeworks.cc/tutorials/introduction/002_projectGenerator.html[projectGenerator] to generate a new projects. Previously (before openFramworks 0072), the preferred method was to duplicate one of the example projects.
+As mentioned in the introduction, openFrameworks takes care of most of the tedious work of setting up a C++ project in your IDE of choice. However, unlike programs like Flash or Processing, there is no "File > New" that allows you to create a project. You can use the link:http://openframeworks.cc/tutorials/introduction/002_projectGenerator.html[projectGenerator] to generate a new projects. Previously (before openFrameworks 0072), the preferred method was to duplicate one of the example projects.
 
 [IMPORTANT]
 =====================================================================
-By extension, duplicating an example project means that you should never edit any of the example projects or put your own apps into the examples folders. They are placed there to provide starting points for your own apps, but you'll want to keep them pristene so that you always have a working starting point for your projects. You'll see the importance of this more as you move forward ... or better use the link:http://openframeworks.cc/tutorials/introduction/002_projectGenerator.html[projectGenerator] in the first place.
+By extension, duplicating an example project means that you should never edit any of the example projects or put your own apps into the examples folders. They are placed there to provide starting points for your own apps, but you'll want to keep them pristine so that you always have a working starting point for your projects. You'll see the importance of this more as you move forward ... or better use the link:http://openframeworks.cc/tutorials/introduction/002_projectGenerator.html[projectGenerator] in the first place.
 =====================================================================
 
 As simple as this seems, this can be a huge stumbling block for a lot of beginners, so first lets agree on some terminology.
 
 When you open your apps folder, you see a _myApps_ folder. Let's call these folders like this one *workspaces*.
 
-If you open the _myApps_ workspace, you see the _emptyExample_ folder, which we will call a *project*. Each project contains (among other things) an ".xcodeproj" or ".workspace" file (dependening on your IDE chosen) and a "src" folder. A *project* _must_ be inside a *workspace* and can be compiled into a single application.
+If you open the _myApps_ workspace, you see the _emptyExample_ folder, which we will call a *project*. Each project contains (among other things) an ".xcodeproj" or ".workspace" file (depending on your IDE chosen) and a "src" folder. A *project* _must_ be inside a *workspace* and can be compiled into a single application.
 
 image:images/workspace04.png["Workspace terminology"]
 
-We want to create a *project*, but every project has to live inside a *workspace*, so lets use this handy *myApps* workspace. You then use workspaces however you want, but the important thing is that they are directly inside the "apps" folder, ie: you can't have a workspace inside another workspace.
+We want to create a *project*, but every project has to live inside a *workspace*, so lets use this handy *myApps* workspace. You then use workspaces however you want, but the important thing is that they are directly inside the "apps" folder, i.e.: you can't have a workspace inside another workspace.
 
 [NOTE]
 .deprecated instructions on the old project creation way
@@ -260,17 +260,17 @@ So what is going on here?
 
 In a lot of ways, testApp.cpp is like hello.cpp, the file that we wrote in the Introduction. It's a plain text file that contains `C++` source code. The difference now is that we are editing it through our IDE, so there is some really nice syntax highlighting that will hopefully make it easier to make sense of the code, and it will be a lot easier to compile and run when we want to.
 
-On a very basic level, what you see here is a bunch of empty functions. A https://en.wikipedia.org/wiki/Function_(computer_science)[function] is a set of instructions that make up part of a larger program. Just in the snippet of code above, there are 4 functions: setup, update, draw, and keyPressed. Each of the functions is followed by a set of curly brackets ({}). What usually goes inside of these curly brackets are the instructions (assiging values to variables, loops, and calls to other functions) that make up the functions.
+On a very basic level, what you see here is a bunch of empty functions. A https://en.wikipedia.org/wiki/Function_(computer_science)[function] is a set of instructions that make up part of a larger program. Just in the snippet of code above, there are 4 functions: setup, update, draw, and keyPressed. Each of the functions is followed by a set of curly brackets ({}). What usually goes inside of these curly brackets are the instructions (assigning values to variables, loops, and calls to other functions) that make up the functions.
 
-If you refer back to the Q&A "What is a software framework?" in the introduction, the film production company analogy is particularly useful at this point. What you are looking at in testApp.cpp is how openFrameworks has provided all of the infrastructure and logistical details. Now it's your job to define what happens. You do this by putting code into the fuctions in testApp.cpp
+If you refer back to the Q&A "What is a software framework?" in the introduction, the film production company analogy is particularly useful at this point. What you are looking at in testApp.cpp is how openFrameworks has provided all of the infrastructure and logistical details. Now it's your job to define what happens. You do this by putting code into the functions in testApp.cpp
 
 These functions will be called by openFrameworks at different points during the execution of your program. Let's take a look at a few of them.
 
 setup;;
-    This function is called (ie: any code that you've put inside the curly brackets runs) at the very beginning of the life of your application, before your program window opens. So, let's say, for instance, you wanted to set the size of the window. You probably want this to happen before the window actually opens, so setup would be a good place for that.
+    This function is called (i.e.: any code that you've put inside the curly brackets runs) at the very beginning of the life of your application, before your program window opens. So, let's say, for instance, you wanted to set the size of the window. You probably want this to happen before the window actually opens, so setup would be a good place for that.
 
 update, draw;;
-    After the setup function runs, the update and draw functions begin a loop that continues until your program ends. So, after setup() runs, update() runs, then draw(), then update(), then draw(), etc. and by default, this happens as fast as your computer can handle. update() is typically used for updating the state of your program (ie: changing the value of variables), while draw() is used to actually draw things into your window.
+    After the setup function runs, the update and draw functions begin a loop that continues until your program ends. So, after setup() runs, update() runs, then draw(), then update(), then draw(), etc. and by default, this happens as fast as your computer can handle. update() is typically used for updating the state of your program (i.e.: changing the value of variables), while draw() is used to actually draw things into your window.
 
 keyPressed, keyReleased, mouseMoved, mouseDragged, mousePressed, mouseReleased, windowResized, gotMessage, dragEvent;;
     Unlike the previous three functions, these functions are called only when a user does something. Can you guess what?
@@ -280,7 +280,7 @@ But enough with the reading. Let's see these things in action.
 Making a Mark
 ~~~~~~~~~~~~~
 
-We will start by drawing a simple circle in our gray window using the ofCircle function. Type `ofCircle(200, 200, 60);` on the blank line inside the draw() function so that your draw function looke like this:
+We will start by drawing a simple circle in our gray window using the ofCircle function. Type `ofCircle(200, 200, 60);` on the blank line inside the draw() function so that your draw function look like this:
 
 [source,cpp]
 ---------------------------------------------------------------------
@@ -387,7 +387,7 @@ Of course, oF can draw more than circles.
 
 [NOTE]
 =====================================================================
-Control points can be tricky. If you've used the pen tool in photoshop or illustrator, you probably understand them. If not, check out http://www.actionscript.org/resources/articles/172/1/Understanding-curves-and-control-point-placement/Page1.html[this tutorial]. It's about ActionScript, but it gives a great overiew of the concept of curves and control points.
+Control points can be tricky. If you've used the pen tool in photoshop or illustrator, you probably understand them. If not, check out http://www.actionscript.org/resources/articles/172/1/Understanding-curves-and-control-point-placement/Page1.html[this tutorial]. It's about ActionScript, but it gives a great overview of the concept of curves and control points.
 =====================================================================
 
 [TIP]
@@ -400,7 +400,7 @@ Adding Movement
 
 Drawing static shapes is great, but what if we want our shapes to move around the screen?
 
-We mentioned earlier that the draw() function is called repeatedly after the program is started. This is very important because it is how we achieve animation in openFrameworks. It might be a little unintuitive if you are used to Flash or even something like stop-frame animation, where you can add something to a "stage" and then reposition it as needed. This is *not* how openFrameworks (or most computer animation) works. Actually, openFrameworks is more like traditional (we're talking old-school Disney/Bambi) animation, where we must redraw the frame completely every single "frame". In the parlance of openFrameworks, every time the draw() function is called is one "frame". So, in actuality, when you run the program above and see your purple circle, what you are actually looking at is the circle being drawn, then cleared (a single frame), and then drawn, then cleared, repeatedly. It's just happening so fast that it appears to stay where it is.
+We mentioned earlier that the draw() function is called repeatedly after the program is started. This is very important because it is how we achieve animation in openFrameworks. It might be a little unintuitive if you are used to Flash or even something like stop-frame animation, where you can add something to a "stage" and then re-position it as needed. This is *not* how openFrameworks (or most computer animation) works. Actually, openFrameworks is more like traditional (we're talking old-school Disney/Bambi) animation, where we must redraw the frame completely every single "frame". In the parlance of openFrameworks, every time the draw() function is called is one "frame". So, in actuality, when you run the program above and see your purple circle, what you are actually looking at is the circle being drawn, then cleared (a single frame), and then drawn, then cleared, repeatedly. It's just happening so fast that it appears to stay where it is.
 
 In the example above, when we draw our circle, we use two numbers to tell the ofCircle function where to draw the circle within the window. So it follows that, if we want the circle to appear to move, we need to change these numbers over time. Perhaps the first time draw() happens, the circle is drawn at (200, 300), but in the next time, we want it to be one pixel to the right (201, 300), and then another pixel to the right (202, 300), and so on.
 
@@ -430,7 +430,7 @@ void testApp::setup(){
 }
 ---------------------------------------------------------------------
 
-Perfect!  So, to recap, we now have 2 variables, 'myCircleX', and 'myCircleY', and we have just "initialized" them, or populated with an "initial" value. Notice that, just like any mathmatical equation, we use the equals sign (=) to assign the number 300 to 'myCircleX'. In `C++` parlance, the equals sign is known as the "assignment operator", because it's used to assign a value to a variable. The "assignment" always flows from right to left; that is, the value that is being assigned is on the right and thing that is receiving the assignment is on the left.
+Perfect!  So, to recap, we now have 2 variables, 'myCircleX', and 'myCircleY', and we have just "initialized" them, or populated with an "initial" value. Notice that, just like any mathematical equation, we use the equals sign (=) to assign the number 300 to 'myCircleX'. In `C++` parlance, the equals sign is known as the "assignment operator", because it's used to assign a value to a variable. The "assignment" always flows from right to left; that is, the value that is being assigned is on the right and thing that is receiving the assignment is on the left.
 
 Now we can edit our ofCircle call a bit :
 
@@ -532,7 +532,7 @@ void testApp::update(){
 The Pacman Effect
 ~~~~~~~~~~~~~~~~~
 
-Let's have one final adventure with our purple circle before saying goodbye. Our application is still a little dissapointing because once our circle leaves the screen on the right, it's gone forever. Let's fix that problem by making the circle re-appear on the left side after leaving on the right: the Pacman Effect.
+Let's have one final adventure with our purple circle before saying goodbye. Our application is still a little disappointing because once our circle leaves the screen on the right, it's gone forever. Let's fix that problem by making the circle re-appear on the left side after leaving on the right: the Pacman Effect.
 
 Before we write any code, let's think about what this is going to mean in terms of the variables that we have. In the current state, we have myCircleX acting as the x coordinate for our circle, and it is being incrementing by 1 (or 4, if you followed the tip above) every frame. By default, an openFrameworks window is 1024x768. So, one way we could achieve the Pacman Effect is to reset myCircleX back to 300 once it goes beyond 1024.
 
@@ -895,7 +895,7 @@ void testApp::mousePressed(int x, int y, int button){
 }
 ---------------------------------------------------------------------
 
-This code says "first calculate the distance btween the center of the circle and the mouse click. Then compare 'distance' to 'myCircleRadius'. If (and only if) distance is LESS THAN myCircleRadius, increment myCircleRadius by 1."
+This code says "first calculate the distance between the center of the circle and the mouse click. Then compare 'distance' to 'myCircleRadius'. If (and only if) distance is LESS THAN myCircleRadius, increment myCircleRadius by 1."
 
 Et voila!  You are interacting with graphics!
 
@@ -1115,7 +1115,7 @@ for(int i=0; i<51; i++)
 
 The syntax of the for loop can be a little daunting at first, but let's take it apart piece by piece. The first part is initialization: "int i=0;"  Pretty straightforward: we now have an integer called i that we have set to 0. The next part is the condition: "i<51". In other words, we want the loop to continue so long as i is less than 51. And lastly,  the increment: "i++". After every iteration of the loop, we will increment i by 1.
 
-We saw each of these things in the other kind of loops. THe only difference here is that they are all smushed into one line. 
+We saw each of these things in the other kind of loops. The only difference here is that they are all smashed into one line. 
 
 
 Arrays
@@ -1272,7 +1272,7 @@ Now, instead of putting hard-coded numbers between the square brackets, we use t
 #define
 ^^^^^^^
 
-A wise person once said: the primary virtue of a programer is laziness. Suppose you wanted to change the number of circles that appear on the screen from 3 to 500. Obviously, the first step would be to change circleX[3] to circleX[500], and likewise circleY and circleRad. Oh, but that's not all. You'd still have to go through every "for" loop and change i<3 to i<50. That's a lot of work!  
+A wise person once said: the primary virtue of a programmer is laziness. Suppose you wanted to change the number of circles that appear on the screen from 3 to 500. Obviously, the first step would be to change circleX[3] to circleX[500], and likewise circleY and circleRad. Oh, but that's not all. You'd still have to go through every "for" loop and change i<3 to i<50. That's a lot of work!  
 
 It would be great if we could use a variable to keep track of how many items we have in our array! It might look something like this:
 
@@ -1379,7 +1379,7 @@ void other(float arg)
 
 The function "add2" takes an integer as an argument ("number") and adds two to it. This value gets returned by the "return" statement. A "void" function (usually) does not have a return statement. The variable "number" can be seen and accessed inside the "add2" function, but not the inside the "other" function. When calling the "add2" function, the value of "ivalue" (4) gets copied over into "number". Then "add2" is executed and the return value (4 + 2 = 6) calculated. This is then passed back add assigned to "ivalue".
 
-There are other noteworthy things about the "drawStar" function. As you can see in the source, a function can have its own variables (like "useInner"), which only exist inside the function body. A function can call other functions, as demonstrated with "ofBeginShape()", "ofDegToRad()" and so on. The line 7 is an abbreviated if statement. A more recognizeable way to write it is:
+There are other noteworthy things about the "drawStar" function. As you can see in the source, a function can have its own variables (like "useInner"), which only exist inside the function body. A function can call other functions, as demonstrated with "ofBeginShape()", "ofDegToRad()" and so on. The line 7 is an abbreviated if statement. A more recognizable way to write it is:
 
 [source,cpp]
 ---------------------------------------------------------------------
@@ -1391,6 +1391,7 @@ if (useInner) {
 }
 ---------------------------------------------------------------------
 
-This abbreviated syntax might be useful if each alternative consists of only one statement to be executed, but is also easy to everlook when trying to find bugs (programming errors) in a program. The more verbose version is easier to spot and understand. It also is easier to extend if needed.
+This abbreviated syntax might be useful if each alternative consists of only one statement to be executed, but is also easy to overlook when trying to find bugs (programming errors) in a program. The more verbose version is easier to spot and understand. It also is easier to extend if needed.
 
 All the concepts introduced should give you the basic tools to study and understand the example code provided. We covered a lot of ground, so go and poke at the other examples!
+
