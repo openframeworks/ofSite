@@ -1,7 +1,7 @@
 ## -*- coding: utf-8 -*-
 <%inherit file="/_templates/markdown.mako" />
 
-linux codeblocks &#038; makefiles
+Linux codeblocks &#038; makefiles
 ================================
 
 
@@ -11,7 +11,7 @@ codeblocks
 
 Codeblocks is a fairly nice IDE for writing code on Linux, and we are happy to support it. Here are some setup instructions for Ubuntu, Debian and Fedora. If you use other distributions please let us know if there are additional steps:
 
-- in the scripts/linux folder inside the openFrameworks package you will find a directory with the name of your distribution. There are 2 scripts, install_codeblocks.sh and install_dependencies.sh. Don&#8217;t execute them from the desktop, as they need root privileges to run, you will need to run them from a terminal. The order of execution doesn&#8217;t matter and you can execute them more than once without problem if something goes wrong. If you update your openFrameworks version or are having problems with codeblocks, execute both scripts. Once you finish these steps, you will find codeblocks under Applications &gt; Development and will be able to open the openFrameworks examples in the apps folder just by double clicking on the .cbp file
+- in the scripts/Linux folder inside the openFrameworks package you will find a directory with the name of your distribution. There are 2 scripts, install_codeblocks.sh and install_dependencies.sh. Don&#8217;t execute them from the desktop, as they need root privileges to run, you will need to run them from a terminal. The order of execution doesn&#8217;t matter and you can execute them more than once without problem if something goes wrong. If you update your openFrameworks version or are having problems with codeblocks, execute both scripts. Once you finish these steps, you will find codeblocks under Applications &gt; Development and will be able to open the openFrameworks examples in the apps folder just by double clicking on the .cbp file
 
 __Ubuntu:__ 
 
@@ -79,7 +79,7 @@ __Fedora:__
 compiling OF
 ------------
 
-The source of openFrameworks comes uncompiled, by default it'll compile automatically the first time you compile an example but it's recomended to compile it alone in case you get any error:
+The source of openFrameworks comes uncompiled by default. It will compile automatically the first time you compile an example but it's recomended to compile it alone in case you get any error:
 
 In the terminal you have opened, if you were in fedora or debian exit from su with:
 
@@ -93,7 +93,7 @@ And use the following script to compile it:
 
         ./compileOF.sh
         
-If you get any error please report it in the linux section in the [forum](http://forum.openframeworks.cc)
+If you get any error please report it in the Linux section in the [forum](http://forum.openframeworks.cc).
 
 
 project generator
@@ -116,7 +116,7 @@ There you'll find 2 files:
     - *config.make* where you can add include search paths, libraries, change the optimization flags and some other configuration settings
     - *addons.make* where you can add addons to your project. If you are using codeblocks adding a line with the name of the addon you want to use will add the necesary config to be able to use those addons but the files won't appear in codeblocks. You can go to Project > Add files recursively and add the folder of the addons you just added in addons.make
     
-Again, don't try to configure things in codeblocks through its project settings windows or add files to a project in order to compile them. Anything in your src folder will compile by default
+Again, don't try to configure things in codeblocks through its project settings windows or add files to a project in order to compile them. Anything in your src folder will compile by default.
 
 
 makefiles
@@ -146,11 +146,11 @@ FAQ
 
     ../../../libs/glew/include/GL/glew.h:1172:20: fatal error: GL/glu.h: No such file or directory
 
-- Did you run install_dependencies.sh first? It will install libraries which are needed to compile the examples.
+- Did you run install_dependencies.sh first? It will install the libraries which are needed to compile the examples.
 
 **I got an example to compile, but it's not running correctly. There's a window but nothing is being displayed.**
 
-- Do you have the graphics card drivers installed? Some openGL functions don't exist in the default software drivers and even if they do you application will be really slow
+- Do you have the graphics card drivers installed? Some openGL functions don't exist in the default software drivers and even if they do you application will be really slow.
 
-- If you get tearing in your applications even with vertical sync enabled and you are in ubuntu try installing gnome shell and using the non-accelerated version of it. both unity and sometimes the accelerated version of gnome shell have problems with vertical refresh
+- If you get tearing in your applications even with vertical sync enabled and you are in Ubuntu try installing gnome shell and using the non-accelerated version of it. Both unity and sometimes the accelerated version of gnome shell have problems with vertical refresh.
 
