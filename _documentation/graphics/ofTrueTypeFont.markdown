@@ -1537,7 +1537,7 @@ This is essentially the width component of the ofTrueTypeFont::getStringBounding
 _description: _
 
 
-Returns the string height.  This is essentially the width component of the ofTrueTypeFont::getStringBoundingBox() rectangle. 
+Returns the string width.  This is essentially the width component of the ofTrueTypeFont::getStringBoundingBox() rectangle. 
 
  
 
