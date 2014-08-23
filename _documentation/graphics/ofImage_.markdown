@@ -2386,14 +2386,14 @@ To rotate an image around its center at 100, 100:
 ofPushMatrix();
   ofTranslate(100, 100, 0);
   ofRotate(45);
-  myImage.setAnchorPercent(myImage.getWidth()/2, myImage.getHeight()/2); 
+  myImage.setAnchorPoint(myImage.getWidth()/2, myImage.getHeight()/2); 
   myImage.draw(0, 0); 
 ofPopMatrix();
 ~~~~
 
 To align the right side of an image with the right edge of the window:
 ~~~~{.cpp}
-myImage.setAnchorPercent(myImage.getWidth(), 0.0);
+myImage.setAnchorPoint(myImage.getWidth(), 0.0);
 myImage.draw(ofGetWidth(), 0);
 ~~~~
 
