@@ -177,8 +177,8 @@ That's where the index comes in. Indices are just a way of describing which sets
 ~~~~{.cpp}
 int width = 10, height = 10;
 ofMesh mesh;
-for (int y = 0; y < height; y = y + 1){
-    for (int x = 0; x < width; x = x + 1){
+for (int y = 0; y < height; y++){
+    for (int x = 0; x < width; x++){
         mesh.addVertex(ofPoint(x*20, y*20, 0)); // make a new vertex
         mesh.addColor(ofFloatColor(0,0, 0));  // add a color at that vertex
     }
