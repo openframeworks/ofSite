@@ -9,11 +9,11 @@ _istemplated: False_
 
 ##InlineDescription
 
-A basic comera object for interacting with objects in 3D space. 
+A basic camera object for interacting with objects in 3D space.
 
 
-***author:*** 
-	Memo Akten, MSA Visuals Ltd. 2011 
+***author:***
+	Memo Akten, MSA Visuals Ltd. 2011
 
 
 
@@ -25,7 +25,7 @@ A basic comera object for interacting with objects in 3D space.
 ##Description
 
 ofCamera provides a camera onto a 3D scene. Some of the different properties of the camera are shown in the picture below:
-![FOV](fov.png)  
+![FOV](fov.png)
 The far and near clip planes are the boundaries of what's visible in the camera. If you need more information on these, check http://www.falloutsoftware.com/tutorials/gl/gl0.htm
 
 
@@ -294,13 +294,13 @@ _advanced: False_
 
 _inlined_description: _
 
-Get the aspect ratio of this camera's viewport. 
+Get the aspect ratio of this camera's viewport.
 
 
 Returns the aspect ratio of this camera's viewport. Usually this will be the ratio of the width to height of your display. Intended for perspective cameras.
 
-***return:*** 
-	The aspect ratio of this camera's viewport. 
+***return:***
+	The aspect ratio of this camera's viewport.
 
 
 
@@ -380,11 +380,11 @@ _advanced: False_
 
 _inlined_description: _
 
-Get the boolean state which indicates whether the aspect ratio of this camera is forced to a non-default setting. 
+Get the boolean state which indicates whether the aspect ratio of this camera is forced to a non-default setting.
 
 
-***return:*** 
-	A boolean: whether or not this camera's aspect ratio is set to a non-default value. 
+***return:***
+	A boolean: whether or not this camera's aspect ratio is set to a non-default value.
 
 
 
@@ -426,13 +426,13 @@ _advanced: False_
 
 _inlined_description: _
 
-Get the camera's field of view, in degrees. 
+Get the camera's field of view, in degrees.
 
 
 Get the horizontal camera's field of view, in degrees. This is only meaningful for perspective cameras.
 
-***return:*** 
-	The camera's field of view, in degrees. 
+***return:***
+	The camera's field of view, in degrees.
 
 
 
@@ -514,13 +514,13 @@ _advanced: False_
 
 _inlined_description: _
 
-Get the "lens offset" applied to this camera, encoded as an ofVec2f. 
+Get the "lens offset" applied to this camera, encoded as an ofVec2f.
 
 
 Ordinarily, the camera is pointed straight down the center of its view frustum. However, it is possible to orient the camera towards a location offset from the center of its frustum. This is called an "asymetric frustum" and is used (for example) in stereo views. It is acheived by applying an offset to the center of projection. This function returns the offset that has been applied, as an ofVec2f. For more information see [http://www.orthostereo.com/geometryopengl.html](http://www.orthostereo.com/geometryopengl.html).
 
-***return:*** 
-	The "lens offset" applied to this camera, encoded in an ofVec2f. 
+***return:***
+	The "lens offset" applied to this camera, encoded in an ofVec2f.
 
 
 
@@ -562,11 +562,11 @@ _advanced: False_
 
 _inlined_description: _
 
-Access the model view matrix. 
+Access the model view matrix.
 
 
-***return:*** 
-	the current 4x4 model view matrix. 
+***return:***
+	the current 4x4 model view matrix.
 
 
 
@@ -728,11 +728,11 @@ _advanced: False_
 
 _inlined_description: _
 
-Access the projection matrix. 
+Access the projection matrix.
 
 
-***return:*** 
-	the current 4x4 projection matrix. 
+***return:***
+	the current 4x4 projection matrix.
 
 
 
@@ -814,7 +814,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Construct a default camera. 
+Construct a default camera.
 
 
 
@@ -854,7 +854,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Obtain the coordinates, in the 3D world, of a 2D point presumed to be on your screen. 
+Obtain the coordinates, in the 3D world, of a 2D point presumed to be on your screen.
 
 
 Takes a pixel location on your screen, encoded in an ofVec3f, and returns (also as an ofVec3f) the 3D world coordinates of that point. You'll also need to specify a Z value when providing your screen point. This Z value is interpreted as a distance into or away from the screen.
@@ -901,7 +901,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Set the recommended aspect ratio for a perspective camera. 
+Set the recommended aspect ratio for a perspective camera.
 
 
 Sets the aspect ratio of the camera to the desired float, and forces the use of aspect ratio calculations. Currently only used with perspective cameras. The default value (and the value used with orthographic cameras) is the ratio of the viewport's width to the viewport's height.
@@ -986,7 +986,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Set whether or not the aspect ratio of this camera is forced to a non-default setting. 
+Set whether or not the aspect ratio of this camera is forced to a non-default setting.
 
 
 The camera's aspect ratio, by default, is the aspect ratio of your viewport. If you have set a non-default value (with ofCamera::setAspectRatio()), you can toggle whether or not this value is applied.
@@ -1031,7 +1031,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Set the field of view for a perspective camera. 
+Set the field of view for a perspective camera.
 
 
 This sets the horizontal field of view for the camera, in degrees. This only operates with perspective cameras, and will have no effect with cameras in orthographic mode.
@@ -1078,7 +1078,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Set the "lens offset" applied to this camera. 
+Set the "lens offset" applied to this camera.
 
 
 Ordinarily, the camera is pointed straight down the center of its view frustum. However, it is possible to orient the camera towards a location offset from the center of its frustum. This is called an "assymetric
@@ -1318,15 +1318,15 @@ _advanced: False_
 
 _inlined_description: _
 
-Obtain the screen coordinates of a point in the 3D world. 
+Obtain the screen coordinates of a point in the 3D world.
 
 
 Takes an (X,Y,Z) point in your 3D world, encoded as an ofVec3f, and returns the location (also as an ofVec3f) where this point would appear on your (two-dimensional) display. The screen position's "Z
 coordinate" is set to be the same as your camera's.
 
 
-***return:*** 
-	An ofVec3f containing the screen coordinates of your 3D point of interest. 
+***return:***
+	An ofVec3f containing the screen coordinates of your 3D point of interest.
 
 
 
@@ -1370,7 +1370,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Destroy the camera. 
+Destroy the camera.
 
 
 
