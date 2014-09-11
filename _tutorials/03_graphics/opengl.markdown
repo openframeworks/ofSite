@@ -170,29 +170,36 @@ You can use other drawing modes if you want but it's really best to stick with t
     quad.draw(); // now you'll see a square
 ~~~~
 
-And now we have a mesh, albeit a really simple one. Ok, actually, that's wrong, but it's wrong on purpose. In a tiny little square it doesn't matter if we use a few extra vertices. When you're modeling a giant particle blob or something like that, it'll matter a lot. That's where the index comes in. It's just a way of saying: I want this vertex to be used at this location. The mesh goes through the list of indices connected each set of three indices, each of which represents a vertex in the vertex array, to another vertex. It's pretty rad and it saves you having to make and store more indices than necessary. A more typical usage is something like the following:
+And now we have a mesh, albeit a really simple one. Ok, actually, that's wrong, but it's wrong on purpose. As you can see, we have exactly duplicated some of our addVertex calls above. In a tiny little square it doesn't matter if we use a few extra vertices - but when you're modeling a giant particle blob or something like that, it'll matter a lot.
+
+That's where the index comes in. Indices are just a way of describing which sets of vertices in our vertex array go together to make triangles. The first 3 indices in the index array describe the vertices of the first triangle, the second 3 describe the second triangle, and so on. It's pretty rad and it saves you having to make and store more vertices than necessary. A more typical usage is something like the following:
 
 ~~~~{.cpp}
+int width = 10, height = 10;
 ofMesh mesh;
-for (int y = 0; y < height; y++){
-  for (int x = 0; x<width; x++){
-    mesh.addVertex(ofPoint(x,y,0)); // make a new vertex
-    mesh.addColor(ofFloatColor(0,0,0));  // add a color at that vertex
-  }
+for (int y = 0; y < height; y = y + 1){
+    for (int x = 0; x < width; x = x + 1){
+        mesh.addVertex(ofPoint(x*20, y*20, 0)); // make a new vertex
+        mesh.addColor(ofFloatColor(0,0, 0));  // add a color at that vertex
+    }
 }
-// now it's important to make sure that each vertex is correctly connected with the
-// other vertices around it. This is done using indices, which you can set up like so:  
-for (int y = 0; y<height-1; y++){
-  for (int x=0; x<width-1; x++){
-    mesh.addIndex(x+y*width);       // 0
-    mesh.addIndex((x+1)+y*width);     // 1
-    mesh.addIndex(x+(y+1)*width);     // 10
-    
-    mesh.addIndex((x+1)+y*width);     // 1
-    mesh.addIndex((x+1)+(y+1)*width);   // 11
-    mesh.addIndex(x+(y+1)*width);     // 10
-  }
+// what this is basically doing is figuring out based on the way we inserted vertices
+// into our vertex array above, which array indices of the vertex array go together
+// to make triangles. the numbers commented show the indices added in the first run of
+// this loop - notice here that we are re-using indices 1 and 10
+for (int y = 0; y < height-1; y++){
+    for (int x=0; x < width-1; x++){
+        mesh.addIndex(x+y*width);         // 0
+        mesh.addIndex((x+1)+y*width);     // 1
+        mesh.addIndex(x+(y+1)*width);     // 10
+        
+        mesh.addIndex((x+1)+y*width);     // 1
+        mesh.addIndex((x+1)+(y+1)*width); // 11
+        mesh.addIndex(x+(y+1)*width);     // 10
+    }
 }
+ofTranslate(20, 20);
+mesh.drawWireframe();
 ~~~~
 
 As we mentioned earlier when you’re using a mesh, drawing a square actually consists of drawing two triangles and then assembling them into a single shape. You can avoid needing to add multiple vertices  by using 6 indices to connect the 4 vertices. That gets more complex when you start working with 3-D. You’re going to draw an icosahedron and to do that you’ll need to know how each of the vertices is connected to all of the others and add those indices. When you create your ofMesh instance, you’re going to add all the vertices first and then add all of the indices. Each vertex will be given a color so that it can be easily differentiated, but the bulk of the tricky stuff is in creating the vertices and indices that the icosahedron will use.
