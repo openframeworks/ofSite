@@ -244,17 +244,17 @@ And now the cpp file:
 
 void icosahedron::setup() 
 {
+  ofColor color(255, 0, 0); float hue = 254.f;
 
-ofColor color(255, 0, 0); float hue = 254.f;
-
-//Here’s where we finally add all the vertices to our mesh and add a color at each vertex:
-
-for (int i = 0; i<12; ++i)
-{
-  mesh.addVertex( ofVec3f( vdata[i][0], vdata[i][1], vdata[i][2] ));
-  mesh.addColor(color);
-  color.setHue( hue );
-  hue -= 20.f; }
+  //Here’s where we finally add all the vertices to our mesh and add a color at each vertex:
+  for (int i = 0; i<12; ++i)
+  {
+    mesh.addVertex( ofVec3f( vdata[i][0], vdata[i][1], vdata[i][2] ));
+    mesh.addColor(color);
+    color.setHue( hue );
+    hue -= 20.f;
+  }
+  
   for (int i = 0; i<20; ++i)
   {
     mesh.addIndex(indices[i][0]);
