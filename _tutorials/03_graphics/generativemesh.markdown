@@ -9,7 +9,7 @@ author: [Michael Hadley](www.mikewesthad.wordpress.com/me)
 
 This tutorial is *hopefully* aimed at anyone who feels comfortable with the basic tutorials (setting up openFrameworks, using variables, creating loops, etc.) and is itching to start playing with 3D shapes.  It may be pedantic at times, but it will take you through the logic and code for taking this image (from the [Hubble star gallery](http://hubblesite.org/gallery/album/star/)):
 
-![Original hubble image](003_images/stars_small.png) 
+![Original hubble image](003_images/stars_small.png)
 
 and making something like this:
 
@@ -28,7 +28,7 @@ The tutorial is broken into four sections:
     * Using ofEasyCam to navigate the mesh
 3. [Manipulations: Adding effects that modify the mesh](#manipulations)
     * Adding jitter
-    * Making the vertices orbit 
+    * Making the vertices orbit
     * Creating an interactive magnifying effect
 4. [Next Steps](#nextsteps)
 
@@ -43,7 +43,7 @@ A mesh is a collection of **vertices** - points in 3D space - that can be connec
 
 To make this a little more concrete, check out the below mesh.  The vertices are orange dots.  The vertices are connected up in sets of three points to form triangle primitives which were then colored in gray.  For some deeper information, have a look at the [opengl tutorial](http://www.openframeworks.cc/tutorials/graphics/opengl.html).
 
-![Keenan Crane's public domain cow shown in wireframe](003_images/Keenan_Crane_Public_Domain_Cow_Small.png) 
+![Keenan Crane's public domain cow shown in wireframe](003_images/Keenan_Crane_Public_Domain_Cow_Small.png)
 
 We are going to focus on using points and lines as our primitives.  Let's get something drawn on our screen.  When creating a mesh you should:
 
@@ -63,8 +63,8 @@ Append these lines to your *setup()* and *draw()* functions in your source file 
 void testApp::setup() {
     mesh.setMode(OF_PRIMITIVE_POINTS);
 
-    ofVec3f top(100.0, 50.0, 0.0);    
-    ofVec3f left(50.0, 150.0, 0.0);    
+    ofVec3f top(100.0, 50.0, 0.0);
+    ofVec3f left(50.0, 150.0, 0.0);
     ofVec3f right(150.0, 150.0, 0.0);
 
     mesh.addVertex(top);
@@ -78,7 +78,7 @@ void testApp::draw() {
 ~~~
 If you build and run your project, you should see three white dots that are placed in a triangular arrangement on top of a black background:
 
-![Triangle Points](003_images/TrianglePoints.png) 
+![Triangle Points](003_images/TrianglePoints.png)
 
 White is boring?  Well, you can add some color by modifying setup:
 
@@ -87,8 +87,8 @@ void testApp::setup() {
     mesh.setMode(OF_PRIMITIVE_POINTS);
     mesh.enableColors();
 
-    ofVec3f top(100.0, 50.0, 0.0);    
-    ofVec3f left(50.0, 150.0, 0.0);    
+    ofVec3f top(100.0, 50.0, 0.0);
+    ofVec3f left(50.0, 150.0, 0.0);
     ofVec3f right(150.0, 150.0, 0.0);
 
     mesh.addVertex(top);
@@ -112,12 +112,12 @@ You find our points boring?  Time for some some lines then.  We need to change t
     mesh.setMode(OF_PRIMITIVE_LINE_LOOP);
 ~~~
 
-![Triangle Points](003_images/TriangleLineMode.png) 
+![Triangle Points](003_images/TriangleLineMode.png)
 
 The modes each have a different way that they generate lines from the vertices:
 * **OF_PRIMITIVE_LINE** creates an *independent* line out of each pair of vertices.  If you have a set of vertices - V<sub>1</sub>, V<sub>2</sub>, V<sub>3</sub>, V<sub>4</sub>, ... - then V<sub>1</sub> will connect to V<sub>2</sub> and V<sub>3</sub> will connect to V<sub>4</sub>.
 * **OF_PRIMITIVE_LINE_STRIP** will create a set of *connected* lines out of each pair of vertices.  V<sub>1</sub> will connect with V<sub>2</sub>.   V<sub>2</sub> will connect with  V<sub>3</sub>. Etc.
-* **OF_PRIMITIVE_LINE_LOOP** will create a set of connected lines, *and* it will connect the first and last vertices.  
+* **OF_PRIMITIVE_LINE_LOOP** will create a set of connected lines, *and* it will connect the first and last vertices.
 
 Only OF_PRIMITIVE_LINE_LOOP outlined the whole triangle. If you wanted to create that same triangle using OF_PRIMITIVE_LINE, you might try adding some more vertices like this:
 
@@ -138,8 +138,8 @@ void testApp::setup() {
     mesh.enableColors();
     mesh.enableIndices();
 
-    ofVec3f top(100.0, 50.0, 0.0);    
-    ofVec3f left(50.0, 150.0, 0.0);    
+    ofVec3f top(100.0, 50.0, 0.0);
+    ofVec3f left(50.0, 150.0, 0.0);
     ofVec3f right(150.0, 150.0, 0.0);
 
     mesh.addVertex(top);
@@ -159,7 +159,7 @@ void testApp::setup() {
     mesh.addIndex(0);
 }
 ~~~
- 
+
 Indices add a layer of abstraction.  Each vertex that you add to a mesh is tacked on to the end of a big old array.  That means that each vertex has a number that uniquely identifies its position (or index) in that array.  There’s the zero-th vertex in the list, the first vertex in the list, the second, etc.  So you can point to an existing vertex using its index number.
 
 When you call mesh.[enableIndices()](http://www.openframeworks.cc/documentation/3d/ofMesh.html#!show_enableIndices), openFrameworks creates an empty array of indices.  When you use [addIndex()](http://www.openframeworks.cc/documentation/3d/ofMesh.html#show_addIndex), you are adding values to the end of this array.  When the mesh is about to be drawn to the screen, instead of looping through the array of vertices to create graphical primitives, openFrameworks will loop through your array of indices to determine how to create the primitives.
@@ -168,9 +168,9 @@ So when our mode is OF_PRIMITIVE_LINE and our array of indices is {0, 1, 1, 2, 2
 
 One more thing you might have noticed - the color of the lines.  This is some of the magic that is happening on your graphics card.  You can tell it that point A is red, point B is blue and that point A and B are connected with a line.  Then, the graphics card will (linearly) interpolate between those colors as it draws the pixels on the screen that constitute that line.
 
-As a reward for reading the whole section: 
+As a reward for reading the whole section:
 
-![Line Mode Smile](003_images/LineModeFace.png) 
+![Line Mode Smile](003_images/LineModeFace.png)
 
 I know.  It's not a great reward.  But it does show off something you can do with OF_PRIMITIVE_LINES that you can't do with the two other line primitive modes - you can create separate lines.  We will take advantage of this in the next section.
 
@@ -216,11 +216,11 @@ I know.  It's not a great reward.  But it does show off something you can do wit
 <a name="generative"></a>
 ##Generative Mesh: Using an image to drive the creation of a mesh
 
-Meshes! You now have the basic ingredients to start creating a ‘generative’ mesh.  This is just a type of mesh that is created from a set of *rules* that are applied to some *data*.  
+Meshes! You now have the basic ingredients to start creating a ‘generative’ mesh.  This is just a type of mesh that is created from a set of *rules* that are applied to some *data*.
 
 So we need some data and some rules.  Let's grab some 'data' from the Hubble Telescope:
 
-![Original hubble image](003_images/stars.png) 
+![Original hubble image](003_images/stars.png)
 
 Create a [new openFrameworks project](http://www.openframeworks.cc/tutorials/introduction/002_projectGenerator.html) called HubbleMesh and save that image as 'stars.png' in your HubbleMesh/bin/data directory.
 
@@ -248,7 +248,7 @@ There is no dedicated [ofImage](http://www.openframeworks.cc/documentation/graph
 
 We just need to load our image using [loadImage()](http://www.openframeworks.cc/documentation/graphics/ofImage.html#!show_loadImage) and draw it at the top left corner of the screen with [draw(0,0)](http://www.openframeworks.cc/documentation/graphics/ofImage.html#show_draw).
 
-Great! Image loaded.  Now, we want to create a mesh with some vertices. If we only want to create vertices at the location of stars, we can do that by searching through our pixels and look for 'bright' colors.  In order to do this, we will need to get access to the color information of the pixels using image.[getColor(x, y)](http://www.openframeworks.cc/documentation/graphics/ofImage.html#show_getColor).  We want to loop through the pixels in the image and apply a [threshold](http://en.wikipedia.org/wiki/Thresholding_%28image_processing%29) such that we only create a vertex at the pixel locations where the intensity of the color is greater than some value. 
+Great! Image loaded.  Now, we want to create a mesh with some vertices. If we only want to create vertices at the location of stars, we can do that by searching through our pixels and look for 'bright' colors.  In order to do this, we will need to get access to the color information of the pixels using image.[getColor(x, y)](http://www.openframeworks.cc/documentation/graphics/ofImage.html#show_getColor).  We want to loop through the pixels in the image and apply a [threshold](http://en.wikipedia.org/wiki/Thresholding_%28image_processing%29) such that we only create a vertex at the pixel locations where the intensity of the color is greater than some value.
 
 Add a mesh to testApp.h:
 ~~~.h
@@ -283,7 +283,7 @@ void testApp::draw(){
 }
 ~~~
 
-![Thresholded Stars Point Mesh](003_images/ThresholdedStarsSmall.png) 
+![Thresholded Stars Point Mesh](003_images/ThresholdedStarsSmall.png)
 
 In that code, we created a mesh with points for primitives.  Then we looped through each pixel in the image (using [getWidth()](http://www.openframeworks.cc/documentation/graphics/ofImage.html#show_getWidth) and [getHeight()](http://www.openframeworks.cc/documentation/graphics/ofImage.html#show_getHeight)) and checked the intensity of each pixel's color using [getLightness()](http://www.openframeworks.cc/documentation/types/ofColor.html#!show_getLightness).  If the intensity exceeded our threshold, we created a vertex at the location of the pixel and colored it with the pixel's color.  Finally, we drew our mesh on a blue background so that we could see which pixels from the image were used to generate vertices.  You can raise or lower the threshold value to decrease or increase (respectively) the number of vertices.
 
@@ -291,16 +291,16 @@ Let's make that background into something more fitting using [ofBackgroundGradie
 
 ~~~.cpp
 void testApp::draw(){
-    ofColor centerColor = ofColor(85, 78, 68); 
+    ofColor centerColor = ofColor(85, 78, 68);
     ofColor edgeColor(0, 0, 0);
     ofBackgroundGradient(centerColor, edgeColor, OF_GRADIENT_CIRCULAR);
     mesh.draw();
 }
 ~~~
 
-Almost time for lines, lines, lines!  
+Almost time for lines, lines, lines!
 
-We have a lot of vertices in our mesh.  You can check the number using [getNumVertices()](http://www.openframeworks.cc/documentation/3d/ofMesh.html#show_getNumVertices) if you like: 
+We have a lot of vertices in our mesh.  You can check the number using [getNumVertices()](http://www.openframeworks.cc/documentation/3d/ofMesh.html#show_getNumVertices) if you like:
 
 ~~~.cpp
     cout << mesh.getNumVertices() << endl;  // It should be ~64,000
@@ -317,7 +317,7 @@ And then because our image pixel are no longer one-to-one with our openFramework
 
 ~~~.cpp
             if (c.getLightness() > intensityThreshold) {
-                // We shrunk our image by a factor of 4, so we need to multiply our pixel 
+                // We shrunk our image by a factor of 4, so we need to multiply our pixel
                 // locations by 4 in order to have our mesh cover the openFrameworks window
                 ofVec3f pos(4*x, 4*y, 0.0);
                 mesh.addVertex(pos);
@@ -353,7 +353,7 @@ Now that we have a reasonable number of vertices (~2000), we can start connectin
 
 You should end up with something like this (if the code is taking too long to run on your machine, try increasing the *intensityThreshold* variable to reduce the number of vertices):
 
-![First Line Mesh](003_images/StarLinesFirstMeshSmall.png) 
+![First Line Mesh](003_images/StarLinesFirstMeshSmall.png)
 
 Let's take a look at that code again:
 
@@ -400,7 +400,7 @@ void testApp::draw(){
 [ofEasyCam](http://www.openframeworks.cc/documentation/3d/ofEasyCam.html) is a quick way to get a feel for that elusive 3rd dimension in your generative mesh.  The [opengl tutorial](http://www.openframeworks.cc/tutorials/graphics/opengl.html) goes into cameras, [ofPushMatrix()](http://www.openframeworks.cc/documentation/graphics/ofGraphics.html#!show_ofPushMatrix), [ofPopMatrix()](http://www.openframeworks.cc/documentation/graphics/ofGraphics.html#!show_ofPopMatrix) and [ofTranslate()](http://www.openframeworks.cc/documentation/graphics/ofGraphics.html#!show_ofTranslate).  This code will center you mesh in the camera's view.  Now you can left click and drag to rotate! And right click and drag to zoom!
 
 
-![Line Mesh with Camera](003_images/cameraSmall.gif) 
+![Line Mesh with Camera](003_images/cameraSmall.gif)
 
 
 
@@ -412,13 +412,13 @@ We've got ourselves a meshy mesh now, so let's go ahead and add some more rules 
 ###Jitter
 The mesh resembles something you might find under a microscope, so let's add some 'organic' movement to the vertices. The motion will likely be much faster on your machine than in the gif below (browsers cap the maximum framerate of gifs), but it will give you an idea of what we are going for:
 
-![Jitter](003_images/jitterSmall.gif) 
+![Jitter](003_images/jitterSmall.gif)
 
-On each frame, we are going to move each vertex by a small, random amount.  Instead of using [ofRandom()](http://www.openframeworks.cc/documentation/math/ofMath.html#show_ofRandom) to displace our vertices, we are going to use [ofSignedNoise()](http://openframeworks.cc/documentation/math/ofMath.html#!show_ofSignedNoise) which generates a thing called Perlin noise.  Check out Daniel Shiffman's description of Perlin noise in section [1.6 Perlin Noise (A Smoother Approach)](http://natureofcode.com/book/introduction/#i6-perlin-noise-a-smoother-approach) of his online book.  Perlin noise yields random values that smoothly vary over time.  You can get a good idea of the difference between random values and perlin noise by checking out [figure 1.5](http://natureofcode.com/book/imgs/intro/intro_05.png) (which shows sequential values of noise) and [figure 1.6](http://natureofcode.com/book/imgs/intro/intro_06.png) (which shows sequential random values) from the book.  
+On each frame, we are going to move each vertex by a small, random amount.  Instead of using [ofRandom()](http://www.openframeworks.cc/documentation/math/ofMath.html#show_ofRandom) to displace our vertices, we are going to use [ofSignedNoise()](http://openframeworks.cc/documentation/math/ofMath.html#!show_ofSignedNoise) which generates a thing called Perlin noise.  Check out Daniel Shiffman's description of Perlin noise in section [1.6 Perlin Noise (A Smoother Approach)](http://natureofcode.com/book/introduction/#i6-perlin-noise-a-smoother-approach) of his online book.  Perlin noise yields random values that smoothly vary over time.  You can get a good idea of the difference between random values and Perlin noise by checking out [figure 1.5](http://natureofcode.com/book/imgs/intro/intro_05.png) (which shows sequential values of noise) and [figure 1.6](http://natureofcode.com/book/imgs/intro/intro_06.png) (which shows sequential random values) from the book.
 
-With ofRandom(), you specify a range of values, and it returns a random value within that range.  If you were to call it multiple times in a row, you will (very, very likely) get a new value every time you call it.  Perlin noise works a bit differently.  ofSignedNoise() will always return a value between -1.0 and 1.0, but you still have to pass in an input to the function.  Think of ofSignedNoise() as a squiggly line drawn on graph paper.  You pass in a coordinate, an x value, and it will return the corresponding y value.  If you were to call ofSignedNoise(3.0) multiple times, you would get the same value every time.  
+With ofRandom(), you specify a range of values, and it returns a random value within that range.  If you were to call it multiple times in a row, you will (very, very likely) get a new value every time you call it.  Perlin noise works a bit differently.  ofSignedNoise() will always return a value between -1.0 and 1.0, but you still have to pass in an input to the function.  Think of ofSignedNoise() as a squiggly line drawn on graph paper.  You pass in a coordinate, an x value, and it will return the corresponding y value.  If you were to call ofSignedNoise(3.0) multiple times, you would get the same value every time.
 
-When using Perlin noise to generate motion, it is common to pass in the current time as the input (the x value).  So, in order to displace our vertices, we are going to pass in the time (using [ofGetElapsedTimef()](http://www.openframeworks.cc/documentation/utils/ofUtils.html#!show_ofGetElapsedTimef])) to ofSignedNoise, so that it will give us values that change smoothly over time.  One caveat - we want our vertices to appear to move independently of one another.  If we pass in the same time to ofSignedNoise for every vertex on a frame, then every vertex will move in the same direction.  When we displace vertex one, we need to use a different time than when we displace vertex two (and vertex 3, vertex 4, etc.).  
+When using Perlin noise to generate motion, it is common to pass in the current time as the input (the x value).  So, in order to displace our vertices, we are going to pass in the time (using [ofGetElapsedTimef()](http://www.openframeworks.cc/documentation/utils/ofUtils.html#!show_ofGetElapsedTimef])) to ofSignedNoise, so that it will give us values that change smoothly over time.  One caveat - we want our vertices to appear to move independently of one another.  If we pass in the same time to ofSignedNoise for every vertex on a frame, then every vertex will move in the same direction.  When we displace vertex one, we need to use a different time than when we displace vertex two (and vertex 3, vertex 4, etc.).
 
 Let's jump into the code.  Add this to your header:
 ~~~.h
@@ -429,7 +429,7 @@ And add the following two lines to your setup function:
 ~~~.cpp
     // Add this line:
     ofSetFrameRate(60);
-    
+
     // Some lines of code omitted for clarity, you should still
     // keep them in your local version
 
@@ -445,7 +445,7 @@ And add the following two lines to your setup function:
                 mesh.addColor(c);
 
                 // And add this line:
-                // It will create a ofVec3f with 3 random values 
+                // It will create a ofVec3f with 3 random values
                 // These will allow us to move the x, y and z coordinates of each vertex independently
                 offsets.push_back(ofVec3f(ofRandom(0,100000), ofRandom(0,100000), ofRandom(0,100000)));
             }
@@ -463,15 +463,15 @@ And finally, add these lines to your update function:
         float timeScale = 5.0;
         float displacementScale = 0.75;
         ofVec3f timeOffsets = offsets[i];
-	
+
 	    // A typical design pattern for using Perlin noise uses a couple parameters:
 	    // ofSignedNoise(time*timeScale+timeOffset)*displacementScale
 	    //     ofSignedNoise(time) gives us noise values that change smoothly over time
 	    //     ofSignedNoise(time*timeScale) allows us to control the smoothness of our noise (smaller timeScale, smoother values)
 	    //     ofSignedNoise(time+timeOffset) allows us to use the same Perlin noise function to control multiple things and have them look as if they are moving independently
-	    //     ofSignedNoise(time)*displacementScale allows us to change the bounds of the noise from [-1, 1] to whatever we want 
+	    //     ofSignedNoise(time)*displacementScale allows us to change the bounds of the noise from [-1, 1] to whatever we want
 	    // Combine all of those parameters together, and you've got some nice control over your noise
-	
+
         vert.x += (ofSignedNoise(time*timeScale+timeOffsets.x)) * displacementScale;
         vert.y += (ofSignedNoise(time*timeScale+timeOffsets.y)) * displacementScale;
         vert.z += (ofSignedNoise(time*timeScale+timeOffsets.z)) * displacementScale;
@@ -493,13 +493,13 @@ Then in update:
 Great! Now we have a warbly mesh.
 
 ###Orbit
-Next, we can add some swirling orbital motion.  These *were* originally stars after all, so it seems fitting. 
+Next, we can add some swirling orbital motion.  These *were* originally stars after all, so it seems fitting.
 
-![Orbit](003_images/orbitSmall.gif) 
+![Orbit](003_images/orbitSmall.gif)
 
-We're going to make use of trigonometric functions to make orbital motion.  If you want a good primer, check out [chapter 3](http://natureofcode.com/book/chapter-3-oscillation/) of The Nature of Code.  
+We're going to make use of trigonometric functions to make orbital motion.  If you want a good primer, check out [chapter 3](http://natureofcode.com/book/chapter-3-oscillation/) of The Nature of Code.
 
-Let's forget about the z-dimension for now and focus in on the x- and y-dimensions.  If we want to take a point and have it orbit in a circle, we can make use of angles, sine and cosine to do that.  Check out the [wiki](http://en.wikipedia.org/wiki/Polar_coordinate_system) on polar coordinates - specifically, have a look at the section on "Converting between polar and Cartesian coordinates."  
+Let's forget about the z-dimension for now and focus in on the x- and y-dimensions.  If we want to take a point and have it orbit in a circle, we can make use of angles, sine and cosine to do that.  Check out the [wiki](http://en.wikipedia.org/wiki/Polar_coordinate_system) on polar coordinates - specifically, have a look at the section on "Converting between polar and Cartesian coordinates."
 
 If we know how far our point is from the center, we can define its location in space using a distance and an angle (polar coordinates).  We can take that distance and angle and use it to convert to x and y values (Cartesian coordinates):
 ~~~.cpp
@@ -507,7 +507,7 @@ If we know how far our point is from the center, we can define its location in s
     y = distance * sin(angle)
 ~~~
 
-If you want to swing that point around in a circle, then you just need to increase the angle over time, and the maths will take care of the rest.  
+If you want to swing that point around in a circle, then you just need to increase the angle over time, and the maths will take care of the rest.
 
 So for our meshy purposes, we need to:
 
@@ -521,7 +521,7 @@ Let's get some new variables in our header file:
 		ofMesh meshCopy;
 		bool orbiting;
 		float startOrbitTime;
-		
+
 		// These variables will let us store the polar coordinates of each vertex
 		vector<float> distances;
 		vector<float> angles;
@@ -531,11 +531,11 @@ Let's get some new variables in our header file:
 Add this at the end of your setup function:
 ~~~.cpp
    // We need to calculate our center point for the mesh
-   // ofMesh has a method called getCentroid() that will 
+   // ofMesh has a method called getCentroid() that will
    // find the average location over all of our vertices
    //    http://en.wikipedia.org/wiki/Centroid
    meshCentroid = mesh.getCentroid();
-   
+
    // Now that we know our centroid, we need to know the polar coordinates (distance and angle)
    // of each vertex relative to that center point.
    // We've found the distance between points before, but what about the angle?
@@ -549,7 +549,7 @@ Add this at the end of your setup function:
         distances.push_back(distance);
         angles.push_back(angle);
     }
-	
+
     // These variables will allow us to toggle orbiting on and off
     orbiting = false;
     startOrbitTime = 0.0;
@@ -564,20 +564,20 @@ Add this into your update function:
             float distance = distances[i];
             float angle = angles[i];
             float elapsedTime = ofGetElapsedTimef() - startOrbitTime;
-            
-            // Lets adjust the speed of the orbits such that things that are closer to 
-            // the center rotate faster than things that are more distant 
+
+            // Lets adjust the speed of the orbits such that things that are closer to
+            // the center rotate faster than things that are more distant
             float speed = ofMap(distance, 0, 200, 1, 0.25, true);
-            
+
             // To find the angular rotation of our vertex, we use the current time and
             // the starting angular rotation
             float rotatedAngle = elapsedTime * speed + angle;
-            
+
             // Remember that our distances are calculated relative to the centroid of the mesh, so
-            // we need to shift everything back to screen coordinates by adding the x and y of the centroid 
+            // we need to shift everything back to screen coordinates by adding the x and y of the centroid
             vert.x = distance * cos(rotatedAngle) + meshCentroid.x;
             vert.y = distance * sin(rotatedAngle) + meshCentroid.y;
-            
+
             mesh.setVertex(i, vert);
         }
     }
@@ -593,7 +593,7 @@ And this into your keyPressed function:
 
 Now you should be able to toggle orbiting on and off using the 'o' key!
 
-One additional programming note: the variable *meshCopy* was used as a backup copy of the original mesh that could be reloaded when needed.  In the setup function, when we used the line: 
+One additional programming note: the variable *meshCopy* was used as a backup copy of the original mesh that could be reloaded when needed.  In the setup function, when we used the line:
 ~~~.cpp
 meshCopy = mesh;
 ~~~
@@ -603,17 +603,17 @@ We were creating a separate copy of the variable *mesh* and storing it in the va
 ###Magnifying
 The last tweak we will add gives a bit of interactivity to the mesh.  We will add a magnifying glass effect:
 
-![Magnified](003_images/magnifierSmall.gif) 
+![Magnified](003_images/magnifierSmall.gif)
 
 It's technically a misnomer to call it a magnifying glass effect. It is really based off of a thing in optics called [barrel distortion](http://en.wikipedia.org/wiki/Distortion_(optics)).  The effect looks like this when we apply it to a grid:
 
-![Grid](003_images/GridSmall.png) 
-![BarrelDistortedGrid](003_images/BarrelDistortedGridSmall.png) 
+![Grid](003_images/GridSmall.png)
+![BarrelDistortedGrid](003_images/BarrelDistortedGridSmall.png)
 
 What we are going to do is:
 
 1. Find where the mouse is on the screen.
-2. Find the direction that points from the mouse to each vertex.  
+2. Find the direction that points from the mouse to each vertex.
 3. Push each vertex away from the mouse in that direction.
     * If a vertex is close to the mouse, push it a large distance.
     * If a vertex is far away from the mouse, push it a small distance.
@@ -640,18 +640,18 @@ Add this chunk of code at that start of our update function:
         for (int i=0; i<mesh.getNumVertices(); ++i) {
             ofVec3f vertex = meshCopy.getVertex(i);
             float distanceToMouse = mouse.distance(vertex);
-            
+
             // Scale the displacement based on the distance to the mouse
             // Small distance to mouse should yield a small displacement
             float displacement = ofMap(distanceToMouse, 0, 400, 300.0, 0, true);
-            
+
             // Calculate the direction from the mouse to the current vertex
             ofVec3f direction = vertex - mouse;
-            
+
             // Normalize the direction so that it has a length of one
             // This lets us easily change the length of the vector later
             direction.normalize();
-            
+
             // Push the vertex in the direction away from the mouse and push it
             // a distance equal to the value of the variable displacement
             ofVec3f displacedVertex = vertex + displacement*direction;

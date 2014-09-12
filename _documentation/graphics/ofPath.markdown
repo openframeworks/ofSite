@@ -20,8 +20,8 @@ ofPath is a way to create a path or multiple paths consisting of points. It allo
 
 ~~~~{.cpp}
 for( int i = 0; i < 5; i++) {
-	path.arc( i * 50 + 20, i * 50 + 20, i * 40 + 10, i * 40 + 10, 0, 360); // creates a new ofSubPath
-	path.close();
+    path.arc( i * 50 + 20, i * 50 + 20, i * 40 + 10, i * 40 + 10, 0, 360); // creates a new ofSubPath
+    path.close();
 }
 ~~~~
 
@@ -487,15 +487,15 @@ float cx = ofGetWidth()/2;
 float cy = 200;
 float step = TWO_PI / 60;
 for (float i = 0.0; i < TWO_PI; i+=step) {
-	
-	
-	if(i == 0.0) {
-		line.addVertex(cx + (400*cos(i)), cy+400, 400 * sin(i));
-	} else {
-		line.bezierTo( cx - (200*cos(i)), cy-100, 400 * sin(i), 
-					   cx + (200*cos(i)), cy+600, 400 * sin(i), 
-					   cx + (400*cos(i)), cy+400, 400 * sin(i));
-	}
+
+
+    if(i == 0.0) {
+        line.addVertex(cx + (400*cos(i)), cy+400, 400 * sin(i));
+    } else {
+        line.bezierTo( cx - (200*cos(i)), cy-100, 400 * sin(i),
+                       cx + (200*cos(i)), cy+600, 400 * sin(i),
+                       cx + (400*cos(i)), cy+400, 400 * sin(i));
+    }
 }
 ~~~~
 
@@ -776,10 +776,10 @@ Draws a curve to x,y from the current drawing position. To draw a small rose cur
 ~~~~{.cpp}
 float scale = ofDist(mouseX, mouseY, px, py);
 
-for( float theta = 0; theta < TWO_PI; theta += 0.1) 
+for( float theta = 0; theta < TWO_PI; theta += 0.1)
 {
-	float r =  cos(theta * (scale/6)) * scale; 
-	path.curveTo(mouseX + r * cos(theta), mouseY + r * sin(theta));
+    float r =  cos(theta * (scale/6)) * scale;
+    path.curveTo(mouseX + r * cos(theta), mouseY + r * sin(theta));
 }
 
 px = mouseX;
@@ -2849,7 +2849,7 @@ _inlined_description: _
 _description: _
 
 
-This sets the color of the path. This affects both the line if the path is drawn as wireframe and the fill if the path is drawn with fill. All subpaths are affeted.
+This sets the color of the path. This affects both the line if the path is drawn as wireframe and the fill if the path is drawn with fill. All subpaths are affected.
 
 
 
@@ -2941,60 +2941,60 @@ So adding the following points:
 
 ~~~~{.cpp}
 void ofApp::setup(){
-	
-	path.lineTo(0, 400);
-	path.lineTo(400, 400);
-	path.lineTo(400, 0);
-	path.lineTo(0, 0); // outer
-	path.close();
-	path.moveTo(100, 100);
-	path.lineTo(100, 300);
-	path.lineTo(300, 300);
-	path.lineTo(300, 100); 
-	path.lineTo(100, 100); // inner 1
-	path.close();
-	path.moveTo(250, 150);
-	path.lineTo(150, 150);
-	path.lineTo(150, 250);
-	path.lineTo(250, 250); 
-	path.lineTo(250, 150); // inner 2 (backwards)
-	
-	
-	path2.lineTo(0, 400);
-	path2.lineTo(400, 400);
-	path2.lineTo(400, 0);
-	path2.lineTo(0, 0); // outer
-	path2.close();
-	path2.moveTo(100, 100);
-	path2.lineTo(300, 100);
-	path2.lineTo(300, 300);
-	path2.lineTo(100, 300); 
-	path2.lineTo(100, 100); // inner 1
-	path2.close();
-	path2.moveTo(150, 150);
-	path2.lineTo(250, 150);
-	path2.lineTo(250, 250);
-	path2.lineTo(150, 250); 
-	path2.lineTo(150, 150); // inner 2 (fwds)
+
+    path.lineTo(0, 400);
+    path.lineTo(400, 400);
+    path.lineTo(400, 0);
+    path.lineTo(0, 0); // outer
+    path.close();
+    path.moveTo(100, 100);
+    path.lineTo(100, 300);
+    path.lineTo(300, 300);
+    path.lineTo(300, 100);
+    path.lineTo(100, 100); // inner 1
+    path.close();
+    path.moveTo(250, 150);
+    path.lineTo(150, 150);
+    path.lineTo(150, 250);
+    path.lineTo(250, 250);
+    path.lineTo(250, 150); // inner 2 (backwards)
+
+
+    path2.lineTo(0, 400);
+    path2.lineTo(400, 400);
+    path2.lineTo(400, 0);
+    path2.lineTo(0, 0); // outer
+    path2.close();
+    path2.moveTo(100, 100);
+    path2.lineTo(300, 100);
+    path2.lineTo(300, 300);
+    path2.lineTo(100, 300);
+    path2.lineTo(100, 100); // inner 1
+    path2.close();
+    path2.moveTo(150, 150);
+    path2.lineTo(250, 150);
+    path2.lineTo(250, 250);
+    path2.lineTo(150, 250);
+    path2.lineTo(150, 150); // inner 2 (fwds)
 
 }
 
 void ofApp::draw(){
-	
-	ofTranslate(40,40);
-	path.draw();
-	ofTranslate(410, 0);
-	path2.draw();
-	
+
+    ofTranslate(40,40);
+    path.draw();
+    ofTranslate(410, 0);
+    path2.draw();
+
 }
 
 void ofApp::keyPressed(int key){
-	
-	mode++;
-	if( mode > 4 ) mode = 0;
-	
-	path.setPolyWindingMode((ofPolyWindingMode) mode);
-	path2.setPolyWindingMode((ofPolyWindingMode) mode);
+
+    mode++;
+    if( mode > 4 ) mode = 0;
+
+    path.setPolyWindingMode((ofPolyWindingMode) mode);
+    path2.setPolyWindingMode((ofPolyWindingMode) mode);
 
 }
 ~~~~

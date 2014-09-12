@@ -39,16 +39,16 @@ You'll see this in the OF core code in places like ofVideoPlayer:
 setPlayer(ofPtr<ofBaseVideoPlayer> newPlayer);
 ~~~~
 
-When you should use ofPtr: 
+When you should use ofPtr:
 
-*	When you have a resource that you need to dynamic allocate and delete and share among multiple objects and processes. 
-*	When your code is not heavily multi-threaded. 
-*	When you don't need blazing speed for pointer access because a shared pointer is *not* a pointer, it's more complex and slower.
-*	When you don't to have multiple processes handle deleting a resource.
+*   When you have a resource that you need to dynamic allocate and delete and share among multiple objects and processes.
+*   When your code is not heavily multi-threaded.
+*   When you don't need blazing speed for pointer access because a shared pointer is *not* a pointer, it's more complex and slower.
+*   When you don't to have multiple processes handle deleting a resource.
 
 For more info on shared pointers this is an excellent reference:  http://ootips.org/yonat/4dev/smart-pointers.html
 
-or you can look at the Poco implementation of shared pointers: http://pocoproject.org/slides/030-MemoryManagement.pdf (linking into their documenation isn't possible, frame fail)
+or you can look at the Poco implementation of shared pointers: http://pocoproject.org/slides/030-MemoryManagement.pdf (linking into their documentation isn't possible, frame fail)
 
 
 

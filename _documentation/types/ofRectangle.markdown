@@ -9,10 +9,10 @@ _istemplated: False_
 
 ##InlineDescription
 
-A class representing a 2D rectangle. 
+A class representing a 2D rectangle.
 
 
-ofRectangle is a simple container for describing the position and size of a 2D rectangle. Since the width and height variables can be negative, the x/y position is not garanteed to represent the upper right hand corner. For example, two visually identical rectangles can be represented in the following ways: ofRectangle myRect(0, 0, 100, 100);
+ofRectangle is a simple container for describing the position and size of a 2D rectangle. Since the width and height variables can be negative, the x/y position is not guaranteed to represent the upper right hand corner. For example, two visually identical rectangles can be represented in the following ways: ofRectangle myRect(0, 0, 100, 100);
 
 
 or ofRectangle myRect(100, 100, -100, -100);
@@ -20,7 +20,7 @@ or ofRectangle myRect(100, 100, -100, -100);
 
 While both representations will yield the same visual results in all openFrameworks renderers, the results of some method operations that modify x, y, width and height (such as scaling) produce mathematically correct, but visually different results for each of the above representations.
 
-To avoid this ambiguity, users planning to should prefer "standardized" rectangles. "Standardized" rectangles are rectangles whose width >= 0 and height >= 0. The ofRectangle::standardize() method can be used to ensure that the is in it the "standard" form. 
+To avoid this ambiguity, users planning to should prefer "standardized" rectangles. "Standardized" rectangles are rectangles whose width >= 0 and height >= 0. The ofRectangle::standardize() method can be used to ensure that the is in it the "standard" form.
 
 
 
@@ -75,16 +75,16 @@ If neither constant is passed in, this will align the center of the rectangle.
 
 __ofAlignHorz Constants:__
 
-__OF_ALIGN_HORZ_IGNORE__              : Does not perform any horizontal alignment.  
+__OF_ALIGN_HORZ_IGNORE__              : Does not perform any horizontal alignment.
 __OF_ALIGN_HORZ_LEFT__                : Uses the left edge of the rectangle to horizontally anchor the alignment.
 __OF_ALIGN_HORZ_RIGHT__               : Uses the right edge of the rectangle to horizontally anchor the alignment.
-__OF_ALIGN_HORZ_CENTER__              : Uses the center of the rectangle to horizontally anchor the alignment.  
+__OF_ALIGN_HORZ_CENTER__              : Uses the center of the rectangle to horizontally anchor the alignment.
 
 __ofAlignVert Constants:__
 
-__OF_ALIGN_VERT_IGNORE__              : Does not perform any vertical alignment.  
-__OF_ALIGN_VERT_TOP__                 : Uses the upper edge of the rectangle to vertically anchor the alignment.  
-__OF_ALIGN_VERT_BOTTOM__              : Uses the bottom edge of the rectangle to vertically anchor the alignment.  
+__OF_ALIGN_VERT_IGNORE__              : Does not perform any vertical alignment.
+__OF_ALIGN_VERT_TOP__                 : Uses the upper edge of the rectangle to vertically anchor the alignment.
+__OF_ALIGN_VERT_BOTTOM__              : Uses the bottom edge of the rectangle to vertically anchor the alignment.
 __OF_ALIGN_VERT_CENTER__              : Uses the center of the rectangle to vertically anchor the alignment.
 
 For a working example of how to use ofAlignVert and ofAlignHorz, see the *graphics/rectangleAlignmentAndScaling/* example within the examples directory.
@@ -128,7 +128,7 @@ _description: _
 
 
 Aligns the position of the ofRectangle to that of the passed-in ofRectangle.  Can take an ofAlignHorz constant and an ofAlignVert constant.
-If neither constant is passed in, this will align the centers of the rectangles. 
+If neither constant is passed in, this will align the centers of the rectangles.
 If constants are passed in, it will use those constants for both rectangles.
 
 For a description of the available options, see above.
@@ -219,10 +219,10 @@ If a constant is not passed in, this will align the center of the rectangle.
 
 __ofAlignHorz Constants:__
 
-__OF_ALIGN_HORZ_IGNORE__              : Does not perform any horizontal alignment.  
+__OF_ALIGN_HORZ_IGNORE__              : Does not perform any horizontal alignment.
 __OF_ALIGN_HORZ_LEFT__                : Uses the left edge of the rectangle to horizontally anchor the alignment.
 __OF_ALIGN_HORZ_RIGHT__               : Uses the right edge of the rectangle to horizontally anchor the alignment.
-__OF_ALIGN_HORZ_CENTER__              : Uses the center of the rectangle to horizontally anchor the alignment.  
+__OF_ALIGN_HORZ_CENTER__              : Uses the center of the rectangle to horizontally anchor the alignment.
 
 For a working example of how to use ofAlignHorz, see the *graphics/rectangleAlignmentAndScaling/* example within the examples directory.
 
@@ -265,7 +265,7 @@ _description: _
 
 
 Aligns the horizontal position of the ofRectangle to that of the passed-in ofRectangle.  Can take an ofAlignHorz constant.
-If a constant is not passed in, this will align the horizontal centers of the rectangles. 
+If a constant is not passed in, this will align the horizontal centers of the rectangles.
 If a constant is passed in, it will use that constant for both rectangles.
 
 For a description of the available options, see above.
@@ -356,9 +356,9 @@ If a constant is not passed in, this will align the center of the rectangle.
 
 __ofAlignVert Constants:__
 
-__OF_ALIGN_VERT_IGNORE__              : Does not perform any vertical alignment.  
-__OF_ALIGN_VERT_TOP__                 : Uses the upper edge of the rectangle to vertically anchor the alignment.  
-__OF_ALIGN_VERT_BOTTOM__              : Uses the bottom edge of the rectangle to vertically anchor the alignment.  
+__OF_ALIGN_VERT_IGNORE__              : Does not perform any vertical alignment.
+__OF_ALIGN_VERT_TOP__                 : Uses the upper edge of the rectangle to vertically anchor the alignment.
+__OF_ALIGN_VERT_BOTTOM__              : Uses the bottom edge of the rectangle to vertically anchor the alignment.
 __OF_ALIGN_VERT_CENTER__              : Uses the center of the rectangle to vertically anchor the alignment.
 
 For a working example of how to use ofAlignVert, see the *graphics/rectangleAlignmentAndScaling/* example within the examples directory.
@@ -402,7 +402,7 @@ _description: _
 
 
 Aligns the vertical position of the ofRectangle to that of the passed-in ofRectangle.  Can take an ofAlignVert constant.
-If a constant is not passed in, this will align the vertical centers of the rectangles. 
+If a constant is not passed in, this will align the vertical centers of the rectangles.
 If a constant is passed in, it will use that constant for both rectangles.
 
 For a description of the available options, see above.
@@ -491,11 +491,11 @@ _description: _
 Returns the area of the ofRectangle as a float.
 This is the product of the width and height.
 
-Example: 
+Example:
 ~~~~{.cpp}
 
 // Create a rectangle that is 100 units wide and 200 units tall
-ofRectangle myRect(0,0,100,200);  
+ofRectangle myRect(0,0,100,200);
 
 // Get the area of that rectangle
 float areaValue = myRect.getArea();
@@ -541,13 +541,13 @@ _inlined_description: _
 _description: _
 
 
-Returns the ratio of width to height of the ofRectangle as a float.  
+Returns the ratio of width to height of the ofRectangle as a float.
 
-Example: 
+Example:
 ~~~~{.cpp}
 
 // Create a rectangle that is 100 units wide and 200 units tall
-ofRectangle myRect(0,0,100,200);  
+ofRectangle myRect(0,0,100,200);
 
 // Get the aspect ratio of that rectangle
 float aspectRatioValue = myRect.getAspectRatio();
@@ -635,7 +635,7 @@ _inlined_description: _
 _description: _
 
 
-Returns the (x,y) coordinates of the bottom left corner of the rectangle as an ofPoint. 
+Returns the (x,y) coordinates of the bottom left corner of the rectangle as an ofPoint.
 
 
 
@@ -675,7 +675,7 @@ _inlined_description: _
 _description: _
 
 
-Returns the (x,y) coordinates of the bottom right corner of the rectangle as an ofPoint. 
+Returns the (x,y) coordinates of the bottom right corner of the rectangle as an ofPoint.
 
 Equivalent to ofRectangle::getMax().
 
@@ -717,7 +717,7 @@ _inlined_description: _
 _description: _
 
 
-Returns the (x,y) coordinates of the center of the rectangle as an ofPoint. 
+Returns the (x,y) coordinates of the center of the rectangle as an ofPoint.
 
 
 
@@ -797,15 +797,15 @@ _inlined_description: _
 _description: _
 
 
-getHorzAnchor is a convenience method that returns the value of one of the horizontal edges of the ofRectangle 
-using the ofAlignHorz enum.  
+getHorzAnchor is a convenience method that returns the value of one of the horizontal edges of the ofRectangle
+using the ofAlignHorz enum.
 
 Possible anchor values are:
 
-__OF_ALIGN_HORZ_IGNORE__  : returns 0.0  
-__OF_ALIGN_HORZ_LEFT__    : returns the position of the left edge, equivalent to ofRectangle::geLeft().  
-__OF_ALIGN_HORZ_RIGHT__   : returns the position of the right edge, equivalent to ofRectangle::getRight().  
-__OF_ALIGN_HORZ_CENTER__  : returns the x position of the center of the ofRectangle.  
+__OF_ALIGN_HORZ_IGNORE__  : returns 0.0
+__OF_ALIGN_HORZ_LEFT__    : returns the position of the left edge, equivalent to ofRectangle::geLeft().
+__OF_ALIGN_HORZ_RIGHT__   : returns the position of the right edge, equivalent to ofRectangle::getRight().
+__OF_ALIGN_HORZ_CENTER__  : returns the x position of the center of the ofRectangle.
 
 Any other anchor value will return 0.0.
 
@@ -933,7 +933,7 @@ _inlined_description: _
 _description: _
 
 
-Returns the (x,y) coordinates of the corner of the rectangle with the largest x and largest y position as an ofPoint. 
+Returns the (x,y) coordinates of the corner of the rectangle with the largest x and largest y position as an ofPoint.
 
 Equivalent to ofRectangle::getBottomRight().
 
@@ -975,7 +975,7 @@ _inlined_description: _
 _description: _
 
 
-Returns the position of the larger of the two sides of the rectangle perpendicular to the x axis as a float. 
+Returns the position of the larger of the two sides of the rectangle perpendicular to the x axis as a float.
 
 Equivalent to ofRectangle::getRight().
 
@@ -1017,7 +1017,7 @@ _inlined_description: _
 _description: _
 
 
-Returns the position of the larger of the two sides of the rectangle perpendicular to the y axis as a float. 
+Returns the position of the larger of the two sides of the rectangle perpendicular to the y axis as a float.
 
 Equivalent to ofRectangle::getBottom().
 
@@ -1059,7 +1059,7 @@ _inlined_description: _
 _description: _
 
 
-Returns the (x,y) coordinates of the corner of the rectangle with the smallest x and y position as an ofPoint. 
+Returns the (x,y) coordinates of the corner of the rectangle with the smallest x and y position as an ofPoint.
 
 Equivalent to ofRectangle::getTopLeft().
 
@@ -1101,7 +1101,7 @@ _inlined_description: _
 _description: _
 
 
-Returns the position of the smaller of the two sides of the rectangle perpendicular to the x axis as a float. 
+Returns the position of the smaller of the two sides of the rectangle perpendicular to the x axis as a float.
 
 Equivalent to ofRectangle::getLeft().
 
@@ -1143,7 +1143,7 @@ _inlined_description: _
 _description: _
 
 
-Returns the position of the smaller of the two sides of the rectangle perpendicular to the y axis as a float. 
+Returns the position of the smaller of the two sides of the rectangle perpendicular to the y axis as a float.
 
 Equivalent to ofRectangle::getTop().
 
@@ -1188,11 +1188,11 @@ _description: _
 Returns the perimeter of the ofRectangle as a float.
 This is the sum of the lengths of the sides.
 
-Example: 
+Example:
 ~~~~{.cpp}
 
 // Create a rectangle that is 100 units wide and 200 units tall
-ofRectangle myRect(0,0,100,200);  
+ofRectangle myRect(0,0,100,200);
 
 // Get the perimeter of that rectangle
 float perimeterValue = myRect.getPerimeter();
@@ -1238,7 +1238,7 @@ _inlined_description: _
 _description: _
 
 
-Returns the (x,y) position of the ofRectangle as an ofPoint. 
+Returns the (x,y) position of the ofRectangle as an ofPoint.
 
 Equivalent to ofRectangle::getPositionRef().
 
@@ -1280,7 +1280,7 @@ _inlined_description: _
 _description: _
 
 
-Returns the current (x,y) position of the ofRectangle as an ofPoint. 
+Returns the current (x,y) position of the ofRectangle as an ofPoint.
 
 Equivalent to ofRectangle::getPosition().
 
@@ -1448,7 +1448,7 @@ _inlined_description: _
 _description: _
 
 
-Returns the (x,y) coordinates of the top left corner of the ofRectangle as an ofPoint. 
+Returns the (x,y) coordinates of the top left corner of the ofRectangle as an ofPoint.
 
 Equivalent to ofRectangle::getMin().
 
@@ -1570,15 +1570,15 @@ _inlined_description: _
 _description: _
 
 
-getVertAnchor is a convenience method that returns the value of one of the vertical edges of the ofRectangle 
-using the ofAlignVert enum.  
+getVertAnchor is a convenience method that returns the value of one of the vertical edges of the ofRectangle
+using the ofAlignVert enum.
 
 Possible anchor values are:
 
-__OF_ALIGN_VERT_IGNORE__  : returns 0.0  
-__OF_ALIGN_VERT_TOP__     : returns the position of the upper edge, equivalent to ofRectangle::getTop().  
-__OF_ALIGN_VERT_BOTTOM__  : returns the position of the bottom edge, equivalent to ofRectangle::getBottom().  
-__OF_ALIGN_VERT_CENTER__  : returns the y position of the center of the ofRectangle.  
+__OF_ALIGN_VERT_IGNORE__  : returns 0.0
+__OF_ALIGN_VERT_TOP__     : returns the position of the upper edge, equivalent to ofRectangle::getTop().
+__OF_ALIGN_VERT_BOTTOM__  : returns the position of the bottom edge, equivalent to ofRectangle::getBottom().
+__OF_ALIGN_VERT_CENTER__  : returns the y position of the center of the ofRectangle.
 
 Any other anchor value will return 0.0.
 
@@ -2205,7 +2205,7 @@ _description: _
 Returns true if this ofRectangle is in the standardized form; that its width and height are
 both positive.
 
-For a discussion of the standardized form, see ofRectangle::standardize()  
+For a discussion of the standardized form, see ofRectangle::standardize()
 
 
 
@@ -2235,7 +2235,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Construct a rectangle with zero width and zero height at 0, 0. 
+Construct a rectangle with zero width and zero height at 0, 0.
 
 
 
@@ -2275,7 +2275,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Construct a rectangle using location and size. 
+Construct a rectangle using location and size.
 
 
 To produce consistent results, users are encouraged to initialize rectangles in the standardized form with width >=0 and height >= 0.
@@ -2320,7 +2320,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Construct a rectangle from a point and dimensions. 
+Construct a rectangle from a point and dimensions.
 
 
 To produce consistent results, users are encouraged to initialize rectangles in the standardized form with width >=0 and height >= 0.
@@ -2365,7 +2365,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Construct a rectangle by copying another rectangle. 
+Construct a rectangle by copying another rectangle.
 
 
 To produce consistent results, users are encouraged to initialize rectangles in the standardized form with width >=0 and height >= 0.
@@ -2410,7 +2410,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Construct a rectangle by defining two corners. 
+Construct a rectangle by defining two corners.
 
 
 
@@ -2611,7 +2611,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Scale the rectangle. 
+Scale the rectangle.
 
 
 Scaling will scale the width and the height, but will not change the position.
@@ -2658,7 +2658,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Scale the rectangle. 
+Scale the rectangle.
 
 
 Scaling will scale the width and the height, but will not change the position.
@@ -2705,7 +2705,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Scale the rectangle. 
+Scale the rectangle.
 
 
 Scaling will scale the width and the height, but will not change the position.
@@ -2722,7 +2722,7 @@ Scaling will scale the width and the height, but will not change the position.
 _description: _
 
 
-Scales the width and height of the ofRectangle by multiplying the current width and 
+Scales the width and height of the ofRectangle by multiplying the current width and
 height with the (x,y) coordinates of the passed-in ofPoint.
 
 
@@ -2763,7 +2763,7 @@ _inlined_description: _
 _description: _
 
 
-Uniformly scales the ofRectangle from its center point.  
+Uniformly scales the ofRectangle from its center point.
 The center point of the rectangle will remain fixed and the width, height, x, and y will be adjusted.
 
 
@@ -2804,7 +2804,7 @@ _inlined_description: _
 _description: _
 
 
-Scales both the width and height the ofRectangle from its center point.  
+Scales both the width and height the ofRectangle from its center point.
 The center point of the rectangle will remain fixed and the width, height, x, and y will be adjusted.
 
 
@@ -2845,7 +2845,7 @@ _inlined_description: _
 _description: _
 
 
-Scales both the width and height the ofRectangle from its center point.  
+Scales both the width and height the ofRectangle from its center point.
 The center point of the rectangle will remain fixed and the width, height, x, and y will be adjusted.
 
 
@@ -2930,15 +2930,15 @@ Adjusts the ofRectangle to match the passed-in ofRectangle using the passed-in o
 
 Assuming the ofRectangle as the Subject and the passed-in ofRectangle as the Target:
 
-__OF_SCALEMODE_FIT__:  
-This centers the Subject rectangle within the Target rectangle, and resizes the Subject rectangle to completely fit within the Target Rectangle.	
+__OF_SCALEMODE_FIT__:
+This centers the Subject rectangle within the Target rectangle, and resizes the Subject rectangle to completely fit within the Target Rectangle.
 
   * It fits the Subject rectangle inside the target rectangle.
   * It preserves Subject's aspect ratio.
   * The Subject's final area <= the Target's area.
   * The Subject's center == the Target's center.
 
-__OF_SCALEMODE_FILL__:  
+__OF_SCALEMODE_FILL__:
 This centers the Subject rectangle within the Target rectangle, and resizes the Subject rectangle to completely encompass the Target Rectangle.
 
   * It fills the Target rectangle with the Subject rectangle.
@@ -2946,14 +2946,14 @@ This centers the Subject rectangle within the Target rectangle, and resizes the 
   * The Subject's Area >= the Target's area.
   * The Subject's center == the Target's center.
 
-__OF_SCALEMODE_CENTER__:  
+__OF_SCALEMODE_CENTER__:
 This centers the Subject rectangle within the Target rectangle, and does not modify the Subject's scale.
 
   * It preserves the Subject's aspect ratio.
   * The Subject's area is unchanged.
   * The Subject's center == Target's center.
 
-__OF_SCALEMODE_STRETCH_TO_FILL__:  
+__OF_SCALEMODE_STRETCH_TO_FILL__:
 This simply modifies the Subject rectangle to match the Target rectangle's dimensions.
 
   * It can change the Subject's aspect ratio.
@@ -3048,22 +3048,22 @@ Assuming the ofRectangle as the Subject and the passed-in ofRectangle as the Tar
 
 __ofAspectRatioMode Options:__
 
-__OF_ASPECT_RATIO_IGNORE__            : Sets the Subject rectangle's width and height to match those of the Target.  
-__OF_ASPECT_RATIO_KEEP__              : Resizes the Subject rectangle to completely fit within the Target rectangle.  
+__OF_ASPECT_RATIO_IGNORE__            : Sets the Subject rectangle's width and height to match those of the Target.
+__OF_ASPECT_RATIO_KEEP__              : Resizes the Subject rectangle to completely fit within the Target rectangle.
 __OF_ASPECT_RATIO_KEEP_BY_EXPANDING__ : Resizes the Subject rectangle to completely enclose the Target rectangle.
 
 __ofAlignHorz Options:__
 
-__OF_ALIGN_HORZ_IGNORE__              : Does not perform any horizontal alignment.  
+__OF_ALIGN_HORZ_IGNORE__              : Does not perform any horizontal alignment.
 __OF_ALIGN_HORZ_LEFT__                : Uses the left edge of the rectangle to horizontally anchor the alignment.
 __OF_ALIGN_HORZ_RIGHT__               : Uses the right edge of the rectangle to horizontally anchor the alignment.
-__OF_ALIGN_HORZ_CENTER__              : Uses the center of the rectangle to horizontally anchor the alignment.  
+__OF_ALIGN_HORZ_CENTER__              : Uses the center of the rectangle to horizontally anchor the alignment.
 
 __ofAlignVert Options:__
 
-__OF_ALIGN_VERT_IGNORE__              : Does not perform any vertical alignment.  
-__OF_ALIGN_VERT_TOP__                 : Uses the upper edge of the rectangle to vertically anchor the alignment.  
-__OF_ALIGN_VERT_BOTTOM__              : Uses the bottom edge of the rectangle to vertically anchor the alignment.  
+__OF_ALIGN_VERT_IGNORE__              : Does not perform any vertical alignment.
+__OF_ALIGN_VERT_TOP__                 : Uses the upper edge of the rectangle to vertically anchor the alignment.
+__OF_ALIGN_VERT_BOTTOM__              : Uses the bottom edge of the rectangle to vertically anchor the alignment.
 __OF_ALIGN_VERT_CENTER__              : Uses the center of the rectangle to vertically anchor the alignment.
 
 For a working example of how to use ofAspectRatioMode, ofAlignVert, and ofAlignHorz, see the *graphics/rectangleAlignmentAndScaling/* example within the examples directory.
@@ -3136,7 +3136,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Set the position and size of a rectangle. 
+Set the position and size of a rectangle.
 
 
 To produce consistent results, users are encouraged to initialize rectangles in the standardized form with width >=0 and height >= 0.
@@ -3183,7 +3183,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Set the position and size of a rectangle. 
+Set the position and size of a rectangle.
 
 
 To produce consistent results, users are encouraged to initialize rectangles in the standardized form with width >=0 and height >= 0.
@@ -3230,7 +3230,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Set the position and size of a rectangle by defining two corners. 
+Set the position and size of a rectangle by defining two corners.
 
 
 
@@ -3275,7 +3275,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Set the position and size of a rectangle using corners. 
+Set the position and size of a rectangle using corners.
 
 
 
@@ -3322,7 +3322,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Set position and size of a rectangle from the center. 
+Set position and size of a rectangle from the center.
 
 
 The center of the rectangle is defined and the width and height grow out around the center.
@@ -3339,7 +3339,7 @@ The center of the rectangle is defined and the width and height grow out around 
 _description: _
 
 
-Sets the position, width, and height of the ofRectangle.  
+Sets the position, width, and height of the ofRectangle.
 The x and y position passed into the function determine the center point of the ofRectangle.
 
 
@@ -3370,7 +3370,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Set position and size of a rectangle from the center. 
+Set position and size of a rectangle from the center.
 
 
 The center of the rectangle is defined and the width and height grow out around the center.
@@ -3387,7 +3387,7 @@ The center of the rectangle is defined and the width and height grow out around 
 _description: _
 
 
-Sets the position, width, and height of the ofRectangle.  
+Sets the position, width, and height of the ofRectangle.
 The (x,y) coordinates passed into the function determine the center point of the ofRectangle.
 
 
@@ -3418,7 +3418,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Set the height of a rectangle. 
+Set the height of a rectangle.
 
 
 
@@ -3463,7 +3463,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Set the position of a rectangle. 
+Set the position of a rectangle.
 
 
 
@@ -3508,7 +3508,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Set the position of a rectangle. 
+Set the position of a rectangle.
 
 
 
@@ -3553,7 +3553,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Set the width of a rectangle. 
+Set the width of a rectangle.
 
 
 
@@ -3598,7 +3598,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Set the x position of a rectangle. 
+Set the x position of a rectangle.
 
 
 
@@ -3643,7 +3643,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Set the y position of a rectangle. 
+Set the y position of a rectangle.
 
 
 
@@ -3753,7 +3753,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Translate the rectangle's position by an x and y amount. 
+Translate the rectangle's position by an x and y amount.
 
 
 
@@ -3798,7 +3798,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Translate the rectangle's position by an x and y amount. 
+Translate the rectangle's position by an x and y amount.
 
 
 
@@ -3813,7 +3813,7 @@ Translate the rectangle's position by an x and y amount.
 _description: _
 
 
-Offsets the position of the ofRectangle in the both the x and y dimensions by passing in an ofPoint. 
+Offsets the position of the ofRectangle in the both the x and y dimensions by passing in an ofPoint.
 
 
 
@@ -3843,7 +3843,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Translate the x position of the rectangle. 
+Translate the x position of the rectangle.
 
 
 
@@ -3858,7 +3858,7 @@ Translate the x position of the rectangle.
 _description: _
 
 
-Offsets the position of the ofRectangle in the x dimension by a given amount. 
+Offsets the position of the ofRectangle in the x dimension by a given amount.
 
 
 
@@ -3888,7 +3888,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Translate the y position of the rectangle. 
+Translate the y position of the rectangle.
 
 
 
@@ -3933,7 +3933,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Destroy the rectangle. 
+Destroy the rectangle.
 
 
 
