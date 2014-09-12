@@ -338,7 +338,7 @@ OF_POLY_WINDING_ODD -
 OF_POLY_WINDING_NONZERO -
 OF_POLY_WINDING_POSITIVE -
 OF_POLY_WINDING_NEGATIVE -
-OF_POLY_WINDING_ABS_GEQ_TWO - 
+OF_POLY_WINDING_ABS_GEQ_TWO -
 
 
 
@@ -393,7 +393,7 @@ _advanced: False_
 _description: _
 
 
-smoothing variable contanins the information about if smoothing effect is activated or not.
+smoothing variable contains the information about if smoothing effect is activated or not.
 
 
 
