@@ -35,8 +35,8 @@ Often the FBO will contain artefacts from the memory that the graphics card has 
 When you call begin() you're telling the framebuffer to store the rendered results of any drawing calls (or shaders for that matter) in the FBO:
 
 ~~~~{.cpp}
+ofBackground(255, 0, 0);
 fbo.begin();
-	ofBackground(255, 0, 0);
 	ofSetColor(255,255,255, fadeAmnt);
 	ofRect(0,0,400,400);
 fbo.end();
