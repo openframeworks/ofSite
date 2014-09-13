@@ -1804,7 +1804,7 @@ _inlined_description: _
 _description: _
 
 
-Turns on alpha blending, which is off by default for performance purposes. It simply wraps opengl commands that enable blending, and turn on a common blend mode.
+Turns on alpha blending (which is on by default since OF version 0.8.0). It simply wraps opengl commands that enable blending, and turn on a common blend mode.
 ~~~~{.cpp}
 void ofApp::draw(){
 	ofEnableAlphaBlending();	// turn on alpha blending
