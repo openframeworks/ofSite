@@ -22,7 +22,7 @@ It has a few default controls built into it:
 
 * Left click drag = orbit the target
 * Right click drag = dolly in and out
-* Double click = reset camera positon
+* Double click = reset camera position
 
 
 

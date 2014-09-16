@@ -16,7 +16,7 @@ _istemplated: False_
 
 ##Description
 
-This class is integrated into the openframeworks events system. When a resize event happens we record window size information inside an object of the class. Used to send event messages. In the new openFrameworks release we can find a very ilustrative example about how to use events in openFrameworks.
+This class is integrated into the openframeworks events system. When a resize event happens we record window size information inside an object of the class. Used to send event messages. In the new openFrameworks release we can find a very illustrative example about how to use events in openFrameworks.
 
 
 

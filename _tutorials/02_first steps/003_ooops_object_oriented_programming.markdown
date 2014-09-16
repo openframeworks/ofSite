@@ -3,7 +3,7 @@ date: 2008/03/20 20:18:00
 title: Ooops! = Object Oriented Programming + Classes
 summary: This tutorial is an quick introduction to Object Oriented Programming in OpenFrameworks and a how-to guide to build and use your own classes.
 author: Rux
-author_site: 
+author_site:
 ---
 
 ## Contents
@@ -16,13 +16,13 @@ author_site:
 *   [6 make objects from your own Classes - part 2.1][7]
 *   [7 make objects from your own Classes - part 3][8]
 *   [8 make objects from your own Classes - part 4][9]
-    
+
 
 <h2 id="overview">Overview</h2>
 
-This tutorial is an quick introduction to Object Oriented Programming in OpenFrameworks and a how-to guide to build and use your own classes.  
+This tutorial is an quick introduction to Object Oriented Programming in OpenFrameworks and a how-to guide to build and use your own classes.
 
-Examples used are based on Mikkel Koser's ofBall class. [See forum thread here][11]   
+Examples used are based on Mikkel Koser's ofBall class. [See forum thread here][11]
 
 <h2 id="oop">What is OOP</h2>
 
@@ -37,56 +37,56 @@ some definitions:
 
 A recurring analogy is to see a Class as a the cookie cutter and the cookies as the Objects.
 
-<h2 id="classes">How to build your own Classes</h2> 
+<h2 id="classes">How to build your own Classes</h2>
 
 Classes and objects are similar to the concepts of movie clips and instances in Flash and are also a fundamental part of Java programming.
 If you have a background in Java and/or Processing this other tutorial will be useful. [OF\_for\_P5\_users][14]
 
 This is how you declare a Class -\> in the header file (\*.h), otherwise known as the declarations file. In this case, the file name should be ofBall.h
 [![Image:ex1-ball_h.jpg](003_images/Ex1-ball_h.jpg)][15]
-    
+
 ~~~~{.cpp}
     #ifndef _OF_BALL // if this class hasn't been defined, the program can define it
-    #define _OF_BALL // by using this if statement you prevent the class to be called more 
+    #define _OF_BALL // by using this if statement you prevent the class to be called more
                      // than once which would confuse the compiler
-    
+
     #include "ofMain.h"
-      
+
     class ofBall {
-    
+
         public: // place public functions or variables declarations here
-      
+
             // methods, equivalent to specific functions of your class objects
             void update();  // update method, used to refresh your objects properties
-            void draw();    // draw method, this where you'll do the object's drawing 
-      
+            void draw();    // draw method, this where you'll do the object's drawing
+
             // variables
             float x;      // position
             float y;
             float speedY; // speed and direction
             float speedX;
             int dim;      // size
-        
-      
-      
-                            
+
+
+
+
             ofBall(); // constructor - used to initialize an object, if no properties are passed
                       //               the program sets them to the default value
-      
-          
+
+
         private: // place private functions or variables declarations here
-       
+
     }; // dont't forget the semicolon!!
-    
-    #endif 
+
+    #endif
 ~~~~
-    
-    
+
+
 
 We have declared the Ball class header filer (the list of ingredients) and now lets get to the cooking part -\> what to do with the ingredients!
 Please notice the '\#include' tag, this is a way to tell the compiler which file to include for each implementation file. When the program is compiled these '\#include' tags will be replaced by the original file they're referring to.
 The 'if statement' (\#ifndef) is a way to prevent the repetition of header files which could easily occur. Here's an example of how easily this could happen due to the recursive structure of the program:
-Lets say we're building a Pool game, we'll have the ofApp class, dependent on this there will be the pool table class and also the pool stick class and as both of these will be needed for our balls colision detection function both will refer to the ball class individually. If we didn't use the '\#ifndef' 'if' statement the compiler would try to compile the ball class repeatedly and would find some conflicts.
+Lets say we're building a Pool game, we'll have the ofApp class, dependent on this there will be the pool table class and also the pool stick class and as both of these will be needed for our balls collision detection function both will refer to the ball class individually. If we didn't use the '\#ifndef' 'if' statement the compiler would try to compile the ball class repeatedly and would find some conflicts.
 
 [![Image:ex-ifndef.jpg](003_images/Ex-ifndef.jpg)][16]
 
@@ -94,7 +94,7 @@ Here's how you can write the class \*.cpp file, the implementation file:
 
 ~~~~{.cpp}
     #include "ofBall.h"
-    
+
     ofBall::ofBall()
     {
         x = ofRandom(0, ofGetWidth());      // give some random positioning
@@ -105,7 +105,7 @@ Here's how you can write the class \*.cpp file, the implementation file:
 
         dim = 20;
     }
-    
+
     void ofBall::update(){
         if(x < 0 ){
             x = 0;
@@ -114,25 +114,25 @@ Here's how you can write the class \*.cpp file, the implementation file:
             x = ofGetWidth();
             speedX *= -1;
         }
-    	
+
         if(y < 0 ){
             y = 0;
             speedY *= -1;
         } else if(y > ofGetHeight()){
             y = ofGetHeight();
             speedY *= -1;
-        } 
-    	
+        }
+
         x+=speedX;
         y+=speedY;
     }
-    
+
     void ofBall::draw(){
         // values for R, G, B
         ofSetColor(120,120,120);
         ofCircle(x, y, dim);
-    } 
-~~~~   
+    }
+~~~~
 
 [![Image:ex1-ball_cpp.jpg](003_images/Ex1-ball_cpp.jpg)][17]
 
@@ -142,26 +142,26 @@ now that we've created a class let's make the real object!
 in your testapp.h (header file) we'll have to add declare a new object and get some free memory for it. this is how we do it:
 
 [![Image:ex1-h.jpg](003_images/Ex1-h.jpg)][19]
-  
-~~~~{.cpp} 
+
+~~~~{.cpp}
     	ofBall myBall;
 ~~~~
-  
+
 and finally let's get that ball bouncing on screen!
 go to your project testapp.cpp (implementation) file. now that we've created the object we just need to draw it and update its values by calling its methods.
 in the update() function add:
 
 [![Image:ex1-cpp.jpg](003_images/Ex1-cpp.jpg)][20]
 
-~~~~{.cpp}    
+~~~~{.cpp}
       myBall.update();  // calling the object's update method
-~~~~    
-    
+~~~~
+
 and in the draw() function lets add:
 
-~~~~{.cpp}    
+~~~~{.cpp}
       myBall.draw();  // call the draw method to draw the object
-~~~~    
+~~~~
 
 compile and run!
 by now you must be seeing a bouncing ball on the screen! great!
@@ -170,15 +170,15 @@ by now you must be seeing a bouncing ball on the screen! great!
 
 <h2 id="objects-part-2">make objects from your own Classes - part 2</h2>
 
-you're probably asking yourself now why did you have so much trouble just to create a bouncing ball. You could have done this (and you've probably done it!) without using classes. In fact one of the advantages of using classes is to be able to create multiple individual objects with the same characteristics. 
+you're probably asking yourself now why did you have so much trouble just to create a bouncing ball. You could have done this (and you've probably done it!) without using classes. In fact one of the advantages of using classes is to be able to create multiple individual objects with the same characteristics.
 So, lets do that now!
 going back to your ofApp.h file we'll just need to create a couple of new objects:
 
-~~~~{.cpp}   
+~~~~{.cpp}
     	 ofBall myBall1;
     	 ofBall myBall2;
     	 ofBall myBall3;
-~~~~    
+~~~~
 
 [![Image:ex2-h.jpg](003_images/Ex2-h.jpg)][23]
 
@@ -190,7 +190,7 @@ in the ofApp's update() function:
     	myBall1.update();
     	myBall2.update();
     	myBall3.update();
-~~~~    
+~~~~
 
 and also in the draw() function:
 
@@ -198,7 +198,7 @@ and also in the draw() function:
     	myBall1.draw();
     	myBall2.draw();
     	myBall3.draw();
-~~~~    
+~~~~
 
 [![Image:ex2-cpp.jpg](003_images/Ex2-cpp.jpg)][24]
 
@@ -213,7 +213,7 @@ Instead of declaring a list of objects one by one we'll just create an array of 
 
 ~~~~{.cpp}
     	#define NBALLS 5
-~~~~    
+~~~~
 
 we'll now use the CONSTANT value to define the size of our array of objects:
 
@@ -233,7 +233,7 @@ in the update() function:
           myBall[i].update();
     	}
 ~~~~
-    
+
 in the draw() function:
 
 ~~~~{.cpp}
@@ -241,8 +241,8 @@ in the draw() function:
     	{
           myBall[i].draw();
     	}
-~~~~    	
-    
+~~~~
+
 [![Image:ex21cpp.jpg](003_images/Ex21cpp.jpg)][29]
 
 [![Image:ex21Ball.jpg](003_images/Ex21Ball.jpg)][30]
@@ -259,7 +259,7 @@ In the ofBall definitions file (\*.h) we can change the constructor to include s
 ~~~~{.cpp}
     	ofBall(float x, float y, int dim);
 ~~~~
-    
+
 As we've changed the constructor we'll need to update the ofBall implementation (\*.cpp) file to reflect these.
 
 ~~~~{.cpp}
@@ -268,18 +268,18 @@ As we've changed the constructor we'll need to update the ofBall implementation 
         x = _x;
         y = _y;
         dim = _dim;
-        
+
         speedX = ofRandom(-1, 1);
         speedY = ofRandom(-1, 1);
     }
-~~~~    
-    
+~~~~
+
 By implementing these changes we'll also need to create space in memory for these objects. We'll do this by creating a pointer (a reference in memory) for each object.
 Back to the ofApp.h (definitions) file we'll declare a new object like this:
 
-~~~~{.cpp}  
-    	ofBall *myBall;  
-~~~~  
+~~~~{.cpp}
+    	ofBall *myBall;
+~~~~
 
 [![Image:ex3-h.jpg](003_images/Ex3-h.jpg)][33]
 
@@ -292,7 +292,7 @@ in the setup() :
                             // x-position,        y-position,           size
     myBall = new ofBall(ofRandom(300,400), ofRandom(200,300), ofRandom(10,40));
 ~~~~
-    
+
 As you see it is now possible to directly control the objects properties on its creation.
 and now we'll just need to update and draw it.
 
@@ -300,7 +300,7 @@ and now we'll just need to update and draw it.
     myBall->update();
 
     myBall->draw();
-~~~~ 
+~~~~
 
 [![Image:ex3-cpp.jpg](003_images/Ex3-cpp.jpg)][34]
 
@@ -314,41 +314,41 @@ we're now at the last part of this how-to tutorial on classes and objects. this 
 
 ~~~~{.cpp}
     	ofBall** myBall;   // an array of pointers of type ofBall
-    	int nBalls;        //variable for the number of balls 
+    	int nBalls;        //variable for the number of balls
 ~~~~
-    
+
 [![Image:ex4-h.jpg](003_images/Ex4-h.jpg)][38]
 
-As we're creating an array of objects, instead of creating one pointer only we'll also have to create an array of pointers. 
+As we're creating an array of objects, instead of creating one pointer only we'll also have to create an array of pointers.
 That's why we have two 'stars' and not one in the declarations(\*.h) file. We have created a pointer to an array of pointers.
 Let's see how we'll create and call these objects in the implementation (\*.cpp) file:
 
 ~~~~{.cpp}
       nBalls = 5; // the number of ball objects we want to create
-    
+
     	myBall = new ofBall*[nBalls]; // an array of pointers for the objects
-    	
+
       for (int i = 0; i < nBalls; i++){
           float x = 20+(100*i); // using the value of the counter variable(i) to differentiate them
           float y = 20+(100*i);
           int dim = 10+(i*10);
-    
+
           myBall[i] = new ofBall(x,y,dim);  // create each object from the array
       }
-~~~~  
+~~~~
 
 similarly when we want to draw and update the objects we've created we'll need 'for' loops to run through the array.
 
-~~~~{.cpp}    
+~~~~{.cpp}
       for (int i = 0; i < nBalls; i++){
           myBall[i]->update();
       }
-    
+
       for (int i = 0; i < nBalls; i++){
           myBall[i]->draw();
       }
-~~~~    
-    
+~~~~
+
 [![Image:ex4-cpp.jpg](003_images/Ex4-cpp.jpg)][39]
 
 [![Image:ex4Ball.jpg](003_images/Ex4Ball.jpg)][40]

@@ -21,7 +21,7 @@ At it's core the ofFBO is a container for textures and an optional depth buffer.
 To start working with an ofFbo, you have to allocate it, the same way that you would with an ofTexture:
 
 ~~~~{.cpp}
-fbo.allocate(400, 400, GL_RGBA); // with alpha, 8 bits red, 8 bits green, 8 bits blue, 8 bits alpha, from 0 to 255 in 256 steps	
+fbo.allocate(400, 400, GL_RGBA); // with alpha, 8 bits red, 8 bits green, 8 bits blue, 8 bits alpha, from 0 to 255 in 256 steps
 ~~~~
 
 Often the FBO will contain artefacts from the memory that the graphics card has just allocated for it, so it's good to clear it before starting to draw it:
@@ -839,7 +839,7 @@ _inlined_description: _
 _description: _
 
 
-This returnes the GLuint of Fbo for advanced actions, if you're interested in doing something with the FBO id directly.
+This returns the GLuint of Fbo for advanced actions, if you're interested in doing something with the FBO id directly.
 
 
 
@@ -1159,7 +1159,7 @@ _inlined_description: _
 _description: _
 
 
-This returnes the max number of simultaneous max color attachments, i.e. textures that will just be used for color information.
+This returns the max number of simultaneous max color attachments, i.e. textures that will just be used for color information.
 
 
 
@@ -1199,7 +1199,7 @@ _inlined_description: _
 _description: _
 
 
-This returnes the max number of simultaneous draw buffers that your graphics card supports, i.e. color buffers that can be drawn to simultaneously. This is usually 4 at present.
+This returns the max number of simultaneous draw buffers that your graphics card supports, i.e. color buffers that can be drawn to simultaneously. This is usually 4 at present.
 
 
 
