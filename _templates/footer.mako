@@ -10,6 +10,11 @@ Last updated ${self.getTime()}&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;<
 href="http://${bf.config.blog.disqus.name}.disqus.com/latest.rss">Comments</a>.
 % endif
 <br/>
+<a href="http://www.rackspace.com" target="_blank" class="rackspace">
+Hosting for openFrameworks is generously provided by Rackspace
+<br/>
+<img src="http://c1776742.cdn.cloudfiles.rackspacecloud.com/images/information/mediacenter/links/130x33_red.png">
+</a>
 
 </p>
 
