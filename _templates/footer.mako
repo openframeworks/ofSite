@@ -13,7 +13,7 @@ href="http://${bf.config.blog.disqus.name}.disqus.com/latest.rss">Comments</a>.
 <a href="http://www.rackspace.com" target="_blank" class="rackspace">
 Hosting for openFrameworks is generously provided by Rackspace
 <br/>
-<img src="http://c1776742.cdn.cloudfiles.rackspacecloud.com/images/information/mediacenter/links/130x33_red.png">
+<img src="http://c1776742.cdn.cloudfiles.rackspacecloud.com/images/information/mediacenter/links/130x33_grey.png">
 </a>
 
 </p>

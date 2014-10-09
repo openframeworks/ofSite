@@ -2,8 +2,10 @@
 <%inherit file="/_templates/fullpage.mako" />
 
 <div class="page-left-medium">                
-<h1 id="community">community</h1>
-<p>openFrameworks is a diverse community of hackers, artists, designers, students, teachers from all over the world. To learn more about getting involved in OF, check out the <a href="http://www.openframeworks.cc/list-info/">community mailing list</a>. The community list is ideal for learning about ways to participate, hearing about upcoming events like workshops and conferences, and sharing projects.</p>
+<!--h1 id="community">community</h1-->
+<h3>openFrameworks is a diverse community of hackers, artists, designers, students, teachers from all over the world.</h3>
+<p>To learn more about getting involved in OF, check out the <a href="http://www.openframeworks.cc/list-info/">community mailing list</a>.
+The community list is ideal for learning about ways to participate, hearing about upcoming events like workshops and conferences, and sharing projects.</p>
 <p>Want to get involved right away?  The OF community is always looking for developers, designers, writers, event organizers, and general enthusiasts to help build a better experience.  If you're wondering where to look, dive into the <a href="http://forum.openframeworks.cc/index.php?board=31.0">collaborations</a> section on the forum, or take a look at the existing <a href="http://www.openframeworks.cc/tutorials/">tutorials</a>.
 
 <ul class="external_links" >
