@@ -55,5 +55,8 @@
     <div id="vimeo"></div>
 
     <br class="clearboth">
+    
+    <a href="http://www.rackspace.com" target="_blank"><img style="margin-top:10px;" src="images/promo/Rackspace-Logo-2.jpg" width="900" height="253" border="0"></a>
+
 </div>
 
