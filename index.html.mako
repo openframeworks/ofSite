@@ -16,7 +16,7 @@
         <p>Grab the most recent release (${bf.config.currentVersion}) and follow the setup guide to get openFrameworks running.</p>
         
 	<h3><a href="documentation/">documentation</a></h3>
-	<p>Reference for openFrameworks classes, functions and addons. For guides and tutorials, see the <a href="http://wiki.openframeworks.cc/">wiki</a>.</p>
+	<p>Reference for openFrameworks classes, functions and addons. You can also check the tutorials<a href="http://openframeworks.cc/tutorials">tutorials</a>.</p>
         
 	<h3><a href="http://forum.openframeworks.cc/">forum</a></h3>
 	<p>The forum is a place to meet other people working with openFrameworks. It's a place to share your work, or find help solving problems.</p>
