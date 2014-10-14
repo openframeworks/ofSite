@@ -33,15 +33,7 @@ The community list is ideal for learning about ways to participate, hearing abou
             
 <div class="page-right-narrow">
     <div class="home-links">
-        <h3>upcoming events</h3>
-        <p>Conferences, workshops, and talks related to oF and the surrounding community</p>
-        <ul>
-        <li><a href="http://www.mirafestival.com/lab-concept-en?lang=en">OF workshops at Mira Festival</a>, Barcelona, 14-16 November 2013</li>
-        <li><a href="http://www.telenoika.net/tallers/taller-opengl-amb-openframeworks">advance OF workshop at Telenoika</a>, Barcelona, 11-14 November 2013</li>
-        <li><a href="http://push-conference.com/">push.conference</a>, Munich, 25-26 October 2013</li>
-        <li><a href="http://studioforcreativeinquiry.org/events/creative-coding-on-the-raspberry-pi-with-openframeworks">OF + RaspberryPi workshop and hackathon</a>, CMU, Pittsburgh.  11-13 October 2013.</li>
-        </ul>
-
+    
         <h3 style="padding-top:30px">recurring meetups</h3>
         <p>Gatherings of people working with oF or curious about getting involved.  A great place to meet people and share your ideas and projects!</p>
         <ul>
