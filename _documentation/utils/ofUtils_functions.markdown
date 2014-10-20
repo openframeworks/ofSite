@@ -1326,8 +1326,12 @@ _description: _
 
 Checks if the string needle exists in the string haystack.
 
-
-
+~~~{.cpp}
+    string haystack = "foobar";
+    ofLog() << ofIsStringInString(haystack, "foo"); // outputs 1
+    ofLog() << ofIsStringInString(haystack,"bar"); // outputs 1
+    ofLog() << ofIsStringInString(haystack, "something else"); // outputs 0
+~~~
 
 
 
@@ -2983,7 +2987,11 @@ _description: _
 
 Converts all characters in the string src to uppercase.
 
-
+~~~~{.cpp}
+    string politeGreeting = "Hello, World!";
+    string enthusiasticGreeting = ofToUpper(politeGreeting); 
+    ofLog() << enthusiasticGreeting; // returns "HELLO, WORLD!"
+~~~~
 
 
 
