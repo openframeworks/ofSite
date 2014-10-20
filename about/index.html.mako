@@ -1,7 +1,11 @@
 ## -*- coding: utf-8 -*-
 <%inherit file="/_templates/slideshow.mako" />
 
-<h1>about</h1>
+<h3>openFrameworks is an <a href="license.html">open source</a> <a href="https://en.wikipedia.org/wiki/C%2B%2B">C++</a> toolkit designed to assist the creative process by providing a simple and intuitive framework for experimentation.</h3>
+</br>
+
+
+<!--h1>about</h1-->
 <div id="myslides">
 <img src="0.jpg" />
 <img src="1.jpg" />
@@ -15,7 +19,7 @@
 </div>
 <br/>
 
-openFrameworks is an [open source](license.html) [C++](https://en.wikipedia.org/wiki/C%2B%2B) toolkit designed to assist the creative process by providing a simple and intuitive framework for experimentation. The toolkit is designed to work as a general purpose glue, and wraps together several commonly used libraries, including:
+openFrameworks is designed to work as a general purpose glue, and wraps together several commonly used libraries, including:
 
 * [OpenGL](http://www.opengl.org/), [GLEW](http://glew.sourceforge.net/), [GLUT](http://www.opengl.org/resources/libraries/glut/), [libtess2](https://code.google.com/p/libtess2/) and [cairo](http://cairographics.org/) for graphics
 * [rtAudio](http://www.music.mcgill.ca/~gary/rtaudio/), [PortAudio](http://www.portaudio.com/), [OpenAL](http://http://connect.creativelabs.com/openal) and [Kiss FFT](http://kissfft.sourceforge.net/) or [FMOD](http://www.fmod.org/) for audio input, output and analysis

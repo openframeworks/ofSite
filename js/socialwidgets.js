@@ -12,7 +12,7 @@ function feedGithubLoaded(result) {
     // http://code.google.com/apis/ajaxfeeds/documentation/reference.html#JSON
     var ul = document.createElement("ul");
     var totalElements = 0;
-    for (var i = 0; i < result.xmlDocument.getElementsByTagName('entry').length && totalElements<6; i++) {
+    for (var i = 0; i < result.xmlDocument.getElementsByTagName('entry').length && totalElements<10; i++) {
       var entry = result.xmlDocument.getElementsByTagName('entry')[i];
       var li = document.createElement("li");
       var a = document.createElement("a");
@@ -74,7 +74,7 @@ function feedForumLoaded(result) {
       li.appendChild(a);
       li.appendChild(document.createElement("br"));
       var span = document.createElement("span")
-      span.innerHTML = entry.content.substr(0,150) + "...</p>"
+      span.innerHTML = entry.content.substr(0,250) + "...</p>"
       li.appendChild(span);
       ul.appendChild(li);
     }
@@ -106,7 +106,8 @@ function feedFlickrLoaded(result) {
       a.href = entry.link;
       aText.href = entry.link;
       aText.className="flickrTitle";
-      h3.appendChild(document.createTextNode(Encoder.htmlDecode(entry.title + " by " + entry.author.substr(entry.author.indexOf('(')+1, entry.author.indexOf(')')-entry.author.indexOf('(')-1))))
+      //entry.title + 
+      h3.appendChild(document.createTextNode(Encoder.htmlDecode(" by " + entry.author.substr(entry.author.indexOf('(')+1, entry.author.indexOf(')')-entry.author.indexOf('(')-1))))
       a.appendChild(img);
       a.className  = "img";
       aText.appendChild(h3)

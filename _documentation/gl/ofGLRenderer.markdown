@@ -28,7 +28,7 @@ ofRunApp( new testApp());
 
 ~~~~
 
-This renderer does not work so well with mobile devices (more specifically with GLES) or on ARM6/7 Linux devices (Raspberry Pi, for instance) but it is the classic version that will be supported on all laptops and desktop machines. Most of the calls to this renderer are handled by other functions, so most of this documenation will simply link to the end user functions that you should call, since you probably don't want to call the renderer directly. 
+This renderer does not work so well with mobile devices (more specifically with GLES) or on ARM6/7 Linux devices (Raspberry Pi, for instance) but it is the classic version that will be supported on all laptops and desktop machines. Most of the calls to this renderer are handled by other functions, so most of this documentation will simply link to the end user functions that you should call, since you probably don't want to call the renderer directly.
 
 
 
@@ -1284,7 +1284,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Queries the current OpenGL matrix state  Returns the specified matrix as held by the renderer's current matrix stack. 
+Queries the current OpenGL matrix state  Returns the specified matrix as held by the renderer's current matrix stack.
 
 
     You can query one of the following:

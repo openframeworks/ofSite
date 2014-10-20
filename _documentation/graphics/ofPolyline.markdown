@@ -2034,7 +2034,7 @@ _inlined_description: _
 _description: _
 
 
-This returns a smoothed version of the ofPolyline.
+This returns a smoothed version of the ofPolyline. `smoothingSize` is the size of the smoothing window. So if `smoothingSize` is 2, then 2 points from the left, 1 in the center, and 2 on the right (5 total) will be used for smoothing each point. `smoothingShape` describes whether to use a triangular window (0) or box window (1) or something in between (for example, .5).
 
 
 

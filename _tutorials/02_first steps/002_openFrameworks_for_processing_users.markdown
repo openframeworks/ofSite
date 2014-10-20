@@ -3,78 +3,78 @@ date: 2008/06/30 14:16:00
 title: openFrameworks for Processing users
 summary: An overview of OpenFrameworks for processing junkies
 author: Zach Gage
-author_site: http://www.stfj.net 
+author_site: http://www.stfj.net
 ---
 
 ## Contents
 
-    
+
 *   [1 How Processing Actually Works][3]
-    
+
     *   [1.1 What is class extending? (base and sub classes)?][4]
     *   [1.2 Ok, so what does this have to do with Processing?][5]
-        
-    
+
+
 *   [2 How OpenFrameworks Works.][6]
-    
+
     *   [2.1 Main.cpp In-depth][7]
-        
-    
+
+
 *   [3 Java vs. C++ Compile Processes][8]
 *   [4 How Classes Work in C++ (Two Files!?)][9]
-    
+
     *   [4.1 ofApp.h][10]
     *   [4.2 ofApp.cpp][11]
-        
-    
+
+
 *   [5 What the Fu\*&? (a very basic introduction to pointers).][12]
-    
+
     *   [5.1 Value vs. Reference][13]
     *   [5.2 & and \*][14]
     *   [5.3 So Where Do I use This?][15]
     *   [5.4 Basic Data-types][16]
-        
+
         *   [5.4.1 The Processing String Exception][17]
-            
-        
-        
-    
+
+
+
+
 *   [6 PImage, updatePixels() vs. ofTexture, pixels\[\]][18]
-    
+
     *   [6.1 How are pixel values stored without a Color object?][19]
-        
-    
+
+
 *   [7 Common Problems With C++ / Misc. Topics][20]
-    
+
     *   [7.1 Expecting implicit data conversion?][21]
     *   [7.2 Changing window size][22]
     *   [7.3 Update() and Draw()?][23]
     *   [7.4 How in the world do I print to the console?][24]
-        
+
         *   [7.4.1 printf][25]
         *   [7.4.2 iostream][26]
-            
-        
+
+
     *   [7.5 Smoothing not working on filled shapes?][27]
     *   [7.6 Displaying video problem/feature related to ofSetColor][28]
     *   [7.7 Processing background() vs. OF ofBackground()][29]
     *   [7.8 ofFill() / ofNoFill() vs. processing fill() noFill()][30]
     *   [7.9 Math functions, and where they come from (no more Math.\*)][31]
-        
+
         *   [7.9.1 cmath][32]
         *   [7.9.2 ofConstants][33]
         *   [7.9.3 ofMath][34]
-            
-        
+
+
     *   [7.10 Structs, what are they for, and how can we use them?][35]
     *   [7.11 Memory Management and You][36]
     *   [7.12 Basic Logic Problems][37]
     *   [7.13 accidental breakpoints in Xcode and Why Having a Debugger Rocks][38]
-            
+
 
 ## How Processing Actually Works
 
-If you've been programming in processing for a while (and if you made it by the disclaimer), it's safe to assume that you've used classes before. One aspect of Java classes that you might not have used however, is polyMorphism (class extending). 
+If you've been programming in processing for a while (and if you made it by the disclaimer), it's safe to assume that you've used classes before. One aspect of Java classes that you might not have used however, is polyMorphism (class extending).
 
 ### What is class extending? (base and sub classes)?
 
@@ -92,7 +92,7 @@ If for instance you were making a video game of some sort. You might make a clas
     		//load in the enemy picture from the hard-drive
     		//assign starting positions
     	}
-    	
+
     	public void move()
     	{
     		//move, maybe shoot at player
@@ -104,7 +104,7 @@ If for instance you were making a video game of some sort. You might make a clas
     }
 ~~~~
 
-But what if you wanted to make multiple types of enemies, each drawing themselves differently? This is where class extension comes in. All of the enemies are still going to have to Init() themselves and move() themselves around screen, so really the only function that we want to change here on an individual basis is the draw() function. 
+But what if you wanted to make multiple types of enemies, each drawing themselves differently? This is where class extension comes in. All of the enemies are still going to have to Init() themselves and move() themselves around screen, so really the only function that we want to change here on an individual basis is the draw() function.
 
 We are now using the Enemy class as what is called a Base Class. A Base Class is a class that probably won't ever be instantiated, only inherited by other classes. Because the draw function is the only one we want to change, we don't need to write either the init() or move() functions. By declaring the draw() function again however, we are doing something called function re-definition. This is where you re-declare a function that has already been declared, in effect overwriting it for this subclass of Enemy.
 
@@ -129,7 +129,7 @@ which in C++ would be something like,
     	public void draw();//the actual code for draw would be on the "DoubleEnemy.cpp" file
     }; // note the ";" at the end of the class statement
 ~~~~
-    
+
 
 Because DoubleEnemy extends our abstract Enemy class, it inherits all of the functions and variables that we declared in the Enemy class. Because of this, we will never have to write a new init or move function. We could even create another specialized Enemy class:
 
@@ -149,21 +149,21 @@ Although Processing hides it from you through their compiler, Processing is actu
 
 ## How OpenFrameworks Works.
 
-OpenFrameworks is built in much the same way as Processing. It just doesn't hide any of the complicated parts from you. However, if you open up ofApp.h, right under the \#include "ofMain.h" line, you will see a line that says: "class TestApp : public ofSimpleApp{". 
+OpenFrameworks is built in much the same way as Processing. It just doesn't hide any of the complicated parts from you. However, if you open up ofApp.h, right under the \#include "ofMain.h" line, you will see a line that says: "class TestApp : public ofSimpleApp{".
 
 This means, the ofApp class extends the ofSimpleApp class, just like in processing. Right under that, under "Public:" are all of the functions that ofApp is inheriting from ofSimpleApp that it needs to re-write, like in processing.
 
-Every C++ application needs a function called int main() to define where the program starts. Java requires this as well, but Processing hides this fact from you since anything you write is only extending a larger class with that main being called elsewhere. 
+Every C++ application needs a function called int main() to define where the program starts. Java requires this as well, but Processing hides this fact from you since anything you write is only extending a larger class with that main being called elsewhere.
 
-C++ however must start with int main(). This is called the "entry point" and is the jumping off point for your program. 
+C++ however must start with int main(). This is called the "entry point" and is the jumping off point for your program.
 
 main.cpp contains this main() function, and essentially contains the code to set your screen size, and kick off an infinite loop which runs your program. If you want to learn more about this, you can read section 2.1, but it's not necessary, and can be confusing at this point.
 
 ### Main.cpp In-depth
 
-If you look at any of the OF example files you will see that in the main.cpp file contains two \#include statements up at the top. These operate the same way as they do in Processing. 
+If you look at any of the OF example files you will see that in the main.cpp file contains two \#include statements up at the top. These operate the same way as they do in Processing.
 
-The first one, 
+The first one,
 
 ~~~~{.cpp}
     #include "ofMain.h"
@@ -171,32 +171,32 @@ The first one,
 
 adds the entire OpenFrameworks library to the main.cpp class. This allows the class to run two important OF functions, ofSetupOpenGL(), which creates the window to display your application, and ofRunApp(), which runs your application.
 
-If you notice, ofRunApp() is passing a parameter, 
+If you notice, ofRunApp() is passing a parameter,
 
 ~~~~{.cpp}
     new ofApp()
 ~~~~
 
-ofRunApp() is passing an instance of the ofApp class, which happens to be the second thing included up at the top of main.cpp. ( \#include "ofApp.h" ) 
+ofRunApp() is passing an instance of the ofApp class, which happens to be the second thing included up at the top of main.cpp. ( \#include "ofApp.h" )
 
 ofRunApp requires the passed parameter to be a type of ofSimpleApp, which is why when we looked at ofApp.h earlier, we noticed it extended ofSimpleApp.
 
-To recap, 
+To recap,
 we have main.cpp which includes ofMain and ofApp.
 
 *   It includes ofMain to set the screenSize and to call ofRunApp
-    
+
 
 (It includes ofApp to have a class to pass ofRunApp.
 
 We also have ofApp which includes ofMain
 
 *   It includes ofMain so that any code you write in ofApp can benefit from the OpenFrameworks Library.
-    
+
 
 Until you start writing your own classes, it might help to think of ofApp.cpp and ofApp.h as the main window in Processing. Meaning, any code you write will go into one of those two files, and until you feel comfortable, you won't have to look at anything else in Xcode.
 
-## Java vs. C++ Compile Processes 
+## Java vs. C++ Compile Processes
 
 Java and C++ have vastly different compiling processes. It is important to understand the C++ compilation process as each stage of it can produce different types of errors. Knowing what stage produces what type of errors can go a long way towards debugging your project.
 
@@ -205,23 +205,23 @@ In Java, every time you compile, your entire program is run through and changed 
 C++ is a bit more complicated.
 
 *   First, the compiler pre-processes your program. This means that it goes through all of your \#include statements and copy and pastes chunks of your code to create essentially one gigantic file. (Any statements preceded by a \# symbol are targeted at the pre-processor).
-    
 
-*   Second, the compiler parses through your code, making sure that all of your code makes sense, and breaking your code down into parse-trees, which it then translates into Assembly (a very low level language). 
-    
+
+*   Second, the compiler parses through your code, making sure that all of your code makes sense, and breaking your code down into parse-trees, which it then translates into Assembly (a very low level language).
+
 
 *   Thirdly, the Assembly is translated into machine-readable code inside object files.
-    
+
 
 *   and Lastly, these Object Files are linked together to create your .exe or .app file
-    
+
 
 One particular advantage that you will notice right away of the C++ compiler style is that when compiling huge programs (like OpenFrameworks applications), sections that have not been updated won't need to be re-compiled. This is easy to understand by opening any example and compiling it. Your first compilation could take 30 seconds to a minute. If you then make changes to ofApp.cpp and compile again, compilation should go much quicker. This is because Xcode no longer needs to compile the entire OpenFrameworks library, only your small bit of code that changed.
 
 ## How Classes Work in C++ (Two Files!?)
 
-C++ classes comprise of two files. 
-It helps to think of these two classes as a recipe. 
+C++ classes comprise of two files.
+It helps to think of these two classes as a recipe.
 
 The header file (.h) is like the list of ingredients, and contains:
 
@@ -231,13 +231,13 @@ The header file (.h) is like the list of ingredients, and contains:
 *   Any variables local to the class
 *   Prototypes of any functions to be contained in the class
 *   And the security settings of these functions and variables (e.g. public, private, protected, etc).
-    
+
 
 and a body file (.cpp) which is like the instructions on what to do with the ingredients and contains:
 
 *   An include statement that references the .h file
 *   All of the code to fill in the function prototypes.
-    
+
 
 To explore this more, open up the ofApp.cpp and ofApp.h files.
 
@@ -300,7 +300,7 @@ It might be easier to think of the spot in memory that num references as a box c
 2591
 // address in memory
 
-  
+
 and as num as knowing the address this box
 
 num:
@@ -318,7 +318,7 @@ Try typing this code into processing:
     addOne(num);
     print(num);
     }
-    
+
     void addOne(int num)
     {
       num++;
@@ -327,7 +327,7 @@ Try typing this code into processing:
 
 Unsurprisingly, the program prints "1". We know that this is because when you pass num to a function, the function makes a copy of num and doesn't modify the original. This is called passing by value.
 
-  
+
 Lets look at another example. Here, instead of passing an integer, we will try passing a class containing an integer. Try typing this code into Processing:
 
 ~~~~{.cpp}
@@ -335,7 +335,7 @@ Lets look at another example. Here, instead of passing an integer, we will try p
     {
       int num=0;
     }
-    
+
     void setup()
     {
     Test test = new Test();
@@ -343,17 +343,17 @@ Lets look at another example. Here, instead of passing an integer, we will try p
     addOne(test);
     print(test.num);
     }
-    
+
     void addOne(Test test)
     {
       test.num++;
     }
 ~~~~
 
-  
-This time it printed "2". What's going on here? 
 
-What happened is that because we created a class Test, Processing recognized that it was not a basic data-type (even though the class contained an int which IS a basic data-type), and passed it to the function by reference. Reference means that instead of passing a copy of the entire Test object to the addOne function, it sent only the address in memory of where the class was stored. 
+This time it printed "2". What's going on here?
+
+What happened is that because we created a class Test, Processing recognized that it was not a basic data-type (even though the class contained an int which IS a basic data-type), and passed it to the function by reference. Reference means that instead of passing a copy of the entire Test object to the addOne function, it sent only the address in memory of where the class was stored.
 
 Let's look at boxes again.
 
@@ -380,7 +380,7 @@ the & symbol is used to acquire the memory address of a variable or function, so
     a = &b;
 ~~~~
 
-means, a is now equal to (or points to) the memory address of b, (and not the value of b). At this point, 
+means, a is now equal to (or points to) the memory address of b, (and not the value of b). At this point,
 
 ~~~~{.cpp}
     a++;
@@ -388,7 +388,7 @@ means, a is now equal to (or points to) the memory address of b, (and not the va
 
 would make a equal to the next memory address after b.
 
-the \* symbol is used to acquire the value stored in an address. So, 
+the \* symbol is used to acquire the value stored in an address. So,
 
 ~~~~{.cpp}
     *a++;
@@ -404,23 +404,23 @@ example:
 ~~~~{.cpp}
     int x;
     int *ptr;
-    
+
     x=5;
     ptr = &x;
     *ptr = 10;
-    
+
     //x now equals 10
 ~~~~
 
 ### So Where Do I use This?
 
-Initially, you will use pointers to pass arrays back and forth through functions. This can be seen in the movieGrabberExample, where a pointer is used to access the pixels from the video grabber. 
+Initially, you will use pointers to pass arrays back and forth through functions. This can be seen in the movieGrabberExample, where a pointer is used to access the pixels from the video grabber.
 
 ~~~~{.cpp}
     ( unsigned char * 	videoInverted;)
 ~~~~
 
-This works because when you refer to an array in C++ without the \[\]'s you are actually referring to an address in memory. The \[\]'s work as a dereferencing operator, or, a "\*". 
+This works because when you refer to an array in C++ without the \[\]'s you are actually referring to an address in memory. The \[\]'s work as a dereferencing operator, or, a "\*".
 
 At runtime, your processor multiplies the number inside of the \[\]'s (your index) by the number of bytes your data-type takes up in memory to figure out how far it must jump in memory to reach that index of your array.
 
@@ -428,7 +428,7 @@ So to pass an array in C++ you must pass it without the \[\]'s, and the receivin
 
     [functionName] ( [variable type] * [varName]){
     }
-    
+
 
 To learn more about the infinite complexities of pointers, I recommend visiting the site I referenced at the top of this section.
 ( [http://www.cplusplus.com/doc/tutorial/pointers.html][51] )
@@ -437,7 +437,7 @@ To learn more about the infinite complexities of pointers, I recommend visiting 
 
 Java and C++ share most basic data-types:
 
-byte, short, int, long, float, double, and char. 
+byte, short, int, long, float, double, and char.
 (Boolean is also in C++, and works the same way as it does in processing except it is called 'bool').
 
 However, C++ has an extra set of data-types that are unsigned:
@@ -446,7 +446,7 @@ unsigned byte, unsigned short, unsigned int, unsigned long, unsigned float, unsi
 
 Unsigned means that instead of running positive and negative, (e.g. char can be set to any value between -128 and 127), these variables have no sign. (e.g. unsigned char can be set to any value 0-255).
 
-  
+
 #### The Processing String Exception
 
 One major difference in the basic data-types is that Processing's string type is "String" while C++ uses a lowercase "string". But more importantly, C++'s string type, when set equal to another string type refers to it by reference (does not make a copy).
@@ -461,7 +461,7 @@ So, in processing:
     String a = "yes";
     String b = a;
     b = "no";
-    
+
     print(a);
 ~~~~
 
@@ -475,7 +475,7 @@ but in C++
     b = "no";
     printf("%s \n", a.c_str(a));   // to see how this prints, see section 6.3.3 How in the world do I print to the console?
 ~~~~
-    
+
 
 will print "no".
 
@@ -492,11 +492,11 @@ The first is the PImage object. A PImage is a texture object that has a built in
     myPImage = loadImage("sample.jpg"); //allocate space for pixels in ram, decode the jpg, and load pixels of the decoded sample.jpg into the pixels.
     image(myPImage,100,100); //draw the texture to the screen at 100,100
 ~~~~
-    
 
-_I should note that its possible that the image() function actually loads the pixels into the ram instead of the PImage, but I dont know enough about the tech behind Processing to say for sure if this is the case or not._
 
-If you want to access the individual pixels of the screen itself, however, you use a different function altogether. You first call loadPixels(), make your pixel changes, and then call updatePixels() to make your changes appear. 
+_I should note that its possible that the image() function actually loads the pixels into the ram instead of the PImage, but I don't know enough about the tech behind Processing to say for sure if this is the case or not._
+
+If you want to access the individual pixels of the screen itself, however, you use a different function altogether. You first call loadPixels(), make your pixel changes, and then call updatePixels() to make your changes appear.
 
 This is slightly confusing, because what is actually happening here is the same as what happened above with the PImage: Processing is loading your pixels from the screen into a texture, essentially a PImage, and then drawing that texture to the screen after you update it. For some reason, however, they chose not to use the same function for both.
 
@@ -519,11 +519,11 @@ If you wanted to change the pixels on the screen, you would also use an ofImage.
     theScreen.draw(0,0); //equivalent to updatePixels();
 ~~~~
 
-But how do I edit the pixels of something that is in the ram you may ask? The short answer is you cannot. Once something is in the RAM (in an ofTexture), you cannot access it anymore. 
+But how do I edit the pixels of something that is in the ram you may ask? The short answer is you cannot. Once something is in the RAM (in an ofTexture), you cannot access it anymore.
 
 You can edit the pixels of an ofImage because ofImages contain two data structures. One of these is an array of Unsigned Characters which represent all of the colors of every pixel, and the other is an ofTexture, which is used to upload those pixels into the ram after changes.
 
-You can actually turn off this texture in an ofImage to save RAM if you know you won't ever have to draw what you are loading to the screen. This could be useful if you only need to load an image to access pixel color values in it, or if you are taking a screenshot that you will save to your hard drive but never draw. 
+You can actually turn off this texture in an ofImage to save RAM if you know you won't ever have to draw what you are loading to the screen. This could be useful if you only need to load an image to access pixel color values in it, or if you are taking a screenshot that you will save to your hard drive but never draw.
 see: [http://www.openframeworks.cc/documentation\#ofImage-setUseTexture][58]
 
 ### How are pixel values stored without a Color object?
@@ -537,11 +537,11 @@ Pixel values are stored as a series of Unsigned Characters. An Unsigned Characte
 To access a color of a specific pixel:
 
 ~~~~{.cpp}
-    unsigned char *	myPixels; //create a pointer to an unsigned charecter
+    unsigned char *	myPixels; //create a pointer to an unsigned character
     myPixels = myOFImage.getPixels(); //set that pointer to point to the beginning of the pixel array
     int colorIndex = y*(myOFImage.width*3)+x*3; // yPos * width * 3 + xPos * 3 = the red channel position
-    ofSetColor(myPixels[colorIndex],myPixels[colorIndex+1],myPixels[colorIndex+2]); 
-    //sets the color of each channel by going to the successive two values in the array after that of the red channel. 
+    ofSetColor(myPixels[colorIndex],myPixels[colorIndex+1],myPixels[colorIndex+2]);
+    //sets the color of each channel by going to the successive two values in the array after that of the red channel.
 ~~~~
 
 ## Common Problems With C++ / Misc. Topics
@@ -567,7 +567,7 @@ Window size is set intuitively in main.cpp. If you open it up, the comments will
 
 ### Update() and Draw()?
 
-Unlike Processing, OF contains two methods that are run every loop through of your program, Update() and Draw(). 
+Unlike Processing, OF contains two methods that are run every loop through of your program, Update() and Draw().
 It is good practice to do all of your calculations in the Update() function and reserve Draw() for simply showing results on the screen. This prevents any large slowdowns that might occur during a draw function that could be too complicated. Instead of getting halves of images drawn or screen-tearing, you simply get a low framerate.
 
 Additionally, I should mention that if you do any heavy lifting in your project (e.g. loading in images, or loading anything at all from a file really), you should do it in your setup() function if possible. Update() and Draw() run in a loop, and because of that you should only include code in them that has to run every frame. If something only has to run once, it should probably be in Setup().
@@ -583,10 +583,10 @@ The second is iostream, which is simpler, but less robust, and not included by d
 If you want to use printf to print to the console, this is a good tutorial on how it works:
 [http://www.cplusplus.com/reference/clibrary/cstdio/printf.html][66]
 
-  
+
 #### iostream
 
-Another option for printing to the console is iostream. This is a very old c++ library that lets you print to the console very easily and will implicitly convert many variable types for you so you don't have to use ofToString(). 
+Another option for printing to the console is iostream. This is a very old c++ library that lets you print to the console very easily and will implicitly convert many variable types for you so you don't have to use ofToString().
 
 To use iostream you first need to include it at the top of your .cpp file
 
@@ -606,12 +606,12 @@ in processing your code might look like this:
     int i = 10;
     String s = "Hello!";
     boolean b = false;
-    
+
     println(i+" "+s+" "+b); // print variables and end the line
     print(i+" "+s+" "+b); // print variables without ending the line.
 ~~~~
 
-this would print 
+this would print
 
 ~~~~{.java}
     10 Hello! false
@@ -626,13 +626,13 @@ The equivalent c++ code using iostream is:
     int i = 10;
     string s = "Hello!";
     bool b = false;
-    
+
     cout<<i<<" "<<s<<" "<<b<<endl; // print variables and end the line
     cout<<i<<" "<<s<<" "<<b;       // print variables without ending the line.
 ~~~~
-    
 
-this would print 
+
+this would print
 
 ~~~~{.cpp}
     10 Hello! 0
@@ -651,17 +651,17 @@ An easy workaround for this is to simply draw your shapes twice, the first time 
 
 ~~~~{.cpp}
     ofFill();
-    
+
     ofBeginShape(); //shape
     	ofVertex( 1,1 );
     	ofVertex( 5,5 );
     	ofVertex( 1,10 );
     	ofVertex( 1,1 );
     ofEndShape();
-    
-    
+
+
     ofNoFill();
-    
+
     ofBeginShape(); //smoothed edges
     	ofVertex( 1,1 );
     	ofVertex( 5,5 );
@@ -674,7 +674,7 @@ An easy workaround for this is to simply draw your shapes twice, the first time 
 
 Although this is a problem/feature affecting any object that uses an ofTexture draw itself to the screen, I first encountered it with the videoGrabber, and I think that may be the case for many people, so I'm listing it as the video problem/feature.
 
-Basically, ofTextures are constructed so that they can be tinted by the ofSetColor() call. This is great as long as you know it's going to happen, but if it catches you by surprise it can be really confusing, especially if your background is black and you have just called 
+Basically, ofTextures are constructed so that they can be tinted by the ofSetColor() call. This is great as long as you know it's going to happen, but if it catches you by surprise it can be really confusing, especially if your background is black and you have just called
 
 ~~~~{.cpp}
     ofSetColor(0,0,0);
@@ -700,7 +700,7 @@ If you don't want to redraw, but make a cumulative image, use:
 ~~~~{.cpp}
     ofSetBackgroundAuto(false);
 ~~~~
-    
+
 
 Because by default OF redraws the screen every frame.
 
@@ -727,7 +727,7 @@ A way around this is to change the stroke size with an openGL call, but it doesn
     glLineWidth(STROKE_SIZE);
 ~~~~
 
-  
+
 ### Math functions, and where they come from (no more Math.\*)
 
 Math functions in OpenFrameworks actually come from three separate files
@@ -752,7 +752,7 @@ Constants:
 *   M\_TWO\_PI;
 *   FOUR\_PI;
 *   HALF\_PI;
-    
+
 
 and Functions:
 
@@ -762,7 +762,7 @@ and Functions:
 *   MAX(x,y);
 *   CLAMP(val,min,max);
 *   ABS(\[math functions you want to get the absolute value of\]);
-    
+
 
 #### ofMath
 
@@ -774,7 +774,7 @@ additionally ofMath() provides functions for getting random values.
 
 Structs are like miniature classes except they don't have methods. Basically they're custom data objects.
 
-They're very convenient because they don't have to be created externally from your class files (although technically neither do classes..) 
+They're very convenient because they don't have to be created externally from your class files (although technically neither do classes..)
 
 Primarily they're used for implementing linked lists (similar to ArrayLists in java). Although linked lists are probably my favorite data structure, I'm not going to write a tutorial here because they can be very complicated at first.
 
@@ -791,7 +791,7 @@ Anyway, the general format of a struct is :
     	[varType] varName;
     	[etc...]
     };
-    
+
 
 ### Memory Management and You
 
@@ -804,11 +804,11 @@ That means if you were to declare
     temp = null;
 ~~~~
 
-temp was set to reference a newly created myCustomDataType. temp was then set equal to null. This did not actually clear the new myCustomDataType from ram, but whenever java's garbage collection runs it would notice that the new myCustomDataType has no references and would delete it. 
+temp was set to reference a newly created myCustomDataType. temp was then set equal to null. This did not actually clear the new myCustomDataType from ram, but whenever java's garbage collection runs it would notice that the new myCustomDataType has no references and would delete it.
 
 Unlike java/p5 however, c++ does not have automated garbage collection. This means that if you have declared object and you want to get rid of it, you will have to delete it yourself. Setting a pointer to NULL is not good enough.
 
-calling the comparable code in c++ would result in an empty pointer and some memory that had been allocated in the ram but now is lost forever. This is called a memory leak. Although it might not affect you right off the bat, memory leaks can lead to your program eating up all of its available memory and crashing. These can be very frustrating to debug because they happen over time and don't give you a specific line that's crashing your program. 
+calling the comparable code in c++ would result in an empty pointer and some memory that had been allocated in the ram but now is lost forever. This is called a memory leak. Although it might not affect you right off the bat, memory leaks can lead to your program eating up all of its available memory and crashing. These can be very frustrating to debug because they happen over time and don't give you a specific line that's crashing your program.
 
 Fortunately, they're easy to avoid as long as you plan your programs carefully. The proper way to delete an object after you have created it is to use the delete keyword
 
@@ -840,7 +840,7 @@ will always return true because ( \> 10) is always true. The proper way to write
 
 ~~~~{.cpp}
     int x = 5;
-    
+
     if(x < 0 ||x > 10)
     {
         return true;
@@ -850,7 +850,7 @@ will always return true because ( \> 10) is always true. The proper way to write
         return false;
     }
 ~~~~
-    
+
 
 note how the entire argument is restated. Instead of asking:
 is x less than 0 or greater than 10
@@ -865,10 +865,10 @@ is x less than 0 or **is x** greater than 10
 Breakpoints are something that you can put in by clicking on the far left column of the editing window. If you're compiling in debug mode:
 [![Image:BuildConf.jpg](002_images/BuildConf.jpg)][85]
 
-your program will stop running whenever it comes across one of these breakpoints and bring up the debugging console which lets you look at variable contents and the current running processes and things like that. 
+your program will stop running whenever it comes across one of these breakpoints and bring up the debugging console which lets you look at variable contents and the current running processes and things like that.
 [![Image:HilightedVar.jpg](002_images/HilightedVar.jpg)][86]
 
-  
+
 They're extremely convenient for debugging programs, but they can be confusing if you don't know what they are and they keep stopping your program.
 
 To remove a debug point just click on it and drag it out of the window. You'll get a friendly poof of smoke and it'll be gone.

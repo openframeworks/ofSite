@@ -2,8 +2,10 @@
 <%inherit file="/_templates/fullpage.mako" />
 
 <div class="page-left-medium">                
-<h1 id="community">community</h1>
-<p>openFrameworks is a diverse community of hackers, artists, designers, students, teachers from all over the world. To learn more about getting involved in OF, check out the <a href="http://www.openframeworks.cc/list-info/">community mailing list</a>. The community list is ideal for learning about ways to participate, hearing about upcoming events like workshops and conferences, and sharing projects.</p>
+<!--h1 id="community">community</h1-->
+<h3>openFrameworks is a diverse community of hackers, artists, designers, students, teachers from all over the world.</h3>
+<p>To learn more about getting involved in OF, check out the <a href="http://www.openframeworks.cc/list-info/">community mailing list</a>.
+The community list is ideal for learning about ways to participate, hearing about upcoming events like workshops and conferences, and sharing projects.</p>
 <p>Want to get involved right away?  The OF community is always looking for developers, designers, writers, event organizers, and general enthusiasts to help build a better experience.  If you're wondering where to look, dive into the <a href="http://forum.openframeworks.cc/index.php?board=31.0">collaborations</a> section on the forum, or take a look at the existing <a href="http://www.openframeworks.cc/tutorials/">tutorials</a>.
 
 <ul class="external_links" >
@@ -31,15 +33,7 @@
             
 <div class="page-right-narrow">
     <div class="home-links">
-        <h3>upcoming events</h3>
-        <p>Conferences, workshops, and talks related to oF and the surrounding community</p>
-        <ul>
-        <li><a href="http://www.mirafestival.com/lab-concept-en?lang=en">OF workshops at Mira Festival</a>, Barcelona, 14-16 November 2013</li>
-        <li><a href="http://www.telenoika.net/tallers/taller-opengl-amb-openframeworks">advance OF workshop at Telenoika</a>, Barcelona, 11-14 November 2013</li>
-        <li><a href="http://push-conference.com/">push.conference</a>, Munich, 25-26 October 2013</li>
-        <li><a href="http://studioforcreativeinquiry.org/events/creative-coding-on-the-raspberry-pi-with-openframeworks">OF + RaspberryPi workshop and hackathon</a>, CMU, Pittsburgh.  11-13 October 2013.</li>
-        </ul>
-
+    
         <h3 style="padding-top:30px">recurring meetups</h3>
         <p>Gatherings of people working with oF or curious about getting involved.  A great place to meet people and share your ideas and projects!</p>
         <ul>

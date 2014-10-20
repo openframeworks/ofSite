@@ -18,7 +18,7 @@ _istemplated: False_
 
 Graphics Language Shading Language (GLSL) can be used in oF by using the ofShader object. Shading happens in two distinct steps: the vertex shader creates values for each vertex in the model, and the fragment shader creates values for each pixel in the rendered object. To define a shader, create a .frag file for the fragment shader and a .vert file for the vertex shader.
 A vertex shader has attributes about a location in space or vertex, which means not only the actual coordinates of that location but also its color, how any textures should be mapped onto it, and how the vertices are modified in the operation. A vertex shader can change the positions of each vertex, the number of lighting computations per vertex, and the color that will be applied to each vertex.
-A geometry shader can generate new graphics primitives like points, lines, and triangles, from those primitives that were sent to the graphics card from the CPU. This means that you could get a point and turn it into a triangle or even a bunch of triangles, or get a line and turn it into a rectangle, or do real-time extrusion. They are very powerful and can be quite tricky to get right, but theyre becoming more popular.
+A geometry shader can generate new graphics primitives like points, lines, and triangles, from those primitives that were sent to the graphics card from the CPU. This means that you could get a point and turn it into a triangle or even a bunch of triangles, or get a line and turn it into a rectangle, or do real-time extrusion. They are very powerful and can be quite tricky to get right, but they're becoming more popular.
 The fragment shader is somewhat misleadingly named because what it really allows you to do is to change values assigned to each pixel. The vertex shader operates on the vertices, and the fragment shader operates on the pixels. By the time the fragment shader gets information passed into it by the graphics card, the color of a particular pixel has already been computed and in the fragment shader can be combined with an element like a lighting effecting, a fog effect, or a blur among many other options. The usual end result of this stage per fragment is a color value and a depth for the fragment.
 
 
@@ -515,7 +515,7 @@ _advanced: False_
 
 _inlined_description: _
 
-returns the shader source as it was passed to the GLSL compiler 
+returns the shader source as it was passed to the GLSL compiler
 
 
 
@@ -990,15 +990,15 @@ _advanced: False_
 
 _inlined_description: _
 
-Mimics the #include behaviour of the c preprocessor  Includes files specified using the '#pragma include <filepath>' directive. 
+Mimics the #include behaviour of the c preprocessor  Includes files specified using the '#pragma include <filepath>' directive.
 
 
-***note:*** 
-	Include paths are always specified relative to the including file's current path 
+***note:***
+    Include paths are always specified relative to the including file's current path
 
-Recursive #pragma include statements are possible 
+Recursive #pragma include statements are possible
 
-Includes will be processed up to 32 levels deep 
+Includes will be processed up to 32 levels deep
 
 
 

@@ -39,9 +39,9 @@ _We need to make sure the CPU has 192MB of RAM in order to compile openFramework
 You now can download the Linux armv6 version of openFrameworks and uncompress it into a folder. Using a Shell, The following commands will download openFrameworks and uncompress it into the folder `/home/pi/openFrameworks`
  
 0. `cd` 
-0. `curl -O http://www.openframeworks.cc/versions/v0.8.3/of_v0.8.3_linuxarmv6l_release.tar.gz` 
+0. `curl -O http://www.openframeworks.cc/versions/v0.8.4/of_v0.8.4_linuxarmv6l_release.tar.gz` 
 0.  `mkdir openFrameworks`
-0.  `tar vxfz of_v0.8.3_linuxarmv6l_release.tar.gz -C openFrameworks --strip-components 1`
+0.  `tar vxfz of_v0.8.4_linuxarmv6l_release.tar.gz -C openFrameworks --strip-components 1`
 
 ## Compile openFrameworks:
 This step will take approximately 1 hour when compiling on the Raspberry Pi, Make sure you didn't skip the Memory Split step in the above section _**Configure the Raspberry Pi**_ or it will eventually fail.

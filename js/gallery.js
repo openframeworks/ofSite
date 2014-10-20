@@ -73,7 +73,7 @@ function feedCANLoaded(result) {
     
 function OnLoad() {
     var feedCAN = new google.feeds.Feed("http://www.creativeapplications.net/category/openframeworks/feed/");
-    feedCAN.setNumEntries(9);
+    feedCAN.setNumEntries(10);
     feedCAN.setResultFormat(google.feeds.Feed.XML_FORMAT);
     // Calling load sends the request off.  It requires a callback function.
     feedCAN.load(feedCANLoaded);

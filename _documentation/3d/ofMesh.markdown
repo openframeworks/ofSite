@@ -16,7 +16,7 @@ _istemplated: False_
 
 ##Description
 
-An ofMesh represents a set of vertices in 3D spaces, and normals at those points, colors at those points, and texture coordinates at those points. Each of these different properties is stored in a vector. 
+An ofMesh represents a set of vertices in 3D spaces, and normals at those points, colors at those points, and texture coordinates at those points. Each of these different properties is stored in a vector.
 Vertices are passed to your graphics card and your graphics card fill in the spaces in between them in a processing usually called the rendering pipeline. The rendering pipeline goes more or less like this:
 
 1. Say how you're going to connect all the points.
@@ -25,11 +25,11 @@ Vertices are passed to your graphics card and your graphics card fill in the spa
 
 3. Say that you're done making points.
 
-You may be thinking: I'll just make eight vertices and voila: a cube. Not so quick. There's a hitch and that hitch is that the OpenGL renderer has different ways of connecting the vertices that you pass to it and none are as efficient as to only need eight vertices to create a cube. 
+You may be thinking: I'll just make eight vertices and voila: a cube. Not so quick. There's a hitch and that hitch is that the OpenGL renderer has different ways of connecting the vertices that you pass to it and none are as efficient as to only need eight vertices to create a cube.
 
 You've probably seen a version of the following image somewhere before.
 ![PRIMATIVES](primitives_new-640x269.gif)
-Generally you have to create your points to fit the drawing mode that you've selected because of whats called winding. A vertex gets connected to another vertex in the order that the mode does its winding and this means that you might need multiple vertices in a given location to create the shape you want. The cube, for example, requires eighteen vertices, not the eight that you would expect. If you note the order of vertices in the GL chart above you'll see that all of them use their vertices slightly differently (in particular you should make note of the GL_TRIANGLE_STRIP example). Drawing a shape requires that you keep track of which drawing mode is being used and which order your vertices are declared in. 
+Generally you have to create your points to fit the drawing mode that you've selected because of whats called winding. A vertex gets connected to another vertex in the order that the mode does its winding and this means that you might need multiple vertices in a given location to create the shape you want. The cube, for example, requires eighteen vertices, not the eight that you would expect. If you note the order of vertices in the GL chart above you'll see that all of them use their vertices slightly differently (in particular you should make note of the GL_TRIANGLE_STRIP example). Drawing a shape requires that you keep track of which drawing mode is being used and which order your vertices are declared in.
 
 If you're thinking: it would be nice if there were an abstraction layer for this you're thinking right. Enter the mesh, which is really just an abstraction of the vertex and drawing mode that we started with but which has the added bonus of managing the draw order for you. That may seem insignificant at first, but it provides some real benefits when working with complex geometry.
 
@@ -45,13 +45,13 @@ for (int y = 0; y < height; y++){
 }
 
 // now it's important to make sure that each vertex is correctly connected with the
-// other vertices around it. This is done using indices, which you can set up like so:	
+// other vertices around it. This is done using indices, which you can set up like so:
 for (int y = 0; y<height-1; y++){
 	for (int x=0; x<width-1; x++){
 		mesh.addIndex(x+y*width);				// 0
 		mesh.addIndex((x+1)+y*width);			// 1
 		mesh.addIndex(x+(y+1)*width);			// 10
-		
+
 		mesh.addIndex((x+1)+y*width);			// 1
 		mesh.addIndex((x+1)+(y+1)*width);		// 11
 		mesh.addIndex(x+(y+1)*width);			// 10
@@ -755,7 +755,7 @@ _inlined_description: _
 _description: _
 
 
-Add the vertices, normals, texture coordinates and indices of one mesh onto another mesh. Everything from the refrenced mesh is simply added at the end of the current mesh's lists.
+Add the vertices, normals, texture coordinates and indices of one mesh onto another mesh. Everything from the referenced mesh is simply added at the end of the current mesh's lists.
 
 
 
@@ -785,7 +785,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Returns an ofMesh representing an XYZ coordinate system. 
+Returns an ofMesh representing an XYZ coordinate system.
 
 
 
@@ -840,7 +840,7 @@ A helper method that returns a box made of triangles. The resolution settings fo
 ofMesh mesh;
 mesh = ofMesh::box(200.0, 200.0, 200.0);
 ~~~~
- 
+
 ![image of a simple box](box.jpg)
 
 
@@ -1126,7 +1126,7 @@ A helper method that returns a cone made of triangles. The resolution settings f
 ofMesh mesh;
 mesh = ofMesh::cone(100.0, 200.0);
 ~~~~
- 
+
 ![image of a simple cone](cone.jpg)
 
 
@@ -1172,7 +1172,7 @@ A helper method that returns a cylinder made of triangles. The resolution settin
 ofMesh mesh;
 mesh = ofMesh::cylinder(100.0, 200.0);
 ~~~~
- 
+
 ![image of a simple cylinder](cylinder.jpg)
 
 
@@ -2053,7 +2053,7 @@ _inlined_description: _
 _description: _
 
 
-Returns the index from the index vector. Each index represents the index of the vertex in the vertices vector. This determines the way that the vertices are connected into the polgoynon type set in the primitiveMode. 
+Returns the index from the index vector. Each index represents the index of the vertex in the vertices vector. This determines the way that the vertices are connected into the polgoynon type set in the primitiveMode.
 
 
 
@@ -2253,7 +2253,7 @@ _inlined_description: _
 _description: _
 
 
-Returns a mesh made up of a range of indices from startIndex to the endIndex. The new mesh includes the mesh mode, colors, textures, and normals of the original mesh (assuming any were added).  
+Returns a mesh made up of a range of indices from startIndex to the endIndex. The new mesh includes the mesh mode, colors, textures, and normals of the original mesh (assuming any were added).
 
 
 
@@ -3691,7 +3691,7 @@ Loads a mesh from a file located at the provided path into the mesh.
 This will replace any existing data within the mesh.
 
 It expects that the file will be in the [PLY Format](http://en.wikipedia.org/wiki/PLY_(file_format)).
-It will only load meshes saved in the PLY ASCII format; the binary format is not supported. 
+It will only load meshes saved in the PLY ASCII format; the binary format is not supported.
 
 
 
@@ -4090,7 +4090,7 @@ _description: _
 Saves the mesh at the passed path in the [PLY Format](http://en.wikipedia.org/wiki/PLY_(file_format)).
 
 There are two format options for PLY: a binary format and an ASCII format.
-By default, it will save using the ASCII format. 
+By default, it will save using the ASCII format.
 Passing ``true`` into the ``useBinary`` parameter will save it in the binary format.
 
 If you're planning on reloading the mesh into ofMesh, ofMesh currently only supports loading the ASCII format.
@@ -4291,7 +4291,7 @@ _inlined_description: _
 _description: _
 
 
-Allows you to set the ofPrimitiveMode. The available modes are OF_PRIMITIVE_TRIANGLES, OF_PRIMITIVE_TRIANGLE_STRIP, OF_PRIMITIVE_TRIANGLE_FAN, OF_PRIMITIVE_LINES, OF_PRIMITIVE_LINE_STRIP, OF_PRIMITIVE_LINE_LOOP, OF_PRIMITIVE_POINTS 
+Allows you to set the ofPrimitiveMode. The available modes are OF_PRIMITIVE_TRIANGLES, OF_PRIMITIVE_TRIANGLE_STRIP, OF_PRIMITIVE_TRIANGLE_FAN, OF_PRIMITIVE_LINES, OF_PRIMITIVE_LINE_STRIP, OF_PRIMITIVE_LINE_LOOP, OF_PRIMITIVE_POINTS
 
 
 

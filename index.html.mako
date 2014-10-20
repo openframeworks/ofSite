@@ -16,21 +16,25 @@
         <p>Grab the most recent release (${bf.config.currentVersion}) and follow the setup guide to get openFrameworks running.</p>
         
 	<h3><a href="documentation/">documentation</a></h3>
-	<p>Reference for openFrameworks classes, functions and addons. For guides and tutorials, see the <a href="http://wiki.openframeworks.cc/">wiki</a>.</p>
+	<p>Reference for openFrameworks classes, functions and addons. You can also check the <a href="http://openframeworks.cc/tutorials">tutorials section<a>.</p>
         
 	<h3><a href="http://forum.openframeworks.cc/">forum</a></h3>
 	<p>The forum is a place to meet other people working with openFrameworks. It's a place to share your work, or find help solving problems.</p>
-
-	<p />
-	<a href="http://inst-int.com" target="_blank"><img style="margin-top:10px;" src="images/promo/INST-INT2014_300x100_.png" width="300" height="100" border="0"></a>
-	
-	<p />
-	<a href="http://www.amazon.com/Mastering-openFrameworks-Creative-Coding-Demystified/dp/1849518041" target="_blank"><img style="margin-top:10px;" src="images/promo/mastering-book.jpg" width="300" height="100" border="0"></a>
-
     </div>
 </div>
 
-<div class="page-wide">
+<div class="sectiontext home">
+    <h2>Latest images</h2>
+</div>
+<div class="gallery home">
+    <div id="flickr"></div>
+    <br class="clearboth">
+</div>
+
+<div class="sectiontext home">
+    <h2>Latest posts</h2>
+</div>
+<div class="social home">
     <div class="tweet">
         <h3>twitter</h3>
         <div id="tweets">
@@ -46,14 +50,6 @@
     <div id="github"></div>
 
     <br class="clearboth">
-    <hr/>
 </div>
 
-<div class="page-wide">
-                
-    <div id="flickr"></div>
-    <div id="vimeo"></div>
-
-    <br class="clearboth">
-</div>
 

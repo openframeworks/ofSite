@@ -46,8 +46,8 @@ _description: _
 Sets the background color. It takes as input r,g,b (0-255). The background is cleared automatically, just before the draw() command, so if the background color is not changing, you could call this inside of setup() (once, at the start of the application). If the background color is changing, you can call this inside of update().
 ~~~~{.cpp}
 void ofApp::setup(){
-	ofBackground(255,0,0); 	// Sets the background color to red
-}    
+    ofBackground(255,0,0);  // Sets the background color to red
+}
 ~~~~
 
 
@@ -196,56 +196,56 @@ _description: _
 
 Sets the background color to a gradient. It takes as input 2 ofColor() objects and a Gradient Mode. Must be called in the draw() function. Accepted modes are:
 
-Circular: OF_GRADIENT_CIRCULAR  
-Linear: OF_GRADIENT_LINEAR  
-Bar: OF_GRADIENT_BAR  
-  
+Circular: OF_GRADIENT_CIRCULAR
+Linear: OF_GRADIENT_LINEAR
+Bar: OF_GRADIENT_BAR
+
 **Background Gradient: Circular:**
 ![Background Gradient Circular](bkgGradient_circular.png)
 ~~~~{.cpp}
 void ofApp::draw(){
 
-	ofColor colorOne;
-	ofColor colorTwo;
+    ofColor colorOne;
+    ofColor colorTwo;
 
-	colorOne.set (255, 0, 0);
-	colorTwo.set (0, 0, 255);
+    colorOne.set (255, 0, 0);
+    colorTwo.set (0, 0, 255);
 
-	ofBackgroundGradient(colorOne, colorTwo, OF_GRADIENT_CIRCULAR);  
-	// Sets the background to a circular gradient
-}    
+    ofBackgroundGradient(colorOne, colorTwo, OF_GRADIENT_CIRCULAR);
+    // Sets the background to a circular gradient
+}
 ~~~~
-  
+
 **Background Gradient: Linear:**
 ![Background Gradient Linear](bkgGradient_linear.png)
 ~~~~{.cpp}
 void ofApp::draw(){
 
-	ofColor colorOne;
-	ofColor colorTwo;
+    ofColor colorOne;
+    ofColor colorTwo;
 
-	colorOne.set (255, 0, 0);
-	colorTwo.set (0, 0, 255);
+    colorOne.set (255, 0, 0);
+    colorTwo.set (0, 0, 255);
 
-	ofBackgroundGradient(colorOne, colorTwo, OF_GRADIENT_LINEAR);
-	  // Sets the background to a linear gradient
-}    
+    ofBackgroundGradient(colorOne, colorTwo, OF_GRADIENT_LINEAR);
+      // Sets the background to a linear gradient
+}
 ~~~~
-  
+
 **Background Gradient: Bar:**
 ![Background Gradient Bar](bkgGradient_bar.png)
 ~~~~{.cpp}
 void ofApp::draw(){
 
-	ofColor colorOne;
-	ofColor colorTwo;
+    ofColor colorOne;
+    ofColor colorTwo;
 
-	colorOne.set (255, 0, 0);
-	colorTwo.set (0, 0, 255);
+    colorOne.set (255, 0, 0);
+    colorTwo.set (0, 0, 255);
 
-	ofBackgroundGradient(colorOne, colorTwo, OF_GRADIENT_BAR);
-	  // Sets the background to a bar gradient
-}    
+    ofBackgroundGradient(colorOne, colorTwo, OF_GRADIENT_BAR);
+      // Sets the background to a bar gradient
+}
 ~~~~
 
 
@@ -320,11 +320,11 @@ _inlined_description: _
 _description: _
 
 
-Sets the background color using a hex color value. 
+Sets the background color using a hex color value.
 ~~~~{.cpp}
 void ofApp::setup(){
-	ofBackgroundHex(0xff0000); 	// Sets the background color to red
-}    
+    ofBackgroundHex(0xff0000);  // Sets the background color to red
+}
 ~~~~
 
 
@@ -363,19 +363,19 @@ _inlined_description: _
 _description: _
 
 
-Begins render to pdf. OpenFrameworks allows rendering of 2D graphics to pdf via the ofCairoRenderer. ofBeginSaveScreenAsPDF is called before drawing. When done drawing call ofEndSaveScreenAsPDF() to output the file. 
+Begins render to pdf. OpenFrameworks allows rendering of 2D graphics to pdf via the ofCairoRenderer. ofBeginSaveScreenAsPDF is called before drawing. When done drawing call ofEndSaveScreenAsPDF() to output the file.
 ~~~~{.cpp}
 void ofApp::setup(){
-	if( oneShot ){
-		ofBeginSaveScreenAsPDF("screenshot-"+ofGetTimestampString()+".pdf", false);
-	}
-	
-	ofSetColor(54,54,54);
-	ofEllipse(100,100,200,200);
-	if( oneShot ){
-		ofEndSaveScreenAsPDF();
-		oneShot = false;
-	}
+    if( oneShot ){
+        ofBeginSaveScreenAsPDF("screenshot-"+ofGetTimestampString()+".pdf", false);
+    }
+
+    ofSetColor(54,54,54);
+    ofEllipse(100,100,200,200);
+    if( oneShot ){
+        ofEndSaveScreenAsPDF();
+        oneShot = false;
+    }
 }
 ~~~~
 
@@ -538,7 +538,7 @@ _inlined_description: _
 _description: _
 
 
-Describes a bezier curve through three points of a shape. To be called between ofBeginShape() and ofEndShape(). 
+Describes a bezier curve through three points of a shape. To be called between ofBeginShape() and ofEndShape().
 
 
 
@@ -653,10 +653,10 @@ eg:
 ~~~~{.cpp}
 float * bgColor = ofBgColorPtr();
 //lets get the individual values!
-float r = bgColor[0];	//red
-float g = bgColor[1];	//green
-float b = bgColor[2];	//blue
-float a = bgColor[3];	//alpha
+float r = bgColor[0];   //red
+float g = bgColor[1];   //green
+float b = bgColor[2];   //blue
+float a = bgColor[3];   //alpha
 ~~~~
 
 
@@ -698,8 +698,8 @@ _description: _
 Draws a circle, centered at x,y, with a given radius.
 ~~~~{.cpp}
 void ofApp::draw(){
-	ofCircle(150,150,100);			
-}    
+    ofCircle(150,150,100);
+}
 ~~~~
 Please keep in mind that drawing circle with different outline color and fill requires calling ofNoFill and ofSetColor for drawing stroke and ofFill and again ofSetColor for filled solid color circle.
 
@@ -817,9 +817,9 @@ When drawing to the screen, ofClear(…) will clear the screen entirely.
 
 ~~~~{.cpp}
 void ofApp::draw() {
-	ofClear ( 255, 0, 0 ); 
-	// Clears current screen and replaces it with red.
-	// Screen will render as a flat color.
+    ofClear ( 255, 0, 0 );
+    // Clears current screen and replaces it with red.
+    // Screen will render as a flat color.
 }
 ~~~~
 
@@ -827,14 +827,14 @@ When using the opengl renderer and drawing into an [FBO](http://www.openframewor
 
 ~~~~{.cpp}
 void ofApp::draw() {
-	ofFbo myFbo;
-	myFbo.allocate ( 300, 300 );
+    ofFbo myFbo;
+    myFbo.allocate ( 300, 300 );
 
-	myFbo.begin();
-		ofClear ( 255, 0, 0 );
-		// Clears FBO buffer and replaces it with red.
-		// No effect in current drawing screen.
-	myFbo.end();
+    myFbo.begin();
+        ofClear ( 255, 0, 0 );
+        // Clears FBO buffer and replaces it with red.
+        // No effect in current drawing screen.
+    myFbo.end();
 }
 ~~~~
 
@@ -880,10 +880,10 @@ Clears the color and depth bits of current renderer and replaces it with a grays
 
 ~~~~{.cpp}
 void ofApp::draw(){
-	ofColor myColor;
-	myColor.set ( 128 );
-	ofClear ( myColor );  
-	// Clears current screen and replaces it with a grayscale value.
+    ofColor myColor;
+    myColor.set ( 128 );
+    ofClear ( myColor );
+    // Clears current screen and replaces it with a grayscale value.
 }
 ~~~~
 
@@ -927,10 +927,10 @@ Clears the color and depth bits of current renderer and replaces it with an ofCo
 
 ~~~~{.cpp}
 void ofApp::draw(){
-	ofColor myColor;
-	myColor.set ( 0, 0, 255 );
-	ofClear ( myColor );  
-	// Clears current screen and replaces it with myColor.
+    ofColor myColor;
+    myColor.set ( 0, 0, 255 );
+    ofClear ( myColor );
+    // Clears current screen and replaces it with myColor.
 }
 ~~~~
 
@@ -1082,7 +1082,7 @@ _inlined_description: _
 _description: _
 
 
-Specifies a single point of a shape. The difference from ofVertex is that the line describing the edge of the shape between two points will be a curve as opposed to a straight line. The curve is automatically generated using the catmull rom forumla. To be called between ofBeginShape() and ofEndShape().
+Specifies a single point of a shape. The difference from ofVertex is that the line describing the edge of the shape between two points will be a curve as opposed to a straight line. The curve is automatically generated using the catmull from formula. To be called between ofBeginShape() and ofEndShape().
 
 
 
@@ -1230,14 +1230,14 @@ _inlined_description: _
 _description: _
 
 
-Turns off alpha blending. 
+Turns off alpha blending.
 ~~~~{.cpp}
 void ofApp::draw(){
-	ofEnableAlphaBlending();	// turn on alpha blending
-	ofSetColor(255,0,0,127);	// red, 50% transparent
-	ofRect(20,20,100,100);		// draws the rect with alpha
-	ofDisableAlphaBlending();	// turn off alpha
-	ofRect(120,20,100,100);	// draws the rect without alpha
+    ofEnableAlphaBlending();    // turn on alpha blending
+    ofSetColor(255,0,0,127);    // red, 50% transparent
+    ofRect(20,20,100,100);      // draws the rect with alpha
+    ofDisableAlphaBlending();   // turn off alpha
+    ofRect(120,20,100,100); // draws the rect without alpha
 }
 ~~~~
 
@@ -1277,7 +1277,7 @@ _inlined_description: _
 _description: _
 
 
-Turns off anti-aliasing (smoothing). 
+Turns off anti-aliasing (smoothing).
 
 
 
@@ -1356,27 +1356,27 @@ _description: _
 Turns off depth testing so rendering happens in draw order rather than by z-depth. Turning off depth test is useful for combining 3d scenes with 2d overlays such as a control panel.
 ~~~~{.cpp}
 void ofApp::draw(){
-    
+
     ofPushMatrix();
-    
+
         ofTranslate( ofGetWidth()/2, ofGetHeight()/2, 0 );
-    
+
         ofEnableDepthTest();
         ofSetColor(255);
         ofDrawSphere(0,0,100,60);
         ofSetColor(255,0,255);
         ofDrawSphere(50,0,50,100);
         ofDisableDepthTest();
-    
+
         ofSetColor(0);
         ofRect(75,75,120,30);
         ofSetColor(255);
         ofDrawBitmapString("Some bubbles.",85,90);
-    
+
     ofPopMatrix();
 }
 ~~~~
- 
+
 
 
 
@@ -1414,7 +1414,7 @@ _inlined_description: _
 _description: _
 
 
-Turns off point sprite. 
+Turns off point sprite.
 
 
 
@@ -1493,7 +1493,7 @@ _description: _
 Draws a bitmapped string, on screen, at point (x,y). For example, you can write some text on screen like this:
 ~~~~{.cpp}
 void ofApp::draw(){
-	ofDrawBitmapString("hi!!", 100,100);
+    ofDrawBitmapString("hi!!", 100,100);
 }
 ~~~~
 Your strings can even be multiline:
@@ -1507,7 +1507,7 @@ you can also using dynamically generated strings. For example, to print the fram
 string fpsStr = "frame rate: "+ofToString(ofGetFrameRate(), 2);
 ofDrawBitmapString(fpsStr, 100,100);
 ~~~~
-Please note, ofDrawBitmapString wraps a glut function that uses glDrawPixels. On some graphics cards, you may discover that glDrawPixels is slow (or even, very slow). If so, you might want to invsetigate using ofTrueTypeFont with a small typeface, non-anti-aliased, as a suitable alternative.
+Please note, ofDrawBitmapString wraps a glut function that uses glDrawPixels. On some graphics cards, you may discover that glDrawPixels is slow (or even, very slow). If so, you might want to investigate using ofTrueTypeFont with a small typeface, non-anti-aliased, as a suitable alternative.
 
 
 
@@ -1692,8 +1692,8 @@ _description: _
 Draws an ellipse from point (x,y) with a given width (w) and height (h).
 ~~~~{.cpp}
 void ofApp::draw(){
-	ofEllipse(10,10,50,30);
-}    
+    ofEllipse(10,10,50,30);
+}
 ~~~~
 
 
@@ -1804,14 +1804,14 @@ _inlined_description: _
 _description: _
 
 
-Turns on alpha blending, which is off by default for performance purposes. It simply wraps opengl commands that enable blending, and turn on a common blend mode.
+Turns on alpha blending (which is on by default since OF version 0.8.0). It simply wraps opengl commands that enable blending, and turn on a common blend mode.
 ~~~~{.cpp}
 void ofApp::draw(){
-	ofEnableAlphaBlending();	// turn on alpha blending
-	ofSetColor(255,0,0,127);	// red, 50% transparent
-	ofRect(20,20,100,100);		// draws the rect with alpha
-	ofDisableAlphaBlending();	// turn off alpha
-	ofRect(120,20,100,100);	// draws the rect without alpha
+    ofEnableAlphaBlending();    // turn on alpha blending
+    ofSetColor(255,0,0,127);    // red, 50% transparent
+    ofRect(20,20,100,100);      // draws the rect with alpha
+    ofDisableAlphaBlending();   // turn off alpha
+    ofRect(120,20,100,100); // draws the rect without alpha
 }
 ~~~~
 
@@ -1890,13 +1890,13 @@ _description: _
 
 
 Sets and enables the blend mode for drawing. The options are:
-	
-	OF_BLENDMODE_DISABLED
-	OF_BLENDMODE_ALPHA
-	OF_BLENDMODE_ADD
-	OF_BLENDMODE_SUBTRACT
-	OF_BLENDMODE_MULTIPLY
-	OF_BLENDMODE_SCREEN 
+
+    OF_BLENDMODE_DISABLED
+    OF_BLENDMODE_ALPHA
+    OF_BLENDMODE_ADD
+    OF_BLENDMODE_SUBTRACT
+    OF_BLENDMODE_MULTIPLY
+    OF_BLENDMODE_SCREEN
 There is a blendingExample in the openFrameworks examples > graphics
 
 
@@ -1935,27 +1935,27 @@ _inlined_description: _
 _description: _
 
 
-Turns on depth testing so rendering happens according to z-depth rather than draw order. 
+Turns on depth testing so rendering happens according to z-depth rather than draw order.
 ~~~~{.cpp}
 void ofApp::draw(){
-    
+
     ofPushMatrix();
-    
+
         ofTranslate( ofGetWidth()/2, ofGetHeight()/2, 0 );
-    
+
         ofEnableDepthTest(); // enable depth test
         ofSetColor(255);
         ofDrawSphere(0,0,100,60); // draw 3d sphere
         ofSetColor(255,0,255);
         ofDrawSphere(50,0,50,100);
         ofDisableDepthTest(); // disable depth test
-    	
-    	// draw 2d overlay
+
+        // draw 2d overlay
         ofSetColor(0);
         ofRect(75,75,120,30);
         ofSetColor(255);
         ofDrawBitmapString("Some bubbles.",85,90);
-    
+
     ofPopMatrix();
 }
 ~~~~
@@ -2075,16 +2075,16 @@ _description: _
 Terminates draw to pdf through ofCairoRenderer and outputs the pdf file.
 ~~~~{.cpp}
 void ofApp::setup(){
-	if( oneShot ){
-		ofBeginSaveScreenAsPDF("screenshot-"+ofGetTimestampString()+".pdf", false);
-	}
-	
-	ofSetColor(54,54,54);
-	ofEllipse(100,100,200,200);
-	if( oneShot ){
-		ofEndSaveScreenAsPDF();
-		oneShot = false;
-	}
+    if( oneShot ){
+        ofBeginSaveScreenAsPDF("screenshot-"+ofGetTimestampString()+".pdf", false);
+    }
+
+    ofSetColor(54,54,54);
+    ofEllipse(100,100,200,200);
+    if( oneShot ){
+        ofEndSaveScreenAsPDF();
+        oneShot = false;
+    }
 }
 ~~~~
 
@@ -2162,13 +2162,13 @@ _inlined_description: _
 _description: _
 
 
-Draw shapes filled with the current draw color. 
+Draw shapes filled with the current draw color.
 ~~~~{.cpp}
 void ofApp::draw(){
-	ofSetColor(0,0,255);
-	ofFill();
-	ofRect(10,10,100,100); 	//draws the rectangle filled in blue
-}    
+    ofSetColor(0,0,255);
+    ofFill();
+    ofRect(10,10,100,100);  //draws the rectangle filled in blue
+}
 ~~~~
 
 
@@ -2272,7 +2272,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Queries the current OpenGL matrix state  Returns the specified matrix as held by the renderer's current matrix stack. 
+Queries the current OpenGL matrix state  Returns the specified matrix as held by the renderer's current matrix stack.
 
 
 
@@ -2466,13 +2466,13 @@ _description: _
 Tells you if rect drawing mode is set to drawn from the center or drawn from the top left corner, as set with the ofSetRectMode() function.
 ~~~~{.cpp}
 void ofApp::draw(){
-	if(ofGetRectMode() == OF_RECTMODE_CORNER){
-		ofRect(10,10,80,80);	
-	}
-	else {
-		ofRect(50,50,80,80);
-	}
-}    
+    if(ofGetRectMode() == OF_RECTMODE_CORNER){
+        ofRect(10,10,80,80);
+    }
+    else {
+        ofRect(50,50,80,80);
+    }
+}
 ~~~~
 
 
@@ -2655,11 +2655,11 @@ _inlined_description: _
 _description: _
 
 
-Draws a line between two points: (x1,y1),(x2,y2). 
+Draws a line between two points: (x1,y1),(x2,y2).
 ~~~~{.cpp}
 void ofApp::draw(){
-	ofLine(10,10,100,100);
-}    
+    ofLine(10,10,100,100);
+}
 ~~~~
 
 
@@ -2988,13 +2988,13 @@ _inlined_description: _
 _description: _
 
 
-Draw shapes as outlines with the current draw color. 
+Draw shapes as outlines with the current draw color.
 ~~~~{.cpp}
 void ofApp::draw(){
-	ofSetColor(0,0,255);
-	ofNoFill();
-	ofRect(10,10,100,100); 	//draws only the outline in blue
-}    
+    ofSetColor(0,0,255);
+    ofNoFill();
+    ofRect(10,10,100,100);  //draws only the outline in blue
+}
 ~~~~
 
 
@@ -3069,14 +3069,14 @@ _inlined_description: _
 _description: _
 
 
-ofPopMatrix() restores the prior coordinate system. 
+ofPopMatrix() restores the prior coordinate system.
 ~~~~{.cpp}
 void ofApp::draw(){
-	ofCircle(10, 10, 5);	// draw a circle
-	ofPushMatrix();			// push the current coordinate position
-	ofRotateX(90);			// change the coordinate system
-	ofRect(10,10,40,40);	// draw a rect
-	ofPopMatrix();			// recall the pushed coordinate position
+    ofCircle(10, 10, 5);    // draw a circle
+    ofPushMatrix();         // push the current coordinate position
+    ofRotateX(90);          // change the coordinate system
+    ofRect(10,10,40,40);    // draw a rect
+    ofPopMatrix();          // recall the pushed coordinate position
 }
 ~~~~
 
@@ -3116,16 +3116,16 @@ _inlined_description: _
 _description: _
 
 
-ofPopStyle() restores the prior style settings. It needs to be called after ofPushStyle. 
+ofPopStyle() restores the prior style settings. It needs to be called after ofPushStyle.
 ~~~~{.cpp}
 void ofApp::draw(){
-	ofCircle(10,10,5);
-	ofPushStyle();	// push the current style for use later
-	ofFill();
-	ofsetColor(255,0,0);
-	ofEllipse(30,10,40,40);
-	ofPopStyle();	// recall the pushed style
-}    
+    ofCircle(10,10,5);
+    ofPushStyle();  // push the current style for use later
+    ofFill();
+    ofsetColor(255,0,0);
+    ofEllipse(30,10,40,40);
+    ofPopStyle();   // recall the pushed style
+}
 ~~~~
 
 
@@ -3204,11 +3204,11 @@ ofPushMatrix saves the current coordinate system allowing users to develop speci
 In the following example we only rotate the square.
 ~~~~{.cpp}
 void ofApp::draw(){
-	ofCircle(10, 10, 5);	// draw a circle
-	ofPushMatrix();			// push the current coordinate position
-	ofRotateX(90);			// change the coordinate system
-	ofRect(10,10,40,40);	// draw a rect
-	ofPopMatrix()			// recall the pushed coordinate position
+    ofCircle(10, 10, 5);    // draw a circle
+    ofPushMatrix();         // push the current coordinate position
+    ofRotateX(90);          // change the coordinate system
+    ofRect(10,10,40,40);    // draw a rect
+    ofPopMatrix()           // recall the pushed coordinate position
 }
 ~~~~
 
@@ -3252,13 +3252,13 @@ ofPushStyle saves the current style settings for the ofGraphics after its call. 
 In the following example the properties of being red and filled only applies to the ellipse:
 ~~~~{.cpp}
 void ofApp::draw(){
-	ofCircle(10,10,5);
-	ofPushStyle();	// push the current style for use later
-	ofFill();
-	ofSetColor(255,0,0);
-	ofEllipse(30,10,40,40);
-	ofPopStyle();	// recall the pushed style
-}    
+    ofCircle(10,10,5);
+    ofPushStyle();  // push the current style for use later
+    ofFill();
+    ofSetColor(255,0,0);
+    ofEllipse(30,10,40,40);
+    ofPopStyle();   // recall the pushed style
+}
 ~~~~
 
 
@@ -3333,11 +3333,11 @@ _inlined_description: _
 _description: _
 
 
-Draws a rectangle from point x,y with a given width and height. 
+Draws a rectangle from point x,y with a given width and height.
 ~~~~{.cpp}
 void ofApp::draw(){
-	ofRect(10,10,100,100);
-}    
+    ofRect(10,10,100,100);
+}
 ~~~~
 
 
@@ -3379,14 +3379,14 @@ _description: _
 Draws an rectangle from the given rectangle.
 ~~~~{.cpp}
 void ofApp::draw(){
-	ofRectangle rect;
-	rect.x = 10;
-	rect.y = 10;
-	rect.width = 100;
-	rect.height = 100;
-	
-	ofRect(rect);
-}    
+    ofRectangle rect;
+    rect.x = 10;
+    rect.y = 10;
+    rect.width = 100;
+    rect.height = 100;
+
+    ofRect(rect);
+}
 ~~~~
 
 
@@ -3428,12 +3428,12 @@ _description: _
 Draws an rectangle from point p, with a given width and height.
 ~~~~{.cpp}
 void ofApp::draw(){
-	ofPoint p;		// create a point P
-	p.x = 10;		// set the x of the point
-	p.y = 10;		// set the y of the point
-	
-	ofRect(p, 80, 80); // Draw the rectangle
-}    
+    ofPoint p;      // create a point P
+    p.x = 10;       // set the x of the point
+    p.y = 10;       // set the y of the point
+
+    ofRect(p, 80, 80); // Draw the rectangle
+}
 ~~~~
 
 
@@ -3475,8 +3475,8 @@ _description: _
 Draws an rectangle from point X, Y at depth Z with a given width and height.
 ~~~~{.cpp}
 void ofApp::draw(){
-	ofRect(10,10,-100, 80, 80); // Draw a rectangle at 100 pixels in depth
-}    
+    ofRect(10,10,-100, 80, 80); // Draw a rectangle at 100 pixels in depth
+}
 ~~~~
 
 
@@ -3519,14 +3519,14 @@ Draws a rounded rectangle from the given rectangle using given radius.
 
 ~~~~{.cpp}
 void ofApp::draw(){
-	ofRectangle myRect;
-	myRect.x = 10;
-	myRect.y = 10;
-	myRect.width = 100;
-	myRect.height = 100;
-	
-	ofRectRounded( myRect, 10 );
-}    
+    ofRectangle myRect;
+    myRect.x = 10;
+    myRect.y = 10;
+    myRect.width = 100;
+    myRect.height = 100;
+
+    ofRectRounded( myRect, 10 );
+}
 ~~~~
 
 
@@ -3566,13 +3566,13 @@ _description: _
 
 
 Draws a rectangle from point p with a given width, height and radius of rounded corners.
-  
+
 ~~~~{.cpp}
 void ofApp::draw(){
-	ofPoint p;
-	p.set ( 10, 10 );
-	ofRectRounded( p, 100, 100, 10 );
-}    
+    ofPoint p;
+    p.set ( 10, 10 );
+    ofRectRounded( p, 100, 100, 10 );
+}
 ~~~~
 
 
@@ -3612,11 +3612,11 @@ _description: _
 
 
 Draws a rectangle from point X, Y with a given width, height and radius of rounded corners.
-  
+
 ~~~~{.cpp}
 void ofApp::draw(){
-	ofRectRounded(10, 10, 100, 100, 10);
-}    
+    ofRectRounded(10, 10, 100, 100, 10);
+}
 ~~~~
 
 
@@ -3656,11 +3656,11 @@ _description: _
 
 
 Draws a rectangle from point X, Y, at depth Z with a given width, height and radius of rounded corners.
-  
+
 ~~~~{.cpp}
 void ofApp::draw(){
-	ofRectRounded(10, 10, 10, 100, 100, 10);
-}    
+    ofRectRounded(10, 10, 10, 100, 100, 10);
+}
 ~~~~
 
 
@@ -3700,11 +3700,11 @@ _description: _
 
 
 Draws a rounded rectangle from point X, Y, at depth Z with a given width, height and radius of rounded corners.
-  
+
 ~~~~{.cpp}
 void ofApp::draw(){
-	ofRectRounded(10, 10, 10, 100, 100, 10);
-}    
+    ofRectRounded(10, 10, 10, 100, 100, 10);
+}
 ~~~~
 
 
@@ -3747,14 +3747,14 @@ Draws a rounded rectangle from the given rectangle using different given radius 
 
 ~~~~{.cpp}
 void ofApp::draw(){
-	ofRectangle myRect;
-	myRect.x = 10;
-	myRect.y = 10;
-	myRect.width = 100;
-	myRect.height = 100;
-	
-	ofRectRounded( myRect, 10, 20, 30, 40 );
-}    
+    ofRectangle myRect;
+    myRect.x = 10;
+    myRect.y = 10;
+    myRect.width = 100;
+    myRect.height = 100;
+
+    ofRectRounded( myRect, 10, 20, 30, 40 );
+}
 ~~~~
 
 
@@ -3794,11 +3794,11 @@ _description: _
 
 
 Draws a rounded rectangle from point X, Y, at depth Z with a given width, height and different radius for each rounded corner.
-  
+
 ~~~~{.cpp}
 void ofApp::draw(){
-	ofRectRounded(10, 10, 10, 100, 100, 10, 20, 30, 40);
-}    
+    ofRectRounded(10, 10, 10, 100, 100, 10, 20, 30, 40);
+}
 ~~~~
 
 
@@ -3837,13 +3837,13 @@ _inlined_description: _
 _description: _
 
 
-ofRotate produces a rotation of angle "degrees"	around the vector (vecX,vecY,vecZ).
+ofRotate produces a rotation of angle "degrees" around the vector (vecX,vecY,vecZ).
 "degrees"specifies the angle of rotation, in degrees. vecX, vecY, vecZ specify the x, y, and z coordinates of a vector, respectively.
 All graphics drawn after ofRotate is called are rotated. Use ofPushMatrix and ofPopMatrix to save and restore the unrotated coordinate system.
 ~~~~{.cpp}
 void ofApp::draw(){
-	ofRotate(50, 1, 0.5, 0); //rotates the coordinate system 50 degrees along the x-axis and 25 degrees on the y-axis
-	ofRect(20,20,100,100);		
+    ofRotate(50, 1, 0.5, 0); //rotates the coordinate system 50 degrees along the x-axis and 25 degrees on the y-axis
+    ofRect(20,20,100,100);
 }
 ~~~~
 
@@ -3922,8 +3922,8 @@ _description: _
 ofRotateX produces a rotation of angle "degrees" around the X-axis of our coordinate system represented by the vector (1,0,0)."degrees"specifies the angle of rotation, in degrees.
 ~~~~{.cpp}
 void ofApp::draw(){
-	ofRotateX(45); //rotates the coordinate system 45 degrees around the x-axis
-	ofRect(20,20,100,100);		
+    ofRotateX(45); //rotates the coordinate system 45 degrees around the x-axis
+    ofRect(20,20,100,100);
 }
 ~~~~
 
@@ -3967,8 +3967,8 @@ ofRotateY produces a rotation of angle "degrees" around the Y-axis of our coordi
 "degrees"specifies the angle of rotation, in degrees.
 ~~~~{.cpp}
 void ofApp::draw(){
-	ofRotateY(45); //rotates the coordinate system 45 degrees around the x-axis
-	ofRect(20,20,100,100);		
+    ofRotateY(45); //rotates the coordinate system 45 degrees around the x-axis
+    ofRect(20,20,100,100);
 }
 ~~~~
 
@@ -4012,8 +4012,8 @@ ofRotateZ produces a rotation of angle "degrees" around the Z-axis of our coordi
 "degrees"specifies the angle of rotation, in degrees.
 ~~~~{.cpp}
 void ofApp::draw(){
-	ofRotateZ(45); //rotates the coordinate system 45 degrees around the x-axis
-	ofRect(20,20,100,100);		
+    ofRotateZ(45); //rotates the coordinate system 45 degrees around the x-axis
+    ofRect(20,20,100,100);
 }
 ~~~~
 
@@ -4057,8 +4057,8 @@ ofScale produces a nonuniform scaling along the x, y, and z axes. The three para
 e.g:
 ~~~~{.cpp}
 void ofApp::draw(){
-	ofScale(0.5,1,1);		// scale 0.5 in height
-	ofRect(10,10,40,40);	// draw a square rectangle	
+    ofScale(0.5,1,1);       // scale 0.5 in height
+    ofRect(10,10,40,40);    // draw a square rectangle
 }
 ~~~~
 Rectangle width will be now 20px heigh!
@@ -4102,13 +4102,13 @@ _description: _
 Sets the background clearing function to be auto (default) or not. If non-auto, then background clearing will not occur per frame (at the start of draw) but rather, whenever ofBackground is called.
 ~~~~{.cpp}
 void ofApp::setup(){
-	ofSetBackgroundAuto(false); //disable automatic background redraw
-}    
+    ofSetBackgroundAuto(false); //disable automatic background redraw
+}
 void ofApp::draw(){
-	if(ofGetFrameNum() % 10 == 0){
-		// draws a black background every 10 frames
-		ofSetBackground(0,0,0);
-	}
+    if(ofGetFrameNum() % 10 == 0){
+        // draws a black background every 10 frames
+        ofSetBackground(0,0,0);
+    }
 }
 ~~~~
 
@@ -4151,8 +4151,8 @@ _description: _
 Sets the background color. It takes as input r,g,b (0-255). The background is cleared automatically, just before the draw() command, so if the background color is not changing, you could call this inside of setup() (once, at the start of the application). If the background color is changing, you can call this inside of update().
 ~~~~{.cpp}
 void ofApp::setup(){
-	ofSetBackgroundColor(255,0,0); 	// Sets the background color to red
-}    
+    ofSetBackgroundColor(255,0,0);  // Sets the background color to red
+}
 ~~~~
 
 
@@ -4263,11 +4263,11 @@ _inlined_description: _
 _description: _
 
 
-Sets the background color using a hex color value. 
+Sets the background color using a hex color value.
 ~~~~{.cpp}
 void ofApp::setup(){
-	ofSetBackgroundColorHex(0xff0000); 	// Sets the background color to red
-}    
+    ofSetBackgroundColorHex(0xff0000);  // Sets the background color to red
+}
 ~~~~
 
 
@@ -4309,11 +4309,11 @@ _description: _
 Sets the resolution for the ofCircle command. By default, the circle is 22 points, but if you need to draw larger circles, you can adjust the resolution using this command. all circles are cached in opengl using a display list for optimization purposes.
 ~~~~{.cpp}
 void ofApp::draw(){
-	ofSetCircleResolution(10);		
-	ofCircle(150,150,100);			//draws a rough circle
-	ofSetCircleResolution(100);
-	ofCircle(450,150,100);			//draws a fine circle
-}    
+    ofSetCircleResolution(10);
+    ofCircle(150,150,100);          //draws a rough circle
+    ofSetCircleResolution(100);
+    ofCircle(450,150,100);          //draws a fine circle
+}
 ~~~~
 
 
@@ -4355,9 +4355,9 @@ _description: _
 Sets the draw color with r,g,b, 0-255. For example, red (0xff0000) would be: ofSetColor(255,0,0). This affects not only the color of shapes drawn with ofRect(...), ofCircle(...), etc, but also the tint of images and textures.
 ~~~~{.cpp}
 void ofApp::draw(){
-	ofSetColor(0,0,255); 	//set te color to blue
-	ofRect(10,10,100,100); 
-}    
+    ofSetColor(0,0,255);    //set te color to blue
+    ofRect(10,10,100,100);
+}
 ~~~~
 
 
@@ -4396,13 +4396,13 @@ _inlined_description: _
 _description: _
 
 
-sets the draw color with r,g,b,a 0-255. For alpha (transparency), you must first enable transparent blending (turned off by default for performance reasons), and draw in the proper z-order (objects in the back drawn first). For example, to draw a transparent red rectangle: 
+sets the draw color with r,g,b,a 0-255. For alpha (transparency), you must first enable transparent blending (turned off by default for performance reasons), and draw in the proper z-order (objects in the back drawn first). For example, to draw a transparent red rectangle:
 ~~~~{.cpp}
 void ofApp::draw(){
-	ofEnableAlphaBlending();	// turn on alpha blending
-	ofSetColor(255,0,0,127);	// red, 50% transparent
-	ofRect(20,20,100,100);
-	ofDisableAlphaBlending();	// turn it back off, if you don't need it
+    ofEnableAlphaBlending();    // turn on alpha blending
+    ofSetColor(255,0,0,127);    // red, 50% transparent
+    ofRect(20,20,100,100);
+    ofDisableAlphaBlending();   // turn it back off, if you don't need it
 }
 ~~~~
 
@@ -4445,9 +4445,9 @@ _description: _
 Sets the draw color with r,g,b, passed in as a hex. Hex is a conventient way to write colors. Some examples:
 ~~~~{.cpp}
 void ofApp::draw(){
-	ofSetColor(0xffffff);  // white  (255,255,255)
-	ofSetColor(0x000000);  // black  (0,0,0);
-	ofSetColor(0x00ff00);  // green  (0,255,0);
+    ofSetColor(0xffffff);  // white  (255,255,255)
+    ofSetColor(0x000000);  // black  (0,0,0);
+    ofSetColor(0x00ff00);  // green  (0,255,0);
 }
 ~~~~
 
@@ -4739,7 +4739,7 @@ _inlined_description: _
 _description: _
 
 
-Set depth testing on or off to either sort by z-depth (true) or draw order (false). 
+Set depth testing on or off to either sort by z-depth (true) or draw order (false).
 
 
 
@@ -4815,12 +4815,12 @@ _inlined_description: _
 _description: _
 
 
-Sets the draw color with a hex value. 
+Sets the draw color with a hex value.
 ~~~~{.cpp}
 void ofApp::draw(){
-	ofSetHexColor(0xff0000); 	//set te color to red
-	ofRect(10,10,100,100); 
-}    
+    ofSetHexColor(0xff0000);    //set te color to red
+    ofRect(10,10,100,100);
+}
 ~~~~
 
 
@@ -4862,11 +4862,11 @@ _description: _
 ofSetLineWidth sets the width of the ofLines called after.
 ~~~~{.cpp}
 void ofApp::draw(){
-	ofSetLineWidth(1);		// set line width to 1
-	ofLine(10,10,100,100);	// draw thin line
-	ofSetLineWidth(10);		// set line width to 10
-	ofLine(10,100,100,10);	// draw fat line
-}    
+    ofSetLineWidth(1);      // set line width to 1
+    ofLine(10,10,100,100);  // draw thin line
+    ofSetLineWidth(10);     // set line width to 10
+    ofLine(10,100,100,10);  // draw fat line
+}
 ~~~~
 
 
@@ -5020,15 +5020,15 @@ _inlined_description: _
 _description: _
 
 
-Sets the mode for drawing rectangles and other rectangular objects, if they are corner aligned, or drawn so that the x,y position is the center of the rectangle. possible options are OF_RECTMODE_CENTER and OF_RECTMODE_CORNER. This afects not only how ofRect() objects are drawn, but also ofTexture (and threfore ofImage) objects. 
+Sets the mode for drawing rectangles and other rectangular objects, if they are corner aligned, or drawn so that the x,y position is the center of the rectangle. possible options are OF_RECTMODE_CENTER and OF_RECTMODE_CORNER. This afects not only how ofRect() objects are drawn, but also ofTexture (and threfore ofImage) objects.
 ~~~~{.cpp}
 void ofApp::draw(){
-	ofSetRectMode(OF_RECTMODE_CORNER); //set rectangle mode to the corner
-	ofRect(10,10,80,80);	
-	ofSetRectMode(OF_RECTMODE_CENTER); //set rectangle mode to the center
-	ofRect(50,50,80,80);
-	// both rectangles are drawn at the same place
-}    
+    ofSetRectMode(OF_RECTMODE_CORNER); //set rectangle mode to the corner
+    ofRect(10,10,80,80);
+    ofSetRectMode(OF_RECTMODE_CENTER); //set rectangle mode to the center
+    ofRect(50,50,80,80);
+    // both rectangles are drawn at the same place
+}
 ~~~~
 
 
@@ -5103,7 +5103,7 @@ _inlined_description: _
 _description: _
 
 
-We use ofSetStyle to set the current style of the ofGraphics. Parameter style contains information of the graphics style such as ofColor, ofFill, polyMode and others. See ofStyle for more details. 
+We use ofSetStyle to set the current style of the ofGraphics. Parameter style contains information of the graphics style such as ofColor, ofFill, polyMode and others. See ofStyle for more details.
 
 
 
@@ -5363,8 +5363,8 @@ ofTranslate produces a translation by (x,y,z) vector of our coordinate system. T
 Use ofPushMatrix and ofPopMatrix to save and restore the untranslated coordinate system.
 ~~~~{.cpp}
 void ofApp::draw(){
-	ofTranslate(100, 100, 0);	// move the coordinate system to position x 100 and y 100 and make that zero.
-	ofRect(0, 0, 10, 10);		// draw a rect at that position
+    ofTranslate(100, 100, 0);   // move the coordinate system to position x 100 and y 100 and make that zero.
+    ofRect(0, 0, 10, 10);       // draw a rect at that position
 }
 ~~~~
 
@@ -5408,12 +5408,12 @@ ofTranslate produces a translation by (x,y,z) vector of our coordinate system. T
 Use ofPushMatrix and ofPopMatrix to save and restore the untranslated coordinate system.
 ~~~~{.cpp}
 void ofApp::draw(){
-	ofPoint point;
-	point.x = 100;
-	point.y = 100;
-	
-	ofTranslate(point);		// move the coordinate system to position of point and make that zero.
-	ofRect(0, 0, 10, 10);	// draw a rect at that position
+    ofPoint point;
+    point.x = 100;
+    point.y = 100;
+
+    ofTranslate(point);     // move the coordinate system to position of point and make that zero.
+    ofRect(0, 0, 10, 10);   // draw a rect at that position
 }
 ~~~~
 
@@ -5453,11 +5453,11 @@ _inlined_description: _
 _description: _
 
 
-Draws a triangle, with the three points: (x1,y1),(x2, y2),(x3, y3). 
+Draws a triangle, with the three points: (x1,y1),(x2, y2),(x3, y3).
 ~~~~{.cpp}
 void ofApp::draw(){
-	ofTriangle(50,10,10,40,90,40);
-}    
+    ofTriangle(50,10,10,40,90,40);
+}
 ~~~~
 
 
@@ -5568,7 +5568,7 @@ _inlined_description: _
 _description: _
 
 
-Specifies a single point of a shape. To be called between ofBeginShape() and ofEndShape(). 
+Specifies a single point of a shape. To be called between ofBeginShape() and ofEndShape().
 
 
 

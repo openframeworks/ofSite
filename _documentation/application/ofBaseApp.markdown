@@ -16,7 +16,7 @@ _istemplated: False_
 
 ##Description
 
-The openframeworks engine is contained in the "app" category. The project works, similar to processing, in that you have a base class which extends a class that already exists. In the case of OF, there is a class called "ofBaseApp" which contains various event driven functions. When you create an OF project, you use a main.cpp which is the boot-strap, that kicks off the application and another class, which inherits the properties of ofBaseApp. Essentially, when you write code in the testApp, you are re-writing already defined functions that exist in OF, such as update, draw, etc. 
+The openframeworks engine is contained in the "app" category. The project works, similar to processing, in that you have a base class which extends a class that already exists. In the case of OF, there is a class called "ofBaseApp" which contains various event driven functions. When you create an OF project, you use a main.cpp which is the boot-strap, that kicks off the application and another class, which inherits the properties of ofBaseApp. Essentially, when you write code in the testApp, you are re-writing already defined functions that exist in OF, such as update, draw, etc.
 
 In versions pre 0.06 this class was called ofSimpleApp
 
@@ -221,7 +221,7 @@ _inlined_description: _
 _description: _
 
 
-Add this function to your ofApp to have it called at the moment before the app is terminated. This is useful for doing cleanup stuff or making sure files are saved before the app terminates. 
+Add this function to your ofApp to have it called at the moment before the app is terminated. This is useful for doing cleanup stuff or making sure files are saved before the app terminates.
 
 
 
@@ -351,7 +351,7 @@ void keyPressed(int key){
 
 ~~~~
 
-There are more complicated character codes, for keys such as F1-F12, Down, Enter: OF_KEY_BACKSPACE, OF_KEY_RETURN, OF_KEY_PRINTSCR, OF_KEY_F1 - OF_KEY_F12, OF_KEY_LEFT, OF_KEY_UP, OF_KEY_RIGHT, OF_KEY_DOWN, OF_KEY_PAGE_UP, OF_KEY_PAGE_DOWN, OF_KEY_HOME, OF_KEY_END, OF_KEY_INSERT 
+There are more complicated character codes, for keys such as F1-F12, Down, Enter: OF_KEY_BACKSPACE, OF_KEY_RETURN, OF_KEY_PRINTSCR, OF_KEY_F1 - OF_KEY_F12, OF_KEY_LEFT, OF_KEY_UP, OF_KEY_RIGHT, OF_KEY_DOWN, OF_KEY_PAGE_UP, OF_KEY_PAGE_DOWN, OF_KEY_HOME, OF_KEY_END, OF_KEY_INSERT
 
 
 
@@ -442,7 +442,7 @@ void keyReleased(int key){
 }
 ~~~~
 
-There are more complicated character codes, for keys such as F1-F12, Down, Enter: OF_KEY_BACKSPACE, OF_KEY_RETURN, OF_KEY_PRINTSCR, OF_KEY_F1 - OF_KEY_F12, OF_KEY_LEFT, OF_KEY_UP, OF_KEY_RIGHT, OF_KEY_DOWN, OF_KEY_PAGE_UP, OF_KEY_PAGE_DOWN, OF_KEY_HOME, OF_KEY_END, OF_KEY_INSERT 
+There are more complicated character codes, for keys such as F1-F12, Down, Enter: OF_KEY_BACKSPACE, OF_KEY_RETURN, OF_KEY_PRINTSCR, OF_KEY_F1 - OF_KEY_F12, OF_KEY_LEFT, OF_KEY_UP, OF_KEY_RIGHT, OF_KEY_DOWN, OF_KEY_PAGE_UP, OF_KEY_PAGE_DOWN, OF_KEY_HOME, OF_KEY_END, OF_KEY_INSERT
 
 
 
@@ -558,7 +558,7 @@ _inlined_description: _
 _description: _
 
 
-This function gets called when the mouse is moving and the button is down. The button variable can be used to test against left or right button drags. You also receive the x and y corrdinates of the mouse.
+This function gets called when the mouse is moving and the button is down. The button variable can be used to test against left or right button drags. You also receive the x and y coordinates of the mouse.
 
 
 
@@ -636,7 +636,7 @@ _inlined_description: _
 _description: _
 
 
-This function gets when ever the mouse moves. You receive the x and y corrdinates of the mouse. 
+This function gets when ever the mouse moves. You receive the x and y coordinates of the mouse.
 
 
 
@@ -714,7 +714,7 @@ _inlined_description: _
 _description: _
 
 
-This function gets called when the mouse is pushed down. The button (left, right, center) is passed in, along with the x and y corrdinate. 
+This function gets called when the mouse is pushed down. The button (left, right, center) is passed in, along with the x and y coordinate.
 
 
 
@@ -792,7 +792,7 @@ _inlined_description: _
 _description: _
 
 
-This function gets called when the mouse is released. The button (left, right, center) is passed in, along with the x and y corrdinate. 
+This function gets called when the mouse is released. The button (left, right, center) is passed in, along with the x and y coordinate.
 
 
 
@@ -870,7 +870,7 @@ _inlined_description: _
 _description: _
 
 
-The openframeworks engine is contained in the "app" category. The project works, similar to processing, in that you have a base class which extends a class that already exists. In the case of OF, there is a class called "ofBaseApp" which contains various event driven functions. When you create an OF project, you use a main.cpp which is the boot-strap, that kicks off the application and another class, which inherits the properties of ofSimpleApp. Essentially, when you write code in the ofApp, you are re-writing already defined functions that exist in OF, such as update, draw, etc. 
+The openframeworks engine is contained in the "app" category. The project works, similar to processing, in that you have a base class which extends a class that already exists. In the case of OF, there is a class called "ofBaseApp" which contains various event driven functions. When you create an OF project, you use a main.cpp which is the boot-strap, that kicks off the application and another class, which inherits the properties of ofSimpleApp. Essentially, when you write code in the ofApp, you are re-writing already defined functions that exist in OF, such as update, draw, etc.
 
 
 
@@ -910,7 +910,7 @@ _inlined_description: _
 _description: _
 
 
-This function gets called once, just at the start of the app. It would be a good place, for example, to allocate variables or load in any files. 
+This function gets called once, just at the start of the app. It would be a good place, for example, to allocate variables or load in any files.
 
 
 
@@ -988,7 +988,7 @@ _inlined_description: _
 _description: _
 
 
-This function gets called repeatedly. It gets just before draw, so it is an ideal place to do any updating of variables. For example, imagine you have a varibale already defined in your ofApp.h called "xpos"
+This function gets called repeatedly. It gets just before draw, so it is an ideal place to do any updating of variables. For example, imagine you have a variable already defined in your ofApp.h called "xpos"
 
 ~~~~{.cpp}
 

@@ -56,7 +56,7 @@ _inlined_description: _
 _description: _
 
 
-This function, which is internal to the font object, binds the texture for the font drawing.  
+This function, which is internal to the font object, binds the texture for the font drawing.
 
 
 
@@ -136,7 +136,7 @@ _inlined_description: _
 _description: _
 
 
-This function draws a character at position x,y.  It uses the texture representation of the font. 
+This function draws a character at position x,y.  It uses the texture representation of the font.
 
 
 
@@ -176,7 +176,7 @@ _inlined_description: _
 _description: _
 
 
-This function draws a character at position x,y.  It uses the path of the font, which involves 
+This function draws a character at position x,y.  It uses the path of the font, which involves
 
 
 
@@ -206,7 +206,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Draw a string s at position x,y. 
+Draw a string s at position x,y.
 
 
 
@@ -277,7 +277,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Draws the string as if it was geometrical shapes. 
+Draws the string as if it was geometrical shapes.
 
 
 Uses the information contained in ofTTFContour and ofTTFCharacter.
@@ -400,13 +400,13 @@ _advanced: False_
 
 _inlined_description: _
 
-Get the current font endcoding. 
+Get the current font encoding.
 
 
 This is set by ofTrueTypeFont::setEncoding() to either OF_ENCODING_UTF8 or OF_ENCODING_ISO_8859_15. OF_ENCODING_ISO_8859_15 is for an 8-bit single-byte coded graphic character sets, like ASCII while OF_ENCODING_UTF8 is a variable-width encoding that can represent every character in the Unicode character set.
 
-***return:*** 
-	encoding used by the font object. 
+***return:***
+    encoding used by the font object.
 
 
 
@@ -420,7 +420,7 @@ This is set by ofTrueTypeFont::setEncoding() to either OF_ENCODING_UTF8 or OF_EN
 _description: _
 
 
-Returns the encoding used by the font object.  This is set by ofTrueTypeFont::setEncoding() to either OF_ENCODING_UTF8 or OF_ENCODING_ISO_8859_15. OF_ENCODING_ISO_8859_15 is for an 8-bit single-byte coded graphic character sets, like ASCII while 
+Returns the encoding used by the font object.  This is set by ofTrueTypeFont::setEncoding() to either OF_ENCODING_UTF8 or OF_ENCODING_ISO_8859_15. OF_ENCODING_ISO_8859_15 is for an 8-bit single-byte coded graphic character sets, like ASCII while
  OF_ENCODING_UTF8 is a variable-width encoding that can represent every character in the Unicode character set.
 
 
@@ -461,7 +461,7 @@ _inlined_description: _
 _description: _
 
 
-Returns the texture (as a reference) that ofTrueTypeFont uses internally.  When you load in a font, it parses the ttf (or .otf) file and rasterizes it to a texture for fast drawing.  This gives you low level access to that texture. 
+Returns the texture (as a reference) that ofTrueTypeFont uses internally.  When you load in a font, it parses the ttf (or .otf) file and rasterizes it to a texture for fast drawing.  This gives you low level access to that texture.
 
 
 
@@ -491,13 +491,13 @@ _advanced: False_
 
 _inlined_description: _
 
-Returns letter spacing of font object. 
+Returns letter spacing of font object.
 
 
 You can control this by the ofTrueTypeFont::setLetterSpacing() function. 1.0 = default spacing, less then 1.0 would be tighter spacing, greater then 1.0 would be wider spacing.
 
-***return:*** 
-	Returns letter spacing of font object. 
+***return:***
+    Returns letter spacing of font object.
 
 
 
@@ -511,7 +511,7 @@ You can control this by the ofTrueTypeFont::setLetterSpacing() function. 1.0 = d
 _description: _
 
 
-Returns the letter spacing of the font object.  You can control this by the ofTrueTypeFont::setLetterSpacing() function.  1.0 = default spacing, less then 1.0 would be tighter spacing, greater then 1.0 would be wider spacing. 
+Returns the letter spacing of the font object.  You can control this by the ofTrueTypeFont::setLetterSpacing() function.  1.0 = default spacing, less then 1.0 would be tighter spacing, greater then 1.0 would be wider spacing.
 
 
 
@@ -541,11 +541,11 @@ _advanced: False_
 
 _inlined_description: _
 
-Computes line height based on font size. 
+Computes line height based on font size.
 
 
-***return:*** 
-	Returns current line height. 
+***return:***
+    Returns current line height.
 
 
 
@@ -559,7 +559,7 @@ Computes line height based on font size.
 _description: _
 
 
-The line height is computed, based on the font size, and can be adjusted. Useful if you are print multi-line text.  This function returns the current line height. 
+The line height is computed, based on the font size, and can be adjusted. Useful if you are print multi-line text.  This function returns the current line height.
 
 
 
@@ -589,13 +589,13 @@ _advanced: False_
 
 _inlined_description: _
 
-Get the num chars in the loaded character set. 
+Get the num chars in the loaded character set.
 
 
-If you allocate the font using different paramters, you can load in partial and full character sets, this helps you know how many characters it can represent.
+If you allocate the font using different parameters, you can load in partial and full character sets, this helps you know how many characters it can represent.
 
-***return:*** 
-	Number of characters in loaded character set. 
+***return:***
+    Number of characters in loaded character set.
 
 
 
@@ -609,7 +609,7 @@ If you allocate the font using different paramters, you can load in partial and 
 _description: _
 
 
-Returns the number of characters this font represents.  If you allocate the font using different paramters, you can load in partial and full character sets, this helps you know how many characters it can represent. 
+Returns the number of characters this font represents.  If you allocate the font using different parameters, you can load in partial and full character sets, this helps you know how many characters it can represent.
 
 
 
@@ -639,11 +639,11 @@ _advanced: False_
 
 _inlined_description: _
 
-Returns the size of the font. 
+Returns the size of the font.
 
 
-***return:*** 
-	Size of font, set when font was loaded. 
+***return:***
+    Size of font, set when font was loaded.
 
 
 
@@ -657,7 +657,7 @@ Returns the size of the font.
 _description: _
 
 
-Returns the size of the font.  This is set when you load in the font. 
+Returns the size of the font.  This is set when you load in the font.
 
 
 
@@ -687,13 +687,13 @@ _advanced: False_
 
 _inlined_description: _
 
-Returns a variable that represents how wide spaces are. 
+Returns a variable that represents how wide spaces are.
 
 
 It's a scalar for the width of the letter 'p', so 1.0 means that a space will be the size of the lower case 'p' of that font. 2.0 means that it's 2 times the size of the lower case 'p', etc.
 
-***return:*** 
-	Returns a variable that represents how wide spaces are. 
+***return:***
+    Returns a variable that represents how wide spaces are.
 
 
 
@@ -707,7 +707,7 @@ It's a scalar for the width of the letter 'p', so 1.0 means that a space will be
 _description: _
 
 
-This is a variable to represent how wide spaces are sized.   It's a scalar for the width of the letter 'p', so 1.0 means that a space will be the size of the lower case 'p' of that font.  2.0 means that it's 2 times the size of the lower case 'p', etc. 
+This is a variable to represent how wide spaces are sized.   It's a scalar for the width of the letter 'p', so 1.0 means that a space will be the size of the lower case 'p' of that font.  2.0 means that it's 2 times the size of the lower case 'p', etc.
 
 
 
@@ -747,7 +747,7 @@ _inlined_description: _
 _description: _
 
 
-This returns a vector of ofTTFCharacters (which is actually an ofPath) for a given string.  This means you can get access to the point data / outlines of the letter forms. 
+This returns a vector of ofTTFCharacters (which is actually an ofPath) for a given string.  This means you can get access to the point data / outlines of the letter forms.
 
 ~~~~{.cpp}
 
@@ -756,7 +756,7 @@ void testApp::setup(){
 
     ofBackground(0);
     font.loadFont("vag.ttf", 100, false, false, true);
-    
+
 }
 
 //--------------------------------------------------------------
@@ -767,30 +767,30 @@ void testApp::update(){
 //--------------------------------------------------------------
 void testApp::draw(){
 
-    
+
     // get the string as paths
     vector < ofTTFCharacter > paths = font.getStringAsPoints("hello!");
 
-    
+
     ofPushMatrix();
     ofTranslate(ofGetWidth()/2, ofGetHeight()/2);
-    
-    
+
+
     for (int i = 0; i < paths.size(); i++){
-        
+
         // for every character break it out to polylines
-        
+
         vector <ofPolyline> polylines = paths[i].getOutline();
-        
+
         // for every polyline, draw every fifth point
-        
+
         for (int j = 0; j < polylines.size(); j++){
             for (int k = 0; k < polylines[j].size(); k+=5){         // draw every "fifth" point
                 ofCircle( polylines[j][k], 3);
             }
         }
     }
-    
+
     ofPopMatrix();
 }
 ~~~~
@@ -823,12 +823,12 @@ _advanced: False_
 
 _inlined_description: _
 
-Returns the bounding box of a string as a rectangle. 
+Returns the bounding box of a string as a rectangle.
 
 
 
-***return:*** 
-	Returns the bounding box of a string as a rectangle. 
+***return:***
+    Returns the bounding box of a string as a rectangle.
 
 
 
@@ -842,12 +842,12 @@ Returns the bounding box of a string as a rectangle.
 _description: _
 
 
-Returns the bounding box of a string as a retangle, useful if you want to position the type or calculate the size of graphics that relate to the font. 
+Returns the bounding box of a string as a rectangle, useful if you want to position the type or calculate the size of graphics that relate to the font.
 
 e.g:
 ~~~~{.cpp}
 
-//in setup() 
+//in setup()
 
 franklinBook.loadFont("frabk.ttf", 32);
 
@@ -930,11 +930,11 @@ _advanced: False_
 
 _inlined_description: _
 
-Does the font have a full character set? 
+Does the font have a full character set?
 
 
-***return:*** 
-	true if the font was allocated with a full character set. 
+***return:***
+    true if the font was allocated with a full character set.
 
 
 
@@ -948,7 +948,7 @@ Does the font have a full character set?
 _description: _
 
 
-Returns true or false if this font was allocated with a full character set. 
+Returns true or false if this font was allocated with a full character set.
 
 
 
@@ -1016,11 +1016,11 @@ _advanced: False_
 
 _inlined_description: _
 
-Is the font anit-aliased? 
+Is the font anit-aliased?
 
 
-***return:*** 
-	true if the font was set to be anti-aliased. 
+***return:***
+    true if the font was set to be anti-aliased.
 
 
 
@@ -1034,7 +1034,7 @@ Is the font anit-aliased?
 _description: _
 
 
-Returns true of false if the font is set to be anti-aliased.  This is set when you load. 
+Returns true of false if the font is set to be anti-aliased.  This is set when you load.
 
 
 
@@ -1064,11 +1064,11 @@ _advanced: False_
 
 _inlined_description: _
 
-Has the font been loaded successfully? 
+Has the font been loaded successfully?
 
 
-***return:*** 
-	true if the font was loaded. 
+***return:***
+    true if the font was loaded.
 
 
 
@@ -1082,7 +1082,7 @@ Has the font been loaded successfully?
 _description: _
 
 
-Returns true or false if the font is loaded properly. 
+Returns true or false if the font is loaded properly.
 
 
 
@@ -1112,16 +1112,16 @@ _advanced: False_
 
 _inlined_description: _
 
-Loads the font specified by filename, allows you to control size, aliasing, and other parameters. 
+Loads the font specified by filename, allows you to control size, aliasing, and other parameters.
 
 
-loads a font, and allows you to set the following parameters: the filename, the size, if the font is anti-aliased, if it has a full character set, if you need it to have contours (for getStringPoints) and paramters that control the simplification amount for those contours and the dpi of the font.
+loads a font, and allows you to set the following parameters: the filename, the size, if the font is anti-aliased, if it has a full character set, if you need it to have contours (for getStringPoints) and parameters that control the simplification amount for those contours and the dpi of the font.
 
 default (without dpi), non-full char set, anti aliased, 96 dpi
 
 
-***return:*** 
-	true if the font was loaded correctly. 
+***return:***
+    true if the font was loaded correctly.
 
 
 
@@ -1135,7 +1135,7 @@ default (without dpi), non-full char set, anti aliased, 96 dpi
 _description: _
 
 
-loads a font, and allows you to set the following parameters: the filename, the size, if the font is anti-aliased, if it has a full character set, if you need it to have contrours (for getStringPoints) and paramters that control the simplification amount for those contours and the dpi of the font. 
+loads a font, and allows you to set the following parameters: the filename, the size, if the font is anti-aliased, if it has a full character set, if you need it to have contrours (for getStringPoints) and parameters that control the simplification amount for those contours and the dpi of the font.
 
 
 
@@ -1241,7 +1241,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Sets the current font encoding. 
+Sets the current font encoding.
 
 
 Can be set to either OF_ENCODING_UTF8 or OF_ENCODING_ISO_8859_15. OF_ENCODING_ISO_8859_15 is for an 8-bit single-byte coded graphic character sets, like ASCII while OF_ENCODING_UTF8 is a variable-width encoding that can represent every character in the Unicode character set. This function is useful if you are trying to draw unicode strings.
@@ -1326,10 +1326,10 @@ _advanced: False_
 
 _inlined_description: _
 
-Sets the letter spacing of the font object. 
+Sets the letter spacing of the font object.
 
 
-1.0 = default spacing, less then 1.0 would be tighter spacing, greater then 1.0 would be wider spacing. 
+1.0 = default spacing, less then 1.0 would be tighter spacing, greater then 1.0 would be wider spacing.
 
 
 
@@ -1341,7 +1341,7 @@ Sets the letter spacing of the font object.
 _description: _
 
 
-Sets the letter spacing of the font object.  1.0 = default spacing, less then 1.0 would be tighter spacing, greater then 1.0 would be wider spacing. 
+Sets the letter spacing of the font object.  1.0 = default spacing, less then 1.0 would be tighter spacing, greater then 1.0 would be wider spacing.
 
 
 
@@ -1371,7 +1371,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Sets line height for text drawn on screen. 
+Sets line height for text drawn on screen.
 
 
 Note the line height is automatically computed based on the font size, when you load in the font.
@@ -1388,7 +1388,7 @@ Note the line height is automatically computed based on the font size, when you 
 _description: _
 
 
-Sets the line height for text that is drawn on screen.   Note the line height is automatically computed based on the font size, when you load in the font. 
+Sets the line height for text that is drawn on screen.   Note the line height is automatically computed based on the font size, when you load in the font.
 
 
 
@@ -1418,7 +1418,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Sets the size of the space ' ' character. 
+Sets the size of the space ' ' character.
 
 
 This number, which defaults to 1.0, scales the width of the letter 'p' for the space.
@@ -1435,7 +1435,7 @@ This number, which defaults to 1.0, scales the width of the letter 'p' for the s
 _description: _
 
 
-Sets the size of the space ' ' character.  This number, which defaults to 1.0, scales the width of the letter 'p' for the space. 
+Sets the size of the space ' ' character.  This number, which defaults to 1.0, scales the width of the letter 'p' for the space.
 
 
 
@@ -1465,14 +1465,14 @@ _advanced: False_
 
 _inlined_description: _
 
-Returns the string height. 
+Returns the string height.
 
 
 This is essentially the height component of the ofTrueTypeFont::getStringBoundingBox() rectangle.
 
 
-***return:*** 
-	Returns the string height. 
+***return:***
+    Returns the string height.
 
 
 
@@ -1486,7 +1486,7 @@ This is essentially the height component of the ofTrueTypeFont::getStringBoundin
 _description: _
 
 
-Returns the string height.  This is essentially the height component of the ofTrueTypeFont::getStringBoundingBox() rectangle. 
+Returns the string height.  This is essentially the height component of the ofTrueTypeFont::getStringBoundingBox() rectangle.
 
 
 
@@ -1516,14 +1516,14 @@ _advanced: False_
 
 _inlined_description: _
 
-Returns the string width. 
+Returns the string width.
 
 
 This is essentially the width component of the ofTrueTypeFont::getStringBoundingBox() rectangle.
 
 
-***return:*** 
-	Returns the string width. 
+***return:***
+    Returns the string width.
 
 
 
@@ -1537,9 +1537,9 @@ This is essentially the width component of the ofTrueTypeFont::getStringBounding
 _description: _
 
 
-Returns the string height.  This is essentially the width component of the ofTrueTypeFont::getStringBoundingBox() rectangle. 
+Returns the string height.  This is essentially the width component of the ofTrueTypeFont::getStringBoundingBox() rectangle.
 
- 
+
 
 
 
@@ -1657,7 +1657,7 @@ _inlined_description: _
 _description: _
 
 
-The destructor for the font object will clear the resources, such as textures, that have been allocated. 
+The destructor for the font object will clear the resources, such as textures, that have been allocated.
 
 
 
@@ -1742,7 +1742,7 @@ _advanced: False_
 _description: _
 
 
-bLoadedOk is a boolean variable containing true if the font was successfully loaded.   
+bLoadedOk is a boolean variable containing true if the font was successfully loaded.
 
 
 
