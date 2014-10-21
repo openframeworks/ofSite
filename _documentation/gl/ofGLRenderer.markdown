@@ -2329,7 +2329,7 @@ _inlined_description: _
 _description: _
 
 
-See [ofScale](ofGraphics.html#show_ofScale)
+See [ofScale](../graphics/ofGraphics.html#show_ofScale)
 
 
 
