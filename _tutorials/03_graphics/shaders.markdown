@@ -66,7 +66,7 @@ In OF we load our shaders into ofShader objects and I'm going to drive-by lay ou
 
 *end()* - stop using your shader to alter all the drawing that your application is doing
 
-You can load shader programs into your ofShader object using shader.*load()* or just use strings your application with shader.*loadFromString()*. Either way is a-ok.
+You can load shader programs into your ofShader object using *shader.load()* or just use strings your application with *shader.setupShaderFromSource()*, passing body of your shader in a string as a second parameter using STRINGIFY macro and linking it with *shader.linkProgram()*. Either way is a-ok.
 
 Before we go get into trouble, there's something that I want to explain that might not make sense right at first but is fairly important to acknoweldge and is not so important to deeply grok at first: our examples use OpenGL3 mostly and to use OpenGL3 in OF you need to alter your main.cpp file. The main files in the tutorial download all look like this:
 
