@@ -988,7 +988,7 @@ _inlined_description: _
 _description: _
 
 
-This function gets called repeatedly. It gets just before draw, so it is an ideal place to do any updating of variables. For example, imagine you have a variable already defined in your ofApp.h called "xpos"
+This function gets called repeatedly. It gets called just before draw, so it is an ideal place to do any updating of variables. For example, imagine you have a variable already defined in your ofApp.h called "xpos"
 
 ~~~~{.cpp}
 
