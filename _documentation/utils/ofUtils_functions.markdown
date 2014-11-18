@@ -1896,65 +1896,6 @@ _description: _
 
 
 
-
-<!----------------------------------------------------------------------------->
-
-###vector<string> ofSplitString(str,delimiter)
-
-<!--
-_syntax: ofSplitString(str,delimiter)_
-_name: ofSplitString_
-_returns: vector<string>_
-_returns_description: _
-_parameters: const string& str, const string& delimiter = " "_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-This function is used to delete some parts of a given string (str). We set in delimiter the parts we want to delete. For example if we call ofSplitSpring in my setup function:
-~~~~{.cpp}
-
-result=ofSplitString("of rocks", "of");
-~~~~
-
-we obtain:
-result[0]=r
-result[1]=cks
-this is the result of deleting o and f letters in the string.
-
-We can find a very useful application if we use delimiter = " ":
-~~~~{.cpp}
-
-result=ofSplitString("of rocks", " ");
-~~~~
-
-we obtain:
-result[0]=of
-result[1]=rocks
-Like this we can "cut" a big string and turn it into a vector of words.
-
-
-
-
-
-
-
 <!----------------------------------------------------------------------------->
 
 ###vector< string > ofSplitString(&source, &delimiter, ignoreEmpty = false, trim = false)
@@ -1987,7 +1928,27 @@ _description: _
 
 Splits source using delimiter and returns the separate tokens. In modern versions of openFrameworks, delimiter can be a multi-character string. In older versions of openFrameworks, delimiter was interpreted as multiple single-character delimiters.
 
+For example:
 
+~~~~{.cpp}
+result = ofSplitString("of rocks", "ro");
+~~~~
+
+gives:
+result[0] = "of "
+result[1] = "cks"
+
+A useful application might be to use delimiter = " ":
+
+~~~~{.cpp}
+result=ofSplitString("of rocks", " ");
+~~~~
+
+gives:
+result[0] = "of"
+result[1] = "rocks"
+
+Like this a big string can be "cut" and turned it into a vector of words.
 
 
 
