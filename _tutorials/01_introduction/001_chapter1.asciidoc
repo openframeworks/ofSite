@@ -690,7 +690,7 @@ void testApp::draw(){
 }
 ---------------------------------------------------------------------
 
-In the Adding Movement section, we used variables so that we could have the circle move by itself. The difference this time is that we want the ball to move in response to our keyboard input. This means that we need to modify the values of the variables depending on which keys are pressed rather than incrementing it automatically every frame. So it follows that we need to change the value of myCircleX and myCircleY in mousePressed() (or mouseReleased() -- it's up to you!) instead of update().
+In the Adding Movement section, we used variables so that we could have the circle move by itself. The difference this time is that we want the ball to move in response to our keyboard input. This means that we need to modify the values of the variables depending on which keys are pressed rather than incrementing it automatically every frame. So it follows that we need to change the value of myCircleX and myCircleY in keyPressed() (or keyReleased() -- it's up to you!) instead of update().
 
 Let's use a typical computer game keyboard scheme: say we want the ball to move up when we press 'w', to the left when we press 'a', down when we press 's', and right when we press 'd'. We could start by looking up the ASCII values and finding that the values are 119, 97, 115, and 100, respectively. Next, we think about what "up", "down", "left" and "right" mean in terms of our variables: myCircleX and myCircleY. What we end up with is:
 
@@ -710,7 +710,7 @@ void testApp::keyPressed(int key){
 
 As we discovered, any time any key is pressed, the keyPressed() function is called. However, we want to be more selective than that. We want to be able to make certain things happen when the 'w' key is pressed, and other things happen when the 'a' key is pressed, etc. So, we need to add some http://www.cprogramming.com/tutorial/lesson2.html[if statements]. When the keyPressed function is called, the first thing that happens is we test if 'key' is equal to 119.
 
-Notice the double equals sign. This signifies that we are performing a comparison rather than an assignment. In other words, we don't want to assign the value 119 to the variable 'key', we want to test whether key is equal to 119. If this turns out to be true, than the code inside the curly brackets immediately following the if() is executed.
+Notice the double equals sign. This signifies that we are performing a comparison rather than an assignment. In other words, we don't want to assign the value 119 to the variable 'key', we want to test whether key is equal to 119. If this turns out to be true, then the code inside the curly brackets immediately following the if() is executed.
 
 Your challenge is to complete the function to respond to the 's' and 'd' keys.
 
@@ -1359,7 +1359,7 @@ void drawStar(float xpos, float ypos, float radius, int npts)
 }
 ---------------------------------------------------------------------
 
-Here you see the definition of a http://www.cplusplus.com/doc/tutorial/functions/[function]. A function is a named group of instruction which might takes some input in the form of variables and might returns some output. It might also be called a https://en.wikipedia.org/wiki/Subroutine[subroutine], depending on the context. Line 1 shows what is called the signature of a function. It first names the type of the data returned. Void means no data will be returned, int means a whole number gets returned, and so on. The return data type is followed by the name of the function ("drawStar") and finally a list of arguments. The list of arguments first states the data type (e.g. "int") and then a variable name (e.g. "xpos"). The argument variables are visible by their name inside the function body (aka. the curly braces), but not outside. The following code should make these concepts more clear.
+Here you see the definition of a http://www.cplusplus.com/doc/tutorial/functions/[function]. A function is a named group of instruction which might take some input in the form of variables and might return some output. It might also be called a https://en.wikipedia.org/wiki/Subroutine[subroutine], depending on the context. Line 1 shows what is called the signature of a function. It first names the type of the data returned. Void means no data will be returned, int means a whole number gets returned, and so on. The return data type is followed by the name of the function ("drawStar") and finally a list of arguments. The list of arguments first states the data type (e.g. "int") and then a variable name (e.g. "xpos"). The argument variables are visible by their name inside the function body (aka. the curly braces), but not outside. The following code should make these concepts more clear.
 
 [source,cpp]
 ---------------------------------------------------------------------

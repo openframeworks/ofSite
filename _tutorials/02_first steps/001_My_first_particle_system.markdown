@@ -159,7 +159,7 @@ If you are doing the Challenges you have may have ended up with a lot of repeate
 Here we will scratch the surface of Object Oriented Programming (a primary feature of C++) in order to make things easier, more readable and less repetitive.
 
 Let's imagine a ball.
-It's an round object that have some properties like the position and the color, also do things like move around. All this abstract items can be imagined as:
+It's a round object that has some properties like its position and color, and can do things like move around. All these abstract items can be imagined as:
 
 Ball:
 
@@ -169,7 +169,7 @@ Ball:
 
 - move (function or method)
 
-This exactly what a `.h` it's a list of things that makes an object. So let's add two new files to our project ( this depends on the IDE you are using ), one it's going to be a `.h` file call `ball.h` (here we are going to define the elements of our ball) and the other one a `.cpp` call `ball.cpp` ( here we are going to write how these things work together ).
+This is exactly what a `.h` (header file) can be used for; a list of things that make an object. So let's add two new files to our project (this depends on the IDE you are using), one is going to be a `.h` file called `ball.h` (here we are going to define the elements of our ball) and the other one is a `.cpp` called `ball.cpp` (here we are going to write how these things work together).
 
 ![Image:kandisky.jpg](001_images/newFile.png)
 
@@ -198,9 +198,9 @@ The `ball.h` file should look like:
 	#endif
 ~~~~
 
-Congratulations, you just created your own Class! There are couple of new things are going on here. The first 2 lines (`#ifndef..` prevent the compiler from using copying the file multiple times. This is a standard practice in C++ and you probably want to leave things the way they are. You are basically saying, "Hey compiler, don't compile this stuff two times, and for compiling you will need ofMain.h header file.". Including `ofMain.h` will give you access to all the methods and objects of openFrameworks. This is what makes your code oF-based and not just C++ code and where the magic happens.
+Congratulations, you just created your own class! There are couple of new things are going on here. The first 2 lines (`#ifndef..` prevent the compiler from using copying the file multiple times. This is a standard practice in C++ and you probably want to leave things the way they are. You are basically saying, "Hey compiler, don't compile this stuff two times, and for compiling you will need ofMain.h header file.". Including `ofMain.h` will give you access to all the methods and objects of openFrameworks. This is what makes your code oF-based and not just C++ code, and is where the magic happens.
 
-To create a object you need to call the Class's constructor. The constructor `Ball()` is the first thing that will execute and create the Ball. It's like when you write `int i;` and 'i' automatically is initially set to zero. int's constructor took care of that for you.
+To create a object you need to call the class's constructor. The constructor `Ball()` is the first thing that will execute and create the Ball. It's like when you write `int i;` and 'i' automatically is initially set to zero. int's constructor took care of that for you.
 The properties should look familiar at this point but a new method is the `draw()` function.
 
 IMPORTANT: Take a look to the `};` at the end of the class. That's super important! Without it you will get annoying errors that are difficult track down.
@@ -280,7 +280,7 @@ In `ofApp.cpp` we can change things to look like this:
 		// Fixed framerate
 		ofSetFrameRate(30);
 
-		// Not need to define the initial position of the ball
+		// No need to define the initial position of the ball
 		// because the Ball constructor does it for you
 	}
 
@@ -297,11 +297,19 @@ In `ofApp.cpp` we can change things to look like this:
 	}
 ~~~~
 
-So now we have a general object that´s automatically is created with some random values, but if we want we can access to the information inside it by using `object.property` or `object.method()`.
-This means that every time we want a new Ball we just to create it and draw it! Is it not awesome?
+So now we have a general object that´s automatically is created with some random values, but if we want we can access the information inside it by using `object.property` or `object.method()`.
+This means that every time we want a new Ball we just create it and draw it! Is that not awesome?
 
-One last thing to talk about how you can pass some parameters to a object method. If we look to the `ofApp::update()` code we are changing the `x` and `y` properties by using the dot-syntax `.`. That's not bad, but it to make things more readable and intuitive if it looked like `myBall.moveTo(mouseX,mouseY)`?
-So let´s change `ball.h` and  `ball.cpp`.
+One last thing to talk about is how you can pass some parameters to an object method. If we look at the `ofApp::update()` code we are changing the `x` and `y` properties by using the dot-syntax `.`. That's not bad, but it would make things more readable and intuitive if it looked like `myBall.moveTo(mouseX,mouseY)`.
+So let´s change the methods part of `ball.h` 
+
+~~~~{.cpp}
+    // Methods
+    void moveTo(int _xDestiny, int _yDestiny);
+    void draw();
+~~~~
+
+and `ball.cpp`.
 
 ~~~~{.cpp}
 	void Ball::moveTo(int _xDestiny, int _yDestiny){
@@ -310,7 +318,7 @@ So let´s change `ball.h` and  `ball.cpp`.
 	}
 ~~~~
 
-And use it like like this on the ofApp project
+And then use it like like this in the ofApp project
 
 ~~~~{.cpp}
 	void ofApp::update(){
@@ -321,9 +329,9 @@ And use it like like this on the ofApp project
 
 ## 4. Let's get physical
 
-Before we continue on our way a to proper particle system. I have good news, You don´t have to deal with heavy maths in order to create some nice physics based effects. openFrameworks provides some very nice functionality that makes this much easier. However if you want to dive into the details, take a look at Keith´s tutorials at [Math Tutorials](http://openframeworks.cc/tutorials/maths/001_vector_maths.html) that can lead you to crazy awesome new things.
+Before we continue on our way to a proper particle system, I have good news: you don´t have to deal with heavy maths in order to create some nice physics-based effects. openFrameworks provides some very nice functionality that makes this much easier. If you want to dive into the details however, take a look at Keith´s tutorials at [Math Tutorials](http://openframeworks.cc/tutorials/maths/001_vector_maths.html) that can lead you to crazy awesome new things.
 
-Some of the most helpful classes are contained in ofVectorMath that allow us to work with forces very easily. Just like have in our `Ball` class, `ofVec2f` has `x` and `y` values, and you can access to them in the same way we just do with `ball.x` and `ball.y`. `ofVec2f` also have really handy methods like `.dot()` and also operator `+`, `+`, `*` and `/` that do the math for you.
+Some of the most helpful classes are contained in ofVectorMath that allow us to work with forces very easily. Just like we have in our `Ball` class, `ofVec2f` has `x` and `y` values, and you can access to them in the same way we just do with `ball.x` and `ball.y`. There are other really handy methods in `ofVec2f` like `.dot()` and also operators `+`, `-`, `*` and `/` that do the math for you.
 
 
 
