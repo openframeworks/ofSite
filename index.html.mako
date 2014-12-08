@@ -6,6 +6,12 @@
 		<!-- OF video -->
 		<iframe src="http://player.vimeo.com/video/74124094?title=0&amp;byline=0&amp;portrait=0" width="550" height="309" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 	</p>
+
+    <p><h3><a href="http://blog.openframeworks.cc/post/104672042124/2014-community-survey">take the OF survey!</a></h3></p>
+
+
+    <p>Every so often, we like to get some information from you that helps us learn more about what openFrameworks is used for, who’s using it, and how we can continue developing and making things simpler, friendlier, and more robust to use.</p>
+
 </div>
 
 <div class="page-right-narrow">
