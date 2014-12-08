@@ -2,7 +2,17 @@
 <%inherit file="/_templates/slideshow_wide.mako" />
 
 <!--h1>download</h1-->
+<div style="border:1px solid #EE3987; margin-bottom: 5em">
+
+  <p><h3 style="padding:0 10px"><a href="http://blog.openframeworks.cc/post/104672042124/2014-community-survey">take the OF survey!</a></h3></p>
+
+  <p style="padding:0 10px">Every so often, we like to get some information from you that helps us learn more about what openFrameworks is used for, who’s using it, and how we can continue developing and making things simpler, friendlier, and more robust to use. The results from <a href="http://blog.openframeworks.cc/post/60000217684/of-2013-survey-results">last year’s survey</a> were really insightful, and the community grows and changes every year, so we’d love to get your input again and continue to learn.</p>
+
+</div>
+
+
 <div id="download-latest-header">
+
 	<h2>${bf.config.currentVersion}</h2>
 	<h3>is the most recent release. It's a minor version, with bugfixes only, so it is fully compatible with projects developed for 0.8.0 or any newer version. Please see the <a href="https://raw.github.com/openframeworks/openFrameworks/${bf.config.currentVersion}/CHANGELOG.md">changelog</a> to get an overview of the differences between versions.</h3>
 	<!--h3>is the most recent release. It has a lot of new features, new interfaces, and probably some new bugs too. ${bf.config.currentVersion} is not 100% compatible with older projects. Please see the <a href="https://raw.github.com/openframeworks/openFrameworks/${bf.config.currentVersion}/CHANGELOG.md">changelog</a> to get an overview of the differences between versions.</h3-->

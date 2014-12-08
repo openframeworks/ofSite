@@ -3,6 +3,16 @@
 
 <div class="page-left-medium">                
 <!--h1 id="community">community</h1-->
+
+<div style="border:1px solid #EE3987; margin-bottom: 5em">
+
+  <p><h3 style="padding:0 10px"><a href="http://blog.openframeworks.cc/post/104672042124/2014-community-survey">take the OF survey!</a></h3></p>
+
+  <p style="padding:0 10px">Every so often, we like to get some information from you that helps us learn more about what openFrameworks is used for, who’s using it, and how we can continue developing and making things simpler, friendlier, and more robust to use. The results from <a href="http://blog.openframeworks.cc/post/60000217684/of-2013-survey-results">last year’s survey</a> were really insightful, and the community grows and changes every year, so we’d love to get your input again and continue to learn.</p>
+
+</div>
+
+
 <h3>openFrameworks is a diverse community of hackers, artists, designers, students, teachers from all over the world.</h3>
 <p>To learn more about getting involved in OF, check out the <a href="http://www.openframeworks.cc/list-info/">community mailing list</a>.
 The community list is ideal for learning about ways to participate, hearing about upcoming events like workshops and conferences, and sharing projects.</p>
