@@ -25,7 +25,9 @@ _Note: On OS X.  You can install a Ubuntu "helper" machine running inside Parall
     
 * With this you are already able to compile armv6 binaries for the PI but we'll also need the libaries. 
     * run the install_dependencies.sh script in the PI
-    * copy the whole /usr folder from the PI's sdcard into a directory on your Linux host called `rpi-root`. We'll call this folder `$RPI_ROOT` from now on. `usr` should be a _subdirectory_ of `rpi-root`.   
+    * copy the whole /usr folder from the PI's sdcard into a directory on your Linux host called `rpi-root`. We'll call this folder `$RPI_ROOT` from now on. `usr` should be a _subdirectory_ of `rpi-root`.
+    * copy or create /etc/debian_version text file in `rpi-root` as it appears on the PI
+    * copy the folder from /opt/vc on the PI to `rpi-root`
 
 * Uncompress OF for armv6 somewhere in your computer
 
@@ -52,4 +54,3 @@ _Note: On OS X.  You can install a Ubuntu "helper" machine running inside Parall
     * from the computer share the OF folder to the PI, that way you don't need to copy executables from the computer to the PI everytime you want to test something
 
 '''}
-
