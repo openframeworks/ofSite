@@ -122,7 +122,7 @@ void ofApp::setup(){
     pixels1.allocate(640,480,OF_IMAGE_COLOR)
     pixels1.set(0);
     pixels2 = pixels1;
-    pixels2.setColor(10,10,ofColor(255,255,255);
+    pixels2.setColor(10,10,ofColor(255,255,255));
     
     tex1.allocate(640,480,GL_RGB);
     tex2.allocate(640,480,GL_RGB);
@@ -162,7 +162,7 @@ void ofApp::setup(){
     pixels.set(0);
     tex1.loadData(pixels);
     tex2 = tex1;
-    pixels.setColor(10,10,ofColor(255,255,255);
+    pixels.setColor(10,10,ofColor(255,255,255));
     tex2.loadData(pixels);
 }
 
