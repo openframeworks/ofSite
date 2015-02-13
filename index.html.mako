@@ -7,13 +7,6 @@
 		<iframe src="http://player.vimeo.com/video/74124094?title=0&amp;byline=0&amp;portrait=0" width="550" height="309" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 	</p>
 
-<div style="border:1px solid #EE3987; margin-bottom: 5em">
-
-  <p><h3 style="padding:0 10px"><a href="http://blog.openframeworks.cc/post/104672042124/2014-community-survey">take the OF survey!</a></h3></p>
-
-  <p style="padding:0 10px">Every so often, we like to get some information from you that helps us learn more about what openFrameworks is used for, who’s using it, and how we can continue developing and making things simpler, friendlier, and more robust to use. The results from <a href="http://blog.openframeworks.cc/post/60000217684/of-2013-survey-results">last year’s survey</a> were really insightful, and the community grows and changes every year, so we’d love to get your input again and continue to learn.</p>
-
-</div>
 
 
 </div>
