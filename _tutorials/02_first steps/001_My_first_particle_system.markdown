@@ -271,7 +271,7 @@ The last step for adding a Class is to add it to `ofApp.h` with a `#include "bal
 	};
 ~~~~
 
-In `ofApp.cpp` we can change things to look like this:
+In `ofApp.cpp` we can change things to look like this (note the empty `ofApp::mousePressed()`):
 
 ~~~~{.cpp}
 	void ofApp::setup(){
