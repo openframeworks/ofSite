@@ -199,7 +199,7 @@ The `ball.h` file should look like:
 	#endif
 ~~~~
 
-Congratulations, you just created your own class! There are couple of new things are going on here. The first 2 lines (`#ifndef..` prevent the compiler from using copying the file multiple times. This is a standard practice in C++ and you probably want to leave things the way they are. You are basically saying, "Hey compiler, don't compile this stuff two times, and for compiling you will need ofMain.h header file.". Including `ofMain.h` will give you access to all the methods and objects of openFrameworks. This is what makes your code oF-based and not just C++ code, and is where the magic happens.
+Congratulations, you just created your own class! There are couple of new things are going on here. The first 2 lines (`#ifndef..` prevent the compiler from using (so called "including") the file multiple times. This is a standard practice in C++ and you probably want to leave things the way they are. You are basically saying, "Hey compiler, don't compile this stuff multiple times, and for compiling you will need ofMain.h header file.". Including `ofMain.h` will give you access to all the methods and objects of openFrameworks. This is what makes your code oF-based and not just C++ code, and is where the magic happens.
 
 To create a object you need to call the class's constructor. The constructor `Ball()` is the first thing that will execute and create the Ball. It's like when you write `int i;` and 'i' automatically is initially set to zero. int's constructor took care of that for you.
 The properties should look familiar at this point but a new method is the `draw()` function.
