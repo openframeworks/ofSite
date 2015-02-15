@@ -7,7 +7,8 @@ author_site: http://patriciogonzalezvivo.com
 ---
 
 At this point, you should have read how to download openFrameworks, setup your IDE and compile some project examples.
-Now you can jump into the fun stuff and start making things!
+Now you can jump into the fun stuff and start making things! This tutorial is going to teach you how to draw a simple
+ball and make it interact with mouse events (cursor movements and key presses).
 
 ## 1. Draw Something
 Let's start by drawing something. If we want to draw something we have to put it inside the function `void ofApp::draw()` in the file ```ofApp.cpp```.
