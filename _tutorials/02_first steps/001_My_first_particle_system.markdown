@@ -27,7 +27,7 @@ For those that know a little about Processing this may look familiar, the bigges
 
 In the first line we are filling the background with black with `ofBackground(0);`. It's also possible to use RGB values by typing `ofBackground(76,63,72);` or something more intuitive like `ofBackground(ofColor::black);`.
 After drawing the background we are setting up the color with `ofSetColor(int r, int g, int b)` that will remain from until it is changed. openFramework's origins are based in OpenGL and like OpenGL once a state is applied it will remain in the state from that point until it's changed again. It may seem strange in the beginning but soon you will see that it is a pretty good and efficient way of dealing with properties.
-So like with ofBackground, you can use options like `ofSetColor(ofColor:blue);` and it will change the color of the circle.
+So like with ofBackground, you can use options like `ofSetColor(ofColor::blue);` and it will change the color of the circle.
 The next line, `ofFill();` , defines the fill style of the shape (filling the shape with color). The opposite is `ofNoFill();` that will only draw the outline. You can change the size of the outline with `ofSetLineWidth( 4 );`
 Once we set up our background and drawing color we draw a small circle with a radius of 30 pixels at the `100,100` position.
 
