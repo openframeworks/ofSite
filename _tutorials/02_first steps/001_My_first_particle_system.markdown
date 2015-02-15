@@ -104,6 +104,7 @@ Right now we are only working on the `draw()` methods and if we want some oF mag
 ~~~~
 
 We are going to use these two variables to store the last position of the ball and progressively move the ball towards the mouse.
+Use the following code in `ofApp.cpp`:
 
 ~~~~{.cpp}
 	void ofApp::setup(){
