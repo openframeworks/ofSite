@@ -7,7 +7,8 @@ author_site: http://patriciogonzalezvivo.com
 ---
 
 At this point, you should have read how to download openFrameworks, setup your IDE and compile some project examples.
-Now you can jump into the fun stuff and start making things!
+Now you can jump into the fun stuff and start making things! This tutorial is going to teach you how to draw a simple
+ball and make it interact with mouse events (cursor movements and key presses).
 
 ## 1. Draw Something
 Let's start by drawing something. If we want to draw something we have to put it inside the function `void ofApp::draw()` in the file ```ofApp.cpp```.
@@ -27,7 +28,7 @@ For those that know a little about Processing this may look familiar, the bigges
 
 In the first line we are filling the background with black with `ofBackground(0);`. It's also possible to use RGB values by typing `ofBackground(76,63,72);` or something more intuitive like `ofBackground(ofColor::black);`.
 After drawing the background we are setting up the color with `ofSetColor(int r, int g, int b)` that will remain from until it is changed. openFramework's origins are based in OpenGL and like OpenGL once a state is applied it will remain in the state from that point until it's changed again. It may seem strange in the beginning but soon you will see that it is a pretty good and efficient way of dealing with properties.
-So like with ofBackground, you can use options like `ofSetColor(ofColor:blue);` and it will change the color of the circle.
+So like with ofBackground, you can use options like `ofSetColor(ofColor::blue);` and it will change the color of the circle.
 The next line, `ofFill();` , defines the fill style of the shape (filling the shape with color). The opposite is `ofNoFill();` that will only draw the outline. You can change the size of the outline with `ofSetLineWidth( 4 );`
 Once we set up our background and drawing color we draw a small circle with a radius of 30 pixels at the `100,100` position.
 
@@ -52,7 +53,7 @@ So, now when you resize the window this little blue world remains centered. Cong
 
 Now let's take a look at the "Graphics" section on  [www.openframeworks.cc/documentation/](http://www.openframeworks.cc/documentation/) . There you will find lots of other methods like `ofLine()`, `ofRect()` that are related to drawing.
 
-In the documentation of openFrameworks you will notice that all the functions and classes have a consistent way of working. The more you try things and play with them sooner you will get this "oF Style" and things will become pretty intuitive.
+In the documentation of openFrameworks you will notice that all the functions and classes have a consistent way of working. The more you try things and play with them sooner you will get this "oF style" and things will become pretty intuitive.
 
 CHALLENGE: Referring to the documention, try and make your a digital Kandinsky-style artwork. [www.openframeworks.cc/documentation/](http://www.openframeworks.cc/documentation/) . A little tip for super awesome results will be the use of: `ofEnableSmoothing();` for making smooth edges and something like `ofBackgroundGradient(ofColor::white,ofColor(255,255,200), OF_GRADIENT_CIRCULAR);` for a nice gradient background.
 
@@ -104,6 +105,7 @@ Right now we are only working on the `draw()` methods and if we want some oF mag
 ~~~~
 
 We are going to use these two variables to store the last position of the ball and progressively move the ball towards the mouse.
+Use the following code in `ofApp.cpp`:
 
 ~~~~{.cpp}
 	void ofApp::setup(){
@@ -140,7 +142,7 @@ We are going to use these two variables to store the last position of the ball a
 Nice, isn't it?
 Other very typical interaction is using the the keyboard. openFrameworks has some default methods for capturing mouse and keyboard events. Take a look at the bottom of the `ofApp.cpp`. You will see `keyPress()`, `keyRelease()`, `mouseMove()`, `mouseDragged()`, `mousePressed()` and `mouseReleased()` events.
 
-At this point we can add some randomness interaction using `ofRandom()` and `ofNoise()`. I highly recommend you take a look at the documentation ( [www.openframeworks.cc/documentation/](http://www.openframeworks.cc/documentation/) ) and also taking a look to Golan's ofNoise example at `openFrameworks/examples/math` directory.
+At this point we can add some randomness to the interaction by using `ofRandom()` and `ofNoise()`. I highly recommend you take a look at the documentation ( [www.openframeworks.cc/documentation/](http://www.openframeworks.cc/documentation/) ) and also taking a look to Golan's ofNoise example at `openFrameworks/examples/math` directory.
 So let's add something really simple. Here every time you press the mouse the ball will go to a random position.
 
 ~~~~{.cpp}
@@ -198,7 +200,7 @@ The `ball.h` file should look like:
 	#endif
 ~~~~
 
-Congratulations, you just created your own class! There are couple of new things are going on here. The first 2 lines (`#ifndef..` prevent the compiler from using copying the file multiple times. This is a standard practice in C++ and you probably want to leave things the way they are. You are basically saying, "Hey compiler, don't compile this stuff two times, and for compiling you will need ofMain.h header file.". Including `ofMain.h` will give you access to all the methods and objects of openFrameworks. This is what makes your code oF-based and not just C++ code, and is where the magic happens.
+Congratulations, you just created your own class! There are couple of new things are going on here. The first 2 lines (`#ifndef..` prevent the compiler from using (so called "including") the file multiple times. This is a standard practice in C++ and you probably want to leave things the way they are. You are basically saying, "Hey compiler, don't compile this stuff multiple times, and for compiling you will need ofMain.h header file.". Including `ofMain.h` will give you access to all the methods and objects of openFrameworks. This is what makes your code oF-based and not just C++ code, and is where the magic happens.
 
 To create a object you need to call the class's constructor. The constructor `Ball()` is the first thing that will execute and create the Ball. It's like when you write `int i;` and 'i' automatically is initially set to zero. int's constructor took care of that for you.
 The properties should look familiar at this point but a new method is the `draw()` function.
@@ -270,7 +272,7 @@ The last step for adding a Class is to add it to `ofApp.h` with a `#include "bal
 	};
 ~~~~
 
-In `ofApp.cpp` we can change things to look like this:
+In `ofApp.cpp` we can change things to look like this (note the empty `ofApp::mousePressed()`):
 
 ~~~~{.cpp}
 	void ofApp::setup(){
@@ -326,6 +328,37 @@ And then use it like like this in the ofApp project
 	}
 ~~~~
 
+Since the properties `Ball::x` and `Ball::y` are not accessed directly from the outside anymore, it is considered good practise
+to make them "private" in the class defintion (file `ball.h`).
+
+~~~~{.cpp}
+	#ifndef ball_h
+	#define ball_h
+
+	#include "ofMain.h"
+
+	class Ball {
+    private:
+    		// Properties
+    		int x;
+    		int y;
+
+	public:
+    		// Constructor
+    		Ball();
+
+    		// Methods
+    		void moveTo();
+    		void draw();
+
+    		// Properties
+    		ofColor color;
+	};
+	#endif
+~~~~
+
+This way the position property can only be changed by methods associated with the class itself. This way you have better control
+of when and how things change and the code tends to become cleaner overall.
 
 ## 4. Let's get physical
 
