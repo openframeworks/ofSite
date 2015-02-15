@@ -327,6 +327,37 @@ And then use it like like this in the ofApp project
 	}
 ~~~~
 
+Since the properties `Ball::x` and `Ball::y` are not accessed directly from the outside anymore, it is considered good practise
+to make them "private" in the class defintion (file `ball.h`).
+
+~~~~{.cpp}
+	#ifndef ball_h
+	#define ball_h
+
+	#include "ofMain.h"
+
+	class Ball {
+    private:
+    		// Properties
+    		int x;
+    		int y;
+
+	public:
+    		// Constructor
+    		Ball();
+
+    		// Methods
+    		void moveTo();
+    		void draw();
+
+    		// Properties
+    		ofColor color;
+	};
+	#endif
+~~~~
+
+This way the position property can only be changed by methods associated with the class itself. This way you have better control
+of when and how things change and the code tends to become cleaner overall.
 
 ## 4. Let's get physical
 
