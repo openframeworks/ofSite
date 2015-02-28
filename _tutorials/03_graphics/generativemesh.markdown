@@ -42,7 +42,7 @@ A mesh is a collection of **vertices** - [points in 3D space](https://en.wikiped
 * You can choose to connect pairs of vertices and draw lines as the primitives.
 * You can connect three or four (or more) vertices and draw triangles or quads  (or polygons) as the primitives.
 
-To make this a little more concrete, check out the below mesh.  The vertices are orange dots.  The vertices are connected up in sets of three points to form triangle primitives which were then colored in gray.  For some deeper information, have a look at the [opengl tutorial](http://www.openframeworks.cc/tutorials/graphics/opengl.html).
+To make this a little more concrete, check out the below mesh.  The vertices are orange dots.  The vertices are connected up in sets of three points to form triangle primitives which were then colored in gray.  For some deeper information, have a look at the [OpenGL tutorial](http://www.openframeworks.cc/tutorials/graphics/opengl.html).
 
 ![Keenan Crane's public domain cow shown in wireframe](003_images/Keenan_Crane_Public_Domain_Cow_Small.png)
 
