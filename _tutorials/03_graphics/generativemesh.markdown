@@ -36,7 +36,7 @@ The tutorial is broken into four sections:
 ##Basics: Working with ofMesh
 
 
-A mesh is a collection of **vertices** - points in 3D space - that can be connected up in different ways.  The shapes that are formed by connecting these vertices are called **primitives**.  The primitives are our smallest building blocks that we can put together to form a mesh.  We can create a couple different kinds of primitives:
+A mesh is a collection of **vertices** - [points in 3D space](https://en.wikipedia.org/wiki/Vertex_%28computer_graphics%29) - that can be connected up in different ways.  The shapes that are formed by connecting these vertices are called **primitives**.  The primitives are our smallest building blocks that we can put together to form a mesh.  We can create a couple different kinds of primitives:
 
 * You can choose to not connect any of your vertices and just draw points as the primitives.
 * You can choose to connect pairs of vertices and draw lines as the primitives.
