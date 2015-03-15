@@ -23,3 +23,5 @@ This folder contains information about the oF examples. You can find the example
 - asciiVideo
 
 ### 3d
+
+- [3DPrimitivesExample](3D/3DPrimitivesExamples.html)
