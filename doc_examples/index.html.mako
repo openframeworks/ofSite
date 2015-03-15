@@ -5,7 +5,9 @@
 This folder contains information about the oF examples. You can find the examples folder in your oF directory.
 
 ### GL
-- [singleLightExample](gl/singleLightExample.html)
+- [singleLightExample](gl/singleLightExample.html)  
+    Tags: `opengl`  
+    Classes used: `opengl`
 
 ### Sound
 
@@ -24,4 +26,4 @@ This folder contains information about the oF examples. You can find the example
 
 ### 3d
 
-- [3DPrimitivesExample](3D/3DPrimitivesExamples.html)
+- [3DPrimitivesExample](3D/3DPrimitivesExample.html)

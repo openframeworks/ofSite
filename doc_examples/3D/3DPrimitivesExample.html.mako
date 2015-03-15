@@ -11,10 +11,12 @@ With this example you can see how to setup all the 3D Primitives, as solids, as 
 ![Alt text](images/3DPrimitivesExample_img04.png)
 ![Alt text](images/3DPrimitivesExample_img05.png)
 
-## Clases:
+----------------
+Classes used
+----------------
 
--`of3dPrimitive`
--`ofSpherePrimitive`
+- `of3dPrimitive`
+- `ofSpherePrimitive`
 -`ofIcoSpherePrimitive`
 -`ofPlanePrimitive`
 -`ofCylinderPrimitive`
