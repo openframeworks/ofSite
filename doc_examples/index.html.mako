@@ -5,6 +5,8 @@
 This folder contains information about the oF examples. You can find the examples folder in your oF directory.
 
 ### GL
+- [singleLightExample](gl/singleLightExample.html)
+
 ### Sound
 
 - audioInputExample
