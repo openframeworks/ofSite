@@ -1,3 +1,0 @@
-# videoGrabberExample
-
-videoGrabberExample documentation
