@@ -4,22 +4,24 @@
 # Examples
 This folder contains information about the oF examples. You can find the examples folder in your oF directory.
 
-### GL
-- [singleLightExample](gl/singleLightExample.html)
-
-### Sound
+## GL
+## Sound
 
 - audioInputExample
 - audioOutputExample
 - soundPlayerExample
 - soundPlayerFFTExample
 
-### Video
+## Video
 
-- [videoGrabberExample](video/videoGrabberExample.html)
-- videoPlayerExample
-- osxVideoRecorderExample
-- osxHighPerformanceVideoPlayerExample
 - asciiVideo
+- osxHighPerformanceVideoPlayerExample
+- [osxVideoRecorderExample](video/osxVideoRecorderExample.html)
+- videoPlayerExample
+   > ofVideoGrabber, ofQTKitGrabber, ofVideoPlayer
+   > video, cameras
+- [videoGrabberExample](video/videoGrabberExample.html) 
+   > ofVideoGrabber, ofTexture
+   > video, cameras, texture
 
-### 3d
+## 3d
