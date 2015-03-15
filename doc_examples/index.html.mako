@@ -32,3 +32,8 @@ This folder contains information about the oF examples. You can find the example
 ## 3d
 
 - [3DPrimitivesExample](3D/3DPrimitivesExample.html)
+   > of3dPrimitive, ofSpherePrimitive, ofIcoSpherePrimitive, ofPlanePrimitive, ofCylinderPrimitive, ofConePrimitive, ofBoxPrimitive, ofMaterial, ofVboMesh, ofMeshFace, ofVideoGrabber, ofLight, ofImage
+   > texture mapping, normals
+- [Advanced3DExample] (3D/Advanced3DExample.html)
+   > ofEasyCam
+   > objects, classes, cameras, orthographic camera, particles, viewers
