@@ -5,10 +5,10 @@ This folder contains detailed information about the oF examples. You can find th
 ### GL
 ### Sound
 
-– audioInputExample
-– audioOutputExample
-– soundPlayerExample
-– soundPlayerFFTExample
+- audioInputExample
+- audioOutputExample
+- soundPlayerExample
+- soundPlayerFFTExample
 
 ### Video
 
