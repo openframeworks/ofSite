@@ -14,7 +14,7 @@ This folder contains information about the oF examples. You can find the example
 
 ### Video
 
-- [videoGrabberExample](video/videoGrabberExample.mako)
+- [videoGrabberExample](video/videoGrabberExample.html)
 - videoPlayerExample
 - osxVideoRecorderExample
 - osxHighPerformanceVideoPlayerExample
