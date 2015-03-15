@@ -2,4 +2,4 @@
 <%inherit file="/_templates/markdown.mako" />
 
 # Single Light Example
-![Alt text](../images/singleLightExample.png "single light example")
+![Single Light Example](images/singleLightExample.png "single light example")
