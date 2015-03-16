@@ -4,20 +4,26 @@
 # Examples
 This folder contains information about the oF examples. You can find the examples folder in your oF directory.
 
-## GL
+-----
+GL
+-----
 
 - [singleLightExample](gl/singleLightExample.html)  
-    Tags: `opengl`  
-    Classes used: `opengl`
+   > pointLight, lightColor, materialColor, ofPushMatrix, ofTranslate, ofRotate  
+   > opengl, light, spheres
 
-## Sound
+------
+Sound
+-----
 
 - audioInputExample
 - audioOutputExample
 - soundPlayerExample
 - soundPlayerFFTExample
 
-## Video
+-----
+Video
+----
 
 - asciiVideo
 - osxHighPerformanceVideoPlayerExample
@@ -29,7 +35,9 @@ This folder contains information about the oF examples. You can find the example
    > ofVideoGrabber, ofTexture
    > video, cameras, texture
 
-## 3d
+-----
+3d
+-----
 
 - [3DPrimitivesExample](3D/3DPrimitivesExample.html)
    > of3dPrimitive, ofSpherePrimitive, ofIcoSpherePrimitive, ofPlanePrimitive, ofCylinderPrimitive, ofConePrimitive, ofBoxPrimitive, ofMaterial, ofVboMesh, ofMeshFace, ofVideoGrabber, ofLight, ofImage
