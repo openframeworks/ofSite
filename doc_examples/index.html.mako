@@ -8,9 +8,34 @@ This folder contains information about the oF examples. You can find the example
 GL
 -----
 
+- alphaMaskingShaderExample  
+   > pointLight, lightColor, materialColor, ofPushMatrix, ofTranslate, ofRotate  
+   > opengl, light, spheres
+- billboardExample  
+   > zoomTarget, ofShader, ofImage, ofVboMesh, ofVec3f, cameraRotation, ofColor, ofGetGLProgrammableRenderer, ofDisableArbTex, ofEnableAlphaBlending, ofGetElapsedTimef, ofSignedNoise, ofDrawBitmapStringHighlight, ofPushMatrix, ofTranslate, ofEnablePointSprites, ofDisablePointSprites, ofPopMatrix  
+   > opengl, particles, perlin noise, 3d camera
+- billboardRotationExample  
+   > pointLight, lightColor, materialColor, ofPushMatrix, ofTranslate, ofRotate  
+   > opengl, light, spheres
+- fboTrailsExample  
+   > pointLight, lightColor, materialColor, ofPushMatrix, ofTranslate, ofRotate  
+   > opengl, light, spheres
+- geometryShaderExample
+- glInfoExample
+- gpuParticleSystemExample
+- multiLightExample
+- multiTextureShaderExample
+- pointsAsTextures
+- shaderExample
 - [singleLightExample](gl/singleLightExample.html)  
    > pointLight, lightColor, materialColor, ofPushMatrix, ofTranslate, ofRotate  
    > opengl, light, spheres
+- slowFastRendering
+- textureExample
+- textureScreengrabExample
+- vboExample
+- vboMeshDrawInstancedExample
+- viewportExample
 
 ------
 Sound
