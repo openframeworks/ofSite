@@ -61,6 +61,9 @@ Add a mesh variable to your header file (.h, e.g. testApp.h):
 ~~~
 Append these lines to your *setup()* and *draw()* functions in your source file (.cpp):
 ~~~.cpp
+#include "ofApp.h"
+#include "testApp.h"
+
 void testApp::setup() {
     mesh.setMode(OF_PRIMITIVE_POINTS);
 
