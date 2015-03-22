@@ -118,7 +118,7 @@ You find our points boring?  Time for some some lines then.  We need to change t
 
 ![Triangle Points](003_images/TriangleLineMode.png)
 
-The modes each have a different way that they generate lines from the vertices:
+The modes for mesh.[setMode()](http://openframeworks.cc/documentation/3d/ofMesh.html#show_setMode) each have a different way that they generate lines from the vertices:
 
 * **OF_PRIMITIVE_LINE** creates an *independent* line out of each pair of vertices.  If you have a set of vertices - V<sub>1</sub>, V<sub>2</sub>, V<sub>3</sub>, V<sub>4</sub>, ... - then V<sub>1</sub> will connect to V<sub>2</sub> and V<sub>3</sub> will connect to V<sub>4</sub>.
 * **OF_PRIMITIVE_LINE_STRIP** will create a set of *connected* lines out of each pair of vertices.  V<sub>1</sub> will connect with V<sub>2</sub>,  V<sub>2</sub> will connect with  V<sub>3</sub> etc.
