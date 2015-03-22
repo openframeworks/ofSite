@@ -334,7 +334,7 @@ If we were to start looping through those each of those 64,000 vertices to conne
 And then because our image pixel are no longer one-to-one with our openFrameworks window pixels, we need to adjust the the *pos* variable inside of our loop:
 
 ~~~.cpp
-            if (c.getLightness() > intensityThreshold) {
+            if (intensity >= intensityThreshold) {
                 // We shrunk our image by a factor of 4, so we need to multiply our pixel
                 // locations by 4 in order to have our mesh cover the openFrameworks window
                 ofVec3f pos(4*x, 4*y, 0.0);
