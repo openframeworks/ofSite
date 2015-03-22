@@ -55,7 +55,7 @@ We are going to focus on using points and lines as our primitives.  Let's get so
 
 And onto the code!
 
-Add a mesh variable to your header file (.h):
+Add a mesh variable to your header file (.h, e.g. testApp.h):
 ~~~.h
     ofMesh mesh;
 ~~~
