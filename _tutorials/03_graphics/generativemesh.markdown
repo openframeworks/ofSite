@@ -238,8 +238,17 @@ Then go into your header file (testApp.h) and add:
 ~~~
 And lastly, into your source file (testApp.cpp):
 ~~~.cpp
+#include "ofApp.h"
+#include "testApp.h"
+#include <iostream>
+using namespace std;
+
 void testApp::setup(){
-    image.loadImage("stars.png");
+    bool succ = true;
+    succ = image.loadImage("stars.png");
+    if (!succ) {
+       cerr << "loading image failed ...\n";
+    }
 }
 void testApp::draw(){
     image.draw(0,0);
@@ -254,13 +263,17 @@ Great! Image loaded.  Now, we want to create a mesh with some vertices. If we on
 
 Add a mesh to testApp.h:
 ~~~.h
-		ofMesh mesh;
+    ofMesh mesh;
 ~~~
 
 And add this to testApp.cpp:
 ~~~.cpp
 void testApp::setup(){
-    image.loadImage("stars.png");
+    bool succ = true;
+    succ = image.loadImage("stars.png");
+    if (!succ) {
+       cerr << "loading image failed ...\n";
+    }
 
     mesh.setMode(OF_PRIMITIVE_POINTS);
 
