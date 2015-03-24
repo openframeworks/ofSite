@@ -66,7 +66,10 @@ Video
 
 - [3DPrimitivesExample](3D/3DPrimitivesExample.html)
    > of3dPrimitive, ofSpherePrimitive, ofIcoSpherePrimitive, ofPlanePrimitive, ofCylinderPrimitive, ofConePrimitive, ofBoxPrimitive, ofMaterial, ofVboMesh, ofMeshFace, ofVideoGrabber, ofLight, ofImage
-   > texture mapping, normals
-- [Advanced3DExample] (3D/Advanced3DExample.html)
+   > texture mapping, normals, 3D primitives, sphere, cone, plane, box, cube, materials, video
+- [Advanced3DExample](3D/Advanced3DExample.html)
    > ofEasyCam
    > objects, classes, cameras, orthographic camera, particles, viewers
+- [cameraLensOffsetExample](3D/cameraLensOffsetExample.html)
+   > ofEasyCam, ofVboMesh, ofMultMatrix(), ofxCvHaarFinder
+   > matrix, cameras, point of view, virtual camera, Vbo, face tracking, computer vision

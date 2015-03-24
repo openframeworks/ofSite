@@ -24,6 +24,12 @@ Classes used
 - ofLight
 - ofImage
 
+Tags
+----------------
+
+texture mapping, normals, 3D primitives, sphere, cone, plane, box, cube, materials, video
+
+
 ![Alt text](images/3DPrimitivesExample_img01.png)
 ![Alt text](images/3DPrimitivesExample_img02.png)
 ![Alt text](images/3DPrimitivesExample_img03.png)
