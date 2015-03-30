@@ -73,3 +73,9 @@ Video
 - [cameraLensOffsetExample](3D/cameraLensOffsetExample.html)
    > ofEasyCam, ofVboMesh, ofMultMatrix(), ofxCvHaarFinder
    > matrix, cameras, point of view, virtual camera, Vbo, face tracking, computer vision
+- [cameraParentingExample](3D/cameraParentingExample.html)
+   > ofNode, ofLight, ofCamera
+   > node, parent, camera, anidate, lookAt, setParent, clearParent, orbit
+- [cameraRibbonExample](3D/cameraRibbonExample.html)
+   > ofVec3f, ofCamera, ofMesh
+   > vector, time, camera, draw, points, OF_PRIMITIVE_TRIANGLE_STRIP
