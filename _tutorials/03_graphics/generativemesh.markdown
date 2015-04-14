@@ -36,12 +36,13 @@ The tutorial is broken into four sections:
 ##Basics: Working with ofMesh
 
 
-A mesh is a collection of **vertices** - points in 3D space - that can be connected up in different ways.  The shapes that are formed by connecting these vertices are called **primitives**.  The primitives are our smallest building blocks that we can put together to form a mesh.  We can create a couple different kinds of primitives:
+A mesh is a collection of **vertices** - [points in 3D space](https://en.wikipedia.org/wiki/Vertex_%28computer_graphics%29) - that can be connected up in different ways.  The shapes that are formed by connecting these vertices are called **primitives**.  The primitives are our smallest building blocks that we can put together to form a mesh.  We can create a couple different kinds of primitives:
+
 * You can choose to not connect any of your vertices and just draw points as the primitives.
 * You can choose to connect pairs of vertices and draw lines as the primitives.
 * You can connect three or four (or more) vertices and draw triangles or quads  (or polygons) as the primitives.
 
-To make this a little more concrete, check out the below mesh.  The vertices are orange dots.  The vertices are connected up in sets of three points to form triangle primitives which were then colored in gray.  For some deeper information, have a look at the [opengl tutorial](http://www.openframeworks.cc/tutorials/graphics/opengl.html).
+To make this a little more concrete, check out the below mesh.  The vertices are orange dots.  The vertices are connected up in sets of three points to form triangle primitives which were then colored in gray.  For some deeper information, have a look at the [OpenGL tutorial](http://www.openframeworks.cc/tutorials/graphics/opengl.html).
 
 ![Keenan Crane's public domain cow shown in wireframe](003_images/Keenan_Crane_Public_Domain_Cow_Small.png)
 
@@ -54,12 +55,15 @@ We are going to focus on using points and lines as our primitives.  Let's get so
 
 And onto the code!
 
-Add a mesh variable to your header file (.h):
+Add a mesh variable to your header file (.h, e.g. testApp.h):
 ~~~.h
     ofMesh mesh;
 ~~~
 Append these lines to your *setup()* and *draw()* functions in your source file (.cpp):
 ~~~.cpp
+#include "ofApp.h"
+#include "testApp.h"
+
 void testApp::setup() {
     mesh.setMode(OF_PRIMITIVE_POINTS);
 
@@ -114,9 +118,10 @@ You find our points boring?  Time for some some lines then.  We need to change t
 
 ![Triangle Points](003_images/TriangleLineMode.png)
 
-The modes each have a different way that they generate lines from the vertices:
+The modes for mesh.[setMode()](http://openframeworks.cc/documentation/3d/ofMesh.html#show_setMode) each have a different way that they generate lines from the vertices:
+
 * **OF_PRIMITIVE_LINE** creates an *independent* line out of each pair of vertices.  If you have a set of vertices - V<sub>1</sub>, V<sub>2</sub>, V<sub>3</sub>, V<sub>4</sub>, ... - then V<sub>1</sub> will connect to V<sub>2</sub> and V<sub>3</sub> will connect to V<sub>4</sub>.
-* **OF_PRIMITIVE_LINE_STRIP** will create a set of *connected* lines out of each pair of vertices.  V<sub>1</sub> will connect with V<sub>2</sub>.   V<sub>2</sub> will connect with  V<sub>3</sub>. Etc.
+* **OF_PRIMITIVE_LINE_STRIP** will create a set of *connected* lines out of each pair of vertices.  V<sub>1</sub> will connect with V<sub>2</sub>,  V<sub>2</sub> will connect with  V<sub>3</sub> etc.
 * **OF_PRIMITIVE_LINE_LOOP** will create a set of connected lines, *and* it will connect the first and last vertices.
 
 Only OF_PRIMITIVE_LINE_LOOP outlined the whole triangle. If you wanted to create that same triangle using OF_PRIMITIVE_LINE, you might try adding some more vertices like this:
@@ -222,7 +227,7 @@ So we need some data and some rules.  Let's grab some 'data' from the Hubble Tel
 
 ![Original hubble image](003_images/stars.png)
 
-Create a [new openFrameworks project](http://www.openframeworks.cc/tutorials/introduction/002_projectGenerator.html) called HubbleMesh and save that image as 'stars.png' in your HubbleMesh/bin/data directory.
+Create a [new openFrameworks project](http://www.openframeworks.cc/tutorials/introduction/002_projectGenerator.html) called HubbleMesh. Inside that project create the bin/data directory ('bin' may already exist) and save the above image there as 'stars.png'.
 
 Now we have some colorful, pixely goodness, but what rules should we use to transform those pixels into a mesh?  We can start with drawing points and work our way up to drawing lines.  Our image has a ton of stars, so let's create some vertices where those stars are located.  Once we do that, we can connect up neighboring vertices with lines in order to create a web of sorts.
 
@@ -236,8 +241,17 @@ Then go into your header file (testApp.h) and add:
 ~~~
 And lastly, into your source file (testApp.cpp):
 ~~~.cpp
+#include "ofApp.h"
+#include "testApp.h"
+#include <iostream>
+using namespace std;
+
 void testApp::setup(){
-    image.loadImage("stars.png");
+    bool succ = true;
+    succ = image.loadImage("stars.png");
+    if (!succ) {
+       cerr << "loading image failed ...\n";
+    }
 }
 void testApp::draw(){
     image.draw(0,0);
@@ -252,13 +266,17 @@ Great! Image loaded.  Now, we want to create a mesh with some vertices. If we on
 
 Add a mesh to testApp.h:
 ~~~.h
-		ofMesh mesh;
+    ofMesh mesh;
 ~~~
 
 And add this to testApp.cpp:
 ~~~.cpp
 void testApp::setup(){
-    image.loadImage("stars.png");
+    bool succ = true;
+    succ = image.loadImage("stars.png");
+    if (!succ) {
+       cerr << "loading image failed ...\n";
+    }
 
     mesh.setMode(OF_PRIMITIVE_POINTS);
 
@@ -316,7 +334,7 @@ If we were to start looping through those each of those 64,000 vertices to conne
 And then because our image pixel are no longer one-to-one with our openFrameworks window pixels, we need to adjust the the *pos* variable inside of our loop:
 
 ~~~.cpp
-            if (c.getLightness() > intensityThreshold) {
+            if (intensity >= intensityThreshold) {
                 // We shrunk our image by a factor of 4, so we need to multiply our pixel
                 // locations by 4 in order to have our mesh cover the openFrameworks window
                 ofVec3f pos(4*x, 4*y, 0.0);
@@ -357,7 +375,7 @@ You should end up with something like this (if the code is taking too long to ru
 
 Let's take a look at that code again:
 
-1. We need to get all unique pairs of vertices.  We can get the position of the *i*th vertex in our mesh using mesh.[getVertex()](http://www.openframeworks.cc/documentation/3d/ofMesh.html#show_getVertex).  Then we can use two for loops to get every pair of vertices.  You might be wondering why the second loop starts *b=a+1*.  The order of the vertices does not matter when connecting them to form a line, so we can exclude a bunch of values for *b*.
+1. We need to get all unique pairs of vertices.  We can get the position of the *a*th vertex in our mesh using mesh.[getVertex()](http://www.openframeworks.cc/documentation/3d/ofMesh.html#show_getVertex).  Then we can use two for loops to get every pair of vertices.  You might be wondering why the second loop starts *b=a+1*.  The order of the vertices does not matter when connecting them to form a line, so we can exclude a bunch of values for *b*.
 2. Then, we need to find the distance between those vertices.  ofVec3f has a function to do just that: [distance()](http://www.openframeworks.cc/documentation/math/ofVec3f.html#show_distance).
 3. If the vertices are closer than a value set by *connectionDistance*, then we need to add a line between them.  Adding a line is just a matter of adding the indices *a* and *b* to the mesh's array of indices.
 
@@ -414,7 +432,7 @@ The mesh resembles something you might find under a microscope, so let's add som
 
 ![Jitter](003_images/jitterSmall.gif)
 
-On each frame, we are going to move each vertex by a small, random amount.  Instead of using [ofRandom()](http://www.openframeworks.cc/documentation/math/ofMath.html#show_ofRandom) to displace our vertices, we are going to use [ofSignedNoise()](http://openframeworks.cc/documentation/math/ofMath.html#!show_ofSignedNoise) which generates a thing called Perlin noise.  Check out Daniel Shiffman's description of Perlin noise in section [1.6 Perlin Noise (A Smoother Approach)](http://natureofcode.com/book/introduction/#i6-perlin-noise-a-smoother-approach) of his online book.  Perlin noise yields random values that smoothly vary over time.  You can get a good idea of the difference between random values and Perlin noise by checking out [figure 1.5](http://natureofcode.com/book/imgs/intro/intro_05.png) (which shows sequential values of noise) and [figure 1.6](http://natureofcode.com/book/imgs/intro/intro_06.png) (which shows sequential random values) from the book.
+On each frame, we are going to move each vertex by a small, random amount.  Instead of using [ofRandom()](http://www.openframeworks.cc/documentation/math/ofMath.html#show_ofRandom) to displace our vertices, we are going to use [ofSignedNoise()](http://openframeworks.cc/documentation/math/ofMath.html#!show_ofSignedNoise) which generates a thing called [Perlin noise](https://en.wikipedia.org/wiki/Perlin_noise).  Check out Daniel Shiffman's description of Perlin noise in section [1.6 Perlin Noise (A Smoother Approach)](http://natureofcode.com/book/introduction/#i6-perlin-noise-a-smoother-approach) of his online book.  Perlin noise yields random values that smoothly vary over time.  You can get a good idea of the difference between random values and Perlin noise by checking out [figure 1.5](http://natureofcode.com/book/imgs/intro/intro_05.png) (which shows sequential values of noise) and [figure 1.6](http://natureofcode.com/book/imgs/intro/intro_06.png) (which shows sequential random values) from the book.
 
 With ofRandom(), you specify a range of values, and it returns a random value within that range.  If you were to call it multiple times in a row, you will (very, very likely) get a new value every time you call it.  Perlin noise works a bit differently.  ofSignedNoise() will always return a value between -1.0 and 1.0, but you still have to pass in an input to the function.  Think of ofSignedNoise() as a squiggly line drawn on graph paper.  You pass in a coordinate, an x value, and it will return the corresponding y value.  If you were to call ofSignedNoise(3.0) multiple times, you would get the same value every time.
 
