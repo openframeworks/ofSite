@@ -107,10 +107,7 @@ The examples folder is a great place to start. Inside examples you'll find a var
 
 -------------------------------
 
-nightly builds  
---------------
-
-Every night OF is built automatically, <a href="${bf.config.site.url}/nightlybuilds.html">here</a> you can find the latest builds.
+<iframe src="http://192.237.185.151/nightlybuilds.html" style="width:100%; height:300px; border: none" scrolling="no" seamless="seamless"></iframe>
 
 -------------------------------
 
