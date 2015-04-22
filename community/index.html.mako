@@ -3,6 +3,8 @@
 
 <div class="page-left-medium">                
 <!--h1 id="community">community</h1-->
+
+
 <h3>openFrameworks is a diverse community of hackers, artists, designers, students, teachers from all over the world.</h3>
 <p>To learn more about getting involved in OF, check out the <a href="http://www.openframeworks.cc/list-info/">community mailing list</a>.
 The community list is ideal for learning about ways to participate, hearing about upcoming events like workshops and conferences, and sharing projects.</p>

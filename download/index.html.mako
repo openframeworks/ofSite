@@ -2,7 +2,10 @@
 <%inherit file="/_templates/slideshow_wide.mako" />
 
 <!--h1>download</h1-->
+
+
 <div id="download-latest-header">
+
 	<h2>${bf.config.currentVersion}</h2>
 	<h3>is the most recent release. It's a minor version, with bugfixes only, so it is fully compatible with projects developed for 0.8.0 or any newer version. Please see the <a href="https://raw.github.com/openframeworks/openFrameworks/${bf.config.currentVersion}/CHANGELOG.md">changelog</a> to get an overview of the differences between versions.</h3>
 	<!--h3>is the most recent release. It has a lot of new features, new interfaces, and probably some new bugs too. ${bf.config.currentVersion} is not 100% compatible with older projects. Please see the <a href="https://raw.github.com/openframeworks/openFrameworks/${bf.config.currentVersion}/CHANGELOG.md">changelog</a> to get an overview of the differences between versions.</h3-->
@@ -32,7 +35,7 @@
 	    <h2>windows</h2>
 	    <h3>download<br/>openFrameworks for</h3>
 	    <p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_win_cb_release.zip">code::blocks</a></p>
-	    <p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_vs_release.zip">visual studio</a></p><br/>
+	    <p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_vs_release.zip">visual studio (2012)</a></p><br/>
 	    <h3>IDE setup guides</h3>
 	    <p><a href="../setup/codeblocks">code::blocks</a></p>
 	    <!--<p><a href="../setup/vs-2008">visual studio 2008</a></p>-->
@@ -77,7 +80,7 @@
 	    <h3>download<br/>openFrameworks for</h3>
 	    <p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_linuxarmv6l_release.tar.gz">linux armv6</a></p><br/>
 	    <h3>setup guide</h3>
-	    <p><a href="../setup/raspberrypi">raspberry pi</a></p>
+	    <p><a href="../setup/raspberrypi">Raspberry Pi 1</a></p>
     </div>
 
     <div id="download-latest-platform-last">
@@ -85,6 +88,7 @@
 	    <h3>download<br/>openFrameworks for</h3>
 	    <p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_linuxarmv7l_release.tar.gz">linux armv7</a></p><br/>
 	    <h3>setup guide</h3>
+		<p><a href="http://forum.openframeworks.cc/t/raspberry-pi-2-setup-guide/">Raspberry Pi 2</a></p>
 	    <p><a href="../setup/pandaboard">pandaboard</a></p>
 	    <p><a href="../setup/armv7">generic armv7</a></p>
     </div>

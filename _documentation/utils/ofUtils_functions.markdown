@@ -1326,8 +1326,12 @@ _description: _
 
 Checks if the string needle exists in the string haystack.
 
-
-
+~~~{.cpp}
+    string haystack = "foobar";
+    ofLog() << ofIsStringInString(haystack, "foo"); // outputs 1
+    ofLog() << ofIsStringInString(haystack,"bar"); // outputs 1
+    ofLog() << ofIsStringInString(haystack, "something else"); // outputs 0
+~~~
 
 
 
@@ -1923,27 +1927,29 @@ _inlined_description: _
 _description: _
 
 
-This function is used to delete some parts of a given string (str). We set in delimiter the parts we want to delete. For example if we call ofSplitSpring in my setup function:
-~~~~{.cpp}
+This function splits a given string using delimiter and returns the resulting parts of the string as vector.
 
-result=ofSplitString("of rocks", "of");
+For example:
+
+~~~~{.cpp}
+result = ofSplitString("of rocks", "ro");
 ~~~~
 
-we obtain:
-result[0]=r
-result[1]=cks
-this is the result of deleting o and f letters in the string.
+gives:
+result[0] = "of "
+result[1] = "cks"
 
-We can find a very useful application if we use delimiter = " ":
+A useful application might be to use delimiter = " ":
+
 ~~~~{.cpp}
-
-result=ofSplitString("of rocks", " ");
+result = ofSplitString("of rocks", " ");
 ~~~~
 
-we obtain:
-result[0]=of
-result[1]=rocks
-Like this we can "cut" a big string and turn it into a vector of words.
+gives:
+result[0] = "of"
+result[1] = "rocks"
+
+Like this a big string can be "cut" and turned it into a vector of words.
 
 
 
@@ -2097,7 +2103,7 @@ _inlined_description: _
 _description: _
 
 
-
+Executes an application or a system command and returns its output as string. Will block until the executed program/command has finished.
 
 
 
@@ -2987,7 +2993,11 @@ _description: _
 
 Converts all characters in the string src to uppercase.
 
-
+~~~~{.cpp}
+    string politeGreeting = "Hello, World!";
+    string enthusiasticGreeting = ofToUpper(politeGreeting); 
+    ofLog() << enthusiasticGreeting; // returns "HELLO, WORLD!"
+~~~~
 
 
 
