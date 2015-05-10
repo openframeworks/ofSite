@@ -760,9 +760,9 @@ Example:
 ofSoundPlayer mySound;
 mySound.load("beat.mp3");
 mySound.play();
-mySound.pan(-1.0f); //Pans to the left
-mySound.pan(1.0f); //Pans to the right
-mySound.pan(0.0f); //Back to center
+mySound.setPan(-1.0f); //Pans to the left
+mySound.setPan(1.0f); //Pans to the right
+mySound.setPan(0.0f); //Back to center
 ~~~~
 
 
