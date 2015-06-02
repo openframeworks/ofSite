@@ -48,6 +48,10 @@ Be careful when using events, it's a powerful structure but can also lead to rea
 
 It's important to unregister events in the destruction of listeners, if not an object that has already been destroyed can get called and the application will crash.
 
+~~~~{.cpp}
+ofRemoveListener(mySoundObject.onVolumeChange,this, &ofApp:onVolumeChange);
+~~~~
+
 Events have a private copy constructor to avoid that a copy of an object with an event gets all the registered listeners of the original. To be able to create a copy of an object that contains an event, use a pointer to an event instead of a normal var. This also means that you cannot store events directly in a vector or any other collection, the solution is the same, just use a pointer to an event.
 
 ie:
