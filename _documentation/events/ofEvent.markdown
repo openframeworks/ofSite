@@ -33,7 +33,7 @@ ofNotifyEvent(onVolumeChange, 10.0);
 To add a listener to that event, if the event is for example in an object called mySoundObject, and you want to register ofApp as a listener for that event:
 
 ~~~~{.cpp}
-ofAddListener(mySoundObject.onVolumeChange,this, &ofApp:onVolumeChange);
+ofAddListener(mySoundObject.onVolumeChange,this, &ofApp::onVolumeChange);
 ~~~~
 
 where ofApp::onVolumeChange is a function with the following signature:
