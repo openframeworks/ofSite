@@ -111,7 +111,7 @@ The examples folder is a great place to start. Inside examples you'll find a var
 
 -------------------------------
 
-<iframe src="http://192.237.185.151/nightlybuilds.html" style="width:100%; height:400px; border: none" scrolling="no" seamless="seamless"></iframe>
+<iframe src="http://192.237.185.151/nightlybuilds.html" style="width:100%; height:370px; border: none" scrolling="no" seamless="seamless"></iframe>
 
 -------------------------------
 
