@@ -1,7 +1,7 @@
 ## -*- coding: utf-8 -*-
 <%inherit file="/_templates/fullpage.mako" />
 
-<div class="page-left-medium">                
+<div class="page-left-wide">                
 <!--h1 id="community">development</h1-->
 
 <h3>openFrameworks development is collaborative. It thrives on the contributions of <a href="https://github.com/openframeworks/openFrameworks/contributors">many people</a>, who engage in frequent discussion on the <a href="http://forum.openframeworks.cc/">forums</a>, <a href="http://webchat.freenode.net/?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39">IRC</a>, and the <a href="http://dev.openframeworks.cc/listinfo.cgi/of-dev-openframeworks.cc">of-dev mailing list</a>.</h3> 
