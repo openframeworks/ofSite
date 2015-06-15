@@ -16,7 +16,8 @@
 ######################################################################
 import inspect, os
 sys.path.append( os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe()))) ) # script directory
-from _version import currentVersion 
+#from _version import currentVersion 
+currentVersion = "0.8.4"
 
 ## site_url -- Your site's full URL
 # Your "site" is the same thing as your _site directory.
