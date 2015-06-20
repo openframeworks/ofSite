@@ -37,9 +37,8 @@ openFrameworks is distributed under the [MIT License](license.html). This gives 
 Simply put, openFrameworks is a tool that makes it much easier to make things with code. We find it super useful, and we hope you do too.
 
 ----------------
-
 design philosophy
---------
+----------------
 
 openFrameworks is guided by a number of goals: it should be collaborative, usable and simple, consistent and intuitive, cross-platform, powerful, and extensible. openFrameworks is also driven by a "do it with others" (DIWO) philosophy.
 
@@ -94,9 +93,8 @@ The driving philosophy behind openFrameworks is "do it with others" (DIWO). We l
 If you are not a part of the group, welcome!
 
 ----------------
-
 faq
---------
+----------------
 
 **Why create another library for C++, since many libraries exist?**
 
