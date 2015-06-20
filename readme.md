@@ -36,7 +36,7 @@ Then inside the blogofile folder run (as root)
 Your may also need to install [asciidoc](http://www.methods.co.nz/asciidoc/manpage.html)
 
 
-####Installing on Vanilla Ubuntu 12.04:
+#### Installing on Vanilla Ubuntu 12.04:
 
 	aptitude install build-essential gcc python-dev libxslt1-dev git python-setuptools python-pip 
 	easy_install lxml
