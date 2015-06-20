@@ -24,7 +24,11 @@ There's a thorough description of the installation procedure on OS X in the [Con
 
 
 #### Installing on Debian: 
-You can install it by downloading the [package](http://pypi.python.org/packages/source/B/Blogofile/Blogofile-0.8b1.tar.gz) from the [project's page](http://www.blogofile.com/).
+You can install blogofile from the Debian (Jessie) repositories by running
+
+    sudo sudo apt-get install -y blogofile python-lxml
+
+You can also install it by downloading the [package](http://pypi.python.org/packages/source/B/Blogofile/Blogofile-0.8b1.tar.gz) from the [project's page](http://www.blogofile.com/).
 Then inside the blogofile folder run (as root)
 
 	python setup.py install
@@ -32,7 +36,7 @@ Then inside the blogofile folder run (as root)
 Your may also need to install [asciidoc](http://www.methods.co.nz/asciidoc/manpage.html)
 
 
-####Installing on Vanilla Ubuntu 12.04:
+#### Installing on Vanilla Ubuntu 12.04:
 
 	aptitude install build-essential gcc python-dev libxslt1-dev git python-setuptools python-pip 
 	easy_install lxml
