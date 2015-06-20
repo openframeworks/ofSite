@@ -37,57 +37,6 @@ openFrameworks is distributed under the [MIT License](license.html). This gives 
 Simply put, openFrameworks is a tool that makes it much easier to make things with code. We find it super useful, and we hope you do too.
 
 ----------------
-contributors and supporters
-----------------
-
-openFrameworks is actively developed by a <a href="../development/#contributors">small core team</a> of developers in conjunction with a large distributed collection of contributors, with a few <a href="../development/#contributors">section leaders</a> maintaining responsibility for subsections of openFrameworks on a rotating basis.
-
-A number of institutions have provided major support for openFrameworks through grants, donations, and as hosting partners for our international developer conferences. These events often require significant resources to bring together participants from many countries to a single location for multiple days.
-
-<span class="sponsors">
-  <a href="http://amt.parsons.edu"><img alt="sponsor_logo" src="logo-parsons.png" style="display: block; height: 58px;padding-bottom: 3px;"></a>
-  <a href="http://www.ycam.jp/en/"><img alt="sponsor_logo" src="logo-ycam.png" style="display: block; height: 69px; /* padding-bottom: 8px; */"></a>
-  <a href="http://eyebeam.org/"><img alt="sponsor_logo" src="logo-eyebeam.png" style="display: block; height: 30px; padding-bottom: 18px;"></a>
-  <a href="http://studioforcreativeinquiry.org/"><img alt="sponsor_logo" src="logo-sfci.png" style="display: block; height: 69px;"></a>
-  <a href="http://www.aec.at/"><img alt="sponsor_logo" src="logo-ars.png" style="display: block; height: 41px; padding-bottom: 14px;"></a>
-  <a href="http://www.fordfoundation.org/"><img alt="sponsor_logo" src="logo-fordfoundation.png" style="display: block; height: 42px; padding-bottom: 13px;"></a>
-</span>
-
-
-**[Ars Electronica Festival and Futurelab](http://www.aec.at/)**
-
-We would like to thank the [Ars Electronica Festival and Futurelab](http://www.aec.at/) for sponsoring the OF Lab at Ars Electronica 2008.
-
-**[Eyebeam](http://eyebeam.org/)**
-
-**[Ford Foundation](http://www.fordfoundation.org/)**
-
-We would like to thank the [Ford Foundation](http://www.fordfoundation.org/) for sponsoring the second openFrameworks developers conference.
-
-**[Parsons the New School for Design](http://amt.parsons.edu)**
-
-**[Frank-Ratchye STUDIO for Creative Inquiry](http://studioforcreativeinquiry.org/)**
-
-We would like to thank the [Frank-Ratchye STUDIO for Creative Inquiry](http://studioforcreativeinquiry.org/) for hosting the first openFrameworks developers conference, and providing other small grants and support to openFrameworks developers.
-
-**[Yamaguchi Center for Arts and Media](http://www.ycam.jp/en/)**
-
-We would like to thank [YCAM](http://www.ycam.jp/en/) for their ongoing support for OF. In 2008 YCAM hosted the first [OF workshop](http://wiki.openframeworks.cc/index.php?title=OfYcam) in Asia, and have since hosted many OF-related events such as: the [LabACT series](http://interlab.ycam.jp/en/projects/labact/eye-tracking-study) exploring uses of the EyeWriter, the first two [Guest Research Projects](http://interlab.ycam.jp/en/projects/guestresearch) which featured OF developers working on open source arts engineering tools like [ofxTimeline](http://interlab.ycam.jp/en/projects/guestresearch/vol2) and [mapamok](http://interlab.ycam.jp/en/projects/guestresearch/vol1), and most recently YCAM has hosted the [third openFrameworks developers conference](http://interlab.ycam.jp/en/projects/of-devcon2013).
-
-We are proud to acknowledge institutions and organizations which have hosted multi-day educational workshops and "OF Lab" events (see [the wiki](http://wiki.openframeworks.cc/index.php?title=Education) for a more complete list): 
-
-* [Art && Code Festival](http://artandcode.com/)
-* [Eyeo festival](http://eyeofestival.com/)
-* [Fabrica: The Benetton Group Communications Research Center](http://www.fabrica.it/)
-* [Graphic Design Festival Breda](http://www.graphicdesignfestival.nl/en/)
-* [iMAL Center for for Digital Cultures and Technology](http://www.imal.org/)
-* [MediaLab Prado](http://medialab-prado.es/)
-* [New York University Interactive Telecommunication Program](http://itp.nyu.edu/itp/) (ITP)
-* [Pratersauna Digital LAB](https://vimeo.com/psdl)
-* [Resonate.io Festival](http://resonate.io/)
-* [Victoria and Albert Museum](http://www.vam.ac.uk/)
-
-----------------
 
 design philosophy
 --------
@@ -205,3 +154,55 @@ We don't really expect that openFrameworks should be used as a teaching tool for
 [13]: http://cprogramming.com/
 [14]: http://yosefk.com/C++fqa/
 [15]: http://www.cppreference.com/wiki/
+
+
+----------------
+contributors and supporters
+----------------
+
+openFrameworks is actively developed by a <a href="../development/#contributors">small core team</a> of developers in conjunction with a large distributed collection of contributors, with a few <a href="../development/#contributors">section leaders</a> maintaining responsibility for subsections of openFrameworks on a rotating basis.
+
+A number of institutions have provided major support for openFrameworks through grants, donations, and as hosting partners for our international developer conferences. These events often require significant resources to bring together participants from many countries to a single location for multiple days.
+
+<span class="sponsors">
+  <a href="http://amt.parsons.edu"><img alt="sponsor_logo" src="logo-parsons.png" style="display: block; height: 58px;padding-bottom: 3px;"></a>
+  <a href="http://www.ycam.jp/en/"><img alt="sponsor_logo" src="logo-ycam.png" style="display: block; height: 69px; /* padding-bottom: 8px; */"></a>
+  <a href="http://eyebeam.org/"><img alt="sponsor_logo" src="logo-eyebeam.png" style="display: block; height: 30px; padding-bottom: 18px;"></a>
+  <a href="http://studioforcreativeinquiry.org/"><img alt="sponsor_logo" src="logo-sfci.png" style="display: block; height: 69px;"></a>
+  <a href="http://www.aec.at/"><img alt="sponsor_logo" src="logo-ars.png" style="display: block; height: 41px; padding-bottom: 14px;"></a>
+  <a href="http://www.fordfoundation.org/"><img alt="sponsor_logo" src="logo-fordfoundation.png" style="display: block; height: 42px; padding-bottom: 13px;"></a>
+</span>
+
+
+**[Ars Electronica Festival and Futurelab](http://www.aec.at/)**
+
+We would like to thank the [Ars Electronica Festival and Futurelab](http://www.aec.at/) for sponsoring the OF Lab at Ars Electronica 2008.
+
+**[Eyebeam](http://eyebeam.org/)**
+
+**[Ford Foundation](http://www.fordfoundation.org/)**
+
+We would like to thank the [Ford Foundation](http://www.fordfoundation.org/) for sponsoring the second openFrameworks developers conference.
+
+**[Parsons the New School for Design](http://amt.parsons.edu)**
+
+**[Frank-Ratchye STUDIO for Creative Inquiry](http://studioforcreativeinquiry.org/)**
+
+We would like to thank the [Frank-Ratchye STUDIO for Creative Inquiry](http://studioforcreativeinquiry.org/) for hosting the first openFrameworks developers conference, and providing other small grants and support to openFrameworks developers.
+
+**[Yamaguchi Center for Arts and Media](http://www.ycam.jp/en/)**
+
+We would like to thank [YCAM](http://www.ycam.jp/en/) for their ongoing support for OF. In 2008 YCAM hosted the first [OF workshop](http://wiki.openframeworks.cc/index.php?title=OfYcam) in Asia, and have since hosted many OF-related events such as: the [LabACT series](http://interlab.ycam.jp/en/projects/labact/eye-tracking-study) exploring uses of the EyeWriter, the first two [Guest Research Projects](http://interlab.ycam.jp/en/projects/guestresearch) which featured OF developers working on open source arts engineering tools like [ofxTimeline](http://interlab.ycam.jp/en/projects/guestresearch/vol2) and [mapamok](http://interlab.ycam.jp/en/projects/guestresearch/vol1), and most recently YCAM has hosted the [third openFrameworks developers conference](http://interlab.ycam.jp/en/projects/of-devcon2013).
+
+We are proud to acknowledge institutions and organizations which have hosted multi-day educational workshops and "OF Lab" events (see [the wiki](http://wiki.openframeworks.cc/index.php?title=Education) for a more complete list): 
+
+* [Art && Code Festival](http://artandcode.com/)
+* [Eyeo festival](http://eyeofestival.com/)
+* [Fabrica: The Benetton Group Communications Research Center](http://www.fabrica.it/)
+* [Graphic Design Festival Breda](http://www.graphicdesignfestival.nl/en/)
+* [iMAL Center for for Digital Cultures and Technology](http://www.imal.org/)
+* [MediaLab Prado](http://medialab-prado.es/)
+* [New York University Interactive Telecommunication Program](http://itp.nyu.edu/itp/) (ITP)
+* [Pratersauna Digital LAB](https://vimeo.com/psdl)
+* [Resonate.io Festival](http://resonate.io/)
+* [Victoria and Albert Museum](http://www.vam.ac.uk/)
