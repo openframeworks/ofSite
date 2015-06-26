@@ -57,7 +57,7 @@ _inlined_description: _
 _description: _
 
 
-Closes the sequence grabber and de-allocates any allocated resources. Call this only when you want to stop the video grabber finally.
+Closes the sequence grabber and de-allocates any allocated resources. Call this only when you want to stop the video grabber finally. See also initGrabber()
 
 
 
