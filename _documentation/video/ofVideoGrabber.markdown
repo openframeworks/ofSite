@@ -17,7 +17,7 @@ _istemplated: False_
 ##Description
 
 The ofVideoGrabber class wraps quicktime's sequence grabbing component to provide low level access to live cameras. On Microsoft Windows it now uses the directshow based videoInput library which offers mainy performance advantages over quicktime and does not require quicktime or WinVDig to be installed. A #define in ofConstants.h allows you to choose whether to use quicktime or directshow (default) for Microsoft Windows.
-In linux it uses by default unicap, although you can change to v4l through a #define in ofConstants in case some v4l devices don't work properly with unicap.
+In Linux it uses by default unicap, although you can change to v4l through a #define in ofConstants in case some v4l devices don't work properly with unicap.
 
 
 
@@ -972,7 +972,7 @@ _inlined_description: _
 _description: _
 
 
-Some video grabbers allow you to adjust the pixel format, which might help for optimization.  At the moment, this seems to only apply to the linux video grabber (GST).  For all other grabbers, the only format accepted is OF_PIXELS_RGB
+Some video grabbers allow you to adjust the pixel format, which might help for optimization.  At the moment, this seems to only apply to the Linux video grabber (GST).  For all other grabbers, the only format accepted is OF_PIXELS_RGB
 
 
 
