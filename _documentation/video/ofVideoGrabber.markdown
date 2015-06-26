@@ -177,7 +177,7 @@ _inlined_description: _
 _description: _
 
 
-getGrabber returns a pointer (ofPtr) to the internally running video grabber.  Since the ofVideoGrabber object has different potential systems for grabbing (QuickTime, qtkit, DirectShow), this ptr gives you access to the underlying video grabber that's running inside of ofVideoGrabber.  Note: use this only if you need low level access to an internal grabbing object, such as to call a specific function.   
+getGrabber returns a pointer (ofPtr) to the internally running video grabber.  Since the ofVideoGrabber object has different potential systems for grabbing (QuickTime, QTKit, DirectShow), this ptr gives you access to the underlying video grabber that's running inside of ofVideoGrabber.  Note: use this only if you need low level access to an internal grabbing object, such as to call a specific function.   
 
 
 
@@ -1144,7 +1144,7 @@ _inlined_description: _
 _description: _
 
 
-Loads the video settings on screen. If your opengl application is full screen, this window might appear underneath the main window the first time you call this.   Note: in qtKit grabbers (10.7+), this video settings panel is not available.
+Loads the video settings on screen. If your opengl application is full screen, this window might appear underneath the main window the first time you call this.   Note: in QTKit grabbers (10.7+), this video settings panel is not available.
 
 
 
