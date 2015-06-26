@@ -16,7 +16,7 @@ _istemplated: False_
 
 ##Description
 
-The ofVideoGrabber class wraps QuickTime's sequence grabbing component to provide low level access to live cameras. On Microsoft Windows it now uses the directshow based videoInput library which offers mainy performance advantages over QuickTime and does not require QuickTime or WinVDig to be installed. A #define in ofConstants.h allows you to choose whether to use QuickTime or directshow (default) for Microsoft Windows.
+The ofVideoGrabber class wraps QuickTime's sequence grabbing component to provide low level access to live cameras. On Microsoft Windows it now uses the DirectShow based videoInput library which offers mainy performance advantages over QuickTime and does not require QuickTime or WinVDig to be installed. A #define in ofConstants.h allows you to choose whether to use QuickTime or DirectShow (default) for Microsoft Windows.
 In Linux it uses by default unicap, although you can change to v4l through a #define in ofConstants in case some v4l devices don't work properly with unicap.
 
 
@@ -177,7 +177,7 @@ _inlined_description: _
 _description: _
 
 
-getGrabber returns a pointer (ofPtr) to the internally running video grabber.  Since the ofVideoGrabber object has different potential systems for grabbing (QuickTime, qtkit, directshow), this ptr gives you access to the underlying video grabber that's running inside of ofVideoGrabber.  Note: use this only if you need low level access to an internal grabbing object, such as to call a specific function.   
+getGrabber returns a pointer (ofPtr) to the internally running video grabber.  Since the ofVideoGrabber object has different potential systems for grabbing (QuickTime, qtkit, DirectShow), this ptr gives you access to the underlying video grabber that's running inside of ofVideoGrabber.  Note: use this only if you need low level access to an internal grabbing object, such as to call a specific function.   
 
 
 
