@@ -17,7 +17,7 @@ _istemplated: False_
 ##Description
 
 The ofVideoGrabber class wraps QuickTime's sequence grabbing component to provide low level access to live cameras. On Microsoft Windows it now uses the DirectShow based videoInput library which offers mainy performance advantages over QuickTime and does not require QuickTime or WinVDig to be installed. A #define in ofConstants.h allows you to choose whether to use QuickTime or DirectShow (default) for Microsoft Windows.
-In Linux it uses by default unicap, although you can change to v4l through a #define in ofConstants in case some v4l devices don't work properly with unicap.
+In Linux it uses by default unicap, although you can change to V4L through a #define in ofConstants in case some V4L devices don't work properly with unicap.
 
 
 
