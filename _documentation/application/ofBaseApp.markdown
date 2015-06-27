@@ -16,7 +16,7 @@ _istemplated: False_
 
 ##Description
 
-The openframeworks engine is contained in the "app" category. The project works, similar to processing, in that you have a base class which extends a class that already exists. In the case of OF, there is a class called "ofBaseApp" which contains various event driven functions. When you create an OF project, you use a main.cpp which is the boot-strap, that kicks off the application and another class, which inherits the properties of ofBaseApp. Essentially, when you write code in the testApp, you are re-writing already defined functions that exist in OF, such as update, draw, etc.
+The openFrameworks engine is contained in the "app" category. The project works, similar to processing, in that you have a base class which extends a class that already exists. In the case of OF, there is a class called "ofBaseApp" which contains various event driven functions. When you create an OF project, you use a main.cpp which is the boot-strap, that kicks off the application and another class, which inherits the properties of ofBaseApp. Essentially, when you write code in the testApp, you are re-writing already defined functions that exist in OF, such as update, draw, etc.
 
 In versions pre 0.06 this class was called ofSimpleApp
 
@@ -870,7 +870,7 @@ _inlined_description: _
 _description: _
 
 
-The openframeworks engine is contained in the "app" category. The project works, similar to processing, in that you have a base class which extends a class that already exists. In the case of OF, there is a class called "ofBaseApp" which contains various event driven functions. When you create an OF project, you use a main.cpp which is the boot-strap, that kicks off the application and another class, which inherits the properties of ofSimpleApp. Essentially, when you write code in the ofApp, you are re-writing already defined functions that exist in OF, such as update, draw, etc.
+The openFrameworks engine is contained in the "app" category. The project works, similar to processing, in that you have a base class which extends a class that already exists. In the case of OF, there is a class called "ofBaseApp" which contains various event driven functions. When you create an OF project, you use a main.cpp which is the boot-strap, that kicks off the application and another class, which inherits the properties of ofSimpleApp. Essentially, when you write code in the ofApp, you are re-writing already defined functions that exist in OF, such as update, draw, etc.
 
 
 
