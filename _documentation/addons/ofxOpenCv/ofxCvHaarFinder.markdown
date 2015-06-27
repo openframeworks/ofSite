@@ -33,7 +33,7 @@ app::update() {
 
 app::draw() {
   for(int i = 0; i < haarFinder.blobs.size(); i++) {
-     ofRect( haarFinder.blobs[i].boundingRect );
+     ofDrawRectangle( haarFinder.blobs[i].boundingRect );
   }
 }
 
