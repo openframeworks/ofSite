@@ -377,7 +377,7 @@ _inlined_description: _
 _description: _
 
 
-This returns the texture reference that the ofVideoGrabber contains. You can use this to directly manipulate the texture itself. For example, you could bind the texture yourself and draw it using lower level opengl commands.
+This returns the texture reference that the ofVideoGrabber contains. You can use this to directly manipulate the texture itself. For example, you could bind the texture yourself and draw it using lower level OpenGL commands.
 
 
 
@@ -1144,7 +1144,7 @@ _inlined_description: _
 _description: _
 
 
-Loads the video settings on screen. If your opengl application is full screen, this window might appear underneath the main window the first time you call this. Note: in QTKit grabbers (10.7+), this video settings panel is not available.
+Loads the video settings on screen. If your OpenGL application is full screen, this window might appear underneath the main window the first time you call this. Note: in QTKit grabbers (10.7+), this video settings panel is not available.
 
 
 
