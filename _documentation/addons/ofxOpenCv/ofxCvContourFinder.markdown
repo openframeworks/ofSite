@@ -69,7 +69,7 @@ void ofApp::update(){
     vidGrabber.update();
     //do we have a new frame?
     if (vidGrabber.isFrameNew()){
-        colorImg.setFromPixels(vidGrabber.getPixelsRef());
+        colorImg.setFromPixels(vidGrabber.getPixels());
         grayImage = colorImg; // convert our color image to a grayscale image
         if (bLearnBackground == true) {
             grayBg = grayImage; // update the background image
