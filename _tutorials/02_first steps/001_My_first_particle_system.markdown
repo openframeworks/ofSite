@@ -51,7 +51,7 @@ Let's use some of this new stuff we just learned about:
 ~~~~
 So, now when you resize the window this little blue world remains centered. Congratulations!!
 
-Now let's take a look at the "Graphics" section on  [www.openframeworks.cc/documentation/](http://www.openframeworks.cc/documentation/) . There you will find lots of other methods like `ofLine()`, `ofRect()` that are related to drawing.
+Now let's take a look at the "Graphics" section on  [www.openframeworks.cc/documentation/](http://www.openframeworks.cc/documentation/) . There you will find lots of other methods like `ofLine()`, `ofDrawRectangle()` that are related to drawing.
 
 In the documentation of openFrameworks you will notice that all the functions and classes have a consistent way of working. The more you try things and play with them sooner you will get this "oF style" and things will become pretty intuitive.
 
@@ -75,7 +75,7 @@ Two variables available to every openFrameworks application are `mouseX` and `mo
 	}
 ~~~~
 
-If you try to do the same with a rectangle ( `ofRect(mouseX,mouseY, 30, 30);`) you will notice that the center of the rectangle it just don't fit with the mouse position. This is because by default, rectangles are draw from the top left corner.
+If you try to do the same with a rectangle ( `ofDrawRectangle(mouseX,mouseY, 30, 30);`) you will notice that the center of the rectangle it just don't fit with the mouse position. This is because by default, rectangles are draw from the top left corner.
 Fortunately we have options and can use `ofSetRectMode(OF_RECTMODE_CENTER);` to set the anchor point to the center of the shape.
 Probably every time you see something that starts with "OF_" and in all-caps it means that you are dealing with modes and pre-defined types. Feeling adventerous, explore using the auto-completion list of your IDE or options like  "Jump to definition".
 

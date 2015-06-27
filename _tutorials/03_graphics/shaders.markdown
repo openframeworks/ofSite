@@ -137,7 +137,7 @@ void ofApp::setup(){
 void ofApp::draw(){
     ofSetColor(255);
     shader.begin();
-    ofRect(0, 0, ofGetWidth(), ofGetHeight());
+    ofDrawRectangle(0, 0, ofGetWidth(), ofGetHeight());
     shader.end();
 }
 
@@ -611,7 +611,7 @@ Using multiple textures in a shader isn't hard at all, you just need to make sur
 void ofApp::draw(){
 
     // draw a white rectangle for background.
-    ofRect(0, 0, image.getWidth(), image.getHeight());
+    ofDrawRectangle(0, 0, image.getWidth(), image.getHeight());
 
     shader.begin();
     shader.setUniformTexture("imageMask", imageMask.getTextureReference(), 1);
