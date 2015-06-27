@@ -221,7 +221,7 @@ _inlined_description: _
 _description: _
 
 
-Add this function to your ofApp to have it called at the moment before the app is terminated. This is useful for doing cleanup stuff or making sure files are saved before the app terminates.
+Add this function to your ofApp to have it called at the moment before the app is terminated. This is useful for doing cleanup stuff or making sure files are saved before the app terminates. If you want to terminate the execution of your ofApp (from the inside), call ofExit().
 
 
 
