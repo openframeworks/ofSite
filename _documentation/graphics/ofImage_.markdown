@@ -71,8 +71,8 @@ This allocates space in the ofImage, both the ofPixels and the ofTexture that th
 ~~~~{.cpp}
 img.allocate(640, 480, OF_IMAGE_COLOR);
 int i = 0;
-while ( i < img.getPixelsRef().size() ) {
-    img.getPixelsRef()[i] = abs(sin( float(i) / 18.f)) * 255.f; // make some op-art
+while ( i < img.getPixels().size() ) {
+    img.getPixels()[i] = abs(sin( float(i) / 18.f)) * 255.f; // make some op-art
     i++;
 }
 img.reloadTexture();
@@ -173,8 +173,8 @@ This binds the ofTexture instance that the ofImage contains so that it can be us
 void ofApp::setup() {
     img.allocate(256, 256, OF_IMAGE_COLOR);
     int i = 0;
-    while ( i < img.getPixelsRef().size() ) {
-        img.getPixelsRef()[i] = abs(sin( float(i) / 18.f )) * 255.f;
+    while ( i < img.getPixels().size() ) {
+        img.getPixels()[i] = abs(sin( float(i) / 18.f )) * 255.f;
         i++;
     }
     img.reloadTexture();
