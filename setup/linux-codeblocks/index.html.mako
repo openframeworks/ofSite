@@ -19,7 +19,7 @@ __Ubuntu:__
 
 - in the terminal go to the directory where your openFrameworks package is.
 
-- ie. if your user name is ofuser and you have uncompressed the oF package in the desktop it should be something like:
+- i.e. if your user name is ofuser and you have uncompressed the oF package in the desktop it should be something like:
 
         cd /home/ofuser/Desktop/of_preRelease_v0.8.0_linux_cb_FAT/scripts/linux/ubuntu
 
