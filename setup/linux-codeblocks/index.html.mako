@@ -76,7 +76,7 @@ __Fedora:__
         ./install_codecs.sh
 
 
-compiling OF
+compiling oF
 ------------
 
 The source of openFrameworks comes uncompiled by default. It will compile automatically the first time you compile an example but it's recomended to compile it alone in case you get any error:
@@ -99,7 +99,7 @@ If you get any error please report it in the Linux section in the [forum](http:/
 project generator
 -----------------
 
-The project generator is a tool to make it easier to create new projects, to compile it from the same terminal you have been using and in the same directory you compiled OF from just do:
+The project generator is a tool to make it easier to create new projects, to compile it from the same terminal you have been using and in the same directory you compiled oF from just do:
 
         ./compilePG.sh
         
