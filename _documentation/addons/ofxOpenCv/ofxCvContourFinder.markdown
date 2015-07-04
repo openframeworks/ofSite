@@ -69,7 +69,7 @@ void ofApp::update(){
     vidGrabber.update();
     //do we have a new frame?
     if (vidGrabber.isFrameNew()){
-        colorImg.setFromPixels(vidGrabber.getPixelsRef());
+        colorImg.setFromPixels(vidGrabber.getPixels());
         grayImage = colorImg; // convert our color image to a grayscale image
         if (bLearnBackground == true) {
             grayBg = grayImage; // update the background image
@@ -316,7 +316,7 @@ Draws the detected contours into the ofRectangle passed in scaling if necessary.
 _syntax: findContours(&input, minArea, maxArea, nConsidered, bFindHoles, bUseApproximation = true)_
 _name: findContours_
 _returns: int_
-_returns_description: _
+_returns_description: number of blobs found
 _parameters: ofxCvGrayscaleImage &input, int minArea, int maxArea, int nConsidered, bool bFindHoles, bool bUseApproximation=true_
 _access: public_
 _version_started: 007_
@@ -339,6 +339,8 @@ _inlined_description: _
 
 _description: _
 
+
+This function tries to find distinct regions (blobs) in the given ofxCvGrayscaleImage. It returns the number of blobs found.
 
 input
 

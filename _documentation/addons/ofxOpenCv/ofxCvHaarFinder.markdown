@@ -125,7 +125,7 @@ Takes an input ofImage object and allows you to set the minimum width and height
 camera.grabFrame();
 if(camera.isFrameNew())
 {
-	img.setFromPixels(grab.getPixelsRef());
+	img.setFromPixels(grab.getPixels());
 	finder.findHaarObjects(img);
 }
 ~~~~
@@ -211,7 +211,7 @@ _description: _
 Takes an input ofxCvGrayscaleImage object and allows you to set the minimum width and height of areas that should be returned and a region of interest as an ofRectangle that you would like to limit haar finding to.
 
 ~~~~{.cpp}
-colorImg.setFromPixels(vidGrabber.getPixelsRef());
+colorImg.setFromPixels(vidGrabber.getPixels());
 grayImage = colorImg; // convert our color image to a grayscale image
 
 faceFinder.findHaarObjects(grayImage);

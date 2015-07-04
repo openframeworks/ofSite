@@ -16,8 +16,8 @@ _istemplated: False_
 
 ##Description
 
-The ofVideoGrabber class wraps quicktime's sequence grabbing component to provide low level access to live cameras. On windows it now uses the directshow based videoInput library which offers mainy performance advantages over quicktime and does not require quicktime or WinVDig to be installed. A #define in ofConstants.h allows you to choose whether to use quicktime or directshow (default) for windows.
-In linux it uses by default unicap, although you can change to v4l through a #define in ofConstants in case some v4l devices don't work properly with unicap.
+The ofVideoGrabber class wraps QuickTime's sequence grabbing component to provide low level access to live cameras. On Microsoft Windows it now uses the DirectShow based videoInput library which offers mainy performance advantages over QuickTime and does not require QuickTime or WinVDig to be installed. A #define in ofConstants.h allows you to choose whether to use QuickTime or DirectShow (default) for Microsoft Windows.
+In Linux it uses by default unicap, although you can change to V4L through a #define in ofConstants in case some V4L devices don't work properly with unicap.
 
 
 
@@ -57,7 +57,7 @@ _inlined_description: _
 _description: _
 
 
-Closes the sequence grabber and de-allocates any allocated resources. Call this only when you want to stop the video grabber finally.
+Closes the sequence grabber and de-allocates any allocated resources. Call this only when you want to stop the video grabber finally. See also initGrabber()
 
 
 
@@ -97,7 +97,7 @@ _inlined_description: _
 _description: _
 
 
-Draws the internal texture of the movie grabber class at the position (x,y) with the given width (w) and height (h).   As the video grabber operates, it grabs pixel data and uploads it to it's internal texture (ie, on the GPU), unless you call setUseTexture(false), which disables the texture uploading.  This draws that internal texture on screen. 
+Draws the internal texture of the movie grabber class at the position (x,y) with the given width (w) and height (h). As the video grabber operates, it grabs pixel data and uploads it to it's internal texture (ie, on the GPU), unless you call setUseTexture(false), which disables the texture uploading. This draws that internal texture on screen.
 
 
 
@@ -137,7 +137,7 @@ _inlined_description: _
 _description: _
 
 
-Draws the internal texture of the movie grabber class at the position (x,y) with the internal width and height of the movie grabber.   It uses the native size of the grabber, so if you initialize the grabber at 320 x 240, it will draw a rectangle at x,y with a width and height of 320 x 240.  Please note, ofSetRectMode() can have an effect on if the x,y is the top left corner or center point. 
+Draws the internal texture of the movie grabber class at the position (x,y) with the internal width and height of the movie grabber. It uses the native size of the grabber, so if you initialize the grabber at 320 x 240, it will draw a rectangle at x,y with a width and height of 320 x 240. Please note, ofSetRectMode() can have an effect on if the x,y is the top left corner or center point.
 
 
 
@@ -177,7 +177,7 @@ _inlined_description: _
 _description: _
 
 
-getGrabber returns a pointer (ofPtr) to the internally running video grabber.  Since the ofVideoGrabber object has different potential systems for grabbing (quicktime, qtkit, directshow), this ptr gives you access to the underlying video grabber that's running inside of ofVideoGrabber.  Note: use this only if you need low level access to an internal grabbing object, such as to call a specific function.   
+getGrabber returns a pointer (ofPtr) to the internally running video grabber. Since the ofVideoGrabber object has different potential systems for grabbing (QuickTime, QTKit, DirectShow), this ptr gives you access to the underlying video grabber that's running inside of ofVideoGrabber. Note: use this only if you need low level access to an internal grabbing object, such as to call a specific function.
 
 
 
@@ -217,7 +217,7 @@ _inlined_description: _
 _description: _
 
 
-Returns the height of the video grabber object.  If you initialize the object at 320x240, it will return 240;
+Returns the height of the video grabber object. If you initialize the object at 320x240, it will return 240;
 
 
 
@@ -257,7 +257,7 @@ _inlined_description: _
 _description: _
 
 
-Returns the height of the video grabber object.  If you initialize the object at 320x240, it will return 240;
+Returns the height of the video grabber object. If you initialize the object at 320x240, it will return 240;
 
 
 
@@ -297,7 +297,7 @@ _inlined_description: _
 _description: _
 
 
-Returns the pointer to the array of pixels that represents the current frame of live video. the data is stored interleaved as RGB, and in an array which is the size: width*height*3.  This function returns a pointer to an unsigned char array -- it's up to the user to deal with this memory correctly.  Functions like getWidth() and getHeight() can help.
+Returns the pointer to the array of pixels that represents the current frame of live video. the data is stored interleaved as RGB, and in an array which is the size: width*height*3. This function returns a pointer to an unsigned char array -- it's up to the user to deal with this memory correctly. Functions like getWidth() and getHeight() can help.
 
 
 
@@ -377,7 +377,7 @@ _inlined_description: _
 _description: _
 
 
-This returns the texture reference that the ofVideoGrabber contains. You can use this to directly manipulate the texture itself.  For example, you could bind the texture yourself and draw it using lower level opengl commands. 
+This returns the texture reference that the ofVideoGrabber contains. You can use this to directly manipulate the texture itself. For example, you could bind the texture yourself and draw it using lower level OpenGL commands.
 
 
 
@@ -417,7 +417,7 @@ _inlined_description: _
 _description: _
 
 
-Returns the width of the video grabber object.  If you initialize the object at 320x240, it will return 320.
+Returns the width of the video grabber object. If you initialize the object at 320x240, it will return 320.
 
 
 
@@ -612,7 +612,7 @@ _inlined_description: _
 _description: _
 
 
-Returns a boolean if the video grabber is properly initialized. 
+Returns a boolean if the video grabber is properly initialized.
 
 
 
@@ -652,7 +652,7 @@ _inlined_description: _
 _description: _
 
 
-Prints to the console a list of available capture devices with the device ID of each device. The device ID can then be used with setDeviceID() to specify a specific device to capture from.  This is especially useful if you have multiple devices, or want to see what kind of cameras openframeworks sees. 
+Prints to the console a list of available capture devices with the device ID of each device. The device ID can then be used with setDeviceID() to specify a specific device to capture from.  This is especially useful if you have multiple devices, or want to see what kind of cameras openframeworks sees.
 
 
 
@@ -692,7 +692,7 @@ _inlined_description: _
 _description: _
 
 
-Initializes the video grabber.  This function doesn't really do any real allocation, which happens in ofVideoGrabber::initGrabber().  In openframeworks we typically use empty constructors so that objects can be defined in h files, ie, you don't need to do dynamic allocation or use pointers as much in your code. 
+Initializes the video grabber. This function doesn't really do any real allocation, which happens in ofVideoGrabber::initGrabber(). In openframeworks we typically use empty constructors so that objects can be defined in h files, ie, you don't need to do dynamic allocation or use pointers as much in your code.
 
 
 
@@ -772,7 +772,7 @@ _inlined_description: _
 _description: _
 
 
-Adjusts ofVideoGrabbers anchor for more drawing control.  see ofImage::setAnchorPercent() for info. 
+Adjusts ofVideoGrabbers anchor for more drawing control. See ofImage::setAnchorPercent() for info.
 
 
 
@@ -812,7 +812,7 @@ _inlined_description: _
 _description: _
 
 
-Adjusts ofVideoGrabbers anchor for more drawing control.  see ofImage::setAnchorPoint(x,y) for info. 
+Adjusts ofVideoGrabbers anchor for more drawing control. See ofImage::setAnchorPoint(x,y) for info.
 
 
 
@@ -852,7 +852,7 @@ _inlined_description: _
 _description: _
 
 
-Set's the desired frame rate of the grabber.  This should be called before initGrabber(), which will try to initialize at the desired frame rate.  Not all frame rates will be supported, but this at least gives you some abilitity to try grab at different rates. 
+Set's the desired frame rate of the grabber. This should be called before initGrabber(), which will try to initialize at the desired frame rate. Not all frame rates will be supported, but this at least gives you some abilitity to try grab at different rates.
 
 
 
@@ -892,7 +892,7 @@ _inlined_description: _
 _description: _
 
 
-Choose to capture from a specific capture device specified by _deviceID. Use listDevices() to see a list of available capture devices and their device IDs.   This should be called before initGrabber(), which will use this info to choose the device you want. 
+Choose to capture from a specific capture device specified by _deviceID. Use listDevices() to see a list of available capture devices and their device IDs. This should be called before initGrabber(), which will use this info to choose the device you want.
 
 
 
@@ -932,7 +932,7 @@ _inlined_description: _
 _description: _
 
 
-This function, similar to getGrabber, allows for low level access to the internal grabber object.  This is useful if you want to adjust the internal grabber that ofVideoGrabber is using.
+This function, similar to getGrabber, allows for low level access to the internal grabber object. This is useful if you want to adjust the internal grabber that ofVideoGrabber is using.
 
 
 
@@ -972,7 +972,7 @@ _inlined_description: _
 _description: _
 
 
-Some video grabbers allow you to adjust the pixel format, which might help for optimization.  At the moment, this seems to only apply to the linux video grabber (GST).  For all other grabbers, the only format accepted is OF_PIXELS_RGB
+Some video grabbers allow you to adjust the pixel format, which might help for optimization. At the moment, this seems to only apply to the Linux video grabber (GST). For all other grabbers, the only format accepted is OF_PIXELS_RGB.
 
 
 
@@ -1144,7 +1144,7 @@ _inlined_description: _
 _description: _
 
 
-Loads the video settings on screen. If your opengl application is full screen, this window might appear underneath the main window the first time you call this.   Note: in qtKit grabbers (10.7+), this video settings panel is not available.
+Loads the video settings on screen. If your OpenGL application is full screen, this window might appear underneath the main window the first time you call this. Note: in QTKit grabbers (10.7+), this video settings panel is not available.
 
 
 

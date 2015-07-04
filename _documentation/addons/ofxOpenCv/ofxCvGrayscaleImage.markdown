@@ -25,7 +25,7 @@ grayscaleImg = colorImg;
 A common routine that you'll see is something like the following:
 
 ~~~~{.cpp}
-colorImg.setFromPixels(vidGrabber.getPixelsRef());
+colorImg.setFromPixels(vidGrabber.getPixels());
 grayImage = colorImg; // convert our color image to a grayscale image
 ~~~~
 
@@ -334,7 +334,7 @@ Maps the pixels of an image to the min and max range passed in.
 
 ~~~~{.cpp}
 
-colors.setFromPixels(grabber.getPixelsRef());
+colors.setFromPixels(grabber.getPixels());
 
 first = colors; // will leave unaltered
 second = colors; // change it

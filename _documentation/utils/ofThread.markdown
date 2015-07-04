@@ -59,7 +59,7 @@ class MyThread : public ofThread {
 			if(cam.isFrameNew()) {
 		
 				// load the image
-				image.setFromPixels(cam.getPixelsRef());
+				image.setFromPixels(cam.getPixels());
 			}
 		}
 	
@@ -128,7 +128,7 @@ class MyThread : public ofThread {
 				lock();
 				
 				// load the image
-				image.setFromPixels(cam.getPixelsRef());	
+				image.setFromPixels(cam.getPixels());	
 				// done with the resource
 				unlock();
 			}	
