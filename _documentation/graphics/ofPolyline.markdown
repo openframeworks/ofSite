@@ -178,7 +178,7 @@ verts.push_back(ofPoint(-X2, Y2));
 verts.push_back(ofPoint(X2, Y2));
 verts.push_back(ofPoint(X1, -Y1));
 ofPolyline p;
-p.addVertexes(verts);
+p.addVertices(verts);
 ~~~~
 
 
@@ -234,7 +234,7 @@ verts[2] = ofPoint(-X2, Y2);
 verts[3] = ofPoint(X2, Y2);
 verts[4] = ofPoint(X1, -Y1);
 ofPolyline p;
-p.addVertexes(verts, 5);
+p.addVertices(verts, 5);
 ~~~~
 
 
@@ -325,7 +325,7 @@ The ``angleBegin`` and ``angleEnd`` indicate the start and end angles of the arc
 Optionally, you can specify ``circleResolution``, which is the number of line segments a circle would be drawn with.
 A partial arc will be drawn with the same resolution: if circleResolution == 20, a half-circle will be drawn with 10 segments.
 	
-If there are already vertexes in the ofPolyline the arc will extend them;
+If there are already vertices in the ofPolyline the arc will extend them;
 a line will be created from the endmost point on the ofPolyline to the beginning point of the arc.
 
 Example:
