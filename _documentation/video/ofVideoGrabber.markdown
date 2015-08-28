@@ -565,8 +565,8 @@ This function can be called after calling ofImage::update() (or alternatively, o
 
 void testApp::update(){
 
-	grabber.update();  // call this once per update
-	if (grabber.isFrameNew()){
+	myGrabber.update();  // call this once per update
+	if (myGrabber.isFrameNew()){
 		; // do computer vision / process the pixels
 	}
 
