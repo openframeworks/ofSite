@@ -59,6 +59,62 @@ _description: _
 
 Closes the sequence grabber and de-allocates any allocated resources. Call this only when you want to stop the video grabber finally. See also initGrabber()
 
+~~~~{.cpp}
+void ofApp::keyPressed(int key){
+	if(key == 'c' || key == 'C'){
+		vidGrabber.close();
+	}
+}
+
+~~~~
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void draw(x, y)
+
+<!--
+_syntax: draw(x, y)_
+_name: draw_
+_returns: void_
+_returns_description: _
+_parameters: float x, float y_
+_access: public_
+_version_started: 006_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+Draws the internal texture of the movie grabber class at the position (x,y) with the internal width and height of the movie grabber. It uses the native size of the grabber, so if you initialize the grabber at 320 x 240, it will draw a rectangle at x,y with a width and height of 320 x 240. Please note, ofSetRectMode() can have an effect on if the x,y is the top left corner or center point.
+~~~~{.cpp}
+
+void ofApp::draw(){
+	// Draw with top left corner at 20, 20
+	vidGrabber.draw(20, 20);
+}
+
+~~~~
+
 
 
 
@@ -99,51 +155,14 @@ _description: _
 
 Draws the internal texture of the movie grabber class at the position (x,y) with the given width (w) and height (h). As the video grabber operates, it grabs pixel data and uploads it to it's internal texture (ie, on the GPU), unless you call setUseTexture(false), which disables the texture uploading. This draws that internal texture on screen.
 
+~~~~{.cpp}
 
+void ofApp::draw(){
+	// Draw frame 10 pixels wide and 100 pixels tall at point 20, 20
+	vidGrabber.draw(20, 200, 10, 100);
+}
 
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void draw(x, y)
-
-<!--
-_syntax: draw(x, y)_
-_name: draw_
-_returns: void_
-_returns_description: _
-_parameters: float x, float y_
-_access: public_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Draws the internal texture of the movie grabber class at the position (x,y) with the internal width and height of the movie grabber. It uses the native size of the grabber, so if you initialize the grabber at 320 x 240, it will draw a rectangle at x,y with a width and height of 320 x 240. Please note, ofSetRectMode() can have an effect on if the x,y is the top left corner or center point.
-
-
-
-
-
-
+~~~~
 
 <!----------------------------------------------------------------------------->
 
@@ -219,6 +238,11 @@ _description: _
 
 Returns the height of the video grabber object. If you initialize the object at 320x240, it will return 240;
 
+~~~~{.cpp}
+
+ofLogNotice() << "Video height: " << vidGrabber.getHeight();
+
+~~~~
 
 
 
@@ -257,8 +281,14 @@ _inlined_description: _
 _description: _
 
 
-Returns the height of the video grabber object. If you initialize the object at 320x240, it will return 240;
+Returns the current pixelformat for this videoGrabber. Current possible values are:
+OF_PIXELS_RGBA, OF_PIXELS_RGB and OF_PIXELS_MONO. See also setPixelFormat().
 
+~~~~{.cpp}
+
+ofLogNotice() << "pixelformat: " << vidGrabber.getPixelFormat();
+
+~~~~
 
 
 
@@ -418,6 +448,11 @@ _description: _
 
 
 Returns the width of the video grabber object. If you initialize the object at 320x240, it will return 320.
+~~~~{.cpp}
+
+ofLogNotice() << "Video width: " << vidGrabber.getWidth();
+
+~~~~
 
 
 
@@ -510,8 +545,9 @@ _description: _
 
 
 Initializes either the default capture device or the capture device specified by setDeviceID. Attempts to setup capture at the width and height specified. If the capture dimensions are not available it will setup capture for the next closest dimensions available. It is good to check what the actual size is before you start processing the pixels.
-~~~~{.cpp}
 
+
+~~~~{.cpp}
 void ofApp::setup(){
 
 	myGrabber.setVerbose(true);
@@ -618,7 +654,11 @@ _description: _
 
 
 Returns a boolean if the video grabber is properly initialized.
-
+~~~~{.cpp}
+    if(vidGrabber.isInitialized()){
+        ; // Do something camera related
+    }
+~~~~
 
 
 
@@ -658,7 +698,30 @@ _description: _
 
 
 Prints to the console a list of available capture devices with the device ID of each device. The device ID can then be used with setDeviceID() to specify a specific device to capture from.  This is especially useful if you have multiple devices, or want to see what kind of cameras openframeworks sees.
+~~~~{.cpp}
 
+void ofApp::setup(){
+    camWidth = 320;  // try to grab at this size.
+    camHeight = 240;
+
+    //Get a list of devices
+    vector<ofVideoDevice> devices = vidGrabber.listDevices();
+
+    for(int i = 0; i < devices.size(); i++){
+        if(devices[i].bAvailable){
+            ofLogNotice() << devices[i].id << ": " << devices[i].deviceName;
+        }else{
+            ofLogNotice() << devices[i].id << ": " << devices[i].deviceName << " - unavailable ";
+        }
+    }
+
+    vidGrabber.setDeviceID(0); // Insert the ID of the device you want to use
+    vidGrabber.setDesiredFrameRate(60);
+    vidGrabber.initGrabber(camWidth, camHeight);
+
+}
+
+~~~~
 
 
 
@@ -859,6 +922,16 @@ _description: _
 
 Set's the desired frame rate of the grabber. This should be called before initGrabber(), which will try to initialize at the desired frame rate. Not all frame rates will be supported, but this at least gives you some abilitity to try grab at different rates.
 
+~~~~{.cpp}
+
+void ofApp::setup(){
+
+    vidGrabber.setDesiredFrameRate(60);
+    vidGrabber.initGrabber(320, 240);
+
+}
+
+~~~~
 
 
 
@@ -898,6 +971,31 @@ _description: _
 
 
 Choose to capture from a specific capture device specified by _deviceID. Use listDevices() to see a list of available capture devices and their device IDs. This should be called before initGrabber(), which will use this info to choose the device you want.
+~~~~{.cpp}
+
+void ofApp::setup(){
+
+	camWidth = 320;  // try to grab at this size.
+	camHeight = 240;
+
+	//Get a list of devices
+	vector<ofVideoDevice> devices = vidGrabber.listDevices();
+
+	for(int i = 0; i < devices.size(); i++){
+		if(devices[i].bAvailable){
+			ofLogNotice() << devices[i].id << ": " << devices[i].deviceName;
+		}else{
+			ofLogNotice() << devices[i].id << ": " << devices[i].deviceName << " - unavailable ";
+		}
+	}
+
+	vidGrabber.setDeviceID(0);
+	vidGrabber.setDesiredFrameRate(60);    
+	vidGrabber.initGrabber(camWidth, camHeight);
+
+}
+
+~~~~
 
 
 
@@ -978,7 +1076,17 @@ _description: _
 
 
 Some video grabbers allow you to adjust the pixel format, which might help for optimization. At the moment, this seems to only apply to the Linux video grabber (GST). For all other grabbers, the only format accepted is OF_PIXELS_RGB.
+Available values are: OF_PIXELS_RGBA, OF_PIXELS_RGB, OF_PIXELS_MONO.
 
+~~~~{.cpp}
+
+void ofApp::setup(){
+    vidGrabber.setDeviceID(0);
+    vidGrabber.setDesiredFrameRate(60);
+    vidGrabber.setPixelFormat(OF_PIXELS_MONO);
+    vidGrabber.initGrabber(320, 240);
+}
+~~~~
 
 
 
@@ -1020,8 +1128,14 @@ _description: _
 Set the usage of texture inside this object. Typically, you will want to draw the movie grabber on screen, and so it will be necessary to use a texture, but there may be cases where it helps to not use a texture in order to save memory or for better performance. To disable the internal use of the texture, you can initialize the sequence grabber like this:
 ~~~~{.cpp}
 
-myGrabber.setUseTexture(false);
-myGrabber.initGrabber(320,240);
+void ofApp::setup(){
+
+    vidGrabber.setDeviceID(0);
+    vidGrabber.setDesiredFrameRate(60);
+    vidGrabber.setUseTexture(false);
+    vidGrabber.initGrabber(320, 240);
+
+}
 ~~~~
 
 
@@ -1067,8 +1181,13 @@ Sets the verbosity - this can be useful for debugging the video grabber interfac
 From 0.06 this method has no effect. Use ofSetLogLevel(OF_LOG_VERBOSE) to enable verbose messages.
 ~~~~{.cpp}
 
-myGrabber.setVerbose(true);
-myGrabber.initGrabber(320,240);
+void ofApp::setup(){
+	vidGrabber.setVerbose(true);
+	vidGrabber.setDeviceID(0);
+	vidGrabber.setDesiredFrameRate(60);
+	vidGrabber.initGrabber(320, 240);
+}
+
 ~~~~
 
 
@@ -1111,9 +1230,18 @@ _description: _
 
 Calls grabframe function.
 
+~~~~{.cpp}
 
+void testApp::update(){
 
+	myGrabber.update();  // call this once per update
+	if (myGrabber.isFrameNew()){
+		; // do computer vision / process the pixels
+	}
 
+}
+
+~~~~
 
 
 
@@ -1149,9 +1277,16 @@ _inlined_description: _
 _description: _
 
 
-Loads the video settings on screen. If your OpenGL application is full screen, this window might appear underneath the main window the first time you call this. Note: in QTKit grabbers (10.7+), this video settings panel is not available.
+Loads the video settings on screen. If your OpenGL application is full screen, this window might appear underneath the main window the first time you call this; use alt-tab to navigate to the settings window. Note: in QTKit grabbers (OSX 10.7+), this video settings panel no longer works. You'll need to compile with the 10.6 SDK for this.
+For Xcode 4.4 and greater, see [this forum post](forum.openframeworks.cc/t/xcode-4-5-not-supporting-10-6-sdk/10343) for instructions on installing the SDK.
 
-
+~~~~{.cpp}
+void ofApp::keyPressed(int key){
+    if(key == 's' || key == 'S'){
+        vidGrabber.videoSettings();
+    }
+}
+~~~~
 
 
 
@@ -1295,6 +1430,7 @@ _advanced: False_
 _description: _
 
 
+Variable containing the desired framerate for the video grabber.
 
 
 
