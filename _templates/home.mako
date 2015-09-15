@@ -9,7 +9,7 @@
 
     <script type="text/javascript" src="http://www.google.com/jsapi?key=AIzaSyA5m1Nc8ws2BbmPRwKu5gFradvD_hgq6G0"></script>
     <script type="text/javascript" src="${bf.config.site.url}/js/encoder.js"></script>
-    <script type="text/javascript" src="http://malsup.github.com/jquery.cycle.all.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle/3.03/jquery.cycle.all.min.js"></script>
     <script type="text/javascript" src="${bf.config.site.url}/js/socialwidgets.js"></script>
     <script type="text/javascript" src="${bf.config.site.url}/js/home.js"></script>
 
