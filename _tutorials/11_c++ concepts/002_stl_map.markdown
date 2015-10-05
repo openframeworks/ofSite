@@ -4,6 +4,19 @@ title: Having fun with Maps, specifically std::map
 summary: Overview of the non-vector containers in std::
 author: Joshua Noble
 ---
+This tutorial is composed by these sections:
+
+1. [Introduction: what is a map?](#intro)
+2. [Insert values into a map](#assign)
+3. [Deleting element from a map](#erase)
+4. [Iterating through a map](#iteration)
+5. [Finding element in a map](#find)
+6. [Storing object in a map](#map_of_objects)
+7. [What is a multimap?](#multimap)
+8. [Other usefull methods](#usefull)
+
+<a name="intro"></a>
+### Introduction: what is a map?
 
 In the previous tutorial you learned about the std::vector but that's not the only kind of container that C++ provides for you. In fact, for almost any kind of data storage that you can think of, there's a container that's going to allow you to express it elegantly. In this little tutorial we're going to look at one that's really handy when you need something more specific than a vector. Maps are containers that store elements formed by a combination of a key value and a mapped value, following a specific order. If you've used Javascript or Ruby or Python you're already familiar with these and you've used them any time you want to do something like:
 ~~~~{.cpp}
@@ -45,7 +58,125 @@ void ofApp::draw(){
     images["Tokyo"].draw(100, 0, 100, 100);
 }
 ~~~~
-You can see how, though this isn't the most powerful example of that, that it might be really nice to be able to keep track of things by something concrete that will keep it's "location" no matter what. So, in a general sense in a map, the key values are generally used to sort and uniquely identify the elements, while the mapped values store the content associated to this key. What kinds of things can you use as a value? Anything. Really, anything can be a value. You will want to be careful storing pointers, but unlike a vector, once inserted into a map objects don't move around even if other elements are added or removed, however, storing pointers is good, especially if you're working with lots of textures or other large data objects. Make sure you don't invalidate your pointers (i.e. delete the object that is being pointed to) and you'll be good to go. What kinds of things can you use as a key? Well, pretty much all the things you probably want to: strings, floats, stuff like that. There are some limits to this though, you might try doing the following:
+You can see how, though this isn't the most powerful example of that, that it might be really nice to be able to keep track of things by something concrete that will keep it's "location" no matter what. So, in a general sense in a map, the key values are generally used to sort and uniquely identify the elements, while the mapped values store the content associated to this key. What kinds of things can you use as a value? Anything. Really, anything can be a value. You will want to be careful storing pointers, but unlike a vector, once inserted into a map objects don't move around even if other elements are added or removed, however, storing pointers is good, especially if you're working with lots of textures or other large data objects. Make sure you don't invalidate your pointers (i.e. delete the object that is being pointed to) and you'll be good to go.
+
+### Insert values into a  map
+<a name='assign'></a>
+
+As far as adding things goes, doing this:
+~~~~{.cpp}
+ map[key] = value;
+~~~~
+isn't the only way that you'll see objects added to a map. Each element in a map is a pair. A pair is composed by to parts, a key and a value.
+A declaration for a pair just looks like the declaration of the map itself:
+~~~~{.cpp}
+typedef pair<const Key, T> value_type;
+~~~~
+Not particularly revelatory yet, but just wait. 
+Considering this, adding elements in a map means adding pairs into it. There
+are different ways to do this in c++. Let's instantiate 3 new cities
+~~~~{.cpp}
+ofImage bImage;
+bImage.loadImage("Berlin.jpg");
+
+ofImage lImage;
+lImage.loadImage("London.jpg");
+
+ofImage pImage;
+pImage.loadImage("Paris.jpg");
+~~~~
+How do we add them into the map? One of the most common is to use the `insert` method combined with `make_pairs`.
+~~~~{.cpp}
+images.insert(make_pair("Berlin", bImage));
+~~~~
+We can also use `insert` and `pair`
+~~~~{.cpp}
+images.insert(pair<string, ofTexture>("London", lImage));
+~~~~
+or we can use the std::pair construct
+
+~~~~{.cpp}
+images.insert(map<string, ofTexture>::value_type("Paris", pImage));
+~~~~
+
+<a name='erase'></a>
+### Deleting element from a map
+
+To delete an element from a map we use `erase`
+~~~~{.cpp}
+images.erase("London");
+~~~~
+
+To completely empty the map, we use `clear`
+~~~~{.cpp}
+images.clear();
+~~~~
+
+<a name='iteration'></a>
+### Iterating through a map
+
+So, we know how to put things into a map and get them out, what about looking through them? You can't just loop through them with an int like a vector, so you need to use an iterator. So, let's put pairs and even maps on hold for just a moment and talk iterators because they make maps a lot more usable:
+
+
+The iterator is the C++ std version of a pointer. You use it to point to location in a container, kind of the same way that with a vector you might keep an index around that references a place in the vector that you're interested in, an iterator is like that index, but more so, it is that object in the vector. All containers have a begin() function, which returns an iterator pointing to the beginning of the container (the first element) and a function end() that returns an iterator corresponding to having reached the end of the container. Let's make a for loop with an iterator to see how they work a little better:
+
+~~~~{.cpp}
+map<float,string>::iterator it; // make the iterator, say it's going to iterate over a map<float, string>
+for ( it = aMap.begin(); // say the iterator should point to the beginning of a map called "aMap"
+      it != aMap.end();  // say let's stop when we get to the end aMap
+      ++it) {            // increment the iterator
+}
+~~~~
+The iterator for a vector of ofImages would look like this: `vector<ofImage>::iterator` while an iterator for a map with string keys and ofMatrix4x4 values would be: `map<string, ofMatrix4x4>::iterator`. You can move an iterator forward with ++ and backward with --.Interesting thing: you can move an iterator with two positions with advance(it, 2) or twenty with advance(it, 20), though you'll probably never need to be able to do that. Ok, back to maps, let's iterate over our map to draw them to the screen:
+~~~~{.cpp}
+void ofApp::draw(){
+    int xpos = 0;
+    for (map<string, ofTexture>::iterator it=cities.begin(); it!=cities.end(); ++it){
+        // it->first contains the key
+        cout << " this is the key " << it->first << endl;
+        // it->second contains the value
+        it->second.draw(xpos, 0, 100, 100);
+        xpos+= 100;
+    }
+}
+~~~~
+So what's that iterator pointing to? Well, a pair, in this case a pair of `string,ofTexture`, like:
+~~~~{.cpp}
+pair<string, ofTexture> p;
+~~~~
+C++ 11 introduce a shorthand to iterate through a map, `auto`. We can use it like this:
+~~~~{.cpp}
+for (auto& pic : images )
+  cout << pic.first << endl;
+~~~~
+Please note that we have used `pic.first` and not `pic->first`. That's beacause
+`pic` is a reference to the pair(note the `&`), not a pointer like in the
+previous example. In this case, we can iterate through the map and change the
+value of the maps. But what if we want to simply read the values from the map,
+without changing them? In this case, we use the keyword `constant`. This
+keyword makes sure that no values in the map will be touched
+~~~~{.cpp}
+for (const auto& pic : images )
+  cout << pic.first << endl;
+~~~~
+
+<a name='find'></a>
+### Finding element in a map
+
+Whic could be the method name to search elements in a map if not `find`?
+
+~~~~{.cpp}
+  if (cities.find("Berlin") != cities.end())
+    cout << it->first << " founded!" <<endl;
+  else
+    cout << "city not found" << endl;
+~~~~
+Notice the end() call there? That's because find() is actually returning an iterator, so if the element is inside the map, we get an iterator to it and if it isn't then we can an iterator that's pointing to the end of the iterator. There's a few other methods that the map provides that we'll list out in slightly abbreviated fashion:
+
+<a name='map_of_objects'></a>
+### Storing object in a map
+
+What kinds of things can you use as a key in a map? Well, pretty much all the things you probably want to: strings, floats, stuff like that. There are some limits to this though, you might try doing the following:
 ~~~~{.cpp}
 map<ofVec2f, string> locations;
 ~~~~
@@ -106,77 +237,41 @@ Now:
 ~~~~{.cpp}
  cout << stringToLocation[vec2Key(100.01, 299.99)] << endl; // returns "second" because 100,300 is both < 0.1 away
 ~~~~
-As far as adding things goes, doing this:
-~~~~{.cpp}
- map[key] = value;
-~~~~
 
-isn't the only way that you'll see objects added to a map. Using the std::pair construct is also very common and allows you to use objects that aren't instantiated elsewhere:
-~~~~{.cpp}
-pair<vec2Key, string> p1(vec2Key(400, 400), "fourth");
-pair<vec2Key, string> p1(vec2Key(300, 700), "fifth");
-pair<vec2Key, string> p1(vec2Key(100, 600), "sixth");
-~~~~
-A declaration for a pair just looks like the declaration of the map itself:
-~~~~{.cpp}
-typedef pair<const Key, T> value_type;
-~~~~
-Not particularly revelatory yet, but just wait. So, we know how to put things into a map and get them out, what about looking through them? You can't just loop through them with an int like a vector, so you need to use an iterator. So, let's put pairs and even maps on hold for just a moment and talk iterators because they make maps a lot more usable:
-
-
-The iterator is the C++ std version of a pointer. You use it to point to location in a container, kind of the same way that with a vector you might keep an index around that references a place in the vector that you're interested in, an iterator is like that index, but more so, it is that object in the vector. All containers have a begin() function, which returns an iterator pointing to the beginning of the container (the first element) and a function end() that returns an iterator corresponding to having reached the end of the container. Let's make a for loop with an iterator to see how they work a little better:
+<a name='multimap'></a>
+### What is a multimap?
+In a `map` each key is unique, that means that is not possible to have in our
+previous map `map<string, ofTexture> images` two city's image with the same
+name as key, like "London".
+In a `multimap` we do not have this rule, a `multimap` can contains pair with
+the same key. Example:
 
 ~~~~{.cpp}
-map<float,string>::iterator it; // make the iterator, say it's going to iterate over a map<float, string>
-for ( it = aMap.begin(); // say the iterator should point to the beginning of a map called "aMap"
-      it != aMap.end();  // say let's stop when we get to the end aMap
-      ++it) {            // increment the iterator
-}
-~~~~
-The iterator for a vector of ofImages would look like this: vector<ofImage>::iterator while an iterator for a map with string keys and ofMatrix4x4 values would be: map<string, ofMatrix4x4>::iterator. You can move an iterator forward with ++ and backward with --. Interesting thing: you can move an iterator with two positions with advance(it, 2) or twenty with advance(it, 20), though you'll probably never need to be able to do that. Ok, back to maps, let's iterate over our map:
-~~~~{.cpp}
-for (map<vec2Key,string>::iterator it=stringToLocation.begin(); it!=stringToLocation.end(); ++it){
-    cout << " this is the key " << it->first.x << " " << it->first.y << endl;
-    cout << " this is the value  " << it->second << endl;
-}
-~~~~
-So what's that iterator pointing to? Well, a pair, in this case a pair of vec2Key,string, like:
-~~~~{.cpp}
-pair<vec2Key,string> p;
-~~~~
-This is handy when you don't know what's in a map and want to check it out. This is also pertinent to what happens when you want to see if something is in a map. If I do 
-~~~~{.cpp}
-cout << stringToLocation[vec2key(301,301)] << endl;
-~~~~
-what happens? Because that's not in our example maps values, bizarrely, the std::map adds a pair like this:
+  multimap<string, int> coldestCities;
+  coldestCities.insert(make_pair("moskow",2015));
+  coldestCities.insert(make_pair("chicago",2014));
+  coldestCities.insert(make_pair("moskow",2013));
+  coldestCities.insert(make_pair("moskow",2012));
+  coldestCities.insert(make_pair("helsinki",2011));
 
-~~~~{.cpp}
-pair<vec2key,key>(vec2key(301,301), "");
+  cout "coldest cities in the last 5 years" << endl;
+  cout "disclaimer: this data are just an example" << endl;
+
+  for (const auto& cityYear : coldestCities )
+    cout << cityYear.first<< "year: "<< cityYear.second << endl;
 ~~~~
-You can check it like:
+We use a map whan we want that our keys appear only once, we use a multimap
+when this detail is not important.
 
-~~~~{.cpp}
-cout << stringToLocation.size(); // should be 3
-stringToLocation[vec2Key(100.01, 699.99)];
-cout << stringToLocation.size(); // will now be 4!
-~~~~
-which is not what we want at all. We didn't want std::map to go ahead and add that element, we just wanted to know if it was there. Happily the map has a way around this: find().
+<a name="usefull">
+### Other Usefull methods
 
-~~~~{.cpp}
-if(stringToLocation.find(vec2Key(400.01, 299.99)) != stringToLocation.end()) {
-    cout << " has it " << endl;
-} else {
-    cout << " doesn't have it " << endl;
-}
-~~~~
-Notice the end() call there? That's because find() is actually returning an iterator, so if the element is inside the map, we get an iterator to it and if it isn't then we can an iterator that's pointing to the end of the iterator. There's a few other methods that the map provides that we'll list out in slightly abbreviated fashion:
+`empty` - if the container is empty returns true, otherwise returns false
 
-empty - if the container is empty returns true, otherwise returns false
+`size` - returns the number of elements in the map
 
-size - returns the number of elements in the map
-
-lower_bound - This gives you back an iterator to the first element not less than the given value, so:
-upper_bound - returns an iterator to the first element greater than a certain value 
+`lower_bound` - This gives you back an iterator to the first element not less than the given value, so:
+`upper_bound` - returns an iterator to the first element greater than a certain value 
 
 As an example of these two:
 
