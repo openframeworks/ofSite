@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     ${self.head()}
- 	<script type="text/javascript" src="http://malsup.github.com/jquery.cycle.all.js"></script>
+ 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle/3.03/jquery.cycle.all.min.js"></script>
 	
 	<script type="text/javascript">
 	$(document).ready(function(){
