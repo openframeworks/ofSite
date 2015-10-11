@@ -1091,8 +1091,14 @@ div.galleryItem p {
     background-color: #eee;
 }
 
+#myslides{
+	width: 880px;
+	height:372px;
+}
+
 #myslides img{
 	width: 880px;
+	height: 372px;
 }
 
 #documentation-ebook {
