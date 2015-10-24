@@ -8,21 +8,39 @@ Since version 0.9.0 we have support for Qt Creator in Linux, Windows and OSX. Th
 
 You can download Qt Creator from: [http://www.qt.io/download-open-source/#section-6](http://www.qt.io/download-open-source/#section-6)
 
-Once installed you can install the Qt Creator plugin for openFrameworks that comes with the OF download:
-
-  - For linux and osx you can run the install_template.sh script in scripts/qtcreator and it'll install everything for you.
-
-  - Under windows, copy the templates in scripts/qtcreator/templates to c:\Qt\qtcreator-3.5.1\share\qtcreator\templates.
 
 Linux
 -----
 
 In linux even if Qt Creator is available in the official repositories for your distributions, it's recommended to install qtcreator from their webpage instead. The one that comes with the distribution (at least in ubuntu) might be outdated and installing the one from the webpage you'll get support for the clang plugin which analizes the code while you type marking any errors more accurately than the default qtcreator static analizer. 
 
+Once installed you can install the Qt Creator plugin for openFrameworks that comes with the OF download, you can run the install_template.sh script in scripts/qtcreator and it'll install everything for you.
+
+Windows
+----
+
+First of all you'll need to install msys2. Follow the instructions in [https://msys2.github.io/](https://msys2.github.io/)
+
+Some parts of the build system rely on msys2 being installed in the default folder: c:\msys64 and installing it somewhere else might need modifications to the project files.
+
+Once you've installed msys2 and updated it according to the instructions, restart the console and from there run the isntall_dependencies script:
+
+        cd OF_PATH 
+        cd scripts/win_cb/msys2
+        ./install_dependencies.sh
+        
+Once this finishes you can already compile applications using the makefiles included in each project.
+
+To use QtCreator with msys2 go to Qt Creator > Preferences > Build and Run > Compilers and if it's not there add a compiler that points to c:\msys64\mingw32\bin then in the Kits tab configure the Desktop Kit to use gcc from msys2.
+
+Once installed you can install the Qt Creator plugin for openFrameworks that comes with the OF download by copying the templates in scripts/qtcreator/templates to c:\Qt\qtcreator-3.5.1\share\qtcreator\templates.
+
 OSX
 ----
 
-After installing QtCreator go to Qt Creator > Preferences > Build and Run and configure the Desktop Kit to use clang instead of gcc. If you can't change it from there, press manage or go to the Compilers tab and check that clang is available. You might need to add a custom config to be able to enable clang instead of GCC
+After installing QtCreator go to Qt Creator > Preferences > Build and Run and configure the Desktop Kit to use clang instead of gcc. If you can't change it from there, press manage or go to the Compilers tab and check that clang is available. You might need to add a custom config to be able to enable clang instead of GCC.
+
+Once installed you can install the Qt Creator plugin for openFrameworks that comes with the OF download, you can run the install_template.sh script in scripts/qtcreator and it'll install everything for you.
 
 All platforms
 -------------
