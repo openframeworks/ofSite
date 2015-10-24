@@ -7,22 +7,26 @@ Here are the setup instructions for those of you who wish to work with Visual St
 
 Download
 --------
-> [Download the Visual Studio 2012 Express for Windows Desktop][0]
+> [Download the Visual Studio Community 2015][0]
 
-Navigate to the [Express Website][0] and download the Express edition of the Visual Studio compiler.   
+Navigate to the [Visual Studio][0] and download the Community edition of the Visual Studio IDE.   
 
-![vs_download](vs_download.png)  
+![](visual_studio_community.png)
 
 Install
 -------
 Run the installer, and let it install to the default configuration. 
 
-![vs_install](vs_install.png)  
+![](vs_install.png)
 
-Update
-------
-If you have developed with older openFrameworks / Visual Studio, we have writen a script which will help you to migrate in a really easy way.
-[Download it here][1], copy it in your project folder, then execute it.
+openFrameworks plugin for Visual Studio
+---------------------------------------------------
+From visual studio, go to Tools > Extensions and Updates. Select online and search for openFrameworks and install the plugin.
 
-[0]: http://www.microsoft.com/en-us/download/details.aspx?id=34673
-[1]: https://gist.github.com/LeoColomb/5284354/raw/0900e935b40ab5a45dce82e50561d9ae5511dfa6/migrationToVS2012.cmd
+That will allow you to use File > New > Project... to create new openFrameworks projects and the contextual menu on any project to later add and remove addons
+
+There's more information in the [Visual Studio Gallery page](https://visualstudiogallery.msdn.microsoft.com/77678909-81b8-494b-b75c-d97dd7a3eaa6) and the following video.
+
+<iframe src="https://player.vimeo.com/video/143111085" width="1000" height="562" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+[0]: https://www.visualstudio.com/
