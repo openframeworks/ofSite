@@ -20,7 +20,7 @@
 	    <h2>osx</h2>
 	    <h3>download<br/>openFrameworks for</h3>
 	    <p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_osx_release.zip">osx</a></p><br/>
-	    <h3>IDE setup guide</h3>
+	    <h3>IDE setup guides</h3>
 	    <p><a href="../setup/xcode">xcode</a></p>
 	    <p><a href="../setup/qtcreator">qt creator</a></p>
 	    <p><a href="../setup/emscripten">emscripten</a></p>
@@ -31,7 +31,7 @@
 	    <h3>download<br/>openFrameworks for</h3>
 	    <p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_linux_release.tar.gz">linux 32bit</a></p>
 	    <p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_linux64_release.tar.gz">linux 64bit</a></p><br/>
-	    <h3>IDE setup guide</h3>
+	    <h3>IDE setup guides</h3>
 	    <p><a href="../setup/qtcreator">qt creator</a></p>
 	    <p><a href="../setup/linux-eclipse">eclipse</a></p>
 	    <p><a href="../setup/emscripten">emscripten</a></p>
@@ -67,7 +67,7 @@
 	    <h2>android</h2>
 	    <h3>download<br/>openFrameworks for</h3>
 	    <p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_android_release.tar.gz">android</a></p><br/>
-	    <h3>IDE setup guide</h3>
+	    <h3>IDE setup guides</h3>
 	    <p><a href="../setup/android-eclipse">eclipse + ADT</a></p>
 	    <p><a href="../setup/android-studio">android studio</a></p>
     </div>
@@ -93,7 +93,7 @@
 	    <h2>linux&nbsp;armv7</h2>
 	    <h3>download<br/>openFrameworks for</h3>
 	    <p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_linuxarmv7l_release.tar.gz">linux armv7</a></p><br/>
-	    <h3>setup guide</h3>
+	    <h3>setup guides</h3>
 		<p><a href="http://forum.openframeworks.cc/t/raspberry-pi-2-setup-guide/">raspberry pi 2</a></p>
 	    <p><a href="../setup/pandaboard">pandaboard</a></p>
 	    <p><a href="../setup/armv7">generic armv7</a></p>
