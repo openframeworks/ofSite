@@ -19,7 +19,7 @@
     <div id="download-latest-platform">
 	    <h2>osx</h2>
 	    <h3>download<br/>openFrameworks for</h3>
-	    <p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_osx_release.zip">xcode</a></p><br/>
+	    <p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_osx_release.zip">osx</a></p><br/>
 	    <h3>IDE setup guide</h3>
 	    <p><a href="../setup/xcode">xcode</a></p>
 	    <p><a href="../setup/qtcreator">qt creator</a></p>
@@ -66,7 +66,7 @@
     <div id="download-latest-platform-last">
 	    <h2>android</h2>
 	    <h3>download<br/>openFrameworks for</h3>
-	    <p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_android_release.tar.gz">eclipse</a></p><br/>
+	    <p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_android_release.tar.gz">android</a></p><br/>
 	    <h3>IDE setup guide</h3>
 	    <p><a href="../setup/android-eclipse">eclipse + ADT</a></p>
 	    <p><a href="../setup/android-studio">android studio</a></p>
