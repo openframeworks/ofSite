@@ -19,10 +19,6 @@ Run the installer, and let it install to the default configuration.
 
 ![vs_install](vs_install.png)  
 
-Video Codecs
--------
-Starting in OF release 0.9.0 the video player now uses DirectShow and not QuickTime.  To support QuickTime video files or files like MP4 video you will need to install the video codecs onto your machine.  We recommend the [K-Lite Codec Pack][2] which is free to download and adds support for many video formats.   
-
 Update
 ------
 If you have developed with older openFrameworks / Visual Studio, we have writen a script which will help you to migrate in a really easy way.
@@ -30,4 +26,3 @@ If you have developed with older openFrameworks / Visual Studio, we have writen 
 
 [0]: http://www.microsoft.com/en-us/download/details.aspx?id=34673
 [1]: https://gist.github.com/LeoColomb/5284354/raw/0900e935b40ab5a45dce82e50561d9ae5511dfa6/migrationToVS2012.cmd
-[2]: https://en.wikipedia.org/wiki/K-Lite_Codec_Pack
