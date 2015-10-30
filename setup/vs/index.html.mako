@@ -21,7 +21,8 @@ Run the installer, and let it install to the default configuration.
 
 Video Codecs
 -------
-Starting in OF release 0.9.0 the video player now uses DirectShow and not QuickTime.  To support QuickTime video files or files like MP4 video you will need to install the video codecs onto your machine.  We recommend the [K-Lite Codec Pack][1] which is free to download and adds support for many video formats.   
+Starting in OF release 0.9.0 the video player now uses DirectShow and not QuickTime.  To support QuickTime video files or files like MP4 video you will need to install the video codecs onto your machine.  We recommend the [K-Lite Codec Pack][1] which is free to download and adds support for many video formats.
+However a lot of codec sites have adware bundled. This link and codec pack has been tested with OF [https://ninite.com/klitecodecs/][2] and it automatically removes any adware from the installer before download. 
 
 openFrameworks plugin for Visual Studio
 ---------------------------------------------------
@@ -35,3 +36,4 @@ There's more information in the [Visual Studio Gallery page](https://visualstudi
 
 [0]: https://www.visualstudio.com/
 [1]: https://en.wikipedia.org/wiki/K-Lite_Codec_Pack
+[2]: https://ninite.com/klitecodecs/
