@@ -40,11 +40,12 @@
     <div id="download-latest-platform-last">
 	    <h2>windows</h2>
 	    <h3>download<br/>openFrameworks for</h3>
-	    <p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_win_cb_release.zip">qt creator / msys2</a></p>
 	    <p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_vs_release.zip">visual studio (2015)</a></p><br/>
+	    <p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_win_cb_release.zip">qt creator / msys2</a></p>
 	    <h3>IDE setup guides</h3>
-	    <p><a href="../setup/qtcreator">qt creator</a></p>
 	    <p><a href="../setup/vs">visual studio</a></p>
+	    <p><a href="../setup/qtcreator">qt creator</a></p>
+	    <p><a href="../setup/msys2">msys2</a></p>
     </div>
 </div>
 

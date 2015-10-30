@@ -19,17 +19,9 @@ Once installed you can install the Qt Creator plugin for openFrameworks that com
 Windows
 ----
 
-First of all you'll need to install msys2. Follow the instructions in [https://msys2.github.io/](https://msys2.github.io/)
+First of all you'll need to install msys2. Follow the instructions in the [setup guide for msys2](../msys2)
 
 Some parts of the build system rely on msys2 being installed in the default folder: c:\msys64 and installing it somewhere else might need modifications to the project files.
-
-Once you've installed msys2 and updated it according to the instructions, restart the console and from there run the isntall_dependencies script:
-
-        cd OF_PATH 
-        cd scripts/win_cb/msys2
-        ./install_dependencies.sh
-        
-Once this finishes you can already compile applications using the makefiles included in each project.
 
 To use QtCreator with msys2 go to Qt Creator > Preferences > Build and Run > Compilers and if it's not there add a compiler that points to c:\msys64\mingw32\bin then in the Kits tab configure the Desktop Kit to use gcc from msys2.
 
