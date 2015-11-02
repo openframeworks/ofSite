@@ -369,6 +369,8 @@ def serialize_var(f,var):
     f.write("_constant: " + str(var.constant) + "_\n")
     f.write("_advanced: " + str(var.advanced) + "_\n")
     f.write("-->\n\n");
+    f.write("_inlined_description: _\n\n")
+    f.write(var.inlined_description.encode('utf-8'))  
     f.write("_description: _\n\n")
     f.write(var.description.encode('utf-8'))  
     f.write("\n\n\n\n\n\n")

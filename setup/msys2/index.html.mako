@@ -40,7 +40,7 @@ Open an **MINGW32** shell and compile oF libraries:
 	cd your_oF_directory/libs/openFrameworksCompiled/project
     make
 
-You can speed-up compilation using parallel build `make -j${NUMBER_OF_PROCESSORS}`
+You can speed-up compilation using parallel build `make -j4` or the number of cores you want it to use
 
 
 Setting the PATH variable

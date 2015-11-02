@@ -28,6 +28,7 @@ class DocsVar:
         self.type = ""
         self.summary = ""
         self.description = ""
+        self.inlined_description = ""
         self.access = ""
         self.version_started = ""
         self.version_deprecated = ""
