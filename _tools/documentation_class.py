@@ -8,6 +8,7 @@ import os
 import fileinput
 import traceback
 import re
+import Levenshtein
 
 class DocsClass:
     def __init__(self,classid):
@@ -157,4 +158,6 @@ class DocsClass:
                 return var
         return False
         
-
+    def get_inlined_docs_similarity(self):
+        return Levenshtein.ratio(self.detailed_inline_description, self.reference)
+        

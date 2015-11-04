@@ -105,13 +105,17 @@ ${clazz.reference}
               </%self:filter>
               % endif
 
-              % if not clazz is None and clazz.detailed_inline_description.strip("\n").strip(" ") != "":
-              <div class="inlined_docs">
-                    <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
-                    <%self:filter chain="markdown_template">
-${clazz.detailed_inline_description}
-                    </%self:filter>
-              </div>                      
+              % if not clazz is None and clazz.detailed_inline_description.strip("\n").strip(" ") != "" and clazz.get_inlined_docs_similarity()<0.8:
+                  % if clazz.reference.strip("\n").strip(" ") != "":
+                    <div class="inlined_docs">
+                  % endif
+                        <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+                        <%self:filter chain="markdown_template">
+    ${clazz.detailed_inline_description}
+                        </%self:filter>
+                  % if clazz.reference.strip("\n").strip(" ") != "":
+                    </div>   
+                  % endif                   
               % endif
               
               % if not functions is None:

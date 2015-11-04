@@ -37,5 +37,5 @@ You can also create your own events using the [ofEvent](ofEvent.html) class. And
 
 Events in OF are an implementation of the [Observer](https://en.wikipedia.org/wiki/Observer_pattern) pattern which has it's pros and cons, use it with care but try not to use it unless really needed. The main usage for an event instead of a direct call from one object to another is to provide independence from the caller to the callee so if you don't really need that or plan to need it in the future you can probably use a direct call beter.
 
-One of the biggest problems of events are that you need to take care of unregistering every listener before it's destroyed, also if you copy an object and it was registered to an event the copy won't be, so you'll need to implement the copy constructor which is better to avoid since it's more error prone than letting the default copy constructor copy the whole object.
+One of the biggest problems of events are that you need to take care of unregistering every listener before it's destroyed, also if you copy an object and it was registered to an event the copy won't be,  so you'll need to implement the copy constructor which is better to avoid since it's more error prone than letting the default copy constructor copy the whole object.
 
