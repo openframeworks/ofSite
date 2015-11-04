@@ -9,6 +9,42 @@ _istemplated: False_
 
 ##InlineDescription
 
+The ofMatrix4x4 is the big 
+
+You'll sometimes see it used for doing things like setting where the camera
+in OpenGL (the mathematically calculated one, not the ofCamera one) is
+looking or is pointed, or figuring how to position something in 3d space,
+doing scaling, etc. The great thing about the 4x4 matrix is that it can do
+all these things at the same time. A single ofMatrix4x4 can represent a ton
+of different information about a stuff that goes on in doing 3d
+programming: where an object is, how you want to scale an object, where a
+camera is. Let's look at a few really basic examples:
+
+![MATS](math/mats.png)
+
+Not particularly exciting, but you can see how they'd be useful. Luckily most
+of the need to transform, rotate, scale, shear, or further bazzlemunge (just
+kidding, bazzlemunging is not a thing) stuff in oF is handled internally by
+objects like ofNode or ofCamera.
+
+oF uses row-vector style by default, meaning that when transforming a vector
+by multiplying with a matrix, you should put the vector on the left side and
+the matrix (or matrices) to its right. When multiplying by multiple matrices,
+the order of application of the transforms is left-to-right. This means that
+the standard order of manipulation operations is
+vector * scale * rotate * translate.
+
+Note that in GLSL, this convention is reversed, and column-vector style is
+used. oF uploads the matrices to the GL context correctly, but you should
+reverse the order of your vertex manipulations to right-to-left style, e.g.
+translate * rotate * scale * vector.
+
+On the application side, oF has operators which let you do matrix-vector
+multiplication with the vector on the right if that's your preferred style.
+To set up a combined transformation matrix for working in this style, you
+should do matrix transformations with the functions like glTranslate,
+glRotate, and glScale.
+
 
 
 
@@ -50,6 +86,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Decompose the matrix into translation, rotation,
+scale and scale orientation.
 
 
 
@@ -88,6 +126,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Gets the perspective components for a frustum projection matrix.
 
 
 
@@ -126,6 +165,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Gets the inverse matrix.
 
 
 
@@ -164,6 +204,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Makes a new matrix which is the inverse of the given matrix.
 
 
 
@@ -202,6 +243,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Gets the lookAt determiners of the matrix.
+
+This function will only work for modelview matrices.
 
 
 
@@ -240,6 +284,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Get the perspective components from a matrix.
+
+This only works with pure perspective projection matrices.
 
 
 
@@ -278,6 +325,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Makes a new matrix which is the given matrix, normalized.
 
 
 
@@ -316,8 +364,17 @@ _advanced: False_
 
 _inlined_description: _
 
+Get the frustum settings of a symmetric perspective projection
+matrix.
 
-Get the frustum settings of a symmetric perspective projection matrix. Return false if matrix is not a perspective matrix, where parameter values are undefined. Note, if matrix is not a symmetric perspective matrix then the shear will be lost. Asymmetric matrices occur when stereo, power walls, caves and reality center display are used. In these configuration one should use the AsFrustum method instead. 
+Note, if matrix is not a symmetric perspective matrix then the
+shear will be lost.
+Asymmetric matrices occur when stereo, power walls, caves and
+reality center display are used.
+In these configuration one should use the getFrustum method instead.
+
+Returns: false if matrix is not a perspective matrix,
+where parameter values are undefined.
 
 
 
@@ -356,6 +413,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Access the internal data in `float*` format
+useful for opengl matrix transformations
 
 
 
@@ -432,6 +491,13 @@ _advanced: False_
 
 _inlined_description: _
 
+\name Get Methods
+\{
+
+These return matrix components. getRotate and getScale can only be
+used if the matrix only has rotation or only has scale, since these
+transform values are stored in the same area of the matrix.
+For matrices with both use decompose instead.
 
 
 
@@ -457,7 +523,7 @@ _syntax: getRowAsVec3f(i)_
 _name: getRowAsVec3f_
 _returns: ofVec3f_
 _returns_description: _
-_parameters: int i_
+_parameters: size_t i_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -470,6 +536,7 @@ _advanced: False_
 
 _inlined_description: _
 
+returns a copy of row i
 
 
 
@@ -495,7 +562,7 @@ _syntax: getRowAsVec4f(i)_
 _name: getRowAsVec4f_
 _returns: ofVec4f_
 _returns_description: _
-_parameters: int i_
+_parameters: size_t i_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -508,6 +575,7 @@ _advanced: False_
 
 _inlined_description: _
 
+returns a copy of row i
 
 
 
@@ -622,6 +690,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Makes a new matrix which is the transpose of the given matrix.
 
 
 
@@ -660,6 +729,7 @@ _advanced: False_
 
 _inlined_description: _
 
+\sa rotate
 
 
 
@@ -698,6 +768,7 @@ _advanced: False_
 
 _inlined_description: _
 
+\sa rotate
 
 
 
@@ -736,6 +807,7 @@ _advanced: False_
 
 _inlined_description: _
 
+\sa rotate
 
 
 
@@ -774,6 +846,7 @@ _advanced: False_
 
 _inlined_description: _
 
+\sa scale
 
 
 
@@ -812,6 +885,7 @@ _advanced: False_
 
 _inlined_description: _
 
+\sa scale
 
 
 
@@ -850,6 +924,7 @@ _advanced: False_
 
 _inlined_description: _
 
+\sa translate
 
 
 
@@ -888,6 +963,7 @@ _advanced: False_
 
 _inlined_description: _
 
+\sa translate
 
 
 
@@ -926,6 +1002,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Checks if the matrix is the identity matrix.
 
 
 
@@ -964,6 +1041,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Checks if the matrix contains items that are not numbers.
 
 
 
@@ -1002,6 +1080,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Checks if the matrix is valid by ensuring its items are numbers.
 
 
 
@@ -1040,6 +1119,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Matrix becomes the result of the multiplication of two other matrices.
 
 
 
@@ -1078,6 +1158,14 @@ _advanced: False_
 
 _inlined_description: _
 
+Matrix becomes a perspective projection matrix.
+
+Related to: glFrustum. The viewing volume is frustum-shaped and
+defined by the six parameters. Left, right, top, and bottom specify
+coordinates in the zNear clipping plane where the frustum edges intersect
+it, and the zNear and zFar parameters define the forward distances of
+the view volume. The resulting volume can be vertically and
+horizontally asymmetrical around the center of the near plane.
 
 
 
@@ -1116,6 +1204,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Matrix becomes the identity matrix.
 
 
 
@@ -1154,6 +1243,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Matrix becomes the inverse of the provided matrix.
 
 
 
@@ -1192,6 +1282,17 @@ _advanced: False_
 
 _inlined_description: _
 
+Matrix becomes a combination of translation and rotation.
+
+Matrix becomes a combination of a translation to the position of 'eye'
+and a rotation matrix which orients an object to point towards 'center'
+along its z-axis. Use this function if you want an object to look at a
+point from another point in space.
+
+Parameters:
+eye The position of the object.
+center The point which the object is "looking" at.
+up The direction which the object considers to be "up".
 
 
 
@@ -1230,6 +1331,19 @@ _advanced: False_
 
 _inlined_description: _
 
+Matrix becomes a combination of an inverse translation and rotation.
+
+Related to: gluLookAt. This creates the inverse of makeLookAtMatrix.
+The matrix will be an opposite translation from the 'eye' position,
+and it will rotate things in the opposite direction of the eye-to-center
+orientation. This is definitely confusing, but the main reason to use
+this transform is to set up a view matrix for a camera that's looking
+at a certain point. To achieve the effect of moving the camera somewhere
+and rotating it so that it points at something, the rest of the world
+is moved in the *opposite* direction and rotated in the *opposite* way
+around the camera. This way, you get the same effect as moving the actual
+camera, but all the projection math can still be done with the camera
+positioned at the origin (which makes it way simpler).
 
 
 
@@ -1268,6 +1382,11 @@ _advanced: False_
 
 _inlined_description: _
 
+Matrix becomes a 2D orthographic projection matrix.
+
+Related to: glOrtho2D. The box-shaped viewing volume is
+described by the four parameters and, implicitly, a zNear of -1
+and a zFar of 1.
 
 
 
@@ -1306,6 +1425,12 @@ _advanced: False_
 
 _inlined_description: _
 
+Matrix becomes an orthographic projection matrix.
+
+Related to: glOrtho. The orthographic projection has a box-shaped
+viewing volume described by the six parameters. Left, right, bottom,
+and top specify coordinates in the zNear clipping plane where the
+corresponding box sides intersect it.
 
 
 
@@ -1344,6 +1469,12 @@ _advanced: False_
 
 _inlined_description: _
 
+Matrix becomes an orthonormalized version of the provided matrix.
+
+The basis vectors (the 3x3 chunk embedded in the upper left of the matrix)
+are normalized. This means the resulting matrix has had scaling effects
+removed. The fourth column and the fourth row are transferred over
+untouched, so translation will be included as well.
 
 
 
@@ -1382,6 +1513,16 @@ _advanced: False_
 
 _inlined_description: _
 
+Matrix becomes a perspective projection matrix.
+
+Related to: gluPerspective. The viewing volume is frustum-shaped amd
+defined by the four parameters. The fovy and aspect ratio
+are used to compute the positions of the left, right, top, and bottom sides
+of the viewing volume in the zNear plane. The fovy is the y field-of-view,
+the angle made by the top and bottom sides of frustum if they were to
+intersect. The aspect ratio is the width of the frustum divided by its
+height. Note that the resulting volume is both vertically and
+horizontally symmetrical around the center of the near plane.
 
 
 
@@ -1420,6 +1561,13 @@ _advanced: False_
 
 _inlined_description: _
 
+\name Rotation
+\{
+Matrix becomes a rotation transform.
+
+Parameters:
+from Matrix becomes a rotation from this vector direction.
+to Matrix becomes a rotation to this vector direction.
 
 
 
@@ -1458,6 +1606,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Parameters:
+angle Matrix becomes a rotation by angle (degrees).
+axis Rotation is performed around this vector.
 
 
 
@@ -1496,6 +1647,11 @@ _advanced: False_
 
 _inlined_description: _
 
+Parameters:
+angle Matrix becomes a rotation by angle (degrees).
+x X-value of the rotation axis.
+y Y-value of the rotation axis.
+z Z-value of the rotation axis.
 
 
 
@@ -1521,7 +1677,7 @@ _syntax: makeRotationMatrix(&)_
 _name: makeRotationMatrix_
 _returns: void_
 _returns_description: _
-_parameters: const ofQuaternion &_
+_parameters: const ofQuaternion &quaternion_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1534,6 +1690,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Parameters:
+quaternion Matrix becomes a rotation that produces the quaternion's orientation.
 
 
 
@@ -1572,6 +1730,11 @@ _advanced: False_
 
 _inlined_description: _
 
+Matrix becomes a rotation around multiple axes.
+
+The final rotation is the result of rotating around each of the three
+axes, in order. Angles are given in degrees, and axes can be arbitrary
+vectors.
 
 
 
@@ -1610,6 +1773,11 @@ _advanced: False_
 
 _inlined_description: _
 
+\name Scale
+\{
+Matrix becomes a scale transform.
+
+Accepts x, y, z scale values as a vector or separately.
 
 
 
@@ -1635,9 +1803,9 @@ _syntax: makeScaleMatrix(float, float, float)_
 _name: makeScaleMatrix_
 _returns: void_
 _returns_description: _
-_parameters: float, float, float_
+_parameters: float , float , float _
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1656,7 +1824,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -1686,6 +1853,11 @@ _advanced: False_
 
 _inlined_description: _
 
+\name Translation
+\{
+Matrix becomes a translation transform.
+
+Accepts x, y, z translation values as a vector or separately.
 
 
 
@@ -1711,9 +1883,9 @@ _syntax: makeTranslationMatrix(float, float, float)_
 _name: makeTranslationMatrix_
 _returns: void_
 _returns_description: _
-_parameters: float, float, float_
+_parameters: float , float , float _
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1732,7 +1904,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -1762,6 +1933,7 @@ _advanced: False_
 
 _inlined_description: _
 
+\sa makeFrustumMatrix
 
 
 
@@ -1780,16 +1952,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofMatrix4x4 newIdentityMatrix(void)
+###ofMatrix4x4 newIdentityMatrix()
 
 <!--
-_syntax: newIdentityMatrix(void)_
+_syntax: newIdentityMatrix()_
 _name: newIdentityMatrix_
 _returns: ofMatrix4x4_
 _returns_description: _
-_parameters: void_
+_parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1800,6 +1972,7 @@ _advanced: False_
 
 _inlined_description: _
 
+\sa makeIdentityMatrix
 
 
 
@@ -1808,7 +1981,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -1838,6 +2010,7 @@ _advanced: False_
 
 _inlined_description: _
 
+\sa makeLookAtMatrix
 
 
 
@@ -1876,6 +2049,7 @@ _advanced: False_
 
 _inlined_description: _
 
+\sa makeOrtho2DMatrix
 
 
 
@@ -1914,6 +2088,7 @@ _advanced: False_
 
 _inlined_description: _
 
+\sa makeOrthoMatrix
 
 
 
@@ -1952,6 +2127,7 @@ _advanced: False_
 
 _inlined_description: _
 
+\sa makePerspectiveMatrix
 
 
 
@@ -1990,6 +2166,7 @@ _advanced: False_
 
 _inlined_description: _
 
+\sa makeRotationMatrix
 
 
 
@@ -2180,6 +2357,7 @@ _advanced: False_
 
 _inlined_description: _
 
+\sa makeScaleMatrix
 
 
 
@@ -2256,6 +2434,7 @@ _advanced: False_
 
 _inlined_description: _
 
+\sa makeTranslationMatrix
 
 
 
@@ -2332,6 +2511,7 @@ _advanced: False_
 
 _inlined_description: _
 
+The default constructor provides an identity matrix.
 
 
 
@@ -2370,6 +2550,7 @@ _advanced: False_
 
 _inlined_description: _
 
+You can pass another ofMatrix4x4 to create a copy.
 
 
 
@@ -2395,7 +2576,7 @@ _syntax: ofMatrix4x4(ptr)_
 _name: ofMatrix4x4_
 _returns: _
 _returns_description: _
-_parameters: float const *const ptr_
+_parameters: const float *const ptr_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -2408,6 +2589,13 @@ _advanced: False_
 
 _inlined_description: _
 
+Construct with a pointer.
+
+You can pass a pointer to floats, and the first 16 contents will be
+extracted into this matrix.
+
+
+warning:the validity of these values is not checked!
 
 
 
@@ -2446,6 +2634,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Rotation matrices can be constructed from a quaternion.
 
 
 
@@ -2484,44 +2673,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Positional style.
 
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float & operator()(row, col)
-
-<!--
-_syntax: operator()(row, col)_
-_name: operator()_
-_returns: float &_
-_returns_description: _
-_parameters: int row, int col_
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
+All 16 values of the matrix as positional arguments in row-major order.
 
 
 
@@ -2547,7 +2701,85 @@ _syntax: operator()(row, col)_
 _name: operator()_
 _returns: float_
 _returns_description: _
-_parameters: int row, int col_
+_parameters: size_t row, size_t col_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Read data with `matrix(row, col)`
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float operator()(row, col)
+
+<!--
+_syntax: operator()(row, col)_
+_name: operator()_
+_returns: float_
+_returns_description: _
+_parameters: size_t row, size_t col_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Read data with `matrix(row, col)`
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofMatrix4x4 operator*(&m)
+
+<!--
+_syntax: operator*(&m)_
+_name: operator*_
+_returns: ofMatrix4x4_
+_returns_description: _
+_parameters: const ofMatrix4x4 &m_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -2560,6 +2792,7 @@ _advanced: False_
 
 _inlined_description: _
 
+creates a new matrix from the product of two matrices.
 
 
 
@@ -2598,6 +2831,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Matrix * Vector operator.
+
+Calls postMult() internally.
 
 
 
@@ -2654,44 +2890,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofMatrix4x4 operator*(&m)
-
-<!--
-_syntax: operator*(&m)_
-_name: operator*_
-_returns: ofMatrix4x4_
-_returns_description: _
-_parameters: const ofMatrix4x4 &m_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void operator*=(&other)
 
 <!--
@@ -2712,6 +2910,11 @@ _advanced: False_
 
 _inlined_description: _
 
+The *= operation for matrices.
+
+This is equivalent to calling postMult(other), but it allows you to do
+someMatrix *= someMatrix without breaking const-correctness. Calling
+someMatrix.postMult(someMatrix) won't work.
 
 
 
@@ -2750,6 +2953,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Copy a matrix using `=` operator.
 
 
 
@@ -2788,6 +2992,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Matrix * vector multiplication.
+
+This operation implicitly treat vectors as column-matrices.
 
 
 
@@ -2826,6 +3033,8 @@ _advanced: False_
 
 _inlined_description: _
 
+post-multiplies the vector by the matrix (i.e. returns M mult v).
+The vector is implicitly treated as a column-matrix
 
 
 
@@ -2864,6 +3073,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Post-multiply by another matrix.
+
+This matrix becomes `this * other`.
 
 
 
@@ -2902,6 +3114,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Equivalent to postMult(newRotationMatrix(q)).
 
 
 
@@ -2978,6 +3191,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Equivalent to postMult(scale(v)).
 
 
 
@@ -3054,6 +3268,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Equivalent to postMult(newTranslationMatrix(v)).
 
 
 
@@ -3092,6 +3307,7 @@ _advanced: False_
 
 _inlined_description: _
 
+the positional argument version of the above
 
 
 
@@ -3130,6 +3346,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Vector * matrix multiplication.
+
+This operation implicitly treats vectors as row-matrices.
 
 
 
@@ -3168,6 +3387,8 @@ _advanced: False_
 
 _inlined_description: _
 
+pre-multiplies the vector by the matrix (i.e. returns v mult M)
+The vector is implicitly treated as a row-matrix
 
 
 
@@ -3206,6 +3427,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Pre-multiply by another matrix.
+
+This matrix becomes `other * this`.
 
 
 
@@ -3244,6 +3468,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Equivalent to preMult(newRotationMatrix(q)).
 
 
 
@@ -3282,6 +3507,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Equivalent to preMult(newScaleMatrix(v)).
 
 
 
@@ -3320,6 +3546,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Equivalent to preMult(newTranslationMatrix(v)).
 
 
 
@@ -3358,6 +3585,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Rotates by angle (degrees) around the given x, y, z axis.
 
 
 
@@ -3396,6 +3624,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Rotates based on the quarternion.
 
 
 
@@ -3434,6 +3663,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Rotates by angle (radians) around the given x, y, z axis.
 
 
 
@@ -3472,6 +3702,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Scales each axis by the corresponding x, y, z.
 
 
 
@@ -3510,6 +3741,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Scales each axis by the corresponding x, y, z of the vector.
 
 
 
@@ -3548,6 +3780,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Set the data of the matrix.
+
+These functions are analogous to the corresponding constructors.
 
 
 
@@ -3573,7 +3808,7 @@ _syntax: set(ptr)_
 _name: set_
 _returns: void_
 _returns_description: _
-_parameters: float const *const ptr_
+_parameters: const float *const ptr_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -3611,7 +3846,7 @@ _syntax: set(ptr)_
 _name: set_
 _returns: void_
 _returns_description: _
-_parameters: double const *const ptr_
+_parameters: const double *const ptr_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -3700,6 +3935,11 @@ _advanced: False_
 
 _inlined_description: _
 
+\name Set methods
+\{
+
+All of these methods alter the components,
+deleting the previous data only in that component.
 
 
 
@@ -3814,6 +4054,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Apply a 3x3 transform (no translation) of v * M.
 
 
 
@@ -3852,6 +4093,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Apply a 3x3 transform (no translation) of M * v.
 
 
 
@@ -3890,6 +4132,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Translates by tx, ty, tz.
 
 
 
@@ -3928,6 +4171,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Translates along the vector.
 
 
 
@@ -3966,6 +4210,7 @@ _advanced: False_
 
 _inlined_description: _
 
+destructor.
 
 
 
@@ -4001,6 +4246,10 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+The values of the matrix, stored in row-major order.
 
 _description: _
 

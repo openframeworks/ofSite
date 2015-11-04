@@ -120,6 +120,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Conjugate
 
 
 
@@ -196,6 +197,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Calculate and return the rotation as euler angles
 
 
 
@@ -234,6 +236,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Return the angle and vector components represented by the quaternion.
 
 
 
@@ -310,6 +313,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Multiplicative inverse method
+
+    q^(-1) = q^*/(q.q^*)
 
 
 
@@ -348,6 +354,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Length of the quaternion = sqrt(vec . vec)
 
 
 
@@ -386,6 +393,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Length of the quaternion = vec . vec
 
 
 
@@ -424,8 +432,10 @@ _advanced: False_
 
 _inlined_description: _
 
+\briefSet a quaternion which will perform a rotation of an
+angle around the axis given by the vector(x,y,z).
 
-Set the elements of the Quat to represent a rotation of angle (degrees) around the axis (x,y,z) 
+Define Spherical Linear interpolation method also
 
 
 
@@ -540,22 +550,11 @@ _advanced: False_
 
 _inlined_description: _
 
-
-Make a rotation Quat which will rotate vec1 to vec2
-
-This routine uses only fast geometric transforms, without costly acos/sin computations. It's exact, fast, and with less degenerate cases than the acos/sin method.
-
-For an explanation of the math used, you may see for example: [http://logiciels.cnes.fr/MARMOTTES/marmottes-mathematique.pdf](http://logiciels.cnes.fr/MARMOTTES/marmottes-mathematique.pdf)
-
-***note:*** 
-	This is the rotation with shortest angle, which is the one equivalent to the acos/sin transform method. Other rotations exists, for example to additionally keep a local horizontal attitude.
-
-
-***author:*** 
-	Nicolas Brodu 
-
-
-
+Make a rotation Quat which will rotate vec1 to vec2.
+Generally take a dot product to get the angle between these
+and then use a cross product to get the rotation axis
+Watch out for the two special cases when the vectors
+are co-incident or opposite in direction.
 
 
 
@@ -670,6 +669,8 @@ _advanced: False_
 
 _inlined_description: _
 
+\name Constructor
+\{
 
 
 
@@ -1468,6 +1469,8 @@ _advanced: False_
 
 _inlined_description: _
 
+\name Operators
+\{
 
 
 
@@ -1582,6 +1585,8 @@ _advanced: False_
 
 _inlined_description: _
 
+\name Getters
+\{
 
 
 
@@ -1658,6 +1663,8 @@ _advanced: False_
 
 _inlined_description: _
 
+\name Setters
+\{
 
 
 
@@ -1772,8 +1779,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Spherical Linear Interpolation.
 
-Spherical Linear Interpolation As t goes from 0 to 1, the Quat object goes from "from" to "to" Reference: Shoemake at SIGGRAPH 89 See also [http://www.gamasutra.com/features/programming/19980703/quaternions_01.htm](http://www.gamasutra.com/features/programming/19980703/quaternions_01.htm) 
+As t goes from 0 to 1, the Quat object goes from "from" to "to".
 
 
 
@@ -2116,6 +2124,8 @@ _advanced: False_
 
 _inlined_description: _
 
+return true if the Quat represents a zero rotation,
+and therefore can be ignored in computations.
 
 
 
@@ -2151,6 +2161,10 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+\cond INTERNAL
 
 _description: _
 

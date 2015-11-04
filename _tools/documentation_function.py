@@ -56,7 +56,7 @@ class DocsFunctionsFile:
                 parameters_names.append(p.split(' ')[len(p.split(' '))-1])
         return parameters_names
                 
-    def function_by_signature(self, name, returns, parameters):
+    def function_by_signature(self, name, returns, parameters, alternatives):
         function = DocsFunction(0)
         function.name = name
         function.parameters = parameters

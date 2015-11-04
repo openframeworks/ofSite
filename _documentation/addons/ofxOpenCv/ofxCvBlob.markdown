@@ -37,7 +37,7 @@ _syntax: draw(x = 0, y = 0)_
 _name: draw_
 _returns: void_
 _returns_description: _
-_parameters: float x=0, float y=0_
+_parameters: float x, float y_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -128,6 +128,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -154,6 +157,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -182,6 +188,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -208,6 +217,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -236,6 +248,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -263,6 +278,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -289,6 +307,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 

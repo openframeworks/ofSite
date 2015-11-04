@@ -9,6 +9,8 @@ _istemplated: False_
 
 ##InlineDescription
 
+Contains general information about the style of ofGraphics
+elements such as color, line width and others.
 
 
 
@@ -46,6 +48,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Create a default ofStyle.
 
 
 
@@ -84,6 +87,7 @@ _advanced: False_
 
 _inlined_description: _
 
+ Destroy the ofStyle.
 
 
 
@@ -120,6 +124,13 @@ _constant: False_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+True if the renderer should fill a rendered shape.
+
+If true, the renderer will fill the rendered shape.  If false, the
+renderer will draw the outline of the rendered shape.
+
 _description: _
 
 
@@ -147,6 +158,10 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+The background color used when rendering.
+
 _description: _
 
 
@@ -172,6 +187,10 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ The blending mode.
+
 _description: _
 
 
@@ -196,6 +215,9 @@ _visible: True_
 _constant: False_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -224,6 +246,12 @@ _constant: False_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+The color used when rendering.
+
+This style depends on the state of the ofStyle::bFill.
+
 _description: _
 
 
@@ -251,6 +279,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -276,6 +307,12 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+The render mode for bitmaps (e.g. ofDrawBitmapString).
+
+\sa ofDrawBitmapString(const T& textString, float x, float y)
+
 _description: _
 
 
@@ -300,6 +337,12 @@ _visible: True_
 _constant: False_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+The width of rendered lines.
+
+warning:This is not currently implemented in modern OF renderers.
 
 _description: _
 
@@ -327,6 +370,15 @@ _visible: True_
 _constant: False_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+The current rendering mode for polygons.
+
+ofPolyWindingMode determines how ovelapping parts of the same
+polygon are rendered.
+
+\sa ofPolyWindingMode
 
 _description: _
 
@@ -362,6 +414,17 @@ _constant: False_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+Determine how some shapes are anchored (e.g. ofDrawEllipse).
+
+The rectMode applies to several shapes, including ofDrawRectangle
+and ofDrawEllipse.  If the current rectMode is `OF_RECTMODE_CENTER`,
+the rendered shape will be drawn with x, y in the center of the
+shape. If the current rectMode is `OF_RECTMODE_CORNER`, the
+rendered shape will be drawn with the x, y in the upper-left-hand
+corner of the shape.
+
 _description: _
 
 
@@ -390,6 +453,10 @@ _constant: False_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+True if anti-aliasing is enabled.
+
 _description: _
 
 
@@ -416,6 +483,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 

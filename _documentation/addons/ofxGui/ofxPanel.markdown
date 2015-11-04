@@ -176,14 +176,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofxPanel(&parameters, filename = "settings.xml", x = 10, y = 10)
+### ofxPanel(&parameters, &filename, x, y)
 
 <!--
-_syntax: ofxPanel(&parameters, filename = "settings.xml", x = 10, y = 10)_
+_syntax: ofxPanel(&parameters, &filename, x, y)_
 _name: ofxPanel_
 _returns: _
 _returns_description: _
-_parameters: const ofParameterGroup &parameters, string filename="settings.xml", float x=10, float y=10_
+_parameters: const ofParameterGroup &parameters, const string &filename, float x, float y_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -290,14 +290,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofxPanel * setup(collectionName = "", filename = "settings.xml", x = 10, y = 10)
+###ofxPanel * setup(&collectionName, &filename, x, y)
 
 <!--
-_syntax: setup(collectionName = "", filename = "settings.xml", x = 10, y = 10)_
+_syntax: setup(&collectionName, &filename, x, y)_
 _name: setup_
 _returns: ofxPanel *_
 _returns_description: _
-_parameters: string collectionName="", string filename="settings.xml", float x=10, float y=10_
+_parameters: const string &collectionName, const string &filename, float x, float y_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -309,11 +309,16 @@ _advanced: False_
 -->
 
 _inlined_description: _
-Setup the panel.
+
+
+
+
+
 
 
 
 _description: _
+
 collectionName is a title that will appear at the top of the panel.
 
 Filename is the name of the xml file that will be used to read and write the panel settings. The default is "settings.xml" and this will be written to the root of your data folder. This file gets written when you click on the save icon in the top-right corner of the panel.
@@ -326,17 +331,16 @@ x and y positions define where on-screen the panel will be drawn. Default is 10 
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###ofxPanel * setup(&parameters, filename = "settings.xml", x = 10, y = 10)
+###ofxPanel * setup(&parameters, &filename, x, y)
 
 <!--
-_syntax: setup(&parameters, filename = "settings.xml", x = 10, y = 10)_
+_syntax: setup(&parameters, &filename, x, y)_
 _name: setup_
 _returns: ofxPanel *_
 _returns_description: _
-_parameters: const ofParameterGroup &parameters, string filename="settings.xml", float x=10, float y=10_
+_parameters: const ofParameterGroup &parameters, const string &filename, float x, float y_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -358,6 +362,43 @@ _inlined_description: _
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ~ofxPanel()
+
+<!--
+_syntax: ~ofxPanel()_
+_name: ~ofxPanel_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -385,6 +426,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -409,6 +453,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -435,6 +482,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -459,6 +509,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -485,6 +538,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -509,6 +565,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -535,6 +594,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -559,6 +621,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 

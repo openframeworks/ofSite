@@ -9,6 +9,9 @@ _istemplated: False_
 
 ##InlineDescription
 
+Derived log 
+
+Example: `ofLogFatalError("Log message")`.
 
 
 
@@ -31,7 +34,7 @@ _syntax: ofLogFatalError(&module = "OF")_
 _name: ofLogFatalError_
 _returns: _
 _returns_description: _
-_parameters: const string &module=""_
+_parameters: const string &module_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -44,6 +47,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Create a fatal error log message.
+Parameters:
+module The target module.
 
 
 
@@ -82,44 +88,10 @@ _advanced: False_
 
 _inlined_description: _
 
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofLogFatalError(&module, *format, ...)
-
-<!--
-_syntax: ofLogFatalError(&module, *format, ...)_
-_name: ofLogFatalError_
-_returns: _
-_returns_description: _
-_parameters: const string &module, const char *format,..._
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
+Create a fatal error log message.
+Parameters:
+module The target module.
+message The log message.
 
 
 

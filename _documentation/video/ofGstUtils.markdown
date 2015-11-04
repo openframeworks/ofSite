@@ -24,16 +24,16 @@ _istemplated: False_
 
 
 
-###GstFlowReturn buffer_cb(*buffer)
+###GstFlowReturn buffer_cb(buffer)
 
 <!--
-_syntax: buffer_cb(*buffer)_
+_syntax: buffer_cb(buffer)_
 _name: buffer_cb_
 _returns: GstFlowReturn_
 _returns_description: _
-_parameters: GstBuffer *buffer_
+_parameters: shared_ptr< GstSample > buffer_
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -52,7 +52,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -898,16 +897,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###GstFlowReturn preroll_cb(*buffer)
+###GstFlowReturn preroll_cb(buffer)
 
 <!--
-_syntax: preroll_cb(*buffer)_
+_syntax: preroll_cb(buffer)_
 _name: preroll_cb_
 _returns: GstFlowReturn_
 _returns_description: _
-_parameters: GstBuffer *buffer_
+_parameters: shared_ptr< GstSample > buffer_
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -927,6 +926,42 @@ _inlined_description: _
 
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void quitGstMainLoop()
+
+<!--
+_syntax: quitGstMainLoop()_
+_name: quitGstMainLoop_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: True_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1057,7 +1092,7 @@ _syntax: setPipelineWithSink(pipeline, sinkname = "sink", isStream = false)_
 _name: setPipelineWithSink_
 _returns: bool_
 _returns_description: _
-_parameters: string pipeline, string sinkname="sink", bool isStream=false_
+_parameters: string pipeline, string sinkname, bool isStream=false_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1448,6 +1483,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1472,6 +1510,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -1498,6 +1539,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1522,6 +1566,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -1548,6 +1595,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1573,6 +1623,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1584,22 +1637,51 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###GstBus * bus
+###guint busWatchID
 
 <!--
-_name: bus_
-_type: GstBus *_
+_name: busWatchID_
+_type: guint_
 _access: private_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
-_constant: True_
+_constant: False_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool closing
+
+<!--
+_name: closing_
+_type: bool_
+_access: protected_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+_description: _
 
 
 
@@ -1623,8 +1705,65 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###condition_variable eosCondition
+
+<!--
+_name: eosCondition_
+_type: condition_variable_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###mutex eosMutex
+
+<!--
+_name: eosMutex_
+_type: mutex_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+_description: _
 
 
 
@@ -1647,6 +1786,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -1673,6 +1815,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1697,6 +1842,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -1723,6 +1871,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1747,6 +1898,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -1773,6 +1927,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1797,6 +1954,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 

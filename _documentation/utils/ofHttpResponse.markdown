@@ -66,14 +66,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofHttpResponse(request, &data, status, error)
+### ofHttpResponse(&request, &data, status, &error)
 
 <!--
-_syntax: ofHttpResponse(request, &data, status, error)_
+_syntax: ofHttpResponse(&request, &data, status, &error)_
 _name: ofHttpResponse_
 _returns: _
 _returns_description: _
-_parameters: ofHttpRequest request, const ofBuffer &data, int status, string error_
+_parameters: const ofHttpRequest &request, const ofBuffer &data, int status, const string &error_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -104,52 +104,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofHttpResponse(request, status, error)
+### ofHttpResponse(&request, status, &error)
 
 <!--
-_syntax: ofHttpResponse(request, status, error)_
+_syntax: ofHttpResponse(&request, status, &error)_
 _name: ofHttpResponse_
 _returns: _
 _returns_description: _
-_parameters: ofHttpRequest request, int status, string error_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### operator ofBuffer &()
-
-<!--
-_syntax: operator ofBuffer &()_
-_name: operator ofBuffer &_
-_returns: _
-_returns_description: _
-_parameters: _
+_parameters: const ofHttpRequest &request, int status, const string &error_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -198,6 +160,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -222,6 +187,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -248,6 +216,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -272,6 +243,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 

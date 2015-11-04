@@ -1,0 +1,145 @@
+#class ofBaseHasTexturePlanes
+
+
+<!--
+_visible: True_
+_advanced: False_
+_istemplated: False_
+-->
+
+##InlineDescription
+
+An abstract 
+
+
+
+
+
+##Description
+
+
+
+
+
+##Methods
+
+
+
+###const vector< ofTexture > & getTexturePlanes()
+
+<!--
+_syntax: getTexturePlanes()_
+_name: getTexturePlanes_
+_returns: const vector< ofTexture > &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Returns: a const reference to a std::vector containing the ofTexture planes.
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const vector< ofTexture > & getTexturePlanes()
+
+<!--
+_syntax: getTexturePlanes()_
+_name: getTexturePlanes_
+_returns: const vector< ofTexture > &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Returns: a const reference to a std::vector containing the ofTexture planes.
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ~ofBaseHasTexturePlanes()
+
+<!--
+_syntax: ~ofBaseHasTexturePlanes()_
+_name: ~ofBaseHasTexturePlanes_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Destroy the ofBaseHasTexturePlanes.
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+##Variables
+
+
+

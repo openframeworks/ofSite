@@ -290,6 +290,43 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###bool mouseScrolled(&args)
+
+<!--
+_syntax: mouseScrolled(&args)_
+_name: mouseScrolled_
+_returns: bool_
+_returns_description: _
+_parameters: ofMouseEventArgs &args_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ### ofxToggle()
 
 <!--
@@ -335,45 +372,7 @@ _syntax: ofxToggle(_bVal, width = defaultWidth, height = defaultHeight)_
 _name: ofxToggle_
 _returns: _
 _returns_description: _
-_parameters: ofParameter< bool > _bVal, float width=defaultWidth, float height=defaultHeight_
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### operator const bool &()
-
-<!--
-_syntax: operator const bool &()_
-_name: operator const bool &_
-_returns: _
-_returns_description: _
-_parameters: _
+_parameters: ofParameter< bool > _bVal, float width, float height_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -563,7 +562,7 @@ _syntax: setup(_bVal, width = defaultWidth, height = defaultHeight)_
 _name: setup_
 _returns: ofxToggle *_
 _returns_description: _
-_parameters: ofParameter< bool > _bVal, float width=defaultWidth, float height=defaultHeight_
+_parameters: ofParameter< bool > _bVal, float width, float height_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -594,14 +593,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofxToggle * setup(toggleName, _bVal, width = defaultWidth, height = defaultHeight)
+###ofxToggle * setup(&toggleName, _bVal, width, height)
 
 <!--
-_syntax: setup(toggleName, _bVal, width = defaultWidth, height = defaultHeight)_
+_syntax: setup(&toggleName, _bVal, width, height)_
 _name: setup_
 _returns: ofxToggle *_
 _returns_description: _
-_parameters: string toggleName, bool _bVal, float width=defaultWidth, float height=defaultHeight_
+_parameters: const string &toggleName, bool _bVal, float width, float height_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -726,6 +725,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -750,6 +752,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -776,6 +781,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -800,6 +808,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -826,6 +837,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -851,6 +865,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -875,6 +892,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 

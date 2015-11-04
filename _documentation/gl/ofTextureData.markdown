@@ -9,10 +9,10 @@ _istemplated: False_
 
 ##InlineDescription
 
-Internal texture settings struct. 
+\
+Internal texture data structure.
 
-
-Used by ofTexture internally. You won't need to work with this in most cases. 
+Used by ofTexture internally. You won't need to work with this in most cases.
 
 
 
@@ -70,6 +70,34 @@ _description: _
 
 
 
+###shared_ptr< ofTexture > alphaMask
+
+<!--
+_name: alphaMask_
+_type: shared_ptr< ofTexture >_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+< Optional alpha mask to bind
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###bool bAllocated
 
 <!--
@@ -83,6 +111,10 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+< Has the texture been allocated?
 
 _description: _
 
@@ -109,6 +141,10 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+< Should the texture be flipped vertically?
+
 _description: _
 
 
@@ -134,8 +170,40 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+< Are we using an external texture ID?
+
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###unsigned int bufferId
+
+<!--
+_name: bufferId_
+_type: unsigned int_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+< Optionally if the texture is backed by a buffer so we can bind it
+
+_description: _
 
 
 
@@ -159,6 +227,10 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+< Texture compression type.
+
 _description: _
 
 
@@ -170,22 +242,54 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int glTypeInternal
+###int glInternalFormat
 
 <!--
-_name: glTypeInternal_
+_name: glInternalFormat_
 _type: int_
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
-_constant: True_
+_constant: False_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+< GL internal format, e.g. GL_RGB8.
+< \sa http://www.opengl.org/wiki/Image_Format
+
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool hasMipmap
+
+<!--
+_name: hasMipmap_
+_type: bool_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+< True if mipmap has been generated for this texture, false by default.
+
+_description: _
 
 
 
@@ -209,8 +313,68 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+< Texture display size.
+
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###GLint magFilter
+
+<!--
+_name: magFilter_
+_type: GLint_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+< Filter to use for magnification (enlargement).
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###GLint minFilter
+
+<!--
+_name: minFilter_
+_type: GLint_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+< Filter to use for minification (reduction).
+
+_description: _
 
 
 
@@ -233,6 +397,10 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+< Texture height (in pixels).
 
 _description: _
 
@@ -259,6 +427,10 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+< Texture horizontal coordinate, ratio of width to display width.
+
 _description: _
 
 
@@ -283,6 +455,10 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+< Texture vertical coordinate, ratio of height to display height.
 
 _description: _
 
@@ -309,6 +485,10 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+< Texture width (in pixels).
+
 _description: _
 
 
@@ -333,6 +513,10 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+< GL internal texture ID.
 
 _description: _
 
@@ -359,6 +543,10 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+< For required transformations.
+
 _description: _
 
 
@@ -383,6 +571,11 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+< GL texture type, either GL_TEXTURE_2D or
+< GL_TEXTURE_RECTANGLE_ARB.
 
 _description: _
 
@@ -409,6 +602,10 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+< Apply the transformation matrix?
+
 _description: _
 
 
@@ -434,8 +631,68 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+< Texture display size.
+
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###GLint wrapModeHorizontal
+
+<!--
+_name: wrapModeHorizontal_
+_type: GLint_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+< How will the texture wrap around horizontally?
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###GLint wrapModeVertical
+
+<!--
+_name: wrapModeVertical_
+_type: GLint_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+< How will the texture wrap around vertically?
+
+_description: _
 
 
 

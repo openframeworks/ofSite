@@ -40,6 +40,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -69,6 +70,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 
@@ -112,6 +114,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -148,8 +151,45 @@ _inlined_description: _
 
 
 
+
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const ofFloatColor & ofGetGlobalAmbientColor()
+
+<!--
+_syntax: ofGetGlobalAmbientColor()_
+_name: ofGetGlobalAmbientColor_
+_returns: const ofFloatColor &_
+_returns_description: _
+_parameters: _
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -184,6 +224,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -195,15 +236,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofSetGlobalAmbientColor(&c)
+###vector<weak_ptr< ofLight::Data>  > & ofLightsData()
 
 <!--
-_syntax: ofSetGlobalAmbientColor(&c)_
-_name: ofSetGlobalAmbientColor_
-_returns: void_
+_syntax: ofLightsData()_
+_name: ofLightsData_
+_returns: vector<weak_ptr< ofLight::Data>  > &_
 _returns_description: _
-_parameters: const ofColor &c_
-_version_started: _
+_parameters: _
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -220,8 +261,44 @@ _inlined_description: _
 
 
 
+
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofSetGlobalAmbientColor(&c)
+
+<!--
+_syntax: ofSetGlobalAmbientColor(&c)_
+_name: ofSetGlobalAmbientColor_
+_returns: void_
+_returns_description: _
+_parameters: const ofFloatColor &c_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -249,6 +326,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 

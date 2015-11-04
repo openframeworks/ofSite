@@ -9,6 +9,7 @@ _istemplated: False_
 
 ##InlineDescription
 
+A base 
 
 
 
@@ -24,16 +25,16 @@ _istemplated: False_
 
 
 
-###void audioIn(*input, bufferSize, nChannels, deviceID, tickCount)
+###void audioIn(&buffer)
 
 <!--
-_syntax: audioIn(*input, bufferSize, nChannels, deviceID, tickCount)_
+_syntax: audioIn(&buffer)_
 _name: audioIn_
 _returns: void_
 _returns_description: _
-_parameters: float *input, int bufferSize, int nChannels, int deviceID, long unsigned long tickCount_
+_parameters: ofSoundBuffer &buffer_
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -44,6 +45,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Receive an audio buffer.
+Parameters:
+buffer An audio buffer.
 
 
 
@@ -53,6 +57,44 @@ _inlined_description: _
 
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void audioIn(*input, bufferSize, nChannels, deviceID, tickCount)
+
+<!--
+_syntax: audioIn(*input, bufferSize, nChannels, deviceID, tickCount)_
+_name: audioIn_
+_returns: void_
+_returns_description: _
+_parameters: float *input, int bufferSize, int nChannels, int deviceID, unsigned long long tickCount_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+\deprecated This legacy method is deprecated and will be removed.
+Use void audioIn(ofSoundBuffer& buffer) instead.
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -82,6 +124,8 @@ _advanced: False_
 
 _inlined_description: _
 
+\deprecated This legacy method is deprecated and will be removed.
+Use void audioIn(ofSoundBuffer& buffer) instead.
 
 
 
@@ -120,6 +164,8 @@ _advanced: False_
 
 _inlined_description: _
 
+\deprecated This legacy method is deprecated and will be removed.
+Use void audioIn(ofSoundBuffer& buffer) instead.
 
 
 
@@ -158,6 +204,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Destroy the ofBaseSoundInput.
 
 
 

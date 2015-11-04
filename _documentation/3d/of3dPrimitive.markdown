@@ -9,6 +9,7 @@ _istemplated: False_
 
 ##InlineDescription
 
+A 
 
 
 
@@ -23,44 +24,6 @@ _istemplated: False_
 ##Methods
 
 
-
-###void clear()
-
-<!--
-_syntax: clear()_
-_name: clear_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
 
 ###void disableColors()
 
@@ -176,14 +139,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void draw()
+###void draw(renderType)
 
 <!--
-_syntax: draw()_
+_syntax: draw(renderType)_
 _name: draw_
 _returns: void_
 _returns_description: _
-_parameters: _
+_parameters: ofPolyRenderMode renderType_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -214,14 +177,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void draw(renderType)
+###void draw()
 
 <!--
-_syntax: draw(renderType)_
+_syntax: draw()_
 _name: draw_
 _returns: void_
 _returns_description: _
-_parameters: ofPolyRenderMode renderType_
+_parameters: _
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -594,12 +557,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofMesh & getMesh()
+###const ofMesh & getMesh()
 
 <!--
 _syntax: getMesh()_
 _name: getMesh_
-_returns: ofMesh &_
+_returns: const ofMesh &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -632,12 +595,50 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofMesh * getMeshPtr()
+###const ofMesh & getMesh()
+
+<!--
+_syntax: getMesh()_
+_name: getMesh_
+_returns: const ofMesh &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const ofMesh * getMeshPtr()
 
 <!--
 _syntax: getMeshPtr()_
 _name: getMeshPtr_
-_returns: ofMesh *_
+_returns: const ofMesh *_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -670,12 +671,50 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec4f & getTexCoords()
+###const ofMesh * getMeshPtr()
+
+<!--
+_syntax: getMeshPtr()_
+_name: getMeshPtr_
+_returns: const ofMesh *_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const ofVec4f & getTexCoords()
 
 <!--
 _syntax: getTexCoords()_
 _name: getTexCoords_
-_returns: ofVec4f &_
+_returns: const ofVec4f &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -708,12 +747,88 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec4f * getTexCoordsPtr()
+###const ofVec4f & getTexCoords()
+
+<!--
+_syntax: getTexCoords()_
+_name: getTexCoords_
+_returns: const ofVec4f &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const ofVec4f * getTexCoordsPtr()
 
 <!--
 _syntax: getTexCoordsPtr()_
 _name: getTexCoordsPtr_
-_returns: ofVec4f *_
+_returns: const ofVec4f *_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const ofVec4f * getTexCoordsPtr()
+
+<!--
+_syntax: getTexCoordsPtr()_
+_name: getTexCoordsPtr_
+_returns: const ofVec4f *_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1012,6 +1127,43 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+### of3dPrimitive(&mesh)
+
+<!--
+_syntax: of3dPrimitive(&mesh)_
+_name: of3dPrimitive_
+_returns: _
+_returns_description: _
+_parameters: const ofMesh &mesh_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ### of3dPrimitive(&mom)
 
 <!--
@@ -1058,82 +1210,6 @@ _name: operator=_
 _returns: of3dPrimitive &_
 _returns_description: _
 _parameters: const of3dPrimitive &mom_
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void removeMesh(index)
-
-<!--
-_syntax: removeMesh(index)_
-_name: removeMesh_
-_returns: void_
-_returns_description: _
-_parameters: int index_
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void removeTexture(index)
-
-<!--
-_syntax: removeTexture(index)_
-_name: removeTexture_
-_returns: void_
-_returns_description: _
-_parameters: int index_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -1258,6 +1334,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1282,6 +1361,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -1308,6 +1390,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1332,6 +1417,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 

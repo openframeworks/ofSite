@@ -38,46 +38,6 @@ This renderer does not work so well with mobile devices (more specifically with 
 
 
 
-###bool bClearBg()
-
-<!--
-_syntax: bClearBg()_
-_name: bClearBg_
-_returns: bool_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Whether you want to clear the background or not.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void background(&c)
 
 <!--
@@ -236,6 +196,339 @@ See [ofBackground](ofGraphics.html#show_ofBackground)
 
 <!----------------------------------------------------------------------------->
 
+###void begin(&fbo, setupPerspective)
+
+<!--
+_syntax: begin(&fbo, setupPerspective)_
+_name: begin_
+_returns: void_
+_returns_description: _
+_parameters: const ofFbo &fbo, bool setupPerspective_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void bind(&video)
+
+<!--
+_syntax: bind(&video)_
+_name: bind_
+_returns: void_
+_returns_description: _
+_parameters: const ofBaseVideoDraws &video_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void bind(&material)
+
+<!--
+_syntax: bind(&material)_
+_name: bind_
+_returns: void_
+_returns_description: _
+_parameters: const ofBaseMaterial &material_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void bind(&shader)
+
+<!--
+_syntax: bind(&shader)_
+_name: bind_
+_returns: void_
+_returns_description: _
+_parameters: const ofShader &shader_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void bind(&texture, location)
+
+<!--
+_syntax: bind(&texture, location)_
+_name: bind_
+_returns: void_
+_returns_description: _
+_parameters: const ofTexture &texture, int location_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void bind(&camera, &viewport)
+
+<!--
+_syntax: bind(&camera, &viewport)_
+_name: bind_
+_returns: void_
+_returns_description: _
+_parameters: const ofCamera &camera, const ofRectangle &viewport_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void bind(&fbo)
+
+<!--
+_syntax: bind(&fbo)_
+_name: bind_
+_returns: void_
+_returns_description: _
+_parameters: const ofFbo &fbo_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void bindForBlitting(&fboSrc, &fboDst, attachmentPoint)
+
+<!--
+_syntax: bindForBlitting(&fboSrc, &fboDst, attachmentPoint)_
+_name: bindForBlitting_
+_returns: void_
+_returns_description: _
+_parameters: const ofFbo &fboSrc, ofFbo &fboDst, int attachmentPoint_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void clear()
+
+<!--
+_syntax: clear()_
+_name: clear_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void clear(r, g, b, a = 0)
 
 <!--
@@ -243,7 +536,7 @@ _syntax: clear(r, g, b, a = 0)_
 _name: clear_
 _returns: void_
 _returns_description: _
-_parameters: float r, float g, float b, float a=0_
+_parameters: float r, float g, float b, float a_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -283,7 +576,7 @@ _syntax: clear(brightness, a = 0)_
 _name: clear_
 _returns: void_
 _returns_description: _
-_parameters: float brightness, float a=0_
+_parameters: float brightness, float a_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -356,6 +649,43 @@ See [ofClear](ofGraphics.html#show_ofClear)
 
 <!----------------------------------------------------------------------------->
 
+###void disableAlphaMask()
+
+<!--
+_syntax: disableAlphaMask()_
+_name: disableAlphaMask_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void disableAntiAliasing()
 
 <!--
@@ -387,6 +717,80 @@ _description: _
 
 
 See [ofDisableAntiAliasing](ofGraphics.html#show_ofDisableAntiAliasing)
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void disableLight(lightIndex)
+
+<!--
+_syntax: disableLight(lightIndex)_
+_name: disableLight_
+_returns: void_
+_returns_description: _
+_parameters: int lightIndex_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void disableLighting()
+
+<!--
+_syntax: disableLighting()_
+_name: disableLighting_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -434,16 +838,53 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void disableTextureTarget(textureTarget)
+###void disableSeparateSpecularLight()
 
 <!--
-_syntax: disableTextureTarget(textureTarget)_
+_syntax: disableSeparateSpecularLight()_
+_name: disableSeparateSpecularLight_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void disableTextureTarget(textureTarget, textureLocation)
+
+<!--
+_syntax: disableTextureTarget(textureTarget, textureLocation)_
 _name: disableTextureTarget_
 _returns: void_
 _returns_description: _
-_parameters: int textureTarget_
+_parameters: int textureTarget, int textureLocation_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -469,57 +910,16 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###void draw(&vertexData, useColors = true, useTextures = true, useNormals = true)
+###void draw(&vertexData, renderType, useColors, useTextures, useNormals)
 
 <!--
-_syntax: draw(&vertexData, useColors = true, useTextures = true, useNormals = true)_
+_syntax: draw(&vertexData, renderType, useColors, useTextures, useNormals)_
 _name: draw_
 _returns: void_
 _returns_description: _
-_parameters: ofMesh &vertexData, bool useColors=true, bool useTextures=true, bool useNormals=true_
-_access: public_
-_version_started: 0071_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Draws an ofMesh.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void draw(&vertexData, renderType, useColors = true, useTextures = true, useNormals = true)
-
-<!--
-_syntax: draw(&vertexData, renderType, useColors = true, useTextures = true, useNormals = true)_
-_name: draw_
-_returns: void_
-_returns_description: _
-_parameters: ofMesh &vertexData, ofPolyRenderMode renderType, bool useColors=true, bool useTextures=true, bool useNormals=true_
+_parameters: const ofMesh &vertexData, ofPolyRenderMode renderType, bool useColors, bool useTextures, bool useNormals_
 _access: public_
 _version_started: 0071_
 _version_deprecated: _
@@ -559,7 +959,7 @@ _syntax: draw(&model, renderType)_
 _name: draw_
 _returns: void_
 _returns_description: _
-_parameters: of3dPrimitive &model, ofPolyRenderMode renderType_
+_parameters: const of3dPrimitive &model, ofPolyRenderMode renderType_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -592,6 +992,43 @@ Draws a of3dPrimitive. Called internally.
 
 <!----------------------------------------------------------------------------->
 
+###void draw(&model)
+
+<!--
+_syntax: draw(&model)_
+_name: draw_
+_returns: void_
+_returns_description: _
+_parameters: const ofNode &model_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void draw(&poly)
 
 <!--
@@ -599,7 +1036,7 @@ _syntax: draw(&poly)_
 _name: draw_
 _returns: void_
 _returns_description: _
-_parameters: ofPolyline &poly_
+_parameters: const ofPolyline &poly_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -639,7 +1076,7 @@ _syntax: draw(&path)_
 _name: draw_
 _returns: void_
 _returns_description: _
-_parameters: ofPath &path_
+_parameters: const ofPath &path_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -679,7 +1116,7 @@ _syntax: draw(&image, x, y, z, w, h, sx, sy, sw, sh)_
 _name: draw_
 _returns: void_
 _returns_description: _
-_parameters: ofImage &image, float x, float y, float z, float w, float h, float sx, float sy, float sw, float sh_
+_parameters: const ofImage &image, float x, float y, float z, float w, float h, float sx, float sy, float sw, float sh_
 _access: public_
 _version_started: 0071_
 _version_deprecated: _
@@ -719,7 +1156,7 @@ _syntax: draw(&image, x, y, z, w, h, sx, sy, sw, sh)_
 _name: draw_
 _returns: void_
 _returns_description: _
-_parameters: ofFloatImage &image, float x, float y, float z, float w, float h, float sx, float sy, float sw, float sh_
+_parameters: const ofFloatImage &image, float x, float y, float z, float w, float h, float sx, float sy, float sw, float sh_
 _access: public_
 _version_started: 0071_
 _version_deprecated: _
@@ -759,7 +1196,7 @@ _syntax: draw(&image, x, y, z, w, h, sx, sy, sw, sh)_
 _name: draw_
 _returns: void_
 _returns_description: _
-_parameters: ofShortImage &image, float x, float y, float z, float w, float h, float sx, float sy, float sw, float sh_
+_parameters: const ofShortImage &image, float x, float y, float z, float w, float h, float sx, float sy, float sw, float sh_
 _access: public_
 _version_started: 0071_
 _version_deprecated: _
@@ -783,6 +1220,154 @@ _description: _
 
 
 Draws an texture.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void draw(&image, x, y, z, w, h, sx, sy, sw, sh)
+
+<!--
+_syntax: draw(&image, x, y, z, w, h, sx, sy, sw, sh)_
+_name: draw_
+_returns: void_
+_returns_description: _
+_parameters: const ofTexture &image, float x, float y, float z, float w, float h, float sx, float sy, float sw, float sh_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void draw(&video, x, y, w, h)
+
+<!--
+_syntax: draw(&video, x, y, w, h)_
+_name: draw_
+_returns: void_
+_returns_description: _
+_parameters: const ofBaseVideoDraws &video, float x, float y, float w, float h_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void draw(&vbo, drawMode, first, total)
+
+<!--
+_syntax: draw(&vbo, drawMode, first, total)_
+_name: draw_
+_returns: void_
+_returns_description: _
+_parameters: const ofVbo &vbo, GLuint drawMode, int first, int total_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void draw(&mesh, renderType)
+
+<!--
+_syntax: draw(&mesh, renderType)_
+_name: draw_
+_returns: void_
+_returns_description: _
+_parameters: const ofVboMesh &mesh, ofPolyRenderMode renderType_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -832,6 +1417,80 @@ See [ofCircle](ofGraphics.html#show_ofCircle)
 
 <!----------------------------------------------------------------------------->
 
+###void drawElements(&vbo, drawMode, amt, offsetelements = 0)
+
+<!--
+_syntax: drawElements(&vbo, drawMode, amt, offsetelements = 0)_
+_name: drawElements_
+_returns: void_
+_returns_description: _
+_parameters: const ofVbo &vbo, GLuint drawMode, int amt, int offsetelements=0_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void drawElementsInstanced(&vbo, drawMode, amt, primCount)
+
+<!--
+_syntax: drawElementsInstanced(&vbo, drawMode, amt, primCount)_
+_name: drawElementsInstanced_
+_returns: void_
+_returns_description: _
+_parameters: const ofVbo &vbo, GLuint drawMode, int amt, int primCount_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void drawEllipse(x, y, z, width, height)
 
 <!--
@@ -863,6 +1522,80 @@ _description: _
 
 
 See [ofEllipse](ofGraphics.html#show_ofEllipse)
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void drawInstanced(&vbo, drawMode, first, total, primCount)
+
+<!--
+_syntax: drawInstanced(&vbo, drawMode, first, total, primCount)_
+_name: drawInstanced_
+_returns: void_
+_returns_description: _
+_parameters: const ofVbo &vbo, GLuint drawMode, int first, int total, int primCount_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void drawInstanced(&mesh, renderType, primCount)
+
+<!--
+_syntax: drawInstanced(&mesh, renderType, primCount)_
+_name: drawInstanced_
+_returns: void_
+_returns_description: _
+_parameters: const ofVboMesh &mesh, ofPolyRenderMode renderType, int primCount_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -952,16 +1685,16 @@ See [ofRect](ofGraphics.html#show_ofRect)
 
 <!----------------------------------------------------------------------------->
 
-###void drawString(text, x, y, z, mode)
+###void drawString(text, x, y, z)
 
 <!--
-_syntax: drawString(text, x, y, z, mode)_
+_syntax: drawString(text, x, y, z)_
 _name: drawString_
 _returns: void_
 _returns_description: _
-_parameters: string text, float x, float y, float z, ofDrawBitmapMode mode_
+_parameters: string text, float x, float y, float z_
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -982,7 +1715,41 @@ _inlined_description: _
 _description: _
 
 
-Draws a characters to the screen.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void drawString(&font, text, x, y)
+
+<!--
+_syntax: drawString(&font, text, x, y)_
+_name: drawString_
+_returns: void_
+_returns_description: _
+_parameters: const ofTrueTypeFont &font, string text, float x, float y_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1072,6 +1839,80 @@ See [ofEnableAntiAliasing](ofGraphics.html#show_ofEnableAntiAliasing)
 
 <!----------------------------------------------------------------------------->
 
+###void enableLight(lightIndex)
+
+<!--
+_syntax: enableLight(lightIndex)_
+_name: enableLight_
+_returns: void_
+_returns_description: _
+_parameters: int lightIndex_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void enableLighting()
+
+<!--
+_syntax: enableLighting()_
+_name: enableLighting_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void enablePointSprites()
 
 <!--
@@ -1110,16 +1951,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void enableTextureTarget(textureTarget)
+###void enableSeparateSpecularLight()
 
 <!--
-_syntax: enableTextureTarget(textureTarget)_
-_name: enableTextureTarget_
+_syntax: enableSeparateSpecularLight()_
+_name: enableSeparateSpecularLight_
 _returns: void_
 _returns_description: _
-_parameters: int textureTarget_
+_parameters: _
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1139,6 +1980,79 @@ _inlined_description: _
 
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void enableTextureTarget(&tex, textureLocation)
+
+<!--
+_syntax: enableTextureTarget(&tex, textureLocation)_
+_name: enableTextureTarget_
+_returns: void_
+_returns_description: _
+_parameters: const ofTexture &tex, int textureLocation_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void end(&fbo)
+
+<!--
+_syntax: end(&fbo)_
+_name: end_
+_returns: void_
+_returns_description: _
+_parameters: const ofFbo &fbo_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1186,16 +2100,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofFloatColor & getBgColor()
+###void finishRender()
 
 <!--
-_syntax: getBgColor()_
-_name: getBgColor_
-_returns: ofFloatColor &_
+_syntax: finishRender()_
+_name: finishRender_
+_returns: void_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1215,6 +2129,153 @@ _inlined_description: _
 
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###of3dGraphics & get3dGraphics()
+
+<!--
+_syntax: get3dGraphics()_
+_name: get3dGraphics_
+_returns: of3dGraphics &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###of3dGraphics & get3dGraphics()
+
+<!--
+_syntax: get3dGraphics()_
+_name: get3dGraphics_
+_returns: of3dGraphics &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool getBackgroundAuto()
+
+<!--
+_syntax: getBackgroundAuto()_
+_name: getBackgroundAuto_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor getBackgroundColor()
+
+<!--
+_syntax: getBackgroundColor()_
+_name: getBackgroundColor_
+_returns: ofColor_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1284,18 +2345,43 @@ _advanced: False_
 
 _inlined_description: _
 
-Queries the current OpenGL matrix state  Returns the specified matrix as held by the renderer's current matrix stack.
-
-
-    You can query one of the following:
-
-    [OF_MATRIX_MODELVIEW | OF_MATRIX_PROJECTION | OF_MATRIX_TEXTURE]
-
-    Each query will return the state of the matrix
-    as it was uploaded to the shader currently bound.
 
 
 
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofMatrix4x4 getCurrentNormalMatrix()
+
+<!--
+_syntax: getCurrentNormalMatrix()_
+_name: getCurrentNormalMatrix_
+_returns: ofMatrix4x4_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
 
 
 
@@ -1306,6 +2392,79 @@ Queries the current OpenGL matrix state  Returns the specified matrix as held by
 
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofMatrix4x4 getCurrentOrientationMatrix()
+
+<!--
+_syntax: getCurrentOrientationMatrix()_
+_name: getCurrentOrientationMatrix_
+_returns: ofMatrix4x4_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofMatrix4x4 getCurrentViewMatrix()
+
+<!--
+_syntax: getCurrentViewMatrix()_
+_name: getCurrentViewMatrix_
+_returns: ofMatrix4x4_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1395,6 +2554,117 @@ See [ofGetFill](ofGraphics.html#show_ofGetFill)
 
 <!----------------------------------------------------------------------------->
 
+###int getGLVersionMajor()
+
+<!--
+_syntax: getGLVersionMajor()_
+_name: getGLVersionMajor_
+_returns: int_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int getGLVersionMinor()
+
+<!--
+_syntax: getGLVersionMinor()_
+_name: getGLVersionMinor_
+_returns: int_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool getLightingEnabled()
+
+<!--
+_syntax: getLightingEnabled()_
+_name: getLightingEnabled_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofRectangle getNativeViewport()
 
 <!--
@@ -1435,6 +2705,43 @@ See [ofGetNativeViewport](ofGraphics.html#show_ofGetNativeViewport)
 
 <!----------------------------------------------------------------------------->
 
+###ofPath & getPath()
+
+<!--
+_syntax: getPath()_
+_name: getPath_
+_returns: ofPath &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofRectMode getRectMode()
 
 <!--
@@ -1466,6 +2773,43 @@ _description: _
 
 
 See [ofGetRectMode](ofGraphics.html#show_ofGetRectMode)
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofStyle getStyle()
+
+<!--
+_syntax: getStyle()_
+_name: getStyle_
+_returns: ofStyle_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1633,16 +2977,16 @@ See [ofIsVFlipped](ofGraphics.html#show_ofIsVFlipped)
 
 <!----------------------------------------------------------------------------->
 
-###void loadIdentityMatrix(void)
+###void loadIdentityMatrix()
 
 <!--
-_syntax: loadIdentityMatrix(void)_
+_syntax: loadIdentityMatrix()_
 _name: loadIdentityMatrix_
 _returns: void_
 _returns_description: _
-_parameters: void_
+_parameters: _
 _access: public_
-_version_started: 0072_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1661,9 +3005,6 @@ _inlined_description: _
 
 
 _description: _
-
-
-See [ofLoadIdentityMatrix](ofGraphics.html#show_ofLoadIdentityMatrix)
 
 
 
@@ -1744,6 +3085,43 @@ _description: _
 
 
 See [ofLoadMatrix](ofGraphics.html#show_ofLoadMatrix)
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void loadViewMatrix(&m)
+
+<!--
+_syntax: loadViewMatrix(&m)_
+_name: loadViewMatrix_
+_returns: void_
+_returns_description: _
+_parameters: const ofMatrix4x4 &m_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1867,16 +3245,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofGLRenderer(useShapeColor = true)
+###void multViewMatrix(&m)
 
 <!--
-_syntax: ofGLRenderer(useShapeColor = true)_
-_name: ofGLRenderer_
-_returns: _
+_syntax: multViewMatrix(&m)_
+_name: multViewMatrix_
+_returns: void_
 _returns_description: _
-_parameters: bool useShapeColor=true_
+_parameters: const ofMatrix4x4 &m_
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1896,6 +3274,42 @@ _inlined_description: _
 
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofGLRenderer(*window)
+
+<!--
+_syntax: ofGLRenderer(*window)_
+_name: ofGLRenderer_
+_returns: _
+_returns_description: _
+_parameters: const ofAppBaseWindow *window_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1936,6 +3350,43 @@ _description: _
 
 
 See [ofPopMatrix](ofGraphics.html#show_ofPopMatrix)
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void popStyle()
+
+<!--
+_syntax: popStyle()_
+_name: popStyle_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2023,16 +3474,16 @@ See [ofPushMatrix](ofGraphics.html#show_ofPushMatrix)
 
 <!----------------------------------------------------------------------------->
 
-###void pushView()
+###void pushStyle()
 
 <!--
-_syntax: pushView()_
-_name: pushView_
+_syntax: pushStyle()_
+_name: pushStyle_
 _returns: void_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2058,15 +3509,14 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###bool rendersPathPrimitives()
+###void pushView()
 
 <!--
-_syntax: rendersPathPrimitives()_
-_name: rendersPathPrimitives_
-_returns: bool_
+_syntax: pushView()_
+_name: pushView_
+_returns: void_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -2299,6 +3749,80 @@ See [ofRotate](ofGraphics.html#show_ofRotate)
 
 <!----------------------------------------------------------------------------->
 
+###void saveFullViewport(&pixels)
+
+<!--
+_syntax: saveFullViewport(&pixels)_
+_name: saveFullViewport_
+_returns: void_
+_returns_description: _
+_parameters: ofPixels &pixels_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void saveScreen(x, y, w, h, &pixels)
+
+<!--
+_syntax: saveScreen(x, y, w, h, &pixels)_
+_name: saveScreen_
+_returns: void_
+_returns_description: _
+_parameters: int x, int y, int w, int h, ofPixels &pixels_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void scale(xAmnt, yAmnt, zAmnt = 1)
 
 <!--
@@ -2306,7 +3830,7 @@ _syntax: scale(xAmnt, yAmnt, zAmnt = 1)_
 _name: scale_
 _returns: void_
 _returns_description: _
-_parameters: float xAmnt, float yAmnt, float zAmnt=1_
+_parameters: float xAmnt, float yAmnt, float zAmnt_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -2330,6 +3854,43 @@ _description: _
 
 
 See [ofScale](../graphics/ofGraphics.html#show_ofScale)
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setAlphaMaskTex(&tex)
+
+<!--
+_syntax: setAlphaMaskTex(&tex)_
+_name: setAlphaMaskTex_
+_returns: void_
+_returns_description: _
+_parameters: const ofTexture &tex_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2368,6 +3929,80 @@ _inlined_description: _
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setBackgroundColor(&c)
+
+<!--
+_syntax: setBackgroundColor(&c)_
+_name: setBackgroundColor_
+_returns: void_
+_returns_description: _
+_parameters: const ofColor &c_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setBitmapTextMode(mode)
+
+<!--
+_syntax: setBitmapTextMode(mode)_
+_name: setBitmapTextMode_
+_returns: void_
+_returns_description: _
+_parameters: ofDrawBitmapMode mode_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2697,16 +4332,16 @@ See [ofSetCoordHandedness](ofGraphics.html#show_ofSetCoordHandedness)
 
 <!----------------------------------------------------------------------------->
 
-###void setCurrentFBO(*fbo)
+###void setCurveResolution(resolution)
 
 <!--
-_syntax: setCurrentFBO(*fbo)_
-_name: setCurrentFBO_
+_syntax: setCurveResolution(resolution)_
+_name: setCurveResolution_
 _returns: void_
 _returns_description: _
-_parameters: ofFbo *fbo_
+_parameters: int resolution_
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2725,7 +4360,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -2813,6 +4447,43 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void setGlobalAmbientColor(&c)
+
+<!--
+_syntax: setGlobalAmbientColor(&c)_
+_name: setGlobalAmbientColor_
+_returns: void_
+_returns_description: _
+_parameters: const ofColor &c_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void setHexColor(hexColor)
 
 <!--
@@ -2844,6 +4515,302 @@ _description: _
 
 
 See [ofSetColor](ofGraphics.html#show_ofSetColor)
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setLightAmbientColor(lightIndex, &c)
+
+<!--
+_syntax: setLightAmbientColor(lightIndex, &c)_
+_name: setLightAmbientColor_
+_returns: void_
+_returns_description: _
+_parameters: int lightIndex, const ofFloatColor &c_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setLightAttenuation(lightIndex, constant, linear, quadratic)
+
+<!--
+_syntax: setLightAttenuation(lightIndex, constant, linear, quadratic)_
+_name: setLightAttenuation_
+_returns: void_
+_returns_description: _
+_parameters: int lightIndex, float constant, float linear, float quadratic_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setLightDiffuseColor(lightIndex, &c)
+
+<!--
+_syntax: setLightDiffuseColor(lightIndex, &c)_
+_name: setLightDiffuseColor_
+_returns: void_
+_returns_description: _
+_parameters: int lightIndex, const ofFloatColor &c_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setLightPosition(lightIndex, &position)
+
+<!--
+_syntax: setLightPosition(lightIndex, &position)_
+_name: setLightPosition_
+_returns: void_
+_returns_description: _
+_parameters: int lightIndex, const ofVec4f &position_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setLightSpecularColor(lightIndex, &c)
+
+<!--
+_syntax: setLightSpecularColor(lightIndex, &c)_
+_name: setLightSpecularColor_
+_returns: void_
+_returns_description: _
+_parameters: int lightIndex, const ofFloatColor &c_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setLightSpotConcentration(lightIndex, exponent)
+
+<!--
+_syntax: setLightSpotConcentration(lightIndex, exponent)_
+_name: setLightSpotConcentration_
+_returns: void_
+_returns_description: _
+_parameters: int lightIndex, float exponent_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setLightSpotDirection(lightIndex, &direction)
+
+<!--
+_syntax: setLightSpotDirection(lightIndex, &direction)_
+_name: setLightSpotDirection_
+_returns: void_
+_returns_description: _
+_parameters: int lightIndex, const ofVec4f &direction_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setLightSpotlightCutOff(lightIndex, spotCutOff)
+
+<!--
+_syntax: setLightSpotlightCutOff(lightIndex, spotCutOff)_
+_name: setLightSpotlightCutOff_
+_returns: void_
+_returns_description: _
+_parameters: int lightIndex, float spotCutOff_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2969,6 +4936,43 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void setPolyMode(mode)
+
+<!--
+_syntax: setPolyMode(mode)_
+_name: setPolyMode_
+_returns: void_
+_returns_description: _
+_parameters: ofPolyWindingMode mode_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void setRectMode(mode)
 
 <!--
@@ -3000,6 +5004,117 @@ _description: _
 
 
 See [ofSetRectMode](ofGraphics.html#show_ofSetRectMode)
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setSmoothLighting(b)
+
+<!--
+_syntax: setSmoothLighting(b)_
+_name: setSmoothLighting_
+_returns: void_
+_returns_description: _
+_parameters: bool b_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setStyle(&style)
+
+<!--
+_syntax: setStyle(&style)_
+_name: setStyle_
+_returns: void_
+_returns_description: _
+_parameters: const ofStyle &style_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setup()
+
+<!--
+_syntax: setup()_
+_name: setup_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -3094,7 +5209,7 @@ _syntax: setupScreenOrtho(width = 0, height = 0, nearDist = -1, farDist = 1)_
 _name: setupScreenOrtho_
 _returns: void_
 _returns_description: _
-_parameters: float width=0, float height=0, float nearDist=-1, float farDist=1_
+_parameters: float width, float height, float nearDist, float farDist_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -3134,7 +5249,7 @@ _syntax: setupScreenPerspective(width = 0, height = 0, fov = 60, nearDist = 0, f
 _name: setupScreenPerspective_
 _returns: void_
 _returns_description: _
-_parameters: float width=0, float height=0, float fov=60, float nearDist=0, float farDist=0_
+_parameters: float width, float height, float fov, float nearDist, float farDist_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -3158,6 +5273,43 @@ _description: _
 
 
 See [ofSetupScreenPerspective](ofGraphics.html#show_ofSetupScreenPerspective)
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void startRender()
+
+<!--
+_syntax: startRender()_
+_name: startRender_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -3250,7 +5402,7 @@ _syntax: translate(x, y, z = 0)_
 _name: translate_
 _returns: void_
 _returns_description: _
-_parameters: float x, float y, float z=0_
+_parameters: float x, float y, float z_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -3323,16 +5475,16 @@ See [ofTranslate](ofGraphics.html#show_ofTranslate)
 
 <!----------------------------------------------------------------------------->
 
-###void update()
+###void unbind(&video)
 
 <!--
-_syntax: update()_
-_name: update_
+_syntax: unbind(&video)_
+_name: unbind_
 _returns: void_
 _returns_description: _
-_parameters: _
+_parameters: const ofBaseVideoDraws &video_
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -3352,6 +5504,190 @@ _inlined_description: _
 
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void unbind(&material)
+
+<!--
+_syntax: unbind(&material)_
+_name: unbind_
+_returns: void_
+_returns_description: _
+_parameters: const ofBaseMaterial &material_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void unbind(&shader)
+
+<!--
+_syntax: unbind(&shader)_
+_name: unbind_
+_returns: void_
+_returns_description: _
+_parameters: const ofShader &shader_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void unbind(&texture, location)
+
+<!--
+_syntax: unbind(&texture, location)_
+_name: unbind_
+_returns: void_
+_returns_description: _
+_parameters: const ofTexture &texture, int location_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void unbind(&camera)
+
+<!--
+_syntax: unbind(&camera)_
+_name: unbind_
+_returns: void_
+_returns_description: _
+_parameters: const ofCamera &camera_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void unbind(&fbo)
+
+<!--
+_syntax: unbind(&fbo)_
+_name: unbind_
+_returns: void_
+_returns_description: _
+_parameters: const ofFbo &fbo_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -3406,7 +5742,7 @@ _syntax: viewport(x = 0, y = 0, width = 0, height = 0, invertY = true)_
 _name: viewport_
 _returns: void_
 _returns_description: _
-_parameters: float x=0, float y=0, float width=0, float height=0, bool vflip=ofIsVFlipped()_
+_parameters: float x, float y, float width, float height, bool vflip=true_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -3493,8 +5829,38 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int alphaMaskTextureTarget
+
+<!--
+_name: alphaMaskTextureTarget_
+_type: int_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+_description: _
 
 
 
@@ -3518,30 +5884,8 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool bSmoothHinted
-
-<!--
-_name: bSmoothHinted_
-_type: bool_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
 
 _description: _
 
@@ -3554,22 +5898,24 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofFloatColor bgColor
+###ofBitmapFont bitmapFont
 
 <!--
-_name: bgColor_
-_type: ofFloatColor_
+_name: bitmapFont_
+_type: ofBitmapFont_
 _access: private_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
-_constant: True_
+_constant: False_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+_description: _
 
 
 
@@ -3592,6 +5938,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -3618,6 +5967,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -3629,22 +5981,162 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofFillFlag fillFlag
+###GLuint currentFramebufferId
 
 <!--
-_name: fillFlag_
-_type: ofFillFlag_
+_name: currentFramebufferId_
+_type: GLuint_
 _access: private_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
-_constant: True_
+_constant: False_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+< the framebuffer id currently bound to the GL_FRAMEBUFFER target
+
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofStyle currentStyle
+
+<!--
+_name: currentStyle_
+_type: ofStyle_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###GLuint defaultFramebufferId
+
+<!--
+_name: defaultFramebufferId_
+_type: GLuint_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+< default GL_FRAMEBUFFER_BINDING, windowing frameworks might want to set this to their MSAA framebuffer, defaults to 0
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###deque< GLuint > framebufferIdStack
+
+<!--
+_name: framebufferIdStack_
+_type: deque< GLuint >_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+< keeps track of currently bound framebuffers
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###of3dGraphics graphics3d
+
+<!--
+_name: graphics3d_
+_type: of3dGraphics_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool lightingEnabled
+
+<!--
+_name: lightingEnabled_
+_type: bool_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+_description: _
 
 
 
@@ -3668,8 +6160,38 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool materialBound
+
+<!--
+_name: materialBound_
+_type: bool_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+_description: _
 
 
 
@@ -3693,6 +6215,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -3704,22 +6229,51 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofRectMode rectMode
+###bool normalsEnabled
 
 <!--
-_name: rectMode_
-_type: ofRectMode_
+_name: normalsEnabled_
+_type: bool_
 _access: private_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
-_constant: True_
+_constant: False_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofPath path
+
+<!--
+_name: path_
+_type: ofPath_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+_description: _
 
 
 
@@ -3743,8 +6297,65 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###deque< ofStyle > styleHistory
+
+<!--
+_name: styleHistory_
+_type: deque< ofStyle >_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###set< int > textureLocationsEnabled
+
+<!--
+_name: textureLocationsEnabled_
+_type: set< int >_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+_description: _
 
 
 
@@ -3768,8 +6379,38 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const ofAppBaseWindow * window
+
+<!--
+_name: window_
+_type: const ofAppBaseWindow *_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+_description: _
 
 
 

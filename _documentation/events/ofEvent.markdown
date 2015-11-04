@@ -9,6 +9,7 @@ _istemplated: False_
 
 ##InlineDescription
 
+/*! \endcond */
 
 
 
@@ -74,16 +75,16 @@ vector< ofEvent<int>* > events;
 
 
 
-### ofEvent()
+###void add(*listener, method, priority)
 
 <!--
-_syntax: ofEvent()_
-_name: ofEvent_
-_returns: _
+_syntax: add(*listener, method, priority)_
+_name: add_
+_returns: void_
 _returns_description: _
-_parameters: _
+_parameters: TObj *listener, TMethod method, int priority_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -102,7 +103,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -112,16 +112,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofEvent(&mom)
+###void add(function, priority)
 
 <!--
-_syntax: ofEvent(&mom)_
-_name: ofEvent_
-_returns: _
+_syntax: add(function, priority)_
+_name: add_
+_returns: void_
 _returns_description: _
-_parameters: const ofEvent< ArgumentsType > &mom_
+_parameters: TFunction function, int priority_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -140,7 +140,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -150,16 +149,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofEvent< ArgumentsType > & operator=(&mom)
+###FunctionPtr make_function(*listener, method, priority)
 
 <!--
-_syntax: operator=(&mom)_
-_name: operator=_
-_returns: ofEvent< ArgumentsType > &_
+_syntax: make_function(*listener, method, priority)_
+_name: make_function_
+_returns: FunctionPtr_
 _returns_description: _
-_parameters: const ofEvent< ArgumentsType > &mom_
-_access: public_
-_version_started: 0073_
+_parameters: TObj *listener, bool (TObj::*)(T &) method, int priority_
+_access: protected_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -179,6 +178,412 @@ _inlined_description: _
 
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###FunctionPtr make_function(*listener, method, priority)
+
+<!--
+_syntax: make_function(*listener, method, priority)_
+_name: make_function_
+_returns: FunctionPtr_
+_returns_description: _
+_parameters: TObj *listener, void (TObj::*)(T &) method, int priority_
+_access: protected_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###FunctionPtr make_function(*listener, *, method, priority)
+
+<!--
+_syntax: make_function(*listener, *, method, priority)_
+_name: make_function_
+_returns: FunctionPtr_
+_returns_description: _
+_parameters: TObj *listener, bool (TObj::*)(const void *, T &) method, int priority_
+_access: protected_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###FunctionPtr make_function(*listener, *, method, priority)
+
+<!--
+_syntax: make_function(*listener, *, method, priority)_
+_name: make_function_
+_returns: FunctionPtr_
+_returns_description: _
+_parameters: TObj *listener, void (TObj::*)(const void *, T &) method, int priority_
+_access: protected_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###FunctionPtr make_function(function, priority)
+
+<!--
+_syntax: make_function(function, priority)_
+_name: make_function_
+_returns: FunctionPtr_
+_returns_description: _
+_parameters: bool (*)(T &) function, int priority_
+_access: protected_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###FunctionPtr make_function(function, priority)
+
+<!--
+_syntax: make_function(function, priority)_
+_name: make_function_
+_returns: FunctionPtr_
+_returns_description: _
+_parameters: void (*)(T &) function, int priority_
+_access: protected_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###FunctionPtr make_function(*, function, priority)
+
+<!--
+_syntax: make_function(*, function, priority)_
+_name: make_function_
+_returns: FunctionPtr_
+_returns_description: _
+_parameters: bool (*)(const void *, T &) function, int priority_
+_access: protected_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###FunctionPtr make_function(*, function, priority)
+
+<!--
+_syntax: make_function(*, function, priority)_
+_name: make_function_
+_returns: FunctionPtr_
+_returns_description: _
+_parameters: void (*)(const void *, T &) function, int priority_
+_access: protected_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###unique_ptr<FunctionId< TObj, TMethod>  > make_function_id(*listener, method)
+
+<!--
+_syntax: make_function_id(*listener, method)_
+_name: make_function_id_
+_returns: unique_ptr<FunctionId< TObj, TMethod>  >_
+_returns_description: _
+_parameters: TObj *listener, TMethod method_
+_access: protected_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void notify(*sender, &param)
+
+<!--
+_syntax: notify(*sender, &param)_
+_name: notify_
+_returns: void_
+_returns_description: _
+_parameters: const void *sender, T &param_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void remove(*listener, method, priority)
+
+<!--
+_syntax: remove(*listener, method, priority)_
+_name: remove_
+_returns: void_
+_returns_description: _
+_parameters: TObj *listener, TMethod method, int priority_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void remove(function, priority)
+
+<!--
+_syntax: remove(function, priority)_
+_name: remove_
+_returns: void_
+_returns_description: _
+_parameters: TFunction function, int priority_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 

@@ -50,13 +50,6 @@ def run():
         if clazz.istemplated:
             clazz.name = clazz.name[:-1]
 
-        methods_to_remove = []
-        for method in clazz.function_list:
-            if method.name[0]=="~" or method.name.find("OF_DEPRECATED_MSG")!=-1:
-                methods_to_remove.append(method)
-        for method in methods_to_remove:
-            clazz.function_list.remove(method)
-
         clazz.detailed_inline_description = str(clazz.detailed_inline_description.encode('ascii', 'ignore'))
         for class_name in classes_simple_name:
             rep = class_name + "[\s]"
@@ -141,6 +134,7 @@ def run():
     bf.template.materialize_template("documentation.mako", ('documentation',"index.html"), {'core':core_index,'addons':addons_index} )
     
     for root, dirs, files in os.walk(directory):
+        """ copy images to their folders """
         for name in files:
             file_split = os.path.splitext(name)
             if file_split[1]==".jpeg" or file_split[1]==".jpg" or file_split[1]==".gif" or file_split[1]==".png":
@@ -149,6 +143,16 @@ def run():
                 except:
                     pass
                 shutil.copyfile(os.path.join(root,name), os.path.join('_site','documentation',os.path.basename(root),name))
+                
+        """ create module introductions """
+        for module in dirs:
+            module_intro = os.path.join(directory,module,"introduction.markdown")
+            if os.path.isfile(module_intro):
+                module_intro_file = open(module_intro)
+                module_intro_content = module_intro_file.read()
+                bf.template.materialize_template("documentation_module_intro.mako", (os.path.join('documentation', module),"introduction.html"), {"module": module, "content": module_intro_content, "classes": core_index[module]} )
+            else:
+                print "couldn't find " + module_intro
                 
     #html = open(documentation.dir + "/" + class_fn + ".html",'w')
     #html.write(p.content)

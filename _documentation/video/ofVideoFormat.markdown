@@ -9,6 +9,12 @@ _istemplated: False_
 
 ##InlineDescription
 
+A structure describing attributes of a video format.
+
+An ofVideoFormat is used to describe the size, pixel format and frame rates
+offered by a video device.
+
+\sa ofVideoDevice
 
 
 
@@ -42,6 +48,10 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+A list of framerates for this video format in frames per second.
+
 _description: _
 
 
@@ -66,6 +76,10 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+The height of the video format in pixels.
 
 _description: _
 
@@ -92,6 +106,10 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+The pixel format of the video format.
+
 _description: _
 
 
@@ -116,6 +134,10 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+The width of the video format in pixels.
 
 _description: _
 

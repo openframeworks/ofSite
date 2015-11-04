@@ -224,6 +224,43 @@ This erases your VBO data from your graphics card, but not the VBO itself, so yo
 
 <!----------------------------------------------------------------------------->
 
+###void clearAttribute(attributePos_)
+
+<!--
+_syntax: clearAttribute(attributePos_)_
+_name: clearAttribute_
+_returns: void_
+_returns_description: _
+_parameters: int attributePos__
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void clearColors()
 
 <!--
@@ -566,44 +603,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void disableVAOs()
-
-<!--
-_syntax: disableVAOs()_
-_name: disableVAOs_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: True_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void draw(drawMode, first, total)
 
 <!--
@@ -650,16 +649,16 @@ Specifies the number of indices to be rendered. This last part is pretty importa
 
 <!----------------------------------------------------------------------------->
 
-###void drawElements(drawMode, amt)
+###void drawElements(drawMode, amt, offsetelements = 0)
 
 <!--
-_syntax: drawElements(drawMode, amt)_
+_syntax: drawElements(drawMode, amt, offsetelements = 0)_
 _name: drawElements_
 _returns: void_
 _returns_description: _
-_parameters: int drawMode, int amt_
+_parameters: int drawMode, int amt, int offsetelements=0_
 _access: public_
-_version_started: _
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -678,15 +677,6 @@ _inlined_description: _
 
 
 _description: _
-
-
-drawElements allows you use indices, unlike draw() which ignores them.
-drawMode
-Specifies what kind of primitives to render. Symbolic constants GL_POINTS, GL_LINE_STRIP, GL_LINE_LOOP, GL_LINES, GL_TRIANGLE_STRIP, GL_TRIANGLE_FAN, GL_TRIANGLES, GL_QUAD_STRIP, GL_QUADS, and GL_POLYGON are accepted.
-~~~~{.cpp}
-vbo.drawElements( GL_TRIANGLES, 60);
-~~~~
-amt specifies the number of indices to be rendered. This last part is pretty important: if you have more indices than vertices you'll want to make sure that you pass the number of indices, not the number of vertices.
 
 
 
@@ -924,20 +914,20 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void enableVAOs()
+###const ofBufferObject & getAttributeBuffer(location)
 
 <!--
-_syntax: enableVAOs()_
-_name: enableVAOs_
-_returns: void_
+_syntax: getAttributeBuffer(location)_
+_name: getAttributeBuffer_
+_returns: const ofBufferObject &_
 _returns_description: _
-_parameters: _
+_parameters: int location_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: True_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -953,6 +943,154 @@ _inlined_description: _
 
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const ofBufferObject & getAttributeBuffer(location)
+
+<!--
+_syntax: getAttributeBuffer(location)_
+_name: getAttributeBuffer_
+_returns: const ofBufferObject &_
+_returns_description: _
+_parameters: int location_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###GLuint getAttributeId(AttrPos_)
+
+<!--
+_syntax: getAttributeId(AttrPos_)_
+_name: getAttributeId_
+_returns: GLuint_
+_returns_description: _
+_parameters: int AttrPos__
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+returns OpenGL memory object id for GL buffer holding attribute data
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const ofBufferObject & getColorBuffer()
+
+<!--
+_syntax: getColorBuffer()_
+_name: getColorBuffer_
+_returns: const ofBufferObject &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const ofBufferObject & getColorBuffer()
+
+<!--
+_syntax: getColorBuffer()_
+_name: getColorBuffer_
+_returns: const ofBufferObject &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -991,6 +1129,80 @@ _inlined_description: _
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const ofBufferObject & getIndexBuffer()
+
+<!--
+_syntax: getIndexBuffer()_
+_name: getIndexBuffer_
+_returns: const ofBufferObject &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const ofBufferObject & getIndexBuffer()
+
+<!--
+_syntax: getIndexBuffer()_
+_name: getIndexBuffer_
+_returns: const ofBufferObject &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1069,6 +1281,80 @@ _description: _
 
 
 Returns whether the ofVbo has been allocated or not. This is important to check before you start drawing or manipulating the vbo.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const ofBufferObject & getNormalBuffer()
+
+<!--
+_syntax: getNormalBuffer()_
+_name: getNormalBuffer_
+_returns: const ofBufferObject &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const ofBufferObject & getNormalBuffer()
+
+<!--
+_syntax: getNormalBuffer()_
+_name: getNormalBuffer_
+_returns: const ofBufferObject &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1183,6 +1469,117 @@ _inlined_description: _
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofVbo::VertexAttribute & getOrCreateAttr(location)
+
+<!--
+_syntax: getOrCreateAttr(location)_
+_name: getOrCreateAttr_
+_returns: ofVbo::VertexAttribute &_
+_returns_description: _
+_parameters: int location_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const ofBufferObject & getTexCoordBuffer()
+
+<!--
+_syntax: getTexCoordBuffer()_
+_name: getTexCoordBuffer_
+_returns: const ofBufferObject &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const ofBufferObject & getTexCoordBuffer()
+
+<!--
+_syntax: getTexCoordBuffer()_
+_name: getTexCoordBuffer_
+_returns: const ofBufferObject &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1430,6 +1827,43 @@ Returns whether the ofVbo is using vertices or not. A VBO can exist without vert
 
 <!----------------------------------------------------------------------------->
 
+###GLuint getVaoId()
+
+<!--
+_syntax: getVaoId()_
+_name: getVaoId_
+_returns: GLuint_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###GLuint getVertId()
 
 <!--
@@ -1459,6 +1893,117 @@ _inlined_description: _
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const ofBufferObject & getVertexBuffer()
+
+<!--
+_syntax: getVertexBuffer()_
+_name: getVertexBuffer_
+_returns: const ofBufferObject &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const ofBufferObject & getVertexBuffer()
+
+<!--
+_syntax: getVertexBuffer()_
+_name: getVertexBuffer_
+_returns: const ofBufferObject &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool hasAttribute(attributePos_)
+
+<!--
+_syntax: hasAttribute(attributePos_)_
+_name: hasAttribute_
+_returns: bool_
+_returns_description: _
+_parameters: int attributePos__
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1600,6 +2145,43 @@ ofVbo v2 = v1; // v2 now contains all of v1s properties in a separate VBO
 
 <!----------------------------------------------------------------------------->
 
+###void setAttributeBuffer(location, &buffer, numCoords, stride, offset = 0)
+
+<!--
+_syntax: setAttributeBuffer(location, &buffer, numCoords, stride, offset = 0)_
+_name: setAttributeBuffer_
+_returns: void_
+_returns_description: _
+_parameters: int location, ofBufferObject &buffer, int numCoords, int stride, int offset=0_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void setAttributeData(location, *vert0x, numCoords, total, usage, stride = sizeof(float))
 
 <!--
@@ -1629,6 +2211,85 @@ _inlined_description: _
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setAttributeDivisor(location, divisor)
+
+<!--
+_syntax: setAttributeDivisor(location, divisor)_
+_name: setAttributeDivisor_
+_returns: void_
+_returns_description: _
+_parameters: int location, int divisor_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+used to send an attribute per instance(s) instead of per vertex.
+will send per vertex if set to 0 or to the number of instances if >0
+
+see textureBufferInstancedExample
+and https://www.opengl.org/sdk/docs/man4/html/glVertexAttribDivisor.xhtml
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setColorBuffer(&buffer, stride, offset = 0)
+
+<!--
+_syntax: setColorBuffer(&buffer, stride, offset = 0)_
+_name: setColorBuffer_
+_returns: void_
+_returns_description: _
+_parameters: ofBufferObject &buffer, int stride, int offset=0_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1719,6 +2380,43 @@ _description: _
 This sets the color data for the ofVbo from a pointer to an array of floats. The colors are RGB and are floats from 0.f - 1.f
 
 The possible options for usage are: GL_STREAM_DRAW, GL_STREAM_READ, GL_STREAM_COPY, GL_STATIC_DRAW, GL_STATIC_READ, GL_STATIC_COPY, GL_DYNAMIC_DRAW, GL_DYNAMIC_READ, or GL_DYNAMIC_COPY
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setIndexBuffer(&buffer)
+
+<!--
+_syntax: setIndexBuffer(&buffer)_
+_name: setIndexBuffer_
+_returns: void_
+_returns_description: _
+_parameters: ofBufferObject &buffer_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1858,6 +2556,43 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void setNormalBuffer(&buffer, stride, offset = 0)
+
+<!--
+_syntax: setNormalBuffer(&buffer, stride, offset = 0)_
+_name: setNormalBuffer_
+_returns: void_
+_returns_description: _
+_parameters: ofBufferObject &buffer, int stride, int offset=0_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void setNormalData(*normals, total, usage)
 
 <!--
@@ -1968,6 +2703,43 @@ The possible options for usage are: GL_STREAM_DRAW, GL_STREAM_READ, GL_STREAM_CO
 
 <!----------------------------------------------------------------------------->
 
+###void setTexCoordBuffer(&buffer, stride, offset = 0)
+
+<!--
+_syntax: setTexCoordBuffer(&buffer, stride, offset = 0)_
+_name: setTexCoordBuffer_
+_returns: void_
+_returns_description: _
+_parameters: ofBufferObject &buffer, int stride, int offset=0_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void setTexCoordData(*texCoords, total, usage)
 
 <!--
@@ -2043,6 +2815,43 @@ _description: _
 This sets the texCoord data for the ofVbo from a pointer to an array of floats, ST, for each face, so a 3D cube would require an array of 16 floats, 2 for each vertex.
 
 The possible options for usage are: GL_STREAM_DRAW, GL_STREAM_READ, GL_STREAM_COPY, GL_STATIC_DRAW, GL_STATIC_READ, GL_STATIC_COPY, GL_DYNAMIC_DRAW, GL_DYNAMIC_READ, or GL_DYNAMIC_COPY
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setVertexBuffer(&buffer, numCoords, stride, offset = 0)
+
+<!--
+_syntax: setVertexBuffer(&buffer, numCoords, stride, offset = 0)_
+_name: setVertexBuffer_
+_returns: void_
+_returns_description: _
+_parameters: ofBufferObject &buffer, int numCoords, int stride, int offset=0_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2740,156 +3549,6 @@ This is the destructor for the ofVbo, it clears all the vertices, texture coordi
 
 
 
-###map< int, GLuint > attributeIds
-
-<!--
-_name: attributeIds_
-_type: map< int, GLuint >_
-_access: private_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###map< int, int > attributeNumCoords
-
-<!--
-_name: attributeNumCoords_
-_type: map< int, int >_
-_access: private_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###map< int, int >  attributeSize
-
-<!--
-_name: attributeSize_
-_type: map< int, int > _
-_access: private_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###map< int, int > attributeStrides
-
-<!--
-_name: attributeStrides_
-_type: map< int, int >_
-_access: private_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool bAllocated
-
-<!--
-_name: bAllocated_
-_type: bool_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool bBound
-
-<!--
-_name: bBound_
-_type: bool_
-_access: private_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###bool bUsingColors
 
 <!--
@@ -2903,6 +3562,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -2929,6 +3591,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -2953,6 +3618,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -2979,6 +3647,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -3004,30 +3675,8 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###GLuint colorId
-
-<!--
-_name: colorId_
-_type: GLuint_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
 
 _description: _
 
@@ -3040,22 +3689,24 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###GLsizei colorStride
+###ofVbo::VertexAttribute colorAttribute
 
 <!--
-_name: colorStride_
-_type: GLsizei_
+_name: colorAttribute_
+_type: ofVbo::VertexAttribute_
 _access: private_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
-_constant: True_
+_constant: False_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+_description: _
 
 
 
@@ -3065,22 +3716,24 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int colorUsage
+###map< int, ofVbo::VertexAttribute > customAttributes
 
 <!--
-_name: colorUsage_
-_type: int_
+_name: customAttributes_
+_type: map< int, ofVbo::VertexAttribute >_
 _access: private_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
-_constant: True_
+_constant: False_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+_description: _
 
 
 
@@ -3090,22 +3743,24 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###GLuint indexId
+###ofVbo::IndexAttribute indexAttribute
 
 <!--
-_name: indexId_
-_type: GLuint_
+_name: indexAttribute_
+_type: ofVbo::IndexAttribute_
 _access: private_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
-_constant: True_
+_constant: False_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+_description: _
 
 
 
@@ -3115,22 +3770,24 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int normUsage
+###ofVbo::VertexAttribute normalAttribute
 
 <!--
-_name: normUsage_
-_type: int_
+_name: normalAttribute_
+_type: ofVbo::VertexAttribute_
 _access: private_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
-_constant: True_
+_constant: False_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+_description: _
 
 
 
@@ -3140,22 +3797,24 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###GLuint normalId
+###ofVbo::VertexAttribute positionAttribute
 
 <!--
-_name: normalId_
-_type: GLuint_
+_name: positionAttribute_
+_type: ofVbo::VertexAttribute_
 _access: private_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
-_constant: True_
+_constant: False_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+_description: _
 
 
 
@@ -3165,122 +3824,24 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###GLsizei normalStride
+###ofVbo::VertexAttribute texCoordAttribute
 
 <!--
-_name: normalStride_
-_type: GLsizei_
+_name: texCoordAttribute_
+_type: ofVbo::VertexAttribute_
 _access: private_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
-_constant: True_
+_constant: False_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool supportVAOs
-
-<!--
-_name: supportVAOs_
-_type: bool_
-_access: private_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
 
 _description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###GLuint texCoordId
-
-<!--
-_name: texCoordId_
-_type: GLuint_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###GLsizei texCoordStride
-
-<!--
-_name: texCoordStride_
-_type: GLsizei_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int texUsage
-
-<!--
-_name: texUsage_
-_type: int_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
 
 
 
@@ -3303,6 +3864,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -3329,6 +3893,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -3353,6 +3920,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -3379,6 +3949,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -3404,30 +3977,8 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###GLuint vertId
-
-<!--
-_name: vertId_
-_type: GLuint_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
 
 _description: _
 
@@ -3440,72 +3991,24 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int vertSize
+###bool vaoSupported
 
 <!--
-_name: vertSize_
-_type: int_
+_name: vaoSupported_
+_type: bool_
 _access: private_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
-_constant: True_
+_constant: False_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###GLsizei vertStride
-
-<!--
-_name: vertStride_
-_type: GLsizei_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
 
 _description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int vertUsage
-
-<!--
-_name: vertUsage_
-_type: int_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
 
 
 

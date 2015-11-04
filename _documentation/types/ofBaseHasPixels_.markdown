@@ -9,6 +9,8 @@ _istemplated: True_
 
 ##InlineDescription
 
+A base 
+\tparam T The pixel data type.
 
 
 
@@ -24,16 +26,16 @@ _istemplated: True_
 
 
 
-###T * getPixels()
+###const ofPixels_< T > & getPixels()
 
 <!--
 _syntax: getPixels()_
 _name: getPixels_
-_returns: T *_
+_returns: const ofPixels_< T > &_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 006_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -44,6 +46,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Get a const reference to the underlying ofPixels.
+Returns: a const reference the underlying ofPixels.
 
 
 
@@ -52,7 +56,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -62,16 +65,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofPixels_< T > & getPixelsRef()
+###const ofPixels_< T > & getPixels()
 
 <!--
-_syntax: getPixelsRef()_
-_name: getPixelsRef_
-_returns: ofPixels_< T > &_
+_syntax: getPixels()_
+_name: getPixels_
+_returns: const ofPixels_< T > &_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -82,6 +85,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Get a const reference to the underlying ofPixels.
+Returns: a const reference the underlying ofPixels.
 
 
 
@@ -90,7 +95,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -120,6 +124,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Destroy the ofAbstractHasPixels.
 
 
 

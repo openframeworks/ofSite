@@ -328,6 +328,43 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###bool mouseScrolled(&args)
+
+<!--
+_syntax: mouseScrolled(&args)_
+_name: mouseScrolled_
+_returns: bool_
+_returns_description: _
+_parameters: ofMouseEventArgs &args_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ### ofxLabel()
 
 <!--
@@ -373,45 +410,7 @@ _syntax: ofxLabel(_label, width = defaultWidth, height = defaultHeight)_
 _name: ofxLabel_
 _returns: _
 _returns_description: _
-_parameters: ofParameter< string > _label, float width=defaultWidth, float height=defaultHeight_
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### operator const string &()
-
-<!--
-_syntax: operator const string &()_
-_name: operator const string &_
-_returns: _
-_returns_description: _
-_parameters: _
+_parameters: ofParameter< string > _label, float width, float height_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -639,7 +638,7 @@ _syntax: setup(_label, width = defaultWidth, height = defaultHeight)_
 _name: setup_
 _returns: ofxLabel *_
 _returns_description: _
-_parameters: ofParameter< string > _label, float width=defaultWidth, float height=defaultHeight_
+_parameters: ofParameter< string > _label, float width, float height_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -670,14 +669,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofxLabel * setup(labelName, label, width = defaultWidth, height = defaultHeight)
+###ofxLabel * setup(&labelName, label, width, height)
 
 <!--
-_syntax: setup(labelName, label, width = defaultWidth, height = defaultHeight)_
+_syntax: setup(&labelName, label, width, height)_
 _name: setup_
 _returns: ofxLabel *_
 _returns_description: _
-_parameters: string labelName, string label, float width=defaultWidth, float height=defaultHeight_
+_parameters: const string &labelName, string label, float width, float height_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -802,6 +801,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -827,6 +829,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -851,6 +856,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 

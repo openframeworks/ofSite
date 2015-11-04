@@ -136,10 +136,13 @@ _inlined_description: _
 
 _description: _
 
+
 Binds default uniforms and attributes, only useful for fixed pipeline simulation under programmable renderer.
 Has to be called before linkProgram().
 
 See setupShaderFromSource() example.
+
+
 
 
 
@@ -299,6 +302,43 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void dispatchCompute(x, y, z)
+
+<!--
+_syntax: dispatchCompute(x, y, z)_
+_name: dispatchCompute_
+_returns: void_
+_returns_description: _
+_parameters: GLuint x, GLuint y, GLuint z_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void end()
 
 <!--
@@ -417,12 +457,12 @@ returns maximum number of supported vertices for your graphics card
 
 <!----------------------------------------------------------------------------->
 
-###GLuint & getProgram()
+###GLuint getProgram()
 
 <!--
 _syntax: getProgram()_
 _name: getProgram_
-_returns: GLuint &_
+_returns: GLuint_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -457,12 +497,12 @@ This returns the GLuint for the actual shader object that is active on the graph
 
 <!----------------------------------------------------------------------------->
 
-###GLuint & getShader(type)
+###GLuint getShader(type)
 
 <!--
 _syntax: getShader(type)_
 _name: getShader_
-_returns: GLuint &_
+_returns: GLuint_
 _returns_description: _
 _parameters: GLenum type_
 _access: public_
@@ -517,11 +557,8 @@ _advanced: False_
 
 _inlined_description: _
 
-returns the shader source as it was passed to the GLSL compiler
-
-
-
-
+@brief returns the shader source as it was passed to the GLSL compiler
+@param type (GL_VERTEX_SHADER | GL_FRAGMENT_SHADER | GL_GEOMETRY_SHADER_EXT) the shader source you'd like to inspect.
 
 
 
@@ -548,7 +585,7 @@ _name: getUniformLocation_
 _returns: GLint_
 _returns_description: _
 _parameters: const string &name_
-_access: private_
+_access: public_
 _version_started: 0073_
 _version_deprecated: _
 _summary: _
@@ -707,7 +744,7 @@ _syntax: load(vertName, fragName, geomName = "")_
 _name: load_
 _returns: bool_
 _returns_description: _
-_parameters: string vertName, string fragName, string geomName=""_
+_parameters: string vertName, string fragName, string geomName_
 _access: public_
 _version_started: _
 _version_deprecated: _
@@ -979,31 +1016,25 @@ _syntax: parseForIncludes(&source, &sourceDirectoryPath = "")_
 _name: parseForIncludes_
 _returns: string_
 _returns_description: _
-_parameters: const string &source, const string &sourceDirectoryPath=""_
+_parameters: const string &source, const string &sourceDirectoryPath_
 _access: private_
 _version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: False_
+_static: True_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
 
-Mimics the #include behaviour of the c preprocessor  Includes files specified using the '#pragma include <filepath>' directive.
-
-
-***note:***
-    Include paths are always specified relative to the including file's current path
-
-Recursive #pragma include statements are possible
-
-Includes will be processed up to 32 levels deep
-
-
-
+@brief			Mimics the #include behaviour of the c preprocessor
+@description	Includes files specified using the
+					'#pragma include <filepath>' directive.
+@note			Include paths are always specified _relative to the including file's current path_
+	@note			Recursive #pragma include statements are possible
+@note			Includes will be processed up to 32 levels deep
 
 
 
@@ -1029,13 +1060,13 @@ _syntax: parseForIncludes(&source, &included, level = 0, &sourceDirectoryPath = 
 _name: parseForIncludes_
 _returns: string_
 _returns_description: _
-_parameters: const string &source, vector< string > &included, int level=0, const string &sourceDirectoryPath=""_
+_parameters: const string &source, vector< string > &included, int level=0, const string &sourceDirectoryPath_
 _access: private_
 _version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: False_
+_static: True_
 _visible: True_
 _advanced: False_
 -->
@@ -1222,14 +1253,14 @@ Attributes are different than uniforms in that you can pass an attribute to each
 
 <!----------------------------------------------------------------------------->
 
-###void setAttribute1fv(&name, *v, stride = sizeof(float))
+###void setAttribute1fv(&name, *v, stride)
 
 <!--
-_syntax: setAttribute1fv(&name, *v, stride = sizeof(float))_
+_syntax: setAttribute1fv(&name, *v, stride)_
 _name: setAttribute1fv_
 _returns: void_
 _returns_description: _
-_parameters: const string &name, float *v, GLsizei stride=sizeof(float)_
+_parameters: const string &name, const float *v, GLsizei stride_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -1383,14 +1414,14 @@ Attributes are different than uniforms in that you can pass an attribute to each
 
 <!----------------------------------------------------------------------------->
 
-###void setAttribute2fv(&name, *v, stride = sizeof(float)*2)
+###void setAttribute2fv(&name, *v, stride)
 
 <!--
-_syntax: setAttribute2fv(&name, *v, stride = sizeof(float)*2)_
+_syntax: setAttribute2fv(&name, *v, stride)_
 _name: setAttribute2fv_
 _returns: void_
 _returns_description: _
-_parameters: const string &name, float *v, GLsizei stride=sizeof(float)*2_
+_parameters: const string &name, const float *v, GLsizei stride_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -1544,14 +1575,14 @@ Attributes are different than uniforms in that you can pass an attribute to each
 
 <!----------------------------------------------------------------------------->
 
-###void setAttribute3fv(&name, *v, stride = sizeof(float)*3)
+###void setAttribute3fv(&name, *v, stride)
 
 <!--
-_syntax: setAttribute3fv(&name, *v, stride = sizeof(float)*3)_
+_syntax: setAttribute3fv(&name, *v, stride)_
 _name: setAttribute3fv_
 _returns: void_
 _returns_description: _
-_parameters: const string &name, float *v, GLsizei stride=sizeof(float)*3_
+_parameters: const string &name, const float *v, GLsizei stride_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -1705,14 +1736,14 @@ Attributes are different than uniforms in that you can pass an attribute to each
 
 <!----------------------------------------------------------------------------->
 
-###void setAttribute4fv(&name, *v, stride = sizeof(float)*4)
+###void setAttribute4fv(&name, *v, stride)
 
 <!--
-_syntax: setAttribute4fv(&name, *v, stride = sizeof(float)*4)_
+_syntax: setAttribute4fv(&name, *v, stride)_
 _name: setAttribute4fv_
 _returns: void_
 _returns_description: _
-_parameters: const string &name, float *v, GLsizei stride=sizeof(float)*4_
+_parameters: const string &name, const float *v, GLsizei stride_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -1953,7 +1984,7 @@ _syntax: setUniform1fv(&name, *v, count = 1)_
 _name: setUniform1fv_
 _returns: void_
 _returns_description: _
-_parameters: const string &name, float *v, int count=1_
+_parameters: const string &name, const float *v, int count=1_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -2029,7 +2060,7 @@ _syntax: setUniform1iv(&name, *v, count = 1)_
 _name: setUniform1iv_
 _returns: void_
 _returns_description: _
-_parameters: const string &name, int *v, int count=1_
+_parameters: const string &name, const int *v, int count=1_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -2098,6 +2129,43 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void setUniform2f(&name, &v)
+
+<!--
+_syntax: setUniform2f(&name, &v)_
+_name: setUniform2f_
+_returns: void_
+_returns_description: _
+_parameters: const string &name, const ofVec2f &v_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void setUniform2fv(&name, *v, count = 1)
 
 <!--
@@ -2105,7 +2173,7 @@ _syntax: setUniform2fv(&name, *v, count = 1)_
 _name: setUniform2fv_
 _returns: void_
 _returns_description: _
-_parameters: const string &name, float *v, int count=1_
+_parameters: const string &name, const float *v, int count=1_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -2186,7 +2254,7 @@ _syntax: setUniform2iv(&name, *v, count = 1)_
 _name: setUniform2iv_
 _returns: void_
 _returns_description: _
-_parameters: const string &name, int *v, int count=1_
+_parameters: const string &name, const int *v, int count=1_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -2262,6 +2330,43 @@ set a vec3 uniform on the shader
 
 <!----------------------------------------------------------------------------->
 
+###void setUniform3f(&name, &v)
+
+<!--
+_syntax: setUniform3f(&name, &v)_
+_name: setUniform3f_
+_returns: void_
+_returns_description: _
+_parameters: const string &name, const ofVec3f &v_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void setUniform3fv(&name, *v, count = 1)
 
 <!--
@@ -2269,7 +2374,7 @@ _syntax: setUniform3fv(&name, *v, count = 1)_
 _name: setUniform3fv_
 _returns: void_
 _returns_description: _
-_parameters: const string &name, float *v, int count=1_
+_parameters: const string &name, const float *v, int count=1_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -2354,7 +2459,7 @@ _syntax: setUniform3iv(&name, *v, count = 1)_
 _name: setUniform3iv_
 _returns: void_
 _returns_description: _
-_parameters: const string &name, int *v, int count=1_
+_parameters: const string &name, const int *v, int count=1_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -2433,6 +2538,80 @@ vec4 fv;
 
 <!----------------------------------------------------------------------------->
 
+###void setUniform4f(&name, &v)
+
+<!--
+_syntax: setUniform4f(&name, &v)_
+_name: setUniform4f_
+_returns: void_
+_returns_description: _
+_parameters: const string &name, const ofVec4f &v_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setUniform4f(&name, &v)
+
+<!--
+_syntax: setUniform4f(&name, &v)_
+_name: setUniform4f_
+_returns: void_
+_returns_description: _
+_parameters: const string &name, const ofFloatColor &v_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void setUniform4fv(&name, *v, count = 1)
 
 <!--
@@ -2440,7 +2619,7 @@ _syntax: setUniform4fv(&name, *v, count = 1)_
 _name: setUniform4fv_
 _returns: void_
 _returns_description: _
-_parameters: const string &name, float *v, int count=1_
+_parameters: const string &name, const float *v, int count=1_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -2521,7 +2700,7 @@ _syntax: setUniform4iv(&name, *v, count = 1)_
 _name: setUniform4iv_
 _returns: void_
 _returns_description: _
-_parameters: const string &name, int *v, int count=1_
+_parameters: const string &name, const int *v, int count=1_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -2557,16 +2736,16 @@ ivec4 iv[2];
 
 <!----------------------------------------------------------------------------->
 
-###void setUniformMatrix4f(&name, &m)
+###void setUniformMatrix3f(&name, &m, count = 1)
 
 <!--
-_syntax: setUniformMatrix4f(&name, &m)_
-_name: setUniformMatrix4f_
+_syntax: setUniformMatrix3f(&name, &m, count = 1)_
+_name: setUniformMatrix3f_
 _returns: void_
 _returns_description: _
-_parameters: const string &name, const ofMatrix4x4 &m_
+_parameters: const string &name, const ofMatrix3x3 &m, int count=1_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2592,6 +2771,42 @@ _description: _
 
 
 
+<!----------------------------------------------------------------------------->
+
+###void setUniformMatrix4f(&name, &m, count = 1)
+
+<!--
+_syntax: setUniformMatrix4f(&name, &m, count = 1)_
+_name: setUniformMatrix4f_
+_returns: void_
+_returns_description: _
+_parameters: const string &name, const ofMatrix4x4 &m, int count=1_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
 
 <!----------------------------------------------------------------------------->
 
@@ -2602,7 +2817,7 @@ _syntax: setUniformTexture(&name, &img, textureLocation)_
 _name: setUniformTexture_
 _returns: void_
 _returns_description: _
-_parameters: const string &name, ofBaseHasTexture &img, int textureLocation_
+_parameters: const string &name, const ofBaseHasTexture &img, int textureLocation_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -2646,7 +2861,7 @@ _syntax: setUniformTexture(&name, &img, textureLocation)_
 _name: setUniformTexture_
 _returns: void_
 _returns_description: _
-_parameters: const string &name, ofTexture &img, int textureLocation_
+_parameters: const string &name, const ofTexture &img, int textureLocation_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -2715,6 +2930,43 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void setUniforms(&parameters)
+
+<!--
+_syntax: setUniforms(&parameters)_
+_name: setUniforms_
+_returns: void_
+_returns_description: _
+_parameters: const ofParameterGroup &parameters_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###bool setupShaderFromFile(type, filename)
 
 <!--
@@ -2762,7 +3014,7 @@ _syntax: setupShaderFromSource(type, source, sourceDirectoryPath = "")_
 _name: setupShaderFromSource_
 _returns: bool_
 _returns_description: _
-_parameters: GLenum type, string source, string sourceDirectoryPath=""_
+_parameters: GLenum type, string source, string sourceDirectoryPath_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -2783,6 +3035,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 This method create and compile a shader from source.
 Working with OpenGL 3 or OpenGL ES 2.0, remember to call bindDefaults() before linkProgram()
@@ -2810,12 +3063,12 @@ fragmentSrc << "void main(void) {\n";
 fragmentSrc << "\toutputColor = texture(tex0, texCoordVarying);\n";
 fragmentSrc << "}\n";
 
-
 shader.setupShaderFromSource( GL_VERTEX_SHADER, vertexSrc.str() );
 shader.setupShaderFromSource( GL_FRAGMENT_SHADER, fragmentSrc.str() );
 shader.bindDefaults();
 shader.linkProgram();
 ~~~~
+
 
 
 
@@ -2906,6 +3159,33 @@ _description: _
 
 
 
+###unordered_map< string, GLint > attributesBindingsCache
+
+<!--
+_name: attributesBindingsCache_
+_type: unordered_map< string, GLint >_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###bool bLoaded
 
 <!--
@@ -2919,6 +3199,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -2945,30 +3228,8 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###map< GLenum, string >  shaderSource
-
-<!--
-_name: shaderSource_
-_type: map< GLenum, string > _
-_access: private_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
 
 _description: _
 
@@ -2995,6 +3256,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -3006,22 +3270,24 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###map< string, GLint > uniformLocations
+###unordered_map< string, GLint > uniformsCache
 
 <!--
-_name: uniformLocations_
-_type: map< string, GLint >_
+_name: uniformsCache_
+_type: unordered_map< string, GLint >_
 _access: private_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
-_constant: True_
+_constant: False_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+_description: _
 
 
 

@@ -27,6 +27,43 @@ In Linux it uses by default unicap, although you can change to V4L through a #de
 
 
 
+###void bind()
+
+<!--
+_syntax: bind()_
+_name: bind_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void close()
 
 <!--
@@ -147,16 +184,16 @@ Draws the internal texture of the movie grabber class at the position (x,y) with
 
 <!----------------------------------------------------------------------------->
 
-###ofPtr< ofBaseVideoGrabber > getGrabber()
+###const shared_ptr< ofBaseVideoGrabber > getGrabber()
 
 <!--
 _syntax: getGrabber()_
 _name: getGrabber_
-_returns: ofPtr< ofBaseVideoGrabber >_
+_returns: const shared_ptr< ofBaseVideoGrabber >_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -177,7 +214,115 @@ _inlined_description: _
 _description: _
 
 
-getGrabber returns a pointer (ofPtr) to the internally running video grabber. Since the ofVideoGrabber object has different potential systems for grabbing (QuickTime, QTKit, DirectShow), this ptr gives you access to the underlying video grabber that's running inside of ofVideoGrabber. Note: use this only if you need low level access to an internal grabbing object, such as to call a specific function.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const shared_ptr< ofBaseVideoGrabber > getGrabber()
+
+<!--
+_syntax: getGrabber()_
+_name: getGrabber_
+_returns: const shared_ptr< ofBaseVideoGrabber >_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const shared_ptr< GrabberType > getGrabber()
+
+<!--
+_syntax: getGrabber()_
+_name: getGrabber_
+_returns: const shared_ptr< GrabberType >_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const shared_ptr< GrabberType > getGrabber()
+
+<!--
+_syntax: getGrabber()_
+_name: getGrabber_
+_returns: const shared_ptr< GrabberType >_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -267,16 +412,16 @@ Returns the height of the video grabber object. If you initialize the object at 
 
 <!----------------------------------------------------------------------------->
 
-###unsigned char * getPixels()
+###const ofPixels & getPixels()
 
 <!--
 _syntax: getPixels()_
 _name: getPixels_
-_returns: unsigned char *_
+_returns: const ofPixels &_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 006_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -295,9 +440,6 @@ _inlined_description: _
 
 
 _description: _
-
-
-Returns the pointer to the array of pixels that represents the current frame of live video. the data is stored interleaved as RGB, and in an array which is the size: width*height*3. This function returns a pointer to an unsigned char array -- it's up to the user to deal with this memory correctly. Functions like getWidth() and getHeight() can help.
 
 
 
@@ -307,16 +449,16 @@ Returns the pointer to the array of pixels that represents the current frame of 
 
 <!----------------------------------------------------------------------------->
 
-###ofPixelsRef getPixelsRef()
+###const ofPixels & getPixels()
 
 <!--
-_syntax: getPixelsRef()_
-_name: getPixelsRef_
-_returns: ofPixelsRef_
+_syntax: getPixels()_
+_name: getPixels_
+_returns: const ofPixels &_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -335,9 +477,6 @@ _inlined_description: _
 
 
 _description: _
-
-
-This returns an ofPixels reference that you can use to access the raw pixel data of the ofImage.  
 
 
 
@@ -347,16 +486,16 @@ This returns an ofPixels reference that you can use to access the raw pixel data
 
 <!----------------------------------------------------------------------------->
 
-###ofTexture & getTextureReference()
+###const ofTexture & getTexture()
 
 <!--
-_syntax: getTextureReference()_
-_name: getTextureReference_
-_returns: ofTexture &_
+_syntax: getTexture()_
+_name: getTexture_
+_returns: const ofTexture &_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 006_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -377,7 +516,115 @@ _inlined_description: _
 _description: _
 
 
-This returns the texture reference that the ofVideoGrabber contains. You can use this to directly manipulate the texture itself. For example, you could bind the texture yourself and draw it using lower level OpenGL commands.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const ofTexture & getTexture()
+
+<!--
+_syntax: getTexture()_
+_name: getTexture_
+_returns: const ofTexture &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const vector< ofTexture > & getTexturePlanes()
+
+<!--
+_syntax: getTexturePlanes()_
+_name: getTexturePlanes_
+_returns: const vector< ofTexture > &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const vector< ofTexture > & getTexturePlanes()
+
+<!--
+_syntax: getTexturePlanes()_
+_name: getTexturePlanes_
+_returns: const vector< ofTexture > &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -477,58 +724,6 @@ printf("asked for 320 by 240 - actual size is %i by %i
 
 <!----------------------------------------------------------------------------->
 
-###bool initGrabber(w, h, bTexture)
-
-<!--
-_syntax: initGrabber(w, h, bTexture)_
-_name: initGrabber_
-_returns: bool_
-_returns_description: _
-_parameters: int w, int h, bool bTexture_
-_access: public_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Initializes either the default capture device or the capture device specified by setDeviceID. Attempts to setup capture at the width and height specified. If the capture dimensions are not available it will setup capture for the next closest dimensions available. It is good to check what the actual size is before you start processing the pixels.
-~~~~{.cpp}
-
-myGrabber.setVerbose(true);
-myGrabber.setDeviceID(1);
-myGrabber.initGrabber(320,240,false);
-int grabW = myGrabber.width;
-int grabH = myGrabber.height;
-printf("asked for 320 by 240 - actual size is %i by %i 
-", grabW, grabH);
-~~~~
-
-bTexture variable tells ofVideoGrabber that it should setup a texture so you can display the video on the screen.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###bool isFrameNew()
 
 <!--
@@ -613,6 +808,43 @@ _description: _
 
 
 Returns a boolean if the video grabber is properly initialized.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool isUsingTexture()
+
+<!--
+_syntax: isUsingTexture()_
+_name: isUsingTexture_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -909,9 +1141,9 @@ _syntax: setGrabber(newGrabber)_
 _name: setGrabber_
 _returns: void_
 _returns_description: _
-_parameters: ofPtr< ofBaseVideoGrabber > newGrabber_
+_parameters: shared_ptr< ofBaseVideoGrabber > newGrabber_
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -930,9 +1162,6 @@ _inlined_description: _
 
 
 _description: _
-
-
-This function, similar to getGrabber, allows for low level access to the internal grabber object. This is useful if you want to adjust the internal grabber that ofVideoGrabber is using.
 
 
 
@@ -1074,6 +1303,117 @@ myGrabber.initGrabber(320,240);
 
 <!----------------------------------------------------------------------------->
 
+###bool setup(w, h)
+
+<!--
+_syntax: setup(w, h)_
+_name: setup_
+_returns: bool_
+_returns_description: _
+_parameters: int w, int h_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool setup(w, h, bTexture)
+
+<!--
+_syntax: setup(w, h, bTexture)_
+_name: setup_
+_returns: bool_
+_returns_description: _
+_parameters: int w, int h, bool bTexture_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void unbind()
+
+<!--
+_syntax: unbind()_
+_name: unbind_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void update()
 
 <!--
@@ -1198,56 +1538,6 @@ Destructor for the video grabber, will release any allocated memory.
 
 
 
-###int RequestedDeviceID
-
-<!--
-_name: RequestedDeviceID_
-_type: int_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool bInitialized
-
-<!--
-_name: bInitialized_
-_type: bool_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###bool bUseTexture
 
 <!--
@@ -1261,6 +1551,9 @@ _visible: True_
 _constant: False_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -1287,6 +1580,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1312,60 +1608,11 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool grabberRunning
-
-<!--
-_name: grabberRunning_
-_type: bool_
-_access: private_
-_version_started: 0072_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
 
 _description: _
 
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int height
-
-<!--
-_name: height_
-_type: int_
-_access: public_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: False_
-_advanced: False_
--->
-
-_description: _
-
-
-Variable containing the height of the video grabber.
 
 
 
@@ -1389,8 +1636,38 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int requestedDeviceID
+
+<!--
+_name: requestedDeviceID_
+_type: int_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+_description: _
 
 
 
@@ -1414,35 +1691,11 @@ _constant: False_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int width
-
-<!--
-_name: width_
-_type: int_
-_access: public_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: False_
-_advanced: False_
--->
 
 _description: _
 
-
-Variable containing the width of the video grabber.
 
 
 

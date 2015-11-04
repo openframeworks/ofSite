@@ -22,7 +22,7 @@ _syntax: ofLoadURL(url)_
 _name: ofLoadURL_
 _returns: ofHttpResponse_
 _returns_description: _
-_parameters: string url_
+_parameters: const string &url_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -33,6 +33,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 
@@ -67,7 +68,7 @@ _syntax: ofLoadURLAsync(url, name = "")_
 _name: ofLoadURLAsync_
 _returns: int_
 _returns_description: _
-_parameters: string url, string name=""_
+_parameters: const string &url, const string &name_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -78,6 +79,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 
@@ -165,6 +167,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -202,6 +205,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 
@@ -248,6 +252,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -269,7 +274,7 @@ _syntax: ofSaveURLAsync(url, path)_
 _name: ofSaveURLAsync_
 _returns: int_
 _returns_description: _
-_parameters: string url, string path_
+_parameters: const string &url, const string &path_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -280,6 +285,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 
@@ -309,7 +315,7 @@ _syntax: ofSaveURLTo(url, path)_
 _name: ofSaveURLTo_
 _returns: ofHttpResponse_
 _returns_description: _
-_parameters: string url, string path_
+_parameters: const string &url, const string &path_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -320,6 +326,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 
@@ -367,6 +374,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -378,12 +386,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofEvent ofURLResponseEvent()
+###ofEvent< ofHttpResponse > & ofURLResponseEvent()
 
 <!--
 _syntax: ofURLResponseEvent()_
 _name: ofURLResponseEvent_
-_returns: ofEvent_
+_returns: ofEvent< ofHttpResponse > &_
 _returns_description: _
 _parameters: _
 _version_started: _
@@ -396,6 +404,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 
@@ -435,6 +444,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 

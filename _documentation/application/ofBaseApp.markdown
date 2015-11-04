@@ -548,6 +548,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Called on the active window when the mouse is dragged, i.e.
+moved with a button pressed
 
 
 
@@ -606,6 +608,164 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void mouseEntered(x, y)
+
+<!--
+_syntax: mouseEntered(x, y)_
+_name: mouseEntered_
+_returns: void_
+_returns_description: _
+_parameters: int x, int y_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Called on the active window when the mouse cursor enters the
+window area
+
+Note that the mouse coordinates are the last known x/y before the
+event occurred, i.e. from the previous frame
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void mouseEntered(&mouse)
+
+<!--
+_syntax: mouseEntered(&mouse)_
+_name: mouseEntered_
+_returns: void_
+_returns_description: _
+_parameters: ofMouseEventArgs &mouse_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void mouseExited(x, y)
+
+<!--
+_syntax: mouseExited(x, y)_
+_name: mouseExited_
+_returns: void_
+_returns_description: _
+_parameters: int x, int y_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Called on the active window when the mouse cursor leaves the
+window area
+
+Note that the mouse coordinates are the last known x/y before the
+event occurred, i.e. from the previous frame
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void mouseExited(&mouse)
+
+<!--
+_syntax: mouseExited(&mouse)_
+_name: mouseExited_
+_returns: void_
+_returns_description: _
+_parameters: ofMouseEventArgs &mouse_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void mouseMoved(x, y)
 
 <!--
@@ -626,6 +786,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Called on the active window when the mouse is moved
 
 
 
@@ -704,6 +865,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Called on the active window when a mouse button is pressed
 
 
 
@@ -782,6 +944,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Called on the active window when a mouse button is released
 
 
 
@@ -831,6 +994,81 @@ _inlined_description: _
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void mouseScrolled(x, y)
+
+<!--
+_syntax: mouseScrolled(x, y)_
+_name: mouseScrolled_
+_returns: void_
+_returns_description: _
+_parameters: float x, float y_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Called on the active window when the mouse wheel is scrolled
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void mouseScrolled(&mouse)
+
+<!--
+_syntax: mouseScrolled(&mouse)_
+_name: mouseScrolled_
+_returns: void_
+_returns_description: _
+_parameters: ofMouseEventArgs &mouse_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -958,6 +1196,376 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void touchCancelled(x, y, id)
+
+<!--
+_syntax: touchCancelled(x, y, id)_
+_name: touchCancelled_
+_returns: void_
+_returns_description: _
+_parameters: int x, int y, int id_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void touchCancelled(&touch)
+
+<!--
+_syntax: touchCancelled(&touch)_
+_name: touchCancelled_
+_returns: void_
+_returns_description: _
+_parameters: ofTouchEventArgs &touch_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void touchDoubleTap(x, y, id)
+
+<!--
+_syntax: touchDoubleTap(x, y, id)_
+_name: touchDoubleTap_
+_returns: void_
+_returns_description: _
+_parameters: int x, int y, int id_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void touchDoubleTap(&touch)
+
+<!--
+_syntax: touchDoubleTap(&touch)_
+_name: touchDoubleTap_
+_returns: void_
+_returns_description: _
+_parameters: ofTouchEventArgs &touch_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void touchDown(x, y, id)
+
+<!--
+_syntax: touchDown(x, y, id)_
+_name: touchDown_
+_returns: void_
+_returns_description: _
+_parameters: int x, int y, int id_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void touchDown(&touch)
+
+<!--
+_syntax: touchDown(&touch)_
+_name: touchDown_
+_returns: void_
+_returns_description: _
+_parameters: ofTouchEventArgs &touch_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void touchMoved(x, y, id)
+
+<!--
+_syntax: touchMoved(x, y, id)_
+_name: touchMoved_
+_returns: void_
+_returns_description: _
+_parameters: int x, int y, int id_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void touchMoved(&touch)
+
+<!--
+_syntax: touchMoved(&touch)_
+_name: touchMoved_
+_returns: void_
+_returns_description: _
+_parameters: ofTouchEventArgs &touch_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void touchUp(x, y, id)
+
+<!--
+_syntax: touchUp(x, y, id)_
+_name: touchUp_
+_returns: void_
+_returns_description: _
+_parameters: int x, int y, int id_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void touchUp(&touch)
+
+<!--
+_syntax: touchUp(&touch)_
+_name: touchUp_
+_returns: void_
+_returns_description: _
+_parameters: ofTouchEventArgs &touch_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void update()
 
 <!--
@@ -1022,82 +1630,6 @@ _name: update_
 _returns: void_
 _returns_description: _
 _parameters: ofEventArgs &args_
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void windowEntry(state)
-
-<!--
-_syntax: windowEntry(state)_
-_name: windowEntry_
-_returns: void_
-_returns_description: _
-_parameters: int state_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void windowEntry(&entry)
-
-<!--
-_syntax: windowEntry(&entry)_
-_name: windowEntry_
-_returns: void_
-_returns_description: _
-_parameters: ofEntryEventArgs &entry_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -1262,6 +1794,9 @@ _constant: False_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1288,6 +1823,9 @@ _visible: True_
 _constant: False_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 

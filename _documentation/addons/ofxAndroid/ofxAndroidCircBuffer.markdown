@@ -145,9 +145,9 @@ _syntax: ofxAndroidCircBuffer(&)_
 _name: ofxAndroidCircBuffer_
 _returns: _
 _returns_description: _
-_parameters: const ofxAndroidCircBuffer &_
+_parameters: const ofxAndroidCircBuffer< Content > &_
 _access: private_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -173,7 +173,6 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
 ### ofxAndroidCircBuffer(_size = 0, &init_val = Content())
@@ -183,7 +182,7 @@ _syntax: ofxAndroidCircBuffer(_size = 0, &init_val = Content())_
 _name: ofxAndroidCircBuffer_
 _returns: _
 _returns_description: _
-_parameters: int _size=0, const Content &init_val=Content()_
+_parameters: int _size=0, const Content &init_val_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -214,16 +213,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofxAndroidCircBuffer & operator=(&)
+###ofxAndroidCircBuffer< Content > & operator=(&)
 
 <!--
 _syntax: operator=(&)_
 _name: operator=_
-_returns: ofxAndroidCircBuffer &_
+_returns: ofxAndroidCircBuffer< Content > &_
 _returns_description: _
-_parameters: const ofxAndroidCircBuffer &_
+_parameters: const ofxAndroidCircBuffer< Content > &_
 _access: private_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -249,7 +248,6 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
 ###Content read(&default_c = Content())
@@ -259,7 +257,7 @@ _syntax: read(&default_c = Content())_
 _name: read_
 _returns: Content_
 _returns_description: _
-_parameters: const Content &default_c=Content()_
+_parameters: const Content &default_c_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -297,7 +295,7 @@ _syntax: setup(_size, &init_val = Content())_
 _name: setup_
 _returns: void_
 _returns_description: _
-_parameters: int _size, const Content &init_val=Content()_
+_parameters: int _size, const Content &init_val_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -408,31 +406,6 @@ _description: _
 
 
 
-###vector< Content > buffer
-
-<!--
-_name: buffer_
-_type: vector< Content >_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###int buffer_size
 
 <!--
@@ -446,6 +419,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -472,6 +448,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -496,6 +475,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -522,6 +504,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -546,6 +531,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 

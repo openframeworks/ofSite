@@ -9,24 +9,33 @@ _istemplated: False_
 
 ##InlineDescription
 
-a streaming log interface 
+\
+A C++ stream-style logging interface.
+
+ofLog accepts variables via the std::ostream operator << and builds a string
+and logs it when the stream is finished (via the destructor). A newline is
+printed automatically and all the stream controls (std::endl, std::flush,
+std::hex, etc) work normally. The default log level is `OF_LOG_NOTICE`.
+
+Basic usage:
+
+~~~~{.cpp}
+
+ofLog() << "My integer is " << 100 << " and my float is " << 20.234f;
+
+~~~~
+
+It also accepts the legacy ofLog interface:
+ofLog(ofLogLevel level, string message):
+
+~~~~{.cpp}
+
+ofLog(OF_LOG_ERROR, "Another string.");
+
+~~~~
 
 
-ofLog accepts variables via the ostream operator << and builds a string and logs it when the stream is finished (via the destructor). A newline is printed automatically and all the stream controls (endl, flush, hex, etc) work normally. The log level is explicitly OF_LOG_NOTICE unless set, see the derived wrapper classes:
-
-Usage: ofLog() << "a string" << 100 << 20.234f;
-
-It also accepts the legacy ofLog interface: ofLog(ofLogLevel level, string message):
-
-Usage: ofLog(OF_LOG_ERROR, "another string");
-
-class idea from: [http://www.gamedev.net/community/forums/topic.asp?topic_id=525405&whichpage=1&#3406418](http://www.gamedev.net/community/forums/topic.asp?topic_id=525405&whichpage=1&#3406418) how to catch std::endl (which is actually a func pointer): [http://yvan.seth.id.au/Entries/Technology/Code/std__endl.html](http://yvan.seth.id.au/Entries/Technology/Code/std__endl.html)
-
-***author:*** 
-	Dan Wilcox [danomatika@gmail.com](danomatika@gmail.com) danomatika.com 
-
-
-
+by:Dan Wilcox <danomatika@gmail.com> danomatika.com
 
 
 
@@ -147,8 +156,11 @@ _advanced: False_
 
 _inlined_description: _
 
-print a log line 
-
+Print a log line.
+Parameters:
+level The log level.
+module The target module.
+message The log message.
 
 
 
@@ -187,6 +199,11 @@ _advanced: False_
 
 _inlined_description: _
 
+Determine if the given module is active at the given log level.
+Parameters:
+level The log level.
+module The target module.
+Returns: true if the given module is active at the given log level.
 
 
 
@@ -225,8 +242,25 @@ _advanced: False_
 
 _inlined_description: _
 
-log at notice level 
+Start logging on notice level.
 
+ofLog provides a streaming log interface by accepting variables via
+the `std::ostream` operator `<<` similar to `std::cout` and
+`std::cerr`.
+
+It builds a string and logs it when the stream is finished. A
+newline is printed automatically and all the stream controls
+(`std::endl`, `std::flush`, `std::hex`, etc)
+work normally.
+
+~~~~{.cpp}
+
+// Converts primitive types (int, float, etc) to strings automatically.
+ofLog() << "a string " << 100 << 20.234f;
+
+~~~~
+
+The log level is `OF_LOG_NOTICE` by default.
 
 
 
@@ -280,8 +314,36 @@ _advanced: False_
 
 _inlined_description: _
 
-set the log level 
+Start logging on a specific ofLogLevel.
 
+Example:
+~~~~{.cpp}
+
+// Set the log level.
+ofLog(OF_LOG_WARNING) << "a string " << 100 << 20.234f;
+
+~~~~
+
+You can use the derived convenience classes as an alternative for specific log levels:
+
+	ofLogVerbose()
+	ofLogNotice()
+	ofLogWarning()
+	ofLogError()
+	ofLogFatalError()
+
+~~~~{.cpp}
+
+// Set the log level.
+ofLog(OF_LOG_WARNING) << "a string " << 100 << 20.234f;
+
+// This is the same as above.
+ofLogWarning() << "a string " << 100 << 20.234f;
+
+~~~~
+
+Parameters:
+level The ofLogLevel for this log message.
 
 
 
@@ -349,8 +411,25 @@ _advanced: False_
 
 _inlined_description: _
 
-the legacy ofLog interfaces 
+Log a string at a specific log level.
 
+Supply the logging message as a parameter to the function
+instead of as a stream.
+
+The string message can be concatenated using the
+ofToString(const T& value) conversion function:
+
+~~~~{.cpp}
+
+// Build a single string message.
+ofLog(OF_LOG_NOTICE, "the number is "
++ ofToString(10) + " and I have a float too " + ofToString(123.45f));
+
+~~~~
+
+Parameters:
+level The ofLogLevel for this log message.
+message The log message.
 
 
 
@@ -383,16 +462,16 @@ See [ofSetLogLevel(logLevel)](./ofLog.html#functions) for more info on log level
 
 <!----------------------------------------------------------------------------->
 
-### ofLog(logLevel, *format, ...)
+### ofLog(&)
 
 <!--
-_syntax: ofLog(logLevel, *format, ...)_
+_syntax: ofLog(&)_
 _name: ofLog_
 _returns: _
 _returns_description: _
-_parameters: ofLogLevel level, const char *format,..._
-_access: public_
-_version_started: 007_
+_parameters: const ofLog &_
+_access: private_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -411,81 +490,6 @@ _inlined_description: _
 
 
 _description: _
-
-
-Logs a message at a specific log level using the printf interface.
-
-The message is built using the formatting from the C printf function and can be used as a direct replacement. Essentially, the second argument is a string with special formatting specifiers starting with '%' that specify where the following variables go in the message. You can have as many variables as you want following the logLevel and format string, but there must be a % specifier for each subsequent variable.
-
-For quick reference, here are a few of the most useful formatting specifiers:
-
-* **%d**: integer number, 123
-* **%f**: floating point number, 123.45
-* **%s**: a C string ([null terminated](http://en.wikipedia.org/wiki/Null-terminated_string)); this is not a C++ string, use [string::c_str()](http://www.cplusplus.com/reference/string/string/c_str/) to get a C string from a C++ string
-* **%c**: a single character
-* **%x**: unsigned integer as a [hexidecimal](http://en.wikipedia.org/wiki/Hexadecimal) number; 'x' uses lower-case letters and 'X' uses upper-case
-* **%%**: prints a '%' character
-
-The specifier should match the variable type as it is used to tell the function how to convert that primitive type (int, float, character, etc) into a string.
-
-For instance, let's say we want to print two messages, a salutation and the value of an int, a float, and a string variable:
-
-~~~~{.cpp}
-
-// print a simple message with no variables
-ofLog(OF_LOG_WARNING, "welcome to the jungle);
-
-// our variables
-float fun = 11.11;
-int games = 100;
-string theNames = "Dan, Kyle, & Golan";
-
-// print a message with variables, sets the message format in the format string
-ofLog(OF_LOG_NOTICE, "we've got %d & %f, we got everything you want honey, we know %s", fun, games, theNames.c_str());
-
-~~~~
-
-Note: theNames.c_str() returns a C string from theNames which is a C++ string object.
-
-There are other formatting options such as setting the decimal precision of float objects and the forward padding of numbers (i.e. 0001 instead of 1). See the [Wikipedia printf format string article](http://en.wikipedia.org/wiki/Printf_format_string) for more detailed information.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofLog(&)
-
-<!--
-_syntax: ofLog(&)_
-_name: ofLog_
-_returns: _
-_returns_description: _
-_parameters: ofLog const &_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: False_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
 
 
 
@@ -515,8 +519,15 @@ _advanced: False_
 
 _inlined_description: _
 
-catch the << ostream with a template class to read any type of data 
+Define flexible stream operator.
 
+This allows the 
+almost any type.
+
+\tparam T the data type to be streamed.
+Parameters:
+value the data to be streamed.
+Returns: A reference to itself.
 
 
 
@@ -535,16 +546,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofLog & operator<<(&))
+###ofLog & operator<<(func)
 
 <!--
-_syntax: operator<<(&))_
+_syntax: operator<<(func)_
 _name: operator<<_
 _returns: ofLog &_
 _returns_description: _
-_parameters: std::ostream &(*func)(std::ostream &)_
+_parameters: ostream &(*)(ostream &) func_
 _access: public_
-_version_started: 0072_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -555,8 +566,14 @@ _advanced: False_
 
 _inlined_description: _
 
-catch the << ostream function pointers such as std::endl and std::hex 
+Define flexible stream operator.
 
+This allows the 
+pointers such as std::endl and std::hex.
+
+Parameters:
+func A function pointer that takes a std::ostream as an argument.
+Returns: A reference to itself.
 
 
 
@@ -565,7 +582,6 @@ catch the << ostream function pointers such as std::endl and std::hex
 
 
 _description: _
-
 
 
 
@@ -633,8 +649,12 @@ _advanced: False_
 
 _inlined_description: _
 
-put a space between stream operator calls? 
+Let the logger automaticly add spaces between messages.
 
+Default is `false`.
+
+Parameters:
+autoSpace Set to true to add spaces between messages
 
 
 
@@ -660,9 +680,9 @@ _syntax: setChannel(channel)_
 _name: setChannel_
 _returns: void_
 _returns_description: _
-_parameters: ofPtr< ofBaseLoggerChannel > channel_
+_parameters: shared_ptr< ofBaseLoggerChannel > channel_
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -673,8 +693,13 @@ _advanced: False_
 
 _inlined_description: _
 
-set the logging channel destinations for messages 
+Set the logging channel destinations for messages.
 
+This can be used to output to files instead of stdout.
+
+\sa ofFileLoggerChannel ofConsoleLoggerChannel
+Parameters:
+channel The channel to log to.
 
 
 
@@ -683,11 +708,6 @@ set the logging channel destinations for messages
 
 
 _description: _
-
-
-Sets the logging channel that receives log messages. This is analogous to ofSetLoggerChannel().
-
-See [ofSetLoggerChannel()](./ofLog.html#functions) for more detail.
 
 
 
@@ -717,8 +737,9 @@ _advanced: False_
 
 _inlined_description: _
 
-does the actual printing when the ostream is done 
+Destroy the ofLog.
 
+This destructor does the actual printing via std::ostream.
 
 
 
@@ -755,6 +776,10 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+< Should space be added between messages?
+
 _description: _
 
 
@@ -779,6 +804,10 @@ _visible: False_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+< Has the message been printed in the constructor?
 
 _description: _
 
@@ -805,6 +834,10 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+< The target channel.
+
 _description: _
 
 
@@ -829,6 +862,10 @@ _visible: False_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+< Log level.
 
 _description: _
 
@@ -855,6 +892,10 @@ _constant: False_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+< Temporary buffer.
+
 _description: _
 
 
@@ -880,6 +921,10 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+< The destination module for this message.
+
 _description: _
 
 
@@ -904,6 +949,10 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+< The padding between std::ostream calls.
 
 _description: _
 

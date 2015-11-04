@@ -9,6 +9,28 @@ _istemplated: False_
 
 ##InlineDescription
 
+ofPath is a way to create a path or multiple paths consisting of
+points. It allows you to combine multiple paths consisting of points into
+a single vector data object that can be drawn to the screen, manipulated
+point by point, or manipulated with it's child subpaths. It is better at
+representing and manipulating complex shapes than the ofPolyline and more
+easily represents multiple child lines or shapes as either ofSubPath or
+ofPolyline instances. By default ofPath uses ofSubPath instances. Closing
+the path automatically creates a new path:
+
+~~~~{.cpp}
+for( int i = 0; i < 5; i++) {
+    // create a new ofSubPath
+    path.arc( i * 50 + 20, i * 50 + 20, i * 40 + 10, i * 40 + 10, 0, 360);
+    path.close();
+}
+~~~~
+
+To use ofPolyline instances, simply set the mode to POLYLINES
+
+~~~~{.cpp}
+path.setMode(POLYLINES);
+~~~~
 
 
 
@@ -46,9 +68,9 @@ _syntax: addCommand(&command)_
 _name: addCommand_
 _returns: void_
 _returns_description: _
-_parameters: const Command &command_
+_parameters: const ofPath::Command &command_
 _access: private_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -68,6 +90,94 @@ _inlined_description: _
 
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void append(&path)
+
+<!--
+_syntax: append(&path)_
+_name: append_
+_returns: void_
+_returns_description: _
+_parameters: const ofPath &path_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void arc(&centre, radiusX, radiusY, angleBegin, angleEnd)
+
+<!--
+_syntax: arc(&centre, radiusX, radiusY, angleBegin, angleEnd)_
+_name: arc_
+_returns: void_
+_returns_description: _
+_parameters: const ofPoint &centre, float radiusX, float radiusY, float angleBegin, float angleEnd_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Create an arc at centre, which has the radiusX, radiusY, and begins at
+angleBegin and ends at angleEnd. To draw a circle with a radius of 50 pixels
+at 100, 100:
+
+\note angleBegin needs to be larger than angleEnd, i.e. 0,180 is ok,
+while 180,0 is not.
+
+
+
+
+
+
+
+_description: _
+
+
+Creates an arc at centre, which has the radiusX, radiusY, and begins at angleBegin and ends at angleEnd. To draw a circle with a radius of 50 pixels at 100, 100:
+
+~~~~{.cpp}
+path.arc( 100, 100, 50, 50, 0, 360);
+~~~~
+
+Note that angleBegin needs to be larger than angleEnd, i.e. 0, 180 is ok, while 180,0 is not.
 
 
 
@@ -115,52 +225,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void arc(&centre, radiusX, radiusY, angleBegin, angleEnd)
-
-<!--
-_syntax: arc(&centre, radiusX, radiusY, angleBegin, angleEnd)_
-_name: arc_
-_returns: void_
-_returns_description: _
-_parameters: const ofPoint &centre, float radiusX, float radiusY, float angleBegin, float angleEnd_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Creates an arc at centre, which has the radiusX, radiusY, and begins at angleBegin and ends at angleEnd. To draw a circle with a radius of 50 pixels at 100, 100:
-
-~~~~{.cpp}
-path.arc( 100, 100, 50, 50, 0, 360);
-~~~~
-
-Note that angleBegin needs to be larger than angleEnd, i.e. 0, 180 is ok, while 180,0 is not.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void arc(x, y, radiusX, radiusY, angleBegin, angleEnd)
 
 <!--
@@ -181,6 +245,19 @@ _advanced: False_
 
 _inlined_description: _
 
+Create an arc at x,y, which has the radiusX, radiusY, and begins at
+angleBegin and ends at angleEnd. To draws a shape with a radius of 200 pixels
+at 300, 300:
+
+~~~~{.cpp}
+path.moveTo(300, 300);
+path.arc( 300, 300, 200, 200, 0, 271); // note 271, not 270 for precision
+~~~~
+
+![ofPath arc](graphics/ofPath_arc.jpg)
+
+\note angleBegin needs to be larger than angleEnd, i.e. 0, 180 is ok,
+while 180,0 is not.
 
 
 
@@ -230,6 +307,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Create an arc at x,y,z, which has the radiusX, radiusY, and begins at
+angleBegin and ends at angleEnd.
 
 
 
@@ -384,6 +463,16 @@ _advanced: False_
 
 _inlined_description: _
 
+Create a cubic bezier line from the current drawing point with the 2
+control points indicated by ofPoint `cp1` and `cp2`, that ends at ofPoint
+to.
+
+~~~~{.cpp}
+line.addVertex(ofPoint(200, 400));
+line.bezierTo(100, 100, 800, 100, 700, 400);
+~~~~
+![polyline bezier](graphics/bezier.jpg)
+The control points are shown in red.
 
 
 
@@ -431,6 +520,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Create a cubic bezier line from the current drawing point with the 2
+control points indicated by the coordinates cx1, cy1 and cx2, cy2,
+that ends at the coordinates x, y.
 
 
 
@@ -471,6 +563,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Create a cubic bezier line in 3D space from the current drawing point
+with the 2 control points indicated by the coordinates cx1, cy1, cz1
+and cx2, cy2, cz2, that ends at the coordinates x, y, z.
 
 
 
@@ -487,7 +582,6 @@ float cx = ofGetWidth()/2;
 float cy = 200;
 float step = TWO_PI / 60;
 for (float i = 0.0; i < TWO_PI; i+=step) {
-
 
     if(i == 0.0) {
         line.addVertex(cx + (400*cos(i)), cy+400, 400 * sin(i));
@@ -641,6 +735,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Remove all subpaths from the ofPath instance
 
 
 
@@ -681,6 +776,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Close the current subpath and create a new subpath, either an
+ofPolyline or ofSubPath by calling newSubPath(), ensuring that the
+closed path doesn't have new points added to it.
 
 
 
@@ -721,6 +819,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Draws a curve to p from the current drawing position
 
 
 
@@ -761,6 +860,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Draws a curve to x,y from the current drawing position
 
 
 
@@ -814,6 +914,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Draws a curve to x,y,z from the current drawing position
 
 
 
@@ -825,46 +926,6 @@ _description: _
 
 
 Draws a curve to x,y,z from the current drawing position.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void draw(x, y)
-
-<!--
-_syntax: draw(x, y)_
-_name: draw_
-_returns: void_
-_returns_description: _
-_parameters: float x, float y_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Draws the path at x,y. Calling draw() also calls tessllate().
 
 
 
@@ -894,6 +955,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Draws the path at 0,0. Calling draw() also calls tessellate()
 
 
 
@@ -905,6 +967,47 @@ _description: _
 
 
 Draws the path at 0,0. Calling draw() also calls tessllate().
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void draw(x, y)
+
+<!--
+_syntax: draw(x, y)_
+_name: draw_
+_returns: void_
+_returns_description: _
+_parameters: float x, float y_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draws the path at x,y. Calling draw() also calls tessellate()
+
+
+
+
+
+
+
+_description: _
+
+
+Draws the path at x,y. Calling draw() also calls tessllate().
 
 
 
@@ -1036,7 +1139,7 @@ _name: flagShapeChanged_
 _returns: void_
 _returns_description: _
 _parameters: _
-_access: public_
+_access: private_
 _version_started: 007_
 _version_deprecated: _
 _summary: _
@@ -1142,16 +1245,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###vector< Command > & getCommands()
+###const vector< ofPath::Command > & getCommands()
 
 <!--
 _syntax: getCommands()_
 _name: getCommands_
-_returns: vector< Command > &_
+_returns: const vector< ofPath::Command > &_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 0.8.0_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1170,7 +1273,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -1180,16 +1282,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const vector< Command > & getCommands()
+###const vector< ofPath::Command > & getCommands()
 
 <!--
 _syntax: getCommands()_
 _name: getCommands_
-_returns: const vector< Command > &_
+_returns: const vector< ofPath::Command > &_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1208,7 +1310,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -1276,6 +1377,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Get the ofColor fill of the ofPath
 
 
 
@@ -1296,16 +1398,16 @@ Returns the ofColor that the ofPath is using.
 
 <!----------------------------------------------------------------------------->
 
-###Mode getMode()
+###ofPath::Mode getMode()
 
 <!--
 _syntax: getMode()_
 _name: getMode_
-_returns: Mode_
+_returns: ofPath::Mode_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1331,15 +1433,14 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###vector< ofPolyline > & getOutline()
+###const vector< ofPolyline > & getOutline()
 
 <!--
 _syntax: getOutline()_
 _name: getOutline_
-_returns: vector< ofPolyline > &_
+_returns: const vector< ofPolyline > &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1354,6 +1455,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Get an ofPolyline representing the outline of the ofPath.
 
 
 
@@ -1394,6 +1496,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Get the stroke color of the ofPath
 
 
 
@@ -1434,6 +1537,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Get the stroke width of the ofPath
+
+The default value is `0
 
 
 
@@ -1454,12 +1560,12 @@ Returns the stroke width.
 
 <!----------------------------------------------------------------------------->
 
-###ofMesh & getTessellation()
+###const ofMesh & getTessellation()
 
 <!--
 _syntax: getTessellation()_
 _name: getTessellation_
-_returns: ofMesh &_
+_returns: const ofMesh &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1550,6 +1656,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Get the poly winding mode currently in use.
 
 
 
@@ -1578,7 +1685,7 @@ _name: hasChanged_
 _returns: bool_
 _returns_description: _
 _parameters: _
-_access: public_
+_access: private_
 _version_started: 0073_
 _version_deprecated: _
 _summary: _
@@ -1666,6 +1773,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Get whether the path is using a fill or not.
+
+The default value is `true`
 
 
 
@@ -1706,6 +1816,7 @@ _advanced: False_
 
 _inlined_description: _
 
+\}
 
 
 
@@ -1744,6 +1855,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Draw a straight line from the current drawing position to the
+location indicated by p.
 
 
 
@@ -1784,6 +1897,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Draw a straight line from the current drawing position to the
+location indicated by x,y.
 
 
 
@@ -1824,6 +1939,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Draw a straight line from the current drawing position to the
+location indicated by x,y,z.
 
 
 
@@ -1864,6 +1981,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Move the drawing position to p. This means that a subsequent calls to,
+for instance, lineTo() or curveTo() will connect the location p to the new
+location.
 
 
 
@@ -1891,7 +2011,7 @@ _syntax: moveTo(x, y, z = 0)_
 _name: moveTo_
 _returns: void_
 _returns_description: _
-_parameters: float x, float y, float z=0_
+_parameters: float x, float y, float z_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1904,6 +2024,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Move the drawing position to x,y.z. This means that a subsequent
+calls to, for instance, lineTo() or curveTo() will connect the
+location x,y,z to the new location.
 
 
 
@@ -1944,6 +2067,11 @@ _advanced: False_
 
 _inlined_description: _
 
+Create a new subpath, either an ofPolyline instance or an ofSubPath
+instance. All points added after a call to ofSubPath will be done in
+the newly created subpath. Calling close() automatically calls create
+newSubPath(), ensuring that the closed path doesn't have new points
+added to it.
 
 
 
@@ -1984,6 +2112,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Create a new ofPath instance.
 
 
 
@@ -2024,6 +2153,11 @@ _advanced: False_
 
 _inlined_description: _
 
+Create a quadratic bezier line in 3D space from the current drawing
+point with the beginning indicated by the coordinates cx1, cy1, cz1,
+the control point at cx2, cy2, cz2, and that ends at the coordinates
+x, y, z.
+![Curves](graphics/curves.jpg)
 
 
 
@@ -2065,6 +2199,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Creates a quadratic bezier line in 2D space from the current drawing
+point with the beginning indicated by the point p1, the control point
+at p2, and that ends at the point p3.
 
 
 
@@ -2105,6 +2242,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Creates a quadratic bezier line in 3D space from the current drawing
+point with the beginning indicated by the coordinates cx1, cy1, the
+control point at cx2, cy2, and that ends at the coordinates x, y.
 
 
 
@@ -2563,6 +2703,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Change the size of either the ofPolyline or ofSubPath instances that
+the ofPath contains. These changes are non-reversible, so for instance
+scaling by 0,0 zeros out all data.
 
 
 
@@ -2641,6 +2784,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Set the color of the path. This affects both the line if the
+path is drawn as wireframe and the fill if the path is drawn with
+fill. All subpaths are affected.
 
 
 
@@ -2719,6 +2865,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Set the fill color of the path. This has no affect if the path is
+drawn as wireframe.
 
 
 
@@ -2759,6 +2907,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Set the fill color of the path. This has no affect if the path is
+drawn as wireframe.
 
 
 
@@ -2799,6 +2949,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Set whether the path should be drawn as wireframes or filled.
 
 
 
@@ -2839,6 +2990,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Set the color of the path. This affects both the line if the path is
+drawn as wireframe and the fill if the path is drawn with fill. All
+subpaths are affected.
 
 
 
@@ -2866,9 +3020,9 @@ _syntax: setMode(mode)_
 _name: setMode_
 _returns: void_
 _returns_description: _
-_parameters: Mode mode_
+_parameters: ofPath::Mode mode_
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2887,7 +3041,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -2917,6 +3070,21 @@ _advanced: False_
 
 _inlined_description: _
 
+Set the way that the points in the sub paths are connected.
+
+OpenGL can only render convex polygons which means that any shape that
+isn't convex, i.e. that has points which are concave, going inwards,
+need to be tessellated into triangles so that OpenGL can render them.
+If you're using filled shapes with your ofPath this is done
+automatically for you.
+
+The possible options you can pass in are:
+
+    OF_POLY_WINDING_ODD
+    OF_POLY_WINDING_NONZERO
+    OF_POLY_WINDING_POSITIVE
+    OF_POLY_WINDING_NEGATIVE
+    OF_POLY_WINDING_ABS_GEQ_TWO
 
 
 
@@ -2958,7 +3126,6 @@ void ofApp::setup(){
     path.lineTo(150, 250);
     path.lineTo(250, 250);
     path.lineTo(250, 150); // inner 2 (backwards)
-
 
     path2.lineTo(0, 400);
     path2.lineTo(400, 400);
@@ -3031,6 +3198,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Set the stroke color of the path. This has no affect if the path
+is drawn filled.
 
 
 
@@ -3071,6 +3240,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Set the stroke color of the path. This has no affect if the path
+is drawn filled.
 
 
 
@@ -3111,6 +3282,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Set the stroke width of the line if the ofPath is to be drawn
+not in wireframe.
 
 
 
@@ -3176,7 +3349,7 @@ _syntax: simplify(tolerance = 0.3)_
 _name: simplify_
 _returns: void_
 _returns_description: _
-_parameters: float tolerance=0.3_
+_parameters: float tolerance=0.3f_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -3415,6 +3588,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -3439,6 +3615,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -3465,6 +3644,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -3489,6 +3671,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -3515,6 +3700,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -3539,6 +3727,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -3565,6 +3756,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -3589,6 +3783,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -3615,6 +3812,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -3639,6 +3839,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -3665,6 +3868,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -3689,6 +3895,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -3715,6 +3924,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -3739,6 +3951,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -3765,6 +3980,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -3789,6 +4007,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -3815,6 +4036,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -3840,6 +4064,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -3864,6 +4091,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 

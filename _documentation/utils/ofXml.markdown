@@ -204,7 +204,7 @@ _syntax: addValue(&path, data = T(), createEntirePath = false)_
 _name: addValue_
 _returns: bool_
 _returns_description: _
-_parameters: const string &path, T data=T(), bool createEntirePath=false_
+_parameters: const string &path, T data, bool createEntirePath=false_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -662,6 +662,80 @@ _inlined_description: _
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int64_t getInt64Value()
+
+<!--
+_syntax: getInt64Value()_
+_name: getInt64Value_
+_returns: int64_t_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int64_t getInt64Value(&path)
+
+<!--
+_syntax: getInt64Value(&path)_
+_name: getInt64Value_
+_returns: int64_t_
+_returns_description: _
+_parameters: const string &path_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1186,7 +1260,7 @@ _syntax: getValue(&path, returnVal = T())_
 _name: getValue_
 _returns: T_
 _returns_description: _
-_parameters: const string &path, T returnVal=T()_
+_parameters: const string &path, T returnVal_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -2012,7 +2086,7 @@ _syntax: setToChild(index)_
 _name: setToChild_
 _returns: bool_
 _returns_description: _
-_parameters: int index_
+_parameters: unsigned long index_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -2373,6 +2447,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -2442,6 +2517,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -2468,6 +2546,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 

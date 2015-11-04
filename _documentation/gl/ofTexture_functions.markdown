@@ -34,7 +34,12 @@ _advanced: False_
 
 _inlined_description: _
 
-Use square GL_TEXTURE_2D textures. 
+Use GL_TEXTURE_2D textures.
+
+GL_TEXTURE_2D is OpenGL's default way of handling textures and supports a
+wider range of core OpenGL features such as mipmaps.
+
+\sa ofEnableArbTex()
 
 
 
@@ -72,7 +77,8 @@ _advanced: False_
 
 _inlined_description: _
 
-Use pixel based texture coordinates. 
+Use pixel-based texture coordinates.
+\sa ofEnableNormalizedTexCoords()
 
 
 
@@ -110,7 +116,8 @@ _advanced: False_
 
 _inlined_description: _
 
-Disable global texture "edge hacking". 
+Disable global texture "edge hack".
+\sa ofEnableTextureEdgeHack()
 
 
 
@@ -148,9 +155,23 @@ _advanced: False_
 
 _inlined_description: _
 
-Use GL ARB rectangular textures. 
+Use GL_TEXTURE_RECTANGLE textures.
 
-Rectangular textures are generally more useful and are enabled by default. Traditional GL_TEXTURE_2D square textures are faster on older hardware and in certain cases.
+GL_TEXTURE_RECTANGLE textures are more intuitive since they allow pixel
+based coordinates and are enabled by default.
+
+GL_TEXTURE_2D textures use normalised texture coordinates (a float value
+between 0 and 1 is used to express texture coordinates along width and
+height).
+
+GL_TEXTURE_2D textures are more widely supported and allow advanced features
+such as mipmaps and texture compression.
+
+\sa ofDisableArbTex()
+
+warning:GL_TEXTURE_RECTANGLE is not available in OpenGL ES.
+
+warning:GL_TEXTURE_RECTANGLE does not support mipmaps.
 
 
 
@@ -190,11 +211,17 @@ _advanced: False_
 
 _inlined_description: _
 
-Use normalized (0 - 1) texture coordinates. 
+Use normalized (0 - 1) texture coordinates.
 
-By default, textures in OF work with pixel based coordinates based on given content dimensions (images size, fbo size, etc). Normalized (0 - 1) coordinates are the traditional GL default as they allow working with internal texture data without having to worry about specific dimensions of the content.
+By default, textures in OF work with pixel-based coordinates based on given
+content dimensions (images size, fbo size, etc). Normalized (0 - 1)
+coordinates are the traditional OpenGL default as they allow working with
+internal texture data without having to worry about specific dimensions of
+the content.
 
-This overrides individual 
+This overrides individual ofTexture wrap settings.
+
+\sa http://www.opengl.org/sdk/docs/man4/html/glTexParameter.xhtml
 
 
 
@@ -232,9 +259,11 @@ _advanced: False_
 
 _inlined_description: _
 
-Enable global texture "edge hacking" to compensate for edge artifacts. 
+Enable the global texture "edge hack" to compensate for edge artifacts.
 
-Adds a 2 pixel offset to avoid possible edge artifacts (typically a black or white border). This 
+Adds a 2 pixel offset to avoid possible edge artifacts (typically a black or
+white border). This *very slightly* alters the image by scaling.  This is
+enabled by default.
 
 
 
@@ -272,83 +301,9 @@ _advanced: False_
 
 _inlined_description: _
 
-Check whether OF is using ARB rectangular or square textures. 
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool ofGetUsingCustomMinMagFilters()
-
-<!--
-_syntax: ofGetUsingCustomMinMagFilters()_
-_name: ofGetUsingCustomMinMagFilters_
-_returns: bool_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Check whether OF is using custom global texture scaling filters. 
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool ofGetUsingCustomTextureWrap()
-
-<!--
-_syntax: ofGetUsingCustomTextureWrap()_
-_name: ofGetUsingCustomTextureWrap_
-_returns: bool_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Check whether OF is using custom global texture wrapping. 
+Check whether OF is using GL_TEXTURE_RECTANGLE rectangular or GL_TEXTURE_2D textures.
+\sa ofEnableArbTex()
+Returns: true if using GL_TEXTURE_RECTANGLE textures, false if using GL_TEXTURE_2D textures.
 
 
 
@@ -386,7 +341,9 @@ _advanced: False_
 
 _inlined_description: _
 
-Check whether OF is using normalized or pixel texture coordinates. 
+Check whether OF is using normalized or pixel texture coordinates.
+\sa ofEnableNormalizedTexCoords()
+Returns: true if using normalized (0 - 1) texture coordinates.
 
 
 
@@ -424,171 +381,9 @@ _advanced: False_
 
 _inlined_description: _
 
-Check whether OF is using the "texture edge hack". 
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofRestoreMinMagFilters()
-
-<!--
-_syntax: ofRestoreMinMagFilters()_
-_name: ofRestoreMinMagFilters_
-_returns: void_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Removes global custom texture wrapping. 
-
-Restores individual 
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofRestoreTextureWrap()
-
-<!--
-_syntax: ofRestoreTextureWrap()_
-_name: ofRestoreTextureWrap_
-_returns: void_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Removes global custom texture wrapping. 
-
-Restores individual 
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofSetMinMagFilters(minFilter = GL_LINEAR, maxFilter = GL_LINEAR)
-
-<!--
-_syntax: ofSetMinMagFilters(minFilter = GL_LINEAR, maxFilter = GL_LINEAR)_
-_name: ofSetMinMagFilters_
-_returns: void_
-_returns_description: _
-_parameters: GLfloat minFilter=GL_LINEAR, GLfloat maxFilter=GL_LINEAR_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Set custom global texture minification/magnification scaling filters. 
-
-This setting allows global control over how OpenGL scales textures. It overrides individual 
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofSetTextureWrap(wrapS = GL_CLAMP_TO_EDGE, wrapT = GL_CLAMP_TO_EDGE)
-
-<!--
-_syntax: ofSetTextureWrap(wrapS = GL_CLAMP_TO_EDGE, wrapT = GL_CLAMP_TO_EDGE)_
-_name: ofSetTextureWrap_
-_returns: void_
-_returns_description: _
-_parameters: GLfloat wrapS=GL_CLAMP_TO_EDGE, GLfloat wrapT=GL_CLAMP_TO_EDGE_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Set custom global texture wrapping. 
-
-By default, textures are clamped to their edges with GL_CLAMP_TO_EDGE. Setting a repeat mode like GL_REPEAT allows you to create tiled backgrounds with small textures.
-
-See 
-
-This overrides individual 
+Check whether OF is using the texture "edge hack".
+\sa ofEnableTextureEdgeHack()
+Returns: true if OF is currently using the texture "edge hack".
 
 
 

@@ -9,6 +9,8 @@ _istemplated: True_
 
 ##InlineDescription
 
+A base 
+\tparam T The pixel data type.
 
 
 
@@ -44,6 +46,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Destroy the ofBaseImage_.
 
 
 

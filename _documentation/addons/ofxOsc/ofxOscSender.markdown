@@ -31,9 +31,9 @@ _syntax: appendBundle(&bundle, &p)_
 _name: appendBundle_
 _returns: void_
 _returns_description: _
-_parameters: ofxOscBundle &bundle, osc::OutboundPacketStream &p_
+_parameters: ofxOscBundle &bundle, int &p_
 _access: private_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -52,7 +52,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -69,9 +68,9 @@ _syntax: appendMessage(&message, &p)_
 _name: appendMessage_
 _returns: void_
 _returns_description: _
-_parameters: ofxOscMessage &message, osc::OutboundPacketStream &p_
+_parameters: ofxOscMessage &message, int &p_
 _access: private_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -90,7 +89,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -176,6 +174,82 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void disableBroadcast()
+
+<!--
+_syntax: disableBroadcast()_
+_name: disableBroadcast_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+disables broadcast capabilities, usually call this before setup
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void enableBroadcast()
+
+<!--
+_syntax: enableBroadcast()_
+_name: enableBroadcast_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+enabled broadcast capabilities (usually no need to call this, enabled by default)
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ### ofxOscSender()
 
 <!--
@@ -214,6 +288,80 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+### ofxOscSender(&mom)
+
+<!--
+_syntax: ofxOscSender(&mom)_
+_name: ofxOscSender_
+_returns: _
+_returns_description: _
+_parameters: const ofxOscSender &mom_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofxOscSender & operator=(&mom)
+
+<!--
+_syntax: operator=(&mom)_
+_name: operator=_
+_returns: ofxOscSender &_
+_returns_description: _
+_parameters: const ofxOscSender &mom_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void sendBundle(&bundle)
 
 <!--
@@ -234,8 +382,7 @@ _advanced: False_
 
 _inlined_description: _
 
-send the given bundle 
-
+send the given bundle
 
 
 
@@ -254,16 +401,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void sendMessage(&message)
+###void sendMessage(&message, wrapInBundle = true)
 
 <!--
-_syntax: sendMessage(&message)_
+_syntax: sendMessage(&message, wrapInBundle = true)_
 _name: sendMessage_
 _returns: void_
 _returns_description: _
-_parameters: ofxOscMessage &message_
+_parameters: ofxOscMessage &message, bool wrapInBundle=true_
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -274,8 +421,7 @@ _advanced: False_
 
 _inlined_description: _
 
-send the given message 
-
+send the given message
 
 
 
@@ -284,7 +430,6 @@ send the given message
 
 
 _description: _
-
 
 
 
@@ -314,8 +459,7 @@ _advanced: False_
 
 _inlined_description: _
 
-creates a message using an ofParameter 
-
+creates a message using an ofParameter
 
 
 
@@ -341,9 +485,9 @@ _syntax: setup(hostname, port)_
 _name: setup_
 _returns: void_
 _returns_description: _
-_parameters: std::string hostname, int port_
+_parameters: string hostname, int port_
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -354,8 +498,7 @@ _advanced: False_
 
 _inlined_description: _
 
-send messages to hostname and port 
-
+send messages to hostname and port
 
 
 
@@ -365,6 +508,42 @@ send messages to hostname and port
 
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setup(*socket)
+
+<!--
+_syntax: setup(*socket)_
+_name: setup_
+_returns: void_
+_returns_description: _
+_parameters: osc::UdpTransmitSocket *socket_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -412,31 +591,25 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ~ofxOscSender()
+##Variables
+
+
+
+###bool broadcast
 
 <!--
-_syntax: ~ofxOscSender()_
-_name: ~ofxOscSender_
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
+_name: broadcast_
+_type: bool_
+_access: private_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
-_constant: False_
-_static: False_
 _visible: True_
+_constant: False_
 _advanced: False_
 -->
 
 _inlined_description: _
-
-
-
-
-
-
 
 
 _description: _
@@ -447,12 +620,61 @@ _description: _
 
 
 
+<!----------------------------------------------------------------------------->
+
+###string hostname
+
+<!--
+_name: hostname_
+_type: string_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+_description: _
+
+
+
+
+
+
 
 <!----------------------------------------------------------------------------->
 
-##Variables
+###int port
+
+<!--
+_name: port_
+_type: int_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
 
 
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###UdpTransmitSocket * socket
 
@@ -467,6 +689,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 

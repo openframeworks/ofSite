@@ -9,6 +9,7 @@ _istemplated: False_
 
 ##InlineDescription
 
+A base 
 
 
 
@@ -44,6 +45,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Destroy the ofBaseVideoDraws.
 
 
 

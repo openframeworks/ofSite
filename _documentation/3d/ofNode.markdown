@@ -9,6 +9,35 @@ _istemplated: False_
 
 ##InlineDescription
 
+A generic 3d object in space with transformation (position, rotation, scale).
+
+The ofNode is the base of all things 3d. It lets you represent a location
+and orientation in 3d space and also allows you to add children or parents
+so that sets of nodes can move together. This is handy for representing
+complex 3d models that are linked together, the same way that your hand is
+linked to your wrist (hopefully), which is linked to your elbow (hopefully),
+and so on. Nodes are the base of the ofPrimitives, ofCamera, and
+ofEasyCamera, among other things.
+
+with API to move around in global or local space
+and virtual draw method
+
+Info:
+uses right-handed coordinate system
+ofNodes 'look' along -ve z axis
+All set* methods work in local space unless stated otherwise
+
+To get the current position, check out: getX(), getY(), getZ().
+To get the axis of the node call getXAxis() (or the y and z variants for
+those other axes). Another really useful feature of the ofNode is that you
+can get the [Eulerian angles](http://en.wikipedia.org/wiki/Euler_angles)
+of each node: getPitch(), getHeading(), getRoll().
+The global transformation matrix of the ofNode is also available using the
+getGlobalTransformMatrix(), very handy for figuring out things in relation
+to the OpenGL representation of your OF world. getGlobalOrientation() also
+is handy, returning a ofQuaternion that you can use to find out whether
+your node is upside down in relation to the rest of your OF world (really
+an OpenGL context, but let's not get into that quite yet).
 
 
 
@@ -48,6 +77,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Move up+down (in local y axis)
 
 
 
@@ -56,6 +86,7 @@ _inlined_description: _
 
 
 _description: _
+
 Move up+down (in local y axis).
 
 
@@ -86,6 +117,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Remove parent node linking
 
 
 
@@ -94,6 +126,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -141,6 +174,46 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void customDraw(*renderer)
+
+<!--
+_syntax: customDraw(*renderer)_
+_name: customDraw_
+_returns: void_
+_returns_description: _
+_parameters: const ofBaseRenderer *renderer_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+If you extend ofNode and wish to change the way it draws, extend this
+try to not use global functions for rendering and instead use the passed
+renderer
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void customDraw()
 
 <!--
@@ -169,6 +242,7 @@ _inlined_description: _
 
 
 _description: _
+
 If you extend ofNode and wish to change the way it draws, extend this.
 
 
@@ -199,6 +273,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Move forward+backward (in local z axis)
 
 
 
@@ -207,6 +282,7 @@ _inlined_description: _
 
 
 _description: _
+
 Move forward+backward (in local z axis)
 
 
@@ -237,6 +313,10 @@ _advanced: False_
 
 _inlined_description: _
 
+Draw function.
+do NOT override this
+transforms the node to its position+orientation+scale
+and calls the virtual 'customDraw' method above which you CAN override
 
 
 
@@ -245,6 +325,7 @@ _inlined_description: _
 
 
 _description: _
+
 Draw function. do NOT override this transforms the node to its position+orientation+scale and calls the virtual 'customDraw' method above which you CAN override.
 
 
@@ -503,6 +584,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Get -z axis as 3d vector
+Returns: -z axis.
 
 
 
@@ -511,6 +594,7 @@ _inlined_description: _
 
 
 _description: _
+
 Get -z axis.
 
 
@@ -617,6 +701,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Get the parent node that this node is linked to
 
 
 
@@ -693,6 +778,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Get position as a 3d vector
 
 
 
@@ -806,7 +892,9 @@ _advanced: False_
 -->
 
 _inlined_description: _
-Get x axis.
+
+Get x axis as 3d vector
+Returns: x axis.
 
 
 
@@ -845,6 +933,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Get y axis as 3d vector
+Returns: y axis.
 
 
 
@@ -853,6 +943,7 @@ _inlined_description: _
 
 
 _description: _
+
 Get y axis.
 
 
@@ -883,6 +974,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Get x coordinate
 
 
 
@@ -891,6 +983,7 @@ _inlined_description: _
 
 
 _description: _
+
 Get x coodinate.
 
 
@@ -921,6 +1014,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Get x axis as 3d vector
 
 
 
@@ -929,6 +1023,7 @@ _inlined_description: _
 
 
 _description: _
+
 Get x axis.
 
 
@@ -959,6 +1054,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Get y coordinate
 
 
 
@@ -967,6 +1063,7 @@ _inlined_description: _
 
 
 _description: _
+
 Get y coordinate.
 
 
@@ -997,6 +1094,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Get y axis as 3d vector
 
 
 
@@ -1005,6 +1103,7 @@ _inlined_description: _
 
 
 _description: _
+
 Get y axis.
 
 
@@ -1035,6 +1134,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Get z coordinate
 
 
 
@@ -1043,6 +1143,7 @@ _inlined_description: _
 
 
 _description: _
+
 Get z coordinate.
 
 
@@ -1073,6 +1174,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Get z axis as 3d vector
 
 
 
@@ -1081,6 +1183,7 @@ _inlined_description: _
 
 
 _description: _
+
 Get z axis.
 
 
@@ -1091,16 +1194,16 @@ Get z axis.
 
 <!----------------------------------------------------------------------------->
 
-###void lookAt(&lookAtPosition, upVector = ofVec3f(0, 1, 0))
+###void lookAt(&lookAtPosition, upVector)
 
 <!--
-_syntax: lookAt(&lookAtPosition, upVector = ofVec3f(0, 1, 0))_
+_syntax: lookAt(&lookAtPosition, upVector)_
 _name: lookAt_
 _returns: void_
 _returns_description: _
-_parameters: const ofVec3f &lookAtPosition, ofVec3f upVector=ofVec3f(0, 1, 0)_
+_parameters: const ofVec3f &lookAtPosition, ofVec3f upVector_
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1111,6 +1214,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Orient node to look at position (-z axis pointing to position)
 
 
 
@@ -1119,7 +1223,6 @@ _inlined_description: _
 
 
 _description: _
-Orient node to look at position (-z axis pointing to position).
 
 
 
@@ -1129,16 +1232,16 @@ Orient node to look at position (-z axis pointing to position).
 
 <!----------------------------------------------------------------------------->
 
-###void lookAt(&lookAtNode, &upVector = ofVec3f(0, 1, 0))
+###void lookAt(&lookAtNode, &upVector)
 
 <!--
-_syntax: lookAt(&lookAtNode, &upVector = ofVec3f(0, 1, 0))_
+_syntax: lookAt(&lookAtNode, &upVector)_
 _name: lookAt_
 _returns: void_
 _returns_description: _
-_parameters: const ofNode &lookAtNode, const ofVec3f &upVector=ofVec3f(0, 1, 0)_
+_parameters: const ofNode &lookAtNode, const ofVec3f &upVector_
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1149,6 +1252,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Orient node to look at node (-z axis pointing to node)
 
 
 
@@ -1157,7 +1261,6 @@ _inlined_description: _
 
 
 _description: _
-Orient node to look at node (-z axis pointing to node).
 
 
 
@@ -1187,6 +1290,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Move by arbitrary amount
 
 
 
@@ -1195,6 +1299,7 @@ _inlined_description: _
 
 
 _description: _
+
 Move by arbitrary amount.
 
 
@@ -1225,6 +1330,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Move by arbitrary amount
 
 
 
@@ -1233,6 +1339,7 @@ _inlined_description: _
 
 
 _description: _
+
 Move by arbitrary amount.
 
 
@@ -1263,6 +1370,7 @@ _advanced: False_
 
 _inlined_description: _
 
+\cond INTERNAL
 
 
 
@@ -1301,6 +1409,7 @@ _advanced: False_
 
 _inlined_description: _
 
+classes extending ofNode can override this methods to get notified when the orientation changed.
 
 
 
@@ -1309,6 +1418,7 @@ _inlined_description: _
 
 
 _description: _
+
 Classes extending ofNode can override these methods to get notified when the orientation changed.
 
 
@@ -1339,6 +1449,8 @@ _advanced: False_
 
 _inlined_description: _
 
+classes extending ofNode can override this method to get
+notified when the position changed.
 
 
 
@@ -1347,6 +1459,7 @@ _inlined_description: _
 
 
 _description: _
+
 Classes extending ofNode can override these methods to get notified when the position changed.
 
 
@@ -1377,6 +1490,7 @@ _advanced: False_
 
 _inlined_description: _
 
+classes extending ofNode can override this methods to get notified when the scale changed.
 
 
 
@@ -1385,6 +1499,7 @@ _inlined_description: _
 
 
 _description: _
+
 Classes extending ofNode can override these methods to get notified when the scale changed.
 
 
@@ -1395,16 +1510,16 @@ Classes extending ofNode can override these methods to get notified when the sca
 
 <!----------------------------------------------------------------------------->
 
-###void orbit(longitude, latitude, radius, &centerPoint = ofVec3f(0, 0, 0))
+###void orbit(longitude, latitude, radius, &centerPoint)
 
 <!--
-_syntax: orbit(longitude, latitude, radius, &centerPoint = ofVec3f(0, 0, 0))_
+_syntax: orbit(longitude, latitude, radius, &centerPoint)_
 _name: orbit_
 _returns: void_
 _returns_description: _
-_parameters: float longitude, float latitude, float radius, const ofVec3f &centerPoint=ofVec3f(0, 0, 0)_
+_parameters: float longitude, float latitude, float radius, const ofVec3f &centerPoint_
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1415,6 +1530,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Orbit object around target at radius
 
 
 
@@ -1423,7 +1539,6 @@ _inlined_description: _
 
 
 _description: _
-Orbit object around target at radius.
 
 
 
@@ -1461,6 +1576,7 @@ _inlined_description: _
 
 
 _description: _
+
 Orbit object around target at radius.
 
 
@@ -1491,6 +1607,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Rotate left+right (around local y axis)
 
 
 
@@ -1499,6 +1616,7 @@ _inlined_description: _
 
 
 _description: _
+
 Rotate left+right (around local y axis).
 
 
@@ -1529,6 +1647,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Resets this node's transformation
 
 
 
@@ -1547,16 +1666,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void restoreTransformGL()
+###void restoreTransformGL(*renderer)
 
 <!--
-_syntax: restoreTransformGL()_
+_syntax: restoreTransformGL(*renderer)_
 _name: restoreTransformGL_
 _returns: void_
 _returns_description: _
-_parameters: _
+_parameters: ofBaseRenderer *renderer_
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1575,7 +1694,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -1605,6 +1723,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Roll left+right (around local z axis)
 
 
 
@@ -1613,6 +1732,7 @@ _inlined_description: _
 
 
 _description: _
+
 roll left+right (around local z axis)
 
 
@@ -1643,6 +1763,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Rotate by quaternion
 
 
 
@@ -1651,6 +1772,7 @@ _inlined_description: _
 
 
 _description: _
+
 Rotate by quaternion.
 
 
@@ -1681,6 +1803,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Rotate around arbitrary axis by angle
 
 
 
@@ -1689,6 +1812,7 @@ _inlined_description: _
 
 
 _description: _
+
 Rotate around arbitrary axis by angle.
 
 
@@ -1719,6 +1843,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Rotate around arbitrary axis by angle
 
 
 
@@ -1727,6 +1852,7 @@ _inlined_description: _
 
 
 _description: _
+
 Rotate around arbitrary axis by angle.
 
 
@@ -1757,6 +1883,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Rotate by quaternion around point
 
 
 
@@ -1765,6 +1892,7 @@ _inlined_description: _
 
 
 _description: _
+
 Rotate by quaternion around point.
 
 
@@ -1795,6 +1923,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Rotate around arbitrary axis by angle around point
 
 
 
@@ -1803,6 +1932,7 @@ _inlined_description: _
 
 
 _description: _
+
 Rotate around arbitrary axis by angle around point.
 
 
@@ -1947,6 +2077,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Set orientation with a quaternion
 
 
 
@@ -1985,6 +2116,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Set orientation with a euler angles
+\note Prepare for gimbal lock
 
 
 
@@ -2023,6 +2156,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Set parent to link nodes transformations. This will inherit
+transformations from parent node.
 
 
 
@@ -2031,6 +2166,7 @@ _inlined_description: _
 
 
 _description: _
+
 Set parent to link nodes transformations are inherited from parent node set to NULL if not needed (default).
 
 
@@ -2061,6 +2197,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Set the position of the node
 
 
 
@@ -2251,6 +2388,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Directly set the transformation matrix
 
 
 
@@ -2259,6 +2397,7 @@ _inlined_description: _
 
 
 _description: _
+
 Directly set transformation matrix.
 
 
@@ -2289,6 +2428,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Tilt up+down (around local x axis)
 
 
 
@@ -2297,6 +2437,7 @@ _inlined_description: _
 
 
 _description: _
+
 Tilt up+down (around local x axis)
 
 
@@ -2307,16 +2448,16 @@ Tilt up+down (around local x axis)
 
 <!----------------------------------------------------------------------------->
 
-###void transformGL()
+###void transformGL(*renderer)
 
 <!--
-_syntax: transformGL()_
+_syntax: transformGL(*renderer)_
 _name: transformGL_
 _returns: void_
 _returns_description: _
-_parameters: _
+_parameters: ofBaseRenderer *renderer_
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2327,6 +2468,10 @@ _advanced: False_
 
 _inlined_description: _
 
+Set opengl's modelview matrix to this nodes transform
+if you want to draw something at the position+orientation+scale of this node...
+...call ofNode::transform(); write your draw code, and ofNode::restoreTransform();
+OR A simpler way is to extend ofNode and override ofNode::customDraw();
 
 
 
@@ -2335,10 +2480,6 @@ _inlined_description: _
 
 
 _description: _
-Set opengl's modelview matrix to this nodes transform.
-If you want to draw something at the position+orientation+scale of this node...
-...call ofNode::transform(); write your draw code, and ofNode::restoreTransform();
-OR A simpler way is to extend ofNode and override ofNode::customDraw().
 
 
 
@@ -2368,6 +2509,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Move sideways (in local x axis)
 
 
 
@@ -2376,7 +2518,45 @@ _inlined_description: _
 
 
 _description: _
+
 move sideways (in local x axis)
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void updateAxis()
+
+<!--
+_syntax: updateAxis()_
+_name: updateAxis_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: protected_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2442,8 +2622,38 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool legacyCustomDrawOverrided
+
+<!--
+_name: legacyCustomDrawOverrided_
+_type: bool_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+_description: _
 
 
 
@@ -2466,6 +2676,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -2492,6 +2705,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -2516,6 +2732,10 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+\}
 
 _description: _
 
@@ -2542,6 +2762,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -2566,6 +2789,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 

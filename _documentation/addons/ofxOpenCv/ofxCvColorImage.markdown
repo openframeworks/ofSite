@@ -26,6 +26,80 @@ The ofxCvColorImage represents the data of each pixel as unsigned char values, l
 
 
 
+###void allocatePixels(w, h)
+
+<!--
+_syntax: allocatePixels(w, h)_
+_name: allocatePixels_
+_returns: void_
+_returns_description: _
+_parameters: int w, int h_
+_access: protected_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void allocateTexture()
+
+<!--
+_syntax: allocateTexture()_
+_name: allocateTexture_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: protected_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void clear()
 
 <!--
@@ -532,16 +606,16 @@ first -= second; // both are ofxCvFloatImage instances
 
 <!----------------------------------------------------------------------------->
 
-###void operator=(*_pixels)
+###void operator=(&_pixels)
 
 <!--
-_syntax: operator=(*_pixels)_
+_syntax: operator=(&_pixels)_
 _name: operator=_
 _returns: void_
 _returns_description: _
-_parameters: unsigned char *_pixels_
+_parameters: const ofPixels &_pixels_
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -560,9 +634,6 @@ _inlined_description: _
 
 
 _description: _
-
-
-Sets the ofxCvColorImage from the pixels pointer. Be sure that the pixels are the same size and dimensions as the ofxCvColorImage.
 
 
 
@@ -747,46 +818,6 @@ colorImage = shortColorImage; // make sure that the dimensions and ROI match
 
 <!----------------------------------------------------------------------------->
 
-###void operator=(*mom)
-
-<!--
-_syntax: operator=(*mom)_
-_name: operator=_
-_returns: void_
-_returns_description: _
-_parameters: const IplImage *mom_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Copies the data from an IplImage into the ofxCvColorImage using the = symbol.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void resize(w, h)
 
 <!--
@@ -834,7 +865,7 @@ _syntax: scaleIntoMe(&mom, interpolationMethod = CV_INTER_NN)_
 _name: scaleIntoMe_
 _returns: void_
 _returns_description: _
-_parameters: ofxCvImage &mom, int interpolationMethod=CV_INTER_NN_
+_parameters: ofxCvImage &mom, int interpolationMethod_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1095,6 +1126,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 

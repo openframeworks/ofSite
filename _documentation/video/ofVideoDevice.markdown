@@ -9,6 +9,9 @@ _istemplated: False_
 
 ##InlineDescription
 
+A structure describing attributes of a video device.
+
+An ofVideoDevice can represent a camera, grabber or other frame source.
 
 
 
@@ -42,6 +45,10 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+Is true if this video device is available.
+
 _description: _
 
 
@@ -66,6 +73,10 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+The video device name.
 
 _description: _
 
@@ -92,6 +103,11 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+A list of video device formats provided by the device.
+\sa ofVideoFormat
+
 _description: _
 
 
@@ -116,6 +132,10 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+The video device hardware name.
 
 _description: _
 
@@ -142,8 +162,40 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+The video device ID.
+
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string serialID
+
+<!--
+_name: serialID_
+_type: string_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Unique identifier for the device if it has one.
+
+_description: _
 
 
 

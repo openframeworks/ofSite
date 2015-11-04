@@ -26,6 +26,43 @@ This is one of the windowing systems used with openFrameworks when you build you
 
 
 
+###bool allowsMultiWindow()
+
+<!--
+_syntax: allowsMultiWindow()_
+_name: allowsMultiWindow_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: True_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void checkEvents()
 
 <!--
@@ -55,6 +92,43 @@ _inlined_description: _
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void close()
+
+<!--
+_syntax: close()_
+_name: close_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -444,44 +518,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void display()
-
-<!--
-_syntax: display()_
-_name: display_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: protected_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###bool doesHWOrientation()
 
 <!--
@@ -511,6 +547,80 @@ _inlined_description: _
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool doesLoop()
+
+<!--
+_syntax: doesLoop()_
+_name: doesLoop_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: True_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void draw()
+
+<!--
+_syntax: draw()_
+_name: draw_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -558,16 +668,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void exit(&e)
+###ofCoreEvents & events()
 
 <!--
-_syntax: exit(&e)_
-_name: exit_
-_returns: void_
+_syntax: events()_
+_name: events_
+_returns: ofCoreEvents &_
 _returns_description: _
-_parameters: ofEventArgs &e_
+_parameters: _
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -586,7 +696,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -1166,16 +1275,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getWindowMode()
+###ofWindowMode getWindowMode()
 
 <!--
 _syntax: getWindowMode()_
 _name: getWindowMode_
-_returns: int_
+_returns: ofWindowMode_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1194,7 +1303,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -1407,7 +1515,7 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: False_
+_static: True_
 _visible: True_
 _advanced: False_
 -->
@@ -1467,6 +1575,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool hasMouse()
@@ -1504,6 +1613,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void hideCursor()
@@ -1515,82 +1625,6 @@ _returns: void_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void idle()
-
-<!--
-_syntax: idle()_
-_name: idle_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: protected_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void init(settings = Settings())
-
-<!--
-_syntax: init(settings = Settings())_
-_name: init_
-_returns: void_
-_returns_description: _
-_parameters: Settings settings=Settings()_
-_access: protected_
 _version_started: 0073_
 _version_deprecated: _
 _summary: _
@@ -1658,16 +1692,53 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void initializeWindow()
+###void loop()
 
 <!--
-_syntax: initializeWindow()_
-_name: initializeWindow_
+_syntax: loop()_
+_name: loop_
 _returns: void_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: True_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void makeCurrent()
+
+<!--
+_syntax: makeCurrent()_
+_name: makeCurrent_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1687,6 +1758,42 @@ _inlined_description: _
 
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool needsPolling()
+
+<!--
+_syntax: needsPolling()_
+_name: needsPolling_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: True_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1734,20 +1841,20 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofAppEGLWindow(settings)
+###void pollEvents()
 
 <!--
-_syntax: ofAppEGLWindow(settings)_
-_name: ofAppEGLWindow_
-_returns: _
+_syntax: pollEvents()_
+_name: pollEvents_
+_returns: void_
 _returns_description: _
-_parameters: Settings settings_
+_parameters: _
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: False_
+_static: True_
 _visible: True_
 _advanced: False_
 -->
@@ -1762,7 +1869,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -1886,16 +1992,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void runAppViaInfiniteLoop(*appPtr)
+###shared_ptr< ofBaseRenderer > & renderer()
 
 <!--
-_syntax: runAppViaInfiniteLoop(*appPtr)_
-_name: runAppViaInfiniteLoop_
-_returns: void_
+_syntax: renderer()_
+_name: renderer_
+_returns: shared_ptr< ofBaseRenderer > &_
 _returns_description: _
-_parameters: ofBaseApp *appPtr_
+_parameters: _
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1914,7 +2020,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -1932,44 +2037,6 @@ _name: setFullscreen_
 _returns: void_
 _returns_description: _
 _parameters: bool fullscreen_
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setGLESVersion(glesVersion)
-
-<!--
-_syntax: setGLESVersion(glesVersion)_
-_name: setGLESVersion_
-_returns: void_
-_returns_description: _
-_parameters: int glesVersion_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -2066,6 +2133,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -2265,6 +2333,80 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void setup(&settings)
+
+<!--
+_syntax: setup(&settings)_
+_name: setup_
+_returns: void_
+_returns_description: _
+_parameters: const ofAppEGLWindow::Settings &settings_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setup(&settings)
+
+<!--
+_syntax: setup(&settings)_
+_name: setup_
+_returns: void_
+_returns_description: _
+_parameters: const ofGLESWindowSettings &settings_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void setupNativeEvents()
 
 <!--
@@ -2417,44 +2559,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setupOpenGL(w, h, screenMode)
-
-<!--
-_syntax: setupOpenGL(w, h, screenMode)_
-_name: setupOpenGL_
-_returns: void_
-_returns_description: _
-_parameters: int w, int h, int screenMode_
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void setupPeripherals()
 
 <!--
@@ -2551,32 +2655,6 @@ _advanced: False_
 
 _inlined_description: _
 
-The thread's run function. 
-
-
-Users must overide this in your their derived class and then implement their threaded activity inside the loop. If the the users's threadedFunction does not have a loop, the contents of the threadedFunction will be executed once and the thread will then exit.
-
-For tasks that must be repeated, the user can use a while loop that will run repeatedly until the thread's threadRunning is set to false via the stopThread() method. void MyThreadedClass::threadedFunction()
-{
-    // Start the loop and continue until
-    // isThreadRunning() returns false.
-    while(isThreadRunning())
-    {
-        // Do activity repeatedly here:
-
-        // int j = 1 + 1;
-
-        // This while loop will run as fast as it possibly
-        // can, consuming as much processor speed as it can.
-        // To help the processor stay cool, users are
-        // encouraged to let the while loop sleep via the
-        // sleep() method, or call the yield() method to let
-        // other threads have a turn.  See the sleep() and
-        // yield() methods for more information.
-
-        // sleep(100);
-    }
- 
 
 
 
@@ -2624,6 +2702,43 @@ _inlined_description: _
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void update()
+
+<!--
+_syntax: update()_
+_name: update_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2689,6 +2804,10 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+< This indicates the need/intent to draw a setup screen.
+
 _description: _
 
 
@@ -2713,6 +2832,10 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+< This indicates if a (new) window rectangle has to be adjusted.
 
 _description: _
 
@@ -2739,6 +2862,10 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+< Indicate the visibility of the (mouse) cursor.
+
 _description: _
 
 
@@ -2764,8 +2891,66 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+< Mouse button currently in use.
+
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofCoreEvents coreEvents
+
+<!--
+_name: coreEvents_
+_type: ofCoreEvents_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###shared_ptr< ofBaseRenderer > currentRenderer
+
+<!--
+_name: currentRenderer_
+_type: shared_ptr< ofBaseRenderer >_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+_description: _
 
 
 
@@ -2788,6 +2973,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -2814,6 +3002,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -2838,6 +3029,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -2864,6 +3058,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -2888,6 +3085,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -2914,6 +3114,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -2938,6 +3141,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -2964,6 +3170,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -2989,8 +3198,39 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+< Indicate the version of OpenGL for Embedded Systems.
+
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofAppEGLWindow * instance
+
+<!--
+_name: instance_
+_type: ofAppEGLWindow *_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+_description: _
 
 
 
@@ -3013,6 +3253,10 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+< Indicate that the surface is (properly) initialized.
 
 _description: _
 
@@ -3039,6 +3283,10 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+< Indicate the use of the X Window System.
+
 _description: _
 
 
@@ -3063,6 +3311,10 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+< Indicate that the window is (properly) initialized.
 
 _description: _
 
@@ -3089,6 +3341,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -3114,7 +3369,11 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
+
 
 
 
@@ -3137,6 +3396,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -3163,7 +3425,11 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
+
 
 
 
@@ -3186,6 +3452,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -3212,6 +3481,10 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+< Amount by which to mouse movements along the X axis.
+
 _description: _
 
 
@@ -3236,6 +3509,10 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+< Amount by which to mouse movements along the Y axis.
 
 _description: _
 
@@ -3262,6 +3539,10 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+< The number of frames passed/shown since the window got resized.
+
 _description: _
 
 
@@ -3287,30 +3568,8 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofBaseApp ofAppPtr
-
-<!--
-_name: ofAppPtr_
-_type: ofBaseApp_
-_access: protected_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
 
 _description: _
 
@@ -3337,6 +3596,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -3362,30 +3624,8 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool terminate
-
-<!--
-_name: terminate_
-_type: bool_
-_access: protected_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
 
 _description: _
 
@@ -3412,7 +3652,11 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
+
 
 
 
@@ -3435,6 +3679,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -3461,6 +3708,10 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+< Indicate which X11 display is in use (currently).
+
 _description: _
 
 
@@ -3485,6 +3736,10 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+< Indicate which X11 screen is in use (currently).
 
 _description: _
 
@@ -3511,6 +3766,10 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+< The number of the X11 screen is in use (currently).
+
 _description: _
 
 
@@ -3535,6 +3794,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 

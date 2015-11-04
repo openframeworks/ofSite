@@ -72,6 +72,43 @@ if (vidGrabber.isFrameNew()){
 
 
 
+###void bind()
+
+<!--
+_syntax: bind()_
+_name: bind_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void close()
 
 <!--
@@ -558,16 +595,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###unsigned char * getPixels()
+###const ofPixels & getPixels()
 
 <!--
 _syntax: getPixels()_
 _name: getPixels_
-_returns: unsigned char *_
+_returns: const ofPixels &_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 006_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -588,18 +625,6 @@ _inlined_description: _
 _description: _
 
 
-For example, to get the red, green, and blue of the pixel at (100,20):
-
-~~~~{.cpp}
-unsigned char * pixels = myMovie.getPixels();
-int nChannels = movie.getPixelsRef().getNumChannels();
-int widthOfLine = myMovie.width;  // how long is a line of pixels
-int red 	= pixels[(20 * widthOfLine + 100) * nChannels    ];
-int green 	= pixels[(20 * widthOfLine + 100) * nChannels + 1];
-int blue 	= pixels[(20 * widthOfLine + 100) * nChannels + 2];
-~~~~
-
-
 
 
 
@@ -607,16 +632,16 @@ int blue 	= pixels[(20 * widthOfLine + 100) * nChannels + 2];
 
 <!----------------------------------------------------------------------------->
 
-###ofPixelsRef getPixelsRef()
+###const ofPixels & getPixels()
 
 <!--
-_syntax: getPixelsRef()_
-_name: getPixelsRef_
-_returns: ofPixelsRef_
+_syntax: getPixels()_
+_name: getPixels_
+_returns: const ofPixels &_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -642,19 +667,18 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###ofPtr< ofBaseVideoPlayer > getPlayer()
+###const shared_ptr< ofBaseVideoPlayer > getPlayer()
 
 <!--
 _syntax: getPlayer()_
 _name: getPlayer_
-_returns: ofPtr< ofBaseVideoPlayer >_
+_returns: const shared_ptr< ofBaseVideoPlayer >_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -675,7 +699,115 @@ _inlined_description: _
 _description: _
 
 
-This returns a [shared pointer](http://thenewcpp.wordpress.com/2012/06/21/shared-pointers/) to the particular implementation of ofVideoPlayer that your system is using.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const shared_ptr< ofBaseVideoPlayer > getPlayer()
+
+<!--
+_syntax: getPlayer()_
+_name: getPlayer_
+_returns: const shared_ptr< ofBaseVideoPlayer >_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const shared_ptr< PlayerType > getPlayer()
+
+<!--
+_syntax: getPlayer()_
+_name: getPlayer_
+_returns: const shared_ptr< PlayerType >_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const shared_ptr< PlayerType > getPlayer()
+
+<!--
+_syntax: getPlayer()_
+_name: getPlayer_
+_returns: const shared_ptr< PlayerType >_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -765,16 +897,16 @@ Returns the speed that the movie is being played at as a floating point number. 
 
 <!----------------------------------------------------------------------------->
 
-###ofTexture & getTextureReference()
+###const ofTexture & getTexture()
 
 <!--
-_syntax: getTextureReference()_
-_name: getTextureReference_
-_returns: ofTexture &_
+_syntax: getTexture()_
+_name: getTexture_
+_returns: const ofTexture &_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 006_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -795,7 +927,115 @@ _inlined_description: _
 _description: _
 
 
-Returns a reference to the videoPlayer's texture.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const ofTexture & getTexture()
+
+<!--
+_syntax: getTexture()_
+_name: getTexture_
+_returns: const ofTexture &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const vector< ofTexture > & getTexturePlanes()
+
+<!--
+_syntax: getTexturePlanes()_
+_name: getTexturePlanes_
+_returns: const vector< ofTexture > &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const vector< ofTexture > & getTexturePlanes()
+
+<!--
+_syntax: getTexturePlanes()_
+_name: getTexturePlanes_
+_returns: const vector< ofTexture > &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -885,6 +1125,43 @@ Get the width of the movie file.
 
 <!----------------------------------------------------------------------------->
 
+###void initDefaultPlayer()
+
+<!--
+_syntax: initDefaultPlayer()_
+_name: initDefaultPlayer_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###bool isFrameNew()
 
 <!--
@@ -924,6 +1201,43 @@ if (myMovie.isFrameNew()){
 	// walk over each pixel and make something fun
 }
 ~~~~
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool isInitialized()
+
+<!--
+_syntax: isInitialized()_
+_name: isInitialized_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1053,16 +1367,16 @@ Whether the the ofVideoPlayer is currently playing.
 
 <!----------------------------------------------------------------------------->
 
-###bool loadMovie(name)
+###bool isUsingTexture()
 
 <!--
-_syntax: loadMovie(name)_
-_name: loadMovie_
+_syntax: isUsingTexture()_
+_name: isUsingTexture_
 _returns: bool_
 _returns_description: _
-_parameters: string name_
+_parameters: _
 _access: public_
-_version_started: 006_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1083,13 +1397,78 @@ _inlined_description: _
 _description: _
 
 
-Load a movie file (fileName) into that object. It will look for the movie file inside of the data/ folder. The movie does not automatically play once loaded.
 
-Example:
-~~~~{.cpp}
-ofVideoPlayer myPlayer;
-myPlayer.loadMovie("myMovie.mov");
-~~~~
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool load(name)
+
+<!--
+_syntax: load(name)_
+_name: load_
+_returns: bool_
+_returns_description: _
+_parameters: string name_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void loadAsync(name)
+
+<!--
+_syntax: loadAsync(name)_
+_name: loadAsync_
+_returns: void_
+_returns_description: _
+_parameters: string name_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1552,9 +1931,9 @@ _syntax: setPlayer(newPlayer)_
 _name: setPlayer_
 _returns: void_
 _returns_description: _
-_parameters: ofPtr< ofBaseVideoPlayer > newPlayer_
+_parameters: shared_ptr< ofBaseVideoPlayer > newPlayer_
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1573,7 +1952,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -1788,6 +2166,43 @@ Stops the movie.
 
 <!----------------------------------------------------------------------------->
 
+###void unbind()
+
+<!--
+_syntax: unbind()_
+_name: unbind_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void update()
 
 <!--
@@ -1846,37 +2261,13 @@ _constant: False_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
 bUseTexture enables and disables the use of ofTexture in our video player.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int height
-
-<!--
-_name: height_
-_type: int_
-_access: public_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: False_
-_advanced: False_
--->
-
-_description: _
-
-
-Variable containing the height of the video.
 
 
 
@@ -1899,6 +2290,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -1925,6 +2319,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1949,6 +2346,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -1975,6 +2375,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -2000,37 +2403,13 @@ _constant: False_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
 ofTexture used by the video player class. 
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int width
-
-<!--
-_name: width_
-_type: int_
-_access: public_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: False_
-_advanced: False_
--->
-
-_description: _
-
-
-Variable containing the width of the video.
 
 
 

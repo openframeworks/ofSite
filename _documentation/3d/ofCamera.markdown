@@ -11,12 +11,7 @@ _istemplated: False_
 
 A basic camera object for interacting with objects in 3D space.
 
-
-***author:***
-	Memo Akten, MSA Visuals Ltd. 2011
-
-
-
+by:Memo Akten, MSA Visuals Ltd. 2011
 
 
 
@@ -43,7 +38,7 @@ _syntax: begin(viewport = ofGetCurrentViewport())_
 _name: begin_
 _returns: void_
 _returns_description: _
-_parameters: ofRectangle viewport=ofGetCurrentViewport()_
+_parameters: ofRectangle viewport_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -56,6 +51,22 @@ _advanced: False_
 
 _inlined_description: _
 
+Begins rendering with the camera.
+
+~~~~{.cpp}
+void draw() {
+    // Begin rendering from the camera's perspective.
+    camera.begin();
+
+    ofLine(0, 0, ofGetWidth(), ofGetHeight());
+    // Additional rendering ...
+
+    // End rendering form the camera's perspective.
+    camera.end();
+}
+~~~~
+Parameters:
+viewport The camera's rendering viewport.
 
 
 
@@ -76,14 +87,14 @@ set the matrices that the camera will use.
 
 <!----------------------------------------------------------------------------->
 
-###void calcClipPlanes(viewport)
+###void calcClipPlanes(&viewport)
 
 <!--
-_syntax: calcClipPlanes(viewport)_
+_syntax: calcClipPlanes(&viewport)_
 _name: calcClipPlanes_
 _returns: void_
 _returns_description: _
-_parameters: ofRectangle viewport_
+_parameters: const ofRectangle &viewport_
 _access: protected_
 _version_started: 007_
 _version_deprecated: _
@@ -121,7 +132,7 @@ _syntax: cameraToWorld(CameraXYZ, viewport = ofGetCurrentViewport())_
 _name: cameraToWorld_
 _returns: ofVec3f_
 _returns_description: _
-_parameters: ofVec3f CameraXYZ, ofRectangle viewport=ofGetCurrentViewport()_
+_parameters: ofVec3f CameraXYZ, ofRectangle viewport_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -134,6 +145,7 @@ _advanced: False_
 
 _inlined_description: _
 
+\todo cameraToWorld()
 
 
 
@@ -254,6 +266,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Ends rendering with the camera.
 
 
 
@@ -296,14 +309,11 @@ _inlined_description: _
 
 Get the aspect ratio of this camera's viewport.
 
+Returns the aspect ratio of this camera's viewport. Usually this will be
+the ratio of the width to height of your display. Intended for
+perspective cameras.
 
-Returns the aspect ratio of this camera's viewport. Usually this will be the ratio of the width to height of your display. Intended for perspective cameras.
-
-***return:***
-	The aspect ratio of this camera's viewport.
-
-
-
+Returns: The aspect ratio of this camera's viewport.
 
 
 
@@ -382,12 +392,7 @@ _inlined_description: _
 
 Get the boolean state which indicates whether the aspect ratio of this camera is forced to a non-default setting.
 
-
-***return:***
-	A boolean: whether or not this camera's aspect ratio is set to a non-default value.
-
-
-
+Returns: A boolean: whether or not this camera's aspect ratio is set to a non-default value.
 
 
 
@@ -428,14 +433,10 @@ _inlined_description: _
 
 Get the camera's field of view, in degrees.
 
+Get the camera's vertical field of view, in degrees.  This is only
+meaningful for perspective cameras.
 
-Get the horizontal camera's field of view, in degrees. This is only meaningful for perspective cameras.
-
-***return:***
-	The camera's field of view, in degrees.
-
-
-
+Returns: The camera's field of view, in degrees.
 
 
 
@@ -461,7 +462,7 @@ _syntax: getImagePlaneDistance(viewport = ofGetCurrentViewport())_
 _name: getImagePlaneDistance_
 _returns: float_
 _returns_description: _
-_parameters: ofRectangle viewport=ofGetCurrentViewport()_
+_parameters: ofRectangle viewport_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -516,14 +517,15 @@ _inlined_description: _
 
 Get the "lens offset" applied to this camera, encoded as an ofVec2f.
 
+Ordinarily, the camera is pointed straight down the center of its view
+frustum.  However, it is possible to orient the camera towards a
+location offset from the center of its frustum.  This is called an
+"asymetric frustum" and is used (for example) in stereo views.  It is
+acheived by applying an offset to the center of projection.  This
+function returns the offset that has been applied, as an ofVec2f.  For
+more information see http://www.orthostereo.com/geometryopengl.html.
 
-Ordinarily, the camera is pointed straight down the center of its view frustum. However, it is possible to orient the camera towards a location offset from the center of its frustum. This is called an "asymetric frustum" and is used (for example) in stereo views. It is acheived by applying an offset to the center of projection. This function returns the offset that has been applied, as an ofVec2f. For more information see [http://www.orthostereo.com/geometryopengl.html](http://www.orthostereo.com/geometryopengl.html).
-
-***return:***
-	The "lens offset" applied to this camera, encoded in an ofVec2f.
-
-
-
+Returns: The "lens offset" applied to this camera, encoded in an ofVec2f.
 
 
 
@@ -563,13 +565,7 @@ _advanced: False_
 _inlined_description: _
 
 Access the model view matrix.
-
-
-***return:***
-	the current 4x4 model view matrix.
-
-
-
+Returns: the current 4x4 model view matrix.
 
 
 
@@ -597,7 +593,7 @@ _syntax: getModelViewProjectionMatrix(viewport = ofGetCurrentViewport())_
 _name: getModelViewProjectionMatrix_
 _returns: ofMatrix4x4_
 _returns_description: _
-_parameters: ofRectangle viewport=ofGetCurrentViewport()_
+_parameters: ofRectangle viewport_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -610,6 +606,7 @@ _advanced: False_
 
 _inlined_description: _
 
+\todo getModelViewProjectionMatrix()
 
 
 
@@ -715,7 +712,7 @@ _syntax: getProjectionMatrix(viewport = ofGetCurrentViewport())_
 _name: getProjectionMatrix_
 _returns: ofMatrix4x4_
 _returns_description: _
-_parameters: ofRectangle viewport=ofGetCurrentViewport()_
+_parameters: ofRectangle viewport_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -729,13 +726,7 @@ _advanced: False_
 _inlined_description: _
 
 Access the projection matrix.
-
-
-***return:***
-	the current 4x4 projection matrix.
-
-
-
+Returns: the current 4x4 projection matrix.
 
 
 
@@ -747,6 +738,81 @@ _description: _
 
 
 Access to the projection matrix.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###shared_ptr< ofBaseRenderer > getRenderer()
+
+<!--
+_syntax: getRenderer()_
+_name: getRenderer_
+_returns: shared_ptr< ofBaseRenderer >_
+_returns_description: _
+_parameters: _
+_access: protected_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofRectangle getViewport(&_viewport)
+
+<!--
+_syntax: getViewport(&_viewport)_
+_name: getViewport_
+_returns: ofRectangle_
+_returns_description: _
+_parameters: const ofRectangle &_viewport_
+_access: protected_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+ \}
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -822,7 +888,6 @@ Construct a default camera.
 
 
 
-
 _description: _
 
 
@@ -841,7 +906,7 @@ _syntax: screenToWorld(ScreenXYZ, viewport = ofGetCurrentViewport())_
 _name: screenToWorld_
 _returns: ofVec3f_
 _returns_description: _
-_parameters: ofVec3f ScreenXYZ, ofRectangle viewport=ofGetCurrentViewport()_
+_parameters: ofVec3f ScreenXYZ, ofRectangle viewport_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -856,11 +921,13 @@ _inlined_description: _
 
 Obtain the coordinates, in the 3D world, of a 2D point presumed to be on your screen.
 
+Takes a pixel location on your screen, encoded in an ofVec3f,
+and returns (also as an ofVec3f) the 3D world coordinates of that point.
+You'll also need to specify a Z value when providing your screen point.
+This Z value is interpreted as a distance into or away from the screen.
 
-Takes a pixel location on your screen, encoded in an ofVec3f, and returns (also as an ofVec3f) the 3D world coordinates of that point. You'll also need to specify a Z value when providing your screen point. This Z value is interpreted as a distance into or away from the screen.
-
-
-
+Parameters:
+ScreenXYZ A point on your screen, whose 3D world coordinates you wish to know.
 
 
 
@@ -903,11 +970,13 @@ _inlined_description: _
 
 Set the recommended aspect ratio for a perspective camera.
 
+Sets the aspect ratio of the camera to the desired float, and forces the
+use of aspect ratio calculations.  Currently only used with perspective
+cameras. The default value (and the value used with orthographic
+cameras) is the ratio of the viewport's width to the viewport's height.
 
-Sets the aspect ratio of the camera to the desired float, and forces the use of aspect ratio calculations. Currently only used with perspective cameras. The default value (and the value used with orthographic cameras) is the ratio of the viewport's width to the viewport's height.
-
-
-
+Parameters:
+aspectRatio The desired aspect ratio, e.g. 1.3333, 1.6, etc.
 
 
 
@@ -988,11 +1057,13 @@ _inlined_description: _
 
 Set whether or not the aspect ratio of this camera is forced to a non-default setting.
 
+The camera's aspect ratio, by default, is the aspect ratio of your
+viewport.  If you have set a non-default value (with
+ofCamera::setAspectRatio()), you can toggle whether or not this value is
+applied.
 
-The camera's aspect ratio, by default, is the aspect ratio of your viewport. If you have set a non-default value (with ofCamera::setAspectRatio()), you can toggle whether or not this value is applied.
-
-
-
+Parameters:
+forceAspectRatio Whether or not this camera should use an aspect ratio you have set yourself.
 
 
 
@@ -1033,11 +1104,12 @@ _inlined_description: _
 
 Set the field of view for a perspective camera.
 
+This sets the vertical field of view for the camera, in degrees.
+This only operates with perspective cameras, and will have no effect
+with cameras in orthographic mode.
 
-This sets the horizontal field of view for the camera, in degrees. This only operates with perspective cameras, and will have no effect with cameras in orthographic mode.
-
-
-
+Parameters:
+f The desired field of view for the camera, in degrees.
 
 
 
@@ -1080,12 +1152,17 @@ _inlined_description: _
 
 Set the "lens offset" applied to this camera.
 
+Ordinarily, the camera is pointed straight down the center of its view
+frustum. However, it is possible to orient the camera towards a location
+offset from the center of its frustum. This is called an "assymetric
+frustum" and is used (for example) in stereo views.  It is acheived by
+applying an offset to the center of projection.  This function sets this
+offset from an ofVec2f argument.  For more information see
+<http://www.orthostereo.com/geometryopengl.html>.
 
-Ordinarily, the camera is pointed straight down the center of its view frustum. However, it is possible to orient the camera towards a location offset from the center of its frustum. This is called an "assymetric
-frustum" and is used (for example) in stereo views. It is acheived by applying an offset to the center of projection. This function sets this offset from an ofVec2f argument. For more information see [http://www.orthostereo.com/geometryopengl.html](http://www.orthostereo.com/geometryopengl.html).
-
-
-
+Parameters:
+lensOffset The "lens offset" to apply to this camera, encoded in
+    an ofVec2f.
 
 
 
@@ -1135,6 +1212,46 @@ _description: _
 
 
 This sets the near clip plane.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setRenderer(renderer)
+
+<!--
+_syntax: setRenderer(renderer)_
+_name: setRenderer_
+_returns: void_
+_returns_description: _
+_parameters: shared_ptr< ofBaseRenderer > renderer_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+\}
+\name Renderer
+ \{
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1220,16 +1337,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setupPerspective(vFlip = true, fov = 60, nearDist = 0, farDist = 0, &lensOffset = ofVec2f(0.0f, 0.0f))
+###void setupPerspective(vFlip = true, fov, nearDist, farDist, &lensOffset)
 
 <!--
-_syntax: setupPerspective(vFlip = true, fov = 60, nearDist = 0, farDist = 0, &lensOffset = ofVec2f(0.0f, 0.0f))_
+_syntax: setupPerspective(vFlip = true, fov, nearDist, farDist, &lensOffset)_
 _name: setupPerspective_
 _returns: void_
 _returns_description: _
-_parameters: bool vFlip=true, float fov=60, float nearDist=0, float farDist=0, const ofVec2f &lensOffset=ofVec2f(0.0f, 0.0f)_
+_parameters: bool vFlip=true, float fov, float nearDist, float farDist, const ofVec2f &lensOffset_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1240,6 +1357,9 @@ _advanced: False_
 
 _inlined_description: _
 
+\}
+\name OpenGL Setup
+\{
 
 
 
@@ -1248,7 +1368,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -1265,7 +1384,7 @@ _syntax: worldToCamera(WorldXYZ, viewport = ofGetCurrentViewport())_
 _name: worldToCamera_
 _returns: ofVec3f_
 _returns_description: _
-_parameters: ofVec3f WorldXYZ, ofRectangle viewport=ofGetCurrentViewport()_
+_parameters: ofVec3f WorldXYZ, ofRectangle viewport_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1278,6 +1397,7 @@ _advanced: False_
 
 _inlined_description: _
 
+\todo worldToCamera()
 
 
 
@@ -1305,7 +1425,7 @@ _syntax: worldToScreen(WorldXYZ, viewport = ofGetCurrentViewport())_
 _name: worldToScreen_
 _returns: ofVec3f_
 _returns_description: _
-_parameters: ofVec3f WorldXYZ, ofRectangle viewport=ofGetCurrentViewport()_
+_parameters: ofVec3f WorldXYZ, ofRectangle viewport_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1320,16 +1440,15 @@ _inlined_description: _
 
 Obtain the screen coordinates of a point in the 3D world.
 
-
-Takes an (X,Y,Z) point in your 3D world, encoded as an ofVec3f, and returns the location (also as an ofVec3f) where this point would appear on your (two-dimensional) display. The screen position's "Z
+Takes an (X,Y,Z) point in your 3D world, encoded as an ofVec3f,
+and returns the location (also as an ofVec3f) where this point would
+appear on your (two-dimensional) display. The screen position's "Z
 coordinate" is set to be the same as your camera's.
 
-
-***return:***
-	An ofVec3f containing the screen coordinates of your 3D point of interest.
-
-
-
+Parameters:
+WorldXYZ A 3D point in the world, whose screen coordinates you wish to know.
+viewport (Optional) A viewport. The default is ofGetCurrentViewport().
+Returns: An ofVec3f containing the screen coordinates of your 3D point of interest.
 
 
 
@@ -1378,7 +1497,6 @@ Destroy the camera.
 
 
 
-
 _description: _
 
 
@@ -1408,6 +1526,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1432,6 +1553,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -1458,6 +1582,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1483,30 +1610,8 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool isActive
-
-<!--
-_name: isActive_
-_type: bool_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
 
 _description: _
 
@@ -1533,6 +1638,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1557,6 +1665,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -1583,8 +1694,38 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###shared_ptr< ofBaseRenderer > renderer
+
+<!--
+_name: renderer_
+_type: shared_ptr< ofBaseRenderer >_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+_description: _
 
 
 
@@ -1607,6 +1748,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 

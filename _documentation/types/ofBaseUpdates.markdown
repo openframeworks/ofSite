@@ -9,6 +9,7 @@ _istemplated: False_
 
 ##InlineDescription
 
+An abstract 
 
 
 
@@ -44,6 +45,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Update the object's state.
 
 
 
@@ -82,6 +84,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Destroy the ofBaseUpdates.
 
 
 

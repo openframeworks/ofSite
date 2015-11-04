@@ -9,10 +9,13 @@ _istemplated: False_
 
 ##InlineDescription
 
-Plays sound files. 
+\
+Plays sound files.
 
-
-ofSoundPlayer handles simple playback of sound files, with controls for volume, pan, speed, seeking and multiplay. This is a common cross-platform sound player interface which is inherited by each of the platform-specific sound player implementations. 
+ofSoundPlayer handles simple playback of sound files, with controls for
+volume, pan, speed, seeking and multiplay.  This is a common cross-platform
+sound player interface which is inherited by each of the platform-specific
+sound player implementations.
 
 
 
@@ -29,63 +32,6 @@ The ofSoundPlayer class wraps one of several underlying audio utility libraries,
 ##Methods
 
 
-
-###bool getIsPlaying()
-
-<!--
-_syntax: getIsPlaying()_
-_name: getIsPlaying_
-_returns: bool_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Gets current playback state. 
-
-
-***return:*** 
-	true if the player is currently playing a file. 
-
-
-
-
-
-
-
-
-
-
-_description: _
-
-
-Returns true if sound is currently playing, otherwise returns false.
-
-Example:
-~~~~{.cpp}
-    ofSoundPlayer mySound;    
-    mySound.load("beat.mp3");   
-    mySound.getIsPlaying(); //Returns false   
-    mySound.play();   
-    mySound.getIsPlaying(); //Returns true
-~~~~
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
 
 ###float getPan()
 
@@ -107,14 +53,8 @@ _advanced: False_
 
 _inlined_description: _
 
-Gets stereo pan. 
-
-
-***return:*** 
-	stereo pan in the range -1 to 1. 
-
-
-
+Gets stereo pan.
+\return stereo pan in the range -1 to 1.
 
 
 
@@ -148,16 +88,16 @@ Example:
 
 <!----------------------------------------------------------------------------->
 
-###ofPtr< ofBaseSoundPlayer > getPlayer()
+###shared_ptr< ofBaseSoundPlayer > getPlayer()
 
 <!--
 _syntax: getPlayer()_
 _name: getPlayer_
-_returns: ofPtr< ofBaseSoundPlayer >_
+_returns: shared_ptr< ofBaseSoundPlayer >_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -176,9 +116,6 @@ _inlined_description: _
 
 
 _description: _
-
-
-ofSoundPlayer actually wraps a dynamic instance of a specific sound player for a specific engine, that is, it contains an interface to the sound engine being used to load and playback sounds. This allows you access to the pointer that contains the specific interface.
 
 
 
@@ -208,14 +145,8 @@ _advanced: False_
 
 _inlined_description: _
 
-Gets position of the playhead. 
-
-
-***return:*** 
-	playhead position as a float between 0 and 1. 
-
-
-
+Gets position of the playhead.
+\return playhead position as a float between 0 and 1.
 
 
 
@@ -264,14 +195,8 @@ _advanced: False_
 
 _inlined_description: _
 
-Gets position of the playhead. 
-
-
-***return:*** 
-	playhead position in milliseconds. 
-
-
-
+Gets position of the playhead.
+\return playhead position in milliseconds.
 
 
 
@@ -312,14 +237,8 @@ _advanced: False_
 
 _inlined_description: _
 
-Gets playback speed. 
-
-
-***return:*** 
-	playback speed (see ofSoundPlayer::setSpeed()). 
-
-
-
+Gets playback speed.
+\return playback speed (see ofSoundPlayer::setSpeed()).
 
 
 
@@ -371,14 +290,8 @@ _advanced: False_
 
 _inlined_description: _
 
-Gets current volume. 
-
-
-***return:*** 
-	current volume in the range 0 to 1. 
-
-
-
+Gets current volume.
+\return current volume in the range 0 to 1.
 
 
 
@@ -419,14 +332,8 @@ _advanced: False_
 
 _inlined_description: _
 
-Queries the player to see if its file was loaded successfully. 
-
-
-***return:*** 
-	whether or not the player is ready to begin playback. 
-
-
-
+Queries the player to see if its file was loaded successfully.
+\return whether or not the player is ready to begin playback.
 
 
 
@@ -447,16 +354,16 @@ Returns whether or not a sound has been successfully loaded into the sound playe
 
 <!----------------------------------------------------------------------------->
 
-###bool loadSound(fileName, stream)
+###bool isPlaying()
 
 <!--
-_syntax: loadSound(fileName, stream)_
-_name: loadSound_
+_syntax: isPlaying()_
+_name: isPlaying_
 _returns: bool_
 _returns_description: _
-_parameters: string fileName, bool stream=false_
+_parameters: _
 _access: public_
-_version_started: 006_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -467,13 +374,8 @@ _advanced: False_
 
 _inlined_description: _
 
-Tells the sound player which file to play. 
-
-
-Codec support varies by platform but wav, aif, and mp3 are safe.
-
-
-
+Gets current playback state.
+\return true if the player is currently playing a file.
 
 
 
@@ -484,22 +386,48 @@ Codec support varies by platform but wav, aif, and mp3 are safe.
 _description: _
 
 
-Loads a sound file given by fileName. Sound files can be in .wav, .aif, .mp3, .mp2, .ogg or .raw format. The program will look for the file relative to the data/ folder. If you set the optional 'bool stream' argument to true the file will be streamed from disk instead of being completely loaded into memory. It makes a lot of sense to stream files if you are dynamically loading large sound files into your program, which would normally cause the program to freeze for a short time as the whole sound is read into memory. 
 
-Examples:
 
-Load a Sound
-~~~~{.cpp}
-ofSoundPlayer mySound;
-mySound.loadSound("beat.mp3");
-~~~~
 
-Load a Sound with Folder Path
-~~~~{.cpp}
-ofSoundPlayer mySound;
-mySound.loadSound("sounds/beat.mp3");
-~~~~
-  
+
+
+<!----------------------------------------------------------------------------->
+
+###bool load(fileName, stream = false)
+
+<!--
+_syntax: load(fileName, stream = false)_
+_name: load_
+_returns: bool_
+_returns_description: _
+_parameters: string fileName, bool stream=false_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Tells the sound player which file to play.
+
+Codec support varies by platform but wav, aif, and mp3 are safe.
+
+Parameters:
+fileName Path to the sound file, relative to your app's data folder.
+stream set "true" to enable streaming from disk (for large files).
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -569,8 +497,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Starts playback. 
-
+Starts playback.
 
 
 
@@ -630,11 +557,9 @@ _advanced: False_
 
 _inlined_description: _
 
-Sets whether to loop once the end of the file is reached. 
-
-
-
-
+Sets whether to loop once the end of the file is reached.
+Parameters:
+loop "true" to loop, default is false.
 
 
 
@@ -683,11 +608,9 @@ _advanced: False_
 
 _inlined_description: _
 
-Enables playing multiple simultaneous copies of the sound. 
-
-
-
-
+Enables playing multiple simultaneous copies of the sound.
+Parameters:
+multiplay "true" to enable, default is false.
 
 
 
@@ -738,11 +661,9 @@ _advanced: False_
 
 _inlined_description: _
 
-Sets stereo pan. 
-
-
-
-
+Sets stereo pan.
+Parameters:
+pan range is -1 to 1 (-1 is full left, 1 is full right).
 
 
 
@@ -793,11 +714,9 @@ _advanced: False_
 
 _inlined_description: _
 
-Enables pause / resume. 
-
-
-
-
+Enables pause / resume.
+Parameters:
+paused "true" to pause, "false" to resume.
 
 
 
@@ -834,9 +753,9 @@ _syntax: setPlayer(newPlayer)_
 _name: setPlayer_
 _returns: void_
 _returns_description: _
-_parameters: ofPtr< ofBaseSoundPlayer > newPlayer_
+_parameters: shared_ptr< ofBaseSoundPlayer > newPlayer_
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -855,14 +774,6 @@ _inlined_description: _
 
 
 _description: _
-
-
-ofSoundPlayer actually wraps a dynamic instance of a sound player, that is, it contains an interface to the sound engine being used to load and playback sounds. If you want to set the interface that your system uses, you can pass an ofPtr to an ofSoundPlayer into the ofSoundPlayer and have the ofSoundPlayer manipulate that one instead.
-
-~~~~{.cpp}
-ofPtr<ofBaseSoundPlayer> soundPtr(new ofOpenALSoundPlayer());
-player.setPlayer(soundPtr);
-~~~~
 
 
 
@@ -892,11 +803,9 @@ _advanced: False_
 
 _inlined_description: _
 
-Sets position of the playhead within the file (aka "seeking"). 
-
-
-
-
+Sets position of the playhead within the file (aka "seeking").
+Parameters:
+percent range is 0 (beginning of file) to 1 (end of file).
 
 
 
@@ -946,11 +855,9 @@ _advanced: False_
 
 _inlined_description: _
 
-Sets position of the playhead within the file (aka "seeking"). 
-
-
-
-
+Sets position of the playhead within the file (aka "seeking").
+Parameters:
+ms number of milliseconds from the start of the file.
 
 
 
@@ -991,11 +898,9 @@ _advanced: False_
 
 _inlined_description: _
 
-Sets playback speed. 
-
-
-
-
+Sets playback speed.
+Parameters:
+speed set > 1 for faster playback, < 1 for slower playback.
 
 
 
@@ -1046,11 +951,9 @@ _advanced: False_
 
 _inlined_description: _
 
-Sets playback volume. 
-
-
-
-
+Sets playback volume.
+Parameters:
+vol range is 0 to 1.
 
 
 
@@ -1099,8 +1002,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Stops playback. 
-
+Stops playback.
 
 
 
@@ -1129,16 +1031,16 @@ mySound.stop(); //Ends playback, stops audio
 
 <!----------------------------------------------------------------------------->
 
-###void unloadSound()
+###void unload()
 
 <!--
-_syntax: unloadSound()_
-_name: unloadSound_
+_syntax: unload()_
+_name: unload_
 _returns: void_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 006_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1149,8 +1051,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Stops and unloads the current sound. 
-
+Stops and unloads the current sound.
 
 
 
@@ -1159,17 +1060,6 @@ Stops and unloads the current sound.
 
 
 _description: _
-
-
-Stops and unloads the current sound.
-
-Example:
-~~~~{.cpp}
-ofSoundPlayer mySound;
-mySound.load("beat.mp3");
-mySound.play();
-mySound.unloadSound(); //Stops sound from playing, unloads "beat.mp3"
-~~~~
 
 
 
@@ -1196,6 +1086,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 

@@ -349,7 +349,7 @@ def serialize_function(f,function,member):
     f.write("_advanced: " + str(function.advanced)  + "_\n")
     f.write("-->\n\n");
     f.write("_inlined_description: _\n\n")
-    f.write(function.inlined_description.encode('utf-8'))
+    f.write(function.inlined_description.decode('utf-8').encode('utf-8'))
     f.write('\n\n\n\n\n\n')
     f.write("_description: _\n\n")
     f.write(function.description.encode('utf-8'))
@@ -370,7 +370,7 @@ def serialize_var(f,var):
     f.write("_advanced: " + str(var.advanced) + "_\n")
     f.write("-->\n\n");
     f.write("_inlined_description: _\n\n")
-    f.write(var.inlined_description.encode('utf-8'))  
+    f.write(var.inlined_description.decode('utf-8').encode('utf-8'))  
     f.write("_description: _\n\n")
     f.write(var.description.encode('utf-8'))  
     f.write("\n\n\n\n\n\n")
@@ -398,7 +398,7 @@ def setclass(clazz,is_addon=False):
     
     #f.write('//----------------------\n\n')
     #f.write('##Example\n\n' + clazz.example + '\n\n\n\n')
-    f.write('##InlineDescription\n\n' + clazz.detailed_inline_description.encode('utf-8') + '\n\n\n\n')
+    f.write('##InlineDescription\n\n' + clazz.detailed_inline_description.decode('utf-8').encode('utf-8') + '\n\n\n\n')
     
     #f.write('//----------------------\n\n')
     f.write('##Description\n\n' + clazz.reference.encode('utf-8') + '\n\n\n\n')

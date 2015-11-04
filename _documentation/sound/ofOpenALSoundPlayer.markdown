@@ -4,6 +4,7 @@
 <!--
 _visible: True_
 _advanced: True_
+_istemplated: False_
 -->
 
 ##InlineDescription
@@ -36,12 +37,13 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: False_
+_static: True_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 
@@ -73,12 +75,13 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: False_
+_static: True_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 
@@ -123,79 +126,6 @@ _inlined_description: _
 
 
 
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool getIsPaused()
-
-<!--
-_syntax: getIsPaused()_
-_name: getIsPaused_
-_returns: bool_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool getIsPlaying()
-
-<!--
-_syntax: getIsPlaying()_
-_name: getIsPlaying_
-_returns: bool_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
 
 _description: _
 
@@ -227,6 +157,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 
@@ -271,8 +202,46 @@ _inlined_description: _
 
 
 
+
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int getPositionMS()
+
+<!--
+_syntax: getPositionMS()_
+_name: getPositionMS_
+_returns: int_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -301,6 +270,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 
@@ -345,6 +315,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -369,6 +340,44 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
+_static: True_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float getVolume()
+
+<!--
+_syntax: getVolume()_
+_name: getVolume_
+_returns: float_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
 _static: False_
 _visible: True_
 _advanced: False_
@@ -382,8 +391,8 @@ _inlined_description: _
 
 
 
-_description: _
 
+_description: _
 
 
 
@@ -419,6 +428,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -443,12 +453,13 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: False_
+_static: True_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 
@@ -480,12 +491,13 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: False_
+_static: True_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 
@@ -504,16 +516,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void loadSound(fileName, stream = false)
+###bool isLoaded()
 
 <!--
-_syntax: loadSound(fileName, stream = false)_
-_name: loadSound_
-_returns: void_
+_syntax: isLoaded()_
+_name: isLoaded_
+_returns: bool_
 _returns_description: _
-_parameters: string fileName, bool stream=false_
+_parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -530,8 +542,193 @@ _inlined_description: _
 
 
 
+
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool isPaused()
+
+<!--
+_syntax: isPaused()_
+_name: isPaused_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool isPlaying()
+
+<!--
+_syntax: isPlaying()_
+_name: isPlaying_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool load(fileName, stream = false)
+
+<!--
+_syntax: load(fileName, stream = false)_
+_name: load_
+_returns: bool_
+_returns_description: _
+_parameters: string fileName, bool stream=false_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool mpg123ReadFile(path, &buffer, &fftAuxBuffer)
+
+<!--
+_syntax: mpg123ReadFile(path, &buffer, &fftAuxBuffer)_
+_name: mpg123ReadFile_
+_returns: bool_
+_returns_description: _
+_parameters: string path, vector< short > &buffer, vector< float > &fftAuxBuffer_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool mpg123Stream(path, &buffer, &fftAuxBuffer)
+
+<!--
+_syntax: mpg123Stream(path, &buffer, &fftAuxBuffer)_
+_name: mpg123Stream_
+_returns: bool_
+_returns_description: _
+_parameters: string path, vector< short > &buffer, vector< float > &fftAuxBuffer_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -560,6 +757,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 
@@ -604,6 +802,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -615,16 +814,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void readFile(fileName, &buffer)
+###bool readFile(fileName, &buffer)
 
 <!--
 _syntax: readFile(fileName, &buffer)_
 _name: readFile_
-_returns: void_
+_returns: bool_
 _returns_description: _
 _parameters: string fileName, vector< short > &buffer_
 _access: private_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -641,8 +840,8 @@ _inlined_description: _
 
 
 
-_description: _
 
+_description: _
 
 
 
@@ -665,12 +864,13 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: False_
+_static: True_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 
@@ -715,6 +915,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -745,6 +946,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 
@@ -789,6 +991,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -819,6 +1022,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 
@@ -863,8 +1067,46 @@ _inlined_description: _
 
 
 
+
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setPositionMS(ms)
+
+<!--
+_syntax: setPositionMS(ms)_
+_name: setPositionMS_
+_returns: void_
+_returns_description: _
+_parameters: int ms_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -893,6 +1135,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 
@@ -937,6 +1180,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -967,6 +1211,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 
@@ -1011,6 +1256,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -1048,6 +1294,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -1059,16 +1306,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void stream(fileName, &buffer)
+###bool stream(fileName, &buffer)
 
 <!--
 _syntax: stream(fileName, &buffer)_
 _name: stream_
-_returns: void_
+_returns: bool_
 _returns_description: _
 _parameters: string fileName, vector< short > &buffer_
 _access: private_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1085,8 +1332,8 @@ _inlined_description: _
 
 
 
-_description: _
 
+_description: _
 
 
 
@@ -1122,6 +1369,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -1133,16 +1381,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void unloadSound()
+###void unload()
 
 <!--
-_syntax: unloadSound()_
-_name: unloadSound_
+_syntax: unload()_
+_name: unload_
 _returns: void_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1159,8 +1407,8 @@ _inlined_description: _
 
 
 
-_description: _
 
+_description: _
 
 
 
@@ -1189,6 +1437,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 
@@ -1233,6 +1482,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -1262,6 +1512,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1286,6 +1539,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -1312,6 +1568,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1336,6 +1595,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -1362,6 +1624,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1386,6 +1651,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -1412,6 +1680,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1436,6 +1707,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -1462,6 +1736,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1486,6 +1763,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -1512,6 +1792,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1536,6 +1819,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -1562,6 +1848,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1586,6 +1875,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -1612,6 +1904,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1636,6 +1931,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -1662,6 +1960,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1686,6 +1987,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -1712,8 +2016,38 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###mpg123_handle * mp3streamf
+
+<!--
+_name: mp3streamf_
+_type: mpg123_handle *_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+_description: _
 
 
 
@@ -1736,6 +2070,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -1762,6 +2099,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1786,6 +2126,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -1812,6 +2155,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1836,6 +2182,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -1862,6 +2211,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1886,6 +2238,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -1912,6 +2267,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1936,6 +2294,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -1962,6 +2323,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1986,6 +2350,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -2012,6 +2379,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -2036,6 +2406,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -2062,6 +2435,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -2086,6 +2462,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -2112,6 +2491,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -2137,6 +2519,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -2161,6 +2546,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 

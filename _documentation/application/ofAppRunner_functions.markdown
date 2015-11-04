@@ -15,6 +15,78 @@ _advanced: False_
 
 <!----------------------------------------------------------------------------->
 
+###void noopDeleter(*)
+
+<!--
+_syntax: noopDeleter(*)_
+_name: noopDeleter_
+_returns: void_
+_returns_description: _
+_parameters: Window *_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###shared_ptr< ofAppBaseWindow > ofCreateWindow(&settings)
+
+<!--
+_syntax: ofCreateWindow(&settings)_
+_name: ofCreateWindow_
+_returns: shared_ptr< ofAppBaseWindow >_
+_returns_description: _
+_parameters: const ofWindowSettings &settings_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void ofDisableSetupScreen()
 
 <!--
@@ -33,6 +105,7 @@ _advanced: True_
 -->
 
 _inlined_description: _
+
 
 
 
@@ -78,6 +151,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -116,10 +190,47 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
 Re-enables the call to ofSetupScreen after being disabled with ofDisableSetupScreen
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofCoreEvents & ofEvents()
+
+<!--
+_syntax: ofEvents()_
+_name: ofEvents_
+_returns: ofCoreEvents &_
+_returns_description: _
+_parameters: _
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -154,6 +265,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -167,12 +279,12 @@ This exits your app, causing it to quit.
 
 <!----------------------------------------------------------------------------->
 
-###ofBaseApp ofGetAppPtr()
+###ofBaseApp * ofGetAppPtr()
 
 <!--
 _syntax: ofGetAppPtr()_
 _name: ofGetAppPtr_
-_returns: ofBaseApp_
+_returns: ofBaseApp *_
 _returns_description: _
 _parameters: _
 _version_started: 0.061_
@@ -185,6 +297,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 
@@ -218,12 +331,48 @@ void myClass::method(){
 
 <!----------------------------------------------------------------------------->
 
-###int ofGetFrameNum()
+###shared_ptr< ofBaseRenderer > & ofGetCurrentRenderer()
+
+<!--
+_syntax: ofGetCurrentRenderer()_
+_name: ofGetCurrentRenderer_
+_returns: shared_ptr< ofBaseRenderer > &_
+_returns_description: _
+_parameters: _
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###uint64_t ofGetFrameNum()
 
 <!--
 _syntax: ofGetFrameNum()_
 _name: ofGetFrameNum_
-_returns: int_
+_returns: uint64_t_
 _returns_description: _
 _parameters: _
 _version_started: 006_
@@ -236,6 +385,9 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+Get the number of frames rendered since the program started.
+Returns: the number of frames rendered since the program started.
 
 
 
@@ -281,10 +433,47 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
 note: this code is implemented inside the ofAppRunner.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###GLXContext ofGetGLXContext()
+
+<!--
+_syntax: ofGetGLXContext()_
+_name: ofGetGLXContext_
+_returns: GLXContext_
+_returns_description: _
+_parameters: _
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -312,6 +501,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 
@@ -357,8 +547,45 @@ _inlined_description: _
 
 
 
+
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###shared_ptr< ofMainLoop > ofGetMainLoop()
+
+<!--
+_syntax: ofGetMainLoop()_
+_name: ofGetMainLoop_
+_returns: shared_ptr< ofMainLoop >_
+_returns_description: _
+_parameters: _
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -386,6 +613,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 
@@ -422,6 +650,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 
@@ -467,6 +696,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -505,6 +735,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -534,6 +765,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 
@@ -579,6 +811,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -608,6 +841,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 
@@ -666,6 +900,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -705,6 +940,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -719,12 +955,12 @@ note: this code is implemented inside the ofAppRunner
 
 <!----------------------------------------------------------------------------->
 
-###ofAppBaseWindow ofGetWindowPtr()
+###ofAppBaseWindow * ofGetWindowPtr()
 
 <!--
 _syntax: ofGetWindowPtr()_
 _name: ofGetWindowPtr_
-_returns: ofAppBaseWindow_
+_returns: ofAppBaseWindow *_
 _returns_description: _
 _parameters: _
 _version_started: _
@@ -737,6 +973,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 
@@ -780,6 +1017,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -809,6 +1047,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 
@@ -854,8 +1093,81 @@ _inlined_description: _
 
 
 
+
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###Display * ofGetX11Display()
+
+<!--
+_syntax: ofGetX11Display()_
+_name: ofGetX11Display_
+_returns: Display *_
+_returns_description: _
+_parameters: _
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###Window ofGetX11Window()
+
+<!--
+_syntax: ofGetX11Window()_
+_name: ofGetX11Window_
+_returns: Window_
+_returns_description: _
+_parameters: _
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -890,6 +1202,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -904,15 +1217,15 @@ note: this code is implemented inside the ofAppRunner.
 
 <!----------------------------------------------------------------------------->
 
-###void ofRunApp(new ofApp)
+###void ofInit()
 
 <!--
-_syntax: ofRunApp(new ofApp)_
-_name: ofRunApp_
+_syntax: ofInit()_
+_name: ofInit_
 _returns: void_
 _returns_description: _
-_parameters: ofBaseApp * app_
-_version_started: 0.01_
+_parameters: _
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -929,15 +1242,8 @@ _inlined_description: _
 
 
 
+
 _description: _
-
-
-Begins the openGL cycle of the application. It's only called once from main function in main.cpp after setting the window with ofSetupOpenGL.
-From 0.06 the app is deleted on exit, so you need to call this function as shown in syntax:
-
-~~~~{.cpp}
-ofRunApp(new ofApp());
-~~~~
 
 
 
@@ -947,15 +1253,15 @@ ofRunApp(new ofApp());
 
 <!----------------------------------------------------------------------------->
 
-###void ofRunApp(OFSA)
+###float ofRandomHeight()
 
 <!--
-_syntax: ofRunApp(OFSA)_
-_name: ofRunApp_
-_returns: void_
+_syntax: ofRandomHeight()_
+_name: ofRandomHeight_
+_returns: float_
 _returns_description: _
-_parameters: ofPtr< ofBaseApp > OFSA_
-_version_started: _
+_parameters: _
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -966,6 +1272,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Returns: a random number between 0 and the height of the window.
+
 
 
 
@@ -980,17 +1288,53 @@ _description: _
 
 
 
+<!----------------------------------------------------------------------------->
+
+###float ofRandomWidth()
+
+<!--
+_syntax: ofRandomWidth()_
+_name: ofRandomWidth_
+_returns: float_
+_returns_description: _
+_parameters: _
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Returns: a random number between 0 and the width of the window.
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
 
 <!----------------------------------------------------------------------------->
 
-###void ofRunApp(*OFSA = NULL)
+###int ofRunApp(*OFSA = NULL)
 
 <!--
 _syntax: ofRunApp(*OFSA = NULL)_
 _name: ofRunApp_
-_returns: void_
+_returns: int_
 _returns_description: _
-_parameters: ofBaseApp *OFSA=NULL_
+_parameters: ofBaseApp *OFSA_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -1008,8 +1352,117 @@ _inlined_description: _
 
 
 
+
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int ofRunApp(OFSA)
+
+<!--
+_syntax: ofRunApp(OFSA)_
+_name: ofRunApp_
+_returns: int_
+_returns_description: _
+_parameters: shared_ptr< ofBaseApp > OFSA_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofRunApp(window, app)
+
+<!--
+_syntax: ofRunApp(window, app)_
+_name: ofRunApp_
+_returns: void_
+_returns_description: _
+_parameters: shared_ptr< ofAppBaseWindow > window, shared_ptr< ofBaseApp > app_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int ofRunMainLoop()
+
+<!--
+_syntax: ofRunMainLoop()_
+_name: ofRunMainLoop_
+_returns: int_
+_returns_description: _
+_parameters: _
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1026,8 +1479,8 @@ _syntax: ofSetAppPtr(appPtr)_
 _name: ofSetAppPtr_
 _returns: void_
 _returns_description: _
-_parameters: ofPtr< ofBaseApp > appPtr_
-_version_started: _
+_parameters: shared_ptr< ofBaseApp > appPtr_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1044,8 +1497,80 @@ _inlined_description: _
 
 
 
+
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofSetCurrentRenderer(renderer, setDefaults = false)
+
+<!--
+_syntax: ofSetCurrentRenderer(renderer, setDefaults = false)_
+_name: ofSetCurrentRenderer_
+_returns: void_
+_returns_description: _
+_parameters: shared_ptr< ofBaseRenderer > renderer, bool setDefaults=false_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofSetEscapeQuitsApp(bQuitOnEsc)
+
+<!--
+_syntax: ofSetEscapeQuitsApp(bQuitOnEsc)_
+_name: ofSetEscapeQuitsApp_
+_returns: void_
+_returns_description: _
+_parameters: bool bQuitOnEsc_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1080,49 +1605,11 @@ _inlined_description: _
 
 
 
-_description: _
-
-
-Attempts to set the frame rate to a given target by sleeping a certain amount per frame. The results of this may vary based if vertical sync is enabled or disabled (either at the card level or via code), because this locks the drawing to intervals where the screen refreshes.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofSetFrameRate(targetRate)
-
-<!--
-_syntax: ofSetFrameRate(targetRate)_
-_name: ofSetFrameRate_
-_returns: void_
-_returns_description: _
-_parameters: int targetRate_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
 
 _description: _
 
 
 Attempts to set the frame rate to a given target by sleeping a certain amount per frame. The results of this may vary based if vertical sync is enabled or disabled (either at the card level or via code), because this locks the drawing to intervals where the screen refreshes.
-note: this code is implemented inside the ofAppRunner
 
 
 
@@ -1157,6 +1644,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -1172,15 +1660,15 @@ note: this code is implemented inside the ofAppRunner.
 
 <!----------------------------------------------------------------------------->
 
-###void ofSetOrientation(orientation)
+###void ofSetMainLoop(mainLoop)
 
 <!--
-_syntax: ofSetOrientation(orientation)_
-_name: ofSetOrientation_
+_syntax: ofSetMainLoop(mainLoop)_
+_name: ofSetMainLoop_
 _returns: void_
 _returns_description: _
-_parameters: ofOrientation orientation_
-_version_started: _
+_parameters: shared_ptr< ofMainLoop > mainLoop_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1197,8 +1685,8 @@ _inlined_description: _
 
 
 
-_description: _
 
+_description: _
 
 
 
@@ -1226,6 +1714,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 
@@ -1269,46 +1758,9 @@ _inlined_description: _
 
 
 
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofSetWindowPosition(x,y)
-
-<!--
-_syntax: ofSetWindowPosition(x,y)_
-_name: ofSetWindowPosition_
-_returns: void_
-_returns_description: _
-_parameters: int x_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
 
 _description: _
 
-
-Sets the window position in the screen to x,y expressed in pixels.
 
 
 
@@ -1343,49 +1795,12 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
 Moves the app window to the x and y coordinates specified. For example: coordinates of (0,0) would set the top-left corner of your app window to the top-left corner of the screen.
 note: this code is implemented inside the ofAppRunner
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofSetWindowShape(w,h)
-
-<!--
-_syntax: ofSetWindowShape(w,h)_
-_name: ofSetWindowShape_
-_returns: void_
-_returns_description: _
-_parameters: int width_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-Sets the window size to w,h expressed in pixels. This size is that of the drawable area, doesn't include the borders of the window.
 
 
 
@@ -1420,47 +1835,12 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
 Sets the dimension of your app's window.
 note: this code is implemented inside the ofAppRunner
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofSetWindowTitle()
-
-<!--
-_syntax: ofSetWindowTitle()_
-_name: ofSetWindowTitle_
-_returns: void_
-_returns_description: _
-_parameters: _
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
 
 
 
@@ -1495,91 +1875,6 @@ _inlined_description: _
 
 
 
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofSetupOpenGL(*window, w, h, screenMode)
-
-<!--
-_syntax: ofSetupOpenGL(*window, w, h, screenMode)_
-_name: ofSetupOpenGL_
-_returns: void_
-_returns_description: _
-_parameters: ofAppBaseWindow * windowPtr, int w, int h, int screenMode_
-_version_started: 0.06_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-Sets up the window aspect and mode. This function should be called only from the main function in main.cpp.
-w and h are the width and height of the window.
-screenMode can be one of:
-- OF_WINDOW: normal window
-- OF_FULLSCREEN: fullscreen, the size of the app will be that of the current screen resolution. The w and h parameters will be ignored. This mode with the default glut window is just a window of the size of the screen without borders.
-- OF_GAME_MODE: fullscreen, the size of the app will be that passed as an argument to the function. The screen resolution will be also changed to fit that size so if the computer doesn't support that resolution, chances are that it won't work. Under glut this is real fullscreen and it's meant to be faster than window and fullscreen modes. Under linux this is the only way of getting fullscreen.
-From 0.06 you can also pass a diferent version of ofAppBaseWindow than the default glut one. To pass a different windowing toolkit than glut, first create an instance of it, and then pass a pointer to it to ofSetupOpenGL.
-ie:
-~~~~{.cpp}
-ofAppCocoaWindow window;
-ofSetupOpenGL(&window, 800, 600, OF_WINDOW);
-~~~~
-You need to have the windowing toolkit files included in your project.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofSetupOpenGL(windowPtr, w, h, screenMode)
-
-<!--
-_syntax: ofSetupOpenGL(windowPtr, w, h, screenMode)_
-_name: ofSetupOpenGL_
-_returns: void_
-_returns_description: _
-_parameters: ofPtr< ofAppBaseWindow > windowPtr, int w, int h, int screenMode_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: True_
--->
-
-_inlined_description: _
-
-
-
-
-
-
 
 _description: _
 
@@ -1599,8 +1894,8 @@ _syntax: ofSetupOpenGL(w, h, screenMode)_
 _name: ofSetupOpenGL_
 _returns: void_
 _returns_description: _
-_parameters: int w, int h, int screenMode_
-_version_started: 0.01_
+_parameters: int w, int h, ofWindowMode screenMode_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1617,14 +1912,44 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
-Sets up the window aspect and mode. This function should be called only from the main function in main.cpp.
-w and h are the width and height of the window.
-screenMode can be one of:
-- OF_WINDOW: normal window
-- OF_FULLSCREEN: fullscreen, the size of the app will be that of the current screen resolution. The w and h parameters will be ignored. 
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofSetupOpenGL(windowPtr, w, h, screenMode)
+
+<!--
+_syntax: ofSetupOpenGL(windowPtr, w, h, screenMode)_
+_name: ofSetupOpenGL_
+_returns: void_
+_returns_description: _
+_parameters: shared_ptr< Window > windowPtr, int w, int h, ofWindowMode screenMode_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1641,8 +1966,8 @@ _syntax: ofSetupOpenGL(*windowPtr, w, h, screenMode)_
 _name: ofSetupOpenGL_
 _returns: void_
 _returns_description: _
-_parameters: ofAppBaseWindow *windowPtr, int w, int h, int screenMode_
-_version_started: _
+_parameters: Window *windowPtr, int w, int h, ofWindowMode screenMode_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1659,8 +1984,8 @@ _inlined_description: _
 
 
 
-_description: _
 
+_description: _
 
 
 
@@ -1695,48 +2020,13 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
 Shows the mouse cursor again when it's been hidden with ofHideCursor
 makes the cursor visible.
 note: this code is implemented inside the ofAppRunner
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofSleepMillis(millis)
-
-<!--
-_syntax: ofSleepMillis(millis)_
-_name: ofSleepMillis_
-_returns: void_
-_returns_description: _
-_parameters: int millis_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
 
 
 
@@ -1764,6 +2054,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 

@@ -9,6 +9,7 @@ _istemplated: False_
 
 ##InlineDescription
 
+A logger channel that logs its messages to the console.
 
 
 
@@ -32,44 +33,6 @@ _name: log_
 _returns: void_
 _returns_description: _
 _parameters: ofLogLevel level, const string &module, const string &message_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void log(logLevel, &module, *format, ...)
-
-<!--
-_syntax: log(logLevel, &module, *format, ...)_
-_name: log_
-_returns: void_
-_returns_description: _
-_parameters: ofLogLevel level, const string &module, const char *format,..._
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -158,6 +121,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Destroy the console logger channel.
 
 
 

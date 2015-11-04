@@ -211,8 +211,6 @@ _advanced: False_
 _inlined_description: _
 
 
-Closes an open socket. NOTE: A closed socket cannot be reused again without a call to "Create()". 
-
 
 
 
@@ -367,6 +365,43 @@ Create the UDP manager. Must be called before binding to any IP or sockets.
 
 <!----------------------------------------------------------------------------->
 
+###bool GetListenAddr(&address, &port)
+
+<!--
+_syntax: GetListenAddr(&address, &port)_
+_name: GetListenAddr_
+_returns: bool_
+_returns_description: _
+_parameters: string &address, int &port_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###int GetMaxMsgSize()
 
 <!--
@@ -445,16 +480,16 @@ Get the size of the receive buffer. The minimum (doubled) value for this option 
 
 <!----------------------------------------------------------------------------->
 
-###bool GetRemoteAddr(*address)
+###bool GetRemoteAddr(&address, &port)
 
 <!--
-_syntax: GetRemoteAddr(*address)_
+_syntax: GetRemoteAddr(&address, &port)_
 _name: GetRemoteAddr_
 _returns: bool_
 _returns_description: _
-_parameters: char *address_
+_parameters: string &address, int &port_
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -473,9 +508,6 @@ _inlined_description: _
 
 
 _description: _
-
-
-Returns the dots and numbers remote address in a string, 
 
 
 
@@ -545,8 +577,7 @@ _advanced: False_
 
 _inlined_description: _
 
-returns -1 on failure 
-
+returns -1 on failure
 
 
 
@@ -645,6 +676,80 @@ Return the current send timeout.
 
 <!----------------------------------------------------------------------------->
 
+###bool HasSocket()
+
+<!--
+_syntax: HasSocket()_
+_name: HasSocket_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int PeekReceive()
+
+<!--
+_syntax: PeekReceive()_
+_name: PeekReceive_
+_returns: int_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###int Receive(*pBuff, iSize)
 
 <!--
@@ -665,8 +770,6 @@ _advanced: False_
 
 _inlined_description: _
 
-
-Return values: SOCKET_TIMEOUT indicates timeout SOCKET_ERROR in case of a problem. 
 
 
 
@@ -714,8 +817,6 @@ _advanced: False_
 _inlined_description: _
 
 
-Return values: SOCKET_TIMEOUT indicates timeout SOCKET_ERROR in case of a problem. 
-
 
 
 
@@ -761,8 +862,6 @@ _advanced: False_
 
 _inlined_description: _
 
-
-Return values: SOCKET_TIMEOUT indicates timeout SOCKET_ERROR in case of a problem. 
 
 
 
@@ -842,8 +941,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
-Theo added - Choose to set nonBLocking - default mode is to block. 
 
 
 
@@ -1208,6 +1305,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1232,6 +1332,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -1258,6 +1361,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1282,6 +1388,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -1308,30 +1417,8 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int m_iListenPort
-
-<!--
-_name: m_iListenPort_
-_type: int_
-_access: protected_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
 
 _description: _
 
@@ -1358,6 +1445,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1383,6 +1473,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1407,6 +1500,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 

@@ -34,6 +34,10 @@ _advanced: False_
 
 _inlined_description: _
 
+Deallocates FreeImage resources.
+
+Used internally during shutdown.
+
 
 
 
@@ -69,6 +73,8 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+\todo Needs documentation.
 
 
 
@@ -112,6 +118,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -141,6 +148,8 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+\todo Needs documentation.
 
 
 
@@ -184,6 +193,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -213,6 +223,8 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+\todo Needs documentation.
 
 
 
@@ -256,6 +268,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -285,6 +298,8 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+\todo Needs documentation.
 
 
 
@@ -328,6 +343,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -357,6 +373,8 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+\todo Needs documentation.
 
 
 
@@ -400,6 +418,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -429,6 +448,8 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+\todo Needs documentation.
 
 
 
@@ -472,6 +493,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -501,6 +523,8 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+\todo Needs documentation.
 
 
 
@@ -537,6 +561,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 

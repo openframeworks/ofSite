@@ -619,7 +619,7 @@ _name: ofxTCPServer_
 _returns: _
 _returns_description: _
 _parameters: const ofxTCPServer &mom_
-_access: private_
+_access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
@@ -657,7 +657,7 @@ _name: operator=_
 _returns: ofxTCPServer &_
 _returns_description: _
 _parameters: const ofxTCPServer &mom_
-_access: private_
+_access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
@@ -678,6 +678,43 @@ _inlined_description: _
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int peekReceiveRawBytes(clientID, *receiveBytes, numBytes)
+
+<!--
+_syntax: peekReceiveRawBytes(clientID, *receiveBytes, numBytes)_
+_name: peekReceiveRawBytes_
+_returns: int_
+_returns_description: _
+_parameters: int clientID, char *receiveBytes, int numBytes_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1324,6 +1361,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1348,6 +1388,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -1374,6 +1417,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1398,6 +1444,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -1424,6 +1473,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1448,6 +1500,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -1474,6 +1529,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1499,6 +1557,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1523,6 +1584,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 

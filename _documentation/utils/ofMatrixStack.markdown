@@ -138,6 +138,43 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###bool doesHardwareOrientation()
+
+<!--
+_syntax: doesHardwareOrientation()_
+_name: doesHardwareOrientation_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###const ofMatrix4x4 & getCurrentMatrix()
 
 <!--
@@ -243,6 +280,43 @@ _inlined_description: _
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofRectangle getFullSurfaceViewport()
+
+<!--
+_syntax: getFullSurfaceViewport()_
+_name: getFullSurfaceViewport_
+_returns: ofRectangle_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -708,6 +782,43 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###const ofMatrix4x4 & getViewMatrix()
+
+<!--
+_syntax: getViewMatrix()_
+_name: getViewMatrix_
+_returns: const ofMatrix4x4 &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###bool isVFlipped()
 
 <!--
@@ -746,16 +857,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void loadIdentityMatrix(void)
+###void loadIdentityMatrix()
 
 <!--
-_syntax: loadIdentityMatrix(void)_
+_syntax: loadIdentityMatrix()_
 _name: loadIdentityMatrix_
 _returns: void_
 _returns_description: _
-_parameters: void_
+_parameters: _
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -774,7 +885,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -813,6 +923,43 @@ _inlined_description: _
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void loadViewMatrix(&matrix)
+
+<!--
+_syntax: loadViewMatrix(&matrix)_
+_name: loadViewMatrix_
+_returns: void_
+_returns_description: _
+_parameters: const ofMatrix4x4 &matrix_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -898,6 +1045,43 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void multViewMatrix(&matrix)
+
+<!--
+_syntax: multViewMatrix(&matrix)_
+_name: multViewMatrix_
+_returns: void_
+_returns_description: _
+_parameters: const ofMatrix4x4 &matrix_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void nativeViewport(viewport)
 
 <!--
@@ -943,7 +1127,7 @@ _syntax: ofMatrixStack(&window)_
 _name: ofMatrixStack_
 _returns: _
 _returns_description: _
-_parameters: const ofAppBaseWindow &window_
+_parameters: const ofAppBaseWindow *window_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -1171,7 +1355,7 @@ _syntax: scale(xAmnt, yAmnt, zAmnt = 1)_
 _name: scale_
 _returns: void_
 _returns_description: _
-_parameters: float xAmnt, float yAmnt, float zAmnt=1_
+_parameters: float xAmnt, float yAmnt, float zAmnt_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -1323,7 +1507,7 @@ _syntax: translate(x, y, z = 0)_
 _name: translate_
 _returns: void_
 _returns_description: _
-_parameters: float x, float y, float z=0_
+_parameters: float x, float y, float z_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -1399,7 +1583,7 @@ _syntax: viewport(x = 0, y = 0, width = 0, height = 0, vflip = ofIsVFlipped())_
 _name: viewport_
 _returns: void_
 _returns_description: _
-_parameters: float x=0, float y=0, float width=0, float height=0, bool vflip=ofIsVFlipped()_
+_parameters: float x, float y, float width, float height, bool vflip_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -1448,6 +1632,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1472,6 +1659,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -1498,6 +1688,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1522,6 +1715,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -1548,6 +1744,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1572,6 +1771,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -1598,6 +1800,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1622,6 +1827,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -1648,6 +1856,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1672,6 +1883,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -1698,6 +1912,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1722,6 +1939,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -1748,6 +1968,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1772,6 +1995,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -1798,6 +2024,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1822,6 +2051,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -1848,6 +2080,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1872,6 +2107,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -1898,8 +2136,65 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofMatrix4x4 viewMatrix
+
+<!--
+_name: viewMatrix_
+_type: ofMatrix4x4_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###stack< ofMatrix4x4 > viewMatrixStack
+
+<!--
+_name: viewMatrixStack_
+_type: stack< ofMatrix4x4 >_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+_description: _
 
 
 
@@ -1922,6 +2217,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 

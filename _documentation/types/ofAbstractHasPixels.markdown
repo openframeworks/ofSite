@@ -9,6 +9,28 @@ _istemplated: False_
 
 ##InlineDescription
 
+An abstract 
+
+This empty 
+types to be stored as raw or shared pointers in collections such as
+std::vector.
+
+Example:
+\code{.cpp}
+
+std::vector<ofAbstractHasPixels> pixelProviders;
+
+ofPixels pixels;
+ofFloatPixels floatPixels;
+ofShortPixels shortPixels;
+
+// ...
+
+pixelProviders.push_back(&pixels);
+pixelProviders.push_back(&floatPixels);
+pixelProviders.push_back(&shortPixels);
+
+\endcode
 
 
 
@@ -44,6 +66,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Destroy the ofAbstractHasPixels.
 
 
 

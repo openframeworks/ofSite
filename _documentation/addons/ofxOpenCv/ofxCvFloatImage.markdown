@@ -66,6 +66,80 @@ Copies the pixel data of an ofxCvGrayscaleImage into the pixel data of the ofxCv
 
 <!----------------------------------------------------------------------------->
 
+###void allocatePixels(w, h)
+
+<!--
+_syntax: allocatePixels(w, h)_
+_name: allocatePixels_
+_returns: void_
+_returns_description: _
+_parameters: int w, int h_
+_access: protected_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void allocateTexture()
+
+<!--
+_syntax: allocateTexture()_
+_name: allocateTexture_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: protected_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void clear()
 
 <!--
@@ -153,9 +227,9 @@ _syntax: convertFloatToGray(*floatImg, *grayImg)_
 _name: convertFloatToGray_
 _returns: void_
 _returns_description: _
-_parameters: IplImage *floatImg, IplImage *grayImg_
+_parameters: int *floatImg, int *grayImg_
 _access: protected_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -174,7 +248,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -191,9 +264,9 @@ _syntax: convertGrayToFloat(*grayImg, *floatImg)_
 _name: convertGrayToFloat_
 _returns: void_
 _returns_description: _
-_parameters: IplImage *grayImg, IplImage *floatImg_
+_parameters: int *grayImg, int *floatImg_
 _access: protected_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -212,7 +285,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -310,16 +382,16 @@ Flag whether the image pixel data has changed so that the ofTexture can be updat
 
 <!----------------------------------------------------------------------------->
 
-###IplImage * getCv8BitsImage()
+###int * getCv8BitsImage()
 
 <!--
 _syntax: getCv8BitsImage()_
 _name: getCv8BitsImage_
-_returns: IplImage *_
+_returns: int *_
 _returns_description: _
 _parameters: _
 _access: protected_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -338,7 +410,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -348,16 +419,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###IplImage * getCv8BitsRoiImage()
+###int * getCv8BitsRoiImage()
 
 <!--
 _syntax: getCv8BitsRoiImage()_
 _name: getCv8BitsRoiImage_
-_returns: IplImage *_
+_returns: int *_
 _returns_description: _
 _parameters: _
 _access: protected_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -376,7 +447,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -1166,44 +1236,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void operator=(*mom)
-
-<!--
-_syntax: operator=(*mom)_
-_name: operator=_
-_returns: void_
-_returns_description: _
-_parameters: const IplImage *mom_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void resize(w, h)
 
 <!--
@@ -1251,7 +1283,7 @@ _syntax: scaleIntoMe(&mom, interpolationMethod = CV_INTER_NN)_
 _name: scaleIntoMe_
 _returns: void_
 _returns_description: _
-_parameters: ofxCvImage &mom, int interpolationMethod=CV_INTER_NN_
+_parameters: ofxCvImage &mom, int interpolationMethod_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1553,6 +1585,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1577,6 +1612,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -1603,6 +1641,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1628,6 +1669,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1652,6 +1696,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 

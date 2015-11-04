@@ -9,6 +9,7 @@ _istemplated: False_
 
 ##InlineDescription
 
+A super simple camera for interacting with objects in 3D space.
 
 
 
@@ -39,7 +40,7 @@ _syntax: begin(viewport = ofGetCurrentViewport())_
 _name: begin_
 _returns: void_
 _returns_description: _
-_parameters: ofRectangle viewport=ofGetCurrentViewport()_
+_parameters: ofRectangle viewport_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -52,6 +53,9 @@ _advanced: False_
 
 _inlined_description: _
 
+ \}
+\name Rendering
+\{
 
 
 
@@ -100,6 +104,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Disable mouse camera control.
 
 
 
@@ -138,6 +143,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Disable the mouse's middle button for camera control.
 
 
 
@@ -176,6 +182,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Enable mouse camera control.
 
 
 
@@ -214,6 +221,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Enable the mouse's middle button for camera control.
 
 
 
@@ -252,6 +260,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Get the distance to the target.
+Returns: the distance to the target.
 
 
 
@@ -290,6 +300,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Get the camera's drag coefficient.
+Returns: the camera's drag coefficient.
 
 
 
@@ -328,6 +340,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Determine if mouse camera control is enabled.
+\todo Rename to isMouseInputEnabled().
+Returns: true iff mouse camera control is enabled.
 
 
 
@@ -366,6 +381,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Determine if the middle mouse button is enabled.
+\todo Rename to isMouseMiddleButtonEnabled().
+Returns: true iff the mouse's middle button is enabled.
 
 
 
@@ -404,6 +422,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Get the camera's target node reference.
+Returns: a reference the the camera's target node.
 
 
 
@@ -442,6 +462,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Get the current translation key code.
+Returns: the current translation key code.
 
 
 
@@ -451,6 +473,154 @@ _inlined_description: _
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void mouseDragged(&mouse)
+
+<!--
+_syntax: mouseDragged(&mouse)_
+_name: mouseDragged_
+_returns: void_
+_returns_description: _
+_parameters: ofMouseEventArgs &mouse_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void mousePressed(&mouse)
+
+<!--
+_syntax: mousePressed(&mouse)_
+_name: mousePressed_
+_returns: void_
+_returns_description: _
+_parameters: ofMouseEventArgs &mouse_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void mouseReleased(&mouse)
+
+<!--
+_syntax: mouseReleased(&mouse)_
+_name: mouseReleased_
+_returns: void_
+_returns_description: _
+_parameters: ofMouseEventArgs &mouse_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void mouseScrolled(&mouse)
+
+<!--
+_syntax: mouseScrolled(&mouse)_
+_name: mouseScrolled_
+_returns: void_
+_returns_description: _
+_parameters: ofMouseEventArgs &mouse_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -480,6 +650,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Create a default camera.
 
 
 
@@ -518,6 +689,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Reset the camera position and orientation.
 
 
 
@@ -556,6 +728,13 @@ _advanced: False_
 
 _inlined_description: _
 
+Enable or disable camera autodistance.
+
+Allow the camera to attempt to set the distance based on the camera's
+current viewpoirt.
+
+Parameters:
+bAutoDistance true to enable auto distance.
 
 
 
@@ -594,6 +773,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Set the camera's distance to the target.
+Parameters:
+distance The distance to the target.
 
 
 
@@ -632,6 +814,7 @@ _advanced: False_
 
 _inlined_description: _
 
+\}
 
 
 
@@ -670,6 +853,13 @@ _advanced: False_
 
 _inlined_description: _
 
+Set the camera's drag coefficient.
+
+Drag is affects how quickly the camera starts up and slows down when
+a user interacts with its position using a pointer.
+
+Parameters:
+drag The normalized coefficient value between 0 and 1.
 
 
 
@@ -679,6 +869,43 @@ _inlined_description: _
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setEvents(&events)
+
+<!--
+_syntax: setEvents(&events)_
+_name: setEvents_
+_returns: void_
+_returns_description: _
+_parameters: ofCoreEvents &events_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -708,6 +935,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Set the camera's target.
+Parameters:
+target The position of the target.
 
 
 
@@ -746,6 +976,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Set the camera's target.
+Parameters:
+target The position of the target.
 
 
 
@@ -784,6 +1017,13 @@ _advanced: False_
 
 _inlined_description: _
 
+Set the key used to switch between camera rotation and translation.
+
+Translation will only happen when the translation key is pressed.
+
+Parameters:
+key The key code for the translation key.
+\todo char is not the right data type for this. Should be int.
 
 
 
@@ -840,16 +1080,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void updateMouse()
+###void updateMouse(&mouse)
 
 <!--
-_syntax: updateMouse()_
+_syntax: updateMouse(&mouse)_
 _name: updateMouse_
 _returns: void_
 _returns_description: _
-_parameters: _
+_parameters: const ofMouseEventArgs &mouse_
 _access: private_
-_version_started: 0072_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -868,7 +1108,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -974,6 +1213,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Destroy the camera.
 
 
 
@@ -1010,6 +1250,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1034,6 +1277,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -1060,6 +1306,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1085,8 +1334,38 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool bDoScrollZoom
+
+<!--
+_name: bDoScrollZoom_
+_type: bool_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+_description: _
 
 
 
@@ -1109,6 +1388,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -1135,8 +1417,38 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool bEventsSet
+
+<!--
+_name: bEventsSet_
+_type: bool_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+_description: _
 
 
 
@@ -1159,6 +1471,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -1185,30 +1500,8 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool bValidClick
-
-<!--
-_name: bValidClick_
-_type: bool_
-_access: private_
-_version_started: 0072_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
 
 _description: _
 
@@ -1235,6 +1528,10 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+The current rotation quaternion.
+
 _description: _
 
 
@@ -1259,6 +1556,10 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+The key used to differentiate between translation and rotation.
 
 _description: _
 
@@ -1285,8 +1586,38 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofCoreEvents * events
+
+<!--
+_name: events_
+_type: ofCoreEvents *_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+_description: _
 
 
 
@@ -1309,6 +1640,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -1335,6 +1669,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1360,30 +1697,9 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofVec2f mouse
-
-<!--
-_name: mouse_
-_type: ofVec2f_
-_access: private_
-_version_started: 0072_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
+The time of the last pointer down event.
 
 _description: _
 
@@ -1410,6 +1726,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1434,6 +1753,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -1460,6 +1782,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1485,8 +1810,178 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofVec3f prevAxisX
+
+<!--
+_name: prevAxisX_
+_type: ofVec3f_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+The previous X axis.
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofVec3f prevAxisY
+
+<!--
+_name: prevAxisY_
+_type: ofVec3f_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+The previous Y axis.
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofVec3f prevAxisZ
+
+<!--
+_name: prevAxisZ_
+_type: ofVec3f_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+The previous Z axis.
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofVec2f prevMouse
+
+<!--
+_name: prevMouse_
+_type: ofVec2f_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofQuaternion prevOrientation
+
+<!--
+_name: prevOrientation_
+_type: ofQuaternion_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+The previous camera orientation.
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofVec3f prevPosition
+
+<!--
+_name: prevPosition_
+_type: ofVec3f_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+the previous camera position.
+
+_description: _
 
 
 
@@ -1509,6 +2004,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -1535,6 +2033,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1559,6 +2060,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -1585,6 +2089,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1609,6 +2116,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -1635,6 +2145,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1659,6 +2172,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -1685,6 +2201,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1709,6 +2228,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 

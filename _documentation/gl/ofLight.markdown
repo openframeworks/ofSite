@@ -116,16 +116,16 @@ spotlight.disable();
 
 
 
-###void customDraw()
+###void customDraw(*renderer)
 
 <!--
-_syntax: customDraw()_
+_syntax: customDraw(*renderer)_
 _name: customDraw_
 _returns: void_
 _returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
+_parameters: const ofBaseRenderer *renderer_
+_access: private_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -144,45 +144,6 @@ _inlined_description: _
 
 
 _description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void destroy()
-
-<!--
-_syntax: destroy()_
-_name: destroy_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
 
 
 
@@ -449,6 +410,43 @@ _inlined_description: _
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool getIsAreaLight()
+
+<!--
+_syntax: getIsAreaLight()_
+_name: getIsAreaLight_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -838,44 +836,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofLight(&mom)
-
-<!--
-_syntax: ofLight(&mom)_
-_name: ofLight_
-_returns: _
-_returns_description: _
-_parameters: const ofLight &mom_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void onOrientationChanged()
 
 <!--
@@ -952,14 +912,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofLight & operator=(&mom)
+###void setAmbientColor(&c)
 
 <!--
-_syntax: operator=(&mom)_
-_name: operator=_
-_returns: ofLight &_
+_syntax: setAmbientColor(&c)_
+_name: setAmbientColor_
+_returns: void_
 _returns_description: _
-_parameters: const ofLight &mom_
+_parameters: const ofFloatColor &c_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -990,16 +950,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setAmbientColor(&c)
+###void setAreaLight(width, height)
 
 <!--
-_syntax: setAmbientColor(&c)_
-_name: setAmbientColor_
+_syntax: setAreaLight(width, height)_
+_name: setAreaLight_
 _returns: void_
 _returns_description: _
-_parameters: const ofFloatColor &c_
+_parameters: float width, float height_
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1018,7 +978,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -1370,364 +1329,28 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ~ofLight()
+##Variables
+
+
+
+###shared_ptr< ofLight::Data > data
 
 <!--
-_syntax: ~ofLight()_
-_name: ~ofLight_
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
+_name: data_
+_type: shared_ptr< ofLight::Data >_
+_access: private_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
-_constant: False_
-_static: False_
 _visible: True_
+_constant: False_
 _advanced: False_
 -->
 
 _inlined_description: _
 
 
-
-
-
-
-
-
 _description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-##Variables
-
-
-
-###ofFloatColor ambientColor
-
-<!--
-_name: ambientColor_
-_type: ofFloatColor_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float attenuation_constant
-
-<!--
-_name: attenuation_constant_
-_type: float_
-_access: private_
-_version_started: 0071_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float attenuation_linear
-
-<!--
-_name: attenuation_linear_
-_type: float_
-_access: private_
-_version_started: 0071_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float attenuation_quadratic
-
-<!--
-_name: attenuation_quadratic_
-_type: float_
-_access: private_
-_version_started: 0071_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofFloatColor diffuseColor
-
-<!--
-_name: diffuseColor_
-_type: ofFloatColor_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float exponent
-
-<!--
-_name: exponent_
-_type: float_
-_access: private_
-_version_started: 0071_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int glIndex
-
-<!--
-_name: glIndex_
-_type: int_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool isDirectional
-
-<!--
-_name: isDirectional_
-_type: bool_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int isEnabled
-
-<!--
-_name: isEnabled_
-_type: int_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool isSpotlight
-
-<!--
-_name: isSpotlight_
-_type: bool_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofLightType lightType
-
-<!--
-_name: lightType_
-_type: ofLightType_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofFloatColor specularColor
-
-<!--
-_name: specularColor_
-_type: ofFloatColor_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float spotCutOff
-
-<!--
-_name: spotCutOff_
-_type: float_
-_access: private_
-_version_started: 0071_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
 
 
 

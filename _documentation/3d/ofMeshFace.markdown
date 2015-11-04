@@ -9,6 +9,21 @@ _istemplated: False_
 
 ##InlineDescription
 
+An ofMeshFace is a face on one of the ofPrimitive instances.
+In the ofPrimitive a face consists of 3 points connected together.
+
+You can get a vector of ofMeshFace instances from any ofPrimitive like so:
+
+~~~~{.cpp}
+
+vector<ofMeshFace> triangles = box.getMesh().getUniqueFaces();
+
+~~~~
+
+They're very handy for manipulating individual vertices or doing strange/fun
+things with intersection and boundary testing, among many many other things.
+
+this is always a triangle
 
 
 
@@ -81,7 +96,7 @@ _syntax: getColor(index)_
 _name: getColor_
 _returns: const ofFloatColor &_
 _returns_description: _
-_parameters: int index_
+_parameters: ofIndexType index_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -157,7 +172,7 @@ _syntax: getNormal(index)_
 _name: getNormal_
 _returns: const ofVec3f &_
 _returns_description: _
-_parameters: int index_
+_parameters: ofIndexType index_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -195,7 +210,7 @@ _syntax: getTexCoord(index)_
 _name: getTexCoord_
 _returns: const ofVec2f &_
 _returns_description: _
-_parameters: int index_
+_parameters: ofIndexType index_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -233,7 +248,7 @@ _syntax: getVertex(index)_
 _name: getVertex_
 _returns: const ofVec3f &_
 _returns_description: _
-_parameters: int index_
+_parameters: ofIndexType index_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -423,7 +438,7 @@ _syntax: setColor(index, &color)_
 _name: setColor_
 _returns: void_
 _returns_description: _
-_parameters: int index, const ofFloatColor &color_
+_parameters: ofIndexType index, const ofFloatColor &color_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -575,7 +590,7 @@ _syntax: setNormal(index, &n)_
 _name: setNormal_
 _returns: void_
 _returns_description: _
-_parameters: int index, const ofVec3f &n_
+_parameters: ofIndexType index, const ofVec3f &n_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -613,7 +628,7 @@ _syntax: setTexCoord(index, &tCoord)_
 _name: setTexCoord_
 _returns: void_
 _returns_description: _
-_parameters: int index, const ofVec2f &tCoord_
+_parameters: ofIndexType index, const ofVec2f &tCoord_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -651,7 +666,7 @@ _syntax: setVertex(index, &v)_
 _name: setVertex_
 _returns: void_
 _returns_description: _
-_parameters: int index, const ofVec3f &v_
+_parameters: ofIndexType index, const ofVec3f &v_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -700,6 +715,9 @@ _constant: False_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -724,6 +742,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -750,6 +771,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -774,6 +798,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -800,6 +827,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -824,6 +854,9 @@ _visible: True_
 _constant: False_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -850,6 +883,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -875,6 +911,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -899,6 +938,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 

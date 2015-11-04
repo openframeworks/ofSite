@@ -183,45 +183,7 @@ _syntax: ofxVecSlider_(value, width = defaultWidth, height = defaultHeight)_
 _name: ofxVecSlider__
 _returns: _
 _returns_description: _
-_parameters: ofParameter< VecType > value, float width=defaultWidth, float height=defaultHeight_
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### operator const VecType &()
-
-<!--
-_syntax: operator const VecType &()_
-_name: operator const VecType &_
-_returns: _
-_returns_description: _
-_parameters: _
+_parameters: ofParameter< VecType > value, float width, float height_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -328,16 +290,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofxVecSlider_ * setup(value, width = defaultWidth, height = defaultHeight)
+###ofxVecSlider_< VecType > * setup(value, width, height)
 
 <!--
-_syntax: setup(value, width = defaultWidth, height = defaultHeight)_
+_syntax: setup(value, width, height)_
 _name: setup_
-_returns: ofxVecSlider_ *_
+_returns: ofxVecSlider_< VecType > *_
 _returns_description: _
-_parameters: ofParameter< VecType > value, float width=defaultWidth, float height=defaultHeight_
+_parameters: ofParameter< VecType > value, float width, float height_
 _access: public_
-_version_started: 0.8.0_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -356,7 +318,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -366,16 +327,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofxVecSlider_ * setup(controlName, &value, &min, &max, width = defaultWidth, height = defaultHeight)
+###ofxVecSlider_< VecType > * setup(&controlName, &value, &min, &max, width, height)
 
 <!--
-_syntax: setup(controlName, &value, &min, &max, width = defaultWidth, height = defaultHeight)_
+_syntax: setup(&controlName, &value, &min, &max, width, height)_
 _name: setup_
-_returns: ofxVecSlider_ *_
+_returns: ofxVecSlider_< VecType > *_
 _returns_description: _
-_parameters: string controlName, const VecType &value, const VecType &min, const VecType &max, float width=defaultWidth, float height=defaultHeight_
+_parameters: const string &controlName, const VecType &value, const VecType &min, const VecType &max, float width, float height_
 _access: public_
-_version_started: 0.8.0_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -394,7 +355,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -422,6 +382,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -446,6 +409,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 

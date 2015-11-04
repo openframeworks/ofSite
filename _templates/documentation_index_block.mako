@@ -1,9 +1,11 @@
 ## -*- coding: utf-8 -*-
-<%page args="module,classes"/>
+<%page args="module,classes,show_header"/>
 <div class="documentation_group">
+    % if show_header:
     <div class="documentation_group_head show">
-			<h2>${module}<h2>
+			<h2>${module}</h2><a href="${module}/introduction.html">module introduction</a>
 	</div>
+	% endif
 			
 	<!-- fileFuncs -->
 

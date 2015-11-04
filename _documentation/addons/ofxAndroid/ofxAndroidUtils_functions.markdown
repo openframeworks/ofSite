@@ -15,12 +15,12 @@ _advanced: False_
 
 <!----------------------------------------------------------------------------->
 
-###JNIEnv * ofGetJNIEnv()
+###int * ofGetJNIEnv()
 
 <!--
 _syntax: ofGetJNIEnv()_
 _name: ofGetJNIEnv_
-_returns: JNIEnv *_
+_returns: int *_
 _returns_description: _
 _parameters: _
 _version_started: _
@@ -40,6 +40,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -51,12 +52,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###jclass ofGetJavaOFAndroid()
+###int ofGetJavaOFAndroid()
 
 <!--
 _syntax: ofGetJavaOFAndroid()_
 _name: ofGetJavaOFAndroid_
-_returns: jclass_
+_returns: int_
 _returns_description: _
 _parameters: _
 _version_started: _
@@ -76,6 +77,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -87,12 +89,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###JavaVM * ofGetJavaVMPtr()
+###int * ofGetJavaVMPtr()
 
 <!--
 _syntax: ofGetJavaVMPtr()_
 _name: ofGetJavaVMPtr_
-_returns: JavaVM *_
+_returns: int *_
 _returns_description: _
 _parameters: _
 _version_started: _
@@ -105,6 +107,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 
@@ -123,12 +126,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###jobject ofGetOFActivityObject()
+###int ofGetOFActivityObject()
 
 <!--
 _syntax: ofGetOFActivityObject()_
 _name: ofGetOFActivityObject_
-_returns: jobject_
+_returns: int_
 _returns_description: _
 _parameters: _
 _version_started: _
@@ -141,6 +144,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 
@@ -184,6 +188,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -202,8 +207,8 @@ _syntax: ofxAndroidAlertListBox(title, &list)_
 _name: ofxAndroidAlertListBox_
 _returns: bool_
 _returns_description: _
-_parameters: string title, const vector< string > &list_
-_version_started: _
+_parameters: string title, const int &list_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -220,8 +225,8 @@ _inlined_description: _
 
 
 
-_description: _
 
+_description: _
 
 
 
@@ -249,6 +254,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 
@@ -292,6 +298,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -321,6 +328,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 
@@ -364,6 +372,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -400,6 +409,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -411,12 +421,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofxAndroidEventsClass ofxAndroidEvents()
+###ofxAndroidEventsClass & ofxAndroidEvents()
 
 <!--
 _syntax: ofxAndroidEvents()_
 _name: ofxAndroidEvents_
-_returns: ofxAndroidEventsClass_
+_returns: ofxAndroidEventsClass &_
 _returns_description: _
 _parameters: _
 _version_started: _
@@ -429,6 +439,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 
@@ -472,6 +483,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -501,6 +513,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 
@@ -544,6 +557,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -573,6 +587,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 
@@ -616,6 +631,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -645,6 +661,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 
@@ -688,6 +705,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -717,6 +735,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 
@@ -760,6 +779,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -789,6 +809,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 
@@ -832,6 +853,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -861,6 +883,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 
@@ -904,6 +927,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -933,6 +957,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 
 
@@ -976,6 +1001,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -1012,6 +1038,7 @@ _inlined_description: _
 
 
 
+
 _description: _
 
 
@@ -1023,15 +1050,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofxRegisterMultitouch(*app)
+###bool ofxJavaCallBoolMethod(object, classID, methodName, methodSignature, args)
 
 <!--
-_syntax: ofxRegisterMultitouch(*app)_
-_name: ofxRegisterMultitouch_
-_returns: void_
+_syntax: ofxJavaCallBoolMethod(object, classID, methodName, methodSignature, args)_
+_name: ofxJavaCallBoolMethod_
+_returns: bool_
 _returns_description: _
-_parameters: ofxAndroidApp *app_
-_version_started: _
+_parameters: int object, int classID, string methodName, string methodSignature, va_list args_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1048,8 +1075,512 @@ _inlined_description: _
 
 
 
+
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float ofxJavaCallFloatMethod(object, classID, methodName, methodSignature, args)
+
+<!--
+_syntax: ofxJavaCallFloatMethod(object, classID, methodName, methodSignature, args)_
+_name: ofxJavaCallFloatMethod_
+_returns: float_
+_returns_description: _
+_parameters: int object, int classID, string methodName, string methodSignature, va_list args_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int ofxJavaCallIntMethod(object, classID, methodName, methodSignature, args)
+
+<!--
+_syntax: ofxJavaCallIntMethod(object, classID, methodName, methodSignature, args)_
+_name: ofxJavaCallIntMethod_
+_returns: int_
+_returns_description: _
+_parameters: int object, int classID, string methodName, string methodSignature, va_list args_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int64_t ofxJavaCallLongMethod(object, classID, methodName, methodSignature, args)
+
+<!--
+_syntax: ofxJavaCallLongMethod(object, classID, methodName, methodSignature, args)_
+_name: ofxJavaCallLongMethod_
+_returns: int64_t_
+_returns_description: _
+_parameters: int object, int classID, string methodName, string methodSignature, va_list args_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int ofxJavaCallObjectMethod()
+
+<!--
+_syntax: ofxJavaCallObjectMethod()_
+_name: ofxJavaCallObjectMethod_
+_returns: int_
+_returns_description: _
+_parameters: _
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int ofxJavaCallStaticObjectMethod()
+
+<!--
+_syntax: ofxJavaCallStaticObjectMethod()_
+_name: ofxJavaCallStaticObjectMethod_
+_returns: int_
+_returns_description: _
+_parameters: _
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofxJavaCallStaticVoidMethod(classID, methodName, methodSignature, args)
+
+<!--
+_syntax: ofxJavaCallStaticVoidMethod(classID, methodName, methodSignature, args)_
+_name: ofxJavaCallStaticVoidMethod_
+_returns: void_
+_returns_description: _
+_parameters: int classID, string methodName, string methodSignature, va_list args_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofxJavaCallStaticVoidMethod(className, methodName, methodSignature)
+
+<!--
+_syntax: ofxJavaCallStaticVoidMethod(className, methodName, methodSignature)_
+_name: ofxJavaCallStaticVoidMethod_
+_returns: void_
+_returns_description: _
+_parameters: string className, string methodName, string methodSignature_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofxJavaCallVoidMethod(object, classID, methodName, methodSignature, args)
+
+<!--
+_syntax: ofxJavaCallVoidMethod(object, classID, methodName, methodSignature, args)_
+_name: ofxJavaCallVoidMethod_
+_returns: void_
+_returns_description: _
+_parameters: int object, int classID, string methodName, string methodSignature, va_list args_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int ofxJavaGetClassID()
+
+<!--
+_syntax: ofxJavaGetClassID()_
+_name: ofxJavaGetClassID_
+_returns: int_
+_returns_description: _
+_parameters: _
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string ofxJavaGetClassName(classID)
+
+<!--
+_syntax: ofxJavaGetClassName(classID)_
+_name: ofxJavaGetClassName_
+_returns: string_
+_returns_description: _
+_parameters: int classID_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int ofxJavaGetMethodID()
+
+<!--
+_syntax: ofxJavaGetMethodID()_
+_name: ofxJavaGetMethodID_
+_returns: int_
+_returns_description: _
+_parameters: _
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int ofxJavaGetStaticFieldID()
+
+<!--
+_syntax: ofxJavaGetStaticFieldID()_
+_name: ofxJavaGetStaticFieldID_
+_returns: int_
+_returns_description: _
+_parameters: _
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int ofxJavaGetStaticMethodID()
+
+<!--
+_syntax: ofxJavaGetStaticMethodID()_
+_name: ofxJavaGetStaticMethodID_
+_returns: int_
+_returns_description: _
+_parameters: _
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int ofxJavaGetStaticObjectField()
+
+<!--
+_syntax: ofxJavaGetStaticObjectField()_
+_name: ofxJavaGetStaticObjectField_
+_returns: int_
+_returns_description: _
+_parameters: _
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 

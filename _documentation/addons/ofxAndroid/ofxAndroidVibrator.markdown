@@ -24,16 +24,16 @@ _istemplated: False_
 
 
 
-###jmethodID getVibratorMethodID(name, signature)
+###int getVibratorMethodID()
 
 <!--
-_syntax: getVibratorMethodID(name, signature)_
+_syntax: getVibratorMethodID()_
 _name: getVibratorMethodID_
-_returns: jmethodID_
+_returns: int_
 _returns_description: _
-_parameters: string name, string signature_
+_parameters: _
 _access: private_
-_version_started: 0.8.0_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -52,7 +52,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -62,16 +61,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###jobject getVibratorService()
+###int getVibratorService()
 
 <!--
 _syntax: getVibratorService()_
 _name: getVibratorService_
-_returns: jobject_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: private_
-_version_started: 0.8.0_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -90,7 +89,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 

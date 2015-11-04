@@ -44,8 +44,7 @@ _advanced: False_
 
 _inlined_description: _
 
-add bundle elements 
-
+add bundle elements
 
 
 
@@ -122,8 +121,7 @@ _advanced: False_
 
 _inlined_description: _
 
-erase contents 
-
+erase contents
 
 
 
@@ -162,8 +160,7 @@ _advanced: False_
 
 _inlined_description: _
 
-for operator= and copy constructor 
-
+for operator= and copy constructor
 
 
 
@@ -202,8 +199,7 @@ _advanced: False_
 
 _inlined_description: _
 
-return the bundle or message at the given index 
-
+return the bundle or message at the given index
 
 
 
@@ -242,8 +238,7 @@ _advanced: False_
 
 _inlined_description: _
 
-get bundle elements 
-
+get bundle elements
 
 
 
@@ -508,6 +503,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -532,6 +530,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 

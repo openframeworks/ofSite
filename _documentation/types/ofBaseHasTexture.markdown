@@ -9,6 +9,7 @@ _istemplated: False_
 
 ##InlineDescription
 
+An abstract 
 
 
 
@@ -24,16 +25,16 @@ _istemplated: False_
 
 
 
-###ofTexture & getTextureReference()
+###const ofTexture & getTexture()
 
 <!--
-_syntax: getTextureReference()_
-_name: getTextureReference_
-_returns: ofTexture &_
+_syntax: getTexture()_
+_name: getTexture_
+_returns: const ofTexture &_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 006_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -44,6 +45,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Returns: a const reference to the ofTexture.
 
 
 
@@ -53,6 +55,81 @@ _inlined_description: _
 
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const ofTexture & getTexture()
+
+<!--
+_syntax: getTexture()_
+_name: getTexture_
+_returns: const ofTexture &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Returns: a const reference to the ofTexture.
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool isUsingTexture()
+
+<!--
+_syntax: isUsingTexture()_
+_name: isUsingTexture_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Returns: true if an internal ofTexture is being used.
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -82,6 +159,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Enable or disable internal ofTexture use.
+Parameters:
+bUseTex true if an ofTexture should be used.
 
 
 
@@ -120,6 +200,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Destroy the ofBaseHasTexture.
 
 
 

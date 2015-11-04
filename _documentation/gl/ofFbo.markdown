@@ -116,7 +116,7 @@ _syntax: allocate(width, height, internalformat = GL_RGBA, numSamples = 0)_
 _name: allocate_
 _returns: void_
 _returns_description: _
-_parameters: int width, int height, int internalformat=GL_RGBA, int numSamples=0_
+_parameters: int width, int height, int internalformat, int numSamples=0_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -151,16 +151,16 @@ This technique does not anti-alias any effects coming out of the shader, because
 
 <!----------------------------------------------------------------------------->
 
-###void allocate(settings = Settings())
+###void allocate(settings)
 
 <!--
-_syntax: allocate(settings = Settings())_
+_syntax: allocate(settings)_
 _name: allocate_
 _returns: void_
 _returns_description: _
-_parameters: Settings settings=Settings()_
+_parameters: ofFbo::Settings settings_
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -181,7 +181,41 @@ _inlined_description: _
 _description: _
 
 
-You can also allocate the ofFbo using a Settings object
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void attachTexture(&texture, internalFormat, attachmentPoint)
+
+<!--
+_syntax: attachTexture(&texture, internalFormat, attachmentPoint)_
+_name: attachTexture_
+_returns: void_
+_returns_description: _
+_parameters: ofTexture &texture, GLenum internalFormat, GLenum attachmentPoint_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -211,6 +245,14 @@ _advanced: False_
 
 _inlined_description: _
 
+   Sets up the framebuffer and binds it for rendering.
+
+warning: This is a convenience method, and is considered unsafe
+          in multi-window and/or multi-renderer scenarios.
+          If you use more than one renderer, use each renderer's
+          explicit void ofBaseGLRenderer::begin(const ofFbo & fbo, bool setupPerspective)
+          method instead.
+\sa       void ofBaseGLRenderer::begin(const ofFbo & fbo, bool setupPerspective)
 
 
 
@@ -251,6 +293,17 @@ _advanced: False_
 
 _inlined_description: _
 
+   Bind OpenGL GL_FRAMEBUFFER target to this ofFbo
+
+warning: If you use this method, you need to manually keep track of the
+          currently bound framebuffer, if you ever want to restore state.
+          * use ofBaseGLRenderer::getCurrentFramebuffer() to query the current
+          framebuffer binding state within the renderer.
+          * Better, use the renderer's explicit method:
+          ofBaseGLRenderer::bind(const ofFbo & fbo) to bind the fbo, to allow
+          the renderer to keep track of any bound fbos.
+\sa       unbind()
+\sa       virtual void ofBaseGLRenderer::bind(const ofFbo & fbo)
 
 
 
@@ -342,6 +395,43 @@ _description: _
 
 
 This checks the status of your FBO object.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void clear()
+
+<!--
+_syntax: clear()_
+_name: clear_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -529,46 +619,6 @@ This creates a texture of the specified format and attaches it to the FBO at the
 
 <!----------------------------------------------------------------------------->
 
-###void destroy()
-
-<!--
-_syntax: destroy()_
-_name: destroy_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Destroys the FBO and releases all textures and renderbuffers created.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void draw(x, y)
 
 <!--
@@ -669,6 +719,8 @@ _advanced: False_
 
 _inlined_description: _
 
+   Ends the current framebuffer render context.
+\sa       void begin(bool setupScreen=true) const;
 
 
 
@@ -680,6 +732,43 @@ _description: _
 
 
 Any drawing that you do after end() is drawn into the fbo rather than the screen. This is how you stop drawing things into your ofFbo instance.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void flagDirty()
+
+<!--
+_syntax: flagDirty()_
+_name: flagDirty_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -769,12 +858,12 @@ This gives you the OpenGL id of the depth RenderBuffer that the fbo contains. Th
 
 <!----------------------------------------------------------------------------->
 
-###ofTexture & getDepthTexture()
+###const ofTexture & getDepthTexture()
 
 <!--
 _syntax: getDepthTexture()_
 _name: getDepthTexture_
-_returns: ofTexture &_
+_returns: const ofTexture &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -809,16 +898,16 @@ This gives you the OpenGL id of the depth Texture that the fbo contains. The dep
 
 <!----------------------------------------------------------------------------->
 
-###GLuint getFbo()
+###const ofTexture & getDepthTexture()
 
 <!--
-_syntax: getFbo()_
-_name: getFbo_
-_returns: GLuint_
+_syntax: getDepthTexture()_
+_name: getDepthTexture_
+_returns: const ofTexture &_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0071_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -839,7 +928,7 @@ _inlined_description: _
 _description: _
 
 
-This returns the GLuint of Fbo for advanced actions, if you're interested in doing something with the FBO id directly.
+This gives you the OpenGL id of the depth Texture that the fbo contains. The depthBuffer will be created by default or if you pass a Setting object with depthStencilAsTexture = true.
 
 
 
@@ -880,6 +969,83 @@ _description: _
 
 
 This returns the height of the fbo. This is just like height of a texture: it sets how many pixels wide the allocated memory on the graphics card is.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###GLuint getId()
+
+<!--
+_syntax: getId()_
+_name: getId_
+_returns: GLuint_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+returns id of the underlying GL object for advanced actions
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###GLuint getIdDrawBuffer()
+
+<!--
+_syntax: getIdDrawBuffer()_
+_name: getIdDrawBuffer_
+_returns: GLuint_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+returns id of Fbo for texture attachments
+which is different when the fbo is using MSAA
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -969,16 +1135,16 @@ This gives you the OpenGL id of the stencil RenderBuffer that the fbo contains. 
 
 <!----------------------------------------------------------------------------->
 
-###ofTexture & getTextureReference()
+###const ofTexture & getTexture()
 
 <!--
-_syntax: getTextureReference()_
-_name: getTextureReference_
-_returns: ofTexture &_
+_syntax: getTexture()_
+_name: getTexture_
+_returns: const ofTexture &_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -997,9 +1163,6 @@ _inlined_description: _
 
 
 _description: _
-
-
-This gives you access to the ofTexture contained w/in the fbo. This returns the texture index returned by setDefaultTextureIndex() if you've set it there.
 
 
 
@@ -1009,16 +1172,16 @@ This gives you access to the ofTexture contained w/in the fbo. This returns the 
 
 <!----------------------------------------------------------------------------->
 
-###ofTexture & getTextureReference(attachmentPoint)
+###const ofTexture & getTexture(attachmentPoint)
 
 <!--
-_syntax: getTextureReference(attachmentPoint)_
-_name: getTextureReference_
-_returns: ofTexture &_
+_syntax: getTexture(attachmentPoint)_
+_name: getTexture_
+_returns: const ofTexture &_
 _returns_description: _
 _parameters: int attachmentPoint_
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1039,7 +1202,78 @@ _inlined_description: _
 _description: _
 
 
-This gives you access to a particular ofTexture contained by the FBO if there are more than 1 contained w/in the FBO. By default you'll have a color texture and a depth texture, though you can configure your FBO to have more.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const ofTexture & getTexture()
+
+<!--
+_syntax: getTexture()_
+_name: getTexture_
+_returns: const ofTexture &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const ofTexture & getTexture(attachmentPoint)
+
+<!--
+_syntax: getTexture(attachmentPoint)_
+_name: getTexture_
+_returns: const ofTexture &_
+_returns_description: _
+_parameters: int attachmentPoint_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1120,6 +1354,43 @@ _description: _
 
 
 Returns whether your FBO is allocated or not.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool isUsingTexture()
+
+<!--
+_syntax: isUsingTexture()_
+_name: isUsingTexture_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1489,6 +1760,43 @@ This allows you to get the pixels from an ofFbo and store it in an ofShortPixels
 
 <!----------------------------------------------------------------------------->
 
+###void reloadFbo()
+
+<!--
+_syntax: reloadFbo()_
+_name: reloadFbo_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void resetAnchor()
 
 <!--
@@ -1736,7 +2044,7 @@ _syntax: setUseTexture(bUseTex)_
 _name: setUseTexture_
 _returns: void_
 _returns_description: _
-_parameters: bool bUseTex_
+_parameters: bool _
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1789,6 +2097,10 @@ _advanced: False_
 
 _inlined_description: _
 
+   Unbinds OpenGL framebuffer target and restores the OpenGL framebuffer
+          render target to whatever this ofFbo stores in previousFramebufferBinding.
+\sa       bind()
+\sa       void setPreviousFramebufferBinding(const GLuint& previousFramebufferBinding_) const
 
 
 
@@ -1817,7 +2129,7 @@ _name: updateTexture_
 _returns: void_
 _returns_description: _
 _parameters: int attachmentPoint_
-_access: private_
+_access: public_
 _version_started: 007_
 _version_deprecated: _
 _summary: _
@@ -1829,6 +2141,11 @@ _advanced: False_
 
 _inlined_description: _
 
+   Explicityl resolve MSAA render buffers into textures
+\note     if using MSAA, we will have rendered into a colorbuffer, not directly
+          into the texture call this to blit from the colorbuffer into the texture
+          so we can use the results for rendering, or input to a shader etc.
+\note     This will get called implicitly upon getTexture();
 
 
 
@@ -1903,6 +2220,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1927,6 +2247,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -1953,8 +2276,39 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###vector< GLenum > activeDrawBuffers
+
+<!--
+_name: activeDrawBuffers_
+_type: vector< GLenum >_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+< table of currently active color draw buffers, allocate() defaults it to size(textures), with GL_COLOR_ATTACHMENT0..n as members, in order of allocation
+
+_description: _
 
 
 
@@ -1977,6 +2331,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -2003,6 +2360,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -2027,6 +2387,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -2053,6 +2416,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -2077,6 +2443,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -2103,6 +2472,17 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ Flags used internally to keep track of MSAA renderbuffers / textures
+\note   The dirty flags are only used when dealing if the framebuffer has MSAA
+        enabled attachments, i.e. numSamples is > 0 and extra Textures have
+        been bound so that the multisampled renderbuffers can be resolved to
+        textures.
+        The flags are read whenever an attached texture is accessed. If the texture
+        is dirty, i.e. it has not yet been resolved from its associated renderbuffer
+        the texture will be resolved through blitting the renderbuffer into it.
+
 _description: _
 
 
@@ -2127,6 +2507,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -2153,55 +2536,8 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int isBound
-
-<!--
-_name: isBound_
-_type: int_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###GLint savedFramebuffer
-
-<!--
-_name: savedFramebuffer_
-_type: GLint_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
 
 _description: _
 
@@ -2228,6 +2564,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -2253,6 +2592,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -2277,6 +2619,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 

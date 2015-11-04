@@ -1,14 +1,17 @@
-#class ofDelegate< TObj, void, true >
+#class ofPath::Command
 
 
 <!--
 _visible: True_
-_advanced: True_
+_advanced: False_
 _istemplated: False_
 -->
 
 ##InlineDescription
 
+\}
+\name Path Commands
+\{
 
 
 
@@ -24,168 +27,16 @@ _istemplated: False_
 
 
 
-###Poco::AbstractDelegate< void > * clone()
+### Command(type)
 
 <!--
-_syntax: clone()_
-_name: clone_
-_returns: Poco::AbstractDelegate< void > *_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void disable()
-
-<!--
-_syntax: disable()_
-_name: disable_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool equals(&other)
-
-<!--
-_syntax: equals(&other)_
-_name: equals_
-_returns: bool_
-_returns_description: _
-_parameters: const Poco::AbstractDelegate< void > &other_
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool notify(*sender)
-
-<!--
-_syntax: notify(*sender)_
-_name: notify_
-_returns: bool_
-_returns_description: _
-_parameters: const void *sender_
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofDelegate(*obj, method, prio)
-
-<!--
-_syntax: ofDelegate(*obj, method, prio)_
-_name: ofDelegate_
+_syntax: Command(type)_
+_name: Command_
 _returns: _
 _returns_description: _
-_parameters: TObj *obj, NotifyMethod method, int prio_
+_parameters: ofPath::Command::Type type_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -196,6 +47,7 @@ _advanced: False_
 
 _inlined_description: _
 
+for close
 
 
 
@@ -211,19 +63,18 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-### ofDelegate(&delegate)
+### Command(type, &p)
 
 <!--
-_syntax: ofDelegate(&delegate)_
-_name: ofDelegate_
+_syntax: Command(type, &p)_
+_name: Command_
 _returns: _
 _returns_description: _
-_parameters: const ofDelegate &delegate_
+_parameters: ofPath::Command::Type type, const ofPoint &p_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -234,6 +85,7 @@ _advanced: False_
 
 _inlined_description: _
 
+for lineTo and curveTo
 
 
 
@@ -249,57 +101,18 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-### ofDelegate()
+### Command(type, &p, &cp1, &cp2)
 
 <!--
-_syntax: ofDelegate()_
-_name: ofDelegate_
+_syntax: Command(type, &p, &cp1, &cp2)_
+_name: Command_
 _returns: _
 _returns_description: _
-_parameters: _
-_access: private_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofDelegate & operator=(&delegate)
-
-<!--
-_syntax: operator=(&delegate)_
-_name: operator=_
-_returns: ofDelegate &_
-_returns_description: _
-_parameters: const ofDelegate &delegate_
+_parameters: ofPath::Command::Type type, const ofPoint &p, const ofPoint &cp1, const ofPoint &cp2_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -310,6 +123,7 @@ _advanced: False_
 
 _inlined_description: _
 
+for bezierTo
 
 
 
@@ -325,19 +139,18 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-### ~ofDelegate()
+### Command(type, &centre, radiusX, radiusY, angleBegin, angleEnd)
 
 <!--
-_syntax: ~ofDelegate()_
-_name: ~ofDelegate_
+_syntax: Command(type, &centre, radiusX, radiusY, angleBegin, angleEnd)_
+_name: Command_
 _returns: _
 _returns_description: _
-_parameters: _
+_parameters: ofPath::Command::Type type, const ofPoint &centre, float radiusX, float radiusY, float angleBegin, float angleEnd_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -348,6 +161,7 @@ _advanced: False_
 
 _inlined_description: _
 
+for arc
 
 
 
@@ -356,7 +170,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -370,22 +183,24 @@ _description: _
 
 
 
-###Poco::Mutex _mutex
+###float angleBegin
 
 <!--
-_name: _mutex_
-_type: Poco::Mutex_
-_access: protected_
-_version_started: 0073_
+_name: angleBegin_
+_type: float_
+_access: public_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
-_constant: True_
+_constant: False_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+_description: _
 
 
 
@@ -395,22 +210,24 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###NotifyMethod _receiverMethod
+###float angleEnd
 
 <!--
-_name: _receiverMethod_
-_type: NotifyMethod_
-_access: protected_
-_version_started: 0073_
+_name: angleEnd_
+_type: float_
+_access: public_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
-_constant: True_
+_constant: False_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+_description: _
 
 
 
@@ -420,22 +237,159 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###TObj * _receiverObject
+###ofPoint cp1
 
 <!--
-_name: _receiverObject_
-_type: TObj *_
-_access: protected_
-_version_started: 0073_
+_name: cp1_
+_type: ofPoint_
+_access: public_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
-_constant: True_
+_constant: False_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofPoint cp2
+
+<!--
+_name: cp2_
+_type: ofPoint_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float radiusX
+
+<!--
+_name: radiusX_
+_type: float_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float radiusY
+
+<!--
+_name: radiusY_
+_type: float_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofPoint to
+
+<!--
+_name: to_
+_type: ofPoint_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofPath::Command::Type type
+
+<!--
+_name: type_
+_type: ofPath::Command::Type_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+_description: _
 
 
 

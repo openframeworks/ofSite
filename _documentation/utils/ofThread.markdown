@@ -9,24 +9,64 @@ _istemplated: False_
 
 ##InlineDescription
 
-A threaded base class with a built in mutex for convenience. 
+\
+A threaded base 
 
+Users can extend this base 
 
-Users can extend this base class by public inheritance like this: class MyThreadedClass: public ofThread
-{
-    public:
-    /// ...
-    void threadedFunction()
+    
     {
-        while(isThreadRunning())
+        public:
+        ...
+        void threadedFunction()
         {
-            /// Threaded function here.
+            while(isThreadRunning())
+            {
+                Threaded function here.
+            }
         }
-    }
-};
+    };
 
+ofThread is a convenient wrapper for Poco::Thread, Poco::Runnable and
+Poco::Mutex.  It represents a simplified (sometimes overly simplified -
+or simplified in ways that might not make sense for your project)
+pathway for quickly writing threaded classes.  Poco::Runnable represents
+a 
+able to spawn a thread and "run" the contents of a 
+the Poco::Runnable interface (which ofThread does).  Poco::FastMutex,
+(aka ofMutex) is a "mutual exclusion" object that prevents two threads
+from accessing the same data at the same time.  It is important to know
+that Poco::FastMutex (aka ofMutex) is not "recursive" while Poco::Mutex
+is. This means that if the same thread attempts to lock a thread while
+it ALREADY has a lock on the mutex, the program will lock up and go
+nowhere.  Thus, it is important that ofThread subclasses carefully
+their use of the mutex.  Currently ofThread does not lock its own mutex
+at any point (e.g. ofThread's internal variables are not thread safe).
+This is a somewhat dangerous convenience that is (theoretically)
+supposed to make it easier for subclasses to avoid the recursive mutex
+"problem". The situation that arises from two threads simultanously
+reading or writing from the same shared data (shared data
+occupies the same physical location in memory) leads to something
+called a "race condition", which can lead to deadlocks.
+A deadlock is as bad as it sounds.  It means your program
+just stops.  ofMutex prevents race conditions, deadlocks and crashes by
+permitting only one thread access to shared data at a time.  When using
+mutexes to protect data, the trick is to always be sure to unlock the
+mutex when finished.  This problem can often be avoided by using
+an Poco::FastMutex::ScopedLock (aka ofScopedLock).  See the
+the documentation for more information.  Finally, there are many cases
+where it might make more sense to use Poco::Thread, Poco::Runnable and
+Poco::FastMutex directly rather than using ofThread.  Further, cross
+platform thread management will be alleviated with the std::thread
+support library included with C++11.
 
-ofThread is a convenient wrapper for Poco::Thread, Poco::Runnable and Poco::Mutex. It represents a simplified (sometimes overly simplified - or simplified in ways that might not make sense for your project) pathway for quickly writing threaded classes. Poco::Runnable represents a class that can be "run" via its void run() method. Poco::Thread is able to spawn a thread and "run" the contents of a class that extends the Poco::Runnable interface (which ofThread does). Poco::FastMutex, (aka ofMutex) is a "mutual exclusion" object that prevents two threads from accessing the same data at the same time. It is important to know that Poco::FastMutex (aka ofMutex) is not "recursive" while Poco::Mutex is. This means that if the same thread attempts to lock a thread while it ALREADY has a lock on the mutex, the program will lock up and go nowhere. Thus, it is important that ofThread subclasses carefully their use of the mutex. Currently ofThread does not lock its own mutex at any point (e.g. ofThread's internal variables are not thread safe). This is a somewhat dangerous convenience that is (theoretically) supposed to make it easier for subclasses to avoid the recursive mutex "problem". The situation that arises from two threads simultanously reading or writing from the same shared data (shared data occupies the same physical location in memory) leads to something called a "race condition", which can lead to deadlocks. A deadlock is as bad as it sounds. It means your program just stops. ofMutex prevents race conditions, deadlocks and crashes by permitting only one thread access to shared data at a time. When using mutexes to protect data, the trick is to always be sure to unlock the mutex when finished. This problem can often be avoided by using an Poco::FastMutex::ScopedLock (aka ofScopedLock). See the the documentation for more information. Finally, there are many cases where it might make more sense to use Poco::Thread, Poco::Runnable and Poco::FastMutex directly rather than using ofThread. Further, cross platform thread management will be alleviated with the std::thread support library included with C++11. 
+Uncaught Exceptions throw from within ofThread will cause the thread to stop
+and the Exception will be delivered to the default ofBaseThreadErrorHandler.
+The ofBaseThreadErrorHandler will print the exception details, if available.
+The ofBaseThreadErrorHandler offers no opportunity to take corrective action
+and only allows the user to receive more valuable debugging information
+about the uncaught exception.  Users should design ofThread subclasses to
+catch and respond to all anticipated exceptions.
 
 
 
@@ -215,16 +255,15 @@ _advanced: False_
 
 _inlined_description: _
 
-Get the current Poco thread. 
+Get the current Poco thread.
 
+In most cases, it is more appropriate to query the current
+thread by calling isCurrentThread() on an active thread or
+by calling ofThread::isMainThread().  See the method
+documentation for more information on those methods.
 
-In most cases, it is more appropriate to query the current thread by calling isCurrentThread() on an active thread or by calling ofThread::isMainThread(). See the method documentation for more information on those methods.
-
-***return:*** 
-	A pointer to the current active thread OR 0 iff the main application thread is active. 
-
-
-
+Returns: A pointer to the current active thread OR 0 iff the main
+    application thread is active.
 
 
 
@@ -233,6 +272,7 @@ In most cases, it is more appropriate to query the current thread by calling isC
 
 
 _description: _
+
 
 
 
@@ -262,16 +302,13 @@ _advanced: False_
 
 _inlined_description: _
 
-Get a reference to the underlying Poco thread. 
+Get a reference to the underlying Poco thread.
 
+Poco::Thread provides a clean cross-platform wrapper for
+threads.  On occasion, it may be useful to interact with the
+underlying Poco::Thread directly.
 
-Poco::Thread provides a clean cross-platform wrapper for threads. On occasion, it may be useful to interact with the underlying Poco::Thread directly.
-
-***return:*** 
-	A reference to the backing Poco thread. 
-
-
-
+Returns: A reference to the backing Poco thread.
 
 
 
@@ -310,16 +347,13 @@ _advanced: False_
 
 _inlined_description: _
 
-Get a const reference to the underlying Poco thread. 
+Get a const reference to the underlying Poco thread.
 
+Poco::Thread provides a clean cross-platform wrapper for
+threads.  On occasion, it may be useful to interact with the
+underlying Poco::Thread directly.
 
-Poco::Thread provides a clean cross-platform wrapper for threads. On occasion, it may be useful to interact with the underlying Poco::Thread directly.
-
-***return:*** 
-	A reference to the backing Poco thread. 
-
-
-
+Returns: A reference to the backing Poco thread.
 
 
 
@@ -328,6 +362,7 @@ Poco::Thread provides a clean cross-platform wrapper for threads. On occasion, i
 
 
 _description: _
+
 
 
 
@@ -357,14 +392,8 @@ _advanced: False_
 
 _inlined_description: _
 
-Get the unique thread id. 
-
-
-***note:*** 
-	This is NOT the the same as the operating thread id! 
-
-
-
+Get the unique thread id.
+\note This is NOT the the same as the operating thread id!
 
 
 
@@ -383,16 +412,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###std::string getThreadName()
+###string getThreadName()
 
 <!--
 _syntax: getThreadName()_
 _name: getThreadName_
-_returns: std::string_
+_returns: string_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 0.8.0_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -403,14 +432,8 @@ _advanced: False_
 
 _inlined_description: _
 
-Get the unique thread name, in the form of "Thread id#". 
-
-
-***return:*** 
-	the Thread ID string. 
-
-
-
+Get the unique thread name, in the form of "Thread id#"
+Returns: the Thread ID string.
 
 
 
@@ -448,27 +471,36 @@ _advanced: False_
 
 _inlined_description: _
 
-Query whether the current thread is active. 
+Query whether the current thread is active.
 
+In multithreaded situations, it can be useful to know which
+thread is currently running some code in order to make sure
+only certain threads can do certain things.  For example,
+OpenGL can only run in the main execution thread.  Thus,
+situations where a thread is responsible for interacting
+with graphics resources may need to prevent graphics updates
+unless the main thread is accessing or updating resources
+shared with this ofThread (or its subclass).
 
-In multithreaded situations, it can be useful to know which thread is currently running some code in order to make sure only certain threads can do certain things. For example, OpenGL can only run in the main execution thread. Thus, situations where a thread is responsible for interacting with graphics resources may need to prevent graphics updates unless the main thread is accessing or updating resources shared with this ofThread (or its subclass). if(myThread.isCurrentThread())
-{
-    // do some myThread things,
-    // but keep your hands off my resources!
-}
-else if(ofThread::isMainThread())
-{
-    // pheew! ok, update those graphics resources
-}
+    if(myThread.isCurrentThread())
+    {
+        // do some myThread things,
+        // but keep your hands off my resources!
+    }
+    else if(ofThread::isMainThread())
+    {
+        // pheew! ok, update those graphics resources
+    }
 
+By way of another example, a sub
+an update() method that is called from ofBaseApp during the
+execution of the main application thread.  In these cases,
+the ofThread sub
+can, for instance, call update() on an ofImage, in order to
+send copy some ofPixels to an ofTexture on the graphics
+card.
 
-By way of another example, a subclass of ofThread may have an update() method that is called from ofBaseApp during the execution of the main application thread. In these cases, the ofThread subclass might want to ask itself whether it can, for instance, call update() on an ofImage, in order to send copy some ofPixels to an ofTexture on the graphics card.
-
-***return:*** 
-	True iff this ofThread the currently active thread. 
-
-
-
+Returns: True iff this ofThread the currently active thread.
 
 
 
@@ -507,24 +539,23 @@ _advanced: False_
 
 _inlined_description: _
 
-A query to see if the current thread is the main thread. 
+A query to see if the current thread is the main thread.
 
+Some functions (e.g. OpenGL calls) can only be executed
+the main thread.  This static function will tell the user
+what thread is currently active at the moment the method
+is called.
 
-Some functions (e.g. OpenGL calls) can only be executed the main thread. This static function will tell the user what thread is currently active at the moment the method is called. if (ofThread::isMainThread())
-{
-    ofLogNotice() << "This is the main thread!";
-}
-else
-{
-    ofLogNotice() << "This is NOT the main thread.";
-}
+    if (ofThread::isMainThread())
+    {
+        ofLogNotice() << "This is the main thread!";
+    }
+    else
+    {
+        ofLogNotice() << "This is NOT the main thread.";
+    }
 
-
-***return:*** 
-	true iff the current thread is the main thread. 
-
-
-
+Returns: true iff the current thread is the main thread.
 
 
 
@@ -563,14 +594,8 @@ _advanced: False_
 
 _inlined_description: _
 
-Check the running status of the thread. 
-
-
-***return:*** 
-	true iff the thread is currently running. 
-
-
-
+Check the running status of the thread.
+Returns: true iff the thread is currently running.
 
 
 
@@ -634,16 +659,14 @@ _advanced: False_
 
 _inlined_description: _
 
-Try to lock the mutex. 
+Try to lock the mutex.
 
+If the thread was started startThread(true), then this call will wait
+until the mutex is available and return true.  If the thread was started
+startThread(false), this call will return true iff the mutex is
+was successfully acquired.
 
-If the thread was started startThread(true), then this call will wait until the mutex is available and return true. If the thread was started startThread(false), this call will return true iff the mutex is was successfully acquired.
-
-***return:*** 
-	true iff the lock was successfully acquired. 
-
-
-
+Returns: true iff the lock was successfully acquired.
 
 
 
@@ -688,8 +711,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Create an ofThread. 
-
+Create an ofThread.
 
 
 
@@ -727,8 +749,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
-Implements Poco::Runnable::run(). 
 
 
 
@@ -768,37 +788,41 @@ _advanced: False_
 
 _inlined_description: _
 
-Tell the thread to sleep for a certain amount of milliseconds. 
+Tell the thread to sleep for a certain amount of milliseconds.
 
+This is useful inside the threadedFunction() when a thread is waiting
+for input to process:
 
-This is useful inside the threadedFunction() when a thread is waiting for input to process: void MyThreadedClass::threadedFunction()
-{
-    // start
-    while(isThreadRunning())
+    void MyThreadedClass::threadedFunction()
     {
-        // bReadyToProcess can be set from outside the threadedFuntion.
-        // perhaps by another thread that downloads data, or loads
-        // some media, etc.
+		    // start
+		    while(isThreadRunning())
+        {
+            // bReadyToProcess can be set from outside the threadedFuntion.
+            // perhaps by another thread that downloads data, or loads
+            // some media, etc.
 
-        if(bReadyToProcess == true)
-        {
-            // do some time intensive processing
-            bReadyToProcess = false;
-        }
-        else
-        {
-            // sleep the thread to give up some cpu
-            sleep(20);
-        }
+		    	if(bReadyToProcess == true)
+            {
+		    		// do some time intensive processing
+		    		bReadyToProcess = false;
+		    	}
+            else
+            {
+		    		// sleep the thread to give up some cpu
+		    		sleep(20);
+		    	}
+		    }
+		    // done
     }
-    // done
-}
 
+If the user does not give the thread a chance to sleep, the
+thread may take 100% of the CPU core while it's looping as it
+waits for something to do.  This may lead to poor application
+performance.
 
-If the user does not give the thread a chance to sleep, the thread may take 100% of the CPU core while it's looping as it waits for something to do. This may lead to poor application performance.
-
-
-
+Parameters:
+milliseconds The number of milliseconds to sleep.
 
 
 
@@ -807,6 +831,7 @@ If the user does not give the thread a chance to sleep, the thread may take 100%
 
 
 _description: _
+
 
 
 
@@ -836,15 +861,12 @@ _advanced: False_
 
 _inlined_description: _
 
-Start the thread with options. 
-
-
-
-***note:*** 
-	Subclasses can directly access the mutex and employ thier own locking strategy. 
-
-
-
+Start the thread with options.
+Parameters:
+mutexBlocks Set blocking to true if you want the mutex to
+       block when lock() is called.
+\note Subclasses can directly access the mutex and employ thier
+      own locking strategy.
 
 
 
@@ -853,6 +875,7 @@ Start the thread with options.
 
 
 _description: _
+
 
 
 
@@ -882,10 +905,13 @@ _advanced: False_
 
 _inlined_description: _
 
-Stop the thread. 
+Stop the thread.
 
-
-This does immediately stop the thread from processing, but will only set a flag that must be checked from within your threadedFunction() by calling isThreadRunning(). If the user wants to both stop the thread AND wait for the thread to finish processing, the user should call waitForThread(true, ...). 
+This does immediately stop the thread from processing, but
+will only set a flag that must be checked from within your
+threadedFunction() by calling isThreadRunning().  If the user wants
+to both stop the thread AND wait for the thread to finish
+processing, the user should call waitForThread(true, ...).
 
 
 
@@ -924,32 +950,40 @@ _advanced: False_
 
 _inlined_description: _
 
-The thread's run function. 
+The thread's run function.
 
+Users must overide this in your their derived class
+and then implement their threaded activity inside the loop.
+If the the users's threadedFunction does not have a loop,
+the contents of the threadedFunction will be executed once
+and the thread will then exit.
 
-Users must overide this in your their derived class and then implement their threaded activity inside the loop. If the the users's threadedFunction does not have a loop, the contents of the threadedFunction will be executed once and the thread will then exit.
+For tasks that must be repeated, the user can use a while
+loop that will run repeatedly until the thread's
+threadRunning is set to false via the stopThread() method.
 
-For tasks that must be repeated, the user can use a while loop that will run repeatedly until the thread's threadRunning is set to false via the stopThread() method. void MyThreadedClass::threadedFunction()
-{
-    // Start the loop and continue until
-    // isThreadRunning() returns false.
-    while(isThreadRunning())
+    void MyThreadedClass::threadedFunction()
     {
-        // Do activity repeatedly here:
+        // Start the loop and continue until
+        // isThreadRunning() returns false.
+        while(isThreadRunning())
+        {
+            // Do activity repeatedly here:
 
-        // int j = 1 + 1;
+            // int j = 1 + 1;
 
-        // This while loop will run as fast as it possibly
-        // can, consuming as much processor speed as it can.
-        // To help the processor stay cool, users are
-        // encouraged to let the while loop sleep via the
-        // sleep() method, or call the yield() method to let
-        // other threads have a turn.  See the sleep() and
-        // yield() methods for more information.
+            // This while loop will run as fast as it possibly
+            // can, consuming as much processor speed as it can.
+            // To help the processor stay cool, users are
+            // encouraged to let the while loop sleep via the
+            // sleep() method, or call the yield() method to let
+            // other threads have a turn.  See the sleep() and
+            // yield() methods for more information.
 
-        // sleep(100);
+            // sleep(100);
+        }
     }
- 
+
 
 
 
@@ -1043,10 +1077,10 @@ _advanced: False_
 
 _inlined_description: _
 
-Unlock the mutex. 
+Unlock the mutex.
 
-
-This will only unlocks the mutex if it was previously by the same calling thread. 
+This will only unlocks the mutex if it was previously by the same
+calling thread.
 
 
 
@@ -1076,7 +1110,7 @@ _syntax: waitForThread(callStopThread = true, milliseconds = INFINITE_JOIN_TIMEO
 _name: waitForThread_
 _returns: void_
 _returns_description: _
-_parameters: bool callStopThread=true, long milliseconds=INFINITE_JOIN_TIMEOUT_
+_parameters: bool callStopThread=true, long milliseconds_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -1089,23 +1123,40 @@ _advanced: False_
 
 _inlined_description: _
 
-Wait for the thread to exit (aka "joining" the thread). 
+Wait for the thread to exit (aka "joining" the thread).
 
+This method waits for a thread will "block" and wait for the
+thread (aka "join" the thread) before it returns.  This allows the
+user to be sure that the thread is properly cleaned up.  An example
+of when this might be particularly important is if the
+threadedFunction() is opening a set of network sockets, or
+downloading data from the web.  Destroying an ofThread subclass
+without releasing those sockets (or other resources), may result in
+segmentation faults, error signals or other undefined behaviors.
 
-This method waits for a thread will "block" and wait for the thread (aka "join" the thread) before it returns. This allows the user to be sure that the thread is properly cleaned up. An example of when this might be particularly important is if the threadedFunction() is opening a set of network sockets, or downloading data from the web. Destroying an ofThread subclass without releasing those sockets (or other resources), may result in segmentation faults, error signals or other undefined behaviors.
+Parameters:
+callStopThread Set stop to true if you want to signal the thread
+    to exit before waiting.  This is the equivalent to calling
+    stopThread(). If you your threadedFunction uses a while-loop that
+    depends on isThreadRunning() and you do not call stopThread() or set
+    stop == true, waitForThread will hang indefinitely.  Set stop ==
+    false ONLY if you have already called stopThread() and you simply
+    need to be sure your thread has finished its tasks.
 
-
-***see:*** 
-	[http://pocoproject.org/slides/090-NotificationsEvents.pdf](http://pocoproject.org/slides/090-NotificationsEvents.pdf) 
-
-[http://pocoproject.org/docs/Poco.Condition.html](http://pocoproject.org/docs/Poco.Condition.html) 
-
-[http://pocoproject.org/docs/Poco.Event.html](http://pocoproject.org/docs/Poco.Event.html) 
-
-[http://pocoproject.org/docs/Poco.Semaphore.html](http://pocoproject.org/docs/Poco.Semaphore.html) 
-
-
-
+milliseconds If millseconds is set to INFINITE_JOIN_TIMEOUT, the
+    waitForThread will wait indefinitely for the thread to complete.  If
+    milliseconds is set to a lower number (e.g. 10000 for 10 seconds),
+    waitForThread will wait for 10000 milliseconds and if the thread has
+    not yet stopped it will return and log an error message.  Users are
+    encouraged to use the default INFINITE_JOIN_TIMEOUT.  If the user is
+    unhappy with the amount of time it takes to join a thread, the user
+    is encouraged to seek more expedient ways of signalling their desire
+    for a thread to complete via other signalling methods such as
+    Poco::Event, Poco::Condition, or Poco::Semaphore.
+\sa http://pocoproject.org/slides/090-NotificationsEvents.pdf
+\sa http://pocoproject.org/docs/Poco.Condition.html
+\sa http://pocoproject.org/docs/Poco.Event.html
+\sa http://pocoproject.org/docs/Poco.Semaphore.html
 
 
 
@@ -1114,6 +1165,7 @@ This method waits for a thread will "block" and wait for the thread (aka "join" 
 
 
 _description: _
+
 
 
 
@@ -1143,10 +1195,15 @@ _advanced: False_
 
 _inlined_description: _
 
-Tell the thread to give up its CPU time other threads. 
+Tell the thread to give up its CPU time other threads.
 
-
-This method is similar to sleep() and can often be used in the same way. The main difference is that 1 millisecond (the minimum sleep time available with sleep()) is a very long time on modern processors and yield() simply gives up processing time to the next thread, instead of waiting for number of milliseconds. In some cases, this behavior will be preferred. 
+This method is similar to sleep() and can often be used in
+the same way.  The main difference is that 1 millisecond
+(the minimum sleep time available with sleep()) is a very
+long time on modern processors and yield() simply gives up
+processing time to the next thread, instead of waiting for
+number of milliseconds. In some cases, this behavior will
+be preferred.
 
 
 
@@ -1185,14 +1242,15 @@ _advanced: False_
 
 _inlined_description: _
 
-Destroy the ofThread. 
+Destroy the ofThread.
 
-
-***warning:*** 
-	The destructor WILL NOT stop the thread or wait for the underlying Poco::Thread to finish. For threads that require the correct deallocation of resources, the user MUST call waitForThread(...); to ensure that the thread is stopped and the thread's resources are released. Improper release of resources or memory can lead to segementation faults and other errors. 
-
-
-
+warning:The destructor WILL NOT stop the thread or wait for
+    the underlying Poco::Thread to finish.  For threads that
+    require the correct deallocation of resources, the user
+    MUST call waitForThread(...); to ensure that the thread
+    is stopped and the thread's resources are released.
+    Improper release of resources or memory can lead to
+    segementation faults and other errors.
 
 
 
@@ -1229,7 +1287,11 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
+
 
 
 
@@ -1253,7 +1315,11 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
+
 
 
 
@@ -1276,6 +1342,16 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+The internal mutex called through lock() & unlock().
+
+This mutext can also be used with ofScopedLock within the threaded
+function by calling:
+
+    ofScopedLock lock(mutex);
+
 
 _description: _
 
@@ -1304,8 +1380,39 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+The Poco::Thread that runs the Poco::Runnable.
+
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool threadBeingWaitedFor
+
+<!--
+_name: threadBeingWaitedFor_
+_type: bool_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+_description: _
 
 
 

@@ -176,16 +176,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###unsigned char * getPixels()
+###const ofPixels & getPixels()
 
 <!--
 _syntax: getPixels()_
 _name: getPixels_
-_returns: unsigned char *_
+_returns: const ofPixels &_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -204,7 +204,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -214,16 +213,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofPixelsRef getPixelsRef()
+###const ofPixels & getPixels()
 
 <!--
-_syntax: getPixelsRef()_
-_name: getPixelsRef_
-_returns: ofPixelsRef_
+_syntax: getPixels()_
+_name: getPixels_
+_returns: const ofPixels &_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -243,6 +242,42 @@ _inlined_description: _
 
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofTexture * getTexturePtr()
+
+<!--
+_syntax: getTexturePtr()_
+_name: getTexturePtr_
+_returns: ofTexture *_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -260,44 +295,6 @@ _name: getWidth_
 _returns: float_
 _returns_description: _
 _parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool initGrabber(w, h)
-
-<!--
-_syntax: initGrabber(w, h)_
-_name: initGrabber_
-_returns: bool_
-_returns_description: _
-_parameters: int w, int h_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -357,6 +354,43 @@ _inlined_description: _
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool isInitialized()
+
+<!--
+_syntax: isInitialized()_
+_name: isInitialized_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -442,16 +476,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofGstVideoFormat & selectFormat(w, h, desired_framerate)
+###ofGstVideoFormat & selectFormat(w, h, desired_framerate, desiredPixelFormat)
 
 <!--
-_syntax: selectFormat(w, h, desired_framerate)_
+_syntax: selectFormat(w, h, desired_framerate, desiredPixelFormat)_
 _name: selectFormat_
 _returns: ofGstVideoFormat &_
 _returns_description: _
-_parameters: int w, int h, int desired_framerate_
+_parameters: int w, int h, int desired_framerate, ofPixelFormat desiredPixelFormat_
 _access: private_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -470,7 +504,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -576,8 +609,7 @@ _advanced: False_
 
 _inlined_description: _
 
-needs to be called before initGrabber 
-
+needs to be called before initGrabber
 
 
 
@@ -625,6 +657,43 @@ _inlined_description: _
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool setup(w, h)
+
+<!--
+_syntax: setup(w, h)_
+_name: setup_
+_returns: bool_
+_returns_description: _
+_parameters: int w, int h_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -766,6 +835,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -790,6 +862,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -816,6 +891,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -840,6 +918,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -866,6 +947,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -890,6 +974,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 

@@ -66,6 +66,80 @@ Allocates the image with the w, h passed in. This must be done before the pixels
 
 <!----------------------------------------------------------------------------->
 
+###void allocatePixels(w, h)
+
+<!--
+_syntax: allocatePixels(w, h)_
+_name: allocatePixels_
+_returns: void_
+_returns_description: _
+_parameters: int w, int h_
+_access: protected_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void allocateTexture()
+
+<!--
+_syntax: allocateTexture()_
+_name: allocateTexture_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: protected_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void blur(value = 3)
 
 <!--
@@ -722,16 +796,16 @@ Marks the image as changed so that the ofTexture can be updated, if the image co
 
 <!----------------------------------------------------------------------------->
 
-###IplImage * getCv8BitsImage()
+###int * getCv8BitsImage()
 
 <!--
 _syntax: getCv8BitsImage()_
 _name: getCv8BitsImage_
-_returns: IplImage *_
+_returns: int *_
 _returns_description: _
 _parameters: _
 _access: protected_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -757,19 +831,18 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###IplImage * getCv8BitsRoiImage()
+###int * getCv8BitsRoiImage()
 
 <!--
 _syntax: getCv8BitsRoiImage()_
 _name: getCv8BitsRoiImage_
-_returns: IplImage *_
+_returns: int *_
 _returns_description: _
 _parameters: _
 _access: protected_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -788,7 +861,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -798,16 +870,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###IplImage * getCvImage()
+###int * getCvImage()
 
 <!--
 _syntax: getCvImage()_
 _name: getCvImage_
-_returns: IplImage *_
+_returns: int *_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -826,9 +898,6 @@ _inlined_description: _
 
 
 _description: _
-
-
-Returns a raw pointer to the OpenCV IplImage.
 
 
 
@@ -916,16 +985,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###unsigned char * getPixels()
+###const ofPixels & getPixels()
 
 <!--
 _syntax: getPixels()_
 _name: getPixels_
-_returns: unsigned char *_
+_returns: const ofPixels &_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -944,9 +1013,6 @@ _inlined_description: _
 
 
 _description: _
-
-
-Returns a raw pointer to the pixel data within the image.
 
 
 
@@ -956,16 +1022,16 @@ Returns a raw pointer to the pixel data within the image.
 
 <!----------------------------------------------------------------------------->
 
-###ofPixelsRef getPixelsRef()
+###const ofPixels & getPixels()
 
 <!--
-_syntax: getPixelsRef()_
-_name: getPixelsRef_
-_returns: ofPixelsRef_
+_syntax: getPixels()_
+_name: getPixels_
+_returns: const ofPixels &_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -984,9 +1050,6 @@ _inlined_description: _
 
 
 _description: _
-
-
-Returns an ofPixels reference to the pixel data within the image.
 
 
 
@@ -1036,16 +1099,16 @@ Returns the region of interest in an ofxCvImage.
 
 <!----------------------------------------------------------------------------->
 
-###unsigned char * getRoiPixels()
+###const ofPixels & getRoiPixels()
 
 <!--
 _syntax: getRoiPixels()_
 _name: getRoiPixels_
-_returns: unsigned char *_
+_returns: const ofPixels &_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1064,9 +1127,6 @@ _inlined_description: _
 
 
 _description: _
-
-
-Returns a raw pointer to the pixel data within the Region of Interest in the ofxCvImage.
 
 
 
@@ -1076,16 +1136,16 @@ Returns a raw pointer to the pixel data within the Region of Interest in the ofx
 
 <!----------------------------------------------------------------------------->
 
-###ofPixelsRef getRoiPixelsRef()
+###const ofPixels & getRoiPixels()
 
 <!--
-_syntax: getRoiPixelsRef()_
-_name: getRoiPixelsRef_
-_returns: ofPixelsRef_
+_syntax: getRoiPixels()_
+_name: getRoiPixels_
+_returns: const ofPixels &_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1104,9 +1164,6 @@ _inlined_description: _
 
 
 _description: _
-
-
-Returns an ofPixels reference to the pixel data within the Region of Interest in the ofxCvImage.
 
 
 
@@ -1116,16 +1173,16 @@ Returns an ofPixels reference to the pixel data within the Region of Interest in
 
 <!----------------------------------------------------------------------------->
 
-###ofTexture & getTextureReference()
+###const ofTexture & getTexture()
 
 <!--
-_syntax: getTextureReference()_
-_name: getTextureReference_
-_returns: ofTexture &_
+_syntax: getTexture()_
+_name: getTexture_
+_returns: const ofTexture &_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1146,7 +1203,41 @@ _inlined_description: _
 _description: _
 
 
-If the ofxCvImage has an ofTexture texture, then this returns a reference to that texture.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const ofTexture & getTexture()
+
+<!--
+_syntax: getTexture()_
+_name: getTexture_
+_returns: const ofTexture &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1229,6 +1320,43 @@ _description: _
 Flip the pixel values of the image.
 
 ![Inverting an image] (invert.png "Original on Left")
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool isUsingTexture()
+
+<!--
+_syntax: isUsingTexture()_
+_name: isUsingTexture_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1790,46 +1918,6 @@ Copy the image data of a ofxCvShortImage into the ofxCvImage instance.
 
 <!----------------------------------------------------------------------------->
 
-###void operator=(*mom)
-
-<!--
-_syntax: operator=(*mom)_
-_name: operator=_
-_returns: void_
-_returns_description: _
-_parameters: const IplImage *mom_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Copy the data from an IplImage into the ofxCvImage instance.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void rangeMap(*img, min1, max1, min2, max2)
 
 <!--
@@ -1837,9 +1925,9 @@ _syntax: rangeMap(*img, min1, max1, min2, max2)_
 _name: rangeMap_
 _returns: void_
 _returns_description: _
-_parameters: IplImage *img, float min1, float max1, float min2, float max2_
+_parameters: int *img, float min1, float max1, float min2, float max2_
 _access: protected_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1858,45 +1946,6 @@ _inlined_description: _
 
 
 _description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void rangeMap(*mom, *kid, min1, max1, min2, max2)
-
-<!--
-_syntax: rangeMap(*mom, *kid, min1, max1, min2, max2)_
-_name: rangeMap_
-_returns: void_
-_returns_description: _
-_parameters: IplImage *mom, IplImage *kid, float min1, float max1, float min2, float max2_
-_access: protected_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
 
 
 
@@ -1913,9 +1962,9 @@ _syntax: remap(*mapX, *mapY)_
 _name: remap_
 _returns: void_
 _returns_description: _
-_parameters: IplImage *mapX, IplImage *mapY_
+_parameters: int *mapX, int *mapY_
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1934,9 +1983,6 @@ _inlined_description: _
 
 
 _description: _
-
-
-This uses a generic geometrical transformation to remap one image to another. This is particularly useful when doing camera calibration.
 
 
 
@@ -1993,9 +2039,9 @@ _syntax: resetImageROI(*img)_
 _name: resetImageROI_
 _returns: void_
 _returns_description: _
-_parameters: IplImage *img_
+_parameters: int *img_
 _access: protected_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2014,7 +2060,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -2191,7 +2236,7 @@ _syntax: scaleIntoMe(&mom, interpolationMethod = CV_INTER_NN)_
 _name: scaleIntoMe_
 _returns: void_
 _returns_description: _
-_parameters: ofxCvImage &mom, int interpolationMethod=CV_INTER_NN_
+_parameters: ofxCvImage &mom, int interpolationMethod_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -2442,9 +2487,9 @@ _syntax: setImageROI(*img, &rect)_
 _name: setImageROI_
 _returns: void_
 _returns_description: _
-_parameters: IplImage *img, const ofRectangle &rect_
+_parameters: int *img, const ofRectangle &rect_
 _access: protected_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2463,7 +2508,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -2811,8 +2855,11 @@ _advanced: False_
 
 _inlined_description: _
 
-
-undistort Usage Example: undistort( 0, 1, 0, 0, 200, 200, cwidth/2, cheight/2 ); creates kind of an old TV monitor distortion. 
+/**
+* undistort Usage Example:
+* undistort( 0, 1, 0, 0, 200, 200, cwidth/2, cheight/2 );
+* creates kind of an old TV monitor distortion.
+*/
 
 
 
@@ -2873,16 +2920,16 @@ Updates the texture of the ofxCvImage if it contains one. This is handy after yo
 
 <!----------------------------------------------------------------------------->
 
-###void warpIntoMe(&mom, src[4], dst[4])
+###void warpIntoMe(&mom, src = 4, dst = 4)
 
 <!--
-_syntax: warpIntoMe(&mom, src[4], dst[4])_
+_syntax: warpIntoMe(&mom, src = 4, dst = 4)_
 _name: warpIntoMe_
 _returns: void_
 _returns_description: _
-_parameters: ofxCvImage &mom, const ofPoint src[4], const ofPoint dst[4]_
+_parameters: ofxCvImage &mom, const ofPoint [4] src=4, const ofPoint [4] dst=4_
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2901,28 +2948,6 @@ _inlined_description: _
 
 
 _description: _
-
-
-This warps the image perspective into the ofxCvImage using two sets four points passed in:
-
-~~~~{.cpp}
-ofPoint[4] src;
-src[0] = ofPoint(0, 0);
-src[1] = ofPoint(320, 0);
-src[2] = ofPoint(320, 240);
-src[3] = ofPoint(0, 240);
-
-ofPoint[4] dst;
-dst[0] = ofPoint(10, 0);
-dst[1] = ofPoint(310, 0);
-dst[2] = ofPoint(310, 230);
-dst[3] = ofPoint(10, 230);
-
-image.warpIntoMe(parent, src, dst);
-
-~~~~
-
-![Warping] (warpPerspective.png "Four corners for warping")
 
 
 
@@ -2952,8 +2977,6 @@ _advanced: False_
 
 _inlined_description: _
 
-
-A +----------+ B / \ / \ / \ D +----------------- + C 
 
 
 
@@ -3034,6 +3057,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -3058,6 +3084,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -3084,6 +3113,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -3108,6 +3140,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -3134,6 +3169,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -3158,6 +3196,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -3184,6 +3225,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -3208,6 +3252,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -3234,55 +3281,8 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int glchannels
-
-<!--
-_name: glchannels_
-_type: int_
-_access: protected_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int gldepth
-
-<!--
-_name: gldepth_
-_type: int_
-_access: protected_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
 
 _description: _
 
@@ -3309,6 +3309,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -3333,6 +3336,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -3359,6 +3365,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -3383,6 +3392,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -3409,6 +3421,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -3434,6 +3449,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -3458,6 +3476,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 

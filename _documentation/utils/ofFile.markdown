@@ -184,7 +184,7 @@ _syntax: changeMode(mode, binary = false)_
 _name: changeMode_
 _returns: bool_
 _returns_description: _
-_parameters: Mode mode, bool binary=false_
+_parameters: ofFile::Mode mode, bool binary=false_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -295,14 +295,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool copyFromTo(pathSrc, pathDst, bRelativeToData = true, overwrite = false)
+###bool copyFromTo(&pathSrc, &pathDst, bRelativeToData = true, overwrite = false)
 
 <!--
-_syntax: copyFromTo(pathSrc, pathDst, bRelativeToData = true, overwrite = false)_
+_syntax: copyFromTo(&pathSrc, &pathDst, bRelativeToData = true, overwrite = false)_
 _name: copyFromTo_
 _returns: bool_
 _returns_description: _
-_parameters: string pathSrc, string pathDst, bool bRelativeToData=true, bool overwrite=false_
+_parameters: const string &pathSrc, const string &pathDst, bool bRelativeToData=true, bool overwrite=false_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -333,14 +333,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool copyTo(path, bRelativeToData = true, overwrite = false)
+###bool copyTo(&path, bRelativeToData = true, overwrite = false)
 
 <!--
-_syntax: copyTo(path, bRelativeToData = true, overwrite = false)_
+_syntax: copyTo(&path, bRelativeToData = true, overwrite = false)_
 _name: copyTo_
 _returns: bool_
 _returns_description: _
-_parameters: string path, bool bRelativeToData=true, bool overwrite=false_
+_parameters: const string &path, bool bRelativeToData=true, bool overwrite=false_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -418,14 +418,14 @@ newFile.create(); // now file exists
 
 <!----------------------------------------------------------------------------->
 
-###bool doesFileExist(fPath, bRelativeToData = true)
+###bool doesFileExist(&fPath, bRelativeToData = true)
 
 <!--
-_syntax: doesFileExist(fPath, bRelativeToData = true)_
+_syntax: doesFileExist(&fPath, bRelativeToData = true)_
 _name: doesFileExist_
 _returns: bool_
 _returns_description: _
-_parameters: string fPath, bool bRelativeToData=true_
+_parameters: const string &fPath, bool bRelativeToData=true_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -744,46 +744,6 @@ Returns the actual file name.
 
 <!----------------------------------------------------------------------------->
 
-###Poco::File & getPocoFile()
-
-<!--
-_syntax: getPocoFile()_
-_name: getPocoFile_
-_returns: Poco::File &_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Returns the poco File instance that the ofFile wraps.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###uint64_t getSize()
 
 <!--
@@ -1062,14 +1022,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool moveFromTo(pathSrc, pathDst, bRelativeToData = true, overwrite = false)
+###bool moveFromTo(&pathSrc, &pathDst, bRelativeToData = true, overwrite = false)
 
 <!--
-_syntax: moveFromTo(pathSrc, pathDst, bRelativeToData = true, overwrite = false)_
+_syntax: moveFromTo(&pathSrc, &pathDst, bRelativeToData = true, overwrite = false)_
 _name: moveFromTo_
 _returns: bool_
 _returns_description: _
-_parameters: string pathSrc, string pathDst, bool bRelativeToData=true, bool overwrite=false_
+_parameters: const string &pathSrc, const string &pathDst, bool bRelativeToData=true, bool overwrite=false_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1100,14 +1060,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool moveTo(path, bRelativeToData = true, overwrite = false)
+###bool moveTo(&path, bRelativeToData = true, overwrite = false)
 
 <!--
-_syntax: moveTo(path, bRelativeToData = true, overwrite = false)_
+_syntax: moveTo(&path, bRelativeToData = true, overwrite = false)_
 _name: moveTo_
 _returns: bool_
 _returns_description: _
-_parameters: string path, bool bRelativeToData=true, bool overwrite=false_
+_parameters: const string &path, bool bRelativeToData=true, bool overwrite=false_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1180,14 +1140,14 @@ Creates an empty ofFile.
 
 <!----------------------------------------------------------------------------->
 
-### ofFile(filePath, mode = ReadOnly, binary = false)
+### ofFile(&path, mode = ReadOnly, binary = true)
 
 <!--
-_syntax: ofFile(filePath, mode = ReadOnly, binary = false)_
+_syntax: ofFile(&path, mode = ReadOnly, binary = true)_
 _name: ofFile_
 _returns: _
 _returns_description: _
-_parameters: string filePath, Mode mode=ReadOnly, bool binary=false_
+_parameters: const filesystem::path &path, ofFile::Mode mode=ReadOnly, bool binary=true_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1269,14 +1229,14 @@ Copy constructor for copying one ofFile into another
 
 <!----------------------------------------------------------------------------->
 
-###bool open(path, mode = ReadOnly, binary = false)
+###bool open(&path, mode = ReadOnly, binary = false)
 
 <!--
-_syntax: open(path, mode = ReadOnly, binary = false)_
+_syntax: open(&path, mode = ReadOnly, binary = false)_
 _name: open_
 _returns: bool_
 _returns_description: _
-_parameters: string path, Mode mode=ReadOnly, bool binary=false_
+_parameters: const filesystem::path &path, ofFile::Mode mode=ReadOnly, bool binary=false_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1316,7 +1276,7 @@ _syntax: openStream(_mode, binary)_
 _name: openStream_
 _returns: bool_
 _returns_description: _
-_parameters: Mode _mode, bool binary_
+_parameters: ofFile::Mode _mode, bool binary_
 _access: private_
 _version_started: 007_
 _version_deprecated: _
@@ -1752,14 +1712,14 @@ deletes a file or folder, be careful as this is not undo-able.
 
 <!----------------------------------------------------------------------------->
 
-###bool removeFile(path, bRelativeToData = true)
+###bool removeFile(&path, bRelativeToData = true)
 
 <!--
-_syntax: removeFile(path, bRelativeToData = true)_
+_syntax: removeFile(&path, bRelativeToData = true)_
 _name: removeFile_
 _returns: bool_
 _returns_description: _
-_parameters: string path, bool bRelativeToData=true_
+_parameters: const string &path, bool bRelativeToData=true_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1790,14 +1750,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool renameTo(path, bRelativeToData = true, overwrite = false)
+###bool renameTo(&path, bRelativeToData = true, overwrite = false)
 
 <!--
-_syntax: renameTo(path, bRelativeToData = true, overwrite = false)_
+_syntax: renameTo(&path, bRelativeToData = true, overwrite = false)_
 _name: renameTo_
 _returns: bool_
 _returns_description: _
-_parameters: string path, bool bRelativeToData=true, bool overwrite=false_
+_parameters: const string &path, bool bRelativeToData=true, bool overwrite=false_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -2048,6 +2008,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -2073,6 +2036,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -2097,6 +2063,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 

@@ -24,44 +24,6 @@ _istemplated: False_
 
 
 
-###bool bClearBg()
-
-<!--
-_syntax: bClearBg()_
-_name: bClearBg_
-_returns: bool_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void background(&c)
 
 <!--
@@ -214,6 +176,80 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void bind(&camera, &viewport)
+
+<!--
+_syntax: bind(&camera, &viewport)_
+_name: bind_
+_returns: void_
+_returns_description: _
+_parameters: const ofCamera &camera, const ofRectangle &viewport_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void clear()
+
+<!--
+_syntax: clear()_
+_name: clear_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void clear(r, g, b, a = 0)
 
 <!--
@@ -221,7 +257,7 @@ _syntax: clear(r, g, b, a = 0)_
 _name: clear_
 _returns: void_
 _returns_description: _
-_parameters: float r, float g, float b, float a=0_
+_parameters: float r, float g, float b, float a_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -259,7 +295,7 @@ _syntax: clear(brightness, a = 0)_
 _name: clear_
 _returns: void_
 _returns_description: _
-_parameters: float brightness, float a=0_
+_parameters: float brightness, float a_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -411,7 +447,7 @@ _syntax: draw(&shape)_
 _name: draw_
 _returns: void_
 _returns_description: _
-_parameters: ofPath &shape_
+_parameters: const ofPath &shape_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -449,7 +485,7 @@ _syntax: draw(&path)_
 _name: draw_
 _returns: void_
 _returns_description: _
-_parameters: ofPath::Command &path_
+_parameters: const ofPath::Command &path_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -487,7 +523,7 @@ _syntax: draw(&poly)_
 _name: draw_
 _returns: void_
 _returns_description: _
-_parameters: ofPolyline &poly_
+_parameters: const ofPolyline &poly_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -518,52 +554,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void draw(&vertexData, useColors = true, useTextures = true, useNormals = true)
+###void draw(&vertexData, mode, useColors, useTextures, useNormals)
 
 <!--
-_syntax: draw(&vertexData, useColors = true, useTextures = true, useNormals = true)_
+_syntax: draw(&vertexData, mode, useColors, useTextures, useNormals)_
 _name: draw_
 _returns: void_
 _returns_description: _
-_parameters: ofMesh &vertexData, bool useColors=true, bool useTextures=true, bool useNormals=true_
-_access: public_
-_version_started: 0071_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void draw(&vertexData, mode, useColors = false, useTextures = false, useNormals = false)
-
-<!--
-_syntax: draw(&vertexData, mode, useColors = false, useTextures = false, useNormals = false)_
-_name: draw_
-_returns: void_
-_returns_description: _
-_parameters: ofMesh &vertexData, ofPolyRenderMode mode, bool useColors=false, bool useTextures=false, bool useNormals=false_
+_parameters: const ofMesh &vertexData, ofPolyRenderMode mode, bool useColors, bool useTextures, bool useNormals_
 _access: public_
 _version_started: 0071_
 _version_deprecated: _
@@ -601,7 +599,7 @@ _syntax: draw(&model, renderType)_
 _name: draw_
 _returns: void_
 _returns_description: _
-_parameters: of3dPrimitive &model, ofPolyRenderMode renderType_
+_parameters: const of3dPrimitive &model, ofPolyRenderMode renderType_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -632,6 +630,43 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void draw(&node)
+
+<!--
+_syntax: draw(&node)_
+_name: draw_
+_returns: void_
+_returns_description: _
+_parameters: const ofNode &node_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void draw(&vertexData, drawMode)
 
 <!--
@@ -639,7 +674,7 @@ _syntax: draw(&vertexData, drawMode)_
 _name: draw_
 _returns: void_
 _returns_description: _
-_parameters: vector< ofPoint > &vertexData, ofPrimitiveMode drawMode_
+_parameters: const vector< ofPoint > &vertexData, ofPrimitiveMode drawMode_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -677,7 +712,7 @@ _syntax: draw(&img, x, y, z, w, h, sx, sy, sw, sh)_
 _name: draw_
 _returns: void_
 _returns_description: _
-_parameters: ofImage &img, float x, float y, float z, float w, float h, float sx, float sy, float sw, float sh_
+_parameters: const ofImage &img, float x, float y, float z, float w, float h, float sx, float sy, float sw, float sh_
 _access: public_
 _version_started: 0071_
 _version_deprecated: _
@@ -715,7 +750,7 @@ _syntax: draw(&image, x, y, z, w, h, sx, sy, sw, sh)_
 _name: draw_
 _returns: void_
 _returns_description: _
-_parameters: ofFloatImage &image, float x, float y, float z, float w, float h, float sx, float sy, float sw, float sh_
+_parameters: const ofFloatImage &image, float x, float y, float z, float w, float h, float sx, float sy, float sw, float sh_
 _access: public_
 _version_started: 0071_
 _version_deprecated: _
@@ -753,7 +788,7 @@ _syntax: draw(&image, x, y, z, w, h, sx, sy, sw, sh)_
 _name: draw_
 _returns: void_
 _returns_description: _
-_parameters: ofShortImage &image, float x, float y, float z, float w, float h, float sx, float sy, float sw, float sh_
+_parameters: const ofShortImage &image, float x, float y, float z, float w, float h, float sx, float sy, float sw, float sh_
 _access: public_
 _version_started: 0071_
 _version_deprecated: _
@@ -775,6 +810,80 @@ _inlined_description: _
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void draw(&video, x, y, w, h)
+
+<!--
+_syntax: draw(&video, x, y, w, h)_
+_name: draw_
+_returns: void_
+_returns_description: _
+_parameters: const ofBaseVideoDraws &video, float x, float y, float w, float h_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void draw(&img, x, y, z, w, h, sx, sy, sw, sh)
+
+<!--
+_syntax: draw(&img, x, y, z, w, h, sx, sy, sw, sh)_
+_name: draw_
+_returns: void_
+_returns_description: _
+_parameters: const ofPixels &img, float x, float y, float z, float w, float h, float sx, float sy, float sw, float sh_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -936,16 +1045,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void drawSphere(x, y, z, radius)
+###void drawString(text, x, y, z)
 
 <!--
-_syntax: drawSphere(x, y, z, radius)_
-_name: drawSphere_
+_syntax: drawString(text, x, y, z)_
+_name: drawString_
 _returns: void_
 _returns_description: _
-_parameters: float x, float y, float z, float radius_
+_parameters: string text, float x, float y, float z_
 _access: public_
-_version_started: 0071_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -964,7 +1073,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -974,16 +1082,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void drawString(text, x, y, z, mode)
+###void drawString(&font, text, x, y)
 
 <!--
-_syntax: drawString(text, x, y, z, mode)_
+_syntax: drawString(&font, text, x, y)_
 _name: drawString_
 _returns: void_
 _returns_description: _
-_parameters: string text, float x, float y, float z, ofDrawBitmapMode mode_
+_parameters: const ofTrueTypeFont &font, string text, float x, float y_
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1002,7 +1110,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -1088,6 +1195,43 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void finishRender()
+
+<!--
+_syntax: finishRender()_
+_name: finishRender_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void flush()
 
 <!--
@@ -1126,16 +1270,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofFloatColor & getBgColor()
+###of3dGraphics & get3dGraphics()
 
 <!--
-_syntax: getBgColor()_
-_name: getBgColor_
-_returns: ofFloatColor &_
+_syntax: get3dGraphics()_
+_name: get3dGraphics_
+_returns: of3dGraphics &_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1155,6 +1299,116 @@ _inlined_description: _
 
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###of3dGraphics & get3dGraphics()
+
+<!--
+_syntax: get3dGraphics()_
+_name: get3dGraphics_
+_returns: of3dGraphics &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool getBackgroundAuto()
+
+<!--
+_syntax: getBackgroundAuto()_
+_name: getBackgroundAuto_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor getBackgroundColor()
+
+<!--
+_syntax: getBackgroundColor()_
+_name: getBackgroundColor_
+_returns: ofColor_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1173,44 +1427,6 @@ _returns: cairo_t *_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###cairo_matrix_t * getCairoMatrix()
-
-<!--
-_syntax: getCairoMatrix()_
-_name: getCairoMatrix_
-_returns: cairo_matrix_t *_
-_returns_description: _
-_parameters: _
-_access: private_
 _version_started: 007_
 _version_deprecated: _
 _summary: _
@@ -1392,6 +1608,117 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###ofMatrix4x4 getCurrentNormalMatrix()
+
+<!--
+_syntax: getCurrentNormalMatrix()_
+_name: getCurrentNormalMatrix_
+_returns: ofMatrix4x4_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofMatrix4x4 getCurrentOrientationMatrix()
+
+<!--
+_syntax: getCurrentOrientationMatrix()_
+_name: getCurrentOrientationMatrix_
+_returns: ofMatrix4x4_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofMatrix4x4 getCurrentViewMatrix()
+
+<!--
+_syntax: getCurrentViewMatrix()_
+_name: getCurrentViewMatrix_
+_returns: ofMatrix4x4_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofRectangle getCurrentViewport()
 
 <!--
@@ -1506,6 +1833,80 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###ofRectangle getNativeViewport()
+
+<!--
+_syntax: getNativeViewport()_
+_name: getNativeViewport_
+_returns: ofRectangle_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofPath & getPath()
+
+<!--
+_syntax: getPath()_
+_name: getPath_
+_returns: ofPath &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofRectMode getRectMode()
 
 <!--
@@ -1535,6 +1936,43 @@ _inlined_description: _
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofStyle getStyle()
+
+<!--
+_syntax: getStyle()_
+_name: getStyle_
+_returns: ofStyle_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1658,16 +2096,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void loadIdentityMatrix(void)
+###bool isVFlipped()
 
 <!--
-_syntax: loadIdentityMatrix(void)_
-_name: loadIdentityMatrix_
-_returns: void_
+_syntax: isVFlipped()_
+_name: isVFlipped_
+_returns: bool_
 _returns_description: _
-_parameters: void_
+_parameters: _
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1687,6 +2125,42 @@ _inlined_description: _
 
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void loadIdentityMatrix()
+
+<!--
+_syntax: loadIdentityMatrix()_
+_name: loadIdentityMatrix_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1763,6 +2237,43 @@ _inlined_description: _
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void loadViewMatrix(&m)
+
+<!--
+_syntax: loadViewMatrix(&m)_
+_name: loadViewMatrix_
+_returns: void_
+_returns_description: _
+_parameters: const ofMatrix4x4 &m_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1886,6 +2397,43 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void multViewMatrix(&m)
+
+<!--
+_syntax: multViewMatrix(&m)_
+_name: multViewMatrix_
+_returns: void_
+_returns_description: _
+_parameters: const ofMatrix4x4 &m_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ### ofCairoRenderer()
 
 <!--
@@ -1953,6 +2501,43 @@ _inlined_description: _
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void popStyle()
+
+<!--
+_syntax: popStyle()_
+_name: popStyle_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2038,16 +2623,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void pushView()
+###void pushStyle()
 
 <!--
-_syntax: pushView()_
-_name: pushView_
+_syntax: pushStyle()_
+_name: pushStyle_
 _returns: void_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2073,15 +2658,14 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###bool rendersPathPrimitives()
+###void pushView()
 
 <!--
-_syntax: rendersPathPrimitives()_
-_name: rendersPathPrimitives_
-_returns: bool_
+_syntax: pushView()_
+_name: pushView_
+_returns: void_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -2311,7 +2895,7 @@ _syntax: scale(xAmnt, yAmnt, zAmnt = 1)_
 _name: scale_
 _returns: void_
 _returns_description: _
-_parameters: float xAmnt, float yAmnt, float zAmnt=1_
+_parameters: float xAmnt, float yAmnt, float zAmnt_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -2380,6 +2964,80 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void setBackgroundColor(&c)
+
+<!--
+_syntax: setBackgroundColor(&c)_
+_name: setBackgroundColor_
+_returns: void_
+_returns_description: _
+_parameters: const ofColor &c_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setBitmapTextMode(mode)
+
+<!--
+_syntax: setBitmapTextMode(mode)_
+_name: setBitmapTextMode_
+_returns: void_
+_returns_description: _
+_parameters: ofDrawBitmapMode mode_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void setBlendMode(blendMode)
 
 <!--
@@ -2418,16 +3076,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setCairoMatrix()
+###void setCircleResolution(int)
 
 <!--
-_syntax: setCairoMatrix()_
-_name: setCairoMatrix_
+_syntax: setCircleResolution(int)_
+_name: setCircleResolution_
 _returns: void_
 _returns_description: _
-_parameters: _
-_access: private_
-_version_started: 007_
+_parameters: int _
+_access: public_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2446,7 +3104,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -2684,6 +3341,43 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void setCurveResolution(resolution)
+
+<!--
+_syntax: setCurveResolution(resolution)_
+_name: setCurveResolution_
+_returns: void_
+_returns_description: _
+_parameters: int resolution_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void setDepthTest(depthTest)
 
 <!--
@@ -2874,6 +3568,80 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void setOrientation(orientation, vFlip)
+
+<!--
+_syntax: setOrientation(orientation, vFlip)_
+_name: setOrientation_
+_returns: void_
+_returns_description: _
+_parameters: ofOrientation orientation, bool vFlip_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setPolyMode(mode)
+
+<!--
+_syntax: setPolyMode(mode)_
+_name: setPolyMode_
+_returns: void_
+_returns_description: _
+_parameters: ofPolyWindingMode mode_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void setRectMode(mode)
 
 <!--
@@ -2912,44 +3680,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setSphereResolution(res)
-
-<!--
-_syntax: setSphereResolution(res)_
-_name: setSphereResolution_
-_returns: void_
-_returns_description: _
-_parameters: int res_
-_access: public_
-_version_started: 0071_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void setStyle(&style)
 
 <!--
@@ -2958,7 +3688,7 @@ _name: setStyle_
 _returns: void_
 _returns_description: _
 _parameters: const ofStyle &style_
-_access: private_
+_access: public_
 _version_started: 0072_
 _version_deprecated: _
 _summary: _
@@ -2988,16 +3718,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setup(filename, type = ofCairoRenderer::FROM_FILE_EXTENSION, multiPage = true, b3D = false, viewport = ofRectangle(0, 0, 0, 0))
+###void setup(filename, type = FROM_FILE_EXTENSION, multiPage = true, b3D = false, outputsize)
 
 <!--
-_syntax: setup(filename, type = ofCairoRenderer::FROM_FILE_EXTENSION, multiPage = true, b3D = false, viewport = ofRectangle(0, 0, 0, 0))_
+_syntax: setup(filename, type = FROM_FILE_EXTENSION, multiPage = true, b3D = false, outputsize)_
 _name: setup_
 _returns: void_
 _returns_description: _
-_parameters: string filename, Type type=ofCairoRenderer::FROM_FILE_EXTENSION, bool multiPage=true, bool b3D=false, ofRectangle viewport=ofRectangle(0, 0, 0, 0)_
+_parameters: string filename, ofCairoRenderer::Type type=FROM_FILE_EXTENSION, bool multiPage=true, bool b3D=false, ofRectangle outputsize_
 _access: public_
-_version_started: 0072_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -3016,7 +3746,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -3064,16 +3793,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setupMemoryOnly(_type, multiPage = true, b3D = false, viewport = ofRectangle(0, 0, 0, 0))
+###void setupMemoryOnly(_type, multiPage = true, b3D = false, viewport)
 
 <!--
-_syntax: setupMemoryOnly(_type, multiPage = true, b3D = false, viewport = ofRectangle(0, 0, 0, 0))_
+_syntax: setupMemoryOnly(_type, multiPage = true, b3D = false, viewport)_
 _name: setupMemoryOnly_
 _returns: void_
 _returns_description: _
-_parameters: Type _type, bool multiPage=true, bool b3D=false, ofRectangle viewport=ofRectangle(0, 0, 0, 0)_
+_parameters: ofCairoRenderer::Type _type, bool multiPage=true, bool b3D=false, ofRectangle viewport_
 _access: public_
-_version_started: 0072_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -3092,7 +3821,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -3147,7 +3875,7 @@ _syntax: setupScreenOrtho(width = 0, height = 0, nearDist = -1, farDist = 1)_
 _name: setupScreenOrtho_
 _returns: void_
 _returns_description: _
-_parameters: float width=0, float height=0, float nearDist=-1, float farDist=1_
+_parameters: float width, float height, float nearDist, float farDist_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -3185,7 +3913,7 @@ _syntax: setupScreenPerspective(width = 0, height = 0, fov = 60, nearDist = 0, f
 _name: setupScreenPerspective_
 _returns: void_
 _returns_description: _
-_parameters: float width=0, float height=0, float fov=60, float nearDist=0, float farDist=0_
+_parameters: float width, float height, float fov, float nearDist, float farDist_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -3207,6 +3935,43 @@ _inlined_description: _
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void startRender()
+
+<!--
+_syntax: startRender()_
+_name: startRender_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -3299,7 +4064,7 @@ _syntax: translate(x, y, z = 0)_
 _name: translate_
 _returns: void_
 _returns_description: _
-_parameters: float x, float y, float z=0_
+_parameters: float x, float y, float z_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -3368,16 +4133,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void update()
+###void unbind(&camera)
 
 <!--
-_syntax: update()_
-_name: update_
+_syntax: unbind(&camera)_
+_name: unbind_
 _returns: void_
 _returns_description: _
-_parameters: _
+_parameters: const ofCamera &camera_
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -3396,7 +4161,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -3451,7 +4215,7 @@ _syntax: viewport(x = 0, y = 0, width = 0, height = 0, invertY = true)_
 _name: viewport_
 _returns: void_
 _returns_description: _
-_parameters: float x=0, float y=0, float width=0, float height=0, bool invertY=true_
+_parameters: float x, float y, float width, float height, bool invertY=true_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -3538,6 +4302,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -3562,6 +4329,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -3588,80 +4358,8 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofFillFlag bFilled
-
-<!--
-_name: bFilled_
-_type: ofFillFlag_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool bSmoothHinted
-
-<!--
-_name: bSmoothHinted_
-_type: bool_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofFloatColor bgColor
-
-<!--
-_name: bgColor_
-_type: ofFloatColor_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
 
 _description: _
 
@@ -3688,6 +4386,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -3713,8 +4414,38 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofStyle currentStyle
+
+<!--
+_name: currentStyle_
+_type: ofStyle_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+_description: _
 
 
 
@@ -3737,6 +4468,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -3763,8 +4497,38 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###of3dGraphics graphics3d
+
+<!--
+_name: graphics3d_
+_type: of3dGraphics_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+_description: _
 
 
 
@@ -3787,6 +4551,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -3813,6 +4580,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -3837,6 +4607,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -3863,6 +4636,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -3888,8 +4664,38 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofRectangle originalViewport
+
+<!--
+_name: originalViewport_
+_type: ofRectangle_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+_description: _
 
 
 
@@ -3913,8 +4719,38 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofPath path
+
+<!--
+_name: path_
+_type: ofPath_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+_description: _
 
 
 
@@ -3937,6 +4773,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -3963,30 +4802,8 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofRectMode rectMode
-
-<!--
-_name: rectMode_
-_type: ofRectMode_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
 
 _description: _
 
@@ -4013,6 +4830,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -4037,6 +4857,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -4063,8 +4886,38 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###deque< ofStyle > styleHistory
+
+<!--
+_name: styleHistory_
+_type: deque< ofStyle >_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+_description: _
 
 
 
@@ -4088,30 +4941,8 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###cairo_matrix_t tmpMatrix
-
-<!--
-_name: tmpMatrix_
-_type: cairo_matrix_t_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
 
 _description: _
 
@@ -4138,6 +4969,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -4163,6 +4997,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -4187,6 +5024,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 

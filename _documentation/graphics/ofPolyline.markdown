@@ -71,8 +71,7 @@ _advanced: False_
 
 _inlined_description: _
 
-add a vertex 
-
+Adds a point using an ofPoint at the end of the ofPolyline.
 
 
 
@@ -100,7 +99,7 @@ _syntax: addVertex(x, y, z = 0)_
 _name: addVertex_
 _returns: void_
 _returns_description: _
-_parameters: float x, float y, float z=0_
+_parameters: float x, float y, float z_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -113,6 +112,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Adds a point using floats at the end of the ofPolyline.
 
 
 
@@ -153,6 +153,25 @@ _advanced: False_
 
 _inlined_description: _
 
+Add multiple points at the end of the ofPolyline using a vector of
+ofPoint objects
+
+~~~~{.cpp}
+	vector<ofPoint> verts;
+	// make a pentagon
+	float size = 80.f;
+	float X1 = 0.125*sqrt(10 + 2*sqrt(5)) * size;
+	float X2 = 0.125*sqrt(10 - 2*sqrt(5)) * size;
+	float Y1 = 0.125*(sqrt(5) - 1) * size;
+	float Y2 = 0.125*(sqrt(5) + 1) * size;
+	verts.push_back(ofPoint(0, -0.5 * size));
+	verts.push_back(ofPoint(-X1, -Y1));
+	verts.push_back(ofPoint(-X2, Y2));
+	verts.push_back(ofPoint(X2, Y2));
+	verts.push_back(ofPoint(X1, -Y1));
+	ofPolyline p;
+	p.addVertices(verts);
+~~~~
 
 
 
@@ -209,6 +228,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Adds multiple points at the end of the ofPolyline using a pointer to
+an array of ofPoint objects.
 
 
 
@@ -265,6 +286,20 @@ _advanced: False_
 
 _inlined_description: _
 
+Adds an arc around the ofPoint `center` with the width of `radiusX`
+and the height of `radiusY` to the polyline.
+
+The `angleBegin` and `angleEnd` indicate the start and end angles of
+the arc in degrees measured clockwise from the x-axis.
+
+The `clockwise` boolean sets the drawing direction.  Passing 'false' to
+it will draw the arc counter-clockwise.
+
+Optionally, you can specify `circleResolution`, which is the number of
+line segments a circle would be drawn with.
+
+If the arc doesn't start at the same point the last vertex finished a
+straight line will be created to join both
 
 
 
@@ -309,6 +344,33 @@ _advanced: False_
 
 _inlined_description: _
 
+Adds an arc around the ofPoint `center` with the width of
+`radiusX` and the height of `radiusY`.
+
+The `angleBegin` and `angleEnd` indicate the start and end angles
+of the arc in degrees measured clockwise from the x-axis.
+
+Optionally, you can specify `circleResolution`, which is the number of
+line segments a circle would be drawn with. A partial arc will be
+drawn with the same resolution: if circleResolution == 20, a half-
+circle will be drawn with 10 segments.
+
+If there are already vertexes in the ofPolyline the arc will extend
+them; a line will be created from the endmost point on the ofPolyline
+to the beginning point of the arc.
+
+~~~~{.cpp}
+ofPolyline polyline1, polyline2;
+
+// draw an line, then an semi-circle in red
+polyline2.lineTo(300, 50);
+ofPoint point2(450,120);
+polyline2.arc(point2,100,100,0,180);
+ofSetColor(ofColor::red);
+polyline2.draw();
+~~~~
+
+![Arc Example](graphics/ofpolyline_arc.jpg)
 
 
 
@@ -376,6 +438,14 @@ _advanced: False_
 
 _inlined_description: _
 
+Adds an arc around the coordinates (`x`,`y`) with the width of
+`radiusX` and the height of `radiusY`.
+
+The `angleBegin` and `angleEnd` indicate the start and end angles
+of the arc in degrees measured clockwise from the x-axis.
+
+Optionally, you can specify `circleResolution`, which is the number
+of line segments a circle would be drawn with.
 
 
 
@@ -419,6 +489,14 @@ _advanced: False_
 
 _inlined_description: _
 
+Adds an arc around the coordinates (`x`,`y`,`z`) with the width of
+`radiusX` and the height of `radiusY`.
+
+The `angleBegin` and `angleEnd` indicate the start and end angles of
+the arc in degrees measured clockwise from the x-axis.
+
+Optionally, you can specify `circleResolution`, which is the number of
+line segments a circle would be drawn with.
 
 
 
@@ -556,16 +634,53 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###vector< ofVec3f >::iterator begin()
+###vector< ofPoint >::iterator begin()
 
 <!--
 _syntax: begin()_
 _name: begin_
-_returns: vector< ofVec3f >::iterator_
+_returns: vector< ofPoint >::iterator_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 0.8.0_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###vector< ofPoint >::const_iterator begin()
+
+<!--
+_syntax: begin()_
+_name: begin_
+_returns: vector< ofPoint >::const_iterator_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -613,8 +728,16 @@ _advanced: False_
 
 _inlined_description: _
 
-cubic bezier 
+Adds a cubic bezier line from the current drawing point with the 2
+control points indicated by ofPoint cp1 and cp2, that ends at ofPoint
+to.
 
+~~~~{.cpp}
+line.addVertex(ofPoint(200, 400));
+line.bezierTo(100, 100, 800, 100, 700, 400);
+~~~~
+![polyline bezier](bezier.jpg)
+The control points are shown in red.
 
 
 
@@ -662,6 +785,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Adds a cubic bezier line from the current drawing point with the 2
+control points indicated by the coordinates cx1, cy1 and cx2, cy2,
+that ends at the coordinates x, y.
 
 
 
@@ -702,6 +828,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Adds a cubic bezier line in 3D space from the current drawing point
+with the 2 control points indicated by the coordinates cx1, cy1, cz1
+and cx2, cy2, cz2, that ends at the coordinates x, y, z.
 
 
 
@@ -796,8 +925,7 @@ _advanced: False_
 
 _inlined_description: _
 
-remove all the points 
-
+Removes all the points from the ofPolyline.
 
 
 
@@ -838,6 +966,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Closes the ofPolyline, meaning that all the vertices will be linked
+and can be "walked".
 
 
 
@@ -878,6 +1008,19 @@ _advanced: False_
 
 _inlined_description: _
 
+Adds a curve to an ofPoint object passed in
+
+~~~~{.cpp}
+float angle = 0;
+while (angle < TWO_PI ) {
+	b.curveTo( ofPoint(100*cos(angle), 100*sin(angle)));
+	b.curveTo( ofPoint(300*cos(angle), 300*sin(angle)));
+	angle += TWO_PI / 30;
+}
+~~~~
+
+\note You need at least 4 points to be able to use curveTo()
+\sa [Catmull-Rom splines wiki](http://en.wikipedia.org/wiki/Centripetal_Catmull%E2%80%93Rom_spline)
 
 
 
@@ -954,7 +1097,7 @@ _syntax: curveTo(x, y, z = 0, curveResolution = 16)_
 _name: curveTo_
 _returns: void_
 _returns_description: _
-_parameters: float x, float y, float z=0, int curveResolution=20_
+_parameters: float x, float y, float z, int curveResolution=20_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -967,6 +1110,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Adds a curve to the x,y,z points passed in with the optional
+resolution.
 
 
 
@@ -1015,6 +1160,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Draw the line using the current renderer
 
 
 
@@ -1035,16 +1181,53 @@ Draw the line using the current renderer.
 
 <!----------------------------------------------------------------------------->
 
-###vector< ofVec3f >::iterator end()
+###vector< ofPoint >::iterator end()
 
 <!--
 _syntax: end()_
 _name: end_
-_returns: vector< ofVec3f >::iterator_
+_returns: vector< ofPoint >::iterator_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 0.8.0_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###vector< ofPoint >::const_iterator end()
+
+<!--
+_syntax: end()_
+_name: end_
+_returns: vector< ofPoint >::const_iterator_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1168,6 +1351,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Get angle (degrees) of the path at index
 
 
 
@@ -1206,6 +1390,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Get angle (degrees) at interpolated index (interpolated between
+neighboring indices)
 
 
 
@@ -1244,6 +1430,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Gets the precise area bounded by the line
 
 
 
@@ -1284,6 +1471,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Get the bounding box of the polyline , taking into account
+all the points to determine the extents of the polyline.
 
 
 
@@ -1324,6 +1513,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Get the center of the area bounded by the line
 
 
 
@@ -1351,7 +1541,7 @@ _syntax: getClosestPoint(&target, *nearestIndex = NULL)_
 _name: getClosestPoint_
 _returns: ofPoint_
 _returns_description: _
-_parameters: const ofPoint &target, unsigned int *nearestIndex=NULL_
+_parameters: const ofPoint &target, unsigned int *nearestIndex_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1364,6 +1554,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Gets the point on the line closest to the target. You can also
+optionally pass a pointer to/address of an unsigned int to get the
+index of the closest vertex
 
 
 
@@ -1404,6 +1597,10 @@ _advanced: False_
 
 _inlined_description: _
 
+Get (interpolated) index at given length along the path
+
+Includes info on percentage along segment, e.g. `ret=5.75` =>
+75% along the path between 5th and 6th points
 
 
 
@@ -1442,6 +1639,10 @@ _advanced: False_
 
 _inlined_description: _
 
+Get (interpolated) index at given percentage along the path
+
+Includes info on percentage along segment, e.g. `ret=5.75`
+=> 75% along the path between 5th and 6th points
 
 
 
@@ -1518,6 +1719,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Get length along path at index
 
 
 
@@ -1556,6 +1758,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Get length along path at interpolated index (e.g. `f=5.75` => 75% along
+the path between 5th and 6th points)
 
 
 
@@ -1594,6 +1798,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Get normal vector at index
 
 
 
@@ -1632,6 +1837,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Get normal vector at interpolated index
+(interpolated between neighboring indices)
 
 
 
@@ -1670,6 +1877,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Gets the size of the perimeter of the polyline, good for
+determining length of the line, rather than just the bounding box
+shape.
 
 
 
@@ -1710,6 +1920,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Get point along the path at interpolated index (e.g. `f=5.75` =>
+75% along the path between 5th and 6th points)
 
 
 
@@ -1748,6 +1960,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Get point long the path at a given length (e.g. `f=150` => 150
+units along the path)
 
 
 
@@ -1786,6 +2000,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Get point along the path at a given percentage (e.g. `f=0.25`
+=> 25% along the path)
 
 
 
@@ -1824,6 +2040,10 @@ _advanced: False_
 
 _inlined_description: _
 
+Resamples the line based on the count passed in. The lower the
+count passed in, the more points will be eliminated.
+
+This doesn't add new points to the line.
 
 
 
@@ -1864,6 +2084,15 @@ _advanced: False_
 
 _inlined_description: _
 
+Resamples the line based on the spacing passed in. The larger the
+spacing, the more points will be eliminated.
+
+~~~~{.cpp}
+line.draw();
+ofTranslate(400, 0);
+line.getResampledBySpacing(100).draw();
+~~~~
+![polyline resample](graphics/resample.jpg)
 
 
 
@@ -1948,6 +2177,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Get rotation vector at index (magnitude is sin of angle)
 
 
 
@@ -1986,6 +2216,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Get rotation vector at interpolated index
+(interpolated between neighboring indices) (magnitude is sin of angle)
 
 
 
@@ -2011,7 +2243,7 @@ _syntax: getSmoothed(smoothingSize, smoothingShape = 0)_
 _name: getSmoothed_
 _returns: ofPolyline_
 _returns_description: _
-_parameters: int smoothingSize, float smoothingShape=0_
+_parameters: int smoothingSize, float smoothingShape_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -2024,6 +2256,13 @@ _advanced: False_
 
 _inlined_description: _
 
+Gets a smoothed version of the ofPolyline.
+
+`smoothingSize` is the size of the smoothing window. So if
+`smoothingSize` is 2, then 2 points from the left, 1 in the center,
+and 2 on the right (5 total) will be used for smoothing each point.
+`smoothingShape` describes whether to use a triangular window (0) or
+box window (1) or something in between (for example, .5).
 
 
 
@@ -2064,6 +2303,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Get tangent vector at index
 
 
 
@@ -2102,6 +2342,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Get tangent vector at interpolated index
+(interpolated between neighboring indices)
 
 
 
@@ -2140,6 +2382,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Gets a vector of vertices that the line contains
 
 
 
@@ -2218,6 +2461,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Get wrapped index depending on whether poly is closed or not
 
 
 
@@ -2256,6 +2500,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Returns whether the vertices within the line have changed.
 
 
 
@@ -2352,86 +2597,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool inside(x, y)
-
-<!--
-_syntax: inside(x, y)_
-_name: inside_
-_returns: bool_
-_returns_description: _
-_parameters: float x, float y_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Tests whether the x,y coordinates are within a closed ofPolyline.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool inside(&p)
-
-<!--
-_syntax: inside(&p)_
-_name: inside_
-_returns: bool_
-_returns_description: _
-_parameters: const ofPoint &p_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Tests whether the ofPoint is within a closed ofPolyline.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###bool inside(x, y, &polyline)
 
 <!--
@@ -2452,6 +2617,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Tests whether the x,y coordinates are within a closed ofPolyline.
 
 
 
@@ -2463,6 +2629,47 @@ _description: _
 
 
 Test whether the x,y point is within anothe polyline, passed in as ofPolyline&
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool inside(x, y)
+
+<!--
+_syntax: inside(x, y)_
+_name: inside_
+_returns: bool_
+_returns_description: _
+_parameters: float x, float y_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Tests whether the x,y coordinates are within a closed ofPolyline.
+
+
+
+
+
+
+
+_description: _
+
+
+Tests whether the x,y coordinates are within a closed ofPolyline.
 
 
 
@@ -2492,6 +2699,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Tests whether the ofPoint is within a closed ofPolyline.
 
 
 
@@ -2503,6 +2711,47 @@ _description: _
 
 
 Test whether the ofPoint is within anothe polyline, passed in as ofPolyline&
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool inside(&p)
+
+<!--
+_syntax: inside(&p)_
+_name: inside_
+_returns: bool_
+_returns_description: _
+_parameters: const ofPoint &p_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Tests whether the ofPoint is within a closed ofPolyline.
+
+
+
+
+
+
+
+_description: _
+
+
+Tests whether the ofPoint is within a closed ofPolyline.
 
 
 
@@ -2572,6 +2821,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Add a straight line from the last point added, or from 0,0 if no point
+is set, to the point indicated by the ofPoint passesd in.
 
 
 
@@ -2599,7 +2850,7 @@ _syntax: lineTo(x, y, z = 0)_
 _name: lineTo_
 _returns: void_
 _returns_description: _
-_parameters: float x, float y, float z=0_
+_parameters: float x, float y, float z_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -2612,6 +2863,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Add a straight line from the last point added, or from 0,0 if no point
+is set, to the point indicated by the floats x,y,z passesd in.
 
 
 
@@ -2652,6 +2905,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Creates an ofPolyline.
 
 
 
@@ -2692,6 +2946,7 @@ _advanced: False_
 
 _inlined_description: _
 
+Creates an ofPolyline from a vector of ofVec2f or ofPoint objects.
 
 
 
@@ -2742,6 +2997,19 @@ _advanced: False_
 
 _inlined_description: _
 
+Allows you to access the points of the ofPolyline just like you would
+in an array, so to make the points of a line follow the mouse
+movement, you could do:
+
+~~~~{.cpp}
+line[0].set(mouseX, mouseY);
+int i = 1;
+while ( i<bounds.size()) {
+	float angle = atan2(line[i-1].y - line[i].y, line[i-1].x - line[i].x);
+	bounds[i].set(bounds[i-1].x - cos(angle) * 20, bounds[i-1].y - sin(angle) * 20);
+	i++;
+}
+~~~~
 
 
 
@@ -2831,8 +3099,12 @@ _advanced: False_
 
 _inlined_description: _
 
-quadratic bezier (lower resolution than cubic) 
+Adds a quadratic bezier line in 3D space from the current drawing
+point with the beginning indicated by the coordinates cx1, cy1, cz1,
+the control point at cx2, cy2, cz2, and that ends at the coordinates
+x, y, z.
 
+![polyline curves](graphics/curves.png)
 
 
 
@@ -2874,6 +3146,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Adds a quadratic bezier line in 2D space from the current drawing
+point with the beginning indicated by the point p1, the control point
+at p2, and that ends at the point p3.
 
 
 
@@ -2914,6 +3189,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Adds a quadratic bezier line in 2D space from the current drawing
+point with the beginning indicated by the coordinates cx1, cy1, the
+control point at cx2, cy2, and that ends at the coordinates x, y.
 
 
 
@@ -2925,6 +3203,154 @@ _description: _
 
 
 Creates a quadratic bezier line in 3D space from the current drawing point with the beginning indicated by the coordinates cx1, cy1, the control point at cx2, cy2, and that ends at the coordinates x, y.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###vector< ofPoint >::reverse_iterator rbegin()
+
+<!--
+_syntax: rbegin()_
+_name: rbegin_
+_returns: vector< ofPoint >::reverse_iterator_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###vector< ofPoint >::const_reverse_iterator rbegin()
+
+<!--
+_syntax: rbegin()_
+_name: rbegin_
+_returns: vector< ofPoint >::const_reverse_iterator_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###vector< ofPoint >::reverse_iterator rend()
+
+<!--
+_syntax: rend()_
+_name: rend_
+_returns: vector< ofPoint >::reverse_iterator_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###vector< ofPoint >::const_reverse_iterator rend()
+
+<!--
+_syntax: rend()_
+_name: rend_
+_returns: vector< ofPoint >::const_reverse_iterator_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2954,6 +3380,8 @@ _advanced: False_
 
 _inlined_description: _
 
+Resize the number of points in the ofPolyline to the value
+passed in.
 
 
 
@@ -2994,6 +3422,7 @@ _advanced: False_
 
 _inlined_description: _
 
+\}
 
 
 
@@ -3032,8 +3461,8 @@ _advanced: False_
 
 _inlined_description: _
 
-closed 
-
+Closes the ofPolyline, meaning that all the vertices will be linked
+and can be "walked".
 
 
 
@@ -3054,16 +3483,16 @@ Closes the ofPolyline, meaning that all the vertices will be linked and can be "
 
 <!----------------------------------------------------------------------------->
 
-###void setRightVector(v = ofVec3f(0, 0, -1))
+###void setRightVector(v)
 
 <!--
-_syntax: setRightVector(v = ofVec3f(0, 0, -1))_
+_syntax: setRightVector(v)_
 _name: setRightVector_
 _returns: void_
 _returns_description: _
-_parameters: ofVec3f v=ofVec3f(0, 0,-1)_
+_parameters: ofVec3f v_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -3082,7 +3511,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -3112,6 +3540,12 @@ _advanced: False_
 
 _inlined_description: _
 
+Simplifies the polyline, removing un-necessary vertices.
+
+Parameters:
+tolerance determines how dis-similar points need to be to stay in the line.
+Higher tolerance means more points removed, lower tolerance means less
+points removed.
 
 
 
@@ -3152,8 +3586,7 @@ _advanced: False_
 
 _inlined_description: _
 
-points vector access 
-
+The number of points in the ofPolyline.
 
 
 
@@ -3268,6 +3701,9 @@ _constant: False_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -3292,6 +3728,9 @@ _visible: True_
 _constant: False_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -3318,6 +3757,9 @@ _constant: False_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -3342,6 +3784,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -3368,6 +3813,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -3392,6 +3840,9 @@ _visible: True_
 _constant: False_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -3418,6 +3869,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -3442,6 +3896,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -3468,6 +3925,9 @@ _constant: False_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -3492,6 +3952,9 @@ _visible: True_
 _constant: False_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -3518,6 +3981,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -3542,6 +4008,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -3568,6 +4037,9 @@ _constant: False_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -3592,6 +4064,9 @@ _visible: True_
 _constant: False_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 

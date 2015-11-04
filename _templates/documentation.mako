@@ -68,7 +68,7 @@
 
     	<div class="page-wide core">
             % for module, classes in sorted(core.items(), key=lambda module: module):
-                <%include file="documentation_index_block.mako" args="module=module,classes=classes" />
+                <%include file="documentation_index_block.mako" args="module=module,classes=classes,show_header=True" />
             % endfor
         </div><!-- End Page Wide -->
         
@@ -81,7 +81,7 @@
 
     	<div class="page-wide addons">
             % for module, classes in sorted(addons.items(), key=lambda module: module):
-                <%include file="documentation_index_block.mako" args="module=module,classes=classes" />
+                <%include file="documentation_index_block.mako" args="module=module,classes=classes,show_header=True" />
             % endfor
         </div><!-- End Page Wide -->
               

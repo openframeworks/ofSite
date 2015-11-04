@@ -9,24 +9,83 @@ _istemplated: True_
 
 ##InlineDescription
 
-A class template to represent a color with variable precision. 
+\
+ofColor represents a color in openFrameworks. Colors are usually defined by
+specifying a red, green, and blue component (RGB), and a transparency
+(alpha) component. You can also specify colors using hue, saturation, and
+brightness (HSB).
 
+For example:
+~~~~{.cpp}
+    // Set red, component by component
+    ofColor red;
+    red.r=255;
+    red.g=0;
+    red.b=0;
+    ofSetColor(red);
+    // Draw color is now red.
 
-ofColor_ is a class template for representing a color using the [RGB model](RGB model). Consequently, ofColor_ stores three numbers representing representing the R (red), G (green) and B (blue) color components. In addition to the R, G and B components, ofColor_ represent's a color's opacity with a fourth alpha component. An alpha value of zero represents a completely transparent color. A maximal alpha value (which depends upon the range and precision of the underlying data type) represents an opaque color.
+    // Shorter notation is also possible.
+    ofColor green(0, 255, 0);
+    ofSetColor(green);
+    // Draw color is now green.
 
-Since each of the R, G, B and A components is represented by any underlying numerical PixelType, the choice of PixelType affects both the range of values and resulting precision of the RGB color representation.
+    // ... or even shorter.
+    ofSetColor( ofColor(0, 0, ofRandom( 128, 255 ) );
+    // Draw color is now a random blue.
+~~~~
 
-Typically users will not use this class template directly, but will use the convenient pre-defined typedefs.
+ofColor also enables a lot of extra functionality like using HSB instead of
+color spectrums, lerping or linearly interpolating between colors, and
+inverting colors, among other things.
 
+ofColor is templated, which means that it has several different ways it can
+be created. These are probably best to leave as they are because there's
+already a few kinds typedefed for you. The default ofColor uses unsigned
+char values (0 to 255), but you can make an ofFloatColor if you want to work
+with floating point numbers between 0 and 1, or ofShortColor if you want to
+work with integers between 0 and 65,535.
 
-For integral PixelTypes (e.g. unsigned char and unsigned short), the minimum is zero and the maximum is given by: std::numeric_limits<PixelType>::max();
+|   Typedef     |    PixelType     | Bit Depth | Min. Value | Max. Value  |
+| ------------- | ---------------- | --------- | ---------- | ----------- |
+| `ofColor`     | `unsigned char`  | 8         | 0          | 255         |
+| `ofShortColor`| `unsigned short` | 16        | 0          | 65535       |
+| `ofFloatColor`| `float`          | _varies_  | 0.0        | 1.0         |
 
+#### HSB
 
-For floating point PixelsTypes, the maximum is 1.0.
+You're probably familiar with RGB colors already, but HSB is a big part of
+ofColor. It uses a *hue* value (for the standard ofColor the range for this
+value is between 0 and 255) to determine what the hue (the 'color' in the
+sense of a color in the rainbow) will be:
 
-The ofColor typedef represents an 8-bit RGBA color. Thus, each component has a maximum value of 255 and a minimum value of 0. The ofColor typedef is the default color type in openFrameworks and will work for most user applications.
+![HSB](types/hsb.jpg)
 
-The ofFloatColor and ofShortColor represent higher precision representations of a given color and are used in special cases where precision color math is required. ofFloatColor might be used for specialized image processing, such as image averaging where rounding errors might otherwise introduce unaccaptable visual artifacts. ofShortColor might be used with depth camera images that can represent the "depth" of each pixel with greater than 256 unique levels. 
+Approximate hues for some common colors:
+
+* Red: 0 (wrapped round from 255)
+* Orange: 25
+* Yellow: 42
+* Green: 85
+* Blue: 170
+* Purple: 205
+* Red: 255 (wraps round to 0)
+
+Once you've selected a hue, you can use the *saturation* and *brightness*
+values to further refine the color. The saturation determines how much of
+the hue versus white is present and brightness determines how much hue
+versus black is present:
+
+![SB](types/hsb-cone.jpg)
+
+In other words, saturation refers to the intensity of the color: high
+saturation means intense color, low saturation means washed out or black and
+white. Brightness refers to how light or dark the color is: high brightness
+means a bright color, low brightness means a dark color. If the brightness
+is 0 the resulting color will be black, regardless of the values of hue or
+saturation.
+
+\tparam PixelType The data type used to represent a single pixel value.
 
 
 
@@ -111,16 +170,18 @@ _advanced: False_
 
 _inlined_description: _
 
-Clamp values between 0 and the limit(). 
+Clamp values between 0 and the limit().
 
+Clamps the value of each component, R, G, B and A to a maximum of
+limit() and a minimum of zero.
 
-Clamps the value of each component, R, G, B and A to a maximum of limit() and a minimum of zero.
+~~~~{.cpp}
+    ofColor c( 300, 0, 0 );
+    // r component is above the limit() of 255.
+    c.clamp(); // c.r has now been clamped so its value is 255.
+~~~~
 
-***return:*** 
-	A reference to itself. 
-
-
-
+Returns: A reference to itself.
 
 
 
@@ -167,6 +228,7 @@ _advanced: False_
 
 _inlined_description: _
 
+\}
 
 
 
@@ -192,7 +254,7 @@ _syntax: fromHex(hexColor, alpha = limit())_
 _name: fromHex_
 _returns: ofColor_< PixelType >_
 _returns_description: _
-_parameters: int hexColor, float alpha=limit()_
+_parameters: int hexColor, float alpha_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -205,15 +267,22 @@ _advanced: False_
 
 _inlined_description: _
 
-Create an ofColor_ from a hexadecimal value. 
+Create an ofColor_ from a hexadecimal value.
 
+In some cases, it is convenient to represent colors using a hexadecimal
+number. In this case, red, green, and blue values are packed into a
+single integer.
 
-In some cases, it is convenient to represent colors using a hexadecimal number. In this case, red, green and blue values are packed into a single integer.
+The alpha channel is specified separately and will default to the
+PixelType's maximum, resulting in an opaque color.
 
-The alpha channel is specified separately and will default to the PixelType's maximum, resulting in an opaque color.
+~~~~{.cpp}
+    ofColor c = ofColor::fromHex(0xFFFF00); // c is yellow.
+~~~~
 
-
-
+Parameters:
+hexColor A color in hexadecimal form.
+alpha The alpha value of the color.
 
 
 
@@ -245,7 +314,7 @@ _syntax: fromHsb(hue, saturation, brightness, alpha = limit())_
 _name: fromHsb_
 _returns: ofColor_< PixelType >_
 _returns_description: _
-_parameters: float hue, float saturation, float brightness, float alpha=limit()_
+_parameters: float hue, float saturation, float brightness, float alpha_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -258,17 +327,29 @@ _advanced: False_
 
 _inlined_description: _
 
-Create an ofColor_ from an HSB representation. 
+Create an ofColor_ from an HSB representation.
 
+While ofColor_ represents color using R, G, B, and A components, other
+representations are available.  This method allows the user to construct
+an ofColor_ from a Hue (H), Saturation (S), and Brightness (B) and an
+optional alpha value.
 
-While ofColor_ represents color using R, G, B, and A components, other representations are available. This method allows the user to construct an ofColor_ from a Hue (H), Saturation (S), and Brightness (B) and an optional alpha value.
+The alpha channel is specified separately and will default to the
+PixelType's maximum, resulting in an opaque color.
 
-The alpha channel is specified separately and will default to the PixelType's maximum, resulting in an opaque color.
+~~~~{.cpp}
+    ofColor c = ofColor::fromHsb(128, 255, 255);
+    // c is bright saturated cyan.
+~~~~
 
-For more information about HSB, see: [http://en.wikipedia.org/wiki/HSV_color_space](http://en.wikipedia.org/wiki/HSV_color_space)
+For more information about HSB, see:
+    http://en.wikipedia.org/wiki/HSV_color_space
 
-
-
+Parameters:
+hue The hue of the color.
+saturation The saturation of the color.
+brightness The brightness of the color.
+alpha The alpha value of the color.
 
 
 
@@ -313,12 +394,13 @@ _advanced: False_
 
 _inlined_description: _
 
-Calculate the brightness of of the R, G and B components. 
+Calculate the brightness of of the R, G and B components.
 
+Brightness is simply the maximum of the three color components. This
+method of calculating brightness is used by Photoshop (HSB) and
+Processing (HSB).  Note that brightness is also called "Value".
 
-Brightness is simply the maximum of the three color components. This method of calculating brightness is used by Photoshop (HSB) and Processing (HSB). Note that brightness is also called "Value".
-
-returns the brightness in the range 0 - limit(). 
+Returns: the brightness in the range 0 - limit().
 
 
 
@@ -359,18 +441,9 @@ _advanced: False_
 
 _inlined_description: _
 
-A non-destructive version of clamp(). 
-
-
-***return:*** 
-	A copy of this color, clamped. 
-
-
-***see:*** 
-	clamp() 
-
-
-
+A non-destructive version of clamp().
+\sa clamp()
+Returns: A copy of this color, clamped.
 
 
 
@@ -411,18 +484,17 @@ _advanced: False_
 
 _inlined_description: _
 
-Get a hexadecimal representation of the RGB color. 
+Get a 24-bit hexadecimal representation of the RGB color.
+
+~~~~{.cpp}
+    ofColor c( 255, 255, 0 ); // Yellow.
+    int hex = c.getHex(); // Hex is 0xffff00 (or 16776960 in decimal).
+~~~~
 
 
-***warning:*** 
-	This method does not encode the alpha component.
+warning:This method does _not_ encode the alpha component.
 
-
-***return:*** 
-	An integer representing an RGB color. 
-
-
-
+Returns: An integer representing an RGB color.
 
 
 
@@ -470,11 +542,24 @@ _advanced: False_
 
 _inlined_description: _
 
-Extract the hue, saturation and brightness from this color. 
+Extract the hue, saturation and brightness (HSB) from this color.
 
+~~~~{.cpp}
+    ofColor red(255,0,0);
+    float hue = 0;  // The hue value to set.
+    float saturation = 0; // The saturation value to set.
+    float brightness = 0; The brightness value to set.
+    red.getHsb(hue, saturation, brightness);
+    // Hue is now 0 (for red), saturation is 255, brightness is 255.
+~~~~
 
-
-
+Parameters:
+hue A reference to the hue to fill. Will be in the range of
+    0 - limit().
+saturation A reference to the saturation to fill. Will be in the
+		range of 0 - limit().
+brightness A reference to the brightness to fill. Will be in the
+    range of 0 - limit().
 
 
 
@@ -524,16 +609,13 @@ _advanced: False_
 
 _inlined_description: _
 
-Get the Hue of this color. 
+Get the Hue of this color.
 
+The color is converted from the default RGB to an HSB color space and
+the resulting Hue value is returned.  The resulting hue value will
+always be returned in the range 0 - limit().
 
-The color is converted from the default RGB to an HSB colorspace and the resulting Hue value is returned. The resulting hue value will always be returned in the range 0 - limit().
-
-***return:*** 
-	The Hue value in the range 0 - limit(). 
-
-
-
+Returns: The Hue value in the range 0 - limit().
 
 
 
@@ -574,16 +656,13 @@ _advanced: False_
 
 _inlined_description: _
 
-Get the Hue angle of this color. 
+Get the Hue angle of this color.
 
+The color is converted from the default RGB to an HSB color space and
+the resulting Hue angle is returned.  The resulting hue value will
+always be returned in degrees in the range 0 - 360.
 
-The color is converted from the default RGB to an HSB colorspace and the resulting Hue angle is returned. The resulting hue value will always be returned in degrees in the range 0 - 360.
-
-***return:*** 
-	The Hue angle in the range 0 - 360. 
-
-
-
+Returns: The Hue angle in the range 0 - 360.
 
 
 
@@ -622,18 +701,9 @@ _advanced: False_
 
 _inlined_description: _
 
-A non-destructive version of invert(). 
-
-
-***return:*** 
-	A copy of this color, inverted. 
-
-
-***see:*** 
-	invert() 
-
-
-
+A non-destructive version of invert().
+\sa invert()
+Returns: A copy of this color, inverted.
 
 
 
@@ -674,18 +744,9 @@ _advanced: False_
 
 _inlined_description: _
 
-A non-destructive version of lerp(). 
-
-
-***return:*** 
-	A copy of this color, lerped. 
-
-
-***see:*** 
-	lerp() 
-
-
-
+A non-destructive version of lerp().
+\sa lerp()
+Returns: A copy of this color, lerped.
 
 
 
@@ -726,12 +787,12 @@ _advanced: False_
 
 _inlined_description: _
 
-Calculate the lightness of the R, G and B components. 
+Calculate the lightness of the R, G and B components.
 
+Lightness is simply the average of the three color components. This
+method of calculating lightness is used by the Lab and HSL color spaces.
 
-Lightness is simply the average of the three color components. This method of calculating lightness is used by the Lab and HSL color spaces.
-
-returns the lightness in the range 0 - limit(). 
+Returns: the lightness in the range 0 - limit().
 
 
 
@@ -772,18 +833,9 @@ _advanced: True_
 
 _inlined_description: _
 
-A non-destructive version of normalize(). 
-
-
-***return:*** 
-	A copy of this color, normalized. 
-
-
-***see:*** 
-	normalize() 
-
-
-
+A non-destructive version of normalize().
+\sa normalize()
+Returns: A copy of this color, normalized.
 
 
 
@@ -824,16 +876,13 @@ _advanced: False_
 
 _inlined_description: _
 
-Get the Saturation of this color. 
+Get the Saturation of this color.
 
+The color is converted from the default RGB to an HSB color space and
+the resulting saturation is returned.  The resulting saturation value
+will always be returned in the range 0 - limit().
 
-The color is converted from the default RGB to an HSB colorspace and the resulting saturation is returned. The resulting saturation value will always be returned in the range 0 - limit().
-
-***return:*** 
-	The saturation in the range 0 - limit(). 
-
-
-
+Returns: The saturation in the range 0 - limit().
 
 
 
@@ -874,27 +923,32 @@ _advanced: False_
 
 _inlined_description: _
 
-Invert the R, G and B components. 
+Invert the R, G and B components.
 
+Performs an inversion operation on the color by replacing the red, green
+and blue components with their original value subtracted from the
+limit().  For example, an ofColor value of:
 
-Performs an inversion operation on the color by replacing the red, green and blue components with their original value subtracted from the limit(). For example, an ofColor value of: unsigned char maxValue = limit(); // would return 255
+~~~~~{.cpp}
+    unsigned char maxValue = limit(); // would return 255
 
-unsigned char r = 255;
-unsigned char g = 255;
-unsigned char b = 0;
+    unsigned char r = 255;
+    unsigned char g = 255;
+    unsigned char b = 0;
 
-unsigned char rNew = maxValue - r; // 255 - 255 = 0
-unsigned char gNew = maxValue - g; // 255 - 255 = 0
-unsigned char bNew = maxValue - b; // 255 - 0   = 255;
+    unsigned char rNew = maxValue - r; // 255 - 255 = 0
+    unsigned char gNew = maxValue - g; // 255 - 255 = 0
+    unsigned char bNew = maxValue - b; // 255 - 0   = 255;
+~~~~~
 
+Example usage:
+~~~~{.cpp}
+    ofColor c(0, 0, 255); // Blue.
+    c.invert();
+    // c is now (255,255,0), or yellow, which is blue's complement.
+~~~~
 
-Thus the inversion of ofColor(255, 255, 0) is ofColor(0, 0, 255);
-
-***return:*** 
-	A reference to itself. 
-
-
-
+Returns: A reference to itself.
 
 
 
@@ -940,17 +994,29 @@ _advanced: False_
 
 _inlined_description: _
 
-A linear interpolation between all components of two colors. 
+A linear interpolation between all components of two colors.
 
+The lerp method performs a linear interpolation (or [lerp][1]) between
+this color and a target color.  In contrast to many of the mathematical
+functions found in ofColor_, The linear interpolation is carried out
+on _all_ components, R, G, B _and_ A.  The amount is typically a value
+between 0.0 and 1.0, with 0.0 yielding an unchanged color and 1.0
+yielding a color identical to the target color.
 
-The lerp method performs a linear interpolation (or [lerp](lerp)) between this color and a target color. In contrast to many of the mathematical functions found in ofColor_, The linear interpolation is carried out on all components, R, G, B and A. The amount is typically a value between 0.0 and 1.0, with 0.0 yielding an unchanged color and 1.0 yielding a color identical to the target color.
+~~~~{.cpp}
+    ofColor r = ofColor::red;
+    ofColor b = ofColor::blue;
+    b.lerp(r, 0.5); // now purple
+~~~~
 
+[1]: http://en.wikipedia.org/wiki/Lerp_(computing) "Lerp"
 
-***return:*** 
-	A reference to itself. 
-
-
-
+Parameters:
+target The target color corresponding to an amount of 1.0.
+amount The amount (between 0.0 and 1.0) to interpolate.
+    A value of 0.0 will yield an unchanged color.  A value of 1.0
+    will yield the target color.
+Returns: A reference to itself.
 
 
 
@@ -998,14 +1064,15 @@ _advanced: False_
 
 _inlined_description: _
 
-Return the maximum value of a color. 
+Get the maximum value of a color component.
 
+Based on the type of PixelType (whether its a ofColor, ofFloatColor or
+ofShortColor), the maximum value different. For a ofFloatColor the
+maximum is `1.0`, but for a ofColor it's `255`.
 
-***return:*** 
-	The value associated with a fully saturated color component. 
+Use this function to get this maximum number.
 
-
-
+Returns: The value associated with a fully saturated color component.
 
 
 
@@ -1046,24 +1113,26 @@ _advanced: True_
 
 _inlined_description: _
 
-Normalize the R, G and B components. 
+Normalize the R, G and B components.
 
+Performs a normalization operation on the red, green and blue components
+by scaling them by brightness of the original color divided by the
+limit().  The brightness is calculated by finding the maximum of
+original red, green and blue components.  This operation is equivalent
+to the following:
 
-Performs a normalization operation on the red, green and blue components by scaling them by brightness of the original color divided by the limit(). The brightness is calculated by finding the maximum of original red, green and blue components. This operation is equivalent to the following: ofColor myColor(127, 0, 0, 127);
+~~~~~{.cpp}
+    ofColor myColor(127, 0, 0, 127);
 
-float brightness = myColor.getBrightness(); // returns 127.
-float scaleFactor = brightness / limit();   // returns 127 / 255.
+    float brightness = myColor.getBrightness(); // Returns 127.
+    float scaleFactor = brightness / limit();   // Returns 127 / 255.
 
-ofColor myNormalizedColor = myColor / scaleFactor;
-                            // Divides the red, green and blue
-                            // components by the scale factor.
+    ofColor myNormalizedColor = myColor / scaleFactor;
+                                // Divides the red, green and blue
+                                // components by the scale factor.
+~~~~~
 
-
-***return:*** 
-	A reference to itself. 
-
-
-
+Returns: A reference to itself.
 
 
 
@@ -1118,8 +1187,12 @@ _advanced: False_
 
 _inlined_description: _
 
-Construct an ofColor_ instance. 
+Construct a default white color.
 
+~~~~{.cpp}
+    ofColor c;
+    ofSetColor(c); // Draw color is now white.
+~~~~
 
 
 
@@ -1152,7 +1225,7 @@ _syntax: ofColor_(_r, _g, _b, _a = limit())_
 _name: ofColor__
 _returns: _
 _returns_description: _
-_parameters: float red, float green, float blue, float alpha=limit()_
+_parameters: float red, float green, float blue, float alpha_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1165,13 +1238,21 @@ _advanced: False_
 
 _inlined_description: _
 
-Construct an ofColor_ by using channel values. 
+Construct an ofColor_ by using channel values.
 
+When creating an instance of ofColor_ the channel values must fall
+within the range represented by the PixelType.  By default, the alpha
+component will take the PixelType's maximum, producing an opaque color.
 
-When creating an instance of ofColor_ the channel values must fall within the range represented by the PixelType. By default, the alpha component will take the PixelType's maximum, producing an opaque color.
-
-
-
+~~~~{.cpp}
+    ofColor c1(255, 0, 0); // Red with 100% alpha.
+    ofColor c2(255, 0, 0, 128); // Red with 50% alpha.
+~~~~
+Parameters:
+red The red component.
+green The green component.
+blue The blue component.
+alpha The alpha component.
 
 
 
@@ -1197,108 +1278,6 @@ ofColor c2(255, 0, 0, 128); // red with 50% alpha.
 
 <!----------------------------------------------------------------------------->
 
-### ofColor_(&color)
-
-<!--
-_syntax: ofColor_(&color)_
-_name: ofColor__
-_returns: _
-_returns_description: _
-_parameters: const ofColor_< PixelType > &color_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Construct an ofColor_ from an existing ofColor_. 
-
-
-
-
-
-
-
-
-
-
-
-_description: _
-
-
-Creates a color by copying another color:
-
-~~~~{.cpp}
-ofColor mom(255, 0, 0);
-ofColor c(mom);
-~~~~
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofColor_(&color, _a)
-
-<!--
-_syntax: ofColor_(&color, _a)_
-_name: ofColor__
-_returns: _
-_returns_description: _
-_parameters: const ofColor_< PixelType > &color, float alpha_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Construct an ofColor_ from an existing ofColor_. 
-
-
-This constructor will use the R, G and B components from the passed color ignoring its alpha channel. The provided alpha channel will be used instead.
-
-
-
-
-
-
-
-
-
-
-_description: _
-
-
-Creates a color by copying another color, overriding the existing alpha value with the value of _a:
-
-~~~~{.cpp}
-ofColor mom(255, 0, 0); // red
-ofColor c(mom, 128); // now c is red with 50% alpha
-~~~~
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ### ofColor_(gray, _a = limit())
 
 <!--
@@ -1306,7 +1285,7 @@ _syntax: ofColor_(gray, _a = limit())_
 _name: ofColor__
 _returns: _
 _returns_description: _
-_parameters: float gray, float alpha=limit()_
+_parameters: float gray, float alpha_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1319,13 +1298,19 @@ _advanced: False_
 
 _inlined_description: _
 
-Construct a grayscale ofColor_ by specifiying a single number. 
+Construct a grayscale ofColor_ by specifying a single number.
 
+This constructor will use a single value to describe a grayscale color.
+This single value will be taken by each of the R, G and B components.
+The alpha channel is specified separately and will and will default to
+the PixelType's maximum resulting in an opaque color.
 
-This constructor will use a single value to describe a grayscale color. This single value will be taken by each of the R, G and B components. The alpha channel is specified separately and will and will default to the PixelType's maximum resulting in an opaque color.
-
-
-
+~~~~{.cpp}
+    ofColor c(0.5); // c is now gray.
+~~~~
+Parameters:
+gray A grayscale value.
+alpha The opacity of the color.
 
 
 
@@ -1370,17 +1355,23 @@ _advanced: False_
 
 _inlined_description: _
 
-Construct an ofColor_ from an existing ofColor_. 
+Construct an ofColor_ from an existing ofColor_.
+
+This constructor will attempt to convert between color instances of
+differing precision.
+
+~~~~{.cpp}
+    ofColor colorA(255, 0, 0);
+    ofColor colorB(colorA); // colorB is now equal to colorA.
+~~~~
 
 
-This constructor will attempt to convert between color instances of differing precision.
+warning:Depending on the PixelType and SrcType used, color precision
+         may be lost when converting a higher precision to a lower
+         precision representation.
 
-***warning:*** 
-	Depending on the PixelType and SrcType used, color precision may be lost when converting a higher precision to a lower precision representation.
-
-
-
-
+Parameters:
+color The ofColor_ to copy.
 
 
 
@@ -1397,6 +1388,60 @@ Creates a color by copying another color with a different type (for example when
 ofColor c1(255, 128, 0); // orange
 ofFloatColor c2(c1);
 float g = c2.g; // g is now 0.5
+~~~~
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofColor_(&color, _a)
+
+<!--
+_syntax: ofColor_(&color, _a)_
+_name: ofColor__
+_returns: _
+_returns_description: _
+_parameters: const ofColor_< PixelType > &color, float alpha_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Construct an ofColor_ from an existing ofColor_.
+
+This constructor will use the R, G, and B components from the passed
+color ignoring its alpha channel.  The provided alpha channel will be
+used instead.
+
+Parameters:
+color The ofColor_ to copy.
+alpha The new alpha value to replace the alpha value in color.
+
+
+
+
+
+
+
+_description: _
+
+
+Creates a color by copying another color, overriding the existing alpha value with the value of _a:
+
+~~~~{.cpp}
+ofColor mom(255, 0, 0); // red
+ofColor c(mom, 128); // now c is red with 50% alpha
 ~~~~
 
 
@@ -1427,14 +1472,8 @@ _advanced: False_
 
 _inlined_description: _
 
-Test two colors for inequality. 
-
-
-***return:*** 
-	true iff any of the R, G, B or A components are not equal. 
-
-
-
+Test two colors for inequality.
+Returns: true iff any of the R, G, B or A components are not equal.
 
 
 
@@ -1473,6 +1512,17 @@ _advanced: False_
 
 _inlined_description: _
 
+Clamped multiplication operator.
+
+Multiply two colors by multiplying and clamping their R, G and B
+components.
+
+
+warning:The alpha component is ignored.
+
+Parameters:
+color The color to multiply.
+Returns: The new clamped color.
 
 
 
@@ -1498,7 +1548,7 @@ _syntax: operator*(&val)_
 _name: operator*_
 _returns: ofColor_< PixelType >_
 _returns_description: _
-_parameters: const float &val_
+_parameters: const float &value_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -1511,6 +1561,16 @@ _advanced: False_
 
 _inlined_description: _
 
+Clamped scalar multiplication operator.
+
+Multiply the R, G and B components by a scaler and clamp each.
+
+
+warning:The alpha component is ignored.
+
+Parameters:
+value The value to multiply.
+Returns: The new clamped color.
 
 
 
@@ -1549,6 +1609,17 @@ _advanced: False_
 
 _inlined_description: _
 
+Clamped multiplication operator.
+
+Multiply two colors by multiplying and clamping their R, G and B
+components.
+
+
+warning:The alpha component is ignored.
+
+Parameters:
+color The color to multiply.
+Returns: A reference to itself, the new clamped color.
 
 
 
@@ -1574,7 +1645,7 @@ _syntax: operator*=(&val)_
 _name: operator*=_
 _returns: ofColor_< PixelType > &_
 _returns_description: _
-_parameters: const float &val_
+_parameters: const float &value_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -1587,6 +1658,16 @@ _advanced: False_
 
 _inlined_description: _
 
+Clamped scalar multiplication operator.
+
+Multiply the R, G and B components by a scaler and clamp each.
+
+
+warning:The alpha component is ignored.
+
+Parameters:
+value The scaler value.
+Returns: A reference to itself, the new clamped color.
 
 
 
@@ -1625,6 +1706,16 @@ _advanced: False_
 
 _inlined_description: _
 
+Clamped addition operator.
+
+Add two colors by summing and clamping their R, G and B components.
+
+
+warning:The alpha component is ignored.
+
+Parameters:
+color The color to add.
+Returns: The new clamped color.
 
 
 
@@ -1650,7 +1741,7 @@ _syntax: operator+(&val)_
 _name: operator+_
 _returns: ofColor_< PixelType >_
 _returns_description: _
-_parameters: const float &val_
+_parameters: const float &color_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -1663,6 +1754,16 @@ _advanced: False_
 
 _inlined_description: _
 
+Clamped addition operator.
+
+Add a value to each of the R, G and B components and clamp each.
+
+
+warning:The alpha component is ignored.
+
+Parameters:
+color The value to add.
+Returns: The new clamped color.
 
 
 
@@ -1701,6 +1802,16 @@ _advanced: False_
 
 _inlined_description: _
 
+Clamped addition operator.
+
+Add two colors by summing and clamping their R, G and B components.
+
+
+warning:The alpha component is ignored.
+
+Parameters:
+color The color to add.
+Returns: A reference to itself, the new clamped color.
 
 
 
@@ -1726,7 +1837,7 @@ _syntax: operator+=(&val)_
 _name: operator+=_
 _returns: ofColor_< PixelType > &_
 _returns_description: _
-_parameters: const float &val_
+_parameters: const float &color_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -1739,6 +1850,16 @@ _advanced: False_
 
 _inlined_description: _
 
+Clamped addition operator.
+
+Add a value to each of the R, G and B components and clamp each.
+
+
+warning:The alpha component is ignored.
+
+Parameters:
+color The value to add.
+Returns: A reference to itself, the new clamped color.
 
 
 
@@ -1777,6 +1898,17 @@ _advanced: False_
 
 _inlined_description: _
 
+Clamped subtraction operator.
+
+Subtract two colors by subtracting and clamping their R, G and B
+components.
+
+
+warning:The alpha component is ignored.
+
+Parameters:
+color The color to subtract.
+Returns: The new clamped color.
 
 
 
@@ -1802,7 +1934,7 @@ _syntax: operator-(&val)_
 _name: operator-_
 _returns: ofColor_< PixelType >_
 _returns_description: _
-_parameters: const float &val_
+_parameters: const float &value_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -1815,6 +1947,16 @@ _advanced: False_
 
 _inlined_description: _
 
+Clamped subtraction operator.
+
+Subtract a value from each of the R, G and B components and clamp each.
+
+
+warning:The alpha component is ignored.
+
+Parameters:
+value The value to subtract.
+Returns: The new clamped color.
 
 
 
@@ -1853,6 +1995,13 @@ _advanced: False_
 
 _inlined_description: _
 
+Clamped subtraction operator.
+
+Add two colors by subtracting and clamping their R, G and B components.
+
+Parameters:
+color The color to subtract.
+Returns: A reference to itself, the new clamped color.
 
 
 
@@ -1878,7 +2027,7 @@ _syntax: operator-=(&val)_
 _name: operator-=_
 _returns: ofColor_< PixelType > &_
 _returns_description: _
-_parameters: const float &val_
+_parameters: const float &color_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -1891,6 +2040,16 @@ _advanced: False_
 
 _inlined_description: _
 
+Clamped subtraction operator.
+
+Subtract a value to each of the R, G and B components and clamp each.
+
+
+warning:The alpha component is ignored.
+
+Parameters:
+color The value to subtract.
+Returns: A reference to itself, the new clamped color.
 
 
 
@@ -1929,6 +2088,16 @@ _advanced: False_
 
 _inlined_description: _
 
+Clamped division operator.
+
+Divide two colors by treating the passed color components as divisors.
+
+
+warning:The alpha component is ignored.
+
+Parameters:
+color The divisor color.
+Returns: The new clamped color.
 
 
 
@@ -1954,7 +2123,7 @@ _syntax: operator/(&val)_
 _name: operator/_
 _returns: ofColor_< PixelType >_
 _returns_description: _
-_parameters: const float &val_
+_parameters: const float &value_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -1967,6 +2136,16 @@ _advanced: False_
 
 _inlined_description: _
 
+Clamped scalar division operator.
+
+Divide each of the R, G and B components by a scalar and clamp each.
+
+
+warning:The alpha component is ignored.
+
+Parameters:
+value The divisor value.
+Returns: The new clamped color.
 
 
 
@@ -2005,6 +2184,13 @@ _advanced: False_
 
 _inlined_description: _
 
+Clamped division operator.
+
+Divide two colors by treating the passed color components as divisors.
+
+Parameters:
+color The divisor color.
+Returns: A reference to itself, the new clamped color.
 
 
 
@@ -2030,7 +2216,7 @@ _syntax: operator/=(&val)_
 _name: operator/=_
 _returns: ofColor_< PixelType > &_
 _returns_description: _
-_parameters: const float &val_
+_parameters: const float &value_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -2043,55 +2229,16 @@ _advanced: False_
 
 _inlined_description: _
 
+Clamped scalar division operator.
+
+Divide each of the R, G and B components by a scalar and clamp each.
 
 
+warning:The alpha component is ignored.
 
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofColor_< PixelType > & operator=(&color)
-
-<!--
-_syntax: operator=(&color)_
-_name: operator=_
-_returns: ofColor_< PixelType > &_
-_returns_description: _
-_parameters: const ofColor_< PixelType > &color_
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Assign a color using an existing color. 
-
-
-R, G, B and A components are set to the the values of the assigned color.
-
-
-***return:*** 
-	A reference to itself. 
-
-
-
+Parameters:
+value The divisor value.
+Returns: A reference to itself, the new clamped color.
 
 
 
@@ -2130,21 +2277,19 @@ _advanced: False_
 
 _inlined_description: _
 
-Assign a color using an existing color. 
+Assign a color using an existing color.
+
+R, G, B and A components are set to the the values of the assigned
+color.
 
 
-R, G, B and A components are set to the the values of the assigned color.
+warning:Depending on the PixelType and SrcType used, color precision
+    may be lost when converting a higher precision to a lower precision
+    representation.
 
-***warning:*** 
-	Depending on the PixelType and SrcType used, color precision may be lost when converting a higher precision to a lower precision representation.
-
-
-
-***return:*** 
-	A reference to itself. 
-
-
-
+Parameters:
+color The color to assign.
+Returns: A reference to itself.
 
 
 
@@ -2170,7 +2315,7 @@ _syntax: operator=(&val)_
 _name: operator=_
 _returns: ofColor_< PixelType > &_
 _returns_description: _
-_parameters: const float &val_
+_parameters: const float &value_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -2183,21 +2328,24 @@ _advanced: False_
 
 _inlined_description: _
 
-Assign a color using a grayscale value. 
+Assign a color using a grayscale value.
 
+R, G and B components are set to the grayscale value and alpha is
+set to limit().
 
-R, G and B components are set to the grayscale value and alpha is set to limit(). ofColor myColor = 127;
+~~~~~{.cpp}
+    ofColor myColor = 127;
+~~~~~
 
+is equivalent to:
 
-is equivalent to: ofColor myColor(127, 127, 127, 255);
+~~~~~{.cpp}
+    ofColor myColor(127, 127, 127, 255);
+~~~~~
 
-
-
-***return:*** 
-	A reference to itself. 
-
-
-
+Parameters:
+value The grayscale value.
+Returns: A reference to itself.
 
 
 
@@ -2236,52 +2384,8 @@ _advanced: False_
 
 _inlined_description: _
 
-Test two colors for equality. 
-
-
-***return:*** 
-	true iff the R, G, B and A components are all equal. 
-
-
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###const PixelType & operator[](n)
-
-<!--
-_syntax: operator[](n)_
-_name: operator[]_
-_returns: const PixelType &_
-_returns_description: _
-_parameters: int n_
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
+Test two colors for equality.
+Returns: true iff the R, G, B and A components are all equal.
 
 
 
@@ -2307,9 +2411,9 @@ _syntax: operator[](n)_
 _name: operator[]_
 _returns: PixelType &_
 _returns_description: _
-_parameters: int n_
+_parameters: size_t n_
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2320,6 +2424,19 @@ _advanced: False_
 
 _inlined_description: _
 
+Array subscript operator.
+
+If n is 0 returns .r, if 1 returns .g, if 2 returns .b, if 3 returns
+alpha.
+
+~~~~{.cpp}
+    ofColor c(128, 64, 255);
+    float red = c[0]; // Red is 128.
+~~~~
+
+Parameters:
+n An index 0-3 of the component to get.
+Returns: The value of the requested component.
 
 
 
@@ -2330,12 +2447,56 @@ _inlined_description: _
 _description: _
 
 
-Array subscript operator. If n is 0 returns .r, if 1 returns .g, if 2 returns .b, if 3 returns alpha.
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###PixelType & operator[](n)
+
+<!--
+_syntax: operator[](n)_
+_name: operator[]_
+_returns: PixelType &_
+_returns_description: _
+_parameters: size_t n_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Array subscript operator.
+
+If n is 0 returns .r, if 1 returns .g, if 2 returns .b, if 3 returns
+alpha.
 
 ~~~~{.cpp}
-ofColor c(128, 64, 255);
-float red = c[0]; // red is 128
+    ofColor c(128, 64, 255);
+    float red = c[0]; // Red is 128.
 ~~~~
+
+Parameters:
+n An index 0-3 of the component to get.
+Returns: The value of the requested component.
+
+
+
+
+
+
+
+_description: _
+
 
 
 
@@ -2352,7 +2513,7 @@ _syntax: set(_r, _g, _b, _a = limit())_
 _name: set_
 _returns: void_
 _returns_description: _
-_parameters: float red, float green, float blue, float alpha=limit()_
+_parameters: float red, float green, float blue, float alpha_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -2365,13 +2526,22 @@ _advanced: False_
 
 _inlined_description: _
 
-Set an ofColor_ by using channel values. 
+Set an ofColor_ by using channel values.
 
+When modifying an instance of ofColor_ the channel values must fall
+within the range represented by the PixelType.  By default, the alpha
+component will take the PixelType's maximum, producing an opaque color.
 
-When modifying an instance of ofColor_ the channel values must fall within the range represented by the PixelType. By default, the alpha component will take the PixelType's maximum, producing an opaque color.
+~~~~{.cpp}
+    ofColor c(255, 0, 0); // Red ...
+    c.set(0, 255, 0); // ... and now green.
+~~~~
 
-
-
+Parameters:
+red The red component.
+green The green component.
+blue The blue component.
+alpha The alpha component.
 
 
 
@@ -2404,7 +2574,7 @@ _syntax: set(_gray, _a = limit())_
 _name: set_
 _returns: void_
 _returns_description: _
-_parameters: float gray, float alpha=limit()_
+_parameters: float gray, float alpha_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -2417,13 +2587,22 @@ _advanced: False_
 
 _inlined_description: _
 
-Set a grayscale ofColor_ by specifiying a single number. 
+Set a grayscale ofColor_ by specifying a single number.
 
+When modifying an instance of ofColor_ you can use a single value to
+describe a grayscale color. This single value will be taken by each of
+the R, G and B components. The alpha channel is specified separately
+and will and will default to the PixelType's maximum resulting in an
+opaque color.
 
-When modifying an instance of ofColor_ you can use a single value to describe a grayscale color. This single value will be taken by each of the R, G and B components. The alpha channel is specified separately and will and will default to the PixelType's maximum resulting in an opaque color.
+~~~~{.cpp}
+    ofColor c(255, 0, 0); // Red ...
+    c.set(128, 128); // ... and now 50% gray with 50% alpha.
+~~~~
 
-
-
+Parameters:
+gray A grayscale value.
+alpha The opacity of the color.
 
 
 
@@ -2468,13 +2647,12 @@ _advanced: False_
 
 _inlined_description: _
 
-Set an ofColor_ from an existing ofColor_. 
-
+Set an ofColor_ from an existing ofColor_.
 
 This will use the R, G, B and A components from the passed color.
 
-
-
+Parameters:
+color The ofColor_ to copy.
 
 
 
@@ -2513,11 +2691,15 @@ _advanced: False_
 
 _inlined_description: _
 
-Set the brightness of this color. 
+Set the brightness of this color.
 
+~~~~{.cpp}
+    ofColor c(0, 0, 255); // Bright blue ...
+    c.setBrightness(128); // ... dark blue.
+~~~~
 
-
-
+Parameters:
+brightness A brightness value to set in the range of 0 - limit().
 
 
 
@@ -2552,7 +2734,7 @@ _syntax: setHex(hexColor, alpha = limit())_
 _name: setHex_
 _returns: void_
 _returns_description: _
-_parameters: int hexColor, float alpha=limit()_
+_parameters: int hexColor, float alpha_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -2565,19 +2747,29 @@ _advanced: False_
 
 _inlined_description: _
 
-Set an ofColor_ from a hexadecimal representation. 
+Set an ofColor_ from a hexadecimal representation.
+
+In some cases, it is convenient to represent colors using a hexadecimal
+number.  In this case, red, green and blue values are packed into a
+integer.
+
+The alpha channel is specified separately and will default to the
+PixelType's maximum, resulting in an opaque color.
+
+~~~~{.cpp}
+    ofColor c;
+    c.setHex(0xFFFFFF); // White.
+    c.setHex(0x00FF00); // Green.
+    c.setHex(0xFF8000, 128); // Orange, 50% alpha.
+~~~~
 
 
-In some cases, it is convenient to represent colors using a hexadecimal number. In this case, red, green and blue values are packed into a integer.
+warning:The alpha value _should not_ be packed in the hexColor and
+    must be specified separately.
 
-The alpha channel is specified separately and will default to the PixelType's maximum, resulting in an opaque color.
-
-***warning:*** 
-	The alpha value should not be packed in the hexColor and must be specified separately.
-
-
-
-
+Parameters:
+hexColor An RGB color in hexadecimal form.
+alpha The alpha value of the color.
 
 
 
@@ -2611,7 +2803,7 @@ _syntax: setHsb(hue, saturation, brightness, alpha)_
 _name: setHsb_
 _returns: void_
 _returns_description: _
-_parameters: float hue, float saturation, float brightness, float alpha=limit()_
+_parameters: float hue, float saturation, float brightness, float alpha_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -2624,11 +2816,12 @@ _advanced: False_
 
 _inlined_description: _
 
-Set the color using HSB components. 
-
-
-
-
+Set the color using HSB components.
+Parameters:
+hue A hue value to set in the range of 0 - limit().
+saturation A saturation value to set in the range of 0 - limit().
+brightness A brightness value to set in the range of 0 - limit().
+alpha An alpha value to set in the range of 0 - limit().
 
 
 
@@ -2669,11 +2862,15 @@ _advanced: False_
 
 _inlined_description: _
 
-Set the hue of this color. 
+Set the hue of this color.
 
+~~~~{.cpp}
+    ofColor c = ofColor::fromHsb(0, 255, 255); // Bright red ...
+    c.setHue(128); // ... now bright cyan.
+~~~~
 
-
-
+Parameters:
+hue A hue value to set in the range of 0 - limit().
 
 
 
@@ -2721,11 +2918,9 @@ _advanced: False_
 
 _inlined_description: _
 
-Set the hue angle of this color. 
-
-
-
-
+Set the hue angle of this color.
+Parameters:
+angle A hue angle value to set in the range of 0 - 360 degrees.
 
 
 
@@ -2764,17 +2959,18 @@ _advanced: False_
 
 _inlined_description: _
 
-Set the saturation this color. 
-
+Set the saturation of this color.
 
 This method uses HSB not HSL. So red desaturated is white, not gray
 
+~~~~{.cpp}
+    ofColor c(0, 0, 255); // Vibrant blue ...
+    c.setSaturation( 128 ); // ... pale blue.
+~~~~
 
-***see:*** 
-	[http://en.wikipedia.org/wiki/HSL_and_HSV](http://en.wikipedia.org/wiki/HSL_and_HSV) 
-
-
-
+Parameters:
+saturation A saturation value value in the range of 0 - limit().
+\sa http://en.wikipedia.org/wiki/HSL_and_HSV
 
 
 
@@ -2802,74 +2998,9 @@ Refer the [discussion of HSB](#HSB) above.
 
 <!----------------------------------------------------------------------------->
 
-### ~ofColor_()
-
-<!--
-_syntax: ~ofColor_()_
-_name: ~ofColor__
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: False_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Destroy an ofColor_ instance. 
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ##Variables
 
 
-
-###union ofColor_::@3 @4
-
-<!--
-_name: @4_
-_type: union ofColor_::@3_
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
 
 ###PixelType a
 
@@ -2884,6 +3015,10 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+< The alpha color component.
 
 _description: _
 
@@ -2912,6 +3047,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -2936,6 +3089,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -2962,6 +3133,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -2986,6 +3175,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -3012,6 +3219,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -3036,6 +3261,10 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+< The blue color component.
 
 _description: _
 
@@ -3069,6 +3298,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -3094,6 +3341,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -3118,6 +3383,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -3150,6 +3433,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -3174,6 +3475,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -3206,6 +3525,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -3230,6 +3567,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -3256,6 +3611,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -3280,6 +3653,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -3306,6 +3697,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -3330,6 +3739,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -3356,6 +3783,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -3380,6 +3825,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -3406,6 +3869,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -3430,6 +3911,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -3456,6 +3955,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -3480,6 +3997,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -3512,6 +4047,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -3536,6 +4089,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -3562,6 +4133,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -3586,6 +4175,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -3612,6 +4219,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -3636,6 +4261,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -3662,6 +4305,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -3686,6 +4347,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -3712,6 +4391,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -3736,6 +4433,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -3762,6 +4477,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -3786,6 +4519,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -3812,6 +4563,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -3836,6 +4605,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -3862,6 +4649,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -3886,6 +4691,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -3912,6 +4735,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -3936,6 +4777,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -3962,6 +4821,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -3986,6 +4863,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -4012,6 +4907,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -4036,6 +4949,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -4062,6 +4993,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -4086,6 +5035,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -4112,6 +5079,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -4136,6 +5121,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -4162,6 +5165,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -4187,6 +5208,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -4211,6 +5250,10 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+< The green color component.
 
 _description: _
 
@@ -4244,6 +5287,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -4268,6 +5329,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -4294,6 +5373,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -4319,6 +5416,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -4343,6 +5458,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -4375,6 +5508,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -4406,6 +5557,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -4430,6 +5599,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -4456,6 +5643,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -4480,6 +5685,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -4506,6 +5729,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -4530,6 +5771,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -4556,6 +5815,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -4580,6 +5857,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -4606,6 +5901,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -4630,6 +5943,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -4656,6 +5987,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -4680,6 +6029,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -4706,6 +6073,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -4730,6 +6115,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -4756,6 +6159,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -4780,6 +6201,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -4806,6 +6245,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -4830,6 +6287,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -4856,6 +6331,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -4880,6 +6373,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -4906,6 +6417,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -4930,6 +6459,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -4956,6 +6503,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -4980,6 +6545,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -5006,6 +6589,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -5030,6 +6631,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -5056,6 +6675,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -5080,6 +6717,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -5106,6 +6761,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -5131,6 +6804,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -5155,6 +6846,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -5187,6 +6896,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -5211,6 +6938,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -5237,6 +6982,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -5261,6 +7024,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -5287,6 +7068,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -5311,6 +7110,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -5337,6 +7154,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -5361,6 +7196,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -5387,6 +7240,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -5411,6 +7282,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -5437,6 +7326,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -5461,6 +7368,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -5487,6 +7412,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -5511,6 +7454,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -5537,6 +7498,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -5561,6 +7540,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -5587,6 +7584,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -5611,6 +7626,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -5637,6 +7670,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -5661,6 +7712,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -5687,6 +7756,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -5711,6 +7798,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -5737,6 +7842,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -5761,6 +7884,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -5787,6 +7928,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -5811,6 +7970,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -5837,6 +8014,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -5861,6 +8056,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -5887,6 +8100,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -5911,6 +8142,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -5937,6 +8186,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -5961,6 +8228,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -5987,6 +8272,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -6011,6 +8314,10 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+< The red color component.
 
 _description: _
 
@@ -6044,6 +8351,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -6075,6 +8400,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -6099,6 +8442,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -6125,6 +8486,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -6149,6 +8528,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -6175,6 +8572,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -6199,6 +8614,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -6225,6 +8658,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -6249,6 +8700,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -6275,6 +8744,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -6299,6 +8786,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -6325,6 +8830,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -6349,6 +8872,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -6375,6 +8916,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -6399,6 +8958,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -6425,6 +9002,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -6449,6 +9044,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -6475,6 +9088,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -6499,6 +9130,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -6525,6 +9174,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -6549,6 +9216,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -6575,6 +9260,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -6599,6 +9302,10 @@ _visible: True_
 _constant: True_
 _advanced: True_
 -->
+
+_inlined_description: _
+
+< The pixel values as an array.
 
 _description: _
 
@@ -6627,6 +9334,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -6652,6 +9377,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -6676,6 +9419,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -6708,6 +9469,24 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
+
 _description: _
 
 
@@ -6732,6 +9511,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 
@@ -6763,6 +9560,24 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
+ \name Predefined Colors
+A collection of static colors defined by name.
+
+These constants allow the user to access colors by name.  For example,
+if using ofColor, one might set a color in the following way:
+
+~~~~{.cpp}
+    ofColor myColor = ofColor::white;
+    // myColor is now full white (255,255,255,255).
+~~~~
+
+The list of colors is based upon the CSS names colors and can be viewed
+[here](http://www.w3schools.com/cssref/css_colornames.asp).
+
+\{
 
 _description: _
 

@@ -28,16 +28,16 @@ See also: ofHttpResponse
 
 
 
-###int getID()
+###int getId()
 
 <!--
-_syntax: getID()_
-_name: getID_
+_syntax: getId()_
+_name: getId_
 _returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -56,7 +56,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -104,14 +103,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofHttpRequest(url, name, saveTo = false)
+### ofHttpRequest(&url, &name, saveTo = false)
 
 <!--
-_syntax: ofHttpRequest(url, name, saveTo = false)_
+_syntax: ofHttpRequest(&url, &name, saveTo = false)_
 _name: ofHttpRequest_
 _returns: _
 _returns_description: _
-_parameters: string url, string name, bool saveTo=false_
+_parameters: const string &url, const string &name, bool saveTo=false_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -146,6 +145,33 @@ _description: _
 
 
 
+###map< string, string > headers
+
+<!--
+_name: headers_
+_type: map< string, string >_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###int id
 
 <!--
@@ -159,6 +185,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -185,6 +214,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -209,6 +241,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 
@@ -235,6 +270,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -259,6 +297,9 @@ _visible: True_
 _constant: True_
 _advanced: False_
 -->
+
+_inlined_description: _
+
 
 _description: _
 

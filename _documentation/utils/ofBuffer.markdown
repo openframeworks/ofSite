@@ -44,7 +44,7 @@ _syntax: allocate(_size)_
 _name: allocate_
 _returns: void_
 _returns_description: _
-_parameters: long _size_
+_parameters: size_t _size_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -122,7 +122,7 @@ _syntax: append(*_buffer, _size)_
 _name: append_
 _returns: void_
 _returns_description: _
-_parameters: const char *_buffer, unsigned int _size_
+_parameters: const char *_buffer, size_t _size_
 _access: public_
 _version_started: 0072_
 _version_deprecated: _
@@ -144,6 +144,80 @@ _inlined_description: _
 
 _description: _
 
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###vector< char >::iterator begin()
+
+<!--
+_syntax: begin()_
+_name: begin_
+_returns: vector< char >::iterator_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###vector< char >::const_iterator begin()
+
+<!--
+_syntax: begin()_
+_name: begin_
+_returns: vector< char >::const_iterator_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -193,16 +267,16 @@ Clears all the data from the buffer.
 
 <!----------------------------------------------------------------------------->
 
-###char * getBinaryBuffer()
+###vector< char >::iterator end()
 
 <!--
-_syntax: getBinaryBuffer()_
-_name: getBinaryBuffer_
-_returns: char *_
+_syntax: end()_
+_name: end_
+_returns: vector< char >::iterator_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 0.8.0_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -223,7 +297,41 @@ _inlined_description: _
 _description: _
 
 
-Returns a pointer into the vector that contains the buffer data.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###vector< char >::const_iterator end()
+
+<!--
+_syntax: end()_
+_name: end_
+_returns: vector< char >::const_iterator_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -233,16 +341,16 @@ Returns a pointer into the vector that contains the buffer data.
 
 <!----------------------------------------------------------------------------->
 
-###const char * getBinaryBuffer()
+###const char * getData()
 
 <!--
-_syntax: getBinaryBuffer()_
-_name: getBinaryBuffer_
+_syntax: getData()_
+_name: getData_
 _returns: const char *_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -261,9 +369,6 @@ _inlined_description: _
 
 
 _description: _
-
-
-Returns a pointer into the vector that contains the buffer data.
 
 
 
@@ -273,16 +378,16 @@ Returns a pointer into the vector that contains the buffer data.
 
 <!----------------------------------------------------------------------------->
 
-###string getFirstLine()
+###const char * getData()
 
 <!--
-_syntax: getFirstLine()_
-_name: getFirstLine_
-_returns: string_
+_syntax: getData()_
+_name: getData_
+_returns: const char *_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -301,9 +406,6 @@ _inlined_description: _
 
 
 _description: _
-
-
-Returns all the text up to the first carriage return, either the \r or \n character.
 
 
 
@@ -313,16 +415,16 @@ Returns all the text up to the first carriage return, either the \r or \n charac
 
 <!----------------------------------------------------------------------------->
 
-###string getNextLine()
+###ofBuffer::Lines getLines()
 
 <!--
-_syntax: getNextLine()_
-_name: getNextLine_
-_returns: string_
+_syntax: getLines()_
+_name: getLines_
+_returns: ofBuffer::Lines_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -341,9 +443,6 @@ _inlined_description: _
 
 
 _description: _
-
-
-If the buffer data contains carriage returns, the '\n' or '\r' character, getNextLine() returns the text up to the next return.
 
 
 
@@ -384,46 +483,6 @@ _description: _
 
 
 Return the buffer data as a string.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool isLastLine()
-
-<!--
-_syntax: isLastLine()_
-_name: isLastLine_
-_returns: bool_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Get whether the current text is the last line in the text file.
 
 
 
@@ -480,7 +539,7 @@ _syntax: ofBuffer(*buffer, size)_
 _name: ofBuffer_
 _returns: _
 _returns_description: _
-_parameters: const char *buffer, unsigned int size_
+_parameters: const char *buffer, size_t size_
 _access: public_
 _version_started: 0072_
 _version_deprecated: _
@@ -556,16 +615,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofBuffer(&stream)
+### ofBuffer(&stream, ioBlockSize)
 
 <!--
-_syntax: ofBuffer(&stream)_
+_syntax: ofBuffer(&stream, ioBlockSize)_
 _name: ofBuffer_
 _returns: _
 _returns_description: _
-_parameters: istream &stream_
+_parameters: istream &stream, size_t ioBlockSize_
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -584,95 +643,6 @@ _inlined_description: _
 
 
 _description: _
-
-
-Construct a buffer from a file stream istream object.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofBuffer(&buffer_)
-
-<!--
-_syntax: ofBuffer(&buffer_)_
-_name: ofBuffer_
-_returns: _
-_returns_description: _
-_parameters: const ofBuffer &buffer__
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Copy constructor, allows you to do:
-
-~~~~{.cpp}
-ofBuffer aBuff;
-// put some stuff in aBuff
-ofBuffer bBuff(aBuff); // now it's in bBuff as well
-~~~~
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### operator string()
-
-<!--
-_syntax: operator string()_
-_name: operator string_
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Internally, calls getText()
 
 
 
@@ -720,16 +690,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void resetLineReader()
+###vector< char >::reverse_iterator rbegin()
 
 <!--
-_syntax: resetLineReader()_
-_name: resetLineReader_
-_returns: void_
+_syntax: rbegin()_
+_name: rbegin_
+_returns: vector< char >::reverse_iterator_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -750,7 +720,115 @@ _inlined_description: _
 _description: _
 
 
-Internally the ofBuffer keeps track of the lines in a file using an index of the \n or \r characters in the data that it contains. resetLineReader() clears this index.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###vector< char >::const_reverse_iterator rbegin()
+
+<!--
+_syntax: rbegin()_
+_name: rbegin_
+_returns: vector< char >::const_reverse_iterator_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###vector< char >::reverse_iterator rend()
+
+<!--
+_syntax: rend()_
+_name: rend_
+_returns: vector< char >::reverse_iterator_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###vector< char >::const_reverse_iterator rend()
+
+<!--
+_syntax: rend()_
+_name: rend_
+_returns: vector< char >::const_reverse_iterator_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -767,7 +845,7 @@ _syntax: set(*_buffer, _size)_
 _name: set_
 _returns: void_
 _returns_description: _
-_parameters: const char *_buffer, unsigned int _size_
+_parameters: const char *_buffer, size_t _size_
 _access: public_
 _version_started: 0072_
 _version_deprecated: _
@@ -844,16 +922,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool set(&stream)
+###bool set(&stream, ioBlockSize)
 
 <!--
-_syntax: set(&stream)_
+_syntax: set(&stream, ioBlockSize)_
 _name: set_
 _returns: bool_
 _returns_description: _
-_parameters: istream &stream_
+_parameters: istream &stream, size_t ioBlockSize_
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -872,9 +950,6 @@ _inlined_description: _
 
 
 _description: _
-
-
-Set the buffer from an istream.
 
 
 
@@ -962,46 +1037,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ~ofBuffer()
-
-<!--
-_syntax: ~ofBuffer()_
-_name: ~ofBuffer_
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Destructor.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ##Variables
 
 
@@ -1020,6 +1055,9 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
 _description: _
 
 
@@ -1031,22 +1069,24 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###long nextLinePos
+###ofBuffer::Line currentLine
 
 <!--
-_name: nextLinePos_
-_type: long_
+_name: currentLine_
+_type: ofBuffer::Line_
 _access: private_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
-_constant: True_
+_constant: False_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+_description: _
 
 
 
