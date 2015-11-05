@@ -27,6 +27,7 @@ official_addons = [
                     "ofxOpenCv",
                     "ofxOsc",
                     "ofxSvg",
+                    "ofxThreadedImageLoader",
                     "ofxXmlSettings",                    
                   ]
 currentversion = "0.9.0"
@@ -59,12 +60,12 @@ def parse_docs(element):
         doc = re.sub(r"\\tparam.*","",doc)
     if doc.find("TODO:") == 0:
         doc = ""
-    doc = doc.replace("\\warning ","\nwarning:")
-    doc = doc.replace("\\author ","\nby:")
-    doc = doc.replace("\\param ","Parameters:\n",1)
+    doc = doc.replace("\\warning ","\nWarning: ")
+    doc = doc.replace("\\author ","\nBy: ")
+    doc = doc.replace("\\param ","\nParameters:\n",1)
     doc = doc.replace("\\param ","")
     doc = doc.replace("\\brief ","")
-    doc = doc.replace("\\returns ","Returns: ")
+    doc = doc.replace("\\returns ","\nReturns: ")
     docs = ""
     for line in iter(doc.splitlines()):
         line = line.strip()
