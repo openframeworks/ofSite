@@ -1,8 +1,8 @@
 var currentHidding=null;
 var coreFunctionsHidden=false;
 var addonsFunctionsHidden=false;
-var coreCollapsed=false;
-var addonsCollapsed = false;
+var coreCollapsed=true;
+var addonsCollapsed = true;
 var goingToIntro=false;
 
 $(function(){

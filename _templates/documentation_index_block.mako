@@ -2,8 +2,8 @@
 <%page args="module,classes,show_header"/>
 <div class="documentation_group">
     % if show_header:
-    <div class="documentation_group_head show">
-			<div class="title"><h2>${module}</h2><a href="${module}/introduction.html">module introduction</a></div>
+    <div class="documentation_group_head hide">
+			<div class="title"><h2>${module}</h2><a href="${module}/introduction.html">module documentation</a></div>
 	</div>
 	% endif
 	
