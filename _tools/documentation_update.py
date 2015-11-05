@@ -155,9 +155,7 @@ def parse_function(documentation_class, clazz, member):
         returns = substitutetype(member.result_type.spelling)
         returns = ("" if returns is None else returns)
     method = documentation_class.function_by_signature(methodname, returns, params, alternatives)
-    if method.name == "ofBackgroundGradient":
-        print methodname, returns, params
-        print "grdient desc: " + "ofBackgroundGradient", "void", ""
+    
     if not clazz is None:
         method.static = member.is_static_method()
         method.clazz = documentation_class.name
@@ -289,8 +287,6 @@ def serialize_class(cursor,is_addon=False, parent=None):
             method = parse_function(documentation_class, clazz, member)
             if method is not None:
                 current_methods_list.append(method)
-        elif member.kind.is_attribute():
-            print "attribute " + member.spelling
     
     class_name_printed = False
     

@@ -583,6 +583,9 @@ ul.functionslist, div.documentation_index_group {
 	padding: 0;
 	/*padding-left: 8px;*/
 }
+div.documentation_index_group{
+    margin-left: 30px;
+}
 #body-warp ul.functionslist li:before {
     padding-right: 0.25em;
 }
@@ -591,6 +594,11 @@ ul.functionslist, div.documentation_index_group {
 	color: #EE3987;
 	font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
 	font-size: 1.1em;
+}
+
+.page-wide.core, .page-wide.addons{
+    padding: 0px 50px 10px;
+    width: 1100px;
 }
 
 h1 {
@@ -653,17 +661,29 @@ hr {
 	position: relative;
 	width: 100%;
 }
+.core .documentation_group, .addons .documentation_group{
+	/*border: 1px #EE3987 solid;	*/
+}
 .documentation_group_head {
-	/*background: #E1E1E1;*/
 	border-bottom: 1px #eee solid;
 	color: black;
 	float: none;
 	/*font-weight: bold;*/
 	margin: 0px 0px 5px 0px;
-	padding: 3px 0px 3px 0px;
-	width: 100%;
-	
+	padding: 10px 30px 10px 30px;
+	width: 1040px;
+	cursor: hand; cursor: pointer;
+	display: flex;
+	justify-content: space-between;
 }
+
+.documentation_group_head .title{
+    display: block;
+}
+.documentation_group_head img{
+    display: block;
+}
+
 .documentation_class {
 	margin: 0px;
 	padding: 5px 0px 5px 0px;
@@ -685,10 +705,6 @@ hr {
 }
 .beginners .documentation_group {
 	width: 100%;
-}
-.documentation_group_head {
-	width: 100%;
-	cursor: hand; cursor: pointer;
 }
 .beginners .documentation_class {
 	/*width: 100%;*/

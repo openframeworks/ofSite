@@ -3,15 +3,9 @@
 <div class="documentation_group">
     % if show_header:
     <div class="documentation_group_head show">
-			<h2>${module}</h2><a href="${module}/introduction.html">module introduction</a>
+			<div class="title"><h2>${module}</h2><a href="${module}/introduction.html">module introduction</a></div>
 	</div>
 	% endif
-			
-	<!-- fileFuncs -->
-
-	
-
-	<!-- file vars -->
 	
 
 	<!-- CLASSES -->
@@ -22,8 +16,13 @@
         	<div class="box">
         	<ul class="documentation_class">
         	    <!-- class link -->
-                <li class="docs-module-title"><a href="${module + '/' + clazz.name}.html" class="documentation_class_link"><strong>${clazz.name}</strong></a></li>
-                
+                <li class="docs-module-title"><a href="${module + '/' + clazz.name}.html" class="documentation_class_link"><strong>${clazz.name}</strong></a>&nbsp;
+                % if clazz.is_class():
+                    <img src="/icons/class.png" alt="C++ Class"/>
+                % else:
+                    <img src="/icons/functions.png" alt="Functions file"/>
+                % endif
+                </li>
                 
         	    <!-- class methods -->
                 <% prevmethod = "" %>

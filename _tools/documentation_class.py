@@ -161,3 +161,5 @@ class DocsClass:
     def get_inlined_docs_similarity(self):
         return Levenshtein.ratio(self.detailed_inline_description, self.reference)
         
+    def is_class(self):
+        return True

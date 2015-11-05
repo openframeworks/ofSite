@@ -160,3 +160,5 @@ class DocsFunctionsFile:
             self.function_list.append(function)
             return function
 
+    def is_class(self):
+        return False

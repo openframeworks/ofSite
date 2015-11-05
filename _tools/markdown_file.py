@@ -350,10 +350,10 @@ def serialize_function(f,function,member):
     f.write("_advanced: " + str(function.advanced)  + "_\n")
     f.write("-->\n\n");
     f.write("_inlined_description: _\n\n")
-    f.write(function.inlined_description.decode('utf-8').encode('utf-8'))
+    f.write(function.inlined_description.strip("\n").decode('utf-8').encode('utf-8'))
     f.write('\n\n\n\n\n\n')
     f.write("_description: _\n\n")
-    f.write(function.description.encode('utf-8'))
+    f.write(function.description.strip("\n").encode('utf-8'))
     f.write('\n\n\n\n\n\n')
     f.write('<!----------------------------------------------------------------------------->\n\n')
 
@@ -371,9 +371,10 @@ def serialize_var(f,var):
     f.write("_advanced: " + str(var.advanced) + "_\n")
     f.write("-->\n\n");
     f.write("_inlined_description: _\n\n")
-    f.write(var.inlined_description.decode('utf-8').encode('utf-8'))  
+    f.write(var.inlined_description.strip("\n").decode('utf-8').encode('utf-8'))  
+    f.write('\n\n\n\n\n\n')
     f.write("_description: _\n\n")
-    f.write(var.description.encode('utf-8'))  
+    f.write(var.description.strip("\n").encode('utf-8'))  
     f.write("\n\n\n\n\n\n")
     f.write('<!----------------------------------------------------------------------------->\n\n')
     

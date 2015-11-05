@@ -3,6 +3,7 @@ var coreFunctionsHidden=false;
 var addonsFunctionsHidden=false;
 var coreCollapsed=false;
 var addonsCollapsed = false;
+var goingToIntro=false;
 
 $(function(){
     $('.documentation_index_group').masonry({
@@ -16,9 +17,16 @@ $(function(){
 $(document).ready(
     function(){
         // collapse one
+        $('div.documentation_group_head a').click(function () {
+            goingToIntro = true;
+        });
         $('div.documentation_group_head').click(function () {
-        if(currentHidding!=null) return;
-        currentHidding = $(this);
+            if(currentHidding!=null) return;
+            if(goingToIntro){
+                goingToIntro = false;
+                return;
+            }
+            currentHidding = $(this);
             if($(this).hasClass('show')){
                 $(this).next('.documentation_index_group').hide("blind", { direction: "vertical" }, 500, function(){
                     currentHidding.removeClass('show');
