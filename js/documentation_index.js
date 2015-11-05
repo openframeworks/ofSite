@@ -20,6 +20,7 @@ $(document).ready(
         $('div.documentation_group_head a').click(function () {
             goingToIntro = true;
         });
+        $('div.documentation_group_head').next('.documentation_index_group').hide();
         $('div.documentation_group_head').click(function () {
             if(currentHidding!=null) return;
             if(goingToIntro){
