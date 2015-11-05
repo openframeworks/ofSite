@@ -52,10 +52,7 @@ Destroy the ofBaseImage_.
 
 
 
-
-
 _description: _
-
 
 
 

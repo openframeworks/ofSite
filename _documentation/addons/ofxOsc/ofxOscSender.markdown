@@ -50,7 +50,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -80,7 +79,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -124,9 +122,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -162,9 +158,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -195,8 +189,6 @@ _advanced: False_
 _inlined_description: _
 
 disables broadcast capabilities, usually call this before setup
-
-
 
 
 
@@ -238,8 +230,6 @@ enabled broadcast capabilities (usually no need to call this, enabled by default
 
 
 
-
-
 _description: _
 
 
@@ -276,9 +266,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -307,7 +295,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -351,7 +338,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -388,10 +374,7 @@ send the given bundle
 
 
 
-
-
 _description: _
-
 
 
 
@@ -422,8 +405,6 @@ _advanced: False_
 _inlined_description: _
 
 send the given message
-
-
 
 
 
@@ -465,10 +446,7 @@ creates a message using an ofParameter
 
 
 
-
-
 _description: _
-
 
 
 
@@ -504,8 +482,6 @@ send messages to hostname and port
 
 
 
-
-
 _description: _
 
 
@@ -535,7 +511,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -579,9 +554,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -612,6 +585,11 @@ _advanced: False_
 _inlined_description: _
 
 
+
+
+
+
+
 _description: _
 
 
@@ -637,6 +615,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _
@@ -666,6 +649,11 @@ _advanced: False_
 _inlined_description: _
 
 
+
+
+
+
+
 _description: _
 
 
@@ -693,8 +681,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 

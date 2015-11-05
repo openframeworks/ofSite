@@ -26,12 +26,12 @@ A base
 
 
 
-###const ofPixels_< T > & getPixels()
+###ofPixels_< T > & getPixels()
 
 <!--
 _syntax: getPixels()_
 _name: getPixels_
-_returns: const ofPixels_< T > &_
+_returns: ofPixels_< T > &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -46,11 +46,9 @@ _advanced: False_
 
 _inlined_description: _
 
-Get a const reference to the underlying ofPixels.
+Get a reference to the underlying ofPixels.
 
-Returns: a const reference the underlying ofPixels.
-
-
+Returns: a reference the underlying ofPixels.
 
 
 
@@ -89,8 +87,6 @@ _inlined_description: _
 Get a const reference to the underlying ofPixels.
 
 Returns: a const reference the underlying ofPixels.
-
-
 
 
 
@@ -132,10 +128,7 @@ Destroy the ofAbstractHasPixels.
 
 
 
-
-
 _description: _
-
 
 
 

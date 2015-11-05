@@ -52,7 +52,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -82,7 +81,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -126,7 +124,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -159,6 +156,10 @@ _inlined_description: _
 
 The Unicode code point you'd expect if this key combo (including modifier keys) was pressed in a text editor, or -1 for non-printable characters.
 
+
+
+
+
 _description: _
 
 
@@ -187,8 +188,11 @@ _inlined_description: _
 
 For special keys, one of OF_KEY_* (@see ofConstants.h). For all other keys, the Unicode code point you'd expect if this key combo (including modifier keys that may be down) was pressed in a text editor (same as codepoint).
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -215,6 +219,10 @@ _advanced: False_
 _inlined_description: _
 
 The keycode returned by the windowing system, independent of any modifier keys or keyboard layout settings. For ofAppGLFWWindow this value is one of GLFW_KEY_* (@see glfw3.h) - typically, ASCII representation of the symbol on the physical key, so A key always returns 0x41 even if shift, alt, ctrl are down.
+
+
+
+
 
 _description: _
 
@@ -244,6 +252,10 @@ _inlined_description: _
 
 The raw scan code returned by the keyboard, OS and hardware specific.
 
+
+
+
+
 _description: _
 
 
@@ -271,8 +283,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 

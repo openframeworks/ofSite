@@ -93,10 +93,7 @@ scale and scale orientation.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -132,10 +129,7 @@ Gets the perspective components for a frustum projection matrix.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -171,10 +165,7 @@ Gets the inverse matrix.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -210,10 +201,7 @@ Makes a new matrix which is the inverse of the given matrix.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -251,10 +239,7 @@ This function will only work for modelview matrices.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -292,10 +277,7 @@ This only works with pure perspective projection matrices.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -331,10 +313,7 @@ Makes a new matrix which is the given matrix, normalized.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -381,10 +360,7 @@ where parameter values are undefined.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -421,10 +397,7 @@ useful for opengl matrix transformations
 
 
 
-
-
 _description: _
-
 
 
 
@@ -460,9 +433,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -504,10 +475,7 @@ For matrices with both use decompose instead.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -543,10 +511,7 @@ returns a copy of row i
 
 
 
-
-
 _description: _
-
 
 
 
@@ -582,10 +547,7 @@ returns a copy of row i
 
 
 
-
-
 _description: _
-
 
 
 
@@ -621,9 +583,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -659,9 +619,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -697,10 +655,7 @@ Makes a new matrix which is the transpose of the given matrix.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -736,10 +691,7 @@ _inlined_description: _
 
 
 
-
-
 _description: _
-
 
 
 
@@ -775,10 +727,7 @@ _inlined_description: _
 
 
 
-
-
 _description: _
-
 
 
 
@@ -814,10 +763,7 @@ _inlined_description: _
 
 
 
-
-
 _description: _
-
 
 
 
@@ -853,10 +799,7 @@ _inlined_description: _
 
 
 
-
-
 _description: _
-
 
 
 
@@ -892,10 +835,7 @@ _inlined_description: _
 
 
 
-
-
 _description: _
-
 
 
 
@@ -931,10 +871,7 @@ _inlined_description: _
 
 
 
-
-
 _description: _
-
 
 
 
@@ -970,10 +907,7 @@ _inlined_description: _
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1009,10 +943,7 @@ Checks if the matrix is the identity matrix.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1048,10 +979,7 @@ Checks if the matrix contains items that are not numbers.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1087,10 +1015,7 @@ Checks if the matrix is valid by ensuring its items are numbers.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1126,10 +1051,7 @@ Matrix becomes the result of the multiplication of two other matrices.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1172,10 +1094,7 @@ horizontally asymmetrical around the center of the near plane.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1211,10 +1130,7 @@ Matrix becomes the identity matrix.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1250,10 +1166,7 @@ Matrix becomes the inverse of the provided matrix.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1300,10 +1213,7 @@ up The direction which the object considers to be "up".
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1351,10 +1261,7 @@ positioned at the origin (which makes it way simpler).
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1394,10 +1301,7 @@ and a zFar of 1.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1438,10 +1342,7 @@ corresponding box sides intersect it.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1482,10 +1383,7 @@ untouched, so translation will be included as well.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1530,10 +1428,7 @@ horizontally symmetrical around the center of the near plane.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1576,10 +1471,7 @@ to Matrix becomes a rotation to this vector direction.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1609,7 +1501,6 @@ _advanced: False_
 
 _inlined_description: _
 
-
 Parameters:
 angle Matrix becomes a rotation by angle (degrees).
 axis Rotation is performed around this vector.
@@ -1618,10 +1509,7 @@ axis Rotation is performed around this vector.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1651,7 +1539,6 @@ _advanced: False_
 
 _inlined_description: _
 
-
 Parameters:
 angle Matrix becomes a rotation by angle (degrees).
 x X-value of the rotation axis.
@@ -1662,10 +1549,7 @@ z Z-value of the rotation axis.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1695,7 +1579,6 @@ _advanced: False_
 
 _inlined_description: _
 
-
 Parameters:
 quaternion Matrix becomes a rotation that produces the quaternion's orientation.
 
@@ -1703,10 +1586,7 @@ quaternion Matrix becomes a rotation that produces the quaternion's orientation.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1746,10 +1626,7 @@ vectors.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1789,10 +1666,7 @@ Accepts x, y, z scale values as a vector or separately.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1821,7 +1695,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1869,10 +1742,7 @@ Accepts x, y, z translation values as a vector or separately.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1901,7 +1771,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1945,10 +1814,7 @@ _inlined_description: _
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1979,8 +1845,6 @@ _advanced: False_
 _inlined_description: _
 
 \sa makeIdentityMatrix
-
-
 
 
 
@@ -2022,10 +1886,7 @@ _inlined_description: _
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2061,10 +1922,7 @@ _inlined_description: _
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2100,10 +1958,7 @@ _inlined_description: _
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2139,10 +1994,7 @@ _inlined_description: _
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2178,10 +2030,7 @@ _inlined_description: _
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2217,9 +2066,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2255,9 +2102,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2293,9 +2138,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2331,9 +2174,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2369,10 +2210,7 @@ _inlined_description: _
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2408,9 +2246,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2446,10 +2282,7 @@ _inlined_description: _
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2485,9 +2318,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2523,10 +2354,7 @@ The default constructor provides an identity matrix.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2562,10 +2390,7 @@ You can pass another ofMatrix4x4 to create a copy.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2607,10 +2432,7 @@ Warning: the validity of these values is not checked!
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2646,10 +2468,7 @@ Rotation matrices can be constructed from a quaternion.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2687,10 +2506,43 @@ All 16 values of the matrix as positional arguments in row-major order.
 
 
 
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float & operator()(row, col)
+
+<!--
+_syntax: operator()(row, col)_
+_name: operator()_
+_returns: float &_
+_returns_description: _
+_parameters: size_t row, size_t col_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Write data with `matrix(row,col)=number`
+
+
+
 
 
 _description: _
-
 
 
 
@@ -2726,49 +2578,7 @@ Read data with `matrix(row, col)`
 
 
 
-
-
 _description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float operator()(row, col)
-
-<!--
-_syntax: operator()(row, col)_
-_name: operator()_
-_returns: float_
-_returns_description: _
-_parameters: size_t row, size_t col_
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Read data with `matrix(row, col)`
-
-
-
-
-
-
-
-_description: _
-
 
 
 
@@ -2804,10 +2614,7 @@ creates a new matrix from the product of two matrices.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2845,10 +2652,7 @@ Calls postMult() internally.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2884,9 +2688,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2926,10 +2728,7 @@ someMatrix.postMult(someMatrix) won't work.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2965,10 +2764,7 @@ Copy a matrix using `=` operator.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -3006,10 +2802,7 @@ This operation implicitly treat vectors as column-matrices.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -3046,10 +2839,7 @@ The vector is implicitly treated as a column-matrix
 
 
 
-
-
 _description: _
-
 
 
 
@@ -3087,10 +2877,7 @@ This matrix becomes `this * other`.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -3126,10 +2913,7 @@ Equivalent to postMult(newRotationMatrix(q)).
 
 
 
-
-
 _description: _
-
 
 
 
@@ -3165,9 +2949,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -3203,10 +2985,7 @@ Equivalent to postMult(scale(v)).
 
 
 
-
-
 _description: _
-
 
 
 
@@ -3242,9 +3021,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -3280,10 +3057,7 @@ Equivalent to postMult(newTranslationMatrix(v)).
 
 
 
-
-
 _description: _
-
 
 
 
@@ -3319,10 +3093,7 @@ the positional argument version of the above
 
 
 
-
-
 _description: _
-
 
 
 
@@ -3360,10 +3131,7 @@ This operation implicitly treats vectors as row-matrices.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -3400,10 +3168,7 @@ The vector is implicitly treated as a row-matrix
 
 
 
-
-
 _description: _
-
 
 
 
@@ -3441,10 +3206,7 @@ This matrix becomes `other * this`.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -3480,10 +3242,7 @@ Equivalent to preMult(newRotationMatrix(q)).
 
 
 
-
-
 _description: _
-
 
 
 
@@ -3519,10 +3278,7 @@ Equivalent to preMult(newScaleMatrix(v)).
 
 
 
-
-
 _description: _
-
 
 
 
@@ -3558,10 +3314,7 @@ Equivalent to preMult(newTranslationMatrix(v)).
 
 
 
-
-
 _description: _
-
 
 
 
@@ -3597,10 +3350,7 @@ Rotates by angle (degrees) around the given x, y, z axis.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -3636,10 +3386,7 @@ Rotates based on the quarternion.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -3675,10 +3422,7 @@ Rotates by angle (radians) around the given x, y, z axis.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -3714,10 +3458,7 @@ Scales each axis by the corresponding x, y, z.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -3753,10 +3494,7 @@ Scales each axis by the corresponding x, y, z of the vector.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -3794,10 +3532,7 @@ These functions are analogous to the corresponding constructors.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -3833,9 +3568,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -3871,9 +3604,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -3909,9 +3640,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -3951,10 +3680,7 @@ deleting the previous data only in that component.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -3990,9 +3716,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -4028,9 +3752,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -4066,10 +3788,7 @@ Apply a 3x3 transform (no translation) of v * M.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -4105,10 +3824,7 @@ Apply a 3x3 transform (no translation) of M * v.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -4144,10 +3860,7 @@ Translates by tx, ty, tz.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -4183,10 +3896,7 @@ Translates along the vector.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -4222,10 +3932,7 @@ destructor.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -4257,8 +3964,11 @@ _inlined_description: _
 
 The values of the matrix, stored in row-major order.
 
-_description: _
 
+
+
+
+_description: _
 
 
 

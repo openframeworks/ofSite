@@ -73,15 +73,11 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Draws any detected objects to the screen with a rectangle, like so:
 
 ![Draw faces](draw_facedetection.jpg "Detecting faces.")
-
-
 
 
 
@@ -115,9 +111,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Takes an input ofImage object and allows you to set the minimum width and height of areas that should be returned.
 
@@ -129,8 +123,6 @@ if(camera.isFrameNew())
 	finder.findHaarObjects(img);
 }
 ~~~~
-
-
 
 
 
@@ -164,13 +156,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Takes an input ofxCvGrayscaleImage object and allows you to set the minimum width and height of areas that should be returned.
-
-
 
 
 
@@ -204,9 +192,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Takes an input ofxCvGrayscaleImage object and allows you to set the minimum width and height of areas that should be returned and a region of interest as an ofRectangle that you would like to limit haar finding to.
 
@@ -221,8 +207,6 @@ for(int i = 0; i < faceFinder.blobs.size(); i++) {
 	eyeFinder.findHaarObjects(grayImage, roi);
 }
 ~~~~
-
-
 
 
 
@@ -256,13 +240,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Takes an input ofxCvGrayscaleImage object and allows you to set the minimum width and height of areas that should be returned and a region of interest as an ofRectangle that you would like to limit haar finding to.
-
-
 
 
 
@@ -296,13 +276,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Takes an input ofPixels object and allows you to set the minimum width and height of areas that should be returned.
-
-
 
 
 
@@ -336,13 +312,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns the height of the image area that is being examined.
-
-
 
 
 
@@ -376,13 +348,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns the width of the image area that is being examined.
-
-
 
 
 
@@ -416,13 +384,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Constructor.
-
-
 
 
 
@@ -456,13 +420,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Copy constructor.
-
-
 
 
 
@@ -489,7 +449,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -533,9 +492,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -571,13 +528,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 This loads a Haar cascade file into the finder. This needs to be done before the Haar finder can be used with images.
-
-
 
 
 
@@ -611,13 +564,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Destructor.
-
-
 
 
 
@@ -646,12 +595,14 @@ _advanced: False_
 _inlined_description: _
 
 
+
+
+
+
+
 _description: _
 
-
 Provides access to the all the blobs detected in the last run of findHaarObjects() via a vector<ofxCvBlob>.
-
-
 
 
 
@@ -676,8 +627,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -704,8 +659,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -732,8 +691,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -760,8 +723,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -788,8 +755,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 

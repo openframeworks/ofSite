@@ -50,7 +50,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -80,7 +79,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -124,7 +122,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -154,7 +151,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -198,7 +194,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -228,7 +223,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -272,7 +266,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -302,7 +295,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -346,7 +338,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -376,7 +367,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -420,7 +410,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -450,7 +439,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -494,7 +482,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -524,7 +511,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -568,7 +554,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -598,7 +583,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -642,6 +626,41 @@ _inlined_description: _
 
 
 
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###PixelType & operator[](idx)
+
+<!--
+_syntax: operator[](idx)_
+_name: operator[]_
+_returns: PixelType &_
+_returns_description: _
+_parameters: int idx_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
 
 _description: _
 
@@ -672,44 +691,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###const PixelType & operator[](idx)
-
-<!--
-_syntax: operator[](idx)_
-_name: operator[]_
-_returns: const PixelType &_
-_returns_description: _
-_parameters: int idx_
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
 
 
 
@@ -748,6 +729,11 @@ _advanced: False_
 _inlined_description: _
 
 
+
+
+
+
+
 _description: _
 
 
@@ -775,6 +761,11 @@ _advanced: False_
 _inlined_description: _
 
 
+
+
+
+
+
 _description: _
 
 
@@ -800,6 +791,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _

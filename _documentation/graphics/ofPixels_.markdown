@@ -81,14 +81,9 @@ channels Number of channels per pixel
 
 
 
-
-
 _description: _
 
-
 Allocates space for pixel data of the given width (w), height (h) and number of channels (channels). If an ofImageType or ofPixelFormat is passed in, it will allocate based on the required number of channels.
-
-
 
 
 
@@ -135,10 +130,7 @@ pixelFormat ofPixelFormat defining number of channels per pixel
 
 
 
-
-
 _description: _
-
 
 ofPixelFormat:
 
@@ -149,8 +141,6 @@ ofPixelFormat:
 	OF_PIXELS_BGRA
 
 	OF_PIXELS_MONO
-
-
 
 
 
@@ -196,10 +186,7 @@ imageType ofImageType defining number of channels per pixel
 
 
 
-
-
 _description: _
-
 
 ofImageType:
 	
@@ -208,8 +195,6 @@ ofImageType:
 	OF_IMAGE_COLOR
 	
 	OF_IMAGE_COLOR_ALPHA
-
-
 
 
 
@@ -236,7 +221,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -280,7 +264,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -317,10 +300,7 @@ _inlined_description: _
 
 
 
-
-
 _description: _
-
 
 
 
@@ -349,7 +329,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -395,14 +374,9 @@ the ofPixels object again to use it.
 
 
 
-
-
 _description: _
 
-
 This clears all the data from the ofPixels objects. After calling this you'll need to allocate the ofPixels object again to use it.
-
-
 
 
 
@@ -436,9 +410,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -474,9 +446,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -515,14 +485,9 @@ expensive if done a lot.
 
 
 
-
-
 _description: _
 
-
 This crops the pixels to a new width and height. As a word of caution this reallocates memory and can be a bit expensive if done a lot.
-
-
 
 
 
@@ -560,14 +525,9 @@ expensive if done a lot.
 
 
 
-
-
 _description: _
 
-
 This crops the pixels into the ofPixels reference passed in by toPix. at the x and y and with the new width and height. As a word of caution this reallocates memory and can be a bit expensive if done a lot.
-
-
 
 
 
@@ -594,7 +554,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -631,7 +590,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -681,15 +639,10 @@ return 32 and ofPixels<unsigned char> return 8.
 
 
 
-
-
 _description: _
-
 
 This is how large each channel of a pixels is, ofPixels objects that store pixel data as unsigned char are smaller than  ofPixels objects that store pixel data as floats.
 This returns bit, not bytes, so you'll probably see ofPixels<float> as 32 and ofPixels<unsigned char> as 8.
-
-
 
 
 
@@ -726,14 +679,9 @@ you'll have 32, if you have grayscale, this will return 8.
 
 
 
-
-
 _description: _
 
-
 If you have RGB pixel data, this will return 3, if you have RGBA, you'll have 4, if you have grayscale, this will return 1.
-
-
 
 
 
@@ -773,15 +721,10 @@ return 4 and ofPixels<unsigned char> return 1.
 
 
 
-
-
 _description: _
-
 
 This is how large each channel of a pixels is, ofPixels objects that store pixel data as unsigned char are smaller than  ofPixels objects that store pixel data as floats.
 This returns bytes, not bits, so you'll probably see ofPixels<float> as 4 and ofPixels<unsigned char> as 1.
-
-
 
 
 
@@ -815,14 +758,9 @@ Get the number of bytes per pixel
 
 
 
-
-
 _description: _
 
-
 Returns the number of the pixels.
-
-
 
 
 
@@ -849,7 +787,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -906,10 +843,7 @@ specific channel
 
 
 
-
-
 _description: _
-
 
 This returns a single channel, for instance, the Red pixel values, from the ofPixels object, this gives you a grayscale representation of that one channel.
 ~~~~{.cpp}
@@ -917,8 +851,6 @@ This returns a single channel, for instance, the Red pixel values, from the ofPi
 	ofPixels gpix = pix.getChannel(1);
 	ofPixels bpix = pix.getChannel(2);
 ~~~~
-
-
 
 
 
@@ -952,17 +884,12 @@ Get the color at a x,y position
 
 
 
-
-
 _description: _
-
 
 This method returns the ofColor that the pixels contains at an x, y pair:
 ~~~~{.cpp}
 ofColor c = pix.getColor(mouseX, mouseY);
 ~~~~
-
-
 
 
 
@@ -991,8 +918,6 @@ _advanced: False_
 _inlined_description: _
 
 Get the color at a specific index
-
-
 
 
 
@@ -1027,7 +952,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1071,7 +995,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -1101,7 +1024,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1145,6 +1067,44 @@ _inlined_description: _
 
 
 
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###PixelType * getData()
+
+<!--
+_syntax: getData()_
+_name: getData_
+_returns: PixelType *_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Retrieves pixel data from the ofPixel object.
+
+
+Returns: A raw pointer to the pixel data.
+
+
+
+
 
 _description: _
 
@@ -1175,44 +1135,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###const PixelType * getData()
-
-<!--
-_syntax: getData()_
-_name: getData_
-_returns: const PixelType *_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
 
 
 
@@ -1256,14 +1178,9 @@ Get the height of the pixel array.
 
 
 
-
-
 _description: _
 
-
 Returns the height of the pixels.
-
-
 
 
 
@@ -1300,14 +1217,9 @@ Returns: One of the following types: `OF_IMAGE_GRAYSCALE`,
 
 
 
-
-
 _description: _
 
-
 Returns what image type the ofPixels object is.
-
-
 
 
 
@@ -1334,7 +1246,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1378,7 +1289,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -1408,7 +1318,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1453,14 +1362,9 @@ RGB is 3 channels, RGBA is 4, and grayscale is 1.
 
 
 
-
-
 _description: _
 
-
 This returns the number of channels that the ofPixels object contains. RGB is 3 channels, RGBA is 4, and grayscale is 1.
-
-
 
 
 
@@ -1487,7 +1391,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1524,7 +1427,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1574,10 +1476,7 @@ pix.setPixel(ind, yellow);
 
 
 
-
-
 _description: _
-
 
 This method tells you want pixel index an x, y pair would be at in the index, for instance:
 ~~~~{.cpp}
@@ -1585,8 +1484,6 @@ ofColor yellow = ofColor::yellow;
 int ind = pix.getPixelIndex(mouseX, mouseY);
 pix.setPixel(ind, yellow);
 ~~~~
-
-
 
 
 
@@ -1613,7 +1510,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1657,7 +1553,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -1687,7 +1582,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1731,14 +1625,9 @@ Get the width of the pixel array.
 
 
 
-
-
 _description: _
 
-
 Returns the width of the pixels.
-
-
 
 
 
@@ -1775,14 +1664,9 @@ the memory needed, but it's sometimes good to check.
 
 
 
-
-
 _description: _
 
-
 Returns whether memory has been allocated for an ofPixels object or not. Many operations like copying pixels, etc, automatically allocate the memory needed, but it's sometimes good to check.
-
-
 
 
 
@@ -1820,14 +1704,9 @@ horizontal Set to true to mirror horizontal
 
 
 
-
-
 _description: _
 
-
 This reflects the pixels across the vertical and/or horizontal axis.
-
-
 
 
 
@@ -1861,9 +1740,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1900,10 +1777,7 @@ _inlined_description: _
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1939,9 +1813,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1977,9 +1849,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2015,9 +1885,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2053,9 +1921,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2093,10 +1959,7 @@ you'll have 4
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2132,13 +1995,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Provides access to each channel of each pixel. If you have RGB pixel data, then you'll have 3 values for each pixel, if you have RGBA, you'll have 4.
-
-
 
 
 
@@ -2175,10 +2034,7 @@ copied doesn't fit into the destination then the image is cropped.
 
 
 
-
-
 _description: _
-
 
 This pastes the ofPixels object into another ofPixels object at the specified index, copying data from the ofPixels that the method is being called on to the ofPixels object at &dst. If the data being copied doesn't fit into the dst then the image is cropped.
 ~~~~{.cpp}
@@ -2191,8 +2047,6 @@ mixtureTex.loadData(fujiPixels);
 ~~~~
 Drawing the three textures here you can see the ball cropped into the mountain:
 ![crop_demo](ofPixels_crop.png)
-
-
 
 
 
@@ -2219,7 +2073,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2263,7 +2116,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -2300,7 +2152,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -2330,7 +2181,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2380,17 +2230,12 @@ The options for the interpolation methods are as follows:
 
 
 
-
-
 _description: _
-
 
 This resizes the ofPixels instance to the dstHeight and dstWidth. The options for the interpolation methods are as follows:
 OF_INTERPOLATE_NEAREST_NEIGHBOR =1
 OF_INTERPOLATE_BILINEAR			=2
 OF_INTERPOLATE_BICUBIC			=3
-
-
 
 
 
@@ -2430,17 +2275,12 @@ The options for the interpolation methods are as follows:
 
 
 
-
-
 _description: _
-
 
 This resizes the ofPixels instance to the size of the ofPixels object passed in dst. The options for the interpolation methods are as follows:
 OF_INTERPOLATE_NEAREST_NEIGHBOR =1
 OF_INTERPOLATE_BILINEAR			=2
 OF_INTERPOLATE_BICUBIC			=3
-
-
 
 
 
@@ -2474,13 +2314,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 crop to a new width and height, this reallocates memory.
-
-
 
 
 
@@ -2514,9 +2350,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2554,10 +2388,7 @@ _inlined_description: _
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2593,9 +2424,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2633,14 +2462,9 @@ representation of the data that should go into that one channel.
 
 
 
-
-
 _description: _
 
-
 This sets all the pixel data for a single channel, for instance, the Red pixel values, from an ofPixels object assumed to be a grayscale representation of the data that should go into that one channel.
-
-
 
 
 
@@ -2674,14 +2498,9 @@ Set the color of the pixel at the x,y location
 
 
 
-
-
 _description: _
 
-
 Sets the color of the pixel at the x,y location.
-
-
 
 
 
@@ -2715,10 +2534,7 @@ Set the color of the pixel at a specific index
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2754,10 +2570,7 @@ Set the color of all pixels
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2793,9 +2606,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2824,7 +2635,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2868,8 +2678,6 @@ used to copy i420 pixels from gstreamer when (width % 4) != 0
 
 
 
-
-
 _description: _
 
 
@@ -2906,9 +2714,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2937,7 +2743,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2981,9 +2786,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -3012,7 +2815,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -3056,9 +2858,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -3098,10 +2898,7 @@ imageType Can be one of the following: OF_IMAGE_GRAYSCALE, OF_IMAGE_COLOR, OF_IM
 
 
 
-
-
 _description: _
-
 
 
 
@@ -3137,9 +2934,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -3177,14 +2972,9 @@ of the same dimensions would be 640,000.
 
 
 
-
-
 _description: _
 
-
 This gives you the number of values that the ofPixels object contains, so an RGB data 400x400 would be 480,000, whereas RGBA data of the same dimensions would be 640,000.
-
-
 
 
 
@@ -3218,9 +3008,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -3257,14 +3045,9 @@ image, leaving the G and A channels as is.
 
 
 
-
-
 _description: _
 
-
 As implemented right now, this method swaps the R and B channels of an image, leaving the G and A channels as is.
-
-
 
 
 
@@ -3298,9 +3081,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -3331,8 +3112,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3359,8 +3144,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3385,6 +3174,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _
@@ -3414,8 +3208,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3442,8 +3240,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3468,6 +3270,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _
@@ -3497,8 +3304,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 

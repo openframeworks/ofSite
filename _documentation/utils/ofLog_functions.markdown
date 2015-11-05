@@ -42,18 +42,13 @@ Returns: The currently set global logging level.
 
 
 
-
-
 _description: _
-
 
 Get the current log level. This is useful when combined with ofGetLogLevelName() if you want to print the current log level:
 ~~~~{.cpp}
 ofLogLevel currentLevel = ofGetLogLevel();
 ofLog() << "The current log level is " << ofGetLogLevelName(currentLevel);
 ~~~~
-
-
 
 
 
@@ -92,10 +87,7 @@ Returns: The log level name as a string.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -133,10 +125,7 @@ after ofLogToFile or ofSetLoggerChannel has been called.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -175,10 +164,7 @@ append True if you want to append to the existing file.
 
 
 
-
-
 _description: _
-
 
 Enable logging to a file instead of the console.
 Set the path and name of the log file and it will be created if it doesn't exist. If it does exist, it will be overwritten unless you set *append* to true, whereas new lines will be added to the bottom of the file.
@@ -192,8 +178,6 @@ ofLogToFile("myLogFile.txt", true);
 ofLog() << "a test string";
 ~~~~
 Note: When file logging is enabled, will not see log messages on the console!
-
-
 
 
 
@@ -249,10 +233,7 @@ level the ofLogLevel (and below) you want to show
 
 
 
-
-
 _description: _
-
 
 Sets the logging level so only messages above a certain priority are shown. This is useful if you want see lots of messages when debugging, but then set a higher level so only warnings and errors appear for users.
 logLevel values are (in order of priority):
@@ -278,8 +259,6 @@ ofLogVerbose() << "a verbose print";	// this doesn't
 ~~~~
 The default log level is OF_LOG_NOTICE.
 OF_LOG_SILENT is a special value which disables **all** messages.
-
-
 
 
 
@@ -341,10 +320,7 @@ ofLogVerbose("MyOtherClass") << "A verbose message from MyOtherClass.";
 
 
 
-
-
 _description: _
-
 
 
 
@@ -387,10 +363,7 @@ loggerChannel A shared pointer to the logger channel.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -433,10 +406,7 @@ loggerChannel A shared pointer to the logger channel.
 
 
 
-
-
 _description: _
-
 
 
 

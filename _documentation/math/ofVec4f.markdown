@@ -55,10 +55,7 @@ num The number of ofVec4f objects in the array.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -100,10 +97,7 @@ Returns: The distance between the two vectors in 4D space.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -151,10 +145,7 @@ Returns: The dot product of this vector with 'vec'.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -197,10 +188,7 @@ Returns: The interpolation as an ofVec4f.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -242,10 +230,7 @@ Returns: A copy of the current vector that is at most 'max' units long.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -287,10 +272,7 @@ Returns: The midpoint between this vector and 'pnt' as an ofVec4f.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -333,10 +315,7 @@ Returns: The normalized copy of the current vector.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -373,10 +352,7 @@ _inlined_description: _
 
 
 
-
-
 _description: _
-
 
 
 
@@ -412,9 +388,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -456,10 +430,7 @@ Returns: The result of scaling the this vector up or down.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -500,10 +471,7 @@ p The amount to move towards 'pnt'; 'p' is normally between 0 and 1 and where 0 
 
 
 
-
-
 _description: _
-
 
 
 
@@ -542,10 +510,7 @@ Returns: The magnitude of the current vector.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -581,9 +546,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -623,10 +586,7 @@ max The maximum length of the current vector.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -662,9 +622,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -706,10 +664,7 @@ Returns: The midpoint between this vector and 'pnt' as an ofVec4f.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -749,10 +704,7 @@ a unit vector, and can be used to represent a pure direction (heading).
 
 
 
-
-
 _description: _
-
 
 
 
@@ -789,10 +741,7 @@ _inlined_description: _
 
 
 
-
-
 _description: _
-
 
 
 
@@ -828,9 +777,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -866,9 +813,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -904,9 +849,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -942,9 +885,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -980,9 +921,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1018,9 +957,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1056,9 +993,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1094,9 +1029,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1132,9 +1065,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1170,9 +1101,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1209,10 +1138,7 @@ _inlined_description: _
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1248,9 +1174,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1286,9 +1210,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1324,9 +1246,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1362,9 +1282,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1400,9 +1318,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1438,9 +1354,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1476,9 +1390,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1514,9 +1426,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1552,9 +1462,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1590,9 +1498,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1628,9 +1534,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1666,9 +1570,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1705,10 +1607,7 @@ _inlined_description: _
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1744,9 +1643,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1782,9 +1679,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1824,10 +1719,7 @@ length The desired length of the vector.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1863,9 +1755,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1901,9 +1791,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1939,9 +1827,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1977,9 +1863,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2015,9 +1899,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2049,8 +1931,11 @@ _inlined_description: _
 
 \cond INTERNAL
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -2077,8 +1962,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2106,8 +1995,11 @@ _inlined_description: _
 
 \endcond
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -2134,8 +2026,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2162,8 +2058,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 

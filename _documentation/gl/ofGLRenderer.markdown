@@ -64,13 +64,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 See [ofBackground](ofGraphics.html#show_ofBackground)
-
-
 
 
 
@@ -104,9 +100,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -142,13 +136,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 See [ofBackground](ofGraphics.html#show_ofBackground)
-
-
 
 
 
@@ -182,13 +172,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 See [ofBackground](ofGraphics.html#show_ofBackground)
-
-
 
 
 
@@ -215,7 +201,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -259,7 +244,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -289,7 +273,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -333,7 +316,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -363,7 +345,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -407,7 +388,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -437,7 +417,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -481,7 +460,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -511,7 +489,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -555,13 +532,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 See [ofClear](ofGraphics.html#show_ofClear)
-
-
 
 
 
@@ -595,13 +568,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 See [ofClear](ofGraphics.html#show_ofClear)
-
-
 
 
 
@@ -635,13 +604,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 See [ofClear](ofGraphics.html#show_ofClear)
-
-
 
 
 
@@ -668,7 +633,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -712,13 +676,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 See [ofDisableAntiAliasing](ofGraphics.html#show_ofDisableAntiAliasing)
-
-
 
 
 
@@ -745,7 +705,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -789,7 +748,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -826,9 +784,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -857,7 +813,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -901,7 +856,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -938,13 +892,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Draws an ofMesh.
-
-
 
 
 
@@ -978,13 +928,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Draws a of3dPrimitive. Called internally.
-
-
 
 
 
@@ -1011,7 +957,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1055,13 +1000,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Handles drawing ofPolylines. This is called when you call line.draw().
-
-
 
 
 
@@ -1095,13 +1036,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Handles drawing ofPath. This is called when you call ofPath::draw().
-
-
 
 
 
@@ -1135,13 +1072,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Draws an texture.
-
-
 
 
 
@@ -1175,13 +1108,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Draws an texture.
-
-
 
 
 
@@ -1215,13 +1144,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Draws an texture.
-
-
 
 
 
@@ -1248,7 +1173,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1292,7 +1216,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -1322,7 +1245,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1366,7 +1288,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -1403,13 +1324,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 See [ofCircle](ofGraphics.html#show_ofCircle)
-
-
 
 
 
@@ -1436,7 +1353,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1480,7 +1396,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -1517,13 +1432,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 See [ofEllipse](ofGraphics.html#show_ofEllipse)
-
-
 
 
 
@@ -1550,7 +1461,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1594,7 +1504,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -1631,13 +1540,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 See [ofLine](ofGraphics.html#show_ofLine)
-
-
 
 
 
@@ -1671,13 +1576,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 See [ofRect](ofGraphics.html#show_ofRect)
-
-
 
 
 
@@ -1704,7 +1605,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1748,7 +1648,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -1785,13 +1684,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Draw a Triangle.
-
-
 
 
 
@@ -1825,13 +1720,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 See [ofEnableAntiAliasing](ofGraphics.html#show_ofEnableAntiAliasing)
-
-
 
 
 
@@ -1858,7 +1749,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1902,7 +1792,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -1939,9 +1828,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1970,7 +1857,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2014,7 +1900,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -2044,7 +1929,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2088,9 +1972,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2126,6 +2008,41 @@ _inlined_description: _
 
 
 
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const of3dGraphics & get3dGraphics()
+
+<!--
+_syntax: get3dGraphics()_
+_name: get3dGraphics_
+_returns: const of3dGraphics &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
 
 _description: _
 
@@ -2156,44 +2073,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###of3dGraphics & get3dGraphics()
-
-<!--
-_syntax: get3dGraphics()_
-_name: get3dGraphics_
-_returns: of3dGraphics &_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
 
 
 
@@ -2237,7 +2116,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -2267,7 +2145,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2311,13 +2188,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 See [ofGetCoordHandedness](ofGraphics.html#show_ofGetCoordHandedness)
-
-
 
 
 
@@ -2351,9 +2224,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2382,7 +2253,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2426,7 +2296,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -2456,7 +2325,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2500,13 +2368,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 See [ofGetCurrentViewport](ofGraphics.html#show_ofGetCurrentViewport)
-
-
 
 
 
@@ -2540,13 +2404,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 See [ofGetFill](ofGraphics.html#show_ofGetFill)
-
-
 
 
 
@@ -2573,7 +2433,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2617,7 +2476,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -2647,7 +2505,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2691,13 +2548,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 See [ofGetNativeViewport](ofGraphics.html#show_ofGetNativeViewport)
-
-
 
 
 
@@ -2724,7 +2577,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2768,13 +2620,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 See [ofGetRectMode](ofGraphics.html#show_ofGetRectMode)
-
-
 
 
 
@@ -2801,7 +2649,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2845,9 +2692,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2883,13 +2728,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 See [ofGetViewportHeight](ofGraphics.html#show_ofGetViewportHeight)
-
-
 
 
 
@@ -2923,13 +2764,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 See [ofGetViewportWidth](ofGraphics.html#show_ofGetViewportWidth)
-
-
 
 
 
@@ -2963,13 +2800,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 See [ofIsVFlipped](ofGraphics.html#show_ofIsVFlipped)
-
-
 
 
 
@@ -2996,7 +2829,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -3040,13 +2872,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 See [ofLoadMatrix](ofGraphics.html#show_ofLoadMatrix)
-
-
 
 
 
@@ -3080,13 +2908,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 See [ofLoadMatrix](ofGraphics.html#show_ofLoadMatrix)
-
-
 
 
 
@@ -3113,7 +2937,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -3157,9 +2980,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -3195,9 +3016,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -3233,9 +3052,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -3264,7 +3081,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -3308,7 +3124,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -3345,13 +3160,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 See [ofPopMatrix](ofGraphics.html#show_ofPopMatrix)
-
-
 
 
 
@@ -3378,7 +3189,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -3422,9 +3232,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -3460,13 +3268,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 See [ofPushMatrix](ofGraphics.html#show_ofPushMatrix)
-
-
 
 
 
@@ -3493,7 +3297,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -3537,9 +3340,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -3575,13 +3376,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 See [ofRotate](ofGraphics.html#show_ofRotate)
-
-
 
 
 
@@ -3615,13 +3412,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 See [ofRotate](ofGraphics.html#show_ofRotate)
-
-
 
 
 
@@ -3655,13 +3448,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 See [ofRotate](ofGraphics.html#show_ofRotate)
-
-
 
 
 
@@ -3695,13 +3484,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 See [ofRotate](ofGraphics.html#show_ofRotate)
-
-
 
 
 
@@ -3735,13 +3520,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 See [ofRotate](ofGraphics.html#show_ofRotate)
-
-
 
 
 
@@ -3768,7 +3549,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -3812,7 +3592,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -3849,13 +3628,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 See [ofScale](../graphics/ofGraphics.html#show_ofScale)
-
-
 
 
 
@@ -3882,7 +3657,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -3926,9 +3700,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -3957,7 +3729,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -4001,7 +3772,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -4038,13 +3808,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 See [ofEnableBlendMode](ofGraphics.html#show_ofEnableBlendMode)
-
-
 
 
 
@@ -4078,13 +3844,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 See [ofSetCircleResolution](ofGraphics.html#show_ofSetCircleResolution)
-
-
 
 
 
@@ -4118,13 +3880,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 See [ofSetColor](ofGraphics.html#show_ofSetColor)
-
-
 
 
 
@@ -4158,13 +3916,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 See [ofSetColor](ofGraphics.html#show_ofSetColor)
-
-
 
 
 
@@ -4198,13 +3952,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 See [ofSetColor](ofGraphics.html#show_ofSetColor)
-
-
 
 
 
@@ -4238,13 +3988,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 See [ofSetColor](ofGraphics.html#show_ofSetColor)
-
-
 
 
 
@@ -4278,13 +4024,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 See [ofSetColor](ofGraphics.html#show_ofSetColor)
-
-
 
 
 
@@ -4318,13 +4060,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 See [ofSetCoordHandedness](ofGraphics.html#show_ofSetCoordHandedness)
-
-
 
 
 
@@ -4351,7 +4089,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -4395,13 +4132,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 See [ofDisableDepthTest](ofGraphics.html#show_ofDisableDepthTest) and [ofEnableDepthTest](ofGraphics.html#show_ofEnableDepthTest)
-
-
 
 
 
@@ -4435,9 +4168,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -4466,7 +4197,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -4510,13 +4240,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 See [ofSetColor](ofGraphics.html#show_ofSetColor)
-
-
 
 
 
@@ -4543,7 +4269,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -4587,7 +4312,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -4617,7 +4341,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -4661,7 +4384,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -4691,7 +4413,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -4735,7 +4456,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -4765,7 +4485,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -4809,7 +4528,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -4846,9 +4564,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -4884,13 +4600,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 See [ofSetLineWidth](ofGraphics.html#show_ofSetLineWidth)
-
-
 
 
 
@@ -4924,9 +4636,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -4955,7 +4665,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -4999,13 +4708,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 See [ofSetRectMode](ofGraphics.html#show_ofSetRectMode)
-
-
 
 
 
@@ -5032,7 +4737,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -5076,7 +4780,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -5106,7 +4809,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -5150,9 +4852,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -5188,13 +4888,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 See [ofSetupScreen](ofGraphics.html#show_ofSetupScreen)
-
-
 
 
 
@@ -5228,13 +4924,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 See [ofSetupScreenOrth](ofGraphics.html#show_ofSetupScreenOrtho)
-
-
 
 
 
@@ -5268,13 +4960,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 See [ofSetupScreenPerspective](ofGraphics.html#show_ofSetupScreenPerspective)
-
-
 
 
 
@@ -5301,7 +4989,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -5345,9 +5032,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -5383,9 +5068,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -5421,13 +5104,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 See [ofTranslate](ofGraphics.html#show_ofTranslate)
-
-
 
 
 
@@ -5461,13 +5140,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 See [ofTranslate](ofGraphics.html#show_ofTranslate)
-
-
 
 
 
@@ -5494,7 +5169,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -5538,7 +5212,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -5568,7 +5241,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -5612,7 +5284,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -5642,7 +5313,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -5686,7 +5356,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -5723,9 +5392,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -5761,9 +5428,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -5799,9 +5464,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -5832,8 +5495,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -5858,6 +5525,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _
@@ -5887,8 +5559,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -5913,6 +5589,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _
@@ -5942,8 +5623,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -5970,8 +5655,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -5999,6 +5688,10 @@ _inlined_description: _
 
 < the framebuffer id currently bound to the GL_FRAMEBUFFER target
 
+
+
+
+
 _description: _
 
 
@@ -6024,6 +5717,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _
@@ -6054,6 +5752,10 @@ _inlined_description: _
 
 < default GL_FRAMEBUFFER_BINDING, windowing frameworks might want to set this to their MSAA framebuffer, defaults to 0
 
+
+
+
+
 _description: _
 
 
@@ -6082,6 +5784,10 @@ _inlined_description: _
 
 < keeps track of currently bound framebuffers
 
+
+
+
+
 _description: _
 
 
@@ -6107,6 +5813,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _
@@ -6136,6 +5847,11 @@ _advanced: False_
 _inlined_description: _
 
 
+
+
+
+
+
 _description: _
 
 
@@ -6163,8 +5879,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -6189,6 +5909,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _
@@ -6218,8 +5943,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -6244,6 +5973,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _
@@ -6273,6 +6007,11 @@ _advanced: False_
 _inlined_description: _
 
 
+
+
+
+
+
 _description: _
 
 
@@ -6300,8 +6039,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -6326,6 +6069,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _
@@ -6355,6 +6103,11 @@ _advanced: False_
 _inlined_description: _
 
 
+
+
+
+
+
 _description: _
 
 
@@ -6382,8 +6135,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -6408,6 +6165,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _

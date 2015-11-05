@@ -52,8 +52,6 @@ Return the average distance between each of the pointers forming the gesture in 
 
 
 
-
-
 _description: _
 
 
@@ -85,8 +83,6 @@ _advanced: False_
 _inlined_description: _
 
 Return the average X distance between each of the pointers forming the gesture in progress through the focal point.
-
-
 
 
 
@@ -128,8 +124,6 @@ Return the average Y distance between each of the pointers forming the gesture i
 
 
 
-
-
 _description: _
 
 
@@ -161,8 +155,6 @@ _advanced: False_
 _inlined_description: _
 
 Return the event time of the current event being processed.
-
-
 
 
 
@@ -204,8 +196,6 @@ Get the X coordinate of the current gesture's focal point.
 
 
 
-
-
 _description: _
 
 
@@ -237,8 +227,6 @@ _advanced: False_
 _inlined_description: _
 
 Get the Y coordinate of the current gesture's focal point.
-
-
 
 
 
@@ -280,8 +268,6 @@ Return the previous average distance between each of the pointers forming the ge
 
 
 
-
-
 _description: _
 
 
@@ -313,8 +299,6 @@ _advanced: False_
 _inlined_description: _
 
 Return the previous average X distance between each of the pointers forming the gesture in progress through the focal point.
-
-
 
 
 
@@ -356,8 +340,6 @@ Return the previous average Y distance between each of the pointers forming the 
 
 
 
-
-
 _description: _
 
 
@@ -389,8 +371,6 @@ _advanced: False_
 _inlined_description: _
 
 Return the scaling factor from the previous scale event to the current event.
-
-
 
 
 
@@ -432,8 +412,6 @@ Return the time difference in milliseconds between the previous accepted scaling
 
 
 
-
-
 _description: _
 
 
@@ -470,7 +448,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -500,6 +477,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _

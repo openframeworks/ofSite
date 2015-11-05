@@ -49,10 +49,7 @@ nBands number of spectrum bands to return, max 512.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -90,14 +87,9 @@ vol range is 0 to 1.
 
 
 
-
-
 _description: _
 
-
 Sets the volume of all ofSoundPlayer objects to the volume (vol) specified. 0.0 - 1.0 range. 0.0 is silent and 1.0 is full volume.
-
-
 
 
 
@@ -130,10 +122,7 @@ Cleans up FMOD (windows, osx).
 
 
 
-
-
 _description: _
-
 
 
 
@@ -168,10 +157,7 @@ Stops all active sound players on FMOD-based systems (windows, osx).
 
 
 
-
-
 _description: _
-
 
 
 
@@ -206,14 +192,9 @@ Call in your app's update() to update FMOD-based sound players.
 
 
 
-
-
 _description: _
 
-
 Updates sound engine. This should be called every frame.
-
-
 
 
 

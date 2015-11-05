@@ -52,7 +52,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -85,6 +84,10 @@ _inlined_description: _
 
 The device's unique ID (to be used in ofSoundStream::setDeviceID() )
 
+
+
+
+
 _description: _
 
 
@@ -112,6 +115,10 @@ _advanced: False_
 _inlined_description: _
 
 Number of input channels the device supports
+
+
+
+
 
 _description: _
 
@@ -141,6 +148,10 @@ _inlined_description: _
 
 If true, this device will be used by ofSoundStream unless changed with setDeviceID()
 
+
+
+
+
 _description: _
 
 
@@ -168,6 +179,10 @@ _advanced: False_
 _inlined_description: _
 
 If true, this device will be used by ofSoundStream unless changed with setDeviceID()
+
+
+
+
 
 _description: _
 
@@ -198,6 +213,10 @@ _inlined_description: _
 Descriptive name for the device
 This is the same string that ofSoundStream::getMatchingDevices() will be looking for
 
+
+
+
+
 _description: _
 
 
@@ -226,6 +245,10 @@ _inlined_description: _
 
 Number of output channels the device supports
 
+
+
+
+
 _description: _
 
 
@@ -253,6 +276,10 @@ _advanced: False_
 _inlined_description: _
 
 List of sample rates the device claims to support
+
+
+
+
 
 _description: _
 

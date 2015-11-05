@@ -83,13 +83,9 @@ Move up+down (in local y axis)
 
 
 
-
-
 _description: _
 
 Move up+down (in local y axis).
-
-
 
 
 
@@ -123,10 +119,7 @@ Remove parent node linking
 
 
 
-
-
 _description: _
-
 
 
 
@@ -162,9 +155,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -197,8 +188,6 @@ _inlined_description: _
 If you extend ofNode and wish to change the way it draws, extend this
 try to not use global functions for rendering and instead use the passed
 renderer
-
-
 
 
 
@@ -240,12 +229,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 If you extend ofNode and wish to change the way it draws, extend this.
-
-
 
 
 
@@ -279,13 +265,9 @@ Move forward+backward (in local z axis)
 
 
 
-
-
 _description: _
 
 Move forward+backward (in local z axis)
-
-
 
 
 
@@ -322,13 +304,9 @@ and calls the virtual 'customDraw' method above which you CAN override
 
 
 
-
-
 _description: _
 
 Draw function. do NOT override this transforms the node to its position+orientation+scale and calls the virtual 'customDraw' method above which you CAN override.
-
-
 
 
 
@@ -362,9 +340,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -400,9 +376,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -438,9 +412,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -476,9 +448,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -514,9 +484,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -552,9 +520,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -592,13 +558,9 @@ Returns: -z axis.
 
 
 
-
-
 _description: _
 
 Get -z axis.
-
-
 
 
 
@@ -632,9 +594,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -670,9 +630,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -708,10 +666,7 @@ Get the parent node that this node is linked to
 
 
 
-
-
 _description: _
-
 
 
 
@@ -747,9 +702,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -785,10 +738,7 @@ Get position as a 3d vector
 
 
 
-
-
 _description: _
-
 
 
 
@@ -824,9 +774,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -862,9 +810,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -902,10 +848,7 @@ Returns: x axis.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -943,13 +886,9 @@ Returns: y axis.
 
 
 
-
-
 _description: _
 
 Get y axis.
-
-
 
 
 
@@ -983,13 +922,9 @@ Get x coordinate
 
 
 
-
-
 _description: _
 
 Get x coodinate.
-
-
 
 
 
@@ -1023,13 +958,9 @@ Get x axis as 3d vector
 
 
 
-
-
 _description: _
 
 Get x axis.
-
-
 
 
 
@@ -1063,13 +994,9 @@ Get y coordinate
 
 
 
-
-
 _description: _
 
 Get y coordinate.
-
-
 
 
 
@@ -1103,13 +1030,9 @@ Get y axis as 3d vector
 
 
 
-
-
 _description: _
 
 Get y axis.
-
-
 
 
 
@@ -1143,13 +1066,9 @@ Get z coordinate
 
 
 
-
-
 _description: _
 
 Get z coordinate.
-
-
 
 
 
@@ -1183,13 +1102,9 @@ Get z axis as 3d vector
 
 
 
-
-
 _description: _
 
 Get z axis.
-
-
 
 
 
@@ -1218,8 +1133,6 @@ _advanced: False_
 _inlined_description: _
 
 Orient node to look at position (-z axis pointing to position)
-
-
 
 
 
@@ -1261,8 +1174,6 @@ Orient node to look at node (-z axis pointing to node)
 
 
 
-
-
 _description: _
 
 
@@ -1299,13 +1210,9 @@ Move by arbitrary amount
 
 
 
-
-
 _description: _
 
 Move by arbitrary amount.
-
-
 
 
 
@@ -1339,13 +1246,9 @@ Move by arbitrary amount
 
 
 
-
-
 _description: _
 
 Move by arbitrary amount.
-
-
 
 
 
@@ -1379,10 +1282,7 @@ _inlined_description: _
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1418,13 +1318,9 @@ classes extending ofNode can override this methods to get notified when the orie
 
 
 
-
-
 _description: _
 
 Classes extending ofNode can override these methods to get notified when the orientation changed.
-
-
 
 
 
@@ -1459,13 +1355,9 @@ notified when the position changed.
 
 
 
-
-
 _description: _
 
 Classes extending ofNode can override these methods to get notified when the position changed.
-
-
 
 
 
@@ -1499,13 +1391,9 @@ classes extending ofNode can override this methods to get notified when the scal
 
 
 
-
-
 _description: _
 
 Classes extending ofNode can override these methods to get notified when the scale changed.
-
-
 
 
 
@@ -1534,8 +1422,6 @@ _advanced: False_
 _inlined_description: _
 
 Orbit object around target at radius
-
-
 
 
 
@@ -1577,12 +1463,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 Orbit object around target at radius.
-
-
 
 
 
@@ -1616,13 +1499,9 @@ Rotate left+right (around local y axis)
 
 
 
-
-
 _description: _
 
 Rotate left+right (around local y axis).
-
-
 
 
 
@@ -1656,10 +1535,7 @@ Resets this node's transformation
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1688,7 +1564,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1732,13 +1607,9 @@ Roll left+right (around local z axis)
 
 
 
-
-
 _description: _
 
 roll left+right (around local z axis)
-
-
 
 
 
@@ -1772,13 +1643,9 @@ Rotate by quaternion
 
 
 
-
-
 _description: _
 
 Rotate by quaternion.
-
-
 
 
 
@@ -1812,13 +1679,9 @@ Rotate around arbitrary axis by angle
 
 
 
-
-
 _description: _
 
 Rotate around arbitrary axis by angle.
-
-
 
 
 
@@ -1852,13 +1715,9 @@ Rotate around arbitrary axis by angle
 
 
 
-
-
 _description: _
 
 Rotate around arbitrary axis by angle.
-
-
 
 
 
@@ -1892,13 +1751,9 @@ Rotate by quaternion around point
 
 
 
-
-
 _description: _
 
 Rotate by quaternion around point.
-
-
 
 
 
@@ -1932,13 +1787,9 @@ Rotate around arbitrary axis by angle around point
 
 
 
-
-
 _description: _
 
 Rotate around arbitrary axis by angle around point.
-
-
 
 
 
@@ -1972,9 +1823,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2010,9 +1859,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2048,9 +1895,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2086,10 +1931,7 @@ Set orientation with a quaternion
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2126,10 +1968,7 @@ Set orientation with a euler angles
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2166,13 +2005,9 @@ transformations from parent node.
 
 
 
-
-
 _description: _
 
 Set parent to link nodes transformations are inherited from parent node set to NULL if not needed (default).
-
-
 
 
 
@@ -2206,10 +2041,7 @@ Set the position of the node
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2245,9 +2077,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2283,9 +2113,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2321,9 +2149,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2359,9 +2185,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2397,13 +2221,9 @@ Directly set the transformation matrix
 
 
 
-
-
 _description: _
 
 Directly set transformation matrix.
-
-
 
 
 
@@ -2437,13 +2257,9 @@ Tilt up+down (around local x axis)
 
 
 
-
-
 _description: _
 
 Tilt up+down (around local x axis)
-
-
 
 
 
@@ -2475,8 +2291,6 @@ Set opengl's modelview matrix to this nodes transform
 if you want to draw something at the position+orientation+scale of this node...
 ...call ofNode::transform(); write your draw code, and ofNode::restoreTransform();
 OR A simpler way is to extend ofNode and override ofNode::customDraw();
-
-
 
 
 
@@ -2518,13 +2332,9 @@ Move sideways (in local x axis)
 
 
 
-
-
 _description: _
 
 move sideways (in local x axis)
-
-
 
 
 
@@ -2551,7 +2361,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2595,9 +2404,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2628,8 +2435,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2654,6 +2465,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _
@@ -2683,8 +2499,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2711,8 +2531,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2740,8 +2564,11 @@ _inlined_description: _
 
 \}
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -2768,8 +2595,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2796,8 +2627,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 

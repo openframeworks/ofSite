@@ -72,13 +72,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Stops ofxAccelerometer from receiving updates from the underlying system.
-
-
 
 
 
@@ -112,13 +108,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Gets the current smoothed accelerometer data (value in number of g's (1g = gravity, 9.8m/s^2). The smoothing prevents sudden spikes but can potentially make detecting gestures or other sudden moments difficult.
-
-
 
 
 
@@ -152,17 +144,13 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 This returns a 3x3 matrix with the following values set:
 
 First column is gravity vector.
 Second column as an arbitrary vector in the plane perpendicular to the gravity vector {Gx, Gy, Gz} defined by by the equation "Gx * x + Gy * y + Gz * z = 0" in which we arbitrarily set x=0 and y=1.
 Third column as the cross product of the first two.
-
-
 
 
 
@@ -196,15 +184,11 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Gets current orientation in degrees as an ofPoint (x: pitch, y: roll, z: not used).
 
 ![yaw-pitch](yaw_axis_corrected.png)
-
-
 
 
 
@@ -238,13 +222,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Gets current real accelerometer data (value in number of g's (1g = gravity, 9.8m/s^2)
-
-
 
 
 
@@ -278,9 +258,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -316,13 +294,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 This allows you to set a callback that can be called whenever motion is detected.
-
-
 
 
 
@@ -356,13 +330,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 This sets amount of smoothing on force data (0: no smooth, 1:very smooth)
-
-
 
 
 
@@ -396,13 +366,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 This sets amount of smoothing on orientation data (0: no smooth, 1:very smooth)
-
-
 
 
 
@@ -436,13 +402,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 You must call setup() before polling ofxAccelerometer for force or orientation values.
-
-
 
 
 
@@ -476,13 +438,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 This is called by your underlying OS to update all the orientation matrices.
-
-
 
 
 
@@ -516,9 +474,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -554,9 +510,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -587,8 +541,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -615,8 +573,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -643,8 +605,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -671,8 +637,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -699,8 +669,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -727,8 +701,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -755,8 +733,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -783,8 +765,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -811,8 +797,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -839,8 +829,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -867,8 +861,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 

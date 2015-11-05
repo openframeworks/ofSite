@@ -49,8 +49,11 @@ _inlined_description: _
 
 Is true if this video device is available.
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -78,8 +81,11 @@ _inlined_description: _
 
 The video device name.
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -108,8 +114,11 @@ _inlined_description: _
 A list of video device formats provided by the device.
 \sa ofVideoFormat
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -137,8 +146,11 @@ _inlined_description: _
 
 The video device hardware name.
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -166,8 +178,11 @@ _inlined_description: _
 
 The video device ID.
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -194,6 +209,10 @@ _advanced: False_
 _inlined_description: _
 
 Unique identifier for the device if it has one.
+
+
+
+
 
 _description: _
 

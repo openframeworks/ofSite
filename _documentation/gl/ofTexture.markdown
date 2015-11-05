@@ -62,10 +62,7 @@ textureData The settings to use when allocating the ofTexture.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -106,10 +103,7 @@ pixelType GL pixel type: GL_UNSIGNED_BYTE, GL_FLOAT, etc.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -165,16 +159,11 @@ glInternalFormat OpenGL internal data format: `GL_RGBA`, `GL_LUMINANCE`, etc.
 
 
 
-
-
 _description: _
-
 
 This is the call to allocate opengl texture. The width (w) and height (h) do not necessarily need to be powers of 2, but they do need to be large enough to contain the data you will upload to the texture.  The internal data type describes how opengl will store this texture internally. For example, if you want a grayscale texture, you can use "GL_LUMINANCE". You can uplaod what ever type of data you want (using loadData()) but internally, opengl will store the information as grayscale. Other types include: GL_RGB, GL_RGBA.
 You need to allocate the texture before drawing it or loading data into it.
 uses the currently set OF texture type - default ARB texture
-
-
 
 
 
@@ -217,10 +206,7 @@ pixelType GL pixel type: GL_UNSIGNED_BYTE, GL_FLOAT, etc.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -271,15 +257,10 @@ bUseARBExtension Set to true to use rectangular textures.
 
 
 
-
-
 _description: _
-
 
 See previous allocate for knowing the behaviour of this function. The parameter bUseARBEExtension allow the user to enable the ARBE extension for this texture.
 You need to allocate the texture before drawing it or loading data into it, lets you overide the default OF texture type
-
-
 
 
 
@@ -323,10 +304,7 @@ pixelType OpenGL pixel type: `GL_UNSIGNED_BYTE`, `GL_FLOAT`, etc.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -368,10 +346,7 @@ pix Reference to ofPixels instance.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -419,10 +394,7 @@ bUseARBExtension Set to true to use rectangular textures.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -465,10 +437,7 @@ pix Reference to ofShortPixels instance.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -512,10 +481,7 @@ bUseARBExtension Set to true to use rectangular textures.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -558,10 +524,7 @@ pix Reference to ofFloatPixels instance.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -605,10 +568,7 @@ bUseARBExtension Set to true to use rectangular textures.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -659,8 +619,6 @@ glInternalFormat Internal pixel format of the data.
 
 
 
-
-
 _description: _
 
 
@@ -702,8 +660,6 @@ calling ofTexture::draw.
 
 
 
-
-
 _description: _
 
 
@@ -740,8 +696,6 @@ Binds the texture as an read or write image, only available since OpenGL 4.2
 
 Warning: This is not available in OpenGLES
 \sa http://www.opengl.org/wiki/GLAPI/glBindImageTexture
-
-
 
 
 
@@ -789,15 +743,10 @@ using it.
 
 
 
-
-
 _description: _
-
 
 clears / frees the texture memory, if something was already allocated. useful if you need to control the memory on the graphics card.
 Clears all the data from the texture
-
-
 
 
 
@@ -834,8 +783,6 @@ buffer the target buffer to copy to.
 
 
 
-
-
 _description: _
 
 
@@ -867,8 +814,6 @@ _advanced: False_
 _inlined_description: _
 
 Disable the alpha mask.
-
-
 
 
 
@@ -920,8 +865,6 @@ point in your code, use ofTexture::generateMipmap() instead.
 
 
 
-
-
 _description: _
 
 
@@ -954,8 +897,6 @@ _inlined_description: _
 
 Disable the texture matrix.
 Disable the texture matrix.
-
-
 
 
 
@@ -1000,8 +941,6 @@ textureLocation the OpenGL texture ID to enable as a target.
 
 
 
-
-
 _description: _
 
 
@@ -1038,14 +977,10 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Draws the texture at a given point (x,y), using the textures true width and height.
 Draws the texture at the point passed in.
-
-
 
 
 
@@ -1079,13 +1014,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Draws the texture at the point passed in in 3D space.
-
-
 
 
 
@@ -1119,14 +1050,10 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 draws the texture at a given point (x,y), with a given width (w) and height (h).
 Draws the texture at the x, y and w, h.
-
-
 
 
 
@@ -1168,14 +1095,9 @@ h Draw height.
 
 
 
-
-
 _description: _
 
-
 Draws the texture at the x, y, z in 3D space with the width and height at w,h.
-
-
 
 
 
@@ -1216,14 +1138,9 @@ p4 Lower right position on the y axis.
 
 
 
-
-
 _description: _
 
-
 Draws the texture at 4 points passed in as if you created 4 glVertices.
-
-
 
 
 
@@ -1273,10 +1190,7 @@ sy Subsection y axis offset within the texture.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1323,10 +1237,7 @@ sy Subsection y axis offset within the texture.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1374,10 +1285,7 @@ sh Subsection height within the texture.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1426,10 +1334,7 @@ sh Subsection height within the texture.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1475,8 +1380,6 @@ point in your code, use generateMipmap() instead.
 
 
 
-
-
 _description: _
 
 
@@ -1511,8 +1414,6 @@ Enable a texture target.
 
 Parameters:
 textureLocation the OpenGL texture ID to enable as a target.
-
-
 
 
 
@@ -1563,8 +1464,6 @@ data for a texture you want to generate mipmaps for.
 
 
 
-
-
 _description: _
 
 
@@ -1594,7 +1493,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1644,10 +1542,7 @@ Returns: Texture coordinate or ofPoint::zero() if texture is not allocated.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1689,14 +1584,9 @@ Returns: Texture coordinate or ofPoint::zero() if texture is not allocated.
 
 
 
-
-
 _description: _
 
-
 these are helpers to allow you to get points for the texture ala "glTexCoordf" but are texture type independent. use them for immediate or non immediate mode
-
-
 
 
 
@@ -1737,14 +1627,9 @@ Returns: Display height of texture in pixels.
 
 
 
-
-
 _description: _
 
-
 Returns the height of the texture. This will be in pixels unless you've set your application to use normalized coordinates.
-
-
 
 
 
@@ -1793,8 +1678,6 @@ rectMode rectMode Taking x,y as the center or the top left corner.
 
 
 
-
-
 _description: _
 
 
@@ -1824,7 +1707,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1875,10 +1757,7 @@ Returns: a reference to the internal texture data struct.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1915,14 +1794,9 @@ Const version of getTextureData().
 
 
 
-
-
 _description: _
 
-
 This returns the internal texture data for this texture, for instance, its textureID, type of texture, whether it's been allocated, and other data about the state of the texture.
-
-
 
 
 
@@ -1949,7 +1823,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2000,14 +1873,9 @@ Returns: Display width of texture in pixels.
 
 
 
-
-
 _description: _
 
-
 Returns the width of the texture. This will be in pixels unless you've set your application to use normalized coordinates.
-
-
 
 
 
@@ -2047,10 +1915,7 @@ Returns: true if the texture has been allocated.
 
 
 
-
-
 _description: _
-
 
 Get whether the texture has been allocated.
 ofTextureData getTextureData() ###
@@ -2059,8 +1924,6 @@ ofTextureData getTextureData() ###
 ofTextureData texData ###
 float getHeight() ###
 float getWidth() ###
-
-
 
 
 
@@ -2087,7 +1950,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2142,10 +2004,7 @@ glFormat GL pixel type: GL_RGBA, GL_LUMINANCE, etc.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2188,10 +2047,7 @@ glFormat GL pixel type: GL_RGBA, GL_LUMINANCE, etc.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2234,10 +2090,7 @@ glFormat GL pixel type: GL_RGBA, GL_LUMINANCE, etc.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2276,10 +2129,7 @@ pix Reference to ofPixels instance.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2322,10 +2172,7 @@ pix Reference to ofShortPixels instance.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2368,10 +2215,7 @@ pix Reference to ofFloatPixels instance.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2416,10 +2260,7 @@ glFormat GL pixel type: GL_RGBA, GL_LUMINANCE, etc.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2461,10 +2302,7 @@ glFormat GL pixel type: GL_RGBA, GL_LUMINANCE, etc.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2506,10 +2344,7 @@ glFormat GL pixel type: GL_RGBA, GL_LUMINANCE, etc.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2553,8 +2388,6 @@ Parameters:
 buffer The buffer to load.
 glFormat GL pixel type: GL_RGBA, GL_LUMINANCE, etc.
 glType the GL type to load.
-
-
 
 
 
@@ -2608,10 +2441,7 @@ glType the OpenGL type of the data.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2662,15 +2492,10 @@ h Height of the area to copy in pixels.
 
 
 
-
-
 _description: _
-
 
 Grabs a region of the screen and loads it into the texture. Specifiy the position (x,y) you wish to grab from, with the width (w) and height (h) of the region. Make sure that you have allocated your texture (using allocate()) to be large enough to hold the region of the screen you wish to load.
 Load data from the current screen into this texture. Grabs a region of the screen and loads it into the texture. Specifiy the position (x,y) you wish to grab from, with the width (w) and height (h) of the region. Make sure that you have allocated your texture (using allocate()) to be large enough to hold the region of the screen you wish to load.
-
-
 
 
 
@@ -2704,14 +2529,9 @@ Construct an ofTexture instance.
 
 
 
-
-
 _description: _
 
-
 Creates an empty ofTexture instance. You can't draw a texture right after it's been created as it has actually uploaded any data to the graphics card that can be drawn yet.
-
-
 
 
 
@@ -2748,10 +2568,7 @@ mom The ofTexture to copy. Reuses internal GL texture ID.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2790,10 +2607,7 @@ mom The ofTexture to copy from. Reuses internal GL texture ID.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2836,10 +2650,7 @@ pixels Target ofPixels reference.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2882,10 +2693,7 @@ pixels Target pixels reference.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2928,10 +2736,7 @@ pixels Target pixels reference.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2967,10 +2772,7 @@ Reset the anchor point to (0, 0).
 
 
 
-
-
 _description: _
-
 
 
 
@@ -3004,8 +2806,6 @@ Set another ofTexture to use as an alpha mask.
 
 Parameters:
 mask The texture to use as alpha mask.
-
-
 
 
 
@@ -3055,14 +2855,9 @@ yPct Vertical texture position as a percentage (0 - 1).
 
 
 
-
-
 _description: _
 
-
 The anchor is the point the image is drawn around. This can be useful if you want to rotate an image around a particular point, allowing you to set the anchor as a percentage of the image width/height ( 0.0-1.0 range )
-
-
 
 
 
@@ -3104,14 +2899,9 @@ y Vertical texture position in pixels.
 
 
 
-
-
 _description: _
 
-
 set the anchor point in pixels
-
-
 
 
 
@@ -3148,10 +2938,7 @@ Set the texture compression.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -3194,10 +2981,7 @@ Warning: This is not supported in OpenGL ES and does nothing.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -3246,8 +3030,6 @@ Warning: This is not supported in OpenGL ES and does nothing.
 
 
 
-
-
 _description: _
 
 
@@ -3282,8 +3064,6 @@ Sets a texture matrix to be uploaded whenever the texture is bound.
 
 Parameters:
 m The 4x4 texture matrix.
-
-
 
 
 
@@ -3338,14 +3118,9 @@ magFilter magnifying filter for scaling a pixel to a larger area.
 
 
 
-
-
 _description: _
 
-
 Set how the texture is scaled up and down, when it's being drawn larger or smaller than it's actual size.
-
-
 
 
 
@@ -3394,14 +3169,9 @@ wrapModeVertical wrap parameter for texture coordinate t.
 
 
 
-
-
 _description: _
 
-
 Sets how the texture wraps around the edges of the vertices that the texture is being drawn to.
-
-
 
 
 
@@ -3446,10 +3216,7 @@ externTexID New texture ID.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -3485,9 +3252,6 @@ For advanced users who need to manually manage texture drawing without
 calling ofTexture::draw.
 
 \sa http://www.opengl.org/sdk/docs/man4/html/glBindTexture.xhtml
-
-
-
 
 
 
@@ -3533,10 +3297,7 @@ references to the internal texture ID.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -3568,8 +3329,11 @@ _inlined_description: _
 
 < The texture's anchor point.
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -3598,8 +3362,11 @@ _inlined_description: _
 < Is the anchor point represented as a normalized
 < (0 - 1) coordinate?
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -3626,6 +3393,10 @@ _advanced: False_
 _inlined_description: _
 
 < Should mipmaps be created?
+
+
+
+
 
 _description: _
 
@@ -3656,12 +3427,13 @@ _inlined_description: _
 < Internal texture data access.
 < For backwards compatibility.
 
+
+
+
+
 _description: _
 
-
 texData is a variable type ofTextureData. ofTextureData is a structure containing information about the texture such as size.
-
-
 
 
 

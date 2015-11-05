@@ -51,8 +51,6 @@ glGenBuffers, allocates a GL buffer
 
 
 
-
-
 _description: _
 
 
@@ -92,8 +90,6 @@ for this buffer uploading data to that target and unbinding again
 
 
 
-
-
 _description: _
 
 
@@ -123,7 +119,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -167,7 +162,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -197,7 +191,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -241,8 +234,6 @@ glBindBuffer: https://www.opengl.org/sdk/docs/man4/html/glBindBuffer.xhtml
 
 
 
-
-
 _description: _
 
 
@@ -274,8 +265,6 @@ _advanced: False_
 _inlined_description: _
 
 glBindBufferBase: https://www.opengl.org/sdk/docs/man4/html/glBindBufferBase.xhtml
-
-
 
 
 
@@ -317,8 +306,6 @@ glBindBufferRange: https://www.opengl.org/sdk/docs/man4/html/glBindBufferRange.x
 
 
 
-
-
 _description: _
 
 
@@ -348,7 +335,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -392,8 +378,6 @@ returns the id of the buffer if it's allocated or 0 otherwise
 
 
 
-
-
 _description: _
 
 
@@ -425,8 +409,6 @@ _advanced: False_
 _inlined_description: _
 
 true if allocate was called before
-
-
 
 
 
@@ -470,8 +452,6 @@ for this buffer and mapping that target
 
 
 
-
-
 _description: _
 
 
@@ -504,8 +484,6 @@ _inlined_description: _
 
 typed version of map, returns an array of T when used like:
 buffer.map<Type>(access)
-
-
 
 
 
@@ -549,8 +527,6 @@ for this buffer and mapping that target
 
 
 
-
-
 _description: _
 
 
@@ -588,8 +564,6 @@ buffer.mapRange<Type>(access)
 
 
 
-
-
 _description: _
 
 
@@ -619,7 +593,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -665,8 +638,6 @@ for this buffer uploading data to that target and unbinding again
 
 
 
-
-
 _description: _
 
 
@@ -704,8 +675,6 @@ of the passed vector and size of the type
 
 
 
-
-
 _description: _
 
 
@@ -735,7 +704,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -779,7 +747,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -811,8 +778,6 @@ _advanced: False_
 _inlined_description: _
 
 binds the passed target to buffer 0
-
-
 
 
 
@@ -854,8 +819,6 @@ binds the given target and index to buffer 0
 
 
 
-
-
 _description: _
 
 
@@ -887,8 +850,6 @@ _advanced: False_
 _inlined_description: _
 
 binds the given target and index to 0
-
-
 
 
 
@@ -932,8 +893,6 @@ the last known target for this buffer
 
 
 
-
-
 _description: _
 
 
@@ -965,8 +924,6 @@ _advanced: False_
 _inlined_description: _
 
 same as unmap, just to make the api more clear
-
-
 
 
 
@@ -1010,8 +967,6 @@ for this buffer uploading data to that target and unbinding again
 
 
 
-
-
 _description: _
 
 
@@ -1041,7 +996,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1086,8 +1040,6 @@ of the passed vector and size of the type
 
 
 
-
-
 _description: _
 
 
@@ -1125,8 +1077,6 @@ of the passed vector and size of the type
 
 
 
-
-
 _description: _
 
 
@@ -1156,6 +1106,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _

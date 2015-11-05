@@ -50,7 +50,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -90,8 +89,6 @@ Disable an event.
 
 
 
-
-
 _description: _
 
 
@@ -126,8 +123,6 @@ Enable an event.
 
 \see ofBaseEvent::disable()
 \see ofBaseEvent::isEnabled()
-
-
 
 
 
@@ -174,8 +169,6 @@ Returns: true if enables
 
 
 
-
-
 _description: _
 
 
@@ -212,8 +205,6 @@ Basic constructor enabling an ofBaseEvent.
 \see ofBaseEvent::enable()
 \see ofBaseEvent::disable()
 \see ofBaseEvent::isEnabled()
-
-
 
 
 
@@ -257,8 +248,6 @@ Copy-constructor for ofBaseEvent.
 
 
 
-
-
 _description: _
 
 
@@ -295,8 +284,6 @@ Overloading the assignment operator.
 
 
 
-
-
 _description: _
 
 
@@ -326,7 +313,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -370,7 +356,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -402,6 +387,11 @@ _advanced: False_
 _inlined_description: _
 
 
+
+
+
+
+
 _description: _
 
 
@@ -429,6 +419,11 @@ _advanced: False_
 _inlined_description: _
 
 
+
+
+
+
+
 _description: _
 
 
@@ -454,6 +449,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _

@@ -55,13 +55,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 After you call begin() everything that you draw, vertexes and textures, in your of application have the effects of the shader applied to them.
-
-
 
 
 
@@ -95,9 +91,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -133,16 +127,12 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Binds default uniforms and attributes, only useful for fixed pipeline simulation under programmable renderer.
 Has to be called before linkProgram().
 
 See setupShaderFromSource() example.
-
-
 
 
 
@@ -176,9 +166,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -214,9 +202,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -252,9 +238,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -290,9 +274,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -321,7 +303,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -365,13 +346,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 After you call end() any drawing, vertexes and textures, do not have the effect of the shader applied to them.
-
-
 
 
 
@@ -405,9 +382,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -443,13 +418,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 returns maximum number of supported vertices for your graphics card
-
-
 
 
 
@@ -483,13 +454,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 This returns the GLuint for the actual shader object that is active on the graphics card. This is more of an advanced usage method, but can be helpful if you need to do something that the ofShader doesn't support currently. This is all the shaders: vertex, geom, and frag.
-
-
 
 
 
@@ -523,13 +490,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 This returns the GLuint for the actual shader object that is active on the graphics card. This is more of an advanced usage method, but can be helpful if you need to do something that the ofShader doesn't support currently. This returns only one of the shaders. You can pass GL_VERTEX_SHADER, GL_GEOMETRY_SHADER_EXT, GL_FRAGMENT_SHADER
-
-
 
 
 
@@ -564,10 +527,7 @@ _inlined_description: _
 
 
 
-
-
 _description: _
-
 
 
 
@@ -603,9 +563,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -641,9 +599,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -679,13 +635,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Links program with all compiled shaders. This is more of an advanced use method, as this is done automatically for you.
-
-
 
 
 
@@ -719,17 +671,13 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 This assumes that your vertex and fragment shaders have the same name, i.e. "dof.vert" and "dof.frag" and loads them using just the name of the shader:
 
 ~~~~{.cpp}
 shader.load("dof"); // assumes the shaders are in /data
 ~~~~
-
-
 
 
 
@@ -763,17 +711,13 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Here you can load shaders with whatever names you choose. The geometry shader is optional, but the vertex and fragment shaders aren't.
 
 ~~~~{.cpp}
 shader.load("dof.vert", "dof.frag"); // assumes the shaders are in /data
 ~~~~
-
-
 
 
 
@@ -807,9 +751,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -845,9 +787,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -883,9 +823,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -921,9 +859,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -959,9 +895,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -997,9 +931,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1040,10 +972,7 @@ _inlined_description: _
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1079,9 +1008,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1117,13 +1044,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 This prints out all the active attributes to the console.
-
-
 
 
 
@@ -1157,13 +1080,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 This prints out all the active uniforms to the console.
-
-
 
 
 
@@ -1197,14 +1116,10 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Set one double attribute on the shader.
 Attributes are different than uniforms in that you can pass an attribute to each vertex or fragment that is being shaded.
-
-
 
 
 
@@ -1238,14 +1153,10 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Set one float attributes on the shader.
 Attributes are different than uniforms in that you can pass an attribute to each vertex or fragment that is being shaded.
-
-
 
 
 
@@ -1279,9 +1190,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1317,14 +1226,10 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Set a short attribute, a short int, on the shader.
 Attributes are different than uniforms in that you can pass an attribute to each vertex or fragment that is being shaded.
-
-
 
 
 
@@ -1358,14 +1263,10 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Set two double attribute on the shader.
 Attributes are different than uniforms in that you can pass an attribute to each vertex or fragment that is being shaded.
-
-
 
 
 
@@ -1399,14 +1300,10 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Set two float attributes on the shader.
 Attributes are different than uniforms in that you can pass an attribute to each vertex or fragment that is being shaded.
-
-
 
 
 
@@ -1440,9 +1337,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1478,14 +1373,10 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Set two short attributes, a short int, on the shader.
 Attributes are different than uniforms in that you can pass an attribute to each vertex or fragment that is being shaded.
-
-
 
 
 
@@ -1519,14 +1410,10 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Set three double attribute on the shader.
 Attributes are different than uniforms in that you can pass an attribute to each vertex or fragment that is being shaded.
-
-
 
 
 
@@ -1560,14 +1447,10 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Set three float attributes on the shader.
 Attributes are different than uniforms in that you can pass an attribute to each vertex or fragment that is being shaded.
-
-
 
 
 
@@ -1601,9 +1484,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1639,14 +1520,10 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Set three short attributes, a short int, on the shader.
 Attributes are different than uniforms in that you can pass an attribute to each vertex or fragment that is being shaded.
-
-
 
 
 
@@ -1680,14 +1557,10 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Set four double attribute on the shader.
 Attributes are different than uniforms in that you can pass an attribute to each vertex or fragment that is being shaded.
-
-
 
 
 
@@ -1721,14 +1594,10 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Set four float attributes on the shader.
 Attributes are different than uniforms in that you can pass an attribute to each vertex or fragment that is being shaded.
-
-
 
 
 
@@ -1762,9 +1631,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1800,14 +1667,10 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Set four short attributes, a short int, on the shader.
 Attributes are different than uniforms in that you can pass an attribute to each vertex or fragment that is being shaded.
-
-
 
 
 
@@ -1841,14 +1704,10 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 You have to call this before linking the program with geometry shaders.
 Possible types are GL_POINTS, GL_LINES, GL_LINES_ADJACENCY_EXT, GL_TRIANGLES, GL_TRIANGLES_ADJACENCY_EXT
-
-
 
 
 
@@ -1882,13 +1741,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 You have to call this before linking the program with geometry shaders to set the number of output vertices, For quads, this should be 4, for points 1. Triangle strips can use up to the maximum number. You can check the maximum number supported on your graphics cards with getGeometryMaxOutputCount()
-
-
 
 
 
@@ -1922,14 +1777,10 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 You have to call this before linking the program with geometry shaders.
 type: GL_POINTS, GL_LINE_STRIP or GL_TRIANGLE_STRIP
-
-
 
 
 
@@ -1963,13 +1814,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 set a float uniform on the shader
-
-
 
 
 
@@ -2003,9 +1850,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2041,9 +1886,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2079,9 +1922,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2117,9 +1958,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2148,7 +1987,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2192,16 +2030,12 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 This allows you to set multiple vec2 uniforms.
 ~~~~{.cpp}
 vec2 v[2];
 ~~~~
-
-
 
 
 
@@ -2235,9 +2069,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2273,16 +2105,12 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 set an array of uniform values on the shader using int[2] value. On the shader this looks like:
 ~~~~{.cpp}
 ivec2 iv[2];
 ~~~~
-
-
 
 
 
@@ -2316,13 +2144,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 set a vec3 uniform on the shader
-
-
 
 
 
@@ -2349,7 +2173,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2393,16 +2216,12 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 This allows you to set multiple vec3 uniforms.
 ~~~~{.cpp}
 vec3 v[2];
 ~~~~
-
-
 
 
 
@@ -2436,15 +2255,11 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 ~~~~{.cpp}
 uniform ivec3 texture;
 ~~~~
-
-
 
 
 
@@ -2478,16 +2293,12 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 set an array of uniform values on the shader using int[2] value. On the shader this looks like:
 ~~~~{.cpp}
 ivec3 iv[2];
 ~~~~
-
-
 
 
 
@@ -2521,16 +2332,12 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 set a vec4 uniform on the shader
 ~~~~{.cpp}
 vec4 fv;
 ~~~~
-
-
 
 
 
@@ -2557,7 +2364,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2601,7 +2407,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -2638,16 +2443,12 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 This allows you to set multiple vec4 uniforms.
 ~~~~{.cpp}
 vec4 v[2];
 ~~~~
-
-
 
 
 
@@ -2681,9 +2482,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2719,16 +2518,12 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 set an array of uniform values on the shader using int[2] value. On the shader this looks like:
 ~~~~{.cpp}
 ivec4 iv[2];
 ~~~~
-
-
 
 
 
@@ -2755,7 +2550,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2799,7 +2593,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -2836,17 +2629,13 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 set a texture reference
 On your shader it should look like this:
 ~~~~{.cpp}
 uniform sampler2DRect texture;
 ~~~~
-
-
 
 
 
@@ -2880,9 +2669,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2918,9 +2705,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2949,7 +2734,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2993,13 +2777,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 This are more of advanced use function and doesn't need.
-
-
 
 
 
@@ -3033,9 +2813,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 This method create and compile a shader from source.
 Working with OpenGL 3 or OpenGL ES 2.0, remember to call bindDefaults() before linkProgram()
@@ -3073,8 +2851,6 @@ shader.linkProgram();
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
 ###void unload()
@@ -3103,13 +2879,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 This unload the shader, which means that it will not be active on the graphics card any longer.
-
-
 
 
 
@@ -3143,9 +2915,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -3176,6 +2946,11 @@ _advanced: False_
 _inlined_description: _
 
 
+
+
+
+
+
 _description: _
 
 
@@ -3203,8 +2978,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3231,8 +3010,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3259,8 +3042,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3285,6 +3072,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _

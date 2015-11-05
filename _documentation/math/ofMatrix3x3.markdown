@@ -60,10 +60,7 @@ Find the determinant of the matrix
 
 
 
-
-
 _description: _
-
 
 
 
@@ -99,9 +96,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -139,10 +134,7 @@ This is referred to as an entrywise, Hadamard, or Schur product.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -186,10 +178,7 @@ divide this through the determinant to get the inverse
 
 
 
-
-
 _description: _
-
 
 
 
@@ -225,9 +214,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -264,10 +251,7 @@ _inlined_description: _
 
 
 
-
-
 _description: _
-
 
 
 
@@ -303,10 +287,7 @@ Multiply a matrix with a scalar
 
 
 
-
-
 _description: _
-
 
 
 
@@ -342,10 +323,7 @@ Multiply a 3x3 matrix with a 3x3 matrix
 
 
 
-
-
 _description: _
-
 
 
 
@@ -381,10 +359,7 @@ Multiply a matrix by a matrix this = this*B (in that order)
 
 
 
-
-
 _description: _
-
 
 
 
@@ -420,10 +395,7 @@ Multiply a matrix by a scalar (multiples all entries by scalar)
 
 
 
-
-
 _description: _
-
 
 
 
@@ -459,10 +431,7 @@ Add two matrices
 
 
 
-
-
 _description: _
-
 
 
 
@@ -498,10 +467,7 @@ Add matrix to existing matrix
 
 
 
-
-
 _description: _
-
 
 
 
@@ -537,10 +503,7 @@ Subtract two matrices
 
 
 
-
-
 _description: _
-
 
 
 
@@ -576,10 +539,7 @@ Subtract matrix from existing matrix
 
 
 
-
-
 _description: _
-
 
 
 
@@ -615,10 +575,7 @@ Divide a matrix through a scalar
 
 
 
-
-
 _description: _
-
 
 
 
@@ -654,9 +611,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -692,9 +647,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -730,9 +683,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -769,10 +720,7 @@ _inlined_description: _
 
 
 
-
-
 _description: _
-
 
 
 
@@ -814,10 +762,7 @@ This changes the matrix.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -856,10 +801,7 @@ Returns: transposed matrix.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -890,8 +832,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -918,8 +864,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -946,8 +896,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -974,8 +928,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -1002,8 +960,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -1030,8 +992,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -1058,8 +1024,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -1086,8 +1056,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -1114,8 +1088,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 

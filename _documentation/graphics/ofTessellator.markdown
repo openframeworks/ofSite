@@ -71,9 +71,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -109,9 +107,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -147,14 +143,9 @@ Copy constructor to copy properties from one tessellator to another.
 
 
 
-
-
 _description: _
 
-
 Copy constructor to copy properties from one tessellator to another. 
-
-
 
 
 
@@ -188,14 +179,9 @@ Operator overloading to copy properties from one tessellator to another.
 
 
 
-
-
 _description: _
 
-
 Operator overloading to copy properties from one tessellator to another. 
-
-
 
 
 
@@ -229,9 +215,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -267,9 +251,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -306,14 +288,9 @@ ofMesh instance using the winding mode set in ofPolyWindingMode.
 
 
 
-
-
 _description: _
 
-
 Tessellates a vector of ofPolyline instances into a single ofMesh instance using the winding mode set in ofPolyWindingMode.
-
-
 
 
 
@@ -348,14 +325,9 @@ using the winding mode set in ofPolyWindingMode.
 
 
 
-
-
 _description: _
 
-
 Tessellates a ofPolyline instance into a single ofMesh instance using the winding mode set in ofPolyWindingMode.
-
-
 
 
 
@@ -390,14 +362,9 @@ ofPolyline instances using the winding mode set in ofPolyWindingMode.
 
 
 
-
-
 _description: _
 
-
 Tessellates a vector of ofPolyline instances into vector of ofPolyline instances using the winding mode set in ofPolyWindingMode.
-
-
 
 
 
@@ -431,10 +398,7 @@ Tessellate multiple polylines into a single polyline.
 
 
 
-
-
 _description: _
-
 
 Tessellate multiple polylines into a single polyline.
 
@@ -444,8 +408,6 @@ ofPolyline destination;
 // ... fill vec
 tess.performTessellation(destination, OF_POLY_WINDING_ODD, sources, true ); // true is for 2d
 ~~~~
-
-
 
 
 
@@ -479,9 +441,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -512,8 +472,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -540,8 +504,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 

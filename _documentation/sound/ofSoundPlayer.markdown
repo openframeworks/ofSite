@@ -60,10 +60,7 @@ Gets stereo pan.
 
 
 
-
-
 _description: _
-
 
 Returns the pan position of the sound. -1.0 - 1.0 range.
 0.0 is center pan, -1.0 is full left pan and 1.0 is full right pan. Default is
@@ -79,8 +76,6 @@ Example:
     mySound.setPan(1.0f);     
     mySound.getPan();//Returns 1.0
 ~~~~
-
-
 
 
 
@@ -107,7 +102,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -152,10 +146,7 @@ Gets position of the playhead.
 
 
 
-
-
 _description: _
-
 
 Returns the current position of the playhead as a float between 0.0 and 1.0. 0.0 is the beginning of the sound file and 1.0 is the end.
   
@@ -166,8 +157,6 @@ Example:
     mySound.play();   
     mySound.getPosition(); //Returns the current position as a percent 0.0-1.0
 ~~~~
-
-
 
 
 
@@ -202,14 +191,9 @@ Gets position of the playhead.
 
 
 
-
-
 _description: _
 
-
 This returns the position of the playhead in terms of milliseconds (i.e. 5000 for 5 seconds into the sound).
-
-
 
 
 
@@ -244,10 +228,7 @@ Gets playback speed.
 
 
 
-
-
 _description: _
-
 
 Returns the speed of the sound playback in relation to its normal speed.
 So 2.0 would mean the sound is playing twice as fast. 0.5 would mean half as fast. 
@@ -261,8 +242,6 @@ Example:
     mySound.setSpeed(2.0f);   
     mySound.getSpeed(); //Returns 2.0f
 ~~~~
-
-
 
 
 
@@ -297,14 +276,9 @@ Gets current volume.
 
 
 
-
-
 _description: _
 
-
 Returns the current volume of the sound player, as set by `setVolume()`. 0.0 is silent and 1.0 is full volume.
-
-
 
 
 
@@ -339,14 +313,9 @@ Queries the player to see if its file was loaded successfully.
 
 
 
-
-
 _description: _
 
-
 Returns whether or not a sound has been successfully loaded into the sound player. 
-
-
 
 
 
@@ -376,8 +345,6 @@ _inlined_description: _
 
 Gets current playback state.
 \return true if the player is currently playing a file.
-
-
 
 
 
@@ -426,8 +393,6 @@ stream set "true" to enable streaming from disk (for large files).
 
 
 
-
-
 _description: _
 
 
@@ -464,13 +429,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Creates the ofSoundPlayer instance and initializes the underlying properties in the underlying engine.
-
-
 
 
 
@@ -504,10 +465,7 @@ Starts playback.
 
 
 
-
-
 _description: _
-
 
 Plays the sound. If setMultiPlay() has been set to true each play() command will spawn a new copy of the sound on a new channel, letting the existing sounds continue until they are finished. If setMultiPlay() is set to false it will restart the playback of the song.
 
@@ -529,8 +487,6 @@ mySound.load("beat.mp3");
 mySound.play(); //Plays sound
 mySound.play(); //Adds new copy of sound to channel and plays over currently playing sound
 ~~~~
-
-
 
 
 
@@ -567,10 +523,7 @@ loop "true" to loop, default is false.
 
 
 
-
-
 _description: _
-
 
 Loops the sound if set to true. Does not loop the sound if set to false. Default is false.
 
@@ -581,8 +534,6 @@ mySound.load("beat.mp3");
 mySound.setLoop(true); //Sound will loop
 mySound.play();
 ~~~~
-
-
 
 
 
@@ -619,10 +570,7 @@ multiplay "true" to enable, default is false.
 
 
 
-
-
 _description: _
-
 
 Allows a sound to be played multiple times at once. When set to true the play() function will start playing the sound on a new channel, letting the old channels continue until they are done playing. When set to false the play() function will stop the channel before playing the sound.
 
@@ -635,8 +583,6 @@ mySound.load("beat.mp3");
 mySound.play(); //Plays sound
 mySound.play(); //Adds new copy of sound to channel and plays over currently playing sound
 ~~~~
-
-
 
 
 
@@ -673,10 +619,7 @@ pan range is -1 to 1 (-1 is full left, 1 is full right).
 
 
 
-
-
 _description: _
-
 
 Sets the pan position (pct) of the sound. -1.0 - 1.0 range. 0.0 is center pan, -1.0 is full left pan and 1.0 is full right pan. 
 
@@ -689,8 +632,6 @@ mySound.setPan(-1.0f); //Pans to the left
 mySound.setPan(1.0f); //Pans to the right
 mySound.setPan(0.0f); //Back to center
 ~~~~
-
-
 
 
 
@@ -727,10 +668,7 @@ paused "true" to pause, "false" to resume.
 
 
 
-
-
 _description: _
-
 
 Pauses and un-pauses the playback of the sound.
 
@@ -742,8 +680,6 @@ mySound.play();
 mySound.setPaused(true); //Sound is paused
 mySound.setPaused(false); //Sound is unpaused, playback continues
 ~~~~
-
-
 
 
 
@@ -770,7 +706,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -817,10 +752,7 @@ percent range is 0 (beginning of file) to 1 (end of file).
 
 
 
-
-
 _description: _
-
 
 Sets the playback-head to the position (pct) specified. 0.0 - 1.0 range. 0.0 is the beginning of the sound file and 1.0 is the end.
 
@@ -832,8 +764,6 @@ mySound.play();
 mySound.setPosition(0.5f); //Moves the playhead to halfway through the sound
 mySound.setPosition(0.0f); //Moves the playhead back to the beginning of the sound
 ~~~~
-
-
 
 
 
@@ -870,14 +800,9 @@ ms number of milliseconds from the start of the file.
 
 
 
-
-
 _description: _
 
-
 This sets the position of the playhead in milliseconds.
-
-
 
 
 
@@ -914,10 +839,7 @@ speed set > 1 for faster playback, < 1 for slower playback.
 
 
 
-
-
 _description: _
-
 
 Sets the playback speed of the sound. 1.0 is normal speed. 2.0 is double the normal speed etc. 
 
@@ -930,8 +852,6 @@ mySound.setSpeed(2.0f); //Chipmunk Voice
 mySound.setSpeed(0.2f); //Isaac Hayes on Muscle Relaxers
 mySound.setSpeed(1.0f); //Normal again
 ~~~~
-
-
 
 
 
@@ -968,10 +888,7 @@ vol range is 0 to 1.
 
 
 
-
-
 _description: _
-
 
 Sets the volume of the sound. 0.0 - 1.0 range. 0.0 is silent and 1.0 is full volume. 
 
@@ -982,8 +899,6 @@ mySound.load("beat.mp3");
 mySound.play();
 mySound.setVolume(0.1f); //Sets volume at 10% of maximum
 ~~~~
-
-
 
 
 
@@ -1017,10 +932,7 @@ Stops playback.
 
 
 
-
-
 _description: _
-
 
 Stops the sound currently playing. 
 
@@ -1031,8 +943,6 @@ mySound.load("beat.mp3");
 mySound.play(); //Begins playback of sound
 mySound.stop(); //Ends playback, stops audio
 ~~~~
-
-
 
 
 
@@ -1061,8 +971,6 @@ _advanced: False_
 _inlined_description: _
 
 Stops and unloads the current sound.
-
-
 
 
 
@@ -1099,8 +1007,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 

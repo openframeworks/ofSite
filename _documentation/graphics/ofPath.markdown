@@ -87,7 +87,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -117,7 +116,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -166,10 +164,7 @@ while 180,0 is not.
 
 
 
-
-
 _description: _
-
 
 Creates an arc at centre, which has the radiusX, radiusY, and begins at angleBegin and ends at angleEnd. To draw a circle with a radius of 50 pixels at 100, 100:
 
@@ -178,8 +173,6 @@ path.arc( 100, 100, 50, 50, 0, 360);
 ~~~~
 
 Note that angleBegin needs to be larger than angleEnd, i.e. 0, 180 is ok, while 180,0 is not.
-
-
 
 
 
@@ -213,9 +206,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -263,10 +254,7 @@ while 180,0 is not.
 
 
 
-
-
 _description: _
-
 
 Creates an arc at x,y, which has the radiusX, radiusY, and begins at angleBegin and ends at angleEnd. To draws a shape with a radius of 200 pixels at 300, 300:
 
@@ -278,8 +266,6 @@ path.arc( 300, 300, 200, 200, 0, 271); // note 271, not 270 for precision
 ![ofPath arc](ofPath_arc.png)
 
 Note that angleBegin needs to be larger than angleEnd, i.e. 0, 180 is ok, while 180,0 is not.
-
-
 
 
 
@@ -314,14 +300,9 @@ angleBegin and ends at angleEnd.
 
 
 
-
-
 _description: _
 
-
 Creates an arc at x,y,z, which has the radiusX, radiusY, and begins at angleBegin and ends at angleEnd.
-
-
 
 
 
@@ -355,9 +336,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -393,9 +372,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -431,9 +408,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -478,10 +453,7 @@ The control points are shown in red.
 
 
 
-
-
 _description: _
-
 
 Creates a cubic bezier line from the current drawing point with the 2 control points indicated by ofPoint cp1 and cp2, that ends at ofPoint to. For instance, the following:
 ~~~~{.cpp}
@@ -491,8 +463,6 @@ line.bezierTo(100, 100, 800, 100, 700, 400);
 Creates this:
 ![polyline bezier](bezier.png)
 The control points are shown in yellow.
-
-
 
 
 
@@ -528,14 +498,9 @@ that ends at the coordinates x, y.
 
 
 
-
-
 _description: _
 
-
 Creates a cubic bezier line from the current drawing point with the 2 control points indicated by the coordinates cx1, cy1 and cx2, cy2, that ends at the coordinates x, y.
-
-
 
 
 
@@ -571,10 +536,7 @@ and cx2, cy2, cz2, that ends at the coordinates x, y, z.
 
 
 
-
-
 _description: _
-
 
 Creates a cubic bezier line in 3D space from the current drawing point with the 2 control points indicated by the coordinates cx1, cy1, cz1 and cx2, cy2, cz2, that ends at the coordinates x, y, z.
 ~~~~{.cpp}
@@ -592,8 +554,6 @@ for (float i = 0.0; i < TWO_PI; i+=step) {
     }
 }
 ~~~~
-
-
 
 
 
@@ -627,9 +587,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -665,9 +623,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -703,9 +659,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -741,14 +695,9 @@ Remove all subpaths from the ofPath instance
 
 
 
-
-
 _description: _
 
-
 Removes all subpaths from the ofPath instance.
-
-
 
 
 
@@ -784,14 +733,9 @@ closed path doesn't have new points added to it.
 
 
 
-
-
 _description: _
 
-
 Closes the current subpath and creates a new subpath, either an ofPolyline or ofSubPath by calling newSubPath(), ensuring that the closed path doesn't have new points added to it.
-
-
 
 
 
@@ -825,14 +769,9 @@ Draws a curve to p from the current drawing position
 
 
 
-
-
 _description: _
 
-
 Draws a curve to p from the current drawing position.
-
-
 
 
 
@@ -866,10 +805,7 @@ Draws a curve to x,y from the current drawing position
 
 
 
-
-
 _description: _
-
 
 Draws a curve to x,y from the current drawing position. To draw a small rose curves at the mouse position:
 
@@ -885,8 +821,6 @@ for( float theta = 0; theta < TWO_PI; theta += 0.1)
 px = mouseX;
 py = mouseY;
 ~~~~
-
-
 
 
 
@@ -920,14 +854,9 @@ Draws a curve to x,y,z from the current drawing position
 
 
 
-
-
 _description: _
 
-
 Draws a curve to x,y,z from the current drawing position.
-
-
 
 
 
@@ -961,14 +890,9 @@ Draws the path at 0,0. Calling draw() also calls tessellate()
 
 
 
-
-
 _description: _
 
-
 Draws the path at 0,0. Calling draw() also calls tessllate().
-
-
 
 
 
@@ -1002,14 +926,9 @@ Draws the path at x,y. Calling draw() also calls tessellate()
 
 
 
-
-
 _description: _
 
-
 Draws the path at x,y. Calling draw() also calls tessllate().
-
-
 
 
 
@@ -1043,9 +962,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1081,9 +998,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1119,9 +1034,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1157,9 +1070,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1195,9 +1106,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1233,9 +1142,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###vector< ofPath::Command > & getCommands()
+
+<!--
+_syntax: getCommands()_
+_name: getCommands_
+_returns: vector< ofPath::Command > &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1264,44 +1207,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###const vector< ofPath::Command > & getCommands()
-
-<!--
-_syntax: getCommands()_
-_name: getCommands_
-_returns: const vector< ofPath::Command > &_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
 
 
 
@@ -1345,9 +1250,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1383,14 +1286,9 @@ Get the ofColor fill of the ofPath
 
 
 
-
-
 _description: _
 
-
 Returns the ofColor that the ofPath is using.
-
-
 
 
 
@@ -1417,7 +1315,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1461,14 +1358,9 @@ Get an ofPolyline representing the outline of the ofPath.
 
 
 
-
-
 _description: _
 
-
 This returns an ofPolyline representing the outline of an ofPath.
-
-
 
 
 
@@ -1502,14 +1394,9 @@ Get the stroke color of the ofPath
 
 
 
-
-
 _description: _
 
-
 Returns the stroke color that the ofPath is using.
-
-
 
 
 
@@ -1545,14 +1432,9 @@ The default value is `0
 
 
 
-
-
 _description: _
 
-
 Returns the stroke width.
-
-
 
 
 
@@ -1586,9 +1468,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1624,9 +1504,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1662,14 +1540,9 @@ Get the poly winding mode currently in use.
 
 
 
-
-
 _description: _
 
-
 Returns the poly winding mode currently in use.
-
-
 
 
 
@@ -1703,9 +1576,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1741,9 +1612,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1781,14 +1650,9 @@ The default value is `true`
 
 
 
-
-
 _description: _
 
-
 Whether the path is using a fill or not.
-
-
 
 
 
@@ -1822,10 +1686,7 @@ _inlined_description: _
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1862,14 +1723,9 @@ location indicated by p.
 
 
 
-
-
 _description: _
 
-
 Draws a straight line from the current drawing position to the location indicated by p.
-
-
 
 
 
@@ -1904,14 +1760,9 @@ location indicated by x,y.
 
 
 
-
-
 _description: _
 
-
 Draws a straight line from the current drawing position to the location indicated by x,y.
-
-
 
 
 
@@ -1946,14 +1797,9 @@ location indicated by x,y,z.
 
 
 
-
-
 _description: _
 
-
 Draws a straight line from the current drawing position to the location indicated by x,y,z.
-
-
 
 
 
@@ -1989,14 +1835,9 @@ location.
 
 
 
-
-
 _description: _
 
-
 Moves the drawing position to p. This means that a subsequent calls to, for instance, lineTo() or curveTo() will connect the location p to the new location.
-
-
 
 
 
@@ -2032,14 +1873,9 @@ location x,y,z to the new location.
 
 
 
-
-
 _description: _
 
-
 Moves the drawing position to x,y.z. This means that a subsequent calls to, for instance, lineTo() or curveTo() will connect the location x,y,z to the new location.
-
-
 
 
 
@@ -2077,14 +1913,9 @@ added to it.
 
 
 
-
-
 _description: _
 
-
 Creates a new subpath, either an ofPolyline instance or an ofSubPath instance. All points added after a call to ofSubPath will be done in the newly created subpath. Calling close() automatically calls create newSubPath(), ensuring that the closed path doesn't have new points added to it.
-
-
 
 
 
@@ -2118,14 +1949,9 @@ Create a new ofPath instance.
 
 
 
-
-
 _description: _
 
-
 Creates a new ofPath instance.
-
-
 
 
 
@@ -2163,15 +1989,10 @@ x, y, z.
 
 
 
-
-
 _description: _
-
 
 Creates a quadratic bezier line in 3D space from the current drawing point with the beginning indicated by the coordinates cx1, cy1, cz1, the control point at cx2, cy2, cz2, and that ends at the coordinates x, y, z.
 ![polyline curves](curves.png)
-
-
 
 
 
@@ -2207,14 +2028,9 @@ at p2, and that ends at the point p3.
 
 
 
-
-
 _description: _
 
-
 Creates a quadratic bezier line in 2D space from the current drawing point with the beginning indicated by the point p1, the control point at p2, and that ends at the point p3.
-
-
 
 
 
@@ -2250,14 +2066,9 @@ control point at cx2, cy2, and that ends at the coordinates x, y.
 
 
 
-
-
 _description: _
 
-
 Creates a quadratic bezier line in 3D space from the current drawing point with the beginning indicated by the coordinates cx1, cy1, the control point at cx2, cy2, and that ends at the coordinates x, y.
-
-
 
 
 
@@ -2291,9 +2102,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2329,9 +2138,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2367,9 +2174,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2405,9 +2210,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2443,9 +2246,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2481,9 +2282,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2519,9 +2318,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2557,9 +2354,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2595,9 +2390,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2633,9 +2426,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2671,9 +2462,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2711,14 +2500,9 @@ scaling by 0,0 zeros out all data.
 
 
 
-
-
 _description: _
 
-
 Changes the size of either the ofPolyline or ofSubPath instances that the ofPath contains. These changes are non-reversible, so for instance scaling by 0,0 zeroes out all data.
-
-
 
 
 
@@ -2752,9 +2536,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2792,14 +2574,9 @@ fill. All subpaths are affected.
 
 
 
-
-
 _description: _
 
-
 This sets the color of the path. This affects both the line if the path is drawn as wireframe and the fill if the path is drawn with fill. All subpaths are affected.
-
-
 
 
 
@@ -2833,9 +2610,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2872,14 +2647,9 @@ drawn as wireframe.
 
 
 
-
-
 _description: _
 
-
 This sets the fill color of the path. This has no affect if the path is drawn as wireframe.
-
-
 
 
 
@@ -2914,14 +2684,9 @@ drawn as wireframe.
 
 
 
-
-
 _description: _
 
-
 This sets the fill color of the path. This has no affect if the path is drawn as wireframe.
-
-
 
 
 
@@ -2955,14 +2720,9 @@ Set whether the path should be drawn as wireframes or filled.
 
 
 
-
-
 _description: _
 
-
 Sets whether the path should be drawn as wireframes or filled.
-
-
 
 
 
@@ -2998,14 +2758,9 @@ subpaths are affected.
 
 
 
-
-
 _description: _
 
-
 This sets the color of the path. This affects both the line if the path is drawn as wireframe and the fill if the path is drawn with fill. All subpaths are affected.
-
-
 
 
 
@@ -3032,7 +2787,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -3090,10 +2844,7 @@ The possible options you can pass in are:
 
 
 
-
-
 _description: _
-
 
 This sets the way that the points in the sub paths are connected. OpenGL can only render convex polygons which means that any shape that isn't convex, i.e. that has points which are concave, going inwards, need to be tessellated into triangles so that OpenGL can render them. If you're using filled shapes with your ofPath this is done automatically for you. The possible options you can pass in are:
 
@@ -3174,8 +2925,6 @@ we can see non zero and positive handle the winding differently:
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
 ###void setStrokeColor(&color)
@@ -3205,14 +2954,9 @@ is drawn filled.
 
 
 
-
-
 _description: _
 
-
 This sets the stroke color of the path. This has no affect if the path is drawn filled.
-
-
 
 
 
@@ -3247,14 +2991,9 @@ is drawn filled.
 
 
 
-
-
 _description: _
 
-
 This sets the stroke color of the path. This has no affect if the path is drawn filled.
-
-
 
 
 
@@ -3289,14 +3028,9 @@ not in wireframe.
 
 
 
-
-
 _description: _
 
-
 Sets the stroke width of the line if the ofPath is to be drawn not in wireframe.
-
-
 
 
 
@@ -3330,9 +3064,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -3368,9 +3100,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -3406,9 +3136,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -3444,9 +3172,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -3482,9 +3208,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -3520,9 +3244,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -3558,9 +3280,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -3591,8 +3311,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3619,8 +3343,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3647,8 +3375,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3675,8 +3407,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3703,8 +3439,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3731,8 +3471,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3759,8 +3503,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3787,8 +3535,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3815,8 +3567,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3843,8 +3599,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3871,8 +3631,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3899,8 +3663,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3927,8 +3695,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3955,8 +3727,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3983,8 +3759,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -4011,8 +3791,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -4039,8 +3823,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -4067,8 +3855,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -4095,8 +3887,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 

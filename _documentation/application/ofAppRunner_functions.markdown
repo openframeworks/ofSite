@@ -40,13 +40,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Every update/draw cycle, the function ofSetupScreen is called. That function sets the perspective, coordinate system, and some other openGL parameters. If you need to use your own parameters, the call to that function can be disabled with ofDisableSetupScreen.
-
-
 
 
 
@@ -79,13 +75,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 This returns whether your current device does hardware orientation. An iPhone, for instance, does hardware orientation, which you might notice when you tilt your iPhone to the side, hence ofDoesHWOrientation() would return true. Tilting your laptop to the side does not do the same thing, hence ofDoesHWOrientation() would return false.
-
-
 
 
 
@@ -118,13 +110,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Re-enables the call to ofSetupScreen after being disabled with ofDisableSetupScreen
-
-
 
 
 
@@ -157,13 +145,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 This exits your app, causing it to quit.
-
-
 
 
 
@@ -196,9 +180,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Useful to access the variables in the main app from other classes. The pointer returned by this function has to be cast from an ofBaseApp pointer, to a pointer to your inherited class, before being used.
 ie:
@@ -214,8 +196,6 @@ void myClass::method(){
    doSomething( ((ofApp*)ofGetAppPtr())->someVar );
 }
 ~~~~
-
-
 
 
 
@@ -248,13 +228,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 note: this code is implemented inside the ofAppRunner.
-
-
 
 
 
@@ -287,13 +263,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 This gets the height of your ofApp window. Useful for finding the middle of the screen like so: ofVec2f middle(ofGetWidth()/2, ofGetHeight()/2)
-
-
 
 
 
@@ -326,9 +298,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -363,9 +333,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -400,13 +368,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 note: this code is implemented inside the ofAppRunner
-
-
 
 
 
@@ -439,13 +403,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 note: this code is implemented inside the ofAppRunner
-
-
 
 
 
@@ -478,9 +438,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -515,13 +473,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 This gets the width of your ofApp window. Useful for finding the middle of the screen like so: ofVec2f middle(ofGetWidth()/2, ofGetHeight()/2)
-
-
 
 
 
@@ -554,9 +508,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -591,9 +543,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 eg:
 ~~~~{.cpp}
@@ -609,8 +559,6 @@ if(mode == OF_WINDOW){
 ~~~~
 note: this code is implemented inside the ofAppRunner
 	
-
-
 
 
 
@@ -643,14 +591,10 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 This is the x position of your window inside your screen. How exactly this is returned is dependent on your operating system but it's pretty consistent across platforms.
 note: this code is implemented inside the ofAppRunner
-
-
 
 
 
@@ -683,14 +627,10 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 This is the y position of your window inside your screen. How exactly this is returned is dependent on your operating system but it's pretty consistent across platforms.
 note: this code is implemented inside the ofAppRunner
-
-
 
 
 
@@ -723,9 +663,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -760,9 +698,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -797,13 +733,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 This is the size of your window as it's drawn on your screen. How exactly this is returned is dependent on your operating system but it's pretty consistent across platforms.
-
-
 
 
 
@@ -836,9 +768,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -873,14 +803,10 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 This hides the mouse cursor, useful if you're doing a clever app that has no need for mouse interaction, evil if you are.
 note: this code is implemented inside the ofAppRunner.
-
-
 
 
 
@@ -913,13 +839,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Attempts to set the frame rate to a given target by sleeping a certain amount per frame. The results of this may vary based if vertical sync is enabled or disabled (either at the card level or via code), because this locks the drawing to intervals where the screen refreshes.
-
-
 
 
 
@@ -952,15 +874,11 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Change the app window mode to fullscreen or window depending on the boolean parameter.
 Enables or disables fullscreen mode for your app's window.
 note: this code is implemented inside the ofAppRunner.
-
-
 
 
 
@@ -993,9 +911,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1030,9 +946,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1067,14 +981,10 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Moves the app window to the x and y coordinates specified. For example: coordinates of (0,0) would set the top-left corner of your app window to the top-left corner of the screen.
 note: this code is implemented inside the ofAppRunner
-
-
 
 
 
@@ -1107,14 +1017,10 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Sets the dimension of your app's window.
 note: this code is implemented inside the ofAppRunner
-
-
 
 
 
@@ -1147,9 +1053,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1184,9 +1088,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Shows the mouse cursor again when it's been hidden with ofHideCursor
 makes the cursor visible.
@@ -1196,8 +1098,6 @@ note: this code is implemented inside the ofAppRunner
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
 ###GLXContext ofToggleFullscreen()
@@ -1225,46 +1125,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###GLXContext ofToggleFullscreen()
-
-<!--
-_syntax: ofToggleFullscreen()_
-_name: ofToggleFullscreen_
-_returns: GLXContext_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
 
 
 
@@ -1299,9 +1160,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1336,9 +1195,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1373,9 +1230,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1410,9 +1265,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1447,9 +1300,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1484,9 +1335,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1521,9 +1370,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1558,9 +1405,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1595,9 +1440,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1632,9 +1475,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1669,9 +1510,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1706,9 +1545,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1743,9 +1580,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1780,9 +1615,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1817,9 +1650,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1854,9 +1685,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1891,9 +1720,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1928,9 +1755,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1965,9 +1790,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2002,9 +1825,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2039,9 +1860,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2076,9 +1895,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2113,9 +1930,42 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###GLXContext ofToggleFullscreen()
+
+<!--
+_syntax: ofToggleFullscreen()_
+_name: ofToggleFullscreen_
+_returns: GLXContext_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 

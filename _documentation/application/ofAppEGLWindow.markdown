@@ -52,7 +52,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -89,9 +88,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -120,7 +117,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -164,9 +160,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -202,9 +196,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -240,9 +232,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -278,9 +268,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -316,9 +304,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -354,9 +340,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -392,9 +376,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -430,9 +412,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -468,9 +448,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -506,9 +484,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -544,9 +520,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -575,7 +549,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -619,7 +592,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -656,9 +628,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -687,7 +657,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -731,9 +700,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -769,9 +736,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -807,9 +772,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -845,9 +808,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -883,9 +844,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -921,9 +880,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -959,9 +916,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -997,9 +952,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1035,9 +988,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1073,9 +1024,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1111,9 +1060,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1149,9 +1096,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1187,9 +1132,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1225,9 +1168,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1263,9 +1204,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1294,7 +1233,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1338,9 +1276,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1376,9 +1312,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1414,9 +1348,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1452,9 +1384,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1490,9 +1420,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1528,9 +1456,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1566,9 +1492,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1604,9 +1528,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1642,9 +1564,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1680,9 +1600,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1711,7 +1629,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1755,7 +1672,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -1785,7 +1701,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1829,9 +1744,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1860,7 +1773,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1904,9 +1816,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1942,9 +1852,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1980,9 +1888,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2011,7 +1917,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2055,9 +1960,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2093,9 +1996,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2131,9 +2032,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2169,9 +2068,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2207,9 +2104,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2245,9 +2140,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2283,9 +2176,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2321,9 +2212,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2352,7 +2241,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2396,7 +2284,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -2433,9 +2320,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2471,9 +2356,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2509,9 +2392,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2547,9 +2428,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2585,9 +2464,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2623,9 +2500,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2661,9 +2536,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2699,9 +2572,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2730,7 +2601,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2774,9 +2644,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2808,8 +2676,11 @@ _inlined_description: _
 
 < This indicates the need/intent to draw a setup screen.
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -2837,8 +2708,11 @@ _inlined_description: _
 
 < This indicates if a (new) window rectangle has to be adjusted.
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -2866,8 +2740,11 @@ _inlined_description: _
 
 < Indicate the visibility of the (mouse) cursor.
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -2895,8 +2772,11 @@ _inlined_description: _
 
 < Mouse button currently in use.
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -2921,6 +2801,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _
@@ -2950,6 +2835,11 @@ _advanced: False_
 _inlined_description: _
 
 
+
+
+
+
+
 _description: _
 
 
@@ -2977,8 +2867,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3005,8 +2899,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3033,8 +2931,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3061,8 +2963,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3089,8 +2995,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3117,8 +3027,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3145,8 +3059,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3173,8 +3091,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3202,8 +3124,11 @@ _inlined_description: _
 
 < Indicate the version of OpenGL for Embedded Systems.
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -3228,6 +3153,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _
@@ -3258,8 +3188,11 @@ _inlined_description: _
 
 < Indicate that the surface is (properly) initialized.
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -3287,8 +3220,11 @@ _inlined_description: _
 
 < Indicate the use of the X Window System.
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -3316,8 +3252,11 @@ _inlined_description: _
 
 < Indicate that the window is (properly) initialized.
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -3344,8 +3283,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3372,8 +3315,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3400,8 +3347,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3428,8 +3379,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3456,8 +3411,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3485,8 +3444,11 @@ _inlined_description: _
 
 < Amount by which to mouse movements along the X axis.
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -3514,8 +3476,11 @@ _inlined_description: _
 
 < Amount by which to mouse movements along the Y axis.
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -3543,8 +3508,11 @@ _inlined_description: _
 
 < The number of frames passed/shown since the window got resized.
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -3571,8 +3539,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3599,8 +3571,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3627,8 +3603,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3655,8 +3635,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3683,8 +3667,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3712,8 +3700,11 @@ _inlined_description: _
 
 < Indicate which X11 display is in use (currently).
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -3741,8 +3732,11 @@ _inlined_description: _
 
 < Indicate which X11 screen is in use (currently).
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -3770,8 +3764,11 @@ _inlined_description: _
 
 < The number of the X11 screen is in use (currently).
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -3798,8 +3795,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 

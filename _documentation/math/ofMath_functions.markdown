@@ -55,10 +55,7 @@ Returns: The difference between two angles in degrees.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -108,105 +105,7 @@ Returns: The difference between two angles in radians.
 
 
 
-
-
 _description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofPoint ofWrapRadians(angle, from = -PI, to = +PI)
-
-<!--
-_syntax: ofWrapRadians(angle, from = -PI, to = +PI)_
-_name: ofBezierPoint_
-_returns: ofPoint_
-_returns_description: _
-_parameters: float angle, float from, float to_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Given the four points that determine a bezier curve, return an interpolated point on the curve.
-
-Parameters:
-a The beginning point of the curve.
-b The first control point.
-c The second control point.
-d The end point of the curve.
-t an offset along the curve, normalized between 0 and 1.
-
-Returns: A ofPoint on the curve.
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofPoint ofWrapRadians(angle, from = -PI, to = +PI)
-
-<!--
-_syntax: ofWrapRadians(angle, from = -PI, to = +PI)_
-_name: ofBezierTangent_
-_returns: ofPoint_
-_returns_description: _
-_parameters: float angle, float from, float to_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Given the four points that determine a bezier curve and an offset along the curve, return an tangent vector to a point on the curve.
-Currently this is not a normalized point, and will need to be normalized.
-
-Parameters:
-a The beginning point of the curve.
-b The first control point.
-c The second control point.
-d The end point of the curve.
-t an offset along the curve, normalized between 0 and 1.
-
-Returns: A ofPoint on the curve.
-
-
-
-
-
-
-
-_description: _
-
 
 
 
@@ -262,104 +161,7 @@ Returns: a floating point number in the range [min, max].
 
 
 
-
-
 _description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofPoint ofWrapRadians(angle, from = -PI, to = +PI)
-
-<!--
-_syntax: ofWrapRadians(angle, from = -PI, to = +PI)_
-_name: ofCurvePoint_
-_returns: ofPoint_
-_returns_description: _
-_parameters: float angle, float from, float to_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Given the four points that determine a Catmull Rom curve, return an interpolated point on the curve.
-
-Parameters:
-a The first control point.
-b The beginning point of the curve.
-c The end point of the curve.
-d The second control point.
-t an offset along the curve, normalized between 0 and 1.
-
-Returns: A ofPoint on the curve.
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofPoint ofWrapRadians(angle, from = -PI, to = +PI)
-
-<!--
-_syntax: ofWrapRadians(angle, from = -PI, to = +PI)_
-_name: ofCurveTangent_
-_returns: ofPoint_
-_returns_description: _
-_parameters: float angle, float from, float to_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Return a tangent point for an offset along a Catmull Rom curve.
-
-Parameters:
-a The first control point.
-b The beginning point of the curve.
-c The end point of the curve.
-d The second control point.
-t an offset along the curve, normalized between 0 and 1.
-
-Returns: A ofPoint on the curve.
-
-
-
-
-
-
-
-_description: _
-
 
 
 
@@ -405,10 +207,7 @@ Returns: the angle in radians.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -454,10 +253,7 @@ Returns: float Distance between points.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -505,10 +301,7 @@ Returns: distance-squared between two points.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -550,10 +343,7 @@ Returns: true if the number t is the range of [min, max].
 
 
 
-
-
 _description: _
-
 
 
 
@@ -595,10 +385,7 @@ Returns: True if the point defined by the coordinates is enclosed, false otherwi
 
 
 
-
-
 _description: _
-
 
 
 
@@ -639,196 +426,7 @@ Returns: True if the ofPoint is enclosed, false otherwise.
 
 
 
-
-
 _description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###Type ofWrapRadians(angle, from = -PI, to = +PI)
-
-<!--
-_syntax: ofWrapRadians(angle, from = -PI, to = +PI)_
-_name: ofInterpolateCatmullRom_
-_returns: Type_
-_returns_description: _
-_parameters: float angle, float from, float to_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###Type ofWrapRadians(angle, from = -PI, to = +PI)
-
-<!--
-_syntax: ofWrapRadians(angle, from = -PI, to = +PI)_
-_name: ofInterpolateCosine_
-_returns: Type_
-_returns_description: _
-_parameters: float angle, float from, float to_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-\}
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###Type ofWrapRadians(angle, from = -PI, to = +PI)
-
-<!--
-_syntax: ofWrapRadians(angle, from = -PI, to = +PI)_
-_name: ofInterpolateCubic_
-_returns: Type_
-_returns_description: _
-_parameters: float angle, float from, float to_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###Type ofWrapRadians(angle, from = -PI, to = +PI)
-
-<!--
-_syntax: ofWrapRadians(angle, from = -PI, to = +PI)_
-_name: ofInterpolateHermite_
-_returns: Type_
-_returns_description: _
-_parameters: float angle, float from, float to_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###Type ofWrapRadians(angle, from = -PI, to = +PI)
-
-<!--
-_syntax: ofWrapRadians(angle, from = -PI, to = +PI)_
-_name: ofInterpolateHermite_
-_returns: Type_
-_returns_description: _
-_parameters: float angle, float from, float to_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
 
 
 
@@ -887,10 +485,7 @@ Returns: A float between start and stop.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -937,10 +532,7 @@ Returns: An angle in degrees between currentAngle and targetAngle.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -987,57 +579,7 @@ Returns: An angle in radians between currentAngle and targetAngle.
 
 
 
-
-
 _description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool ofWrapRadians(angle, from = -PI, to = +PI)
-
-<!--
-_syntax: ofWrapRadians(angle, from = -PI, to = +PI)_
-_name: ofLineSegmentIntersection_
-_returns: bool_
-_returns_description: _
-_parameters: float angle, float from, float to_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Determine the intersection between two lines.
-
-Parameters:
-line1Start Starting point for first line.
-line1End End point for first line.
-line2Start Starting point for second line.
-line2End End point for second line.
-intersection ofPoint reference in which to store the computed intersection point.
-
-Returns: True if the lines intersect.
-
-
-
-
-
-
-
-_description: _
-
 
 
 
@@ -1105,10 +647,7 @@ Returns: a mapped floating point number.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1158,10 +697,7 @@ Returns: value^2.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1196,10 +732,7 @@ Calculates a one dimensional Perlin noise value between 0.0...1.0.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1234,10 +767,7 @@ Calculates a two dimensional Perlin noise value between 0.0...1.0.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1272,10 +802,7 @@ Calculates a three dimensional Perlin noise value between 0.0...1.0.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1310,10 +837,7 @@ Calculates a four dimensional Perlin noise value between 0.0...1.0.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1361,10 +885,7 @@ Returns: A float between 0 and 1.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1410,10 +931,7 @@ Returns: the angle in degrees.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1466,10 +984,7 @@ Returns: A random floating point number between val0 and val1.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1519,10 +1034,7 @@ max The maximum value of the random number.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1565,10 +1077,7 @@ Returns: a random number between 0 and ofGetHeight().
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1611,10 +1120,7 @@ Returns: a random number between 0 and ofGetWidth().
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1655,10 +1161,7 @@ Returns: A random floating point number between -1 and 1.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1699,10 +1202,7 @@ Returns: A random floating point number between 0 and 1.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1740,10 +1240,7 @@ generated from clock time and the PID.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1786,10 +1283,7 @@ val The value with which to seed the generator.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1826,10 +1320,7 @@ Returns: int -1 if n is negative, 1 if n is positive, and 0 is n == 0;
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1864,10 +1355,7 @@ Calculates a one dimensional Perlin noise value between -1.0...1.0.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1902,10 +1390,7 @@ Calculates a two dimensional Perlin noise value between -1.0...1.0.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1940,10 +1425,7 @@ Calculates a three dimensional Perlin noise value between -1.0...1.0.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1978,10 +1460,7 @@ Calculates a four dimensional Perlin noise value between -1.0...1.0.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2033,10 +1512,7 @@ Returns: to The upper bound of the range.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2071,9 +1547,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2108,9 +1582,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2145,9 +1617,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2182,9 +1652,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2219,9 +1687,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2256,9 +1722,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2293,9 +1757,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2330,9 +1792,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2367,9 +1827,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2404,9 +1862,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2441,9 +1897,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2478,9 +1932,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2515,9 +1967,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2552,9 +2002,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2589,9 +2037,357 @@ _inlined_description: _
 
 
 
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###Type ofWrapRadians(angle, from = -PI, to = +PI)
+
+<!--
+_syntax: ofWrapRadians(angle, from = -PI, to = +PI)_
+_name: ofWrapRadians_
+_returns: Type_
+_returns_description: _
+_parameters: float angle, float from, float to_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
 
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###Type ofWrapRadians(angle, from = -PI, to = +PI)
+
+<!--
+_syntax: ofWrapRadians(angle, from = -PI, to = +PI)_
+_name: ofWrapRadians_
+_returns: Type_
+_returns_description: _
+_parameters: float angle, float from, float to_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###Type ofWrapRadians(angle, from = -PI, to = +PI)
+
+<!--
+_syntax: ofWrapRadians(angle, from = -PI, to = +PI)_
+_name: ofWrapRadians_
+_returns: Type_
+_returns_description: _
+_parameters: float angle, float from, float to_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###Type ofWrapRadians(angle, from = -PI, to = +PI)
+
+<!--
+_syntax: ofWrapRadians(angle, from = -PI, to = +PI)_
+_name: ofWrapRadians_
+_returns: Type_
+_returns_description: _
+_parameters: float angle, float from, float to_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###Type ofWrapRadians(angle, from = -PI, to = +PI)
+
+<!--
+_syntax: ofWrapRadians(angle, from = -PI, to = +PI)_
+_name: ofWrapRadians_
+_returns: Type_
+_returns_description: _
+_parameters: float angle, float from, float to_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###Type ofWrapRadians(angle, from = -PI, to = +PI)
+
+<!--
+_syntax: ofWrapRadians(angle, from = -PI, to = +PI)_
+_name: ofWrapRadians_
+_returns: Type_
+_returns_description: _
+_parameters: float angle, float from, float to_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###Type ofWrapRadians(angle, from = -PI, to = +PI)
+
+<!--
+_syntax: ofWrapRadians(angle, from = -PI, to = +PI)_
+_name: ofWrapRadians_
+_returns: Type_
+_returns_description: _
+_parameters: float angle, float from, float to_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###Type ofWrapRadians(angle, from = -PI, to = +PI)
+
+<!--
+_syntax: ofWrapRadians(angle, from = -PI, to = +PI)_
+_name: ofWrapRadians_
+_returns: Type_
+_returns_description: _
+_parameters: float angle, float from, float to_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###Type ofWrapRadians(angle, from = -PI, to = +PI)
+
+<!--
+_syntax: ofWrapRadians(angle, from = -PI, to = +PI)_
+_name: ofWrapRadians_
+_returns: Type_
+_returns_description: _
+_parameters: float angle, float from, float to_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###Type ofWrapRadians(angle, from = -PI, to = +PI)
+
+<!--
+_syntax: ofWrapRadians(angle, from = -PI, to = +PI)_
+_name: ofWrapRadians_
+_returns: Type_
+_returns_description: _
+_parameters: float angle, float from, float to_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 

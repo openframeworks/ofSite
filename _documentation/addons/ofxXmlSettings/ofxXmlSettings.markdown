@@ -162,13 +162,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Adds a new attribute to the tag with with the given int value. If the tag doesn't exist it is created. If an attribute at index 'which' already exists its value replaced by the provided value
-
-
 
 
 
@@ -202,13 +198,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Adds a new attribute to the tag with the given double value. 
-
-
 
 
 
@@ -242,13 +234,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Adds a new attribute to the tag with the given string value. 
-
-
 
 
 
@@ -282,13 +270,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Adds a new attribute to the tag with with the given int value.
-
-
 
 
 
@@ -322,13 +306,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Adds a new attribute to the tag with with the given double value.
-
-
 
 
 
@@ -362,13 +342,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Adds a new attribute to the tag with with the given string value.
-
-
 
 
 
@@ -402,15 +378,11 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Adds an empty tag at the current document level. If you want to add children tags, call pushTag afterwords to begin editing the document with the new tag as root.
 
 Return the number of tags with the same name at the current level.
-
-
 
 
 
@@ -444,15 +416,11 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Adds a tag with tag name and integer value to the document, returning the number of tags with the same name.
 
 addValue and setValue are very similar, both add new tags to the current document with the given name and value.  The distinction is that if tags exist with the same name at the current document level, addValue will create additional tags, while setValue will replace contents of the tags based on the 'which' parameter.
-
-
 
 
 
@@ -486,13 +454,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Adds a tag with tag name and double value to the document, returning the number of tags with the same name.
-
-
 
 
 
@@ -526,13 +490,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Adds a tag with tag name and string value to the document, returning the number of tags with the same name.
-
-
 
 
 
@@ -566,13 +526,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns true if a tag has any attributes.
-
-
 
 
 
@@ -606,13 +562,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Removes all tags at the current document level.
-
-
 
 
 
@@ -646,13 +598,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Clears all attributes from the given tag name and tag index which.
-
-
 
 
 
@@ -686,13 +634,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 If the given tag exists at the current pushTag level set its contents to empty.
-
-
 
 
 
@@ -726,13 +670,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Copies the contents of the ofxXmlSettings into the string str.
-
-
 
 
 
@@ -766,9 +706,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -804,13 +742,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns the value of the attribute on tag at index which as an int.
-
-
 
 
 
@@ -844,13 +778,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns the value of the attribute on tag at index which as a double.
-
-
 
 
 
@@ -884,13 +814,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns the value of the attribute on tag at index which as a string.
-
-
 
 
 
@@ -924,13 +850,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns an array of strings containing all attribute names on the tag.  This is useful in conjunction with a loop to get all values of the tags one by one with calls to getAttribute.
-
-
 
 
 
@@ -964,9 +886,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1002,13 +922,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns the number of attributes on a tag at index which.
-
-
 
 
 
@@ -1042,13 +958,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns the number of tags with the given name at the current document level. Useful for iterating through a list of sibling tags with the same name.  
-
-
 
 
 
@@ -1082,13 +994,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 getPushLevel returns the number of tags that have been pushed. Starting at 0 when the file is first populated (eg a call to loadFile). Each time pushTag is called push level increases by one. Each time popTag is called it decreases.
-
-
 
 
 
@@ -1122,9 +1030,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Returns the value stored by the requested tag. The data type returned depends on the type provided as the defaultArgument. For example, if the tag is:
 ~~~~{.xml}
@@ -1141,8 +1047,6 @@ int myInt = settings.getValue("myTag", 0);
 //returns the double value 9.8
 double myDouble = settings.getValue("myTag", 0.0);
 ~~~~
-
-
 
 
 
@@ -1176,13 +1080,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns the value stored by the requested tag as a double. Refer above for description of how this method works.
-
-
 
 
 
@@ -1216,13 +1116,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns the value stored by the requested tag as a string. Refer above for description of how this method works.
-
-
 
 
 
@@ -1256,9 +1152,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1294,13 +1188,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Loads and parses the xml file at the given path.  Returns true if the file is found and is correctly formatted xml.
-
-
 
 
 
@@ -1334,13 +1224,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Populates the ofxXmlSettings object from a string of containing xml.
-
-
 
 
 
@@ -1374,13 +1260,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Default constructor for ofxXmlSettings.  Initializes an empty object with no file set or loaded and no contents.
-
-
 
 
 
@@ -1414,13 +1296,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Initializes an xml settings object and loads the file at xmlFile path.
-
-
 
 
 
@@ -1454,13 +1332,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 popTag restores the current document root after a call to pushTag.
-
-
 
 
 
@@ -1494,15 +1368,11 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Pushing and Popping operations are used to set the current document level. Most of the methods in ofxXmlSettings are done in relationship to just the top level tags, so pushing tags is necessary to go deeper into documents. Every pushTag should be matched with a popTag after operations at that level are finished.  
 
 pushingTag pushes the given tag which is then treated as the tag as as the document root.
-
-
 
 
 
@@ -1536,9 +1406,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1574,9 +1442,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1612,9 +1478,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1650,9 +1514,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1688,13 +1550,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Removes the attribute from tag name at index specified by 'which'.
-
-
 
 
 
@@ -1728,13 +1586,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Removes a tag from the current level. This differs from clearing it in that the entire tag is removed, rather than just its contents being set to empty.
-
-
 
 
 
@@ -1768,9 +1622,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1806,13 +1658,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Saves the current state of the xml settings object to file at xmlFile path.  
-
-
 
 
 
@@ -1846,13 +1694,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Saves the current state of the xml file to its current path. The current path is defined by whatever path was specified when loadFile(xmlFile) or saveFile(xmlFile) was last called.
-
-
 
 
 
@@ -1886,9 +1730,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1924,13 +1766,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns the value of the attribute on tag as a double.
-
-
 
 
 
@@ -1964,13 +1802,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Refer to addAttribute
-
-
 
 
 
@@ -2004,13 +1838,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Refer to addAttribute
-
-
 
 
 
@@ -2044,13 +1874,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Refer to addAttribute
-
-
 
 
 
@@ -2084,13 +1910,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Refer to addAttribute
-
-
 
 
 
@@ -2124,13 +1946,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Refer to addAttribute
-
-
 
 
 
@@ -2164,15 +1982,11 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Sets the value of a tag to an integer value.  If the tag already exists, the current value is replaced with value. Otherwise a new tag is created.
 
 The number of tags with the same name at the current document level is returned.
-
-
 
 
 
@@ -2206,15 +2020,11 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Sets the value of a tag to an integer value.  If the tag already exists, the current value is replaced with value otherwise a new tag is created.
 
 The number of tags with the same name at the current document level is returned.
-
-
 
 
 
@@ -2248,15 +2058,11 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Sets the value of a tag to a string value.  If the tag already exists, the current value is replaced with value otherwise a new tag is created.
 
 The number of tags with the same name at the current document level is returned.
-
-
 
 
 
@@ -2290,9 +2096,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2328,13 +2132,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns true if the given tag exists at the current pushTag level.
-
-
 
 
 
@@ -2368,9 +2168,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2406,9 +2204,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2444,9 +2240,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2477,8 +2271,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2505,8 +2303,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2533,8 +2335,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2561,8 +2367,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 

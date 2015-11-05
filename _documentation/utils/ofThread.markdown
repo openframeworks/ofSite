@@ -270,10 +270,7 @@ Returns: A pointer to the current active thread OR 0 iff the main
 
 
 
-
-
 _description: _
-
 
 
 
@@ -316,10 +313,7 @@ Returns: A reference to the backing Poco thread.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -362,10 +356,7 @@ Returns: A reference to the backing Poco thread.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -402,10 +393,7 @@ Get the unique thread id.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -438,8 +426,6 @@ _inlined_description: _
 Get the unique thread name, in the form of "Thread id#"
 
 Returns: the Thread ID string.
-
-
 
 
 
@@ -511,10 +497,7 @@ Returns: True iff this ofThread the currently active thread.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -567,10 +550,7 @@ Returns: true iff the current thread is the main thread.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -608,10 +588,7 @@ Returns: true iff the thread is currently running.
 
 
 
-
-
 _description: _
-
 
 Returns true if the thread is currently running. This is especially useful inside the thread's threadedFunction() when you want it to loop continuously until it's told to exit:
 
@@ -637,8 +614,6 @@ class MyThread : public ofThread {
 };
 
 ~~~~
-
-
 
 
 
@@ -680,18 +655,13 @@ Returns: true iff the lock was successfully acquired.
 
 
 
-
-
 _description: _
-
 
 Try to lock the mutex.
 
 If the thread was started in blocking mode in startThread(), any thread (including your app main loop) will wait until the mutex is unlocked.
 
 If the thread is non-blocking, this call will immediately return a true or false if the mutex is available. It is up to you to make sure the resource is not being used when accessing it. See the [Wikipedia article on Non-blocking](http://en.wikipedia.org/wiki/Non-blocking_algorithm) for reasons as to why using a non-blocking thread might be more advantageous.
-
-
 
 
 
@@ -725,10 +695,7 @@ Create an ofThread.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -764,9 +731,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -837,10 +802,7 @@ milliseconds The number of milliseconds to sleep.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -882,10 +844,7 @@ mutexBlocks Set blocking to true if you want the mutex to
 
 
 
-
-
 _description: _
-
 
 
 
@@ -927,10 +886,7 @@ processing, the user should call waitForThread(true, ...).
 
 
 
-
-
 _description: _
-
 
 
 
@@ -998,11 +954,7 @@ threadRunning is set to false via the stopThread() method.
 
 
 
-
-
-
 _description: _
-
 
 This is the thread run function, the heart of your thread.
 
@@ -1063,8 +1015,6 @@ void ofApp::exit() {
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
 ###void unlock()
@@ -1096,16 +1046,11 @@ calling thread.
 
 
 
-
-
 _description: _
-
 
 Unlock the mutex.
 
 This only unlocks the mutex if the calling thread had previously locked it, otherwise the functions does nothing and does not block.
-
-
 
 
 
@@ -1173,10 +1118,7 @@ milliseconds If millseconds is set to INFINITE_JOIN_TIMEOUT, the
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1220,10 +1162,7 @@ be preferred.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1267,10 +1206,7 @@ Warning: The destructor WILL NOT stop the thread or wait for
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1301,8 +1237,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -1329,8 +1269,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -1364,12 +1308,12 @@ function by calling:
     ofScopedLock lock(mutex);
 
 
+
+
+
 _description: _
 
-
 This is the internal [mutex](http://en.wikipedia.org/wiki/Mutex) called through lock() & unlock(). You can use it manually inside your derived class.
-
-
 
 
 
@@ -1395,8 +1339,11 @@ _inlined_description: _
 
 The Poco::Thread that runs the Poco::Runnable.
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -1421,6 +1368,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _

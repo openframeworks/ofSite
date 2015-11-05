@@ -51,9 +51,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -89,9 +87,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -127,9 +123,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -165,9 +159,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -203,9 +195,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -241,9 +231,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -279,9 +267,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -317,9 +303,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -355,9 +339,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -393,9 +375,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -431,9 +411,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -469,9 +447,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -507,9 +483,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -545,9 +519,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofMesh & getMesh()
+
+<!--
+_syntax: getMesh()_
+_name: getMesh_
+_returns: ofMesh &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -583,9 +591,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -595,12 +601,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const ofMesh & getMesh()
+###ofMesh * getMeshPtr()
 
 <!--
-_syntax: getMesh()_
-_name: getMesh_
-_returns: const ofMesh &_
+_syntax: getMeshPtr()_
+_name: getMeshPtr_
+_returns: ofMesh *_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -621,9 +627,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -659,9 +663,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -671,12 +673,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const ofMesh * getMeshPtr()
+###ofVec4f & getTexCoords()
 
 <!--
-_syntax: getMeshPtr()_
-_name: getMeshPtr_
-_returns: const ofMesh *_
+_syntax: getTexCoords()_
+_name: getTexCoords_
+_returns: ofVec4f &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -697,9 +699,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -735,9 +735,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -747,12 +745,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const ofVec4f & getTexCoords()
+###ofVec4f * getTexCoordsPtr()
 
 <!--
-_syntax: getTexCoords()_
-_name: getTexCoords_
-_returns: const ofVec4f &_
+_syntax: getTexCoordsPtr()_
+_name: getTexCoordsPtr_
+_returns: ofVec4f *_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -773,9 +771,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -811,47 +807,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###const ofVec4f * getTexCoordsPtr()
-
-<!--
-_syntax: getTexCoordsPtr()_
-_name: getTexCoordsPtr_
-_returns: const ofVec4f *_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
 
 
 
@@ -887,9 +843,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -925,9 +879,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -963,9 +915,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1001,9 +951,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1039,9 +987,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1077,9 +1023,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1115,9 +1059,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1146,7 +1088,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1190,9 +1131,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1228,9 +1167,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1266,9 +1203,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1304,9 +1239,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1337,8 +1270,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -1365,8 +1302,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -1393,8 +1334,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -1421,8 +1366,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 

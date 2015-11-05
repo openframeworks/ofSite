@@ -12,6 +12,7 @@ _advanced: False_
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofTrueTypeShutdown()
@@ -34,8 +35,6 @@ _advanced: False_
 _inlined_description: _
 
 \}
-
-
 
 
 

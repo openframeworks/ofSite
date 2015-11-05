@@ -98,7 +98,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -135,13 +134,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Calls the closeMovie() function, which closes the movie file and de-allocates resources.
-
-
 
 
 
@@ -175,9 +170,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Closes the movie file and de-allocates resources.
 
@@ -188,8 +181,6 @@ ofVideoPlayer myPlayer;
 myPlayer.loadMovie("myMovie.mov"); //Loads video resources
 myPlayer.closeMovie(); //Unloads video resources
 ~~~~
-
-
 
 
 
@@ -223,13 +214,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Draws the texture of the movie player class at the position (x,y) with the given width (w) and height (h). 
-
-
 
 
 
@@ -263,13 +250,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Draws the texture of the movie player class as the position (x,y) with the internal width and height of the loaded movie. 
-
-
 
 
 
@@ -303,13 +286,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Moves the playhead to the first frame of the movie. This can also be accomplished using setCurrentFrame(0).
-
-
 
 
 
@@ -343,13 +322,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Get the current frame number.
-
-
 
 
 
@@ -383,13 +358,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns the duration of the movie in seconds as a floating number.
-
-
 
 
 
@@ -423,13 +394,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Get the height of the movie file.
-
-
 
 
 
@@ -463,13 +430,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns whether the movie has played all the way until the end.
-
-
 
 
 
@@ -503,13 +466,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns whether the video is looping or not.
-
-
 
 
 
@@ -543,13 +502,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns the path to the file that the ofVideoPlayer is currently playing. If it's not playing any files, then this returns a blank string.
-
-
 
 
 
@@ -583,9 +538,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofPixels & getPixels()
+
+<!--
+_syntax: getPixels()_
+_name: getPixels_
+_returns: ofPixels &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -621,7 +610,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -632,12 +620,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const ofPixels & getPixels()
+###shared_ptr< ofBaseVideoPlayer > getPlayer()
 
 <!--
-_syntax: getPixels()_
-_name: getPixels_
-_returns: const ofPixels &_
+_syntax: getPlayer()_
+_name: getPlayer_
+_returns: shared_ptr< ofBaseVideoPlayer >_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -651,7 +639,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -695,7 +682,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -706,12 +692,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const shared_ptr< ofBaseVideoPlayer > getPlayer()
+###shared_ptr< PlayerType > getPlayer()
 
 <!--
 _syntax: getPlayer()_
 _name: getPlayer_
-_returns: const shared_ptr< ofBaseVideoPlayer >_
+_returns: shared_ptr< PlayerType >_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -725,44 +711,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###const shared_ptr< PlayerType > getPlayer()
-
-<!--
-_syntax: getPlayer()_
-_name: getPlayer_
-_returns: const shared_ptr< PlayerType >_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
 
 
 
@@ -799,7 +747,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -843,13 +790,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns the position of the playhead from 0-1, where 0 is the start and 1 is the end of the video.
-
-
 
 
 
@@ -883,9 +826,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Returns the speed that the movie is being played at as a floating point number. 1 = normal speed, 0 = paused, -1 = backwards. 
 
@@ -893,16 +834,14 @@ Returns the speed that the movie is being played at as a floating point number. 
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
-###const ofTexture & getTexture()
+###ofTexture & getTexture()
 
 <!--
 _syntax: getTexture()_
 _name: getTexture_
-_returns: const ofTexture &_
+_returns: ofTexture &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -916,7 +855,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -954,6 +892,41 @@ _advanced: False_
 
 _inlined_description: _
 
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###vector< ofTexture > & getTexturePlanes()
+
+<!--
+_syntax: getTexturePlanes()_
+_name: getTexturePlanes_
+_returns: vector< ofTexture > &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
 
 
 
@@ -990,44 +963,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###const vector< ofTexture > & getTexturePlanes()
-
-<!--
-_syntax: getTexturePlanes()_
-_name: getTexturePlanes_
-_returns: const vector< ofTexture > &_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
 
 
 
@@ -1071,13 +1006,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Get the number of frames that the movie file being played contains.
-
-
 
 
 
@@ -1111,13 +1042,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Get the width of the movie file.
-
-
 
 
 
@@ -1144,7 +1071,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1188,9 +1114,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 This gets whether there are new pixels in your movies player. This is a way to poll the library that's actually reading your video file to see whether there's something new: For example, if the pixels are new, you could then process them.
 
@@ -1201,8 +1125,6 @@ if (myMovie.isFrameNew()){
 	// walk over each pixel and make something fun
 }
 ~~~~
-
-
 
 
 
@@ -1229,7 +1151,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1273,13 +1194,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Whether the resources that you've tried to load into your ofVideoPlayer have been loaded yet.
-
-
 
 
 
@@ -1313,13 +1230,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Whether the the ofVideoPlayer is currently paused.
-
-
 
 
 
@@ -1353,13 +1266,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Whether the the ofVideoPlayer is currently playing.
-
-
 
 
 
@@ -1386,7 +1295,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1430,7 +1338,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -1460,7 +1367,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1504,13 +1410,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Advances the playhead by one frame.
-
-
 
 
 
@@ -1544,13 +1446,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Constructor.
-
-
 
 
 
@@ -1584,13 +1482,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Plays the movie. If the movie has been stopped or paused it will the continue playback at the point it was stopped. You still need to call update() periodically to ensure that you're copying frames to an ofTexture so that they can be drawn.
-
-
 
 
 
@@ -1624,13 +1518,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Reverses the playhead by one frame.
-
-
 
 
 
@@ -1664,13 +1554,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Resets the ancher point of this ofVideoPlayer, if one has been set.
-
-
 
 
 
@@ -1704,13 +1590,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Sets an anchor percentage for this ofVideoPlayer instance
-
-
 
 
 
@@ -1744,13 +1626,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Sets anchor points for this ofVideoPlayer instance.
-
-
 
 
 
@@ -1784,13 +1662,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Sets the current frame of the video. Should be used only if you know the bounds of the movie ( using totalNumberFrames() ) or store a location using getCurrentFrame();
-
-
 
 
 
@@ -1824,9 +1698,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Sets the looping state of the movie. Default behavior is OF_LOOP_NORMAL. There are three options:
 ~~~~{.cpp}
@@ -1835,8 +1707,6 @@ OF_LOOP_NONE - don't loop, the movie will stop when it gets to the last frame (o
 OF_LOOP_NORMAL - loop normally (the last frame loops to the first frame)
 OF_LOOP_PALINDROME - loop back and forth. Movie will play forward until it gets to the last frame, then plays backwards until it gets to the first frame, and so on.
 ~~~~
-
-
 
 
 
@@ -1870,13 +1740,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Sets the paused state of the movie. Use "true" to pause and false to unpause. 
-
-
 
 
 
@@ -1910,13 +1776,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Sets the pixel format for the 
-
-
 
 
 
@@ -1943,7 +1805,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1987,13 +1848,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Sets the position of the playhead to a given percentage through the movie. This can be used to scrub through a movie. 
-
-
 
 
 
@@ -2027,13 +1884,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Sets the speed of the movie that is playing. 1 = normal, 2 = 2x as fast, 0 = stopped, -1 = backwards, etc; 
-
-
 
 
 
@@ -2067,9 +1920,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Set the usage of texture inside this object. Typically, you will want to draw the movie on screen, and so it will be necessary to use a texture, but there may be cases where it helps to not use a texture in order to save memory or for better performance. To disable the internal use of the texture, you can load the movie like this:
 ~~~~{.cpp}
@@ -2077,8 +1928,6 @@ Set the usage of texture inside this object. Typically, you will want to draw th
 myMovie.setUseTexture(false);
 myMovie.loadMovie("blah.mov");
 ~~~~
-
-
 
 
 
@@ -2112,13 +1961,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Sets the volume of a movie as it plays. The maximum values is 1.0f, 0.0f is silent.
-
-
 
 
 
@@ -2152,13 +1997,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Stops the movie. 
-
-
 
 
 
@@ -2185,7 +2026,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2229,13 +2069,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Calls the idleMovie() function. This function idles the movie player, so that the movie can play. If you don't call it, when the movie is playing then you may encounter problems, especially on windows machines. 
-
-
 
 
 
@@ -2264,12 +2100,14 @@ _advanced: False_
 _inlined_description: _
 
 
+
+
+
+
+
 _description: _
 
-
 bUseTexture enables and disables the use of ofTexture in our video player.
-
-
 
 
 
@@ -2294,8 +2132,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2322,8 +2164,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2350,8 +2196,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2378,8 +2228,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2406,12 +2260,14 @@ _advanced: False_
 _inlined_description: _
 
 
+
+
+
+
+
 _description: _
 
-
 ofTexture used by the video player class. 
-
-
 
 
 

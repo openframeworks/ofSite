@@ -57,10 +57,7 @@ y Draw position on the y axis.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -103,10 +100,7 @@ h Draw height.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -148,10 +142,7 @@ point Draw position.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -191,10 +182,7 @@ rect Draw position and size.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -236,10 +224,7 @@ h Draw height.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -277,10 +262,7 @@ Returns: the height.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -318,10 +300,7 @@ Returns: the width.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -357,10 +336,7 @@ Reset the anchor point to (0, 0).
 
 
 
-
-
 _description: _
-
 
 
 
@@ -404,10 +380,7 @@ yPct Vertical position as a percentage (0 - 1).
 
 
 
-
-
 _description: _
-
 
 
 
@@ -451,10 +424,7 @@ y Vertical texture position in pixels.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -490,10 +460,7 @@ Destroy the abstract object.
 
 
 
-
-
 _description: _
-
 
 
 

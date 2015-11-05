@@ -52,8 +52,11 @@ _inlined_description: _
 
 A list of framerates for this video format in frames per second.
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -81,8 +84,11 @@ _inlined_description: _
 
 The height of the video format in pixels.
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -110,8 +116,11 @@ _inlined_description: _
 
 The pixel format of the video format.
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -139,8 +148,11 @@ _inlined_description: _
 
 The width of the video format in pixels.
 
-_description: _
 
+
+
+
+_description: _
 
 
 

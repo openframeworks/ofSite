@@ -50,10 +50,7 @@ add bundle elements
 
 
 
-
-
 _description: _
-
 
 
 
@@ -89,9 +86,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -127,10 +122,7 @@ erase contents
 
 
 
-
-
 _description: _
-
 
 
 
@@ -166,10 +158,7 @@ for operator= and copy constructor
 
 
 
-
-
 _description: _
-
 
 
 
@@ -205,10 +194,7 @@ return the bundle or message at the given index
 
 
 
-
-
 _description: _
-
 
 
 
@@ -244,10 +230,7 @@ get bundle elements
 
 
 
-
-
 _description: _
-
 
 
 
@@ -283,9 +266,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -321,9 +302,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -359,9 +338,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -397,9 +374,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -435,9 +410,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -473,9 +446,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -506,8 +477,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -534,8 +509,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 

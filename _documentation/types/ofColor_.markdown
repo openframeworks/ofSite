@@ -188,10 +188,7 @@ Returns: A reference to itself.
 
 
 
-
-
 _description: _
-
 
 This clamps the values of your color in case they're too high or low for their types, in case you go negative or too use values that are too high, like anything >1.0 in the case of ofFloatColor.
 
@@ -200,8 +197,6 @@ ofFloatColor c( 1, 0, 0 );
 c.g = 2; // g now has 2: this is usually invalid!
 c.clamp(); // c.g has now been clamped so its value is 1.
 ~~~~
-
-
 
 
 
@@ -235,10 +230,7 @@ _inlined_description: _
 
 
 
-
-
 _description: _
-
 
 
 
@@ -290,18 +282,13 @@ alpha The alpha value of the color.
 
 
 
-
-
 _description: _
-
 
 Convenience method to construct an ofColor from a 24 bit hex value.
 
 ~~~~{.cpp}
 ofColor c = ofColor::fromHex(0xFFFF00); // c is yellow
 ~~~~
-
-
 
 
 
@@ -358,18 +345,13 @@ alpha The alpha value of the color.
 
 
 
-
-
 _description: _
-
 
 Convenience method to construct an ofColor from Hsb values.
 
 ~~~~{.cpp}
 ofColor c = ofColor::fromHsb(128, 255, 255); // c is bright saturated cyan
 ~~~~
-
-
 
 
 
@@ -410,14 +392,9 @@ Returns: the brightness in the range 0 - limit().
 
 
 
-
-
 _description: _
 
-
 Return the brightness component of the HSB representation of this color. Refer the [discussion of HSB](#HSB) above.
-
-
 
 
 
@@ -454,14 +431,9 @@ Returns: A copy of this color, clamped.
 
 
 
-
-
 _description: _
 
-
 Returns a clamped version of this color, without modifying the original. See [clamp](#clamp) for more info.
-
-
 
 
 
@@ -506,10 +478,7 @@ Returns: An integer representing an RGB color.
 
 
 
-
-
 _description: _
-
 
 Return a 24 bit hexidecimal number representing this color.
 
@@ -519,8 +488,6 @@ int hex = c.getHex(); // hex is 0xffff00 (or 16776960 in decimal)
 ~~~~
 
 Usually when we look at these colors in print they're hex, so don't be surprised if they don't look familiar when you print them as decimal. 
-
-
 
 
 
@@ -572,10 +539,7 @@ brightness A reference to the brightness to fill. Will be in the
 
 
 
-
-
 _description: _
-
 
 Return all three components of the HSB representation of this color at the same time.
 
@@ -587,8 +551,6 @@ red.getHsb( hue, saturation, brightness );
 ~~~~
 
 Refer the [discussion of HSB](#HSB) above.
-
-
 
 
 
@@ -629,14 +591,9 @@ Returns: The Hue value in the range 0 - limit().
 
 
 
-
-
 _description: _
 
-
 Return the hue component of the HSB representation of this color. Refer the [discussion of HSB](#HSB) above.
-
-
 
 
 
@@ -677,10 +634,7 @@ Returns: The Hue angle in the range 0 - 360.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -719,14 +673,9 @@ Returns: A copy of this color, inverted.
 
 
 
-
-
 _description: _
 
-
 Returns the color that is the inverted version (complement) to this color, without modifying the original. See [invert](#invert) for more info.
-
-
 
 
 
@@ -763,14 +712,9 @@ Returns: A copy of this color, lerped.
 
 
 
-
-
 _description: _
 
-
 Returns this color lerped towards target by amount, without modifying the original. See [lerp](#lerp) for more info.
-
-
 
 
 
@@ -810,14 +754,9 @@ Returns: the lightness in the range 0 - limit().
 
 
 
-
-
 _description: _
 
-
 Return the average of the three color components. This is used by the Lab and HSL color spaces.
-
-
 
 
 
@@ -854,14 +793,9 @@ Returns: A copy of this color, normalized.
 
 
 
-
-
 _description: _
 
-
 Returns the normalized version of this color, without modifying the original. See [normalize](#normalize) for more info.
-
-
 
 
 
@@ -902,14 +836,9 @@ Returns: The saturation in the range 0 - limit().
 
 
 
-
-
 _description: _
 
-
 Return the saturation component of the HSB representation of this color. Refer the [discussion of HSB](#HSB) above.
-
-
 
 
 
@@ -969,10 +898,7 @@ Returns: A reference to itself.
 
 
 
-
-
 _description: _
-
 
 Invert the color, which turns it into its complement.
 
@@ -980,8 +906,6 @@ Invert the color, which turns it into its complement.
 ofColor c(0, 0, 255); // blue
 c.invert(); // c is now (255,255,0), or yellow, which is blue's complement
 ~~~~
-
-
 
 
 
@@ -1039,10 +963,7 @@ Returns: A reference to itself.
 
 
 
-
-
 _description: _
-
 
 Perform a linear interpolation (lerp) between this color and the target. Amount is a percentage represented by a float from 0 to 1. 
 
@@ -1052,8 +973,6 @@ ofColor r = ofColor::red;
 ofColor b = ofColor::blue;
 b.lerp(r, 0.5); // now purple!
 ~~~~
-
-
 
 
 
@@ -1096,14 +1015,9 @@ Returns: The value associated with a fully saturated color component.
 
 
 
-
-
 _description: _
 
-
 Returns the maximum value for a component for this color. For standard ofColor returns 255, for ofFloatColor returns 1.0, for ofShortColor returns 65,536.
-
-
 
 
 
@@ -1157,10 +1071,7 @@ Returns: A reference to itself.
 
 
 
-
-
 _description: _
-
 
 Divide all color components by brightness. This has the effect of conforming the color to the outer surface of the hue/saturation/brightness spherical color space, by forcing a unit radius (brightness).
 
@@ -1177,8 +1088,6 @@ The following
 will create this:
 
 ![ofNorm](../types/ofNormalize.png)
-
-
 
 
 
@@ -1217,10 +1126,7 @@ Construct a default white color.
 
 
 
-
-
 _description: _
-
 
 Creates a color and sets it to white.
 
@@ -1228,8 +1134,6 @@ Creates a color and sets it to white.
 ofColor c;
 ofSetColor( c ); // draw color is now white
 ~~~~
-
-
 
 
 
@@ -1278,10 +1182,7 @@ alpha The alpha component.
 
 
 
-
-
 _description: _
-
 
 Creates a color using RGB values and optional alpha value. The default alpha value makes a completely opaque color:
 
@@ -1289,8 +1190,6 @@ Creates a color using RGB values and optional alpha value. The default alpha val
 ofColor c1(255, 0, 0); // red with 100% alpha
 ofColor c2(255, 0, 0, 128); // red with 50% alpha.
 ~~~~
-
-
 
 
 
@@ -1337,18 +1236,13 @@ alpha The opacity of the color.
 
 
 
-
-
 _description: _
-
 
 Creates a gray color from the value of gray. _a defaults to completely opaque.
 
 ~~~~{.cpp}
 ofColor c(0.5, 122); // now c is 50% alpha gray, ooh, dismal
 ~~~~
-
-
 
 
 
@@ -1399,10 +1293,7 @@ color The ofColor_ to copy.
 
 
 
-
-
 _description: _
-
 
 Creates a color by copying another color with a different type (for example when copying from a standard ofColor using unsigned chars to an ofFloatColor):
 
@@ -1411,8 +1302,6 @@ ofColor c1(255, 128, 0); // orange
 ofFloatColor c2(c1);
 float g = c2.g; // g is now 0.5
 ~~~~
-
-
 
 
 
@@ -1455,10 +1344,7 @@ alpha The new alpha value to replace the alpha value in color.
 
 
 
-
-
 _description: _
-
 
 Creates a color by copying another color, overriding the existing alpha value with the value of _a:
 
@@ -1466,8 +1352,6 @@ Creates a color by copying another color, overriding the existing alpha value wi
 ofColor mom(255, 0, 0); // red
 ofColor c(mom, 128); // now c is red with 50% alpha
 ~~~~
-
-
 
 
 
@@ -1503,10 +1387,7 @@ Returns: true iff any of the R, G, B or A components are not equal.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1554,10 +1435,7 @@ Returns: The new clamped color.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1604,10 +1482,7 @@ Returns: The new clamped color.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1655,10 +1530,7 @@ Returns: A reference to itself, the new clamped color.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1705,10 +1577,7 @@ Returns: A reference to itself, the new clamped color.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1755,10 +1624,7 @@ Returns: The new clamped color.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1805,10 +1671,7 @@ Returns: The new clamped color.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1855,10 +1718,7 @@ Returns: A reference to itself, the new clamped color.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1905,10 +1765,7 @@ Returns: A reference to itself, the new clamped color.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1956,10 +1813,7 @@ Returns: The new clamped color.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2006,10 +1860,7 @@ Returns: The new clamped color.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2053,10 +1904,7 @@ Returns: A reference to itself, the new clamped color.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2103,10 +1951,7 @@ Returns: A reference to itself, the new clamped color.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2153,10 +1998,7 @@ Returns: The new clamped color.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2203,10 +2045,7 @@ Returns: The new clamped color.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2250,10 +2089,7 @@ Returns: A reference to itself, the new clamped color.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2300,10 +2136,7 @@ Returns: A reference to itself, the new clamped color.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2353,10 +2186,7 @@ Returns: A reference to itself.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2411,10 +2241,7 @@ Returns: A reference to itself.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2452,10 +2279,57 @@ Returns: true iff the R, G, B and A components are all equal.
 
 
 
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const PixelType & operator[](n)
+
+<!--
+_syntax: operator[](n)_
+_name: operator[]_
+_returns: const PixelType &_
+_returns_description: _
+_parameters: size_t n_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Array subscript operator.
+
+If n is 0 returns .r, if 1 returns .g, if 2 returns .b, if 3 returns
+alpha.
+
+~~~~{.cpp}
+    ofColor c(128, 64, 255);
+    float red = c[0]; // Red is 128.
+~~~~
+
+
+Parameters:
+n An index 0-3 of the component to get.
+
+Returns: The value of the requested component.
+
+
+
 
 
 _description: _
-
 
 
 
@@ -2505,63 +2379,7 @@ Returns: The value of the requested component.
 
 
 
-
-
 _description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###PixelType & operator[](n)
-
-<!--
-_syntax: operator[](n)_
-_name: operator[]_
-_returns: PixelType &_
-_returns_description: _
-_parameters: size_t n_
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Array subscript operator.
-
-If n is 0 returns .r, if 1 returns .g, if 2 returns .b, if 3 returns
-alpha.
-
-~~~~{.cpp}
-    ofColor c(128, 64, 255);
-    float red = c[0]; // Red is 128.
-~~~~
-
-
-Parameters:
-n An index 0-3 of the component to get.
-
-Returns: The value of the requested component.
-
-
-
-
-
-
-
-_description: _
-
 
 
 
@@ -2613,10 +2431,7 @@ alpha The alpha component.
 
 
 
-
-
 _description: _
-
 
 Creates a color using RGB values and optional alpha value. The default alpha value makes a completely opaque color.
 
@@ -2624,8 +2439,6 @@ Creates a color using RGB values and optional alpha value. The default alpha val
 ofColor c(255, 0, 0); // red
 c.set(0, 255, 0); // and now green
 ~~~~
-
-
 
 
 
@@ -2675,18 +2488,13 @@ alpha The opacity of the color.
 
 
 
-
-
 _description: _
-
 
 Creates a gray color from the value of gray. _a defaults to completely opaque.
 ~~~~{.cpp}
 ofColor c(255, 0, 0); // red
 c.set( 128, 128 ); // now 50% gray with 50% alpha
 ~~~~
-
-
 
 
 
@@ -2726,10 +2534,7 @@ color The ofColor_ to copy.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2774,10 +2579,7 @@ brightness A brightness value to set in the range of 0 - limit().
 
 
 
-
-
 _description: _
-
 
 Change the current brightness, leaving hue and saturation intact.
 
@@ -2787,8 +2589,6 @@ c.setBrightness( 128 ); // dark blue
 ~~~~
 
 Refer the [discussion of HSB](#HSB) above.
-
-
 
 
 
@@ -2845,10 +2645,7 @@ alpha The alpha value of the color.
 
 
 
-
-
 _description: _
-
 
 Set this color to hexColor using a 24 bit hex-style color as normally used in web development.  alpha defaults to completely opaque.
 ~~~~{.cpp}
@@ -2857,8 +2654,6 @@ c.setHex( 0xFFFFFF ); // white
 c.setHex( 0x00FF00 ); // green
 c.setHex( 0xFF8000, 128 ); // orange, 50% alpha
 ~~~~
-
-
 
 
 
@@ -2898,14 +2693,9 @@ alpha An alpha value to set in the range of 0 - limit().
 
 
 
-
-
 _description: _
 
-
 Set this color using a HSB representation. Refer the [discussion of HSB](#HSB) above. **Note** that the hue value has a range that matches the base data type (ie **0 to 255** for the standard ofColor), rather than 0 to 360, 0 to 100 or float 0 to 1, as may be expected.
-
-
 
 
 
@@ -2948,10 +2738,7 @@ hue A hue value to set in the range of 0 - limit().
 
 
 
-
-
 _description: _
-
 
 Change the current hue, leaving saturation and brightness intact. 
 
@@ -2961,8 +2748,6 @@ c.setHue( 128 ); // now bright cyan
 ~~~~
 
 Refer the [discussion of HSB](#HSB) above.
-
-
 
 
 
@@ -2999,10 +2784,7 @@ angle A hue angle value to set in the range of 0 - 360 degrees.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -3050,10 +2832,7 @@ saturation A saturation value value in the range of 0 - limit().
 
 
 
-
-
 _description: _
-
 
 Change the current saturation, leaving hue and brightness intact.
 
@@ -3063,8 +2842,6 @@ c.setSaturation( 128 ); // pale blue
 ~~~~
 
 Refer the [discussion of HSB](#HSB) above.
-
-
 
 
 
@@ -3094,12 +2871,13 @@ _inlined_description: _
 
 < The alpha color component.
 
+
+
+
+
 _description: _
 
-
 The alpha value (transparency) of a color. 0 is completely transparent, 255 is completely opaque.
-
-
 
 
 
@@ -3139,8 +2917,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -3182,8 +2963,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -3225,8 +3009,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -3268,8 +3055,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -3311,8 +3101,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -3340,8 +3133,11 @@ _inlined_description: _
 
 < The blue color component.
 
-_description: _
 
+
+
+
+_description: _
 
 The blue component of this color.
 
@@ -3349,8 +3145,6 @@ The blue component of this color.
 ofColor c = ofColor::cyan;
 float blue = c.b; // 255
 ~~~~
-
-
 
 
 
@@ -3390,8 +3184,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -3433,8 +3230,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -3476,16 +3276,17 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 Pre-iniatilized black color.
 
 ~~~~{.cpp}
 ofColor c = ofColor::black; // (0, 0, 0)
 ~~~~
-
-
 
 
 
@@ -3525,8 +3326,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -3568,16 +3372,17 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 Pre-iniatilized blue color.
 
 ~~~~{.cpp}
 ofColor c = ofColor::blue; // (0, 0, 255)
 ~~~~
-
-
 
 
 
@@ -3617,8 +3422,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -3660,8 +3468,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -3703,8 +3514,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -3746,8 +3560,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -3789,8 +3606,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -3832,8 +3652,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -3875,8 +3698,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -3918,8 +3744,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -3961,8 +3790,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -4004,8 +3836,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -4047,8 +3882,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -4090,16 +3928,17 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 Pre-iniatilized cyan color.
 
 ~~~~{.cpp}
 ofColor c = ofColor::cyan; // (0, 255, 255)
 ~~~~
-
-
 
 
 
@@ -4139,8 +3978,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -4182,8 +4024,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -4225,8 +4070,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -4268,8 +4116,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -4311,8 +4162,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -4354,8 +4208,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -4397,8 +4254,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -4440,8 +4300,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -4483,8 +4346,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -4526,8 +4392,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -4569,8 +4438,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -4612,8 +4484,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -4655,8 +4530,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -4698,8 +4576,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -4741,8 +4622,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -4784,8 +4668,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -4827,8 +4714,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -4870,8 +4760,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -4913,8 +4806,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -4956,8 +4852,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -4999,8 +4898,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -5042,8 +4944,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -5085,8 +4990,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -5128,8 +5036,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -5171,8 +5082,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -5214,8 +5128,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -5257,8 +5174,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -5300,8 +5220,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -5329,8 +5252,11 @@ _inlined_description: _
 
 < The green color component.
 
-_description: _
 
+
+
+
+_description: _
 
 The green component of this color.
 
@@ -5338,8 +5264,6 @@ The green component of this color.
 ofColor c = ofColor::yellow;
 float green = c.g; // 255
 ~~~~
-
-
 
 
 
@@ -5379,8 +5303,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -5422,8 +5349,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -5465,8 +5395,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -5508,8 +5441,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -5551,16 +5487,17 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 Pre-iniatilized gray color.
 
 ~~~~{.cpp}
 ofColor c = ofColor::gray;
 ~~~~
-
-
 
 
 
@@ -5600,16 +5537,17 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 Pre-iniatilized green color.
 
 ~~~~{.cpp}
 ofColor c = ofColor::green; // (0, 255, 0)
 ~~~~
-
-
 
 
 
@@ -5649,8 +5587,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -5692,8 +5633,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -5735,8 +5679,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -5778,8 +5725,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -5821,8 +5771,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -5864,8 +5817,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -5907,8 +5863,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -5950,8 +5909,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -5993,8 +5955,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -6036,8 +6001,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -6079,8 +6047,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -6122,8 +6093,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -6165,8 +6139,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -6208,8 +6185,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -6251,8 +6231,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -6294,8 +6277,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -6337,8 +6323,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -6380,8 +6369,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -6423,8 +6415,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -6466,8 +6461,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -6509,8 +6507,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -6552,8 +6553,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -6595,8 +6599,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -6638,8 +6645,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -6681,8 +6691,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -6724,8 +6737,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -6767,8 +6783,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -6810,8 +6829,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -6853,8 +6875,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -6896,8 +6921,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -6939,16 +6967,17 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 Pre-iniatilized magenta color.
 
 ~~~~{.cpp}
 ofColor c = ofColor::magenta; // (255, 0, 255)
 ~~~~
-
-
 
 
 
@@ -6988,8 +7017,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -7031,8 +7063,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -7074,8 +7109,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -7117,8 +7155,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -7160,8 +7201,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -7203,8 +7247,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -7246,8 +7293,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -7289,8 +7339,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -7332,8 +7385,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -7375,8 +7431,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -7418,8 +7477,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -7461,8 +7523,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -7504,8 +7569,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -7547,8 +7615,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -7590,8 +7661,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -7633,8 +7707,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -7676,8 +7753,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -7719,8 +7799,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -7762,8 +7845,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -7805,8 +7891,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -7848,8 +7937,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -7891,8 +7983,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -7934,8 +8029,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -7977,8 +8075,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -8020,8 +8121,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -8063,8 +8167,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -8106,8 +8213,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -8149,8 +8259,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -8192,8 +8305,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -8235,8 +8351,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -8278,8 +8397,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -8321,8 +8443,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -8364,8 +8489,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -8393,8 +8521,11 @@ _inlined_description: _
 
 < The red color component.
 
-_description: _
 
+
+
+
+_description: _
 
 The red component of this color.
 
@@ -8402,8 +8533,6 @@ The red component of this color.
 ofColor c = ofColor::red;
 float red = c.r; // 255
 ~~~~
-
-
 
 
 
@@ -8443,16 +8572,17 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 Pre-iniatilized red color.
 
 ~~~~{.cpp}
 ofColor c = ofColor::red; // (255, 0, 0)
 ~~~~
-
-
 
 
 
@@ -8492,8 +8622,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -8535,8 +8668,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -8578,8 +8714,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -8621,8 +8760,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -8664,8 +8806,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -8707,8 +8852,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -8750,8 +8898,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -8793,8 +8944,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -8836,8 +8990,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -8879,8 +9036,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -8922,8 +9082,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -8965,8 +9128,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -9008,8 +9174,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -9051,8 +9220,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -9094,8 +9266,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -9137,8 +9312,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -9180,8 +9358,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -9223,8 +9404,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -9266,8 +9450,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -9309,8 +9496,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -9352,8 +9542,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -9381,12 +9574,13 @@ _inlined_description: _
 
 < The pixel values as an array.
 
+
+
+
+
 _description: _
 
-
 Array/pointer access. Allows the r, g, b, a components to be accessed as a pointer to an array of PixelType.
-
-
 
 
 
@@ -9426,8 +9620,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -9469,8 +9666,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -9512,16 +9712,17 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 Pre-iniatilized white color.
 
 ~~~~{.cpp}
 ofColor c = ofColor::white;
 ~~~~
-
-
 
 
 
@@ -9561,8 +9762,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -9604,16 +9808,17 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 Pre-iniatilized yellow color.
 
 ~~~~{.cpp}
 ofColor c = ofColor::yellow; // (255, 255, 0)
 ~~~~
-
-
 
 
 
@@ -9653,8 +9858,11 @@ The list of colors is based upon the CSS names colors and can be viewed
 
 \{
 
-_description: _
 
+
+
+
+_description: _
 
 
 

@@ -52,9 +52,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -90,9 +88,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -128,9 +124,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -166,9 +160,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -204,17 +196,13 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Valid options are: 
 
 OF_MESH_POINTS 	 
 OF_MESH_WIREFRAME   	
 OF_MESH_FILL   
-
-
 
 
 
@@ -248,9 +236,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -286,9 +272,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -324,9 +308,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -362,9 +344,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -400,9 +380,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofVbo & getVbo()
+
+<!--
+_syntax: getVbo()_
+_name: getVbo_
+_returns: ofVbo &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -438,47 +452,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###const ofVbo & getVbo()
-
-<!--
-_syntax: getVbo()_
-_name: getVbo_
-_returns: const ofVbo &_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
 
 
 
@@ -514,9 +488,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -552,9 +524,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -590,9 +560,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -628,9 +596,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -659,7 +625,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -703,9 +668,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -741,9 +704,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -779,9 +740,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -817,9 +776,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -855,9 +812,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -886,7 +841,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -925,8 +879,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -953,8 +911,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -981,8 +943,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -1009,8 +975,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -1037,8 +1007,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -1065,8 +1039,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -1093,8 +1071,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 

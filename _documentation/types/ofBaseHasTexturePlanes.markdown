@@ -25,12 +25,12 @@ An abstract
 
 
 
-###const vector< ofTexture > & getTexturePlanes()
+###vector< ofTexture > & getTexturePlanes()
 
 <!--
 _syntax: getTexturePlanes()_
 _name: getTexturePlanes_
-_returns: const vector< ofTexture > &_
+_returns: vector< ofTexture > &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -45,10 +45,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
-Returns: a const reference to a std::vector containing the ofTexture planes.
-
-
+Returns: a reference to a std::vector containing the ofTexture planes.
 
 
 
@@ -84,10 +81,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
 Returns: a const reference to a std::vector containing the ofTexture planes.
-
-
 
 
 
@@ -124,8 +118,6 @@ _advanced: False_
 _inlined_description: _
 
 Destroy the ofBaseHasTexturePlanes.
-
-
 
 
 

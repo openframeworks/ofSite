@@ -63,13 +63,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Allocate memory for the buffer to use. This sizes the char vector that the ofBuffer instance contains.
-
-
 
 
 
@@ -103,9 +99,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -141,9 +135,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -172,7 +164,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -216,7 +207,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -253,13 +243,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Clears all the data from the buffer.
-
-
 
 
 
@@ -286,7 +272,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -330,6 +315,41 @@ _inlined_description: _
 
 
 
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###char * getData()
+
+<!--
+_syntax: getData()_
+_name: getData_
+_returns: char *_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
 
 _description: _
 
@@ -360,44 +380,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###const char * getData()
-
-<!--
-_syntax: getData()_
-_name: getData_
-_returns: const char *_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
 
 
 
@@ -441,7 +423,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -478,13 +459,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Return the buffer data as a string.
-
-
 
 
 
@@ -518,13 +495,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Constructor.
-
-
 
 
 
@@ -558,9 +531,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Create a buffer with a character array.
 
@@ -568,8 +539,6 @@ Create a buffer with a character array.
 string giantDataString;
 ofBuffer buff(giantDataString.c_str(), giantDataString.size());
 ~~~~
-
-
 
 
 
@@ -603,9 +572,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -634,7 +601,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -678,9 +644,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -709,7 +673,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -753,7 +716,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -783,7 +745,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -827,7 +788,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -864,9 +824,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Set the buffer from a string.
 
@@ -875,8 +833,6 @@ string giantDataString;
 ofBuffer buff;
 buff.set(giantDataString.c_str(), giantDataString.size());
 ~~~~
-
-
 
 
 
@@ -910,9 +866,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -941,7 +895,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -985,13 +938,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Get the size of the buffer data.
-
-
 
 
 
@@ -1025,9 +974,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1058,8 +1005,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -1084,6 +1035,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _

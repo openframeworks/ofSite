@@ -73,14 +73,9 @@ viewport The camera's rendering viewport.
 
 
 
-
-
 _description: _
 
-
 set the matrices that the camera will use.
-
-
 
 
 
@@ -114,9 +109,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -152,14 +145,9 @@ _inlined_description: _
 
 
 
-
-
 _description: _
 
-
 When you have a position in camera coordinates you can get what it would be in world coordinates, transforming it using the ofCamera.
-
-
 
 
 
@@ -193,13 +181,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Calling disableOrtho() turns off the orthographic mode.
-
-
 
 
 
@@ -233,13 +217,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Orthographic, or parallel, projections consist of those that involve no perspective correction. There is no adjustment for distance from the camera made in these projections, meaning objects on the screen will appear the same size no matter how close or far away they are. Calling enableOrtho() sets the ofCamera to orthographic mode.
-
-
 
 
 
@@ -273,14 +253,9 @@ Ends rendering with the camera.
 
 
 
-
-
 _description: _
 
-
 set the matrices
-
-
 
 
 
@@ -321,10 +296,7 @@ Returns: The aspect ratio of this camera's viewport.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -360,9 +332,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -401,10 +371,7 @@ Returns: A boolean: whether or not this camera's aspect ratio is set to a non-de
 
 
 
-
-
 _description: _
-
 
 
 
@@ -446,10 +413,7 @@ Returns: The camera's field of view, in degrees.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -485,13 +449,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 This allows you to get the image plane distance from any viewport passed in. By default this is the current viewport, but it can be whatever you find useful.
-
-
 
 
 
@@ -536,10 +496,7 @@ Returns: The "lens offset" applied to this camera, encoded in an ofVec2f.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -577,14 +534,9 @@ Returns: the current 4x4 model view matrix.
 
 
 
-
-
 _description: _
 
-
 Access to the projection matrix.
-
-
 
 
 
@@ -618,14 +570,9 @@ _inlined_description: _
 
 
 
-
-
 _description: _
 
-
 Access to the projection ModelViewProjectionMatrix.
-
-
 
 
 
@@ -659,9 +606,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -697,13 +642,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Get whether the camera is in orthographic mode.
-
-
 
 
 
@@ -739,14 +680,9 @@ Returns: the current 4x4 projection matrix.
 
 
 
-
-
 _description: _
 
-
 Access to the projection matrix.
-
-
 
 
 
@@ -773,7 +709,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -817,8 +752,6 @@ _inlined_description: _
 
 
 
-
-
 _description: _
 
 
@@ -855,9 +788,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -893,10 +824,7 @@ Construct a default camera.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -941,14 +869,9 @@ ScreenXYZ A point on your screen, whose 3D world coordinates you wish to know.
 
 
 
-
-
 _description: _
 
-
 When you have a position in screen coordinates you can get what it would be in world coordinates, transforming it using the ofCamera.
-
-
 
 
 
@@ -991,10 +914,7 @@ aspectRatio The desired aspect ratio, e.g. 1.3333, 1.6, etc.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1030,13 +950,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Sets the far clip plane
-
-
 
 
 
@@ -1079,10 +995,7 @@ forceAspectRatio Whether or not this camera should use an aspect ratio you have 
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1126,14 +1039,9 @@ f The desired field of view for the camera, in degrees.
 
 
 
-
-
 _description: _
 
-
 Here you can set the field of view of the camera.
-
-
 
 
 
@@ -1180,10 +1088,7 @@ lensOffset The "lens offset" to apply to this camera, encoded in
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1219,13 +1124,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 This sets the near clip plane.
-
-
 
 
 
@@ -1256,8 +1157,6 @@ _inlined_description: _
 \}
 \name Renderer
  \{
-
-
 
 
 
@@ -1299,9 +1198,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1337,9 +1234,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1372,8 +1267,6 @@ _inlined_description: _
 \}
 \name OpenGL Setup
 \{
-
-
 
 
 
@@ -1415,14 +1308,9 @@ _inlined_description: _
 
 
 
-
-
 _description: _
 
-
 When you have a position in world coordinates you can get what it would be in camera coordinates, transforming it using the ofCamera.
-
-
 
 
 
@@ -1468,14 +1356,9 @@ Returns: An ofVec3f containing the screen coordinates of your 3D point of intere
 
 
 
-
-
 _description: _
 
-
 When you have a position in world coordinates you can get what it would be in world coordinates, transforming it using the ofCamera.
-
-
 
 
 
@@ -1509,10 +1392,7 @@ Destroy the camera.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1543,8 +1423,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -1571,8 +1455,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -1599,8 +1487,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -1627,8 +1519,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -1655,8 +1551,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -1683,8 +1583,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -1711,8 +1615,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -1737,6 +1645,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _
@@ -1766,8 +1679,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 

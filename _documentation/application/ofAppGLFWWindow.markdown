@@ -52,7 +52,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -82,7 +81,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -126,9 +124,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -157,7 +153,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -201,7 +196,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -231,7 +225,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -275,9 +268,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -306,7 +297,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -350,9 +340,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -381,7 +369,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -425,13 +412,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 This is the exit callback that is called by your the ofAppRunner [exit()](../ofAppRunner_functions.html#ofExit) method.
-
-
 
 
 
@@ -458,7 +441,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -502,9 +484,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -533,7 +513,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -577,7 +556,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -614,13 +592,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Gets the height of the current window and is mirrored in the ofGetScreenHeight() method.
-
-
 
 
 
@@ -654,9 +628,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -692,9 +664,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -730,13 +700,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Gets the height of the current window and is mirrored in the ofGetWindowSize() method.
-
-
 
 
 
@@ -770,13 +736,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Gets the height of the current window and is mirrored in the ofGetScreenWidth() method.
-
-
 
 
 
@@ -803,7 +765,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -847,7 +808,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -884,13 +844,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 This returns the location of the window relative to the deivce that it's being displayed on.
-
-
 
 
 
@@ -917,7 +873,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -961,9 +916,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -992,7 +945,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1036,7 +988,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -1073,9 +1024,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1111,9 +1060,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1149,13 +1096,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Hardcoded to return true right now.
-
-
 
 
 
@@ -1189,9 +1132,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1227,9 +1168,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1258,7 +1197,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1302,7 +1240,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -1339,9 +1276,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1370,7 +1305,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1414,7 +1348,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -1451,9 +1384,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1489,9 +1420,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1520,7 +1449,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1564,9 +1492,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1583,7 +1509,7 @@ _syntax: ofAppGLFWWindow(&w)_
 _name: ofAppGLFWWindow_
 _returns: _
 _returns_description: _
-_parameters: ofAppGLFWWindow &w_
+_parameters: const ofAppGLFWWindow &w_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -1595,7 +1521,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1620,7 +1545,7 @@ _syntax: operator=(&w)_
 _name: operator=_
 _returns: ofAppGLFWWindow &_
 _returns_description: _
-_parameters: ofAppGLFWWindow &w_
+_parameters: const ofAppGLFWWindow &w_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -1632,7 +1557,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1676,7 +1600,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -1706,7 +1629,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1750,9 +1672,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1788,9 +1708,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1819,7 +1737,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1863,7 +1780,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -1900,9 +1816,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1938,9 +1852,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1976,9 +1888,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2007,7 +1917,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2051,7 +1960,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -2088,9 +1996,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2126,9 +2032,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2157,7 +2061,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2201,9 +2104,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2232,7 +2133,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2276,7 +2176,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -2313,9 +2212,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2351,9 +2248,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2382,7 +2277,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2426,9 +2320,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2459,8 +2351,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2485,6 +2381,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _
@@ -2514,8 +2415,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2542,8 +2447,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2568,6 +2477,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _
@@ -2597,6 +2511,11 @@ _advanced: False_
 _inlined_description: _
 
 
+
+
+
+
+
 _description: _
 
 
@@ -2624,8 +2543,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2652,8 +2575,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2680,8 +2607,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2708,8 +2639,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2736,8 +2671,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2762,6 +2701,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _
@@ -2791,8 +2735,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2819,8 +2767,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2847,8 +2799,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2875,8 +2831,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 

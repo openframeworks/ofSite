@@ -118,8 +118,6 @@ as copyTo but mixes source audio with audio in `outBuffer` by adding samples tog
 
 
 
-
-
 _description: _
 
 
@@ -151,8 +149,6 @@ _advanced: False_
 _inlined_description: _
 
 as addTo above but reads outNumFrames and outNumChannels from outBuffer
-
-
 
 
 
@@ -194,8 +190,6 @@ as copyTo but mixes source audio with audio in `out` by adding samples together 
 
 
 
-
-
 _description: _
 
 
@@ -225,7 +219,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -269,7 +262,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -299,7 +291,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -343,8 +334,6 @@ remove all samples, preserving channel count and sample rate.
 
 
 
-
-
 _description: _
 
 
@@ -381,8 +370,6 @@ copy length samples from shortBuffer and interpret as interleaved with the given
 
 
 
-
-
 _description: _
 
 
@@ -412,7 +399,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -456,7 +442,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -486,7 +471,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -533,8 +517,6 @@ if outBuffer has more channels than our buffer, loop through our channels repeat
 
 
 
-
-
 _description: _
 
 
@@ -566,8 +548,6 @@ _advanced: False_
 _inlined_description: _
 
 as copyTo above but reads outNumFrames and outNumChannels from outBuffer
-
-
 
 
 
@@ -612,8 +592,6 @@ if out has more channels than our buffer, loop through our channels repeatedly u
 
 
 
-
-
 _description: _
 
 
@@ -645,8 +623,6 @@ _advanced: False_
 _inlined_description: _
 
 fills the buffer with random noise between -amplitude and amplitude. useful for debugging.
-
-
 
 
 
@@ -688,6 +664,40 @@ fills the buffer with a sine wave. useful for debugging.
 
 
 
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###vector< float > & getBuffer()
+
+<!--
+_syntax: getBuffer()_
+_name: getBuffer_
+_returns: vector< float > &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+return the underlying buffer. careful!
+
+
+
 
 
 _description: _
@@ -719,44 +729,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###const vector< float > & getBuffer()
-
-<!--
-_syntax: getBuffer()_
-_name: getBuffer_
-_returns: const vector< float > &_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
 
 
 
@@ -800,8 +772,6 @@ copy the requested channel of our data to outBuffer. resize outBuffer to fit.
 
 
 
-
-
 _description: _
 
 
@@ -833,8 +803,6 @@ _advanced: False_
 _inlined_description: _
 
 return the ID of the device which generated this buffer
-
-
 
 
 
@@ -876,8 +844,6 @@ return the duration of audio in this buffer in milliseconds (==(getNumFrames()/g
 
 
 
-
-
 _description: _
 
 
@@ -907,7 +873,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -951,7 +916,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -983,8 +947,6 @@ _advanced: False_
 _inlined_description: _
 
 the number of channels per frame
-
-
 
 
 
@@ -1026,8 +988,6 @@ the number of frames, ie the number of sets of (getNumChannels()) samples
 
 
 
-
-
 _description: _
 
 
@@ -1057,7 +1017,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1101,6 +1060,41 @@ _inlined_description: _
 
 
 
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float & getSample(frameIndex, channel)
+
+<!--
+_syntax: getSample(frameIndex, channel)_
+_name: getSample_
+_returns: float &_
+_returns_description: _
+_parameters: size_t frameIndex, size_t channel_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+access the sample at frameIndex on a soecific channel
+
+
+
+
 
 _description: _
 
@@ -1131,44 +1125,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###const float & getSample(frameIndex, channel)
-
-<!--
-_syntax: getSample(frameIndex, channel)_
-_name: getSample_
-_returns: const float &_
-_returns_description: _
-_parameters: size_t frameIndex, size_t channel_
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
 
 
 
@@ -1212,8 +1168,6 @@ sample rate of the audio in this buffer
 
 
 
-
-
 _description: _
 
 
@@ -1250,8 +1204,6 @@ return the tickCount that was assigned by ofSoundStream (if this buffer originat
 
 
 
-
-
 _description: _
 
 
@@ -1281,7 +1233,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1325,7 +1276,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -1362,8 +1312,6 @@ amplifies samples so that the maximum amplitude is equal to 'level'
 
 
 
-
-
 _description: _
 
 
@@ -1393,7 +1341,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1437,7 +1384,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -1469,8 +1415,6 @@ _advanced: False_
 _inlined_description: _
 
 return a new buffer containing the contents of this buffer multiplied by value.
-
-
 
 
 
@@ -1512,6 +1456,44 @@ multiply everything in this buffer by value, in-place.
 
 
 
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float & operator[](samplePos)
+
+<!--
+_syntax: operator[](samplePos)_
+_name: operator[]_
+_returns: float &_
+_returns_description: _
+_parameters: size_t samplePos_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+access the sample at the given position in the buffer.
+to retrieve the sample for channel channelIndex of frame frameIndex, do the following:
+ofSoundBuffer myBuffer;
+...
+float sample = myBuffer[(frameIndex*myBuffer.getNumChannels()) + channelIndex];
+
+
+
 
 
 _description: _
@@ -1543,44 +1525,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###const float & operator[](samplePos)
-
-<!--
-_syntax: operator[](samplePos)_
-_name: operator[]_
-_returns: const float &_
-_returns_description: _
-_parameters: size_t samplePos_
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
 
 
 
@@ -1624,8 +1568,6 @@ resample by changing the playback speed, keeping the same sampleRate
 
 
 
-
-
 _description: _
 
 
@@ -1658,8 +1600,6 @@ _inlined_description: _
 
 resample our data to outBuffer at the given target speed, starting at fromFrame and copying numFrames of data. resize outBuffer to fit.
 speed is relative to current speed (ie 1.0f == no change). lower speeds will give a larger outBuffer, higher speeds a smaller outBuffer.
-
-
 
 
 
@@ -1701,8 +1641,6 @@ resize this buffer to exactly this many samples. it's up to you make sure sample
 
 
 
-
-
 _description: _
 
 
@@ -1734,8 +1672,6 @@ _advanced: False_
 _inlined_description: _
 
 set everything in this buffer to value, preserving size, channel count and sample rate.
-
-
 
 
 
@@ -1777,8 +1713,6 @@ copy data from inBuffer to the given channel. resize ourselves to match inBuffer
 
 
 
-
-
 _description: _
 
 
@@ -1808,7 +1742,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1852,8 +1785,6 @@ set the number of channels. does not change the underlying data, ie causes getNu
 
 
 
-
-
 _description: _
 
 
@@ -1883,7 +1814,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1927,7 +1857,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -1959,8 +1888,6 @@ _advanced: False_
 _inlined_description: _
 
 return the total number of samples in this buffer (==getNumFrames()*getNumChannels())
-
-
 
 
 
@@ -2002,8 +1929,6 @@ assuming a 2-channel buffer, apply a stereo pan by multiplying channel 0 by left
 
 
 
-
-
 _description: _
 
 
@@ -2040,8 +1965,6 @@ swap the contents of this buffer with otherBuffer
 
 
 
-
-
 _description: _
 
 
@@ -2071,7 +1994,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2115,7 +2037,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -2152,8 +2073,6 @@ removes initial / ending silence from the buffer
 
 
 
-
-
 _description: _
 
 
@@ -2185,6 +2104,11 @@ _advanced: False_
 _inlined_description: _
 
 
+
+
+
+
+
 _description: _
 
 
@@ -2210,6 +2134,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _
@@ -2239,6 +2168,11 @@ _advanced: False_
 _inlined_description: _
 
 
+
+
+
+
+
 _description: _
 
 
@@ -2264,6 +2198,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _
@@ -2293,6 +2232,11 @@ _advanced: False_
 _inlined_description: _
 
 
+
+
+
+
+
 _description: _
 
 
@@ -2318,6 +2262,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _

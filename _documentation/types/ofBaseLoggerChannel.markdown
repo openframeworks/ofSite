@@ -59,10 +59,7 @@ message The log message.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -104,10 +101,7 @@ args the list of printf-style arguments.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -143,10 +137,7 @@ Destroy the channel.
 
 
 
-
-
 _description: _
-
 
 
 

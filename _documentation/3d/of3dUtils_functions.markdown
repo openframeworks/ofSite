@@ -57,10 +57,7 @@ headSize The size of the arrowhead.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -89,7 +86,6 @@ _advanced: False_
 
 _inlined_description: _
 
-
 Parameters:
 size The size at which to draw the axes.
 
@@ -97,10 +93,7 @@ size The size at which to draw the axes.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -141,10 +134,7 @@ circleRes The resolution of the circular bands. The default is 60 segments.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -173,22 +163,25 @@ _advanced: False_
 
 _inlined_description: _
 
-This function renders a set of 3 axis-aligned circular bands, centered at the origin.
+Draws the YZ grid plane representing the current reference frame.
+
+This function draws the YZ grid plane, at x=0, in a double-ended manner
+centered at the origin. Optionally, the function can include white numeric
+labels for grid subdivisions. (Numeric labels are drawn using
+ofDrawBitmapString internally.) The grid is drawn with the current color
+(i.e. set with ofSetColor).
 
 
 Parameters:
-radius The radius of the circular bands.
-stripWidth The width of the circular bands. The default is 10 units.
-circleRes The resolution of the circular bands. The default is 60 segments.
-
-
+stepSize distance between (parallel) lines on the grid
+numberOfSteps number of lines to draw on each side of the central axis of the grid. A number of 8 will draw 8 lines on each side of the central axis, plus one line at the central axis.
+labels Whether or not labels are drawn.
 
 
 
 
 
 _description: _
-
 
 
 
@@ -217,15 +210,19 @@ _advanced: False_
 
 _inlined_description: _
 
-This function renders a set of 3 axis-aligned circular bands, centered at the origin.
+Draws the YZ grid plane representing the current reference frame.
+
+This function draws the YZ grid plane, at x=0, in a double-ended manner
+centered at the origin. Optionally, the function can include white numeric
+labels for grid subdivisions. (Numeric labels are drawn using
+ofDrawBitmapString internally.) The grid is drawn with the current color
+(i.e. set with ofSetColor).
 
 
 Parameters:
-radius The radius of the circular bands.
-stripWidth The width of the circular bands. The default is 10 units.
-circleRes The resolution of the circular bands. The default is 60 segments.
-
-
+stepSize distance between (parallel) lines on the grid
+numberOfSteps number of lines to draw on each side of the central axis of the grid. A number of 8 will draw 8 lines on each side of the central axis, plus one line at the central axis.
+labels Whether or not labels are drawn.
 
 
 
@@ -233,6 +230,52 @@ circleRes The resolution of the circular bands. The default is 60 segments.
 
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawRotationAxes(radius, stripWidth = 10, circleRes = 60)
+
+<!--
+_syntax: ofDrawRotationAxes(radius, stripWidth = 10, circleRes = 60)_
+_name: ofDrawRotationAxes_
+_returns: void_
+_returns_description: _
+_parameters: float radius, float stripWidth, int circleRes=60_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draws the YZ grid plane representing the current reference frame.
+
+This function draws the YZ grid plane, at x=0, in a double-ended manner
+centered at the origin. Optionally, the function can include white numeric
+labels for grid subdivisions. (Numeric labels are drawn using
+ofDrawBitmapString internally.) The grid is drawn with the current color
+(i.e. set with ofSetColor).
+
+
+Parameters:
+stepSize distance between (parallel) lines on the grid
+numberOfSteps number of lines to draw on each side of the central axis of the grid. A number of 8 will draw 8 lines on each side of the central axis, plus one line at the central axis.
+labels Whether or not labels are drawn.
+
+
+
+
+
+_description: _
 
 
 

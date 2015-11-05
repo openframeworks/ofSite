@@ -47,12 +47,14 @@ _advanced: False_
 _inlined_description: _
 
 
+
+
+
+
+
 _description: _
 
-
 A list of the absolute file paths that were drag-and-dropped onto the window. 
-
-
 
 
 
@@ -77,12 +79,14 @@ _advanced: False_
 _inlined_description: _
 
 
+
+
+
+
+
 _description: _
 
-
 The position where the user dropped the files onto the window.
-
-
 
 
 

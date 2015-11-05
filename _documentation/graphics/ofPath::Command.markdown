@@ -53,8 +53,6 @@ for close
 
 
 
-
-
 _description: _
 
 
@@ -86,8 +84,6 @@ _advanced: False_
 _inlined_description: _
 
 for lineTo and curveTo
-
-
 
 
 
@@ -129,8 +125,6 @@ for bezierTo
 
 
 
-
-
 _description: _
 
 
@@ -167,8 +161,6 @@ for arc
 
 
 
-
-
 _description: _
 
 
@@ -200,6 +192,11 @@ _advanced: False_
 _inlined_description: _
 
 
+
+
+
+
+
 _description: _
 
 
@@ -225,6 +222,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _
@@ -254,6 +256,11 @@ _advanced: False_
 _inlined_description: _
 
 
+
+
+
+
+
 _description: _
 
 
@@ -279,6 +286,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _
@@ -308,6 +320,11 @@ _advanced: False_
 _inlined_description: _
 
 
+
+
+
+
+
 _description: _
 
 
@@ -333,6 +350,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _
@@ -362,6 +384,11 @@ _advanced: False_
 _inlined_description: _
 
 
+
+
+
+
+
 _description: _
 
 
@@ -387,6 +414,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _

@@ -15,133 +15,6 @@ _advanced: False_
 
 <!----------------------------------------------------------------------------->
 
-###ofHttpResponse ofUnregisterURLNotification(*obj)
-
-<!--
-_syntax: ofUnregisterURLNotification(*obj)_
-_name: ofLoadURL_
-_returns: ofHttpResponse_
-_returns_description: _
-_parameters: T *obj_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Loads content from the specified URL. It makes a synchronous HTTP request and returns the response as an instance of the `ofHttpResponse` class.
-
-For example, this will retrieve the contents of a text file and print the output to the console.
-
-~~~~{.cpp}
-ofHttpResponse resp = ofLoadURL("http://www.google.com/robots.txt");
-cout << resp.data << endl;
-~~~~
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int ofUnregisterURLNotification(*obj)
-
-<!--
-_syntax: ofUnregisterURLNotification(*obj)_
-_name: ofLoadURLAsync_
-_returns: int_
-_returns_description: _
-_parameters: T *obj_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Loads content asynchronously from the specified URL and
-returns the ID of the process. You need to listen for URL notifications
-in `testApp::urlResponse(ofHttpResponse&)`
-
-Step 1. Declare urlResponse in the header of the class which should receive
-notifications:
-
-~~~~{.cpp}
-class testApp : public ofBaseApp {
-    public:
-        void urlResponse(ofHttpResponse & response);
-}
-~~~~
-
-Step 2. Define urlResponse in the class which should receive notifications:
-
-~~~~{.cpp}
-void testApp::urlResponse(ofHttpResponse & response) {
-    if (response.status==200 && response.request.name == "async_req") {
-        img.loadImage(response.data);
-        loading = false;
-    } else {
-      cout << response.status << " " << response.error << endl;
-      if (response.status != -1) loading = false;
-    }
-}
-~~~~
-
-Step 3. Enable URL notifications
-
-~~~~{.cpp}
-void testApp::setup() {
-  ofRegisterURLNotification(this);
-}
-~~~~
-
-Step 4. Submit the asynchronous request
-~~~~{.cpp}
-int id = ofLoadURLAsync("http://www.openframeworks.cc/images/ofw-logo.png",
-                        "async_req");
-~~~~
-
-Examples based on [http://www.slideshare.net/roxlu/openframworks-007-utils](http://www.slideshare.net/roxlu/openframworks-007-utils)
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void ofRegisterURLNotification(*obj)
 
 <!--
@@ -167,9 +40,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Registers a listener to receive notifications from `ofLoadURLAsync()` .
 
@@ -178,8 +49,6 @@ void testApp::setup() {
   ofRegisterURLNotification(this);
 }
 ~~~~
-
-
 
 
 
@@ -212,14 +81,10 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Removes all asynchronously loaded URL requests initiated by
 `ofLoadURLAsync()` .
-
-
 
 
 
@@ -252,96 +117,10 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Removes a single request initiated by `ofLoadURLAsync()` . The request is
 specified by its ID.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int ofUnregisterURLNotification(*obj)
-
-<!--
-_syntax: ofUnregisterURLNotification(*obj)_
-_name: ofSaveURLAsync_
-_returns: int_
-_returns_description: _
-_parameters: T *obj_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Asynchronously saves a file from a URL. The returned int is the id of
-the request. This allows you to remove the request if it keeps failing, and also
-to identify when it has finished.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofHttpResponse ofUnregisterURLNotification(*obj)
-
-<!--
-_syntax: ofUnregisterURLNotification(*obj)_
-_name: ofSaveURLTo_
-_returns: ofHttpResponse_
-_returns_description: _
-_parameters: T *obj_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Retrieves a file from a remote URL and saves it locally. This is a synchronous method.
-
-See also: `ofSaveURLAsync()`
-
-
 
 
 
@@ -374,9 +153,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -411,9 +188,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Unregisters a notification for an `ofLoadURLAsync()` operation.
 
@@ -421,16 +196,14 @@ Unregisters a notification for an `ofLoadURLAsync()` operation.
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
-###void ofUnregisterURLNotification(*obj)
+###ofEvent< ofHttpResponse > & ofUnregisterURLNotification(*obj)
 
 <!--
 _syntax: ofUnregisterURLNotification(*obj)_
 _name: ofUnregisterURLNotification_
-_returns: void_
+_returns: ofEvent< ofHttpResponse > &_
 _returns_description: _
 _parameters: T *obj_
 _version_started: _
@@ -450,9 +223,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Unregisters a notification for an `ofLoadURLAsync()` operation.
 
@@ -460,16 +231,14 @@ Unregisters a notification for an `ofLoadURLAsync()` operation.
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
-###void ofUnregisterURLNotification(*obj)
+###ofEvent< ofHttpResponse > & ofUnregisterURLNotification(*obj)
 
 <!--
 _syntax: ofUnregisterURLNotification(*obj)_
 _name: ofUnregisterURLNotification_
-_returns: void_
+_returns: ofEvent< ofHttpResponse > &_
 _returns_description: _
 _parameters: T *obj_
 _version_started: _
@@ -489,13 +258,149 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Unregisters a notification for an `ofLoadURLAsync()` operation.
 
 
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofEvent< ofHttpResponse > & ofUnregisterURLNotification(*obj)
+
+<!--
+_syntax: ofUnregisterURLNotification(*obj)_
+_name: ofUnregisterURLNotification_
+_returns: ofEvent< ofHttpResponse > &_
+_returns_description: _
+_parameters: T *obj_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+Unregisters a notification for an `ofLoadURLAsync()` operation.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofEvent< ofHttpResponse > & ofUnregisterURLNotification(*obj)
+
+<!--
+_syntax: ofUnregisterURLNotification(*obj)_
+_name: ofUnregisterURLNotification_
+_returns: ofEvent< ofHttpResponse > &_
+_returns_description: _
+_parameters: T *obj_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+Unregisters a notification for an `ofLoadURLAsync()` operation.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofEvent< ofHttpResponse > & ofUnregisterURLNotification(*obj)
+
+<!--
+_syntax: ofUnregisterURLNotification(*obj)_
+_name: ofUnregisterURLNotification_
+_returns: ofEvent< ofHttpResponse > &_
+_returns_description: _
+_parameters: T *obj_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+Unregisters a notification for an `ofLoadURLAsync()` operation.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofEvent< ofHttpResponse > & ofUnregisterURLNotification(*obj)
+
+<!--
+_syntax: ofUnregisterURLNotification(*obj)_
+_name: ofUnregisterURLNotification_
+_returns: ofEvent< ofHttpResponse > &_
+_returns_description: _
+_parameters: T *obj_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+Unregisters a notification for an `ofLoadURLAsync()` operation.
 
 
 

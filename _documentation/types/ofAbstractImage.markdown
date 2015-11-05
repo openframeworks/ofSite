@@ -72,10 +72,7 @@ Destroy the ofAbstractImage.
 
 
 
-
-
 _description: _
-
 
 
 

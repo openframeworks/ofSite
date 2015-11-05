@@ -54,8 +54,6 @@ buffer An audio buffer.
 
 
 
-
-
 _description: _
 
 
@@ -88,8 +86,6 @@ _inlined_description: _
 
 \deprecated This legacy method is deprecated and will be removed.
 Use void audioIn(ofSoundBuffer& buffer) instead.
-
-
 
 
 
@@ -132,10 +128,7 @@ Use void audioIn(ofSoundBuffer& buffer) instead.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -172,10 +165,7 @@ Use void audioIn(ofSoundBuffer& buffer) instead.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -211,10 +201,7 @@ Destroy the ofBaseSoundInput.
 
 
 
-
-
 _description: _
-
 
 
 

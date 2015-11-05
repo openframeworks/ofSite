@@ -116,9 +116,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -154,9 +152,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Adds a child to the ofXml object. So if you have:
 
@@ -193,8 +189,6 @@ and that would create:
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
 ###bool addValue(&path, data = T(), createEntirePath = false)
@@ -223,9 +217,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Adds a child to the ofXml object. So if you have:
 
@@ -262,8 +254,6 @@ and that would create:
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
 ###void addXml(&xml, copyAll = false)
@@ -292,9 +282,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Adds one ofXml object to another.
 
@@ -303,8 +291,6 @@ firstXml.addXml(secondXml, true);
 ~~~~
 
 The second parameter tells the ofXml whether to add the entire XML document or whether to only add the current element of the XML being added.
-
-
 
 
 
@@ -338,9 +324,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -376,9 +360,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -414,9 +396,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Returns whether a path exists. This can be a path to a node, like:
 ~~~~{.cpp}
@@ -430,8 +410,6 @@ or even a particular attribute anywhere in the DOM
 ~~~~{.cpp}
 xml.exists("//[@id='9']");
 ~~~~
-
-
 
 
 
@@ -465,13 +443,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns the value of an attribute or an empty string if it doesn't exist.
-
-
 
 
 
@@ -505,13 +479,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns a map of all the attributes of the current node.
-
-
 
 
 
@@ -545,9 +515,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -583,9 +551,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -621,9 +587,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -659,9 +623,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -690,7 +652,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -734,7 +695,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -771,9 +731,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -809,9 +767,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -847,9 +803,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -885,9 +839,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -923,9 +875,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -961,9 +911,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -999,9 +947,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1037,9 +983,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1075,9 +1019,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1113,9 +1055,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1151,9 +1091,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1189,13 +1127,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns the value of the current element in the ofXml.
-
-
 
 
 
@@ -1229,9 +1163,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Returns the value at the node indicated by the path. This can be a path that uses an element:
 
@@ -1244,8 +1176,6 @@ or an attribute:
 ~~~~{.cpp}
 xml.exists("picture/pictures[2][@id]");
 ~~~~
-
-
 
 
 
@@ -1279,9 +1209,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1317,9 +1245,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1355,13 +1281,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Loads the XML file from a string. This string needs to be a properly formatted XML document. The method returns false if the document is not correctly created and true if it does.
-
-
 
 
 
@@ -1395,13 +1317,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Constructor. On construction a Poco::XML::Document is created, but not an element, so you'll need to append new elements using addChild() and addAttribute().
-
-
 
 
 
@@ -1435,9 +1353,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1473,13 +1389,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Copy constructor. This clones the Poco::XML::Document so can be a little bit slow but is very safe.
-
-
 
 
 
@@ -1513,13 +1425,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Copy constructor. This clones the Poco::XML::Document so can be a little bit slow but is very safe.
-
-
 
 
 
@@ -1553,9 +1461,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1591,13 +1497,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Removes an element or attribute using the path. Returns false if the path is not valid. All children of the element are also removed.
-
-
 
 
 
@@ -1631,9 +1533,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1669,9 +1569,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1707,9 +1605,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Removes all the attributes from a node.
 
@@ -1722,8 +1618,6 @@ would become
 ~~~~{.cpp}
 <picture>
 ~~~~
-
-
 
 
 
@@ -1757,9 +1651,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Removes all the attributes from a node.
 
@@ -1772,8 +1664,6 @@ would become
 ~~~~{.cpp}
 <picture>
 ~~~~
-
-
 
 
 
@@ -1807,9 +1697,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Removes all the contents from a node.
 
@@ -1828,8 +1716,6 @@ would become
 <picture>
 </picture>
 ~~~~
-
-
 
 
 
@@ -1863,9 +1749,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1901,13 +1785,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Sets the current element back to the root node of the document, i.e. the first child after the <xml> declaration.
-
-
 
 
 
@@ -1941,13 +1821,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Save the XML object to a file.
-
-
 
 
 
@@ -1981,9 +1857,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2019,13 +1893,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Sets attribute at the path indicated. If the attribute doesn't already exist, it's created.
-
-
 
 
 
@@ -2059,9 +1929,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Sets the current element to the path indicated. This can be up or down the DOM:
 
@@ -2070,8 +1938,6 @@ xml.setTo("pictures[1]/url"); // go down
 xml.setTo("../"); // go up
 xml.setTo("../pictures[0]/url"); // go up and then down
 ~~~~
-
-
 
 
 
@@ -2105,13 +1971,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Sets the current element to the index-th child.
-
-
 
 
 
@@ -2145,13 +2007,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Sets the current element to the parent of the current element. This returns false if the parent does not exist.
-
-
 
 
 
@@ -2185,16 +2043,12 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Sets the current element to the numLevelsUp-th parent of the current element.
 ~~~~{.cpp}
 xml.setCurrentElementToParent(3); // this is the same as xml.setCurrentElementToParent("../../../");
 ~~~~
-
-
 
 
 
@@ -2228,9 +2082,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 This sets the current element to the previous sibling element. If your document looks like this:
 
@@ -2255,8 +2107,6 @@ Then you could do the following:
 xml.setCurrentElement("pictures/picture[1]"); // now current element is picture with id=1
 xml.setCurrentElementToPrevSibling(); // now current element is picture with id=0
 ~~~~
-
-
 
 
 
@@ -2290,9 +2140,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 This sets the current element to the previous sibling element. If your document looks like this:
 
@@ -2317,8 +2165,6 @@ Then you could do the following:
 xml.setCurrentElement("pictures/picture[0]"); // now current element is picture with id=0
 xml.setCurrentElementToSibling(); // now current element is picture with id=1
 ~~~~
-
-
 
 
 
@@ -2352,9 +2198,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Sets the value of the element pointed at by the path. If the value, or any other element along the path, does not exist then it is created. This means that:
 
@@ -2371,8 +2215,6 @@ will create:
 	</bar>
 </foo>
 ~~~~
-
-
 
 
 
@@ -2406,13 +2248,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Creates a string from the XML document. Useful for when you want to send or save the document.
-
-
 
 
 
@@ -2446,10 +2284,7 @@ _inlined_description: _
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2485,13 +2320,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Destructor. Deletes both the current element and the current document.
-
-
 
 
 
@@ -2520,12 +2351,14 @@ _advanced: False_
 _inlined_description: _
 
 
+
+
+
+
+
 _description: _
 
-
 This is the XML document that the ofXml object wraps.
-
-
 
 
 
@@ -2550,12 +2383,14 @@ _advanced: False_
 _inlined_description: _
 
 
+
+
+
+
+
 _description: _
 
-
 This is the current element that the ofXml object points at.
-
-
 
 
 

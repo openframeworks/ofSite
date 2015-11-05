@@ -50,7 +50,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -80,7 +79,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -139,8 +137,6 @@ depth The depth of the box.
 
 
 
-
-
 _description: _
 
 
@@ -187,8 +183,6 @@ x The x-coordinate of the cube's origin.
 y The y-coordinate of the cube's origin.
 z The z-coordinate of the cube's origin.
 size The size of the cube.
-
-
 
 
 
@@ -243,8 +237,6 @@ depth The depth of the box.
 
 
 
-
-
 _description: _
 
 
@@ -290,8 +282,6 @@ size The size of the cube.
 
 
 
-
-
 _description: _
 
 
@@ -330,8 +320,6 @@ The cube is drawn filled by default; change this with ofFill();
 
 Parameters:
 size The size of the cube.
-
-
 
 
 
@@ -385,8 +373,6 @@ depth The depth of the box.
 
 
 
-
-
 _description: _
 
 
@@ -416,7 +402,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -460,7 +445,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -490,7 +474,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -534,7 +517,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -564,7 +546,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -608,7 +589,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -638,7 +618,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -682,7 +661,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -712,7 +690,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -756,7 +733,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -786,7 +762,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -830,7 +805,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -860,7 +834,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -904,7 +877,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -934,7 +906,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -978,7 +949,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -1008,7 +978,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1052,7 +1021,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -1082,7 +1050,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1126,7 +1093,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -1156,7 +1122,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1200,7 +1165,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -1237,7 +1201,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -1267,7 +1230,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1320,8 +1282,6 @@ Returns: An ofVec3f containing (radiusSegments, heightSegments, capSegments) for
 
 
 
-
-
 _description: _
 
 
@@ -1351,7 +1311,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1395,7 +1354,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -1425,7 +1383,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1469,7 +1426,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -1499,7 +1455,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1543,7 +1498,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -1580,7 +1534,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -1610,7 +1563,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1662,8 +1614,6 @@ capSegments The number of annular (ring-shaped) subdivisions of the cone's endca
 
 
 
-
-
 _description: _
 
 
@@ -1693,7 +1643,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1737,7 +1686,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -1767,7 +1715,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1811,7 +1758,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -1843,6 +1789,11 @@ _advanced: False_
 _inlined_description: _
 
 
+
+
+
+
+
 _description: _
 
 
@@ -1868,6 +1819,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _
@@ -1897,6 +1853,11 @@ _advanced: False_
 _inlined_description: _
 
 
+
+
+
+
+
 _description: _
 
 
@@ -1922,6 +1883,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _
@@ -1951,6 +1917,11 @@ _advanced: False_
 _inlined_description: _
 
 
+
+
+
+
+
 _description: _
 
 
@@ -1976,6 +1947,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _
@@ -2005,6 +1981,11 @@ _advanced: False_
 _inlined_description: _
 
 
+
+
+
+
+
 _description: _
 
 
@@ -2032,6 +2013,11 @@ _advanced: False_
 _inlined_description: _
 
 
+
+
+
+
+
 _description: _
 
 
@@ -2057,6 +2043,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _

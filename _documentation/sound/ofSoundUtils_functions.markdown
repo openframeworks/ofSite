@@ -12,6 +12,7 @@ _advanced: False_
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofStereoVolumes(volume, pan, &left, &right)
@@ -32,7 +33,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 

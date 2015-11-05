@@ -47,14 +47,9 @@ Returns: the char represented by the string or 0 on failure.
 
 
 
-
-
 _description: _
 
-
 Interprets a string consisting only of 1s and 0s as a char, and returns the corresponding char value.
-
-
 
 
 
@@ -94,14 +89,9 @@ Returns: the float represented by the string or 0 on failure.
 
 
 
-
-
 _description: _
 
-
 Interprets a string consisting only of 1s and 0s as a float (little-endian, 32-bit IEEE 754), and returns the corresponding float value.
-
-
 
 
 
@@ -141,14 +131,9 @@ Returns: the integer represented by the string or 0 on failure.
 
 
 
-
-
 _description: _
 
-
 Interprets a string consisting only of 1s and 0s as an int (little-endian, 32-bit), and returns the corresponding int value.
-
-
 
 
 
@@ -188,14 +173,9 @@ Returns: the ASCII string represented by the string.
 
 
 
-
-
 _description: _
 
-
 Interprets a string consisting only of 1s and 0s as 8-bit ASCII characters, and returns the corresponding string.
-
-
 
 
 
@@ -235,14 +215,9 @@ Returns: true if at least one value equal to the target value is found.
 
 
 
-
-
 _description: _
 
-
 returns true if the vector values contains target
-
-
 
 
 
@@ -278,14 +253,9 @@ with ofSetDataPathRoot().
 
 
 
-
-
 _description: _
 
-
 Disables the conversion of paths to realtive to data/
-
-
 
 
 
@@ -321,60 +291,9 @@ with ofSetDataPathRoot().  This is enabled by default.
 
 
 
-
-
 _description: _
-
 
 Enables the conversion of paths to relative to data/  This is enabled by default.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###size_t ofVAArgsToString(*format, args)
-
-<!--
-_syntax: ofVAArgsToString(*format, args)_
-_name: ofFind_
-_returns: size_t_
-_returns_description: _
-_parameters: const char *format, va_list args_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Search for a target value in a vector of values.
-\tparam T the type contained by the vector.
-
-Parameters:
-values The vector of values to be searched.
-target The target value to be found.
-
-Returns: true the index of the first target value found.
-\sa http://www.cplusplus.com/reference/iterator/distance/
-
-
-
-
-
-
-
-_description: _
-
-
-
 
 
 
@@ -415,10 +334,7 @@ Returns: the string converted to a c-style string.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -455,10 +371,7 @@ Returns: the day witin the month [1-31].
 
 
 
-
-
 _description: _
-
 
 
 
@@ -500,14 +413,9 @@ Returns: the floating point elapsed time in seconds.
 
 
 
-
-
 _description: _
 
-
 returns the elapsed time since the application started in seconds as a float
-
-
 
 
 
@@ -542,10 +450,7 @@ Returns: the hour of the day [0-23].
 
 
 
-
-
 _description: _
-
 
 
 
@@ -582,10 +487,7 @@ Returns: the minutes after the hour [0-59].
 
 
 
-
-
 _description: _
-
 
 
 
@@ -622,10 +524,7 @@ Returns: the current month [1-12].
 
 
 
-
-
 _description: _
-
 
 
 
@@ -662,10 +561,7 @@ Returns: the seconds after the minute [0-59].
 
 
 
-
-
 _description: _
-
 
 
 
@@ -702,10 +598,7 @@ Returns: the current ofTargetPlatform.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -746,117 +639,7 @@ Returns: the current time as a string with the default format.
 
 
 
-
-
 _description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###string ofVAArgsToString(*format, args)
-
-<!--
-_syntax: ofVAArgsToString(*format, args)_
-_name: ofGetTimestampString_
-_returns: string_
-_returns_description: _
-_parameters: const char *format, va_list args_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Formats the current system time according to the given format.
-
-The format string is used as a template to format the date and
-is copied character by character except for the following special
-characters, which are replaced by the corresponding value.
-
-  * %w - abbreviated weekday (Mon, Tue, ...)
-  * %W - full weekday (Monday, Tuesday, ...)
-  * %b - abbreviated month (Jan, Feb, ...)
-  * %B - full month (January, February, ...)
-  * %d - zero-padded day of month (01 .. 31)
-  * %e - day of month (1 .. 31)
-  * %f - space-padded day of month ( 1 .. 31)
-  * %m - zero-padded month (01 .. 12)
-  * %n - month (1 .. 12)
-  * %o - space-padded month ( 1 .. 12)
-  * %y - year without century (70)
-  * %Y - year with century (1970)
-  * %H - hour (00 .. 23)
-  * %h - hour (00 .. 12)
-  * %a - am/pm
-  * %A - AM/PM
-  * %M - minute (00 .. 59)
-  * %S - second (00 .. 59)
-  * %s - seconds and microseconds (equivalent to %S.%F)
-  * %i - millisecond (000 .. 999)
-  * %c - centisecond (0 .. 9)
-  * %F - fractional seconds/microseconds (000000 - 999999)
-  * %z - time zone differential in ISO 8601 format (Z or +NN.NN)
-  * %Z - time zone differential in RFC format (GMT or +NNNN)
-  * %% - percent sign
-
-
-Parameters:
-timestampFormat The formatting pattern.
-
-Returns: the formatted timestamp as a string.
-
-Warning: an invalid timestampFormat may crash windows apps.
-
-
-
-
-
-
-
-_description: _
-
-
-Formats the given timestamp according to the given format.	
-The format string is used as a template to format the date and
-is copied character by character except for the following special characters,
-which are replaced by the corresponding value.
-
-* %w - abbreviated weekday (Mon, Tue, ...)
-* %W - full weekday (Monday, Tuesday, ...)
-* %b - abbreviated month (Jan, Feb, ...)
-* %B - full month (January, February, ...)
-* %d - zero-padded day of month (01 .. 31)
-* %e - day of month (1 .. 31)
-* %f - space-padded day of month ( 1 .. 31)
-* %m - zero-padded month (01 .. 12)
-* %n - month (1 .. 12)
-* %o - space-padded month ( 1 .. 12)
-* %y - year without century (70)
-* %Y - year with century (1970)
-* %H - hour (00 .. 23)
-* %h - hour (00 .. 12)
-* %a - am/pm
-* %A - AM/PM
-* %M - minute (00 .. 59)
-* %S - second (00 .. 59)
-* %s - seconds and microseconds (equivalent to %S.%F)
-* %i - millisecond (000 .. 999)
-* %c - centisecond (0 .. 9)
-* %F - fractional seconds/microseconds (000000 - 999999)
-* %z - time zone differential in ISO 8601 format (Z or +NN.NN)
-* %Z - time zone differential in RFC format (GMT or +NNNN)
-* %% - percent sign
 
 
 
@@ -896,10 +679,7 @@ Returns: the number of seconds since Midnight, January 1, 1970 (epoch time).
 
 
 
-
-
 _description: _
-
 
 
 
@@ -940,10 +720,7 @@ Returns: The string representation of the version (e.g. `0.9.0`).
 
 
 
-
-
 _description: _
-
 
 
 
@@ -984,10 +761,7 @@ Returns: The major version number.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1028,10 +802,7 @@ Returns: The minor version number.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1072,10 +843,7 @@ Returns: The patch version number.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1115,10 +883,7 @@ Returns: the current weekday [0-6].
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1155,10 +920,7 @@ Returns: the current year.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1202,14 +964,9 @@ Returns: the char represented by the string.
 
 
 
-
-
 _description: _
 
-
 Converts a hexadecimal representation of an char (e.g., "61") to an actual char (e.g., a).
-
-
 
 
 
@@ -1251,14 +1008,9 @@ Returns: the float represented by the string.
 
 
 
-
-
 _description: _
 
-
 Converts a hexadecimal representation of an float (little-endian, 32-bit IEEE 754, e.g., "4060000000000000") to an actual float (e.g., 128.f).
-
-
 
 
 
@@ -1300,14 +1052,9 @@ Returns: the integer represented by the string.
 
 
 
-
-
 _description: _
 
-
 Converts a hexadecimal representation of an int (little-endian, 32-bit, e.g., "0xbadf00d" or "badf00d") to an actual int.
-
-
 
 
 
@@ -1349,154 +1096,9 @@ Returns: the string represented by the string.
 
 
 
-
-
 _description: _
-
 
 Converts a hexadecimal representation of an string (e.g., "61626364656667") to an actual string ("abcdefg");
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool ofVAArgsToString(*format, args)
-
-<!--
-_syntax: ofVAArgsToString(*format, args)_
-_name: ofIsStringInString_
-_returns: bool_
-_returns_description: _
-_parameters: const char *format, va_list args_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Check if string contains another string.
-
-Example:
-~~~{.cpp}
-    std::string haystack = "foobar";
-    ofLog() << ofIsStringInString(haystack, "foo"); // Outputs 1.
-    ofLog() << ofIsStringInString(haystack,"bar"); // Outputs 1.
-    ofLog() << ofIsStringInString(haystack, "something else"); // Outputs 0.
-~~~
-
-Parameters:
-haystack The string to check for occurrence in.
-needle The string to check for.
-
-
-
-
-
-
-
-_description: _
-
-
-Checks if the string needle exists in the string haystack.
-
-~~~{.cpp}
-    string haystack = "foobar";
-    ofLog() << ofIsStringInString(haystack, "foo"); // outputs 1
-    ofLog() << ofIsStringInString(haystack,"bar"); // outputs 1
-    ofLog() << ofIsStringInString(haystack, "something else"); // outputs 0
-~~~
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###string ofVAArgsToString(*format, args)
-
-<!--
-_syntax: ofVAArgsToString(*format, args)_
-_name: ofJoinString_
-_returns: string_
-_returns_description: _
-_parameters: const char *format, va_list args_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Join a vector of strings together into one string.
-
-Parameters:
-stringElements The vector of strings to join.
-delimiter The delimiter to put betweeen each string.
-
-
-
-
-
-
-
-_description: _
-
-
-Turns a stringElements into a single string, with an instance of delimiter between all the elements.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofVAArgsToString(*format, args)
-
-<!--
-_syntax: ofVAArgsToString(*format, args)_
-_name: ofLaunchBrowser_
-_returns: void_
-_returns_description: _
-_parameters: const char *format, va_list args_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
 
 
 
@@ -1534,10 +1136,7 @@ values The vector of values to modify.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1611,10 +1210,7 @@ shouldErase A boolean function as described above.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1654,10 +1250,7 @@ ofGetElapsedTimeMillis() and ofGetElapsedTimeMicros() to zero.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1699,160 +1292,7 @@ bUseViewport Set to true if the current viewport should be used.
 
 
 
-
-
 _description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofVAArgsToString(*format, args)
-
-<!--
-_syntax: ofVAArgsToString(*format, args)_
-_name: ofSaveScreen_
-_returns: void_
-_returns_description: _
-_parameters: const char *format, va_list args_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Saves the current screen image to a file on disk.
-
-Example:
-~~~~{.cpp}
-		ofSaveScreen("screen.png"); // Will save screen.png in the /data folder.
-~~~~
-
-The output file type will be deduced from the given file name.
-
-
-Parameters:
-filename The image output file.
-
-
-
-
-
-
-
-_description: _
-
-
-Saves the current screen image into a given file name (string filename).
-Example:
-~~~~{.cpp}
-
-string filename;
-fileName = "screen1.png";
-ofSaveScreen(fileName);
-~~~~
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofVAArgsToString(*format, args)
-
-<!--
-_syntax: ofVAArgsToString(*format, args)_
-_name: ofSaveViewport_
-_returns: void_
-_returns_description: _
-_parameters: const char *format, va_list args_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Saves the current viewport as an image.
-
-The output file type will be deduced from the given file name.
-
-
-Parameters:
-filename The image output file.
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofVAArgsToString(*format, args)
-
-<!--
-_syntax: ofVAArgsToString(*format, args)_
-_name: ofSetDataPathRoot_
-_returns: void_
-_returns_description: _
-_parameters: const char *format, va_list args_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Set the relative path to the data/ folder from the executable.
-
-This method can be useful when users want to embed the data as a resource
-folder within an *.app bundle on OSX or perhaps work from a shared data
-folder in the user's Documents directory.
-
-
-Warning: The provided path must have a trailing slash (/).
-
-Parameters:
-root The path to the data/ folder relative to the app executable.
-
-
-
-
-
-
-
-_description: _
-
 
 
 
@@ -1897,10 +1337,7 @@ values The vector of values to be sorted.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1976,10 +1413,7 @@ compare The comparison function.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2041,151 +1475,9 @@ Returns: A vector of strings split with the delimiter.
 
 
 
-
-
 _description: _
-
 
 Splits source using delimiter and returns the separate tokens. In modern versions of openFrameworks, delimiter can be a multi-character string. In older versions of openFrameworks, delimiter was interpreted as multiple single-character delimiters.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofVAArgsToString(*format, args)
-
-<!--
-_syntax: ofVAArgsToString(*format, args)_
-_name: ofStringReplace_
-_returns: void_
-_returns_description: _
-_parameters: const char *format, va_list args_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Replace all occurrences of a string with another string.
-\note The input string is passed by reference, so it will be modified.
-
-Parameters:
-input The string to run the replacement on.
-searchStr The string to be replaced.
-replaceStr The string to put in place.
-
-
-
-
-
-
-
-_description: _
-
-
-Searches input for instances of searchStr and replaces them with replaceStr.
-
-~~~~{.cpp}
-string message = "hello, world!";
-ofStringReplace(message,"hello","goodbye");
-ofLog() << message; // outputs "goodbye, world!"
-~~~~
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###size_t ofVAArgsToString(*format, args)
-
-<!--
-_syntax: ofVAArgsToString(*format, args)_
-_name: ofStringTimesInString_
-_returns: size_t_
-_returns_description: _
-_parameters: const char *format, va_list args_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Check how many times a string contains another string.
-
-Parameters:
-haystack The string to check for occurrence in .
-needle The string to check for.
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###string ofVAArgsToString(*format, args)
-
-<!--
-_syntax: ofVAArgsToString(*format, args)_
-_name: ofSystem_
-_returns: string_
-_returns_description: _
-_parameters: const char *format, va_list args_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Executes a system command. Similar to run a command in terminal.
-\note Will block until the executed program/command has finished.
-
-Returns: the system command output as string.
-
-
-
-
-
-
-
-_description: _
-
-
-Executes an application or a system command and returns its output as string. Will block until the executed program/command has finished.
-
-
 
 
 
@@ -2228,14 +1520,9 @@ Returns: a binary string.
 
 
 
-
-
 _description: _
 
-
 Converts any datatype value to a string of only 1s and 0s corresponding to the way value is stored in memory.
-
-
 
 
 
@@ -2277,14 +1564,9 @@ Returns: a binary string.
 
 
 
-
-
 _description: _
 
-
 Converts a string value to a string of only 1s and 0s corresponding to the way value is stored in memory.
-
-
 
 
 
@@ -2326,14 +1608,9 @@ Returns: a binary string.
 
 
 
-
-
 _description: _
 
-
 Converts any C-style string value to a string of only 1s and 0s corresponding to the way value is stored in memory.
-
-
 
 
 
@@ -2376,14 +1653,9 @@ Returns: the boolean represented by the string or 0 on failure.
 
 
 
-
-
 _description: _
 
-
 Converts a string representation boolString (e.g., "TRUE") to an actual bool using a case-insensitive comparison against the words "true" and "false". 
-
-
 
 
 
@@ -2427,69 +1699,9 @@ Returns: The string as a char or 0 on failure.
 
 
 
-
-
 _description: _
-
 
 Converts a string representation of a single char (e.g., " c ") to an actual char.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###string ofVAArgsToString(*format, args)
-
-<!--
-_syntax: ofVAArgsToString(*format, args)_
-_name: ofToDataPath_
-_returns: string_
-_returns_description: _
-_parameters: const char *format, va_list args_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Make a path relative to the location of the data/ folder.
-
-This funtion returns path unchanged if ofDisableDataPath() was called first.
-
-By default, a relative path is returned. Users requiring absolute paths for
-(e.g. for non-openFrameworks functions), can specify that an absolute path
-be returned.
-
-
-Parameters:
-path The path to make relative to the data/ folder.
-absolute Set to true to return an absolute path.
-
-Returns: the new path, unless paths were disabled with ofDisableDataPath().
-
-
-
-
-
-
-
-_description: _
-
-
-openFrameworks now treats all files in the data/ folder as being at the same level as your app. When a file is loaded using openFrameworks classes (like ofVideoPlayer) the file path is run through this function to turn it into a relative path for the executible. As windows, mac and linux all have different relative paths, it is important to use this function if you have written your own class or addon for openFrameworks and you wish to be able to load files from the data/ folder.
-
-The optional parameter makeAbsolute, if set to true (false by default) returns the generated path as an absolute path starting from the root of your filesystem instead of from the folder your application is run from.
-
-
 
 
 
@@ -2531,10 +1743,7 @@ Returns: the double represented by the string or 0 on failure.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2578,14 +1787,9 @@ Returns: the float represented by the string or 0 on failure.
 
 
 
-
-
 _description: _
 
-
 Converts a string representation floatString (e.g., "3.14") to an actual float.
-
-
 
 
 
@@ -2628,14 +1832,9 @@ Returns: the hexadecimal string representation of the value.
 
 
 
-
-
 _description: _
 
-
 Converts any value to its equivalent hexadecimal representation corresponding to the way it is stored in memory.
-
-
 
 
 
@@ -2677,14 +1876,9 @@ Returns: a hexadecimal string.
 
 
 
-
-
 _description: _
 
-
 Converts a string (e.g., "abc") to its equivalent hexadecimal representation (e.g., "616263").
-
-
 
 
 
@@ -2726,14 +1920,9 @@ Returns: a hexadecimal string.
 
 
 
-
-
 _description: _
 
-
 Converts a c-style string (e.g., "abc") to its equivalent hexadecimal representation (e.g., "616263").
-
-
 
 
 
@@ -2775,14 +1964,9 @@ Returns: the integer represented by the string or 0 on failure.
 
 
 
-
-
 _description: _
 
-
 Converts a string representation of an int (e.g., "2012") to an actual int.
-
-
 
 
 
@@ -2832,10 +2016,7 @@ Returns: A string representing the value or an empty string on failure.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2880,10 +2061,7 @@ Returns: The string representation of the value.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2928,10 +2106,7 @@ Returns: a comma-delimited string representation of the intput values.
 
 
 
-
-
 _description: _
-
 
 Converts a vector of values to a single string representation. 
 ~~~~{.cpp}
@@ -2941,8 +2116,6 @@ vec.push_back(2);
 vec.push_back(3);
 cout << ofToString(vec) << endl; // prints "{1, 2, 3}"
 ~~~~
-
-
 
 
 
@@ -2986,10 +2159,7 @@ Returns: The string representation of the value.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -3036,10 +2206,7 @@ Returns: The string representation of the value.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -3068,909 +2235,19 @@ _advanced: False_
 
 _inlined_description: _
 
-Get the pre-release version of openFrameworks.
+Convert a variable length argument to a string.
 
-openFrameworks uses the semantic versioning system.
+Parameters:
+format A printf-style format string.
+args A variable argument list.
 
-For pre-release versions of openFrameworks, including development versions,
-this string will describe the pre-release state. Examples might include
-"master", "rc1", "rc2", etc.  For all stable releases, this string will be
-empty.
-
-\sa http://semver.org/
-
-Returns: The pre-release version string.
-
-
+Returns: A string representation of the argument list.
 
 
 
 
 
 _description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###string ofVAArgsToString(*format, args)
-
-<!--
-_syntax: ofVAArgsToString(*format, args)_
-_name: ofVAArgsToString_
-_returns: string_
-_returns_description: _
-_parameters: const char *format, va_list args_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Get the pre-release version of openFrameworks.
-
-openFrameworks uses the semantic versioning system.
-
-For pre-release versions of openFrameworks, including development versions,
-this string will describe the pre-release state. Examples might include
-"master", "rc1", "rc2", etc.  For all stable releases, this string will be
-empty.
-
-\sa http://semver.org/
-
-Returns: The pre-release version string.
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###string ofVAArgsToString(*format, args)
-
-<!--
-_syntax: ofVAArgsToString(*format, args)_
-_name: ofVAArgsToString_
-_returns: string_
-_returns_description: _
-_parameters: const char *format, va_list args_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Get the pre-release version of openFrameworks.
-
-openFrameworks uses the semantic versioning system.
-
-For pre-release versions of openFrameworks, including development versions,
-this string will describe the pre-release state. Examples might include
-"master", "rc1", "rc2", etc.  For all stable releases, this string will be
-empty.
-
-\sa http://semver.org/
-
-Returns: The pre-release version string.
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###string ofVAArgsToString(*format, args)
-
-<!--
-_syntax: ofVAArgsToString(*format, args)_
-_name: ofVAArgsToString_
-_returns: string_
-_returns_description: _
-_parameters: const char *format, va_list args_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Get the pre-release version of openFrameworks.
-
-openFrameworks uses the semantic versioning system.
-
-For pre-release versions of openFrameworks, including development versions,
-this string will describe the pre-release state. Examples might include
-"master", "rc1", "rc2", etc.  For all stable releases, this string will be
-empty.
-
-\sa http://semver.org/
-
-Returns: The pre-release version string.
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###string ofVAArgsToString(*format, args)
-
-<!--
-_syntax: ofVAArgsToString(*format, args)_
-_name: ofVAArgsToString_
-_returns: string_
-_returns_description: _
-_parameters: const char *format, va_list args_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Get the pre-release version of openFrameworks.
-
-openFrameworks uses the semantic versioning system.
-
-For pre-release versions of openFrameworks, including development versions,
-this string will describe the pre-release state. Examples might include
-"master", "rc1", "rc2", etc.  For all stable releases, this string will be
-empty.
-
-\sa http://semver.org/
-
-Returns: The pre-release version string.
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###string ofVAArgsToString(*format, args)
-
-<!--
-_syntax: ofVAArgsToString(*format, args)_
-_name: ofVAArgsToString_
-_returns: string_
-_returns_description: _
-_parameters: const char *format, va_list args_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Get the pre-release version of openFrameworks.
-
-openFrameworks uses the semantic versioning system.
-
-For pre-release versions of openFrameworks, including development versions,
-this string will describe the pre-release state. Examples might include
-"master", "rc1", "rc2", etc.  For all stable releases, this string will be
-empty.
-
-\sa http://semver.org/
-
-Returns: The pre-release version string.
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###string ofVAArgsToString(*format, args)
-
-<!--
-_syntax: ofVAArgsToString(*format, args)_
-_name: ofVAArgsToString_
-_returns: string_
-_returns_description: _
-_parameters: const char *format, va_list args_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Get the pre-release version of openFrameworks.
-
-openFrameworks uses the semantic versioning system.
-
-For pre-release versions of openFrameworks, including development versions,
-this string will describe the pre-release state. Examples might include
-"master", "rc1", "rc2", etc.  For all stable releases, this string will be
-empty.
-
-\sa http://semver.org/
-
-Returns: The pre-release version string.
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###string ofVAArgsToString(*format, args)
-
-<!--
-_syntax: ofVAArgsToString(*format, args)_
-_name: ofVAArgsToString_
-_returns: string_
-_returns_description: _
-_parameters: const char *format, va_list args_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Get the pre-release version of openFrameworks.
-
-openFrameworks uses the semantic versioning system.
-
-For pre-release versions of openFrameworks, including development versions,
-this string will describe the pre-release state. Examples might include
-"master", "rc1", "rc2", etc.  For all stable releases, this string will be
-empty.
-
-\sa http://semver.org/
-
-Returns: The pre-release version string.
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###string ofVAArgsToString(*format, args)
-
-<!--
-_syntax: ofVAArgsToString(*format, args)_
-_name: ofVAArgsToString_
-_returns: string_
-_returns_description: _
-_parameters: const char *format, va_list args_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Get the pre-release version of openFrameworks.
-
-openFrameworks uses the semantic versioning system.
-
-For pre-release versions of openFrameworks, including development versions,
-this string will describe the pre-release state. Examples might include
-"master", "rc1", "rc2", etc.  For all stable releases, this string will be
-empty.
-
-\sa http://semver.org/
-
-Returns: The pre-release version string.
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###string ofVAArgsToString(*format, args)
-
-<!--
-_syntax: ofVAArgsToString(*format, args)_
-_name: ofVAArgsToString_
-_returns: string_
-_returns_description: _
-_parameters: const char *format, va_list args_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Get the pre-release version of openFrameworks.
-
-openFrameworks uses the semantic versioning system.
-
-For pre-release versions of openFrameworks, including development versions,
-this string will describe the pre-release state. Examples might include
-"master", "rc1", "rc2", etc.  For all stable releases, this string will be
-empty.
-
-\sa http://semver.org/
-
-Returns: The pre-release version string.
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###string ofVAArgsToString(*format, args)
-
-<!--
-_syntax: ofVAArgsToString(*format, args)_
-_name: ofVAArgsToString_
-_returns: string_
-_returns_description: _
-_parameters: const char *format, va_list args_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Get the pre-release version of openFrameworks.
-
-openFrameworks uses the semantic versioning system.
-
-For pre-release versions of openFrameworks, including development versions,
-this string will describe the pre-release state. Examples might include
-"master", "rc1", "rc2", etc.  For all stable releases, this string will be
-empty.
-
-\sa http://semver.org/
-
-Returns: The pre-release version string.
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###string ofVAArgsToString(*format, args)
-
-<!--
-_syntax: ofVAArgsToString(*format, args)_
-_name: ofVAArgsToString_
-_returns: string_
-_returns_description: _
-_parameters: const char *format, va_list args_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Get the pre-release version of openFrameworks.
-
-openFrameworks uses the semantic versioning system.
-
-For pre-release versions of openFrameworks, including development versions,
-this string will describe the pre-release state. Examples might include
-"master", "rc1", "rc2", etc.  For all stable releases, this string will be
-empty.
-
-\sa http://semver.org/
-
-Returns: The pre-release version string.
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###string ofVAArgsToString(*format, args)
-
-<!--
-_syntax: ofVAArgsToString(*format, args)_
-_name: ofVAArgsToString_
-_returns: string_
-_returns_description: _
-_parameters: const char *format, va_list args_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Get the pre-release version of openFrameworks.
-
-openFrameworks uses the semantic versioning system.
-
-For pre-release versions of openFrameworks, including development versions,
-this string will describe the pre-release state. Examples might include
-"master", "rc1", "rc2", etc.  For all stable releases, this string will be
-empty.
-
-\sa http://semver.org/
-
-Returns: The pre-release version string.
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###string ofVAArgsToString(*format, args)
-
-<!--
-_syntax: ofVAArgsToString(*format, args)_
-_name: ofVAArgsToString_
-_returns: string_
-_returns_description: _
-_parameters: const char *format, va_list args_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Get the pre-release version of openFrameworks.
-
-openFrameworks uses the semantic versioning system.
-
-For pre-release versions of openFrameworks, including development versions,
-this string will describe the pre-release state. Examples might include
-"master", "rc1", "rc2", etc.  For all stable releases, this string will be
-empty.
-
-\sa http://semver.org/
-
-Returns: The pre-release version string.
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###string ofVAArgsToString(*format, args)
-
-<!--
-_syntax: ofVAArgsToString(*format, args)_
-_name: ofVAArgsToString_
-_returns: string_
-_returns_description: _
-_parameters: const char *format, va_list args_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Get the pre-release version of openFrameworks.
-
-openFrameworks uses the semantic versioning system.
-
-For pre-release versions of openFrameworks, including development versions,
-this string will describe the pre-release state. Examples might include
-"master", "rc1", "rc2", etc.  For all stable releases, this string will be
-empty.
-
-\sa http://semver.org/
-
-Returns: The pre-release version string.
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###string ofVAArgsToString(*format, args)
-
-<!--
-_syntax: ofVAArgsToString(*format, args)_
-_name: ofVAArgsToString_
-_returns: string_
-_returns_description: _
-_parameters: const char *format, va_list args_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Get the pre-release version of openFrameworks.
-
-openFrameworks uses the semantic versioning system.
-
-For pre-release versions of openFrameworks, including development versions,
-this string will describe the pre-release state. Examples might include
-"master", "rc1", "rc2", etc.  For all stable releases, this string will be
-empty.
-
-\sa http://semver.org/
-
-Returns: The pre-release version string.
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###string ofVAArgsToString(*format, args)
-
-<!--
-_syntax: ofVAArgsToString(*format, args)_
-_name: ofVAArgsToString_
-_returns: string_
-_returns_description: _
-_parameters: const char *format, va_list args_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Get the pre-release version of openFrameworks.
-
-openFrameworks uses the semantic versioning system.
-
-For pre-release versions of openFrameworks, including development versions,
-this string will describe the pre-release state. Examples might include
-"master", "rc1", "rc2", etc.  For all stable releases, this string will be
-empty.
-
-\sa http://semver.org/
-
-Returns: The pre-release version string.
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###string ofVAArgsToString(*format, args)
-
-<!--
-_syntax: ofVAArgsToString(*format, args)_
-_name: ofVAArgsToString_
-_returns: string_
-_returns_description: _
-_parameters: const char *format, va_list args_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Get the pre-release version of openFrameworks.
-
-openFrameworks uses the semantic versioning system.
-
-For pre-release versions of openFrameworks, including development versions,
-this string will describe the pre-release state. Examples might include
-"master", "rc1", "rc2", etc.  For all stable releases, this string will be
-empty.
-
-\sa http://semver.org/
-
-Returns: The pre-release version string.
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###string ofVAArgsToString(*format, args)
-
-<!--
-_syntax: ofVAArgsToString(*format, args)_
-_name: ofVAArgsToString_
-_returns: string_
-_returns_description: _
-_parameters: const char *format, va_list args_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Get the pre-release version of openFrameworks.
-
-openFrameworks uses the semantic versioning system.
-
-For pre-release versions of openFrameworks, including development versions,
-this string will describe the pre-release state. Examples might include
-"master", "rc1", "rc2", etc.  For all stable releases, this string will be
-empty.
-
-\sa http://semver.org/
-
-Returns: The pre-release version string.
-
-
-
-
-
-
-
-_description: _
-
 
 
 

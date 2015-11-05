@@ -77,14 +77,9 @@ Adds a point using an ofPoint at the end of the ofPolyline.
 
 
 
-
-
 _description: _
 
-
 Adds a point using an ofPoint at the end of the ofPolyline.
-
-
 
 
 
@@ -118,14 +113,9 @@ Adds a point using floats at the end of the ofPolyline.
 
 
 
-
-
 _description: _
 
-
 Adds a point using floats instead of an ofPoint at the end of the ofPolyline.
-
-
 
 
 
@@ -177,10 +167,7 @@ ofPoint objects
 
 
 
-
-
 _description: _
-
 
 Adds multiple points at the end of the ofPolyline using a vector of ofPoint objects, which can be declared like so:
 ~~~~{.cpp}
@@ -199,8 +186,6 @@ verts.push_back(ofPoint(X1, -Y1));
 ofPolyline p;
 p.addVertices(verts);
 ~~~~
-
-
 
 
 
@@ -235,10 +220,7 @@ an array of ofPoint objects.
 
 
 
-
-
 _description: _
-
 
 Adds multiple points at the end of the ofPolyline using a pointer to an array of ofPoint objects.
 ~~~~{.cpp}
@@ -257,8 +239,6 @@ verts[4] = ofPoint(X1, -Y1);
 ofPolyline p;
 p.addVertices(verts, 5);
 ~~~~
-
-
 
 
 
@@ -305,18 +285,13 @@ straight line will be created to join both
 
 
 
-
-
 _description: _
-
 
 Draws an arc around the ofPoint ``center`` with the width of ``radiusX`` and the height of ``radiusY``.
 The ``angleBegin`` and ``angleEnd`` indicate the start and end angles of the arc in degrees measured clockwise from the x-axis.
 The ``clockwise`` boolean sets the drawing direction.  Passing 'false' to it will draw the arc counter-clockwise.
 
 Optionally, you can specify ``circleResolution``, which is the number of line segments a circle would be drawn with.
-
-
 
 
 
@@ -376,10 +351,7 @@ polyline2.draw();
 
 
 
-
-
 _description: _
-
 
 Draws an arc around the ofPoint ``center`` with the width of ``radiusX`` and the height of ``radiusY``. 
 The ``angleBegin`` and ``angleEnd`` indicate the start and end angles of the arc in degrees measured clockwise from the x-axis.
@@ -409,8 +381,6 @@ polyline2.draw();
 ~~~~
 
 ![Arc Example](ofpolyline_arc.png)
-
-
 
 
 
@@ -451,17 +421,12 @@ of line segments a circle would be drawn with.
 
 
 
-
-
 _description: _
-
 
 Draws an arc around the coordinates (``x``,``y``) with the width of ``radiusX`` and the height of ``radiusY``.
 The ``angleBegin`` and ``angleEnd`` indicate the start and end angles of the arc in degrees measured clockwise from the x-axis.
 
 Optionally, you can specify ``circleResolution``, which is the number of line segments a circle would be drawn with.
-
-
 
 
 
@@ -502,17 +467,12 @@ line segments a circle would be drawn with.
 
 
 
-
-
 _description: _
-
 
 Draws an arc around the coordinates (``x``,``y``,``z``) with the width of ``radiusX`` and the height of ``radiusY``.
 The ``angleBegin`` and ``angleEnd`` indicate the start and end angles of the arc in degrees measured clockwise from the x-axis.
 
 Optionally, you can specify ``circleResolution``, which is the number of line segments a circle would be drawn with.
-
-
 
 
 
@@ -546,9 +506,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -584,9 +542,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -622,9 +578,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -653,7 +607,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -690,7 +643,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -743,10 +695,7 @@ The control points are shown in red.
 
 
 
-
-
 _description: _
-
 
 Creates a cubic bezier line from the current drawing point with the 2 control points indicated by ofPoint cp1 and cp2, that ends at ofPoint to. For instance, the following:
 ~~~~{.cpp}
@@ -756,8 +705,6 @@ line.bezierTo(100, 100, 800, 100, 700, 400);
 Creates this:
 ![polyline bezier](bezier.png)
 The control points are shown in yellow.
-
-
 
 
 
@@ -793,14 +740,9 @@ that ends at the coordinates x, y.
 
 
 
-
-
 _description: _
 
-
 Creates a cubic bezier line from the current drawing point with the 2 control points indicated by the coordinates cx1, cy1 and cx2, cy2, that ends at the coordinates x, y.
-
-
 
 
 
@@ -836,10 +778,7 @@ and cx2, cy2, cz2, that ends at the coordinates x, y, z.
 
 
 
-
-
 _description: _
-
 
 Creates a cubic bezier line in 3D space from the current drawing point with the 2 control points indicated by the coordinates cx1, cy1, cz1 and cx2, cy2, cz2, that ends at the coordinates x, y, z.
 ~~~~{.cpp}
@@ -858,8 +797,6 @@ for (float i = 0.0; i < TWO_PI; i+=step) {
 	}
 }
 ~~~~
-
-
 
 
 
@@ -893,9 +830,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -931,14 +866,9 @@ Removes all the points from the ofPolyline.
 
 
 
-
-
 _description: _
 
-
 Removes all the points from the ofPolyline.
-
-
 
 
 
@@ -973,14 +903,9 @@ and can be "walked".
 
 
 
-
-
 _description: _
 
-
 Closes the ofPolyline, meaning that all the vertices will be linked and can be "walked".
-
-
 
 
 
@@ -1026,10 +951,7 @@ while (angle < TWO_PI ) {
 
 
 
-
-
 _description: _
-
 
 Draws a curve to an ofPoint object passed in:
 ~~~~{.cpp}
@@ -1086,8 +1008,6 @@ The oldest point, `v0`, was bumped and everything shifted down.  The sampling oc
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
 ###void curveTo(x, y, z = 0, curveResolution = 16)
@@ -1117,10 +1037,7 @@ resolution.
 
 
 
-
-
 _description: _
-
 
 Draws a curve to the x,y,z points passed in with the optional resolution.
 ~~~~{.cpp}
@@ -1131,8 +1048,6 @@ while (angle < TWO_PI ) {
 	angle += TWO_PI / 30;
 }
 ~~~~
-
-
 
 
 
@@ -1166,14 +1081,9 @@ Draw the line using the current renderer
 
 
 
-
-
 _description: _
 
-
 Draw the line using the current renderer.
-
-
 
 
 
@@ -1200,7 +1110,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1244,7 +1153,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -1281,9 +1189,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1319,9 +1225,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1357,10 +1261,7 @@ Get angle (degrees) of the path at index
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1397,10 +1298,7 @@ neighboring indices)
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1436,14 +1334,9 @@ Gets the precise area bounded by the line
 
 
 
-
-
 _description: _
 
-
 Gets the precise area bounded by the line.
-
-
 
 
 
@@ -1478,14 +1371,9 @@ all the points to determine the extents of the polyline.
 
 
 
-
-
 _description: _
 
-
 Returns the bounding box of the shape, taking into account all the points to determine the extents of the polyline.
-
-
 
 
 
@@ -1519,14 +1407,9 @@ Get the center of the area bounded by the line
 
 
 
-
-
 _description: _
 
-
 Get the center of the area bounded by the line.
-
-
 
 
 
@@ -1562,14 +1445,9 @@ index of the closest vertex
 
 
 
-
-
 _description: _
 
-
 This returns the point on the line closest to the target. You can also optionally pass a pointer to/address of an unsigned int to get the index of the closest vertex.
-
-
 
 
 
@@ -1606,10 +1484,7 @@ Includes info on percentage along segment, e.g. `ret=5.75` =>
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1648,10 +1523,7 @@ Includes info on percentage along segment, e.g. `ret=5.75`
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1687,9 +1559,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1725,10 +1595,7 @@ Get length along path at index
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1765,10 +1632,7 @@ the path between 5th and 6th points)
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1804,10 +1668,7 @@ Get normal vector at index
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1844,10 +1705,7 @@ Get normal vector at interpolated index
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1885,14 +1743,9 @@ shape.
 
 
 
-
-
 _description: _
 
-
 Returns the size of the perimeter of the polyline, good for determining length of the line, rather than just the bounding box shape.
-
-
 
 
 
@@ -1927,10 +1780,7 @@ Get point along the path at interpolated index (e.g. `f=5.75` =>
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1967,10 +1817,7 @@ units along the path)
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2007,10 +1854,7 @@ Get point along the path at a given percentage (e.g. `f=0.25`
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2049,14 +1893,9 @@ This doesn't add new points to the line.
 
 
 
-
-
 _description: _
 
-
 This resamples the line based on the spacing passed in. The lower the count passed in, the more points will be eliminated. This doesn't add new points to the line though.
-
-
 
 
 
@@ -2098,10 +1937,7 @@ line.getResampledBySpacing(100).draw();
 
 
 
-
-
 _description: _
-
 
 This resamples the line based on the spacing passed in. The larger the spacing, the more points will be eliminated.
 ~~~~{.cpp}
@@ -2110,8 +1946,6 @@ ofTranslate(400, 0);
 line.getResampledBySpacing(100).draw();
 ~~~~
 ![polyline resample](resample.png)
-
-
 
 
 
@@ -2145,9 +1979,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2183,10 +2015,7 @@ Get rotation vector at index (magnitude is sin of angle)
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2223,10 +2052,7 @@ Get rotation vector at interpolated index
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2268,14 +2094,9 @@ box window (1) or something in between (for example, .5).
 
 
 
-
-
 _description: _
 
-
 This returns a smoothed version of the ofPolyline. `smoothingSize` is the size of the smoothing window. So if `smoothingSize` is 2, then 2 points from the left, 1 in the center, and 2 on the right (5 total) will be used for smoothing each point. `smoothingShape` describes whether to use a triangular window (0) or box window (1) or something in between (for example, .5).
-
-
 
 
 
@@ -2309,10 +2130,7 @@ Get tangent vector at index
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2349,10 +2167,7 @@ Get tangent vector at interpolated index
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2388,10 +2203,7 @@ Gets a vector of vertices that the line contains
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2427,13 +2239,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns the vector of vertices that the line contains, vector<ofPoint> &.
-
-
 
 
 
@@ -2467,10 +2275,7 @@ Get wrapped index depending on whether poly is closed or not
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2506,14 +2311,9 @@ Returns whether the vertices within the line have changed.
 
 
 
-
-
 _description: _
 
-
 Returns whether the vertices within the line have changed.
-
-
 
 
 
@@ -2547,9 +2347,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2585,9 +2383,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2623,14 +2419,9 @@ Tests whether the x,y coordinates are within a closed ofPolyline.
 
 
 
-
-
 _description: _
 
-
 Test whether the x,y point is within anothe polyline, passed in as ofPolyline&
-
-
 
 
 
@@ -2664,14 +2455,9 @@ Tests whether the x,y coordinates are within a closed ofPolyline.
 
 
 
-
-
 _description: _
 
-
 Tests whether the x,y coordinates are within a closed ofPolyline.
-
-
 
 
 
@@ -2705,14 +2491,9 @@ Tests whether the ofPoint is within a closed ofPolyline.
 
 
 
-
-
 _description: _
 
-
 Test whether the ofPoint is within anothe polyline, passed in as ofPolyline&
-
-
 
 
 
@@ -2746,14 +2527,9 @@ Tests whether the ofPoint is within a closed ofPolyline.
 
 
 
-
-
 _description: _
 
-
 Tests whether the ofPoint is within a closed ofPolyline.
-
-
 
 
 
@@ -2787,13 +2563,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Whether the shape is closed or not. Certain operations, like getSmoothed() can only be performed on closed shapes.
-
-
 
 
 
@@ -2828,14 +2600,9 @@ is set, to the point indicated by the ofPoint passesd in.
 
 
 
-
-
 _description: _
 
-
 Add a line from the last point added, or from 0,0 if no point is set, to the point indicated by the ofPoint passesd in.
-
-
 
 
 
@@ -2870,14 +2637,9 @@ is set, to the point indicated by the floats x,y,z passesd in.
 
 
 
-
-
 _description: _
 
-
 Add a line from the last point added, or from 0,0 if no point is set, to the point indicated by the floats x,y,z passesd in.
-
-
 
 
 
@@ -2911,14 +2673,9 @@ Creates an ofPolyline.
 
 
 
-
-
 _description: _
 
-
 Creates an ofPolyline.
-
-
 
 
 
@@ -2952,10 +2709,7 @@ Creates an ofPolyline from a vector of ofVec2f or ofPoint objects.
 
 
 
-
-
 _description: _
-
 
 Creates an ofPolyline from a vector of ofVec2f or ofPoint objects.
 ~~~~{.cpp}
@@ -2968,8 +2722,6 @@ vector<ofPoint> pts;
 	ofPolyline cp(pts);
 ~~~~
 There is an easier way to draw circles though, using the arc() method.
-
-
 
 
 
@@ -3015,10 +2767,7 @@ while ( i<bounds.size()) {
 
 
 
-
-
 _description: _
-
 
 
 
@@ -3054,9 +2803,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 The [] operator allows you to access the points of the ofPolyline just like you would in an array, so to make the points of a line follow the mouse movement, you could do:
 ~~~~{.cpp}
@@ -3070,8 +2817,6 @@ while ( i<bounds.size()) {
 	i++;
 }
 ~~~~
-
-
 
 
 
@@ -3110,15 +2855,10 @@ x, y, z.
 
 
 
-
-
 _description: _
-
 
 Creates a quadratic bezier line in 3D space from the current drawing point with the beginning indicated by the coordinates cx1, cy1, cz1, the control point at cx2, cy2, cz2, and that ends at the coordinates x, y, z.
 ![polyline curves](curves.png)
-
-
 
 
 
@@ -3154,14 +2894,9 @@ at p2, and that ends at the point p3.
 
 
 
-
-
 _description: _
 
-
 Creates a quadratic bezier line in 2D space from the current drawing point with the beginning indicated by the point p1, the control point at p2, and that ends at the point p3.
-
-
 
 
 
@@ -3197,14 +2932,9 @@ control point at cx2, cy2, and that ends at the coordinates x, y.
 
 
 
-
-
 _description: _
 
-
 Creates a quadratic bezier line in 3D space from the current drawing point with the beginning indicated by the coordinates cx1, cy1, the control point at cx2, cy2, and that ends at the coordinates x, y.
-
-
 
 
 
@@ -3231,7 +2961,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -3275,7 +3004,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -3312,7 +3040,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -3342,7 +3069,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -3387,14 +3113,9 @@ passed in.
 
 
 
-
-
 _description: _
 
-
 Resize the number of points in the ofPolyline to the value passed in.
-
-
 
 
 
@@ -3428,10 +3149,7 @@ _inlined_description: _
 
 
 
-
-
 _description: _
-
 
 
 
@@ -3468,14 +3186,9 @@ and can be "walked".
 
 
 
-
-
 _description: _
 
-
 Closes the ofPolyline, meaning that all the vertices will be linked and can be "walked".
-
-
 
 
 
@@ -3502,7 +3215,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -3552,14 +3264,9 @@ points removed.
 
 
 
-
-
 _description: _
 
-
 Simplifies the polyline, removing un-necessary vertices. The tolerance determines how dis-similar points need to be to stay in the line. Higher tolerance means more points removed, lower tolerance means less points removed.
-
-
 
 
 
@@ -3593,14 +3300,9 @@ The number of points in the ofPolyline.
 
 
 
-
-
 _description: _
 
-
 The number of points in the ofPolyline.
-
-
 
 
 
@@ -3634,9 +3336,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -3672,9 +3372,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -3705,8 +3403,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3733,8 +3435,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3761,8 +3467,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3789,8 +3499,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3817,8 +3531,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3845,8 +3563,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3873,8 +3595,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3901,8 +3627,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3929,8 +3659,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3957,8 +3691,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3985,8 +3723,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -4013,8 +3755,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -4041,8 +3787,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -4069,8 +3819,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 

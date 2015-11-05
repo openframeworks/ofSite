@@ -40,9 +40,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -77,9 +75,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -114,9 +110,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -151,9 +145,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -188,9 +180,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -225,9 +215,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -262,9 +250,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -299,9 +285,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -336,9 +320,42 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###vector<weak_ptr< ofLight::Data>  > & ofSetSmoothLighting(b)
+
+<!--
+_syntax: ofSetSmoothLighting(b)_
+_name: ofSetSmoothLighting_
+_returns: vector<weak_ptr< ofLight::Data>  > &_
+_returns_description: _
+_parameters: bool b_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 

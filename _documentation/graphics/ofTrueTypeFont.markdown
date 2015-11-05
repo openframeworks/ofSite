@@ -52,7 +52,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -89,7 +88,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -119,7 +117,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -168,10 +165,7 @@ y Y position of string
 
 
 
-
-
 _description: _
-
 
 Draws a string with that typeface, on screen, at point(x,y). For example, you can write some text on screen like this:
 ~~~~{.cpp}
@@ -200,8 +194,6 @@ char fpsStr[255]; // an array of chars
 sprintf(fpsStr, "frame rate: %f", ofGetFrameRate());
 myfont.drawString(fpsStr, 100,100);
 ~~~~
-
-
 
 
 
@@ -242,14 +234,9 @@ y Y position of shapes
 
 
 
-
-
 _description: _
 
-
 drawStringAsShapes function draws the s string as if it was a geometrical shapes using the information contained in ofTTFContour and ofTTFCharacter. Parameters x and y sets the position of the shape.
-
-
 
 
 
@@ -283,9 +270,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -328,8 +313,6 @@ Returns: the font ascender height in pixels.
 
 
 
-
-
 _description: _
 
 
@@ -361,8 +344,6 @@ _advanced: False_
 _inlined_description: _
 
 \todo Documentation.
-
-
 
 
 
@@ -412,8 +393,6 @@ Returns: the font descender height in pixels.
 
 
 
-
-
 _description: _
 
 
@@ -450,13 +429,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns the texture (as a reference) that ofTrueTypeFont uses internally.  When you load in a font, it parses the ttf (or .otf) file and rasterizes it to a texture for fast drawing.  This gives you low level access to that texture.
-
-
 
 
 
@@ -497,8 +472,6 @@ Returns: the font descender height in pixels.
 
 
 
-
-
 _description: _
 
 
@@ -528,7 +501,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -578,14 +550,9 @@ Returns: the letter spacing of font object.
 
 
 
-
-
 _description: _
 
-
 Returns the letter spacing of the font object.  You can control this by the ofTrueTypeFont::setLetterSpacing() function.  1.0 = default spacing, less then 1.0 would be tighter spacing, greater then 1.0 would be wider spacing.
-
-
 
 
 
@@ -621,14 +588,9 @@ Returns: the current line height.
 
 
 
-
-
 _description: _
 
-
 The line height is computed, based on the font size, and can be adjusted. Useful if you are print multi-line text.  This function returns the current line height.
-
-
 
 
 
@@ -668,14 +630,9 @@ Returns: Number of characters in loaded character set.
 
 
 
-
-
 _description: _
 
-
 Returns the number of characters this font represents.  If you allocate the font using different parameters, you can load in partial and full character sets, this helps you know how many characters it can represent.
-
-
 
 
 
@@ -711,14 +668,9 @@ Returns: Size of font, set when font was loaded.
 
 
 
-
-
 _description: _
 
-
 Returns the size of the font.  This is set when you load in the font.
-
-
 
 
 
@@ -758,14 +710,9 @@ Returns: the width of the space.
 
 
 
-
-
 _description: _
 
-
 This is a variable to represent how wide spaces are sized.   It's a scalar for the width of the letter 'p', so 1.0 means that a space will be the size of the lower case 'p' of that font.  2.0 means that it's 2 times the size of the lower case 'p', etc.
-
-
 
 
 
@@ -792,7 +739,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -843,8 +789,6 @@ Returns: the bounding box of a string as a rectangle.
 
 
 
-
-
 _description: _
 
 
@@ -874,7 +818,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -920,14 +863,9 @@ Returns: true if the font was allocated with a full character set.
 
 
 
-
-
 _description: _
 
-
 Returns true or false if this font was allocated with a full character set.
-
-
 
 
 
@@ -961,9 +899,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1001,14 +937,9 @@ Returns: true if the font was set to be anti-aliased.
 
 
 
-
-
 _description: _
 
-
 Returns true of false if the font is set to be anti-aliased.  This is set when you load.
-
-
 
 
 
@@ -1044,14 +975,9 @@ Returns: true if the font was loaded.
 
 
 
-
-
 _description: _
 
-
 Returns true or false if the font is loaded properly.
-
-
 
 
 
@@ -1103,8 +1029,6 @@ Returns: true if the font was loaded correctly.
 
 
 
-
-
 _description: _
 
 
@@ -1141,10 +1065,7 @@ Construct a default ofTrueTypeFont.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1180,9 +1101,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1218,10 +1137,7 @@ Set the default dpi for all typefaces.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1262,14 +1178,9 @@ spacing Spacing of font object.
 
 
 
-
-
 _description: _
 
-
 Sets the letter spacing of the font object.  1.0 = default spacing, less then 1.0 would be tighter spacing, greater then 1.0 would be wider spacing.
-
-
 
 
 
@@ -1309,14 +1220,9 @@ height Line height for text drawn on screen.
 
 
 
-
-
 _description: _
 
-
 Sets the line height for text that is drawn on screen.   Note the line height is automatically computed based on the font size, when you load in the font.
-
-
 
 
 
@@ -1356,14 +1262,9 @@ size Scales the width of the letter 'p' for the space.
 
 
 
-
-
 _description: _
 
-
 Sets the size of the space ' ' character.  This number, which defaults to 1.0, scales the width of the letter 'p' for the space.
-
-
 
 
 
@@ -1405,14 +1306,9 @@ Returns: the string height.
 
 
 
-
-
 _description: _
 
-
 Returns the string height.  This is essentially the height component of the ofTrueTypeFont::getStringBoundingBox() rectangle.
-
-
 
 
 
@@ -1454,14 +1350,9 @@ Returns: the string width.
 
 
 
-
-
 _description: _
 
-
 Returns the string height.  This is essentially the width component of the ofTrueTypeFont::getStringBoundingBox() rectangle.
-
-
 
 
 
@@ -1495,9 +1386,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1533,14 +1422,9 @@ Destroy the ofTrueTypeFont.
 
 
 
-
-
 _description: _
 
-
 The destructor for the font object will clear the resources, such as textures, that have been allocated.
-
-
 
 
 
@@ -1567,6 +1451,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _
@@ -1596,12 +1485,14 @@ _advanced: False_
 _inlined_description: _
 
 
+
+
+
+
+
 _description: _
 
-
 A variable which tells you if the font is antiAliased.
-
-
 
 
 
@@ -1626,12 +1517,14 @@ _advanced: False_
 _inlined_description: _
 
 
+
+
+
+
+
 _description: _
 
-
 A variable which tells you if the font contains the full character set, or a subset.
-
-
 
 
 
@@ -1657,12 +1550,13 @@ _inlined_description: _
 
 \cond INTERNAL
 
+
+
+
+
 _description: _
 
-
 bLoadedOk is a boolean variable containing true if the font was successfully loaded.
-
-
 
 
 
@@ -1687,8 +1581,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -1715,8 +1613,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -1741,6 +1643,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _
@@ -1770,8 +1677,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -1796,6 +1707,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _
@@ -1825,8 +1741,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -1851,6 +1771,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _
@@ -1880,8 +1805,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -1906,6 +1835,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _
@@ -1935,8 +1869,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -1963,8 +1901,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -1989,6 +1931,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _
@@ -2018,8 +1965,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2046,8 +1997,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2074,12 +2029,14 @@ _advanced: False_
 _inlined_description: _
 
 
+
+
+
+
+
 _description: _
 
-
 nCharacters contains the number of characters that our font has.
-
-
 
 
 
@@ -2104,8 +2061,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2132,8 +2093,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2160,8 +2125,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2188,8 +2157,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2214,6 +2187,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _

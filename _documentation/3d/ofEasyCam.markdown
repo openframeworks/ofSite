@@ -61,10 +61,7 @@ _inlined_description: _
 
 
 
-
-
 _description: _
-
 
 Begin using the camera, e.g.:
 
@@ -75,8 +72,6 @@ ofDrawGrid();
 //draw rest of scene
 
 myCamera.end();
-
-
 
 
 
@@ -110,10 +105,7 @@ Disable mouse camera control.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -149,10 +141,7 @@ Disable the mouse's middle button for camera control.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -188,10 +177,7 @@ Enable mouse camera control.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -227,10 +213,7 @@ Enable the mouse's middle button for camera control.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -268,10 +251,7 @@ Returns: the distance to the target.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -309,10 +289,7 @@ Returns: the camera's drag coefficient.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -351,10 +328,7 @@ Returns: true iff mouse camera control is enabled.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -393,10 +367,7 @@ Returns: true iff the mouse's middle button is enabled.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -434,10 +405,7 @@ Returns: a reference the the camera's target node.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -475,10 +443,7 @@ Returns: the current translation key code.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -507,7 +472,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -551,7 +515,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -581,7 +544,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -625,7 +587,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -662,10 +623,7 @@ Create a default camera.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -701,10 +659,7 @@ Reset the camera position and orientation.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -747,10 +702,7 @@ bAutoDistance true to enable auto distance.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -789,10 +741,7 @@ distance The distance to the target.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -828,10 +777,7 @@ _inlined_description: _
 
 
 
-
-
 _description: _
-
 
 
 
@@ -874,10 +820,7 @@ drag The normalized coefficient value between 0 and 1.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -906,7 +849,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -953,10 +895,7 @@ target The position of the target.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -995,10 +934,7 @@ target The position of the target.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1041,10 +977,7 @@ key The key code for the translation key.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1080,9 +1013,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1111,7 +1042,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1155,9 +1085,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1193,9 +1121,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1231,10 +1157,7 @@ Destroy the camera.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1265,8 +1188,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -1293,8 +1220,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -1321,8 +1252,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -1349,8 +1284,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -1375,6 +1314,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _
@@ -1404,8 +1348,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -1432,8 +1380,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -1458,6 +1410,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _
@@ -1487,8 +1444,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -1515,8 +1476,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -1544,8 +1509,11 @@ _inlined_description: _
 
 The current rotation quaternion.
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -1573,8 +1541,11 @@ _inlined_description: _
 
 The key used to differentiate between translation and rotation.
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -1601,8 +1572,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -1627,6 +1602,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _
@@ -1656,8 +1636,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -1684,8 +1668,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -1713,8 +1701,11 @@ _inlined_description: _
 
 The time of the last pointer down event.
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -1741,8 +1732,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -1769,8 +1764,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -1797,8 +1796,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -1825,8 +1828,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -1853,6 +1860,10 @@ _advanced: False_
 _inlined_description: _
 
 The previous X axis.
+
+
+
+
 
 _description: _
 
@@ -1882,6 +1893,10 @@ _inlined_description: _
 
 The previous Y axis.
 
+
+
+
+
 _description: _
 
 
@@ -1910,6 +1925,10 @@ _inlined_description: _
 
 The previous Z axis.
 
+
+
+
+
 _description: _
 
 
@@ -1935,6 +1954,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _
@@ -1965,6 +1989,10 @@ _inlined_description: _
 
 The previous camera orientation.
 
+
+
+
+
 _description: _
 
 
@@ -1993,6 +2021,10 @@ _inlined_description: _
 
 the previous camera position.
 
+
+
+
+
 _description: _
 
 
@@ -2020,8 +2052,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2048,8 +2084,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2076,8 +2116,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2104,8 +2148,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2132,8 +2180,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2160,8 +2212,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2188,8 +2244,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2216,8 +2276,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2244,8 +2308,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 

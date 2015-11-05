@@ -158,10 +158,7 @@ Returns: true if both vectors are aligned (pointing in the same direction).
 
 
 
-
-
 _description: _
-
 
 Returns true if both vectors are aligned (pointing in the same direction). tolerance is an angle tolerance/threshold (specified in degrees) for deciding if the vectors are sufficiently aligned.
 
@@ -170,8 +167,6 @@ ofVec2f v1 = ofVec2f(40, 20);
 ofVec2f v2 = ofVec2f(4, 2);
 // v1.align(v2) returns true
 ~~~~
-
-
 
 
 
@@ -210,14 +205,9 @@ tolerance an angle tolerance/threshold (specified in radians) for deciding if th
 
 
 
-
-
 _description: _
 
-
 Just like [align](#align) but the angle tolerance is specified in radians rather than degrees.
-
-
 
 
 
@@ -262,10 +252,7 @@ Returns: The angle in degrees (-180...180)
 
 
 
-
-
 _description: _
-
 
 Calculate and return the angle in degrees between this vector and vec.
 
@@ -274,8 +261,6 @@ ofVec2f v1(1,0);
 ofVec2f v2(0,1);
 float angle = v1.angle(v2); // angle is 90
 ~~~~
-
-
 
 
 
@@ -320,10 +305,7 @@ Returns: The angle in radians (-PI...PI)
 
 
 
-
-
 _description: _
-
 
 Calculate and return the angle in radians between this vector and vec.
 
@@ -332,8 +314,6 @@ ofVec2f v1(1,0);
 ofVec2f v2(0,1);
 float angle = v1.angleRad(v2); // angle is HALF_PI
 ~~~~
-
-
 
 
 
@@ -388,10 +368,7 @@ Returns: Vector that is the avarage of the points in the array
 
 
 
-
-
 _description: _
-
 
 Sets this vector to be the average (*centre of gravity* or *centroid*) of a given array of ofVec2fs. points is the array of ofVec2fs and num specifies the number of ofVec2fs in the array.
 
@@ -405,8 +382,6 @@ ofVec2f centroid;
 centroid.average( points, numPoints ); 
 // centroid now is the centre of gravity/average of all the random points
 ~~~~
-
-
 
 
 
@@ -463,10 +438,7 @@ Returns: The distance as float
 
 
 
-
-
 _description: _
-
 
 Treats both this vector and pnt as points in 2D space, and calculates and returns the distance between them.
 
@@ -477,8 +449,6 @@ float distance = p1.distance( p2 ); // distance is 5
 ~~~~
 
 distance involves a square root calculation, which is one of the slowest things you can do in programming. If you don't need an exact number but rather just a rough idea of distance (for example when finding the shortest distance of a bunch of points to a reference point, where it doesn't matter exactly what the distances are, you just want the shortest), you can use [squareDistance](#squareDistance) instead.
-
-
 
 
 
@@ -541,10 +511,7 @@ vec The vector to dotproduct
 
 
 
-
-
 _description: _
-
 
 Calculate and return the dot product of this vector with vec.
 
@@ -567,8 +534,6 @@ ofVec2f a3(1, 0);
 ofVec2f b3(-1, 0); // 180 degree angle to a3
 dot = a3.dot(b3); // dot is -1, ie cos(180)
 ~~~~
-
-
 
 
 
@@ -623,10 +588,7 @@ p The amount to move towards pnt
 
 
 
-
-
 _description: _
-
 
 Perform a linear interpolation of this vector's position towards pnt and return the interpolated position without altering the original vector. p controls the amount to move towards pnt. p is normally between 0 and 1 and where 0 means stay the original position and 1 means move all the way to pnt, but you can also have p greater than 1 overshoot pnt, or less than 0 to move backwards away from pnt.
 
@@ -636,8 +598,6 @@ ofVec2f v2( 10, 10 );
 ofVec3f v3 = v1.getInterpolated( v2, 0.5 ); // v3 is (5, 7.5)
 ofVec3f v4 = v1.getInterpolated( v2, 0.8 ); // v4 is (8, 9)
 ~~~~
-
-
 
 
 
@@ -688,10 +648,7 @@ maximum of max units by scaling down if necessary.
 
 
 
-
-
 _description: _
-
 
 Return a copy of this vector with its length (magnitude) restricted to a maximum of max units by scaling down if necessary.
 
@@ -703,8 +660,6 @@ ofVec2f v1Limited = v1.getLimited(3);
 ofVec2f v2Limited = v2.getLimited(3);
 // v2Limited is (2, 1) (same as v2)
 ~~~~
-
-
 
 
 
@@ -748,16 +703,11 @@ vx, and Y direction vy.
 
 
 
-
-
 _description: _
-
 
 Return a new ofVec2f calculated by copying this vector and then mapping from its default coordinate system -- origin (0,0), X direction (1,0), Y direction (0,1) -- to a new coordinate system defined with origin at origin, X direction vx, and Y direction vy.
 
 *In most cases you want vx and vy to be perpendicular and of unit length; if they are not perpendicular you will have shearing as part of the mapping, and if they are not of unit length you will have scaling as part of the mapping.*
-
-
 
 
 
@@ -804,10 +754,7 @@ Returns: The middle between this vector and `pnt`
 
 
 
-
-
 _description: _
-
 
 Calculate and return the midpoint between this vector and pnt.
 
@@ -816,8 +763,6 @@ ofVec2f v1(5, 0);
 ofVec2f v2(10, 10);
 ofVec3f mid = v1.getMiddle(v2); // mid gets (7.5, 5)
 ~~~~
-
-
 
 
 
@@ -863,10 +808,7 @@ ofVec2f v2Normalized = v2.getNormalized(); // (√2, √2)
 
 
 
-
-
 _description: _
-
 
 Return a normalized copy of this vector. 
 
@@ -878,8 +820,6 @@ ofVec2f v1Normalized = v1.getNormalized(); // (1, 0)
 ofVec2f v2(5, 5);
 ofVec2f v2Normalized = v2.getNormalized(); // (√2, √2)
 ~~~~
-
-
 
 
 
@@ -924,10 +864,7 @@ ofVec2f u = v.getPerpendicular(); // u is (0.928, -0.371)
 
 
 
-
-
 _description: _
-
 
 Return the **normalized** ofVec2f that is perpendicular to this vector (ie rotated 90 degrees and normalized).
 
@@ -938,8 +875,6 @@ Image courtesy of Wikipedia
 ofVec2f v(2, 5);
 ofVec2f u = v.getPerpendicular(); // u is (0.928, -0.371)
 ~~~~
-
-
 
 
 
@@ -985,10 +920,7 @@ floats that can be passed verbatim to OpenGL.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1024,9 +956,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Returns a pointer to the memory position of the first element of the vector  (x); the second element (y) immediately follows it in memory.
 
@@ -1038,8 +968,6 @@ float y = *(v1Ptr+1); // y is 20
 ~~~~
 
 This is very useful when using arrays of ofVec2fs to store geometry information, as it allows the vector to be treated as a simple C array of floats that can be passed verbatim to OpenGL.
-
-
 
 
 
@@ -1083,10 +1011,7 @@ ofVec3f v3 = v2.getRotated( 45 ); // v3 is (0, 1)
 
 
 
-
-
 _description: _
-
 
 Return a new ofVec2f that is the result of rotating this vector by angle degrees around the origin.
 
@@ -1095,8 +1020,6 @@ ofVec2f v1(1, 0);
 ofVec2f v2 = v1.getRotated( 45 ); // v2 is (√2, √2)
 ofVec3f v3 = v2.getRotated( 45 ); // v3 is (0, 1)
 ~~~~
-
-
 
 
 
@@ -1130,14 +1053,9 @@ Like getRotated() but rotates around `pivot` rather than around the origin
 
 
 
-
-
 _description: _
 
-
 Like [getRotated](#getRotated) but rotates around pivot rather than around the origin.
-
-
 
 
 
@@ -1178,11 +1096,7 @@ ofVec3f v3 = v2.getRotatedRad( PI/4 ); // v3 is (0, 1)
 
 
 
-
-
-
 _description: _
-
 
 Return a new ofVec2f that is the result of rotating this vector by angle radians around the origin.
 
@@ -1191,8 +1105,6 @@ ofVec2f v1(1, 0);
 ofVec2f v2 = v1.getRotatedRad( PI/4 ); // v2 is (√2, √2)
 ofVec3f v3 = v2.getRotated( PI/4 ); // v3 is (0, 1)
 ~~~~
-
-
 
 
 
@@ -1226,14 +1138,9 @@ Like getRotatedRad() but rotates around `pivot` rather than around the origin
 
 
 
-
-
 _description: _
 
-
 Like [getRotatedRad](#getRotatedRad) but rotates around pivot rather than around the origin.
-
-
 
 
 
@@ -1275,10 +1182,7 @@ ofVec2f v2 = v1.getScaled( 15 ); // ( 9, 12 ), length is now 15
 
 
 
-
-
 _description: _
-
 
 Return a new ofVec2f that is the result of scaling this vector up or down so that it has the requested length.
 
@@ -1286,8 +1190,6 @@ Return a new ofVec2f that is the result of scaling this vector up or down so tha
 ofVec2f v1( 3, 4 ); // length is 5
 ofVec2f v2 = v1.getScaled( 15 ); // ( 9, 12 ), length is now 15
 ~~~~
-
-
 
 
 
@@ -1339,10 +1241,7 @@ v1.interpolate( v2, 0.5 ); // v1 is now (9.375, 9.6875)
 
 
 
-
-
 _description: _
-
 
 Perform a linear interpolation of this vector's position towards pnt. p controls the amount to move towards pnt. p is normally between 0 and 1 and where 0 means stay the original position and 1 means move all the way to pnt, but you can also have p greater than 1 overshoot pnt, or less than 0 to move backwards away from pnt.
 
@@ -1355,8 +1254,6 @@ v1.interpolate( v2, 0.5 ); // v1 is now (7.5, 8.75)
 v1.interpolate( v2, 0.5 ); // v1 is now (8.75, 9.375)
 v1.interpolate( v2, 0.5 ); // v1 is now (9.375, 9.6875)
 ~~~~
-
-
 
 
 
@@ -1402,10 +1299,7 @@ Returns: true if both vectors are aligned (pointing in the same direction).
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1446,10 +1340,7 @@ tolerance an angle tolerance/threshold (specified in radians) for deciding if th
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1499,10 +1390,7 @@ lengthSquared() instead.
 
 
 
-
-
 _description: _
-
 
 Return the length (magnitude) of this vector.
 
@@ -1512,8 +1400,6 @@ float len = v.length(); // len is 5 (3,4,5 triangle)
 ~~~~
 
 length involves a square root calculation, which is one of the slowest things you can do in programming. If you don't need an exact number but rather just a rough idea of a length (for example when finding the shortest distance of a bunch of points to a reference point, where it doesn't matter exactly what the lengths are, you just want the shortest), you can use [squareLength](#squareLength) instead.
-
-
 
 
 
@@ -1561,10 +1447,7 @@ calculation that is ordinarily required to calculate a length.
 
 
 
-
-
 _description: _
-
 
 Return the squared length (squared magnitude) of this vector.
 
@@ -1574,8 +1457,6 @@ float len = v.length(); // len is 5 (3,4,5 triangle)
 ~~~~
 
 Use as a much faster alternative to [length](#length) if you don't need to know an accurate length but rather just a rough idea of a length (for example when finding the shortest distance of a bunch of points to a reference point, where it doesn't matter exactly what the lengths are, you just want the shortest). It avoids the square root calculation that is ordinarily required to calculate a length.
-
-
 
 
 
@@ -1620,10 +1501,7 @@ v2.limit(3);
 
 
 
-
-
 _description: _
-
 
 Restrict the length (magnitude) of this vector to a maximum of max units by scaling down if necessary.
 
@@ -1635,8 +1513,6 @@ v1.limit(3);
 v2.limit(3);
 // v2 is unchanged
 ~~~~
-
-
 
 
 
@@ -1678,16 +1554,11 @@ if they are not of unit length you will have scaling as part of the mapping.
 
 
 
-
-
 _description: _
-
 
 Maps this vector from its default coordinate system -- origin (0,0), X direction (1,0), Y direction (0,1) -- to a new coordinate system defined with origin at origin, X direction vx, and Y direction vy. 
 
 *In most case you want vx and vy to be perpendicular and of unit length; if they are not perpendicular you will have shearing as part of the mapping, and if they are not of unit length you will have scaling as part of the mapping.*
-
-
 
 
 
@@ -1733,11 +1604,7 @@ This is handy if, for example, you want to find out when a point becomes
 
 
 
-
-
-
 _description: _
-
 
 Returns true if each component is *close enough* to its corresponding component in vec, where what is *close enough* is determined by the value of tolerance: 
 
@@ -1749,8 +1616,6 @@ ofVec2f v2 = ofVec2f(40.01, 19.999);
 ~~~~
 
 This is handy if, for example, you want to find out when a point becomes *close enough* to another point to trigger an event.
-
-
 
 
 
@@ -1795,10 +1660,7 @@ v1.middle( v2 ); // v1 is now (9.375, 9.6875)
 
 
 
-
-
 _description: _
-
 
 Set this vector to the midpoint between itself and pnt.
 
@@ -1811,8 +1673,6 @@ v1.middle( v2 ); // v1 is now (7.5, 8.75)
 v1.middle( v2 ); // v1 is now (8.75, 9.375)
 v1.middle( v2 ); // v1 is now (9.375, 9.6875)
 ~~~~
-
-
 
 
 
@@ -1859,10 +1719,7 @@ v2.normalize(); // v2 is now (√2, √2)
 
 
 
-
-
 _description: _
-
 
 Normalize the vector.
 
@@ -1874,8 +1731,6 @@ v1.normalize(); // v2 is now (1, 0)
 ofVec2f v2(5, 5);
 v2.normalize(); // v2 is now (√2, √2)
 ~~~~
-
-
 
 
 
@@ -1915,11 +1770,7 @@ ofVec3f v3(0.1, 0.3); // v3.x is 0.1, v3.y is 0.3
 
 
 
-
-
-
 _description: _
-
 
 
 
@@ -1955,10 +1806,7 @@ Construct a 2D vector with `x` and `y` set to `scalar`
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2005,10 +1853,7 @@ y The y component
 
 
 
-
-
 _description: _
-
 
 Construct a 2D vector. Defaults to (0,0).
 
@@ -2017,8 +1862,6 @@ ofVec2f v1; // default: v1.x is 0, v1.y is 0
 ofVec2f v2 = ofVec2f(40, 20); // v2.x is 40, v2.y is 20
 ofVec3f v3(0.1, 0.3); // v3.x is 0.1, v3.y is 0.3
 ~~~~
-
-
 
 
 
@@ -2058,11 +1901,7 @@ ofVec2f v(mom3d); // v.x is 40, v.y is 20
 
 
 
-
-
-
 _description: _
-
 
 Create a 2D vector (ofVec2f) from a 3D vector (ofVec3f) by throwing away the z component of the 3D vector.
 
@@ -2070,8 +1909,6 @@ Create a 2D vector (ofVec2f) from a 3D vector (ofVec3f) by throwing away the z c
 ofVec3f mom3d(40, 20, 50); // 3d vector 
 ofVec2f v(mom3d); // v.x is 40, v.y is 20
 ~~~~
-
-
 
 
 
@@ -2111,11 +1948,7 @@ ofVec2f v(mom4d); // v.x is 40, v.y is 20
 
 
 
-
-
-
 _description: _
-
 
 Create a 2D vector (ofVec2f) from a 4D vector (ofVec4f) by throwing away the z and w components of the 4D vector.
 
@@ -2123,8 +1956,6 @@ Create a 2D vector (ofVec2f) from a 4D vector (ofVec4f) by throwing away the z a
 ofVec3f mom4d(40, 20, 50, 80); // 4d vector 
 ofVec2f v(mom4d); // v.x is 40, v.y is 20
 ~~~~
-
-
 
 
 
@@ -2158,9 +1989,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2209,10 +2038,7 @@ false.
 
 
 
-
-
 _description: _
-
 
 Returns true if any component is different to its corresponding component in vec, ie if x != vec.x or y != vec.y; otherwise returns false.
 
@@ -2223,8 +2049,6 @@ ofVec2f v3(40, 20);
 // ( v1 != v2 ) is true
 // ( v1 != v3 ) is false
 ~~~~
-
-
 
 
 
@@ -2266,11 +2090,7 @@ Useful for scaling a 2D point by a non-uniform scale.
 
 
 
-
-
-
 _description: _
-
 
 Returns a new vector (x*vec.x,y*vec.y).
 
@@ -2281,8 +2101,6 @@ ofVec2f v3 = v1 * v2; // (80, 80)
 ~~~~
 
 Useful for scaling a 2D point by a non-uniform scale.
-
-
 
 
 
@@ -2322,10 +2140,7 @@ ofVec2f v2 = v1 * 4; // (8, 20)
 
 
 
-
-
 _description: _
-
 
 Return a new ofVec2f that is this vector scaled by multiplying both x and y members by f.
 
@@ -2333,8 +2148,6 @@ Return a new ofVec2f that is this vector scaled by multiplying both x and y memb
 ofVec2f v1(2, 5);
 ofVec2f v2 = v1 * 4; // (8, 20)
 ~~~~
-
-
 
 
 
@@ -2376,10 +2189,7 @@ Useful for scaling a 2D point by a non-uniform scale.
 
 
 
-
-
 _description: _
-
 
 Multiplies x by vec.x, and multiplies y by vec.y.
 
@@ -2390,8 +2200,6 @@ v1 *= v2; // v1 is now (80, 80)
 ~~~~
 
 Useful for scaling a 2D point by a non-uniform scale.
-
-
 
 
 
@@ -2430,10 +2238,7 @@ v1 *= 4; // (8, 20)
 
 
 
-
-
 _description: _
-
 
 Scale this vector by multiplying both x and y members by f.
 
@@ -2441,8 +2246,6 @@ Scale this vector by multiplying both x and y members by f.
 ofVec2f v1(2, 5);
 v1 *= 4; // (8, 20)
 ~~~~
-
-
 
 
 
@@ -2482,10 +2285,7 @@ ofVec3f v3 = v1 + v2; // v3 is (65, 70)
 
 
 
-
-
 _description: _
-
 
 Super easy vector addition. Returns a new vector (x+vec.x,y+vec.y).
 
@@ -2494,8 +2294,6 @@ ofVec2f v1 = ofVec2f(40, 20);
 ofVec2f v2 = ofVec2f(25, 50);
 ofVec3f v3 = v1 + v2; // v3 is (65, 70)
 ~~~~
-
-
 
 
 
@@ -2534,10 +2332,7 @@ ofVec2f v2 = v1 + 10; // (12, 15)
 
 
 
-
-
 _description: _
-
 
 Returns a new vector with a float value f added to both x and y members.
 
@@ -2545,8 +2340,6 @@ Returns a new vector with a float value f added to both x and y members.
 ofVec2f v1(2, 5);
 ofVec2f v2 = v1 + 10; // (12, 15)
 ~~~~
-
-
 
 
 
@@ -2586,10 +2379,7 @@ v1 += v2; // v1 is (65, 70)
 
 
 
-
-
 _description: _
-
 
 Super easy addition assignment. Adds vec.x to x, and adds vec.y to y.
 
@@ -2598,8 +2388,6 @@ ofVec2f v1 = ofVec2f(40, 20);
 ofVec2f v2 = ofVec2f(25, 50);
 v1 += v2; // v1 is (65, 70)
 ~~~~
-
-
 
 
 
@@ -2638,10 +2426,7 @@ v1 += 10; // (12, 15)
 
 
 
-
-
 _description: _
-
 
 Adds a float value f to both x and y members.
 
@@ -2649,8 +2434,6 @@ Adds a float value f to both x and y members.
 ofVec2f v1(2, 5);
 v1 += 10; // (12, 15)
 ~~~~
-
-
 
 
 
@@ -2690,10 +2473,7 @@ ofVec3f v3 = v1 - v2; // v3 is (15, -30)
 
 
 
-
-
 _description: _
-
 
 Super easy vector subtraction. Returns a new vector (x-vec.x,y-vec.y).
 
@@ -2702,8 +2482,6 @@ ofVec2f v1 = ofVec2f(40, 20);
 ofVec2f v2 = ofVec2f(25, 50);
 ofVec3f v3 = v1 - v2; // v3 is (15, -30)
 ~~~~
-
-
 
 
 
@@ -2742,10 +2520,7 @@ ofVec2f v2 = v1 - 10; // (-8, -5)
 
 
 
-
-
 _description: _
-
 
 Returns a new vector with a float value f subtracted from both x and y members.
 
@@ -2753,8 +2528,6 @@ Returns a new vector with a float value f subtracted from both x and y members.
 ofVec2f v1(2, 5);
 ofVec2f v2 = v1 - 10; // (-8, -5)
 ~~~~
-
-
 
 
 
@@ -2793,10 +2566,7 @@ ofVec2f v2 = -v1; // (-2, -5)
 
 
 
-
-
 _description: _
-
 
 Returns a new ofVec2f that is the inverted version (mirrored in X and Y) of this vector.
 
@@ -2804,8 +2574,6 @@ Returns a new ofVec2f that is the inverted version (mirrored in X and Y) of this
 ofVec2f v1(2, 5);
 ofVec2f v2 = -v1; // (-2, -5)
 ~~~~
-
-
 
 
 
@@ -2845,10 +2613,7 @@ v1 -= v2; // v1 is (15, -30)
 
 
 
-
-
 _description: _
-
 
 Super easy subtraction assignment. Subtracts vec.x from x, and subtracts vec.y from y.
 
@@ -2857,8 +2622,6 @@ ofVec2f v1 = ofVec2f(40, 20);
 ofVec2f v2 = ofVec2f(25, 50);
 v1 -= v2; // v1 is (15, -30)
 ~~~~
-
-
 
 
 
@@ -2897,10 +2660,7 @@ v1 -= 10; // (-8, -5)
 
 
 
-
-
 _description: _
-
 
 Subtract a float value f from both x and y members.
 
@@ -2908,8 +2668,6 @@ Subtract a float value f from both x and y members.
 ofVec2f v1(2, 5);
 v1 -= 10; // (-8, -5)
 ~~~~
-
-
 
 
 
@@ -2951,10 +2709,7 @@ Useful for scaling a 2D point by a non-uniform scale.
 
 
 
-
-
 _description: _
-
 
 Returns a new vector (x/vec.x,y/vec.y).
 
@@ -2965,8 +2720,6 @@ ofVec3f v3 = v1 / v2; // (20, 5)
 ~~~~
 
 Useful for scaling a 2D point by a non-uniform scale.
-
-
 
 
 
@@ -3006,10 +2759,7 @@ ofVec2f v2 = v1 / 4; // (0.5, 1.25)
 
 
 
-
-
 _description: _
-
 
 Return a new ofVec2f that is this vector scaled by dividing both x and y members by f.
 
@@ -3017,8 +2767,6 @@ Return a new ofVec2f that is this vector scaled by dividing both x and y members
 ofVec2f v1(2, 5);
 ofVec2f v2 = v1 / 4; // (0.5, 1.25)
 ~~~~
-
-
 
 
 
@@ -3060,10 +2808,7 @@ Useful for scaling a 2D point by a non-uniform scale.
 
 
 
-
-
 _description: _
-
 
 Divides x by vec.x, and divides y by vec.y.
 
@@ -3074,8 +2819,6 @@ v1 *= v2; // v1 is now (20, 5)
 ~~~~
 
 Useful for scaling a 2D point by a non-uniform scale.
-
-
 
 
 
@@ -3114,10 +2857,7 @@ v1 /= 4; // (0.5, 1.25)
 
 
 
-
-
 _description: _
-
 
 Scale this vector by dividing both x and y members by f.
 
@@ -3125,8 +2865,6 @@ Scale this vector by dividing both x and y members by f.
 ofVec2f v1(2, 5);
 v1 /= 4; // (0.5, 1.25)
 ~~~~
-
-
 
 
 
@@ -3173,10 +2911,7 @@ false.
 
 
 
-
-
 _description: _
-
 
 Returns true if each component is the same as the corresponding component in vec, ie if x == vec.x and y == vec.y; otherwise returns false.
 
@@ -3187,8 +2922,6 @@ ofVec2f v3(40, 20);
 // ( v1 == v2 ) is false
 // ( v1 == v3 ) is true
 ~~~~
-
-
 
 
 
@@ -3231,10 +2964,7 @@ y components, as it means you can just make a for loop that repeats twice.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -3270,9 +3000,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Allows to access the x and y components of an ofVec2f as though it is an array:
 
@@ -3283,8 +3011,6 @@ float y = v1[1]; // y is 20
 ~~~~
 
 This function can be handy if you want to do the same operation to both x and y components, as it means you can just make a for loop that repeats twice.
-
-
 
 
 
@@ -3328,10 +3054,7 @@ v.perpendicular(); // v is (0.928, -0.371)
 
 
 
-
-
 _description: _
-
 
 Set this vector to its own **normalized** perpendicular (by rotating 90 degrees and normalizing).
 
@@ -3342,8 +3065,6 @@ Image courtesy of Wikipedia
 ofVec2f v(2, 5);
 v.perpendicular(); // v is (0.928, -0.371)
 ~~~~
-
-
 
 
 
@@ -3385,10 +3106,7 @@ v1.rotate( 45 ); // (0, 1)
 
 
 
-
-
 _description: _
-
 
 Rotate this vector by angle degrees around the origin.
 
@@ -3397,8 +3115,6 @@ ofVec2f v1(1, 0);
 v1.rotate( 45 ); // (√2, √2)
 v1.rotate( 45 ); // (0, 1)
 ~~~~
-
-
 
 
 
@@ -3432,14 +3148,9 @@ Like rotate() but rotates around `pivot` rather than around the origin
 
 
 
-
-
 _description: _
 
-
 Like [rotate](#rotate) but rotates around pivot rather than around the origin.
-
-
 
 
 
@@ -3481,10 +3192,7 @@ v1.rotate( PI/4 ); // (0, 1)
 
 
 
-
-
 _description: _
-
 
 Rotate this vector by angle radians around the origin.
 
@@ -3493,8 +3201,6 @@ ofVec2f v1(1, 0);
 v1.rotate( PI/4 ); // (√2, √2)
 v1.rotate( PI/4 ); // (0, 1)
 ~~~~
-
-
 
 
 
@@ -3528,14 +3234,9 @@ Like rotateRad() but rotates around `pivot` rather than around the origin
 
 
 
-
-
 _description: _
 
-
 Like [rotateRad](#rotateRad) but rotates around pivot rather than around the origin.
-
-
 
 
 
@@ -3576,10 +3277,7 @@ v1.scale( 15 ); // v1 is now (9, 12), with length 15
 
 
 
-
-
 _description: _
-
 
 Scales this vector up or down so that it has the requested length.
 
@@ -3587,8 +3285,6 @@ Scales this vector up or down so that it has the requested length.
 ofVec2f v1( 3, 4 ); // length is 5
 v1.scale( 15 ); // v1 is now (9, 12), with length 15
 ~~~~
-
-
 
 
 
@@ -3627,11 +3323,7 @@ v1.set(40, 20);
 
 
 
-
-
-
 _description: _
-
 
 Set x and y components of this vector with just one function call.
 
@@ -3639,8 +3331,6 @@ Set x and y components of this vector with just one function call.
 ofVec2f v1;
 v1.set(40, 20);
 ~~~~
-
-
 
 
 
@@ -3680,11 +3370,7 @@ v2.set(v1); // v2.x is 40, v2.y is 20
 
 
 
-
-
-
 _description: _
-
 
 Set the x and y components of this vector by copying the corresponding values from vec.
 
@@ -3693,8 +3379,6 @@ ofVec2f v1(40, 20);
 ofVec2f v2;
 v2.set(v1); // v2.x is 40, v2.y is 20
 ~~~~
-
-
 
 
 
@@ -3728,9 +3412,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -3786,10 +3468,7 @@ Returns: The distance squared as float
 
 
 
-
-
 _description: _
-
 
 Treats both this vector and pnt as points in 2D space, and calculates and returns the squared distance between them.
 
@@ -3800,8 +3479,6 @@ float distance = p1.distance( p2 ); // distance is 5
 ~~~~
 
 Use as a much faster alternative to [distance](#distance) if you don't need to know an exact number but rather just a rough idea of distance (for example when finding the shortest distance of a bunch of points to a reference point, where it doesn't matter exactly what the distances are, you just want the shortest). It avoids the square root calculation that is ordinarily required to calculate a length.
-
-
 
 
 
@@ -3835,9 +3512,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -3869,8 +3544,11 @@ _inlined_description: _
 
 \cond INTERNAL
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -3898,12 +3576,13 @@ _inlined_description: _
 
 Stores the `x` component of the vector.
 
+
+
+
+
 _description: _
 
-
 Stores the X component of this vector.
-
-
 
 
 
@@ -3929,12 +3608,13 @@ _inlined_description: _
 
 Stores the `y` component of the vector.
 
+
+
+
+
 _description: _
 
-
 Stores the Y component of this vector.
-
-
 
 
 

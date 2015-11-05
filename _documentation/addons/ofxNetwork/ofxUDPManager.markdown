@@ -125,9 +125,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Bind a port to receive socket/unicast UDP:
 
@@ -136,8 +134,6 @@ udpConnection.Create();
 udpConnection.Bind(11999);
 udpConnection.SetNonBlocking(true);
 ~~~~
-
-
 
 
 
@@ -171,9 +167,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Bind to multicast address to receive data:
 
@@ -181,8 +175,6 @@ Bind to multicast address to receive data:
 udpConnection.Create();
 udpConnection.BindMcast("224.0.0.1", 11999);
 ~~~~
-
-
 
 
 
@@ -216,13 +208,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Stop listening on a given port. Works with both socket and multicast.
-
-
 
 
 
@@ -256,9 +244,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Connect to a socket client to send information.
 
@@ -269,8 +255,6 @@ udpConnection.Connect("127.0.0.1",11999);
 udpConnection.SetNonBlocking(true);
 
 ~~~~
-
-
 
 
 
@@ -304,9 +288,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Connect to a multicast address. 
 
@@ -316,8 +298,6 @@ udpConnection.Create();
 udpConnection.Connect("224.0.0.1",11999);
 
 ~~~~
-
-
 
 
 
@@ -351,13 +331,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Create the UDP manager. Must be called before binding to any IP or sockets.
-
-
 
 
 
@@ -384,7 +360,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -428,9 +403,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -466,13 +439,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Get the size of the receive buffer. The minimum (doubled) value for this option is 256. The max is determined by your OS.
-
-
 
 
 
@@ -499,7 +468,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -543,13 +511,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Get the size of the send buffer. The minimum (doubled) value for this option is 256. The max is determined by your OS.
-
-
 
 
 
@@ -583,10 +547,7 @@ returns -1 on failure
 
 
 
-
-
 _description: _
-
 
 
 
@@ -622,13 +583,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Return the current receive timeout.
-
-
 
 
 
@@ -662,13 +619,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Return the current send timeout.
-
-
 
 
 
@@ -695,7 +648,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -739,7 +691,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -776,9 +727,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Receives a message to a buffer of size iSize. Receive() returns the number of bytes actually received.
 
@@ -787,8 +736,6 @@ char udpMessage[100000];
 udpConnection.Receive(udpMessage,100000);
 string message=udpMessage;
 ~~~~
-
-
 
 
 
@@ -822,9 +769,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Send a char* of data with length of iSize to all listeners.
 
@@ -833,8 +778,6 @@ string message = "A message";
 udpConnection.Send(message.c_str(),message.length());
 
 ~~~~
-
-
 
 
 
@@ -868,13 +811,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 The SendAll() method is useful for extremely large data objects that may need multiple sendto() calls to actually be completely.
-
-
 
 
 
@@ -908,13 +847,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Broadcast allows sending of packets to a particular network layer. If you're only using a single local network without a large number of attached machines, using broadcast may make more sense than trying to use multicast.
-
-
 
 
 
@@ -948,13 +883,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Determines whether calls to send or receive are allowed to block their thread until they've completed. If your network infrastructure is time critical, then this may be a good choice. Usually though, you should leave it off.
-
-
 
 
 
@@ -988,13 +919,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Set the size of the receive buffer. The minimum (doubled) value for this option is 256. The max is determined by your OS.
-
-
 
 
 
@@ -1028,9 +955,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1066,13 +991,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Set the size of the send buffer. The minimum (doubled) value for this option is 256. The max is determined by your OS.
-
-
 
 
 
@@ -1106,9 +1027,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 The TTL (Time To Live) field in the IP header has a double significance in multicast. As always, it controls the live time of the datagram to avoid it being looped forever due to routing errors. Routers decrement the TTL of every datagram as it traverses from one network to another and when its value reaches 0 the packet is dropped.
 
@@ -1122,8 +1041,6 @@ TTL     Scope
  <64 Restricted to the same region.
 <128 Restricted to the same continent.
 <255 Unrestricted in scope. Global.
-
-
 
 
 
@@ -1157,13 +1074,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Set a timeout for any receive operations in seconds.
-
-
 
 
 
@@ -1197,13 +1110,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Set a timeout for any send operations in seconds.
-
-
 
 
 
@@ -1237,9 +1146,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1275,9 +1182,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1308,8 +1213,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -1336,8 +1245,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -1364,8 +1277,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -1392,8 +1309,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -1420,8 +1341,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -1448,8 +1373,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -1476,8 +1405,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -1504,8 +1437,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 

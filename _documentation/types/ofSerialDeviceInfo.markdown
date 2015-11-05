@@ -58,10 +58,7 @@ Returns: the device ID.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -102,10 +99,7 @@ Returns: the device name.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -146,10 +140,7 @@ Returns: the device path.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -190,10 +181,7 @@ deviceIDIn The ID of the device.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -229,10 +217,7 @@ _inlined_description: _
 
 
 
-
-
 _description: _
-
 
 
 
@@ -264,8 +249,11 @@ _inlined_description: _
 
 The device ID (e.g. 0, 1, 2, 3, etc).
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -293,8 +281,11 @@ _inlined_description: _
 
 The device name (e.g. usbdevice-a440 / COM4).
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -322,8 +313,11 @@ _inlined_description: _
 
 The device path (e.g /dev/tty.cu/usbdevice-a440).
 
-_description: _
 
+
+
+
+_description: _
 
 
 

@@ -89,14 +89,9 @@ baud The baud rate the connection uses
 
 
 
-
-
 _description: _
 
-
 opens a serial port connection to the arduino
-
-
 
 
 
@@ -131,14 +126,9 @@ Does not turn the Arduino off.
 
 
 
-
-
 _description: _
 
-
 closes the serial port connection. Does not turn the Arduino off.
-
-
 
 
 
@@ -178,14 +168,9 @@ pin The pin number (0-5)
 
 
 
-
-
 _description: _
 
-
 Returns the analog in value that the pin is currently reading. because the Arduino has a 10 bit ADC you get between 0 and 1023 for possible values.
-
-
 
 
 
@@ -222,15 +207,10 @@ pin The Arduino Uno pin: 0-5
 
 
 
-
-
 _description: _
-
 
 On the Arduino Uno pin: 0-5
 returns a pointer to the analog data history list for the given pin
-
-
 
 
 
@@ -258,10 +238,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
 Returns: `ARD_ON` or `ARD_OFF`
-
-
 
 
 
@@ -269,10 +246,7 @@ Returns: `ARD_ON` or `ARD_OFF`
 
 _description: _
 
-
 returns ARD_ON, ARD_OFF
-
-
 
 
 
@@ -319,10 +293,7 @@ against this with an if() statement which is handy:
 
 
 
-
-
 _description: _
-
 
 On the Arduino Uno pin: 2-13
 returns the last received value (if the pin mode is ARD_INPUT) or the last set value (if the pin mode is ARD_OUTPUT) for the given pin
@@ -335,8 +306,6 @@ if(arduino.getDigital(pin)){
     // do something on low
 }
 ~~~~
-
-
 
 
 
@@ -376,16 +345,11 @@ pin The pin number (2-13)
 
 
 
-
-
 _description: _
-
 
 On the Arduino Uno pin: 2-13
 returns a pointer to the digital data history list for the given pin
 Note: pin 16-21 can also be used if analog inputs 0-5 are used as digital pins
-
-
 
 
 
@@ -422,14 +386,9 @@ Returns: `ARD_INPUT`, `ARD_OUTPUT`, `ARD_PWM`, `ARD_SERVO`, `ARD_ANALOG`
 
 
 
-
-
 _description: _
 
-
 returns ARD_INPUT, ARD_OUTPUT, ARD_PWM, ARD_SERVO, ARD_ANALOG
-
-
 
 
 
@@ -457,10 +416,7 @@ _advanced: True_
 
 _inlined_description: _
 
-
 Returns: the name of the firmware.
-
-
 
 
 
@@ -468,10 +424,7 @@ Returns: the name of the firmware.
 
 _description: _
 
-
 returns the name of the firmware
-
-
 
 
 
@@ -499,10 +452,7 @@ _advanced: True_
 
 _inlined_description: _
 
-
 Returns: the major firmware version.
-
-
 
 
 
@@ -510,10 +460,7 @@ Returns: the major firmware version.
 
 _description: _
 
-
 returns the major firmware version
-
-
 
 
 
@@ -547,14 +494,9 @@ Returns the major firmware version
 
 
 
-
-
 _description: _
 
-
 returns the major firmware version
-
-
 
 
 
@@ -582,10 +524,7 @@ _advanced: True_
 
 _inlined_description: _
 
-
 Returns: the minor firmware version.
-
-
 
 
 
@@ -593,10 +532,7 @@ Returns: the minor firmware version.
 
 _description: _
 
-
 returns the minor firmware version
-
-
 
 
 
@@ -624,10 +560,7 @@ _advanced: True_
 
 _inlined_description: _
 
-
 Returns: the minor firmware version.
-
-
 
 
 
@@ -635,10 +568,7 @@ Returns: the minor firmware version.
 
 _description: _
 
-
 returns the minor firmware version
-
-
 
 
 
@@ -677,17 +607,12 @@ On the Arduino Uno the following pins are supported: 3, 5, 6, 9, 10 and 11
 
 
 
-
-
 _description: _
-
 
 On the Arduino Uno pin: 3, 5, 6, 9, 10 and 11
 returns the last set PWM value (0-255) for the given pin
 the pins mode has to be ARD_PWM
 Note: pin 16-21 can also be used if analog inputs 0-5 are used as digital pins
-
-
 
 
 
@@ -715,10 +640,7 @@ _advanced: True_
 
 _inlined_description: _
 
-
 Returns: the last set servo value for a pin if the pin has a servo attached.
-
-
 
 
 
@@ -726,10 +648,7 @@ Returns: the last set servo value for a pin if the pin has a servo attached.
 
 _description: _
 
-
 returns the last set servo value for a pin if the pin has a servo attached
-
-
 
 
 
@@ -757,10 +676,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
 Returns: the last received string.
-
-
 
 
 
@@ -768,10 +684,7 @@ Returns: the last received string.
 
 _description: _
 
-
 returns the last received string
-
-
 
 
 
@@ -799,10 +712,7 @@ _advanced: True_
 
 _inlined_description: _
 
-
 Returns: a pointer to the string history.
-
-
 
 
 
@@ -810,10 +720,7 @@ Returns: a pointer to the string history.
 
 _description: _
 
-
 returns a pointer to the string history
-
-
 
 
 
@@ -841,10 +748,7 @@ _advanced: True_
 
 _inlined_description: _
 
-
 Returns: the last received SysEx message.
-
-
 
 
 
@@ -852,10 +756,7 @@ Returns: the last received SysEx message.
 
 _description: _
 
-
 returns the last received SysEx message
-
-
 
 
 
@@ -883,10 +784,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
 Returns: a pointer to the SysEx history.
-
-
 
 
 
@@ -928,14 +826,9 @@ Useful for parsing SysEx messages
 
 
 
-
-
 _description: _
 
-
 useful for parsing SysEx messages
-
-
 
 
 
@@ -969,10 +862,7 @@ _inlined_description: _
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1008,9 +898,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1047,14 +935,9 @@ and the Arduino has reported a firmware
 
 
 
-
-
 _description: _
 
-
 returns true if a succesfull connection has been established and the Arduino has reported a firmware
-
-
 
 
 
@@ -1089,10 +972,7 @@ _inlined_description: _
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1128,9 +1008,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1166,9 +1044,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1204,9 +1080,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1242,9 +1116,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1283,15 +1155,10 @@ commands.
 
 
 
-
-
 _description: _
-
 
 sends a byte without wrapping it in a firmata message, data has to be in the 0-127 range,
 values > 127 will be interpreted as commands.
-
-
 
 
 
@@ -1327,10 +1194,7 @@ _inlined_description: _
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1373,14 +1237,9 @@ reporting will be turned off
 
 
 
-
-
 _description: _
 
-
 On the Arduino Uno pin: 2-13 mode: ARD_INPUT, ARD_OUTPUT, ARD_PWM setting a pins mode to ARD_INPUT turns on reporting for the port the pin is on Note: analog pins 0-5 can be used as digitial pins 16-21 but if the mode of _one_ of these pins is set to ARD_INPUT then _all_ analog pin reporting will be turned off
-
-
 
 
 
@@ -1414,10 +1273,7 @@ _inlined_description: _
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1453,9 +1309,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1491,9 +1345,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1529,9 +1381,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1567,14 +1417,10 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 On the Uno this will work on pins: 3, 5, 6, 9, 10 and 11 value: 0 (always off) to 255 (always on). the pins mode has to be set to ARD_PWM
 TODO check if the PWM bug still is there causing frequent digital port reporting...
-
-
 
 
 
@@ -1608,14 +1454,9 @@ This will cause your Arduino to reset and boot into the program again.
 
 
 
-
-
 _description: _
 
-
 This will cause your Arduino to reset and boot into the program again.
-
-
 
 
 
@@ -1655,15 +1496,10 @@ value The value to send
 
 
 
-
-
 _description: _
-
 
 On the Arduino Uno pin: 9, 10
 the pin has to have a servo attached for this to work.
-
-
 
 
 
@@ -1691,7 +1527,6 @@ _advanced: True_
 
 _inlined_description: _
 
-
 Parameters:
 angle parameter DEPRECATED as of Firmata 2.2
 
@@ -1699,15 +1534,10 @@ angle parameter DEPRECATED as of Firmata 2.2
 
 
 
-
-
 _description: _
-
 
 On the Arduino Uno pin: 9, 10 attaches a servo to a pin
 angle parameter DEPRECATED as of Firmata 2.2
-
-
 
 
 
@@ -1742,15 +1572,10 @@ Detaches a servo on a pin
 
 
 
-
-
 _description: _
-
 
 On the Arduino Uno pin: 9, 10 detaches a servo from a pin, the pin mode remains as OUTPUT
 sendServoDetach DEPRECATED as of Firmata 2.2
-
-
 
 
 
@@ -1785,14 +1610,9 @@ Send a string to the Arduino
 
 
 
-
-
 _description: _
 
-
 firmata can not handle strings longer than 12 characters.
-
-
 
 
 
@@ -1826,9 +1646,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1864,10 +1682,7 @@ Sends the `FIRMATA_START_SYSEX` command
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1903,10 +1718,7 @@ Sends the `FIRMATA_END_SYSEX` command
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1950,10 +1762,7 @@ value The value to send.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1989,9 +1798,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2027,9 +1834,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2065,9 +1870,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2103,9 +1906,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2141,9 +1942,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2179,14 +1978,9 @@ Polls data from the serial port, this has to be called periodically
 
 
 
-
-
 _description: _
 
-
 polls data from the serial port, this has to be called periodically
-
-
 
 
 
@@ -2220,9 +2014,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2255,12 +2047,13 @@ _inlined_description: _
 Triggered when an analog pin changes value, the pin that
 changed is passed as an argument.
 
+
+
+
+
 _description: _
 
-
 triggered when an analog pin changes value, the pin that changed is passed as an argument
-
-
 
 
 
@@ -2287,12 +2080,13 @@ _inlined_description: _
 Triggered when a digital pin changes value, the pin that
 changed is passed as an argument.
 
+
+
+
+
 _description: _
 
-
 triggered when a digital pin changes value, the pin that changed is passed as an argument
-
-
 
 
 
@@ -2319,12 +2113,13 @@ _inlined_description: _
 Triggered when a firmware version is received, the major version
 is passed as an argument.
 
+
+
+
+
 _description: _
 
-
 triggered when a firmware version is received, the major version is passed as an argument
-
-
 
 
 
@@ -2352,13 +2147,14 @@ Triggered when the firmware version is received upon connect,
 the major firmware version is passed as an argument. From this point
 it's safe to send to the Arduino.
 
-_description: _
 
+
+
+
+_description: _
 
 triggered when the firmware version is received upon connect, the major firmware version is passed as an argument
 from this point it's safe to send to the Arduino.
-
-
 
 
 
@@ -2385,12 +2181,13 @@ _inlined_description: _
 Triggered when a protocol version is received, the major version
 is passed as an argument.
 
+
+
+
+
 _description: _
 
-
 triggered when a protocol version is received, the major version is passed as an argument
-
-
 
 
 
@@ -2417,12 +2214,13 @@ _inlined_description: _
 Triggered when a string is received, the string is passed as an
 argument
 
+
+
+
+
 _description: _
 
-
 triggered when a string is received, the string is passed as an argument
-
-
 
 
 
@@ -2449,12 +2247,13 @@ _inlined_description: _
 Triggered when a SysEx message that isn't in the extended
 command set is received, the SysEx message is passed as an argument
 
+
+
+
+
 _description: _
 
-
 triggered when a SysEx message that isn't in the extended command set is received, the SysEx message is passed as an argument
-
-
 
 
 
@@ -2479,8 +2278,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2507,8 +2310,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2535,8 +2342,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2563,8 +2374,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2591,8 +2406,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2619,8 +2438,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2647,8 +2470,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2675,8 +2502,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2703,8 +2534,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2731,8 +2566,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2760,8 +2599,11 @@ _inlined_description: _
 
 < Indicate Firmata command to execute.
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -2788,8 +2630,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2816,8 +2662,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2845,8 +2695,11 @@ _inlined_description: _
 
 \}
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -2873,8 +2726,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2901,8 +2758,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2929,8 +2790,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2957,8 +2822,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2986,8 +2855,11 @@ _inlined_description: _
 
 < Indicates which pin the data came from.
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -3014,8 +2886,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3042,8 +2918,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3070,8 +2950,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3098,8 +2982,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3126,8 +3014,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3154,8 +3046,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3182,8 +3078,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3210,8 +3110,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3238,8 +3142,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3266,8 +3174,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3294,8 +3206,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3322,8 +3238,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3351,8 +3271,11 @@ _inlined_description: _
 
 < This represents the (running) time of establishing a serial connection.
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -3380,8 +3303,11 @@ _inlined_description: _
 
 < This yields true if a serial connection to Arduino exists.
 
-_description: _
 
+
+
+
+_description: _
 
 
 

@@ -50,9 +50,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -88,9 +86,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -126,10 +122,7 @@ Conjugate
 
 
 
-
-
 _description: _
-
 
 
 
@@ -165,9 +158,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -203,10 +194,7 @@ Calculate and return the rotation as euler angles
 
 
 
-
-
 _description: _
-
 
 
 
@@ -242,10 +230,7 @@ Return the angle and vector components represented by the quaternion.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -281,9 +266,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -321,10 +304,7 @@ Multiplicative inverse method
 
 
 
-
-
 _description: _
-
 
 
 
@@ -360,10 +340,7 @@ Length of the quaternion = sqrt(vec . vec)
 
 
 
-
-
 _description: _
-
 
 
 
@@ -399,10 +376,7 @@ Length of the quaternion = vec . vec
 
 
 
-
-
 _description: _
-
 
 
 
@@ -441,10 +415,7 @@ Define Spherical Linear interpolation method also
 
 
 
-
-
 _description: _
-
 
 
 
@@ -480,9 +451,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -518,9 +487,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -560,10 +527,7 @@ are co-incident or opposite in direction.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -599,9 +563,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -637,9 +599,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -676,10 +636,7 @@ _inlined_description: _
 
 
 
-
-
 _description: _
-
 
 
 
@@ -715,9 +672,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -753,9 +708,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -791,9 +744,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -829,9 +780,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -867,9 +816,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -905,9 +852,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -943,9 +888,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -981,9 +924,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1019,9 +960,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1057,9 +996,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1095,9 +1032,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1133,9 +1068,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1171,9 +1104,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1209,9 +1140,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1247,9 +1176,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1285,9 +1212,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1323,9 +1248,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1361,9 +1284,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1399,9 +1320,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1437,9 +1356,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1476,10 +1393,7 @@ _inlined_description: _
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1515,9 +1429,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1553,9 +1465,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1592,10 +1502,7 @@ _inlined_description: _
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1631,9 +1538,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1670,10 +1575,7 @@ _inlined_description: _
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1709,9 +1611,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1747,9 +1647,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1787,10 +1685,7 @@ As t goes from 0 to 1, the Quat object goes from "from" to "to".
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1826,9 +1721,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1864,9 +1757,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1902,9 +1793,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1940,9 +1829,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1978,9 +1865,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2016,9 +1901,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2054,9 +1937,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2092,9 +1973,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2131,10 +2010,7 @@ and therefore can be ignored in computations.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2166,8 +2042,11 @@ _inlined_description: _
 
 \cond INTERNAL
 
-_description: _
 
+
+
+
+_description: _
 
 
 

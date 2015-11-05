@@ -51,9 +51,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -89,9 +87,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -127,10 +123,7 @@ Destroy the console logger channel.
 
 
 
-
-
 _description: _
-
 
 
 

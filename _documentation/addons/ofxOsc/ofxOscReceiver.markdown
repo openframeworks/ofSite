@@ -50,8 +50,6 @@ process an incoming osc message and add it to the queue
 
 
 
-
-
 _description: _
 
 
@@ -83,8 +81,6 @@ _advanced: False_
 _inlined_description: _
 
 disables port reuse reuse which allows to use the same port by several sockets
-
-
 
 
 
@@ -126,8 +122,6 @@ enabled broadcast capabilities (usually no need to call this, enabled by default
 
 
 
-
-
 _description: _
 
 
@@ -164,9 +158,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -202,9 +194,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -240,10 +230,7 @@ returns true if there are any messages waiting for collection
 
 
 
-
-
 _description: _
-
 
 
 
@@ -279,9 +266,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -310,7 +295,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -354,7 +338,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -391,10 +374,7 @@ listen_port is the port to listen for messages on
 
 
 
-
-
 _description: _
-
 
 
 
@@ -430,9 +410,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -468,9 +446,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -501,6 +477,11 @@ _advanced: False_
 _inlined_description: _
 
 
+
+
+
+
+
 _description: _
 
 
@@ -526,6 +507,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _
@@ -555,6 +541,11 @@ _advanced: False_
 _inlined_description: _
 
 
+
+
+
+
+
 _description: _
 
 
@@ -580,6 +571,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _

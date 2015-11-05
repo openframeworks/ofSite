@@ -50,9 +50,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -88,9 +86,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -126,9 +122,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -164,9 +158,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofPixels & getPixels()
+
+<!--
+_syntax: getPixels()_
+_name: getPixels_
+_returns: ofPixels &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -195,44 +223,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###const ofPixels & getPixels()
-
-<!--
-_syntax: getPixels()_
-_name: getPixels_
-_returns: const ofPixels &_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
 
 
 
@@ -276,7 +266,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -313,9 +302,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -351,9 +338,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -382,7 +367,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -426,9 +410,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -464,9 +446,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -495,7 +475,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -539,9 +518,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -577,9 +554,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -615,10 +590,7 @@ needs to be called before initGrabber
 
 
 
-
-
 _description: _
-
 
 
 
@@ -654,9 +626,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -685,7 +655,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -729,9 +698,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -767,9 +734,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -805,9 +770,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -838,8 +801,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -866,8 +833,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -894,8 +865,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -922,8 +897,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -950,8 +929,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -978,8 +961,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 

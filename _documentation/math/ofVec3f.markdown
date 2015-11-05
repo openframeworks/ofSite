@@ -174,10 +174,7 @@ ofVec3f v2 = ofVec3f(4, 2, 7);
 
 
 
-
-
 _description: _
-
 
 Returns 'true' if this vector is pointing in the same direction as 'vec', with an angle error threshold 'tolerance' in degrees (default 0.0001 degrees).
 
@@ -186,8 +183,6 @@ ofVec3f v1 = ofVec3f(40, 20, 70);
 ofVec3f v2 = ofVec3f(4, 2, 7);
 // v1.align(v2, 0.0) is true
 ~~~~
-
-
 
 
 
@@ -229,10 +224,7 @@ ofVec3f v2 = ofVec3f(4, 2, 7);
 
 
 
-
-
 _description: _
-
 
 Returns 'true' if this vector is pointing in the same direction as 'vec', with an angle error threshold 'tolerance' in radians (default 0.0001).
 
@@ -241,8 +233,6 @@ ofVec3f v1 = ofVec3f(40, 20, 70);
 ofVec3f v2 = ofVec3f(4, 2, 7);
 // v1.align(v2, 0.0) is true
 ~~~~
-
-
 
 
 
@@ -283,10 +273,7 @@ float angle = v1.angle(v2); // angle is 90
 
 
 
-
-
 _description: _
-
 
 Calculate and return the coplanar angle in degrees between this vector and 'vec'.
 
@@ -295,8 +282,6 @@ ofVec3f v1(1,0,0);
 ofVec3f v2(0,1,0);
 float angle = v1.angle(v2); // angle is 90
 ~~~~
-
-
 
 
 
@@ -337,11 +322,7 @@ float angle = v1.angle(v2); // angle is 90
 
 
 
-
-
-
 _description: _
-
 
 Calculate and return the coplanar angle in radians between this vector and 'vec'.
 
@@ -350,8 +331,6 @@ ofVec3f v1(1,0,0);
 ofVec3f v2(0,1,0);
 float angle = v1.angle(v2); // angle is 90
 ~~~~
-
-
 
 
 
@@ -398,10 +377,7 @@ centroid.average( points, numPoints );
 
 
 
-
-
 _description: _
-
 
 Sets this vector to be the average (*centre of gravity* or *centroid*) of a given array of 'ofVec3f's. 'points' is the array of 'ofVec3f's and 'num' specifies the number of 'ofVec3f's in the array.
 
@@ -415,8 +391,6 @@ ofVec3f centroid;
 centroid.average( points, numPoints ); 
 // centroid now is the centre of gravity/average of all the random points
 ~~~~
-
-
 
 
 
@@ -457,14 +431,9 @@ result.
 
 
 
-
-
 _description: _
 
-
 Set this vector to the cross product (vector product) of itself and 'vec'. This is a binary operation on two vectors in three-dimensional space, which results in a vector that is perpendicular to both of the vectors being multiplied, and normal to the plane containing them. The name *cross product* is derived from the cross symbol X that is often used to designate this operation; the alternative name *vector product* emphasizes the vector (rather than scalar) nature of the result.
-
-
 
 
 
@@ -512,10 +481,7 @@ just want the shortest), you can use squareDistance() instead.
 
 
 
-
-
 _description: _
-
 
 Treats both this vector and 'pnt' as points in 3D space, and calculates and returns the distance between them.
 
@@ -526,8 +492,6 @@ float distance = p1.distance( p2 ); // distance is 5.8310
 ~~~~
 
 'distance' involves a square root calculation, which is one of the slowest things you can do in programming. If you don't need an exact number but rather just a rough idea of distance (for example when finding the shortest distance of a bunch of points to a reference point, where it doesn't matter exactly what the distances are, you just want the shortest), you can use ['squareDistance'](#squareDistance) instead.
-
-
 
 
 
@@ -586,11 +550,7 @@ dot = a3.dot(b3); // dot is -1, ie cos(180)
 
 
 
-
-
-
 _description: _
-
 
 Calculate and return the dot product of this vector with 'vec'.
 
@@ -613,8 +573,6 @@ ofVec3f a3(0, 1, 0);
 ofVec3f b3(0, -1, 0); // 180 degree angle to a3
 dot = a3.dot(b3); // dot is -1, ie cos(180)
 ~~~~
-
-
 
 
 
@@ -657,17 +615,12 @@ Image courtesy of Wikipedia
 
 
 
-
-
 _description: _
-
 
 Returns the cross product (vector product) of this vector and 'vec'. This is a binary operation on two vectors in three-dimensional space, which results in a vector that is perpendicular to both of the vectors being multiplied, and normal to the plane containing them. The name *cross product* is derived from the cross symbol X that is often used to designate this operation; the alternative name *vector product* emphasizes the vector (rather than scalar) nature of the result.
 
 ![CROSS](../math/crossproduct.png)
 Image courtesy of Wikipedia
-
-
 
 
 
@@ -713,11 +666,7 @@ ofVec3f v4 = v1.getInterpolated(p2, 0.8); // v4 is (8, 9, 16)
 
 
 
-
-
-
 _description: _
-
 
 Perform a linear interpolation of this vector's position towards 'pnt' and return the interpolated vector without altering the original. 'p' controls the amount to move towards 'pnt'. 'p' is normally between 0 and 1 and where 0 means stay the original position and 1 means move all the way to 'pnt', but you can also have 'p' greater than 1 overshoot 'pnt', or less than 0 to move backwards away from 'pnt'.
 
@@ -727,8 +676,6 @@ ofVec3f v2(10, 10, 20);
 ofVec3f v3 = v1.getInterpolated(p2, 0.5); // v3 is (5, 7.5, 10)
 ofVec3f v4 = v1.getInterpolated(p2, 0.8); // v4 is (8, 9, 16)
 ~~~~
-
-
 
 
 
@@ -772,10 +719,7 @@ ofVec3f v2Limited = v2.getLimited(3);
 
 
 
-
-
 _description: _
-
 
 Return a copy of this vector with its length (magnitude) restricted to a maximum of 'max' units by scaling down if necessary.
 
@@ -787,8 +731,6 @@ ofVec3f v1Limited = v1.getLimited(3);
 ofVec3f v2Limited = v2.getLimited(3);
 // v2Limited is (2, 0, 1) (same as v2)
 ~~~~
-
-
 
 
 
@@ -831,17 +773,11 @@ the mapping.*
 
 
 
-
-
-
 _description: _
-
 
 Return a new 'ofVec3f' calculated by copying this vector and then mapping from its default coordinate system -- origin (0,0,0), X direction (1,0,0), Y direction (0,1,0), Z direction (0,0,1) -- to a new coordinate system defined with origin at 'origin', X direction 'vx', and Y direction 'vy', and Z direction 'vz'.
 
 *In most cases you want 'vx', 'vy', and 'vz' to be perpendicular and of unit length; if they are not perpendicular you will have shearing as part of the mapping, and if they are not of unit length you will have scaling as part of the mapping.*
-
-
 
 
 
@@ -881,10 +817,7 @@ ofVec3f mid = v1.getMiddle(v2); // mid gets (7.5, 5, 10)
 
 
 
-
-
 _description: _
-
 
 Calculate and return the midpoint between this vector and 'pnt'.
 
@@ -893,8 +826,6 @@ ofVec3f v1(5, 0, 0);
 ofVec3f v2(10, 10, 20);
 ofVec3f mid = v1.getMiddle(v2); // mid gets (7.5, 5, 10)
 ~~~~
-
-
 
 
 
@@ -940,10 +871,7 @@ ofVec3f v2Normalized = v2.getNormalized(); // (√2, 0, √2)
 
 
 
-
-
 _description: _
-
 
 Return a normalized copy of this vector. 
 
@@ -955,8 +883,6 @@ ofVec3f v1Normalized = v1.getNormalized(); // (1, 0, 0)
 ofVec3f v2(5, 0, 5);
 ofVec3f v2Normalized = v2.getNormalized(); // (√2, 0, √2)
 ~~~~
-
-
 
 
 
@@ -1004,11 +930,7 @@ can then be used to calculate lighting, collisions, and other 3D effects.
 
 
 
-
-
-
 _description: _
-
 
 Construct a plane using this vector and 'vec' (by finding the plane that both lectors lie on), and return the vector that is perpendicular to that plane (the normal to that plane).
 
@@ -1022,8 +944,6 @@ ofLog(OF_LOG_NOTICE, "%1.1f, %1.1f, %1.1f\n", p.x, p.y, p.z);
 ~~~~
 
 This method is usually used to calculate a normal vector to a surface, which can then be used to calculate lighting, collisions, and other 3D effects.
-
-
 
 
 
@@ -1070,11 +990,7 @@ information, as it allows the vector to be treated as a simple C array of
 
 
 
-
-
-
 _description: _
-
 
 
 
@@ -1110,9 +1026,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Returns a pointer to the memory position of the first element of the vector  ('x'); the other elements ('y' and 'z') immediately follow it in memory.
 
@@ -1125,8 +1039,6 @@ float z = *(v1Ptr+2); // z is 10
 ~~~~
 
 This is very useful when using arrays of 'ofVec3f's to store geometry information, as it allows the vector to be treated as a simple C array of 'float's that can be passed verbatim to OpenGL.
-
-
 
 
 
@@ -1169,11 +1081,7 @@ ofVec3f v3 = v1.getRotated(45, ofVec3f(0, 1, 0)); // v3 is (√2, 0, √2)
 
 
 
-
-
-
 _description: _
-
 
 Return a new 'ofVec3f' that is the result of rotating this vector by 'angle' degrees around the given axis.
 
@@ -1184,8 +1092,6 @@ ofVec3f v2 = v1.getRotated(45, ofVec3f(0, 0, 1)); // v2 is (√2, √2, 0)
 // rotate v1 around the y axis
 ofVec3f v3 = v1.getRotated(45, ofVec3f(0, 1, 0)); // v3 is (√2, 0, √2)
 ~~~~
-
-
 
 
 
@@ -1229,11 +1135,7 @@ Watch out for gimbal lock when specifying multiple rotations in the same call.
 
 
 
-
-
-
 _description: _
-
 
 Make a copy of this vector and perform an Euler rotation of the copy around three axes: 'ax' degrees about the x axis, 'ay' about the y axis and 'az' about the z axis. Return the copy.
 
@@ -1244,8 +1146,6 @@ ofVec3f v3 = v1.getRotated( 45, 0, 0 ); // v is now (0, √2, √2)
 ~~~~~
 
 Watch out for gimbal lock when specifying multiple rotations in the same call.
-
-
 
 
 
@@ -1281,14 +1181,9 @@ the origin of rotation.
 
 
 
-
-
 _description: _
 
-
 Return a new 'ofVec3f' that is the result of rotating this vector by 'angle' degrees around the axis specified by 'axis', using 'pivot' as the origin of rotation.
-
-
 
 
 
@@ -1331,10 +1226,7 @@ ofVec3f v3 = v1.getRotated(PI/4, ofVec3f(0, 1, 0)); // v3 is (√2, 0, √2)
 
 
 
-
-
 _description: _
-
 
 Return a new 'ofVec3f' that is the result of rotating this vector by 'angle' radians around the given axis.
 
@@ -1345,8 +1237,6 @@ ofVec3f v2 = v1.getRotated(PI/4, ofVec3f(0, 0, 1)); // v2 is (√2, √2, 0)
 // rotate v1 around the y axis
 ofVec3f v3 = v1.getRotated(PI/4, ofVec3f(0, 1, 0)); // v3 is (√2, 0, √2)
 ~~~~
-
-
 
 
 
@@ -1390,11 +1280,7 @@ Watch out for gimbal lock when specifying multiple rotations in the same call.
 
 
 
-
-
-
 _description: _
-
 
 Make a copy of this vector and perform an Euler rotation of the copy around three axes: 'ax' radians about the x axis, 'ay' about the y axis and 'az' about the z axis. Return the copy.
 
@@ -1405,8 +1291,6 @@ ofVec3f v3 = v1.getRotatedRad( PI/4, 0, 0 ); // v is now (0, √2, √2)
 ~~~~~
 
 Watch out for gimbal lock when specifying multiple rotations in the same call.
-
-
 
 
 
@@ -1441,14 +1325,9 @@ around the axis specified by 'axis', using 'pivot' as the origin of rotation.
 
 
 
-
-
 _description: _
 
-
 Return a new 'ofVec3f' that is the result of rotating this vector by 'angle' radians around the axis specified by 'axis', using 'pivot' as the origin of rotation.
-
-
 
 
 
@@ -1488,11 +1367,7 @@ ofVec3f v2 = v1.getScaled(15); // v2 is (9, 12), which has length of 15
 
 
 
-
-
-
 _description: _
-
 
 Return a new 'ofVec3f' that is the result of scaling this vector up or down so that it has the requested length.
 
@@ -1500,8 +1375,6 @@ Return a new 'ofVec3f' that is the result of scaling this vector up or down so t
 ofVec3f v1(3, 4); // length is 5
 ofVec3f v2 = v1.getScaled(15); // v2 is (9, 12), which has length of 15
 ~~~~
-
-
 
 
 
@@ -1550,10 +1423,7 @@ v1.interpolate( v2, 0.5 ); // v1 is now (9.375, 9.6875, 18.75)
 
 
 
-
-
 _description: _
-
 
 Perform a linear interpolation of this vector's position towards 'pnt'. 'p' controls the amount to move towards 'pnt'. 'p' is normally between 0 and 1 and where 0 means stay the original position and 1 means move all the way to 'pnt', but you can also have 'p' greater than 1 overshoot 'pnt', or less than 0 to move backwards away from 'pnt'.
 
@@ -1566,8 +1436,6 @@ v1.interpolate( v2, 0.5 ); // v1 is now (7.5, 8.75, 15)
 v1.interpolate( v2, 0.5 ); // v1 is now (8.75, 9.375, 17.5)
 v1.interpolate( v2, 0.5 ); // v1 is now (9.375, 9.6875, 18.75)
 ~~~~
-
-
 
 
 
@@ -1603,10 +1471,7 @@ _inlined_description: _
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1642,9 +1507,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1692,11 +1555,7 @@ want the shortest), you can use lengthSquared() instead.
 
 
 
-
-
-
 _description: _
-
 
 Return the length (magnitude) of this vector.
 
@@ -1706,8 +1565,6 @@ float len = v.length(); // len is 5.0990
 ~~~~
 
 'length' involves a square root calculation, which is one of the slowest things you can do in programming. If you don't need an exact number but rather just a rough idea of a length (for example when finding the shortest distance of a bunch of points to a reference point, where it doesn't matter exactly what the lengths are, you just want the shortest), you can use ['squareLength'](#squareLength) instead.
-
-
 
 
 
@@ -1753,10 +1610,7 @@ ordinarily required to calculate a length.
 
 
 
-
-
 _description: _
-
 
 Return the squared length (squared magnitude) of this vector.
 
@@ -1766,8 +1620,6 @@ float len = v.length(); // len is 5.0990
 ~~~~
 
 Use as a much faster alternative to ['length'](#length) if you don't need to know an accurate length but rather just a rough idea of a length (for example when finding the shortest distance of a bunch of points to a reference point, where it doesn't matter exactly what the lengths are, you just want the shortest). It avoids the square root calculation that is ordinarily required to calculate a length.
-
-
 
 
 
@@ -1811,10 +1663,7 @@ v2.limit(3);
 
 
 
-
-
 _description: _
-
 
 Restrict the length (magnitude) of this vector to a maximum of 'max' units by scaling down if necessary.
 
@@ -1826,8 +1675,6 @@ v1.limit(3);
 v2.limit(3);
 // v2 is unchanged
 ~~~~
-
-
 
 
 
@@ -1869,17 +1716,11 @@ as part of the mapping.*
 
 
 
-
-
-
 _description: _
-
 
 Map this vector from its default coordinate system -- origin (0,0,0), X direction (1,0,0), Y direction (0,1,0), Z direction (0,0,1) -- to a new coordinate system defined with origin at 'origin', X direction 'vx', and Y direction 'vy', and Z direction 'vz'.
 
 *In most cases you want 'vx', 'vy', and 'vz' to be perpendicular and of unit length; if they are not perpendicular you will have shearing as part of the mapping, and if they are not of unit length you will have scaling as part of the mapping.*
-
-
 
 
 
@@ -1921,11 +1762,7 @@ ofVec3f v2 = ofVec3f(40.01, 19.999, 70.05);
 
 
 
-
-
-
 _description: _
-
 
 Let you check if two vectors are similar given a tolerance threshold 'tolerance' (default = 0.0001). 
 
@@ -1935,8 +1772,6 @@ ofVec3f v2 = ofVec3f(40.01, 19.999, 70.05);
 // v1.match(v2, 0.1) is true
 // v1.match(v2, 0.01) is false (because (70.5-70) > 0.01)
 ~~~~
-
-
 
 
 
@@ -1980,10 +1815,7 @@ v1.middle( v2 ); // v1 is now (9.375, 9.6875, 18.75)
 
 
 
-
-
 _description: _
-
 
 Set this vector to the midpoint between itself and 'pnt'.
 
@@ -1996,8 +1828,6 @@ v1.middle( v2 ); // v1 is now (7.5, 8.75, 15)
 v1.middle( v2 ); // v1 is now (8.75, 9.375, 17.5)
 v1.middle( v2 ); // v1 is now (9.375, 9.6875, 18.75)
 ~~~~
-
-
 
 
 
@@ -2043,11 +1873,7 @@ v2.normalize(); // v2 is now (√2, 0, √2)
 
 
 
-
-
-
 _description: _
-
 
 Normalize the vector.
 
@@ -2059,8 +1885,6 @@ v1.normalize(); // v2 is now (1, 0, 0)
 ofVec3f v2(5, 0, 5);
 v2.normalize(); // v2 is now (√2, 0, √2)
 ~~~~
-
-
 
 
 
@@ -2105,10 +1929,7 @@ ofVec3f v3(0.1, 0.3, -1.5);
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2144,10 +1965,7 @@ Construt a 3D vector with `x`, `y` and `z` specified
 
 
 
-
-
 _description: _
-
 
 Construct a 3D vector. Defaults to (0,0).
 
@@ -2156,8 +1974,6 @@ ofVec3f v1; // default: v1.x is 0, v1.y is 0, v1.z is 0
 ofVec3f v2 = ofVec3f(40, 20, 10); // v2.x is 40, v2.y is 20, v2.z is 10
 ofVec3f v3(0.1, 0.3, -1.5); // v3.x is 0.1, v3.y is 0.3, v3.z is -1.5
 ~~~~
-
-
 
 
 
@@ -2191,10 +2007,7 @@ Construct a 3D vector with `x`, `y` and `z` set to `scalar`
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2230,10 +2043,7 @@ _inlined_description: _
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2275,10 +2085,7 @@ ofVec3f v(mom); // v is (40, 20, 10)
 
 
 
-
-
 _description: _
-
 
 Construct a new 3D vector ('ofxVec3f') from a 4D vector 'vec' by throwing away the 'z' component.
 
@@ -2286,8 +2093,6 @@ Construct a new 3D vector ('ofxVec3f') from a 4D vector 'vec' by throwing away t
 ofVec3f mom = ofVec4f(40, 20, 10, 100);
 ofVec3f v(mom); // v is (40, 20, 10)
 ~~~~
-
-
 
 
 
@@ -2321,9 +2126,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2369,10 +2172,7 @@ ofVec3f v3(40, 20, 10);
 
 
 
-
-
 _description: _
-
 
 Returns 'true' if any component is different to its corresponding component in 'vec', ie if 'x != vec.x' or 'y != vec.y' or 'z != vec.z'; otherwise returns 'false'.
 
@@ -2383,8 +2183,6 @@ ofVec3f v3(40, 20, 10);
 // ( v1 != v2 ) is true
 // ( v1 != v3 ) is false
 ~~~~
-
-
 
 
 
@@ -2426,11 +2224,7 @@ Useful for scaling a 3D point by a non-uniform scale.
 
 
 
-
-
-
 _description: _
-
 
 Returns a new vector ('x'*'vec.x','y'*'vec.y','z'*'vec.z').
 
@@ -2441,8 +2235,6 @@ ofVec3f v3 = v1 * v2; // (80, 80, 100)
 ~~~~
 
 Useful for scaling a 3D point by a non-uniform scale.
-
-
 
 
 
@@ -2482,10 +2274,7 @@ ofVec3f v2 = v1 * 4; // (8, 20, 4)
 
 
 
-
-
 _description: _
-
 
 Return a new 'ofVec3f' that is this vector scaled by multiplying 'x', 'y', 'z' members by 'f'.
 
@@ -2493,8 +2282,6 @@ Return a new 'ofVec3f' that is this vector scaled by multiplying 'x', 'y', 'z' m
 ofVec3f v1(2, 5, 1);
 ofVec3f v2 = v1 * 4; // (8, 20, 4)
 ~~~~
-
-
 
 
 
@@ -2537,10 +2324,7 @@ Useful for scaling a 3D point by a non-uniform scale.
 
 
 
-
-
 _description: _
-
 
 Multiplies 'x' by 'vec.x', and multiplies 'y' by 'vec.y', and multiplies 'z' by 'vec.z'.
 
@@ -2551,8 +2335,6 @@ v1 *= v2; // v1 is now (80, 80, 100)
 ~~~~
 
 Useful for scaling a 3D point by a non-uniform scale.
-
-
 
 
 
@@ -2591,10 +2373,7 @@ v1 *= 4; // (8, 20, 4)
 
 
 
-
-
 _description: _
-
 
 Scale this vector by multiplying 'x', 'y' and 'z' members by 'f'.
 
@@ -2602,8 +2381,6 @@ Scale this vector by multiplying 'x', 'y' and 'z' members by 'f'.
 ofVec3f v1(2, 5, 1);
 v1 *= 4; // (8, 20, 4)
 ~~~~
-
-
 
 
 
@@ -2644,10 +2421,7 @@ ofVec3f v3 = v1 + v2; // v3 is (65, 70, 20)
 
 
 
-
-
 _description: _
-
 
 Super easy vector addition. Returns a new vector ('x'+'vec.x','y'+'vec.y','z'+'vec.z').
 
@@ -2656,8 +2430,6 @@ ofVec3f v1 = ofVec3f(40, 20, 10);
 ofVec3f v2 = ofVec3f(25, 50, 10);
 ofVec3f v3 = v1 + v2; // v3 is (65, 70, 20)
 ~~~~
-
-
 
 
 
@@ -2697,10 +2469,7 @@ ofVec3f v2 = v1 + 10; // (12, 15, 11)
 
 
 
-
-
 _description: _
-
 
 Returns a new vector with a float value 'f' added to 'x', 'y' and 'z' members.
 
@@ -2708,8 +2477,6 @@ Returns a new vector with a float value 'f' added to 'x', 'y' and 'z' members.
 ofVec3f v1(2, 5, 1);
 ofVec3f v2 = v1 + 10; // (12, 15, 11)
 ~~~~
-
-
 
 
 
@@ -2750,10 +2517,7 @@ v1 += v2; // v1 is (65, 70, 20)
 
 
 
-
-
 _description: _
-
 
 Super easy addition assignment. Adds 'vec.x' to 'x', adds 'vec.y' to 'y' and adds 'vec.z' to 'z'.
 
@@ -2762,8 +2526,6 @@ ofVec3f v1 = ofVec3f(40, 20, 10);
 ofVec3f v2 = ofVec3f(25, 50, 10);
 v1 += v2; // v1 is (65, 70, 20)
 ~~~~
-
-
 
 
 
@@ -2802,10 +2564,7 @@ v1 += 10; // (12, 15, 11)
 
 
 
-
-
 _description: _
-
 
 Adds a float value 'f' to 'x', 'y' and 'z' members.
 
@@ -2813,8 +2572,6 @@ Adds a float value 'f' to 'x', 'y' and 'z' members.
 ofVec3f v1(2, 5, 1);
 v1 += 10; // (12, 15, 11)
 ~~~~
-
-
 
 
 
@@ -2855,10 +2612,7 @@ ofVec3f v3 = v1 - v2; // v3 is (15, -30, 0)
 
 
 
-
-
 _description: _
-
 
 Super easy vector subtraction. Returns a new vector ('x'-'vec.x','y'-'vec.y','z'-'vec.z').
 
@@ -2867,8 +2621,6 @@ ofVec3f v1 = ofVec3f(40, 20, 10);
 ofVec3f v2 = ofVec3f(25, 50, 10);
 ofVec3f v3 = v1 - v2; // v3 is (15, -30, 0)
 ~~~~
-
-
 
 
 
@@ -2908,10 +2660,7 @@ ofVec3f v2 = v1 - 10; // (-8, -5, -9)
 
 
 
-
-
 _description: _
-
 
 Returns a new vector with a float value 'f' subtracted from 'x', 'y' and 'z' members.
 
@@ -2919,8 +2668,6 @@ Returns a new vector with a float value 'f' subtracted from 'x', 'y' and 'z' mem
 ofVec3f v1(2, 5, 1);
 ofVec3f v2 = v1 - 10; // (-8, -5, -9)
 ~~~~
-
-
 
 
 
@@ -2960,11 +2707,7 @@ ofVec3f v2 = -v1; // (-2, -5, -1)
 
 
 
-
-
-
 _description: _
-
 
 Returns a new 'ofVec3f' that is the inverted version (mirrored in X, Y and Z) of this vector.
 
@@ -2972,8 +2715,6 @@ Returns a new 'ofVec3f' that is the inverted version (mirrored in X, Y and Z) of
 ofVec3f v1(2, 5, 1);
 ofVec3f v2 = -v1; // (-2, -5, -1)
 ~~~~
-
-
 
 
 
@@ -3014,10 +2755,7 @@ v1 -= v2; // v1 is (15, -30, 0)
 
 
 
-
-
 _description: _
-
 
 Super easy subtraction assignment. Subtracts 'vec.x' from 'x', subtracts 'vec.y' from 'y' and subtracts 'vec.z' from 'z'.
 
@@ -3026,8 +2764,6 @@ ofVec3f v1 = ofVec3f(40, 20, 10);
 ofVec3f v2 = ofVec3f(25, 50, 10);
 v1 -= v2; // v1 is (15, -30, 0)
 ~~~~
-
-
 
 
 
@@ -3066,10 +2802,7 @@ v1 -= 10; // (-8, -5, -9)
 
 
 
-
-
 _description: _
-
 
 Subtract a float value 'f' from 'x', 'y', and 'z' members.
 
@@ -3077,8 +2810,6 @@ Subtract a float value 'f' from 'x', 'y', and 'z' members.
 ofVec3f v1(2, 5, 1);
 v1 -= 10; // (-8, -5, -9)
 ~~~~
-
-
 
 
 
@@ -3120,10 +2851,7 @@ Useful for scaling a 3D point by a non-uniform scale.
 
 
 
-
-
 _description: _
-
 
 Returns a new vector ('x'/'vec.x','y'/'vec.y','z'/'vec.z').
 
@@ -3134,8 +2862,6 @@ ofVec3f v3 = v1 / v2; // (20, 5, 1)
 ~~~~
 
 Useful for scaling a 3D point by a non-uniform scale.
-
-
 
 
 
@@ -3175,10 +2901,7 @@ ofVec3f v2 = v1 / 4; // (0.5, 1.25, 0.25)
 
 
 
-
-
 _description: _
-
 
 Return a new 'ofVec3f' that is this vector scaled by dividing 'x', 'y' and 'z' members by 'f'.
 
@@ -3186,8 +2909,6 @@ Return a new 'ofVec3f' that is this vector scaled by dividing 'x', 'y' and 'z' m
 ofVec3f v1(2, 5, 1);
 ofVec3f v2 = v1 / 4; // (0.5, 1.25, 0.25)
 ~~~~
-
-
 
 
 
@@ -3229,10 +2950,7 @@ Useful for scaling a 3D point by a non-uniform scale.
 
 
 
-
-
 _description: _
-
 
 Divides 'x' by 'vec.x', divides 'y' by 'vec.y', and divides 'z' by 'vec.z'.
 
@@ -3243,8 +2961,6 @@ v1 *= v2; // v1 is now (20, 5, 1)
 ~~~~
 
 Useful for scaling a 3D point by a non-uniform scale.
-
-
 
 
 
@@ -3283,10 +2999,7 @@ v1 /= 4; // (0.5, 1.25, 0.25)
 
 
 
-
-
 _description: _
-
 
 Scale this vector by dividing 'x', 'y' and 'z' members by 'f'.
 
@@ -3294,8 +3007,6 @@ Scale this vector by dividing 'x', 'y' and 'z' members by 'f'.
 ofVec3f v1(2, 5, 1);
 v1 /= 4; // (0.5, 1.25, 0.25)
 ~~~~
-
-
 
 
 
@@ -3341,10 +3052,7 @@ ofVec3f v3(40, 20, 10);
 
 
 
-
-
 _description: _
-
 
 Returns 'true' if each component is the same as the corresponding component in 'vec', ie if 'x == vec.x' and 'y == vec.y' and 'z == vec.z'; otherwise returns 'false'. But you should probably be using ['match'](#match) instead.
 
@@ -3355,8 +3063,6 @@ ofVec3f v3(40, 20, 10);
 // ( v1 == v2 ) is false
 // ( v1 == v3 ) is true
 ~~~~
-
-
 
 
 
@@ -3402,10 +3108,7 @@ repeats 3 times.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -3441,9 +3144,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Allows to access the individual components of an 'ofVec3f' as though it is an array:
 
@@ -3455,8 +3156,6 @@ float z = v1[2]; // z is 10
 ~~~~
 
 This function can be handy if you want to do the same operation to all 'x', 'y' and 'z' components, as it means you can just make a 'for' loop that repeats 3 times.
-
-
 
 
 
@@ -3504,11 +3203,7 @@ can then be used to calculate lighting, collisions, and other 3D effects.
 
 
 
-
-
-
 _description: _
-
 
 Construct a plane using this vector and 'vec' (by finding the plane that both lie on), and set our 'x', 'y' and 'z' to be the vector that is perpendicular to the constructed plane (the normal to the plane).
 
@@ -3522,8 +3217,6 @@ ofLog(OF_LOG_NOTICE, "%1.1f, %1.1f, %1.1f\n", v1.x, v1.y, v1.z);
 ~~~~
 
 This method is usually used to calculate a normal vector to a surface, which can then be used to calculate lighting, collisions, and other 3D effects.
-
-
 
 
 
@@ -3568,10 +3261,7 @@ v1.rotate(45, ofVec3f(0, 1, 0)); // v3 is (√2, 0, √2)
 
 
 
-
-
 _description: _
-
 
 Return a new 'ofVec3f' that is the result of rotating this vector by 'angle' degrees around the given axis.
 
@@ -3584,8 +3274,6 @@ v1.set(1, 0, 0);
 // then rotate around the y axis
 v1.rotate(45, ofVec3f(0, 1, 0)); // v3 is (√2, 0, √2)
 ~~~~
-
-
 
 
 
@@ -3628,11 +3316,7 @@ Watch out for gimbal lock when specifying multiple rotations in the same call.
 
 
 
-
-
-
 _description: _
-
 
 Perform an Euler rotation of this vector around three axes: 'ax' degrees about the x axis, 'ay' about the y axis and 'az' about the z axis. 
 
@@ -3643,8 +3327,6 @@ v.rotate( 45, 0, 0 ); // v is now (0, √2, √2)
 ~~~~~
 
 Watch out for gimbal lock when specifying multiple rotations in the same call.
-
-
 
 
 
@@ -3679,14 +3361,9 @@ using 'pivot' as the origin of rotation.
 
 
 
-
-
 _description: _
 
-
 Rotate this vector by 'angle' degrees around the axis specified by 'axis', using 'pivot' as the origin of rotation.
-
-
 
 
 
@@ -3731,10 +3408,7 @@ v1.rotate(45, ofVec3f(0, 1, 0)); // v3 is (√2, 0, √2)
 
 
 
-
-
 _description: _
-
 
 Return a new 'ofVec3f' that is the result of rotating this vector by 'angle' degrees around the given axis.
 
@@ -3747,8 +3421,6 @@ v1.set(1, 0, 0);
 // then rotate around the y axis
 v1.rotate(45, ofVec3f(0, 1, 0)); // v3 is (√2, 0, √2)
 ~~~~
-
-
 
 
 
@@ -3791,10 +3463,7 @@ Watch out for gimbal lock when specifying multiple rotations in the same call.
 
 
 
-
-
 _description: _
-
 
 Perform an Euler rotation of this vector around three axes: 'ax' radians about the x axis, 'ay' about the y axis and 'az' about the z axis. 
 
@@ -3805,8 +3474,6 @@ v.rotateRad( PI/4, 0, 0 ); // v is now (0, √2, √2)
 ~~~~~
 
 Watch out for gimbal lock when specifying multiple rotations in the same call.
-
-
 
 
 
@@ -3841,14 +3508,9 @@ using 'pivot' as the origin of rotation.
 
 
 
-
-
 _description: _
 
-
 Rotate this vector by 'angle' radians around the axis specified by 'axis', using 'pivot' as the origin of rotation.
-
-
 
 
 
@@ -3887,10 +3549,7 @@ v1.scale(15); // v1 is now (9, 12), which has length of 15
 
 
 
-
-
 _description: _
-
 
 Scales this vector up or down so that it has the requested length.
 
@@ -3898,8 +3557,6 @@ Scales this vector up or down so that it has the requested length.
 ofVec3f v1(3, 4); // length is 5
 v1.scale(15); // v1 is now (9, 12), which has length of 15
 ~~~~
-
-
 
 
 
@@ -3939,10 +3596,7 @@ v1.set(40, 20, 70);
 
 
 
-
-
 _description: _
-
 
 Set 'x', 'y' and 'z' components of this vector with just one function call. 'z' is optional, it defaults to 0.
 
@@ -3950,8 +3604,6 @@ Set 'x', 'y' and 'z' components of this vector with just one function call. 'z' 
 ofVec3f v1;
 v1.set(40, 20, 70);
 ~~~~
-
-
 
 
 
@@ -3992,10 +3644,7 @@ v2.set(v1);
 
 
 
-
-
 _description: _
-
 
 Setting the values by using other 3 dimension vector ('ofVec3f').
 
@@ -4005,8 +3654,6 @@ ofVec3f v2;
 v1.set(40, 20, 70);
 v2.set(v1);
 ~~~~
-
-
 
 
 
@@ -4040,9 +3687,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -4092,11 +3737,7 @@ to calculate a length.
 
 
 
-
-
-
 _description: _
-
 
 Treats both this vector and 'pnt' as points in 3D space, and calculates and returns the squared distance between them.
 
@@ -4107,8 +3748,6 @@ float distance = p1.distance( p2 ); // distance is 5.8310
 ~~~~
 
 Use as a much faster alternative to ['distance'](#distance) if you don't need to know an exact number but rather just a rough idea of distance (for example when finding the shortest distance of a bunch of points to a reference point, where it doesn't matter exactly what the distances are, you just want the shortest). It avoids the square root calculation that is ordinarily required to calculate a length.
-
-
 
 
 
@@ -4142,9 +3781,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -4176,8 +3813,11 @@ _inlined_description: _
 
 \cond INTERNAL
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -4205,12 +3845,13 @@ _inlined_description: _
 
 Stores the `X` component of this vector.
 
+
+
+
+
 _description: _
 
-
 Stores the X component of this vector.
-
-
 
 
 
@@ -4236,12 +3877,13 @@ _inlined_description: _
 
 Stores the `Y` component of this vector.
 
+
+
+
+
 _description: _
 
-
 Stores the Y component of this vector.
-
-
 
 
 
@@ -4267,12 +3909,13 @@ _inlined_description: _
 
 Stores the `Z` component of this vector.
 
+
+
+
+
 _description: _
 
-
 Stores the Z component of this vector.
-
-
 
 
 

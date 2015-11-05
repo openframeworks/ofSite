@@ -45,10 +45,7 @@ wider range of core OpenGL features such as mipmaps.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -84,10 +81,7 @@ Use pixel-based texture coordinates.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -123,10 +117,7 @@ Disable global texture "edge hack".
 
 
 
-
-
 _description: _
-
 
 
 
@@ -177,14 +168,9 @@ Warning: GL_TEXTURE_RECTANGLE does not support mipmaps.
 
 
 
-
-
 _description: _
 
-
 ofEnableArbText enables the use of ARB textures. ARB textures enable the creation of non power of 2 sized textures.
-
-
 
 
 
@@ -227,10 +213,7 @@ This overrides individual ofTexture wrap settings.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -269,10 +252,7 @@ enabled by default.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -310,10 +290,7 @@ Returns: true if using GL_TEXTURE_RECTANGLE textures, false if using GL_TEXTURE_
 
 
 
-
-
 _description: _
-
 
 
 
@@ -351,10 +328,7 @@ Returns: true if using normalized (0 - 1) texture coordinates.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -392,10 +366,7 @@ Returns: true if OF is currently using the texture "edge hack".
 
 
 
-
-
 _description: _
-
 
 
 

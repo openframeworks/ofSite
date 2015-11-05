@@ -72,10 +72,7 @@ Destroy the ofAbstractHasPixels.
 
 
 
-
-
 _description: _
-
 
 
 

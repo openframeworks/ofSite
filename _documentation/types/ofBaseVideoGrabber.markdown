@@ -53,10 +53,7 @@ Returns: the video grabber's height.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -93,8 +90,6 @@ upload video grabber pixels directly to an ofTexture.
 
 
 Returns: the internal ofTexture pointer or nullptr if not available.
-
-
 
 
 
@@ -138,10 +133,7 @@ Returns: the video grabber's width.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -179,10 +171,7 @@ Returns: a std::vector of ofVideoDevice objects.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -225,10 +214,7 @@ framerate the desired frame rate.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -272,10 +258,7 @@ deviceID The device ID provided by listDevices().
 
 
 
-
-
 _description: _
-
 
 
 
@@ -314,10 +297,7 @@ bTalkToMe true if verbose grabber logging feedback is required.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -365,8 +345,6 @@ Returns: true if the video grabber was set up successfully.
 
 
 
-
-
 _description: _
 
 
@@ -404,10 +382,7 @@ Request a native GUI for video grabber settings.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -443,10 +418,7 @@ Destroy the ofBaseVideoGrabber
 
 
 
-
-
 _description: _
-
 
 
 

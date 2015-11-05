@@ -50,6 +50,41 @@ _inlined_description: _
 
 
 
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofPixels_< PixelType > asPixels()
+
+<!--
+_syntax: asPixels()_
+_name: asPixels_
+_returns: ofPixels_< PixelType >_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
 
 _description: _
 
@@ -87,7 +122,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -98,12 +132,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const ofPixels_< PixelType > asPixels()
+###PixelType * begin()
 
 <!--
-_syntax: asPixels()_
-_name: asPixels_
-_returns: const ofPixels_< PixelType >_
+_syntax: begin()_
+_name: begin_
+_returns: PixelType *_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -117,7 +151,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -161,7 +194,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -172,12 +204,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const PixelType * begin()
+###PixelType * end()
 
 <!--
-_syntax: begin()_
-_name: begin_
-_returns: const PixelType *_
+_syntax: end()_
+_name: end_
+_returns: PixelType *_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -191,7 +223,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -228,44 +259,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###const PixelType * end()
-
-<!--
-_syntax: end()_
-_name: end_
-_returns: const PixelType *_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
 
 
 
@@ -309,7 +302,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -339,7 +331,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -383,7 +374,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -413,7 +403,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -457,7 +446,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -487,7 +475,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -531,7 +518,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -561,7 +547,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -605,7 +590,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -635,7 +619,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -679,7 +662,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -709,7 +691,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -753,7 +734,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -783,7 +763,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -827,7 +806,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -857,7 +835,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -901,7 +878,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -933,6 +909,11 @@ _advanced: False_
 _inlined_description: _
 
 
+
+
+
+
+
 _description: _
 
 
@@ -958,6 +939,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _
@@ -987,6 +973,11 @@ _advanced: False_
 _inlined_description: _
 
 
+
+
+
+
+
 _description: _
 
 
@@ -1012,6 +1003,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _
@@ -1041,6 +1037,11 @@ _advanced: False_
 _inlined_description: _
 
 
+
+
+
+
+
 _description: _
 
 
@@ -1066,6 +1067,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _

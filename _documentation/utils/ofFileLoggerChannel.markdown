@@ -51,10 +51,7 @@ CLose the log file.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -90,9 +87,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -128,9 +123,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -166,10 +159,7 @@ Create an ofFileLoggerChannel.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -209,10 +199,7 @@ append True if the log data should be added to an existing file.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -252,10 +239,7 @@ append True if the log data should be added to an existing file.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -291,10 +275,7 @@ Destroy the file logger channel.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -326,8 +307,11 @@ _inlined_description: _
 
 < The location of the log file.
 
-_description: _
 
+
+
+
+_description: _
 
 
 

@@ -129,14 +129,9 @@ _inlined_description: _
 
 
 
-
-
 _description: _
 
-
 This returns a vector of the indices of vertices that make up the cap (as opposed to the cone indices)
-
-
 
 
 
@@ -170,14 +165,9 @@ _inlined_description: _
 
 
 
-
-
 _description: _
 
-
 This returns an ofMesh made up of the cap (as opposed to the cone)
-
-
 
 
 
@@ -211,14 +201,9 @@ _inlined_description: _
 
 
 
-
-
 _description: _
 
-
 This returns a vector of the indices of vertices that make up the cone (as opposed to the cap indices)
-
-
 
 
 
@@ -252,14 +237,9 @@ _inlined_description: _
 
 
 
-
-
 _description: _
 
-
 This returns an ofMesh made up of the cone (as opposed to the cap)
-
-
 
 
 
@@ -293,14 +273,9 @@ _inlined_description: _
 
 
 
-
-
 _description: _
 
-
 This returns the height of the cone.
-
-
 
 
 
@@ -334,14 +309,9 @@ _inlined_description: _
 
 
 
-
-
 _description: _
 
-
 This returns the radius of the cap
-
-
 
 
 
@@ -375,14 +345,9 @@ _inlined_description: _
 
 
 
-
-
 _description: _
 
-
 This returns the resolution of the cone (rather than the cap)
-
-
 
 
 
@@ -416,14 +381,9 @@ _inlined_description: _
 
 
 
-
-
 _description: _
 
-
 This returns the resolution of the cap (rather than the cone)
-
-
 
 
 
@@ -457,9 +417,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -495,9 +453,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -533,9 +489,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -571,9 +525,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -609,9 +561,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -647,9 +597,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -685,9 +633,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -723,9 +669,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -761,9 +705,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -799,9 +741,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -837,9 +777,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -875,9 +813,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -913,9 +849,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -951,9 +885,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -989,9 +921,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1027,9 +957,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1060,8 +988,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -1088,8 +1020,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -1116,8 +1052,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -1144,8 +1084,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -1172,8 +1116,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 

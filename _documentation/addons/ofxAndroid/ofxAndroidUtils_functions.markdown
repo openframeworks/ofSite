@@ -40,9 +40,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -77,9 +75,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -114,9 +110,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -151,9 +145,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -188,9 +180,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -225,46 +215,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofxAndroidEventsClass & ofxRegisterMultitouch(*app)
-
-<!--
-_syntax: ofxRegisterMultitouch(*app)_
-_name: ofxAndroidEvents_
-_returns: ofxAndroidEventsClass &_
-_returns_description: _
-_parameters: ofxAndroidApp *app_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
 
 
 
@@ -299,9 +250,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -336,9 +285,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -373,9 +320,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -410,9 +355,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -447,9 +390,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -484,9 +425,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -521,9 +460,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -558,9 +495,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -595,9 +530,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -632,9 +565,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -669,9 +600,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -706,9 +635,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -743,9 +670,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -780,9 +705,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -817,9 +740,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -854,9 +775,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -866,12 +785,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool ofxRegisterMultitouch(*app)
+###ofxAndroidEventsClass & ofxRegisterMultitouch(*app)
 
 <!--
 _syntax: ofxRegisterMultitouch(*app)_
 _name: ofxRegisterMultitouch_
-_returns: bool_
+_returns: ofxAndroidEventsClass &_
 _returns_description: _
 _parameters: ofxAndroidApp *app_
 _version_started: _
@@ -891,9 +810,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -903,12 +820,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool ofxRegisterMultitouch(*app)
+###ofxAndroidEventsClass & ofxRegisterMultitouch(*app)
 
 <!--
 _syntax: ofxRegisterMultitouch(*app)_
 _name: ofxRegisterMultitouch_
-_returns: bool_
+_returns: ofxAndroidEventsClass &_
 _returns_description: _
 _parameters: ofxAndroidApp *app_
 _version_started: _
@@ -928,9 +845,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -940,12 +855,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool ofxRegisterMultitouch(*app)
+###ofxAndroidEventsClass & ofxRegisterMultitouch(*app)
 
 <!--
 _syntax: ofxRegisterMultitouch(*app)_
 _name: ofxRegisterMultitouch_
-_returns: bool_
+_returns: ofxAndroidEventsClass &_
 _returns_description: _
 _parameters: ofxAndroidApp *app_
 _version_started: _
@@ -965,9 +880,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -977,12 +890,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool ofxRegisterMultitouch(*app)
+###ofxAndroidEventsClass & ofxRegisterMultitouch(*app)
 
 <!--
 _syntax: ofxRegisterMultitouch(*app)_
 _name: ofxRegisterMultitouch_
-_returns: bool_
+_returns: ofxAndroidEventsClass &_
 _returns_description: _
 _parameters: ofxAndroidApp *app_
 _version_started: _
@@ -1002,9 +915,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1014,12 +925,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool ofxRegisterMultitouch(*app)
+###ofxAndroidEventsClass & ofxRegisterMultitouch(*app)
 
 <!--
 _syntax: ofxRegisterMultitouch(*app)_
 _name: ofxRegisterMultitouch_
-_returns: bool_
+_returns: ofxAndroidEventsClass &_
 _returns_description: _
 _parameters: ofxAndroidApp *app_
 _version_started: _
@@ -1039,9 +950,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1051,12 +960,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool ofxRegisterMultitouch(*app)
+###ofxAndroidEventsClass & ofxRegisterMultitouch(*app)
 
 <!--
 _syntax: ofxRegisterMultitouch(*app)_
 _name: ofxRegisterMultitouch_
-_returns: bool_
+_returns: ofxAndroidEventsClass &_
 _returns_description: _
 _parameters: ofxAndroidApp *app_
 _version_started: _
@@ -1076,9 +985,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1088,12 +995,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool ofxRegisterMultitouch(*app)
+###ofxAndroidEventsClass & ofxRegisterMultitouch(*app)
 
 <!--
 _syntax: ofxRegisterMultitouch(*app)_
 _name: ofxRegisterMultitouch_
-_returns: bool_
+_returns: ofxAndroidEventsClass &_
 _returns_description: _
 _parameters: ofxAndroidApp *app_
 _version_started: _
@@ -1113,9 +1020,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1125,12 +1030,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool ofxRegisterMultitouch(*app)
+###ofxAndroidEventsClass & ofxRegisterMultitouch(*app)
 
 <!--
 _syntax: ofxRegisterMultitouch(*app)_
 _name: ofxRegisterMultitouch_
-_returns: bool_
+_returns: ofxAndroidEventsClass &_
 _returns_description: _
 _parameters: ofxAndroidApp *app_
 _version_started: _
@@ -1150,9 +1055,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1162,12 +1065,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool ofxRegisterMultitouch(*app)
+###ofxAndroidEventsClass & ofxRegisterMultitouch(*app)
 
 <!--
 _syntax: ofxRegisterMultitouch(*app)_
 _name: ofxRegisterMultitouch_
-_returns: bool_
+_returns: ofxAndroidEventsClass &_
 _returns_description: _
 _parameters: ofxAndroidApp *app_
 _version_started: _
@@ -1187,9 +1090,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1199,12 +1100,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool ofxRegisterMultitouch(*app)
+###ofxAndroidEventsClass & ofxRegisterMultitouch(*app)
 
 <!--
 _syntax: ofxRegisterMultitouch(*app)_
 _name: ofxRegisterMultitouch_
-_returns: bool_
+_returns: ofxAndroidEventsClass &_
 _returns_description: _
 _parameters: ofxAndroidApp *app_
 _version_started: _
@@ -1224,9 +1125,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1236,12 +1135,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool ofxRegisterMultitouch(*app)
+###ofxAndroidEventsClass & ofxRegisterMultitouch(*app)
 
 <!--
 _syntax: ofxRegisterMultitouch(*app)_
 _name: ofxRegisterMultitouch_
-_returns: bool_
+_returns: ofxAndroidEventsClass &_
 _returns_description: _
 _parameters: ofxAndroidApp *app_
 _version_started: _
@@ -1261,9 +1160,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1273,12 +1170,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool ofxRegisterMultitouch(*app)
+###ofxAndroidEventsClass & ofxRegisterMultitouch(*app)
 
 <!--
 _syntax: ofxRegisterMultitouch(*app)_
 _name: ofxRegisterMultitouch_
-_returns: bool_
+_returns: ofxAndroidEventsClass &_
 _returns_description: _
 _parameters: ofxAndroidApp *app_
 _version_started: _
@@ -1298,9 +1195,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1310,12 +1205,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool ofxRegisterMultitouch(*app)
+###ofxAndroidEventsClass & ofxRegisterMultitouch(*app)
 
 <!--
 _syntax: ofxRegisterMultitouch(*app)_
 _name: ofxRegisterMultitouch_
-_returns: bool_
+_returns: ofxAndroidEventsClass &_
 _returns_description: _
 _parameters: ofxAndroidApp *app_
 _version_started: _
@@ -1335,9 +1230,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1347,12 +1240,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool ofxRegisterMultitouch(*app)
+###ofxAndroidEventsClass & ofxRegisterMultitouch(*app)
 
 <!--
 _syntax: ofxRegisterMultitouch(*app)_
 _name: ofxRegisterMultitouch_
-_returns: bool_
+_returns: ofxAndroidEventsClass &_
 _returns_description: _
 _parameters: ofxAndroidApp *app_
 _version_started: _
@@ -1372,9 +1265,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1384,12 +1275,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool ofxRegisterMultitouch(*app)
+###ofxAndroidEventsClass & ofxRegisterMultitouch(*app)
 
 <!--
 _syntax: ofxRegisterMultitouch(*app)_
 _name: ofxRegisterMultitouch_
-_returns: bool_
+_returns: ofxAndroidEventsClass &_
 _returns_description: _
 _parameters: ofxAndroidApp *app_
 _version_started: _
@@ -1409,9 +1300,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1421,12 +1310,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool ofxRegisterMultitouch(*app)
+###ofxAndroidEventsClass & ofxRegisterMultitouch(*app)
 
 <!--
 _syntax: ofxRegisterMultitouch(*app)_
 _name: ofxRegisterMultitouch_
-_returns: bool_
+_returns: ofxAndroidEventsClass &_
 _returns_description: _
 _parameters: ofxAndroidApp *app_
 _version_started: _
@@ -1446,9 +1335,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1458,12 +1345,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool ofxRegisterMultitouch(*app)
+###ofxAndroidEventsClass & ofxRegisterMultitouch(*app)
 
 <!--
 _syntax: ofxRegisterMultitouch(*app)_
 _name: ofxRegisterMultitouch_
-_returns: bool_
+_returns: ofxAndroidEventsClass &_
 _returns_description: _
 _parameters: ofxAndroidApp *app_
 _version_started: _
@@ -1483,9 +1370,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1495,12 +1380,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool ofxRegisterMultitouch(*app)
+###ofxAndroidEventsClass & ofxRegisterMultitouch(*app)
 
 <!--
 _syntax: ofxRegisterMultitouch(*app)_
 _name: ofxRegisterMultitouch_
-_returns: bool_
+_returns: ofxAndroidEventsClass &_
 _returns_description: _
 _parameters: ofxAndroidApp *app_
 _version_started: _
@@ -1520,9 +1405,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1532,12 +1415,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool ofxRegisterMultitouch(*app)
+###ofxAndroidEventsClass & ofxRegisterMultitouch(*app)
 
 <!--
 _syntax: ofxRegisterMultitouch(*app)_
 _name: ofxRegisterMultitouch_
-_returns: bool_
+_returns: ofxAndroidEventsClass &_
 _returns_description: _
 _parameters: ofxAndroidApp *app_
 _version_started: _
@@ -1557,9 +1440,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1569,12 +1450,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool ofxRegisterMultitouch(*app)
+###ofxAndroidEventsClass & ofxRegisterMultitouch(*app)
 
 <!--
 _syntax: ofxRegisterMultitouch(*app)_
 _name: ofxRegisterMultitouch_
-_returns: bool_
+_returns: ofxAndroidEventsClass &_
 _returns_description: _
 _parameters: ofxAndroidApp *app_
 _version_started: _
@@ -1594,9 +1475,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1606,12 +1485,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool ofxRegisterMultitouch(*app)
+###ofxAndroidEventsClass & ofxRegisterMultitouch(*app)
 
 <!--
 _syntax: ofxRegisterMultitouch(*app)_
 _name: ofxRegisterMultitouch_
-_returns: bool_
+_returns: ofxAndroidEventsClass &_
 _returns_description: _
 _parameters: ofxAndroidApp *app_
 _version_started: _
@@ -1631,9 +1510,42 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofxAndroidEventsClass & ofxRegisterMultitouch(*app)
+
+<!--
+_syntax: ofxRegisterMultitouch(*app)_
+_name: ofxRegisterMultitouch_
+_returns: ofxAndroidEventsClass &_
+_returns_description: _
+_parameters: ofxAndroidApp *app_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 

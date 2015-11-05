@@ -52,13 +52,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Allocates the image with the w, h passed in. This must be done before the pixels of the image are created.
-
-
 
 
 
@@ -85,7 +81,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -129,7 +124,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -166,15 +160,11 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Blurs the image
 
 ![Blurring] (blur.png "Blurring an image original on Left")
-
-
 
 
 
@@ -208,13 +198,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Blurs the using Gaussian blurring. Gaussian blurring is typically to reduce image noise and reduce detail.
-
-
 
 
 
@@ -248,13 +234,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Clears the pixel data of the image. The image must be allocated again with a call to allocate() before it can be used.
-
-
 
 
 
@@ -288,13 +270,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 This increases the contrast of the image remapping the brightest points in the image to 255 and the darkest points in the image to 0.
-
-
 
 
 
@@ -328,9 +306,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Maps the pixels of an image to the min and max range passed in.
 
@@ -345,8 +321,6 @@ second.convertToRange(100, 140); // super low contrast
 ~~~~
 
 ![Image convert to range](convertToRangeColor.png "Converting the range of an image")
-
-
 
 
 
@@ -380,13 +354,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns the number of non-zero pixels in an image.
-
-
 
 
 
@@ -420,13 +390,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 ![Dilating] (dilate.png "Dilating an image, original on Left")
-
-
 
 
 
@@ -460,13 +426,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Draw the image at the x,y.
-
-
 
 
 
@@ -500,13 +462,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Draw the image at the x,y with the w,h.
-
-
 
 
 
@@ -540,13 +498,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Draw the image at the ofPoint passed in.
-
-
 
 
 
@@ -580,13 +534,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Draw the image into the ofRectangle passed in.
-
-
 
 
 
@@ -620,13 +570,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Draw the outline of an ofxCvblob into the ofxCvImage.
-
-
 
 
 
@@ -660,13 +606,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Draw just the Region of Interest of the image at the x,y.
-
-
 
 
 
@@ -700,13 +642,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Draw just the Region of Interest of the image into the x,y with the w,h passed in.
-
-
 
 
 
@@ -740,15 +678,11 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Erodes the image.
 
 ![Eroding] (erode.png "Eroding an image, original on Left")
-
-
 
 
 
@@ -782,13 +716,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Marks the image as changed so that the ofTexture can be updated, if the image contains one.
-
-
 
 
 
@@ -815,7 +745,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -859,7 +788,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -889,7 +817,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -933,13 +860,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns the height of the image in pixels.
-
-
 
 
 
@@ -973,9 +896,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofPixels & getPixels()
+
+<!--
+_syntax: getPixels()_
+_name: getPixels_
+_returns: ofPixels &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1004,44 +961,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###const ofPixels & getPixels()
-
-<!--
-_syntax: getPixels()_
-_name: getPixels_
-_returns: const ofPixels &_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
 
 
 
@@ -1085,9 +1004,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Returns the region of interest in an ofxCvImage.
 
@@ -1095,16 +1012,14 @@ Returns the region of interest in an ofxCvImage.
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
-###const ofPixels & getRoiPixels()
+###ofPixels & getRoiPixels()
 
 <!--
 _syntax: getRoiPixels()_
 _name: getRoiPixels_
-_returns: const ofPixels &_
+_returns: ofPixels &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1118,7 +1033,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1156,6 +1070,41 @@ _advanced: False_
 
 _inlined_description: _
 
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofTexture & getTexture()
+
+<!--
+_syntax: getTexture()_
+_name: getTexture_
+_returns: ofTexture &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
 
 
 
@@ -1192,44 +1141,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###const ofTexture & getTexture()
-
-<!--
-_syntax: getTexture()_
-_name: getTexture_
-_returns: const ofTexture &_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
 
 
 
@@ -1273,13 +1184,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns the width of the image in pixels.
-
-
 
 
 
@@ -1313,15 +1220,11 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Flip the pixel values of the image.
 
 ![Inverting an image] (invert.png "Original on Left")
-
-
 
 
 
@@ -1348,7 +1251,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1392,13 +1294,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns whether the Region of Interests match position and dimension or not.
-
-
 
 
 
@@ -1432,13 +1330,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Flips the image horizontally and/or vertically.
-
-
 
 
 
@@ -1472,13 +1366,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Constructor.
-
-
 
 
 
@@ -1512,9 +1402,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Binary & (Logical AND http://en.wikipedia.org/wiki/Bitwise_operation) the pixel data of the right hand side image from the current image:
 
@@ -1529,8 +1417,6 @@ andPuppy &= cvPuppy; // will & all the bits
 ~~~~
 
 ![puppy AND](ANDoperation.png "Using the &= operation")
-
-
 
 
 
@@ -1564,17 +1450,13 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Multiplies the pixel data of the right hand side image from the current image:
 
 ~~~~{.cpp}
 first *= second; // both are ofxCvImage instances
 ~~~~
-
-
 
 
 
@@ -1608,17 +1490,13 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Adds the pixel data of the right hand side image from the current image:
 
 ~~~~{.cpp}
 first += second; // both are ofxCvImage instances
 ~~~~
-
-
 
 
 
@@ -1652,17 +1530,13 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Adds the pixel data of the right hand side image from the current image:
 
 ~~~~{.cpp}
 first += second; // both are ofxCvImage instances
 ~~~~
-
-
 
 
 
@@ -1696,17 +1570,13 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Subtracts the pixel data of the right hand side image from the current image:
 
 ~~~~{.cpp}
 first -= second; // both are ofxCvImage instances
 ~~~~
-
-
 
 
 
@@ -1740,17 +1610,13 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Subtracts the pixel data of the right hand side image from the current image:
 
 ~~~~{.cpp}
 first -= second; // both are ofxCvImage instances
 ~~~~
-
-
 
 
 
@@ -1784,13 +1650,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Copy a ofxCvGrayscaleImage into the current ofxCvImage.
-
-
 
 
 
@@ -1824,13 +1686,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Copy the image data of an ofxCvColorImage into the ofxCvImage instance.
-
-
 
 
 
@@ -1864,13 +1722,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Copy the image data ofxCvFloatImage into the ofxCvImage instance.
-
-
 
 
 
@@ -1904,13 +1758,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Copy the image data of a ofxCvShortImage into the ofxCvImage instance.
-
-
 
 
 
@@ -1937,7 +1787,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1981,7 +1830,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -2018,13 +1866,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Reset the anchor point of the image, i.e. the center point for rotations, 
-
-
 
 
 
@@ -2051,7 +1895,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2095,13 +1938,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Removes the region of interest from an ofxCvImage.
-
-
 
 
 
@@ -2135,13 +1974,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Resizes the image to the w.h passed in.
-
-
 
 
 
@@ -2175,13 +2010,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Rotates the image. This is different than the OpenGL rotate as it actually sets the pixel data, rather than just the posotion of the drawing.
-
-
 
 
 
@@ -2215,13 +2046,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Scales the image to the scaleX, scaleY passed in. This is different than the OpenGL rotate as it actually sets the pixel data, rather than just the posotion of the drawing.
-
-
 
 
 
@@ -2255,9 +2082,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Scales the image passed in to be the size of the current image, 
 
@@ -2271,8 +2096,6 @@ second.allocate(320, 240);
 second.scaleIntoMe(first); // first is now 320,240
 
 ~~~~
-
-
 
 
 
@@ -2306,13 +2129,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Set all the pixels in the image to the float value passed in. This is useful for blanking or filling an image quickly. the values are 1.0 to 255.0.
-
-
 
 
 
@@ -2346,13 +2165,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Set the anchor point of the image, i.e. the center point for rotations, at the percentage positions passed in.
-
-
 
 
 
@@ -2386,13 +2201,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Set the anchor point of the image, i.e. the center point for rotations, at the x,y passed in.
-
-
 
 
 
@@ -2426,13 +2237,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Set all the pixels in a ofxCvImage from a pointer to an array of unsigned char values, using the w and h parameters to determine the dimensions of the image.
-
-
 
 
 
@@ -2466,13 +2273,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Set all the pixels in a ofxCvImage from an ofPixels reference.
-
-
 
 
 
@@ -2499,7 +2302,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2543,13 +2345,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Sets the region of interest on the image.  Region of Interest is a rectangular area in an image, to segment object for further processing. Once the ROI is defined, OpenCV functions will operate on the ROI, reducing the number of pixels that the operation will examine.
-
-
 
 
 
@@ -2583,13 +2381,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Sets the region of interest on the image.  Region of Interest is a rectangular area in an image, to segment object for further processing. Once the ROI is defined, OpenCV functions will operate on the ROI, reducing the number of pixels that the operation will examine.
-
-
 
 
 
@@ -2623,13 +2417,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Set the Region Of Interest using a pointer to an unsigned char array and a w,h to define the area of the ROI
-
-
 
 
 
@@ -2663,13 +2453,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Set the Region Of Interest using an ofPixels reference The w,h of the ofPixels will define the area of the ROI
-
-
 
 
 
@@ -2703,13 +2489,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Sets whether the image is using a texture or not. If the image is not using a texture then calls to getTextureReference() will return null and the image cannot be drawn. This is handy if you know that you won't be displaying the image to the screen.
-
-
 
 
 
@@ -2743,9 +2525,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2781,13 +2561,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Transforms the image with the angle, scaling, and transformation passed in. This is different than the OpenGL rotate as it actually sets the pixel data, rather than just the posotion of the drawing.
-
-
 
 
 
@@ -2821,13 +2597,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Moves the image by the x,y amount passed in. This is different than the OpenGL rotate as it actually sets the pixel data, rather than just the posotion of the drawing.
-
-
 
 
 
@@ -2865,14 +2637,9 @@ _inlined_description: _
 
 
 
-
-
 _description: _
 
-
 The function cvUnDistortOnce corrects camera lens distortion for the image. It requires that you have an estimate of the camera distortion from a call to cvCalibrateCamera() or other calibration method.
-
-
 
 
 
@@ -2906,13 +2673,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Updates the texture of the ofxCvImage if it contains one. This is handy after you've changed the image pixel data and want it to be uploaded to the texture on the graphics card.
-
-
 
 
 
@@ -2939,7 +2702,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2983,15 +2745,11 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 This warps the image perspective to the four points passed in:
 
 ![Warping] (warpPerspective.png "Four corners for warping")
-
-
 
 
 
@@ -3025,13 +2783,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Destructor.
-
-
 
 
 
@@ -3060,8 +2814,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3088,8 +2846,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3116,8 +2878,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3144,8 +2910,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3172,8 +2942,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3200,8 +2974,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3228,8 +3006,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3256,8 +3038,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3284,8 +3070,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3312,8 +3102,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3340,8 +3134,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3368,8 +3166,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3396,8 +3198,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3424,8 +3230,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3452,8 +3262,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3480,8 +3294,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 

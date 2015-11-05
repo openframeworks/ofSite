@@ -108,10 +108,7 @@ stops the stream and cleans up its resources.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -148,10 +145,7 @@ Queries the stream's buffer size.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -182,8 +176,6 @@ _advanced: False_
 _inlined_description: _
 
 Retrieves a list of available audio devices
-
-
 
 
 
@@ -220,8 +212,6 @@ _advanced: False_
 _inlined_description: _
 
 Get all devices which match the arguments (name can be a partial match)
-
-
 
 
 
@@ -264,10 +254,7 @@ Queries the stream's number of input channels.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -304,10 +291,7 @@ Queries the stream's number of output channels.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -345,10 +329,7 @@ Queries the stream's sample rate
 
 
 
-
-
 _description: _
-
 
 
 
@@ -377,7 +358,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -429,8 +409,6 @@ following formula:
 
 
 
-
-
 _description: _
 
 
@@ -467,9 +445,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -500,8 +476,6 @@ _advanced: False_
 _inlined_description: _
 
 Prints a list of available audio devices to the console
-
-
 
 
 
@@ -543,8 +517,6 @@ sets the device represented by the stream, see ofSoundStream::getDeviceList().
 
 
 
-
-
 _description: _
 
 
@@ -581,10 +553,7 @@ sets the device represented by the stream, see ofSoundStream::getDeviceList().
 
 
 
-
-
 _description: _
-
 
 
 
@@ -620,10 +589,7 @@ Sets the object which will have audioIn() called when the device receives audio.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -659,10 +625,7 @@ Sets the object which will have audioIn() called when the device receives audio.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -698,10 +661,7 @@ Sets the object which will have audioOut() called when the device requests audio
 
 
 
-
-
 _description: _
-
 
 
 
@@ -737,10 +697,7 @@ Sets the object which will have audioOut() called when the device requests audio
 
 
 
-
-
 _description: _
-
 
 
 
@@ -769,7 +726,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -824,10 +780,7 @@ nBuffers number of buffers to queue. Less buffers will be more
 
 
 
-
-
 _description: _
-
 
 
 
@@ -873,10 +826,7 @@ nBuffers number of buffers to queue. Less buffers will be more
 
 
 
-
-
 _description: _
-
 
 
 
@@ -912,10 +862,7 @@ Starts a stream (note that setup() will start the stream on its own).
 
 
 
-
-
 _description: _
-
 
 
 
@@ -951,10 +898,7 @@ Stops the stream.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -985,8 +929,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 

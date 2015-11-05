@@ -136,13 +136,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Draws the detected contours at 0, 0.
-
-
 
 
 
@@ -176,13 +172,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Draws the detected contours into the coordintes passed in.
-
-
 
 
 
@@ -216,13 +208,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Draws the detected contours at the point passed in with the height and width, scaling as necessary.
-
-
 
 
 
@@ -256,13 +244,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Draws the detected contours at the point passed in.
-
-
 
 
 
@@ -296,13 +280,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Draws the detected contours into the ofRectangle passed in scaling if necessary.
-
-
 
 
 
@@ -336,9 +316,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 This function tries to find distinct regions (blobs) in the given ofxCvGrayscaleImage. It returns the number of blobs found.
 
@@ -365,8 +343,6 @@ This tells the contour finder to try to determine whether there are holes within
 bUseApproximation
 
 This tells the contour finder to use approximation and to set the minimum number of points needed to represent a certain blob; for instance, a straight line would be represented by only two points if bUseApproximation is set to true.
-
-
 
 
 
@@ -400,13 +376,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns the height of the area that detection is being performed upon.
-
-
 
 
 
@@ -440,13 +412,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns the height of the area that detection is being performed upon.
-
-
 
 
 
@@ -480,13 +448,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Constructor.
-
-
 
 
 
@@ -520,9 +484,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -558,13 +520,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Resets the anchor point, restoring it to 0,0.
-
-
 
 
 
@@ -598,13 +556,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Sets the anchor point as a percentage.
-
-
 
 
 
@@ -638,13 +592,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Sets an anchor point for the drawing. 
-
-
 
 
 
@@ -678,13 +628,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Destructor.
-
-
 
 
 
@@ -713,8 +659,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -741,8 +691,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -769,8 +723,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -797,8 +755,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -825,8 +787,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 The vector ofxCvBlob blobs returns each blob that was found in the image. These should, if all has gone well, correlate to the blobs in previous examples so that you can begin to perform tracking.
 
@@ -852,8 +818,6 @@ while( bit != contourFinder.blobs.end())
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
 ###CvMemStorage * contour_storage
@@ -873,8 +837,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -901,8 +869,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -929,8 +901,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -957,8 +933,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -985,8 +965,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 This is an int that returns the number of blobs found by the contour finder.
 
@@ -995,8 +979,6 @@ for (int i = 0; i < contourFinder.nBlobs; i++){
     contourFinder.blobs[i].draw(360,540);
 }
 ~~~~
-
-
 
 
 
@@ -1021,8 +1003,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 

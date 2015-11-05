@@ -40,10 +40,7 @@ Stops the sound stream and also cleans up the stream's resources
 
 
 
-
-
 _description: _
-
 
 
 
@@ -87,10 +84,7 @@ appPtr pointer to the app which will own the sound stream (optional).
 
 
 
-
-
 _description: _
-
 
 
 
@@ -133,10 +127,7 @@ nBuffers number of buffers to queue. Less buffers will be more responsive, but l
 
 
 
-
-
 _description: _
-
 
 
 
@@ -181,10 +172,7 @@ nBuffers number of buffers to queue. Less buffers will be more
 
 
 
-
-
 _description: _
-
 
 
 
@@ -219,10 +207,7 @@ Starts the sound stream (audioIn() / audioOut() will start being called)
 
 
 
-
-
 _description: _
-
 
 
 
@@ -258,10 +243,7 @@ Prints a list of all available audio devices
 
 
 
-
-
 _description: _
-
 
 
 
@@ -297,10 +279,43 @@ Prints a list of all available audio devices
 
 
 
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###vector< ofSoundDevice > ofSoundStreamStop()
+
+<!--
+_syntax: ofSoundStreamStop()_
+_name: ofSoundStreamStop_
+_returns: vector< ofSoundDevice >_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Prints a list of all available audio devices
+\return all sound devices found on the system
+
+
+
 
 
 _description: _
-
 
 
 

@@ -25,12 +25,12 @@ An abstract
 
 
 
-###const ofTexture & getTexture()
+###ofTexture & getTexture()
 
 <!--
 _syntax: getTexture()_
 _name: getTexture_
-_returns: const ofTexture &_
+_returns: ofTexture &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -45,10 +45,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
-Returns: a const reference to the ofTexture.
-
-
+Returns: a reference to the ofTexture.
 
 
 
@@ -84,10 +81,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
 Returns: a const reference to the ofTexture.
-
-
 
 
 
@@ -123,10 +117,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
 Returns: true if an internal ofTexture is being used.
-
-
 
 
 
@@ -171,10 +162,7 @@ bUseTex true if an ofTexture should be used.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -210,10 +198,7 @@ Destroy the ofBaseHasTexture.
 
 
 
-
-
 _description: _
-
 
 
 

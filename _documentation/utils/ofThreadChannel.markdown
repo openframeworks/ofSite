@@ -76,8 +76,6 @@ will return false.
 
 
 
-
-
 _description: _
 
 
@@ -113,8 +111,6 @@ Queries empty channel.
 This call is only an approximation, since messages come from a different
 thread the channel can return true when calling empty() and then receive
 a message right afterwards
-
-
 
 
 
@@ -156,8 +152,6 @@ ofThreadChannel must be instantiated with a template parameter such as:
 ~~~~{.cpp}
 	ofThreadChannel<ofPixels> myThreadChannel;
 ~~~~
-
-
 
 
 
@@ -227,6 +221,66 @@ Returns: True if a new value was received or false if the ofThreadChannel was cl
 
 
 
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool send(&value)
+
+<!--
+_syntax: send(&value)_
+_name: send_
+_returns: bool_
+_returns_description: _
+_parameters: const T &value_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Send a value to the receiver by making a copy.
+
+This method copies the contents of the sent value, leaving the original
+data unchanged.
+
+~~~~{.cpp}
+ofThreadChannel<ofPixels> myThreadChannel;
+
+// ofThreadChannel<ofPixels> initialized elsewhere.
+
+ofPixels myPixelsToSend;
+
+// Fill the pixels with valid data, an image for example.
+
+ofLoadImage(myPixelsToSend, "myImage.jpg");
+
+// Send `myPixelsToSend` by copying it. `myPixelsToSend` is still valid
+// after sending.
+if (myThreadChannel.send(myPixelsToSend)) {
+		// If true, `myPixelsToSend` was sent successfully.
+} else {
+		// If false, the thread channel was closed.
+}
+~~~~
+
+
+Returns: true if the value was sent successfully or false if the channel was closed.
+
+
+
 
 
 _description: _
@@ -291,77 +345,6 @@ if (myThreadChannel.send(std::move(myPixelsToSend))) {
 
 
 Returns: true if the value was sent successfully or false if the channel was closed.
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool send(&&value)
-
-<!--
-_syntax: send(&&value)_
-_name: send_
-_returns: bool_
-_returns_description: _
-_parameters: T &&value_
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Send a value to the receiver without making a copy.
-
-This method moves the contents of the sent value using `std::move`
-semantics. This avoids copying the data, but the original data data will
-be invalidated. Note that the original data will be invalideated even if
-the send fails because the channel is already closed.
-
-~~~~{.cpp}
-ofThreadChannel<ofPixels> myThreadChannel;
-
-// ofThreadChannel<ofPixels> initialized elsewhere.
-
-ofPixels myPixelsToSend;
-
-// Fill the pixels with valid data, an image for example.
-
-ofLoadImage(myPixelsToSend, "myImage.jpg");
-
-// Send `myPixelsToSend` by moving it. `myPixelsToSend` will no longer
-// be valid, even if the send fails because the channel is closed.
-if (myThreadChannel.send(std::move(myPixelsToSend))) {
-		// If true, `myPixelsToSend` was sent successfully.
-		// `myPixelsToSend` is no longer valid because it was moved.
-} else {
-		// If false, the thread channel was closed.
-		// `myPixelsToSend` is no longer valid because it was moved.
-}
-
-~~~~
-
-
-Returns: true if the value was sent successfully or false if the channel was closed.
-
-
 
 
 
@@ -430,8 +413,6 @@ Parameters:
 sentValue A reference to a sent value.
 
 Returns: True if a new value was received or false if the ofThreadChannel was closed.
-
-
 
 
 
@@ -507,8 +488,6 @@ Returns: True if a new value was received or false if the ofThreadChannel was cl
 
 
 
-
-
 _description: _
 
 
@@ -541,6 +520,10 @@ _inlined_description: _
 
 True if the channel is closed.
 
+
+
+
+
 _description: _
 
 
@@ -568,6 +551,10 @@ _advanced: False_
 _inlined_description: _
 
 The condition even to notify receivers.
+
+
+
+
 
 _description: _
 
@@ -597,6 +584,10 @@ _inlined_description: _
 
 The mutext to protect the data.
 
+
+
+
+
 _description: _
 
 
@@ -624,6 +615,10 @@ _advanced: False_
 _inlined_description: _
 
 The FIFO data queue.
+
+
+
+
 
 _description: _
 

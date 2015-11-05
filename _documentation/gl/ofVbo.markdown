@@ -170,13 +170,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 This is for advanced users who might want to use ways of drawing other than draw() or drawElements(), it simply binds all the arrays for the VBO.
-
-
 
 
 
@@ -210,13 +206,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 This erases your VBO data from your graphics card, but not the VBO itself, so you can fill it with data again.
-
-
 
 
 
@@ -243,7 +235,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -287,9 +278,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -325,9 +314,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -363,9 +350,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -401,9 +386,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -439,9 +422,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -477,9 +458,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -515,9 +494,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -553,9 +530,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -591,9 +566,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -629,9 +602,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 This method allows you to draw your VBO but unlike drawElements() ignores any indices that you might have set up. This is an important distinction between the two methods.
 mode
@@ -640,8 +611,6 @@ first
 Specifies the starting index in the enabled arrays.
 total
 Specifies the number of indices to be rendered. This last part is pretty important: if you have more indices than vertices you'll want to make sure that you pass the number of indices, not the number of vertices.
-
-
 
 
 
@@ -668,7 +637,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -712,9 +680,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -750,9 +716,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -788,9 +752,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -826,9 +788,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -864,9 +824,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -902,9 +860,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofBufferObject & getAttributeBuffer(location)
+
+<!--
+_syntax: getAttributeBuffer(location)_
+_name: getAttributeBuffer_
+_returns: ofBufferObject &_
+_returns_description: _
+_parameters: int location_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -933,44 +925,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###const ofBufferObject & getAttributeBuffer(location)
-
-<!--
-_syntax: getAttributeBuffer(location)_
-_name: getAttributeBuffer_
-_returns: const ofBufferObject &_
-_returns_description: _
-_parameters: int location_
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
 
 
 
@@ -1014,6 +968,40 @@ returns OpenGL memory object id for GL buffer holding attribute data
 
 
 
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofBufferObject & getColorBuffer()
+
+<!--
+_syntax: getColorBuffer()_
+_name: getColorBuffer_
+_returns: ofBufferObject &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
 
 
 _description: _
@@ -1045,44 +1033,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###const ofBufferObject & getColorBuffer()
-
-<!--
-_syntax: getColorBuffer()_
-_name: getColorBuffer_
-_returns: const ofBufferObject &_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
 
 
 
@@ -1126,9 +1076,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofBufferObject & getIndexBuffer()
+
+<!--
+_syntax: getIndexBuffer()_
+_name: getIndexBuffer_
+_returns: ofBufferObject &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1157,44 +1141,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###const ofBufferObject & getIndexBuffer()
-
-<!--
-_syntax: getIndexBuffer()_
-_name: getIndexBuffer_
-_returns: const ofBufferObject &_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
 
 
 
@@ -1238,9 +1184,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1276,9 +1220,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Returns whether the ofVbo has been allocated or not. This is important to check before you start drawing or manipulating the vbo.
 
@@ -1286,16 +1228,14 @@ Returns whether the ofVbo has been allocated or not. This is important to check 
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
-###const ofBufferObject & getNormalBuffer()
+###ofBufferObject & getNormalBuffer()
 
 <!--
 _syntax: getNormalBuffer()_
 _name: getNormalBuffer_
-_returns: const ofBufferObject &_
+_returns: ofBufferObject &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1309,7 +1249,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1346,7 +1285,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1390,9 +1328,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1428,9 +1364,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1466,9 +1400,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1504,6 +1436,41 @@ _inlined_description: _
 
 
 
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofBufferObject & getTexCoordBuffer()
+
+<!--
+_syntax: getTexCoordBuffer()_
+_name: getTexCoordBuffer_
+_returns: ofBufferObject &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
 
 _description: _
 
@@ -1534,44 +1501,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###const ofBufferObject & getTexCoordBuffer()
-
-<!--
-_syntax: getTexCoordBuffer()_
-_name: getTexCoordBuffer_
-_returns: const ofBufferObject &_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
 
 
 
@@ -1615,9 +1544,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1653,13 +1580,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns whether the vertices within the VBO have colors associated with them or not.
-
-
 
 
 
@@ -1693,13 +1616,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns whether the VBO has assigned indices or not.
-
-
 
 
 
@@ -1733,13 +1652,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns whether the surfaces of the VBO have normals associated with them or not.
-
-
 
 
 
@@ -1773,13 +1688,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns whether the vertices of the VBO have texture coordinates associated with them or not.
-
-
 
 
 
@@ -1813,13 +1724,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns whether the ofVbo is using vertices or not. A VBO can exist without vertices, though it's quite unusual.
-
-
 
 
 
@@ -1846,7 +1753,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1890,9 +1796,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofBufferObject & getVertexBuffer()
+
+<!--
+_syntax: getVertexBuffer()_
+_name: getVertexBuffer_
+_returns: ofBufferObject &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1921,44 +1861,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###const ofBufferObject & getVertexBuffer()
-
-<!--
-_syntax: getVertexBuffer()_
-_name: getVertexBuffer_
-_returns: const ofBufferObject &_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
 
 
 
@@ -2002,7 +1904,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 
@@ -2039,13 +1940,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Simple constructor for the ofVbo. When the ofVbo is first created there are no vertices or normals within it.
-
-
 
 
 
@@ -2079,9 +1976,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 This is the copy constructor, so that you can do the following:
 
@@ -2090,8 +1985,6 @@ ofVbo v1;
 // filll v1;
 ofVbo v2(v1); // v2 now contains all of v1s properties in a separate VBO
 ~~~~
-
-
 
 
 
@@ -2125,9 +2018,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 This is the equals operator, so that you can do the following:
 
@@ -2136,8 +2027,6 @@ ofVbo v1;
 // filll v1;
 ofVbo v2 = v1; // v2 now contains all of v1s properties in a separate VBO
 ~~~~
-
-
 
 
 
@@ -2164,7 +2053,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2208,9 +2096,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2250,8 +2136,6 @@ and https://www.opengl.org/sdk/docs/man4/html/glVertexAttribDivisor.xhtml
 
 
 
-
-
 _description: _
 
 
@@ -2281,7 +2165,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2325,9 +2208,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 This allows you to set the colors for a vertex using an array of ofFloatColor instances.
 
@@ -2338,8 +2219,6 @@ vbo.setColorData( &c[0], 12, GL_STATIC_DRAW );
 ~~~~
 
 The possible options for usage are: GL_STREAM_DRAW, GL_STREAM_READ, GL_STREAM_COPY, GL_STATIC_DRAW, GL_STATIC_READ, GL_STATIC_COPY, GL_DYNAMIC_DRAW, GL_DYNAMIC_READ, or GL_DYNAMIC_COPY
-
-
 
 
 
@@ -2373,15 +2252,11 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 This sets the color data for the ofVbo from a pointer to an array of floats. The colors are RGB and are floats from 0.f - 1.f
 
 The possible options for usage are: GL_STREAM_DRAW, GL_STREAM_READ, GL_STREAM_COPY, GL_STATIC_DRAW, GL_STATIC_READ, GL_STATIC_COPY, GL_DYNAMIC_DRAW, GL_DYNAMIC_READ, or GL_DYNAMIC_COPY
-
-
 
 
 
@@ -2408,7 +2283,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2452,15 +2326,11 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 This sets the index data for the VBO from a pointer to an array of ints. Each int represents the index of a vertex, and when the vbo is drawn the indices are used to generate the geometry from the indices.
 
 The possible options for usage are: GL_STREAM_DRAW, GL_STREAM_READ, GL_STREAM_COPY, GL_STATIC_DRAW, GL_STATIC_READ, GL_STATIC_COPY, GL_DYNAMIC_DRAW, GL_DYNAMIC_READ, or GL_DYNAMIC_COPY
-
-
 
 
 
@@ -2494,9 +2364,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 This allows you to pass a mesh to the ofVbo and populate the vertices, texture coordinates, and other properties of the VBO from the ofMesh instance. You can think of this as essentially moving geometry data from the CPU to the GPU.
 
@@ -2509,8 +2377,6 @@ vbo.setMesh(mesh, GL_STATIC_DRAW);
 ~~~~
 
 The possible options for usage are: GL_STREAM_DRAW, GL_STREAM_READ, GL_STREAM_COPY, GL_STATIC_DRAW, GL_STATIC_READ, GL_STATIC_COPY, GL_DYNAMIC_DRAW, GL_DYNAMIC_READ, or GL_DYNAMIC_COPY
-
-
 
 
 
@@ -2544,9 +2410,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2575,7 +2439,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2619,9 +2482,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 This sets the normal data for the VBO from a pointer to an array of ofVec3f instances. The normals are calculated as the vector perpendicular to a face. The mathematical definition of a normal is shown on the left, while the way that a normal is calculated for a triangle is shown on the right.
 
@@ -2657,8 +2518,6 @@ The possible options for usage are: GL_STREAM_DRAW, GL_STREAM_READ, GL_STREAM_CO
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
 ###void setNormalData(*normal0x, total, usage, stride = 0)
@@ -2687,15 +2546,11 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 This sets the normals data for the ofVbo from a pointer to an array of floats, x,y,z, for each face, so a 3D cube would require an array of 18 floats, 3 for each face.
 
 The possible options for usage are: GL_STREAM_DRAW, GL_STREAM_READ, GL_STREAM_COPY, GL_STATIC_DRAW, GL_STATIC_READ, GL_STATIC_COPY, GL_DYNAMIC_DRAW, GL_DYNAMIC_READ, or GL_DYNAMIC_COPY
-
-
 
 
 
@@ -2722,7 +2577,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2766,15 +2620,11 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 This sets the texture coordinate data for the VBO from a pointer to an array of ofVec2f instances. Each ofVec2f represents the texture coordinate of a vertex. By default OF uses ARB coords, so you can use pixel coordinates rather than normalized UV coordinates.
 
 The possible options for usage are: GL_STREAM_DRAW, GL_STREAM_READ, GL_STREAM_COPY, GL_STATIC_DRAW, GL_STATIC_READ, GL_STATIC_COPY, GL_DYNAMIC_DRAW, GL_DYNAMIC_READ, or GL_DYNAMIC_COPY
-
-
 
 
 
@@ -2808,15 +2658,11 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 This sets the texCoord data for the ofVbo from a pointer to an array of floats, ST, for each face, so a 3D cube would require an array of 16 floats, 2 for each vertex.
 
 The possible options for usage are: GL_STREAM_DRAW, GL_STREAM_READ, GL_STREAM_COPY, GL_STATIC_DRAW, GL_STATIC_READ, GL_STATIC_COPY, GL_DYNAMIC_DRAW, GL_DYNAMIC_READ, or GL_DYNAMIC_COPY
-
-
 
 
 
@@ -2843,7 +2689,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -2887,15 +2732,11 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 This sets the vertex data for the ofVbo from a pointer to an array of ofVec3f instances. This creates a 3D vbo.
 
 The possible options for usage are: GL_STREAM_DRAW, GL_STREAM_READ, GL_STREAM_COPY, GL_STATIC_DRAW, GL_STATIC_READ, GL_STATIC_COPY, GL_DYNAMIC_DRAW, GL_DYNAMIC_READ, or GL_DYNAMIC_COPY
-
-
 
 
 
@@ -2929,15 +2770,11 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 This sets the vertex data for the ofVbo from a pointer to an array of ofVec2f instances. This creates a 2D vbo.
 
 The possible options for usage are: GL_STREAM_DRAW, GL_STREAM_READ, GL_STREAM_COPY, GL_STATIC_DRAW, GL_STATIC_READ, GL_STATIC_COPY, GL_DYNAMIC_DRAW, GL_DYNAMIC_READ, or GL_DYNAMIC_COPY
-
-
 
 
 
@@ -2971,15 +2808,11 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 This sets the vertex data for the ofVbo from a pointer to an array of floats. The numCoords determines whether you're creating a 3D or 2D vbo, i.e. a 3D cube would require an array of 24 floats, and numCoords to be 8.
 
 The possible options for usage are: GL_STREAM_DRAW, GL_STREAM_READ, GL_STREAM_COPY, GL_STATIC_DRAW, GL_STATIC_READ, GL_STATIC_COPY, GL_DYNAMIC_DRAW, GL_DYNAMIC_READ, or GL_DYNAMIC_COPY
-
-
 
 
 
@@ -3013,13 +2846,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 This is for advanced users who might want to use ways of drawing other than draw() or drawElements(), it simply unbinds all the arrays for the VBO.
-
-
 
 
 
@@ -3053,9 +2882,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -3091,13 +2918,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 If the color data for each vertex of the VBO have been declared as GL_DYNAMIC_DRAW, then you can update the vertex colors at any time.
-
-
 
 
 
@@ -3131,13 +2954,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 If the vertex colors of the VBO have been declared as GL_DYNAMIC_DRAW, then you can update the colors at any time using an array of floats.
-
-
 
 
 
@@ -3171,13 +2990,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 If the indices of the VBO have been declared as GL_DYNAMIC_DRAW, then you can update the indices at any time.
-
-
 
 
 
@@ -3211,13 +3026,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Updates all the data within the VBO from the data in the ofMesh.
-
-
 
 
 
@@ -3251,13 +3062,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 If the normals of the VBO have been declared as GL_DYNAMIC_DRAW, then you can update the normals at any time.
-
-
 
 
 
@@ -3291,13 +3098,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 If the normals of the VBO have been declared as GL_DYNAMIC_DRAW, then you can update the normal data at any time using an array of floats.
-
-
 
 
 
@@ -3331,13 +3134,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 If the texture coordinates of the VBO have been declared as GL_DYNAMIC_DRAW, then you can update the texcoords at any time.
-
-
 
 
 
@@ -3371,13 +3170,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 If the texture coords of the VBO have been declared as GL_DYNAMIC_DRAW, then you can update the tex coords at any time using an array of floats.
-
-
 
 
 
@@ -3411,13 +3206,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 If the vertices of the VBO have been declared as GL_DYNAMIC_DRAW, then you can update the vertices at any time.
-
-
 
 
 
@@ -3451,13 +3242,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 If the vertices of the VBO have been declared as GL_DYNAMIC_DRAW, then you can update the vertices at any time.
-
-
 
 
 
@@ -3491,13 +3278,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 If the vertices of the VBO have been declared as GL_DYNAMIC_DRAW, then you can update the indices at any time using an array of floats.
-
-
 
 
 
@@ -3531,13 +3314,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 This is the destructor for the ofVbo, it clears all the vertices, texture coordinates, and normals from the graphics card.
-
-
 
 
 
@@ -3566,8 +3345,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3594,8 +3377,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3622,8 +3409,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3650,8 +3441,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3678,8 +3473,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3704,6 +3503,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _
@@ -3733,6 +3537,11 @@ _advanced: False_
 _inlined_description: _
 
 
+
+
+
+
+
 _description: _
 
 
@@ -3758,6 +3567,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _
@@ -3787,6 +3601,11 @@ _advanced: False_
 _inlined_description: _
 
 
+
+
+
+
+
 _description: _
 
 
@@ -3812,6 +3631,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _
@@ -3841,6 +3665,11 @@ _advanced: False_
 _inlined_description: _
 
 
+
+
+
+
+
 _description: _
 
 
@@ -3868,8 +3697,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3896,8 +3729,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3924,8 +3761,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3952,8 +3793,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -3980,8 +3825,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -4006,6 +3855,11 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
+
+
+
+
 
 
 _description: _

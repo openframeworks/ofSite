@@ -52,10 +52,7 @@ void ofApp::setup(){
 
 
 
-
-
 _description: _
-
 
 
 
@@ -90,9 +87,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -127,9 +122,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -212,10 +205,7 @@ void ofApp::draw(){
 
 
 
-
-
 _description: _
-
 
 
 
@@ -255,10 +245,7 @@ void ofApp::setup(){
 
 
 
-
-
 _description: _
-
 
 Sets the background color using a hex color value.
 ~~~~{.cpp}
@@ -266,8 +253,6 @@ void ofApp::setup(){
     ofBackgroundHex(0xff0000);  // Sets the background color to red
 }
 ~~~~
-
-
 
 
 
@@ -315,10 +300,7 @@ ofEndShape();
 
 
 
-
-
 _description: _
-
 
 Call this to start drawing a new shape. Needs to be followed by a list of vertex points and lastly a call to ofEndShape().
 ~~~~{.cpp}
@@ -332,8 +314,6 @@ ofBeginShape();
   ofVertex(250,25);
 ofEndShape();
 ~~~~
-
-
 
 
 
@@ -367,14 +347,9 @@ between ofBeginShape() and ofEndShape().
 
 
 
-
-
 _description: _
 
-
 Describes a bezier curve through three points of a shape. To be called between ofBeginShape() and ofEndShape().
-
-
 
 
 
@@ -407,9 +382,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -444,9 +417,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -514,10 +485,7 @@ ofClear() is based on [glClear][2].
 
 
 
-
-
 _description: _
-
 
 Clears the color and depth bits of current renderer and replaces it with an RGB color.
 
@@ -547,8 +515,6 @@ void ofApp::draw() {
 ~~~~
 
 ofClear(…) is based on glClear (http://www.opengl.org/sdk/docs/man/xhtml/glClear.xml).
-
-
 
 
 
@@ -589,10 +555,7 @@ void ofApp::draw(){
 
 
 
-
-
 _description: _
-
 
 Clears the color and depth bits of current renderer and replaces it with a grayscale value.
 
@@ -604,8 +567,6 @@ void ofApp::draw(){
     // Clears current screen and replaces it with a grayscale value.
 }
 ~~~~
-
-
 
 
 
@@ -647,10 +608,7 @@ void ofApp::draw(){
 
 
 
-
-
 _description: _
-
 
 Clears the color and depth bits of current renderer and replaces it with an ofColor.
 
@@ -662,8 +620,6 @@ void ofApp::draw(){
     // Clears current screen and replaces it with myColor.
 }
 ~~~~
-
-
 
 
 
@@ -696,9 +652,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -738,14 +692,9 @@ This function has to be called between ofBeginShape() and ofEndShape().
 
 
 
-
-
 _description: _
 
-
 Specifies a single point of a shape. The difference from ofVertex is that the line describing the edge of the shape between two points will be a curve as opposed to a straight line. The curve is automatically generated using the catmull from formula. To be called between ofBeginShape() and ofEndShape().
-
-
 
 
 
@@ -778,9 +727,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -815,9 +762,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -853,14 +798,9 @@ ofPoints. Should be called between ofBeginShape() and ofEndShape().
 
 
 
-
-
 _description: _
 
-
 Draws a curve through a series of vertices stored as a vector of ofPoints. Should be called between ofBeginShape() and ofEndShape().
-
-
 
 
 
@@ -904,10 +844,7 @@ void ofApp::draw(){
 
 
 
-
-
 _description: _
-
 
 Turns off alpha blending.
 ~~~~{.cpp}
@@ -919,8 +856,6 @@ void ofApp::draw(){
     ofRect(120,20,100,100); // draws the rect without alpha
 }
 ~~~~
-
-
 
 
 
@@ -953,14 +888,9 @@ Turns off anti-aliasing (smoothing).
 
 
 
-
-
 _description: _
 
-
 Turns off anti-aliasing (smoothing).
-
-
 
 
 
@@ -993,14 +923,9 @@ Disable the current blend mode.
 
 
 
-
-
 _description: _
 
-
 Disables the current blend mode.
-
-
 
 
 
@@ -1062,10 +987,7 @@ void ofApp::draw(){
 
 
 
-
-
 _description: _
-
 
 Turns off depth testing so rendering happens in draw order rather than by z-depth. Turning off depth test is useful for combining 3d scenes with 2d overlays such as a control panel.
 ~~~~{.cpp}
@@ -1090,8 +1012,6 @@ void ofApp::draw(){
     ofPopMatrix();
 }
 ~~~~
-
-
 
 
 
@@ -1124,14 +1044,9 @@ Turn off point sprites
 
 
 
-
-
 _description: _
 
-
 Turns off point sprite.
-
-
 
 
 
@@ -1166,51 +1081,9 @@ smoothing effects on filled shapes.
 
 
 
-
-
 _description: _
-
 
 Turns off smoothing. Currently, this only works for lines. You can draw a filled object, and then draw the outline with smoothing enabled to get smoothing effects on filled shapes.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofbClearBg()
-
-<!--
-_syntax: ofbClearBg()_
-_name: ofDrawBitmapString_
-_returns: void_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
 
 
 
@@ -1243,9 +1116,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1280,9 +1151,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1329,10 +1198,7 @@ void ofApp::draw(){
 
 
 
-
-
 _description: _
-
 
 Turns on alpha blending (which is on by default since OF version 0.8.0). It simply wraps opengl commands that enable blending, and turn on a common blend mode.
 ~~~~{.cpp}
@@ -1344,8 +1210,6 @@ void ofApp::draw(){
     ofRect(120,20,100,100); // draws the rect without alpha
 }
 ~~~~
-
-
 
 
 
@@ -1378,14 +1242,9 @@ Enables anti-aliasing (smoothing) for lines.
 
 
 
-
-
 _description: _
 
-
 Enables anti-aliasing (smoothing) for lines.
-
-
 
 
 
@@ -1427,10 +1286,7 @@ There is a blendingExample in the openFrameworks examples > graphics
 
 
 
-
-
 _description: _
-
 
 Sets and enables the blend mode for drawing. The options are:
 
@@ -1441,8 +1297,6 @@ Sets and enables the blend mode for drawing. The options are:
     OF_BLENDMODE_MULTIPLY
     OF_BLENDMODE_SCREEN
 There is a blendingExample in the openFrameworks examples > graphics
-
-
 
 
 
@@ -1478,10 +1332,7 @@ than draw order.
 
 
 
-
-
 _description: _
-
 
 Turns on depth testing so rendering happens according to z-depth rather than draw order.
 ~~~~{.cpp}
@@ -1507,8 +1358,6 @@ void ofApp::draw(){
     ofPopMatrix();
 }
 ~~~~
-
-
 
 
 
@@ -1545,14 +1394,9 @@ texture is not shown correctly. You can change point size by
 
 
 
-
-
 _description: _
 
-
 Turns on point sprite. Textures can be mapped onto points. By default, point size is 1pt. So texture is not shown correctly. You can change point size by glPointSize(GLfloat size).
-
-
 
 
 
@@ -1585,13 +1429,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Turns on smoothing. Currently, this only works for lines. You can draw a filled object, and then draw the outline with smoothing enabled to get smoothing effects on filled shapes.
-
-
 
 
 
@@ -1625,10 +1465,7 @@ Terminates draw to PDF through ofCairoRenderer and outputs the file.
 
 
 
-
-
 _description: _
-
 
 Terminates draw to pdf through ofCairoRenderer and outputs the pdf file.
 ~~~~{.cpp}
@@ -1645,8 +1482,6 @@ void ofApp::setup(){
     }
 }
 ~~~~
-
-
 
 
 
@@ -1687,14 +1522,9 @@ shape for you. Default false.
 
 
 
-
-
 _description: _
 
-
 This tells the program that your shape is finished and that it should now draw it to the screen. If you set the optional 'bClose' argument to true it will automatically close your shape for you.'bClose' is set to false by default. This function must be called otherwise you will not see your shape.
-
-
 
 
 
@@ -1734,10 +1564,7 @@ void ofApp::draw(){
 
 
 
-
-
 _description: _
-
 
 Draw shapes filled with the current draw color.
 ~~~~{.cpp}
@@ -1747,8 +1574,6 @@ void ofApp::draw(){
     ofRect(10,10,100,100);  //draws the rectangle filled in blue
 }
 ~~~~
-
-
 
 
 
@@ -1781,9 +1606,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1818,10 +1641,7 @@ Query the current (oF internal) Transformation Matrix state.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1858,10 +1678,7 @@ Returns: A rectangle describing the viewport
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1896,9 +1713,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1935,10 +1750,7 @@ Returns: A rectangle describing the viewport
 
 
 
-
-
 _description: _
-
 
 
 
@@ -1988,10 +1800,7 @@ void ofApp::draw(){
 
 
 
-
-
 _description: _
-
 
 Tells you if rect drawing mode is set to drawn from the center or drawn from the top left corner, as set with the ofSetRectMode() function.
 ~~~~{.cpp}
@@ -2004,8 +1813,6 @@ void ofApp::draw(){
     }
 }
 ~~~~
-
-
 
 
 
@@ -2038,9 +1845,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2077,10 +1882,7 @@ Returns: A height in pixels
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2117,10 +1919,7 @@ Returns: A width in pixels
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2155,10 +1954,7 @@ Get if view is flipped vertically
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2193,9 +1989,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2230,9 +2024,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2267,9 +2059,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2304,9 +2094,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2348,14 +2136,9 @@ automatically closed. Default false
 
 
 
-
-
 _description: _
 
-
 Allows you to draw multiple contours within one shape. Call this between ofBeginShape() and ofEndShape() to create a new contour for your shape. If you set the optional argument 'bClose' to true then the previous contour will be automatically closed. 'bClose' is set to false by default.
-
-
 
 
 
@@ -2395,10 +2178,7 @@ void ofApp::draw(){
 
 
 
-
-
 _description: _
-
 
 Draw shapes as outlines with the current draw color.
 ~~~~{.cpp}
@@ -2408,8 +2188,6 @@ void ofApp::draw(){
     ofRect(10,10,100,100);  //draws only the outline in blue
 }
 ~~~~
-
-
 
 
 
@@ -2442,9 +2220,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2481,10 +2257,7 @@ Restores the prior coordinate system.
 
 
 
-
-
 _description: _
-
 
 ofPopMatrix() restores the prior coordinate system.
 ~~~~{.cpp}
@@ -2496,8 +2269,6 @@ void ofApp::draw(){
     ofPopMatrix();          // recall the pushed coordinate position
 }
 ~~~~
-
-
 
 
 
@@ -2532,10 +2303,7 @@ Restores the prior style settings. It needs to be called after ofPushStyle.
 
 
 
-
-
 _description: _
-
 
 ofPopStyle() restores the prior style settings. It needs to be called after ofPushStyle.
 ~~~~{.cpp}
@@ -2548,8 +2316,6 @@ void ofApp::draw(){
     ofPopStyle();   // recall the pushed style
 }
 ~~~~
-
-
 
 
 
@@ -2582,9 +2348,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2631,10 +2395,7 @@ void ofApp::draw(){
 
 
 
-
-
 _description: _
-
 
 ofPushMatrix saves the current coordinate system allowing users to develop specific movements in some graphic objects. ofPopMatrix needs to be called after.
 In the following example we only rotate the square.
@@ -2647,8 +2408,6 @@ void ofApp::draw(){
     ofPopMatrix()           // recall the pushed coordinate position
 }
 ~~~~
-
-
 
 
 
@@ -2698,10 +2457,7 @@ sa ofPopStyle()
 
 
 
-
-
 _description: _
-
 
 ofPushStyle saves the current style settings for the ofGraphics after its call. Usage of ofPushStyle and ofPopStyle allow users to have more control of certain graphics elements. All the style that applies to certain elements is controled using ofStyle class. See ofStyle type.
 In the following example the properties of being red and filled only applies to the ellipse:
@@ -2715,8 +2471,6 @@ void ofApp::draw(){
     ofPopStyle();   // recall the pushed style
 }
 ~~~~
-
-
 
 
 
@@ -2751,10 +2505,7 @@ _inlined_description: _
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2805,10 +2556,7 @@ vecZ specifies the z coordinates of a vector
 
 
 
-
-
 _description: _
-
 
 ofRotate produces a rotation of angle "degrees" around the vector (vecX,vecY,vecZ).
 "degrees"specifies the angle of rotation, in degrees. vecX, vecY, vecZ specify the x, y, and z coordinates of a vector, respectively.
@@ -2819,8 +2567,6 @@ void ofApp::draw(){
     ofRect(20,20,100,100);
 }
 ~~~~
-
-
 
 
 
@@ -2853,10 +2599,7 @@ Rotate around the z-axis
 
 
 
-
-
 _description: _
-
 
 
 
@@ -2901,10 +2644,7 @@ degrees Specifies the angle of rotation, in degrees.
 
 
 
-
-
 _description: _
-
 
 ofRotateX produces a rotation of angle "degrees" around the X-axis of our coordinate system represented by the vector (1,0,0)."degrees"specifies the angle of rotation, in degrees.
 ~~~~{.cpp}
@@ -2913,8 +2653,6 @@ void ofApp::draw(){
     ofRect(20,20,100,100);
 }
 ~~~~
-
-
 
 
 
@@ -2957,10 +2695,7 @@ degrees Specifies the angle of rotation, in degrees.
 
 
 
-
-
 _description: _
-
 
 ofRotateY produces a rotation of angle "degrees" around the Y-axis of our coordinate system represented by the vector (0,1,0).
 "degrees"specifies the angle of rotation, in degrees.
@@ -2970,8 +2705,6 @@ void ofApp::draw(){
     ofRect(20,20,100,100);
 }
 ~~~~
-
-
 
 
 
@@ -3014,10 +2747,7 @@ degrees Specifies the angle of rotation, in degrees.
 
 
 
-
-
 _description: _
-
 
 ofRotateZ produces a rotation of angle "degrees" around the Z-axis of our coordinate system represented by the vector (0,0,1).
 "degrees"specifies the angle of rotation, in degrees.
@@ -3027,8 +2757,6 @@ void ofApp::draw(){
     ofRect(20,20,100,100);
 }
 ~~~~
-
-
 
 
 
@@ -3061,9 +2789,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 ofScale produces a nonuniform scaling along the x, y, and z axes. The three parameters xAmnt, yAmnt and zAmnt indicate the desired scale factor along each of the three axes.
 e.g:
@@ -3074,8 +2800,6 @@ void ofApp::draw(){
 }
 ~~~~
 Rectangle width will be now 20px heigh!
-
-
 
 
 
@@ -3122,10 +2846,7 @@ void ofApp::draw(){
 
 
 
-
-
 _description: _
-
 
 Sets the background clearing function to be auto (default) or not. If non-auto, then background clearing will not occur per frame (at the start of draw) but rather, whenever ofBackground is called.
 ~~~~{.cpp}
@@ -3139,8 +2860,6 @@ void ofApp::draw(){
     }
 }
 ~~~~
-
-
 
 
 
@@ -3183,10 +2902,7 @@ void ofApp::setup(){
 
 
 
-
-
 _description: _
-
 
 Sets the background color. It takes as input r,g,b (0-255). The background is cleared automatically, just before the draw() command, so if the background color is not changing, you could call this inside of setup() (once, at the start of the application). If the background color is changing, you can call this inside of update().
 ~~~~{.cpp}
@@ -3194,8 +2910,6 @@ void ofApp::setup(){
     ofSetBackgroundColor(255,0,0);  // Sets the background color to red
 }
 ~~~~
-
-
 
 
 
@@ -3228,9 +2942,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -3265,9 +2977,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -3307,10 +3017,7 @@ void ofApp::setup(){
 
 
 
-
-
 _description: _
-
 
 Sets the background color using a hex color value.
 ~~~~{.cpp}
@@ -3318,8 +3025,6 @@ void ofApp::setup(){
     ofSetBackgroundColorHex(0xff0000);  // Sets the background color to red
 }
 ~~~~
-
-
 
 
 
@@ -3364,10 +3069,7 @@ void ofApp::draw(){
 
 
 
-
-
 _description: _
-
 
 Sets the resolution for the ofCircle command. By default, the circle is 22 points, but if you need to draw larger circles, you can adjust the resolution using this command. all circles are cached in opengl using a display list for optimization purposes.
 ~~~~{.cpp}
@@ -3378,8 +3080,6 @@ void ofApp::draw(){
     ofCircle(450,150,100);          //draws a fine circle
 }
 ~~~~
-
-
 
 
 
@@ -3422,10 +3122,7 @@ void ofApp::draw(){
 
 
 
-
-
 _description: _
-
 
 Sets the draw color with r,g,b, 0-255. For example, red (0xff0000) would be: ofSetColor(255,0,0). This affects not only the color of shapes drawn with ofRect(...), ofCircle(...), etc, but also the tint of images and textures.
 ~~~~{.cpp}
@@ -3434,8 +3131,6 @@ void ofApp::draw(){
     ofRect(10,10,100,100);
 }
 ~~~~
-
-
 
 
 
@@ -3481,10 +3176,7 @@ void ofApp::draw(){
 
 
 
-
-
 _description: _
-
 
 sets the draw color with r,g,b,a 0-255. For alpha (transparency), you must first enable transparent blending (turned off by default for performance reasons), and draw in the proper z-order (objects in the back drawn first). For example, to draw a transparent red rectangle:
 ~~~~{.cpp}
@@ -3495,8 +3187,6 @@ void ofApp::draw(){
     ofDisableAlphaBlending();   // turn it back off, if you don't need it
 }
 ~~~~
-
-
 
 
 
@@ -3529,9 +3219,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Sets the draw color with r,g,b, passed in as a hex. Hex is a conventient way to write colors. Some examples:
 ~~~~{.cpp}
@@ -3541,8 +3229,6 @@ void ofApp::draw(){
     ofSetColor(0x00ff00);  // green  (0,255,0);
 }
 ~~~~
-
-
 
 
 
@@ -3575,9 +3261,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -3612,9 +3296,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -3649,9 +3331,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -3686,9 +3366,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -3724,14 +3402,9 @@ or draw order (`false`).
 
 
 
-
-
 _description: _
 
-
 Set depth testing on or off to either sort by z-depth (true) or draw order (false).
-
-
 
 
 
@@ -3772,14 +3445,9 @@ Valid modes:
 
 
 
-
-
 _description: _
 
-
 takes OF_BITMAPMODE_SIMPLE, OF_BITMAPMODE_SCREEN, OF_BITMAPMODE_VIEWPORT, OF_BITMAPMODE_MODEL and OF_BITMAPMODE_MODEL_BILLBOARD
-
-
 
 
 
@@ -3821,10 +3489,7 @@ void ofApp::draw(){
 
 
 
-
-
 _description: _
-
 
 Sets the draw color with a hex value.
 ~~~~{.cpp}
@@ -3833,8 +3498,6 @@ void ofApp::draw(){
     ofRect(10,10,100,100);
 }
 ~~~~
-
-
 
 
 
@@ -3875,10 +3538,7 @@ void ofApp::draw(){
 
 
 
-
-
 _description: _
-
 
 ofSetLineWidth sets the width of the ofLines called after.
 ~~~~{.cpp}
@@ -3889,8 +3549,6 @@ void ofApp::draw(){
     ofLine(10,100,100,10);  // draw fat line
 }
 ~~~~
-
-
 
 
 
@@ -3923,9 +3581,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -3968,10 +3624,7 @@ Possible modes are:
 
 
 
-
-
 _description: _
-
 
 
 
@@ -4020,10 +3673,7 @@ void ofApp::draw(){
 
 
 
-
-
 _description: _
-
 
 
 
@@ -4064,14 +3714,9 @@ ofColor, ofFill, polyMode and others.
 
 
 
-
-
 _description: _
 
-
 We use ofSetStyle to set the current style of the ofGraphics. Parameter style contains information of the graphics style such as ofColor, ofFill, polyMode and others. See ofStyle for more details.
-
-
 
 
 
@@ -4104,14 +3749,9 @@ Resets openGL screen coordinates and values back to OF defaults.
 
 
 
-
-
 _description: _
 
-
 Resets openGL parameters back to OF defaults.
-
-
 
 
 
@@ -4144,9 +3784,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -4181,9 +3819,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -4218,9 +3854,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -4265,10 +3899,7 @@ void ofApp::draw(){
 
 
 
-
-
 _description: _
-
 
 ofTranslate produces a translation by (x,y,z) vector of our coordinate system. The call of ofTranslate modifies graphics positions.
 Use ofPushMatrix and ofPopMatrix to save and restore the untranslated coordinate system.
@@ -4278,8 +3909,6 @@ void ofApp::draw(){
     ofRect(0, 0, 10, 10);       // draw a rect at that position
 }
 ~~~~
-
-
 
 
 
@@ -4312,9 +3941,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 ofTranslate produces a translation by (x,y,z) vector of our coordinate system. The call of ofTranslate modifies graphics positions.
 Use ofPushMatrix and ofPopMatrix to save and restore the untranslated coordinate system.
@@ -4328,8 +3955,6 @@ void ofApp::draw(){
     ofRect(0, 0, 10, 10);   // draw a rect at that position
 }
 ~~~~
-
-
 
 
 
@@ -4363,14 +3988,9 @@ ofEndShape().
 
 
 
-
-
 _description: _
 
-
 Specifies a single point of a shape. To be called between ofBeginShape() and ofEndShape().
-
-
 
 
 
@@ -4403,9 +4023,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -4440,9 +4058,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -4477,9 +4093,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -4519,10 +4133,7 @@ size (ofGetWidth(), ofGetHeight())
 
 
 
-
-
 _description: _
-
 
 
 
@@ -4563,10 +4174,7 @@ height The height of the viewport, defaults to ofGetHeight()
 
 
 
-
-
 _description: _
-
 
 
 
@@ -4601,9 +4209,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -4638,9 +4244,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -4675,9 +4279,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -4712,9 +4314,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -4749,9 +4349,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -4786,9 +4384,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -4823,9 +4419,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -4860,9 +4454,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -4897,9 +4489,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -4934,9 +4524,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -4971,9 +4559,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -5008,9 +4594,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -5045,9 +4629,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -5082,9 +4664,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -5119,9 +4699,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -5156,9 +4734,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -5193,9 +4769,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -5230,9 +4804,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -5267,9 +4839,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -5304,9 +4874,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -5341,9 +4909,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -5378,9 +4944,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -5415,9 +4979,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -5452,9 +5014,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -5489,9 +5049,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -5526,9 +5084,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -5563,9 +5119,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -5600,9 +5154,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -5637,9 +5189,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -5674,9 +5224,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -5711,9 +5259,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -5748,9 +5294,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -5785,9 +5329,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -5822,9 +5364,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -5859,9 +5399,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -5896,9 +5434,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -5933,9 +5469,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -5970,9 +5504,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -6007,9 +5539,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -6044,9 +5574,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -6081,9 +5609,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -6118,9 +5644,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -6155,9 +5679,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -6192,9 +5714,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -6229,9 +5749,42 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofbClearBg()
+
+<!--
+_syntax: ofbClearBg()_
+_name: ofbClearBg_
+_returns: void_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 

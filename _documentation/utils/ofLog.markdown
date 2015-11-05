@@ -167,10 +167,7 @@ message The log message.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -212,10 +209,7 @@ Returns: true if the given module is active at the given log level.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -269,10 +263,7 @@ The log level is `OF_LOG_NOTICE` by default.
 
 
 
-
-
 _description: _
-
 
 ofLog provides a streaming log interface by accepting variables via the ostream operator << similar to cout and cerr.
 
@@ -288,8 +279,6 @@ ofLog() << "a string" << 100 << 20.234f;
 The log level is explicitly OF_LOG_NOTICE.
 
 See [ofSetLogLevel(logLevel)](./ofLog.html#functions) for more info on log levels.
-
-
 
 
 
@@ -353,10 +342,7 @@ level The ofLogLevel for this log message.
 
 
 
-
-
 _description: _
-
 
 The same as the ofLog() stream interface, except it accepts a log level. 
 
@@ -386,8 +372,6 @@ ofLogWarning() << "a string" << 100 << 20.234f;
 ~~~~
 
 See [ofSetLogLevel()](./ofLog.html#functions) for more info on log levels.
-
-
 
 
 
@@ -440,10 +424,7 @@ message The log message.
 
 
 
-
-
 _description: _
-
 
 Logs a string at a specific log level.
 
@@ -458,8 +439,6 @@ ofLog(OF_LOG_NOTICE, "the number is "
 ~~~~
 
 See [ofSetLogLevel(logLevel)](./ofLog.html#functions) for more info on log levels.
-
-
 
 
 
@@ -486,7 +465,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -540,10 +518,7 @@ Returns: A reference to itself.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -588,8 +563,6 @@ Returns: A reference to itself.
 
 
 
-
-
 _description: _
 
 
@@ -626,9 +599,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -670,10 +641,7 @@ autoSpace Set to true to add spaces between messages
 
 
 
-
-
 _description: _
-
 
 
 
@@ -711,8 +679,6 @@ This can be used to output to files instead of stdout.
 
 Parameters:
 channel The channel to log to.
-
-
 
 
 
@@ -756,10 +722,7 @@ This destructor does the actual printing via std::ostream.
 
 
 
-
-
 _description: _
-
 
 
 
@@ -791,8 +754,11 @@ _inlined_description: _
 
 < Should space be added between messages?
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -820,8 +786,11 @@ _inlined_description: _
 
 < Has the message been printed in the constructor?
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -849,8 +818,11 @@ _inlined_description: _
 
 < The target channel.
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -878,8 +850,11 @@ _inlined_description: _
 
 < Log level.
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -907,8 +882,11 @@ _inlined_description: _
 
 < Temporary buffer.
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -936,8 +914,11 @@ _inlined_description: _
 
 < The destination module for this message.
 
-_description: _
 
+
+
+
+_description: _
 
 
 
@@ -965,8 +946,11 @@ _inlined_description: _
 
 < The padding between std::ostream calls.
 
-_description: _
 
+
+
+
+_description: _
 
 
 

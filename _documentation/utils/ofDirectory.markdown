@@ -69,9 +69,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Adds an allowed extension to the list of filters when listing directories. Use this to set any number of filters before calling listDir().
 
@@ -85,8 +83,6 @@ dir.allowExt("jpg");
 dir.allowExt("gif");
 dir.listDir();
 ~~~~
-
-
 
 
 
@@ -113,7 +109,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -157,13 +152,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns true if the current directory is executable. An executable directory can be entered into with command such as cd.
-
-
 
 
 
@@ -197,13 +188,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns true if the open directory can be read.
-
-
 
 
 
@@ -237,13 +224,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns true if the open directory can be written to.
-
-
 
 
 
@@ -277,13 +260,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Closes the directory.
-
-
 
 
 
@@ -317,13 +296,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Copies the directory into path.  If bRelativeToData is set to false then path should be absolute. If overwrite is set to true any existing files with the same name will be overwritten by the copy.
-
-
 
 
 
@@ -357,9 +332,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Creates the directory if it doesn't exist already. A common reason to use create is to ensure that you are able to write files to a known path, like so
 
@@ -373,8 +346,6 @@ if(!dir.exists()){
 ~~~~
 
 The recursive boolean flag will indicate if you'd like to create directories all the directories required to reach the given path.  In our example, if "/path/to" didn't already exist, the call to create() would also create these. If recursive were set to false, the directory would not be created.
-
-
 
 
 
@@ -408,13 +379,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Static method to create a directory at a given path. 
-
-
 
 
 
@@ -448,13 +415,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns true if the directory at dirPath exists.
-
-
 
 
 
@@ -481,7 +444,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -525,13 +487,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns true if the open directory exists. Great to be used in conjunction with ofDirectory::create()
-
-
 
 
 
@@ -565,9 +523,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -603,9 +559,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -641,13 +595,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns a vector of ofFile objects populated by a prior call to listDir().  The files are opened in ofFile::Reference mode.
-
-
 
 
 
@@ -681,13 +631,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns the file name,(eg "mypicture.png") with extension but not the enclosing path at a given index. Position must be less than the result of numFiles().
-
-
 
 
 
@@ -721,9 +667,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -759,13 +703,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns the absolute path,(eg "/path/to/files/mypicture.png"). Position must be less than the result of size().
-
-
 
 
 
@@ -799,13 +739,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns if hidden files are set to be shown or not.
-
-
 
 
 
@@ -832,7 +768,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -876,13 +811,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns true if the given path is actually a directory.
-
-
 
 
 
@@ -916,13 +847,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns true if the directory at dirPath is empty.
-
-
 
 
 
@@ -956,13 +883,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns true if the directory is hidden in the file system. 
-
-
 
 
 
@@ -996,13 +919,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Opens and populates the directory with files.  Returns the number of files found.
-
-
 
 
 
@@ -1036,13 +955,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Populates the directory with files. Call this after opening a directory and setting filters. After this call, size(), getPath(position), and getName(position) can be used to access the contents of the directory.
-
-
 
 
 
@@ -1076,13 +991,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Moves the directory into another directory at path.  If bRelativeToData is set to false then path should be absolute. If overwrite is set to true any existing files with the same name will be overwritten by the move.
-
-
 
 
 
@@ -1116,13 +1027,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Constructs an empty directory object.
-
-
 
 
 
@@ -1156,13 +1063,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Constructs a directory object and calls open() on the provided path.  The contents of the path are not accessible until listDir() is called.
-
-
 
 
 
@@ -1196,15 +1099,11 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Opens a path. At this point you can see if the directory exists by calling exists() but the contents of the path are not accessible until listDir() is called.
 
 	
-
-
 
 
 
@@ -1238,13 +1137,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns true if this directory and another have different paths.
-
-
 
 
 
@@ -1278,13 +1173,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns true if the right hand side directory is alphabetically after the left hand side directory.
-
-
 
 
 
@@ -1318,13 +1209,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns true if the right hand side directory is alphabetically after or equal to the left hand side directory.
-
-
 
 
 
@@ -1358,13 +1245,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns true if this directory and another have the same path.
-
-
 
 
 
@@ -1398,13 +1281,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns true if the left hand side directory is alphabetically after the right hand side directory.
-
-
 
 
 
@@ -1438,13 +1317,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns true if the left hand side directory is alphabetically after or equal to the right hand side directory;
-
-
 
 
 
@@ -1478,13 +1353,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Operator for accessing files with array notation syntax. Call is equivalent to ofFile::getFile(position).
-
-
 
 
 
@@ -1518,13 +1389,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns the currently opened path.
-
-
 
 
 
@@ -1551,7 +1418,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1595,13 +1461,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Deletes the directory. If recursive is set to false and this directory contains others the remove will fail.
-
-
 
 
 
@@ -1635,13 +1497,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Removes a directory. If deleteIfNotEmpty is set to false and the directory contains files the call will fail.
-
-
 
 
 
@@ -1675,13 +1533,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Renames the directory to the path path.  If bRelativeToData is set to false then path should be absolute. If overwrite is set to true any existing files with the same name will be overwritten by the rename.
-
-
 
 
 
@@ -1708,7 +1562,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -1752,13 +1605,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Resets the current directory. Equivalent to close().
-
-
 
 
 
@@ -1792,13 +1641,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Enables or disables execution on the current open directory. If the directory is executable then it can be entered through commands such as cd.
-
-
 
 
 
@@ -1832,13 +1677,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Enables or disables readable on the current open directory.
-
-
 
 
 
@@ -1872,13 +1713,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Sets whether or not the call to listDir() will return hidden files.
-
-
 
 
 
@@ -1912,13 +1749,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Enables or disables writeable on the current open directory.
-
-
 
 
 
@@ -1952,13 +1785,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns the number of files contained within the directory. Set after listDir() is called.
-
-
 
 
 
@@ -1992,13 +1821,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Sorts the contents of the directory by filename.
-
-
 
 
 
@@ -2027,8 +1852,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2055,8 +1884,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2083,8 +1916,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2111,8 +1948,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
@@ -2139,8 +1980,12 @@ _advanced: False_
 _inlined_description: _
 
 
-_description: _
 
+
+
+
+
+_description: _
 
 
 
