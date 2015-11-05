@@ -18,9 +18,9 @@
         	    <!-- class link -->
                 <li class="docs-module-title"><a href="${module + '/' + clazz.name}.html" class="documentation_class_link"><strong>${clazz.name}</strong></a>&nbsp;
                 % if clazz.is_class():
-                    <img src="/icons/class.png" alt="C++ Class"/>
+                    <img src="${bf.config.site.url}/icons/class.png" alt="C++ Class"/>
                 % else:
-                    <img src="/icons/functions.png" alt="Functions file"/>
+                    <img src="${bf.config.site.url}/icons/functions.png" alt="Functions file"/>
                 % endif
                 </li>
                 
