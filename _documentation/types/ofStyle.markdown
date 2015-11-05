@@ -342,7 +342,7 @@ _inlined_description: _
 
 The width of rendered lines.
 
-warning:This is not currently implemented in modern OF renderers.
+Warning: This is not currently implemented in modern OF renderers.
 
 _description: _
 

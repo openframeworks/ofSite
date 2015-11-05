@@ -38,7 +38,7 @@ height >= 0. The ofRectangle::standardize() method can be used to ensure
 that the is in it the "standard" form.
 
 
-warning:While ofRectangle takes ofPoint (a typedef for ofVec3f, a 3D
+Warning: While ofRectangle takes ofPoint (a typedef for ofVec3f, a 3D
 vector), all ofRectangle operations are 2D only, ignoring the z-component.
 
 
@@ -104,7 +104,8 @@ For a working example of how to use ofAlignVert and ofAlignHorz, see the
 directory.
 
 
-warning:The z-component of the passed ofPoint is ignored.
+Warning: The z-component of the passed ofPoint is ignored.
+
 
 Parameters:
 targetPoint The target ofPoint to align to.
@@ -179,6 +180,7 @@ rectangles.
 If constants are passed in, it will use those constants for both
 rectangles.
 
+
 Parameters:
 targetRect The target ofRectangle to align this rectangle to.
 sharedHorzAnchor The alignment anchor for both rectangles.
@@ -235,6 +237,7 @@ constants.
 
 Will align the chosen anchors in the ofRectangle with the chosen
 anchors in the passed-in ofRectangle.
+
 
 Parameters:
 targetRect The target ofRectangle to align this rectangle to.
@@ -302,6 +305,7 @@ For an example of how to use ofAlignHorz, see the
 *graphics/rectangleAlignmentAndScaling/* example within the examples
 directory.
 
+
 Parameters:
 targetX The x-position to align this rectangle to.
 thisHorzAnchor The edge of this rectangle to align.
@@ -366,6 +370,7 @@ of the rectangles.
 If a constant is passed in, it will use that constant for both
 rectangles.
 
+
 Parameters:
 targetRect The target rectangle to align this rectangle to.
 sharedAnchor The common edge of the rectangles to align.
@@ -420,6 +425,7 @@ passed-in ofRectangle. Takes two ofAlignHorz constants.
 
 Will align the chosen anchor in the ofRectangle with the chosen anchor
 in the passed-in ofRectangle.
+
 
 Parameters:
 targetRect The target rectangle to align this rectangle to.
@@ -487,6 +493,7 @@ For a working example of how to use ofAlignVert, see the
 *graphics/rectangleAlignmentAndScaling/* example within the examples
 directory
 
+
 Parameters:
 targetY The target y-position to align this rectangle to.
 sharedAnchor The alignment position of this ofRectangle to use.
@@ -547,6 +554,7 @@ of the rectangles.
 
 If a constant is passed in, it will use that constant for both rectangles.
 
+
 Parameters:
 targetRect The target ofRectangle to align this rectangle to.
 sharedAnchor The alignment position for both rectangles to use.
@@ -598,6 +606,7 @@ Vertically align this ofRectangle to another target ofRectangle.
 
 Will align the chosen anchor in the ofRectangle with the chosen anchor
 in the passed-in ofRectangle.
+
 
 Parameters:
 targetRect The target ofRectangle to align this rectangle to.
@@ -659,6 +668,7 @@ This is the product of the width and height.
 
     // areaValue will be 20000.0.
 ~~~~
+
 
 Returns: The area of the rectangle.
 
@@ -726,6 +736,7 @@ Gets the ratio of width to height of the ofRectangle.
     // aspectRatioValue will be 0.5.
 ~~~~
 
+
 Returns: The aspect ratio of the rectangle.
 
 
@@ -781,6 +792,7 @@ _inlined_description: _
 
 Gets the y-position of the bottom edge of the ofRectangle.
 \sa getMaxY()
+
 Returns: The y-position of the bottom edge of the rectangle.
 
 
@@ -825,6 +837,7 @@ _advanced: False_
 _inlined_description: _
 
 Get the bottom-left coordinates of the ofRectangle.
+
 Returns: The bottom-left coordinates of the rectangle.
 
 
@@ -868,6 +881,7 @@ _inlined_description: _
 
 Get the bottom-right coordinates of the ofRectangle.
 \sa getMax()
+
 Returns: The bottom-right coordinates of the rectangle.
 
 
@@ -914,7 +928,8 @@ _inlined_description: _
 Get the coordiantes of the ofRectangle's center.
 
 
-warning:The z-component of the returned ofPoint will always be 0.
+Warning: The z-component of the returned ofPoint will always be 0.
+
 
 Returns: The coordinates of the center of the rectangle (z = 0).
 
@@ -958,6 +973,7 @@ _advanced: False_
 _inlined_description: _
 
 Gets the height of the ofRectangle.
+
 Returns: The height of the rectangle.
 
 
@@ -1011,8 +1027,10 @@ Possible anchor values are:
 
 Any other anchor value will return `0.0`.
 
+
 Parameters:
 anchor The anchor position to query.
+
 Returns: the value of the referenced anchor position.
 
 
@@ -1078,8 +1096,10 @@ positioned on that edge:
 If the shared edge is vertical, the rectangle will have zero width,
 otherwise it will have zero height.
 
+
 Parameters:
 rect The rectangle to intersect.
+
 Returns: A new ofRectangle representing the intersecting area or an
          empty rectangle (0, 0, 0, 0) if there is no intersection.
 
@@ -1128,6 +1148,7 @@ _inlined_description: _
 
 Gets the x-position of the left edge of the ofRectangle.
 \sa getMinX()
+
 Returns: The x-position of the left edge of the rectangle.
 
 
@@ -1172,6 +1193,7 @@ _advanced: False_
 _inlined_description: _
 
 Get the maximum x- and y- coordinates of the ofRectangle.
+
 Returns: The maximum x- and y- coordinates of the rectangle.
 
 
@@ -1216,6 +1238,7 @@ _advanced: False_
 _inlined_description: _
 
 Get the largest x-position of the ofRectangle.
+
 Returns: The largest x-position of the rectangle.
 
 
@@ -1260,6 +1283,7 @@ _advanced: False_
 _inlined_description: _
 
 Get the largest y-position of the ofRectangle.
+
 Returns: The largest y-position of the rectangle.
 
 
@@ -1304,6 +1328,7 @@ _advanced: False_
 _inlined_description: _
 
 Get the minimum x- and y- coordinates of the ofRectangle.
+
 Returns: The minimum x- and y- coordinates of the rectangle.
 
 
@@ -1348,6 +1373,7 @@ _advanced: False_
 _inlined_description: _
 
 Get the smallest x-position of the ofRectangle.
+
 Returns: The smallest x-position of the rectangle.
 
 
@@ -1392,6 +1418,7 @@ _advanced: False_
 _inlined_description: _
 
 Get the smallest y-position of the ofRectangle.
+
 Returns: The smallest y-position of the rectangle.
 
 
@@ -1448,6 +1475,7 @@ This is the sum of the lengths of the sides.
 
     // perimeterValue will be 600.0.
 ~~~~
+
 
 Returns: The perimeter of the rectangle.
 
@@ -1506,7 +1534,8 @@ _inlined_description: _
 Get the ofRectangle's position.
 
 
-warning:The z-component of the returned ofPoint is undefined.
+Warning: The z-component of the returned ofPoint is undefined.
+
 
 Returns: The rectangle's position.
 
@@ -1554,9 +1583,10 @@ _inlined_description: _
 Get a reference to the ofRectangle's position.
 
 
-warning:Changes to the z-component of the referenced ofPoint are not
+Warning: Changes to the z-component of the referenced ofPoint are not
 guaranteed to be preserved and will be ignored during further
 ofRectangle operations.
+
 
 Returns: A reference to the position of the rectangle.
 
@@ -1603,6 +1633,7 @@ _inlined_description: _
 
 Gets the x-position of the right edge of the ofRectangle.
 \sa getMaxX()
+
 Returns: The y-position of the right edge of the rectangle.
 
 
@@ -1651,6 +1682,7 @@ Get the standardized representation of this rectangle..
 For more information about standardized rectangles, see the discussion
 of the standardize() method.
 
+
 Returns: the Standardized version of this ofRectangle.
 
 
@@ -1696,6 +1728,7 @@ _inlined_description: _
 
 Gets the y-position of the top edge of the ofRectangle.
 \sa getMinY()
+
 Returns: The y-position of the top edge of the rectangle.
 
 
@@ -1741,6 +1774,7 @@ _inlined_description: _
 
 Get the top-left coordinates of the ofRectangle.
 \sa getMin()
+
 Returns: The top-left coordinates of the rectangle.
 
 
@@ -1785,6 +1819,7 @@ _advanced: False_
 _inlined_description: _
 
 Get the top-right coordinates of the ofRectangle.
+
 Returns: The top-right coordinates of the rectangle.
 
 
@@ -1829,8 +1864,10 @@ _inlined_description: _
 Get the union area between this rectangle and anohter.
 
 \sa growToInclude(const ofRectangle& rect)
+
 Parameters:
 rect The rectangle to unite with.
+
 Returns: A new ofRectangle whose area contains both the area of the
          this rectangle and the passed rectangle..
 
@@ -1885,8 +1922,10 @@ Possible anchor values are:
 
 Any other anchor value will return `0.0`.
 
+
 Parameters:
 anchor The anchor position to query.
+
 Returns: the value of the referenced anchor position.
 
 
@@ -1939,6 +1978,7 @@ _advanced: False_
 _inlined_description: _
 
 Gets the width of the ofRectangle.
+
 Returns: The width of the rectangle.
 
 
@@ -1981,6 +2021,7 @@ _advanced: False_
 _inlined_description: _
 
 Gets the x-position of the ofRectangle.
+
 Returns: The x-position of the rectangle.
 
 
@@ -2023,6 +2064,7 @@ _advanced: False_
 _inlined_description: _
 
 Gets the y-position of the ofRectangle.
+
 Returns: the y-position of the rectangle.
 
 
@@ -2069,6 +2111,7 @@ Grow the ofRectangle to include the given (x, y) coordinates.
 This will potentially change the width, height, x-position, and y-
 position of the ofRectangle. If the points are already within the
 rectangle, this rectangle will remain unchanged.
+
 
 Parameters:
 px The x-coordinate to include.
@@ -2117,11 +2160,12 @@ _inlined_description: _
 Grow the ofRectangle to include the given point.
 
 
-warning:The z-component of the passed ofPoint is ignored.
+Warning: The z-component of the passed ofPoint is ignored.
 
 This will potentially change the width, height, x-position, and y-
 position of the ofRectangle.  If the point is already within the
 rectangle, this rectangle will remain unchanged.
+
 
 Parameters:
 p The position to include.
@@ -2172,6 +2216,7 @@ This will potentially change the width, height, x-position, and y-
 position of the ofRectangle.  If the rectangle is already within the
 rectangle, this rectangle will remain unchanged.
 
+
 Parameters:
 rect The rectangle to include.
 
@@ -2219,11 +2264,12 @@ _inlined_description: _
 Grow the ofRectangle to include the given line segment.
 
 
-warning:The z-components of the passed ofPoints are ignored.
+Warning: The z-components of the passed ofPoints are ignored.
 
 This will potentially change the width, height, x-position, and
 y-position of the ofRectangle.  If the points are already within the
 rectangle, this rectangle will remain unchanged.
+
 
 Parameters:
 p0 The first point to include.
@@ -2278,9 +2324,11 @@ Coordinates (x, y) are considered inside the rectangle if:
 
 `x > rectMinX && x < rectMinX && y > rectMinY && y < rectMaxY`
 
+
 Parameters:
 px The x-coordinate to test.
 py The y-coordinate to test.
+
 Returns: true if px and py are inside this ofRectangle.
 
 
@@ -2335,10 +2383,12 @@ Coordinates (x, y) are considered inside the rectangle if:
 `x > rectMinX && x < rectMinX && y > rectMinY && y < rectMaxY`
 
 
-warning:The z-component of the passed ofPoint is ignored.
+Warning: The z-component of the passed ofPoint is ignored.
+
 
 Parameters:
 p The point to test.
+
 Returns: true if the point p is inside this ofRectangle.
 
 
@@ -2388,8 +2438,10 @@ Determines if another ofRectangle is within the ofRectangle.
 Note that rectangles that share an edge with the ofRectangle are not
 considered within the rectangle and will return false.
 
+
 Parameters:
 rect The ofRectangle to test.
+
 Returns: true if all four corners of the rect are within this rectangle.
 
 
@@ -2442,11 +2494,13 @@ Note that points on the edge of the ofRectangle are not considered
 within the rectangle and will return false.
 
 
-warning:The z-components of the passed ofPoints are ignored.
+Warning: The z-components of the passed ofPoints are ignored.
+
 
 Parameters:
 p0 The first point to test.
 p1 The second point to test.
+
 Returns: true if both points are inside the rectangle.
 
 
@@ -2497,8 +2551,10 @@ Determines if another rectangle intersects with the ofRectangle.
 Rectangles that only share an edge and do not intersect otherwise are
 not considered to intersect and will return false.
 
+
 Parameters:
 rect The rectangle to test.
+
 Returns: `true` if the area contained within the ofRectangle overlaps
     with the area contained within the passed ofRectangle.
 
@@ -2547,11 +2603,13 @@ _inlined_description: _
 Determines if a line segment intersects with the ofRectangle.
 
 
-warning:The z-components of the passed ofPoints are ignored.
+Warning: The z-components of the passed ofPoints are ignored.
+
 
 Parameters:
 p0 The first point to test.
 p1 The second point to test.
+
 Returns: `true` if the line segment defined by the two passed ofPoints
     either crosses the perimeter of the ofRectangle or is completely
     contained within.
@@ -2598,6 +2656,7 @@ _inlined_description: _
 
 Determines if the ofRectangle's area is zero.
 \sa getArea().
+
 Returns: true if both the width == 0 and height == 0.
 
 
@@ -2643,6 +2702,7 @@ Returns true if this ofRectangle is standardized.
 
 For more information about standardized rectangles, see the discussion
 of the standardize() method.
+
 
 Returns: true if both width >= 0 and height >= 0.
 
@@ -2769,6 +2829,7 @@ Construct a rectangle using position and size.
 To produce consistent results, users are encouraged to initialize
 rectangles in the standardized form with width >=0 and height >= 0.
 
+
 Parameters:
 px The x-position of the rectangle.
 py The y-position of the rectangle.
@@ -2818,7 +2879,8 @@ To produce consistent results, users are encouraged to initialize
 rectangles in the standardized form with width >=0 and height >= 0.
 
 
-warning:The z-component of the passed ofPoint is ignored.
+Warning: The z-component of the passed ofPoint is ignored.
+
 
 Parameters:
 p The ofPoint representing the position of the rectangle.
@@ -2863,6 +2925,7 @@ _advanced: False_
 _inlined_description: _
 
 Construct a rectangle by copying another rectangle.
+
 Parameters:
 rect The rectangle to copy.
 
@@ -2906,7 +2969,8 @@ _inlined_description: _
 Construct a rectangle by defining two corners.
 
 
-warning:The z-components of the passed ofPoints are ignored.
+Warning: The z-components of the passed ofPoints are ignored.
+
 
 Parameters:
 p0 An ofPoint representing the upper left hand corner.
@@ -2951,8 +3015,10 @@ _inlined_description: _
 
 If the two ofRectangles differ in x, y, width, or height, they
 are considered unequal.
+
 Parameters:
 rect The rectangle to compare.
+
 Returns: True if the rectangles are not equal.
 
 
@@ -2996,8 +3062,10 @@ _inlined_description: _
 
 Returns a new ofRectangle where the x and y-positions of the
 rectangle are offset by the (x, y) coordinates of the ofPoint.
+
 Parameters:
 p The point to translate.
+
 Returns: The translated ofRectangle.
 
 
@@ -3041,8 +3109,10 @@ _inlined_description: _
 
 Returns a new ofRectangle where the x and y-positions of the
 rectangle are offset by the (x, y) coordinates of the ofPoint.
+
 Parameters:
 p The point to translate.
+
 Returns: The translated ofRectangle.
 
 
@@ -3082,8 +3152,10 @@ _advanced: True_
 _inlined_description: _
 
 Assignment operator.
+
 Parameters:
 rect The rectangle to assign.
+
 Returns: A reference to this rectangle.
 
 
@@ -3125,8 +3197,10 @@ _inlined_description: _
 
 If both ofRectangles have the same x, y, width, and height,
 they are considered equal.
+
 Parameters:
 rect The rectangle to compare.
+
 Returns: True if the rectangles are equal.
 
 
@@ -3172,6 +3246,7 @@ Scale the rectangle.
 
 Scaling will scale the width and the height, but will not change the
 position.
+
 
 Parameters:
 s The scaling factor.
@@ -3233,6 +3308,7 @@ myRect.scaleWidth(sX);
 myRect.scaleHeight(sY);
 
 ~~~~
+
 Parameters:
 sX The width-scaling factor.
 sY The height-scaling factor.
@@ -3297,7 +3373,8 @@ myRect.scaleHeight(myScaler.y);
 ~~~~
 
 
-warning:The z-component of the passed ofPoint is ignored.
+Warning: The z-component of the passed ofPoint is ignored.
+
 
 Parameters:
 s The scaling factor.
@@ -3347,6 +3424,7 @@ Scales both the width and height the ofRectangle from its center.
 The center point of the rectangle will remain fixed and the width,
 height, x, and y will be adjusted.
 
+
 Parameters:
 s The scaling factor.
 
@@ -3394,6 +3472,7 @@ Scales both the width and height the ofRectangle from its center.
 
 The center point of the rectangle will remain fixed and the width,
 height, x, and y will be adjusted.
+
 
 Parameters:
 sX the width-scaling factor.
@@ -3458,7 +3537,8 @@ myRect.scaleFromCenter(myScaler.x, myScaler.y);
 ~~~~
 
 
-warning:The z-component of the passed ofPoint is ignored.
+Warning: The z-component of the passed ofPoint is ignored.
+
 
 Parameters:
 s The scaling factor.
@@ -3506,6 +3586,7 @@ _inlined_description: _
 Scale the height of the rectangle.
 
 This will scale the height but will not change the position and width.
+
 
 Parameters:
 sY The height-scaling factor.
@@ -3601,6 +3682,7 @@ For an example of the various ofScaleModes, see the
 *graphics/rectangleAlignmentAndScaling/* example within the examples
 directory.
 
+
 Parameters:
 targetRect The Target Rectangle to scale to.
 scaleMode The scale mode to use when scaling.
@@ -3695,6 +3777,7 @@ For a working example of how to use ofAspectRatioMode, ofAlignVert, and
 ofAlignHorz, see the *graphics/rectangleAlignmentAndScaling/* example
 within the examples directory.
 
+
 Parameters:
 targetRect The Target Rectangle to scale to.
 subjectAspectRatioMode Aspect ratio scaling mode.
@@ -3775,6 +3858,7 @@ For an example of how to use ofAspectRatioMode, ofAlignVert,
 and ofAlignHorz, see the *graphics/rectangleAlignmentAndScaling/*
 example within the examples directory.
 
+
 Parameters:
 targetRect The Target Rectangle to scale to.
 subjectAspectRatioMode Aspect ratio scaling mode.
@@ -3850,6 +3934,7 @@ Scale the width of the rectangle.
 
 This will scale the width but will not change the position or height.
 
+
 Parameters:
 sX The width-scaling factor.
 
@@ -3896,6 +3981,7 @@ Set the position and size of the rectangle.
 
 To produce consistent results, users are encouraged to initialize
 rectangles in the standardized form with width >=0 and height >= 0.
+
 
 Parameters:
 px The new x-position.
@@ -3948,7 +4034,8 @@ To produce consistent results, users are encouraged to initialize
 rectangles in the standardized form with width >=0 and height >= 0.
 
 
-warning:The z-component of the passed ofPoint is ignored.
+Warning: The z-component of the passed ofPoint is ignored.
+
 
 Parameters:
 p The new position.
@@ -3995,6 +4082,7 @@ _advanced: False_
 _inlined_description: _
 
 Set the position and size by copying them from anohter rectangle.
+
 Parameters:
 rect The rectangle to copy.
 
@@ -4040,7 +4128,8 @@ _inlined_description: _
 Set the position and size of the rectangle using corners.
 
 
-warning:The z-components of the passed ofPoints are ignored.
+Warning: The z-components of the passed ofPoints are ignored.
+
 
 Parameters:
 p0 The ofPoint representing the upper left hand corner.
@@ -4091,6 +4180,7 @@ Set position and size of the rectangle from the center.
 
 The center of the rectangle is defined and the width and height grow
 out around the center.
+
 
 Parameters:
 px The x-position of the rectangle's center.
@@ -4143,6 +4233,7 @@ Set position and size of the rectangle from the center.
 The center of the rectangle is defined and the width and height grow
 out around the center.
 
+
 Parameters:
 p The position of the rectangle's center as an ofPoint.
 w The width of the rectangle.
@@ -4189,6 +4280,7 @@ _advanced: False_
 _inlined_description: _
 
 Set the height of the rectangle.
+
 Parameters:
 h The new height.
 
@@ -4232,6 +4324,7 @@ _advanced: False_
 _inlined_description: _
 
 Set the position of the rectangle.
+
 Parameters:
 px The new x-position.
 py The new y-position.
@@ -4278,7 +4371,8 @@ _inlined_description: _
 Set the position of the rectangle.
 
 
-warning:The z-component of the passed ofPoint is ignored.
+Warning: The z-component of the passed ofPoint is ignored.
+
 
 Parameters:
 p The position as an ofPoint.
@@ -4323,6 +4417,7 @@ _advanced: False_
 _inlined_description: _
 
 Set the size of the rectangle.
+
 Parameters:
 w The new width.
 h The new height.
@@ -4364,6 +4459,7 @@ _advanced: False_
 _inlined_description: _
 
 Set the width of the rectangle.
+
 Parameters:
 w The new width.
 
@@ -4407,6 +4503,7 @@ _advanced: False_
 _inlined_description: _
 
 Set the x-position of the rectangle.
+
 Parameters:
 px The new x-position.
 
@@ -4450,6 +4547,7 @@ _advanced: False_
 _inlined_description: _
 
 Set the y-position of the rectangle.
+
 Parameters:
 py The new y-position.
 
@@ -4586,6 +4684,7 @@ _advanced: False_
 _inlined_description: _
 
 Translate the rectangle's position by an x and y amount.
+
 Parameters:
 dx The amount to translate in the x direction.
 dy The amount to translate in the y direction.
@@ -4632,7 +4731,8 @@ _inlined_description: _
 Translate the rectangle's position by an x and y amount.
 
 
-warning:The z-component of the passed ofPoint is ignored.
+Warning: The z-component of the passed ofPoint is ignored.
+
 
 Parameters:
 dp The amount to translate as an ofPoint.
@@ -4677,6 +4777,7 @@ _advanced: False_
 _inlined_description: _
 
 Translate the x-position of the rectangle.
+
 Parameters:
 dx The amount to translate on the x-axis.
 
@@ -4720,6 +4821,7 @@ _advanced: False_
 _inlined_description: _
 
 Translate the y-position of the rectangle.
+
 Parameters:
 dy The amount to translate on the y-axis.
 
@@ -4835,7 +4937,7 @@ _inlined_description: _
 The (x,y) position of the ofRectangle as an ofPoint.
 
 
-warning:The z-component of this position is preserved and can be used
+Warning: The z-component of this position is preserved and can be used
 but all ofRectangle operations will ignore the z-component.
 
 _description: _

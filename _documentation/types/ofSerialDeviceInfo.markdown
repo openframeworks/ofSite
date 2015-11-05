@@ -51,6 +51,7 @@ Gets the ID of the device
 
 Example: `0`,`1`,`2`,`3` etc.
 
+
 Returns: the device ID.
 
 
@@ -93,6 +94,7 @@ _inlined_description: _
 Gets the name of the device
 
 Example: `usbdevice-a440` or `COM4`.
+
 
 Returns: the device name.
 
@@ -137,6 +139,7 @@ Gets the path to the device
 
 Example: `/dev/tty.cu/usbdevice-a440`.
 
+
 Returns: the device path.
 
 
@@ -177,6 +180,7 @@ _advanced: False_
 _inlined_description: _
 
  Construct an ofSerialDeviceInfo with parameters.
+
 Parameters:
 devicePathIn The path to the device.
 deviceNameIn The name of the device.

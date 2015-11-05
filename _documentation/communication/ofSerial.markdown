@@ -266,6 +266,7 @@ _inlined_description: _
 Clears data from one or both of the serial buffers.
 
 Any data in the cleared buffers is discarded.
+
 Parameters:
 flushIn If true then it clears the incoming data buffer
 flushOut If true then it clears the outgoing data buffer.
@@ -495,6 +496,7 @@ if ( myByte == OF_SERIAL_NO_DATA ){
 	 printf("myByte is %d", myByte);
 }
 ~~~~
+
 
 Returns: The single byte as integer. If there is no data it will return
 `OF_SERIAL_NO_DATA`, and on error it returns `OF_SERIAL_ERROR`

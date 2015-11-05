@@ -155,10 +155,15 @@ def parse_function(documentation_class, clazz, member):
         returns = substitutetype(member.result_type.spelling)
         returns = ("" if returns is None else returns)
     method = documentation_class.function_by_signature(methodname, returns, params, alternatives)
+    if method.name == "ofBackgroundGradient":
+        print methodname, returns, params
+        print "grdient desc: " + "ofBackgroundGradient", "void", ""
     if not clazz is None:
         method.static = member.is_static_method()
         method.clazz = documentation_class.name
         method.access = member.access_specifier.name.lower()
+    else:
+        print method.name + (" new" if method.new else "")
     method.returns = returns
     #method.description = method.description.replace("~~~~{.brush: cpp}","~~~~{.cpp}").replace('</pre>',"~~~~")
     method.description = method.description.replace('<p>','').replace('</p>','').replace('<code>','').replace('</code>','').replace('<pre>','')

@@ -261,6 +261,7 @@ _advanced: False_
 _inlined_description: _
 
 Get the distance to the target.
+
 Returns: the distance to the target.
 
 
@@ -301,6 +302,7 @@ _advanced: False_
 _inlined_description: _
 
 Get the camera's drag coefficient.
+
 Returns: the camera's drag coefficient.
 
 
@@ -342,6 +344,7 @@ _inlined_description: _
 
 Determine if mouse camera control is enabled.
 \todo Rename to isMouseInputEnabled().
+
 Returns: true iff mouse camera control is enabled.
 
 
@@ -383,6 +386,7 @@ _inlined_description: _
 
 Determine if the middle mouse button is enabled.
 \todo Rename to isMouseMiddleButtonEnabled().
+
 Returns: true iff the mouse's middle button is enabled.
 
 
@@ -423,6 +427,7 @@ _advanced: False_
 _inlined_description: _
 
 Get the camera's target node reference.
+
 Returns: a reference the the camera's target node.
 
 
@@ -463,6 +468,7 @@ _advanced: False_
 _inlined_description: _
 
 Get the current translation key code.
+
 Returns: the current translation key code.
 
 
@@ -733,6 +739,7 @@ Enable or disable camera autodistance.
 Allow the camera to attempt to set the distance based on the camera's
 current viewpoirt.
 
+
 Parameters:
 bAutoDistance true to enable auto distance.
 
@@ -774,6 +781,7 @@ _advanced: False_
 _inlined_description: _
 
 Set the camera's distance to the target.
+
 Parameters:
 distance The distance to the target.
 
@@ -858,6 +866,7 @@ Set the camera's drag coefficient.
 Drag is affects how quickly the camera starts up and slows down when
 a user interacts with its position using a pointer.
 
+
 Parameters:
 drag The normalized coefficient value between 0 and 1.
 
@@ -936,6 +945,7 @@ _advanced: False_
 _inlined_description: _
 
 Set the camera's target.
+
 Parameters:
 target The position of the target.
 
@@ -977,6 +987,7 @@ _advanced: False_
 _inlined_description: _
 
 Set the camera's target.
+
 Parameters:
 target The position of the target.
 
@@ -1020,6 +1031,7 @@ _inlined_description: _
 Set the key used to switch between camera rotation and translation.
 
 Translation will only happen when the translation key is pressed.
+
 
 Parameters:
 key The key code for the translation key.

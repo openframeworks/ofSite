@@ -262,6 +262,7 @@ thread by calling isCurrentThread() on an active thread or
 by calling ofThread::isMainThread().  See the method
 documentation for more information on those methods.
 
+
 Returns: A pointer to the current active thread OR 0 iff the main
     application thread is active.
 
@@ -308,6 +309,7 @@ Poco::Thread provides a clean cross-platform wrapper for
 threads.  On occasion, it may be useful to interact with the
 underlying Poco::Thread directly.
 
+
 Returns: A reference to the backing Poco thread.
 
 
@@ -352,6 +354,7 @@ Get a const reference to the underlying Poco thread.
 Poco::Thread provides a clean cross-platform wrapper for
 threads.  On occasion, it may be useful to interact with the
 underlying Poco::Thread directly.
+
 
 Returns: A reference to the backing Poco thread.
 
@@ -433,6 +436,7 @@ _advanced: False_
 _inlined_description: _
 
 Get the unique thread name, in the form of "Thread id#"
+
 Returns: the Thread ID string.
 
 
@@ -500,6 +504,7 @@ can, for instance, call update() on an ofImage, in order to
 send copy some ofPixels to an ofTexture on the graphics
 card.
 
+
 Returns: True iff this ofThread the currently active thread.
 
 
@@ -555,6 +560,7 @@ is called.
         ofLogNotice() << "This is NOT the main thread.";
     }
 
+
 Returns: true iff the current thread is the main thread.
 
 
@@ -595,6 +601,7 @@ _advanced: False_
 _inlined_description: _
 
 Check the running status of the thread.
+
 Returns: true iff the thread is currently running.
 
 
@@ -665,6 +672,7 @@ If the thread was started startThread(true), then this call will wait
 until the mutex is available and return true.  If the thread was started
 startThread(false), this call will return true iff the mutex is
 was successfully acquired.
+
 
 Returns: true iff the lock was successfully acquired.
 
@@ -821,6 +829,7 @@ thread may take 100% of the CPU core while it's looping as it
 waits for something to do.  This may lead to poor application
 performance.
 
+
 Parameters:
 milliseconds The number of milliseconds to sleep.
 
@@ -862,6 +871,7 @@ _advanced: False_
 _inlined_description: _
 
 Start the thread with options.
+
 Parameters:
 mutexBlocks Set blocking to true if you want the mutex to
        block when lock() is called.
@@ -1134,6 +1144,7 @@ downloading data from the web.  Destroying an ofThread subclass
 without releasing those sockets (or other resources), may result in
 segmentation faults, error signals or other undefined behaviors.
 
+
 Parameters:
 callStopThread Set stop to true if you want to signal the thread
     to exit before waiting.  This is the equivalent to calling
@@ -1244,7 +1255,7 @@ _inlined_description: _
 
 Destroy the ofThread.
 
-warning:The destructor WILL NOT stop the thread or wait for
+Warning: The destructor WILL NOT stop the thread or wait for
     the underlying Poco::Thread to finish.  For threads that
     require the correct deallocation of resources, the user
     MUST call waitForThread(...); to ensure that the thread

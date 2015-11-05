@@ -71,6 +71,7 @@ _advanced: False_
 _inlined_description: _
 
 Allocates space for pixel data
+
 Parameters:
 w Width of pixel array
 h Height of pixel array
@@ -123,6 +124,7 @@ The pixelFormat can be one of the following:
     OF_PIXELS_RGBA
     OF_PIXELS_BGRA
     OF_PIXELS_MONO
+
 
 Parameters:
 w Width of pixel array
@@ -183,6 +185,7 @@ The imageType can be one of the following:
     OF_IMAGE_GRAYSCALE
     OF_IMAGE_COLOR
     OF_IMAGE_COLOR_ALPHA
+
 
 Parameters:
 w Width of pixel array
@@ -1289,6 +1292,7 @@ _advanced: False_
 _inlined_description: _
 
 Get the type of the image
+
 Returns: One of the following types: `OF_IMAGE_GRAYSCALE`,
 `OF_IMAGE_COLOR`, `OF_IMAGE_COLOR_ALPHA`
 
@@ -1807,6 +1811,7 @@ _advanced: False_
 _inlined_description: _
 
 Mirror the pixels across the vertical and/or horizontal axis.
+
 Parameters:
 vertically Set to true to mirror vertically
 horizontal Set to true to mirror horizontal
@@ -3084,6 +3089,7 @@ _advanced: False_
 _inlined_description: _
 
 Changes the image type for the ofPixels object
+
 
 Parameters:
 imageType Can be one of the following: OF_IMAGE_GRAYSCALE, OF_IMAGE_COLOR, OF_IMAGE_COLOR_ALPHA

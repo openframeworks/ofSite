@@ -45,6 +45,7 @@ _advanced: False_
 
 _inlined_description: _
 
+
 Returns: a const reference to a std::vector containing the ofTexture planes.
 
 
@@ -82,6 +83,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 Returns: a const reference to a std::vector containing the ofTexture planes.
 

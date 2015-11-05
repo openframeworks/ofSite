@@ -52,42 +52,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###string ofGLSLVersionFromGL(major, minor)
-
-<!--
-_syntax: ofGLSLVersionFromGL(major, minor)_
-_name: ofGLSLVersionFromGL_
-_returns: string_
-_returns_description: _
-_parameters: int major, int minor_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###bool ofGLSupportsNPOTTextures()
 
 <!--
@@ -125,42 +89,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int ofGetBytesPerChannelFromGLType(glType)
-
-<!--
-_syntax: ofGetBytesPerChannelFromGLType(glType)_
-_name: ofGetBytesPerChannelFromGLType_
-_returns: int_
-_returns_description: _
-_parameters: int glType_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###int ofGetGLFormatFromInternal(glInternalFormat)
 
 <!--
@@ -189,42 +117,6 @@ _inlined_description: _
 
 _description: _
 
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int ofGetGLFormatFromPixelFormat(pixelFormat)
-
-<!--
-_syntax: ofGetGLFormatFromPixelFormat(pixelFormat)_
-_name: ofGetGLFormatFromPixelFormat_
-_returns: int_
-_returns_description: _
-_parameters: ofPixelFormat pixelFormat_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
 
 
 
@@ -316,43 +208,6 @@ _name: ofGetGLPrimitiveMode_
 _returns: GLuint_
 _returns_description: _
 _parameters: ofPrimitiveMode mode_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###shared_ptr< ofBaseGLRenderer > ofGetGLRenderer()
-
-<!--
-_syntax: ofGetGLRenderer()_
-_name: ofGetGLRenderer_
-_returns: shared_ptr< ofBaseGLRenderer >_
-_returns_description: _
-_parameters: _
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -900,15 +755,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofSetPixelStoreiAlignment(pname, w, bpc, numChannels)
+###string ofSetPixelStorei(w, bpc, numChannels)
 
 <!--
-_syntax: ofSetPixelStoreiAlignment(pname, w, bpc, numChannels)_
-_name: ofSetPixelStoreiAlignment_
-_returns: void_
+_syntax: ofSetPixelStorei(w, bpc, numChannels)_
+_name: ofSetPixelStorei_
+_returns: string_
 _returns_description: _
-_parameters: GLenum pname, int w, int bpc, int numChannels_
-_version_started: 0.9.0_
+_parameters: int w, int bpc, int numChannels_
+_version_started: _
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -927,6 +782,7 @@ _inlined_description: _
 
 
 _description: _
+
 
 
 
@@ -936,15 +792,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofSetPixelStoreiAlignment(panme, stride)
+###string ofSetPixelStorei(w, bpc, numChannels)
 
 <!--
-_syntax: ofSetPixelStoreiAlignment(panme, stride)_
-_name: ofSetPixelStoreiAlignment_
-_returns: void_
+_syntax: ofSetPixelStorei(w, bpc, numChannels)_
+_name: ofSetPixelStorei_
+_returns: string_
 _returns_description: _
-_parameters: GLenum panme, int stride_
-_version_started: 0.9.0_
+_parameters: int w, int bpc, int numChannels_
+_version_started: _
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -963,6 +819,192 @@ _inlined_description: _
 
 
 _description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string ofSetPixelStorei(w, bpc, numChannels)
+
+<!--
+_syntax: ofSetPixelStorei(w, bpc, numChannels)_
+_name: ofSetPixelStorei_
+_returns: string_
+_returns_description: _
+_parameters: int w, int bpc, int numChannels_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string ofSetPixelStorei(w, bpc, numChannels)
+
+<!--
+_syntax: ofSetPixelStorei(w, bpc, numChannels)_
+_name: ofSetPixelStorei_
+_returns: string_
+_returns_description: _
+_parameters: int w, int bpc, int numChannels_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string ofSetPixelStorei(w, bpc, numChannels)
+
+<!--
+_syntax: ofSetPixelStorei(w, bpc, numChannels)_
+_name: ofSetPixelStorei_
+_returns: string_
+_returns_description: _
+_parameters: int w, int bpc, int numChannels_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string ofSetPixelStorei(w, bpc, numChannels)
+
+<!--
+_syntax: ofSetPixelStorei(w, bpc, numChannels)_
+_name: ofSetPixelStorei_
+_returns: string_
+_returns_description: _
+_parameters: int w, int bpc, int numChannels_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string ofSetPixelStorei(w, bpc, numChannels)
+
+<!--
+_syntax: ofSetPixelStorei(w, bpc, numChannels)_
+_name: ofSetPixelStorei_
+_returns: string_
+_returns_description: _
+_parameters: int w, int bpc, int numChannels_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
 
 
 

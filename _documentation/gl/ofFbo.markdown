@@ -247,7 +247,7 @@ _inlined_description: _
 
    Sets up the framebuffer and binds it for rendering.
 
-warning: This is a convenience method, and is considered unsafe
+Warning:  This is a convenience method, and is considered unsafe
           in multi-window and/or multi-renderer scenarios.
           If you use more than one renderer, use each renderer's
           explicit void ofBaseGLRenderer::begin(const ofFbo & fbo, bool setupPerspective)
@@ -295,7 +295,7 @@ _inlined_description: _
 
    Bind OpenGL GL_FRAMEBUFFER target to this ofFbo
 
-warning: If you use this method, you need to manually keep track of the
+Warning:  If you use this method, you need to manually keep track of the
           currently bound framebuffer, if you ever want to restore state.
           * use ofBaseGLRenderer::getCurrentFramebuffer() to query the current
           framebuffer binding state within the renderer.

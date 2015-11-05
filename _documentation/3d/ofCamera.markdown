@@ -11,7 +11,7 @@ _istemplated: False_
 
 A basic camera object for interacting with objects in 3D space.
 
-by:Memo Akten, MSA Visuals Ltd. 2011
+By: Memo Akten, MSA Visuals Ltd. 2011
 
 
 
@@ -65,6 +65,7 @@ void draw() {
     camera.end();
 }
 ~~~~
+
 Parameters:
 viewport The camera's rendering viewport.
 
@@ -313,6 +314,7 @@ Returns the aspect ratio of this camera's viewport. Usually this will be
 the ratio of the width to height of your display. Intended for
 perspective cameras.
 
+
 Returns: The aspect ratio of this camera's viewport.
 
 
@@ -392,6 +394,7 @@ _inlined_description: _
 
 Get the boolean state which indicates whether the aspect ratio of this camera is forced to a non-default setting.
 
+
 Returns: A boolean: whether or not this camera's aspect ratio is set to a non-default value.
 
 
@@ -435,6 +438,7 @@ Get the camera's field of view, in degrees.
 
 Get the camera's vertical field of view, in degrees.  This is only
 meaningful for perspective cameras.
+
 
 Returns: The camera's field of view, in degrees.
 
@@ -525,6 +529,7 @@ acheived by applying an offset to the center of projection.  This
 function returns the offset that has been applied, as an ofVec2f.  For
 more information see http://www.orthostereo.com/geometryopengl.html.
 
+
 Returns: The "lens offset" applied to this camera, encoded in an ofVec2f.
 
 
@@ -565,6 +570,7 @@ _advanced: False_
 _inlined_description: _
 
 Access the model view matrix.
+
 Returns: the current 4x4 model view matrix.
 
 
@@ -726,6 +732,7 @@ _advanced: False_
 _inlined_description: _
 
 Access the projection matrix.
+
 Returns: the current 4x4 projection matrix.
 
 
@@ -926,6 +933,7 @@ and returns (also as an ofVec3f) the 3D world coordinates of that point.
 You'll also need to specify a Z value when providing your screen point.
 This Z value is interpreted as a distance into or away from the screen.
 
+
 Parameters:
 ScreenXYZ A point on your screen, whose 3D world coordinates you wish to know.
 
@@ -974,6 +982,7 @@ Sets the aspect ratio of the camera to the desired float, and forces the
 use of aspect ratio calculations.  Currently only used with perspective
 cameras. The default value (and the value used with orthographic
 cameras) is the ratio of the viewport's width to the viewport's height.
+
 
 Parameters:
 aspectRatio The desired aspect ratio, e.g. 1.3333, 1.6, etc.
@@ -1062,6 +1071,7 @@ viewport.  If you have set a non-default value (with
 ofCamera::setAspectRatio()), you can toggle whether or not this value is
 applied.
 
+
 Parameters:
 forceAspectRatio Whether or not this camera should use an aspect ratio you have set yourself.
 
@@ -1107,6 +1117,7 @@ Set the field of view for a perspective camera.
 This sets the vertical field of view for the camera, in degrees.
 This only operates with perspective cameras, and will have no effect
 with cameras in orthographic mode.
+
 
 Parameters:
 f The desired field of view for the camera, in degrees.
@@ -1159,6 +1170,7 @@ frustum" and is used (for example) in stereo views.  It is acheived by
 applying an offset to the center of projection.  This function sets this
 offset from an ofVec2f argument.  For more information see
 <http://www.orthostereo.com/geometryopengl.html>.
+
 
 Parameters:
 lensOffset The "lens offset" to apply to this camera, encoded in
@@ -1445,9 +1457,11 @@ and returns the location (also as an ofVec3f) where this point would
 appear on your (two-dimensional) display. The screen position's "Z
 coordinate" is set to be the same as your camera's.
 
+
 Parameters:
 WorldXYZ A 3D point in the world, whose screen coordinates you wish to know.
 viewport (Optional) A viewport. The default is ofGetCurrentViewport().
+
 Returns: An ofVec3f containing the screen coordinates of your 3D point of interest.
 
 

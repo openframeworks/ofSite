@@ -35,6 +35,7 @@ _advanced: False_
 _inlined_description: _
 
 Get the currently set global logging level.
+
 Returns: The currently set global logging level.
 
 
@@ -80,9 +81,11 @@ _advanced: False_
 _inlined_description: _
 
 Get log level name as a string.
+
 Parameters:
 level The ofLogLevel you want as a string.
 pad True if you want all log level names to be the same length.
+
 Returns: The log level name as a string.
 
 
@@ -163,6 +166,7 @@ _advanced: False_
 _inlined_description: _
 
 Set the logging to output to a file instead of the console.
+
 Parameters:
 path The path to the log file to use.
 append True if you want to append to the existing file.
@@ -236,6 +240,7 @@ OF_LOG_VERBOSE, will be printed.  Finally, setting a log level of
 OF_LOG_SILENT will prevent any messages from being printed.
 
 The default ofLogLevel is `OF_LOG_NOTICE`.
+
 
 Parameters:
 level the ofLogLevel (and below) you want to show
@@ -356,8 +361,8 @@ _syntax: ofSetLoggerChannel(loggerChannel)_
 _name: ofSetLoggerChannel_
 _returns: void_
 _returns_description: _
-_parameters: shared_ptr< ofBaseLoggerChannel > loggerChannel_
-_version_started: 0.9.0_
+_parameters: ofPtr< ofBaseLoggerChannel > loggerChannel_
+_version_started: _
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -374,6 +379,7 @@ Custom logger channels must extend ofBaseLoggerChannel. Custom log channels
 can be useful for combining logging methods, logging to a server, logging
 to email or even Twitter.
 
+
 Parameters:
 loggerChannel A shared pointer to the logger channel.
 
@@ -384,6 +390,53 @@ loggerChannel A shared pointer to the logger channel.
 
 
 _description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofSetLoggerChannel(loggerChannel)
+
+<!--
+_syntax: ofSetLoggerChannel(loggerChannel)_
+_name: ofSetLoggerChannel_
+_returns: void_
+_returns_description: _
+_parameters: ofPtr< ofBaseLoggerChannel > loggerChannel_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Set the logger to use a custom logger channel.
+
+Custom logger channels must extend ofBaseLoggerChannel. Custom log channels
+can be useful for combining logging methods, logging to a server, logging
+to email or even Twitter.
+
+
+Parameters:
+loggerChannel A shared pointer to the logger channel.
+
+
+
+
+
+
+
+_description: _
+
 
 
 

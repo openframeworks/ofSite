@@ -373,6 +373,7 @@ Asymmetric matrices occur when stereo, power walls, caves and
 reality center display are used.
 In these configuration one should use the getFrustum method instead.
 
+
 Returns: false if matrix is not a perspective matrix,
 where parameter values are undefined.
 
@@ -1289,6 +1290,7 @@ and a rotation matrix which orients an object to point towards 'center'
 along its z-axis. Use this function if you want an object to look at a
 point from another point in space.
 
+
 Parameters:
 eye The position of the object.
 center The point which the object is "looking" at.
@@ -1565,6 +1567,7 @@ _inlined_description: _
 \{
 Matrix becomes a rotation transform.
 
+
 Parameters:
 from Matrix becomes a rotation from this vector direction.
 to Matrix becomes a rotation to this vector direction.
@@ -1606,6 +1609,7 @@ _advanced: False_
 
 _inlined_description: _
 
+
 Parameters:
 angle Matrix becomes a rotation by angle (degrees).
 axis Rotation is performed around this vector.
@@ -1646,6 +1650,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 Parameters:
 angle Matrix becomes a rotation by angle (degrees).
@@ -1689,6 +1694,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 Parameters:
 quaternion Matrix becomes a rotation that produces the quaternion's orientation.
@@ -2595,7 +2601,7 @@ You can pass a pointer to floats, and the first 16 contents will be
 extracted into this matrix.
 
 
-warning:the validity of these values is not checked!
+Warning: the validity of these values is not checked!
 
 
 

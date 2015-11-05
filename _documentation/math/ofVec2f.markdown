@@ -147,9 +147,11 @@ ofVec2f v1 = ofVec2f(40, 20);
 ofVec2f v2 = ofVec2f(4, 2);
 v1.align(v2) // returns true
 ~~~~
+
 Parameters:
 vec The vector to compare alignment with
 tolerance an angle tolerance/threshold (specified in degrees) for deciding if the vectors are sufficiently aligned.
+
 Returns: true if both vectors are aligned (pointing in the same direction).
 
 
@@ -198,6 +200,7 @@ _advanced: False_
 _inlined_description: _
 
 Determine if two vectors are aligned with tolerance in radians
+
 Parameters:
 vec The vector to compare alignment with
 tolerance an angle tolerance/threshold (specified in radians) for deciding if the vectors are sufficiently aligned.
@@ -249,8 +252,10 @@ ofVec2f v1(1,0);
 ofVec2f v2(0,1);
 float angle = v1.angle(v2); // angle is 90
 ~~~~
+
 Parameters:
 vec The vector to calculate the angle to
+
 Returns: The angle in degrees (-180...180)
 
 
@@ -305,8 +310,10 @@ ofVec2f v1(1,0);
 ofVec2f v2(0,1);
 float angle = v1.angleRad(v2); // angle is HALF_PI
 ~~~~
+
 Parameters:
 vec The vector to calculate the angle to
+
 Returns: The angle in radians (-PI...PI)
 
 
@@ -370,9 +377,11 @@ centroid.average( points, numPoints );
 // centroid now is the centre of gravity/average of all the random points
 ~~~~
 
+
 Parameters:
 points The array of ofVec2f to avarage over
 num specifies the number of ofVec2f in the array.
+
 Returns: Vector that is the avarage of the points in the array
 
 
@@ -443,9 +452,11 @@ of a bunch of points to a reference point, where it doesn't matter exactly
 what the distances are, you just want the shortest), you can use
 squareDistance() instead.
 
+
 Parameters:
 pnt The point to calculate the distance to
- Returns: The distance as float
+ 
+Returns: The distance as float
 \sa squareDistance()
 
 
@@ -521,6 +532,7 @@ ofVec2f a3(1, 0);
 ofVec2f b3(-1, 0); // 180 degree angle to a3
 dot = a3.dot(b3); // dot is -1, ie cos(180)
 ~~~~
+
 
 Parameters:
 vec The vector to dotproduct
@@ -601,6 +613,7 @@ ofVec3f v3 = v1.getInterpolated( v2, 0.5 ); // v3 is (5, 7.5)
 ofVec3f v4 = v1.getInterpolated( v2, 0.8 ); // v4 is (8, 9)
 ~~~~
 
+
 Parameters:
 pnt The point to move towards
 p The amount to move towards pnt
@@ -664,8 +677,10 @@ ofVec2f v2Limited = v2.getLimited(3);
 ~~~~
 
  \sa limit()
+
 Parameters:
 max The maximum length of the vector to return
+
 Returns: A copy of this vector with its length (magnitude) restricted to a
 maximum of max units by scaling down if necessary.
 
@@ -723,6 +738,7 @@ In most cases you want `vx` and `vy` to be perpendicular and of unit length; if
 they are not perpendicular you will have shearing as part of the mapping, and
 if they are not of unit length you will have scaling as part of the mapping.
 
+
 Returns: A new ofVec2f calculated by copying this vector and then mapping from
 its default coordinate system -- origin (0,0), X direction (1,0), Y direction
 (0,1) -- to a new coordinate system defined with origin at origin, X direction
@@ -777,8 +793,10 @@ ofVec2f v2(10, 10);
 ofVec3f mid = v1.getMiddle(v2); // mid gets (7.5, 5)
 ~~~~
 
+
 Parameters:
 pnt The vector to find the middle to
+
 Returns: The middle between this vector and `pnt`
 \sa middle()
 
@@ -1373,9 +1391,11 @@ ofVec2f v1 = ofVec2f(40, 20);
 ofVec2f v2 = ofVec2f(4, 2);
 v1.isAligned(v2) // returns true
 ~~~~
+
 Parameters:
 vec The vector to compare alignment with
 tolerance an angle tolerance/threshold (specified in degrees) for deciding if the vectors are sufficiently aligned.
+
 Returns: true if both vectors are aligned (pointing in the same direction).
 
 
@@ -1416,6 +1436,7 @@ _advanced: False_
 _inlined_description: _
 
 Determine if two vectors are aligned with tolerance in radians
+
 Parameters:
 vec The vector to compare alignment with
 tolerance an angle tolerance/threshold (specified in radians) for deciding if the vectors are sufficiently aligned.
@@ -1975,6 +1996,7 @@ ofVec2f v2 = ofVec2f(40, 20); // v2.x is 40, v2.y is 20
 ofVec3f v3(0.1, 0.3); // v3.x is 0.1, v3.y is 0.3
 ~~~~
 
+
 Parameters:
 x The x component
 y The y component
@@ -2177,6 +2199,7 @@ ofVec2f v3(40, 20);
 // ( v1 != v2 ) is true
 // ( v1 != v3 ) is false
 ~~~~
+
 
 Returns: true if any component is different to its corresponding
 component in vec, ie if 'x != vec.x' or 'y != vec.y', otherwise returns
@@ -3141,6 +3164,7 @@ ofVec2f v3(40, 20);
 // ( v1 == v3 ) is true
 ~~~~
 
+
 Returns: true if each component is the same as the corresponding
 component in vec, ie if x == vec.x and y == vec.y; otherwise returns
 false.
@@ -3753,6 +3777,7 @@ when finding the shortest distance of a bunch of points to a reference point,
 where it doesn't matter exactly what the distances are, you just want the
 shortest). It avoids the square root calculation that is ordinarily required
 to calculate a length.
+
 
 Returns: The distance squared as float
 \sa distance()

@@ -44,7 +44,7 @@ ofXml pictures;
 pictures.loadFromBuffer( buffer.getText() ); // now get the buffer as a string and make XML
 ~~~~
 
-Now you have an ofXml document, but you're not pointing at anything yet. The way to select which element you're looking at it by setting the current element, using setTo(const string& path), like this:
+Now you have an ofXml document, but you're not pointing at anything yet. The way to select which element you're looking at is by setting the current element, using setTo(const string& path), like this:
 
 ~~~~{.cpp}
 pictures.setTo("pictures"); // now we're at the root

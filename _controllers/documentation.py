@@ -103,14 +103,6 @@ def run():
 #        functions_file.reference = str(functions_file.reference)
 #        for func in function_files:
 #            functions_file.reference = str.replace(functions_file.reference, class_name, "<a href=\"../"+clazz.module+"/"+class_name+".html\">"+class_name+"</a>")
-
-
-        functions_to_remove = []
-        for function in functions_file.function_list:
-            if function.name.find("OF_DEPRECATED_MSG")!=-1:
-                functions_to_remove.append(method)
-        for function in functions_to_remove:
-            functions_file.function_list.remove(method)
         env = {
             "modulename": functions_file.name,
             "clazz": None,

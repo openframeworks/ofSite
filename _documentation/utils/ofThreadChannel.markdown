@@ -217,8 +217,10 @@ if (myThreadChannel.receive(myPixelsToSet)) {
 }
 ~~~~
 
+
 Parameters:
 sentValue A reference to a sent value.
+
 Returns: True if a new value was received or false if the ofThreadChannel was closed.
 
 
@@ -287,6 +289,7 @@ if (myThreadChannel.send(std::move(myPixelsToSend))) {
 
 ~~~~
 
+
 Returns: true if the value was sent successfully or false if the channel was closed.
 
 
@@ -354,6 +357,7 @@ if (myThreadChannel.send(std::move(myPixelsToSend))) {
 }
 
 ~~~~
+
 
 Returns: true if the value was sent successfully or false if the channel was closed.
 
@@ -421,8 +425,10 @@ if (myThreadChannel.tryReceive(myPixelsToSet)) {
 }
 ~~~~
 
+
 Parameters:
 sentValue A reference to a sent value.
+
 Returns: True if a new value was received or false if the ofThreadChannel was closed.
 
 
@@ -490,9 +496,11 @@ if (myThreadChannel.tryReceive(myPixelsToSet)) {
 }
 ~~~~
 
+
 Parameters:
 sentValue A reference to a sent value.
 timeoutMs The number of milliseconds to wait for new data before continuing.
+
 Returns: True if a new value was received or false if the ofThreadChannel was closed.
 
 

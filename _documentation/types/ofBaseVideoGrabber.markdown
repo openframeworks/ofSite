@@ -46,6 +46,7 @@ _advanced: False_
 _inlined_description: _
 
 Get the video grabber's height.
+
 Returns: the video grabber's height.
 
 
@@ -90,6 +91,7 @@ Get the video grabber's internal ofTexture pointer if available.
 \note Subclasses should implement this method only if internal API can
 upload video grabber pixels directly to an ofTexture.
 
+
 Returns: the internal ofTexture pointer or nullptr if not available.
 
 
@@ -129,6 +131,7 @@ _advanced: False_
 _inlined_description: _
 
 Get the video grabber's width.
+
 Returns: the video grabber's width.
 
 
@@ -169,6 +172,7 @@ _advanced: False_
 _inlined_description: _
 
 Get a list of available video grabber devices.
+
 Returns: a std::vector of ofVideoDevice objects.
 
 
@@ -212,6 +216,7 @@ Set the video grabber's desired frame rate.
 
 Many video grabbers support user-specified frame rates.  This frame rate
 should be considered a hint for the video grabber and is not guaranteed.
+
 
 Parameters:
 framerate the desired frame rate.
@@ -259,6 +264,7 @@ In most cases, a user can choose a specific grabber source by ID.  This
 device ID information should be available to the user via the
 listDevices() method.
 
+
 Parameters:
 deviceID The device ID provided by listDevices().
 
@@ -300,6 +306,7 @@ _advanced: False_
 _inlined_description: _
 
 Set the video grabber's hardware verbosity level.
+
 Parameters:
 bTalkToMe true if verbose grabber logging feedback is required.
 
@@ -347,9 +354,11 @@ a hint and choose the closest dimensions to those requested.
 Users can check the actual width and height by calling getWidth() and
 getHeight() respectively after a successful setup.
 
+
 Parameters:
 w the requested width.
 h the requested height.
+
 Returns: true if the video grabber was set up successfully.
 
 

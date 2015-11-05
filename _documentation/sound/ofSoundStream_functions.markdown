@@ -53,45 +53,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###vector< ofSoundDevice > ofSoundStreamListDevices()
-
-<!--
-_syntax: ofSoundStreamListDevices()_
-_name: ofSoundStreamListDevices_
-_returns: vector< ofSoundDevice >_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Prints a list of all available audio devices
-\return all sound devices found on the system
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void ofSoundStreamSetup(nOutputChannels, nInputChannels, *appPtr = NULL)
 
 <!--
@@ -115,6 +76,7 @@ Sets up and starts a global ofSoundStream.
 
 This will set up a sound stream with a default sample rate of 44100, a
 buffer size of 256 samples, and a queue of 4 buffers.
+
 
 Parameters:
 nOutputChannels number of requested output channels (i.e. 2 for stereo).
@@ -158,6 +120,7 @@ _advanced: False_
 _inlined_description: _
 
 Sets up and starts a global ofSoundStream.
+
 Parameters:
 nOutputChannels number of requested output channels (i.e. 2 for stereo).
 nInputChannels number of requested input channels.
@@ -203,6 +166,7 @@ _advanced: False_
 _inlined_description: _
 
 Sets up and starts a global ofSoundStream.
+
 Parameters:
 nOutputChannels number of requested output channels (i.e. 2 for stereo).
 nInputChannels number of requested input channels.
@@ -268,12 +232,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofSoundStreamStop()
+###vector< ofSoundDevice > ofSoundStreamStop()
 
 <!--
 _syntax: ofSoundStreamStop()_
 _name: ofSoundStreamStop_
-_returns: void_
+_returns: vector< ofSoundDevice >_
 _returns_description: _
 _parameters: _
 _version_started: _
@@ -287,7 +251,47 @@ _advanced: False_
 
 _inlined_description: _
 
-Stops the sound stream (audioIn() / audioOut() will stop being called)
+Prints a list of all available audio devices
+\return all sound devices found on the system
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###vector< ofSoundDevice > ofSoundStreamStop()
+
+<!--
+_syntax: ofSoundStreamStop()_
+_name: ofSoundStreamStop_
+_returns: vector< ofSoundDevice >_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Prints a list of all available audio devices
+\return all sound devices found on the system
 
 
 

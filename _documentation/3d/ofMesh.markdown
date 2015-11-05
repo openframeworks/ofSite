@@ -907,6 +907,7 @@ _advanced: False_
 
 _inlined_description: _
 
+
 Returns: an ofMesh representing an XYZ coordinate system.
 
 
@@ -1912,6 +1913,7 @@ _advanced: False_
 
 _inlined_description: _
 
+
 Returns: a ofVec3f defining the centroid of all the vetices in the mesh.
 
 
@@ -1954,6 +1956,7 @@ _advanced: False_
 _inlined_description: _
 
 Get the color at the index in the colors vector.
+
 Returns: the color at the index in the colors vector.
 
 
@@ -1996,6 +1999,7 @@ _advanced: False_
 _inlined_description: _
 
 Use this if you plan to change the colors as part of this call as it will force a reset of the cache.
+
 Returns: the vector that contains all of the colors of the mesh, if it has any.
 
 
@@ -2036,6 +2040,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 Returns: the vector that contains all of the colors of the mesh, if it has any. (read only)
 
@@ -2079,6 +2084,7 @@ _advanced: False_
 _inlined_description: _
 
 Use this if you plan to change the colors as part of this call as it will force a reset of the cache.
+
 Returns: a pointer that contains all of the colors of the mesh, if it has any.
 
 
@@ -2120,6 +2126,7 @@ _advanced: False_
 
 _inlined_description: _
 
+
 Returns: a pointer that contains all of the colors of the mesh, if it has any. (read only)
 
 
@@ -2160,6 +2167,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 Returns: the vector that contains all of the faces of the mesh. This isn't currently implemented.
 
@@ -2203,6 +2211,7 @@ Get normals for each face
 As a default it only calculates the normal for the face as a whole but
 by setting (perVertex = true) it will return the same normal value for
 each of the three vertices making up a face.
+
 Returns: a vector containing the calculated normals of each face in the mesh.
 
 
@@ -2243,6 +2252,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 Returns: the index from the index vector. Each index represents the index of the vertex in the vertices vector. This determines the way that the vertices are connected into the polgoynon type set in the primitiveMode.
 
@@ -2285,6 +2295,7 @@ _advanced: False_
 
 _inlined_description: _
 
+
 Returns: a pointer to the indices that the mesh contains.
 
 
@@ -2325,6 +2336,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 Returns: a pointer to the indices that the mesh contains.
 
@@ -2369,6 +2381,7 @@ _inlined_description: _
 
 Use this if you plan to change the indices as part of this call as it
 will force a reset of the cache.
+
 Returns: the vector that contains all of the indices of the mesh, if it has any.
 
 
@@ -2409,6 +2422,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 Returns: the vector that contains all of the indices of the mesh, if it has any. (read only)
 
@@ -2452,6 +2466,7 @@ _advanced: False_
 _inlined_description: _
 
 The new mesh includes the mesh mode, colors, textures, and normals of the original mesh (assuming any were added).
+
 Returns: a mesh made up of a range of indices from startIndex to the endIndex.
 
 
@@ -2531,7 +2546,8 @@ _advanced: False_
 
 _inlined_description: _
 
-\Returns: the primitive mode that the mesh is using.
+\
+Returns: the primitive mode that the mesh is using.
 
 
 
@@ -2572,7 +2588,8 @@ _advanced: False_
 
 _inlined_description: _
 
-\Returns: the normal at the index in the normals vector.
+\
+Returns: the normal at the index in the normals vector.
 
 
 
@@ -2615,6 +2632,7 @@ _inlined_description: _
 
 Use this if you plan to change the normals as part of this call as it
 will force a reset of the cache.
+
 Returns: the vector that contains all of the normals of the mesh,
 if it has any.
 
@@ -2656,6 +2674,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 Returns: the vector that contains all of the normals of the mesh, if
 it has any. (read only)
@@ -2699,6 +2718,7 @@ _advanced: False_
 
 _inlined_description: _
 
+
 Returns: a pointer to the normals that the mesh contains.
 
 
@@ -2740,6 +2760,7 @@ _advanced: False_
 
 _inlined_description: _
 
+
 Returns: a pointer to the normals that the mesh contains.
 
 
@@ -2780,6 +2801,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 Returns: the size of the colors vector for the mesh.
 This will tell you how many colors are contained in the mesh.
@@ -2824,6 +2846,7 @@ _advanced: False_
 _inlined_description: _
 
 This will tell you how many indices are contained in the mesh.
+
 Returns: the size of the indices vector for the mesh.
 
 
@@ -2866,6 +2889,7 @@ _advanced: False_
 _inlined_description: _
 
 This will tell you how many normals are contained in the mesh.
+
 Returns: the size of the normals vector for the mesh.
 
 
@@ -2908,6 +2932,7 @@ _advanced: False_
 _inlined_description: _
 
 This will tell you how many texture coordinates are contained in the mesh.
+
 Returns: the size of the texture coordinates vector for the mesh.
 
 
@@ -2948,6 +2973,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 Returns: the size of the vertices vector for the mesh.
 This will tell you how many vertices are contained in the mesh.
@@ -2990,6 +3016,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 Returns: the Vec2f representing the texture coordinate.
 Because OF uses ARB textures these are in pixels rather than
@@ -3038,6 +3065,7 @@ Get a vector representing the texture coordinates of the mesh
 Because OF uses ARB textures these are in pixels rather than 0-1 normalized coordinates.
 Use this if you plan to change the texture coordinates as part of this
 call as it will force a reset of the cache.
+
 Returns: a vector of Vec2f representing the texture coordinates for the whole mesh.
 
 
@@ -3080,6 +3108,7 @@ _advanced: False_
 _inlined_description: _
 
 Because OF uses ARB textures these are in pixels rather than 0-1 normalized coordinates.
+
 Returns: a vector of Vec2f representing the texture coordinates for the whole mesh. (read only)
 
 
@@ -3120,6 +3149,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 Returns: a pointer to the texture coords that the mesh contains.
 
@@ -3203,6 +3233,7 @@ _advanced: False_
 
 _inlined_description: _
 
+
 Returns: the mesh as a vector of unique ofMeshFaces
 a list of triangles that do not share vertices or indices
 
@@ -3245,6 +3276,7 @@ _advanced: False_
 
 _inlined_description: _
 
+
 Returns: the vertex at the index.
 
 
@@ -3285,6 +3317,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 Returns: the vector that contains all of the vertices of the mesh.
 
@@ -3327,6 +3360,7 @@ _advanced: False_
 
 _inlined_description: _
 
+
 Returns: the vector that contains all of the vertices of the mesh.
 
 
@@ -3368,6 +3402,7 @@ _advanced: False_
 
 _inlined_description: _
 
+
 Returns: a pointer to the vertices that the mesh contains.
 
 
@@ -3408,6 +3443,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 Returns: a pointer to the vertices that the mesh contains.
 
@@ -3614,6 +3650,7 @@ _advanced: False_
 
 _inlined_description: _
 
+
 Returns: Whether the mesh has any vertices.
 
 
@@ -3654,6 +3691,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 Returns: If the colors of the mesh have changed, been added or removed.
 
@@ -3696,6 +3734,7 @@ _advanced: False_
 
 _inlined_description: _
 
+
 Returns: If the indices of the mesh have changed, been added or removed.
 
 
@@ -3736,6 +3775,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 Returns: If the normals of the mesh have changed, been added or removed.
 
@@ -3778,6 +3818,7 @@ _advanced: False_
 
 _inlined_description: _
 
+
 Returns: If the texture coords of the mesh have changed, been added or removed.
 
 
@@ -3818,6 +3859,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 Returns: If the vertices of the mesh have changed, been added or removed.
 

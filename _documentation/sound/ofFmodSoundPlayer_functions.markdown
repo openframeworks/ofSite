@@ -15,42 +15,6 @@ _advanced: True_
 
 <!----------------------------------------------------------------------------->
 
-###void ofFmodSetBuffersize(bs)
-
-<!--
-_syntax: ofFmodSetBuffersize(bs)_
-_name: ofFmodSetBuffersize_
-_returns: void_
-_returns_description: _
-_parameters: unsigned int bs_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###float * ofFmodSoundGetSpectrum(nBands)
 
 <!--
@@ -130,6 +94,43 @@ _description: _
 <!--
 _syntax: ofFmodSoundStopAll()_
 _name: ofFmodSoundStopAll_
+_returns: void_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofFmodSoundUpdate()
+
+<!--
+_syntax: ofFmodSoundUpdate()_
+_name: ofFmodSoundUpdate_
 _returns: void_
 _returns_description: _
 _parameters: _

@@ -295,7 +295,8 @@ def getclass(clazz):
                             documentation_clazz.example = documentation_clazz.example + templatedClazz.example
                             documentation_clazz.istemplated = True"""
                             
-                documentation_clazz.function_list.sort(key=lambda function: function.name)
+                documentation_clazz.function_list.sort(key= sort_function)
+                #documentation_clazz.function_list.sort(key=lambda function: function.name)
                 documentation_clazz.var_list.sort(key=lambda variable: variable.name)
                 #documentation_clazz.function_list.sort(key= sort_function)
                 return documentation_clazz   
@@ -324,8 +325,8 @@ def getclass(clazz):
                 documentation_clazz.example = documentation_clazz.example + templatedClazz.example
                 documentation_clazz.istemplated = True"""
     
-    #documentation_clazz.function_list.sort(key= sort_function)
-    documentation_clazz.function_list.sort(key=lambda function: function.name)
+    documentation_clazz.function_list.sort(key= sort_function)
+    #documentation_clazz.function_list.sort(key=lambda function: function.name)
     documentation_clazz.var_list.sort(key=lambda variable: variable.name)
     return documentation_clazz
     

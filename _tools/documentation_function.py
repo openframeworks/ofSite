@@ -1,4 +1,5 @@
 import Levenshtein
+import re
 
 class DocsFunction:
     def __init__(self,functionid):
@@ -60,7 +61,65 @@ class DocsFunctionsFile:
             else:
                 parameters_names.append(p.split(' ')[len(p.split(' '))-1])
         return parameters_names
-                
+        
+    def test_alternative_types(self, ty, other_ty, alternatives):
+        """print "-----------------------"
+        print ty.strip()
+        print other_ty.strip()
+        print "ty in alternatives " + str(ty in alternatives)
+        if ty in alternatives:
+            print "alternatives[ty].count(other_ty) " + str(alternatives[ty].count(other_ty))"""
+        return ty in alternatives and alternatives[ty].count(other_ty)>0
+        
+    def fuzzy_function_search(self, name, returns, parameters, alternatives):
+        for function in self.function_list:
+            if function.name == name:
+                dst_parameters_types = self.get_parameter_types(function.parameters)
+                src_parameters_types = self.get_parameter_types(parameters)
+                if len(src_parameters_types)==len(dst_parameters_types):
+                    a = -1
+                    for i in range(len(src_parameters_types)):
+                        ty = src_parameters_types[i].strip()
+                        other_ty = dst_parameters_types[i].strip()
+                        non_const_ty = re.sub(r"const (.*)","\\1",ty).strip()
+                        non_const_other_ty = re.sub(r"const (.*)","\\1",other_ty).strip()
+                        if ty != other_ty and \
+                           not self.test_alternative_types(ty, other_ty, alternatives) and \
+                           non_const_ty != other_ty and \
+                           not self.test_alternative_types(non_const_ty, other_ty, alternatives) and \
+                           non_const_ty != non_const_other_ty and \
+                           not self.test_alternative_types(non_const_ty, non_const_other_ty, alternatives) and \
+                           ty != non_const_other_ty and \
+                           not self.test_alternative_types(ty, non_const_other_ty, alternatives):
+                            non_const_ty = re.sub(r"(.*)::(.*)","\\2",non_const_ty).strip()
+                            if ty != other_ty and \
+                               not self.test_alternative_types(ty, other_ty, alternatives) and \
+                               non_const_ty != other_ty and \
+                               not self.test_alternative_types(non_const_ty, other_ty, alternatives) and \
+                               non_const_ty != non_const_other_ty and \
+                               not self.test_alternative_types(non_const_ty, non_const_other_ty, alternatives) and \
+                               ty != non_const_other_ty and \
+                               not self.test_alternative_types(ty, non_const_other_ty, alternatives):
+                                break
+                        else:
+                            a = i
+                    fuzzy_return = returns.replace("&","").replace("*","").strip()
+                    other_fuzzy_return = function.returns.replace("&","").replace("*","").strip()
+                    non_const_return = re.sub(r"const (.*)","\\1",fuzzy_return).strip()
+                    non_const_other_return = re.sub(r"const (.*)","\\1",other_fuzzy_return).strip()
+                    if a == len(src_parameters_types)-1 and \
+                       (fuzzy_return == other_fuzzy_return or \
+                       self.test_alternative_types(fuzzy_return, other_fuzzy_return, alternatives) or \
+                       fuzzy_return == non_const_other_return or \
+                       self.test_alternative_types(fuzzy_return, non_const_other_return, alternatives) or \
+                       non_const_return == non_const_other_return or \
+                       self.test_alternative_types(non_const_return, non_const_other_return, alternatives) or \
+                       non_const_return == other_fuzzy_return or \
+                       self.test_alternative_types(non_const_return, other_fuzzy_return, alternatives)):                        
+                        function.new = False
+                        return function
+        return None
+    
     def function_by_signature(self, name, returns, parameters, alternatives):
         function = DocsFunction(0)
         function.name = name
@@ -72,12 +131,10 @@ class DocsFunctionsFile:
         function.syntax = function.syntax + ")"
         function.returns = returns
         function.new = True
-        found = False
-        for f in self.function_list:
-            if f.name == name:
-                dst_parameters_types = self.get_parameter_types(f.parameters.replace('const ',''))
-                src_parameters_types = self.get_parameter_types(parameters.replace('const ',''))
-
+        for function in self.function_list:
+            if function.name == name:
+                dst_parameters_types = self.get_parameter_types(function.parameters)
+                src_parameters_types = self.get_parameter_types(parameters)
                 if(len(src_parameters_types)==len(dst_parameters_types)):
                     a = -1
                     for i in range(len(src_parameters_types)):
@@ -85,20 +142,21 @@ class DocsFunctionsFile:
                             break
                         else:
                             a = i
-                    if a == len(src_parameters_types)-1:
-                        f.new = False
-                        f.parameters = parameters
-                        return f
-                        found = True
-                        #print 'found ' + function.name
-                        break
-        if not found:
-            #print 'not found ' + method.name
-            #clazzmethod = method
-            self.function_list.append(function)   
-        return function
-        
-        
-    def get_inlined_docs_similarity(self):
-        return Levenshtein.ratio(self.inlined_description, self.description)
+                    if a == len(src_parameters_types)-1 and function.returns == returns:
+                        function.new = False
+                        function.parameters = parameters
+                        return function
+        if len(alternatives)>0:
+            alternative_func = self.fuzzy_function_search(name, returns, parameters, alternatives)
+            if alternative_func != None:        
+                alternative_func.parameters = function.parameters
+                alternative_func.syntax = function.syntax
+                alternative_func.returns = function.returns
+                return alternative_func
+            else:
+                self.function_list.append(function)
+                return function
+        else:
+            self.function_list.append(function)
+            return function
 

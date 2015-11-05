@@ -54,6 +54,7 @@ This is useful if you need manual control over loading a number of
 textures with the same settings. Make sure to set the texture data
 parameters first.
 
+
 Parameters:
 textureData The settings to use when allocating the ofTexture.
 
@@ -95,6 +96,7 @@ _advanced: False_
 _inlined_description: _
 
 Allocate the texture using the given settings and custom format.
+
 Parameters:
 textureData The settings to use when allocating the ofTexture.
 glFormat GL texture format: GL_RGBA, GL_LUMINANCE, etc.
@@ -153,6 +155,7 @@ This method applies the currently set OF texture type and defaults to
 ARB rectangular textures if they are supported. (They are not supported
 on OpenGL ES).
 
+
 Parameters:
 w Desired width in pixels.
 h Desired height in pixels.
@@ -202,6 +205,7 @@ _inlined_description: _
 Allocate texture of a given size and format.
 
 \sa allocate(int w, int h, int glInternalFormat)
+
 Parameters:
 w Desired width in pixels.
 h Desired height in pixels.
@@ -253,9 +257,10 @@ This will overide the default OF texture type, in case you need a
 square texture (`GL_TEXTURE_2D`).
 
 
-warning:ARB textures are not available in OpenGL ES.
+Warning: ARB textures are not available in OpenGL ES.
 \sa ofEnableArbTex()
 \sa allocate(int w, int h, int glInternalFormat)
+
 Parameters:
 w Desired width in pixels.
 h Desired height in pixels.
@@ -305,6 +310,7 @@ _inlined_description: _
 Allocate texture of a given size, format, & type.
 
 \sa allocate(int w, int h, int glInternalFormat)
+
 Parameters:
 w Desired width in pixels.
 h Desired height in pixels.
@@ -354,6 +360,7 @@ Allocate texture using an ofPixels instance.
 
 Pixel type and OpenGL format are determined from pixel settings.
 
+
 Parameters:
 pix Reference to ofPixels instance.
 
@@ -400,9 +407,10 @@ This lets you overide the default OF texture type in case you need a
 square GL_TEXTURE_2D texture.
 
 
-warning:ARB textures are not available in OpenGL ES.
+Warning: ARB textures are not available in OpenGL ES.
 \sa ofEnableArbTex()
 \sa allocate(const ofPixels& pix)
+
 Parameters:
 pix Reference to ofPixels instance.
 bUseARBExtension Set to true to use rectangular textures.
@@ -449,6 +457,7 @@ Allocate texture using an ofShortPixels instance.
 Same as void allocate(const ofPixels& pix), except using ofShortPixels.
 
 \sa allocate(const ofPixels& pix)
+
 Parameters:
 pix Reference to ofShortPixels instance.
 
@@ -494,6 +503,7 @@ Allocate texture using an ofShortPixels instance and type.
 Same as void void allocate(const ofPixels& pix), except using ofShortPixels.
 
 \sa allocate(const ofShortPixels& pix)
+
 Parameters:
 pix Reference to ofShortPixels instance.
 bUseARBExtension Set to true to use rectangular textures.
@@ -540,6 +550,7 @@ Allocate texture using an ofFloatPixels instance.
 Same as void allocate(const ofPixels& pix), except using ofFloatPixels.
 
 \sa allocate(const ofPixels& pix)
+
 Parameters:
 pix Reference to ofFloatPixels instance.
 
@@ -585,6 +596,7 @@ Allocate texture using an ofShortPixels instance and type.
 Same as void void allocate(const ofPixels& pix), except using ofShortPixels.
 
 \sa allocate(const ofFloatPixels& pix)
+
 Parameters:
 pix Reference to ofFloatPixels instance.
 bUseARBExtension Set to true to use rectangular textures.
@@ -638,6 +650,7 @@ in GLSL.
 See textureBufferInstanceExample and https://www.opengl.org/wiki/Buffer_Texture
 
 \sa allocate(const ofBufferObject & buffer, int glInternalFormat)
+
 Parameters:
 buffer Reference to ofBufferObject instance.
 glInternalFormat Internal pixel format of the data.
@@ -725,7 +738,7 @@ Calls glBindImageTexture on the texture
 
 Binds the texture as an read or write image, only available since OpenGL 4.2
 
-warning:This is not available in OpenGLES
+Warning: This is not available in OpenGLES
 \sa http://www.opengl.org/wiki/GLAPI/glBindImageTexture
 
 
@@ -813,6 +826,7 @@ _advanced: False_
 _inlined_description: _
 
 Copy the texture to an ofBufferObject.
+
 Parameters:
 buffer the target buffer to copy to.
 
@@ -978,6 +992,7 @@ _advanced: False_
 _inlined_description: _
 
 Disable a texture target.
+
 Parameters:
 textureLocation the OpenGL texture ID to enable as a target.
 
@@ -1141,6 +1156,7 @@ _inlined_description: _
 
 Draw the texture at a given size witdh and depth.
 
+
 Parameters:
 x Draw position on the x axis.
 y Draw position on the y axis.
@@ -1188,6 +1204,7 @@ _advanced: False_
 _inlined_description: _
 
 Draws the texture at 4 points passed in as if you created 4 glVertices.
+
 
 Parameters:
 p1 Upper left position on the x axis.
@@ -1243,6 +1260,7 @@ Like ofRect() depend on the current `OF_RECT_MODE`:
 
 \sa ofSetRectMode()
 
+
 Parameters:
 x Draw position on the x axis.
 y Draw position on the y axis.
@@ -1291,6 +1309,7 @@ _inlined_description: _
 Draw a subsection of the texture with depth.
 
 \sa drawSubsection(float x, float y, float w, float h, float sx, float sy)
+
 Parameters:
 x Draw position on the x axis.
 y Draw position on the y axis.
@@ -1340,6 +1359,7 @@ _inlined_description: _
 Draw a subsection of the texture with an offset.
 
 \sa drawSubsection(float x, float y, float w, float h, float sx, float sy)
+
 Parameters:
 x Draw position on the x axis.
 y Draw position on the y axis.
@@ -1390,6 +1410,7 @@ _inlined_description: _
 Draw a subsection of the texture with an offset and depth.
 
 \sa drawSubsection(float x, float y, float w, float h, float sx, float sy)
+
 Parameters:
 x Draw position on the x axis.
 y Draw position on the y axis.
@@ -1487,6 +1508,7 @@ _advanced: False_
 _inlined_description: _
 
 Enable a texture target.
+
 Parameters:
 textureLocation the OpenGL texture ID to enable as a target.
 
@@ -1529,7 +1551,7 @@ _inlined_description: _
 Generate mipmap for the current texture.
 
 
-warning:Only GL_TEXTURE_RECTANGLE - which is the default openFrameworks
+Warning: Only GL_TEXTURE_RECTANGLE - which is the default openFrameworks
 texture target - does *not* support mipmaps, so make sure to call
 ofDisableArbTex() before loading texture
 data for a texture you want to generate mipmaps for.
@@ -1611,9 +1633,11 @@ _advanced: False_
 _inlined_description: _
 
 Helper to convert display coordinate to texture coordinate.
+
 Parameters:
 xPts Horizontal position in a normalized percentage (0 - 1).
 yPts Vertical position in a normalized percentage (0 - 1).
+
 Returns: Texture coordinate or ofPoint::zero() if texture is not allocated.
 
 
@@ -1654,9 +1678,11 @@ _advanced: False_
 _inlined_description: _
 
 Helper to convert display coordinate to texture coordinate.
+
 Parameters:
 xPos Horizontal position in pixels.
 yPos Vertical position in pixels.
+
 Returns: Texture coordinate or ofPoint::zero() if texture is not allocated.
 
 
@@ -1704,6 +1730,7 @@ Return value is pixel size (default) or normalized (0 - 1) if ofEnableNormalized
 
 \sa ofEnabledNormalizedTextures()
 
+
 Returns: Display height of texture in pixels.
 
 
@@ -1748,6 +1775,7 @@ _inlined_description: _
 Get a mesh that has the texture coordinates set.
 
 \sa drawSubsection(float x, float y, float w, float h, float sx, float sy)
+
 Parameters:
 x Draw position on the x axis.
 y Draw position on the y axis.
@@ -1839,6 +1867,7 @@ Internal texture data access.
 This returns the internal texture data for this texture, for instance,
 its textureID, type of texture, whether it's been allocated and other
 data about the state of the texture.
+
 
 Returns: a reference to the internal texture data struct.
 
@@ -1964,6 +1993,7 @@ Return value is pixel size (default) or normalized (0 - 1) if ofEnableNormalized
 
 \sa ofEnabledNormalizedTextures()
 
+
 Returns: Display width of texture in pixels.
 
 
@@ -2009,6 +2039,7 @@ Determine whether the texture has been allocated.
 
 This lets you check if a texture is safe to draw.  The texture can both
 be allocated by using `allocate()` or loading it with data `loadData()`.
+
 
 Returns: true if the texture has been allocated.
 
@@ -2100,6 +2131,7 @@ glFormat can be different to the internal format of the texture on each
 load, i.e. we can upload GL_BGRA pixels into a GL_RGBA texture but the
 number of channels need to match according to the OpenGL standard.
 
+
 Parameters:
 data Pointer to byte pixel data. Must not be nullptr.
 w Pixel data width.
@@ -2145,6 +2177,7 @@ _inlined_description: _
 
 Load short (2 byte) pixel data.
 \sa loadData(const unsigned char* const data, int w, int h, int glFormat)
+
 Parameters:
 data Pointer to byte pixel data. Must not be nullptr.
 w Pixel data width.
@@ -2190,6 +2223,7 @@ _inlined_description: _
 
 Load float pixel data.
 \sa loadData(const unsigned char* const data, int w, int h, int glFormat)
+
 Parameters:
 data Pointer to byte pixel data. Must not be nullptr.
 w Pixel data width.
@@ -2234,6 +2268,7 @@ _advanced: False_
 _inlined_description: _
 
 Load pixels from an ofPixels instance.
+
 Parameters:
 pix Reference to ofPixels instance.
 
@@ -2279,6 +2314,7 @@ Load pixels from an ofShortPixels instance.
 Same as loadData(ofPixels &) but for ofShortPixels.
 
 \sa loadData(const ofPixels & pix)
+
 Parameters:
 pix Reference to ofShortPixels instance.
 
@@ -2324,6 +2360,7 @@ Load pixels from an ofFloatPixels instance.
 Same as loadData(ofPixels &) but for ofFloatPixels.
 
 \sa loadData(const ofPixels & pix)
+
 Parameters:
 pix Reference to ofFloatPixels instance.
 
@@ -2370,6 +2407,7 @@ glFormat can be different to the internal format of the texture on each
 load, ie. we can upload GL_BGRA pixels into a GL_RGBA texture, but the
 number of channels need to match according to the OpenGL standard.
 
+
 Parameters:
 pix Reference to ofPixels instance.
 glFormat GL pixel type: GL_RGBA, GL_LUMINANCE, etc.
@@ -2414,6 +2452,7 @@ _inlined_description: _
 Load pixels from an ofShortPixels instance & specify the format.
 
 \sa loadData(const ofPixels & pix, int glFormat)
+
 Parameters:
 pix Reference to ofShortPixels instance.
 glFormat GL pixel type: GL_RGBA, GL_LUMINANCE, etc.
@@ -2458,6 +2497,7 @@ _inlined_description: _
 Load pixels from an ofFloatPixels instance and specify the format.
 
 \sa loadData(const ofPixels & pix, int glFormat)
+
 Parameters:
 pix Reference to ofFloatPixels instance.
 glFormat GL pixel type: GL_RGBA, GL_LUMINANCE, etc.
@@ -2508,6 +2548,7 @@ copies the data from the buffer to the texture.
 This is usually used to upload data to be shown asynchronously
 by using a buffer object binded as a PBO
 
+
 Parameters:
 buffer The buffer to load.
 glFormat GL pixel type: GL_RGBA, GL_LUMINANCE, etc.
@@ -2554,6 +2595,7 @@ Load byte pixel data.
 glFormat can be different to the internal format of the texture on each
 load, i.e. we can upload GL_BGRA pixels into a GL_RGBA texture but the
 number of channels need to match according to the OpenGL standard.
+
 
 Parameters:
 data Pointer to byte pixel data. Must not be nullptr.
@@ -2608,6 +2650,7 @@ Make sure that you have allocated your texture (using `allocate()`)
 to be large enough to hold the region of the screen you wish to load.
 
 \sa http://www.opengl.org/sdk/docs/man4/html/glCopyTexSubImage2D.xhtml
+
 
 Parameters:
 x Upper left corner horizontal screen position.
@@ -2697,6 +2740,7 @@ _advanced: False_
 _inlined_description: _
 
 Construct an ofTexture from an existing ofTexture.
+
 Parameters:
 mom The ofTexture to copy. Reuses internal GL texture ID.
 
@@ -2738,6 +2782,7 @@ _advanced: False_
 _inlined_description: _
 
 Copy a given ofTexture into this texture.
+
 Parameters:
 mom The ofTexture to copy from. Reuses internal GL texture ID.
 
@@ -2781,7 +2826,8 @@ _inlined_description: _
 Read current texture data from the GPU into pixels.
 
 
-warning:This is not supported in OpenGL ES and does nothing.
+Warning: This is not supported in OpenGL ES and does nothing.
+
 
 Parameters:
 pixels Target ofPixels reference.
@@ -2826,7 +2872,8 @@ _inlined_description: _
 Read current texture data from the GPU into pixels.
 
 
-warning:This is not supported in OpenGL ES and does nothing.
+Warning: This is not supported in OpenGL ES and does nothing.
+
 
 Parameters:
 pixels Target pixels reference.
@@ -2871,7 +2918,8 @@ _inlined_description: _
 Read current texture data from the GPU into pixels.
 
 
-warning:This is not supported in OpenGL ES and does nothing.
+Warning: This is not supported in OpenGL ES and does nothing.
+
 
 Parameters:
 pixels Target pixels reference.
@@ -2953,6 +3001,7 @@ _advanced: False_
 _inlined_description: _
 
 Set another ofTexture to use as an alpha mask.
+
 Parameters:
 mask The texture to use as alpha mask.
 
@@ -2996,6 +3045,7 @@ Set the anchor point the texture is drawn around as a percentage.
 
 This can be useful if you want to rotate an image around a particular
 point.
+
 
 Parameters:
 xPct Horizontal texture position as a percentage (0 - 1).
@@ -3044,6 +3094,7 @@ Set the anchor point the texture is drawn around in pixels.
 
 This can be useful if you want to rotate an image around a particular
 point.
+
 
 Parameters:
 x Horizontal texture position in pixels.
@@ -3136,7 +3187,7 @@ Swizzle RGBA to grayscale with alpha in the red channel.
 Use 1 channel GL_R as luminance instead of red channel in OpenGL 3+.
 
 
-warning:This is not supported in OpenGL ES and does nothing.
+Warning: This is not supported in OpenGL ES and does nothing.
 \sa https://en.wikipedia.org/wiki/Swizzling_(computer_graphics)
 
 
@@ -3188,7 +3239,7 @@ tex.setSwizzle(GL_TEXTURE_SWIZZLE_R,GL_ALPHA);
 will make channel 0 appear as alpha in the shader.
 
 
-warning:This is not supported in OpenGL ES and does nothing.
+Warning: This is not supported in OpenGL ES and does nothing.
 \sa https://en.wikipedia.org/wiki/Swizzling_(computer_graphics)
 
 
@@ -3228,6 +3279,7 @@ _advanced: False_
 _inlined_description: _
 
 Sets a texture matrix to be uploaded whenever the texture is bound.
+
 Parameters:
 m The 4x4 texture matrix.
 
@@ -3275,7 +3327,8 @@ Controls how OpenGL will scale this texture.
 \sa ofTextureSetMinMagFilters()
 
 
-warning:May be overridden.
+Warning: May be overridden.
+
 
 Parameters:
 minFilter minifying filter for scaling a pixel to a smaller area.
@@ -3330,7 +3383,8 @@ backgrounds with small textures.
 \sa http://www.opengl.org/sdk/docs/man4/html/glTexParameter.xhtml
 
 
-warning:May be overridden.
+Warning: May be overridden.
+
 
 Parameters:
 wrapModeHorizontal wrap parameter for texture coordinate s.
@@ -3382,8 +3436,9 @@ Allows you to point the texture id to an externally allocated id
 textData parameters manually.
 
 
-warning:When setting an external texture ID, the user must set the
+Warning: When setting an external texture ID, the user must set the
 remaining ofTextureData parameters manually.
+
 Parameters:
 externTexID New texture ID.
 

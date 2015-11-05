@@ -169,9 +169,9 @@ such as mipmaps and texture compression.
 
 \sa ofDisableArbTex()
 
-warning:GL_TEXTURE_RECTANGLE is not available in OpenGL ES.
+Warning: GL_TEXTURE_RECTANGLE is not available in OpenGL ES.
 
-warning:GL_TEXTURE_RECTANGLE does not support mipmaps.
+Warning: GL_TEXTURE_RECTANGLE does not support mipmaps.
 
 
 
@@ -303,6 +303,7 @@ _inlined_description: _
 
 Check whether OF is using GL_TEXTURE_RECTANGLE rectangular or GL_TEXTURE_2D textures.
 \sa ofEnableArbTex()
+
 Returns: true if using GL_TEXTURE_RECTANGLE textures, false if using GL_TEXTURE_2D textures.
 
 
@@ -343,6 +344,7 @@ _inlined_description: _
 
 Check whether OF is using normalized or pixel texture coordinates.
 \sa ofEnableNormalizedTexCoords()
+
 Returns: true if using normalized (0 - 1) texture coordinates.
 
 
@@ -383,6 +385,7 @@ _inlined_description: _
 
 Check whether OF is using the texture "edge hack".
 \sa ofEnableTextureEdgeHack()
+
 Returns: true if OF is currently using the texture "edge hack".
 
 

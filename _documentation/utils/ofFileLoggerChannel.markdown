@@ -200,6 +200,7 @@ _advanced: False_
 _inlined_description: _
 
 Create an ofFileLoggerChannel with parameters.
+
 Parameters:
 path The file path for the log file.
 append True if the log data should be added to an existing file.
@@ -242,6 +243,7 @@ _advanced: False_
 _inlined_description: _
 
 Set the log file.
+
 Parameters:
 path The file path for the log file.
 append True if the log data should be added to an existing file.

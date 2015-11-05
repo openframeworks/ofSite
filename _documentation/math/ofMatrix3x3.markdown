@@ -849,6 +849,7 @@ _inlined_description: _
 
 Transpose without changing the matrix.
 Uses the "swap" method with additions and subtractions to swap the elements that aren't on the main diagonal.
+
 Returns: transposed matrix.
 
 

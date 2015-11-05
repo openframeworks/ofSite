@@ -36,7 +36,7 @@ _inlined_description: _
 
 \cond INTERNAL
 
-warning:The internal z-component of the ofPoint is preserved even though it
+Warning: The internal z-component of the ofPoint is preserved even though it
 is not used.
 
 
@@ -86,7 +86,7 @@ _advanced: False_
 _inlined_description: _
 
 
-warning:The internal z-component of the ofPoint is preserved even though it
+Warning: The internal z-component of the ofPoint is preserved even though it
 is not used.
 
 

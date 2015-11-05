@@ -3542,6 +3542,7 @@ _inlined_description: _
 
 Simplifies the polyline, removing un-necessary vertices.
 
+
 Parameters:
 tolerance determines how dis-similar points need to be to stay in the line.
 Higher tolerance means more points removed, lower tolerance means less

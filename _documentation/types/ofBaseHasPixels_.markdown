@@ -47,6 +47,7 @@ _advanced: False_
 _inlined_description: _
 
 Get a const reference to the underlying ofPixels.
+
 Returns: a const reference the underlying ofPixels.
 
 
@@ -86,6 +87,7 @@ _advanced: False_
 _inlined_description: _
 
 Get a const reference to the underlying ofPixels.
+
 Returns: a const reference the underlying ofPixels.
 
 

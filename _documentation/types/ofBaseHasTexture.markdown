@@ -45,6 +45,7 @@ _advanced: False_
 
 _inlined_description: _
 
+
 Returns: a const reference to the ofTexture.
 
 
@@ -83,6 +84,7 @@ _advanced: False_
 
 _inlined_description: _
 
+
 Returns: a const reference to the ofTexture.
 
 
@@ -120,6 +122,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 Returns: true if an internal ofTexture is being used.
 
@@ -160,6 +163,7 @@ _advanced: False_
 _inlined_description: _
 
 Enable or disable internal ofTexture use.
+
 Parameters:
 bUseTex true if an ofTexture should be used.
 

@@ -62,6 +62,7 @@ or `OF_IMAGE_GRAYSCALE`.
 You need to call update() to update the texture after updating
 the pixels manually.
 
+
 Parameters:
 w Width of image to allocate.
 h Height of image to allocate.
@@ -288,6 +289,7 @@ This crops the image to the w,h passed in from the x,y position.
 
 This does an in place crop and **allocates memory**.
 
+
 Parameters:
 x x position of upper-left corner of region to crop.
 y y position of upper-left corner of region to crop.
@@ -337,6 +339,7 @@ Replaces region in caller image specified by w,h,x,y with pixels from otherImage
 
 The w,h are measured from the x,y, so passing 100, 100, 300, 300 will grab
 a 300x300 pixel block of data starting from 100, 100.
+
 
 Parameters:
 otherImage Image to crop from.
@@ -391,6 +394,7 @@ _inlined_description: _
 
 Draw the image at it's normal size.
 
+
 Parameters:
 x Draw position on the x axis.
 y Draw position on the y axis.
@@ -435,6 +439,7 @@ _advanced: False_
 _inlined_description: _
 
 Draw the texture at it's normal size with depth.
+
 
 Parameters:
 x Draw position on the x axis.
@@ -482,6 +487,7 @@ _inlined_description: _
 
 Draw the image at a given size.
 
+
 Parameters:
 x Draw position on the x axis.
 y Draw position on the y axis.
@@ -528,6 +534,7 @@ _advanced: False_
 _inlined_description: _
 
 Draw the image at a given size with depth.
+
 
 Parameters:
 x Draw position on the x axis.
@@ -579,6 +586,7 @@ Draws a subsection of the image.
 
 This functions like a clipping mask. Does not altering any pixel
 data.
+
 
 Parameters:
 x X position to draw cropped image at.
@@ -639,6 +647,7 @@ Draws a subsection of the image.
 This functions like a clipping mask. Does not altering any pixel
 data.
 
+
 Parameters:
 x X position to draw cropped image at.
 y Y position to draw cropped image at.
@@ -689,6 +698,7 @@ Draws a subsection of the image.
 
 This functions like a clipping mask. Does not altering any pixel
 data.
+
 
 Parameters:
 x X position to draw cropped image at.
@@ -744,6 +754,7 @@ Draws a subsection of the image.
 This functions like a clipping mask. Does not altering any pixel
 data.
 
+
 Parameters:
 x X position to draw cropped image at.
 y Y position to draw cropped image at.
@@ -794,9 +805,11 @@ _inlined_description: _
 
 This returns the ofColor representing the pixels at the x and y
 position passed in.
+
 Parameters:
 x x position of pixel
 y y position of pixel
+
 Returns: The ofColor representing the pixels at the x and y position passed in.
 
 
@@ -840,8 +853,10 @@ _inlined_description: _
 
 This returns the ofColor representing the pixels at the index
 passed in.
+
 Parameters:
 index index into pixel data
+
 Returns: The ofColor representing the pixels at the index position passed in.
 
 
@@ -881,6 +896,7 @@ _advanced: False_
 _inlined_description: _
 
 Get height of image as a float.
+
 Returns: Height of image as float.
 
 
@@ -1108,6 +1124,7 @@ _advanced: False_
 _inlined_description: _
 
 Get width of image as a float.
+
 Returns: Width of image as float.
 
 
@@ -1155,7 +1172,8 @@ Grabs pixels from the opengl window specified by the region
 It resizes or allocates the ofImage if it's necessary.
 
 
-warning:Uses glReadPixels() which can be slow.
+Warning: Uses glReadPixels() which can be slow.
+
 
 Parameters:
 x x position of upper-left corner of region.
@@ -1204,6 +1222,7 @@ _inlined_description: _
 
 Whether the image has been allocated either by a call to
 allocate or by loading pixel data into the image.
+
 Returns: true if the image has been allocated.
 
 
@@ -1248,6 +1267,7 @@ _inlined_description: _
 Returns whether the ofImage has a texture or not.
 
 If the ofImage doesn't have a texture, nothing will be drawn to the screen.
+
 Returns: true if the ofImage is using a texture.
 
 
@@ -1290,9 +1310,11 @@ _advanced: False_
 _inlined_description: _
 
 Loads an image given by fileName.
+
 Parameters:
 fileName Program looks for image given by fileName, relative to
 the data folder.
+
 Returns: true if image loaded correctly.
 
 
@@ -1416,6 +1438,7 @@ _advanced: False_
 _inlined_description: _
 
 This reflects the pixels of the image across the vertical and/or horizontal axis.
+
 Parameters:
 vertical Set to true to reflect image across vertical axis.
 horizontal Set to true to reflect image across horizontal axis.
@@ -1896,6 +1919,7 @@ _inlined_description: _
 Resizes the image to a new size (w, h); Can be used to scale up
 or down an image.
 
+
 Parameters:
 newWidth New width of image.
 newHeight New height of image.
@@ -1978,6 +2002,7 @@ _advanced: False_
 _inlined_description: _
 
 Rotates the image by a multiple of 90 degrees.
+
 Parameters:
 rotation Amount to rotate in multiples of 90. For instance, if you pass
 in 2, then the image will be rotated 180 degrees.
@@ -2024,6 +2049,7 @@ _inlined_description: _
 Saves the image to the file path in fileName with the image
 quality specified by compressionLevel.
 
+
 Parameters:
 fileName Saves image to this path, relative to the data folder.
 compressionLevel The ofImageQualityType.
@@ -2067,6 +2093,7 @@ _inlined_description: _
 This saves the image to the ofBuffer passed with the image
 quality specified by compressionLevel.
 
+
 Parameters:
 buffer ofBuffer to save image to.
 compressionLevel The ofImageQualityType.
@@ -2108,6 +2135,7 @@ _advanced: False_
 _inlined_description: _
 
 This saves the image to the ofFile passed with the image quality specified by compressionLevel.
+
 Parameters:
 file ofFile to save image to.
 compressionLevel The different compression levels are: `OF_IMAGE_QUALITY_BEST`, `OF_IMAGE_QUALITY_HIGH`,
@@ -2159,6 +2187,7 @@ aligning and centering images as well as rotating an image around its
 center. Note: range of  xPct and yPct is 0.0 to 1.0. For xPct, 1.0
 represents the width of the image. For yPct, 1.0 represents  the
 height of the image. These values are not capped.
+
 
 Parameters:
 xPct X position of the new anchor, specified as a percent of the width of the image.
@@ -2234,6 +2263,7 @@ left corner of the image to a  position specified by x and y, measured
 in pixels. This can be useful for aligning and centering  images as
 well as rotating an image around its center.
 
+
 Parameters:
 x X position of the new anchor.
 y Y position of the new anchor.
@@ -2306,6 +2336,7 @@ Sets the pixel at the x,y position passed in.
 The ofColor type needs to match the ofImage type, i.e. ofFloatImage
 requires that you use ofFloatPixels.
 
+
 Parameters:
 x x position of pixel.
 y y position of pixel.
@@ -2352,6 +2383,7 @@ _inlined_description: _
 
 Sets the pixel at the given pixel buffer index
 
+
 Parameters:
 index Index of pixel to set.
 color Color to set pixel to.
@@ -2394,6 +2426,7 @@ _advanced: False_
 _inlined_description: _
 
 Sets all pixels to a color.
+
 Parameters:
 color Color to set pixel to.
 
@@ -2436,6 +2469,7 @@ _inlined_description: _
 
 This sets the compression level used when creating mipmaps for
 the ofTexture contained by the ofImage.
+
 Parameters:
 compression The ofTexCompression to set.
 
@@ -2490,6 +2524,7 @@ dimensions are set in the  image. This assumes that you're setting the
 pixels from 0,0 or the upper left hand corner of the image. The
 bOrderIsRGB flag allows you pass in pixel data that is BGR by setting
 bOrderIsRGB=false.
+
 
 Parameters:
 pixels Array of pixel values.
@@ -2600,6 +2635,7 @@ updated, so it can be an expensive operation  if done frequently.
 Converting down, for example from color to grayscale, loses
 information and is a destructive change.
 
+
 Parameters:
 type The type of image, one of the following:
 `OF_IMAGE_GRAYSCALE`, `OF_IMAGE_COLOR`, `OF_IMAGE_COLOR_ALPHA`
@@ -2650,6 +2686,7 @@ _advanced: False_
 _inlined_description: _
 
 Turns on or off the allocation and use of a texture.
+
 
 Parameters:
 bUse Allocate and use a texture or not.

@@ -79,6 +79,7 @@ _advanced: False_
 _inlined_description: _
 
 Opens a serial port connection to the arduino
+
 Parameters:
 device The name of the device.
 You can get the name from the Arduino IDE
@@ -169,6 +170,7 @@ Returns the analog in value that the pin is currently reading.
 because the Arduino has a 10 bit ADC you get between 0 and 1023 for
 possible values.
 
+
 Parameters:
 pin The pin number (0-5)
 
@@ -212,6 +214,7 @@ _advanced: True_
 _inlined_description: _
 
 Returns a pointer to the analog data history list for the given pin.
+
 Parameters:
 pin The Arduino Uno pin: 0-5
 
@@ -254,6 +257,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 Returns: `ARD_ON` or `ARD_OFF`
 
@@ -364,6 +368,7 @@ Returns a pointer to the digital data history list for the
 given pin
 \note Pin 16-21 can also be used if analog inputs 0-5 are used as
 digital pins
+
 Parameters:
 pin The pin number (2-13)
 
@@ -410,6 +415,7 @@ _inlined_description: _
 
 Get the pin mode of the given pin
 
+
 Returns: `ARD_INPUT`, `ARD_OUTPUT`, `ARD_PWM`, `ARD_SERVO`, `ARD_ANALOG`
 
 
@@ -451,6 +457,7 @@ _advanced: True_
 
 _inlined_description: _
 
+
 Returns: the name of the firmware.
 
 
@@ -491,6 +498,7 @@ _advanced: True_
 -->
 
 _inlined_description: _
+
 
 Returns: the major firmware version.
 
@@ -574,6 +582,7 @@ _advanced: True_
 
 _inlined_description: _
 
+
 Returns: the minor firmware version.
 
 
@@ -614,6 +623,7 @@ _advanced: True_
 -->
 
 _inlined_description: _
+
 
 Returns: the minor firmware version.
 
@@ -705,6 +715,7 @@ _advanced: True_
 
 _inlined_description: _
 
+
 Returns: the last set servo value for a pin if the pin has a servo attached.
 
 
@@ -745,6 +756,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 Returns: the last received string.
 
@@ -787,6 +799,7 @@ _advanced: True_
 
 _inlined_description: _
 
+
 Returns: a pointer to the string history.
 
 
@@ -828,6 +841,7 @@ _advanced: True_
 
 _inlined_description: _
 
+
 Returns: the last received SysEx message.
 
 
@@ -868,6 +882,7 @@ _advanced: False_
 -->
 
 _inlined_description: _
+
 
 Returns: a pointer to the SysEx history.
 
@@ -1346,6 +1361,7 @@ _advanced: False_
 _inlined_description: _
 
 Setting a pins mode to ARD_INPUT turns on reporting for the port the pin is on
+
 Parameters:
 pin Pin on arduino (2-13)
 mode `ARD_INPUT`, `ARD_OUTPUT`, `ARD_PWM`
@@ -1630,6 +1646,7 @@ _inlined_description: _
 Send a value to a servo.
 
 A servo has to be atached to the pin prior
+
 Parameters:
 pin 9 or 10
 value The value to send
@@ -1673,6 +1690,7 @@ _advanced: True_
 -->
 
 _inlined_description: _
+
 
 Parameters:
 angle parameter DEPRECATED as of Firmata 2.2
@@ -1923,6 +1941,7 @@ Send value as two 7 bit bytes.
 Sends a value as two 7-bit bytes without wrapping it in a firmata
 message.  Values in the range 0 - 16384 will be sent as two bytes
 within the 0-127 data range.
+
 
 Parameters:
 value The value to send.

@@ -158,6 +158,7 @@ _advanced: False_
 _inlined_description: _
 
 Draw a string s at position x,y
+
 Parameters:
 s String to draw
 x X position of string
@@ -231,6 +232,7 @@ _inlined_description: _
 Draws the string as if it was geometrical shapes.
 
 Uses the information contained in ofTTFContour and ofTTFCharacter.
+
 
 Parameters:
 x X position of shapes
@@ -319,6 +321,7 @@ The ascender is the vertical distance from the baseline to the highest "characte
 The meaning of "character" coordinate depends on the font. Some fonts take accents into account,
 others do not, and still others define it simply to be the highest coordinate over all glyphs.
 
+
 Returns: the font ascender height in pixels.
 
 
@@ -401,6 +404,7 @@ The descender is the vertical distance from the baseline to the lowest "characte
 The meaning of "character" coordinate depends on the font. Some fonts take accents into account,
 others do not, and still others define it simply to be the lowest coordinate over all glyphs.
 This value will be negative for descenders below the baseline (which is typical).
+
 
 Returns: the font descender height in pixels.
 
@@ -486,6 +490,7 @@ The global bounding box is the rectangle inside of which all glyphs in the font 
 Glyphs are drawn starting from (0,0) in the returned box (though note that the box can
 extend in any direction out from the origin).
 
+
 Returns: the font descender height in pixels.
 
 
@@ -566,6 +571,7 @@ Returns letter spacing of font object.
 You can control this by the ofTrueTypeFont::setLetterSpacing() function. 1.0 = default spacing,
 less then 1.0 would be tighter spacing, greater then 1.0 would be wider spacing.
 
+
 Returns: the letter spacing of font object.
 
 
@@ -608,6 +614,7 @@ _advanced: False_
 _inlined_description: _
 
 Computes line height based on font size.
+
 Returns: the current line height.
 
 
@@ -654,6 +661,7 @@ Get the number of characters in the loaded character set.
 If you allocate the font using different parameters, you can load in partial
 and full character sets, this helps you know how many characters it can represent.
 
+
 Returns: Number of characters in loaded character set.
 
 
@@ -696,6 +704,7 @@ _advanced: False_
 _inlined_description: _
 
 Returns the size of the font.
+
 Returns: Size of font, set when font was loaded.
 
 
@@ -741,6 +750,7 @@ Returns a variable that represents how wide spaces are.
 
 It's a scalar for the width of the letter 'p', so 1.0 means that a space will be the size of the lower
 case 'p' of that font. 2.0 means that it's 2 times the size of the lower case 'p', etc.
+
 
 Returns: the width of the space.
 
@@ -821,10 +831,12 @@ _advanced: False_
 _inlined_description: _
 
 Returns the bounding box of a string as a rectangle.
+
 Parameters:
 s The string to get bounding box of.
 x X position of returned rectangle.
 y Y position of returned rectangle.
+
 Returns: the bounding box of a string as a rectangle.
 
 
@@ -901,6 +913,7 @@ _advanced: False_
 _inlined_description: _
 
 Does the font have a full character set?
+
 Returns: true if the font was allocated with a full character set.
 
 
@@ -981,6 +994,7 @@ _advanced: False_
 _inlined_description: _
 
 Is the font anti-aliased?
+
 Returns: true if the font was set to be anti-aliased.
 
 
@@ -1023,6 +1037,7 @@ _advanced: False_
 _inlined_description: _
 
 Has the font been loaded successfully?
+
 Returns: true if the font was loaded.
 
 
@@ -1072,6 +1087,7 @@ the simplification amount for those contours and the dpi of the font.
 
 default (without dpi), non-full char set, anti aliased, 96 dpi
 
+
 Parameters:
 filename The name of the font file to load.
 fontsize The size in pixels to load the font.
@@ -1080,6 +1096,7 @@ _bFullCharacterSet true if the full character set should be cached.
 makeContours true if the vector contours should be cached.
 simplifyAmt the amount to simplify the vector contours.  Larger number means more simplified.
 dpi the dots per inch used to specify rendering size.
+
 Returns: true if the font was loaded correctly.
 
 
@@ -1237,6 +1254,7 @@ _inlined_description: _
 Sets the letter spacing of the font object.
 
 1.0 = default spacing, less then 1.0 would be tighter spacing, greater then 1.0 would be wider spacing.
+
 Parameters:
 spacing Spacing of font object.
 
@@ -1282,6 +1300,7 @@ _inlined_description: _
 Sets line height for text drawn on screen.
 
 Note the line height is automatically computed based on the font size, when you load in the font.
+
 
 Parameters:
 height Line height for text drawn on screen.
@@ -1329,6 +1348,7 @@ Sets the size of the space ' ' character.
 
 This number, which defaults to 1.0, scales the width of the letter 'p' for the space.
 
+
 Parameters:
 size Scales the width of the letter 'p' for the space.
 
@@ -1375,8 +1395,10 @@ Returns the string height.
 
 This is essentially the height component of the ofTrueTypeFont::getStringBoundingBox() rectangle.
 
+
 Parameters:
 s The string to get the height of.
+
 Returns: the string height.
 
 
@@ -1422,8 +1444,10 @@ Returns the string width.
 
 This is essentially the width component of the ofTrueTypeFont::getStringBoundingBox() rectangle.
 
+
 Parameters:
 s The string to get the width of.
+
 Returns: the string width.
 
 

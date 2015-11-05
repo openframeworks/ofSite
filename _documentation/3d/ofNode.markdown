@@ -585,6 +585,7 @@ _advanced: False_
 _inlined_description: _
 
 Get -z axis as 3d vector
+
 Returns: -z axis.
 
 
@@ -894,6 +895,7 @@ _advanced: False_
 _inlined_description: _
 
 Get x axis as 3d vector
+
 Returns: x axis.
 
 
@@ -934,6 +936,7 @@ _advanced: False_
 _inlined_description: _
 
 Get y axis as 3d vector
+
 Returns: y axis.
 
 

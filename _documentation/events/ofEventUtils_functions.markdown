@@ -15,590 +15,14 @@ _advanced: False_
 
 <!----------------------------------------------------------------------------->
 
-###void ofAddListener(&event, *listener, *, listenerMethod, prio)
+###void ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)
 
 <!--
-_syntax: ofAddListener(&event, *listener, *, listenerMethod, prio)_
-_name: ofAddListener_
-_returns: void_
-_returns_description: _
-_parameters: EventType &event, ListenerClass *listener, void (ListenerClass::*)(const void *, ArgumentsType &) listenerMethod, int prio_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofAddListener(&event, *listener, listenerMethod, prio)
-
-<!--
-_syntax: ofAddListener(&event, *listener, listenerMethod, prio)_
-_name: ofAddListener_
-_returns: void_
-_returns_description: _
-_parameters: EventType &event, ListenerClass *listener, void (ListenerClass::*)(ArgumentsType &) listenerMethod, int prio_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofAddListener(&event, *listener, listenerMethod, prio)
-
-<!--
-_syntax: ofAddListener(&event, *listener, listenerMethod, prio)_
-_name: ofAddListener_
-_returns: void_
-_returns_description: _
-_parameters: ofEvent< void > &event, ListenerClass *listener, void (ListenerClass::*)(const void *) listenerMethod, int prio_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofAddListener(&event, *listener, listenerMethod, prio)
-
-<!--
-_syntax: ofAddListener(&event, *listener, listenerMethod, prio)_
-_name: ofAddListener_
-_returns: void_
-_returns_description: _
-_parameters: ofEvent< void > &event, ListenerClass *listener, void (ListenerClass::*)() listenerMethod, int prio_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofAddListener(&event, *listener, *, listenerMethod, prio)
-
-<!--
-_syntax: ofAddListener(&event, *listener, *, listenerMethod, prio)_
-_name: ofAddListener_
-_returns: void_
-_returns_description: _
-_parameters: EventType &event, ListenerClass *listener, bool (ListenerClass::*)(const void *, ArgumentsType &) listenerMethod, int prio_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofAddListener(&event, *listener, listenerMethod, prio)
-
-<!--
-_syntax: ofAddListener(&event, *listener, listenerMethod, prio)_
-_name: ofAddListener_
-_returns: void_
-_returns_description: _
-_parameters: EventType &event, ListenerClass *listener, bool (ListenerClass::*)(ArgumentsType &) listenerMethod, int prio_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofAddListener(&event, *listener, listenerMethod, prio)
-
-<!--
-_syntax: ofAddListener(&event, *listener, listenerMethod, prio)_
-_name: ofAddListener_
-_returns: void_
-_returns_description: _
-_parameters: ofEvent< void > &event, ListenerClass *listener, bool (ListenerClass::*)(const void *) listenerMethod, int prio_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofAddListener(&event, *listener, listenerMethod, prio)
-
-<!--
-_syntax: ofAddListener(&event, *listener, listenerMethod, prio)_
-_name: ofAddListener_
-_returns: void_
-_returns_description: _
-_parameters: ofEvent< void > &event, ListenerClass *listener, bool (ListenerClass::*)() listenerMethod, int prio_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofAddListener(&event, *, listenerFunction, prio)
-
-<!--
-_syntax: ofAddListener(&event, *, listenerFunction, prio)_
-_name: ofAddListener_
-_returns: void_
-_returns_description: _
-_parameters: EventType &event, void (*)(const void *, ArgumentsType &) listenerFunction, int prio_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofAddListener(&event, listenerFunction, prio)
-
-<!--
-_syntax: ofAddListener(&event, listenerFunction, prio)_
-_name: ofAddListener_
-_returns: void_
-_returns_description: _
-_parameters: EventType &event, void (*)(ArgumentsType &) listenerFunction, int prio_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofAddListener(&event, listenerFunction, prio)
-
-<!--
-_syntax: ofAddListener(&event, listenerFunction, prio)_
-_name: ofAddListener_
-_returns: void_
-_returns_description: _
-_parameters: ofEvent< void > &event, void (*)(const void *) listenerFunction, int prio_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofAddListener(&event, listenerFunction, prio)
-
-<!--
-_syntax: ofAddListener(&event, listenerFunction, prio)_
-_name: ofAddListener_
-_returns: void_
-_returns_description: _
-_parameters: ofEvent< void > &event, void (*)() listenerFunction, int prio_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofAddListener(&event, *, listenerFunction, prio)
-
-<!--
-_syntax: ofAddListener(&event, *, listenerFunction, prio)_
-_name: ofAddListener_
-_returns: void_
-_returns_description: _
-_parameters: EventType &event, bool (*)(const void *, ArgumentsType &) listenerFunction, int prio_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofAddListener(&event, listenerFunction, prio)
-
-<!--
-_syntax: ofAddListener(&event, listenerFunction, prio)_
-_name: ofAddListener_
-_returns: void_
-_returns_description: _
-_parameters: EventType &event, bool (*)(ArgumentsType &) listenerFunction, int prio_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofAddListener(&event, listenerFunction, prio)
-
-<!--
-_syntax: ofAddListener(&event, listenerFunction, prio)_
-_name: ofAddListener_
-_returns: void_
-_returns_description: _
-_parameters: ofEvent< void > &event, bool (*)(const void *) listenerFunction, int prio_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofAddListener(&event, listenerFunction, prio)
-
-<!--
-_syntax: ofAddListener(&event, listenerFunction, prio)_
-_name: ofAddListener_
-_returns: void_
-_returns_description: _
-_parameters: ofEvent< void > &event, bool (*)() listenerFunction, int prio_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofNotifyEvent(&event, &args, *sender)
-
-<!--
-_syntax: ofNotifyEvent(&event, &args, *sender)_
+_syntax: ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)_
 _name: ofNotifyEvent_
 _returns: void_
 _returns_description: _
-_parameters: EventType &event, const ArgumentsType &args, SenderType *sender_
+_parameters: ofEvent< void > &event, ListenerClass *listener, bool(ListenerClass::*listenerMethod)(const void *), int prio=OF_EVENT_ORDER_AFTER_APP_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -667,14 +91,14 @@ void ofApp::haveBeenNotified(float &f){
 
 <!----------------------------------------------------------------------------->
 
-###void ofNotifyEvent(&event, &args)
+###void ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)
 
 <!--
-_syntax: ofNotifyEvent(&event, &args)_
+_syntax: ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)_
 _name: ofNotifyEvent_
 _returns: void_
 _returns_description: _
-_parameters: EventType &event, const ArgumentsType &args_
+_parameters: ofEvent< void > &event, ListenerClass *listener, bool(ListenerClass::*listenerMethod)(const void *), int prio=OF_EVENT_ORDER_AFTER_APP_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -893,15 +317,15 @@ void ofApp::haveBeenNotified(){
 
 <!----------------------------------------------------------------------------->
 
-###void ofRemoveListener(&event, *listener, *, listenerMethod, prio)
+###void ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)
 
 <!--
-_syntax: ofRemoveListener(&event, *listener, *, listenerMethod, prio)_
+_syntax: ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)_
 _name: ofRemoveListener_
 _returns: void_
 _returns_description: _
-_parameters: EventType &event, ListenerClass *listener, void (ListenerClass::*)(const void *, ArgumentsType &) listenerMethod, int prio_
-_version_started: 0.9.0_
+_parameters: ofEvent< void > &event, ListenerClass *listener, bool(ListenerClass::*listenerMethod)(const void *), int prio=OF_EVENT_ORDER_AFTER_APP_
+_version_started: _
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -920,6 +344,13 @@ _inlined_description: _
 
 
 _description: _
+
+
+Removes a listener method from an event. Use it whenever you want a class to stop being notified about an event after having registered it to the method with ofAddListener.
+
+Don't forget to call this before deleting any instance that is listening to an event, if not the event will try to notify a non existent instance and the application will crash.
+
+The syntax is just the same as that of ofAddListener.
 
 
 
@@ -929,15 +360,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofRemoveListener(&event, *listener, listenerMethod, prio)
+###void ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)
 
 <!--
-_syntax: ofRemoveListener(&event, *listener, listenerMethod, prio)_
+_syntax: ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)_
 _name: ofRemoveListener_
 _returns: void_
 _returns_description: _
-_parameters: EventType &event, ListenerClass *listener, void (ListenerClass::*)(ArgumentsType &) listenerMethod, int prio_
-_version_started: 0.9.0_
+_parameters: ofEvent< void > &event, ListenerClass *listener, bool(ListenerClass::*listenerMethod)(const void *), int prio=OF_EVENT_ORDER_AFTER_APP_
+_version_started: _
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -956,6 +387,13 @@ _inlined_description: _
 
 
 _description: _
+
+
+Removes a listener method from an event. Use it whenever you want a class to stop being notified about an event after having registered it to the method with ofAddListener.
+
+Don't forget to call this before deleting any instance that is listening to an event, if not the event will try to notify a non existent instance and the application will crash.
+
+The syntax is just the same as that of ofAddListener.
 
 
 
@@ -965,15 +403,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofRemoveListener(&event, *listener, listenerMethod, prio)
+###void ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)
 
 <!--
-_syntax: ofRemoveListener(&event, *listener, listenerMethod, prio)_
+_syntax: ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)_
 _name: ofRemoveListener_
 _returns: void_
 _returns_description: _
-_parameters: ofEvent< void > &event, ListenerClass *listener, void (ListenerClass::*)(const void *) listenerMethod, int prio_
-_version_started: 0.9.0_
+_parameters: ofEvent< void > &event, ListenerClass *listener, bool(ListenerClass::*listenerMethod)(const void *), int prio=OF_EVENT_ORDER_AFTER_APP_
+_version_started: _
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -992,6 +430,13 @@ _inlined_description: _
 
 
 _description: _
+
+
+Removes a listener method from an event. Use it whenever you want a class to stop being notified about an event after having registered it to the method with ofAddListener.
+
+Don't forget to call this before deleting any instance that is listening to an event, if not the event will try to notify a non existent instance and the application will crash.
+
+The syntax is just the same as that of ofAddListener.
 
 
 
@@ -1001,15 +446,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofRemoveListener(&event, *listener, listenerMethod, prio)
+###void ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)
 
 <!--
-_syntax: ofRemoveListener(&event, *listener, listenerMethod, prio)_
+_syntax: ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)_
 _name: ofRemoveListener_
 _returns: void_
 _returns_description: _
-_parameters: ofEvent< void > &event, ListenerClass *listener, void (ListenerClass::*)() listenerMethod, int prio_
-_version_started: 0.9.0_
+_parameters: ofEvent< void > &event, ListenerClass *listener, bool(ListenerClass::*listenerMethod)(const void *), int prio=OF_EVENT_ORDER_AFTER_APP_
+_version_started: _
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1028,6 +473,13 @@ _inlined_description: _
 
 
 _description: _
+
+
+Removes a listener method from an event. Use it whenever you want a class to stop being notified about an event after having registered it to the method with ofAddListener.
+
+Don't forget to call this before deleting any instance that is listening to an event, if not the event will try to notify a non existent instance and the application will crash.
+
+The syntax is just the same as that of ofAddListener.
 
 
 
@@ -1037,15 +489,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofRemoveListener(&event, *listener, *, listenerMethod, prio)
+###void ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)
 
 <!--
-_syntax: ofRemoveListener(&event, *listener, *, listenerMethod, prio)_
+_syntax: ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)_
 _name: ofRemoveListener_
 _returns: void_
 _returns_description: _
-_parameters: EventType &event, ListenerClass *listener, bool (ListenerClass::*)(const void *, ArgumentsType &) listenerMethod, int prio_
-_version_started: 0.9.0_
+_parameters: ofEvent< void > &event, ListenerClass *listener, bool(ListenerClass::*listenerMethod)(const void *), int prio=OF_EVENT_ORDER_AFTER_APP_
+_version_started: _
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1064,6 +516,13 @@ _inlined_description: _
 
 
 _description: _
+
+
+Removes a listener method from an event. Use it whenever you want a class to stop being notified about an event after having registered it to the method with ofAddListener.
+
+Don't forget to call this before deleting any instance that is listening to an event, if not the event will try to notify a non existent instance and the application will crash.
+
+The syntax is just the same as that of ofAddListener.
 
 
 
@@ -1073,15 +532,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofRemoveListener(&event, *listener, listenerMethod, prio)
+###void ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)
 
 <!--
-_syntax: ofRemoveListener(&event, *listener, listenerMethod, prio)_
+_syntax: ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)_
 _name: ofRemoveListener_
 _returns: void_
 _returns_description: _
-_parameters: EventType &event, ListenerClass *listener, bool (ListenerClass::*)(ArgumentsType &) listenerMethod, int prio_
-_version_started: 0.9.0_
+_parameters: ofEvent< void > &event, ListenerClass *listener, bool(ListenerClass::*listenerMethod)(const void *), int prio=OF_EVENT_ORDER_AFTER_APP_
+_version_started: _
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1100,6 +559,13 @@ _inlined_description: _
 
 
 _description: _
+
+
+Removes a listener method from an event. Use it whenever you want a class to stop being notified about an event after having registered it to the method with ofAddListener.
+
+Don't forget to call this before deleting any instance that is listening to an event, if not the event will try to notify a non existent instance and the application will crash.
+
+The syntax is just the same as that of ofAddListener.
 
 
 
@@ -1109,15 +575,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofRemoveListener(&event, *listener, listenerMethod, prio)
+###void ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)
 
 <!--
-_syntax: ofRemoveListener(&event, *listener, listenerMethod, prio)_
+_syntax: ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)_
 _name: ofRemoveListener_
 _returns: void_
 _returns_description: _
-_parameters: ofEvent< void > &event, ListenerClass *listener, bool (ListenerClass::*)(const void *) listenerMethod, int prio_
-_version_started: 0.9.0_
+_parameters: ofEvent< void > &event, ListenerClass *listener, bool(ListenerClass::*listenerMethod)(const void *), int prio=OF_EVENT_ORDER_AFTER_APP_
+_version_started: _
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1136,6 +602,13 @@ _inlined_description: _
 
 
 _description: _
+
+
+Removes a listener method from an event. Use it whenever you want a class to stop being notified about an event after having registered it to the method with ofAddListener.
+
+Don't forget to call this before deleting any instance that is listening to an event, if not the event will try to notify a non existent instance and the application will crash.
+
+The syntax is just the same as that of ofAddListener.
 
 
 
@@ -1145,15 +618,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofRemoveListener(&event, *listener, listenerMethod, prio)
+###void ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)
 
 <!--
-_syntax: ofRemoveListener(&event, *listener, listenerMethod, prio)_
+_syntax: ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)_
 _name: ofRemoveListener_
 _returns: void_
 _returns_description: _
-_parameters: ofEvent< void > &event, ListenerClass *listener, bool (ListenerClass::*)() listenerMethod, int prio_
-_version_started: 0.9.0_
+_parameters: ofEvent< void > &event, ListenerClass *listener, bool(ListenerClass::*listenerMethod)(const void *), int prio=OF_EVENT_ORDER_AFTER_APP_
+_version_started: _
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1172,6 +645,13 @@ _inlined_description: _
 
 
 _description: _
+
+
+Removes a listener method from an event. Use it whenever you want a class to stop being notified about an event after having registered it to the method with ofAddListener.
+
+Don't forget to call this before deleting any instance that is listening to an event, if not the event will try to notify a non existent instance and the application will crash.
+
+The syntax is just the same as that of ofAddListener.
 
 
 
@@ -1181,15 +661,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofRemoveListener(&event, *, listenerFunction, prio)
+###void ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)
 
 <!--
-_syntax: ofRemoveListener(&event, *, listenerFunction, prio)_
+_syntax: ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)_
 _name: ofRemoveListener_
 _returns: void_
 _returns_description: _
-_parameters: EventType &event, void (*)(const void *, ArgumentsType &) listenerFunction, int prio_
-_version_started: 0.9.0_
+_parameters: ofEvent< void > &event, ListenerClass *listener, bool(ListenerClass::*listenerMethod)(const void *), int prio=OF_EVENT_ORDER_AFTER_APP_
+_version_started: _
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1208,6 +688,13 @@ _inlined_description: _
 
 
 _description: _
+
+
+Removes a listener method from an event. Use it whenever you want a class to stop being notified about an event after having registered it to the method with ofAddListener.
+
+Don't forget to call this before deleting any instance that is listening to an event, if not the event will try to notify a non existent instance and the application will crash.
+
+The syntax is just the same as that of ofAddListener.
 
 
 
@@ -1217,15 +704,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofRemoveListener(&event, listenerFunction, prio)
+###void ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)
 
 <!--
-_syntax: ofRemoveListener(&event, listenerFunction, prio)_
+_syntax: ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)_
 _name: ofRemoveListener_
 _returns: void_
 _returns_description: _
-_parameters: EventType &event, void (*)(ArgumentsType &) listenerFunction, int prio_
-_version_started: 0.9.0_
+_parameters: ofEvent< void > &event, ListenerClass *listener, bool(ListenerClass::*listenerMethod)(const void *), int prio=OF_EVENT_ORDER_AFTER_APP_
+_version_started: _
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1244,6 +731,13 @@ _inlined_description: _
 
 
 _description: _
+
+
+Removes a listener method from an event. Use it whenever you want a class to stop being notified about an event after having registered it to the method with ofAddListener.
+
+Don't forget to call this before deleting any instance that is listening to an event, if not the event will try to notify a non existent instance and the application will crash.
+
+The syntax is just the same as that of ofAddListener.
 
 
 
@@ -1253,15 +747,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofRemoveListener(&event, listenerFunction, prio)
+###void ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)
 
 <!--
-_syntax: ofRemoveListener(&event, listenerFunction, prio)_
+_syntax: ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)_
 _name: ofRemoveListener_
 _returns: void_
 _returns_description: _
-_parameters: ofEvent< void > &event, void (*)(const void *) listenerFunction, int prio_
-_version_started: 0.9.0_
+_parameters: ofEvent< void > &event, ListenerClass *listener, bool(ListenerClass::*listenerMethod)(const void *), int prio=OF_EVENT_ORDER_AFTER_APP_
+_version_started: _
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1280,6 +774,13 @@ _inlined_description: _
 
 
 _description: _
+
+
+Removes a listener method from an event. Use it whenever you want a class to stop being notified about an event after having registered it to the method with ofAddListener.
+
+Don't forget to call this before deleting any instance that is listening to an event, if not the event will try to notify a non existent instance and the application will crash.
+
+The syntax is just the same as that of ofAddListener.
 
 
 
@@ -1289,15 +790,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofRemoveListener(&event, listenerFunction, prio)
+###void ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)
 
 <!--
-_syntax: ofRemoveListener(&event, listenerFunction, prio)_
+_syntax: ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)_
 _name: ofRemoveListener_
 _returns: void_
 _returns_description: _
-_parameters: ofEvent< void > &event, void (*)() listenerFunction, int prio_
-_version_started: 0.9.0_
+_parameters: ofEvent< void > &event, ListenerClass *listener, bool(ListenerClass::*listenerMethod)(const void *), int prio=OF_EVENT_ORDER_AFTER_APP_
+_version_started: _
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1316,6 +817,13 @@ _inlined_description: _
 
 
 _description: _
+
+
+Removes a listener method from an event. Use it whenever you want a class to stop being notified about an event after having registered it to the method with ofAddListener.
+
+Don't forget to call this before deleting any instance that is listening to an event, if not the event will try to notify a non existent instance and the application will crash.
+
+The syntax is just the same as that of ofAddListener.
 
 
 
@@ -1325,15 +833,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofRemoveListener(&event, *, listenerFunction, prio)
+###void ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)
 
 <!--
-_syntax: ofRemoveListener(&event, *, listenerFunction, prio)_
+_syntax: ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)_
 _name: ofRemoveListener_
 _returns: void_
 _returns_description: _
-_parameters: EventType &event, bool (*)(const void *, ArgumentsType &) listenerFunction, int prio_
-_version_started: 0.9.0_
+_parameters: ofEvent< void > &event, ListenerClass *listener, bool(ListenerClass::*listenerMethod)(const void *), int prio=OF_EVENT_ORDER_AFTER_APP_
+_version_started: _
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1352,6 +860,13 @@ _inlined_description: _
 
 
 _description: _
+
+
+Removes a listener method from an event. Use it whenever you want a class to stop being notified about an event after having registered it to the method with ofAddListener.
+
+Don't forget to call this before deleting any instance that is listening to an event, if not the event will try to notify a non existent instance and the application will crash.
+
+The syntax is just the same as that of ofAddListener.
 
 
 
@@ -1361,15 +876,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofRemoveListener(&event, listenerFunction, prio)
+###void ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)
 
 <!--
-_syntax: ofRemoveListener(&event, listenerFunction, prio)_
+_syntax: ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)_
 _name: ofRemoveListener_
 _returns: void_
 _returns_description: _
-_parameters: EventType &event, bool (*)(ArgumentsType &) listenerFunction, int prio_
-_version_started: 0.9.0_
+_parameters: ofEvent< void > &event, ListenerClass *listener, bool(ListenerClass::*listenerMethod)(const void *), int prio=OF_EVENT_ORDER_AFTER_APP_
+_version_started: _
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1388,6 +903,13 @@ _inlined_description: _
 
 
 _description: _
+
+
+Removes a listener method from an event. Use it whenever you want a class to stop being notified about an event after having registered it to the method with ofAddListener.
+
+Don't forget to call this before deleting any instance that is listening to an event, if not the event will try to notify a non existent instance and the application will crash.
+
+The syntax is just the same as that of ofAddListener.
 
 
 
@@ -1397,15 +919,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofRemoveListener(&event, listenerFunction, prio)
+###void ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)
 
 <!--
-_syntax: ofRemoveListener(&event, listenerFunction, prio)_
+_syntax: ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)_
 _name: ofRemoveListener_
 _returns: void_
 _returns_description: _
-_parameters: ofEvent< void > &event, bool (*)(const void *) listenerFunction, int prio_
-_version_started: 0.9.0_
+_parameters: ofEvent< void > &event, ListenerClass *listener, bool(ListenerClass::*listenerMethod)(const void *), int prio=OF_EVENT_ORDER_AFTER_APP_
+_version_started: _
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1424,6 +946,13 @@ _inlined_description: _
 
 
 _description: _
+
+
+Removes a listener method from an event. Use it whenever you want a class to stop being notified about an event after having registered it to the method with ofAddListener.
+
+Don't forget to call this before deleting any instance that is listening to an event, if not the event will try to notify a non existent instance and the application will crash.
+
+The syntax is just the same as that of ofAddListener.
 
 
 
@@ -1433,15 +962,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofRemoveListener(&event, listenerFunction, prio)
+###void ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)
 
 <!--
-_syntax: ofRemoveListener(&event, listenerFunction, prio)_
+_syntax: ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)_
 _name: ofRemoveListener_
 _returns: void_
 _returns_description: _
-_parameters: ofEvent< void > &event, bool (*)() listenerFunction, int prio_
-_version_started: 0.9.0_
+_parameters: ofEvent< void > &event, ListenerClass *listener, bool(ListenerClass::*listenerMethod)(const void *), int prio=OF_EVENT_ORDER_AFTER_APP_
+_version_started: _
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1460,6 +989,830 @@ _inlined_description: _
 
 
 _description: _
+
+
+Removes a listener method from an event. Use it whenever you want a class to stop being notified about an event after having registered it to the method with ofAddListener.
+
+Don't forget to call this before deleting any instance that is listening to an event, if not the event will try to notify a non existent instance and the application will crash.
+
+The syntax is just the same as that of ofAddListener.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)
+
+<!--
+_syntax: ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)_
+_name: ofRemoveListener_
+_returns: void_
+_returns_description: _
+_parameters: ofEvent< void > &event, ListenerClass *listener, bool(ListenerClass::*listenerMethod)(const void *), int prio=OF_EVENT_ORDER_AFTER_APP_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+Removes a listener method from an event. Use it whenever you want a class to stop being notified about an event after having registered it to the method with ofAddListener.
+
+Don't forget to call this before deleting any instance that is listening to an event, if not the event will try to notify a non existent instance and the application will crash.
+
+The syntax is just the same as that of ofAddListener.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)
+
+<!--
+_syntax: ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)_
+_name: ofRemoveListener_
+_returns: void_
+_returns_description: _
+_parameters: ofEvent< void > &event, ListenerClass *listener, bool(ListenerClass::*listenerMethod)(const void *), int prio=OF_EVENT_ORDER_AFTER_APP_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+Removes a listener method from an event. Use it whenever you want a class to stop being notified about an event after having registered it to the method with ofAddListener.
+
+Don't forget to call this before deleting any instance that is listening to an event, if not the event will try to notify a non existent instance and the application will crash.
+
+The syntax is just the same as that of ofAddListener.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)
+
+<!--
+_syntax: ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)_
+_name: ofRemoveListener_
+_returns: void_
+_returns_description: _
+_parameters: ofEvent< void > &event, ListenerClass *listener, bool(ListenerClass::*listenerMethod)(const void *), int prio=OF_EVENT_ORDER_AFTER_APP_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+Removes a listener method from an event. Use it whenever you want a class to stop being notified about an event after having registered it to the method with ofAddListener.
+
+Don't forget to call this before deleting any instance that is listening to an event, if not the event will try to notify a non existent instance and the application will crash.
+
+The syntax is just the same as that of ofAddListener.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)
+
+<!--
+_syntax: ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)_
+_name: ofRemoveListener_
+_returns: void_
+_returns_description: _
+_parameters: ofEvent< void > &event, ListenerClass *listener, bool(ListenerClass::*listenerMethod)(const void *), int prio=OF_EVENT_ORDER_AFTER_APP_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+Removes a listener method from an event. Use it whenever you want a class to stop being notified about an event after having registered it to the method with ofAddListener.
+
+Don't forget to call this before deleting any instance that is listening to an event, if not the event will try to notify a non existent instance and the application will crash.
+
+The syntax is just the same as that of ofAddListener.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)
+
+<!--
+_syntax: ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)_
+_name: ofRemoveListener_
+_returns: void_
+_returns_description: _
+_parameters: ofEvent< void > &event, ListenerClass *listener, bool(ListenerClass::*listenerMethod)(const void *), int prio=OF_EVENT_ORDER_AFTER_APP_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+Removes a listener method from an event. Use it whenever you want a class to stop being notified about an event after having registered it to the method with ofAddListener.
+
+Don't forget to call this before deleting any instance that is listening to an event, if not the event will try to notify a non existent instance and the application will crash.
+
+The syntax is just the same as that of ofAddListener.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)
+
+<!--
+_syntax: ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)_
+_name: ofRemoveListener_
+_returns: void_
+_returns_description: _
+_parameters: ofEvent< void > &event, ListenerClass *listener, bool(ListenerClass::*listenerMethod)(const void *), int prio=OF_EVENT_ORDER_AFTER_APP_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+Removes a listener method from an event. Use it whenever you want a class to stop being notified about an event after having registered it to the method with ofAddListener.
+
+Don't forget to call this before deleting any instance that is listening to an event, if not the event will try to notify a non existent instance and the application will crash.
+
+The syntax is just the same as that of ofAddListener.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)
+
+<!--
+_syntax: ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)_
+_name: ofRemoveListener_
+_returns: void_
+_returns_description: _
+_parameters: ofEvent< void > &event, ListenerClass *listener, bool(ListenerClass::*listenerMethod)(const void *), int prio=OF_EVENT_ORDER_AFTER_APP_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+Removes a listener method from an event. Use it whenever you want a class to stop being notified about an event after having registered it to the method with ofAddListener.
+
+Don't forget to call this before deleting any instance that is listening to an event, if not the event will try to notify a non existent instance and the application will crash.
+
+The syntax is just the same as that of ofAddListener.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)
+
+<!--
+_syntax: ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)_
+_name: ofRemoveListener_
+_returns: void_
+_returns_description: _
+_parameters: ofEvent< void > &event, ListenerClass *listener, bool(ListenerClass::*listenerMethod)(const void *), int prio=OF_EVENT_ORDER_AFTER_APP_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+Removes a listener method from an event. Use it whenever you want a class to stop being notified about an event after having registered it to the method with ofAddListener.
+
+Don't forget to call this before deleting any instance that is listening to an event, if not the event will try to notify a non existent instance and the application will crash.
+
+The syntax is just the same as that of ofAddListener.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)
+
+<!--
+_syntax: ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)_
+_name: ofRemoveListener_
+_returns: void_
+_returns_description: _
+_parameters: ofEvent< void > &event, ListenerClass *listener, bool(ListenerClass::*listenerMethod)(const void *), int prio=OF_EVENT_ORDER_AFTER_APP_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+Removes a listener method from an event. Use it whenever you want a class to stop being notified about an event after having registered it to the method with ofAddListener.
+
+Don't forget to call this before deleting any instance that is listening to an event, if not the event will try to notify a non existent instance and the application will crash.
+
+The syntax is just the same as that of ofAddListener.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)
+
+<!--
+_syntax: ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)_
+_name: ofRemoveListener_
+_returns: void_
+_returns_description: _
+_parameters: ofEvent< void > &event, ListenerClass *listener, bool(ListenerClass::*listenerMethod)(const void *), int prio=OF_EVENT_ORDER_AFTER_APP_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+Removes a listener method from an event. Use it whenever you want a class to stop being notified about an event after having registered it to the method with ofAddListener.
+
+Don't forget to call this before deleting any instance that is listening to an event, if not the event will try to notify a non existent instance and the application will crash.
+
+The syntax is just the same as that of ofAddListener.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)
+
+<!--
+_syntax: ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)_
+_name: ofRemoveListener_
+_returns: void_
+_returns_description: _
+_parameters: ofEvent< void > &event, ListenerClass *listener, bool(ListenerClass::*listenerMethod)(const void *), int prio=OF_EVENT_ORDER_AFTER_APP_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+Removes a listener method from an event. Use it whenever you want a class to stop being notified about an event after having registered it to the method with ofAddListener.
+
+Don't forget to call this before deleting any instance that is listening to an event, if not the event will try to notify a non existent instance and the application will crash.
+
+The syntax is just the same as that of ofAddListener.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)
+
+<!--
+_syntax: ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)_
+_name: ofRemoveListener_
+_returns: void_
+_returns_description: _
+_parameters: ofEvent< void > &event, ListenerClass *listener, bool(ListenerClass::*listenerMethod)(const void *), int prio=OF_EVENT_ORDER_AFTER_APP_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+Removes a listener method from an event. Use it whenever you want a class to stop being notified about an event after having registered it to the method with ofAddListener.
+
+Don't forget to call this before deleting any instance that is listening to an event, if not the event will try to notify a non existent instance and the application will crash.
+
+The syntax is just the same as that of ofAddListener.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)
+
+<!--
+_syntax: ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)_
+_name: ofRemoveListener_
+_returns: void_
+_returns_description: _
+_parameters: ofEvent< void > &event, ListenerClass *listener, bool(ListenerClass::*listenerMethod)(const void *), int prio=OF_EVENT_ORDER_AFTER_APP_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+Removes a listener method from an event. Use it whenever you want a class to stop being notified about an event after having registered it to the method with ofAddListener.
+
+Don't forget to call this before deleting any instance that is listening to an event, if not the event will try to notify a non existent instance and the application will crash.
+
+The syntax is just the same as that of ofAddListener.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)
+
+<!--
+_syntax: ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)_
+_name: ofRemoveListener_
+_returns: void_
+_returns_description: _
+_parameters: ofEvent< void > &event, ListenerClass *listener, bool(ListenerClass::*listenerMethod)(const void *), int prio=OF_EVENT_ORDER_AFTER_APP_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+Removes a listener method from an event. Use it whenever you want a class to stop being notified about an event after having registered it to the method with ofAddListener.
+
+Don't forget to call this before deleting any instance that is listening to an event, if not the event will try to notify a non existent instance and the application will crash.
+
+The syntax is just the same as that of ofAddListener.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)
+
+<!--
+_syntax: ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)_
+_name: ofRemoveListener_
+_returns: void_
+_returns_description: _
+_parameters: ofEvent< void > &event, ListenerClass *listener, bool(ListenerClass::*listenerMethod)(const void *), int prio=OF_EVENT_ORDER_AFTER_APP_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+Removes a listener method from an event. Use it whenever you want a class to stop being notified about an event after having registered it to the method with ofAddListener.
+
+Don't forget to call this before deleting any instance that is listening to an event, if not the event will try to notify a non existent instance and the application will crash.
+
+The syntax is just the same as that of ofAddListener.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)
+
+<!--
+_syntax: ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)_
+_name: ofRemoveListener_
+_returns: void_
+_returns_description: _
+_parameters: ofEvent< void > &event, ListenerClass *listener, bool(ListenerClass::*listenerMethod)(const void *), int prio=OF_EVENT_ORDER_AFTER_APP_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+Removes a listener method from an event. Use it whenever you want a class to stop being notified about an event after having registered it to the method with ofAddListener.
+
+Don't forget to call this before deleting any instance that is listening to an event, if not the event will try to notify a non existent instance and the application will crash.
+
+The syntax is just the same as that of ofAddListener.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)
+
+<!--
+_syntax: ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)_
+_name: ofRemoveListener_
+_returns: void_
+_returns_description: _
+_parameters: ofEvent< void > &event, ListenerClass *listener, bool(ListenerClass::*listenerMethod)(const void *), int prio=OF_EVENT_ORDER_AFTER_APP_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+Removes a listener method from an event. Use it whenever you want a class to stop being notified about an event after having registered it to the method with ofAddListener.
+
+Don't forget to call this before deleting any instance that is listening to an event, if not the event will try to notify a non existent instance and the application will crash.
+
+The syntax is just the same as that of ofAddListener.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)
+
+<!--
+_syntax: ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)_
+_name: ofRemoveListener_
+_returns: void_
+_returns_description: _
+_parameters: ofEvent< void > &event, ListenerClass *listener, bool(ListenerClass::*listenerMethod)(const void *), int prio=OF_EVENT_ORDER_AFTER_APP_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+Removes a listener method from an event. Use it whenever you want a class to stop being notified about an event after having registered it to the method with ofAddListener.
+
+Don't forget to call this before deleting any instance that is listening to an event, if not the event will try to notify a non existent instance and the application will crash.
+
+The syntax is just the same as that of ofAddListener.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)
+
+<!--
+_syntax: ofRemoveListener(&event, *listener, *), prio = OF_EVENT_ORDER_AFTER_APP)_
+_name: ofRemoveListener_
+_returns: void_
+_returns_description: _
+_parameters: ofEvent< void > &event, ListenerClass *listener, bool(ListenerClass::*listenerMethod)(const void *), int prio=OF_EVENT_ORDER_AFTER_APP_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+Removes a listener method from an event. Use it whenever you want a class to stop being notified about an event after having registered it to the method with ofAddListener.
+
+Don't forget to call this before deleting any instance that is listening to an event, if not the event will try to notify a non existent instance and the application will crash.
+
+The syntax is just the same as that of ofAddListener.
 
 
 

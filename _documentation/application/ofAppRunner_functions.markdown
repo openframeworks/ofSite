@@ -15,78 +15,6 @@ _advanced: False_
 
 <!----------------------------------------------------------------------------->
 
-###void noopDeleter(*)
-
-<!--
-_syntax: noopDeleter(*)_
-_name: noopDeleter_
-_returns: void_
-_returns_description: _
-_parameters: Window *_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###shared_ptr< ofAppBaseWindow > ofCreateWindow(&settings)
-
-<!--
-_syntax: ofCreateWindow(&settings)_
-_name: ofCreateWindow_
-_returns: shared_ptr< ofAppBaseWindow >_
-_returns_description: _
-_parameters: const ofWindowSettings &settings_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void ofDisableSetupScreen()
 
 <!--
@@ -204,42 +132,6 @@ Re-enables the call to ofSetupScreen after being disabled with ofDisableSetupScr
 
 <!----------------------------------------------------------------------------->
 
-###ofCoreEvents & ofEvents()
-
-<!--
-_syntax: ofEvents()_
-_name: ofEvents_
-_returns: ofCoreEvents &_
-_returns_description: _
-_parameters: _
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void ofExit(status = 0)
 
 <!--
@@ -279,10 +171,10 @@ This exits your app, causing it to quit.
 
 <!----------------------------------------------------------------------------->
 
-###ofBaseApp * ofGetAppPtr()
+###ofBaseApp * ofToggleFullscreen()
 
 <!--
-_syntax: ofGetAppPtr()_
+_syntax: ofToggleFullscreen()_
 _name: ofGetAppPtr_
 _returns: ofBaseApp *_
 _returns_description: _
@@ -331,83 +223,6 @@ void myClass::method(){
 
 <!----------------------------------------------------------------------------->
 
-###shared_ptr< ofBaseRenderer > & ofGetCurrentRenderer()
-
-<!--
-_syntax: ofGetCurrentRenderer()_
-_name: ofGetCurrentRenderer_
-_returns: shared_ptr< ofBaseRenderer > &_
-_returns_description: _
-_parameters: _
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###uint64_t ofGetFrameNum()
-
-<!--
-_syntax: ofGetFrameNum()_
-_name: ofGetFrameNum_
-_returns: uint64_t_
-_returns_description: _
-_parameters: _
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Get the number of frames rendered since the program started.
-Returns: the number of frames rendered since the program started.
-
-
-
-
-
-
-
-_description: _
-
-
-This returns the current frame as an int, counting up to (depending on your system) 2147483647 before rolling over back to 0. Don't worry though, at 60 frames a second you have 68 years until it rolls over though.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###float ofGetFrameRate()
 
 <!--
@@ -438,42 +253,6 @@ _description: _
 
 
 note: this code is implemented inside the ofAppRunner.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###GLXContext ofGetGLXContext()
-
-<!--
-_syntax: ofGetGLXContext()_
-_name: ofGetGLXContext_
-_returns: GLXContext_
-_returns_description: _
-_parameters: _
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
 
 
 
@@ -550,42 +329,6 @@ _inlined_description: _
 
 _description: _
 
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###shared_ptr< ofMainLoop > ofGetMainLoop()
-
-<!--
-_syntax: ofGetMainLoop()_
-_name: ofGetMainLoop_
-_returns: shared_ptr< ofMainLoop >_
-_returns_description: _
-_parameters: _
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
 
 
 
@@ -955,10 +698,10 @@ note: this code is implemented inside the ofAppRunner
 
 <!----------------------------------------------------------------------------->
 
-###ofAppBaseWindow * ofGetWindowPtr()
+###ofAppBaseWindow * ofToggleFullscreen()
 
 <!--
-_syntax: ofGetWindowPtr()_
+_syntax: ofToggleFullscreen()_
 _name: ofGetWindowPtr_
 _returns: ofAppBaseWindow *_
 _returns_description: _
@@ -1105,78 +848,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###Display * ofGetX11Display()
-
-<!--
-_syntax: ofGetX11Display()_
-_name: ofGetX11Display_
-_returns: Display *_
-_returns_description: _
-_parameters: _
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###Window ofGetX11Window()
-
-<!--
-_syntax: ofGetX11Window()_
-_name: ofGetX11Window_
-_returns: Window_
-_returns_description: _
-_parameters: _
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void ofHideCursor()
 
 <!--
@@ -1208,369 +879,6 @@ _description: _
 
 This hides the mouse cursor, useful if you're doing a clever app that has no need for mouse interaction, evil if you are.
 note: this code is implemented inside the ofAppRunner.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofInit()
-
-<!--
-_syntax: ofInit()_
-_name: ofInit_
-_returns: void_
-_returns_description: _
-_parameters: _
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float ofRandomHeight()
-
-<!--
-_syntax: ofRandomHeight()_
-_name: ofRandomHeight_
-_returns: float_
-_returns_description: _
-_parameters: _
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Returns: a random number between 0 and the height of the window.
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float ofRandomWidth()
-
-<!--
-_syntax: ofRandomWidth()_
-_name: ofRandomWidth_
-_returns: float_
-_returns_description: _
-_parameters: _
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Returns: a random number between 0 and the width of the window.
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int ofRunApp(*OFSA = NULL)
-
-<!--
-_syntax: ofRunApp(*OFSA = NULL)_
-_name: ofRunApp_
-_returns: int_
-_returns_description: _
-_parameters: ofBaseApp *OFSA_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int ofRunApp(OFSA)
-
-<!--
-_syntax: ofRunApp(OFSA)_
-_name: ofRunApp_
-_returns: int_
-_returns_description: _
-_parameters: shared_ptr< ofBaseApp > OFSA_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofRunApp(window, app)
-
-<!--
-_syntax: ofRunApp(window, app)_
-_name: ofRunApp_
-_returns: void_
-_returns_description: _
-_parameters: shared_ptr< ofAppBaseWindow > window, shared_ptr< ofBaseApp > app_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int ofRunMainLoop()
-
-<!--
-_syntax: ofRunMainLoop()_
-_name: ofRunMainLoop_
-_returns: int_
-_returns_description: _
-_parameters: _
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofSetAppPtr(appPtr)
-
-<!--
-_syntax: ofSetAppPtr(appPtr)_
-_name: ofSetAppPtr_
-_returns: void_
-_returns_description: _
-_parameters: shared_ptr< ofBaseApp > appPtr_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofSetCurrentRenderer(renderer, setDefaults = false)
-
-<!--
-_syntax: ofSetCurrentRenderer(renderer, setDefaults = false)_
-_name: ofSetCurrentRenderer_
-_returns: void_
-_returns_description: _
-_parameters: shared_ptr< ofBaseRenderer > renderer, bool setDefaults=false_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofSetEscapeQuitsApp(bQuitOnEsc)
-
-<!--
-_syntax: ofSetEscapeQuitsApp(bQuitOnEsc)_
-_name: ofSetEscapeQuitsApp_
-_returns: void_
-_returns_description: _
-_parameters: bool bQuitOnEsc_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
 
 
 
@@ -1651,42 +959,6 @@ _description: _
 Change the app window mode to fullscreen or window depending on the boolean parameter.
 Enables or disables fullscreen mode for your app's window.
 note: this code is implemented inside the ofAppRunner.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofSetMainLoop(mainLoop)
-
-<!--
-_syntax: ofSetMainLoop(mainLoop)_
-_name: ofSetMainLoop_
-_returns: void_
-_returns_description: _
-_parameters: shared_ptr< ofMainLoop > mainLoop_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
 
 
 
@@ -1887,114 +1159,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofSetupOpenGL(w, h, screenMode)
-
-<!--
-_syntax: ofSetupOpenGL(w, h, screenMode)_
-_name: ofSetupOpenGL_
-_returns: void_
-_returns_description: _
-_parameters: int w, int h, ofWindowMode screenMode_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofSetupOpenGL(windowPtr, w, h, screenMode)
-
-<!--
-_syntax: ofSetupOpenGL(windowPtr, w, h, screenMode)_
-_name: ofSetupOpenGL_
-_returns: void_
-_returns_description: _
-_parameters: shared_ptr< Window > windowPtr, int w, int h, ofWindowMode screenMode_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofSetupOpenGL(*windowPtr, w, h, screenMode)
-
-<!--
-_syntax: ofSetupOpenGL(*windowPtr, w, h, screenMode)_
-_name: ofSetupOpenGL_
-_returns: void_
-_returns_description: _
-_parameters: Window *windowPtr, int w, int h, ofWindowMode screenMode_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void ofShowCursor()
 
 <!--
@@ -2036,12 +1200,900 @@ note: this code is implemented inside the ofAppRunner
 
 <!----------------------------------------------------------------------------->
 
-###void ofToggleFullscreen()
+###GLXContext ofToggleFullscreen()
 
 <!--
 _syntax: ofToggleFullscreen()_
 _name: ofToggleFullscreen_
-_returns: void_
+_returns: GLXContext_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###GLXContext ofToggleFullscreen()
+
+<!--
+_syntax: ofToggleFullscreen()_
+_name: ofToggleFullscreen_
+_returns: GLXContext_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###GLXContext ofToggleFullscreen()
+
+<!--
+_syntax: ofToggleFullscreen()_
+_name: ofToggleFullscreen_
+_returns: GLXContext_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###GLXContext ofToggleFullscreen()
+
+<!--
+_syntax: ofToggleFullscreen()_
+_name: ofToggleFullscreen_
+_returns: GLXContext_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###GLXContext ofToggleFullscreen()
+
+<!--
+_syntax: ofToggleFullscreen()_
+_name: ofToggleFullscreen_
+_returns: GLXContext_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###GLXContext ofToggleFullscreen()
+
+<!--
+_syntax: ofToggleFullscreen()_
+_name: ofToggleFullscreen_
+_returns: GLXContext_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###GLXContext ofToggleFullscreen()
+
+<!--
+_syntax: ofToggleFullscreen()_
+_name: ofToggleFullscreen_
+_returns: GLXContext_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###GLXContext ofToggleFullscreen()
+
+<!--
+_syntax: ofToggleFullscreen()_
+_name: ofToggleFullscreen_
+_returns: GLXContext_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###GLXContext ofToggleFullscreen()
+
+<!--
+_syntax: ofToggleFullscreen()_
+_name: ofToggleFullscreen_
+_returns: GLXContext_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###GLXContext ofToggleFullscreen()
+
+<!--
+_syntax: ofToggleFullscreen()_
+_name: ofToggleFullscreen_
+_returns: GLXContext_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###GLXContext ofToggleFullscreen()
+
+<!--
+_syntax: ofToggleFullscreen()_
+_name: ofToggleFullscreen_
+_returns: GLXContext_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###GLXContext ofToggleFullscreen()
+
+<!--
+_syntax: ofToggleFullscreen()_
+_name: ofToggleFullscreen_
+_returns: GLXContext_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###GLXContext ofToggleFullscreen()
+
+<!--
+_syntax: ofToggleFullscreen()_
+_name: ofToggleFullscreen_
+_returns: GLXContext_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###GLXContext ofToggleFullscreen()
+
+<!--
+_syntax: ofToggleFullscreen()_
+_name: ofToggleFullscreen_
+_returns: GLXContext_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###GLXContext ofToggleFullscreen()
+
+<!--
+_syntax: ofToggleFullscreen()_
+_name: ofToggleFullscreen_
+_returns: GLXContext_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###GLXContext ofToggleFullscreen()
+
+<!--
+_syntax: ofToggleFullscreen()_
+_name: ofToggleFullscreen_
+_returns: GLXContext_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###GLXContext ofToggleFullscreen()
+
+<!--
+_syntax: ofToggleFullscreen()_
+_name: ofToggleFullscreen_
+_returns: GLXContext_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###GLXContext ofToggleFullscreen()
+
+<!--
+_syntax: ofToggleFullscreen()_
+_name: ofToggleFullscreen_
+_returns: GLXContext_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###GLXContext ofToggleFullscreen()
+
+<!--
+_syntax: ofToggleFullscreen()_
+_name: ofToggleFullscreen_
+_returns: GLXContext_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###GLXContext ofToggleFullscreen()
+
+<!--
+_syntax: ofToggleFullscreen()_
+_name: ofToggleFullscreen_
+_returns: GLXContext_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###GLXContext ofToggleFullscreen()
+
+<!--
+_syntax: ofToggleFullscreen()_
+_name: ofToggleFullscreen_
+_returns: GLXContext_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###GLXContext ofToggleFullscreen()
+
+<!--
+_syntax: ofToggleFullscreen()_
+_name: ofToggleFullscreen_
+_returns: GLXContext_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###GLXContext ofToggleFullscreen()
+
+<!--
+_syntax: ofToggleFullscreen()_
+_name: ofToggleFullscreen_
+_returns: GLXContext_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###GLXContext ofToggleFullscreen()
+
+<!--
+_syntax: ofToggleFullscreen()_
+_name: ofToggleFullscreen_
+_returns: GLXContext_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###GLXContext ofToggleFullscreen()
+
+<!--
+_syntax: ofToggleFullscreen()_
+_name: ofToggleFullscreen_
+_returns: GLXContext_
 _returns_description: _
 _parameters: _
 _version_started: _

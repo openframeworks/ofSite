@@ -42,6 +42,7 @@ It has a width (in x), a height (in y), and a depth (in z).
 The box is drawn with the current color, e.g. set with ofSetColor().
 The box is drawn filled by default; change this with ofFill();
 
+
 Parameters:
 x The x-coordinate of the box's origin.
 y The y-coordinate of the box's origin.
@@ -115,6 +116,7 @@ It is drawn starting from a 3D reference coordinate, with the specified size.
 The cube is drawn with the current color, e.g. set with ofSetColor().
 The cube is drawn filled by default; change this with ofFill();
 
+
 Parameters:
 x The x-coordinate of the cube's origin.
 y The y-coordinate of the cube's origin.
@@ -187,6 +189,7 @@ It has a width (in x), a height (in y), and a depth (in z).
 The box is drawn with the current color, e.g. set with ofSetColor().
 The box is drawn filled by default; change this with ofFill();
 
+
 Parameters:
 position an ofPoint which contains the (x,y,z) coordinates for the box's reference corner.
 width The width of the box.
@@ -253,6 +256,7 @@ A cube is drawn starting from a 3D reference position, with the specified size.
 The cube is drawn with the current color, e.g. set with ofSetColor().
 The cube is drawn filled by default; change this with ofFill();
 
+
 Parameters:
 position an ofPoint which contains the (x,y,z) coordinates for the cube's reference corner.
 size The size of the cube.
@@ -318,6 +322,7 @@ Draws a cube with the specified size, starting from the origin.
 The cube is drawn with the current color, e.g. set with ofSetColor().
 The cube is drawn filled by default; change this with ofFill();
 
+
 Parameters:
 size The size of the cube.
 
@@ -382,6 +387,7 @@ It is drawn starting from the origin of the current reference frame.
 It has a width (in x), a height (in y), and a depth (in z).
 The box is drawn with the current color, e.g. set with ofSetColor().
 The box is drawn filled by default; change this with ofFill();
+
 
 Parameters:
 width The width of the box.
@@ -1573,6 +1579,7 @@ Encoded as "x": radiusSegments, the number of facets (subdivisions) around the c
 Encoded as "y": heightSegments, the number of subdivisions from the cone's top to bottom.
 Encoded as "z": capSegments, the number of annular (ring-shaped) subdivisions of the cone's endcap.
 
+
 Returns: An ofVec3f containing (radiusSegments, heightSegments, capSegments) for cone polygonization.
 
 
@@ -2060,6 +2067,7 @@ _inlined_description: _
 Set the resolution of a polygonized cone.
 
 Allows you to set the polygonization resolution of any cones you subsequently draw with ofDrawCone().
+
 
 Parameters:
 radiusSegments The number of facets (subdivisions) around the cone's circular footprint.

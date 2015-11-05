@@ -15,14 +15,14 @@ _advanced: False_
 
 <!----------------------------------------------------------------------------->
 
-###ofHttpResponse ofLoadURL(url)
+###ofHttpResponse ofUnregisterURLNotification(*obj)
 
 <!--
-_syntax: ofLoadURL(url)_
+_syntax: ofUnregisterURLNotification(*obj)_
 _name: ofLoadURL_
 _returns: ofHttpResponse_
 _returns_description: _
-_parameters: const string &url_
+_parameters: T *obj_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -61,14 +61,14 @@ cout << resp.data << endl;
 
 <!----------------------------------------------------------------------------->
 
-###int ofLoadURLAsync(url, name = "")
+###int ofUnregisterURLNotification(*obj)
 
 <!--
-_syntax: ofLoadURLAsync(url, name = "")_
+_syntax: ofUnregisterURLNotification(*obj)_
 _name: ofLoadURLAsync_
 _returns: int_
 _returns_description: _
-_parameters: const string &url, const string &name_
+_parameters: T *obj_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -267,14 +267,14 @@ specified by its ID.
 
 <!----------------------------------------------------------------------------->
 
-###int ofSaveURLAsync(url, path)
+###int ofUnregisterURLNotification(*obj)
 
 <!--
-_syntax: ofSaveURLAsync(url, path)_
+_syntax: ofUnregisterURLNotification(*obj)_
 _name: ofSaveURLAsync_
 _returns: int_
 _returns_description: _
-_parameters: const string &url, const string &path_
+_parameters: T *obj_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -308,14 +308,14 @@ to identify when it has finished.
 
 <!----------------------------------------------------------------------------->
 
-###ofHttpResponse ofSaveURLTo(url, path)
+###ofHttpResponse ofUnregisterURLNotification(*obj)
 
 <!--
-_syntax: ofSaveURLTo(url, path)_
+_syntax: ofUnregisterURLNotification(*obj)_
 _name: ofSaveURLTo_
 _returns: ofHttpResponse_
 _returns_description: _
-_parameters: const string &url, const string &path_
+_parameters: T *obj_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -386,14 +386,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofEvent< ofHttpResponse > & ofURLResponseEvent()
+###void ofUnregisterURLNotification(*obj)
 
 <!--
-_syntax: ofURLResponseEvent()_
-_name: ofURLResponseEvent_
-_returns: ofEvent< ofHttpResponse > &_
+_syntax: ofUnregisterURLNotification(*obj)_
+_name: ofUnregisterURLNotification_
+_returns: void_
 _returns_description: _
-_parameters: _
+_parameters: T *obj_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -415,8 +415,46 @@ _inlined_description: _
 _description: _
 
 
-Used internally for registering and unregistering URL notifications, and
-also by `ofThreadedImageLoader` and `ofURLFileLoader`.
+Unregisters a notification for an `ofLoadURLAsync()` operation.
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofUnregisterURLNotification(*obj)
+
+<!--
+_syntax: ofUnregisterURLNotification(*obj)_
+_name: ofUnregisterURLNotification_
+_returns: void_
+_returns_description: _
+_parameters: T *obj_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+
+_description: _
+
+
+Unregisters a notification for an `ofLoadURLAsync()` operation.
 
 
 

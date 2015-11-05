@@ -35,7 +35,7 @@ ofLog(OF_LOG_ERROR, "Another string.");
 ~~~~
 
 
-by:Dan Wilcox <danomatika@gmail.com> danomatika.com
+By: Dan Wilcox <danomatika@gmail.com> danomatika.com
 
 
 
@@ -157,6 +157,7 @@ _advanced: False_
 _inlined_description: _
 
 Print a log line.
+
 Parameters:
 level The log level.
 module The target module.
@@ -200,9 +201,11 @@ _advanced: False_
 _inlined_description: _
 
 Determine if the given module is active at the given log level.
+
 Parameters:
 level The log level.
 module The target module.
+
 Returns: true if the given module is active at the given log level.
 
 
@@ -342,6 +345,7 @@ ofLogWarning() << "a string " << 100 << 20.234f;
 
 ~~~~
 
+
 Parameters:
 level The ofLogLevel for this log message.
 
@@ -426,6 +430,7 @@ ofLog(OF_LOG_NOTICE, "the number is "
 + ofToString(10) + " and I have a float too " + ofToString(123.45f));
 
 ~~~~
+
 
 Parameters:
 level The ofLogLevel for this log message.
@@ -525,8 +530,10 @@ This allows the
 almost any type.
 
 \tparam T the data type to be streamed.
+
 Parameters:
 value the data to be streamed.
+
 Returns: A reference to itself.
 
 
@@ -571,8 +578,10 @@ Define flexible stream operator.
 This allows the 
 pointers such as std::endl and std::hex.
 
+
 Parameters:
 func A function pointer that takes a std::ostream as an argument.
+
 Returns: A reference to itself.
 
 
@@ -653,6 +662,7 @@ Let the logger automaticly add spaces between messages.
 
 Default is `false`.
 
+
 Parameters:
 autoSpace Set to true to add spaces between messages
 
@@ -698,6 +708,7 @@ Set the logging channel destinations for messages.
 This can be used to output to files instead of stdout.
 
 \sa ofFileLoggerChannel ofConsoleLoggerChannel
+
 Parameters:
 channel The channel to log to.
 

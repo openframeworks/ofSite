@@ -48,6 +48,7 @@ _advanced: False_
 _inlined_description: _
 
 Create a error log message.
+
 Parameters:
 module The target module.
 
@@ -89,6 +90,7 @@ _advanced: False_
 _inlined_description: _
 
 Create a error log message.
+
 Parameters:
 module The target module.
 message The log message.

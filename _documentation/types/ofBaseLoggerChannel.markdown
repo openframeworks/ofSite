@@ -49,6 +49,7 @@ _advanced: False_
 _inlined_description: _
 
 Log a message.
+
 Parameters:
 level The log level.
 module The target module.
@@ -92,6 +93,7 @@ _advanced: False_
 _inlined_description: _
 
 Log a message.
+
 Parameters:
 level The log level.
 module The target module.

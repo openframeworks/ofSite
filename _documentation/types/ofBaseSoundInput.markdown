@@ -46,6 +46,7 @@ _advanced: False_
 _inlined_description: _
 
 Receive an audio buffer.
+
 Parameters:
 buffer An audio buffer.
 

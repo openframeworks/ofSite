@@ -165,6 +165,7 @@ _inlined_description: _
 
 Check whether an event is enabled or not.
 
+
 Returns: true if enables
 \see ofBaseEvent::enable()
 \see ofBaseEvent::disable()

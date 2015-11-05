@@ -15,14 +15,14 @@ _advanced: False_
 
 <!----------------------------------------------------------------------------->
 
-###ofCoreEvents & ofEvents()
+###ofCoreEvents & ofUnregisterTouchEvents(*listener, prio = OF_EVENT_ORDER_AFTER_APP)
 
 <!--
-_syntax: ofEvents()_
+_syntax: ofUnregisterTouchEvents(*listener, prio = OF_EVENT_ORDER_AFTER_APP)_
 _name: ofEvents_
 _returns: ofCoreEvents &_
 _returns_description: _
-_parameters: _
+_parameters: ListenerClass *listener, int prio=OF_EVENT_ORDER_AFTER_APP_
 _version_started: _
 _version_deprecated: _
 _summary: _

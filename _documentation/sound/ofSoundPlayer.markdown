@@ -417,6 +417,7 @@ Tells the sound player which file to play.
 
 Codec support varies by platform but wav, aif, and mp3 are safe.
 
+
 Parameters:
 fileName Path to the sound file, relative to your app's data folder.
 stream set "true" to enable streaming from disk (for large files).
@@ -558,6 +559,7 @@ _advanced: False_
 _inlined_description: _
 
 Sets whether to loop once the end of the file is reached.
+
 Parameters:
 loop "true" to loop, default is false.
 
@@ -609,6 +611,7 @@ _advanced: False_
 _inlined_description: _
 
 Enables playing multiple simultaneous copies of the sound.
+
 Parameters:
 multiplay "true" to enable, default is false.
 
@@ -662,6 +665,7 @@ _advanced: False_
 _inlined_description: _
 
 Sets stereo pan.
+
 Parameters:
 pan range is -1 to 1 (-1 is full left, 1 is full right).
 
@@ -715,6 +719,7 @@ _advanced: False_
 _inlined_description: _
 
 Enables pause / resume.
+
 Parameters:
 paused "true" to pause, "false" to resume.
 
@@ -804,6 +809,7 @@ _advanced: False_
 _inlined_description: _
 
 Sets position of the playhead within the file (aka "seeking").
+
 Parameters:
 percent range is 0 (beginning of file) to 1 (end of file).
 
@@ -856,6 +862,7 @@ _advanced: False_
 _inlined_description: _
 
 Sets position of the playhead within the file (aka "seeking").
+
 Parameters:
 ms number of milliseconds from the start of the file.
 
@@ -899,6 +906,7 @@ _advanced: False_
 _inlined_description: _
 
 Sets playback speed.
+
 Parameters:
 speed set > 1 for faster playback, < 1 for slower playback.
 
@@ -952,6 +960,7 @@ _advanced: False_
 _inlined_description: _
 
 Sets playback volume.
+
 Parameters:
 vol range is 0 to 1.
 

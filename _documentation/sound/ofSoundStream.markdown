@@ -31,7 +31,7 @@ Some platforms (iOS, for example) will expose additional platform-specific
 sound stream functionality. See the platform-specific examples for demos.
 
 
-warning:Be aware that audioIn() and audioOut() will be called on a different
+Warning: Be aware that audioIn() and audioOut() will be called on a different
 thread from your app's update() / draw() thread.
 
 
@@ -808,6 +808,7 @@ _advanced: False_
 _inlined_description: _
 
 Sets up and starts the stream.
+
 Parameters:
 app pointer to the app which will own the sound stream.
 outChannels number of requested output channels (i.e. 2 for stereo).
@@ -857,6 +858,7 @@ _advanced: False_
 _inlined_description: _
 
 Sets up and starts the stream.
+
 Parameters:
 outChannels number of requested output channels (i.e. 2 for stereo).
 inChannels number of requested input channels.
