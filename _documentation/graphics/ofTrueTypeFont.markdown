@@ -35,7 +35,7 @@ _returns: void_
 _returns_description: _
 _parameters: const string &s, float x, float y, bool vFlipped_
 _access: protected_
-_version_started: 0.9.0_
+_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -54,7 +54,7 @@ _inlined_description: _
 
 _description: _
 
-
+This function, which is used internally, builds a mesh representation of the font.  This function is used by ofTrueTypeFont::getStringMesh().
 
 
 
@@ -71,7 +71,7 @@ _returns: void_
 _returns_description: _
 _parameters: int c, float x, float y, bool vFlipped_
 _access: protected_
-_version_started: 0.9.0_
+_version_started: 006_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -90,7 +90,7 @@ _inlined_description: _
 
 _description: _
 
-
+This function draws a character at position x,y.  It uses the texture representation of the font.
 
 
 
@@ -107,7 +107,7 @@ _returns: void_
 _returns_description: _
 _parameters: int c, float x, float y, bool vFlipped, bool filled_
 _access: protected_
-_version_started: 0.9.0_
+_version_started: 006_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -126,7 +126,7 @@ _inlined_description: _
 
 _description: _
 
-
+This function draws a character at position x,y.  It uses the path of the font, which involves
 
 
 
@@ -332,7 +332,7 @@ _returns: ofTTFCharacter_
 _returns_description: _
 _parameters: int character, bool vflip=true, bool filled=true_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -729,7 +729,7 @@ _returns: vector< ofTTFCharacter >_
 _returns_description: _
 _parameters: const string &str, bool vflip=true, bool filled=true_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -748,7 +748,50 @@ _inlined_description: _
 
 _description: _
 
+This returns a vector of ofTTFCharacters (which is actually an ofPath) for a given string.  This means you can get access to the point data / outlines of the letter forms.
 
+~~~~{.cpp}
+
+//--------------------------------------------------------------
+void testApp::setup(){
+
+    ofBackground(0);
+    font.loadFont("vag.ttf", 100, false, false, true);
+
+}
+
+//--------------------------------------------------------------
+void testApp::update(){
+
+}
+
+//--------------------------------------------------------------
+void testApp::draw(){
+
+    // get the string as paths
+    vector < ofTTFCharacter > paths = font.getStringAsPoints("hello!");
+
+    ofPushMatrix();
+    ofTranslate(ofGetWidth()/2, ofGetHeight()/2);
+
+    for (int i = 0; i < paths.size(); i++){
+
+        // for every character break it out to polylines
+
+        vector <ofPolyline> polylines = paths[i].getOutline();
+
+        // for every polyline, draw every fifth point
+
+        for (int j = 0; j < polylines.size(); j++){
+            for (int k = 0; k < polylines[j].size(); k+=5){         // draw every "fifth" point
+                ofCircle( polylines[j][k], 3);
+            }
+        }
+    }
+
+    ofPopMatrix();
+}
+~~~~
 
 
 
@@ -765,7 +808,7 @@ _returns: ofRectangle_
 _returns_description: _
 _parameters: const string &s, float x, float y, bool vflip=true_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 006_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -791,7 +834,25 @@ Returns: the bounding box of a string as a rectangle.
 
 _description: _
 
+Returns the bounding box of a string as a rectangle, useful if you want to position the type or calculate the size of graphics that relate to the font.
 
+e.g:
+~~~~{.cpp}
+
+//in setup()
+
+franklinBook.loadFont("frabk.ttf", 32);
+
+//in update()
+
+char tempString[255];
+ofRectangle rect = franklinBook.getStringBoundingBox(tempString, 0,0);
+
+//in draw
+
+ofSetColor(0xcccccc);
+ofRect(rect.x, rect.y, rect.width, rect.height);
+~~~~
 
 
 
@@ -808,7 +869,7 @@ _returns: const ofMesh &_
 _returns_description: _
 _parameters: const string &s, float x, float y, bool vflip=true_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -827,7 +888,7 @@ _inlined_description: _
 
 _description: _
 
-
+Returns the string as an ofMesh.   Note: this is a mesh that contains vertices and texture coordinates for the textured font, not the points of the font that are returned via any of the get points functions.
 
 
 

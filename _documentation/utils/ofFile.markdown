@@ -1046,6 +1046,42 @@ Creates an empty ofFile.
 
 <!----------------------------------------------------------------------------->
 
+### ofFile(&mom)
+
+<!--
+_syntax: ofFile(&mom)_
+_name: ofFile_
+_returns: _
+_returns_description: _
+_parameters: const ofFile &mom_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+Copy constructor for copying one ofFile into another 
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ### ofFile(&path, mode = ReadOnly, binary = true)
 
 <!--
@@ -1084,42 +1120,6 @@ ofFile fileToRead(ofToDataPath("dictionary.txt")); // a file that exists
 ofFile newFile(ofToDataPath("temp.txt"), ofFile::Write); //file doesn't exist yet
 newFile.create(); // now file doesn't exist 
 ~~~~
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofFile(&mom)
-
-<!--
-_syntax: ofFile(&mom)_
-_name: ofFile_
-_returns: _
-_returns_description: _
-_parameters: const ofFile &mom_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-Copy constructor for copying one ofFile into another 
 
 
 

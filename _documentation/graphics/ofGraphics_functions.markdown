@@ -260,6 +260,105 @@ void ofApp::setup(){
 
 <!----------------------------------------------------------------------------->
 
+###void ofBeginSaveScreenAsPDF(filename, bMultipage = false, b3D = false, outputsize)
+
+<!--
+_syntax: ofBeginSaveScreenAsPDF(filename, bMultipage = false, b3D = false, outputsize)_
+_name: ofBeginSaveScreenAsPDF_
+_returns: void_
+_returns_description: _
+_parameters: string filename, bool bMultipage=false, bool b3D=false, ofRectangle outputsize_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Begin rendering to a PDF file.
+
+openFrameworks allows rendering of 2D graphics to pdf via the
+ofCairoRenderer. ofBeginSaveScreenAsPDF() is called before drawing. When
+done drawing call ofEndSaveScreenAsPDF() to output the file.
+
+~~~~{.cpp}
+void ofApp::setup(){
+    ofBeginSaveScreenAsPDF("screenshot.pdf", false);
+    ofSetColor(54,54,54);
+    ofDrawEllipse(100,100,200,200);
+    ofEndSaveScreenAsPDF();
+}
+~~~~
+\sa End drawing with ofEndSaveScreenAsPDF()
+
+
+
+
+
+_description: _
+
+Begins render to pdf. OpenFrameworks allows rendering of 2D graphics to pdf via the ofCairoRenderer. ofBeginSaveScreenAsPDF is called before drawing. When done drawing call ofEndSaveScreenAsPDF() to output the file.
+~~~~{.cpp}
+void ofApp::setup(){
+    if( oneShot ){
+        ofBeginSaveScreenAsPDF("screenshot-"+ofGetTimestampString()+".pdf", false);
+    }
+
+    ofSetColor(54,54,54);
+    ofEllipse(100,100,200,200);
+    if( oneShot ){
+        ofEndSaveScreenAsPDF();
+        oneShot = false;
+    }
+}
+~~~~
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofBeginSaveScreenAsSVG(filename, bMultipage = false, b3D = false, outputsize)
+
+<!--
+_syntax: ofBeginSaveScreenAsSVG(filename, bMultipage = false, b3D = false, outputsize)_
+_name: ofBeginSaveScreenAsSVG_
+_returns: void_
+_returns_description: _
+_parameters: string filename, bool bMultipage=false, bool b3D=false, ofRectangle outputsize_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Begin rendering to a SVG file.
+\sa ofEndSaveScreenAsSVG(), ofBeginSaveScreenAsPDF()
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void ofBeginShape()
 
 <!--
@@ -1091,6 +1190,261 @@ Turns off smoothing. Currently, this only works for lines. You can draw a filled
 
 <!----------------------------------------------------------------------------->
 
+###void ofDrawBezier(x0, y0, x1, y1, x2, y2, x3, y3)
+
+<!--
+_syntax: ofDrawBezier(x0, y0, x1, y1, x2, y2, x3, y3)_
+_name: ofDrawBezier_
+_returns: void_
+_returns_description: _
+_parameters: float x0, float y0, float x1, float y1, float x2, float y2, float x3, float y3_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawBezier(x0, y0, z0, x1, y1, z1, x2, y2, z2, x3, y3, z3)
+
+<!--
+_syntax: ofDrawBezier(x0, y0, z0, x1, y1, z1, x2, y2, z2, x3, y3, z3)_
+_name: ofDrawBezier_
+_returns: void_
+_returns_description: _
+_parameters: float x0, float y0, float z0, float x1, float y1, float z1, float x2, float y2, float z2, float x3, float y3, float z3_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawBitmapString(&textString, x, y, z)
+
+<!--
+_syntax: ofDrawBitmapString(&textString, x, y, z)_
+_name: ofDrawBitmapString_
+_returns: void_
+_returns_description: _
+_parameters: const T &textString, float x, float y, float z_
+_version_started: 006_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+Draws a bitmapped string, on screen, at point (x,y). For example, you can write some text on screen like this:
+~~~~{.cpp}
+void ofApp::draw(){
+    ofDrawBitmapString("hi!!", 100,100);
+}
+~~~~
+Your strings can even be multiline:
+~~~~{.cpp}
+ofDrawBitmapString("a test
+of multiline
+text", 100,100);
+~~~~
+you can also using dynamically generated strings. For example, to print the frame rate:
+~~~~{.cpp}
+string fpsStr = "frame rate: "+ofToString(ofGetFrameRate(), 2);
+ofDrawBitmapString(fpsStr, 100,100);
+~~~~
+Please note, ofDrawBitmapString wraps a glut function that uses glDrawPixels. On some graphics cards, you may discover that glDrawPixels is slow (or even, very slow). If so, you might want to investigate using ofTrueTypeFont with a small typeface, non-anti-aliased, as a suitable alternative.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawBitmapString(&textString, &p)
+
+<!--
+_syntax: ofDrawBitmapString(&textString, &p)_
+_name: ofDrawBitmapString_
+_returns: void_
+_returns_description: _
+_parameters: const T &textString, const ofPoint &p_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+\}
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawBitmapString(&textString, x, y)
+
+<!--
+_syntax: ofDrawBitmapString(&textString, x, y)_
+_name: ofDrawBitmapString_
+_returns: void_
+_returns_description: _
+_parameters: const T &textString, float x, float y_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draws a bitmapped string, on screen, at point (x,y).
+
+For example, you can write some text on screen like this:
+~~~~{.cpp}
+void ofApp::draw(){
+    ofDrawBitmapString("hi!!", 100,100);
+}
+~~~~
+
+Your strings can even be multiline:
+~~~~{.cpp}
+ofDrawBitmapString("a test
+of multiline
+text", 100,100);
+~~~~
+
+you can also using dynamically generated strings. For example, to print
+the frame rate:
+~~~~{.cpp}
+string fpsStr = "frame rate: "+ofToString(ofGetFrameRate(), 2);
+ofDrawBitmapString(fpsStr, 100,100);
+~~~~
+
+\note ofDrawBitmapString wraps a glut function that uses glDrawPixels. On
+some graphics cards, you may discover that glDrawPixels is slow (or even,
+very slow). If so, you might want to investigate using ofTrueTypeFont
+with a small typeface, non-anti-aliased, as a suitable alternative.
+
+\sa ofTrueTypeFont
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawBitmapString(&textString, x, y, z)
+
+<!--
+_syntax: ofDrawBitmapString(&textString, x, y, z)_
+_name: ofDrawBitmapString_
+_returns: void_
+_returns_description: _
+_parameters: const string &textString, float x, float y, float z_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void ofDrawBitmapStringHighlight(text, &position, &background = ofColor::black, &foreground = ofColor::white)
 
 <!--
@@ -1135,6 +1489,1000 @@ _returns: void_
 _returns_description: _
 _parameters: string text, int x, int y, const ofColor &background=black, const ofColor &foreground=white_
 _version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawCircle(x, y, radius)
+
+<!--
+_syntax: ofDrawCircle(x, y, radius)_
+_name: ofDrawCircle_
+_returns: void_
+_returns_description: _
+_parameters: float x, float y, float radius_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draws a circle, centered at x,y, with a given radius.
+
+~~~~{.cpp}
+void ofApp::draw(){
+    ofDrawCircle(150,150,100);
+}
+~~~~
+Please keep in mind that drawing circle with different outline color and
+fill requires calling ofNoFill and ofSetColor for drawing stroke and
+ofFill and again ofSetColor for filled solid color circle.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawCircle(x, y, z, radius)
+
+<!--
+_syntax: ofDrawCircle(x, y, z, radius)_
+_name: ofDrawCircle_
+_returns: void_
+_returns_description: _
+_parameters: float x, float y, float z, float radius_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawCircle(&p, radius)
+
+<!--
+_syntax: ofDrawCircle(&p, radius)_
+_name: ofDrawCircle_
+_returns: void_
+_returns_description: _
+_parameters: const ofPoint &p, float radius_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawCurve(x0, y0, x1, y1, x2, y2, x3, y3)
+
+<!--
+_syntax: ofDrawCurve(x0, y0, x1, y1, x2, y2, x3, y3)_
+_name: ofDrawCurve_
+_returns: void_
+_returns_description: _
+_parameters: float x0, float y0, float x1, float y1, float x2, float y2, float x3, float y3_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draws a curve from point (x1, y1) to point (x2, y2). The curve is shaped by
+the two control points (x0,y0) and (x3,y3).
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawCurve(x0, y0, z0, x1, y1, z1, x2, y2, z2, x3, y3, z3)
+
+<!--
+_syntax: ofDrawCurve(x0, y0, z0, x1, y1, z1, x2, y2, z2, x3, y3, z3)_
+_name: ofDrawCurve_
+_returns: void_
+_returns_description: _
+_parameters: float x0, float y0, float z0, float x1, float y1, float z1, float x2, float y2, float z2, float x3, float y3, float z3_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draws a 3-dimensional curve from point (x1, y1, z1) to point (x2, y2, z2).
+The curve is shaped by the two control points (x0, y0, z0) and (x3, y3, z3).
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawEllipse(x, y, width, height)
+
+<!--
+_syntax: ofDrawEllipse(x, y, width, height)_
+_name: ofDrawEllipse_
+_returns: void_
+_returns_description: _
+_parameters: float x, float y, float width, float height_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draws an ellipse from point (x,y) with a given width (w) and height (h).
+~~~~{.cpp}
+void ofApp::draw(){
+    ofDrawEllipse(10,10,50,30);
+}
+~~~~
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawEllipse(x, y, z, width, height)
+
+<!--
+_syntax: ofDrawEllipse(x, y, z, width, height)_
+_name: ofDrawEllipse_
+_returns: void_
+_returns_description: _
+_parameters: float x, float y, float z, float width, float height_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawEllipse(&p, width, height)
+
+<!--
+_syntax: ofDrawEllipse(&p, width, height)_
+_name: ofDrawEllipse_
+_returns: void_
+_returns_description: _
+_parameters: const ofPoint &p, float width, float height_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawLine(x1, y1, x2, y2)
+
+<!--
+_syntax: ofDrawLine(x1, y1, x2, y2)_
+_name: ofDrawLine_
+_returns: void_
+_returns_description: _
+_parameters: float x1, float y1, float x2, float y2_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draws a line between two points: (x1,y1),(x2,y2).
+~~~~{.cpp}
+void ofApp::draw(){
+    ofDrawLine(10,10,100,100);
+}
+~~~~
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawLine(x1, y1, z1, x2, y2, z2)
+
+<!--
+_syntax: ofDrawLine(x1, y1, z1, x2, y2, z2)_
+_name: ofDrawLine_
+_returns: void_
+_returns_description: _
+_parameters: float x1, float y1, float z1, float x2, float y2, float z2_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawLine(&p1, &p2)
+
+<!--
+_syntax: ofDrawLine(&p1, &p2)_
+_name: ofDrawLine_
+_returns: void_
+_returns_description: _
+_parameters: const ofPoint &p1, const ofPoint &p2_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawRectRounded(&b, r)
+
+<!--
+_syntax: ofDrawRectRounded(&b, r)_
+_name: ofDrawRectRounded_
+_returns: void_
+_returns_description: _
+_parameters: const ofRectangle &b, float r_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draws a rounded rectangle from the given rectangle using given
+radius.
+
+~~~~{.cpp}
+void ofApp::draw(){
+    ofRectangle myRect;
+    myRect.x = 10;
+    myRect.y = 10;
+    myRect.width = 100;
+    myRect.height = 100;
+
+    ofDrawRectRounded(myRect, 10);
+}
+~~~~
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawRectRounded(&p, w, h, r)
+
+<!--
+_syntax: ofDrawRectRounded(&p, w, h, r)_
+_name: ofDrawRectRounded_
+_returns: void_
+_returns_description: _
+_parameters: const ofPoint &p, float w, float h, float r_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draws a rectangle from point p with a given width, height and radius of
+rounded corners.
+
+~~~~{.cpp}
+void ofApp::draw(){
+    ofPoint p;
+    p.set ( 10, 10 );
+    ofDrawRectRounded( p, 100, 100, 10 );
+}
+~~~~
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawRectRounded(x, y, w, h, r)
+
+<!--
+_syntax: ofDrawRectRounded(x, y, w, h, r)_
+_name: ofDrawRectRounded_
+_returns: void_
+_returns_description: _
+_parameters: float x, float y, float w, float h, float r_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draws a rectangle from point X, Y with a given width, height and radius of
+rounded corners.
+
+~~~~{.cpp}
+void ofApp::draw(){
+    ofDrawRectRounded(10, 10, 100, 100, 10);
+}
+~~~~
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawRectRounded(x, y, z, w, h, r)
+
+<!--
+_syntax: ofDrawRectRounded(x, y, z, w, h, r)_
+_name: ofDrawRectRounded_
+_returns: void_
+_returns_description: _
+_parameters: float x, float y, float z, float w, float h, float r_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draws a rectangle from point X, Y, at depth Z with a given width, height and
+radius of rounded corners.
+
+~~~~{.cpp}
+void ofApp::draw(){
+    ofDrawRectRounded(10, 10, 10, 100, 100, 10);
+}
+~~~~
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawRectRounded(&p, w, h, topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius)
+
+<!--
+_syntax: ofDrawRectRounded(&p, w, h, topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius)_
+_name: ofDrawRectRounded_
+_returns: void_
+_returns_description: _
+_parameters: const ofPoint &p, float w, float h, float topLeftRadius, float topRightRadius, float bottomRightRadius, float bottomLeftRadius_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draws a rounded rectangle from point X, Y, at depth Z with a given width,
+height and radius of rounded corners.
+
+~~~~{.cpp}
+void ofApp::draw(){
+    ofDrawRectRounded(10, 10, 10, 100, 100, 10);
+}
+~~~~
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawRectRounded(&b, topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius)
+
+<!--
+_syntax: ofDrawRectRounded(&b, topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius)_
+_name: ofDrawRectRounded_
+_returns: void_
+_returns_description: _
+_parameters: const ofRectangle &b, float topLeftRadius, float topRightRadius, float bottomRightRadius, float bottomLeftRadius_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draws a rounded rectangle from the given rectangle using different given
+radius for each of the corners.
+
+~~~~{.cpp}
+void ofApp::draw(){
+    ofRectangle myRect;
+    myRect.x = 10;
+    myRect.y = 10;
+    myRect.width = 100;
+    myRect.height = 100;
+
+    ofDrawRectRounded( myRect, 10, 20, 30, 40 );
+}
+~~~~
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawRectRounded(x, y, z, w, h, topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius)
+
+<!--
+_syntax: ofDrawRectRounded(x, y, z, w, h, topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius)_
+_name: ofDrawRectRounded_
+_returns: void_
+_returns_description: _
+_parameters: float x, float y, float z, float w, float h, float topLeftRadius, float topRightRadius, float bottomRightRadius, float bottomLeftRadius_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draws a rounded rectangle from point X, Y, at depth Z with a given width,
+height and different radius for each rounded corner.
+
+~~~~{.cpp}
+void ofApp::draw(){
+    ofDrawRectRounded(10, 10, 10, 100, 100, 10, 20, 30, 40);
+}
+~~~~
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawRectangle(x1, y1, w, h)
+
+<!--
+_syntax: ofDrawRectangle(x1, y1, w, h)_
+_name: ofDrawRectangle_
+_returns: void_
+_returns_description: _
+_parameters: float x1, float y1, float w, float h_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draws a rectangle from point x,y with a given width and height.
+~~~~{.cpp}
+void ofApp::draw(){
+    ofDrawRect(10,10,100,100);
+}
+~~~~
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawRectangle(&r)
+
+<!--
+_syntax: ofDrawRectangle(&r)_
+_name: ofDrawRectangle_
+_returns: void_
+_returns_description: _
+_parameters: const ofRectangle &r_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draws an rectangle from the given rectangle.
+~~~~{.cpp}
+void ofApp::draw(){
+    ofRectangle rect;
+    rect.x = 10;
+    rect.y = 10;
+    rect.width = 100;
+    rect.height = 100;
+
+    ofDrawRectangle(rect);
+}
+~~~~
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawRectangle(&p, w, h)
+
+<!--
+_syntax: ofDrawRectangle(&p, w, h)_
+_name: ofDrawRectangle_
+_returns: void_
+_returns_description: _
+_parameters: const ofPoint &p, float w, float h_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draws an rectangle from point p, with a given width and height.
+~~~~{.cpp}
+void ofApp::draw(){
+    ofPoint p;      // create a point P
+    p.x = 10;       // set the x of the point
+    p.y = 10;       // set the y of the point
+
+    ofDrawRectangle(p, 80, 80); // Draw the rectangle
+}
+~~~~
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawRectangle(x, y, z, w, h)
+
+<!--
+_syntax: ofDrawRectangle(x, y, z, w, h)_
+_name: ofDrawRectangle_
+_returns: void_
+_returns_description: _
+_parameters: float x, float y, float z, float w, float h_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draws an rectangle from point X, Y at depth Z with a given width and height.
+~~~~{.cpp}
+void ofApp::draw(){
+    ofDrawRectangle(10,10,-100, 80, 80); // Draw a rectangle at 100 pixels in depth
+}
+~~~~
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawTriangle(x1, y1, x2, y2, x3, y3)
+
+<!--
+_syntax: ofDrawTriangle(x1, y1, x2, y2, x3, y3)_
+_name: ofDrawTriangle_
+_returns: void_
+_returns_description: _
+_parameters: float x1, float y1, float x2, float y2, float x3, float y3_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draws a triangle, with the three points: (x1,y1),(x2, y2),(x3, y3).
+~~~~{.cpp}
+void ofApp::draw(){
+    ofDrawTriangle(50,10,10,40,90,40);
+}
+~~~~
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawTriangle(x1, y1, z1, x2, y2, z2, x3, y3, z3)
+
+<!--
+_syntax: ofDrawTriangle(x1, y1, z1, x2, y2, z2, x3, y3, z3)_
+_name: ofDrawTriangle_
+_returns: void_
+_returns_description: _
+_parameters: float x1, float y1, float z1, float x2, float y2, float z2, float x3, float y3, float z3_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawTriangle(&p1, &p2, &p3)
+
+<!--
+_syntax: ofDrawTriangle(&p1, &p2, &p3)_
+_name: ofDrawTriangle_
+_returns: void_
+_returns_description: _
+_parameters: const ofPoint &p1, const ofPoint &p2, const ofPoint &p3_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1489,6 +2837,42 @@ void ofApp::setup(){
 
 <!----------------------------------------------------------------------------->
 
+###void ofEndSaveScreenAsSVG()
+
+<!--
+_syntax: ofEndSaveScreenAsSVG()_
+_name: ofEndSaveScreenAsSVG_
+_returns: void_
+_returns_description: _
+_parameters: _
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Terminates draw to SVG and outputs the file.
+\sa ofBeginSaveScreenAsSVG()
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void ofEndShape(bClose)
 
 <!--
@@ -1581,6 +2965,76 @@ void ofApp::draw(){
 
 <!----------------------------------------------------------------------------->
 
+###bool ofGetBackgroundAuto()
+
+<!--
+_syntax: ofGetBackgroundAuto()_
+_name: ofGetBackgroundAuto_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofColor ofGetBackgroundColor()
+
+<!--
+_syntax: ofGetBackgroundColor()_
+_name: ofGetBackgroundColor_
+_returns: ofColor_
+_returns_description: _
+_parameters: _
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Returns the current background color as an ofColor.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofHandednessType ofGetCoordHandedness()
 
 <!--
@@ -1636,6 +3090,122 @@ _advanced: False_
 _inlined_description: _
 
 Query the current (oF internal) Transformation Matrix state.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofMatrix4x4 ofGetCurrentNormalMatrix()
+
+<!--
+_syntax: ofGetCurrentNormalMatrix()_
+_name: ofGetCurrentNormalMatrix_
+_returns: ofMatrix4x4_
+_returns_description: _
+_parameters: _
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Query the current (oF internal) Normal Matrix state.
+\note  The matrix returned is the transposed of the inverse of the
+       view matrix
+
+       Currently, only GL Programmable Renderer and GL Renderer
+       implement ofGetCurrentNormalMatrix.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofMatrix4x4 ofGetCurrentOrientationMatrix()
+
+<!--
+_syntax: ofGetCurrentOrientationMatrix()_
+_name: ofGetCurrentOrientationMatrix_
+_returns: ofMatrix4x4_
+_returns_description: _
+_parameters: _
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Query the current (oF internal) Orientation Matrix state.
+\note  The matrix returned is the matrix openFrameworks uses internally
+       to calculate the (final, oriented) projection matrix as it is
+       passed on to the GPU.
+
+       Currently, only GL Programmable Renderer and GL Renderer
+       implement ofGetCurrentOrientationMatrix.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofMatrix4x4 ofGetCurrentViewMatrix()
+
+<!--
+_syntax: ofGetCurrentViewMatrix()_
+_name: ofGetCurrentViewMatrix_
+_returns: ofMatrix4x4_
+_returns_description: _
+_parameters: _
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
 
 
 
@@ -1964,6 +3534,43 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void ofLoadIdentityMatrix()
+
+<!--
+_syntax: ofLoadIdentityMatrix()_
+_name: ofLoadIdentityMatrix_
+_returns: void_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+\}
+\name Matrix Transformation
+\{
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void ofLoadMatrix(&m)
 
 <!--
@@ -2034,6 +3641,41 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void ofLoadViewMatrix(&m)
+
+<!--
+_syntax: ofLoadViewMatrix(&m)_
+_name: ofLoadViewMatrix_
+_returns: void_
+_returns_description: _
+_parameters: const ofMatrix4x4 &m_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void ofMultMatrix(&m)
 
 <!--
@@ -2078,6 +3720,41 @@ _returns: void_
 _returns_description: _
 _parameters: const float *m_
 _version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofMultViewMatrix(&m)
+
+<!--
+_syntax: ofMultViewMatrix(&m)_
+_name: ofMultViewMatrix_
+_returns: void_
+_returns_description: _
+_parameters: const ofMatrix4x4 &m_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -4169,1616 +5846,6 @@ x The x position of the viewport
 y The y position of the viewport
 width The width of the viewport, defaults to ofGetWidth()
 height The height of the viewport, defaults to ofGetHeight()
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofbClearBg()
-
-<!--
-_syntax: ofbClearBg()_
-_name: ofbClearBg_
-_returns: void_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofbClearBg()
-
-<!--
-_syntax: ofbClearBg()_
-_name: ofbClearBg_
-_returns: void_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofbClearBg()
-
-<!--
-_syntax: ofbClearBg()_
-_name: ofbClearBg_
-_returns: void_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofbClearBg()
-
-<!--
-_syntax: ofbClearBg()_
-_name: ofbClearBg_
-_returns: void_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofbClearBg()
-
-<!--
-_syntax: ofbClearBg()_
-_name: ofbClearBg_
-_returns: void_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofbClearBg()
-
-<!--
-_syntax: ofbClearBg()_
-_name: ofbClearBg_
-_returns: void_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofbClearBg()
-
-<!--
-_syntax: ofbClearBg()_
-_name: ofbClearBg_
-_returns: void_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofbClearBg()
-
-<!--
-_syntax: ofbClearBg()_
-_name: ofbClearBg_
-_returns: void_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofbClearBg()
-
-<!--
-_syntax: ofbClearBg()_
-_name: ofbClearBg_
-_returns: void_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofbClearBg()
-
-<!--
-_syntax: ofbClearBg()_
-_name: ofbClearBg_
-_returns: void_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofbClearBg()
-
-<!--
-_syntax: ofbClearBg()_
-_name: ofbClearBg_
-_returns: void_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofbClearBg()
-
-<!--
-_syntax: ofbClearBg()_
-_name: ofbClearBg_
-_returns: void_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofbClearBg()
-
-<!--
-_syntax: ofbClearBg()_
-_name: ofbClearBg_
-_returns: void_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofbClearBg()
-
-<!--
-_syntax: ofbClearBg()_
-_name: ofbClearBg_
-_returns: void_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofbClearBg()
-
-<!--
-_syntax: ofbClearBg()_
-_name: ofbClearBg_
-_returns: void_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofbClearBg()
-
-<!--
-_syntax: ofbClearBg()_
-_name: ofbClearBg_
-_returns: void_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofbClearBg()
-
-<!--
-_syntax: ofbClearBg()_
-_name: ofbClearBg_
-_returns: void_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofbClearBg()
-
-<!--
-_syntax: ofbClearBg()_
-_name: ofbClearBg_
-_returns: void_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofbClearBg()
-
-<!--
-_syntax: ofbClearBg()_
-_name: ofbClearBg_
-_returns: void_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofbClearBg()
-
-<!--
-_syntax: ofbClearBg()_
-_name: ofbClearBg_
-_returns: void_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofbClearBg()
-
-<!--
-_syntax: ofbClearBg()_
-_name: ofbClearBg_
-_returns: void_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofbClearBg()
-
-<!--
-_syntax: ofbClearBg()_
-_name: ofbClearBg_
-_returns: void_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofbClearBg()
-
-<!--
-_syntax: ofbClearBg()_
-_name: ofbClearBg_
-_returns: void_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofbClearBg()
-
-<!--
-_syntax: ofbClearBg()_
-_name: ofbClearBg_
-_returns: void_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofbClearBg()
-
-<!--
-_syntax: ofbClearBg()_
-_name: ofbClearBg_
-_returns: void_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofbClearBg()
-
-<!--
-_syntax: ofbClearBg()_
-_name: ofbClearBg_
-_returns: void_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofbClearBg()
-
-<!--
-_syntax: ofbClearBg()_
-_name: ofbClearBg_
-_returns: void_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofbClearBg()
-
-<!--
-_syntax: ofbClearBg()_
-_name: ofbClearBg_
-_returns: void_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofbClearBg()
-
-<!--
-_syntax: ofbClearBg()_
-_name: ofbClearBg_
-_returns: void_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofbClearBg()
-
-<!--
-_syntax: ofbClearBg()_
-_name: ofbClearBg_
-_returns: void_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofbClearBg()
-
-<!--
-_syntax: ofbClearBg()_
-_name: ofbClearBg_
-_returns: void_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofbClearBg()
-
-<!--
-_syntax: ofbClearBg()_
-_name: ofbClearBg_
-_returns: void_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofbClearBg()
-
-<!--
-_syntax: ofbClearBg()_
-_name: ofbClearBg_
-_returns: void_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofbClearBg()
-
-<!--
-_syntax: ofbClearBg()_
-_name: ofbClearBg_
-_returns: void_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofbClearBg()
-
-<!--
-_syntax: ofbClearBg()_
-_name: ofbClearBg_
-_returns: void_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofbClearBg()
-
-<!--
-_syntax: ofbClearBg()_
-_name: ofbClearBg_
-_returns: void_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofbClearBg()
-
-<!--
-_syntax: ofbClearBg()_
-_name: ofbClearBg_
-_returns: void_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofbClearBg()
-
-<!--
-_syntax: ofbClearBg()_
-_name: ofbClearBg_
-_returns: void_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofbClearBg()
-
-<!--
-_syntax: ofbClearBg()_
-_name: ofbClearBg_
-_returns: void_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofbClearBg()
-
-<!--
-_syntax: ofbClearBg()_
-_name: ofbClearBg_
-_returns: void_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofbClearBg()
-
-<!--
-_syntax: ofbClearBg()_
-_name: ofbClearBg_
-_returns: void_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofbClearBg()
-
-<!--
-_syntax: ofbClearBg()_
-_name: ofbClearBg_
-_returns: void_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofbClearBg()
-
-<!--
-_syntax: ofbClearBg()_
-_name: ofbClearBg_
-_returns: void_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofbClearBg()
-
-<!--
-_syntax: ofbClearBg()_
-_name: ofbClearBg_
-_returns: void_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofbClearBg()
-
-<!--
-_syntax: ofbClearBg()_
-_name: ofbClearBg_
-_returns: void_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofbClearBg()
-
-<!--
-_syntax: ofbClearBg()_
-_name: ofbClearBg_
-_returns: void_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
 
 
 

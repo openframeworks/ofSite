@@ -505,6 +505,42 @@ Constructor.
 
 <!----------------------------------------------------------------------------->
 
+### ofBuffer(&text)
+
+<!--
+_syntax: ofBuffer(&text)_
+_name: ofBuffer_
+_returns: _
+_returns_description: _
+_parameters: const string &text_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ### ofBuffer(*buffer, size)
 
 <!--
@@ -546,42 +582,6 @@ ofBuffer buff(giantDataString.c_str(), giantDataString.size());
 
 <!----------------------------------------------------------------------------->
 
-### ofBuffer(&text)
-
-<!--
-_syntax: ofBuffer(&text)_
-_name: ofBuffer_
-_returns: _
-_returns_description: _
-_parameters: const string &text_
-_access: public_
-_version_started: 0072_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ### ofBuffer(&stream, ioBlockSize)
 
 <!--
@@ -591,7 +591,7 @@ _returns: _
 _returns_description: _
 _parameters: istream &stream, size_t ioBlockSize_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -610,7 +610,13 @@ _inlined_description: _
 
 _description: _
 
+Copy constructor, allows you to do:
 
+~~~~{.cpp}
+ofBuffer aBuff;
+// put some stuff in aBuff
+ofBuffer bBuff(aBuff); // now it's in bBuff as well
+~~~~
 
 
 
@@ -798,6 +804,42 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void set(&text)
+
+<!--
+_syntax: set(&text)_
+_name: set_
+_returns: void_
+_returns_description: _
+_parameters: const string &text_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void set(*_buffer, _size)
 
 <!--
@@ -840,42 +882,6 @@ buff.set(giantDataString.c_str(), giantDataString.size());
 
 <!----------------------------------------------------------------------------->
 
-###void set(&text)
-
-<!--
-_syntax: set(&text)_
-_name: set_
-_returns: void_
-_returns_description: _
-_parameters: const string &text_
-_access: public_
-_version_started: 0072_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###bool set(&stream, ioBlockSize)
 
 <!--
@@ -885,7 +891,7 @@ _returns: bool_
 _returns_description: _
 _parameters: istream &stream, size_t ioBlockSize_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -904,7 +910,7 @@ _inlined_description: _
 
 _description: _
 
-
+Set the buffer from an istream.
 
 
 

@@ -638,13 +638,13 @@ _returns: void_
 _returns_description: _
 _parameters: int textureLocation=0_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 006_
 _version_deprecated: _
 _summary: _
 _constant: False_
 _static: False_
 _visible: True_
-_advanced: False_
+_advanced: True_
 -->
 
 _inlined_description: _
@@ -662,7 +662,7 @@ calling ofTexture::draw.
 
 _description: _
 
-
+This is for the advanced user who wants to draw textures in their own way. Each set of vertices that you draw after calling bind() will be textured using this texture.
 
 
 
@@ -921,7 +921,7 @@ _returns: void_
 _returns_description: _
 _parameters: int textureLocation_
 _access: protected_
-_version_started: 0.9.0_
+_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1399,7 +1399,7 @@ _returns: void_
 _returns_description: _
 _parameters: int textureLocation_
 _access: protected_
-_version_started: 0.9.0_
+_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2354,6 +2354,54 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void loadData(*data, w, h, glFormat, glType)
+
+<!--
+_syntax: loadData(*data, w, h, glFormat, glType)_
+_name: loadData_
+_returns: void_
+_returns_description: _
+_parameters: const void *data, int w, int h, int glFormat, int glType_
+_access: protected_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Load byte pixel data.
+
+glFormat can be different to the internal format of the texture on each
+load, i.e. we can upload GL_BGRA pixels into a GL_RGBA texture but the
+number of channels need to match according to the OpenGL standard.
+
+
+Parameters:
+data Pointer to byte pixel data. Must not be nullptr.
+w Pixel data width.
+h Pixel data height.
+glFormat GL pixel type: GL_RGBA, GL_LUMINANCE, etc.
+glType the OpenGL type of the data.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void loadData(&buffer, glFormat, glType)
 
 <!--
@@ -2388,54 +2436,6 @@ Parameters:
 buffer The buffer to load.
 glFormat GL pixel type: GL_RGBA, GL_LUMINANCE, etc.
 glType the GL type to load.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void loadData(*data, w, h, glFormat, glType)
-
-<!--
-_syntax: loadData(*data, w, h, glFormat, glType)_
-_name: loadData_
-_returns: void_
-_returns_description: _
-_parameters: const void *data, int w, int h, int glFormat, int glType_
-_access: protected_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Load byte pixel data.
-
-glFormat can be different to the internal format of the texture on each
-load, i.e. we can upload GL_BGRA pixels into a GL_RGBA texture but the
-number of channels need to match according to the OpenGL standard.
-
-
-Parameters:
-data Pointer to byte pixel data. Must not be nullptr.
-w Pixel data width.
-h Pixel data height.
-glFormat GL pixel type: GL_RGBA, GL_LUMINANCE, etc.
-glType the OpenGL type of the data.
 
 
 
@@ -3235,13 +3235,13 @@ _returns: void_
 _returns_description: _
 _parameters: int textureLocation=0_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 006_
 _version_deprecated: _
 _summary: _
 _constant: False_
 _static: False_
 _visible: True_
-_advanced: False_
+_advanced: True_
 -->
 
 _inlined_description: _
@@ -3259,7 +3259,7 @@ calling ofTexture::draw.
 
 _description: _
 
-
+This for the advanced user who wants to draw textures in their own way. This stops vertices from being textured using this texture.
 
 
 

@@ -2348,7 +2348,7 @@ _returns: PixelType &_
 _returns_description: _
 _parameters: size_t n_
 _access: public_
-_version_started: 0.8.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2381,7 +2381,12 @@ Returns: The value of the requested component.
 
 _description: _
 
+Array subscript operator. If n is 0 returns .r, if 1 returns .g, if 2 returns .b, if 3 returns alpha.
 
+~~~~{.cpp}
+ofColor c(128, 64, 255);
+float red = c[0]; // red is 128
+~~~~
 
 
 

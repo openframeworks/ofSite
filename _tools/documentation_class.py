@@ -63,8 +63,12 @@ class DocsClass:
             print "alternatives[ty].count(other_ty) " + str(alternatives[ty].count(other_ty))"""
         return ty in alternatives and alternatives[ty].count(other_ty)>0
     
-    def fuzzy_function_search(self, name, returns, parameters, alternatives):
+    def fuzzy_function_search(self, name, returns, parameters, alternatives, already_found):
+        most_similar_function = None
+        max_similarity = 0
         for function in self.function_list:
+            if function in already_found:
+                continue
             if function.name == name:
                 dst_parameters_types = self.get_parameter_types(function.parameters)
                 src_parameters_types = self.get_parameter_types(parameters)
@@ -110,9 +114,11 @@ class DocsClass:
                        self.test_alternative_types(non_const_return, other_fuzzy_return, alternatives)):                        
                         function.new = False
                         return function
-        return None
+                if most_similar_function == None or Levenshtein.ratio(parameters,str(function.parameters))>max_similarity:
+                    most_similar_function = function
+        return most_similar_function
     
-    def function_by_signature(self, name, returns, parameters, alternatives):
+    def function_by_signature(self, name, returns, parameters, alternatives, already_found, fuzzy):
         method = DocsMethod(0)
         method.name = name
         method.parameters = parameters
@@ -138,8 +144,8 @@ class DocsClass:
                         function.new = False
                         function.parameters = parameters
                         return function
-        if len(alternatives)>0:
-            alternative_func = self.fuzzy_function_search(name, returns, parameters, alternatives)
+        if fuzzy and len(alternatives)>0:
+            alternative_func = self.fuzzy_function_search(name, returns, parameters, alternatives, already_found)
             if alternative_func != None:        
                 alternative_func.parameters = method.parameters
                 alternative_func.syntax = method.syntax
@@ -149,8 +155,7 @@ class DocsClass:
                 self.function_list.append(method)
                 return method
         else:
-            self.function_list.append(method)
-            return method
+            return None
 
     def var_by_name(self, name):
         for var in self.var_list:

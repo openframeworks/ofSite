@@ -789,7 +789,7 @@ _returns: bool_
 _returns_description: _
 _parameters: string fileName, vector< short > &buffer_
 _access: private_
-_version_started: 0.9.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1257,7 +1257,7 @@ _returns: bool_
 _returns_description: _
 _parameters: string fileName, vector< short > &buffer_
 _access: private_
-_version_started: 0.9.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_

@@ -597,7 +597,7 @@ _returns: vector< ofPoint >::iterator_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1100,7 +1100,7 @@ _returns: vector< ofPoint >::iterator_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -3205,7 +3205,7 @@ _returns: void_
 _returns_description: _
 _parameters: ofVec3f v_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_

@@ -71,8 +71,12 @@ class DocsFunctionsFile:
             print "alternatives[ty].count(other_ty) " + str(alternatives[ty].count(other_ty))"""
         return ty in alternatives and alternatives[ty].count(other_ty)>0
         
-    def fuzzy_function_search(self, name, returns, parameters, alternatives):
+    def fuzzy_function_search(self, name, returns, parameters, alternatives, already_found):
+        most_similar_function = None
+        max_similarity = 0
         for function in self.function_list:
+            if function in already_found:
+                continue
             if function.name == name:
                 dst_parameters_types = self.get_parameter_types(function.parameters)
                 src_parameters_types = self.get_parameter_types(parameters)
@@ -118,19 +122,21 @@ class DocsFunctionsFile:
                        self.test_alternative_types(non_const_return, other_fuzzy_return, alternatives)):                        
                         function.new = False
                         return function
-        return None
+                if most_similar_function == None or Levenshtein.ratio(parameters,str(function.parameters))>max_similarity:
+                    most_similar_function = function
+        return most_similar_function
     
-    def function_by_signature(self, name, returns, parameters, alternatives):
-        function = DocsFunction(0)
-        function.name = name
-        function.parameters = parameters
-        function.syntax = name + "("
+    def function_by_signature(self, name, returns, parameters, alternatives, already_found, fuzzy):
+        passed_function = DocsFunction(0)
+        passed_function.name = name
+        passed_function.parameters = parameters
+        passed_function.syntax = name + "("
         for p in self.get_parameter_names(parameters):
-            function.syntax = function.syntax + p + ", "
-        function.syntax = function.syntax.rstrip(', ')
-        function.syntax = function.syntax + ")"
-        function.returns = returns
-        function.new = True
+            passed_function.syntax = passed_function.syntax + p + ", "
+        passed_function.syntax = passed_function.syntax.rstrip(', ')
+        passed_function.syntax = passed_function.syntax + ")"
+        passed_function.returns = returns
+        passed_function.new = True
         for function in self.function_list:
             if function.name == name:
                 dst_parameters_types = self.get_parameter_types(function.parameters)
@@ -146,19 +152,18 @@ class DocsFunctionsFile:
                         function.new = False
                         function.parameters = parameters
                         return function
-        if len(alternatives)>0:
-            alternative_func = self.fuzzy_function_search(name, returns, parameters, alternatives)
+        if fuzzy and len(alternatives)>0:
+            alternative_func = self.fuzzy_function_search(name, returns, parameters, alternatives, already_found)
             if alternative_func != None:        
-                alternative_func.parameters = function.parameters
-                alternative_func.syntax = function.syntax
-                alternative_func.returns = function.returns
+                alternative_func.parameters = passed_function.parameters
+                alternative_func.syntax = passed_function.syntax
+                alternative_func.returns = passed_function.returns
                 return alternative_func
             else:
-                self.function_list.append(function)
-                return function
+                self.function_list.append(passed_function)
+                return passed_function
         else:
-            self.function_list.append(function)
-            return function
+            return None
 
     def is_class(self):
         return False

@@ -33,7 +33,7 @@ _returns: int64_t_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -141,7 +141,7 @@ _returns: _
 _returns_description: _
 _parameters: int64_t _value_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -177,7 +177,7 @@ _returns: void_
 _returns_description: _
 _parameters: int64_t _value_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_

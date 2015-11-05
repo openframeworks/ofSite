@@ -285,7 +285,7 @@ _returns: ofxVecSlider_< VecType > *_
 _returns_description: _
 _parameters: ofParameter< VecType > value, float width, float height_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -321,7 +321,7 @@ _returns: ofxVecSlider_< VecType > *_
 _returns_description: _
 _parameters: const string &controlName, const VecType &value, const VecType &min, const VecType &max, float width, float height_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_

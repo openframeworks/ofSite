@@ -503,7 +503,7 @@ _returns: ofWindowMode_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 0.9.0_
+_version_started: 006_
 _version_deprecated: _
 _summary: _
 _constant: False_

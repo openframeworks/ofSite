@@ -115,6 +115,95 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###ofPoint ofBezierPoint(&a, &b, &c, &d, t)
+
+<!--
+_syntax: ofBezierPoint(&a, &b, &c, &d, t)_
+_name: ofBezierPoint_
+_returns: ofPoint_
+_returns_description: _
+_parameters: const ofPoint &a, const ofPoint &b, const ofPoint &c, const ofPoint &d, float t_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Given the four points that determine a bezier curve, return an interpolated point on the curve.
+
+Parameters:
+a The beginning point of the curve.
+b The first control point.
+c The second control point.
+d The end point of the curve.
+t an offset along the curve, normalized between 0 and 1.
+
+Returns: A ofPoint on the curve.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofPoint ofBezierTangent(&a, &b, &c, &d, t)
+
+<!--
+_syntax: ofBezierTangent(&a, &b, &c, &d, t)_
+_name: ofBezierTangent_
+_returns: ofPoint_
+_returns_description: _
+_parameters: const ofPoint &a, const ofPoint &b, const ofPoint &c, const ofPoint &d, float t_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Given the four points that determine a bezier curve and an offset along the curve, return an tangent vector to a point on the curve.
+Currently this is not a normalized point, and will need to be normalized.
+
+Parameters:
+a The beginning point of the curve.
+b The first control point.
+c The second control point.
+d The end point of the curve.
+t an offset along the curve, normalized between 0 and 1.
+
+Returns: A ofPoint on the curve.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###float ofClamp(value,min,max) 
 
 <!--
@@ -156,6 +245,94 @@ min The lower bound of the range.
 max The upper bound of the range.
 
 Returns: a floating point number in the range [min, max].
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofPoint ofCurvePoint(&a, &b, &c, &d, t)
+
+<!--
+_syntax: ofCurvePoint(&a, &b, &c, &d, t)_
+_name: ofCurvePoint_
+_returns: ofPoint_
+_returns_description: _
+_parameters: const ofPoint &a, const ofPoint &b, const ofPoint &c, const ofPoint &d, float t_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Given the four points that determine a Catmull Rom curve, return an interpolated point on the curve.
+
+Parameters:
+a The first control point.
+b The beginning point of the curve.
+c The end point of the curve.
+d The second control point.
+t an offset along the curve, normalized between 0 and 1.
+
+Returns: A ofPoint on the curve.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofPoint ofCurveTangent(&a, &b, &c, &d, t)
+
+<!--
+_syntax: ofCurveTangent(&a, &b, &c, &d, t)_
+_name: ofCurveTangent_
+_returns: ofPoint_
+_returns_description: _
+_parameters: const ofPoint &a, const ofPoint &b, const ofPoint &c, const ofPoint &d, float t_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Return a tangent point for an offset along a Catmull Rom curve.
+
+Parameters:
+a The first control point.
+b The beginning point of the curve.
+c The end point of the curve.
+d The second control point.
+t an offset along the curve, normalized between 0 and 1.
+
+Returns: A ofPoint on the curve.
 
 
 
@@ -217,6 +394,54 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###float ofDist(x1, y1, z1, x2, y2, z2)
+
+<!--
+_syntax: ofDist(x1, y1, z1, x2, y2, z2)_
+_name: ofDist_
+_returns: float_
+_returns_description: _
+_parameters: float x1, float y1, float z1, float x2, float y2, float z2_
+_version_started: 006_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Calculates the 3D distance between two points.
+
+Uses the [Pythagorean theorem](http://en.wikipedia.org/wiki/Pythagorean_theorem).
+
+
+Parameters:
+x1 X position of first point.
+y1 Y position of first point.
+z1 Z position of first point.
+x2 X position of second point.
+y2 Y position of second point.
+z2 Z position of second point.
+
+Returns: float Distance between points.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###float ofDist(x1, y1, x2, y2)
 
 <!--
@@ -248,6 +473,56 @@ x2 X position of second point.
 y2 Y position of second point.
 
 Returns: float Distance between points.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float ofDistSquared(x1, y1, z1, x2, y2, z2)
+
+<!--
+_syntax: ofDistSquared(x1, y1, z1, x2, y2, z2)_
+_name: ofDistSquared_
+_returns: float_
+_returns_description: _
+_parameters: float x1, float y1, float z1, float x2, float y2, float z2_
+_version_started: 006_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Calculates the squared 3D distance between two points.
+
+Same as ofDist() but doesn't take the square root sqrt() of the result,
+which is a faster operation if you need to calculate and compare multiple
+distances.
+
+
+Parameters:
+x1 X position of first point.
+y1 Y position of first point.
+z1 Z position of first point.
+x2 X position of second point.
+y2 Y position of second point.
+z2 Z position of second point.
+
+Returns: distance-squared between two points.
 
 
 
@@ -436,6 +711,181 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###Type ofInterpolateCatmullRom(&y0, &y1, &y2, &y3, pct)
+
+<!--
+_syntax: ofInterpolateCatmullRom(&y0, &y1, &y2, &y3, pct)_
+_name: ofInterpolateCatmullRom_
+_returns: Type_
+_returns_description: _
+_parameters: const Type &y0, const Type &y1, const Type &y2, const Type &y3, float pct_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###Type ofInterpolateCosine(&y1, &y2, pct)
+
+<!--
+_syntax: ofInterpolateCosine(&y1, &y2, pct)_
+_name: ofInterpolateCosine_
+_returns: Type_
+_returns_description: _
+_parameters: const Type &y1, const Type &y2, float pct_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+\}
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###Type ofInterpolateCubic(&y0, &y1, &y2, &y3, pct)
+
+<!--
+_syntax: ofInterpolateCubic(&y0, &y1, &y2, &y3, pct)_
+_name: ofInterpolateCubic_
+_returns: Type_
+_returns_description: _
+_parameters: const Type &y0, const Type &y1, const Type &y2, const Type &y3, float pct_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###Type ofInterpolateHermite(&y0, &y1, &y2, &y3, pct)
+
+<!--
+_syntax: ofInterpolateHermite(&y0, &y1, &y2, &y3, pct)_
+_name: ofInterpolateHermite_
+_returns: Type_
+_returns_description: _
+_parameters: const Type &y0, const Type &y1, const Type &y2, const Type &y3, float pct_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###Type ofInterpolateHermite(&y0, &y1, &y2, &y3, pct, tension, bias)
+
+<!--
+_syntax: ofInterpolateHermite(&y0, &y1, &y2, &y3, pct, tension, bias)_
+_name: ofInterpolateHermite_
+_returns: Type_
+_returns_description: _
+_parameters: const Type &y0, const Type &y1, const Type &y2, const Type &y3, float pct, float tension, float bias_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###float ofLerp(start,stop,amt)
 
 <!--
@@ -574,6 +1024,50 @@ targetAngle The upper bound of the range in radians.
 pct An amount between [0.0, 1.0] within the range to return.
 
 Returns: An angle in radians between currentAngle and targetAngle.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool ofLineSegmentIntersection(&line1Start, &line1End, &line2Start, &line2End, &intersection)
+
+<!--
+_syntax: ofLineSegmentIntersection(&line1Start, &line1End, &line2Start, &line2End, &intersection)_
+_name: ofLineSegmentIntersection_
+_returns: bool_
+_returns_description: _
+_parameters: const ofPoint &line1Start, const ofPoint &line1End, const ofPoint &line2Start, const ofPoint &line2End, ofPoint &intersection_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Determine the intersection between two lines.
+
+Parameters:
+line1Start Starting point for first line.
+line1End End point for first line.
+line2Start Starting point for second line.
+line2End End point for second line.
+intersection ofPoint reference in which to store the computed intersection point.
+
+Returns: True if the lines intersect.
 
 
 
@@ -821,6 +1315,111 @@ _returns: float_
 _returns_description: _
 _parameters: float x, float y, float z, float w_
 _version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Calculates a four dimensional Perlin noise value between 0.0...1.0.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float ofNoise(&p)
+
+<!--
+_syntax: ofNoise(&p)_
+_name: ofNoise_
+_returns: float_
+_returns_description: _
+_parameters: const ofVec2f &p_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Calculates a two dimensional Perlin noise value between 0.0...1.0.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float ofNoise(&p)
+
+<!--
+_syntax: ofNoise(&p)_
+_name: ofNoise_
+_returns: float_
+_returns_description: _
+_parameters: const ofVec3f &p_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Calculates a three dimensional Perlin noise value between 0.0...1.0.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float ofNoise(&p)
+
+<!--
+_syntax: ofNoise(&p)_
+_name: ofNoise_
+_returns: float_
+_returns_description: _
+_parameters: const ofVec4f &p_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1470,6 +2069,111 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###float ofSignedNoise(&p)
+
+<!--
+_syntax: ofSignedNoise(&p)_
+_name: ofSignedNoise_
+_returns: float_
+_returns_description: _
+_parameters: const ofVec2f &p_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Calculates a two dimensional Perlin noise value between -1.0...1.0.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float ofSignedNoise(&p)
+
+<!--
+_syntax: ofSignedNoise(&p)_
+_name: ofSignedNoise_
+_returns: float_
+_returns_description: _
+_parameters: const ofVec3f &p_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Calculates a three dimensional Perlin noise value between -1.0...1.0.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float ofSignedNoise(&p)
+
+<!--
+_syntax: ofSignedNoise(&p)_
+_name: ofSignedNoise_
+_returns: float_
+_returns_description: _
+_parameters: const ofVec4f &p_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Calculates a four dimensional Perlin noise value between -1.0...1.0.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###float ofWrap(value, from, to)
 
 <!--
@@ -1557,817 +2261,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###Type ofWrapRadians(angle, from = -PI, to = +PI)
+###float ofWrapRadians(angle, from = -PI, to = +PI)
 
 <!--
 _syntax: ofWrapRadians(angle, from = -PI, to = +PI)_
 _name: ofWrapRadians_
-_returns: Type_
-_returns_description: _
-_parameters: float angle, float from, float to_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###Type ofWrapRadians(angle, from = -PI, to = +PI)
-
-<!--
-_syntax: ofWrapRadians(angle, from = -PI, to = +PI)_
-_name: ofWrapRadians_
-_returns: Type_
-_returns_description: _
-_parameters: float angle, float from, float to_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###Type ofWrapRadians(angle, from = -PI, to = +PI)
-
-<!--
-_syntax: ofWrapRadians(angle, from = -PI, to = +PI)_
-_name: ofWrapRadians_
-_returns: Type_
-_returns_description: _
-_parameters: float angle, float from, float to_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###Type ofWrapRadians(angle, from = -PI, to = +PI)
-
-<!--
-_syntax: ofWrapRadians(angle, from = -PI, to = +PI)_
-_name: ofWrapRadians_
-_returns: Type_
-_returns_description: _
-_parameters: float angle, float from, float to_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###Type ofWrapRadians(angle, from = -PI, to = +PI)
-
-<!--
-_syntax: ofWrapRadians(angle, from = -PI, to = +PI)_
-_name: ofWrapRadians_
-_returns: Type_
-_returns_description: _
-_parameters: float angle, float from, float to_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###Type ofWrapRadians(angle, from = -PI, to = +PI)
-
-<!--
-_syntax: ofWrapRadians(angle, from = -PI, to = +PI)_
-_name: ofWrapRadians_
-_returns: Type_
-_returns_description: _
-_parameters: float angle, float from, float to_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###Type ofWrapRadians(angle, from = -PI, to = +PI)
-
-<!--
-_syntax: ofWrapRadians(angle, from = -PI, to = +PI)_
-_name: ofWrapRadians_
-_returns: Type_
-_returns_description: _
-_parameters: float angle, float from, float to_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###Type ofWrapRadians(angle, from = -PI, to = +PI)
-
-<!--
-_syntax: ofWrapRadians(angle, from = -PI, to = +PI)_
-_name: ofWrapRadians_
-_returns: Type_
-_returns_description: _
-_parameters: float angle, float from, float to_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###Type ofWrapRadians(angle, from = -PI, to = +PI)
-
-<!--
-_syntax: ofWrapRadians(angle, from = -PI, to = +PI)_
-_name: ofWrapRadians_
-_returns: Type_
-_returns_description: _
-_parameters: float angle, float from, float to_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###Type ofWrapRadians(angle, from = -PI, to = +PI)
-
-<!--
-_syntax: ofWrapRadians(angle, from = -PI, to = +PI)_
-_name: ofWrapRadians_
-_returns: Type_
-_returns_description: _
-_parameters: float angle, float from, float to_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###Type ofWrapRadians(angle, from = -PI, to = +PI)
-
-<!--
-_syntax: ofWrapRadians(angle, from = -PI, to = +PI)_
-_name: ofWrapRadians_
-_returns: Type_
-_returns_description: _
-_parameters: float angle, float from, float to_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###Type ofWrapRadians(angle, from = -PI, to = +PI)
-
-<!--
-_syntax: ofWrapRadians(angle, from = -PI, to = +PI)_
-_name: ofWrapRadians_
-_returns: Type_
-_returns_description: _
-_parameters: float angle, float from, float to_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###Type ofWrapRadians(angle, from = -PI, to = +PI)
-
-<!--
-_syntax: ofWrapRadians(angle, from = -PI, to = +PI)_
-_name: ofWrapRadians_
-_returns: Type_
-_returns_description: _
-_parameters: float angle, float from, float to_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###Type ofWrapRadians(angle, from = -PI, to = +PI)
-
-<!--
-_syntax: ofWrapRadians(angle, from = -PI, to = +PI)_
-_name: ofWrapRadians_
-_returns: Type_
-_returns_description: _
-_parameters: float angle, float from, float to_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###Type ofWrapRadians(angle, from = -PI, to = +PI)
-
-<!--
-_syntax: ofWrapRadians(angle, from = -PI, to = +PI)_
-_name: ofWrapRadians_
-_returns: Type_
-_returns_description: _
-_parameters: float angle, float from, float to_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###Type ofWrapRadians(angle, from = -PI, to = +PI)
-
-<!--
-_syntax: ofWrapRadians(angle, from = -PI, to = +PI)_
-_name: ofWrapRadians_
-_returns: Type_
-_returns_description: _
-_parameters: float angle, float from, float to_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###Type ofWrapRadians(angle, from = -PI, to = +PI)
-
-<!--
-_syntax: ofWrapRadians(angle, from = -PI, to = +PI)_
-_name: ofWrapRadians_
-_returns: Type_
-_returns_description: _
-_parameters: float angle, float from, float to_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###Type ofWrapRadians(angle, from = -PI, to = +PI)
-
-<!--
-_syntax: ofWrapRadians(angle, from = -PI, to = +PI)_
-_name: ofWrapRadians_
-_returns: Type_
-_returns_description: _
-_parameters: float angle, float from, float to_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###Type ofWrapRadians(angle, from = -PI, to = +PI)
-
-<!--
-_syntax: ofWrapRadians(angle, from = -PI, to = +PI)_
-_name: ofWrapRadians_
-_returns: Type_
-_returns_description: _
-_parameters: float angle, float from, float to_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###Type ofWrapRadians(angle, from = -PI, to = +PI)
-
-<!--
-_syntax: ofWrapRadians(angle, from = -PI, to = +PI)_
-_name: ofWrapRadians_
-_returns: Type_
-_returns_description: _
-_parameters: float angle, float from, float to_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###Type ofWrapRadians(angle, from = -PI, to = +PI)
-
-<!--
-_syntax: ofWrapRadians(angle, from = -PI, to = +PI)_
-_name: ofWrapRadians_
-_returns: Type_
-_returns_description: _
-_parameters: float angle, float from, float to_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###Type ofWrapRadians(angle, from = -PI, to = +PI)
-
-<!--
-_syntax: ofWrapRadians(angle, from = -PI, to = +PI)_
-_name: ofWrapRadians_
-_returns: Type_
-_returns_description: _
-_parameters: float angle, float from, float to_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###Type ofWrapRadians(angle, from = -PI, to = +PI)
-
-<!--
-_syntax: ofWrapRadians(angle, from = -PI, to = +PI)_
-_name: ofWrapRadians_
-_returns: Type_
-_returns_description: _
-_parameters: float angle, float from, float to_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###Type ofWrapRadians(angle, from = -PI, to = +PI)
-
-<!--
-_syntax: ofWrapRadians(angle, from = -PI, to = +PI)_
-_name: ofWrapRadians_
-_returns: Type_
+_returns: float_
 _returns_description: _
 _parameters: float angle, float from, float to_
 _version_started: _

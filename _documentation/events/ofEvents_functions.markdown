@@ -15,6 +15,41 @@ _advanced: False_
 
 <!----------------------------------------------------------------------------->
 
+###ofCoreEvents & ofEvents()
+
+<!--
+_syntax: ofEvents()_
+_name: ofEvents_
+_returns: ofCoreEvents &_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###bool ofGetKeyPressed(key = -1)
 
 <!--
@@ -616,76 +651,6 @@ _description: _
 _syntax: ofUnregisterTouchEvents(*listener, prio = OF_EVENT_ORDER_AFTER_APP)_
 _name: ofUnregisterTouchEvents_
 _returns: void_
-_returns_description: _
-_parameters: ListenerClass *listener, int prio_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofCoreEvents & ofUnregisterTouchEvents(*listener, prio = OF_EVENT_ORDER_AFTER_APP)
-
-<!--
-_syntax: ofUnregisterTouchEvents(*listener, prio = OF_EVENT_ORDER_AFTER_APP)_
-_name: ofUnregisterTouchEvents_
-_returns: ofCoreEvents &_
-_returns_description: _
-_parameters: ListenerClass *listener, int prio_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofCoreEvents & ofUnregisterTouchEvents(*listener, prio = OF_EVENT_ORDER_AFTER_APP)
-
-<!--
-_syntax: ofUnregisterTouchEvents(*listener, prio = OF_EVENT_ORDER_AFTER_APP)_
-_name: ofUnregisterTouchEvents_
-_returns: ofCoreEvents &_
 _returns_description: _
 _parameters: ListenerClass *listener, int prio_
 _version_started: _

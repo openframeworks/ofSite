@@ -215,7 +215,7 @@ _returns: void_
 _returns_description: _
 _parameters: GLFWwindow *windowP_, int numFiles, const char **dropString_
 _access: private_
-_version_started: 0.9.0_
+_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -234,7 +234,7 @@ _inlined_description: _
 
 _description: _
 
-
+This is the drag and drop callback. This should be handled in your ofBaseApp instance.
 
 
 
@@ -791,7 +791,7 @@ _returns: ofWindowMode_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -810,7 +810,7 @@ _inlined_description: _
 
 _description: _
 
-
+Returns one of the following: OF_FULLSCREEN or OF_WINDOW.
 
 
 
@@ -1187,7 +1187,7 @@ _returns: void_
 _returns_description: _
 _parameters: GLFWwindow *windowP_, int key, int scancode, unsigned int codepoint, int action, int mods_
 _access: private_
-_version_started: 0.9.0_
+_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_

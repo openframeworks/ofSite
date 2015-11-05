@@ -132,42 +132,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofxAndroidCircBuffer(&)
-
-<!--
-_syntax: ofxAndroidCircBuffer(&)_
-_name: ofxAndroidCircBuffer_
-_returns: _
-_returns_description: _
-_parameters: const ofxAndroidCircBuffer< Content > &_
-_access: private_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ### ofxAndroidCircBuffer(_size = 0, &init_val = Content())
 
 <!--
@@ -204,6 +168,42 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+### ofxAndroidCircBuffer(&)
+
+<!--
+_syntax: ofxAndroidCircBuffer(&)_
+_name: ofxAndroidCircBuffer_
+_returns: _
+_returns_description: _
+_parameters: const ofxAndroidCircBuffer< Content > &_
+_access: private_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofxAndroidCircBuffer< Content > & operator=(&)
 
 <!--
@@ -213,7 +213,7 @@ _returns: ofxAndroidCircBuffer< Content > &_
 _returns_description: _
 _parameters: const ofxAndroidCircBuffer< Content > &_
 _access: private_
-_version_started: 0.9.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_

@@ -102,7 +102,7 @@ _returns: void_
 _returns_description: _
 _parameters: int textureLocation=0_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -122,7 +122,40 @@ it can be used for advanced drawing.
 
 _description: _
 
+This binds the ofTexture instance that the ofImage contains so that it can be used for advanced drawing
+~~~~{.cpp}
+void ofApp::setup() {
+    img.allocate(256, 256, OF_IMAGE_COLOR);
+    int i = 0;
+    while ( i < img.getPixels().size() ) {
+        img.getPixels()[i] = abs(sin( float(i) / 18.f )) * 255.f;
+        i++;
+    }
+    img.reloadTexture();
 
+    mesh.setMode(OF_PRIMITIVE_TRIANGLE_STRIP);
+
+    mesh.addVertex(ofVec2f(10, 10));
+    mesh.addVertex(ofVec2f(410, 10));
+    mesh.addVertex(ofVec2f(410, 410));
+    mesh.addVertex(ofVec2f(10, 410));
+    mesh.addVertex(ofVec2f(10, 10));
+
+    mesh.addTexCoord(ofVec2f(0, 0));
+    mesh.addTexCoord(ofVec2f(256, 0));
+    mesh.addTexCoord(ofVec2f(256, 256));
+    mesh.addTexCoord(ofVec2f(0, 256));
+    mesh.addTexCoord(ofVec2f(0, 0));
+}
+void ofApp::draw(){
+
+    ofBackground(255, 255, 255); // background white
+
+    img.bind();
+    mesh.draw();
+    img.unbind();
+}
+~~~~
 
 
 
@@ -885,7 +918,7 @@ _returns: ofPixels_< PixelType > &_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 0.9.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -917,7 +950,9 @@ Returns: A raw pointer to the pixel data.
 
 _description: _
 
+This returns a raw pointer to the pixel data.
 
+This function will give you access to a continuous block of pixels. you can grab the data and do what you like with it. If you have a grayscale image, you will have (width*height) number of pixels. Color images will have (width*height*3) number of pixels (interlaced R,G,B), and coloralpha images will have (width*height*4) number of pixels (interlaced R,G,B,A).
 
 
 
@@ -2526,7 +2561,7 @@ _returns: void_
 _returns_description: _
 _parameters: int textureLocation=0_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2547,7 +2582,7 @@ Call this after you call bind().
 
 _description: _
 
-
+This unbinds the ofTexture instance that the ofImage contains. Call this after you call bind().
 
 
 

@@ -152,7 +152,7 @@ _returns: void_
 _returns_description: _
 _parameters: ofFbo::Settings settings_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -171,7 +171,7 @@ _inlined_description: _
 
 _description: _
 
-
+You can also allocate the ofFbo using a Settings object
 
 
 
@@ -836,7 +836,7 @@ _returns: const ofTexture &_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 0071_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -855,7 +855,7 @@ _inlined_description: _
 
 _description: _
 
-This gives you the OpenGL id of the depth Texture that the fbo contains. The depthBuffer will be created by default or if you pass a Setting object with depthStencilAsTexture = true.
+
 
 
 

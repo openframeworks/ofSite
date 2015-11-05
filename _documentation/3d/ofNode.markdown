@@ -165,6 +165,42 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void customDraw()
+
+<!--
+_syntax: customDraw()_
+_name: customDraw_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+If you extend ofNode and wish to change the way it draws, extend this.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void customDraw(*renderer)
 
 <!--
@@ -196,42 +232,6 @@ renderer
 _description: _
 
 
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void customDraw()
-
-<!--
-_syntax: customDraw()_
-_name: customDraw_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-If you extend ofNode and wish to change the way it draws, extend this.
 
 
 
@@ -1121,7 +1121,7 @@ _returns: void_
 _returns_description: _
 _parameters: const ofVec3f &lookAtPosition, ofVec3f upVector_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1140,7 +1140,7 @@ Orient node to look at position (-z axis pointing to position)
 
 _description: _
 
-
+Orient node to look at node (-z axis pointing to node).
 
 
 
@@ -1157,7 +1157,7 @@ _returns: void_
 _returns_description: _
 _parameters: const ofNode &lookAtNode, const ofVec3f &upVector_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1176,7 +1176,7 @@ Orient node to look at node (-z axis pointing to node)
 
 _description: _
 
-
+Orient node to look at position (-z axis pointing to position).
 
 
 
@@ -1401,42 +1401,6 @@ Classes extending ofNode can override these methods to get notified when the sca
 
 <!----------------------------------------------------------------------------->
 
-###void orbit(longitude, latitude, radius, &centerPoint)
-
-<!--
-_syntax: orbit(longitude, latitude, radius, &centerPoint)_
-_name: orbit_
-_returns: void_
-_returns_description: _
-_parameters: float longitude, float latitude, float radius, const ofVec3f &centerPoint_
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Orbit object around target at radius
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void orbit(longitude, latitude, radius, &centerNode)
 
 <!--
@@ -1458,6 +1422,42 @@ _advanced: False_
 _inlined_description: _
 
 
+
+
+
+
+
+_description: _
+
+Orbit object around target at radius.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void orbit(longitude, latitude, radius, &centerPoint)
+
+<!--
+_syntax: orbit(longitude, latitude, radius, &centerPoint)_
+_name: orbit_
+_returns: void_
+_returns_description: _
+_parameters: float longitude, float latitude, float radius, const ofVec3f &centerPoint_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Orbit object around target at radius
 
 
 
@@ -1554,7 +1554,7 @@ _returns: void_
 _returns_description: _
 _parameters: ofBaseRenderer *renderer_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2276,7 +2276,7 @@ _returns: void_
 _returns_description: _
 _parameters: ofBaseRenderer *renderer_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2298,7 +2298,10 @@ OR A simpler way is to extend ofNode and override ofNode::customDraw();
 
 _description: _
 
-
+Set opengl's modelview matrix to this nodes transform.
+If you want to draw something at the position+orientation+scale of this node...
+...call ofNode::transform(); write your draw code, and ofNode::restoreTransform();
+OR A simpler way is to extend ofNode and override ofNode::customDraw().
 
 
 

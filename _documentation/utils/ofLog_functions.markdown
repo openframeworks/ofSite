@@ -337,50 +337,7 @@ _syntax: ofSetLoggerChannel(loggerChannel)_
 _name: ofSetLoggerChannel_
 _returns: void_
 _returns_description: _
-_parameters: ofPtr< ofBaseLoggerChannel > loggerChannel_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Set the logger to use a custom logger channel.
-
-Custom logger channels must extend ofBaseLoggerChannel. Custom log channels
-can be useful for combining logging methods, logging to a server, logging
-to email or even Twitter.
-
-
-Parameters:
-loggerChannel A shared pointer to the logger channel.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofSetLoggerChannel(loggerChannel)
-
-<!--
-_syntax: ofSetLoggerChannel(loggerChannel)_
-_name: ofSetLoggerChannel_
-_returns: void_
-_returns_description: _
-_parameters: ofPtr< ofBaseLoggerChannel > loggerChannel_
+_parameters: shared_ptr< ofBaseLoggerChannel > loggerChannel_
 _version_started: _
 _version_deprecated: _
 _summary: _

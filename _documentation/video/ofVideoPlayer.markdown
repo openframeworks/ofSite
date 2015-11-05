@@ -557,7 +557,7 @@ _returns: ofPixels &_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 0.9.0_
+_version_started: 006_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -576,7 +576,16 @@ _inlined_description: _
 
 _description: _
 
+For example, to get the red, green, and blue of the pixel at (100,20):
 
+~~~~{.cpp}
+unsigned char * pixels = myMovie.getPixels();
+int nChannels = movie.getPixelsRef().getNumChannels();
+int widthOfLine = myMovie.width;  // how long is a line of pixels
+int red 	= pixels[(20 * widthOfLine + 100) * nChannels    ];
+int green 	= pixels[(20 * widthOfLine + 100) * nChannels + 1];
+int blue 	= pixels[(20 * widthOfLine + 100) * nChannels + 2];
+~~~~
 
 
 
@@ -629,7 +638,7 @@ _returns: shared_ptr< ofBaseVideoPlayer >_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 0.9.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -648,7 +657,7 @@ _inlined_description: _
 
 _description: _
 
-
+This returns a [shared pointer](http://thenewcpp.wordpress.com/2012/06/21/shared-pointers/) to the particular implementation of ofVideoPlayer that your system is using.
 
 
 
@@ -1795,7 +1804,7 @@ _returns: void_
 _returns_description: _
 _parameters: shared_ptr< ofBaseVideoPlayer > newPlayer_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_

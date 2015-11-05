@@ -15,6 +15,146 @@ _advanced: False_
 
 <!----------------------------------------------------------------------------->
 
+###int * ofGetJNIEnv()
+
+<!--
+_syntax: ofGetJNIEnv()_
+_name: ofGetJNIEnv_
+_returns: int *_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int ofGetJavaOFAndroid()
+
+<!--
+_syntax: ofGetJavaOFAndroid()_
+_name: ofGetJavaOFAndroid_
+_returns: int_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int * ofGetJavaVMPtr()
+
+<!--
+_syntax: ofGetJavaVMPtr()_
+_name: ofGetJavaVMPtr_
+_returns: int *_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int ofGetOFActivityObject()
+
+<!--
+_syntax: ofGetOFActivityObject()_
+_name: ofGetOFActivityObject_
+_returns: int_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void ofxAndroidAlertBox(msg)
 
 <!--
@@ -23,6 +163,41 @@ _name: ofxAndroidAlertBox_
 _returns: void_
 _returns_description: _
 _parameters: string msg_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool ofxAndroidAlertListBox(title, &list)
+
+<!--
+_syntax: ofxAndroidAlertListBox(title, &list)_
+_name: ofxAndroidAlertListBox_
+_returns: bool_
+_returns_description: _
+_parameters: string title, const int &list_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -196,6 +371,41 @@ _description: _
 _syntax: ofxAndroidEnableMulticast()_
 _name: ofxAndroidEnableMulticast_
 _returns: void_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofxAndroidEventsClass & ofxAndroidEvents()
+
+<!--
+_syntax: ofxAndroidEvents()_
+_name: ofxAndroidEvents_
+_returns: ofxAndroidEventsClass &_
 _returns_description: _
 _parameters: _
 _version_started: _
@@ -785,15 +995,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofxAndroidEventsClass & ofxRegisterMultitouch(*app)
+###bool ofxJavaCallBoolMethod(object, classID, methodName, methodSignature, args)
 
 <!--
-_syntax: ofxRegisterMultitouch(*app)_
-_name: ofxRegisterMultitouch_
-_returns: ofxAndroidEventsClass &_
+_syntax: ofxJavaCallBoolMethod(object, classID, methodName, methodSignature, args)_
+_name: ofxJavaCallBoolMethod_
+_returns: bool_
 _returns_description: _
-_parameters: ofxAndroidApp *app_
-_version_started: _
+_parameters: int object, int classID, string methodName, string methodSignature, va_list args_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -820,15 +1030,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofxAndroidEventsClass & ofxRegisterMultitouch(*app)
+###float ofxJavaCallFloatMethod(object, classID, methodName, methodSignature, args)
 
 <!--
-_syntax: ofxRegisterMultitouch(*app)_
-_name: ofxRegisterMultitouch_
-_returns: ofxAndroidEventsClass &_
+_syntax: ofxJavaCallFloatMethod(object, classID, methodName, methodSignature, args)_
+_name: ofxJavaCallFloatMethod_
+_returns: float_
 _returns_description: _
-_parameters: ofxAndroidApp *app_
-_version_started: _
+_parameters: int object, int classID, string methodName, string methodSignature, va_list args_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -855,15 +1065,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofxAndroidEventsClass & ofxRegisterMultitouch(*app)
+###int ofxJavaCallIntMethod(object, classID, methodName, methodSignature, args)
 
 <!--
-_syntax: ofxRegisterMultitouch(*app)_
-_name: ofxRegisterMultitouch_
-_returns: ofxAndroidEventsClass &_
+_syntax: ofxJavaCallIntMethod(object, classID, methodName, methodSignature, args)_
+_name: ofxJavaCallIntMethod_
+_returns: int_
 _returns_description: _
-_parameters: ofxAndroidApp *app_
-_version_started: _
+_parameters: int object, int classID, string methodName, string methodSignature, va_list args_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -890,15 +1100,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofxAndroidEventsClass & ofxRegisterMultitouch(*app)
+###int64_t ofxJavaCallLongMethod(object, classID, methodName, methodSignature, args)
 
 <!--
-_syntax: ofxRegisterMultitouch(*app)_
-_name: ofxRegisterMultitouch_
-_returns: ofxAndroidEventsClass &_
+_syntax: ofxJavaCallLongMethod(object, classID, methodName, methodSignature, args)_
+_name: ofxJavaCallLongMethod_
+_returns: int64_t_
 _returns_description: _
-_parameters: ofxAndroidApp *app_
-_version_started: _
+_parameters: int object, int classID, string methodName, string methodSignature, va_list args_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -925,15 +1135,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofxAndroidEventsClass & ofxRegisterMultitouch(*app)
+###int ofxJavaCallObjectMethod()
 
 <!--
-_syntax: ofxRegisterMultitouch(*app)_
-_name: ofxRegisterMultitouch_
-_returns: ofxAndroidEventsClass &_
+_syntax: ofxJavaCallObjectMethod()_
+_name: ofxJavaCallObjectMethod_
+_returns: int_
 _returns_description: _
-_parameters: ofxAndroidApp *app_
-_version_started: _
+_parameters: _
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -960,15 +1170,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofxAndroidEventsClass & ofxRegisterMultitouch(*app)
+###int ofxJavaCallStaticObjectMethod()
 
 <!--
-_syntax: ofxRegisterMultitouch(*app)_
-_name: ofxRegisterMultitouch_
-_returns: ofxAndroidEventsClass &_
+_syntax: ofxJavaCallStaticObjectMethod()_
+_name: ofxJavaCallStaticObjectMethod_
+_returns: int_
 _returns_description: _
-_parameters: ofxAndroidApp *app_
-_version_started: _
+_parameters: _
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -995,15 +1205,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofxAndroidEventsClass & ofxRegisterMultitouch(*app)
+###void ofxJavaCallStaticVoidMethod(classID, methodName, methodSignature, args)
 
 <!--
-_syntax: ofxRegisterMultitouch(*app)_
-_name: ofxRegisterMultitouch_
-_returns: ofxAndroidEventsClass &_
+_syntax: ofxJavaCallStaticVoidMethod(classID, methodName, methodSignature, args)_
+_name: ofxJavaCallStaticVoidMethod_
+_returns: void_
 _returns_description: _
-_parameters: ofxAndroidApp *app_
-_version_started: _
+_parameters: int classID, string methodName, string methodSignature, va_list args_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1030,15 +1240,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofxAndroidEventsClass & ofxRegisterMultitouch(*app)
+###void ofxJavaCallStaticVoidMethod(className, methodName, methodSignature)
 
 <!--
-_syntax: ofxRegisterMultitouch(*app)_
-_name: ofxRegisterMultitouch_
-_returns: ofxAndroidEventsClass &_
+_syntax: ofxJavaCallStaticVoidMethod(className, methodName, methodSignature)_
+_name: ofxJavaCallStaticVoidMethod_
+_returns: void_
 _returns_description: _
-_parameters: ofxAndroidApp *app_
-_version_started: _
+_parameters: string className, string methodName, string methodSignature_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1065,15 +1275,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofxAndroidEventsClass & ofxRegisterMultitouch(*app)
+###void ofxJavaCallVoidMethod(object, classID, methodName, methodSignature, args)
 
 <!--
-_syntax: ofxRegisterMultitouch(*app)_
-_name: ofxRegisterMultitouch_
-_returns: ofxAndroidEventsClass &_
+_syntax: ofxJavaCallVoidMethod(object, classID, methodName, methodSignature, args)_
+_name: ofxJavaCallVoidMethod_
+_returns: void_
 _returns_description: _
-_parameters: ofxAndroidApp *app_
-_version_started: _
+_parameters: int object, int classID, string methodName, string methodSignature, va_list args_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1100,15 +1310,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofxAndroidEventsClass & ofxRegisterMultitouch(*app)
+###int ofxJavaGetClassID()
 
 <!--
-_syntax: ofxRegisterMultitouch(*app)_
-_name: ofxRegisterMultitouch_
-_returns: ofxAndroidEventsClass &_
+_syntax: ofxJavaGetClassID()_
+_name: ofxJavaGetClassID_
+_returns: int_
 _returns_description: _
-_parameters: ofxAndroidApp *app_
-_version_started: _
+_parameters: _
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1135,15 +1345,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofxAndroidEventsClass & ofxRegisterMultitouch(*app)
+###string ofxJavaGetClassName(classID)
 
 <!--
-_syntax: ofxRegisterMultitouch(*app)_
-_name: ofxRegisterMultitouch_
-_returns: ofxAndroidEventsClass &_
+_syntax: ofxJavaGetClassName(classID)_
+_name: ofxJavaGetClassName_
+_returns: string_
 _returns_description: _
-_parameters: ofxAndroidApp *app_
-_version_started: _
+_parameters: int classID_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1170,15 +1380,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofxAndroidEventsClass & ofxRegisterMultitouch(*app)
+###int ofxJavaGetMethodID()
 
 <!--
-_syntax: ofxRegisterMultitouch(*app)_
-_name: ofxRegisterMultitouch_
-_returns: ofxAndroidEventsClass &_
+_syntax: ofxJavaGetMethodID()_
+_name: ofxJavaGetMethodID_
+_returns: int_
 _returns_description: _
-_parameters: ofxAndroidApp *app_
-_version_started: _
+_parameters: _
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1205,15 +1415,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofxAndroidEventsClass & ofxRegisterMultitouch(*app)
+###int ofxJavaGetStaticFieldID()
 
 <!--
-_syntax: ofxRegisterMultitouch(*app)_
-_name: ofxRegisterMultitouch_
-_returns: ofxAndroidEventsClass &_
+_syntax: ofxJavaGetStaticFieldID()_
+_name: ofxJavaGetStaticFieldID_
+_returns: int_
 _returns_description: _
-_parameters: ofxAndroidApp *app_
-_version_started: _
+_parameters: _
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1240,15 +1450,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofxAndroidEventsClass & ofxRegisterMultitouch(*app)
+###int ofxJavaGetStaticMethodID()
 
 <!--
-_syntax: ofxRegisterMultitouch(*app)_
-_name: ofxRegisterMultitouch_
-_returns: ofxAndroidEventsClass &_
+_syntax: ofxJavaGetStaticMethodID()_
+_name: ofxJavaGetStaticMethodID_
+_returns: int_
 _returns_description: _
-_parameters: ofxAndroidApp *app_
-_version_started: _
+_parameters: _
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1275,260 +1485,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofxAndroidEventsClass & ofxRegisterMultitouch(*app)
+###int ofxJavaGetStaticObjectField()
 
 <!--
-_syntax: ofxRegisterMultitouch(*app)_
-_name: ofxRegisterMultitouch_
-_returns: ofxAndroidEventsClass &_
+_syntax: ofxJavaGetStaticObjectField()_
+_name: ofxJavaGetStaticObjectField_
+_returns: int_
 _returns_description: _
-_parameters: ofxAndroidApp *app_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofxAndroidEventsClass & ofxRegisterMultitouch(*app)
-
-<!--
-_syntax: ofxRegisterMultitouch(*app)_
-_name: ofxRegisterMultitouch_
-_returns: ofxAndroidEventsClass &_
-_returns_description: _
-_parameters: ofxAndroidApp *app_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofxAndroidEventsClass & ofxRegisterMultitouch(*app)
-
-<!--
-_syntax: ofxRegisterMultitouch(*app)_
-_name: ofxRegisterMultitouch_
-_returns: ofxAndroidEventsClass &_
-_returns_description: _
-_parameters: ofxAndroidApp *app_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofxAndroidEventsClass & ofxRegisterMultitouch(*app)
-
-<!--
-_syntax: ofxRegisterMultitouch(*app)_
-_name: ofxRegisterMultitouch_
-_returns: ofxAndroidEventsClass &_
-_returns_description: _
-_parameters: ofxAndroidApp *app_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofxAndroidEventsClass & ofxRegisterMultitouch(*app)
-
-<!--
-_syntax: ofxRegisterMultitouch(*app)_
-_name: ofxRegisterMultitouch_
-_returns: ofxAndroidEventsClass &_
-_returns_description: _
-_parameters: ofxAndroidApp *app_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofxAndroidEventsClass & ofxRegisterMultitouch(*app)
-
-<!--
-_syntax: ofxRegisterMultitouch(*app)_
-_name: ofxRegisterMultitouch_
-_returns: ofxAndroidEventsClass &_
-_returns_description: _
-_parameters: ofxAndroidApp *app_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofxAndroidEventsClass & ofxRegisterMultitouch(*app)
-
-<!--
-_syntax: ofxRegisterMultitouch(*app)_
-_name: ofxRegisterMultitouch_
-_returns: ofxAndroidEventsClass &_
-_returns_description: _
-_parameters: ofxAndroidApp *app_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofxAndroidEventsClass & ofxRegisterMultitouch(*app)
-
-<!--
-_syntax: ofxRegisterMultitouch(*app)_
-_name: ofxRegisterMultitouch_
-_returns: ofxAndroidEventsClass &_
-_returns_description: _
-_parameters: ofxAndroidApp *app_
-_version_started: _
+_parameters: _
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_

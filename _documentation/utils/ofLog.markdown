@@ -455,12 +455,12 @@ _returns: _
 _returns_description: _
 _parameters: const ofLog &_
 _access: private_
-_version_started: 0.9.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
 _static: False_
-_visible: True_
+_visible: False_
 _advanced: False_
 -->
 
@@ -537,7 +537,7 @@ _returns: ofLog &_
 _returns_description: _
 _parameters: ostream &(*)(ostream &) func_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0072_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -660,7 +660,7 @@ _returns: void_
 _returns_description: _
 _parameters: shared_ptr< ofBaseLoggerChannel > channel_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -686,7 +686,9 @@ channel The channel to log to.
 
 _description: _
 
+Sets the logging channel that receives log messages. This is analogous to ofSetLoggerChannel().
 
+See [ofSetLoggerChannel()](./ofLog.html#functions) for more detail.
 
 
 

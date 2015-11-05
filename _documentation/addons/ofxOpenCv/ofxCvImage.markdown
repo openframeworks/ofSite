@@ -735,7 +735,7 @@ _returns: int *_
 _returns_description: _
 _parameters: _
 _access: protected_
-_version_started: 0.9.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -771,7 +771,7 @@ _returns: int *_
 _returns_description: _
 _parameters: _
 _access: protected_
-_version_started: 0.9.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -807,7 +807,7 @@ _returns: int *_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 0.9.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -826,7 +826,7 @@ _inlined_description: _
 
 _description: _
 
-
+Returns a raw pointer to the OpenCV IplImage.
 
 
 
@@ -915,7 +915,7 @@ _returns: ofPixels &_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 0.9.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -934,7 +934,7 @@ _inlined_description: _
 
 _description: _
 
-
+Returns a raw pointer to the pixel data within the image.
 
 
 
@@ -1023,7 +1023,7 @@ _returns: ofPixels &_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 0.9.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1042,7 +1042,7 @@ _inlined_description: _
 
 _description: _
 
-
+Returns a raw pointer to the pixel data within the Region of Interest in the ofxCvImage.
 
 
 
@@ -1777,7 +1777,7 @@ _returns: void_
 _returns_description: _
 _parameters: int *img, float min1, float max1, float min2, float max2_
 _access: protected_
-_version_started: 0.9.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1813,7 +1813,7 @@ _returns: void_
 _returns_description: _
 _parameters: int *mapX, int *mapY_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1832,7 +1832,7 @@ _inlined_description: _
 
 _description: _
 
-
+This uses a generic geometrical transformation to remap one image to another. This is particularly useful when doing camera calibration.
 
 
 
@@ -1885,7 +1885,7 @@ _returns: void_
 _returns_description: _
 _parameters: int *img_
 _access: protected_
-_version_started: 0.9.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2292,7 +2292,7 @@ _returns: void_
 _returns_description: _
 _parameters: int *img, const ofRectangle &rect_
 _access: protected_
-_version_started: 0.9.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2692,7 +2692,7 @@ _returns: void_
 _returns_description: _
 _parameters: ofxCvImage &mom, const ofPoint [4] src=4, const ofPoint [4] dst=4_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2711,7 +2711,26 @@ _inlined_description: _
 
 _description: _
 
+This warps the image perspective into the ofxCvImage using two sets four points passed in:
 
+~~~~{.cpp}
+ofPoint[4] src;
+src[0] = ofPoint(0, 0);
+src[1] = ofPoint(320, 0);
+src[2] = ofPoint(320, 240);
+src[3] = ofPoint(0, 240);
+
+ofPoint[4] dst;
+dst[0] = ofPoint(10, 0);
+dst[1] = ofPoint(310, 0);
+dst[2] = ofPoint(310, 230);
+dst[3] = ofPoint(10, 230);
+
+image.warpIntoMe(parent, src, dst);
+
+~~~~
+
+![Warping] (warpPerspective.png "Four corners for warping")
 
 
 

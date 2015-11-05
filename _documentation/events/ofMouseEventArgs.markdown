@@ -170,6 +170,70 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###float scrollX
+
+<!--
+_name: scrollX_
+_type: float_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float scrollY
+
+<!--
+_name: scrollY_
+_type: float_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofMouseEventArgs::Type type
 
 <!--

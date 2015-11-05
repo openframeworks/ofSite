@@ -177,7 +177,7 @@ _returns: ofPixels &_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 0.9.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -465,7 +465,7 @@ _returns: ofGstVideoFormat &_
 _returns_description: _
 _parameters: int w, int h, int desired_framerate, ofPixelFormat desiredPixelFormat_
 _access: private_
-_version_started: 0.9.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_

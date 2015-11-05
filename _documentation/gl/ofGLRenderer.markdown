@@ -470,42 +470,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void clear()
-
-<!--
-_syntax: clear()_
-_name: clear_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void clear(r, g, b, a = 0)
 
 <!--
@@ -571,6 +535,42 @@ _inlined_description: _
 _description: _
 
 See [ofClear](ofGraphics.html#show_ofClear)
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void clear()
+
+<!--
+_syntax: clear()_
+_name: clear_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
 
 
 
@@ -839,7 +839,7 @@ _returns: void_
 _returns_description: _
 _parameters: int textureTarget, int textureLocation_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -947,7 +947,7 @@ _returns: void_
 _returns_description: _
 _parameters: const ofNode &model_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0071_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -966,7 +966,7 @@ _inlined_description: _
 
 _description: _
 
-
+Draws an texture.
 
 
 
@@ -1146,7 +1146,7 @@ _inlined_description: _
 
 _description: _
 
-Draws an texture.
+Draws an ofMesh.
 
 
 
@@ -1595,7 +1595,7 @@ _returns: void_
 _returns_description: _
 _parameters: string text, float x, float y, float z_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1614,7 +1614,7 @@ _inlined_description: _
 
 _description: _
 
-
+Draws a characters to the screen.
 
 
 
@@ -1883,7 +1883,7 @@ _returns: void_
 _returns_description: _
 _parameters: const ofTexture &tex, int textureLocation_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2819,7 +2819,7 @@ _returns: void_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0072_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2838,7 +2838,7 @@ _inlined_description: _
 
 _description: _
 
-
+See [ofLoadIdentityMatrix](ofGraphics.html#show_ofLoadIdentityMatrix)
 
 
 
@@ -3107,7 +3107,7 @@ _returns: _
 _returns_description: _
 _parameters: const ofAppBaseWindow *window_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_

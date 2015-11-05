@@ -33,7 +33,7 @@ _returns: GstFlowReturn_
 _returns_description: _
 _parameters: shared_ptr< GstSample > buffer_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -141,7 +141,7 @@ _returns: GstFlowReturn_
 _returns_description: _
 _parameters: shared_ptr< GstSample > buffer_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_

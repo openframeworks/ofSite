@@ -2576,7 +2576,43 @@ _returns: void_
 _returns_description: _
 _parameters: const string &name, const ofMatrix4x4 &m, int count=1_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setUniformTexture(&name, textureTarget, textureID, textureLocation)
+
+<!--
+_syntax: setUniformTexture(&name, textureTarget, textureID, textureLocation)_
+_name: setUniformTexture_
+_returns: void_
+_returns_description: _
+_parameters: const string &name, int textureTarget, GLint textureID, int textureLocation_
+_access: public_
+_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2651,42 +2687,6 @@ _name: setUniformTexture_
 _returns: void_
 _returns_description: _
 _parameters: const string &name, const ofTexture &img, int textureLocation_
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setUniformTexture(&name, textureTarget, textureID, textureLocation)
-
-<!--
-_syntax: setUniformTexture(&name, textureTarget, textureID, textureLocation)_
-_name: setUniformTexture_
-_returns: void_
-_returns_description: _
-_parameters: const string &name, int textureTarget, GLint textureID, int textureLocation_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _

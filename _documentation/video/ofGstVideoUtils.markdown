@@ -33,7 +33,7 @@ _returns: bool_
 _returns_description: _
 _parameters: int w, int h, ofPixelFormat pixelFormat_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -69,7 +69,7 @@ _returns: GstFlowReturn_
 _returns_description: _
 _parameters: shared_ptr< GstSample > buffer_
 _access: protected_
-_version_started: 0.9.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -357,7 +357,7 @@ _returns: ofPixels &_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 0.9.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -609,7 +609,7 @@ _returns: GstFlowReturn_
 _returns_description: _
 _parameters: shared_ptr< GstSample > buffer_
 _access: protected_
-_version_started: 0.9.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -753,7 +753,7 @@ _returns: bool_
 _returns_description: _
 _parameters: string pipeline, ofPixelFormat pixelFormat=OF_PIXELS_RGB, bool isStream=false, int w, int h_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_

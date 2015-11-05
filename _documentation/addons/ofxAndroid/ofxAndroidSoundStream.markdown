@@ -33,7 +33,7 @@ _returns: int_
 _returns_description: _
 _parameters: int *env, int thiz, int array, int numChannels, int bufferSize_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -69,7 +69,7 @@ _returns: int_
 _returns_description: _
 _parameters: int *env, int thiz, int array, int numChannels, int bufferSize_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -429,7 +429,7 @@ _returns: unsigned long long_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 0.9.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_

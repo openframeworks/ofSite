@@ -96,42 +96,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###typename enable_if<is_arithmetic< T>::value, void >::type add(&p)
-
-<!--
-_syntax: add(&p)_
-_name: add_
-_returns: typename enable_if<is_arithmetic< T>::value, void >::type_
-_returns_description: _
-_parameters: ofParameter< T > &p_
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void add(&parameter)
 
 <!--
@@ -392,6 +356,42 @@ _name: add_
 _returns: void_
 _returns_description: _
 _parameters: ofParameter< ofFloatColor > &parameter_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###typename enable_if<is_arithmetic< T>::value, void >::type add(&p)
+
+<!--
+_syntax: add(&p)_
+_name: add_
+_returns: typename enable_if<is_arithmetic< T>::value, void >::type_
+_returns_description: _
+_parameters: ofParameter< T > &p_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -1320,14 +1320,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setPosition(&p)
+###void setPosition(x, y)
 
 <!--
-_syntax: setPosition(&p)_
+_syntax: setPosition(x, y)_
 _name: setPosition_
 _returns: void_
 _returns_description: _
-_parameters: const ofPoint &p_
+_parameters: float x, float y_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -1356,14 +1356,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setPosition(x, y)
+###void setPosition(&p)
 
 <!--
-_syntax: setPosition(x, y)_
+_syntax: setPosition(&p)_
 _name: setPosition_
 _returns: void_
 _returns_description: _
-_parameters: float x, float y_
+_parameters: const ofPoint &p_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _

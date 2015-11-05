@@ -155,6 +155,41 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###const ofFloatColor & ofGetGlobalAmbientColor()
+
+<!--
+_syntax: ofGetGlobalAmbientColor()_
+_name: ofGetGlobalAmbientColor_
+_returns: const ofFloatColor &_
+_returns_description: _
+_parameters: _
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###bool ofGetLightingEnabled()
 
 <!--
@@ -190,14 +225,49 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###vector<weak_ptr< ofLight::Data>  > & ofSetSmoothLighting(b)
+###vector<weak_ptr< ofLight::Data>  > & ofLightsData()
 
 <!--
-_syntax: ofSetSmoothLighting(b)_
-_name: ofSetSmoothLighting_
+_syntax: ofLightsData()_
+_name: ofLightsData_
 _returns: vector<weak_ptr< ofLight::Data>  > &_
 _returns_description: _
-_parameters: bool b_
+_parameters: _
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofSetGlobalAmbientColor(&c)
+
+<!--
+_syntax: ofSetGlobalAmbientColor(&c)_
+_name: ofSetGlobalAmbientColor_
+_returns: void_
+_returns_description: _
+_parameters: const ofFloatColor &c_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -225,117 +295,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###vector<weak_ptr< ofLight::Data>  > & ofSetSmoothLighting(b)
+###void ofSetSmoothLighting(b)
 
 <!--
 _syntax: ofSetSmoothLighting(b)_
 _name: ofSetSmoothLighting_
-_returns: vector<weak_ptr< ofLight::Data>  > &_
-_returns_description: _
-_parameters: bool b_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###vector<weak_ptr< ofLight::Data>  > & ofSetSmoothLighting(b)
-
-<!--
-_syntax: ofSetSmoothLighting(b)_
-_name: ofSetSmoothLighting_
-_returns: vector<weak_ptr< ofLight::Data>  > &_
-_returns_description: _
-_parameters: bool b_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###vector<weak_ptr< ofLight::Data>  > & ofSetSmoothLighting(b)
-
-<!--
-_syntax: ofSetSmoothLighting(b)_
-_name: ofSetSmoothLighting_
-_returns: vector<weak_ptr< ofLight::Data>  > &_
-_returns_description: _
-_parameters: bool b_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###vector<weak_ptr< ofLight::Data>  > & ofSetSmoothLighting(b)
-
-<!--
-_syntax: ofSetSmoothLighting(b)_
-_name: ofSetSmoothLighting_
-_returns: vector<weak_ptr< ofLight::Data>  > &_
+_returns: void_
 _returns_description: _
 _parameters: bool b_
 _version_started: _

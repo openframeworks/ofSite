@@ -26,16 +26,16 @@ and serialization facilities
 
 
 
-###void add(&p, parameters)
+###void add(&param)
 
 <!--
-_syntax: add(&p, parameters)_
+_syntax: add(&param)_
 _name: add_
 _returns: void_
 _returns_description: _
-_parameters: ofAbstractParameter &p, Args &... parameters_
+_parameters: ofAbstractParameter &param_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -62,14 +62,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void add(&param)
+###void add(&p, parameters)
 
 <!--
-_syntax: add(&param)_
+_syntax: add(&p, parameters)_
 _name: add_
 _returns: void_
 _returns_description: _
-_parameters: ofAbstractParameter &param_
+_parameters: ofAbstractParameter &p, Args &... parameters_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -575,7 +575,7 @@ _returns: ofAbstractParameter &_
 _returns_description: _
 _parameters: const string &name_
 _access: public_
-_version_started: 0.8.0_
+_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -611,7 +611,7 @@ _returns: ofAbstractParameter &_
 _returns_description: _
 _parameters: size_t pos_
 _access: public_
-_version_started: 0.8.0_
+_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -647,7 +647,7 @@ _returns: const ofParameter< ParameterType > &_
 _returns_description: _
 _parameters: const string &name_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -683,7 +683,7 @@ _returns: const ofParameter< ParameterType > &_
 _returns_description: _
 _parameters: size_t pos_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -719,7 +719,7 @@ _returns: ofParameter< ParameterType > &_
 _returns_description: _
 _parameters: const string &name_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -755,7 +755,7 @@ _returns: ofParameter< ParameterType > &_
 _returns_description: _
 _parameters: size_t pos_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -863,7 +863,7 @@ _returns: ofParameter< bool > &_
 _returns_description: _
 _parameters: const string &name_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -899,7 +899,7 @@ _returns: ofParameter< bool > &_
 _returns_description: _
 _parameters: size_t pos_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1007,7 +1007,7 @@ _returns: ofParameter< char > &_
 _returns_description: _
 _parameters: const string &name_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1043,7 +1043,7 @@ _returns: ofParameter< char > &_
 _returns_description: _
 _parameters: size_t pos_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1151,7 +1151,7 @@ _returns: ofParameter< ofColor > &_
 _returns_description: _
 _parameters: const string &name_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1187,7 +1187,7 @@ _returns: ofParameter< ofColor > &_
 _returns_description: _
 _parameters: size_t pose_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1367,7 +1367,7 @@ _returns: ofParameter< float > &_
 _returns_description: _
 _parameters: const string &name_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1403,7 +1403,7 @@ _returns: ofParameter< float > &_
 _returns_description: _
 _parameters: size_t pos_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1511,7 +1511,7 @@ _returns: ofParameter< ofFloatColor > &_
 _returns_description: _
 _parameters: const string &name_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1547,7 +1547,7 @@ _returns: ofParameter< ofFloatColor > &_
 _returns_description: _
 _parameters: size_t pos_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1655,7 +1655,7 @@ _returns: ofParameterGroup &_
 _returns_description: _
 _parameters: const string &name_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1691,7 +1691,7 @@ _returns: ofParameterGroup &_
 _returns_description: _
 _parameters: size_t pos_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1799,7 +1799,7 @@ _returns: ofParameter< int > &_
 _returns_description: _
 _parameters: const string &name_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1835,7 +1835,7 @@ _returns: ofParameter< int > &_
 _returns_description: _
 _parameters: size_t pos_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1898,14 +1898,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###string getName(position)
+###string getName()
 
 <!--
-_syntax: getName(position)_
+_syntax: getName()_
 _name: getName_
 _returns: string_
 _returns_description: _
-_parameters: size_t position_
+_parameters: _
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -1934,14 +1934,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###string getName()
+###string getName(position)
 
 <!--
-_syntax: getName()_
+_syntax: getName(position)_
 _name: getName_
 _returns: string_
 _returns_description: _
-_parameters: _
+_parameters: size_t position_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -2051,7 +2051,7 @@ _returns: ofParameter< ofPoint > &_
 _returns_description: _
 _parameters: const string &name_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2087,7 +2087,7 @@ _returns: ofParameter< ofPoint > &_
 _returns_description: _
 _parameters: size_t pos_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2231,7 +2231,7 @@ _returns: ofParameter< ofShortColor > &_
 _returns_description: _
 _parameters: const string &name_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2267,7 +2267,7 @@ _returns: ofParameter< ofShortColor > &_
 _returns_description: _
 _parameters: size_t pos_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2375,7 +2375,7 @@ _returns: ofParameter< string > &_
 _returns_description: _
 _parameters: const string &name_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2411,7 +2411,7 @@ _returns: ofParameter< string > &_
 _returns_description: _
 _parameters: size_t pos_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2555,7 +2555,7 @@ _returns: ofParameter< ofVec2f > &_
 _returns_description: _
 _parameters: const string &name_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2591,7 +2591,7 @@ _returns: ofParameter< ofVec2f > &_
 _returns_description: _
 _parameters: size_t pos_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2699,7 +2699,7 @@ _returns: ofParameter< ofVec3f > &_
 _returns_description: _
 _parameters: const string &name_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2735,7 +2735,7 @@ _returns: ofParameter< ofVec3f > &_
 _returns_description: _
 _parameters: size_t pos_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2843,7 +2843,7 @@ _returns: ofParameter< ofVec4f > &_
 _returns_description: _
 _parameters: const string &name_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2879,7 +2879,7 @@ _returns: ofParameter< ofVec4f > &_
 _returns_description: _
 _parameters: size_t pos_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -3203,7 +3203,7 @@ _returns: ofAbstractParameter &_
 _returns_description: _
 _parameters: const string &name_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -3239,7 +3239,7 @@ _returns: ofAbstractParameter &_
 _returns_description: _
 _parameters: size_t pos_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_

@@ -15,6 +15,41 @@ _advanced: False_
 
 <!----------------------------------------------------------------------------->
 
+###void ofAppendUTF8(&str, utf8)
+
+<!--
+_syntax: ofAppendUTF8(&str, utf8)_
+_name: ofAppendUTF8_
+_returns: void_
+_returns_description: _
+_parameters: string &str, int utf8_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###char ofBinaryToChar(&value)
 
 <!--
@@ -301,6 +336,49 @@ Enables the conversion of paths to relative to data/  This is enabled by default
 
 <!----------------------------------------------------------------------------->
 
+###size_t ofFind(&values, &target)
+
+<!--
+_syntax: ofFind(&values, &target)_
+_name: ofFind_
+_returns: size_t_
+_returns_description: _
+_parameters: const vector< T > &values, const T &target_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Search for a target value in a vector of values.
+\tparam T the type contained by the vector.
+
+Parameters:
+values The vector of values to be searched.
+target The target value to be found.
+
+Returns: true the index of the first target value found.
+\sa http://www.cplusplus.com/reference/iterator/distance/
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###const char * ofFromString(&value)
 
 <!--
@@ -329,6 +407,90 @@ Parameters:
 value The string value to convert to another string.
 
 Returns: the string converted to a c-style string.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###T ofFromString(&value)
+
+<!--
+_syntax: ofFromString(&value)_
+_name: ofFromString_
+_returns: T_
+_returns_description: _
+_parameters: const string &value_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Convert a string represetnation to another type.
+
+Often, this method will be used to convert a string to a numerical type.
+
+\tparam T The target data type.
+
+Parameters:
+value The string value to convert to type T.
+
+Returns: the string converted to the target data type T.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string ofFromString(&value)
+
+<!--
+_syntax: ofFromString(&value)_
+_name: ofFromString_
+_returns: string_
+_returns_description: _
+_parameters: const string &value_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Convert a string represetnation to another string.
+
+Parameters:
+value The string value to convert to another string.
+
+Returns: the string converted to another string.
 
 
 
@@ -381,6 +543,90 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###uint64_t ofGetElapsedTimeMicros()
+
+<!--
+_syntax: ofGetElapsedTimeMicros()_
+_name: ofGetElapsedTimeMicros_
+_returns: uint64_t_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Get the elapsed time in microseconds.
+
+This returns the elapsed time since ofResetElapsedTimeCounter() was called.
+Usually ofResetElapsedTimeCounter() is called automatically upon program
+startup.
+
+
+Returns: the elapsed time in microseconds (1000000 microseconds = 1 second).
+
+
+
+
+
+_description: _
+
+returns the elapsed time since the application started in microseconds (1000000 microsecs = 1 second)
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###uint64_t ofGetElapsedTimeMillis()
+
+<!--
+_syntax: ofGetElapsedTimeMillis()_
+_name: ofGetElapsedTimeMillis_
+_returns: uint64_t_
+_returns_description: _
+_parameters: _
+_version_started: 006_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Get the elapsed time in milliseconds.
+
+This returns the elapsed time since ofResetElapsedTimeCounter() was called.
+Usually ofResetElapsedTimeCounter() is called automatically once during
+program startup.
+
+
+Returns: the elapsed time in milliseconds (1000 milliseconds = 1 second).
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###float ofGetElapsedTimef()
 
 <!--
@@ -416,6 +662,43 @@ Returns: the floating point elapsed time in seconds.
 _description: _
 
 returns the elapsed time since the application started in seconds as a float
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###uint64_t ofGetFrameNum()
+
+<!--
+_syntax: ofGetFrameNum()_
+_name: ofGetFrameNum_
+_returns: uint64_t_
+_returns_description: _
+_parameters: _
+_version_started: 006_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Get the number of frames rendered since the program started.
+
+Returns: the number of frames rendered since the program started.
+
+
+
+
+
+_description: _
+
+
 
 
 
@@ -571,6 +854,80 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###uint64_t ofGetSystemTime()
+
+<!--
+_syntax: ofGetSystemTime()_
+_name: ofGetSystemTime_
+_returns: uint64_t_
+_returns_description: _
+_parameters: _
+_version_started: 006_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: True_
+-->
+
+_inlined_description: _
+
+Get the system time in milliseconds.
+
+Returns: the system time in milliseconds.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###uint64_t ofGetSystemTimeMicros()
+
+<!--
+_syntax: ofGetSystemTimeMicros()_
+_name: ofGetSystemTimeMicros_
+_returns: uint64_t_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Get the system time in microseconds.
+
+Returns: the system time in microseconds.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofTargetPlatform ofGetTargetPlatform()
 
 <!--
@@ -642,6 +999,108 @@ Returns: the current time as a string with the default format.
 _description: _
 
 
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string ofGetTimestampString(&timestampFormat)
+
+<!--
+_syntax: ofGetTimestampString(&timestampFormat)_
+_name: ofGetTimestampString_
+_returns: string_
+_returns_description: _
+_parameters: const string &timestampFormat_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Formats the current system time according to the given format.
+
+The format string is used as a template to format the date and
+is copied character by character except for the following special
+characters, which are replaced by the corresponding value.
+
+  * %w - abbreviated weekday (Mon, Tue, ...)
+  * %W - full weekday (Monday, Tuesday, ...)
+  * %b - abbreviated month (Jan, Feb, ...)
+  * %B - full month (January, February, ...)
+  * %d - zero-padded day of month (01 .. 31)
+  * %e - day of month (1 .. 31)
+  * %f - space-padded day of month ( 1 .. 31)
+  * %m - zero-padded month (01 .. 12)
+  * %n - month (1 .. 12)
+  * %o - space-padded month ( 1 .. 12)
+  * %y - year without century (70)
+  * %Y - year with century (1970)
+  * %H - hour (00 .. 23)
+  * %h - hour (00 .. 12)
+  * %a - am/pm
+  * %A - AM/PM
+  * %M - minute (00 .. 59)
+  * %S - second (00 .. 59)
+  * %s - seconds and microseconds (equivalent to %S.%F)
+  * %i - millisecond (000 .. 999)
+  * %c - centisecond (0 .. 9)
+  * %F - fractional seconds/microseconds (000000 - 999999)
+  * %z - time zone differential in ISO 8601 format (Z or +NN.NN)
+  * %Z - time zone differential in RFC format (GMT or +NNNN)
+  * %% - percent sign
+
+
+Parameters:
+timestampFormat The formatting pattern.
+
+Returns: the formatted timestamp as a string.
+
+Warning: an invalid timestampFormat may crash windows apps.
+
+
+
+
+
+_description: _
+
+Formats the given timestamp according to the given format.	
+The format string is used as a template to format the date and
+is copied character by character except for the following special characters,
+which are replaced by the corresponding value.
+
+* %w - abbreviated weekday (Mon, Tue, ...)
+* %W - full weekday (Monday, Tuesday, ...)
+* %b - abbreviated month (Jan, Feb, ...)
+* %B - full month (January, February, ...)
+* %d - zero-padded day of month (01 .. 31)
+* %e - day of month (1 .. 31)
+* %f - space-padded day of month ( 1 .. 31)
+* %m - zero-padded month (01 .. 12)
+* %n - month (1 .. 12)
+* %o - space-padded month ( 1 .. 12)
+* %y - year without century (70)
+* %Y - year with century (1970)
+* %H - hour (00 .. 23)
+* %h - hour (00 .. 12)
+* %a - am/pm
+* %A - AM/PM
+* %M - minute (00 .. 59)
+* %S - second (00 .. 59)
+* %s - seconds and microseconds (equivalent to %S.%F)
+* %i - millisecond (000 .. 999)
+* %c - centisecond (0 .. 9)
+* %F - fractional seconds/microseconds (000000 - 999999)
+* %z - time zone differential in ISO 8601 format (Z or +NN.NN)
+* %Z - time zone differential in RFC format (GMT or +NNNN)
+* %% - percent sign
 
 
 
@@ -838,6 +1297,52 @@ openFrameworks uses the semantic versioning system.
 \sa http://semver.org/
 
 Returns: The patch version number.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string ofGetVersionPreRelease()
+
+<!--
+_syntax: ofGetVersionPreRelease()_
+_name: ofGetVersionPreRelease_
+_returns: string_
+_returns_description: _
+_parameters: _
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Get the pre-release version of openFrameworks.
+
+openFrameworks uses the semantic versioning system.
+
+For pre-release versions of openFrameworks, including development versions,
+this string will describe the pre-release state. Examples might include
+"master", "rc1", "rc2", etc.  For all stable releases, this string will be
+empty.
+
+\sa http://semver.org/
+
+Returns: The pre-release version string.
 
 
 
@@ -1106,6 +1611,134 @@ Converts a hexadecimal representation of an string (e.g., "61626364656667") to a
 
 <!----------------------------------------------------------------------------->
 
+###bool ofIsStringInString(&haystack, &needle)
+
+<!--
+_syntax: ofIsStringInString(&haystack, &needle)_
+_name: ofIsStringInString_
+_returns: bool_
+_returns_description: _
+_parameters: const string &haystack, const string &needle_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Check if string contains another string.
+
+Example:
+~~~{.cpp}
+    std::string haystack = "foobar";
+    ofLog() << ofIsStringInString(haystack, "foo"); // Outputs 1.
+    ofLog() << ofIsStringInString(haystack,"bar"); // Outputs 1.
+    ofLog() << ofIsStringInString(haystack, "something else"); // Outputs 0.
+~~~
+
+Parameters:
+haystack The string to check for occurrence in.
+needle The string to check for.
+
+
+
+
+
+_description: _
+
+Checks if the string needle exists in the string haystack.
+
+~~~{.cpp}
+    string haystack = "foobar";
+    ofLog() << ofIsStringInString(haystack, "foo"); // outputs 1
+    ofLog() << ofIsStringInString(haystack,"bar"); // outputs 1
+    ofLog() << ofIsStringInString(haystack, "something else"); // outputs 0
+~~~
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string ofJoinString(&stringElements, &delimiter)
+
+<!--
+_syntax: ofJoinString(&stringElements, &delimiter)_
+_name: ofJoinString_
+_returns: string_
+_returns_description: _
+_parameters: const vector< string > &stringElements, const string &delimiter_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Join a vector of strings together into one string.
+
+Parameters:
+stringElements The vector of strings to join.
+delimiter The delimiter to put betweeen each string.
+
+
+
+
+
+_description: _
+
+Turns a stringElements into a single string, with an instance of delimiter between all the elements.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofLaunchBrowser(&url, uriEncodeQuery = false)
+
+<!--
+_syntax: ofLaunchBrowser(&url, uriEncodeQuery = false)_
+_name: ofLaunchBrowser_
+_returns: void_
+_returns_description: _
+_parameters: const string &url, bool uriEncodeQuery=false_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void ofRandomize(&values)
 
 <!--
@@ -1260,6 +1893,47 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###bool ofRestoreWorkingDirectoryToDefault()
+
+<!--
+_syntax: ofRestoreWorkingDirectoryToDefault()_
+_name: ofRestoreWorkingDirectoryToDefault_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Reset the working directory to the platform default.
+
+The default working directory is where the application was started from
+or the exe directory in case of osx bundles. GLUT might change the default
+working directory to the resources directory in the bundle in osx. This
+will restore it to the exe dir or whatever was the current dir when the
+application was started
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void ofSaveFrame(bUseViewport = false)
 
 <!--
@@ -1287,6 +1961,183 @@ The count will be restarted each time the program is restarted.
 
 Parameters:
 bUseViewport Set to true if the current viewport should be used.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofSaveScreen(&filename)
+
+<!--
+_syntax: ofSaveScreen(&filename)_
+_name: ofSaveScreen_
+_returns: void_
+_returns_description: _
+_parameters: const string &filename_
+_version_started: 006_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Saves the current screen image to a file on disk.
+
+Example:
+~~~~{.cpp}
+		ofSaveScreen("screen.png"); // Will save screen.png in the /data folder.
+~~~~
+
+The output file type will be deduced from the given file name.
+
+
+Parameters:
+filename The image output file.
+
+
+
+
+
+_description: _
+
+Saves the current screen image into a given file name (string filename).
+Example:
+~~~~{.cpp}
+
+string filename;
+fileName = "screen1.png";
+ofSaveScreen(fileName);
+~~~~
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofSaveViewport(&filename)
+
+<!--
+_syntax: ofSaveViewport(&filename)_
+_name: ofSaveViewport_
+_returns: void_
+_returns_description: _
+_parameters: const string &filename_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Saves the current viewport as an image.
+
+The output file type will be deduced from the given file name.
+
+
+Parameters:
+filename The image output file.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofSetDataPathRoot(&root)
+
+<!--
+_syntax: ofSetDataPathRoot(&root)_
+_name: ofSetDataPathRoot_
+_returns: void_
+_returns_description: _
+_parameters: const string &root_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Set the relative path to the data/ folder from the executable.
+
+This method can be useful when users want to embed the data as a resource
+folder within an *.app bundle on OSX or perhaps work from a shared data
+folder in the user's Documents directory.
+
+
+Warning: The provided path must have a trailing slash (/).
+
+Parameters:
+root The path to the data/ folder relative to the app executable.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofSleepMillis(millis)
+
+<!--
+_syntax: ofSleepMillis(millis)_
+_name: ofSleepMillis_
+_returns: void_
+_returns_description: _
+_parameters: int millis_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Sleeps the current thread for the specified amount of milliseconds.
+
+Parameters:
+millis The number of millseconds to sleep.
 
 
 
@@ -1478,6 +2329,130 @@ Returns: A vector of strings split with the delimiter.
 _description: _
 
 Splits source using delimiter and returns the separate tokens. In modern versions of openFrameworks, delimiter can be a multi-character string. In older versions of openFrameworks, delimiter was interpreted as multiple single-character delimiters.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofStringReplace(&input, &searchStr, &replaceStr)
+
+<!--
+_syntax: ofStringReplace(&input, &searchStr, &replaceStr)_
+_name: ofStringReplace_
+_returns: void_
+_returns_description: _
+_parameters: string &input, const string &searchStr, const string &replaceStr_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Replace all occurrences of a string with another string.
+\note The input string is passed by reference, so it will be modified.
+
+Parameters:
+input The string to run the replacement on.
+searchStr The string to be replaced.
+replaceStr The string to put in place.
+
+
+
+
+
+_description: _
+
+Searches input for instances of searchStr and replaces them with replaceStr.
+
+~~~~{.cpp}
+string message = "hello, world!";
+ofStringReplace(message,"hello","goodbye");
+ofLog() << message; // outputs "goodbye, world!"
+~~~~
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###size_t ofStringTimesInString(&haystack, &needle)
+
+<!--
+_syntax: ofStringTimesInString(&haystack, &needle)_
+_name: ofStringTimesInString_
+_returns: size_t_
+_returns_description: _
+_parameters: const string &haystack, const string &needle_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Check how many times a string contains another string.
+
+Parameters:
+haystack The string to check for occurrence in .
+needle The string to check for.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string ofSystem(&command)
+
+<!--
+_syntax: ofSystem(&command)_
+_name: ofSystem_
+_returns: string_
+_returns_description: _
+_parameters: const string &command_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Executes a system command. Similar to run a command in terminal.
+\note Will block until the executed program/command has finished.
+
+Returns: the system command output as string.
+
+
+
+
+
+_description: _
+
+Executes an application or a system command and returns its output as string. Will block until the executed program/command has finished.
 
 
 
@@ -1702,6 +2677,56 @@ Returns: The string as a char or 0 on failure.
 _description: _
 
 Converts a string representation of a single char (e.g., " c ") to an actual char.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string ofToDataPath(&path, absolute = false)
+
+<!--
+_syntax: ofToDataPath(&path, absolute = false)_
+_name: ofToDataPath_
+_returns: string_
+_returns_description: _
+_parameters: const string &path, bool absolute=false_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Make a path relative to the location of the data/ folder.
+
+This funtion returns path unchanged if ofDisableDataPath() was called first.
+
+By default, a relative path is returned. Users requiring absolute paths for
+(e.g. for non-openFrameworks functions), can specify that an absolute path
+be returned.
+
+
+Parameters:
+path The path to make relative to the data/ folder.
+absolute Set to true to return an absolute path.
+
+Returns: the new path, unless paths were disabled with ofDisableDataPath().
+
+
+
+
+
+_description: _
+
+openFrameworks now treats all files in the data/ folder as being at the same level as your app. When a file is loaded using openFrameworks classes (like ofVideoPlayer) the file path is run through this function to turn it into a relative path for the executible. As windows, mac and linux all have different relative paths, it is important to use this function if you have written your own class or addon for openFrameworks and you wish to be able to load files from the data/ folder.
+
+The optional parameter makeAbsolute, if set to true (false by default) returns the generated path as an absolute path starting from the root of your filesystem instead of from the folder your application is run from.
 
 
 
@@ -1974,6 +2999,100 @@ Converts a string representation of an int (e.g., "2012") to an actual int.
 
 <!----------------------------------------------------------------------------->
 
+###int64_t ofToInt64(&intString)
+
+<!--
+_syntax: ofToInt64(&intString)_
+_name: ofToInt64_
+_returns: int64_t_
+_returns_description: _
+_parameters: const string &intString_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Convert a string to a int64_t.
+
+Converts a `std::string` representation of a long integer
+(e.g., `"9223372036854775807"`) to an actual `int64_t`.
+
+
+Parameters:
+intString The string representation of the long integer.
+
+Returns: the long integer represented by the string or 0 on failure.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string ofToLower(&src, &locale)
+
+<!--
+_syntax: ofToLower(&src, &locale)_
+_name: ofToLower_
+_returns: string_
+_returns_description: _
+_parameters: const string &src, const string &locale_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Converts all characters in a string to lowercase.
+
+This function expects a UTF-8 encoded multi-byte string to be passed.
+Resulting strings will be returned as UTF-8 encoded multi-byte strings.
+
+~~~~{.cpp}
+    std::string enthusiasticGreeting = "HELLO, WORLD!";
+    std::string politeGreeting = ofToLower(enthusiasticGreeting);
+    ofLog() << politeGreeting; // Returns "hello, world!"
+~~~~
+
+
+Parameters:
+src The UTF-8 encoded string to convert to lowercase.
+
+Returns: the UTF-8 encoded string as all lowercase characters.
+
+
+
+
+
+_description: _
+
+Converts all characters in the string src to lowercase.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###string ofToString(&value)
 
 <!--
@@ -2201,6 +3320,207 @@ width The width of the value to use when converting to a string.
 fill The character to use when padding the converted string.
 
 Returns: The string representation of the value.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string ofToUpper(&src, &locale)
+
+<!--
+_syntax: ofToUpper(&src, &locale)_
+_name: ofToUpper_
+_returns: string_
+_returns_description: _
+_parameters: const string &src, const string &locale_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Converts all characters in the string to uppercase.
+
+This function expects a UTF-8 encoded multi-byte string to be passed.
+Resulting strings will be returned as UTF-8 encoded multi-byte strings.
+
+~~~~{.cpp}
+    std::string politeGreeting = "Hello, World!";
+    std::string enthusiasticGreeting = ofToUpper(politeGreeting);
+    ofLog() << enthusiasticGreeting; // Returns "HELLO, WORLD!"
+~~~~
+
+
+Parameters:
+src The UTF-8 encoded string to convert to uppercase.
+
+Returns: the UTF-8 encoded string as all uppercase characters.
+
+
+
+
+
+_description: _
+
+Converts all characters in the string src to uppercase.
+
+~~~~{.cpp}
+    string politeGreeting = "Hello, World!";
+    string enthusiasticGreeting = ofToUpper(politeGreeting); 
+    ofLog() << enthusiasticGreeting; // returns "HELLO, WORLD!"
+~~~~
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string ofTrim(&src, &locale)
+
+<!--
+_syntax: ofTrim(&src, &locale)_
+_name: ofTrim_
+_returns: string_
+_returns_description: _
+_parameters: const string &src, const string &locale_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string ofTrimBack(&src, &locale)
+
+<!--
+_syntax: ofTrimBack(&src, &locale)_
+_name: ofTrimBack_
+_returns: string_
+_returns_description: _
+_parameters: const string &src, const string &locale_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string ofTrimFront(&src, &locale)
+
+<!--
+_syntax: ofTrimFront(&src, &locale)_
+_name: ofTrimFront_
+_returns: string_
+_returns_description: _
+_parameters: const string &src, const string &locale_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string ofVAArgsToString(*format)
+
+<!--
+_syntax: ofVAArgsToString(*format)_
+_name: ofVAArgsToString_
+_returns: string_
+_returns_description: _
+_parameters: const char *format_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Convert a variable length argument to a string.
+
+Parameters:
+format a printf-style format string.
+
+Returns: A string representation of the argument list.
 
 
 

@@ -204,42 +204,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void clear()
-
-<!--
-_syntax: clear()_
-_name: clear_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void clear(r, g, b, a = 0)
 
 <!--
@@ -286,6 +250,42 @@ _returns_description: _
 _parameters: float brightness, float a_
 _access: public_
 _version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void clear()
+
+<!--
+_syntax: clear()_
+_name: clear_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -465,7 +465,7 @@ _returns: void_
 _returns_description: _
 _parameters: const ofPath &shape, float x, float y_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0071_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -501,7 +501,7 @@ _returns: void_
 _returns_description: _
 _parameters: const ofMesh &mesh, ofPolyRenderMode renderType_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0071_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -609,7 +609,7 @@ _returns: void_
 _returns_description: _
 _parameters: const ofNode &model_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0071_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -681,7 +681,7 @@ _returns: void_
 _returns_description: _
 _parameters: const ofFloatImage &image, float x, float y, float z, float w, float h, float sx, float sy, float sw, float sh_
 _access: public_
-_version_started: 0071_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -717,7 +717,7 @@ _returns: void_
 _returns_description: _
 _parameters: const ofShortImage &image, float x, float y, float z, float w, float h, float sx, float sy, float sw, float sh_
 _access: public_
-_version_started: 0071_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2120,7 +2120,7 @@ _returns: void_
 _returns_description: _
 _parameters: string text, float x, float y, float z_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -3209,7 +3209,7 @@ _returns: void_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0072_
 _version_deprecated: _
 _summary: _
 _constant: False_

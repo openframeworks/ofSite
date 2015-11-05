@@ -180,7 +180,7 @@ _returns: shared_ptr< ofBaseVideoGrabber >_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 0.9.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -199,7 +199,7 @@ _inlined_description: _
 
 _description: _
 
-
+getGrabber returns a pointer (ofPtr) to the internally running video grabber. Since the ofVideoGrabber object has different potential systems for grabbing (QuickTime, QTKit, DirectShow), this ptr gives you access to the underlying video grabber that's running inside of ofVideoGrabber. Note: use this only if you need low level access to an internal grabbing object, such as to call a specific function.
 
 
 
@@ -396,7 +396,7 @@ _returns: ofPixels &_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 0.9.0_
+_version_started: 006_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -415,7 +415,7 @@ _inlined_description: _
 
 _description: _
 
-
+Returns the pointer to the array of pixels that represents the current frame of live video. the data is stored interleaved as RGB, and in an array which is the size: width*height*3. This function returns a pointer to an unsigned char array -- it's up to the user to deal with this memory correctly. Functions like getWidth() and getHeight() can help.
 
 
 
@@ -1067,7 +1067,7 @@ _returns: void_
 _returns_description: _
 _parameters: shared_ptr< ofBaseVideoGrabber > newGrabber_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1086,7 +1086,7 @@ _inlined_description: _
 
 _description: _
 
-
+This function, similar to getGrabber, allows for low level access to the internal grabber object. This is useful if you want to adjust the internal grabber that ofVideoGrabber is using.
 
 
 

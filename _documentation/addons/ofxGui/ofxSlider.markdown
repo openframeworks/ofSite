@@ -753,7 +753,7 @@ _returns: ofxSlider< Type > *_
 _returns_description: _
 _parameters: ofParameter< Type > _val, float width, float height_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -789,7 +789,7 @@ _returns: ofxSlider< Type > *_
 _returns_description: _
 _parameters: const string &sliderName, Type _val, Type _min, Type _max, float width, float height_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_

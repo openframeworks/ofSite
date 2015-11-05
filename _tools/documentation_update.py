@@ -112,7 +112,7 @@ def parse_variable(documentation_class, clazz, member):
     return var
     
     
-def parse_function(documentation_class, clazz, member):
+def parse_function(documentation_class, clazz, member, already_found, fuzzy=False):
     params = ""
     for arg in member.get_children():
         if arg.kind.is_attribute():
@@ -154,14 +154,15 @@ def parse_function(documentation_class, clazz, member):
     else:
         returns = substitutetype(member.result_type.spelling)
         returns = ("" if returns is None else returns)
-    method = documentation_class.function_by_signature(methodname, returns, params, alternatives)
+    method = documentation_class.function_by_signature(methodname, returns, params, alternatives, already_found, fuzzy)
+    
+    if method is None:
+        return None
     
     if not clazz is None:
         method.static = member.is_static_method()
         method.clazz = documentation_class.name
         method.access = member.access_specifier.name.lower()
-    else:
-        print method.name + (" new" if method.new else "")
     method.returns = returns
     #method.description = method.description.replace("~~~~{.brush: cpp}","~~~~{.cpp}").replace('</pre>',"~~~~")
     method.description = method.description.replace('<p>','').replace('</p>','').replace('<code>','').replace('</code>','').replace('<pre>','')
@@ -173,7 +174,7 @@ def parse_function(documentation_class, clazz, member):
     
     if method.new:
         signature = returns + " " + methodname + "(" + params + ")"
-        print "new: " + signature
+        print ("new " if method.new else "") + signature
         
     return method
 
@@ -210,12 +211,20 @@ def serialize_functionsfile(cursor,filename,is_addon=False):
     functionsfile = getfunctionsfile(filename)
     #print 'new: ' + str(functionsfile.new)
     functions_fromcode = []
-    for function in cursor.get_children():
-        if is_function(function) and str(function.location.file) == cursor.spelling: 
-                function = parse_function(functionsfile, None, function)
-                if function is not None:
-                    functions_fromcode.append(function)
+    functions_for_fuzzy_search = []
+    for member in cursor.get_children():
+        if is_function(member) and str(member.location.file) == cursor.spelling: 
+            function = parse_function(functionsfile, None, member, functions_fromcode)
+            if function is not None:
+                functions_fromcode.append(function)
+            else:
+                functions_for_fuzzy_search.append(member)
     
+    for member in functions_for_fuzzy_search:
+        function = parse_function(functionsfile, None, member, functions_fromcode, True)
+        if function is not None:
+            functions_fromcode.append(function)
+                
     #print "missing functions"
     thisfile_missing_functions = []
     #[f for f in functionsfile.function_list if f not in functions_fromxml.function_list]
@@ -226,7 +235,8 @@ def serialize_functionsfile(cursor,filename,is_addon=False):
             thisfile_missing_functions.append(function)
     
     for function in thisfile_missing_functions:
-        print "removing " + function.name
+        signature = function.returns + " " + function.name + "(" + function.parameters + ")"
+        print "removing " + signature
         functionsfile.function_list.remove(function)
                 
     functionsfile.function_list.sort(key=lambda function: function.name)
@@ -243,6 +253,7 @@ def serialize_class(cursor,is_addon=False, parent=None):
     
     current_variables_list = []
     current_methods_list = []
+    methods_for_fuzzy_search = []
         
     inheritsfrom = []
     for child in clazz.get_children():
@@ -284,10 +295,17 @@ def serialize_class(cursor,is_addon=False, parent=None):
             current_variables_list.append(var)
             #f.write( str(member.type.text) + " " + str(member.name.text) + "\n" )
         elif is_method(member):
-            method = parse_function(documentation_class, clazz, member)
+            method = parse_function(documentation_class, clazz, member, current_methods_list)
             if method is not None:
                 current_methods_list.append(method)
+            else:
+                methods_for_fuzzy_search.append(member)
     
+    for member in methods_for_fuzzy_search:
+        method = parse_function(documentation_class, clazz, member, current_methods_list, True)
+        if method is not None:
+            current_methods_list.append(method)
+                
     class_name_printed = False
     
     for method in documentation_class.function_list:

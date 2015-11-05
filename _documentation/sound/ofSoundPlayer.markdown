@@ -92,7 +92,7 @@ _returns: shared_ptr< ofBaseSoundPlayer >_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 0.9.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -111,7 +111,7 @@ _inlined_description: _
 
 _description: _
 
-
+ofSoundPlayer actually wraps a dynamic instance of a specific sound player for a specific engine, that is, it contains an interface to the sound engine being used to load and playback sounds. This allows you access to the pointer that contains the specific interface.
 
 
 
@@ -696,7 +696,7 @@ _returns: void_
 _returns_description: _
 _parameters: shared_ptr< ofBaseSoundPlayer > newPlayer_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -715,7 +715,12 @@ _inlined_description: _
 
 _description: _
 
+ofSoundPlayer actually wraps a dynamic instance of a sound player, that is, it contains an interface to the sound engine being used to load and playback sounds. If you want to set the interface that your system uses, you can pass an ofPtr to an ofSoundPlayer into the ofSoundPlayer and have the ofSoundPlayer manipulate that one instead.
 
+~~~~{.cpp}
+ofPtr<ofBaseSoundPlayer> soundPtr(new ofOpenALSoundPlayer());
+player.setPlayer(soundPtr);
+~~~~
 
 
 

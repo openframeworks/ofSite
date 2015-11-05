@@ -930,14 +930,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void notifyMouseScrolled(x, y)
+###void notifyMouseScrolled(x, y, scrollX, scrollY)
 
 <!--
-_syntax: notifyMouseScrolled(x, y)_
+_syntax: notifyMouseScrolled(x, y, scrollX, scrollY)_
 _name: notifyMouseScrolled_
 _returns: void_
 _returns_description: _
-_parameters: float x, float y_
+_parameters: int x, int y, float scrollX, float scrollY_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _

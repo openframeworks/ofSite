@@ -43,7 +43,7 @@ _returns: void_
 _returns_description: _
 _parameters: ListenerClass *listener, ListenerMethod method, int prio_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -619,7 +619,7 @@ _returns: _
 _returns_description: _
 _parameters: ofReadOnlyParameter< ParameterType, Friend > &p_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -727,7 +727,7 @@ _returns: _
 _returns_description: _
 _parameters: const string &name, const ParameterType &v, const ParameterType &min, const ParameterType &max_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1411,7 +1411,7 @@ _returns: void_
 _returns_description: _
 _parameters: ListenerClass *listener, ListenerMethod method, int prio_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_

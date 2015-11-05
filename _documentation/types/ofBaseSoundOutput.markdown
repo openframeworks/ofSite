@@ -25,6 +25,43 @@ A base
 
 
 
+###void audioOut(*output, bufferSize, nChannels)
+
+<!--
+_syntax: audioOut(*output, bufferSize, nChannels)_
+_name: audioOut_
+_returns: void_
+_returns_description: _
+_parameters: float *output, int bufferSize, int nChannels_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+\deprecated This legacy method is deprecated and will be removed.
+Use void audioOut(ofSoundBuffer& buffer) instead.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void audioOut(&buffer)
 
 <!--
@@ -34,7 +71,7 @@ _returns: void_
 _returns_description: _
 _parameters: ofSoundBuffer &buffer_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -74,43 +111,6 @@ _returns_description: _
 _parameters: float *output, int bufferSize, int nChannels, int deviceID, unsigned long long tickCount_
 _access: public_
 _version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-\deprecated This legacy method is deprecated and will be removed.
-Use void audioOut(ofSoundBuffer& buffer) instead.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void audioOut(*output, bufferSize, nChannels)
-
-<!--
-_syntax: audioOut(*output, bufferSize, nChannels)_
-_name: audioOut_
-_returns: void_
-_returns_description: _
-_parameters: float *output, int bufferSize, int nChannels_
-_access: public_
-_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_

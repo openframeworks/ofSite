@@ -177,7 +177,7 @@ _returns: _
 _returns_description: _
 _parameters: ofParameter<ofColor_< ColorType>  > value, float width, float height_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -249,7 +249,7 @@ _returns: ofxColorSlider_< ColorType > *_
 _returns_description: _
 _parameters: ofParameter<ofColor_< ColorType>  > value, float width, float height_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -285,7 +285,7 @@ _returns: ofxColorSlider_< ColorType > *_
 _returns_description: _
 _parameters: const string &controlName, const ofColor_< ColorType > &value, const ofColor_< ColorType > &min, const ofColor_< ColorType > &max, float width, float height_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_

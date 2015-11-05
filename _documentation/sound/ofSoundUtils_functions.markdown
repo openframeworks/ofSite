@@ -12,7 +12,6 @@ _advanced: False_
 
 
 
-
 <!----------------------------------------------------------------------------->
 
 ###void ofStereoVolumes(volume, pan, &left, &right)
