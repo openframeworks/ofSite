@@ -802,10 +802,10 @@ Add the vertices, normals, texture coordinates and indices of one mesh onto anot
 
 <!----------------------------------------------------------------------------->
 
-###ofMesh axis(size = 1.0)
+###ofMesh axis(size)
 
 <!--
-_syntax: axis(size = 1.0)_
+_syntax: axis(size)_
 _name: axis_
 _returns: ofMesh_
 _returns_description: _

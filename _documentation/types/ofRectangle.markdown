@@ -2138,10 +2138,10 @@ Note that coordinates on the edge of the ofRectangle are not considered within t
 
 <!----------------------------------------------------------------------------->
 
-###bool inside(p)
+###bool inside(&p)
 
 <!--
-_syntax: inside(p)_
+_syntax: inside(&p)_
 _name: inside_
 _returns: bool_
 _returns_description: _
@@ -2550,10 +2550,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofRectangle(_x, _y, _w, _h)
+### ofRectangle(px, py, w, h)
 
 <!--
-_syntax: ofRectangle(_x, _y, _w, _h)_
+_syntax: ofRectangle(px, py, w, h)_
 _name: ofRectangle_
 _returns: _
 _returns_description: _
@@ -2596,10 +2596,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofRectangle(pos, w, h)
+### ofRectangle(&p, w, h)
 
 <!--
-_syntax: ofRectangle(pos, w, h)_
+_syntax: ofRectangle(&p, w, h)_
 _name: ofRectangle_
 _returns: _
 _returns_description: _
@@ -2644,10 +2644,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofRectangle(&r)
+### ofRectangle(&rect)
 
 <!--
-_syntax: ofRectangle(&r)_
+_syntax: ofRectangle(&rect)_
 _name: ofRectangle_
 _returns: _
 _returns_description: _
@@ -2727,10 +2727,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool operator!=(&r)
+###bool operator!=(&rect)
 
 <!--
-_syntax: operator!=(&r)_
+_syntax: operator!=(&rect)_
 _name: operator!=_
 _returns: bool_
 _returns_description: _
@@ -2769,10 +2769,10 @@ If the two ofRectangles differ in x, y, width, or height, they are considered un
 
 <!----------------------------------------------------------------------------->
 
-###ofRectangle operator+(&point)
+###ofRectangle operator+(&p)
 
 <!--
-_syntax: operator+(&point)_
+_syntax: operator+(&p)_
 _name: operator+_
 _returns: ofRectangle_
 _returns_description: _
@@ -2894,10 +2894,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool operator==(&r)
+###bool operator==(&rect)
 
 <!--
-_syntax: operator==(&r)_
+_syntax: operator==(&rect)_
 _name: operator==_
 _returns: bool_
 _returns_description: _
@@ -3662,10 +3662,10 @@ Sets the x position, y position, width, and height of the ofRectangle.
 
 <!----------------------------------------------------------------------------->
 
-###void set(pos, w, h)
+###void set(&p, w, h)
 
 <!--
-_syntax: set(pos, w, h)_
+_syntax: set(&p, w, h)_
 _name: set_
 _returns: void_
 _returns_description: _
@@ -3842,10 +3842,10 @@ The x and y position passed into the function determine the center point of the 
 
 <!----------------------------------------------------------------------------->
 
-###void setFromCenter(pos, w, h)
+###void setFromCenter(&p, w, h)
 
 <!--
-_syntax: setFromCenter(pos, w, h)_
+_syntax: setFromCenter(&p, w, h)_
 _name: setFromCenter_
 _returns: void_
 _returns_description: _

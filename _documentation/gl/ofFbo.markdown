@@ -105,10 +105,10 @@ This method allows you to render the results of a shading pass to all the textur
 
 <!----------------------------------------------------------------------------->
 
-###void allocate(width, height, internalformat = GL_RGBA, numSamples = 0)
+###void allocate(width, height, internalformat, numSamples = 0)
 
 <!--
-_syntax: allocate(width, height, internalformat = GL_RGBA, numSamples = 0)_
+_syntax: allocate(width, height, internalformat, numSamples = 0)_
 _name: allocate_
 _returns: void_
 _returns_description: _
@@ -456,10 +456,10 @@ The attachment point is the index of the texture that you're going to be referri
 
 <!----------------------------------------------------------------------------->
 
-###void createAndAttachDepthStencilTexture(target, internalformat, format, type, attachment)
+###void createAndAttachDepthStencilTexture(target, internalformat, attachment, transferFormat, transferType)
 
 <!--
-_syntax: createAndAttachDepthStencilTexture(target, internalformat, format, type, attachment)_
+_syntax: createAndAttachDepthStencilTexture(target, internalformat, attachment, transferFormat, transferType)_
 _name: createAndAttachDepthStencilTexture_
 _returns: void_
 _returns_description: _
@@ -1872,10 +1872,10 @@ This allows you set the default texture that your fbo will use. If you're using 
 
 <!----------------------------------------------------------------------------->
 
-###void setUseTexture(bUseTex)
+###void setUseTexture(bool)
 
 <!--
-_syntax: setUseTexture(bUseTex)_
+_syntax: setUseTexture(bool)_
 _name: setUseTexture_
 _returns: void_
 _returns_description: _

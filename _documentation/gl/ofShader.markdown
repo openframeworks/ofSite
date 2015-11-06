@@ -685,10 +685,10 @@ shader.load("dof"); // assumes the shaders are in /data
 
 <!----------------------------------------------------------------------------->
 
-###bool load(vertName, fragName, geomName = "")
+###bool load(vertName, fragName, geomName)
 
 <!--
-_syntax: load(vertName, fragName, geomName = "")_
+_syntax: load(vertName, fragName, geomName)_
 _name: load_
 _returns: bool_
 _returns_description: _
@@ -941,10 +941,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###string parseForIncludes(&source, &sourceDirectoryPath = "")
+###string parseForIncludes(&source, &sourceDirectoryPath)
 
 <!--
-_syntax: parseForIncludes(&source, &sourceDirectoryPath = "")_
+_syntax: parseForIncludes(&source, &sourceDirectoryPath)_
 _name: parseForIncludes_
 _returns: string_
 _returns_description: _
@@ -982,10 +982,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###string parseForIncludes(&source, &included, level = 0, &sourceDirectoryPath = "")
+###string parseForIncludes(&source, &included, level = 0, &sourceDirectoryPath)
 
 <!--
-_syntax: parseForIncludes(&source, &included, level = 0, &sourceDirectoryPath = "")_
+_syntax: parseForIncludes(&source, &included, level = 0, &sourceDirectoryPath)_
 _name: parseForIncludes_
 _returns: string_
 _returns_description: _
@@ -2603,42 +2603,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setUniformTexture(&name, textureTarget, textureID, textureLocation)
-
-<!--
-_syntax: setUniformTexture(&name, textureTarget, textureID, textureLocation)_
-_name: setUniformTexture_
-_returns: void_
-_returns_description: _
-_parameters: const string &name, int textureTarget, GLint textureID, int textureLocation_
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void setUniformTexture(&name, &img, textureLocation)
 
 <!--
@@ -2687,6 +2651,42 @@ _name: setUniformTexture_
 _returns: void_
 _returns_description: _
 _parameters: const string &name, const ofTexture &img, int textureLocation_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setUniformTexture(&name, textureTarget, textureID, textureLocation)
+
+<!--
+_syntax: setUniformTexture(&name, textureTarget, textureID, textureLocation)_
+_name: setUniformTexture_
+_returns: void_
+_returns_description: _
+_parameters: const string &name, int textureTarget, GLint textureID, int textureLocation_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -2787,10 +2787,10 @@ This are more of advanced use function and doesn't need.
 
 <!----------------------------------------------------------------------------->
 
-###bool setupShaderFromSource(type, source, sourceDirectoryPath = "")
+###bool setupShaderFromSource(type, source, sourceDirectoryPath)
 
 <!--
-_syntax: setupShaderFromSource(type, source, sourceDirectoryPath = "")_
+_syntax: setupShaderFromSource(type, source, sourceDirectoryPath)_
 _name: setupShaderFromSource_
 _returns: bool_
 _returns_description: _

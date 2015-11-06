@@ -140,10 +140,10 @@ As you can see this really makes dealing with vectors as easy as dealing with si
 
 
 
-###bool align(&vec, tolerance = 0.0001)
+###bool align(&vec, tolerance = 0.0001f)
 
 <!--
-_syntax: align(&vec, tolerance = 0.0001)_
+_syntax: align(&vec, tolerance = 0.0001f)_
 _name: align_
 _returns: bool_
 _returns_description: _
@@ -190,10 +190,10 @@ ofVec3f v2 = ofVec3f(4, 2, 7);
 
 <!----------------------------------------------------------------------------->
 
-###bool alignRad(&vec, tolerance = 0.0001)
+###bool alignRad(&vec, tolerance = 0.0001f)
 
 <!--
-_syntax: alignRad(&vec, tolerance = 0.0001)_
+_syntax: alignRad(&vec, tolerance = 0.0001f)_
 _name: alignRad_
 _returns: bool_
 _returns_description: _
@@ -1443,10 +1443,10 @@ v1.interpolate( v2, 0.5 ); // v1 is now (9.375, 9.6875, 18.75)
 
 <!----------------------------------------------------------------------------->
 
-###bool isAligned(&vec, tolerance = 0.0001)
+###bool isAligned(&vec, tolerance = 0.0001f)
 
 <!--
-_syntax: isAligned(&vec, tolerance = 0.0001)_
+_syntax: isAligned(&vec, tolerance = 0.0001f)_
 _name: isAligned_
 _returns: bool_
 _returns_description: _
@@ -1481,10 +1481,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool isAlignedRad(&vec, tolerance = 0.0001)
+###bool isAlignedRad(&vec, tolerance = 0.0001f)
 
 <!--
-_syntax: isAlignedRad(&vec, tolerance = 0.0001)_
+_syntax: isAlignedRad(&vec, tolerance = 0.0001f)_
 _name: isAlignedRad_
 _returns: bool_
 _returns_description: _
@@ -1728,10 +1728,10 @@ Map this vector from its default coordinate system -- origin (0,0,0), X directio
 
 <!----------------------------------------------------------------------------->
 
-###bool match(&vec, tolerance = 0.0001)
+###bool match(&vec, tolerance = 0.0001f)
 
 <!--
-_syntax: match(&vec, tolerance = 0.0001)_
+_syntax: match(&vec, tolerance = 0.0001f)_
 _name: match_
 _returns: bool_
 _returns_description: _
@@ -1939,10 +1939,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofVec3f(_x = 0.f, _y = 0.f, _z = 0.f)
+### ofVec3f(x, y, z)
 
 <!--
-_syntax: ofVec3f(_x = 0.f, _y = 0.f, _z = 0.f)_
+_syntax: ofVec3f(x, y, z)_
 _name: ofVec3f_
 _returns: _
 _returns_description: _
@@ -1981,10 +1981,10 @@ ofVec3f v3(0.1, 0.3, -1.5); // v3.x is 0.1, v3.y is 0.3, v3.z is -1.5
 
 <!----------------------------------------------------------------------------->
 
-### ofVec3f(_scalar)
+### ofVec3f(scalar)
 
 <!--
-_syntax: ofVec3f(_scalar)_
+_syntax: ofVec3f(scalar)_
 _name: ofVec3f_
 _returns: _
 _returns_description: _
@@ -3564,10 +3564,10 @@ v1.scale(15); // v1 is now (9, 12), which has length of 15
 
 <!----------------------------------------------------------------------------->
 
-###void set(_x, _y, _z = 0)
+###void set(x, y, z)
 
 <!--
-_syntax: set(_x, _y, _z = 0)_
+_syntax: set(x, y, z)_
 _name: set_
 _returns: void_
 _returns_description: _

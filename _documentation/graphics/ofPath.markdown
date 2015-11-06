@@ -1845,10 +1845,10 @@ Moves the drawing position to p. This means that a subsequent calls to, for inst
 
 <!----------------------------------------------------------------------------->
 
-###void moveTo(x, y, z = 0)
+###void moveTo(x, y, z)
 
 <!--
-_syntax: moveTo(x, y, z = 0)_
+_syntax: moveTo(x, y, z)_
 _name: moveTo_
 _returns: void_
 _returns_description: _
@@ -3074,10 +3074,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void simplify(tolerance = 0.3)
+###void simplify(tolerance = 0.3f)
 
 <!--
-_syntax: simplify(tolerance = 0.3)_
+_syntax: simplify(tolerance = 0.3f)_
 _name: simplify_
 _returns: void_
 _returns_description: _

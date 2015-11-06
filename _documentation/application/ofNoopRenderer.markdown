@@ -204,10 +204,46 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void clear(r, g, b, a = 0)
+###void clear()
 
 <!--
-_syntax: clear(r, g, b, a = 0)_
+_syntax: clear()_
+_name: clear_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void clear(r, g, b, a)
+
+<!--
+_syntax: clear(r, g, b, a)_
 _name: clear_
 _returns: void_
 _returns_description: _
@@ -240,52 +276,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void clear(brightness, a = 0)
+###void clear(brightness, a)
 
 <!--
-_syntax: clear(brightness, a = 0)_
+_syntax: clear(brightness, a)_
 _name: clear_
 _returns: void_
 _returns_description: _
 _parameters: float brightness, float a_
 _access: private_
 _version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void clear()
-
-<!--
-_syntax: clear()_
-_name: clear_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: private_
-_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2544,10 +2544,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void scale(xAmnt, yAmnt, zAmnt = 1)
+###void scale(xAmnt, yAmnt, zAmnt)
 
 <!--
-_syntax: scale(xAmnt, yAmnt, zAmnt = 1)_
+_syntax: scale(xAmnt, yAmnt, zAmnt)_
 _name: scale_
 _returns: void_
 _returns_description: _
@@ -3516,10 +3516,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void translate(x, y, z = 0)
+###void translate(x, y, z)
 
 <!--
-_syntax: translate(x, y, z = 0)_
+_syntax: translate(x, y, z)_
 _name: translate_
 _returns: void_
 _returns_description: _
@@ -3696,10 +3696,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void viewport(x = 0, y = 0, width = 0, height = 0, invertY = true)
+###void viewport(x, y, width, height, invertY = true)
 
 <!--
-_syntax: viewport(x = 0, y = 0, width = 0, height = 0, invertY = true)_
+_syntax: viewport(x, y, width, height, invertY = true)_
 _name: viewport_
 _returns: void_
 _returns_description: _

@@ -1058,10 +1058,10 @@ This only unlocks the mutex if the calling thread had previously locked it, othe
 
 <!----------------------------------------------------------------------------->
 
-###void waitForThread(callStopThread = true, milliseconds = INFINITE_JOIN_TIMEOUT)
+###void waitForThread(callStopThread = true, milliseconds)
 
 <!--
-_syntax: waitForThread(callStopThread = true, milliseconds = INFINITE_JOIN_TIMEOUT)_
+_syntax: waitForThread(callStopThread = true, milliseconds)_
 _name: waitForThread_
 _returns: void_
 _returns_description: _

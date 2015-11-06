@@ -87,10 +87,10 @@ Adds a point using an ofPoint at the end of the ofPolyline.
 
 <!----------------------------------------------------------------------------->
 
-###void addVertex(x, y, z = 0)
+###void addVertex(x, y, z)
 
 <!--
-_syntax: addVertex(x, y, z = 0)_
+_syntax: addVertex(x, y, z)_
 _name: addVertex_
 _returns: void_
 _returns_description: _
@@ -246,10 +246,10 @@ p.addVertices(verts, 5);
 
 <!----------------------------------------------------------------------------->
 
-###void arc(&center, radiusX, radiusY, angleBegin, angleEnd, clockwise, curveResolution = 20)
+###void arc(&center, radiusX, radiusY, angleBegin, angleEnd, clockwise, circleResolution = 20)
 
 <!--
-_syntax: arc(&center, radiusX, radiusY, angleBegin, angleEnd, clockwise, curveResolution = 20)_
+_syntax: arc(&center, radiusX, radiusY, angleBegin, angleEnd, clockwise, circleResolution = 20)_
 _name: arc_
 _returns: void_
 _returns_description: _
@@ -299,10 +299,10 @@ Optionally, you can specify ``circleResolution``, which is the number of line se
 
 <!----------------------------------------------------------------------------->
 
-###void arc(&center, radiusX, radiusY, angleBegin, angleEnd, curveResolution = 20)
+###void arc(&center, radiusX, radiusY, angleBegin, angleEnd, circleResolution = 20)
 
 <!--
-_syntax: arc(&center, radiusX, radiusY, angleBegin, angleEnd, curveResolution = 20)_
+_syntax: arc(&center, radiusX, radiusY, angleBegin, angleEnd, circleResolution = 20)_
 _name: arc_
 _returns: void_
 _returns_description: _
@@ -388,10 +388,10 @@ polyline2.draw();
 
 <!----------------------------------------------------------------------------->
 
-###void arc(x, y, radiusX, radiusY, angleBegin, angleEnd, curveResolution = 20)
+###void arc(x, y, radiusX, radiusY, angleBegin, angleEnd, circleResolution = 20)
 
 <!--
-_syntax: arc(x, y, radiusX, radiusY, angleBegin, angleEnd, curveResolution = 20)_
+_syntax: arc(x, y, radiusX, radiusY, angleBegin, angleEnd, circleResolution = 20)_
 _name: arc_
 _returns: void_
 _returns_description: _
@@ -434,10 +434,10 @@ Optionally, you can specify ``circleResolution``, which is the number of line se
 
 <!----------------------------------------------------------------------------->
 
-###void arc(x, y, z, radiusX, radiusY, angleBegin, angleEnd, curveResolution = 20)
+###void arc(x, y, z, radiusX, radiusY, angleBegin, angleEnd, circleResolution = 20)
 
 <!--
-_syntax: arc(x, y, z, radiusX, radiusY, angleBegin, angleEnd, curveResolution = 20)_
+_syntax: arc(x, y, z, radiusX, radiusY, angleBegin, angleEnd, circleResolution = 20)_
 _name: arc_
 _returns: void_
 _returns_description: _
@@ -480,10 +480,10 @@ Optionally, you can specify ``circleResolution``, which is the number of line se
 
 <!----------------------------------------------------------------------------->
 
-###void arcNegative(&center, radiusX, radiusY, angleBegin, angleEnd, curveResolution = 20)
+###void arcNegative(&center, radiusX, radiusY, angleBegin, angleEnd, circleResolution = 20)
 
 <!--
-_syntax: arcNegative(&center, radiusX, radiusY, angleBegin, angleEnd, curveResolution = 20)_
+_syntax: arcNegative(&center, radiusX, radiusY, angleBegin, angleEnd, circleResolution = 20)_
 _name: arcNegative_
 _returns: void_
 _returns_description: _
@@ -516,10 +516,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void arcNegative(x, y, radiusX, radiusY, angleBegin, angleEnd, curveResolution = 20)
+###void arcNegative(x, y, radiusX, radiusY, angleBegin, angleEnd, circleResolution = 20)
 
 <!--
-_syntax: arcNegative(x, y, radiusX, radiusY, angleBegin, angleEnd, curveResolution = 20)_
+_syntax: arcNegative(x, y, radiusX, radiusY, angleBegin, angleEnd, circleResolution = 20)_
 _name: arcNegative_
 _returns: void_
 _returns_description: _
@@ -552,10 +552,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void arcNegative(x, y, z, radiusX, radiusY, angleBegin, angleEnd, curveResolution = 20)
+###void arcNegative(x, y, z, radiusX, radiusY, angleBegin, angleEnd, circleResolution = 20)
 
 <!--
-_syntax: arcNegative(x, y, z, radiusX, radiusY, angleBegin, angleEnd, curveResolution = 20)_
+_syntax: arcNegative(x, y, z, radiusX, radiusY, angleBegin, angleEnd, circleResolution = 20)_
 _name: arcNegative_
 _returns: void_
 _returns_description: _
@@ -660,10 +660,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void bezierTo(&cp1, &cp2, &to, curveResolution = 16)
+###void bezierTo(&cp1, &cp2, &to, curveResolution = 20)
 
 <!--
-_syntax: bezierTo(&cp1, &cp2, &to, curveResolution = 16)_
+_syntax: bezierTo(&cp1, &cp2, &to, curveResolution = 20)_
 _name: bezierTo_
 _returns: void_
 _returns_description: _
@@ -712,10 +712,10 @@ The control points are shown in yellow.
 
 <!----------------------------------------------------------------------------->
 
-###void bezierTo(cx1, cy1, cx2, cy2, x, y, curveResolution = 16)
+###void bezierTo(cx1, cy1, cx2, cy2, x, y, curveResolution = 20)
 
 <!--
-_syntax: bezierTo(cx1, cy1, cx2, cy2, x, y, curveResolution = 16)_
+_syntax: bezierTo(cx1, cy1, cx2, cy2, x, y, curveResolution = 20)_
 _name: bezierTo_
 _returns: void_
 _returns_description: _
@@ -750,10 +750,10 @@ Creates a cubic bezier line from the current drawing point with the 2 control po
 
 <!----------------------------------------------------------------------------->
 
-###void bezierTo(cx1, cy1, cz1, cx2, cy2, cz2, x, y, z, curveResolution = 16)
+###void bezierTo(cx1, cy1, cz1, cx2, cy2, cz2, x, y, z, curveResolution = 20)
 
 <!--
-_syntax: bezierTo(cx1, cy1, cz1, cx2, cy2, cz2, x, y, z, curveResolution = 16)_
+_syntax: bezierTo(cx1, cy1, cz1, cx2, cy2, cz2, x, y, z, curveResolution = 20)_
 _name: bezierTo_
 _returns: void_
 _returns_description: _
@@ -913,10 +913,10 @@ Closes the ofPolyline, meaning that all the vertices will be linked and can be "
 
 <!----------------------------------------------------------------------------->
 
-###void curveTo(&to, curveResolution = 16)
+###void curveTo(&to, curveResolution = 20)
 
 <!--
-_syntax: curveTo(&to, curveResolution = 16)_
+_syntax: curveTo(&to, curveResolution = 20)_
 _name: curveTo_
 _returns: void_
 _returns_description: _
@@ -1010,10 +1010,10 @@ The oldest point, `v0`, was bumped and everything shifted down.  The sampling oc
 
 <!----------------------------------------------------------------------------->
 
-###void curveTo(x, y, z = 0, curveResolution = 16)
+###void curveTo(x, y, z, curveResolution = 20)
 
 <!--
-_syntax: curveTo(x, y, z = 0, curveResolution = 16)_
+_syntax: curveTo(x, y, z, curveResolution = 20)_
 _name: curveTo_
 _returns: void_
 _returns_description: _
@@ -1417,10 +1417,10 @@ Get the center of the area bounded by the line.
 
 <!----------------------------------------------------------------------------->
 
-###ofPoint getClosestPoint(&target, *nearestIndex = NULL)
+###ofPoint getClosestPoint(&target, *nearestIndex)
 
 <!--
-_syntax: getClosestPoint(&target, *nearestIndex = NULL)_
+_syntax: getClosestPoint(&target, *nearestIndex)_
 _name: getClosestPoint_
 _returns: ofPoint_
 _returns_description: _
@@ -2062,10 +2062,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofPolyline getSmoothed(smoothingSize, smoothingShape = 0)
+###ofPolyline getSmoothed(smoothingSize, smoothingShape)
 
 <!--
-_syntax: getSmoothed(smoothingSize, smoothingShape = 0)_
+_syntax: getSmoothed(smoothingSize, smoothingShape)_
 _name: getSmoothed_
 _returns: ofPolyline_
 _returns_description: _
@@ -2610,10 +2610,10 @@ Add a line from the last point added, or from 0,0 if no point is set, to the poi
 
 <!----------------------------------------------------------------------------->
 
-###void lineTo(x, y, z = 0)
+###void lineTo(x, y, z)
 
 <!--
-_syntax: lineTo(x, y, z = 0)_
+_syntax: lineTo(x, y, z)_
 _name: lineTo_
 _returns: void_
 _returns_description: _
@@ -2824,10 +2824,10 @@ while ( i<bounds.size()) {
 
 <!----------------------------------------------------------------------------->
 
-###void quadBezierTo(cx1, cy1, cz1, cx2, cy2, cz2, x, y, z, curveResolution = 16)
+###void quadBezierTo(cx1, cy1, cz1, cx2, cy2, cz2, x, y, z, curveResolution = 20)
 
 <!--
-_syntax: quadBezierTo(cx1, cy1, cz1, cx2, cy2, cz2, x, y, z, curveResolution = 16)_
+_syntax: quadBezierTo(cx1, cy1, cz1, cx2, cy2, cz2, x, y, z, curveResolution = 20)_
 _name: quadBezierTo_
 _returns: void_
 _returns_description: _
@@ -2866,10 +2866,10 @@ Creates a quadratic bezier line in 3D space from the current drawing point with 
 
 <!----------------------------------------------------------------------------->
 
-###void quadBezierTo(&p1, &p2, &p3, curveResolution = 16)
+###void quadBezierTo(&p1, &p2, &p3, curveResolution = 20)
 
 <!--
-_syntax: quadBezierTo(&p1, &p2, &p3, curveResolution = 16)_
+_syntax: quadBezierTo(&p1, &p2, &p3, curveResolution = 20)_
 _name: quadBezierTo_
 _returns: void_
 _returns_description: _
@@ -2904,10 +2904,10 @@ Creates a quadratic bezier line in 2D space from the current drawing point with 
 
 <!----------------------------------------------------------------------------->
 
-###void quadBezierTo(cx1, cy1, cx2, cy2, x, y, curveResolution = 16)
+###void quadBezierTo(cx1, cy1, cx2, cy2, x, y, curveResolution = 20)
 
 <!--
-_syntax: quadBezierTo(cx1, cy1, cx2, cy2, x, y, curveResolution = 16)_
+_syntax: quadBezierTo(cx1, cy1, cx2, cy2, x, y, curveResolution = 20)_
 _name: quadBezierTo_
 _returns: void_
 _returns_description: _
@@ -3232,10 +3232,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void simplify(tolerance = 0.3)
+###void simplify(tolerance = 0.3f)
 
 <!--
-_syntax: simplify(tolerance = 0.3)_
+_syntax: simplify(tolerance = 0.3f)_
 _name: simplify_
 _returns: void_
 _returns_description: _

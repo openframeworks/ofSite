@@ -286,10 +286,10 @@ See [ofSetLogLevel(logLevel)](./ofLog.html#functions) for more info on log level
 
 <!----------------------------------------------------------------------------->
 
-### ofLog(logLevel)
+### ofLog(level)
 
 <!--
-_syntax: ofLog(logLevel)_
+_syntax: ofLog(level)_
 _name: ofLog_
 _returns: _
 _returns_description: _
@@ -379,10 +379,10 @@ See [ofSetLogLevel()](./ofLog.html#functions) for more info on log levels.
 
 <!----------------------------------------------------------------------------->
 
-### ofLog(logLevel, &message)
+### ofLog(level, &message)
 
 <!--
-_syntax: ofLog(logLevel, &message)_
+_syntax: ofLog(level, &message)_
 _name: ofLog_
 _returns: _
 _returns_description: _

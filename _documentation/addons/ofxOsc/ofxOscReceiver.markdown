@@ -132,10 +132,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool getNextMessage(*)
+###bool getNextMessage(&msg)
 
 <!--
-_syntax: getNextMessage(*)_
+_syntax: getNextMessage(&msg)_
 _name: getNextMessage_
 _returns: bool_
 _returns_description: _

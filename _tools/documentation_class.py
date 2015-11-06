@@ -143,6 +143,8 @@ class DocsClass:
                     if a == len(src_parameters_types)-1 and function.returns == returns:
                         function.new = False
                         function.parameters = parameters
+                        function.syntax = method.syntax
+                        function.returns = method.returns
                         return function
         if fuzzy and len(alternatives)>0:
             alternative_func = self.fuzzy_function_search(name, returns, parameters, alternatives, already_found)

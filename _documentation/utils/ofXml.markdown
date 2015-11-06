@@ -191,10 +191,10 @@ and that would create:
 
 <!----------------------------------------------------------------------------->
 
-###bool addValue(&path, data = T(), createEntirePath = false)
+###bool addValue(&path, data, createEntirePath = false)
 
 <!--
-_syntax: addValue(&path, data = T(), createEntirePath = false)_
+_syntax: addValue(&path, data, createEntirePath = false)_
 _name: addValue_
 _returns: bool_
 _returns_description: _
@@ -1183,10 +1183,10 @@ xml.exists("picture/pictures[2][@id]");
 
 <!----------------------------------------------------------------------------->
 
-###T getValue(&path, returnVal = T())
+###T getValue(&path, returnVal)
 
 <!--
-_syntax: getValue(&path, returnVal = T())_
+_syntax: getValue(&path, returnVal)_
 _name: getValue_
 _returns: T_
 _returns_description: _

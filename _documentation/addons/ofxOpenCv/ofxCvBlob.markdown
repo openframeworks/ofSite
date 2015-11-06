@@ -30,10 +30,10 @@ In the image below you can see two blobs detected in the grayscale image:
 
 
 
-###void draw(x = 0, y = 0)
+###void draw(x, y)
 
 <!--
-_syntax: draw(x = 0, y = 0)_
+_syntax: draw(x, y)_
 _name: draw_
 _returns: void_
 _returns_description: _

@@ -139,10 +139,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofHttpResponse handleRequest(request)
+###ofHttpResponse handleRequest(&request)
 
 <!--
-_syntax: handleRequest(request)_
+_syntax: handleRequest(&request)_
 _name: handleRequest_
 _returns: ofHttpResponse_
 _returns_description: _

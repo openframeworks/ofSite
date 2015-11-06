@@ -596,10 +596,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool match(&vec, tolerance = 0.0001)
+###bool match(&vec, tolerance = 0.0001f)
 
 <!--
-_syntax: match(&vec, tolerance = 0.0001)_
+_syntax: match(&vec, tolerance = 0.0001f)_
 _name: match_
 _returns: bool_
 _returns_description: _
@@ -787,10 +787,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofVec4f(_x = 0.f, _y = 0.f, _z = 0.f, _w = 0.f)
+### ofVec4f(_x, _y, _z, _w)
 
 <!--
-_syntax: ofVec4f(_x = 0.f, _y = 0.f, _z = 0.f, _w = 0.f)_
+_syntax: ofVec4f(_x, _y, _z, _w)_
 _name: ofVec4f_
 _returns: _
 _returns_description: _

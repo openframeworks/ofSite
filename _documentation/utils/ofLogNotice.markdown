@@ -27,10 +27,10 @@ Example: `ofLogNotice("Log message")`.
 
 
 
-### ofLogNotice(&module = "OF")
+### ofLogNotice(&module)
 
 <!--
-_syntax: ofLogNotice(&module = "OF")_
+_syntax: ofLogNotice(&module)_
 _name: ofLogNotice_
 _returns: _
 _returns_description: _

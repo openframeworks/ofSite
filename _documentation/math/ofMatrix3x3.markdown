@@ -224,10 +224,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofMatrix3x3(_a = 0.0, _b = 0.0, _c = 0.0, _d = 0.0, _e = 0.0, _f = 0.0, _g = 0.0, _h = 0.0, _i = 0.0)
+### ofMatrix3x3(_a, _b, _c, _d, _e, _f, _g, _h, _i)
 
 <!--
-_syntax: ofMatrix3x3(_a = 0.0, _b = 0.0, _c = 0.0, _d = 0.0, _e = 0.0, _f = 0.0, _g = 0.0, _h = 0.0, _i = 0.0)_
+_syntax: ofMatrix3x3(_a, _b, _c, _d, _e, _f, _g, _h, _i)_
 _name: ofMatrix3x3_
 _returns: _
 _returns_description: _

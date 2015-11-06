@@ -529,10 +529,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setParent(*_parent)
+###void setParent(&_parent)
 
 <!--
-_syntax: setParent(*_parent)_
+_syntax: setParent(&_parent)_
 _name: setParent_
 _returns: void_
 _returns_description: _

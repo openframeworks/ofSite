@@ -27,10 +27,10 @@ Example: `ofLogFatalError("Log message")`.
 
 
 
-### ofLogFatalError(&module = "OF")
+### ofLogFatalError(&module)
 
 <!--
-_syntax: ofLogFatalError(&module = "OF")_
+_syntax: ofLogFatalError(&module)_
 _name: ofLogFatalError_
 _returns: _
 _returns_description: _

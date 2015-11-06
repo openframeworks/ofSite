@@ -113,10 +113,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void allocate(w, h, internalGlDataType)
+###void allocate(w, h, glInternalFormat)
 
 <!--
-_syntax: allocate(w, h, internalGlDataType)_
+_syntax: allocate(w, h, glInternalFormat)_
 _name: allocate_
 _returns: void_
 _returns_description: _
@@ -216,10 +216,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void allocate(w, h, internalGlDataType, bUseARBExtention)
+###void allocate(w, h, glInternalFormat, bUseARBExtension)
 
 <!--
-_syntax: allocate(w, h, internalGlDataType, bUseARBExtention)_
+_syntax: allocate(w, h, glInternalFormat, bUseARBExtension)_
 _name: allocate_
 _returns: void_
 _returns_description: _
@@ -268,10 +268,10 @@ You need to allocate the texture before drawing it or loading data into it, lets
 
 <!----------------------------------------------------------------------------->
 
-###void allocate(w, h, glInternalFormat, bUseARBExtention, glFormat, pixelType)
+###void allocate(w, h, glInternalFormat, bUseARBExtension, glFormat, pixelType)
 
 <!--
-_syntax: allocate(w, h, glInternalFormat, bUseARBExtention, glFormat, pixelType)_
+_syntax: allocate(w, h, glInternalFormat, bUseARBExtension, glFormat, pixelType)_
 _name: allocate_
 _returns: void_
 _returns_description: _
@@ -356,10 +356,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void allocate(&pix, bUseARBExtention)
+###void allocate(&pix, bUseARBExtension)
 
 <!--
-_syntax: allocate(&pix, bUseARBExtention)_
+_syntax: allocate(&pix, bUseARBExtension)_
 _name: allocate_
 _returns: void_
 _returns_description: _
@@ -447,10 +447,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void allocate(&pix, bUseARBExtention)
+###void allocate(&pix, bUseARBExtension)
 
 <!--
-_syntax: allocate(&pix, bUseARBExtention)_
+_syntax: allocate(&pix, bUseARBExtension)_
 _name: allocate_
 _returns: void_
 _returns_description: _
@@ -534,10 +534,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void allocate(&pix, bUseARBExtention)
+###void allocate(&pix, bUseARBExtension)
 
 <!--
-_syntax: allocate(&pix, bUseARBExtention)_
+_syntax: allocate(&pix, bUseARBExtension)_
 _name: allocate_
 _returns: void_
 _returns_description: _
@@ -1105,10 +1105,10 @@ Draws the texture at the x, y, z in 3D space with the width and height at w,h.
 
 <!----------------------------------------------------------------------------->
 
-###void draw(p1, p2, p3, p4)
+###void draw(&p1, &p2, &p3, &p4)
 
 <!--
-_syntax: draw(p1, p2, p3, p4)_
+_syntax: draw(&p1, &p2, &p3, &p4)_
 _name: draw_
 _returns: void_
 _returns_description: _
@@ -1967,10 +1967,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void loadData(*data, w, h, glFormat)
+###void loadData(data, w, h, glFormat)
 
 <!--
-_syntax: loadData(*data, w, h, glFormat)_
+_syntax: loadData(data, w, h, glFormat)_
 _name: loadData_
 _returns: void_
 _returns_description: _
@@ -2354,54 +2354,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void loadData(*data, w, h, glFormat, glType)
-
-<!--
-_syntax: loadData(*data, w, h, glFormat, glType)_
-_name: loadData_
-_returns: void_
-_returns_description: _
-_parameters: const void *data, int w, int h, int glFormat, int glType_
-_access: protected_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Load byte pixel data.
-
-glFormat can be different to the internal format of the texture on each
-load, i.e. we can upload GL_BGRA pixels into a GL_RGBA texture but the
-number of channels need to match according to the OpenGL standard.
-
-
-Parameters:
-data Pointer to byte pixel data. Must not be nullptr.
-w Pixel data width.
-h Pixel data height.
-glFormat GL pixel type: GL_RGBA, GL_LUMINANCE, etc.
-glType the OpenGL type of the data.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void loadData(&buffer, glFormat, glType)
 
 <!--
@@ -2436,6 +2388,54 @@ Parameters:
 buffer The buffer to load.
 glFormat GL pixel type: GL_RGBA, GL_LUMINANCE, etc.
 glType the GL type to load.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void loadData(*data, w, h, glFormat, glType)
+
+<!--
+_syntax: loadData(*data, w, h, glFormat, glType)_
+_name: loadData_
+_returns: void_
+_returns_description: _
+_parameters: const void *data, int w, int h, int glFormat, int glType_
+_access: protected_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Load byte pixel data.
+
+glFormat can be different to the internal format of the texture on each
+load, i.e. we can upload GL_BGRA pixels into a GL_RGBA texture but the
+number of channels need to match according to the OpenGL standard.
+
+
+Parameters:
+data Pointer to byte pixel data. Must not be nullptr.
+w Pixel data width.
+h Pixel data height.
+glFormat GL pixel type: GL_RGBA, GL_LUMINANCE, etc.
+glType the OpenGL type of the data.
 
 
 
@@ -3079,10 +3079,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setTextureMinMagFilter(minFilter, maxFilter)
+###void setTextureMinMagFilter(minFilter, magFilter)
 
 <!--
-_syntax: setTextureMinMagFilter(minFilter, maxFilter)_
+_syntax: setTextureMinMagFilter(minFilter, magFilter)_
 _name: setTextureMinMagFilter_
 _returns: void_
 _returns_description: _

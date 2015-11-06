@@ -120,10 +120,10 @@ As you can see this really makes dealing with vectors as easy as dealing with si
 
 
 
-###bool align(&vec, tolerance = 0.0001)
+###bool align(&vec, tolerance = 0.0001f)
 
 <!--
-_syntax: align(&vec, tolerance = 0.0001)_
+_syntax: align(&vec, tolerance = 0.0001f)_
 _name: align_
 _returns: bool_
 _returns_description: _
@@ -174,10 +174,10 @@ ofVec2f v2 = ofVec2f(4, 2);
 
 <!----------------------------------------------------------------------------->
 
-###bool alignRad(&vec, tolerance = 0.0001)
+###bool alignRad(&vec, tolerance = 0.0001f)
 
 <!--
-_syntax: alignRad(&vec, tolerance = 0.0001)_
+_syntax: alignRad(&vec, tolerance = 0.0001f)_
 _name: alignRad_
 _returns: bool_
 _returns_description: _
@@ -1261,10 +1261,10 @@ v1.interpolate( v2, 0.5 ); // v1 is now (9.375, 9.6875)
 
 <!----------------------------------------------------------------------------->
 
-###bool isAligned(&vec, tolerance = 0.0001)
+###bool isAligned(&vec, tolerance = 0.0001f)
 
 <!--
-_syntax: isAligned(&vec, tolerance = 0.0001)_
+_syntax: isAligned(&vec, tolerance = 0.0001f)_
 _name: isAligned_
 _returns: bool_
 _returns_description: _
@@ -1309,10 +1309,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool isAlignedRad(&vec, tolerance = 0.0001)
+###bool isAlignedRad(&vec, tolerance = 0.0001f)
 
 <!--
-_syntax: isAlignedRad(&vec, tolerance = 0.0001)_
+_syntax: isAlignedRad(&vec, tolerance = 0.0001f)_
 _name: isAlignedRad_
 _returns: bool_
 _returns_description: _
@@ -1566,10 +1566,10 @@ Maps this vector from its default coordinate system -- origin (0,0), X direction
 
 <!----------------------------------------------------------------------------->
 
-###bool match(&vec, tolerance = 0.0001)
+###bool match(&vec, tolerance = 0.0001f)
 
 <!--
-_syntax: match(&vec, tolerance = 0.0001)_
+_syntax: match(&vec, tolerance = 0.0001f)_
 _name: match_
 _returns: bool_
 _returns_description: _
@@ -1780,10 +1780,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofVec2f(_scalar)
+### ofVec2f(scalar)
 
 <!--
-_syntax: ofVec2f(_scalar)_
+_syntax: ofVec2f(scalar)_
 _name: ofVec2f_
 _returns: _
 _returns_description: _
@@ -1816,10 +1816,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofVec2f(_x = 0.f, _y = 0.f)
+### ofVec2f(x, y)
 
 <!--
-_syntax: ofVec2f(_x = 0.f, _y = 0.f)_
+_syntax: ofVec2f(x, y)_
 _name: ofVec2f_
 _returns: _
 _returns_description: _
@@ -3292,10 +3292,10 @@ v1.scale( 15 ); // v1 is now (9, 12), with length 15
 
 <!----------------------------------------------------------------------------->
 
-###void set(_x, _y)
+###void set(x, y)
 
 <!--
-_syntax: set(_x, _y)_
+_syntax: set(x, y)_
 _name: set_
 _returns: void_
 _returns_description: _
@@ -3386,10 +3386,10 @@ v2.set(v1); // v2.x is 40, v2.y is 20
 
 <!----------------------------------------------------------------------------->
 
-###void set(_scalar)
+###void set(scalar)
 
 <!--
-_syntax: set(_scalar)_
+_syntax: set(scalar)_
 _name: set_
 _returns: void_
 _returns_description: _

@@ -384,10 +384,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofxLabel(_label, width = defaultWidth, height = defaultHeight)
+### ofxLabel(_label, width, height)
 
 <!--
-_syntax: ofxLabel(_label, width = defaultWidth, height = defaultHeight)_
+_syntax: ofxLabel(_label, width, height)_
 _name: ofxLabel_
 _returns: _
 _returns_description: _
@@ -600,10 +600,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofxLabel * setup(_label, width = defaultWidth, height = defaultHeight)
+###ofxLabel * setup(_label, width, height)
 
 <!--
-_syntax: setup(_label, width = defaultWidth, height = defaultHeight)_
+_syntax: setup(_label, width, height)_
 _name: setup_
 _returns: ofxLabel *_
 _returns_description: _

@@ -505,42 +505,6 @@ Constructor.
 
 <!----------------------------------------------------------------------------->
 
-### ofBuffer(&text)
-
-<!--
-_syntax: ofBuffer(&text)_
-_name: ofBuffer_
-_returns: _
-_returns_description: _
-_parameters: const string &text_
-_access: public_
-_version_started: 0072_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ### ofBuffer(*buffer, size)
 
 <!--
@@ -575,6 +539,42 @@ Create a buffer with a character array.
 string giantDataString;
 ofBuffer buff(giantDataString.c_str(), giantDataString.size());
 ~~~~
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofBuffer(&text)
+
+<!--
+_syntax: ofBuffer(&text)_
+_name: ofBuffer_
+_returns: _
+_returns_description: _
+_parameters: const string &text_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
 
 
 
@@ -804,42 +804,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void set(&text)
-
-<!--
-_syntax: set(&text)_
-_name: set_
-_returns: void_
-_returns_description: _
-_parameters: const string &text_
-_access: public_
-_version_started: 0072_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void set(*_buffer, _size)
 
 <!--
@@ -875,6 +839,42 @@ string giantDataString;
 ofBuffer buff;
 buff.set(giantDataString.c_str(), giantDataString.size());
 ~~~~
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void set(&text)
+
+<!--
+_syntax: set(&text)_
+_name: set_
+_returns: void_
+_returns_description: _
+_parameters: const string &text_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
 
 
 

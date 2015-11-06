@@ -1166,10 +1166,10 @@ values > 127 will be interpreted as commands.
 
 <!----------------------------------------------------------------------------->
 
-###void sendDigital(pin, value, force)
+###void sendDigital(pin, value, force = false)
 
 <!--
-_syntax: sendDigital(pin, value, force)_
+_syntax: sendDigital(pin, value, force = false)_
 _name: sendDigital_
 _returns: void_
 _returns_description: _
@@ -1391,10 +1391,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void sendPwm(pin, value, force)
+###void sendPwm(pin, value, force = false)
 
 <!--
-_syntax: sendPwm(pin, value, force)_
+_syntax: sendPwm(pin, value, force = false)_
 _name: sendPwm_
 _returns: void_
 _returns_description: _
@@ -1464,10 +1464,10 @@ This will cause your Arduino to reset and boot into the program again.
 
 <!----------------------------------------------------------------------------->
 
-###void sendServo(pin, value, force)
+###void sendServo(pin, value, force = false)
 
 <!--
-_syntax: sendServo(pin, value, force)_
+_syntax: sendServo(pin, value, force = false)_
 _name: sendServo_
 _returns: void_
 _returns_description: _
@@ -1507,10 +1507,10 @@ the pin has to have a servo attached for this to work.
 
 <!----------------------------------------------------------------------------->
 
-###void sendServoAttach(pin, minPulse, maxPulse, angle)
+###void sendServoAttach(pin, minPulse = 544, maxPulse = 2400, angle = 180)
 
 <!--
-_syntax: sendServoAttach(pin, minPulse, maxPulse, angle)_
+_syntax: sendServoAttach(pin, minPulse = 544, maxPulse = 2400, angle = 180)_
 _name: sendServoAttach_
 _returns: void_
 _returns_description: _

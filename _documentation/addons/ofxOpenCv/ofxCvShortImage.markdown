@@ -852,10 +852,10 @@ Resizes the image to the w, h passed in.
 
 <!----------------------------------------------------------------------------->
 
-###void scaleIntoMe(&mom, interpolationMethod = CV_INTER_NN)
+###void scaleIntoMe(&mom, interpolationMethod)
 
 <!--
-_syntax: scaleIntoMe(&mom, interpolationMethod = CV_INTER_NN)_
+_syntax: scaleIntoMe(&mom, interpolationMethod)_
 _name: scaleIntoMe_
 _returns: void_
 _returns_description: _

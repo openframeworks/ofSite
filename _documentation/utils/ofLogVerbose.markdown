@@ -27,10 +27,10 @@ Example: `ofLogVerbose("Log message")`.
 
 
 
-### ofLogVerbose(&module = "OF")
+### ofLogVerbose(&module)
 
 <!--
-_syntax: ofLogVerbose(&module = "OF")_
+_syntax: ofLogVerbose(&module)_
 _name: ofLogVerbose_
 _returns: _
 _returns_description: _

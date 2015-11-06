@@ -494,10 +494,10 @@ mySound.play(); //Adds new copy of sound to channel and plays over currently pla
 
 <!----------------------------------------------------------------------------->
 
-###void setLoop(bLp)
+###void setLoop(loop)
 
 <!--
-_syntax: setLoop(bLp)_
+_syntax: setLoop(loop)_
 _name: setLoop_
 _returns: void_
 _returns_description: _
@@ -541,10 +541,10 @@ mySound.play();
 
 <!----------------------------------------------------------------------------->
 
-###void setMultiPlay(bMp)
+###void setMultiPlay(multiplay)
 
 <!--
-_syntax: setMultiPlay(bMp)_
+_syntax: setMultiPlay(multiplay)_
 _name: setMultiPlay_
 _returns: void_
 _returns_description: _
@@ -590,10 +590,10 @@ mySound.play(); //Adds new copy of sound to channel and plays over currently pla
 
 <!----------------------------------------------------------------------------->
 
-###void setPan(vol)
+###void setPan(pan)
 
 <!--
-_syntax: setPan(vol)_
+_syntax: setPan(pan)_
 _name: setPan_
 _returns: void_
 _returns_description: _
@@ -639,10 +639,10 @@ mySound.setPan(0.0f); //Back to center
 
 <!----------------------------------------------------------------------------->
 
-###void setPaused(bP)
+###void setPaused(paused)
 
 <!--
-_syntax: setPaused(bP)_
+_syntax: setPaused(paused)_
 _name: setPaused_
 _returns: void_
 _returns_description: _
@@ -728,10 +728,10 @@ player.setPlayer(soundPtr);
 
 <!----------------------------------------------------------------------------->
 
-###void setPosition(pct)
+###void setPosition(percent)
 
 <!--
-_syntax: setPosition(pct)_
+_syntax: setPosition(percent)_
 _name: setPosition_
 _returns: void_
 _returns_description: _
@@ -815,10 +815,10 @@ This sets the position of the playhead in milliseconds.
 
 <!----------------------------------------------------------------------------->
 
-###void setSpeed(spd)
+###void setSpeed(speed)
 
 <!--
-_syntax: setSpeed(spd)_
+_syntax: setSpeed(speed)_
 _name: setSpeed_
 _returns: void_
 _returns_description: _

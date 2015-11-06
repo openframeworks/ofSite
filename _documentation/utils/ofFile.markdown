@@ -1046,42 +1046,6 @@ Creates an empty ofFile.
 
 <!----------------------------------------------------------------------------->
 
-### ofFile(&mom)
-
-<!--
-_syntax: ofFile(&mom)_
-_name: ofFile_
-_returns: _
-_returns_description: _
-_parameters: const ofFile &mom_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-Copy constructor for copying one ofFile into another 
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ### ofFile(&path, mode = ReadOnly, binary = true)
 
 <!--
@@ -1120,6 +1084,42 @@ ofFile fileToRead(ofToDataPath("dictionary.txt")); // a file that exists
 ofFile newFile(ofToDataPath("temp.txt"), ofFile::Write); //file doesn't exist yet
 newFile.create(); // now file doesn't exist 
 ~~~~
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofFile(&mom)
+
+<!--
+_syntax: ofFile(&mom)_
+_name: ofFile_
+_returns: _
+_returns_description: _
+_parameters: const ofFile &mom_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+Copy constructor for copying one ofFile into another 
 
 
 
@@ -1636,10 +1636,10 @@ Renames the file with the new file name. If you specify a different path then th
 
 <!----------------------------------------------------------------------------->
 
-###void setExecutable(executable)
+###void setExecutable(executable = true)
 
 <!--
-_syntax: setExecutable(executable)_
+_syntax: setExecutable(executable = true)_
 _name: setExecutable_
 _returns: void_
 _returns_description: _
@@ -1672,10 +1672,10 @@ Toggles the file as executable or not executable.
 
 <!----------------------------------------------------------------------------->
 
-###void setReadOnly(readable)
+###void setReadOnly(readable = true)
 
 <!--
-_syntax: setReadOnly(readable)_
+_syntax: setReadOnly(readable = true)_
 _name: setReadOnly_
 _returns: void_
 _returns_description: _
@@ -1708,10 +1708,10 @@ Toggles the file as readable or not readable.
 
 <!----------------------------------------------------------------------------->
 
-###void setWriteable(writeable)
+###void setWriteable(writeable = true)
 
 <!--
-_syntax: setWriteable(writeable)_
+_syntax: setWriteable(writeable = true)_
 _name: setWriteable_
 _returns: void_
 _returns_description: _

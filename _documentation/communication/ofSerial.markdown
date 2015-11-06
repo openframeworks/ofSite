@@ -225,10 +225,10 @@ drain is only available on OSX and Linux and is very similar to flush(), but blo
 
 <!----------------------------------------------------------------------------->
 
-###void flush(flushIn, flushOut)
+###void flush(flushIn = true, flushOut = true)
 
 <!--
-_syntax: flush(flushIn, flushOut)_
+_syntax: flush(flushIn = true, flushOut = true)_
 _name: flush_
 _returns: void_
 _returns_description: _
@@ -661,10 +661,10 @@ if( mySerial.setup() ){
 
 <!----------------------------------------------------------------------------->
 
-###bool setup(portName,baudrate)
+###bool setup(portName, baudrate)
 
 <!--
-_syntax: setup(portName,baudrate)_
+_syntax: setup(portName, baudrate)_
 _name: setup_
 _returns: bool_
 _returns_description: _
@@ -721,10 +721,10 @@ mySerial.setup("COM4", 57600);
 
 <!----------------------------------------------------------------------------->
 
-###bool setup(deviceNumber,baudrate)
+###bool setup(deviceNumber, baudrate)
 
 <!--
-_syntax: setup(deviceNumber,baudrate)_
+_syntax: setup(deviceNumber, baudrate)_
 _name: setup_
 _returns: bool_
 _returns_description: _

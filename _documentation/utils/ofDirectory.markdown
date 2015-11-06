@@ -1615,10 +1615,10 @@ Resets the current directory. Equivalent to close().
 
 <!----------------------------------------------------------------------------->
 
-###void setExecutable(executable)
+###void setExecutable(executable = true)
 
 <!--
-_syntax: setExecutable(executable)_
+_syntax: setExecutable(executable = true)_
 _name: setExecutable_
 _returns: void_
 _returns_description: _
@@ -1651,10 +1651,10 @@ Enables or disables execution on the current open directory. If the directory is
 
 <!----------------------------------------------------------------------------->
 
-###void setReadOnly(readable)
+###void setReadOnly(readable = true)
 
 <!--
-_syntax: setReadOnly(readable)_
+_syntax: setReadOnly(readable = true)_
 _name: setReadOnly_
 _returns: void_
 _returns_description: _
@@ -1723,10 +1723,10 @@ Sets whether or not the call to listDir() will return hidden files.
 
 <!----------------------------------------------------------------------------->
 
-###void setWriteable(writeable)
+###void setWriteable(writeable = true)
 
 <!--
-_syntax: setWriteable(writeable)_
+_syntax: setWriteable(writeable = true)_
 _name: setWriteable_
 _returns: void_
 _returns_description: _

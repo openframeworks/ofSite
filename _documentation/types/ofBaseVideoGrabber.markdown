@@ -224,10 +224,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setDeviceID(_deviceID)
+###void setDeviceID(deviceID)
 
 <!--
-_syntax: setDeviceID(_deviceID)_
+_syntax: setDeviceID(deviceID)_
 _name: setDeviceID_
 _returns: void_
 _returns_description: _

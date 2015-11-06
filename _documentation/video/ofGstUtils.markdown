@@ -1032,10 +1032,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool setPipelineWithSink(pipeline, sinkname = "sink", isStream = false)
+###bool setPipelineWithSink(pipeline, sinkname, isStream = false)
 
 <!--
-_syntax: setPipelineWithSink(pipeline, sinkname = "sink", isStream = false)_
+_syntax: setPipelineWithSink(pipeline, sinkname, isStream = false)_
 _name: setPipelineWithSink_
 _returns: bool_
 _returns_description: _

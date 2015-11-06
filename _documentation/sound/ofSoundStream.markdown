@@ -563,10 +563,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setInput(*soundInput)
+###void setInput(&soundInput)
 
 <!--
-_syntax: setInput(*soundInput)_
+_syntax: setInput(&soundInput)_
 _name: setInput_
 _returns: void_
 _returns_description: _
@@ -599,10 +599,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setInput(*soundInput)
+###void setInput(&soundInput)
 
 <!--
-_syntax: setInput(*soundInput)_
+_syntax: setInput(&soundInput)_
 _name: setInput_
 _returns: void_
 _returns_description: _
@@ -635,10 +635,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setOutput(*soundOutput)
+###void setOutput(&soundOutput)
 
 <!--
-_syntax: setOutput(*soundOutput)_
+_syntax: setOutput(&soundOutput)_
 _name: setOutput_
 _returns: void_
 _returns_description: _
@@ -671,10 +671,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setOutput(*soundOutput)
+###void setOutput(&soundOutput)
 
 <!--
-_syntax: setOutput(*soundOutput)_
+_syntax: setOutput(&soundOutput)_
 _name: setOutput_
 _returns: void_
 _returns_description: _

@@ -1802,10 +1802,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool loadModel(modelName, optimize = true)
+###bool loadModel(modelName, optimize = false)
 
 <!--
-_syntax: loadModel(modelName, optimize = true)_
+_syntax: loadModel(modelName, optimize = false)_
 _name: loadModel_
 _returns: bool_
 _returns_description: _
@@ -1838,10 +1838,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool loadModel(&buffer, optimize = true, *extension = "")
+###bool loadModel(&buffer, optimize = false, *extension)
 
 <!--
-_syntax: loadModel(&buffer, optimize = true, *extension = "")_
+_syntax: loadModel(&buffer, optimize = false, *extension)_
 _name: loadModel_
 _returns: bool_
 _returns_description: _

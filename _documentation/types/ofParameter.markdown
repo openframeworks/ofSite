@@ -466,10 +466,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void makeReferenceTo(mom)
+###void makeReferenceTo(&mom)
 
 <!--
-_syntax: makeReferenceTo(mom)_
+_syntax: makeReferenceTo(&mom)_
 _name: makeReferenceTo_
 _returns: void_
 _returns_description: _

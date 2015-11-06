@@ -165,42 +165,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void customDraw()
-
-<!--
-_syntax: customDraw()_
-_name: customDraw_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-If you extend ofNode and wish to change the way it draws, extend this.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void customDraw(*renderer)
 
 <!--
@@ -232,6 +196,42 @@ renderer
 _description: _
 
 
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void customDraw()
+
+<!--
+_syntax: customDraw()_
+_name: customDraw_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+If you extend ofNode and wish to change the way it draws, extend this.
 
 
 
@@ -1401,42 +1401,6 @@ Classes extending ofNode can override these methods to get notified when the sca
 
 <!----------------------------------------------------------------------------->
 
-###void orbit(longitude, latitude, radius, &centerNode)
-
-<!--
-_syntax: orbit(longitude, latitude, radius, &centerNode)_
-_name: orbit_
-_returns: void_
-_returns_description: _
-_parameters: float longitude, float latitude, float radius, ofNode &centerNode_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-Orbit object around target at radius.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void orbit(longitude, latitude, radius, &centerPoint)
 
 <!--
@@ -1458,6 +1422,42 @@ _advanced: False_
 _inlined_description: _
 
 Orbit object around target at radius
+
+
+
+
+
+_description: _
+
+Orbit object around target at radius.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void orbit(longitude, latitude, radius, &centerNode)
+
+<!--
+_syntax: orbit(longitude, latitude, radius, &centerNode)_
+_name: orbit_
+_returns: void_
+_returns_description: _
+_parameters: float longitude, float latitude, float radius, ofNode &centerNode_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
 
 
 

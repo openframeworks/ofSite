@@ -2076,10 +2076,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setAttributeData(location, *vert0x, numCoords, total, usage, stride = sizeof(float))
+###void setAttributeData(location, *vert0x, numCoords, total, usage, stride = 0)
 
 <!--
-_syntax: setAttributeData(location, *vert0x, numCoords, total, usage, stride = sizeof(float))_
+_syntax: setAttributeData(location, *vert0x, numCoords, total, usage, stride = 0)_
 _name: setAttributeData_
 _returns: void_
 _returns_description: _

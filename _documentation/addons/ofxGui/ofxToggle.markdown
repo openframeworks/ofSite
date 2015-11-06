@@ -348,10 +348,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofxToggle(_bVal, width = defaultWidth, height = defaultHeight)
+### ofxToggle(_bVal, width, height)
 
 <!--
-_syntax: ofxToggle(_bVal, width = defaultWidth, height = defaultHeight)_
+_syntax: ofxToggle(_bVal, width, height)_
 _name: ofxToggle_
 _returns: _
 _returns_description: _
@@ -528,10 +528,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofxToggle * setup(_bVal, width = defaultWidth, height = defaultHeight)
+###ofxToggle * setup(_bVal, width, height)
 
 <!--
-_syntax: setup(_bVal, width = defaultWidth, height = defaultHeight)_
+_syntax: setup(_bVal, width, height)_
 _name: setup_
 _returns: ofxToggle *_
 _returns_description: _

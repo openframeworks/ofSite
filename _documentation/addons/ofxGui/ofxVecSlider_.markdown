@@ -168,10 +168,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofxVecSlider_(value, width = defaultWidth, height = defaultHeight)
+### ofxVecSlider_(value, width, height)
 
 <!--
-_syntax: ofxVecSlider_(value, width = defaultWidth, height = defaultHeight)_
+_syntax: ofxVecSlider_(value, width, height)_
 _name: ofxVecSlider__
 _returns: _
 _returns_description: _

@@ -240,10 +240,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofColor_< PixelType > fromHex(hexColor, alpha = limit())
+###ofColor_< PixelType > fromHex(hexColor, alpha)
 
 <!--
-_syntax: fromHex(hexColor, alpha = limit())_
+_syntax: fromHex(hexColor, alpha)_
 _name: fromHex_
 _returns: ofColor_< PixelType >_
 _returns_description: _
@@ -296,10 +296,10 @@ ofColor c = ofColor::fromHex(0xFFFF00); // c is yellow
 
 <!----------------------------------------------------------------------------->
 
-###ofColor_< PixelType > fromHsb(hue, saturation, brightness, alpha = limit())
+###ofColor_< PixelType > fromHsb(hue, saturation, brightness, alpha)
 
 <!--
-_syntax: fromHsb(hue, saturation, brightness, alpha = limit())_
+_syntax: fromHsb(hue, saturation, brightness, alpha)_
 _name: fromHsb_
 _returns: ofColor_< PixelType >_
 _returns_description: _
@@ -1141,10 +1141,10 @@ ofSetColor( c ); // draw color is now white
 
 <!----------------------------------------------------------------------------->
 
-### ofColor_(_r, _g, _b, _a = limit())
+### ofColor_(red, green, blue, alpha)
 
 <!--
-_syntax: ofColor_(_r, _g, _b, _a = limit())_
+_syntax: ofColor_(red, green, blue, alpha)_
 _name: ofColor__
 _returns: _
 _returns_description: _
@@ -1197,10 +1197,10 @@ ofColor c2(255, 0, 0, 128); // red with 50% alpha.
 
 <!----------------------------------------------------------------------------->
 
-### ofColor_(gray, _a = limit())
+### ofColor_(gray, alpha)
 
 <!--
-_syntax: ofColor_(gray, _a = limit())_
+_syntax: ofColor_(gray, alpha)_
 _name: ofColor__
 _returns: _
 _returns_description: _
@@ -1309,10 +1309,10 @@ float g = c2.g; // g is now 0.5
 
 <!----------------------------------------------------------------------------->
 
-### ofColor_(&color, _a)
+### ofColor_(&color, alpha)
 
 <!--
-_syntax: ofColor_(&color, _a)_
+_syntax: ofColor_(&color, alpha)_
 _name: ofColor__
 _returns: _
 _returns_description: _
@@ -1445,10 +1445,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofColor_< PixelType > operator*(&val)
+###ofColor_< PixelType > operator*(&value)
 
 <!--
-_syntax: operator*(&val)_
+_syntax: operator*(&value)_
 _name: operator*_
 _returns: ofColor_< PixelType >_
 _returns_description: _
@@ -1540,10 +1540,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofColor_< PixelType > & operator*=(&val)
+###ofColor_< PixelType > & operator*=(&value)
 
 <!--
-_syntax: operator*=(&val)_
+_syntax: operator*=(&value)_
 _name: operator*=_
 _returns: ofColor_< PixelType > &_
 _returns_description: _
@@ -1634,10 +1634,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofColor_< PixelType > operator+(&val)
+###ofColor_< PixelType > operator+(&color)
 
 <!--
-_syntax: operator+(&val)_
+_syntax: operator+(&color)_
 _name: operator+_
 _returns: ofColor_< PixelType >_
 _returns_description: _
@@ -1728,10 +1728,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofColor_< PixelType > & operator+=(&val)
+###ofColor_< PixelType > & operator+=(&color)
 
 <!--
-_syntax: operator+=(&val)_
+_syntax: operator+=(&color)_
 _name: operator+=_
 _returns: ofColor_< PixelType > &_
 _returns_description: _
@@ -1823,10 +1823,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofColor_< PixelType > operator-(&val)
+###ofColor_< PixelType > operator-(&value)
 
 <!--
-_syntax: operator-(&val)_
+_syntax: operator-(&value)_
 _name: operator-_
 _returns: ofColor_< PixelType >_
 _returns_description: _
@@ -1914,10 +1914,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofColor_< PixelType > & operator-=(&val)
+###ofColor_< PixelType > & operator-=(&color)
 
 <!--
-_syntax: operator-=(&val)_
+_syntax: operator-=(&color)_
 _name: operator-=_
 _returns: ofColor_< PixelType > &_
 _returns_description: _
@@ -2008,10 +2008,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofColor_< PixelType > operator/(&val)
+###ofColor_< PixelType > operator/(&value)
 
 <!--
-_syntax: operator/(&val)_
+_syntax: operator/(&value)_
 _name: operator/_
 _returns: ofColor_< PixelType >_
 _returns_description: _
@@ -2099,10 +2099,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofColor_< PixelType > & operator/=(&val)
+###ofColor_< PixelType > & operator/=(&value)
 
 <!--
-_syntax: operator/=(&val)_
+_syntax: operator/=(&value)_
 _name: operator/=_
 _returns: ofColor_< PixelType > &_
 _returns_description: _
@@ -2196,10 +2196,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofColor_< PixelType > & operator=(&val)
+###ofColor_< PixelType > & operator=(&value)
 
 <!--
-_syntax: operator=(&val)_
+_syntax: operator=(&value)_
 _name: operator=_
 _returns: ofColor_< PixelType > &_
 _returns_description: _
@@ -2394,10 +2394,10 @@ float red = c[0]; // red is 128
 
 <!----------------------------------------------------------------------------->
 
-###void set(_r, _g, _b, _a = limit())
+###void set(red, green, blue, alpha)
 
 <!--
-_syntax: set(_r, _g, _b, _a = limit())_
+_syntax: set(red, green, blue, alpha)_
 _name: set_
 _returns: void_
 _returns_description: _
@@ -2451,10 +2451,10 @@ c.set(0, 255, 0); // and now green
 
 <!----------------------------------------------------------------------------->
 
-###void set(_gray, _a = limit())
+###void set(gray, alpha)
 
 <!--
-_syntax: set(_gray, _a = limit())_
+_syntax: set(gray, alpha)_
 _name: set_
 _returns: void_
 _returns_description: _
@@ -2601,10 +2601,10 @@ Refer the [discussion of HSB](#HSB) above.
 
 <!----------------------------------------------------------------------------->
 
-###void setHex(hexColor, alpha = limit())
+###void setHex(hexColor, alpha)
 
 <!--
-_syntax: setHex(hexColor, alpha = limit())_
+_syntax: setHex(hexColor, alpha)_
 _name: setHex_
 _returns: void_
 _returns_description: _

@@ -168,10 +168,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofxAssimpTexture(*texture, texturePath)
+### ofxAssimpTexture(texture, texturePath)
 
 <!--
-_syntax: ofxAssimpTexture(*texture, texturePath)_
+_syntax: ofxAssimpTexture(texture, texturePath)_
 _name: ofxAssimpTexture_
 _returns: _
 _returns_description: _

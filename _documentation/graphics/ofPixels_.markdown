@@ -91,10 +91,10 @@ Allocates space for pixel data of the given width (w), height (h) and number of 
 
 <!----------------------------------------------------------------------------->
 
-###void allocate(w, h, type)
+###void allocate(w, h, pixelFormat)
 
 <!--
-_syntax: allocate(w, h, type)_
+_syntax: allocate(w, h, pixelFormat)_
 _name: allocate_
 _returns: void_
 _returns_description: _
@@ -148,10 +148,10 @@ ofPixelFormat:
 
 <!----------------------------------------------------------------------------->
 
-###void allocate(w, h, type)
+###void allocate(w, h, imageType)
 
 <!--
-_syntax: allocate(w, h, type)_
+_syntax: allocate(w, h, imageType)_
 _name: allocate_
 _returns: void_
 _returns_description: _
@@ -495,10 +495,10 @@ This crops the pixels to a new width and height. As a word of caution this reall
 
 <!----------------------------------------------------------------------------->
 
-###void cropTo(&toPix, x, y, _width, _height)
+###void cropTo(&toPix, x, y, width, height)
 
 <!--
-_syntax: cropTo(&toPix, x, y, _width, _height)_
+_syntax: cropTo(&toPix, x, y, width, height)_
 _name: cropTo_
 _returns: void_
 _returns_description: _
@@ -2472,10 +2472,10 @@ This sets all the pixel data for a single channel, for instance, the Red pixel v
 
 <!----------------------------------------------------------------------------->
 
-###void setColor(x, y, color)
+###void setColor(x, y, &color)
 
 <!--
-_syntax: setColor(x, y, color)_
+_syntax: setColor(x, y, &color)_
 _name: setColor_
 _returns: void_
 _returns_description: _
@@ -2796,16 +2796,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setFromPixels(*newPixels, w, h, type)
+###void setFromPixels(*newPixels, w, h, pixelFormat)
 
 <!--
-_syntax: setFromPixels(*newPixels, w, h, type)_
+_syntax: setFromPixels(*newPixels, w, h, pixelFormat)_
 _name: setFromPixels_
 _returns: void_
 _returns_description: _
-_parameters: const PixelType *newPixels, int w, int h, ofImageType type_
+_parameters: const PixelType *newPixels, int w, int h, ofPixelFormat pixelFormat_
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2832,16 +2832,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setFromPixels(*newPixels, w, h, pixelFormat)
+###void setFromPixels(*newPixels, w, h, type)
 
 <!--
-_syntax: setFromPixels(*newPixels, w, h, pixelFormat)_
+_syntax: setFromPixels(*newPixels, w, h, type)_
 _name: setFromPixels_
 _returns: void_
 _returns_description: _
-_parameters: const PixelType *newPixels, int w, int h, ofPixelFormat pixelFormat_
+_parameters: const PixelType *newPixels, int w, int h, ofImageType type_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_

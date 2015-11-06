@@ -2180,10 +2180,10 @@ myImage.draw(ofGetWidth(), 0);
 
 <!----------------------------------------------------------------------------->
 
-###void setColor(x, y, color)
+###void setColor(x, y, &color)
 
 <!--
-_syntax: setColor(x, y, color)_
+_syntax: setColor(x, y, &color)_
 _name: setColor_
 _returns: void_
 _returns_description: _

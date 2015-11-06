@@ -132,15 +132,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofxAndroidCircBuffer(_size = 0, &init_val = Content())
+### ofxAndroidCircBuffer(&)
 
 <!--
-_syntax: ofxAndroidCircBuffer(_size = 0, &init_val = Content())_
+_syntax: ofxAndroidCircBuffer(&)_
 _name: ofxAndroidCircBuffer_
 _returns: _
 _returns_description: _
-_parameters: int _size=0, const Content &init_val_
-_access: public_
+_parameters: const ofxAndroidCircBuffer< Content > &_
+_access: private_
 _version_started: 007_
 _version_deprecated: _
 _summary: _
@@ -168,15 +168,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofxAndroidCircBuffer(&)
+### ofxAndroidCircBuffer(_size = 0, &init_val)
 
 <!--
-_syntax: ofxAndroidCircBuffer(&)_
+_syntax: ofxAndroidCircBuffer(_size = 0, &init_val)_
 _name: ofxAndroidCircBuffer_
 _returns: _
 _returns_description: _
-_parameters: const ofxAndroidCircBuffer< Content > &_
-_access: private_
+_parameters: int _size=0, const Content &init_val_
+_access: public_
 _version_started: 007_
 _version_deprecated: _
 _summary: _
@@ -240,10 +240,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###Content read(&default_c = Content())
+###Content read(&default_c)
 
 <!--
-_syntax: read(&default_c = Content())_
+_syntax: read(&default_c)_
 _name: read_
 _returns: Content_
 _returns_description: _
@@ -276,10 +276,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setup(_size, &init_val = Content())
+###void setup(_size, &init_val)
 
 <!--
-_syntax: setup(_size, &init_val = Content())_
+_syntax: setup(_size, &init_val)_
 _name: setup_
 _returns: void_
 _returns_description: _

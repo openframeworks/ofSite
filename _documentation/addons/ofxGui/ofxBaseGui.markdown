@@ -1860,14 +1860,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setPosition(x, y)
+###void setPosition(&p)
 
 <!--
-_syntax: setPosition(x, y)_
+_syntax: setPosition(&p)_
 _name: setPosition_
 _returns: void_
 _returns_description: _
-_parameters: float x, float y_
+_parameters: const ofPoint &p_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -1896,14 +1896,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setPosition(&p)
+###void setPosition(x, y)
 
 <!--
-_syntax: setPosition(&p)_
+_syntax: setPosition(x, y)_
 _name: setPosition_
 _returns: void_
 _returns_description: _
-_parameters: const ofPoint &p_
+_parameters: float x, float y_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _

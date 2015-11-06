@@ -97,10 +97,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void log(logLevel, &module, *format, args)
+###void log(level, &module, *format, args)
 
 <!--
-_syntax: log(logLevel, &module, *format, args)_
+_syntax: log(level, &module, *format, args)_
 _name: log_
 _returns: void_
 _returns_description: _

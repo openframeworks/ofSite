@@ -456,10 +456,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofxSlider(_val, width = defaultWidth, height = defaultHeight)
+### ofxSlider(_val, width, height)
 
 <!--
-_syntax: ofxSlider(_val, width = defaultWidth, height = defaultHeight)_
+_syntax: ofxSlider(_val, width, height)_
 _name: ofxSlider_
 _returns: _
 _returns_description: _

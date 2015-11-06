@@ -1069,16 +1069,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### of3dPrimitive(&mom)
+### of3dPrimitive(&mesh)
 
 <!--
-_syntax: of3dPrimitive(&mom)_
+_syntax: of3dPrimitive(&mesh)_
 _name: of3dPrimitive_
 _returns: _
 _returns_description: _
-_parameters: const of3dPrimitive &mom_
+_parameters: const ofMesh &mesh_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1105,16 +1105,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### of3dPrimitive(&mesh)
+### of3dPrimitive(&mom)
 
 <!--
-_syntax: of3dPrimitive(&mesh)_
+_syntax: of3dPrimitive(&mom)_
 _name: of3dPrimitive_
 _returns: _
 _returns_description: _
-_parameters: const ofMesh &mesh_
+_parameters: const of3dPrimitive &mom_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_

@@ -33,10 +33,10 @@ It has a few default controls built into it:
 
 
 
-###void begin(viewport = ofGetCurrentViewport())
+###void begin(viewport)
 
 <!--
-_syntax: begin(viewport = ofGetCurrentViewport())_
+_syntax: begin(viewport)_
 _name: begin_
 _returns: void_
 _returns_description: _

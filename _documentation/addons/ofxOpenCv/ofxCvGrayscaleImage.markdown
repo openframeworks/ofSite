@@ -576,6 +576,46 @@ Copy constructor, allows you copy one ofxCvGrayscaleImage into another.
 
 <!----------------------------------------------------------------------------->
 
+###void operator=(&_pixels)
+
+<!--
+_syntax: operator=(&_pixels)_
+_name: operator=_
+_returns: void_
+_returns_description: _
+_parameters: const ofPixels &_pixels_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+Copies a IplImage into a ofxCvGrayscaleImage using the = symbol.
+
+~~~~{.cpp}
+grayImage = iplImage; // make sure that the dimensions and ROI match
+~~~~
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void operator=(&mom)
 
 <!--
@@ -736,46 +776,6 @@ grayImage = shortColorImage; // make sure that the dimensions and ROI match
 
 <!----------------------------------------------------------------------------->
 
-###void operator=(&_pixels)
-
-<!--
-_syntax: operator=(&_pixels)_
-_name: operator=_
-_returns: void_
-_returns_description: _
-_parameters: const ofPixels &_pixels_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-Copies a IplImage into a ofxCvGrayscaleImage using the = symbol.
-
-~~~~{.cpp}
-grayImage = iplImage; // make sure that the dimensions and ROI match
-~~~~
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void resize(w, h)
 
 <!--
@@ -812,10 +812,10 @@ Resizes the image to the w, h passed in.
 
 <!----------------------------------------------------------------------------->
 
-###void scaleIntoMe(&mom, interpolationMethod = CV_INTER_NN)
+###void scaleIntoMe(&mom, interpolationMethod)
 
 <!--
-_syntax: scaleIntoMe(&mom, interpolationMethod = CV_INTER_NN)_
+_syntax: scaleIntoMe(&mom, interpolationMethod)_
 _name: scaleIntoMe_
 _returns: void_
 _returns_description: _

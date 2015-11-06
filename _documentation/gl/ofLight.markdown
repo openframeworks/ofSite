@@ -944,10 +944,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setAttenuation(constant = 2.f, linear = 1.f, quadratic = 0.5f)
+###void setAttenuation(constant = 1.f, linear = 0.f, quadratic = 0.f)
 
 <!--
-_syntax: setAttenuation(constant = 2.f, linear = 1.f, quadratic = 0.5f)_
+_syntax: setAttenuation(constant = 1.f, linear = 0.f, quadratic = 0.f)_
 _name: setAttenuation_
 _returns: void_
 _returns_description: _

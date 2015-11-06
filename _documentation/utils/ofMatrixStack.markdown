@@ -1068,10 +1068,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofMatrixStack(&window)
+### ofMatrixStack(*window)
 
 <!--
-_syntax: ofMatrixStack(&window)_
+_syntax: ofMatrixStack(*window)_
 _name: ofMatrixStack_
 _returns: _
 _returns_description: _
@@ -1284,10 +1284,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void scale(xAmnt, yAmnt, zAmnt = 1)
+###void scale(xAmnt, yAmnt, zAmnt)
 
 <!--
-_syntax: scale(xAmnt, yAmnt, zAmnt = 1)_
+_syntax: scale(xAmnt, yAmnt, zAmnt)_
 _name: scale_
 _returns: void_
 _returns_description: _
@@ -1428,10 +1428,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void translate(x, y, z = 0)
+###void translate(x, y, z)
 
 <!--
-_syntax: translate(x, y, z = 0)_
+_syntax: translate(x, y, z)_
 _name: translate_
 _returns: void_
 _returns_description: _
@@ -1500,10 +1500,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void viewport(x = 0, y = 0, width = 0, height = 0, vflip = ofIsVFlipped())
+###void viewport(x, y, width, height, vflip)
 
 <!--
-_syntax: viewport(x = 0, y = 0, width = 0, height = 0, vflip = ofIsVFlipped())_
+_syntax: viewport(x, y, width, height, vflip)_
 _name: viewport_
 _returns: void_
 _returns_description: _

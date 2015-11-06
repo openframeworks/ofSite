@@ -155,9 +155,9 @@ def getclass_list(getTemplated=True):
     
 def sort_function(function):
     if (function.name==function.clazz) or (function.name == "~" + function.clazz):
-        return "0"
+        return "0" + function.name + function.parameters
     else:
-        return function.name
+        return function.name + function.parameters
       
 def getclass(clazz):
     var = DocsVar(0)

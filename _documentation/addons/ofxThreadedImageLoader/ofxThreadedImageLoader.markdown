@@ -24,10 +24,10 @@ _istemplated: False_
 
 
 
-###void loadFromDisk(*image, file)
+###void loadFromDisk(&image, file)
 
 <!--
-_syntax: loadFromDisk(*image, file)_
+_syntax: loadFromDisk(&image, file)_
 _name: loadFromDisk_
 _returns: void_
 _returns_description: _
@@ -60,10 +60,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void loadFromURL(*image, url)
+###void loadFromURL(&image, url)
 
 <!--
-_syntax: loadFromURL(*image, url)_
+_syntax: loadFromURL(&image, url)_
 _name: loadFromURL_
 _returns: void_
 _returns_description: _

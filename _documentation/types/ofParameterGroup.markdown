@@ -26,14 +26,14 @@ and serialization facilities
 
 
 
-###void add(&param)
+###void add(&p, parameters)
 
 <!--
-_syntax: add(&param)_
+_syntax: add(&p, parameters)_
 _name: add_
 _returns: void_
 _returns_description: _
-_parameters: ofAbstractParameter &param_
+_parameters: ofAbstractParameter &p, Args &... parameters_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -62,14 +62,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void add(&p, parameters)
+###void add(&param)
 
 <!--
-_syntax: add(&p, parameters)_
+_syntax: add(&param)_
 _name: add_
 _returns: void_
 _returns_description: _
-_parameters: ofAbstractParameter &p, Args &... parameters_
+_parameters: ofAbstractParameter &param_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -1898,14 +1898,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###string getName()
+###string getName(position)
 
 <!--
-_syntax: getName()_
+_syntax: getName(position)_
 _name: getName_
 _returns: string_
 _returns_description: _
-_parameters: _
+_parameters: size_t position_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -1934,14 +1934,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###string getName(position)
+###string getName()
 
 <!--
-_syntax: getName(position)_
+_syntax: getName()_
 _name: getName_
 _returns: string_
 _returns_description: _
-_parameters: size_t position_
+_parameters: _
 _access: public_
 _version_started: 0073_
 _version_deprecated: _

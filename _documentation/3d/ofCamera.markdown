@@ -31,10 +31,10 @@ The far and near clip planes are the boundaries of what's visible in the camera.
 
 
 
-###void begin(viewport = ofGetCurrentViewport())
+###void begin(viewport)
 
 <!--
-_syntax: begin(viewport = ofGetCurrentViewport())_
+_syntax: begin(viewport)_
 _name: begin_
 _returns: void_
 _returns_description: _
@@ -119,10 +119,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec3f cameraToWorld(CameraXYZ, viewport = ofGetCurrentViewport())
+###ofVec3f cameraToWorld(CameraXYZ, viewport)
 
 <!--
-_syntax: cameraToWorld(CameraXYZ, viewport = ofGetCurrentViewport())_
+_syntax: cameraToWorld(CameraXYZ, viewport)_
 _name: cameraToWorld_
 _returns: ofVec3f_
 _returns_description: _
@@ -423,10 +423,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###float getImagePlaneDistance(viewport = ofGetCurrentViewport())
+###float getImagePlaneDistance(viewport)
 
 <!--
-_syntax: getImagePlaneDistance(viewport = ofGetCurrentViewport())_
+_syntax: getImagePlaneDistance(viewport)_
 _name: getImagePlaneDistance_
 _returns: float_
 _returns_description: _
@@ -544,10 +544,10 @@ Access to the projection matrix.
 
 <!----------------------------------------------------------------------------->
 
-###ofMatrix4x4 getModelViewProjectionMatrix(viewport = ofGetCurrentViewport())
+###ofMatrix4x4 getModelViewProjectionMatrix(viewport)
 
 <!--
-_syntax: getModelViewProjectionMatrix(viewport = ofGetCurrentViewport())_
+_syntax: getModelViewProjectionMatrix(viewport)_
 _name: getModelViewProjectionMatrix_
 _returns: ofMatrix4x4_
 _returns_description: _
@@ -652,10 +652,10 @@ Get whether the camera is in orthographic mode.
 
 <!----------------------------------------------------------------------------->
 
-###ofMatrix4x4 getProjectionMatrix(viewport = ofGetCurrentViewport())
+###ofMatrix4x4 getProjectionMatrix(viewport)
 
 <!--
-_syntax: getProjectionMatrix(viewport = ofGetCurrentViewport())_
+_syntax: getProjectionMatrix(viewport)_
 _name: getProjectionMatrix_
 _returns: ofMatrix4x4_
 _returns_description: _
@@ -834,10 +834,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec3f screenToWorld(ScreenXYZ, viewport = ofGetCurrentViewport())
+###ofVec3f screenToWorld(ScreenXYZ, viewport)
 
 <!--
-_syntax: screenToWorld(ScreenXYZ, viewport = ofGetCurrentViewport())_
+_syntax: screenToWorld(ScreenXYZ, viewport)_
 _name: screenToWorld_
 _returns: ofVec3f_
 _returns_description: _
@@ -1282,10 +1282,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec3f worldToCamera(WorldXYZ, viewport = ofGetCurrentViewport())
+###ofVec3f worldToCamera(WorldXYZ, viewport)
 
 <!--
-_syntax: worldToCamera(WorldXYZ, viewport = ofGetCurrentViewport())_
+_syntax: worldToCamera(WorldXYZ, viewport)_
 _name: worldToCamera_
 _returns: ofVec3f_
 _returns_description: _
@@ -1318,10 +1318,10 @@ When you have a position in world coordinates you can get what it would be in ca
 
 <!----------------------------------------------------------------------------->
 
-###ofVec3f worldToScreen(WorldXYZ, viewport = ofGetCurrentViewport())
+###ofVec3f worldToScreen(WorldXYZ, viewport)
 
 <!--
-_syntax: worldToScreen(WorldXYZ, viewport = ofGetCurrentViewport())_
+_syntax: worldToScreen(WorldXYZ, viewport)_
 _name: worldToScreen_
 _returns: ofVec3f_
 _returns_description: _
