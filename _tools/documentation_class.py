@@ -15,7 +15,7 @@ class DocsClass:
         self.id = classid
         self.module = ""
         self.name = ""
-        self.new = 0
+        self.new = True
         self.advanced = False
         self.visible = True
         self.example = ""

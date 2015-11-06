@@ -105,6 +105,7 @@ def parse_variable(documentation_class, clazz, member):
         var.clazz = documentation_class.name
         #member.type.ref.text if hasattr(member.type,'ref') else member.type.text
         var.type = substitutetype(member.type.spelling)
+        new_vars.append(var)
     try:
         var.inlined_description = parse_docs(member)
     except:
@@ -116,7 +117,6 @@ def parse_function(documentation_class, clazz, member, already_found, fuzzy=Fals
     params = ""
     for arg in member.get_children():
         if arg.kind.is_attribute():
-            print "function attribute " + member.spelling + " " + arg.displayname
             # TODO: we suppose only attributes are the deprecated ones 
             return None
         if arg.kind != CursorKind.PARM_DECL:
@@ -173,8 +173,10 @@ def parse_function(documentation_class, clazz, member, already_found, fuzzy=Fals
     method.inlined_description = parse_docs(member)
     
     if method.new:
-        signature = returns + " " + methodname + "(" + params + ")"
-        print ("new " if method.new else "") + signature
+        if clazz is None:
+            new_functions.append(method)
+        else:
+            new_methods.append(method)
         
     return method
 
@@ -207,9 +209,7 @@ def parse_function(documentation_class, clazz, member, already_found, fuzzy=Fals
     
             
 def serialize_functionsfile(cursor,filename,is_addon=False):
-    print("functions file " + filename)    
     functionsfile = getfunctionsfile(filename)
-    #print 'new: ' + str(functionsfile.new)
     functions_fromcode = []
     functions_for_fuzzy_search = []
     for member in cursor.get_children():
@@ -225,18 +225,14 @@ def serialize_functionsfile(cursor,filename,is_addon=False):
         if function is not None:
             functions_fromcode.append(function)
                 
-    #print "missing functions"
     thisfile_missing_functions = []
-    #[f for f in functionsfile.function_list if f not in functions_fromxml.function_list]
     for function in functionsfile.function_list:
         if not function in functions_fromcode:
-            #print function.name+"("+function.parameters+")"
             missing_functions.append(function)
             thisfile_missing_functions.append(function)
     
     for function in thisfile_missing_functions:
         signature = function.returns + " " + function.name + "(" + function.parameters + ")"
-        print "removing " + signature
         functionsfile.function_list.remove(function)
                 
     functionsfile.function_list.sort(key=lambda function: function.name)
@@ -246,11 +242,8 @@ def serialize_functionsfile(cursor,filename,is_addon=False):
 def serialize_class(cursor,is_addon=False, parent=None):
     clazz = cursor
     classname = (parent + "::" if parent is not None else "") + clazz.spelling
-    print
-    print "//------------------------------"
-    print classname
     documentation_class = getclass(classname)
-    
+        
     current_variables_list = []
     current_methods_list = []
     methods_for_fuzzy_search = []
@@ -271,14 +264,12 @@ def serialize_class(cursor,is_addon=False, parent=None):
             if member.access_specifier.name.lower() == 'public' and clazz.spelling + "::" + member.spelling not in visited_classes:
                 for child in member.get_children():
                     if is_variable(child) or is_method(child):
-                        print "subclass " + member.displayname
                         if classname[-1] == '_':
                             serialize_class(member,is_addon,classname[:-1])
                             visited_classes.append(classname[:-1] + "::" + member.spelling)
                         else:
                             serialize_class(member,is_addon,classname)
                             visited_classes.append(classname + "::" + member.spelling)
-                        print "end subclass"
                         break
         elif member.kind == CursorKind.UNION_DECL:
             for union_member in member.get_children():
@@ -306,39 +297,22 @@ def serialize_class(cursor,is_addon=False, parent=None):
         if method is not None:
             current_methods_list.append(method)
                 
-    class_name_printed = False
     
     for method in documentation_class.function_list:
         if not method in current_methods_list:
-            if method.description.strip("\n ") != "":
-                if not class_name_printed:    
-                    print "\n\n\n\n"
-                    print "========================================"
-                    print "class " + documentation_class.name
-                    class_name_printed = True
-                print "\n\n\n\n"
-                print "removing method " + method.returns + " " + method.name + "(" + method.parameters + ")"
-                #print "with description:"
-                #print method.description
+            missing_methods.append(mmethod)
     documentation_class.function_list = current_methods_list
     
     for var in documentation_class.var_list:
         if not var in current_variables_list:
-            if var.description.strip("\n ") != "":
-                if not class_name_printed:    
-                    print "\n\n\n\n"
-                    print "========================================"
-                    print "class " + documentation_class.name
-                    class_name_printed = True
-                print "removing " + var.name
-                #print "with description:"
-                #print var.description
+            missing_vars.append(var)
     documentation_class.var_list = current_variables_list
         
     documentation_class.function_list.sort(key=lambda function: function.name)
     documentation_class.var_list.sort(key=lambda variable: variable.name)
     
-    #return
+    if documentation_class.new:
+        new_classes.append(documentation_class)
     setclass(documentation_class,is_addon)
 
 def parse_folder(root, files, is_addon=False):
@@ -372,6 +346,12 @@ file_count=0
 visited_classes = []
 visited_function_files = []
 missing_functions = []
+missing_methods = []
+missing_vars = []
+new_classes = []
+new_methods = []
+new_vars = []
+new_methods = []
 
 for root, dirs, files in os.walk(of_source):
     dir_count+=1
@@ -400,5 +380,34 @@ for addon in official_addons:
         if name.find('ofx')==0 and name.find('8h.xml')!=-1:
             update_moved_functions(filename,True)"""
             
-print ""+str(dir_count)+" dirs/"+str(file_count)+" files"
+#print ""+str(dir_count)+" dirs/"+str(file_count)+" files"
 
+if len(new_functions)>0:
+    print "added " + str(len(new_functions)) + " new functions:"
+    for f in new_functions:
+        print "\t- " + f.returns + " " + f.name + "(" + f.parameters + ")  to " + f.functionsfile
+        
+if len(missing_functions)>0:
+    print "removed " + str(len(missing_functions)) + " functions"
+    for f in missing_functions:
+        print "\t- " + f.returns + " " + f.name + "(" + f.parameters + ")  from " + f.functionsfile
+
+if len(new_methods)>0:
+    print "added " + str(len(new_methods)) + " new methods:"
+    for f in new_methods:
+        print "\t- " + f.returns + " " + f.name + "(" + f.parameters + ")  to " + f.clazz
+        
+if len(missing_methods)>0:
+    print "removed " + str(len(missing_methods)) + " methods"
+    for f in missing_methods:
+        print "\t- " + f.returns + " " + f.name + "(" + f.parameters + ")  from " + f.clazz
+
+if len(new_vars)>0:
+    print "added " + str(len(new_vars)) + " new vars:"
+    for f in new_vars:
+        print "\t- " + v.name + "  to " + v.clazz
+        
+if len(missing_vars)>0:
+    print "removed " + str(len(missing_vars))
+    for v in missing_vars:
+        print "\t- " + v.name + "  from " + v.clazz

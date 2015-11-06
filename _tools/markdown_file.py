@@ -155,9 +155,9 @@ def getclass_list(getTemplated=True):
     
 def sort_function(function):
     if (function.name==function.clazz) or (function.name == "~" + function.clazz):
-        return "0" + function.name + function.parameters
+        return "0" + function.name + "(" + function.parameters + ")"
     else:
-        return function.name + function.parameters
+        return function.name + "(" + function.parameters + ")"
       
 def getclass(clazz):
     var = DocsVar(0)
@@ -175,6 +175,7 @@ def getclass(clazz):
         for name in files:
             file_split = os.path.splitext(name)
             if file_split[1]=='.markdown' and file_split[0] == clazz: 
+                documentation_clazz.new = False
                 f = open(os.path.join(root,name),'rU')
                 state = 'begin'
                 linenum = 0
