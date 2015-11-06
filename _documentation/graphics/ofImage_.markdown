@@ -5,6 +5,7 @@
 _visible: True_
 _advanced: False_
 _istemplated: True_
+_extends: ofBaseImage_<PixelType>_
 -->
 
 ##InlineDescription

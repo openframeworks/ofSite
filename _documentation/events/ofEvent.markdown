@@ -5,6 +5,7 @@
 _visible: True_
 _advanced: False_
 _istemplated: False_
+_extends: ofBaseEvent<of::priv::Function<T, Mutex>, Mutex>_
 -->
 
 ##InlineDescription

@@ -5,6 +5,7 @@
 _visible: False_
 _advanced: False_
 _istemplated: False_
+_extends: ofBaseLoggerChannel_
 -->
 
 ##InlineDescription

@@ -5,6 +5,7 @@
 _visible: True_
 _advanced: True_
 _istemplated: True_
+_extends: ofAbstractHasPixels_
 -->
 
 ##InlineDescription

@@ -5,6 +5,7 @@
 _visible: True_
 _advanced: False_
 _istemplated: False_
+_extends: std::iterator<std::forward_iterator_tag, ConstPixel>_
 -->
 
 ##InlineDescription

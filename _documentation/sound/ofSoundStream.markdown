@@ -5,6 +5,7 @@
 _visible: True_
 _advanced: False_
 _istemplated: False_
+_extends: _
 -->
 
 ##InlineDescription
@@ -584,78 +585,6 @@ _advanced: False_
 _inlined_description: _
 
 Sets the object which will have audioIn() called when the device receives audio.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setInput(&soundInput)
-
-<!--
-_syntax: setInput(&soundInput)_
-_name: setInput_
-_returns: void_
-_returns_description: _
-_parameters: ofBaseSoundInput &soundInput_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Sets the object which will have audioIn() called when the device receives audio.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setOutput(&soundOutput)
-
-<!--
-_syntax: setOutput(&soundOutput)_
-_name: setOutput_
-_returns: void_
-_returns_description: _
-_parameters: ofBaseSoundOutput &soundOutput_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Sets the object which will have audioOut() called when the device requests audio.
 
 
 
