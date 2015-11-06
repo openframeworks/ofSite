@@ -1,1 +1,1 @@
-Addon to get accelerometer data from mobile devices
+## Addon to get accelerometer data from mobile devices

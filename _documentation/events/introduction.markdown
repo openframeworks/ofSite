@@ -1,4 +1,4 @@
-Application and custom events using the observer pattern.
+## Application and custom events using the observer pattern.
 
 The events module in openFrameworks has some classes and functions that allow to work with events. Events allow to receive a notification whenever something happens in another part of the code or in the hardware. 
 

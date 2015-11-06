@@ -1,1 +1,1 @@
-Simple gui to easily change parameters in your applications
+## Simple gui to easily change parameters in your applications

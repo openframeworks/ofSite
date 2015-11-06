@@ -1,4 +1,4 @@
-Arduino and other serial devices communication.
+## Arduino and other serial devices communication.
 
 The communication module has classes to communicate with other devices by now through the serial protocol. This mainly allows to communicate with devices like the Arduino. There's 2 classes in this module, [ofSerial](ofSerial.html) which allows to communicate with any device through the serial protocol. It can be used to send custom commands to for example an Arduino sketch that will receive them and do something in response like turn an LED on, move a motor... It also works the other way around, you can send messages from the Arduino (or any other serial device), for example the read from a temperature sensor to openFrameworks.
 

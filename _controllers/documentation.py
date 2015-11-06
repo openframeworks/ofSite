@@ -139,7 +139,7 @@ def run():
                 if os.path.isfile(module_intro):
                     module_intro_file = open(module_intro)
                     module_intro_content = module_intro_file.read()
-                    module_subtitles[module] = module_intro_content.splitlines()[0]
+                    module_subtitles[module] = module_intro_content.splitlines()[0].strip('##').strip(' ')
                     if module.find("ofx") == 0:
                         bf.template.materialize_template("documentation_module_intro.mako", (os.path.join('documentation', module),"introduction.html"), {"module": module, "content": module_intro_content, "classes": addons_index[module]} )
                     else:
