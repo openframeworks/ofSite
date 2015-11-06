@@ -320,7 +320,8 @@ _inlined_description: _
 
 The render mode for bitmaps (e.g. ofDrawBitmapString).
 
-\sa ofDrawBitmapString(const T& textString, float x, float y)
+
+See also: ofDrawBitmapString(const T& textString, float x, float y)
 
 
 
@@ -391,7 +392,8 @@ The current rendering mode for polygons.
 ofPolyWindingMode determines how ovelapping parts of the same
 polygon are rendered.
 
-\sa ofPolyWindingMode
+
+See also: ofPolyWindingMode
 
 
 

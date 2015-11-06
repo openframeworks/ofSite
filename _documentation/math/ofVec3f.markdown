@@ -76,8 +76,10 @@ As you can see this really makes dealing with vectors as easy as dealing with
 single 'float's or 'int's, and can reduce the number of lines of code you have
 to write by half, at the same time making your code much easier to read and
 understand!
-\sa ofVec2f for 2D vectors
-\sa ofVec4f for 4D vectors
+
+See also: ofVec2f for 2D vectors
+
+See also: ofVec4f for 4D vectors
 
 
 

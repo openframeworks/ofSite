@@ -67,8 +67,10 @@ single floats or ints, and can reduce the number of lines of code you have to
 write by half, at the same time making your code much easier to read and
 understand!
 
-\sa ofVec3f for 3D vectors
-\sa ofVec4f for 4D vectors
+
+See also: ofVec3f for 3D vectors
+
+See also: ofVec4f for 4D vectors
 
 
 
@@ -200,7 +202,8 @@ Determine if two vectors are aligned with tolerance in radians
 Parameters:
 vec The vector to compare alignment with
 tolerance an angle tolerance/threshold (specified in radians) for deciding if the vectors are sufficiently aligned.
-\sa align()
+
+See also: align()
 
 
 
@@ -433,7 +436,8 @@ Parameters:
 pnt The point to calculate the distance to
  
 Returns: The distance as float
-\sa squareDistance()
+
+See also: squareDistance()
 
 
 
@@ -583,7 +587,8 @@ ofVec3f v4 = v1.getInterpolated( v2, 0.8 ); // v4 is (8, 9)
 Parameters:
 pnt The point to move towards
 p The amount to move towards pnt
-\sa interpolate()
+
+See also: interpolate()
 
 
 
@@ -637,7 +642,8 @@ ofVec2f v2Limited = v2.getLimited(3);
 // v2Limited is (2, 1) (same as v2)
 ~~~~
 
- \sa limit()
+ 
+See also: limit()
 
 Parameters:
 max The maximum length of the vector to return
@@ -749,7 +755,8 @@ Parameters:
 pnt The vector to find the middle to
 
 Returns: The middle between this vector and `pnt`
-\sa middle()
+
+See also: middle()
 
 
 
@@ -859,7 +866,8 @@ ofVec2f v(2, 5);
 ofVec2f u = v.getPerpendicular(); // u is (0.928, -0.371)
 ~~~~
 
-\sa perpendicular()
+
+See also: perpendicular()
 
 
 
@@ -1005,8 +1013,10 @@ ofVec2f v2 = v1.getRotated( 45 ); // v2 is (√2, √2)
 ofVec3f v3 = v2.getRotated( 45 ); // v3 is (0, 1)
 ~~~~
 
-\sa getRotatedRad()
-\sa rotate()
+
+See also: getRotatedRad()
+
+See also: rotate()
 
 
 
@@ -1177,7 +1187,8 @@ ofVec2f v1( 3, 4 ); // length is 5
 ofVec2f v2 = v1.getScaled( 15 ); // ( 9, 12 ), length is now 15
 ~~~~ofVec2f
 
-\sa scale()
+
+See also: scale()
 
 
 
@@ -1236,7 +1247,8 @@ v1.interpolate( v2, 0.5 ); // v1 is now (8.75, 9.375)
 v1.interpolate( v2, 0.5 ); // v1 is now (9.375, 9.6875)
 ~~~~
 
-\sa getInterpolated()
+
+See also: getInterpolated()
 
 
 
@@ -1335,7 +1347,8 @@ Determine if two vectors are aligned with tolerance in radians
 Parameters:
 vec The vector to compare alignment with
 tolerance an angle tolerance/threshold (specified in radians) for deciding if the vectors are sufficiently aligned.
-\sa isAligned()
+
+See also: isAligned()
 
 
 
@@ -1385,7 +1398,8 @@ bunch of points to a reference point, where it doesn't matter exactly what the
 lengths are, you just want the shortest), you can use
 lengthSquared() instead.
 
-\sa lengthSquared()
+
+See also: lengthSquared()
 
 
 
@@ -1442,7 +1456,8 @@ points to a reference point, where it doesn't matter exactly what the
 lengths are, you just want the shortest). It avoids the square root
 calculation that is ordinarily required to calculate a length.
 
-\sa length()
+
+See also: length()
 
 
 
@@ -1496,7 +1511,8 @@ v2.limit(3);
 // v2 is unchanged
 ~~~~
 
- \sa limit()
+ 
+See also: limit()
 
 
 
@@ -1549,7 +1565,8 @@ In most case you want vx and vy to be perpendicular and of unit length; if
 they are not perpendicular you will have shearing as part of the mapping, and
 if they are not of unit length you will have scaling as part of the mapping.
 
-\sa perpendicular()
+
+See also: perpendicular()
 
 
 
@@ -1655,7 +1672,8 @@ v1.middle( v2 ); // v1 is now (8.75, 9.375)
 v1.middle( v2 ); // v1 is now (9.375, 9.6875)
 ~~~~
 
-\sa getMiddle()
+
+See also: getMiddle()
 
 
 
@@ -1714,7 +1732,8 @@ v1.normalize(); // v2 is now (1, 0)
 ofVec2f v2(5, 5);
 v2.normalize(); // v2 is now (√2, √2)
 ~~~~
-\sa getNormalized()
+
+See also: getNormalized()
 
 
 
@@ -3049,7 +3068,8 @@ Image courtesy of Wikipedia
 ofVec2f v(2, 5);
 v.perpendicular(); // v is (0.928, -0.371)
 ~~~~
-\sa getPerpendicular()
+
+See also: getPerpendicular()
 
 
 
@@ -3101,7 +3121,8 @@ v1.rotate( 45 ); // (√2, √2)
 v1.rotate( 45 ); // (0, 1)
 ~~~~
 
-\sa getRotated()
+
+See also: getRotated()
 
 
 
@@ -3187,7 +3208,8 @@ v1.rotate( PI/4 ); // (√2, √2)
 v1.rotate( PI/4 ); // (0, 1)
 ~~~~
 
-\sa getRotatedRad()
+
+See also: getRotatedRad()
 
 
 
@@ -3272,7 +3294,8 @@ ofVec2f v1( 3, 4 ); // length is 5
 v1.scale( 15 ); // v1 is now (9, 12), with length 15
 ~~~~
 
-\sa getScaled()
+
+See also: getScaled()
 
 
 
@@ -3463,7 +3486,8 @@ to calculate a length.
 
 
 Returns: The distance squared as float
-\sa distance()
+
+See also: distance()
 
 
 

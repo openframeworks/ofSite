@@ -39,7 +39,8 @@ Use GL_TEXTURE_2D textures.
 GL_TEXTURE_2D is OpenGL's default way of handling textures and supports a
 wider range of core OpenGL features such as mipmaps.
 
-\sa ofEnableArbTex()
+
+See also: ofEnableArbTex()
 
 
 
@@ -75,7 +76,8 @@ _advanced: False_
 _inlined_description: _
 
 Use pixel-based texture coordinates.
-\sa ofEnableNormalizedTexCoords()
+
+See also: ofEnableNormalizedTexCoords()
 
 
 
@@ -111,7 +113,8 @@ _advanced: False_
 _inlined_description: _
 
 Disable global texture "edge hack".
-\sa ofEnableTextureEdgeHack()
+
+See also: ofEnableTextureEdgeHack()
 
 
 
@@ -158,7 +161,8 @@ height).
 GL_TEXTURE_2D textures are more widely supported and allow advanced features
 such as mipmaps and texture compression.
 
-\sa ofDisableArbTex()
+
+See also: ofDisableArbTex()
 
 Warning: GL_TEXTURE_RECTANGLE is not available in OpenGL ES.
 
@@ -207,7 +211,8 @@ the content.
 
 This overrides individual ofTexture wrap settings.
 
-\sa http://www.opengl.org/sdk/docs/man4/html/glTexParameter.xhtml
+
+See also: http://www.opengl.org/sdk/docs/man4/html/glTexParameter.xhtml
 
 
 
@@ -282,7 +287,8 @@ _advanced: False_
 _inlined_description: _
 
 Check whether OF is using GL_TEXTURE_RECTANGLE rectangular or GL_TEXTURE_2D textures.
-\sa ofEnableArbTex()
+
+See also: ofEnableArbTex()
 
 Returns: true if using GL_TEXTURE_RECTANGLE textures, false if using GL_TEXTURE_2D textures.
 
@@ -320,7 +326,8 @@ _advanced: False_
 _inlined_description: _
 
 Check whether OF is using normalized or pixel texture coordinates.
-\sa ofEnableNormalizedTexCoords()
+
+See also: ofEnableNormalizedTexCoords()
 
 Returns: true if using normalized (0 - 1) texture coordinates.
 
@@ -358,7 +365,8 @@ _advanced: False_
 _inlined_description: _
 
 Check whether OF is using the texture "edge hack".
-\sa ofEnableTextureEdgeHack()
+
+See also: ofEnableTextureEdgeHack()
 
 Returns: true if OF is currently using the texture "edge hack".
 

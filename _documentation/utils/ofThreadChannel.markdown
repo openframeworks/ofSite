@@ -29,7 +29,8 @@ it was sent.
 If multiple threads attempt to send data using the same ofThreadChannel, the
 send method will block the calling thread until it is free.
 
-\sa https://github.com/openframeworks/ofBook/blob/master/chapters/threads/chapter.md
+
+See also: https://github.com/openframeworks/ofBook/blob/master/chapters/threads/chapter.md
 \tparam T The data type sent by the ofThreadChannel.
 
 

@@ -1110,10 +1110,14 @@ milliseconds If millseconds is set to INFINITE_JOIN_TIMEOUT, the
     is encouraged to seek more expedient ways of signalling their desire
     for a thread to complete via other signalling methods such as
     Poco::Event, Poco::Condition, or Poco::Semaphore.
-\sa http://pocoproject.org/slides/090-NotificationsEvents.pdf
-\sa http://pocoproject.org/docs/Poco.Condition.html
-\sa http://pocoproject.org/docs/Poco.Event.html
-\sa http://pocoproject.org/docs/Poco.Semaphore.html
+
+See also: http://pocoproject.org/slides/090-NotificationsEvents.pdf
+
+See also: http://pocoproject.org/docs/Poco.Condition.html
+
+See also: http://pocoproject.org/docs/Poco.Event.html
+
+See also: http://pocoproject.org/docs/Poco.Semaphore.html
 
 
 

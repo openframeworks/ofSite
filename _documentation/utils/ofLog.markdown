@@ -676,7 +676,8 @@ Set the logging channel destinations for messages.
 
 This can be used to output to files instead of stdout.
 
-\sa ofFileLoggerChannel ofConsoleLoggerChannel
+
+See also: ofFileLoggerChannel ofConsoleLoggerChannel
 
 Parameters:
 channel The channel to log to.

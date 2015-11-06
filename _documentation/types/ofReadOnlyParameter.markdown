@@ -17,7 +17,8 @@ classes specified in the template arguments allow other classes
 write-access to the internal data.  Otherwise, all other access is
 "read only".
 
-\sa ofParameter
+
+See also: ofParameter
 \tparam ParameterType The data wrapped by the ofParameter.
 \tparam Friend The type of the "friend" class with write access.
 

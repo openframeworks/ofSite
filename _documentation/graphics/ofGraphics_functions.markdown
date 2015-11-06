@@ -293,7 +293,8 @@ void ofApp::setup(){
     ofEndSaveScreenAsPDF();
 }
 ~~~~
-\sa End drawing with ofEndSaveScreenAsPDF()
+
+See also: End drawing with ofEndSaveScreenAsPDF()
 
 
 
@@ -343,7 +344,8 @@ _advanced: False_
 _inlined_description: _
 
 Begin rendering to a SVG file.
-\sa ofEndSaveScreenAsSVG(), ofBeginSaveScreenAsPDF()
+
+See also: ofEndSaveScreenAsSVG(), ofBeginSaveScreenAsPDF()
 
 
 
@@ -393,7 +395,8 @@ ofBeginShape();
 ofEndShape();
 ~~~~
 
-\sa ofEndShape()
+
+See also: ofEndShape()
 
 
 
@@ -937,7 +940,8 @@ void ofApp::draw(){
 }
 ~~~~
 
-\sa ofEnableAlphaBlending()
+
+See also: ofEnableAlphaBlending()
 
 
 
@@ -1080,7 +1084,8 @@ void ofApp::draw(){
 }
 ~~~~
 
-\sa ofEnableDepthTest()
+
+See also: ofEnableDepthTest()
 
 
 
@@ -1394,7 +1399,8 @@ some graphics cards, you may discover that glDrawPixels is slow (or even,
 very slow). If so, you might want to investigate using ofTrueTypeFont
 with a small typeface, non-anti-aliased, as a suitable alternative.
 
-\sa ofTrueTypeFont
+
+See also: ofTrueTypeFont
 
 
 
@@ -2674,7 +2680,8 @@ _inlined_description: _
 Turns on depth testing so rendering happens according to z-depth rather
 than draw order.
 
-\sa ofDisableDepthTest()
+
+See also: ofDisableDepthTest()
 
 
 
@@ -2807,7 +2814,8 @@ _advanced: False_
 _inlined_description: _
 
 Terminates draw to PDF through ofCairoRenderer and outputs the file.
-\sa ofBeginSaveScreenAsPDF()
+
+See also: ofBeginSaveScreenAsPDF()
 
 
 
@@ -2857,7 +2865,8 @@ _advanced: False_
 _inlined_description: _
 
 Terminates draw to SVG and outputs the file.
-\sa ofBeginSaveScreenAsSVG()
+
+See also: ofBeginSaveScreenAsSVG()
 
 
 
@@ -3364,7 +3373,8 @@ void ofApp::draw(){
     }
 }
 ~~~~
-\sa ofSetRectMode()
+
+See also: ofSetRectMode()
 
 
 
@@ -3928,7 +3938,8 @@ _inlined_description: _
 
 Restores the prior coordinate system.
 
-\sa ofPushMatrix()
+
+See also: ofPushMatrix()
 
 
 
@@ -3974,7 +3985,8 @@ _inlined_description: _
 
 Restores the prior style settings. It needs to be called after ofPushStyle.
 
-\sa ofPushStyle()
+
+See also: ofPushStyle()
 
 
 
@@ -5385,7 +5397,8 @@ Parameters:
 style contains information of the graphics style such as
 ofColor, ofFill, polyMode and others.
 
-\sa See ofStyle for more details.
+
+See also: See ofStyle for more details.
 
 
 

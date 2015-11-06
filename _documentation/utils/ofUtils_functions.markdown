@@ -363,7 +363,8 @@ values The vector of values to be searched.
 target The target value to be found.
 
 Returns: true the index of the first target value found.
-\sa http://www.cplusplus.com/reference/iterator/distance/
+
+See also: http://www.cplusplus.com/reference/iterator/distance/
 
 
 
@@ -1171,7 +1172,8 @@ Get the current version of openFrameworks as a string.
 
 openFrameworks uses the semantic versioning system.
 
-\sa http://semver.org/
+
+See also: http://semver.org/
 
 Returns: The string representation of the version (e.g. `0.9.0`).
 
@@ -1212,7 +1214,8 @@ Get the major version number of openFrameworks.
 
 openFrameworks uses the semantic versioning system.
 
-\sa http://semver.org/
+
+See also: http://semver.org/
 
 Returns: The major version number.
 
@@ -1253,7 +1256,8 @@ Get the minor version number of openFrameworks.
 
 openFrameworks uses the semantic versioning system.
 
-\sa http://semver.org/
+
+See also: http://semver.org/
 
 Returns: The minor version number.
 
@@ -1294,7 +1298,8 @@ Get the patch version number of openFrameworks.
 
 openFrameworks uses the semantic versioning system.
 
-\sa http://semver.org/
+
+See also: http://semver.org/
 
 Returns: The patch version number.
 
@@ -1340,7 +1345,8 @@ this string will describe the pre-release state. Examples might include
 "master", "rc1", "rc2", etc.  For all stable releases, this string will be
 empty.
 
-\sa http://semver.org/
+
+See also: http://semver.org/
 
 Returns: The pre-release version string.
 
@@ -1763,7 +1769,8 @@ Randomly reorder the values in a vector.
 
 Parameters:
 values The vector of values to modify.
-\sa http://www.cplusplus.com/reference/algorithm/random_shuffle/
+
+See also: http://www.cplusplus.com/reference/algorithm/random_shuffle/
 
 
 
@@ -1837,7 +1844,8 @@ The resulting vector will contain the following values:
 Parameters:
 values The vector of values to modify.
 shouldErase A boolean function as described above.
-\sa http://www.cplusplus.com/reference/algorithm/remove_if/
+
+See also: http://www.cplusplus.com/reference/algorithm/remove_if/
 
 
 
@@ -2182,7 +2190,8 @@ order.
 
 Parameters:
 values The vector of values to be sorted.
-\sa http://www.cplusplus.com/reference/algorithm/sort/
+
+See also: http://www.cplusplus.com/reference/algorithm/sort/
 
 
 
@@ -2258,7 +2267,8 @@ The resulting vector will contain the following values:
 Parameters:
 values The vector of values to be sorted.
 compare The comparison function.
-\sa http://www.cplusplus.com/reference/algorithm/sort/
+
+See also: http://www.cplusplus.com/reference/algorithm/sort/
 
 
 

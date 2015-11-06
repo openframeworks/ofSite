@@ -243,7 +243,8 @@ Warning:  This is a convenience method, and is considered unsafe
           If you use more than one renderer, use each renderer's
           explicit void ofBaseGLRenderer::begin(const ofFbo & fbo, bool setupPerspective)
           method instead.
-\sa       void ofBaseGLRenderer::begin(const ofFbo & fbo, bool setupPerspective)
+
+See also:       void ofBaseGLRenderer::begin(const ofFbo & fbo, bool setupPerspective)
 
 
 
@@ -288,8 +289,10 @@ Warning:  If you use this method, you need to manually keep track of the
           * Better, use the renderer's explicit method:
           ofBaseGLRenderer::bind(const ofFbo & fbo) to bind the fbo, to allow
           the renderer to keep track of any bound fbos.
-\sa       unbind()
-\sa       virtual void ofBaseGLRenderer::bind(const ofFbo & fbo)
+
+See also:       unbind()
+
+See also:       virtual void ofBaseGLRenderer::bind(const ofFbo & fbo)
 
 
 
@@ -668,7 +671,8 @@ _advanced: False_
 _inlined_description: _
 
    Ends the current framebuffer render context.
-\sa       void begin(bool setupScreen=true) const;
+
+See also:       void begin(bool setupScreen=true) const;
 
 
 
@@ -1931,8 +1935,10 @@ _inlined_description: _
 
    Unbinds OpenGL framebuffer target and restores the OpenGL framebuffer
           render target to whatever this ofFbo stores in previousFramebufferBinding.
-\sa       bind()
-\sa       void setPreviousFramebufferBinding(const GLuint& previousFramebufferBinding_) const
+
+See also:       bind()
+
+See also:       void setPreviousFramebufferBinding(const GLuint& previousFramebufferBinding_) const
 
 
 

@@ -737,7 +737,8 @@ _advanced: False_
 _inlined_description: _
 
 Gets the y-position of the bottom edge of the ofRectangle.
-\sa getMaxY()
+
+See also: getMaxY()
 
 Returns: The y-position of the bottom edge of the rectangle.
 
@@ -816,7 +817,8 @@ _advanced: False_
 _inlined_description: _
 
 Get the bottom-right coordinates of the ofRectangle.
-\sa getMax()
+
+See also: getMax()
 
 Returns: The bottom-right coordinates of the rectangle.
 
@@ -1058,7 +1060,8 @@ _advanced: False_
 _inlined_description: _
 
 Gets the x-position of the left edge of the ofRectangle.
-\sa getMinX()
+
+See also: getMinX()
 
 Returns: The x-position of the left edge of the rectangle.
 
@@ -1493,7 +1496,8 @@ _advanced: False_
 _inlined_description: _
 
 Gets the x-position of the right edge of the ofRectangle.
-\sa getMaxX()
+
+See also: getMaxX()
 
 Returns: The y-position of the right edge of the rectangle.
 
@@ -1578,7 +1582,8 @@ _advanced: False_
 _inlined_description: _
 
 Gets the y-position of the top edge of the ofRectangle.
-\sa getMinY()
+
+See also: getMinY()
 
 Returns: The y-position of the top edge of the rectangle.
 
@@ -1619,7 +1624,8 @@ _advanced: False_
 _inlined_description: _
 
 Get the top-left coordinates of the ofRectangle.
-\sa getMin()
+
+See also: getMin()
 
 Returns: The top-left coordinates of the rectangle.
 
@@ -1699,7 +1705,8 @@ _inlined_description: _
 
 Get the union area between this rectangle and anohter.
 
-\sa growToInclude(const ofRectangle& rect)
+
+See also: growToInclude(const ofRectangle& rect)
 
 Parameters:
 rect The rectangle to unite with.
@@ -2416,7 +2423,8 @@ _advanced: False_
 _inlined_description: _
 
 Determines if the ofRectangle's area is zero.
-\sa getArea().
+
+See also: getArea().
 
 Returns: true if both the width == 0 and height == 0.
 

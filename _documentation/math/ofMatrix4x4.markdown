@@ -686,7 +686,7 @@ _advanced: False_
 
 _inlined_description: _
 
-\sa rotate
+See also: rotate
 
 
 
@@ -722,7 +722,7 @@ _advanced: False_
 
 _inlined_description: _
 
-\sa rotate
+See also: rotate
 
 
 
@@ -758,7 +758,7 @@ _advanced: False_
 
 _inlined_description: _
 
-\sa rotate
+See also: rotate
 
 
 
@@ -794,7 +794,7 @@ _advanced: False_
 
 _inlined_description: _
 
-\sa scale
+See also: scale
 
 
 
@@ -830,7 +830,7 @@ _advanced: False_
 
 _inlined_description: _
 
-\sa scale
+See also: scale
 
 
 
@@ -866,7 +866,7 @@ _advanced: False_
 
 _inlined_description: _
 
-\sa translate
+See also: translate
 
 
 
@@ -902,7 +902,7 @@ _advanced: False_
 
 _inlined_description: _
 
-\sa translate
+See also: translate
 
 
 
@@ -1809,7 +1809,7 @@ _advanced: False_
 
 _inlined_description: _
 
-\sa makeFrustumMatrix
+See also: makeFrustumMatrix
 
 
 
@@ -1845,7 +1845,7 @@ _advanced: False_
 
 _inlined_description: _
 
-\sa makeIdentityMatrix
+See also: makeIdentityMatrix
 
 
 
@@ -1881,7 +1881,7 @@ _advanced: False_
 
 _inlined_description: _
 
-\sa makeLookAtMatrix
+See also: makeLookAtMatrix
 
 
 
@@ -1917,7 +1917,7 @@ _advanced: False_
 
 _inlined_description: _
 
-\sa makeOrtho2DMatrix
+See also: makeOrtho2DMatrix
 
 
 
@@ -1953,7 +1953,7 @@ _advanced: False_
 
 _inlined_description: _
 
-\sa makeOrthoMatrix
+See also: makeOrthoMatrix
 
 
 
@@ -1989,7 +1989,7 @@ _advanced: False_
 
 _inlined_description: _
 
-\sa makePerspectiveMatrix
+See also: makePerspectiveMatrix
 
 
 
@@ -2025,7 +2025,7 @@ _advanced: False_
 
 _inlined_description: _
 
-\sa makeRotationMatrix
+See also: makeRotationMatrix
 
 
 
@@ -2205,7 +2205,7 @@ _advanced: False_
 
 _inlined_description: _
 
-\sa makeScaleMatrix
+See also: makeScaleMatrix
 
 
 
@@ -2277,7 +2277,7 @@ _advanced: False_
 
 _inlined_description: _
 
-\sa makeTranslationMatrix
+See also: makeTranslationMatrix
 
 
 

@@ -946,7 +946,8 @@ while (angle < TWO_PI ) {
 ~~~~
 
 \note You need at least 4 points to be able to use curveTo()
-\sa [Catmull-Rom splines wiki](http://en.wikipedia.org/wiki/Centripetal_Catmull%E2%80%93Rom_spline)
+
+See also: [Catmull-Rom splines wiki](http://en.wikipedia.org/wiki/Centripetal_Catmull%E2%80%93Rom_spline)
 
 
 

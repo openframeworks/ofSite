@@ -15,7 +15,8 @@ A structure describing attributes of a video format.
 An ofVideoFormat is used to describe the size, pixel format and frame rates
 offered by a video device.
 
-\sa ofVideoDevice
+
+See also: ofVideoDevice
 
 
 

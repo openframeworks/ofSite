@@ -424,7 +424,8 @@ _advanced: False_
 _inlined_description: _
 
 A non-destructive version of clamp().
-\sa clamp()
+
+See also: clamp()
 
 Returns: A copy of this color, clamped.
 
@@ -666,7 +667,8 @@ _advanced: False_
 _inlined_description: _
 
 A non-destructive version of invert().
-\sa invert()
+
+See also: invert()
 
 Returns: A copy of this color, inverted.
 
@@ -705,7 +707,8 @@ _advanced: False_
 _inlined_description: _
 
 A non-destructive version of lerp().
-\sa lerp()
+
+See also: lerp()
 
 Returns: A copy of this color, lerped.
 
@@ -786,7 +789,8 @@ _advanced: True_
 _inlined_description: _
 
 A non-destructive version of normalize().
-\sa normalize()
+
+See also: normalize()
 
 Returns: A copy of this color, normalized.
 
@@ -2832,7 +2836,8 @@ This method uses HSB not HSL. So red desaturated is white, not gray
 
 Parameters:
 saturation A saturation value value in the range of 0 - limit().
-\sa http://en.wikipedia.org/wiki/HSL_and_HSV
+
+See also: http://en.wikipedia.org/wiki/HSL_and_HSV
 
 
 

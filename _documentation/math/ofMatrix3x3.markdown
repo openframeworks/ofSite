@@ -55,7 +55,8 @@ _advanced: False_
 _inlined_description: _
 
 Find the determinant of the matrix
-\sa [Wolfram explanation](http://mathworld.wolfram.com/Determinant.html)
+
+See also: [Wolfram explanation](http://mathworld.wolfram.com/Determinant.html)
 
 
 
@@ -173,7 +174,8 @@ turn them in cofactors (= change some of the signs)
 find the adjoint by transposing the matrix of cofactors
 divide this through the determinant to get the inverse
 
-\sa invert();
+
+See also: invert();
 
 
 

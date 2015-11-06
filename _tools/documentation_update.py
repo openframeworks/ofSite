@@ -66,6 +66,7 @@ def parse_docs(element):
     doc = doc.replace("\\param ","")
     doc = doc.replace("\\brief ","")
     doc = doc.replace("\\returns ","\nReturns: ")
+    doc = doc.replace("\\sa ","\nSee also: ")
     docs = ""
     for line in iter(doc.splitlines()):
         line = line.strip()

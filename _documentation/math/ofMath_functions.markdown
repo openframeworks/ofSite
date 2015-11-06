@@ -922,7 +922,8 @@ the values.
 		result = ofLerp(init, end, increment); // result = 3
 ~~~~
 
-\sa float ofClamp(float value, float min, float max)
+
+See also: float ofClamp(float value, float min, float max)
 
 Parameters:
 start The lower bound of the range.

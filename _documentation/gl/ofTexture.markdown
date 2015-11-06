@@ -194,7 +194,8 @@ _inlined_description: _
 
 Allocate texture of a given size and format.
 
-\sa allocate(int w, int h, int glInternalFormat)
+
+See also: allocate(int w, int h, int glInternalFormat)
 
 Parameters:
 w Desired width in pixels.
@@ -245,8 +246,10 @@ square texture (`GL_TEXTURE_2D`).
 
 
 Warning: ARB textures are not available in OpenGL ES.
-\sa ofEnableArbTex()
-\sa allocate(int w, int h, int glInternalFormat)
+
+See also: ofEnableArbTex()
+
+See also: allocate(int w, int h, int glInternalFormat)
 
 Parameters:
 w Desired width in pixels.
@@ -291,7 +294,8 @@ _inlined_description: _
 
 Allocate texture of a given size, format, & type.
 
-\sa allocate(int w, int h, int glInternalFormat)
+
+See also: allocate(int w, int h, int glInternalFormat)
 
 Parameters:
 w Desired width in pixels.
@@ -384,8 +388,10 @@ square GL_TEXTURE_2D texture.
 
 
 Warning: ARB textures are not available in OpenGL ES.
-\sa ofEnableArbTex()
-\sa allocate(const ofPixels& pix)
+
+See also: ofEnableArbTex()
+
+See also: allocate(const ofPixels& pix)
 
 Parameters:
 pix Reference to ofPixels instance.
@@ -429,7 +435,8 @@ Allocate texture using an ofShortPixels instance.
 
 Same as void allocate(const ofPixels& pix), except using ofShortPixels.
 
-\sa allocate(const ofPixels& pix)
+
+See also: allocate(const ofPixels& pix)
 
 Parameters:
 pix Reference to ofShortPixels instance.
@@ -472,7 +479,8 @@ Allocate texture using an ofShortPixels instance and type.
 
 Same as void void allocate(const ofPixels& pix), except using ofShortPixels.
 
-\sa allocate(const ofShortPixels& pix)
+
+See also: allocate(const ofShortPixels& pix)
 
 Parameters:
 pix Reference to ofShortPixels instance.
@@ -516,7 +524,8 @@ Allocate texture using an ofFloatPixels instance.
 
 Same as void allocate(const ofPixels& pix), except using ofFloatPixels.
 
-\sa allocate(const ofPixels& pix)
+
+See also: allocate(const ofPixels& pix)
 
 Parameters:
 pix Reference to ofFloatPixels instance.
@@ -559,7 +568,8 @@ Allocate texture using an ofShortPixels instance and type.
 
 Same as void void allocate(const ofPixels& pix), except using ofShortPixels.
 
-\sa allocate(const ofFloatPixels& pix)
+
+See also: allocate(const ofFloatPixels& pix)
 
 Parameters:
 pix Reference to ofFloatPixels instance.
@@ -610,7 +620,8 @@ in GLSL.
 
 See textureBufferInstanceExample and https://www.opengl.org/wiki/Buffer_Texture
 
-\sa allocate(const ofBufferObject & buffer, int glInternalFormat)
+
+See also: allocate(const ofBufferObject & buffer, int glInternalFormat)
 
 Parameters:
 buffer Reference to ofBufferObject instance.
@@ -655,7 +666,8 @@ Bind the texture.
 For advanced users who need to manually manage texture drawing without
 calling ofTexture::draw.
 
-\sa http://www.opengl.org/sdk/docs/man4/html/glBindTexture.xhtml
+
+See also: http://www.opengl.org/sdk/docs/man4/html/glBindTexture.xhtml
 
 
 
@@ -696,7 +708,8 @@ Calls glBindImageTexture on the texture
 Binds the texture as an read or write image, only available since OpenGL 4.2
 
 Warning: This is not available in OpenGLES
-\sa http://www.opengl.org/wiki/GLAPI/glBindImageTexture
+
+See also: http://www.opengl.org/wiki/GLAPI/glBindImageTexture
 
 
 
@@ -858,9 +871,12 @@ If you want to change your minFilter later use setTextureMinMagFilter()
 	If you want to generate a mipmap later, or at a specific
 point in your code, use ofTexture::generateMipmap() instead.
 
-\sa generateMipmap()
-\sa enableMipmap()
-\sa setTextureMinMagFilter()
+
+See also: generateMipmap()
+
+See also: enableMipmap()
+
+See also: setTextureMinMagFilter()
 
 
 
@@ -1176,7 +1192,8 @@ Like ofRect() depend on the current `OF_RECT_MODE`:
 * `OF_RECT_MODE_CORNER`: drawn with the upper left corner = (x,y)
 * `OF_RECT_MODE_CENTER`: drawn centered on (x,y)
 
-\sa ofSetRectMode()
+
+See also: ofSetRectMode()
 
 
 Parameters:
@@ -1223,7 +1240,8 @@ _inlined_description: _
 
 Draw a subsection of the texture with depth.
 
-\sa drawSubsection(float x, float y, float w, float h, float sx, float sy)
+
+See also: drawSubsection(float x, float y, float w, float h, float sx, float sy)
 
 Parameters:
 x Draw position on the x axis.
@@ -1270,7 +1288,8 @@ _inlined_description: _
 
 Draw a subsection of the texture with an offset.
 
-\sa drawSubsection(float x, float y, float w, float h, float sx, float sy)
+
+See also: drawSubsection(float x, float y, float w, float h, float sx, float sy)
 
 Parameters:
 x Draw position on the x axis.
@@ -1318,7 +1337,8 @@ _inlined_description: _
 
 Draw a subsection of the texture with an offset and depth.
 
-\sa drawSubsection(float x, float y, float w, float h, float sx, float sy)
+
+See also: drawSubsection(float x, float y, float w, float h, float sx, float sy)
 
 Parameters:
 x Draw position on the x axis.
@@ -1373,9 +1393,12 @@ If you want to change your minFilter later use setTextureMinMagFilter()
 	If you want to generate a mipmap later, or at a specific
 point in your code, use generateMipmap() instead.
 
-\sa generateMipmap()
-\sa disableMipmap()
-\sa setTextureMinMagFilter()
+
+See also: generateMipmap()
+
+See also: disableMipmap()
+
+See also: setTextureMinMagFilter()
 
 
 
@@ -1458,8 +1481,10 @@ texture target - does *not* support mipmaps, so make sure to call
 ofDisableArbTex() before loading texture
 data for a texture you want to generate mipmaps for.
 
-\sa ofEnableArbTex()
-\sa ofDisableArbTex()
+
+See also: ofEnableArbTex()
+
+See also: ofDisableArbTex()
 
 
 
@@ -1619,7 +1644,8 @@ Display height of texture.
 
 Return value is pixel size (default) or normalized (0 - 1) if ofEnableNormalizedTextures() is set to true.
 
-\sa ofEnabledNormalizedTextures()
+
+See also: ofEnabledNormalizedTextures()
 
 
 Returns: Display height of texture in pixels.
@@ -1660,7 +1686,8 @@ _inlined_description: _
 
 Get a mesh that has the texture coordinates set.
 
-\sa drawSubsection(float x, float y, float w, float h, float sx, float sy)
+
+See also: drawSubsection(float x, float y, float w, float h, float sx, float sy)
 
 Parameters:
 x Draw position on the x axis.
@@ -1789,7 +1816,8 @@ _advanced: True_
 _inlined_description: _
 
 Const version of getTextureData().
-\sa ofTextureData::getTextureData()
+
+See also: ofTextureData::getTextureData()
 
 
 
@@ -1865,7 +1893,8 @@ Display width of texture.
 
 Return value is pixel size (default) or normalized (0 - 1) if ofEnableNormalizedTextures() is set to true.
 
-\sa ofEnabledNormalizedTextures()
+
+See also: ofEnabledNormalizedTextures()
 
 
 Returns: Display width of texture in pixels.
@@ -2036,7 +2065,8 @@ _advanced: False_
 _inlined_description: _
 
 Load short (2 byte) pixel data.
-\sa loadData(const unsigned char* const data, int w, int h, int glFormat)
+
+See also: loadData(const unsigned char* const data, int w, int h, int glFormat)
 
 Parameters:
 data Pointer to byte pixel data. Must not be nullptr.
@@ -2079,7 +2109,8 @@ _advanced: False_
 _inlined_description: _
 
 Load float pixel data.
-\sa loadData(const unsigned char* const data, int w, int h, int glFormat)
+
+See also: loadData(const unsigned char* const data, int w, int h, int glFormat)
 
 Parameters:
 data Pointer to byte pixel data. Must not be nullptr.
@@ -2164,7 +2195,8 @@ Load pixels from an ofShortPixels instance.
 
 Same as loadData(ofPixels &) but for ofShortPixels.
 
-\sa loadData(const ofPixels & pix)
+
+See also: loadData(const ofPixels & pix)
 
 Parameters:
 pix Reference to ofShortPixels instance.
@@ -2207,7 +2239,8 @@ Load pixels from an ofFloatPixels instance.
 
 Same as loadData(ofPixels &) but for ofFloatPixels.
 
-\sa loadData(const ofPixels & pix)
+
+See also: loadData(const ofPixels & pix)
 
 Parameters:
 pix Reference to ofFloatPixels instance.
@@ -2293,7 +2326,8 @@ _inlined_description: _
 
 Load pixels from an ofShortPixels instance & specify the format.
 
-\sa loadData(const ofPixels & pix, int glFormat)
+
+See also: loadData(const ofPixels & pix, int glFormat)
 
 Parameters:
 pix Reference to ofShortPixels instance.
@@ -2335,7 +2369,8 @@ _inlined_description: _
 
 Load pixels from an ofFloatPixels instance and specify the format.
 
-\sa loadData(const ofPixels & pix, int glFormat)
+
+See also: loadData(const ofPixels & pix, int glFormat)
 
 Parameters:
 pix Reference to ofFloatPixels instance.
@@ -2480,7 +2515,8 @@ and height (h) of the region.
 Make sure that you have allocated your texture (using `allocate()`)
 to be large enough to hold the region of the screen you wish to load.
 
-\sa http://www.opengl.org/sdk/docs/man4/html/glCopyTexSubImage2D.xhtml
+
+See also: http://www.opengl.org/sdk/docs/man4/html/glCopyTexSubImage2D.xhtml
 
 
 Parameters:
@@ -2933,7 +2969,8 @@ _inlined_description: _
 Set the texture compression.
 
 \warning: not yet implemented.
-\sa ofTexCompression
+
+See also: ofTexCompression
 
 
 
@@ -2976,7 +3013,8 @@ Use 1 channel GL_R as luminance instead of red channel in OpenGL 3+.
 
 
 Warning: This is not supported in OpenGL ES and does nothing.
-\sa https://en.wikipedia.org/wiki/Swizzling_(computer_graphics)
+
+See also: https://en.wikipedia.org/wiki/Swizzling_(computer_graphics)
 
 
 
@@ -3025,7 +3063,8 @@ will make channel 0 appear as alpha in the shader.
 
 
 Warning: This is not supported in OpenGL ES and does nothing.
-\sa https://en.wikipedia.org/wiki/Swizzling_(computer_graphics)
+
+See also: https://en.wikipedia.org/wiki/Swizzling_(computer_graphics)
 
 
 
@@ -3104,8 +3143,10 @@ Set texture minification/magnification scaling filters.
 
 Controls how OpenGL will scale this texture.
 
-\sa http://www.opengl.org/sdk/docs/man4/html/glTexParameter.xhtml
-\sa ofTextureSetMinMagFilters()
+
+See also: http://www.opengl.org/sdk/docs/man4/html/glTexParameter.xhtml
+
+See also: ofTextureSetMinMagFilters()
 
 
 Warning: May be overridden.
@@ -3155,8 +3196,10 @@ By default, textures are clamped to their edges with `GL_CLAMP_TO_EDGE`.
 Setting a repeat mode like `GL_REPEAT` allows you to create tiled
 backgrounds with small textures.
 
-\sa ofTextureSetWrap()
-\sa http://www.opengl.org/sdk/docs/man4/html/glTexParameter.xhtml
+
+See also: ofTextureSetWrap()
+
+See also: http://www.opengl.org/sdk/docs/man4/html/glTexParameter.xhtml
 
 
 Warning: May be overridden.
@@ -3252,7 +3295,8 @@ Unbind the texture.
 For advanced users who need to manually manage texture drawing without
 calling ofTexture::draw.
 
-\sa http://www.opengl.org/sdk/docs/man4/html/glBindTexture.xhtml
+
+See also: http://www.opengl.org/sdk/docs/man4/html/glBindTexture.xhtml
 
 
 

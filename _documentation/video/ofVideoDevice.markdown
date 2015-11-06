@@ -113,7 +113,8 @@ _advanced: False_
 _inlined_description: _
 
 A list of video device formats provided by the device.
-\sa ofVideoFormat
+
+See also: ofVideoFormat
 
 
 
