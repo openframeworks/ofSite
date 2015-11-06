@@ -10,7 +10,7 @@ _extends: ofBaseVideo_
 
 ##InlineDescription
 
-A base 
+A base class representing a video device such as a camera.
 
 
 

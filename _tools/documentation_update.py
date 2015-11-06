@@ -71,7 +71,7 @@ def parse_docs(element):
         line = line.strip()
         line = line.replace("/// ","")
         line = line.replace("///","")
-        line = re.sub("\\class (.*)","",line)
+        line = re.sub(r"\\class (.*)","",line)
         docs += line + "\n"
     try:
         docs = HTMLParser.HTMLParser().unescape(docs)
@@ -163,6 +163,8 @@ def parse_function(documentation_class, clazz, member, already_found, fuzzy=Fals
         method.static = member.is_static_method()
         method.clazz = documentation_class.name
         method.access = member.access_specifier.name.lower()
+    else:
+        method.functionsfile = documentation_class.name
     method.returns = returns
     #method.description = method.description.replace("~~~~{.brush: cpp}","~~~~{.cpp}").replace('</pre>',"~~~~")
     method.description = method.description.replace('<p>','').replace('</p>','').replace('<code>','').replace('</code>','').replace('<pre>','')
@@ -232,7 +234,6 @@ def serialize_functionsfile(cursor,filename,is_addon=False):
             thisfile_missing_functions.append(function)
     
     for function in thisfile_missing_functions:
-        signature = function.returns + " " + function.name + "(" + function.parameters + ")"
         functionsfile.function_list.remove(function)
                 
     functionsfile.function_list.sort(key=lambda function: function.name)
@@ -248,14 +249,15 @@ def serialize_class(cursor,is_addon=False, parent=None):
     current_methods_list = []
     methods_for_fuzzy_search = []
         
-    inheritsfrom = []
+    documentation_class.extends = []
+    
     for child in clazz.get_children():
         if child.kind == CursorKind.CXX_BASE_SPECIFIER:
             if child.spelling.find("class") == 0:
                 baseclass = child.spelling.split(' ')[1]
-                inheritsfrom.append(baseclass)
+                documentation_class.extends.append(baseclass)
             else:
-                inheritsfrom.append(child.spelling)
+                documentation_class.extends.append(child.spelling)
 
     documentation_class.detailed_inline_description = parse_docs(clazz)
     
@@ -300,7 +302,7 @@ def serialize_class(cursor,is_addon=False, parent=None):
     
     for method in documentation_class.function_list:
         if not method in current_methods_list:
-            missing_methods.append(mmethod)
+            missing_methods.append(method)
     documentation_class.function_list = current_methods_list
     
     for var in documentation_class.var_list:
@@ -349,7 +351,7 @@ missing_functions = []
 missing_methods = []
 missing_vars = []
 new_classes = []
-new_methods = []
+new_functions = []
 new_vars = []
 new_methods = []
 
@@ -404,7 +406,7 @@ if len(missing_methods)>0:
 
 if len(new_vars)>0:
     print "added " + str(len(new_vars)) + " new vars:"
-    for f in new_vars:
+    for v in new_vars:
         print "\t- " + v.name + "  to " + v.clazz
         
 if len(missing_vars)>0:

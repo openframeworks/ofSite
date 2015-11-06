@@ -11,10 +11,10 @@ _extends: _
 ##InlineDescription
 
 \brief
-ofVec2f is a 
+ofVec2f is a class for storing a two dimensional vector.
 
 Moving through space requires knowledge of where things are and where they are going.
-Vector Maths is the 
+Vector Maths is the class of mathematics that gives us control over these
 things in space, allowing for elegant and intuitive descriptions of complex
 structures and movement. Vectors are at the heart of animations, particle
 systems, and 2D and 3D graphics.

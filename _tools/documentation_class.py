@@ -25,6 +25,7 @@ class DocsClass:
         self.var_list = []
         self.detailed_inline_description = ""
         self.istemplated = False
+        self.extends = []
         
 
     def functions(self):

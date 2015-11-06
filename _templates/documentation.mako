@@ -32,7 +32,11 @@
                 </ul-->
 
                 
-                <h1 class="documentation">reference</h1> <ul class="docsadvanced"><li><a href="/documentation" class="active">basic</a></li> <li><a href="/doxygen/annotated.html">advanced</a></li> </ul>
+                <h1 class="documentation">reference</h1> 
+                <!--ul class="docsadvanced">
+                    <li><a href="/documentation" class="active">basic</a></li> 
+                    <li><a href="/doxygen/annotated.html">advanced</a></li> 
+                </ul-->
             </div>  
 		    <div class="page-right-narrow">
 			    <p>This page is the reference for the openFrameworks core and included addons. There are also <a href="http://ofxaddons.com/">contributed addons</a>. The openFrameworks API is constantly evolving: any corrections, additions or comments are very welcome!</p>

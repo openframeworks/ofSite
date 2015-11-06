@@ -10,7 +10,7 @@ _extends: ofAbstractHasPixels_
 
 ##InlineDescription
 
-A base 
+A base class represeting an object that has pixels.
 \tparam T The pixel data type.
 
 

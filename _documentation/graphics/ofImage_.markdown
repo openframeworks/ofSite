@@ -10,7 +10,7 @@ _extends: ofBaseImage_<PixelType>_
 
 ##InlineDescription
 
-A 
+A class representing an image using memory and gpu based pixels.
 \tparam PixelType The data type used to represent a single pixel value.
 
 

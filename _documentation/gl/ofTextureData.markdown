@@ -10,7 +10,7 @@ _extends: _
 
 ##InlineDescription
 
-\
+
 Internal texture data structure.
 
 Used by ofTexture internally. You won't need to work with this in most cases.

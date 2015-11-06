@@ -10,7 +10,7 @@ _extends: ofBaseHasPixels, ofBaseUpdates_
 
 ##InlineDescription
 
-A base 
+A base class representing a video source.
 
 
 

@@ -10,7 +10,7 @@ _extends: ofBaseSoundPlayer_
 
 ##InlineDescription
 
-\
+
 Plays sound files.
 
 ofSoundPlayer handles simple playback of sound files, with controls for

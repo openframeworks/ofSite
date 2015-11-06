@@ -19,7 +19,7 @@ write-access to the internal data.  Otherwise, all other access is
 
 \sa ofParameter
 \tparam ParameterType The data wrapped by the ofParameter.
-\tparam Friend The type of the "friend" 
+\tparam Friend The type of the "friend" class with write access.
 
 
 

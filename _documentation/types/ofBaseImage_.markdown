@@ -10,7 +10,7 @@ _extends: ofAbstractImage, ofBaseHasPixels_<T>_
 
 ##InlineDescription
 
-A base 
+A base class represeting an image.
 \tparam T The pixel data type.
 
 

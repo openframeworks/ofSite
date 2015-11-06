@@ -10,7 +10,7 @@ _extends: ofLog_
 
 ##InlineDescription
 
-Derived log 
+Derived log class for easy warning logging.
 
 Example: `ofLogWarning("Log message")`.
 

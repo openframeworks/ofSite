@@ -10,7 +10,7 @@ _extends: ofBaseVideo, ofBaseDraws, ofBaseHasTexturePlanes, ofBaseHasPixels_
 
 ##InlineDescription
 
-A base 
+A base class representing a drawable video source.
 
 
 

@@ -10,7 +10,7 @@ _extends: _
 
 ##InlineDescription
 
-\
+
 ofColor represents a color in openFrameworks. Colors are usually defined by
 specifying a red, green, and blue component (RGB), and a transparency
 (alpha) component. You can also specify colors using hue, saturation, and

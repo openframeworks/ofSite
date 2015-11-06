@@ -10,7 +10,7 @@ _extends: _
 
 ##InlineDescription
 
-A 
+A class representing a collection of pixels.
 
 
 

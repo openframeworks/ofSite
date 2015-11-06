@@ -10,7 +10,7 @@ _extends: ofBaseHasTexture_
 
 ##InlineDescription
 
-An abstract 
+An abstract class representing an object that ofTexture planes.
 
 
 

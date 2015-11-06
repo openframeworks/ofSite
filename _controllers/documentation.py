@@ -64,6 +64,10 @@ def run():
             rep = class_name + "[(]"
             clazz.reference = re.sub(rep, "<a href=\"../"+module_lookup[class_name]+"/"+class_name+".html\" class=\"docs_class\" >"+class_name+"</a>(", clazz.reference)
 
+        def gen_link(class_name): return "<a href=\"../"+module_lookup[class_name]+"/"+class_name+".html\" class=\"docs_class\" >"+class_name+"</a> " if class_name in module_lookup else ""
+        def filter_out_empty(class_name): return class_name!="" 
+        clazz.extends = list(filter(filter_out_empty, map(gen_link, clazz.extends)))
+            
         functions_file = markdown_file.getfunctionsfile(clazz.name)
         #print clazz.name
         #print clazz.function_list 

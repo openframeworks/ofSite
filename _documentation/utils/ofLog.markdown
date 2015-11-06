@@ -10,7 +10,7 @@ _extends: _
 
 ##InlineDescription
 
-\
+
 A C++ stream-style logging interface.
 
 ofLog accepts variables via the std::ostream operator << and builds a string
@@ -505,7 +505,7 @@ _inlined_description: _
 
 Define flexible stream operator.
 
-This allows the 
+This allows the class to use the << std::ostream to read data of
 almost any type.
 
 \tparam T the data type to be streamed.
@@ -551,7 +551,7 @@ _inlined_description: _
 
 Define flexible stream operator.
 
-This allows the 
+This allows the class to use the << std::ostream to catch function
 pointers such as std::endl and std::hex.
 
 

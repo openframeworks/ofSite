@@ -10,7 +10,7 @@ _extends: _
 
 ##InlineDescription
 
-A base 
+A base class representing a sound output stream.
 
 
 

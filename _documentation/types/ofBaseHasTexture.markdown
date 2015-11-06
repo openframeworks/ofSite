@@ -10,7 +10,7 @@ _extends: _
 
 ##InlineDescription
 
-An abstract 
+An abstract class representing an object that can have an ofTexture.
 
 
 

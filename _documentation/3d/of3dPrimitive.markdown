@@ -10,7 +10,7 @@ _extends: ofNode_
 
 ##InlineDescription
 
-A 
+A class representing a 3d primitive.
 
 
 

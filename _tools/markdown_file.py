@@ -48,6 +48,9 @@ def addfield(method,line):
             value = value + ":" + text
     
     value = value.lstrip(' ').rstrip('\n').rstrip('\r')[:-1]
+    if field=='extends':
+        value = value.split(", ")
+        
     if field=='constant' or field=='advanced' or field=='visible' or field=='static' or field=='istemplated':
         value = ((value == '1') or (value == 'True') or (value=='true') or (value=='TRUE'))
     #print field, "=", value
@@ -397,6 +400,7 @@ def setclass(clazz,is_addon=False):
     f.write("_visible: " + str(clazz.visible) + "_\n")
     f.write("_advanced: " + str(clazz.advanced) + "_\n")
     f.write("_istemplated: " + str(clazz.istemplated) + "_\n")
+    f.write("_extends: " + ", ".join(clazz.extends) + "_\n")
     f.write("-->\n\n");
     
     #f.write('//----------------------\n\n')

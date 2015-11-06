@@ -10,10 +10,10 @@ _extends: _
 
 ##InlineDescription
 
-  ofVec3f is a 
+  ofVec3f is a class for storing a three dimensional vector.
 
 Moving through space requires knowledge of where things are and where they are
-going. Vector Maths is the 
+going. Vector Maths is the class of mathematics that gives us control over
 these things in space, allowing for elegant and intuitive descriptions of
 complex structures and movement. Vectors are at the heart of animations,
 particle systems, and 2D and 3D graphics.

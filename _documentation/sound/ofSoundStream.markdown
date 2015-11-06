@@ -10,7 +10,7 @@ _extends: _
 
 ##InlineDescription
 
-\
+
 Gives access to audio input and output devices
 
 ofSoundStream controls access to your computer's audio input and output
@@ -18,7 +18,7 @@ devices. For example, you could use an ofSoundStream to get live input from
 a microphone, or generate sound in realtime for your computer's speakers.
 
 A typical openFrameworks app will use just one ofSoundStream, and you might
-not even need to use this 
+not even need to use this class directly at all if you don't need to query
 things like the sample rate or buffer size. In order to start receiving or
 generating audio, your ofApp should implement either ofBaseApp::audioIn() or
 ofBaseApp::audioOut() respectively, and then call ofSoundStreamSetup(). You
@@ -585,6 +585,78 @@ _advanced: False_
 _inlined_description: _
 
 Sets the object which will have audioIn() called when the device receives audio.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setInput(&soundInput)
+
+<!--
+_syntax: setInput(&soundInput)_
+_name: setInput_
+_returns: void_
+_returns_description: _
+_parameters: ofBaseSoundInput &soundInput_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Sets the object which will have audioIn() called when the device receives audio.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setOutput(&soundOutput)
+
+<!--
+_syntax: setOutput(&soundOutput)_
+_name: setOutput_
+_returns: void_
+_returns_description: _
+_parameters: ofBaseSoundOutput &soundOutput_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Sets the object which will have audioOut() called when the device requests audio.
 
 
 

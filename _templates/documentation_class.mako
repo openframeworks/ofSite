@@ -100,6 +100,14 @@
 	    <div class="submenucol-right">
             <div class="documentation_detail class_documentation">
               % if not clazz is None:
+                % if len(clazz.extends)>0:
+                    <h2><strong><em>Extends:</em></strong></h2><br/>
+                    <ul>
+                    % for base in clazz.extends:
+                        <li>${base}</li>
+                    % endfor
+                    </ul>
+                % endif
               <%self:filter chain="markdown_template">
 ${clazz.reference}
               </%self:filter>

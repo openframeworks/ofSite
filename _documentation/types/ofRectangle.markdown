@@ -10,7 +10,7 @@ _extends: _
 
 ##InlineDescription
 
-A 
+A class representing a 2D rectangle.
 
 ofRectangle is a simple container for describing the position and size of a
 2D rectangle. Since the `width` and `height` variables can be negative, the

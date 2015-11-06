@@ -10,7 +10,7 @@ _extends: _
 
 ##InlineDescription
 
-Base 
+Base class for ofParameter, ofReadOnlyParameter and ofParameterGroup
 
 
 

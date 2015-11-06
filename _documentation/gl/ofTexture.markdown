@@ -10,8 +10,8 @@ _extends: ofBaseDraws_
 
 ##InlineDescription
 
-\
-A wrapper 
+
+A wrapper class for an OpenGL texture.
 
 
 

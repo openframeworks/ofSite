@@ -10,12 +10,12 @@ _extends: Poco::Runnable_
 
 ##InlineDescription
 
-\
-A threaded base 
 
-Users can extend this base 
+A threaded base class with a built in mutex for convenience.
 
-    
+Users can extend this base class by public inheritance like this:
+
+    class MyThreadedClass: public ofThread
     {
         public:
         ...
@@ -32,8 +32,8 @@ ofThread is a convenient wrapper for Poco::Thread, Poco::Runnable and
 Poco::Mutex.  It represents a simplified (sometimes overly simplified -
 or simplified in ways that might not make sense for your project)
 pathway for quickly writing threaded classes.  Poco::Runnable represents
-a 
-able to spawn a thread and "run" the contents of a 
+a class that can be "run" via its void run() method.  Poco::Thread is
+able to spawn a thread and "run" the contents of a class that extends
 the Poco::Runnable interface (which ofThread does).  Poco::FastMutex,
 (aka ofMutex) is a "mutual exclusion" object that prevents two threads
 from accessing the same data at the same time.  It is important to know
@@ -483,10 +483,10 @@ shared with this ofThread (or its subclass).
         // pheew! ok, update those graphics resources
     }
 
-By way of another example, a sub
+By way of another example, a subclass of ofThread may have
 an update() method that is called from ofBaseApp during the
 execution of the main application thread.  In these cases,
-the ofThread sub
+the ofThread subclass might want to ask itself whether it
 can, for instance, call update() on an ofImage, in order to
 send copy some ofPixels to an ofTexture on the graphics
 card.

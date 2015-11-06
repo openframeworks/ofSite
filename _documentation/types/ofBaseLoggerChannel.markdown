@@ -10,7 +10,7 @@ _extends: _
 
 ##InlineDescription
 
-The base 
+The base class representing a logger channel.
 
 Users can derive their own logging channels from ofBaseLoggerChannel or use
 default channels.

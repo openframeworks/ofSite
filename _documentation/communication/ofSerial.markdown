@@ -15,7 +15,7 @@ serial port. You can choose the port and baud rate, and then read and send
 data. Please note that the port must be set manually in the code, so you
 should be clear what port your device is on. For example, Arduino users should
 check the arduino app to see what port their device is on. Alternatively the
-ofSerial 
+ofSerial class can attempt to communicate with the first available device it
 finds.
 
 To start up a serial connection to another device you do the following:

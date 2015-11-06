@@ -10,9 +10,9 @@ _extends: _
 
 ##InlineDescription
 
-An abstract 
+An abstract class representing an object that has pixels.
 
-This empty 
+This empty class primarily exists to allow templated subclasses of different
 types to be stored as raw or shared pointers in collections such as
 std::vector.
 

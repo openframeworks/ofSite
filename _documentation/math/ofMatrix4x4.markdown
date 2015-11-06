@@ -10,7 +10,7 @@ _extends: _
 
 ##InlineDescription
 
-The ofMatrix4x4 is the big 
+The ofMatrix4x4 is the big class of the math part of openFrameworks.
 
 You'll sometimes see it used for doing things like setting where the camera
 in OpenGL (the mathematically calculated one, not the ofCamera one) is

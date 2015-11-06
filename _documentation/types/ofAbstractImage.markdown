@@ -10,9 +10,9 @@ _extends: ofBaseDraws, ofBaseHasTexture_
 
 ##InlineDescription
 
-An abstract 
+An abstract class representing an image.
 
-This empty 
+This empty class primarily exists to allow templated subclasses of different
 types to be stored as raw or shared pointers in collections such as
 std::vector.
 

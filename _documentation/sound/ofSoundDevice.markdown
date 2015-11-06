@@ -10,7 +10,7 @@ _extends: _
 
 ##InlineDescription
 
-\
+
 Represents information about a sound device on the system.
 
 
