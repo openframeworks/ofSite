@@ -665,7 +665,7 @@ hr {
 	/*border: 1px #EE3987 solid;	*/
 }
 .documentation_group_head {
-	border-bottom: 1px #eee solid;
+	border-bottom: 1px #ccc solid;
 	color: black;
 	float: none;
 	/*font-weight: bold;*/
@@ -676,7 +676,9 @@ hr {
 	display: flex;
 	justify-content: space-between;
 }
-
+.documentation_group_head.show{
+	border-bottom: 1px #eee solid;
+}
 .documentation_group_head .title{
     display: block;
 }
@@ -710,6 +712,8 @@ hr {
 	/*width: 100%;*/
 }
 div.sectiontitle{
+    padding-top: 10px;
+    padding-bottom: 20px;
     background-color:#eee;
     margin: 1em 0 1em 0;
 }

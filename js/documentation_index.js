@@ -33,14 +33,14 @@ $(document).ready(
                     currentHidding.removeClass('show');
                     currentHidding.addClass('hide');
                     currentHidding = null;
-                    });
+                });
             }else{
                 $(this).next('.documentation_index_group').show("blind", { direction: "vertical" }, 500, function(){
                     currentHidding.removeClass('hide');
                     currentHidding.addClass('show');
                     currentHidding = null;
                     $(this).masonry( 'reload' );
-                    });
+                });
             }
         });
         
@@ -87,7 +87,7 @@ $(document).ready(
                 $('.core .documentation_group_head').addClass('hide');
                 $('.core .documentation_group_head').removeClass('show');
                 coreCollapsed = true;
-                $(this).text('open all');
+                $(this).text('expand all');
             }
         });
         $('a.collapse_addons').click(function(){
@@ -103,7 +103,7 @@ $(document).ready(
                 $('.addons .documentation_group_head').addClass('hide');
                 $('.addons .documentation_group_head').removeClass('show');
                 addonsCollapsed = true;
-                $(this).text('open all');
+                $(this).text('expand all');
             }
         });
 });
