@@ -1,4 +1,4 @@
-The application module in openFrameworks contains all the classes required to start an application, mostly to create a window and run the infinite update/draw loop.
+Create windows, start the OF app and check info about the it's state
 
 The main classes in this module are windows for each platform and settings classes that can be passed to openFrameworks when creating the window. In most projects you don't even need to use them explicitly as openFrameworks will use them under the hood, select the correct one in each case and start and end the infinite loop.
 

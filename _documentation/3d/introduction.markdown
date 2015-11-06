@@ -1,4 +1,4 @@
-The 3d module in openFrameworks contains classes for working with 3 dimensional graphics. 
+Three-dimensional graphics classes and functions. 
 
 Drawing in 3d no matter the API you are using (openGL, directX...) usually involves:
 

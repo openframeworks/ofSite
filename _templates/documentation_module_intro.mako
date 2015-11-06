@@ -39,7 +39,7 @@ ${content}
     		</div>
         </div><!-- End Page Wide Tutorial --> 
         <div class="page-wide">
-        	<%include file="documentation_index_block.mako" args="module=module,classes=classes,show_header=False" />
+        	<%include file="documentation_index_block.mako" args="module=module,classes=classes,show_header=False,subtitle=''" />
 		</div><!-- End Page Wide -->   
       </div><!-- End Body Wrap -->
       

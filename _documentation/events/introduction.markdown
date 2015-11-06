@@ -1,3 +1,5 @@
+Application and custom events using the observer pattern.
+
 The events module in openFrameworks has some classes and functions that allow to work with events. Events allow to receive a notification whenever something happens in another part of the code or in the hardware. 
 
 For example when the mouse is moved you can use the mouseMoved function in your ofApp to do something. If you want to know when the mouse is moved in any other object in your code you can simply call from your ofApp to your object or you can register a method of that object as a listener to the mouseMoved event.

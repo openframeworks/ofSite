@@ -1,9 +1,15 @@
 ## -*- coding: utf-8 -*-
-<%page args="module,classes,show_header"/>
+<%page args="module,classes,show_header,subtitle"/>
 <div class="documentation_group">
     % if show_header:
     <div class="documentation_group_head hide">
-			<div class="title"><h2>${module}</h2><a href="${module}/introduction.html">module documentation</a></div>
+			<div class="title">
+			    <h2>${module}</h2>
+			    % if subtitle is not None:
+    			    <h3>${subtitle}</h3>
+			        <a href="${module}/introduction.html">module documentation</a>
+    			% endif
+			</div>
 	</div>
 	% endif
 	

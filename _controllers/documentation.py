@@ -22,7 +22,6 @@ def uniqify(seq):
     seen = set()
     seen_add = seen.add
     return [ x for x in seq if x not in seen and not seen_add(x)]
-        
 
 def run():
     classes = []
@@ -36,6 +35,7 @@ def run():
     module_lookup = dict()
     core_index = dict()
     addons_index = dict()
+    module_subtitles = dict()
     
     # Create an index of which module each class is in for generated links to other classes
     for class_name in classes:
@@ -120,10 +120,6 @@ def run():
                 addons_index[functions_file.module] = []
             addons_index[functions_file.module].append(functions_file)
         
-        
-
-    # process index file        
-    bf.template.materialize_template("documentation.mako", ('documentation',"index.html"), {'core':core_index,'addons':addons_index} )
     
     for root, dirs, files in os.walk(directory):
         """ copy images to their folders """
@@ -138,13 +134,23 @@ def run():
                 
         """ create module introductions """
         for module in dirs:
-            module_intro = os.path.join(directory,module,"introduction.markdown")
-            if os.path.isfile(module_intro):
-                module_intro_file = open(module_intro)
-                module_intro_content = module_intro_file.read()
-                bf.template.materialize_template("documentation_module_intro.mako", (os.path.join('documentation', module),"introduction.html"), {"module": module, "content": module_intro_content, "classes": core_index[module]} )
-            else:
-                print "couldn't find " + module_intro
+            if module!="addons":
+                module_intro = os.path.join(root,module,"introduction.markdown")
+                if os.path.isfile(module_intro):
+                    module_intro_file = open(module_intro)
+                    module_intro_content = module_intro_file.read()
+                    module_subtitles[module] = module_intro_content.splitlines()[0]
+                    if module.find("ofx") == 0:
+                        bf.template.materialize_template("documentation_module_intro.mako", (os.path.join('documentation', module),"introduction.html"), {"module": module, "content": module_intro_content, "classes": addons_index[module]} )
+                    else:
+                        bf.template.materialize_template("documentation_module_intro.mako", (os.path.join('documentation', module),"introduction.html"), {"module": module, "content": module_intro_content, "classes": core_index[module]} )
+                else:
+                    module_subtitles[module] = None
+                    print "couldn't find " + module_intro
+        
+
+    # process index file        
+    bf.template.materialize_template("documentation.mako", ('documentation',"index.html"), {'core':core_index, 'addons':addons_index, 'module_subtitles':module_subtitles} )
                 
     #html = open(documentation.dir + "/" + class_fn + ".html",'w')
     #html.write(p.content)
