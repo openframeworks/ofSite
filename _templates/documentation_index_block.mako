@@ -22,7 +22,7 @@
         	<div class="box">
         	<ul class="documentation_class">
         	    <!-- class link -->
-                <li class="docs-module-title"><a href="${bf.config.site.url + '/' + module + '/' + clazz.name}.html" class="documentation_class_link"><strong>${clazz.name}</strong></a>&nbsp;
+                <li class="docs-module-title"><a href="${bf.config.site.url + '/documentation/' + module + '/' + clazz.name}.html" class="documentation_class_link"><strong>${clazz.name}</strong></a>&nbsp;
                 % if clazz.is_class():
                     <img src="${bf.config.site.url}/icons/class.png" alt="C++ Class"/>
                 % else:
@@ -38,7 +38,7 @@
                         % if len(method.description) <= 1 and len(method.inlined_description) <= 1:
                             <% htmlclass = htmlclass + " noDoc" %>
                         % endif
-                        <li class="${htmlclass}"><a href="${bf.config.site.url + '/' + module + '/' + clazz.name}.html#!show_${method.name}" title="${method.name}" class="documentation_func">${method.name}()</a></li>
+                        <li class="${htmlclass}"><a href="${bf.config.site.url + '/documentation/' + module + '/' + clazz.name}.html#!show_${method.name}" title="${method.name}" class="documentation_func">${method.name}()</a></li>
                         <% prevmethod = method.name %>
                     % endif
                 % endfor
@@ -55,7 +55,7 @@
                             % if len(variable.description) <= 1:
                                 <% htmlclass = htmlclass + " noDoc" %>
                             % endif
-                            <li class="${htmlclass}"><a href="${module + '/' + clazz.name}.html#!show_${variable.name}" title="${variable.name}" class="documentation_func">${variable.name}</a></li>
+                            <li class="${htmlclass}"><a href="${bf.config.site.url + '/documentation/' + module + '/' + clazz.name}.html#!show_${variable.name}" title="${variable.name}" class="documentation_func">${variable.name}</a></li>
                         % endif
                     % endfor
                 % endif
