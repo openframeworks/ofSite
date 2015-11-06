@@ -656,7 +656,7 @@ hr {
 .documentation_group {
 	float: left;
 	line-height: 140%;
-	margin: 0px 0px 20px 0px;
+	margin: 0px 0px 10px 0px;
 	padding: 0px 0px 0px 0px;
 	position: relative;
 	width: 100%;
@@ -670,7 +670,7 @@ hr {
 	float: none;
 	/*font-weight: bold;*/
 	margin: 0px 0px 5px 0px;
-	padding: 10px 30px 10px 30px;
+	padding: 10px 30px 15px 30px;
 	width: 1040px;
 	cursor: hand; cursor: pointer;
 	display: flex;
