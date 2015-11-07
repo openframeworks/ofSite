@@ -35,9 +35,9 @@ $(document).ready(
                     currentHidding = null;
                 });
             }else{
+                currentHidding.removeClass('hide');
+                currentHidding.addClass('show');
                 $(this).next('.documentation_index_group').show("blind", { direction: "vertical" }, 500, function(){
-                    currentHidding.removeClass('hide');
-                    currentHidding.addClass('show');
                     currentHidding = null;
                     $(this).masonry( 'reload' );
                 });

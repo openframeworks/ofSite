@@ -584,7 +584,8 @@ ul.functionslist, div.documentation_index_group {
 	/*padding-left: 8px;*/
 }
 div.documentation_index_group{
-    margin-left: 30px;
+    padding: 0px 0px 20px 30px;
+    border-bottom: 1px solid #ccc;
 }
 #body-warp ul.functionslist li:before {
     padding-right: 0.25em;
@@ -656,8 +657,8 @@ hr {
 .documentation_group {
 	float: left;
 	line-height: 140%;
-	margin: 0px 0px 10px 0px;
-	padding: 0px 0px 0px 0px;
+	margin: 0px;
+	padding: 0px;
 	position: relative;
 	width: 100%;
 }
@@ -669,15 +670,15 @@ hr {
 	color: black;
 	float: none;
 	/*font-weight: bold;*/
-	margin: 0px 0px 5px 0px;
-	padding: 10px 30px 15px 30px;
+	margin: 0px;
+	padding: 20px 30px;
 	width: 1040px;
 	cursor: hand; cursor: pointer;
 	display: flex;
 	justify-content: space-between;
 }
 .documentation_group_head.show{
-	border-bottom: 1px #eee solid;
+	border-bottom: none;
 }
 .documentation_group_head .title{
     display: block;
