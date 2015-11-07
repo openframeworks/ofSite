@@ -587,6 +587,10 @@ div.documentation_index_group{
     padding: 0px 0px 20px 30px;
     border-bottom: 1px solid #ccc;
 }
+.page-wide > .documentation_group:last-child .documentation_index_group{
+    border-bottom: none;
+}
+
 #body-warp ul.functionslist li:before {
     padding-right: 0.25em;
 }
@@ -676,6 +680,9 @@ hr {
 	cursor: hand; cursor: pointer;
 	display: flex;
 	justify-content: space-between;
+}
+.page-wide > .documentation_group:last-child .documentation_group_head{
+	border-bottom: none;
 }
 .documentation_group_head.show{
 	border-bottom: none;
