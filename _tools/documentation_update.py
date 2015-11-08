@@ -324,7 +324,7 @@ def parse_folder(root, files, is_addon=False):
         file_count+=1
         filename = os.path.join(root, name)
         if name.find('of')==0 and os.path.splitext(name)[1]=='.h':
-            tu = clang_utils.get_tu_from_file(filename)
+            tu = clang_utils.get_tu_from_file(filename, of_root)
             num_functions = 0
             for child in tu.cursor.get_children():
                 if is_class(child) and child.spelling.find('of')==0:
