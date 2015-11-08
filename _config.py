@@ -19,7 +19,7 @@ sys.path.append( os.path.dirname(os.path.abspath(inspect.getfile(inspect.current
 #from _version import currentVersion 
 olderVersion = "0.8.4"
 majorVersion = "0.9.0"
-currentVersion = "0.9.0RC2"
+currentVersion = "0.9.0"
 breaking = True
 
 ## site_url -- Your site's full URL
