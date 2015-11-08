@@ -5,6 +5,7 @@
 _visible: True_
 _advanced: False_
 _istemplated: False_
+_extends: _
 -->
 
 ##InlineDescription
@@ -136,9 +137,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -174,9 +173,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -212,9 +209,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -250,9 +245,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -288,9 +281,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -326,9 +317,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -364,9 +353,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -402,9 +389,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -440,9 +425,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -478,9 +461,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -516,9 +497,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -554,9 +533,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -592,9 +569,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -630,9 +605,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -668,9 +641,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -706,9 +677,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -744,9 +713,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -782,9 +749,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -820,9 +785,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -832,14 +795,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void getBoundingBoxForNode(*nd, *min, *max, *trafo)
+###void getBoundingBoxForNode(&mesh, *min, *max)
 
 <!--
-_syntax: getBoundingBoxForNode(*nd, *min, *max, *trafo)_
+_syntax: getBoundingBoxForNode(&mesh, *min, *max)_
 _name: getBoundingBoxForNode_
 _returns: void_
 _returns_description: _
-_parameters: const struct aiNode *nd, struct aiVector3D *min, struct aiVector3D *max, struct aiMatrix4x4 *trafo_
+_parameters: const ofxAssimpMeshHelper &mesh, aiVector3D *min, aiVector3D *max_
 _access: protected_
 _version_started: 007_
 _version_deprecated: _
@@ -858,9 +821,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -877,7 +838,7 @@ _syntax: getBoundingBoxWithMinVector(*min, *max)_
 _name: getBoundingBoxWithMinVector_
 _returns: void_
 _returns_description: _
-_parameters: struct aiVector3D *min, struct aiVector3D *max_
+_parameters: aiVector3D *min, aiVector3D *max_
 _access: protected_
 _version_started: 007_
 _version_deprecated: _
@@ -896,9 +857,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -934,9 +893,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -972,9 +929,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1010,9 +965,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1048,9 +1001,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1086,9 +1037,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1124,9 +1073,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1162,9 +1109,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1200,9 +1145,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1238,9 +1181,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1276,9 +1217,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1314,9 +1253,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1352,9 +1289,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1390,9 +1325,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1428,9 +1361,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1466,9 +1397,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1504,9 +1433,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1542,9 +1469,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1580,9 +1505,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1618,9 +1541,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1656,9 +1577,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1694,9 +1613,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1732,9 +1649,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1770,9 +1685,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1808,9 +1721,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###unsigned int initImportProperties(optimize)
+
+<!--
+_syntax: initImportProperties(optimize)_
+_name: initImportProperties_
+_returns: unsigned int_
+_returns_description: _
+_parameters: bool optimize_
+_access: protected_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1846,9 +1793,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1858,10 +1803,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool loadModel(modelName, optimize = true)
+###bool loadModel(modelName, optimize = false)
 
 <!--
-_syntax: loadModel(modelName, optimize = true)_
+_syntax: loadModel(modelName, optimize = false)_
 _name: loadModel_
 _returns: bool_
 _returns_description: _
@@ -1884,9 +1829,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1896,14 +1839,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool loadModel(&buffer, optimize = true, *extension = "")
+###bool loadModel(&buffer, optimize = false, *extension)
 
 <!--
-_syntax: loadModel(&buffer, optimize = true, *extension = "")_
+_syntax: loadModel(&buffer, optimize = false, *extension)_
 _name: loadModel_
 _returns: bool_
 _returns_description: _
-_parameters: ofBuffer &buffer, bool optimize=false, const char *extension=""_
+_parameters: ofBuffer &buffer, bool optimize=false, const char *extension_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1922,9 +1865,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1960,47 +1901,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void onAppExit(&args)
-
-<!--
-_syntax: onAppExit(&args)_
-_name: onAppExit_
-_returns: void_
-_returns_description: _
-_parameters: ofEventArgs &args_
-_access: protected_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
 
 
 
@@ -2036,9 +1937,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2074,9 +1973,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool processScene()
+
+<!--
+_syntax: processScene()_
+_name: processScene_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: protected_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2112,9 +2045,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2150,9 +2081,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2188,9 +2117,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2226,9 +2153,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2264,9 +2189,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2302,9 +2225,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2340,9 +2261,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2378,9 +2297,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2390,16 +2307,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setScaleNomalization(normalize)
+###void setScaleNormalization(normalize)
 
 <!--
-_syntax: setScaleNomalization(normalize)_
-_name: setScaleNomalization_
+_syntax: setScaleNormalization(normalize)_
+_name: setScaleNormalization_
 _returns: void_
 _returns_description: _
 _parameters: bool normalize_
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2416,9 +2333,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2454,9 +2369,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2492,47 +2405,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void updateAnimation(animationIndex, time)
-
-<!--
-_syntax: updateAnimation(animationIndex, time)_
-_name: updateAnimation_
-_returns: void_
-_returns_description: _
-_parameters: unsigned int animationIndex, float time_
-_access: protected_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
 
 
 
@@ -2568,9 +2441,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2606,9 +2477,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2644,9 +2513,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2682,9 +2549,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2720,9 +2585,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2758,9 +2621,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2788,8 +2649,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2813,8 +2681,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2838,8 +2713,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2863,8 +2745,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2888,8 +2777,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2913,8 +2809,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2938,8 +2841,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2963,8 +2873,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2988,8 +2905,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -3013,8 +2937,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -3038,8 +2969,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -3063,8 +3001,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -3088,8 +3033,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -3113,8 +3065,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -3138,8 +3097,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -3163,8 +3129,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -3188,8 +3161,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -3213,8 +3193,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -3238,8 +3225,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -3263,8 +3257,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -3288,8 +3289,47 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###shared_ptr< aiPropertyStore > store
+
+<!--
+_name: store_
+_type: shared_ptr< aiPropertyStore >_
+_access: protected_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -3313,8 +3353,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 

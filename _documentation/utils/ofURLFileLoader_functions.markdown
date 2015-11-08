@@ -15,14 +15,14 @@ _advanced: False_
 
 <!----------------------------------------------------------------------------->
 
-###ofHttpResponse ofLoadURL(url)
+###ofHttpResponse ofLoadURL(&url)
 
 <!--
-_syntax: ofLoadURL(url)_
+_syntax: ofLoadURL(&url)_
 _name: ofLoadURL_
 _returns: ofHttpResponse_
 _returns_description: _
-_parameters: string url_
+_parameters: const string &url_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -41,7 +41,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 Loads content from the specified URL. It makes a synchronous HTTP request and returns the response as an instance of the `ofHttpResponse` class.
 
@@ -56,18 +55,16 @@ cout << resp.data << endl;
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
-###int ofLoadURLAsync(url, name = "")
+###int ofLoadURLAsync(&url, &name)
 
 <!--
-_syntax: ofLoadURLAsync(url, name = "")_
+_syntax: ofLoadURLAsync(&url, &name)_
 _name: ofLoadURLAsync_
 _returns: int_
 _returns_description: _
-_parameters: string url, string name=""_
+_parameters: const string &url, const string &name_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -86,7 +83,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 Loads content asynchronously from the specified URL and
 returns the ID of the process. You need to listen for URL notifications
@@ -136,8 +132,6 @@ Examples based on [http://www.slideshare.net/roxlu/openframworks-007-utils](http
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
 ###void ofRegisterURLNotification(*obj)
@@ -167,7 +161,6 @@ _inlined_description: _
 
 _description: _
 
-
 Registers a listener to receive notifications from `ofLoadURLAsync()` .
 
 ~~~~{.cpp}
@@ -175,8 +168,6 @@ void testApp::setup() {
   ofRegisterURLNotification(this);
 }
 ~~~~
-
-
 
 
 
@@ -211,11 +202,8 @@ _inlined_description: _
 
 _description: _
 
-
 Removes all asynchronously loaded URL requests initiated by
 `ofLoadURLAsync()` .
-
-
 
 
 
@@ -250,7 +238,6 @@ _inlined_description: _
 
 _description: _
 
-
 Removes a single request initiated by `ofLoadURLAsync()` . The request is
 specified by its ID.
 
@@ -258,18 +245,16 @@ specified by its ID.
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
-###int ofSaveURLAsync(url, path)
+###int ofSaveURLAsync(&url, &path)
 
 <!--
-_syntax: ofSaveURLAsync(url, path)_
+_syntax: ofSaveURLAsync(&url, &path)_
 _name: ofSaveURLAsync_
 _returns: int_
 _returns_description: _
-_parameters: string url, string path_
+_parameters: const string &url, const string &path_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -288,7 +273,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 Asynchronously saves a file from a URL. The returned int is the id of
 the request. This allows you to remove the request if it keeps failing, and also
@@ -298,18 +282,16 @@ to identify when it has finished.
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
-###ofHttpResponse ofSaveURLTo(url, path)
+###ofHttpResponse ofSaveURLTo(&url, &path)
 
 <!--
-_syntax: ofSaveURLTo(url, path)_
+_syntax: ofSaveURLTo(&url, &path)_
 _name: ofSaveURLTo_
 _returns: ofHttpResponse_
 _returns_description: _
-_parameters: string url, string path_
+_parameters: const string &url, const string &path_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -329,12 +311,9 @@ _inlined_description: _
 
 _description: _
 
-
 Retrieves a file from a remote URL and saves it locally. This is a synchronous method.
 
 See also: `ofSaveURLAsync()`
-
-
 
 
 
@@ -375,15 +354,14 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###ofEvent ofURLResponseEvent()
+###ofEvent< ofHttpResponse > & ofURLResponseEvent()
 
 <!--
 _syntax: ofURLResponseEvent()_
 _name: ofURLResponseEvent_
-_returns: ofEvent_
+_returns: ofEvent< ofHttpResponse > &_
 _returns_description: _
 _parameters: _
 _version_started: _
@@ -405,11 +383,8 @@ _inlined_description: _
 
 _description: _
 
-
 Used internally for registering and unregistering URL notifications, and
 also by `ofThreadedImageLoader` and `ofURLFileLoader`.
-
-
 
 
 
@@ -444,10 +419,7 @@ _inlined_description: _
 
 _description: _
 
-
 Unregisters a notification for an `ofLoadURLAsync()` operation.
-
-
 
 
 

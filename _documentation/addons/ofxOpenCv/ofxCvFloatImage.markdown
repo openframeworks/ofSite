@@ -5,6 +5,7 @@
 _visible: True_
 _advanced: False_
 _istemplated: False_
+_extends: ofxCvImage_
 -->
 
 ##InlineDescription
@@ -52,11 +53,79 @@ _inlined_description: _
 
 
 
+_description: _
+
+Copies the pixel data of an ofxCvGrayscaleImage into the pixel data of the ofxCvShortImage.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void allocatePixels(w, h)
+
+<!--
+_syntax: allocatePixels(w, h)_
+_name: allocatePixels_
+_returns: void_
+_returns_description: _
+_parameters: int w, int h_
+_access: protected_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
 
 _description: _
 
 
-Copies the pixel data of an ofxCvGrayscaleImage into the pixel data of the ofxCvShortImage.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void allocateTexture()
+
+<!--
+_syntax: allocateTexture()_
+_name: allocateTexture_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: protected_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -92,13 +161,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Remove all pixel data from the ofxCvFloatImage instance.
-
-
 
 
 
@@ -132,13 +197,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 This increases the contrast of the image remapping the brightest points in the image to 255 and the darkest points in the image to 0.
-
-
 
 
 
@@ -153,7 +214,7 @@ _syntax: convertFloatToGray(*floatImg, *grayImg)_
 _name: convertFloatToGray_
 _returns: void_
 _returns_description: _
-_parameters: IplImage *floatImg, IplImage *grayImg_
+_parameters: int *floatImg, int *grayImg_
 _access: protected_
 _version_started: 007_
 _version_deprecated: _
@@ -172,9 +233,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -191,7 +250,7 @@ _syntax: convertGrayToFloat(*grayImg, *floatImg)_
 _name: convertGrayToFloat_
 _returns: void_
 _returns_description: _
-_parameters: IplImage *grayImg, IplImage *floatImg_
+_parameters: int *grayImg, int *floatImg_
 _access: protected_
 _version_started: 007_
 _version_deprecated: _
@@ -210,9 +269,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -248,9 +305,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Maps the pixels of an image to the min and max range passed in.
 
@@ -261,8 +316,6 @@ second.convertToRange(100, 140); // super low contrast
 ~~~~
 
 ![Image convert to range](convertToRangeColor.png "Converting the range of an image")
-
-
 
 
 
@@ -296,9 +349,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Flag whether the image pixel data has changed so that the ofTexture can be updated.
 
@@ -306,16 +357,14 @@ Flag whether the image pixel data has changed so that the ofTexture can be updat
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
-###IplImage * getCv8BitsImage()
+###int * getCv8BitsImage()
 
 <!--
 _syntax: getCv8BitsImage()_
 _name: getCv8BitsImage_
-_returns: IplImage *_
+_returns: int *_
 _returns_description: _
 _parameters: _
 _access: protected_
@@ -336,9 +385,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -348,12 +395,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###IplImage * getCv8BitsRoiImage()
+###int * getCv8BitsRoiImage()
 
 <!--
 _syntax: getCv8BitsRoiImage()_
 _name: getCv8BitsRoiImage_
-_returns: IplImage *_
+_returns: int *_
 _returns_description: _
 _parameters: _
 _access: protected_
@@ -374,9 +421,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -412,13 +457,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns a ofFloatPixels that contains the pixels of the image.
-
-
 
 
 
@@ -452,13 +493,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 If you've set the native scale max and min using setNativeScale() this returns the maximum value.
-
-
 
 
 
@@ -492,13 +529,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 If you've set the native scale max and min using setNativeScale() this returns the minimum value.
-
-
 
 
 
@@ -532,13 +565,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns a pointer to an array of floating point numbers that represent the pixels of the image.
-
-
 
 
 
@@ -572,13 +601,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns a ofFloatPixels that contains the pixels within the ROI the image.
-
-
 
 
 
@@ -612,13 +637,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns a pointer to an array of floating point numbers that represent the pixels of the ROI of the image.
-
-
 
 
 
@@ -652,9 +673,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -690,13 +709,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Constructor.
-
-
 
 
 
@@ -730,13 +745,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Copy constructor.
-
-
 
 
 
@@ -770,9 +781,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Binary & (Logical AND http://en.wikipedia.org/wiki/Bitwise_operation) the pixel data of the right hand side image from the current image:
 
@@ -787,8 +796,6 @@ andPuppy &= cvPuppy; // will & all the bits
 ~~~~
 
 ![puppy AND](ANDoperation.png "Using the &= operation")
-
-
 
 
 
@@ -822,17 +829,13 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Multiplies the pixel data of the right hand side image from the current image:
 
 ~~~~{.cpp}
 first *= second; // both are ofxCvFloatImage instances
 ~~~~
-
-
 
 
 
@@ -866,17 +869,13 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Multiplies the pixel data of the right hand side image from the current image:
 
 ~~~~{.cpp}
 first *= second; // both are ofxCvFloatImage instances
 ~~~~
-
-
 
 
 
@@ -910,17 +909,13 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Divides each pixel of the pixel data of the right hand side image from the current image:
 
 ~~~~{.cpp}
 first /= second; // both are ofxCvFloatImage instances
 ~~~~
-
-
 
 
 
@@ -954,13 +949,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Copy the data from an array of unsigned char numbers into the ofxCvFloatImage instance. The dimensions of the array are assumed to match the dimensions of the image. The values will be converted to a 0.0 - 1.0 scale.
-
-
 
 
 
@@ -994,13 +985,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Copy the data from an array of floating point numbers into the ofxCvFloatImage instance. The dimensions of the array are assumed to match the dimensions of the image.
-
-
 
 
 
@@ -1034,13 +1021,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Copy the data from an ofxCvGrayscaleImage image into the ofxCvFloatImage instance.
-
-
 
 
 
@@ -1074,13 +1057,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Copy the data from an ofxCvColor image into the ofxCvFloatImage instance.
-
-
 
 
 
@@ -1114,13 +1093,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Copy the data from an ofxCvFloatImage image into the ofxCvFloatImage instance.
-
-
 
 
 
@@ -1154,47 +1129,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void operator=(*mom)
-
-<!--
-_syntax: operator=(*mom)_
-_name: operator=_
-_returns: void_
-_returns_description: _
-_parameters: const IplImage *mom_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
 
 
 
@@ -1230,9 +1165,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Resizes the image to the w.h passed in.
 
@@ -1240,18 +1173,16 @@ Resizes the image to the w.h passed in.
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
-###void scaleIntoMe(&mom, interpolationMethod = CV_INTER_NN)
+###void scaleIntoMe(&mom, interpolationMethod)
 
 <!--
-_syntax: scaleIntoMe(&mom, interpolationMethod = CV_INTER_NN)_
+_syntax: scaleIntoMe(&mom, interpolationMethod)_
 _name: scaleIntoMe_
 _returns: void_
 _returns_description: _
-_parameters: ofxCvImage &mom, int interpolationMethod=CV_INTER_NN_
+_parameters: ofxCvImage &mom, int interpolationMethod_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1270,9 +1201,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Scales the image passed in to be the size of the current image, 
 
@@ -1286,8 +1215,6 @@ second.allocate(320, 240);
 second.scaleIntoMe(first); // first is now 320,240
 
 ~~~~
-
-
 
 
 
@@ -1321,13 +1248,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Set all the pixels in the image to the float value passed in. This is useful for blanking or filling an image quickly. the values are 0.0 to 1.0.
-
-
 
 
 
@@ -1361,13 +1284,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Set all the pixels in a ofxCvGrayscaleImage from a pointer to an array of unsigned char values, using the w and h parameters to determine the dimensions of the image. The array is assumed to contain color values.
-
-
 
 
 
@@ -1401,13 +1320,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 This allows you to set the ROI on the image from an array of pixels. Region of Interest is a rectangular area in an image, to segment object for further processing. Once the ROI is defined, OpenCV functions will operate on the ROI, reducing the number of pixels that the operation will examine.
-
-
 
 
 
@@ -1441,13 +1356,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Allows you to set the native scale of your images, for instance, if your images contain values ranging from 0.0 to 255.0 (unlikely, but possible) then you would want to set them to ensure that all image operations complete correctly.
-
-
 
 
 
@@ -1481,13 +1392,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 This allows you to set the ROI on the image from an array of pixels. Region of Interest is a rectangular area in an image, to segment object for further processing. Once the ROI is defined, OpenCV functions will operate on the ROI, reducing the number of pixels that the operation will examine.
-
-
 
 
 
@@ -1521,13 +1428,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 This allows you to set the ROI on the image from an ofPixels instance. Region of Interest is a rectangular area in an image, to segment object for further processing. Once the ROI is defined, OpenCV functions will operate on the ROI, reducing the number of pixels that the operation will examine.
-
-
 
 
 
@@ -1553,8 +1456,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1578,8 +1488,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1603,8 +1520,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1628,8 +1552,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1653,8 +1584,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 

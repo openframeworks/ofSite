@@ -5,10 +5,12 @@
 _visible: True_
 _advanced: True_
 _istemplated: False_
+_extends: _
 -->
 
 ##InlineDescription
 
+An abstract class representing an object that can be updated.
 
 
 
@@ -44,15 +46,13 @@ _advanced: False_
 
 _inlined_description: _
 
-
-
+Update the object's state.
 
 
 
 
 
 _description: _
-
 
 
 
@@ -82,15 +82,13 @@ _advanced: False_
 
 _inlined_description: _
 
-
-
+Destroy the ofBaseUpdates.
 
 
 
 
 
 _description: _
-
 
 
 

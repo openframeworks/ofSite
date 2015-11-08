@@ -5,10 +5,12 @@
 _visible: True_
 _advanced: True_
 _istemplated: False_
+_extends: ofBaseLoggerChannel_
 -->
 
 ##InlineDescription
 
+A logger channel that logs its messages to a log file.
 
 
 
@@ -44,15 +46,13 @@ _advanced: False_
 
 _inlined_description: _
 
-
-
+CLose the log file.
 
 
 
 
 
 _description: _
-
 
 
 
@@ -88,9 +88,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -100,48 +98,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void log(logLevel, &module, *format, ...)
+###void log(level, &module, *format, args)
 
 <!--
-_syntax: log(logLevel, &module, *format, ...)_
-_name: log_
-_returns: void_
-_returns_description: _
-_parameters: ofLogLevel level, const string &module, const char *format,..._
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void log(logLevel, &module, *format, args)
-
-<!--
-_syntax: log(logLevel, &module, *format, args)_
+_syntax: log(level, &module, *format, args)_
 _name: log_
 _returns: void_
 _returns_description: _
@@ -164,9 +124,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -196,15 +154,13 @@ _advanced: False_
 
 _inlined_description: _
 
-
-
+Create an ofFileLoggerChannel.
 
 
 
 
 
 _description: _
-
 
 
 
@@ -234,15 +190,17 @@ _advanced: False_
 
 _inlined_description: _
 
+Create an ofFileLoggerChannel with parameters.
 
-
+Parameters:
+path The file path for the log file.
+append True if the log data should be added to an existing file.
 
 
 
 
 
 _description: _
-
 
 
 
@@ -272,15 +230,17 @@ _advanced: False_
 
 _inlined_description: _
 
+Set the log file.
 
-
+Parameters:
+path The file path for the log file.
+append True if the log data should be added to an existing file.
 
 
 
 
 
 _description: _
-
 
 
 
@@ -310,15 +270,13 @@ _advanced: False_
 
 _inlined_description: _
 
-
-
+Destroy the file logger channel.
 
 
 
 
 
 _description: _
-
 
 
 
@@ -346,8 +304,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+< The location of the log file.
+
+
+
+
+
+_description: _
 
 
 

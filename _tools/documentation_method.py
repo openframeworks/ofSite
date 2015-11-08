@@ -1,3 +1,5 @@
+import Levenshtein
+
 class DocsMethod:
     def __init__(self,functionid):
         self.id = functionid
@@ -11,3 +13,5 @@ class DocsMethod:
         self.parameters = ""
         self.syntax = ""
 
+    def get_inlined_docs_similarity(self):
+        return Levenshtein.ratio(self.inlined_description, self.description)

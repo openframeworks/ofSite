@@ -5,10 +5,12 @@
 _visible: True_
 _advanced: True_
 _istemplated: False_
+_extends: _
 -->
 
 ##InlineDescription
 
+Base class for ofParameter, ofReadOnlyParameter and ofParameterGroup
 
 
 
@@ -50,9 +52,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -88,9 +88,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -100,14 +98,86 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###string escape(str)
+###ofParameterGroup & castGroup()
 
 <!--
-_syntax: escape(str)_
+_syntax: castGroup()_
+_name: castGroup_
+_returns: ofParameterGroup &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const ofParameterGroup & castGroup()
+
+<!--
+_syntax: castGroup()_
+_name: castGroup_
+_returns: const ofParameterGroup &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string escape(&str)
+
+<!--
+_syntax: escape(&str)_
 _name: escape_
 _returns: string_
 _returns_description: _
-_parameters: string str_
+_parameters: const string &str_
 _access: protected_
 _version_started: 0073_
 _version_deprecated: _
@@ -126,9 +196,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -138,14 +206,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void fromString(str)
+###void fromString(&str)
 
 <!--
-_syntax: fromString(str)_
+_syntax: fromString(&str)_
 _name: fromString_
 _returns: void_
 _returns_description: _
-_parameters: string str_
+_parameters: const string &str_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -164,9 +232,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -202,9 +268,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const ofParameterGroup getFirstParent()
+
+<!--
+_syntax: getFirstParent()_
+_name: getFirstParent_
+_returns: const ofParameterGroup_
+_returns_description: _
+_parameters: _
+_access: protected_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -240,9 +340,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -278,9 +376,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -290,16 +386,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const ofParameterGroup * getParent()
+###bool isReadOnly()
 
 <!--
-_syntax: getParent()_
-_name: getParent_
-_returns: const ofParameterGroup *_
+_syntax: isReadOnly()_
+_name: isReadOnly_
+_returns: bool_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 0.8.0_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -316,47 +412,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofParameterGroup * getParent()
-
-<!--
-_syntax: getParent()_
-_name: getParent_
-_returns: ofParameterGroup *_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
 
 
 
@@ -392,9 +448,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -404,54 +458,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void notifyParent()
+###shared_ptr< ofAbstractParameter > newReference()
 
 <!--
-_syntax: notifyParent()_
-_name: notifyParent_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: protected_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofAbstractParameter()
-
-<!--
-_syntax: ofAbstractParameter()_
-_name: ofAbstractParameter_
-_returns: _
+_syntax: newReference()_
+_name: newReference_
+_returns: shared_ptr< ofAbstractParameter >_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -468,9 +484,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -480,14 +494,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setName(name)
+###void setName(&name)
 
 <!--
-_syntax: setName(name)_
+_syntax: setName(&name)_
 _name: setName_
 _returns: void_
 _returns_description: _
-_parameters: string name_
+_parameters: const string &name_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -506,9 +520,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -518,14 +530,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setParent(*_parent)
+###void setParent(&_parent)
 
 <!--
-_syntax: setParent(*_parent)_
+_syntax: setParent(&_parent)_
 _name: setParent_
 _returns: void_
 _returns_description: _
-_parameters: ofParameterGroup *_parent_
+_parameters: ofParameterGroup &_parent_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -544,9 +556,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -582,9 +592,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -620,9 +628,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -658,9 +664,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -696,9 +700,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -711,29 +713,4 @@ _description: _
 ##Variables
 
 
-
-###ofParameterGroup parent
-
-<!--
-_name: parent_
-_type: ofParameterGroup_
-_access: private_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
 

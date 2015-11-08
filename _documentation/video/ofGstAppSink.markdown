@@ -5,6 +5,7 @@
 _visible: True_
 _advanced: True_
 _istemplated: False_
+_extends: _
 -->
 
 ##InlineDescription
@@ -24,14 +25,14 @@ _istemplated: False_
 
 
 
-###GstFlowReturn on_buffer(*buffer)
+###GstFlowReturn on_buffer(buffer)
 
 <!--
-_syntax: on_buffer(*buffer)_
+_syntax: on_buffer(buffer)_
 _name: on_buffer_
 _returns: GstFlowReturn_
 _returns_description: _
-_parameters: GstBuffer *buffer_
+_parameters: shared_ptr< GstSample > buffer_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -50,9 +51,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -88,9 +87,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -126,9 +123,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -138,14 +133,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###GstFlowReturn on_preroll(*buffer)
+###GstFlowReturn on_preroll(buffer)
 
 <!--
-_syntax: on_preroll(*buffer)_
+_syntax: on_preroll(buffer)_
 _name: on_preroll_
 _returns: GstFlowReturn_
 _returns_description: _
-_parameters: GstBuffer *buffer_
+_parameters: shared_ptr< GstSample > buffer_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -164,9 +159,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -202,9 +195,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -240,9 +231,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 

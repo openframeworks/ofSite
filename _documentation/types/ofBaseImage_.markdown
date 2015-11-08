@@ -5,10 +5,13 @@
 _visible: True_
 _advanced: True_
 _istemplated: True_
+_extends: ofAbstractImage, ofBaseHasPixels_<T>_
 -->
 
 ##InlineDescription
 
+A base class represeting an image.
+\tparam T The pixel data type.
 
 
 
@@ -44,15 +47,13 @@ _advanced: False_
 
 _inlined_description: _
 
-
-
+Destroy the ofBaseImage_.
 
 
 
 
 
 _description: _
-
 
 
 

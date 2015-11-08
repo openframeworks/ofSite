@@ -100,18 +100,31 @@
 	    <div class="submenucol-right">
             <div class="documentation_detail class_documentation">
               % if not clazz is None:
+                % if len(clazz.extends)>0:
+                    <h2><strong><em>Extends</em></strong></h2>
+                    <p>This class extends others, you can call their methods on an instance of ${clazz.name} too:</p>
+                    <ul>
+                    % for base in clazz.extends:
+                        <li>${base}</li>
+                    % endfor
+                    </ul>
+                % endif
               <%self:filter chain="markdown_template">
 ${clazz.reference}
               </%self:filter>
               % endif
 
-              % if not clazz is None and clazz.detailed_inline_description.strip("\n").strip(" ") != "":
-              <div class="inlined_docs">
-                    <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
-                    <%self:filter chain="markdown_template">
-${clazz.detailed_inline_description}
-                    </%self:filter>
-              </div>                      
+              % if not clazz is None and clazz.detailed_inline_description.strip("\n").strip(" ") != "" and clazz.get_inlined_docs_similarity()<0.8:
+                  % if clazz.reference.strip("\n").strip(" ") != "":
+                    <div class="inlined_docs">
+                  % endif
+                        <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+                        <%self:filter chain="markdown_template">
+    ${clazz.detailed_inline_description}
+                        </%self:filter>
+                  % if clazz.reference.strip("\n").strip(" ") != "":
+                    </div>   
+                  % endif                   
               % endif
               
               % if not functions is None:

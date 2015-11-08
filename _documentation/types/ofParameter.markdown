@@ -5,10 +5,21 @@
 _visible: True_
 _advanced: False_
 _istemplated: False_
+_extends: ofAbstractParameter_
 -->
 
 ##InlineDescription
 
+ofParameter holds a value and notifies its listeners when it changes.
+
+ofParameter can be used as the value itself. For example an `ofParameter<int>`
+can be added, multiplied, substracted, etc with another number.
+
+For an ofParameter with a custom object such as `ofParameter<MyObject> myObject`,
+`MyObject`'s methods can be accessed using pointer syntax,
+e.g. `myObject->myMethod();`.
+
+\tparam ParameterType The data wrapped by the ofParameter.
 
 
 
@@ -24,14 +35,14 @@ _istemplated: False_
 
 
 
-###void addListener(*listener, method)
+###void addListener(*listener, method, prio)
 
 <!--
-_syntax: addListener(*listener, method)_
+_syntax: addListener(*listener, method, prio)_
 _name: addListener_
 _returns: void_
 _returns_description: _
-_parameters: ListenerClass *listener, ListenerMethod method_
+_parameters: ListenerClass *listener, ListenerMethod method, int prio_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -50,9 +61,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -88,9 +97,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -126,9 +133,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -138,14 +143,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void eventsSetValue(v)
+###void eventsSetValue(&v)
 
 <!--
-_syntax: eventsSetValue(v)_
+_syntax: eventsSetValue(&v)_
 _name: eventsSetValue_
 _returns: void_
 _returns_description: _
-_parameters: ParameterType v_
+_parameters: const ParameterType &v_
 _access: private_
 _version_started: 0073_
 _version_deprecated: _
@@ -164,9 +169,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -176,14 +179,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void fromString(str)
+###void fromString(&name)
 
 <!--
-_syntax: fromString(str)_
+_syntax: fromString(&name)_
 _name: fromString_
 _returns: void_
 _returns_description: _
-_parameters: string str_
+_parameters: const string &name_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -202,9 +205,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -240,9 +241,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const ofParameterGroup getFirstParent()
+
+<!--
+_syntax: getFirstParent()_
+_name: getFirstParent_
+_returns: const ofParameterGroup_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -278,9 +313,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -316,9 +349,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -354,9 +385,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool isReadOnly()
+
+<!--
+_syntax: isReadOnly()_
+_name: isReadOnly_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -392,9 +457,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -404,14 +467,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void makeReferenceTo(mom)
+###void makeReferenceTo(&mom)
 
 <!--
-_syntax: makeReferenceTo(mom)_
+_syntax: makeReferenceTo(&mom)_
 _name: makeReferenceTo_
 _returns: void_
 _returns_description: _
-_parameters: ofParameter< ParameterType > mom_
+_parameters: ofParameter< ParameterType > &mom_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -430,9 +493,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -442,14 +503,50 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void noEventsSetValue(v)
+###shared_ptr< ofAbstractParameter > newReference()
 
 <!--
-_syntax: noEventsSetValue(v)_
+_syntax: newReference()_
+_name: newReference_
+_returns: shared_ptr< ofAbstractParameter >_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void noEventsSetValue(&v)
+
+<!--
+_syntax: noEventsSetValue(&v)_
 _name: noEventsSetValue_
 _returns: void_
 _returns_description: _
-_parameters: ParameterType v_
+_parameters: const ParameterType &v_
 _access: private_
 _version_started: 0073_
 _version_deprecated: _
@@ -468,9 +565,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -506,9 +601,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -518,14 +611,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofParameter(v)
+### ofParameter(&v)
 
 <!--
-_syntax: ofParameter(v)_
+_syntax: ofParameter(&v)_
 _name: ofParameter_
 _returns: _
 _returns_description: _
-_parameters: ParameterType v_
+_parameters: const ofParameter< ParameterType > &v_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -544,9 +637,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -556,14 +647,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofParameter(name, v)
+### ofParameter(&v)
 
 <!--
-_syntax: ofParameter(name, v)_
+_syntax: ofParameter(&v)_
 _name: ofParameter_
 _returns: _
 _returns_description: _
-_parameters: string name, ParameterType v_
+_parameters: const ParameterType &v_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -582,9 +673,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -594,14 +683,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofParameter(name, v, min, max)
+### ofParameter(&name, &v)
 
 <!--
-_syntax: ofParameter(name, v, min, max)_
+_syntax: ofParameter(&name, &v)_
 _name: ofParameter_
 _returns: _
 _returns_description: _
-_parameters: string name, ParameterType v, ParameterType min, ParameterType max_
+_parameters: const string &name, const ParameterType &v_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -620,9 +709,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -632,16 +719,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### operator const ParameterType &()
+### ofParameter(&name, &v, &min, &max)
 
 <!--
-_syntax: operator const ParameterType &()_
-_name: operator const ParameterType &_
+_syntax: ofParameter(&name, &v, &min, &max)_
+_name: ofParameter_
 _returns: _
 _returns_description: _
-_parameters: _
+_parameters: const string &name, const ParameterType &v, const ParameterType &min, const ParameterType &max_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -658,9 +745,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -696,9 +781,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -734,9 +817,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -772,9 +853,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -810,9 +889,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -848,9 +925,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -886,9 +961,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -924,9 +997,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -962,9 +1033,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1000,9 +1069,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1038,9 +1105,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1076,9 +1141,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1114,9 +1177,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1152,9 +1213,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1190,9 +1249,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1228,9 +1285,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1266,9 +1321,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1304,9 +1357,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1316,14 +1367,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void removeListener(*listener, method)
+###void removeListener(*listener, method, prio)
 
 <!--
-_syntax: removeListener(*listener, method)_
+_syntax: removeListener(*listener, method, prio)_
 _name: removeListener_
 _returns: void_
 _returns_description: _
-_parameters: ListenerClass *listener, ListenerMethod method_
+_parameters: ListenerClass *listener, ListenerMethod method, int prio_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -1342,9 +1393,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1354,14 +1403,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofParameter< ParameterType > & set(v)
+###ofParameter< ParameterType > & set(&v)
 
 <!--
-_syntax: set(v)_
+_syntax: set(&v)_
 _name: set_
 _returns: ofParameter< ParameterType > &_
 _returns_description: _
-_parameters: ParameterType v_
+_parameters: const ParameterType &v_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -1380,9 +1429,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1392,14 +1439,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofParameter< ParameterType > & set(name, value)
+###ofParameter< ParameterType > & set(&name, &v)
 
 <!--
-_syntax: set(name, value)_
+_syntax: set(&name, &v)_
 _name: set_
 _returns: ofParameter< ParameterType > &_
 _returns_description: _
-_parameters: string name, ParameterType value_
+_parameters: const string &name, const ParameterType &v_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -1418,9 +1465,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1430,14 +1475,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofParameter< ParameterType > & set(name, value, min, max)
+###ofParameter< ParameterType > & set(&name, &v, &min, &max)
 
 <!--
-_syntax: set(name, value, min, max)_
+_syntax: set(&name, &v, &min, &max)_
 _name: set_
 _returns: ofParameter< ParameterType > &_
 _returns_description: _
-_parameters: string name, ParameterType value, ParameterType min, ParameterType max_
+_parameters: const string &name, const ParameterType &v, const ParameterType &min, const ParameterType &max_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -1456,9 +1501,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1468,14 +1511,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setMax(max)
+###void setMax(&max)
 
 <!--
-_syntax: setMax(max)_
+_syntax: setMax(&max)_
 _name: setMax_
 _returns: void_
 _returns_description: _
-_parameters: ParameterType max_
+_parameters: const ParameterType &max_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -1494,9 +1537,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1506,14 +1547,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setMin(min)
+###void setMin(&min)
 
 <!--
-_syntax: setMin(min)_
+_syntax: setMin(&min)_
 _name: setMin_
 _returns: void_
 _returns_description: _
-_parameters: ParameterType min_
+_parameters: const ParameterType &min_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -1532,9 +1573,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1544,14 +1583,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setName(name)
+###void setName(&name)
 
 <!--
-_syntax: setName(name)_
+_syntax: setName(&name)_
 _name: setName_
 _returns: void_
 _returns_description: _
-_parameters: string name_
+_parameters: const string &name_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -1570,9 +1609,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setParent(&_parent)
+
+<!--
+_syntax: setParent(&_parent)_
+_name: setParent_
+_returns: void_
+_returns_description: _
+_parameters: ofParameterGroup &_parent_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1608,9 +1681,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofParameter< ParameterType > & setWithoutEventNotifications(&v)
+
+<!--
+_syntax: setWithoutEventNotifications(&v)_
+_name: setWithoutEventNotifications_
+_returns: ofParameter< ParameterType > &_
+_returns_description: _
+_parameters: const ParameterType &v_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1646,9 +1753,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1676,8 +1781,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1701,8 +1813,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 

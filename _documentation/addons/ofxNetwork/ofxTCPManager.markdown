@@ -5,12 +5,12 @@
 _visible: True_
 _advanced: True_
 _istemplated: False_
+_extends: _
 -->
 
 ##InlineDescription
 
-Implementation of a TCP socket. 
-
+Implementation of a TCP socket.
 
 
 
@@ -52,9 +52,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -90,9 +88,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -128,9 +124,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -166,9 +160,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -199,16 +191,12 @@ _advanced: False_
 _inlined_description: _
 
 
-Closes an open socket. NOTE: A closed socket cannot be reused again without a call to "Create()". 
-
-
 
 
 
 
 
 _description: _
-
 
 
 
@@ -244,9 +232,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -282,9 +268,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -320,9 +304,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -358,9 +340,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -396,9 +376,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -434,9 +412,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -472,9 +448,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -510,9 +484,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int GetTimeoutConnect()
+
+<!--
+_syntax: GetTimeoutConnect()_
+_name: GetTimeoutConnect_
+_returns: int_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -548,9 +556,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -586,9 +592,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -624,9 +628,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int PeekReceive(*pBuff, iSize)
+
+<!--
+_syntax: PeekReceive(*pBuff, iSize)_
+_name: PeekReceive_
+_returns: int_
+_returns_description: _
+_parameters: char *pBuff, const int iSize_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -657,16 +695,12 @@ _advanced: False_
 _inlined_description: _
 
 
-Return values: SOCKET_TIMEOUT indicates timeout SOCKET_ERROR in case of a problem. 
-
-
 
 
 
 
 
 _description: _
-
 
 
 
@@ -697,16 +731,12 @@ _advanced: False_
 _inlined_description: _
 
 
-Return values: SOCKET_TIMEOUT indicates timeout SOCKET_ERROR in case of a problem. 
-
-
 
 
 
 
 
 _description: _
-
 
 
 
@@ -737,16 +767,12 @@ _advanced: False_
 _inlined_description: _
 
 
-Return values: SOCKET_TIMEOUT indicates timeout SOCKET_ERROR in case of a problem. 
-
-
 
 
 
 
 
 _description: _
-
 
 
 
@@ -777,16 +803,12 @@ _advanced: False_
 _inlined_description: _
 
 
-Return values: SOCKET_TIMEOUT indicates timeout SOCKET_ERROR in case of a problem. 
-
-
 
 
 
 
 
 _description: _
-
 
 
 
@@ -816,9 +838,6 @@ _advanced: False_
 
 _inlined_description: _
 
-Theo added - Choose to set nonBLocking - default mode is to block. 
-
-
 
 
 
@@ -826,7 +845,6 @@ Theo added - Choose to set nonBLocking - default mode is to block.
 
 
 _description: _
-
 
 
 
@@ -862,9 +880,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -900,9 +916,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -938,9 +952,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void SetTimeoutConnect(timeoutInSeconds)
+
+<!--
+_syntax: SetTimeoutConnect(timeoutInSeconds)_
+_name: SetTimeoutConnect_
+_returns: void_
+_returns_description: _
+_parameters: int timeoutInSeconds_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -976,9 +1024,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1014,9 +1060,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1052,9 +1096,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1090,9 +1132,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1128,9 +1168,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1166,9 +1204,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1204,9 +1240,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1234,8 +1268,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1259,8 +1300,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1284,8 +1332,47 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###unsigned long m_dwTimeoutConnect
+
+<!--
+_name: m_dwTimeoutConnect_
+_type: unsigned long_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1309,8 +1396,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1334,8 +1428,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1359,8 +1460,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1384,8 +1492,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1409,8 +1524,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1434,8 +1556,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 

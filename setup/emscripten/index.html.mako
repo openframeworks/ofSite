@@ -49,7 +49,7 @@ emrun --browser chrome bin/3DPrimitivesExample.html
 ```
 If everything works, you should see this image
 
-![1](3dPrimitives.png)
+![](3dprimitives.png)
 
 This Tutorial is taken from this [blog post](http://www.reginafloresmir.com/blog/2015/5/14/openframeworks-on-the-line) by Regine Flores Mir.
 

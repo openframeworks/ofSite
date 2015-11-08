@@ -5,6 +5,7 @@
 _visible: True_
 _advanced: False_
 _istemplated: False_
+_extends: ofAppBaseWindow_
 -->
 
 ##InlineDescription
@@ -25,6 +26,150 @@ Sometimes you might want to run your OF application without a window at all, for
 ##Methods
 
 
+
+###bool allowsMultiWindow()
+
+<!--
+_syntax: allowsMultiWindow()_
+_name: allowsMultiWindow_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: True_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool doesLoop()
+
+<!--
+_syntax: doesLoop()_
+_name: doesLoop_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: True_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void draw()
+
+<!--
+_syntax: draw()_
+_name: draw_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofCoreEvents & events()
+
+<!--
+_syntax: events()_
+_name: events_
+_returns: ofCoreEvents &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void exitApp()
 
@@ -52,9 +197,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -90,9 +233,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -128,9 +269,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -166,9 +305,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -204,9 +341,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -242,9 +377,79 @@ _inlined_description: _
 
 
 
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void loop()
+
+<!--
+_syntax: loop()_
+_name: loop_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: True_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
 
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool needsPolling()
+
+<!--
+_syntax: needsPolling()_
+_name: needsPolling_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: True_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -280,9 +485,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -292,16 +495,88 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void runAppViaInfiniteLoop(*appPtr)
+###void pollEvents()
 
 <!--
-_syntax: runAppViaInfiniteLoop(*appPtr)_
-_name: runAppViaInfiniteLoop_
+_syntax: pollEvents()_
+_name: pollEvents_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: True_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###shared_ptr< ofBaseRenderer > & renderer()
+
+<!--
+_syntax: renderer()_
+_name: renderer_
+_returns: shared_ptr< ofBaseRenderer > &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void run(*appPtr)
+
+<!--
+_syntax: run(*appPtr)_
+_name: run_
 _returns: void_
 _returns_description: _
 _parameters: ofBaseApp *appPtr_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -318,9 +593,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -330,16 +603,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setupOpenGL(w, h, screenMode)
+###void setup(&settings)
 
 <!--
-_syntax: setupOpenGL(w, h, screenMode)_
-_name: setupOpenGL_
+_syntax: setup(&settings)_
+_name: setup_
 _returns: void_
 _returns_description: _
-_parameters: int w, int h, int screenMode_
+_parameters: const ofWindowSettings &settings_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -356,9 +629,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void update()
+
+<!--
+_syntax: update()_
+_name: update_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -394,9 +701,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -409,6 +714,70 @@ _description: _
 ##Variables
 
 
+
+###ofCoreEvents coreEvents
+
+<!--
+_name: coreEvents_
+_type: ofCoreEvents_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###shared_ptr< ofBaseRenderer > currentRenderer
+
+<!--
+_name: currentRenderer_
+_type: shared_ptr< ofBaseRenderer >_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###int height
 
@@ -424,8 +793,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -449,8 +825,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -474,8 +857,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 

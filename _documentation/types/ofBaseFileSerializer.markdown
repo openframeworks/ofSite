@@ -5,6 +5,7 @@
 _visible: True_
 _advanced: True_
 _istemplated: False_
+_extends: ofBaseSerializer_
 -->
 
 ##InlineDescription
@@ -50,9 +51,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -88,9 +87,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -126,9 +123,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 

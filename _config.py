@@ -17,14 +17,16 @@
 import inspect, os
 sys.path.append( os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe()))) ) # script directory
 #from _version import currentVersion 
-currentVersion = "0.8.4"
+olderVersion = "0.8.4"
+majorVersion = "0.9.0"
+currentVersion = "0.9.0RC2"
+breaking = True
 
 ## site_url -- Your site's full URL
 # Your "site" is the same thing as your _site directory.
 #  If you're hosting a blogofile powered site as a subdirectory of a larger
 #  non-blogofile site, then you would set the site_url to the full URL
 #  including that subdirectory: "http://www.yoursite.com/path/to/blogofile-dir"
-#site.url = "http://arturocastro.net/newofsite"
 site.url = "http://localhost:8080"
 
 #### Blog Settings ####

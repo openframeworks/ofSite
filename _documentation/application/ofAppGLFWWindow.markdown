@@ -5,6 +5,7 @@
 _visible: True_
 _advanced: False_
 _istemplated: False_
+_extends: ofAppBaseGLWindow_
 -->
 
 ##InlineDescription
@@ -25,6 +26,78 @@ This is the base class for the [GLFW](https://github.com/glfw) renderer that you
 ##Methods
 
 
+
+###bool allowsMultiWindow()
+
+<!--
+_syntax: allowsMultiWindow()_
+_name: allowsMultiWindow_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: True_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void close()
+
+<!--
+_syntax: close()_
+_name: close_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void disableSetupScreen()
 
@@ -52,9 +125,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -64,16 +135,52 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void display(void)
+###bool doesLoop()
 
 <!--
-_syntax: display(void)_
-_name: display_
+_syntax: doesLoop()_
+_name: doesLoop_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: True_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void draw()
+
+<!--
+_syntax: draw()_
+_name: draw_
 _returns: void_
 _returns_description: _
-_parameters: void_
-_access: private_
-_version_started: 0073_
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -90,9 +197,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -102,14 +207,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void drop_cb(*windowP_, *dropString)
+###void drop_cb(*windowP_, numFiles, **dropString)
 
 <!--
-_syntax: drop_cb(*windowP_, *dropString)_
+_syntax: drop_cb(*windowP_, numFiles, **dropString)_
 _name: drop_cb_
 _returns: void_
 _returns_description: _
-_parameters: GLFWwindow *windowP_, const char *dropString_
+_parameters: GLFWwindow *windowP_, int numFiles, const char **dropString_
 _access: private_
 _version_started: 0073_
 _version_deprecated: _
@@ -128,13 +233,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 This is the drag and drop callback. This should be handled in your ofBaseApp instance.
-
-
 
 
 
@@ -168,9 +269,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void entry_cb(*windowP_, entered)
+
+<!--
+_syntax: entry_cb(*windowP_, entered)_
+_name: entry_cb_
+_returns: void_
+_returns_description: _
+_parameters: GLFWwindow *windowP_, int entered_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: True_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -206,9 +341,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -218,20 +351,20 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void exitApp()
+###ofCoreEvents & events()
 
 <!--
-_syntax: exitApp()_
-_name: exitApp_
-_returns: void_
+_syntax: events()_
+_name: events_
+_returns: ofCoreEvents &_
 _returns_description: _
 _parameters: _
-_access: private_
-_version_started: 0073_
+_access: public_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: True_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -244,9 +377,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -282,11 +413,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 This is the exit callback that is called by your the ofAppRunner [exit()](../ofAppRunner_functions.html#ofExit) method.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string getClipboardString()
+
+<!--
+_syntax: getClipboardString()_
+_name: getClipboardString_
+_returns: string_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -322,9 +485,79 @@ _inlined_description: _
 
 
 
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###GLFWwindow * getGLFWWindow()
+
+<!--
+_syntax: getGLFWWindow()_
+_name: getGLFWWindow_
+_returns: GLFWwindow *_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
 
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###GLXContext getGLXContext()
+
+<!--
+_syntax: getGLXContext()_
+_name: getGLXContext_
+_returns: GLXContext_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -360,13 +593,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Gets the height of the current window and is mirrored in the ofGetScreenHeight() method.
-
-
 
 
 
@@ -400,9 +629,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -431,7 +658,6 @@ _advanced: False_
 -->
 
 _inlined_description: _
-
 
 
 
@@ -475,13 +701,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Gets the height of the current window and is mirrored in the ofGetWindowSize() method.
-
-
 
 
 
@@ -515,11 +737,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Gets the height of the current window and is mirrored in the ofGetScreenWidth() method.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void * getWindowContext()
+
+<!--
+_syntax: getWindowContext()_
+_name: getWindowContext_
+_returns: void *_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -529,12 +783,12 @@ Gets the height of the current window and is mirrored in the ofGetScreenWidth() 
 
 <!----------------------------------------------------------------------------->
 
-###int getWindowMode()
+###ofWindowMode getWindowMode()
 
 <!--
 _syntax: getWindowMode()_
 _name: getWindowMode_
-_returns: int_
+_returns: ofWindowMode_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -555,13 +809,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns one of the following: OF_FULLSCREEN or OF_WINDOW.
-
-
 
 
 
@@ -595,11 +845,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 This returns the location of the window relative to the deivce that it's being displayed on.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool getWindowShouldClose()
+
+<!--
+_syntax: getWindowShouldClose()_
+_name: getWindowShouldClose_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -635,9 +917,79 @@ _inlined_description: _
 
 
 
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###Display * getX11Display()
+
+<!--
+_syntax: getX11Display()_
+_name: getX11Display_
+_returns: Display *_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
 
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###Window getX11Window()
+
+<!--
+_syntax: getX11Window()_
+_name: getX11Window_
+_returns: Window_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -673,9 +1025,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -711,47 +1061,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void initializeWindow()
-
-<!--
-_syntax: initializeWindow()_
-_name: initializeWindow_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
 
 
 
@@ -787,13 +1097,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Hardcoded to return true right now.
-
-
 
 
 
@@ -827,9 +1133,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -865,9 +1169,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -877,14 +1179,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void keyboard_cb(*windowP_, key, scancode, action, mods)
+###void keyboard_cb(*windowP_, key, scancode, codepoint, action, mods)
 
 <!--
-_syntax: keyboard_cb(*windowP_, key, scancode, action, mods)_
+_syntax: keyboard_cb(*windowP_, key, scancode, codepoint, action, mods)_
 _name: keyboard_cb_
 _returns: void_
 _returns_description: _
-_parameters: GLFWwindow *windowP_, int key, int scancode, int action, int mods_
+_parameters: GLFWwindow *windowP_, int key, int scancode, unsigned int codepoint, int action, int mods_
 _access: private_
 _version_started: 0073_
 _version_deprecated: _
@@ -903,9 +1205,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void listMonitors()
+
+<!--
+_syntax: listMonitors()_
+_name: listMonitors_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: True_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -928,6 +1264,78 @@ _version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
+_static: True_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void loop()
+
+<!--
+_syntax: loop()_
+_name: loop_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: True_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void makeCurrent()
+
+<!--
+_syntax: makeCurrent()_
+_name: makeCurrent_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
 _static: False_
 _visible: True_
 _advanced: False_
@@ -941,9 +1349,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -979,9 +1385,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1017,9 +1421,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool needsPolling()
+
+<!--
+_syntax: needsPolling()_
+_name: needsPolling_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: True_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1055,9 +1493,151 @@ _inlined_description: _
 
 
 
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofAppGLFWWindow(&w)
+
+<!--
+_syntax: ofAppGLFWWindow(&w)_
+_name: ofAppGLFWWindow_
+_returns: _
+_returns_description: _
+_parameters: const ofAppGLFWWindow &w_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
 
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofAppGLFWWindow & operator=(&w)
+
+<!--
+_syntax: operator=(&w)_
+_name: operator=_
+_returns: ofAppGLFWWindow &_
+_returns_description: _
+_parameters: const ofAppGLFWWindow &w_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void pollEvents()
+
+<!--
+_syntax: pollEvents()_
+_name: pollEvents_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: True_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###shared_ptr< ofBaseRenderer > & renderer()
+
+<!--
+_syntax: renderer()_
+_name: renderer_
+_returns: shared_ptr< ofBaseRenderer > &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1093,47 +1673,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void runAppViaInfiniteLoop(*appPtr)
-
-<!--
-_syntax: runAppViaInfiniteLoop(*appPtr)_
-_name: runAppViaInfiniteLoop_
-_returns: void_
-_returns_description: _
-_parameters: ofBaseApp *appPtr_
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
 
 
 
@@ -1169,9 +1709,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1181,16 +1719,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setAlphaBits(a)
+###void setClipboardString(&text)
 
 <!--
-_syntax: setAlphaBits(a)_
-_name: setAlphaBits_
+_syntax: setClipboardString(&text)_
+_name: setClipboardString_
 _returns: void_
 _returns_description: _
-_parameters: int a_
+_parameters: const string &text_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1207,9 +1745,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1219,20 +1755,20 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setColorBits(r, g, b)
+###ofAppGLFWWindow * setCurrent(*windowP)
 
 <!--
-_syntax: setColorBits(r, g, b)_
-_name: setColorBits_
-_returns: void_
+_syntax: setCurrent(*windowP)_
+_name: setCurrent_
+_returns: ofAppGLFWWindow *_
 _returns_description: _
-_parameters: int r, int g, int b_
-_access: public_
-_version_started: 0073_
+_parameters: GLFWwindow *windowP_
+_access: private_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: False_
+_static: True_
 _visible: True_
 _advanced: False_
 -->
@@ -1245,85 +1781,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setDepthBits(depth)
-
-<!--
-_syntax: setDepthBits(depth)_
-_name: setDepthBits_
-_returns: void_
-_returns_description: _
-_parameters: int depth_
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setDoubleBuffering(doubleBuff)
-
-<!--
-_syntax: setDoubleBuffering(doubleBuff)_
-_name: setDoubleBuffering_
-_returns: void_
-_returns_description: _
-_parameters: bool doubleBuff_
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
 
 
 
@@ -1359,123 +1817,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setMultiDisplayFullscreen(bMultiFullscreen)
-
-<!--
-_syntax: setMultiDisplayFullscreen(bMultiFullscreen)_
-_name: setMultiDisplayFullscreen_
-_returns: void_
-_returns_description: _
-_parameters: bool bMultiFullscreen_
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setNumSamples(samples)
-
-<!--
-_syntax: setNumSamples(samples)_
-_name: setNumSamples_
-_returns: void_
-_returns_description: _
-_parameters: int samples_
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setOpenGLVersion(major, minor)
-
-<!--
-_syntax: setOpenGLVersion(major, minor)_
-_name: setOpenGLVersion_
-_returns: void_
-_returns_description: _
-_parameters: int major, int minor_
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
 
 
 
@@ -1511,47 +1853,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setStencilBits(stencil)
-
-<!--
-_syntax: setStencilBits(stencil)_
-_name: setStencilBits_
-_returns: void_
-_returns_description: _
-_parameters: int stencil_
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
 
 
 
@@ -1587,9 +1889,79 @@ _inlined_description: _
 
 
 
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setWindowIcon(&path)
+
+<!--
+_syntax: setWindowIcon(&path)_
+_name: setWindowIcon_
+_returns: void_
+_returns_description: _
+_parameters: const string &path_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
 
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setWindowIcon(&iconPixels)
+
+<!--
+_syntax: setWindowIcon(&iconPixels)_
+_name: setWindowIcon_
+_returns: void_
+_returns_description: _
+_parameters: const ofPixels &iconPixels_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1625,9 +1997,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1663,9 +2033,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setWindowShouldClose()
+
+<!--
+_syntax: setWindowShouldClose()_
+_name: setWindowShouldClose_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1701,9 +2105,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1713,16 +2115,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setupOpenGL(w, h, screenMode)
+###void setup(&settings)
 
 <!--
-_syntax: setupOpenGL(w, h, screenMode)_
-_name: setupOpenGL_
+_syntax: setup(&settings)_
+_name: setup_
 _returns: void_
 _returns_description: _
-_parameters: int w, int h, int screenMode_
+_parameters: const ofGLWindowSettings &settings_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1739,9 +2141,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setup(&settings)
+
+<!--
+_syntax: setup(&settings)_
+_name: setup_
+_returns: void_
+_returns_description: _
+_parameters: const ofGLFWWindowSettings &settings_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1777,9 +2213,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1815,9 +2249,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void update()
+
+<!--
+_syntax: update()_
+_name: update_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1853,9 +2321,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1868,81 +2334,6 @@ _description: _
 ##Variables
 
 
-
-###int aBits
-
-<!--
-_name: aBits_
-_type: int_
-_access: private_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int bBits
-
-<!--
-_name: bBits_
-_type: int_
-_access: private_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool bDoubleBuffered
-
-<!--
-_name: bDoubleBuffered_
-_type: bool_
-_access: private_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
 
 ###bool bEnableSetupScreen
 
@@ -1958,8 +2349,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1969,22 +2367,29 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool bMultiWindowFullscreen
+###bool bWindowNeedsShowing
 
 <!--
-_name: bMultiWindowFullscreen_
+_name: bWindowNeedsShowing_
 _type: bool_
 _access: private_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
-_constant: True_
+_constant: False_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2008,8 +2413,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2033,8 +2445,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2044,22 +2463,29 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int depthBits
+###ofCoreEvents coreEvents
 
 <!--
-_name: depthBits_
-_type: int_
+_name: coreEvents_
+_type: ofCoreEvents_
 _access: private_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
-_constant: True_
+_constant: False_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2069,72 +2495,29 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int gBits
+###shared_ptr< ofBaseRenderer > currentRenderer
 
 <!--
-_name: gBits_
-_type: int_
+_name: currentRenderer_
+_type: shared_ptr< ofBaseRenderer >_
 _access: private_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
-_constant: True_
+_constant: False_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
 
 
 
 
 
-
-
-<!----------------------------------------------------------------------------->
-
-###int glVersionMajor
-
-<!--
-_name: glVersionMajor_
-_type: int_
-_access: private_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
 
 _description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int glVersionMinor
-
-<!--
-_name: glVersionMinor_
-_type: int_
-_access: private_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
 
 
 
@@ -2158,33 +2541,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
 
 
 
 
 
-
-
-<!----------------------------------------------------------------------------->
-
-###ofAppGLFWWindow instance
-
-<!--
-_name: instance_
-_type: ofAppGLFWWindow_
-_access: private_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
 
 _description: _
-
 
 
 
@@ -2208,108 +2573,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
 
 
 
 
 
-
-
-<!----------------------------------------------------------------------------->
-
-###int nonFullScreenH
-
-<!--
-_name: nonFullScreenH_
-_type: int_
-_access: private_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
 
 _description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int nonFullScreenW
-
-<!--
-_name: nonFullScreenW_
-_type: int_
-_access: private_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int nonFullScreenX
-
-<!--
-_name: nonFullScreenX_
-_type: int_
-_access: private_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int nonFullScreenY
-
-<!--
-_name: nonFullScreenY_
-_type: int_
-_access: private_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
 
 
 
@@ -2333,8 +2605,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2358,8 +2637,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2383,6 +2669,14 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
 
 
@@ -2393,122 +2687,29 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int rBits
+###ofGLFWWindowSettings settings
 
 <!--
-_name: rBits_
-_type: int_
+_name: settings_
+_type: ofGLFWWindowSettings_
 _access: private_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
-_constant: True_
+_constant: False_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
 
 
 
 
 
-
-
-<!----------------------------------------------------------------------------->
-
-###int requestedHeight
-
-<!--
-_name: requestedHeight_
-_type: int_
-_access: private_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
 
 _description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int requestedWidth
-
-<!--
-_name: requestedWidth_
-_type: int_
-_access: private_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int samples
-
-<!--
-_name: samples_
-_type: int_
-_access: private_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int stencilBits
-
-<!--
-_name: stencilBits_
-_type: int_
-_access: private_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
 
 
 
@@ -2532,8 +2733,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2557,8 +2765,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2582,8 +2797,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2607,8 +2829,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 

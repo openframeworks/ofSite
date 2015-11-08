@@ -48,7 +48,6 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
 ###ofFloatColor aiColorToOfColor(&c)
@@ -77,7 +76,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -120,7 +118,6 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
 ###void aiMeshToOfMesh(*aim, &ofm, *helper = NULL)
@@ -130,7 +127,7 @@ _syntax: aiMeshToOfMesh(*aim, &ofm, *helper = NULL)_
 _name: aiMeshToOfMesh_
 _returns: void_
 _returns_description: _
-_parameters: const aiMesh *aim, ofMesh &ofm, ofxAssimpMeshHelper *helper=NULL_
+_parameters: const aiMesh *aim, ofMesh &ofm, ofxAssimpMeshHelper *helper_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -149,7 +146,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -192,7 +188,6 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
 ###vector< ofVec3f > aiVecVecToOfVecVec(&v)
@@ -221,7 +216,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
