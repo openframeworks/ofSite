@@ -8,7 +8,7 @@ OpenGL until version 3 had an API that used an style called immediate mode and l
 
 Since OpenGL 3 the API has changed to what's called a programmable pipeline, meaning that the pipeline can be completely customized to do whatever we want. That happens through the use of shader programs that allow to configure how the graphics card draws the geometry we send to it. Or even do something completely different. It also reduces (although not completely) the use of mutable global state.
 
-openFrameworks supports both modes, you can set the openGL version in your `main.cpp` file. Check the [application module](../applciation/introduction.html) to see how to do it.
+openFrameworks supports both modes, you can set the openGL version in your `main.cpp` file. Check the [application module](../application/introduction.html) to see how to do it.
 
 To make simple uses easier and simplify the port of old code, openFrameworks when using openGL 3+ does an emulation of the fixed pipeline but you can also use it as a fully programmable pipeline by using your own shaders instead of the default ones that openFrameworks sets if we don't define our own.
 
