@@ -11,10 +11,11 @@ The [Raspberry Pi](http://www.raspberrypi.org/) is a small, inexpensive ARM-base
 
 
 ## openFrameworks on the Raspberry Pi
-Starting with version 0.8, openFrameworks now supports ARM based devices running Linux. Similiar to the desktop-based platforms, openFrameworks provides a common interface to create applications that incorporate real-time graphics, shaders, audio/video processing and networking. openFrameworks addons (commonly referred to as ofxAddons) provide a common pathway to many popular technologies like OpenCv, OSC.
+Similiar to the desktop-based platforms, openFrameworks provides a common interface to create applications that incorporate real-time graphics, shaders, audio/video processing and networking. openFrameworks addons (commonly referred to as ofxAddons) provide a common pathway to many popular technologies like OpenCv, OSC.
 
-openFrameworks supports the Raspberry Pi via the recommended Linux distribution Raspbian "Wheezy" (hard float).
+openFrameworks 0.9.0 supports the Raspberry Pi via the recommended Linux distribution Raspbian "Jessie" (hard float). Wheezy can be used with older versions of openFrameworks (0.84 recommended). [See here for the older versions of this guide that talk about Wheezy](Raspberry-Pi-Wheezy-index.html)
 
+If you are an existing openFrameworks/RPi user you may wish to read [what's different in 0.9.0](Raspberry-Pi-8-9-Transition-Notes.html) 
 
 ## Getting Started
 
@@ -28,7 +29,7 @@ openFrameworks supports the Raspberry Pi via the recommended Linux distribution 
 * [Raspberry Pi DISTCC Guide](Raspberry-Pi-DISTCC-guide.html)
 
 ## Community
-* [openFrameworks arm forum](http://forum.openframeworks.cc/index.php/board,32.0.html)
+* [openFrameworks arm forum](http://forum.openframeworks.cc/c/arm)
 
 
 
