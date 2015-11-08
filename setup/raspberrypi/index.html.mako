@@ -26,11 +26,9 @@ If you are an existing openFrameworks/RPi user you may wish to read [what's diff
 ## Advanced
 
 * [Raspberry Pi Cross-compiling Guide](Raspberry-Pi-Cross-compiling-guide.html)
-* [Raspberry Pi DISTCC Guide](Raspberry-Pi-DISTCC-guide.html)
 
 ## Community
 * [openFrameworks arm forum](http://forum.openframeworks.cc/c/arm)
-
 
 
 ### openFrameworks + Raspberry Pi = <3
