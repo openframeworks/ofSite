@@ -104,7 +104,7 @@ For example, here is how you build and run the polygonExample:
 * `make`
 * `make run`
 
-To create your own project from scratch, copy `examples/empty/emptyExample` into `apps/myApps/yourProjectName` folder and start from there
+Unlike other platforms, OF Raspberry Pi projects do not make use of the projectGenerator. To create your own project from scratch, copy `examples/empty/emptyExample` into `apps/myApps/yourProjectName` folder and start from there
 
 For example:
 
