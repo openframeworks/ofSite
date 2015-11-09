@@ -12,22 +12,24 @@ Getting your Raspberry Pi ready for openFrameworks
 
          
 ## Configure the Raspberry Pi
-This guide assumes you are starting from a fresh Raspian install and that you are able to connect to the Raspberry Pi to give it commands.
+This guide assumes you are starting from a fresh Raspian install and that you are able to connect to the Raspberry Pi and send it commands.
 
-Options to give commands are:
+You can enter commands on the Pi by:
 
 0. SSH into the Pi from a different computer
 0. Attach a keyboard and monitor to the Pi.
 	* With Jessie the Raspberry Pi now boots the X11 window system by default, open up LXTerminal from the shortcut on the Raspberry Pi Desktop
 	* Type in the command `sudo raspi-config`
 
-We need to make sure the CPU has 192MB of RAM in order to compile openFrameworks. Once you have compiled openFrameworks you may want to repeat this step with 128_
+_We need to make sure the CPU has 192MB of RAM in order to compile openFrameworks. Once you have compiled openFrameworks you may want to repeat this step with 128_
+
 0.  Select `1 Expand Filesystem` and hit Enter
 0.  Select `8 Advanced Options` and hit Enter
 	* Select `A3 Memory Split` and hit Enter
 	* Type `64` and Hit `<ok>`
 
-openFrameworks does not use the X11 Desktop for running OF applications. You can save GPU memory by disabling it. This is optional but suggested. 
+openFrameworks does not use the X11 Desktop for running OF applications. You can save GPU memory by disabling it. This is optional but suggested.
+ 
 0. Select `3 Boot Options`
 0. Select `B1 Console` or `B2 Console Autologin`
 
