@@ -4,7 +4,7 @@
 linux eclipse
 =============
 
-Before using OF in linux you need to run some install scripts, follow the instructions [here](../linux) if you haven't done so yet.
+Before using OF in linux you need to run some install scripts, follow the instructions [here](../linux-install/) if you haven't done so yet.
 
 **Note**: see the [FAQ](#faq) at the bottom of this page if you're having trouble.
 
