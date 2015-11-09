@@ -30,7 +30,7 @@
 	    <h2>linux</h2>
 	    <h3>download<br/>openFrameworks for</h3>
 	    <p><a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_linux_release.tar.gz">linux 32bit</a> / <a href="http://www.openframeworks.cc/versions/v${bf.config.currentVersion}/of_v${bf.config.currentVersion}_linux64_release.tar.gz">linux 64bit</a></p><br/>
-	    <p><a href="../setup/linux">linux install</a></p>
+	    <p><a href="../setup/linux-install">linux install</a></p>
 	    <h3>IDE setup guides</h3>
 	    <p><a href="../setup/qtcreator">qt creator</a></p>
 	    <p><a href="../setup/linux-eclipse">eclipse</a></p>
