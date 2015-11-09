@@ -6,28 +6,35 @@ Getting your Raspberry Pi ready for openFrameworks
 ============
 
     
-## Install Raspbian "wheezy"
-0. Install the latest _**Raspbian** (Debian Wheezy)_ image from the [Raspberry Pi downloads page](http://www.raspberrypi.org/downloads)
+## Install Raspbian "Jessie"
+0. Install the latest _**Raspbian** (Debian Jessie)_ image from the [Raspberry Pi downloads page](http://www.raspberrypi.org/downloads)
 1. Follow the instructions at [Raspberry Pi Preparing Your SD Card](http://elinux.org/RPi_Easy_SD_Card_Setup) to get Raspbian installed onto your SD Card
 
          
 ## Configure the Raspberry Pi
-This guide assumes you are starting from a fresh Raspian install and that you are able to connect to the Raspberry Pi to give it commands.
+This guide assumes you are starting from a fresh Raspian install and that you are able to connect to the Raspberry Pi and send it commands.
 
-Options to give commands are:
+You can enter commands on the Pi by:
 
 0. SSH into the Pi from a different computer
-0. Attach a keyboard and monitor to the Pi. 
-	* If the Pi boots to the command prompt you are ready to go
-	* If the Pi boots the X11 window system, open up LXTerminal from the shortcut on the Raspberry Pi Desktop
+0. Attach a keyboard and monitor to the Pi.
+	* With Jessie the Raspberry Pi now boots the X11 window system by default, open up LXTerminal from the shortcut on the Raspberry Pi Desktop
+	* Type in the command `sudo raspi-config`
 
-With a fresh install the Raspberry Pi configuration is presented at the first boot. Otherwise, you can re-configure with the command `sudo raspi-config`
 _We need to make sure the CPU has 192MB of RAM in order to compile openFrameworks. Once you have compiled openFrameworks you may want to repeat this step with 128_
+
 0.  Select `1 Expand Filesystem` and hit Enter
 0.  Select `8 Advanced Options` and hit Enter
 	* Select `A3 Memory Split` and hit Enter
 	* Type `64` and Hit `<ok>`
-	 
+
+openFrameworks does not use the X11 Desktop for running OF applications. You can save GPU memory by disabling it. This is optional but suggested.
+ 
+0. Select `3 Boot Options`
+0. Select `B1 Console` or `B2 Console Autologin`
+
+Unlike Wheezy, Debian Jessie does not display the IP address on boot. You may wish to get the current IP by typing `ifconfig`. The IP address is under the eth0 entry for wired ethernet. This can possibly change on reboot. 
+
 0. Reboot when prompted or type `sudo reboot`
 0. Assuming you have internet access run these commands to update the software to the latest packages.
     * `sudo apt-get clean`
@@ -36,33 +43,44 @@ _We need to make sure the CPU has 192MB of RAM in order to compile openFramework
     * _Note: The above steps may take a little while._
 
 ## Download openFrameworks
-You now can download the Linux armv6 version of openFrameworks and uncompress it into a folder. Using a Shell, The following commands will download openFrameworks and uncompress it into the folder `/home/pi/openFrameworks`
+You now can download openFrameworks and uncompress it into a folder. Using a Shell, The following commands will download openFrameworks and uncompress it into the folder `/home/pi/openFrameworks`
  
-0. `cd` 
-0. `curl -O http://www.openframeworks.cc/versions/v0.8.4/of_v0.8.4_linuxarmv6l_release.tar.gz` 
-0.  `mkdir openFrameworks`
-0.  `tar vxfz of_v0.8.4_linuxarmv6l_release.tar.gz -C openFrameworks --strip-components 1`
+<h3> For the Raspberry Pi 1/arm6</h3>
+    * `cd` 
+    * `curl -O http://www.openframeworks.cc/versions/v0.9.0/of_v0.9.0_linuxarmv6l_release.tar.gz` 
+    * `mkdir openFrameworks`
+    * `tar vxfz of_v0.9.0_linuxarmv6l_release.tar.gz -C openFrameworks --strip-components 1`
 
-## Compile openFrameworks:
-This step will take approximately 1 hour when compiling on the Raspberry Pi, Make sure you didn't skip the Memory Split step in the above section _**Configure the Raspberry Pi**_ or it will eventually fail.
+<h3> For the Raspberry Pi 2/arm7</h3>
+    * `cd` 
+    * `curl -O http://www.openframeworks.cc/versions/v0.9.0/of_v0.9.0_linuxarmv7l_release.tar.gz` 
+    * `mkdir openFrameworks`
+    * `tar vxfz of_v0.9.0_linuxarmv7l_release.tar.gz -C openFrameworks --strip-components 1`
 
+## Install packages and compile openFrameworks:
+ Make sure you didn't skip the Memory Split step in the above section _**Configure the Raspberry Pi**_ or it will eventually fail.
+ 
+The time for these steps will depend on whether you are on a RPI1 or RPI2 and the speed of the Raspbian mirrors to download the packages.
 Assuming openFrameworks is located at `/home/pi/openFrameworks` run the following commands to install the necessary packages and compile openFrameworks. 
 
-0. `cd /home/pi/openFrameworks/scripts/linux/debian_armv6l`  
-0. `sudo ./install_dependencies.sh` 
+    * `cd /home/pi/openFrameworks/scripts/linux/debian`  
+    * `sudo ./install_dependencies.sh` 
 
 You are now ready to compile openFrameworks! 
 
-0. `make Release -C /home/pi/openFrameworks/libs/openFrameworksCompiled/project`
+### For the Raspberry Pi 1/arm6
+    * `make Release -C /home/pi/openFrameworks/libs/openFrameworksCompiled/project`
+
+### For the Raspberry Pi 2/arm7
+    * `make Release -j4 -C /home/pi/openFrameworks/libs/openFrameworksCompiled/project`
 
 ## Speeding up compiling
-Compiling natively on the Raspberry Pi takes a long time. openFrameworks applications typically take much less time than the core library. Taking the time to set up a cross-compiling solution will save you enormous amounts of time. 
+Compiling natively on the Raspberry Pi 1 takes a long time. openFrameworks applications typically take much less time than the core library. Taking the time to set up a cross-compiling solution will save you enormous amounts of time. 
 
-[Raspberry Pi DISTCC Guide](Raspberry-Pi-DISTCC-guide.html)    
 [Raspberry Pi Cross Compiling Guide](Raspberry-Pi-Cross-compiling-guide.html)
 
 ## Compile your first app
-Like on other platforms, openFrameworks ships with a bunch of examples located in the `openFrameworks/examples` folder. Inside examples the projects are sorted by the categories: 
+openFrameworks ships with a bunch of examples located in the `openFrameworks/examples` folder. Inside examples the projects are sorted by the categories: 
 
 * 3d 
 * addons 
