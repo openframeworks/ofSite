@@ -39,7 +39,9 @@ A toolchain is often set up with multiple architectures in order to cross-compil
 
 For example, to compile for an RPI/Arch Linux target the prefix is often `armv6l-unknown-linux-gnueabihf`. For Raspbian it is commonly `arm-linux-gnueabihf`
 
-If `GCC_PREFIX` is not passed in `arm-linux-gnueabihf` is assumed.
+If `GCC_PREFIX` is not passed in `arm-linux-gnueabihf` is assumed. The prefix is then added to `-g++`, `-gcc`, `-ar` and `-ld` to complete the paths to the compiler and linkers.
+
+
 
 <h3>RPI_ROOT</h3>
 `RPI_ROOT` is the Target Root File System previously described. This is required to be passed in and there is no default value.
