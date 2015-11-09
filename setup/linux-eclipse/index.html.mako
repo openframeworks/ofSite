@@ -3,6 +3,9 @@
 
 linux eclipse
 =============
+
+Before using OF in linux you need to run some install scripts, follow the instructions [here](../linux-install/) if you haven't done so yet.
+
 **Note**: see the [FAQ](#faq) at the bottom of this page if you're having trouble.
 
 This guide describes how to get started with openframeworks using Eclipse as IDE. Eclipse is very powerful, however it is a complex and somewhat resource heavy environment. Since version 0.9.0 Qt Creator is the recomended IDE.
