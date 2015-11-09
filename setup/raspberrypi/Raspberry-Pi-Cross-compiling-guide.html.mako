@@ -21,14 +21,13 @@ A typical cross-compiler on a modern Desktop PC will compile the OF core library
 
 To use a cross-compiler you will need to setup a few things:
 
-Toolchain
-
+<h3>Toolchain</h3>
 This is basically a custom version of GCC that understands your target platform. In order to cross-compile openFrameworks the compiler must support GCC 4.9. Previous versions of GCC do not support the level of C++11 features that openFrameworks requires. Unfortunately that means the [previous cross-compiling tools](https://github.com/raspberrypi/tools) are out-of-date and require you to build GCC yourself.
 
-Target Root File System
-
+<h3>Target Root File System</h3>
 This is a copy of the RPI's file system that the compiler will use to build openFrameworks and applications. It is a copy because you will need to manipulate certain files that if changed directly would cause the RPI to stop working.
 
+## Makefile variables
 The openFrameworks Makefile system has some built-in variables that allow for easier cross-compiling.
 
 <h3>TOOLCHAIN_ROOT</h3>
@@ -42,7 +41,6 @@ For example, to compile for an RPI/Arch Linux target the prefix is often `armv6l
 If `GCC_PREFIX` is not passed in `arm-linux-gnueabihf` is assumed. The prefix is then added to `-g++`, `-gcc`, `-ar` and `-ld` to complete the paths to the compiler and linkers.
 
 
-
 <h3>RPI_ROOT</h3>
 `RPI_ROOT` is the Target Root File System previously described. This is required to be passed in and there is no default value.
 
@@ -52,14 +50,14 @@ These variables are either passed in with the make command:
 
 or set via environmental variables
 
-export TOOLCHAIN_ROOT=/path/to/toolchain
+`export TOOLCHAIN_ROOT=/path/to/toolchain`
 
-export GCC_PREFIX=arm-linux-gnueabihf
+`export GCC_PREFIX=arm-linux-gnueabihf`
 
-export RPI_ROOT=/path/to/local_copy_of_pi_filesystem
+`export RPI_ROOT=/path/to/local_copy_of_pi_filesystem`
 
 
-Using export allows you just use the shorter `make` command throughout a session. You can make these variables permanent by adding the export lines to the end of your ~/.profile file.
+Using export allows you just use the shorter `make` command throughout a session. You can make these variables permanent by adding the export lines to the end of `~/.profile`.
 
 ## STILL TO COME
 How to build and configure a cross-compiler for your host machine (Linux, Mac, Windows)
