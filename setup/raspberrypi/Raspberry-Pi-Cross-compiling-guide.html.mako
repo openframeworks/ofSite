@@ -43,13 +43,17 @@ If `GCC_PREFIX` is not passed in `arm-linux-gnueabihf` is assumed.
 `RPI_ROOT` is the Target Root File System previously described. This is required to be passed in and there is no default value.
 
 These variables are either passed in with the make command:
+
 `make TOOLCHAIN_ROOT=/path/to/toolchain GCC_PREFIX=arm-linux-gnueabihf RPI_ROOT=/path/to/local_copy_of_pi_filesystem`
 
 or set via environmental variables
 
 export TOOLCHAIN_ROOT=/path/to/toolchain
+
 export GCC_PREFIX=arm-linux-gnueabihf
+
 export RPI_ROOT=/path/to/local_copy_of_pi_filesystem
+
 
 Using export allows you just use the shorter `make` command throughout a session. You can make these variables permanent by adding the export lines to the end of your ~/.profile file.
 
