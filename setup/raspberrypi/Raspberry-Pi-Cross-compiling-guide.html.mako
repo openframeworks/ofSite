@@ -22,7 +22,7 @@ A typical cross-compiler on a modern Desktop PC will compile the OF core library
 To use a cross-compiler you will need to setup a few things:
 
 <h3>Toolchain</h3>
-This is basically a custom version of GCC that understands your target platform. In order to cross-compile openFrameworks the compiler must support GCC 4.9. Previous versions of GCC do not support the level of C++11 features that openFrameworks requires. Unfortunately that means the [previous cross-compiling tools](https://github.com/raspberrypi/tools) are out-of-date and require you to build GCC yourself.
+This is basically a custom version of GCC that understands your target platform. In order to cross-compile openFrameworks the compiler must support GCC 4.9. Previous versions of GCC do not support the level of C++11 features that openFrameworks requires. Unfortunately that means the [previous cross-compiling tools](https://github.com/raspberrypi/tools) are out-of-date, requiring you to build GCC yourself.
 
 <h3>Target Root File System</h3>
 This is a copy of the RPI's file system that the compiler will use to build openFrameworks and applications. It is a copy because you will need to manipulate certain files that if changed directly would cause the RPI to stop working.
