@@ -59,8 +59,8 @@ or set via environmental variables
 
 Using export allows you just use the shorter `make` command throughout a session. You can make these variables permanent by adding the export lines to the end of `~/.profile`.
 
-## STILL TO COME
-How to build and configure a cross-compiler for your host machine (Linux, Mac, Windows)
+## Cross compiling guides for 0.9.0
+[Mac based, uses Debian VM](http://forum.openframeworks.cc/t/cross-compiler-for-of-0-9-0-jessie-arm6-rpi1)
 
 
 
