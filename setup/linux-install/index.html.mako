@@ -45,3 +45,8 @@ cd OF/scripts/linux
 
 This will compile the GUI version of the project generator which will be placed in the root of the OF folder. When it's done compiling it will ask you if you also want to install the optional command line version of the tool which allows you to create projects from anywhere on your system.
 If you installed the command line tool and want to change the OF path it uses, you can change the value of PG_OF_PATH in ~/.profile.
+
+Run the commandline project generator without any arguments to see how to use it:
+```
+projectGenerator
+```
