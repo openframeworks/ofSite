@@ -181,8 +181,8 @@ This is exactly what a `.h` (header file) can be used for; a list of things that
 The `ball.h` file should look like:
 
 ~~~~{.cpp}
-	#ifndef ball_h
-	#define ball_h
+	#ifndef BALL_H
+	#define BALL_H
 
 	#include "ofMain.h"
 
@@ -337,8 +337,8 @@ Since the properties `Ball::x` and `Ball::y` are not accessed directly from the 
 to make them "private" in the class defintion (file `ball.h`).
 
 ~~~~{.cpp}
-	#ifndef ball_h
-	#define ball_h
+	#ifndef BALL_H
+	#define BALL_H
 
 	#include "ofMain.h"
 
