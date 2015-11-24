@@ -55,16 +55,18 @@ We are going to focus on using points and lines as our primitives.  Let's get so
 
 And onto the code!
 
-Add a mesh variable to your header file (.h, e.g. testApp.h):
+Add a mesh variable to your header file (.h, e.g. ofApp.h):
 ~~~.h
-    ofMesh mesh;
-~~~
-Append these lines to your *setup()* and *draw()* functions in your source file (.cpp):
-~~~.cpp
-#include "ofApp.h"
-#include "testApp.h"
+class ofApp : public ofBaseApp{
 
-void testApp::setup() {
+    public:
+        ofMesh mesh;
+    // ...
+    // Keep the rest of the code that is already there.
+~~~
+Update *setup()* and *draw()* functions in your source file (.cpp) to look like this:
+~~~.cpp
+void ofApp::setup() {
     mesh.setMode(OF_PRIMITIVE_POINTS);
 
     ofVec3f top(100.0, 50.0, 0.0);
@@ -75,7 +77,7 @@ void testApp::setup() {
     mesh.addVertex(left);
     mesh.addVertex(right);
 }
-void testApp::draw() {
+void ofApp::draw() {
     ofBackground(0);
     mesh.draw();
 }
@@ -87,7 +89,7 @@ If you build and run your project, you should see three white dots that are plac
 White is boring?  Well, you can add some color by modifying setup:
 
 ~~~.cpp
-void testApp::setup() {
+void ofApp::setup() {
     mesh.setMode(OF_PRIMITIVE_POINTS);
     mesh.enableColors();
 
@@ -120,9 +122,9 @@ You find our points boring?  Time for some some lines then.  We need to change t
 
 The modes for mesh.[setMode()](http://openframeworks.cc/documentation/3d/ofMesh.html#show_setMode) each have a different way that they generate lines from the vertices:
 
-* **OF_PRIMITIVE_LINE** creates an *independent* line out of each pair of vertices.  If you have a set of vertices - V<sub>1</sub>, V<sub>2</sub>, V<sub>3</sub>, V<sub>4</sub>, ... - then V<sub>1</sub> will connect to V<sub>2</sub> and V<sub>3</sub> will connect to V<sub>4</sub>.
-* **OF_PRIMITIVE_LINE_STRIP** will create a set of *connected* lines out of each pair of vertices.  V<sub>1</sub> will connect with V<sub>2</sub>,  V<sub>2</sub> will connect with  V<sub>3</sub> etc.
-* **OF_PRIMITIVE_LINE_LOOP** will create a set of connected lines, *and* it will connect the first and last vertices.
+* **OF_PRIMITIVE_LINE** creates an *independent* line out of each pair of vertices.  If you have a set of vertices - V<sub>1</sub>, V<sub>2</sub>, V<sub>3</sub>, V<sub>4</sub>, ... - then V<sub>1</sub> will connect to V<sub>2</sub> and V<sub>3</sub> will connect to V<sub>4</sub>, etc.
+* **OF_PRIMITIVE_LINE_STRIP** will create a set of *connected* lines out of each pair of vertices.  V<sub>1</sub> will connect with V<sub>2</sub>,  V<sub>2</sub> will connect with  V<sub>3</sub>, etc.
+* **OF_PRIMITIVE_LINE_LOOP** does the same as OF_PRIMITIVE_LINE_STRIP but will also connect the last and first vertices.
 
 Only OF_PRIMITIVE_LINE_LOOP outlined the whole triangle. If you wanted to create that same triangle using OF_PRIMITIVE_LINE, you might try adding some more vertices like this:
 
@@ -138,7 +140,7 @@ Only OF_PRIMITIVE_LINE_LOOP outlined the whole triangle. If you wanted to create
 Feels excessive to add duplicate vertices? Let’s try something else:
 
 ~~~.cpp
-void testApp::setup() {
+void ofApp::setup() {
     mesh.setMode(OF_PRIMITIVE_LINES);
     mesh.enableColors();
     mesh.enableIndices();
@@ -235,45 +237,41 @@ First things first, let's load that image.  Go into the main.cpp file and change
 ~~~.cpp
     ofSetupOpenGL(800,800,OF_WINDOW);
 ~~~
-Then go into your header file (testApp.h) and add:
+Then go into your header file (ofApp.h) and add:
 ~~~.h
     ofImage image;
 ~~~
-And lastly, into your source file (testApp.cpp):
+And lastly, into your source file (ofApp.cpp):
 ~~~.cpp
-#include "ofApp.h"
-#include "testApp.h"
-#include <iostream>
-using namespace std;
-
-void testApp::setup(){
+void ofApp::setup(){
     bool succ = true;
-    succ = image.loadImage("stars.png");
+    succ = image.load("stars.png");
     if (!succ) {
        cerr << "loading image failed ...\n";
     }
 }
-void testApp::draw(){
+
+void ofApp::draw(){
     image.draw(0,0);
 }
 ~~~
 
 There is no dedicated [ofImage](http://www.openframeworks.cc/documentation/graphics/ofImage.html) tutorial at the moment, so you will have to poke around the [openFrameworks for Processing users](http://www.openframeworks.cc/tutorials/first%20steps/002_openFrameworks_for_processing_users.html) tutorial or [004 presentation](http://www.openframeworks.cc/tutorials/first%20steps/004_presentations.html) if you want to know more about what you can do with images.
 
-We just need to load our image using [loadImage()](http://www.openframeworks.cc/documentation/graphics/ofImage.html#!show_loadImage) and draw it at the top left corner of the screen with [draw(0,0)](http://www.openframeworks.cc/documentation/graphics/ofImage.html#show_draw).
+We just need to load our image using [load()](http://www.openframeworks.cc/documentation/graphics/ofImage.html#show_load) and draw it at the top left corner of the screen with [draw(0,0)](http://www.openframeworks.cc/documentation/graphics/ofImage.html#show_draw).
 
 Great! Image loaded.  Now, we want to create a mesh with some vertices. If we only want to create vertices at the location of stars, we can do that by searching through our pixels and look for 'bright' colors.  In order to do this, we will need to get access to the color information of the pixels using image.[getColor(x, y)](http://www.openframeworks.cc/documentation/graphics/ofImage.html#show_getColor).  We want to loop through the pixels in the image and apply a [threshold](http://en.wikipedia.org/wiki/Thresholding_%28image_processing%29) such that we only create a vertex at the pixel locations where the intensity of the color is greater than some value.
 
-Add a mesh to testApp.h:
+Add a mesh to ofApp.h:
 ~~~.h
     ofMesh mesh;
 ~~~
 
-And add this to testApp.cpp:
+And add this to ofApp.cpp:
 ~~~.cpp
-void testApp::setup(){
+void ofApp::setup(){
     bool succ = true;
-    succ = image.loadImage("stars.png");
+    succ = image.load("stars.png");
     if (!succ) {
        cerr << "loading image failed ...\n";
     }
@@ -295,7 +293,7 @@ void testApp::setup(){
         }
     }
 }
-void testApp::draw(){
+void ofApp::draw(){
     ofBackground(0,0,255);
     mesh.draw();
 }
@@ -308,7 +306,7 @@ In that code, we created a mesh with points for primitives.  Then we looped thro
 Let's make that background into something more fitting using [ofBackgroundGradient](http://www.openframeworks.cc/documentation/graphics/ofGraphics.html#!show_ofBackgroundGradient)...
 
 ~~~.cpp
-void testApp::draw(){
+void ofApp::draw(){
     ofColor centerColor = ofColor(85, 78, 68);
     ofColor edgeColor(0, 0, 0);
     ofBackgroundGradient(centerColor, edgeColor, OF_GRADIENT_CIRCULAR);
@@ -327,7 +325,7 @@ We have a lot of vertices in our mesh.  You can check the number using [getNumVe
 If we were to start looping through those each of those 64,000 vertices to connect them up to the other vertices that are close-by, we could end up spending a fair chunk of time in that loop.  A fairly common thing to do to speed up the processing of an image is to shrink it:
 
 ~~~.cpp
-    image.loadImage("stars.png");
+    image.load("stars.png");
     image.resize(200, 200);
 ~~~
 
@@ -337,7 +335,7 @@ And then because our image pixel are no longer one-to-one with our openFramework
             if (intensity >= intensityThreshold) {
                 // We shrunk our image by a factor of 4, so we need to multiply our pixel
                 // locations by 4 in order to have our mesh cover the openFrameworks window
-                ofVec3f pos(4*x, 4*y, 0.0);
+                ofVec3f pos(x*4, y*4, 0.0);
                 mesh.addVertex(pos);
                 mesh.addColor(c);
             }
@@ -385,7 +383,7 @@ Boom! Generative mesh.  Let’s add two more tweaks to make this into proper 3D.
             if (intensity >= intensityThreshold) {
                 float saturation = c.getSaturation();
                 float z = ofMap(saturation, 0, 255, -100, 100);
-                ofVec3f pos(4*x, 4*y, z);
+                ofVec3f pos(x*4, y*4, z);
                 mesh.addVertex(pos);
                 mesh.addColor(c);
             }
@@ -401,7 +399,7 @@ Add this to your header:
 ~~~
 And then modify your draw function:
 ~~~.cpp
-void testApp::draw(){
+void ofApp::draw(){
     ofColor centerColor = ofColor(85, 78, 68);
     ofColor edgeColor(0, 0, 0);
     ofBackgroundGradient(centerColor, edgeColor, OF_GRADIENT_CIRCULAR);
@@ -458,7 +456,7 @@ And add the following two lines to your setup function:
             if (intensity >= intensityThreshold) {
                 float saturation = c.getSaturation();
                 float z = ofMap(saturation, 0, 255, -100, 100);
-                ofVec3f pos(4*x, 4*y, z);
+                ofVec3f pos(x*4, y*4, z);
                 mesh.addVertex(pos);
                 mesh.addColor(c);
 
