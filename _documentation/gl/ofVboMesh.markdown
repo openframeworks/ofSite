@@ -5,6 +5,7 @@
 _visible: True_
 _advanced: False_
 _istemplated: False_
+_extends: ofMesh_
 -->
 
 ##InlineDescription
@@ -52,9 +53,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -90,9 +89,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -128,9 +125,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -166,9 +161,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -204,7 +197,6 @@ _inlined_description: _
 
 
 
-
 _description: _
 
 Valid options are: 
@@ -212,7 +204,6 @@ Valid options are:
 OF_MESH_POINTS 	 
 OF_MESH_WIREFRAME   	
 OF_MESH_FILL   
-
 
 
 
@@ -246,9 +237,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -284,9 +273,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -322,9 +309,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -360,9 +345,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -398,9 +381,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -436,9 +417,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const ofVbo & getVbo()
+
+<!--
+_syntax: getVbo()_
+_name: getVbo_
+_returns: const ofVbo &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -474,9 +489,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -512,9 +525,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -550,9 +561,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -588,9 +597,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void unloadVbo()
+
+<!--
+_syntax: unloadVbo()_
+_name: unloadVbo_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -626,9 +669,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -664,9 +705,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -702,9 +741,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -740,9 +777,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -778,9 +813,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ~ofVboMesh()
+
+<!--
+_syntax: ~ofVboMesh()_
+_name: ~ofVboMesh_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -808,8 +877,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -833,8 +909,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -858,8 +941,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -883,8 +973,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -908,8 +1005,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -933,8 +1037,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -958,8 +1069,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 

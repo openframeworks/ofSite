@@ -34,11 +34,22 @@ _advanced: False_
 
 _inlined_description: _
 
-Draws a rectangular box with the specified dimensions, starting from the specified coordinates. 
+Draws a rectangular box with the specified dimensions, starting from the specified coordinates.
 
-A box is a rectangular solid: an extruded rectangle. It is drawn starting from a 3D reference coordinate. It has a width (in x), a height (in y), and a depth (in z). The box is drawn with the current color, e.g. set with 
+A box is a rectangular solid: an extruded rectangle.
+It is drawn starting from a 3D reference coordinate.
+It has a width (in x), a height (in y), and a depth (in z).
+The box is drawn with the current color, e.g. set with ofSetColor().
+The box is drawn filled by default; change this with ofFill();
 
 
+Parameters:
+x The x-coordinate of the box's origin.
+y The y-coordinate of the box's origin.
+z The z-coordinate of the box's origin.
+width The width of the box.
+height The height of the box.
+depth The depth of the box.
 
 
 
@@ -69,7 +80,6 @@ ofDrawBox(ofGetWidth() * .5, ofGetHeight() * .7, 0, 200, 100, 200);
 
 
 
-
 <!----------------------------------------------------------------------------->
 
 ###void ofDrawBox(x, y, z, size)
@@ -91,13 +101,22 @@ _advanced: False_
 
 _inlined_description: _
 
-Draws a cube with the specified size, starting from the specified coordinates. 
+Draws a cube with the specified size, starting from the specified coordinates.
 
-A cube is a rectangular solid bounded by six square faces of equal size. It is also known as a regular hexahedron, a square parallelepiped, an equilateral cuboid and a right rhombohedron. It is a regular square prism in three orientations.
+A cube is a rectangular solid bounded by six square faces of equal size.
+It is also known as a regular hexahedron, a square parallelepiped, an equilateral cuboid
+and a right rhombohedron. It is a regular square prism in three orientations.
 
-It is drawn starting from a 3D reference coordinate, with the specified size. The cube is drawn with the current color, e.g. set with 
+It is drawn starting from a 3D reference coordinate, with the specified size.
+The cube is drawn with the current color, e.g. set with ofSetColor().
+The cube is drawn filled by default; change this with ofFill();
 
 
+Parameters:
+x The x-coordinate of the cube's origin.
+y The y-coordinate of the cube's origin.
+z The z-coordinate of the cube's origin.
+size The size of the cube.
 
 
 
@@ -131,7 +150,6 @@ ofDrawBox(ofGetWidth() * .5, ofGetHeight() * .7, 0, 200);
 
 
 
-
 <!----------------------------------------------------------------------------->
 
 ###void ofDrawBox(&position, width, height, depth)
@@ -153,11 +171,20 @@ _advanced: False_
 
 _inlined_description: _
 
-Draws a rectangular box with the specified dimensions, starting from the specified position. 
+Draws a rectangular box with the specified dimensions, starting from the specified position.
 
-A box is a rectangular solid: an extruded rectangle. It is drawn starting from a 3D reference coordinate. It has a width (in x), a height (in y), and a depth (in z). The box is drawn with the current color, e.g. set with 
+A box is a rectangular solid: an extruded rectangle.
+It is drawn starting from a 3D reference coordinate.
+It has a width (in x), a height (in y), and a depth (in z).
+The box is drawn with the current color, e.g. set with ofSetColor().
+The box is drawn filled by default; change this with ofFill();
 
 
+Parameters:
+position an ofPoint which contains the (x,y,z) coordinates for the box's reference corner.
+width The width of the box.
+height The height of the box.
+depth The depth of the box.
 
 
 
@@ -168,7 +195,6 @@ _description: _
 Draws a rectangular box with the specified dimensions, starting from the specified position. 
 
 A box is a rectangular solid: an extruded rectangle. It is drawn starting from a 3D reference coordinate. It has a width (in x), a height (in y), and a depth (in z). The box is drawn with the current color, e.g. set with ofSetColor(). The box is drawn filled by default; change this with ofFill();
-
 
 ~~~~{.cpp}
 void ofApp::draw(){
@@ -183,7 +209,6 @@ ofDrawBox(ofPoint(ofGetWidth() * .5, ofGetHeight() * .7, 0), 100, 200,300);
 
 }
 ~~~~
-
 
 
 
@@ -210,11 +235,16 @@ _advanced: False_
 
 _inlined_description: _
 
-Draws a cube with the specified size, starting from the specified position. 
+Draws a cube with the specified size, starting from the specified position.
 
-A cube is drawn starting from a 3D reference position, with the specified size. The cube is drawn with the current color, e.g. set with 
+A cube is drawn starting from a 3D reference position, with the specified size.
+The cube is drawn with the current color, e.g. set with ofSetColor().
+The cube is drawn filled by default; change this with ofFill();
 
 
+Parameters:
+position an ofPoint which contains the (x,y,z) coordinates for the cube's reference corner.
+size The size of the cube.
 
 
 
@@ -246,7 +276,6 @@ ofDrawBox(ofPoint(ofGetWidth() * .5, ofGetHeight() * .5, 0), 200);
 
 
 
-
 <!----------------------------------------------------------------------------->
 
 ###void ofDrawBox(size)
@@ -268,11 +297,14 @@ _advanced: False_
 
 _inlined_description: _
 
-Draws a cube with the specified size, starting from the origin. 
+Draws a cube with the specified size, starting from the origin.
 
-The cube is drawn with the current color, e.g. set with 
+The cube is drawn with the current color, e.g. set with ofSetColor().
+The cube is drawn filled by default; change this with ofFill();
 
 
+Parameters:
+size The size of the cube.
 
 
 
@@ -302,7 +334,6 @@ ofDrawBox(500);
 
 
 
-
 <!----------------------------------------------------------------------------->
 
 ###void ofDrawBox(width, height, depth)
@@ -324,11 +355,19 @@ _advanced: False_
 
 _inlined_description: _
 
-Draws a rectangular box with the specified dimensions, starting from the origin. 
+Draws a rectangular box with the specified dimensions, starting from the origin.
 
-A box is a rectangular solid: an extruded rectangle. It is drawn starting from the origin of the current reference frame. It has a width (in x), a height (in y), and a depth (in z). The box is drawn with the current color, e.g. set with 
+A box is a rectangular solid: an extruded rectangle.
+It is drawn starting from the origin of the current reference frame.
+It has a width (in x), a height (in y), and a depth (in z).
+The box is drawn with the current color, e.g. set with ofSetColor().
+The box is drawn filled by default; change this with ofFill();
 
 
+Parameters:
+width The width of the box.
+height The height of the box.
+depth The depth of the box.
 
 
 
@@ -354,7 +393,6 @@ ofDrawBox(500, 400, 300);
 }
 
 ~~~~
-
 
 
 
@@ -405,7 +443,6 @@ ofDrawCone(ofGetWidth() * .5, ofGetHeight()* .5, 0, 200, 300);
 }
 
 ~~~~
-
 
 
 
@@ -510,6 +547,7 @@ ofDrawCone(ofPoint(ofGetWidth() * .5, ofGetHeight()* .5), 200, 300);
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofDrawCone(radius, height)
@@ -555,6 +593,7 @@ ofDrawCone(200, 300);
 }
 
 ~~~~
+
 
 
 
@@ -758,6 +797,7 @@ ofDrawCylinder(50, 300);
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofDrawIcoSphere(x, y, z, radius)
@@ -807,6 +847,7 @@ ofDrawIcoSphere(ofGetWidth() * .5, ofGetHeight()* .5, 0, 100);
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofDrawIcoSphere(x, y, radius)
@@ -852,6 +893,7 @@ ofDrawIcoSphere(ofGetWidth() * .5, ofGetHeight()* .5, 100);
 }
 
 ~~~~
+
 
 
 
@@ -906,7 +948,6 @@ ofDrawIcoSphere(ofPoint(ofGetWidth() * .5, ofGetHeight()* .5), 100);
 
 
 
-
 <!----------------------------------------------------------------------------->
 
 ###void ofDrawIcoSphere(radius)
@@ -938,7 +979,6 @@ _description: _
 
 Draws an icosphere (i.e. a sphere based on faces as opposed to UV map) starting from the origin. The icosphere is drawn with the current color, e.g. set with ofSetColor(). The icosphere is drawn filled by default; change this with ofFill();
 
-
 ~~~~{.cpp}
 void ofApp::draw(){
 
@@ -953,6 +993,7 @@ ofDrawIcoSphere(100);
 }
 
 ~~~~
+
 
 
 
@@ -999,6 +1040,7 @@ ofDrawPlane(ofGetWidth() * .5, ofGetHeight()* .5, 100, 200);
 }
 
 ~~~~
+
 
 
 
@@ -1095,6 +1137,8 @@ ofDrawPlane(ofPoint(ofGetWidth() * .5, ofGetHeight()* .5), 100, 200);
 
 
 
+
+
 <!----------------------------------------------------------------------------->
 
 ###void ofDrawPlane(width, height)
@@ -1137,6 +1181,7 @@ ofDrawPlane(100, 200);
 }
 
 ~~~~
+
 
 
 
@@ -1190,6 +1235,7 @@ ofDrawSphere(ofGetWidth() * .5, ofGetHeight()* .5, 100);
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofDrawSphere(x, y, z, radius)
@@ -1239,6 +1285,7 @@ ofDrawSphere(ofGetWidth() * .5, ofGetHeight()* .5, 0, 100);
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void ofDrawSphere(&position, radius)
@@ -1284,6 +1331,7 @@ ofDrawSphere(ofPoint(ofGetWidth() * .5, ofGetHeight()* .5), 100);
 }
 
 ~~~~
+
 
 
 
@@ -1387,6 +1435,7 @@ ofDrawBitmapString("Box Resolution: " + boxres, 30, 30);
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofVec3f ofGetConeResolution()
@@ -1408,11 +1457,16 @@ _advanced: False_
 
 _inlined_description: _
 
-Retrieve a data structure describing the resolution with which cones are polygonized. 
+Retrieve a data structure describing the resolution with which cones are polygonized.
 
-Allows you to fetch the resolution with which cones are polygonized. Returns an 
+Allows you to fetch the resolution with which cones are polygonized.
+Returns an ofVec3f containing the following data:
+Encoded as "x": radiusSegments, the number of facets (subdivisions) around the cone's circular footprint.
+Encoded as "y": heightSegments, the number of subdivisions from the cone's top to bottom.
+Encoded as "z": capSegments, the number of annular (ring-shaped) subdivisions of the cone's endcap.
 
 
+Returns: An ofVec3f containing (radiusSegments, heightSegments, capSegments) for cone polygonization.
 
 
 
@@ -1507,6 +1561,7 @@ ofDrawBitmapString("Cylinder Resolution: " + cylres, 30, 30);
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###int ofGetIcoSphereResolution()
@@ -1559,6 +1614,7 @@ ofDrawBitmapString("Icosphere Resolution: " + icores, 30, 30);
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofVec2f ofGetPlaneResolution()
@@ -1601,13 +1657,9 @@ ofDrawPlane(ofGetWidth() * .5, ofGetHeight() * .5,  400, 200);
 string planeres = ofToString(ofGetPlaneResolution());
 ofDrawBitmapString("Plane Resolution: " + planeres, 30, 30);
 
-
-
 }
 
 ~~~~
-
-
 
 
 
@@ -1655,11 +1707,10 @@ ofDrawSphere(ofGetWidth() * .5, ofGetHeight() * .5,  200);
 string sphereres = ofToString(ofGetSphereResolution());
 ofDrawBitmapString("Sphere Resolution: " + sphereres, 30, 30);
 
-
-
 }
 
 ~~~~
+
 
 
 
@@ -1701,7 +1752,6 @@ int res;
 
 ~~~~
 
-
 ~~~~{.cpp}
 
 void ofApp::setup(){
@@ -1741,8 +1791,8 @@ void ofApp::keyPressed(int key){
 
 }
 
-
 ~~~~
+
 
 
 
@@ -1785,9 +1835,7 @@ int resw, resh, resd;
 
 ~~~~
 
-
 ~~~~{.cpp}
-
 
 void ofApp::setup(){
     resw = 1;
@@ -1846,8 +1894,8 @@ void ofApp::keyPressed(int key){
 
 }
 
-
 ~~~~
+
 
 
 
@@ -1873,11 +1921,15 @@ _advanced: False_
 
 _inlined_description: _
 
-Set the resolution of a polygonized cone. 
+Set the resolution of a polygonized cone.
 
-Allows you to set the polygonization resolution of any cones you subsequently draw with 
+Allows you to set the polygonization resolution of any cones you subsequently draw with ofDrawCone().
 
 
+Parameters:
+radiusSegments The number of facets (subdivisions) around the cone's circular footprint.
+heightSegments The number of subdivisions from the cone's top to bottom.
+capSegments The number of annular (ring-shaped) subdivisions of the cone's endcap.
 
 
 
@@ -1899,9 +1951,7 @@ int resr, resh, resc;
 
 ~~~~
 
-
 ~~~~{.cpp}
-
 
 void ofApp::setup(){
     resr = 9;
@@ -1958,9 +2008,7 @@ void ofApp::keyPressed(int key){
 
 }
 
-
 ~~~~
-
 
 
 
@@ -2009,9 +2057,7 @@ int resr, resh, resc;
 
 ~~~~
 
-
 ~~~~{.cpp}
-
 
 void ofApp::setup(){
     resr = 8;
@@ -2069,10 +2115,7 @@ void ofApp::keyPressed(int key){
     
 }
 
-
 ~~~~
-
-
 
 
 
@@ -2115,7 +2158,6 @@ int res;
 
 ~~~~
 
-
 ~~~~{.cpp}
 
 void ofApp::setup(){
@@ -2155,8 +2197,8 @@ void ofApp::keyPressed(int key){
 
 }
 
-
 ~~~~
+
 
 
 
@@ -2197,7 +2239,6 @@ Sets the resolution with which Plane is drawn. Sets columns across x axis and ro
 int resx, resy;
 
 ~~~~
-
 
 ~~~~{.cpp}
 
@@ -2245,9 +2286,7 @@ void ofApp::keyPressed(int key){
 
 }
 
-
 ~~~~
-
 
 
 
@@ -2290,7 +2329,6 @@ int res;
 
 ~~~~
 
-
 ~~~~{.cpp}
 
 void ofApp::setup(){
@@ -2329,7 +2367,6 @@ void ofApp::keyPressed(int key){
     }
 
 }
-
 
 ~~~~
 

@@ -5,26 +5,35 @@
 _visible: True_
 _advanced: False_
 _istemplated: False_
+_extends: _
 -->
 
 ##InlineDescription
 
-Gives access to audio input and output devices. 
+
+Gives access to audio input and output devices
+
+ofSoundStream controls access to your computer's audio input and output
+devices. For example, you could use an ofSoundStream to get live input from
+a microphone, or generate sound in realtime for your computer's speakers.
+
+A typical openFrameworks app will use just one ofSoundStream, and you might
+not even need to use this class directly at all if you don't need to query
+things like the sample rate or buffer size. In order to start receiving or
+generating audio, your ofApp should implement either ofBaseApp::audioIn() or
+ofBaseApp::audioOut() respectively, and then call ofSoundStreamSetup(). You
+can find examples of this in either the audioInputExample or the
+audioOutputExample.
+
+Starting a stream with 0 input or output channels will prevent audioIn() or
+audioOut() from being called, respectively.
+
+Some platforms (iOS, for example) will expose additional platform-specific
+sound stream functionality. See the platform-specific examples for demos.
 
 
-ofSoundStream controls access to your computer's audio input and output devices. For example, you could use an ofSoundStream to get live input from a microphone, or generate sound in realtime for your computer's speakers.
-
-A typical openFrameworks app will use just one ofSoundStream, and you might not even need to use this class directly at all if you don't need to query things like the sample rate or buffer size. In order to start receiving or generating audio, your ofApp should implement either ofBaseApp::audioIn() or ofBaseApp::audioOut() respectively, and then call ofSoundStreamSetup(). You can find examples of this in either the audioInputExample or the audioOutputExample.
-
-Starting a stream with 0 input or output channels will prevent audioIn() or audioOut() from being called, respectively.
-
-Some platforms (iOS, for example) will expose additional platform-specific sound stream functionality. See the platform-specific examples for demos.
-
-***warning:*** 
-	Be aware that audioIn() and audioOut() will be called on a different thread from your app's update() / draw() thread. 
-
-
-
+Warning: Be aware that audioIn() and audioOut() will be called on a different
+thread from your app's update() / draw() thread.
 
 
 
@@ -94,17 +103,13 @@ _advanced: False_
 
 _inlined_description: _
 
-stops the stream and cleans up its resources. 
-
-
-
+stops the stream and cleans up its resources.
 
 
 
 
 
 _description: _
-
 
 
 
@@ -134,16 +139,8 @@ _advanced: False_
 
 _inlined_description: _
 
-Queries the stream's buffer size. 
-
-
-***return:*** 
-	the current buffer size of the stream. 
-
-
-
-
-
+Queries the stream's buffer size.
+\return the current buffer size of the stream.
 
 
 
@@ -151,6 +148,77 @@ Queries the stream's buffer size.
 
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###vector< ofSoundDevice > getDeviceList()
+
+<!--
+_syntax: getDeviceList()_
+_name: getDeviceList_
+_returns: vector< ofSoundDevice >_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Retrieves a list of available audio devices
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###vector< ofSoundDevice > getMatchingDevices(&name, inChannels, outChannels)
+
+<!--
+_syntax: getMatchingDevices(&name, inChannels, outChannels)_
+_name: getMatchingDevices_
+_returns: vector< ofSoundDevice >_
+_returns_description: _
+_parameters: const string &name, unsigned int inChannels, unsigned int outChannels_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Get all devices which match the arguments (name can be a partial match)
+
+
+
+
+
+_description: _
 
 
 
@@ -180,23 +248,14 @@ _advanced: False_
 
 _inlined_description: _
 
-Queries the stream's number of input channels. 
-
-
-***return:*** 
-	the number of input channels (e.g. 2 for stereo). 
-
-
-
-
-
+Queries the stream's number of input channels.
+\return the number of input channels (e.g. 2 for stereo).
 
 
 
 
 
 _description: _
-
 
 
 
@@ -226,23 +285,14 @@ _advanced: False_
 
 _inlined_description: _
 
-Queries the stream's number of output channels. 
-
-
-***return:*** 
-	the number of output channels (e.g. 2 for stereo). 
-
-
-
-
-
+Queries the stream's number of output channels.
+\return the number of output channels (e.g. 2 for stereo).
 
 
 
 
 
 _description: _
-
 
 
 
@@ -272,20 +322,9 @@ _advanced: False_
 
 _inlined_description: _
 
-Queries the stream's sample rate. 
-
-
-***return:*** 
-	the current sample rate of the stream 
-
-
-***note:*** 
-	The returned sample rate may differ from the requested sample rate. 
-
-
-
-
-
+Queries the stream's sample rate
+\return the current sample rate of the stream
+\note The returned sample rate may differ from the requested sample rate.
 
 
 
@@ -299,15 +338,14 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###ofPtr< ofBaseSoundStream > getSoundStream()
+###shared_ptr< ofBaseSoundStream > getSoundStream()
 
 <!--
 _syntax: getSoundStream()_
 _name: getSoundStream_
-_returns: ofPtr< ofBaseSoundStream >_
+_returns: shared_ptr< ofBaseSoundStream >_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -328,9 +366,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -340,12 +376,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###long unsigned long getTickCount()
+###unsigned long long getTickCount()
 
 <!--
 _syntax: getTickCount()_
 _name: getTickCount_
-_returns: long unsigned long_
+_returns: unsigned long long_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -360,67 +396,21 @@ _advanced: False_
 
 _inlined_description: _
 
-Queries the number of "ticks" passed since the stream started. 
+Queries the number of "ticks" passed since the stream started.
 
+This is a representation of how many buffers have passed through the
+stream since it started. This can be converted to seconds with the
+following formula:
 
-This is a representation of how many buffers have passed through the stream since it started. This can be converted to seconds with the following formula:
+   secondsOfPlayback = (tickCount * bufferSize) / sampleRate
 
-secondsOfPlayback = (tickCount * bufferSize) / sampleRate
-
-***return:*** 
-	number of buffers passed through the stream since it started. 
-
-
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void listDevices()
-
-<!--
-_syntax: listDevices()_
-_name: listDevices_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-prints a list of available audio devices to the console. 
-
-
-
+\return number of buffers passed through the stream since it started.
 
 
 
 
 
 _description: _
-
 
 
 
@@ -456,9 +446,79 @@ _inlined_description: _
 
 
 
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void printDeviceList()
+
+<!--
+_syntax: printDeviceList()_
+_name: printDeviceList_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Prints a list of available audio devices to the console
+
+
+
+
 
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setDevice(&device)
+
+<!--
+_syntax: setDevice(&device)_
+_name: setDevice_
+_returns: void_
+_returns_description: _
+_parameters: const ofSoundDevice &device_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+sets the device represented by the stream, see ofSoundStream::getDeviceList().
+
+
+
+
+
+_description: _
 
 
 
@@ -488,10 +548,7 @@ _advanced: False_
 
 _inlined_description: _
 
-sets the device represented by the stream, see ofSoundStream::listDevices(). 
-
-
-
+sets the device represented by the stream, see ofSoundStream::getDeviceList().
 
 
 
@@ -505,17 +562,16 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###void setInput(*soundInput)
+###void setInput(&soundInput)
 
 <!--
-_syntax: setInput(*soundInput)_
+_syntax: setInput(&soundInput)_
 _name: setInput_
 _returns: void_
 _returns_description: _
-_parameters: ofBaseSoundInput *soundInput_
+_parameters: ofBaseSoundInput &soundInput_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -528,17 +584,13 @@ _advanced: False_
 
 _inlined_description: _
 
-Sets the object which will have audioIn() called when the device receives audio. 
-
-
-
+Sets the object which will have audioIn() called when the device receives audio.
 
 
 
 
 
 _description: _
-
 
 
 
@@ -548,14 +600,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setOutput(*soundOutput)
+###void setInput(&soundInput)
 
 <!--
-_syntax: setOutput(*soundOutput)_
-_name: setOutput_
+_syntax: setInput(&soundInput)_
+_name: setInput_
 _returns: void_
 _returns_description: _
-_parameters: ofBaseSoundOutput *soundOutput_
+_parameters: ofBaseSoundInput &soundInput_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -568,10 +620,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Sets the object which will have audioOut() called when the device requests audio. 
-
-
-
+Sets the object which will have audioIn() called when the device receives audio.
 
 
 
@@ -579,6 +628,77 @@ Sets the object which will have audioOut() called when the device requests audio
 
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setOutput(&soundOutput)
+
+<!--
+_syntax: setOutput(&soundOutput)_
+_name: setOutput_
+_returns: void_
+_returns_description: _
+_parameters: ofBaseSoundOutput &soundOutput_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Sets the object which will have audioOut() called when the device requests audio.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setOutput(&soundOutput)
+
+<!--
+_syntax: setOutput(&soundOutput)_
+_name: setOutput_
+_returns: void_
+_returns_description: _
+_parameters: ofBaseSoundOutput &soundOutput_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Sets the object which will have audioOut() called when the device requests audio.
+
+
+
+
+
+_description: _
 
 
 
@@ -595,7 +715,7 @@ _syntax: setSoundStream(soundStreamPtr)_
 _name: setSoundStream_
 _returns: void_
 _returns_description: _
-_parameters: ofPtr< ofBaseSoundStream > soundStreamPtr_
+_parameters: shared_ptr< ofBaseSoundStream > soundStreamPtr_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -614,9 +734,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -646,24 +764,24 @@ _advanced: False_
 
 _inlined_description: _
 
-Sets up and starts the stream. 
+Sets up and starts the stream.
 
-
-
-***return:*** 
-	true on success 
-
-
-
-
-
+Parameters:
+app pointer to the app which will own the sound stream.
+outChannels number of requested output channels (i.e. 2 for stereo).
+inChannels number of requested input channels.
+sampleRate requested sample rate (44100 is typical).
+bufferSize requested buffer size (256 is typical). Smaller
+       values will be more responsive, but less stable.
+nBuffers number of buffers to queue. Less buffers will be more
+       responsive, but less stable.
+\return true on success
 
 
 
 
 
 _description: _
-
 
 
 
@@ -693,24 +811,23 @@ _advanced: False_
 
 _inlined_description: _
 
-Sets up and starts the stream. 
+Sets up and starts the stream.
 
-
-
-***return:*** 
-	true on success 
-
-
-
-
-
+Parameters:
+outChannels number of requested output channels (i.e. 2 for stereo).
+inChannels number of requested input channels.
+sampleRate requested sample rate (44100 is typical).
+bufferSize requested buffer size (256 is typical). Smaller values
+       will be more responsive, but less stable.
+nBuffers number of buffers to queue. Less buffers will be more
+       responsive, but less stable.
+\return true on success
 
 
 
 
 
 _description: _
-
 
 
 
@@ -740,17 +857,13 @@ _advanced: False_
 
 _inlined_description: _
 
-Starts a stream (note that setup() will start the stream on its own). 
-
-
-
+Starts a stream (note that setup() will start the stream on its own).
 
 
 
 
 
 _description: _
-
 
 
 
@@ -780,17 +893,13 @@ _advanced: False_
 
 _inlined_description: _
 
-Stops the stream. 
-
-
-
+Stops the stream.
 
 
 
 
 
 _description: _
-
 
 
 
@@ -818,8 +927,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 

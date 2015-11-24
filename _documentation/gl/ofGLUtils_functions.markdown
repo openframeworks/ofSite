@@ -48,18 +48,17 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###vector< string > ofGLSupportedExtensions()
+###string ofGLSLVersionFromGL(major, minor)
 
 <!--
-_syntax: ofGLSupportedExtensions()_
-_name: ofGLSupportedExtensions_
-_returns: vector< string >_
+_syntax: ofGLSLVersionFromGL(major, minor)_
+_name: ofGLSLVersionFromGL_
+_returns: string_
 _returns_description: _
-_parameters: _
-_version_started: _
+_parameters: int major, int minor_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -77,7 +76,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -120,6 +118,40 @@ _description: _
 
 
 
+<!----------------------------------------------------------------------------->
+
+###int ofGetBytesPerChannelFromGLType(glType)
+
+<!--
+_syntax: ofGetBytesPerChannelFromGLType(glType)_
+_name: ofGetBytesPerChannelFromGLType_
+_returns: int_
+_returns_description: _
+_parameters: int glType_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
 
 <!----------------------------------------------------------------------------->
 
@@ -150,6 +182,40 @@ _inlined_description: _
 
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int ofGetGLFormatFromPixelFormat(pixelFormat)
+
+<!--
+_syntax: ofGetGLFormatFromPixelFormat(pixelFormat)_
+_name: ofGetGLFormatFromPixelFormat_
+_returns: int_
+_returns_description: _
+_parameters: ofPixelFormat pixelFormat_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -192,7 +258,6 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
 ###GLuint ofGetGLPolyMode(m)
@@ -221,7 +286,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -264,51 +328,14 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###ofPtr ofGetGLProgrammableRenderer()
-
-<!--
-_syntax: ofGetGLProgrammableRenderer()_
-_name: ofGetGLProgrammableRenderer_
-_returns: ofPtr_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofPtr ofGetGLRenderer()
+###shared_ptr< ofBaseGLRenderer > ofGetGLRenderer()
 
 <!--
 _syntax: ofGetGLRenderer()_
 _name: ofGetGLRenderer_
-_returns: ofPtr_
+_returns: shared_ptr< ofBaseGLRenderer >_
 _returns_description: _
 _parameters: _
 _version_started: _
@@ -329,43 +356,6 @@ _inlined_description: _
 
 
 _description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int ofGetGLTypeFromPixelFormat(pixelFormat)
-
-<!--
-_syntax: ofGetGLTypeFromPixelFormat(pixelFormat)_
-_name: ofGetGLTypeFromPixelFormat_
-_returns: int_
-_returns_description: _
-_parameters: ofPixelFormat pixelFormat_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
 
 
 
@@ -408,7 +398,6 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
 ###int ofGetGlInternalFormat(&pix)
@@ -437,7 +426,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -480,7 +468,6 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
 ###int ofGetGlInternalFormat(&pix)
@@ -509,7 +496,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -552,7 +538,6 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
 ###int ofGetGlType(&pixels)
@@ -581,7 +566,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -624,7 +608,6 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
 ###int ofGetGlType(&pixels)
@@ -653,7 +636,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -696,7 +678,6 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
 ###ofImageType ofGetImageTypeFromGLType(glType)
@@ -725,7 +706,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -768,7 +748,6 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
 ###ofPolyRenderMode ofGetOFPolyMode(m)
@@ -797,7 +776,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -840,7 +818,6 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
 ###bool ofIsGLProgrammableRenderer()
@@ -876,18 +853,17 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###void ofSetPixelStorei(w, bpc, numChannels)
+###void ofSetPixelStoreiAlignment(pname, w, bpc, numChannels)
 
 <!--
-_syntax: ofSetPixelStorei(w, bpc, numChannels)_
-_name: ofSetPixelStorei_
+_syntax: ofSetPixelStoreiAlignment(pname, w, bpc, numChannels)_
+_name: ofSetPixelStoreiAlignment_
 _returns: void_
 _returns_description: _
-_parameters: int w, int bpc, int numChannels_
-_version_started: _
+_parameters: GLenum pname, int w, int bpc, int numChannels_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -906,6 +882,40 @@ _inlined_description: _
 
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofSetPixelStoreiAlignment(panme, stride)
+
+<!--
+_syntax: ofSetPixelStoreiAlignment(panme, stride)_
+_name: ofSetPixelStoreiAlignment_
+_returns: void_
+_returns_description: _
+_parameters: GLenum panme, int stride_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 

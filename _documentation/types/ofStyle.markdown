@@ -5,10 +5,13 @@
 _visible: True_
 _advanced: False_
 _istemplated: False_
+_extends: _
 -->
 
 ##InlineDescription
 
+Contains general information about the style of ofGraphics
+elements such as color, line width and others.
 
 
 
@@ -46,15 +49,13 @@ _advanced: False_
 
 _inlined_description: _
 
-
-
+Create a default ofStyle.
 
 
 
 
 
 _description: _
-
 
 
 
@@ -84,15 +85,13 @@ _advanced: False_
 
 _inlined_description: _
 
-
-
+ Destroy the ofStyle.
 
 
 
 
 
 _description: _
-
 
 
 
@@ -120,12 +119,20 @@ _constant: False_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+True if the renderer should fill a rendered shape.
+
+If true, the renderer will fill the rendered shape.  If false, the
+renderer will draw the outline of the rendered shape.
+
+
+
+
+
 _description: _
 
-
 bFill variable contains information about how the graphics have to be drawed: Fill or noFill(empty)
-
-
 
 
 
@@ -147,8 +154,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+The background color used when rendering.
+
+
+
+
+
+_description: _
 
 
 
@@ -172,8 +186,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+ The blending mode.
+
+
+
+
+
+_description: _
 
 
 
@@ -197,12 +218,17 @@ _constant: False_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
 
-
 circleResolution variable contains the resolution of a ofCircle.
-
-
 
 
 
@@ -224,12 +250,19 @@ _constant: False_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+The color used when rendering.
+
+This style depends on the state of the ofStyle::bFill.
+
+
+
+
+
 _description: _
 
-
 color variable contain the color information for the style object.
-
-
 
 
 
@@ -251,8 +284,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -276,8 +316,18 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+The render mode for bitmaps (e.g. ofDrawBitmapString).
+
+
+See also: ofDrawBitmapString(const T& textString, float x, float y)
+
+
+
+
+
+_description: _
 
 
 
@@ -301,12 +351,19 @@ _constant: False_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+The width of rendered lines.
+
+Warning: This is not currently implemented in modern OF renderers.
+
+
+
+
+
 _description: _
 
-
 lineWidth contains information about the width of the line for our ofLine.
-
-
 
 
 
@@ -328,8 +385,21 @@ _constant: False_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+The current rendering mode for polygons.
+
+ofPolyWindingMode determines how ovelapping parts of the same
+polygon are rendered.
+
+
+See also: ofPolyWindingMode
+
+
+
+
+
+_description: _
 
 polyMode variable contains information about the drawing behavior for ovelapping parts of the same polygon when we create a shape.
 
@@ -339,8 +409,6 @@ OF_POLY_WINDING_NONZERO -
 OF_POLY_WINDING_POSITIVE -
 OF_POLY_WINDING_NEGATIVE -
 OF_POLY_WINDING_ABS_GEQ_TWO -
-
-
 
 
 
@@ -362,13 +430,25 @@ _constant: False_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+Determine how some shapes are anchored (e.g. ofDrawEllipse).
+
+The rectMode applies to several shapes, including ofDrawRectangle
+and ofDrawEllipse.  If the current rectMode is `OF_RECTMODE_CENTER`,
+the rendered shape will be drawn with x, y in the center of the
+shape. If the current rectMode is `OF_RECTMODE_CORNER`, the
+rendered shape will be drawn with the x, y in the upper-left-hand
+corner of the shape.
+
+
+
+
+
+_description: _
 
 rectMode contains information about the mode for drawing rectangles.
 If they are corner aligned, or drawn so that the x,y position is the center of the rectangle. Possible options are OF_RECTMODE_CENTER and OF_RECTMODE_CORNER
-
-
 
 
 
@@ -390,12 +470,17 @@ _constant: False_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+True if anti-aliasing is enabled.
+
+
+
+
+
 _description: _
 
-
 smoothing variable contains the information about if smoothing effect is activated or not.
-
-
 
 
 
@@ -417,8 +502,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 

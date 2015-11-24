@@ -5,6 +5,7 @@
 _visible: True_
 _advanced: True_
 _istemplated: False_
+_extends: ofBaseVideoPlayer_
 -->
 
 ##InlineDescription
@@ -50,9 +51,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -88,9 +87,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -126,9 +123,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -164,9 +159,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -202,9 +195,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -240,9 +231,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -252,49 +241,11 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###unsigned char * getPixels()
+###ofPixels & getPixels()
 
 <!--
 _syntax: getPixels()_
 _name: getPixels_
-_returns: unsigned char *_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofPixels & getPixelsRef()
-
-<!--
-_syntax: getPixelsRef()_
-_name: getPixelsRef_
 _returns: ofPixels &_
 _returns_description: _
 _parameters: _
@@ -316,9 +267,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const ofPixels & getPixels()
+
+<!--
+_syntax: getPixels()_
+_name: getPixels_
+_returns: const ofPixels &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -354,9 +339,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -366,16 +349,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofTexture * getTexture()
+###ofTexture * getTexturePtr()
 
 <!--
-_syntax: getTexture()_
-_name: getTexture_
+_syntax: getTexturePtr()_
+_name: getTexturePtr_
 _returns: ofTexture *_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 0.8.0_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -392,9 +375,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -430,9 +411,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -468,9 +447,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -506,9 +483,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -544,9 +519,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -582,9 +555,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -594,16 +565,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool loadMovie(fileName)
+###bool load(fileName)
 
 <!--
-_syntax: loadMovie(fileName)_
-_name: loadMovie_
+_syntax: load(fileName)_
+_name: load_
 _returns: bool_
 _returns_description: _
 _parameters: string fileName_
 _access: public_
-_version_started: 0.8.0_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -620,9 +591,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -658,9 +627,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -696,9 +663,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -716,7 +681,7 @@ _name: reloadTexture_
 _returns: void_
 _returns_description: _
 _parameters: _
-_access: public_
+_access: private_
 _version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
@@ -734,9 +699,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -772,9 +735,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -810,9 +771,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -848,9 +807,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -886,9 +843,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -924,9 +879,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -962,9 +915,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -982,7 +933,7 @@ _name: unloadTexture_
 _returns: void_
 _returns_description: _
 _parameters: _
-_access: public_
+_access: private_
 _version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
@@ -1000,9 +951,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1038,9 +987,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1076,9 +1023,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1106,8 +1051,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1131,8 +1083,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1156,8 +1115,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1181,8 +1147,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1206,8 +1179,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1231,8 +1211,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1256,8 +1243,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1281,8 +1275,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 

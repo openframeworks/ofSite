@@ -5,6 +5,7 @@
 _visible: True_
 _advanced: False_
 _istemplated: False_
+_extends: _
 -->
 
 ##InlineDescription
@@ -125,9 +126,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Bind a port to receive socket/unicast UDP:
 
@@ -136,8 +135,6 @@ udpConnection.Create();
 udpConnection.Bind(11999);
 udpConnection.SetNonBlocking(true);
 ~~~~
-
-
 
 
 
@@ -171,9 +168,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Bind to multicast address to receive data:
 
@@ -181,8 +176,6 @@ Bind to multicast address to receive data:
 udpConnection.Create();
 udpConnection.BindMcast("224.0.0.1", 11999);
 ~~~~
-
-
 
 
 
@@ -211,9 +204,6 @@ _advanced: False_
 _inlined_description: _
 
 
-Closes an open socket. NOTE: A closed socket cannot be reused again without a call to "Create()". 
-
-
 
 
 
@@ -221,10 +211,7 @@ Closes an open socket. NOTE: A closed socket cannot be reused again without a ca
 
 _description: _
 
-
 Stop listening on a given port. Works with both socket and multicast.
-
-
 
 
 
@@ -258,9 +245,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Connect to a socket client to send information.
 
@@ -271,8 +256,6 @@ udpConnection.Connect("127.0.0.1",11999);
 udpConnection.SetNonBlocking(true);
 
 ~~~~
-
-
 
 
 
@@ -306,9 +289,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Connect to a multicast address. 
 
@@ -318,8 +299,6 @@ udpConnection.Create();
 udpConnection.Connect("224.0.0.1",11999);
 
 ~~~~
-
-
 
 
 
@@ -353,11 +332,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Create the UDP manager. Must be called before binding to any IP or sockets.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool GetListenAddr(&address, &port)
+
+<!--
+_syntax: GetListenAddr(&address, &port)_
+_name: GetListenAddr_
+_returns: bool_
+_returns_description: _
+_parameters: string &address, int &port_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -393,9 +404,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -431,9 +440,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Get the size of the receive buffer. The minimum (doubled) value for this option is 256. The max is determined by your OS.
 
@@ -441,18 +448,16 @@ Get the size of the receive buffer. The minimum (doubled) value for this option 
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
-###bool GetRemoteAddr(*address)
+###bool GetRemoteAddr(&address, &port)
 
 <!--
-_syntax: GetRemoteAddr(*address)_
+_syntax: GetRemoteAddr(&address, &port)_
 _name: GetRemoteAddr_
 _returns: bool_
 _returns_description: _
-_parameters: char *address_
+_parameters: string &address, int &port_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -471,13 +476,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns the dots and numbers remote address in a string, 
-
-
 
 
 
@@ -511,13 +512,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Get the size of the send buffer. The minimum (doubled) value for this option is 256. The max is determined by your OS.
-
-
 
 
 
@@ -545,17 +542,13 @@ _advanced: False_
 
 _inlined_description: _
 
-returns -1 on failure 
-
-
-
+returns -1 on failure
 
 
 
 
 
 _description: _
-
 
 
 
@@ -591,13 +584,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Return the current receive timeout.
-
-
 
 
 
@@ -631,11 +620,79 @@ _inlined_description: _
 
 
 
+_description: _
+
+Return the current send timeout.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool HasSocket()
+
+<!--
+_syntax: HasSocket()_
+_name: HasSocket_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
 
 _description: _
 
 
-Return the current send timeout.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int PeekReceive()
+
+<!--
+_syntax: PeekReceive()_
+_name: PeekReceive_
+_returns: int_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -666,16 +723,12 @@ _advanced: False_
 _inlined_description: _
 
 
-Return values: SOCKET_TIMEOUT indicates timeout SOCKET_ERROR in case of a problem. 
-
-
 
 
 
 
 
 _description: _
-
 
 Receives a message to a buffer of size iSize. Receive() returns the number of bytes actually received.
 
@@ -684,8 +737,6 @@ char udpMessage[100000];
 udpConnection.Receive(udpMessage,100000);
 string message=udpMessage;
 ~~~~
-
-
 
 
 
@@ -714,16 +765,12 @@ _advanced: False_
 _inlined_description: _
 
 
-Return values: SOCKET_TIMEOUT indicates timeout SOCKET_ERROR in case of a problem. 
-
-
 
 
 
 
 
 _description: _
-
 
 Send a char* of data with length of iSize to all listeners.
 
@@ -732,8 +779,6 @@ string message = "A message";
 udpConnection.Send(message.c_str(),message.length());
 
 ~~~~
-
-
 
 
 
@@ -762,9 +807,6 @@ _advanced: False_
 _inlined_description: _
 
 
-Return values: SOCKET_TIMEOUT indicates timeout SOCKET_ERROR in case of a problem. 
-
-
 
 
 
@@ -772,10 +814,7 @@ Return values: SOCKET_TIMEOUT indicates timeout SOCKET_ERROR in case of a proble
 
 _description: _
 
-
 The SendAll() method is useful for extremely large data objects that may need multiple sendto() calls to actually be completely.
-
-
 
 
 
@@ -809,13 +848,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Broadcast allows sending of packets to a particular network layer. If you're only using a single local network without a large number of attached machines, using broadcast may make more sense than trying to use multicast.
-
-
 
 
 
@@ -843,9 +878,6 @@ _advanced: False_
 
 _inlined_description: _
 
-Theo added - Choose to set nonBLocking - default mode is to block. 
-
-
 
 
 
@@ -854,10 +886,7 @@ Theo added - Choose to set nonBLocking - default mode is to block.
 
 _description: _
 
-
 Determines whether calls to send or receive are allowed to block their thread until they've completed. If your network infrastructure is time critical, then this may be a good choice. Usually though, you should leave it off.
-
-
 
 
 
@@ -891,13 +920,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Set the size of the receive buffer. The minimum (doubled) value for this option is 256. The max is determined by your OS.
-
-
 
 
 
@@ -931,9 +956,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -969,13 +992,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Set the size of the send buffer. The minimum (doubled) value for this option is 256. The max is determined by your OS.
-
-
 
 
 
@@ -1009,9 +1028,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 The TTL (Time To Live) field in the IP header has a double significance in multicast. As always, it controls the live time of the datagram to avoid it being looped forever due to routing errors. Routers decrement the TTL of every datagram as it traverses from one network to another and when its value reaches 0 the packet is dropped.
 
@@ -1025,8 +1042,6 @@ TTL     Scope
  <64 Restricted to the same region.
 <128 Restricted to the same continent.
 <255 Unrestricted in scope. Global.
-
-
 
 
 
@@ -1060,13 +1075,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Set a timeout for any receive operations in seconds.
-
-
 
 
 
@@ -1100,13 +1111,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Set a timeout for any send operations in seconds.
-
-
 
 
 
@@ -1140,9 +1147,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1178,9 +1183,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1208,8 +1211,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1233,8 +1243,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1258,8 +1275,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1283,8 +1307,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1308,33 +1339,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
 
 
 
 
 
-
-
-<!----------------------------------------------------------------------------->
-
-###int m_iListenPort
-
-<!--
-_name: m_iListenPort_
-_type: int_
-_access: protected_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
 
 _description: _
-
 
 
 
@@ -1358,8 +1371,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1383,8 +1403,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1408,8 +1435,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 

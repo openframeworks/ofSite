@@ -5,6 +5,7 @@
 _visible: True_
 _advanced: False_
 _istemplated: False_
+_extends: ofxBaseGui_
 -->
 
 ##InlineDescription
@@ -50,9 +51,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -88,9 +87,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -100,14 +97,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void add(&parameter)
+###typename enable_if<is_arithmetic< T>::value, void >::type add(&p)
 
 <!--
-_syntax: add(&parameter)_
+_syntax: add(&p)_
 _name: add_
-_returns: void_
+_returns: typename enable_if<is_arithmetic< T>::value, void >::type_
 _returns_description: _
-_parameters: ofParameter< float > &parameter_
+_parameters: ofParameter< T > &p_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -126,47 +123,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void add(&parameter)
-
-<!--
-_syntax: add(&parameter)_
-_name: add_
-_returns: void_
-_returns_description: _
-_parameters: ofParameter< int > &parameter_
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
 
 
 
@@ -202,9 +159,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -240,9 +195,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -278,9 +231,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -316,9 +267,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -354,9 +303,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -392,9 +339,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -430,9 +375,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -468,9 +411,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -506,9 +447,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -544,9 +483,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -556,14 +493,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofxButton & getButton(name)
+###ofxButton & getButton(&name)
 
 <!--
-_syntax: getButton(name)_
+_syntax: getButton(&name)_
 _name: getButton_
 _returns: ofxButton &_
 _returns_description: _
-_parameters: string name_
+_parameters: const string &name_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -582,9 +519,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -594,14 +529,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofxBaseGui * getControl(name)
+###ofxBaseGui * getControl(&name)
 
 <!--
-_syntax: getControl(name)_
+_syntax: getControl(&name)_
 _name: getControl_
 _returns: ofxBaseGui *_
 _returns_description: _
-_parameters: string name_
+_parameters: const string &name_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -620,9 +555,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -639,7 +572,7 @@ _syntax: getControl(num)_
 _name: getControl_
 _returns: ofxBaseGui *_
 _returns_description: _
-_parameters: int num_
+_parameters: size_t num_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -658,9 +591,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -696,9 +627,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -708,14 +637,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ControlType & getControlType(name)
+###ControlType & getControlType(&name)
 
 <!--
-_syntax: getControlType(name)_
+_syntax: getControlType(&name)_
 _name: getControlType_
 _returns: ControlType &_
 _returns_description: _
-_parameters: string name_
+_parameters: const string &name_
 _access: protected_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -734,9 +663,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -746,14 +673,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofxFloatSlider & getFloatSlider(name)
+###ofxFloatSlider & getFloatSlider(&name)
 
 <!--
-_syntax: getFloatSlider(name)_
+_syntax: getFloatSlider(&name)_
 _name: getFloatSlider_
 _returns: ofxFloatSlider &_
 _returns_description: _
-_parameters: string name_
+_parameters: const string &name_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -772,9 +699,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -784,14 +709,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofxGuiGroup & getGroup(name)
+###ofxGuiGroup & getGroup(&name)
 
 <!--
-_syntax: getGroup(name)_
+_syntax: getGroup(&name)_
 _name: getGroup_
 _returns: ofxGuiGroup &_
 _returns_description: _
-_parameters: string name_
+_parameters: const string &name_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -810,9 +735,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -822,14 +745,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofxIntSlider & getIntSlider(name)
+###ofxIntSlider & getIntSlider(&name)
 
 <!--
-_syntax: getIntSlider(name)_
+_syntax: getIntSlider(&name)_
 _name: getIntSlider_
 _returns: ofxIntSlider &_
 _returns_description: _
-_parameters: string name_
+_parameters: const string &name_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -848,9 +771,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -860,12 +781,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getNumControls()
+###size_t getNumControls()
 
 <!--
 _syntax: getNumControls()_
 _name: getNumControls_
-_returns: int_
+_returns: size_t_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -886,9 +807,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -924,9 +843,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -936,14 +853,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofxToggle & getToggle(name)
+###ofxToggle & getToggle(&name)
 
 <!--
-_syntax: getToggle(name)_
+_syntax: getToggle(&name)_
 _name: getToggle_
 _returns: ofxToggle &_
 _returns_description: _
-_parameters: string name_
+_parameters: const string &name_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -962,9 +879,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1000,9 +915,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1038,9 +951,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1076,9 +987,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1114,9 +1023,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1152,9 +1059,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1190,9 +1095,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1228,9 +1131,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1266,9 +1167,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool mouseScrolled(&args)
+
+<!--
+_syntax: mouseScrolled(&args)_
+_name: mouseScrolled_
+_returns: bool_
+_returns_description: _
+_parameters: ofMouseEventArgs &args_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1304,9 +1239,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1316,14 +1249,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofxGuiGroup(&parameters, _filename = "settings.xml", x = 10, y = 10)
+### ofxGuiGroup(&parameters, &_filename, x, y)
 
 <!--
-_syntax: ofxGuiGroup(&parameters, _filename = "settings.xml", x = 10, y = 10)_
+_syntax: ofxGuiGroup(&parameters, &_filename, x, y)_
 _name: ofxGuiGroup_
 _returns: _
 _returns_description: _
-_parameters: const ofParameterGroup &parameters, string _filename="settings.xml", float x=10, float y=10_
+_parameters: const ofParameterGroup &parameters, const string &_filename, float x, float y_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -1342,47 +1275,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void registerMouseEvents()
-
-<!--
-_syntax: registerMouseEvents()_
-_name: registerMouseEvents_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: protected_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
 
 
 
@@ -1418,9 +1311,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1430,14 +1321,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setPosition(p)
+###void setPosition(&p)
 
 <!--
-_syntax: setPosition(p)_
+_syntax: setPosition(&p)_
 _name: setPosition_
 _returns: void_
 _returns_description: _
-_parameters: ofPoint p_
+_parameters: const ofPoint &p_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -1456,9 +1347,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1494,9 +1383,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1532,9 +1419,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1570,9 +1455,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1582,14 +1465,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofxGuiGroup * setup(collectionName = "", filename = "settings.xml", x = 10, y = 10)
+###ofxGuiGroup * setup(&collectionName, &filename, x, y)
 
 <!--
-_syntax: setup(collectionName = "", filename = "settings.xml", x = 10, y = 10)_
+_syntax: setup(&collectionName, &filename, x, y)_
 _name: setup_
 _returns: ofxGuiGroup *_
 _returns_description: _
-_parameters: string collectionName="", string filename="settings.xml", float x=10, float y=10_
+_parameters: const string &collectionName, const string &filename, float x, float y_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -1608,9 +1491,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1620,14 +1501,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofxGuiGroup * setup(&parameters, filename = "settings.xml", x = 10, y = 10)
+###ofxGuiGroup * setup(&parameters, &filename, x, y)
 
 <!--
-_syntax: setup(&parameters, filename = "settings.xml", x = 10, y = 10)_
+_syntax: setup(&parameters, &filename, x, y)_
 _name: setup_
 _returns: ofxGuiGroup *_
 _returns_description: _
-_parameters: const ofParameterGroup &parameters, string filename="settings.xml", float x=10, float y=10_
+_parameters: const ofParameterGroup &parameters, const string &filename, float x, float y_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -1646,9 +1527,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1666,7 +1545,7 @@ _name: sizeChangedCB_
 _returns: void_
 _returns_description: _
 _parameters: _
-_access: protected_
+_access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
@@ -1684,9 +1563,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1722,9 +1599,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1752,8 +1627,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1777,8 +1659,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1802,8 +1691,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1827,8 +1723,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1852,8 +1755,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1877,8 +1787,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1902,8 +1819,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1927,33 +1851,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
 
 
 
 
 
-
-
-<!----------------------------------------------------------------------------->
-
-###ofxGuiGroup *  parent
-
-<!--
-_name: parent_
-_type: ofxGuiGroup * _
-_access: protected_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
 
 _description: _
-
 
 
 
@@ -1977,8 +1883,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2002,8 +1915,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2027,8 +1947,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 

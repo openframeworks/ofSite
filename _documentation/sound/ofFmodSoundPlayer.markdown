@@ -5,6 +5,7 @@
 _visible: True_
 _advanced: True_
 _istemplated: False_
+_extends: ofBaseSoundPlayer_
 -->
 
 ##InlineDescription
@@ -50,47 +51,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool getIsPlaying()
-
-<!--
-_syntax: getIsPlaying()_
-_name: getIsPlaying_
-_returns: bool_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
 
 
 
@@ -126,9 +87,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -164,9 +123,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -202,9 +159,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -240,9 +195,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -278,9 +231,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -316,9 +267,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -354,9 +303,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -366,16 +313,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool loadSound(fileName, stream = false)
+###bool isPlaying()
 
 <!--
-_syntax: loadSound(fileName, stream = false)_
-_name: loadSound_
+_syntax: isPlaying()_
+_name: isPlaying_
 _returns: bool_
 _returns_description: _
-_parameters: string fileName, bool stream=false_
+_parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -392,9 +339,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool load(fileName, stream = false)
+
+<!--
+_syntax: load(fileName, stream = false)_
+_name: load_
+_returns: bool_
+_returns_description: _
+_parameters: string fileName, bool stream=false_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -430,9 +411,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -468,9 +447,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -506,9 +483,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -544,9 +519,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -582,9 +555,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -620,9 +591,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -658,9 +627,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -696,9 +663,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -734,9 +699,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -772,9 +735,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -810,9 +771,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -822,16 +781,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void unloadSound()
+###void unload()
 
 <!--
-_syntax: unloadSound()_
-_name: unloadSound_
+_syntax: unload()_
+_name: unload_
 _returns: void_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -848,9 +807,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -886,9 +843,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -916,8 +871,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -941,8 +903,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -966,8 +935,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -991,8 +967,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1016,8 +999,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1041,8 +1031,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1066,8 +1063,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1091,8 +1095,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1116,8 +1127,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1141,8 +1159,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1166,8 +1191,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1191,8 +1223,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1216,8 +1255,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 

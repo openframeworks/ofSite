@@ -22,7 +22,6 @@ def uniqify(seq):
     seen = set()
     seen_add = seen.add
     return [ x for x in seq if x not in seen and not seen_add(x)]
-        
 
 def run():
     classes = []
@@ -36,6 +35,7 @@ def run():
     module_lookup = dict()
     core_index = dict()
     addons_index = dict()
+    module_subtitles = dict()
     
     # Create an index of which module each class is in for generated links to other classes
     for class_name in classes:
@@ -49,13 +49,6 @@ def run():
         clazz = markdown_file.getclass(clazz_name)
         if clazz.istemplated:
             clazz.name = clazz.name[:-1]
-
-        methods_to_remove = []
-        for method in clazz.function_list:
-            if method.name[0]=="~" or method.name.find("OF_DEPRECATED_MSG")!=-1:
-                methods_to_remove.append(method)
-        for method in methods_to_remove:
-            clazz.function_list.remove(method)
 
         clazz.detailed_inline_description = str(clazz.detailed_inline_description.encode('ascii', 'ignore'))
         for class_name in classes_simple_name:
@@ -71,6 +64,10 @@ def run():
             rep = class_name + "[(]"
             clazz.reference = re.sub(rep, "<a href=\"../"+module_lookup[class_name]+"/"+class_name+".html\" class=\"docs_class\" >"+class_name+"</a>(", clazz.reference)
 
+        def gen_link(class_name): return "<a href=\"../"+module_lookup[class_name]+"/"+class_name+".html\" class=\"docs_class\" >"+class_name+"</a> " if class_name in module_lookup else ""
+        def filter_out_empty(class_name): return class_name!="" 
+        clazz.extends = list(filter(filter_out_empty, map(gen_link, clazz.extends)))
+            
         functions_file = markdown_file.getfunctionsfile(clazz.name)
         #print clazz.name
         #print clazz.function_list 
@@ -110,14 +107,6 @@ def run():
 #        functions_file.reference = str(functions_file.reference)
 #        for func in function_files:
 #            functions_file.reference = str.replace(functions_file.reference, class_name, "<a href=\"../"+clazz.module+"/"+class_name+".html\">"+class_name+"</a>")
-
-
-        functions_to_remove = []
-        for function in functions_file.function_list:
-            if function.name.find("OF_DEPRECATED_MSG")!=-1:
-                functions_to_remove.append(method)
-        for function in functions_to_remove:
-            functions_file.function_list.remove(method)
         env = {
             "modulename": functions_file.name,
             "clazz": None,
@@ -135,12 +124,9 @@ def run():
                 addons_index[functions_file.module] = []
             addons_index[functions_file.module].append(functions_file)
         
-        
-
-    # process index file        
-    bf.template.materialize_template("documentation.mako", ('documentation',"index.html"), {'core':core_index,'addons':addons_index} )
     
     for root, dirs, files in os.walk(directory):
+        """ copy images to their folders """
         for name in files:
             file_split = os.path.splitext(name)
             if file_split[1]==".jpeg" or file_split[1]==".jpg" or file_split[1]==".gif" or file_split[1]==".png":
@@ -149,6 +135,26 @@ def run():
                 except:
                     pass
                 shutil.copyfile(os.path.join(root,name), os.path.join('_site','documentation',os.path.basename(root),name))
+                
+        """ create module introductions """
+        for module in dirs:
+            if module!="addons":
+                module_intro = os.path.join(root,module,"introduction.markdown")
+                if os.path.isfile(module_intro):
+                    module_intro_file = open(module_intro)
+                    module_intro_content = module_intro_file.read()
+                    module_subtitles[module] = module_intro_content.splitlines()[0].strip('##').strip(' ')
+                    if module.find("ofx") == 0:
+                        bf.template.materialize_template("documentation_module_intro.mako", (os.path.join('documentation', module),"introduction.html"), {"module": module, "content": module_intro_content, "classes": addons_index[module]} )
+                    else:
+                        bf.template.materialize_template("documentation_module_intro.mako", (os.path.join('documentation', module),"introduction.html"), {"module": module, "content": module_intro_content, "classes": core_index[module]} )
+                else:
+                    module_subtitles[module] = None
+                    print "couldn't find " + module_intro
+        
+
+    # process index file        
+    bf.template.materialize_template("documentation.mako", ('documentation',"index.html"), {'core':core_index, 'addons':addons_index, 'module_subtitles':module_subtitles} )
                 
     #html = open(documentation.dir + "/" + class_fn + ".html",'w')
     #html.write(p.content)

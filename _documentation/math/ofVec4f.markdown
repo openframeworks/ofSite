@@ -5,6 +5,7 @@
 _visible: True_
 _advanced: False_
 _istemplated: False_
+_extends: _
 -->
 
 ##InlineDescription
@@ -44,20 +45,18 @@ _advanced: False_
 
 _inlined_description: _
 
-Sets this vector to be the average (center of gravity or centroid) of a given array of 'ofVec4f's. 
+Sets this vector to be the average (center of gravity or centroid) of a given array of 'ofVec4f's.
 
 
-
-
-
-
+Parameters:
+points The array of 'ofVec4f's used in the average calculation.
+num The number of ofVec4f objects in the array.
 
 
 
 
 
 _description: _
-
 
 
 
@@ -87,62 +86,19 @@ _advanced: False_
 
 _inlined_description: _
 
-Treats this vector and 'pnt' as points in 4D space and calculates the distance between them. 
+Treats this vector and 'pnt' as points in 4D space and calculates the distance between them.
 
 
+Parameters:
+pnt The vector used in the distance calculation with the current vector.
 
-***return:*** 
-	The distance between the two vectors in 4D space. 
-
-
-
-
-
+Returns: The distance between the two vectors in 4D space.
 
 
 
 
 
 _description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float distanceSquared(&pnt)
-
-<!--
-_syntax: distanceSquared(&pnt)_
-_name: distanceSquared_
-_returns: float_
-_returns_description: _
-_parameters: const ofVec4f &pnt_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
 
 
 
@@ -172,26 +128,25 @@ _advanced: False_
 
 _inlined_description: _
 
-Calculates and returns the dot product of this vector with 'vec'. 
+Calculates and returns the dot product of this vector with 'vec'.
+
+Dot product (less commonly known as Euclidean inner product) expresses the angular
+relationship between two vectors. In other words it is a measure of how parallel two vectors
+are. If they are completely perpendicular the dot product is 0; if they are completely parallel
+their dot product is either 1 if they are pointing in the same direction, or -1 if they are pointing
+in opposite directions.
 
 
-Dot product (less commonly known as Euclidean inner product) expresses the angular relationship between two vectors. In other words it is a measure of how parallel two vectors are. If they are completely perpendicular the dot product is 0; if they are completely parallel their dot product is either 1 if they are pointing in the same direction, or -1 if they are pointing in opposite directions.
+Parameters:
+vec The vector used in the dot product calculation with this vector.
 
-
-***return:*** 
-	The dot product of this vector with 'vec'.
-
-
-Dot Product. 
-
-
+Returns: The dot product of this vector with 'vec'.
 
 
 
 
 
 _description: _
-
 
 
 
@@ -221,24 +176,20 @@ _advanced: False_
 
 _inlined_description: _
 
-Performs a linear interpolation of this vector towards 'pnt'. 
+Performs a linear interpolation of this vector towards 'pnt'.
 
 
+Parameters:
+pnt The vector the interpolation will be performed on.
+p The amount to move towards 'pnt'; 'p' is normally between 0 and 1 and where 0 means stay the original position and 1 means move all the way to 'pnt', but you can also have 'p' greater than 1 overshoot 'pnt', or less than 0 to move backwards away from 'pnt'.
 
-***return:*** 
-	The interpolation as an ofVec4f. 
-
-
-
-
-
+Returns: The interpolation as an ofVec4f.
 
 
 
 
 
 _description: _
-
 
 
 
@@ -268,24 +219,19 @@ _advanced: False_
 
 _inlined_description: _
 
-Returns a copy of this vector with its length (magnitude) restricted to a maximum of 'max' units by scaling down if necessary. 
+Returns a copy of this vector with its length (magnitude) restricted to a maximum of 'max' units by scaling down if necessary.
 
 
+Parameters:
+max The maximum length of the new vector.
 
-***return:*** 
-	A copy of the current vector that is at most 'max' units long. 
-
-
-
-
-
+Returns: A copy of the current vector that is at most 'max' units long.
 
 
 
 
 
 _description: _
-
 
 
 
@@ -315,24 +261,19 @@ _advanced: False_
 
 _inlined_description: _
 
-Calculates and returns the midpoint (as a vector) between this vector and 'pnt'. 
+Calculates and returns the midpoint (as a vector) between this vector and 'pnt'.
 
 
+Parameters:
+pnt The vector used in the midpoint calculation with this vector.
 
-***return:*** 
-	The midpoint between this vector and 'pnt' as an ofVec4f. 
-
-
-
-
-
+Returns: The midpoint between this vector and 'pnt' as an ofVec4f.
 
 
 
 
 
 _description: _
-
 
 
 
@@ -362,25 +303,20 @@ _advanced: False_
 
 _inlined_description: _
 
-Returns a normalized copy of this vector. 
+Returns a normalized copy of this vector.
+
+Normalization means to scale the vector so that its length (magnitude) is exactly 1,
+at which stage all that is left is the direction. A normalized vector is usually called
+a unit vector, and can be used to represent a pure direction (heading).
 
 
-Normalization means to scale the vector so that its length (magnitude) is exactly 1, at which stage all that is left is the direction. A normalized vector is usually called a unit vector, and can be used to represent a pure direction (heading).
-
-***return:*** 
-	The normalized copy of the current vector. 
-
-
-
-
-
+Returns: The normalized copy of the current vector.
 
 
 
 
 
 _description: _
-
 
 
 
@@ -410,15 +346,14 @@ _advanced: False_
 
 _inlined_description: _
 
-
-
+\name Access components
+\{
 
 
 
 
 
 _description: _
-
 
 
 
@@ -454,9 +389,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -486,24 +419,19 @@ _advanced: False_
 
 _inlined_description: _
 
-Returns a new ofVec4f that is the result of scaling this vector up or down so that it has the requested length. 
+Returns a new ofVec4f that is the result of scaling this vector up or down so that it has the requested length.
 
 
+Parameters:
+length The desired length of the new ofVec4f object.
 
-***return:*** 
-	The result of scaling the this vector up or down. 
-
-
-
-
-
+Returns: The result of scaling the this vector up or down.
 
 
 
 
 
 _description: _
-
 
 
 
@@ -533,60 +461,18 @@ _advanced: False_
 
 _inlined_description: _
 
-Performs a linear interpolation of this vector towards 'pnt'. This modifies the current vector to the interpolated value. 
+Performs a linear interpolation of this vector towards 'pnt'. This modifies the current vector to the interpolated value.
 
 
-
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofVec4f interpolated(&pnt, p)
-
-<!--
-_syntax: interpolated(&pnt, p)_
-_name: interpolated_
-_returns: ofVec4f_
-_returns_description: _
-_parameters: const ofVec4f &pnt, float p_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-p==0.0 results in this point, p==0.5 results in the midpoint, and p==1.0 results in pnt being returned. 
-
-
+Parameters:
+pnt The vector the interpolation will be performed on.
+p The amount to move towards 'pnt'; 'p' is normally between 0 and 1 and where 0 means stay the original position and 1 means move all the way to 'pnt', but you can also have 'p' greater than 1 overshoot 'pnt', or less than 0 to move backwards away from 'pnt'.
 
 
 
 
 
 _description: _
-
 
 
 
@@ -616,23 +502,16 @@ _advanced: False_
 
 _inlined_description: _
 
-Returns the length (magnitude) of this vector. 
+Returns the length (magnitude) of this vector.
 
 
-***return:*** 
-	The magnitude of the current vector. 
-
-
-
-
-
+Returns: The magnitude of the current vector.
 
 
 
 
 
 _description: _
-
 
 
 
@@ -668,9 +547,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -700,51 +577,11 @@ _advanced: False_
 
 _inlined_description: _
 
-Restrict the length (magnitude) of this vector to a maximum of 'max' units by scaling down if necessary. 
+Restrict the length (magnitude) of this vector to a maximum of 'max' units by scaling down if necessary.
 
 
-
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofVec4f limited(max)
-
-<!--
-_syntax: limited(max)_
-_name: limited_
-_returns: ofVec4f_
-_returns_description: _
-_parameters: float max_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
+Parameters:
+max The maximum length of the current vector.
 
 
 
@@ -758,17 +595,16 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###bool match(&vec, tolerance = 0.0001)
+###bool match(&vec, tolerance = 0.0001f)
 
 <!--
-_syntax: match(&vec, tolerance = 0.0001)_
+_syntax: match(&vec, tolerance = 0.0001f)_
 _name: match_
 _returns: bool_
 _returns_description: _
-_parameters: const ofVec4f &vec, float tolerance=0.0001_
+_parameters: const ofVec4f &vec, float tolerance=0.0001f_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -787,9 +623,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -819,62 +653,19 @@ _advanced: False_
 
 _inlined_description: _
 
-Calculates and returns the midpoint (as a vector) between this vector and 'pnt'. This modifies the current vector to the midpoint value. 
+Calculates and returns the midpoint (as a vector) between this vector and 'pnt'. This modifies the current vector to the midpoint value.
 
 
+Parameters:
+pnt The vector used in the midpoint calculation with this vector.
 
-***return:*** 
-	The midpoint between this vector and 'pnt' as an ofVec4f. 
-
-
-
-
-
+Returns: The midpoint between this vector and 'pnt' as an ofVec4f.
 
 
 
 
 
 _description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofVec4f middled(&pnt)
-
-<!--
-_syntax: middled(&pnt)_
-_name: middled_
-_returns: ofVec4f_
-_returns_description: _
-_parameters: const ofVec4f &pnt_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
 
 
 
@@ -904,57 +695,17 @@ _advanced: False_
 
 _inlined_description: _
 
-Normalizes the vector. This changes the current vector to its normalized value. 
+Normalizes the vector. This changes the current vector to its normalized value.
 
-
-Normalization means to scale the vector so that its length (magnitude) is exactly 1, at which stage all that is left is the direction. A normalized vector is usually called a unit vector, and can be used to represent a pure direction (heading). 
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofVec4f normalized()
-
-<!--
-_syntax: normalized()_
-_name: normalized_
-_returns: ofVec4f_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
+Normalization means to scale the vector so that its length (magnitude) is exactly 1,
+at which stage all that is left is the direction. A normalized vector is usually called
+a unit vector, and can be used to represent a pure direction (heading).
 
 
 
 
 
 _description: _
-
 
 
 
@@ -984,15 +735,14 @@ _advanced: False_
 
 _inlined_description: _
 
-
-
+\name Construct a 4D vector
+\{
 
 
 
 
 
 _description: _
-
 
 
 
@@ -1028,9 +778,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1040,10 +788,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofVec4f(_x = 0.f, _y = 0.f, _z = 0.f, _w = 0.f)
+### ofVec4f(_x, _y, _z, _w)
 
 <!--
-_syntax: ofVec4f(_x = 0.f, _y = 0.f, _z = 0.f, _w = 0.f)_
+_syntax: ofVec4f(_x, _y, _z, _w)_
 _name: ofVec4f_
 _returns: _
 _returns_description: _
@@ -1066,9 +814,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1104,9 +850,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1142,9 +886,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1180,9 +922,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1218,9 +958,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1256,9 +994,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1294,9 +1030,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1332,9 +1066,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1370,9 +1102,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1402,15 +1132,14 @@ _advanced: False_
 
 _inlined_description: _
 
-
-
+\name Operators
+\{
 
 
 
 
 
 _description: _
-
 
 
 
@@ -1446,9 +1175,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1484,9 +1211,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1522,9 +1247,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1560,9 +1283,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1598,9 +1319,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1636,9 +1355,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1674,9 +1391,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1712,9 +1427,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1750,9 +1463,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1788,9 +1499,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1826,9 +1535,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1864,9 +1571,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1896,15 +1601,14 @@ _advanced: False_
 
 _inlined_description: _
 
-
-
+\name Comparison
+\{
 
 
 
 
 
 _description: _
-
 
 
 
@@ -1940,9 +1644,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1978,85 +1680,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofVec4f & rescale(length)
-
-<!--
-_syntax: rescale(length)_
-_name: rescale_
-_returns: ofVec4f &_
-_returns_description: _
-_parameters: const float length_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofVec4f rescaled(length)
-
-<!--
-_syntax: rescaled(length)_
-_name: rescaled_
-_returns: ofVec4f_
-_returns_description: _
-_parameters: const float length_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
 
 
 
@@ -2086,20 +1710,17 @@ _advanced: False_
 
 _inlined_description: _
 
-Scales this vector up or down so that it has the requested length. 
+Scales this vector up or down so that it has the requested length.
 
 
-
-
-
-
+Parameters:
+length The desired length of the vector.
 
 
 
 
 
 _description: _
-
 
 
 
@@ -2135,9 +1756,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2173,9 +1792,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2211,9 +1828,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2249,9 +1864,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2287,9 +1900,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2317,8 +1928,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+\cond INTERNAL
+
+
+
+
+
+_description: _
 
 
 
@@ -2342,8 +1960,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2367,8 +1992,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+\endcond
+
+
+
+
+
+_description: _
 
 
 
@@ -2392,8 +2024,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2417,8 +2056,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 

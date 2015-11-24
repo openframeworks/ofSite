@@ -5,6 +5,7 @@
 _visible: True_
 _advanced: False_
 _istemplated: False_
+_extends: _
 -->
 
 ##InlineDescription
@@ -30,7 +31,7 @@ dir.allowExt("png");
 dir.listDir();
 
 //go through and print out all the paths
-for(int i = 0; i < dir.numFiles(); i++){
+for(int i = 0; i < dir.size(); i++){
 	ofLogNotice(dir.getPath(i));
 }
 ~~~~
@@ -43,14 +44,14 @@ for(int i = 0; i < dir.numFiles(); i++){
 
 
 
-###void allowExt(extension)
+###void allowExt(&extension)
 
 <!--
-_syntax: allowExt(extension)_
+_syntax: allowExt(&extension)_
 _name: allowExt_
 _returns: void_
 _returns_description: _
-_parameters: string extension_
+_parameters: const string &extension_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -69,9 +70,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Adds an allowed extension to the list of filters when listing directories. Use this to set any number of filters before calling listDir().
 
@@ -85,6 +84,40 @@ dir.allowExt("jpg");
 dir.allowExt("gif");
 dir.listDir();
 ~~~~
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###vector< ofFile >::const_iterator begin()
+
+<!--
+_syntax: begin()_
+_name: begin_
+_returns: vector< ofFile >::const_iterator_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -120,13 +153,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns true if the current directory is executable. An executable directory can be entered into with command such as cd.
-
-
 
 
 
@@ -160,13 +189,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns true if the open directory can be read.
-
-
 
 
 
@@ -200,13 +225,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns true if the open directory can be written to.
-
-
 
 
 
@@ -240,9 +261,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Closes the directory.
 
@@ -250,18 +269,16 @@ Closes the directory.
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
-###bool copyTo(path, bRelativeToData = true, overwrite = false)
+###bool copyTo(&path, bRelativeToData = true, overwrite = false)
 
 <!--
-_syntax: copyTo(path, bRelativeToData = true, overwrite = false)_
+_syntax: copyTo(&path, bRelativeToData = true, overwrite = false)_
 _name: copyTo_
 _returns: bool_
 _returns_description: _
-_parameters: string path, bool bRelativeToData=true, bool overwrite=false_
+_parameters: const string &path, bool bRelativeToData=true, bool overwrite=false_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -280,13 +297,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Copies the directory into path.  If bRelativeToData is set to false then path should be absolute. If overwrite is set to true any existing files with the same name will be overwritten by the copy.
-
-
 
 
 
@@ -320,9 +333,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Creates the directory if it doesn't exist already. A common reason to use create is to ensure that you are able to write files to a known path, like so
 
@@ -341,18 +352,16 @@ The recursive boolean flag will indicate if you'd like to create directories all
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
-###bool createDirectory(dirPath, bRelativeToData = true, recursive = false)
+###bool createDirectory(&dirPath, bRelativeToData = true, recursive = false)
 
 <!--
-_syntax: createDirectory(dirPath, bRelativeToData = true, recursive = false)_
+_syntax: createDirectory(&dirPath, bRelativeToData = true, recursive = false)_
 _name: createDirectory_
 _returns: bool_
 _returns_description: _
-_parameters: string dirPath, bool bRelativeToData=true, bool recursive=false_
+_parameters: const string &dirPath, bool bRelativeToData=true, bool recursive=false_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -371,9 +380,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Static method to create a directory at a given path. 
 
@@ -381,18 +388,16 @@ Static method to create a directory at a given path.
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
-###bool doesDirectoryExist(dirPath, bRelativeToData = true)
+###bool doesDirectoryExist(&dirPath, bRelativeToData = true)
 
 <!--
-_syntax: doesDirectoryExist(dirPath, bRelativeToData = true)_
+_syntax: doesDirectoryExist(&dirPath, bRelativeToData = true)_
 _name: doesDirectoryExist_
 _returns: bool_
 _returns_description: _
-_parameters: string dirPath, bool bRelativeToData=true_
+_parameters: const string &dirPath, bool bRelativeToData=true_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -411,11 +416,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns true if the directory at dirPath exists.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###vector< ofFile >::const_iterator end()
+
+<!--
+_syntax: end()_
+_name: end_
+_returns: vector< ofFile >::const_iterator_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -451,13 +488,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns true if the open directory exists. Great to be used in conjunction with ofDirectory::create()
-
-
 
 
 
@@ -491,9 +524,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -503,14 +534,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofFile getFile(position, mode = ofFile::Reference, binary = false)
+###ofFile getFile(position, mode = Reference, binary = false)
 
 <!--
-_syntax: getFile(position, mode = ofFile::Reference, binary = false)_
+_syntax: getFile(position, mode = Reference, binary = false)_
 _name: getFile_
 _returns: ofFile_
 _returns_description: _
-_parameters: unsigned int position, ofFile::Mode mode=ofFile::Reference, bool binary=false_
+_parameters: size_t position, ofFile::Mode mode=Reference, bool binary=false_
 _access: public_
 _version_started: 0072_
 _version_deprecated: _
@@ -529,9 +560,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -541,12 +570,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###vector< ofFile > getFiles()
+###const vector< ofFile > & getFiles()
 
 <!--
 _syntax: getFiles()_
 _name: getFiles_
-_returns: vector< ofFile >_
+_returns: const vector< ofFile > &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -567,13 +596,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns a vector of ofFile objects populated by a prior call to listDir().  The files are opened in ofFile::Reference mode.
-
-
 
 
 
@@ -588,7 +613,7 @@ _syntax: getName(position)_
 _name: getName_
 _returns: string_
 _returns_description: _
-_parameters: unsigned int position_
+_parameters: size_t position_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -607,13 +632,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns the file name,(eg "mypicture.png") with extension but not the enclosing path at a given index. Position must be less than the result of numFiles().
-
-
 
 
 
@@ -647,9 +668,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -666,7 +685,7 @@ _syntax: getPath(position)_
 _name: getPath_
 _returns: string_
 _returns_description: _
-_parameters: unsigned int position_
+_parameters: size_t position_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -685,53 +704,9 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Returns the absolute path,(eg "/path/to/files/mypicture.png"). Position must be less than the result of size().
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###Poco::File & getPocoFile()
-
-<!--
-_syntax: getPocoFile()_
-_name: getPocoFile_
-_returns: Poco::File &_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Accessor to low-level poco file object.
-
-
 
 
 
@@ -765,11 +740,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns if hidden files are set to be shown or not.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofDirectory getSorted()
+
+<!--
+_syntax: getSorted()_
+_name: getSorted_
+_returns: ofDirectory_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -805,9 +812,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Returns true if the given path is actually a directory.
 
@@ -815,18 +820,16 @@ Returns true if the given path is actually a directory.
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
-###bool isDirectoryEmpty(dirPath, bRelativeToData = true)
+###bool isDirectoryEmpty(&dirPath, bRelativeToData = true)
 
 <!--
-_syntax: isDirectoryEmpty(dirPath, bRelativeToData = true)_
+_syntax: isDirectoryEmpty(&dirPath, bRelativeToData = true)_
 _name: isDirectoryEmpty_
 _returns: bool_
 _returns_description: _
-_parameters: string dirPath, bool bRelativeToData=true_
+_parameters: const string &dirPath, bool bRelativeToData=true_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -845,13 +848,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns true if the directory at dirPath is empty.
-
-
 
 
 
@@ -885,9 +884,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Returns true if the directory is hidden in the file system. 
 
@@ -895,18 +892,16 @@ Returns true if the directory is hidden in the file system.
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
-###int listDir(path)
+###size_t listDir(&path)
 
 <!--
-_syntax: listDir(path)_
+_syntax: listDir(&path)_
 _name: listDir_
-_returns: int_
+_returns: size_t_
 _returns_description: _
-_parameters: string path_
+_parameters: const string &path_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -925,9 +920,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Opens and populates the directory with files.  Returns the number of files found.
 
@@ -935,16 +928,14 @@ Opens and populates the directory with files.  Returns the number of files found
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
-###int listDir()
+###size_t listDir()
 
 <!--
 _syntax: listDir()_
 _name: listDir_
-_returns: int_
+_returns: size_t_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -965,9 +956,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Populates the directory with files. Call this after opening a directory and setting filters. After this call, size(), getPath(position), and getName(position) can be used to access the contents of the directory.
 
@@ -975,18 +964,16 @@ Populates the directory with files. Call this after opening a directory and sett
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
-###bool moveTo(path, bRelativeToData = true, overwrite = false)
+###bool moveTo(&path, bRelativeToData = true, overwrite = false)
 
 <!--
-_syntax: moveTo(path, bRelativeToData = true, overwrite = false)_
+_syntax: moveTo(&path, bRelativeToData = true, overwrite = false)_
 _name: moveTo_
 _returns: bool_
 _returns_description: _
-_parameters: string path, bool bRelativeToData=true, bool overwrite=false_
+_parameters: const string &path, bool bRelativeToData=true, bool overwrite=false_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1005,53 +992,9 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Moves the directory into another directory at path.  If bRelativeToData is set to false then path should be absolute. If overwrite is set to true any existing files with the same name will be overwritten by the move.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int numFiles()
-
-<!--
-_syntax: numFiles()_
-_name: numFiles_
-_returns: int_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-deprecated. Use size().
-
-
 
 
 
@@ -1085,9 +1028,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Constructs an empty directory object.
 
@@ -1095,18 +1036,16 @@ Constructs an empty directory object.
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
-### ofDirectory(path)
+### ofDirectory(&path)
 
 <!--
-_syntax: ofDirectory(path)_
+_syntax: ofDirectory(&path)_
 _name: ofDirectory_
 _returns: _
 _returns_description: _
-_parameters: string path_
+_parameters: const filesystem::path &path_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1125,9 +1064,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Constructs a directory object and calls open() on the provided path.  The contents of the path are not accessible until listDir() is called.
 
@@ -1135,18 +1072,16 @@ Constructs a directory object and calls open() on the provided path.  The conten
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
-###void open(path)
+###void open(&path)
 
 <!--
-_syntax: open(path)_
+_syntax: open(&path)_
 _name: open_
 _returns: void_
 _returns_description: _
-_parameters: string path_
+_parameters: const filesystem::path &path_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1165,15 +1100,11 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Opens a path. At this point you can see if the directory exists by calling exists() but the contents of the path are not accessible until listDir() is called.
 
 	
-
-
 
 
 
@@ -1207,13 +1138,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns true if this directory and another have different paths.
-
-
 
 
 
@@ -1247,13 +1174,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns true if the right hand side directory is alphabetically after the left hand side directory.
-
-
 
 
 
@@ -1287,13 +1210,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns true if the right hand side directory is alphabetically after or equal to the left hand side directory.
-
-
 
 
 
@@ -1327,13 +1246,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns true if this directory and another have the same path.
-
-
 
 
 
@@ -1367,13 +1282,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns true if the left hand side directory is alphabetically after the right hand side directory.
-
-
 
 
 
@@ -1407,13 +1318,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns true if the left hand side directory is alphabetically after or equal to the right hand side directory;
-
-
 
 
 
@@ -1428,7 +1335,7 @@ _syntax: operator[](position)_
 _name: operator[]_
 _returns: ofFile_
 _returns_description: _
-_parameters: unsigned int position_
+_parameters: size_t position_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1447,13 +1354,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Operator for accessing files with array notation syntax. Call is equivalent to ofFile::getFile(position).
-
-
 
 
 
@@ -1487,11 +1390,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns the currently opened path.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###vector< ofFile >::const_reverse_iterator rbegin()
+
+<!--
+_syntax: rbegin()_
+_name: rbegin_
+_returns: vector< ofFile >::const_reverse_iterator_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1527,9 +1462,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Deletes the directory. If recursive is set to false and this directory contains others the remove will fail.
 
@@ -1537,18 +1470,16 @@ Deletes the directory. If recursive is set to false and this directory contains 
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
-###bool removeDirectory(path, deleteIfNotEmpty, bRelativeToData = true)
+###bool removeDirectory(&path, deleteIfNotEmpty, bRelativeToData = true)
 
 <!--
-_syntax: removeDirectory(path, deleteIfNotEmpty, bRelativeToData = true)_
+_syntax: removeDirectory(&path, deleteIfNotEmpty, bRelativeToData = true)_
 _name: removeDirectory_
 _returns: bool_
 _returns_description: _
-_parameters: string path, bool deleteIfNotEmpty, bool bRelativeToData=true_
+_parameters: const string &path, bool deleteIfNotEmpty, bool bRelativeToData=true_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1567,9 +1498,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Removes a directory. If deleteIfNotEmpty is set to false and the directory contains files the call will fail.
 
@@ -1577,18 +1506,16 @@ Removes a directory. If deleteIfNotEmpty is set to false and the directory conta
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
-###bool renameTo(path, bRelativeToData = true, overwrite = false)
+###bool renameTo(&path, bRelativeToData = true, overwrite = false)
 
 <!--
-_syntax: renameTo(path, bRelativeToData = true, overwrite = false)_
+_syntax: renameTo(&path, bRelativeToData = true, overwrite = false)_
 _name: renameTo_
 _returns: bool_
 _returns_description: _
-_parameters: string path, bool bRelativeToData=true, bool overwrite=false_
+_parameters: const string &path, bool bRelativeToData=true, bool overwrite=false_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1607,11 +1534,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Renames the directory to the path path.  If bRelativeToData is set to false then path should be absolute. If overwrite is set to true any existing files with the same name will be overwritten by the rename.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###vector< ofFile >::const_reverse_iterator rend()
+
+<!--
+_syntax: rend()_
+_name: rend_
+_returns: vector< ofFile >::const_reverse_iterator_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1647,9 +1606,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Resets the current directory. Equivalent to close().
 
@@ -1657,14 +1614,12 @@ Resets the current directory. Equivalent to close().
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
-###void setExecutable(executable)
+###void setExecutable(executable = true)
 
 <!--
-_syntax: setExecutable(executable)_
+_syntax: setExecutable(executable = true)_
 _name: setExecutable_
 _returns: void_
 _returns_description: _
@@ -1687,9 +1642,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Enables or disables execution on the current open directory. If the directory is executable then it can be entered through commands such as cd.
 
@@ -1697,14 +1650,12 @@ Enables or disables execution on the current open directory. If the directory is
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
-###void setReadOnly(readable)
+###void setReadOnly(readable = true)
 
 <!--
-_syntax: setReadOnly(readable)_
+_syntax: setReadOnly(readable = true)_
 _name: setReadOnly_
 _returns: void_
 _returns_description: _
@@ -1727,13 +1678,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Enables or disables readable on the current open directory.
-
-
 
 
 
@@ -1767,9 +1714,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Sets whether or not the call to listDir() will return hidden files.
 
@@ -1777,14 +1722,12 @@ Sets whether or not the call to listDir() will return hidden files.
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
-###void setWriteable(writeable)
+###void setWriteable(writeable = true)
 
 <!--
-_syntax: setWriteable(writeable)_
+_syntax: setWriteable(writeable = true)_
 _name: setWriteable_
 _returns: void_
 _returns_description: _
@@ -1807,9 +1750,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Enables or disables writeable on the current open directory.
 
@@ -1817,16 +1758,14 @@ Enables or disables writeable on the current open directory.
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
-###unsigned int size()
+###size_t size()
 
 <!--
 _syntax: size()_
 _name: size_
-_returns: unsigned int_
+_returns: size_t_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1847,13 +1786,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns the number of files contained within the directory. Set after listDir() is called.
-
-
 
 
 
@@ -1887,13 +1822,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Sorts the contents of the directory by filename.
-
-
 
 
 
@@ -1919,8 +1850,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1944,8 +1882,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1969,8 +1914,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1994,8 +1946,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2019,8 +1978,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 

@@ -5,6 +5,7 @@
 _visible: True_
 _advanced: False_
 _istemplated: False_
+_extends: _
 -->
 
 ##InlineDescription
@@ -50,9 +51,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -88,9 +87,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -126,9 +123,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -164,9 +159,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -202,9 +195,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -240,9 +231,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -278,9 +267,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -316,9 +303,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -354,9 +339,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -392,9 +375,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -430,9 +411,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -442,14 +421,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofxAssimpAnimation(*scene, *animation)
+### ofxAssimpAnimation(scene, *animation)
 
 <!--
-_syntax: ofxAssimpAnimation(*scene, *animation)_
+_syntax: ofxAssimpAnimation(scene, *animation)_
 _name: ofxAssimpAnimation_
 _returns: _
 _returns_description: _
-_parameters: const aiScene *scene, aiAnimation *animation_
+_parameters: shared_ptr< const aiScene > scene, aiAnimation *animation_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -468,9 +447,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -506,9 +483,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -544,9 +519,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -582,9 +555,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -620,9 +591,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -658,9 +627,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -696,9 +663,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -734,9 +699,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -772,9 +735,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -810,9 +771,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -848,9 +807,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -878,8 +835,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -903,8 +867,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -928,8 +899,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -953,8 +931,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -978,8 +963,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1003,8 +995,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1028,8 +1027,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1053,8 +1059,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1078,8 +1091,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1103,8 +1123,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1128,8 +1155,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1153,8 +1187,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1178,8 +1219,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 

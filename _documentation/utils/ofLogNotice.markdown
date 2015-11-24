@@ -5,10 +5,14 @@
 _visible: True_
 _advanced: True_
 _istemplated: False_
+_extends: ofLog_
 -->
 
 ##InlineDescription
 
+Derived log class for easy notice logging.
+
+Example: `ofLogNotice("Log message")`.
 
 
 
@@ -24,14 +28,14 @@ _istemplated: False_
 
 
 
-### ofLogNotice(&module = "OF")
+### ofLogNotice(&module)
 
 <!--
-_syntax: ofLogNotice(&module = "OF")_
+_syntax: ofLogNotice(&module)_
 _name: ofLogNotice_
 _returns: _
 _returns_description: _
-_parameters: const string &module=""_
+_parameters: const string &module_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -44,15 +48,16 @@ _advanced: False_
 
 _inlined_description: _
 
+Create a notice log message.
 
-
+Parameters:
+module The target module.
 
 
 
 
 
 _description: _
-
 
 
 
@@ -82,53 +87,17 @@ _advanced: False_
 
 _inlined_description: _
 
+Create a notice log message.
 
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofLogNotice(&module, *format, ...)
-
-<!--
-_syntax: ofLogNotice(&module, *format, ...)_
-_name: ofLogNotice_
-_returns: _
-_returns_description: _
-_parameters: const string &module, const char *format,..._
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
+Parameters:
+module The target module.
+message The log message.
 
 
 
 
 
 _description: _
-
 
 
 

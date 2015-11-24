@@ -5,6 +5,7 @@
 _visible: True_
 _advanced: False_
 _istemplated: False_
+_extends: ofBaseSoundInput, ofBaseSoundOutput_
 -->
 
 ##InlineDescription
@@ -54,9 +55,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -92,9 +91,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -130,9 +127,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 This function gets called regularly just after update. It's where you draw things:
 
@@ -144,8 +139,6 @@ void draw(){
 	ofRect(20,20,100,100);
 }
 ~~~~
-
-
 
 
 
@@ -179,9 +172,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -217,13 +208,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Add this function to your ofApp to have it called at the moment before the app is terminated. This is useful for doing cleanup stuff or making sure files are saved before the app terminates. If you want to terminate the execution of your ofApp (from the inside), call ofExit().
-
-
 
 
 
@@ -257,9 +244,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -295,9 +280,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -333,9 +316,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 This function gets called when a key is pressed. The value key can be tested against:
 ~~~~{.cpp}
@@ -352,8 +333,6 @@ void keyPressed(int key){
 ~~~~
 
 There are more complicated character codes, for keys such as F1-F12, Down, Enter: OF_KEY_BACKSPACE, OF_KEY_RETURN, OF_KEY_PRINTSCR, OF_KEY_F1 - OF_KEY_F12, OF_KEY_LEFT, OF_KEY_UP, OF_KEY_RIGHT, OF_KEY_DOWN, OF_KEY_PAGE_UP, OF_KEY_PAGE_DOWN, OF_KEY_HOME, OF_KEY_END, OF_KEY_INSERT
-
-
 
 
 
@@ -387,9 +366,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -425,9 +402,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 This function gets called when a key is released. The value key can be tested against:
 ~~~~{.cpp}
@@ -443,8 +418,6 @@ void keyReleased(int key){
 ~~~~
 
 There are more complicated character codes, for keys such as F1-F12, Down, Enter: OF_KEY_BACKSPACE, OF_KEY_RETURN, OF_KEY_PRINTSCR, OF_KEY_F1 - OF_KEY_F12, OF_KEY_LEFT, OF_KEY_UP, OF_KEY_RIGHT, OF_KEY_DOWN, OF_KEY_PAGE_UP, OF_KEY_PAGE_DOWN, OF_KEY_HOME, OF_KEY_END, OF_KEY_INSERT
-
-
 
 
 
@@ -478,9 +451,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -516,9 +487,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -548,8 +517,8 @@ _advanced: False_
 
 _inlined_description: _
 
-
-
+Called on the active window when the mouse is dragged, i.e.
+moved with a button pressed
 
 
 
@@ -557,10 +526,7 @@ _inlined_description: _
 
 _description: _
 
-
 This function gets called when the mouse is moving and the button is down. The button variable can be used to test against left or right button drags. You also receive the x and y coordinates of the mouse.
-
-
 
 
 
@@ -594,9 +560,159 @@ _inlined_description: _
 
 
 
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void mouseEntered(x, y)
+
+<!--
+_syntax: mouseEntered(x, y)_
+_name: mouseEntered_
+_returns: void_
+_returns_description: _
+_parameters: int x, int y_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Called on the active window when the mouse cursor enters the
+window area
+
+Note that the mouse coordinates are the last known x/y before the
+event occurred, i.e. from the previous frame
+
+
+
+
 
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void mouseEntered(&mouse)
+
+<!--
+_syntax: mouseEntered(&mouse)_
+_name: mouseEntered_
+_returns: void_
+_returns_description: _
+_parameters: ofMouseEventArgs &mouse_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void mouseExited(x, y)
+
+<!--
+_syntax: mouseExited(x, y)_
+_name: mouseExited_
+_returns: void_
+_returns_description: _
+_parameters: int x, int y_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Called on the active window when the mouse cursor leaves the
+window area
+
+Note that the mouse coordinates are the last known x/y before the
+event occurred, i.e. from the previous frame
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void mouseExited(&mouse)
+
+<!--
+_syntax: mouseExited(&mouse)_
+_name: mouseExited_
+_returns: void_
+_returns_description: _
+_parameters: ofMouseEventArgs &mouse_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -626,8 +742,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
-
+Called on the active window when the mouse is moved
 
 
 
@@ -635,10 +750,7 @@ _inlined_description: _
 
 _description: _
 
-
 This function gets when ever the mouse moves. You receive the x and y coordinates of the mouse.
-
-
 
 
 
@@ -672,9 +784,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -704,8 +814,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
-
+Called on the active window when a mouse button is pressed
 
 
 
@@ -713,10 +822,7 @@ _inlined_description: _
 
 _description: _
 
-
 This function gets called when the mouse is pushed down. The button (left, right, center) is passed in, along with the x and y coordinate.
-
-
 
 
 
@@ -750,9 +856,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -782,8 +886,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
-
+Called on the active window when a mouse button is released
 
 
 
@@ -791,10 +894,7 @@ _inlined_description: _
 
 _description: _
 
-
 This function gets called when the mouse is released. The button (left, right, center) is passed in, along with the x and y coordinate.
-
-
 
 
 
@@ -828,9 +928,79 @@ _inlined_description: _
 
 
 
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void mouseScrolled(x, y, scrollX, scrollY)
+
+<!--
+_syntax: mouseScrolled(x, y, scrollX, scrollY)_
+_name: mouseScrolled_
+_returns: void_
+_returns_description: _
+_parameters: int x, int y, float scrollX, float scrollY_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Called on the active window when the mouse wheel is scrolled
+
+
+
+
 
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void mouseScrolled(&mouse)
+
+<!--
+_syntax: mouseScrolled(&mouse)_
+_name: mouseScrolled_
+_returns: void_
+_returns_description: _
+_parameters: ofMouseEventArgs &mouse_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -866,13 +1036,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 The openFrameworks engine is contained in the "app" category. The project works, similar to processing, in that you have a base class which extends a class that already exists. In the case of OF, there is a class called "ofBaseApp" which contains various event driven functions. When you create an OF project, you use a main.cpp which is the boot-strap, that kicks off the application and another class, which inherits the properties of ofSimpleApp. Essentially, when you write code in the ofApp, you are re-writing already defined functions that exist in OF, such as update, draw, etc.
-
-
 
 
 
@@ -906,13 +1072,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 This function gets called once, just at the start of the app. It would be a good place, for example, to allocate variables or load in any files.
-
-
 
 
 
@@ -946,9 +1108,367 @@ _inlined_description: _
 
 
 
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void touchCancelled(x, y, id)
+
+<!--
+_syntax: touchCancelled(x, y, id)_
+_name: touchCancelled_
+_returns: void_
+_returns_description: _
+_parameters: int x, int y, int id_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
 
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void touchCancelled(&touch)
+
+<!--
+_syntax: touchCancelled(&touch)_
+_name: touchCancelled_
+_returns: void_
+_returns_description: _
+_parameters: ofTouchEventArgs &touch_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void touchDoubleTap(x, y, id)
+
+<!--
+_syntax: touchDoubleTap(x, y, id)_
+_name: touchDoubleTap_
+_returns: void_
+_returns_description: _
+_parameters: int x, int y, int id_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void touchDoubleTap(&touch)
+
+<!--
+_syntax: touchDoubleTap(&touch)_
+_name: touchDoubleTap_
+_returns: void_
+_returns_description: _
+_parameters: ofTouchEventArgs &touch_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void touchDown(x, y, id)
+
+<!--
+_syntax: touchDown(x, y, id)_
+_name: touchDown_
+_returns: void_
+_returns_description: _
+_parameters: int x, int y, int id_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void touchDown(&touch)
+
+<!--
+_syntax: touchDown(&touch)_
+_name: touchDown_
+_returns: void_
+_returns_description: _
+_parameters: ofTouchEventArgs &touch_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void touchMoved(x, y, id)
+
+<!--
+_syntax: touchMoved(x, y, id)_
+_name: touchMoved_
+_returns: void_
+_returns_description: _
+_parameters: int x, int y, int id_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void touchMoved(&touch)
+
+<!--
+_syntax: touchMoved(&touch)_
+_name: touchMoved_
+_returns: void_
+_returns_description: _
+_parameters: ofTouchEventArgs &touch_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void touchUp(x, y, id)
+
+<!--
+_syntax: touchUp(x, y, id)_
+_name: touchUp_
+_returns: void_
+_returns_description: _
+_parameters: int x, int y, int id_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void touchUp(&touch)
+
+<!--
+_syntax: touchUp(&touch)_
+_name: touchUp_
+_returns: void_
+_returns_description: _
+_parameters: ofTouchEventArgs &touch_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -984,9 +1504,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 This function gets called repeatedly. It gets called just before draw, so it is an ideal place to do any updating of variables. For example, imagine you have a variable already defined in your ofApp.h called "xpos"
 
@@ -1005,8 +1523,6 @@ void draw(){
 	ofRect(xPos, 30,10,10);
 }
 ~~~~
-
-
 
 
 
@@ -1040,85 +1556,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void windowEntry(state)
-
-<!--
-_syntax: windowEntry(state)_
-_name: windowEntry_
-_returns: void_
-_returns_description: _
-_parameters: int state_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void windowEntry(&entry)
-
-<!--
-_syntax: windowEntry(&entry)_
-_name: windowEntry_
-_returns: void_
-_returns_description: _
-_parameters: ofEntryEventArgs &entry_
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
 
 
 
@@ -1154,13 +1592,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 This function gets called when ever we resize the application window. You receive the new width (w) and the new height (h) of the window.
-
-
 
 
 
@@ -1194,9 +1628,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1232,9 +1664,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1262,12 +1692,17 @@ _constant: False_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
 
-
 Variable mouseX contains information about the current x coordinate of the mouse.
-
-
 
 
 
@@ -1289,12 +1724,17 @@ _constant: False_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
 
-
 Variable mouseY contains information about the current y coordinate of the mouse.
-
-
 
 
 

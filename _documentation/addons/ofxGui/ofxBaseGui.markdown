@@ -5,6 +5,7 @@
 _visible: True_
 _advanced: False_
 _istemplated: False_
+_extends: _
 -->
 
 ##InlineDescription
@@ -50,9 +51,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -88,9 +87,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -126,9 +123,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -164,9 +159,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -202,9 +195,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -240,9 +231,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -278,9 +267,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -316,9 +303,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -354,9 +339,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -392,9 +375,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofxBaseGui * getParent()
+
+<!--
+_syntax: getParent()_
+_name: getParent_
+_returns: ofxBaseGui *_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -430,9 +447,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -468,9 +483,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -506,9 +519,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -544,9 +555,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -556,12 +565,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofMesh & getTextMesh(&text, x, y)
+###ofMesh getTextMesh(&text, x, y)
 
 <!--
 _syntax: getTextMesh(&text, x, y)_
 _name: getTextMesh_
-_returns: ofMesh &_
+_returns: ofMesh_
 _returns_description: _
 _parameters: const string &text, float x, float y_
 _access: protected_
@@ -582,9 +591,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -620,9 +627,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -658,9 +663,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -670,14 +673,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void loadFont(filename, fontsize, _bAntiAliased = true, _bFullCharacterSet = false, dpi = 0)
+###void loadFont(&filename, fontsize, _bAntiAliased = true, _bFullCharacterSet = false, dpi = 0)
 
 <!--
-_syntax: loadFont(filename, fontsize, _bAntiAliased = true, _bFullCharacterSet = false, dpi = 0)_
+_syntax: loadFont(&filename, fontsize, _bAntiAliased = true, _bFullCharacterSet = false, dpi = 0)_
 _name: loadFont_
 _returns: void_
 _returns_description: _
-_parameters: string filename, int fontsize, bool _bAntiAliased=true, bool _bFullCharacterSet=false, int dpi=0_
+_parameters: const string &filename, int fontsize, bool _bAntiAliased=true, bool _bFullCharacterSet=false, int dpi=0_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -696,9 +699,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -734,9 +735,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -746,14 +745,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void loadFromFile(filename)
+###void loadFromFile(&filename)
 
 <!--
-_syntax: loadFromFile(filename)_
+_syntax: loadFromFile(&filename)_
 _name: loadFromFile_
 _returns: void_
 _returns_description: _
-_parameters: string filename_
+_parameters: const string &filename_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -772,9 +771,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -810,9 +807,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -848,9 +843,79 @@ _inlined_description: _
 
 
 
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void mouseEntered(&args)
+
+<!--
+_syntax: mouseEntered(&args)_
+_name: mouseEntered_
+_returns: void_
+_returns_description: _
+_parameters: ofMouseEventArgs &args_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
 
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void mouseExited(&args)
+
+<!--
+_syntax: mouseExited(&args)_
+_name: mouseExited_
+_returns: void_
+_returns_description: _
+_parameters: ofMouseEventArgs &args_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -886,9 +951,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -924,9 +987,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -962,9 +1023,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool mouseScrolled(&args)
+
+<!--
+_syntax: mouseScrolled(&args)_
+_name: mouseScrolled_
+_returns: bool_
+_returns_description: _
+_parameters: ofMouseEventArgs &args_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1000,9 +1095,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void registerMouseEvents()
+
+<!--
+_syntax: registerMouseEvents()_
+_name: registerMouseEvents_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1038,9 +1167,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1057,7 +1184,7 @@ _syntax: saveStencilToHex(&img)_
 _name: saveStencilToHex_
 _returns: string_
 _returns_description: _
-_parameters: ofImage &img_
+_parameters: const ofImage &img_
 _access: protected_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -1076,9 +1203,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1114,9 +1239,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1126,14 +1249,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void saveToFile(filename)
+###void saveToFile(&filename)
 
 <!--
-_syntax: saveToFile(filename)_
+_syntax: saveToFile(&filename)_
 _name: saveToFile_
 _returns: void_
 _returns_description: _
-_parameters: string filename_
+_parameters: const string &filename_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -1152,9 +1275,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1190,9 +1311,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1228,9 +1347,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1266,9 +1383,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1304,9 +1419,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1342,9 +1455,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1380,9 +1491,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1418,9 +1527,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1437,7 +1544,7 @@ _syntax: setDefaultSerializer(serializer)_
 _name: setDefaultSerializer_
 _returns: void_
 _returns_description: _
-_parameters: ofPtr< ofBaseFileSerializer > serializer_
+_parameters: shared_ptr< ofBaseFileSerializer > serializer_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -1456,9 +1563,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1494,9 +1599,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1532,9 +1635,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1570,9 +1671,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1608,9 +1707,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1646,9 +1743,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1658,14 +1753,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setName(name)
+###void setName(&name)
 
 <!--
-_syntax: setName(name)_
+_syntax: setName(&name)_
 _name: setName_
 _returns: void_
 _returns_description: _
-_parameters: string name_
+_parameters: const string &name_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -1684,9 +1779,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1696,14 +1789,86 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setPosition(p)
+###void setNeedsRedraw()
 
 <!--
-_syntax: setPosition(p)_
+_syntax: setNeedsRedraw()_
+_name: setNeedsRedraw_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: protected_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setParent(*parent)
+
+<!--
+_syntax: setParent(*parent)_
+_name: setParent_
+_returns: void_
+_returns_description: _
+_parameters: ofxBaseGui *parent_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setPosition(&p)
+
+<!--
+_syntax: setPosition(&p)_
 _name: setPosition_
 _returns: void_
 _returns_description: _
-_parameters: ofPoint p_
+_parameters: const ofPoint &p_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -1722,9 +1887,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1760,9 +1923,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1798,9 +1959,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1836,9 +1995,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1874,9 +2031,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1912,9 +2067,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1950,9 +2103,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1988,9 +2139,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void sizeChangedCB()
+
+<!--
+_syntax: sizeChangedCB()_
+_name: sizeChangedCB_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2026,9 +2211,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void unregisterMouseEvents()
+
+<!--
+_syntax: unregisterMouseEvents()_
+_name: unregisterMouseEvents_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2064,9 +2283,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -2094,8 +2311,47 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool bRegisteredForMouseEvents
+
+<!--
+_name: bRegisteredForMouseEvents_
+_type: bool_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2119,8 +2375,47 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofBitmapFont bitmapFont
+
+<!--
+_name: bitmapFont_
+_type: ofBitmapFont_
+_access: protected_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2144,8 +2439,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2169,8 +2471,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2194,8 +2503,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2219,8 +2535,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2244,8 +2567,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2269,8 +2599,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2294,8 +2631,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2319,8 +2663,79 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool needsRedraw
+
+<!--
+_name: needsRedraw_
+_type: bool_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofxBaseGui * parent
+
+<!--
+_name: parent_
+_type: ofxBaseGui *_
+_access: protected_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2344,8 +2759,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2369,8 +2791,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2394,8 +2823,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2419,8 +2855,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2444,8 +2887,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2469,8 +2919,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2494,8 +2951,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2519,8 +2983,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2544,8 +3015,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 

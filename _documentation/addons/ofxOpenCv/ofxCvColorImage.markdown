@@ -5,6 +5,7 @@
 _visible: True_
 _advanced: False_
 _istemplated: False_
+_extends: ofxCvImage_
 -->
 
 ##InlineDescription
@@ -25,6 +26,78 @@ The ofxCvColorImage represents the data of each pixel as unsigned char values, l
 ##Methods
 
 
+
+###void allocatePixels(w, h)
+
+<!--
+_syntax: allocatePixels(w, h)_
+_name: allocatePixels_
+_returns: void_
+_returns_description: _
+_parameters: int w, int h_
+_access: protected_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void allocateTexture()
+
+<!--
+_syntax: allocateTexture()_
+_name: allocateTexture_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: protected_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void clear()
 
@@ -52,13 +125,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Clears the pixel data of the image. The image must be allocated again with a call to allocate() before it can be used.
-
-
 
 
 
@@ -92,13 +161,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 This increases the contrast of the image remapping the brightest points in the image to white and the darkest points in the image to black.
-
-
 
 
 
@@ -132,13 +197,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Converts the image from values in the Hue Saturation and Value color space (sometimes called Hue Saturation Brightness) to values in the Red Green and Blue color space.
-
-
 
 
 
@@ -172,15 +233,11 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Converts the image from values in the Red Green and Blue color space to values in the Hue Saturation and Value color space (sometimes called Hue Saturation Brightness)
 
 ![HSV](../../types/hsb-cone.jpg "HSB")
-
-
 
 
 
@@ -214,13 +271,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Copies the pixels of the ofxCvColorImage into an ofxCvGrayscale image. You can optionally specify whether you want to use the R G or B channel of the ofxCvColorImage to set the values of the ofxCvGrayscale.
-
-
 
 
 
@@ -254,13 +307,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Copies the different channels of the ofxCvColorImage into 3 different grayscale images using the R G and B channels of the ofxCvColorImage.
-
-
 
 
 
@@ -294,9 +343,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Maps the pixels of an image to the min and max range passed in.
 
@@ -311,8 +358,6 @@ second.convertToRange(100, 140); // super low contrast
 ~~~~
 
 ![Image convert to range](convertToRange.png "Converting the range of an image")
-
-
 
 
 
@@ -346,9 +391,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -384,13 +427,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Constructor.
-
-
 
 
 
@@ -424,9 +463,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Copy constructor, which allows you to this:
 
@@ -435,8 +472,6 @@ ofxCvShortImage old;
 // allocate old
 ofxCvShortImage new(old);
 ~~~~
-
-
 
 
 
@@ -470,17 +505,13 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Adds the pixel data of the right hand side image from the current image:
 
 ~~~~{.cpp}
 first += second; // both are ofxCvFloatImage instances
 ~~~~
-
-
 
 
 
@@ -514,9 +545,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Subtracts the pixel data of the right hand side image from the current image:
 
@@ -528,18 +557,16 @@ first -= second; // both are ofxCvFloatImage instances
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
-###void operator=(*_pixels)
+###void operator=(&_pixels)
 
 <!--
-_syntax: operator=(*_pixels)_
+_syntax: operator=(&_pixels)_
 _name: operator=_
 _returns: void_
 _returns_description: _
-_parameters: unsigned char *_pixels_
+_parameters: const ofPixels &_pixels_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -558,13 +585,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
-Sets the ofxCvColorImage from the pixels pointer. Be sure that the pixels are the same size and dimensions as the ofxCvColorImage.
-
-
+Copies the data from an IplImage into the ofxCvColorImage using the = symbol.
 
 
 
@@ -598,16 +621,12 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Copies ofxCvGrayscaleImage to another ofxCvShortImage using the = symbol.
 
 ~~~~{.cpp}
 imageOne = imageTwo; // make sure that the dimensions and ROI match
-
-
 
 
 
@@ -641,17 +660,13 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Copies the data from an ofxCvColorImage into the instance using the = symbol.
 
 ~~~~{.cpp}
 colorImage1 = colorImage2; // make sure that the dimensions and ROI match
 ~~~~
-
-
 
 
 
@@ -685,17 +700,13 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Copies the data from an ofxCvFloatImage into a ofxCvShortImage using the = symbol.
 
 ~~~~{.cpp}
 colorImage = floatColorImage; // make sure that the dimensions and ROI match
 ~~~~
-
-
 
 
 
@@ -729,57 +740,13 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Copies the data from a ofxCvShortImage into the ofxCvColorImage using the = symbol.
 
 ~~~~{.cpp}
 colorImage = shortColorImage; // make sure that the dimensions and ROI match
 ~~~~
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void operator=(*mom)
-
-<!--
-_syntax: operator=(*mom)_
-_name: operator=_
-_returns: void_
-_returns_description: _
-_parameters: const IplImage *mom_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Copies the data from an IplImage into the ofxCvColorImage using the = symbol.
-
-
 
 
 
@@ -813,9 +780,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Resizes the image to the w, h passed in.
 
@@ -823,18 +788,16 @@ Resizes the image to the w, h passed in.
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
-###void scaleIntoMe(&mom, interpolationMethod = CV_INTER_NN)
+###void scaleIntoMe(&mom, interpolationMethod)
 
 <!--
-_syntax: scaleIntoMe(&mom, interpolationMethod = CV_INTER_NN)_
+_syntax: scaleIntoMe(&mom, interpolationMethod)_
 _name: scaleIntoMe_
 _returns: void_
 _returns_description: _
-_parameters: ofxCvImage &mom, int interpolationMethod=CV_INTER_NN_
+_parameters: ofxCvImage &mom, int interpolationMethod_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -853,9 +816,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Scales the image passed in to be the size of the current image, 
 
@@ -869,8 +830,6 @@ second.allocate(320, 240);
 second.scaleIntoMe(first); // first is now 320,240
 
 ~~~~
-
-
 
 
 
@@ -904,13 +863,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Set all the pixels in the image to the float value passed in. This is useful for blanking or filling an image quickly. The values are 0.0 to 1.0.
-
-
 
 
 
@@ -944,13 +899,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Set all the pixels in the image to the float value passed in as a color using 0 to 255 scale for each channel. This is useful for blanking or filling an image quickly.
-
-
 
 
 
@@ -984,13 +935,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 This method allows you use multiple ofxCvGrayscaleImage images to create a full color image. Each ofxCvGrayscaleImage represents the data of one channel, r, g, b.
-
-
 
 
 
@@ -1024,13 +971,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Set all the pixels in a ofxCvShortImage from a pointer to an array of unsigned char values, using the w and h parameters to determine the dimensions of the image.
-
-
 
 
 
@@ -1064,13 +1007,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Set the Region Of Interest using a pointer to an unsigned char array and a w,h to define the area of the ROI
-
-
 
 
 
@@ -1096,8 +1035,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 

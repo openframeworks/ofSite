@@ -5,6 +5,7 @@
 _visible: True_
 _advanced: False_
 _istemplated: False_
+_extends: _
 -->
 
 ##InlineDescription
@@ -44,12 +45,17 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
 
-
 A list of the absolute file paths that were drag-and-dropped onto the window. 
-
-
 
 
 
@@ -71,12 +77,17 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
 
-
 The position where the user dropped the files onto the window.
-
-
 
 
 

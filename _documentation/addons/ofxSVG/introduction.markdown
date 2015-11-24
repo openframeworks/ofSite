@@ -1,0 +1,1 @@
+## SVG file format loader
