@@ -158,7 +158,7 @@ We don't really expect that openFrameworks should be used as a teaching tool for
 contributors and supporters
 ----------------
 
-openFrameworks is actively developed by a <a href="../development/#contributors">small core team</a> of developers in conjunction with a large distributed collection of contributors, with a few <a href="../development/#contributors">section leaders</a> maintaining responsibility for subsections of openFrameworks on a rotating basis.
+openFrameworks is actively developed by a <a href="/development/#contributors">small core team</a> of developers in conjunction with a large distributed collection of contributors, with a few <a href="/development/#contributors">section leaders</a> maintaining responsibility for subsections of openFrameworks on a rotating basis.
 
 A number of institutions have provided major support for openFrameworks through grants, donations, and as hosting partners for our international developer conferences. These events often require significant resources to bring together participants from many countries to a single location for multiple days.
 
