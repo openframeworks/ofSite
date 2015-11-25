@@ -5,18 +5,23 @@
 _visible: True_
 _advanced: False_
 _istemplated: False_
+_extends: ofBaseMaterial_
 -->
 
 ##InlineDescription
 
-
-Material concept: "Anything graphical applied to the polygons"
-
-***author:*** 
-	Diederick Huijbers <diederick[at]apollomedia[dot]nl>
-
-
-material file spec: [http://people.sc.fsu.edu/~jburkardt/data/mtl/mtl.html](http://people.sc.fsu.edu/~jburkardt/data/mtl/mtl.html)  Ogre3D [http://www.ogre3d.org/docs/manual/manual_11.html#SEC14](http://www.ogre3d.org/docs/manual/manual_11.html#SEC14)  assim material [http://assimp.sourceforge.net/lib_html/ai_material_8h.html#7dd415ff703a2cc53d1c22ddbbd7dde0](http://assimp.sourceforge.net/lib_html/ai_material_8h.html#7dd415ff703a2cc53d1c22ddbbd7dde0) 
+/**
+* Material concept: "Anything graphical applied to the polygons"
+*
+* @author	Diederick Huijbers <diederick[at]apollomedia[dot]nl>
+*
+* @link	Wavefront material file spec:
+*			http://people.sc.fsu.edu/~jburkardt/data/mtl/mtl.html
+* @link	Ogre3D
+*			http://www.ogre3d.org/docs/manual/manual_11.html#SEC14
+* @link	assim material
+*			http://assimp.sourceforge.net/lib_html/ai_material_8h.html#7dd415ff703a2cc53d1c22ddbbd7dde0
+*/
 
 
 
@@ -58,9 +63,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -96,9 +99,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -134,9 +135,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofMaterial::Data getData()
+
+<!--
+_syntax: getData()_
+_name: getData_
+_returns: ofMaterial::Data_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -172,9 +207,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -210,9 +243,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const ofShader & getShader(textureTarget, &renderer)
+
+<!--
+_syntax: getShader(textureTarget, &renderer)_
+_name: getShader_
+_returns: const ofShader &_
+_returns_description: _
+_parameters: int textureTarget, ofGLProgrammableRenderer &renderer_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -248,9 +315,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -286,9 +351,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void initShaders(&renderer)
+
+<!--
+_syntax: initShaders(&renderer)_
+_name: initShaders_
+_returns: void_
+_returns_description: _
+_parameters: ofGLProgrammableRenderer &renderer_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -324,9 +423,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -362,9 +459,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -400,9 +495,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setData(&data)
+
+<!--
+_syntax: setData(&data)_
+_name: setData_
+_returns: void_
+_returns_description: _
+_parameters: const ofMaterial::Data &data_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -438,9 +567,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -476,9 +603,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -514,9 +639,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -552,9 +675,79 @@ _inlined_description: _
 
 
 
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void updateLights(&shader, &renderer)
+
+<!--
+_syntax: updateLights(&shader, &renderer)_
+_name: updateLights_
+_returns: void_
+_returns_description: _
+_parameters: const ofShader &shader, ofGLProgrammableRenderer &renderer_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
 
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void updateMaterial(&shader, &renderer)
+
+<!--
+_syntax: updateMaterial(&shader, &renderer)_
+_name: updateMaterial_
+_returns: void_
+_returns_description: _
+_parameters: const ofShader &shader, ofGLProgrammableRenderer &renderer_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -590,9 +783,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -606,22 +797,29 @@ _description: _
 
 
 
-###ofFloatColor ambient
+###ofMaterial::Data data
 
 <!--
-_name: ambient_
-_type: ofFloatColor_
+_name: data_
+_type: ofMaterial::Data_
 _access: private_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
-_constant: True_
+_constant: False_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -631,22 +829,29 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofFloatColor diffuse
+###string fragmentShader
 
 <!--
-_name: diffuse_
-_type: ofFloatColor_
+_name: fragmentShader_
+_type: string_
 _access: private_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
-_constant: True_
+_constant: False_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -656,22 +861,29 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofFloatColor emissive
+###size_t shaderLights
 
 <!--
-_name: emissive_
-_type: ofFloatColor_
+_name: shaderLights_
+_type: size_t_
 _access: private_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
-_constant: True_
+_constant: False_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -681,22 +893,29 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofFloatColor prev_ambient
+###ofShader shaderNoTexture
 
 <!--
-_name: prev_ambient_
-_type: ofFloatColor_
+_name: shaderNoTexture_
+_type: ofShader_
 _access: private_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
-_constant: True_
+_constant: False_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -706,22 +925,29 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofFloatColor prev_ambient_back
+###ofShader shaderTexture2D
 
 <!--
-_name: prev_ambient_back_
-_type: ofFloatColor_
+_name: shaderTexture2D_
+_type: ofShader_
 _access: private_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
-_constant: True_
+_constant: False_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -731,22 +957,29 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofFloatColor prev_diffuse
+###ofShader shaderTextureRect
 
 <!--
-_name: prev_diffuse_
-_type: ofFloatColor_
+_name: shaderTextureRect_
+_type: ofShader_
 _access: private_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
-_constant: True_
+_constant: False_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -756,22 +989,29 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofFloatColor prev_diffuse_back
+###bool shadersInitialized
 
 <!--
-_name: prev_diffuse_back_
-_type: ofFloatColor_
+_name: shadersInitialized_
+_type: bool_
 _access: private_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
-_constant: True_
+_constant: False_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -781,197 +1021,29 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofFloatColor prev_emissive
+###string vertexShader
 
 <!--
-_name: prev_emissive_
-_type: ofFloatColor_
+_name: vertexShader_
+_type: string_
 _access: private_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
-_constant: True_
+_constant: False_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
 
 
 
 
 
-
-
-<!----------------------------------------------------------------------------->
-
-###ofFloatColor prev_emissive_back
-
-<!--
-_name: prev_emissive_back_
-_type: ofFloatColor_
-_access: private_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
 
 _description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float prev_shininess
-
-<!--
-_name: prev_shininess_
-_type: float_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float prev_shininess_back
-
-<!--
-_name: prev_shininess_back_
-_type: float_
-_access: private_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofFloatColor prev_specular
-
-<!--
-_name: prev_specular_
-_type: ofFloatColor_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofFloatColor prev_specular_back
-
-<!--
-_name: prev_specular_back_
-_type: ofFloatColor_
-_access: private_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float shininess
-
-<!--
-_name: shininess_
-_type: float_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofFloatColor specular
-
-<!--
-_name: specular_
-_type: ofFloatColor_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
 
 
 

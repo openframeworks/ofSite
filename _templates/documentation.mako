@@ -7,7 +7,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     ${self.head()}
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
-    <script src="${bf.config.site.url}/js/jquery.masonry.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/2.1.08/jquery.masonry.min.js"></script>
     <script src="${bf.config.site.url}/js/documentation_index.js"></script>
     <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -32,7 +32,11 @@
                 </ul-->
 
                 
-                <h1 class="documentation">reference</h1> <ul class="docsadvanced"><li><a href="/documentation" class="active">basic</a></li> <li><a href="/doxygen/annotated.html">advanced</a></li> </ul>
+                <h1 class="documentation">reference</h1> 
+                <!--ul class="docsadvanced">
+                    <li><a href="/documentation" class="active">basic</a></li> 
+                    <li><a href="/doxygen/annotated.html">advanced</a></li> 
+                </ul-->
             </div>  
 		    <div class="page-right-narrow">
 			    <p>This page is the reference for the openFrameworks core and included addons. There are also <a href="http://ofxaddons.com/">contributed addons</a>. The openFrameworks API is constantly evolving: any corrections, additions or comments are very welcome!</p>
@@ -63,12 +67,12 @@
 
     	<div class="page-wide sectiontitle">
 		    <h2>core</h2> 
-		    <a class="hide_core_functions">hide functions</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="collapse_core">collapse all</a>
+		    <a class="hide_core_functions">hide functions</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="collapse_core">expand all</a>
         </div><!-- End Page Wide -->
 
     	<div class="page-wide core">
             % for module, classes in sorted(core.items(), key=lambda module: module):
-                <%include file="documentation_index_block.mako" args="module=module,classes=classes" />
+                <%include file="documentation_index_block.mako" args="module=module, classes=classes, show_header=True, subtitle=module_subtitles[module]" />
             % endfor
         </div><!-- End Page Wide -->
         
@@ -76,12 +80,12 @@
         </div><!-- End Page Wide -->
         
     	<div class="page-wide sectiontitle">
-		    <h2>addons</h2> <a class="hide_addons_functions">hide functions</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="collapse_addons">collapse all</a>
+		    <h2>addons</h2> <a class="hide_addons_functions">hide functions</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="collapse_addons">expand all</a>
         </div><!-- End Page Wide -->
 
     	<div class="page-wide addons">
             % for module, classes in sorted(addons.items(), key=lambda module: module):
-                <%include file="documentation_index_block.mako" args="module=module,classes=classes" />
+                <%include file="documentation_index_block.mako" args="module=module, classes=classes, show_header=True, subtitle=module_subtitles[module]" />
             % endfor
         </div><!-- End Page Wide -->
               

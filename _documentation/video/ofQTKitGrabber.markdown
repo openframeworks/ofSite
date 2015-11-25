@@ -5,6 +5,7 @@
 _visible: True_
 _advanced: True_
 _istemplated: False_
+_extends: ofBaseVideoGrabber_
 -->
 
 ##InlineDescription
@@ -50,9 +51,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -88,9 +87,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -126,9 +123,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -164,9 +159,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -202,9 +195,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -240,9 +231,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -252,12 +241,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###unsigned char * getPixels()
+###ofPixels & getPixels()
 
 <!--
 _syntax: getPixels()_
 _name: getPixels_
-_returns: unsigned char *_
+_returns: ofPixels &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -278,9 +267,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -290,16 +277,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofPixelsRef getPixelsRef()
+###const ofPixels & getPixels()
 
 <!--
-_syntax: getPixelsRef()_
-_name: getPixelsRef_
-_returns: ofPixelsRef_
+_syntax: getPixels()_
+_name: getPixels_
+_returns: const ofPixels &_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 0072_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -316,9 +303,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -354,9 +339,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -392,9 +375,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -430,47 +411,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool initGrabber(w, h)
-
-<!--
-_syntax: initGrabber(w, h)_
-_name: initGrabber_
-_returns: bool_
-_returns_description: _
-_parameters: int w, int h_
-_access: public_
-_version_started: 0072_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
 
 
 
@@ -506,9 +447,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -544,9 +483,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -582,9 +519,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool isInitialized()
+
+<!--
+_syntax: isInitialized()_
+_name: isInitialized_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -620,9 +591,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -658,9 +627,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -696,9 +663,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -708,12 +673,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###vector< string > & listAudioCodecs()
+###const vector< string > & listAudioCodecs()
 
 <!--
 _syntax: listAudioCodecs()_
 _name: listAudioCodecs_
-_returns: vector< string > &_
+_returns: const vector< string > &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -734,9 +699,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -746,12 +709,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###vector< string > & listAudioDevices()
+###const vector< string > & listAudioDevices()
 
 <!--
 _syntax: listAudioDevices()_
 _name: listAudioDevices_
-_returns: vector< string > &_
+_returns: const vector< string > &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -772,9 +735,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -810,9 +771,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -822,12 +781,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###vector< string > & listVideoCodecs()
+###const vector< string > & listVideoCodecs()
 
 <!--
 _syntax: listVideoCodecs()_
 _name: listVideoCodecs_
-_returns: vector< string > &_
+_returns: const vector< string > &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -848,9 +807,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -860,12 +817,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###vector< string > & listVideoDevices()
+###const vector< string > & listVideoDevices()
 
 <!--
 _syntax: listVideoDevices()_
 _name: listVideoDevices_
-_returns: vector< string > &_
+_returns: const vector< string > &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -886,9 +843,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -924,9 +879,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -962,9 +915,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1000,9 +951,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1038,9 +987,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1076,9 +1023,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1114,9 +1059,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1152,9 +1095,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1190,9 +1131,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1228,9 +1167,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1266,9 +1203,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1304,9 +1239,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1342,9 +1275,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1380,9 +1311,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool setup(w, h)
+
+<!--
+_syntax: setup(w, h)_
+_name: setup_
+_returns: bool_
+_returns_description: _
+_parameters: int w, int h_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1418,9 +1383,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1456,9 +1419,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1494,9 +1455,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1532,9 +1491,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1570,9 +1527,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1600,8 +1555,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1625,8 +1587,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1650,8 +1619,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1675,8 +1651,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1700,8 +1683,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1725,8 +1715,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1750,8 +1747,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1775,8 +1779,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1800,8 +1811,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1825,8 +1843,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1850,8 +1875,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1875,8 +1907,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1900,8 +1939,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1925,8 +1971,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1950,8 +2003,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 

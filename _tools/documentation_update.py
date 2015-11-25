@@ -5,29 +5,185 @@ from lxml import objectify
 import os
 import sys
 import re
-from lxml.html.soupparser import fromstring 
-
-import doxygen_compound
+import HTMLParser
 
 from documentation_class import DocsClass
 from markdown_file import getclass,setclass,getfunctionsfile,setfunctionsfile
 from documentation_members import DocsMethod, DocsVar
 from documentation_function import DocsFunctionsFile, DocsFunction
+import clang_utils
+from clang.cindex import CursorKind
 
-of_root = "/home/arturo/Desktop/openFrameworks"
-of_documentation = of_root + '/libs/openFrameworksCompiled/project/doxygen/build/xml/'
-of_addons_documentation = of_root + 'addons/doxygen/xml/'
-documentation_root = '/home/arturo/Documents/ofSite/documentation/'
-#index = open(documentation_root + "index.html.mako",'w')
+of_root = "/home/arturo/Code/openFrameworks"
+of_source = os.path.join(of_root, "libs/openFrameworks")
+of_addons = os.path.join(of_root, "addons")
+official_addons = [
+                    "ofxAccelerometer",
+                    "ofxAndroid",
+                    "ofxAssimpModelLoader",
+                    "ofxEmscripten",
+                    "ofxGui",
+                    "ofxNetwork",
+                    "ofxOpenCv",
+                    "ofxOsc",
+                    "ofxSvg",
+                    "ofxThreadedImageLoader",
+                    "ofxXmlSettings",                    
+                  ]
+currentversion = "0.9.0"
+alternatives = { 
+                 'size_t': ['int', 'unsigned int', 'long', 'unsigned long'],
+                 'filesystem::path': ['string'],
+                 'ofIndexType': ['int', 'unsigned int', 'long'],
+                 'unsigned long': ['int', 'unsigned int', 'long'],
+                 'unsigned long long': ['int', 'unsigned int', 'long'],
+               }
 
-print of_documentation
+def substitutetype(ty):
+    """ fix types to match the standard format in the final docs,
+        removes std:: and adds a leading and trailing space between
+        triangular brackets """
+        
+    ty = ty.replace("std::", "")
+    ty = re.sub(r"(.*)<(.*)>","\\1< \\2 >",ty)
+    return ty
+    
+def parse_docs(element):
+    """ parse an inlined documentation block """
+    doc = str("" if element.raw_comment is None else element.raw_comment)
+    doc = doc.strip()
+    if doc.find("< ") == 0:
+        doc = doc[2:]
+    if doc.find("\\todo") == 0:
+        doc = ""
+    if doc.find("\\tparam") == 0:
+        doc = re.sub(r"\\tparam.*","",doc)
+    if doc.find("TODO:") == 0:
+        doc = ""
+    doc = doc.replace("\\warning ","\nWarning: ")
+    doc = doc.replace("\\author ","\nBy: ")
+    doc = doc.replace("\\param ","\nParameters:\n",1)
+    doc = doc.replace("\\param ","")
+    doc = doc.replace("\\brief ","")
+    doc = doc.replace("\\returns ","\nReturns: ")
+    doc = doc.replace("\\sa ","\nSee also: ")
+    docs = ""
+    for line in iter(doc.splitlines()):
+        line = line.strip()
+        line = line.replace("/// ","")
+        line = line.replace("///","")
+        line = re.sub(r"\\class (.*)","",line)
+        docs += line + "\n"
+    try:
+        docs = HTMLParser.HTMLParser().unescape(docs)
+    except:
+        pass
+    docs += "\n"
+    return docs
+    
+def is_class(member):
+    return member.kind == CursorKind.CLASS_DECL or member.kind == CursorKind.CLASS_TEMPLATE or member.kind == CursorKind.STRUCT_DECL
+    
+def is_variable(member):
+    return member.kind == CursorKind.VAR_DECL or member.kind == CursorKind.FIELD_DECL
+    
+def is_method(member):
+    return member.kind == CursorKind.CXX_METHOD or member.kind == CursorKind.CONSTRUCTOR or member.kind == CursorKind.DESTRUCTOR or member.kind == CursorKind.FUNCTION_TEMPLATE
+    
+def is_function(member):
+    return (member.kind == CursorKind.FUNCTION_DECL or member.kind == CursorKind.FUNCTION_TEMPLATE) and not is_class(member.semantic_parent)
 
-missing_functions = []
+def parse_variable(documentation_class, clazz, member):
+    var = documentation_class.var_by_name(member.displayname)
+    if not var:
+        var = DocsVar(0)
+        var.name = member.spelling
+        var.access = member.access_specifier.name.lower()
+        var.version_started = currentversion
+        var.version_deprecated = ""
+        var.constant = member.result_type.is_volatile_qualified()
+        var.static = member.kind == CursorKind.VAR_DECL
+        var.clazz = documentation_class.name
+        #member.type.ref.text if hasattr(member.type,'ref') else member.type.text
+        var.type = substitutetype(member.type.spelling)
+        new_vars.append(var)
+    try:
+        var.inlined_description = parse_docs(member)
+    except:
+        pass
+    return var
+    
+    
+def parse_function(documentation_class, clazz, member, already_found, fuzzy=False):
+    params = ""
+    for arg in member.get_children():
+        if arg.kind.is_attribute():
+            # TODO: we suppose only attributes are the deprecated ones 
+            return None
+        if arg.kind != CursorKind.PARM_DECL:
+            continue
+        if len(params) > 0:
+            params += ", "
+        argtype = substitutetype(arg.type.spelling)
+        if argtype[-1]=='&' or argtype[-1]=='*':
+            params += argtype + arg.spelling
+        else:
+            params += argtype + " " + arg.spelling
+        
+        for part in arg.get_children():
+            if part.kind == CursorKind.INTEGER_LITERAL or \
+               part.kind == CursorKind.CHARACTER_LITERAL or \
+               part.kind == CursorKind.CXX_BOOL_LITERAL_EXPR or \
+               part.kind == CursorKind.CXX_NULL_PTR_LITERAL_EXPR or \
+               part.kind == CursorKind.FLOATING_LITERAL or \
+               part.kind == CursorKind.IMAGINARY_LITERAL or \
+               part.kind == CursorKind.OBJC_STRING_LITERAL or \
+               part.kind == CursorKind.OBJ_BOOL_LITERAL_EXPR or \
+               part.kind == CursorKind.STRING_LITERAL:
+                try:
+                    params += "=" + part.get_tokens().next().spelling
+                except:
+                    print "error trying to print default value for " + documentation_class.name + "::" + member.spelling + " " + arg.spelling + " = " + str(part.kind)
+                    pass
+            elif part.kind == CursorKind.DECL_REF_EXPR:    
+                params += "=" + part.spelling
 
-currentversion = "0.8.0"
+    methodname = member.spelling
+    methodname = re.sub("<.*>","",methodname)
+    if member.kind == CursorKind.CONSTRUCTOR or member.kind == CursorKind.DESTRUCTOR or (not clazz is None and methodname == clazz.spelling):
+        returns = ""
+    else:
+        returns = substitutetype(member.result_type.spelling)
+        returns = ("" if returns is None else returns)
+    method = documentation_class.function_by_signature(methodname, returns, params, alternatives, already_found, fuzzy)
+    
+    if method is None:
+        return None
+    
+    if not clazz is None:
+        method.static = member.is_static_method()
+        method.clazz = documentation_class.name
+        method.access = member.access_specifier.name.lower()
+    else:
+        method.functionsfile = documentation_class.name
+    method.returns = returns
+    #method.description = method.description.replace("~~~~{.brush: cpp}","~~~~{.cpp}").replace('</pre>',"~~~~")
+    method.description = method.description.replace('<p>','').replace('</p>','').replace('<code>','').replace('</code>','').replace('<pre>','')
+    
+    if method.new:
+        method.version_started = currentversion
 
+    method.inlined_description = parse_docs(member)
+    
+    if method.new:
+        if clazz is None:
+            new_functions.append(method)
+        else:
+            new_methods.append(method)
+        
+    return method
 
-def update_moved_functions(filename,is_addon=False):
+"""def update_moved_functions(filename,is_addon=False):
     xml = objectify.parse(filename)
     doxygen = xml.getroot()
     
@@ -51,315 +207,160 @@ def update_moved_functions(filename,is_addon=False):
                                 moved_function.description = moved_function.description + '\n\n' + function.description
                                 print "moved function: " + function.name
                                 
-            setfunctionsfile(functionsfile,is_addon)
+            setfunctionsfile(functionsfile,is_addon)"""
     
     
             
-def serialize_functionsfile(filename,is_addon=False):
-    print("functions file " + filename)
-    xml = objectify.parse(filename)
-    doxygen = xml.getroot()
+def serialize_functionsfile(cursor,filename,is_addon=False):
+    functionsfile = getfunctionsfile(filename)
+    functions_fromcode = []
+    functions_for_fuzzy_search = []
+    for member in cursor.get_children():
+        if is_function(member) and str(member.location.file) == cursor.spelling: 
+            function = parse_function(functionsfile, None, member, functions_fromcode)
+            if function is not None:
+                functions_fromcode.append(function)
+            else:
+                functions_for_fuzzy_search.append(member)
     
-    xmlfunctionsfile = doxygen.compounddef
-
-    
-    if xmlfunctionsfile.find('sectiondef')!=None:
-        if len([ s for s in xmlfunctionsfile.sectiondef if s.get('kind')=='func'])>0:
-            #print '\n'
-            file_split = os.path.splitext(xmlfunctionsfile.compoundname.text)
-            #print file_split[0]
-            functionsfile = getfunctionsfile(file_split[0])
-            #print 'new: ' + str(functionsfile.new)
-            functions_fromxml = []
-            for section in xmlfunctionsfile.sectiondef:
-                if section.get('kind')=='func':
-                    for xmlfunction in section.memberdef:
-                        argstring = str(xmlfunction.argsstring.text)
-                        params = argstring[argstring.find('(')+1:argstring.rfind(')')]
-                        returns = xmlfunction.type.ref.text if hasattr(xmlfunction.type,'ref') else xmlfunction.type.text
-                        function = functionsfile.function_by_signature(xmlfunction.name.text, returns, params)
-                        #function.description = function.description.replace("~~~~{.brush cpp}","~~~~{.cpp}").replace('</pre>',"~~~~")
-                        function.description = function.description.replace('<p>','').replace('</p>','').replace('<code>','').replace('</code>','').replace('<pre>','')
-                        function.returns = returns
-                        functions_fromxml.append(function.name)
-                        
-                        if xmlfunction.find("briefdescription")!=None and    xmlfunction.briefdescription.find("para")!=None:
-                            function.inlined_description = ""
-                            for p in xmlfunction.briefdescription.para:
-                                function.inlined_description = function.inlined_description + serialize_doxygen_paragraph(p)
-                            
-                        if xmlfunction.find("detaileddescription")!=None and xmlfunction.detaileddescription.find("para")!=None:
-                            function.inlined_description = function.inlined_description + "\n"
-                            for p in xmlfunction.detaileddescription.para:
-                                function.inlined_description = function.inlined_description + serialize_doxygen_paragraph(p)
-                        
-                        #print function.returns + " " + function.name + xmlfunction.argsstring.text + " new: " + str(function.new)
-            
-            #print "missing functions"
-            thisfile_missing_functions = []
-            #[f for f in functionsfile.function_list if f not in functions_fromxml.function_list]
-            for function in functionsfile.function_list:
-                if not function.name in functions_fromxml:
-                    #print function.name+"("+function.parameters+")"
-                    missing_functions.append(function)
-                    thisfile_missing_functions.append(function)
-            
-            for function in thisfile_missing_functions:
-                functionsfile.function_list.remove(function)
+    for member in functions_for_fuzzy_search:
+        function = parse_function(functionsfile, None, member, functions_fromcode, True)
+        if function is not None:
+            functions_fromcode.append(function)
                 
-            deprecated_functions = []
-            for function in functionsfile.function_list:
-                if function.name.find("OF_DEPRECATED_MSG")!=-1:
-                    deprecated_functions.append(function)
-            for function in deprecated_functions:
-                functionsfile.function_list.remove(function);
-                        
-            functionsfile.function_list.sort(key=lambda function: function.name)
-            setfunctionsfile(functionsfile,is_addon)
-                        
+    thisfile_missing_functions = []
+    for function in functionsfile.function_list:
+        if not function in functions_fromcode:
+            missing_functions.append(function)
+            thisfile_missing_functions.append(function)
     
-def parse_doxigen_para_element(e):
-    if type(e.value) == doxygen_compound.docRefTextType:
-        if type(e.value.content_) == list:
-            ret = ""
-            for l in e.value.content_:
-                ret = ret + parse_doxigen_para_element(l)
-            return ret
-        else:
-            return e.value.content_
-            
-            
-    elif type(e.value) == doxygen_compound.docURLLink:
-        if type(e.value.content_) == list:
-            ret = ""
-            for l in e.value.content_:
-                ret = ret + "[" + l.value + "](" + l.value + ")"
-            return ret
-        else:
-            return + "[" + e.value.content_ + "](" + e.value.content_ + ")"
-            
-            
-    elif type(e.value) == doxygen_compound.docSimpleSectType:
-        ret = "***" + e.value.kind + ":*** \n\t"
-        for pc in e.value.get_para():
-            ret = ret + serialize_doxygen_paragraph(pc)
-        return ret
+    for function in thisfile_missing_functions:
+        functionsfile.function_list.remove(function)
+                
+    functionsfile.function_list.sort(key=lambda function: function.name)
+    if len(functionsfile.function_list)>0:
+        setfunctionsfile(functionsfile,is_addon)
+    
+def serialize_class(cursor,is_addon=False, parent=None):
+    clazz = cursor
+    classname = (parent + "::" if parent is not None else "") + clazz.spelling
+    documentation_class = getclass(classname)
         
-    elif type(e.value) == doxygen_compound.refTextType:
-        if type(e.value.content_) == list:
-            ret = ""
-            for l in e.value.content_:
-                ret = ret + parse_doxigen_para_element(l)
-            return ret
-        else:
-            return e.value.content_
-    
-    elif type(e.value) == doxygen_compound.docMarkupType:
-        if type(e.value.content_) == list:
-            ret = ""
-            for l in e.value.content_:
-                ret = ret + parse_doxigen_para_element(l)
-            return ret
-        else:
-            return e.value.content_
-            
-    elif type(e.value) == doxygen_compound.docListType:
-        ret = ""
-        for l in e.value.listitem:
-            for p in l.para:
-                for c in p.content_:
-                    ret = ret + parse_doxigen_para_element(c)
-        return ret
-            
-    
-
-    else:        
-        return  e.value
-
-def serialize_doxygen_paragraph(p):
-    ret = ""
-    if hasattr(p,"content_"):
-        for c in p.content_:
-            next_element = parse_doxigen_para_element(c)
-            if type(next_element)!=doxygen_compound.docEmptyType:
-                if type(next_element)==str:
-                    ret = ret + next_element;
-                else:
-                    print "Next Element: (not str) "+ type(next_element).__name__;
-    else:
-        ret = str(p)
-    if ret != "":
-        ret = ret + "\n\n"
-    return ret
-
-def serialize_class(filename,is_addon=False):
-    xml = objectify.parse(filename)
-    doxygen = xml.getroot()
-    
-    clazz = doxygen_compound.parse(filename).compounddef #doxygen.compounddef
-        
-    documentation_class = getclass(clazz.compoundname)
-    
     current_variables_list = []
     current_methods_list = []
-    
-    
-    #f = open('documentation/' + classname + ".html.mako",'w')
-    
-    #index.write("[" + classname + "](" + classname + ".html)\n\n")
-    
-    #f.write( '<%inherit file="_templates/documentation.mako" />\n' )
-    #f.write( '___' + classname + "___\n" )
-    
-    inheritsfrom = []
-    #if clazz.find('derivedcompoundref')!=None:
-    inheritsfrom = clazz.derivedcompoundref
-
-    documentation_class.detailed_inline_description = ""
-   
-    #clazz_for_description = doxygen_compound.parse(filename).compounddef 
-    for p in clazz.briefdescription.get_para():
-        documentation_class.detailed_inline_description = documentation_class.detailed_inline_description + serialize_doxygen_paragraph(p)
-    documentation_class.detailed_inline_description = documentation_class.detailed_inline_description + "\n"
+    methods_for_fuzzy_search = []
         
-    for p in clazz.detaileddescription.get_para():
-        documentation_class.detailed_inline_description = documentation_class.detailed_inline_description + serialize_doxygen_paragraph(p)
-
-    #if clazz.find('sectiondef')!=None:
-    for section in clazz.sectiondef:
-        for member in section.memberdef:
-            #if section.get("kind") == public TODO: access, virtual, pure virtual
-            if member.kind == 'enum':
-                pass
+    documentation_class.extends = []
+    
+    for child in clazz.get_children():
+        if child.kind == CursorKind.CXX_BASE_SPECIFIER:
+            if child.spelling.find("class") == 0:
+                baseclass = child.spelling.split(' ')[1]
+                documentation_class.extends.append(baseclass)
             else:
-                #f.write( "$$code(lang=c++)\n" )
-                if member.kind == 'variable':
-                    var = documentation_class.var_by_name(member.name)
-                    if not var:
-                        var = DocsVar(0)
-                        var.name = member.name
-                        var.access = member.prot
-                        var.version_started = currentversion
-                        var.version_deprecated = ""
-                        var.constant = member.mutable=="no"
-                        var.static = member.static!="no"
-                        var.clazz = documentation_class.name
-                        #member.type.ref.text if hasattr(member.type,'ref') else member.type.text
-                        var.type = ""
-                        try:
-                            for e in member.type_.content_:
-                                if type(e.value) == doxygen_compound.refTextType:
-                                    var.type = var.type +  e.value.valueOf_
-                                else:
-                                    var.type = var.type + e.value + " "
-                        except:
-                            pass
+                documentation_class.extends.append(child.spelling)
+
+    documentation_class.detailed_inline_description = parse_docs(clazz)
+    
+    for member in clazz.get_children():
+        if member.kind == CursorKind.CLASS_DECL or member.kind == CursorKind.CLASS_TEMPLATE or member.kind == CursorKind.STRUCT_DECL:
+            if member.access_specifier.name.lower() == 'public' and clazz.spelling + "::" + member.spelling not in visited_classes:
+                for child in member.get_children():
+                    if is_variable(child) or is_method(child):
+                        if classname[-1] == '_':
+                            serialize_class(member,is_addon,classname[:-1])
+                            visited_classes.append(classname[:-1] + "::" + member.spelling)
+                        else:
+                            serialize_class(member,is_addon,classname)
+                            visited_classes.append(classname + "::" + member.spelling)
+                        break
+        elif member.kind == CursorKind.UNION_DECL:
+            for union_member in member.get_children():
+                if is_variable(union_member):
+                    var = parse_variable(documentation_class, clazz, union_member)
                     current_variables_list.append(var)
-                    #f.write( str(member.type.text) + " " + str(member.name.text) + "\n" )
-                if member.kind == 'function' and member.name.find("OF_DEPRECATED_MSG")==-1:
-                    #print member.name
-                    argstring = str(member.argsstring)
-                    params = argstring[argstring.find('(')+1:argstring.rfind(')')]
-                    
-                    returns = ""
-                    try:
-                        for e in member.type_.content_:
-                            if type(e.value) == doxygen_compound.refTextType:
-                                returns = returns +  e.value.valueOf_
-                            else:
-                                returns = returns + e.value
-                    except:
-                        pass
-                        
-                    returns = ("" if returns is None else returns)
-                    method = documentation_class.function_by_signature(member.name, returns, params)
-                    method.static = member.static!="no"
-                    method.clazz = documentation_class.name
-                    method.access = member.prot
-                    method.returns = returns
-                    #method.description = method.description.replace("~~~~{.brush: cpp}","~~~~{.cpp}").replace('</pre>',"~~~~")
-                    method.description = method.description.replace('<p>','').replace('</p>','').replace('<code>','').replace('</code>','').replace('<pre>','')
-                    if method.new:
-                        print "new method " + method.name + " in " + method.clazz
-                        method.version_started = currentversion
-                        
-                    method.inlined_description = ""
-                    for p in member.briefdescription.get_para():
-                        method.inlined_description = method.inlined_description + serialize_doxygen_paragraph(p)
-                        
-                    method.inlined_description = method.inlined_description + "\n"
-                    for p in member.detaileddescription.get_para():
-                        method.inlined_description = method.inlined_description + serialize_doxygen_paragraph(p)
-                        
-                    current_methods_list.append(method)
-                        
-                    #f.write( str(member.type.text) + " " + str(member.name.text) + str(member.argsstring.text) + "\n" )
-                """if member.name.text.find("OF_DEPRECATED_MSG")!=-1:
-                    print "found deprecated function " + member.name.text
-                    print "argstring = " + str(member.argsstring.text)
-                    print "params = " + member.argsstring.text[member.argsstring.text.find('(')+1:member.argsstring.text.rfind(')')]
-                    returns = member.type.ref.text if hasattr(member.type,'ref') else member.type.text
-                    print "returns = " + ("" if returns is None else returns)"""
-                #f.write( "$$/code\n\n\n\n" )
+                if union_member.kind == CursorKind.STRUCT_DECL:
+                    for union_struct_member in union_member.get_children():
+                        if is_variable(union_struct_member):
+                            var = parse_variable(documentation_class, clazz, union_struct_member)
+                            current_variables_list.append(var)
+        elif is_variable(member):
+            var = parse_variable(documentation_class, clazz, member)
+            current_variables_list.append(var)
+            #f.write( str(member.type.text) + " " + str(member.name.text) + "\n" )
+        elif is_method(member):
+            method = parse_function(documentation_class, clazz, member, current_methods_list)
+            if method is not None:
+                current_methods_list.append(method)
+            else:
+                methods_for_fuzzy_search.append(member)
     
-    #f.close()
-    deprecated_methods = []
-    for method in documentation_class.function_list:
-        if method.name.find("OF_DEPRECATED_MSG")!=-1:
-            deprecated_methods.append(method)
-    for method in deprecated_methods:
-        documentation_class.function_list.remove(method);
-    
-    class_name_printed = False
+    for member in methods_for_fuzzy_search:
+        method = parse_function(documentation_class, clazz, member, current_methods_list, True)
+        if method is not None:
+            current_methods_list.append(method)
+                
     
     for method in documentation_class.function_list:
         if not method in current_methods_list:
-            if method.description.strip("\n ") != "":
-                if not class_name_printed:    
-                    print "\n\n\n\n"
-                    print "========================================"
-                    print "class " + documentation_class.name
-                    class_name_printed = True
-                print "\n\n\n\n"
-                print "removing method " + method.returns + " " + method.name + "(" + method.parameters + ")"
-                print "with description:"
-                print method.description
+            missing_methods.append(method)
     documentation_class.function_list = current_methods_list
     
     for var in documentation_class.var_list:
         if not var in current_variables_list:
-            if var.description.strip("\n ") != "":
-                if not class_name_printed:    
-                    print "\n\n\n\n"
-                    print "========================================"
-                    print "class " + documentation_class.name
-                    class_name_printed = True
-                print "removing " + var.name
-                print "with description:"
-                print var.description
+            missing_vars.append(var)
     documentation_class.var_list = current_variables_list
         
     documentation_class.function_list.sort(key=lambda function: function.name)
     documentation_class.var_list.sort(key=lambda variable: variable.name)
+    
+    if documentation_class.new:
+        new_classes.append(documentation_class)
     setclass(documentation_class,is_addon)
 
-#serialize_class ("/home/arturo/Desktop/openFrameworks/libs/openFrameworksCompiled/project/doxygen/build/xml/classof_log.xml")
-#quit()
-
-#index.write( '<%inherit file="_templates/documentation.mako" />\n' )
-dir_count=0
-file_count=0
-for root, dirs, files in os.walk(of_documentation):
-    dir_count+=1
+def parse_folder(root, files, is_addon=False):
+    file_count=0
     for name in files:       
         file_count+=1
         filename = os.path.join(root, name)
-        if name.find('class')==0:
-            serialize_class(filename)
-        elif name.find('of')==0 and name.find('8h.xml')!=-1:
-            serialize_functionsfile(filename)
+        if name.find('of')==0 and os.path.splitext(name)[1]=='.h':
+            tu = clang_utils.get_tu_from_file(filename, of_root)
+            num_functions = 0
+            for child in tu.cursor.get_children():
+                if is_class(child) and child.spelling.find('of')==0:
+                    i=0
+                    for c in child.get_children():
+                        if is_variable(c) or is_method(c) or c.kind == CursorKind.CXX_BASE_SPECIFIER:
+                            i+=1
+                    if i>0 and child.spelling not in visited_classes:
+                        serialize_class(child, is_addon)
+                        visited_classes.append(child.spelling)
+                if is_function(child) and child.spelling.find('of')==0:
+                    num_functions+=1
+            functions_name = os.path.splitext(name)[0]
+            if num_functions>0 and functions_name not in visited_function_files and functions_name != "ofMain":
+                serialize_functionsfile(tu.cursor, functions_name, is_addon)
+                visited_function_files.append(functions_name)
+    return file_count
+    
+""" main """
+dir_count=0
+file_count=0
+visited_classes = []
+visited_function_files = []
+missing_functions = []
+missing_methods = []
+missing_vars = []
+new_classes = []
+new_functions = []
+new_vars = []
+new_methods = []
 
-for root, dirs, files in os.walk(of_documentation):
+for root, dirs, files in os.walk(of_source):
+    dir_count+=1
+    file_count += parse_folder(root, files, False)
+    
+"""for root, dirs, files in os.walk(of_documentation):
     dir_count+=1
     for name in files:       
         file_count+=1
@@ -367,23 +368,49 @@ for root, dirs, files in os.walk(of_documentation):
         if name.find('of')==0 and name.find('8h.xml')!=-1:
             update_moved_functions(filename)
 
-for root, dirs, files in os.walk(of_addons_documentation):
-    dir_count+=1
-    for name in files:       
-        file_count+=1
-        filename = os.path.join(root, name)
-        if name.find('class')==0:
-            serialize_class(filename,True)
-        elif name.find('ofx')==0 and name.find('8h.xml')!=-1:
-            serialize_functionsfile(filename,True)
+#serialize_functionsfile(of_documentation + "/index.xml",True)"""
 
-for root, dirs, files in os.walk(of_addons_documentation):
+for addon in official_addons:
+    for root, dirs, files in os.walk(os.path.join(of_addons, addon, "src")):
+        dir_count += 1
+        file_count += parse_folder(root, files, True)
+
+"""for root, dirs, files in os.walk(of_addons_documentation):
     dir_count+=1
     for name in files:       
         file_count+=1
         filename = os.path.join(root, name)
         if name.find('ofx')==0 and name.find('8h.xml')!=-1:
-            update_moved_functions(filename,True)
+            update_moved_functions(filename,True)"""
             
-print ""+str(dir_count)+" dirs/"+str(file_count)+" files"
+#print ""+str(dir_count)+" dirs/"+str(file_count)+" files"
 
+if len(new_functions)>0:
+    print "added " + str(len(new_functions)) + " new functions:"
+    for f in new_functions:
+        print "\t- " + f.returns + " " + f.name + "(" + f.parameters + ")  to " + f.functionsfile
+        
+if len(missing_functions)>0:
+    print "removed " + str(len(missing_functions)) + " functions"
+    for f in missing_functions:
+        print "\t- " + f.returns + " " + f.name + "(" + f.parameters + ")  from " + f.functionsfile
+
+if len(new_methods)>0:
+    print "added " + str(len(new_methods)) + " new methods:"
+    for f in new_methods:
+        print "\t- " + f.returns + " " + f.name + "(" + f.parameters + ")  to " + f.clazz
+        
+if len(missing_methods)>0:
+    print "removed " + str(len(missing_methods)) + " methods"
+    for f in missing_methods:
+        print "\t- " + f.returns + " " + f.name + "(" + f.parameters + ")  from " + f.clazz
+
+if len(new_vars)>0:
+    print "added " + str(len(new_vars)) + " new vars:"
+    for v in new_vars:
+        print "\t- " + v.name + "  to " + v.clazz
+        
+if len(missing_vars)>0:
+    print "removed " + str(len(missing_vars))
+    for v in missing_vars:
+        print "\t- " + v.name + "  from " + v.clazz

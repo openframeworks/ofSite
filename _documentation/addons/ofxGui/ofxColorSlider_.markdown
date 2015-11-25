@@ -5,6 +5,7 @@
 _visible: True_
 _advanced: False_
 _istemplated: True_
+_extends: ofxGuiGroup_
 -->
 
 ##InlineDescription
@@ -50,9 +51,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -88,9 +87,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -126,9 +123,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -164,9 +159,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -176,14 +169,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofxColorSlider_(value, width = defaultWidth, height = defaultHeight)
+### ofxColorSlider_(value, width, height)
 
 <!--
-_syntax: ofxColorSlider_(value, width = defaultWidth, height = defaultHeight)_
+_syntax: ofxColorSlider_(value, width, height)_
 _name: ofxColorSlider__
 _returns: _
 _returns_description: _
-_parameters: ofParameter< ofColor_< ColorType > > value, float width=defaultWidth, float height=defaultHeight_
+_parameters: ofParameter<ofColor_< ColorType>  > value, float width, float height_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -202,47 +195,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### operator const ofColor_< ColorType > &()
-
-<!--
-_syntax: operator const ofColor_< ColorType > &()_
-_name: operator const ofColor_< ColorType > &_
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
 
 
 
@@ -278,9 +231,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -290,14 +241,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofxColorSlider_ * setup(value, width = defaultWidth, height = defaultHeight)
+###ofxColorSlider_< ColorType > * setup(value, width, height)
 
 <!--
-_syntax: setup(value, width = defaultWidth, height = defaultHeight)_
+_syntax: setup(value, width, height)_
 _name: setup_
-_returns: ofxColorSlider_ *_
+_returns: ofxColorSlider_< ColorType > *_
 _returns_description: _
-_parameters: ofParameter< ofColor_< ColorType > > value, float width=defaultWidth, float height=defaultHeight_
+_parameters: ofParameter<ofColor_< ColorType>  > value, float width, float height_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -316,9 +267,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -328,14 +277,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofxColorSlider_ * setup(controlName, &value, &min, &max, width = defaultWidth, height = defaultHeight)
+###ofxColorSlider_< ColorType > * setup(&controlName, &value, &min, &max, width, height)
 
 <!--
-_syntax: setup(controlName, &value, &min, &max, width = defaultWidth, height = defaultHeight)_
+_syntax: setup(&controlName, &value, &min, &max, width, height)_
 _name: setup_
-_returns: ofxColorSlider_ *_
+_returns: ofxColorSlider_< ColorType > *_
 _returns_description: _
-_parameters: string controlName, const ofColor_< ColorType > &value, const ofColor_< ColorType > &min, const ofColor_< ColorType > &max, float width=defaultWidth, float height=defaultHeight_
+_parameters: const string &controlName, const ofColor_< ColorType > &value, const ofColor_< ColorType > &min, const ofColor_< ColorType > &max, float width, float height_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -354,9 +303,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -384,8 +331,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -409,8 +363,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 

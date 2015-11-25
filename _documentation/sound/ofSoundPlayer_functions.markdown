@@ -34,18 +34,22 @@ _advanced: False_
 
 _inlined_description: _
 
-Gets a frequency spectrum sample, taking all current sound players into account. 
+Gets a frequency spectrum sample, taking all current sound players into account.
 
 Each band will be represented as a float between 0 and 1.
 
 
+Warning: This isn't implemented on mobile & embedded platforms.
+
+Parameters:
+nBands number of spectrum bands to return, max 512.
+\return pointer to an FFT sample, sample size is equal to the nBands parameter.
 
 
 
 
 
 _description: _
-
 
 
 
@@ -74,9 +78,10 @@ _advanced: False_
 
 _inlined_description: _
 
-Sets global volume for FMOD-based sound players (windows, osx). 
+Sets global volume for FMOD-based sound players (windows, osx).
 
-
+Parameters:
+vol range is 0 to 1.
 
 
 
@@ -84,10 +89,7 @@ Sets global volume for FMOD-based sound players (windows, osx).
 
 _description: _
 
-
 Sets the volume of all ofSoundPlayer objects to the volume (vol) specified. 0.0 - 1.0 range. 0.0 is silent and 1.0 is full volume.
-
-
 
 
 
@@ -114,16 +116,13 @@ _advanced: False_
 
 _inlined_description: _
 
-Cleans up FMOD (windows, osx). 
-
-
+Cleans up FMOD (windows, osx).
 
 
 
 
 
 _description: _
-
 
 
 
@@ -152,16 +151,13 @@ _advanced: False_
 
 _inlined_description: _
 
-Stops all active sound players on FMOD-based systems (windows, osx). 
-
-
+Stops all active sound players on FMOD-based systems (windows, osx).
 
 
 
 
 
 _description: _
-
 
 
 
@@ -190,9 +186,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Call in your app's update() to update FMOD-based sound players. 
-
-
+Call in your app's update() to update FMOD-based sound players.
 
 
 
@@ -200,10 +194,7 @@ Call in your app's update() to update FMOD-based sound players.
 
 _description: _
 
-
 Updates sound engine. This should be called every frame.
-
-
 
 
 

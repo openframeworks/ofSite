@@ -5,10 +5,22 @@
 _visible: True_
 _advanced: False_
 _istemplated: False_
+_extends: ofAbstractParameter_
 -->
 
 ##InlineDescription
 
+ofReadOnlyParameter holds a value and notifies its listeners when it changes.
+
+ofReadOnlyParameter is a "read only" version of `ofPareameter`.  "Friend"
+classes specified in the template arguments allow other classes
+write-access to the internal data.  Otherwise, all other access is
+"read only".
+
+
+See also: ofParameter
+\tparam ParameterType The data wrapped by the ofParameter.
+\tparam Friend The type of the "friend" class with write access.
 
 
 
@@ -24,14 +36,14 @@ _istemplated: False_
 
 
 
-###void addListener(*listener, method)
+###void addListener(*listener, method, prio)
 
 <!--
-_syntax: addListener(*listener, method)_
+_syntax: addListener(*listener, method, prio)_
 _name: addListener_
 _returns: void_
 _returns_description: _
-_parameters: ListenerClass *listener, ListenerMethod method_
+_parameters: ListenerClass *listener, ListenerMethod method, int prio_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -50,9 +62,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -88,9 +98,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -126,9 +134,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -138,14 +144,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void fromString(str)
+###void fromString(&str)
 
 <!--
-_syntax: fromString(str)_
+_syntax: fromString(&str)_
 _name: fromString_
 _returns: void_
 _returns_description: _
-_parameters: string str_
+_parameters: const string &str_
 _access: protected_
 _version_started: 0073_
 _version_deprecated: _
@@ -164,9 +170,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -202,9 +206,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const ofParameterGroup getFirstParent()
+
+<!--
+_syntax: getFirstParent()_
+_name: getFirstParent_
+_returns: const ofParameterGroup_
+_returns_description: _
+_parameters: _
+_access: protected_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -240,9 +278,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -278,9 +314,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -316,9 +350,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool isReadOnly()
+
+<!--
+_syntax: isReadOnly()_
+_name: isReadOnly_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -336,7 +404,7 @@ _name: isSerializable_
 _returns: bool_
 _returns_description: _
 _parameters: _
-_access: protected_
+_access: public_
 _version_started: 0073_
 _version_deprecated: _
 _summary: _
@@ -354,9 +422,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -392,9 +458,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -430,9 +494,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###shared_ptr< ofAbstractParameter > newReference()
+
+<!--
+_syntax: newReference()_
+_name: newReference_
+_returns: shared_ptr< ofAbstractParameter >_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -468,9 +566,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -506,9 +602,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -518,14 +612,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofReadOnlyParameter(v)
+### ofReadOnlyParameter(ParameterType, &p)
 
 <!--
-_syntax: ofReadOnlyParameter(v)_
+_syntax: ofReadOnlyParameter(ParameterType, &p)_
 _name: ofReadOnlyParameter_
 _returns: _
 _returns_description: _
-_parameters: ParameterType v_
+_parameters: ofReadOnlyParameter< ParameterType, Friend > &p_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -544,9 +638,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -556,14 +648,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofReadOnlyParameter(name, v)
+### ofReadOnlyParameter(&v)
 
 <!--
-_syntax: ofReadOnlyParameter(name, v)_
+_syntax: ofReadOnlyParameter(&v)_
 _name: ofReadOnlyParameter_
 _returns: _
 _returns_description: _
-_parameters: string name, ParameterType v_
+_parameters: const ParameterType &v_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -582,9 +674,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -594,14 +684,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofReadOnlyParameter(name, v, min, max)
+### ofReadOnlyParameter(&name, &v)
 
 <!--
-_syntax: ofReadOnlyParameter(name, v, min, max)_
+_syntax: ofReadOnlyParameter(&name, &v)_
 _name: ofReadOnlyParameter_
 _returns: _
 _returns_description: _
-_parameters: string name, ParameterType v, ParameterType min, ParameterType max_
+_parameters: const string &name, const ParameterType &v_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -620,9 +710,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -632,16 +720,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### operator const ParameterType &()
+### ofReadOnlyParameter(&name, &v, &min, &max)
 
 <!--
-_syntax: operator const ParameterType &()_
-_name: operator const ParameterType &_
+_syntax: ofReadOnlyParameter(&name, &v, &min, &max)_
+_name: ofReadOnlyParameter_
 _returns: _
 _returns_description: _
-_parameters: _
+_parameters: const string &name, const ParameterType &v, const ParameterType &min, const ParameterType &max_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -658,9 +746,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -696,9 +782,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -734,9 +818,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -772,9 +854,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -810,9 +890,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -848,9 +926,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -886,9 +962,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -924,9 +998,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -962,9 +1034,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1000,9 +1070,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1038,9 +1106,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1076,9 +1142,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1114,9 +1178,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1152,9 +1214,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1190,9 +1250,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1228,9 +1286,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1266,9 +1322,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1304,9 +1358,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1342,9 +1394,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1354,14 +1404,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void removeListener(*listener, method)
+###void removeListener(*listener, method, prio)
 
 <!--
-_syntax: removeListener(*listener, method)_
+_syntax: removeListener(*listener, method, prio)_
 _name: removeListener_
 _returns: void_
 _returns_description: _
-_parameters: ListenerClass *listener, ListenerMethod method_
+_parameters: ListenerClass *listener, ListenerMethod method, int prio_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -1380,9 +1430,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1392,14 +1440,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofReadOnlyParameter< ParameterType, Friend > & set(v)
+###ofReadOnlyParameter< ParameterType, Friend > & set(&v)
 
 <!--
-_syntax: set(v)_
+_syntax: set(&v)_
 _name: set_
 _returns: ofReadOnlyParameter< ParameterType, Friend > &_
 _returns_description: _
-_parameters: ParameterType v_
+_parameters: const ParameterType &v_
 _access: protected_
 _version_started: 0073_
 _version_deprecated: _
@@ -1418,9 +1466,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1430,14 +1476,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofReadOnlyParameter< ParameterType, Friend > & set(name, value)
+###ofReadOnlyParameter< ParameterType, Friend > & set(&name, &value)
 
 <!--
-_syntax: set(name, value)_
+_syntax: set(&name, &value)_
 _name: set_
 _returns: ofReadOnlyParameter< ParameterType, Friend > &_
 _returns_description: _
-_parameters: string name, ParameterType value_
+_parameters: const string &name, const ParameterType &value_
 _access: protected_
 _version_started: 0073_
 _version_deprecated: _
@@ -1456,9 +1502,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1468,14 +1512,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofReadOnlyParameter< ParameterType, Friend > & set(name, value, min, max)
+###ofReadOnlyParameter< ParameterType, Friend > & set(&name, &value, &min, &max)
 
 <!--
-_syntax: set(name, value, min, max)_
+_syntax: set(&name, &value, &min, &max)_
 _name: set_
 _returns: ofReadOnlyParameter< ParameterType, Friend > &_
 _returns_description: _
-_parameters: string name, ParameterType value, ParameterType min, ParameterType max_
+_parameters: const string &name, const ParameterType &value, const ParameterType &min, const ParameterType &max_
 _access: protected_
 _version_started: 0073_
 _version_deprecated: _
@@ -1494,9 +1538,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1506,14 +1548,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setMax(max)
+###void setMax(&max)
 
 <!--
-_syntax: setMax(max)_
+_syntax: setMax(&max)_
 _name: setMax_
 _returns: void_
 _returns_description: _
-_parameters: ParameterType max_
+_parameters: const ParameterType &max_
 _access: protected_
 _version_started: 0073_
 _version_deprecated: _
@@ -1532,9 +1574,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1544,14 +1584,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setMin(min)
+###void setMin(&min)
 
 <!--
-_syntax: setMin(min)_
+_syntax: setMin(&min)_
 _name: setMin_
 _returns: void_
 _returns_description: _
-_parameters: ParameterType min_
+_parameters: const ParameterType &min_
 _access: protected_
 _version_started: 0073_
 _version_deprecated: _
@@ -1570,9 +1610,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1582,14 +1620,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setName(name)
+###void setName(&name)
 
 <!--
-_syntax: setName(name)_
+_syntax: setName(&name)_
 _name: setName_
 _returns: void_
 _returns_description: _
-_parameters: string name_
+_parameters: const string &name_
 _access: protected_
 _version_started: 0073_
 _version_deprecated: _
@@ -1608,9 +1646,79 @@ _inlined_description: _
 
 
 
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setParent(&_parent)
+
+<!--
+_syntax: setParent(&_parent)_
+_name: setParent_
+_returns: void_
+_returns_description: _
+_parameters: ofParameterGroup &_parent_
+_access: protected_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
 
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setSerializable(s)
+
+<!--
+_syntax: setSerializable(s)_
+_name: setSerializable_
+_returns: void_
+_returns_description: _
+_parameters: bool s_
+_access: protected_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1646,9 +1754,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1676,8 +1782,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 

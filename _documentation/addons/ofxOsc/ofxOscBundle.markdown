@@ -5,6 +5,7 @@
 _visible: True_
 _advanced: False_
 _istemplated: False_
+_extends: _
 -->
 
 ##InlineDescription
@@ -44,17 +45,13 @@ _advanced: False_
 
 _inlined_description: _
 
-add bundle elements 
-
-
-
+add bundle elements
 
 
 
 
 
 _description: _
-
 
 
 
@@ -90,9 +87,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -122,17 +117,13 @@ _advanced: False_
 
 _inlined_description: _
 
-erase contents 
-
-
-
+erase contents
 
 
 
 
 
 _description: _
-
 
 
 
@@ -162,17 +153,13 @@ _advanced: False_
 
 _inlined_description: _
 
-for operator= and copy constructor 
-
-
-
+for operator= and copy constructor
 
 
 
 
 
 _description: _
-
 
 
 
@@ -202,17 +189,13 @@ _advanced: False_
 
 _inlined_description: _
 
-return the bundle or message at the given index 
-
-
-
+return the bundle or message at the given index
 
 
 
 
 
 _description: _
-
 
 
 
@@ -242,17 +225,13 @@ _advanced: False_
 
 _inlined_description: _
 
-get bundle elements 
-
-
-
+get bundle elements
 
 
 
 
 
 _description: _
-
 
 
 
@@ -288,9 +267,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -326,9 +303,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -364,9 +339,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -402,9 +375,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -440,9 +411,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -478,9 +447,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -508,8 +475,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -533,8 +507,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 

@@ -10,14 +10,18 @@
 ${method.description}
 		</%self:filter>
 
-         % if method.inlined_description.strip("\n").strip(" ") != "":
+         % if method.inlined_description.strip("\n").strip(" ") != "" and method.get_inlined_docs_similarity()<0.8:
+            % if method.description.strip("\n").strip(" ") != "":
             <div class="inlined_docs">
+            % endif
                 <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
 
 		        <%self:filter chain="markdown_template">
 ${method.inlined_description}
 		        </%self:filter>
+            % if method.description.strip("\n").strip(" ") != "":
             </div>
+            % endif
         % endif
     
 	</div>

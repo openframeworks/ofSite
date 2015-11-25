@@ -5,6 +5,7 @@
 _visible: True_
 _advanced: False_
 _istemplated: False_
+_extends: _
 -->
 
 ##InlineDescription
@@ -73,15 +74,11 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Draws any detected objects to the screen with a rectangle, like so:
 
 ![Draw faces](draw_facedetection.jpg "Detecting faces.")
-
-
 
 
 
@@ -115,9 +112,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Takes an input ofImage object and allows you to set the minimum width and height of areas that should be returned.
 
@@ -125,12 +120,10 @@ Takes an input ofImage object and allows you to set the minimum width and height
 camera.grabFrame();
 if(camera.isFrameNew())
 {
-	img.setFromPixels(grab.getPixelsRef());
+	img.setFromPixels(grab.getPixels());
 	finder.findHaarObjects(img);
 }
 ~~~~
-
-
 
 
 
@@ -164,13 +157,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Takes an input ofxCvGrayscaleImage object and allows you to set the minimum width and height of areas that should be returned.
-
-
 
 
 
@@ -204,14 +193,12 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Takes an input ofxCvGrayscaleImage object and allows you to set the minimum width and height of areas that should be returned and a region of interest as an ofRectangle that you would like to limit haar finding to.
 
 ~~~~{.cpp}
-colorImg.setFromPixels(vidGrabber.getPixelsRef());
+colorImg.setFromPixels(vidGrabber.getPixels());
 grayImage = colorImg; // convert our color image to a grayscale image
 
 faceFinder.findHaarObjects(grayImage);
@@ -221,8 +208,6 @@ for(int i = 0; i < faceFinder.blobs.size(); i++) {
 	eyeFinder.findHaarObjects(grayImage, roi);
 }
 ~~~~
-
-
 
 
 
@@ -256,13 +241,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Takes an input ofxCvGrayscaleImage object and allows you to set the minimum width and height of areas that should be returned and a region of interest as an ofRectangle that you would like to limit haar finding to.
-
-
 
 
 
@@ -296,13 +277,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Takes an input ofPixels object and allows you to set the minimum width and height of areas that should be returned.
-
-
 
 
 
@@ -336,13 +313,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns the height of the image area that is being examined.
-
-
 
 
 
@@ -376,13 +349,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns the width of the image area that is being examined.
-
-
 
 
 
@@ -416,13 +385,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Constructor.
-
-
 
 
 
@@ -456,13 +421,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Copy constructor.
-
-
 
 
 
@@ -477,7 +438,7 @@ _syntax: setNeighbors(neighbors)_
 _name: setNeighbors_
 _returns: void_
 _returns_description: _
-_parameters: unsigned neighbors_
+_parameters: unsigned int neighbors_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -496,13 +457,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Minimum number (minus 1) of neighbor rectangles that makes up an object. All the groups of a smaller number of rectangles than min_neighbors-1 are rejected. If min_neighbors is 0, the function does not any grouping at all and returns all the detected candidate rectangles, that might be useful if you want to do a customized grouping.
-
-
 
 
 
@@ -536,9 +493,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -574,13 +529,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 This loads a Haar cascade file into the finder. This needs to be done before the Haar finder can be used with images.
-
-
 
 
 
@@ -614,13 +565,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Destructor.
-
-
 
 
 
@@ -646,12 +593,17 @@ _constant: True_
 _advanced: False_
 -->
 
+_inlined_description: _
+
+
+
+
+
+
+
 _description: _
 
-
 Provides access to the all the blobs detected in the last run of findHaarObjects() via a vector<ofxCvBlob>.
-
-
 
 
 
@@ -673,8 +625,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -698,8 +657,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -723,8 +689,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -748,8 +721,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -773,8 +753,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 

@@ -5,6 +5,7 @@
 _visible: True_
 _advanced: True_
 _istemplated: False_
+_extends: ofBaseVideoGrabber_
 -->
 
 ##InlineDescription
@@ -50,9 +51,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -70,7 +69,7 @@ _name: getAuxBuffer_
 _returns: ofPixelsRef_
 _returns_description: _
 _parameters: _
-_access: public_
+_access: private_
 _version_started: 007_
 _version_deprecated: _
 _summary: _
@@ -88,9 +87,193 @@ _inlined_description: _
 
 
 
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int getBackCamera()
+
+<!--
+_syntax: getBackCamera()_
+_name: getBackCamera_
+_returns: int_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Get device id of back facing camera.
+Returns -1 if no match is found
+
+
+
+
 
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int getCameraFacing(facing)
+
+<!--
+_syntax: getCameraFacing(facing)_
+_name: getCameraFacing_
+_returns: int_
+_returns_description: _
+_parameters: int facing_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int getCameraOrientation(device)
+
+<!--
+_syntax: getCameraOrientation(device)_
+_name: getCameraOrientation_
+_returns: int_
+_returns_description: _
+_parameters: int device_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Get the physical orientation of the camera. Typically on a phone the camera mounted in
+landscape mode, this returns 90
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int getFacingOfCamera(device)
+
+<!--
+_syntax: getFacingOfCamera(device)_
+_name: getFacingOfCamera_
+_returns: int_
+_returns_description: _
+_parameters: int device_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Get facing of camera.
+Leave device = -1 to get selected cameras facing
+
+Returns 0 on backfacing camera, and 1 on frontal facing camera.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int getFrontCamera()
+
+<!--
+_syntax: getFrontCamera()_
+_name: getFrontCamera_
+_returns: int_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Get device id of front facing (selfie) camera.
+Returns -1 if no match is found
+
+
+
+
+
+_description: _
 
 
 
@@ -126,9 +309,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int getNumCameras()
+
+<!--
+_syntax: getNumCameras()_
+_name: getNumCameras_
+_returns: int_
+_returns_description: _
+_parameters: _
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Get number of cameras available
+
+
+
+
+
+_description: _
 
 
 
@@ -164,9 +381,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -176,12 +391,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###unsigned char * getPixels()
+###ofPixels & getPixels()
 
 <!--
 _syntax: getPixels()_
 _name: getPixels_
-_returns: unsigned char *_
+_returns: ofPixels &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -202,9 +417,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -214,16 +427,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofPixelsRef getPixelsRef()
+###const ofPixels & getPixels()
 
 <!--
-_syntax: getPixelsRef()_
-_name: getPixelsRef_
-_returns: ofPixelsRef_
+_syntax: getPixels()_
+_name: getPixels_
+_returns: const ofPixels &_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -240,9 +453,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofTexture * getTexturePtr()
+
+<!--
+_syntax: getTexturePtr()_
+_name: getTexturePtr_
+_returns: ofTexture *_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -278,9 +525,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -290,16 +535,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool initGrabber(w, h)
+###bool initCamera()
 
 <!--
-_syntax: initGrabber(w, h)_
-_name: initGrabber_
+_syntax: initCamera()_
+_name: initCamera_
 _returns: bool_
 _returns_description: _
-_parameters: int w, int h_
-_access: public_
-_version_started: 007_
+_parameters: _
+_access: private_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -316,9 +561,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -354,9 +597,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool isInitialized()
+
+<!--
+_syntax: isInitialized()_
+_name: isInitialized_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -392,9 +669,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -430,9 +705,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -468,9 +741,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -500,15 +771,14 @@ _advanced: False_
 
 _inlined_description: _
 
-
-
+Set desired frame rate of the camera.
+By default will the camera pick the highest frame rate available
 
 
 
 
 
 _description: _
-
 
 
 
@@ -538,15 +808,15 @@ _advanced: False_
 
 _inlined_description: _
 
-
-
+Set specific camera device id.
+Must be a value between 0 and numCameras.
+Default is first back facing camera
 
 
 
 
 
 _description: _
-
 
 
 
@@ -582,9 +852,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setUsePixels(usePixels)
+
+<!--
+_syntax: setUsePixels(usePixels)_
+_name: setUsePixels_
+_returns: void_
+_returns_description: _
+_parameters: bool usePixels_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -620,9 +924,79 @@ _inlined_description: _
 
 
 
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool setup(w, h)
+
+<!--
+_syntax: setup(w, h)_
+_name: setup_
+_returns: bool_
+_returns_description: _
+_parameters: int w, int h_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
 
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool supportsTextureRendering()
+
+<!--
+_syntax: supportsTextureRendering()_
+_name: supportsTextureRendering_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -658,9 +1032,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -696,9 +1068,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -734,9 +1104,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -750,172 +1118,29 @@ _description: _
 
 
 
-###int attemptFramerate
+###shared_ptr< ofxAndroidVideoGrabber::Data > data
 
 <!--
-_name: attemptFramerate_
-_type: int_
+_name: data_
+_type: shared_ptr< ofxAndroidVideoGrabber::Data >_
 _access: private_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
-_constant: True_
+_constant: False_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
 
 
 
 
 
-
-
-<!----------------------------------------------------------------------------->
-
-###ofPixels auxBuffer
-
-<!--
-_name: auxBuffer_
-_type: ofPixels_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
 
 _description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool bGrabberInited
-
-<!--
-_name: bGrabberInited_
-_type: bool_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool bIsFrameNew
-
-<!--
-_name: bIsFrameNew_
-_type: bool_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofPixelFormat internalPixelFormat
-
-<!--
-_name: internalPixelFormat_
-_type: ofPixelFormat_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofEvent< ofPixels > newFrameE
-
-<!--
-_name: newFrameE_
-_type: ofEvent< ofPixels >_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofPixels pixels
-
-<!--
-_name: pixels_
-_type: ofPixels_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_description: _
-
 
 
 

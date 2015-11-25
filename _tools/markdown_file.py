@@ -48,6 +48,9 @@ def addfield(method,line):
             value = value + ":" + text
     
     value = value.lstrip(' ').rstrip('\n').rstrip('\r')[:-1]
+    if field=='extends':
+        value = value.split(", ")
+        
     if field=='constant' or field=='advanced' or field=='visible' or field=='static' or field=='istemplated':
         value = ((value == '1') or (value == 'True') or (value=='true') or (value=='TRUE'))
     #print field, "=", value
@@ -155,9 +158,9 @@ def getclass_list(getTemplated=True):
     
 def sort_function(function):
     if (function.name==function.clazz) or (function.name == "~" + function.clazz):
-        return "0"
+        return "0" + function.name + "(" + function.parameters + ")"
     else:
-        return function.name
+        return function.name + "(" + function.parameters + ")"
       
 def getclass(clazz):
     var = DocsVar(0)
@@ -175,6 +178,7 @@ def getclass(clazz):
         for name in files:
             file_split = os.path.splitext(name)
             if file_split[1]=='.markdown' and file_split[0] == clazz: 
+                documentation_clazz.new = False
                 f = open(os.path.join(root,name),'rU')
                 state = 'begin'
                 linenum = 0
@@ -295,7 +299,8 @@ def getclass(clazz):
                             documentation_clazz.example = documentation_clazz.example + templatedClazz.example
                             documentation_clazz.istemplated = True"""
                             
-                documentation_clazz.function_list.sort(key=lambda function: function.name)
+                documentation_clazz.function_list.sort(key= sort_function)
+                #documentation_clazz.function_list.sort(key=lambda function: function.name)
                 documentation_clazz.var_list.sort(key=lambda variable: variable.name)
                 #documentation_clazz.function_list.sort(key= sort_function)
                 return documentation_clazz   
@@ -324,8 +329,8 @@ def getclass(clazz):
                 documentation_clazz.example = documentation_clazz.example + templatedClazz.example
                 documentation_clazz.istemplated = True"""
     
-    #documentation_clazz.function_list.sort(key= sort_function)
-    documentation_clazz.function_list.sort(key=lambda function: function.name)
+    documentation_clazz.function_list.sort(key= sort_function)
+    #documentation_clazz.function_list.sort(key=lambda function: function.name)
     documentation_clazz.var_list.sort(key=lambda variable: variable.name)
     return documentation_clazz
     
@@ -349,10 +354,10 @@ def serialize_function(f,function,member):
     f.write("_advanced: " + str(function.advanced)  + "_\n")
     f.write("-->\n\n");
     f.write("_inlined_description: _\n\n")
-    f.write(function.inlined_description.encode('utf-8'))
+    f.write(function.inlined_description.strip("\n").decode('utf-8').encode('utf-8'))
     f.write('\n\n\n\n\n\n')
     f.write("_description: _\n\n")
-    f.write(function.description.encode('utf-8'))
+    f.write(function.description.strip("\n").encode('utf-8'))
     f.write('\n\n\n\n\n\n')
     f.write('<!----------------------------------------------------------------------------->\n\n')
 
@@ -369,8 +374,11 @@ def serialize_var(f,var):
     f.write("_constant: " + str(var.constant) + "_\n")
     f.write("_advanced: " + str(var.advanced) + "_\n")
     f.write("-->\n\n");
+    f.write("_inlined_description: _\n\n")
+    f.write(var.inlined_description.strip("\n").decode('utf-8').encode('utf-8'))  
+    f.write('\n\n\n\n\n\n')
     f.write("_description: _\n\n")
-    f.write(var.description.encode('utf-8'))  
+    f.write(var.description.strip("\n").encode('utf-8'))  
     f.write("\n\n\n\n\n\n")
     f.write('<!----------------------------------------------------------------------------->\n\n')
     
@@ -392,11 +400,12 @@ def setclass(clazz,is_addon=False):
     f.write("_visible: " + str(clazz.visible) + "_\n")
     f.write("_advanced: " + str(clazz.advanced) + "_\n")
     f.write("_istemplated: " + str(clazz.istemplated) + "_\n")
+    f.write("_extends: " + ", ".join(clazz.extends) + "_\n")
     f.write("-->\n\n");
     
     #f.write('//----------------------\n\n')
     #f.write('##Example\n\n' + clazz.example + '\n\n\n\n')
-    f.write('##InlineDescription\n\n' + clazz.detailed_inline_description.encode('utf-8') + '\n\n\n\n')
+    f.write('##InlineDescription\n\n' + clazz.detailed_inline_description.decode('utf-8').encode('utf-8') + '\n\n\n\n')
     
     #f.write('//----------------------\n\n')
     f.write('##Description\n\n' + clazz.reference.encode('utf-8') + '\n\n\n\n')

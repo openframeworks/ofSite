@@ -1,8 +1,9 @@
 var currentHidding=null;
 var coreFunctionsHidden=false;
 var addonsFunctionsHidden=false;
-var coreCollapsed=false;
-var addonsCollapsed = false;
+var coreCollapsed=true;
+var addonsCollapsed = true;
+var goingToIntro=false;
 
 $(function(){
     $('.documentation_index_group').masonry({
@@ -16,22 +17,30 @@ $(function(){
 $(document).ready(
     function(){
         // collapse one
+        $('div.documentation_group_head a').click(function () {
+            goingToIntro = true;
+        });
+        $('div.documentation_group_head').next('.documentation_index_group').hide();
         $('div.documentation_group_head').click(function () {
-        if(currentHidding!=null) return;
-        currentHidding = $(this);
+            if(currentHidding!=null) return;
+            if(goingToIntro){
+                goingToIntro = false;
+                return;
+            }
+            currentHidding = $(this);
             if($(this).hasClass('show')){
                 $(this).next('.documentation_index_group').hide("blind", { direction: "vertical" }, 500, function(){
                     currentHidding.removeClass('show');
                     currentHidding.addClass('hide');
                     currentHidding = null;
-                    });
+                });
             }else{
+                currentHidding.removeClass('hide');
+                currentHidding.addClass('show');
                 $(this).next('.documentation_index_group').show("blind", { direction: "vertical" }, 500, function(){
-                    currentHidding.removeClass('hide');
-                    currentHidding.addClass('show');
                     currentHidding = null;
                     $(this).masonry( 'reload' );
-                    });
+                });
             }
         });
         
@@ -78,7 +87,7 @@ $(document).ready(
                 $('.core .documentation_group_head').addClass('hide');
                 $('.core .documentation_group_head').removeClass('show');
                 coreCollapsed = true;
-                $(this).text('open all');
+                $(this).text('expand all');
             }
         });
         $('a.collapse_addons').click(function(){
@@ -94,7 +103,7 @@ $(document).ready(
                 $('.addons .documentation_group_head').addClass('hide');
                 $('.addons .documentation_group_head').removeClass('show');
                 addonsCollapsed = true;
-                $(this).text('open all');
+                $(this).text('expand all');
             }
         });
 });

@@ -20,7 +20,7 @@ Let's start with a graphic version of "Hello World". This draws a blue circle:
 		ofBackground(0);
 		ofSetColor(0,0,255);
 		ofFill();
-		ofCircle(100, 100, 30);
+		ofDrawCircle(100, 100, 30);
 	}
 ~~~~
 
@@ -36,7 +36,7 @@ Once we set up our background and drawing color we draw a small circle with a ra
 
 As you may notice, `x` and `y` coordinates are setup in a way that the `0,0` position it's the top left corner.
 
-So if we have a `1024,768` window and we want to draw something on the middle we can do something like: `ofCircle(1024/2, 768/2, 30);`. What happens if the windows is resized? The circle is no longer centered because we used "hardcoded" values.
+So if we have a `1024,768` window and we want to draw something on the middle we can do something like: `ofDrawCircle(1024/2, 768/2, 30);`. What happens if the windows is resized? The circle is no longer centered because we used "hardcoded" values.
 
 This is where some the oF methods `ofGetWindowWidth()` and `ofGetWindowHeight()` become very handy. These methods return the current values of the width and height of the windows. There are two similar functions named `ofGetScreenWidth()` and `ofGetScreenHeight()` that instead of returning the windows parameters the return the width and height of the entire screen.
 Let's use some of this new stuff we just learned about:
@@ -46,12 +46,12 @@ Let's use some of this new stuff we just learned about:
 		ofBackground(30,10,30);
 		ofSetColor(ofColor::blue);
 		ofFill();
-		ofCircle( ofGetWindowWidth()*0.5, ofGetWindowHeight()*0.5, 30);
+		ofDrawCircle( ofGetWindowWidth()*0.5, ofGetWindowHeight()*0.5, 30);
 	}
 ~~~~
 So, now when you resize the window this little blue world remains centered. Congratulations!!
 
-Now let's take a look at the "Graphics" section on  [www.openframeworks.cc/documentation/](http://www.openframeworks.cc/documentation/) . There you will find lots of other methods like `ofLine()`, `ofDrawRectangle()` that are related to drawing.
+Now let's take a look at the "Graphics" section on  [www.openframeworks.cc/documentation/](http://www.openframeworks.cc/documentation/) . There you will find lots of other methods like `ofDrawLine()`, `ofDrawRect()` that are related to drawing.
 
 In the documentation of openFrameworks you will notice that all the functions and classes have a consistent way of working. The more you try things and play with them sooner you will get this "oF style" and things will become pretty intuitive.
 
@@ -71,11 +71,11 @@ Two variables available to every openFrameworks application are `mouseX` and `mo
 		ofBackground(30,10,30);
 		ofSetColor(ofColor::blue);
 		ofFill();
-		ofCircle( mouseX, mouseY, 30);
+		ofDrawCircle( mouseX, mouseY, 30);
 	}
 ~~~~
 
-If you try to do the same with a rectangle ( `ofDrawRectangle(mouseX,mouseY, 30, 30);`) you will notice that the center of the rectangle it just don't fit with the mouse position. This is because by default, rectangles are draw from the top left corner.
+If you try to do the same with a rectangle ( `ofDrawRect(mouseX,mouseY, 30, 30);`) you will notice that the center of the rectangle it just don't fit with the mouse position. This is because by default, rectangles are draw from the top left corner.
 Fortunately we have options and can use `ofSetRectMode(OF_RECTMODE_CENTER);` to set the anchor point to the center of the shape.
 Probably every time you see something that starts with "OF_" and in all-caps it means that you are dealing with modes and pre-defined types. Feeling adventerous, explore using the auto-completion list of your IDE or options like  "Jump to definition".
 
@@ -89,12 +89,14 @@ Right now we are only working on the `draw()` methods and if we want some oF mag
 		void update();
 		void draw();
 
-		void keyPressed  (int key);
+		void keyPressed(int key);
 		void keyReleased(int key);
 		void mouseMoved(int x, int y );
 		void mouseDragged(int x, int y, int button);
 		void mousePressed(int x, int y, int button);
 		void mouseReleased(int x, int y, int button);
+		void mouseEntered(int x, int y);
+		void mouseExited(int x, int y);
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
@@ -112,7 +114,7 @@ Use the following code in `ofApp.cpp`:
 		// Smooth edges
 		ofEnableSmoothing();
 
-	    // Fixed framerate
+		// Fixed framerate
 		ofSetFrameRate(30);
 
 		// Initial x position of the ball
@@ -135,7 +137,7 @@ Use the following code in `ofApp.cpp`:
 		ofBackgroundGradient(ofColor::gray,ofColor(30,10,30), OF_GRADIENT_CIRCULAR);
 		ofSetColor(200,200,124);
 		ofFill();
-		ofCircle( xPos, yPos, 30);
+		ofDrawCircle( xPos, yPos, 30);
 	}
 ~~~~
 
@@ -178,34 +180,34 @@ This is exactly what a `.h` (header file) can be used for; a list of things that
 The `ball.h` file should look like:
 
 ~~~~{.cpp}
-	#ifndef ball_h
-	#define ball_h
+	#ifndef BALL_H
+	#define BALL_H
 
 	#include "ofMain.h"
 
 	class Ball {
 	public:
-    		// Constructor
-    		Ball();
+		// Constructor
+		Ball();
 
-    		// Methods
-    		void moveTo();
-    		void draw();
+		// Methods
+		void moveTo();
+		void draw();
 
-    		// Properties
-    		int x;
-    		int y;
-    		ofColor color;
+		// Properties
+		int x;
+		int y;
+		ofColor color;
 	};
 	#endif
 ~~~~
 
-Congratulations, you just created your own class! There are couple of new things are going on here. The first 2 lines (`#ifndef..` prevent the compiler from using (so called "including") the file multiple times. This is a standard practice in C++ and you probably want to leave things the way they are. You are basically saying, "Hey compiler, don't compile this stuff multiple times, and for compiling you will need ofMain.h header file.". Including `ofMain.h` will give you access to all the methods and objects of openFrameworks. This is what makes your code oF-based and not just C++ code, and is where the magic happens.
+Congratulations, you just created your own class! There are couple of new things are going on here. The first 2 lines (`#ifndef..` prevent the compiler from using (so called "including") the file multiple times; this is a standard practice in C++ and you probably want to leave things the way they are. You are basically saying, "Hey compiler, only compile this stuff if the variable (a `constant` to be precise) with the name `BALL_H` does NOT exist, and for compiling you will need the ofMain.h header file.". Then the `BALL_H` variable is created and all the code up to the `#ENDIF` at the bottom will be compliled. The next time this file is called, the `BALL_H` variable is already there and so the class will not be compiled again, Including `ofMain.h` will give you access to all the methods and objects of openFrameworks. This is what makes your code oF-based and not just C++ code, and is where the magic happens.
 
-To create a object you need to call the class's constructor. The constructor `Ball()` is the first thing that will execute and create the Ball. It's like when you write `int i;` and 'i' automatically is initially set to zero. int's constructor took care of that for you.
+To create a object you need to call the class's constructor. The constructor `Ball()` is the first thing that will execute and create the Ball. It's like when you write `int i;` and 'i' automatically is initially set to zero: int's constructor took care of that for you.
 The properties should look familiar at this point but a new method is the `draw()` function.
 
-IMPORTANT: Take a look to the `};` at the end of the class. That's super important! Without it you will get annoying errors that are difficult track down.
+IMPORTANT: Take a look to the `};` at the end of the class. That's super important! Without it you will get annoying errors that are difficult to track down.
 
 Inside the file `ball.cpp` let's prepare everything:
 
@@ -230,7 +232,7 @@ Inside the file `ball.cpp` let's prepare everything:
 	void Ball::draw(){
 		ofSetColor(color);
 		ofFill();
-		ofCircle( x, y, 30);
+		ofDrawCircle( x, y, 30);
 	}
 ~~~~
 
@@ -251,24 +253,26 @@ The last step for adding a Class is to add it to `ofApp.h` with a `#include "bal
 	#include "ball.h" // Add this
 
 	class ofApp : public ofBaseApp{
-  	public:
-    		void setup();
-    		void update();
-    		void draw();
+	public:
+		void setup();
+		void update();
+		void draw();
 
-    		void keyPressed  (int key);
-    		void keyReleased(int key);
-    		void mouseMoved(int x, int y );
-    		void mouseDragged(int x, int y, int button);
-    		void mousePressed(int x, int y, int button);
-    		void mouseReleased(int x, int y, int button);
-    		void windowResized(int w, int h);
-    		void dragEvent(ofDragInfo dragInfo);
-    		void gotMessage(ofMessage msg);
+		void keyPressed(int key);
+		void keyReleased(int key);
+		void mouseMoved(int x, int y );
+		void mouseDragged(int x, int y, int button);
+		void mousePressed(int x, int y, int button);
+		void mouseReleased(int x, int y, int button);
+		void mouseEntered(int x, int y);
+		void mouseExited(int x, int y);
+		void windowResized(int w, int h);
+		void dragEvent(ofDragInfo dragInfo);
+		void gotMessage(ofMessage msg);
 
-    		Ball theBall;	// Replaces the previous variables
-							// with a new object that contains
-							// the previous information
+		Ball theBall;	// Replaces the previous variables
+						// with a new object that contains
+						// the previous information
 	};
 ~~~~
 
@@ -303,12 +307,12 @@ So now we have a general object that´s automatically is created with some rando
 This means that every time we want a new Ball we just create it and draw it! Is that not awesome?
 
 One last thing to talk about is how you can pass some parameters to an object method. If we look at the `ofApp::update()` code we are changing the `x` and `y` properties by using the dot-syntax `.`. That's not bad, but it would make things more readable and intuitive if it looked like `myBall.moveTo(mouseX,mouseY)`.
-So let´s change the methods part of `ball.h` 
+So let´s change the methods part of `ball.h`
 
 ~~~~{.cpp}
-    // Methods
-    void moveTo(int _xDestiny, int _yDestiny);
-    void draw();
+	// Methods
+	void moveTo(int _xDestiny, int _yDestiny);
+	void draw();
 ~~~~
 
 and `ball.cpp`.
@@ -324,7 +328,7 @@ And then use it like like this in the ofApp project
 
 ~~~~{.cpp}
 	void ofApp::update(){
-    		theBall.moveTo(mouseX,mouseY);
+			theBall.moveTo(mouseX,mouseY);
 	}
 ~~~~
 
@@ -332,27 +336,27 @@ Since the properties `Ball::x` and `Ball::y` are not accessed directly from the 
 to make them "private" in the class defintion (file `ball.h`).
 
 ~~~~{.cpp}
-	#ifndef ball_h
-	#define ball_h
+	#ifndef BALL_H
+	#define BALL_H
 
 	#include "ofMain.h"
 
 	class Ball {
-    private:
-    		// Properties
-    		int x;
-    		int y;
+	private:
+		// Properties
+		int x;
+		int y;
 
 	public:
-    		// Constructor
-    		Ball();
+		// Constructor
+		Ball();
 
-    		// Methods
-    		void moveTo();
-    		void draw();
+		// Methods
+		void moveTo();
+		void draw();
 
-    		// Properties
-    		ofColor color;
+		// Properties
+		ofColor color;
 	};
 	#endif
 ~~~~

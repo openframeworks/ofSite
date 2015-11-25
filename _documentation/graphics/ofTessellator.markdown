@@ -5,10 +5,26 @@
 _visible: True_
 _advanced: False_
 _istemplated: False_
+_extends: _
 -->
 
 ##InlineDescription
 
+\brief
+ofTessellator exists for one purpose: to turn ofPolylines into ofMeshes so
+that they can be more efficiently displayed using OpenGL. The ofPath class
+uses tessellation to turn its paths into openGL-ready shapes under the hood,
+so if you're interested in just having ofPolyline instances converted to
+meshes, it's handled for you by ofPath. If you're interested in using the
+tessellation multiple polylines at a time, then you'll find what you need in
+the ofTessellator. Many shapes can't be drawn by OpenGL without tessellation,
+but by breaking them into triangles or quads, they can be drawn easily.
+
+An example: The fairly simple shape shown on the left needs to be broken
+into triangles to be displayed, an example of how this might be done is
+shown on the right.
+
+![tessellation](graphics/tessellation.jpg)
 
 
 
@@ -56,9 +72,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -94,9 +108,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -126,8 +138,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
-
+Copy constructor to copy properties from one tessellator to another.
 
 
 
@@ -135,10 +146,7 @@ _inlined_description: _
 
 _description: _
 
-
 Copy constructor to copy properties from one tessellator to another. 
-
-
 
 
 
@@ -166,8 +174,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
-
+Operator overloading to copy properties from one tessellator to another.
 
 
 
@@ -175,10 +182,7 @@ _inlined_description: _
 
 _description: _
 
-
 Operator overloading to copy properties from one tessellator to another. 
-
-
 
 
 
@@ -212,9 +216,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -250,9 +252,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -282,8 +282,8 @@ _advanced: False_
 
 _inlined_description: _
 
-
-
+Tessellates a vector of ofPolyline instances into a single
+ofMesh instance using the winding mode set in ofPolyWindingMode.
 
 
 
@@ -291,10 +291,7 @@ _inlined_description: _
 
 _description: _
 
-
 Tessellates a vector of ofPolyline instances into a single ofMesh instance using the winding mode set in ofPolyWindingMode.
-
-
 
 
 
@@ -322,8 +319,8 @@ _advanced: False_
 
 _inlined_description: _
 
-
-
+Tessellates a ofPolyline instance into a single ofMesh instance
+using the winding mode set in ofPolyWindingMode.
 
 
 
@@ -331,10 +328,7 @@ _inlined_description: _
 
 _description: _
 
-
 Tessellates a ofPolyline instance into a single ofMesh instance using the winding mode set in ofPolyWindingMode.
-
-
 
 
 
@@ -362,8 +356,8 @@ _advanced: False_
 
 _inlined_description: _
 
-
-
+Tessellates a vector of ofPolyline instances into vector of
+ofPolyline instances using the winding mode set in ofPolyWindingMode.
 
 
 
@@ -371,10 +365,7 @@ _inlined_description: _
 
 _description: _
 
-
 Tessellates a vector of ofPolyline instances into vector of ofPolyline instances using the winding mode set in ofPolyWindingMode.
-
-
 
 
 
@@ -402,15 +393,13 @@ _advanced: False_
 
 _inlined_description: _
 
-
-
+Tessellate multiple polylines into a single polyline.
 
 
 
 
 
 _description: _
-
 
 Tessellate multiple polylines into a single polyline.
 
@@ -420,8 +409,6 @@ ofPolyline destination;
 // ... fill vec
 tess.performTessellation(destination, OF_POLY_WINDING_ODD, sources, true ); // true is for 2d
 ~~~~
-
-
 
 
 
@@ -455,9 +442,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -485,8 +470,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -510,8 +502,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 

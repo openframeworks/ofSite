@@ -5,10 +5,12 @@
 _visible: True_
 _advanced: True_
 _istemplated: False_
+_extends: ofBaseVideo, ofBaseDraws, ofBaseHasTexturePlanes, ofBaseHasPixels_
 -->
 
 ##InlineDescription
 
+A base class representing a drawable video source.
 
 
 
@@ -44,15 +46,13 @@ _advanced: False_
 
 _inlined_description: _
 
-
-
+Destroy the ofBaseVideoDraws.
 
 
 
 
 
 _description: _
-
 
 
 
