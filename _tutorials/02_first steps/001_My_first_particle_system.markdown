@@ -104,7 +104,6 @@ Right now we are only working on the `draw()` methods and if we want some oF mag
 		float xPos;
 		float yPos;
 	};
-
 ~~~~
 
 We are going to use these two variables to store the last position of the ball and progressively move the ball towards the mouse.

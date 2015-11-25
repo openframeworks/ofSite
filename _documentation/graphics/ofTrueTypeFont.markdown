@@ -852,7 +852,7 @@ ofRectangle rect = franklinBook.getStringBoundingBox(tempString, 0,0);
 //in draw
 
 ofSetColor(0xcccccc);
-ofRect(rect.x, rect.y, rect.width, rect.height);
+ofDrawRectangle(rect.x, rect.y, rect.width, rect.height);
 ~~~~
 
 

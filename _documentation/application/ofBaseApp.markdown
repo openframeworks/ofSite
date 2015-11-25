@@ -136,7 +136,7 @@ This function gets called regularly just after update. It's where you draw thing
 void draw(){
 	ofSetColor(255,255,255);
 	ofNoFill();
-	ofRect(20,20,100,100);
+	ofDrawRectangle(20,20,100,100);
 }
 ~~~~
 
@@ -1520,7 +1520,7 @@ void update(){
 }
 
 void draw(){
-	ofRect(xPos, 30,10,10);
+	ofDrawRectangle(xPos, 30,10,10);
 }
 ~~~~
 
