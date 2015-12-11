@@ -59,7 +59,7 @@ void draw() {
     // Begin rendering from the camera's perspective.
     camera.begin();
 
-    ofLine(0, 0, ofGetWidth(), ofGetHeight());
+    ofDrawLine(0, 0, ofGetWidth(), ofGetHeight());
     // Additional rendering ...
 
     // End rendering form the camera's perspective.

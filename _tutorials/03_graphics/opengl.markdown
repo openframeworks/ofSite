@@ -39,7 +39,7 @@ OpenGL’s main job is to help a programmer create code that creates points, lin
 ~~~~
 
 Now, what's going on in there looks pretty weird, but it's actually fairly straight forward. Don't worry too much about the calls that are going on below, just check out the notes alongside them because, while the methods and variable names are kinda tricky, the fundamental ideas are not.
-So, we've got two points representing the beginning and end of our line, so we set those with the values we passed into ofLine():
+So, we've got two points representing the beginning and end of our line, so we set those with the values we passed into ofDrawLine():
 
 ~~~~{.cpp}
 	linePoints[0].set(x1,y1,z1);

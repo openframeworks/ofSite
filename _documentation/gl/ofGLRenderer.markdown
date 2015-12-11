@@ -1435,7 +1435,7 @@ _inlined_description: _
 
 _description: _
 
-See [ofEllipse](ofGraphics.html#show_ofEllipse)
+See [ofDrawEllipse](ofGraphics.html#show_ofDrawEllipse)
 
 
 

@@ -310,7 +310,7 @@ void ofApp::setup(){
     }
 
     ofSetColor(54,54,54);
-    ofEllipse(100,100,200,200);
+    ofDrawEllipse(100,100,200,200);
     if( oneShot ){
         ofEndSaveScreenAsPDF();
         oneShot = false;
@@ -2831,7 +2831,7 @@ void ofApp::setup(){
     }
 
     ofSetColor(54,54,54);
-    ofEllipse(100,100,200,200);
+    ofDrawEllipse(100,100,200,200);
     if( oneShot ){
         ofEndSaveScreenAsPDF();
         oneShot = false;
@@ -4001,7 +4001,7 @@ void ofApp::draw(){
     ofPushStyle();           // push the current style for use later
     ofFill();
     ofsetColor(255,0,0);
-    ofEllipse(30,10,40,40);
+    ofDrawEllipse(30,10,40,40);
     ofPopStyle();   // recall the pushed style
 }
 ~~~~
@@ -4156,7 +4156,7 @@ void ofApp::draw(){
     ofPushStyle();  // push the current style for use later
     ofFill();
     ofSetColor(255,0,0);
-    ofEllipse(30,10,40,40);
+    ofDrawEllipse(30,10,40,40);
     ofPopStyle();   // recall the pushed style
 }
 ~~~~
@@ -5229,13 +5229,13 @@ void ofApp::draw(){
 
 _description: _
 
-ofSetLineWidth sets the width of the ofLines called after.
+ofSetLineWidth sets the width of the ofDrawLines called after.
 ~~~~{.cpp}
 void ofApp::draw(){
-    ofSetLineWidth(1);      // set line width to 1
-    ofLine(10,10,100,100);  // draw thin line
-    ofSetLineWidth(10);     // set line width to 10
-    ofLine(10,100,100,10);  // draw fat line
+    ofSetLineWidth(1);          // set line width to 1
+    ofDrawLine(10,10,100,100);  // draw thin line
+    ofSetLineWidth(10);         // set line width to 10
+    ofDrawLine(10,100,100,10);  // draw fat line
 }
 ~~~~
 

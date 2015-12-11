@@ -363,7 +363,7 @@ Warning: This is not currently implemented in modern OF renderers.
 
 _description: _
 
-lineWidth contains information about the width of the line for our ofLine.
+lineWidth contains information about the width of the line for our ofDrawLine.
 
 
 

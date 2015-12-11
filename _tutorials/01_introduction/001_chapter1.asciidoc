@@ -379,11 +379,11 @@ All The Shapes You Can Handle
 
 Of course, oF can draw more than circles.
 
-. link:/documentation/graphics/ofGraphics.html#show_ofRect[ofRect] draws a rectangle. arguments are (x, y, width, height)
-. link:/documentation/graphics/ofGraphics.html#show_ofTriangle[ofTriangle] draws a triangle. arguments are the coordinates of the three points: (x1, y1, x2, y2, x3, y3)
-. link:/documentation/graphics/ofGraphics.html#show_ofLine[ofLine] draws a line. arguments are the start coordinate and the end coordinate (x1, y1, x2, y2)
-. link:/documentation/graphics/ofGraphics.html#show_ofEllipse[ofEllipse] arguments are: (x, y, width, height)
-. link:/documentation/graphics/ofGraphics.html#show_ofCurve[ofCurve] Draws a curve from point (x1, y1) to point (x2, y2). The curve is shaped by the two control points (x0,y0) and (x3,y3).
+. link:/documentation/graphics/ofGraphics.html#show_ofDrawRect[ofDrawRect] draws a rectangle. arguments are (x, y, width, height)
+. link:/documentation/graphics/ofGraphics.html#show_ofDrawTriangle[ofDrawTriangle] draws a triangle. arguments are the coordinates of the three points: (x1, y1, x2, y2, x3, y3)
+. link:/documentation/graphics/ofGraphics.html#show_ofDrawLine[ofDrawLine] draws a line. arguments are the start coordinate and the end coordinate (x1, y1, x2, y2)
+. link:/documentation/graphics/ofGraphics.html#show_ofDrawEllipse[ofDrawEllipse] arguments are: (x, y, width, height)
+. link:/documentation/graphics/ofGraphics.html#show_ofDrawCurve[ofDrawCurve] Draws a curve from point (x1, y1) to point (x2, y2). The curve is shaped by the two control points (x0,y0) and (x3,y3).
 
 [NOTE]
 =====================================================================
