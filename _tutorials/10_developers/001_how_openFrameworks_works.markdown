@@ -6,7 +6,7 @@ author: Arturo Castro
 author_site: http://arturocastro.net
 ---
 
-openFrameworks is an open source C++ toolkit designed to assist the creative process by providing a simple and intuitive framework for experimentation. The toolkit is designed to work as a general purpose glue, and wraps together several commonly used libraries. 
+openFrameworks is an open source C++ toolkit designed to assist the creative process by providing a simple and intuitive framework for experimentation. The toolkit is designed to work as a general purpose glue, and wraps together several commonly used libraries.
 
 openFrameworks uses a few patterns so it's easy to understand how things work. Once you understand what these patterns are, it should be easier to use any of the functionality in openFrameworks.
 
@@ -66,7 +66,7 @@ void ofApp::update(){
 }
 
 void ofApp::draw(){
-    ofCircle(x,120,30);
+    ofDrawCircle(x,120,30);
 }
 ~~~~
 
@@ -123,7 +123,7 @@ void ofApp::setup(){
     pixels1.set(0);
     pixels2 = pixels1;
     pixels2.setColor(10,10,ofColor(255,255,255));
-    
+
     tex1.allocate(640,480,GL_RGB);
     tex2.allocate(640,480,GL_RGB);
     tex1.loadData(pixels1);
@@ -180,5 +180,4 @@ These are classes that represent types in openFrameworks like ofRectangle, ofVec
 
 ## Functions
 
-Some functionality in openFrameworks is provided through plain C functions. This are usually utility functions like ofToString(), ofRandom(), ofDrawBitmapString() and simple draw functions like ofCircle(), ofDrawRectangle().
-
+Some functionality in openFrameworks is provided through plain C functions. This are usually utility functions like ofToString(), ofRandom(), ofDrawBitmapString() and simple draw functions like ofDrawCircle(), ofDrawRectangle().

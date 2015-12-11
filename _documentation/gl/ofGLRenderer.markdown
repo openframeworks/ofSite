@@ -1327,7 +1327,7 @@ _inlined_description: _
 
 _description: _
 
-See [ofCircle](ofGraphics.html#show_ofCircle)
+See [ofDrawCircle](ofGraphics.html#show_ofDrawCircle)
 
 
 
@@ -6182,4 +6182,3 @@ _description: _
 
 
 <!----------------------------------------------------------------------------->
-

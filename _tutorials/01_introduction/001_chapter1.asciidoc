@@ -102,7 +102,7 @@ Click on either "Open an existing project" or press Ctrl+O to open a file browse
 
 image::images/oF_codeblocks_2.png["file browser for graphicsExample Code::Blocks workspace",width="400"]
 
-The workspace is needed so that the compiler can find all relevant libraries. If the workspace is not loaded, the environment will lack crucial information for creating the final executable file. After the workspace is loaded successfully, 
+The workspace is needed so that the compiler can find all relevant libraries. If the workspace is not loaded, the environment will lack crucial information for creating the final executable file. After the workspace is loaded successfully,
 
 image::images/oF_codeblocks_3.png["graphicsExample Code::Blocks workspace",width="800"]
 
@@ -124,12 +124,12 @@ You don't actually need an IDE to build the oF examples since all tools necessar
 cd examples/graphics/graphicsExample
 ----
 
-Now run 
+Now run
 [source,bash]
 ----
 $ make
 $ make run
----- 
+----
 to build and execute the code. In the end you should see the same with the methods pointed out above.
 
 image::images/graphicsExample03.png["graphicsExample, running",width="800"]
@@ -280,12 +280,12 @@ But enough with the reading. Let's see these things in action.
 Making a Mark
 ~~~~~~~~~~~~~
 
-We will start by drawing a simple circle in our gray window using the ofCircle function. Type `ofCircle(200, 200, 60);` on the blank line inside the draw() function so that your draw function look like this:
+We will start by drawing a simple circle in our gray window using the ofDrawCircle function. Type `ofDrawCircle(200, 200, 60);` on the blank line inside the draw() function so that your draw function look like this:
 
 [source,cpp]
 ---------------------------------------------------------------------
 void testApp::draw(){
-    ofCircle(200, 300, 60);
+    ofDrawCircle(200, 300, 60);
 }
 ---------------------------------------------------------------------
 
@@ -302,7 +302,7 @@ Congratulations!  You just made something appear on the screen! It's all downhil
 
 But what did we just do?
 
-link:/documentation/graphics/ofGraphics.html#show_ofCircle[ofCircle] is a function that comes with openFrameworks (hence the 'of' prefix). You can invoke the ofCircle function inside your draw function as many times as you'd like. The numbers inside of the parenthesis after 'ofCircle' are called https://en.wikipedia.org/wiki/Parameter_(computer_programming)[arguments]. They determine exactly what the function does. They answer the questions: "okay, you want to draw a circle, but where? and how big?" Functions can take any number of arguments, always separated by commas, but ofCircle takes 3: an x coordinate, a y coordinate, and a radius. There are a few things you need to know to make sense of these arguments:
+link:/documentation/graphics/ofGraphics.html#show_ofDrawCircle[ofDrawCircle] is a function that comes with openFrameworks (hence the 'of' prefix). You can invoke the ofDrawCircle function inside your draw function as many times as you'd like. The numbers inside of the parenthesis after 'ofDrawCircle' are called https://en.wikipedia.org/wiki/Parameter_(computer_programming)[arguments]. They determine exactly what the function does. They answer the questions: "okay, you want to draw a circle, but where? and how big?" Functions can take any number of arguments, always separated by commas, but ofDrawCircle takes 3: an x coordinate, a y coordinate, and a radius. There are a few things you need to know to make sense of these arguments:
 
 . All measurements in openFrameworks are in pixels. By saying that our circle has a radius of 60, that means that it will take up PI*60^2^ pixels total.
 . This may seem obvious, but the coordinates refer to the center of the circle. Other shapes (such as rectangles) use the upper left corner.
@@ -310,7 +310,7 @@ link:/documentation/graphics/ofGraphics.html#show_ofCircle[ofCircle] is a functi
 
 [NOTE]
 =====================================================================
-The order of the arguments is important. The first argument to ofCircle will always mean "x coordinate" and the third will always mean "radius".
+The order of the arguments is important. The first argument to ofDrawCircle will always mean "x coordinate" and the third will always mean "radius".
 =====================================================================
 
 [NOTE]
@@ -318,18 +318,18 @@ The order of the arguments is important. The first argument to ofCircle will alw
 There are some functions (such as link:/documentation/graphics/ofGraphics.html#show_ofFill[ofFill], which simply tells oF to fill shapes that are drawn) that have 0 arguments, but you still have to put parenthesis after them.
 =====================================================================
 
-If you hadn't just read about it here, you could have found information about ofCircle on the link:/documentation/[openFrameworks documentation page], which you will be using more as we move on.
+If you hadn't just read about it here, you could have found information about ofDrawCircle on the link:/documentation/[openFrameworks documentation page], which you will be using more as we move on.
 
 Adding some Color
 ~~~~~~~~~~~~~~~~~
 
-Your circle is great, but kind of boring. What if we want to introduce some color to our application? To do that, we need the the link:/documentation/graphics/ofGraphics.html#show_ofSetColor[ofSetColor] function. Try adding `ofSetColor(255, 0, 255);` right above the ofCircle line, so that your draw function looks like this:
+Your circle is great, but kind of boring. What if we want to introduce some color to our application? To do that, we need the the link:/documentation/graphics/ofGraphics.html#show_ofSetColor[ofSetColor] function. Try adding `ofSetColor(255, 0, 255);` right above the ofDrawCircle line, so that your draw function looks like this:
 
 [source,cpp]
 ---------------------------------------------------------------------
 void testApp::draw(){
     ofSetColor(255, 0, 255);
-    ofCircle(200, 300, 60);
+    ofDrawCircle(200, 300, 60);
 }
 ---------------------------------------------------------------------
 
@@ -337,23 +337,23 @@ Now try running your application.
 
 image:images/MyFirstProject02.png["A purple circle", width="500"]
 
-Similar to ofCircle, the ofSetColor function takes 3 arguments, but the numbers have very different meanings. If you look at the documentation for link:/documentation/graphics/ofGraphics.html#show_ofSetColor[ofSetColor], you'll notice that they arguments actually represent the red, green, and blue values for the color that you want to use, on a scale of 0-255. The red, green and blue make up the https://en.wikipedia.org/w/index.php?title=RGB_color_model[RGB color model or color space]. So when we typed `ofSetColor(255, 0, 255);`, we were saying "until further notice, draw everything with 100% red, 0 green, and 100% blue."
+Similar to ofDrawCircle, the ofSetColor function takes 3 arguments, but the numbers have very different meanings. If you look at the documentation for link:/documentation/graphics/ofGraphics.html#show_ofSetColor[ofSetColor], you'll notice that they arguments actually represent the red, green, and blue values for the color that you want to use, on a scale of 0-255. The red, green and blue make up the https://en.wikipedia.org/w/index.php?title=RGB_color_model[RGB color model or color space]. So when we typed `ofSetColor(255, 0, 255);`, we were saying "until further notice, draw everything with 100% red, 0 green, and 100% blue."
 
 [TIP]
 =====================================================================
 Try changing the values to get different color variations.
 =====================================================================
 
-This last point is important: when we call "ofSetColor", it's like picking a crayon out of a box. Everything that gets drawn after that (below that line of code) will be drawn in that color until we call ofSetColor again. So if we want to draw another circle on the screen, we could simply call the ofCircle function again:
+This last point is important: when we call "ofSetColor", it's like picking a crayon out of a box. Everything that gets drawn after that (below that line of code) will be drawn in that color until we call ofSetColor again. So if we want to draw another circle on the screen, we could simply call the ofDrawCircle function again:
 
 
 [source,cpp]
 ---------------------------------------------------------------------
 void testApp::draw(){
     ofSetColor(255, 0, 255);
-    ofCircle(200, 300, 60);
+    ofDrawCircle(200, 300, 60);
 
-    ofCircle(500, 500, 100);
+    ofDrawCircle(500, 500, 100);
 }
 ---------------------------------------------------------------------
 
@@ -364,10 +364,10 @@ But if we wanted that circle to be a different color, we would have to call ofSe
 ---------------------------------------------------------------------
 void testApp::draw(){
     ofSetColor(255, 0, 255);
-    ofCircle(200, 300, 60);
+    ofDrawCircle(200, 300, 60);
 
     ofSetColor(0, 255, 255);
-    ofCircle(500, 500, 100);
+    ofDrawCircle(500, 500, 100);
 }
 ---------------------------------------------------------------------
 
@@ -402,9 +402,9 @@ Drawing static shapes is great, but what if we want our shapes to move around th
 
 We mentioned earlier that the draw() function is called repeatedly after the program is started. This is very important because it is how we achieve animation in openFrameworks. It might be a little unintuitive if you are used to Flash or even something like stop-frame animation, where you can add something to a "stage" and then re-position it as needed. This is *not* how openFrameworks (or most computer animation) works. Actually, openFrameworks is more like traditional (we're talking old-school Disney/Bambi) animation, where we must redraw the frame completely every single "frame". In the parlance of openFrameworks, every time the draw() function is called is one "frame". So, in actuality, when you run the program above and see your purple circle, what you are actually looking at is the circle being drawn, then cleared (a single frame), and then drawn, then cleared, repeatedly. It's just happening so fast that it appears to stay where it is.
 
-In the example above, when we draw our circle, we use two numbers to tell the ofCircle function where to draw the circle within the window. So it follows that, if we want the circle to appear to move, we need to change these numbers over time. Perhaps the first time draw() happens, the circle is drawn at (200, 300), but in the next time, we want it to be one pixel to the right (201, 300), and then another pixel to the right (202, 300), and so on.
+In the example above, when we draw our circle, we use two numbers to tell the ofDrawCircle function where to draw the circle within the window. So it follows that, if we want the circle to appear to move, we need to change these numbers over time. Perhaps the first time draw() happens, the circle is drawn at (200, 300), but in the next time, we want it to be one pixel to the right (201, 300), and then another pixel to the right (202, 300), and so on.
 
-In `C++`, and in programming in general, whenever you have a value that you want to change, you create a "variable". Variables come in different shapes and sizes depending on what they represent, such as decimal numbers, whole numbers, a letter, or a bunch of letters. In this case, we want to create variables that can stand in for coordinates in our ofCircle function, so we will use 2 **int**s.
+In `C++`, and in programming in general, whenever you have a value that you want to change, you create a "variable". Variables come in different shapes and sizes depending on what they represent, such as decimal numbers, whole numbers, a letter, or a bunch of letters. In this case, we want to create variables that can stand in for coordinates in our ofDrawCircle function, so we will use 2 **int**s.
 
 Put this at the top of your testApp.cpp, right under the `#include` line, so that your file starts like this:
 
@@ -432,17 +432,17 @@ void testApp::setup(){
 
 Perfect!  So, to recap, we now have 2 variables, 'myCircleX', and 'myCircleY', and we have just "initialized" them, or populated with an "initial" value. Notice that, just like any mathematical equation, we use the equals sign (=) to assign the number 300 to 'myCircleX'. In `C++` parlance, the equals sign is known as the "assignment operator", because it's used to assign a value to a variable. The "assignment" always flows from right to left; that is, the value that is being assigned is on the right and thing that is receiving the assignment is on the left.
 
-Now we can edit our ofCircle call a bit :
+Now we can edit our ofDrawCircle call a bit :
 
 [source,cpp]
 ---------------------------------------------------------------------
 void testApp::draw(){
     ofSetColor(255, 0, 255);
-    ofCircle(myCircleX, myCircleY, 60);
+    ofDrawCircle(myCircleX, myCircleY, 60);
 }
 ---------------------------------------------------------------------
 
-Notice that we are still passing 3 arguments to the ofCircle function. But now, instead of the old "hard-coded" (200, 300) values that we can't change, we are letting the variables that we made stand in.
+Notice that we are still passing 3 arguments to the ofDrawCircle function. But now, instead of the old "hard-coded" (200, 300) values that we can't change, we are letting the variables that we made stand in.
 
 If you run your app now, you shouldn't notice any change. That's because we haven't gotten around to changing the variables yet. So let's do it.
 
@@ -454,7 +454,7 @@ void testApp::draw(){
     myCircleX = myCircleX + 1;
 
     ofSetColor(255, 0, 255);
-    ofCircle(myCircleX, myCircleY, 60);
+    ofDrawCircle(myCircleX, myCircleY, 60);
 }
 ---------------------------------------------------------------------
 
@@ -480,7 +480,7 @@ void testApp::update(){
 
 void testApp::draw(){
     ofSetColor(255, 0, 255);
-    ofCircle(myCircleX, myCircleY, 60);
+    ofDrawCircle(myCircleX, myCircleY, 60);
 }
 ---------------------------------------------------------------------
 
@@ -652,7 +652,7 @@ The fact that the 'key' is supplied as an 'int' may seem a bit strange. Perhaps 
 
 image:images/ascii_table.jpg["ASCII Table"]
 
-On the right of each column in red, you will see a key on your keyboard. Under the corresponding "Dec" (decimal=base 10) column, you will see the number that you will receive in the key functions. 
+On the right of each column in red, you will see a key on your keyboard. Under the corresponding "Dec" (decimal=base 10) column, you will see the number that you will receive in the key functions.
 
 [TIP]
 =====================================================================
@@ -686,7 +686,7 @@ void testApp::update(){
 
 void testApp::draw(){
     ofSetColor(255, 0, 255);
-    ofCircle(myCircleX, myCircleY, 60);
+    ofDrawCircle(myCircleX, myCircleY, 60);
 }
 ---------------------------------------------------------------------
 
@@ -840,7 +840,7 @@ void testApp::update(){
 
 void testApp::draw(){
     ofSetColor(255, 0, 255);
-    ofCircle(myCircleX, myCircleY, myCircleRadius);
+    ofDrawCircle(myCircleX, myCircleY, myCircleRadius);
 }
 ---------------------------------------------------------------------
 
@@ -913,7 +913,7 @@ But there will be times when you do need to have a variable that can hold a frac
 
 image:images/variable-types.png["Variable Types"]
 
-So, as you can see, our basic integer takes up 4 bytes in memory. This is a finite amount of memory, and therefore there is limited (but pretty huge!) range of values that it can hold: namely, -2,147,483,648 to 2,147,483,647. If you need to store higher (or lower) numbers, you'd have to use a 'long int', which (contrary to the diagram) can go up to 9,223,372,036,854,775,807 and down to -9,223,372,036,854,775,808. 
+So, as you can see, our basic integer takes up 4 bytes in memory. This is a finite amount of memory, and therefore there is limited (but pretty huge!) range of values that it can hold: namely, -2,147,483,648 to 2,147,483,647. If you need to store higher (or lower) numbers, you'd have to use a 'long int', which (contrary to the diagram) can go up to 9,223,372,036,854,775,807 and down to -9,223,372,036,854,775,808.
 
 It may be unintuitive to make such distinctions when dealing with variables. A number is a number, right? Why differentiate between a decimal number and a whole number? The reason has to do with how values are stored in your computer's memory. Ultimately, by giving the programmer the responsibility of declaring what range and precision their variables need, the program can run that much more efficiently.
 
@@ -953,19 +953,19 @@ Loops
 
 Loops are perhaps one of the most important things to be comfortable with as a programmer. They are, arguably, the main advantage of using a computer: doing something over and over again very rapidly is the definition of what a computer is good at. There are a few different kinds of loops, and it is important to be familiar with all of them.
 
-Suppose you want to a circle every 20 pixels across your window. One option would be to copy and paste ofCircle commands like this:
+Suppose you want to a circle every 20 pixels across your window. One option would be to copy and paste ofDrawCircle commands like this:
 
 [source,cpp]
 ---------------------------------------------------------------------
 void testApp::draw(){
-    ofCircle(20, 300, 10);
-    ofCircle(40, 300, 10);
-    ofCircle(60, 300, 10);
-    ofCircle(80, 300, 10);
-    ofCircle(100, 300, 10);
-    ofCircle(120, 300, 10);
+    ofDrawCircle(20, 300, 10);
+    ofDrawCircle(40, 300, 10);
+    ofDrawCircle(60, 300, 10);
+    ofDrawCircle(80, 300, 10);
+    ofDrawCircle(100, 300, 10);
+    ofDrawCircle(120, 300, 10);
     // repeat
-    ofCircle(1020, 300, 10);
+    ofDrawCircle(1020, 300, 10);
 }
 ---------------------------------------------------------------------
 
@@ -976,13 +976,13 @@ That would be over 50 lines of code - ugh. And what if you decided you wanted th
 void testApp::draw(){
     int x = 10;
 
-    ofCircle(x, 300, 10);
+    ofDrawCircle(x, 300, 10);
     x += 20;
-    ofCircle(x, 300, 10);
+    ofDrawCircle(x, 300, 10);
     x += 20;
-    ofCircle(x, 300, 10);
+    ofDrawCircle(x, 300, 10);
     x += 20;
-    ofCircle(x, 300, 10);
+    ofDrawCircle(x, 300, 10);
     x += 20;
     // copy and paste 47 more times
 }
@@ -1009,7 +1009,7 @@ void testApp::draw(){
     int i = 0;
     int x = 20;
     do {
-        ofCircle(x, 300, 10);
+        ofDrawCircle(x, 300, 10);
         x+=20;
         i++;
     } while( i < 51 );
@@ -1049,7 +1049,7 @@ We could actually make this even a bit more efficient and make the 'x' variable 
 ---------------------------------------------------------------------
 int x = 20;
 do {
-    ofCircle(x, 300, 10);
+    ofDrawCircle(x, 300, 10);
     x+=20;
 } while(x < ofGetWidth());
 ---------------------------------------------------------------------
@@ -1067,7 +1067,7 @@ int i = 0;
 int x = 20;
 while(i < 51)
 {
-    ofCircle(x, 300, 10);
+    ofDrawCircle(x, 300, 10);
     x+=20;
     i++;
 }
@@ -1079,7 +1079,7 @@ The only difference between a do...while loop and a while loop is that the the c
 ---------------------------------------------------------------------
 int x = 10;
 do {
-    ofCircle(x, 300, 10);
+    ofDrawCircle(x, 300, 10);
     x += 20;
 } while( x < mouseX );
 ---------------------------------------------------------------------
@@ -1091,12 +1091,12 @@ Notice how we've changed the condition so that the circles will be drawn until '
 int x = 10;
 while( x < mouseX )
 {
-    ofCircle(x, 300, 10);
+    ofDrawCircle(x, 300, 10);
     x += 20;
 }
 ---------------------------------------------------------------------
 
-Now, if you move your mouse beyond the left side of the window, nothing at all is drawn. This is because before the body of the loop is executed (namely the ofCircle draw command), the test is done. So if mouseX is less than x, no circles are drawn at all.
+Now, if you move your mouse beyond the left side of the window, nothing at all is drawn. This is because before the body of the loop is executed (namely the ofDrawCircle draw command), the test is done. So if mouseX is less than x, no circles are drawn at all.
 
 for loop
 ^^^^^^^^
@@ -1108,14 +1108,14 @@ We've saved the best for last. The for loop is probably the one that you will us
 int x = 20;
 for(int i=0; i<51; i++)
 {
-    ofCircle(x, 300, 10);
+    ofDrawCircle(x, 300, 10);
     x+=20;
 }
 ---------------------------------------------------------------------
 
 The syntax of the for loop can be a little daunting at first, but let's take it apart piece by piece. The first part is initialization: "int i=0;"  Pretty straightforward: we now have an integer called i that we have set to 0. The next part is the condition: "i<51". In other words, we want the loop to continue so long as i is less than 51. And lastly,  the increment: "i++". After every iteration of the loop, we will increment i by 1.
 
-We saw each of these things in the other kind of loops. The only difference here is that they are all smashed into one line. 
+We saw each of these things in the other kind of loops. The only difference here is that they are all smashed into one line.
 
 
 Arrays
@@ -1140,15 +1140,15 @@ float circle3r;
 
 void testApp::setup(){
     ofSetFrameRate(24);
-    
+
     circle1x = ofRandom(0, ofGetWidth());
     circle1y = ofRandom(0, ofGetHeight());
     circle1r = ofRandom(10, 40);
-    
+
     circle2x = ofRandom(0, ofGetWidth());
     circle2y = ofRandom(0, ofGetHeight());
     circle2r = ofRandom(10, 40);
-    
+
     circle3x = ofRandom(0, ofGetWidth());
     circle3y = ofRandom(0, ofGetHeight());
     circle3r = ofRandom(10, 40);
@@ -1158,20 +1158,20 @@ void testApp::setup(){
 void testApp::update(){
     circle1x += ofRandom(-1,1);
     circle1y += ofRandom(-1,1);
-    
+
     circle2x += ofRandom(-1,1);
     circle2y += ofRandom(-1,1);
-    
+
     circle3x += ofRandom(-1,1);
     circle3y += ofRandom(-1,1);
 }
 
 void testApp::draw(){
-    ofCircle(circle1x, circle1y, circle1r);
-    
-    ofCircle(circle2x, circle2y, circle2r);
-    
-    ofCircle(circle3x, circle3y, circle3r);
+    ofDrawCircle(circle1x, circle1y, circle1r);
+
+    ofDrawCircle(circle2x, circle2y, circle2r);
+
+    ofDrawCircle(circle3x, circle3y, circle3r);
 }
 ---------------------------------------------------------------------
 
@@ -1192,45 +1192,45 @@ float circleRad[3];
 
 void testApp::setup(){
     ofSetFrameRate(24);
-    
+
     circleX[0] = ofRandom(0, ofGetWidth());
     circleY[0] = ofRandom(0, ofGetHeight());
     circleRad[0] = ofRandom(10, 40);
-    
+
     circleX[1] = ofRandom(0, ofGetWidth());
     circleY[1] = ofRandom(0, ofGetHeight());
-    circleRad[1] = ofRandom(10, 40); 
-    
+    circleRad[1] = ofRandom(10, 40);
+
     circleX[2] = ofRandom(0, ofGetWidth());
     circleY[2] = ofRandom(0, ofGetHeight());
-    circleRad[2] = ofRandom(10, 40); 
+    circleRad[2] = ofRandom(10, 40);
 }
 
 void testApp::update(){
-    
+
     circleX[0] += ofRandom(-1,1);
     circleY[0] += ofRandom(-1,1);
 
     circleX[1] += ofRandom(-1,1);
     circleY[1] += ofRandom(-1,1);
-    
+
     circleX[2] += ofRandom(-1,1);
     circleY[2] += ofRandom(-1,1);
 }
 
 void testApp::draw(){
-    
-    ofCircle(circleX[0], circleY[0], circleRad[0]);
-    ofCircle(circleX[1], circleY[1], circleRad[1]);
-    ofCircle(circleX[2], circleY[2], circleRad[2]);
+
+    ofDrawCircle(circleX[0], circleY[0], circleRad[0]);
+    ofDrawCircle(circleX[1], circleY[1], circleRad[1]);
+    ofDrawCircle(circleX[2], circleY[2], circleRad[2]);
 }
 ---------------------------------------------------------------------
 
-As you can see, we've replaced int circle1x, int circle2x, and int circle3x with simply int circleX[3]. Now circleX is an "array" that can hold up to 3 integers, rather than just 1. Read a little further, and you will see that, in order to assign a value to one of the ints in the array, you use the square brackets, like this: circleX[0] = 50;  
+As you can see, we've replaced int circle1x, int circle2x, and int circle3x with simply int circleX[3]. Now circleX is an "array" that can hold up to 3 integers, rather than just 1. Read a little further, and you will see that, in order to assign a value to one of the ints in the array, you use the square brackets, like this: circleX[0] = 50;
 
 Down in the draw function, you can see that we use the same syntax to use the values that we have previously assigned to a particular slot in the array.
 
-But this is still kind of a mess. One sign that you might not be utilizing loops as much as possible is if you see patterns in your code -- that is, similar sequences of code over and over again. So let's try to clean this up even more using some 'for' loops. 
+But this is still kind of a mess. One sign that you might not be utilizing loops as much as possible is if you see patterns in your code -- that is, similar sequences of code over and over again. So let's try to clean this up even more using some 'for' loops.
 
 [source,cpp]
 ---------------------------------------------------------------------
@@ -1245,12 +1245,12 @@ void testApp::setup(){
     {
         circleX[i] = ofRandom(0, ofGetWidth());
         circleY[i] = ofRandom(0, ofGetHeight());
-        circleRad[i] = ofRandom(10, 40); 
+        circleRad[i] = ofRandom(10, 40);
     }
 }
 
 void testApp::update(){
-    
+
     for(int i=0; i<3; i++)
     {
         circleX[i] += ofRandom(-1,1);
@@ -1259,10 +1259,10 @@ void testApp::update(){
 }
 
 void testApp::draw(){
-    
+
     for(int i=0; i<3; i++)
     {
-        ofCircle(circleX[i], circleY[i], circleRad[i]);
+        ofDrawCircle(circleX[i], circleY[i], circleRad[i]);
     }
 }
 ---------------------------------------------------------------------
@@ -1272,7 +1272,7 @@ Now, instead of putting hard-coded numbers between the square brackets, we use t
 #define
 ^^^^^^^
 
-A wise person once said: the primary virtue of a programmer is laziness. Suppose you wanted to change the number of circles that appear on the screen from 3 to 500. Obviously, the first step would be to change circleX[3] to circleX[500], and likewise circleY and circleRad. Oh, but that's not all. You'd still have to go through every "for" loop and change i<3 to i<50. That's a lot of work!  
+A wise person once said: the primary virtue of a programmer is laziness. Suppose you wanted to change the number of circles that appear on the screen from 3 to 500. Obviously, the first step would be to change circleX[3] to circleX[500], and likewise circleY and circleRad. Oh, but that's not all. You'd still have to go through every "for" loop and change i<3 to i<50. That's a lot of work!
 
 It would be great if we could use a variable to keep track of how many items we have in our array! It might look something like this:
 
@@ -1284,7 +1284,7 @@ float circleY[num];
 float circleRad[num];
 ---------------------------------------------------------------------
 
-Unfortunately, this isn't possible. You can't use a variable to declare a variable. 
+Unfortunately, this isn't possible. You can't use a variable to declare a variable.
 
 Instead, we will use a new thing called a #define (pronounced: "pound define"). Take a look at this:
 
@@ -1301,13 +1301,13 @@ int circleB[NUM_CIRCLES];
 
 void testApp::setup(){
     ofSetFrameRate(24);
-    
+
     for(int i=0; i<NUM_CIRCLES; i++)
     {
         circleX[i] = ofRandom(0, ofGetWidth());
         circleY[i] = ofRandom(0, ofGetHeight());
         circleRad[i] = ofRandom(10, 40);
-        
+
         circleR[i] = ofRandom(0, 255);
         circleG[i] = ofRandom(0, 255);
         circleB[i] = ofRandom(0, 255);
@@ -1315,7 +1315,7 @@ void testApp::setup(){
 }
 
 void testApp::update(){
-    
+
     for(int i=0; i<NUM_CIRCLES; i++)
     {
         circleX[i] += ofRandom(-1,1);
@@ -1324,11 +1324,11 @@ void testApp::update(){
 }
 
 void testApp::draw(){
-    
+
     for(int i=0; i<NUM_CIRCLES; i++)
     {
         ofSetColor(circleR[i], circleG[i], circleB[i]);
-        ofCircle(circleX[i], circleY[i], circleRad[i]);
+        ofDrawCircle(circleX[i], circleY[i], circleRad[i]);
     }
 }
 ---------------------------------------------------------------------
@@ -1394,4 +1394,3 @@ if (useInner) {
 This abbreviated syntax might be useful if each alternative consists of only one statement to be executed, but is also easy to overlook when trying to find bugs (programming errors) in a program. The more verbose version is easier to spot and understand. It also is easier to extend if needed.
 
 All the concepts introduced should give you the basic tools to study and understand the example code provided. We covered a lot of ground, so go and poke at the other examples!
-

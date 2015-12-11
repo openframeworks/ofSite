@@ -316,7 +316,7 @@ Although that's nowhere close to everything about vertices and meshes, we're goi
 Now, the thing about vertices is that the describe positions in space *but* those positions are *relative*. This important because the meaning of 10,10 can be very different if you've called ofTranslate(100, 100) or not. Imagine for a moment that the window of your OF application is a piece of paper and you are seated at a desk in front of this piece of paper with a pencil in your hand. Your hand is sitting at the 0,0 point of the paper, the upper-left corner. If you want to draw something in the lower-right corner of that piece of paper, you can move your hand down to the lower right of the page, or you can push the page so that the lower- right corner is beneath where your hand already sits. Take that thought and apply it to OF: drawing a circle in the lower right of a 300 × 300 pixel window would look like this:
 
 ~~~~{.cpp}
-ofCircle(270, 270, 30, 30);
+ofDrawCircle(270, 270, 30, 30);
 ~~~~
 
 The ellipse is drawn 270 pixels down and 270 pixels to the right of the window. Now take a look at the following bit of code and think of moving the piece of paper:
@@ -324,7 +324,7 @@ The ellipse is drawn 270 pixels down and 270 pixels to the right of the window. 
 ~~~~{.cpp}
 ellipse(270, 270, 30, 30);
 ofTranslate(−30, −30);
-ofCircle(270, 270, 30, 30);
+ofDrawCircle(270, 270, 30, 30);
 ~~~~
 
 One easy way of thinking of the translate() method is to imagine that it moves the upper-left corner of the drawing space. Move the drawing space down 20 pixels, and all drawings will appear 20 pixels lower on the screen. The proper way of thinking of the translate() method is that it modifies the coordinate space of the application; that is, it moves the position of the 0,0 point in the application, what you might know as the origin of the coordinate system.

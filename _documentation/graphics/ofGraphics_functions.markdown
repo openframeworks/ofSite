@@ -3950,11 +3950,11 @@ _description: _
 ofPopMatrix() restores the prior coordinate system.
 ~~~~{.cpp}
 void ofApp::draw(){
-    ofCircle(10, 10, 5);    // draw a circle
-    ofPushMatrix();         // push the current coordinate position
-    ofRotateX(90);          // change the coordinate system
-    ofDrawRectangle(10,10,40,40);    // draw a rect
-    ofPopMatrix();          // recall the pushed coordinate position
+    ofDrawCircle(10, 10, 5);      // draw a circle
+    ofPushMatrix();               // push the current coordinate position
+    ofRotateX(90);                // change the coordinate system
+    ofDrawRectangle(10,10,40,40); // draw a rect
+    ofPopMatrix();                // recall the pushed coordinate position
 }
 ~~~~
 
@@ -3997,8 +3997,8 @@ _description: _
 ofPopStyle() restores the prior style settings. It needs to be called after ofPushStyle.
 ~~~~{.cpp}
 void ofApp::draw(){
-    ofCircle(10,10,5);
-    ofPushStyle();  // push the current style for use later
+    ofDrawCircle(10,10,5);
+    ofPushStyle();           // push the current style for use later
     ofFill();
     ofsetColor(255,0,0);
     ofEllipse(30,10,40,40);
@@ -4090,11 +4090,11 @@ ofPushMatrix saves the current coordinate system allowing users to develop speci
 In the following example we only rotate the square.
 ~~~~{.cpp}
 void ofApp::draw(){
-    ofCircle(10, 10, 5);    // draw a circle
-    ofPushMatrix();         // push the current coordinate position
-    ofRotateX(90);          // change the coordinate system
+    ofDrawCircle(10,10,5); // draw a circle
+    ofPushMatrix();    // push the current coordinate position
+    ofRotateX(90);     // change the coordinate system
     ofDrawRectangle(10,10,40,40);    // draw a rect
-    ofPopMatrix()           // recall the pushed coordinate position
+    ofPopMatrix()      // recall the pushed coordinate position
 }
 ~~~~
 
@@ -4152,7 +4152,7 @@ ofPushStyle saves the current style settings for the ofGraphics after its call. 
 In the following example the properties of being red and filled only applies to the ellipse:
 ~~~~{.cpp}
 void ofApp::draw(){
-    ofCircle(10,10,5);
+    ofDrawCircle(10,10,5);
     ofPushStyle();  // push the current style for use later
     ofFill();
     ofSetColor(255,0,0);
@@ -4760,13 +4760,13 @@ void ofApp::draw(){
 
 _description: _
 
-Sets the resolution for the ofCircle command. By default, the circle is 22 points, but if you need to draw larger circles, you can adjust the resolution using this command. all circles are cached in opengl using a display list for optimization purposes.
+Sets the resolution for the ofDrawCircle command. By default, the circle is 22 points, but if you need to draw larger circles, you can adjust the resolution using this command. all circles are cached in opengl using a display list for optimization purposes.
 ~~~~{.cpp}
 void ofApp::draw(){
     ofSetCircleResolution(10);
-    ofCircle(150,150,100);          //draws a rough circle
+    ofDrawCircle(150,150,100);          //draws a rough circle
     ofSetCircleResolution(100);
-    ofCircle(450,150,100);          //draws a fine circle
+    ofDrawCircle(450,150,100);          //draws a fine circle
 }
 ~~~~
 
@@ -4813,7 +4813,7 @@ void ofApp::draw(){
 
 _description: _
 
-Sets the draw color with r,g,b, 0-255. For example, red (0xff0000) would be: ofSetColor(255,0,0). This affects not only the color of shapes drawn with ofDrawRectangle(...), ofCircle(...), etc, but also the tint of images and textures.
+Sets the draw color with r,g,b, 0-255. For example, red (0xff0000) would be: ofSetColor(255,0,0). This affects not only the color of shapes drawn with ofDrawRectangle(...), ofDrawCircle(...), etc, but also the tint of images and textures.
 ~~~~{.cpp}
 void ofApp::draw(){
     ofSetColor(0,0,255);    //set te color to blue
@@ -5873,4 +5873,3 @@ _description: _
 
 
 <!----------------------------------------------------------------------------->
-

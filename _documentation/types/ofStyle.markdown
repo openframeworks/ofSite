@@ -228,7 +228,7 @@ _inlined_description: _
 
 _description: _
 
-circleResolution variable contains the resolution of a ofCircle.
+circleResolution variable contains the resolution of a ofDrawCircle.
 
 
 
@@ -519,4 +519,3 @@ _description: _
 
 
 <!----------------------------------------------------------------------------->
-
