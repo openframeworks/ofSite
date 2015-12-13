@@ -110,9 +110,8 @@ Let's take a look at a very simple example to help you get going with it. First 
 ~~~~{.cpp}
 
 void ofApp::setup(){
-  # Depending in the OpenGL version that your hardware support, you have to load the right shader.
-  # As the OpenGL version that we have choosed is 3.2, we will load
-  # the shaders for OpenGL 3
+  # Depending on the OpenGL version that your hardware supports, you have to load the right shader.
+  # As the OpenGL version that we have set is 3.2, we will load the shaders for OpenGL 3
   shader.load("shadersGL3/shader");
 }
 
