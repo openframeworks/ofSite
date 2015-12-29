@@ -31,7 +31,7 @@ dir.allowExt("png");
 dir.listDir();
 
 //go through and print out all the paths
-for(int i = 0; i < dir.numFiles(); i++){
+for(int i = 0; i < dir.size(); i++){
 	ofLogNotice(dir.getPath(i));
 }
 ~~~~

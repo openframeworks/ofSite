@@ -59,7 +59,7 @@ void draw() {
     // Begin rendering from the camera's perspective.
     camera.begin();
 
-    ofLine(0, 0, ofGetWidth(), ofGetHeight());
+    ofDrawLine(0, 0, ofGetWidth(), ofGetHeight());
     // Additional rendering ...
 
     // End rendering form the camera's perspective.
@@ -1359,7 +1359,7 @@ Returns: An ofVec3f containing the screen coordinates of your 3D point of intere
 
 _description: _
 
-When you have a position in world coordinates you can get what it would be in world coordinates, transforming it using the ofCamera.
+When you have a position in world coordinates you can get what it would be in screen coordinates, transforming it using the ofCamera.
 
 
 

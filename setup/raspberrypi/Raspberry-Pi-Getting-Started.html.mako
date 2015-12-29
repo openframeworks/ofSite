@@ -45,7 +45,7 @@ Unlike Wheezy, Debian Jessie does not display the IP address on boot. You may wi
 ## Download openFrameworks
 You now can download openFrameworks and uncompress it into a folder. Using a Shell, The following commands will download openFrameworks and uncompress it into the folder `/home/pi/openFrameworks`
  
-<h3> For the Raspberry Pi 1 and 2 using OF for arm6</h3>
+<h3> For the Raspberry Pi using OF for arm6</h3>
     * `cd` 
     * `curl -O http://www.openframeworks.cc/versions/v0.9.0/of_v0.9.0_linuxarmv6l_release.tar.gz` 
     * `mkdir openFrameworks`
@@ -93,7 +93,7 @@ For example, here is how you build and run the polygonExample:
 * `make`
 * `make run`
 
-To create your own project from scratch, copy `examples/empty/emptyExample` into `apps/myApps/yourProjectName` folder and start from there
+Unlike other platforms, OF Raspberry Pi projects do not make use of the projectGenerator. To create your own project from scratch, copy `examples/empty/emptyExample` into `apps/myApps/yourProjectName` folder and start from there
 
 For example:
 

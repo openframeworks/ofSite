@@ -785,7 +785,7 @@ void testApp::draw(){
 
         for (int j = 0; j < polylines.size(); j++){
             for (int k = 0; k < polylines[j].size(); k+=5){         // draw every "fifth" point
-                ofCircle( polylines[j][k], 3);
+                ofDrawCircle( polylines[j][k], 3);
             }
         }
     }
@@ -852,7 +852,7 @@ ofRectangle rect = franklinBook.getStringBoundingBox(tempString, 0,0);
 //in draw
 
 ofSetColor(0xcccccc);
-ofRect(rect.x, rect.y, rect.width, rect.height);
+ofDrawRectangle(rect.x, rect.y, rect.width, rect.height);
 ~~~~
 
 
@@ -2265,4 +2265,3 @@ _description: _
 
 
 <!----------------------------------------------------------------------------->
-
