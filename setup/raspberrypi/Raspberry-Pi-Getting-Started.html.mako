@@ -45,17 +45,11 @@ Unlike Wheezy, Debian Jessie does not display the IP address on boot. You may wi
 ## Download openFrameworks
 You now can download openFrameworks and uncompress it into a folder. Using a Shell, The following commands will download openFrameworks and uncompress it into the folder `/home/pi/openFrameworks`
  
-<h3> For the Raspberry Pi 1/arm6</h3>
+<h3> For the Raspberry Pi 1 and 2 using OF for arm6</h3>
     * `cd` 
     * `curl -O http://www.openframeworks.cc/versions/v0.9.0/of_v0.9.0_linuxarmv6l_release.tar.gz` 
     * `mkdir openFrameworks`
     * `tar vxfz of_v0.9.0_linuxarmv6l_release.tar.gz -C openFrameworks --strip-components 1`
-
-<h3> For the Raspberry Pi 2/arm7</h3>
-    * `cd` 
-    * `curl -O http://www.openframeworks.cc/versions/v0.9.0/of_v0.9.0_linuxarmv7l_release.tar.gz` 
-    * `mkdir openFrameworks`
-    * `tar vxfz of_v0.9.0_linuxarmv7l_release.tar.gz -C openFrameworks --strip-components 1`
 
 ## Install packages and compile openFrameworks:
  Make sure you didn't skip the Memory Split step in the above section _**Configure the Raspberry Pi**_ or it will eventually fail.
@@ -67,15 +61,10 @@ Assuming openFrameworks is located at `/home/pi/openFrameworks` run the followin
     * `sudo ./install_dependencies.sh` 
 
 You are now ready to compile openFrameworks! 
-
-### For the Raspberry Pi 1/arm6
     * `make Release -C /home/pi/openFrameworks/libs/openFrameworksCompiled/project`
 
-### For the Raspberry Pi 2/arm7
-    * `make Release -j4 -C /home/pi/openFrameworks/libs/openFrameworksCompiled/project`
-
 ## Speeding up compiling
-Compiling natively on the Raspberry Pi 1 takes a long time. openFrameworks applications typically take much less time than the core library. Taking the time to set up a cross-compiling solution will save you enormous amounts of time. 
+Compiling natively on the Raspberry Pi takes a long time. openFrameworks applications typically take much less time than the core library. Taking the time to set up a cross-compiling solution will save you enormous amounts of time. 
 
 [Raspberry Pi Cross Compiling Guide](Raspberry-Pi-Cross-compiling-guide.html)
 
