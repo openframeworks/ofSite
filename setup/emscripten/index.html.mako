@@ -3,10 +3,20 @@
 
 emscripten setup
 ===========
-
 Have you ever made a project in openFrameworks and been like "This is awesome! I want to put it on my online portfolio!". You could always make a video or take photos, but what about the UI aspect of your project? How can people see the awesome mouse effects you made? Enter Emscripten. Emscripten translates your C++ code into Javascript code in a matter of minutes! So you can put your awesome OF project "on the line" in your portfolio.
 
 These instructions will show you how to compile one example project in the openFrameworks distribution, and can be reused whenever you want to translate an openFrameworks sketch to a web page. Assuming that you have downloaded openFrameworks 0.9 (it works only with OF versions >= 0.9) you only have to install emscripten and compile a project with it. Here are the instructions step by step.
+
+Where are you running?
+----------------------
+
+A quick note before you start. Make sure the path to your openFrameworks does not include spaces, like this:
+
+```
+~/My Stuff/of_v0.9.0_osx_release/
+```
+
+If it does, you will hit compile errors. Alternatively you can use symlinks, [as suggested here](https://github.com/openframeworks/openFrameworks/issues/4195).
 
 Install Emscripten
 ------------------
