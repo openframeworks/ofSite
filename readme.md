@@ -86,9 +86,9 @@ Note: The website utilizes some additions to Markdown itself, so specialized fun
 
 
 ## solution for non askii character related issue
-### `python valueError: unknown locale: UTF-8`, when `blogofile build`
+#### `python valueError: unknown locale: UTF-8`, when `blogofile build`:
 add export `LC_ALL=en_US.UTF-8`, `export LANG=en_US.UTF-8` to bash_profile<br/>
-*with ubuntu, edit `.profile`, not `.bash_profile`*
+**with ubuntu, edit `.profile`, not `.bash_profile`**
 ```
 sudo nano ~/.bash_profile
 ```
@@ -99,7 +99,7 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 ```
 
-### `ascii codec cannot decode byte 0xec in position`, when `blogfile build`
+#### `ascii codec cannot decode byte 0xec in position`, when `blogfile build`:
 this is because python related issue
 
 edit _config.py, and add code below:
