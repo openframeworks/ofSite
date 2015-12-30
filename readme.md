@@ -83,3 +83,33 @@ An alternative to running blogofile locally is to use a Markdown editor that can
 * Online: [Dillinger](http://dillinger.io/)
 
 Note: The website utilizes some additions to Markdown itself, so specialized functions such as code syntax highlighting may not be available in the editor, even though it will work fine on the site.
+
+
+## solution for non askii character related issue
+### `python valueError: unknown locale: UTF-8`, when `blogofile build`
+add export `LC_ALL=en_US.UTF-8`, `export LANG=en_US.UTF-8` to bash_profile
+*with ubuntu, edit `.profile`, not `.bash_profile`*
+```
+sudo nano ~/.bash_profile
+```
+
+add code below
+```
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+```
+
+### `ascii codec cannot decode byte 0xec in position`, when `blogfile build`
+this is because python related issue
+
+edit _config.py, and add code below:
+
+```
+...
+import inspect, os
+import sys  # add this line
+reload(sys) # add this line
+sys.setdefaultencoding('utf-8') # add this line
+olderVersion = "0.8.4"
+...
+```
