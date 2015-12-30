@@ -87,7 +87,7 @@ Note: The website utilizes some additions to Markdown itself, so specialized fun
 
 ## solution for non askii character related issue
 ### `python valueError: unknown locale: UTF-8`, when `blogofile build`
-add export `LC_ALL=en_US.UTF-8`, `export LANG=en_US.UTF-8` to bash_profile
+add export `LC_ALL=en_US.UTF-8`, `export LANG=en_US.UTF-8` to bash_profile<br/>
 *with ubuntu, edit `.profile`, not `.bash_profile`*
 ```
 sudo nano ~/.bash_profile
