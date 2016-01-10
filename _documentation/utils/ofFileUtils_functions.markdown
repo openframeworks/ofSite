@@ -48,7 +48,6 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
 ###bool ofBufferToFile(&path, &buffer, binary = false)
@@ -77,7 +76,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 

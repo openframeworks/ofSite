@@ -5,6 +5,7 @@
 _visible: True_
 _advanced: False_
 _istemplated: False_
+_extends: ofThread_
 -->
 
 ##InlineDescription
@@ -97,13 +98,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Close the server down and disconnect all clients.
-
-
 
 
 
@@ -137,13 +134,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Disconnect a particular client.
-
-
 
 
 
@@ -177,9 +170,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -215,13 +206,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns the ID that the client is connected from. This is useful for tracking clients that connect and disconnect.
-
-
 
 
 
@@ -255,13 +242,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Gets the port that the client is currently connected on.
-
-
 
 
 
@@ -295,9 +278,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Returns the last UID assigned to a client. As this counts upwards, it's the best way to loop through all clients:
 
@@ -313,8 +294,6 @@ for(int i = 0; i < TCP.getLastID(); i++) // getLastID is UID of all clients
 		}
 }
 ~~~~
-
-
 
 
 
@@ -348,13 +327,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns the number of connected clients, helpful for monitoring loads on a server but not for sending messages.
-
-
 
 
 
@@ -388,13 +363,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns the total bytes sent by a client.
-
-
 
 
 
@@ -428,13 +399,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns the port that the server is currently serving on.
-
-
 
 
 
@@ -468,9 +435,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Returns whether a client ID correlates to a connected client:
 
@@ -486,8 +451,6 @@ for(int i = 0; i < TCP.getLastID(); i++) // getLastID is UID of all clients
 		}
 }
 ~~~~
-
-
 
 
 
@@ -521,9 +484,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -559,9 +520,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -597,13 +556,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Constructor. You need to call setup() before your server itself is ready to receive connections.
-
-
 
 
 
@@ -619,7 +574,7 @@ _name: ofxTCPServer_
 _returns: _
 _returns_description: _
 _parameters: const ofxTCPServer &mom_
-_access: private_
+_access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
@@ -637,9 +592,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -657,7 +610,7 @@ _name: operator=_
 _returns: ofxTCPServer &_
 _returns_description: _
 _parameters: const ofxTCPServer &mom_
-_access: private_
+_access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
@@ -675,9 +628,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int peekReceiveRawBytes(clientID, *receiveBytes, numBytes)
+
+<!--
+_syntax: peekReceiveRawBytes(clientID, *receiveBytes, numBytes)_
+_name: peekReceiveRawBytes_
+_returns: int_
+_returns_description: _
+_parameters: int clientID, char *receiveBytes, int numBytes_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -713,9 +700,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Receives raw bytes, such as an bitmap or audio data from a client indicated with the clientID:
 
@@ -727,8 +712,6 @@ for ( int i = 0; i < server.getLastID(); i++ ) {
     }
 }
 ~~~~
-
-
 
 
 
@@ -762,9 +745,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Receives raw bytes, such as an bitmap or audio data from a client indicated with the clientID:
 
@@ -776,8 +757,6 @@ for ( int i = 0; i < server.getLastID(); i++ ) {
     }
 }
 ~~~~
-
-
 
 
 
@@ -811,9 +790,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -849,13 +826,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Sends a string delimited with the delimiter value to a selected client.
-
-
 
 
 
@@ -889,13 +862,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Sends raw bytes to a selected client. See sendRawBytesToAll()
-
-
 
 
 
@@ -929,9 +898,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Sends raw bytes to all connected clients, handy for sending an image or other binary data to a client. For instance:
 
@@ -991,8 +958,6 @@ This example is a bit silly because it assumes that you know the exact size of a
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
 ###bool sendRawMsg(clientID, *rawMsg, numBytes)
@@ -1021,9 +986,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1059,9 +1022,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1097,13 +1058,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Sends a string delimited with the delimiter value to all connected clients.
-
-
 
 
 
@@ -1137,13 +1094,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 This sets the message delimiter that your server will use when sending and receiving messages from clients. By default it's [\TCP] though you can have it be any value as long as it's consistent on both the client and server sides.
-
-
 
 
 
@@ -1177,9 +1130,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1215,14 +1166,10 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 The port is the port that your server will serve up data on. It shouldn't be a commonly used port like 22 or 80, go with a higher number less likely to be used.
 The blocking parameter signals whether the client connections will be allowed to block on the servers thread as they send a message. This becomes important when you're dealing with very large messages coming from clients.
-
-
 
 
 
@@ -1256,9 +1203,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1294,9 +1239,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1324,8 +1267,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1349,8 +1299,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1374,8 +1331,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1399,8 +1363,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1424,8 +1395,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1449,8 +1427,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1474,8 +1459,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1499,8 +1491,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1524,8 +1523,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 

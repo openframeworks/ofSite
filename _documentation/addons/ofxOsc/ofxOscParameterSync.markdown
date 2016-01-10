@@ -5,6 +5,7 @@
 _visible: True_
 _advanced: False_
 _istemplated: False_
+_extends: _
 -->
 
 ##InlineDescription
@@ -50,9 +51,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -88,9 +87,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -100,14 +97,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setup(&group, localPort, remoteHost, remotePort)
+###void setup(&group, localPort, &remoteHost, remotePort)
 
 <!--
-_syntax: setup(&group, localPort, remoteHost, remotePort)_
+_syntax: setup(&group, localPort, &remoteHost, remotePort)_
 _name: setup_
 _returns: void_
 _returns_description: _
-_parameters: ofParameterGroup &group, int localPort, string remoteHost, int remotePort_
+_parameters: ofParameterGroup &group, int localPort, const string &remoteHost, int remotePort_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -120,17 +117,13 @@ _advanced: False_
 
 _inlined_description: _
 
-the remote and local ports must be different to avoid collisions 
-
-
-
+the remote and local ports must be different to avoid collisions
 
 
 
 
 
 _description: _
-
 
 
 
@@ -166,9 +159,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -204,9 +195,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -234,8 +223,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -259,8 +255,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -284,8 +287,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -309,8 +319,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 

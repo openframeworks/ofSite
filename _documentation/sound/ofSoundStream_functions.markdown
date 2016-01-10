@@ -34,9 +34,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Stops the sound stream and also cleans up the stream's resources. 
-
-
+Stops the sound stream and also cleans up the stream's resources
 
 
 
@@ -50,15 +48,14 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###void ofSoundStreamListDevices()
+###vector< ofSoundDevice > ofSoundStreamListDevices()
 
 <!--
 _syntax: ofSoundStreamListDevices()_
 _name: ofSoundStreamListDevices_
-_returns: void_
+_returns: vector< ofSoundDevice >_
 _returns_description: _
 _parameters: _
 _version_started: _
@@ -72,98 +69,14 @@ _advanced: False_
 
 _inlined_description: _
 
-Prints a list of available devices to the console. 
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofSoundStreamSetup(nOutputs,nInputs,OFSA)
-
-<!--
-_syntax: ofSoundStreamSetup(nOutputs,nInputs,OFSA)_
-_name: ofSoundStreamSetup_
-_returns: void_
-_returns_description: _
-_parameters: int nOutputs, int nInputs, ofSimpleApp * OFSA_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
+Prints a list of all available audio devices
+\return all sound devices found on the system
 
 
 
 
 
 _description: _
-
-
-Sets up the audio, with nOutputs channels of audio out, nInputs channels of audio in. You also must pass in a pointer to the ofSimpleApp, so you can just use the word "this". For example, for 2 channel output, call in the setup function:
-~~~~{.cpp}
-
-ofSoundStreamSetup(2,0,this);
-~~~~
-
-In this simplified call, the bufferSize, sampleRate, and number of buffers (for latency) are all set to defaults.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofSoundStreamSetup(nOutputs,nInputs,OFSA,sampleRate,bufferSize,nBuffers)
-
-<!--
-_syntax: ofSoundStreamSetup(nOutputs,nInputs,OFSA,sampleRate,bufferSize,nBuffers)_
-_name: ofSoundStreamSetup_
-_returns: void_
-_returns_description: _
-_parameters: int nOutputs, int nInputs, ofSimpleApp * OFSA, int sampleRate, int bufferSize, int nBuffers_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-Sets up the audio, but allows you to control more precise details of the audio system.
 
 
 
@@ -180,7 +93,7 @@ _syntax: ofSoundStreamSetup(nOutputChannels, nInputChannels, *appPtr = NULL)_
 _name: ofSoundStreamSetup_
 _returns: void_
 _returns_description: _
-_parameters: int nOutputChannels, int nInputChannels, ofBaseApp *appPtr=NULL_
+_parameters: int nOutputChannels, int nInputChannels, ofBaseApp *appPtr_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -192,18 +105,22 @@ _advanced: False_
 
 _inlined_description: _
 
-Sets up and starts a global 
+Sets up and starts a global ofSoundStream.
 
-This will set up a sound stream with a default sample rate of 44100, a buffer size of 256 samples, and a queue of 4 buffers.
+This will set up a sound stream with a default sample rate of 44100, a
+buffer size of 256 samples, and a queue of 4 buffers.
 
 
+Parameters:
+nOutputChannels number of requested output channels (i.e. 2 for stereo).
+nInputChannels number of requested input channels.
+appPtr pointer to the app which will own the sound stream (optional).
 
 
 
 
 
 _description: _
-
 
 
 
@@ -232,16 +149,21 @@ _advanced: False_
 
 _inlined_description: _
 
-Sets up and starts a global 
+Sets up and starts a global ofSoundStream.
 
-
+Parameters:
+nOutputChannels number of requested output channels (i.e. 2 for stereo).
+nInputChannels number of requested input channels.
+sampleRate requested sample rate (44100 is typical).
+bufferSize requested buffer size (256 is typical). Smaller values
+       will be more responsive, but less stable.
+nBuffers number of buffers to queue. Less buffers will be more responsive, but less stable.
 
 
 
 
 
 _description: _
-
 
 
 
@@ -270,16 +192,23 @@ _advanced: False_
 
 _inlined_description: _
 
-Sets up and starts a global 
+Sets up and starts a global ofSoundStream.
 
-
+Parameters:
+nOutputChannels number of requested output channels (i.e. 2 for stereo).
+nInputChannels number of requested input channels.
+appPtr pointer to the app which will own the sound stream (optional).
+sampleRate requested sample rate (44100 is typical).
+bufferSize requested buffer size (256 is typical). Smaller values
+       will be more responsive, but less stable.
+nBuffers number of buffers to queue. Less buffers will be more
+       responsive, but less stable.
 
 
 
 
 
 _description: _
-
 
 
 
@@ -308,16 +237,13 @@ _advanced: False_
 
 _inlined_description: _
 
-Starts the sound stream (audioIn() / audioOut() will start being called) 
-
-
+Starts the sound stream (audioIn() / audioOut() will start being called)
 
 
 
 
 
 _description: _
-
 
 
 
@@ -346,16 +272,13 @@ _advanced: False_
 
 _inlined_description: _
 
-Stops the sound stream (audioIn() / audioOut() will stop being called) 
-
-
+Stops the sound stream (audioIn() / audioOut() will stop being called)
 
 
 
 
 
 _description: _
-
 
 
 

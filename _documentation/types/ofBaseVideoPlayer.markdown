@@ -5,10 +5,12 @@
 _visible: True_
 _advanced: True_
 _istemplated: False_
+_extends: ofBaseVideo_
 -->
 
 ##InlineDescription
 
+A base class representing a video player.
 
 
 
@@ -23,44 +25,6 @@ _istemplated: False_
 ##Methods
 
 
-
-###void close()
-
-<!--
-_syntax: close()_
-_name: close_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
 
 ###void firstFrame()
 
@@ -88,9 +52,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -126,9 +88,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -164,9 +124,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -202,9 +160,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -240,9 +196,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -278,85 +232,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofPixelFormat getPixelFormat()
-
-<!--
-_syntax: getPixelFormat()_
-_name: getPixelFormat_
-_returns: ofPixelFormat_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0072_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###unsigned char * getPixels()
-
-<!--
-_syntax: getPixels()_
-_name: getPixels_
-_returns: unsigned char *_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
 
 
 
@@ -392,9 +268,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -430,9 +304,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -442,16 +314,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofTexture * getTexture()
+###ofTexture * getTexturePtr()
 
 <!--
-_syntax: getTexture()_
-_name: getTexture_
+_syntax: getTexturePtr()_
+_name: getTexturePtr_
 _returns: ofTexture *_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -468,9 +340,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -506,9 +376,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -544,9 +412,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -556,16 +422,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool isFrameNew()
+###bool isInitialized()
 
 <!--
-_syntax: isFrameNew()_
-_name: isFrameNew_
+_syntax: isInitialized()_
+_name: isInitialized_
 _returns: bool_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -582,9 +448,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -620,9 +484,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -658,9 +520,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -696,9 +556,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -708,16 +566,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool loadMovie(name)
+###bool load(name)
 
 <!--
-_syntax: loadMovie(name)_
-_name: loadMovie_
+_syntax: load(name)_
+_name: load_
 _returns: bool_
 _returns_description: _
 _parameters: string name_
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -734,9 +592,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void loadAsync(name)
+
+<!--
+_syntax: loadAsync(name)_
+_name: loadAsync_
+_returns: void_
+_returns_description: _
+_parameters: string name_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -772,9 +664,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -810,9 +700,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -848,9 +736,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -886,9 +772,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -924,9 +808,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -962,47 +844,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool setPixelFormat(pixelFormat)
-
-<!--
-_syntax: setPixelFormat(pixelFormat)_
-_name: setPixelFormat_
-_returns: bool_
-_returns_description: _
-_parameters: ofPixelFormat pixelFormat_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
 
 
 
@@ -1038,9 +880,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1076,9 +916,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1114,9 +952,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1152,47 +988,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void update()
-
-<!--
-_syntax: update()_
-_name: update_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
 
 
 
@@ -1228,9 +1024,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 

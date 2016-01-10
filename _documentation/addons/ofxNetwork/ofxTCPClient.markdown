@@ -5,6 +5,7 @@
 _visible: True_
 _advanced: False_
 _istemplated: False_
+_extends: _
 -->
 
 ##InlineDescription
@@ -87,13 +88,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 This closes any open connection to a server.
-
-
 
 
 
@@ -127,13 +124,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns the IP address number set in the setup() method of the client.
-
-
 
 
 
@@ -167,13 +160,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns the number of bytes that a single call to receive has gotten.
-
-
 
 
 
@@ -207,13 +196,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns the port number set in the setup() method of the client.
-
-
 
 
 
@@ -247,13 +232,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns whether the client is currently connected to a server.
-
-
 
 
 
@@ -287,13 +268,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Constructor. This doesn't prepare your client to send and receive information though, you need to call the setup() method for that.
-
-
 
 
 
@@ -327,9 +304,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -365,9 +340,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int peekReceiveRawBytes(*receiveBytes, numBytes)
+
+<!--
+_syntax: peekReceiveRawBytes(*receiveBytes, numBytes)_
+_name: peekReceiveRawBytes_
+_returns: int_
+_returns_description: _
+_parameters: char *receiveBytes, int numBytes_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -403,9 +412,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Receives ASCII encoded data from the server. You should make sure you check that the client is connected before calling this.
 
@@ -415,8 +422,6 @@ if(tcpClient.isConnected()) {
         cout << str << endl;
 }
 ~~~~
-
-
 
 
 
@@ -450,9 +455,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 This receives the raw bytes from a server. Like with receive(), you should check that the client is connected before calling this.
 
@@ -464,8 +467,6 @@ if(tcpClient.isConnected()) {
 }
 
 ~~~~
-
-
 
 
 
@@ -499,9 +500,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 This retrieves non-ASCII from a server, handy for receiving an image or other binary data to a client. For instance:
 
@@ -559,8 +558,6 @@ On the ofxTCPServer side this would look like:
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
 ###int receiveRawMsg(*receiveBuffer, numBytes)
@@ -589,9 +586,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -627,13 +622,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Send the message, which can be as complex as a full GET request or as simple as raw string.
-
-
 
 
 
@@ -667,13 +658,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 This sends the message as raw, i.e. not ASCII encoded. This is what you'll want to do if you're sending bitmap data or other kinds of non-text information.
-
-
 
 
 
@@ -707,13 +694,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 This method sends raw bytes (i.e. not ASCII encoded bytes) to the server.
-
-
 
 
 
@@ -747,9 +730,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -785,13 +766,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 This is important because the message delimiter used by your client has to match what your sever is using. If the server uses '[\TCP]', which is the default for ofxTCPClient and ofxTCPServer, then your client needs to do the same so that the server knows when a message has ended. ofxTCPServer allows you to use whatever delimiter you want.
-
-
 
 
 
@@ -825,9 +802,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -863,9 +838,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 You call this to setup what IP and port your client will try to connect to:
 
@@ -874,8 +847,6 @@ tcpClient.setup("127.0.0.1", 11999);
 ~~~~
 
 It returns whether the connection has successfully been made. Don't mistake this for a URI or URL, it comes before that, where the connection is made so that files or data streams can be requested.
-
-
 
 
 
@@ -909,9 +880,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -947,9 +916,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -985,9 +952,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1015,8 +980,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1040,8 +1012,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1065,8 +1044,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1090,8 +1076,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1115,8 +1108,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1140,8 +1140,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1165,8 +1172,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1190,8 +1204,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1215,8 +1236,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1240,8 +1268,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1265,8 +1300,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1290,8 +1332,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1315,8 +1364,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 

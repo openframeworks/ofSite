@@ -40,7 +40,7 @@ OpenGL’s main job is to help a programmer create code that creates points, lin
 ~~~~
 
 Now, what's going on in there looks pretty weird, but it's actually fairly straight forward. Don't worry too much about the calls that are going on below, just check out the notes alongside them because, while the methods and variable names are kinda tricky, the fundamental ideas are not.
-So, we've got two points representing the beginning and end of our line, so we set those with the values we passed into ofLine():
+So, we've got two points representing the beginning and end of our line, so we set those with the values we passed into ofDrawLine():
 
 ~~~~{.cpp}
 	linePoints[0].set(x1,y1,z1);
@@ -79,7 +79,7 @@ For those of your who've read other OpenGL tutorials you may be wondering: why d
 
 ###[Vertices](#vertices)
 
-Vertices define points in 3d space that are going to be used to place textures, create meshes, draw lines, and set the locations of almost any other drawing operation in openFrameworks. Generally speaking, you make some vertices and then later decide what you're going to do with them. Drawing a line rectangle is just making 4 points in space and connecting them with lines. Drawing an ofImage is defining 4 points in 3D space and then saying that you're going to fill the space in between them with the texture data that the ofImage uses. Drawing a 3D sphere is, unsurprisingly, just calculating where all the vertices for a sphere would need to go, defining those in an array, and then uploading that array to the graphics card so they can be drawn when sphere.draw() is called. Every time your OF application does any drawing, it's secretly creating vertices and uploading those to the grpahics card using what's called a vertex array that gets uploaded to the graphics card. In some cases, like when you call ofRect(), the vertices are hidden from you. In other cases, like when you create an ofPolyline, you're participating in generating those vertices explicitly. Let's take a closer look at how that works. You call
+Vertices define points in 3d space that are going to be used to place textures, create meshes, draw lines, and set the locations of almost any other drawing operation in openFrameworks. Generally speaking, you make some vertices and then later decide what you're going to do with them. Drawing a line rectangle is just making 4 points in space and connecting them with lines. Drawing an ofImage is defining 4 points in 3D space and then saying that you're going to fill the space in between them with the texture data that the ofImage uses. Drawing a 3D sphere is, unsurprisingly, just calculating where all the vertices for a sphere would need to go, defining those in an array, and then uploading that array to the graphics card so they can be drawn when sphere.draw() is called. Every time your OF application does any drawing, it's secretly creating vertices and uploading those to the grpahics card using what's called a vertex array that gets uploaded to the graphics card. In some cases, like when you call ofDrawRectangle(), the vertices are hidden from you. In other cases, like when you create an ofPolyline, you're participating in generating those vertices explicitly. Let's take a closer look at how that works. You call
 
 ~~~~{.cpp}
 line.addVertex(x, y);
@@ -432,7 +432,7 @@ void ofApp::draw(){
 
 ~~~~
 
-openFrameworks allow us to do matrices operation in an easy way. Under the hood, there are these 3 matrix that are defining how do we see our object on the screen.
+openFrameworks allow us to do matrices operations in an easy way. Under the hood, there are these 3 matrix that are defining how do we see our object on the screen.
 We'll lay them all out really quick (not because they're not important but because OF relieves you of having to do a ton of messing with them).
 
 *The Model matrix*
@@ -574,7 +574,7 @@ Finally, we can just use:
 ofLoadImage(theTex, "path/toAnImage.png");
 ~~~~
 
-When we actually draw the texture what we're doing is, surprise, putting some vertices on the screen that say where the texture should show up and say: we're going to use this ofTexture to fill in the spaces in between our vertices. The vertices are used to define locations in space where that texture will be used. Voila, textures on the screen. The way that we actually say "this is the texture that should show up in between all the vertices that we're drawing" is by using the bind() method. Now, you don't normally need to do this. The draw() method of both the ofImage and the ofTexture object take care of all of this for you, but this tutorial is all about explaining some of the underlying OpenGL stuff and underneath, those draw() methods call bind() to start drawing the texture, ofRect() to put some vertices in place, and unbind() when it's done. It's just like this:
+When we actually draw the texture what we're doing is, surprise, putting some vertices on the screen that say where the texture should show up and say: we're going to use this ofTexture to fill in the spaces in between our vertices. The vertices are used to define locations in space where that texture will be used. Voila, textures on the screen. The way that we actually say "this is the texture that should show up in between all the vertices that we're drawing" is by using the bind() method. Now, you don't normally need to do this. The draw() method of both the ofImage and the ofTexture object take care of all of this for you, but this tutorial is all about explaining some of the underlying OpenGL stuff and underneath, those draw() methods call bind() to start drawing the texture, ofDrawRectangle() to put some vertices in place, and unbind() when it's done. It's just like this:
 
 ~~~~{.cpp}
 tex.bind(); // start using our texture

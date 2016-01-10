@@ -34,14 +34,16 @@ _advanced: False_
 
 _inlined_description: _
 
+\cond INTERNAL
 
+Warning: The internal z-component of the ofPoint is preserved even though it
+is not used.
 
 
 
 
 
 _description: _
-
 
 Writes the parameters of the ofRectangle to an ostream.
 Typically used to print or save to a file.
@@ -52,8 +54,6 @@ ofFile file("rectangle.txt",ofFile::WriteOnly);
 file << rect;
 file.close();
 ~~~~
-
-
 
 
 
@@ -80,14 +80,14 @@ _advanced: False_
 
 _inlined_description: _
 
-
+Warning: The internal z-component of the ofPoint is preserved even though it
+is not used.
 
 
 
 
 
 _description: _
-
 
 Reads the parameters of the ofRectangle from an istream and constructs the ofRectangle.
 Typically used to load from a stream or a file.
@@ -98,8 +98,6 @@ ofFile file("rectangle.txt",ofFile::ReadOnly);
 file >> rect;
 file.close();
 ~~~~
-
-
 
 
 

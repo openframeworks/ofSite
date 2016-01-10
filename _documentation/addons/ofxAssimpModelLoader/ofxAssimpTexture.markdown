@@ -5,6 +5,7 @@
 _visible: False_
 _advanced: False_
 _istemplated: False_
+_extends: _
 -->
 
 ##InlineDescription
@@ -50,9 +51,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -62,16 +61,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofTexture * getTexturePtr()
+###ofTexture & getTextureRef()
 
 <!--
-_syntax: getTexturePtr()_
-_name: getTexturePtr_
-_returns: ofTexture *_
+_syntax: getTextureRef()_
+_name: getTextureRef_
+_returns: ofTexture &_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 0.8.0_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -88,9 +87,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -126,9 +123,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -164,9 +159,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -176,14 +169,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofxAssimpTexture(*assimpTexture)
+### ofxAssimpTexture(texture, texturePath)
 
 <!--
-_syntax: ofxAssimpTexture(*assimpTexture)_
+_syntax: ofxAssimpTexture(texture, texturePath)_
 _name: ofxAssimpTexture_
 _returns: _
 _returns_description: _
-_parameters: ofxAssimpTexture *assimpTexture_
+_parameters: ofTexture texture, string texturePath_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -202,47 +195,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofxAssimpTexture(*texture, texturePath)
-
-<!--
-_syntax: ofxAssimpTexture(*texture, texturePath)_
-_name: ofxAssimpTexture_
-_returns: _
-_returns_description: _
-_parameters: ofTexture *texture, string texturePath_
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
 
 
 
@@ -270,8 +223,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -295,8 +255,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 

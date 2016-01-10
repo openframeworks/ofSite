@@ -349,7 +349,7 @@ ofApp.h
     	}
 	
     	void draw(){
-    		ofEllipse(pos.x,pos.y,10,10);
+    		ofDrawEllipse(pos.x,pos.y,10,10);
     	}
 	
     	ofPoint pos;

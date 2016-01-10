@@ -5,6 +5,7 @@
 _visible: True_
 _advanced: False_
 _istemplated: False_
+_extends: ofxToggle_
 -->
 
 ##InlineDescription
@@ -50,9 +51,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -88,9 +87,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -126,9 +123,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -164,9 +159,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -202,9 +195,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -240,9 +231,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -278,9 +267,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -290,14 +277,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofxButton * setup(toggleName, width = defaultWidth, height = defaultHeight)
+###ofxButton * setup(&toggleName, width, height)
 
 <!--
-_syntax: setup(toggleName, width = defaultWidth, height = defaultHeight)_
+_syntax: setup(&toggleName, width, height)_
 _name: setup_
 _returns: ofxButton *_
 _returns_description: _
-_parameters: string toggleName, float width=defaultWidth, float height=defaultHeight_
+_parameters: const string &toggleName, float width, float height_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -316,9 +303,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -354,9 +339,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ~ofxButton()
+
+<!--
+_syntax: ~ofxButton()_
+_name: ~ofxButton_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -384,8 +403,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 

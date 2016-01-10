@@ -5,6 +5,7 @@
 _visible: True_
 _advanced: False_
 _istemplated: False_
+_extends: fstream_
 -->
 
 ##InlineDescription
@@ -83,13 +84,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Whether the file is an executable file.
-
-
 
 
 
@@ -123,13 +120,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Whether the file can be read or not.
-
-
 
 
 
@@ -163,13 +156,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Whether the file can be written to or not.
-
-
 
 
 
@@ -184,7 +173,7 @@ _syntax: changeMode(mode, binary = false)_
 _name: changeMode_
 _returns: bool_
 _returns_description: _
-_parameters: Mode mode, bool binary=false_
+_parameters: ofFile::Mode mode, bool binary=false_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -203,13 +192,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Changes the mode of the file from the current mode to the one passed in.
-
-
 
 
 
@@ -243,13 +228,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Closes the ofFile instance.
-
-
 
 
 
@@ -283,9 +264,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -295,14 +274,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool copyFromTo(pathSrc, pathDst, bRelativeToData = true, overwrite = false)
+###bool copyFromTo(&pathSrc, &pathDst, bRelativeToData = true, overwrite = false)
 
 <!--
-_syntax: copyFromTo(pathSrc, pathDst, bRelativeToData = true, overwrite = false)_
+_syntax: copyFromTo(&pathSrc, &pathDst, bRelativeToData = true, overwrite = false)_
 _name: copyFromTo_
 _returns: bool_
 _returns_description: _
-_parameters: string pathSrc, string pathDst, bool bRelativeToData=true, bool overwrite=false_
+_parameters: const string &pathSrc, const string &pathDst, bool bRelativeToData=true, bool overwrite=false_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -321,9 +300,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -333,14 +310,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool copyTo(path, bRelativeToData = true, overwrite = false)
+###bool copyTo(&path, bRelativeToData = true, overwrite = false)
 
 <!--
-_syntax: copyTo(path, bRelativeToData = true, overwrite = false)_
+_syntax: copyTo(&path, bRelativeToData = true, overwrite = false)_
 _name: copyTo_
 _returns: bool_
 _returns_description: _
-_parameters: string path, bool bRelativeToData=true, bool overwrite=false_
+_parameters: const string &path, bool bRelativeToData=true, bool overwrite=false_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -359,13 +336,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Copy the file from its current location into the path parameter. This is similar to the cp command.
-
-
 
 
 
@@ -399,9 +372,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 If the ofFile contains a file path that doesn't exist yet, calling create() generates the file.
 
@@ -414,18 +385,16 @@ newFile.create(); // now file exists
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
-###bool doesFileExist(fPath, bRelativeToData = true)
+###bool doesFileExist(&fPath, bRelativeToData = true)
 
 <!--
-_syntax: doesFileExist(fPath, bRelativeToData = true)_
+_syntax: doesFileExist(&fPath, bRelativeToData = true)_
 _name: doesFileExist_
 _returns: bool_
 _returns_description: _
-_parameters: string fPath, bool bRelativeToData=true_
+_parameters: const string &fPath, bool bRelativeToData=true_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -444,9 +413,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -482,13 +449,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Tests whether a file path exists or not.
-
-
 
 
 
@@ -522,13 +485,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns the absolute path to the file, on OSX this will be something like /Users/name/openFrameworks/apps/app/data/file.xml on Windows it will something like C:\Documents\openframeworks\apps\app\data\file.xml
-
-
 
 
 
@@ -562,9 +521,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -600,9 +557,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Returns the relative path to the directory containing the file, for instance:
 
@@ -612,8 +567,6 @@ ofFile file(ofToDataPath("foo.xml"));
 cout << file.getEnclosingDirectory(); // prints "../../../data/xml"
 
 ~~~~
-
-
 
 
 
@@ -647,9 +600,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Returns the extension of the file.
 
@@ -657,8 +608,6 @@ Returns the extension of the file.
     ofFile file(ofToDataPath("foo.xml"));
     cout << file.getExtension();
 ~~~~
-
-
 
 
 
@@ -692,9 +641,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -730,53 +677,9 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Returns the actual file name.
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###Poco::File & getPocoFile()
-
-<!--
-_syntax: getPocoFile()_
-_name: getPocoFile_
-_returns: Poco::File &_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-
-_description: _
-
-
-Returns the poco File instance that the ofFile wraps.
-
-
 
 
 
@@ -810,13 +713,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Gets the size of the file at the file path.
-
-
 
 
 
@@ -850,13 +749,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns whether the file path points to a mounted device.
-
-
 
 
 
@@ -890,13 +785,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns whether the file path points to a directory or not.
-
-
 
 
 
@@ -930,13 +821,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Whether the file path points to a file (it could also be a directory)
-
-
 
 
 
@@ -970,13 +857,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns whether the file path points to a hidden file or not.
-
-
 
 
 
@@ -1010,13 +893,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns whether file is an alias or not.
-
-
 
 
 
@@ -1050,9 +929,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1062,14 +939,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool moveFromTo(pathSrc, pathDst, bRelativeToData = true, overwrite = false)
+###bool moveFromTo(&pathSrc, &pathDst, bRelativeToData = true, overwrite = false)
 
 <!--
-_syntax: moveFromTo(pathSrc, pathDst, bRelativeToData = true, overwrite = false)_
+_syntax: moveFromTo(&pathSrc, &pathDst, bRelativeToData = true, overwrite = false)_
 _name: moveFromTo_
 _returns: bool_
 _returns_description: _
-_parameters: string pathSrc, string pathDst, bool bRelativeToData=true, bool overwrite=false_
+_parameters: const string &pathSrc, const string &pathDst, bool bRelativeToData=true, bool overwrite=false_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1088,9 +965,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1100,14 +975,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool moveTo(path, bRelativeToData = true, overwrite = false)
+###bool moveTo(&path, bRelativeToData = true, overwrite = false)
 
 <!--
-_syntax: moveTo(path, bRelativeToData = true, overwrite = false)_
+_syntax: moveTo(&path, bRelativeToData = true, overwrite = false)_
 _name: moveTo_
 _returns: bool_
 _returns_description: _
-_parameters: string path, bool bRelativeToData=true, bool overwrite=false_
+_parameters: const string &path, bool bRelativeToData=true, bool overwrite=false_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1126,13 +1001,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Moves the file to the location specified by path. This is similar to the mv command.
-
-
 
 
 
@@ -1166,9 +1037,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Creates an empty ofFile.
 
@@ -1176,18 +1045,16 @@ Creates an empty ofFile.
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
-### ofFile(filePath, mode = ReadOnly, binary = false)
+### ofFile(&path, mode = ReadOnly, binary = true)
 
 <!--
-_syntax: ofFile(filePath, mode = ReadOnly, binary = false)_
+_syntax: ofFile(&path, mode = ReadOnly, binary = true)_
 _name: ofFile_
 _returns: _
 _returns_description: _
-_parameters: string filePath, Mode mode=ReadOnly, bool binary=false_
+_parameters: const filesystem::path &path, ofFile::Mode mode=ReadOnly, bool binary=true_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1206,9 +1073,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Creates an ofFile using the file path and mode specified. Note that if the file doesn't actually exist on the file system this doesn't actually create file until you call create().
 
@@ -1220,8 +1085,6 @@ ofFile fileToRead(ofToDataPath("dictionary.txt")); // a file that exists
 ofFile newFile(ofToDataPath("temp.txt"), ofFile::Write); //file doesn't exist yet
 newFile.create(); // now file doesn't exist 
 ~~~~
-
-
 
 
 
@@ -1255,9 +1118,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Copy constructor for copying one ofFile into another 
 
@@ -1265,18 +1126,16 @@ Copy constructor for copying one ofFile into another
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
-###bool open(path, mode = ReadOnly, binary = false)
+###bool open(&path, mode = ReadOnly, binary = false)
 
 <!--
-_syntax: open(path, mode = ReadOnly, binary = false)_
+_syntax: open(&path, mode = ReadOnly, binary = false)_
 _name: open_
 _returns: bool_
 _returns_description: _
-_parameters: string path, Mode mode=ReadOnly, bool binary=false_
+_parameters: const filesystem::path &path, ofFile::Mode mode=ReadOnly, bool binary=false_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1295,13 +1154,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Opens the file with the file mode, either Reference, ReadOnly, WriteOnly, ReadWrite, Append
-
-
 
 
 
@@ -1316,7 +1171,7 @@ _syntax: openStream(_mode, binary)_
 _name: openStream_
 _returns: bool_
 _returns_description: _
-_parameters: Mode _mode, bool binary_
+_parameters: ofFile::Mode _mode, bool binary_
 _access: private_
 _version_started: 007_
 _version_deprecated: _
@@ -1335,9 +1190,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1373,13 +1226,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Tests whether a file path is not equal to the file path of the ofFile on the right hand side. 
-
-
 
 
 
@@ -1413,13 +1262,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Tests whether a file path is greater than the file path of the ofFile on the right hand side. 
-
-
 
 
 
@@ -1453,13 +1298,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Tests whether a file path is lesser or equal than the file path of the ofFile on the right hand side.
-
-
 
 
 
@@ -1493,17 +1334,13 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Equals operator which allows you to do this:
 
 ~~~~{.cpp}
 ofFile f1 = f2;
 ~~~~
-
-
 
 
 
@@ -1537,13 +1374,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Tests whether a file path is equal to the file path of the  ofFile on the right hand side. 
-
-
 
 
 
@@ -1577,13 +1410,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Tests whether a file path is greater than the file path of the ofFile on the right hand side.
-
-
 
 
 
@@ -1617,14 +1446,10 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Tests whether a file path is greater than or equal to the file path of the ofFile on the right hand side.
  
-
-
 
 
 
@@ -1658,13 +1483,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Returns the string of the ofFile file path.
-
-
 
 
 
@@ -1698,13 +1519,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Read the file into an ofBuffer object and return it.
-
-
 
 
 
@@ -1738,9 +1555,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 deletes a file or folder, be careful as this is not undo-able. 
 
@@ -1748,18 +1563,16 @@ deletes a file or folder, be careful as this is not undo-able.
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
-###bool removeFile(path, bRelativeToData = true)
+###bool removeFile(&path, bRelativeToData = true)
 
 <!--
-_syntax: removeFile(path, bRelativeToData = true)_
+_syntax: removeFile(&path, bRelativeToData = true)_
 _name: removeFile_
 _returns: bool_
 _returns_description: _
-_parameters: string path, bool bRelativeToData=true_
+_parameters: const string &path, bool bRelativeToData=true_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1778,9 +1591,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1790,14 +1601,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool renameTo(path, bRelativeToData = true, overwrite = false)
+###bool renameTo(&path, bRelativeToData = true, overwrite = false)
 
 <!--
-_syntax: renameTo(path, bRelativeToData = true, overwrite = false)_
+_syntax: renameTo(&path, bRelativeToData = true, overwrite = false)_
 _name: renameTo_
 _returns: bool_
 _returns_description: _
-_parameters: string path, bool bRelativeToData=true, bool overwrite=false_
+_parameters: const string &path, bool bRelativeToData=true, bool overwrite=false_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1816,9 +1627,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Renames the file with the new file name. If you specify a different path then this will move the file as well.
 
@@ -1826,14 +1635,12 @@ Renames the file with the new file name. If you specify a different path then th
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
-###void setExecutable(executable)
+###void setExecutable(executable = true)
 
 <!--
-_syntax: setExecutable(executable)_
+_syntax: setExecutable(executable = true)_
 _name: setExecutable_
 _returns: void_
 _returns_description: _
@@ -1856,9 +1663,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Toggles the file as executable or not executable.
 
@@ -1866,14 +1671,12 @@ Toggles the file as executable or not executable.
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
-###void setReadOnly(readable)
+###void setReadOnly(readable = true)
 
 <!--
-_syntax: setReadOnly(readable)_
+_syntax: setReadOnly(readable = true)_
 _name: setReadOnly_
 _returns: void_
 _returns_description: _
@@ -1896,9 +1699,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 Toggles the file as readable or not readable.
 
@@ -1906,14 +1707,12 @@ Toggles the file as readable or not readable.
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
-###void setWriteable(writeable)
+###void setWriteable(writeable = true)
 
 <!--
-_syntax: setWriteable(writeable)_
+_syntax: setWriteable(writeable = true)_
 _name: setWriteable_
 _returns: void_
 _returns_description: _
@@ -1936,13 +1735,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Toggles the file as writeable or not writeable.
-
-
 
 
 
@@ -1976,13 +1771,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Write an ofBuffer instance to the file path.
-
-
 
 
 
@@ -2016,13 +1807,9 @@ _inlined_description: _
 
 
 
-
 _description: _
 
-
 Destructor
-
-
 
 
 
@@ -2048,8 +1835,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2073,8 +1867,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -2098,8 +1899,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 

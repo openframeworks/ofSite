@@ -5,6 +5,7 @@
 _visible: True_
 _advanced: True_
 _istemplated: False_
+_extends: ofBaseVideoPlayer, ofGstAppSink_
 -->
 
 ##InlineDescription
@@ -24,14 +25,14 @@ _istemplated: False_
 
 
 
-###bool allocate(bpp)
+###bool allocate()
 
 <!--
-_syntax: allocate(bpp)_
+_syntax: allocate()_
 _name: allocate_
 _returns: bool_
 _returns_description: _
-_parameters: int bpp_
+_parameters: _
 _access: protected_
 _version_started: 0071_
 _version_deprecated: _
@@ -50,9 +51,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -88,9 +87,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool createPipeline(uri)
+
+<!--
+_syntax: createPipeline(uri)_
+_name: createPipeline_
+_returns: bool_
+_returns_description: _
+_parameters: string uri_
+_access: protected_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -126,9 +159,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -164,9 +195,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -202,9 +231,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -240,9 +267,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -278,9 +303,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -316,9 +339,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -354,9 +375,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -392,9 +411,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -404,12 +421,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###unsigned char * getPixels()
+###ofPixels & getPixels()
 
 <!--
 _syntax: getPixels()_
 _name: getPixels_
-_returns: unsigned char *_
+_returns: ofPixels &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -430,9 +447,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -442,16 +457,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofPixelsRef getPixelsRef()
+###const ofPixels & getPixels()
 
 <!--
-_syntax: getPixelsRef()_
-_name: getPixelsRef_
-_returns: ofPixelsRef_
+_syntax: getPixels()_
+_name: getPixels_
+_returns: const ofPixels &_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -468,9 +483,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -506,9 +519,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -544,9 +555,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofTexture * getTexturePtr()
+
+<!--
+_syntax: getTexturePtr()_
+_name: getTexturePtr_
+_returns: ofTexture *_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -582,9 +627,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -620,9 +663,43 @@ _inlined_description: _
 
 
 
-
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool isFrameByFrame()
+
+<!--
+_syntax: isFrameByFrame()_
+_name: isFrameByFrame_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -658,9 +735,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -696,9 +771,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -734,9 +807,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -772,9 +843,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -810,9 +879,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -822,16 +889,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool loadMovie(uri)
+###bool isThreadedAppSink()
 
 <!--
-_syntax: loadMovie(uri)_
-_name: loadMovie_
+_syntax: isThreadedAppSink()_
+_name: isThreadedAppSink_
 _returns: bool_
 _returns_description: _
-_parameters: string uri_
+_parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -848,9 +915,79 @@ _inlined_description: _
 
 
 
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool load(uri)
+
+<!--
+_syntax: load(uri)_
+_name: load_
+_returns: bool_
+_returns_description: _
+_parameters: string uri_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
 
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void loadAsync(name)
+
+<!--
+_syntax: loadAsync(name)_
+_name: loadAsync_
+_returns: void_
+_returns_description: _
+_parameters: string name_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 
 
@@ -886,9 +1023,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -924,9 +1059,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -962,9 +1095,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1000,9 +1131,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1038,9 +1167,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1076,9 +1203,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1114,9 +1239,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1152,9 +1275,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1190,9 +1311,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1228,9 +1347,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1260,17 +1377,13 @@ _advanced: False_
 
 _inlined_description: _
 
-needs to be called before loadMovie 
-
-
-
+needs to be called before loadMovie
 
 
 
 
 
 _description: _
-
 
 
 
@@ -1306,9 +1419,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1344,9 +1455,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1382,9 +1491,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1420,9 +1527,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1458,9 +1563,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1496,9 +1599,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1534,9 +1635,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -1549,6 +1648,38 @@ _description: _
 ##Variables
 
 
+
+###bool bAsyncLoad
+
+<!--
+_name: bAsyncLoad_
+_type: bool_
+_access: private_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###bool bIsAllocated
 
@@ -1564,8 +1695,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1589,8 +1727,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1614,8 +1759,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1639,8 +1791,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1664,8 +1823,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1689,8 +1855,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1714,8 +1887,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 
@@ -1739,8 +1919,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 

@@ -5,6 +5,7 @@
 _visible: True_
 _advanced: True_
 _istemplated: False_
+_extends: ofxOscArg_
 -->
 
 ##InlineDescription
@@ -44,17 +45,13 @@ _advanced: False_
 
 _inlined_description: _
 
-return value 
-
-
-
+return value
 
 
 
 
 
 _description: _
-
 
 
 
@@ -84,17 +81,13 @@ _advanced: False_
 
 _inlined_description: _
 
-return the type of this argument 
-
-
-
+return the type of this argument
 
 
 
 
 
 _description: _
-
 
 
 
@@ -130,9 +123,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -168,9 +159,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -200,17 +189,13 @@ _advanced: False_
 
 _inlined_description: _
 
-set value 
-
-
-
+set value
 
 
 
 
 
 _description: _
-
 
 
 
@@ -246,9 +231,7 @@ _inlined_description: _
 
 
 
-
 _description: _
-
 
 
 
@@ -276,8 +259,15 @@ _constant: True_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+
+
+
+
+
+
+_description: _
 
 
 

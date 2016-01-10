@@ -48,7 +48,6 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
 ###void ofxGuiSetBitmapFont()
@@ -77,7 +76,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -120,7 +118,6 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
 ###void ofxGuiSetDefaultHeight(height)
@@ -149,7 +146,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -192,7 +188,6 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
 ###void ofxGuiSetFillColor(&color)
@@ -221,7 +216,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -264,7 +258,6 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
 ###void ofxGuiSetHeaderColor(&color)
@@ -293,7 +286,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
@@ -336,7 +328,6 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
 ###void ofxGuiSetTextPadding(padding)
@@ -365,7 +356,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 

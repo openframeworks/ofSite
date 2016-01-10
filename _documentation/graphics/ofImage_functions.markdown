@@ -34,14 +34,15 @@ _advanced: False_
 
 _inlined_description: _
 
+Deallocates FreeImage resources.
 
+Used internally during shutdown.
 
 
 
 
 
 _description: _
-
 
 
 
@@ -70,14 +71,13 @@ _advanced: False_
 
 _inlined_description: _
 
-
+\todo Needs documentation.
 
 
 
 
 
 _description: _
-
 
 
 
@@ -120,7 +120,6 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
 ###bool ofLoadImage(&tex, path)
@@ -142,14 +141,13 @@ _advanced: False_
 
 _inlined_description: _
 
-
+\todo Needs documentation.
 
 
 
 
 
 _description: _
-
 
 
 
@@ -192,7 +190,6 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
 ###bool ofLoadImage(&pix, path)
@@ -214,14 +211,13 @@ _advanced: False_
 
 _inlined_description: _
 
-
+\todo Needs documentation.
 
 
 
 
 
 _description: _
-
 
 
 
@@ -264,7 +260,6 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
 ###bool ofLoadImage(&pix, path)
@@ -286,14 +281,13 @@ _advanced: False_
 
 _inlined_description: _
 
-
+\todo Needs documentation.
 
 
 
 
 
 _description: _
-
 
 
 
@@ -336,7 +330,6 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
 ###void ofSaveImage(&pix, path, qualityLevel = OF_IMAGE_QUALITY_BEST)
@@ -358,14 +351,13 @@ _advanced: False_
 
 _inlined_description: _
 
-
+\todo Needs documentation.
 
 
 
 
 
 _description: _
-
 
 
 
@@ -408,7 +400,6 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
 ###void ofSaveImage(&pix, path, qualityLevel = OF_IMAGE_QUALITY_BEST)
@@ -430,14 +421,13 @@ _advanced: False_
 
 _inlined_description: _
 
-
+\todo Needs documentation.
 
 
 
 
 
 _description: _
-
 
 
 
@@ -480,7 +470,6 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
 ###void ofSaveImage(&pix, path, qualityLevel = OF_IMAGE_QUALITY_BEST)
@@ -502,14 +491,13 @@ _advanced: False_
 
 _inlined_description: _
 
-
+\todo Needs documentation.
 
 
 
 
 
 _description: _
-
 
 
 
@@ -545,7 +533,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 
