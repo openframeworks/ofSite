@@ -757,6 +757,7 @@ ofVec3f cameraToWorld(ofVec3f CameraXYZ, ofRectangle viewport = ofGetCurrentView
 As with everything else, there's a ton more to learn, but this tutorial is already pushing the bounds of acceptability, so we'll wrap it up here. A few further resources before we go though:
 
 * [OpenGL Tutorials](http://www.opengl-tutorial.org)
+* [OpenGL Tutorials (matrices)](http://www.opengl-tutorial.org/beginners-tutorials/tutorial-3-matrices/)
 * [Modern OpenGL](http://tomdalling.com/blog/modern-opengl)
 * [Swiftless Tutorials](http://www.swiftless.com)
 
