@@ -12,6 +12,7 @@ author: [Joshua Noble](http://twitter.com/fctry2)
 * [Vertices](#vertices)
 * [Meshes](#meshes)
 * [VBOs](#vbos)
+* [A Basic 3D Scene](#a-basic-3d-scene)
 * [Matrices](#matrices)
 * [Textures](#textures)
 * [Cameras](#cameras)
@@ -310,6 +311,87 @@ for( int i = 0; i < mesh.getVertices().size(); i++ )
 There's a few new tricks to VBOs that you can leverage if you have a new enough graphics card, for instance, the ability to draw a single VBO many many times and position them in the vertex shader. This is called instancing and it's available in the ofVboMesh in the drawInstanced() method. You can see an example of this being used in the vboMeshDrawInstancedExample in examples/gl. Generally speaking, if you have something that you know you're going to keep around for a long time and that you're going to draw lots of times in lots of different places, you'll get a speed increase from using a VBO. This isn't always true, but it's true enough of the time.
 
 Although that's nowhere close to everything about vertices and meshes, we're going to move on to another frequently misunderstood but vital part of OpenGL: matrices.
+
+###[A Basic 3D Scene](#a-basic-3D-scene)
+
+Now take a breath. Before we go further and start dig into matrices, let's set up
+a simple scene that you can use as reference while reading the next part of
+this dense tutorial. Since OF version 0.9, you need 5 things to set up a 3D
+scene: a window, a camera, a material, a light and an object.
+Let's start from the window.
+
+Create a new project using the ProjectGenerator and edit the main.cpp file as follow.  Since OF 0.9, that is the way to set up a window
+that use the programmable pipeline. If you want to read in detail what was introduced with the 0.9 version, on the blog there is a [detailed review](http://blog.openframeworks.cc/post/133400454159/openframeworks-090-opengl-45), but for now it is not necessary.
+
+~~~~{.cpp}
+
+#include "ofMain.h"
+#include "ofApp.h"
+
+//========================================================================
+int main( ){
+    ofGLFWWindowSettings settings;
+    settings.setGLVersion(3, 2);
+    settings.width = 1280;
+    settings.height = 720;
+    ofCreateWindow(settings);
+    ofRunApp(new ofApp());
+}
+
+~~~~
+
+Here you have defined the dimension of our window and which OpenGL version we want to use.
+
+The second thing that you need is a camera and a light. Later on this tutorial you will see how to get full controll over your camera, for now let's do something really basic. Edit your App.cpp and App.h as follow
+
+~~~~{.cpp}
+
+// Add this in the App.h
+ofLight light;
+ofEasyCam cam;
+
+// add these lines to the setup and to the draw method in the App.cpp
+void ofApp::setup(){
+    light.setup();
+    light.setPosition(-100, 200,0);
+    ofEnableDepthTest();
+}
+
+void ofApp::draw(){
+    cam.begin();
+    // here you will draw your object
+    cam.end();
+}
+
+~~~~
+
+With this code you have accomplished two important things. It's a bit like making a movie, you have first to position the light, to turn it on, and then you have to put your camera in the right position. Now the set of our movie is ready for our first scene. If you run this code, you will a gray screen. That is obvius, there is nothing under our camera.Let's put an actor (a simple box) under the reflectors.
+
+~~~~{.cpp}
+
+// add this to your App.h file
+ofBoxPrimitive box;
+ofMaterial boxMaterial;
+
+// edit your App.cpp file and add these lines
+void ofApp::setup(){
+    //...
+    boxMaterial.setDiffuseColor(ofFloatColor::red);
+    boxMaterial.setShininess(0.02);
+}
+
+void ofApp::draw(){
+    cam.begin();
+        boxMaterial.begin();
+          box.draw()
+        boxMaterial.end();
+    cam.end();
+}
+
+~~~~
+
+In this chunk of code you have added 2 things. The box, our main actor in this movie, and the material, that defines the color of the box and how it reacts to the light.
+If you run the code you will see a red box in the middle of your screen. The In the next part we will see how to move things around using the incredible properties of the ofNode class, that simplify all the matrices operations needed in a every 3D scene.
 
 ###[Matrices](#matrices)
 
