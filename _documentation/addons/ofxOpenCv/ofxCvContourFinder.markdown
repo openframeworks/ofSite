@@ -86,7 +86,7 @@ void ofApp::draw(){
     ofSetHexColor(0xffffff);
     colorImg.draw(0, 0, 320, 240);
     grayDiff.draw(0, 240, 320, 240);
-    ofRect(320, 0, 320, 240);
+    ofDrawRectangle(320, 0, 320, 240);
     contourFinder.draw(320, 0, 320, 240);
     ofColor c(255, 255, 255);
     for(int i = 0; i < contourFinder.nBlobs; i++) {
@@ -94,7 +94,7 @@ void ofApp::draw(){
         r.x += 320; r.y += 240;
         c.setHsb(i * 64, 255, 255);
         ofSetColor(c);
-        ofRect(r);
+        ofDrawRectangle(r);
     }
 }
 

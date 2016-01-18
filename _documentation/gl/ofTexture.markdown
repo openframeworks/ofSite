@@ -1187,7 +1187,7 @@ _inlined_description: _
 
 Draw a subsection of the texture.
 
-Like ofRect() depend on the current `OF_RECT_MODE`:
+Like ofDrawRectangle() depend on the current `OF_RECT_MODE`:
 
 * `OF_RECT_MODE_CORNER`: drawn with the upper left corner = (x,y)
 * `OF_RECT_MODE_CENTER`: drawn centered on (x,y)

@@ -954,9 +954,9 @@ Turns off alpha blending.
 void ofApp::draw(){
     ofEnableAlphaBlending();    // turn on alpha blending
     ofSetColor(255,0,0,127);    // red, 50% transparent
-    ofRect(20,20,100,100);      // draws the rect with alpha
+    ofDrawRectangle(20,20,100,100);      // draws the rect with alpha
     ofDisableAlphaBlending();   // turn off alpha
-    ofRect(120,20,100,100); // draws the rect without alpha
+    ofDrawRectangle(120,20,100,100); // draws the rect without alpha
 }
 ~~~~
 
@@ -1109,7 +1109,7 @@ void ofApp::draw(){
         ofDisableDepthTest();
 
         ofSetColor(0);
-        ofRect(75,75,120,30);
+        ofDrawRectangle(75,75,120,30);
         ofSetColor(255);
         ofDrawBitmapString("Some bubbles.",85,90);
 
@@ -2559,9 +2559,9 @@ Turns on alpha blending (which is on by default since OF version 0.8.0). It simp
 void ofApp::draw(){
     ofEnableAlphaBlending();    // turn on alpha blending
     ofSetColor(255,0,0,127);    // red, 50% transparent
-    ofRect(20,20,100,100);      // draws the rect with alpha
+    ofDrawRectangle(20,20,100,100);      // draws the rect with alpha
     ofDisableAlphaBlending();   // turn off alpha
-    ofRect(120,20,100,100); // draws the rect without alpha
+    ofDrawRectangle(120,20,100,100); // draws the rect without alpha
 }
 ~~~~
 
@@ -2706,7 +2706,7 @@ void ofApp::draw(){
 
         // draw 2d overlay
         ofSetColor(0);
-        ofRect(75,75,120,30);
+        ofDrawRectangle(75,75,120,30);
         ofSetColor(255);
         ofDrawBitmapString("Some bubbles.",85,90);
 
@@ -2964,7 +2964,7 @@ Draw shapes filled with the current draw color.
 void ofApp::draw(){
     ofSetColor(0,0,255);
     ofFill();
-    ofRect(10,10,100,100);  //draws the rectangle filled in blue
+    ofDrawRectangle(10,10,100,100);  //draws the rectangle filled in blue
 }
 ~~~~
 
@@ -3386,10 +3386,10 @@ Tells you if rect drawing mode is set to drawn from the center or drawn from the
 ~~~~{.cpp}
 void ofApp::draw(){
     if(ofGetRectMode() == OF_RECTMODE_CORNER){
-        ofRect(10,10,80,80);
+        ofDrawRectangle(10,10,80,80);
     }
     else {
-        ofRect(50,50,80,80);
+        ofDrawRectangle(50,50,80,80);
     }
 }
 ~~~~
@@ -3872,7 +3872,7 @@ Draw shapes as outlines with the current draw color.
 void ofApp::draw(){
     ofSetColor(0,0,255);
     ofNoFill();
-    ofRect(10,10,100,100);  //draws only the outline in blue
+    ofDrawRectangle(10,10,100,100);  //draws only the outline in blue
 }
 ~~~~
 
@@ -3953,7 +3953,7 @@ void ofApp::draw(){
     ofCircle(10, 10, 5);    // draw a circle
     ofPushMatrix();         // push the current coordinate position
     ofRotateX(90);          // change the coordinate system
-    ofRect(10,10,40,40);    // draw a rect
+    ofDrawRectangle(10,10,40,40);    // draw a rect
     ofPopMatrix();          // recall the pushed coordinate position
 }
 ~~~~
@@ -4093,7 +4093,7 @@ void ofApp::draw(){
     ofCircle(10, 10, 5);    // draw a circle
     ofPushMatrix();         // push the current coordinate position
     ofRotateX(90);          // change the coordinate system
-    ofRect(10,10,40,40);    // draw a rect
+    ofDrawRectangle(10,10,40,40);    // draw a rect
     ofPopMatrix()           // recall the pushed coordinate position
 }
 ~~~~
@@ -4253,7 +4253,7 @@ All graphics drawn after ofRotate is called are rotated. Use ofPushMatrix and of
 ~~~~{.cpp}
 void ofApp::draw(){
     ofRotate(50, 1, 0.5, 0); //rotates the coordinate system 50 degrees along the x-axis and 25 degrees on the y-axis
-    ofRect(20,20,100,100);
+    ofDrawRectangle(20,20,100,100);
 }
 ~~~~
 
@@ -4339,7 +4339,7 @@ ofRotateX produces a rotation of angle "degrees" around the X-axis of our coordi
 ~~~~{.cpp}
 void ofApp::draw(){
     ofRotateX(45); //rotates the coordinate system 45 degrees around the x-axis
-    ofRect(20,20,100,100);
+    ofDrawRectangle(20,20,100,100);
 }
 ~~~~
 
@@ -4391,7 +4391,7 @@ ofRotateY produces a rotation of angle "degrees" around the Y-axis of our coordi
 ~~~~{.cpp}
 void ofApp::draw(){
     ofRotateY(45); //rotates the coordinate system 45 degrees around the x-axis
-    ofRect(20,20,100,100);
+    ofDrawRectangle(20,20,100,100);
 }
 ~~~~
 
@@ -4443,7 +4443,7 @@ ofRotateZ produces a rotation of angle "degrees" around the Z-axis of our coordi
 ~~~~{.cpp}
 void ofApp::draw(){
     ofRotateZ(45); //rotates the coordinate system 45 degrees around the x-axis
-    ofRect(20,20,100,100);
+    ofDrawRectangle(20,20,100,100);
 }
 ~~~~
 
@@ -4485,7 +4485,7 @@ e.g:
 ~~~~{.cpp}
 void ofApp::draw(){
     ofScale(0.5,1,1);       // scale 0.5 in height
-    ofRect(10,10,40,40);    // draw a square rectangle
+    ofDrawRectangle(10,10,40,40);    // draw a square rectangle
 }
 ~~~~
 Rectangle width will be now 20px heigh!
@@ -4813,11 +4813,11 @@ void ofApp::draw(){
 
 _description: _
 
-Sets the draw color with r,g,b, 0-255. For example, red (0xff0000) would be: ofSetColor(255,0,0). This affects not only the color of shapes drawn with ofRect(...), ofCircle(...), etc, but also the tint of images and textures.
+Sets the draw color with r,g,b, 0-255. For example, red (0xff0000) would be: ofSetColor(255,0,0). This affects not only the color of shapes drawn with ofDrawRectangle(...), ofCircle(...), etc, but also the tint of images and textures.
 ~~~~{.cpp}
 void ofApp::draw(){
     ofSetColor(0,0,255);    //set te color to blue
-    ofRect(10,10,100,100);
+    ofDrawRectangle(10,10,100,100);
 }
 ~~~~
 
@@ -4872,7 +4872,7 @@ sets the draw color with r,g,b,a 0-255. For alpha (transparency), you must first
 void ofApp::draw(){
     ofEnableAlphaBlending();    // turn on alpha blending
     ofSetColor(255,0,0,127);    // red, 50% transparent
-    ofRect(20,20,100,100);
+    ofDrawRectangle(20,20,100,100);
     ofDisableAlphaBlending();   // turn it back off, if you don't need it
 }
 ~~~~
@@ -5184,7 +5184,7 @@ Sets the draw color with a hex value.
 ~~~~{.cpp}
 void ofApp::draw(){
     ofSetHexColor(0xff0000);    //set te color to red
-    ofRect(10,10,100,100);
+    ofDrawRectangle(10,10,100,100);
 }
 ~~~~
 
@@ -5596,7 +5596,7 @@ Use ofPushMatrix and ofPopMatrix to save and restore the untranslated coordinate
 ~~~~{.cpp}
 void ofApp::draw(){
     ofTranslate(100, 100, 0);   // move the coordinate system to position x 100 and y 100 and make that zero.
-    ofRect(0, 0, 10, 10);       // draw a rect at that position
+    ofDrawRectangle(0, 0, 10, 10);       // draw a rect at that position
 }
 ~~~~
 
@@ -5642,7 +5642,7 @@ void ofApp::draw(){
     point.y = 100;
 
     ofTranslate(point);     // move the coordinate system to position of point and make that zero.
-    ofRect(0, 0, 10, 10);   // draw a rect at that position
+    ofDrawRectangle(0, 0, 10, 10);   // draw a rect at that position
 }
 ~~~~
 
