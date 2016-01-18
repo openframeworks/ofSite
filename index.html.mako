@@ -17,10 +17,9 @@
 
         <h3><a href="${bf.config.site.url}/download/">download</a></h3>
         <p>Grab the most recent release (${bf.config.currentVersion}) and follow the setup guide to get openFrameworks running.</p>
-        
 	<h3><a href="${bf.config.site.url}/documentation/">documentation</a></h3>
 	<p>Reference for openFrameworks classes, functions and addons. You can also check the <a href="http://openframeworks.cc/tutorials">tutorials section<a>.</p>
-        
+
 	<h3><a href="http://forum.openframeworks.cc/">forum</a></h3>
 	<p>The forum is a place to meet other people working with openFrameworks. It's a place to share your work, or find help solving problems.</p>
     </div>
@@ -49,7 +48,7 @@
     </div>
 
     <div id="forum"></div>
-    
+
     <div id="github"></div>
 
     <br class="clearboth">
