@@ -180,5 +180,5 @@ These are classes that represent types in openFrameworks like ofRectangle, ofVec
 
 ## Functions
 
-Some functionality in openFrameworks is provided through plain C functions. This are usually utility functions like ofToString(), ofRandom(), ofDrawBitmapString() and simple draw functions like ofCircle(), ofRect().
+Some functionality in openFrameworks is provided through plain C functions. This are usually utility functions like ofToString(), ofRandom(), ofDrawBitmapString() and simple draw functions like ofCircle(), ofDrawRectangle().
 

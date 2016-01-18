@@ -39,7 +39,7 @@ When you call begin() you're telling the framebuffer to store the rendered resul
 float alpha = ofMap(ofGetMouseX(), 0, ofGetWidth(), 0, 255);
 fbo.begin();
 	ofSetColor(255,255,255, alpha);
-	ofRect(0,0,400,400);
+	ofDrawRectangle(0,0,400,400);
 fbo.end();
 ~~~~
 
