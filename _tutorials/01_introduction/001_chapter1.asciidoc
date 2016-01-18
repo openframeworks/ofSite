@@ -1400,4 +1400,3 @@ if (useInner) {
 This abbreviated syntax might be useful if each alternative consists of only one statement to be executed, but is also easy to overlook when trying to find bugs (programming errors) in a program. The more verbose version is easier to spot and understand. It also is easier to extend if needed.
 
 All the concepts introduced should give you the basic tools to study and understand the example code provided. We covered a lot of ground, so go and poke at the other examples!
-

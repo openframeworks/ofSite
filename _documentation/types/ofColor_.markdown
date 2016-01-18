@@ -96,7 +96,7 @@ saturation.
 
 ofColor represents a color in openFrameworks. Colors are usually defined by specifying a red, green, and blue component (RGB), and a transparency (alpha) component. You can also specify colors using hue, saturation and brightness (HSB).
 
-For example: 
+For example:
 
 ~~~~{.cpp}
 // set red, component by component
@@ -104,20 +104,20 @@ ofColor red;
 red.r=255;
 red.g=0;
 red.b=0;
-ofSetColor(red); 
+ofSetColor(red);
 // draw color is now red
 
 // shorter notation is also possible
 ofColor green(0, 255, 0);
-ofSetColor(green); 
+ofSetColor(green);
 // draw color is now green
 
-// or even shorter 
-ofSetColor( ofColor(0, 0, ofRandom( 128, 255 ) ); 
+// or even shorter
+ofSetColor( ofColor(0, 0, ofRandom( 128, 255 ) );
 // draw color is now a random blue
 ~~~~
 
-ofColor also enables a lot of extra functionality like using HSB instead of color spectrums, lerping or linearly interpolating between colors, and inverting colors, among other things. 
+ofColor also enables a lot of extra functionality like using HSB instead of color spectrums, lerping or linearly interpolating between colors, and inverting colors, among other things.
 
 ofColor is templated, which means that it has several different ways it can be created. These are probably best to leave as they are because there's already a few kinds typedefed for you. The default ofColor uses unsigned char values (0 to 255), but you can make an ofFloatColor if you want to work with floating point numbers between 0 and 1, or ofShortColor if you want to work with integers between 0 and 65,535.
 
@@ -489,7 +489,7 @@ ofColor c( 255, 255, 0 ); // yellow
 int hex = c.getHex(); // hex is 0xffff00 (or 16776960 in decimal)
 ~~~~
 
-Usually when we look at these colors in print they're hex, so don't be surprised if they don't look familiar when you print them as decimal. 
+Usually when we look at these colors in print they're hex, so don't be surprised if they don't look familiar when you print them as decimal.
 
 
 
@@ -970,7 +970,7 @@ Returns: A reference to itself.
 
 _description: _
 
-Perform a linear interpolation (lerp) between this color and the target. Amount is a percentage represented by a float from 0 to 1. 
+Perform a linear interpolation (lerp) between this color and the target. Amount is a percentage represented by a float from 0 to 1.
 
 This function allows to blend between colors. For instance, if you have red and you want halfway between red and blue, you can do this:
 ~~~~{.cpp}
@@ -1084,10 +1084,10 @@ The following
 ~~~~{.cpp}
 	ofColor c(122, 122, 0);
 	ofSetColor(c);
-	ofCircle(100, 100, 100);
+	ofDrawCircle(100, 100, 100);
 	c.normalize();
 	ofSetColor(c);
-	ofCircle(300, 100, 100);
+	ofDrawCircle(300, 100, 100);
 ~~~~
 
 will create this:
@@ -2750,7 +2750,7 @@ hue A hue value to set in the range of 0 - limit().
 
 _description: _
 
-Change the current hue, leaving saturation and brightness intact. 
+Change the current hue, leaving saturation and brightness intact.
 
 ~~~~{.cpp}
 ofColor c = ofColor::fromHsb( 0, 255, 255 ); // bright red
@@ -9882,4 +9882,3 @@ _description: _
 
 
 <!----------------------------------------------------------------------------->
-
