@@ -129,7 +129,7 @@ Here's how you can write the class \*.cpp file, the implementation file:
     void ofBall::draw(){
         // values for R, G, B
         ofSetColor(120,120,120);
-        ofCircle(x, y, dim);
+        ofDrawCircle(x, y, dim);
     }
 ~~~~
 

@@ -15,10 +15,9 @@
     <div class="home-links">
         <h2>openFrameworks is an open source C++ toolkit for creative coding.</h2>
 
-        <h3><a href="/download/">download</a></h3>
+        <h3><a href="${bf.config.site.url}/download/">download</a></h3>
         <p>Grab the most recent release (${bf.config.currentVersion}) and follow the setup guide to get openFrameworks running.</p>
-
-	<h3><a href="/documentation/">documentation</a></h3>
+	<h3><a href="${bf.config.site.url}/documentation/">documentation</a></h3>
 	<p>Reference for openFrameworks classes, functions and addons. You can also check the <a href="http://openframeworks.cc/tutorials">tutorials section<a>.</p>
 
 	<h3><a href="http://forum.openframeworks.cc/">forum</a></h3>
@@ -49,7 +48,7 @@
     </div>
 
     <div id="forum"></div>
-    
+
     <div id="github"></div>
 
     <br class="clearboth">

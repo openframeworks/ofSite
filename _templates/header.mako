@@ -49,6 +49,8 @@
             <li>english</li>
             <li>/</li>
             <li><a href="http://openframeworks.jp">japanese</a></li>
+            <li>/</li>
+            <li><a href="http://openframeworks.kr">korean</a></li>
         </ul>
 		</div>
 </div><!-- head -->

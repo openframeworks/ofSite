@@ -10,7 +10,7 @@ The most important classes in this module are:
 
 - [ofPath](ofPath.html): represents a complex shape formed by one or more outlines, internally it uses [ofPolyline](ofPolyline.html) to represent that data and later decomposes it in [ofMesh](../3d/ofMesh.html) if necesary. It can draw both contours and filled shapes and it's the recommended way to draw 2d shapes in openFrameworks.
 
-- [ofTrueType](ofTrueType.html): can load true type fonts in different formats and draw text using the loaded font.
+- [ofTrueTypeFont](ofTrueTypeFont.html): can load true type fonts in different formats and draw text using the loaded font.
 
 - [ofGraphics](ofGraphics.html): has several utility functions to change the state of the graphics pipeline (like the default color or the blending mode) and allows to draw shapes in immediate mode which can be useful if you want to draw something quickly, for prototipying, instead of using ofPath
 

@@ -15,6 +15,8 @@ Similiar to the desktop-based platforms, openFrameworks provides a common interf
 
 openFrameworks 0.9.0 supports the Raspberry Pi via the recommended Linux distribution Raspbian "Jessie" (hard float). Wheezy can be used with older versions of openFrameworks (0.84 recommended). [See here for the older versions of this guide that talk about Wheezy](Raspberry-Pi-Wheezy-index.html)
 
+On the Raspberry 2 although it's architecture is arm7 raspbian only supports arm6 by now so be sure to download that version as is explained in the [getting started guide](Raspberry-Pi-Getting-Started.html). If you want to use arm7 binaries with the raspberry PI 2 you can try other distributions like archlinux or ubuntu core and the arm7 download of OF but this is still not very well tested so some changes might be required to the original install scripts.
+
 If you are an existing openFrameworks/RPi user you may wish to read [what's different in 0.9.0](Raspberry-Pi-8-9-Transition-Notes.html) 
 
 ## Getting Started

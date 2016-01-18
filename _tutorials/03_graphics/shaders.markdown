@@ -20,7 +20,7 @@ author: Lucasz Karluk, Joshua Noble, Jordi Puig
 
 <a name="introducing"></a>
 
-This tutorial comes in two parts: first, this thing, the HTML file and second, nine OF projects that progress along with this tutorial. You can find them in the tutorials folder of your OF download or [on github](https://github.com/openframeworks/openFrameworks/tree/master/tutorials/shader). As you read along with this, you should check the code downloads as well because a lot of the code isn't here, but rather is there. You'll notice that all of those project folders have source code and a data folder that contains 3 different kinds of shaders: GL2, GL3, and GLES2. What these are and how they're different from one another will be described below.
+This tutorial comes in two parts: first, this thing, the HTML file and second, nine OF projects that progress along with this tutorial. You can find them in the example folder of your OF download, under `examples/shader` or [on github](https://github.com/openframeworks/openFrameworks/tree/master/examples/shader). As you read along with this, you should check the code downloads as well because a lot of the code isn't here, but rather is there. You'll notice that all of those project folders have source code and a data folder that contains 3 different kinds of shaders: GL2, GL3, and GLES2. What these are and how they're different from one another will be described below.
 
 You've probably heard somewhere about "shaders", those mystical things that let you render beautiful things at blazing speed. Shaders are not actually mystical but they are a little tricky to get started with at first because they're working with a different part of the computer than you're usually working with in your openFrameworks application: you're working on the Graphics Processing Unit (as opposed to the Central Processing Unit that you're usually working on in OF). To really get the hang of working with shaders, we need to get you a little background on what the GPU is first. So, without further ado, let's go:
 
@@ -71,34 +71,22 @@ You can load shader programs into your ofShader object using *shader.load()* or 
 Before we go get into trouble, there's something that I want to explain that might not make sense right at first but is fairly important to acknoweldge and is not so important to deeply grok at first: our examples use OpenGL3 mostly and to use OpenGL3 in OF you need to alter your main.cpp file. The main files in the tutorial download all look like this:
 
 ~~~~{.cpp}
-
 #include "ofMain.h"
 #include "ofApp.h"
-// import the fancy new renderer
-#include "ofGLProgrammableRenderer.h"
 
 int main( ){
-
-    // say that we're going to *use* the fancy new renderer
-    ofSetCurrentRenderer(ofGLProgrammableRenderer::TYPE);
-    ofSetupOpenGL(1024,768, OF_WINDOW);         // <-------- setup the GL context
-
+    ofGLFWWindowSettings settings;
+    settings.setGLVersion(3, 2); //we define the OpenGL version we want to use
+    settings.width = 1024;
+    settings.height = 768;
+    ofCreateWindow(settings);
     // this kicks off the running of my app
-    // can be OF_WINDOW or OF_FULLSCREEN
-    // pass in width and height too:
-    ofRunApp( new ofApp());
-
+    ofRunApp(new ofApp());
 }
 
 ~~~~
 
-Did you catch that? There's a new renderer that lets you use all kinds of cool new stuff and the way to tell OF to use that fancy new renderer is right here:
-
-~~~~{.cpp}
-// say that we're going to *use* the fancy new renderer
-ofSetCurrentRenderer(ofGLProgrammableRenderer::TYPE);
-ofSetupOpenGL(1024,768, OF_WINDOW);         // <-------- setup the GL context
-~~~~
+Did you catch that? There's a new setting object that lets you define the OpenGL version and the dimension of the window.
 
 Now, what OpenGL3 is and how it's going to change the way that you think about code and graphics on your computer isn't a topic for this tutorial, but if you want to look up some tutorials on that [please do so](http://www.youtube.com/watch?v=XMgfddy7S7Q). We're working on an OpenGL tutorial but for the the moment we're going to stick with shaders. The OpenGL3 shader which confusingly uses GLSL 1.5, has the following at the top:
 
@@ -122,16 +110,9 @@ Let's take a look at a very simple example to help you get going with it. First 
 ~~~~{.cpp}
 
 void ofApp::setup(){
-
-#ifdef TARGET_OPENGLES
-	shader.load("shadersES2/shader");
-#else
-	if(ofIsGLProgrammableRenderer()){
-		shader.load("shadersGL3/shader");
-	}else{
-		shader.load("shadersGL2/shader");
-	}
-#endif
+  # Depending on the OpenGL version that your hardware supports, you have to load the right shader.
+  # As the OpenGL version that we have set is 3.2, we will load the shaders for OpenGL 3
+  shader.load("shadersGL3/shader");
 }
 
 void ofApp::draw(){

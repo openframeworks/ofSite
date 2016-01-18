@@ -23,7 +23,7 @@ Make sure you have at least 128MB of RAM given to the CPU. Check the _**Configur
 You can build openFrameworks and your app with debug symbols by using the command `make Debug` in any project. You can then use [gdb](http://www.cs.cmu.edu/~gilpin/tutorial/) in order to narrow down issues. 
 
 #### Are you running into problems with a USB device?  
-Reference the list of Verified Peripherals](http://elinux.org/RPi_VerifiedPeripherals). If your USB device isn't listed and is failing please follow these steps to gather useful log information from the Pi: 
+Reference the list of [Verified Peripherals](http://elinux.org/RPi_VerifiedPeripherals). If your USB device isn't listed and is failing please follow these steps to gather useful log information from the Pi: 
 
 * `rm /var/log/kern.log /var/log/kern.log.1 /var/log/kern.log.*.gz`
 * `shutdown -r now`
