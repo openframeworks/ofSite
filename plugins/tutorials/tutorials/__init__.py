@@ -138,19 +138,6 @@ class TutorialsTask(Task):
                 elif os.path.isdir(folder):
                     out_folder = os.path.join(self.site.original_cwd, 'output','tutorials',catfolder,article.lower())
                             
-                    yield {
-                        'basename': self.name,
-                        'name': out_folder,
-                        'file_dep': [],
-                        'targets': [out_folder],
-                        'actions': [
-                            (os.mkdir, (out_folder))
-                        ],
-                        'clean': True,  
-                        'uptodate': [utils.config_changed({
-                            1: self.kw,
-                        })],
-                    }
                     for root, dirs, file_ins in os.walk(folder):
                         for d in dirs:
                             try:
