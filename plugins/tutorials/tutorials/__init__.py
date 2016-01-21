@@ -137,11 +137,6 @@ class TutorialsTask(Task):
                     articles.append(articleobj)
                 elif os.path.isdir(folder):
                     out_folder = os.path.join(self.site.original_cwd, 'output','tutorials',catfolder,article.lower())
-                    def create_folder():
-                        try:
-                            os.mkdir(out_folder)
-                        except:
-                            pass
                             
                     yield {
                         'basename': self.name,
@@ -149,7 +144,7 @@ class TutorialsTask(Task):
                         'file_dep': [],
                         'targets': [out_folder],
                         'actions': [
-                            create_folder
+                            (os.mkdir, (out_folder))
                         ],
                         'clean': True,  
                         'uptodate': [utils.config_changed({
