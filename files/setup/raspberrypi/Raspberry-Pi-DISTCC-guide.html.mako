@@ -34,7 +34,7 @@ _Note: On OS X.  You can install a Ubuntu "helper" machine running inside Parall
         * Change `STARTDISTCC="false"` to `STARTDISTCC="true"`
         * Change `ALLOWEDNETS="127.0.0.1"` to include the network IP addresses of your Raspberry Pis 
             * _Note: Addresses use CIDR notation.  To allow your `localhost` AND IP addresses in the range `192.168.1.0-192.168.1.255` use this `ALLOWEDNETS="127.0.0.1 192.168.1.0/24`._
-            * _Note: If you want help with CIDR notation, you can use the calculator here http://www.subnet-calculator.com/cidr.php._
+            * _Note: If you want help with CIDR notation, you can use the calculator [here](http://www.subnet-calculator.com/cidr.php)._
         * Change `ZEROCONF="false"` to `ZEROCONF="true"`
         * Change `LISTENER="127.0.0.1"` to `LISTENER=""` in order to listen for incoming connections all any network interface (not just the `localhost/127.0.0.1`).
     * Edit `/etc/init.d/distcc` (e.g. `sudo vi /etc/init.d/distcc`)

@@ -46,10 +46,9 @@ This is how you declare a Class -\> in the header file (\*.h), otherwise known a
 [![Image:ex1-ball_h.jpg](Ex1-ball_h.jpg)][15]
 
 ~~~~{.cpp}
-    #ifndef _OF_BALL // if this class hasn't been defined, the program can define it
-    #define _OF_BALL // by using this if statement you prevent the class to be called more
-    #endif           // than once which would confuse the compiler
-
+    #ifndef _OF_BALL // if this class hasn't been defined, the program can define it. By using
+    #define _OF_BALL // this if statement the class is only defined once.
+    
     #include "ofMain.h"
 
     class ofBall {

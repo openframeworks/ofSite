@@ -32,7 +32,7 @@ Visit the <a href="../community">community page</a> for other ways to contribute
 
 <h3>Community management and outreach</h3>
 
-<p><a href="https://github.com/kylemcdonald">Kyle McDonald</a> (kylemcdonald)</a>, <a href="https://github.com/bilderbuchi">Christoph Buchner</a> (bilderbuchi), <a href="https://github.com/caitlinmorris">caitlinmorris</a></p>
+<p><a href="https://github.com/caitlinmorris">caitlinmorris</a></p>
 
 <h3>Documentation</h3>
 <p><a href="https://github.com/HalfdanJ">Jonas Jongejan</a> (HalfdanJ), <a href="https://github.com/jefftimesten">Jeff Crouse</a> (jefftimesten), <a href="https://github.com/roxlu">@roxlu</a> (roxlu)</p>
@@ -65,6 +65,8 @@ Visit the <a href="../community">community page</a> for other ways to contribute
 
 <p>And previously:</p>
 <ul>
+<li><a href="https://github.com/kylemcdonald">Kyle McDonald</a> (kylemcdonald) for community management</li>
+<li><a href="https://github.com/bilderbuchi">Christoph Buchner</a> (bilderbuchi) for community management and GitHub leadership</li>
 <li><a href="https://github.com/jvcleave">Jason Van Cleave</a> (jvcleave) as forum leader</li>
 <li><a href="http://www.roxlu.com/">Diederick Huijbers</a> (roxlu) as tutorial leader</li>
 <li><a href="http://www.jeffcrouse.info/">Jeff Crouse</a> (jefftimesten) as tutorial leader</li>

@@ -12,6 +12,7 @@
 * [Vertices](#vertices)
 * [Meshes](#meshes)
 * [VBOs](#vbos)
+* [A Basic 3D Scene](#a-basic-3d-scene)
 * [Matrices](#matrices)
 * [Textures](#textures)
 * [Cameras](#cameras)
@@ -102,7 +103,7 @@ if(!poly.getVertices().empty()) {
 
 So, really what you're doing is storing vertices and depending on whether you want OpenGL to close your application for you or not, you tell it in the glDrawArrays() method to either a) GL_LINE_LOOP close them all up or b) GL_LINE_STRIP don't close them all up. Again, like before, exactly what's going on there isn't super important, but it is good to understand that lines, rectangles, even meshes are all just vertices. Since I just mentioned meshes, lets talk about those! If you want some [more info](http://www.opengl.org/wiki/Vertex_Specification).
 
-###[ofMesh](#meshes)
+###[Meshes](#meshes)
 
 The ofMesh is, like the ofPolyline, lots of vertices with some attendant information around them. In the case of a mesh though, there's a lot more information for some interesting reasons. An ofMesh represents a set of vertices in 3D spaces, and normals at those points, colors at those points, and texture coordinates at those points. Each of these different properties is stored in a vector.
 Vertices are passed to your graphics card and your graphics card fill in the spaces in between them in a processing usually called the rendering pipeline. The rendering pipeline goes more or less like this:
@@ -311,86 +312,138 @@ There's a few new tricks to VBOs that you can leverage if you have a new enough 
 
 Although that's nowhere close to everything about vertices and meshes, we're going to move on to another frequently misunderstood but vital part of OpenGL: matrices.
 
+###[A Basic 3D Scene](#a-basic-3D-scene)
+
+Now take a breath. Before we go further and start dig into matrices, let's set up
+a simple scene that you can use as reference while reading the next part of
+this dense tutorial. Since OF version 0.9, you need 5 things to set up a 3D
+scene: a window, a camera, a material, a light and an object.
+Let's start from the window.
+
+Create a new project using the ProjectGenerator and edit the main.cpp file as follow.  Since OF 0.9, that is the way to set up a window
+that use the programmable pipeline. If you want to read in detail what was introduced with the 0.9 version, on the blog there is a [detailed review](http://blog.openframeworks.cc/post/133400454159/openframeworks-090-opengl-45), but for now it is not necessary.
+
+~~~~{.cpp}
+
+#include "ofMain.h"
+#include "ofApp.h"
+
+//========================================================================
+int main( ){
+    ofGLFWWindowSettings settings;
+    settings.setGLVersion(3, 2);
+    settings.width = 1280;
+    settings.height = 720;
+    ofCreateWindow(settings);
+    ofRunApp(new ofApp());
+}
+
+~~~~
+
+Here you have defined the dimension of our window and which OpenGL version we want to use.
+
+The second thing that you need is a camera and a light. Later on this tutorial you will see how to get full controll over your camera, for now let's do something really basic. Edit your App.cpp and App.h as follow
+
+~~~~{.cpp}
+
+// Add this in the App.h
+ofLight light;
+ofEasyCam cam;
+
+// add these lines to the setup and to the draw method in the App.cpp
+void ofApp::setup(){
+    light.setup();
+    light.setPosition(-100, 200,0);
+    ofEnableDepthTest();
+}
+
+void ofApp::draw(){
+    cam.begin();
+    // here you will draw your object
+    cam.end();
+}
+
+~~~~
+
+With this code you have accomplished two important things. It's a bit like making a movie, you have first to position the light, to turn it on, and then you have to put your camera in the right position. Now the set of our movie is ready for our first scene. If you run this code, you will a gray screen. That is obvius, there is nothing under our camera.Let's put an actor (a simple box) under the reflectors.
+
+~~~~{.cpp}
+
+// add this to your App.h file
+ofBoxPrimitive box;
+ofMaterial boxMaterial;
+
+// edit your App.cpp file and add these lines
+void ofApp::setup(){
+    //...
+    boxMaterial.setDiffuseColor(ofFloatColor::red);
+    boxMaterial.setShininess(0.02);
+}
+
+void ofApp::draw(){
+    cam.begin();
+        boxMaterial.begin();
+          box.draw();
+        boxMaterial.end();
+    cam.end();
+}
+
+~~~~
+
+In this chunk of code you have added 2 things. The box, our main actor in this movie, and the material, that defines the color of the box and how it reacts to the light.
+If you run the code you will see a red box in the middle of your screen. The In the next part we will see how to move things around using the incredible properties of the ofNode class, that simplify all the matrices operations needed in a every 3D scene.
+
 ###[Matrices](#matrices)
 
-Now, the thing about vertices is that the describe positions in space *but* those positions are *relative*. This important because the meaning of 10,10 can be very different if you've called ofTranslate(100, 100) or not. Imagine for a moment that the window of your OF application is a piece of paper and you are seated at a desk in front of this piece of paper with a pencil in your hand. Your hand is sitting at the 0,0 point of the paper, the upper-left corner. If you want to draw something in the lower-right corner of that piece of paper, you can move your hand down to the lower right of the page, or you can push the page so that the lower- right corner is beneath where your hand already sits. Take that thought and apply it to OF: drawing a circle in the lower right of a 300 × 300 pixel window would look like this:
-
-~~~~{.cpp}
-ofDrawCircle(270, 270, 30, 30);
-~~~~
-
-The ellipse is drawn 270 pixels down and 270 pixels to the right of the window. Now take a look at the following bit of code and think of moving the piece of paper:
-
-~~~~{.cpp}
-ellipse(270, 270, 30, 30);
-ofTranslate(−30, −30);
-ofDrawCircle(270, 270, 30, 30);
-~~~~
-
-One easy way of thinking of the translate() method is to imagine that it moves the upper-left corner of the drawing space. Move the drawing space down 20 pixels, and all drawings will appear 20 pixels lower on the screen. The proper way of thinking of the translate() method is that it modifies the coordinate space of the application; that is, it moves the position of the 0,0 point in the application, what you might know as the origin of the coordinate system.
-
-Alright, so let's dispense with the metaphor: what's the piece of paper? It's a matrix. Yep. A matrix. An algebra class when you were 12 matrix. Gross, I know. But really, trust me, they're not that bad.
-
-Let's get the idea of a matrix stack going first before we dig in deeper. Initially, there is only one transformation in the matrix stack, the original coordinate system. When a call is made to pushMatrix(), a new coordinate system is added to the stack. All drawing goes on in that new coordinate system, and any changes made are made to that system. Next, a translation is made to the coordinate system using the translate() method to move it 30 pixels to the right and 30 pixels down. This affects only the current coordinate system in the matrix stack. Finally, popMatrix() is called, and the translated matrix is removed from the matrix stack, meaning that any changes made to the old coordinate system will not be used in new drawings.
-
-openFrameworks has convenience methods that will allow you to transform and alter your drawing in the same way that you’ve seen in Processing. We’ll jump right into how those methods are structured. To push a new set of matrices onto the stack, or pop a matrix off the stack, use the following:
-
-ofPushMatrix() - Saves the current coordinate system to the matrix stack, making it available for use.
-
-ofPopMatrix() - Removes the current coordinate system from the matrix stack, removing all of its transformations from any future drawings.
-
-Lets create a series of three matrices where each new matrix saves the previous one and then uses its coordinates as the origin, meaning that changes are cumulative:
+Matrices are collections of vertices that are used to move things around. This is a very semplified definitions, but for now take it as it is. In the previous example with the red box, OF automatically put the box in the center of the screen. But what if we want to position our box a bit on the right and a bit away from the camera? We have to use the `move` method. A method that internally apply a Matrix to our object and move the object at the position that we want. This coordinates, in this example, are relative to the middle of the screen, in this case 0,0,0. But let's see how the position of our box changes.
 
 ~~~~{.cpp}
 
-ofPushMatrix();
-  ofTranslate(30, 0); // everything from here on out is going to be 30 pixels over
-  ofPushMatrix();
-    ofTranslate(0, 30); // everything from here on out is going to be 30 pixels over AND 30 pixels down
-    ofPushMatrix();
-      ofTranslate(60, 0); // everything from here on out is going to be 90 pixels over AND 30 pixels down
-    ofPopMatrix(); // now we're back to 30 pixels over AND 30 pixels down
-  ofPopMatrix(); 30 pixels over
-ofPopMatrix(); // now we're back to 0,0
+void ofApp::setup(){
+    //...
+    box.move(200, 0, -200);
+}
+
 ~~~~
 
-So every change we make after ofPushMatrix() carries into everything that we do until we call ofPopMatrix();
+What if we want to define the position of an object not relative to the center of the screen, but relative to the position of another object? Think about drawing a car. You draw the body of the car, and then you draw the headlamp of the car, the wheels, and all the other parts that compose a car. If you define the position of all these object relative to the center of the screen (that in this case is the origin of the axes) you have to calculate the distance of every element from the center. But what if the car move? you will have to recalculate all the position of all the objects relative to the center, eache single element of the car. That would be terrible! To solve this problem, you have to define the position of each element composing the car not to be relative to the origin of the axes, but to be relative to the body of the car. In this way, moving the car will move all the parts that compose the car. What is happening under the hood, is a bunch of matrix operation. There is a first matrix that it is applied to the car, and that define the position of the car relative to the center of the screen, and then there are other matrices, each for every element composing the car, that define the position of each element relative to the body of the car. You can find this example in the examples folder, under `examples/3d/ofNodeExample`.
+
+Let's add a sphere positioned 100 pixel left from the our box
 
 ~~~~{.cpp}
 
-ofPushMatrix(); // set a matrix to hold all transform
+//In your App.h file
+ofSpherePrimitive sphere;
 
-  ofSetColor(255, 0, 0);
-  ofDrawRectangle(0, 0, 20, 20);
-  ofTranslate(50, 50);
-  ofSetColor(255, 255, 0);
-  ofDrawRectangle(0, 0, 20, 20);
+// In your App.cpp file
+void ofApp::setup(){
+    //...
+    box.move(200, 0, -200);
+    sphere.setParent(box);
+    sphere.move(-100,0,0);
+}
 
-  ofPushMatrix(); // add a matrix to the previous matrix
-      ofTranslate(50, 50);
-      ofSetColor(0, 255, 255);
-      ofDrawRectangle(0, 0, 20, 20);
-  ofPopMatrix(); // now back to the first matrix
-
-  ofTranslate(0, 50);
-  ofSetColor(0, 0, 255);
-  ofDrawRectangle(0, 0, 20, 20);
-
-ofPopMatrix();
+void ofApp::draw(){
+    cam.begin();
+        box.draw();
+        sphere.draw();
+    cam.end();
+}
 
 ~~~~
 
-Alright, so what's going on underneath here? Well actually, there's three matrices that are mucking around. All the transformation stuff that we're doing is messing with the Model matrix, but there's two other ones. We'll lay them all out really quick (not because they're not important but because OF relieves you of having to do a ton of messing with them).
+openFrameworks allow us to do matrices operations in an easy way. Under the hood, there are these 3 matrix that are defining how do we see our object on the screen.
+We'll lay them all out really quick (not because they're not important but because OF relieves you of having to do a ton of messing with them).
 
 *The Model matrix*
 
-A model, like an ofBox(), is defined by a set of vertices, which you can think of as ofVec3f objects, but are really just X,Y,Z coordinates of these vertices are defined relative to the center point where the drawing started. You can think of this as the 0,0,0 of your "world space". Imagine someone saying "I'm 10 meters north". If you don't know where they started from, that's not super helpful, but if you did know where they started from, it's pretty handy. That's what the Model matrix is. For OF, this is the upper left hand corner of your window. Really these aren't super meaningful without a view onto them, which is why usually in OpenGL we're talking about the ModelView matrix. That's just the Model matrix time the View matrix, and that begs the question: what's the view matrix?
+A model, like our `box`, is defined by a set of vertices, which you can think of as ofVec3f objects, but are really just X,Y,Z coordinates of these vertices are defined relative to the center point where the drawing started. You can think of this as the 0,0,0 of your "world space". Imagine someone saying "I'm 10 meters north". If you don't know where they started from, that's not super helpful, but if you did know where they started from, it's pretty handy. That's what the Model matrix is. For OF, this is the upper left hand corner of your window. Really these aren't super meaningful without a view onto them, which is why usually in OpenGL we're talking about the ModelView matrix. That's just the Model matrix time the View matrix, and that begs the question: what's the view matrix?
 
 *The View matrix*
 
 Little known fact: cameras don't move, when you want to look at something new, the world moves around the camera. If I'm standing in Paris and I want to take a picture of a different side of the Eiffel Tower, I just walk around to the other side. Imagine if instead I just made the entire earth spin around so I could see a different side of the Eiffel tower. Totally not practical in real life but really simple and handy in OpenGL.
 
-So initially your openFrameworks camera, an ofCamera instance let's say, is just at 0,0,0. To move the camera, you move the whole world, which is fairly easy because the location and orientation of our world is just matrices. So our ofBox that thinks it's at 100,100, might actually be at 400,100 because of where our camera is located and it never needs to change its actual values. We just multiply everything by the location of the view matrix and voila: it's in the right place. That means this whole "moving the whole world" is really just moving a matrix over by doing a translate. We're going to dig into what that looks like in a second, right now we just want to get to the bottom of what the "camera" is: it's a matrix. And the relationship between a camera and where everything is getting drawn is called the ModelViewMatrix. Super important? Not really, but you're going to run into it now and again and it's good to know what it generally means.
+So initially your openFrameworks camera, an ofEasyCame instance let's say, is just at 0,0,0. To move the camera, you move the whole world, which is fairly easy because the location and orientation of our world is just matrices. So our `box` that thinks it's at 100,100, might actually be at 400,100 because of where our camera is located and it never needs to change its actual values. We just multiply everything by the location of the view matrix and voila: it's in the right place. That means this whole "moving the whole world" is really just moving a matrix over by doing a translate. We're going to dig into what that looks like in a second, right now we just want to get to the bottom of what the "camera" is: it's a matrix. And the relationship between a camera and where everything is getting drawn is called the ModelViewMatrix. Super important? Not really, but you're going to run into it now and again and it's good to know what it generally means.
 
 *The Projection matrix*
 
@@ -757,6 +810,7 @@ ofVec3f cameraToWorld(ofVec3f CameraXYZ, ofRectangle viewport = ofGetCurrentView
 As with everything else, there's a ton more to learn, but this tutorial is already pushing the bounds of acceptability, so we'll wrap it up here. A few further resources before we go though:
 
 * [OpenGL Tutorials](http://www.opengl-tutorial.org)
+* [OpenGL Tutorials (matrices)](http://www.opengl-tutorial.org/beginners-tutorials/tutorial-3-matrices/)
 * [Modern OpenGL](http://tomdalling.com/blog/modern-opengl)
 * [Swiftless Tutorials](http://www.swiftless.com)
 
