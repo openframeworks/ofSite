@@ -10,7 +10,7 @@ if [ "$OS" == "Linux" ]; then
 		PIP=$(which pip)
 	fi
         if [ "$PIP" == "" ]; then
-		echo Couldn't find pip for python3, please install it manually
+		echo Couldn\'t find pip for python3, please install it manually
 	fi
 fi
 if [ "$(which python3)" == "" ]; then
