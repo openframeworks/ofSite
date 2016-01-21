@@ -40,8 +40,11 @@ rm -rf ../openFrameworks.cc/tutorials
 rm -rf ../openFrameworks.cc/development
 rm -rf ../openFrameworks.cc/ja
 rm -rf ../openFrameworks.cc/ko
+rm -rf ../openFrameworks.cc/assets
+rm -rf ../openFrameworks.cc/icons
+rm -rf ../openFrameworks.cc/categories
 
-mv output/* ../openFrameworks.cc/
+cp -r output/* ../openFrameworks.cc/
 cp *.php ../openFrameworks.cc/
 rm /home/ofadmin/ofSite/.lock
 rm ../openFrameworks.cc/*.sh
