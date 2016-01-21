@@ -96,7 +96,7 @@ TRANSLATIONS = {
 # are ready. To test local translations comment out or remove the
 # specific language from here
 EXTERNAL_TRANSLATIONS = {    
-    #"ja": "http://openframeworks.jp",
+    "ja": "http://openframeworks.jp",
     "ko": "http://openframeworks.ko",
 }
 
