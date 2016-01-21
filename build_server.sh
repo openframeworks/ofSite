@@ -42,6 +42,7 @@ rm -rf ../openFrameworks.cc/ja
 rm -rf ../openFrameworks.cc/ko
 
 mv output/* ../openFrameworks.cc/
+cp *.php ../openFrameworks.cc/
 rm /home/ofadmin/ofSite/.lock
 rm ../openFrameworks.cc/*.sh
 
