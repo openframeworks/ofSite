@@ -89,6 +89,13 @@ class AsciidocArticle:
             if stripFileLine(line).find(":")!=0:
                 return   
 
+def create_file(in_path, out_path):
+    try:
+        os.makedirs(os.path.dirname(out_folder))
+    except:
+        pass
+    shutil.copyfile(in_path, out_path)
+    
 class TutorialsTask(Task):
     """Generates the tutorials contents."""
 
@@ -137,13 +144,7 @@ class TutorialsTask(Task):
                     articles.append(articleobj)
                 elif os.path.isdir(folder):
                     out_folder = os.path.join(self.site.original_cwd, 'output','tutorials',catfolder,article.lower())
-                            
                     for root, dirs, file_ins in os.walk(folder):
-                        for d in dirs:
-                            try:
-                                os.makedirs(os.path.join(out_folder,d))
-                            except:
-                                pass
                         for f in file_ins:
                             in_path = os.path.join(root,f)
                             out_path = os.path.join(out_folder, f)
@@ -153,7 +154,7 @@ class TutorialsTask(Task):
                                 'file_dep': [in_path],
                                 'targets': [out_path],
                                 'actions': [
-                                    (shutil.copyfile, (in_path, out_path))
+                                    (create_file, (in_path, out_path))
                                 ],
                                 'clean': True,
                                 'uptodate': [utils.config_changed({
