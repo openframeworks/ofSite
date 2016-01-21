@@ -16,6 +16,9 @@ rm -r ~/openFrameworks.cc
 cp -r output ~/openFrameworks.cc
 cp *.php ~/openFrameworks.cc
 mkdir ~/logs
+mkdir ~/hooks
+chmod 775 hooks
+sudo chgrp www-data hooks
 
 # Install ofBook
 cd ~
