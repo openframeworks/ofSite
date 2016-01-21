@@ -8,7 +8,7 @@ cd /home/ofadmin/ofSite
 echo pull
 git pull origin master 
 echo nikola
-source ../nikola/bin/activate
+source nikola/bin/activate
 #nikola clean 2>> /home/ofadmin/openFrameworks.cc/buildingstate
 nikola build 2>> /home/ofadmin/openFrameworks.cc/buildingstate
 ret=$?
