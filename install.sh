@@ -1,7 +1,7 @@
 OS=$(uname -s)
 PIP=pip
 if [ "$OS" == "Linux" ]; then
-	sudo apt-get install python3 python3-pip asciidoc
+	sudo apt-get install python3 python3-pip asciidoc source-highlight
 	PIP=$(ls /usr/bin/pip-3* | head -n1)
 	if [ "$PIP" == "" ]; then
 		PIP=$(ls /usr/bin/pip3 | head -n1)
@@ -22,4 +22,3 @@ virtualenv -p $(which python3) nikola
 source nikola/bin/activate
 pip install --upgrade "Nikola[extras]"
 pip install --upgrade python-Levenshtein
-
