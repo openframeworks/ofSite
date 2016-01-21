@@ -14,6 +14,7 @@ git checkout nikola
 ./build.sh
 rm -r ~/openFrameworks.cc
 cp -r output ~/openFrameworks.cc
+mkdir ~/logs
 
 # Install ofBook
 cd ~
@@ -25,7 +26,7 @@ cp output/webBook ../openFrameworks.cc/ofBook -r
 
 # Install cron tasks
 read -d '' cronlines <<-"_EOF_"
-* * * * * /home/$USER/ofSite/build.sh
+* * * * * /home/$USER/ofSite/build-server.sh
 * * * * * /home/$USER/ofBook/web/build.sh
 * * * * * /home/$USER/ofSite/import_release.sh
 _EOF_
