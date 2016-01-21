@@ -1,5 +1,5 @@
 # Install dependencies
-sudo apt-get install vim git libjpeg-dev bash-completion libxml2-dev libxslt1-dev zlib1g-dev nginx
+sudo apt-get install vim git libjpeg-dev bash-completion libxml2-dev libxslt1-dev zlib1g-dev nginx php5-common php5-cli php5-fpm
 
 # nginx config
 sudo cp nginx.conf /etc/nginx/sites-available/default
