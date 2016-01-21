@@ -14,6 +14,7 @@ git checkout nikola
 ./build.sh
 rm -r ~/openFrameworks.cc
 cp -r output ~/openFrameworks.cc
+cp *.php ~/openFrameworks.cc
 mkdir ~/logs
 
 # Install ofBook
