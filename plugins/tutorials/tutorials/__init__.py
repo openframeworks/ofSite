@@ -91,7 +91,7 @@ class AsciidocArticle:
 
 def create_file(in_path, out_path):
     try:
-        os.makedirs(os.path.dirname(out_folder))
+        os.makedirs(os.path.dirname(out_path))
     except:
         pass
     shutil.copyfile(in_path, out_path)
