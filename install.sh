@@ -20,6 +20,6 @@ fi
 sudo $PIP install virtualenv
 virtualenv -p $(which python3) nikola
 source nikola/bin/activate
-$PIP install --upgrade "Nikola[extras]"
-$PIP install --upgrade python-Levenshtein
+pip install --upgrade "Nikola[extras]"
+pip install --upgrade python-Levenshtein
 
