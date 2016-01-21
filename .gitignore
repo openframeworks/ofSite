@@ -5,4 +5,4 @@ output
 __pycache__
 cache
 .doit.db
-
+/nikola
