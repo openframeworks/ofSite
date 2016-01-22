@@ -49,5 +49,5 @@ The `documentation` folder contains the OF API reference and are also in markdow
 
     ![Image Title](filename.png "alt text")
 
-도큐먼트 공헌에 관한 최종 설명은, [문서 공헌하기](http://www.openframeworks.kr/tutorials/developers/003_contributing_to_the_documentation.html)튜토리얼을 참고해주시기 바랍니다.
+도큐먼트 공헌에 관한 최종 설명은, [문서 공헌하기](http://www.openframeworks.kr/tutorials/developers/003_contributing_to_the_documentation.html) 튜토리얼을 참고해주시기 바랍니다.
 
