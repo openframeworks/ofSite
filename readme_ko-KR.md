@@ -15,7 +15,6 @@ Most of the content is in the `content` folder in markdown folder.
 ![img](image.png)
 ```
 
-The `documentation` folder contains the OF API reference and are also in markdown format. This docs are generated from the code but the `description` field in every class, function or var can be edited directly in the markdown files.
 `documentation` 폴더는 OF API 레퍼런스들을 담고 있으며, 역시 마크다운포맷입니다. 이 문서들은 코드에 의해 생성되나, 모든 클래스, 함수 및 변수들의 `description`필드는 마크다운으로 직접 편집할 수 있습니다.
 
 ## 로컬 사이트 구축을 위한 세팅
