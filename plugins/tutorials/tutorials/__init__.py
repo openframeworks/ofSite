@@ -25,10 +25,11 @@ def stripFileLine(line):
     return  line.lstrip(' ').rstrip('\n').rstrip(' ')
         
 class MarkdownArticle:
-    def __init__(self,markdown,directory):
+    def __init__(self,markdown,directory, lang):
         mdfile = open(markdown,'r')
         state = 'begin'
-        self.file = markdown[len(directory)+1:markdown.find('.markdown')].lower() + '/'
+        self.file = markdown
+        self.path = markdown[len(directory)+1:markdown.find('.markdown')].lower() + '/'
         self.date = ''
         self.title = ''
         self.summary = ''
@@ -36,33 +37,36 @@ class MarkdownArticle:
         self.author_site = ''
         self.body = ''
         self.type = 'markdown'
+        self.lang = lang
+        self.translations = {}
         for line in mdfile:
             #line = line.decode('utf-8','replace')
-            if state=='begin' and stripFileLine(line) =='---':
+            if state=='begin' and stripFileLine(line).strip(' ') =='---':
                 state='header'
                 continue
             if state=='header' and line.find('date:')!=-1:
-                self.date = stripFileLine(line[line.find(':')+1:])
+                self.date = stripFileLine(line[line.find(':')+1:]).strip(' ')
                 continue
             if state=='header' and line.find('title:')!=-1:
-                self.title = stripFileLine(line[line.find(':')+1:])
+                self.title = stripFileLine(line[line.find(':')+1:]).strip(' ')
                 continue
             if state=='header' and line.find('summary:')!=-1:
-                self.summary = stripFileLine(line[line.find(':')+1:])
+                self.summary = stripFileLine(line[line.find(':')+1:]).strip(' ')
                 continue
             if state=='header' and line.find('author:')!=-1:
-                self.author = stripFileLine(line[line.find(':')+1:])
+                self.author = stripFileLine(line[line.find(':')+1:]).strip(' ')
                 continue
             if state=='header' and line.find('author_site:')!=-1:
-                self.author_site = stripFileLine(line[line.find(':')+1:])
+                self.author_site = stripFileLine(line[line.find(':')+1:]).strip(' ')
                 continue
-            if state=='header' and stripFileLine(line)=='---':
+            if state=='header' and stripFileLine(line).strip(' ')=='---':
                 return  
                    
 class AsciidocArticle:
-    def __init__(self,asciidoc,directory):
+    def __init__(self,asciidoc,directory,lang):
         mdfile = open(asciidoc,'r')
-        self.file = asciidoc[len(directory)+1:asciidoc.find('.asciidoc')].lower() + '/'
+        self.file = asciidoc
+        self.path = asciidoc[len(directory)+1:asciidoc.find('.asciidoc')].lower() + '/'
         self.date = ''
         self.title = ''
         self.summary = ''
@@ -70,21 +74,23 @@ class AsciidocArticle:
         self.author_site = ''
         self.body = ''
         self.type = 'asciidoc'
+        self.lang = lang
+        self.translations = {}
         for line in mdfile:
             if line.find(':date:')!=-1:
-                self.date = stripFileLine(line[line[1:].find(':')+2:])
+                self.date = stripFileLine(line[line[1:].find(':')+2:]).strip(' ')
                 continue
             if line.find(':title:')!=-1:
-                self.title = stripFileLine(line[line[1:].find(':')+2:])
+                self.title = stripFileLine(line[line[1:].find(':')+2:]).strip(' ')
                 continue
             if line.find(':summary:')!=-1:
-                self.summary = stripFileLine(line[line[1:].find(':')+2:])
+                self.summary = stripFileLine(line[line[1:].find(':')+2:]).strip(' ')
                 continue
             if line.find(':author:')!=-1:
-                self.author = stripFileLine(line[line[1:].find(':')+2:])
+                self.author = stripFileLine(line[line[1:].find(':')+2:]).strip(' ')
                 continue
             if line.find(':author_site:')!=-1:
-                self.author_site = stripFileLine(line[line[1:].find(':')+2:])
+                self.author_site = stripFileLine(line[line[1:].find(':')+2:]).strip(' ')
                 continue
             if stripFileLine(line).find(":")!=0:
                 return   
@@ -126,22 +132,32 @@ class TutorialsTask(Task):
             if not os.path.isdir(os.path.join(directory,catfolder)):
                 continue
             articles = []
+            translations = []
             category = catfolder[catfolder.find("_")+1:]
             articlesfiles = os.listdir(os.path.join(directory,catfolder));
             articlesfiles.sort()
             for article in articlesfiles:
                 file_split = os.path.splitext(article)
+                extension = file_split[1]
+                lang_split = article.split(".")
+                lang = self.site.config['DEFAULT_LANG'] if len(lang_split)<3 else lang_split[1]
                 folder = os.path.join(directory,catfolder,article)
-                if file_split[1]=='.markdown':
+                if extension=='.markdown':
                     path = os.path.join(directory,catfolder,article)
                     files += [path]
-                    articleobj = MarkdownArticle(path, directory)
-                    articles.append(articleobj)
-                elif file_split[1]=='.asciidoc':
+                    articleobj = MarkdownArticle(path, directory, lang)
+                    if lang == self.site.config['DEFAULT_LANG']:
+                        articles.append(articleobj)
+                    else:
+                        translations.append(articleobj)
+                elif extension=='.asciidoc':
                     path = os.path.join(directory,catfolder,article)
                     files += [path]
-                    articleobj = AsciidocArticle(path, directory)
-                    articles.append(articleobj)
+                    articleobj = AsciidocArticle(path, directory, lang)
+                    if lang == self.site.config['DEFAULT_LANG']:
+                        articles.append(articleobj)
+                    else:
+                        translations.append(articleobj)
                 elif os.path.isdir(folder):
                     out_folder = os.path.join(self.site.original_cwd, 'output','tutorials',catfolder,article.lower())
                     for root, dirs, file_ins in os.walk(folder):
@@ -161,6 +177,22 @@ class TutorialsTask(Task):
                                     1: self.kw,
                                 })],
                             }, self.kw['filters'])
+            
+                
+            def find_translations(article):
+                article_file_name = os.path.splitext(article.file)[0]
+                it = filter((lambda possible_translation: os.path.splitext(os.path.splitext(possible_translation.file)[0])[0] == article_file_name), translations)
+                article_translations = {}
+                for translation in it:
+                    article_translations[translation.lang] = translation
+                return article_translations
+                
+            def collect_translations(article):
+                article.translations = find_translations(article)
+                return article
+                
+            articles = list(map(collect_translations, articles))
+            
             categories.append({'category': category, 'articles': articles});
             
         for lang in self.kw['translations']:
@@ -186,6 +218,7 @@ class TutorialsTask(Task):
             tdst = os.path.normpath(os.path.join(self.kw['output_folder'], short_tdst))
             template_dep = self.site.template_system.template_deps(template_name)
             template_dep += files
+            template_dep += [__file__]
             yield utils.apply_filters({
                 'basename': self.name,
                 'name': tdst,
