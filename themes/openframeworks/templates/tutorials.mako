@@ -16,11 +16,11 @@
                     <ul class="articles">
                     % for article in category["articles"]:
                          %if lang in article.translations.keys():
-                             <li><a href="${lang_folder}/tutorials/${article.translations[lang].path}"> ${article.translations[lang].title} </a></br>
+                             <li><a href="/${lang}/tutorials/${article.translations[lang].path}"> ${article.translations[lang].title} </a></br>
                                  <p>${article.translations[lang].summary}</p>
                              </li>
                          %else:
-                             <li><a href="${lang_folder}/tutorials/${article.path}"> ${article.title} </a></br>
+                             <li><a href="/tutorials/${article.path}"> ${article.title} </a></br>
                                  <p>${article.summary}</p>
                              </li>
                          %endif
