@@ -1,16 +1,17 @@
+LOG=../logs/webbuild.log
 if [ -f /home/ofadmin/ofSite/.lock ] || [ ! -f /home/ofadmin/hooks/.regenerate_site ]; then
 	exit
 fi
 touch /home/ofadmin/ofSite/.lock
 rm /home/ofadmin/hooks/.regenerate_site
-echo "started building at `date`" > /home/ofadmin/openFrameworks.cc/buildingstate
+echo "started building at `date`" > $LOG
 cd /home/ofadmin/ofSite
 echo pull
 git pull origin master 
 echo nikola
-source nikola/bin/activate
-#nikola clean 2>> /home/ofadmin/openFrameworks.cc/buildingstate
-nikola build 2>> /home/ofadmin/openFrameworks.cc/buildingstate
+. nikola/bin/activate 2>> $LOG
+#nikola clean 2>> $LOG
+nikola build 2>> $LOG
 ret=$?
 if [ $ret -ne 0 ]
 then
@@ -19,12 +20,12 @@ then
 	EMAIL="arturo@openframeworks.cc"
 	# Email text/message
 	# send an email using /bin/mail
-	/usr/bin/mail -s "$SUBJECT" "$EMAIL" < /home/ofadmin/openFrameworks.cc/buildingstate
-	cat /home/ofadmin/openFrameworks.cc/buildingstate
+	/usr/bin/mail -s "$SUBJECT" "$EMAIL" < $LOG
+	cat $LOG
 	rm /home/ofadmin/ofSite/.lock
 	exit
 fi
-echo "build finished correctly at `date` " >> /home/ofadmin/openFrameworks.cc/buildingstate
+echo "build finished correctly at `date` " >> $LOG
 echo copy newsite
 rm -rf ../openFrameworks.cc/about 
 rm -rf ../openFrameworks.cc/community
@@ -44,8 +45,8 @@ rm -rf ../openFrameworks.cc/assets
 rm -rf ../openFrameworks.cc/icons
 rm -rf ../openFrameworks.cc/categories
 
-cp -r output/* ../openFrameworks.cc/
-cp *.php ../openFrameworks.cc/
-rm /home/ofadmin/ofSite/.lock
+cp -r output/* ../openFrameworks.cc/ 2>> $LOG
+cp *.php ../openFrameworks.cc/ 2>> $LOG
+rm /home/ofadmin/ofSite/.lock 2>> $LOG
 rm ../openFrameworks.cc/*.sh
 
