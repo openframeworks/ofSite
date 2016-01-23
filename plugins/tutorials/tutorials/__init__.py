@@ -214,13 +214,12 @@ class TutorialsTask(Task):
             context = {}
             context["lang"] = lang
             if lang == self.site.config['DEFAULT_LANG']: 
-                context["lang_folder"] = ""
+                context["permalink"] = '/tutorials/'
             else:
-                context["lang_folder"] = "/" + lang
+                context["permalink"] = '/' + lang + '/tutorials/'
             context["tutorials_intro"] = tutorials_intro
             context["title"] = "tutorials"
             context['categories'] = categories
-            context["permalink"] = '/tutorials/'
             short_tdst = os.path.join(self.kw['translations'][lang], "tutorials", "index.html")
             tdst = os.path.normpath(os.path.join(self.kw['output_folder'], short_tdst))
             template_dep = self.site.template_system.template_deps(template_name)
