@@ -9,7 +9,7 @@ cd /home/ofadmin/ofSite
 echo pull
 git pull origin master 
 echo nikola
-. nikola/bin/activate 2>> $LOG
+. nikola/bin/activate
 #nikola clean 2>> $LOG
 nikola build 2>> $LOG
 ret=$?
