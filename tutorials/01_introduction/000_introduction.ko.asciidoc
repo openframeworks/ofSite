@@ -1,24 +1,23 @@
-ofTutorials - Introduction
-==========================
-Jeff Crouse <jeff@crouse.cc>
-v0.2, September 2013:
-:Author Initials: JRC, JED
-:icons:
-:numbered:
-:doctype: book
+:author: Jeff Crouse <jeff@crouse.cc>
+:title: ofTutorials - Introduction
+:date: September 2013
 :author_site: http://www.jeffcrouse.info
 :summary: 이 챕터에서는 openFrameworks를 소개하고 여러분이 첫 프로젝트를 시작할 수 있도록 준비하는 과정을 소개합니다.
+:doctype: book
+
+ofTutorials - Introduction
+==========================
 
 이 챕터에서는 openFrameworks를 소개하고 여러분이 첫 프로젝트를 시작할 수 있도록 준비하는 과정을 소개합니다.
 
 image::images/ofw-logo.png["oF Logo",float="right"]
 
-오픈프레임웍스가 뭔가요 ?
+What is OpenFrameworks?
 =======================
 
 [quote, openframeworks.cc/about]
 __________________________
-오픈프레임웍스는 실험적인 작업을 위한 간단하고 직관적인 프레임워크를 제공하여 생산적인 프로세스를 돕는 창조적 http://www.openframeworks.cc/about/license.html[오픈소스] http://en.wikipedia.org/wiki/C%2B%2B"[C++] 저작도구입니다. 이 저작도구는 범용적인 "접착제"의 역활을 하도록 디자인 되었으며 아래에 나열된 일반적으로 사용되는 라이브러리들을 포함하고 있습니다. 
+오픈프레임웍스는 실험적인 작업을 위한 간단하고 직관적인 프레임워크를 제공하여 생산적인 프로세스를 돕는 창조적 http://www.openframeworks.cc/about/license.html[오픈소스] http://en.wikipedia.org/wiki/C%2B%2B"[C++] 저작도구입니다. 이 저작도구는 범용적인 "접착제" 의 역활을 하도록 디자인 되었으며 아래에 나열된 일반적으로 사용되는 라이브러리들을 포함하고 있습니다. 
 
 -   그래픽 :http://www.opengl.org/[OpenGL],
     http://glew.sourceforge.net/[GLEW],
@@ -44,7 +43,7 @@ openFrameworks는 강력한 크로스플랫폼을 지원합니다. 현재만 하
 
 간단히 요약하자면, openFrameworks는 코드를 사용하여 쉽게 무언가를 제작할 수 있는 도구라고 할 수 있습니다. 저희에게 상당히 유용한 이 툴이 여러분들께도 도움이 되었으면 좋겠습니다.
 
-openFrameworks는 http://thesystemis.com/[Zach Lieberman], http://muonics.net/[Theodore Watson], and http://arturocastro.net/[Arturo Castro] ("the core")에 의해 활발히 개발되었으며, http://www.openframeworks.kr/community/[OF community]의 도움을 받았습니다. openFrameworks는 두 선지자들의 은혜를 입었습니다: http://reas.com/[Casey Reas], http://benfry.com/[Ben Fry]에 의해 개발된 http://processing.org/[Processing development environment], 프로세싱 커뮤니티; 그리고 Ben Fry와 http://acg.media.mit.edu/[MIT Media Lab's Aesthetics and Computation Group]의 구성원들에 의해 개발된 비공개 c++ 배포판 ACU Toolkit입니다.
+openFrameworks는 http://thesystemis.com/[Zach Lieberman], http://muonics.net/[Theodore Watson], 그리고 http://arturocastro.net/[Arturo Castro] ("the core")에 의해 활발히 개발되었으며, http://www.openframeworks.kr/community/[OF community] 의 도움을 받았습니다. openFrameworks는 두 선지자들의 은혜를 입었습니다: http://reas.com/[Casey Reas], http://benfry.com/[Ben Fry] 에 의해 개발된 http://processing.org/[Processing development environment], 프로세싱 커뮤니티; 그리고 Ben Fry와 http://acg.media.mit.edu/[MIT Media Lab's Aesthetics and Computation Group] 의 구성원들에 의해 개발된 비공개 c++ 배포판 ACU Toolkit입니다.
 __________________________
 
 
@@ -54,17 +53,17 @@ __________________________
 .Q&A
 
 이것은 프로그램인가요?::
-    오픈프레임웍스는 http://en.wikipedia.org/wiki/Computer_program[program]이나 http://en.wikipedia.org/wiki/Software_application[application]자체는 아닙니다만, 여러분이 오픈프레임웍스를 사용해 여러분의 프로그램과 어플리케이션을 작성할 수 있습니다.
+    오픈프레임웍스는 http://en.wikipedia.org/wiki/Computer_program[program] 이나 http://en.wikipedia.org/wiki/Software_application[application] 자체는 아닙니다만, 여러분이 오픈프레임웍스를 사용해 여러분의 프로그램과 어플리케이션을 작성할 수 있습니다.
 
 이것은 프로그래밍 언어인가요?::
-    오픈프레임웍스가 자체의 http://en.wikipedia.org/wiki/Programming_language[programming language]를 구성하지는 않습니다. 오픈프레임웍스로 작성할때 작성하는 언어는 http://en.wikipedia.org/wiki/C%2B%2B[C++]입니다.
+    오픈프레임웍스가 자체의 http://en.wikipedia.org/wiki/Programming_language[programming language] 를 구성하지는 않습니다. 오픈프레임웍스로 작성할때 작성하는 언어는 http://en.wikipedia.org/wiki/C%2B%2B[C++] 입니다.
 
 그렇다면 이것이 라이브러리인가요?::
-	오픈프레임웍스는 사실 몇몇 http://en.wikipedia.org/wiki/Software_library[software libraries]로 만들어졌습니다만, 정확하게 말해 이러한 라이브러리들을 통합한다는 의미에서 보다 적절한 표현으로 소프트웨어 프레임워크라고 할 수 있습니다.
+	오픈프레임웍스는 사실 몇몇 http://en.wikipedia.org/wiki/Software_library[software libraries] 로 만들어졌습니다만, 정확하게 말해 이러한 라이브러리들을 통합한다는 의미에서 보다 적절한 표현으로 소프트웨어 프레임워크라고 할 수 있습니다.
 
 소프트웨어 프레임워크가 뭔가요?::
 	
-    http://en.wikipedia.org/wiki/Software_framework[소프트웨어 프레임워크]는 미리 만들어진 소프트웨어 기본 구조의 일종으로, 프로그래머가 어플리케이션이 해야만 하는 것들의 상위레벨 디테일들을 커스텀하기 위해 어플리케이션이 필요로 하는 하위 레벨 기능의 모든 것을 제공하도록 디자인되어있습니다. 프레임워크를 사용하는것과 라이브러리를 사용하는것의 차이점 중 하나는, 제어의 흐름이 http://en.wikipedia.org/wiki/Inversion_of_control[반대]라는 점입니다. 라이브러리는 여러분의 코드에 의해 바로 제어되어 일종의 작업을 수행합니다. 프레임워크에서 여러분의 코드는 프레임워크에 제어되는 이벤트에 응답하고, 다른 라이브러리의 기능에 접근하기 위해 프레임워크를 인터페이스처럼 사용합니다.
+    http://en.wikipedia.org/wiki/Software_framework[소프트웨어 프레임워크] 는 미리 만들어진 소프트웨어 기본 구조의 일종으로, 프로그래머가 어플리케이션이 해야만 하는 것들의 상위레벨 디테일들을 커스텀하기 위해 어플리케이션이 필요로 하는 하위 레벨 기능의 모든 것을 제공하도록 디자인되어있습니다. 프레임워크를 사용하는것과 라이브러리를 사용하는것의 차이점 중 하나는, 제어의 흐름이 http://en.wikipedia.org/wiki/Inversion_of_control[반대] 라는 점입니다. 라이브러리는 여러분의 코드에 의해 바로 제어되어 일종의 작업을 수행합니다. 프레임워크에서 여러분의 코드는 프레임워크에 제어되는 이벤트에 응답하고, 다른 라이브러리의 기능에 접근하기 위해 프레임워크를 인터페이스처럼 사용합니다.
 
 
 복잡하게 들리나요?
@@ -78,9 +77,9 @@ C++ is a programming language
 
 앞 섹션에서 오픈프레임웍스는 프로그래밍 언어가 *아니*라, http://en.wikipedia.org/wiki/C%2B%2B[`C++`] 프로그램을 위한 소프트웨어 프레임워크라고 했습니다. 그렇다면 C++은 뭔가요?
 
-Note : 이 문서는 여러분이 오픈프레임웍스를 통해 `C++`언어에 익숙해지도록 안내하는 것을 목표로 하고 있습니다. 하지만 이는 bottom-up 방식으로 `C++`를 소개하는 것에 너무 깊이 탐구하는 범위를 벗어나게 되므로, 이후에 여러분이 리스트된 추가적인 자료 부록들을 살펴본다면 많은도움이 될 것입니다.
+Note : 이 문서는 여러분이 오픈프레임웍스를 통해 `C++` 언어에 익숙해지도록 안내하는 것을 목표로 하고 있습니다. 하지만 이는 bottom-up 방식으로 `C++` 를 소개하는 것에 너무 깊이 탐구하는 범위를 벗어나게 되므로, 이후에 여러분이 리스트된 추가적인 자료 부록들을 살펴본다면 많은도움이 될 것입니다.
 
-`C++`은 http://en.wikipedia.org/wiki/C_(programming_language)[C 언어]의 확장으로, 1979년에 벨 연구소에 의해 개발되었습니다. 이 두 언어 모두는 세상의 어떠한 컴퓨터 플랫폼에서도 동작이 가능한 범용 컴퓨터 언어입니다. 대부분의 기본 C++ 프로그램은 아래와 같이 생겼습니다:
+`C++` 은 http://en.wikipedia.org/wiki/C_(programming_language)[C 언어] 의 확장으로, 1979년에 벨 연구소에 의해 개발되었습니다. 이 두 언어 모두는 세상의 어떠한 컴퓨터 플랫폼에서도 동작이 가능한 범용 컴퓨터 언어입니다. 대부분의 기본 C++ 프로그램은 아래와 같이 생겼습니다:
 
 [source,cpp]
 ---------------------------------------------------------------------
@@ -98,7 +97,7 @@ int main()
 
 팁 : 이 프로그램의 한줄한줄은 http://www.cplusplus.com/doc/tutorial/program_structure/[cplusplus.com "Structure of a program"] 튜토리얼에서 얻으실 수 있습니다.
 
-이후 컴파일러를 통해 실행되면, 이 코드는 완전히 실행가능한 프로그램으로 생성됩니다. 이 프로그램은 콘솔에 "Hello World!"를 출력하는 아주 단순한 명령행 프로그램입니다만, 그럼에도 프로그램이지요. 아래 단계를 통해 직접해보실 수 있습니다:
+이후 컴파일러를 통해 실행되면, 이 코드는 완전히 실행가능한 프로그램으로 생성됩니다. 이 프로그램은 콘솔에 "Hello World!" 를 출력하는 아주 단순한 명령행 프로그램입니다만, 그럼에도 프로그램이지요. 아래 단계를 통해 직접해보실 수 있습니다:
 
 Warning : 이 단계는 플랫폼에 따라 약간씩 다릅니다. 아래 지시들은 매킨토시 운영체제를 위한것으로, 실행을 위해 XCode가 설치되어있어야 합니다.
 
@@ -108,9 +107,9 @@ Your First compiling C++ Program
 
 image::images/PlainText.png["PlainText",float="right"]
 
-. 위의 코드를 텍스트파일에 붙여넣고 바탕화면에 *hello.cpp*로 저장합니다.
+. 위의 코드를 텍스트파일에 붙여넣고 바탕화면에 *hello.cpp* 로 저장합니다.
 
-.. 만약 여러분이 텍스트 편집기를 사용한다면, 저장할때 "rich text"나 다른 포맷이 아닌, plain text"로 저장해야 합니다.
+.. 만약 여러분이 텍스트 편집기를 사용한다면, 저장할때 "rich text" 나 다른 포맷이 아닌, plain text" 로 저장해야 합니다.
 . /응용프로그램/유틸리티 로 가서, 터미널.app을 더블클릭합니다 image:images/Terminal.png["Terminal.app",height=24]
 . 아래의 명령을 터미널 윈도우에 입력하고, 각 라인뒤에 엔터를 입력합니다:
 
