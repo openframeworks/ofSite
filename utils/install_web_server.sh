@@ -65,3 +65,11 @@ _EOF_
 
 echo "$cronlines" | crontab -
 
+
+# Install locales
+sudo sed -i "s/# ja_JP.UTF-8 UTF-8/ja_JP.UTF-8 UTF-8/g" /etc/locale.gen
+sudo sed -i "s/# ko_KR.UTF-8 UTF-8/ko_KR.UTF-8 UTF-8/g" /etc/locale.gen
+sudo sed -i "s/# es_ES.UTF-8 UTF-8/es_ES.UTF-8 UTF-8/g" /etc/locale.gen
+sudo sed -i "s/# de_DE.UTF-8 UTF-8/de_DE.UTF-8 UTF-8/g" /etc/locale.gen
+sudo /usr/sbin/locale-gen
+
