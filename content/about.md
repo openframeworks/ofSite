@@ -162,12 +162,12 @@ openFrameworks is actively developed by a <a href="/development/#contributors">s
 A number of institutions have provided major support for openFrameworks through grants, donations, and as hosting partners for our international developer conferences. These events often require significant resources to bring together participants from many countries to a single location for multiple days.
 
 <span class="sponsors">
-  <a href="http://amt.parsons.edu"><img alt="sponsor_logo" src="logo-parsons.png" style="display: block; height: 58px;padding-bottom: 3px;"></a>
-  <a href="http://www.ycam.jp/en/"><img alt="sponsor_logo" src="logo-ycam.png" style="display: block; height: 69px; /* padding-bottom: 8px; */"></a>
-  <a href="http://eyebeam.org/"><img alt="sponsor_logo" src="logo-eyebeam.png" style="display: block; height: 30px; padding-bottom: 18px;"></a>
-  <a href="http://studioforcreativeinquiry.org/"><img alt="sponsor_logo" src="logo-sfci.png" style="display: block; height: 69px;"></a>
-  <a href="http://www.aec.at/"><img alt="sponsor_logo" src="logo-ars.png" style="display: block; height: 41px; padding-bottom: 14px;"></a>
-  <a href="http://www.fordfoundation.org/"><img alt="sponsor_logo" src="logo-fordfoundation.png" style="display: block; height: 42px; padding-bottom: 13px;"></a>
+  <a href="http://amt.parsons.edu"><img alt="sponsor_logo" src="/about/logo-parsons.png" style="display: block; height: 58px;padding-bottom: 3px;"></a>
+  <a href="http://www.ycam.jp/en/"><img alt="sponsor_logo" src="/about/logo-ycam.png" style="display: block; height: 69px; /* padding-bottom: 8px; */"></a>
+  <a href="http://eyebeam.org/"><img alt="sponsor_logo" src="/about/logo-eyebeam.png" style="display: block; height: 30px; padding-bottom: 18px;"></a>
+  <a href="http://studioforcreativeinquiry.org/"><img alt="sponsor_logo" src="/about/logo-sfci.png" style="display: block; height: 69px;"></a>
+  <a href="http://www.aec.at/"><img alt="sponsor_logo" src="/about/logo-ars.png" style="display: block; height: 41px; padding-bottom: 14px;"></a>
+  <a href="http://www.fordfoundation.org/"><img alt="sponsor_logo" src="/about/logo-fordfoundation.png" style="display: block; height: 42px; padding-bottom: 13px;"></a>
 </span>
 
 
