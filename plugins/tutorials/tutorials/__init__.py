@@ -25,11 +25,14 @@ def stripFileLine(line):
     return  line.lstrip(' ').rstrip('\n').rstrip(' ')
         
 class MarkdownArticle:
-    def __init__(self,markdown,directory, lang):
+    def __init__(self,markdown, directory, lang, is_translation):
         mdfile = open(markdown,'r')
         state = 'begin'
         self.file = markdown
-        self.path = markdown[len(directory)+1:markdown.find('.markdown')].lower() + '/'
+        if is_translation:
+            self.path = os.path.splitext(markdown[len(directory)+1: markdown.find('.markdown')].lower())[0] + '/'
+        else:
+            self.path = markdown[len(directory)+1: markdown.find('.markdown')].lower() + '/'
         self.date = ''
         self.title = ''
         self.summary = ''
@@ -63,10 +66,13 @@ class MarkdownArticle:
                 return  
                    
 class AsciidocArticle:
-    def __init__(self,asciidoc,directory,lang):
+    def __init__(self,asciidoc,directory,lang,is_translation):
         mdfile = open(asciidoc,'r')
         self.file = asciidoc
-        self.path = asciidoc[len(directory)+1:asciidoc.find('.asciidoc')].lower() + '/'
+        if is_translation:
+            self.path = os.path.splitext(asciidoc[len(directory)+1:asciidoc.find('.asciidoc')].lower())[0] + '/'
+        else:
+            self.path = asciidoc[len(directory)+1:asciidoc.find('.asciidoc')].lower() + '/'
         self.date = ''
         self.title = ''
         self.summary = ''
@@ -141,20 +147,21 @@ class TutorialsTask(Task):
                 extension = file_split[1]
                 lang_split = article.split(".")
                 lang = self.site.config['DEFAULT_LANG'] if len(lang_split)<3 else lang_split[1]
+                is_translation = lang != self.site.config['DEFAULT_LANG']
                 folder = os.path.join(directory,catfolder,article)
                 if extension=='.markdown':
                     path = os.path.join(directory,catfolder,article)
                     files += [path]
-                    articleobj = MarkdownArticle(path, directory, lang)
-                    if lang == self.site.config['DEFAULT_LANG']:
+                    articleobj = MarkdownArticle(path, directory, lang, is_translation)
+                    if not is_translation:
                         articles.append(articleobj)
                     else:
                         translations.append(articleobj)
                 elif extension=='.asciidoc':
                     path = os.path.join(directory,catfolder,article)
                     files += [path]
-                    articleobj = AsciidocArticle(path, directory, lang)
-                    if lang == self.site.config['DEFAULT_LANG']:
+                    articleobj = AsciidocArticle(path, directory, lang, is_translation)
+                    if not is_translation:
                         articles.append(articleobj)
                     else:
                         translations.append(articleobj)
