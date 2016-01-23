@@ -3,8 +3,9 @@
 This repository stores the content and code that generates the [openFrameworks](http://openFrameworks.cc/) website.
 
 for other language, please read below.
-- korean(한국어) : [readme.ko.md](readme.ko.md)
 
+- korean(한국어) : [readme.ko.md](readme.ko.md)
+- japanese(日本語) : [readme.ja.md](readme.ja.md)
 
 ## Contributing
 
@@ -34,7 +35,7 @@ If you plan to do a big modification like contribute a translation the easiest i
 
 ## Documentation-style markdown
 
-The documentation portion of the site is written in Markdown, a wiki-style syntax. See details on [Daringfireball](http://daringfireball.net/projects/markdown/). 
+The documentation portion of the site is written in Markdown, a wiki-style syntax. See details on [Daringfireball](http://daringfireball.net/projects/markdown/).
 
 The easiest way to check the syntax is having a look at the many pages already on the site, but here are some useful tips:
 
@@ -52,5 +53,3 @@ Images are added using normal markdown format:
     ![Image Title](filename.png "alt text")
 
 For a more complete description of how to contribute documentation, please see the [Contributing to the Documentation ](http://www.openframeworks.cc/tutorials/developers/003_contributing_to_the_documentation.html) tutorial.
-
-
