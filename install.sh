@@ -1,7 +1,7 @@
 OS=$(uname -s)
 PIP=pip
 if [ "$OS" == "Linux" ]; then
-	sudo apt-get install python3 python3-pip asciidoc source-highlight
+	sudo apt-get install python3 python3-pip asciidoctor
 	PIP=$(ls /usr/bin/pip-3* | head -n1)
 	if [ "$PIP" == "" ]; then
 		PIP=$(ls /usr/bin/pip3 | head -n1)
@@ -14,7 +14,7 @@ if [ "$OS" == "Linux" ]; then
 	fi
 fi
 if [ "$(which python3)" == "" ]; then
-	echo ofSite needs python3, pip and asciidoc to run, please install them before running this script
+	echo ofSite needs python3, pip and asciidoctor to run, please install them before running this script
 	exit 1
 fi
 sudo $PIP install virtualenv

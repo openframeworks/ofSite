@@ -3,6 +3,7 @@
 :date: September 2013
 :author_site: http://www.jeffcrouse.info
 :summary: This chapter will introduce openFrameworks and prepare you to start your first project.
+:source-highlighter: highlightjs
 :doctype: book
 
 ofTutorials - Introduction
