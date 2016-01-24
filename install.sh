@@ -1,7 +1,7 @@
 OS=$(uname -s)
 PIP=pip
 if [ "$OS" == "Linux" ]; then
-	sudo apt-get install python3 python3-pip asciidoc source-highlight
+	sudo apt-get install python3 python3-pip asciidoc
 	PIP=$(ls /usr/bin/pip-3* | head -n1)
 	if [ "$PIP" == "" ]; then
 		PIP=$(ls /usr/bin/pip3 | head -n1)
