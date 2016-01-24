@@ -84,7 +84,7 @@ OpenGL의 주된 역할은 프로그래머로 하여금 코드로 점, 선, 폴�
 <!-- Alright, so that's what some OpenGL looks like, how does this all work? Take a look at the following diagram. -->
 좋습니다, 지금까지 OpenGL이 어떻게 생겼는지, 어떻게 동작하는지 알아봤습니다. 그렇다면 아래 다이어그램을 살펴봅시다.
 
-![파이프라인](002_images/pipeline.png)
+![파이프라인](pipeline.png)
 
 <!-- For those of your who've read other OpenGL tutorials you may be wondering: why do these all look the same? Answer: because there's really no other way to describe it. You start with vertices and you end up with rastered pixels. Much like other inevitable things in life, that's all there is to it. -->
 다른 OpenGl 튜토리얼을 읽어보신 분들은 알아차리셨겠지만 설명이 너무나도 똑같아서 의아해 하실겁니다. 사실 딱히 다른 방법으로 설명될 수 없기 떄문이죠. 어찌되었든 간에 여러분은 버텍스로 시작해서 래스터라이즈된 픽셀로 끝납니다. 마치 인생에서 피해갈수 없는 것들처럼 말이죠. 
@@ -142,7 +142,7 @@ ofMesh는, ofPolyline과 같이 그것들과 관련한 부수적인 정보들을
 <!-- You may be thinking: I'll just make eight vertices and voila: a cube. Not so quick. There's a hitch and that hitch is that the OpenGL renderer has different ways of connecting the vertices that you pass to it and none are as efficient as to only need eight vertices to create a cube. You've probably seen a version of the following image somewhere before. -->
 여러분은 아마도 이렇게 생각할겁니다: 난 8개의 점을 만들거야. 짜쟌: 큐브입니다. 아주 빠르진 않습니다. 여러분이 전달해준 버텍스들 각각을 OpenGL 렌더러가 연결하는 방법은 다양합니다. 그리고 그리고 큐브를 만들기 위해 오직 8개의 버텍스를 전달하는것은 전혀 효율적이지 않죠. 아마도 아래에 보여지는 이미지의 여러 버전을 보신적이 있을겁니다:
 
-![PRIMATIVES](002_images/gl_vertices_options.jpg)
+![PRIMATIVES](gl_vertices_options.jpg)
 
 <!-- Generally you have to create your points to fit the drawing mode that you've selected. A vertex gets connected to another vertex in the order that the mode does its winding and this means that you might need multiple vertices in a given location to create the shape you want. The cube, for example, requires eighteen vertices, not the eight that you would expect. If you note the order of vertices in the GL chart above you'll see that all of them use their vertices slightly differently (in particular you should make note of the GL_TRIANGLE_STRIP above). Drawing a shape requires that you keep track of which drawing mode is being used and which order your vertices are declared in. -->
 일반적으로 여러분이 결정한 드로잉 모드에 맞는 점들을 생성해줘야 합니다. 버텍스가 다른 버텍스로 연결되는 순서는 드로잉 모드에 의해 결정되며, 이 말은 여러분이 원하는 형태를 생성하기 위해 주어진 좌표에 다중의 버텍스가 필요할 수도 있다는 의미입니다. 예를들어 큐브의 경우, 8개가 필요할 것이라 예상되지만 실제로는 18개의 버텍스가 필요합니다. 위에 보여지는 GL 차트안에서 버텍스의 순서를 보시면, 조금씩 다름을 알 수 있을것입니다(특히 GL_TRIANGLE_STRIP을 꼭 살펴봐야 합니다). 형태를 그릴때에는 어떤 드로잉모드에 따르는지, 그리고 버텍스들이 어떤 순서로 선언되어있는지를 알고 있어야 합니다.
@@ -165,12 +165,12 @@ ofMesh는, ofPolyline과 같이 그것들과 관련한 부수적인 정보들을
 <!-- And then we get: -->
 그렇다면 우리는 이런것을 얻을 수 있습니다:
 
-![vertices_not_working.png](002_images/vertices_not_working.png)
+![vertices_not_working.png](vertices_not_working.png)
 
 <!-- That's not right. What you need to remember is that the default setting of the mesh is to make triangles out of everything, so you need to make two triangles. What you've given OpenGL is interpreted like so: -->
 이건 잘못됐습니다. 여러분이 기억해야할것은 메시의 기본세팅은 삼각형이라는 것입니다. 따라서 두개의 삼각형을 만들 필요가 있습니다. 여러분이 OpenGL에게 전달한것은 이렇게 해석되어집니다:
 
-![vertices.png](002_images/vertices.png)
+![vertices.png](vertices.png)
 
 <!-- You can use other drawing modes if you want but it's really best to stick with triangles (connected triangles to be precise) because they're so much more flexible than other modes and because they're best supported across different devices. Points and wires are also supported everywhere, quads for example, are not. Anyhow, let's draw our mesh correctly: -->
 원한다면 다른 드로잉 모드를 사용할 수 있습니다. 하지만 삼각형을 이용하는것이 최선의 방법입니다(삼각형들을 연결하는것은 정확해야 합니다). 이는 다른 모드보다 훨씬 유연할 뿐만 아니라, 다양한 장치에서 최고의 호환성을 보여주기 때문입니다. 점과 선은 어디에서든 지원되지만, quads 같은 경우는 그렇지 않습니다. 어째ㅆ든, 우리의 메시를 정확하게 그려봅시다:
@@ -460,18 +460,18 @@ So initially your openFrameworks camera, an ofCamera instance let's say, is just
 <!-- Ok, so know what the world space is and what the view space is, how does that end up on the screen? Well, another thing that the camera has, in addition to a location and a thing that it's looking at (aka View Matrix) is the space that it sees. Just like a movie screen, you've got to at some point turn everything into a 2D screen. A vertex that happens to be at 0, 0 should be rendered at the center of the screen. But! We can’t just use the x and y coordinates to figure out where something should be on screen. We also need to figure out its Z depth because something in front of something should be drawn (and the thing behind it shouldn't) For two vertices with similar x and y coordinates, the vertex with the biggest z coordinate will be more on the center of the screen than the other. This is called a perspective projection and every ofCamera has a perspective transform that it applies to the ModelView matrix that makes it represent not only how to turn a vertex from world space plus camera space but also to add in how a vertex should be shown in the projection that the camera is making. Ok, so before projection, we’ve got stuff in Camera Space: -->
 자 이제 world space가 무엇인지, 그리고 view space가 뭔지는 알았는데, 스크린에서는 어떠한가요? 카메라의 위치정보 이외에 추가된 또다른 정보는 그것이 어디서 보고 있는지(뷰 매트릭스)dhk, 그것이 보고있는 space 입니다. 영화 스크린과 같이, 어떤 지점 바라보게 되면 모든것이 2D로 변합니다. 0,0 위치의 버텍스는 스크린의 중앙에 위치하게 됩니다. 또한 그 x,y가 비슷한 두 버텍스의 Z뎁스를 판별하여 그것이 다른 것보다 앞에 있으면 그것을 그려내야 하기 때문이죠(반대로 뒤에 있다면 그리지 말아야 하겠죠?).  이것을 perspective transform이라고 불리우는데, ofCamera가 갖고있는 perspective transform은 world space에서의 버텍스를 camera space에 적용하는것 뿐만 아니라 카메라가 만들어내는 projection에 버텍스를 추가해 만들어냅니다. 수행합니다. 좋습니다. projection 전에, camera space에서 할일이 생겼습니다:
 
-![img](002_images/OF_GL_tutorial.jpg)
+![img](OF_GL_tutorial.jpg)
 
 <!-- Now here's what that projection matrix does to it. Looks wrong, right? -->
 자 이것이 저 projection 매트릭스가 하는 것입니다. 잘못되어 보이죠?
 
-![img](002_images/OF_GL_tutorial1.jpg)
+![img](OF_GL_tutorial1.jpg)
 
 <!-- Looks wrong, right? But when you look at through the camera, it will look right and *that* is the secret of the projection matrix: multiplying everything by it makes it all look correct. The frustum is cube and objects that are near to the camera are big and things far away are smaller. -->
 
 잘못됐나요? 하지만 카메라를 통해서 바라본다면, 이게 올바르게 보이는겁니다. 그리고 *이것*이 바로 projection 매트릭스의 비밀이죠. 모든것을 올바르게 보이도록 처리하는겁니다. 카메라에서 가까운 큐브는 크게, 그리고 멀리 있는것들은 작게 보이는겁니다. 
 
-![img](002_images/OF_GL_tutorial2.jpg)
+![img](OF_GL_tutorial2.jpg)
 
 <!-- That reminds me of a [Father Ted joke](http://www.youtube.com/watch?v=vh5kZ4uIUC0). Unlike the toy cows, the projection matrix actually makes things far away small. Lots of times in OpenGL stuff we talk about either the ModelViewMatrix or the ModelViewProjectionMatrix. Both of those are just the different matrices multiplied by one another to get "where things are" and "where things are *on the screen*". Matrices themselves are the subject of a million different tutorials and explanations which range from awesome to useless but there is one thing that I want to put in here to explain a quick way to read and understand them in OpenFrameworks and OpenGL in general. There's a trick that I've learned to understand matrices which I'm going borrowing from Steve Baker for your edification. Here's an OpenGL matrix: -->
 이건 정말이지 [Father Ted joke](http://www.youtube.com/watch?v=vh5kZ4uIUC0)를 생각나게 하는군요. 장난감 소와 달리, projection matrics는 정말로 멀리 있는것을 작게 만들어버립니다. 얘기했던 OpenGL의 것들중 여러번 얘기했던 ModelViewMatrix또는  ModelViewProjectionMatrix가 다르지만, 단지 "어디에 그것들이 있는지", "그것들이 화면상에 어디에 있는지"를 위해 서로 다른 매트릭스와의 곱연산이 수행될 뿐입니다. 매트릭스 자체만으로도 수만개의 서로 다른 튜토리얼과 설명이 존재합니다만, 오픈프레임웍스와 OpenGL에서의 매트릭스를 쉽게 설명하기 위해서 제가 Steve Backer의 아이디어를 소개하고자 합니다. 이것이 바로 OpenGL 매트릭스입니다:
@@ -496,7 +496,7 @@ m[3]  m[7]  m[11]  m[15]
 <!-- So, this is the way that I always visualize this: imagine what happens to four points  near to the origin after they are transformed by the matrix: -->
 자, 이것이 제가 matrix를 시각화하는 방법입니다: origin에서 가까운 4개의 점에게 matrix에 의해 transform되면 어떤일이 벌어질지 생각해봅시다:
 
-![img](002_images/rotation1.png)
+![img](rotation1.png)
 
 <!-- These are four vertices on a unit cube (i.e. what that's 1 x 1 x 1) that has one corner at the origin. So, what we can do is pull apart the matrix and use differents elements to move that little cube around and get a better picture of what that matrix is actually representing. -->
 
@@ -531,7 +531,7 @@ translation부분은 넘어가고(하단열의 3, 7, 11), 회전부분은 단순
 <!-- When we draw that out, the X axis of our cube is now pointing somewhere between the X and Y axes, the Y axis is pointing somewhere between Y and negative X and the Z axis hasn't moved at all. The entire cube has been moved 1 units in X direction and 0 in the Y and Z: -->
 이것을 그려보면, 큐브의 X축은 X와 Y축 사이의 어딘가에 있을것이고, Y축은 Y와 -X축 사이 어딘가 있을것이며, Z축은 전혀 움직임이 없을것입니다. 큐브 전체는 X방향으로 1만큼, Y와 Z방향으로 0만큼 이동되었습니다:
 
-![img](002_images/rotation2.png)
+![img](rotation2.png)
 
 <!-- What you'll tend to see in your ModelView matrix is a lot of rotation and translation to account for the position of your camera and of world space (that is, stuff in the rotation and translation parts of the matrix), what you'll tend to see in your projection matrix is some translation but mostly a lot of skewing (m[3], m[7], m[11]) to show how the camera deforms the world to make it look right on the screen. We're going to come back to matrices a little bit later in this article when we talk about cameras. -->
 여러분이 ModelView 매트릭스를 통해 알고자 하는것은 많은 rotation과 카메라의 위치변화(transform)입니다. projection 매트릭스에서는 약간의 translation이 있지만, 대부분은 수많은 왜곡들(m[3], m[7], m[11])- 즉 카메라가 어떻게 세계를 왜곡시켜 스크린에서 올바르게 보여지게 하느냐 입니다. 잠시후 카메라에 대해서 얘기할때 우리는 다시 매트릭스에 대해서 얘기할 것입니다.
@@ -664,12 +664,12 @@ void testApp::draw(){
 <!-- We should see this: -->
 결과는 이렇습니다:
 
-![img](002_images/texture_coords.png)
+![img](texture_coords.png)
 
 <!-- Take note that anything we do moving the modelView matrix around, for example that call to ofTranslate(), doesn't affect the images texture coordinates, only their screen position. What about when we go past the end of a texture? -->
 여기서 우리는 modelView 매트릭스에 관해서는 아무것도 변화를 주지 않았습니다. 예를들어 ofTranslate() 호출을 예를들면, 이미지 텍스쳐 좌표에는 아무런 영향을 주지 않고, 화면의 위치에만 영향을 미쳤습니다. 그렇다면 앞의 텍스쳐 끝은 어떨까요?
 
-![img](002_images/past_last_texcoord.png)
+![img](past_last_texcoord.png)
 
 <!-- Eww, right? Well, we can call: -->
 으... 그렇죠? 흠. 이렇게 호출할 수 있습니다:
@@ -682,7 +682,7 @@ void testApp::draw(){
 <!-- Now we get: -->
 이렇게 하면 아래와 같은 결과가 나옵니다:
 
-![img](002_images/past_tex_border.png)
+![img](past_tex_border.png)
 
 <!-- Since we're not using power of two textures, i.e. textures that are strange sizes, we can't use the classic GL_REPEAT, but that's fine, it's not really that useful anyways, honestly. -->
 두 텍스쳐의 합을 다루는 챕터에 들어가기 전에 언급하자면, 이상한 사이즈의 텍스쳐에서, GL_REPEAT를 사용하는 예도 있습니다만, 솔직히 말해서, 이건 별로 유용한 것은 아닙니다.
@@ -697,7 +697,7 @@ bikers.draw(0, 0, 101); // supposed to up front
 tdf.draw(0, 0, 100); // getting drawn last
 ~~~~
 
-![img](002_images/depth.png)
+![img](depth.png)
 
 <!-- Enable depth test to get it to work: -->
 depth text를 켜고 살펴봅시다:
@@ -717,7 +717,7 @@ bikers.draw(0, 0, 0);
 tdf.draw(100, 0, -50); // bikers보다 50픽셀 뒤에 있도록 한다.
 ~~~~
 
-![img](002_images/alpha_enabled.png)
+![img](alpha_enabled.png)
 
 <!-- Well, we get the visibility, but the TDF is in from of the bikers, which it shouldn't be, let's turn on depth testing: -->
 자, 이제 보이는군요, 하지만 TDF가 biker보다 앞에 있군요. 그러면 안되는데요.. depth test를 켜봅시다.
@@ -728,7 +728,7 @@ bikers.draw(0, 0, 0);
 tdf.draw(100, 0, -50); bikers보다 50픽셀 뒤에 있도록 한다.
 ~~~~
 
-![img](002_images/depth_enabled.png)
+![img](depth_enabled.png)
 
 <!-- That's not right either. What's happening? Turns out in OpenGL alpha and depth just don't get along. You can have which pixels selected according to their alpha values or you can have things placed according to their position in z-space. If you want to do both you need to do multiple render passes or other trickery to get it to work, which is a little out of the scope of this tutorial. Suffice to say, that it's a little bit tricky and that you might need to think carefully about how you're going to work with 3D objects and textures that have alpha enabled because it can some serious headaches. Alright, enough of that, this part of this tutorial has gone on long enough. -->
 이것 역시 잘못되었네요. 대체 어떻게 된걸까요? OpenGL alpha와 depth는 함께 동작하지 않는것으로 보이는군요. alpha값에 따를지 혹은 z축의 위치에 따를지에 따라 픽셀을 가질수는 있습니다. 만약 두가지 모두를 원한다면, 두 렌더의 곱을 전달할 필요가 있거나, 혹은 다른 복잡한 과정이 필요한데, 이는 조금 까다로울 뿐더러, 3D오브젝트와 alpha가 활성화된 텍스처를 어떻게 다룰것인지 세심하게 생각해야할 필요가 있습니다. 이는 심각한 두통을 유발할것입니다. 좋습니다. 이정도면 됐습니다.
@@ -757,7 +757,7 @@ cam.end();
 <!-- So, we always have a camera? Yep, and it has a location in space too. Just imagine this: -->
 우리가 항상 카메라를 가지고 있다구요? 넵, 그리고 그것 역시 공간상의 위치를 갖고 있습니다. 이렇게 생각해보죠:
 
-![img](002_images/camera.png)
+![img](camera.png)
 
 <!-- What's that -7992 and 79? Well, those are just a guess at a 1024x768 sized window, from the renderers setupScreenPerspective() method: -->
 -저 7992와 79는 뭔가요? 뭐, 이것들은 setupScreenperspective()메소드에서 그려내는 1024*768 사이즈 윈도우에서의 추측입니다. 
