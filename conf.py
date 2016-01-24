@@ -331,7 +331,7 @@ COMPILERS = {
 # You can choose what command to use for processing.
 # For example, you can replace asciidoc with asciidoctor
 # Or use the full path to the program.
-# ASCIIDOC_BINARY = "asciidoc"
+ASCIIDOC_BINARY = "asciidoctor"
 
 # Create by default posts in one file format?
 # Set to False for two-file posts, with separate metadata.
