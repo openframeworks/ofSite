@@ -24,26 +24,7 @@ function resetDiscuss(section_name){
 
 $(document).ready(
 
-    function(){
-      
-      // Setup Syntax handler
-      $("pre").each(function(){
-        children = $(this).children("code");
-        if(children.length>0){
-            $(this).text($(children[0]).text());
-            if(children[0].className=="h"){
-                this.className="sh_cpp";
-            }else if(children[0].className=="bash"){
-                this.className="sh_sh";
-            }else if(children[0].className=="make"){
-                this.className="sh_makefile";
-            }else{
-                this.className="sh_" + children[0].className;
-            }
-        }    
-      });      
-      sh_highlightDocument();
-      
+    function(){      
       // Handle loading a page with a named anchor in the hash.
       // Chrome and Safari don't need this, Firefox does.
       loadDocumentationFromLocation();

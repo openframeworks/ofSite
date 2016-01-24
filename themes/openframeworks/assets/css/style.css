@@ -1,4 +1,5 @@
 @import url("http://fonts.googleapis.com/css?family=Roboto");
+@import url(https://fonts.googleapis.com/css?family=Fira+Mono:400,700);
 html {
 	height: 100%;
 }
@@ -804,8 +805,8 @@ a.docs_class{
 
 /* BEGIN unify formatting for markdown ``inline code blocks`` */
 .class_documentation code, .documentation_detail_description code{
-  font-size: 12px;
-  font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;	
+  font-size: 14px;
+  font-family: "Fira Mono", "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;	
 }
 /* END unify formatting for markdown ``inline code blocks`` */
 
