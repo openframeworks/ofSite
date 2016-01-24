@@ -1,8 +1,8 @@
 ---
-date: 2013/08/17 10:00:00
-title: 쉐이더 소개
-summary: ofShare와 GLSL의 기초
-author: Lucasz Karluk, Joshua Noble, Jordi Puig
+.. date: 2013/08/17 10:00:00
+.. title: 쉐이더 소개
+.. summary: ofShare와 GLSL의 기초
+.. author: Lucasz Karluk, Joshua Noble, Jordi Puig
 ---
 
 ###Contents

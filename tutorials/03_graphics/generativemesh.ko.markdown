@@ -1,8 +1,9 @@
 ---
-date: 2013/11/20 4:00:00
-title: 메시 생성하기
-summary: 이미지로부터 메시 생성하기 기초편
-author: [Michael Hadley](www.mikewesthad.wordpress.com/me)
+.. date: 2013/11/20 4:00:00
+.. title: 메시 생성하기
+.. summary: 이미지로부터 메시 생성하기 기초편
+.. author: Michael Hadley
+.. author_site : www.mikewesthad.wordpress.com/me
 ---
 
 
