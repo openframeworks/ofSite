@@ -1073,17 +1073,17 @@ if문의 조건문 코드가 어떻게 수정되었는지 유심히 살펴보시
 
 
 ### xCode의 breakpoint, 정말 편리한 디버거!
-[![Image:BkPt.jpg](002_images/BkPt.jpg)][84]
+[![Image:BkPt.jpg](BkPt.jpg)][84]
 
 <!-- Breakpoints are something that you can put in by clicking on the far left column of the editing window. If you're compiling in debug mode:-->
 
 편집창의 좌측 끝을 열을 클릭함으로써, breakpoint를 세팅할 수 있습니다. 만약 여러분이 디버그 모드에서 컴파일을 수행하면 :
-[![Image:BuildConf.jpg](002_images/BuildConf.jpg)][85]
+[![Image:BuildConf.jpg](BuildConf.jpg)][85]
 
 <!-- your program will stop running whenever it comes across one of these breakpoints and bring up the debugging console which lets you look at variable contents and the current running processes and things like that.--> 
 
 breakpoint를 지나ㄹ때 프로그램이 멈추면서 디버깅 콘솔을 보여줍니다. 이 콘솔에는 현재 수행중인 프로세스의 변수들과 같은 정보들을 출력해줍니다.
-[![Image:HilightedVar.jpg](002_images/HilightedVar.jpg)][86]
+[![Image:HilightedVar.jpg](HilightedVar.jpg)][86]
 
   
 <!-- They're extremely convenient for debugging programs, but they can be confusing if you don't know what they are and they keep stopping your program. -->
