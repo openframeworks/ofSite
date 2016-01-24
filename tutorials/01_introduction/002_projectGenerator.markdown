@@ -1,9 +1,9 @@
 ---
-date: 2012/10/20 17:00:00
-title: Create a new project with the projectGenerator
-summary: openframeworks 0072 comes with a new tool to generate projects
-author: Jesus Gollonet
-author_site: http://jesusgollonet.com
+.. date: 2012/10/20 17:00:00
+.. title: Create a new project with the projectGenerator
+.. summary: openframeworks 0072 comes with a new tool to generate projects
+.. author: Jesus Gollonet
+.. author_site: http://jesusgollonet.com
 ---
 
 ## 1. What is it?
