@@ -2,7 +2,8 @@
 .. date: 2013/11/20 4:00:00
 .. title: Generating Meshes
 .. summary: Basics of Generating Meshes from an Image
-.. author: [Michael Hadley](www.mikewesthad.wordpress.com/me)
+.. author: Michael Hadley
+.. author_site: www.mikewesthad.wordpress.com/me
 ---
 
 ##Basics of Generating Meshes from an Image

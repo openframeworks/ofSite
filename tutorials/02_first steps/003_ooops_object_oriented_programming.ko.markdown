@@ -1,9 +1,9 @@
 ---
-date: 2008/03/20 20:18:00
-title: 웁쓰! = 객체지향프로그래밍 + 클래스
-summary: 이 튜토리얼은 오픈프레임웍스에서의 객체지향 프로그래밍에 관한 간단한 소개와 자신만의 클래스를 작성하는 가이드를 담고 있습니다.
-author: Rux
-author_site:
+.. date: 2008/03/20 20:18:00
+.. title: 웁쓰! = 객체지향프로그래밍 + 클래스
+.. summary: 이 튜토리얼은 오픈프레임웍스에서의 객체지향 프로그래밍에 관한 간단한 소개와 자신만의 클래스를 작성하는 가이드를 담고 있습니다.
+.. author: Rux
+.. author_site:
 ---
 
 ## Contents
@@ -56,9 +56,9 @@ A recurring analogy is to see a Class as a the cookie cutter and the cookies as 
 클래스와 객체는 플래시에서의 MovieClip과 인스턴스 관계와 개념이 비슷합니다. 이는 또한 자바 프로그래밍의 핵심이기도 합니다. 만약 여러분이 Java 또는 Processing의 경험이 있으시다면, [프로세싱 사용자를 위한 오픈프레임웍스][14] 튜토리얼이 유용할 것입니다.
 
 <!-- This is how you declare a Class -\> in the header file (\*.h), otherwise known as the declarations file. In this case, the file name should be ofBall.h -->
-[![Image:ex1-ball_h.jpg](003_images/Ex1-ball_h.jpg)][15]
+[![Image:ex1-ball_h.jpg](Ex1-ball_h.jpg)][15]
 
-클래스를 선언하려면 -\> 헤더파일 (\*.h)에 작성하면 됩니다. 헤더파일은 또한 선언 파일이라고 하기도 합니다. 우리의 경우, 파일명은 ofBall.h가 되어야 합니다. [![Image:ex1-ball_h.jpg](003_images/Ex1-ball_h.jpg)][15]
+클래스를 선언하려면 -\> 헤더파일 (\*.h)에 작성하면 됩니다. 헤더파일은 또한 선언 파일이라고 하기도 합니다. 우리의 경우, 파일명은 ofBall.h가 되어야 합니다. [![Image:ex1-ball_h.jpg](Ex1-ball_h.jpg)][15]
 
 ~~~~{.cpp}
 
@@ -112,7 +112,7 @@ Lets say we're building a Pool game, we'll have the ofApp class, dependent on th
 
 
 
-[![Image:ex-ifndef.jpg](003_images/Ex-ifndef.jpg)][16]
+[![Image:ex-ifndef.jpg](Ex-ifndef.jpg)][16]
 
 <!-- Here's how you can write the class \*.cpp file, the implementation file: -->
 
@@ -160,7 +160,7 @@ Lets say we're building a Pool game, we'll have the ofApp class, dependent on th
     }
 ~~~~
 
-[![Image:ex1-ball_cpp.jpg](003_images/Ex1-ball_cpp.jpg)][17]
+[![Image:ex1-ball_cpp.jpg](Ex1-ball_cpp.jpg)][17]
 
 <!-- <h2 id="objects-part-1">make objects from your own Classes</h2> -->
 <h2 id="objects-part-1">나만의 클래스로 오브젝트들을 만들기</h2>
@@ -172,7 +172,7 @@ in your testapp.h (header file) we'll have to add declare a new object and get s
 클래스를 생성했으니, 실제 오브젝트를 만들어봅시다!
 아래의 코드로 testapp.h파일(헤더파일)에서, 새 오브젝트 선언을 추가하고, 그것을 위한 메모리를 할당할 것입니다:
 
-[![Image:ex1-h.jpg](003_images/Ex1-h.jpg)][19]
+[![Image:ex1-h.jpg](Ex1-h.jpg)][19]
 
 ~~~~{.cpp}
     	ofBall myBall;
@@ -186,7 +186,7 @@ in your testapp.h (header file) we'll have to add declare a new object and get s
 프로젝트의 testapp.cpp 파일 (구현파일)로 가서, 우리가 생성한 오브젝트를 그리고, 동시에 메소드를 호출하여 값들을 업데이트 시켜봅시다. 
 update() 함수에 아래와 같이 추가해봅시다:
 
-[![Image:ex1-cpp.jpg](003_images/Ex1-cpp.jpg)][20]
+[![Image:ex1-cpp.jpg](Ex1-cpp.jpg)][20]
 
 ~~~~{.cpp}
       myBall.update();  // 오브젝트의 update메소드를 호출한다.
@@ -227,7 +227,7 @@ ofApp.h파일로 돌아가서 몇가지 새 오브젝트들을 만들면 됩니�
     	 ofBall myBall3;
 ~~~~
 
-[![Image:ex2-h.jpg](003_images/Ex2-h.jpg)][23]
+[![Image:ex2-h.jpg](Ex2-h.jpg)][23]
 
 <!-- And in the implementation file (\*.cpp) just call the corresponding methods for each of the objects. -->
 그리고 구현파일 (\*.cpp)에서 각각의 오브젝트에 대응하는 메소드들을 호출해주면 됩니다.
@@ -250,9 +250,9 @@ ofApp의 update()함수에 이렇게 추가합니다:
     	myBall3.draw();
 ~~~~
 
-[![Image:ex2-cpp.jpg](003_images/Ex2-cpp.jpg)][24]
+[![Image:ex2-cpp.jpg](Ex2-cpp.jpg)][24]
 
-[![Image:ex2Ball.jpg](003_images/Ex2Ball.jpg)][25]
+[![Image:ex2Ball.jpg](Ex2Ball.jpg)][25]
 
 [소스코드 다운받기][26]
 
@@ -277,7 +277,7 @@ ofApp의 update()함수에 이렇게 추가합니다:
     	ofBall myBall[NBALLS];
 ~~~~
 
-[![Image:ex21h.jpg](003_images/Ex21h.jpg)][28]
+[![Image:ex21h.jpg](Ex21h.jpg)][28]
 
 <!-- back to our implementation file we'll just need to create an array of objects and call their methods through 'for' loops. -->
 구현파일로 돌아와, 방금 만든 오브젝트의 배열안에 있는 메소드를 'for'방복문으로 호출합니다.
@@ -302,9 +302,9 @@ draw()함수에 이와같이 작성합니다:
     	}
 ~~~~
 
-[![Image:ex21cpp.jpg](003_images/Ex21cpp.jpg)][29]
+[![Image:ex21cpp.jpg](Ex21cpp.jpg)][29]
 
-[![Image:ex21Ball.jpg](003_images/Ex21Ball.jpg)][30]
+[![Image:ex21Ball.jpg](Ex21Ball.jpg)][30]
 
 [소스코드 다운받기][31]
 
@@ -350,7 +350,7 @@ ofApp.h(선언)파일로 돌아가, 새 오브젝트를 아래와 같이 선언�
     	ofBall *myBall;
 ~~~~
 
-[![Image:ex3-h.jpg](003_images/Ex3-h.jpg)][33]
+[![Image:ex3-h.jpg](Ex3-h.jpg)][33]
 
 <!-- The star means it will be created in a reserved part of memory just for it. -->
 별(*)은 예약된 메모리의 일부에 생성하겠다 라는 의미입니다. 
@@ -378,9 +378,9 @@ in the setup() :
     myBall->draw();
 ~~~~
 
-[![Image:ex3-cpp.jpg](003_images/Ex3-cpp.jpg)][34]
+[![Image:ex3-cpp.jpg](Ex3-cpp.jpg)][34]
 
-[![Image:ex3Ball.jpg](003_images/Ex3Ball.jpg)][35]
+[![Image:ex3Ball.jpg](Ex3Ball.jpg)][35]
 
 [소스코드 다운받기][36]
 
@@ -394,7 +394,7 @@ in the setup() :
     	int nBalls;        // 공의 갯수를 위한 변수
 ~~~~
 
-[![Image:ex4-h.jpg](003_images/Ex4-h.jpg)][38]
+[![Image:ex4-h.jpg](Ex4-h.jpg)][38]
 
 <!-- As we're creating an array of objects, instead of creating one pointer only we'll also have to create an array of pointers. -->
 <!-- That's why we have two 'stars' and not one in the declarations(\*.h) file. We have created a pointer to an array of pointers. -->
@@ -431,9 +431,9 @@ similarly when we want to draw and update the objects we've created we'll need '
       }
 ~~~~
 
-[![Image:ex4-cpp.jpg](003_images/Ex4-cpp.jpg)][39]
+[![Image:ex4-cpp.jpg](Ex4-cpp.jpg)][39]
 
-[![Image:ex4Ball.jpg](003_images/Ex4Ball.jpg)][40]
+[![Image:ex4Ball.jpg](Ex4Ball.jpg)][40]
 
 [소스코드 다운받기][41]
 
@@ -450,35 +450,35 @@ similarly when we want to draw and update the objects we've created we'll need '
 
 [14]: http://wiki.openframeworks.cc/index.php?title=OF_for_Processing_users "http://wiki.openframeworks.cc/index.php?title=OF_for_Processing_users"
 
-[15]: 003_images/Ex1-ball_h.jpg "Image:ex1-ball_h.jpg"
-[16]: 003_images/Ex-ifndef.jpg "Image:ex-ifndef.jpg"
-[17]: 003_images/Ex1-ball_cpp.jpg "Image:ex1-ball_cpp.jpg"
+[15]: Ex1-ball_h.jpg "Image:ex1-ball_h.jpg"
+[16]: Ex-ifndef.jpg "Image:ex-ifndef.jpg"
+[17]: Ex1-ball_cpp.jpg "Image:ex1-ball_cpp.jpg"
 
-[19]: 003_images/Ex1-h.jpg "Image:ex1-h.jpg"
-[20]: 003_images/Ex1-cpp.jpg "Image:ex1-cpp.jpg"
+[19]: Ex1-h.jpg "Image:ex1-h.jpg"
+[20]: Ex1-cpp.jpg "Image:ex1-cpp.jpg"
 
 [21]: http://www.essaycollective.org/personal/rx/patcher/of-werx/object-ballclass_example1.zip "http://www.essaycollective.org/personal/rx/patcher/of-werx/object-ballclass_example1.zip"
 
-[23]: 003_images/Ex2-h.jpg "Image:ex2-h.jpg"
-[24]: 003_images/Ex2-cpp.jpg "Image:ex2-cpp.jpg"
-[25]: 003_images/Ex2Ball.jpg "Image:ex2Ball.jpg"
+[23]: Ex2-h.jpg "Image:ex2-h.jpg"
+[24]: Ex2-cpp.jpg "Image:ex2-cpp.jpg"
+[25]: Ex2Ball.jpg "Image:ex2Ball.jpg"
 
 [26]: http://www.essaycollective.org/personal/rx/patcher/of-werx/object-ballclass_example2.zip "http://www.essaycollective.org/personal/rx/patcher/of-werx/object-ballclass_example2.zip"
 
-[28]: 003_images/Ex21h.jpg "Image:ex21h.jpg"
-[29]: 003_images/Ex21cpp.jpg "Image:ex21cpp.jpg"
-[30]: 003_images/Ex21Ball.jpg "Image:ex21Ball.jpg"
+[28]: Ex21h.jpg "Image:ex21h.jpg"
+[29]: Ex21cpp.jpg "Image:ex21cpp.jpg"
+[30]: Ex21Ball.jpg "Image:ex21Ball.jpg"
 
 [31]: http://www.essaycollective.org/personal/rx/patcher/of-werx/object-ballclass_example2-1.zip "http://www.essaycollective.org/personal/rx/patcher/of-werx/object-ballclass_example2-1.zip"
 
-[33]: 003_images/Ex3-h.jpg "Image:ex3-h.jpg"
-[34]: 003_images/Ex3-cpp.jpg "Image:ex3-cpp.jpg"
-[35]: 003_images/Ex3Ball.jpg "Image:ex3Ball.jpg"
+[33]: Ex3-h.jpg "Image:ex3-h.jpg"
+[34]: Ex3-cpp.jpg "Image:ex3-cpp.jpg"
+[35]: Ex3Ball.jpg "Image:ex3Ball.jpg"
 
 [36]: http://www.essaycollective.org/personal/rx/patcher/of-werx/object-ballclass_example3.zip "http://www.essaycollective.org/personal/rx/patcher/of-werx/object-ballclass_example3.zip"
 
-[38]: 003_images/Ex4-h.jpg "Image:ex4-h.jpg"
-[39]: 003_images/Ex4-cpp.jpg "Image:ex4-cpp.jpg"
-[40]: 003_images/Ex4Ball.jpg "Image:ex4Ball.jpg"
+[38]: Ex4-h.jpg "Image:ex4-h.jpg"
+[39]: Ex4-cpp.jpg "Image:ex4-cpp.jpg"
+[40]: Ex4Ball.jpg "Image:ex4Ball.jpg"
 
 [41]: http://www.essaycollective.org/personal/rx/patcher/of-werx/object-ballclass_example4.zip "http://www.essaycollective.org/personal/rx/patcher/of-werx/object-ballclass_example4.zip"

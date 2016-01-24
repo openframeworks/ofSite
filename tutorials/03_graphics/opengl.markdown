@@ -2,7 +2,8 @@
 .. date: 2013/09/01 00:00:00
 .. title: Basics of OpenGL
 .. summary: Introducing OpenGL for OF
-.. author: [Joshua Noble](http://twitter.com/fctry2)
+.. author: Joshua Noble
+.. author_site: http://twitter.com/fctry2/
 ---
 
 

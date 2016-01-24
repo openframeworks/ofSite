@@ -10,7 +10,7 @@ ofTutorials - Introduction
 
 이 챕터에서는 openFrameworks를 소개하고 여러분이 첫 프로젝트를 시작할 수 있도록 준비하는 과정을 소개합니다.
 
-image::images/ofw-logo.png["oF Logo",float="right"]
+image::ofw-logo.png["oF Logo",float="right"]
 
 What is OpenFrameworks?
 =======================
@@ -102,15 +102,15 @@ int main()
 Warning : 이 단계는 플랫폼에 따라 약간씩 다릅니다. 아래 지시들은 매킨토시 운영체제를 위한것으로, 실행을 위해 XCode가 설치되어있어야 합니다.
 
 
-Your First compiling C++ Program
+Compiling your First C++ program
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-image::images/PlainText.png["PlainText",float="right"]
+image::PlainText.png["PlainText",float="right"]
 
 . 위의 코드를 텍스트파일에 붙여넣고 바탕화면에 *hello.cpp* 로 저장합니다.
 
 .. 만약 여러분이 텍스트 편집기를 사용한다면, 저장할때 "rich text" 나 다른 포맷이 아닌, plain text" 로 저장해야 합니다.
-. /응용프로그램/유틸리티 로 가서, 터미널.app을 더블클릭합니다 image:images/Terminal.png["Terminal.app",height=24]
+. /응용프로그램/유틸리티 로 가서, 터미널.app을 더블클릭합니다 image::Terminal.png["Terminal.app",height=24]
 . 아래의 명령을 터미널 윈도우에 입력하고, 각 라인뒤에 엔터를 입력합니다:
 
 ---------------------------------------------------------------------
@@ -125,11 +125,11 @@ g++ -o hello hello.cpp <2>
 
 결과는 아래와 같습니다:
 
-image::images/HelloWorld.png["Hello World!"]
+image::HelloWorld.png["Hello World!"]
 
 축하드립니다, 여러분은 방금 여러분의 첫번째 C++프로그램을 생성(그리고 실행)하였습니다! 바탕화면에 아래와 같은 화면이 보여질 것입니다:
 
-image::images/hello.png["Your First Program"]
+image::hello.png["Your First Program"]
 
 이는 아마도 여러분이 사용해왔던 프로그램과는 다르게 보입니다 -- 그리픽을 사용하며 윈도우를 실행하는 깜찍한 아이콘을 갖고 있는 그런 프로그램들 말이죠 -- 하지만 그럼에도 이것도 프로그램입니다. 사실, 충분이 깊게 파고들면, 컴퓨터의 모든 프로그램은 'hello' 프로그램과 같습니다. 나머지는 장식같은것이죠.
 
