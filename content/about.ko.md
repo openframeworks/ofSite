@@ -1,7 +1,7 @@
 ## -*- coding: utf-8 -*-
 .. title: about
 
-### 오픈프레임웍스는 실험적인 작업을 위해 단순하고 직관적인 프레임워크를 제공하여 창의적인 프로세스를 돕는  <a href="license.html">[오픈소스](license/)[C++](https://en.wikipedia.org/wiki/C%2B%2B/a> 툴킷입니다. 
+### 오픈프레임웍스는 실험적인 작업을 위해 단순하고 직관적인 프레임워크를 제공하여 창의적인 프로세스를 돕는  <a href="license.html">[오픈소스](license/)[C++](https://en.wikipedia.org/wiki/C%2B%2B) 툴킷입니다. 
 </br>
 
 <!--h1>about</h1-->

@@ -15,9 +15,15 @@
                 <div class="page-wide">  
                     <ul class="articles">
                     % for article in category["articles"]:
-                         <li><a href="${lang_folder}/tutorials/${article.file}"> ${article.title} </a></br>
-                             <p>${article.summary}</p>
-                         </li>
+                         %if lang in article.translations.keys():
+                             <li><a href="${article.translations[lang].path}"> ${article.translations[lang].title} </a></br>
+                                 <p>${article.translations[lang].summary}</p>
+                             </li>
+                         %else:
+                             <li><a href="${article.path}"> ${article.title} </a></br>
+                                 <p>${article.summary}</p>
+                             </li>
+                         %endif
                     % endfor
                     </ul>
                 </div><!-- End Page Wide -->
