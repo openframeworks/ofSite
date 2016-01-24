@@ -1,0 +1,95 @@
+## -*- coding: utf-8 -*-
+<%inherit file="base.tmpl" />
+
+<%block name="extra_head">
+    <script type="text/javascript">
+        forumTitle = '${ self.msg("forum", locals()) }';
+        githubTitle = '${ self.msg("github", locals()) }';
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle/3.03/jquery.cycle.all.min.js"></script>
+    <script type="text/javascript" src="/assets/js/encoder.js"></script>
+    <script type="text/javascript" src="/assets/js/socialwidgets.js"></script>
+    <script type="text/javascript" src="/assets/js/home.js"></script>
+</%block>
+
+
+
+<%block name="content">
+<div id="body-wrap">
+    <div id="body-wrap">
+        <div class="page-left-medium">
+        <p>
+            <!-- OF video -->
+            <iframe src="http://player.vimeo.com/video/74124094?title=0&amp;byline=0&amp;portrait=0" width="700" height="393" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </p>
+        </div>
+
+        <div class="page-right-narrow">
+            <div class="home-links">
+                <h2>${self.msg("openFrameworks is an open source C++ toolkit for creative coding.", locals())}</h2>
+
+                <h3><a href="download/">${self.msg("download", locals())}</a></h3>
+                <p>${self.msg("Grab the most recent release (${currentVersion}) and follow the setup guide to get openFrameworks running.", locals())}</p>
+                
+	        <h3><a href="documentation/">${self.msg("documentation", locals())}</a></h3>
+	        <p>${self.msg('Reference for openFrameworks classes, functions and addons. You can also check the <a href="http://openframeworks.cc/tutorials">tutorials section<a>.', locals())}</p>
+                
+	        <h3><a href="http://forum.openframeworks.cc/">${self.msg("forum", locals())}</a></h3>
+	        <p>${self.msg("The forum is a place to meet other people working with openFrameworks. It's a place to share your work, or find help solving problems.", locals())}</p>
+            </div>
+        </div>
+
+        <div class="sectiontext home">
+            <h2>${self.msg("Latest images", locals())}</h2>
+        </div>
+        <div class="gallery home">
+            <div id="flickr"></div>
+            <br class="clearboth">
+        </div>
+
+        <div class="sectiontext home">
+            <h2>${self.msg("Latest posts", locals())}</h2>
+        </div>
+        
+        <div class="social home">
+            <div class="tweet">
+                <h3>${self.msg("twitter", locals())}</h3>
+                <div id="tweets">
+                <div class="tweets">
+                    <a data-chrome="noheader noscrollbar nofooter transparent"  data-show-replies="false" data-tweet-limit="4" data-link-color="#EE3987"  class="twitter-timeline" href="https://twitter.com/search?q=openframeworks" data-widget-id="367489340693176321">${self.msg('Tweets about "#openframeworks"', locals())}</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                </div>
+                </div>
+            </div>
+
+            <div id="forum"></div>
+            
+            <div id="github"></div>
+
+            <br class="clearboth">
+        </div>
+    </div>
+</div>
+</%block>
+
+
+<%def name="msg(key, locals)"><%
+    import importlib
+    import sys
+    import pathlib
+    import re
+    sys.path.append( "messages" )
+    has_translation = locals["pageargs"]["exists"]("messages/of_messages_"+locals["pageargs"]["lang"]+".py")
+    messages = {}
+    if has_translation:
+        messages = importlib.import_module("of_messages_"+locals["pageargs"]["lang"])
+    messages_en = importlib.import_module("of_messages_en")
+    msg = ""
+    try:
+        msg = messages.MESSAGES[key]
+    except:
+        msg = messages_en.MESSAGES[key]
+    search = re.findall(r'\$\{([^}]*)\}', msg)
+    for match in search:
+        msg = msg.replace('${' + match + '}', locals["pageargs"][match.strip()])
+%>${msg}</%def>

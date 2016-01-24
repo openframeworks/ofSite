@@ -1,5 +1,9 @@
-_site
 *~
 *.pyc
 .DS_Store
-_filters/asciidoc_template
+output
+__pycache__
+cache
+.doit.db
+.doit.db.db
+/nikola
