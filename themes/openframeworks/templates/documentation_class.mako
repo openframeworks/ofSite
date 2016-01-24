@@ -14,16 +14,16 @@
               <div id="editdocs">
                 % if not clazz is None:
                   % if is_addon:
-                    <a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/addons/${clazz.module}/${clazz.name}.markdown" class="nohover"><img title="edit class on GitHub" src="/images/editclass.png?a=5"/></a>
+                    <a href="https://github.com/openframeworks/ofSite/edit/master/documentation/addons/${clazz.module}/${clazz.name}.markdown" class="nohover"><img title="edit class on GitHub" src="/images/editclass.png?a=5"/></a>
                   % else:
-                    <a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/${clazz.module}/${clazz.name}.markdown" class="nohover"><img title="edit class on GitHub" src="/images/editclass.png?a=5"/></a>
+                    <a href="https://github.com/openframeworks/ofSite/edit/master/documentation/${clazz.module}/${clazz.name}.markdown" class="nohover"><img title="edit class on GitHub" src="/images/editclass.png?a=5"/></a>
                   % endif
                 % endif
                 % if not functions is None and len(functions.function_list)>0:
                    % if is_addon:
-                     <a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/addons/${functions.module}/${functions.name}_functions.markdown" class="nohover"><img title="edit functions on GitHub" src="/images/editfunctions.png?a=5"/></a>
+                     <a href="https://github.com/openframeworks/ofSite/edit/master/documentation/addons/${functions.module}/${functions.name}_functions.markdown" class="nohover"><img title="edit functions on GitHub" src="/images/editfunctions.png?a=5"/></a>
                    % else:
-                     <a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/${functions.module}/${functions.name}_functions.markdown" class="nohover"><img title="edit functions on GitHub" src="/images/editfunctions.png?a=5"/></a>
+                     <a href="https://github.com/openframeworks/ofSite/edit/master/documentation/${functions.module}/${functions.name}_functions.markdown" class="nohover"><img title="edit functions on GitHub" src="/images/editfunctions.png?a=5"/></a>
                    % endif
                 % endif
               </div>
@@ -159,15 +159,15 @@ ${functions.description}
             <p>If you want to contribute better documentation or start documenting this section you can do so 
                 % if not clazz is None:
                   % if is_addon:
-                    <a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/addons/${clazz.module}/${clazz.name}.markdown">here</a>
+                    <a href="https://github.com/openframeworks/ofSite/edit/master/documentation/addons/${clazz.module}/${clazz.name}.markdown">here</a>
                   % else:
-                    <a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/${clazz.module}/${clazz.name}.markdown">here</a>
+                    <a href="https://github.com/openframeworks/ofSite/edit/master/documentation/${clazz.module}/${clazz.name}.markdown">here</a>
                   % endif
                 % elif not functions is None and len(functions.function_list)>0:
                    % if is_addon:
-                     <a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/addons/${functions.module}/${functions.name}_functions.markdown">here</a>
+                     <a href="https://github.com/openframeworks/ofSite/edit/master/documentation/addons/${functions.module}/${functions.name}_functions.markdown">here</a>
                    % else:
-                     <a href="https://github.com/openframeworks/ofSite/edit/master/_documentation/${functions.module}/${functions.name}_functions.markdown">here</a>
+                     <a href="https://github.com/openframeworks/ofSite/edit/master/documentation/${functions.module}/${functions.name}_functions.markdown">here</a>
                    % endif
                 % endif.
             </p>
