@@ -219,7 +219,19 @@ FAQ
 - Are you including addons? They need to be specified in addons.make, and the case of the letters must match exactly (ie, ofxOpenCv works but ofxOpenCV won't work). This error will probably show up as missing header files or symbols.
 - If you're getting a bunch of undeclared reference errors, check which version of the NDK you're using. For this version you should be using NDK r8d.
 - If you get 'com.android.sdklib.build.ApkCreationException: Debug Certificate expired on <date>', you have to 'rm ~/.android/debug.keystore'. A new certificate will be generated automatically.
+- If you get the error: Make: ***This package doesn’t support your platform, probably you downloaded the wrong package?
+1. Open the C++ perspective: Window -> Open Perspective -> Other... -> C/C++
+2. Select openFrameworks in the Project Explorer
+3. Drop down the hammer button
+4. Select Android
 
+- If you get the error: Project 'androidEmptyExample' is missing required source folder: 'gen'
+1. Select androidEmptyExample in the Project Explorer
+2. Go to Menu -> Project -> Properties -> Android
+3. Select Android-19 in the right side
+4. Click OK
+5. Clean & Build the project, the error will be disappeared
+6. Revert back to Android-21 and Clean&Build again. You will have no more error.
 
 **If the build succeeds but you can't install it on the phone:**
 
