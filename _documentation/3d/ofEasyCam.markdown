@@ -24,7 +24,7 @@ It has a few default controls built into it:
 * Right click drag = dolly in and out
 * Double click = reset camera position
 
-Please note: Setting the position an ofEasyCam instance by calling ofEasyCam::setPosition() in ofSetup()/ofApp::setup() does not work due to the current implementation. You can resort to calling ofEasyCam::setDistance() in ofApp::setup(). Using ofEasyCam::setPosition() in inther places (like ofApp::draw()) does work as intended.
+Please note: Setting the position an ofEasyCam instance by calling ofEasyCam::setPosition() in ofSetup()/ofApp::setup() does not work due to the current implementation. You can resort to calling ofEasyCam::setDistance() in ofApp::setup(). Using ofEasyCam::setPosition() in other places (like ofApp::draw()) does work as intended.
 
 
 
