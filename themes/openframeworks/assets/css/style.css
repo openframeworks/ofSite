@@ -552,7 +552,7 @@ a.nohover {
     margin-bottom:2em;
 }
 
-.article > p > img{
+.article img{
 	max-width:100%;
 }
 
@@ -985,7 +985,7 @@ a.documentation_class_link, a:link.documentation_class_link, a:visited.documenta
 }
 pre {
 	background-color: #fdfde3;
-	font-family: Courier,  monospace; 
+	font-family: "Fira Mono", Courier,  monospace; 
 	line-height: 120%;
 	margin: 0px;
 	margin-left: 10px;
