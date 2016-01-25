@@ -14,7 +14,7 @@ directly unzipping the archive from their [repository](http://sourceforge.net/pr
 
 If you are going to use QtCreator you should install msys2 in the default install folder, c:\msys64
 
-Open a MSYS2 shell and update the system packages :
+Open a **MSYS2 shell** (`C:\msys64\msys2_shell.bat`) and update the system packages :
 
     pacman --noconfirm  --needed -Sy bash pacman pacman-mirrors msys2-runtime
 	
@@ -30,7 +30,7 @@ Installing openFrameworks
 
 Download and unzip the qt **creator / msys2** version of oF.
 
-Open an MSYS shell and install OF dependencies:
+Open an **MSYS shell** (`C:\msys64\msys2_shell.bat`) and install OF dependencies:
 
     cd your_oF_directory/scripts/msys2
     ./install_dependencies.sh`
