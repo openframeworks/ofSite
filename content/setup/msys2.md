@@ -35,9 +35,9 @@ Open an MSYS shell and install OF dependencies:
     cd your_oF_directory/scripts/msys2
     ./install_dependencies.sh`
 	
-Open an **MINGW32** shell and compile oF libraries:
+Open an **MINGW32** shell (run `C:\msys64\mingw32_shell.bat`) and compile oF libraries:
 
-	cd your_oF_directory/libs/openFrameworksCompiled/project
+    cd your_oF_directory/libs/openFrameworksCompiled/project
     make
 
 You can speed-up compilation using parallel build `make -j4` or the number of cores you want it to use
@@ -49,13 +49,13 @@ On MSYS2, openFrameworks needs the dlls that are provided by MSYS2 package manag
 
 You can find how to set the PATH in windows here: http://www.computerhope.com/issues/ch000549.htm
 
-You'll need to add your_msys2_directory\mingw32\bin;your_msys2_directory\usr\bin to your PATH, which usually is:
+You'll need to add `c:\msys64\mingw32\bin` and `c:\msys64\usr\bin` to your PATH. There are two ways:
 
-        c:\msys64\mingw32\bin;c:\msys64\usr\bin
-        
-You can also set the PATH from the command line: open a Windows cmd prompt and set you user PATH
-
-        setx PATH "%PATH%;your_msys2_directory\mingw32\bin;your_msys2_directory\usr\bin;"
+1. Either add them via 'Environment Variables' from the Control Panel > System > Advanced System Settings.
+2. Or you can also set the PATH from the command line: open a Windows cmd prompt and set you user PATH.
+```
+setx PATH "c:\msys64\mingw32\bin;c:\msys64\usr\bin;%PATH%"
+```
 
 If you have administrative privileges, you can directly set the system PATH. All users will benefit of it...
 
