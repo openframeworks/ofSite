@@ -34,6 +34,11 @@ import codecs
 import os
 import subprocess
 
+# for non-ascii encoding
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
+
 from nikola.plugin_categories import PageCompiler
 from nikola.utils import makedirs, req_missing, write_metadata
 
