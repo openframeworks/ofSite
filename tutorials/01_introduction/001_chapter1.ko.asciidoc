@@ -1,3 +1,4 @@
+-*- coding: utf-8 -*-
 :authoer: Jeff Crouse <jeff@crouse.cc>
 :title: ofTutorials - 시작하기
 :date: setptember 2013
@@ -549,11 +550,11 @@ void ofApp::update(){
 The Pacman Effect
 ~~~~~~~~~~~~~~~~~
 
-Let's have one final adventure with our purple circle before saying goodbye. Our application is still a little disappointing because once our circle leaves the screen on the right, it's gone forever. Let's fix that problem by making the circle re-appear on the left side after leaving on the right: the Pacman Effect.
+튜토리얼을 마치기 전에 마지막으로 보라색 원으로 한가지를 더 해봅시다. 우리의 어플리케이션에서 원이 화면의 우측으로 영원히 사라져버리므로 여전히 약간 실망습니다. 이 문제를 원이 우측에서 사라지면 좌측에서 다시 나타나도록 해결해봅시다 : 이른바 팩맨 효과입니다.
 
-Before we write any code, let's think about what this is going to mean in terms of the variables that we have. In the current state, we have myCircleX acting as the x coordinate for our circle, and it is being incrementing by 1 (or 4, if you followed the tip above) every frame. By default, an openFrameworks window is 1024x768. So, one way we could achieve the Pacman Effect is to reset myCircleX back to 300 once it goes beyond 1024.
+코드를 작성하기 전에, 우리가 갖고 있는 변수의 측면에서 이것이 무슨 의미를 갖게 되는지 생각해봅시다. 현재 myCircleX는 원의 x 좌표로 사용되고 있고, 이것은 매 프레임마다 1씩 증가하고 있습니다(바로 위의 팁을 따른다면 4씩 증가하겠죠?). 기본적으로, 오픈프레임웍스 윈도우는 1024x768의 크기를 갖습니다. 따라서 팩맨 효과를 적용하는 방법중 하나는 myCircleX이 1024보다 커질경우 300으로 리셋하는것입니다.
 
-How can we do this? We know that we are supposed to do any variable updating in the update() function, so let's start there. We also know that we *only* want to reset myCircleX *if* it has gone above 1024. So for that, we use the 'if' statement.
+어떻게 하면 될까요? 우리는 어떤 변수든지 update()안에서 다룬다는것을 알고 있으므로, 여기서 시작해보도록 합시다. 또한 *만약* myCircleX가 1024보다 클때*만*, 리셋하면 된다는것도 알고 있죠. 이를 위해서 `if`구문을 사용합니다.
 
 [source,cpp]
 ---------------------------------------------------------------------
@@ -565,19 +566,18 @@ void ofApp::update(){
     }
 }
 ---------------------------------------------------------------------
-This code says:
+코드의 뜻은 이렇습니다:
 
-- increment myCircleX by one.
-- test if myCircleX is greater than 1024
-- *only* if that test turns out to be true, set myCircleX back to 300;
-
+- myCircleX를 1씩 증가시킨다
+- myCircleX가 1024보다 큰지 테스트한다.
+- 테스트한 결과가 참일때*만*, myCircleX 를 300으로 되돌린다;
 
 Adding Interaction
 ------------------
 
-Now that you are a master of animation, it's time to get the user involved. For this section, we will be focusing on keyboard and mouse interaction.
+이제 여러분은 애니메이션을 마스터했습니다. 이제 사용자의 참여에 대해서 배울 시간이군요. 이 섹션에서는, 키보드와 마우스 인터랙션에 집중해보려 합니다.
 
-So far, we've been focusing on 3 functions: setup(), update(), and draw(). For interaction, we will start with 2 of the other functions in your ofApp.cpp file:
+지금까지는, setup(), update(), 그리고 draw() 세 함수에 대해 알아봤습니다. 인터랙션을 위해서는, ofApp.cpp 파일안의 다른 2개의 함수로 시작합니다:
 
 [source,cpp]
 ---------------------------------------------------------------------
@@ -590,38 +590,41 @@ void ofApp::keyReleased(int key){
 }
 ---------------------------------------------------------------------
 
-Going back to the producer metaphor can help us understand how these functions work. openFrameworks has done the hard work of setting up your app to know when the user has done some keyboard business. Now, all you have to do is put code into these functions that you want to execute when a particular event occurs:
+프로덕션 비유로 돌아가서 보면 이런 함수들의 동작원리를 이해하는데 도움이 됩니다. 오픈프레임웍스는 여러분의 앱이 사용자가 키보드로 하는 작업들이 언제 발생하는지 알수 있도록 어려운 작업들을 해두었습니다. 이제, 여러분이 할일은 이런 특정 이벤트들이 발생했을때 수행할 것들을 이 함수들안에 코드로 작성하는것입니다:
 
 - user physically presses down on a key
 - user physically releases the key
 
-This might be a little unintuitive if you are accustomed to thinking about typing a letter as a single action: "I just typed the letter 'o'". But in fact, they are 2 distinct actions, or "events", and eventually you might find it handy to be able to distinguish between them.
+- 사용자가 물리적인 키를 누름
+- 사용자가 물리적인 키를 눌렀다 뗌
 
-Create a new project in "myApps" called "keyboardInteraction". If you need to, go back to "Creating your First Project" to see how.
+이는 여러분이 평소처럼 키를 누르는 것을 하나의 행위로 생각하는데 익숙했다면 직관적이지 않을 수 있습니다: "그냥 `o`키를 눌렀음". 하지만 사실 여기엔 두 가지 행위, 또는 "이벤트"로 구분됩니다. 그리고 궁극적으로 여러분이 이 둘의 차이를 구별할 수 있어야 합니다.
+
+"myApps"에 "keyboardInteraction"이라는 새 프로젝트를 생성합니다. 만약 필요하다면, "여러분의 첫 프로젝트 생성하기"로 돌아가서 어떻게 하는지 살펴보시기 바랍니다.
 
 image::KeyboardInteraction01.png["Keyboard Interaction Project",width="750"]
 
 Introducing, cout!
 ~~~~~~~~~~~~~~~~~~
 
-The easiest way to quickly see how these functions work is to print a message to the console. Remember when we printed "Hello, World!" to the console in the introduction? We did that using a `C++` thing called http://www.cplusplus.com/reference/iostream/cout/["cout"] (pronounced 'c out'). The syntax for using it is a bit weird because it's not technically a function (it's actually an object, which we will talk more about in later chapters), but if you can get beyond the syntax, it's actually very useful for debugging.
+이 기능들이 어떻게 동작하는지 알아볼 수 있는 가장 쉽고 빠른 방법은 콘솔에 메시지를 출력하는 것입니다. 콘솔에 "Hello, World"를 출력하는 가이드 기억나시죠? http://www.cplusplus.com/reference/iostream/cout/["cout"] 이라 불리는 것을 `C++`에서 사용했습니다. 이 문법을 사용하는 것은 약간 이상한데, 사실 기술적으로 이녀석은 함수가 아니기 때문입니다(정확히는 오브젝트이며, 추후 챕터에서 이에 대해서 다룰 것입니다). 하지만 이 문법에 대해 익숙해진다면, 디버깅을 할때 아주 유용합니다.
 
-But first: you may be asking yourself: how will we see text output? We are dealing with a GUI interface now. Luckily, XCode/Code::Blocks provides a window where we can see anything text that your program outputs (also known as http://www.cplusplus.com/reference/clibrary/cstdio/stdout/[stdout]).
+하지만 우선: 스스로에게 물어봅시다: 텍스트 출력을 어떻게 확인하죠? 우리는 지금 GUI를 다루고 있습니다. 다행이도, Xcode/Code::Blocks는 프로그램에서 출력되는 텍스트를 확인할 수 있는 윈도우를 제공하고 있습니다(http://www.cplusplus.com/reference/clibrary/cstdio/stdout/[stdout] 이라고 불리기도 합니다).
 
-So start by going to View->Debug Area->Activate Console, or press apple+shift+C when using XCode. Code::Blocks automatically opens a console window when you press F9 (to build and run your program).
+자, Xcode에서 메뉴의 View->Debug Area->Activate Console을 투르거나, 혹은 apple+shift+C 단축기를 눌러봅시다.Code::Blocks는 F9를 누를때(프로그램을 빌드하거나 실행) 자동으로 콘솔 윈도우를 보여줍니다.
 
 image::activate-console.png["Activate Console"]
 
 [NOTE]
 =====================================================================
-For XCode 3 users, use the key command Shift-Cmd-R. There's also a preference in XCode to bring up the console after each launch - Xcode->Preferences->Debugging->On Start Show Console.
+Xcode 3를 사용하신다면, Shift+Cmd+R 단축키를 누르십시오. 또한 XCode 환경설정인 Xcode->Preference->Debugging->On Start Show console 에서 콘솔창을 보이게 할 수 있습니다.
 =====================================================================
 
-You should see a panel like this appear at the bottom of your XCode window
+XCode 윈도우의 하단에 아래와 같은 패널이 보일것입니다.
 
 image::debug-area.png["Debug Area"]
 
-Excellent! Your output will appear in the pane on the right. Now we will add some code to our key functions that will print stuff to the console:
+훌륭합니다! 이제 출력은 패널의 우측에 보여질 것입니다. 이제 키 기능을 사용하여 콘솔에 출력하는 코드를 작성해봅시다.
 
 [source,cpp]
 ---------------------------------------------------------------------
@@ -634,11 +637,11 @@ void ofApp::keyReleased(int key){
 }
 ---------------------------------------------------------------------
 
-As I mentioned before, the syntax for cout is a little strange and, frankly, way beyond the scope of this chapter. In `C++` parlance, cout represents the "standard output stream", and without worrying too much about what that means, "stream" is a nice way to think about it. If you look at the line of code within 'keyPressed', it appears that there is a "stream" of data flowing into the "cout". First we send in the string "keyPressed " down the stream, then we send in a variable: key. Finally, we send http://www.cplusplus.com/reference/iostream/manipulators/endl/[endl] down the stream. endl simply tells the console to go to the next line.
+앞에서 언급했던것처럼, cout의 문법은 약간 이상합니다. 그리고 솔직히, 이 챕터의 범위를 벗어납니다. `C++`에서는, cout은 "표준 출력 스트림(standard output stream)"을 의미하며 여기서 이게 무슨말인지 걱정할 필요는 없습니다만, "stream(흐름)"이야 말로 이것에 대해 생각하기엔 좋은 방법입니다. `keyPressed` 가 포함된 코드라인을 살펴보면, 데이터의 "stream"이 "cout"으로 되어있음을 볼 수 있습니다. 우선 "keyPressed" 문자열을 stream으로 흘려보내고, 그리고 나서 변수 key 를 흘려보냈습니다. 마지막으로, http://www.cplusplus.com/reference/iostream/manipulators/endl/[endl] 를 보냈습니다. endl은 콘솔에게 다음 줄로 넘어가라 라고 명령하는 것과 같습니다.
 
-The 'key' variable represents the key that was pressed or released. More about this in a bit.
+'key' 변수는 눌렸거나, 떼었을 키를 의미합니다. 이것에 대해서 좀더 살펴보죠.
 
-Let's give it a try. Launch your program and type some keys. I will type "qwerty". You should see something like this in the console:
+한번 직접 해봅시다. 프로그램을 실행하고 아무 키나 눌러보십시오. 저는 "qwerty"를 입력했습니다. 콘솔에는 이렇게 보일겁니다:
 
 ...................................
 GNU gdb 6.3.50-20050815 (Apple version gdb-1708) (Thu Nov  3 21:59:02 UTC 2011)
@@ -663,27 +666,27 @@ keyPressed 121
 keyReleased 121
 ...................................
 
-Don't worry about the crap at the beginning -- that's added by the debugger.
+시작부분의 잡다한 부분은 신경쓰지 마세요 -- 이것들은 디버거에서 추가한 것들입니다.
 
-The fact that the 'key' is supplied as an 'int' may seem a bit strange. Perhaps you were expecting a string or a char? In fact, what this number represents is the http://www.asciitable.com/[ASCII code] for the key pressed. Check out this table:
+'key'는 'int(정수형)'인데, 이건 좀 이상해 보입니다. 아마도 여러분은 문자나 문자열을 기대하고 있었죠? 사실, 이 숫자는 눌렸던 키의 http://www.asciitable.com/[ASCII 코드] 입니다. 표를 한번 살펴보죠:
 
 image::ascii_table.jpg["ASCII Table"]
 
-On the right of each column in red, you will see a key on your keyboard. Under the corresponding "Dec" (decimal=base 10) column, you will see the number that you will receive in the key functions.
+각 열의 우측에 붉은색을 보면, 키보드의 키를 볼 수 있습니다. 아래에 대응되는 "Dec(10진수)" 열을 보시면, key 함수에서 받는 숫자를 볼 수 있습니다.
 
 [TIP]
 =====================================================================
-You can actually use something called http://www.cplusplus.com/doc/tutorial/typecasting/[type casting] to turn the int into a 'char', or letter. Simply put "(char)" before the "key" variable so that your cout statement looks like this:
+사실 이 int를 'char'나 문자로 변환하기 위해 http://www.cplusplus.com/doc/tutorial/typecasting/[type casting(형 변환)] 이라 불리는 것을 사용할수도 있습니다. "key"앞에 "(char)"만 붙여넣어 cout 구문에 넣으면 됩니다:
 [source,cpp]
 ---------------------------------------------------------------------
 cout << "keyPressed " << (char)key << endl;
 ---------------------------------------------------------------------
-More about type casting later in this chapter!
+형변환에 대해서는 이 나중에 더 살펴보도록 하죠!
 =====================================================================
 
-Fantastic. But presumably we want to do more with the key presses than print to the console. Let's use the keys to move a ball around on the screen.
+훌륭합니다만, 키를 이용해 콘솔에 출력하는 그럴듯한 프로그램이 되었네요. 이번엔 키를 이용해서 화면의 공을 움직여봅시다.
 
-Start by adding two variables to your ofApp and using them to draw a circle, just like we did in the Adding Movement section:
+ofApp에 두 변수를 추가하고 이것들을 이용해 원을 그려봅시다. 아치 움직임을 추가하는 앞 섹션과 같이요:
 
 [source,cpp]
 ---------------------------------------------------------------------

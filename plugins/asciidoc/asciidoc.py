@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+## -*- coding: utf-8 -*-
 
 # Copyright © 2012-2014 Roberto Alsina and others.
 
@@ -33,11 +33,6 @@ You will need, of course, to install asciidoc
 import codecs
 import os
 import subprocess
-
-# for non-ascii encoding
-import sys
-reload(sys)
-sys.setdefaultencoding('utf-8')
 
 from nikola.plugin_categories import PageCompiler
 from nikola.utils import makedirs, req_missing, write_metadata
