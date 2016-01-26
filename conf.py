@@ -4,11 +4,6 @@ from __future__ import unicode_literals
 import time
 import markdown
 
-# added for non ascii
-import sys
-reload(sys)
-sys.setdefaultencoding('utf-8')
-
 # !! This is the configuration of Nikola. !! #
 # !!  You should edit it to your liking.  !! #
 
