@@ -76,3 +76,4 @@
 <li><a href="http://www.vargatron.com/">Steve Varga</a> (vargatron) as typography leader</li>
 <li><a href="http://justdayan.com/">Dayan Moisa</a> (justdayan) as documentation leader</li>
 </ul>
+
