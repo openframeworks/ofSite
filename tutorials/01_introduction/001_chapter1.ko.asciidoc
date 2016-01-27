@@ -1,4 +1,3 @@
--*- coding: utf-8 -*-
 :authoer: Jeff Crouse <jeff@crouse.cc>
 :title: ofTutorials - 시작하기
 :date: setptember 2013
