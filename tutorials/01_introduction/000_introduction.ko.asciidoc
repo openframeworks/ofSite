@@ -4,6 +4,7 @@
 :author_site: http://www.jeffcrouse.info
 :summary: 이 챕터에서는 openFrameworks를 소개하고 여러분이 첫 프로젝트를 시작할 수 있도록 준비하는 과정을 소개합니다.
 :source-highlighter: highlightjs
+:icons: font
 :doctype: book
 
 ofTutorials - Introduction
