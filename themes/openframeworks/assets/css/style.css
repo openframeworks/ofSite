@@ -804,11 +804,29 @@ a.docs_class{
 }
 
 /* BEGIN unify formatting for markdown ``inline code blocks`` */
-.class_documentation code, .documentation_detail_description code{
-    font-size: 14px;
-    font-family: "Fira Mono", "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;	
+pre {
+	font-family: "Fira Mono", Courier,  monospace; 
+	line-height: 120%;
+	margin: 0px;
+	/*margin-left: 10px;*/
+	margin-top: 15px;
+	margin-bottom: 15px;
+	/*padding-bottom: 10px;
+	padding-left: 10px;
+	padding-top: 10px;*/
+	white-space: pre-wrap;
+	line-height: normal;
+}
+
+pre code {
     border-left: 6px solid rgba(197, 213, 229, 0.65);
     padding: 6px 20px !important;
+}
+
+code {
+	background-color: #F8F8F8;
+    font-size: 14px;
+    font-family: "Fira Mono", "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;	
 }
 /* END unify formatting for markdown ``inline code blocks`` */
 
@@ -985,20 +1003,7 @@ a.documentation_class_link, a:link.documentation_class_link, a:visited.documenta
 .documentation-returns-type {
 	font-weight: bold;
 }
-pre {
-	background-color: #fdfde3;
-	font-family: "Fira Mono", Courier,  monospace; 
-	line-height: 120%;
-	margin: 0px;
-	/*margin-left: 10px;*/
-	margin-top: 15px;
-	margin-bottom: 15px;
-	/*padding-bottom: 10px;
-	padding-left: 10px;
-	padding-top: 10px;*/
-	white-space: pre-wrap;
-	line-height: normal;
-}
+
 .faqAnswer {
 	background-color: #FCFCFC;
 	margin: 10px 0 10px 20px;
