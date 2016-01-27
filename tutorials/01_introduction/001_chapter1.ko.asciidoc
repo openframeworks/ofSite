@@ -22,11 +22,11 @@ Your First look inside oF
 
 여기서는, 여러분이 http://www.openframeworks.cc/download/[오픈프레임웍스 다운및 셋업가이드] 를 따라했다고 가정합니다. 우선 여러분이 해야할 일은 압축된 오픈프레임웍스를 여러분이 접근하기 쉬운 폴더에 압축을 푸는 것입니다. 개인적으로, 저는 폴더를 내문서에 위치시키고 사이드바에 바로가기를 만들어둡니다. 이렇게 말이죠 :
 
-image::shortcut.png["Shortcut",width="600"]
+image::/tutorials/01_introduction/001_chapter1/shortcut.png["Shortcut",width="600"]
 
 어디에 위치해두건, 폴더를 열어보면, 아래 같은 폴더가 보일 것입니다:
 
-image::structure1.png[addons, apps, and libs folders]
+image::/tutorials/01_introduction/001_chapter1/structure1.png[addons, apps, and libs folders]
 
 그렇다면, 이 폴더들은 무엇일까요?
 
@@ -54,25 +54,25 @@ XCode
 
 examples/graphicsExample폴더로 이동하여 "graphicsExample.xcodeproj" 파일을 더블릭합니다.
 
-image::graphicsExample01.png["navigate to graphicsExample",width="800"]
+image::/tutorials/01_introduction/001_chapter1/graphicsExample01.png["navigate to graphicsExample",width="800"]
 
 아마 아래와 같은 윈도우가 보일것입니다:
 
-image::graphicsExample02.png["graphicsExample 02",width="800"]
+image::/tutorials/01_introduction/001_chapter1/graphicsExample02.png["graphicsExample 02",width="800"]
 
 IMPORTANT: 메뉴 바에서 어떤 버전을 사용하고 있는지 살펴보세요: Xcode > About Xcode 에서 보실수 있습니다. 사용하고 있는 Xcode가 4.0 이하 버전이라면, 윈도우는 상당히 다를것이지만, 혼란스러워하지 마세요 -- 대응되는 인터페이스 기능들은 충분히 쉽게 찾을 수 있습니다.
 
 화면의 좌측 상단에 커다란 "Run" 버튼이 있을것입니다. Xcode 3에서는, "Build & Run" 이라고 불렸었습니다. 이 버튼을 눌러  현재 활성화된 타겟으로 실행할 수 있습니다. 하지만 여러분도 곧 알아차리시겠지만, 기본적으로, 활성화된 타겟은 openFrameworks라이브러리입니다. 이럴 경우 말그대로, 아무일도 발생하지 않습니다. 우리가 원하는것은 "graphicsExample" 프로그램을 실행하는 것이죠. 따라서 아래와 같이 보인다면:
 
-image::target-bad.png["openFrameworks library chosen",width="400"]
+image::/tutorials/01_introduction/001_chapter1/target-bad.png["openFrameworks library chosen",width="400"]
 
 클릭하여 아래로 드래그하면 이와같이 보입니다:
 
-image::target-good.png["graphicsExample target chosen",width="400"]
+image::/tutorials/01_introduction/001_chapter1/target-good.png["graphicsExample target chosen",width="400"]
 
 이제 "Run" 버튼을 클릭하면, 이 화면이 보일겁니다:
 
-image::graphicsExample03.png["graphicsExample, running",width="800"]
+image::/tutorials/01_introduction/001_chapter1/graphicsExample03.png["graphicsExample, running",width="800"]
 
 원과 오렌지색 원은 분명히 크기가 일정하게 변할것이고, 사각형들은 랜덤하게 그려질것입니다. 위에 위치한 빨간색 바는 페이드아웃되고, 선들은 부드럽게 변합니다. ESC나 Apple+Q를 눌러 프로그램을 종료합니다.
 
@@ -86,7 +86,7 @@ image::graphicsExample03.png["graphicsExample, running",width="800"]
 . 아래에 보이는것처럼 "All"과 "Combinded"가 선택되었는지 확인합니다.
 . *Base SDK"를 찾아, 클릭하여 "10.6"을 선택합니다.
 
-image::tenpointsix.png["10.6 Fix",width="600"]
+image::/tutorials/01_introduction/001_chapter1/tenpointsix.png["10.6 Fix",width="600"]
 
 모든 프로젝트마다 이런 과정을 거쳐야 할것 이므로, 익숙해지셔야 할겁니다 :)
 =====================================================================
@@ -98,19 +98,19 @@ Code::Blocks
 
 Code::Blocks를 여세요. 기본 화면은 아래와 같습니다:
 
-image::oF_codeblocks_1.png["default empty workspace of Code::Blocks",width="800"]
+image::/tutorials/01_introduction/001_chapter1/oF_codeblocks_1.png["default empty workspace of Code::Blocks",width="800"]
 
 "Open an existing project" 를 클릭하거나 또는 Ctrl+O를 사용하여 파일브라우저를 엽니다. 이제 오픈프레임웍스 예제 디렉토리로 이동하여 graphics/graphicsExample폴더로 들어갑니다. 화면 뷰에서 "All files *.*" 가 선택되었는지 꼭 확인하세요. Code::Blocks프로젝트인 "graphicsExample.workspace" (graphicsExample.cbp가 *아닙니다*)를 여세요.
 
-image::oF_codeblocks_2.png["file browser for graphicsExample Code::Blocks workspace",width="400"]
+image::/tutorials/01_introduction/001_chapter1/oF_codeblocks_2.png["file browser for graphicsExample Code::Blocks workspace",width="400"]
 
 workspace가 있어야 컴파일러가 관련된 라이브러리를 찾을 수 있습니다. 만약 workspace가 불려지지 않으면, 개발환경에서 최종 실행파일을 생성하기 위한 중요한 정보가 누락되게 됩니다. workspace가 성공적으로 볼러와지면,
 
-image::oF_codeblocks_3.png["graphicsExample Code::Blocks workspace",width="800"]
+image::/tutorials/01_introduction/001_chapter1/oF_codeblocks_3.png["graphicsExample Code::Blocks workspace",width="800"]
 
 상단의 작은 기어 버튼을 클릭하거나 Ctrl+F9를 눌러 프로젝트를 빌드(컴파일)할 수 있습니다. 작은 녹색 삼각형버튼을 누르거나 Ctrl+F10을 눌러 프로젝트를 실행할 수 있습니다. F9를 눌러 이 두가지 과정을 조합할 수 있습니다. 결과는 아래와 같이 보일것입니다:
 
-image::graphicsExample03.png["graphicsExample, running",width="800"]
+image::/tutorials/01_introduction/001_chapter1/graphicsExample03.png["graphicsExample, running",width="800"]
 
 원과 오렌지색 원은 분명히 크기가 일정하게 변할것이고, 사각형들은 랜덤하게 그려질것입니다. 위에 위치한 빨간색 바는 페이드아웃되고, 선들은 부드럽게 변합니다. ESC나 Apple+Q를 눌러 프로그램을 종료합니다.
 
@@ -134,7 +134,7 @@ $ make run
 
 명령이 실행되면 마침내 위에서 보았던 똑같은 화면이 보여질 것입니다.
 
-image::graphicsExample03.png["graphicsExample, running",width="800"]
+image::/tutorials/01_introduction/001_chapter1/graphicsExample03.png["graphicsExample, running",width="800"]
 
 원과 오렌지색 원은 분명히 크기가 일정하게 변할것이고, 사각형들은 랜덤하게 그려질것입니다. 위에 위치한 빨간색 바는 페이드아웃되고, 선들은 부드럽게 변합니다. ESC나 Apple+Q를 눌러 프로그램을 종료합니다.
 
@@ -171,7 +171,7 @@ apps폴더를 열어보면, _myApps_폴더를 볼 수 있습니다. 이 폴더�
 이제 _myApps_ 작업공간을 열어보면, _emptyExample_ 폴더가 보입니다. 이것을 *프로젝트* 라고 부르겠습니다. 각 프로젝트에는 다른 파일들과 함께 (사용하고 있는 IDE에 따라)".xcodeproj" 또는 ".workspace" 파일과, "src" 폴더가 있습니다. *프로젝트* 는 _반드시_ *작업공간*내에 위치해야 하며, 하나의 어플리케이션으로 컴파일 될 수 있습니다.
 
 
-image::workspace04.png["Workspace terminology"]
+image::/tutorials/01_introduction/001_chapter1/workspace04.png["Workspace terminology"]
 
 자 우리는 *프로젝트* 를 만들려고 합니다만, 모든 프로젝트는 *작업공간* 내에서 살아갑니다. 따라서 편리하가게 *myApps* 작업공간을 사용해봅시다. 물론 원한다면 여러분이 원하는 작업공간을 사용할 수 있습니다. 하지만 중요한것은 "apps" 내에 바로 위치해야 한다는 점입니다. 예를들어 : 하나의 작업공간 내에 다른 작업공간을 가질 수 없습니다.
 
@@ -182,11 +182,11 @@ First we will [underline]#duplicate# (NOT rename) the entire "emptyExample"
 folder. On a Mac, you can literally right-click on the emptyExample folder,
 and click 'Duplicate'. So the result should look like this:
 
-image::workspace02.png["emptyExample Copy", width="800"]
+image::/tutorials/01_introduction/001_chapter1/workspace02.png["emptyExample Copy", width="800"]
 
 Next, we can rename the duplicate project folder from "emptyExample Copy" to "myFirstProject".
 
-image::workspace03.png["My First Project", width="800"]
+image::/tutorials/01_introduction/001_chapter1/workspace03.png["My First Project", width="800"]
 =====================================================================
 
 여기서 매우 중요한 사실은 여러분 Xcode나 Code::Blocks 프로젝트 파일은 root폴더로부터 *정확히* 3단계를 유지하고 있다는 점입니다 (위의 컬러 다이어그램을 참고하세요). 따라서, 여러분이 새 프로젝트를 만들떄, 특별한 이유없이 갑자기 수천개의 에러가 출력되는 경우, Xcode나 Code::Blocks 프로젝트 파일이 정확한 위치에 있는지 반드시 체크해봐야 합니다.
@@ -195,7 +195,7 @@ image::workspace03.png["My First Project", width="800"]
 
 자 보십시오! 이제 여러분의 최조의 오픈프레임웍스 프로젝트를 생성했네요. 여러분의 새 Xcode 프로젝트 파일을 더블클릭하고 "emptyExample" 이 타겟으로 선택되었는지 확인한 다음 "Run" 을 클릭하면(또는 Code::Blocks에서 F9를 눌러보면), 아래와 같은 화면이 보일것입니다:
 
-image::PlainGray.png["Plain Gray Window", width="600"]
+image::/tutorials/01_introduction/001_chapter1/PlainGray.png["Plain Gray Window", width="600"]
 
 아무것도 없네요! 하지만 이것이 정확히 여러분이 보게 될 화면입니다. 뭐, 아직 아주 흥미롭진 않네요, 그래도 잘하고 있는겁니다.
 
@@ -207,11 +207,11 @@ ESC나 Apple+Q를 눌러 프로그램을 종료하세요
 =====================================================================
 파일명을 "emptyExample.xcodeproj" 를 "myFirstProject.xcodeproj" 로 변경하려고 시도할수도 있습니다. 만약 Xcode 4 이전의 버젼이라면 가능하지만, Xcode 4에서는 문제가 발생합니다. 따라서 대신에, 프로젝트를 XCode에서 열고, 아래에 보이는 것처럼 좌측 상단의 "emptyExample" 제목을 누르십시오:
 
-image::rename01.png["Renaming your Project",width="400"]
+image::/tutorials/01_introduction/001_chapter1/rename01.png["Renaming your Project",width="400"]
 
 이름을 변경하면, 다이얼로그 박스로 많은것들 역시 이름을 변경할것이냐고 물어볼것입니다. "Rename"을 누르세요.
  
-image::rename02.png["Renaming your Project",width="700"]
+image::/tutorials/01_introduction/001_chapter1/rename02.png["Renaming your Project",width="700"]
 
 쨔잔!
 =====================================================================
@@ -219,7 +219,7 @@ image::rename02.png["Renaming your Project",width="700"]
 
 XCode의 "Run" 버튼을 클릭할 때, 실제로 뒤에서 벌어지는 일을 설명하자면, 여러분의 코드는 실행가능한 파일로 컴파일되어 "bin" 디렉토리에 위치하게 됩니다. 그리고 나서 실행파일을 더블클릭하여 실행한것처럼 해당 어플리케이션이 실행됩니다. 자, "myApps/MyFirstApplication/bin" 폴더를 살펴보면, 어플리케이션 아이콘이 보일것입니다. 이것이 여러분의 어플리케이션입니다! 더블클릭해보면, 똑같은 회색 윈도우가 보일 것입니다. 이제 이 어플리케이션을 (맥을 사용하는) 다른 친구에게 보낼 수 있습니다. 그리고 이 멋진 회색 윈도우 프로그램을 실행 할수도 있죠!
 
-image::workspace05.png["Your Executable",width="760"]
+image::/tutorials/01_introduction/001_chapter1/workspace05.png["Your Executable",width="760"]
 
 
 Writing Code
@@ -232,7 +232,7 @@ ofApp.cpp
 
 자 마침내 코드를 살펴보기 시작할 시간입니다. 우선 해야할 일은 Xcode에서 프로젝트를 여는것입니다. 여러분이 앞 섹션에의 "myApps" 작업공간에 있는 "myFirstProject" 로 작업한다고 가정하고 진행하겠습니다. 열어서, *네비게이터 뷰* (XCode의 좌측 끝 패널)의 작은 삼각형을 클릭해보세요. 아래와 같이요:
 
-image::expand01.gif["Open up the project"]
+image::/tutorials/01_introduction/001_chapter1/expand01.gif["Open up the project"]
 
 . Click the disclosure triangle next to "MyFirstProject"
 . Click the disclosure triangle next to "src"
@@ -306,7 +306,7 @@ void testApp::draw(){
 
 이제 프로그램을 실행하면, 이런 화면이 보일것입니다:
 
-image::MyFirstProject01.png["A Plain White Circle", width="500"]
+image::/tutorials/01_introduction/001_chapter1/MyFirstProject01.png["A Plain White Circle", width="500"]
 
 축하드립니다! 화면에 뭔가를 띄웠네요! 이제부터는 내리막길만 남았습니다.
 
@@ -346,7 +346,7 @@ void testApp::draw(){
 
 이제 어플리케이션을 실행해봅시다.
 
-image::MyFirstProject02.png["A purple circle", width="500"]
+image::/tutorials/01_introduction/001_chapter1/MyFirstProject02.png["A purple circle", width="500"]
 
 ofCircle과 비슷하게, ofSetColor함수 역시 3개의 인자를 취합니다. 하지만 숫자들은 아주 다른 의미를 가집니다. link:/documentation/graphics/ofGraphics.html#show_ofSetColor[ofSetColor] 문서를 살펴보시면, 이 인자들은 사용하기 위한 색의 red, green, blue값을 의미하며, 각각 0-255사이의 범위를 갖는다는 것을 알 수 있습니다. red, green, blue는 https://en.wikipedia.org/w/index.php?title=RGB_color_model[RGB 색모델 혹은 색공간] 을 구성합니다. 따라서 우리가 `ofSetColor(255, 0, 255);` 라고 입력하면, "추후에 공지를 하기전까지는, 그려지는 모든것은 100%의 red, 0의 green, 100%의 blue로 칠해라" 라고 말하는 것입니다. 
 
@@ -381,7 +381,7 @@ void testApp::draw(){
 }
 ---------------------------------------------------------------------
 
-image::MyFirstProject03.png["Two Colorful Circles", width="500"]
+image::/tutorials/01_introduction/001_chapter1/MyFirstProject03.png["Two Colorful Circles", width="500"]
 
 
 All The Shapes You Can Handle
@@ -602,7 +602,7 @@ void ofApp::keyReleased(int key){
 
 "myApps"에 "keyboardInteraction"이라는 새 프로젝트를 생성합니다. 만약 필요하다면, "여러분의 첫 프로젝트 생성하기"로 돌아가서 어떻게 하는지 살펴보시기 바랍니다.
 
-image::KeyboardInteraction01.png["Keyboard Interaction Project",width="750"]
+image::/tutorials/01_introduction/001_chapter1/KeyboardInteraction01.png["Keyboard Interaction Project",width="750"]
 
 Introducing, cout!
 ~~~~~~~~~~~~~~~~~~
@@ -613,7 +613,7 @@ Introducing, cout!
 
 자, Xcode에서 메뉴의 View->Debug Area->Activate Console을 투르거나, 혹은 apple+shift+C 단축기를 눌러봅시다.Code::Blocks는 F9를 누를때(프로그램을 빌드하거나 실행) 자동으로 콘솔 윈도우를 보여줍니다.
 
-image::activate-console.png["Activate Console"]
+image::/tutorials/01_introduction/001_chapter1/activate-console.png["Activate Console"]
 
 [NOTE]
 =====================================================================
@@ -622,7 +622,7 @@ Xcode 3를 사용하신다면, Shift+Cmd+R 단축키를 누르십시오. 또한 
 
 XCode 윈도우의 하단에 아래와 같은 패널이 보일것입니다.
 
-image::debug-area.png["Debug Area"]
+image::/tutorials/01_introduction/001_chapter1/debug-area.png["Debug Area"]
 
 훌륭합니다! 이제 출력은 패널의 우측에 보여질 것입니다. 이제 키 기능을 사용하여 콘솔에 출력하는 코드를 작성해봅시다.
 
@@ -670,7 +670,7 @@ keyReleased 121
 
 'key'는 'int(정수형)'인데, 이건 좀 이상해 보입니다. 아마도 여러분은 문자나 문자열을 기대하고 있었죠? 사실, 이 숫자는 눌렸던 키의 http://www.asciitable.com/[ASCII 코드] 입니다. 표를 한번 살펴보죠:
 
-image::ascii_table.jpg["ASCII Table"]
+image::/tutorials/01_introduction/001_chapter1/ascii_table.jpg["ASCII Table"]
 
 각 열의 우측에 붉은색을 보면, 키보드의 키를 볼 수 있습니다. 아래에 대응되는 "Dec(10진수)" 열을 보시면, key 함수에서 받는 숫자를 볼 수 있습니다.
 
@@ -777,7 +777,7 @@ void ofApp::mouseReleased(int x, int y, int button){
 
 Create a new project called MouseInteraction so we can play with them.
 
-image::MouseInteraction01.png["Mouse Interaction Project"]
+image::/tutorials/01_introduction/001_chapter1/MouseInteraction01.png["Mouse Interaction Project"]
 
 Let's do the same thing with the mouse functions that we did with the key functions. Add the following to your project:
 
@@ -879,11 +879,11 @@ You should find that the circle grows every time you click the mouse, regardless
 
 Well, luckily we are dealing with a circle, which will make it significantly easier. Because if we can determine the distance between the center of the circle and the location of the mouse click, we can compare this distance to the radius, and if it is less than the radius, then the click was inside the circle. Take a look at the diagrams:
 
-image::hit-test-01.png["Hit Test 1"]
+image::/tutorials/01_introduction/001_chapter1/hit-test-01.png["Hit Test 1"]
 
 We know that the radius of the circle = 300, and we know that the mouse click is 230 pixels away from the center of the circle. So, was the mouse click inside the circle?
 
-image::hit-test-02.png["Hit Test 2"]
+image::/tutorials/01_introduction/001_chapter1/hit-test-02.png["Hit Test 2"]
 
 In this case, we know that the mouse click was 90 pixels from the center of the circle, so the click was clearly inside the circle.
 
@@ -931,7 +931,7 @@ In the "Adding Movement" section, we introduced the idea of using variables to r
 
 But there will be times when you do need to have a variable that can hold a fraction, or something completely different, such as letters, words, even a location in memory. There are variable types for each of these situations. Here is a short list of some of them from http://www.cplusplus.com/doc/tutorial/variables/[cplusplus.com]
 
-image::variable-types.png["Variable Types"]
+image::/tutorials/01_introduction/001_chapter1/variable-types.png["Variable Types"]
 
 So, as you can see, our basic integer takes up 4 bytes in memory. This is a finite amount of memory, and therefore there is limited (but pretty huge!) range of values that it can hold: namely, -2,147,483,648 to 2,147,483,647. If you need to store higher (or lower) numbers, you'd have to use a 'long int', which (contrary to the diagram) can go up to 9,223,372,036,854,775,807 and down to -9,223,372,036,854,775,808.
 
@@ -1143,7 +1143,7 @@ Arrays
 Another strength of computers is that they are encyclopedic: that is, they can keep track of a huge number of things at a time. Suppose we want to draw six thousand moving particles?  We know from the loop section that it is trivial to do something over and over again, but so far, we have only used loops to achieve a relatively consistent pattern. If we want do draw tons of particles, each with their own position, things get a little more complicated.
 
 .50000 particles!
-image::Arrays01.png["Arrays!",width=500]
+image::/tutorials/01_introduction/001_chapter1/Arrays01.png["Arrays!",width=500]
 
 [source,cpp]
 ---------------------------------------------------------------------

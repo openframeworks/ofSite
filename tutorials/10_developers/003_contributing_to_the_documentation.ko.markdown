@@ -130,12 +130,12 @@ _field: value_ 로 작성된 필드를 수정하지 **마십시오**: 이부분�
 <!-- Within the [openFrameworks documentation](http://www.openframeworks.cc/documentation/), at the top of every class's page, there are two buttons on the top of the page for "Edit Class" and/or "Edit Functions": -->
 [오픈프레임웍스 도큐먼트 페이지](http://www.openframeworks.cc/documentation/)에서, 클래스의 매 페이지 상단에 보면, 두 개의 버튼이 있을겁니다. "Edit Clas" 그리고/혹은 "Edit Functions"입니다:
 
-![](003_images/editclass.png)
+![](/tutorials/10_developers/003_images/editclass.png)
 
 <!-- If you click either of these buttons, you'll be taken to a page on github with a text area containing the entire documentation for that class or set of functions.  It will look something like this: -->
 두 버튼중 하나를 클릭하면, github의 문서 전체의 내용이 담긴 텍스트 편집창으로 이동할것입니다. 이 텍스트들은 클래스 혹은 함수들의 세트입니다. 아마도 이렇게 보일것입니다:
 
-![](003_images/editscreen.png)
+![](/tutorials/10_developers/003_images/editscreen.png)
 
 <!-- #### Step 2:  Edit the Documentation -->
 #### 단계 2: 문서 편집하기 
@@ -143,7 +143,7 @@ _field: value_ 로 작성된 필드를 수정하지 **마십시오**: 이부분�
 <!-- Within that block of text, you'll find the method, variable, or function that you're interested in editing.  Directly edit the text.  When you've made your changes, you can propose the edit using the box below the text: -->
 텍스트의 블록에서, 편집하고 싶은 메소드, 편수, 함수를 찾습니다. 텍스트를 바로 편집하세요. 편집이 완료되었다면, 텍스트박스 하단에서 편집을 완료할 수 있습니다.
 
-![](003_images/edit_save.png)
+![](/tutorials/10_developers/003_images/edit_save.png)
 
 <!-- Write a summary and an optional brief description of the changes you made, and click the "Propose File Change" button. -->
 여러분이 변형한 내용들에 대해서 간단한 설명이나 요약을 덧붙일 수 있습니다. "Propose File Change"버튼을 클릭하시면 됩니다.
@@ -154,7 +154,7 @@ _field: value_ 로 작성된 필드를 수정하지 **마십시오**: 이부분�
 <!-- You'll end up on the following page, which will let you review your changes: -->
 과정이 완료되고 나면, 변경된 내용을 리뷰할 수 있습니다:
 
-![](003_images/review.png)
+![](/tutorials/10_developers/003_images/review.png)
 
 <!-- Below that will be a list of all of the lines of text that you've changed.   It's a good practice to go through the changes and make sure that you didn't accidentally delete something and that your changes are what you thought they were.  If you'd like to write a message to the person who will be reviewing your changes, you can do that, too. -->
 아레에 보시면 변경된 텍스트들의 모든 내용이 있습니다. 변경한 내용들을 쭉 훑어보면서 실수로 삭제했거나 잘못 작성한 곳이 있는지 확인해보세요. 여러분의 코드를 리뷰한
@@ -315,7 +315,7 @@ Github계정이 필요합니다. 만약 계정이 없다면, 무료로 만드실
 <!-- You'll do this by going to [https://github.com/openframeworks/ofSite](https://github.com/openframeworks/ofSite).  In the top left corner, you'll see a button marked **fork** that looks like: -->
 [https://github.com/openframeworks/ofSite](https://github.com/openframeworks/ofSite)에 접속해, 좌측 상단에 보시면, **fork**버튼을 볼 수 있을것입니다. 아마 이렇게 생겼을 것입니다:
 
-![](003_images/fork.png)
+![](/tutorials/10_developers/003_images/fork.png)
 
 <!-- Clicking it will create a your own repository—the only difference is that it will be at https://github.com/<YOUR_USERNAME>/ofSite. -->
 클릭하면, 여러분만의 저장소가 생성될것입니다. 다른점이 있다면 주소가 https://github.com/<YOUR_USERNAME>/ofSite라는 것입니다.
@@ -329,7 +329,7 @@ Github계정이 필요합니다. 만약 계정이 없다면, 무료로 만드실
 <!-- On the left side of your ofSite repository, there's a text box marked **clone URL** that looks like: -->
 ofSite 저장소의 좌측에, **Clone URL**이라는 텍스트 박스가 보일겁니다. 이렇게 생겼습니다:
 
-![](003_images/clone.png)
+![](/tutorials/10_developers/003_images/clone.png)
 
 <!-- If you push the little clipboard button, it will copy your URL into your clipboard.  You can also just copy it the old-fashioned way.   -->
 작은 clipboard버튼을 클릭하면, 클립보드에 여러분의 URL이 복사될것입니다. 아니면 그냥 드래그하여 복사할 수도 있습니다.
@@ -453,7 +453,7 @@ fork, 푸쉬, 그리고 깃에 관한 더 자새한 사항은, Github에서 제�
 <!-- Go back to the Github page for your personal copy of the ofSite repository.   There, you'll see a banner that looks like: -->
 ofSite 저장소의 개인 복사본인 Github페이지로 접속해보면, 아래와 같은 배너를 볼 수 있습니다:
 
-![](003_images/pull.png)
+![](/tutorials/10_developers/003_images/pull.png)
 
 <!-- If you click the "Compare & pull request" button, you'll be taken to a page where you can add a message to the ofSite admins describing your changes, and a pull request will be filed on the main site for approval and merging with the main code base. -->
 "Compare & pull request" 버튼을 누르면, 원본 ofSite의 관리자에게 여러분이 작성한 변경사항을 담은 메시지를 작성하면서, pull request를 요청할 수 있는 페이지가 뜹니다. pull request가 완료되면, 원본 ofSite관리자에 의해 승인되어 원본 ofSite 저장소에 병합(merge)됩니다.
